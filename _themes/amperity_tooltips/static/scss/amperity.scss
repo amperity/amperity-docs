@@ -1,0 +1,8 @@
+// TO COMPILE CSS 
+// In command line switch to _themes/amperity_tooltips/static/ and run :
+// sass --watch scss/amperity.scss:amperity.css_t
+@import 'reset', 'config', 'sphinx';
+
+.left {
+  float: left;
+}

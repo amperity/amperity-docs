@@ -1,0 +1,443 @@
+// Nav Styling
+$nav-links: $amperity-brand-white;
+$nav-links-hover: lighten($amperity-brand-yellow, 0%);
+$nav-breakpoint: 1060px;
+$nav-border: 3px solid lighten($amperity-brand-white, 0%);
+
+.downloads .nav-main {
+  margin-bottom: 20px;
+}
+
+// Top Bar
+nav.nav-main {
+  width: 100%;
+  min-height: 64px;
+  margin-bottom: -3px;
+  vertical-align: middle;
+  background: $amperity-brand-off-black;
+  border-bottom: $nav-border;
+  h1 {
+    margin: 0;
+    padding: 15px 0 0 20px;
+    text-transform: uppercase;
+    font-family: $primary;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: $amperity-brand-white;
+    a {
+      color: $amperity-companyname;
+    }
+    span {
+      color: $amperity-companyname;
+    }
+  }
+  @media (min-width: $nav-breakpoint) {
+    position: relative;
+    padding: 11px 20px;
+    h1 {
+      padding: 0px 0;
+    }
+  }
+}
+
+.nav-inner {
+  max-width: 1295px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+// Subsections
+.nav-submain {
+  width: 100%;
+  min-height: 36px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  background: $amperity-brand-cement;
+  border-bottom: $nav-border;
+  h1 {
+    margin: 0;
+    padding: 15px 0 0 20px;
+    text-transform: uppercase;
+    font-family: $primary;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: $amperity-brand-off-black;
+    a {
+      color: $amperity-companyname;
+    }
+    span {
+      color: $amperity-companyname;
+    }
+  }
+  @media (min-width: $nav-breakpoint) {
+    position: relative;
+    padding: 11px 20px;
+    h1 {
+      padding: 0px 0;
+    }
+  }
+}
+
+.nav-subinner {
+  max-width: 1295px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+// List of Nav Links
+.nav-links {
+  margin: 0;
+  clear: both;
+  padding: 10px 17px;
+  color: $nav-links;
+  background: $amperity-brand-off-black;
+  line-height: 2;
+  font-family: $primary;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: none;
+  // Override Mobile Safari UL styles
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 10px;
+  a {
+    display: inline-block;
+    color: inherit;
+    transition: all 0.4s ease;
+  }
+  li {
+    display: block;
+    clear: both;
+  }
+  a:hover,
+  .is-active a {
+    color: $nav-links-hover;
+  }
+}
+
+// Nav at Smaller sizes
+@media (max-width: $nav-breakpoint) {
+  .nav-links {
+    border-bottom: $nav-border;
+    position: absolute;
+    width: 100%;
+    right: -100%;
+    z-index: 3;
+  }
+  .nav-links,
+  .nav-docs {
+    transition: right 0.2s ease;
+    &.is-open {
+      right: 0;
+    }
+  }
+}
+
+// Links List at Larger Sizes
+@media (min-width: $nav-breakpoint) {
+  .nav-links {
+    display: block;
+    clear: none;
+    float: left;
+    margin: 5px 0 0 10px;
+    padding: 0;
+    padding-right: 100px;
+    font-size: 14px;
+    line-height: 1;
+    li {
+      display: inline-block;
+      margin-left: 20px;
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  .nav-link {
+    a {
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-bottom: 2px solid $nav-links-hover; 
+      }
+    }
+    &.is-active a {
+      border-bottom: 2px solid $nav-links-hover; 
+    }
+  }
+}
+
+
+
+// List of Sublinks
+.sublinks {
+  margin: 0;
+  clear: both;
+  padding: 10px 17px;
+  color: $amperity-brand-off-black;
+  background: $amperity-brand-cement;
+  line-height: 2;
+  font-family: $primary;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: none;
+  // Override Mobile Safari UL styles
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 10px;
+  a {
+    display: inline-block;
+    color: inherit;
+    transition: all 0.4s ease;
+  }
+  li {
+    display: block;
+    clear: both;
+  }
+  a:hover,
+  .is-active a {
+    color: $amperity-brand-slate;
+  }
+}
+
+// Nav at Smaller sizes
+@media (max-width: $nav-breakpoint) {
+  .sublinks {
+    border-bottom: $nav-border;
+    position: absolute;
+    width: 100%;
+    right: -100%;
+    z-index: 3;
+  }
+  .sublinks,
+  .nav-docs {
+    transition: right 0.2s ease;
+    &.is-open {
+      right: 0;
+    }
+  }
+}
+
+// Links List at Larger Sizes
+@media (min-width: $nav-breakpoint) {
+  .sublinks {
+    display: block;
+    clear: none;
+    float: left;
+    margin: -2px 0 0 0px;
+    padding: 0;
+    padding-right: 100px;
+    font-size: 14px;
+    line-height: 1;
+    li {
+      display: inline-block;
+      margin-left: 20px;
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  .sublink {
+    a {
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-bottom: .5px solid $amperity-brand-slate; 
+      }
+    }
+    &.is-active a {
+      border-bottom: .5px solid $amperity-brand-slate; 
+    }
+  }
+}
+
+
+
+// Hamburger Icon
+#nav-icon {
+  position: absolute;
+  top: 12px;
+  right: 52px;
+  width: 27px;
+  height: 24px;
+  padding: 4px 6px;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 1;
+  color: $amperity-brand-white;
+  @media (min-width: $nav-breakpoint) {
+    display: none;
+  }
+}
+
+// Logo on Right Side of Nav
+#logo {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: $nav-breakpoint) {
+    top: -1px;
+    right: 0;
+  }
+}
+
+// Search box
+
+.searchbox-item {
+  position: relative;
+  padding: 0px;
+  background: $amperity-brand-off-black;
+  color: $amperity-brand-off-black;
+}
+
+
+.st-default-search-input {
+  display: inline-block;
+  width: 170px;
+  height: 12px;
+  padding: 8px 28px 8px 28px;
+  border: 0px solid $amperity-brand-white;
+  font-weight: 400;
+  color: $amperity-brand-off-black;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none ;
+  box-shadow: none;
+  font-family: "Montserrat", system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif !important;
+}
+
+
+/* The container <div> positions the dropdown content */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Shows the dropdown menu on hover */
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+/* The content in the dropdown (hidden by default) */
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $amperity-brand-cloud;
+  min-width: 200px;
+  line-height: 34px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.nav-dropdown-content a {
+  color: darken($amperity-brand-off-black, 10%);
+  border-bottom: 1px solid $amperity-brand-white;
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Changes the color of dropdown links on hover */
+.nav-dropdown-content a:hover {
+  color: $amperity-brand-off-black;
+  background-color: $amperity-brand-yellow;
+  border-bottom: 1px solid $amperity-brand-white;
+}
+
+
+
+/* These are the default badge styles for CHANGELOG */
+.Canny_BadgeContainer .Canny_Badge {
+  position: absolute;
+  top: -5px;
+  right: -7px;
+  border-radius: 10px;
+  background-color: $amperity-brand-apple;
+  padding: 5px;
+  border: 0px solid $amperity-brand-apple;
+}
+
+/* This CSS honeybadgers the iframe styling for CHANGELOG */
+#canny-changelog-iframe {
+  border-radius: 0px !important;
+  top: 62px !important;
+/*  left: unset !important; */
+/*  right: 206px !important; */
+}
+
+
+/* These is the CSS for the search box in the navbar */
+/* Need to figure out how to position it to be from the right side */
+
+.docs-search {
+    margin-top: 4.5px;
+}
+
+@media (max-width: $nav-breakpoint) {
+  .docs-search {
+    border-bottom: $nav-border;
+    position: absolute;
+    width: 100%;
+    right: -100%;
+    z-index: 3;
+  }
+  .docs-search,
+  .form.nav-search {
+    transition: right 0.2s ease;
+    &.is-open {
+      right: 0;
+    }
+  }
+}
+
+
+#search-results {
+    padding-bottom: 20px;
+}
+
+
+form.nav-search {
+    /*padding-left: 50px;*/
+}
+
+input#docs-search {
+    border-radius: 3px;
+    border: 0px;
+    font-family: 'Montserrat';
+    font-size: 11px;
+    height: 14px;
+    width: 200px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 7px;
+}
+
+svg.svg-inline--fa.fa-search.fa-w-16.icon-search {
+    margin-left: -25px;
+    color: $amperity-brand-off-black;
+}
+
+/* These is the CSS for the search box in the navbar */
+
+

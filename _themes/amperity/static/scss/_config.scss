@@ -1,0 +1,176 @@
+/* Colors
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+
+ /*
+  * The following are the primary brand colors. Use triads for admonitions and code blocks as necessary.
+  */
+
+ $amperity-brand-off-black: #0c0c0c;
+ $amperity-brand-anvil: #282b2e;
+ $amperity-brand-slate: #5a5f66;
+ $amperity-brand-prime-gray: #c2cbd1;
+ $amperity-brand-cement: #e8edef;
+ $amperity-brand-cloud: #f2f4f4;
+ $amperity-brand-white: #ffffff;
+
+ $amperity-brand-midnight: #002c33;
+ $amperity-brand-dark-teal: #09717f;
+ $amperity-brand-ocean: #459aa8;
+ $amperity-brand-prime-teal: #80c7d1;
+ $amperity-brand-ice: #caefef;
+ $amperity-awesome-blue: #00a6f2;
+
+ $amperity-brand-warm-grey: #f6ffdc;
+
+ $amperity-brand-gold: #b2b520;
+ $amperity-brand-moss: #d8e21a;
+ $amperity-brand-yellow: #dff200;
+ $amperity-brand-sunburst: #ddf85b;
+ $amperity-brand-merengue: #edff95;
+
+ $amperity-brand-red: #af3708;
+ $amperity-brand-crimson: #f75b2b;
+ $amperity-brand-prime-red: #ff9988;
+ $amperity-brand-hmred: #f5e6e8;
+
+ $amperity-brand-green: #317a1c;
+ $amperity-brand-apple: #8fdd7a;
+ $amperity-brand-prime-green: #ade5a3;
+ $amperity-brand-hmgreen: #e9f6ea;
+
+ $amperity-brand-lavender: #b5b5e0;
+
+ $amperity-brand-flamingo: #f5cfe4;
+
+ $amperity-brand-orange: #f4b670;
+
+
+ /*
+  * The following are shades of the logos for AI Assistant;
+  */
+
+ $amperity-brand-ai-larkle-light: #ce49a9;
+ $amperity-brand-ai-larkle-dark: #670788;
+ 
+
+ /*
+  * The following map directly to Sphinx code block directives; the colors are the tetrad colors for #5d9acd, #378f6e, and #e68c42;
+  */
+
+ $amperity-code-block-none: #e8edef;
+ $amperity-code-block-bash: #e8edef;
+ $amperity-code-block-clojure: #e8edef;
+ $amperity-code-block-console: #e8edef;
+ $amperity-code-block-css: #e8edef;
+ $amperity-code-block-django: #e8edef;
+ $amperity-code-block-html: #e8edef;
+ $amperity-code-block-javascript: #e8edef;
+ $amperity-code-block-json: #e8edef;
+ $amperity-code-block-markdown: #e8edef;
+ $amperity-code-block-mysql: #e8edef;
+ $amperity-code-block-python: #e8edef;
+ $amperity-code-block-rest: #e8edef;
+ $amperity-code-block-rst: #e8edef;
+ $amperity-code-block-ruby: #e8edef;
+ $amperity-code-block-salt: #e8edef;
+ $amperity-code-block-sass: #e8edef;
+ $amperity-code-block-sql: #e8edef;
+ $amperity-code-block-text: #e8edef;
+ $amperity-code-block-yaml: #e8edef;
+
+ /*
+  * The highlight for code blocks is in the file pygments.css
+  * at .highlight .hll { background-color: #ffd636 }
+  * All of these need colors updated
+  */
+
+ $amperity-code-block-future1: #e8edef;
+ $amperity-code-block-future2: #e8edef;
+ $amperity-code-block-future3: #e8edef;
+ $amperity-code-block-future4: #e8edef;
+ $amperity-code-block-future5: #e8edef;
+ $amperity-code-block-future6: #e8edef;
+ $amperity-code-block-future7: #e8edef;
+ $amperity-code-block-future8: #e8edef;
+ $amperity-code-block-future9: #e8edef;
+
+
+
+ /*
+  * The following map directly to Sphinx admonitions; the colors are variations of the tetrad colors for #a93439
+  */
+
+ /* updated note, tip, important, caution*/
+
+ $amperity-note: #caefef;
+ $amperity-tip: #80c7d1;
+ $amperity-important: #ade5a3;
+ $amperity-hint: #ade5a3;
+ $amperity-attention: #ade5a3;
+ $amperity-custom: #e8edef;
+ $amperity-warning: #ff9988;
+ $amperity-caution: #ff9988;
+ $amperity-danger: #ff9988;
+ $amperity-error: #ff9988;
+
+ /*
+  * The following map directly to navigation and default styles; these are a mix of primary, secondary, and tetrad colors
+  */
+
+ $amperity-table-border: #f2f4f4;
+ $amperity-table-border-bottom: #c2cbd1;
+ $amperity-table-box-shadow: #c2cbd1;
+ $amperity-companyname: #0c0c0c;
+ $amperity-header: #0c0c0c;
+ $amperity-header-underline: #0c0c0c;
+ $amperity-link: #09717f;
+ $amperity-rollover: #002c33;
+ $amperity-none: #ffffff;
+ $amperity-subheaders: #f75b2b;
+ $amperity-sidebar: #f75b2b;
+
+ $amperity-leftnav-groups: #5a5f66;
+ $amperity-leftnav-expanded: #e8edef;
+ $amperity-leftnav-rollover: #09717f;
+ $amperity-leftnav-active: #3478c3;
+
+
+ /*
+ * $amperity-topnav-rollover: #f3f8fd;
+ * $amperity-topnav-links-rollover: #4b6a8e;
+ */
+
+
+
+
+/* Fonts
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * $primary: 
+ *   Open Sans is used for the top global navigation and the grey nav on the left,
+ *   as well as the global flyout menu on the right (hidden by default).
+ *
+ * $secondary: 
+ *   Open Sans is used for the body text and the Table of Contents on the right.
+ * 
+ * $mono: 
+ *   Consolas is used for monospace text. 
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900);
+$primary: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$secondary: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$mono: "Consolas", "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+
+
+/* Icons
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Use Font Awesome CDN for iconography; if this, then update javascripts.html to not use the all.js
+ * Read more about use here: https://fortawesome.github.io/Font-Awesome/icons/
+ * 
+ * This theme does not use the Font Awesome CDN. Instead, the file is loaded via Javascript and is
+ * part of the /static collection of files built into the theme. This ensures that icons are local
+ * to the documentation set and that users who do not have an Internet connection will still see them.
+ * 
+ * @import url(https://use.fontawesome.com/releases/v5.0.12/css/all.css);
+ */

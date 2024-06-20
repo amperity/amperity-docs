@@ -1,0 +1,64 @@
+{#
+    basic/search.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for the search page.
+
+    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" -%}
+{%- set title = _('Search') -%}
+{%- set script_files = script_files + ['_static/searchtools.js'] -%}
+{%- block extrahead -%}
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
+  </script>
+  {{ super() }}
+  {# this is used when loading the search index using $.ajax fails,
+     such as on Chrome for documents on localhost #}
+  <script type="text/javascript" id="searchindexloader"></script>
+{%- endblock -%}
+{%- block body -%}
+  <h1 id="search-documentation">{{ _('Search') }}</h1>
+  <div id="fallback" class="admonition warning">
+  <script type="text/javascript">$('#fallback').hide();</script>
+  <p>
+    {%- trans -%}Please activate JavaScript to enable the search
+    functionality.{%- endtrans -%}
+  </p>
+  </div>
+  <p>
+    {%- trans -%}Enter a search term into the box below, and then click the <strong>Search</strong> button. Search results are scoped to return only pages in this document collection. A search query may be a single word with 3 (or more) characters and it may be multiple words.
+
+<!--    <p>Use a <strong>+</strong> symbol to join multiple words into a single query, such as <strong>customer+360</strong>, <strong>azure+data+factory</strong> or <strong>sftp+amperity</strong>, instead of putting quotes around the words (with spaces in-between) like "azure data factory".</p>
+
+    <p>Use more direct terms when possible. For example: <strong>hard+labeling</strong> does not return any results and neither does <strong>hard label</strong>, but a search for just <strong>label</strong> will return a few pages.</p>
+-->
+    <p>Avoid searching for words with 2 (or fewer) characters, as they are not part of the search index and will be ignored.</p>
+    {%- endtrans -%}
+  </p>
+  <form action="" method="get">
+    <input type="text" name="q" value="" />
+    <input type="submit" value="{{ _('search') }}" />
+    <span id="search-progress" style="padding-left: 10px"></span>
+  </form>
+  {%- if search_performed -%}
+    <h2>{{ _('Search Results') }}</h2>
+    {%- if not search_results -%}
+      <p>{{ _('Your search did not match any results.') }}</p>
+    {%- endif -%}
+  {%- endif -%}
+  <div id="search-results">
+  {%- if search_results -%}
+    <ul>
+    {%- for href, caption, context in search_results -%}
+      <li><a href="{{ pathto(item.href) }}">{{ caption }}</a>
+        <div class="context">{{ context|e }}</div>
+      </li>
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+  </div>
+{%- endblock -%}
+
