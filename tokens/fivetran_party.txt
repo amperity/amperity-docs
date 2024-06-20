@@ -1,0 +1,966 @@
+.. THESE ONLY LINK OUT TO FIVETRAN FOR THE PURPOSE OF DOCUMENTING THE DATA SOURCES THAT CAN BE ENABLED FROM FIVETRAN.
+
+
+.. |fivetran_example| raw:: html
+
+   <a href="https://www.fivetran.com" target="_blank">LINK_TEXT</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_documentation| raw:: html
+
+   <a href="https://fivetran.com/docs/getting-started" target="_blank">Fivetran documentation</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_adjust| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/adjust" target="_blank">Adjust</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_adobe| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/adobe" target="_blank">Adobe Analytics</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_adobe_analytics| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/adobe-analytics" target="_blank">Adobe Analytics (Omniture)</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_adp_workforce_now| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/adp-workforce-now" target="_blank">ADP Workforce Now</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_adroll| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/adroll" target="_blank">AdRoll</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_airtable| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/airtable" target="_blank">Airtable</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_amazon_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/amazon-ads" target="_blank">Amazon Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_amazon_aurora_mysql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/amazon-aurora-mysql" target="_blank">Amazon Aurora MySQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_amazon_aurora_postgresql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/amazon-aurora-postgresql" target="_blank">Amazon Aurora PostgreSQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_amazon_cloudfront| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/amazon-cloudfront" target="_blank">Amazon Cloudfront</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_amazon_dynamodb| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/amazon-dynamodb" target="_blank">Amazon DynamoDB</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_amazon_s3| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/amazon-s3" target="_blank">Amazon S3</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_amplitude| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/amplitude" target="_blank">Amplitude</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_anaplan| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/anaplan" target="_blank">Anaplan</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_apache_kafka| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/apache-kafka" target="_blank">Apache Kafka</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_apache_kafka_on_heroku| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/apache-kafka-heroku" target="_blank">Apache Kafka on Heroku</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_apple_app_store| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/apple-app-store" target="_blank">Apple App Store (formerly iTunes Connect)</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_apple_search_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/apple-search-ads" target="_blank">Apple Search Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_appsflyer| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/appsflyer" target="_blank">AppsFlyer</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_asana| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/asana" target="_blank">Asana</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_atlassian_jira| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/atlassian-jira" target="_blank">Atlassian Jira</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_aws_asset_inventory| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/aws-asset-inventory" target="_blank">AWS Asset Inventory</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_aws_cloudtrail| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/aws-cloudtrail" target="_blank">AWS CloudTrail</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_aws_kinesis| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/aws-kinesis" target="_blank">AWS Kinesis</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_aws_lambda| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/aws-lambda" target="_blank">AWS Lambda</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_azure_cloud_functions| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-azure-functions" target="_blank">Azure Cloud Functions</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_bigcommerce| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/bigcommerce" target="_blank">BigCommerce</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_box| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/box" target="_blank">Box</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_braintree_payments| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/braintree-payments" target="_blank">Braintree Payments</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_branch| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/branch" target="_blank">Branch</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_braze| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/braze" target="_blank">Braze</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_campaign_manager| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/campaign-manager" target="_blank">Campaign Manager</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_canvas| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/canvas" target="_blank">Canvas</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_coupa| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/coupa" target="_blank">Coupa</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_criteo| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/criteo" target="_blank">Criteo</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_csv_browser_upload| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/csv-uploader" target="_blank">CSV Browser Upload</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_delighted| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/delighted" target="_blank">Delighted</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_documentdb| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/documentdb" target="_blank">DocumentDB</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_dropbox| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/dropbox" target="_blank">Dropbox</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_ellucian_banner| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/ellucian-banner" target="_blank">Ellucian Banner</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_email_ingestor| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/email-ingestor" target="_blank">Email Ingestor</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_epicor_prophet_21| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/epicor-prophet-21" target="_blank">Epicor Prophet 21</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_facebook| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/facebook" target="_blank">Facebook</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_facebook_ads_account| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/facebook-ads-account" target="_blank">Facebook Ads Account</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_facebook_ads_insights| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/facebook-ads-insights" target="_blank">Facebook Ads Insights</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_facebook_page_insights| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/facebook-pages" target="_blank">Facebook Page Insights</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_financial_force| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/financialforce" target="_blank">FinancialForce</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_freshdesk| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/freshdesk" target="_blank">Freshdesk</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_front| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/front" target="_blank">Front</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_ftp| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/ftp" target="_blank">FTP</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_ftps| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/ftps" target="_blank">FTPS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_gainsight| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/gainsight" target="_blank">Gainsight</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_github| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/github" target="_blank">Github</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_gladly| raw:: html
+
+   <a href="https://fivetran.com/docs/applications/gladly/setup-guide" target="_blank">Gladly</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_ad_manager| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-ad-manager" target="_blank">Google Ad Manager</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-ads" target="_blank">Google Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_analytics| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-analytics" target="_blank">Google Analytics</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_analytics_360| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-analytics-360" target="_blank">Google Analytics 360</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_analytics_4| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-analytics-4" target="_blank">Google Analytics 4</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_analytics_4_export| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-analytics-4-export" target="_blank">Google Analytics 4 Export</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_cloud_functions| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-cloud-functions" target="_blank">Google Cloud Functions</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_cloud_storage| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-cloud-storage" target="_blank">Google Cloud Storage</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_display_video_360| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-display-and-video-360" target="_blank">Google Display & Video 360</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_drive| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-drive" target="_blank">Google Drive</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_play| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-play" target="_blank">Google Play</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_search_console| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-search-console" target="_blank">Google Search Console</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_google_sheets| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-sheets" target="_blank">Google Sheets</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_greenhouse| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/greenhouse" target="_blank">Greenhouse</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_heap| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/heap" target="_blank">Heap</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_height| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/height" target="_blank">Height</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_help_scout| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/help-scout" target="_blank">Help Scout</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_heroku_postgres| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/heroku-postgres" target="_blank">Heroku Postgres</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_hubspot| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/hubspot" target="_blank">Hubspot</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_instagram_business| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/instagram-business" target="_blank">Instagram Business</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_intercom| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/intercom" target="_blank">Intercom</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_iterable| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/iterable" target="_blank">Iterable</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_klaviyo| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/klaviyo" target="_blank">Klaviyo</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_kustomer| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/kustomer" target="_blank">Kustomer</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_lever| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/lever" target="_blank">Lever</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_lightspeed| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/lightspeed" target="_blank">Lightspeed</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_linkedin_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/linkedin-ads" target="_blank">LinkedIn Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_linkedin_company_pages| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/linkedin-company-pages" target="_blank">Linkedin Company Pages</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_loaded_commerce_mysql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/loaded-commerce-via-mysql" target="_blank">Loaded Commerce via MySQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_magento_mysql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/magento-mysql" target="_blank">Magento via MySQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_magento_mysql_amazon_rds| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/magento-mysql-amazon-rds" target="_blank">Magento via MySQL Amazon RDS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mailchimp| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mailchimp" target="_blank">Mailchimp</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mandrill| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mandrill" target="_blank">Mandrill</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mariadb| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mariadb" target="_blank">MariaDB</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mariadb_amazon_rds| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mariadb-amazon-rds" target="_blank">MariaDB on Amazon RDS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mariadb_azure_database| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mariadb-azure" target="_blank">MariaDB on Azure Database</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_marin_software| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/marin-software" target="_blank">Marin Software</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_marketo| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/marketo" target="_blank">Marketo</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mavenlink| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mavenlink" target="_blank">Mavenlink</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_medallia| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/medallia" target="_blank">Medallia</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_advertising| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/bing-ads" target="_blank">Microsoft Advertising</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_azure_blob_storage| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-azure-blob-storage" target="_blank">Microsoft Azure Blob Storage</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_azure_sql_database| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-azure-sql-database" target="_blank">Microsoft Azure SQL Database</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_dynamics_365| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-dynamics-365" target="_blank">Microsoft Dynamics 365</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_dynamics_ax| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/dynamics-ax" target="_blank">Microsoft Dynamics AX</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_dynamics_crm| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-dynamics-crm" target="_blank">Microsoft Dynamics CRM</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_dynamics_gp| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-dynamics-gp" target="_blank">Microsoft Dynamics GP</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_microsoft_dynamics_nav| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-dynamics-nav" target="_blank">Microsoft Dynamics NAV</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mixpanel| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mixpanel" target="_blank">Mixpanel</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mongodb| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mongodb" target="_blank">MongoDB</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mongodb_sharded| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mongo-sharded" target="_blank">MongoDB Sharded</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mysql_database| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/mysql-database" target="_blank">MySQL Database</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mysql_azure_database| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-azure-mysql" target="_blank">MySQL on Azure Database</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mysql_google_cloud_sql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-cloud-mysql-database" target="_blank">MySQL on Google Cloud SQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_mysql_rds| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/aws-rds-mysql" target="_blank">MySQL on RDS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_ncino| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/ncino" target="_blank">nCino</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_netsuite_suiteanalytics| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/netsuite-suiteanalytics" target="_blank">NetSuite SuiteAnalytics</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_optimizely| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/optimizely" target="_blank">Optimizely</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle" target="_blank">Oracle</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_amazon_rds| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-amazon-rds" target="_blank">Oracle on Amazon RDS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_ebs| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-ebs" target="_blank">Oracle EBS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_eloqua| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-eloqua" target="_blank">Oracle Eloqua</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_fusion_cloud_cx| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-fusion-cloud-applications-cx" target="_blank">Oracle Fusion Cloud Applications — CX</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_fusion_cloud_erp| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-fusion-cloud-applications-erp" target="_blank">Oracle Fusion Cloud Applications — ERP</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_fusion_cloud_hcm| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-fusion-cloud-applications-hcm" target="_blank">Oracle Fusion Cloud Applications — HCM</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_fusion_cloud_scm| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-fusion-cloud-applications-scm" target="_blank">Oracle Fusion Cloud Applications — SCM</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_peoplesoft| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-peoplesoft" target="_blank">Oracle PeopleSoft</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_rac| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-rac" target="_blank">Oracle RAC</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oracle_siebel_crm| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oracle-siebel-crm" target="_blank">Oracle Siebel CRM</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_oscommerce_mysql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/oscommerce-mysql" target="_blank">OsCommerce via MySQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_outbrain| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/outbrain" target="_blank">Outbrain</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_outreach| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/outreach" target="_blank">Outreach</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_paypal| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/paypal" target="_blank">Paypal</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_pendo| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/pendo" target="_blank">Pendo</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_pipedrive| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/pipedrive" target="_blank">Pipedrive</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_pinterest_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/pinterest-ads" target="_blank">Pinterest Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_postgresql_database| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/postgresql-database" target="_blank">PostgreSQL Database</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_postgresql_azure_database| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/microsoft-azure-postgres" target="_blank">PostgreSQL on Azure Database</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_postgresql_google_cloud| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/google-cloud-postgres" target="_blank">PostgreSQL on Google Cloud</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_postgresql_rds| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/aws-rds-postgres" target="_blank">PostgreSQL on RDS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_powerschool| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/powerschool" target="_blank">PowerSchool</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_prestashop| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/prestashop" target="_blank">PrestaShop</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_prestashop_mysql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/prestashop-via-mysql" target="_blank">PrestaShop via MySQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_qualtrics| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/qualtrics" target="_blank">Qualtrics</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_quickbooks| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/quickbooks-online" target="_blank">Quickbooks</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_recharge| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/recharge" target="_blank">ReCharge</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_recurly| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/recurly" target="_blank">Recurly</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_reddit_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/reddit-ads" target="_blank">Reddit Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sage_intacct| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sage-intacct" target="_blank">Sage Intacct</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sailthru| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sailthru" target="_blank">Sailthru</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_salesforce| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/salesforce" target="_blank">Salesforce</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_salesforce_commerce_cloud| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/salesforce-commerce-cloud" target="_blank">Salesforce Commerce Cloud</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_salesforce_marketing_cloud| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/salesforce-marketing-cloud" target="_blank">Salesforce Marketing Cloud</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_salesforce_pardot| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/salesforce-pardot" target="_blank">Salesforce Pardot</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sap_business_bydesign| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sap-business-by-design" target="_blank">SAP Business ByDesign</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sap_concur| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sap-concur" target="_blank">SAP Concur</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sap_erp_hana| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sap-erp" target="_blank">SAP ERP (S/4 HANA)</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_segment| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/segment" target="_blank">Segment</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sendgrid| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sendgrid" target="_blank">Sendgrid</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_servicenow| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/servicenow" target="_blank">ServiceNow</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sftp| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sftp" target="_blank">SFTP</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_shopify| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/shopify" target="_blank">Shopify</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_snapchat_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/snapchat-ads" target="_blank">Snapchat Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_snowplow_analytics| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/snowplow-analytics" target="_blank">Snowplow Analytics</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_splunk| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/splunk" target="_blank">Splunk</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_spree_commerce_mysql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/spree-commerce-via-mysql" target="_blank">Spree Commerce via MySQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sql_server| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sql-server" target="_blank">SQL Server</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sql_server_rds| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/aws-rds-sql-server" target="_blank">SQL Server on RDS</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_square| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/square" target="_blank">Square</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_stripe| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/stripe" target="_blank">Stripe</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_sugarcrm| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/sugarcrm" target="_blank">SugarCRM</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_surveymonkey| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/surveymonkey" target="_blank">SurveyMonkey</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_taboola| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/taboola" target="_blank">Taboola</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_tiktok_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/tiktok-ads" target="_blank">TikTok Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_twilio| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/twilio" target="_blank">Twilio</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_twitter_ads| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/twitter-ads" target="_blank">Twitter Ads</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_twitter_analytics| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/twitter-analytics" target="_blank">Twitter Analytics</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_typeform| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/typeform" target="_blank">Typeform</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_uservoice| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/uservoice" target="_blank">UserVoice</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_veeva| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/veeva" target="_blank">Veeva</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_webhooks| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/webhooks" target="_blank">Webhooks</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_woocommerce| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/woocommerce" target="_blank">WooCommerce</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_woocommerce_mysql| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/woocommerce-via-mysql" target="_blank">WooCommerce via MySQL</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_workday| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/workday" target="_blank">Workday</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_workday_hcm| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/workday-hcm" target="_blank">Workday HCM</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_xero| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/xero" target="_blank">Xero</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_yahoo_gemini| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/yahoo-gemini" target="_blank">Yahoo Gemini (Verizon Media)</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_youtube_analytics| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/youtube" target="_blank">YouTube Analytics</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zendesk| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zendesk" target="_blank">Zendesk</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zendesk_chat| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zendesk-chat" target="_blank">Zendesk Chat</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zendesk_gather| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zendesk-gather" target="_blank">Zendesk Gather</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zendesk_guide| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zendesk-guide" target="_blank">Zendesk Guide</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zendesk_sell| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zendesk-sell" target="_blank">Zendesk Sell</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zendesk_sunshine| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zendesk-sunshine" target="_blank">Zendesk Sunshine</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zendesk_talk| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zendesk-talk" target="_blank">Zendesk Talk</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zoho_crm| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zoho-crm" target="_blank">Zoho CRM</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |fivetran_zuora| raw:: html
+
+   <a href="https://www.fivetran.com/connectors/zuora" target="_blank">Zuora</a> <i class="fas fa-external-link-square-alt"></i>

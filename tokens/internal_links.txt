@@ -1,0 +1,1550 @@
+.. Use only for internal links that go from one internal site (reference, datagrid, amp360, ampiq, ampid, etc.) to another. Do not use this to define links that leave https://docs.amperity.com. Do not use this to define links to other topics WITHIN the same topic collection.
+
+
+.. |amperity_api| raw:: html
+
+   <a href="https://docs.amperity.com/api/start_here.html">Amperity API</a>
+
+
+.. |add_ampiq_data_requirements| raw:: html
+
+   <a href="/datagrid/add_ampiq.html#data-requirements" target="_blank">data requirements</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |add_customer_360_database| raw:: html
+
+   <a href="/datagrid/add_customer_profiles.html" target="_blank">customer 360 database</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |ampiq_destinations| raw:: html
+
+   <a href="https://docs.amperity.com/destinations_campaigns.html">destinations for customer activation</a>
+
+
+.. |api_keys| raw:: html
+
+   <a href="https://docs.amperity.com/reference/api.html">API keys</a>
+
+
+.. |api_keys_add| raw:: html
+
+   <a href="https://docs.amperity.com/reference/api.html#add-api-keys">adding API keys</a>
+
+
+.. |api_keys_delete| raw:: html
+
+   <a href="https://docs.amperity.com/reference/api.html#delete-api-tokens">deleting API tokens</a>
+
+
+.. |api_keys_rotate| raw:: html
+
+   <a href="https://docs.amperity.com/reference/api.html#rotate-api-tokens">rotating API tokens</a>
+
+
+.. |api_keys_access_generate| raw:: html
+
+   <a href="https://docs.amperity.com/reference/api.html#generate-access-tokens">generating access tokens</a>
+
+
+.. |api_keys_access_refresh| raw:: html
+
+   <a href="https://docs.amperity.com/reference/api.html#refresh-access-tokens">refreshing access tokens</a>
+
+
+.. |api_profile| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/api_profile.html">Profile API</a>
+
+
+.. |api_streaming_ingest| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/api_streaming_ingest.html">Streaming Ingest API</a>
+
+
+.. |attribute_compound_first_order| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_compound_first_order.html">First Order</a>
+
+
+.. |attribute_compound_has_not_purchased| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_compound_has_not_purchased.html">Has Not Purchased</a>
+
+
+.. |attribute_compound_has_purchased| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_compound_has_purchased.html">Has Purchased</a>
+
+
+.. |attribute_compound_most_frequent_order| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_compound_most_frequent_order.html">Most Frequent Order</a>
+
+
+.. |attribute_compound_repeat_order| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_compound_repeat_order.html">Repeat Order</a>
+
+
+.. |attribute_compound_total_value_of_orders| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_compound_total_value_of_orders.html">Total Value of Orders</a>
+
+
+.. |blocklist_bad_values| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/blocklist_bad_values.html">bad-values blocklist</a>
+
+
+.. |braze_table| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_braze.html#customer-profiles-table">customer profiles table</a>
+
+
+.. |campaigns| raw:: html
+
+   <a href="https://docs.amperity.com/reference/campaigns.html">About Campaigns</a>
+
+
+.. |campaigns_notifications| raw:: html
+
+   <a href="https://docs.amperity.com/reference/campaigns.html">campaigns</a>
+
+
+.. |campaign_active_campaign| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_active_campaign.html">send campaigns</a>
+
+
+.. |campaign_adobe_marketo| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_adobe_marketo.html">send campaigns</a>
+
+
+.. |campaign_amazon_s3| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_amazon_s3.html">send campaigns</a>
+
+
+.. |campaign_attentive_mobile| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_attentive_mobile.html">send campaigns</a>
+
+
+.. |campaign_azure_blob_storage| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_azure_blob_storage.html">send campaigns</a>
+
+
+.. |campaign_braze| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_braze.html">send campaigns</a>
+
+
+.. |campaign_cheetah_digital| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_cheetah_digital.html">send campaigns</a>
+
+
+.. |campaign_cordial| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_cordial.html">send campaigns</a>
+
+
+.. |campaign_criteo| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_criteo.html">send campaigns</a>
+
+
+.. |campaign_google_ads| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_google_ads.html">send campaigns</a>
+
+
+.. |campaign_google_cloud_storage| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_google_cloud_storage.html">send campaigns</a>
+
+
+.. |campaign_google_customer_match| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_google_customer_match.html">send campaigns</a>
+
+
+.. |campaign_google_dv360| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_dv360.html">send campaigns</a>
+
+
+.. |campaign_hubspot| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_hubspot.html">send campaigns</a>
+
+
+.. |campaign_klaviyo| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_klaviyo.html">send campaigns</a>
+
+
+.. |campaign_listrak| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_listrak.html">send campaigns</a>
+
+
+.. |campaign_liveramp| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_liveramp.html">send campaigns</a>
+
+
+.. |campaign_meta_ads_manager| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_meta_ads_manager.html">send campaigns</a>
+
+
+.. |campaign_microsoft_ads| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_microsoft_ads.html">send campaigns</a>
+
+
+.. |channel_oracle_eloqua| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_oracle_eloqua.html">send campaigns</a>
+
+
+.. |campaign_pinterest| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_pinterest.html">send campaigns</a>
+
+
+.. |campaign_reddit_ads| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_reddit_ads.html">send campaigns</a>
+
+
+.. |campaign_sailthru| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_sailthru.html">send campaigns</a>
+
+
+.. |campaign_salesforce_marketing_cloud| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_salesforce_marketing_cloud.html">send campaigns</a>
+
+
+.. |campaign_sftp| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_sftp.html">send campaigns</a>
+
+
+.. |campaign_snapchat| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_snapchat.html">send campaigns</a>
+
+
+.. |campaign_tdd| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_the_trade_desk.html">send campaigns</a>
+
+
+.. |campaign_template| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/template_channel.html">send campaigns</a>
+
+
+.. |campaign_tiktok| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_tiktok_ads.html">send campaigns</a>
+
+
+.. |channel_active_campaign| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_active_campaign.html">Active Campaign</a>
+
+
+.. |channel_adobe_marketo| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_adobe_marketo.html">Adobe Marketo</a>
+
+
+.. |channel_amazon_s3| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_amazon_s3.html">Amazon S3</a>
+
+
+.. |channel_attentive_mobile| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_attentive_mobile.html">Attentive</a>
+
+
+.. |channel_azure_blob_storage| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_azure_blob_storage.html">Microsoft Azure Blob Storage</a>
+
+
+.. |channel_braze| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_braze.html">Braze</a>
+
+
+.. |channel_cheetah_digital| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_cheetah_digital.html">Cheetah Digital</a>
+
+
+.. |channel_cordial| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_cordial.html">Cordial</a>
+
+
+.. |channel_criteo| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_criteo.html">Criteo</a>
+
+
+.. |channel_google_ads| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_google_ads.html">Google Ads</a>
+
+
+.. |channel_google_cloud_storage| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_google_cloud_storage.html">Google Cloud Storage</a>
+
+
+.. |channel_google_customer_match| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_google_customer_match.html">Google Customer Match</a>
+
+
+.. |channel_google_dv360| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_dv360.html">Google DV360</a>
+
+
+.. |channel_hubspot| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_hubspot.html">HubSpot</a>
+
+
+.. |channel_klaviyo| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_klaviyo.html">Klaviyo</a>
+
+
+.. |channel_listrak| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_listrak.html">Listrak</a>
+
+
+.. |channel_liveramp| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_liveramp.html">LiveRamp</a>
+
+
+.. |channel_meta_ads_manager| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_meta_ads_manager.html">Meta Ads Manager</a>
+
+
+.. |channel_microsoft_ads| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_microsoft_ads.html">Microsoft Advertising</a>
+
+
+.. |channel_pinterest| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_pinterest.html">Pinterest</a>
+
+
+.. |channel_reddit_ads| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_reddit_ads.html">Reddit Ads</a>
+
+
+.. |channel_sailthru| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_sailthru.html">Sailthru</a>
+
+
+.. |channel_salesforce_marketing_cloud| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_salesforce_marketing_cloud.html">send campaigns</a>
+
+
+.. |channel_sftp| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_sftp.html">any SFTP site</a>
+
+
+.. |channel_snapchat| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_snapchat.html">Snapchat</a>
+
+
+.. |configure_stitch_ignore_jitter| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/configure_stitch.html#ignore-jitter-alerts">jitter alerts</a>
+
+.. |channel_template| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/template_channel.html">Destination_Name</a>
+
+
+.. |channel_the_trade_desk| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_the_trade_desk.html">The Trade Desk</a>
+
+
+.. |channel_tiktok| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_tiktok_ads.html">TikTok Ads</a>
+
+
+.. |credentials| raw:: html
+
+   <a href="https://docs.amperity.com/reference/credentials.html">Credentials</a>
+
+
+.. |custom_domain_tables| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/custom_domain_tables.html">custom domain tables</a>
+
+
+.. |database_add_passthrough| raw:: html
+
+   <a href="https://docs.amperity.com/reference/database.html#add-passthrough-table">a passthrough table</a>
+
+
+.. |database_add_sql| raw:: html
+
+   <a href="https://docs.amperity.com/reference/database.html#add-passthrough-table">a SQL table</a>
+
+
+.. |database_add_sql_template| raw:: html
+
+   <a href="https://docs.amperity.com/reference/database.html#add-passthrough-table">a SQL table from a template </a>
+
+
+.. |destination_amazon_ads| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_amazon_ads.html">Amazon Ads</a>
+
+
+.. |destination_amazon_s3| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_amazon_s3.html">Amazon S3</a>
+
+
+.. |destination_azure_blob_storage| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_azure_blob_storage.html">Azure Blob Storage</a>
+
+
+.. |destination_azure_data_lake_storage_gen2| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_azure_data_lake_storage_gen2.html">Azure Data Lake Storage Gen2</a>
+
+
+.. |destination_campaign_monitor| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_campaign_monitor.html">Campaign Monitor</a>
+
+
+.. |destination_criteo| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_criteo.html">Criteo</a>
+
+
+.. |destination_databricks_amazon_redshift| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_databricks_amazon_redshift.html">Amazon Redshift</a>
+
+
+.. |destination_databricks_amazon_s3| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_databricks_amazon_s3.html">Amazon S3</a>
+
+
+.. |destination_databricks_azure_blob_storage| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_databricks_azure_blob_storage.html">Azure Blob Storage</a>
+
+
+.. |destination_databricks_azure_synapse_analytics| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_databricks_azure_synapse_analytics.html">Azure Synapse Analytics</a>
+
+
+.. |destination_databricks_delta_table| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_databricks_delta_table.html">Databricks Delta table</a>
+
+
+.. |destination_databricks_google_big_query| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_databricks_google_big_query.html">Google BigQuery</a>
+
+
+.. |destination_databricks_snowflake| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_databricks_snowflake.html">Snowflake</a>
+
+
+.. |destination_google_ads| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_google_ads.html">Google Ads</a>
+
+
+.. |destination_google_cloud_storage| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_google_cloud_storage.html">Google Cloud Storage</a>
+
+
+.. |destination_google_audience_partner_api| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_google_audience_partner_api.html">Google Customer Match</a>
+
+
+.. |destination_hubspot| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_hubspot.html">HubSpot</a>
+
+
+.. |destination_klaviyo| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_klaviyo.html">Klaviyo</a>
+
+
+.. |destination_meta_ads_manager| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_meta_ads_manager.html">Meta Ads Manager</a>
+
+
+.. |destination_meta_ads_manager_custom_audiences| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#custom-audiences">custom audiences</a>
+
+
+.. |destination_meta_ads_manager_offline_events| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#offline-events">offline events</a>
+
+
+.. |destination_microsoft_dynamics| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_microsoft_dynamics.html">Microsoft Dynamics</a>
+
+
+.. |destination_oracle_eloqua| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_oracle_eloqua.html">Oracle Eloqua</a>
+
+
+.. |destination_sailthru| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_sailthru.html">SailThru</a>
+
+
+.. |destination_salesforce_marketing_cloud| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html">Salesforce Marketing Cloud</a>
+
+
+.. |destination_sftp| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_sftp.html">SFTP</a>
+
+
+.. |destination_sftp_any| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_sftp.html">Any SFTP site</a>
+
+
+.. |destination_the_trade_desk| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_the_trade_desk.html">The Trade Desk</a>
+
+
+.. |destination_zendesk| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/destination_zendesk.html">Zendesk</a>
+
+
+.. |people_based_measurement| raw:: html
+
+    <a href="https://docs.amperity.com/ampiq/peoplebased_measurement.html">People-based measurement</a>
+
+
+.. |feeds| raw:: html
+
+    <a href="https://docs.amperity.com/datagrid/feeds.html">Configure feeds</a>
+
+
+.. |feed_type_decimal| raw:: html
+
+   <a href="https://docs.amperity.com/reference/feeds.html#decimal">decimal</a>
+
+
+.. |queries| raw:: html
+
+   <a href="https://docs.amperity.com/reference/queries.html#run-as-sla-query">queries</a>
+
+
+.. |orchestration_groups| raw:: html
+
+   <a href="https://docs.amperity.com/reference/orchestration_groups.html">orchestration groups</a>
+
+
+.. |stitch| raw:: html
+
+   <a href="https://docs.amperity.com/reference/stitch.html">Stitch</a>
+
+
+.. 
+.. The following is used only in /reference/domain_tables.rst
+.. 
+
+.. |data_first_party_raw_clickstream| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/data_first_party.html#raw-clickstream-data">require filtered sets of raw clickstream data</a>
+
+
+.. |first_party_data_sources| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/data_first_party.html">First-party Data Sources</a>
+
+
+.. |format_actual_json| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_json_actual.html">actual JSON</a>
+
+
+.. |format_avro| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_avro.html">Apache Avro</a>
+
+
+.. |format_cbor| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_cbor.html">CBOR</a>
+
+
+.. |format_cbor_couriers| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_cbor.html#couriers">load settings and operations</a>
+
+
+.. |format_cbor_feeds| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_cbor.html#feeds">define a feed</a>
+
+
+.. |format_cbor_ingest_query| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_cbor.html#ingest-queries">ingest query</a>
+
+
+.. |format_common_allow_access| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#connect-to-source">allow Amperity to access, and then read data</a>
+
+
+.. |format_common_rsa_keys| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#sftp-and-encryption">RSA key for public key credentials</a>
+
+
+.. |format_common_file_formats| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#pull-file-formats">supported file format</a>
+
+
+.. |format_common_date_formats| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#date-formats">date format</a>
+
+
+.. |format_common_file_compression_archive| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#file-compression-archive">file compression and/or archive</a>
+
+
+.. |format_common_filename_template_pattern| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#filename-templates">filename template pattern</a>
+
+
+.. |format_common_pgp| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#pretty-good-privacy-pgp">PGP encryption</a>
+
+
+.. |format_csv| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_csv.html">CSV</a>
+
+
+.. |format_dat| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_dat.html">DAT</a>
+
+
+.. |format_dsv| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_dsv.html">DSV</a>
+
+
+.. |format_json| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_json.html">JSON</a>
+
+
+.. |format_json_streaming| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_json_streaming.html">Streaming JSON</a>
+
+
+.. |format_ndjson| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_ndjson.html">NDJSON</a>
+
+
+.. |format_ndjson_ingest_query| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_ndjson.html#ingest-queries">ingest query</a>
+
+
+.. |format_parquet| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_parquet.html">Apache Parquet</a>
+
+
+.. |format_parquet_directories| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_parquet.html#configure-parquet-directories">Apache Parquet files</a>
+
+
+.. |format_psv| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_psv.html">PSV</a>
+
+
+.. |format_send_compression| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#file-compression">file compression and/or archive</a>
+
+
+.. |format_send_credentials| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#connect-to-destination">allow Amperity to access</a>
+
+
+.. |format_send_files| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#send-file-formats">file format</a>
+
+
+.. |format_send_public_keys| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#public-keys-for-sftp">RSA key for public key credentials</a>
+
+
+.. |format_send_templates| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_common.html#filename-template-patterns">filename template pattern</a>
+
+
+.. |format_tsv| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_tsv.html">TSV</a>
+
+
+.. |format_xml| raw:: html
+
+   <a href="https://docs.amperity.com/reference/format_xml.html">XML</a>
+
+
+.. |passthrough_tables| raw:: html
+
+   <a href="https://docs.amperity.com/reference/databases.html#add-passthrough-table">passthrough tables</a>
+
+
+.. |predicted customer lifetime value (CLV) model| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/model_predicted_clv.html#which-customers-are-the-most-valuable">predicted customer lifetime value (CLV) model</a>
+
+
+.. |predicted customer lifetime value (CLV) model spend| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/model_predicted_clv.html#models-predicted-clv-use-cases-spend">predicted customer lifetime value (CLV) model</a>
+
+
+.. |privacy_rights| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/privacy_rights.html">privacy rights</a>
+
+
+.. |relative_dates| raw:: html
+
+   <a href="https://docs.amperity.com/reference/segments.html#relative-dates">relative dates</a>
+
+
+.. |segments| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/segments.html">Build Segments</a>
+
+
+.. |semantics| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html">About Semantic Tags</a>
+
+
+.. |semantics_customer_profile| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#profile-pii">customer profile (PII)</a>
+
+
+.. |semantics_email_events| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#email-events">email events</a>
+
+
+.. |semantics_email_events_summary| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#email-summary">email summary</a>
+
+
+.. |semantics_email_optin| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#email-opt-in-status">email opt-in status</a>
+
+
+.. |semantics_product_catalog| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#product-catalog">product catalog</a>
+
+
+.. |semantics_loyalty_events| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#loyalty-events">loyalty events</a>
+
+
+.. |semantics_loyalty_profiles| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#loyalty-profiles">loyalty profiles</a>
+
+
+.. |semantics_keys_fk| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#foreign-keys-fk">foreign keys (FKs)</a>
+
+
+.. |semantics_sms_optin| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#sms-opt-in-status">SMS opt-in status</a>
+
+
+.. |semantics_transactions| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#transactions">transactions</a>
+
+
+.. |semantics_transactions_long| raw:: html
+
+   <a href="https://docs.amperity.com/reference/semantics.html#transactions">transaction semantic tags</a>
+
+
+.. |sendto_active_campaign| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_active_campaign.html">send query results to Active Campaign</a>
+
+
+.. |sendto_acxiom| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_acxiom.html">send query results</a>
+
+
+.. |sendto_adobe_aep| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_adobe_aep.html">send query results</a>
+
+
+.. |sendto_adobe_campaign| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_adobe_campaign.html">send query results</a>
+
+
+.. |sendto_adobe_customer_attributes| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_adobe_customer_attributes.html">send query results</a>
+
+
+.. |sendto_adobe_marketo| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_adobe_marketo.html">send query results</a>
+
+
+.. |sendto_airship| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_airship.html">send query results</a>
+
+
+.. |sendto_amazon_pinpoint| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_amazon_pinpoint.html">send query results</a>
+
+
+.. |sendto_amazon_redshift| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_amazon_redshift.html">send query results</a>
+
+
+.. |sendto_amazon_s3| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_amazon_s3.html">send query results</a>
+
+
+.. |sendto_attentive_mobile| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_attentive_mobile.html">send query results</a>
+
+
+.. |sendto_aws_connect| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_aws_connect.html">send query results</a>
+
+
+.. |sendto_azure_blob_storage| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_azure_blob_storage.html">send query results</a>
+
+
+.. |sendto_bazaarvoice| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_bazaarvoice.html">send query results</a>
+
+
+.. |sendto_bi_toolsx| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_bi_tools.html">send query results to BI tools, like Databricks, Microsoft Power BI, and Tableau</a>
+
+
+.. |sendto_bluecore| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_bluecore.html">send query results</a>
+
+
+.. |sendto_braze| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_braze.html">send query results</a>
+
+
+.. |sendto_campaign_monitor| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_campaign_monitor.html">send query results</a>
+
+
+.. |sendto_cheetah_digital| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_cheetah_digital.html">send query results</a>
+
+
+.. |sendto_cordial| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_cordial.html">send query results</a>
+
+
+.. |sendto_criteo| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_criteo.html">send query results</a>
+
+
+.. |sendto_domo| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_domo.html">send query results</a>
+
+
+.. |sendto_dynamic_yield| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_dynamic_yield.html">send query results</a>
+
+
+.. |sendto_evocalize| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_evocalize.html">send query results</a>
+
+
+.. |sendto_experian| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_experian.html">send query results</a>
+
+
+.. |sendto_google_ads| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_google_ads.html">send query results</a>
+
+
+.. |sendto_google_cloud_storage| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_google_cloud_storage.html">send query results</a>
+
+
+.. |sendto_google_customer_match| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_google_customer_match.html">send query results</a>
+
+
+.. |sendto_hubspot| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_hubspot.html">send query results</a>
+
+
+.. |sendto_infutor| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_infutor.html">send query results</a>
+
+
+.. |sendto_kibo| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_kibo.html">send query results</a>
+
+
+.. |sendto_klaviyo| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_klaviyo.html">send query results</a>
+
+
+.. |sendto_koupon_media| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_koupon_media.html">send query results</a>
+
+
+.. |sendto_listrak| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_listrak.html">send query results</a>
+
+
+.. |sendto_liveramp| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_liveramp.html">send query results</a>
+
+
+.. |sendto_mailchimp| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_mailchimp.html">send query results</a>
+
+
+.. |sendto_meta_ads_manager| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_meta_ads_manager.html">send query results</a>
+
+
+.. |sendto_meta_ads_manager_offline_events| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_meta_ads_manager.html#send-offline-events">send offline events</a>
+
+
+.. |sendto_microsoft_ads| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_microsoft_ads.html">send query results</a>
+
+
+.. |sendto_microsoft_dataverse| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_microsoft_dataverse.html">send query results</a>
+
+
+.. |sendto_monetate| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_monetate.html">send query results</a>
+
+
+.. |sendto_neustar| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_neustar.html">send query results</a>
+
+
+.. |sendto_optimizely| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_optimizely.html">send query results</a>
+
+
+.. |sendto_oracle_data_cloud| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_oracle_data_cloud.html">send query results</a>
+
+
+.. |sendto_oracle_dmp| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_oracle_dmp.html">send query results</a>
+
+
+.. |sendto_oracle_eloqua| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_oracle_eloqua.html">send query results</a>
+
+
+.. |sendto_oracle_responsys| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_oracle_responsys.html">send query results</a>
+
+
+.. |sendto_pebblepost| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_pebblepost.html">send query results</a>
+
+
+.. |sendto_persado| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_persado.html">send query results</a>
+
+
+.. |sendto_pinterest| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_pinterest.html">send query results</a>
+
+
+.. |sendto_powerreviews| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_powerreviews.html">send query results</a>
+
+
+.. |sendto_sailthru| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_sailthru.html">send query results</a>
+
+
+.. |sendto_salesforce_marketing_cloud| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_salesforce_marketing_cloud.html">send query results</a>
+
+
+.. |sendto_sftp| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_sftp.html">send query results</a>
+
+
+.. |sendto_snapchat| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_snapchat.html">send query results</a>
+
+
+.. |sendto_tdd| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_the_trade_desk.html">send query results</a>
+
+
+.. |sendto_template| raw:: html
+
+   <a href="https://docs.amperity.com/internal/template_sendto.html">send query results</a>
+
+
+.. |sendto_throtle| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_throtle.html">send query results</a>
+
+
+.. |sendto_tiktok| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_tiktok_ads.html">send query results</a>
+
+
+.. |sendto_vibes| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_vibes.html">send query results</a>
+
+
+.. |sendto_zendesk| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/destination_zendesk.html">send query results</a>
+
+
+.. |source_amazon_s3| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_amazon_s3.html">Amazon S3</a>
+
+
+.. |source_azure_blob_storage| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_azure_blob_storage.html">Azure Blob Storage</a>
+
+
+.. |source_azure_data_lake_storage_gen2| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_azure_data_lake_storage_gen2.html">Azure Data Lake Storage Gen2</a>
+
+
+.. |source_campaign_monitor| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_campaign_monitor.html">Campaign Monitor</a>
+
+
+.. |source_google_analytics| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_google_analytics.html">Google Analytics</a>
+
+
+.. |source_google_analytics_build_reports| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/queries_reference.html#google-analytics-reports">build acquisition channel reports</a>
+
+
+.. |source_google_cloud_storage| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_google_cloud_storage.html">Google Cloud Storage</a>
+
+
+.. |source_hubspot| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_hubspot.html">HubSpot</a>
+
+
+.. |source_klaviyo| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_klaviyo.html">Klaviyo</a>
+
+
+.. |source_kustomer| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_kustomer.html">Kustomer</a>
+
+
+.. |source_sailthru| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_sailthru.html">Sailthru</a>
+
+
+.. |source_salesforce_sales_cloud| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_salesforce_sales_cloud.html">Salesforce Sales Cloud</a>
+
+
+.. |source_sftp| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_sftp.html">SFTP</a>
+
+
+.. |source_sftp_amperity| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_sftp_amperity.html">SFTP (Amperity)</a>
+
+
+.. |source_sftp_any| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_sftp.html">Any SFTP site</a>
+
+
+.. |source_shopify| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_shopify.html">Shopify</a>
+
+
+.. |source_snowflake_aws| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_snowflake_aws.html">Snowflake (AWS)</a>
+
+
+.. |source_snowflake_azure| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_snowflake_azure.html">Snowflake (Azure)</a>
+
+
+.. |source_square| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_square.html">Square</a>
+
+
+.. |source_zendesk| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/source_zendesk.html">Zendesk</a>
+
+
+.. |sql_presto| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html">Presto SQL</a>
+
+
+.. |sql_presto_case| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#case">CASE</a>
+
+
+.. |sql_presto_cast| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#cast">CAST()</a>
+
+
+.. |sql_presto_function_rank| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#rank">RANK()</a>
+
+
+.. |sql_presto_functions| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#functions">functions</a>
+
+
+.. |sql_presto_group_by| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#group-by-clause">GROUP BY</a>
+
+
+.. |sql_presto_indentation| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#indentation">indentation</a>
+
+
+.. |sql_presto_left_join| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#left-join-clause">LEFT JOIN</a>
+
+
+.. |sql_presto_limit| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#limit-clause">LIMIT</a>
+
+
+.. |sql_presto_naming_conventions| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#naming-conventions">naming conventions</a>
+
+
+.. |sql_presto_one_way_hash| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#one-way-sha-256-hashes">SHA-256 hashing</a>
+
+
+.. |sql_presto_operators| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#operators">operators</a>
+
+
+.. |sql_presto_order_by| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#order-by-clause">ORDER BY</a>
+
+
+.. |sql_presto_recommendations| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#recommendations">recommendations</a>
+
+
+.. |sql_presto_reserved_words| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#reserved-words">reserved words</a>
+
+
+.. |sql_presto_select| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#select-statement">SELECT</a>
+
+
+.. |sql_presto_where| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#where-clause">WHERE</a>
+
+
+.. |sql_presto_whitespace| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#whitespace">whitespace</a>
+
+
+.. |sql_presto_with| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_presto.html#with-clause">WITH</a>
+
+
+.. |sql_spark| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_spark.html">Spark SQL</a>
+
+
+.. |sql_spark_cast| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_spark.html#cast">CAST()</a>
+
+
+.. |sql_spark_function_sha2| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_spark.html#sha2">SHA2()</a>
+
+
+.. |sql_spark_one_way_hash| raw:: html
+
+   <a href="https://docs.amperity.com/reference/sql_spark.html#one-way-sha-256-hashes">SHA-256 hashing</a>
+
+
+.. |stitch_labels| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/stitch_labels.html">Stitch labels</a>
+
+
+.. |stitch_qa| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/stitch_qa.html">Stitch QA</a>
+
+
+.. |stitch_results| raw:: html
+
+   <a href="https://docs.amperity.com/amp360/stitch_results.html">Review ID Resolution</a>
+
+
+.. |support_ai_assistant_privacy_faq| raw:: html
+
+   <a href="https://docs.amperity.com/support/ai_assistant.html">Privacy FAQ for the AI Assistant</a>
+
+
+
+.. |table_campaign_recipients| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_campaign_recipients.html">Campaign Recipients</a>
+
+
+.. |table_customer_attributes| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_customer_attributes.html">Customer Attributes</a>
+
+
+.. |table_customer_360| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_customer_360.html">Customer 360</a>
+
+
+.. |table_detailed_examples| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_detailed_examples.html">Detailed Examples</a>
+
+
+.. |table_lifecycle_events| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_lifecycle_events.html">Lifecycle Events</a>
+
+
+.. |table_merged_customers| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_merged_customers.html">Merged Customers</a>
+
+
+.. |table_predicted_affinity| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_predicted_affinity.html">Predicted Affinity</a>
+
+
+.. |table_predicted_clv_attributes| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_predicted_clv_attributes.html">Predicted CLV Attributes</a>
+
+
+.. |table_recommendation| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_recommendation.html">Recommendations</a>
+
+
+.. |table_transaction_attributes_extended| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_transaction_attributes_extended.html">Transaction Attributes Extended</a>
+
+
+.. |table_transaction_attributes| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_transaction_attributes.html">Transaction Attributes</a>
+
+
+.. |table_unified_changes_clusters| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_changes_clusters.html">Unified Changes Clusters</a>
+
+
+.. |table_unified_changes_pks| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_changes_pks.html">Unified Changes Pks</a>
+
+
+.. |table_unified_coalesced| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_coalesced.html">Unified Coalesced</a>
+
+
+.. |table_unified_customers| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_customers.html">Unified Customers</a>
+
+
+.. |table_unified_itemized_transactions| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_itemized_transactions.html">Unified Itemized Transactions</a>
+
+
+.. |table_unified_paid_media| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_paid_media.html">Unified Paid Media</a>
+
+
+.. |table_unified_preprocessed_raw| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_preprocessed_raw.html">Unified Preprocessed Raw</a>
+
+
+.. |table_unified_product_catalog| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_product_catalog.html">Unified Product Catalog</a>
+
+
+.. |table_unified_scores| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_scores.html">Unified Scores</a>
+
+
+.. |table_unified_transactions| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_unified_transactions.html">Unified Transactions</a>
+
+
+.. |third_party_data_sources| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/data_third_party.html">Third-party Data Sources</a>
+
+
+.. |campaign_default_attributes| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/default_attributes.html">default attributes</a>
+
+
+.. |paid_media| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/paid_media.html">paid media campaigns</a>
+
+
+.. |paid_media_match_rates| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/paid_media.html#match-rates">match rates</a>
+
+
+.. |usecase_customers_high_value_multichannel| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/usecase_customers_high_value_multichannel.html">High-value multi-channel customers</a>
+
+
+.. |usecase_customers_lapsing| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/usecase_customers_lapsing.html">Lapsing customers</a>
+
+
+.. |usecase_customers_high_value_new| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/usecase_customers_high_value_new.html">New high-value customers</a>
+
+
+.. |usecase_rfm_top_20_percent_revenue| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/usecase_customers_top20_revenue.html">Top 20% revenue during previous year</a>
+
+
+.. |usecase_customers_website_new| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/usecase_customers_website_new.html">New website customers</a>
+   
+
+.. |workflows| raw:: html
+
+   <a href="https://docs.amperity.com/reference/workflows.html">About workflows</a>

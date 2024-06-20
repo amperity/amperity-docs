@@ -1,0 +1,4 @@
+.. true tokens for Unicode characters
+
+.. |u-copyright| unicode:: U+00A9
+.. |u-registered| unicode:: U+00AE
