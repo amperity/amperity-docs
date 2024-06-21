@@ -1,2029 +1,333 @@
-{% set active_product = active_product|default('About Docs') -%}
-{% set active_page_name = active_page_name|default('About Docs') -%}
+{% set active_product = active_product|default('Contributing') -%}
+{% set active_page_name = active_page_name|default('Contributing') -%}
 {% set active_page_icon = active_page_icon|default('<i class="far fa-circle fa-fw icon-left">') -%}
-{% set active_search_path = active_search_path|default('/search.html') -%}
+<!--{% set active_search_path = active_search_path|default('/search.html') -%}-->
 <!--{% set active_version = active_version|default('Latest') -%}-->
 {% set defaultNavItems = [
 
   {
-    "title": "Getting started",
+    "title": "Contributing",
     "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
     "subItems": [
       {
         "title": "Start Here",
         "hasSubItems": false,
-        "url": "/xxxxx/start_here.html"
-      },
-      {
-        "title": "Tools for marketers",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "1. Build segments",
-            "hasSubItems": false,
-            "url": "/ampiq/segments.html"
-          },
-          {
-            "title": "2. Configure journeys",
-            "hasSubItems": false,
-            "url": "/internal/journeys.html"
-          },
-          {
-            "title": "3. Create campaigns",
-            "hasSubItems": false,
-            "url": "/ampiq/campaigns.html"
-          },
-        ],
-      },
-      {
-        "title": "Tools for analysts",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "1. Build queries",
-            "hasSubItems": false,
-            "url": "/amp360/queries.html"
-          },
-          {
-            "title": "2. Send data anywhere",
-            "hasSubItems": false,
-            "url": "/amp360/orchestrations.html"
-          },
-          {
-            "title": "3. Monitor workflows",
-            "hasSubItems": false,
-            "url": "/amp360/workflows.html"
-          },
-        ],
+        "url": "/contributing/start_here.html"
       },
     ]
   },
 
   {
-    "title": "AmpAi",
+    "title": "Formatting",
     "iconClass": "far fa-sparkles fa-fw",
     "subItems": [
       {
-        "title": "AmpAi toolkit",
+        "title": "Admonitions",
         "hasSubItems": true,
         "subItems": [
           {
-            "title": "About the AmpAi toolkit",
+            "title": "Attention",
             "hasSubItems": false,
-            "url": "/reference/ampai.html"
+            "url": "/contributing/rst.html#attention"
           },
           {
-            "title": "Stitch",
+            "title": "Caution",
             "hasSubItems": false,
-            "url": "/reference/ampai.html#stitch"
+            "url": "/contributing/rst.html#caution"
           },
           {
-            "title": "Assist",
+            "title": "Custom",
             "hasSubItems": false,
-            "url": "/reference/ampai.html#assist"
+            "url": "/contributing/rst.html#custom"
           },
           {
-            "title": "Predict",
+            "title": "Danger",
             "hasSubItems": false,
-            "url": "/reference/ampai.html#predict"
+            "url": "/contributing/rst.html#danger"
+          },
+          {
+            "title": "Error",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#error"
+          },
+          {
+            "title": "Hint",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#hint"
+          },
+          {
+            "title": "Important",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#important"
+          },
+          {
+            "title": "Note",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#note"
+          },
+          {
+            "title": "Tip",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#tip"
+          },
+          {
+            "title": "Warning",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#warning"
           },
         ],
       },
       {
-        "title": "How Stitch works",
+        "title": "Code blocks",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Command shell",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#command-shell"
+          },
+          {
+            "title": "Data table",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#data-table"
+          },
+          {
+            "title": "HTML",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#html"
+          },
+          {
+            "title": "JavaScript",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#javascript"
+          },
+          {
+            "title": "JSON",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#json"
+          },
+          {
+            "title": "JSON w/Jinja",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#json-w-jinja"
+          },
+          {
+            "title": "None",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#none"
+          },
+          {
+            "title": "Python",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#python"
+          },
+          {
+            "title": "REST API",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#rest-api"
+          },
+          {
+            "title": "reStructuredText",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#restructuredtext"
+          },
+          {
+            "title": "Ruby",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#ruby"
+          },
+          {
+            "title": "SQL query",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#sql-query"
+          },
+          {
+            "title": "YAML",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#yaml"
+          },
+          {
+            "title": "YAML w/Jinja",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#yaml-w-jinja"
+          },
+        ],
+      },
+      {
+        "title": "Headers",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Header (level 1)",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#header-level-1"
+          },
+          {
+            "title": "Header (level 2)",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#header-level-2"
+          },
+          {
+            "title": "Header (level 3)",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#header-level-3"
+          },
+          {
+            "title": "Header (level 4)",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#header-level-4"
+          },
+          {
+            "title": "Header markup length",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#header-markup-length"
+          },
+        ],
+      },
+      {
+        "title": "Images",
         "hasSubItems": false,
-        "url": "/reference/stitch.html"
+        "url": "/contributing/rst.html#images"
       },
       {
-        "title": "AI Assistant",
+        "title": "Includes",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "From file",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#from-file"
+          },
+          {
+            "title": "From snippet",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#from-snippet"
+          },
+        ],
+      },
+      {
+        "title": "Inline markup",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Bold",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#bold"
+          },
+          {
+            "title": "Italics",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#italics"
+          },
+          {
+            "title": "Code strings",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#code-strings"
+          },
+        ],
+      },
+      {
+        "title": "Links",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "External",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#external"
+          },
+          {
+            "title": "External (opens new tab)",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#external-opens-new-tab"
+          },
+          {
+            "title": "Reference",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#reference"
+          },
+          {
+            "title": "Topic",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#topic"
+          },
+        ],
+      },
+      {
+        "title": "Lists",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Definition",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#definition-list"
+          },
+          {
+            "title": "Ordered list",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#ordered-list"
+          },
+          {
+            "title": "Table list",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#table-list"
+          },
+          {
+            "title": "Unordered list",
+            "hasSubItems": false,
+            "url": "/contributing/rst.html#unordered-list"
+          },
+        ],
+      },
+      {
+        "title": "Meta tags",
         "hasSubItems": false,
-        "url": "/reference/assistant.html"
+        "url": "/contributing/rst.html#meta-tags"
       },
       {
-        "title": "Predictive modeling",
+        "title": "Tables",
         "hasSubItems": true,
         "subItems": [
           {
-            "title": "Customer lifetime value",
+            "title": "CSV table",
             "hasSubItems": false,
-            "url": "/ampiq/model_predicted_clv.html"
+            "url": "/contributing/rst.html#csv-table"
           },
           {
-            "title": "Churn propensity",
+            "title": "Grid table",
             "hasSubItems": false,
-            "url": "/ampiq/model_predicted_churn.html"
+            "url": "/contributing/rst.html#grid-table"
           },
           {
-            "title": "Event propensity",
+            "title": "List table",
             "hasSubItems": false,
-            "url": "/internal/model_event_propensity.html"
+            "url": "/contributing/rst.html#list-table"
           },
           {
-            "title": "Product affinity",
+            "title": "Simple table",
             "hasSubItems": false,
-            "url": "/ampiq/model_predicted_product_affinity.html"
-          },
-          {
-            "title": "Recommended audiences",
-            "hasSubItems": false,
-            "url": "/ampiq/recommended_audiences.html"
+            "url": "/contributing/rst.html#simple-table"
           },
         ],
       },
-    ]
-  },
-  {
-    "title": "Segments",
-    "iconClass": "far fa-circle-a fa-fw",
-    "subItems": [
       {
-        "title": "About segments",
+        "title": "Toctree",
         "hasSubItems": false,
-        "url": "/ampiq/segments_reference.html"
+        "url": "/contributing/rst.html#toctree"
       },
       {
-        "title": "How segments work",
+        "title": "Tokens",
         "hasSubItems": false,
-        "url": "/ampiq/segments_reference.html#how-segments-work"
+        "url": "/contributing/rst.html#tokens"
       },
       {
-        "title": "Segment names",
+        "title": "Topic titles",
         "hasSubItems": false,
-        "url": "/ampiq/segments_reference.html#segment-names"
+        "url": "/contributing/rst.html#topic-titles"
       },
       {
-        "title": "Build segments",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Segment editor",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Databases and tables",
-                "hasSubItems": false,
-                "url": "/ampiq/segments_reference.html#databases-and-tables"
-              },
-              {
-                "title": "AND vs. OR",
-                "hasSubItems": false,
-                "url": "/ampiq/segments_reference.html#and-vs-or"
-              },
-              {
-                "title": "SQL segment editor",
-                "hasSubItems": false,
-                "url": "/ampiq/segments_reference.html#sql-editor"
-              },
-            ],
-          },
-          {
-            "title": "Standard attributes",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Average number of items",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_average_number_of_items_intervals.html"
-              },
-              {
-                "title": "Average order values",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_order_value_average.html"
-              },
-              {
-                "title": "Average prices",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_average_price_intervals.html"
-              },
-              {
-                "title": "Birthdates",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_customer_profile_birthdate.html"
-              },
-              {
-                "title": "Brand intervals",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_brands_purchased_intervals.html"
-              },
-              {
-                "title": "Brand purchases",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_brands_purchased.html"
-              },
-              {
-                "title": "Canceled quantities",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_canceled_quantity.html"
-              },
-              {
-                "title": "Canceled revenue",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_canceled_revenue.html"
-              },
-              {
-                "title": "Channel intervals",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_channels_purchased_intervals.html"
-              },
-              {
-                "title": "Channel purchases",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_channels_purchased.html"
-              },
-              {
-                "title": "Costs",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_costs.html"
-              },
-              {
-                "title": "Currency",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_currency.html"
-              },
-              {
-                "title": "Days since latest order",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_days_since_latest_order.html"
-              },
-              {
-                "title": "Digital channels",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_channels_digital.html"
-              },
-              {
-                "title": "Discount amounts",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_discount_amounts.html"
-              },
-              {
-                "title": "Discount percents",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_discount_percents.html"
-              },
-              {
-                "title": "Early repeat purchaser?",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_early_repeat_purchaser.html"
-              },
-              {
-                "title": "Email addresses",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_customer_profile_email.html"
-              },
-              {
-                "title": "First-to-latest orders",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_first_to_latest_order.html"
-              },
-              {
-                "title": "First-to-second orders",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_first_to_second_order.html"
-              },
-              {
-                "title": "Gender",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_customer_profile_gender.html"
-              },
-              {
-                "title": "Is canceled?",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_is_canceled.html"
-              },
-              {
-                "title": "Is returned?",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_is_returned.html"
-              },
-              {
-                "title": "Largest order values",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_order_value_largest.html"
-              },
-              {
-                "title": "List prices",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_list_prices.html"
-              },
-              {
-                "title": "Multi-brand purchases?",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_brands_multiple.html"
-              },
-              {
-                "title": "Multi-channel purchases?",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_channels_multiple.html"
-              },
-              {
-                "title": "Names",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_customer_profile_names.html"
-              },
-              {
-                "title": "One and done?",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_one_and_done.html"
-              },
-              {
-                "title": "Order dates and times",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_order_datetimes.html"
-              },
-              {
-                "title": "Order IDs",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_order_id.html"
-              },
-              {
-                "title": "Order frequencies",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_order_frequency_intervals.html"
-              },
-              {
-                "title": "Payment methods",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_payment_method.html"
-              },
-              {
-                "title": "Phone numbers",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_customer_profile_phone.html"
-              },
-              {
-                "title": "Physical addresses",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_customer_profile_addresses.html"
-              },
-              {
-                "title": "Preferred brands",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_brands_preferred_intervals.html"
-              },
-              {
-                "title": "Preferred channels",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_channels_preferred_intervals.html"
-              },
-              {
-                "title": "Preferred stores",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_stores_preferred_intervals.html"
-              },
-              {
-                "title": "Product catalogs",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_product_catalogs.html"
-              },
-              {
-                "title": "Profit amounts",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_profit_amounts.html"
-              },
-              {
-                "title": "Quantities",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_quantity.html"
-              },
-              {
-                "title": "Repeat within 365 days?",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_repeat_365_days.html"
-              },
-              {
-                "title": "Returned quantities",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_returned_quantity.html"
-              },
-              {
-                "title": "Returned revenue",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_returned_revenue.html"
-              },
-              {
-                "title": "Revenue",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_revenue.html"
-              },
-              {
-                "title": "Revenue intervals",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_revenue_intervals.html"
-              },
-              {
-                "title": "RFM scores",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_rfm.html"
-              },
-              {
-                "title": "Shipping amounts",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_order_shipping_amount.html"
-              },
-              {
-                "title": "Store IDs",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_store_id.html"
-              },
-              {
-                "title": "Store visit intervals",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_stores_visit_intervals.html"
-              },
-              {
-                "title": "Subtotals",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_subtotals.html"
-              },
-              {
-                "title": "Sum of item discounts",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_discount_amounts_sum_item.html"
-              },
-              {
-                "title": "Tax amounts",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_tax_amounts.html"
-              },
-              {
-                "title": "Total discount amounts",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_discount_amounts_total.html"
-              },
-              {
-                "title": "Total items",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_total_items.html"
-              },
-              {
-                "title": "Total item intervals",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_total_items_intervals.html"
-              },
-            ],
-          },
-          {
-            "title": "Predictive attributes",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Audience sizes",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_audience_sizes.html"
-              },
-              {
-                "title": "Customer rankings",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_customer_ranking.html"
-              },
-              {
-                "title": "Predicted AOR",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_predicted_average_order_revenue.html"
-              },
-              {
-                "title": "Predicted CLV",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_predicted_clv.html"
-              },
-              {
-                "title": "Predicted orders",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_predicted_order_frequency.html"
-              },
-              {
-                "title": "Predicted status",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_predicted_lifecycle_status.html"
-              },
-              {
-                "title": "Predicted transactions",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_predicted_transactions.html"
-              },
-              {
-                "title": "Predicted value tiers",
-                "hasSubItems": false,
-                "url": "/ampiq/attribute_predicted_value_tier.html"
-              },
-            ],
-          },
-          {
-            "title": "Purchase behaviors",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "First order",
-                "hasSubItems": false,
-                "url": "/ampiq/purchase_behavior_first_order.html"
-              },
-              {
-                "title": "Has not purchased",
-                "hasSubItems": false,
-                "url": "/ampiq/purchase_behavior_has_not_purchased.html"
-              },
-              {
-                "title": "Has purchased",
-                "hasSubItems": false,
-                "url": "/ampiq/purchase_behavior_has_purchased.html"
-              },
-              {
-                "title": "Most frequent order",
-                "hasSubItems": false,
-                "url": "/ampiq/purchase_behavior_most_frequent_order.html"
-              },
-              {
-                "title": "Repeat order",
-                "hasSubItems": false,
-                "url": "/ampiq/purchase_behavior_repeat_order.html"
-              },
-              {
-                "title": "Total value of orders",
-                "hasSubItems": false,
-                "url": "/ampiq/purchase_behavior_total_value_of_orders.html"
-              },
-            ],
-          },
-          {
-            "title": "Table reference",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "About standard tables",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html"
-              },
-              {
-                "title": "Customer 360",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#customer-360"
-              },
-              {
-                "title": "Customer attributes",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#customer-attributes"
-              },
-              {
-                "title": "Merged customers",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#merged-customers"
-              },
-              {
-                "title": "Predicted affinity",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#predicted-affinity"
-              },
-              {
-                "title": "Predicted CLV attributes",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#predicted-clv-attributes"
-              },
-              {
-                "title": "Transaction attributes",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#transaction-attributes"
-              },
-              {
-                "title": "Unified itemized transactions",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#unified-itemized-transactions"
-              },
-              {
-                "title": "Unified transactions",
-                "hasSubItems": false,
-                "url": "/ampiq/standard_output.html#unified-transactions"
-              },
-            ],
-          },
-        ],
-      },
-      {
-        "title": "Review segments",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Segment insights",
-            "hasSubItems": false,
-            "url": "/ampiq/segments_reference.html#segment-insights"
-          },
-          {
-            "title": "Revenue tree",
-            "hasSubItems": false,
-            "url": "/ampiq/segments_reference.html#revenue-tree"
-          },
-          {
-            "title": "Segment overview",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Summary",
-                "hasSubItems": false,
-                "url": "/ampiq/segments_reference.html#summary"
-              },
-              {
-                "title": "Breakdown",
-                "hasSubItems": false,
-                "url": "/ampiq/segments_reference.html#breakdown"
-              },
-              {
-                "title": "Customers",
-                "hasSubItems": false,
-                "url": "/ampiq/segments_reference.html#customers"
-              },
-            ],
-          },
-        ],
-      },
-      {
-        "title": "Example segments",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Active store shoppers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_active_store_shoppers.html"
-          },
-          {
-            "title": "Dormant customers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_dormant_customers.html"
-          },
-          {
-            "title": "Early repeat purchasers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_early_repeat_purchasers.html"
-          },
-          {
-            "title": "High-value channels",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_customers_high_value_multichannel.html"
-          },
-          {
-            "title": "New high-value customers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_customers_high_value_new.html"
-          },
-          {
-            "title": "Holiday shoppers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_holiday_shoppers_sms.html"
-          },
-          {
-            "title": "Lapsing customers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_customers_lapsing.html"
-          },
-          {
-            "title": "New website customers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_customers_website_new.html"
-          },
-          {
-            "title": "One and done",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_one_and_done.html"
-          },
-          {
-            "title": "Purchased yesterday",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_purchased_yesterday.html"
-          },
-          {
-            "title": "Reduce paid media ad spend",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_reduce_paid_media_spend.html"
-          },
-          {
-            "title": "Store invites",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_store_invite.html"
-          },
-          {
-            "title": "Top 10% high-value",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_predicted_top_10_percent.html"
-          },
-          {
-            "title": "Top 20% revenue",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_customers_top20_revenue.html"
-          },
-          {
-            "title": "Win back lost customers",
-            "hasSubItems": false,
-            "url": "/ampiq/usecase_winback_emails_lost_customers.html"
-          },
-        ],
-      },
-    ]
-  },
-
-  {
-    "title": "Campaigns",
-    "iconClass": "fas fa-badge-check fa-fw",
-    "subItems": [
-      {
-        "title": "About campaigns",
+        "title": "Additional resources",
         "hasSubItems": false,
-        "url": "/ampiq/campaigns_reference.html"
-      },
-      {
-        "title": "Build campaigns",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Audiences",
-            "hasSubItems": false,
-            "url": "/ampiq/campaigns.html"
-          },
-          {
-            "title": "Default attributes",
-            "hasSubItems": false,
-            "url": "/ampiq/campaigns.html"
-          },
-          {
-            "title": "Destinations",
-            "hasSubItems": false,
-            "url": "/ampiq/campaigns.html"
-          },
-          {
-            "title": "Exclusions",
-            "hasSubItems": false,
-            "url": "/ampiq/campaigns.html"
-          },
-          {
-            "title": "Schedules",
-            "hasSubItems": false,
-            "url": "/ampiq/campaigns.html"
-          },
-          {
-            "title": "Treatment groups",
-            "hasSubItems": false,
-            "url": "/ampiq/campaigns.html"
-          },
-        ],
-      },
-      {
-        "title": "Send campaigns to ...",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "ActiveCampaign",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_active_campaign.html"
-          },
-          {
-            "title": "Adobe Marketo",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_adobe_marketo.html"
-          },
-          {
-            "title": "Amazon S3",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_amazon_s3.html"
-          },
-          {
-            "title": "Attentive Mobile",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_attentive_mobile.html"
-          },
-          {
-            "title": "Azure Blob Storage",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_azure_blob_storage.html"
-          },
-          {
-            "title": "Braze",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_braze.html"
-          },
-          {
-            "title": "Cheetah Digital",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_cheetah_digital.html"
-          },
-          {
-            "title": "Cordial",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_cordial.html"
-          },
-          {
-            "title": "Criteo",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_criteo.html"
-          },
-          {
-            "title": "DV360",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_dv360.html"
-          },
-          {
-            "title": "Google Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_google_ads.html"
-          },
-          {
-            "title": "Google Cloud Storage",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_google_cloud_storage.html"
-          },
-          {
-            "title": "HubSpot",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_hubspot.html"
-          },
-          {
-            "title": "Klaviyo",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_klaviyo.html"
-          },
-          {
-            "title": "Listrak",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_listrak.html"
-          },
-          {
-            "title": "Liveramp",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_liveramp.html"
-          },
-          {
-            "title": "Meta Ads Manager",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_meta_ads_manager.html"
-          },
-          {
-            "title": "Microsoft Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_microsoft_ads.html"
-          },
-          {
-            "title": "Neustar",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_neustar.html"
-          },
-          {
-            "title": "Oracle DMP",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_oracle_dmp.html"
-          },
-          {
-            "title": "Oracle Eloqua",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_oracle_eloqua.html"
-          },
-          {
-            "title": "Pinterest",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_pinterest.html"
-          },
-          {
-            "title": "Reddit Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_reddit_ads.html"
-          },
-          {
-            "title": "Sailthru",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_sailthru.html"
-          },
-          {
-            "title": "Salesforce Marketing Cloud",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_salesforce_marketing_cloud.html"
-          },
-          {
-            "title": "SFTP",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_sftp.html"
-          },
-          {
-            "title": "Snapchat",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_snapchat.html"
-          },
-          {
-            "title": "The Trade Desk",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_the_trade_desk.html"
-          },
-          {
-            "title": "TikTok Ads Manager",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_tiktok_ads.html"
-          },
-        ],
-      },
-    ]
-  },
-
-  {
-    "title": "Journeys",
-    "iconClass": "fas fa-split fa-fw",
-    "subItems": [
-      {
-        "title": "About journeys",
-        "hasSubItems": false,
-        "url": "/xxxxx/xxxxx.html"
-      },
-      {
-        "title": "Use cases",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Churn prevention",
-            "hasSubItems": false,
-            "url": "/ampiq/churn_prevention.html"
-          },
-          {
-            "title": "One-time buyers",
-            "hasSubItems": false,
-            "url": "/ampiq/onetime_buyers.html"
-          },
-          {
-            "title": "TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-        ],
-      },
-      {
-        "title": "Stages",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Stage",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "Stage",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "Stage",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "...",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-        ],
-      },
-      {
-        "title": "Build journeys",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "1. TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "2. TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "3. TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-        ],
-      },
-      {
-        "title": "Test mode",
-        "hasSubItems": false,
-        "url": "/xxxxx/xxxxx.html"
-      },
-      {
-        "title": "Start journeys from ...",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-        ],
-      },
-      {
-        "title": "Send journeys to ...",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-        ],
-      },
-    ]
-  },
-
-  {
-    "title": "Paid media",
-    "iconClass": "fas fa-square-dollar fa-fw",
-    "subItems": [
-      {
-        "title": "About paid media",
-        "hasSubItems": false,
-        "url": "/ampiq/paid_media.html"
-      },
-      {
-        "title": "What is 1st party data?",
-        "hasSubItems": false,
-        "url": "/ampiq/paid_media.html#what-is-first-party-data"
-      },
-      {
-        "title": "Activation scenarios",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Audience expansion",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#audience-expansion"
-          },
-          {
-            "title": "Lifecycle marketing",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#lifecycle-marketing"
-          },
-          {
-            "title": "Product marketing",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#product-marketing"
-          },
-          {
-            "title": "Optimize bidding",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#optimize-bidding"
-          },
-          {
-            "title": "Optimize budgets with CLV",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#optimize-budgets-with-clv"
-          },
-          {
-            "title": "Suppression lists",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#suppression-lists"
-          },
-          {
-            "title": "Prospect conversion",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#prospect-conversion"
-          },
-        ],
-      },
-      {
-        "title": "Match rates",
-        "hasSubItems": false,
-        "url": "/ampiq/paid_media.html#match-rates"
-      },
-      {
-        "title": "Activate audiences with ...",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Amazon Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#amazon-ads"
-          },
-          {
-            "title": "Bing Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#bing-ads"
-          },
-          {
-            "title": "Criteo",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#criteo"
-          },
-          {
-            "title": "DV360",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#dv360"
-          },
-          {
-            "title": "Facebook",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#facebook"
-          },
-          {
-            "title": "Facebook Messenger",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#facebook-messenger"
-          },
-          {
-            "title": "Gmail",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#gmail"
-          },
-          {
-            "title": "Google Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#google-ads"
-          },
-          {
-            "title": "Google Search",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#google-search"
-          },
-          {
-            "title": "Google Shopping",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#google-shopping"
-          },
-          {
-            "title": "Instagram",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#instagram"
-          },
-          {
-            "title": "LiveRamp",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#liveramp"
-          },
-          {
-            "title": "Meta Ads Manager",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#meta-ads-manager"
-          },
-          {
-            "title": "Microsoft Advertising",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#microsoft-ads"
-          },
-          {
-            "title": "Neustar",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#neustar"
-          },
-          {
-            "title": "Oracle DMP",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#oracle-dmp"
-          },
-          {
-            "title": "Pinterest",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#pinterest"
-          },
-          {
-            "title": "Reddit Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#reddit-ads"
-          },
-          {
-            "title": "Snapchat",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#snapchat"
-          },
-          {
-            "title": "The Trade Desk",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#the-trade-desk"
-          },
-          {
-            "title": "TikTok Ads",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#tiktok-ads"
-          },
-          {
-            "title": "WhatsApp",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#whatsapp"
-          },
-          {
-            "title": "YouTube",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#youtube"
-          },
-        ],
-      },
-      {
-        "title": "Measure paid media",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Performance indicators",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#performance-indicators"
-          },
-          {
-            "title": "Example",
-            "hasSubItems": false,
-            "url": "/ampiq/paid_media.html#example-measure-campaigns"
-          },
-        ],
-      },
-    ]
-  },
-
-  {
-    "title": "Offline events",
-    "iconClass": "fas fa-check-double fa-fw",
-    "subItems": [
-      {
-        "title": "About offline events",
-        "hasSubItems": false,
-        "url": "/ampiq/events.html"
-      },
-      {
-        "title": "Send offline events to ...",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Braze",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_braze.html#custom-attributes"
-          },
-          {
-            "title": "Criteo",
-            "hasSubItems": false,
-            "url": "/ampiq/events_criteo.html"
-          },
-          {
-            "title": "Klaviyo",
-            "hasSubItems": false,
-            "url": "/ampiq/destination_klaviyo.html#customer-profile-parameters"
-          },
-          {
-            "title": "Meta Ads Manager",
-            "hasSubItems": false,
-            "url": "/ampiq/events_meta_ads_manager.html"
-          },
-          {
-            "title": "Pinterest",
-            "hasSubItems": false,
-            "url": "/ampiq/events_pinterest.html"
-          },
-          {
-            "title": "Snapchat",
-            "hasSubItems": false,
-            "url": "/ampiq/events_snapchat.html"
-          },
-          {
-            "title": "The Trade Desk",
-            "hasSubItems": false,
-            "url": "/ampiq/events_the_trade_desk.html"
-          },
-          {
-            "title": "TikTok Ads Manager",
-            "hasSubItems": false,
-            "url": "/ampiq/events_tiktok_ads_manager.html"
-          },
-        ],
-      },
-    ]
-  },
-
-
-
-
-  {
-    "title": "SQL queries",
-    "iconClass": "far fa-database fa-fw",
-    "subItems": [
-      {
-        "title": "About queries",
-        "hasSubItems": false,
-        "url": "/amp360/queries_reference.html"
-      },
-      {
-        "title": "Review the customer 360",
-        "hasSubItems": false,
-        "url": "/amp360/databases.html"
-      },
-      {
-        "title": "Explore tables",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Standard",
-            "hasSubItems": false,
-            "url": "/amp360/databases.html#standard-tables"
-          },
-          {
-            "title": "Source and custom",
-            "hasSubItems": false,
-            "url": "/amp360/databases.html#source-and-custom-tables"
-          },
-          {
-            "title": "QA",
-            "hasSubItems": false,
-            "url": "/amp360/databases.html#qa-tables"
-          },
-        ],
-      },
-      {
-        "title": "Review customer profiles",
-        "hasSubItems": false,
-        "url": "/amp360/databases.html#review-customer-profiles"
-      },
-      {
-        "title": "Build queries",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "SQL query editor",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "About the query editor",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#query-editor"
-              },
-              {
-                "title": "Presto SQL reference <i class='fas fa-external-link-square-alt'></i>",
-                "hasSubItems": false,
-                "url": "/reference/sql_presto.html"
-              },
-              {
-                "title": "Add queries",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#add-query"
-              },
-              {
-                "title": "Preview results",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#preview-results"
-              },
-              {
-                "title": "Validate queries",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#validate-query"
-              },
-              {
-                "title": "Add to orchestrations",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#add-to-orchestration"
-              },
-            ],
-          },
-          {
-            "title": "Example SQL queries",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Cohort analysis",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#cohort-analysis"
-              },
-              {
-                "title": "Count loyalty by state",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#count-loyalty-by-state"
-              },
-              {
-                "title": "Customer acquisition",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#customer-acquisition"
-              },
-              {
-                "title": "Days to 2nd purchase",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#days-to-second-purchase"
-              },
-              {
-                "title": "Google Analytics reports",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#google-analytics-reports"
-              },
-              {
-                "title": "Leaky bucket ratio",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#leaky-bucket-ratio"
-              },
-              {
-                "title": "Missing Amperity IDs",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#missing-amperity-ids"
-              },
-              {
-                "title": "Month-over-month revenue",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#month-over-month-revenue"
-              },
-              {
-                "title": "One-and-done, by category",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#one-and-dones-by-category"
-              },
-              {
-                "title": "One-and-done, by year",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#one-and-dones-by-year"
-              },
-              {
-                "title": "Partition (P)CLV by brand",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#partition-p-clv-by-brand"
-              },
-              {
-                "title": "Percent rank of purchases",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#percent-rank-of-purchases"
-              },
-              {
-                "title": "Products by revenue",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#products-by-revenue"
-              },
-              {
-                "title": "Rank by product affinity",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#rank-by-product-affinity"
-              },
-              {
-                "title": "Rank by Amperity ID",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#rank-by-amperity-id"
-              },
-              {
-                "title": "Return percentiles",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#return-percentiles"
-              },
-              {
-                "title": "Reachable email, by state",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#reachable-email-by-state"
-              },
-              {
-                "title": "Replenishment by date",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#product-replenishment-by-date"
-              },
-              {
-                "title": "Replenishment by decile",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#product-replenishment-by-decile"
-              },
-              {
-                "title": "Revenue, 1 group",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#revenue-opportunity-1-group"
-              },
-              {
-                "title": "Revenue, 7-day rolling",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#order-revenue-7-day-rolling-window"
-              },
-              {
-                "title": "Revenue by month",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#revenue-by-month"
-              },
-              {
-                "title": "Revenue, many groups",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#revenue-opportunity-many-groups"
-              },
-              {
-                "title": "Top 20% revenue",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#top-20-revenue-during-previous-year"
-              },
-              {
-                "title": "Totals by brand",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#totals-by-brand"
-              },
-              {
-                "title": "Transactions by day",
-                "hasSubItems": false,
-                "url": "/amp360/queries_reference.html#transactions-by-day"
-              },
-            ],
-          },    
-          {
-            "title": "Visual Query Editor",
-            "iconClass": "fas fa-sliders fa-fw",
-            "subItems": [
-              {
-                "title": "About the Visual Query Editor",
-                "hasSubItems": false,
-                "url": "/amp360/queries_visual.html"
-              },
-              {
-                "title": "Example visual queries",
-                "hasSubItems": true,
-                "subItems": [
-                  {
-                    "title": "Early repeat purchasers",
-                    "hasSubItems": false,
-                    "url": "/amp360/usecase_early_repeat_purchasers_visual.html"
-                  },
-                  {
-                    "title": "High-value, multi-channel",
-                    "hasSubItems": false,
-                    "url": "/amp360/usecase_customers_high_value_multichannel_visual.html"
-                  },
-                  {
-                    "title": "New website customers",
-                    "hasSubItems": false,
-                    "url": "/amp360/usecase_customers_website_new_visual.html"
-                   },
-                   {
-                    "title": "One and done",
-                    "hasSubItems": false,
-                    "url": "/amp360/usecase_one_and_done_visual.html"
-                  },
-                  {
-                    "title": "Top 20% revenue",
-                    "hasSubItems": false,
-                    "url": "/amp360/usecase_customers_top20_revenue_visual.html"
-                  },
-                ],
-              },
-              {
-                "title": "AND vs. OR",
-                "hasSubItems": false,
-                "url": "/amp360/queries_visual.html#and-vs-or"
-              },
-            ]
-          },
-        ],
-      },
-      {
-        "title": "Send query results to ...",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Analytics tools ...",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Amazon QuickSight",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#amazon-quicksight"
-              },
-              {
-                "title": "Databricks",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#databricks"
-              },
-              {
-                "title": "Domo",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#domo"
-              },
-              {
-                "title": "Google BigQuery",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#google-bigquery"
-              },
-              {
-                "title": "Looker",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#looker"
-              },
-              {
-                "title": "Microsoft Power BI",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#microsoft-power-bi"
-              },
-              {
-                "title": "Pyramid Analytics",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#pyramid-analytics"
-              },
-              {
-                "title": "Sisense",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#sisense"
-              },
-              {
-                "title": "Tableau",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#tableau"
-              },
-              {
-                "title": "Tellius",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#tellius"
-              },
-              {
-                "title": "ThoughtSpot",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#thoughtspot"
-              },
-              {
-                "title": "Yellowfin",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#yellowfin"
-              },
-              {
-                "title": "Zoho",
-                "hasSubItems": false,
-                "url": "/amp360/sendto_analytics_bi.html#zoho-analytics"
-              },
-            ],
-          },
-          {
-            "title": "Databases and storage ...",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Amazon Redshift",
-                "hasSubItems": false,
-                "url": "/amp360/destination_amazon_redshift.html"
-              },
-              {
-                "title": "Amazon S3",
-                "hasSubItems": false,
-                "url": "/amp360/destination_amazon_s3.html"
-              },
-              {
-                "title": "Amperity Bridge",
-                "hasSubItems": false,
-                "url": "/reference/bridge.html"
-              },
-              {
-                "title": "Azure Blob Storage",
-                "hasSubItems": false,
-                "url": "/amp360/destination_azure_blob_storage.html"
-              },
-              {
-                "title": "Databricks",
-                "hasSubItems": false,
-                "url": "/amp360/destination_databricks.html"
-              },
-              {
-                "title": "Google Cloud Storage",
-                "hasSubItems": false,
-                "url": "/amp360/destination_google_cloud_storage.html"
-              },
-              {
-                "title": "Microsoft Dataverse",
-                "hasSubItems": false,
-                "url": "/amp360/destination_microsoft_dataverse.html"
-              },
-              {
-                "title": "Oracle Data Cloud",
-                "hasSubItems": false,
-                "url": "/amp360/destination_oracle_data_cloud.html"
-              },
-              {
-                "title": "SFTP",
-                "hasSubItems": false,
-                "url": "/amp360/destination_sftp.html"
-              },
-              {
-                "title": "Snowflake (AWS)",
-                "hasSubItems": false,
-                "url": "/datagrid/destination_snowflake_aws.html"
-              },
-              {
-                "title": "Snowflake (Azure)",
-                "hasSubItems": false,
-                "url": "/datagrid/destination_snowflake_azure.html"
-              },
-            ],
-          },
-          {
-            "title": "Marketing applications ...",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "ActiveCampaign",
-                "hasSubItems": false,
-                "url": "/amp360/destination_active_campaign.html"
-              },
-              {
-                "title": "Acxiom",
-                "hasSubItems": false,
-                "url": "/amp360/destination_acxiom.html"
-              },
-              {
-                "title": "Adobe AEP",
-                "hasSubItems": false,
-                "url": "/amp360/destination_adobe_aep.html"
-              },
-              {
-                "title": "Adobe Campaign",
-                "hasSubItems": false,
-                "url": "/amp360/destination_adobe_campaign.html"
-              },
-              {
-                "title": "Adobe Customer Attributes",
-                "hasSubItems": false,
-                "url": "/amp360/destination_adobe_customer_attributes.html"
-              },
-              {
-                "title": "Adobe Marketo",
-                "hasSubItems": false,
-                "url": "/amp360/destination_adobe_marketo.html"
-              },
-              {
-                "title": "Airship",
-                "hasSubItems": false,
-                "url": "/amp360/destination_airship.html"
-              },
-              {
-                "title": "Amazon Pinpoint",
-                "hasSubItems": false,
-                "url": "/amp360/destination_amazon_pinpoint.html"
-              },
-              {
-                "title": "Attentive Mobile",
-                "hasSubItems": false,
-                "url": "/amp360/destination_attentive_mobile.html"
-              },
-              {
-                "title": "AWS Connect",
-                "hasSubItems": false,
-                "url": "/amp360/destination_aws_connect.html"
-              },
-              {
-                "title": "BazaarVoice",
-                "hasSubItems": false,
-                "url": "/amp360/destination_bazaarvoice.html"
-              },
-              {
-                "title": "Bluecore",
-                "hasSubItems": false,
-                "url": "/amp360/destination_bluecore.html"
-              },
-              {
-                "title": "Braze",
-                "hasSubItems": false,
-                "url": "/amp360/destination_braze.html"
-              },
-              {
-                "title": "Cheetah Digital",
-                "hasSubItems": false,
-                "url": "/amp360/destination_cheetah_digital.html"
-              },
-              {
-                "title": "Cordial",
-                "hasSubItems": false,
-                "url": "/amp360/destination_cordial.html"
-              },
-              {
-                "title": "Criteo",
-                "hasSubItems": false,
-                "url": "/amp360/destination_criteo.html"
-              },
-              {
-                "title": "DV360",
-                "hasSubItems": false,
-                "url": "/amp360/destination_dv360.html"
-              },
-              {
-                "title": "Dynamic Yield",
-                "hasSubItems": false,
-                "url": "/amp360/destination_dynamic_yield.html"
-              },
-              {
-                "title": "Evocalize",
-                "hasSubItems": false,
-                "url": "/amp360/destination_evocalize.html"
-              },
-              {
-                "title": "Experian",
-                "hasSubItems": false,
-                "url": "/amp360/destination_experian.html"
-              },
-              {
-                "title": "Google Ads",
-                "hasSubItems": false,
-                "url": "/amp360/destination_google_ads.html"
-              },
-              {
-                "title": "HubSpot",
-                "hasSubItems": false,
-                "url": "/amp360/destination_hubspot.html"
-              },
-              {
-                "title": "Infutor",
-                "hasSubItems": false,
-                "url": "/amp360/destination_infutor.html"
-              },
-              {
-                "title": "Kibo",
-                "hasSubItems": false,
-                "url": "/amp360/destination_kibo.html"
-              },
-              {
-                "title": "Klaviyo",
-                "hasSubItems": false,
-                "url": "/amp360/destination_klaviyo.html"
-              },
-              {
-                "title": "Koupon Media",
-                "hasSubItems": false,
-                "url": "/amp360/destination_koupon_media.html"
-              },
-              {
-                "title": "Listrak",
-                "hasSubItems": false,
-                "url": "/amp360/destination_listrak.html"
-              },
-              {
-                "title": "LiveRamp",
-                "hasSubItems": false,
-                "url": "/amp360/destination_liveramp.html"
-              },
-              {
-                "title": "Mailchimp",
-                "hasSubItems": false,
-                "url": "/amp360/destination_mailchimp.html"
-              },
-              {
-                "title": "Meta Ads Manager",
-                "hasSubItems": false,
-                "url": "/amp360/destination_meta_ads_manager.html"
-              },
-              {
-                "title": "Microsoft Advertising",
-                "hasSubItems": false,
-                "url": "/amp360/destination_microsoft_ads.html"
-              },
-              {
-                "title": "Monetate",
-                "hasSubItems": false,
-                "url": "/amp360/destination_monetate.html"
-              },
-              {
-                "title": "Neustar",
-                "hasSubItems": false,
-                "url": "/amp360/destination_neustar.html"
-              },
-              {
-                "title": "Optimizely",
-                "hasSubItems": false,
-                "url": "/amp360/destination_optimizely.html"
-              },
-              {
-                "title": "Oracle DMP (BlueKai)",
-                "hasSubItems": false,
-                "url": "/amp360/destination_oracle_dmp.html"
-              },
-              {
-                "title": "Oracle Eloqua",
-                "hasSubItems": false,
-                "url": "/amp360/destination_oracle_eloqua.html"
-              },
-              {
-                "title": "Oracle Responsys",
-                "hasSubItems": false,
-                "url": "/amp360/destination_oracle_responsys.html"
-              },
-              {
-                "title": "PebblePost",
-                "hasSubItems": false,
-                "url": "/amp360/destination_pebblepost.html"
-              },
-              {
-                "title": "Persado",
-                "hasSubItems": false,
-                "url": "/amp360/destination_persado.html"
-              },
-              {
-                "title": "Pinterest Ads",
-                "hasSubItems": false,
-                "url": "/amp360/destination_pinterest.html"
-              },
-              {
-                "title": "PowerReviews",
-                "hasSubItems": false,
-                "url": "/amp360/destination_powerreviews.html"
-              },
-              {
-                "title": "Sailthru",
-                "hasSubItems": false,
-                "url": "/amp360/destination_sailthru.html"
-              },
-              {
-                "title": "Salesforce Marketing Cloud",
-                "hasSubItems": false,
-                "url": "/amp360/destination_salesforce_marketing_cloud.html"
-              },
-              {
-                "title": "Snapchat",
-                "hasSubItems": false,
-                "url": "/amp360/destination_snapchat.html"
-              },
-              {
-                "title": "The Trade Desk",
-                "hasSubItems": false,
-                "url": "/amp360/destination_the_trade_desk.html"
-              },
-              {
-                "title": "Throtle",
-                "hasSubItems": false,
-                "url": "/amp360/destination_throtle.html"
-              },
-              {
-                "title": "TikTok Ads Manager",
-                "hasSubItems": false,
-                "url": "/amp360/destination_tiktok_ads.html"
-              },
-              {
-                "title": "Vibes",
-                "hasSubItems": false,
-                "url": "/amp360/destination_vibes.html"
-              },
-              {
-                "title": "Zendesk",
-                "hasSubItems": false,
-                "url": "/amp360/destination_zendesk.html"
-              },
-            ],
-          },
-        ],
-      },
-    ]
-  },
-
-  {
-    "title": "Measurement",
-    "iconClass": "fas fa-grid-round fa-fw",
-    "subItems": [
-      {
-        "title": "People-based measurement",
-        "hasSubItems": false,
-        "url": "/ampiq/people_based_measurement.html"
-      },
-      {
-        "title": "RFM scoring",
-        "hasSubItems": false,
-        "url": "/ampiq/rfm.html"
-      },
-      {
-        "title": "Customer lifetime value",
-        "hasSubItems": false,
-        "url": "/ampiq/customer_lifetime_value.html"
-      },
-      {
-        "title": "Measure campaigns",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Campaign recipients",
-            "hasSubItems": false,
-            "url": "/ampiq/standard_output.html#campaign-recipients"
-          },
-          {
-            "title": "Analyze campaign data",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "Download recipients",
-                "hasSubItems": false,
-                "url": "/amp360/analyze_campaigns.html#download-recipients"
-              },
-              {
-                "title": "Download results",
-                "hasSubItems": false,
-                "url": "/amp360/analyze_campaigns.html#download-results"
-              },
-            ],
-          },
-        ],
-      },
-      {
-        "title": "TBD",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "TBD",
-            "hasSubItems": false,
-            "url": "/xxxxx/xxxxx.html"
-          },
-          {
-            "title": "TBD",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "TBD",
-                "hasSubItems": false,
-                "url": "/xxxxx/xxxxx.html"
-              },
-              {
-                "title": "TBD",
-                "hasSubItems": false,
-                "url": "/xxxxx/xxxxx.html"
-              },
-            ],
-          },
-        ],
+        "url": "/contributing/rst.html#additional-resources"
       },
     ]
   },
