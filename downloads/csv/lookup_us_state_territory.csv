@@ -1,0 +1,165 @@
+User_Input,US_State_Territory_Name,USPS_Code,ISO_Code_2,ISO_Code_3,ISO_Code_Num,ISO_Code_Hyphen,Classification,Input_Type,USER_INPUT_IS_UNIQUE
+Alabama,Alabama,AL,US-AL,,,,State,Source,TRUE
+Alaska,Alaska,AK,US-AK,,,,State,Source,TRUE
+Arizona,Arizona,AZ,US-AZ,,,,State,Source,TRUE
+Arkansas,Arkansas,AR,US-AR,,,,State,Source,TRUE
+California,California,CA,US-CA,,,,State,Source,TRUE
+Colorado,Colorado,CO,US-CO,,,,State,Source,TRUE
+Connecticut,Connecticut,CT,US-CT,,,,State,Source,TRUE
+Delaware,Delaware,DE,US-DE,,,,State,Source,TRUE
+District of Columbia,District of Columbia,DC,US-DC,,,,Federal district,Source,TRUE
+Florida,Florida,FL,US-FL,,,,State,Source,TRUE
+Georgia,Georgia,GA,US-GA,,,,State,Source,TRUE
+Hawaii,Hawaii,HI,US-HI,,,,State,Source,TRUE
+Idaho,Idaho,ID,US-ID,,,,State,Source,TRUE
+Illinois,Illinois,IL,US-IL,,,,State,Source,TRUE
+Indiana,Indiana,IN,US-IN,,,,State,Source,TRUE
+Iowa,Iowa,IA,US-IA,,,,State,Source,TRUE
+Kansas,Kansas,KS,US-KS,,,,State,Source,TRUE
+Kentucky,Kentucky,KY,US-KY,,,,State,Source,TRUE
+Louisiana,Louisiana,LA,US-LA,,,,State,Source,TRUE
+Maine,Maine,ME,US-ME,,,,State,Source,TRUE
+Maryland,Maryland,MD,US-MD,,,,State,Source,TRUE
+Massachusetts,Massachusetts,MA,US-MA,,,,State,Source,TRUE
+Michigan,Michigan,MI,US-MI,,,,State,Source,TRUE
+Minnesota,Minnesota,MN,US-MN,,,,State,Source,TRUE
+Mississippi,Mississippi,MS,US-MS,,,,State,Source,TRUE
+Missouri,Missouri,MO,US-MO,,,,State,Source,TRUE
+Montana,Montana,MT,US-MT,,,,State,Source,TRUE
+Nebraska,Nebraska,NE,US-NE,,,,State,Source,TRUE
+Nevada,Nevada,NV,US-NV,,,,State,Source,TRUE
+New Hampshire,New Hampshire,NH,US-NH,,,,State,Source,TRUE
+New Jersey,New Jersey,NJ,US-NJ,,,,State,Source,TRUE
+New Mexico,New Mexico,NM,US-NM,,,,State,Source,TRUE
+New York,New York,NY,US-NY,,,,State,Source,TRUE
+North Carolina,North Carolina,NC,US-NC,,,,State,Source,TRUE
+North Dakota,North Dakota,ND,US-ND,,,,State,Source,TRUE
+Ohio,Ohio,OH,US-OH,,,,State,Source,TRUE
+Oklahoma,Oklahoma,OK,US-OK,,,,State,Source,TRUE
+Oregon,Oregon,OR,US-OR,,,,State,Source,TRUE
+Pennsylvania,Pennsylvania,PA,US-PA,,,,State,Source,TRUE
+Rhode Island,Rhode Island,RI,US-RI,,,,State,Source,TRUE
+South Carolina,South Carolina,SC,US-SC,,,,State,Source,TRUE
+South Dakota,South Dakota,SD,US-SD,,,,State,Source,TRUE
+Tennessee,Tennessee,TN,US-TN,,,,State,Source,TRUE
+Texas,Texas,TX,US-TX,,,,State,Source,TRUE
+Utah,Utah,UT,US-UT,,,,State,Source,TRUE
+Vermont,Vermont,VT,US-VT,,,,State,Source,TRUE
+Virginia,Virginia,VA,US-VA,,,,State,Source,TRUE
+Washington,Washington,WA,US-WA,,,,State,Source,TRUE
+West Virginia,West Virginia,WV,US-WV,,,,State,Source,TRUE
+Wisconsin,Wisconsin,WI,US-WI,,,,State,Source,TRUE
+Wyoming,Wyoming,WY,US-WY,,,,State,Source,TRUE
+American Samoa,American Samoa,AS,AS,ASM,016,US-AS,Insular area (Territory),Source,TRUE
+Guam,Guam,GU,GU,GUM,316,US-GU,Insular area (Territory),Source,TRUE
+Northern Mariana Islands,Northern Mariana Islands,MP,MP,MNP,580,US-MP,Insular area (Commonwealth),Source,TRUE
+Puerto Rico,Puerto Rico,PR,PR,PRI,630,US-PR,Insular area (Commonwealth),Source,TRUE
+United States Virgin Islands,US Virgin Islands,VI,VI,VIR,850,US-VI,Insular area (Territory),Custom - Alternate Spelling,TRUE
+United States Minor Outlying Islands,US Minor Outlying Islands,UM,UM,UMI,581,US-UM,Insular areas,Custom - Alternate Spelling,TRUE
+US Virgin Islands,US Virgin Islands,VI,VI,VIR,850,US-VI,Insular area (Territory),Source,TRUE
+US Minor Outlying Islands,US Minor Outlying Islands,UM,UM,UMI,581,US-UM,Insular areas,Source,TRUE
+United States Outlying Islands,US Minor Outlying Islands,UM,UM,UMI,581,US-UM,Insular areas,Custom - Alternate Spelling,TRUE
+Baker Island,Baker Island,UM-81,UM-81,,,,Island,Source,TRUE
+Howland Island,Howland Island,UM-84,UM-84,,,,Island,Source,TRUE
+Jarvis Island,Jarvis Island,UM-86,UM-86,,,,Island,Source,TRUE
+Johnston Atoll,Johnston Atoll,UM-67,UM-67,,,,Atoll,Source,TRUE
+Kingman Reef,Kingman Reef,UM-89,UM-89,,,,Atoll,Source,TRUE
+Midway Islands,Midway Islands,UM-71,UM-71,,,,Atoll,Source,TRUE
+Navassa Island,Navassa Island,UM-76,UM-76,,,,Island,Source,TRUE
+Palmyra Atoll,Palmyra Atoll,UM-95,UM-95,,,,Atoll,Source,TRUE
+Wake Island,Wake Island,UM-79,UM-79,,,,Atoll,Source,TRUE
+Marshall Islands,Marshall Islands,MH,MH,MHL,584,,Freely associated state,Source,TRUE
+Micronesia,Micronesia,FM,FM,FSM,583,,Freely associated state,Source,TRUE
+Palau,Palau,PW,PW,PLW,585,,Freely associated state,Source,TRUE
+US Armed Forces – Americas,US Armed Forces – Americas,AA,AA,,,,US military mail code,Source,TRUE
+US Armed Forces – Europe,US Armed Forces – Europe,AE,AE,,,,US military mail code,Source,TRUE
+US Armed Forces – Pacific,US Armed Forces – Pacific,AP,AP,,,,US military mail code,Source,TRUE
+Armed Forces – Americas,US Armed Forces – Americas,AA,AA,,,,US military mail code,Custom - Alternate Spelling,TRUE
+Armed Forces – Europe,US Armed Forces – Europe,AE,AE,,,,US military mail code,Custom - Alternate Spelling,TRUE
+Armed Forces – Pacific,US Armed Forces – Pacific,AP,AP,,,,US military mail code,Custom - Alternate Spelling,TRUE
+US Armed Forces Americas,US Armed Forces – Americas,AA,AA,,,,US military mail code,Custom - Alternate Spelling,TRUE
+US Armed Forces Europe,US Armed Forces – Europe,AE,AE,,,,US military mail code,Custom - Alternate Spelling,TRUE
+US Armed Forces Pacific,US Armed Forces – Pacific,AP,AP,,,,US military mail code,Custom - Alternate Spelling,TRUE
+Armed Forces Americas,US Armed Forces – Americas,AA,AA,,,,US military mail code,Custom - Alternate Spelling,TRUE
+Armed Forces Europe,US Armed Forces – Europe,AE,AE,,,,US military mail code,Custom - Alternate Spelling,TRUE
+Armed Forces Pacific,US Armed Forces – Pacific,AP,AP,,,,US military mail code,Custom - Alternate Spelling,TRUE
+AL,Alabama,AL,US-AL,,,,State,Custom - Abbreviation,TRUE
+AK,Alaska,AK,US-AK,,,,State,Custom - Abbreviation,TRUE
+AZ,Arizona,AZ,US-AZ,,,,State,Custom - Abbreviation,TRUE
+AR,Arkansas,AR,US-AR,,,,State,Custom - Abbreviation,TRUE
+CA,California,CA,US-CA,,,,State,Custom - Abbreviation,TRUE
+CO,Colorado,CO,US-CO,,,,State,Custom - Abbreviation,TRUE
+CT,Connecticut,CT,US-CT,,,,State,Custom - Abbreviation,TRUE
+DE,Delaware,DE,US-DE,,,,State,Custom - Abbreviation,TRUE
+DC,District of Columbia,DC,US-DC,,,,Federal district,Custom - Abbreviation,TRUE
+FL,Florida,FL,US-FL,,,,State,Custom - Abbreviation,TRUE
+GA,Georgia,GA,US-GA,,,,State,Custom - Abbreviation,TRUE
+HI,Hawaii,HI,US-HI,,,,State,Custom - Abbreviation,TRUE
+ID,Idaho,ID,US-ID,,,,State,Custom - Abbreviation,TRUE
+IL,Illinois,IL,US-IL,,,,State,Custom - Abbreviation,TRUE
+IN,Indiana,IN,US-IN,,,,State,Custom - Abbreviation,TRUE
+IA,Iowa,IA,US-IA,,,,State,Custom - Abbreviation,TRUE
+KS,Kansas,KS,US-KS,,,,State,Custom - Abbreviation,TRUE
+KY,Kentucky,KY,US-KY,,,,State,Custom - Abbreviation,TRUE
+LA,Louisiana,LA,US-LA,,,,State,Custom - Abbreviation,TRUE
+ME,Maine,ME,US-ME,,,,State,Custom - Abbreviation,TRUE
+MD,Maryland,MD,US-MD,,,,State,Custom - Abbreviation,TRUE
+MA,Massachusetts,MA,US-MA,,,,State,Custom - Abbreviation,TRUE
+MI,Michigan,MI,US-MI,,,,State,Custom - Abbreviation,TRUE
+MN,Minnesota,MN,US-MN,,,,State,Custom - Abbreviation,TRUE
+MS,Mississippi,MS,US-MS,,,,State,Custom - Abbreviation,TRUE
+MO,Missouri,MO,US-MO,,,,State,Custom - Abbreviation,TRUE
+MT,Montana,MT,US-MT,,,,State,Custom - Abbreviation,TRUE
+NE,Nebraska,NE,US-NE,,,,State,Custom - Abbreviation,TRUE
+NV,Nevada,NV,US-NV,,,,State,Custom - Abbreviation,TRUE
+NH,New Hampshire,NH,US-NH,,,,State,Custom - Abbreviation,TRUE
+NJ,New Jersey,NJ,US-NJ,,,,State,Custom - Abbreviation,TRUE
+NM,New Mexico,NM,US-NM,,,,State,Custom - Abbreviation,TRUE
+NY,New York,NY,US-NY,,,,State,Custom - Abbreviation,TRUE
+NC,North Carolina,NC,US-NC,,,,State,Custom - Abbreviation,TRUE
+ND,North Dakota,ND,US-ND,,,,State,Custom - Abbreviation,TRUE
+OH,Ohio,OH,US-OH,,,,State,Custom - Abbreviation,TRUE
+OK,Oklahoma,OK,US-OK,,,,State,Custom - Abbreviation,TRUE
+OR,Oregon,OR,US-OR,,,,State,Custom - Abbreviation,TRUE
+PA,Pennsylvania,PA,US-PA,,,,State,Custom - Abbreviation,TRUE
+RI,Rhode Island,RI,US-RI,,,,State,Custom - Abbreviation,TRUE
+SC,South Carolina,SC,US-SC,,,,State,Custom - Abbreviation,TRUE
+SD,South Dakota,SD,US-SD,,,,State,Custom - Abbreviation,TRUE
+TN,Tennessee,TN,US-TN,,,,State,Custom - Abbreviation,TRUE
+TX,Texas,TX,US-TX,,,,State,Custom - Abbreviation,TRUE
+UT,Utah,UT,US-UT,,,,State,Custom - Abbreviation,TRUE
+VT,Vermont,VT,US-VT,,,,State,Custom - Abbreviation,TRUE
+VA,Virginia,VA,US-VA,,,,State,Custom - Abbreviation,TRUE
+WA,Washington,WA,US-WA,,,,State,Custom - Abbreviation,TRUE
+WV,West Virginia,WV,US-WV,,,,State,Custom - Abbreviation,TRUE
+WI,Wisconsin,WI,US-WI,,,,State,Custom - Abbreviation,TRUE
+WY,Wyoming,WY,US-WY,,,,State,Custom - Abbreviation,TRUE
+AS,American Samoa,AS,,,,,Insular area (Territory),Custom - Abbreviation,TRUE
+GU,Guam,GU,,,,,Insular area (Territory),Custom - Abbreviation,TRUE
+MP,Northern Mariana Islands,MP,,,,,Insular area (Commonwealth),Custom - Abbreviation,TRUE
+PR,Puerto Rico,PR,,,,,Insular area (Commonwealth),Custom - Abbreviation,TRUE
+VI,US Virgin Islands,VI,,,,,Insular area (Territory),Custom - Abbreviation,TRUE
+UM,US Minor Outlying Islands,UM,,,,,Insular areas,Custom - Abbreviation,TRUE
+UM-81,Baker Island,UM-81,,,,,Island,Custom - Abbreviation,TRUE
+UM-84,Howland Island,UM-84,,,,,Island,Custom - Abbreviation,TRUE
+UM-86,Jarvis Island,UM-86,,,,,Island,Custom - Abbreviation,TRUE
+UM-67,Johnston Atoll,UM-67,,,,,Atoll,Custom - Abbreviation,TRUE
+UM-89,Kingman Reef,UM-89,,,,,Atoll,Custom - Abbreviation,TRUE
+UM-71,Midway Islands,UM-71,,,,,Atoll,Custom - Abbreviation,TRUE
+UM-76,Navassa Island,UM-76,,,,,Island,Custom - Abbreviation,TRUE
+UM-95,Palmyra Atoll,UM-95,,,,,Atoll,Custom - Abbreviation,TRUE
+UM-79,Wake Island,UM-79,,,,,Atoll,Custom - Abbreviation,TRUE
+MH,Marshall Islands,MH,,,,,Freely associated state,Custom - Abbreviation,TRUE
+FM,Micronesia,FM,,,,,Freely associated state,Custom - Abbreviation,TRUE
+PW,Palau,PW,,,,,Freely associated state,Custom - Abbreviation,TRUE
+AA,US Armed Forces – Americas,AA,,,,,US military mail code,Custom - Abbreviation,TRUE
+AE,US Armed Forces – Europe,AE,,,,,US military mail code,Custom - Abbreviation,TRUE
+AP,US Armed Forces – Pacific,AP,,,,,US military mail code,Custom - Abbreviation,TRUE
+Calif,California,CA,US-CA,,,,,Custom - Misspelling,TRUE
+Californiz,California,CA,US-CA,,,,,Custom - Misspelling,TRUE
+Califronia,California,CA,US-CA,,,,,Custom - Misspelling,TRUE
+Mass,Massachusetts,MA,US-MA,,,,,Custom - Misspelling,TRUE
+Massachusetes,Massachusetts,MA,US-MA,,,,,Custom - Misspelling,TRUE
+Massachusettes,Massachusetts,MA,US-MA,,,,,Custom - Misspelling,TRUE
+Ore,Oregon,OR,US-OR,,,,,Custom - Misspelling,TRUE
+Conneticut,Connecticut,CT,US-CT,,,,,Custom - Misspelling,TRUE

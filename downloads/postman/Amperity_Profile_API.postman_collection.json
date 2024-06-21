@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "d4d24996-b5f0-4e6d-93eb-def6ac496cb2",
+		"name": "Profile API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21578950"
+	},
+	"item": [
+		{
+			"name": "List indexes (prod)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-amperity-tenant",
+						"value": "{{TENANT}}",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer {{API_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{TENANT}}/attribute/v0/indexes",
+					"protocol": "https",
+					"host": [
+						"{{TENANT}}"
+					],
+					"path": [
+						"attribute",
+						"v0",
+						"indexes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lookup key (prod)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-amperity-tenant",
+						"value": "{{TENANT}}",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{API_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"key\": \"{{LOOKUP_KEY}}\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{TENANT}}/attribute/v0/indexes/{{INDEX_ID}}",
+					"protocol": "https",
+					"host": [
+						"{{TENANT}}"
+					],
+					"path": [
+						"attribute",
+						"v0",
+						"indexes",
+						"{{INDEX_ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TENANT",
+			"value": "your-tenant-id",
+			"type": "string"
+		},
+		{
+			"key": "API_TOKEN",
+			"value": "your-bearer-token",
+			"type": "string"
+		},
+		{
+			"key": "INDEX_ID",
+			"value": "your-index-id",
+			"type": "string"
+		},
+		{
+			"key": "LOOKUP_KEY",
+			"value": "your-lookup-key",
+			"type": "string"
+		}
+	]
+}
