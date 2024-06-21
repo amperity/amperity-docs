@@ -13,7 +13,6 @@ This is the formatting guide for |rst| as it may be used with |theme|.
 
 * :ref:`format-content-admonitions`
 * :ref:`format-content-code-blocks`
-* :ref:`format-content-fontawesome`
 * :ref:`Headers (Levels 1-4) <format-content-header-h1>`
 * :ref:`format-content-images`
 * :ref:`format-content-includes`
