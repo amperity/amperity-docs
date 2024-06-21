@@ -2,46 +2,38 @@ BUILDDIR = build
 BUILD_COMMAND = sphinx-build -b html -W
 BUILD_HELP_COMMAND = sphinx-build -b text -W
 
-all: base ampiq amp360 datagrid reference api support internal help
+all: base ampiq amp360 datagrid reference api contributing
 
 static:
 	cp -vr downloads $(BUILDDIR)/
 
-base: static ## Build the root topic collection
+base: static ## Build Amperity Documentation
 	# Building amperity_base/source...
 	$(BUILD_COMMAND) amperity_base/source $(BUILDDIR)/
 
 ampiq: static ## Build the /ampiq topic collection
-	# Building amperity_ampiq/source...
+	# Building User Guides for AmpIQ pages...
 	$(BUILD_COMMAND) amperity_ampiq/source $(BUILDDIR)/ampiq
 
 amp360: static ## Build the /amp360 topic collection
-	# Building amperity_amp360/source...
+	# Building User Guides for Amp360 pages...
 	$(BUILD_COMMAND) amperity_amp360/source $(BUILDDIR)/amp360
 
 datagrid: static ## Build only the "/datagrid" section
-	# Building amperity_datagrid/source...
+	# Building Configuration Guide pages...
 	$(BUILD_COMMAND) amperity_datagrid/source $(BUILDDIR)/datagrid
 
 reference: static ## Build only the "/reference" section
-	# Building amperity_reference/source...
+	# Building A-Z Reference pages...
 	$(BUILD_COMMAND) amperity_reference/source $(BUILDDIR)/reference
 
 api: static ## Build only the "/api" section
-	# Building amperity_api/source...
+	# Building Amperity API pages...
 	$(BUILD_COMMAND) amperity_api/source $(BUILDDIR)/api
 
-support: static ## Build only the "/support" section
-	# Building amperity_support/source...
-	$(BUILD_COMMAND) amperity_support/source $(BUILDDIR)/support
-
-help: static ## Build only the "/help" section
-	# Building amperity_help/source...
-	$(BUILD_HELP_COMMAND) amperity_help/source $(BUILDDIR)/help
-
-internal: static ## Build only the "/internal" section
-	# Building amperity_internal/source...
-	$(BUILD_COMMAND) amperity_internal/source $(BUILDDIR)/internal
+contributing: static ## Build only the "/contributing" section
+	# Building Contributing pages...
+	$(BUILD_COMMAND) contributing/source $(BUILDDIR)/contributing
 
 clean: ## Flush the entire build directory
 	# Cleaning out build directory...
