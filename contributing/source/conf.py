@@ -189,6 +189,6 @@ htmlhelp_basename = 'Contribute'
 # Edit this page on GitHub link
 html_context = {
     "display_github": True, # Integrate GitHub
-    "github_path": "https://github.com/amperity/amperity-docs/blob/master/contribute/source/", # Path in the checkout to the docs root
+    "github_path": "https://github.com/amperity/amperity-docs/tree/main/contribute/source/", # Path in the checkout to the docs root
 }
 
