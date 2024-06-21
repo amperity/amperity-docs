@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "77878753-cf38-401a-8bee-c398b0269cf0",
+		"name": "Amperity Streaming Ingest REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post data to Streaming Ingest API",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d7dc4e87-6209-4c08-8a0e-e314836606e7",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Amperity-Tenant",
+						"value": "{{tenant}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<records>\n<record>\n    <firstName>John</firstName>\n</record>\n<record>\n    <firstName>Jane</firstName>\n</record>\n</records>"
+				},
+				"url": {
+					"raw": "https://{{tenant}}.amperity.com/stream/v0/data/{{streamId}}",
+					"protocol": "https",
+					"host": [
+						"{{tenant}}",
+						"amperity",
+						"com"
+					],
+					"path": [
+						"stream",
+						"v0",
+						"data",
+						"{{streamId}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Amperity-Tenant",
+						"value": "{{tenant}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "-d '{\"expires-at\": \"2020-06-16T00:24:16Z\"}'"
+				},
+				"url": {
+					"raw": "https://{{tenant}}.amperity.com/api/v0/admin/api-keys/{{apiKey}}/tokens",
+					"protocol": "https",
+					"host": [
+						"{{tenant}}",
+						"amperity",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"admin",
+						"api-keys",
+						"{{apiKey}}",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
