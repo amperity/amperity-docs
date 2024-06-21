@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "f8cd555d-524e-4143-9538-8ed45ae5b7a9",
+		"name": "Refresh Token API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21578950"
+	},
+	"item": [
+		{
+			"name": "Generate Bearer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var expire_timestamp = new Date();",
+							"expire_timestamp.setHours(expire_timestamp.getHours() + 1);",
+							"postman.setEnvironmentVariable(\"EXPIRATION_DATE\", expire_timestamp.toISOString());",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-amperity-tenant",
+						"value": "{{TENANT}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{ISSUER BEARER}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"expires-at\": \"{{EXPIRATION_DATE}}\"}"
+				},
+				"url": {
+					"raw": "https://{{TENANT}}.amperity.com/api/v0/admin/api-keys/{{API KEY ID}}/tokens",
+					"protocol": "https",
+					"host": [
+						"{{TENANT}}",
+						"amperity",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"admin",
+						"api-keys",
+						"{{API KEY ID}}",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TENANT",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "API KEY ID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "ISSUER BEARER",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

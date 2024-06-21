@@ -1,0 +1,249 @@
+-------------------------------------------------------------------------
+-- Merged_Households query                                             --
+--                                                                     --
+-- This query generates a UUID household_id for records with an exact  --
+-- match on full_address and surname. It uses Merged_Customers as a    --
+-- foundation, which means that householding occurs AFTER the best     --
+-- address has been selected, after which business rules are applied   --
+-- to define what qualifies as a household.                            --
+-------------------------------------------------------------------------
+
+WITH 
+
+-------------------------------------------------------------------------
+-- Basic address standardization                                      --
+-------------------------------------------------------------------------
+
+clean_addresses AS (
+  SELECT
+    core.*
+    ,REGEXP_REPLACE(
+      REPLACE(
+        REPLACE(
+          REPLACE(
+            REPLACE(
+              REPLACE(
+                REPLACE(
+                  REPLACE(
+                    REPLACE(
+                      CONCAT_WS(' ', core.a1,
+                        COALESCE(a2clean.converted, core.a2),
+                        COALESCE(a3clean.converted, core.a3),
+                        COALESCE(a4clean.converted, core.a4),
+                        COALESCE(a5clean.converted, core.a5),
+                        core.a6,
+                        core.a7,
+                        address2,
+                        city,
+                        COALESCE(stateclean.converted, core.state),
+                        postal)
+                      ,' APT')
+                    ,' STE')
+                  ,' UNIT')
+                ,' RM')
+              ,' SPACE')
+            ,' APARTMENT')
+          ,' SUITE')
+        ,' ROOM')
+      ,' +'
+    ,''
+  )
+  AS full_address
+  FROM (
+    SELECT
+      amperity_id
+      ,UPPER(given_name) AS given_name
+      ,UPPER(surname) AS surname
+      ,UPPER(address) AS address
+      ,REGEXP_REPLACE(UPPER(address2),'[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\.]', '') AS address2
+      ,UPPER(city) AS city
+      ,TRIM(UPPER(state)) AS state
+      ,UPPER(SUBSTR(postal,1,5)) AS postal
+      ,CASE
+        WHEN NOT SIZE(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')) >= 1 THEN ''
+        ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[0]), '[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\. ]', '')
+      END AS a1
+      ,CASE
+        WHEN NOT SIZE(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')) >= 2 THEN ''
+        ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[1]), '[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\. ]', '')
+      END AS a2
+      ,CASE
+        WHEN NOT SIZE(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')) >= 3 THEN ''
+        ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[2]), '[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\. ]', '')
+      END AS a3
+      ,CASE
+        WHEN NOT SIZE(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')) >= 4 THEN ''
+        ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[3]), '[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\. ]', '')
+      END AS a4
+      ,CASE
+        WHEN NOT SIZE(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')) >= 5 THEN ''
+        ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[4]), '[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\. ]', '')
+      END AS a5
+      ,CASE
+        WHEN NOT SIZE(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')) >= 6 THEN ''
+        ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[5]), '[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\. ]', '')
+      END AS a6
+      ,CASE
+        WHEN NOT SIZE(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')) >= 7 THEN ''
+        ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[6]), '[.,\\/#!$%\\^&\\*;:{}=\\-_`~()\\. ]', '')
+      END AS a7
+
+    FROM
+      Merged_Customers
+      WHERE address IS NOT NULL
+      AND city IS NOT NULL
+      AND state IS NOT NULL
+      AND postal IS NOT NULL
+      AND surname IS NOT NULL
+  ) AS core
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STREET'
+  ) AS a1clean ON (a1clean.before = core.a1)
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STREET'
+  ) AS a2clean ON (a2clean.before = core.a2)
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STREET'
+  ) AS a3clean ON (a3clean.before = core.a3)
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STREET'
+  ) AS a4clean ON (a4clean.before = core.a4)
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STREET'
+  ) AS a5clean ON (a5clean.before = core.a5)
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STREET'
+  ) AS a6clean ON (a6clean.before = core.a6)
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STREET'
+  ) AS a7clean ON (a7clean.before = core.a7)
+
+  LEFT JOIN (
+    SELECT
+      UPPER(before) AS before
+      ,UPPER(convert) AS converted
+    FROM LookupTables_AddressStandardization
+    WHERE type = 'STATE'
+  ) AS stateclean ON (stateclean.before = core.state)
+
+),
+
+-------------------------------------------------------------------------
+-- Build the Household ID from full_address + surname as a UUID        --
+-------------------------------------------------------------------------
+
+uuid_ids AS (
+  SELECT
+    amperity_id
+    ,CONCAT_WS(
+      '-'
+      ,substr(household_id, 1,  8)
+      ,substr(household_id, 9,  4)
+      ,substr(household_id, 13, 4)
+      ,substr(household_id, 17, 4)
+      ,substr(household_id, 21, 12)) AS household_id
+  FROM (
+    SELECT
+      amperity_id
+      ,SHA(CONCAT(full_address, surname)) AS household_id
+    FROM
+      clean_addresses
+  )
+),
+
+-------------------------------------------------------------------------
+-- Get count of Amperity ID per Household ID                           --
+-- For use with downstream filters                                     --
+-------------------------------------------------------------------------
+
+household_stats AS (
+  SELECT
+    household_id
+    ,COUNT(DISTINCT amperity_id) AS amperity_id_count
+  FROM uuid_ids
+  WHERE household_id IS NOT NULL
+  GROUP BY 1
+)
+
+-------------------------------------------------------------------------
+-- Create flag for addresses in bad-values blocklist                   --
+-- Blocklist_Values is the name of a domain table; verify then update  --
+-- For use with downstream filters                                     --
+-------------------------------------------------------------------------
+
+--blv_addresses AS (
+--  SELECT
+--    amperity_id,
+--    CASE
+--      WHEN (blv.value IS NOT NULL)
+--      THEN TRUE
+--      ELSE FALSE
+--    END AS blv_address
+--  FROM clean_addresses AS AD
+--  LEFT JOIN Blocklist_Values AS BLV
+--    ON AD.address = UPPER(BLV.value)
+--)
+
+-------------------------------------------------------------------------
+-- Build Merged_Households table                                       --
+-------------------------------------------------------------------------
+
+SELECT distinct
+  AD.amperity_id
+  ,ID.household_id
+  ,ST.amperity_id_count AS household_size
+  --  ,BL.blv_address
+  ,AD.full_address
+  ,AD.given_name
+  ,AD.surname
+  ,AD.address
+  ,AD.address2
+  ,AD.city
+  ,AD.state
+  ,AD.postal
+
+FROM clean_addresses AS AD
+
+LEFT JOIN uuid_ids AS ID
+  ON AD.amperity_id = ID.amperity_id
+
+LEFT JOIN household_stats AS ST
+  ON ID.household_id = ST.household_id
+
+--LEFT JOIN blv_addresses AS BL
+--  ON AD.amperity_id = BL.amperity_id

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salesTransactions>
+  <salesTransaction>
+    <salesTransactionId>DEF</salesTransactionId>
+    <type>Create</type>
+    <sourceSalesTransactionId />
+    <originalSalesTransactionId />
+    <dateTime>2020-11-22T06:57:22Z</dateTime>
+    <utcOffset>-07:00</utcOffset>
+    <msrUsageCode>NA</msrUsageCode>
+    <merchantId />
+    <brandCode>BRAND</brandCode>
+    <countryCode>USA</countryCode>
+    <salesOrder>
+      <salesOrderId>A1zyBCxwvDu</salesOrderId>
+      <storeNumber>1234</storeNumber>
+      <locale>EN-US</locale>
+      <registerNumber>2</registerNumber>
+      <checkNumber>6789</checkNumber>
+      <receiptNumber>123456</receiptNumber>
+      <currencyCode>USD</currencyCode>
+      <channelType>Cafe</channelType>
+      <subChannelType />
+      <preparationType>To-go</preparationType>
+      <discounts />
+      <lineItems />
+      <tenders>
+        <tender>
+          <type>Cash</type>
+          <amount>20</amount>
+        </tender>
+        <tender>
+          <type>Gift Card</type>
+          <amount>100</amount>
+        </tender>
+      </tenders>
+      <orderSummary>
+        <subtotalAmount>120</subtotalAmount>
+        <totalDiscountAmount>0</totalDiscountAmount>
+        <totalTaxAmount>0</totalTaxAmount>
+        <totalAmount>120</totalAmount>
+        <taxes />
+        <receiptLines />
+      </orderSummary>
+    </salesOrder>
+    <loyaltyPartner>A</loyaltyPartner>
+  </salesTransaction>
+</salesTransactions>
