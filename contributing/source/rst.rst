@@ -12,7 +12,6 @@ Formatting guide
 This is the formatting guide for |rst| as it may be used with |theme|.
 
 * :ref:`format-content-admonitions`
-* :ref:`format-content-card-walls-inline`
 * :ref:`format-content-code-blocks`
 * :ref:`format-content-fontawesome`
 * :ref:`Headers (Levels 1-4) <format-content-header-h1>`
@@ -47,15 +46,15 @@ Attention
 
 .. format-content-attention-start
 
-Use ``.. attention::`` as shown here:
+Use ``.. attention::`` occasionally, as shown here:
 
 .. code-block:: rst
 
-   .. attention:: The words for the attention itself.
+   .. attention:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. attention:: The words for the attention itself.
+.. attention:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-attention-end
 
@@ -67,15 +66,15 @@ Caution
 
 .. format-content-caution-start
 
-Use ``.. caution::`` as shown here:
+Use ``.. caution::`` when it's appropriate, as shown here:
 
 .. code-block:: rst
 
-   .. caution:: The words for the caution itself.
+   .. caution:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. caution:: The words for the caution itself.
+.. caution:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-caution-end
 
@@ -93,15 +92,15 @@ For a custom admonition, use ``.. admonition:: some string`` as shown here:
 
 .. code-block:: rst
 
-   .. admonition:: Custom admonition title
+   .. admonition:: Ut enim ad minim veniam
 
-      Contents of custom admonition.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 Which will appear in the documentation like this:
 
-.. admonition:: Custom admonition title
+.. admonition:: Ut enim ad minim veniam
 
-   Contents of custom admonition.
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-custom-end
 
@@ -113,15 +112,15 @@ Danger
 
 .. format-content-danger-start
 
-Use ``.. danger::`` as shown here:
+Use ``.. danger::`` sparingly, as shown here:
 
 .. code-block:: rst
 
-   .. danger:: The words for the danger itself.
+   .. danger:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. danger:: The words for the danger itself.
+.. danger:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-danger-end
 
@@ -133,15 +132,15 @@ Error
 
 .. format-content-error-start
 
-Use ``.. error::`` as shown here:
+Use ``.. error::`` when it's appropriate, as shown here:
 
 .. code-block:: rst
 
-   .. error:: The words for the error itself.
+   .. error:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. error:: The words for the error itself.
+.. error:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-error-end
 
@@ -153,15 +152,15 @@ Hint
 
 .. format-content-hint-start
 
-Use ``.. hint::`` as shown here:
+Use ``.. hint::`` when it's appropriate, as shown here:
 
 .. code-block:: rst
 
-   .. hint:: The words for the hint itself.
+   .. hint:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. hint:: The words for the hint itself.
+.. hint:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-hint-end
 
@@ -173,15 +172,15 @@ Important
 
 .. format-content-important-start
 
-Use ``.. important::`` as shown here:
+Use ``.. important::`` when it's appropriate, as shown here:
 
 .. code-block:: rst
 
-   .. important:: The words for the important itself.
+   .. important:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. important:: The words for the important itself.
+.. important:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-important-end
 
@@ -193,15 +192,15 @@ Note
 
 .. format-content-note-start
 
-Use ``.. note::`` as shown here:
+Use ``.. note::`` as your first-choice admonition, as shown here:
 
 .. code-block:: rst
 
-   .. note:: The words for the note itself.
+   .. note:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. note:: The words for the note itself.
+.. note:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-note-end
 
@@ -213,15 +212,15 @@ Tip
 
 .. format-content-tip-start
 
-Use ``.. tip::`` as shown here:
+Use ``.. tip::`` when it's appropriate, as shown here:
 
 .. code-block:: rst
 
-   .. tip:: The words for the tip itself.
+   .. tip:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. tip:: The words for the tip itself.
+.. tip:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-tip-end
 
@@ -233,250 +232,17 @@ Warning
 
 .. format-content-warning-start
 
-Use ``.. warning::`` as shown here:
+Use ``.. warning::`` when it's appropriate, as shown here:
 
 .. code-block:: rst
 
-   .. warning:: The words for the warning itself.
+   .. warning:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 to create an admonition like this:
 
-.. warning:: The words for the warning itself.
+.. warning:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 .. format-content-warning-end
-
-
-.. _format-content-card-walls-inline:
-
-Card walls, inline
-==================================================
-
-.. format-content-card-walls-inline-start
-
-An inline card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that's full of links to resources.
-
-.. important:: Inline card walls exist within the page and within the left- and right-side navigation. Use sparingly as occasionally. These are different from standalone card walls in that these are authored using reStructuredText container objects and can use all standard formatting options, whereas standalone card walls are written in HTML and do not have access to reStructuredText formatting.
-
-A card may contain standard inline formatting (plain text, bold, italics, and so on, along with links to topics in other parts of the documentation collection). A card wall may be placed inline on a page. It may also be used as a index page, where the only contents on the index page are cards in the card wall.
-
-
-.. container:: card-group
-
-   .. container:: card-wall
-
-      .. container:: card-wall-content
-
-         .. container:: card-wall-name
-
-            Getting Started
-
-         .. container:: card-wall-description
-
-            The getting started guide is how to get started and learns you how to get started.
-
-            Links for :ref:`le success <format-content-links>`.
-
-   .. container:: card-wall
-
-      .. container:: card-wall-content
-
-         .. container:: card-wall-name
-
-            Deployment Guide
-
-         .. container:: card-wall-description
-
-            The deployment guide is the deployment guide and learns you how to deploy.
-
-            Links for :ref:`le success <format-content-links>`.
-
-   .. container:: card-wall
-
-      .. container:: card-wall-content
-
-         .. container:: card-wall-name
-
-            User Guide
-
-         .. container:: card-wall-description
-
-            The user guide is the user guide and learns you how to user.
-
-            Links for :ref:`le success <format-content-links>`.
-
-   .. container:: card-wall
-
-      .. container:: card-wall-content
-
-         .. container:: card-wall-name
-
-            Admin Guide
-
-         .. container:: card-wall-description
-
-            The admin guide is the admin guide and learns you how to admin.
-
-            Links for :ref:`le success <format-content-links>`.
-
-   .. container:: card-wall
-
-      .. container:: card-wall-content
-
-         .. container:: card-wall-name
-
-            Reference
-
-         .. container:: card-wall-description
-
-            The reference guide is the reference guide and learns you how to reference.
-
-            Links for :ref:`le success <format-content-links>`.
-
-
-   .. container:: card-wall
-
-      .. container:: card-wall-content
-
-         .. container:: card-wall-name
-
-            Diagrams
-
-         .. container:: card-wall-description
-
-            The diagrams guide is just a list of sweet diagrams.
-
-            Links for :ref:`le success <format-content-links>`.
-
-.. format-content-card-walls-inline-end
-
-
-.. _format-content-card-walls-standalone:
-
-Card walls, standalone
-==================================================
-
-.. format-content-card-walls-standalone-start
-
-A standalone card wall is built using an HTML template that contains a block of HTML and associated CSS that builds a nice card wall that does not contain the left- or right-side navigation. Use a standalone card wall to present items in a scrolling list, either alphabetically or (in certain cases) in a specific order.
-
-.. tip:: Look in the ``_templates/`` directory and review the ``cardwall.html`` file as a working example of how to build the card wall. Click the **Cardwall** link in the top navigation to see an example of a card wall.
-
-.. format-content-card-walls-standalone-end
-
-
-.. _format-content-card-walls-standalone-block:
-
-Card wall block
---------------------------------------------------
-
-.. format-content-card-walls-standalone-block-start
-
-The entire block of content for the document body is replaced by this block of HTML and Jinja:
-
-.. code-block:: none
-
-   <div class="document markup-docs">
-     {%- block document %}
-       <div class="documentcardwrapper">
-         <div class="cardwrapper">
-           <div class="body" role="main">
-             {% block body %}
-
-             <div class="firstcard">...</div>
-
-             <div class="cards">...</div>
-
-             {% endblock %}
-           </div>
-         </div>
-       </div>
-     {% endblock %}
-   </div>
-
-.. format-content-card-walls-standalone-block-end
-
-
-.. _format-content-card-walls-standalone-configure:
-
-Configure card wall
---------------------------------------------------
-
-.. format-content-card-walls-standalone-configure-start
-
-To configure the card wall you have to tell the ``conf.py`` file which file in the ``_templates`` directory to use for the template, and then what the file name will be in the content directory. Find the following section:
-
-.. code-block:: none
-
-   # Additional templates that should be rendered to pages, maps page names to
-   # template names.
-   #    '404': '/internal/404.html',
-   html_additional_pages = {
-     'cardwall': 'cardwall.html',
-   }
-
-and then update the ``'cardwall': 'cardwall.html',`` pattern for the template name (on the left) and the webpage filename (on the right). For example, to use the cardwall template to build an HTML file named "sources.html", do the following:
-
-.. code-block:: none
-
-   html_additional_pages = {
-     'cardwall': 'sources.html',
-   }
-
-.. format-content-card-walls-standalone-configure-end
-
-
-.. _format-content-card-walls-standalone-first:
-
-First cards
---------------------------------------------------
-
-.. format-content-card-walls-standalone-first-start
-
-You should use the first card pattern to introduce the card wall *or* to break the card wall into logical groups.
-
-The block for first cards has different class names to allow for different styles, and then comments out the image used with the other card wall type. For example:
-
-.. code-block:: none
-
-   <div class="firstcard">
-     <a href="destinations_reference.html" class="card"><div class="firstcard-item">
-       <!--<div class="firstcard-image"><img id="markup" height="80" src="_static/connector-acxiom.svg"/>
-       </div>-->
-       <div class="firstcard-info">
-         <h4 class="firstcard-title">About Card Walls</h4>
-         <p class="firstcard-intro">A card wall is a template page that builds the top-level navigation, and then presents cards instead of pages. Use these to present lists of items as a visual, scrolling page.</p>
-       </div>
-     </div></a>
-   </div>
-
-Use this pattern as the first card in any card wall. This locates it in the top left of the page. The image in the first card is commented out. You *can* use an image in there. You will get more room for explanatory text without the image, but when the image is in there it is styled to be exactly the same as the information cards. Change the background color as appropriate. If you need different cards, update the styles in the main theme to support the variations.
-
-.. tip:: You *could* use it as a "category card" and place more of them within the page to break a very long list of cards into some logical groups. Or you could define more than one block of cards, and then use the first card as the first card in each block. The cardwall example in the Amperity style guide shows using multiple "firstcard" cards in the card wall.
-
-.. format-content-card-walls-standalone-first-end
-
-
-.. _format-content-card-walls-standalone-information:
-
-Information cards
---------------------------------------------------
-
-Use the following pattern for all other cards in the card wall:
-
-.. code-block:: none
-
-   <div class="cards">
-     <a href="style_guide.html" class="card"><div class="card-item">
-       <div class="card-image"><img id="markup" height="80" src="_static/cardwall-placeholder.svg"/>
-       </div>
-       <div class="card-info">
-         <h4 class="card-title">Lorem ipsum #1</h4>
-         <p class="card-intro">All of these cards link to the style guide, but they could be linked to anything!</p>
-       </div>
-     </div></a>
-   </div>
-
-.. format-content-card-walls-standalone-end
 
 
 .. _format-content-code-blocks:
@@ -488,7 +254,7 @@ Code blocks
 
 For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the ``.. code-block::`` directive.
 
-.. note:: Code block types in the |theme| are generalized. For example: the ``text`` type is used for general text files **including** configuration files and the ``sql`` type is used for general data tables. You may customize this to make them more specific and/or add more types to the code block styling options.
+.. note:: Code block types in the |theme| are generalized. For example: the ``text`` type is used for general text files **including** configuration files and the ``sql`` type is used for general data tables.
 
 Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it's pseudocode, is formatted correctly.
 
@@ -500,71 +266,9 @@ Code blocks are parsed using a tool called Pygments that checks the syntax in th
 
    For example, if a code block contains YAML and Jinja and is defined by a ``.. code-block:: yaml`` code block, the build will fail because Jinja templating is not YAML.
 
-   Use a ``none`` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.
+   Use a ``none`` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block does not check against a lexer.
 
 .. format-content-code-blocks-warning-end
-
-
-.. _format-content-code-block-line-emphasis:
-
-Line emphasis
---------------------------------------------------
-
-.. format-content-code-block-line-emphasis-start
-
-Individual lines in a code block may be emphasized. The presentation is similar to a yellow highlight in a book. The following example shows how to highlight lines 3 and 5 in a code block:
-
-.. code-block:: rst
-
-   .. code-block:: python
-      :emphasize-lines: 3,5
-   
-      def function(foo):
-        if (some_thing):
-          return bar
-        else:
-          return 0
-
-will display as:
-
-.. code-block:: python
-   :emphasize-lines: 3,5
-
-   def function(foo):
-     if (some_thing):
-       return bar
-     else:
-       return 0
-
-.. format-content-code-block-line-emphasis-end
-
-
-.. _format-content-code-block-clojure:
-
-Clojure
---------------------------------------------------
-
-.. format-content-code-block-clojure-start
-
-For Clojure blocks, assign ``clojure`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: clojure
-
-      user=> (println "Hello, world!")
-      Hello, world!
-      nil
-
-to create a code block like this:
-
-.. code-block:: clojure
-
-   user=> (println "Hello, world!")
-   Hello, world!
-   nil
-
-.. format-content-code-block-clojure-end
 
 
 .. _format-content-code-block-command-shell:
@@ -621,44 +325,6 @@ to create a code block like this:
 .. format-content-code-block-config-file-end
 
 
-.. _format-content-code-block-css:
-
-CSS
---------------------------------------------------
-
-.. format-content-code-block-css-start
-
-For CSS code blocks, assign ``css`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: css
-
-      ul.tab-selector {
-        display: block;
-        list-style-type: none;
-        margin: 10 0 10px;
-        padding: 0;
-        line-height: normal;
-        overflow: auto;
-      }
-
-to create a code block like this:
-
-.. code-block:: css
-
-   ul.tab-selector {
-     display: block;
-     list-style-type: none;
-     margin: 10 0 10px;
-     padding: 0;
-     line-height: normal;
-     overflow: auto;
-   }
-
-.. format-content-code-block-css-end
-
-
 .. _format-content-code-block-data-table:
 
 Data table
@@ -709,8 +375,8 @@ For HTML code blocks, assign ``html`` as the name of the code block:
    .. code-block:: html
 
       <div class="admonition warning">
-        <p class="first admonition-title">Warning</p>
-        <p class="last">The text for the warning built from raw HTML.</p>
+        <p class="first admonition-title">Custom warning</p>
+        <p class="last">The text for a custom warning that is built from raw HTML.</p>
       </div>
 
 to create a code block like this:
@@ -718,87 +384,11 @@ to create a code block like this:
 .. code-block:: html
 
    <div class="admonition warning">
-     <p class="first admonition-title">Warning</p>
-     <p class="last">The text for the warning built from raw HTML.</p>
+     <p class="first admonition-title">Custom warning</p>
+     <p class="last">The text for a custom warning that is built from raw HTML.</p>
    </div>
 
 .. format-content-code-block-html-end
-
-
-.. _format-content-code-block-javascript:
-
-JavaScript
---------------------------------------------------
-
-.. format-content-code-block-javascript-start
-
-For JavaScript code blocks, assign ``javascript`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: javascript
-
-      $('div.content-tabs').each(function() {
-          var tab_sel = $('<ul />', { class: "tab-selector" });
-          var i = 0;
-
-          if ($(this).hasClass('right-col')){
-              tab_sel.addClass('in-right-col');
-          }
-
-          $('.tab-content', this).each(function() {
-              var sel_item = $('<li />', {
-                  class: $(this).attr('id'),
-                  text: $(this).find('.tab-title').text()
-              });
-              $(this).find('.tab-title').remove();
-              if (i++) {
-                  $(this).hide();
-              } else {
-                  sel_item.addClass('selected');
-              }
-              tab_sel.append(sel_item);
-              $(this).addClass('contenttab');
-          });
-
-          $('.tab-content', this).eq(0).before(contenttab_sel);
-          contenttab_sel = null;
-          i = null;
-      });
-
-to create a code block like this:
-
-.. code-block:: javascript
-      
-   $('div.content-tabs').each(function() {
-       var tab_sel = $('<ul />', { class: "tab-selector" });
-       var i = 0;
-
-       if ($(this).hasClass('right-col')){
-           tab_sel.addClass('in-right-col');
-       }
-
-       $('.tab-content', this).each(function() {
-           var sel_item = $('<li />', {
-               class: $(this).attr('id'),
-               text: $(this).find('.tab-title').text()
-           });
-           $(this).find('.tab-title').remove();
-           if (i++) {
-               $(this).hide();
-           } else {
-               sel_item.addClass('selected');
-           }
-           tab_sel.append(sel_item);
-           $(this).addClass('contenttab');
-       });
-
-       $('.tab-content', this).eq(0).before(contenttab_sel);
-       contenttab_sel = null;
-       i = null;
-   });
-
-.. format-content-code-block-javascript-end
 
 
 .. _format-content-code-block-json:
@@ -848,7 +438,7 @@ JSON w/Jinja
 
 .. format-content-code-block-json-jinja-start
 
-For JSON code blocks that also embed Jinja templating, such as the nav-docs.html files that are used to build the documentation site's left navigation structures, the standard ``.. code-block:: json`` block will not work because the code block is not parsable as JSON. Instead, for code blocks that require a mix of JSON and Jinja templating, assign ``django`` as the name of the code block:
+For JSON code blocks that refuse to parse when ``json`` is assigned to the code block, try ``django`` which supports non-standard JSON structures, such as those that combined JSON and Jinja templating:
 
 .. code-block:: rst
 
@@ -910,65 +500,7 @@ to create a code block like this:
      },
    ] -%}
 
-.. admonition:: Why django?
-
-   Using ``django`` seems like an odd way to specify a code block that contains both Jinja and JSON.
-
-   Django is a site templating language that is part of the Python world. The Sphinx themes are actually built using a combination of Django, Jinja, JSON, and other stuff. The left-side navigation, in particular, is a mix of JSON structure and Jinja variables.
-
-   ``django`` identifies the Pygments lexer that parses a code block that contains both Jinja and JSON.
-
 .. format-content-code-block-json-jinja-end
-
-
-
-.. 
-.. .. _format-content-code-block-markdown:
-.. 
-.. Markdown
-.. --------------------------------------------------
-.. 
-.. .. format-content-code-block-markdown-start
-.. 
-.. For Markdown code blocks, assign ``md`` as the name of the code block:
-.. 
-.. .. code-block:: rst
-.. 
-..    .. code-block:: md
-.. 
-..       ~~~
-..       ```eval_rst
-..       .. note:: This is the text for the note built from a directive.
-..       ```
-..       ~~~
-.. 
-..       builds as:
-.. 
-..       ```eval_rst
-..       .. note:: This is the text for the note built from a directive.
-..       ```
-.. 
-.. .. note:: The Markdown lexer requires Pygments 2.2, but is configured to display the same as the reStructuredText code-block, but with MD in the upper right corner.
-.. 
-.. 
-.. to create a code block like this:
-.. 
-.. .. code-block:: md
-.. 
-..    ~~~
-..    ```eval_rst
-..    .. note:: This is the text for the note built from a directive.
-..    ```
-..    ~~~
-.. 
-..    builds as:
-.. 
-..    ```eval_rst
-..    .. note:: This is the text for the note built from a directive.
-..    ```
-.. 
-.. .. format-content-code-block-markdown-end
-
 
 
 .. _format-content-code-block-none:
@@ -1014,27 +546,93 @@ Python
 
 .. format-content-code-block-python-start
 
-For Python code blocks, assign ``python`` as the name of the code block:
+For Python code blocks, such as those that may show how to use an Amperity API endpoint, assign ``python`` as the name of the code block:
 
 .. code-block:: rst
 
    .. code-block:: python
 
-      def function(foo):
-        if (some_thing):
-          return bar
-        else:
-          return 0
+      import requests
+      import json
+      import csv
+
+      # URL for Campaigns endpoint
+      url = "https://tenant-name.amperity.com/api/campaigns"
+
+      # Required headers
+      headers = {
+        'accept': 'application/json',
+        'authorization': 'Bearer token', # add token here
+        'amperity-tenant': 'tenant-name',
+        'api-version': 'version'
+      }
+
+      # Query parameter for data template IDs
+      payload = {
+        # 'destination_data_template_id': ''
+      }
+
+      # Get the response from the Campaigns endpoint
+      response = requests.request("GET", url, headers=headers, params=payload)
+      response_json = response.json()
+
+      # Extract headers from the first data entry
+      headers = list(response_json["data"][0].keys())
+
+      # Specify the output CSV file path
+      csv_file_path = "campaigns.csv"
+
+      # Write data to a CSV file
+      with open(csv_file_path, mode='w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=headers)
+        writer.writeheader()
+        for entry in response_json["data"]:
+          writer.writerow(entry)
+
+      print("CSV file generated successfully.")
 
 to create a code block like this:
 
 .. code-block:: python
 
-   def function(foo):
-     if (some_thing):
-       return bar
-     else:
-       return 0
+   import requests
+   import json
+   import csv
+
+   # URL for Campaigns endpoint
+   url = "https://tenant-name.amperity.com/api/campaigns"
+
+   # Required headers
+   headers = {
+     'accept': 'application/json',
+     'authorization': 'Bearer token', # add token here
+     'amperity-tenant': 'tenant-name',
+     'api-version': 'version'
+   }
+
+   # Query parameter for data template IDs
+   payload = {
+     # 'destination_data_template_id': ''
+   }
+
+   # Get the response from the Campaigns endpoint
+   response = requests.request("GET", url, headers=headers, params=payload)
+   response_json = response.json()
+
+   # Extract headers from the first data entry
+   headers = list(response_json["data"][0].keys())
+
+   # Specify the output CSV file path
+   csv_file_path = "campaigns.csv"
+
+   # Write data to a CSV file
+   with open(csv_file_path, mode='w', newline='') as file:
+     writer = csv.DictWriter(file, fieldnames=headers)
+     writer.writeheader()
+     for entry in response_json["data"]:
+       writer.writerow(entry)
+
+   print("CSV file generated successfully.")
 
 .. format-content-code-block-python-end
 
@@ -1073,7 +671,7 @@ reStructuredText
 
 .. format-content-code-block-rst-start
 
-For reStructured Text code blocks, assign ``rst`` as the name of the code block:
+For reStructuredText code blocks, assign ``rst`` as the name of the code block:
 
 .. code-block:: rst
 
@@ -1105,29 +703,51 @@ Ruby
 
 .. format-content-code-block-ruby-start
 
-For Ruby code blocks, assign ``ruby`` as the name of the code block:
+For Ruby code blocks, such as those that may show how to use an Amperity API endpoint, assign ``ruby`` as the name of the code block:
 
 .. code-block:: rst
 
    .. code-block:: ruby
 
-      items = [ 'one', 1, 'two', 2.0 ]
-      for it in items
-        print it, " "
-      end
+      require 'uri'
+      require 'net/http'
 
-      print "\n"
+      url = URI("https://tenant-name.amperity.com/api/campaigns")
+
+      http = Net::HTTP.new(url.host, url.port)
+      http.use_ssl = true
+
+      request = Net::HTTP::Get.new(url)
+      request["accept"] = 'application/json'
+      request["authorization"] = 'Bearer token'
+      request["amperity-tenant"] = 'tenant-name'
+      request["api-version"] = '2024-04-01'
+      request["destination_data_template_id"] = 'ab-1CDEfGHIj'
+
+      response = http.request(request)
+      puts response.read_body
 
 to create a code block like this:
 
 .. code-block:: ruby
 
-   items = [ 'one', 1, 'two', 2.0 ]
-   for it in items
-     print it, " "
-   end
+   require 'uri'
+   require 'net/http'
 
-   print "\n"
+   url = URI("https://tenant-name.amperity.com/api/campaigns")
+
+   http = Net::HTTP.new(url.host, url.port)
+   http.use_ssl = true
+
+   request = Net::HTTP::Get.new(url)
+   request["accept"] = 'application/json'
+   request["authorization"] = 'Bearer token'
+   request["amperity-tenant"] = 'tenant-name'
+   request["api-version"] = '2024-04-01'
+   request["destination_data_template_id"] = 'ab-1CDEfGHIj'
+
+   response = http.request(request)
+   puts response.read_body
 
 .. format-content-code-block-ruby-end
 
@@ -1249,31 +869,7 @@ to create a code block like this:
 
    SaltStack is a configuration management tool similar to Ansible, Chef, and Puppet. SaltStack uses a mix of Jinja and YAML to define system states that are to be configured and maintained. The ``salt`` lexer exists in Pygments originally because of how SaltStack defines system states, their use of Python and documentation built via Sphinx, and the need for a lexer that could parse a file with code samples that contain both Jinja and YAML.
 
-   ``salt`` identifies the Pygments lexer that parses a code block that contains both Jinja and YAML.
-
 .. format-content-code-block-yaml-jinja-end
-
-
-.. _format-content-fontawesome:
-
-Font Awesome
-==================================================
-
-.. format-content-fontawesome-start
-
-The docs themes use the `free-for-web Font Awesome library <https://fontawesome.com/download>`__ as a local font library, primarily to add some flair to the left-side navigation. It's possible (though should be done sparingly) to place Font Awesome icons inline within paragraphs, like this: |fa-meh|.
-
-This requires the tokens file to have an entry similar to:
-
-.. code-block:: text
-
-   .. |fa-meh| raw:: html
-
-       &nbsp; <i class="fas fa-meh"></i> &nbsp;
-
-after which ``|fa-meh|`` used inline in a paragraph results in |fa-meh|.
-
-.. format-content-fontawesome-end
 
 
 .. _format-content-header-h1:
@@ -1286,7 +882,7 @@ Header (level 1)
    #. The left-side navigation supports 3 levels.
    #. The right-side navigation, while built automatically from the headers that exist on that page, indents each header level, and then wraps the text when the header is longer than the width of the right-side column.
 
-   As such, H4 headers are as much formatting as they are organization. Anything below H4 is recommended to be formatted as **Bold** so that it doesn't appear in the right-side navigation, but still looks on the page as if it were an H5 header. Headers formatted via **Bold** cannot be linked from the left-side navigation because only headers generate an anchor reference. Consider also reformatting the structure of your page to minimize the depth of the header levels. Or use H5 headers: it's up to you!
+   As such, H4 headers are as much formatting as they are organization. Anything below H4 is recommended to be formatted as **Bold** so that it doesn't appear in the right-side navigation, but still looks on the page as if it were an H5 header. Headers formatted via **Bold** cannot be linked from the left-side navigation because only headers generate an anchor reference. Consider also reformatting the structure of your page to minimize the depth of the header levels.
 
 .. format-content-header-h1-start
 
@@ -1372,16 +968,7 @@ Header markup length
 
 Sphinx requires the length of the header to be at least the same length as the content string that defines the header.
 
-Short headers, short title markup. Makes sense!
-
-That said, in large files, it's easier to scan the structure of the content when you can actually see where the headers are. That's why the header markup strings are recommended to be 50 characters long:
-
-.. code-block:: none
-
-   Short title
-   ==================================================
-
-This makes it easier to see the structure of the file when scrolling up and down a long topic page. This is pretty much the only reason to use consistent header markup length. Copy, paste, done.
+Amperity documentation uses a consistent header length: 50 characters. This makes it easier to scan the structure of the content within a topic.
 
 .. format-content-header-markup-length-end
 
@@ -1397,9 +984,9 @@ Images may be embedded in the documentation using the ``.. image::`` directive. 
 
 .. code-block:: rst
 
-   .. image:: ../../images/busycorp.svg
-      :width: 600 px
-      :alt: Welcome to Busycorp!
+   .. image:: ../../images/amp-amperity-bridge-alt.png
+      :width: 280 px
+      :alt: Amperity Bridge
       :align: left
       :class: no-scaled-link
 
@@ -1407,19 +994,13 @@ with the ``:width:`` and ``:align:`` attributes being aligned underneath ``image
 
 This image will appear in the documentation like this:
 
-.. image:: ../../images/busycorp.svg
-   :width: 600 px
-   :alt: Welcome to Busycorp!
+.. image:: ../../images/amp-amperity-bridge-alt.png
+   :width: 280 px
+   :alt: Amperity Bridge
    :align: left
    :class: no-scaled-link
 
 Images should be SVG when only HTML output is desired. Printing to PDF from HTML pages requires PNG images.
-
-**Wholesome Memes**
-
-You can add your favorite GIF images (but please add them to internal-facing topics only):
-
-.. image:: https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif
 
 .. format-content-images-end
 
@@ -1454,7 +1035,7 @@ For example:
 
 .. code-block:: rst
 
-   .. include:: ../../includes/terms.rst
+   .. include:: ../../shared/some-file.rst
 
 will pull in the contents of that file right into the location of the directive.
 
@@ -1470,7 +1051,7 @@ via snippet
 
 Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.
 
-.. warning:: Snippets may not be used within the same file. What this means is the source of the snippet may not also be the target for that snippet. This will cause a rendering issue in the output or an error in the build.
+.. warning:: Snippets may not be used within the same file. What this means is the source of the snippet may not also be the target for that snippet. This will cause a build error.
 
 These types of inclusions require two steps:
 
