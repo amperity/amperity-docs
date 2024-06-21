@@ -45,7 +45,7 @@ jobs:
             ls -aslh .
       - run:
           name: Build Contributing
-          command: sphinx-build -b html -W amperity-docs/contributing/source /output/contributing
+          command: sphinx-build -b html -W contributing/source /output/contributing
 
 
 workflows:
