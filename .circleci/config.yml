@@ -48,42 +48,9 @@ jobs:
           command: sphinx-build -b html -W contributing/source /output/contributing
 
 
-  docs-deploy:
-    docker:
-      - image: cimg/base:2021.11
-    resource_class: small
-    steps:
-      - run:
-          name: ping docs build pipeline
-          command: |
-            curl --request POST \
-                 --url https://circleci.com/api/v1.1/project/gh/amperity/docs/tree/master \
-                 --header "Circle-Token: $CCIPRJ_2zpnd68oVAr8HZfUSVGwJf_148c04e74bc59b03acfc89c49e669ec402eabbe0" \
-                 --header "content-type: application/json" \
-                 --data '{"branch":"master","parameters":{"docs-test":"true"}}'
-
-
-# curl -u $CCIPRJ_XccNCdTVC3XbxYVgFhFdDU_1f19ba884c6ff0ae5ad0776611cfadb170dab282: -X POST --header "Content-Type: application/json" -d '{
-#                             "branch": "feat",
-#                             "parameters": {
-#                                "workflow_ondemand": true,
-#                                "workflow_job2_ondemand": true,
-#                                "workflow_job2_param1_version": "version1"
-#                              }
-# }' https://circleci.com/api/v2/project/gh/amperity/docs/pipeline
-
-
-
-
-
 workflows:
   version: 2
   build:
     jobs:
       - docs-test
-      - docs-deploy:
-#          requires:
-#            - docs-test
-          filters:
-            branches:
-              only: main
+
