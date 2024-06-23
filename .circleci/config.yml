@@ -82,7 +82,7 @@ workflows:
     jobs:
       - docs-test
       - docs-deploy:
-        requires:
+          requires:
             - docs-test
           filters:
             branches:
