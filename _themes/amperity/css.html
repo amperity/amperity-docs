@@ -1,12 +1,4 @@
-  {#- CSS #}
-  {%- if sphinx_version_info < (4, 0) -%}
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-  {%- endif %}
-  {%- for css_file in css_files %}
-    {%- if css_file|attr("filename") %}
-      {{ css_tag(css_file) }}
-    {%- else %}
-      <link rel="stylesheet" href="{{ pathto(css_file, 1)|escape }}" type="text/css" />
-    {%- endif %}
-  {%- endfor %}
+<link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+{%- for cssfile in css_files %}
+<link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+{%- endfor %}
