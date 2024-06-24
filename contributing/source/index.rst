@@ -19,3 +19,4 @@ About Amperity documentation
    :hidden:
 
    rst
+   setup

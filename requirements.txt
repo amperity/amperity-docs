@@ -1,4 +1,4 @@
 
-Sphinx==4.4.0
-docutils==0.17
-PyJWT==2.4.0
+Sphinx==5.1.1
+docutils==0.19
+
