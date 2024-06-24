@@ -13,7 +13,7 @@ Requirements
 ==================================================
 
 * Python 3.x
-* Sphinx 6.1.1
+* Sphinx 5.1.1
 * docutils 0.19
 * sphinxcontrib-redoc 1.6.0 (builds the OpenAPI specification for the Ampeity API)
 * sphinxcontrib-video 0.2.0 (allows embedding videos on pages)
