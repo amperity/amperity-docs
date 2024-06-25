@@ -9,6 +9,8 @@ Workstation setup
 
 Local development of documentation for Amperity can be done on your workstation and requires some configuration.
 
+TEST PING DEPLOY
+
 Requirements
 ==================================================
 
