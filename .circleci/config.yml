@@ -60,7 +60,7 @@ jobs:
             --url https://circleci.com/api/v2/project/gh/amperity/docs/pipeline \
             --header 'Circle-Token: CCIPRJ_HM2nREJmRh644PZ88iBmgk_7115b641e2ab4fef18703c6aace4118c9d40b614' \
             --header 'content-type: application/json' \
-            --data '{"parameters":{"amperity-docs-deploy":true}}'
+#            --data '{"parameters":{"amperity-docs-deploy":true}}'
 
 
 
