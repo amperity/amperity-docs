@@ -49,9 +49,9 @@ workflows:
   build:
     jobs:
       - docs-test
-      - docs-deploy
+      - docs-deploy:
 #        requires:
 #            - docs-test
-#          filters:
-#            branches:
-#              only: main
+          filters:
+            branches:
+              only: main
