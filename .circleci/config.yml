@@ -32,7 +32,8 @@ jobs:
           command: |
             echo $PWD
             ls -aslh .
-
+            cd ..
+            ls -aslh .
 
 
 
