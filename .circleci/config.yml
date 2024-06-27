@@ -8,30 +8,10 @@ version: 2.1
 jobs:
   docs-test:
     docker:
-      - image: python:3.7
+      - image: python:3.9
     resource_class: medium
     steps:
-#      - run:
-#          name: Placeholder ECHO $PWD
-#          command: |
-#            echo $PWD
       - checkout
-#      - run:
-#          name: Post-checkout WTF is here
-#          command: |
-#            echo $PWD
-#            ls -aslh .
-#      - add_ssh_keys:
-#          fingerprints:
-#            - "SHA256:RgCpYZUJ4BY0EKSVzT9rCyOoEgWTeKyDL7Su7DYWvEU"
-#      - run:
-#          name: Download amperity-docs
-#          command: git clone https://github.com/amperity/amperity-docs.git
-#      - run:
-#          name: Post-amperity-docs checkout WTF is here
-#          command: |
-#            echo $PWD
-#            ls -aslh .
       - run:
           name: Install dependencies
           command: pip install -r requirements.txt
@@ -69,9 +49,9 @@ workflows:
   build:
     jobs:
       - docs-test
-      - docs-deploy
+      - docs-deploy:
 #        requires:
 #            - docs-test
-#          filters:
-#            branches:
-#              only: main
+          filters:
+            branches:
+              only: main
