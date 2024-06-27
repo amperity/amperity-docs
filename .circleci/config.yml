@@ -30,17 +30,17 @@ jobs:
       - run:
           name: Test deleting files
           command: |
-            cd output
+#            cd output
             ls -aslh .
-            cd contributing
-            ls -aslh .
-            rm -i _static/*
-            rm -i .doctrees/*
-            rm .buildinfo
-            rm genindex.html
-            rm objects.inv
-            rm searchindex.js
-            ls -aslh .
+#            cd contributing
+#            ls -aslh .
+#            rm -i _static/*
+#            rm -i .doctrees/*
+#            rm .buildinfo
+#            rm genindex.html
+#            rm objects.inv
+#            rm searchindex.js
+#            ls -aslh .
 
 
 
