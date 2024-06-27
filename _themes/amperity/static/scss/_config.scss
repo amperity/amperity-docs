@@ -165,12 +165,12 @@ $mono: "Consolas", "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 
 /* Icons
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Use Font Awesome CDN for iconography; if this, then update javascripts.html to not use the all.js
+ * Use Font Awesome CDN for iconography; if this, then update javascripts.html to not use the regular.js
  * Read more about use here: https://fortawesome.github.io/Font-Awesome/icons/
  * 
  * This theme does not use the Font Awesome CDN. Instead, the file is loaded via Javascript and is
  * part of the /static collection of files built into the theme. This ensures that icons are local
  * to the documentation set and that users who do not have an Internet connection will still see them.
  * 
- * @import url(https://use.fontawesome.com/releases/v5.0.12/css/all.css);
+ * @import url(https://use.fontawesome.com/releases/v5.0.12/css/regular.css);
  */
