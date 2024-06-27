@@ -130,3 +130,4 @@ To set up your local authoring environment:
        Run ``make serve``, and then open ``http://localhost:8080/`` to view the documenation.
 
 .. contributing-set-up-environment-end
+
