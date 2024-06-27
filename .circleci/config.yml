@@ -36,7 +36,7 @@ jobs:
             ls -aslh .
             cd contributing
             ls -aslh .
-            rm -r _static/*
+            rm -r _sources/*
             rm -r .doctrees/*
             rm .buildinfo
             rm genindex.html
