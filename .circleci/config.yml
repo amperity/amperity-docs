@@ -34,8 +34,8 @@ jobs:
             ls -aslh .
             cd site-test
             ls -aslh .
-#            cd contributing
-#            ls -aslh .
+            cd contributing
+            ls -aslh .
 #            rm -i _static/*
 #            rm -i .doctrees/*
 #            rm .buildinfo
