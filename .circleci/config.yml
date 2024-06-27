@@ -19,13 +19,33 @@ jobs:
 #          name: Install tool for using Markdown
 #          command: pip install myst-parser
       - run:
-          name: Post-dependencies WTF is here
+          name: What is here?
           command: |
             echo $PWD
             ls -aslh .
       - run:
           name: Build Contributing
-          command: sphinx-build -b html -W contributing/source /output/contributing
+          command: sphinx-build -b html -W contributing/source ./site-test/contributing
+
+      - run:
+          name: Test deleting files
+          command: |
+            echo $PWD
+            ls -aslh .
+            cd site-test
+            ls -aslh .
+            cd contributing
+            ls -aslh .
+            rm -r _sources/*
+            rm -r .doctrees/*
+            rm .buildinfo
+            rm genindex.html
+            rm objects.inv
+            rm searchindex.js
+            ls -aslh .
+            cd ..
+            ls -aslh .
+
 
 
   docs-deploy:
