@@ -36,16 +36,15 @@ jobs:
             ls -aslh .
             cd contributing
             ls -aslh .
-            cd .doctrees
+            rm -i _static/*
+            rm -i .doctrees/*
+            rm .buildinfo
+            rm genindex.html
+            rm objects.inv
+            rm searchindex.js
             ls -aslh .
-#            rm -i _static/*
-#            rm -i .doctrees/*
-#            rm .buildinfo
-#            rm genindex.html
-#            rm objects.inv
-#            rm searchindex.js
-#            ls -aslh .
-
+            cd ..
+            ls -aslh .
 
 
 
