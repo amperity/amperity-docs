@@ -25,15 +25,24 @@ jobs:
             ls -aslh .
       - run:
           name: Build Contributing
-          command: sphinx-build -b html -W contributing/source ./site-test/contributing
+          command: sphinx-build -b html -W contributing/source /output/contributing
 
       - run:
           name: Test deleting files
           command: |
             echo $PWD
             ls -aslh .
-            cd ..
+            cd site-test
             ls -aslh .
+#            cd contributing
+#            ls -aslh .
+#            rm -i _static/*
+#            rm -i .doctrees/*
+#            rm .buildinfo
+#            rm genindex.html
+#            rm objects.inv
+#            rm searchindex.js
+#            ls -aslh .
 
 
 
