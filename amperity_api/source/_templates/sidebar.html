@@ -1,0 +1,25 @@
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+
+{% if display_github %}
+    <a href="{{ github_path }}{{ pagename }}.rst"><img src="_static/edit-in-github.png" alt="alt" width="90%"/>
+  </a>
+{% endif %}
+
+<!-- This is an example of how to add an image above the right-side nav bar. It could be below also. -->
+
+  <!--<a class="sphinxsidebar-ad" href="https://docs.amperity.com/datagrid/sandboxes.html" target="_blank">
+    <img src="_static/remember-to-use-a-sandbox.png" alt="alt" />
+  </a>-->
+
+  <div class="sphinxsidebarwrapper">
+    {%- if sidebars != None %}
+      {#- new style sidebar: explicitly include/exclude templates #}
+      {%- for sidebartemplate in sidebars %}
+      {%- include sidebartemplate %}
+      {%- endfor %}
+    {%- endif %}
+  </div>
+
+<!-- An image could also go here. -->
+
+</div>

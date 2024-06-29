@@ -1,0 +1,52 @@
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+
+   * - **data**
+     - A JSON array of values for the current page of results. The array of values includes the following properties:
+
+       **event_id**
+          The Amperity internal identifier for the event.
+
+       **event_type**
+          The :ref:`type of event <endpoint-get-audit-events-list-common-event-types>`.
+
+       **happened_at**
+          The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC.
+
+       **principal_email**
+          The email address for the user who initiated the action.
+
+       **principal_id**
+          The authentication identifier for the user who initiated the action. This user may be an API key or a non-human user.
+
+       **principal_name**
+          The friendly name of the user associated with the activity, if available, otherwise the email address or API key.
+
+       **object_id**
+          The identifier for the object against which the action occurred.
+
+       **object_name**
+          Optional. A composed string that describes the object(s) for which the action occurred.
+
+       **origin_ip**
+          The IP address that is associated with the user who initiated the action.
+
+       **tenant_family**
+          The name of the tenant family that is associated with the action. When **tenant** is a sandbox, **tenant_family** is the tenant ID of the production tenant.
+
+       **tenant**
+          The tenant ID of the tenant associated with the action. This ID may be for a sandbox.
+
+   * - **next_token**
+     - The cursor value to use in a subsequent request to return the next page of results.
+
+       .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
+
+   * - **total**
+     - The total count of all results. This property is only returned when **with_total** is set to **true** in a request.
+
+       .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.

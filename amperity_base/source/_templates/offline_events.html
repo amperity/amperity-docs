@@ -1,0 +1,199 @@
+{#
+    basic/search.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for the search page.
+
+    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" -%}
+{%- set title = _('Destinations') -%}
+
+{%- block extra_meta %}
+<meta content="A cardwall with links to topics that describe how to configure Amperity to send offline events to a variety of destinations." lang="en" name="description" xml:lang="en" />
+<meta class="swiftype" content="A cardwall with links to topics that describe how to configure Amperity to send offline events to a variety of destinations." data-type="text" name="body" />
+<meta class="swiftype" content="Offline events" data-type="string" name="title" />
+{%- endblock %}
+
+{%- block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+{%- endblock %}
+
+{%- block content %}
+
+    <div class="document markup-docs">
+    {%- block document %}
+      <div class="documentcardwrapper">
+        <div class="cardwrapper">
+          <div class="body" role="main">
+            {% block body %}
+
+<div class="container-cardgroup-cement">
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-info">
+        <h4 class="card-subtitle">About offline events</h4>
+        <p class="card-intro">Offline events help your brand associate customer purchases and customer activity with your marketing campaigns.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_braze.html#custom-attributes" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-braze.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Braze</h4>
+        <p class="card-intro">Send customer profiles and attributes to Braze using the Braze API.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_criteo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-cr1t30.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Criteo</h4>
+        <p class="card-intro">Send offline events to Criteo to help track the success of campaigns.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-facebook-ads.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Facebook</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Facebook.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-facebook-messenger.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Facebook Messenger</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Facebook Messenger.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-instagram.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Instagram</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Instagram.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_klaviyo.html#customer-profile-parameters" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-klaviyo.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Klaviyo</h4>
+        <p class="card-intro">Use the Klaviyo API to send offline events to Klaviyo.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-meta.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Meta Ads Manager</h4>
+        <p class="card-intro">Use the Conversions API to send offline events to Meta Ads Manager.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_pinterest.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-pinterest.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Pinterest</h4>
+        <p class="card-intro">Upload offline conversions to Pinterest using a CSV file.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_snapchat.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-snapchat.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Snapchat</h4>
+        <p class="card-intro">Upload offline events to Snapchat using a CSV file.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_the_trade_desk.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-thetradedesk.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">The Trade Desk</h4>
+        <p class="card-intro">Associate offline events with UID 2.0 audiences in The Trade Desk.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_tiktok_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-tiktok.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">TikTok Ads Manager</h4>
+        <p class="card-intro">Send offline events to TikTok Ads Manager to track conversions.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/events_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-whatsapp.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">WhatsApp</h4>
+        <p class="card-intro">Use audiences and offilne events to open conversations in WhatsApp.</p>
+      </div>
+    </div></a>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+          </div>
+          {%- block footer %}
+          <div class="footer" role="contentinfo">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+              {%- else %}
+                {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
+              {%- endif %}
+            {%- endif %}
+            </div>
+          {%- endblock %}
+        </div>
+      </div>
+  {%- endblock %}
+
+      <div class="clearer"></div>
+    </div>
+{%- endblock %}

@@ -1,0 +1,137 @@
+{#
+    basic/search.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for the search page.
+
+    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" -%}
+{%- set title = _('Purchase Behaviors') -%}
+
+{%- block extra_meta %}
+<meta content="A cardwall with links to topics that describe transactional behavior attributes, referred to in documentation as purchase behaviors." lang="en" name="description" xml:lang="en" />
+<meta class="swiftype" content="A cardwall with links to topics that describe transactional behavior attributes, referred to in documentation as purchase behaviors." data-type="text" name="body" />
+<meta class="swiftype" content="Purchase Behaviors" data-type="string" name="title" />
+{%- endblock %}
+
+{%- block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+{%- endblock %}
+
+{%- block content %}
+
+    <div class="document markup-docs">
+    {%- block document %}
+      <div class="documentcardwrapper">
+        <div class="cardwrapper">
+          <div class="body" role="main">
+            {% block body %}
+
+<div class="container-cardgroup-cement">
+
+  <div class="card-group-cement-title">
+    <div class="card-group-cement-box">
+      <div class="card-group-cement-info">
+        <h4 class="card-group-cement-subtitle">Purchase Behaviors</h4>
+        <!--<p class="card-group-cement-intro">Use purchase behaviors to build segments.</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="cardgroups">
+    <a href="ampiq/purchase_behavior_first_order.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">First orders</h4>
+          <p class="cardgroups-intro">When did your customers place their first orders? What did they order?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="ampiq/purchase_behavior_has_not_purchased.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Has not purchased</h4>
+          <p class="cardgroups-intro">Which of your customers have not purchased a product?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="ampiq/purchase_behavior_has_purchased.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Has purchased</h4>
+          <p class="cardgroups-intro">Which purchased a product? What did they purchase?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="ampiq/purchase_behavior_most_frequent_order.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Most frequent orders</h4>
+          <p class="cardgroups-intro">Which products have your customers most frequently purchased?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="ampiq/purchase_behavior_repeat_order.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Repeat orders</h4>
+          <p class="cardgroups-intro">Who has purchased more than once? What did they purchase?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="ampiq/purchase_behavior_total_value_of_orders.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Total value of orders</h4>
+          <p class="cardgroups-intro">What is the total value of orders that were made by your customers?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+          </div>
+          {%- block footer %}
+          <div class="footer" role="contentinfo">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+              {%- else %}
+                {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
+              {%- endif %}
+            {%- endif %}
+            </div>
+          {%- endblock %}
+        </div>
+      </div>
+  {%- endblock %}
+
+      <div class="clearer"></div>
+    </div>
+{%- endblock %}
+
+
+
+

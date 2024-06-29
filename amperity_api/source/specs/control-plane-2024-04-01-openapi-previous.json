@@ -1,0 +1,473 @@
+{
+    "schemes" : [ "https" ],
+    "tags" : [ {
+      "name" : "Audit events"
+    }, {
+      "name" : "Campaigns"
+    } ],
+    "definitions" : {
+      "AuditEvent" : {
+        "type" : "object",
+        "properties" : {
+          "tenant" : {
+            "description" : "The unique identifier for the tenant.",
+            "x-example" : "acme-sb",
+            "type" : "string"
+          },
+          "principal_name" : {
+            "description" : "The friendly name of the user associated with the activity, if available, otherwise the email address or API key.",
+            "type" : "string"
+          },
+          "object_id" : {
+            "description" : "The identifier for the object against which the action occurred.",
+            "x-example" : "seg-35GMWpn6Y",
+            "type" : "string"
+          },
+          "happened_at" : {
+            "description" : "The date and time at which the action occurred. Dates and times are in ISO-8601 format and in UTC.",
+            "x-example" : "2024-04-09T17:21:06.747Z",
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "tenant_family" : {
+            "description" : "The unique identifier for the tenant family",
+            "x-example" : "acme",
+            "type" : "string"
+          },
+          "object_name" : {
+            "description" : "A composed string that describes the object(s) for which the action occurred.",
+            "x-example" : "demo segment",
+            "type" : "string"
+          },
+          "principal_email" : {
+            "description" : "The email address for the user who initiated the action.",
+            "type" : "string"
+          },
+          "principal_id" : {
+            "description" : "The identifier for the user who initiated the action. This user may be an API key or a non-human user.",
+            "type" : "string"
+          },
+          "origin_ip" : {
+            "description" : "The IP address that is associated with the user who initiated the action.",
+            "x-example" : "127.0.0.1",
+            "type" : "string"
+          },
+          "event_id" : {
+            "description" : "The unique identifier for the event.",
+            "x-example" : "ae-21HCWon6Y",
+            "type" : "string"
+          },
+          "event_type" : {
+            "description" : "The type of event.",
+            "x-example" : ":amperity.plugin.credential/updated",
+            "type" : "string"
+          }
+        },
+        "additionalProperties" : false,
+        "required" : [ "tenant", "principal_name", "object_id", "happened_at", "tenant_family", "object_name", "principal_email", "principal_id", "origin_ip", "event_id", "event_type" ]
+      },
+      "AuditEventListEnvelope" : {
+        "type" : "object",
+        "properties" : {
+          "total" : {
+            "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "next_token" : {
+            "description" : "The cursor value to use in a subsequent request to return the next page of results.",
+            "x-example" : "ZVEy1iwsKBs9a6H",
+            "type" : "string"
+          },
+          "data" : {
+            "description" : "List of audit events",
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/AuditEvent"
+            }
+          }
+        },
+        "additionalProperties" : false,
+        "required" : [ "data" ]
+      },
+      "Campaign" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "x-example" : "cc-21HCWon6Y",
+            "type" : "string"
+          },
+          "name" : {
+            "x-example" : "Holiday Campaign",
+            "type" : "string"
+          },
+          "deliver_at" : {
+            "description" : "The instant this campaign should be delivered",
+            "type" : "string",
+            "format" : "date-time"
+          }
+        },
+        "additionalProperties" : false,
+        "required" : [ "id", "name" ]
+      },
+      "CampaignListEnvelope" : {
+        "type" : "object",
+        "properties" : {
+          "total" : {
+            "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "next_token" : {
+            "description" : "The cursor value to use in a subsequent request to return the next page of results.",
+            "x-example" : "ZVEy1iwsKBs9a6H",
+            "type" : "string"
+          },
+          "data" : {
+            "description" : "List of campaigns",
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/Campaign"
+            }
+          }
+        },
+        "additionalProperties" : false,
+        "required" : [ "data" ]
+      },
+      "ErrorResponse" : {
+        "type" : "object",
+        "properties" : {
+          "status" : {
+            "x-example" : 400,
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "message" : {
+            "type" : "string"
+          }
+        },
+        "additionalProperties" : false,
+        "required" : [ "status", "message" ]
+      },
+      "Segment" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "x-example" : "mx-seg-21HCWon6Y",
+            "type" : "string"
+          },
+          "name" : {
+            "x-example" : "Washington Purchasers",
+            "type" : "string"
+          }
+        },
+        "additionalProperties" : false,
+        "required" : [ "id", "name" ]
+      },
+      "SegmentListEnvelope" : {
+        "type" : "object",
+        "properties" : {
+          "total" : {
+            "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "next_token" : {
+            "description" : "The cursor value to use in a subsequent request to return the next page of results.",
+            "x-example" : "ZVEy1iwsKBs9a6H",
+            "type" : "string"
+          },
+          "data" : {
+            "description" : "List of segments",
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/Segment"
+            }
+          }
+        },
+        "additionalProperties" : false,
+        "required" : [ "data" ]
+      }
+    },
+    "produces" : [ "application/json" ],
+    "paths" : {
+      "/campaigns" : {
+        "get" : {
+          "parameters" : [ {
+            "in" : "query",
+            "name" : "with_total",
+            "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
+            "required" : false,
+            "type" : "boolean"
+          }, {
+            "in" : "query",
+            "name" : "limit",
+            "description" : "The maximum number of records to include in a single page of results.",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "in" : "query",
+            "name" : "api_version",
+            "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+            "required" : false,
+            "x-example" : "2024-04-01",
+            "type" : "string"
+          }, {
+            "in" : "query",
+            "name" : "next_token",
+            "description" : "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.",
+            "required" : false,
+            "x-example" : "ZVEy1iwsKBs9a6H",
+            "type" : "string"
+          }, {
+            "in" : "query",
+            "name" : "destination_data_template_id",
+            "description" : "Use this parameter to restrict the list of campaigns that are returned to only campaigns that are configured to use specific data template.",
+            "required" : false,
+            "x-example" : "ct-2QLLqXBEq",
+            "type" : "string"
+          } ],
+          "responses" : {
+            "400" : {
+              "description" : "Bad Request",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "401" : {
+              "description" : "Authentication Required",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "403" : {
+              "description" : "Not Authorized",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "404" : {
+              "description" : "Not Found"
+            },
+            "405" : {
+              "description" : "Method Not Allowed",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "500" : {
+              "description" : "Internal Error",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "200" : {
+              "description" : "List of campaigns",
+              "schema" : {
+                "$ref" : "#/definitions/CampaignListEnvelope"
+              }
+            }
+          },
+          "description" : "List campaigns",
+          "summary" : "List campaigns",
+          "produces" : [ "application/json" ],
+          "consumes" : [ "application/json" ],
+          "tags" : [ "Campaigns" ],
+          "operationId" : "list-campaign"
+        }
+      },
+      "/segments" : {
+        "get" : {
+          "parameters" : [ {
+            "in" : "query",
+            "name" : "with_total",
+            "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
+            "required" : false,
+            "type" : "boolean"
+          }, {
+            "in" : "query",
+            "name" : "limit",
+            "description" : "The maximum number of records to include in a single page of results.",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "in" : "query",
+            "name" : "api_version",
+            "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+            "required" : false,
+            "x-example" : "2024-04-01",
+            "type" : "string"
+          }, {
+            "in" : "query",
+            "name" : "next_token",
+            "description" : "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.",
+            "required" : false,
+            "x-example" : "ZVEy1iwsKBs9a6H",
+            "type" : "string"
+          } ],
+          "responses" : {
+            "400" : {
+              "description" : "Bad Request",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "401" : {
+              "description" : "Authentication Required",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "403" : {
+              "description" : "Not Authorized",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "404" : {
+              "description" : "Not Found"
+            },
+            "405" : {
+              "description" : "Method Not Allowed",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "500" : {
+              "description" : "Internal Error",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "200" : {
+              "description" : "List of segments",
+              "schema" : {
+                "$ref" : "#/definitions/SegmentListEnvelope"
+              }
+            }
+          },
+          "description" : "List segments",
+          "summary" : "List segments",
+          "produces" : [ "application/json" ],
+          "consumes" : [ "application/json" ],
+          "tags" : [ "Segments" ],
+          "operationId" : "list-segment"
+        }
+      },
+      "/audit-events" : {
+        "get" : {
+          "parameters" : [ {
+            "in" : "query",
+            "name" : "with_total",
+            "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
+            "required" : false,
+            "type" : "boolean"
+          }, {
+            "in" : "query",
+            "name" : "limit",
+            "description" : "The maximum number of records to include in a single page of results.",
+            "required" : false,
+            "type" : "integer",
+            "format" : "int64"
+          }, {
+            "in" : "query",
+            "name" : "api_version",
+            "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+            "required" : false,
+            "x-example" : "2024-04-01",
+            "type" : "string"
+          }, {
+            "in" : "query",
+            "name" : "next_token",
+            "description" : "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.",
+            "required" : false,
+            "x-example" : "ZVEy1iwsKBs9a6H",
+            "type" : "string"
+          }, {
+            "in" : "query",
+            "name" : "happened_start",
+            "description" : "The start date (inclusive) that defines the beginning ofthe time range for which audit events will be returned.The date should be in ISO-8601 format and in UTC.",
+            "required" : false,
+            "x-example" : "2023-01-03T11:11:11Z",
+            "type" : "string",
+            "format" : "date-time"
+          }, {
+            "in" : "query",
+            "name" : "happened_end",
+            "description" : "The end date (exclusive) that defines the end of thetime range for which audit events will be returned.The date should be in ISO-8601 format and in UTC",
+            "required" : false,
+            "x-example" : "2023-01-03T22:22:22Z",
+            "type" : "string",
+            "format" : "date-time"
+          } ],
+          "responses" : {
+            "400" : {
+              "description" : "Bad Request",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "401" : {
+              "description" : "Authentication Required",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "403" : {
+              "description" : "Not Authorized",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "404" : {
+              "description" : "Not Found"
+            },
+            "405" : {
+              "description" : "Method Not Allowed",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "500" : {
+              "description" : "Internal Error",
+              "schema" : {
+                "$ref" : "#/definitions/ErrorResponse"
+              }
+            },
+            "200" : {
+              "description" : "List of audit events",
+              "schema" : {
+                "$ref" : "#/definitions/AuditEventListEnvelope"
+              }
+            }
+          },
+          "description" : "Use the Audit Events endpoint to return a log of user activity that occurred with your tenant. When requesting events for a production tenant, all events (including events from sandboxes created for that tenant) are included in the response. When requesting events from a sandbox, only events from that sandbox are included in the response.",
+          "summary" : "List audit events",
+          "produces" : [ "application/json" ],
+          "consumes" : [ "application/json" ],
+          "tags" : [ "Audit events" ],
+          "operationId" : "list-events"
+        }
+      }
+    },
+    "consumes" : [ "application/json" ],
+    "host" : "app.amperity.com",
+    "info" : {
+      "title" : "Amperity API",
+      "version" : "2024-04-01",
+      "description" : "# Overview\n\n## Who is this for?\n\nThis documentation is for developers creating their own integration with [Amperity](https://docs.amperity.com/reference/api/) APIs.\n\n\n## Authentication\n\nAPI calls must be authenticated with an [API Key](https://docs.amperity.com/reference/api/).\n\n\n## Service URL\n\nThe base service URL follows the pattern `https://<tenant-id>.amperity.com/api`, for example:\n\n```sh\n> curl https://acme.amperity.com/api/campaigns?limit=2 \\\\\n  -H \\\"Authorization: Bearer <token>\\\" \\\\\n  -H \\\"Amperity-Tenant: acme\\\" \\\\\n  -H \\\"api-version: 2024-04-01\\\"\n```\n\nWhen working with a [sandbox tenant](https://docs.amperity.com/datagrid/sandboxes.html),\nuse the parent tenant in the URL and the sandbox tenant id in the `Amperity-Tenant` header:\n\n```sh\n> curl https://acme.amperity.com/api/campaigns?limit=2 \\\\\n  -H \\\"Authorization: Bearer <token>\\\" \\\\\n  -H \\\"Amperity-Tenant: acme-sb-2zezitlj\\\" \\\\\n  -H \\\"api-version: 2024-04-01\\\"\n```\n\n\n## Headers\n\nCommon headers used in Amperity APIs:\n\n- `Authorization`: *(required)* The bearer authentication header, typically an API Key\n- `api-version`: *(required)* The version of the API to use, e.g. `2024-04-01`.  See [Versioning](#section/Overview/Versioning) for more information. This can also be provided as a query parameter, but the value provided in the header will be used over any query parameter in event of conflicting values.\n- `Amperity-Tenant`: *(required)* The tenant id or sandbox tenant id for the request, e.g. `acme2`\n\n\n## Pagination\n\nAmperity APIs implement standard cursor based pagination scheme for all `GET` resource collections.\nWhen you send a request to an endpoint that supports pagination, the response body returns the\nfirst page of results. When there are no more results, the `next_token` will not be present.\nTo iterate through a collection, use the following URL query parameters:\n\n- `with_total`: when true, include a total count of all results. Obtaining the record count may slow down API response time. Defaults to false.\n- `next_token`: opaque token used to paginate through results.  Omit the `next_token` parameter to get the first page of results.\n- `limit`: The maximum number of records to include in a single page of results. The endpoint may decide to return fewer results than the caller asked for, even if there is more data available.\n\nThe response object will include the following fields:\n\n- `data`: JSON array of values in the current page of results.\n- `next_token`: The cursor value to use in a subsequent request to fetch the next page of results.  When there are no more results, the `next_token` will not be included in the response.  If an endpoint returns a full listing it will have the same response shape as one that paginates but has no more results.\n- `total`: When requested with `with_total`, the total number of records.\n\n\n## Error Response\n\nFor requests that result in errors, a standard error response shape will be returned with the fields:\n\n- `status`: The status code of the error\n- `message`: A human readable error message\n- `request_id`: An optional Amperity request id\n- `trace_id`: An optional Amperity trace id for use in tracing\n\nExample:\n```json\n{\\\"status\\\": 400,\n \\\"message\\\": \\\"Error updating database: Can't rename to existing database table 'Customized_UIT'\\\",\n \\\"request_id\\\":\\\"6ce22158-e79a-4968-8898-35dbe4eb90e1\\\",\n \\\"trace_id\\\":\\\"1c9d3727772ac1af0f590aeeeda1aded\\\"}\n```\n \n## Versioning\n\nVersioning is controlled by a `api-version` header, which is a date in `YYYY-MM-DD` format that\nrepresents the \\\"version\\\" of the API which you expect from Amperity. It is designed to give\ndevelopers the freedom to adapt to Amperity API changes on their own schedule. \n\nAll API requests *require* a version parameter; we will not default you to the latest version.\nThis gives developers control over the time period in which to call our continuously updated API.\nIf you do not include an version in the request, an error will be returned. In order to stay up\nto date with the latest changes, Amperity recommends updating your version as often as possible.\nUsing a single version across all API calls will avoid any incompatibilities between APIs.\n\n\n### Supported Versions\n\nThe currently supported versions are:\n* `2024-04-01`\n\n\n### Unstable\n\nDuring development, Amperity may release APIs for testing using the `unstable` version identifier.\nUnstable versions contain features that are still in progress and may not be backward compatible.\nThere are no guarantees around customer support, notification of changes, breaking changes, or\navailability of unreleased versions.\n\n\n### Lifespan\n\nAmperity will periodically release new versions throughout the year and each version will be\nsupported for at least 1 year.  Amperity will provide at least 6 months notice before marking\na version as unsupported. API calls made with a version identifier that is no longer supported\nwill error with a 400 response.  Developers should monitor our API documentation to know when\nversions are no longer supported.\n\n\n### Deprecation\n\nAs Amperity continues to grow and evolve, we will occasionally deprecate fields or entire endpoints.\nFields or parameters being deprecated will be annotated as such in the documentation. To warn\ndevelopers of impending deprecation for an endpoint, a `Deprecation` header will be included and a\n`Sunset` header may be included.  The `Deprecation` header will either be `true` to indicate an\nendpoint has been deprecated or a future date as described in the\n[Deprecation Header proposal](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header).\nIn addition, a [Sunset header](https://datatracker.ietf.org/doc/html/rfc8594) may be included to\nindicate the date at which the endpoint may cease to function and return a 4xx response.\n\nThe `Deprecation` and `Sunset` headers will be added 6 months prior to an endpoint's removal.  The\nvalue of the `Deprecation` header will be 3 months before the endpoint's removal date.  The value\nof the `Sunset` header is the removal date.\n\nThe purpose of the `Deprecation` and `Sunset` headers is merely informational.  We recommend clients\nbuild alerts on this monitoring information to ensure the proper amount of time for migration. Example:\n\n```\nDeprecation: Tue, 1 Sep 2024 23:59:59 GMT\nSunset: Wed, 1 Dec 2024 23:59:59 GMT\n```\n\n\n### Breaking Changes\n\nAny breaking changes will be released in a new API version.  A breaking change is any change\nthat requires a third-party developer to do any migration work to maintain the existing\nfunctionality of their application. Some examples of breaking changes are:\n\n* adding pagination to a resource collection response\n* adding a new or modifying an existing validation to an existing resource\n* requiring a parameter that wasn’t required before\n* changing existing error response codes/messages\n* changing the data type of an existing field\n* changing supported filtering on existing endpoints\n* removing an endpoint\n* removing or renaming a parameter or response field\n* removing an enum value\n* adding a new feature that will change the meaning of a field\n* changing the URL structure of an existing endpoint\n\nAdditive changes are non-breaking:\n* adding an endpoint\n* adding an optional parameter\n* adding an optional request header\n* adding a response field or header\n* adding an enum value\n\n",
+      "contact" : {
+        "name" : "Amperity Support",
+        "url" : "https://docs.amperity.com/",
+        "email" : "support@amperity.com"
+      },
+      "x-logo" : {
+        "url" : "_static/logo-api.png",
+        "backgroundColor" : "#000",
+        "altText" : "Amperity API Docs"
+      }
+    },
+    "swagger" : "2.0"
+  }
