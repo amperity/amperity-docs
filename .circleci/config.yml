@@ -24,6 +24,24 @@ jobs:
             echo $PWD
             ls -aslh .
       - run:
+          name: Build base docs
+          command: sphinx-build -b html -W amperity_base/source ./site-test/
+      - run:
+          name: Build AmpIQ user guides
+          command: sphinx-build -b html -W amperity_ampiq/source ./site-test/ampiq
+      - run:
+          name: Build Amp360 user guides
+          command: sphinx-build -b html -W amperity_amp360/source ./site-test/amp360
+      - run:
+          name: Build Operators guide
+          command: sphinx-build -b html -W amperity_datagrid/source ./site-test/datagrid
+      - run:
+          name: Build API
+          command: sphinx-build -b html -W amperity_api/source ./site-test/api
+      - run:
+          name: Build A-Z reference
+          command: sphinx-build -b html -W amperity_reference/source ./site-test/reference
+      - run:
           name: Build Contributing
           command: sphinx-build -b html -W contributing/source ./site-test/contributing
 
