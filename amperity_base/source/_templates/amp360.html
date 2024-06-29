@@ -1,0 +1,384 @@
+{#
+    basic/search.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for the search page.
+
+    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" -%}
+{%- set title = _('About Amp360') -%}
+
+{%- block extra_meta %}
+<meta content="A cardwall with links to topics about Amp360." lang="en" name="description" xml:lang="en" />
+<meta class="swiftype" content="A cardwall with links to topics about Amp360." data-type="text" name="body" />
+<meta class="swiftype" content="About Amp360" data-type="string" name="title" />
+{%- endblock %}
+
+{%- block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+{%- endblock %}
+
+{%- block content %}
+
+    <div class="document markup-docs">
+    {%- block document %}
+      <div class="documentcardwrapper">
+        <div class="cardwrapper">
+          <div class="body" role="main">
+            {% block body %}
+
+
+<div class="container">
+
+  <div class="doubles-ampiq">
+    <div class="double-ampiq-item">
+      <div class="double-ampiq-info">
+        <h1 class="double-ampiq-title">Amp360</h1>
+        <p class="double-ampiq-subtitle">The modern customer 360.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="amps">
+    <a href="amp360/amp360.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-logo-amp360-dark.png"/>
+        </div>
+        <div class="amp-info">
+          <h4 class="amp-title">What is Amp360?</h4>
+          <p>Accurate and accessible customer profiles, ready for analysis anywhere.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="destinations_analytics.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-amp360-analytics-bi.png"/>
+        </div>
+        <div class="amp-info">
+          <h4 class="amp-title">Analytics and BI tools</h4>
+          <p>Up-to-date data helps you make better decisions and optimize your campaigns.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<div class="container-cardgroup-ice">
+
+  <div class="card-group-ice-title">
+    <div class="card-group-ice-box">
+      <div class="card-group-ice-info">
+        <h4 class="card-group-ice-subtitle">Tools for Analysts</h4>
+        <!--<p class="card-group-ice-intro">Use these attributes to build segments.</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="amps">
+    <a href="amp360/queries.html" class="card"><div class="amp-item">
+      <div class="amp-image"><img id="markup" height="80" src="_static/amp-queries-123.png"/>
+      </div>
+      <div class="amp-info">
+        <h4 class="amp-title">1. Build queries</h4>
+        <p>Build queries using Presto SQL against any database or table in your tenant.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="amps">
+    <a href="amp360/orchestrations.html" class="card"><div class="amp-item">
+      <div class="amp-image"><img id="markup" height="80" src="_static/amp-destinations-123.png"/>
+      </div>
+      <div class="amp-info">
+        <h4 class="amp-title">2. Send data anywhere</h4>
+        <p>Send the results of your queries and/or entire tables to any destination.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="amps">
+    <a href="amp360/workflows.html" class="card"><div class="amp-item">
+      <div class="amp-image"><img id="markup" height="80" src="_static/amp-workflows-123.png"/>
+      </div>
+      <div class="amp-info">
+        <h4 class="amp-title">3. Monitor workflows</h4>
+        <p>Ensure that your data arrives at the locations to which it's been sent.</p>
+      </div>
+    </div></a>
+  </div>
+
+</div>
+
+
+<div class="container-cardgroup-cement">
+
+  <div class="card-group-cement-title">
+    <div class="card-group-cement-box">
+      <div class="card-group-cement-info">
+        <h4 class="card-group-cement-subtitle">Build Queries</h4>
+        <!--<p class="card-group-ice-intro">Common scenarios</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="cardgroups">
+    <a href="amp360/queries.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">About SQL queries</h4>
+          <p class="cardgroups-intro">Build any type of query against any table in any of your databases.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="queries.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Example SQL queries</h4>
+          <p class="cardgroups-intro">Some examples of the types of queries you might use in your tenant.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="reference/sql_presto.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Presto SQL</h4>
+          <p class="cardgroups-intro">A distributed query engine that efficiently queries data and returns results quickly.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+<div class="container-cardgroup-ice">
+
+  <div class="card-group-ice-title">
+    <div class="card-group-ice-box">
+      <div class="card-group-ice-info">
+        <h4 class="card-group-ice-subtitle">Visual Query Editor</h4>
+        <!--<p class="card-group-ice-intro">Common scenarios</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="cardgroups">
+    <a href="amp360/queries_visual.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">About visual queries</h4>
+          <p class="cardgroups-intro">A user interface helps you build queries without having to write SQL.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="queries_usecases_visual.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Example visual queries</h4>
+          <p class="cardgroups-intro">Build useful queries in just a few clicks. No SQL required!</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="amp360/queries_visual.html#and-vs-or" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">AND vs. OR</h4>
+          <p class="cardgroups-intro">AND returns a smaller audience; OR returns a larger audience.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+<!--<div class="container-cardgroup-cement">
+
+  <div class="card-group-cement-title">
+    <div class="card-group-cement-box">
+      <div class="card-group-cement-info">
+        <h4 class="card-group-cement-subtitle">Send Data Anywhere</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardgroups">
+    <a href="xxxxx.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Send query results ...</h4>
+          <p class="cardgroups-intro">xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="xxxxx.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Send tables ...</h4>
+          <p class="cardgroups-intro">xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="xxxxx.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">... to anywhere</h4>
+          <p class="cardgroups-intro">xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>-->
+
+
+<div class="container-cardgroup-cement">
+
+  <div class="card-group-cement-title">
+    <div class="card-group-cement-box">
+      <div class="card-group-cement-info">
+        <h4 class="card-group-cement-subtitle">Monitor Workflows</h4>
+        <!--<p class="card-group-cement-intro">Monitor workflows</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="cardgroups">
+    <a href="reference/workflows.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Workflows</h4>
+          <p class="cardgroups-intro">A workflow shows you the status of your queries and orchestrations.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="reference/notifications.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Notifications</h4>
+          <p class="cardgroups-intro">Notifications alert you to issues related to queries and orchestrations.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!--<div class="cardgroups">
+    <a href="amp360/workflow_actions.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Workflow actions</h4>
+          <p class="cardgroups-intro">Workflow actions help you resolve issues with queries and sending data.</p>
+        </div>
+      </div>
+    </a>
+  </div>-->
+
+</div>
+
+
+<!--<div class="container-cardgroup-midnight">
+
+  <div class="card-group-midnight-title">
+    <div class="card-group-midnight-box">
+      <div class="card-group-midnight-info">
+        <h4 class="card-group-midnight-subtitle">Reference</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardgroups">
+    <a href="amp360/queries_reference.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">All about queries</h4>
+          <p class="cardgroups-intro">xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="reference/orchestrations.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">All about orchestrations</h4>
+          <p class="cardgroups-intro">xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="reference/workflows.html" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">All about workflows</h4>
+          <p class="cardgroups-intro">xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>-->
+
+
+
+
+
+
+{% endblock %}
+
+
+          </div>
+          {%- block footer %}
+          <div class="footer" role="contentinfo">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+              {%- else %}
+                {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
+              {%- endif %}
+            {%- endif %}
+            </div>
+          {%- endblock %}
+        </div>
+      </div>
+  {%- endblock %}
+
+      <div class="clearer"></div>
+    </div>
+{%- endblock %}
+
+
+
+

@@ -1,0 +1,17 @@
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+
+{% if display_github %}
+    <a href="{{ github_path }}{{ pagename }}.rst"><img src="_static/edit-in-github.png" alt="alt" width="90%"/>
+  </a>
+{% endif %}
+
+  <div class="sphinxsidebarwrapper">
+    {%- if sidebars != None %}
+      {#- new style sidebar: explicitly include/exclude templates #}
+      {%- for sidebartemplate in sidebars %}
+      {%- include sidebartemplate %}
+      {%- endfor %}
+    {%- endif %}
+  </div>
+
+</div>

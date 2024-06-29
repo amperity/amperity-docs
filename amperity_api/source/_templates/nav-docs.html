@@ -1,0 +1,365 @@
+{% set active_product = active_product|default('Amperity API') -%}
+{% set active_page_name = active_page_name|default('Amperity API') -%}
+{% set active_page_icon = active_page_icon|default('<i class="far fa-circle fa-fw icon-left">') -%}
+<!--{% set active_search_path = active_search_path|default('/search.html') -%}-->
+<!--{% set active_version = active_version|default('Latest') -%}-->
+{% set defaultNavItems = [
+
+  {
+    "title": "Amperity API",
+    "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
+    "subItems": [
+      {
+        "title": "Start here",
+        "hasSubItems": false,
+        "url": "/api/start_here.html"
+      },
+      {
+        "title": "Changelog",
+        "hasSubItems": false,
+        "url": "/api/changelog.html"
+      },
+      {
+        "title": "OpenAPI Specification <i class='fas fa-external-link-square-alt'></i>",
+        "hasSubItems": false,
+        "url": "/api/openapi.html"
+      },
+    ]
+  },
+
+  {
+    "title": "Overview",
+    "iconClass": "fas fa-align-justify fa-fw",
+    "subItems": [
+      {
+        "title": "About the Amperity API",
+        "hasSubItems": false,
+        "url": "/api/overview.html"
+      },
+
+      {
+        "title": "Amperity API versions",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About versioning",
+            "hasSubItems": false,
+            "url": "/api/versioning.html"
+          },
+          {
+            "title": "Breaking changes",
+            "hasSubItems": false,
+            "url": "/api/versioning.html#breaking-changes"
+          },
+          {
+            "title": "Non-breaking changes",
+            "hasSubItems": false,
+            "url": "/api/versioning.html#non-breaking-changes"
+          },
+          {
+            "title": "Version identifiers",
+            "hasSubItems": false,
+            "url": "/api/versioning.html#version-identifiers"
+          },
+          {
+            "title": "Supported versions",
+            "hasSubItems": false,
+            "url": "/api/versioning.html#supported-versions"
+          },
+          {
+            "title": "Deprecated versions",
+            "hasSubItems": false,
+            "url": "/api/versioning.html#deprecated-versions"
+          },
+        ],
+      },
+
+      {
+        "title": "Authentication",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About authentication",
+            "hasSubItems": false,
+            "url": "/api/authentication.html"
+          },
+          {
+            "title": "API keys",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About API keys",
+                "hasSubItems": false,
+                "url": "/api/authentication.html#api-keys"
+              },
+              {
+                "title": "Add API key",
+                "hasSubItems": false,
+                "url": "/api/authentication.html#add-api-key"
+              },
+              {
+                "title": "Rotate API key",
+                "hasSubItems": false,
+                "url": "/api/authentication.html#rotate-api-key"
+              },
+            ],
+          },
+          {
+            "title": "Access tokens",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About access tokens",
+                "hasSubItems": false,
+                "url": "/api/authentication.html#access-tokens"
+              },
+              {
+                "title": "Generate access tokens",
+                "hasSubItems": false,
+                "url": "/api/authentication.html#generate-access-token"
+              },
+              {
+                "title": "Revoke access tokens",
+                "hasSubItems": false,
+                "url": "/api/authentication.html#revoke-access-token"
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        "title": "Base URL",
+        "hasSubItems": false,
+        "url": "/api/overview.html#base-url"
+      },
+      {
+        "title": "Requests",
+        "hasSubItems": false,
+        "url": "/api/overview.html#requests"
+      },
+      {
+        "title": "Response codes",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About response codes",
+            "hasSubItems": false,
+            "url": "/api/responses.html"
+          },
+          {
+            "title": "2xx status codes",
+            "hasSubItems": false,
+            "url": "/api/responses.html#xx-status-codes"
+          },
+          {
+            "title": "4xx status codes",
+            "hasSubItems": false,
+            "url": "/api/responses.html#status-codes-4xx"
+          },
+          {
+            "title": "5xx status codes",
+            "hasSubItems": false,
+            "url": "/api/responses.html#status-codes-5xx"
+          },
+        ],
+      },
+      {
+        "title": "Pagination",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About pagination",
+            "hasSubItems": false,
+            "url": "/api/overview.html#pagination"
+          },
+          {
+            "title": "Pagination requests",
+            "hasSubItems": false,
+            "url": "/api/overview.html#pagination-requests"
+          },
+          {
+            "title": "Pagination responses",
+            "hasSubItems": false,
+            "url": "/api/overview.html#pagination-responses"
+          },
+        ],
+      },
+      {
+        "title": "Rate limits",
+        "hasSubItems": false,
+        "url": "/api/rate_limits.html"
+      },
+    ]
+  },
+
+  {
+    "title": "Endpoints",
+    "iconClass": "fas fa-square-e fa-fw",
+    "subItems": [
+      {
+        "title": "Audit Events",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "GET /audit-events",
+            "hasSubItems": false,
+            "url": "/api/endpoint_get_audit_events_list.html"
+          },
+        ],
+      },
+      {
+        "title": "Campaigns",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "GET /campaigns",
+            "hasSubItems": false,
+            "url": "/api/endpoint_get_campaigns_list.html"
+          },
+        ],
+      },
+      {
+        "title": "Segments",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "GET /segments",
+            "hasSubItems": false,
+            "url": "/api/endpoint_get_segments_list.html"
+          },
+        ],
+      },
+      {
+        "title": "Workflows",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "GET /workflow/runs",
+            "hasSubItems": false,
+            "url": "/api/endpoint_get_workflows_list.html"
+          },
+          {
+            "title": "GET /workflow/runs/{id}",
+            "hasSubItems": false,
+            "url": "/api/endpoint_get_workflows_fetch.html"
+          },
+        ],
+      },
+    ]
+  },
+
+
+] -%}
+
+{% set navItems = navItems|default(defaultNavItems) -%}
+<nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+
+    {% block leftnav %}
+    {%- for item in navItems %}
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="{{ item.title }}">
+
+       {%- if item.image %}
+
+        <img class="icon-left" src="./_static/{{ item.image }}"/> {{ item.title }}
+
+       {%- else %}
+
+        <i class="fa {{ item.iconClass }} icon-left"></i> {{ item.title }}
+
+       {%- endif %}
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items">
+
+        {%- for subItem in item.subItems %}
+        {%- if subItem.hasSubItems %}
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="{{ subItem.title }}">
+            {{ subItem.title }}
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2">
+
+            {%- for subItem2 in subItem.subItems %}
+            {%- if subItem2.hasSubItems %}
+
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                {%- for subItem3 in subItem2.subItems %}
+
+                <li>
+                  <a class="nav-docs-link" href="{{ subItem3.url }}" title="{{ subItem3.title }}">
+                    {{ subItem3.title }}
+                  </a>
+                </li>
+
+                {%- endfor %}
+
+              </ul>
+            </li>
+
+            {%- else %}
+
+            <li>
+              <a class="nav-docs-link" href="{{ subItem2.url }}" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+              </a>
+            </li>
+
+            {%- endif %}
+            {%- endfor %}
+
+          </ul>
+        
+        </li>
+
+        {%- else %}
+
+        <li>
+          <a class="nav-docs-link" href="{{ subItem.url }}" title="{{ subItem.title }}">
+            {{ subItem.title }}
+          </a>
+        </li>
+
+        {% endif %}
+        {%- endfor %}
+
+      </ul>
+    </li>
+    {%- endfor %}
+    {% endblock %}
+
+    <li class="main-item dark-item">
+      <a href="https://learn.amperity.com"><i class="fas fa-graduation-cap fa-fw icon-left"></i>Learning Lab</a>
+    </li>
+
+    <li class="main-item dark-item">
+      <a href="/support/index.html"><i class="fas fa-life-ring fa-fw icon-left"></i>Get Support</a>
+    </li>
+
+    <!--<li class="main-item dark-item">
+      <a href="https://docs.amperity.com/" target="_blank"><i class="fas fa-pen-to-square fa-fw icon-left"></i>Contribute to docs</a>
+    </li>-->
+
+    <li class="main-item dark-item">
+      <a href="https://status.amperity.com/" target="_blank"><i class="fas fa-wave-pulse fa-fw icon-left"></i>System Status</a>
+    </li>
+
+    <li class="main-item dark-item">
+      <a href="https://www.amperity.com" target="_blank"><i class="fa regular fa-house fa-fw icon-left"></i>Amperity.com</a>
+    </li>
+
+  </ul>
+</nav>

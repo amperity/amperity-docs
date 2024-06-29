@@ -1,0 +1,238 @@
+{#
+    basic/layout.html
+    ~~~~~~~~~~~~~~~~~
+
+    Master layout template for Sphinx themes.
+
+    :copyright: Copyright 2007-2015 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- block doctype -%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{%- endblock %}
+{%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
+{%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
+{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and
+                         (sidebars != []) %}
+{%- set url_root = pathto('', 1) %}
+{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
+{%- if not embedded and docstitle %}
+  {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+{%- else %}
+  {%- set titlesuffix = "" %}
+{%- endif %}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="zd-site-verification" content="ydiuqs34jdrk6ejm53rudg" />
+    {{ metatags }}
+    {%- block htmltitle %}
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {%- endblock %}
+    {% include 'css.html' %}
+    {%- if not embedded %}
+    {% include 'javascripts.html' %}
+    {%- if use_opensearch %}
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
+          href="{{ pathto('_static/opensearch.xml', 1) }}"/>
+    {%- endif %}
+    {%- if favicon %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    {%- endif %}
+    {%- endif %}
+{%- block linktags %}
+    {%- if hasdoc('about') %}
+    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
+    {%- endif %}
+    {%- if hasdoc('genindex') %}
+    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+    {%- endif %}
+    {%- if hasdoc('search') %}
+    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+    {%- endif %}
+    {%- if hasdoc('copyright') %}
+    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+    {%- endif %}
+    <link rel="top" title="{{ docstitle|e }}" href="{{ pathto(master_doc) }}" />
+    {%- if parents %}
+    <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}" />
+    {%- endif %}
+    {%- if next %}
+    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+    {%- endif %}
+    {%- if prev %}
+    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+    {%- endif %}
+{%- endblock %}
+{%- block extrahead %} {% endblock %}
+
+<script>
+    window._6si = window._6si || [];
+    window._6si.push(['enableEventTracking', true]);
+    window._6si.push(['setToken', '2b6922b68c4abd0f3d57bc4de27de8e1']);
+    window._6si.push(['setEndpoint', 'b.6sc.co']);
+    (function() {
+      var gd = document.createElement('script');
+      gd.type = 'text/javascript';
+      gd.async = true;
+      gd.src = '//j.6sc.co/6si.min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gd, s);
+    })();
+</script>
+
+  </head>
+  <body role="document">
+    <div class="body-wrap">
+
+{% block nav_main %}
+
+  <nav class="nav-main" role="navigation" data-topbar>
+    <div class="nav-inner">
+      <div class="left">
+        <h1>
+           <a href="https://docs.amperity.com/">
+            <img id="markup" height="38" src="_static/amperity_docs2.svg" onerror="_static/amperity_circle.svg"/>
+          </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        </h1>
+      </div>
+
+      <div id="nav-icon"><i class="fas fa-bars"></i></div>
+
+      <ul class="nav-links links-main">
+
+         <li class="nav-link">
+          <div class="nav-dropdown">
+            <a href="/ampiq/user_guides.html">User Guides</a>
+          </div>
+        </li>
+
+        <li class="nav-link">
+          <div class="nav-dropdown">
+            <a href="/datagrid/start_here.html">Operators Guide</a>
+          </div>
+        </li>
+
+         <li class="nav-link">
+          <div class="nav-dropdown">
+            <a href="/api/start_here.html">API</a>
+          </div>
+        </li>
+
+         <li class="nav-link">
+          <div class="nav-dropdown">
+            <a href="/reference/start_here.html">Amperity A-Z</a>
+          </div>
+        </li>
+
+<!--  this is the Canny changelog integration using default Docs nav styling. -->
+
+        <li class="nav-link">
+          <div class="nav-dropdown" data-canny-changelog>
+            <i class="fas fa-gift"></i>
+          </div>
+        </li>
+
+<!--  start Canny script -->
+
+<script>!function(w,d,i,s){function l(){if(!d.getElementById(i)){var f=d.getElementsByTagName(s)[0],e=d.createElement(s);e.type="text/javascript",e.async=!0,e.src="https://canny.io/sdk.js",f.parentNode.insertBefore(e,f)}}if("function"!=typeof w.Canny){var c=function(){c.q.push(arguments)};c.q=[],w.Canny=c,"complete"===d.readyState?l():w.attachEvent?w.attachEvent("onload",l):w.addEventListener("load",l,!1)}}(window,document,"canny-jssdk","script");</script>
+
+
+<script>
+  Canny('initChangelog', {
+    appID: '5ee29bf80008207d5df5ceb5',
+
+    position: 'bottom',
+    align: 'right',
+  });
+</script>
+
+<!--  end Canny script -->
+
+<!--  start Swiftype search box and script -->
+
+    <li class="searchbox-item">
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','bWjxZne8RNBBMvTkpcrK','2.0.0');
+</script>
+      <form>
+        <input type="text" placeholder="Search ..." class="st-default-search-input"/>
+      </form>
+    </li>
+
+<!--  end Swiftype search box and script -->
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+{% endblock %}
+
+{%- block content %}
+  <div class="document markup-docs">
+    {%- block document %}
+      <div class="documentwrapper">
+        {% include 'nav-docs.html' with context %}
+        {%- if render_sidebar %}{% include 'sidebar.html' %}{%- endif %}
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            {% block body %} {% endblock %}
+          </div>
+          {%- block footer %}
+            <div class="footer" role="contentinfo">
+              {%- if show_copyright %}
+                {%- if hasdoc('copyright') %}
+                  {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+                  {%- else %}
+                  {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
+                {%- endif %}
+              {%- endif %}
+
+              <!--{%- if last_updated %}
+                {% trans last_updated=last_updated|e %}This page is about: {{ last_updated }}.{% endtrans %}
+              {%- endif %}-->
+
+            </div>
+          {%- endblock %}
+        </div>
+      </div>
+    {%- endblock %}
+    <div class="st-search-container"></div>
+    <div class="clearer"></div>
+  </div>
+
+{%- endblock %}
+
+</div>
+
+<!-- Doorbell.io feedback widget begin -->
+
+<script type="text/javascript">
+    window.doorbellOptions = {
+        email: "docs@amperity.com",
+        "id": "13157",
+        "appKey": "otkMaSoqvriF1sC6RJZXNuA0negWEhY70ZyG34HzdDXD0Cic82vG0pjz2A7b91IE"
+    };
+    (function(w, d, t) {
+        var hasLoaded = false;
+        function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/'+window.doorbellOptions['id']+'?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); }
+        if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); }
+        if (d.readyState == 'complete') { l(); }
+    }(window, document, 'script'));
+</script>
+
+<!-- Doorbell.io feedback widget end -->
+
+  </body>
+</html>

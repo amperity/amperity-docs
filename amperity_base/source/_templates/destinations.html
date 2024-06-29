@@ -1,0 +1,1105 @@
+{#
+    basic/search.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for the search page.
+
+    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" -%}
+{%- set title = _('Destinations') -%}
+
+{%- block extra_meta %}
+<meta content="A cardwall with links to topics that describe how to configure Amperity to send data to a variety of destinations." lang="en" name="description" xml:lang="en" />
+<meta class="swiftype" content="A cardwall with links to topics that describe how to configure Amperity to send data to a variety of destinations." data-type="text" name="body" />
+<meta class="swiftype" content="Destinations" data-type="string" name="title" />
+{%- endblock %}
+
+{%- block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+{%- endblock %}
+
+{%- block content %}
+
+    <div class="document markup-docs">
+    {%- block document %}
+      <div class="documentcardwrapper">
+        <div class="cardwrapper">
+          <div class="body" role="main">
+            {% block body %}
+
+<div class="container-cardgroup-cement">
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-info">
+        <h4 class="card-subtitle">About destinations</h4>
+        <p class="card-intro">A destination is any external system to which Amperity sends query results and/or audience lists. Use these outputs with any downstream workflow or campaign.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_active_campaign.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-active-campaign.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">ActiveCampaign</h4>
+        <p class="card-intro">Send audience lists to ActiveCampaign using the ActiveCampaign REST API.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_acxiom.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-acxiom.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Acxiom</h4>
+        <p class="card-intro">Use SFTP to send results to Acxiom.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_adobe_campaign.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Adobe Campaign</h4>
+        <p class="card-intro">Use SFTP to send results to Adobe Campaign.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_adobe_customer_attributes.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Adobe Customer Attributes</h4>
+        <p class="card-intro">Use SFTP to send results to Adobe Customer Attributes.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_adobe_aep.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Adobe Experience Platform</h4>
+        <p class="card-intro">Use SFTP to send results to Adobe Experience Platform.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_adobe_marketo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Adobe Marketo Engage</h4>
+        <p class="card-intro">Use the Marketo REST API to manage audience list membership.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_airship.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-airship.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Airship</h4>
+        <p class="card-intro">Use SFTP to send audience lists and attributes to Airship.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_amazon_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-ads.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Amazon Ads</h4>
+        <p class="card-intro">Build audiences and advertise across Amazon-associated paid media.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_amazon_ads.html#about-amazon-marketing-cloud-amc" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-ads-amc.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Amazon Marketing Cloud (AMC)</h4>
+        <p class="card-intro">A secure, privacy-safe, and cloud-based clean room for building audiences without using PII.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_amazon_pinpoint.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-pinpoint.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Amazon Pinpoint</h4>
+        <p class="card-intro">Connect with your customers over SMS channels.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_amazon_redshift.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-redshift.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Amazon Redshift</h4>
+        <p class="card-intro">Stage data to an Amazon S3 bucket, and then load it to Amazon Redshift.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_amazon_s3.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-s3.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Amazon S3</h4>
+        <p class="card-intro">Send any type of data to any Amazon S3 bucket.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_attentive_mobile.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-attentive.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Attentive</h4>
+        <p class="card-intro">Use SFTP to send phone numbers or email addresses to Attentive.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_aws_connect.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-aws-connect.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">AWS Connect</h4>
+        <p class="card-intro">Send customer profiles to AWS Connect.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_azure_blob_storage.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-azure.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Azure Blob Storage</h4>
+        <p class="card-intro">Send any type of data to Azure Blob Storage.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_azure_synapse.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-azure.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Azure Synapse Analytics</h4>
+        <p class="card-intro">Stage data to cloud storage, and then load it to Azure Synapse Analytics.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_bazaarvoice.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-bazaarvoice.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Bazaarvoice</h4>
+        <p class="card-intro">Use SFTP to send results to Bazaarvoice.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_bluecore.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-bluecore.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Bluecore</h4>
+        <p class="card-intro">Use SFTP to send results to Bluecore.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_braze.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-braze.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Braze</h4>
+        <p class="card-intro">Send customer profiles and attributes to Braze using the Braze API.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_business_intelligence_connect.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amperity.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">BI Connect</h4>
+        <p class="card-intro">Send data to BI Connect; analyze data with your favorite BI tools.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-camelot-smm.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Camelot SMM</h4>
+        <p class="card-intro">Use SFTP to send results to Camelot SMM.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_cheetah_digital.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-cheetah.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Cheetah Digital</h4>
+        <p class="card-intro">Send customer profiles to Cheetah Digital using SFTP or Amazon S3.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_cordial.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-cordial.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Cordial</h4>
+        <p class="card-intro">Manage audience segments, trends, and automated customer experiences.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_criteo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-cr1t30.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Criteo</h4>
+        <p class="card-intro">Use Criteo to manage and scale campaigns.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-ccc.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Cross Country Computer</h4>
+        <p class="card-intro">Use SFTP to send results to Cross Country Computer.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_databricks.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-databricks.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Databricks</h4>
+        <p class="card-intro">Stage data to cloud storage, and then load it to Databricks.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_domo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-domo.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Domo</h4>
+        <p class="card-intro">Stage data to Amazon S3, and then load it directly to Domo.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_dv360.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-display-video.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">DV360</h4>
+        <p class="card-intro">Send data to DV360 and enable ads for display and video.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_dynamic_yield.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-dynamic-yield.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Dynamic Yield</h4>
+        <p class="card-intro">Use Amazon S3 to send product catalog data to Dynamic Yield.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_dynamics_365_marketing.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-dynamics-marketing.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Dynamics 365 Marketing</h4>
+        <p class="card-intro">Use the Segmentation API to send static segments to Dynamics 365 Marketing.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-epsilon.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Epsilon Abacus</h4>
+        <p class="card-intro">Use SFTP to send results to Epsilon Abacus.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-epsilon.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Epsilon Conversant</h4>
+        <p class="card-intro">Use SFTP to send results to Epsilon Conversant.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-epsilon.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Epsilon Targeting</h4>
+        <p class="card-intro">Use SFTP to send results to Epsilon Targeting.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_evocalize.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-evocalize.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Evocalize</h4>
+        <p class="card-intro">Use SFTP to send results to Evocalize.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_experian.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-experian.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Experian</h4>
+        <p class="card-intro">Use SFTP to send results to Experian.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-facebook-ads.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Facebook</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Facebook.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-facebook-messenger.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Facebook Messenger</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Facebook Messenger.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_google_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-gmail.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Gmail</h4>
+        <p class="card-intro">Reach customers in the Promotions and Social tabs in Gmail.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_google_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-ads.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google Ads</h4>
+        <p class="card-intro">Use the AdWords API to send customer data to Google Ads.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_google_bigquery.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-bigquery.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google BigQuery</h4>
+        <p class="card-intro">Stage data to cloud storage, and then load it to Google BigQuery.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_google_cloud_storage.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-cloud.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google Cloud Storage</h4>
+        <p class="card-intro">Send any type of data to Google Cloud Storage.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_google_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-search.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google Search</h4>
+        <p class="card-intro">Run ads at the top of search results on Google.com.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_google_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-shopping.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google Shopping</h4>
+        <p class="card-intro">Run ads within the Shopping tab on Google.com.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_hubspot.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-hubspot.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">HubSpot</h4>
+        <p class="card-intro">Use the HubSpot API to send email lists to HubSpot.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_infutor.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-infutor.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Infutor</h4>
+        <p class="card-intro">Use SFTP to send results to Infutor.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-instagram.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Instagram</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Instagram.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_kibo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-kibo.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Kibo</h4>
+        <p class="card-intro">Use SFTP to send results to Kibo.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_klaviyo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-klaviyo.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Klaviyo</h4>
+        <p class="card-intro">Use the Klaviyo API to manage audience lists in Klaviyo.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_koupon_media.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-koupon-media.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Koupon Media</h4>
+        <p class="card-intro">Use SFTP to send results to Koupon Media.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_listrak.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-listrak.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Listrak</h4>
+        <p class="card-intro">Use the Listrak API to send audiences and SFTP for automated workflows.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_liveramp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-liveramp.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">LiveRamp</h4>
+        <p class="card-intro">Use SFTP to send results to LiveRamp.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_mailchimp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-mailchimp.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Mailchimp</h4>
+        <p class="card-intro">Use the Mailchimp REST API to manage audience data in Mailchimp.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-meta.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Meta Ads Manager</h4>
+        <p class="card-intro">Send audiences to Meta Ads Manager, run ads on Facebook, Instagram, etc.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/api_profile.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-metarouter.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">MetaRouter</h4>
+        <p class="card-intro">Use the Profile API to make customer profile data available to MetaRouter.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_microsoft_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Microsoft Advertising</h4>
+        <p class="card-intro">Push customer data to the Microsoft Advertising syndication network.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_microsoft_dataverse.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-dataverse.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Microsoft Dataverse</h4>
+        <p class="card-intro">Send data to the Microsoft Power Platform, Microsoft 365, and more.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_microsoft_dynamics.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-dynamics.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Microsoft Dynamics</h4>
+        <p class="card-intro">Use the Common Data Service API to send data to Microsoft Dynamics.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_power_bi.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-power-bi.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Microsoft Power BI</h4>
+        <p class="card-intro">Stage data to cloud storage, and then load it to Microsoft Power BI.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_monetate.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-monetate.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Monetate</h4>
+        <p class="card-intro">Use SFTP to send results to Monetate.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_neustar.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-neustar.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Neustar</h4>
+        <p class="card-intro">Use SFTP to send results to Neustar.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_optimizely.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-optimizely.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Optimizely</h4>
+        <p class="card-intro">Use Amazon S3 to send results to Optimizely.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_oracle_data_cloud.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Oracle Data Cloud</h4>
+        <p class="card-intro">Use SFTP to send results to Oracle Data Cloud.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_oracle_dmp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Oracle DMP (BlueKai)</h4>
+        <p class="card-intro">Use SFTP to send results to Oracle DMP (BlueKai).</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_oracle_eloqua.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Oracle Eloqua</h4>
+        <p class="card-intro">Manage static lists in Oracle Eloqua.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_oracle_responsys.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Oracle Responsys</h4>
+        <p class="card-intro">Use SFTP to send results to Oracle Responsys.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-panda-printing.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Panda Printing</h4>
+        <p class="card-intro">Use SFTP to send results to Panda Printing.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_pebblepost.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-pebblepost.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">PebblePost</h4>
+        <p class="card-intro">Use SFTP to send results to PebblePost.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_persado.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-persado.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Persado</h4>
+        <p class="card-intro">Send campaign response data to Persado for content personalization.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_pinterest.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-pinterest.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Pinterest</h4>
+        <p class="card-intro">Engage with customers who interact with your product Pins.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_powerreviews.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-powerreviews.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">PowerReviews</h4>
+        <p class="card-intro">Use SFTP to send results for reviews data to PowerReviews.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/api_profile.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-api-profile.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Profile API</h4>
+        <p class="card-intro">Custom endpoints for customer profiles enable any downstream workflow..</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-quad.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Quad</h4>
+        <p class="card-intro">Use SFTP to send results to Quad.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_reddit_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-reddit-ads.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Reddit Ads</h4>
+        <p class="card-intro">Engage with your customers within 100K+ active communities.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-rr-donnelly.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">RR Donnelly</h4>
+        <p class="card-intro">Use SFTP to send results to RR Donnelly.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sailthru.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-sailthru.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Sailthru</h4>
+        <p class="card-intro">Use the Sailthru API to send audience lists and extended profile attributes to Sailthru.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_salesforce_marketing_cloud.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Marketing Cloud</h4>
+        <p class="card-intro">Use SFTP to send results to Salesforce Marketing Cloud.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_salesforce_marketing_cloud_personalization.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Personalization</h4>
+        <p class="card-intro">Use SFTP to send results to Salesforce Marketing Cloud Personalization.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_salesforce_sales_cloud.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Sales Cloud</h4>
+        <p class="card-intro">Use a SOAP API to send customer data to Salesforce Sales Cloud.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-sftp.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">SFTP</h4>
+        <p class="card-intro">Use SFTP to send any type of data from Amperity to anywhere.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-smg.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">SMG</h4>
+        <p class="card-intro">Use SFTP to send results to SMG.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_snapchat.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-snapchat.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Snapchat</h4>
+        <p class="card-intro">Use the Snapchat Marketing API to build and market to audiences.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_snowflake_aws.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-snowflake.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Snowflake on AWS</h4>
+        <p class="card-intro">Send databases and tables directly to Snowflake running on Amazon AWS.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_snowflake_azure.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-snowflake.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Snowflake on Azure</h4>
+        <p class="card-intro">Send databases and tables directly to Snowflake running on Azure.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-soundcommerce.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">SoundCommerce</h4>
+        <p class="card-intro">Use SFTP to send results to SoundCommerce.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_tableau.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-tableau.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Tableau</h4>
+        <p class="card-intro">Stage data to cloud storage, and then load it to Tableau.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_the_trade_desk.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-thetradedesk.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">The Trade Desk</h4>
+        <p class="card-intro">Send email addresses and build UID 2.0 audiences using The Trade Desk API.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_throtle.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-throtle.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Throtle</h4>
+        <p class="card-intro">Use Amazon S3 to send customer profile and identifier data to Throtle.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_tiktok_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-tiktok.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">TikTok Ads Manager</h4>
+        <p class="card-intro">Send first-party data and build high-value segments. Track conversions with offline events.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_tulip.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-tulip.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Tulip</h4>
+        <p class="card-intro">An experience platform that helps your brand connect with customers.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_vibes.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-vibes.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Vibes</h4>
+        <p class="card-intro">Use SFTP to send results to Vibes.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_webhook.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-webhook.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Webhook</h4>
+        <p class="card-intro">Build custom integrations for any downstream application or workflow.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-whatsapp.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">WhatsApp</h4>
+        <p class="card-intro">Use audiences and offilne events to open conversations in WhatsApp.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_dv360.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-youtube.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">YouTube Ads</h4>
+        <p class="card-intro">Send data to DV360; set up campaigns in YouTube Ads.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_zendesk.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-zendesk.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Zendesk</h4>
+        <p class="card-intro">Use the Zendesk Support API to create or update user records in Zendesk.</p>
+      </div>
+    </div></a>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+          </div>
+          {%- block footer %}
+          <div class="footer" role="contentinfo">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+              {%- else %}
+                {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
+              {%- endif %}
+            {%- endif %}
+            </div>
+          {%- endblock %}
+        </div>
+      </div>
+  {%- endblock %}
+
+      <div class="clearer"></div>
+    </div>
+{%- endblock %}
+
+
+
+

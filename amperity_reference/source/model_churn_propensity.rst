@@ -1,0 +1,158 @@
+.. 
+.. https://docs.amperity.com/reference/
+.. 
+
+
+.. meta::
+    :description lang=en:
+        Churn propensity predicts each customer's likelihood to churn based on their purchase history with your brand.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Churn propensity predicts each customer's likelihood to churn based on their purchase history with your brand.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Churn propensity model
+
+==================================================
+Churn propensity model
+==================================================
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-churn-propensity-start
+   :end-before: .. term-churn-propensity-end
+
+.. tip:: 
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-preturn-start
+      :end-before: .. term-preturn-end
+
+.. model-churn-propensity-about-start
+
+Amperity models churn propensity for each customer's unique purchase history. Some customers are seasonal shoppers, whereas other customers make monthly (or even weekly) purchases. Churn propensity modeling is based on each customer's individual p(return) score, which helps you build audiences that:
+
+* Identify customers who are likely to churn
+* Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
+* Support a churn prevention campaign that contains a series of escalating win-back offers
+* Optimize suppression and spend
+
+.. model-churn-propensity-about-end
+
+
+.. _model-churn-propensity-use-cases:
+
+Use cases
+==================================================
+
+.. model-churn-propensity-use-cases-start
+
+The churn propensity model helps you build audiences to support churn prevention campaigns, including:
+
+#. :ref:`Predicting which customers are likely to spend <model-churn-propensity-use-cases-spend>`
+#. :ref:`Identifying each customer's churn lifecycle status <model-churn-propensity-use-cases-churn>`
+
+.. model-churn-propensity-use-cases-end
+
+
+.. _model-churn-propensity-use-cases-spend:
+
+Which customers are likely to spend?
+--------------------------------------------------
+
+.. model-churn-propensity-use-cases-spend-start
+
+The churn propensity model outputs a series of attributes that predict each customer purchase behavior in the coming year, including attributes for:
+
+#. Average order revenue
+#. Likelihood to spend
+#. Order frequency
+#. Total spend
+
+Attributes that predict a customer's future purchase behavior are available from the **Predicted CLV Attributes** table:
+
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
+
+   * - Attribute Name
+     - Description
+   * - **Predicted Average Order Revenue Next 365d**
+     - The predicted average order revenue over the next 365 days.
+   * - **Predicted CLV Next 365d**
+     - The total predicted customer spend over the next 365 days.
+   * - **Predicted Order Frequency Next 365d**
+     - The predicted number of orders over the next 365 days.
+   * - **Predicted Probability of Transaction Next 365d**
+     - The probability a customer will purchase again in the next 365 days.
+
+Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns. You can access these attributes directly from the segment editor:
+
+.. image:: ../../images/attribute-predicted-transactions.png
+   :width: 600 px
+   :alt: Choose the predicted probability of transactions attribute from the Segment Editor.
+   :align: left
+   :class: no-scaled-link
+
+.. model-churn-propensity-use-cases-spend-end
+
+
+.. _model-churn-propensity-use-cases-churn:
+
+Which customers are likely to churn?
+--------------------------------------------------
+
+.. model-churn-propensity-use-cases-churn-start
+
+The churn propensity model outputs a series of attributes that categorize your customers by:
+
+#. Predicted lifecycle status, such as active, cooling down, at risk, and lost
+#. Predicted lifetime value, such as top 1%, top 10%, and top 50%
+
+Attributes that predict a customer's likelihood to churn, along with their predicted lifetime value, are available from the **Predicted CLV Attributes** table:
+
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
+
+   * - Attribute Name
+     - Description
+   * - **Predicted Customer Lifecycle Status**
+     - A probabilistic grouping of a customer's likelihood to purchase again.
+
+       For repeat customers, groupings include the following tiers:
+
+       #. Active (likelihood to purchase is greater than 60%)
+       #. Cooling down (likelihood to purchase is between than 50% and 60%)
+       #. At risk (likelihood to purchase is between than 35% and 50%)
+       #. Highly at risk (likelihood to purchase is between than 20% and 35%)
+       #. Lost (likelihood to purchase is less than 20%)
+
+       For one-time buyers, groupings include the following tiers:
+
+       #. Active (purchased within 60 days)
+       #. Cooling down (purchased 60-120 days ago)
+       #. At risk (purchased 120-180 days ago)
+       #. Highly at risk (purchased 180-240 days ago)
+       #. Lost (purchased 240+ days ago)
+
+   * - **Predicted Customer Lifetime Value Tier**
+     - A percentile grouping of customers by pCLV. Groupings include:
+
+       #. Platinum: top 1% of customers
+       #. Gold: top 1%-5% of customers
+       #. Silver: top 5%-10% of customers
+       #. Bronze: top 10%-25% of customers
+       #. Medium: top 25%-50% of customers
+       #. Low: bottom 50% of customers
+
+Use any combination of these attributes to help focus your churn prevention and one-time buyer campaigns on your most valuable customers at the right stages within the campaign. You can access these attributes directly from the segment editor:
+
+.. image:: ../../images/attribute-predicted-lifecycle-status.png
+   :width: 600 px
+   :alt: Choose the predicted lifecycle status attribute from the Segment Editor.
+   :align: left
+   :class: no-scaled-link
+
+.. model-churn-propensity-use-cases-churn-end

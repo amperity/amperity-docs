@@ -1,0 +1,419 @@
+{#
+    basic/search.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for the search page.
+
+    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" -%}
+{%- set title = _('Configure Amperity') -%}
+
+{%- block extra_meta %}
+<meta content="A cardwall with links to topics about how to build and configure your customer 360 using DataGrid." lang="en" name="description" xml:lang="en" />
+<meta class="swiftype" content="A cardwall with links to topics about how to build and configure your customer 360 using DataGrid." data-type="text" name="body" />
+<meta class="swiftype" content="Configure Amperity" data-type="string" name="title" />
+{%- endblock %}
+
+{%- block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+{%- endblock %}
+
+{%- block content %}
+
+    <div class="document markup-docs">
+    {%- block document %}
+      <div class="documentcardwrapper">
+        <div class="cardwrapper">
+          <div class="body" role="main">
+            {% block body %}
+
+
+
+<div class="container">
+
+  <div class="doubles-landing">
+    <div class="double-landing-item">
+      <div class="double-landing-info">
+        <h1 class="double-landing-title">DataGrid</h1>
+        <p class="double-landing-subtitle">Your brand's platform for building unified customer profiles.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="amps">
+    <a href="sources.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-datagrid-sources.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Data Sources</h4>-->
+          <p>Pull customer profiles, purchase histories, email and website events, loyalty profiles to Amperity.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="destinations.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-datagrid-destinations.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Destinations</h4>-->
+          <p>Send audiences to any downstream workflow. Activate your brand's customers anywhere.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+
+<div class="container-cardgroup-midnight">
+
+  <div class="card-group-midnight-title">
+    <div class="card-group-midnight-box">
+      <div class="card-group-midnight-info">
+        <h4 class="card-group-midnight-subtitle">Sandboxes</h4>
+        <!--<p class="card-group-midnight-intro">Use sandboxes to make configuration changes to your tenant.</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="amps">
+    <a href="/datagrid/sandbox_create.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-sandbox-create.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">1. Create a sandbox</h4>-->
+          <p>Create a sandbox to make a copy of your production tenant.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="/datagrid/sandbox_open.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-sandbox-open-alt-alt.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">2. Open the sandbox</h4>-->
+          <p>Open a sandbox and safely make (and validate) changes to your tenant.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="/datagrid/sandbox_promote.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-sandbox-promote.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">3. Promote changes to production</h4>-->
+          <p>Promote configuration changes from a sandbox to production.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+<div class="container-cardgroup-cement">
+
+  <div class="card-group-cement-title">
+    <div class="card-group-cement-box">
+      <div class="card-group-cement-info">
+        <h4 class="card-group-cement-subtitle">Configure</h4>
+        <!--<p class="card-group-teal-intro">Use these attributes to build segments.</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="amps">
+    <a href="/datagrid/add_customer_profiles.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-customer-profiles-alt-alt.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Customer profiles</h4>-->
+          <p>Who are your customers? Where do they live? How can they be contacted?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="/datagrid/add_transactions.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-transactions-alt-alt.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Transactions</h4>-->
+          <p>What products do your customers buy? How much do they spend?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="/datagrid/add_data_assets.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-data-assets-alt-alt.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Data assets</h4>-->
+          <p>Review the list of data assets that can be configured for your tenant.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+<div class="container-cardgroup-ice">
+
+  <div class="card-group-ice-title">
+    <div class="card-group-ice-box">
+      <div class="card-group-ice-info">
+        <h4 class="card-group-ice-subtitle">Data assets</h4>
+        <!--<p class="card-group-yellow-intro">Follow these steps for each data source.</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#lookup-countries" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Country lookups</h4>
+          <p class="cardgroups-intro">A set of standardized names and codes for all countries, regions, and sub-regions.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#customer-attributes" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Customer attributes</h4>
+          <p class="cardgroups-intro">Attributes about customer revenue relationships with your brand.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#customer-consent" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Customer consent</h4>
+          <p class="cardgroups-intro">Which customers can (or cannot) be sent email and/or SMS messages?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#email-engagement" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Email engagement</h4>
+          <p class="cardgroups-intro">Capture the interactions your customers have had with your brand's emails.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#fiscal-calendars" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Fiscal calendar</h4>
+          <p class="cardgroups-intro">Align weeks and months to your brand's fiscal calendar.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#gender-name-ratios" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Gender name ratios</h4>
+          <p class="cardgroups-intro">Support personalization strategies within marketing campaigns.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#loyalty-programs" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Loyalty programs</h4>
+          <p class="cardgroups-intro">High-value customers often belong to a brand’s loyalty program.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#nrf-calendar" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">NRF calendar</h4>
+          <p class="cardgroups-intro">A fiscal calendar that divides years a 4 weeks - 5 weeks - 4 weeks format.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!--<div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#xxxxx" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Paid media</h4>
+          <p class="cardgroups-intro">Build a paid media table to consolidate your customers prior to activation.</p>
+        </div>
+      </div>
+    </a>
+  </div>-->
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#lookup-zip-codes" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Postal codes</h4>
+          <p class="cardgroups-intro">Postal codes by city, state, time zone, area code, and demographic.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#address-standardization" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">Standard addresses</h4>
+          <p class="cardgroups-intro">A list of address variations for state names and for street names.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cardgroups">
+    <a href="/datagrid/add_data_assets.html#lookup-united-states" class="card">
+      <div class="cardgroups-item">
+        <div class="cardgroups-info">
+          <h4 class="cardgroups-title">USA lookups</h4>
+          <p class="cardgroups-intro">A set of standardized names and ISO codes for the United States and territories.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+
+
+<div class="container-cardgroup-midnight">
+
+  <div class="card-group-midnight-title">
+    <div class="card-group-midnight-box">
+      <div class="card-group-midnight-info">
+        <h4 class="card-group-midnight-subtitle">Optional workflows</h4>
+        <!--<p class="card-group-midnight-intro">Use these attributes to build segments.</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="amps">
+    <a href="datagrid/blocklist_bad_values.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-bad-values-blocklist.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Bad-values blocklist</h4>-->
+          <p>Remove values that appear too frequently across your data sources.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="datagrid/privacy_rights.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-privacy-rights.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Privacy rights</h4>-->
+          <p>Help your brand meet compliance goals for CCPA and GDPR.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="amps">
+    <a href="datagrid/qa_stitch.html" class="card">
+      <div class="amp-item">
+        <div class="amp-image">
+          <img id="markup" height="80" src="_static/amp-stitch-qa.png"/>
+        </div>
+        <div class="amp-info">
+          <!--<h4 class="amp-title">Stitch QA</h4>-->
+          <p>Evaluate cluster quality for all of your brand's unified customer profiles.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+
+          </div>
+          {%- block footer %}
+          <div class="footer" role="contentinfo">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+              {%- else %}
+                {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
+              {%- endif %}
+            {%- endif %}
+            </div>
+          {%- endblock %}
+        </div>
+      </div>
+  {%- endblock %}
+
+      <div class="clearer"></div>
+    </div>
+{%- endblock %}
+
+
+
+
