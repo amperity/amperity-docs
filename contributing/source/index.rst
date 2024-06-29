@@ -20,3 +20,4 @@ About Amperity documentation
 
    rst
    setup
+   terminology
