@@ -126,11 +126,12 @@ This topic describes the correct use of terms, which is a very interesting topic
    See **primary** / **replica**.
 
 
-.. _term-serial-comma:
-
-**serial comma**
-   See :ref:`Oxford (or serial) comma <style-guide-oxford-comma>`.
-
+.. 
+.. .. _term-serial-comma:
+.. 
+.. **serial comma**
+..    See :ref:`Oxford (or serial) comma <style-guide-oxford-comma>`.
+.. 
 
 .. _term-slave:
 
