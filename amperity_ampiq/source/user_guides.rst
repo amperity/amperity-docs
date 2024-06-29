@@ -170,3 +170,4 @@ SQL queries
 A SQL query runs against any database table in your customer 360 database and returns a set of results that are defined by that query. Use SQL queries to support any downstream use case, such as specific audience types for specific marketing applications, sending customer profiles and interaction histories to data analytics tools, and so on. Each query returns a refined and filtered subset of useful customer data.
 
 .. user-guides-sql-queries-end
+
