@@ -1,0 +1,2897 @@
+{% set active_product = active_product|default('DataGrid & AmpID') -%}
+{% set active_page_name = active_page_name|default('DataGrid & AmpID') -%}
+{% set active_page_icon = active_page_icon|default('<i class="far fa-circle fa-fw icon-left">') -%}
+{% set active_search_path = active_search_path|default('/search.html') -%}
+<!--{% set active_version = active_version|default('Latest') -%}-->
+{% set defaultNavItems = [
+
+  {
+    "title": "Configure Amperity",
+    "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
+    "subItems": [
+      {
+        "title": "Start here",
+        "hasSubItems": false,
+        "url": "/datagrid/start_here.html"
+      },
+      {
+        "title": "About AmpID",
+        "hasSubItems": false,
+        "url": "/datagrid/ampid.html"
+      },
+      {
+        "title": "About DataGrid",
+        "hasSubItems": false,
+        "url": "/datagrid/datagrid.html"
+      },
+      {
+        "title": "Spark SQL reference <i class='fas fa-external-link-square-alt'></i>",
+        "hasSubItems": false,
+        "url": "/reference/sql_spark.html"
+      },
+    ]
+  },
+
+  {
+    "title": "Use sandboxes",
+    "iconClass": "far fa-clone fa-fw",
+    "subItems": [
+      {
+        "title": "About sandboxes",
+        "hasSubItems": false,
+        "url": "/datagrid/sandboxes.html"
+      },
+      {
+        "title": "Allow sandbox administration",
+        "hasSubItems": false,
+        "url": "/datagrid/sandboxes.html#allow-sandbox-administration"
+      },
+      {
+        "title": "Safely make changes",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "1. Create sandbox",
+            "hasSubItems": false,
+            "url": "/datagrid/sandbox_create.html"
+          },
+          {
+            "title": "2. Configure your tenant",
+            "hasSubItems": false,
+            "url": "/datagrid/sandbox_open.html"
+          },
+          {
+            "title": "3. Promote sandbox",
+            "hasSubItems": false,
+            "url": "/datagrid/sandbox_promote.html"
+          },
+        ],
+      },
+      {
+        "title": "Best practices",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Continuous validation",
+            "hasSubItems": false,
+            "url": "/datagrid/sandboxes.html#continuous-validation"
+          },
+          {
+            "title": "Data across environments",
+            "hasSubItems": false,
+            "url": "/datagrid/sandboxes.html#data-across-environments"
+          },
+          {
+            "title": "Delete sandbox on promote",
+            "hasSubItems": false,
+            "url": "/datagrid/sandboxes.html#delete-sandbox-on-promote"
+          },
+          {
+            "title": "Run partial workflows",
+            "hasSubItems": false,
+            "url": "/datagrid/sandboxes.html#run-partial-workflows"
+          },
+          {
+            "title": "Short-lived sandboxes",
+            "hasSubItems": false,
+            "url": "/datagrid/sandboxes.html#short-lived-sandboxes"
+          },
+        ],
+      },
+      {
+        "title": "Common activities",
+        "hasSubItems": false,
+        "url": "/datagrid/sandboxes.html#common-activities"
+      },
+    ]
+  },
+
+  {
+    "title": "Manage sources",
+    "iconClass": "fas fa-layer-plus fa-fw",
+    "subItems": [
+      {
+        "title": "General advice",
+        "hasSubItems": false,
+        "url": "/datagrid/send_data.html"
+      },
+      {
+        "title": "Pull data from ...",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Any SFTP site",
+            "hasSubItems": false,
+            "url": "/datagrid/source_sftp.html"
+          },
+          {
+            "title": "Acxiom",
+            "hasSubItems": false,
+            "url": "/datagrid/source_acxiom.html"
+          },
+          {
+            "title": "Adobe",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Adobe Analytics",
+                "hasSubItems": false,
+                "url": "/datagrid/source_adobe_analytics.html"
+              },
+              {
+                "title": "Adobe Campaign",
+                "hasSubItems": false,
+                "url": "/datagrid/source_adobe_campaign.html"
+              },
+              {
+                "title": "Adobe Commerce",
+                "hasSubItems": false,
+                "url": "/datagrid/source_adobe_commerce.html"
+              },
+              {
+                "title": "Adobe Customer Attributes",
+                "hasSubItems": false,
+                "url": "/datagrid/source_adobe_customer_attributes.html"
+              },
+            ]
+          },
+          {
+            "title": "Amazon S3",
+            "hasSubItems": false,
+            "url": "/datagrid/source_amazon_s3.html"
+          },
+          {
+            "title": "Attentive Mobile",
+            "hasSubItems": false,
+            "url": "/datagrid/source_attentive_mobile.html"
+          },
+          {
+            "title": "Azure Blob Storage",
+            "hasSubItems": false,
+            "url": "/datagrid/source_azure_blob_storage.html"
+          },
+          {
+            "title": "Bazaarvoice",
+            "hasSubItems": false,
+            "url": "/datagrid/source_bazaarvoice.html"
+          },
+          {
+            "title": "Bluecore",
+            "hasSubItems": false,
+            "url": "/datagrid/source_bluecore.html"
+          },
+          {
+            "title": "Braze",
+            "hasSubItems": false,
+            "url": "/datagrid/source_braze.html"
+          },
+          {
+            "title": "Camelot SMM",
+            "hasSubItems": false,
+            "url": "/datagrid/source_camelot_smm.html"
+          },
+          {
+            "title": "Cheetah Digital",
+            "hasSubItems": false,
+            "url": "/datagrid/source_cheetah_digital.html"
+          },
+          {
+            "title": "Cordial",
+            "hasSubItems": false,
+            "url": "/datagrid/source_cordial.html"
+          },
+          {
+            "title": "Cross Country Computer",
+            "hasSubItems": false,
+            "url": "/datagrid/source_cross_country_computer.html"
+          },
+          {
+            "title": "Databricks",
+            "hasSubItems": false,
+            "url": "/datagrid/source_databricks.html"
+          },
+          {
+            "title": "Dynamic Yield",
+            "hasSubItems": false,
+            "url": "/datagrid/source_dynamic_yield.html"
+          },
+          {
+            "title": "Emarsys",
+            "hasSubItems": false,
+            "url": "/datagrid/source_emarsys.html"
+          },
+          {
+            "title": "Epsilon",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Epsilon Abacus",
+                "hasSubItems": false,
+                "url": "/datagrid/source_epsilon_abacus.html"
+              },
+              {
+                "title": "Epsilon Conversant",
+                "hasSubItems": false,
+                "url": "/datagrid/source_epsilon_conversant.html"
+              },
+              {
+                "title": "Epsilon Targeting",
+                "hasSubItems": false,
+                "url": "/datagrid/source_epsilon_targeting.html"
+              },
+            ]
+          },
+          {
+            "title": "Experian",
+            "hasSubItems": false,
+            "url": "/datagrid/source_experian.html"
+          },
+          {
+            "title": "Fivetran",
+            "hasSubItems": false,
+            "url": "/datagrid/source_fivetran.html"
+          },
+          {
+            "title": "Google Analytics",
+            "hasSubItems": false,
+            "url": "/datagrid/source_google_analytics.html"
+          },
+          {
+            "title": "Google Cloud Storage",
+            "hasSubItems": false,
+            "url": "/datagrid/source_google_cloud_storage.html"
+          },
+          {
+            "title": "Heap",
+            "hasSubItems": false,
+            "url": "/datagrid/source_heap.html"
+          },
+          {
+            "title": "HubSpot",
+            "hasSubItems": false,
+            "url": "/datagrid/source_hubspot.html"
+          },
+          {
+            "title": "Infutor",
+            "hasSubItems": false,
+            "url": "/datagrid/source_infutor.html"
+          },
+          {
+            "title": "Klaviyo",
+            "hasSubItems": false,
+            "url": "/datagrid/source_klaviyo.html"
+          },
+          {
+            "title": "Koupon Media",
+            "hasSubItems": false,
+            "url": "/datagrid/source_koupon_media.html"
+          },
+          {
+            "title": "Kustomer",
+            "hasSubItems": false,
+            "url": "/datagrid/source_kustomer.html"
+          },
+          {
+            "title": "Listrak",
+            "hasSubItems": false,
+            "url": "/datagrid/source_listrak.html"
+          },
+          {
+            "title": "Microsoft Dataverse",
+            "hasSubItems": false,
+            "url": "/datagrid/source_microsoft_dataverse.html"
+          },
+          {
+            "title": "Monetate",
+            "hasSubItems": false,
+            "url": "/datagrid/source_monetate.html"
+          },
+          {
+            "title": "Neustar",
+            "hasSubItems": false,
+            "url": "/datagrid/source_neustar.html"
+          },
+          {
+            "title": "Optimizely",
+            "hasSubItems": false,
+            "url": "/datagrid/source_optimizely.html"
+          },
+          {
+            "title": "Oracle Data Cloud",
+            "hasSubItems": false,
+            "url": "/datagrid/source_oracle_data_cloud.html"
+          },
+          {
+            "title": "Oracle Responsys",
+            "hasSubItems": false,
+            "url": "/datagrid/source_oracle_responsys.html"
+          },
+          {
+            "title": "PebblePost",
+            "hasSubItems": false,
+            "url": "/datagrid/source_pebblepost.html"
+          },
+          {
+            "title": "PowerReviews",
+            "hasSubItems": false,
+            "url": "/datagrid/source_powerreviews.html"
+          },
+          {
+            "title": "Quad",
+            "hasSubItems": false,
+            "url": "/datagrid/source_quad.html"
+          },
+          {
+            "title": "RR Donnelly",
+            "hasSubItems": false,
+            "url": "/datagrid/source_rr_donnelly.html"
+          },
+          {
+            "title": "Sailthru",
+            "hasSubItems": false,
+            "url": "/datagrid/source_sailthru.html"
+          },
+          {
+            "title": "Salesforce",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Commerce Cloud",
+                "hasSubItems": false,
+                "url": "/datagrid/source_salesforce_commerce_cloud.html"
+              },
+              {
+                "title": "Marketing Cloud",
+                "hasSubItems": false,
+                "url": "/datagrid/source_salesforce_marketing_cloud.html"
+              },
+              {
+                "title": "Pardot",
+                "hasSubItems": false,
+                "url": "/datagrid/source_salesforce_pardot.html"
+              },
+              {
+                "title": "Sales Cloud",
+                "hasSubItems": false,
+                "url": "/datagrid/source_salesforce_sales_cloud.html"
+              },
+            ]
+          },
+          {
+            "title": "Shopify",
+            "hasSubItems": false,
+            "url": "/datagrid/source_shopify.html"
+          },
+          {
+            "title": "SMG",
+            "hasSubItems": false,
+            "url": "/datagrid/source_smg.html"
+          },
+          {
+            "title": "Snowflake",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "... on Amazon AWS",
+                "hasSubItems": false,
+                "url": "/datagrid/source_snowflake_aws.html"
+              },
+              {
+                "title": "... on Microsoft Azure",
+                "hasSubItems": false,
+                "url": "/datagrid/source_snowflake_azure.html"
+              },
+            ]
+          },
+          {
+            "title": "SoundCommerce",
+            "hasSubItems": false,
+            "url": "/datagrid/source_soundcommerce.html"
+          },
+          {
+            "title": "Square",
+            "hasSubItems": false,
+            "url": "/datagrid/source_square.html"
+          },
+          {
+            "title": "Streaming Ingest REST API",
+            "hasSubItems": false,
+            "url": "/datagrid/api_streaming_ingest.html"
+          },
+          {
+            "title": "Vibes",
+            "hasSubItems": false,
+            "url": "/datagrid/source_vibes.html"
+          },
+          {
+            "title": "Zendesk",
+            "hasSubItems": false,
+            "url": "/datagrid/source_zendesk.html"
+          },
+        ],
+      },
+
+      {
+        "title": "Reshape data on ingest",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About ingest queries",
+            "hasSubItems": false,
+            "url": "/datagrid/ingest_queries.html"
+          },
+          {
+            "title": "Courier load operations",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About load operations",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#courier-load-operations"
+              },
+              {
+                "title": "for Apache Avro",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#apache-avro"
+              },
+              {
+                "title": "for Apache Parquet",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#apache-parquet"
+              },
+              {
+                "title": "for CBOR",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#cbor"
+              },
+              {
+                "title": "for CSV",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#csv"
+              },
+              {
+                "title": "for JSON",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#json"
+              },
+              {
+                "title": "for NDJSON",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#ndjson"
+              },
+              {
+                "title": "for PSV",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#psv"
+              },
+              {
+                "title": "for Streaming JSON",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#streaming-json"
+              },
+              {
+                "title": "for TSV",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#tsv"
+              },
+              {
+                "title": "for XML",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#xml"
+              },
+            ],
+          },
+          {
+            "title": "Example ingest queries",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Build birthdate",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#build-birthdate"
+              },
+              {
+                "title": "Concatenate columns",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#concatenate-columns"
+              },
+              {
+                "title": "Explode transactions",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#explode-transactions"
+              },
+              {
+                "title": "Find records",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#find-records"
+              },
+              {
+                "title": "Flatten with identifiers",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#flatten-with-identifiers"
+              },
+              {
+                "title": "Import billing as address",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#import-billing-as-address"
+              },
+              {
+                "title": "JOIN datasets",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#join-datasets"
+              },
+              {
+                "title": "Load XML data",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#load-xml-data"
+              },
+              {
+                "title": "Parse fields from files",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#parse-fiels-from-files"
+              },
+              {
+                "title": "Parse nested records",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#parse-nested-records"
+              },
+              {
+                "title": "Remove field",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#remove-field"
+              },
+              {
+                "title": "Select all fields",
+                "hasSubItems": false,
+                "url": "/datagrid/ingest_queries.html#select-all-fields"
+              },
+            ],
+          },
+        ],
+      },
+    ]
+  },
+
+
+  {
+    "title": "Apply semantic tags",
+    "iconClass": "fas fa-compress fa-fw",
+    "subItems": [
+      {
+        "title": "Configure feeds",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About feeds",
+            "hasSubItems": false,
+            "url": "/datagrid/feeds.html"
+          },
+          {
+            "title": "Set the primary key",
+            "hasSubItems": false,
+            "url": "/datagrid/feeds.html"
+          },
+          {
+            "title": "Apply semantic tags",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html"
+          },
+          {
+            "title": "Select last updated field",
+            "hasSubItems": false,
+            "url": "/datagrid/feeds.html"
+          },
+          {
+            "title": "Make available to Stitch",
+            "hasSubItems": false,
+            "url": "/datagrid/feeds.html"
+          },
+        ],
+      },
+      {
+        "title": "Profiles",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About profiles",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#profiles"
+          },
+          {
+            "title": "Address groups",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About address groups",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#address-groups"
+              },
+              {
+                "title": "Apply ordinals",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#apply-ordinals-to-address-groups"
+              },
+            ],
+          },
+          {
+            "title": "Email addresses",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About email addresses",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#email-addresses"
+              },
+              {
+                "title": "Apply namespaces",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#apply-namespaces-to-emails"
+              },
+              {
+                "title": "Apply ordinals",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#apply-ordinals-to-emails"
+              },
+              {
+                "title": "Consolidate emails",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#consolidate-emails"
+              },
+              {
+                "title": "Exclude duplicates",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#exclude-duplicate-emails"
+              },
+              {
+                "title": "Ignore email addresses",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#ignore-email-addresses"
+              },
+              {
+                "title": "Update merge rules",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#update-email-merge-rules"
+              },
+            ],
+          },
+          {
+            "title": "Loyalty programs",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#loyalty-programs"
+          },
+          {
+            "title": "Names",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About names",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#names"
+              },
+              {
+                "title": "Deriving names",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#deriving-names"
+              },
+              {
+                "title": "Deriving generational suffix",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#deriving-generational-suffix"
+              },
+            ],
+          },
+          {
+            "title": "Phone numbers",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About phone numbers",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#phone-numbers"
+              },
+              {
+                "title": "Apply namespaces",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#apply-namespaces-to-phone"
+              },
+              {
+                "title": "Apply ordinals",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#apply-ordinals-to-phone"
+              },
+              {
+                "title": "Consolidate numbers",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#consolidate-numbers"
+              },
+              {
+                "title": "Update merge rules",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#update-phone-merge-rules"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Interactions",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About interactions",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#interactions"
+          },
+          {
+            "title": "Domain SQL vs. feeds",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#domain-sql-vs-feeds"
+          },
+          {
+            "title": "Associate to Amperity ID",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Customer records",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#customer-records"
+              },
+              {
+                "title": "Interaction records",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#interaction-records"
+              },
+              {
+                "title": "Custom semantics",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#custom-semantics"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Keys",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About keys",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#keys"
+          },
+          {
+            "title": "Blocking keys",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About blocking keys",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#blocking-keys-bk"
+              },
+              {
+                "title": "Label foreign keys",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#label-foreign-key-as-blocking-key"
+              },
+              {
+                "title": "Update blocking strategy",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#update-blocking-strategies"
+              },
+            ],
+          },
+          {
+            "title": "Customer keys",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#customer-keys-ck"
+          },
+          {
+            "title": "Foreign keys",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About foreign keys",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#foreign-keys-fk"
+              },
+              {
+                "title": "Link transactions",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#link-transactions-to-profiles"
+              },
+              {
+                "title": "Prioritize matching",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#prioritize-foreign-key-matching"
+              },
+              {
+                "title": "Use case-sensitive keys",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#use-case-sensitive-foreign-keys"
+              },
+            ],
+          },
+          {
+            "title": "Primary keys",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#primary-keys-pk"
+          },
+          {
+            "title": "Separation keys",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About separation keys",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#separation-keys-sk"
+              },
+              {
+                "title": "Apply to brand names",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#apply-to-brand-names"
+              },
+              {
+                "title": "Associate to semantics",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#associate-to-semantic-tags"
+              },
+              {
+                "title": "Prioritize unmatching",
+                "hasSubItems": false,
+                "url": "/datagrid/semantics.html#prioritize-separation-key-unmatching"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Product catalogs",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About product catalogs",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#product-catalogs"
+          },
+          {
+            "title": "Define product catalogs",
+            "hasSubItems": false,
+            "url": "/datagrid/semantics.html#define-product-catalogs"
+          },
+        ],
+      },
+      {
+        "title": "About custom domain tables",
+        "hasSubItems": false,
+        "url": "/datagrid/custom_domain_tables.html"
+      },
+    ]
+  },
+
+
+  {
+    "title": "Review domain data",
+    "iconClass": "fas fa-th-large fa-fw",
+    "subItems": [
+      {
+        "title": "About domain data",
+        "hasSubItems": false,
+        "url": "/datagrid/domain_data.html"
+      },
+      {
+        "title": "Review domain data",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About reviewing data",
+            "hasSubItems": false,
+            "url": "/datagrid/domain_data.html#review-domain-data"
+          },
+          {
+            "title": "Amperity-added columns</i>",
+            "hasSubItems": false,
+            "url": "/datagrid/domain_data.html#amperity-added-columns"
+          },
+          {
+            "title": "Column types</i>",
+            "hasSubItems": false,
+            "url": "/datagrid/domain_data.html#column-types"
+          },
+          {
+            "title": "Record types",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About record types",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#record-types"
+              },
+              {
+                "title": "Customer records",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#customer-records"
+              },
+              {
+                "title": "Interaction records",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#interaction-records"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Reshape domain data",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About reshaping data",
+            "hasSubItems": false,
+            "url": "/datagrid/domain_data.html#reshape-domain-data"
+          },
+          {
+            "title": "About Domain SQL",
+            "hasSubItems": false,
+            "url": "/datagrid/domain_data.html#about-domain-sql"
+          },
+          {
+            "title": "Examples",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Build birthdates",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#build-birthdates"
+              },
+              {
+                "title": "Combine postal codes",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#combine-postal-codes"
+              },
+              {
+                "title": "Extract names",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#extract-names"
+              },
+              {
+                "title": "Hash profile data",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#hash-profile-data"
+              },
+              {
+                "title": "Parse multiple separators",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#parse-multiple-separators"
+              },
+              {
+                "title": "Set non-USA email to NULL",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#set-non-usa-email-to-null"
+              },
+              {
+                "title": "Standardize phone numbers",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#standardize-phone-numbers"
+              },
+              {
+                "title": "Standardize USA states",
+                "hasSubItems": false,
+                "url": "/datagrid/domain_data.html#standardize-usa-states"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Validate domain data",
+        "hasSubItems": false,
+        "url": "/datagrid/validate_inputs.html"
+      },
+    ]
+  },
+
+  {
+    "title": "Run Stitch",
+    "iconClass": "fas fa-random fa-fw",
+    "subItems": [
+      {
+        "title": "Add tables to Stitch run",
+        "hasSubItems": false,
+        "url": "/datagrid/stitch.html#add-tables-to-stitch-run"
+      },
+      {
+        "title": "Run Stitch",
+        "hasSubItems": false,
+        "url": "/datagrid/stitch.html#run-stitch"
+      },
+    ]
+  },
+
+  {
+    "title": "Build databases",
+    "iconClass": "fas fa-user-circle fa-fw",
+    "subItems": [
+      {
+        "title": "Add customer profiles",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About customer profiles",
+            "hasSubItems": false,
+            "url": "/datagrid/add_customer_profiles.html"
+          },
+          {
+            "title": "Apply semantics",
+            "hasSubItems": false,
+            "url": "/datagrid/add_customer_profiles.html#apply-semantics"
+          },
+          {
+            "title": "Review validations",
+            "hasSubItems": false,
+            "url": "/datagrid/add_customer_profiles.html#review-validations"
+          },
+          {
+            "title": "Run Stitch",
+            "hasSubItems": false,
+            "url": "/datagrid/add_customer_profiles.html#run-stitch"
+          },
+          {
+            "title": "Build database",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About database tables",
+                "hasSubItems": false,
+                "url": "/datagrid/add_customer_profiles.html#build-database"
+              },
+              {
+                "title": "Unified coalesced",
+                "hasSubItems": false,
+                "url": "/datagrid/add_customer_profiles.html#unified-coalesced"
+              },
+              {
+                "title": "Best email address",
+                "hasSubItems": false,
+                "url": "/datagrid/add_customer_profiles.html#best-email-address"
+              },
+              {
+                "title": "Merged customers",
+                "hasSubItems": false,
+                "url": "/datagrid/add_customer_profiles.html#merged-customers"
+              },
+              {
+                "title": "Customer 360",
+                "hasSubItems": false,
+                "url": "/datagrid/add_customer_profiles.html#customer-360"
+              },
+            ],
+          },
+          {
+            "title": "Activate database",
+            "hasSubItems": false,
+            "url": "/datagrid/add_customer_profiles.html#activate-database"
+          },
+        ],
+      },
+      {
+        "title": "Add transactions",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About transactions",
+            "hasSubItems": false,
+            "url": "/datagrid/add_transactions.html"
+          },
+          {
+            "title": "Apply semantics",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About semantics",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#apply-semantics"
+              },
+              {
+                "title": "Purchase histories",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#purchase-histories"
+              },
+              {
+                "title": "Product catalogs",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#product-catalogs"
+              },
+            ],
+          },
+          {
+            "title": "Review validations",
+            "hasSubItems": false,
+            "url": "/datagrid/add_transactions.html#review-validations"
+          },
+          {
+            "title": "Associate to profiles",
+            "hasSubItems": false,
+            "url": "/datagrid/add_transactions.html#associate-to-profiles"
+          },
+          {
+            "title": "Extend database",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About transaction tables",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#extend-database"
+              },
+              {
+                "title": "Itemized transactions",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#itemized-transactions"
+              },
+              {
+                "title": "Unified transactions",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#unified-transactions"
+              },
+              {
+                "title": "Extended attributes",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#extended-attributes"
+              },
+              {
+                "title": "Transaction attributes",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#transaction-attributes"
+              },
+            ],
+          },
+          {
+            "title": "Optional attributes",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About optional attributes",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#optional-attributes"
+              },
+              {
+                "title": "Cancellations",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#cancellations"
+              },
+              {
+                "title": "Fiscal calendars",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#fiscal-calendars"
+              },
+              {
+                "title": "Net order revenue",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#net-order-revenue"
+              },
+              {
+                "title": "Order costs",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#order-costs"
+              },
+              {
+                "title": "Order discount amounts",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#order-discount-amounts"
+              },
+              {
+                "title": "Returns",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#returns"
+              },
+              {
+                "title": "RFM",
+                "hasSubItems": false,
+                "url": "/datagrid/add_transactions.html#rfm"
+              },
+            ],
+          },
+          {
+            "title": "Refresh database",
+            "hasSubItems": false,
+            "url": "/datagrid/add_transactions.html#refresh-database"
+          },
+          {
+            "title": "C360 validations",
+            "hasSubItems": false,
+            "url": "/datagrid/add_transactions.html#c360-validations"
+          },
+          {
+            "title": "Enable AmpIQ",
+            "hasSubItems": false,
+            "url": "/datagrid/add_transactions.html#enable-ampiq"
+          },
+        ],
+      },
+      {
+        "title": "Add data assets",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About data assets",
+            "hasSubItems": false,
+            "url": "/datagrid/add_data_assets.html"
+          },
+          {
+            "title": "Best email address",
+            "hasSubItems": false,
+            "url": "/datagrid/table_email_ampid_assignment.html"
+          },
+          {
+            "title": "Customer attributes",
+            "hasSubItems": false,
+            "url": "/datagrid/table_customer_attributes.html"
+          },
+          {
+            "title": "Customer consent",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About customer consent",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#customer-consent"
+              },
+              {
+                "title": "All opted-in email addresses",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#all-opted-in-email-addresses"
+              },
+              {
+                "title": "Email opt status",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#email-opt-status"
+              },
+              {
+                "title": "SMS opt status",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#sms-opt-status"
+              },
+            ],
+          },
+          {
+            "title": "Email engagement",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About email engagement",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#email-engagement"
+              },
+              {
+                "title": "Engagement attributes",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#engagement-attributes"
+              },
+              {
+                "title": "Engagement summary",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#engagement-summary"
+              },
+              {
+                "title": "Unified email events",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#unified-email-events"
+              },
+            ],
+          },
+          {
+            "title": "Fiscal calendars",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About fiscal calendars",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#fiscal-calendars"
+              },
+              {
+                "title": "NRF calendar",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#nrf-calendar"
+              },
+              {
+                "title": "Extended fiscal calendar",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#extended-fiscal-calendar"
+              },
+              {
+                "title": "Add fiscal calendar table",
+                "hasSubItems": false,
+                "url": "/datagrid/table_fiscal_calendar.html"
+              },
+            ],
+          },
+          {
+            "title": "Loyalty programs",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About loyalty programs",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#loyalty-programs"
+              },
+              {
+                "title": "Loyalty events",
+                "hasSubItems": false,
+                "url": "/datagrid/table_unified_loyalty_events.html"
+              },
+              {
+                "title": "Loyalty profiles",
+                "hasSubItems": false,
+                "url": "/datagrid/table_unified_loyalty.html"
+              },
+            ],
+          },
+          {
+            "title": "Paid media",
+            "hasSubItems": false,
+            "url": "/datagrid/table_unified_paid_media.html"
+          },
+          {
+            "title": "Reference data assets",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Address standardization",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#address-standardization"
+              },
+              {
+                "title": "Gender name ratios",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#gender-name-ratios"
+              },
+              {
+                "title": "Lookup: Countries",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#lookup-countries"
+              },
+              {
+                "title": "Lookup: United States",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#lookup-united-states"
+              },
+              {
+                "title": "Lookup: Zip codes",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#lookup-zip-codes"
+              },
+              {
+                "title": "Normalization: United States",
+                "hasSubItems": false,
+                "url": "/datagrid/add_data_assets.html#normalization-united-states"
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        "title": "Enable AmpIQ",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About AmpIQ",
+            "hasSubItems": false,
+            "url": "/datagrid/add_ampiq.html"
+          },
+          {
+            "title": "Verify prerequisites",
+            "hasSubItems": false,
+            "url": "/datagrid/add_ampiq.html#verify-prerequisites"
+          },
+          {
+            "title": "Review data requirements",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About data requirements",
+                "hasSubItems": false,
+                "url": "/datagrid/add_ampiq.html#data-requirements"
+              },
+              {
+                "title": "for columns and tables",
+                "hasSubItems": false,
+                "url": "/datagrid/add_ampiq.html#columns-and-tables"
+              },
+              {
+                "title": "for fields",
+                "hasSubItems": false,
+                "url": "/datagrid/add_ampiq.html#fields"
+              },
+              {
+                "title": "for additional data sources",
+                "hasSubItems": false,
+                "url": "/datagrid/add_ampiq.html#additional-data-sources"
+              },
+            ],
+          },
+          {
+            "title": "Request to enable AmpIQ",
+            "hasSubItems": false,
+            "url": "/datagrid/add_ampiq.html#request-to-enable-ampiq"
+          },
+          {
+            "title": "Enable visual segments",
+            "hasSubItems": false,
+            "url": "/datagrid/add_ampiq.html#enable-visual-segments"
+          },
+          {
+            "title": "Review AmpIQ features",
+            "hasSubItems": false,
+            "url": "/datagrid/add_ampiq.html#review-ampiq-features"
+          },
+        ],
+      },
+
+      {
+        "title": "Enable predictive models",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About predictive models",
+            "hasSubItems": false,
+            "url": "/datagrid/add_predicted_models.html"
+          },
+          {
+            "title": "Predictive models workflow",
+            "hasSubItems": false,
+            "url": "/datagrid/add_predicted_models.html#predicted-models-workflow"
+          },
+          {
+            "title": "Verify prerequisites",
+            "hasSubItems": false,
+            "url": "/datagrid/add_predicted_models.html#verify-prerequisites"
+          },
+          {
+            "title": "Review data requirements",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About data requirements",
+                "hasSubItems": false,
+                "url": "/datagrid/add_predicted_models.html#data-requirements"
+              },
+              {
+                "title": "for columns and tables",
+                "hasSubItems": false,
+                "url": "/datagrid/add_predicted_models.html#columns-and-tables"
+              },
+              {
+                "title": "for fields",
+                "hasSubItems": false,
+                "url": "/datagrid/add_predicted_models.html#fields"
+              },
+            ],
+          },
+          {
+            "title": "Request to enable",
+            "hasSubItems": false,
+            "url": "/datagrid/add_predicted_models.html#request-to-enable"
+          },
+          {
+            "title": "Configure predictive tables",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Add affinity table",
+                "hasSubItems": false,
+                "url": "/datagrid/add_predicted_models.html#add-affinity-table"
+              },
+              {
+                "title": "Add pCLV attributes table",
+                "hasSubItems": false,
+                "url": "/datagrid/add_predicted_models.html#add-pclv-attributes-table"
+              },
+            ],
+          },
+          {
+            "title": "Define product catalog",
+            "hasSubItems": false,
+            "url": "/datagrid/add_predicted_models.html#define-product-catalog"
+          },
+          {
+            "title": "Add pCLV attributes",
+            "hasSubItems": false,
+            "url": "/datagrid/add_predicted_models.html#add-pclv-attributes-to-customer360-table"
+          },
+          {
+            "title": "Review tables",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Affinity",
+                "hasSubItems": false,
+                "url": "/datagrid/table_predicted_affinity.html"
+              },
+              {
+                "title": "Predicted pCLV Attributes",
+                "hasSubItems": false,
+                "url": "/datagrid/table_predicted_clv_attributes.html"
+              },
+            ],
+          },
+        ],
+      },
+    ]
+  },
+
+
+  {
+    "title": "Validate results",
+    "iconClass": "fas fa-chart-network fa-fw",
+    "subItems": [
+      {
+        "title": "Review ID resolution",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About ID resolution",
+            "hasSubItems": false,
+            "url": "/datagrid/stitch_results.html"
+          },
+          {
+            "title": "Explore Stitch results",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "By Amperity ID",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#explore-by-amperity-id"
+              },
+              {
+                "title": "By data source",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#explore-by-data-source"
+              },
+              {
+                "title": "Cluster graphs",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#view-cluster-graph"
+              },
+              {
+                "title": "Deduplication rate",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#view-deduplication-rate"
+              },
+              {
+                "title": "Pairwise connections",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#view-pairwise-connections"
+              },
+              {
+                "title": "Previous results",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#explore-previous-results"
+              },
+              {
+                "title": "Semantics",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#explore-semantics"
+              },
+              {
+                "title": "Stitch metrics",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#view-stitch-metrics"
+              },
+              {
+                "title": "Stitched records",
+                "hasSubItems": false,
+                "url": "/datagrid/stitch_results.html#view-stitched-records"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Manage Stitch QA",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Stitch QA",
+            "hasSubItems": false,
+            "url": "/datagrid/qa_stitch.html"
+          },
+          {
+            "title": "Add database",
+            "hasSubItems": false,
+            "url": "/datagrid/qa_stitch.html#add-stitch-qa-database"
+          },
+          {
+            "title": "Add queries",
+            "hasSubItems": false,
+            "url": "/datagrid/qa_stitch.html#add-stitch-qa-queries"
+          },
+          {
+            "title": "Extend Stitch QA",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Add blocklist values",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#add-stitch-blocklistvalues"
+              },
+              {
+                "title": "Join to Unified_Coalesced",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#update-unified-preprocessed-raw"
+              },
+            ],
+          },
+          {
+            "title": "What to look for?",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Anomalies in output",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#anomalies-in-stitch-output"
+              },
+              {
+                "title": "Blocking keys",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#blocking-keys"
+              },
+              {
+                "title": "Customer keys",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#customer-keys"
+              },
+              {
+                "title": "Foreign keys",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#foreign-keys"
+              },
+              {
+                "title": "Overclustering",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#overclustering"
+              },
+              {
+                "title": "Problematic nicknames",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#problematic-nicknames"
+              },
+              {
+                "title": "Record pairs and scores",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#record-pairs-and-scores"
+              },
+              {
+                "title": "Review cluster details",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#review-cluster-details"
+              },
+              {
+                "title": "Semantic tags",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#semantic-tags"
+              },
+              {
+                "title": "Supersized clusters",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#supersized-clusters"
+              },
+              {
+                "title": "Underclustering",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#underclustering"
+              },
+              {
+                "title": "Values to blocklist",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_stitch.html#values-to-blocklist"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Manage transactions QA",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About transactions QA",
+            "hasSubItems": false,
+            "url": "/datagrid/qa_transactions.html"
+          },
+          {
+            "title": "Add queries",
+            "hasSubItems": false,
+            "url": "/datagrid/qa_transactions.html#add-transaction-qa-queries"
+          },
+          {
+            "title": "Rollup validation queries",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "for item-level rollups",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_transactions.html#for-item-level-rollups"
+              },
+              {
+                "title": "for order-level rollups",
+                "hasSubItems": false,
+                "url": "/datagrid/qa_transactions.html#for-order-level-rollups"
+              },
+            ],
+          },
+          {
+            "title": "Prioritize Amperity IDs",
+            "hasSubItems": false,
+            "url": "/datagrid/qa_transactions.html#prioritize-amperity-ids"
+          },
+        ],
+      },
+      {
+        "title": "Bad-values blocklist",
+        "hasSubItems": false,
+        "url": "/datagrid/blocklist_bad_values.html"
+      },
+      {
+        "title": "Add Stitch labels",
+        "hasSubItems": false,
+        "url": "/datagrid/stitch_labels.html"
+      },
+      {
+        "title": "Manage nicknames",
+        "hasSubItems": false,
+        "url": "/datagrid/stitch_nicknames.html"
+      },
+      {
+        "title": "Configure Stitch",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Stitch settings",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html"
+          },
+          {
+            "title": "Allowed empty tables",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#allowed-empty-tables"
+          },
+          {
+            "title": "Automatic bad value detection",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#automatic-bad-value-detection"
+          },
+          {
+            "title": "Blocking strategy",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#blocking-strategy"
+          },
+          {
+            "title": "Case-sensitive foreign keys",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#case-sensitive-foreign-keys"
+          },
+          {
+            "title": "Clustering algorithm",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#clustering-algorithm"
+          },
+          {
+            "title": "Days of recorded history",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#days-of-recorded-history"
+          },
+          {
+            "title": "Email addresses",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#email-addresses"
+          },
+          {
+            "title": "Force Stitch to run",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#force-stitch-to-run"
+          },
+          {
+            "title": "Ignore jitter alerts",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#ignore-jitter-alerts"
+          },
+          {
+            "title": "Matching strategy",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About matching strategies",
+                "hasSubItems": false,
+                "url": "/datagrid/configure_stitch.html#matching-strategy"
+              },
+              {
+                "title": "Foreign key matching",
+                "hasSubItems": false,
+                "url": "/datagrid/configure_stitch.html#foreign-key-matching"
+              },
+              {
+                "title": "Separation key unmatching",
+                "hasSubItems": false,
+                "url": "/datagrid/configure_stitch.html#separation-key-umatching"
+              },
+            ],
+          },
+          {
+            "title": "Matching thresholds",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#matching-thresholds"
+          },
+          {
+            "title": "One-to-one Stitch",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#one-to-one-stitch"
+          },
+          {
+            "title": "Preprocessing profiles",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#preprocessing-profiles"
+          },
+          {
+            "title": "Semantic exclusions",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#semantic-exclusions"
+          },
+          {
+            "title": "Skip unified changes",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#skip-unified-changes"
+          },
+          {
+            "title": "Skip unified scores",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#skip-unified-scores"
+          },
+          {
+            "title": "Stable ID assignment",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About Stable ID assignment",
+                "hasSubItems": false,
+                "url": "/datagrid/configure_stitch.html#stable-ids"
+              },
+              {
+                "title": "Disable stable IDs",
+                "hasSubItems": false,
+                "url": "/datagrid/configure_stitch.html#disable-stable-ids"
+              },
+              {
+                "title": "Increase partitions",
+                "hasSubItems": false,
+                "url": "/datagrid/configure_stitch.html#increase-partitions"
+              },
+            ],
+          },
+          {
+            "title": "Stitch reports",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#stitch-reports"
+          },
+          {
+            "title": "Supersized clusters",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#supersized-clusters"
+          },
+          {
+            "title": "Trivial duplicates",
+            "hasSubItems": false,
+            "url": "/datagrid/configure_stitch.html#trivial-duplicates"
+          },
+        ],
+      },
+    ]
+  },
+
+
+  {
+    "title": "Manage databases",
+    "iconClass": "fas fa-layer-group fa-fw",
+    "subItems": [
+      {
+        "title": "About databases",
+        "hasSubItems": false,
+        "url": "/datagrid/databases.html"
+      },
+      {
+        "title": "About Spark SQL",
+        "hasSubItems": false,
+        "url": "/datagrid/databases.html#spark-sql"
+      },
+      {
+        "title": "About table types",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Standard tables",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#standard-tables"
+          },
+          {
+            "title": "Source and custom tables",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#source-and-custom-tables"
+          },
+          {
+            "title": "QA tables",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#qa-tables"
+          },
+        ],
+      },
+      {
+        "title": "Define customer profile",
+        "hasSubItems": false,
+        "url": "/datagrid/databases.html#define-customer-profile"
+      },
+      {
+        "title": "Filtered 360 databases",
+        "hasSubItems": false,
+        "url": "/datagrid/filtered_360_databases.html"
+      },
+      {
+        "title": "Manage databases",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Add empty database",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#add-empty-database"
+          },
+          {
+            "title": "Add from template",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About database templates",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#add-database-from-template"
+              },
+              {
+                "title": "Customer 360 template",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#customer-360-template"
+              },
+              {
+                "title": "Passthrough template",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#passthrough-template"
+              },
+              {
+                "title": "Stitch QA template",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#stitch-qa-template"
+              },
+            ],
+          },
+          {
+            "title": "Use multiple databases",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#use-multiple-databases"
+          },
+          {
+            "title": "Apply flexible merge rules",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#apply-flexible-merge-rules"
+          },
+        ],
+      },
+      {
+        "title": "Manage tables",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Add as passthrough",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#add-as-passthrough"
+          },
+          {
+            "title": "Add as SQL",
+            "hasSubItems": false,
+            "url": "/datagrid/databases.html#add-as-sql"
+          },
+          {
+            "title": "Add from table template",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About table templates",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#add-from-table-template"
+              },
+              {
+                "title": "Standard table templates",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#standard-table-templates"
+              },
+              {
+                "title": "Other templates",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#other-templates"
+              },
+            ],
+          },
+          {
+            "title": "Validation alerts",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About validation alerts",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#validation-alerts"
+              },
+              {
+                "title": "Implicit CROSS JOIN",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#implicit-cross-join"
+              },
+              {
+                "title": "OVER without PARTITION BY",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#over-without-partition-by"
+              },
+              {
+                "title": "Unescaped backslashes",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#unescaped-backslashes-in-regular-expressions"
+              },
+              {
+                "title": "Unintentional broadcast joins",
+                "hasSubItems": false,
+                "url": "/datagrid/databases.html#unintentional-broadcast-joins"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Query historical data",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About historical data",
+            "hasSubItems": false,
+            "url": "/datagrid/historical_data.html"
+          },
+          {
+            "title": "Available versions",
+            "hasSubItems": false,
+            "url": "/datagrid/historical_data.html#available-versions"
+          },
+          {
+            "title": "Return versions w/datetime",
+            "hasSubItems": false,
+            "url": "/datagrid/historical_data.html#return-versions-by-datetime"
+          },
+          {
+            "title": "Return versions w/created_at",
+            "hasSubItems": false,
+            "url": "/datagrid/historical_data.html#return-versions-by-creation-date"
+          },
+          {
+            "title": "View all versioned tables",
+            "hasSubItems": false,
+            "url": "/datagrid/historical_data.html#view-all-versioned-tables"
+          },
+        ],
+      },
+      {
+        "title": "Extend databases",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Add graph database",
+            "hasSubItems": false,
+            "url": "/datagrid/graph_database.html"
+          },
+          {
+            "title": "Add householding",
+            "hasSubItems": false,
+            "url": "/datagrid/householding.html"
+          },
+          {
+            "title": "Add PII table",
+            "hasSubItems": false,
+            "url": "/datagrid/table_pii.html"
+          },
+          {
+            "title": "Add SHA-256 hashed columns",
+            "hasSubItems": false,
+            "url": "/datagrid/table_customer360.html#add-sha-256-hashed-columns"
+          },
+          {
+            "title": "Calculate nearest store",
+            "hasSubItems": false,
+            "url": "/datagrid/calculate_nearest_store.html"
+          },
+          {
+            "title": "Predict gender",
+            "hasSubItems": false,
+            "url": "/datagrid/predict_gender.html"
+          },
+          {
+            "title": "Use first-party data",
+            "hasSubItems": false,
+            "url": "/datagrid/data_first_party.html"
+          },
+          {
+            "title": "Use third-party data",
+            "hasSubItems": false,
+            "url": "/datagrid/data_third_party.html"
+          },
+        ],
+      },
+
+
+      {
+        "title": "Export databases, tables",
+        "hasSubItems": false,
+        "url": "/datagrid/databases.html#export-databases-and-tables"
+      },
+      {
+        "title": "Privacy rights (CCPA / GDPR)",
+        "hasSubItems": false,
+        "url": "/datagrid/privacy_rights.html"
+      },
+    ]
+  },
+
+
+  {
+    "title": "Configure destinations",
+    "iconClass": "fas fa-adjust fa-fw",
+    "subItems": [
+      {
+        "title": "Any SFTP site",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_sftp.html"
+      },
+      {
+        "title": "ActiveCampaign",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_active_campaign.html"
+      },
+      {
+        "title": "Acxiom",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_acxiom.html"
+      },
+      {
+        "title": "Adobe",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Adobe Campaign",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_campaign.html"
+          },
+          {
+            "title": "Adobe Customer Attributes",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_customer_attributes.html"
+          },
+          {
+            "title": "Adobe Experience Platform",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_aep.html"
+          },
+          {
+            "title": "Adobe Marketo",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_marketo.html"
+          },
+        ]
+      },
+      {
+        "title": "Airship",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_airship.html"
+      },
+      {
+        "title": "Amazon Ads",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_amazon_ads.html"
+      },
+      {
+        "title": "Amazon Pinpoint",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_amazon_pinpoint.html"
+      },
+      {
+        "title": "Amazon Redshift",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_amazon_redshift.html"
+      },
+      {
+        "title": "Amazon S3",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_amazon_s3.html"
+      },
+      {
+        "title": "Attentive Mobile",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Attentive Mobile",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_attentive_mobile.html"
+          },
+          {
+            "title": "Audience segments",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_attentive_mobile.html#audience-segments"
+          },
+          {
+            "title": "Custom attributes",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_attentive_mobile.html#custom-attributes-api"
+          },
+        ]
+      },
+      {
+        "title": "AWS Connect",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_aws_connect.html"
+      },
+      {
+        "title": "Azure Blob Storage",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_azure_blob_storage.html"
+      },
+      {
+        "title": "Azure Synapse",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_azure_synapse.html"
+      },
+      {
+        "title": "Bazaarvoice",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_bazaarvoice.html"
+      },
+      {
+        "title": "Bluecore",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_bluecore.html"
+      },
+      {
+        "title": "Braze",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_braze.html"
+      },
+      {
+        "title": "Business Intelligence Connect",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_business_intelligence_connect.html"
+      },
+      {
+        "title": "Cheetah Digital",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_cheetah_digital.html"
+      },
+      {
+        "title": "Cordial",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_cordial.html"
+      },
+      {
+        "title": "Criteo",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_criteo.html"
+      },
+      {
+        "title": "Databricks",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Databricks",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_databricks.html"
+          },
+          {
+            "title": "Connect Databricks to ...",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Amazon Redshift",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_databricks_amazon_redshift.html"
+              },
+              {
+                "title": "Amazon S3",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_databricks_amazon_s3.html"
+              },
+              {
+                "title": "Azure Blob Storage",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_databricks_azure_blob_storage.html"
+              },
+              {
+                "title": "Azure Synapse Analytics",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_databricks_azure_synapse_analytics.html"
+              },
+              {
+                "title": "Google BigQuery",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_databricks_google_big_query.html"
+              },
+              {
+                "title": "Snowflake",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_databricks_snowflake.html"
+              },
+            ],
+          },
+          {
+            "title": "Send data to Delta table",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_databricks_delta_table.html"
+          },
+        ]
+      },
+      {
+        "title": "Domo",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_domo.html"
+      },
+      {
+        "title": "DV360",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_dv360.html"
+      },
+      {
+        "title": "Dynamic Yield",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_dynamic_yield.html"
+      },
+      {
+        "title": "Dynamics 365 Marketing",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_dynamics_365_marketing.html"
+      },
+      {
+        "title": "Evocalize",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_evocalize.html"
+      },
+      {
+        "title": "Experian",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_experian.html"
+      },
+      {
+        "title": "Google Ads",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_google_ads.html"
+      },
+      {
+        "title": "Google BigQuery",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_google_bigquery.html"
+      },
+      {
+        "title": "Google Cloud Storage",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_google_cloud_storage.html"
+      },
+      {
+        "title": "HubSpot",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_hubspot.html"
+      },
+      {
+        "title": "Infutor",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_infutor.html"
+      },
+      {
+        "title": "Kibo",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_kibo.html"
+      },
+      {
+        "title": "Klaviyo",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_klaviyo.html"
+      },
+      {
+        "title": "Koupon Media",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_koupon_media.html"
+      },
+      {
+        "title": "Listrak",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_listrak.html"
+      },
+      {
+        "title": "LiveRamp",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_liveramp.html"
+      },
+      {
+        "title": "Mailchimp",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_mailchimp.html"
+      },
+      {
+        "title": "Meta Ads Manager",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Meta Ads Manager",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_meta_ads_manager.html"
+          },
+          {
+            "title": "Custom audiences",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_meta_ads_manager.html#custom-audiences"
+          },
+          {
+            "title": "Offline events",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_meta_ads_manager.html#offline-events"
+          },
+        ]
+      },
+      {
+        "title": "Microsoft",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Microsoft Advertising",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_microsoft_ads.html"
+          },
+          {
+            "title": "Microsoft Dataverse",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_microsoft_dataverse.html"
+          },
+          {
+            "title": "Microsoft Dynamics",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_microsoft_dynamics.html"
+          },
+          {
+            "title": "Microsoft PowerBI",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_power_bi.html"
+          },
+        ]
+      },
+      {
+        "title": "Monetate",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_monetate.html"
+      },
+      {
+        "title": "Neustar",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_neustar.html"
+      },
+      {
+        "title": "Optimizely",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_optimizely.html"
+      },
+      {
+        "title": "Oracle Data Cloud",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_oracle_data_cloud.html"
+      },
+      {
+        "title": "Oracle DMP",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_oracle_dmp.html"
+      },
+      {
+        "title": "Oracle Eloqua",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_oracle_eloqua.html"
+      },
+      {
+        "title": "Oracle Responsys",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_oracle_responsys.html"
+      },
+      {
+        "title": "PebblePost",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_pebblepost.html"
+      },
+      {
+        "title": "Persado",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_persado.html"
+      },
+      {
+        "title": "Pinterest",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_pinterest.html"
+      },
+      {
+        "title": "PowerReviews",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_powerreviews.html"
+      },
+      {
+        "title": "Profile API",
+        "hasSubItems": false,
+        "url": "/datagrid/api_profile.html"
+      },
+      {
+        "title": "Sailthru",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_sailthru.html"
+      },
+      {
+        "title": "Salesforce",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Marketing Cloud",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_salesforce_marketing_cloud.html"
+          },
+          {
+            "title": "Personalization",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_salesforce_marketing_cloud_personalization.html"
+          },
+          {
+            "title": "Sales Cloud",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_salesforce_sales_cloud.html"
+          },
+        ]
+      },
+      {
+        "title": "Snapchat",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_snapchat.html"
+      },
+      {
+        "title": "Snowflake",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "... on Amazon AWS",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_snowflake_aws.html"
+          },
+          {
+            "title": "... on Microsoft Azure",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_snowflake_azure.html"
+          },
+        ]
+      },
+      {
+        "title": "Tableau",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Tableau",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_tableau.html"
+          },
+          {
+            "title": "Connect Tableau to ...",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Amazon Redshift",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_tableau_amazon_redshift.html"
+              },
+              {
+                "title": "Azure Synapse Analytics",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_tableau_azure_synapse_analytics.html"
+              },
+              {
+                "title": "Databricks",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_tableau_databricks.html"
+              },
+              {
+                "title": "Google BigQuery",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_tableau_google_big_query.html"
+              },
+              {
+                "title": "Snowflake",
+                "hasSubItems": false,
+                "url": "/datagrid/destination_tableau_snowflake.html"
+              },
+            ],
+          },
+        ]
+      },
+      {
+        "title": "The Trade Desk",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About The Trade Desk",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_the_trade_desk.html"
+          },
+          {
+            "title": "Custom audiences",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_the_trade_desk.html#custom-audiences"
+          },
+          {
+            "title": "Offline events",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_the_trade_desk.html#offline-events"
+          },
+        ]
+      },
+      {
+        "title": "Throtle",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_throtle.html"
+      },
+      {
+        "title": "TikTok Ads Manager",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About TikTok Ads Manager",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_tiktok_ads.html"
+          },
+          {
+            "title": "Custom audiences",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_tiktok_ads.html#custom-audiences"
+          },
+          {
+            "title": "Offline events",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_tiktok_ads.html#offline-events"
+          },
+        ]
+      },
+      {
+        "title": "Tulip",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_tulip.html"
+      },
+      {
+        "title": "Vibes",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_vibes.html"
+      },
+      {
+        "title": "Webhook",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_webhook.html"
+      },
+      {
+        "title": "Zendesk",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_zendesk.html"
+      },
+    ]
+  },
+
+
+  {
+    "title": "Automate workflows",
+    "iconClass": "fas fa-repeat-alt fa-fw",
+    "subItems": [
+      {
+        "title": "About automated workflows",
+        "hasSubItems": false,
+        "url": "/datagrid/workflows.html"
+      },
+
+      {
+        "title": "Courier groups",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About courier groups",
+            "hasSubItems": false,
+            "url": "/datagrid/workflows.html#courier-groups"
+          },
+          {
+            "title": "Duration thresholds",
+            "hasSubItems": false,
+            "url": "/datagrid/workflows.html#duration-thresholds"
+          },
+          {
+            "title": "Missing files",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "About missing files",
+                "hasSubItems": false,
+                "url": "/datagrid/workflows.html#missing-files"
+              },
+              {
+                "title": "Notify and continue",
+                "hasSubItems": false,
+                "url": "/datagrid/workflows.html#notify-and-continue"
+              },
+              {
+                "title": "Notify and stop",
+                "hasSubItems": false,
+                "url": "/datagrid/workflows.html#notify-and-stop"
+              },
+              {
+                "title": "Wait for missing files",
+                "hasSubItems": false,
+                "url": "/datagrid/workflows.html#wait-for-missing-files"
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "title": "Orchestration groups",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About orchestration groups",
+            "hasSubItems": false,
+            "url": "/datagrid/workflows.html#orchestration-groups"
+          },
+          {
+            "title": "Run after courier group",
+            "hasSubItems": false,
+            "url": "/datagrid/workflows.html#run-after-courier-group"
+          },
+          {
+            "title": "Run on a schedule",
+            "hasSubItems": false,
+            "url": "/datagrid/workflows.html#run-on-schedule"
+          },
+        ],
+      },
+    ]
+  },
+
+] -%}
+
+{% set navItems = navItems|default(defaultNavItems) -%}
+<nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+
+    {% block leftnav %}
+    {%- for item in navItems %}
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="{{ item.title }}">
+
+       {%- if item.image %}
+
+        <img class="icon-left" src="./_static/{{ item.image }}"></img> {{ item.title }}
+
+       {%- else %}
+
+        <i class="fa {{ item.iconClass }} icon-left"></i> {{ item.title }}
+
+       {%- endif %}
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items">
+
+        {%- for subItem in item.subItems %}
+        {%- if subItem.hasSubItems %}
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="{{ subItem.title }}">
+            {{ subItem.title }}
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2">
+
+            {%- for subItem2 in subItem.subItems %}
+            {%- if subItem2.hasSubItems %}
+
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                {%- for subItem3 in subItem2.subItems %}
+
+                <li>
+                  <a class="nav-docs-link" href="{{ subItem3.url }}" title="{{ subItem3.title }}">
+                    {{ subItem3.title }}
+                  </a>
+                </li>
+
+                {%- endfor %}
+
+              </ul>
+            </li>
+
+            {%- else %}
+
+            <li>
+              <a class="nav-docs-link" href="{{ subItem2.url }}" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+              </a>
+            </li>
+
+            {%- endif %}
+            {%- endfor %}
+
+          </ul>
+        
+        </li>
+
+        {%- else %}
+
+        <li>
+          <a class="nav-docs-link" href="{{ subItem.url }}" title="{{ subItem.title }}">
+            {{ subItem.title }}
+          </a>
+        </li>
+
+        {% endif %}
+        {%- endfor %}
+
+      </ul>
+    </li>
+    {%- endfor %}
+    {% endblock %}
+
+    <li class="main-item dark-item">
+      <a href="https://learn.amperity.com"><i class="fas fa-graduation-cap fa-fw icon-left"></i>Learning Lab</a>
+    </li>
+
+    <li class="main-item dark-item">
+      <a href="/support/index.html"><i class="fas fa-life-ring fa-fw icon-left"></i>Get Support</a>
+    </li>
+
+    <!--<li class="main-item dark-item">
+      <a href="https://docs.amperity.com/" target="_blank"><i class="fas fa-pen-to-square fa-fw icon-left"></i>Contribute to docs</a>
+    </li>-->
+
+    <li class="main-item dark-item">
+      <a href="https://status.amperity.com/" target="_blank"><i class="fas fa-wave-pulse fa-fw icon-left"></i>System Status</a>
+    </li>
+
+    <li class="main-item dark-item">
+      <a href="https://www.amperity.com" target="_blank"><i class="fa regular fa-house fa-fw icon-left"></i>Amperity.com</a>
+    </li>
+
+  </ul>
+</nav>

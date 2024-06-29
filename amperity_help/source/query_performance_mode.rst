@@ -1,0 +1,1 @@
+You may enable performance mode for any query that returns large result sets. Performance mode is significantly faster than running a query in non-performance mode, but has some limitations, which are explained on the docs site.

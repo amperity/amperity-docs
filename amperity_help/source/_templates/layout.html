@@ -1,0 +1,42 @@
+{#
+    basic/layout.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for Amperity tooltips.
+
+#}
+
+{%- block doctype -%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{%- endblock %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-y: hidden">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+{% include 'css.html' %}
+</head>
+
+<body role="document">
+<div class="body-wrap">
+{%- block content %}
+<div class="document markup-docs">
+{%- block document %}
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+{% block body %} {% endblock %}
+</div>
+</div>
+</div>
+{%- endblock %}
+
+
+
+{%- endblock %}
+
+</div>
+</body>
+</html>

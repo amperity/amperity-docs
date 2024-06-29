@@ -1,0 +1,459 @@
+{#
+    basic/search.html
+    ~~~~~~~~~~~~~~~~~
+
+    Template for the search page.
+
+    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- extends "layout.html" -%}
+{%- set title = _('Destinations for Customer Activation') -%}
+
+{%- block extra_meta %}
+<meta content="A cardwall with links to destinations for paid media and customer activation." lang="en" name="description" xml:lang="en" />
+<meta class="swiftype" content="A cardwall with links to destinations for paid media and customer activation." data-type="text" name="body" />
+<meta class="swiftype" content="Destinations for Customer Activation" data-type="string" name="title" />
+{%- endblock %}
+
+{%- block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+{%- endblock %}
+
+{%- block content %}
+
+    <div class="document markup-docs">
+    {%- block document %}
+      <div class="documentcardwrapper">
+        <div class="cardwrapper">
+          <div class="body" role="main">
+            {% block body %}
+
+<div class="container-cardgroup-midnight">
+
+  <div class="card-group-midnight-title">
+    <div class="card-group-midnight-box">
+      <div class="card-group-midnight-info">
+        <h4 class="card-group-midnight-subtitle">Customer Activation</h4>
+        <p class="card-group-midnight-intro">Activate customers using your brand's preferred marketing automation or advertising platforms.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_active_campaign.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-active-campaign.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">ActiveCampaign</h4>
+        <p class="card-intro">Send audience lists using the ActiveCampaign REST API.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_adobe_marketo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Adobe Marketo</h4>
+        <p class="card-intro">Manage audience list membership using the Marketo REST API.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="datagrid/destination_amazon_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-ads.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Amazon Ads</h4>
+        <p class="card-intro">Build audiences and advertise across Amazon-associated paid media.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_attentive_mobile.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-attentive.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Attentive</h4>
+        <p class="card-intro">Use SFTP to send phone numbers or email addresses to Attentive.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_braze.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-braze.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Braze</h4>
+        <p class="card-intro">Send customer profiles and attributes to Braze using the Braze API.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_cheetah_digital.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-cheetah.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Cheetah Digital</h4>
+        <p class="card-intro">Send customer profiles to Cheetah Digital using SFTP or Amazon S3.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_cordial.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-cordial.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Cordial</h4>
+        <p class="card-intro">Manage audiences, view trends, and automate customer experiences.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_criteo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-cr1t30.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Criteo</h4>
+        <p class="card-intro">Use Criteo to manage and scale campaigns.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_dv360.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-display-video.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">DV360</h4>
+        <p class="card-intro">Send data to DV360; enable ads for display and video.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-facebook-ads.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Facebook</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Facebook.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-facebook-messenger.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Facebook Messenger</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Facebook Messenger.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_google_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-gmail.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Gmail</h4>
+        <p class="card-intro">Reach customers in the Promotions and Social tabs in Gmail.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_google_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-ads.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google Ads</h4>
+        <p class="card-intro">Use the AdWords API to send audiences to Google Ads.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_google_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-shopping.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google Shopping</h4>
+        <p class="card-intro">Run ads within the Shopping tab on Google.com.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_hubspot.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-hubspot.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">HubSpot</h4>
+        <p class="card-intro">Use the HubSpot API to send email lists to HubSpot.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-instagram.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Instagram</h4>
+        <p class="card-intro">Use audiences and offilne events to advertise on Instagram.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_klaviyo.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-klaviyo.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Klaviyo</h4>
+        <p class="card-intro">Use the Klaviyo API to manage audience lists in Klaviyo.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_listrak.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-listrak.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Listrak</h4>
+        <p class="card-intro">Use the Listrak API to send audiences and SFTP for automated workflows.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-meta.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Meta Ads Manager</h4>
+        <p class="card-intro">Send audiences and offline events to Meta Ads Manager.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_microsoft_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Microsoft Advertising</h4>
+        <p class="card-intro">Push audiences to the Microsoft Advertising network.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_oracle_eloqua.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Oracle Eloqua</h4>
+        <p class="card-intro">Manage static lists in Oracle Eloqua.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_pinterest.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-pinterest.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Pinterest</h4>
+        <p class="card-intro">Engage with customers who interact with your product Pins.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_reddit_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-reddit-ads.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Reddit Ads</h4>
+        <p class="card-intro">Engage with your customers within 100K+ active Reddit communities.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_sailthru.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-sailthru.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Sailthru</h4>
+        <p class="card-intro">Use the Sailthru API to send audience lists and attributes to Sailthru.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_salesforce_marketing_cloud.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Marketing Cloud</h4>
+        <p class="card-intro">Use SFTP to send audiences to Salesforce Marketing Cloud.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_snapchat.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-snapchat.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Snapchat</h4>
+        <p class="card-intro">Send audiences using the Snapchat Marketing API.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_the_trade_desk.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-thetradedesk.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">The Trade Desk</h4>
+        <p class="card-intro">Send email addresses and build UID 2.0 audiences using The Trade Desk API.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_tiktok_ads.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-tiktok.png"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">TikTok Ads Manager</h4>
+        <p class="card-intro">Send first-party data and build high-value segments. Track conversions with offline events.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_meta_ads_manager.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-whatsapp.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">WhatsApp</h4>
+        <p class="card-intro">Use audiences and offilne events to open conversations in WhatsApp.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_dv360.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-youtube.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">YouTube Ads</h4>
+        <p class="card-intro">Send data to Google Customer Match; set up campaigns in YouTube Ads.</p>
+      </div>
+    </div></a>
+  </div>
+
+</div>
+
+
+<div class="container-cardgroup-cement">
+
+  <div class="card-group-cement-title">
+    <div class="card-group-cement-box">
+      <div class="card-group-cement-info">
+        <h4 class="card-group-cement-subtitle">Cloud Storage and SFTP</h4>
+        <!--<p class="card-group-cement-intro">Cloud Storage and SFTP</p>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_amazon_s3.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-s3.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Amazon S3</h4>
+        <p class="card-intro">Send any type of data to any Amazon S3 bucket.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_azure_blob_storage.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-azure.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Azure Blob Storage</h4>
+        <p class="card-intro">Send any type of data to Azure Blob Storage.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_google_cloud_storage.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-cloud.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">Google Cloud Storage</h4>
+        <p class="card-intro">Send any type of data to Google Cloud Storage.</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="cards">
+    <a href="ampiq/destination_sftp.html" class="card"><div class="card-item">
+      <div class="card-image"><img id="markup" height="80" src="_static/connector-sftp.svg"/>
+      </div>
+      <div class="card-info">
+        <h4 class="card-title">SFTP</h4>
+        <p class="card-intro">Use SFTP to send any type of data anywhere.</p>
+      </div>
+    </div></a>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+          </div>
+          {%- block footer %}
+          <div class="footer" role="contentinfo">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="../ampiq/{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+              {%- else %}
+                {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
+              {%- endif %}
+            {%- endif %}
+            </div>
+          {%- endblock %}
+        </div>
+      </div>
+  {%- endblock %}
+
+      <div class="clearer"></div>
+    </div>
+{%- endblock %}
+
+
+
+

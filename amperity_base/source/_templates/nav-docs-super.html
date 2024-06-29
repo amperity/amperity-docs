@@ -1,0 +1,134 @@
+{% set active_product = active_product|default('Docs') -%}
+{% set active_page_name = active_page_name|default('Docs') -%}
+{% set active_page_icon = active_page_icon|default('<i class="far fa-circle fa-fw icon-left">') -%}
+{% set active_search_path = active_search_path|default('/search.html') -%}
+<!--{% set active_version = active_version|default('Latest') -%}-->
+{% set defaultNavItems = [
+  {
+    "title": "Amperity",
+    "iconClass": "fa-home",
+    "subItems": [
+      {
+        "title": "Welcome to Amperity Docs",
+        "hasSubItems": false,
+        "url": "/index.html"
+      },
+      {
+        "title": "Glossary",
+        "hasSubItems": false,
+        "url": "/reference/glossary.html"
+      },
+      {
+        "title": "About AmpIQ",
+        "hasSubItems": false,
+        "url": "/ampiq/index.html"
+      },
+      {
+        "title": "About Amp360",
+        "hasSubItems": false,
+        "url": "/amp360/index.html"
+      },
+      {
+        "title": "About DataGrid",
+        "hasSubItems": false,
+        "url": "/datagrid/index.html"
+      },
+    ]
+  },
+] -%}
+
+{% set navItems = navItems|default(defaultNavItems) -%}
+<nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+
+    {% block leftnav %}
+    {%- for item in navItems %}
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="{{ item.title }}">
+
+       {%- if item.image %}
+
+        <img class="icon-left" src="./_static/{{ item.image }}"></img> {{ item.title }}
+
+       {%- else %}
+
+        <i class="fa {{ item.iconClass }} icon-left"></i> {{ item.title }}
+
+       {%- endif %}
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items">
+
+        {%- for subItem in item.subItems %}
+        {%- if subItem.hasSubItems %}
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="{{ subItem.title }}">
+            {{ subItem.title }}
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2">
+
+            {%- for subItem2 in subItem.subItems %}
+            {%- if subItem2.hasSubItems %}
+
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                {%- for subItem3 in subItem2.subItems %}
+
+                <li>
+                  <a class="nav-docs-link" href="{{ subItem3.url }}" title="{{ subItem3.title }}">
+                    {{ subItem3.title }}
+                  </a>
+                </li>
+
+                {%- endfor %}
+
+              </ul>
+            </li>
+
+            {%- else %}
+
+            <li>
+              <a class="nav-docs-link" href="{{ subItem2.url }}" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+              </a>
+            </li>
+
+            {%- endif %}
+            {%- endfor %}
+
+          </ul>
+        
+        </li>
+
+        {%- else %}
+
+        <li>
+          <a class="nav-docs-link" href="{{ subItem.url }}" title="{{ subItem.title }}">
+            {{ subItem.title }}
+          </a>
+        </li>
+
+        {% endif %}
+        {%- endfor %}
+
+      </ul>
+    </li>
+    {%- endfor %}
+    {% endblock %}
+
+    <li class="main-item dark-item">
+      <a href="/support/index.html"><i class="fas fa-life-ring fa-fw icon-left"></i>Get Support</a>
+    </li>
+
+  </ul>
+</nav>

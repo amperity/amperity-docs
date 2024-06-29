@@ -1,0 +1,55 @@
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+
+   * - **api_version**
+     - String. Optional.
+
+       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2024-04-01**.
+
+       .. note:: You may use the **api-version** request header instead of the **api-version** request parameter.
+
+
+   * - **happened_end**
+     - String. Optional.
+
+       The end date (exclusive) that defines the end of the time range for which audit events will be returned. For example: "2024-03-01T11:11:11Z".
+
+       The values for the end date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
+
+
+   * - **happened_start**
+     - String. Optional.
+
+       The start date (inclusive) that defines the beginning of the time range for which audit events will be returned. For example: "2024-04-01T11:11:11Z".
+
+       The start date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
+
+
+   * - **limit**
+     - Integer. Optional.
+
+       The maximum number of records to include in a single page of results.
+
+
+   * - **next_token**
+     - String. Optional.
+
+       An opaque token that is used to paginate results. Omit the **next_token** property to return the first page. Use the cursor value for **next_token** that was returned in a response to view the next page of results.
+
+       For example: **ABCd1fghIJk2l3M**
+
+       .. note:: The possible values for **next_token** are returned within the **200** response.
+
+       .. important:: The value for **next_token** cannot be **NULL**.
+
+
+   * - **with_total**
+     - Boolean. Optional.
+
+       Set this value to **true** to include a total count of all results. Default value: **false**.
+
+       .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
