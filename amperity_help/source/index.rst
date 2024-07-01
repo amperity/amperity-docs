@@ -31,6 +31,12 @@ Collection of standalone topics
    campaign_list_delivery
    campaign_schedule
    campaign_sub_audiences_and_destinations
+   destination_google_ads_audience_description
+   destination_google_ads_audience_name
+   destination_google_ads_id_customer
+   destination_google_ads_id_mobile_app
+   destination_google_ads_membership_duration
+   destination_google_ads_upload_key_type
    file_patterns
    query_performance_mode
    relative_dates
