@@ -88,7 +88,7 @@ The following example uses **Has Purchased** to return a list of customers who h
 Available conditions
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+.. include:: ../../amperity_reference/source/attribute_compound_has_purchased.rst
    :start-after: .. attribute-compound-has-purchased-conditions-start
    :end-before: .. attribute-compound-has-purchased-conditions-end
 

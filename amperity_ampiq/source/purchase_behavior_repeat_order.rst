@@ -68,7 +68,7 @@ Use repeat order in a segment
 Available conditions
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+.. include:: ../../amperity_reference/source/attribute_compound_repeat_order.rst
    :start-after: .. attribute-compound-repeat-order-conditions-start
    :end-before: .. attribute-compound-repeat-order-conditions-end
 

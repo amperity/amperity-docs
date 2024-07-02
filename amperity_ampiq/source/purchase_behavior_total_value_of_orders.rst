@@ -86,7 +86,7 @@ In the following example uses **Total Value of Orders** to return a list of cust
 Available conditions
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+.. include:: ../../amperity_reference/source/attribute_compound_total_value_of_orders.rst
    :start-after: .. attribute-compound-total-value-of-orders-conditions-start
    :end-before: .. attribute-compound-total-value-of-orders-conditions-end
 
