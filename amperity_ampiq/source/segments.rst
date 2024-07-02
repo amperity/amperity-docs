@@ -96,7 +96,7 @@ The following sections describe the individual elements within the **Segment Edi
 
        Click **Add attribute** to open the attributes menu, find the **Predicted CLV Attributes** table, and then choose the **Predicted Lifecycle Status** attribute.
 
-       There are six possible stages for predicted lifecycle status, so choose the "is in list" operator, and then select "active", "cooling down", and "at risk":
+       There are six possible stages for predicted lifecycle status, so choose the "is in list" operator, and then select "Active", "Cooling down", and "At risk":
 
        .. image:: ../../images/mockup-segments-tab-lifecycle-status-active-coolingdown-atrisk.png
           :width: 540 px
