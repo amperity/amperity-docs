@@ -793,7 +793,7 @@ You can add a saved segment to a sub-audience in a campaign on the **Edit Campai
 
 #. From the **Edit Campaign** page, click **Add Sub-audience**.
 #. From the **Source** menu, click **Saved segments**.
-#. From the **Segments(s)** list, select one or more saved segments.
+#. From the **Segment(s)** list, select one or more saved segments.
 
 The saved segment(s) appear in the **Sub-audiences and Destinations** section on the **Edit Campaign** page.
 
