@@ -242,10 +242,6 @@ The following table lists the conditions that are available to this attribute.
 Filter attributes
 ==================================================
 
-.. attribute-compound-repeat-order-filter-attributes-start
-
 .. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
    :start-after: .. attribute-compound-first-order-filter-attributes-start
    :end-before: .. attribute-compound-first-order-filter-attributes-end
-
-.. attribute-compound-repeat-order-filter-attributes-end

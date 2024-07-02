@@ -81,3 +81,23 @@ The following example uses **Has Purchased** to return a list of customers who h
    :class: no-scaled-link
 
 .. purchase-behavior-has-purchased-example-watch-end
+
+
+.. _purchase-behavior-has-purchased-conditions:
+
+Available conditions
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_has_purchased.rst
+   :start-after: .. attribute-compound-has-purchased-conditions-start
+   :end-before: .. attribute-compound-has-purchased-conditions-end
+
+
+.. _purchase-behavior-has-purchased-filter-attributes:
+
+Filter attributes
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-first-order-filter-attributes-start
+   :end-before: .. attribute-compound-first-order-filter-attributes-end

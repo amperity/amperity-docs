@@ -98,3 +98,22 @@ The following example uses **Has Not Purchased** to return a list of customers w
 
 .. purchase-behavior-has-not-purchased-example-shirts-end
 
+
+.. _purchase-behavior-has-not-purchased-conditions:
+
+Available conditions
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_has_not_purchased.rst
+   :start-after: .. attribute-compound-has-not-purchased-conditions-start
+   :end-before: .. attribute-compound-has-not-purchased-conditions-end
+
+
+.. _purchase-behavior-has-not-purchased-filter-attributes:
+
+Filter attributes
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-first-order-filter-attributes-start
+   :end-before: .. attribute-compound-first-order-filter-attributes-end
