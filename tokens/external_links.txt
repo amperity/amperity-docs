@@ -2236,7 +2236,7 @@
 
 .. |ext_tulip_file_importer| raw:: html
 
-   <a href="https://docs.tulip.com/integrating/file-importer/fileimporteroverview/" target="_blank">File Importer</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://docs.tulip.com/integrating/file-importer/overview/" target="_blank">File Importer</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_tulip_file_importer_file_formatting| raw:: html
