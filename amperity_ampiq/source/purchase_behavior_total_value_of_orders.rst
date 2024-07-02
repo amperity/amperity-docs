@@ -79,3 +79,23 @@ In the following example uses **Total Value of Orders** to return a list of cust
    :class: no-scaled-link
 
 .. purchase-behavior-total-value-of-orders-example-shoes-end
+
+
+.. _purchase-behavior-total-value-of-orders-conditions:
+
+Available conditions
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-total-value-of-orders-conditions-start
+   :end-before: .. attribute-compound-total-value-of-orders-conditions-end
+
+
+.. _purchase-behavior-total-value-of-orders-filter-attributes:
+
+Filter attributes
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-first-order-filter-attributes-start
+   :end-before: .. attribute-compound-first-order-filter-attributes-end
