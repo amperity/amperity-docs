@@ -104,7 +104,7 @@ The following example uses **Has Not Purchased** to return a list of customers w
 Available conditions
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+.. include:: ../../amperity_reference/source/attribute_compound_has_not_purchased.rst
    :start-after: .. attribute-compound-has-not-purchased-conditions-start
    :end-before: .. attribute-compound-has-not-purchased-conditions-end
 

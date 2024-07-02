@@ -86,7 +86,7 @@ In the following example uses **Most Frequent Order** to return a list of custom
 Available conditions
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+.. include:: ../../amperity_reference/source/attribute_compound_most_frequent_order.rst
    :start-after: .. attribute-compound-most-frequent-order-conditions-start
    :end-before: .. attribute-compound-most-frequent-order-conditions-end
 
