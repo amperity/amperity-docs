@@ -73,7 +73,7 @@ To find predicted lifecycle status, start with the **Predicted Customer Lifecycl
 
 .. attribute-predicted-lifecycle-status-segment-list-options-start
 
-Choose the **is in list** attribute, and then set predicted lifecycle status to **active**, **at risk**, and **cooling down**:
+Choose the **is in list** attribute, and then set predicted lifecycle status to **Active**, **At risk**, and **Cooling down**:
 
 .. attribute-predicted-lifecycle-status-segment-list-options-end
 
@@ -127,7 +127,7 @@ The following table lists the conditions that are available to this attribute.
 
        Returns all customer records with values that match the specified characters.
 
-       For example, "active" will return "active" and not "cooling down", "at risk", "highly at risk" or "lost".
+       For example, "Active" will return "active" and not "cooling down", "at risk", "highly at risk" or "lost".
 
    * - **is not empty**
      - Returns customer records that have a value in this field.
