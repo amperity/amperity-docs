@@ -121,7 +121,7 @@ By lifecycle status
 
 .. direct-mail-build-audience-by-status-start
 
-Set your list to the following values: "cooling down" and "at risk".
+Set your list to the following values: "Cooling down" and "At risk".
 
 .. direct-mail-build-audience-by-status-end
 
