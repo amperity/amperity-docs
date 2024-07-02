@@ -71,3 +71,25 @@ Use first order in a segment
 .. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
    :start-after: .. attribute-compound-first-order-segments-filters-start
    :end-before: .. attribute-compound-first-order-segments-filters-end
+
+
+.. _purchase-behavior-first-order-conditions:
+
+Available conditions
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-first-order-conditions-start
+   :end-before: .. attribute-compound-first-order-conditions-end
+
+
+.. _purchase-behavior-first-order-filter-attributes:
+
+Filter attributes
+==================================================
+
+.. attribute-compound-first-order-filter-attributes-start
+
+A filter attribute is a standard column that is output by Amperity and is available from the **Unified Itemized Transactions** table. When a filter attribute is associated with a purchase behavior attribute, you may use them to filter the results by specific items in your product catalog, such as by brand, by channel, by store, or by specific details about the items in your product catalog, such as color, SKU, and so on. The list of filter attributes that will be available for product catalogs depends on their availability within your **Unified Itemized Transactions** table.
+
+.. attribute-compound-first-order-filter-attributes-end
