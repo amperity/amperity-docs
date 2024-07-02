@@ -79,3 +79,23 @@ In the following example uses **Most Frequent Order** to return a list of custom
    :class: no-scaled-link
 
 .. purchase-behavior-most-frequent-order-example-shoes-end
+
+
+.. _purchase-behavior-most-frequent-order-conditions:
+
+Available conditions
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-most-frequent-order-conditions-start
+   :end-before: .. attribute-compound-most-frequent-order-conditions-end
+
+
+.. _purchase-behavior-most-frequent-order-filter-attributes:
+
+Filter attributes
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-first-order-filter-attributes-start
+   :end-before: .. attribute-compound-first-order-filter-attributes-end

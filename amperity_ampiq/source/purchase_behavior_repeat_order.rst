@@ -61,3 +61,23 @@ Use repeat order in a segment
 .. include:: ../../amperity_reference/source/attribute_compound_repeat_order.rst
    :start-after: .. attribute-compound-repeat-order-segments-filters-start
    :end-before: .. attribute-compound-repeat-order-segments-filters-end
+
+
+.. _purchase-behavior-repeat-order-conditions:
+
+Available conditions
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-repeat-order-conditions-start
+   :end-before: .. attribute-compound-repeat-order-conditions-end
+
+
+.. _purchase-behavior-repeat-order-filter-attributes:
+
+Filter attributes
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
+   :start-after: .. attribute-compound-first-order-filter-attributes-start
+   :end-before: .. attribute-compound-first-order-filter-attributes-end
