@@ -70,7 +70,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The usernam and passphrase.
+     - The username and passphrase.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
