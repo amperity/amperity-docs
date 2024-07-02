@@ -126,11 +126,11 @@ The following sections describe the steps you'll follow to set up and configure 
 
        This topic uses sub-audiences to split the combined high-value audience into more specific audiences by lifecycle status.
 
-       Click **Add sub-audience** to open the **Audience Builder**, find the **Predicted CLV Attributes** table, choose the **Predicted Lifecycle Status** attribute, and then select "active".
+       Click **Add sub-audience** to open the **Audience Builder**, find the **Predicted CLV Attributes** table, choose the **Predicted Lifecycle Status** attribute, and then select "Active".
 
        .. image:: ../../images/mockup-segments-tab-lifecycle-status-active.png
           :width: 540 px
-          :alt: Choose the "active" lifecycle status.
+          :alt: Choose the "Active" lifecycle status.
           :align: left
           :class: no-scaled-link
 
@@ -169,7 +169,7 @@ The following sections describe the steps you'll follow to set up and configure 
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - The second sub-audience is similar to the first one, but instead choose the "cooling down" value from **Predicted Lifecycle Status**.
+     - The second sub-audience is similar to the first one, but instead choose the "Cooling down" value from **Predicted Lifecycle Status**.
 
        .. image:: ../../images/mockup-segments-tab-lifecycle-status-coolingdown.png
           :width: 540 px
@@ -191,11 +191,11 @@ The following sections describe the steps you'll follow to set up and configure 
           :alt: Step 6.
           :align: left
           :class: no-scaled-link
-     - The third sub-audience is similar to the previous two, but instead choose the "at risk" value from **Predicted Lifecycle Status**.
+     - The third sub-audience is similar to the previous two, but instead choose the "At risk" value from **Predicted Lifecycle Status**.
 
        .. image:: ../../images/mockup-segments-tab-lifecycle-status-atrisk.png
           :width: 540 px
-          :alt: Choose the "at risk" lifecycle status.
+          :alt: Choose the "At risk" lifecycle status.
           :align: left
           :class: no-scaled-link
 
