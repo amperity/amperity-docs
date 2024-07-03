@@ -15,9 +15,9 @@ Local development of documentation for Amperity can be done on your workstation 
 Requirements
 ==================================================
 
-* Python 3.x
-* Sphinx 5.1.1
-* docutils 0.19
+* Python 3.9
+* Sphinx 7.3.7
+* docutils 0.20
 * sphinxcontrib-redoc 1.6.0 (builds the OpenAPI specification for the Ampeity API)
 * sphinxcontrib-video 0.2.0 (allows embedding videos on pages)
 
