@@ -34,7 +34,6 @@
     {% include 'css.html' %}
     {%- if not embedded %}
     {% include 'javascripts.html' %}
-    {%- if use_opensearch %}
 <!--    {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
           title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
@@ -42,7 +41,6 @@
     {%- endif %} -->
     {%- if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
-    {%- endif %}
     {%- endif %}
 {%- block linktags %}
     {%- if hasdoc('about') %}
