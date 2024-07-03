@@ -27,7 +27,6 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="zd-site-verification" content="ydiuqs34jdrk6ejm53rudg" />
     {{ metatags }}
     {%- block htmltitle %}
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
@@ -36,10 +35,11 @@
     {%- if not embedded %}
     {% include 'javascripts.html' %}
     {%- if use_opensearch %}
+<!--    {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
           title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
           href="{{ pathto('_static/opensearch.xml', 1) }}"/>
-    {%- endif %}
+    {%- endif %} -->
     {%- if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
     {%- endif %}
