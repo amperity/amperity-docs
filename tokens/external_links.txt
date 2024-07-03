@@ -2241,17 +2241,17 @@
 
 .. |ext_tulip_file_importer_file_formatting| raw:: html
 
-   <a href="https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#important-considerations-for-performance-and-formatting" target="_blank">correct file formatting</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://docs.tulip.com/integrating/file-importer/overview/#important-considerations-for-performance-and-formatting" target="_blank">correct file formatting</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_tulip_file_importer_naming_conventions| raw:: html
 
-   <a href="https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#file-naming-conventions" target="_blank">file naming conventions</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions" target="_blank">file naming conventions</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_tulip_file_importer_sample_files| raw:: html
 
-   <a href="https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#supported-csv-file-types" target="_blank">review the sample files</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions" target="_blank">review the sample files</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_tz_database_names| raw:: html
