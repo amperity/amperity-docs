@@ -44,6 +44,272 @@ Advantages of Amperity Bridge include:
 .. bridge-context-end
 
 
+.. _bridge-inbound-share:
+
+Inbound shares
+==================================================
+
+.. TODO: This section is specific to Databricks. Once we have more than one outbound share to document, we'll generalize a how-to section for outbound shares, and then move this content to bridge_databricks_outbound most likely. Possible to still consolidate the inbound/outbound sharing into one topic by vendor. If shared, the first three terms should be moved to the intro.
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-delta-sharing-start
+   :end-before: .. term-delta-sharing-end
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-bridge-start
+   :end-before: .. term-bridge-end
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-inbound-share-start
+   :end-before: .. term-inbound-share-end
+
+.. bridge-inbound-share-start
+
+An inbound share is configured in a series of steps across Databricks and Amperity.
+
+.. bridge-inbound-share-end
+
+.. bridge-inbound-share-links-start
+
+#. :ref:`Inbound prerequisites <bridge-inbound-share-prerequisites>`
+#. :ref:`Configure Databricks <bridge-inbound-share-configure-databricks>`
+#. :ref:`Add bridge <bridge-inbound-share-add-bridge>`
+
+.. bridge-inbound-share-links-end
+
+
+.. _bridge-inbound-share-prerequisites:
+
+Inbound prerequisites
+--------------------------------------------------
+
+.. bridge-inbound-share-prerequisites-start
+
+Before you can create inbound sharing between Databricks and Amperity a recipient and share must be created in Databricks, after which tables are added to the share and access to the share is granted to the recipient. The user who performs these actions may use the Databricks CLI or the Databricks Catalog Explorer and must the **CREATE RECIPIENT**, **CREATE SHARE**, **USE CATALOG**, **USE SCHEMA**, and **SELECT** permissions, along with the ability to grant the recipient access to the share.
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 1.
+          :align: left
+          :class: no-scaled-link
+     - The user who will create a recipient for sharing data from Databricks to Amperity must have |ext_databricks_permission_create_recipient| permissions in Databricks.
+
+       .. note:: If a Databricks notebook is used to create the recipient the cluster must use Databricks Runtime 11.3 LTS (or higher) and must be running in shared mode or single-cluster access mode.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 2.
+          :align: left
+          :class: no-scaled-link
+     - The user who will create a share in the Unity Catalog metastore must have |ext_databricks_permission_create_share| permissions in Databricks.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 3.
+          :align: left
+          :class: no-scaled-link
+
+     - The user who will add tables to a share must:
+
+       * Be a share owner; Databricks recommends to use a group as the share owner.
+       * Have |ext_databricks_permission_use_catalog| *and* |ext_databricks_permission_use_schema| permissions on the catalog and schema in which the tables are located.
+       * Have |ext_databricks_permission_select| permissions to each table.
+
+         This permission must be maintained while Databricks and Amperity are actively sharing data.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 4.
+          :align: left
+          :class: no-scaled-link
+
+     - The user who grants the recipient access to the metastore must be one of the following:
+
+       * A metastore administrator.
+       * A user with delegated permissions or ownership on both the share and recipient objects. 
+
+         If the user created the recipient and share, they are the share owner and recipient owner.
+
+         If the user did not create the recipient and share they will need **USE SHARE** and **SET SHARE PERMISSION** on the share and **USE RECIPIENT** on the recipient.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 5.
+          :align: left
+          :class: no-scaled-link
+
+     - The IP address for Amperity may need to be added to an allowlist.
+
+       .. include:: ../../amperity_datagrid/source/send_data.rst
+         :start-after: .. send-data-to-amperity-ip-allowlists-amperity-start
+         :end-before: .. send-data-to-amperity-ip-allowlists-amperity-end
+
+.. bridge-inbound-share-prerequisites-end
+
+
+.. _bridge-inbound-share-configure-databricks:
+
+Configure Databricks
+--------------------------------------------------
+
+.. bridge-inbound-share-configure-databricks-start
+
+To configure Databricks to share data with Amperity you will need to |ext_databricks_catalog_explorer_create_share| and add tables to that share, |ext_databricks_catalog_explorer_create_recipient|, |ext_databricks_catalog_explorer_grant_access_to_share|, and then get an |ext_databricks_catalog_explorer_activation_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-inbound-share-add-bridge>` in Amperity.
+
+.. note:: The following section briefly describes using the Databricks Catalog Explorer to configure Databricks to be ready to share data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
+
+.. bridge-inbound-share-configure-databricks-end
+
+**To configure Databricks for inbound sharing to Amperity**
+
+.. bridge-inbound-share-configure-databricks-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - A share is a securable object in Unity Catalog that can be configured to share tables with Amperity.
+
+       Open the Databricks Catalog Explorer. Under Delta Sharing, choose **Shared by me**, then select **Share data**, and then |ext_databricks_catalog_explorer_create_share_object|.
+
+       After you have created the share you may |ext_databricks_catalog_explorer_create_share_add_tables|. Click **Add assets**, and then select the tables to share.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - A recipient in Databricks represents the entity that will consume shared data: Amperity. Configure the recipient for open sharing and to use token-based authentication.
+
+       Open the Databricks Catalog Explorer. Under Delta Sharing, choose **Shared by me**, and then click **New recipient** to |ext_databricks_catalog_explorer_create_recipient_object|.
+
+       After the recipient is created, |ext_databricks_catalog_explorer_grant_access_to_share|.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - Open sharing uses token-based authentication.
+
+       The credentials file that contains the token is available from an |ext_databricks_catalog_explorer_activation_link|. Use a secure channel to share the activation link with the user who will download the credentials file, and then :ref:`configure Amperity for inbound sharing <bridge-inbound-share-add-bridge>`.
+
+       .. important:: You can download the credential file only once. Recipients should treat the downloaded credential as a secret and must not share it outside of their organization. If you have concerns that a credential may have been handled insecurely, you can |ext_databricks_rotate_credentials| at any time.
+
+.. bridge-inbound-share-configure-databricks-steps-end
+
+
+.. _bridge-inbound-share-add-bridge:
+
+Add inbound bridge
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-bridge-start
+   :end-before: .. term-bridge-end
+
+**To add an inbound bridge**
+
+.. bridge-inbound-share-add-bridge-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**. This opens the **Create bridge** dialog box. 
+
+       .. image:: ../../images/bridge-inbound-name-description.png
+          :width: 500 px
+          :alt: Add a bridge for an inbound share.
+          :align: left
+          :class: no-scaled-link
+
+       Add the name for the bridge and a description *or* select an existing bridge, and then click **Confirm**.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - Connect the bridge to Databricks by uploading the credential file that was downloaded from the |ext_databricks_catalog_explorer_activation_link|. There are two ways to upload the credential file:
+
+       #. Uploading the credentials as the second step when adding a bridge. Drop the file into the dialog box or browse to a location on your local machine.
+       #. Choosing the **Upload credential** option from the **Actions** menu for an inbound share.
+
+       After the credential file is uploaded, click **Continue**.
+
+       .. important:: You can download the credential file only once. Recipients should treat the downloaded credential as a secret and must not share it outside of their organization. If you have concerns that a credential may have been handled insecurely, you can |ext_databricks_rotate_credentials| at any time.
+
+       When finished, click **Continue**. This will open the **Select tables to share** dialog box.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - Use the **Select tables to share** dialog box to select any combination of databases and tables to be shared with Amperity.
+
+       .. image:: ../../images/bridge-select-databases-and-tables.png
+          :width: 500 px
+          :alt: Select databases and tables to be shared.
+          :align: left
+          :class: no-scaled-link
+
+       If you select a database, all tables in that database will be shared, including all changes made to all tables in that database.
+
+       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step 4.
+          :align: left
+          :class: no-scaled-link
+     - Map the tables that are shared from Databricks to domain tables in Amperity.
+
+       .. image:: ../../images/bridge-map-inbound-to-domain.png
+          :width: 500 px
+          :alt: Map inbound shared tables to domain tables.
+          :align: left
+          :class: no-scaled-link
+
+       Tables that are shared with Amperity are added as domain tables.
+
+       * The names of shared tables must be unique among all domain tables.
+       * Primary keys are not assigned.
+       * Semantic tags are not applied.
+
+       .. tip:: Use a custom database table to assign primary keys, apply semantic tags, and shape data within shared tables to support any of your Amperity workflows.
+
+       When finished, click **Save and sync**. This will start a workflow that synchronizes data from Databricks to Amperity and will create the mapped domain table names.
+
+       You can manually sync tables that are shared with Amperity using the **Sync** option from the **Actions** menu for the inbound bridge.
+
+.. bridge-inbound-share-add-bridge-steps-end
+
+
 .. _bridge-outbound-shares:
 
 Outbound shares
@@ -73,7 +339,7 @@ An outbound share is configured in a series of steps across Databricks and Amper
 
 .. bridge-outbound-share-links-start
 
-#. :ref:`Prerequisites <bridge-outbound-share-prerequisites>`
+#. :ref:`Outbound prerequisites <bridge-outbound-share-prerequisites>`
 #. :ref:`Add bridge <bridge-outbound-share-add-bridge>`
 #. :ref:`Select tables to share <bridge-outbound-share-select-tables>`
 #. :ref:`Download credential file <bridge-outbound-share-download-credentials>`
@@ -86,7 +352,7 @@ An outbound share is configured in a series of steps across Databricks and Amper
 
 .. _bridge-outbound-share-prerequisites:
 
-Prerequisites
+Outbound prerequisites
 --------------------------------------------------
 
 .. bridge-outbound-share-prerequisites-start
