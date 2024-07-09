@@ -127,12 +127,7 @@ A source that uses |source-name| credentials may use a connection string, a shar
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - The URL for the Azure authentication endpoint. This is typically in the following format: 
-
-       ::
-
-          https://login.microsoftonline.com/<directory_id>/oauth2/token
-
+     - The URL for the Azure authentication endpoint.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
