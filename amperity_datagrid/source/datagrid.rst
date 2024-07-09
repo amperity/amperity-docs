@@ -56,7 +56,7 @@ The most common workflows for DataGrid involve pulling data to Amperity from a c
 
 * Pulling data to Amperity
 * Configuring and running Stitch
-* Configuring the Customer 360 database, along with any other custom databases and tables your data requires
+* Configuring the customer 360 database, along with any other custom databases and tables your data requires
 * Defining queries that interact with databases and tables in the **Customer 360** page, some of which are used for QA purposes, others are used to generate results to be sent to downstream workflows outside of Amperity
 * Sending data from Amperity
 
