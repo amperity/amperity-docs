@@ -1969,7 +1969,7 @@ A Delta table is a table in a Delta Lake, which is an optimized storage layer th
 
 .. term-datagrid-start
 
-DataGrid pulls all your customer data from any source-–online, offline, historical, streaming--without requiring schema planning or ETL. DataGrid sends results of any size and type to any of your downstream applications and workflows.
+DataGrid pulls all your customer data from any source - online, offline, historical, streaming - without requiring schema planning or ETL. DataGrid sends results of any size and type to any of your downstream applications and workflows.
 
 .. term-datagrid-end
 
