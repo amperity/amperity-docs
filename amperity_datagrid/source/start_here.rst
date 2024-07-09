@@ -81,7 +81,7 @@ Customers who use AmpIQ will have the following additional pages:
 
 * A **Segments** page that builds segments against the customer 360 for use with campaigns.
 * A **Metrics** page that contains a series of metrics cards that track core business outcomes.
-* A **Campaigns** page that allows you to define campaigns, and then send messages or offers specific group of customers or recipients
+* A **Campaigns** page that allows you to define campaigns, and then send messages or offers specific group of customers or recipients.
 
 .. start-here-tenant-end
 
