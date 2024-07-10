@@ -23,12 +23,6 @@ Amperity Bridge
    :start-after: .. term-amperity-bridge-start
    :end-before: .. term-amperity-bridge-end
 
-.. video:: https://videos.ctfassets.net/5vqt5w81x2im/4SO4NXTsjL9Kruao6EFBTk/d94016d037217e66ad18fd18cd034093/Amperity_Bridge_Product_12998v1_gif_1.mp4
-   :alt: Amperity Bridge intro video.
-   :autoplay:
-   :width: 520
-   :muted:
-
 .. bridge-context-start
 
 Advantages of Amperity Bridge include:
