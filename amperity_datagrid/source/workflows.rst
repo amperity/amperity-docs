@@ -30,7 +30,7 @@ For example, many workflows are end-to-end process that:
 #. Use a courier to pull data to Amperity.
 #. Standardize data using semantic tags and feeds.
 #. Add data to domain tables.
-#. Build database.
+#. Build databases.
 #. Run queries and segments to return results and audiences for use with downstream workflows.
 #. Send results to destinations using orchestrations and campaigns.
 
