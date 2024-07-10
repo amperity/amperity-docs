@@ -40,7 +40,7 @@
           href="{{ pathto('_static/opensearch.xml', 1) }}"/>
     {%- endif %}
     {%- if favicon %}
-    <link rel="shortcut icon" href="https://amperity-static-assets.s3-us-west-2.amazonaws.com/resources/img/favicon-16x16.png"/>
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
     {%- endif %}
     {%- endif %}
 {%- block linktags %}
