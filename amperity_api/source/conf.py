@@ -46,8 +46,7 @@ sys.path.append(os.path.abspath('../../_ext'))
 # Cannot do this just yet:
 # extensions = ['sphinx.ext.todo', 'recommonmark']
 # because it breaks the search when RST and MD files are in the same location by truncating a SINGLE CHARACTER from the search result link :(
-extensions = ['sphinx.ext.todo', 
-'sphinxcontrib.redoc']
+extensions = ['sphinx.ext.todo']
 
 # autosummary_generate = True
 
@@ -122,18 +121,18 @@ rst_prolog = """
 
 # Config settings for Redoc OpenAPI page builder.
 
-redoc = [
-    {
-        'name': 'OpenAPI Specification',
-        'page': 'openapi',
-        'spec': 'specs/control-plane-2024-04-01-openapi.json',
-        'embed': True,
-        'opts': {
-            'native-scrollbars': True,
-            'required-props-first': True,
-        },
-    },
-]
+#redoc = [
+#    {
+#        'name': 'OpenAPI Specification',
+#        'page': 'openapi',
+#        'spec': 'specs/control-plane-2024-04-01-openapi.json',
+#        'embed': True,
+#        'opts': {
+#            'native-scrollbars': True,
+#            'required-props-first': True,
+#        },
+#    },
+#]
 
 
 # -- Options for HTML output ---------------------------------------------------
@@ -192,8 +191,8 @@ html_sidebars = {
 html_additional_pages = {
     'endpoint_audit_events': 'endpoint_audit_events.html',
     'endpoint_campaigns': 'endpoint_campaigns.html',
-    'endpoint_segments': 'endpoint_segments.html'
-}
+    'endpoint_segments': 'endpoint_segments.html',
+    'openapi': 'openapi.html'}
 
 
 # If false, no module index is generated.

@@ -46,7 +46,7 @@ sys.path.append(os.path.abspath('../../_ext'))
 # Cannot do this just yet:
 # extensions = ['sphinx.ext.todo', 'recommonmark']
 # because it breaks the search when RST and MD files are in the same location by truncating a SINGLE CHARACTER from the search result link :(
-extensions = ['sphinx.ext.todo', 'sphinxcontrib.video']
+extensions = ['sphinx.ext.todo']
 
 # autosummary_generate = True
 
