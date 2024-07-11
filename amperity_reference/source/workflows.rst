@@ -82,6 +82,47 @@ Configure automated workflow alerts within the **Automated workflow alerts** dia
 * Query alerts, if configured
 * Workflow stopped alerts
 
+Here is a more detailed breakdown of automated workflow alerts by workflow type:
+
+Courier groups
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. courier-group-automated-alert-details-start
+
+Alerts are sent when:
+* Files are missing
+* A failure occurs within any part of a courier group workflow, including courier groups with orchestration groups, campaigns, or profile API indexes configured to run as part of the workflow
+* The courier group succeeds, if configured
+* If downstream workflows are configured, an alert will be sent both when database generation is complete and when downstream workflows succeed
+* The courier group runtime exceeds a threshold, if configured
+* Query thresholds are reached, if configured
+* A user cancels an automatically launched workflow
+
+.. courier-group-automated-alert-details-end
+
+Orchestration groups
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. orchestration-group-automated-alert-details-start
+
+Alerts are sent when:
+* A failure occurs within an orchestration group workflow, regardless of whether the orchestration group is configured to run after a courier group or run on a schedule
+* A failure occurs in an upstream courier group if your orchestration group is configured to run after a courier group. This is to let you know about potential delays to your orchestration group workflow.
+* The orchestration group succeeds, if configured (only available for orchestration groups run on a schedule)
+
+.. orchestration-group-automated-alert-details-end
+
+Campaigns
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. campaign-automated-alert-details-start
+
+Alerts are sent when:
+* A failure occurs within campaign send, regardless of whether the campaign is configured to run after a courier group or run on a schedule
+* A failure occurs in an upstream courier group if your campaign is configured to run after a courier group. This is to let you know about potential delays to your campaign send.
+
+.. campaign-automated-alert-details-end
+
 .. automated-workflow-alerts-end
 
 Workflow run alerts
