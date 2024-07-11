@@ -191,7 +191,8 @@ html_sidebars = {
 html_additional_pages = {
     'endpoint_audit_events': 'endpoint_audit_events.html',
     'endpoint_campaigns': 'endpoint_campaigns.html',
-    'endpoint_segments': 'endpoint_segments.html'}
+    'endpoint_segments': 'endpoint_segments.html',
+    'openapi': 'openapi.html'}
 
 
 # If false, no module index is generated.
