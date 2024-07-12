@@ -154,6 +154,7 @@ A Stitch labels table is a CSV file that is maintained as a local file, and then
    where "'123a-456b-789c','234d-567e-891f'" represents the pair of Amperity IDs in the overcluster or undercluster.
 
    This query will return all of the rows associated with those Amperity IDs. Examine the results to understand if the customer records were merged or split correctly.
+   .. tip:: Use the Unified Preprocessed Raw table instead of the Unified Coalesced table to compare values in source tables instead of normalized values.
 #. Add instances of incorrectly merged and/or split customer records to a CSV file with the correct schema for Stitch labels.
 #. Ingest the CSV file as a feed.
 #. Add semantic values to each field that matches the name of the column in the CSV file, with the exception of the **semantic** column, which must be associated with a profile (PII) semantic.
