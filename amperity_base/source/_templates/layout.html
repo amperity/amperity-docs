@@ -40,9 +40,9 @@
           title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
           href="{{ pathto('_static/opensearch.xml', 1) }}"/>
     {%- endif %}
-    {%- if favicon %}
-    <link rel="icon" type="image/png" sizes="16x16" href="https://amperity-static-assets.s3-us-west-2.amazonaws.com/resources/img/favicon-16x16.png">
-    {%- endif %}
+    <link rel="icon" 
+          type="image/png" 
+          href="https://amperity-static-assets.s3-us-west-2.amazonaws.com/resources/img/favicon-16x16.png">
     {%- endif %}
 
 {%- block extrahead %} {% endblock %}
