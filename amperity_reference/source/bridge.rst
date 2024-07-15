@@ -121,8 +121,6 @@ Before you can create inbound sharing between Databricks and Amperity a recipien
        * Have |ext_databricks_permission_use_catalog| *and* |ext_databricks_permission_use_schema| permissions on the catalog and schema in which the tables are located.
        * Have |ext_databricks_permission_select| permissions to each table.
 
-         This permission must be maintained while Databricks and Amperity are actively sharing data.
-
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
