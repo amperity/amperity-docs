@@ -45,7 +45,7 @@ How policies work
 
 Actions within Amperity are controlled by policies, which act as containers for a set of actions. All tenants share a set of global policies with groups for standard policies and administrator policies. Each tenant assigns one (or more) policies to every user in their tenant, after which each user may also be assigned any of the policy options.
 
-Each user has a set of assigned actions that are determined by their assigned policy (or policies). Policy assignment may be managed using SSO (recommended) or may be :ref:`managed from the Amperity user interface <users-manage>` by users who are assigned the **Allow user administration** policy option.
+Each user has a set of assigned actions that are determined by their assigned policy (or policies). Policy assignment may be managed using SSO (recommended) or may be :ref:`managed from the Amperity user interface <settings-security-resource-groups>` by users who are assigned the **Allow user administration** policy option.
 
 The access model in Amperity defines actions as short strings that contain a resource type and an associated verb. A policy is a series of statements that allow or deny actions. For example: ``pii:download`` is an action. ``pii`` is the resource type and ``download`` is the associated verb. A user that is authorized to perform this action may run a query or segment, and then click the **Download** button to download the results.
 
@@ -240,7 +240,7 @@ Allow user admin
 
 .. policies-allow-user-administration-start
 
-The **Allow user administration** policy may be assigned to users to enable access to the **Users and Activity** page and :ref:`manage users <users-manage>`, :ref:`resource groups <users-resource-groups>`, and :ref:`API keys <api-keys>`.
+The **Allow user administration** policy may be assigned to users to enable access to the **Users and Activity** page and :ref:`manage users <settings-users>`, :ref:`resource groups <settings-security-resource-groups>`, and :ref:`API keys <api-keys>`.
 
 .. policies-allow-user-administration-end
 
