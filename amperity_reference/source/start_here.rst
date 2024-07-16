@@ -113,6 +113,9 @@ This set of topics covers the following components of Amperity and is organized 
    * - **Semantic tags**
      - A :doc:`semantic tag <semantics>` standardizes profile (PII), transaction, and other important customer details across all columns in all data tables.
 
+   * - **Settings**
+     - The :doc:`Settings page <settings>` lets you manage users, configure SSO, define resource groups, and monitor user activity. 
+
    * - **Single sign-on (SSO)**
      - Amperity supports the use of :doc:`single sign-on (SSO) <sso>` to manage the users who can access your tenant. Learn more about :ref:`how it works with Amperity <sso-howitworks>`, and then request to :ref:`enable SSO for your tenant <sso-use-cases>`.
 
@@ -128,9 +131,6 @@ This set of topics covers the following components of Amperity and is organized 
 
    * - **Stitch**
      - :doc:`Stitch <stitch>` uses patented algorithms to evaluate massive volumes of data to discover the hidden connections in your customer records that identify unique individuals. Stitch outputs a unified collection of data that assigns a unique identifier to each unique individual that is discovered within your customer records.
-
-   * - **Users**
-     - The :doc:`Users & Activity page <users>` lets you manage users, configure SSO, define resource groups, and monitor user activity. 
 
    * - **Workflows**
      - The :doc:`Workflow page <workflows>` provides a view of all of your tenant workflows.
