@@ -38,7 +38,7 @@ Send data to HubSpot
 
 .. destination-hubspot-start
 
-Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. If contacts exist in |destination-name| for the emails sent in the query, the contact list will be updated to match the query.
+Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
 
 .. destination-hubspot-end
 
@@ -59,6 +59,8 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
    If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import will fail and return a 400 error.
 
    If you experience a 400 error (due to invalid email addresses) please work with your DataGrid Operator to identify which email addresses are invalid, have them help you remove them from your list, and then resend a list of valid email addresses to |destination-name|.
+
+   Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
 
 .. destination-hubspot-build-query-end
 

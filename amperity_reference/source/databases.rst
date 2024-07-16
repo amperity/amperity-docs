@@ -1067,7 +1067,7 @@ Allow resource group
 
 .. databases-database-howto-configure-permission-resource-group-start
 
-A database that is configured for **Standard** access may restrict access to a datbase to only users who belong to a :ref:`resource group <users-resource-groups>` that is configured in Amperity.
+A database that is configured for **Standard** access may restrict access to a datbase to only users who belong to a :ref:`resource group <settings-security-resource-groups>` that is configured in Amperity.
 
 .. databases-database-howto-configure-permission-resource-group-end
 
@@ -1088,9 +1088,9 @@ A database that is configured for **Standard** access may restrict access to a d
 Allow everyone
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_reference/source/users.rst
-   :start-after: .. users-resource-groups-all-resource-groups-start
-   :end-before: .. users-resource-groups-all-resource-groups-end
+.. include:: ../../amperity_reference/source/settings.rst
+   :start-after: .. settings-security-resource-groups-all-start
+   :end-before: .. settings-security-resource-groups-all-end
 
 .. databases-database-howto-configure-permission-everyone-start
 

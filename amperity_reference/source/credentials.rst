@@ -21,7 +21,7 @@ About credentials
 
 .. credentials-start
 
-Use the **Credentials** page to view and manage credentials for data sources and destinations. Any credential that you add from the **Sources** or **Destinations** page is available from the **Credentials** page. You may also define credentials directly from this page.
+Use the **Credentials** page to view and manage credentials for data sources and destinations. Any credential that you add from the **Sources** or **Destinations** page is available from the **Credentials** page. You may also define credentials directly from this tab.
 
 .. credentials-end
 
