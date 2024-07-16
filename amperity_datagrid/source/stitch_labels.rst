@@ -159,6 +159,7 @@ A Stitch labels table is a CSV file that is maintained as a local file, and then
    
 #. Add instances of incorrectly merged and/or split customer records to a CSV file with the correct schema for Stitch labels.
 #. Ingest the CSV file as a feed.
+#. Select **row_id** field as primary key.
 #. Add semantic values to each field that matches the name of the column in the CSV file, with the exception of the **semantic** column, which must be associated with a profile (PII) semantic.
 
    The semantic tags for Stitch labels are: **sl/label-id**, **sl/partition-id**, **sl/datasource**, **sl/semantic**, and **sl/value**.
