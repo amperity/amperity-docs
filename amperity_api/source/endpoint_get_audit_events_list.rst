@@ -290,6 +290,6 @@ A **200 OK** response contains the following parameters.
 Common event types
 ==================================================
 
-.. include:: ../../amperity_reference/source/users.rst
-   :start-after: .. users-event-types-start
-   :end-before: .. users-event-types-end
+.. include:: ../../amperity_reference/source/settings.rst
+   :start-after: .. settings-user-activity-logs-event-types-start
+   :end-before: .. settings-user-activity-logs-event-types-end

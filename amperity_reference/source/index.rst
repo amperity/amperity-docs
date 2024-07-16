@@ -333,6 +333,31 @@ Semantic tags
 
 :doc:`About semantic tags <semantics>` |fa-index-separator| :ref:`semantics-blocklists` |fa-index-separator| :ref:`semantics-compliance` |fa-index-separator| :ref:`semantics-custom` |fa-index-separator| :ref:`semantics-db` |fa-index-separator| :ref:`semantics-email-event` |fa-index-separator| :ref:`semantics-optin-email-status` |fa-index-separator| :ref:`semantics-email-summary` |fa-index-separator| :ref:`semantics-keys` |fa-index-separator| :ref:`semantics-loyalty` |fa-index-separator| :ref:`semantics-profile` |fa-index-separator| :ref:`semantics-optin-sms-status` |fa-index-separator| :ref:`semantics-stitch-labels` |fa-index-separator| :ref:`Transactions <semantics-itemized-transactions>`
 
+
+.. _index-settings:
+
+Settings
+==================================================
+
+**User settings**
+   :ref:`settings-users` |fa-index-separator| :ref:`settings-users-add` |fa-index-separator| :ref:`settings-users-delete` |fa-index-separator| :ref:`settings-users-edit` |fa-index-separator| :ref:`settings-users-revoke` |fa-index-separator| :ref:`settings-users-allow-domains`
+
+**Security settings**
+   :ref:`settings-security` |fa-index-separator| :ref:`settings-security-sso` |fa-index-separator| :ref:`settings-security-resource-groups` |fa-index-separator| :ref:`settings-security-resource-groups-all` |fa-index-separator| :ref:`settings-security-resource-groups-custom` |fa-index-separator| :ref:`settings-security-resource-groups-assign-users` |fa-index-separator| :ref:`settings-security-resource-groups-database-permissions` |fa-index-separator| :ref:`settings-security-resource-groups-multi-brand-tenants` |fa-index-separator| :ref:`settings-security-api-keys`
+
+**Credentials**
+   :ref:`settings-credentials`
+
+**Sandbox settings**
+   :ref:`settings-sandboxes`
+
+**Integrations**
+   :ref:`settings-integrations` |fa-index-separator| :ref:`settings-integration-bi-connect` |fa-index-separator| :ref:`settings-integration-bi-connect-add` |fa-index-separator| :ref:`settings-integration-slack`
+
+**Activity logs**
+   :ref:`settings-user-activity-logs` |fa-index-separator| :ref:`settings-user-activity-logs-download` |fa-index-separator| :ref:`settings-user-activity-logs-event-types`
+
+
 .. _index-sso:
 
 Single sign-on (SSO)
@@ -367,20 +392,6 @@ Stitch
 
 **Stitch results**
    :doc:`About Stitch results <stitch>` |fa-index-separator| :ref:`Explore Stitch results <stitch-explore-stitch-results>` |fa-index-separator| :ref:`Explore by Amperity ID <stitch-explore-by-amperity-id>` |fa-index-separator| :ref:`Explore by data source <stitch-explore-by-data-source>` |fa-index-separator| :ref:`Explore previous Stitch results <stitch-explore-previous-stitch-results>` |fa-index-separator| :ref:`Explore semantics <stitch-explore-semantics>` |fa-index-separator| :ref:`View cluster graph <stitch-explore-cluster-graph>` |fa-index-separator| :ref:`View deduplication rate <stitch-explore-deduplication-rate>` |fa-index-separator| :ref:`View pairwise connections <stitch-explore-pairwise-connections>` |fa-index-separator| :ref:`View Stitch metrics <stitch-explore-stitch-metrics>` |fa-index-separator| :ref:`View stitched records <stitch-explore-stitched-records>`
-
-
-.. _index-users:
-
-Users
-==================================================
-
-:doc:`About users <users>` |fa-index-separator| :ref:`About user activity <users-about-activity>` |fa-index-separator| :ref:`Activity downloads <users-download-activity>`
-
-**Manage users**
-   :ref:`About managing users <users-manage>` |fa-index-separator| :ref:`Add users <users-manage-add>` |fa-index-separator| :ref:`Delete users <users-manage-delete>` |fa-index-separator| :ref:`Edit users <users-manage-edit>` |fa-index-separator| :ref:`Revoke tenant access <users-manage-revoke>` |fa-index-separator| :ref:`Allowed domains <users-manage-allow-domains>` |fa-index-separator|
-
-**Resource groups**
-   :ref:`About resource groups <users-resource-groups>` |fa-index-separator| :ref:`"All resource groups" <users-resource-groups-all-resource-groups>` |fa-index-separator| :ref:`Custom resource groups <users-resource-groups-custom-resource-groups>` |fa-index-separator| :ref:`Assign users to resource groups <users-resource-groups-assign-users-to-groups>` |fa-index-separator| :ref:`Database permissions <users-resource-groups-database-permissions>` |fa-index-separator| :ref:`Multi-brand tenants <users-resource-groups-multi-brand-tenants>` |fa-index-separator|
 
 
 .. _index-workflows:
@@ -529,6 +540,7 @@ Workflows
    sandboxes
    segments
    semantics
+   settings
    sources
    sql_presto
    sql_spark
@@ -537,5 +549,4 @@ Workflows
    system_status
    stitch
    stitch_results
-   users
    workflows
