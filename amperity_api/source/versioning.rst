@@ -145,6 +145,19 @@ Current versions:
 .. versioning-supported-versions-end
 
 
+.. _versioning-unstable-versions:
+
+Unstable versions
+==================================================
+
+.. versioning-unstable-versions-start
+
+During development, Amperity may release APIs for testing using the **unstable** version identifier. Unstable versions contain features that are still in progress and may not be backward compatible.
+
+There are no guarantees around customer support, notification of changes, breaking changes, or availability of unstable versions.
+
+.. versioning-unstable-versions-end
+
 .. _versioning-deprecated-versions:
 
 Deprecated versions
@@ -156,6 +169,19 @@ At least 6 months notice will be given before any supported version is marked as
 
 .. important:: API calls that are made to an endpoint using a version identifier that is no longer supported will return a 400 response.
 
-.. note:: The Amperity API does not have any deprecated versions.
+
+Amperity APIs evolve and change over time. To warn developers of upcoming deprecations Amperity uses the following headers:
+
+* |ext_itef_deprecation_header|. When **true** a deprecation will occur at the date indicated in the header.
+* |ext_itef_sunset_header|. When **true** a deprecated feature will stop working and return a 4xx response at the date indicated in the header.
+
+Deprecation and Sunset headers will be added at least 6 months prior to a deprecation. A deprecation date will be at least 3 months prior to a sunset date. For example:
+
+::
+
+   Deprecation: Tue, 1 Sep 2024 23:59:59 GMT
+   Sunset: Wed, 1 Dec 2024 23:59:59 GMT
+
+Deprecation and Sunset headers are informational. Amperity recommends building alerts to monitor for these headers to ensure that your applications and workflows can be migrated.
 
 .. versioning-deprecated-versions-end
