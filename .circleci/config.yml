@@ -76,7 +76,7 @@ jobs:
           command: |
             curl --request POST \
             --url https://circleci.com/api/v2/project/gh/amperity/docs/pipeline \
-            --header 'Circle-Token: $AMPERITY_DOCS' \
+            --header 'Circle-Token: CCIPAT_PxhepZeHxpa3uNGM33sDib_c8d4e85dbe3e2885817e42d0840095efc5bb1891' \
             --header 'content-type: application/json' \
             --data '{"parameters":{"amperity-docs-deploy":true}}'
 
