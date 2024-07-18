@@ -72,6 +72,10 @@ jobs:
     resource_class: small
     steps:
       - run:
+          name: "echo environment variable"
+          command: |
+            echo $AMPERITY_DOCS
+      - run:
           name: ping docs build pipeline
           command: |
             curl --request POST \
