@@ -1234,6 +1234,16 @@
    <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> <i class="fas fa-external-link-square-alt"></i>
 
 
+.. |ext_itef_deprecation_header| raw:: html
+
+   <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header" target="_blank">Deprecation Header</a> <i class="fas fa-external-link-square-alt"></i>
+
+
+.. |ext_itef_sunset_header| raw:: html
+
+   <a href="https://datatracker.ietf.org/doc/html/rfc8594" target="_blank">Sunset Header</a> <i class="fas fa-external-link-square-alt"></i>
+
+
 .. |ext_itef_terminology| raw:: html
 
    <a href="https://tools.ietf.org/id/draft-knodel-terminology-00.html" target="_blank">Terminology, Power and Oppressive Language</a> <i class="fas fa-external-link-square-alt"></i>
