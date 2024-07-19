@@ -1,17 +1,52 @@
-{#
-  Redirect template.
-  Add to html_additional_pages the filename pair for this page.
-  Remove from Sphinx RST collection.
-  Update URL for the target URL.
-#}
-{%- block doctype -%}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-{%- endblock %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
   <head>
-    <meta http-equiv="Refresh" content="0; url='https://docs.amperity.com/api/start_here.html'" />
-    <meta name="robots" content="noindex">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+    <style>
+      rapi-doc{
+        width:100%;
+      }
+    </style>
   </head>
-  <body role="document"></body>
+  <body>
+    <rapi-doc 
+      spec-url="https://docs.amperity.com/downloads/openapi/control-plane-2024-04-01-openapi.json" 
+      show-header = "false"
+      render-style = "read"
+      regular-font="Open Sans" 
+      mono-font = "Roboto Mono"
+
+
+    theme = "light"
+    bg-color = "#f2f4f4"
+    text-color = "#0c0c0c"
+    header-color = "#0c0c0c"
+    primary-color = "#09717f"
+
+    show-info = "true"
+    allow-authentication = "true"
+
+    allow-spec-file-download = "true"
+    allow-try = "true"
+    show-curl-before-try = "true"
+    allow-server-selection = "false"
+    allow-schema-description-expand-toggle = "true"
+    schema-description-expanded = "true"
+    schema-style = "table"
+
+    > 
+      <div slot="nav-logo" style="display: flex; align-items: center; justify-content: left;"> 
+        <img src = "../_static/amp-yellow.png" style="width:80px; margin-right: -10px"> <span style="color:#fff"> <b>Amperity</b> API </span>
+      </div>
+
+
+
+    </rapi-doc>
+  </body>
 </html>
