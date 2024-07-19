@@ -12,16 +12,16 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        GET /workflow/runs
+        GET /workflows/runs
 
 
 ==================================================
-GET /workflow/runs
+GET /workflows/runs
 ==================================================
 
 .. endpoint-get-workflows-list-start
 
-Use the **/workflow/runs** endpoint to return a list of workflows that exist within the date range defined in the request.
+Use the **/workflows/runs** endpoint to return a list of workflows that exist within the date range defined in the request.
 
 .. endpoint-get-workflows-list-end
 
@@ -33,7 +33,7 @@ Available HTTP methods
 
 .. image:: ../../images/api-request-get-workflow-runs-list.png
    :width: 440 px
-   :alt: GET /workflow/runs/
+   :alt: GET /workflows/runs/
    :align: left
    :class: no-scaled-link
 
@@ -58,11 +58,11 @@ Base URL
 
 .. endpoint-get-workflows-list-base-url-start
 
-All requests made to the **/workflow/runs** endpoint should be directed to the following base URL:
+All requests made to the **/workflows/runs** endpoint should be directed to the following base URL:
 
 ::
 
-   https://{tenant-id}.amperity.com/api/workflow/runs
+   https://{tenant-id}.amperity.com/api/workflows/runs
 
 .. endpoint-get-workflows-list-base-url-end
 
@@ -84,12 +84,12 @@ Requests
 
 .. endpoint-get-workflows-list-request-start
 
-A request to the **/workflow/runs** endpoint is similar to:
+A request to the **/workflows/runs** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs \
+          'https://tenant.amperity.com/api/workflows/runs \
           ?limit=12 \
           &with_total=true \
 
@@ -112,7 +112,7 @@ Request parameters
 
 .. endpoint-get-workflows-list-request-parameters-start
 
-The following table describes the parameters that may be used with the **/workflow/runs** endpoint.
+The following table describes the parameters that may be used with the **/workflows/runs** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -227,7 +227,7 @@ Request examples
 
 .. endpoint-get-workflows-list-request-examples-start
 
-The following examples show how to send requests to the **/workflow/runs** endpoint.
+The following examples show how to send requests to the **/workflows/runs** endpoint.
 
 .. endpoint-get-workflows-list-request-examples-end
 
@@ -239,12 +239,12 @@ cURL
 
 .. endpoint-get-workflows-list-request-example-curl-start
 
-The following example shows how to use cURL to send a request to the **/workflow/runs** endpoint.
+The following example shows how to use cURL to send a request to the **/workflows/runs** endpoint.
 
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs \
+          'https://tenant.amperity.com/api/workflows/runs \
           ?limit=12 \
           &with_total=true \
         --header 'amperity-tenant: tenant' \
@@ -263,7 +263,7 @@ Responses
 
 .. endpoint-get-workflows-list-responses-start
 
-A response from the **/workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **/workflows/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-list-responses-end
 
