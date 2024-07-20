@@ -65,15 +65,14 @@ All requests made to Amperity API endpoints should be directed to the following 
 
    https://{tenant-id}.amperity.com/api
 
-.. tip:: You can find the tenant ID from the Amperity user interface.
 
-   From the **Users and Activity** page, select the **Actions** menu for an API key, and then click **Copy tenant ID**.
+You can find the tenant ID from the Amperity user interface. From the **Users and Activity** page, select the **Actions** menu for an API key, and then click **Copy tenant ID**.
 
-   For example, if the tenant ID is **acme** the base URL would be
+For example, if the tenant ID is **acme** the base URL would be
 
-   ::
+::
 
-      https://acme.amperity.com/api
+   https://acme.amperity.com/api
 
 .. api-amperity-base-url-end
 
@@ -102,14 +101,14 @@ Requests made to Amperity API endpoints require the following headers:
    * - **Amperity-Tenant**
      - **Required**
 
-       The ID for the tenant to which the request will be sent. You can find the tenant ID in the :ref:`base URL <api-amperity-base-url>` for your tenant.
+       The ID for the tenant to which the request will be sent. You can find the tenant ID in the base URL for your tenant.
 
    * - **api-version**
      - **Required**
 
-       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2024-04-01**.
+       A supported version of the Amperity API. For example: **2024-04-01**.
 
-       .. note:: You may use the **api-version** request parameter instead of the **api-version** request header.
+       You may use the **api-version** request parameter instead of the **api-version** request header.
 
 
 In addition to all required headers, you must specify the HTTP method, and base URL. For example:
@@ -134,7 +133,7 @@ Responses
 
 .. api-amperity-response-format-start
 
-The Amperity API responds in JSON format. Each response includes relevant :doc:`HTTP status codes <responses>` that indicate the success or failure of the request. The individual properties in a response will vary by endpoint; all endpoints that support the GET HTTP method will return lists using :ref:`pagination <api-amperity-pagination>`.
+The Amperity API responds in JSON format. Each response includes relevant HTTP status codes that indicate the success or failure of the request. The individual properties in a response will vary by endpoint; all endpoints that support the GET HTTP method will return lists using pagination.
 
 .. api-amperity-response-format-end
 
