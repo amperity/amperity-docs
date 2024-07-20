@@ -61,4 +61,4 @@ Configure the following settings.
 
 **Verbose logging?**
 
-   Enable to log details when |destination-name| rejects adding contacts to the contact list.
+   Enable to return log details when |destination-name| rejects adding contacts to the contact list.
