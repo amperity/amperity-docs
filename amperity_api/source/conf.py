@@ -119,21 +119,6 @@ rst_prolog = """
 .. include:: ../../tokens/names.txt
 """
 
-# Config settings for Redoc OpenAPI page builder.
-
-#redoc = [
-#    {
-#        'name': 'OpenAPI Specification',
-#        'page': 'openapi',
-#        'spec': 'specs/control-plane-2024-04-01-openapi.json',
-#        'embed': True,
-#        'opts': {
-#            'native-scrollbars': True,
-#            'required-props-first': True,
-#        },
-#    },
-#]
-
 
 # -- Options for HTML output ---------------------------------------------------
 

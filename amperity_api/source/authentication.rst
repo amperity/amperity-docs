@@ -106,8 +106,8 @@ Generate access token
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-     :start-after: .. term-jwt-start
-     :end-before: .. term-jwt-end
+   :start-after: .. term-jwt-start
+   :end-before: .. term-jwt-end
 
 .. include:: ../../amperity_reference/source/api.rst
    :start-after: .. api-keys-access-tokens-start

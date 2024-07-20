@@ -23,7 +23,7 @@ Amperity API Versions
 
 Amperity APIs evolve and change over time. Amperity versions API endpoints to help your brand track changes to the Amperity API and to offer support to developers as these endpoints evolve.
 
-Your team of developers can track improvements to the Amperity API from the :ref:`changelog <changelog-current>`. Monitor the changelog to know when new versions are available and/or when existing versions are updated or planned for deprecation.
+Your team of developers can track improvements to the Amperity API from the `changelog <https://docs.amperity.com/api/changelog.html>`__. Monitor the changelog to know when new versions are available and/or when existing versions are updated or planned for deprecation.
 
 .. versioning-end
 
@@ -158,22 +158,22 @@ There are no guarantees around customer support, notification of changes, breaki
 
 .. versioning-unstable-versions-end
 
+
 .. _versioning-deprecated-versions:
 
 Deprecated versions
 ==================================================
 
+.. TODO: Not using the external links formatting to preserve ability to generate this into the OpenAPI specification.
+
 .. versioning-deprecated-versions-start
 
-At least 6 months notice will be given before any supported version is marked as unsupported.
-
-.. important:: API calls that are made to an endpoint using a version identifier that is no longer supported will return a 400 response.
-
+At least 6 months notice will be given before any supported version is marked as unsupported. API calls that are made to an endpoint using a version identifier that is no longer supported will return a 400 response.
 
 Amperity APIs evolve and change over time. To warn developers of upcoming deprecations Amperity uses the following headers:
 
-* |ext_itef_deprecation_header|. When **true** a deprecation will occur at the date indicated in the header.
-* |ext_itef_sunset_header|. When **true** a deprecated feature will stop working and return a 4xx response at the date indicated in the header.
+* `Deprecation Header <https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header>`__. When **true** a deprecation will occur at the date indicated in the header.
+* `Sunset Header <https://datatracker.ietf.org/doc/html/rfc8594>`__. When **true** a deprecated feature will stop working and return a 4xx response at the date indicated in the header.
 
 Deprecation and Sunset headers will be added at least 6 months prior to a deprecation. A deprecation date will be at least 3 months prior to a sunset date. For example:
 
