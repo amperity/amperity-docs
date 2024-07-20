@@ -42,7 +42,7 @@ Settings
 
 Configure the following settings.
 
-**setting 1**
+**setting**
 
    **Required**
 
@@ -50,14 +50,13 @@ Configure the following settings.
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
 
-**setting 2**
-
+**setting**
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
 
 
-**setting 3**
+**setting**
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-alt-start
       :end-before: .. setting-lorem-ipsum-alt-end
@@ -96,7 +95,7 @@ Formatting observations for Markdown files in app modals:
 * Links cannot be REF or DOC, only defined as external with paths (can be a relative path, should that be necessary).
 
 
-More information
+Links
 ==================================================
 
 * Link to `Amperity Docs <https://docs.amperity.com>`__.
