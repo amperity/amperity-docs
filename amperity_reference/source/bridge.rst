@@ -261,15 +261,15 @@ Add inbound bridge
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Use the **Select tables to share** dialog box to select any combination of databases and tables to be shared with Amperity.
+     - Use the **Select tables to share** dialog box to select any combination of schemas and tables to be synced to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
-          :alt: Select databases and tables to be shared.
+          :alt: Select schemas and tables to be shared.
           :align: left
           :class: no-scaled-link
 
-       If you select a database, all tables in that database will be shared, including all changes made to all tables in that database.
+       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync. 
 
        When finished, click **Next**. This will open the **Domain table mapping** dialog box.
 
@@ -293,7 +293,7 @@ Add inbound bridge
        * Primary keys are not assigned.
        * Semantic tags are not applied.
 
-       .. tip:: Use a custom database table to assign primary keys, apply semantic tags, and shape data within shared tables to support any of your Amperity workflows.
+       .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within shared tables to support any of your Amperity workflows.
 
        When finished, click **Save and sync**. This will start a workflow that synchronizes data from Databricks to Amperity and will create the mapped domain table names.
 
@@ -439,7 +439,7 @@ Add outbound bridge
 
        Optional. You may restrict access to specific IPs or to a valid CIDR (for a range of IPs). Place separate entries on a new line. Expand **Advanced Settings** to restrict access.
 
-       When finished, click **Create**. This will open the **Select tables to share** dialog box, in which you will :ref:`configure any combination of databases and tables <bridge-outbound-share-select-tables>` to share with Databricks.
+       When finished, click **Create**. This will open the **Select tables to share** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-outbound-share-select-tables>` to share with Databricks.
 
 .. bridge-outbound-share-add-bridge-steps-end
 
@@ -455,11 +455,11 @@ Select tables to share
 
 .. bridge-outbound-share-select-tables-start
 
-You can configure Amperity to share any combination of databases and tables that are available from the **Customer 360** page.
+You can configure Amperity to share any combination of schemas and tables that are available from the **Customer 360** page.
 
 .. bridge-outbound-share-select-tables-end
 
-**To select databases and tables to share**
+**To select schemas and tables to share**
 
 .. bridge-outbound-share-select-tables-steps-start
 
@@ -476,13 +476,13 @@ You can configure Amperity to share any combination of databases and tables that
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
-          :alt: Select databases and tables to be shared.
+          :alt: Select schemas and tables to be shared.
           :align: left
           :class: no-scaled-link
 
-       You may select any combination of databases and tables.
+       You may select any combination of schemas and tables.
 
-       If you select a database, all tables in that database will be shared, including all changes made to all tables in that database.
+       If you select a scehma, all tables in that scehma will be shared, including all changes made to all tables in that schema.
 
        When finished, click **Save**. This will open the **Download credential** dialog box, from which you will :ref:`download the credentials.share file <bridge-outbound-share-download-credentials>` that is required by the Databricks CLI when :ref:`creating a catalog in Databricks <bridge-outbound-share-add-catalog-from-share>`.
 
@@ -492,7 +492,7 @@ You can configure Amperity to share any combination of databases and tables that
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - When a bridge is already configured, you may edit the list of databases and tables that are shared. From the **Destinations** page, under **Outbound shares**, open the **Actions** for a bridge, and then click **Edit**. This will open the **Select tables to share** dialog box.
+     - When a bridge is already configured, you may edit the list of schemas and tables that are shared. From the **Destinations** page, under **Outbound shares**, open the **Actions** for a bridge, and then click **Edit**. This will open the **Select tables to share** dialog box.
 
 .. bridge-outbound-share-select-tables-steps-end
 
