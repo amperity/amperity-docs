@@ -41,6 +41,7 @@ You can make data available to Databricks using any of the following cloud-based
 
 * :doc:`Amazon Redshift <destination_databricks_amazon_redshift>`
 * :doc:`Amazon S3 <destination_databricks_amazon_s3>`
+* :doc:`Amperity Bridge <bridge>`
 * :doc:`Azure Blob Storage <destination_databricks_azure_blob_storage>`
 * :doc:`Azure Synapse Analytics <destination_databricks_azure_synapse_analytics>`
 * :doc:`Databricks Delta table <destination_databricks_delta_table>`
