@@ -1116,6 +1116,9 @@ This section describes tasks related to building segments in Amperity:
 * :ref:`segments-add-attribute`
 * :ref:`segments-add-browse`
 * :ref:`segments-add-segment`
+* :ref:`segments-add-query-segment`
+* :ref:`segments-add-segments-segment`
+* :ref:`segments-add-files-segment`
 * :ref:`segments-comment`
 * :ref:`segments-compare`
 * :ref:`segments-configure-segments`
@@ -1333,70 +1336,68 @@ The data appears on the **Segments** page.
 
 .. _segments-add-query-segment:
 
-Add a query output to a segment
+Add query results to a segment
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. segments-add-query-start
 
-You can add a query output to a segment from the **Segment Editor**.
+You can add query results to a segment from the **Segment Editor**.
 
 .. segments-add-query-end
 
-**To add a query output to a segment**
+**To add query results to a segment**
 
 .. segments-add-query-steps-start
 
-#. From the **Segment Editor** window, click **Add Attribute**.
-#. From the **Source** menu, either select a table source *or* search for a table source in the search field.
-#. From the **Attribute** menu, either select an attribute *or* search for an attribute in the search field.
-#. From the **Condition** menu, select a condition.
-#. From the value menu, either select a value *or* search for a value in the search field.
-#. Click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
-#. From the **Customer Lists** list, in the **Queries** section, select a query output.
-
-   .. note:: To delete a segment associated with a query output, you will need to first delete the query output before being able to delete the segment.
-   
-#. Click **Save As**.
-
-The data appears on the **Segments** page.
-
-.. note:: In order for a query output to appear on the **Segment Editor**, you will need to add the Amperity ID field to the query.
+#. From the **Segment Editor** window, click **Add condition**.
+#. Select **Customer lists**, and then choose **Query**.
+#. In the **Select query** dialog, choose a query, and then click **Confirm**.
 
 .. segments-add-query-steps-end
 
 
-.. _segments-add-file-segment:
+.. _segments-add-segments-segment:
 
-Add an uploaded file to a segment
+Add a segment to a segment
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. segments-add-file-start
+.. segments-add-files-segment-start
 
-You can add an uploaded file to a segment from the **Segment Editor**.
+You can add a segment to a segment from the **Segment Editor**.
 
-.. segments-add-file-end
+.. segments-add-files-segment-end
 
-**To add an uploaded file to a segment**
+**To add a segment to a segment**
 
-.. segments-add-file-steps-start
+.. segments-add-files-segment-steps-start
 
-#. From the **Segment Editor** window, click **Add Attribute**.
-#. From the **Source** menu, either select a table source *or* search for a table source in the search field.
-#. From the **Attribute** menu, either select an attribute *or* search for an attribute in the search field.
-#. From the **Condition** menu, select a condition.
-#. From the value menu, either select a value *or* search for a value in the search field.
-#. Click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
-#. From the **Customer Lists** list, in the **File Uploads** section, select an uploaded file output.
+#. From the **Segment Editor** window, click **Add condition**.
+#. Select **Customer lists**, and then choose **Segment**.
+#. In the **Select segment** dialog, choose a query, and then click **Confirm**.
 
-   .. note:: To delete a segment associated with a query output, you will need to first delete the uploaded file output before being able to delete the segment.
-   
-#. Click **Save As**.
+.. segments-add-files-segment-steps-end
 
-The data appears on the **Segments** page.
 
-.. segments-add-file-steps-end
+.. _segments-add-files-segment:
+
+Add uploaded files to a segment
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. segments-add-files-segment-start
+
+You can add data in uploaded files to a segment from the **Segment Editor**.
+
+.. segments-add-files-segment-end
+
+**To add uploaded files to a segment**
+
+.. segments-add-files-segment-steps-start
+
+#. From the **Segment Editor** window, click **Add condition**.
+#. Select **Customer lists**, and then choose **File upload**.
+#. In the **Select file upload** dialog, choose a query, and then click **Confirm**.
+
+.. segments-add-files-segment-steps-end
 
 
 .. _segments-view-file-segment:
