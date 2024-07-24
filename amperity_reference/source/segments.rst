@@ -943,13 +943,13 @@ SQL editor
 
 .. segments-howitworks-sql-editor-start
 
-The **SQL Segment Editor** is an optional interface that allows you to build an attribute profile using Presto SQL. Start with a ``SELECT`` statement that returns the Amperity ID, and then apply a series of ``WHERE`` statements to define one (or more) attribute groups that match specific conditions and values.
+The **Segment Editor** is an optional interface that allows you to build an attribute profile using Presto SQL. Start with a ``SELECT`` statement that returns the Amperity ID, and then apply a series of ``WHERE`` statements to define one (or more) attribute groups that match specific conditions and values.
 
 .. segments-howitworks-sql-editor-end
 
 .. segments-howitworks-sql-editor-requirements-start
 
-There **SQL Segment Editor** has the following requirements:
+There **Segment Editor** has the following requirements:
 
 #. The *only* field that can be returned by the ``SELECT`` statement is **amperity_id**.
 #. All conditions and values must be contained within a ``WHERE`` clause.
@@ -1112,10 +1112,8 @@ This section describes tasks related to building segments in Amperity:
 
 .. segments-howtos-list-start
 
-* :ref:`segments-access-campaigns`
-* :ref:`segments-add-attribute`
+* :ref:`segments-add-conditions`
 * :ref:`segments-add-browse`
-* :ref:`segments-add-segment`
 * :ref:`segments-add-query-segment`
 * :ref:`segments-add-segments-segment`
 * :ref:`segments-add-files-segment`
@@ -1152,36 +1150,14 @@ This section describes tasks related to building segments in Amperity:
 .. segments-howtos-list-end
 
 
-.. _segments-access-campaigns:
+.. _segments-add-conditions:
 
-Access downstream campaigns
---------------------------------------------------
-
-.. segments-access-campaigns-start
-
-You can access downstream campaigns from the **Segments** page.
-
-.. segments-access-campaigns-end
-
-**To access a downstream campaign**
-
-.. segments-access-campaigns-steps-start
-
-#. From the **Segments** page, in the **All segments** section, in the **Used in** column, click the downstream campaign link.
-
-The **Edit Campaign** page appears with the downstream campaign information.
-
-.. segments-access-campaigns-steps-end
-
-
-.. _segments-add-attribute:
-
-Add attribute
+Add conditions
 --------------------------------------------------
 
 .. segments-add-attribute-start
 
-Attributes are the fields in your data tables that your brand uses to create segments, define audiences, and build campaigns.
+Conditions are the fields in your data tables that your brand uses to create segments, define audiences, and build campaigns.
 
 .. segments-add-attribute-end
 
@@ -1201,85 +1177,44 @@ You can add attributes from a table to a segment on the **Segment Editor**.
 
 .. segments-add-attribute-from-table-steps-start
 
-#. From the **Segment Editor**, click **Add Attribute**.
-#. From the **Source** menu, either select a table source *or* search for the a table source from the search field.
-#. From the **Attribute** menu, either select an attribute *or* search for an attribute in the search field.
-#. From the **Condition** menu, select a condition.
-#. From the value menu, either select a value *or* search for a value in the search field.
-#. Add another attribute or section.
-#. When done, click **Save As**.
-
-The data appears on the **Segments** page.
+#. From the **Segment Editor**, click **Add condition**.
+#. Choose **Attributes**, and then select a table.
+#. Choose an attribute from the table, and then define the criteria for the attribute.
 
 .. segments-add-attribute-from-table-steps-end
 
 
-.. _segments-add-attribute-from-query:
+.. _segments-add-purchase-behavior:
 
-Add attribute from query
+Add purchase behaviors
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. segments-add-attribute-from-query-start
+.. segments-add-purchase-behavior-start
 
-You can add attributes from a query to a segment on the **Segment Editor**.
+Purchase behaviors are a feature of Amperity that are built on top of standard output for transactions (orders and items). Purchase behaviors require standardized product catalog field names to be present in your standard output for transactions.
 
-.. segments-add-attribute-from-query-end
+Use purchase behaviors in segments to return a list of customers, *and then* filter that list of customers by any combination of brand, channel, individual items in your product catalog, and store.
 
-**To add an attribute from a query to a segment**
+Purchase behaviors are available for :doc:`first order <attribute_compound_first_order>`, :doc:`has not purchased <attribute_compound_has_not_purchased>`, :doc:`has purchased <attribute_compound_has_purchased>`, :doc:`most frequent order <attribute_compound_most_frequent_order>`, :doc:`repeat order <attribute_compound_repeat_order>`, and :doc:`total value of orders <attribute_compound_total_value_of_orders>`.
 
-.. segments-add-attribute-from-query-steps-start
- 
-#. From the **Segment Editor**, click **Add Attribute**.
-#. From the **Source** menu, either select a query source *or* search for a query source in the search field.
-#. From the **Attribute** menu, either select an attribute *or* search for an attribute in the search field.
-#. From the **Condition** menu, select a condition.
-#. From the value menu, either select a value *or* search for a value in the search field.
-#. Add another attribute or section.
-#. When done, click **Save As**.
-
-The data appears on the **Segments** page.
-
-.. segments-add-attribute-from-query-steps-end
-
-
-.. _segments-add-transactional-behavior:
-
-Add transactional behaviors
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. segments-add-transactional-behavior-start
-
-You can add transaction behaviors from the **Segment Editor**.
+You can add purchase behaviors to segments from the **Segment Editor**.
 
 .. segments-add-transactional-behavior-end
 
-**To add transactional behavior attributes to a segment**
+**To add purchase behaviors to a segment**
 
 .. segments-add-transactional-behavior-steps-start
 
-#. From the **Segment Editor**, click **Add criteria**.
-#. Select one an attribute, from the **Transactional Activity** menu.
-#. Select a source from the **Sources** menu.
-
-   .. tip:: You can also use the **Search** field to find a source.
-
-#. In the menu, select a segment attribute.
-#. In the **Operators** menu, select an condition.
-
-   .. note:: You can delete an attribute by clicking on the 'x' to the right of the criteria.
-
-#. Enter information into the required fields.
-#. Click **Add filter**.
-#. From the **Filters** window, select the appropriate conditions and values.
-#. Click **Save As**. The filters appear on the **Segment Editor** window beneath the associated attributes.
-#. When done adding criteria and sections, click **Save As** to update the segment.
+#. From the **Segment Editor**, click **Add condition**.
+#. Open **Purchase behaviors**, and then select a purchase behavior attribute.
+#. Define the criteria for the attribute.
 
 .. segments-add-transactional-behavior-steps-end
 
 
 .. _segments-add-condition:
 
-Add condition
+Add conditions
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. segments-add-condition-start
@@ -1288,19 +1223,24 @@ You can add conditions to an attribute in a segment on the **Segment Editor**.
 
 .. segments-add-condition-end
 
-**To add a condition to an attribute in a segment**
+**To add conditions to a segment**
 
 .. segments-add-condition-steps-start
 
-#. From the **Segment Editor**, click **Add Attribute**.
-#. From the **Source** menu, either select a source *or* search for a source in the search field.
-#. From the **Attribute** menu, either select an attribute *or* search for an attribute in the search field.
-#. From the **Condition** menu, select a condition.
-#. From the value menu, either select a value *or* search for a value in the search field.
-#. Add another attribute or section.
-#. When done, click **Save As**.
+#. From the **Segment Editor**, click **Add condition**.
+#. Choose one of **Purchase behaviors**, **Attributes**, or **Customer lists**.
 
-The data appears on the **Segments** page.
+   Purchase behaviors are a feature of Amperity that are built on top of standard output for transactions (orders and items). Purchase behaviors require standardized product catalog field names to be present in your standard output for transactions.
+
+   Use purchase behaviors in segments to return a list of customers, *and then* filter that list of customers by any combination of brand, channel, individual items in your product catalog, and store.
+
+   Purchase behaviors are available for :doc:`first order <attribute_compound_first_order>`, :doc:`has not purchased <attribute_compound_has_not_purchased>`, :doc:`has purchased <attribute_compound_has_purchased>`, :doc:`most frequent order <attribute_compound_most_frequent_order>`, :doc:`repeat order <attribute_compound_repeat_order>`, and :doc:`total value of orders <attribute_compound_total_value_of_orders>`.
+
+   Attributes are available for tables in your customer 360 database.
+
+   Customer lists are available from segments and queries that have been made available for use in the **Segments Editor** *and* from files that have been uploaded to Amperity.
+
+#. When done adding conditions, click **Save As**.
 
 .. segments-add-condition-steps-end
 
@@ -1320,16 +1260,8 @@ You can add sections to a segment on the **Segment Editor**.
 
 .. segments-add-section-steps-start
 
-#. From the **Segment Editor**, click **Add Section**.
-#. Click **Add Attribute**.
-#. From the **Source** menu, either select a source *or* search for a source in the search field.
-#. From the **Attribute** menu, either select an attribute *or* search for an attribute in the search field.
-#. From the **Condition** menu, select a condition.
-#. From the value menu, either select a value *or* search for a value in the search field.
-#. Add another attribute or section.
-#. When done, click **Save As**.
-
-The data appears on the **Segments** page.
+#. From the **Segment Editor**, click **Add section**.
+#. Click **Add condition** to add a set of conditions to the section.
 
 .. segments-add-section-steps-end
 
@@ -1400,61 +1332,6 @@ You can add data in uploaded files to a segment from the **Segment Editor**.
 .. segments-add-files-segment-steps-end
 
 
-.. _segments-view-file-segment:
-
-View uploaded files
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. segments-view-file-segment-start
-
-You can view a list of uploaded files on the **Segment Editor**.
-
-.. segments-view-file-segment-end
-
-**To view uploaded files**
-
-.. segments-view-file-segment-steps-start
-
-#. From the **Segment Editor** window, click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
-#. From the **Customer Lists** list, in the **File Uploads** section, view a list of uploaded files.
-
-   .. note:: When you upload a file to Amperity, the system will write a table from the data contained in that file. The table is then layered on top of a database at the queries (storage-service) layer. 
-
-   Amperity does not enforce a time constraint on how long uploaded files can remain in the database. To remove an uploaded file from that database, please contact your Amperity Customer Support representative.
-
-.. segments-view-file-segment-steps-end
-
-
-.. _segments-add-segment:
-
-Add segment	
---------------------------------------------------
-
-.. segments-add-segment-start
-
-You can add a segment on the **Segments** page.
-
-.. segments-add-segment-end
-
-**To add a segment**
-
-.. segments-add-segment-steps-start
-
-#. From the **Segments** page, either click **Create Segment** *or* select a segment, click **Actions**, and then, in the menu, click **Edit segment**.
-#. On the **Segment Editor** window, click **Add Attribute**.
-#. From the **Source** menu, either select a source *or* search for a source in the search field.
-#. From the **Attribute** menu, either select an attribute *or* search for an attribute in the search field.
-#. From the **Condition** menu, select a condition.
-#. From the value menu, either select a value *or* search for a value in the search field.
-#. Add another attribute or section.
-#. When done, click **Save As**.
-
-The segment data appears on the **Segments** page.
-
-.. segments-add-segment-steps-end
-
-
 .. _segments-add-browse:
 
 Browse tables and columns
@@ -1492,10 +1369,8 @@ You can change the insight details date range on the **Segments** page.
 
 .. segments-change-date-start
 
-#. From the **Segments** page, in the **More Insights** section, click the date range field.
+#. From the **Segments** page, in the **More insights** section, click the date range field.
 #. Select a date range from the menu.
-
-   The updated insights data appears on the **Segments** page.
 
 .. segments-change-date-end
 
@@ -1516,12 +1391,10 @@ You can add comments to the query in a segment.
 .. segments-comment-start
 
 #. From the **Segment Editor**, click **View SQL**
-#. On the **Visual SQL** window, click **Convert to SQL Segment**.
-#. On the **SQL Segment Editor**, click **Comment**.
+#. On the **Visual SQL** window, click **Convert to SQL segment**.
+#. On the **Segment Editor**, click **Comment**.
 #. Enter your comments.
 #. Click **Activate**.
-
-   The segment data appears on the **Segments** page.
 
 .. segments-comment-end
 
@@ -1545,14 +1418,12 @@ You can compare segment insights by the following:
 
 .. segments-compare-start
 
-#. From the **Segments** page, from the **More Insights** section, click the down arrow in the **Compare by:** field.
+#. From the **Segments** page, from the **More insights** section, click the down arrow in the **Compare by:** field.
 #. Select one of the following options from the list:
 
    * **% of Purchasers**
    * **% of Revenue**
    * **Revenue/Purchaser**
-
-   The updated insights data appears on the **Segments** page.
 
 .. segments-compare-end
 
@@ -1574,8 +1445,6 @@ You can configure recommended segments on the **Segment** page.
 #. In the table section, select a segment.
 #. Select an icon.
 #. Click **Save**.
-
-   The recommended segment(s) appear on the **Segments** page.
 
 .. segments-configure-segments-steps-end
 
@@ -1615,12 +1484,9 @@ You can copy a SQL query from the **Segment Editor**.
 
 #. From the **Segment Editor**, click **View SQL**
 #. On the **View SQL** window, click **Convert to SQL Segment**.
-#. On the **SQL Segment Editor**, click **Copy as SQL Query**.
+#. On the **Segment Editor**, click **Copy as SQL Query**.
 #. On the **Copy as SQL Query** window, click **Copy as SQL Query**.
-#. On the **SQL Query Editor** page, make your changes.
-#. When done with creating the query, click **Activate**.
-
-   The new query appears on the **Queries** page.
+#. When finished, click **Activate**.
 
    .. tip:: To include customer matches, you can select the **Include "Customer Matches" columns** option.
 
@@ -1642,7 +1508,7 @@ You can customize insights charts on the **Segments** page.
 
 .. segments-customize-charts-start
 
-#. From the **Segment** page, in the **More Insights** section, click **Customize**.
+#. From the **Segment** page, in the **More insights** section, click **Customize**.
 #. On the **Customize Insights Charts** window, you can either select up to 6 customer attributes *or* select up to 6 behavioral attributes.
 #. Once done updating the insights charts, click **Apply**.
 
@@ -1672,8 +1538,6 @@ You can delete a segment from the **Segments** page.
 #. In the menu, click **Delete**.
 #. On the **Delete Segment** window, click **Confirm**.
 
-   The segment no longer appears on the **Segments** page.
-
 .. segments-delete-segments-steps-end
 
 
@@ -1695,8 +1559,6 @@ You can delete multiple segments from the **Segments** page.
 #. From the **Segments** page, select multiple segments.
 #. On the bottom of the **Segments** page, click **Delete**.
 #. On the **Bulk Delete** window, click **Delete <#> Items**.
-
-   The segments no longer appear on the **Segments** page.
 
 .. segments-bulk-delete-segments-steps-end
 
@@ -1767,8 +1629,6 @@ You can duplicate a segment from the **Segments** page.
 #. On the **Duplicate Segment** window, click **Confirm**.
 #. On the **Segment Editor**, make your changes, and then click **Save As**.
 
-   The duplicated segment appears on the **Segments** page.
-
 .. segments-duplicate-segments-steps-end
 
 
@@ -1791,8 +1651,6 @@ You can edit a segment from the **Segments** page.
 #. Click **Edit**.
 #. On the **Segment Editor**, make your changes, and then click **Save**.
 
-   The updated segment data appears on the **Segments** page.
-
 .. segments-edit-segments-steps-end
 
 
@@ -1814,8 +1672,6 @@ You can edit a segment from the **Segment Editor**.
 #. From the **Segment Editor**, click **Actions** (upper-right corner).
 #. Click **Edit**.
 #. Make your changes and then click **Save**.
-
-   The updated segment data appears on the **Segments** page.
 
 .. segments-edit-segments-editor-steps-end
 
@@ -1884,8 +1740,6 @@ You can format a segment from the **Segments** page.
 #. From the **Segments** page, open the menu for a segment.
 #. Click **Edit**.
 #. On the **Segment Editor**, make your changes, and then click **Save**.
-
-The updated segment data appears on the **Segments** page.
 
 .. segments-edit-segments-steps-end
 
@@ -2022,8 +1876,6 @@ You can save a segment into a folder from the **Segment Editor**.
 #. In the **Location** section, select the folder or subfolder.
 #. Click **Save**.
 
-The segment appears in the folder on the **Segments** page.
-
 .. segments-save-segments-to-folder-steps-end
 
 
@@ -2047,8 +1899,6 @@ You can move multiple segments to a folder from the **Segments** page.
 #. On the **Bulk Move** window, select a folder.
 #. Click **Move**.
 
-   The segments appear in the folder on the **Segments** page.
-
 .. segments-bulk-move-segments-steps-end
 
 
@@ -2071,8 +1921,6 @@ You can rename a segment from the **Segments** page.
 #. Click **Rename**.
 #. On the **Rename segment** window, enter a name.
 #. Click **Save**.
-
-   The updated segment name appears on the **Segments** page.
 
 .. segments-rename-segments-steps-end
 
@@ -2116,8 +1964,6 @@ You can search for segments on the **Segments** page.
 #. From the **Segments** page, open a segment.
 #. On the top of the **Segments** page, enter the name of the segment into the search field.
 
-   The segment appears in a list on the **Segments** page.
-
    .. tip:: Select the **Also search segment content** option to search segment content.
 
 .. segments-search-segment-steps-end
@@ -2160,7 +2006,7 @@ You can select multiple values from the **Segment Editor**.
 
 .. segments-select-multiple-values-start
 
-#. From the **Segment Editor**, click **Add criteria**.
+#. From the **Segment Editor**, click **Add condition**.
 #. Select a table or search for an attribute in the search field.
 #. Select a condition.
 #. In the field, search for or select values.
@@ -2308,8 +2154,6 @@ You can view matching records from a table from the **Customers** page on the **
 #. From the **Segments** page, on the **Customers** page, expand the **Show [x] columns from [table]** link.
 #. Click in the **Show matching records from:** field.
 #. In the list that appears, select a table.
-
-The updated customer data appears on the **Segments** page.
 
 .. segments-view-matching-records-steps-end
 
