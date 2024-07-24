@@ -115,6 +115,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Conversion Rate
    * - **DAG**
      - Directed Acyclic Graph
+   * - **DII**
+     - Directly Identifying Information
    * - **DMP**
      - Data Management Platform
    * - **DOB**

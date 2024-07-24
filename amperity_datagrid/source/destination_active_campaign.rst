@@ -232,7 +232,6 @@ Add destination
           * - **Audience primary key**
             - Select **email** as the audience primary key. (Amperity only sends a list of email addresses to |destination-name|.)
 
-
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
