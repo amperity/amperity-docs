@@ -148,7 +148,7 @@ Add to segments
 
 .. attribute-compound-repeat-order-segments-start
 
-To find all customers who made their first order within a specified date range, start with the **Repeat Order** attribute located under **Transactional Behaviors**:
+To find all customers who made their first order within a specified date range, start with the **Repeat Order** attribute located under **Purchase behaviors**:
 
 .. attribute-compound-repeat-order-segments-end
 

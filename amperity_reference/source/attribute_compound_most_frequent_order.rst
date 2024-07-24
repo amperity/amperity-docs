@@ -126,7 +126,7 @@ Add to segments
 
 .. attribute-compound-most-frequent-order-segments-start
 
-To find all customers who made their first order within a specified date range, start with the **Most Frequent Order** attribute located under **Transactional Behaviors**:
+To find all customers who made their first order within a specified date range, start with the **Most Frequent Order** attribute located under **Purchase behaviors**:
 
 .. attribute-compound-most-frequent-order-segments-end
 
