@@ -520,7 +520,7 @@ Pull from Streaming Ingest
 Add courier
 --------------------------------------------------
 
-The streaming ingest courier pulls your data from the location that the Streaming Ingest API streams data to Amperity.
+The Streaming Ingest courier pulls your data from the location that the Streaming Ingest API streams data to Amperity. A courier is required for each data stream.
 
 .. tip::
 
@@ -535,15 +535,15 @@ The streaming ingest courier pulls your data from the location that the Streamin
 #. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 #. Enter the name of the courier. For example: "|source-name|".
-#. A courier that pulls data from |source-name| requires a default credential type. Give the courier a name, and then select **Create a new credential** from the **Credential** drop-down. Add a name and a description for the default credential type.
+#. A courier that pulls data that was streamed to Amperity by the Streaming Ingest API does not require a credential even though the configuration steps will ask you to provide a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming Ingest API".
+
 #. Under **Streaming Ingest Settings**, add the Stream ID which is available from the **Stream ID** column.
-   Specify the **File format** (which can be XML, JSON, or NDJSON).
 
-     .. note:: Streaming Ingest supports the following file types: |format_json|, |format_ndjson|, and |format_xml|.
+   Specify the **File format**, which can be |format_xml|, |format_json|, or |format_ndjson|.
 
-   Set the **File tag** (which can be the same as the name of the file). 
+   Set the **File tag**. This must be identical to the file tag within the load operation, but prefixed with a colon ``:``.
    
-   Enter the **File pattern prefix** which is useful for time based ingestion of streaming data.
+   Enter the **File pattern prefix**, which is useful for time based ingestion of streaming data. This setting may be configured to load data on an hourly basis. Possible values range from ``00`` - ``24``, each of which represents an hour in a 24 hour window. For example, use ``00`` to load data at 12:00 AM, ``08`` to load data at 8:00 AM, or ``12`` to load data at 12:00 PM. A courier may only be configured to use a single file pattern prefix.
    
 #. Set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
 
@@ -614,19 +614,10 @@ For example:
 ::
 
    {
-     "CUSTOMER-RECORDS-FEED-ID": [
-       {
-         "type": "truncate"
-       },
+     "FEED_ID": [
        {
          "type": "load",
-         "file": "customer-records"
-       }
-     ],
-     "TRANSACTION-RECORDS-FEED-ID": [
-       {
-         "type": "load",
-         "file": "transaction-records"
+         "file": "file_tag"
        }
      ]
    }
