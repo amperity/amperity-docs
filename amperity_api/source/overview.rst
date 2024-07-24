@@ -86,30 +86,9 @@ Requests
 
 Requests made to Amperity API endpoints require the following headers:
 
-.. list-table::
-   :widths: 35 65
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **Authorization**
-     - **Required**
-
-       The bearer authentication header. This should be the access token for your tenant's API key.
-
-   * - **Amperity-Tenant**
-     - **Required**
-
-       The ID for the tenant to which the request will be sent. You can find the tenant ID in the base URL for your tenant.
-
-   * - **api-version**
-     - **Required**
-
-       A supported version of the Amperity API. For example: **2024-04-01**.
-
-       You may use the **api-version** request parameter instead of the **api-version** request header.
-
+* **Authorization** Required. The bearer authentication header. This should be the access token for your tenant's API key.
+* **Amperity-Tenant** Required. The ID for the tenant to which the request will be sent. You can find the tenant ID in the base URL for your tenant.
+* **api-version** Required. A supported version of the Amperity API. For example: **2024-04-01**.
 
 In addition to all required headers, you must specify the HTTP method, and base URL. For example:
 

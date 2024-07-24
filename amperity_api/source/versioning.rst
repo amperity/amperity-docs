@@ -105,6 +105,8 @@ A version identifier is a string that identifies a :ref:`supported version <vers
 
 .. versioning-version-identifier-request-header-example-start
 
+In the following example, replace "{tenant-id}" with your tenant name, "{endpoint}" with the name and path of the Amperity API endpoint, "{access-token}" with your Amperity API access token, and "{version}" with the version of the Amperity API to which the request will be made:
+
 ::
 
    curl -request GET \
@@ -130,17 +132,7 @@ New versions of the Amperity API are released periodically. Each version of an e
 
 Current versions:
 
-.. list-table::
-   :widths: 30 20 50
-   :header-rows: 1
-
-   * - Version
-     - Deprecated?
-     - Description
-
-   * - **2024-04-01**
-     - No
-     - The current version of the Amperity API.
+* **2024-04-01** The current version of the Amperity API.
 
 .. versioning-supported-versions-end
 

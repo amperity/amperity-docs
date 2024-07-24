@@ -4,7 +4,7 @@
 
 
 
-==================================================
+
 Amperity API Overview
 ==================================================
 
@@ -48,11 +48,16 @@ Version identifiers
 
 A version identifier is a date string that must be included with each request made to an API endpoint. All endpoints are versioned together. This provides consistency across all endpoints and ensures interoperability. A version identifier is updated only when breaking changes occur.
 
-**Example versioning in request header**
+For example:
 
-.. include:: ../../amperity_api/source/versioning.rst
-   :start-after: .. versioning-version-identifier-request-header-example-start
-   :end-before: .. versioning-version-identifier-request-header-example-end
+::
+
+   curl -request GET \
+        -url "https://{tenant-id}.amperity.com/api/{endpoint}/" \
+        -H "Authorization: Bearer ${access-token}" \
+        -H "Amperity-Tenant: {tenant-id}" \
+        -H "Content-Type: application/json" \
+        -H "api-version: {version}"
 
 
 Supported versions
