@@ -112,7 +112,7 @@ Add to segments
 
 .. attribute-compound-total-value-of-orders-segments-start
 
-To find the total values of orders for customers who made orders within a specified date range, start with the **Total Value of Orders** attribute located under **Transactional Behaviors**:
+To find the total values of orders for customers who made orders within a specified date range, start with the **Total Value of Orders** attribute located under **Purchase behaviors**:
 
 .. attribute-compound-total-value-of-orders-segments-end
 

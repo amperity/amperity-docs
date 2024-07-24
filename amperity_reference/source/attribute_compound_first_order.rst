@@ -128,7 +128,7 @@ Add to segments
 
 .. attribute-compound-first-order-segments-start
 
-To find all customers who made their first order within a specified date range, start with the **First Order** attribute located under **Transactional Behaviors**:
+To find all customers who made their first order within a specified date range, start with the **First Order** attribute located under **Purchase behaviors**:
 
 .. attribute-compound-first-order-segments-end
 

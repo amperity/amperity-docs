@@ -210,7 +210,7 @@ Add to segments
 
 .. attribute-compound-has-not-purchased-segments-start
 
-To find all customers who made their first order within a specified date range, start with the **Has Not Purchased** attribute located under **Transactional Behaviors**:
+To find all customers who made their first order within a specified date range, start with the **Has Not Purchased** attribute located under **Purchase behaviors**:
 
 .. attribute-compound-has-not-purchased-segments-end
 
