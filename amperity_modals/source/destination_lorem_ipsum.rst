@@ -51,12 +51,13 @@ Configure the following settings.
       :end-before: .. setting-lorem-ipsum-short-end
 
 **setting**
+
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
 
-
 **setting**
+
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-alt-start
       :end-before: .. setting-lorem-ipsum-alt-end
