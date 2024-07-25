@@ -2157,6 +2157,15 @@ The digital channel through which a transaction was made. For example: Facebook,
 .. term-digital-channel-end
 
 
+**Directly identifying information**, **DII**
+
+.. term-dii-start
+   
+Directly identifying information (DII) is information that directly identifies an individual, such as a name, an email address, or a phone number.
+
+.. term-dii-end
+
+
 **direct mail** (campaign strategy)
 
 .. term-direct-mail-start
@@ -5128,6 +5137,15 @@ Amperity loads data in raw form preserving the original schema as well as identi
 .. term-raw-data-end
 
 
+**Raw UID2 values**
+
+.. term-raw-uid2-values-start
+
+Raw UID2 values are unencrypted alphanumeric identifiers that are created from a user's email address or phone number. Raw UID2 values are encrypted to create a UID2 token. Raw UID2 values (and their associated UID2 tokens) are case sensitive and are unique.
+
+.. term-raw-uid2-values-end
+
+
 **RCFile**, **Record Columnar File (RCFile)**
 
 .. term-rcfile-start
@@ -6596,6 +6614,15 @@ Tune is a partner marketing platform for advertisers and networks.
 Turnkey Intelligence provides sports industry intelligence, data-driven research, and advisory services for sports leagues, teams, and venues.
 
 .. term-turnkey-intelligence-end
+
+
+**UID2 tokens**
+
+.. term-uid2-tokens-start
+
+A Unified ID 2.0 (UID2) token, also called an advertising token, is an encrypted form of a raw UID2 value. UID2 tokens are generated from a user's email address or phone number. UID2 tokens are case sensitive, are unique, and have are refreshed periodically.
+
+.. term-uid2-tokens-end
 
 
 **undercluster**
