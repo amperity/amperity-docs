@@ -563,7 +563,7 @@ Update Merged Customers table
 
 .. bad-values-blocklist-update-merged-customers-start
 
-When using the bad-values blocklist, you must update the **Merged Customers** table include the bad-values blocklist items in the merge rules.
+When using the bad-values blocklist, you must update the **Merged Customers** table to include the bad-values blocklist items in the merge rules.
 
 .. bad-values-blocklist-update-merged-customers-end
 
