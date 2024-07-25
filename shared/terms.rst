@@ -2157,7 +2157,7 @@ The digital channel through which a transaction was made. For example: Facebook,
 .. term-digital-channel-end
 
 
-**directly identifying information**, **DII**
+**Directly identifying information**, **DII**
 
 .. term-dii-start
    

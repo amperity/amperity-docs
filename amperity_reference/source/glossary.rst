@@ -1544,7 +1544,7 @@ D
 
 .. _d-dii:
 
-**directly identifiable information (DII)**
+**directly identifying information (DII)**
   .. include:: ../../shared/terms.rst
 	 :start-after: .. term-dii-start
 	 :end-before: .. term-dii-end
