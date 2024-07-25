@@ -1542,6 +1542,14 @@ D
 	 :end-before: .. term-direct-mail-end
 
 
+.. _d-dii:
+
+**directly identifiable information (DII)**
+  .. include:: ../../shared/terms.rst
+	 :start-after: .. term-dii-start
+	 :end-before: .. term-dii-end
+
+
 .. _d-display-advertising:
 
 **display advertising**
