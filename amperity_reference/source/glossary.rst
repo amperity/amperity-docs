@@ -3737,6 +3737,14 @@ R
       :end-before: .. term-raw-data-end
 
 
+.. _r-raw-uid2-values:
+
+**raw UID2 values**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-raw-uid2-values-start
+      :end-before: .. term-raw-uid2-values-end
+
+
 .. _r-rcfile:
 
 **RCFile**, **Record Columnar File**
@@ -4840,6 +4848,15 @@ T
 
 U
 ==================================================
+
+
+.. _u-uid2-tokens:
+
+**UID2 tokens**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-uid2-tokens-start
+      :end-before: .. term-uid2-tokens-end
+
 
 .. _u-undercluster:
 
