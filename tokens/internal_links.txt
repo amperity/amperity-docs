@@ -21,6 +21,11 @@
    <a href="https://docs.amperity.com/destinations_campaigns.html">destinations for customer activation</a>
 
 
+.. |amperity_bridge| raw:: html
+
+   <a href="https://docs.amperity.com/reference/bridge.html">Amperity Bridge</a>
+
+
 .. |api_keys| raw:: html
 
    <a href="https://docs.amperity.com/reference/api.html">API keys</a>
