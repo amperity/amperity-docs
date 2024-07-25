@@ -59,7 +59,7 @@ This section describes tasks related to managing orchestrations in Amperity:
 * :ref:`orchestrations-run-scheduled-always-run`
 * :ref:`orchestrations-run-scheduled-wait-for-changes`
 * :ref:`orchestrations-run-unscheduled-wait-for-changes`
-* :ref:`orchestrations-run-unscheduled-wait-for-changes`
+* :ref:`orchestrations-view-notifications`
 
 .. orchestrations-howtos-end
 
