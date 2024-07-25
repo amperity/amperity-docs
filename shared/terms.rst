@@ -2157,6 +2157,15 @@ The digital channel through which a transaction was made. For example: Facebook,
 .. term-digital-channel-end
 
 
+**directly identifying information**, **DII**
+
+.. term-dii-start
+   
+Directly identifying information (DII) is information that directly identifies an individual, such as a name, an email address, or a phone number.
+
+.. term-dii-end
+
+
 **direct mail** (campaign strategy)
 
 .. term-direct-mail-start
