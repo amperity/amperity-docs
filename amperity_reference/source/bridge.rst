@@ -482,7 +482,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
        You may select any combination of schemas and tables.
 
-       If you select a scehma, all tables in that scehma will be shared, including all changes made to all tables in that schema.
+       If you select a schema, all tables in that schema will be shared, including all changes made to all tables in that schema.
 
        When finished, click **Save**. This will open the **Download credential** dialog box, from which you will :ref:`download the credentials.share file <bridge-outbound-share-download-credentials>` that is required by the Databricks CLI when :ref:`creating a catalog in Databricks <bridge-outbound-share-add-catalog-from-share>`.
 
