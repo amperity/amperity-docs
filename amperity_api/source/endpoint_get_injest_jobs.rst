@@ -239,12 +239,10 @@ A **200 OK** response contains the following parameters.
 
        .. code-block:: json
 
-       {
-         "id": "isj-1f73r9u2",
-         "tables": [
-           {
+          "tables": [
+            {
               "errors": 200,
-              "feed_id": "df-￿5L6d1veh",
+              "feed_id": "df-5L6d1veh",
               "read": 1000,
               "rejected": 200,
               "updated": 200,
@@ -253,59 +251,56 @@ A **200 OK** response contains the following parameters.
               "ended_at": "2024-06-01T04:02:57.433Z",
               "files": [
                 {
-                   "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
-                   "name": "part0.avro",
-                   "read": 1000,
-                   "errors": 200
+                  "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
+                  "name": "part0.avro",
+                  "read": 1000,
+                  "errors": 200
                 }
-             ],
-             "inserted": 400,
-             "table_name": "My table",
-             "job_id": "isj-1f73r9u2"
-           }
-         ],
-         "workflow_id": "wf-20240618-3423-b45"
-       }
+              ],
+              "inserted": 400,
+              "table_name": "My table",
+              "job_id": "isj-1f73r9u2"
+            }
+          ],
 
-        where
+       where
 
-        **errors**
-           The number of rows with an ingest error. For example, when Amperity cannot match a field value to the expected data type.
+       **errors**
+          The number of rows with an ingest error. For example, when Amperity cannot match a field value to the expected data type.
 
-        **feed_id**
-           The unique ID of this feed.
+       **feed_id**
+          The unique ID of this feed.
 
-        **read**
-           The number of rows ingested into this feed.
+       **read**
+          The number of rows ingested into this feed.
 
-        **rejected** 
-           The number of duplicate rows that were not ingested.  
+       **rejected** 
+          The number of duplicate rows that were not ingested.  
 
-        **updated** 
-           The total count of rows updated for this feed during the job.
+       **updated** 
+          The total count of rows updated for this feed during the job.
 
-        **started_at** 
-           The date and time at which a job started.
+       **started_at** 
+          The date and time at which a job started.
 
-        **state** 
-           The current state of the job. For example:
+       **state** 
+          The current state of the job. For example:
 
-           * Scheduled
-           * Started
-           * In progress
-           * Running
-           * Finalizing
-           * Succeeded
-           * Stopping
-           * Stopped
-           * Failed
-           * Skipped
-           * Canceled
+          * Scheduled
+          * Started
+          * In progress
+          * Running
+          * Finalizing
+          * Succeeded
+          * Stopping
+          * Stopped
+          * Failed
+          * Skipped
+          * Canceled
 
           .. note:: This is the same value that is visible from the **Status** column on each individual workflow page. Some values are only visible while a task is active.
 
-        **ended_at**	
-           The date and time at which a job ended.
-
+       **ended_at**	
+          The date and time at which a job ended.
 
 .. endpoint-get-ingest-jobs-response-parameters-end
