@@ -119,7 +119,7 @@ The following table describes the parameters that may be used with the **ingest/
 
        The Amperity internal identifier for the injest job. For example **isj-20240701-48815-6dcXdk**.
 
-       .. note:: On the right side, click **Recent Activity**, select **Ingest details** under the job, and copy the job id from the open dialog box.
+       .. note:: From the workflows page, on the right side, click **Recent Activity**, select **Ingest details** under the job, and copy the job id from the open dialog box.
 
 .. endpoint-get-ingest-jobs-request-parameters-end
 
