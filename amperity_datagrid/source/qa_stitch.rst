@@ -62,9 +62,7 @@ The recommended way to add the Stitch QA database to your tenant is to use the "
 #. Name the database "Stitch QA".
 #. From the **Template** drop-down, select **Stitch QA**.
 #. Click **Create**. This opens the **Database Editor** page and shows a list of preconfigured database tables.
-#. Add a database description, such as "Stitch QA database for [tenant-name]". This enables a tooltip that is visible from other pages and tabs within Amperity.
-#. Under **Database Type**, ensure that **Set as Customer 360 Database** is not selected.
-#. Under **Visibility**, ensure that **Customer Visible**  is not selected.
+#. Under **Database Type**, ensure that **Amp360** and **AmpIQ** are notselected.
 #. Click the **Activate** button.
 #. Open the menu for the activated Stitch QA database, and then select **Run**.
 #. Take a few minutes to review the tables that are added by the "Stitch QA" database template.
