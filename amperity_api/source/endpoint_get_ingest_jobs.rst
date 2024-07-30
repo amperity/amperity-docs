@@ -16,12 +16,12 @@
 
 
 ==================================================
-GET /ingest jobs details
+GET /ingest/jobs details
 ==================================================
 
 .. endpoint-get-ingest-jobs-start
 
-Use the **/endpoint-get-ingest-jobs** endpoint to return a list of jobs from your tenant. You may restrict the list of ingest jobs to those associated with a specific data template.
+Use the **/ingest/jobs/{id}** endpoint to return a list of jobs from your tenant. 
 
 .. endpoint-get-ingest-jobs-end
 
@@ -33,7 +33,7 @@ Available HTTP methods
 
 .. image:: ../../images/api-request-get-ingest-jobs.png
    :width: 440 px
-   :alt: GET /campaigns
+   :alt: GET /ingest/jobs/{id}
    :align: left
    :class: no-scaled-link
 
@@ -90,7 +90,9 @@ A request to the **/ingest/jobs/{id}** endpoint is similar to:
 
    curl --request GET \
           'https://app.amperity.com/api/ingest/jobs/{id}" \
-          --header "accept: application/json"
+        --header 'amperity-tenant: tenant' \
+        --header 'api-version: 2024-04-01' \
+        --header 'Authorization: Bearer token'
 
 
 (This example is formatted for readability in a narrow page layout.)
@@ -105,7 +107,7 @@ Request parameters
 
 .. endpoint-get-ingest-jobs-request-parameters-start
 
-The following table describes the parameters that may be used with the **ingest/jobs** endpoint.
+The following table describes the parameters that may be used with the **ingest/jobs{id}** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -114,7 +116,14 @@ The following table describes the parameters that may be used with the **ingest/
    * - Parameter
      - Description
 
-   * - **job_id**
+   * - **api_version**
+     - String. Optional.
+
+       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2024-04-01**.
+
+       .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
+
+   * - **id**
      - String. Required.
 
        The Amperity internal identifier for the injest job. For example **isj-20240701-48815-6dcXdk**.
@@ -131,7 +140,7 @@ Request examples
 
 .. endpoint-get-ingest-jobs-request-examples-start
 
-The following examples show how to send requests to the **/ingest/jobs** endpoint.
+The following examples show how to send requests to the **/ingest/jobs{id}** endpoint.
 
 .. endpoint-get-ingest-jobs-request-examples-end
 
@@ -143,13 +152,15 @@ cURL
 
 .. endpoint-get-ingest-jobs-request-example-curl-start
 
-The following example shows how to use cURL to send a request to the **ingest/jobs** endpoint.
+The following example shows how to use cURL to send a request to the **ingest/jobs{id}** endpoint.
 
 ::
 
    curl --request GET \
           'https://tenant.amperity.com/api/ingest/jobs/{id}" \
-          --header "accept: application/json"
+        --header 'amperity-tenant: tenant' \
+        --header 'api-version: 2024-04-01' \
+        --header 'Authorization: Bearer token'
 
 (This example is formatted for readability in a narrow page layout.)
 
@@ -184,7 +195,7 @@ The **200** response returns a set of jobs.
      "tables": [
        {
           "errors": 200,
-          "feed_id": "df-￿5L6d1veh",
+          "feed_id": "df-5L6d1veh",
           "read": 1000,
           "rejected": 200,
           "updated": 200,
@@ -233,7 +244,7 @@ A **200 OK** response contains the following parameters.
      - The Amperity internal identifier for the workflow that ran this job.
 
    * - **tables**
-     - A summary of feed details from this ingest job.
+     - A summary of table details from this ingest job.
 
        The JSON array for this summary is similar to: 
 
