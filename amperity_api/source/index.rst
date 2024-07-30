@@ -56,6 +56,7 @@ Endpoints
    changelog
    endpoint_get_audit_events_list
    endpoint_get_campaigns_list
+   endpoint_get_ingest_jobs
    endpoint_get_segments_list
    endpoint_get_workflows_fetch
    endpoint_get_workflows_list
