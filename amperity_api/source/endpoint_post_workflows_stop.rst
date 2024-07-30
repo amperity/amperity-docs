@@ -16,7 +16,7 @@
 
 
 ==================================================
-POST /workflows stop details
+POST /workflow/runs/{id}:stop details
 ==================================================
 
 .. endpoint-post-workflows-stop-start
@@ -90,7 +90,9 @@ A request to the **workflow/runs/{id}:stop** endpoint is similar to:
 
    curl --request POST \ 
           "https://app.amperity.com/api/workflow/runs/{id}:stop" \
-        --header "accept: application/json"
+        --header 'amperity-tenant: tenant' \
+        --header 'api-version: 2024-04-01' \
+        --header 'Authorization: Bearer token'
 
 
 (This example is formatted for readability in a narrow page layout.)
@@ -113,6 +115,14 @@ The following table describes the parameters that may be used with the **workflo
 
    * - Parameter
      - Description
+	 
+
+   * - **api_version**
+     - String. Optional.
+
+       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2024-04-01**.
+
+       .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
 
    * - **{id}**
      - String. Required.
@@ -149,7 +159,9 @@ The following example shows how to use cURL to send a request to the **workflow/
 
    curl --request GET \
           'https://tenant.amperity.com/api/workflow/runs/{id}:stop" \
-          --header "accept: application/json"
+        --header 'amperity-tenant: tenant' \
+        --header 'api-version: 2024-04-01' \
+        --header 'Authorization: Bearer token'
 
 (This example is formatted for readability in a narrow page layout.)
 
