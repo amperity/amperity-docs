@@ -70,4 +70,4 @@ Enable to return log details when |destination-name| rejects adding contacts to 
 
 When this setting is enabled, a list of rejected contacts is returned by the response from ActiveCampaign. For each rejected contact, a contact identifier is provided along with a string that describes the reason why the contact was rejected.
 
-.. setting-active-campaign-verbose-name-end
+.. setting-active-campaign-verbose-logging-end
