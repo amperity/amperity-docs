@@ -19,7 +19,6 @@ Requirements
 
 This destination has the following requirements.
 
-
 #. The API key for your instance of |destination-name|.
 #. The ActiveCampaign API `endpoint URL <https://developers.activecampaign.com/reference/url>`__.
 
@@ -42,25 +41,31 @@ Configure the following settings.
 
    **Required**
 
-   The user group to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-group-name-start
+      :end-before: .. setting-active-campaign-group-name-end
 
 
 **List name**
 
    **Required**
 
-   The name of the contact list in |destination-name| that will be managed by Amperity
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-list-name-start
+      :end-before: .. setting-active-campaign-list-name-end
 
 
 **Audience primary key**
 
    **Required**
 
-   Set to "email".
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-audience-primary-key-start
+      :end-before: .. setting-active-campaign-audience-primary-key-end
 
 
 **Verbose logging?**
 
-   Enable to return log details when |destination-name| rejects adding contacts to the contact list.
-
-   When this setting is enabled, a list of rejected contacts is returned by the response from ActiveCampaign. For each rejected contact, a contact identifier is provided along with a string that describes the reason why the contact was rejected.
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-verbose-logging-start
+      :end-before: .. setting-active-campaign-verbose-logging-end
