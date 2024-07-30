@@ -1344,6 +1344,11 @@
    <a href="https://learn.amperity.com/the-amperity-ai-assistant" target="_blank">AI Assistant</a> <i class="fas fa-external-link-square-alt"></i>
 
 
+.. |ext_learning_lab_bridge| raw:: html
+
+   <a href="https://learn.amperity.com/amperity-bridge-and-data-warehouses" target="_blank">Amperity Bridge</a> <i class="fas fa-external-link-square-alt"></i>
+
+
 .. |ext_learning_lab_ingest_queries| raw:: html
 
    <a href="https://learn.amperity.com/ingest-queries" target="_blank">ingest queries</a> <i class="fas fa-external-link-square-alt"></i>
