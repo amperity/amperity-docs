@@ -2,14 +2,22 @@
 .. https://docs.amperity.com/datagrid/
 .. 
 
+.. |source-name| replace:: Streaming Ingest
+.. |plugin-name| replace:: Sreaming Ingest
+.. |feed-name| replace:: WebEvents
+.. |example-filename| replace:: filename_YYYY-MM-DD.json
+.. |domain-table-name| replace:: |source-name|:|feed-name|
+.. |what-pull| replace:: streamed data
+.. |filter-the-list| replace:: "stream"
+
 
 .. meta::
     :description lang=en:
-        This topic describes how the Streaming Ingest API works.
+        This topic describes how the Streaming Ingest API works and how to pull data to Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        This topic describes how the Streaming Ingest API works.
+        This topic describes how the Streaming Ingest API works and how to pull data to Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -482,3 +490,174 @@ To load streamed XML data that has been converted to CBOR format into Amperity, 
 XML data sent to the Streaming Ingest API is loaded to Amperity using the CBOR file format. Define an |format_cbor_ingest_query|, configure courier |format_cbor_couriers|, and then |format_cbor_feeds|.
 
 .. streaming-ingest-rest-api-stream-load-cbor-end
+
+
+Pull from Streaming Ingest
+==================================================
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-streaming-ingest-api-start
+   :end-before: .. term-streaming-ingest-api-end
+
+.. source-streaming-ingest-steps-to-pull-start
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-overview-list-intro-start
+   :end-before: .. sources-overview-list-intro-end
+
+#. :ref:`Add courier <source-streaming-ingest-legacy-add-courier>`
+#. :ref:`Get sample files <source-streaming-ingest-legacy-get-sample-files>`
+#. :ref:`Add feeds <source-streaming-ingest-legacy-add-feeds>`
+#. :ref:`Add load operations <source-streaming-ingest-legacy-add-load-operations>`
+#. :ref:`Run courier <source-streaming-ingest-legacy-run-courier>`
+#. :ref:`Add to courier group <source-streaming-ingest-legacy-add-to-courier-group>`
+
+.. source-streaming-ingest-steps-to-pull-end
+
+
+.. _source-streaming-ingest-legacy-add-courier:
+
+Add courier
+--------------------------------------------------
+
+The Streaming Ingest courier pulls your data from the location that the Streaming Ingest API streams data to Amperity. A courier is required for each data stream.
+
+.. tip::
+
+   .. include:: ../../amperity_reference/source/couriers.rst
+      :start-after: .. couriers-run-without-load-operations-start
+      :end-before: .. couriers-run-without-load-operations-end
+
+**To add a courier for Streaming Ingest**
+
+.. source-streaming-ingest-legacy-add-courier-steps-start
+
+#. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
+#. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
+#. Enter the name of the courier. For example: "|source-name|".
+#. A courier that pulls data that was streamed to Amperity by the Streaming Ingest API does not require a credential even though the configuration steps will ask you to provide a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming Ingest API".
+
+#. Under **Streaming Ingest Settings**, add the Stream ID which is available from the **Stream ID** column.
+
+   Specify the **File format**, which can be |format_xml|, |format_json|, or |format_ndjson|.
+
+   Set the **File tag**. This must be identical to the file tag within the load operation, but prefixed with a colon ``:``.
+   
+   Enter the **File pattern prefix**, which is useful for time based ingestion of streaming data. This setting may be configured to load data on an hourly basis. Possible values range from ``00`` - ``24``, each of which represents an hour in a 24 hour window. For example, use ``00`` to load data at 12:00 AM, ``08`` to load data at 8:00 AM, or ``12`` to load data at 12:00 PM. A courier may only be configured to use a single file pattern prefix.
+   
+#. Set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+
+   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+
+   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
+   
+#. Click **Save**.
+
+.. source-streaming-ingest-legacy-add-courier-steps-end
+
+
+.. _source-streaming-ingest-legacy-get-sample-files:
+
+Get sample files
+--------------------------------------------------
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-get-sample-files-start
+   :end-before: .. sources-get-sample-files-end
+
+**To get sample files**
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-get-sample-files-steps-start
+   :end-before: .. sources-get-sample-files-steps-end
+
+
+.. _source-streaming-ingest-legacy-add-feeds:
+
+Add feeds
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-feed-start
+   :end-before: .. term-feed-end
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-add-feed-note-file-start
+   :end-before: .. sources-add-feed-note-file-end
+
+**To add a feed**
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-add-feed-steps-start
+   :end-before: .. sources-add-feed-steps-end
+
+
+.. _source-streaming-ingest-legacy-add-load-operations:
+
+Add load operations
+--------------------------------------------------
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-add-load-operation-start
+   :end-before: .. sources-add-load-operation-end
+
+**Example load operations**
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-add-load-operation-example-intro-start
+   :end-before: .. sources-add-load-operation-example-intro-end
+
+.. source-streaming-ingest-legacy-add-load-operations-example-start
+
+For example:
+
+::
+
+   {
+     "FEED_ID": [
+       {
+         "type": "load",
+         "file": "file_tag"
+       }
+     ]
+   }
+
+.. source-streaming-ingest-legacy-add-load-operations-example-end
+
+**To add load operations**
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-add-load-operation-steps-start
+   :end-before: .. sources-add-load-operation-steps-end
+
+
+.. _source-streaming-ingest-legacy-run-courier:
+
+Run courier manually
+--------------------------------------------------
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-run-courier-start
+   :end-before: .. sources-run-courier-end
+
+**To run the courier manually**
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-run-courier-steps-start
+   :end-before: .. sources-run-courier-steps-end
+
+
+.. _source-streaming-ingest-legacy-add-to-courier-group:
+
+Add to courier group
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-courier-group-start
+   :end-before: .. term-courier-group-end
+
+**To add the courier to a courier group**
+
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-add-to-courier-group-steps-start
+   :end-before: .. sources-add-to-courier-group-steps-end

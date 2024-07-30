@@ -1494,23 +1494,9 @@ When separation key unmatching is the priority, Amperity scores record pairs in 
 
 **To change the matching strategy classifier**
 
-.. semantics-key-separation-prioritize-unmatching-steps-start
-
-Update the configuration setting for model selection from:
-
-.. code-block:: clojure
-
-   :stitch/classifier :general-ordinal-fk-priority
-
-to:
-
-.. code-block:: clojure
-
-   :stitch/classifier :general-ordinal-sk-priority
-
-.. warning:: This value should be changed only after careful consideration. If changed, be sure to validate these results carefully to ensure that any changes to pairwise comparison scoring had the desired outcome.
-
-.. semantics-key-separation-prioritize-unmatching-steps-end
+.. include:: ../../amperity_datagrid/source/configure_stitch.rst
+   :start-after: .. configure-stitch-general-clustering-matching-strategy-steps-start
+   :end-before: .. configure-stitch-general-clustering-matching-strategy-steps-end
 
 
 .. _semantics-product-catalogs:
