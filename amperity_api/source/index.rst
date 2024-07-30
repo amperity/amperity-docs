@@ -59,6 +59,7 @@ Endpoints
    endpoint_get_segments_list
    endpoint_get_workflows_fetch
    endpoint_get_workflows_list
+   endpoint_post_workflows_stop
    overview
    rate_limits
    responses

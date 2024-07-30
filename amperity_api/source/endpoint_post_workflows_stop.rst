@@ -31,7 +31,7 @@ Use the **workflow/runs/{id}:stop** to stop a running workflow.
 Available HTTP methods
 ==================================================
 
-.. image:: ../../images/api-request-post-workflows-stop.png
+.. image:: ../../images/api-request-post-workflow-runs-stop.png
    :width: 440 px
    :alt: GET /campaigns
    :align: left
@@ -88,9 +88,9 @@ A request to the **workflow/runs/{id}:stop** endpoint is similar to:
 
 .. code-block:: rest
 
-   curl --request GET \
-          'https://app.amperity.com/api/ingest/jobs/{id}" \
-          --header "accept: application/json"
+   curl --request POST \ 
+          "https://app.amperity.com/api/workflow/runs/{id}:stop" \
+        --header "accept: application/json"
 
 
 (This example is formatted for readability in a narrow page layout.)
@@ -114,7 +114,7 @@ The following table describes the parameters that may be used with the **workflo
    * - Parameter
      - Description
 
-   * - **job_id**
+   * - **{id}**
      - String. Required.
 
        The Amperity internal identifier for the workflow. For example **wf-20240619-14418-6UhqSe**.
@@ -185,10 +185,10 @@ The **200** response returns a set of jobs.
      "error": {
        "attribution": "customer",
        "data": {
-           "error_code": "InvalidAccessKeyId",
-           "id": "s3",
-           "request_id": "Z47DXHNGJ7ZPMRVS",
-           "retryable?": false
+         "error_code": "InvalidAccessKeyId",
+         "id": "s3",
+         "request_id": "Z47DXHNGJ7ZPMRVS",
+         "retryable?": false
        },
        "message": "The credential does not provide access to the given resource. Please update the credential's access or try another credential.",
        "type": "amperity.plugin.error/invalid-credentials"
@@ -219,7 +219,206 @@ A **200 OK** response contains the following parameters.
    * - Parameter
      - Description
 
+   * - **current_version**
+     - A unique identifier that describes the configuration state of Amperity at the end of the workflow or at the time an error occurred. The value for this property is similar to: "etv-20240210-12345-6AbCDE".
+
+
+   * - **ended_at**
+     - The date and time at which a workflow ended.
+
+       .. note:: The amount of time that elapsed between **created_at** and **ended_at** is the runtime for the workflow.
+
+          The length of time a workflow ran is visible from the **Runtime** box visible from the **Type** box on each individual workflow page.
+
+   * - **error**
+     - A JSON array of values for a workflow error.
+
+       .. note:: An error message is shown for any workflow with a state of **Failed**. You can view the error message the from the **Workflows** page.
+
+       The JSON array for an error is similar to:
+
+       .. code-block:: django
+
+          "error": {
+            "attribution": "customer",
+            "type": "amperity.workflow.task.stitch/table",
+            "message": "Found table in an invalid state:\n
+                        loyalty_members. This error can be\n
+                        resolved by removing this table\n
+                        or by loading data to the table.",
+            "data": NULL,
+          },
+
+       where:
+
+       **attribution**
+          The source of the error. May be attributed to **customer** or **platform**.
+
+          * **customer** indicates the source of the error is one (or more) configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
+          * **platform** indicates there is an issue with components and/or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
+
+       **data**
+          Additional data that is associated with the error. This parameter may be omitted from the response when the error message does not contain additional data or may return a NULL value.
+
+       **message**
+          The error message.
+
+       **type**
+          A period-delimited string that indicates where an error occurred
+
    * - **id**
-     - The workflow identifier.
+     - The Amperity internal identifier for the workflow. For example **wf-20240619-14418-6UhqSe**.
+
+   * - **launched_version**
+     - A unique identifier that describes the configuration state of Amperity at the start of the workflow. The value for this property is similar to: "etv-20240210-12345-6AbCDE".
+	 
+   * - **name**
+     - The name of the workflow.
+
+       .. note:: This is the same value that is visible from the title of each individual workflow page and from the **Name** column on the **Workflows** page.
+
+   * - **principal_email**
+     - The email address for the user who started the workflow.
+
+
+   * - **principal_id**
+     - A unique identifier for the Amperity user who started the workflow. For example: "google-apps|socktown@socktown.com".
+
+
+   * - **principal_name**
+     - The name of the Amperity user who started the workflow. For example: "Justin Scott" or "Automated workflow".
+
+   * - **state**
+     - The current state of the workflow. For example:
+
+       * Scheduled
+       * Started
+       * In progress
+       * Stopping
+       * Stopped
+       * Succeeded
+       * Running with failures
+       * Failed
+       * Canceled
+
+       .. note:: This is the same value that is visible from the **Status** box on each individual workflow page and from the **Status** column on the **Workflows** page.
+
+   * - **task_instances**
+     - A JSON array that contains zero (or more) sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
+
+       **ended_at**
+          The date and time at which a workflow task ended.
+
+          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+
+       **execution_type**
+          The service that runs a workflow task. Possible return values are spark-sql, prodigal, prodigal-aurora, databricks, identity, task-identity, legacy.
+
+       **id**
+          The unique identifier for the task instance.
+
+          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+
+       **label**
+          The name of the task instance. Examples of task instance labels include:
+
+          * Appending outputs of treatment [treatment] into campaign recipients table
+          * Deleting records
+          * Generating database
+          * Getting query results
+          * Getting segment results
+          * Migrating [schema] schema
+          * Recording segment tracking history
+          * Resolving input tasks
+          * Runing query: [query]
+          * Running segment
+          * Syncing tables
+          * Truncating tables
+          * Validating database [database-name]
+          * Updating domain tables
+          * Updating [table-name]
+
+          where the brackets [] are placeholders for named objects withn your tenant.
+
+       .. note:: This is the same value that is visible from the **Task** column on each individual workflow page.
+
+       **run_id**
+          A unique identifier provided to the task instance to support situations where execution engines cannot provide a run ID. The value for this property is similar to: "abc-20240210-12345-6AbCDE".
+
+          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+
+       **state**
+          The current state of the task. For example:
+
+          * Scheduled
+          * Started
+          * In progress
+          * Running
+          * Finalizing
+          * Succeeded
+          * Stopping
+          * Stopped
+          * Failed
+          * Skipped
+          * Canceled
+
+          .. note:: This is the same value that is visible from the **Status** column on each individual workflow page. Some values are only visible while a task is active.
+
+       **task_definition_id**
+          A unique identifier for a task definition.
+
+          These values often contain human-readable strings within a series of alphanumeric characters. For example, a task that runs a SQL query that updates the view for the **Unified Scores** table has a task definition ID similar to **ab-create-view-db-1a2BcdEFGhI-unified_scores**.
+
+       **task_definition_type**
+          The task definition type. The possible values for this property are the similar to the **type** property for the workflow. For example, "bridge.sync" or "campaign.append-results".
+
+          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+
+       **tenant**
+          The unique identifier for the tenant.
+
+       **timeout_ms**
+          The length of time (in milliseconds) after which a running task instance will be forced to stop.
+
+       **workflow_id**
+          The unique identifier for the workflow to which this task belongs.
+
+   * - **tenant**
+     - The unique identifier for the tenant.
+
+   * - **type**
+     - The type of workflow. Most workflows will have workflow types related to the following areas within Amperity:
+
+       * Bridge sync
+       * C360 validation
+       * Campaign results
+       * Campaign send
+       * CCPA delete
+       * Compact campaign recipients table
+       * Courier
+       * Courier group
+       * Data refresh
+       * Database
+       * Domain table schema migration
+       * File upload
+       * Ingest
+       * Input validation report update
+       * Manual campaign run
+       * Manual index run
+       * Orchestration
+       * Orchestration group
+       * Predictive job
+       * Record deletion
+       * System migration on campaigns recipients table
+       * UID2 enrichment
+       * Update campaign recipients table
+
+       .. note:: This is the same value that is visible from the **Type** box on each individual workflow page and from the **Type** column on the **Workflows** page.
+
+   * - **warn_after_ms**
+     - The length of time (in milliseconds) after which a warning is sent that notifies users that a workflow is running longer than expected.
+
+       .. note:: This parameter only applies to workflows that use SQL to write tables to storage.
+
 
 .. endpoint-post-workflows-stop-response-parameters-end
