@@ -2986,6 +2986,61 @@ Each of the recency (R), frequency (F), and monetary (M) scores are represented 
 .. data-tables-transaction-attributes-extended-rfm-table-end
 
 
+.. _data-tables-uid2:
+
+UID2
+==================================================
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-overview-start
+   :end-before: .. uid2-overview-end
+
+.. data-tables-uid2-start
+
+The **UID2** table contains the results of UID2 token generation when enabled for your tenant.
+
+.. data-tables-uid2-end
+
+.. data-tables-uid2-table-about-start
+
+The **UID2** table contains the following columns:
+
+.. data-tables-uid2-table-about-end
+
+.. data-tables-uid2-table-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Bucket ID**
+     - String
+     - A unique identifier for the salt bucket that is used to ensure that expired UID2 tokens are refreshed. This value is returned in the response from the **POST /identity/map** endpoint.
+
+       .. note:: Each UID2 token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily. Amperity `monitors salt buckets <https://unifiedid.com/docs/guides/advertiser-dataprovider-guide#3-monitor-for-salt-bucket-rotations-related-to-your-stored-raw-uid2s>`__ on a daily basis to determine which UID2 tokens need to be refreshed.
+
+
+   * - **Email**
+     - String
+     - The email address for the customer. Amperity gets this value from the **email** field in the **Unified Coalesced** table.
+
+
+   * - **Normalized Email**
+     - String
+     - The normalized email address that was sent from Amperity to the **POST /identity/map** endpoint for mapping. This value is returned in the response from the **POST /identity/map** endpoint.
+
+
+   * - **UID2**
+     - String
+     - The raw UID2 value for the customer. This value, when encrypted, may be used as a UID2 token. This value is returned in the response from the **POST /identity/map** endpoint.
+
+.. data-tables-uid2-table-end
+
+
 .. _data-tables-unified-changes-clusters:
 
 Unified Changes Clusters
