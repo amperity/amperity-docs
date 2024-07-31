@@ -4,11 +4,10 @@
 
 .. meta::
     :description lang=en:
-         Return a list of ingest jobs from your tenant. You may restrict the list of jobs to those associated with a specific data template.
-
+         Return a list of ingest jobs from your tenant. 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Return a list of ingest jobs from your tenant. You may restrict the list of jobs to those associated with a specific data template.
+        Return a list of ingest jobs from your tenant. 
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -16,7 +15,7 @@
 
 
 ==================================================
-GET /ingest/jobs details
+GET /ingest/jobs/{id} details
 ==================================================
 
 .. endpoint-get-ingest-jobs-start
