@@ -394,6 +394,20 @@ Stitch
    :doc:`About Stitch results <stitch>` |fa-index-separator| :ref:`Explore Stitch results <stitch-explore-stitch-results>` |fa-index-separator| :ref:`Explore by Amperity ID <stitch-explore-by-amperity-id>` |fa-index-separator| :ref:`Explore by data source <stitch-explore-by-data-source>` |fa-index-separator| :ref:`Explore previous Stitch results <stitch-explore-previous-stitch-results>` |fa-index-separator| :ref:`Explore semantics <stitch-explore-semantics>` |fa-index-separator| :ref:`View cluster graph <stitch-explore-cluster-graph>` |fa-index-separator| :ref:`View deduplication rate <stitch-explore-deduplication-rate>` |fa-index-separator| :ref:`View pairwise connections <stitch-explore-pairwise-connections>` |fa-index-separator| :ref:`View Stitch metrics <stitch-explore-stitch-metrics>` |fa-index-separator| :ref:`View stitched records <stitch-explore-stitched-records>`
 
 
+.. _index-uid2:
+
+Unified ID 2.0 (UID2)
+==================================================
+
+:doc:`About Unified ID 2.0 (UID2) <uid2>` |fa-index-separator| :ref:`How UID2 works <uid2-howitworks>` |fa-index-separator| :ref:`About UID2 workflows <uid2-workflows>`
+
+**Prerequisites**
+   :ref:`About prerequisites <uid2-prerequisites>` |fa-index-separator| :ref:`Get access to UID2 <uid2-prerequisite-get-access>` |fa-index-separator| :ref:`Participate in UID2 <uid2-prerequisite-participate>` |fa-index-separator| :ref:`Get Mapper credentials <uid2-prerequisite-get-credentials>`
+
+**Configure Amperity**
+   :ref:`Configure Amperity <uid2-configure-amperity>` |fa-index-separator| :ref:`Add Mapper credentials <uid2-configure-amperity-add-credentials>` |fa-index-separator| :ref:`Enable UID2 token generation <uid2-configure-amperity-enable-uid2>` |fa-index-separator| :ref:`Add UID2 table to database <uid2-configure-amperity-add-uid2-table>`
+
+
 .. _index-workflows:
 
 Workflows
@@ -549,4 +563,5 @@ Workflows
    system_status
    stitch
    stitch_results
+   uid2
    workflows
