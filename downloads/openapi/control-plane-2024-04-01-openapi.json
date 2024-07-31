@@ -5,6 +5,8 @@
   }, {
     "name" : "Campaigns"
   }, {
+    "name" : "Ingest"
+  }, {
     "name" : "Segments"
   }, {
     "name" : "Workflow"
@@ -598,7 +600,7 @@
       "additionalProperties" : { }
     },
     "WorkflowListEnvelope" : {
-      "description" : "Paginated list of Workflow",
+      "description" : "A paginated list of workflows.",
       "type" : "object",
       "properties" : {
         "total" : {
@@ -935,7 +937,7 @@
             }
           }
         },
-        "summary" : "Returns a list of feed details from a given ingest job.",
+        "summary" : "Ingest job details.",
         "produces" : [ "application/json" ],
         "consumes" : [ "application/json" ],
         "tags" : [ "Ingest" ]
@@ -1052,7 +1054,7 @@
             }
           }
         },
-        "description" : "Use the Workflows endpoint to return a list of workflows that exist within the date ranges defined in the request.",
+        "description" : "Return a list of workflows that exist within the date ranges defined in the request.",
         "summary" : "List workflows",
         "produces" : [ "application/json" ],
         "consumes" : [ "application/json" ],
@@ -1070,7 +1072,7 @@
         }, {
           "in" : "path",
           "name" : "workflow-id",
-          "description" : "The workflow ID",
+          "description" : "The workflow ID.",
           "required" : true,
           "type" : "string"
         } ],
@@ -1115,19 +1117,19 @@
             }
           }
         },
-        "description" : "Use the Workflows endpoint to return details for a specific workflow.",
-        "summary" : "Fetch workflow",
+        "description" : "Return details for a specific workflow.",
+        "summary" : "Get workflow details",
         "produces" : [ "application/json" ],
         "consumes" : [ "application/json" ],
         "tags" : [ "Workflow" ]
       }
     },
-    "/workflow/runs/{workflow-id}:stop" : {
+    "/workflow/runs/{workflow-id}/stop" : {
       "post" : {
         "parameters" : [ {
           "in" : "path",
           "name" : "workflow-id",
-          "description" : "The workflow ID",
+          "description" : "The workflow ID.",
           "required" : true,
           "type" : "string"
         } ],
@@ -1178,8 +1180,8 @@
             }
           }
         },
-        "description" : "Use the Workflows endpoint to stop a workflow.",
-        "summary" : "Stop a running workflow",
+        "description" : "Stop a workflow.",
+        "summary" : "Stop a workflow",
         "produces" : [ "application/json" ],
         "consumes" : [ "application/json" ],
         "tags" : [ "Workflow" ]
