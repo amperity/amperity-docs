@@ -82,11 +82,11 @@ The following sections describe at a high level the series of steps that are req
 
           #. Amperity sends an API request to Unified ID 2.0 using the |ext_uid2_endpoint_post_identity_buckets| endpoint to identify salt buckets that have expired. All UID2 tokens associated with an expired salt bucket are refreshed.
 
-          #. Amperity sends an API request to Unified ID 2.0 using the |ext_uid2_endpoint_post_identity_map| endpoint. This request contains a list of normalized email addresses. Amperity gets this list of normalized email addresses from the **Unified Coalesced** table.
+          #. Amperity sends an API request to Unified ID 2.0 using the |ext_uid2_endpoint_post_identity_map| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table.
 
              The **POST /identity/map** endpoint responds with three values: a hashed email address, an advertising ID (the UID2 token), and a salt bucket ID.
 
-          #. Amperity adds the normalized email address, hashed email address, advertising ID, and salt bucket ID to the **UID2** table.
+          #. Amperity adds the original email address, normalized email address, advertising ID, and salt bucket ID to the **UID2** table.
 
 
    * - .. image:: ../../images/steps-03.png
