@@ -369,7 +369,7 @@ Loyalty events
 
 .. data-asset-loyalty-events-start
 
-Apply **loy/event** semantic tags to data sources, and then add the :doc:`Unified Loyalty Events <table_unified_loyalty_events>` table to your customer 360 database as a passthrough table.
+Apply |semantics_loyalty_events| semantic tags to data sources, and then add the :doc:`Unified Loyalty Events <table_unified_loyalty_events>` table to your customer 360 database as a passthrough table.
 
 .. data-asset-loyalty-events-end
 
@@ -385,7 +385,7 @@ Loyalty profiles
 
 .. data-asset-loyalty-profiles-start
 
-Apply **loy** semantic tags to data sources, and then add the :doc:`Unified Loyalty <table_unified_loyalty>` table to your customer 360 database as a passthrough table, after which you can analyze retention rates and customer value for your loyalty program. For example:
+Apply |semantics_loyalty_profiles| semantic tags to data sources, and then add the :doc:`Unified Loyalty <table_unified_loyalty>` table to your customer 360 database as a passthrough table, after which you can analyze retention rates and customer value for your loyalty program. For example:
 
 * :ref:`table-unified-loyalty-example-retention-analysis`
 * :ref:`table-unified-loyalty-example-value-analysis`
