@@ -200,40 +200,40 @@
       "type" : "object",
       "properties" : {
         "errors" : {
-          "description" : "The total count of errors for this feed",
+          "description" : "The number of rows with an ingest error.",
           "type" : "integer",
           "format" : "int64"
         },
         "feed_id" : {
-          "description" : "The feed ID",
+          "description" : "The unique ID of this feed.",
           "type" : "string"
         },
         "read" : {
-          "description" : "The total count of records processed for this feed",
+          "description" : "The number of rows ingested into this feed.",
           "type" : "integer",
           "format" : "int64"
         },
         "rejected" : {
-          "description" : "The total count of records rejected for this feed",
+          "description" : "The number of duplicate rows that were not ingested.",
           "type" : "integer",
           "format" : "int64"
         },
         "updated" : {
-          "description" : "The total count of records updated for this feed",
+          "description" : "The total count of rows updated for this feed during the job.",
           "type" : "integer",
           "format" : "int64"
         },
         "started_at" : {
-          "description" : "The timestamp the feed began ingesting",
+          "description" : "The date and time at which a job started.",
           "type" : "string",
           "format" : "date-time"
         },
         "state" : {
-          "description" : "The state of the job",
+          "description" : "The current state of the job.",
           "type" : "string"
         },
         "ended_at" : {
-          "description" : "The timestamp the feed finished ingesting",
+          "description" : "The date and time at which a job ended.",
           "type" : "string",
           "format" : "date-time"
         },
@@ -245,16 +245,16 @@
           }
         },
         "inserted" : {
-          "description" : "The total count of records added for this feed",
+          "description" : "The total count of records added to this feed.",
           "type" : "integer",
           "format" : "int64"
         },
         "table_name" : {
-          "description" : "The name of the table updated",
+          "description" : "The name of the updated table.",
           "type" : "string"
         },
         "job_id" : {
-          "description" : "The identifier of the job",
+          "description" : "The ingest job identifier.",
           "type" : "string"
         }
       },
@@ -285,7 +285,7 @@
           "type" : "string"
         },
         "errors" : {
-          "description" : "The count of errored records in this file",
+          "description" : "The number of rows with an ingest error. For example, when Amperity cannot match a field value to the expected data type.",
           "type" : "integer",
           "format" : "int64"
         }
@@ -294,7 +294,7 @@
       "required" : [ "file_id", "read", "errors" ]
     },
     "IngestJobDetails" : {
-      "description" : "A summary of records, files, and feeds ingested in this job",
+      "description" : "Ingest job details",
       "example" : {
         "id" : "isj-1f73r9u2",
         "tables" : [ {
@@ -321,15 +321,15 @@
       "type" : "object",
       "properties" : {
         "id" : {
-          "description" : "The identifier of the job",
+          "description" : "The Amperity internal identifier for the injest job.",
           "type" : "string"
         },
         "workflow_id" : {
-          "description" : "The ID of the workflow in which this job ran",
+          "description" : "The Amperity internal identifier for the workflow that ran this job.",
           "type" : "string"
         },
         "tables" : {
-          "description" : "Array of per-feed ingest details",
+          "description" : "A summary of table details from this ingest job.",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/IngestFeedDetails"
@@ -631,6 +631,13 @@
       "get" : {
         "parameters" : [ {
           "in" : "query",
+          "name" : "api_version",
+          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+          "required" : false,
+          "x-example" : "2024-04-01",
+          "type" : "string"
+        }, {
+          "in" : "query",
           "name" : "with_total",
           "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
           "required" : false,
@@ -642,13 +649,6 @@
           "required" : false,
           "type" : "integer",
           "format" : "int64"
-        }, {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "x-example" : "2024-04-01",
-          "type" : "string"
         }, {
           "in" : "query",
           "name" : "next_token",
@@ -726,6 +726,13 @@
       "get" : {
         "parameters" : [ {
           "in" : "query",
+          "name" : "api_version",
+          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+          "required" : false,
+          "x-example" : "2024-04-01",
+          "type" : "string"
+        }, {
+          "in" : "query",
           "name" : "with_total",
           "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
           "required" : false,
@@ -737,13 +744,6 @@
           "required" : false,
           "type" : "integer",
           "format" : "int64"
-        }, {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "x-example" : "2024-04-01",
-          "type" : "string"
         }, {
           "in" : "query",
           "name" : "next_token",
@@ -812,6 +812,13 @@
       "get" : {
         "parameters" : [ {
           "in" : "query",
+          "name" : "api_version",
+          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+          "required" : false,
+          "x-example" : "2024-04-01",
+          "type" : "string"
+        }, {
+          "in" : "query",
           "name" : "with_total",
           "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
           "required" : false,
@@ -823,13 +830,6 @@
           "required" : false,
           "type" : "integer",
           "format" : "int64"
-        }, {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "x-example" : "2024-04-01",
-          "type" : "string"
         }, {
           "in" : "query",
           "name" : "next_token",
@@ -890,6 +890,13 @@
     "/ingest/jobs/{job-id}" : {
       "get" : {
         "parameters" : [ {
+          "in" : "query",
+          "name" : "api_version",
+          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+          "required" : false,
+          "x-example" : "2024-04-01",
+          "type" : "string"
+        }, {
           "in" : "path",
           "name" : "job-id",
           "description" : "The id of the ingest job",
@@ -937,7 +944,7 @@
             }
           }
         },
-        "summary" : "Ingest job details.",
+        "summary" : "Ingest job details",
         "produces" : [ "application/json" ],
         "consumes" : [ "application/json" ],
         "tags" : [ "Ingest" ]
@@ -1065,6 +1072,13 @@
       "get" : {
         "parameters" : [ {
           "in" : "query",
+          "name" : "api_version",
+          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+          "required" : false,
+          "x-example" : "2024-04-01",
+          "type" : "string"
+        }, {
+          "in" : "query",
           "name" : "view",
           "description" : "Set to \"overview\" to return only \"created_at\", \"ended_at\", \"id\", \"name\", \"state\", \"tenant\", and \"type\". Set to \"verbose\" to return all response parameters, including for any tasks that were started by the workflow.",
           "required" : false,
@@ -1127,6 +1141,13 @@
     "/workflow/runs/{workflow-id}/stop" : {
       "post" : {
         "parameters" : [ {
+          "in" : "query",
+          "name" : "api_version",
+          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+          "required" : false,
+          "x-example" : "2024-04-01",
+          "type" : "string"
+        }, {
           "in" : "path",
           "name" : "workflow-id",
           "description" : "The workflow ID.",
@@ -1193,7 +1214,7 @@
   "info" : {
     "title" : "Amperity API",
     "version" : "2024-04-01",
-    "description" : "# Overview\n\n## Who is this for?\n\nThis documentation is for developers creating their own integration with [Amperity](https://docs.amperity.com/reference/api/) APIs.\n\n\n## Authentication\n\nAPI calls must be authenticated with an [API Key](https://docs.amperity.com/reference/api/).\n\n\n## Service URL\n\nThe base service URL follows the pattern `https://<tenant-id>.amperity.com/api`, for example:\n\n```sh\n> curl https://acme.amperity.com/api/campaigns?limit=2 \\\\\n  -H \\\"Authorization: Bearer <token>\\\" \\\\\n  -H \\\"Amperity-Tenant: acme\\\" \\\\\n  -H \\\"api-version: 2024-04-01\\\"\n```\n\nWhen working with a [sandbox tenant](https://docs.amperity.com/datagrid/sandboxes.html),\nuse the parent tenant in the URL and the sandbox tenant id in the `Amperity-Tenant` header:\n\n```sh\n> curl https://acme.amperity.com/api/campaigns?limit=2 \\\\\n  -H \\\"Authorization: Bearer <token>\\\" \\\\\n  -H \\\"Amperity-Tenant: acme-sb-2zezitlj\\\" \\\\\n  -H \\\"api-version: 2024-04-01\\\"\n```\n\n\n## Headers\n\nCommon headers used in Amperity APIs:\n\n- `Authorization`: *(required)* The bearer authentication header, typically an API Key\n- `api-version`: *(required)* The version of the API to use, e.g. `2024-04-01`.  See [Versioning](#section/Overview/Versioning) for more information. This can also be provided as a query parameter, but the value provided in the header will be used over any query parameter in event of conflicting values.\n- `Amperity-Tenant`: *(required)* The tenant id or sandbox tenant id for the request, e.g. `acme2`\n\n\n## Pagination\n\nAmperity APIs implement standard cursor based pagination scheme for all `GET` resource collections.\nWhen you send a request to an endpoint that supports pagination, the response body returns the\nfirst page of results. When there are no more results, the `next_token` will not be present.\nTo iterate through a collection, use the following URL query parameters:\n\n- `with_total`: when true, include a total count of all results. Obtaining the record count may slow down API response time. Defaults to false.\n- `next_token`: opaque token used to paginate through results.  Omit the `next_token` parameter to get the first page of results.\n- `limit`: The maximum number of records to include in a single page of results. The endpoint may decide to return fewer results than the caller asked for, even if there is more data available.\n\nThe response object will include the following fields:\n\n- `data`: JSON array of values in the current page of results.\n- `next_token`: The cursor value to use in a subsequent request to fetch the next page of results.  When there are no more results, the `next_token` will not be included in the response.  If an endpoint returns a full listing it will have the same response shape as one that paginates but has no more results.\n- `total`: When requested with `with_total`, the total number of records.\n\n\n## Error Response\n\nFor requests that result in errors, a standard error response shape will be returned with the fields:\n\n- `status`: The status code of the error\n- `message`: A human readable error message\n- `request_id`: An optional Amperity request id\n- `trace_id`: An optional Amperity trace id for use in tracing\n\nExample:\n```json\n{\\\"status\\\": 400,\n \\\"message\\\": \\\"Error updating database: Can't rename to existing database table 'Customized_UIT'\\\",\n \\\"request_id\\\":\\\"6ce22158-e79a-4968-8898-35dbe4eb90e1\\\",\n \\\"trace_id\\\":\\\"1c9d3727772ac1af0f590aeeeda1aded\\\"}\n```\n \n## Versioning\n\nVersioning is controlled by a `api-version` header, which is a date in `YYYY-MM-DD` format that\nrepresents the \\\"version\\\" of the API which you expect from Amperity. It is designed to give\ndevelopers the freedom to adapt to Amperity API changes on their own schedule. \n\nAll API requests *require* a version parameter; we will not default you to the latest version.\nThis gives developers control over the time period in which to call our continuously updated API.\nIf you do not include an version in the request, an error will be returned. In order to stay up\nto date with the latest changes, Amperity recommends updating your version as often as possible.\nUsing a single version across all API calls will avoid any incompatibilities between APIs.\n\n\n### Supported Versions\n\nThe currently supported versions are:\n* `2024-04-01`\n\n\n### Unstable\n\nDuring development, Amperity may release APIs for testing using the `unstable` version identifier.\nUnstable versions contain features that are still in progress and may not be backward compatible.\nThere are no guarantees around customer support, notification of changes, breaking changes, or\navailability of unreleased versions.\n\n\n### Lifespan\n\nAmperity will periodically release new versions throughout the year and each version will be\nsupported for at least 1 year.  Amperity will provide at least 6 months notice before marking\na version as unsupported. API calls made with a version identifier that is no longer supported\nwill error with a 400 response.  Developers should monitor our API documentation to know when\nversions are no longer supported.\n\n\n### Deprecation\n\nAs Amperity continues to grow and evolve, we will occasionally deprecate fields or entire endpoints.\nFields or parameters being deprecated will be annotated as such in the documentation. To warn\ndevelopers of impending deprecation for an endpoint, a `Deprecation` header will be included and a\n`Sunset` header may be included.  The `Deprecation` header will either be `true` to indicate an\nendpoint has been deprecated or a future date as described in the\n[Deprecation Header proposal](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header).\nIn addition, a [Sunset header](https://datatracker.ietf.org/doc/html/rfc8594) may be included to\nindicate the date at which the endpoint may cease to function and return a 4xx response.\n\nThe `Deprecation` and `Sunset` headers will be added 6 months prior to an endpoint's removal.  The\nvalue of the `Deprecation` header will be 3 months before the endpoint's removal date.  The value\nof the `Sunset` header is the removal date.\n\nThe purpose of the `Deprecation` and `Sunset` headers is merely informational.  We recommend clients\nbuild alerts on this monitoring information to ensure the proper amount of time for migration. Example:\n\n```\nDeprecation: Tue, 1 Sep 2024 23:59:59 GMT\nSunset: Wed, 1 Dec 2024 23:59:59 GMT\n```\n\n\n### Breaking Changes\n\nAny breaking changes will be released in a new API version.  A breaking change is any change\nthat requires a third-party developer to do any migration work to maintain the existing\nfunctionality of their application. Some examples of breaking changes are:\n\n* adding pagination to a resource collection response\n* adding a new or modifying an existing validation to an existing resource\n* requiring a parameter that wasn’t required before\n* changing existing error response codes/messages\n* changing the data type of an existing field\n* changing supported filtering on existing endpoints\n* removing an endpoint\n* removing or renaming a parameter or response field\n* removing an enum value\n* adding a new feature that will change the meaning of a field\n* changing the URL structure of an existing endpoint\n\nAdditive changes are non-breaking:\n* adding an endpoint\n* adding an optional parameter\n* adding an optional request header\n* adding a response field or header\n* adding an enum value\n\n",
+    "description" : "# Amperity API Overview\n\nThe Amperity API enables programmatic access to your Amperity tenant\nthrough a collection of RESTful endpoints that support API-first use\ncases for integrations, applications, and custom workflows. Use Amperity\nAPI endpoints to streamline workflows, enhance marketing strategies, and\nunlock the value of your brand\\'s customer data.\n\n# Versions\n\nAmperity APIs evolve and change over time. Amperity versions API\nendpoints to help your brand track changes to the Amperity API and to\noffer support to developers as these endpoints evolve.\n\nYour team of developers can track improvements to the Amperity API from\nthe [changelog](https://docs.amperity.com/api/changelog.html). Monitor\nthe changelog to know when new versions are available and/or when\nexisting versions are updated or planned for deprecation.\n\n## Breaking changes\n\nA breaking change occurs when functionality within an API is modified in\na way that causes integrations or applications to function abnormally or\nto stop working.\n\nA breaking change often requires a third-party developer to make changes\nto their existing integrations or applications to maintain functionality\nwith an API.\n\nExamples of breaking changes include, but are not limited to:\n\n-   Removing an endpoint\n-   Renaming a URL, request or response field, HTTP header, or query\n    parameter\n-   Adding a required request field, HTTP header, or query parameter\n-   Requiring a request field, HTTP header, or query parameter that was\n    previously optional\n-   Removing a request or response field, HTTP header, or query\n    parameter\n-   Modifying a data type or enumeration value\n-   Adding pagination to a resource collection response\n\n## Non-breaking changes\n\nA non-breaking change does not cause integrations or applications to\nfunction abnormally or to stop working.\n\nA non-breaking change should not require a third-party developer to do\nany migration work to maintain existing functionality.\n\nExamples of non-breaking changes include, but are not limited to:\n\n-   Adding an endpoint\n-   Adding a request or response field, HTTP header, or query parameter\n-   Adding an enumeration value\n\n## Version identifiers\n\nA version identifier is a date string that must be included with each\nrequest made to an API endpoint. All endpoints are versioned together.\nThis provides consistency across all endpoints and ensures\ninteroperability. A version identifier is updated only when breaking\nchanges occur.\n\nFor example:\n\n    curl -request GET \\\n         -url \"https://{tenant-id}.amperity.com/api/{endpoint}/\" \\\n         -H \"Authorization: Bearer ${access-token}\" \\\n         -H \"Amperity-Tenant: {tenant-id}\" \\\n         -H \"Content-Type: application/json\" \\\n         -H \"api-version: {version}\"\n\n## Supported versions\n\nNew versions of the Amperity API are released periodically. Each version\nof an endpoint will be supported for at least 1 year.\n\nCurrent versions:\n\n-   **2024-04-01** The current version of the Amperity API.\n\n## Unstable versions\n\nDuring development, Amperity may release APIs for testing using the\n**unstable** version identifier. Unstable versions contain features that\nare still in progress and may not be backward compatible.\n\nThere are no guarantees around customer support, notification of\nchanges, breaking changes, or availability of unstable versions.\n\n## Deprecated versions\n\nAt least 6 months notice will be given before any supported version is\nmarked as unsupported. API calls that are made to an endpoint using a\nversion identifier that is no longer supported will return a 400\nresponse.\n\nAmperity APIs evolve and change over time. To warn developers of\nupcoming deprecations Amperity uses the following headers:\n\n-   [Deprecation\n    Header](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header).\n    When **true** a deprecation will occur at the date indicated in the\n    header.\n-   [Sunset Header](https://datatracker.ietf.org/doc/html/rfc8594). When\n    **true** a deprecated feature will stop working and return a 4xx\n    response at the date indicated in the header.\n\nDeprecation and Sunset headers will be added at least 6 months prior to\na deprecation. A deprecation date will be at least 3 months prior to a\nsunset date. For example:\n\n    Deprecation: Tue, 1 Sep 2024 23:59:59 GMT\n    Sunset: Wed, 1 Dec 2024 23:59:59 GMT\n\nDeprecation and Sunset headers are informational. Amperity recommends\nbuilding alerts to monitor for these headers to ensure that your\napplications and workflows can be migrated.\n\n# Authentication\n\nAll requests that are made to Amperity API endpoints must be\nauthenticated by access tokens that are signed by Amperity-managed API\nkeys.\n\n## API keys\n\nAmperity API keys are synthetic identities that are bound to your tenant\nand enable programmatic access to Amperity. Your API key is configured\nwithin Amperity from the **Settings** page, **Security** tab.\n\n## Access tokens\n\nAccess to the Amperity API requires using JWT access tokens that are\nsigned by Amperity-managed API keys. Access tokens are generated against\nAmperity API keys within Amperity from the **Settings** page,\n**Security** tab.\n\n# Base URL\n\nAll requests made to Amperity API endpoints should be directed to the\nfollowing base URL:\n\n    https://{tenant-id}.amperity.com/api\n\nYou can find the tenant ID from the Amperity user interface. From the\n**Users and Activity** page, select the **Actions** menu for an API key,\nand then click **Copy tenant ID**.\n\nFor example, if the tenant ID is **acme** the base URL would be\n\n    https://acme.amperity.com/api\n\n# Requests\n\nRequests made to Amperity API endpoints require the following headers:\n\n-   **Authorization** Required. The bearer authentication header. This\n    should be the access token for your tenant\\'s API key.\n-   **Amperity-Tenant** Required. The ID for the tenant to which the\n    request will be sent. You can find the tenant ID in the base URL for\n    your tenant.\n-   **api-version** Required. A supported version of the Amperity API.\n    For example: **2024-04-01**.\n\nIn addition to all required headers, you must specify the HTTP method,\nand base URL. For example:\n\n    curl -request GET \\\n         -url \"https://{tenant-id}.amperity.com/api/{endpoint}/\" \\\n         -H \"Authorization: Bearer ${access-token}\" \\\n         -H \"Amperity-Tenant: {tenant-id}\" \\\n         -H \"api-version: {version}\"\n\nMost endpoints provide a set of endpoint-specific properties that may be\nincluded within the URL header.\n\n# Responses\n\nThe Amperity API responds in JSON format. Each response includes\nrelevant HTTP status codes that indicate the success or failure of the\nrequest. The individual properties in a response will vary by endpoint;\nall endpoints that support the GET HTTP method will return lists using\npagination.\n\n# Pagination\n\nAmperity uses cursor-based pagination to return pages of data for large\nlists. A paginated endpoint returns responses with a list of results\n*and* a **next_token** parameter when another page is available in the\nreturned dataset. You have reached the last page in the results set when\nthe **next_token** parameter is not returned.\n\n## Pagination in requests\n\nOmit the **next_token** property to return the first page. Use the\ncursor value for **next_token** that was returned in a response to view\nthe next page of results. The possible values for **next_token** are\nreturned within the **200** response. **next_token** cannot be set to\n**NULL**.\n\n## Pagination in responses\n\nA response will include the value of the next page as the value of the\n**next_token** parameter. You may use this value in a subsequent request\nto return the next page of results. When the value for **next_token** is\nempty, the last page in the results set has been returned.\n\n# Rate limits\n\nA rate limit is the number of requests that may be made to the Amperity\nAPI in a given time period.\n\nThe Amperity API supports requests to endpoints that do not exceed a\nrate of 10 requests per second. Response times will vary by endpoint and\nthe complexity of data that is returned by the response. Some requests\nmay take seconds to return.\n\nRequests to the Amperity API that exceed 10 requests per second may\nreturn an error response with an HTTP 429 status code.\n",
     "contact" : {
       "name" : "Amperity Support",
       "url" : "https://docs.amperity.com/",
