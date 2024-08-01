@@ -12,16 +12,16 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        POST /workflows/stop
+        POST /workflow/runs/{id}/stop
 
 
 ==================================================
-POST /workflow/runs/{id}:stop details
+POST /workflow/runs/{id}/stop details
 ==================================================
 
 .. endpoint-post-workflows-stop-start
 
-Use the **workflow/runs/{id}:stop** to stop a running workflow. 
+Use the **workflow/runs/{id}/stop** to stop a running workflow. 
 
 .. endpoint-post-workflows-stop-end
 
@@ -31,9 +31,9 @@ Use the **workflow/runs/{id}:stop** to stop a running workflow.
 Available HTTP methods
 ==================================================
 
-.. image:: ../../images/api-request-post-workflow-runs-stop.png
+.. image:: ../../images/api-post-workflow-run-stop.png
    :width: 440 px
-   :alt: GET /campaigns
+   :alt: POST /workflow/runs/{id}/stop
    :align: left
    :class: no-scaled-link
 
@@ -58,11 +58,11 @@ Base URL
 
 .. endpoint-post-workflows-stop-base-url-start
 
-All requests made to the **workflow/runs/{id}:stop** endpoint should be directed to the following base URL:
+All requests made to the **workflow/runs/{id}/stop** endpoint should be directed to the following base URL:
 
 .. code-block:: rest
 
-   https://{tenant-id}.amperity.com/api/workflow/runs/{id}:stop
+   https://{tenant-id}.amperity.com/api/workflow/runs/{id}/stop
 
 .. endpoint-post-workflows-stop-base-url-end
 
@@ -84,12 +84,12 @@ Requests
 
 .. endpoint-post-workflows-stop-request-start
 
-A request to the **workflow/runs/{id}:stop** endpoint is similar to:
+A request to the **workflow/runs/{id}/stop** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request POST \ 
-          "https://app.amperity.com/api/workflow/runs/{id}:stop" \
+          "https://app.amperity.com/api/workflow/runs/{id}/stop" \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
@@ -107,7 +107,7 @@ Request parameters
 
 .. endpoint-post-workflows-stop-request-parameters-start
 
-The following table describes the parameters that may be used with the **workflow/runs/{id}:stop** endpoint.
+The following table describes the parameters that may be used with the **workflow/runs/{id}/stop** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -141,7 +141,7 @@ Request examples
 
 .. endpoint-post-workflows-stop-request-examples-start
 
-The following examples show how to send requests to the **workflow/runs/{id}:stop** endpoint.
+The following examples show how to send requests to the **workflow/runs/{id}/stop** endpoint.
 
 .. endpoint-post-workflows-stop-request-examples-end
 
@@ -153,12 +153,12 @@ cURL
 
 .. endpoint-post-workflows-stop-request-example-curl-start
 
-The following example shows how to use cURL to send a request to the **workflow/runs/{id}:stop** endpoint.
+The following example shows how to use cURL to send a request to the **workflow/runs/{id}/stop** endpoint.
 
 ::
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs/{id}:stop" \
+          'https://tenant.amperity.com/api/workflow/runs/{id}/stop" \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
@@ -175,7 +175,7 @@ Responses
 
 .. endpoint-post-workflows-stop-responses-start
 
-A response from the **workflow/runs/{id}:stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **workflow/runs/{id}/stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was stopped. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-stop-responses-end
 
@@ -187,7 +187,7 @@ A response from the **workflow/runs/{id}:stop** endpoint will match an :doc:`HTT
 
 .. endpoint-post-workflows-stop-response-200ok-start
 
-The **200** response returns a set of jobs.
+The **200** response returns details for the workflow that was stopped.
 
 .. code-block:: json
 
