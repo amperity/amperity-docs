@@ -192,24 +192,13 @@ The **200** response returns details for the workflow that was stopped.
 .. code-block:: json
 
    {
-     "created_at": "2024-06-19T04:00:18.764Z",
-     "ended_at": "2024-06-19T04:03:10.119Z",
-     "error": {
-       "attribution": "customer",
-       "data": {
-         "error_code": "InvalidAccessKeyId",
-         "id": "s3",
-         "request_id": "Z47DXHNGJ7ZPMRVS",
-         "retryable?": false
-       },
-       "message": "The credential does not provide access to the given resource. Please update the credential's access or try another credential.",
-       "type": "amperity.plugin.error/invalid-credentials"
-     },
-     "id": "wf-20240619-14418-6UhqSe",
-     "name": "Customer Attribute Daily",
-     "state": "failed",
-     "tenant": "acme2-max",
-     "type": "campaign.send"
+     "id":"wf-20240801-65278-x9E9U",
+      "type":"campaign.send",
+      "name":"testing",
+      "tenant":"acme2-max",
+      "created_at":"2024-08-01T18:07:58.099Z",
+      "ended_at":"2024-08-01T18:10:47.712Z",
+      "state":"succeeded"
    }
 
 .. endpoint-post-workflows-stop-response-200ok-end
