@@ -251,5 +251,3 @@ The **Unified Compliance** table contains the following columns:
    :start-after: .. data-tables-unified-compliance-table-start
    :end-before: .. data-tables-unified-compliance-table-end
 
-..
-  need to add in info about suppression
