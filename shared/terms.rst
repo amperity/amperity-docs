@@ -1915,7 +1915,7 @@ A data source is a system in a customer's environment that sends data to Amperit
 
 .. term-dsar-start
 
-A data subject access request (DSAR) is a written request made by an individual to ask for their data to be handled according to General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) regulations. A Data Subject Access Request (DSAR) requires a response within a pre-defined time window, typically 30 days.
+A data subject access request (DSAR) is a written request made by an individual to ask for their data to be handled according to regulations, such as General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). A DSAR requires a response within a pre-defined time window, typically 30 days.
 
 .. term-dsar-end
 
