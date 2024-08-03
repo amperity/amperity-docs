@@ -16,7 +16,7 @@
 
 
 ==================================================
-POST /workflow/runs/{id}/stop details
+POST /workflow/runs/{id}/stop 
 ==================================================
 
 .. endpoint-post-workflows-stop-start
