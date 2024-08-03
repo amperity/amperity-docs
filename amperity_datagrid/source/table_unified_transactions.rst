@@ -75,31 +75,40 @@ The **Unified Transactions** table is a required table for the customer 360 data
 
 .. _table-unified-transactions-sql-multiple-amperity-ids:
 
-Multiple Amperity ID template
+Multiple Amperity IDs
 --------------------------------------------------
 
 .. table-unified-transactions-sql-multiple-amperity-ids-start
 
-If orders are associated with more than one Amperity ID, prioritize the IDs using the following template:
+The following section (located near the top of the SQL) prioritizes order IDs when order IDs are associated with more than one Amperity ID. This may be customized.
 
 .. code-block:: sql
 
-   WITH 
-     amp_priority AS (
+   amp_priority AS (
+     SELECT DISTINCT
+       uit.order_id
+       ,FIRST(uc.amperity_id) OVER (
+         PARTITION BY uit.order_id
+         ORDER BY
+           uc.update_dt
+           ,uc.amperity_id
+         DESC
+       ) AS amperity_id
+     FROM (
        SELECT DISTINCT
-         ut.order_id
-         ,ut.datasource
-         ,FIRST_VALUE(uc.amperity_id) OVER (
-           PARTITION BY ut.order_id, ut.datasource
-           ORDER BY uc.update_dt DESC
-         ) AS amperity_id
-       FROM (SELECT amperity_id, datasource, update_dt FROM Unified_Coalesced) uc
-       JOIN (SELECT amperity_id, datasource, order_id FROM Unified_Transactions) ut 
-       ON uc.amperity_id = ut.amperity_id
-     )
-
-   SELECT t.* FROM table_name t
-   JOIN amp_priority ap ON t.order_id=ap.order_id
+         amperity_id
+         ,update_dt
+       FROM Unified_Coalesced
+     ) uc
+     JOIN (
+       SELECT DISTINCT
+         amperity_id
+         ,order_id
+        FROM Unified_Itemized_Transactions
+        WHERE amperity_id IS NOT NULL
+     ) uit
+     ON uc.amperity_id = uit.amperity_id
+   )
 
 .. table-unified-transactions-sql-multiple-amperity-ids-end
 
