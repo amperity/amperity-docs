@@ -60,8 +60,8 @@ Configure the following settings.
    **Required**
 
    .. include:: ../../shared/destination_settings.rst
-      :start-after: .. setting-active-campaign-audience-primary-key-start
-      :end-before: .. setting-active-campaign-audience-primary-key-end
+      :start-after: .. setting-common-audience-primary-key-start
+      :end-before: .. setting-common-audience-primary-key-end
 
 
 **Verbose logging?**
