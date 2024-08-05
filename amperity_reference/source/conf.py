@@ -175,6 +175,7 @@ html_additional_pages = {
     'release_notes': 'release_notes.html',
     'release_notes_2023': 'release_notes_2023.html',
     'sources': 'sources-list.html',
+    'users': 'users.html',
 }
 
 # If false, no module index is generated.
