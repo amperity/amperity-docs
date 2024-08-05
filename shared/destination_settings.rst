@@ -31,20 +31,31 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 **COMMON**
 
-.. TODO: Future common settings that are the same across N destinations.
+This section contains destination settings that are identical across more than one destination.
+
+
+**Audience primary key**
+
+Applies to: ActiveCampaign, Cordial, Criteo, HubSpot, Klaviyo, Listrak, Microsoft Ads, Oracle Eloqua, Pinterest, and Sailthru.
+
+.. setting-common-audience-primary-key-start
+
+The primary key for the audience. Set to "email".
+
+.. setting-common-audience-primary-key-end
+
+
 
 
 
 
 **ACTIVECAMPAIGN**
 
+This section contains destination settings that are unique to ActiveCampaign.
+
 **Audience primary key**
 
-.. setting-active-campaign-audience-primary-key-start
-
-Set to "email".
-
-.. setting-active-campaign-audience-primary-key-end
+See common settings.
 
 **Group name**
 
