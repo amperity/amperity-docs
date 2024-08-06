@@ -36,7 +36,7 @@ The Amperity API enables programmatic access to your Amperity tenant through a c
 
 .. start-here-endpoints-start
 
-.. include:: ../../shared/terms.rst
+.. include:: ../../shared/api_amperity.rst
    :start-after: .. term-http-methods-start
    :end-before: .. term-http-methods-end
 
