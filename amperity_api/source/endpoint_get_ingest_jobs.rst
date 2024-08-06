@@ -15,7 +15,7 @@
 
 
 ==================================================
-GET /ingest/jobs/{id} details
+GET /ingest/jobs/{id} 
 ==================================================
 
 .. endpoint-get-ingest-jobs-start

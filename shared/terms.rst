@@ -7156,3 +7156,59 @@ Zendesk is a service-first CRM company that builds software designed to improve 
 A 4-5-4 calendar divides years into months using a 4 weeks - 5 weeks - 4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
 
 .. term-454-calendar-end
+
+.. term-http-methods-start
+
+Available Endpoints
+--------------------------------------------------
+
+.. image:: ../../images/api-request-get-audit-events.png
+   :width: 440 px
+   :alt: GET /audit-events
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_audit_events_list.html
+
+.. image:: ../../images/api-request-get-campaigns.png
+   :width: 440 px
+   :alt: GET /campaigns
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_campaigns_list.html
+
+.. image:: ../../images/api-request-get-ingest-jobs.png
+   :width: 440 px
+   :alt: GET /ingest/jobs/{id}
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_ingest_jobs.html
+
+.. image:: ../../images/api-request-get-segments.png
+   :width: 440 px
+   :alt: GET /segments
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_segments_list.html
+
+.. image:: ../../images/api-request-get-workflow-runs-list.png
+   :width: 440 px
+   :alt: GET /workflows/runs/
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_workflows_list.html
+
+.. image:: ../../images/api-request-get-workflow-runs-fetch.png
+   :width: 440 px
+   :alt: GET /workflows/runs/{id}
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_workflows_fetch.html
+
+.. image:: ../../images/api-post-workflow-run-stop.png
+   :width: 440 px
+   :alt: POST /workflow/runs/{id}/stop
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_post_workflows_stop.html
+
+.. term-http-methods-end
