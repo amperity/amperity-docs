@@ -54,6 +54,249 @@ This topic describes how to configure Amperity to support a self-service privacy
 .. privacy-rights-important-end
 
 
+.. _privacy-rights-workflows:
+
+About privacy rights workflows
+==================================================
+
+.. privacy-rights-workflows-start
+
+The following sections describe the three types of privacy rights workflows:
+
+* :ref:`DSAR <privacy-rights-workflows-dsar>`
+* :ref:`Delete records <privacy-rights-workflows-delete-records>`
+* :ref:`Delete PII <privacy-rights-workflows-delete-pii>`
+
+The sections are repetitive when the workflows have shared behavior and are different when they have unique behavior. For example: the first step for all privacy rights workflows is to find all records with exact matches to the inbound request; however, the **Delete PII** privacy rights workflow is the only one that requires using the **compliance/pii** semantic tag.
+
+.. privacy-rights-workflows-end
+
+
+.. _privacy-rights-workflows-dsar:
+
+DSAR
+----------------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-dsar-start
+   :end-before: .. term-dsar-end
+
+.. privacy-rights-workflows-dsar-start
+
+The following diagram shows the workflow that occurs when a DSAR request is present in the inbound requests table.
+
+.. image:: ../../images/privacy-rights-dsar.png
+   :width: 700 px
+   :alt: DSAR
+   :align: left
+   :class: no-scaled-link
+
+The following sections describe the individual steps within the workflow that occurs when a DSAR request is present in the inbound requests table.
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+
+     - **Find records**
+
+       A DSAR request runs when **type** field in the inbound requests table is set to **dsar**.
+
+       The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
+
+       .. admonition:: About the connected_pii strategy
+
+          Using the the **exact** strategy for DSAR requests is recommended.
+
+          The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+
+          A Stitch cluster often contains variations of email addresses, phone numbers, and address groups that are all associated with a single unique individual, but only one email address, phone number, or address group will match exactly to the values in the inbound request.
+
+          To avoid potentially exposing additional customer PII in the DSAR report (and possible DSAR response) it is recommended to use the **exact** strategy as often as possible.
+
+       .. note:: A linkage table traces records in a custom domain table back to a source table. When a linkage table exists, a connected PII matching strategy will find all matching records in custom domain tables.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+
+     - **Refresh reports**
+
+       When the DSAR request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+
+.. privacy-rights-workflows-dsar-end
+
+
+.. _privacy-rights-workflows-delete-records:
+
+Delete records
+----------------------------------------------------------
+
+.. privacy-rights-workflows-delete-records-start
+
+An inbound request may require deleting customer records.
+
+The following diagram shows the workflow that occurs when a delete records request is present in the inbound requests table.
+
+.. image:: ../../images/privacy-rights-delete-records.png
+   :width: 700 px
+   :alt: Delete records
+   :align: left
+   :class: no-scaled-link
+
+The following sections describe the individual steps within the workflow that occurs when a delete records request is present in the inbound requests table.
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+
+     - **Find records**
+
+       A delete records request runs when **type** field in the inbound requests table is set to **delete**.
+
+       The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
+
+       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+
+       .. note:: A linkage table traces records in a custom domain table back to a source table. When a linkage table exists, a connected PII matching strategy will find all matching records in custom domain tables.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+
+     - **Suppress records**
+
+       Data in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table) that matches the inbound request is suppressed. All records that match values in the inbound request are set to **NULL**.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+
+     - **Delete records**
+
+       Data in source tables that matches the inbound request is deleted.
+
+       .. note:: Data that is deleted *today* is removed from the next refresh of Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step 4.
+          :align: left
+          :class: no-scaled-link
+
+     - **Refresh reports**
+
+       When the delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+
+       .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
+
+.. privacy-rights-workflows-delete-records-end
+
+
+.. _privacy-rights-workflows-delete-pii:
+
+Delete PII
+----------------------------------------------------------
+
+.. privacy-rights-workflows-delete-pii-start
+
+An inbound request may require deleting specific PII fields within customer records.
+
+.. important:: The delete PII workflow requires requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
+
+The following diagram shows the workflow that occurs when a delete PII request is present in the inbound requests table.
+
+.. image:: ../../images/privacy-rights-delete-pii.png
+   :width: 700 px
+   :alt: Delete PII
+   :align: left
+   :class: no-scaled-link
+
+The following sections describe the individual steps within the workflow that occurs when a delete PII request is present in the inbound requests table.
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+
+     - **Find records**
+
+       A delete PII request runs runs when **type** field in the inbound requests table is set to **delete_pii**.
+
+       The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
+
+       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+
+       .. note:: A linkage table traces records in a custom domain table back to a source table. When a linkage table exists, a connected PII matching strategy will find all matching records in custom domain tables.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+
+     - **Suppress records**
+
+       Data in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table) that matches the inbound request is suppressed. All values in all columns that match the inbound request are set to **NULL**.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+
+     - **Delete PII**
+
+       Column values in source tables that match the inbound request are deleted.
+
+       .. note:: Data that is deleted *today* is removed from the next refresh of Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+
+       .. important:: This step requires applying the **compliance/pii** semantic tag to all fields in all source tables that contain data that should be deleted when an inbound request asks Amperity to delete data.
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step 4.
+          :align: left
+          :class: no-scaled-link
+
+     - **Refresh reports**
+
+       When the delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+
+       .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
+
+.. privacy-rights-workflows-delete-pii-end
+
+
 .. _privacy-rights-request-types:
 
 Request types
@@ -127,7 +370,7 @@ Inbound requests table
 
 An inbound request table contains information about compliance requests. It must contain at least one field that is used to identify matching records: this is most commonly email address, but phone number, address, and custom fields such as a customer key or loyalty ID can also be used.
 
-.. note:: If multiple identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
+If multiple identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
 
 .. note:: An address group is a single entity. A compliance action must match all fields within the address group: address, address2, city, state, postal, and country. It is important for addresses in incoming data to be standardized before they can be used for matching in compliance requests.
 
@@ -152,7 +395,7 @@ An inbound requests table may have the following columns. **compliance/request-*
 
 .. _privacy-rights-apply-semantic-tags:
 
-Apply semantic tags source tables
+Apply semantic tags
 -------------------------------------------------------------------
 
 .. privacy-rights-apply-semantic-tags-start
