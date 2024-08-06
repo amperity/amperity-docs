@@ -1,5 +1,5 @@
 BUILDDIR = build
-BUILD_COMMAND = sphinx-build -b html -W
+BUILD_COMMAND = sphinx-build -b html --jobs auto -W
 BUILD_HELP_COMMAND = sphinx-build -b text -W
 
 
