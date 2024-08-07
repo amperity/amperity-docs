@@ -1,4 +1,4 @@
-.. 
+..
 .. https://docs.amperity.com/reference/
 ..
 
@@ -94,7 +94,7 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 
 A courier group that is scheduled to run on a daily basis will check for files on a daily basis.
 
-A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran. 
+A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
 
 When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
 
@@ -173,7 +173,7 @@ Offsets
 
 .. courier-groups-schedule-offset-start
 
-An offset is a constraint placed on a courier group that defines a range of time that is older than the scheduled time, within which a courier group will accept customer data as valid for the current job. Offset times are in Coordinated Universal Time (UTC).
+An offset is a constraint placed on a courier group that defines a range of time that is older than the scheduled time, within which a courier group will accept customer data as valid for the current job. Offset times are in Coordinated Universal Time (UTC), unless the "Use this time zone for file date ranges" checkbox is checked.
 
 A courier group offset is typically set to be 24 hours. For example, it's possible for customer data to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of the customer's own workflow. An offset ensures that the data at the source location is recognized by the courier as the correct data source.
 
