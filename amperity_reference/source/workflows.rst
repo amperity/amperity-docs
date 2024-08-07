@@ -201,7 +201,7 @@ Each stage contains a series of individual tasks that run in sequence.
 
 For example, tasks for the **Sources** stage must locate today's data updates, pull those updates to Amperity, and then refresh domain tables with the updated data. Each data source that is located will show as an individual task, each data set that is pulled to Amperity will show as an individual task. Many of the steps a courier takes will show as an individual task.
 
-.. tip:: Use the **View inputs / outputs** menu option to learn more about the information that was submitted to each task, such as the name of a service, the ID for the file(s) that were submitted to the task, dependencies (such as list names or attribute names that are required by a destination), and so on.
+.. tip:: Use the **View task details** menu option to learn more about the information that was submitted to each task, such as the name of a service, the ID for the file(s) that were submitted to the task, dependencies (such as list names or attribute names that are required by a destination), and so on.
 
    Outputs show the information that was submitted to the next step in the workflow.
 
