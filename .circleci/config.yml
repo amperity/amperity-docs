@@ -44,41 +44,47 @@ jobs:
       - run:
           name: Build Contributing
           command: sphinx-build -b html --jobs auto -W contributing/source ./site-test/contributing
-
       - run:
-          name: Test deleting files
-          command: |
-            echo $PWD
-            ls -aslh .
-            cd site-test
-            ls -aslh .
-            cd contributing
-            ls -aslh .
-            rm -r _sources/*
-            rm -r .doctrees/*
-            rm .buildinfo
-            rm genindex.html
-            rm objects.inv
-            rm searchindex.js
-            ls -aslh .
-            cd ..
-            ls -aslh .
-
-
-
-  docs-deploy:
-    docker:
-      - image: cimg/base:2021.11
-    resource_class: small
-    steps:
+          name: Build Modals
+          command: sphinx-build -b html --jobs auto -W amperity_modals/source ./site-test/modals
       - run:
-          name: ping docs build pipeline
-          command: |
-            curl --request POST \
-            --url https://circleci.com/api/v2/project/gh/amperity/docs/pipeline \
-            --header 'Circle-Token: CCIPAT_PxhepZeHxpa3uNGM33sDib_c8d4e85dbe3e2885817e42d0840095efc5bb1891' \
-            --header 'content-type: application/json' \
-            --data '{"parameters":{"amperity-docs-deploy":true}}'
+          name: Build Tooltips
+          command: sphinx-build -b html --jobs auto -W amperity_help/source ./site-test/help/text
+
+#      - run:
+#          name: Test deleting files
+#          command: |
+#            echo $PWD
+#            ls -aslh .
+#            cd site-test
+#            ls -aslh .
+#            cd contributing
+#            ls -aslh .
+#            rm -r _sources/*
+#            rm -r .doctrees/*
+#            rm .buildinfo
+#            rm genindex.html
+#            rm objects.inv
+#            rm searchindex.js
+#            ls -aslh .
+#            cd ..
+#            ls -aslh .
+
+
+
+#  docs-deploy:
+#    docker:
+#      - image: cimg/base:2021.11
+#    resource_class: small
+#    steps:
+#      - run:
+#          name: ping docs build pipeline
+#          command: |
+#            curl --request POST \
+#            --url https://circleci.com/api/v2/project/gh/amperity/docs/pipeline \
+#            --header 'Circle-Token: CCIPAT_PxhepZeHxpa3uNGM33sDib_c8d4e85dbe3e2885817e42d0840095efc5bb1891' \
+#            --header 'content-type: application/json' \
+#            --data '{"parameters":{"amperity-docs-deploy":true}}'
 
 
 
@@ -87,9 +93,9 @@ workflows:
   build:
     jobs:
       - docs-test
-      - docs-deploy:
+#      - docs-deploy:
 #        requires:
 #            - docs-test
-          filters:
-            branches:
-              only: main
+#          filters:
+#            branches:
+#              only: main
