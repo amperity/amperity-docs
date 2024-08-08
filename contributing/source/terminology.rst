@@ -7,7 +7,7 @@
 Terminology
 ==================================================
 
-This topic describes the correct use of terms, which is a very interesting topic. Read up, talk about this with all your friends, co-workers, and bus-riding compatriots. Listed alphabetically. When not specified here, refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/.
+This topic describes the correct use of terms within Amperity documentation. Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified in this topic.
 
 
 .. _term-s3:
@@ -42,6 +42,12 @@ This topic describes the correct use of terms, which is a very interesting topic
    Use the word-pair **blocklist** and **allowlist** to refer behaviors and processes that block or allow values to be processed by Amperity, such as a bad-values blocklist or a 360 values blocklist.
 
 
+.. _term-datasource:
+
+**datasource** vs. **data source**
+   Use **data source** as a single word to describe upstream sources from which Amperity is configured to pull data.
+
+
 .. _term-datasheet:
 
 **datasheet** vs. **data sheet**
@@ -69,7 +75,7 @@ This topic describes the correct use of terms, which is a very interesting topic
 .. _term-excited:
 
 **excited**
-   Avoid using this term to prevent localization issues with the meaning of this word in certain parts of the world.
+   Avoid using this term to prevent potential localization issues with the meaning of this word in certain parts of the world.
 
 
 .. _term-filename:
@@ -126,25 +132,24 @@ This topic describes the correct use of terms, which is a very interesting topic
    See **primary** / **replica**.
 
 
-.. 
-.. .. _term-serial-comma:
-.. 
-.. **serial comma**
-..    See :ref:`Oxford (or serial) comma <style-guide-oxford-comma>`.
-.. 
+.. _term-serial-comma:
+
+**serial comma**
+   See Oxford (or serial) comma.
+
 
 .. _term-slave:
 
 **slave**
-   See **primary** / **replica**. Don't use this term FFS.
+   See **primary** / **replica**. Don't use this term.
 
 
 .. _term-stitch:
 
 **Stitch** vs. **stitch**, **stitched**, and/or **stitching**
-   You can stitch data and data can be stitched, but only Stitch is part of Amperity.
+   You can stitch data and data can be stitched, but only Stitch is a feature within Amperity.
 
-   Use a capital "S" when referring to Stitch as a feature. Never use Stitched, or Stitch's. Just Stitch. Rewrite your sentences and make this happen.
+   Use a capital "S" when referring to Stitch as a feature. Never use Stitched, or Stitch's. Just Stitch. Rewrite your sentences to make this happen.
 
    Any other use of stitch should have a lower-case "s" and may follow any other standard use cases.
 
