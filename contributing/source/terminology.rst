@@ -135,7 +135,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-serial-comma:
 
 **serial comma**
-   See :ref:`Oxford (or serial) comma <style-guide-oxford-comma>`.
+   See Oxford (or serial) comma.
 
 
 .. _term-slave:
