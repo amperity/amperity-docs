@@ -2199,6 +2199,11 @@
    <a href="https://unifiedid.com/docs/intro" target="_blank">UID 2.0</a> <i class="fas fa-external-link-square-alt"></i>
 
 
+.. |ext_the_trade_desk_offline_events| raw:: html
+
+   <a href="https://partner.thetradedesk.com/v3/portal/data/doc/DataOfflineMeasurement" target="_blank">Offline conversion events</a> <i class="fas fa-external-link-square-alt"></i>
+
+
 .. |ext_thoughtspot_dataflow| raw:: html
 
    <a href="https://docs.thoughtspot.com/software/latest/dataflow" target="_blank">DataFlow</a> <i class="fas fa-external-link-square-alt"></i>
