@@ -31,7 +31,7 @@ A courier group is typically configured to run automatically on a recurring sche
 
 .. image:: ../../images/mockups-workflow-courier-group-dialog.png
    :width: 400 px
-   :alt: Enable duration alerts for workflows.
+   :alt: Enable runtime alerts for workflows.
    :align: left
    :class: no-scaled-link
 
@@ -245,7 +245,7 @@ How-tos
 This section describes tasks related to managing courier groups in Amperity:
 
 * :ref:`Add a courier group <courier-groups-add>`
-* :ref:`Configure duration alerts for workflows <courier-groups-configure-duration-alert>`
+* :ref:`Configure runtime alerts for workflows <courier-groups-configure-duration-alert>`
 * :ref:`Configure missing files alerts for workflows <courier-groups-configure-missing-files-alert>`
 * :ref:`Copy a courier group <courier-groups-copy>`
 * :ref:`Delete a courier group <courier-groups-delete>`
@@ -293,7 +293,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
        .. image:: ../../images/mockups-workflow-courier-group-name.png
           :width: 400 px
-          :alt: Enable duration alerts for workflows.
+          :alt: Enable runtime alerts for workflows.
           :align: left
           :class: no-scaled-link
 
@@ -310,7 +310,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
        .. image:: ../../images/mockups-workflow-courier-group-schedule.png
           :width: 400 px
-          :alt: Enable duration alerts for workflows.
+          :alt: Enable runtime alerts for workflows.
           :align: left
           :class: no-scaled-link
 
@@ -341,11 +341,11 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-     - Optional. Enable duration alerts. Enable the **Warn if runtime exceeds** checkbox, and then set the number of hours (or minutes) at which, when the configured amount of time is exceeded, a workflow alert will be sent.
+     - Optional. Enable runtime alerts. Enable the **Warn if runtime exceeds** checkbox, and then set the number of hours (or minutes) at which, when the configured amount of time is exceeded, a workflow alert will be sent.
 
        .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
           :width: 400 px
-          :alt: Enable duration alerts for workflows.
+          :alt: Enable runtime alerts for workflows.
           :align: left
           :class: no-scaled-link
 
@@ -383,7 +383,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
        .. image:: ../../images/mockups-workflow-courier-group-settings.png
           :width: 400 px
-          :alt: Enable duration alerts for workflows.
+          :alt: Enable runtime alerts for workflows.
           :align: left
           :class: no-scaled-link
 
@@ -408,7 +408,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
        .. image:: ../../images/mockups-workflow-courier-group-add-couriers.png
           :width: 400 px
-          :alt: Enable duration alerts for workflows.
+          :alt: Enable runtime alerts for workflows.
           :align: left
           :class: no-scaled-link
 
@@ -440,16 +440,16 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
 .. _courier-groups-configure-duration-alert:
 
-Configure duration alerts
+Configure runtime alerts
 --------------------------------------------------
 
 .. courier-groups-configure-duration-alert-start
 
-A duration alert is a type of workflow alert that is sent when a courier group has run longer than a configured amount of time. A duration alert is sent to any email address or Slack channel that is configured for the **Courier group** workflow type.
+A runtime alert is a type of workflow alert that is sent when a courier group has run longer than a configured amount of time. A runtime alert is sent to any email address or Slack channel that is configured for the **Courier group** workflow type.
 
 .. courier-groups-configure-duration-alert-end
 
-**To configure a duration alert for a courier group**
+**To configure a runtime alert for a courier group**
 
 .. courier-groups-configure-duration-alert-steps-start
 
@@ -458,7 +458,7 @@ A duration alert is a type of workflow alert that is sent when a courier group h
 
    .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
       :width: 400 px
-      :alt: Enable duration alerts for workflows.
+      :alt: Enable runtime alerts for workflows.
       :align: left
       :class: no-scaled-link
 
@@ -616,7 +616,7 @@ Configure the courier group to run at the end of that 24-hour window, and then e
 
    .. image:: ../../images/mockups-workflow-courier-group-settings.png
       :width: 400 px
-      :alt: Enable duration alerts for workflows.
+      :alt: Enable runtime alerts for workflows.
       :align: left
       :class: no-scaled-link
 
@@ -758,7 +758,7 @@ When files are missing or late, in addition to sending an email alert and either
 
 .. image:: ../../images/mockups-workflow-courier-group-settings-wait.png
    :width: 400 px
-   :alt: Enable duration alerts for workflows.
+   :alt: Enable runtime alerts for workflows.
    :align: left
    :class: no-scaled-link
 
