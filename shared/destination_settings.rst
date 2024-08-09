@@ -1221,6 +1221,14 @@ This section contains settings that are unique to SFTP.
 
 Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airship, BazaarVoice, Bluecore, Evocalize, Experian, Infutor, Kibo (Monetate), Koupon Media, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, PowerReviews, SFTP, Vibes.
 
+**About**
+
+.. setting-sftp-about-start
+
+`Secure File Transfer Protocol (SFTP) <https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol>`__ is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
+
+.. setting-sftp-about-end
+
 **Compression**
 
 See Common.

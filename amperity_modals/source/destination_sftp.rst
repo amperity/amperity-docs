@@ -9,9 +9,9 @@
 SFTP
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-sftp-start
-   :end-before: .. term-sftp-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-sftp-about-start
+   :end-before: .. setting-sftp-about-end
 
 
 Requirements
