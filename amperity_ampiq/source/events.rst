@@ -147,7 +147,7 @@ Amperity provides direct connections to the most popular destinations across the
           :class: no-scaled-link
      - Snapchat is a social media platform that allows users to access pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
 
-       :doc:`Send offline events <events_snapchat>` to Snapchat as a CSV file that contains |ext_snapchat_offline_conversions| *and* meets |ext_snapchat_offline_conversions_file_requirements| to |destination-name|..
+       :doc:`Send offline events <events_snapchat>` to Snapchat as a CSV file that contains |ext_snapchat_offline_conversions| *and* meets |ext_snapchat_offline_conversions_file_requirements| to Snapchat.
 
 
 .. _events-the-trade-desk:
