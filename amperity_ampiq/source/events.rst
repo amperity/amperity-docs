@@ -31,7 +31,7 @@ Offline events represent a set of fields that may be used to help your brand att
 Offline events share similar use cases across marketing platforms; however, each marketing platform has its own terminology and requirements for using offline events. For example:
 
 * :ref:`Braze <events-braze>` and :ref:`Klaviyo <events-klaviyo>` support offline events when sent as custom attributes for any audience.
-* :ref:`Criteo <events-criteo>` supports offline events for transactions, which must be sent separately from audiences using as an SFTP file.
+* :ref:`Criteo <events-criteo>`, :ref:`Pinterest <events-pinterest>`, and :ref:`Snapchat <events-snapchat>` support offline events for transactions, which must be sent separately from audiences using SFTP.
 * :ref:`Meta Ads Manager <events-meta-ads-manager>`, :ref:`The Trade Desk <events-the-trade-desk>`, and :ref:`TikTok Ads Manager <events-tiktok-ads-manager>` each support a complex set of offline events that are sent to REST API endpoints and typically require using SQL to return the unique sets of offline events that are required by each platform.
 
 Your brand may need to experiment with how offline events are provided to the marketing platforms from which your campaigns are run. Amperity is flexible; you may take any approach that works. For example: using a database tables that consolidates offline events, configuring default attributes to represent offline events for campaigns, or by using SQL to handle more complex sets of offline events.
@@ -116,6 +116,38 @@ Amperity provides direct connections to the most popular destinations across the
      - Meta Ads Manageris a unified ad creation tool that your brand can use to create and publish ads to Facebook, Messenger, Instagram and the Meta Audience Network. When you send data to Facebook using the Facebook Ads destination, your data will be available from Meta Ads Manager.
 
        :doc:`Send a rolling 7-day window of offline events <events_meta_ads_manager>` to Meta Ads Manager to help your brand track offline conversions that result from your marketing campaigns. Offline events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+
+
+.. _events-pinterest:
+
+.. list-table::
+   :widths: 40 60
+   :header-rows: 0
+
+   * - .. image:: ../../amperity_base/source/_static/connector-pinterest.png
+          :width: 140 px
+          :alt: Pinterest
+          :align: left
+          :class: no-scaled-link
+     - Pinterest is a visual discovery engine on which your brand can engage with your customers. Upload a CSV file that contains offline conversions to Pinterest Ads Manager, after which Pinterest Ads Manager will match campaigns to these conversions so your brand can review total conversions in Pinterest Ads Manager as they relate to all active campaigns.
+
+       :doc:`Send offline events <events_pinterest>` to Pinterest at least once a month and send conversion data within 30 days of each conversion occurrence to Pinterest Ads Manager.
+
+
+.. _events-snapchat:
+
+.. list-table::
+   :widths: 40 60
+   :header-rows: 0
+
+   * - .. image:: ../../amperity_base/source/_static/connector-snapchat.svg
+          :width: 140 px
+          :alt: Snapchat
+          :align: left
+          :class: no-scaled-link
+     - Snapchat is a social media platform that allows users to access pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
+
+       :doc:`Send offline events <events_snapchat>` to Snapchat as a CSV file that contains |ext_snapchat_offline_conversions| *and* meets |ext_snapchat_offline_conversions_file_requirements| to |destination-name|..
 
 
 .. _events-the-trade-desk:
