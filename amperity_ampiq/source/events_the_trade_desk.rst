@@ -32,7 +32,7 @@ Send offline events to The Trade Desk
 
 .. events-the-trade-desk-overview-start
 
-Offline events help your brand track offline conversions---for in-store sales, place visits, and other events---for your marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
+|ext_the_trade_desk_offline_events| help your brand track offline conversions---for in-store sales, place visits, and other events---for your marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
 
 .. events-the-trade-desk-overview-end
 
