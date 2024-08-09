@@ -1961,7 +1961,7 @@
 
 .. |ext_sftp| raw:: html
 
-   <a href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol" target="_blank">SSH File Transfer Protocol (also Secure File Transfer Protocol, or SFTP)</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol" target="_blank">Secure File Transfer Protocol (SFTP)</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_shopify_rest_admin_api| raw:: html

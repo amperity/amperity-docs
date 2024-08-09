@@ -2633,7 +2633,7 @@ A filedrop is the most common way to transfer data from Amperity. A cloud-based 
 
 .. term-filename-template-start
 
-A filename template defines the naming patterns for files that are sent by Amperity to a location in which files are dropped. A filename template specifies the name of the file and then uses Jinja-style string formats to append a date to the filename to ensure that any downstream process can identify which file is the one to be picked up.
+A filename template defines the naming pattern for files that are sent from Amperity. Specify the name of the file, and then use Jinja-style string formatting to append a date or timestamp to the filename.
 
 .. term-filename-template-end
 
