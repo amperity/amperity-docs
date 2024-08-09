@@ -1,6 +1,6 @@
-.. 
+..
 .. https://docs.amperity.com/reference/
-.. 
+..
 
 
 .. meta::
@@ -82,12 +82,12 @@ Couriers
    :ref:`couriers-add` |fa-index-separator| :ref:`couriers-add-as-copy` |fa-index-separator| :ref:`couriers-add-to-courier-group` |fa-index-separator| :ref:`couriers-delete` |fa-index-separator| :ref:`couriers-edit` |fa-index-separator| :ref:`couriers-load-data-only` |fa-index-separator| :ref:`Run and only load files <couriers-run-only-load-files>` |fa-index-separator| :ref:`Run for a specific day <couriers-run-for-specific-day>` |fa-index-separator| :ref:`Run for a time period <couriers-run-for-time-period>` |fa-index-separator| :ref:`Run, but skip missing files <couriers-run-skip-missing-files>` |fa-index-separator| :ref:`couriers-run-restart-job` |fa-index-separator| :ref:`couriers-view`
 
 
-.. 
+..
 .. Credentials
 .. ==================================================
-.. 
+..
 .. :doc:`About credentials <credentials>`
-.. 
+..
 
 
 .. _index-data-exports:
@@ -280,7 +280,7 @@ Presto SQL
 Queries
 ==================================================
 
-:doc:`About queries <queries>` |fa-index-separator| :ref:`Queries page <queries-tab>` 
+:doc:`About queries <queries>` |fa-index-separator| :ref:`Queries page <queries-tab>`
 
 **Data explorer**
    :ref:`About the data explorer <queries-data-explorer>` |fa-index-separator| :ref:`Docked mode <queries-data-explorer-docked>` |fa-index-separator| :ref:`Full screen mode <queries-data-explorer-full-screen>` |fa-index-separator| :ref:`Table schema <queries-data-explorer-full-screen-table-schema>` |fa-index-separator| :ref:`Completion <queries-data-explorer-full-screen-completion>` |fa-index-separator| :ref:`Cardinality vs. uniqueness <queries-data-explorer-full-screen-cardinality>` |fa-index-separator| :ref:`Table examples <queries-data-explorer-full-screen-examples>` |fa-index-separator| :ref:`Table details <queries-data-explorer-full-screen-details>`
@@ -416,13 +416,13 @@ Workflows
 :doc:`About workflows <workflows>` |fa-index-separator| :ref:`About the Workflows page <workflows-about>` |fa-index-separator| :ref:`About workflow alerts <workflows-discover-alerts>`
 
 **Common resolutions**
-   :ref:`Ignore missing file <workflows-common-ignore-missing-files>` |fa-index-separator| :ref:`Restart workflow <workflows-common-restart>` |fa-index-separator| :ref:`Retry task <workflows-common-retry>` |fa-index-separator| :ref:`Skip a task <workflows-common-skip-task>` |fa-index-separator| :ref:`Update credentials <workflows-common-update-credentials>` |fa-index-separator| :ref:`Update error threshold <workflows-common-update-error-threshold>` |fa-index-separator| 
+   :ref:`Ignore missing file <workflows-common-ignore-missing-files>` |fa-index-separator| :ref:`Restart workflow <workflows-common-restart>` |fa-index-separator| :ref:`Retry task <workflows-common-retry>` |fa-index-separator| :ref:`Skip a task <workflows-common-skip-task>` |fa-index-separator| :ref:`Update credentials <workflows-common-update-credentials>` |fa-index-separator| :ref:`Update error threshold <workflows-common-update-error-threshold>` |fa-index-separator|
 
 **Context-specific resolutions**
    :ref:`for campaigns <workflows-context-campaigns>` |fa-index-separator| :ref:`for courier groups <workflows-context-courier-groups>` |fa-index-separator| :ref:`for databases <workflows-context-databases>` |fa-index-separator| :ref:`for destinations <workflows-context-destinations>` |fa-index-separator| :ref:`for scheduled orchestration groups <workflows-context-scheduled>` |fa-index-separator| :ref:`for sources <workflows-context-sources>` |fa-index-separator| :ref:`for Stitch <workflows-context-stitch>`
 
 **How-tos**
-   :ref:`Configure duration alerts <workflows-howto-configure-duration-alerts>` |fa-index-separator| :ref:`Filter workflows <workflows-howto-filter-workflows>` |fa-index-separator| :ref:`Hide skipped tasks <workflows-howto-hide-skipped-tasks>` |fa-index-separator| :ref:`Resolve workflows <workflows-howto-resolve>` |fa-index-separator| :ref:`Search workflows <workflows-howto-search>` |fa-index-separator| :ref:`Send alerts to email addresses <workflows-howto-email>` |fa-index-separator| :ref:`Send alerts to Slack channels <workflows-howto-slack>` |fa-index-separator| :ref:`View all workflows <workflows-howto-view-all>` |fa-index-separator| :ref:`View details <workflows-howto-view-details>` |fa-index-separator| :ref:`View resolutions <workflows-howto-view-resolutions>` |fa-index-separator| :ref:`View workflow graphs <workflows-howto-view-workflow-graph>`
+   :ref:`Configure runtime alerts <workflows-howto-configure-duration-alerts>` |fa-index-separator| :ref:`Filter workflows <workflows-howto-filter-workflows>` |fa-index-separator| :ref:`Hide skipped tasks <workflows-howto-hide-skipped-tasks>` |fa-index-separator| :ref:`Resolve workflows <workflows-howto-resolve>` |fa-index-separator| :ref:`Search workflows <workflows-howto-search>` |fa-index-separator| :ref:`Send alerts to email addresses <workflows-howto-email>` |fa-index-separator| :ref:`Send alerts to Slack channels <workflows-howto-slack>` |fa-index-separator| :ref:`View all workflows <workflows-howto-view-all>` |fa-index-separator| :ref:`View details <workflows-howto-view-details>` |fa-index-separator| :ref:`View resolutions <workflows-howto-view-resolutions>` |fa-index-separator| :ref:`View workflow graphs <workflows-howto-view-workflow-graph>`
 
 **Open workflow alerts**
    :ref:`from email alerts <workflows-howto-open-from-email-alerts>` |fa-index-separator| :ref:`from Recent activity pane <workflows-howto-open-from-recent-activity>` |fa-index-separator| :ref:`from Slack alerts <workflows-howto-open-from-slack-alerts>` |fa-index-separator| :ref:`from Workflow page <workflows-howto-open-from-workflow-page>` |fa-index-separator|
