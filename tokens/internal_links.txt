@@ -861,7 +861,7 @@
 
 .. |sendto_active_campaign| raw:: html
 
-   <a href="https://docs.amperity.com/amp360/destination_active_campaign.html">send query results to Active Campaign</a>
+   <a href="https://docs.amperity.com/amp360/destination_active_campaign.html">send query results</a>
 
 
 .. |sendto_acxiom| raw:: html

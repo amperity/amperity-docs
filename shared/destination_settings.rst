@@ -45,6 +45,22 @@ The primary key for the audience. Set to "email".
 
 .. setting-common-audience-primary-key-end
 
+**Business user access**
+
+.. TODO: These two settings are in an admonition block in docs pages; definition list in modals.
+
+.. setting-common-business-user-access-allow-start
+
+Select the **Allow business users** option to allow access to |destination-name| for users who are assigned the **Amp360 User** and/or **AmpIQ User** policies.
+
+.. setting-common-business-user-access-allow-end
+
+.. setting-common-business-user-access-restrict-pii-start
+
+Some business users may have restricted access to PII, which will prevent them from sending data to |destination-name|. Select the **Allow limited PII access** option to allow access to |destination-name| for users who are assigned the **Restrict PII access** policy option.
+
+.. setting-common-business-user-access-restrict-pii-end
+
 **Compression**
 
 .. setting-common-compression-start
