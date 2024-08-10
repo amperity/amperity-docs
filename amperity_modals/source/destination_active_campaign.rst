@@ -69,3 +69,14 @@ Configure the following settings.
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-active-campaign-verbose-logging-start
       :end-before: .. setting-active-campaign-verbose-logging-end
+
+
+**Business user access**
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-common-business-user-access-allow-start
+      :end-before: .. setting-common-business-user-access-allow-end
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-common-business-user-access-restrict-pii-start
+      :end-before: .. setting-common-business-user-access-restrict-pii-end
