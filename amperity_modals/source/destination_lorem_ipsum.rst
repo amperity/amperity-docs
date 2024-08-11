@@ -33,12 +33,6 @@ Requirements
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
 
-TEST:
-
-|ext_active_campaign_contacts_list|
-
-|ext_active_campaign_user_group|
-
 
 Settings
 ==================================================
@@ -105,3 +99,5 @@ Links
 * Link to `Amperity Docs <https://docs.amperity.com>`__.
 * Link to `Active Campaign <https://docs.amperity.com/datagrid/destination_active_campaign.html>`__.
 * Relative link example (probably 404s) `some link text here <../tutorials/start_here.html>`__
+* |ext_active_campaign_contacts_list|
+* |ext_active_campaign_user_group|
