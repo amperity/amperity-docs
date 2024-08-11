@@ -41,27 +41,31 @@ Applies to: ActiveCampaign, Cordial, Criteo, HubSpot, Klaviyo, Listrak, Microsof
 
 .. setting-common-audience-primary-key-start
 
-The primary key for the audience. Set to "email".
+The primary key for the audience. Set to |audience-primary-key|.
 
 .. setting-common-audience-primary-key-end
 
 **Business user access**
 
+Applies to: all destinations.
+
 .. TODO: These two settings are in an admonition block in docs pages; definition list in modals.
 
 .. setting-common-business-user-access-allow-start
 
-Select the **Allow business users** option to allow access to |destination-name| for users who are assigned the **Amp360 User** and/or **AmpIQ User** policies.
+Select the "Allow business users" option to allow access to |destination-name| for users who are assigned the "Amp360 User" and/or "AmpIQ User" policies.
 
 .. setting-common-business-user-access-allow-end
 
 .. setting-common-business-user-access-restrict-pii-start
 
-Some business users may have restricted access to PII, which will prevent them from sending data to |destination-name|. Select the **Allow limited PII access** option to allow access to |destination-name| for users who are assigned the **Restrict PII access** policy option.
+Some business users may have restricted access to PII, which will prevent them from sending data to |destination-name|. Select the "Allow limited PII access" option to allow access to |destination-name| for users who are assigned the "Restrict PII access" policy option.
 
 .. setting-common-business-user-access-restrict-pii-end
 
 **Compression**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-compression-start
 
@@ -70,6 +74,8 @@ The compression format to apply to the output file. May be one of "GZIP", "None"
 .. setting-common-compression-end
 
 **Escape character**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-escape-character-start
 
@@ -85,6 +91,8 @@ When an escape character is not specified *and* the quote mode is "None" files m
 
 **File format**
 
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
+
 .. setting-common-file-format-start
 
 Send |file-format| to |destination-name|.
@@ -99,11 +107,15 @@ Some file formats allow a custom delimiter. Choose the "Custom delimiter" file f
 
 **Filename template**
 
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-filename-template-start
    :end-before: .. term-filename-template-end
 
 **Header?**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-header-start
 
@@ -112,6 +124,8 @@ Enable to include header rows in output files.
 .. setting-common-header-end
 
 **Line ending**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-line-ending-start
 
@@ -131,6 +145,8 @@ The primary key for the audience. Set to "email".
 
 **PGP public key**
 
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
+
 .. setting-common-pgp-public-key-start
 
 The PGP public key that Amperity uses to encrypt files that are sent to |destination-name|.
@@ -138,6 +154,8 @@ The PGP public key that Amperity uses to encrypt files that are sent to |destina
 .. setting-common-pgp-public-key-end
 
 **Quote mode**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-quote-mode-start
 
@@ -152,6 +170,8 @@ Unescaped, unquoted files may occur when quote mode is set to "None" and an esca
 .. setting-common-quote-mode-none-end
 
 **Remote folder**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-remote-folder-start
 
@@ -173,6 +193,8 @@ If the path to the remote folder contains a space, use a backslash (\) character
 
 **Success file**
 
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
+
 .. setting-common-success-file-start
 
 Enable to send a .DONE file when Amperity has finished sending data.
@@ -186,6 +208,8 @@ If a downstream sensor is listening for files sent from Amperity, configure that
 .. setting-common-success-file-downstream-end
 
 **Use Zip64?**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-use-zip64-start
 
@@ -209,7 +233,7 @@ See common settings.
 
 .. setting-active-campaign-group-name-start
 
-The user group to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
+The name of the user group to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
 
 .. setting-active-campaign-group-name-end
 
@@ -225,9 +249,9 @@ The name of the contact list in |destination-name| that will be managed by Amper
 
 .. setting-active-campaign-verbose-logging-start
 
-Enable to return log details when |destination-name| rejects adding contacts to the contact list.
+Enable verbose logging to return log details when |destination-name| rejects adding contacts to the contact list.
 
-When this setting is enabled, a list of rejected contacts is returned by the response from ActiveCampaign. For each rejected contact, a contact identifier is provided along with a string that describes the reason why the contact was rejected.
+When verbose logging setting is enabled, a list of rejected contacts is returned by the response from ActiveCampaign. For each rejected contact, a contact identifier is provided along with a string that describes the reason why the contact was rejected.
 
 .. setting-active-campaign-verbose-logging-end
 
