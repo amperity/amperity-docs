@@ -37,7 +37,7 @@ This section contains settings that are identical across more than one destinati
 
 **Audience primary key**
 
-Applies to: ActiveCampaign, Cordial, Criteo, HubSpot, Klaviyo, Listrak, Microsoft Ads, Oracle Eloqua, Pinterest, and Sailthru.
+Applies to: ActiveCampaign, Cordial, Criteo, HubSpot, Klaviyo, Listrak, Microsoft Ads, Oracle Eloqua, Pinterest, and Sailthru. Must set the ``|audience-primary-key|`` variable in the destination file.
 
 .. setting-common-audience-primary-key-start
 
@@ -241,7 +241,7 @@ The name of the user group to which Amperity will send data. This group must exi
 
 .. setting-active-campaign-list-name-start
 
-The name of the contact list in |destination-name| that will be managed by Amperity.
+The name of the contacts list in |destination-name| that will be managed by Amperity.
 
 .. setting-active-campaign-list-name-end
 
