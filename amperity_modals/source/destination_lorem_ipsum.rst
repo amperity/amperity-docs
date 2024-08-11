@@ -19,7 +19,7 @@ Lorem Ipsum
 Requirements
 ==================================================
 
-This destination has the following requirements.
+.. TODO: This destination has the following requirements.
 
 #. .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-short-start
@@ -33,12 +33,17 @@ This destination has the following requirements.
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
 
+TEST:
+
+|ext_active_campaign_contacts_list|
+
+|ext_active_campaign_user_group|
 
 
 Settings
 ==================================================
 
-Configure the following settings.
+.. TODO: Configure the following settings.
 
 **setting**
 
