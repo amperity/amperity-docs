@@ -95,11 +95,11 @@ pygments_style = 'friendly'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-# A string of reStructuredText that will be included at the beginning of every source file that is read.
-#rst_prolog = """
-#.. include:: ../../tokens/external_links.txt
-#.. include:: ../../tokens/names.txt
-#"""
+#A string of reStructuredText that will be included at the beginning of every source file that is read.
+rst_prolog = """
+.. include:: ../../tokens/external_links.txt
+.. include:: ../../tokens/names.txt
+"""
 
 # -- Options for HTML output ---------------------------------------------------
 
