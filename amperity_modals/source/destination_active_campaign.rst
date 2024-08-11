@@ -21,13 +21,27 @@ Requirements
 
 #. The API key and base URL for your |destination-name| account.
 
-#. The name of a `contacts list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ in |destination-name| that will be managed by Amperity. This can be the name of an existing list or a new list.
+   Learn more about the `ActiveCampaign REST API <https://developers.activecampaign.com/reference/url>`__.
 
-#. The name of a `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
+#. .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-list-name-start
+      :end-before: .. setting-active-campaign-list-name-end
 
-   You must log into |destination-name| as a member of the specified user group to have access to the contact list that is managed by Amperity.
+   Learn more about |destination-name| `contacts lists <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__.
 
-#. A query or campaign must be configured to provide the set of fields that are added to the contacts list in |destination-name|. A valid email address must be included.
+#. .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-group-name-start
+      :end-before: .. setting-active-campaign-group-name-end
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-group-name-access-start
+      :end-before: .. setting-active-campaign-group-name-access-end
+
+   Learn more about |destination-name| `user groups <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__.
+
+#. .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-active-campaign-email-required-start
+      :end-before: .. setting-active-campaign-email-required-end
 
 
 Settings

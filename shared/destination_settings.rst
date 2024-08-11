@@ -229,6 +229,14 @@ This section contains settings that are unique to ActiveCampaign.
 
 See common settings.
 
+.. setting-active-campaign-email-required-start
+
+A contact in |destination-name| is defined by an email address. A contact may have additional information, but cannot exist without an email address.
+
+Use a query or a campaign to define the information in the contacts list that will be managed by Amperity.
+
+.. setting-active-campaign-email-required-end
+
 **Group name**
 
 .. setting-active-campaign-group-name-start
@@ -236,6 +244,12 @@ See common settings.
 The name of the user group to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
 
 .. setting-active-campaign-group-name-end
+
+.. setting-active-campaign-group-name-access-start
+
+You must log into |destination-name| as a member of the specified user group to have access to the contacts list that is managed by Amperity.
+
+.. setting-active-campaign-group-name-access-end
 
 **List name**
 

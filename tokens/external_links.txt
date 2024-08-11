@@ -8,17 +8,17 @@
 
 .. |ext_active_campaign_api| raw:: html
 
-   <a href="https://developers.activecampaign.com/reference/url" target="_blank">Active Campaign REST API</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://developers.activecampaign.com/reference/url" target="_blank">ActiveCampaign REST API</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_active_campaign_contacts_list| raw:: html
 
-   <a href="https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign" target="_blank">contacts list</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign" target="_blank">contacts lists</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_active_campaign_user_group| raw:: html
 
-   <a href="https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0" target="_blank">user group</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0" target="_blank">user groups</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_acxiom| raw:: html
