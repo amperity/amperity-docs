@@ -2,6 +2,8 @@
 .. /markdown
 .. 
 
+.. |destination-name| replace:: Lorem Ipsum
+
 
 Lorem Ipsum
 ==================================================
