@@ -2,6 +2,8 @@
 .. /markdown
 .. 
 
+.. |destination-name| replace:: Lorem Ipsum
+
 
 Lorem Ipsum
 ==================================================
@@ -25,19 +27,15 @@ Requirements
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
 
-#. .. include:: ../../shared/destination_settings.rst
-      :start-after: .. setting-lorem-ipsum-short-start
-      :end-before: .. setting-lorem-ipsum-short-end
+   Learn more about |destination-name| `xxxxx <https://docs.amperity.com>`__.
 
 #. .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
 
-TEST:
-
-|ext_active_campaign_contacts_list|
-
-|ext_active_campaign_user_group|
+#. .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-lorem-ipsum-short-start
+      :end-before: .. setting-lorem-ipsum-short-end
 
 
 Settings
