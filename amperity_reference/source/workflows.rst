@@ -110,7 +110,7 @@ Alerts are sent when:
 * A failure occurs within an orchestration group workflow, regardless of whether the orchestration group is configured to run after a courier group or run on a schedule
 * A failure occurs in an upstream courier group if your orchestration group is configured to run after a courier group. This is to let you know about potential delays to your orchestration group workflow.
 * A user cancels an automatically launched workflow
-* The orchestration group succeeds, if configured (only available for orchestration groups run on a schedule)
+* The orchestration group succeeds, if configured. This is only available for orchestration groups run on a schedule. Subscribe to courier group runtime alerts if your orchestration group is configured to run after a courier group and you want to know when it succeeds.
 
 .. orchestration-group-automated-alert-details-end
 
@@ -124,8 +124,8 @@ Alerts are sent when:
 * A failure occurs within campaign send, regardless of whether the campaign is configured to run after a courier group or run on a schedule
 * A user cancels an automatically launched workflow
 * A failure occurs in an upstream courier group if your campaign is configured to run after a courier group. This is to let you know about potential delays to your campaign send.
-* The campaign succeeds, if configured (only available for campaigns run on a schedule, subscribe to courier group success alerts if your campaign is configured to run after a courier group and you want to know when it succeeds)
-* The campaign runtime exceeds a threshold, if configured (only available for campaigns run on a schedule, subscribe to courier group runtime alerts if your campaign is configured to run after a courier group and you want to know when it succeeds)
+* The campaign succeeds, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group success alerts if your campaign is configured to run after a courier group and you want to know when it succeeds.
+* The campaign runtime exceeds a threshold, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group runtime alerts if your campaign is configured to run after a courier group and you want to know when it runs long.
 
 
 .. campaign-automated-alert-details-end
