@@ -1199,7 +1199,7 @@ Purchase behaviors are available for :doc:`first order <attribute_compound_first
 
 You can add purchase behaviors to segments from the **Segment Editor**.
 
-.. segments-add-transactional-behavior-end
+.. segments-add-purchase-behavior-end
 
 **To add purchase behaviors to a segment**
 
