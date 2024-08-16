@@ -1335,6 +1335,8 @@ The **Merged Customers** table contains the following columns:
           :start-after: .. term-loyalty-id-start
           :end-before: .. term-loyalty-id-end
 
+       This column is added when the **loyalty-id** semantic tag is applied to customer profiles.
+
        Also in: **Unified Coalesced**
 
    * - **Phone**
@@ -3417,6 +3419,8 @@ The **Unified Coalesced** table contains the following columns:
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-loyalty-id-start
           :end-before: .. term-loyalty-id-end
+
+       This column is added when the **loyalty-id** semantic tag is applied to customer profiles.
 
        Also in: **Merged Customers**
 
