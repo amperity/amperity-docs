@@ -61,7 +61,7 @@ Workflow alerts
 
 .. workflows-discover-alerts-start
 
-A workflow alert is sent when a task within the workflow requires your attention. Each alert contains a description of what caused the alert, along with a link to the workflow in Amperity. Workflow alerts can be configured to send when workflows fail, workflows succeed, workflows exceed a configured duration threshold, query results exceed a configured threshold, and when workflows are manually stopped.
+A workflow alert is sent when a task within the workflow requires your attention. Each alert contains a description of what caused the alert, along with a link to the workflow in Amperity. Workflow alerts can be configured to send when workflows fail, workflows succeed, workflows exceed a configured runtime threshold, query results exceed a configured threshold, and when workflows are manually stopped.
 
 Workflow alerts may be configured to be :ref:`sent to an email address <workflows-howto-open-from-email-alerts>` or sent to :ref:`a channel in a Slack workspace <workflows-howto-open-from-slack-alerts>`. Click the link in the email or Slack message to open the workflow in Amperity, and then resolve the issue(s) that caused the workflow alert.
 
@@ -78,7 +78,7 @@ Configure automated workflow alerts within the **Automated workflow alerts** dia
 
 * Failure alerts
 * Success alerts, only if enabled
-* Duration alerts, if configured
+* Runtime alerts, if configured
 * Query alerts, if configured
 * Workflow stopped alerts
 
@@ -93,10 +93,9 @@ Alerts are sent when:
 
 * Files are missing
 * A failure occurs within any part of a courier group workflow, including courier groups with orchestration groups, campaigns, or profile API indexes configured to run as part of the workflow
-* The courier group succeeds, if configured
+* The courier group succeeds, if configured. If downstream workflows are configured, an alert will be sent both when database generation is complete and when downstream workflows succeed
 * The courier group runtime exceeds a threshold, if configured
 * Query thresholds are reached, if configured
-* If downstream workflows are configured, an alert will be sent both when database generation is complete and when downstream workflows succeed
 * A user cancels an automatically launched workflow
 
 .. courier-group-automated-alert-details-end
@@ -111,7 +110,7 @@ Alerts are sent when:
 * A failure occurs within an orchestration group workflow, regardless of whether the orchestration group is configured to run after a courier group or run on a schedule
 * A failure occurs in an upstream courier group if your orchestration group is configured to run after a courier group. This is to let you know about potential delays to your orchestration group workflow.
 * A user cancels an automatically launched workflow
-* The orchestration group succeeds, if configured (only available for orchestration groups run on a schedule)
+* The orchestration group succeeds, if configured. This is only available for orchestration groups run on a schedule. Subscribe to courier group runtime alerts if your orchestration group is configured to run after a courier group and you want to know when it succeeds.
 
 .. orchestration-group-automated-alert-details-end
 
@@ -125,6 +124,9 @@ Alerts are sent when:
 * A failure occurs within campaign send, regardless of whether the campaign is configured to run after a courier group or run on a schedule
 * A user cancels an automatically launched workflow
 * A failure occurs in an upstream courier group if your campaign is configured to run after a courier group. This is to let you know about potential delays to your campaign send.
+* The campaign succeeds, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group success alerts if your campaign is configured to run after a courier group and you want to know when it succeeds.
+* The campaign runtime exceeds a threshold, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group runtime alerts if your campaign is configured to run after a courier group and you want to know when it runs long.
+
 
 .. campaign-automated-alert-details-end
 
@@ -139,7 +141,7 @@ Subscribe to alerts for individual workflow runs to receive alerts on manually r
 
 * Failure alerts
 * Success alerts (always)
-* Duration alerts, if configured
+* Runtime alerts, if configured
 * Query alerts, if configured
 * Workflow stopped alerts
 
@@ -161,7 +163,7 @@ High-level details are visible within a series of boxes along the top of the pag
 * The type of workflow, such as "courier", "courier group", "campaign send", "database", "file upload", and "orchestration group"
 * Who started the workflow, such as "automated" or a user name
 * The time at which the workflow started
-* The duration of the workflow (from start to finish or from start to failure)
+* The Runtime of the workflow (from start to finish or from start to failure)
 
 .. image:: ../../images/howitworks-workflows-details-and-tasks.png
    :width: 600 px
@@ -626,7 +628,7 @@ Courier groups
 
 Some common workflow actions that your brand may see when pulling data to Amperity using courier groups include:
 
-* :ref:`Duration alerts <workflows-courier-groups-duration-alerts>`
+* :ref:`Runtime alerts <workflows-courier-groups-duration-alerts>`
 * :ref:`Workflow alerts <workflows-courier-groups-alerts>`
 
 .. workflows-context-courier-groups-end
@@ -634,16 +636,16 @@ Some common workflow actions that your brand may see when pulling data to Amperi
 
 .. _workflows-courier-groups-duration-alerts:
 
-Duration alerts
+Runtime alerts
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. courier-groups-configure-duration-alert-start
 
-A duration alert notifies when a courier group has run for longer than a configured amount of time. A duration alert is sent to each email address that is configured to receive email alerts for courier groups and/or to a channel in your Slack workspace.
+A runtime alert notifies when a courier group has run for longer than a configured amount of time. A runtime alert is sent to each email address that is configured to receive email alerts for courier groups and/or to a channel in your Slack workspace.
 
 .. courier-groups-configure-duration-alert-end
 
-**To configure a duration alert for a courier group**
+**To configure a runtime alert for a courier group**
 
 .. courier-groups-configure-duration-alert-steps-start
 
@@ -1163,7 +1165,7 @@ How-tos
 
 This section describes tasks related to managing workflow actions in Amperity:
 
-* :ref:`Configure duration alerts for courier groups <workflows-howto-configure-duration-alerts>`
+* :ref:`Configure runtime alerts for courier groups <workflows-howto-configure-duration-alerts>`
 * :ref:`Filter workflows by status <workflows-howto-filter-workflows-by-status>`
 * :ref:`Filter workflows by type <workflows-howto-filter-workflows-by-type>`
 * :ref:`Filter workflows by user <workflows-howto-filter-workflows-by-user>`
@@ -1190,14 +1192,14 @@ This section describes tasks related to managing workflow actions in Amperity:
 
 .. _workflows-howto-configure-duration-alerts:
 
-Configure duration alerts
+Configure runtime alerts
 --------------------------------------------------
 
 .. workflows-howto-configure-duration-alerts-start
 
-A duration alert notifies you when a courier group has run for longer than the configured amount of time.
+A runtime alert notifies you when a courier group has run for longer than the configured amount of time.
 
-* :ref:`Configure duration alerts for courier groups <workflows-howto-configure-duration-alerts-courier-group>`
+* :ref:`Configure runtime alerts for courier groups <workflows-howto-configure-duration-alerts-courier-group>`
 
 .. workflows-howto-configure-duration-alerts-end
 
@@ -1213,7 +1215,7 @@ Use a workflow alert to be notified when a courier group runs for longer than a 
 
 .. courier-groups-configure-duration-alert-end
 
-**To configure a duration alert for a courier group**
+**To configure a runtime alert for a courier group**
 
 .. courier-groups-configure-duration-alert-steps-start
 
@@ -1222,7 +1224,7 @@ Use a workflow alert to be notified when a courier group runs for longer than a 
 
    .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
       :width: 400 px
-      :alt: Enable duration alerts for workflows.
+      :alt: Enable runtime alerts for workflows.
       :align: left
       :class: no-scaled-link
 
@@ -1677,7 +1679,7 @@ View workflow details
 
 Workflow details are available from the **Workflows** page. Click the name of the workflow *or* from the |fa-kebab| menu icon for workflow click **View details**.
 
-Details include the list of individual tasks that occurred during the workflow, the workflow's current status, type of workflow, who started the workflow, the time at which the workflow started, and the duration of the workflow (from start to finish).
+Details include the list of individual tasks that occurred during the workflow, the workflow's current status, type of workflow, who started the workflow, the time at which the workflow started, and the runtime of the workflow (from start to finish).
 
 .. workflows-howto-view-details-end
 
