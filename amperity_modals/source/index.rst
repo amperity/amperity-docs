@@ -17,3 +17,4 @@ Site Index
    destination_lorem_ipsum
    destination_sftp
    openapi
+   semantics
