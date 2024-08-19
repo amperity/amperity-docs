@@ -133,9 +133,9 @@ Another example campaign
 
 .. people-based-measurement-another-example-start
 
-ACME BigStore USA wants to run a new arrivals campaign that is focused on customers who have an affinity for kids apparel. ACME BigStore USA does not have accurate opt-in data available to this campaign.
+Socktown wants to run a new arrivals campaign that is focused on customers who have an affinity for athletic socks. Socktown does not have accurate opt-in data available to this campaign.
 
-ACME BigStore USA builds a relevant segment of customers without using opt-in filters, and then they run the campaign. The campaign might look like this:
+Socktown builds a relevant segment of customers without using opt-in filters, and then they run the campaign. The campaign might look like this:
 
 .. list-table::
    :widths: 120 120 120 120 120
@@ -163,7 +163,7 @@ where the total revenue is equal to the number of customers times the difference
 
    75,000 * ($0.11 - $0.068) = $3150
 
-How can this work when the campaign does not have visibility into who opted in? Is $3150 accurate? An analyst from ACME BigStore USA pulls data from their email service provider. The analyst compares the lists of who, from each group, had opted in and opted out, and then compares that to the results for the campaign:
+How can this work when the campaign does not have visibility into who opted in? Is $3150 accurate? An analyst from Socktown pulls data from their email service provider. The analyst compares the lists of who, from each group, had opted in and opted out, and then compares that to the results for the campaign:
 
 .. list-table::
    :widths: 120 120 120 120 120
