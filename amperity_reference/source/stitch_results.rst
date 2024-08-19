@@ -499,3 +499,22 @@ The **Stitched Records** tab in the **Data Explorer** shows a table with a row f
 #. When finished exploring, click **Close**.
 
 .. stitch-explore-stitched-records-steps-end
+
+View profile attributes and interactions
+--------------------------------------------------
+
+Two additional tabs, **Profile attributes** and **Interactions** can be made available in the data explorer. These show information about Customer 360 attributes and interaction records for an individual customer. To access these tabs:
+
+**To view profile attributes**
+
+.. stitch-configure-profile-attributes-start
+
+#. Configure a database with the following tables: `Unified_Scores`, `Unified_Customer` and a Customer 360 table tagged with the corresponding table semantic.
+#. In the query editor select this database.
+#. Run a query over the customers you're interested in.
+#. Click into the Amperity IDs in the query results.
+#. This opens the **Data Explorer** to the **Profile attributes** tab.
+#. After viewing **Profile attributes** click the **Interactions** tab.
+#. Select a table in the dropdown to inspect interaction records.
+
+.. stitch-configure-profile-attributes-end
