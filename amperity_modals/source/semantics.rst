@@ -125,9 +125,7 @@ Customer profiles (PII)
 
 **update-dt**
 
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-update-dt-start
-      :end-before: .. term-update-dt-end
+   Identifies when the data was last updated.
 
 
 
@@ -162,9 +160,7 @@ Email events
 
 **email-event/event-type**
 
-   .. include:: ../../shared/email-events.rst
-      :start-after: .. email-events-type-start
-      :end-before: .. email-events-type-end
+   The type of email event. Possible values: "Open", "Click", "Sent", "Optin", "Bounce", "Converted" or "Unsubscribe".
 
 **email-event/region**
 
@@ -296,15 +292,13 @@ Email summary
 
 **email-summary/engagement-frequency-last-15-months**
 
-   .. include:: ../../shared/email-events.rst
-      :start-after: .. email-events-engagement-frequency-15-months-start
-      :end-before: .. email-events-engagement-frequency-15-months-end
+   A classification that measures engagement frequency click rates for
+   email addresses that have received a low volume of emails.
 
 **email-summary/engagement-status-last-15-months**
 
-   .. include:: ../../shared/email-events.rst
-      :start-after: .. email-events-engagement-status-15-months-start
-      :end-before: .. email-events-engagement-status-15-months-end
+   A classification that measures click rates for email addresses that
+   have received a low volume of emails.
 
 **email-summary/first-email-click-datetime**
 
@@ -452,9 +446,7 @@ Loyalty events
 
 **loy-event/event-datetime**
 
-   .. include:: ../../shared/loyalty-events.rst
-      :start-after: .. loyalty-event-datetime-start
-      :end-before: .. loyalty-event-datetime-end
+   The date and time at which a loyalty event occurred.
 
 **loy-event/event-description**
 
