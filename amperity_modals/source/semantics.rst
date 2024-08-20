@@ -945,11 +945,163 @@ Transactions
       :start-after: .. term-payment-method-start
       :end-before: .. term-payment-method-end
 
+**txn-item/product-brand**
+
+   The brand name of a product or item.
+
+**txn-item/product-brand-id**
+
+   The ID for the brand name of a product or item.
+
+**txn-item/product-category**
+
+   A category to which a product belongs. Use this semantic tag to identify how a customer categorizes individual products within their product catalog.
+
+**txn-item/product-category-id**
+
+   The ID for the category to which a product belongs.
+
+**txn-item/product-class**
+
+   The name of the class (or grouping) to which a product or item belongs.
+
+**txn-item/product-class-id**
+
+   The ID for the name of the class (or grouping) to which a product or item belongs.
+
+**txn-item/product-collection**
+
+   The name of the collection to which a product or item belongs.
+
+**txn-item/product-collection-id**
+
+   The ID for the name of the collection to which a product or item belongs.
+
+**txn-item/product-color**
+
+   The color of a product or item.
+
+**txn-item/product-color-id**
+
+   The ID for the color of a product or item.
+
+**txn-item/product-department**
+
+   The department to which a product or item belongs.
+
+**txn-item/product-department-id**
+
+   The ID for the department to which a product or item belongs.
+
+**txn-item/product-description**
+
+   A description of the product.
+
+**txn-item/product-division**
+
+   The division to which a product or item belongs.
+
+**txn-item/product-division-id**
+
+   The ID for the division to which a product or item belongs.
+
+**txn-item/product-fabric**
+
+   The fabric used for a product or item.
+
+**txn-item/product-fabric-id**
+
+   The ID for the fabric used for a product or item.
+
+**txn-item/product-gender**
+
+   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, NULL (for unknown).
+
+**txn-item/product-group**
+
+   The group to which a product or item belongs.
+
 **txn-item/product-id**
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-product-id-start
       :end-before: .. term-product-id-end
+
+**txn-item/product-material**
+
+   The material used for a product or item.
+
+**txn-item/product-material-id**
+
+   The ID for the material used for a product or item.
+
+**txn-item/product-msrp**
+
+   The manufacturer's suggested retail price (MSRP) for a product or item.
+
+**txn-item/product-name**
+
+   The name of the product or item.
+
+**txn-item/product-season**
+
+   The season to which a product or item is associated.
+
+**txn-item/product-season-id**
+
+   The ID for the season to which a product or item is associated.
+
+**txn-item/product-silhouette**
+
+   The shape of a product or item, typically an image.
+
+**txn-item/product-size**
+
+   The size of a product or item.
+
+**txn-item/product-size-id**
+
+   The ID for the size of a product or item.
+
+**txn-item/product-sku**
+
+   The stock keeping unit, or SKU, for the product or item.
+
+**txn-item/product-style**
+
+   The style of a product or item.
+
+**txn-item/product-subcategory**
+
+   The subcategory or secondary variant to which a product belongs.
+
+**txn-item/product-subcategory-id**
+
+   The ID for the subcategory or secondary variant to which a product belongs.
+
+**txn-item/product-subclass**
+
+   The subclass to which a product or item is assigned.
+
+**txn-item/product-subclass-id**
+
+   The ID for the subclass to which a product or item is assigned.
+
+**txn-item/product-subdepartment**
+
+   The sub-department to which a product or item is assigned.
+
+**txn-item/product-subdepartment-id**
+
+   The ID for the sub-department to which a product or item is assigned.
+
+**txn-item/product-type**
+
+   The type assigned to a product or item.
+
+**txn-item/product-upc**
+
+   The UPC code for the product or item.
 
 **txn-item/purchase-brand**
 
