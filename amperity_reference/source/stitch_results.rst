@@ -509,9 +509,9 @@ The **Profile attributes** and **Interactions** tabs are available in the data e
 
 .. stitch-configure-profile-attributes-start
 
-#. Configure a database with the **Unified_Scores** and **Unified_Customer** tables, and add a customer 360 table that is tagged with a table semantic.
-#. In the query editor select this database.
-#. Create and run a query to return a list of customers that you're interested in.
+#. Create a database with the **Unified Scores** and **Unified Customer** tables, and add a customer 360 table that is tagged with a table semantic.
+#. In the query editor select the database.
+#. Create and run a query that returns a list of customers.
 #. Click an Amperity ID in the results to open the data explorer.
 #. On the **Interactions** tab, select a table in the **Show matching records from** field. 
 #. View each interaction record.
