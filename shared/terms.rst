@@ -116,7 +116,7 @@ Acxiom collects, analyzes, and sells information about customers and businesses 
 
 .. term-address-start
 
-The address that is associated with the location of an individual customer record. For example: 123 Main Street.
+The address that is associated with the location of a customer, such as "123 Main Street".
 
 .. term-address-end
 
@@ -158,7 +158,7 @@ Address-based householding is a process that standardizes addresses, pairs them 
 
 .. term-address2-start
 
-Additional address information, such as an apartment number or a post office box, that is associated with the location of an individual customer record. For example: Apt #9.
+Additional address information, such as an apartment number or a post office box, that is associated with the location of a customer, such as "Apt #9".
 
 .. term-address2-end
 
@@ -892,7 +892,7 @@ Bing Ads appear within the Bing advertising network to web users. Advertisers pa
 
 .. term-birthdate-start
 
-The date of birth that is associated with an individual customer record.
+The date of birth that is associated with a customer.
 
 .. term-birthdate-end
 
@@ -1208,7 +1208,7 @@ Churn propensity is a predictive model that determines the likelihood that a cus
 
 .. term-city-start
 
-The city that is associated with the location of an individual customer record.
+The city that is associated with the location of a customer.
 
 .. term-city-end
 
@@ -1324,7 +1324,7 @@ A common table expression (CTE) is a named subquery defined by the ``WITH`` clau
 
 .. term-company-start
 
-The company, typically an employer or small business, that is associated with an individual customer record.
+The company, typically an employer or small business, that is associated with a customer.
 
 .. term-company-end
 
@@ -1507,7 +1507,7 @@ Cost represents the total cost of all goods sold (COGS) for a product.
 
 .. term-country-start
 
-The country that is associated with the location of an individual customer record.
+The country that is associated with the location of a customer.
 
 .. term-country-end
 
@@ -2364,7 +2364,7 @@ An edge is the relationship between two vertices in a graph database. Each edge 
 
 .. term-email-start
 
-The email address that is associated with an individual customer record. A customer record may be associated with multiple email addresses.
+The email address that is associated with a customer. A customer may have more than one email address.
 
 .. term-email-end
 
@@ -2777,7 +2777,7 @@ Frequency capping is an approach to marketing that sets limits on the number of 
 
 .. term-full-name-start
 
-A combination of given name (first name) and surname (last name) that is associated with an individual customer record and is stored as a combined value in a single field within customer data. A full name may include a middle name or initial.
+A combination of given name (first name) and surname (last name) for a customer. May include a middle name or initial.
 
 .. term-full-name-end
 
@@ -2785,7 +2785,7 @@ A combination of given name (first name) and surname (last name) that is associa
 
 .. term-full-name-ampid-start
 
-The combination of given name (first name) and surname (last name) that is associated with a unique Amperity ID. A full name may also include the middle name or initial.
+A combination of given name (first name) and surname (last name) for a customer. May include a middle name or initial.
 
 .. term-full-name-ampid-end
 
@@ -2794,7 +2794,7 @@ The combination of given name (first name) and surname (last name) that is assoc
 
 .. term-gender-start
 
-The gender that is associated with an individual customer record.
+The gender that is associated with a customer.
 
 .. term-gender-end
 
@@ -2837,7 +2837,7 @@ The suffix that identifies to which family generation a unique Amperity ID belon
 
 .. term-given-name-start
 
-The first name that is associated with an individual customer record.
+The first name that is associated with a customer.
 
 .. term-given-name-end
 
@@ -3691,7 +3691,7 @@ A load operation defines the fileset to be processed by a courier. Each file in 
 
 .. term-location-start
 
-A location is a unique combination of address, address2, city, state, and postal details for an individual customer record.
+A location is a unique combination of address, address2, city, state, and postal details for a customer.
 
 .. term-location-end
 
@@ -3782,7 +3782,7 @@ These loyalty programs also retain information about which channels or by what m
 
 .. term-loyalty-id-start
 
-The identifier for a loyalty program that is associated with an individual customer record.
+The identifier for a loyalty program that is associated with a customer.
 
 .. term-loyalty-id-end
 
@@ -4685,7 +4685,7 @@ Personally identifiable information (PII) is any data that could potentially ide
 
 .. term-phone-start
 
-The phone number that is associated with an individual customer record. A customer record may be associated with multiple phone numbers.
+The phone number that is associated with a customer. A customer may bhave more than one phone number.
 
 .. term-phone-end
 
@@ -4747,7 +4747,7 @@ A policy represents a set of actions that are available to a user when that poli
 
 .. term-postal-start
 
-The zip code or postal code that is associated with the location of an individual customer record.
+The zip code or postal code that is associated with the location of a customer.
 
 .. term-postal-end
 
@@ -6067,7 +6067,7 @@ along with tables that are associated with predictive modeling and AmpIQ, such a
 
 .. term-state-start
 
-The state or province that is associated with the location of an individual customer record.
+The state or province that is associated with the location of a customer.
 
 .. term-state-end
 
@@ -6174,7 +6174,7 @@ Stitch QA tables are generated by Stitch. Use these tables in a dedicated databa
 
 .. term-stitched-record-start
 
-A stitched record is a unique output of the Stitch process that associates the Amperity ID to an individual customer record.
+A stitched record is a unique output of the Stitch process that associates the Amperity ID to a customer.
 
 .. term-stitched-record-end
 
@@ -6287,7 +6287,7 @@ with user records in the customer 360 database. User records in a suppression ta
 
 .. term-surname-start
 
-The last name that is associated with an individual customer record.
+The last name that is associated with a customer.
 
 .. term-surname-end
 
@@ -6411,7 +6411,7 @@ TikTok is the world's leading destination for short-form mobile videos. TikTok's
 
 .. term-title-start
 
-The title that precedes a full name that is associated with an individual customer record. For example: Mr., Mrs, and Dr.
+The title that precedes a full name that is associated with a customer, such as "Mr.", "Mrs", and "Dr".
 
 .. term-title-end
 
