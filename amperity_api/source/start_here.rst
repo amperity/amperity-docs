@@ -41,7 +41,7 @@ OpenAPI specification
 
 .. start-here-openapi-specification-start
 
-Amperity provides an `OpenAPI specification <https://docs.amperity.com/api/openapi.html>`__ for the Amperity API. Download the OpenAPI specification, and then import it into an API tool, such as Postman, to start interacting with Amperity API endpoints.
+Amperity provides an `OpenAPI specification <https://docs.amperity.com/api/openapi.html>`__ for the Amperity API. Download the OpenAPI specification, and then import it into an API tool, such as `Postman <https://www.postman.com/>`__, to start interacting with Amperity API endpoints.
 
 .. start-here-openapi-specification-end
 
@@ -109,6 +109,7 @@ In addition to all required headers, you must specify the HTTP method, base URL,
         -url "https://{tenant-id}.amperity.com/api/{endpoint}/" \
         -H "Authorization: Bearer ${access-token}" \
         -H "Amperity-Tenant: {tenant-id}" \
+        -H "Content-Type: application/json" \
         -H "api-version: {version}"
 
 Most endpoints have additional endpoint-specific parameters that may be included in the request.
@@ -123,7 +124,7 @@ Responses
 
 .. start-here-responses-start
 
-The Amperity API responds in JSON format. Each response includes relevant :doc:`HTTP status codes <responses>` that indicate the success or failure of the request. The individual properties in a response will vary by endpoint; all endpoints that support the GET HTTP method will return lists using :ref:`pagination <api-amperity-pagination>`.
+The Amperity API responds in JSON format. Each response includes relevant :doc:`HTTP status codes <responses>` that indicate the success or the failure of a request. The individual properties in a response will vary by endpoint; all endpoints that support the GET HTTP method will return lists using :ref:`pagination <api-amperity-pagination>`.
 
 .. start-here-responses-end
 
