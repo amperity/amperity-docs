@@ -134,9 +134,9 @@ The following sections describe how you can use the visual **Query Editor** to b
 AND vs. OR
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments.rst
-   :start-after: .. segments-howitworks-and-vs-or-start
-   :end-before: .. segments-howitworks-and-vs-or-end
+.. include:: ../../amperity_reference/source/segments_editor.rst
+   :start-after: .. segments-editor-and-vs-or-intro-start
+   :end-before: .. segments-editor-and-vs-or-intro-end
 
 
 .. _segments-howitworks-and-vs-or-context:
@@ -144,6 +144,6 @@ AND vs. OR
 How AND vs. OR works
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments.rst
-   :start-after: .. segments-howitworks-and-vs-or-context-start
-   :end-before: .. segments-howitworks-and-vs-or-context-end
+.. include:: ../../amperity_reference/source/segments_editor.rst
+   :start-after: .. segments-editor-and-vs-or-start
+   :end-before: .. segments-editor-and-vs-or-end
