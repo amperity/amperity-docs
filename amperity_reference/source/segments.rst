@@ -40,7 +40,7 @@ About the Segments page
 
 .. segments-page-start
 
-You can **Segments** view a list of active segments along with recommended segments highlighted across the top of the page.
+You can view a list of active segments along with recommended segments highlighted across the top of the page.
 
 Click **Create Segment** to open the **Segment Editor**. Build your segment using a series of drop-downs and picklists. Refresh **Segment insights** to see how many customers match and to see how much value they bring to your brand. Activate the segment when you're ready to use it in marketing campaigns.
 
