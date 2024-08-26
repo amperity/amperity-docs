@@ -75,22 +75,15 @@ All versioned tables are appended with **_versioned**. For example:
 Available versions
 ==================================================
 
-.. historical-data-available-versions-start
-
-A version is created for all tables every time the customer 360 database is run, regardless of database run type (express, normal, or full). The **amperity_version** column is added to all versioned tables. The typical frequency at which the customer 360 database is run is "once per day", but this is not always the case.
-
-.. important:: The maximum number of versions is 10 and must have been created within the last 14 days.
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-database-howto-enable-table-versioning-start
+   :end-before: .. databases-database-howto-enable-table-versioning-end
 
 **To enable table versioning**
 
-#. From the **Database Table** editor, under **Advanced Settings**, expand **Version History**.
-#. Select **Enable table version history**.
-
-   .. note:: Version history allows queries to be made against older versions of this table. Adding or removing columns will break previous versions. Only enable table versioning for tables that are expected to have a static schema.
-
-#. Click **Save**.
-
-.. historical-data-available-versions-end
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-database-howto-enable-table-versioning-steps-start
+   :end-before: .. databases-database-howto-enable-table-versioning-steps-end
 
 
 .. _historical-data-access-datetime:
