@@ -598,6 +598,7 @@ This section describes tasks related to building and managing databases in Amper
 * :ref:`databases-core-howtos-edit-custom`
 * :ref:`databases-database-howto-edit-database`
 * :ref:`databases-database-howto-edit-table`
+* :ref:`databases-database-howto-enable-table-versioning`
 * :ref:`databases-database-howto-enforce-static-schemas`
 * :ref:`databases-database-howto-explore`
 * :ref:`databases-database-howto-export-database`
@@ -1519,6 +1520,37 @@ Tables in a database may be edited. This should not be done without considering 
 #. Click **Save**.
 
 .. databases-database-howto-edit-table-steps-end
+
+
+.. _databases-database-howto-enable-table-versioning:
+
+Enable table versioning
+--------------------------------------------------
+
+.. databases-database-howto-enable-table-versioning-start
+
+A version is created for all tables every time the customer 360 database is run, regardless of database run type (express, normal, or full). The **amperity_version** column is added to all versioned tables. The typical frequency at which the customer 360 database is run is "once per day", but this is not always the case.
+
+.. important:: The maximum number of versions is 10 and must have been created within the last 14 days.
+
+   Changes to columns within a table that is enabled for table versioning changes the schema and will cause incompatible versions to be dropped. To avoid this, add columns to the end of the table.
+
+.. databases-database-howto-enable-table-versioning-end
+
+**To enable table versioning**
+
+.. databases-database-howto-enable-table-versioning-steps-start
+
+#. From the **Database Table** editor, under **Advanced Settings**, expand **Version history**.
+#. Select **Enable table version history**.
+
+   .. note:: Version history allows queries to be made against older versions of this table. Adding or removing columns within the table will cause incompatible versions to be dropped.
+
+      |attribute-recommended| Enforce static table schemas when using table versioning. This will help avoid schema changes that cause incompatible versions to be dropped.
+
+#. Click **Save**.
+
+.. databases-database-howto-enable-table-versioning-steps-end
 
 
 .. _databases-database-howto-enforce-static-schemas:
