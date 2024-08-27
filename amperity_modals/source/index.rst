@@ -16,5 +16,6 @@ Site Index
    destination_active_campaign
    destination_lorem_ipsum
    destination_sftp
+   destination_vibes
    openapi
    semantics

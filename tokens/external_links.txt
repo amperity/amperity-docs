@@ -2346,12 +2346,12 @@
 
 .. |ext_vibes_import_recipient_list| raw:: html
 
-   <a href="https://developer.vibes.com/display/APIs/Recipient+List+Import" target="_blank">recipient list</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://developer-platform.vibes.com/docs/recipient-list-import" target="_blank">recipient list</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_vibes_pull_data| raw:: html
 
-   <a href="https://developer.vibes.com/display/APIs/Legacy+SFTP+Documentation" target="_blank">pull data</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://developer-platform.vibes.com/docs/standard-data-extracts-via-sftp" target="_blank">pull data</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_yellowfin| raw:: html
