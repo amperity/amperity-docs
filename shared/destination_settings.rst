@@ -187,7 +187,7 @@ A "/" (forward slash) must be used as the first character for this value. For ex
 
 .. setting-common-remote-folder-spaces-start
 
-If the path to the remote folder contains a space, use a backslash (\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\ ACME".
+If the path to the remote folder contains a space, use a backslash (\\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
 
 .. setting-common-remote-folder-spaces-end
 
