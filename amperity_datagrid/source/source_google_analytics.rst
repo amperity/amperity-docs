@@ -143,7 +143,6 @@ The following fields will be available:
 * **date**
 * **deviceCategory**
 * **operatingSystem**
-* **sessionGoogleAdsQuery**
 * **operatingSystemVersion**
 * **sessionMedium**
 * **sessionGoogleAdsAdGroupId**
