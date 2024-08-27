@@ -3,9 +3,9 @@
 .. 
 
 .. |destination-name| replace:: SFTP
-.. |file-format| replace:: Apache Parquet, CSV, Custom delimiter, JSON, NDJSON, PSV, or TSV
-.. |sftp-hostname| replace:: "sftp.acme.com"
-.. |remote-folder| replace:: "/folder/name"
+.. |file-format| replace:: CSV
+.. |sftp-hostname| replace:: "upload.vibes.com"
+.. |remote-folder| replace:: "/folder"
 .. |sftp-port| replace:: "22"
 
 
