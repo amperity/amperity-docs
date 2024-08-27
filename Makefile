@@ -2,9 +2,7 @@ BUILDDIR = build
 BUILD_COMMAND = sphinx-build -b html --jobs auto -W
 BUILD_HELP_COMMAND = sphinx-build -b text -W
 
-
-
-all: base ampiq amp360 datagrid reference api contributing
+all: base ampiq amp360 datagrid reference api help modals contributing
 
 static:
 	cp -vr downloads $(BUILDDIR)/
@@ -32,6 +30,14 @@ reference: static ## Build only the "/reference" section
 api: static ## Build only the "/api" section
 	# Building Amperity API pages...
 	$(BUILD_COMMAND) amperity_api/source $(BUILDDIR)/api
+
+help: static ## Build only the "/help" section
+	# Building Contributing pages...
+	$(BUILD_COMMAND) amperity_help/source $(BUILDDIR)/help
+
+modals: static ## Build only the "/modals" section
+	# Building Contributing pages...
+	$(BUILD_COMMAND) amperity_modals/source $(BUILDDIR)/modals
 
 contributing: static ## Build only the "/contributing" section
 	# Building Contributing pages...
