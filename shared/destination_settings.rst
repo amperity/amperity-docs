@@ -139,7 +139,7 @@ Applies to: currently unknown. Look at ActiveCampaign, Cordial, HubSpot, Klaviyo
 
 .. setting-common-list-name-start
 
-The primary key for the audience. Set to "email".
+The primary key for the audience. Set to |audience-primary-key|.
 
 .. setting-common-list-name-end
 
@@ -1283,6 +1283,18 @@ Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airshi
 
 .. setting-sftp-about-end
 
+.. setting-sftp-configure-start
+
+Amperity can be configured to send |what-send| to |where-send|.
+
+.. setting-sftp-configure-end
+
+.. setting-sftp-get-details-start
+
+Review the following details before configuring credentials for |destination-name| and before configuring Amperity to send |what-send| to |where-send|.
+
+.. setting-sftp-get-details-end
+
 **Compression**
 
 See Common.
@@ -1318,6 +1330,21 @@ See Common.
 **Remote folder**
 
 See Common.
+
+**Requirements**
+
+All SFTP destinations share the same requirements block for modals. These can only use quotes for inline formatting.
+
+.. setting-sftp-requirements-start
+
+#. The hostname and port for the SFTP site to which data will be sent. For example, |sftp-hostname| (hostname) and |sftp-port| (port).
+#. A username and passphrase.
+#. The host public key when encryption is configured.
+#. A private key when the "private-key" credential type is selected.
+#. The name of the remote folder to which Amperity will send data. This must begin with a forward slash ("/"). For example: |remote-folder|.
+#. A public key is required when Amperity is configured to send files to the remote folder using Pretty Good Privacy (PGP) encryption.
+
+.. setting-sftp-requirements-end
 
 **Success file**
 
