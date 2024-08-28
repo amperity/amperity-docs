@@ -5,29 +5,29 @@
 
 .. meta::
     :description lang=en:
-        Configure and manage the Email Ampid Assignment table.
+        Configure and manage the Email AmpID Assignment table.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure and manage the Email Ampid Assignment table.
+        Configure and manage the Email AmpID Assignment table.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Email Ampid Assignment table
+        Email AmpID Assignment table
 
 ==================================================
-Email Ampid Assignment table
+Email AmpID Assignment table
 ==================================================
 
 .. table-email-ampid-assignment-start
 
-The **Email Ampid Assignment** table narrows the many-to-many relationships between Amperity IDs and email addresses down to one-to-one relationships, and then makes the one-to-one relationships available to the **Merged Customers** table to help your brand identify the best email address for each of your customers.
+The **Email AmpID Assignment** table narrows the many-to-many relationships between Amperity IDs and email addresses down to one-to-one relationships, and then makes the one-to-one relationships available to the **Merged Customers** table to help your brand identify the best email address for each of your customers.
 
 .. table-email-ampid-assignment-end
 
 .. table-email-ampid-assignment-note-start
 
-.. note:: The **Email Ampid Assignment** table does not prevent Amperity IDs from being associated with multiple email addresses *or* prevent email addresses from being associated with multiple Amperity IDs.
+.. note:: The **Email AmpID Assignment** table does not prevent Amperity IDs from being associated with multiple email addresses *or* prevent email addresses from being associated with multiple Amperity IDs.
 
    This table enforces a one-to-one relationship for use in the **Merged Customers** table.
 
@@ -43,7 +43,7 @@ How this table works
 
 .. table-email-ampid-assignment-howitworks-start
 
-The **Email Ampid Assignment** table:
+The **Email AmpID Assignment** table:
 
 #. Returns a list of all email addresses.
 #. Ranks email addresses by Amperity ID using a prioritized list of attributes that have been configured for this table.
@@ -68,7 +68,7 @@ Configure table
 
 .. table-email-ampid-assignment-configure-table-start
 
-Configuring the **Email Ampid Assignment** table requires the following steps:
+Configuring the **Email AmpID Assignment** table requires the following steps:
 
 #. :ref:`Define the list of Amperity ID attributes <table-email-ampid-assignment-configure-ampid-attributes>`
 #. :ref:`Define the list of email address attributes <table-email-ampid-assignment-configure-email-attributes>`
@@ -82,7 +82,7 @@ Configuring the **Email Ampid Assignment** table requires the following steps:
 
 .. caution:: You should only configure the list of Amperity ID and email address attributes, and then update the priority for ranking Amperity IDs and email addresses.
 
-   For most tenants, the thresholds should not be updated. No other sections within the **Email Ampid Assignment** table require updates.
+   For most tenants, the thresholds should not be updated. No other sections within the **Email AmpID Assignment** table require updates.
 
 .. table-email-ampid-assignment-configure-table-caution-end
 
