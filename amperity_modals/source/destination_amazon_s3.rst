@@ -2,19 +2,17 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: SFTP
-.. |file-format| replace:: CSV
-.. |sftp-hostname| replace:: "upload.vibes.com"
-.. |remote-folder| replace:: "/folder"
-.. |sftp-port| replace:: "22"
+.. |destination-name| replace:: Amazon S3
+.. |file-format| replace:: Apache Parquet, CSV, Custom delimiter, JSON, NDJSON, PSV, or TSV
+.. |remote-folder| replace:: "/folder/name"
 
 
-SFTP
+Amazon S3
 ==================================================
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-sftp-about-start
-   :end-before: .. setting-sftp-about-end
+   :start-after: .. setting-amazon-s3-about-start
+   :end-before: .. setting-amazon-s3-about-end
 
 
 Requirements
@@ -22,8 +20,10 @@ Requirements
 
 .. TODO: This destination has the following requirements.
 
-#. The hostname for the SFTP site to which data will be sent. The hostname should be |sftp-hostname|.
-#. A username and passphrase for |sftp-hostname|.
+#. An Amazon S3 bucket that is already configured to use credentials or cross-account role assumption.
+#. The name of the S3 bucket to which Amperity will send data.
+#. The Amazon S3 prefix for the location in the Amazon S3 bucket to which Amperity will send data.
+#. The public key to use when Amperity is configured to send files to the bucket using Pretty Good Privacy (PGP) encryption.
 
 
 Settings
@@ -61,6 +61,12 @@ Settings
       :start-after: .. setting-common-file-format-custom-delimiter-start
       :end-before: .. setting-common-file-format-custom-delimiter-end
 
+   **Apache Parquet files only**
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-common-file-format-apache-parquet-start
+      :end-before: .. setting-common-file-format-apache-parquet-end
+
 
 **Filename template**
 
@@ -74,13 +80,6 @@ Settings
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-header-start
       :end-before: .. setting-common-header-end
-
-
-**Line ending**
-
-   .. include:: ../../shared/destination_settings.rst
-      :start-after: .. setting-common-line-ending-start
-      :end-before: .. setting-common-line-ending-end
 
 
 **PGP public key**
@@ -101,21 +100,11 @@ Settings
       :end-before: .. setting-common-quote-mode-none-end
 
 
-**Remote folder**
-
-   **Required**
+**S3 prefix**
 
    .. include:: ../../shared/destination_settings.rst
-      :start-after: .. setting-common-remote-folder-start
-      :end-before: .. setting-common-remote-folder-end
-
-   .. include:: ../../shared/destination_settings.rst
-      :start-after: .. setting-common-remote-folder-forward-slash-start
-      :end-before: .. setting-common-remote-folder-forward-slash-end
-
-   .. include:: ../../shared/destination_settings.rst
-      :start-after: .. setting-common-remote-folder-spaces-start
-      :end-before: .. setting-common-remote-folder-spaces-end
+      :start-after: .. setting-amazon-s3-prefix-start
+      :end-before: .. setting-amazon-s3-prefix-end
 
 
 **Success file**

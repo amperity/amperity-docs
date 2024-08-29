@@ -22,9 +22,16 @@ Requirements
 
 .. TODO: This destination has the following requirements.
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-sftp-requirements-start
-   :end-before: .. setting-sftp-requirements-end
+.. setting-sftp-requirements-start
+
+#. The hostname and port for the SFTP site to which data will be sent. For example, |sftp-hostname| (hostname) and |sftp-port| (port).
+#. A username and passphrase.
+#. The host public key when encryption is configured.
+#. The name of the remote folder to which Amperity will send data. This must begin with a forward slash ("/"). For example: |remote-folder|.
+#. The public key to use when Amperity is configured to send files to the bucket using Pretty Good Privacy (PGP) encryption.
+#. The private key if the "private-key" credential type is selected.
+
+.. setting-sftp-requirements-end
 
 
 Settings
@@ -61,6 +68,12 @@ Settings
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-file-format-custom-delimiter-start
       :end-before: .. setting-common-file-format-custom-delimiter-end
+
+   **Apache Parquet files only**
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-common-file-format-apache-parquet-start
+      :end-before: .. setting-common-file-format-apache-parquet-end
 
 
 **Filename template**
