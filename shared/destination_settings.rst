@@ -73,13 +73,21 @@ The compression format to apply to the output file. May be one of "GZIP", "None"
 
 .. setting-common-compression-end
 
+**Configure** (in intro)
+
+.. setting-common-file-configure-start
+
+Amperity can be configured to send |what-send| to |where-send|.
+
+.. setting-common-file-configure-end
+
 **Escape character**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-escape-character-start
 
-The escape character that is required by |destination-name|.
+The escape character to use in the file output.
 
 .. setting-common-escape-character-end
 
@@ -95,7 +103,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-file-format-start
 
-Send |file-format| to |destination-name|.
+Configure Amperity to send |file-format| to |destination-name|.
 
 .. setting-common-file-format-end
 
@@ -105,6 +113,12 @@ Some file formats allow a custom delimiter. Choose the "Custom delimiter" file f
 
 .. setting-common-file-format-custom-delimiter-end
 
+.. setting-common-file-format-apache-parquet-start
+
+The extension for Apache Parquet files may be excluded from the directory name.
+
+.. setting-common-file-format-apache-parquet-end
+
 **Filename template**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
@@ -112,6 +126,14 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 .. include:: ../../shared/terms.rst
    :start-after: .. term-filename-template-start
    :end-before: .. term-filename-template-end
+
+**Get details** (common intro)
+
+.. setting-common-get-details-start
+
+Review the following details before configuring credentials for |destination-name| and before configuring Amperity to send |what-send| to |where-send|.
+
+.. setting-common-get-details-end
 
 **Header?**
 
@@ -135,7 +157,7 @@ The line ending to use in file output. May be one of "LF" or "CRLF".
 
 **List name**
 
-Applies to: currently unknown. Look at ActiveCampaign, Cordial, HubSpot, Klaviyo, and Listrak. Try to come up with some type of template.
+Applies to ActiveCampaign, Cordial, HubSpot, Klaviyo, Listrak and others. Try to come up with some type of template.
 
 .. setting-common-list-name-start
 
@@ -171,7 +193,7 @@ Unescaped, unquoted files may occur when quote mode is set to "None" and an esca
 
 **Remote folder**
 
-Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
+Applies to: Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-remote-folder-start
 
@@ -359,6 +381,15 @@ This section contains settings that are unique to Amazon S3.
 
 Applies to: Amazon S3, Cheetah Digital, Domo, Optimizely.
 
+
+**About**
+
+.. setting-amazon-s3-about-start
+
+Amazon Simple Storage Service (Amazon S3) can store data files of any size for any file format that is supported by Amperity.
+
+.. setting-amazon-s3-about-end
+
 **Compression**
 
 See Common.
@@ -389,11 +420,11 @@ See Common.
 
 **S3 prefix**
 
-.. setting-amazon-s3-s3-prefix-start
+.. setting-amazon-s3-prefix-start
 
-xxxxx
+The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
-.. setting-amazon-s3-s3-prefix-end
+.. setting-amazon-s3-prefix-end
 
 **Success file**
 
@@ -1289,12 +1320,6 @@ Amperity can be configured to send |what-send| to |where-send|.
 
 .. setting-sftp-configure-end
 
-.. setting-sftp-get-details-start
-
-Review the following details before configuring credentials for |destination-name| and before configuring Amperity to send |what-send| to |where-send|.
-
-.. setting-sftp-get-details-end
-
 **Compression**
 
 See Common.
@@ -1330,21 +1355,6 @@ See Common.
 **Remote folder**
 
 See Common.
-
-**Requirements**
-
-All SFTP destinations share the same requirements block for modals. These can only use quotes for inline formatting.
-
-.. setting-sftp-requirements-start
-
-#. The hostname and port for the SFTP site to which data will be sent. For example, |sftp-hostname| (hostname) and |sftp-port| (port).
-#. A username and passphrase.
-#. The host public key when encryption is configured.
-#. A private key when the "private-key" credential type is selected.
-#. The name of the remote folder to which Amperity will send data. This must begin with a forward slash ("/"). For example: |remote-folder|.
-#. A public key is required when Amperity is configured to send files to the remote folder using Pretty Good Privacy (PGP) encryption.
-
-.. setting-sftp-requirements-end
 
 **Success file**
 

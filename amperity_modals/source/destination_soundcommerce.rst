@@ -2,14 +2,13 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: SFTP
+.. |destination-name| replace:: SoundCommerce
 .. |file-format| replace:: CSV
-.. |sftp-hostname| replace:: "upload.vibes.com"
+.. |sftp-hostname| replace:: "client.sftp.soundcommerce.io"
 .. |remote-folder| replace:: "/folder"
-.. |sftp-port| replace:: "22"
 
 
-SFTP
+SoundCommerce
 ==================================================
 
 .. include:: ../../shared/destination_settings.rst
@@ -23,7 +22,8 @@ Requirements
 .. TODO: This destination has the following requirements.
 
 #. The hostname for the SFTP site to which data will be sent. The hostname should be |sftp-hostname|.
-#. A username and passphrase for |sftp-hostname|.
+#. A username for |sftp-hostname|.
+#. The private key required by |sftp-hostname|.
 
 
 Settings
