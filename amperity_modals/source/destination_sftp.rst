@@ -7,6 +7,8 @@
 .. |sftp-hostname| replace:: "sftp.acme.com"
 .. |remote-folder| replace:: "/folder/name"
 .. |sftp-port| replace:: "22"
+.. |what-send| replace:: Apache Parquet, CSV, JSON, NDJSON, PSV, or TSV files
+.. |where-send| replace:: any SFTP site
 
 
 SFTP
@@ -83,7 +85,7 @@ Settings
       :end-before: .. term-filename-template-end
 
 
-**Header?**
+**Header**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-header-start

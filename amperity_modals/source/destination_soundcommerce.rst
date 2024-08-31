@@ -6,6 +6,8 @@
 .. |file-format| replace:: CSV
 .. |sftp-hostname| replace:: "client.sftp.soundcommerce.io"
 .. |remote-folder| replace:: "/folder"
+.. |what-send| replace:: CSV files
+.. |where-send| replace:: |destination-name|
 
 
 SoundCommerce
@@ -69,7 +71,7 @@ Settings
       :end-before: .. term-filename-template-end
 
 
-**Header?**
+**Header**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-header-start
