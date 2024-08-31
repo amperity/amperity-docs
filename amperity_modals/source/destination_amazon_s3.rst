@@ -5,6 +5,8 @@
 .. |destination-name| replace:: Amazon S3
 .. |file-format| replace:: Apache Parquet, CSV, Custom delimiter, JSON, NDJSON, PSV, or TSV
 .. |remote-folder| replace:: "/folder/name"
+.. |what-send| replace:: Apache Parquet, CSV, JSON, NDJSON, PSV, or TSV files
+.. |where-send| replace:: any Amazon S3 bucket
 
 
 Amazon S3
@@ -75,7 +77,7 @@ Settings
       :end-before: .. term-filename-template-end
 
 
-**Header?**
+**Header**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-header-start

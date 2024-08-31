@@ -69,7 +69,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-compression-start
 
-The compression format to apply to the output file. May be one of "GZIP", "None", "TAR", "TGZ", or "ZIP". 
+The compression format to apply to the file. May be one of "GZIP", "None", "TAR", "TGZ", or "ZIP". 
 
 .. setting-common-compression-end
 
@@ -103,7 +103,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-file-format-start
 
-Configure Amperity to send |file-format| to |destination-name|.
+Configure Amperity to send |what-send| to |where-send|.
 
 .. setting-common-file-format-end
 
@@ -135,7 +135,7 @@ Review the following details before configuring credentials for |destination-nam
 
 .. setting-common-get-details-end
 
-**Header?**
+**Header**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
@@ -165,13 +165,21 @@ The primary key for the audience. Set to |audience-primary-key|.
 
 .. setting-common-list-name-end
 
+**Optional settings**
+
+.. setting-common-optional-settings-start
+
+All other Amperity file format settings for |destination-name| are optional.
+
+.. setting-common-optional-settings-end
+
 **PGP public key**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-pgp-public-key-start
 
-The PGP public key that Amperity uses to encrypt files that are sent to |destination-name|.
+The PGP public key that Amperity will use to encrypt files.
 
 .. setting-common-pgp-public-key-end
 
@@ -203,7 +211,7 @@ The remote folder to which Amperity will send data.
 
 .. setting-common-remote-folder-forward-slash-start
 
-A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
+A "/" (forward slash) must be used as the first character for this value. For example: |remote-folder|. For example: |remote-folder|.
 
 .. setting-common-remote-folder-forward-slash-end
 
@@ -213,29 +221,38 @@ If the path to the remote folder contains a space, use a backslash (\\) characte
 
 .. setting-common-remote-folder-spaces-end
 
+**Sandbox**
+
+.. setting-common-sandbox-recommendation-start
+
+Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a test audience, and then verify the the results in |destination-name|. After the end-to-end workflow has been verified, push the destination from the sandbox to production.
+
+.. setting-common-sandbox-recommendation-end
+
+
 **Success file**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-success-file-start
 
-Enable to send a .DONE file when Amperity has finished sending data.
+Enable to send a ".DONE" file when Amperity has finished sending data.
 
 .. setting-common-success-file-end
 
 .. setting-common-success-file-downstream-start
 
-If a downstream sensor is listening for files sent from Amperity, configure that sensor to listen for the presence of the .DONE file.
+If a downstream sensor is listening for files sent from Amperity, configure that sensor to listen for the presence of the ".DONE" file.
 
 .. setting-common-success-file-downstream-end
 
-**Use Zip64?**
+**Use Zip64**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-use-zip64-start
 
-Enable to apply data compression to very large files.
+Enable to apply Zip64 data compression to very large files.
 
 .. setting-common-use-zip64-end
 
@@ -380,9 +397,6 @@ xxxxx
 This section contains settings that are unique to Amazon S3.
 
 Applies to: Amazon S3, Cheetah Digital, Domo, Optimizely.
-
-
-**About**
 
 .. setting-amazon-s3-about-start
 
@@ -1313,12 +1327,6 @@ Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airshi
 `Secure File Transfer Protocol (SFTP) <https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol>`__ is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
 
 .. setting-sftp-about-end
-
-.. setting-sftp-configure-start
-
-Amperity can be configured to send |what-send| to |where-send|.
-
-.. setting-sftp-configure-end
 
 **Compression**
 

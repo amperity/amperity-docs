@@ -4,6 +4,8 @@
 
 .. |destination-name| replace:: ActiveCampaign
 .. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: CSV files
+.. |where-send| replace:: |destination-name|
 
 
 ActiveCampaign

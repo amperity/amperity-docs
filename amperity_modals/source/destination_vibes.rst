@@ -7,6 +7,8 @@
 .. |sftp-hostname| replace:: "upload.vibes.com"
 .. |remote-folder| replace:: "/folder"
 .. |sftp-port| replace:: "22"
+.. |what-send| replace:: CSV files
+.. |where-send| replace:: |destination-name|
 
 
 SFTP
@@ -69,7 +71,7 @@ Settings
       :end-before: .. term-filename-template-end
 
 
-**Header?**
+**Header**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-header-start
