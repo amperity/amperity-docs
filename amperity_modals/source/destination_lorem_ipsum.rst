@@ -3,6 +3,8 @@
 .. 
 
 .. |destination-name| replace:: Lorem Ipsum
+.. |what-send| replace:: files
+.. |where-send| replace:: to lorem ipsum
 
 
 Lorem Ipsum
