@@ -244,6 +244,11 @@
    <i class="fad fa-triangle-exclamation" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #b2b520;"></i>
 
 
+.. |setting-provided-by-amperity| raw:: html
+
+   <i class="fad fa-arrow-alt-circle-right" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #317a1c;"></i>
+
+
 .. |input-to-ampiq-models| raw:: html
 
    <i class="fad fa-arrow-alt-circle-right" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #317a1c;"></i>
