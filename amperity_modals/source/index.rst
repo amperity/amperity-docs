@@ -13,6 +13,7 @@ Site Index
 .. toctree::
    :hidden:
 
+   credential_azure_blob_storage
    destination_active_campaign
    destination_amazon_s3
    destination_lorem_ipsum
