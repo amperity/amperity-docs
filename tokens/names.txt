@@ -42,6 +42,11 @@
 .. FontAwesome icons won't build into PDFs, so just use a hex code (for stars)
 
 
+.. |ext_link| raw:: html
+
+   <i class="fas fa-external-link-square-alt"></i>
+
+
 .. |bars| raw:: html
 
    <i class="fas fa-bars"></i>
