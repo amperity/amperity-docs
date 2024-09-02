@@ -27,6 +27,68 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 .. setting-lorem-ipsum-alt-end
 
 
+**STEPS**
+
+**Step 01a**
+
+.. destinations-steps-add-destinations-start
+
+Open the **Destinations** page, and then click the **Add destination** button.
+
+.. destinations-steps-add-destinations-end
+
+**Step 01b**
+
+.. destinations-steps-add-destinations-select-start
+
+To configure a destination for |destination-name|, do one of the following:
+
+#. Click the row in which |destination-name| is located. Destinations are listed alphabetically and you can scroll up and down the list.
+#. Search for |destination-name|. Start typing |filter-the-list|. The list will filter to show only matching destinations.
+
+.. destinations-steps-add-destinations-select-end
+
+**Step 02a**
+
+.. destinations-steps-select-credential-start
+
+Select the credential for |destination-name| from the **Credential** drop-down, and then click **Continue**.
+
+.. destinations-steps-select-credential-end
+
+**Step 02b**
+
+.. destinations-steps-test-connection-start
+
+Click the "Test connection" link on the "Configure destination" page to verify that Amperity can connect to |destination-name|.
+
+.. destinations-steps-test-connection-end
+
+**Step 03**
+
+.. destinations-steps-name-and-description-start
+
+In the "Destination settings" dialog box, assign the destination a name and description that ensures other users of Amperity can recognize when to use this destination.
+
+.. destinations-steps-name-and-description-end
+
+**Step 04**
+
+.. destinations-steps-settings-start
+
+Configure the following settings, and then click "Save".
+
+.. destinations-steps-settings-end
+
+**Step 05**
+
+.. destinations-steps-business-users-start
+
+After this destination is configured, business users may configure Amperity to |sendto-link| and |channel-link| to |destination-name|.
+
+.. destinations-steps-business-users-end
+
+
 
 
 **COMMON**
@@ -80,6 +142,14 @@ The compression format to apply to the file. May be one of "GZIP", "None", "TAR"
 Amperity can be configured to send |what-send| to |where-send|.
 
 .. setting-common-file-configure-end
+
+**Delimiter**
+
+.. setting-common-delimiter-start
+
+The custom character to use as a delimiter within the output file.
+
+.. setting-common-delimiter-end
 
 **Escape character**
 
@@ -135,6 +205,16 @@ Review the following details before configuring credentials for |destination-nam
 
 .. setting-common-get-details-end
 
+.. setting-common-get-details-file-specific-start
+
+File-specific details to ensure that all files that are sent from Amperity are configured correctly for your brand's downstream workflows.
+
+For example, Apache Parquet can be configured to exclude the extension from the directory name, some files require specific escape characters, and others may have unique delimiters.
+
+Each file that is sent from Amperity may be configured for its own unique requirements.
+
+.. setting-common-get-details-file-specific-end
+
 **Header**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
@@ -169,7 +249,7 @@ The primary key for the audience. Set to |audience-primary-key|.
 
 .. setting-common-optional-settings-start
 
-All other Amperity file format settings for |destination-name| are optional.
+All other Amperity file formatt settings for |destination-name| are optional.
 
 .. setting-common-optional-settings-end
 
@@ -280,7 +360,7 @@ Use a query or a campaign to define the information in the contacts list that wi
 
 .. setting-active-campaign-group-name-start
 
-The name of the user group to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
+The name of the `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
 
 .. setting-active-campaign-group-name-end
 
@@ -294,7 +374,7 @@ You must log into |destination-name| as a member of the specified user group to 
 
 .. setting-active-campaign-list-name-start
 
-The name of the contacts list in |destination-name| that will be managed by Amperity.
+The name of the `contacts list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| that will be managed by Amperity.
 
 .. setting-active-campaign-list-name-end
 
@@ -348,13 +428,21 @@ See SFTP.
 
 This section contains settings that are unique to Adobe Marketo.
 
-**xxxxx**
+**Folder name**
 
-.. setting-xxxxx-xxxxx-start
+.. setting-adobe-marketo-folder-name-start
 
-xxxxx
+TEMP: "Folder to upload Marketo list"
 
-.. setting-xxxxx-xxxxx-end
+.. setting-adobe-marketo-folder-name-end
+
+**Program name**
+
+.. setting-adobe-marketo-program-name-start
+
+TEMP: "Program to upload Marketo list"
+
+.. setting-adobe-marketo-program-name-end
 
 
 
@@ -376,17 +464,33 @@ This section contains settings that are unique to Amazon Ads.
 
 .. setting-amazon-ads-amc-instance-start
 
-xxxxx
+TEMP: "The Amazon Marketing Cloud instance"
 
 .. setting-amazon-ads-amc-instance-end
+
+**Audience description**
+
+.. setting-amazon-ads-audience-description-start
+
+TEMP: "The audience description to create for Amazon Ads"
+
+.. setting-amazon-ads-audience-description-end
 
 **DSP advertiser**
 
 .. setting-amazon-ads-dsp-advertiser-start
 
-xxxxx
+TEMP: "The Amazon Ads DSP advertiser"
 
 .. setting-amazon-ads-dsp-advertiser-end
+
+**Membership duration**
+
+.. setting-amazon-ads-membership-duration-start
+
+TEMP: "The amount of time (in seconds) an audience member will belong to this audience, after which they are removed. Maximum value: 34,300,800."
+
+.. setting-amazon-ads-membership-duration-end
 
 
 
@@ -408,13 +512,17 @@ Amazon Simple Storage Service (Amazon S3) can store data files of any size for a
 
 See Common.
 
+**Delimiter**
+
+See Delimiter.
+
 **Escape character**
 
 See Common.
 
 **File format**
 
-See Common.
+See Common. Including Parquet extension.
 
 **Filename template**
 
@@ -460,7 +568,7 @@ This section contains settings that are unique to Attentive (API).
 
 .. setting-attentive-primary-identifier-start
 
-xxxxx
+TEMP: "The primary identifier within your |destination-name| account."
 
 .. setting-attentive-primary-identifier-end
 
@@ -472,7 +580,15 @@ xxxxx
 
 This section contains settings that are unique to Attentive (SFTP).
 
-See SFTP.
+See SFTP for all common file settings.
+
+**Client domain**
+
+.. setting-attentive-primary-identifier-start
+
+TEMP: "The client domain of the Attentive instance"
+
+.. setting-attentive-primary-identifier-end
 
 
 
@@ -484,11 +600,17 @@ This section contains settings that are unique to Azure Blob Storage.
 
 Applies to: Azure Blob Storage.
 
+.. setting-azure-blob-storage-about-start
+
+Microsoft Azure Blob Storage can store data files of any size for any file format that is supported by Amperity.
+
+.. setting-azure-blob-storage-about-end
+
 **Blob prefix**
 
 .. setting-azure-blob-storage-blob-prefix-start
 
-xxxxx
+A prefix filters the list of `blob storage objects <https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-list#filter-results-with-a-prefix>`__ |ext_link| to only blob names that match the prefix value within your instance of |destination-name|. A prefix may be a character or a string.
 
 .. setting-azure-blob-storage-blob-prefix-end
 
@@ -496,13 +618,17 @@ xxxxx
 
 See Common.
 
+**Delimiter**
+
+See Delimiter.
+
 **Escape character**
 
 See Common.
 
 **File format**
 
-See Common.
+See Common. Including Parquet extension.
 
 **Filename template**
 
@@ -556,7 +682,7 @@ This section contains settings that are unique to Braze.
 
 .. setting-braze-instance-start
 
-xxxxx
+TEMP: "The instance where the Braze account was provisioned"
 
 .. setting-braze-instance-end
 
@@ -564,7 +690,7 @@ xxxxx
 
 .. setting-braze-profile-updates-start
 
-xxxxx
+TEMP: "Only send updated audience profiles."
 
 .. setting-braze-profile-updates-end
 
@@ -572,7 +698,7 @@ xxxxx
 
 .. setting-braze-user-identifier-start
 
-xxxxx
+TEMP: "The indentifier used to match users in Braze"
 
 .. setting-braze-user-identifier-end
 
@@ -600,7 +726,7 @@ See common settings.
 
 .. setting-cordial-list-name-start
 
-xxxxx
+TEMP: "xxxxx"
 
 .. setting-cordial-list-name-end
 
@@ -611,6 +737,8 @@ xxxxx
 UI field name: "Do not set subscription status automatically"
 
 UI description: "Prevents updates without a channels.email.subscribeStatus from being automatically subscribed"
+
+TEMP: "Prevents updates without a channels.email.subscribeStatus from being automatically subscribed"
 
 .. setting-cordial-subscription-status-end
 
@@ -653,6 +781,36 @@ See SFTP.
 
 
 
+**DATABRICKS**
+
+This section contains settings that are unique to Databricks.
+
+**Catalog name**
+
+.. setting-databricks-catalog-name-start
+
+TEMP: "The catalog name to use for Databricks"
+
+.. setting-databricks-catalog-name-end
+
+**Schema name**
+
+.. setting-databricks-schema-name-start
+
+TEMP: "The schema name to use for Databricks"
+
+.. setting-databricks-schema-name-end
+
+**Table name**
+
+.. setting-databricks-table-name-start
+
+TEMP: "The table name to create/use for Databricks"
+
+.. setting-databricks-table-name-end
+
+
+
 
 **EPSILON ABACUS**
 
@@ -692,26 +850,26 @@ This section contains settings that are unique to Google Ads.
 
 **Audience description**
 
-.. setting-google-ads-audiewnce-description-start
+.. setting-google-ads-audience-description-start
 
-xxxxx
+TEMP: "The audience's description. Will be used if audience doesn't currently exist."
 
-.. setting-google-ads-audiewnce-description-end
+.. setting-google-ads-audience-description-end
 
 
 **Audience name**
 
-.. setting-google-ads-audiewnce-name-start
+.. setting-google-ads-audience-name-start
 
-xxxxx
+TEMP: "xxxxx"
 
-.. setting-google-ads-audiewnce-name-end
+.. setting-google-ads-audience-name-end
 
 **Customer ID**
 
 .. setting-google-ads-customer-id-start
 
-xxxxx
+TEMP: "Customer ID of the Google Ads account"
 
 .. setting-google-ads-customer-id-end
 
@@ -719,7 +877,7 @@ xxxxx
 
 .. setting-google-ads-membership-duration-start
 
-xxxxx
+TEMP: "The number of days until a user's membership expires from the audience if not re-added"
 
 .. setting-google-ads-membership-duration-end
 
@@ -727,7 +885,7 @@ xxxxx
 
 .. setting-google-ads-mobile-app-id-start
 
-xxxxx
+TEMP: "ID of iOS or Android app where mobile app ID was collected. For use with the mobile ID upload key type."
 
 .. setting-google-ads-mobile-app-id-end
 
@@ -735,7 +893,7 @@ xxxxx
 
 .. setting-google-ads-upload-key-type-start
 
-xxxxx
+TEMP: "The type of key to use for matching."
 
 .. setting-google-ads-upload-key-type-end
 
@@ -753,13 +911,17 @@ Applies to: Google Cloud Storage.
 
 See Common.
 
+**Delimiter**
+
+See Delimiter.
+
 **Escape character**
 
 See Common.
 
 **File format**
 
-See Common.
+See Common. Including Parquet extension.
 
 **Filename template**
 
@@ -773,7 +935,7 @@ See Common.
 
 .. setting-google-cloud-storage-object-prefix-start
 
-xxxxx
+The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
 
 .. setting-google-cloud-storage-object-prefix-end
 
@@ -805,21 +967,77 @@ See Common.
 
 This section contains settings that are unique to Google Customer Match.
 
+**Audience description**
+
+.. setting-google-customer-match-audience-description-start
+
+TEMP: "The audience's description. Will be used if audience doesn't currently exist."
+
+.. setting-google-customer-match-audience-description-end
+
 **Customer ID**
 
 .. setting-google-customer-match-customer-id-start
 
-xxxxx
+TEMP: "Customer ID of the Google Customer Match account"
 
 .. setting-google-customer-match-customer-id-end
 
-**Compression**
+**Customer product**
 
 .. setting-google-customer-match-customer-product-start
 
-xxxxx
+TEMP: "The type of google product; either google ads, display video advertiser or display video partner."
 
 .. setting-google-customer-match-customer-product-end
+
+**Membership duration**
+
+.. setting-google-customer-match-membership-duration-start
+
+TEMP: "The number of days until a user's membership expires from the audience if not re-added."
+
+.. setting-google-customer-match-membership-duration-end
+
+**Mobile app ID**
+
+.. setting-google-customer-match-mobile-app-id-start
+
+TEMP: "ID of iOS or Android App where mobile app ID was collected. For use with the mobile ID upload key type."
+
+.. setting-google-customer-match-mobile-app-id-end
+
+**Upload key type**
+
+.. setting-google-customer-match-upload-key-type-start
+
+TEMP: "The type of key to use for matching."
+
+.. setting-google-customer-match-upload-key-type-end
+
+
+
+
+
+**GOOGLE ENHANCED CONVERSIONS**
+
+This section contains settings that are unique to Google Enhanced Conversions.
+
+**Conversion action name**
+
+.. setting-google-enhanced-conversions-xxxxx-start
+
+TEMP: "Name of the Conversion Action. Will be created if it doesn't exist."
+
+.. setting-google-enhanced-conversions-xxxxx-end
+
+**Customer ID**
+
+.. setting-google-enhanced-conversions-xxxxx-start
+
+TEMP: "Customer ID of the Google Ads account"
+
+.. setting-google-enhanced-conversions-xxxxx-end
 
 
 
@@ -881,7 +1099,7 @@ xxxxx
 
 .. setting-klaviyo-update-contacts-start
 
-xxxxx
+TEMP: "Use full profile to update list"
 
 .. setting-klaviyo-update-contacts-end
 
@@ -909,7 +1127,7 @@ See common settings.
 
 .. setting-listrak-field-group-start
 
-xxxxx
+TEMP: "The field group to use for audience and attribute fields"
 
 .. setting-listrak-field-group-end
 
@@ -925,7 +1143,7 @@ The name of the list that will be managed in |destination-name|. This is often, 
 
 .. setting-listrak-segment-name-start
 
-xxxxx
+TEMP: "xxxxx"
 
 .. setting-listrak-segment-name-end
 
@@ -949,9 +1167,17 @@ This section contains settings that are unique to Mailchimp.
 
 .. setting-mailchimp-data-center-start
 
-xxxxx
+TEMP: "The data center to used to talk to the Mailchimp API"
 
 .. setting-mailchimp-data-center-end
+
+**List ID**
+
+.. setting-mailchimp-list-id-start
+
+TEMP: "The id of the list to insert members"
+
+.. setting-mailchimp-list-id-end
 
 
 
@@ -965,7 +1191,7 @@ This section contains settings that are unique to Meta Ads Manager.
 
 .. setting-meta-ads-manager-account-id-start
 
-xxxxx
+TEMP: "Ad account ID"
 
 .. setting-meta-ads-manager-account-id-end
 
@@ -973,7 +1199,7 @@ xxxxx
 
 .. setting-meta-ads-manager-custom-audience-name-start
 
-xxxxx
+TEMP: "xxxxx"
 
 .. setting-meta-ads-manager-custom-audience-name-end
 
@@ -981,7 +1207,7 @@ xxxxx
 
 .. setting-meta-ads-manager-customer-file-source-start
 
-xxxxx
+TEMP: "Where the data was sourced from for the custom audience (directly from users, 3rd party, or both)"
 
 .. setting-meta-ads-manager-customer-file-source-end
 
@@ -997,7 +1223,7 @@ This section contains settings that are unique to Meta Ads Manager: Offline Even
 
 .. setting-meta-ads-manager-dataset-id-start
 
-xxxxx
+TEMP: "The dataset to associate your offline events with."
 
 .. setting-meta-ads-manager-dataset-id-end
 
@@ -1013,7 +1239,7 @@ This section contains settings that are unique to Microsoft Advertising.
 
 .. setting-microsoft-advertising-account-id-start
 
-xxxxx
+TEMP: "Microsoft Ads account ID"
 
 .. setting-microsoft-advertising-account-id-end
 
@@ -1025,7 +1251,7 @@ See common settings.
 
 .. setting-microsoft-advertising-customer-id-start
 
-xxxxx
+TEMP: "Customer ID for the Microsoft Ads account"
 
 .. setting-microsoft-advertising-customer-id-end
 
@@ -1037,11 +1263,19 @@ xxxxx
 
 This section contains settings that are unique to Microsoft Dataverse.
 
+**Dataverse table logical name**
+
+.. setting-microsoft-dataverse-table-logical-name-start
+
+TEMP: "xxxxx"
+
+.. setting-microsoft-dataverse-table-logical-name-end
+
 **Power Apps environment name**
 
 .. setting-microsoft-dataverse-powerapps-name-start
 
-xxxxx
+TEMP: "xxxxx"
 
 .. setting-microsoft-dataverse-powerapps-name-end
 
@@ -1049,9 +1283,17 @@ xxxxx
 
 .. setting-microsoft-dataverse-powerapps-region-start
 
-xxxxx
+TEMP: "xxxxx"
 
 .. setting-microsoft-dataverse-powerapps-region-end
+
+**Truncate table?**
+
+.. setting-microsoft-dataverse-truncate-table-start
+
+TEMP: "xxxxx"
+
+.. setting-microsoft-dataverse-truncate-table-end
 
 
 
@@ -1061,13 +1303,29 @@ xxxxx
 
 This section contains settings that are unique to Microsoft Dynamics 365 Marketing.
 
-**xxxxx**
+**Dynamics 365 marketing segment name**
 
-.. setting-xxxxx-xxxxx-start
+.. setting-microsoft-dynamics-365-segment-name-start
 
-xxxxx
+TEMP: "The name for your Dynamics 365 Marketing Segment."
 
-.. setting-xxxxx-xxxxx-end
+.. setting-microsoft-dynamics-365-segment-name-end
+
+**Power Apps environment name**
+
+.. setting-microsoft-dynamics-365-environment-name-start
+
+TEMP: "The unique name for your Power Apps environment. For example: “acme”."
+
+.. setting-microsoft-dynamics-365-environment-name-end
+
+**Power Apps environment region**
+
+.. setting-microsoft-dynamics-365-environment-region-start
+
+TEMP: "The region in which your data center is located. For example: “crm”."
+
+.. setting-microsoft-dynamics-365-environment-region-end
 
 
 
@@ -1081,15 +1339,23 @@ This section contains settings that are unique to Microsoft Dynamics.
 
 .. setting-microsoft-dynamics-azure-ad-id-start
 
-xxxxx
+TEMP: "The tenant identifier"
 
 .. setting-microsoft-dynamics-azure-ad-id-end
+
+**Dynamics entity**
+
+.. setting-microsoft-dynamics-entity-start
+
+TEMP: "The dynamics entity"
+
+.. setting-microsoft-dynamics-entity-end
 
 **Dynamics URL**
 
 .. setting-microsoft-dynamics-url-start
 
-xxxxx
+TEMP: "The URL of the customers Dynamics instance"
 
 .. setting-microsoft-dynamics-url-end
 
@@ -1133,7 +1399,7 @@ See common settings.
 
 .. setting-oracle-eloqua-shared-list-name-start
 
-xxxxx
+TEMP: "The shared list name in Eloqua to update. It will be created if it doesn't currently exist"
 
 .. setting-oracle-eloqua-shared-list-name-end
 
@@ -1173,10 +1439,9 @@ This section contains settings that are unique to Pinterest.
 
 .. setting-pinterest-ad-account-id-start
 
-xxxxx
+TEMP: "The Ad Account ID for Pinterest"
 
 .. setting-pinterest-ad-account-id-end
-
 
 **Audience primary key**
 
@@ -1224,7 +1489,7 @@ See common settings.
 
 .. setting-sailthru-list-name-start
 
-xxxxx?
+?????
 
 .. setting-sailthru-list-name-end
 
@@ -1242,15 +1507,23 @@ Note: There is an SFTP-based connector also.
 
 .. setting-salesforce-marketing-cloud-account-id-start
 
-xxxxx
+TEMP: "xxxxx"
 
 .. setting-salesforce-marketing-cloud-account-id-end
+
+**Append data**
+
+.. setting-salesforce-marketing-cloud-append-data-start
+
+TEMP: "Append onto the data extension"
+
+.. setting-salesforce-marketing-cloud-append-data-end
 
 **Folder name**
 
 .. setting-salesforce-marketing-cloud-folder-name-start
 
-xxxxx
+TEMP: "Name of the folder you wish to send the data to"
 
 .. setting-salesforce-marketing-cloud-folder-name-end
 
@@ -1258,7 +1531,7 @@ xxxxx
 
 .. setting-salesforce-marketing-cloud-import-location-start
 
-xxxxx
+TEMP: "File transfer location object name that points to the import directory"
 
 .. setting-salesforce-marketing-cloud-import-location-end
 
@@ -1266,7 +1539,7 @@ xxxxx
 
 .. setting-salesforce-marketing-cloud-primary-key-start
 
-xxxxx
+TEMP: "Field to be used as the customer primary key in SFMC"
 
 .. setting-salesforce-marketing-cloud-primary-key-end
 
@@ -1274,7 +1547,7 @@ xxxxx
 
 .. setting-salesforce-marketing-cloud-subscriber-field-start
 
-xxxxx. "Subscriber key" or "Email address".
+TEMP: "Field to be used as the customer subscriber field in SFMC" May be: "Subscriber key" or "Email address".
 
 .. setting-salesforce-marketing-cloud-subscriber-field-end
 
@@ -1290,7 +1563,7 @@ This section contains settings that are unique to Salesforce Sales Cloud.
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-start
 
-xxxxx
+TEMP: "Set to 'Yes' to connect to a Salesforce sandbox for testing rather than a production instance. (Note: this setting is ignored if a custom login url is specified)"
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-end
 
@@ -1298,17 +1571,49 @@ xxxxx
 
 .. setting-salesforce-sales-cloud-custom-login-url-start
 
-xxxxx
+TEMP: "Login to Salesforce using a custom url. Specify the scheme and host part only. The path will be set automatically."
 
 .. setting-salesforce-sales-cloud-custom-login-url-end
+
+**External ID field**
+
+.. setting-salesforce-sales-cloud-external-id-field-start
+
+TEMP: "The external ID field to use to identify existing objects to update when performing an upsert load."
+
+.. setting-salesforce-sales-cloud-external-id-field-end
+
+**Load data in parallel?**
+
+.. setting-salesforce-sales-cloud-load-data-in-parallel-start
+
+TEMP: "Whether or not batches of data should be loaded in parallel. Parallelism may increase performance, but it can also cause lock contention for highly overlapping data."
+
+.. setting-salesforce-sales-cloud-load-data-in-parallel-end
+
+**Operation**
+
+.. setting-salesforce-sales-cloud-operation-start
+
+TEMP: "The type of API operation to perform with the input data."
+
+.. setting-salesforce-sales-cloud-operation-end
 
 **Salesforce object**
 
 .. setting-salesforce-sales-cloud-salesforce-object-start
 
-xxxxx
+TEMP: "The Salesforce object that the data should be loaded into."
 
 .. setting-salesforce-sales-cloud-salesforce-object-end
+
+**Use NULL for empty fields?**
+
+.. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
+
+TEMP: Convert empty fields in the data set to null values. When false empty fields will be ignored.
+
+.. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
 
 
@@ -1332,13 +1637,17 @@ Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airshi
 
 See Common.
 
+**Delimiter**
+
+See Delimiter.
+
 **Escape character**
 
 See Common.
 
 **File format**
 
-See Common.
+See Common. Including Parquet extension.
 
 **Filename template**
 
@@ -1392,7 +1701,7 @@ This section contains settings that are unique to Snapchat.
 
 .. setting-snapchat-ad-account-id-start
 
-xxxxx
+TEMP: "The ID of the ad account to create/update"
 
 .. setting-snapchat-ad-account-id-end
 
@@ -1408,31 +1717,63 @@ This section contains settings that are unique to Snowflake.
 
 .. setting-snowflake-account-name-start
 
-xxxxx
+TEMP: "The name of the Snowflake account"
 
 .. setting-snowflake-account-name-end
+
+**Create table?**
+
+.. setting-snowflake-create-table-start
+
+TEMP: "Create table if not present?"
+
+.. setting-snowflake-create-table-end
+
+**Drop table?**
+
+.. setting-snowflake-drop-table-start
+
+TEMP: "Drop table before loading data?"
+
+.. setting-snowflake-drop-table-end
 
 **Region ID**
 
 .. setting-snowflake-region-id-start
 
-xxxxx
+TEMP: "The ID for the Snowflake region where the account is located"
 
 .. setting-snowflake-region-id-end
+
+**Snowflake location**
+
+.. setting-snowflake-snowflake-location-start
+
+TEMP: "The target Snowflake location to export data to (format: Database.Schema[.Table])."
+
+.. setting-snowflake-snowflake-location-end
 
 **Stage**
 
 .. setting-snowflake-stage-start
 
-xxxxx
+TEMP: "The external stage used for staging the data. Case sensitive."
 
 .. setting-snowflake-stage-end
+
+**Truncate table?**
+
+.. setting-snowflake-truncate-table-start
+
+TEMP: "Truncate table before loading data?"
+
+.. setting-snowflake-truncate-table-end
 
 **Warehouse**
 
 .. setting-snowflake-warehouse-start
 
-xxxxx
+TEMP: "The Snowflake Virtual Warehouse to use when loading and transforming data"
 
 .. setting-snowflake-warehouse-end
 
@@ -1502,7 +1843,9 @@ This section contains settings that are unique to The Trade Desk (3P Marketplace
 
 .. setting-the-trade-desk-3p-membership-duration-start
 
-xxxxx. (in days)
+TEMP: "The length of time (in days) an audience member will belong to this segment, after which they are removed."
+
+QUESTION: This is the same as the standard The Trade Desk membership duration?
 
 .. setting-the-trade-desk-3p-membership-duration-end
 
@@ -1518,7 +1861,7 @@ This section contains settings that are unique to The Trade Desk: Offline Events
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-xxxxx
+TEMP: "The tracking tag name to associate your offline events with."
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
 
@@ -1534,7 +1877,7 @@ This section contains settings that are unique to TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-start
 
-xxxxx
+TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads Advertiser ID"
 
 .. setting-tiktok-ads-manager-advertiser-id-end
 
@@ -1542,7 +1885,7 @@ xxxxx
 
 .. setting-tiktok-ads-manager-custom-audience-name-start
 
-xxxxx
+?????
 
 .. setting-tiktok-ads-manager-custom-audience-name-end
 
@@ -1550,7 +1893,7 @@ xxxxx
 
 .. setting-tiktok-ads-manager-user-id-type-start
 
-xxxxx. IDFA, AAID, EMAIL, PHONE.
+TEMP: "Audience primary key type." May be: IDFA, AAID, EMAIL, PHONE.
 
 .. setting-tiktok-ads-manager-user-id-type-end
 
@@ -1565,10 +1908,17 @@ This section contains settings that are unique to TikTok Ads Manager: Offline Ev
 
 .. setting-tiktok-ads-manager-offline-advertiser-id-start
 
-xxxxx
+TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads Advertiser ID"
 
 .. setting-tiktok-ads-manager-offline-advertiser-id-end
 
+**Event set ID**
+
+.. setting-tiktok-ads-manager-offline-event-set-id-start
+
+TEMP: "Event Set ID"
+
+.. setting-tiktok-ads-manager-offline-event-set-id-end
 
 
 
@@ -1577,6 +1927,14 @@ xxxxx
 
 See SFTP.
 
+
+
+
+**WEBHOOK**
+
+**Label name**
+
+**Settings**
 
 
 
