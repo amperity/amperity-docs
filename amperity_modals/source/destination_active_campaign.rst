@@ -21,15 +21,11 @@ Requirements
 
 .. TODO: This destination has the following requirements.
 
-#. The API key and base URL for your |destination-name| account.
-
-   Learn more about the `ActiveCampaign REST API <https://developers.activecampaign.com/reference/url>`__.
+#. The `ActiveCampaign REST API key <https://developers.activecampaign.com/reference/authentication>`__ |ext_link| and `base URL <https://developers.activecampaign.com/reference/url>`__ |ext_link| for your |destination-name| account.
 
 #. .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-active-campaign-list-name-start
       :end-before: .. setting-active-campaign-list-name-end
-
-   Learn more about |destination-name| `contacts lists <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__.
 
 #. .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-active-campaign-group-name-start
@@ -38,8 +34,6 @@ Requirements
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-active-campaign-group-name-access-start
       :end-before: .. setting-active-campaign-group-name-access-end
-
-   Learn more about |destination-name| `user groups <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__.
 
 #. .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-active-campaign-email-required-start
