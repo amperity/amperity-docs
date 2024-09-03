@@ -207,7 +207,7 @@ Review the following details before configuring credentials for |destination-nam
 
 .. setting-common-get-details-file-specific-start
 
-File-specific details to ensure that all files that are sent from Amperity are configured correctly for your brand's downstream workflows.
+File-specific details to ensure that all files that are sent from Amperity are configured correctly for downstream workflows.
 
 For example, Apache Parquet can be configured to exclude the extension from the directory name, some files require specific escape characters, and others may have unique delimiters.
 

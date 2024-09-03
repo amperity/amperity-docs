@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html>
+  <head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" 
+          type="image/png" 
+          href="https://amperity-static-assets.s3-us-west-2.amazonaws.com/resources/img/favicon-16x16.png">
+    <script type="text/javascript" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72135505-7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-72135505-7');
+    </script>
+    <style>
+      rapi-doc{
+        width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <rapi-doc 
+      spec-url="https://docs.amperity.com/downloads/openapi/control-plane-unstable-openapi.json" 
+      show-header = "false"
+      render-style = "read"
+      regular-font="Open Sans" 
+      mono-font = "Roboto Mono"
+      sort-tags = "true"
+
+    theme = "light"
+    bg-color = "#f2f4f4"
+    text-color = "#0c0c0c"
+    header-color = "#0c0c0c"
+    primary-color = "#09717f"
+
+    show-info = "true"
+    allow-authentication = "true"
+
+    allow-spec-file-download = "true"
+    allow-try = "true"
+    show-curl-before-try = "true"
+    allow-server-selection = "false"
+    allow-schema-description-expand-toggle = "true"
+    schema-description-expanded = "true"
+    schema-style = "table"
+
+    > 
+      <div slot="nav-logo" style="display: flex; align-items: center; justify-content: left;"> 
+        <img src = "../_static/amp-yellow.png" style="width:80px; margin-right: -10px"> <span style="color:#fff"> <b>Amperity</b> API </span>
+      </div>
+
+
+
+    </rapi-doc>
+  </body>
+</html>
