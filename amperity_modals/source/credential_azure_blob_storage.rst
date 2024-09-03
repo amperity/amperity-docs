@@ -36,6 +36,6 @@ Storage URI
 
 .. destination-azure-blob-storage-credentials-storage-uri-start
 
-Each |destination-name| resource has `storage URI <https://learn.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#resource-uri-syntax>`__ |ext_link|, which contains the name of the account and the name of the container in which blob storage is located.
+Each |destination-name| resource has a `storage URI <https://learn.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#resource-uri-syntax>`__ |ext_link|, which contains the name of the account and the name of the container in which blob storage is located.
 
 .. destination-azure-blob-storage-credentials-storage-uri-end
