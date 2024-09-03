@@ -14,7 +14,7 @@ Shared access signature
 
 .. TODO: Hook this in from shared/credentials_settings.rst
 
-A `service-level shared access signature (SAS) <https://learn.microsoft.com/en-us/rest/api/storageservices/create-service-sas>`__ |ext_link| specifies which resources in your brand's |destination-name| account can be accessed, what permissions that access allows on resources in the container, and the length of time for which the SAS is valid.
+A `service-level shared access signature (SAS) <https://learn.microsoft.com/en-us/rest/api/storageservices/create-service-sas>`__ |ext_link| specifies which resources in your |destination-name| account can be accessed, what permissions that access allows on resources in the container, and the length of time for which the SAS is valid.
 
 
 Settings
