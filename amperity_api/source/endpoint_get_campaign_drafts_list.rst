@@ -19,20 +19,20 @@
 GET /campaign-drafts
 ==================================================
 
-.. endpoint-get-campaigns-list-start
+.. endpoint-get-campaign-drafts-list-start
 
 Use the **/campaign-drafts** endpoint to return a list of draft campaigns from your tenant. You may restrict the list of draft campaigns to those associated with a specific data template.
 
-.. endpoint-get-campaigns-list-end
+.. endpoint-get-campaign-drafts-list-end
 
-.. endpoint-get-campaigns-list-unstable-start
+.. endpoint-get-campaign-drafts-list-unstable-start
 
 .. important:: This endpoint is only available from the **unstable** version of the Amperity API.
 
-.. endpoint-get-campaigns-list-unstable-end
+.. endpoint-get-campaign-drafts-list-unstable-end
 
 
-.. _endpoint-get-campaigns-list-http-methods:
+.. _endpoint-get-campaign-drafts-list-http-methods:
 
 Available HTTP methods
 ==================================================
@@ -44,25 +44,25 @@ Available HTTP methods
    :class: no-scaled-link
 
 
-.. _endpoint-get-campaigns-list-http-methods:
+.. _endpoint-get-campaign-drafts-list-prerequisites:
 
 Prerequisites
 ==================================================
 
-.. endpoint-get-campaigns-list-prerequisites-start
+.. endpoint-get-campaign-drafts-list-prerequisites-start
 
 #. `Add an API key <__https://docs.amperity.com/api/authentication.html#add-api-key>`__.
 #. `Generate an access token <https://docs.amperity.com/api/authentication.html#generate-access-token>`__.
 
-.. endpoint-get-campaigns-list-prerequisites-end
+.. endpoint-get-campaign-drafts-list-prerequisites-end
 
 
-.. _endpoint-get-campaigns-list-base-url:
+.. _endpoint-get-campaign-drafts-list-base-url:
 
 Base URL
 ==================================================
 
-.. endpoint-get-campaigns-list-base-url-start
+.. endpoint-get-campaign-drafts-list-base-url-start
 
 All requests made to the **/campaign-drafts** endpoint should be directed to the following base URL:
 
@@ -70,10 +70,10 @@ All requests made to the **/campaign-drafts** endpoint should be directed to the
 
    https://{tenant-id}.amperity.com/api/campaign-drafts/
 
-.. endpoint-get-campaigns-list-base-url-end
+.. endpoint-get-campaign-drafts-list-base-url-end
 
 
-.. _endpoint-get-campaigns-list-rate-limit:
+.. _endpoint-get-campaign-drafts-list-rate-limit:
 
 Rate limit
 ==================================================
@@ -85,12 +85,12 @@ The Amperity API supports requests to endpoints that do not exceed a rate of 10 
 Requests to the Amperity API that exceed 10 requests per second may return an error response with an HTTP 429 status code.
 
 
-.. _endpoint-get-campaigns-list-request:
+.. _endpoint-get-campaign-drafts-list-request:
 
 Requests
 ==================================================
 
-.. endpoint-get-campaigns-list-request-start
+.. endpoint-get-campaign-drafts-list-request-start
 
 A request to the **/campaign-drafts** endpoint is similar to:
 
@@ -107,15 +107,15 @@ A request to the **/campaign-drafts** endpoint is similar to:
 
 (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-get-campaigns-list-request-end
+.. endpoint-get-campaign-drafts-list-request-end
 
 
-.. _endpoint-get-campaigns-list-request-parameters:
+.. _endpoint-get-campaign-drafts-list-request-parameters:
 
 Request parameters
 --------------------------------------------------
 
-.. endpoint-get-campaigns-list-request-parameters-start
+.. endpoint-get-campaign-drafts-list-request-parameters-start
 
 The following table describes the parameters that may be used with the **/campaign-drafts** endpoint.
 
@@ -169,27 +169,27 @@ The following table describes the parameters that may be used with the **/campai
 
        .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
 
-.. endpoint-get-campaigns-list-request-parameters-end
+.. endpoint-get-campaign-drafts-list-request-parameters-end
 
 
-.. _endpoint-get-campaigns-list-request-examples:
+.. _endpoint-get-campaign-drafts-list-request-examples:
 
 Request examples
 --------------------------------------------------
 
-.. endpoint-get-campaigns-list-request-examples-start
+.. endpoint-get-campaign-drafts-list-request-examples-start
 
 The following examples show how to send requests to the **/campaign-drafts** endpoint.
 
-.. endpoint-get-campaigns-list-request-examples-end
+.. endpoint-get-campaign-drafts-list-request-examples-end
 
 
-.. _endpoint-get-campaigns-list-request-example-curl:
+.. _endpoint-get-campaign-drafts-list-request-example-curl:
 
 cURL
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. endpoint-get-campaigns-list-request-example-curl-start
+.. endpoint-get-campaign-drafts-list-request-example-curl-start
 
 The following example shows how to use cURL to send a request to the **/campaign-drafts** endpoint.
 
@@ -206,15 +206,15 @@ The following example shows how to use cURL to send a request to the **/campaign
 
 (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-get-campaigns-list-request-example-curl-end
+.. endpoint-get-campaign-drafts-list-request-example-curl-end
 
 
-.. _endpoint-get-campaigns-list-request-python:
+.. _endpoint-get-campaign-drafts-list-request-python:
 
 Python
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. endpoint-get-campaigns-list-request-python-start
+.. endpoint-get-campaign-drafts-list-request-python-start
 
 The following example shows how to use Python to send a request to the **/campaign-drafts** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
 
@@ -259,27 +259,27 @@ The following example shows how to use Python to send a request to the **/campai
 
    print("CSV file generated successfully.")
 
-.. endpoint-get-campaigns-list-request-python-end
+.. endpoint-get-campaign-drafts-list-request-python-end
 
 
-.. _endpoint-get-campaigns-list-unstable-responses:
+.. _endpoint-get-campaign-drafts-list-unstable-responses:
 
 Responses
 ==================================================
 
-.. endpoint-get-campaigns-list-unstable-responses-start
+.. endpoint-get-campaign-drafts-list-unstable-responses-start
 
 A response from the **/campaign-drafts** endpoint will match an `HTTP status code <https://docs.amperity.com/api/responses.html>`__. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
-.. endpoint-get-campaigns-list-unstable-responses-end
+.. endpoint-get-campaign-drafts-list-unstable-responses-end
 
 
-.. _endpoint-get-campaigns-list-response-200ok:
+.. _endpoint-get-campaign-drafts-list-response-200ok:
 
 200 OK
 --------------------------------------------------
 
-.. endpoint-get-campaigns-list-response-200ok-start
+.. endpoint-get-campaign-drafts-list-response-200ok-start
 
 The **200** response returns a set of draft campaigns.
 
@@ -302,15 +302,15 @@ The **200** response returns a set of draft campaigns.
      ]
    }
 
-.. endpoint-get-campaigns-list-response-200ok-end
+.. endpoint-get-campaign-drafts-list-response-200ok-end
 
 
-.. _endpoint-get-campaigns-list-response-parameters:
+.. _endpoint-get-campaign-drafts-list-response-parameters:
 
 Response parameters
 --------------------------------------------------
 
-.. endpoint-get-campaigns-list-response-parameters-start
+.. endpoint-get-campaign-drafts-list-response-parameters-start
 
 A **200 OK** response contains the following parameters.
 
@@ -343,4 +343,4 @@ A **200 OK** response contains the following parameters.
 
        .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
 
-.. endpoint-get-campaigns-list-response-parameters-end
+.. endpoint-get-campaign-drafts-list-response-parameters-end
