@@ -17,6 +17,13 @@ Available Endpoints
    :class: no-scaled-link
    :target: https://docs.amperity.com/api/endpoint_get_audit_events_list.html
 
+.. image:: ../../images/api-request-get-campaigns-drafts.png
+   :width: 440 px
+   :alt: GET /campaign-drafts
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_campaign_drafts_list.html
+
 .. image:: ../../images/api-request-get-campaigns.png
    :width: 440 px
    :alt: GET /campaigns

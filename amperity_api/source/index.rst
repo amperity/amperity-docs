@@ -44,7 +44,7 @@ Requests and responses
 Endpoints
 ==================================================
 
-:doc:`endpoint_get_audit_events_list` |fa-index-separator| :doc:`endpoint_get_campaigns_list` |fa-index-separator| :doc:`endpoint_get_ingest_jobs` |fa-index-separator|  :doc:`endpoint_get_segments_list` |fa-index-separator| :doc:`endpoint_get_workflows_list` |fa-index-separator| :doc:`endpoint_get_workflows_fetch`
+:doc:`endpoint_get_audit_events_list` |fa-index-separator| :doc:`endpoint_get_campaign_drafts_list` |fa-index-separator| :doc:`endpoint_get_campaigns_list` |fa-index-separator| :doc:`endpoint_get_ingest_jobs` |fa-index-separator|  :doc:`endpoint_get_segments_list` |fa-index-separator| :doc:`endpoint_get_workflows_list` |fa-index-separator| :doc:`endpoint_get_workflows_fetch`
 
 
 .. Hide the TOC from this file.
@@ -55,6 +55,7 @@ Endpoints
    authentication
    changelog
    endpoint_get_audit_events_list
+   endpoint_get_campaign_drafts_list
    endpoint_get_campaigns_list
    endpoint_get_ingest_jobs
    endpoint_get_segments_list
