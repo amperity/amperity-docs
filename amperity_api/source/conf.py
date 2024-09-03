@@ -177,8 +177,9 @@ html_additional_pages = {
     'endpoint_audit_events': 'endpoint_audit_events.html',
     'endpoint_campaigns': 'endpoint_campaigns.html',
     'endpoint_segments': 'endpoint_segments.html',
-    'openapi': 'openapi.html'}
-    'unstable': 'openapi-unstable.html'}
+    'openapi': 'openapi.html',
+    'openapi-unstable': 'openapi-unstable.html',
+}
 
 
 # If false, no module index is generated.
