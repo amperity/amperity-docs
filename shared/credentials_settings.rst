@@ -47,7 +47,7 @@ A connection string is similar to:
 
 .. credential-azure-blob-storage-container-start
 
-A container organizes a set of blobs, similar to a directory in a file system. Your brand's |destination-name| account can include an unlimited number of containers. Each container can store an unlimited number of blobs.
+A container organizes a set of blobs, similar to a directory in a file system. Your |destination-name| account can include an unlimited number of containers. Each container can store an unlimited number of blobs.
 
 A container name must be a valid DNS name, as it forms part of the unique uniform resource identifier (URI) used to address the container or its blobs.
 
@@ -65,7 +65,7 @@ A shared access signature (SAS) grants limited access to containers and blobs in
 
 .. credential-azure-blob-storage-shared-access-signature-overview-start
 
-A `service-level shared access signature (SAS) <https://learn.microsoft.com/en-us/rest/api/storageservices/create-service-sas>`__ |ext_link| specifies which resources in your brand's |destination-name| account can be accessed, what permissions that access allows on resources in the container, and the length of time for which the SAS is valid.
+A `service-level shared access signature (SAS) <https://learn.microsoft.com/en-us/rest/api/storageservices/create-service-sas>`__ |ext_link| specifies which resources in your |destination-name| account can be accessed, what permissions that access allows on resources in the container, and the length of time for which the SAS is valid.
 
 .. credential-azure-blob-storage-shared-access-signature-overview-end
 
