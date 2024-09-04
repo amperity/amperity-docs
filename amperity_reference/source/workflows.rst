@@ -31,7 +31,7 @@ About the Workflows page
 
 .. workflows-page-start
 
-The workflow page consists of two tabs: **Run history** and **Configured**. **Run history** allows you to see a filterable list of workflow runs that have happened. **Configured** allows you to see at a glace all of the automatically-run workflows that have been configured. For each workflow you can view details for every step within a workflow. Both tabs in the **Workflows** page automatically refresh with the latest status of any workflows that are currently running.
+The workflows page contains two tabs: **Run history** and **Configured**. **Run history** allows you to see a filterable list of workflow runs that have happened. **Configured** allows you to see at a glace all of the automatically-run workflows that have been configured. For each workflow you can view details for every step within a workflow. Both tabs in the **Workflows** page automatically refresh with the latest status of any workflows that are currently running.
 
 .. image:: ../../images/mockups-workflow-success.png
    :width: 600 px
@@ -48,6 +48,8 @@ Within **Configured**, click the name of any workflow to open up its configurati
 
 .. note:: The **Workflows** page is accessible to users of Amperity who are assigned the **Amp360 User** policy, the **AmpIQ User** policy, the **DataGrid Operator** policy, *or* the **DataGrid Administrator** policy in your production tenant and the **DataGrid Administrator** policy in a sandbox.
 
+   The **Workflows** page is read-only for users who are assigned the **AmpIQ User** policy.
+
 .. workflow-policy-end
 
 
@@ -60,9 +62,9 @@ Workflow alerts
 
 A workflow alert is sent when a task within the workflow requires your attention. Each alert contains a description of what caused the alert, along with a link to the workflow in Amperity. Workflow alerts can be configured to send when workflows fail, workflows succeed, workflows exceed a configured runtime threshold, query results exceed a configured threshold, and when workflows are manually stopped.
 
-Workflow alerts may be configured to be :ref:`sent to an email address <workflows-howto-open-from-email-alerts>` or sent to :ref:`a channel in a Slack workspace <workflows-howto-open-from-slack-alerts>`. Click the link in the email or Slack message to open the workflow in Amperity, and then resolve the issue(s) that caused the workflow alert.
-
 Workflow alerts can be grouped into automated workflow alerts and workflow run alerts. Configure recipients for automated workflow alerts when you want to monitor recurring automated workflow runs. Subscribe to individual workflow run alerts when you want to subscribe to updates for individual manually-run workflows, or if you want to subscribe to updates for a specific workflow run.
+
+Workflow alerts may be configured to be :ref:`sent to an email address <workflows-howto-open-from-email-alerts>` or sent to :ref:`a channel in a Slack workspace <workflows-howto-open-from-slack-alerts>`. Click the link in the email or Slack message to open the workflow in Amperity, and then resolve the issue(s) that caused the workflow alert.
 
 .. workflows-discover-alerts-end
 
@@ -71,13 +73,7 @@ Automated workflow alerts
 
 .. automated-workflow-alerts-start
 
-Configure automated workflow alerts within the **Automated workflow alerts** dialog in the workflow page. Use this as your default set of recipients to receive alerts for regularly occurring workflows. Configured recipients will receive the following alerts, for the workflow types they are subscribe to.
-
-* Failure alerts
-* Success alerts, only if enabled
-* Runtime alerts, if configured
-* Query alerts, if configured
-* Workflow stopped alerts
+Configure automated workflow alerts by workflow type within the **Automated workflow alerts** dialog in the workflow page. Use this as your default set of recipients to receive alerts for regularly occurring workflows.
 
 Here is a more detailed breakdown of automated workflow alerts by workflow type:
 
@@ -220,7 +216,7 @@ Details page actions
 
 .. workflows-discover-details-actions-start
 
-All workflows can be inspected from the workflow details page, regardless of their status or whether there is a warning or an error. Any workflow that is running may be stopped.
+All workflow runs can be inspected from the workflow details page, regardless of their status or whether there is a warning or an error. Any workflow that is running may be stopped.
 
 .. tip:: You may configure Amperity to send workflow alerts to an email address or to a channel in a Slack workspace. Individual team members who have access to workflow alerts can click a link to open the workflow in Amperity, after which they can investigate, and then take steps to resolve these warnings and errors.
 
