@@ -169,10 +169,10 @@ Segment tabs
 
 After you click a segment on the **Segments page**, you can view insites about each segment.
 
-* **Summary** tab - Presents key insights for a specific segment.
-* **Breakdown** tab - Provides charts to analyze and compare customer behavior patterns and demographic attributes.
-* **Compare** tab - Compares and intersects segments, allowing for new segment creation.
-* **Customers** tab - Details the comprehensive list of customers who fall within the target market segment.
+* The **Summary** tab presents key insights for a specific segment.
+* The **Breakdown** tab provides charts to analyze and compare customer behavior patterns and demographic attributes.
+* The **Compare** tab compares and intersects segments, allowing for new segment creation.
+* The **Customers** tab details the comprehensive list of customers who fall within the target market segment.
 
 .. segments-tabs-end
 
@@ -184,10 +184,10 @@ Summary tab
 
 .. segments-summary-start
 
-The **Summary** tab highlights the most important information about a segment, including:
+The **Summary** tab highlights important information about a segment, including:
 
 * How much opportunity does this segment have?
-* Which channels should I engage on?
+* Which channels can I engage on?
 * What is the predicted revenue for this segment?
 
 Use the information on the **Summary** tab to help determine the best way to initiate a marketing campaign.
@@ -251,7 +251,12 @@ Breakdown tab
 
 .. segments-breakdown-details-start
 
-The **Breakdown** tab contains insight charts for customer behaviors and customer attributes. These charts have a configurable date range and the displayed attributes charts are customizable. To customize the breakdown charts displayed on the **Breakdown** tab, click the **Customize** link, select up to six charts on the **Customize Breakdown Charts** window, and then click **Apply**.
+The **Breakdown** tab contains insight charts for customer behaviors and customer attributes. You can ask questions to analyze customer demographics and identify target market segments:
+
+* What is the distribution of customers across categories?
+* What are potential customer groups for my marketing efforts?
+
+These charts have a configurable date range and the displayed attributes charts are customizable. To customize the breakdown charts displayed on the **Breakdown** tab, click the **Customize** link, select up to six charts on the **Customize Breakdown Charts** window, and then click **Apply**.
 
 .. note:: Compare by % of Purchasers, % of Revenue, or Revenue/Purchaser in the breakdown charts by selecting one of these options from the **Compare by:** drop-down menu.
 
@@ -287,7 +292,10 @@ Compare tab
 
 .. segments-compare-details-start
 
-The **Compare** tab shows how two or more segment statistics compare. You can compare key metrics and identify shared audiences to identify new opportunities to reach customers. You can also view segment overlap.
+The **Compare** tab shows how two or more segment statistics compare. You can ask questions that compare key metrics and identify shared audiences to identify new opportunities to reach customers. 
+
+* What is the overlap if I compare multiple segments? 
+* How do metrics like active customers, revenue, average revenue per customer, average units per order, and average order value compare across segments?
 
 .. note:: Up to five total segments can be compared together. 
 
@@ -328,7 +336,11 @@ Customers tab
 
 .. segments-customers-start
 
-The **Customers** tab shows the all data for all of the customers in this segment as a series of columns pulled from various tables in your Customer 360 database.
+The **Customers** tab shows the all data for all of the customers in this segment as a series of columns pulled from various tables in your Customer 360 database. You can download a csv file containing detailed information about each individual customer within the selected segment. This comprehensive dataset includes crucial data points such as:
+
+* Basic information like a customers email, address, and phone number.
+* Depending on your company's PII restrictions, age group and birthday.
+* Other categories that are identified in your Customer 360 table.
 
 .. tip:: You can customize the columns to display in order to only focus on certain attributes. You can also download the segment as a CSV file.
 
