@@ -169,10 +169,10 @@ Segment tabs
 
 After you click a segment on the **Segments page**, you can view insights about segments on the following tabs:
 
-#. :ref:`Segments <segment-reference-link>`
-#. :ref:`Breakdown <segment-reference-link>`
-#. :ref:`Compare <segment-reference-link>`
-#. :ref:`Customers <segment-reference-link>`
+#. :ref:`Summary <segments-howitworks-segment-summary>`
+#. :ref:`Breakdown <segments-howitworks-segment-breakdown>`
+#. :ref:`Compare <segments-howitworks-segment-compare>`
+#. :ref:`Customers <segments-howitworks-segment-compare>`
 
 .. segments-tabs-end
 
