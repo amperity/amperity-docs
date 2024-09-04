@@ -167,12 +167,12 @@ Segment tabs
 
 .. segments-tabs-start
 
-After you click a segment on the **Segments page**, you can view insites about each segment.
+After you click a segment on the **Segments page**, you can view insights about segments on the following tabs:
 
-* The **Summary** tab presents key insights for a specific segment.
-* The **Breakdown** tab provides charts to analyze and compare customer behavior patterns and demographic attributes.
-* The **Compare** tab compares and intersects segments, allowing for new segment creation.
-* The **Customers** tab details the comprehensive list of customers who fall within the target market segment.
+#. :ref:`Segments <segment-reference-link>`
+#. :ref:`Breakdown <segment-reference-link>`
+#. :ref:`Compare <segment-reference-link>`
+#. :ref:`Customers <segment-reference-link>`
 
 .. segments-tabs-end
 
@@ -336,7 +336,7 @@ Customers tab
 
 .. segments-customers-start
 
-The **Customers** tab shows the all data for all of the customers in this segment as a series of columns pulled from various tables in your Customer 360 database. You can download a csv file containing detailed information about each individual customer within the selected segment. This comprehensive dataset includes crucial data points such as:
+The **Customers** tab shows the all data for all of the customers in this segment as a series of columns pulled from various tables in your Customer 360 database. You can download a csv file containing detailed information about each individual customer within the selected segment. This comprehensive dataset includes information such as:
 
 * Basic information like a customers email, address, and phone number.
 * Depending on your company's PII restrictions, age group and birthday.
