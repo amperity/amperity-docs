@@ -25,7 +25,7 @@ About courier groups
 
 .. courier-groups-context-start
 
-A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit; couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started. For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity.
+A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit; couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started. For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate a Customer 360. If orchestrations, campaigns, or Profile API indexes are configured to run as part of a courier group, they may then also run once the Customer 360 is created.
 
 .. courier-groups-context-end
 
@@ -43,7 +43,9 @@ What a courier group does:
 #. Allows for each courier to be assigned schedule variance via wait times and offsets.
 #. Enables both automatic and ad hoc runs of couriers.
 #. Polls each data source associated with a courier in the group to determine if data is ready to be pulled to Amperity.
-#. Ensures that constraints for downstream processes are present in the workflow; all couriers in a courier group must complete their jobs.
+#. Pulls source data into Amperity.
+#. Runs Stitch and generates a Customer 360, if configured.
+#. Runs downstream activations (orchestrations, campaigns, Profile API index refreshes), if configured.
 
 What a courier group needs:
 
@@ -56,7 +58,7 @@ What a courier group needs:
 
 .. courier-groups-view-start
 
-The **Sources** page shows the status of all courier groups, including when they last ran or updated, and its current status.
+The **Configured** tab in the **Workflows** page shows the status of all courier group workflows including when they last ran, and its current status. The **Sources** page also shows the status of all courier groups.
 
 .. courier-groups-view-end
 
@@ -118,15 +120,15 @@ Run types
 
 .. courier-groups-run-types-start
 
-A courier group can be configured for any of the following run types:
+A courier group workflow can be configured with any of the following run types:
 
 **Full workflow**
-   A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every scheduled orchestration group that is configured to run after this courier group.
+   A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
 **Partial workflow**
-   A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any orchestrations.
+   A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
-   .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream workflows.
+   .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
 
 **Ingest only**
    An ingest-only workflow refreshes domain tables, but does not run Stitch.
@@ -173,9 +175,9 @@ Offsets
 
 .. courier-groups-schedule-offset-start
 
-An offset is a constraint placed on a courier group that defines a range of time that is older than the scheduled time, within which a courier group will accept customer data as valid for the current job. Offset times are in Coordinated Universal Time (UTC), unless the "Use this time zone for file date ranges" checkbox is checked.
+An offset is a constraint placed on a courier that defines a range of time that is older than the scheduled time, within which a courier group will accept customer data as valid for the current job. Offset times are in Coordinated Universal Time (UTC), unless the "Use this time zone for file date ranges" checkbox is checked.
 
-A courier group offset is typically set to be 24 hours. For example, it's possible for customer data to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of the customer's own workflow. An offset ensures that the data at the source location is recognized by the courier as the correct data source.
+A courier offset is typically set to be 24 hours. For example, it's possible for customer data to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of the customer's own workflow. An offset ensures that the data at the source location is recognized by the courier as the correct data source.
 
 .. warning:: An offset affects couriers in a courier group whether or not they run on a schedule. Manually run courier groups will not take their schedule into consideration when determining the date range; only the provided input day(s) to load data from are used as inputs.
 
@@ -202,6 +204,8 @@ Time zones
 .. courier-groups-timezones-start
 
 A courier group schedule is associated with a time zone. The time zone determines the point at which a courier group's scheduled start time begins. A time zone should be aligned with the time zone of system from which the data is being pulled.
+
+Use the **Use this time zone for file date ranges** checkbox to use the selected time zone to look for files. If unchecked, the courier group will use the current time in UTC to look for files to pick up.
 
 .. courier-groups-timezones-end
 
@@ -364,9 +368,9 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-       A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every scheduled orchestration group that is configured to run after this courier group.
+       A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-       A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any orchestrations.
+       A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
        An ingest-only workflow refreshes domain tables, but does not run Stitch.
 
