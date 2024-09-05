@@ -492,6 +492,12 @@ Ignore jitter alerts
    :start-after: .. tooltip-stitch-config-jitter-alerts-start
    :end-before: .. tooltip-stitch-config-jitter-alerts-end
 
+.. configure-stitch-general-stitch-ignore-jitter-rates-start
+
+.. note:: The rates at which jitter may occur is when large numbers of customer records are added to or removed from your tenant or when two percent (or greater) of all customer records are assigned an updated Amperity ID.
+
+.. configure-stitch-general-stitch-ignore-jitter-rates-end
+
 .. configure-stitch-general-stitch-ignore-jitter-start
 
 For example, if you are using a tenant for training purposes or if you are loading a very large and complex set of data to an established tenant. In these situations a high jitter rate is common, but not unexpected.
