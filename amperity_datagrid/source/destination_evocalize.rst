@@ -6,8 +6,8 @@
 .. |plugin-name| replace:: SFTP
 .. |what-send| replace:: CSV files
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "evo"
-.. |sftp-type| replace:: **evocalize**
+.. |filter-the-list| replace:: "sftp"
+.. |sftp-type| replace:: **sftp**
 .. |sftp-hostname| replace:: **files.evocalize.com**
 .. |file-format| replace:: CSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
