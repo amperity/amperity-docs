@@ -492,6 +492,12 @@ Ignore jitter alerts
    :start-after: .. tooltip-stitch-config-jitter-alerts-start
    :end-before: .. tooltip-stitch-config-jitter-alerts-end
 
+.. configure-stitch-general-stitch-ignore-jitter-rates-start
+
+.. note:: The rates at which jitter may occur is when large numbers of customer records are added to or removed from your tenant or when two percent (or greater) of all customer records are assigned an updated Amperity ID.
+
+.. configure-stitch-general-stitch-ignore-jitter-rates-end
+
 .. configure-stitch-general-stitch-ignore-jitter-start
 
 For example, if you are using a tenant for training purposes or if you are loading a very large and complex set of data to an established tenant. In these situations a high jitter rate is common, but not unexpected.
@@ -748,7 +754,6 @@ The following settings are available for advanced configuration of Stitch:
 
 * :ref:`configure-stitch-advanced-bad-values`
 * :ref:`configure-stitch-advanced-clustering-algorithm`
-* :ref:`configure-stitch-advanced-jitter-thresholds`
 * :ref:`configure-stitch-advanced-profiles`
 * :ref:`configure-stitch-advanced-profile-supersized-clusters`
 * :ref:`configure-stitch-advanced-profile-trivial-duplicates`
@@ -769,8 +774,7 @@ The following settings are available for advanced configuration of Stitch:
        :amperity.stitch.settings/soft-trivial-dupe-semantic-exclusions #{},
        :amperity.stitch.settings/soft-trivial-dupe-size-threshold 10,
        :amperity.stitch.settings/supersized-cluster-min-size 500,
-       :amperity.stitch.settings/supersized-partition-max-depth 4,
-       :amperity.stitch.settings/jitter-thresholds 2}
+       :amperity.stitch.settings/supersized-partition-max-depth 4}
 
    Advanced configuration settings are described in more detail below. You may also override general configuration settings.
 
@@ -819,24 +823,6 @@ The advanced configuration setting for the clustering algorithm is:
 The default value for the Stitch clustering algorithm is **:hierarchical**, which applies hierarchical clustering. This value should not be changed without careful consideration. Other configuration values are: **:nil**, which uses connected components directly.
 
 .. configure-stitch-advanced-clustering-algorithm-end
-
-
-.. _configure-stitch-advanced-jitter-thresholds:
-
-Jitter thresholds
---------------------------------------------------
-
-.. configure-stitch-advanced-jitter-thresholds-start
-
-Jitter measures the number of customer profiles that are updated. When jitter exceeds a configured threshold a warning for "an above average number of customer profiles were updated" is shown. The default value for jitter thresholds is 2 (percent). This value may be adjusted.
-
-The advanced configuration setting for jitter thresholds is:
-
-.. code-block:: clojure
-
-   :amperity.stitch.settings/jitter-thresholds 2
-
-.. configure-stitch-advanced-jitter-thresholds-end
 
 
 .. _configure-stitch-advanced-profiles:
