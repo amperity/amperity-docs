@@ -22,9 +22,8 @@ Requirements
 
 .. TODO: This destination has the following requirements.
 
-#. An Amazon S3 bucket that is already configured to use credentials or cross-account role assumption.
-#. The name of the S3 bucket to which Amperity will send data.
-#. The Amazon S3 prefix for the location in the Amazon S3 bucket to which Amperity will send data.
+#. The name of the |destination-name| bucket to which Amperity will send data.
+#. The |destination-name| prefix for the bucket.
 #. The public key to use when Amperity is configured to send files to the bucket using Pretty Good Privacy (PGP) encryption.
 
 
