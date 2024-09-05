@@ -1085,7 +1085,7 @@
 
 .. |ext_google_cloud_storage_service_account_key| raw:: html
 
-   <a href="https://cloud.google.com/storage/" target="_blank">creating the service account key-pair</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://cloud.google.com/iam/docs/keys-create-delete" target="_blank">creating the service account key-pair</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_google_display_and_video_advertisers| raw:: html

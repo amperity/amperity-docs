@@ -504,7 +504,7 @@ Applies to: Amazon S3, Cheetah Digital, Domo, Optimizely.
 
 .. setting-amazon-s3-about-start
 
-Amazon Simple Storage Service (Amazon S3) can store data files of any size for any file format that is supported by Amperity.
+Amazon Simple Storage Service (|destination-name|) can store data files of any size for any file format that is supported by Amperity.
 
 .. setting-amazon-s3-about-end
 
@@ -602,7 +602,7 @@ Applies to: Azure Blob Storage.
 
 .. setting-azure-blob-storage-about-start
 
-Microsoft Azure Blob Storage can store data files of any size for any file format that is supported by Amperity.
+Microsoft |destination-name| can store data files of any size for any file format that is supported by Amperity.
 
 .. setting-azure-blob-storage-about-end
 
@@ -906,6 +906,12 @@ TEMP: "The type of key to use for matching."
 This section contains settings that are unique to Google Cloud Storage.
 
 Applies to: Google Cloud Storage.
+
+.. setting-google-cloud-storage-about-start
+
+|destination-name| can store data files of any size for any file format that is supported by Amperity.
+
+.. setting-google-cloud-storage-about-end
 
 **Compression**
 
@@ -1623,13 +1629,13 @@ TEMP: Convert empty fields in the data set to null values. When false empty fiel
 
 This section contains settings that are unique to SFTP.
 
-Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airship, BazaarVoice, Bluecore, Evocalize, Experian, Infutor, Kibo (Monetate), Koupon Media, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, PowerReviews, SFTP, Vibes.
+Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airship, BazaarVoice, Bluecore, Evocalize, Experian, Infutor, Kibo (Monetate), Koupon Media, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, PowerReviews, Quad, RR Donnelly, Salesforce Marketing Cloud, SMG, SoundCommerce, SFTP, Vibes.
 
 **About**
 
 .. setting-sftp-about-start
 
-`Secure File Transfer Protocol (SFTP) <https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol>`__ is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
+Secure File Transfer Protocol (SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
 
 .. setting-sftp-about-end
 
@@ -1947,6 +1953,6 @@ This section contains settings that are unique to Zendesk.
 
 .. setting-zendesk-subdomain-start
 
-The subdomain is part of your |destination-name| URL. For example: "acme" is the subdomain for "acme.zendesk.com".
+The subdomain is part of your |destination-name| URL. For example: "socktown" is the subdomain for "socktown.zendesk.com".
 
 .. setting-zendesk-subdomain-end
