@@ -1,3 +1,610 @@
+.. 
+.. shared settings for destinations
+.. 
+
+
+
+**LOREM IPSUM**
+
+.. TODO: Placeholder content for testing and validation.
+
+.. credential-lorem-ipsum-long-start
+
+Lorem ipsum dolor sit amet, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+.. credential-lorem-ipsum-long-end
+
+.. credential-lorem-ipsum-short-start
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+.. credential-lorem-ipsum-short-end
+
+.. credential-lorem-ipsum-alt-start
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+.. credential-lorem-ipsum-alt-end
+
+
+
+**STEPS**
+
+This section contains the steps that all credentials follow. Custom information belongs in specific destination topics.
+
+**Step 01**
+
+.. credential-steps-add-credential-start
+
+From the **Settings** page, select the **Credentials** tab, and then click the **Add credential** button.
+
+.. credential-steps-add-credential-end
+
+**Step 02**
+
+.. credential-steps-select-type-start
+
+In the **Credentials settings** dialog box, do the following:
+
+From the **Plugin** dropdown, select |destination-name|.
+
+Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+
+The |credential-type| credential type should already be selected in the **Credential type** drop-down.
+
+.. credential-steps-select-type-end
+
+Notes: When a source or destination supports more than one credential type, use the "multiple" inclusion block, and then add "From the **Credential type** drop-down, select **credential-name**." See the Amazon S3 destination topic for an example.
+
+.. credential-steps-select-type-multiple-start
+
+In the **Credentials settings** dialog box, do the following:
+
+From the **Plugin** dropdown, select |destination-name|.
+
+Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+
+.. credential-steps-select-type-multiple-end
+
+**Step 03**
+
+Notes: When a source or destination supports more than one credential type, copy the contents of this section instead of using the inclusion, and then replace credential-type with the credential string. See the Amazon S3 destination topic for an example.
+
+.. credential-steps-settings-intro-start
+
+The settings that are available for a credential are determined by the credential type. For the |credential-type| credential type, configure the following settings, and then click **Save**.
+
+.. credential-steps-settings-intro-end
+
+
+
+
+**COMMON**
+
+This section contains credential settings that are not unique.
+
+**Get details**
+
+.. credential-get-details-both-types-start
+
+Choose |credential-type| as the credential type, and then configure the hostname, username and passphrase, host public key, port number, and private key as required by the credential type.
+
+.. credential-get-details-both-types-end
+
+.. credential-get-details-private-key-only-start
+
+The "private-key" credential type requires a public key that Amperity will use to encrypt files using Pretty Good Privacy (PGP).
+
+.. credential-get-details-private-key-only-end
+
+.. credential-get-details-credential-files-start
+
+|destination-name| requires |required-credentials|.
+
+.. credential-get-details-credential-files-end
+
+**Configure credentials first**
+
+.. credential-configure-first-start
+
+Configure credentials for |destination-name| before adding a destination.
+
+.. credential-configure-first-end
+
+**SnapPass callout**
+
+.. credential-snappass-start
+
+An individual with access to |destination-name| should use SnapPass to securely share |required-credentials| details with the individual who will configure Amperity.
+
+.. credential-snappass-end
+
+
+**ACTIVECAMPAIGN**
+
+This section contains credentials that are unique to ActiveCampaign.
+
+**API key**
+
+.. credential-active-campaign-api-key-start
+
+The `API key <https://developers.activecampaign.com/reference/authentication>`__ |ext_link| for your |destination-name| account.
+
+.. credential-active-campaign-api-key-end
+
+**API URL**
+
+.. credential-active-campaign-url-start
+
+The `base URL <https://developers.activecampaign.com/reference/url>`__ |ext_link| for your |destination-name| account. For example: `https://<your-account>.api-us1.com/api/3/`.
+
+.. credential-active-campaign-url-end
+
+
+
+
+
+**ACXIOM**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+**ADOBE CAMPAIGN**
+
+**Hostname**
+
+.. credential-adobe-campaign-hostname-start
+
+"[value]" is the name of your tenant on |destination-name|; ".campaign.adobe.com" is appended automatically.
+
+.. credential-adobe-campaign-hostname-end
+
+**Private key**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+**ADOBE COMMERCE**
+
+xxxxx
+
+**Access token**
+
+.. credential-adobe-commerce-access-token-start
+
+xxxxx
+
+.. credential-adobe-commerce-access-token-end
+
+**Access token secret**
+
+.. credential-adobe-commerce-access-token-secret-start
+
+xxxxx
+
+.. credential-adobe-commerce-access-token-secret-end
+
+**Consumer key**
+
+.. credential-adobe-commerce-consumer-key-start
+
+xxxxx
+
+.. credential-adobe-commerce-consumer-key-end
+
+**Consumer secret**
+
+.. credential-adobe-commerce-consumer-secret-start
+
+xxxxx
+
+.. credential-adobe-commerce-consumer-secret-end
+
+**Hostname**
+
+.. credential-adobe-commerce-hostname-start
+
+xxxxx
+
+.. credential-adobe-commerce-hostname-end
+
+
+
+
+**ADOBE CUSTOMER ATTRIBUTES**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**ADOBE EXPERIENCE CLOUD**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**ADOBE MARKETO**
+
+xxxxx
+
+**Client ID**
+
+.. credential-adobe-marketo-client-id-start
+
+xxxxx
+
+.. credential-adobe-marketo-client-id-end
+
+**Client secret**
+
+.. credential-adobe-marketo-client-secret-start
+
+xxxxx
+
+.. credential-adobe-marketo-client-secret-end
+
+**Subdomain**
+
+.. credential-adobe-marketo-subdomain-start
+
+xxxxx
+
+.. credential-adobe-marketo-subdomain-end
+
+
+
+
+**AIRSHIP**
+
+**Hostname**
+
+See SFTP.
+
+**Port**
+
+.. credential-airship-port-start
+
+|destination-name| requires port "5222".
+
+.. credential-airship-port-end
+
+**Private key**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**AMAZON ADS**
+
+xxxxx
+
+
+**OAuth flow**
+
+.. credential-amazon-ads-oauth-start
+
+xxxxx
+
+.. credential-amazon-ads-oauth-end
+
+
+
+**AMAZON KINESIS DATA FIREHOSE**
+
+xxxxx
+
+
+**IAM access key**
+
+.. credential-amazon-kinesis-iam-access-key-start
+
+xxxxx
+
+.. credential-amazon-kinesis-iam-access-key-end
+
+**IAM role ARN**
+
+.. credential-amazon-kinesis-iam-role-arn-start
+
+xxxxx
+
+.. credential-amazon-kinesis-iam-role-arn-end
+
+**IAM secret key**
+
+.. credential-amazon-kinesis-iam-secret-key-start
+
+xxxxx
+
+.. credential-amazon-kinesis-iam-secret-key-end
+
+**S3 bucket name**
+
+.. credential-amazon-kinesis-s3-bucket-name-start
+
+xxxxx
+
+.. credential-amazon-kinesis-s3-bucket-name-end
+
+
+
+
+**AMAZON S3**
+
+This section contains credentials that are unique to Amazon S3.
+
+For iam-credential:
+
+**Amperity role ARN**
+
+.. credential-amazon-s3-amperity-role-arn-start
+
+The intermediate IAM role ARN that is used to assume the target role. Amperity provides this value.
+
+.. credential-amazon-s3-amperity-role-arn-end
+
+**External ID**
+
+.. credential-amazon-s3-external-id-start
+
+The external ID that is used to assume the target IAM role.
+
+An external ID is an alphanumeric string between 2-1224 characters (without spaces) and may include the following symbols: plus (+), equal (=), comma (,), period (.), at (@), colon (:), forward slash (/), and hyphen (-).
+
+.. credential-amazon-s3-external-id-end
+
+**IAM access key**
+
+.. credential-amazon-s3-iam-access-key-start
+
+The IAM access key is one part (of two) that allows Amperity to autheticate to an Amazon S3 bucket. The value for this part of the access key is the access key ID. For example: "AKIAIOSFODNN7EXAMPLE".
+
+.. credential-amazon-s3-iam-access-key-end
+
+**IAM role ARN**
+
+.. credential-amazon-s3-iam-role-arn-start
+
+The IAM role ARN that is used by Amperity to access a customer-managed Amazon S3 bucket.
+
+.. credential-amazon-s3-iam-role-arn-end
+
+**IAM secret key**
+
+.. credential-amazon-s3-iam-secret-key-start
+
+The IAM secret key is one part (of two) that allows Amperity to autheticate to an Amazon S3 bucket. The value for this part of the access key is the secret access key. For example: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY".
+
+.. credential-amazon-s3-iam-secret-key-end
+
+**S3 bucket name**
+
+.. credential-amazon-s3-bucket-name-start
+
+The name of the Amazon S3 bucket.
+
+.. credential-amazon-s3-bucket-name-end
+
+**Target role ARN**
+
+.. credential-amazon-s3-target-role-arn-start
+
+The IAM role ARN that is used by Amperity to access a customer-managed Amazon S3 bucket.
+
+.. credential-amazon-s3-target-role-arn-end
+
+**Trust policy**
+
+.. credential-amazon-s3-trust-policy-start
+
+The complete trust policy is availabe from a link at the bottom of the credential configuration page.
+
+.. credential-amazon-s3-trust-policy-end
+
+**SETUP STEPS FOR ROLE-TO-ROLE**
+
+**Intro**
+
+.. credential-amazon-s3-cross-account-roles-overview-start
+
+Amperity prefers to pull data from and send data to customer-managed cloud storage.
+
+Amperity recommends using cross-account role assumption to manage access to Amazon S3. This ensures that your brand manages the security policies that control access to your data.
+
+.. credential-amazon-s3-cross-account-roles-overview-end
+
+**Benefits**
+
+.. credential-amazon-s3-cross-account-roles-context-start
+
+Using cross-account role assumption helps ensures that customers can:
+
+* Directly manage the IAM policies that control access to data
+* Directly manage the files that are available within the Amazon S3 bucket
+* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Amazon AWS account, after which data sharing ends immediately
+* Directly troubleshoot incomplete or missing files
+
+.. credential-amazon-s3-cross-account-roles-context-end
+
+**Note to make files available for feed creation**
+
+.. credential-amazon-s3-cross-account-roles-setup-start
+
+After setting up cross-account role assumption, a list of files (by filename and file type), along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after cross-account role assumption is configured.
+
+.. credential-amazon-s3-cross-account-roles-setup-end
+
+**About AWS access point**
+
+.. credential-amazon-s3-aws-access-point-start
+
+.. admonition:: Can I use an Amazon AWS Access Point?
+
+   Yes, but with the following limitations:
+
+   #. The direction of access is Amperity access files that are located in a customer-managed Amazon S3 bucket
+   #. A credential-free role-to-role access pattern is used
+   #. Traffic is not restricted to VPC-only
+
+.. credential-amazon-s3-aws-access-point-end
+
+**Intro to steps**
+
+.. credential-amazon-s3-cross-account-roles-steps-intro-done-by-admins-start
+
+The following steps describe how to configure Amperity to use cross-account role assumption to pull data from (or push data to) a customer-managed Amazon S3 bucket.
+
+.. important:: These steps require configuration changes to customer-managed Amazon AWS accounts and must be done by users with administrative access.
+
+.. credential-amazon-s3-cross-account-roles-steps-intro-done-by-admins-end
+
+**Settings context**
+
+.. credential-amazon-s3-cross-account-roles-steps-settings-required-start
+
+You must provide the values for the **Target Role ARN** and **S3 Bucket Name** fields. Enter the target role ARN for the IAM role that Amperity will use to access the customer-managed Amazon S3 bucket, and then enter the name of the Amazon S3 bucket.
+
+.. credential-amazon-s3-cross-account-roles-steps-settings-required-end
+
+.. credential-amazon-s3-cross-account-roles-steps-settings-provided-start
+
+The values for the **Amperity Role ARN** and **External ID** fields -- the Amazon Resource Name (ARN) for your Amperity tenant and its external ID -- are provided automatically.
+
+.. credential-amazon-s3-cross-account-roles-steps-settings-provided-end
+
+**Review policy**
+
+.. credential-amazon-s3-cross-account-roles-steps-policy-example-intro-start
+
+Review the following sample policy, and then add a similar policy to the customer-managed Amazon S3 bucket that allows Amperity access to the bucket. Add this policy as a trusted policy to the IAM role that is used to manage access to the customer-managed Amazon S3 bucket.
+
+.. credential-amazon-s3-cross-account-roles-steps-policy-example-intro-end
+
+**Example policy**
+
+.. credential-amazon-s3-cross-account-roles-steps-policy-example-start
+
+The policy for the customer-managed Amazon S3 bucket is unique, but will be similar to:
+
+::
+
+   {
+     "Statement": [
+       {
+         "Sid": "AllowAmperityAccess",
+         "Effect": "Allow",
+         "Principal": {
+           "AWS": "arn:aws:iam::account:role/resource"
+          },
+         "Action": "sts:AssumeRole",
+         "Condition": {
+           "StringEquals": {
+              "sts:ExternalId": "01234567890123456789"
+           }
+         }
+       }
+     ]
+   }
+
+The value for the role ARN is similar to:
+
+::
+
+   arn:aws:iam::1234567890:role/prod/amperity-plugin
+
+.. credential-amazon-s3-cross-account-roles-steps-policy-example-end
+
+**Save Amazon S3 credentials**
+
+.. credential-amazon-s3-cross-account-roles-steps-save-credentials-start
+
+Click **Continue** to test the configuration (and validate the connection) to the customer-managed Amazon S3 bucket, after which you will be able to continue the steps for adding a courier.
+
+.. credential-amazon-s3-cross-account-roles-steps-save-credentials-end
+
+
+
+
+
+**ATTENTIVE (API)**
+
+xxxxx
+
+**API key**
+
+.. credential-attentive-api-key-start
+
+xxxxx
+
+.. credential-attentive-api-key-end
+
+
+
+
+
+**ATTENTIVE (SFTP)** / **ATTENTIVE MOBILE**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
 
 
 
@@ -37,11 +644,6 @@ A connection string is similar to:
    AccountName=name;AccountKey=key
 
 .. credential-azure-blob-storage-connection-string-example-end
-
-
-
-
-
 
 **Container**
 
@@ -92,3 +694,1357 @@ A URI for |destination-name| that contains the name of the account and the name 
 Each |destination-name| resource has a `storage URI <https://learn.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#resource-uri-syntax>`__ |ext_link|, which contains the name of the account and the name of the container in which blob storage is located.
 
 .. credential-azure-blob-storage-storage-uri-overview-end
+
+
+
+**BAZAARVOICE**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**BLUECORE**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**BRAZE**
+
+xxxxx
+
+**API key**
+
+.. credential-braze-api-key-start
+
+xxxxx
+
+.. credential-braze-api-key-end
+
+
+
+
+
+**CAMELOT SMM**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**CORDIAL**
+
+xxxxx
+
+For cordial and cordial-aws both use API key and API URL.
+
+**API key**
+
+.. credential-cordial-api-key-start
+
+xxxxx
+
+.. credential-cordial-api-key-end
+
+**API URL**
+
+.. credential-cordial-api-url-start
+
+xxxxx
+
+.. credential-cordial-api-url-end
+
+**IAM access key**
+
+.. credential-cordial-iam-access-key-start
+
+xxxxx
+
+.. credential-cordial-iam-access-key-end
+
+**IAM secret key**
+
+.. credential-cordial-iam-secret-key-start
+
+xxxxx
+
+.. credential-cordial-iam-secret-key-end
+
+**S3 bucket name**
+
+.. credential-cordial-s3-bucket-name-start
+
+xxxxx
+
+.. credential-cordial-s3-bucket-name-end
+
+
+
+
+
+**CRITEO**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-criteo-oauth-start
+
+xxxxx
+
+.. credential-criteo-oauth-end
+
+
+
+
+
+**CROSS COUNTRY COMPUTER**
+
+**Hostnamem**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**DATABRICKS**
+
+xxxxx
+
+For azure-databricks
+
+
+**Server hostname**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+**HTTP path**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+**Personal access token**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+**Azure Blob account name**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+**Azure Blob shared access signature**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+**Container**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+For databricks
+
+**HTTP path**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+**Personal access token**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+**Server hostname**
+
+.. credential-xxxxx-xxxxx-start
+
+xxxxx
+
+.. credential-xxxxx-xxxxx-end
+
+
+
+
+
+**EPSILON ABACUS**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**EPSILON CONVERSANT**
+
+**Hostname**
+
+.. credential-epsilon-conversant-hostname-start
+
+"[value]" is the name of your tenant on |destination-name|.
+
+.. credential-epsilon-conversant-hostname-end
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+
+**EPSILON TARGETING**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+
+**EXPERIAN**
+
+xxxxx
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Private key**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**GOOGLE ADS**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-google-ads-oauth-start
+
+xxxxx
+
+.. credential-google-ads-oauth-end
+
+
+
+
+**GOOGLE ANALYTICS** / **GOOGLE ANALYTICS 4**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-google-analytics-4-oauth-start
+
+xxxxx
+
+.. credential-google-analytics-4-oauth-end
+
+
+
+
+
+**GOOGLE CLOUD STORAGE**
+
+This section contains credentials that are unique to Google Cloud Storage.
+
+**Bucket name**
+
+.. credential-google-cloud-storage-bucket-name-start
+
+`Buckets <https://cloud.google.com/storage/docs/buckets>`__ |ext_link| are basic containers that hold data in |destination-name|. Use buckets to organize storage locations for your data, and then configure Amperity to send data to that bucket.
+
+.. credential-google-cloud-storage-bucket-name-end
+
+.. credential-google-cloud-storage-bucket-name-must-match-start
+
+The bucket name must match the value of the ``<<GCS_BUCKET_NAME>>`` placeholder shown in the :ref:`service account key example <destination-google-cloud-storage-service-account-key-example>`.
+
+.. credential-google-cloud-storage-bucket-name-must-match-end
+
+**Service account key**
+
+.. credential-google-cloud-storage-service-account-key-start
+
+Google Cloud uses service account key-pairs for authentication. A public service account key is stored in Google Cloud; a private service account key allows applications access to your instance of |destination-name|.
+
+.. credential-google-cloud-storage-service-account-key-end
+
+.. credential-google-cloud-storage-service-account-key-value-start
+
+The value of the private service account key is the contents of the JSON file downloaded from Google Cloud after `creating the service account key-pair <https://cloud.google.com/iam/docs/keys-create-delete>`__ |ext_link|. Open the JSON file in a text editor, select all of the content in the JSON file, copy it, and then paste it into the **Service account key** field.
+
+.. credential-google-cloud-storage-service-account-key-value-end
+
+**Service account role**
+
+.. TODO: Is the service account role required for sending data *and* pulling data from Google Cloud Storage? Or just pulling data?
+
+.. credential-google-cloud-storage-service-account-role-start
+
+The **Storage Object Admin** role must be assigned to the service account.
+
+.. credential-google-cloud-storage-service-account-role-end
+
+
+
+**GOOGLE CUSTOMER MATCH**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-google-customer-match-oauth-start
+
+xxxxx
+
+.. credential-google-customer-match-oauth-end
+
+
+
+
+
+**HUBSPOT**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-hubspot-oauth-start
+
+xxxxx
+
+.. credential-hubspot-oauth-end
+
+
+
+
+
+**INFUTOR**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**KIBO**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**KLAVIYO**
+
+xxxxx
+
+
+**API key**
+
+.. credential-klaviyo-api-key-start
+
+xxxxx
+
+.. credential-klaviyo-api-key-end
+
+
+
+
+
+**KOUPON MEDIA**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**LISTRAK**
+
+xxxxx
+
+**Email client ID**
+
+.. credential-listrak-email-client-id-start
+
+xxxxx
+
+.. credential-listrak-email-client-id-end
+
+**Email client secret**
+
+.. credential-listrak-email-client-secret-start
+
+xxxxx
+
+.. credential-listrak-email-client-secret-end
+
+**SMS client ID**
+
+.. credential-listrak-sms-client-id-start
+
+xxxxx
+
+.. credential-listrak-sms-client-id-end
+
+**SMS client secret**
+
+.. credential-listrak-sms-client-secret-start
+
+xxxxx
+
+.. credential-listrak-sms-client-secret-end
+
+
+
+
+
+**LIVERAMP**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**MAILCHIMP**
+
+xxxxx
+
+**API key**
+
+.. credential-mailchimp-api-key-start
+
+xxxxx
+
+.. credential-mailchimp-api-key-end
+
+
+
+
+
+**META ADS MANAGER**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-meta-ads-manager-oauth-start
+
+xxxxx
+
+.. credential-meta-ads-manager-oauth-end
+
+
+
+
+
+**META ADS MANAGER: OFFLINE EVENTS**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-meta-ads-manager-offline-events-oauth-start
+
+xxxxx
+
+.. credential-meta-ads-manager-offline-events-oauth-end
+
+
+
+
+
+**MICROSOFT ADVERTISING**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-microsoft-advertising-oauth-start
+
+xxxxx
+
+.. credential-microsoft-advertising-oauth-end
+
+
+
+
+
+**MICROSOFT DATAVERSE**
+
+xxxxx
+
+**Azure tenant ID**
+
+.. credential-microsoft-dataverse-azure-tenant-id-start
+
+xxxxx
+
+.. credential-microsoft-dataverse-azure-tenant-id-end
+
+**Azure client ID**
+
+.. credential-microsoft-dataverse-azure-client-id-start
+
+xxxxx
+
+.. credential-microsoft-dataverse-azure-client-id-end
+
+**Azure client secret**
+
+.. credential-microsoft-dataverse-azure-client-secret-start
+
+xxxxx
+
+.. credential-microsoft-dataverse-azure-client-secret-end
+
+
+
+
+
+**MICROSOFT DYNAMICS 365 MARKETING**
+
+xxxxx
+
+**Azure client ID**
+
+.. credential-microsoft-dynamics-365-marketing-azure-client-id-start
+
+xxxxx
+
+.. credential-microsoft-dynamics-365-marketing-azure-client-id-end
+
+**Azure client secret**
+
+.. credential-microsoft-dynamics-365-marketing-azure-client-secret-start
+
+xxxxx
+
+.. credential-microsoft-dynamics-365-marketing-azure-client-secret-end
+
+**Azure tenant ID**
+
+.. credential-microsoft-dynamics-365-marketing-azure-tenant-id-start
+
+xxxxx
+
+.. credential-microsoft-dynamics-365-marketing-azure-tenant-id-end
+
+
+
+
+
+
+**MICROSOFT DYNAMICS**
+
+xxxxx
+
+
+**Client ID**
+
+.. credential-microsoft-dynamics-client-id-start
+
+xxxxx
+
+.. credential-microsoft-dynamics-client-id-end
+
+**Client secret**
+
+.. credential-microsoft-dynamics-client-secret-start
+
+xxxxx
+
+.. credential-microsoft-dynamics-client-secret-end
+
+
+
+
+
+**MONETATE**
+
+See Kibo.
+
+
+
+
+
+**NEUSTAR**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**ORACLE DATA CLOUD**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+
+
+**ORACLE ELOQUA**
+
+xxxxx
+
+**Company name**
+
+.. credential-oracle-eloqua-company-name-start
+
+xxxxx
+
+.. credential-oracle-eloqua-company-name-end
+
+**Password**
+
+.. credential-oracle-eloqua-password-start
+
+xxxxx
+
+.. credential-oracle-eloqua-password-end
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**ORACLE RESPONSYS**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Private key**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+
+**PANDA PRINTING**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+
+**PEBBLEPOST**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**PERSADO**
+
+**Hostname**
+
+See SFTP.
+
+**Private key**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**PINTEREST**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-pinterest-oauth-start
+
+xxxxx
+
+.. credential-pinterest-oauth-end
+
+
+
+
+
+**POWERREVIEWS**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**QUAD**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+
+**RR DONNELLY**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+
+**SAILTHRU**
+
+xxxxx
+
+**API key**
+
+.. credential-sailthru-api-key-start
+
+xxxxx
+
+.. credential-sailthru-api-key-end
+
+**Secret**
+
+.. credential-sailthru-secret-start
+
+xxxxx
+
+.. credential-sailthru-secret-end
+
+
+
+
+**SALESFORCE COMMERCE CLOUD**
+
+xxxxx
+
+**API token**
+
+.. credential-salesforce-commerce-cloud-api-token-start
+
+xxxxx
+
+.. credential-salesforce-commerce-cloud-api-token-end
+
+
+
+
+
+**SALESFORCE MARKETING CLOUD**
+
+xxxxx
+
+**Credential type**
+
+.. credential-salesforce-marketing-cloud-credential-type-start
+
+xxxxx
+
+(for non-SFTP destination)
+
+.. credential-salesforce-marketing-cloud-credential-type-end
+
+**Hostname**
+
+.. credential-salesforce-marketing-cloud-hostname-start
+
+"[hostname]" is the name of your tenant on |destination-name|.
+
+.. credential-salesforce-marketing-cloud-hostname-end
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**SALESFORCE SALES CLOUD**
+
+xxxxx
+
+**Username**
+
+.. credential-salesforce-sales-cloud-username-start
+
+xxxxx
+
+.. credential-salesforce-sales-cloud-username-end
+
+**Password**
+
+.. credential-salesforce-sales-cloud-password-start
+
+xxxxx
+
+.. credential-salesforce-sales-cloud-password-end
+
+**Security token**
+
+.. credential-salesforce-sales-cloud-security-token-start
+
+xxxxx
+
+.. credential-salesforce-sales-cloud-security-token-end
+
+
+
+
+
+**SFTP**
+
+This section contains credentials that are unique to SFTP. These credentials apply to all sources and destinations that use SFTP, including Acxiom, Adobe Campaign, Adobe Customer Attributes, Adobe Experience Platform, Airship, Attentive, BazaarVoice, Bluecore, Camelot SMM, Cheetah Digital, Criteo (offline events), Cross Country Computer, Emarsys, Epsilon, Evocalize, Experian, Infutor, Iterable, Kibo, Koupon Media, LiveRamp, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, Pinterest (product catalogs), PowerReviews, Quad, Reddit Ads, RR Donnelly, Salesforce Commerce Cloud, Salesforce Marketing Cloud, Salesforce Marketing Cloud Personalization, SMG, SoundCommerce, Vibes.
+
+.. credential-sftp-about-start
+
+Secure File Transfer Protocol (SFTP) is a network connection that is configured using a combination of a hostname and a username, along with a passphrase, public key, or private key.
+
+.. credential-sftp-about-end
+
+**Host public key**
+
+.. credential-sftp-host-public-key-start
+
+Optional. The host public key for |where-send|.
+
+.. credential-sftp-host-public-key-end
+
+**Hostname**
+
+.. credential-sftp-hostname-start
+
+The hostname for |where-send|. For example: |sftp-hostname|.
+
+.. credential-sftp-hostname-end
+
+**Passphrase**
+
+.. credential-sftp-passphrase-start
+
+The passphrase that is associated with the username.
+
+.. credential-sftp-passphrase-end
+
+**Port**
+
+.. credential-sftp-port-start
+
+Optional. The port number required by |where-send|. Use this setting only when the SFTP site uses a non-default port value.
+
+.. credential-sftp-port-end
+
+**Private key**
+
+.. credential-sftp-private-key-start
+
+Optional. A private key that is used to encrypt files that are sent to |where-send|.
+
+.. credential-sftp-private-key-end
+
+.. credential-sftp-private-key-required-start
+
+This setting is only required when the "private-key" credential type is selected.
+
+.. credential-sftp-private-key-required-end
+
+**Username**
+
+.. credential-sftp-username-start
+
+A username with access to |where-send|. This username must be allowed to write data to the remote folder to which Amperity will send data.
+
+.. credential-sftp-username-end
+
+
+
+
+**SHOPIFY**
+
+xxxxx
+
+**Access token**
+
+.. credential-shopify-access-token-start
+
+xxxxx
+
+.. credential-shopify-access-token-end
+
+**Shop name**
+
+.. credential-shopify-shop-name-start
+
+xxxxx
+
+.. credential-shopify-shop-name-end
+
+
+
+
+**SMG**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**SNAPCHAT**
+
+xxxxx
+
+**OAuth flow**
+
+.. credential-snapchat-oauth-start
+
+xxxxx
+
+.. credential-snapchat-oauth-end
+
+
+
+
+
+**SNOWFLAKE**
+
+xxxxx
+
+**xxxxx**
+
+.. credential-snowflake-xxxxx-start
+
+xxxxx
+
+.. credential-snowflake-xxxxx-end
+
+
+
+
+
+**SOUNDCOMMERCE**
+
+**Hostname**
+
+See SFTP.
+
+**Private key**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**THE TRADE DESK**
+
+**Advertiser ID**
+
+.. credential-the-trade-desk-advertiser-id-start
+
+xxxxx
+
+.. credential-the-trade-desk-advertiser-id-end
+
+**Advertiser secret**
+
+.. credential-the-trade-desk-advertiser-secret-start
+
+xxxxx
+
+.. credential-the-trade-desk-advertiser-secret-end
+
+
+
+
+
+**THE TRADE DESK: 3P MARKETPLACE**
+
+**Advertiser secret**
+
+See The Trade Desk.
+
+**Advertiser ID**
+
+See The Trade Desk.
+
+**Platform API token**
+
+.. credential-the-trade-desk-platform-api-token-start
+
+xxxxx
+
+.. credential-the-trade-desk-platform-api-token-end
+
+**Provider ID**
+
+.. credential-the-trade-desk-provider-id-start
+
+xxxxx
+
+.. credential-the-trade-desk-provider-id-end
+
+
+
+
+
+**THE TRADE DESK: OFFLINE EVENTS**
+
+**Advertiser ID**
+
+See The Trade Desk.
+
+**Advertiser secret**
+
+See The Trade Desk.
+
+
+
+
+**TIKTOK ADS MANAGER**
+
+**OAuth flow**
+
+.. credential-tiktok-ads-manager-oauth-start
+
+xxxxx
+
+.. credential-tiktok-ads-manager-oauth-end
+
+
+
+
+
+**TIKTOK ADS MANAGER: OFFLINE EVENTS**
+
+**OAuth flow**
+
+.. credential-tiktok-ads-manager-oauth-start
+
+xxxxx
+
+.. credential-tiktok-ads-manager-oauth-end
+
+
+
+
+
+**UID2**
+
+**UID2 key**
+
+.. credential-uid2-key-start
+
+xxxxx
+
+.. credential-uid2-key-end
+
+**UID2 secret**
+
+.. credential-uid2-secret-start
+
+xxxxx
+
+.. credential-uid2-secret-end
+
+
+
+
+
+**VIBES**
+
+**Hostname**
+
+See SFTP.
+
+**Passphrase**
+
+See SFTP.
+
+**Username**
+
+See SFTP.
+
+
+
+
+
+**ZENDESK**
+
+**API token**
+
+.. credential-zendesk-api-token-start
+
+xxxxx
+
+.. credential-zendesk-api-token-end
+
+
+**Email address**
+
+.. credential-zendesk-email-address-start
+
+xxxxx
+
+.. credential-zendesk-email-address-end
