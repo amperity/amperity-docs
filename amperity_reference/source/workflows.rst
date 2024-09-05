@@ -31,7 +31,7 @@ About the Workflows page
 
 .. workflows-page-start
 
-For each workflow you can view details for every step within a workflow. The **Workflows** page automatically refreshes every 30 seconds and updates the status for all workflows that are currently running.
+The workflows page contains two tabs: **Run history** and **Configured**. **Run history** allows you to see a filterable list of workflow runs that have happened. **Configured** allows you to see at a glace all of the automatically-run workflows that have been configured. For each workflow you can view details for every step within a workflow. Both tabs in the **Workflows** page automatically refresh with the latest status of any workflows that are currently running.
 
 .. image:: ../../images/mockups-workflow-success.png
    :width: 600 px
@@ -39,17 +39,16 @@ For each workflow you can view details for every step within a workflow. The **W
    :align: left
    :class: no-scaled-link
 
-Click the name of any workflow to open a page that shows a list of tasks and the order in which they occurred.
+Within **Run history**, click the name of any workflow run to open a page that shows a list of tasks and the order in which they occurred in the workflow run.
+Within **Configured**, click the name of any workflow to open up its configuration.
 
 .. workflows-page-end
 
 .. workflow-policy-start
 
-.. note:: The **Workflows** page is accessible to users of Amperity who are assigned the **Amp360 User** policy *or* the **DataGrid Operator** policy in your production tenant and the **DataGrid Administrator** policy in a sandbox.
+.. note:: The **Workflows** page is accessible to users of Amperity who are assigned the **Amp360 User** policy, the **AmpIQ User** policy, the **DataGrid Operator** policy, *or* the **DataGrid Administrator** policy in your production tenant and the **DataGrid Administrator** policy in a sandbox.
 
-   The **Workflows** page is not accessible to users who are assigned the **AmpIQ User** policy.
-
-   Workflow alerts are not available for workflows that run in a sandbox.
+   The **Workflows** page is read-only for users who are assigned the **AmpIQ User** policy.
 
 .. workflow-policy-end
 
@@ -63,9 +62,9 @@ Workflow alerts
 
 A workflow alert is sent when a task within the workflow requires your attention. Each alert contains a description of what caused the alert, along with a link to the workflow in Amperity. Workflow alerts can be configured to send when workflows fail, workflows succeed, workflows exceed a configured runtime threshold, query results exceed a configured threshold, and when workflows are manually stopped.
 
-Workflow alerts may be configured to be :ref:`sent to an email address <workflows-howto-open-from-email-alerts>` or sent to :ref:`a channel in a Slack workspace <workflows-howto-open-from-slack-alerts>`. Click the link in the email or Slack message to open the workflow in Amperity, and then resolve the issue(s) that caused the workflow alert.
-
 Workflow alerts can be grouped into automated workflow alerts and workflow run alerts. Configure recipients for automated workflow alerts when you want to monitor recurring automated workflow runs. Subscribe to individual workflow run alerts when you want to subscribe to updates for individual manually-run workflows, or if you want to subscribe to updates for a specific workflow run.
+
+Workflow alerts may be configured to be :ref:`sent to an email address <workflows-howto-open-from-email-alerts>` or sent to :ref:`a channel in a Slack workspace <workflows-howto-open-from-slack-alerts>`. Click the link in the email or Slack message to open the workflow in Amperity, and then resolve the issue(s) that caused the workflow alert.
 
 .. workflows-discover-alerts-end
 
@@ -74,13 +73,7 @@ Automated workflow alerts
 
 .. automated-workflow-alerts-start
 
-Configure automated workflow alerts within the **Automated workflow alerts** dialog in the workflow page. Use this as your default set of recipients to receive alerts for regularly occurring workflows. Configured recipients will receive the following alerts, for the workflow types they are subscribe to.
-
-* Failure alerts
-* Success alerts, only if enabled
-* Runtime alerts, if configured
-* Query alerts, if configured
-* Workflow stopped alerts
+Configure automated workflow alerts by workflow type within the **Automated workflow alerts** dialog in the workflow page. Use this as your default set of recipients to receive alerts for regularly occurring workflows.
 
 Here is a more detailed breakdown of automated workflow alerts by workflow type:
 
@@ -150,20 +143,20 @@ Subscribe to alerts for individual workflow runs to receive alerts on manually r
 
 .. _workflows-discover-details:
 
-Workflow details
+Workflow run details
 ==================================================
 
 .. workflows-discover-details-start
 
-The workflow details page provides a set of high-level details for each workflow, along with a list of tasks that were run during the workflow. To open the workflow details page, click any workflow in the list of workflows on the **Workflows** page.
+The workflow run details page provides a set of high-level details for a particular workflow run, along with a list of tasks that were run. To open the workflow run details page, click any workflow run in the list of workflows on the **Run history** tab or click the **last run** link in the **Config** tab.
 
 High-level details are visible within a series of boxes along the top of the page and include:
 
-* The workflow’s status, such as "succeeded", "failed", or "stopped"
-* The type of workflow, such as "courier", "courier group", "campaign send", "database", "file upload", and "orchestration group"
-* Who started the workflow, such as "automated" or a user name
-* The time at which the workflow started
-* The Runtime of the workflow (from start to finish or from start to failure)
+* The workflow run's status, such as "succeeded", "failed", or "stopped"
+* The type of workflow run, such as "courier", "courier group", "campaign send", "database", "file upload", and "orchestration group"
+* Who started the workflow run, such as "automated" or a user name
+* The time at which the workflow run started
+* The runtime of the workflow run (from start to finish or from start to failure)
 
 .. image:: ../../images/howitworks-workflows-details-and-tasks.png
    :width: 600 px
@@ -171,7 +164,7 @@ High-level details are visible within a series of boxes along the top of the pag
    :align: left
    :class: no-scaled-link
 
-Tasks appear in the lower part of the workflow page. Tasks represent the individual steps a workflow followed while running.
+Tasks appear in the lower part of the workflow run page. Tasks represent the individual steps a workflow followed while running.
 
 .. admonition:: Workflow status icons
 
@@ -211,7 +204,7 @@ For example, tasks for the **Sources** stage must locate today's data updates, p
 
    Use the **Hide skipped tasks** option to hide all tasks within a workflow that were skipped. A skipped workflow is shown in the workflow details page with the |workflow-skipped| icon.
 
-   Use the **Hide warnings** to hide alerts that may appear in the top of the workflow details page. A warning describes a warning that was detected during the workflow, but did not prevent the workflow from completing. Most warnings should be investigated to determine their origin.
+   Use the **Hide warnings** to hide warning banners that may appear in the top of the workflow details page. A warning describes a warning that was detected during the workflow, but did not prevent the workflow from completing. Most warnings should be investigated to determine their origin.
 
 .. workflows-discover-details-end
 
@@ -223,7 +216,7 @@ Details page actions
 
 .. workflows-discover-details-actions-start
 
-All workflows can be inspected from the workflow details page, regardless of their status or whether there is a warning or an error. Any workflow that is running may be stopped.
+All workflow runs can be inspected from the workflow details page, regardless of their status or whether there is a warning or an error. Any workflow that is running may be stopped.
 
 .. tip:: You may configure Amperity to send workflow alerts to an email address or to a channel in a Slack workspace. Individual team members who have access to workflow alerts can click a link to open the workflow in Amperity, after which they can investigate, and then take steps to resolve these warnings and errors.
 
@@ -232,7 +225,7 @@ All workflows can be inspected from the workflow details page, regardless of the
 
 .. _workflows-discover-details-actions-stop:
 
-Stop workflows
+Stop workflow runs
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. workflows-discover-details-actions-stop-start
@@ -240,7 +233,7 @@ Stop workflows
 You can stop a workflow that is actively running from one of the following locations:
 
 #. The **Stop workflow** button in the top right of the workflow details page.
-#. The **Stop workflow** option is available from the actions menu on the **Workflows** page while that workflow is running.
+#. The **Stop workflow** option available from the actions menu on the **Run history** tab while that workflow is running.
 
 .. image:: ../../images/howitworks-workflows-stop-alt.png
    :width: 600 px
@@ -248,9 +241,9 @@ You can stop a workflow that is actively running from one of the following locat
    :align: left
    :class: no-scaled-link
 
-When a workflow is stopped while a task is running, the workflow will initially enter a “Stopping” state while the task is being stopped, after which the workflow will move to a “Stopped” state.
+When a workflow run is stopped while a task is running, the workflow will initially enter a “Stopping” state while the task is being stopped, after which the workflow will move to a “Stopped” state.
 
-When a workflow is stopped while no tasks are running it will immediately move to a “Stopped” state.
+When a workflow run is stopped while no tasks are running it will immediately move to a “Stopped” state.
 
 .. important:: Orchestration tasks that have started running within a workflow cannot be stopped because of external dependencies that an orchestration has with a downstream system. Orchestration tasks that have started may run to completion even when the workflow to which they are associated is stopped.
 
@@ -264,13 +257,13 @@ Review warnings
 
 .. workflows-discover-details-actions-warnings-start
 
-A workflow may show an warning when Amperity detects a problem. For example:
+A workflow run may show an warning when Amperity detects a problem. For example:
 
 * When a threshold that is defined for a validation report is exceeded
 * Optional files are missing
 * An issue with an upstream or downstream application, such as the amount of time it may take to send an audience to Google Ads (which is "up to 48 hours"; a new Google Ads workflow cannot start until a previous workflow has finished)
 
-A warning does not typically prevent a workflow from completing, but a warning should be investigated to determine its cause and, where possible, steps should be taken to fix it.
+A warning does not typically prevent a workflow run from completing, but a warning should be investigated to determine its cause and, where possible, steps should be taken to fix it.
 
 .. image:: ../../images/howitworks-workflows-issues.png
    :width: 600 px
@@ -278,7 +271,7 @@ A warning does not typically prevent a workflow from completing, but a warning s
    :align: left
    :class: no-scaled-link
 
-Use the workflow details page to identify issues with workflows. Review the individual tasks that show warnings, and then work to resolve the underlying issue.
+Use the workflow details page to identify issues with workflow runs. Review the individual tasks that show warnings, and then work to resolve the underlying issue.
 
 .. workflows-discover-details-actions-warnings-end
 
@@ -290,7 +283,7 @@ Review errors
 
 .. workflows-discover-details-actions-errors-start
 
-Some workflows may have errors that will prevent the workflow from completing successfully. Use the workflow details page to resolve workflows that failed by reviewing options for resolution, and then choosing one of those options or choosing to restart the workflow.
+Some workflow runs may have errors that will prevent the run from completing successfully. Use the workflow details page to resolve workflows that failed by reviewing options for resolution, and then choosing one of those options or choosing to restart the workflow.
 
 .. image:: ../../images/howitworks-workflows-failures.png
    :width: 600 px
@@ -321,6 +314,7 @@ You can access workflow alerts from the following locations:
 * Email alerts that were sent to an email address
 * A Slack channel that is configured to receive alerts
 * A notification within the **Recent activity** pane on the **Sources**, **Stitch**, **Customer 360**, **Queries**, and **Destinations** pages.
+* The **Activity log** within the **Settings** tab will list an entry for every alert sent
 
 When you receive a workflow alert, use the link provided within the workflow alert to open Amperity, and then review the workflow details page. The individual task that contains the error that caused the workflow to stop is shown with the the |workflow-failed| icon. An error message will appear at the top of the workflow details page.
 
@@ -1197,7 +1191,7 @@ Configure runtime alerts
 
 .. workflows-howto-configure-duration-alerts-start
 
-A runtime alert notifies you when a courier group has run for longer than the configured amount of time.
+A runtime alert notifies you when a workflow has run for longer than the configured amount of time.
 
 * :ref:`Configure runtime alerts for courier groups <workflows-howto-configure-duration-alerts-courier-group>`
 
@@ -1739,7 +1733,7 @@ View workflow graphs
 
 .. workflows-howto-view-workflow-graph-start
 
-Each workflow has a workflow graph. This is a visual representation of each task in the workflow, showing their relationships to each other and the state of each task. Workflow states for "Failed", "Stopped", and "Succeeded" are color coded.
+Each workflow has a workflow graph. This is a visual representation of each task run in the workflow, showing their relationships to each other and the state of each task. Workflow states for "Failed", "Stopped", and "Succeeded" are color coded.
 
 .. workflows-howto-view-workflow-graph-end
 
