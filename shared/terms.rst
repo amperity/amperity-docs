@@ -1199,7 +1199,11 @@ Churn prevention is a process of identifying, and then marketing to users who ar
 
 .. term-churn-propensity-start
 
-Churn propensity is a predictive model that determines the likelihood that a customer will be active at any point in time, based on their purchase history. The churn propensity model outputs a score between 0 and 1 that represents a customer's probability of return.
+Churn propensity is a predictive model that determines the likelihood that a customer will be active at any point in time, based on their purchase history. The churn propensity model outputs a score between 0 and 1 that represents a customer's probability of returning to make a purchase.
+
+* A score closer to 0 indicates a low probability of churn, suggesting the customer is likely to remain active.
+
+* A score closer to 1 indicates a high probability of churn, suggesting the customer is at risk of leaving.
 
 .. term-churn-propensity-end
 
@@ -4891,6 +4895,8 @@ Presto is a distributed SQL query engine that is designed to efficiently query v
 .. term-preturn-start
 
 p(return) is a probabilistic score that predicts churn likelihood and represents how likely is it for an individual customer to purchase in the next year.
+
+This score is calculated from various factors such as the customer's historical purchase behavior and engagement levels.
 
 .. term-preturn-end
 
