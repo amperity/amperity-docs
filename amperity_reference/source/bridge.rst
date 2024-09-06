@@ -162,8 +162,8 @@ Before you can create inbound sharing between Databricks and Amperity a recipien
      - The IP address for Amperity may need to be added to an allowlist.
 
        .. include:: ../../amperity_datagrid/source/send_data.rst
-         :start-after: .. send-data-to-amperity-ip-allowlists-amperity-start
-         :end-before: .. send-data-to-amperity-ip-allowlists-amperity-end
+          :start-after: .. send-data-to-amperity-ip-allowlists-amperity-start
+          :end-before: .. send-data-to-amperity-ip-allowlists-amperity-end
 
 .. bridge-inbound-share-prerequisites-end
 
