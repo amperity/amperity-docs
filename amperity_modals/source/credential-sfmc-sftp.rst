@@ -28,6 +28,10 @@ Settings
       :start-after: .. credential-salesforce-marketing-cloud-hostname-start
       :end-before: .. credential-salesforce-marketing-cloud-hostname-end
 
+   .. include:: ../../shared/credentials_settings.rst
+      :start-after: .. credential-salesforce-marketing-cloud-hostname-context-start
+      :end-before: .. credential-salesforce-marketing-cloud-hostname-context-end
+
 **Passphrase**
 
    .. include:: ../../shared/credentials_settings.rst
