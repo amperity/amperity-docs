@@ -2,16 +2,15 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: SFTP
+.. |destination-name| replace:: RR Donnelly
 .. |file-format| replace:: CSV
-.. |sftp-hostname| replace:: "upload.vibes.com"
+.. |sftp-hostname| replace:: "sftpp3.rrd.com"
 .. |remote-folder| replace:: "/folder"
-.. |sftp-port| replace:: "22"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
 
 
-SFTP
+RR Donnelly
 ==================================================
 
 .. include:: ../../shared/destination_settings.rst
@@ -25,7 +24,8 @@ Requirements
 .. TODO: This destination has the following requirements.
 
 #. The hostname for the SFTP site to which data will be sent. The hostname should be |sftp-hostname|.
-#. A username and passphrase for |sftp-hostname|.
+#. A username for |sftp-hostname|.
+#. The private key required by |sftp-hostname|.
 
 
 Settings
@@ -39,6 +39,7 @@ Settings
       :start-after: .. setting-common-compression-start
       :end-before: .. setting-common-compression-end
 
+
 **Escape character**
 
    .. include:: ../../shared/destination_settings.rst
@@ -48,6 +49,7 @@ Settings
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-escape-character-unspecified-start
       :end-before: .. setting-common-escape-character-unspecified-end
+
 
 **File format**
 
@@ -59,15 +61,13 @@ Settings
       :start-after: .. setting-common-file-format-custom-delimiter-start
       :end-before: .. setting-common-file-format-custom-delimiter-end
 
+
 **Filename template**
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-filename-template-start
       :end-before: .. term-filename-template-end
 
-   .. include:: ../../shared/destination_settings.rst
-      :start-after: .. setting-vibes-filename-template-pattern-start
-      :end-before: .. setting-vibes-filename-template-pattern-end
 
 **Header**
 
@@ -75,17 +75,20 @@ Settings
       :start-after: .. setting-common-header-start
       :end-before: .. setting-common-header-end
 
+
 **Line ending**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-line-ending-start
       :end-before: .. setting-common-line-ending-end
 
+
 **PGP public key**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-pgp-public-key-start
       :end-before: .. setting-common-pgp-public-key-end
+
 
 **Quote mode**
 
@@ -96,6 +99,7 @@ Settings
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-quote-mode-none-start
       :end-before: .. setting-common-quote-mode-none-end
+
 
 **Remote folder**
 
@@ -111,6 +115,7 @@ Settings
       :start-after: .. setting-common-remote-folder-spaces-start
       :end-before: .. setting-common-remote-folder-spaces-end
 
+
 **Success file**
 
    .. include:: ../../shared/destination_settings.rst
@@ -120,6 +125,7 @@ Settings
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-success-file-downstream-start
       :end-before: .. setting-common-success-file-downstream-end
+
 
 **Use Zip64?**
 

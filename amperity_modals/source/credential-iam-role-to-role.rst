@@ -26,7 +26,6 @@ Settings
       :start-after: .. credential-amazon-s3-amperity-role-arn-start
       :end-before: .. credential-amazon-s3-amperity-role-arn-end
 
-
 **External ID**
 
    .. include:: ../../shared/credentials_settings.rst
@@ -39,11 +38,9 @@ Settings
       :start-after: .. credential-amazon-s3-bucket-name-start
       :end-before: .. credential-amazon-s3-bucket-name-end
 
-   .. note:: 
-
-      .. include:: ../../shared/credentials_settings.rst
-         :start-after: .. credential-amazon-s3-trust-policy-start
-         :end-before: .. credential-amazon-s3-trust-policy-end
+   .. include:: ../../shared/credentials_settings.rst
+      :start-after: .. credential-amazon-s3-trust-policy-start
+      :end-before: .. credential-amazon-s3-trust-policy-end
 
 **Target role ARN**
 

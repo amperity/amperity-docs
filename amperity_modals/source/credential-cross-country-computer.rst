@@ -4,7 +4,7 @@
 
 .. |destination-name| replace:: Cross Country Computer
 .. |where-send| replace:: Cross Country Computer
-.. |sftp-hostname| replace:: "sftp.crosscountrycomputer.co"
+.. |sftp-hostname| replace:: "sftp.crosscountrycomputer.com"
 
 
 Cross Country Computer

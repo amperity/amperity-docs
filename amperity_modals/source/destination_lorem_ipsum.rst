@@ -47,8 +47,6 @@ Settings
 
 **setting**
 
-   **Required**
-
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
@@ -102,6 +100,6 @@ Formatting observations for Markdown files in app modals:
 Links
 ==================================================
 
-* Link to `Amperity Docs <https://docs.amperity.com>`__.
-* Link to `Active Campaign <https://docs.amperity.com/datagrid/destination_active_campaign.html>`__.
-* Relative link example (probably 404s) `some link text here <../tutorials/start_here.html>`__
+* Link to `Amperity Docs <https://docs.amperity.com>`__ |ext_link|.
+* Link to `Active Campaign <https://docs.amperity.com/datagrid/destination_active_campaign.html>`__ |ext_link|.
+* Relative link example (probably 404s) `some link text here <../tutorials/start_here.html>`__ |ext_link|.
