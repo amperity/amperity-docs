@@ -279,7 +279,7 @@ Most connections are made directly to your Amperity tenant. Use one of the follo
 
 * On Amazon AWS use "52.42.237.53"
 * On Amazon AWS (Canada) use "3.98.199.97"
-* On Microsoft Azure use "104.46.106.84"
+* On Microsoft Azure use "104.46.106.84" and "20.81.91.210"
 * On Microsoft Azure (EU) use "20.123.127.54"
 
 .. send-data-to-amperity-ip-allowlists-amperity-end
