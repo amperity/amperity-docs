@@ -2,12 +2,12 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Adobe Experience Cloud
-.. |where-send| replace:: Adobe Experience Cloud
+.. |destination-name| replace:: Adobe Experience Platform
+.. |where-send| replace:: Adobe Experience Platform
 .. |sftp-hostname| replace:: "ftp5.adobe.net"
 
 
-Adobe Experience Cloud
+Adobe Experience Platform
 ==================================================
 
 .. include:: ../../shared/credentials_settings.rst

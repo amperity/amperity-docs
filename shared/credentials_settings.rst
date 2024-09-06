@@ -1428,6 +1428,12 @@ See SFTP.
 
 See SFTP.
 
+.. credential-neustar-passphrase-start
+
+|destination-name| requires the SFTP passphrase to be rotated every 180 days. When rotated, it must also be updated in Amperity.
+
+.. credential-neustar-passphrase-end
+
 **Username**
 
 See SFTP.
@@ -1694,6 +1700,12 @@ xxxxx
 "[hostname]" is the name of your tenant on |destination-name|.
 
 .. credential-salesforce-marketing-cloud-hostname-end
+
+.. credential-salesforce-marketing-cloud-hostname-context-start
+
+The SFTP hostname is represented by a 28-character string that starts with the letters “mc”, such as "mcabc123...". This is the same 28-character string that represents the subdomain, which is part of the SOAP base URI for Salesforce Marketing Cloud.
+
+.. credential-salesforce-marketing-cloud-hostname-context-end
 
 **Passphrase**
 

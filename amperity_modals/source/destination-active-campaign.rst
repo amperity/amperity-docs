@@ -47,8 +47,6 @@ Settings
 
 **Group name**
 
-   **Required**
-
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-active-campaign-group-name-start
       :end-before: .. setting-active-campaign-group-name-end
@@ -56,16 +54,12 @@ Settings
 
 **List name**
 
-   **Required**
-
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-active-campaign-list-name-start
       :end-before: .. setting-active-campaign-list-name-end
 
 
 **Audience primary key**
-
-   **Required**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-audience-primary-key-start

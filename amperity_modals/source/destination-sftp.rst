@@ -61,8 +61,6 @@ Settings
 
 **File format**
 
-   **Required**
-
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-file-format-start
       :end-before: .. setting-common-file-format-end
@@ -118,8 +116,6 @@ Settings
 
 
 **Remote folder**
-
-   **Required**
 
    .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-common-remote-folder-start
