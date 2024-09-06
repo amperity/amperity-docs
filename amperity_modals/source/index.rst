@@ -54,10 +54,39 @@ Site Index
    credential-sound-commerce
    credential-vibes
    destination-active-campaign
+   destination-acxiom
+   destination-airship
+   destination-adobe-ecs
+   destination-adobe-customer-attributes
+   destination-adobe-campaign
+   destination-attentive-mobile
    destination-azure-blob
+   destination-bazaar-voice
+   destination-blue-core
+   destination-camelot-smm
+   destination-cross-country-computer
+   destination-epsilon-abacus
+   destination-epsilon-conversant
+   destination-epsilon-targeting
+   destination-experian
    destination-gcs
+   destination-infutor
+   destination-kibo
+   destination-koupon-media
+   destination-liveramp
+   destination-neustar
+   destination-oracle-data-cloud
+   destination-oracle-responsys
+   destination-panda-printing
+   destination-pebble-post
+   destination-persado
+   destination-power-reviews
+   destination-quad
+   destination-rr-donnelly
    destination-s3
+   destination-sfmc-sftp
    destination-sftp
+   destination-smg
    destination-sound-commerce
    destination-vibes
    destination_lorem_ipsum

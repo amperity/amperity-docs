@@ -670,6 +670,17 @@ See SFTP.
 
 See SFTP.
 
+**Header**
+
+.. setting-bluecore-header-start
+
+|destination-name| requires a header row to be present in |what-send|. The header row cannot start with a number or contain any special characters other than underscores ( _ ) and must be less than 30 characters in length.
+
+|destination-name| recommends the following file naming convention: "<company_name>_<data_type>_<date>.csv".
+
+Consider naming queries that are sent to the |destination-name| platform in a way that satisfies the "<company_name>_<data_type>" component of the recommended naming pattern.
+
+.. setting-bluecore-header-end
 
 
 
@@ -1072,6 +1083,30 @@ The list name to which the |destination-name| connector will write. This can be 
 **INFUTOR**
 
 See SFTP.
+
+**Escape character**
+
+.. setting-infutor-escape-character-start
+
+An escape character must be specified because |destination-name| requires that quotations be removed from files.
+
+.. setting-infutor-escape-character-end
+
+**Quote mode**
+
+.. setting-infutor-quote-mode-start
+
+Quotations must be removed from files. If an escape character is not specified and quote mode is set to “None” (as required by |destination-name|) this may result in unescaped, unquoted files.
+
+.. setting-infutor-quote-mode-end
+
+**Public key**
+
+.. setting-infutor-public-key-start
+
+Data that contains PII must be encrypted using public key encryption before it is transmitted to |destination-name| using SFTP.
+
+.. setting-infutor-public-key-end
 
 
 
@@ -1932,6 +1967,14 @@ TEMP: "Event Set ID"
 **VIBES**
 
 See SFTP.
+
+**Filename template**
+
+.. setting-vibes-filename-template-pattern-start
+
+A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| must be assigned a name similar to "<filename>.recipient_list".
+
+.. setting-vibes-filename-template-pattern-end
 
 
 

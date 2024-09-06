@@ -30,6 +30,10 @@ Settings
       :start-after: .. credential-sftp-passphrase-start
       :end-before: .. credential-sftp-passphrase-end
 
+   .. include:: ../../shared/credentials_settings.rst
+      :start-after: .. credential-neustar-passphrase-start
+      :end-before: .. credential-neustar-passphrase-end
+
 **Username**
 
    .. include:: ../../shared/credentials_settings.rst
