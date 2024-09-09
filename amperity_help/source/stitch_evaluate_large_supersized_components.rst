@@ -1,5 +1,5 @@
 .. tooltip-stitch-large-supersized-components-start
 
-This test computes a count of how many "large" (> 1000 recod) supersized components there are in Stitch output. Counter-intuitively, because of how Stitch works, a large count implies many records were not compared to each other, and thus records may have under-clustered.
+This test computes a count of how many very large (> 1000 recod) components there are in Stitch output. Counter-intuitively, because of how Stitch works, a large count implies many records were not compared to each other during Stitch, which means the pipeline may have missed potential connections and under-clustered records.
 
 .. tooltip-stitch-large-supersized-components-end
