@@ -47,14 +47,14 @@ Available Endpoints
 
 .. image:: ../../images/api-request-get-workflow-runs-list.png
    :width: 440 px
-   :alt: GET /workflows/runs/
+   :alt: GET /workflow/runs/
    :align: left
    :class: no-scaled-link
    :target: https://docs.amperity.com/api/endpoint_get_workflows_list.html
 
 .. image:: ../../images/api-request-get-workflow-runs-fetch.png
    :width: 440 px
-   :alt: GET /workflows/runs/{id}
+   :alt: GET /workflow/runs/{id}
    :align: left
    :class: no-scaled-link
    :target: https://docs.amperity.com/api/endpoint_get_workflows_fetch.html
