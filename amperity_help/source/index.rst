@@ -67,6 +67,7 @@ Collection of standalone topics
    stitch_evaluate_name_email_undercluster
    stitch_evaluate_name_phone_undercluster
    stitch_evaluate_small_supersized_components
+   stitch_evaluate_company_name_equality
    stitch_evaluate_sparse_data
    term_uniqueness
    term_cardinality
