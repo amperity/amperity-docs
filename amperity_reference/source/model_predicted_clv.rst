@@ -25,17 +25,17 @@ Predicted CLV model
 
 .. model-predicted-clv-about-start
 
-Amperity models predicted CLV by comparing what customers spent in the previous year to their predicted spend in the coming year, and then determines for each customer their:
+Amperity models predicted customer lifetime value (CLV) by comparing what customers spent in the previous year to their predicted spend in the coming year, and then predicts for each customer their:
 
-#. Predicted probability of purchase
-#. Predicted number of orders
-#. Predicted average order value
+#. Probability of purchase
+#. Number of orders
+#. Average order value
 
-Use predicted CLV modeling to build high-value audiences that identify:
+You can use predicted CLV modeling to build high-value audiences that identify:
 
 * Which customers have the highest predicted value?
 * Which customers will respond better to special offers and perks?
-* What are the best personalized experiences for your best customers?
+* What are the best personalized experiences for your top customers, such as personalized rewards, offers, and content?
 * Which customers have individual price preferences?
 
 .. model-predicted-clv-about-end
@@ -73,9 +73,9 @@ The **Predicted CLV Next 365d** attribute in the **Predicted CLV Attributes** ta
 
 After you select this attribute you can specify the type of values you want to use for this audience, such as:
 
-* Predicted value is greater than $100
-* Predicted value is less than $400
-* Predicted value is between $100 and $400
+* Predicted CLV is greater than $100
+* Predicted CLV is less than $400
+* Predicted CLV is between $100 and $400
 
 .. model-predicted-clv-use-cases-spend-end
 
