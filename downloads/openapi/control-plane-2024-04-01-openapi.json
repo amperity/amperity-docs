@@ -1088,6 +1088,7 @@
           "name" : "workflow-id",
           "description" : "The workflow ID.",
           "required" : true,
+          "x-example" : "id",
           "type" : "string"
         } ],
         "responses" : {
@@ -1152,6 +1153,7 @@
           "name" : "workflow-id",
           "description" : "The workflow ID.",
           "required" : true,
+          "x-example" : "id",
           "type" : "string"
         } ],
         "responses" : {
