@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        A courier group defines the frequency at which one (or more) couriers bring data from an external system to Amperity.
+        A courier group defines the frequency at which one (or more) couriers or bridges bring data from an external system to Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A courier group defines the frequency at which one (or more) couriers bring data from an external system to Amperity.
+        A courier group defines the frequency at which one (or more) couriers or bridges bring data from an external system to Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -25,7 +25,7 @@ About courier groups
 
 .. courier-groups-context-start
 
-A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit; couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started. For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate a Customer 360. If orchestrations, campaigns, or Profile API indexes are configured to run as part of a courier group, they may then also run once the Customer 360 is created.
+A courier group is typically configured to run automatically on a recurring schedule. All couriers and bridges within a courier group run as a unit; couriers with required files and bridges must complete before any downstream processes, such as Stitch or database generation, can be started. For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. For each bridge, Amperity performs a sync of the tables configured as part of the inbound share. Depending on the run type, Amperity may then run Stitch and generate a Customer 360. If orchestrations, campaigns, or Profile API indexes are configured to run as part of a courier group, they may then also run once the Customer 360 is created.
 
 .. courier-groups-context-end
 
@@ -39,17 +39,18 @@ A courier group is typically configured to run automatically on a recurring sche
 
 What a courier group does:
 
-#. Logically organizes a list of couriers into a group that shares the same schedule and workflow.
+#. Logically organizes a list of couriers and bridges into a group that shares the same schedule and workflow.
 #. Allows for each courier to be assigned schedule variance via wait times and offsets.
 #. Enables both automatic and ad hoc runs of couriers.
 #. Polls each data source associated with a courier in the group to determine if data is ready to be pulled to Amperity.
+#. Syncs tables shared within any configured bridges.
 #. Pulls source data into Amperity.
 #. Runs Stitch and generates a Customer 360, if configured.
 #. Runs downstream activations (orchestrations, campaigns, Profile API index refreshes), if configured.
 
 What a courier group needs:
 
-#. One (or more) couriers.
+#. One (or more) couriers, or one (or more) bridges.
 #. A schedule.
 #. A run type.
 #. Configuration for wait times and offsets to help ensure that all files assigned to the courier group have a time window that is large enough to complete data collection.
@@ -143,6 +144,8 @@ Wait times
 
 .. courier-groups-schedule-wait-time-start
 
+Wait times are not necessary for bridges configured within a courier group workflow.
+
 A wait time is a constraint placed on a courier group that defines an extended time window for data to be made available at the source location.
 
 A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and isn't made available within that time window.
@@ -174,6 +177,8 @@ Offsets
 ==================================================
 
 .. courier-groups-schedule-offset-start
+
+Offsets are not necessary for bridges configured within a courier group workflow.
 
 An offset is a constraint placed on a courier that defines a range of time that is older than the scheduled time, within which a courier group will accept customer data as valid for the current job. Offset times are in Coordinated Universal Time (UTC), unless the "Use this time zone for file date ranges" checkbox is checked.
 
@@ -406,9 +411,11 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-     - Add one (or more) couriers to the courier group.
+     - Add one (or more) couriers or bridges to the courier group.
 
-       For each courier in the courier group, select a courier, configure the wait time and offset, and then enable workflow alerts.
+       If you are adding a courier to the courier group workflow: For each courier you add to the courier group, select a courier, configure the wait time and offset, and then enable workflow alerts.
+
+       If you are adding a bridge to the courier group workflow: For each bridge you add to the courier group, select its name in the dropdown within the **Bridges** subtab.
 
        .. image:: ../../images/mockups-workflow-courier-group-add-couriers.png
           :width: 400 px
