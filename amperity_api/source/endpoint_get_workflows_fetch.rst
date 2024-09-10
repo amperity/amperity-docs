@@ -12,16 +12,16 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        GET /workflows/runs/{id}
+        GET /workflow/runs/{id}
 
 
 ==================================================
-GET /workflows/runs/{id}
+GET /workflow/runs/{id}
 ==================================================
 
 .. endpoint-get-workflows-fetch-start
 
-Use the **/workflows/runs/{id}** endpoint to return details for a specific workflow.
+Use the **/workflow/runs/{id}** endpoint to return details for a specific workflow.
 
 .. endpoint-get-workflows-fetch-end
 
@@ -33,7 +33,7 @@ Available HTTP methods
 
 .. image:: ../../images/api-request-get-workflow-runs-fetch.png
    :width: 440 px
-   :alt: GET /workflows/runs/{id}
+   :alt: GET /workflow/runs/{id}
    :align: left
    :class: no-scaled-link
 
@@ -58,11 +58,11 @@ Base URL
 
 .. endpoint-get-workflows-fetch-base-url-start
 
-All requests made to the **/workflows/runs/{id}** endpoint should be directed to the following base URL:
+All requests made to the **/workflow/runs/{id}** endpoint should be directed to the following base URL:
 
 ::
 
-   https://{tenant-id}.amperity.com/api/workflows/runs/{id}
+   https://{tenant-id}.amperity.com/api/workflow/runs/{id}
 
 .. endpoint-get-workflows-fetch-base-url-end
 
@@ -84,12 +84,12 @@ Requests
 
 .. endpoint-get-workflows-fetch-request-start
 
-A request to the **/workflows/runs/{id}** endpoint is similar to:
+A request to the **/workflow/runs/{id}** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflows/runs/{id} \
+          'https://tenant.amperity.com/api/workflow/runs/{id} \
           ?view=overview \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
@@ -107,7 +107,7 @@ Request parameters
 
 .. endpoint-get-workflows-fetch-request-parameters-start
 
-The following table describes the parameters that may be used with the **/workflows/runs/{id}** endpoint.
+The following table describes the parameters that may be used with the **/workflow/runs/{id}** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -129,7 +129,7 @@ The following table describes the parameters that may be used with the **/workfl
 
        The unique identifier for a workflow, similar to: **wf-20240603-12345-MNabc**.
 
-       The workflow ID must be in the URL. For example: **/workflows/runs/wf-20240603-12345-MNabc**.
+       The workflow ID must be in the URL. For example: **/workflow/runs/wf-20240603-12345-MNabc**.
 
        Use the :doc:`/workflow/runs <endpoint_get_workflows_list>` endpoint to get a list of workflow IDs or copy the ID from the **Workflows** page in Amperity.
 
@@ -153,7 +153,7 @@ Request examples
 
 .. endpoint-get-workflows-fetch-request-examples-start
 
-The following examples show how to send requests to the **/workflows/runs/{id}** endpoint.
+The following examples show how to send requests to the **/workflow/runs/{id}** endpoint.
 
 .. endpoint-get-workflows-fetch-request-examples-end
 
@@ -165,12 +165,12 @@ cURL
 
 .. endpoint-get-workflows-fetch-request-example-curl-start
 
-The following example shows how to use cURL to send a request to the **/workflows/runs/{id}** endpoint.
+The following example shows how to use cURL to send a request to the **/workflow/runs/{id}** endpoint.
 
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflows/runs/{id} \
+          'https://tenant.amperity.com/api/workflow/runs/{id} \
           ?view=overview \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
@@ -188,7 +188,7 @@ Responses
 
 .. endpoint-get-workflows-fetch-responses-start
 
-A response from the **/workflows/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **/workflow/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-fetch-responses-end
 

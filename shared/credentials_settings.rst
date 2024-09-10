@@ -87,21 +87,22 @@ This section contains credential settings that are not unique.
 
 .. credential-get-details-both-types-start
 
-Choose |credential-type| as the credential type, and then configure the hostname, username and passphrase, host public key, port number, and private key as required by the credential type.
+Choose |credential-type| as the credential type, and then configure a combination of hostname, username and passphrase, host public key, port number, and private key settings as required by the credential type.
 
 .. credential-get-details-both-types-end
 
-.. credential-get-details-private-key-only-start
+.. credential-get-details-passphrase-start
 
-The "private-key" credential type requires a public key that Amperity will use to encrypt files using Pretty Good Privacy (PGP).
+Credentials for |destination-name| require a "username" and "passphrase". Set the hostname to |sftp-hostname|.
 
-.. credential-get-details-private-key-only-end
+.. credential-get-details-passphrase-end
 
-.. credential-get-details-credential-files-start
+.. credential-get-details-private-key-start
 
-|destination-name| requires |required-credentials|.
+Credentials for |destination-name| require a "username" and "private key". Set the hostname to |sftp-hostname|.
 
-.. credential-get-details-credential-files-end
+.. credential-get-details-private-key-end
+
 
 **Configure credentials first**
 
