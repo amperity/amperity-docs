@@ -1042,19 +1042,19 @@ This section contains settings that are unique to Google Enhanced Conversions.
 
 **Conversion action name**
 
-.. setting-google-enhanced-conversions-xxxxx-start
+.. setting-google-enhanced-conversions-action-name-start
 
 TEMP: "Name of the Conversion Action. Will be created if it doesn't exist."
 
-.. setting-google-enhanced-conversions-xxxxx-end
+.. setting-google-enhanced-conversions-action-name-end
 
 **Customer ID**
 
-.. setting-google-enhanced-conversions-xxxxx-start
+.. setting-google-enhanced-conversions-customer-id-start
 
-TEMP: "Customer ID of the Google Ads account"
+TEMP: "Customer ID of the Google Enhanced Conversions account; might just be Google Ads account"
 
-.. setting-google-enhanced-conversions-xxxxx-end
+.. setting-google-enhanced-conversions-customer-id-end
 
 
 
