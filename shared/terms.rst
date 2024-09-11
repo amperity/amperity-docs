@@ -4689,7 +4689,7 @@ Personally identifiable information (PII) is any data that could potentially ide
 
 .. term-phone-start
 
-The phone number that is associated with a customer. A customer may bhave more than one phone number.
+The phone number that is associated with a customer. A customer may have more than one phone number.
 
 .. term-phone-end
 
