@@ -13,6 +13,7 @@ Site Index
 .. toctree::
    :hidden:
 
+   404
    credential-acxiom
    credential-adobe-campaign
    credential-adobe-customer-attributes
