@@ -148,7 +148,9 @@ Get details
 
        An event set ID is a nineteen character string similar to "7654321098765432109".
 
-       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the TikTok Ads user interface.
+
+       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -695,7 +697,11 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       An event set ID is a nineteen character string similar to "7654321098765432109". You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       An event set ID is a nineteen character string similar to "7654321098765432109".
+
+       You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the TikTok Ads user interface.
+
+       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
 
        .. note:: If the event set ID is not specified in the data template it must be specified at orchestration.
 
