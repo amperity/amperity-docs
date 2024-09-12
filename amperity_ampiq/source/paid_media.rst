@@ -462,7 +462,7 @@ Amperity provides direct connections to the most popular destinations across the
    :widths: 40 60
    :header-rows: 0
 
-   * - .. image:: ../../amperity_base/source/_static/connector-meta.svg
+   * - .. image:: ../../amperity_base/source/_static/connector-meta.png
           :width: 140 px
           :alt: Meta Ads Manager
           :align: left
@@ -552,7 +552,7 @@ Amperity provides direct connections to the most popular destinations across the
    :widths: 40 60
    :header-rows: 0
 
-   * - .. image:: ../../amperity_base/source/_static/connector-snapchat.svg
+   * - .. image:: ../../amperity_base/source/_static/connector-snapchat.png
           :width: 140 px
           :alt: Snapchat
           :align: left

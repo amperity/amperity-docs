@@ -350,7 +350,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :start-after: .. term-branch-start
           :end-before: .. term-branch-end
 
-   * - .. image:: ../../amperity_base/source/_static/connector-braze.svg
+   * - .. image:: ../../amperity_base/source/_static/connector-braze.png
           :width: 140 px
           :alt: Braze
           :align: left
@@ -581,7 +581,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :start-after: .. term-iterable-start
           :end-before: .. term-iterable-end
 
-   * - .. image:: ../../amperity_base/source/_static/connector-klaviyo.svg
+   * - .. image:: ../../amperity_base/source/_static/connector-klaviyo.png
           :width: 140 px
           :alt: Klaviyo
           :align: left
@@ -993,7 +993,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :start-after: .. term-shopify-start
           :end-before: .. term-shopify-end
 
-   * - .. image:: ../../amperity_base/source/_static/connector-snapchat.svg
+   * - .. image:: ../../amperity_base/source/_static/connector-snapchat.png
           :width: 140 px
           :alt: Snapchat Ads
           :align: left
