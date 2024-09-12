@@ -354,7 +354,7 @@ You can pull entire tables from |source-name| to Amperity.
 
 .. _source-snowflake-aws-add-courier-query:
 
-Pull columns using Snowflake query syxtax
+Pull columns using Snowflake query syntax
 --------------------------------------------------
 
 .. source-snowflake-aws-add-courier-query-start
@@ -365,7 +365,7 @@ You can use |ext_snowflake_query_syntax| to build a query that runs against one 
 
 .. source-snowflake-aws-add-courier-query-end
 
-**To pull columns using Snowflake query syxtax**
+**To pull columns using Snowflake query syntax**
 
 .. source-snowflake-aws-add-courier-query-steps-start
 
