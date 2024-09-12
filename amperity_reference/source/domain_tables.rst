@@ -203,6 +203,7 @@ The following examples describe some of the more common uses cases for domain SQ
 * :ref:`domain-tables-custom-sql-use-case-rehash-data`
 * :ref:`domain-tables-custom-sql-use-case-parse-fields-with-multiple-separators`
 * :ref:`domain-tables-custom-sql-use-reference-custom-domain-table`
+* :ref:`domain-tables-custom-sql-use-case-semantic-tags-and-bridge-tables`
 * :ref:`domain-tables-custom-sql-use-case-set-email-to-null`
 * :ref:`domain-tables-custom-sql-use-case-standardize-values-for-usa-states`
 
@@ -322,6 +323,18 @@ A custom domain table may reference another custom domain table. For example:
    LEFT JOIN custom_domain_table2 two ON one.order_id = two.order_id
 
 .. domain-tables-custom-sql-use-reference-custom-domain-table-end
+
+
+.. _domain-tables-custom-sql-use-case-semantic-tags-and-bridge-tables:
+
+Semantic tags and bridge tables
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. domain-tables-custom-sql-use-case-apply-semantic-tags-to-bridge-syncs-start
+
+You must use a custom domain table to apply semantic tags to data sources that are made available to Amperity using an Amperity Bridge sync. The most common use cases for applying semantic tags are the same as data sources that are made available without using Amperity Bridge sync. These use cases include `customer profiles <https://docs.amperity.com/reference/semantics.html#profile-pii>`__ and `transactions <https://docs.amperity.com/reference/semantics.html#transactions>`__, and then apply `customer keys <https://docs.amperity.com/reference/semantics.html#customer-keys-ck>`__ and `foreign keys <https://docs.amperity.com/reference/semantics.html#foreign-keys-fk>`__. Any `semantic tag <https://docs.amperity.com/reference/semantics.html>`__ may be used with tables that are made available using Amperity Bridge.
+
+.. domain-tables-custom-sql-use-case-apply-semantic-tags-to-bridge-syncs-end
 
 
 .. _domain-tables-custom-sql-use-case-set-email-to-null:
