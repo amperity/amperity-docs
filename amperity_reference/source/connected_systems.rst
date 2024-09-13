@@ -94,7 +94,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Formerly known as Urban Airship.
 
-       Send data from Amperity to SFTP.
+       Send data from Amperity using SFTP.
 
    * - **Airtable**
      - |system-yes|
@@ -416,7 +416,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Google Ads**
      - 
      - |system-yes|
-     - See **Google Customer Match**.
+     - See Google Customer Match.
 
    * - **Google Analytics**
      - 
@@ -865,7 +865,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull any type of data to Amperity.
 
-       Send Apache Parquet, CSV, and TSV files to SFTP.
+       Send Apache Parquet, CSV, and TSV files using SFTP.
 
    * - **Shopify**
      - |system-yes|
