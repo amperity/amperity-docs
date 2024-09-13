@@ -557,7 +557,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Magento**
      - |system-yes|
      - 
-     - See Adobe Commerce.
+     - Pull customer, order, and transaction data to Amperity.
 
    * - **Mailchimp**
      - 
