@@ -40,7 +40,7 @@ Use in segments
 
 .. attribute-order-value-largest-start
 
-You can access largest order values directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select a largest order value attribute, apply a condition, and then specify a value.
+You can access largest order values directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a largest order value attribute, apply a condition, and then specify a value.
 
 .. attribute-order-value-largest-end
 

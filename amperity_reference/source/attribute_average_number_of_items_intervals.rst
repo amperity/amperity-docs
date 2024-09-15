@@ -40,7 +40,7 @@ Use in segments
 
 .. attribute-average-items-segments-start
 
-You can access averages for the number of items purchased directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select an average number of items interval attribute, and then apply a condition.
+You can access averages for the number of items purchased directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select an average number of items interval attribute, and then apply a condition.
 
 .. attribute-average-items-segments-end
 

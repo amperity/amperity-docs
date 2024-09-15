@@ -70,7 +70,7 @@ Recency, frequency, and monetary
 
 .. attribute-rfm-individual-start
 
-You can access individual RFM scores directly from the **Segment Editor**. To add any of these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select **L12M Frequency**, **L12M Monetary**, or **L12M Recency**, and then apply an condition.
+You can access individual RFM scores directly from the **Segment Editor**. To add any of these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select **L12M Frequency**, **L12M Monetary**, or **L12M Recency**, and then apply an condition.
 
 .. attribute-rfm-individual-end
 
@@ -230,7 +230,7 @@ For example, you can build an audience that contains your top 20% customers for 
 
 .. attribute-rfm-score-context-start
 
-You can access combined approximate RFM scores directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select the **L12M RFM Score** attribute, and then apply an condition.
+You can access combined approximate RFM scores directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **L12M RFM Score** attribute, and then apply an condition.
 
 .. attribute-rfm-score-context-end
 

@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-customer-profile-birthdate-start
 
-You can access birthdates directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Customer 360** table, select the **Birthdate** attribute, and then apply an condition.
+You can access birthdates directly from the **Segment Editor**. To add this attribute to your segment, click **Add condition** and then **Add attribute**. Select the **Customer 360** table, select the **Birthdate** attribute, and then apply a condition.
 
 .. attribute-customer-profile-birthdate-end
 

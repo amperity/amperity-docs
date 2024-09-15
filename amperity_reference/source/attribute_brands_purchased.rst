@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-brands-purchased-segments-start
 
-You can access the names of brands that were purchased by your customers directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Transactions** table (for **Purchase Brand**) *or* the **Transaction Attributes Extended** table (for **First Order Purchase Brand**, **Second Order Purchase Brand**, or **Latest Order Purchase Brand**), apply a condition, and then specify a value.
+You can access the names of brands that were purchased by your customers directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table (for **Purchase Brand**) *or* the **Transaction Attributes Extended** table (for **First Order Purchase Brand**, **Second Order Purchase Brand**, or **Latest Order Purchase Brand**), apply a condition, and then specify a value.
 
 .. attribute-brands-purchased-segments-end
 

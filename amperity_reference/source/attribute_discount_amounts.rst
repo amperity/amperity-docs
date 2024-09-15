@@ -43,7 +43,7 @@ Use in segments
 
 .. attribute-discount-amounts-access-start
 
-You can access discount amount attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Discount Amount** and **Unit Discount Amount**) *or* the **Unified Transactions** table (for **Order Discount Amount**), apply a condition, and then specify a value.
+You can access discount amount attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Discount Amount** and **Unit Discount Amount**) *or* the **Unified Transactions** table (for **Order Discount Amount**), apply a condition, and then specify a value.
 
 .. attribute-discount-amounts-access-end
 

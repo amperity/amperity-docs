@@ -39,7 +39,7 @@ Use in segments
 
 .. attribute-product-category-segment-start
 
-You can access product catalog attributes directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Unified Itemized Transactions** table, select one of your product catalog attributes, apply a condition, and then specify a value.
+You can access product catalog attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table, select one of your product catalog attributes, apply a condition, and then specify a value.
 
 .. attribute-product-category-segment-end
 

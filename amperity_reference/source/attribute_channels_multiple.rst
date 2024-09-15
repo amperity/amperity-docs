@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-channels-multi-purchase-start
 
-You can access multichannel purchases directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select the **Multi Purchase Channel** attribute, and then apply an condition.
+You can access multichannel purchases directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **Multi Purchase Channel** attribute, and then apply a condition.
 
 .. attribute-channels-multi-purchase-end
 

@@ -46,7 +46,7 @@ Use in segments
 
 .. attribute-total-items-intervals-segment-start
 
-You can access total items intervals directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select a total items interval attribute, apply a condition, and then specify a value.
+You can access total items intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a total items interval attribute, apply a condition, and then specify a value.
 
 .. attribute-total-items-intervals-segment-end
 

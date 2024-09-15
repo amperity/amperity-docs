@@ -40,7 +40,7 @@ Use in segments
 
 .. attribute-quantity-access-start
 
-You can access quantity attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Quantity**) *or* the **Unified Transactions** table (for **Order Quantity**), apply a condition, and then specify a value.
+You can access quantity attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Quantity**) *or* the **Unified Transactions** table (for **Order Quantity**), apply a condition, and then specify a value.
 
 .. attribute-quantity-access-end
 

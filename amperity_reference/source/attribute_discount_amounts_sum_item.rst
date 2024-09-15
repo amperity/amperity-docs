@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-discount-amounts-sum-of-items-start
 
-You can access the sum-of-item discount attribute directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Unified Itemized Transactions** table, select the **Sum of Item Discount Amount** attribute, and then apply a condition.
+You can access the sum-of-item discount attribute directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table, select the **Sum of Item Discount Amount** attribute, and then apply a condition.
 
 .. attribute-discount-amounts-sum-of-items-end
 
