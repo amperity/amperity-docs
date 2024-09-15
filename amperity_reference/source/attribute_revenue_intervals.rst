@@ -54,7 +54,7 @@ Use in segments
 
 .. attribute-order-revenue-intervals-segment-start
 
-You can access order revenue intervals directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select an order revenue interval, and then apply a condition.
+You can access order revenue intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select an order revenue interval, and then apply a condition.
 
 .. attribute-order-revenue-intervals-segment-end
 

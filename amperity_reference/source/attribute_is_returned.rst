@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-is-return-start
 
-You can access is return directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Unified Itemized Transactions** table, select the **Is Return** attribute, and then apply a condition.
+You can access is return directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table, select the **Is Return** attribute, and then apply a condition.
 
 .. attribute-is-return-end
 

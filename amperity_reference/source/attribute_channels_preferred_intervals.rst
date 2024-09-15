@@ -40,7 +40,7 @@ Use in segments
 
 .. attribute-channel-preferred-intervals-segment-start
 
-You can access preferred channel interval attributes directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select a preferred purchase channel attribute, and then apply a condition.
+You can access preferred channel interval attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a preferred purchase channel attribute, and then apply a condition.
 
 .. attribute-channel-preferred-intervals-segment-end
 

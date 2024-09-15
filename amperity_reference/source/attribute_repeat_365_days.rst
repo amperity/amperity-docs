@@ -44,7 +44,7 @@ Of first order?
 
 .. attribute-repeat-365-first-start
 
-You can access if a customer made a second purchase within 365 days of their first purchase from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select the **First Order Is Retained** attribute, apply a condition, and then specify a value.
+You can access if a customer made a second purchase within 365 days of their first purchase from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **First Order Is Retained** attribute, apply a condition, and then specify a value.
 
 .. attribute-repeat-365-first-end
 
@@ -72,7 +72,7 @@ Use in segments
 
 .. attribute-repeat-365-second-start
 
-You can access if a customer made a third purchase within 365 days of their second purchase from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select the **Second Order Is Retained** attribute, and then apply an condition.
+You can access if a customer made a third purchase within 365 days of their second purchase from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **Second Order Is Retained** attribute, and then apply an condition.
 
 .. attribute-repeat-365-second-end
 

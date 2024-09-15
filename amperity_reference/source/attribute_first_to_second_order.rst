@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-days-between-orders-first-to-second-start
 
-You can access first-to-second order days directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select the **First To Second Order Days** attribute, apply a condition, and then specify a value.
+You can access first-to-second order days directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **First To Second Order Days** attribute, apply a condition, and then specify a value.
 
 .. attribute-days-between-orders-first-to-second-end
 

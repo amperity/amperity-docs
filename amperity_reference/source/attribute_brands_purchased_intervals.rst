@@ -40,7 +40,7 @@ Use in segments
 
 .. attribute-brands-purchased-intervals-segment-start
 
-You can access purchased brand intervals directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select a purchased brand interval attribute, and then apply a condition.
+You can access purchased brand intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a purchased brand interval attribute, and then apply a condition.
 
 .. attribute-brands-purchased-intervals-segment-end
 

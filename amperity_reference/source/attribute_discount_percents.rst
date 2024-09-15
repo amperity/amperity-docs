@@ -40,7 +40,7 @@ Use in segments
 
 .. attribute-discount-percent-access-start
 
-You can access discount percent attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Discount Percent**) *or* the **Unified Transactions** table (for **Order Discount Percent**), apply a condition, and then specify a value.
+You can access discount percent attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Discount Percent**) *or* the **Unified Transactions** table (for **Order Discount Percent**), apply a condition, and then specify a value.
 
 .. attribute-discount-percent-access-end
 

@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-stores-id-start
 
-You can access store IDs directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select the **Store ID** attribute or one of **First Store ID**, **Second Store ID**, and **Latest Store ID**, and then apply a condition.
+You can access store IDs directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **Store ID** attribute or one of **First Store ID**, **Second Store ID**, and **Latest Store ID**, and then apply a condition.
 
 .. attribute-stores-id-end
 

@@ -45,7 +45,7 @@ Use in segments
 
 .. attribute-channels-purchased-segments-start
 
-You can access the names of channels through which your customers made purchases directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Transactions** table (for **Purchase Channel**) *or* the **Transaction Attributes Extended** table (for **First Order Purchase Channel**, **Second Order Purchase Channel**, or **Latest Order Purchase Channel**), apply a condition, and then specify a value.
+You can access the names of channels through which your customers made purchases directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table (for **Purchase Channel**) *or* the **Transaction Attributes Extended** table (for **First Order Purchase Channel**, **Second Order Purchase Channel**, or **Latest Order Purchase Channel**), apply a condition, and then specify a value.
 
 .. attribute-channels-purchased-segments-end
 

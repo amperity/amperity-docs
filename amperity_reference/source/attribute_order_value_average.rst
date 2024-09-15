@@ -44,7 +44,7 @@ Use in segments
 
 .. attribute-order-value-average-intervals-segment-start
 
-You can access average order value intervals directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select an average order value interval attribute, apply a condition, and then specify a value.
+You can access average order value intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select an average order value interval attribute, apply a condition, and then specify a value.
 
 .. attribute-order-value-average-intervals-segment-end
 

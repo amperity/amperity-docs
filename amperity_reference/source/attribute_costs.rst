@@ -43,7 +43,7 @@ Use in segments
 
 .. attribute-costs-access-start
 
-You can access cost attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Cost** and **Unit Cost**) *or* the **Unified Transactions** table (for **Order Cost**), apply a condition, and then specify a value.
+You can access cost attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Cost** and **Unit Cost**) *or* the **Unified Transactions** table (for **Order Cost**), apply a condition, and then specify a value.
 
 .. attribute-costs-access-end
 

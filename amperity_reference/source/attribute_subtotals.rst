@@ -43,7 +43,7 @@ Use in segments
 
 .. attribute-subtotals-access-start
 
-You can access subtotal attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Subtotal** and **Unit Subtotal**) *or* the **Unified Transactions** table (for **Order Subtotal**), apply a condition, and then specify a value.
+You can access subtotal attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Subtotal** and **Unit Subtotal**) *or* the **Unified Transactions** table (for **Order Subtotal**), apply a condition, and then specify a value.
 
 .. attribute-subtotals-access-end
 

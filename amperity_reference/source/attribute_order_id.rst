@@ -45,7 +45,7 @@ Use in segments
 
 .. attribute-order-id-base-start
 
-You can access order ID attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Transaction Attributes Extended** table (for **First Order ID**, **Latest Order ID**, and **Second Order ID**) *or* the **Unified Transactions** table (for **Order ID**), apply a condition, and then specify a value.
+You can access order ID attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source (for **First Order ID**, **Latest Order ID**, and **Second Order ID**) *or* the **Unified Transactions** table (for **Order ID**), apply a condition, and then specify a value.
 
 .. attribute-order-id-base-end
 

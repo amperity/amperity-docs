@@ -46,7 +46,7 @@ Use in segments
 
 .. attribute-channel-purchased-intervals-segment-start
 
-You can access purchased channel intervals directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select a purchase channel interval attribute, and then apply a condition.
+You can access purchased channel intervals directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a purchase channel interval attribute, and then apply a condition.
 
 .. attribute-channel-purchased-intervals-segment-end
 
