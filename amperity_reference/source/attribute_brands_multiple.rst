@@ -33,7 +33,7 @@ Use in segments
 
 .. attribute-multibrand-access-start
 
-You can access multi-brand purchases directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **Multi Purchase Brand** attribute, and then apply an condition.
+You can access multi-brand purchases directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **Multi Purchase Brand** attribute, and then apply a condition.
 
 .. attribute-multibrand-access-end
 
