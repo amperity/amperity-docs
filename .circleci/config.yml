@@ -1,0 +1,56 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+
+version: 2.1
+
+jobs:
+  docs-test:
+    docker:
+      - image: python:3.9
+    resource_class: medium
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: What is here?
+          command: |
+            echo $PWD
+            ls -aslh .
+      - run:
+          name: Build base docs
+          command: sphinx-build -b html --jobs auto -W amperity_base/source ./site-test/
+      - run:
+          name: Build AmpIQ user guides
+          command: sphinx-build -b html --jobs auto -W amperity_ampiq/source ./site-test/ampiq
+      - run:
+          name: Build Amp360 user guides
+          command: sphinx-build -b html --jobs auto -W amperity_amp360/source ./site-test/amp360
+      - run:
+          name: Build Operators guide
+          command: sphinx-build -b html --jobs auto -W amperity_datagrid/source ./site-test/datagrid
+      - run:
+          name: Build API
+          command: sphinx-build -b html --jobs auto -W amperity_api/source ./site-test/api
+      - run:
+          name: Build A-Z reference
+          command: sphinx-build -b html --jobs auto -W amperity_reference/source ./site-test/reference
+      - run:
+          name: Build Contributing
+          command: sphinx-build -b html --jobs auto -W contributing/source ./site-test/contributing
+      - run:
+          name: Build Modals
+          command: sphinx-build -b html --jobs auto -W amperity_modals/source ./site-test/modals
+      - run:
+          name: Build Tooltips
+          command: sphinx-build -b html --jobs auto -W amperity_help/source ./site-test/help/text
+
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - docs-test
