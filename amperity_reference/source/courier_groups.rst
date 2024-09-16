@@ -277,7 +277,8 @@ Courier group alerts
 Courier groups may be configured for the following types of alerts:
 
 * :ref:`courier-groups-howto-notify-slow`
-* :ref:`courier-groups-howto-notify-success`
+
+.. * :ref:`courier-groups-howto-notify-success`
 
 .. courier-groups-setting-alerts-end
 
@@ -291,11 +292,16 @@ Run types
 
 A courier group can be configured with any of the following run types:
 
-* A :ref:`full workflow <courier-groups-howto-set-run-type-full>` refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
-* A :ref:`partial workflow <courier-groups-howto-set-run-type-partial>` refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+**Full workflow**
+   A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-  .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
-* An :ref:`ingest-only workflow <courier-groups-howto-set-run-type-ingest>` refreshes domain tables, but does not run Stitch.
+**Partial workflow**
+   A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+
+   .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
+
+**Ingest-only workflow**
+   An ingest-only workflow refreshes domain tables, but does not run Stitch.
 
 .. courier-groups-run-types-end
 
