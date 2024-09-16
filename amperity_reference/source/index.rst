@@ -19,7 +19,6 @@
 Site index
 ==================================================
 
-
 .. _index-amperity-bridge:
 
 Amperity Bridge
