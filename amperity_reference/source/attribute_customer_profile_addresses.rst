@@ -52,7 +52,7 @@ Use in segments
 
 .. attribute-customer-profile-addresses-access-start
 
-You can access address attributes directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Customer 360** table, select a combination of **Address**, **Address2**, **City**, **State**, and **Postal** attributes, apply a condition, and then specify a value.
+You can access address attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Customer 360** table, select a combination of **Address**, **Address2**, **City**, **State**, and **Postal** attributes, apply a condition, and then specify a value.
 
 .. attribute-customer-profile-addresses-access-end
 

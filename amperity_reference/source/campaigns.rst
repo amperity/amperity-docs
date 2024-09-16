@@ -762,11 +762,11 @@ You can add a sub-audience to a campaign on the **Edit Campaign** page.
 
 #. From the **Campaigns** page, in the **Sub-audiences and Destinations** section, click **Add Sub-audience**.
 #. From the **Source** menu, select **Create custom criteria**.
-#. From the **Audience Builder** window, click **Add criteria**.
+#. From the **Audience Builder** window, To add these attributes to your segment, click **Add condition**,**.
 #. From the **Sources** drop-down list, select a source.
 #. From the **Attributes** drop-down list, select an attribute.
 #. From the **Operators** drop-down list, select an operator.
-#. Click **Add criteria** to add more criteria.
+#. To add these attributes to your segment, click **Add condition**,** to add more criteria.
 #. When done setting your criteria, click **Save**.
 
 The new sub-audience appears in the **Sub-audiences and Destinations** section.

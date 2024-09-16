@@ -45,7 +45,7 @@ Use in segments
 
 .. attribute-list-prices-access-start
 
-You can access list price attributes directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item List Price** and **Unit List Price**) *or* the **Unified Transactions** table (for **Order List Price**), apply a condition, and then specify a value.
+You can access list price attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item List Price** and **Unit List Price**) *or* the **Unified Transactions** table (for **Order List Price**), apply a condition, and then specify a value.
 
 .. attribute-list-prices-access-end
 

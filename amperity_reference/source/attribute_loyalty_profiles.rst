@@ -84,7 +84,7 @@ Use in segments
 
 .. attribute-loyalty-profiles-access-attributes-start
 
-You can access loyalty profile attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Loyalty** table, and then add the combination of loyalty profile attributes you want to use in your segment. Apply conditions and specify values for each attribute as necessary.
+You can access loyalty profile attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Loyalty** table, and then add the combination of loyalty profile attributes you want to use in your segment. Apply conditions and specify values for each attribute as necessary.
 
 .. attribute-loyalty-profiles-access-attributes-end
 

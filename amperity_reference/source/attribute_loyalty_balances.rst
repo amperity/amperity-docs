@@ -79,7 +79,7 @@ Use in segments
 
 .. attribute-loyalty-balances-access-attributes-start
 
-You can access loyalty balance attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Loyalty** table, and then add the combination of loyalty balance attributes you want to use in your segment. Apply conditions and specify values for each attribute as necessary.
+You can access loyalty balance attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Loyalty** table, and then add the combination of loyalty balance attributes you want to use in your segment. Apply conditions and specify values for each attribute as necessary.
 
 .. attribute-loyalty-balances-overview-end
 

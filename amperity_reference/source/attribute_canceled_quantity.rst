@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-canceled-quantity-start
 
-You can access canceled order quantity directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Unified Transactions** table, select the **Order canceled Quantity** attribute, and then apply a condition.
+You can access canceled order quantity directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table, select the **Order canceled Quantity** attribute, and then apply a condition.
 
 .. attribute-canceled-quantity-end
 
