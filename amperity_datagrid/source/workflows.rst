@@ -61,14 +61,14 @@ Duration thresholds
 --------------------------------------------------
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-duration-alert-start
-   :end-before: .. courier-groups-configure-duration-alert-end
+   :start-after: .. courier-groups-howto-notify-slow-start
+   :end-before: .. courier-groups-howto-notify-slow-end
 
 **To configure a workflow alert for a courier group**
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-duration-alert-steps-start
-   :end-before: .. courier-groups-configure-duration-alert-steps-end
+   :start-after: .. courier-groups-howto-notify-slow-steps-start
+   :end-before: .. courier-groups-howto-notify-slow-steps-end
 
 
 .. _workflows-courier-group-missing-files:
@@ -92,18 +92,18 @@ Notify and continue
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-missing-files-alert-notify-continue-start
-   :end-before: .. courier-groups-configure-missing-files-alert-notify-continue-end
+   :start-after: .. courier-groups-howto-add-courier-alert-start
+   :end-before: .. courier-groups-howto-add-courier-alert-end
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-missing-files-alert-notify-continue-tip-start
-   :end-before: .. courier-groups-configure-missing-files-alert-notify-continue-tip-end
+   :start-after: .. courier-groups-howto-add-courier-alert-tip-start
+   :end-before: .. courier-groups-howto-add-courier-alert-tip-end
 
 **To send a workflow notification, and then continue the workflow**
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-missing-files-alert-notify-continue-steps-start
-   :end-before: .. courier-groups-configure-missing-files-alert-notify-continue-steps-end
+   :start-after: .. courier-groups-howto-add-courier-alert-steps-start
+   :end-before: .. courier-groups-howto-add-courier-alert-steps-end
 
 
 .. _workflows-courier-group-missing-files-notify-stop:
@@ -112,14 +112,14 @@ Notify and stop
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-missing-files-alert-notify-stop-start
-   :end-before: .. courier-groups-configure-missing-files-alert-notify-stop-end
+   :start-after: .. courier-groups-howto-add-courier-stop-start
+   :end-before: .. courier-groups-howto-add-courier-stop-end
 
 **To send a workflow notification, and then stop the workflow**
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-missing-files-alert-notify-stop-steps-start
-   :end-before: .. courier-groups-configure-missing-files-alert-notify-stop-steps-end
+   :start-after: .. courier-groups-howto-add-courier-stop-steps-start
+   :end-before: .. courier-groups-howto-add-courier-stop-steps-end
 
 
 .. _workflows-courier-group-missing-files-wait:
@@ -128,12 +128,12 @@ Wait for missing files
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-missing-files-wait-start
-   :end-before: .. courier-groups-configure-missing-files-wait-end
+   :start-after: .. courier-groups-wait-for-missing-files-start
+   :end-before: .. courier-groups-wait-for-missing-files-end
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
-   :start-after: .. courier-groups-configure-missing-files-alert-important-start
-   :end-before: .. courier-groups-configure-missing-files-alert-important-end
+   :start-after: .. courier-groups-source-courier-alerts-start
+   :end-before: .. courier-groups-source-courier-alerts-end
 
 
 .. _workflows-orchestration-groups:

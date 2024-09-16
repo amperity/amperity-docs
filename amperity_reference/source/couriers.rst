@@ -1643,43 +1643,9 @@ Add to courier group
 
 .. couriers-add-to-courier-group-steps-start
 
-#. From the **Sources** page, click **Add Courier Group**. This opens the **Create Courier Group** dialog box.
-#. Enter the name of the courier.
-#. Add a cron string to the **Schedule** field to define a schedule for the orchestration group.
-
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-courier-group-schedule-start
-      :end-before: .. term-courier-group-schedule-end
-
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-crontab-syntax-start
-      :end-before: .. term-crontab-syntax-end
-
-#. Set **Status** to **Enabled**
-#. Specify a time zone.
-
-   .. include:: ../../amperity_reference/source/courier_groups.rst
-      :start-after: .. courier-groups-timezones-start
-      :end-before: .. courier-groups-timezones-end
-
-   .. note::
-
-      .. include:: ../../amperity_reference/source/courier_groups.rst
-         :start-after: .. courier-groups-timezones-downstream-start
-         :end-before: .. courier-groups-timezones-downstream-end
-
-#. Add at least one courier to the courier group. Select the name of a courier from the **Courier** drop-down. Click **+ Add Courier** to add additional couriers to the courier group.
-#. Click **Add a courier group constraint**, and then select a courier group from the drop-down list.
-
-   .. include:: ../../amperity_reference/source/courier_groups.rst
-      :start-after: .. courier-groups-schedule-wait-time-start
-      :end-before: .. courier-groups-schedule-wait-time-end
-
-#. For each courier group constraint, apply any offsets.
-
-   .. include:: ../../amperity_reference/source/courier_groups.rst
-      :start-after: .. courier-groups-schedule-offset-start
-      :end-before: .. courier-groups-schedule-offset-end
+#. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
+#. On the **Couriers** tab, click the **Add courier** link.
+#. Select the name of a courier from the drop-down list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
 #. Click **Save**.
 
 .. couriers-add-to-courier-group-steps-end
