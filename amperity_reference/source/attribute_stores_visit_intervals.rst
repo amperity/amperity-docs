@@ -42,7 +42,7 @@ Use in segments
 
 .. attribute-stores-visits-segment-start
 
-You can access 30 day visit intervals directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select a store visit interval attribute, and then apply a condition.
+You can access 30 day visit intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a store visit interval attribute, and then apply a condition.
 
 .. attribute-stores-visits-segment-end
 

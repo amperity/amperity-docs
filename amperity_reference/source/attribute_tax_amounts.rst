@@ -32,7 +32,7 @@ Use in segments
 
 .. attribute-tax-amounts-start
 
-You can access tax amounts attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Tax Amount** and **Unit Tax Amount**) *or* the **Unified Transactions** table (for **Order Tax Amount**), apply a condition, and then specify a value.
+You can access tax amounts attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Tax Amount** and **Unit Tax Amount**) *or* the **Unified Transactions** table (for **Order Tax Amount**), apply a condition, and then specify a value.
 
 .. attribute-tax-amounts-end
 

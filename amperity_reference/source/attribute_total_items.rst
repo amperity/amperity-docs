@@ -33,7 +33,7 @@ Use in segments
 
 .. attribute-total-items-ordered-start
 
-You can access total items attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Transaction Attributes Extended** table, select one of **First Order Total Items**, **Latest Order Latest Items**, or **Second Order Second Items**, apply a condition, and then specify a value.
+You can access total items attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select one of **First Order Total Items**, **Latest Order Latest Items**, or **Second Order Second Items**, apply a condition, and then specify a value.
 
 .. attribute-total-items-ordered-end
 

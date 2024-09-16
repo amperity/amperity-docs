@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-shipping-amount-start
 
-You can access order shipping amounts directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Unified Itemized Transactions** table, select the **Order Shipping Amount** attribute, apply a condition, and then specify a value.
+You can access order shipping amounts directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table, select the **Order Shipping Amount** attribute, apply a condition, and then specify a value.
 
 .. attribute-shipping-amount-end
 

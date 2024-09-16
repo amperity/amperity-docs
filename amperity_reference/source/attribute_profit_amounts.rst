@@ -43,7 +43,7 @@ Use in segments
 
 .. attribute-profits-access-start
 
-You can access profit amounts attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Profit** and **Unit Profit**) *or* the **Unified Transactions** table (for **Order Profit**), apply a condition, and then specify a value.
+You can access profit amounts attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Profit** and **Unit Profit**) *or* the **Unified Transactions** table (for **Order Profit**), apply a condition, and then specify a value.
 
 .. attribute-profits-access-end
 

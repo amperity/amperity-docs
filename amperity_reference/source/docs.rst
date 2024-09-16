@@ -67,11 +67,10 @@ Site navigation
 The site navigation runs across the top of the site and links together five topic collections. From left to right:
 
 #. Click the Amperity Documentation logo to return to a collection of overview topics.
-#. Click **AmpIQ** for information about building segments that define high value audiences, and then sending those audiences to various marketing channels to support any type of marketing campaign.
-#. Click **Amp360** for information about building queries that return data from your customer 360 database, and then sending those results to any downstream workflow.
-#. Click **DataGrid & AmpID** for information about configuring Amperity for your tenant.
+#. Click **User Guides** for information about AmpAi, building segments that define high value audiences, and then sending those audiences to various marketing channels to support any type of marketing campaign.
+#. Click **Operators Guide** for information about configuring Amperity for your tenant.
+#. Click **API** for information about Amperity's API endpoints. (You can learn more about the Profile API and Streaming Ingest API in the Operators Guide.)
 #. Click **Amperity A-Z** to open a topic collection that describes every aspect of Amperity.
-#. Click **Get Support** for information about how to contact Amperity Support.
 #. Click the |gift| icon for information about the latest features and improvements to Amperity.
 
 .. docs-site-navigation-end

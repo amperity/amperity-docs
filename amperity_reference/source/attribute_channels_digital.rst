@@ -31,7 +31,7 @@ Use in segments
 
 .. attribute-channels-digital-start
 
-You can access digital channels directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Unified Transactions** table, select the **Digital Channel** attribute, apply a condition, and then specify a value.
+You can access digital channels directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table, select the **Digital Channel** attribute, apply a condition, and then specify a value.
 
 For example, if your tenant had digital channels defined for "Email", "Paid media", "Paid search", "SMS", and "Streaming" the list of options would be:
 

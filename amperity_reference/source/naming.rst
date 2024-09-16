@@ -134,7 +134,7 @@ Destination names
 
 .. naming-destinations-start
 
-Use the name of the system to which Amperity will send data.
+Use the name of the system to which Amperity will send data. Use title case and separate the name using an underscore (``_``), if needed.
 
 For example:
 
@@ -216,7 +216,7 @@ Query names
 
 .. naming-queries-start
 
-Use a name that describes the purpose and result type for the query. Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand.
+Use a name that describes the purpose and result type for the query. Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand. Use title case and separate details using an underscore (``_``).
 
 For example:
 
@@ -235,7 +235,7 @@ Segment names
 
 .. naming-segments-start
 
-Use a name that describes the purpose and audience type for the segment. Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand.
+Use a name that describes the purpose and audience type for the segment. Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand and use underscores (``_``).
 
 For example:
 
@@ -255,7 +255,7 @@ Source names
 
 .. naming-sources-start
 
-Use the name of the system that provided this data to Amperity.
+Use the name of the system that provided this data to Amperity. You do not need to use underscores (``_``) in the source name.
 
 For example:
 

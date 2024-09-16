@@ -32,7 +32,7 @@ Use in segments
 
 .. attribute-returned-revenue-start
 
-You can access returned revenue directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Unified Transactions** table, select the **Order Returned Revenue** attribute, and then apply a condition.
+You can access returned revenue directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table, select the **Order Returned Revenue** attribute, and then apply a condition.
 
 .. attribute-returned-revenue-end
 

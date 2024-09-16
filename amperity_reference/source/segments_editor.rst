@@ -746,7 +746,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 
        For example, if the current day is "Thursday 01 / 12 / 2023" then **1 year ago** is "Wednesday 01 / 12 / 2022".
 
-.. tip:: You can compare segments by **% of Purchasers**, **% of Revenue**, **Revenue/Purchaser** by changing the option under the down arrow in the **Compare by:** field.
+.. tip:: You can compare segments by **% of Purchasers**, **% of Revenue**, or **Revenue/Purchaser** by changing the option in the **Compare by:** field.
 
 .. segments-editor-relative-date-values-end
 

@@ -44,7 +44,7 @@ Use in segments
 
 .. attribute-price-average-item-intervals-segments-start
 
-You can access average item price intervals directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select an average item price interval attribute, and then apply a condition.
+You can access average item price intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select an average item price interval attribute, and then apply a condition.
 
 .. attribute-price-average-item-intervals-segments-end
 

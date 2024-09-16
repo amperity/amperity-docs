@@ -40,7 +40,7 @@ Use in segments
 
 .. attribute-stores-preferred-segment-start
 
-You can access 30 day preferred store intervals directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Transaction Attributes Extended** table, select a preferred store interval attribute, and then apply a condition.
+You can access 30 day preferred store intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a preferred store interval attribute, and then apply a condition.
 
 .. attribute-stores-preferred-segment-end
 
