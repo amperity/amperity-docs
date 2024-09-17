@@ -259,7 +259,7 @@ The following table describes the semantic tags that are used for CCPA and/or GD
 
 .. semantics-compliance-table-pii-note-start
 
-.. note:: Linkage tables identify which source table records were used to create a custom domain table record. They do not trace individual fields, so **compliance/pii** semantic tags should be applied directly to the source tables, not on the custom domain tables, if the **delete_pii** compliance type is used.
+.. note:: Source keys and linkage tables identify which source table records were used to create a custom domain table record. They do not trace individual fields, so **compliance/pii** semantic tags should be applied directly to the source tables, not on the custom domain tables, if the **delete_pii** compliance type is used.
 
 .. semantics-compliance-table-pii-note-end
 

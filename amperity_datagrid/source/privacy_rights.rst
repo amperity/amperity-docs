@@ -432,6 +432,31 @@ The **delete** request type acts on entire rows of source tables, but it is poss
 
 Any field that is tagged with the **compliance/pii** semantic will be replaced with **NULL** if its record is eligible for compliance actions and an inbound request with the **delete_pii** request type is ingested.
 
+.. _privacy-rights-configure-source-keys:
+
+Configure source keys
+----------------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-source-keys-start
+   :end-before: .. term-source-keys-end
+
+In some cases a compliance request cannot directly match to source table rows. This includes an untagged table for the `exact` strategy, and a non-stitched source table for the `connected_pii` strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
+
+**To configure source keys**
+
+For each CDT with PII data on the **Sources** page do the following:
+
+#. Pick a column to tag with your source key. In most cases you want this value to be unique to a given CDT record and its upstream source table record. `pk` columns are often a good option if they are selected from the upstream source table.
+#. Pick a source key semantic, these follow the pattern `source/<source key name>`. For example: if we are tagging the pk value from `Table:A` we might use `source/table-a-pk`.
+#. Tag the corresponding fields on the feed and CDT with the source key you chose and click **Activate**.
+
+Once these keys have been configured, a match on a CDT row will link to source records with the same source key value.
+
+.. include:: ../../amperity_reference/source/semantics.rst
+   :start-after: .. semantics-compliance-table-pii-note-start
+   :end-before: .. semantics-compliance-table-pii-note-end
+
 .. _privacy-rights-build-linkage-tables:
 
 Create linkage tables
@@ -441,7 +466,9 @@ Create linkage tables
    :start-after: .. term-linkage-table-start
    :end-before: .. term-linkage-table-end
 
-If a compliance request cannot be directly linked to a source table, but can be linked to a custom domain table, create a linkage table to identify the source table records and ensure compliance actions are applied to them.
+In some cases a compliance request cannot directly match to source rows. This includes an untagged table for the `exact` strategy, and a non-stitched source table for the `connected_pii` strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
+
+.. note:: The main reason for using a linkage table rather than source keys is if the CDT you're linking is aggregating records using multiple keys since we do not allow source keys composed of multiple columns.
 
 .. include:: ../../amperity_reference/source/domain_tables.rst
    :start-after: .. domain-tables-add-linkage-steps-start
