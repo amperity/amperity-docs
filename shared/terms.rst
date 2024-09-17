@@ -3650,7 +3650,7 @@ The lifetime number of individual items associated with the transaction, ignorin
 
 .. term-linkage-table-start
 
-A linkage table is used to trace records in a custom domain table back to their corresponding source table records so that privacy compliance actions can be applied.
+A linkage table is a CDT used to trace records in a custom domain table back to their corresponding source table records so that privacy compliance actions can be applied. It is an alternative to source keys for advanced users who want to express links between their CDTs and source tables using SQL.
 
 .. term-linkage-table-end
 
@@ -5943,6 +5943,14 @@ A source database table is a domain table that is created by a feed in the **Sou
 Source IDs are unique identifiers that exist within each of your upstream data sources, including customer databases, transactional databases, or behavioral data assets. One way that Amperity measures Stitch quality is by comparing the number of Source IDs to the final number of Amperity IDs, showing the degree to with we matched and reconciled your data, forming comprehensive customer views.
 
 .. term-source-id-end
+
+**source keys**
+
+.. term-source-keys-start
+
+Source keys are semantics used to link records in a custom domain table back to their corresponding source table records so that privacy compliance actions can be applied.
+
+.. term-source-keys-end
 
 
 **Sources** (page)

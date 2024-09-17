@@ -647,13 +647,10 @@ Add linkage table
 **To add a linkage table**
 
 #. Open the **Sources** page.
-#. Under **Custom domain tables** open the |fa-kebab| menu for a custom domain table that contains email addresses, phone numbers, and/or physical addresses that may be the subject of a DSAR or delete request, and then select **Create linkage table**.
-#. Optional: Customize linkage table.
-
-   .. important:: The default linkage table will connect back to all source tables that are referenced by the custom domain table. This may cause too many records to be indicated as subject to compliance. For example: if the custom domain table references a mapping file, its mapping record may be subject to deletion even if it does not contain PII and can be applied to many people.
+#. Under **Custom domain tables** click **Add table**.
+#. Write SQL to specify which CDT records link to which source records. This will be four columns specifying the source table name, source table pk, cdt table name, and cdt pk.
 #. Click **Next**.
-
-   .. note:: Semantic tags for the data source and primary keys are applied automatically and should not be modified.
+#. Tag the the source table name with `compliance/source-ds`, source table pk with `compliance/source-pk`, cdt table name with `compliance/cdt-ds`, and cdt pk with `compliance/cdt-pk`.
 #. Click **Activate**.
 
 .. domain-tables-add-linkage-steps-end

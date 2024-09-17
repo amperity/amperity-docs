@@ -3560,6 +3560,10 @@ Unified Compliance
      - String
      - The value that was used to search for matching records. For example: **paul.jackson@amperity.com**.
 
+   * - **Request Match Category**
+     - String
+     - The match category will be **direct** for matches on pii, **connected** for matches on the amperity-id of a direct match, and **source_key** or **linkage_table** for upstream source records.
+
    * - **Amperity ID**
      - String
      - .. include:: ../../shared/terms.rst
