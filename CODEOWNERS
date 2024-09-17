@@ -1,0 +1,10 @@
+# Code ownership assignments for Amperity documentation.
+#
+# Code owners are automatically requested for review when someone opens a pull
+# request that modifies pages at https://docs.amperity.com.
+#
+# Note that this format is somewhat brittle, and *ANY* invalid lines will
+# prevent this file from working! See the GitHub docs for valid syntax:
+# https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
+
+* @amperity/docs @jamescott @karenkathryn
