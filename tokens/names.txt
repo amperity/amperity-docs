@@ -16,7 +16,7 @@
 
 .. |fa-kebab| raw:: html
 
-   &nbsp;<i class="fal fa-ellipsis-v fa-lg"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-ellipsis-vertical fa-lg"></i>&nbsp;
 
 
 .. |fa-help-circle| raw:: html
