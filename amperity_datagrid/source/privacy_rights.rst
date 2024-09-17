@@ -119,7 +119,7 @@ The following sections describe the individual steps within the workflow that oc
 
           To avoid potentially exposing additional customer PII in the DSAR report (and possible DSAR response) it is recommended to use the **exact** strategy as often as possible.
 
-       .. note:: A linkage table traces records in a custom domain table back to a source table. When a linkage table exists, a connected PII matching strategy will find all matching records in custom domain tables.
+       .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a CDT will find all corresponding records in source domain tables.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -168,11 +168,11 @@ The following sections describe the individual steps within the workflow that oc
 
        A delete records request runs when **type** field in the inbound requests table is set to **delete**.
 
-       The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
+       The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request. The request match category resulting from a match on pii will be `direct` and can be viewed on `Unified:Compliance`.
 
-       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all records with the same Amperity ID as those direct matches. The request match category resulting from a match on Amperity ID will be `connected` and can be viewed on `Unified:Compliance`.
 
-       .. note:: A linkage table traces records in a custom domain table back to a source table. When a linkage table exists, a connected PII matching strategy will find all matching records in custom domain tables.
+       .. note:: The request match category resulting from a match due to source keys will be `source_key` and the request match category resulting from a match due to linkage tables will be `linkage_table`.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -253,7 +253,7 @@ The following sections describe the individual steps within the workflow that oc
 
        The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
 
-       .. note:: A linkage table traces records in a custom domain table back to a source table. When a linkage table exists, a connected PII matching strategy will find all matching records in custom domain tables.
+       .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a CDT will find all corresponding records in source domain tables.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -356,7 +356,7 @@ A privacy rights workflow requires the following steps:
 
 #. :ref:`Configure inbound requests table <privacy-rights-inbound-requests-table>`.
 #. :ref:`Apply semantic tags to tables with desired deletes <privacy-rights-apply-semantic-tags>`.
-#. :ref:`Create linkage tables if necessary <privacy-rights-build-linkage-tables>`.
+#. :ref:`Configure source keys <privacy-rights-configure-source-keys>`.
 
 .. privacy-rights-enable-end
 
