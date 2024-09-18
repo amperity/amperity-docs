@@ -44,7 +44,7 @@ Once provisioned, you may configure the SFTP site to support any desired SFTP wo
 
 .. about-tenant-sftp-provisioned-start
 
-.. note:: The SFTP server has a 30-day limit on data and after 30 days, data may be moved automatically to an archive location. This location is still accessible to Amperity in case it becomes necessary to reuse it.
+.. note:: The SFTP server has a 30-day limit on data and after 30 days, data will be removed.
 
    The hostname for the SFTP site is always |sftp-hostname|. Some older tenants may still be using the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
 
