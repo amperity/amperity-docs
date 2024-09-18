@@ -14,6 +14,8 @@
 .. |sendto-link| replace:: send query results
 .. |channel-link| replace:: send campaigns
 .. |duration| replace:: (in days)
+.. |allow-for-what| replace:: audience lists
+.. |allow-for-duration| replace:: up to 48 hours
 
 
 .. meta::
@@ -49,6 +51,16 @@ Send data to Yahoo DSP
    Amperity uses the `POST /AUDIENCE <https://help.yahooinc.com/datax/docs/post-audience>`__ |ext_link| endpoint to manage the segment.
 
 .. destination-yahoo-dsp-end
+
+.. destination-active-campaign-api-note-start
+
+.. note::
+
+   .. include:: ../../shared/destinations.rst
+      :start-after: .. destinations-add-destinations-intro-allow-for-start
+      :end-before: .. destinations-add-destinations-intro-allow-for-end
+
+.. destination-active-campaign-api-note-end
 
 .. destination-yahoo-dsp-steps-to-send-start
 

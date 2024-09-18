@@ -9,6 +9,7 @@
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
 
+
 .. meta::
     :description lang=en:
         Use segments and campaigns to send audiences from Amperity to Yahoo DSP.
@@ -148,7 +149,7 @@ Build a campaign
           :start-after: .. channels-build-campaign-steps-edit-attributes-start
           :end-before: .. channels-build-campaign-steps-edit-attributes-end
 
-       .. image:: ../../images/mockup-campaigns-attributes-active-campaign.png
+       .. image:: ../../images/mockup-campaigns-attributes-yahoo-dsp.png
           :width: 500 px
           :alt: Edit the attributes for Yahoo DSP.
           :align: left
