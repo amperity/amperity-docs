@@ -7132,13 +7132,22 @@ eXtensible Markup Language (XML) is supported data format for customer data sour
 .. term-xml-end
 
 
-**Yahoo! Ads**
+**Yahoo Ads**
 
 .. term-yahoo-ads-start
 
-Yahoo! Ads is a search and display advertising network that can measure potential customers by demographic data points, such as geography and age.
+Yahoo Advertising is a search and display advertising network that can measure potential customers by demographic data points, such as geography and age.
 
 .. term-yahoo-ads-end
+
+
+**Yahoo DSP**
+
+.. term-yahoo-dsp-start
+
+Yahoo DSP is a demand-side platform (DSP) to which you can send audiences, and then advertise across the Yahoo brand ecosystem, incluidng Yahoo, Yahoo Mail, TechCrunch, Yahoo Finance, Yahoo Sports, and Yahoo News.
+
+.. term-yahoo-dsp-end
 
 
 **YouTube**

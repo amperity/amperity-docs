@@ -2042,6 +2042,27 @@ See SFTP.
 
 
 
+**YAHOO DSP**
+
+**Short intro**
+
+.. credential-yahoo-dsp-intro-start
+
+Yahoo DSP is a demand-side platform (DSP) to which you can send audiences, and then advertise across the Yahoo brand ecosystem.
+
+.. credential-yahoo-dsp-intro-end
+
+**MDM site ID**
+
+.. credential-yahoo-dsp-mdm-id-start
+
+The "MDM site ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
+
+.. credential-yahoo-dsp-mdm-id-end
+
+
+
+
 
 **ZENDESK**
 
