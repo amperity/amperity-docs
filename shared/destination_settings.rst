@@ -2004,7 +2004,7 @@ A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/
 
 .. setting-yahoo-dsp-segment-name-start
 
-The name of the segment in |destination-name|. This can be the name of an existing segment or a new segment within the |destination-name| taxonomy.
+The name of the segment in |destination-name|. This can be the name of an existing segment or a new segment within the |destination-name| taxonomy. Segments are available in |destination-name| from "Audiences". Open the "Partner" audiences, and then choose "Amperity".
 
 .. setting-yahoo-dsp-segment-name-start
 
