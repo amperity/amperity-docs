@@ -417,6 +417,15 @@ Before you can create outbound sharing between Amperity and Databricks the Datab
           :class: no-scaled-link
      - A user who will run queries against tables in a schema must have |ext_databricks_permission_select| permissions in Databricks. **SELECT** permissions may be granted on a specific table, on a schema, or on a catalog.
 
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 5.
+          :align: left
+          :class: no-scaled-link
+     - For outbound bridges that connect to Databricks environments running in Microsoft Azure and are using storage account firewalls, the :ref:`outbound subnet IDs <bridge-outbound-share-subnet-ids>` for Amperity Bridge must be configured in Microsoft Azure using the Azure CLI.
+
+
 .. bridge-outbound-share-prerequisites-end
 
 
@@ -859,3 +868,56 @@ Verify that the tables shared from Amperity are available from a catalog in Data
           :class: no-scaled-link
 
 .. bridge-outbound-share-verify-table-sharing-steps-end
+
+
+.. _bridge-outbound-share-subnet-ids:
+
+Configure outbound subnet IDs
+--------------------------------------------------
+
+.. bridge-outbound-share-subnet-ids-start
+
+Outbound bridges that connect to Databricks environments running in Microsoft Azure and are using storage account firewalls, the outbound subnet IDs for Amperity Bridge must be configured in Microsoft Azure using the Azure CLI. This step is only required for Microsoft Azure storage accounts running in any of the following regions: :ref:`az-prod-east-us-2`, :ref:`az-prod-east-us`, or :ref:`az-prod-en1-north-europe`.
+
+.. bridge-outbound-share-subnet-ids-end
+
+
+.. _az-prod-east-us-2:
+
+**az-prod East US 2**
+
+.. code-block:: bash
+
+   az storage account network-rule add --subnet \
+   /subscriptions/e733fc0a-b51a-4e9d-b6bb-fffc216f4d87/ \
+   resourceGroups/prod/providers/Microsoft.Network/ \
+   virtualNetworks/prod/subnets/compute-spark-outbound \
+   --resource-group "myresourcegroup" \
+   --account-name "mystorageaccount"
+
+
+.. _az-prod-east-us:
+
+**az-prod East US**
+
+.. code-block:: bash
+
+   az storage account network-rule add --subnet \
+   /subscriptions/e733fc0a-b51a-4e9d-b6bb-fffc216f4d87/ \
+   resourceGroups/prod-compute-failover/providers/Microsoft.Network/ \
+   virtualNetworks/prod-compute-failover/subnets/compute-spark-outbound \
+   --resource-group "myresourcegroup" \
+   --account-name "mystorageaccount"
+
+.. _az-prod-en1-north-europe:
+
+**az-prod-en1 North Europe**
+
+.. code-block:: bash
+
+   az storage account network-rule add --subnet \
+   /subscriptions/0e2b72b5-de51-4c28-8ba3-355fc7db10b7/ \
+   resourceGroups/prod-en1/providers/Microsoft.Network/ \
+   virtualNetworks/vnet/subnets/compute-spark-outbound \
+   --resource-group "myresourcegroup" \
+   --account-name "mystorageaccount"
