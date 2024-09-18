@@ -1003,6 +1003,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Xero using Fivetran.
 
+   * - **Yahoo DSP**
+     - 
+     - |system-yes|
+     - Send audiences from Amperity to Yahoo DSP.
+
    * - **Yahoo Gemini**
      - |system-yes|
      - 

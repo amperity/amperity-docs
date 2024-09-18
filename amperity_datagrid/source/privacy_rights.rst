@@ -119,7 +119,7 @@ The following sections describe the individual steps within the workflow that oc
 
           To avoid potentially exposing additional customer PII in the DSAR report (and possible DSAR response) it is recommended to use the **exact** strategy as often as possible.
 
-       .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a CDT will find all corresponding records in source domain tables.
+       .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a custom domain table will find all corresponding records in source domain tables.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -168,11 +168,11 @@ The following sections describe the individual steps within the workflow that oc
 
        A delete records request runs when **type** field in the inbound requests table is set to **delete**.
 
-       The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request. The request match category resulting from a match on pii will be `direct` and can be viewed on `Unified:Compliance`.
+       The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request. The request match category resulting from a match on PII will be **direct** and can be viewed from the **Unified_Compliance** table.
 
-       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all records with the same Amperity ID as those direct matches. The request match category resulting from a match on Amperity ID will be `connected` and can be viewed on `Unified:Compliance`.
+       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all records with the same Amperity ID as those direct matches. The request match category resulting from a match on Amperity ID will be **connected** and can be viewed from the **Unified_Compliance** table.
 
-       .. note:: The request match category resulting from a match due to source keys will be `source_key` and the request match category resulting from a match due to linkage tables will be `linkage_table`.
+       .. note:: The request match category resulting from a match due to source keys will be **source_key** and the request match category resulting from a match due to linkage tables will be **linkage_table**.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -404,6 +404,7 @@ Semantic tags are used to identify records and fields eligible for compliance ac
 
 .. privacy-rights-apply-semantic-tags-end
 
+
 .. _privacy-rights-semantic-tag-find-records:
 
 Identify records eligible for compliance actions
@@ -421,6 +422,7 @@ Custom fields can also be used to identify records. If the inbound request table
 
 .. privacy-rights-semantic-tag-find-records-end
 
+
 .. _privacy-rights-semantic-tag-find-fields:
 
 Identify fields to delete
@@ -432,6 +434,7 @@ The **delete** request type acts on entire rows of source tables, but it is poss
 
 Any field that is tagged with the **compliance/pii** semantic will be replaced with **NULL** if its record is eligible for compliance actions and an inbound request with the **delete_pii** request type is ingested.
 
+
 .. _privacy-rights-configure-source-keys:
 
 Configure source keys
@@ -441,21 +444,22 @@ Configure source keys
    :start-after: .. term-source-keys-start
    :end-before: .. term-source-keys-end
 
-In some cases a compliance request cannot directly match to source table rows. This includes an untagged table for the `exact` strategy, and a non-stitched source table for the `connected_pii` strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
+In some cases a compliance request cannot directly match to source table rows. This includes an untagged table for the **exact** strategy, and a non-stitched source table for the **connected_pii** strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
 
 **To configure source keys**
 
 For each CDT with PII data on the **Sources** page do the following:
 
-#. Pick a column to tag with your source key. In most cases you want this value to be unique to a given CDT record and its upstream source table record. `pk` columns are often a good option if they are selected from the upstream source table.
-#. Pick a source key semantic, these follow the pattern `source/<source key name>`. For example: if we are tagging the pk value from `Table:A` we might use `source/table-a-pk`.
-#. Tag the corresponding fields on the feed and CDT with the source key you chose and click **Activate**.
+#. Pick a column to tag with your source key. In most cases you want this value to be unique to a given record in a custom domain table and its upstream source table record. **pk** columns are often a good option if they are selected from the upstream source table.
+#. Pick a source key semantic, these follow the pattern **source/<source key name>**. For example: tagging the primary key value from **Table_A** is similar to **source/table-a-pk**.
+#. Tag the corresponding fields on the feed and custom domain table with the source key you chose and click **Activate**.
 
-Once these keys have been configured, a match on a CDT row will link to source records with the same source key value.
+Once these keys have been configured, a match on a row in a custom domain table will link to source records with the same source key value.
 
 .. include:: ../../amperity_reference/source/semantics.rst
    :start-after: .. semantics-compliance-table-pii-note-start
    :end-before: .. semantics-compliance-table-pii-note-end
+
 
 .. _privacy-rights-build-linkage-tables:
 
@@ -466,9 +470,9 @@ Create linkage tables
    :start-after: .. term-linkage-table-start
    :end-before: .. term-linkage-table-end
 
-In some cases a compliance request cannot directly match to source rows. This includes an untagged table for the `exact` strategy, and a non-stitched source table for the `connected_pii` strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
+In some cases a compliance request cannot directly match to source rows. This includes an untagged table for the **exact** strategy, and a non-stitched source table for the **connected_pii** strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
 
-.. note:: The main reason for using a linkage table rather than source keys is if the CDT you're linking is aggregating records using multiple keys since we do not allow source keys composed of multiple columns.
+.. note:: The main reason for using a linkage table rather than source keys is if the custom domain table to which you are linking is aggregating records using multiple keys since Amperity doees not allow source keys to be composed of multiple columns.
 
 .. include:: ../../amperity_reference/source/domain_tables.rst
    :start-after: .. domain-tables-add-linkage-steps-start
@@ -477,6 +481,7 @@ In some cases a compliance request cannot directly match to source rows. This in
 .. include:: ../../amperity_reference/source/semantics.rst
    :start-after: .. semantics-compliance-table-pii-note-start
    :end-before: .. semantics-compliance-table-pii-note-end
+
 
 .. _privacy-rights-reports-tables:
 
@@ -520,4 +525,3 @@ The **Unified Compliance** table contains the following columns:
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-unified-compliance-table-start
    :end-before: .. data-tables-unified-compliance-table-end
-

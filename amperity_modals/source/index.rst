@@ -54,6 +54,7 @@ Site Index
    credential-smg
    credential-sound-commerce
    credential-vibes
+   credential-yahoo-dsp
    destination-active-campaign
    destination-acxiom
    destination-airship
@@ -90,6 +91,7 @@ Site Index
    destination-smg
    destination-sound-commerce
    destination-vibes
+   destination-yahoo-dsp
    destination_lorem_ipsum
    openapi
    semantics

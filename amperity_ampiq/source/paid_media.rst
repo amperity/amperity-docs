@@ -602,6 +602,24 @@ Amperity provides direct connections to the most popular destinations across the
      - WhatsApp is a text and messaging platform from which your brand can reach users who are not on Facebook or Instagram, but are on mobile apps that are within the same audience network. Users can open conversation threads in WhatsApp and interact directly with your brand. Use the |channel_meta_ads_manager| destination to reach users on WhatsApp.
 
 
+.. _yahoo-dsp:
+
+.. list-table::
+   :widths: 40 60
+   :header-rows: 0
+
+   * - .. image:: ../../amperity_base/source/_static/connector-yahoo-dsp.png
+          :width: 140 px
+          :alt: Yahoo DSP
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-yahoo-dsp-start
+          :end-before: .. term-yahoo-dsp-end
+
+       Use the |channel_yahoo_dsp| destination to activate audiences using Gmail.
+
+
 .. _youtube:
 
 .. list-table::

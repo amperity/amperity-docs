@@ -390,6 +390,7 @@
 
    <a href="https://docs.amperity.com/datagrid/configure_stitch.html#ignore-jitter-alerts">jitter alerts</a>
 
+
 .. |channel_template| raw:: html
 
    <a href="https://docs.amperity.com/ampiq/template_channel.html">Destination_Name</a>
@@ -403,6 +404,11 @@
 .. |channel_tiktok| raw:: html
 
    <a href="https://docs.amperity.com/ampiq/destination_tiktok_ads.html">TikTok Ads</a>
+
+
+.. |channel_yahoo_dsp| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_yahoo_dsp.html">Yahoo DSP</a>
 
 
 .. |credentials| raw:: html

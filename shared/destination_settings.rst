@@ -245,6 +245,16 @@ The primary key for the audience. Set to |audience-primary-key|.
 
 .. setting-common-list-name-end
 
+**Membership duration**
+
+Applies to Yahoo DSP and several other API-based destinations.
+
+.. setting-common-membership-duration-start
+
+The length of time |duration| an audience member will belong to this segment, after which they are removed.
+
+.. setting-common-membership-duration-end
+
 **Optional settings**
 
 .. setting-common-optional-settings-start
@@ -1984,6 +1994,19 @@ A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/
 **Label name**
 
 **Settings**
+
+
+
+
+**YAHOO DSP**
+
+**Segment name**
+
+.. setting-yahoo-dsp-segment-name-start
+
+The name of the segment in |destination-name|. This can be the name of an existing segment or a new segment within the |destination-name| taxonomy. Segments are available in |destination-name| from "Audiences". Open the "Partner" audiences, and then choose "Amperity".
+
+.. setting-yahoo-dsp-segment-name-start
 
 
 
