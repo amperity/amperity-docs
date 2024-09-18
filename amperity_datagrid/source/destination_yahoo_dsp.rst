@@ -99,7 +99,13 @@ Get details
           :start-after: .. credential-yahoo-dsp-mdm-id-start
           :end-before: .. credential-yahoo-dsp-mdm-id-end
 
-       .. tip:: You can find your brand's MDM ID from the |destination-name| user interface. Log in to |destination-name|, then navigate to the **Advertisers** page. Open your brand's profile. The MDM ID is available from the **MDM ID** field.
+       .. tip:: You can find your brand's **Site MDM ID** from the |destination-name| user interface. Log in to |destination-name|, then navigate to the **Advertisers** page. Open your brand's profile. The **Site MDM ID** is available from the **MDM ID** field.
+
+          .. image:: ../../images/destination-yahoo-site-mdm-id.png
+             :width: 360 px
+             :alt: Location of Yahoo DSP site MDM ID
+             :align: left
+             :class: no-scaled-link
 
 
    * - .. image:: ../../images/steps-check-off-black.png
