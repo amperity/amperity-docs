@@ -2052,11 +2052,11 @@ Yahoo DSP is a demand-side platform (DSP) to which you can send audiences, and t
 
 .. credential-yahoo-dsp-intro-end
 
-**MDM site ID**
+**Site MDM ID**
 
 .. credential-yahoo-dsp-mdm-id-start
 
-The "MDM site ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
+The "Site MDM ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
 
 .. credential-yahoo-dsp-mdm-id-end
 

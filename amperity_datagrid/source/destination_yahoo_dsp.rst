@@ -169,7 +169,7 @@ Add destination
 
        |destination-name| has the following settings:
 
-       * **MDM seat ID**
+       * **Seat MDM ID**
 
          .. include:: ../../shared/credentials_settings.rst
             :start-after: .. credential-yahoo-dsp-mdm-id-start
