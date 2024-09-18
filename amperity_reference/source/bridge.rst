@@ -879,6 +879,8 @@ Configure outbound subnet IDs
 
 For outbound bridges that connect to Databricks environments running in Microsoft Azure and are using storage account firewalls, the outbound subnet IDs for Amperity Bridge must be configured in Microsoft Azure using the Azure CLI. This step is only required for Microsoft Azure storage accounts running in any of the following regions: :ref:`az-prod East US 2 <az-prod-east-us-2>`, :ref:`az-prod East US <az-prod-east-us>`, or :ref:`az-prod-en1 North Europe <az-prod-en1-north-europe>`.
 
+.. important:: The following command line examples use placeholders. Change "myresourcegroup" and "mystorageaccount" to the names of the resource group and storage account that exists within your Microsoft Azure environment.
+
 .. bridge-outbound-share-subnet-ids-end
 
 
