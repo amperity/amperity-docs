@@ -982,6 +982,17 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        You may use **uid2** as an attribute when Amperity is configured as a |uid2_operator| for your brand.
 
+       For example:
+
+       .. code-block:: sql
+
+          SELECT 
+            uid2.uid2
+            ,uit.order_datetime AS timestamp
+          FROM Unified_Itemized_Transactions uit
+          LEFT JOIN UID2 uid2 ON uit.amperity_id = uid2.uid2
+          WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
+
 
    * - **value**
      - **Recommended**
