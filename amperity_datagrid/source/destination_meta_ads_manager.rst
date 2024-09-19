@@ -659,7 +659,7 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-offline-events-build-query-start
    :end-before: .. events-meta-ads-manager-offline-events-build-query-end
 
