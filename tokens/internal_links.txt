@@ -1531,6 +1531,11 @@
    <a href="https://docs.amperity.com/ampiq/paid_media.html#match-rates">match rates</a>
 
 
+.. |uid2_operator| raw:: html
+
+   <a href="https://docs.amperity.com/reference/uid2.html">UID2 Operator</a>
+
+
 .. |usecase_customers_high_value_multichannel| raw:: html
 
    <a href="https://docs.amperity.com/ampiq/usecase_customers_high_value_multichannel.html">High-value multi-channel customers</a>
