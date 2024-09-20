@@ -659,7 +659,7 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-offline-events-build-query-start
    :end-before: .. events-meta-ads-manager-offline-events-build-query-end
 
@@ -1402,13 +1402,13 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **external_id**
      - **Recommended**
 
-       The **amperity_id** field **MUST** be renamed to **extern_id**.
+       The **amperity_id** field **MUST** be renamed to **external_id**.
 
-       Add **extern_id** to your query:
+       Add **external_id** to your query:
 
        ::
 
-          ,c360.amperity_id AS extern_id
+          ,c360.amperity_id AS external_id
 
        .. note:: Amperity performs the same actions for the external ID when sending to the Conversions API as when sending to the Marketing API.
 

@@ -58,7 +58,7 @@ A query that returns a collection offline events for use in |destination-name| i
 .. code-block:: sql
 
    SELECT 
-     c360.amperity_id AS extern_id
+     c360.amperity_id AS external_id
      ,c360.email AS email
      ,c360.phone AS phone
      ,c360.given_name AS given_name
@@ -81,7 +81,7 @@ A query that returns a collection offline events for use in |destination-name| i
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
    GROUP BY order_id
 
-The query **MUST** contain the following fields: **extern_id**, **order_id**, **quantity**, **email** (OR **phone**), **product_id**, **timestamp**, **price**, and **currency**. When **action_source** is not specified the default value is "physical_store".
+The query **MUST** contain the following fields: **external_id**, **order_id**, **quantity**, **email** (OR **phone**), **product_id**, **timestamp**, **price**, and **currency**. When **action_source** is not specified the default value is "physical_store".
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
