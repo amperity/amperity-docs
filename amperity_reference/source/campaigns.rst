@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        Use segments to define audiences, and then send those audiences to downstream marketing workflows for customer activation.
+        Use campaigns to define audiences, and then send those audiences to downstream marketing workflows for customer activation.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use segments to define audiences, and then send those audiences to downstream marketing workflows for customer activation.
+        Use campaigns to define audiences, and then send those audiences to downstream marketing workflows for customer activation.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -49,11 +49,11 @@ About the Campaigns page
 
 Use the **Campaigns** page to activate a variety of use cases across your marketing stack. For example:
 
-* View your recently edited campaigns
+* Viewing your recently edited campaigns
 * Messaging a group of high customer lifetime value (CLV) customers on Facebook for a VIP event
 * Emailing customers with an affinity toward blue button down shirts for a product liquidation
 * Targeting a segment of customers who are more likely to add a visit to the hotel spa
-* Messaging a group of customers likely to churn with a special offer
+* Messaging a group of customers likely to churn without a special offer
 * Showing an ad to re-engage customers who have unsubscribed from email
 * Reaching out to customers that have enrolled in your loyalty program
 * Identifying customers within existing lists, and then pushing targeted subsets for downstream messaging to any channel
@@ -201,7 +201,7 @@ For many |ampiq_destinations|, you may configure the list of attributes (i.e. fi
 
 .. campaigns-attributes-important-start
 
-.. important:: Some destinations only support sending specific attributes. Review the requirements for each destination to ensure that you don't attach unsupported attributes to your campaign send.
+.. important:: Some destinations only support sending specific attributes. Review the requirements for each destination to ensure that you don't attach unsupported attributes to the campaigns that you send.
 
 .. campaigns-attributes-important-end
 
@@ -263,7 +263,7 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    Amperity attempts to maintain (but does not guarantee) consistent audience membership for control groups that are associated with recurring campaigns.
 
-   * When the audience size is unchanged across campaign sends, the membership of the control group will be unchanged.
+   * When the audience size is unchanged across the campaigns that you send, the membership of the control group will be unchanged.
 
    * When the audience size changes, the size of the control group also changes. Amperity IDs are added to the control group when the audience size gets bigger and are removed when the audience size gets smaller.
 
@@ -762,11 +762,11 @@ You can add a sub-audience to a campaign on the **Edit Campaign** page.
 
 #. From the **Campaigns** page, in the **Sub-audiences and Destinations** section, click **Add Sub-audience**.
 #. From the **Source** menu, select **Create custom criteria**.
-#. From the **Audience Builder** window, To add these attributes to your segment, click **Add condition**,**.
+#. From the **Audience Builder** window, To add these attributes to your segment, click **Add condition**.
 #. From the **Sources** drop-down list, select a source.
 #. From the **Attributes** drop-down list, select an attribute.
 #. From the **Operators** drop-down list, select an operator.
-#. To add these attributes to your segment, click **Add condition**,** to add more criteria.
+#. To add these attributes to your segment, click **Add condition** to add more criteria.
 #. When done setting your criteria, click **Save**.
 
 The new sub-audience appears in the **Sub-audiences and Destinations** section.
@@ -1188,7 +1188,7 @@ Configure a one-time campaign
 
 .. campaigns-config-onetime-campaign-start
 
-You you can configure a one-time campaign on the **Edit Campaign** page.
+You can configure a one-time campaign on the **Edit Campaign** page.
 
 .. campaigns-config-onetime-campaign-end
 
@@ -1555,7 +1555,7 @@ You can filter campaigns on the **Campaigns** page.
 
 The filtered results appear on the **Campaigns** page.
 
-..tip:: You can filter campaigns by the following cadences: all, one-time, or recurring.
+   .. tip:: You can filter campaigns by the following cadences: all, one-time, or recurring.
 
 .. campaigns-filter-campaigns-steps-end
 
@@ -1637,7 +1637,7 @@ You can delete a folder from the **Campaigns** page.
 #. From the **Campaigns** page, open the menu for a folder, and then select **Delete**. This opens the **Delete Folder** dialog box.
 #. Click **Delete**.
 
-The folder no longer appears on the **Campaigns** 
+The folder no longer appears on the **Campaigns** page. 
 
 .. campaigns-delete-steps-end
 
