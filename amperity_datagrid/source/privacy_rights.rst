@@ -451,7 +451,7 @@ In some cases a compliance request cannot directly match to source table rows. T
 For each CDT with PII data on the **Sources** page do the following:
 
 #. Pick a column to tag with your source key. In most cases you want this value to be unique to a given record in a custom domain table and its upstream source table record. **pk** columns are often a good option if they are selected from the upstream source table.
-#. Pick a source key semantic, these follow the pattern **source/<source key name>**. For example: tagging the primary key value from **Table_A** is similar to **source/table-a-pk**.
+#. Pick a source key semantic, these follow the pattern **source/<source key name>**. For example: when tagging the primary key value from **Table_A** you might use **source/table-a-pk**.
 #. Tag the corresponding fields on the feed and custom domain table with the source key you chose and click **Activate**.
 
 Once these keys have been configured, a match on a row in a custom domain table will link to source records with the same source key value.
