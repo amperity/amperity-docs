@@ -241,4 +241,11 @@ Configure default attributes
    * - email
      - email
 
+   * - uid2
+
+       You may use **uid2** as a source attribute when Amperity is configured as a |uid2_operator| for your brand.
+
+     - uid2
+
+
 .. channel-the-trade-desk-configure-default-attributes-end

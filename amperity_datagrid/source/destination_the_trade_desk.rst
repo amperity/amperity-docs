@@ -791,6 +791,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        .. note:: Amperity converts email addresses to a UID 2.0 value, and then sends them to |destination-name|, after which they are available from within |destination-name| as a **UID2** ID type. Rows that are sent to |destination-name| that do not have a UID 2.0 value or have an empty value are removed by |destination-name|.
 
+          You may use **uid2** as an attribute when Amperity is configured as a |uid2_operator| for your brand.
 
    * - **eventname**
      - **Optional**; **Required** for sending product catalogs alongside offline events.
@@ -974,6 +975,23 @@ The fields are listed alphabetically, but may be returned by the query in any or
        .. code-block:: sql
 
           ,order_datetime AS timestamp
+
+
+   * - **uid2**
+     - **Optional**
+
+       You may use **uid2** as an attribute when Amperity is configured as a |uid2_operator| for your brand.
+
+       For example:
+
+       .. code-block:: sql
+
+          SELECT 
+            uid2.uid2
+            ,uit.order_datetime AS timestamp
+          FROM Unified_Itemized_Transactions uit
+          LEFT JOIN UID2 uid2 ON uit.amperity_id = uid2.uid2
+          WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
 
 
    * - **value**

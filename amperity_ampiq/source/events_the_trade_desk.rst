@@ -79,6 +79,17 @@ A query that returns a collection offline event is similar to:
 
 The query **MUST** contain the following fields: **email** and **timestamp**.
 
+.. tip:: You may use **uid2** as an attribute when Amperity is configured as a |uid2_operator| for your brand. For example:
+
+   .. code-block:: sql
+
+      SELECT 
+        uid2.uid2
+        ,uit.order_datetime AS timestamp
+      FROM Unified_Itemized_Transactions uit
+      LEFT JOIN UID2 uid2 ON uit.amperity_id = uid2.uid2
+      WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
+
 .. caution:: Review the list of offline events parameters that may be sent to |destination-name|. Compare these parameters to the fields that are available from your brand's customer 360 database to determine which fields are available to be sent to |destination-name|.
 
    Some parameters, such as **city**, **region** (which represents a state within the United States), and **country**, must be associated with the location in which the offline event occurred, not the location at which the customer associated with the offline event resides.
