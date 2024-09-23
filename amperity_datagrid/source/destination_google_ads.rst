@@ -294,17 +294,42 @@ Add destination
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings-google-ads.png
           :width: 500 px
-          :alt: Settings for Google Ads: advertiser or partner?
-          :align: left
-          :class: no-scaled-link
-
-       Choose "Google Ads".
-
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-google-ads.png
-          :width: 500 px
           :alt: Settings for Google Ads.
           :align: left
           :class: no-scaled-link
+
+       The following settings are specific to |destination-name|:
+
+       .. list-table::
+          :widths: 180 320
+          :header-rows: 1
+
+          * - **Setting**
+            - **Description**
+          * - **Audience name**
+            - The name of an audience in |destination-name|. If the audience does not exist, Amperity will create it.
+
+          * - **Audience description**
+            - An optional description of the audience.
+
+          * - **Customer ID**
+            - The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Google Ads" account.
+
+              .. note:: The customer ID must be 10 digits and may not contain dashes.
+
+          * - **Customer product**
+            - The name of the product to which Amperity will send data. Choose "Google Ads".
+
+          * - **Membership duration**
+            - The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+
+              .. tip:: Set this value to "0" to remove all audience members.
+
+          * - **Upload key type**
+            - The **Upload key type** must be set to one of :ref:`Contact Info <destination-google-ads-api-matching-contact>`, :ref:`User ID <destination-google-ads-api-matching-user>`, or :ref:`Mobile ID <destination-google-ads-api-matching-mobile>`.
+
+          * - **Mobile app ID**
+            - If the **Upload key type** is set to "Mobile ID", use the **Mobile app ID** setting to provide the ID for the iOS or Android app from which the mobile ID was collected.
 
 
    * - .. image:: ../../images/steps-04.png
