@@ -39,7 +39,7 @@ Your brand can configure |source-name| to push profile and reservation events da
 
 .. note:: This connector requires configuration steps to be completed in |source-name| first, and then within Amperity. Enable the profiles and events stream in |source-name| *only after* the courier is configured in Amperity.
 
-.. important:: Configure only one courier in Amperity for |source-name|. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
+.. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
 
 .. source-oracle-opera-context-end
 
@@ -143,9 +143,9 @@ Get details
           :alt: Detail four.
           :align: left
           :class: no-scaled-link
-     - |source-name| makes streamed data available from a `websocket <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/c_streaming_api.htm>`__ |ext_link|.
+     - |source-name| makes streamed data available from the `Streaming API <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/c_streaming_api.htm>`__ |ext_link|.
 
-       Amperity does not listen to this websocket; instead, Amperity reconnects to the websocket each time the courier runs, and then pulls all of the data that is available from the websocket *at that time* to Amperity. Configure the courier to run automatically at a frequency that ensures there is no events data loss.
+       .. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
 
 
 .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
@@ -184,7 +184,7 @@ Add courier
 
 .. source-oracle-opera-add-courier-important-start
 
-.. important:: Configure only one courier in Amperity for |source-name|. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
+.. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
 
 .. source-oracle-opera-add-courier-important-end
 
