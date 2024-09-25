@@ -30,6 +30,29 @@ body {
 }
 
 
+/* -- Skip link to top of page */
+
+#linkToTop {
+  display: none;
+  position: fixed;
+  bottom: 8%;
+  right: 5%;
+  z-index: 1;
+  border: none;
+  outline: none;
+  background-color: $amperity-brand-yellow;
+  color: $amperity-brand-off-black;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 18px 18px 18px 18px;
+  font-size: 16px;
+}
+
+#linkToTop:hover {
+  background-color: $amperity-brand-merengue;
+}
+
+
 
 /* -- the actual topic background, must be white all the time no exceptions */
 
