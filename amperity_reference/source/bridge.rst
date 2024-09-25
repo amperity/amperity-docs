@@ -435,7 +435,7 @@ Outbound prerequisites
 
 .. bridge-outbound-share-prerequisites-start
 
-Before you can create outbound sharing between Amperity and Databricks you must have permission to create providers and catalogs in Databricks. You may create the provider :ref:`using the Databricks CLI <bridge-outbound-share-add-provider-cli>`, :ref:`from the Databricks user interface <bridge-outbound-share-add-provider-ui>`, or by :ref:`using Python <bridge-outbound-share-add-provider-python>`
+Before you can create outbound sharing between Amperity and Databricks you must have permission to create providers and catalogs in Databricks. You may create the provider :ref:`using the Databricks CLI <bridge-outbound-share-add-provider-cli>`, :ref:`from the Databricks user interface <bridge-outbound-share-add-provider-ui>`, or by :ref:`using Python <bridge-outbound-share-add-provider-python>`.
 
 
 .. list-table::
