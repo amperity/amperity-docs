@@ -4310,6 +4310,15 @@ Oracle Eloqua is a marketing automation platform that helps your brand design an
 .. term-oracle-eloqua-end
 
 
+**Oracle OPERA**
+
+.. term-oracle-opera-start
+
+Oracle OPERA is a property management solution that consolidates reservations, loyalty, sales and catering systems, and guest services into a single platform.
+
+.. term-oracle-opera-end
+
+
 **Oracle Responsys**
 
 .. term-oracle-responsys-start
