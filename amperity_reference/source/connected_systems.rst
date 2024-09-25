@@ -682,6 +682,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Oracle Netsuite SuiteAnalytics using Fivetran.
 
+   * - **Oracle Opera**
+     - |system-yes|
+     - 
+     - Push data to Amperity using the Oracle OPERA streaming API.
+
    * - **Oracle PeopleSoft**
      - |system-yes|
      - 

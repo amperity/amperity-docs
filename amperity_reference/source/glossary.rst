@@ -3091,6 +3091,14 @@ O
       :end-before: .. term-oracle-dmp-end
 
 
+.. _o-oracle-opera:
+
+**Oracle OPERA**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-oracle-opera-start
+      :end-before: .. term-oracle-opera-end
+
+
 .. _o-orc:
 
 **ORC**, **Optimized Row Columnar (ORC)**

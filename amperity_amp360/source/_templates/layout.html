@@ -88,6 +88,30 @@
   <body role="document">
     <div class="body-wrap">
 
+<button onclick="topFunction()" id="linkToTop" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script>
+    // Define the button:
+    let linkToTopButton = document.getElementById("linkToTop");
+
+    // After the user scrolls down show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        linkToTopButton.style.display = "block";
+      } else {
+        linkToTopButton.style.display = "none";
+      }
+    }
+
+    // When the user clicks the button bring them to the top of the page
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+
 {% block nav_main %}
 
   <nav class="nav-main" role="navigation" data-topbar>
