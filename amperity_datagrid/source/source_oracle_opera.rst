@@ -235,7 +235,7 @@ Add courier
         ]
       }
 
-   .. important:: If the business events are changed in |source-name| you must configure a new courier. Feed configuration within Amperity can be edited, but if the list of business events that are made available from the |source-name| stream a new courier must be configured.
+   .. important:: If the business events are changed in |source-name| you must configure a new courier. Feed configuration within Amperity can be edited, but if the list of business events that are made available from the |source-name| change a new courier must be configured.
 
 #. Click **Save**.
 
