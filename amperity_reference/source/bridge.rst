@@ -447,7 +447,7 @@ Before you can create outbound sharing between Amperity and Databricks you must 
           :alt: Requirement 1.
           :align: left
           :class: no-scaled-link
-     - To use the Databricks CLI it must be installed and configured on your workstation.
+     - To use the Databricks CLI, it must be installed and configured on your workstation.
 
        .. admonition:: For new users ...
 
