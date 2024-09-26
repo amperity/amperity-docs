@@ -116,6 +116,22 @@ Get details
      - The name of a segment in |destination-name|. This can be the name of an existing segment or be a new segment.
 
 
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail two.
+          :align: left
+          :class: no-scaled-link
+     - To ensure that audiences are compliant with General Data Protection Regulation (GDPR) requirements for "information storage and access" and "personalization" features within the `transparency consent framework <https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md#what-are-the-purposes-and-features-being-supported->`__ |ext_link| you must include the following fields:
+
+       * **storage-consent**
+       * **personalization-consent**
+
+       Both fields have a Boolean data type and may be set to "true" or "false".
+
+       When these fields are present in an audience, any users for whom the fields are not set or are both set to "false" will be omitted from the upload to |destination-name|. Only users who have both fields set and at least one field set to "true" are uploaded.
+
+       .. important:: If your brand knows your audience contains users who reside in the Europe and are protected by GDPR consent requirements you should include these fields in the audience to ensure that your brand meets GDPR consent requirements.
+
 .. destination-yahoo-dsp-get-details-end
 
 
