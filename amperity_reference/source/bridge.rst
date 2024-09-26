@@ -435,7 +435,7 @@ Outbound prerequisites
 
 .. bridge-outbound-share-prerequisites-start
 
-Before you can create outbound sharing between Amperity and Databricks you must have permission to create providers and catalogs in Databricks. You may create the provider :ref:`using the Databricks CLI <bridge-outbound-share-add-provider-cli>`, :ref:`from the Databricks user interface <bridge-outbound-share-add-provider-ui>`, or by :ref:`using Python <bridge-outbound-share-add-provider-python>`.
+Before you can create outbound sharing between Amperity and Databricks you must have permission to create providers and catalogs in Databricks. You may create the provider :ref:`from the Databricks user interface <bridge-outbound-share-add-provider-ui>`, :ref:`using the Databricks CLI <bridge-outbound-share-add-provider-cli>`, or by :ref:`using Python <bridge-outbound-share-add-provider-python>`.
 
 
 .. list-table::
@@ -445,6 +445,22 @@ Before you can create outbound sharing between Amperity and Databricks you must 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 1.
+          :align: left
+          :class: no-scaled-link
+     - The user who will add the schema to a catalog in Databricks must have |ext_databricks_permission_create_catalog| permissions in Databricks.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 2.
+          :align: left
+          :class: no-scaled-link
+     - A user who will run queries against tables in a schema must have |ext_databricks_permission_select| permissions in Databricks. **SELECT** permissions may be granted on a specific table, on a schema, or on a catalog.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 3.
           :align: left
           :class: no-scaled-link
      - To use the Databricks CLI, it must be installed and configured on your workstation.
@@ -459,29 +475,7 @@ Before you can create outbound sharing between Amperity and Databricks you must 
 
              Run the |ext_databricks_cli_run_databricks_configure| command, after which you will be asked to enter the hostname for your instance of Databricks along with your personal access token.
 
-
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 2.
-          :align: left
-          :class: no-scaled-link
-     - The user who will run the Databricks CLI and add a schema to Databricks for outbound sharing from Amperity must have |ext_databricks_permission_create_provider| permissions in Databricks.
-
-
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 3.
-          :align: left
-          :class: no-scaled-link
-     - The user who will add the schema to a catalog in Databricks must have |ext_databricks_permission_create_catalog| permissions in Databricks.
-
-
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 4.
-          :align: left
-          :class: no-scaled-link
-     - A user who will run queries against tables in a schema must have |ext_databricks_permission_select| permissions in Databricks. **SELECT** permissions may be granted on a specific table, on a schema, or on a catalog.
+       The user who will run the Databricks CLI and add a schema to Databricks for outbound sharing from Amperity must have |ext_databricks_permission_create_provider| permissions in Databricks.
 
 
 .. bridge-outbound-share-prerequisites-end
