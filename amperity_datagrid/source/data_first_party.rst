@@ -118,7 +118,7 @@ Adobe Analytics
 
 .. data-source-first-party-raw-clickstream-adobe-analytics-start
 
-Clickstream data from Adobe Analytics |ext_adobe_analytics_fields|, and then |ext_adobe_analytics_conversion_variables|.
+Clickstream data from Adobe Analytics `contains standard fields <https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html>`__ |ext_link|, and then `up to 250 conversion variables (evar1-evar250) <https://docs.adobe.com/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html>` |ext_link|.
 
 Conversion variables are customer-specific and represent events that identify:
 

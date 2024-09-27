@@ -76,7 +76,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The |ext_adobe_marketo_access_token|.
+     - The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -174,7 +174,7 @@ Add destination
 
        |destination-name| has the following settings:
 
-       * The |ext_adobe_marketo_access_token|.
+       * The The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
        * The subdomain used with |destination-name|.
 
        .. include:: ../../shared/destinations.rst

@@ -772,7 +772,7 @@ ODBC driver
 
 .. destination-bic-connect-other-odbc-start
 
-Download the |ext_snowflake_odbc| to connect BI tools such as |ext_adobe_campaign_snowflake|, Microsoft PowerBI, SAP Business Objects, Tableau, or |ext_tibco_spotfire_snowflake| to the |bic| data warehouse.
+Download the |ext_snowflake_odbc| to connect BI tools such as `Adobe Campaign <https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/accessing-external-database/configure-fda/config-databases/configure-fda-snowflake.html?lang=en>`__ |ext_link|, Microsoft PowerBI, SAP Business Objects, Tableau, or |ext_tibco_spotfire_snowflake| to the |bic| data warehouse.
 
 .. destination-bic-connect-other-odbc-end
 
