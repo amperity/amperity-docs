@@ -91,7 +91,7 @@ Get details
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - |source-name| uses |ext_adobe_commerce_oauth|, which requires all of the following settings:
+     - |source-name| uses `OAuth-based credentials <https://devdocs.magento.com/guides/v2.3/get-started/authentication/gs-authentication-oauth.html>`__ |ext_link|, which requires all of the following settings:
 
        * The consumer key and consumer secret.
        * The access token and access token secret.

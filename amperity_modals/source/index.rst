@@ -14,10 +14,12 @@ Site Index
    :hidden:
 
    404
+   credential-active-campaign
    credential-acxiom
    credential-adobe-campaign
    credential-adobe-customer-attributes
    credential-adobe-ecs
+   credential-adobe-marketo
    credential-airship
    credential-attentive-mobile
    credential-azure-blob-connection-string

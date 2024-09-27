@@ -6,56 +6,6 @@
    <a href="https://docs.amperity.com" target="_blank">LINK_TEXT</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_active_campaign_api| raw:: html
-
-   <a href="https://developers.activecampaign.com/reference/url" target="_blank">ActiveCampaign REST API</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_active_campaign_contacts_list| raw:: html
-
-   <a href="https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign" target="_blank">contacts lists</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_active_campaign_user_group| raw:: html
-
-   <a href="https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0" target="_blank">user groups</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_acxiom| raw:: html
-
-   <a href="https://www.acxiom.com/" target="_blank">Acxiom</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_adobe_analytics_conversion_variables| raw:: html
-
-   <a href="https://docs.adobe.com/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html" target="_blank">up to 250 conversion variables (evar1-evar250)</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_adobe_analytics_fields| raw:: html
-
-   <a href="https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html" target="_blank">contains standard fields</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_adobe_analytics_data_feed| raw:: html
-
-   <a href="https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html" target="_blank">Adobe Analytics Data Feed</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_adobe_campaign_snowflake| raw:: html
-
-   <a href="https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/accessing-external-database/configure-fda/config-databases/configure-fda-snowflake.html?lang=en" target="_blank">Adobe Campaign</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_adobe_commerce_oauth| raw:: html
-
-   <a href="https://devdocs.magento.com/guides/v2.3/get-started/authentication/gs-authentication-oauth.html" target="_blank">OAuth-based credentials</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_adobe_marketo_access_token| raw:: html
-
-   <a href="https://developers.marketo.com/rest-api/authentication/#creating_an_access_token" target="_blank">client ID and client secret</a> <i class="fas fa-external-link-square-alt"></i>
-
-
 .. |ext_airship_attributes| raw:: html
 
    <a href="https://docs.airship.com/guides/audience/attributes/" target="_blank">attributes</a> <i class="fas fa-external-link-square-alt"></i>

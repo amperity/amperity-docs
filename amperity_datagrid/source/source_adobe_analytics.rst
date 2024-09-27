@@ -67,7 +67,7 @@ Adobe Analytics may be configured to send data to Amperity using SFTP, Amazon S3
 
       You may configure |source-name| to send data to :doc:`Amazon S3 <source_amazon_s3>` or :doc:`Azure Blob Storage <source_azure_blob_storage>`, after which you would use that data source to configure your connection to |source-name|. The connection steps will change (from SFTP to Amazon S3 or Azure Blob Storage) and are outlined in those topics, but all other steps are the same as outlined in this topic.
 
-#. From the Adobe Anaytics admin console, configure an |ext_adobe_analytics_data_feed|. Specify the connection type as **SFTP**, port **22**, the host name (**<tenant>.sftp.amperity.com**), and then the folder path to which that data is sent. For example: **/tenant/**.
+#. From the Adobe Anaytics admin console, configure an `Adobe Analytics Data Feed <https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html>`__ |ext_link|. Specify the connection type as **SFTP**, port **22**, the host name (**<tenant>.sftp.amperity.com**), and then the folder path to which that data is sent. For example: **/tenant/**.
 
 #. From the Adobe Analytics console, configure the contents of the data feed to contain a limited set of fields. (Clickstream data can contain hundreds or even thousands of fields. Many of these are not useful for workflows within Amperity).
 

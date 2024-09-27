@@ -46,7 +46,7 @@ Use Amperity to manage audience lists in |destination-name|.
 
 .. destination-active-campaign-api-note-start
 
-.. note:: This destination uses the Active Campaign REST API.
+.. note:: This destination uses the `Active Campaign REST API <https://developers.activecampaign.com/reference/url>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -105,7 +105,7 @@ Get details
           :alt: Detail three.
           :align: left
           :class: no-scaled-link
-     - The name of a |ext_active_campaign_user_group| that exists in |destination-name| and has permission to view and interact with the contact list.
+     - The name of a `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| that exists in |destination-name| and has permission to view and interact with the contact list.
 
        .. important:: You must log into |destination-name| as a member of the specified user group to have access to the contact list that is managed by Amperity.
 
@@ -115,7 +115,7 @@ Get details
           :alt: Detail four.
           :align: left
           :class: no-scaled-link
-     - The name of a |ext_active_campaign_contacts_list| in |destination-name|. This can be the name of an existing list or a new list.
+     - The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name|. This can be the name of an existing list or a new list.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -345,7 +345,7 @@ Add data template
           * - **Setting**
             - **Description**
           * - **List name**
-            - The name of a |ext_active_campaign_contacts_list| in |destination-name|. This can be the name of an existing list or a new list.
+            - The name of an email list in |destination-name|. This can be the name of an existing list or a new list.
           * - **Enable verbose logs**
             - Select this option to return a log file that contains a list of email addresses that were not accepted by |destination-name|.
 
@@ -484,7 +484,7 @@ Invalid group name
 
 .. destination-active-campaign-workflow-actions-invalid-group-name-start
 
-A |ext_active_campaign_user_group| defines which set of users within |destination-name| have permission to interact with contacts in a contact list. For example: managing tags, defining list exclusions, or running campaigns.
+A `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| defines which set of users within |destination-name| have permission to interact with contacts in a contact list. For example: managing tags, defining list exclusions, or running campaigns.
 
 When the name of the user group defined in Amperity does not match the name of a user group defined in |destination-name|, Amperity will be unable to update the list of contacts for a contact list and a workflow action will be shown.
 
@@ -494,7 +494,7 @@ When the name of the user group defined in Amperity does not match the name of a
 
 To resolve this error, verify the name of the user group in |destination-name|, and then update the data template in Amperity for the correct name of the user group.
 
-#. Log in to **ActiveCampaign** as a user assigned who is assigned to the **Admin** permission.
+#. Log in to |destination-name| as a user assigned who is assigned to the **Admin** permission.
 #. Verify the name of the user group and/or create a user group with the name that is required by this workflow.
 #. Verify the name of the user group that is defined in the data template used by this workflow. Update this value if required.
 #. Return to the workflow action, and then click **Resolve** to retry.

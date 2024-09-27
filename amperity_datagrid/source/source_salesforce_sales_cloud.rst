@@ -67,8 +67,7 @@ Get details
 
 Salesforce Sales Cloud requires the following configuration details:
 
-#. The Salesforce Sales Cloud username.
-#. The Salesforce Sales Cloud password.
+#. The username and password of a Salesforce account configured for API access.
 #. The Salesforce Sales Cloud security token that belongs to username. (The security token is not required if IP range policies are configured from the Salesforce admin console.)
 #. The scheme and host for a custom Salesforce Sales Cloud URL, if used by customer.
 #. If Salesforce Sales Cloud will send data to Amperity from a sandbox instance.

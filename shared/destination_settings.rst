@@ -255,6 +255,14 @@ The length of time |duration| an audience member will belong to this segment, af
 
 .. setting-common-membership-duration-end
 
+**Name and description**
+
+.. setting-common-name-and-description-start
+
+Add a name and description for this destination.
+
+.. setting-common-name-and-description-end
+
 **Optional settings**
 
 .. setting-common-optional-settings-start
@@ -384,7 +392,7 @@ You must log into |destination-name| as a member of the specified user group to 
 
 .. setting-active-campaign-list-name-start
 
-The name of the `contacts list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| that will be managed by Amperity.
+The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| that will be managed by Amperity.
 
 .. setting-active-campaign-list-name-end
 

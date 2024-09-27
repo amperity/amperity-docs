@@ -71,7 +71,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The username and password.
+     - The username and password of a Salesforce account configured for API access.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
