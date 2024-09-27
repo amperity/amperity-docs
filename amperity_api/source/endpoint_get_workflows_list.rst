@@ -92,10 +92,6 @@ A request to the **/workflow/runs** endpoint is similar to:
           'https://tenant.amperity.com/api/workflow/runs \
           ?limit=12 \
           &with_total=true \
-
-
-
-
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
