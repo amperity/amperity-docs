@@ -115,7 +115,7 @@ Get details
           :alt: Detail four.
           :align: left
           :class: no-scaled-link
-     - The name of a `contacts list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name|. This can be the name of an existing list or a new list.
+     - The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name|. This can be the name of an existing list or a new list.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -345,7 +345,7 @@ Add data template
           * - **Setting**
             - **Description**
           * - **List name**
-            - The name of a contacts list in |destination-name|. This can be the name of an existing list or a new list.
+            - The name of an email list in |destination-name|. This can be the name of an existing list or a new list.
           * - **Enable verbose logs**
             - Select this option to return a log file that contains a list of email addresses that were not accepted by |destination-name|.
 

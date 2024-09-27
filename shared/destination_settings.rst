@@ -392,7 +392,7 @@ You must log into |destination-name| as a member of the specified user group to 
 
 .. setting-active-campaign-list-name-start
 
-The name of the `contacts list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| that will be managed by Amperity.
+The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| that will be managed by Amperity.
 
 .. setting-active-campaign-list-name-end
 
