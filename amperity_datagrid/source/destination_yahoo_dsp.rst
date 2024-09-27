@@ -46,7 +46,7 @@ Send data to Yahoo DSP
 
    This destination enables your brand to manage audiences within the |destination-name| taxonomy from Amperity.
 
-   Amperity uses the `PUT /TAXONOMY <https://help.yahooinc.com/datax/docs/put-append-taxonomy-node>`__ |ext_link| endpoint. Amperity uses your brand's MDM ID to identify the correct location within the Yahoo DSP taxonomy structure. This ID must be validated each time an audience is sent, which can take up to 30 minutes, after which the audience is sent to Yahoo DSP.
+   Amperity uses the `PUT /TAXONOMY <https://help.yahooinc.com/datax/docs/put-append-taxonomy-node>`__ |ext_link| endpoint to determine the correct location within the |destination-name| taxonomy using your brand's MDM ID. This ID must be validated each time an audience is sent, which can take up to 30 minutes, after which the audience is sent to Yahoo DSP.
 
    Amperity uses the `POST /AUDIENCE <https://help.yahooinc.com/datax/docs/post-audience>`__ |ext_link| endpoint to manage the segment.
 
