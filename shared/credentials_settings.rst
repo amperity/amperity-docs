@@ -121,6 +121,9 @@ An individual with access to |destination-name| should use SnapPass to securely 
 .. credential-snappass-end
 
 
+
+
+
 **ACTIVECAMPAIGN**
 
 This section contains credentials that are unique to ActiveCampaign.
@@ -185,47 +188,28 @@ See SFTP.
 
 **ADOBE COMMERCE**
 
-xxxxx
+Source only.
 
 **Access token**
 
-.. credential-adobe-commerce-access-token-start
-
-xxxxx
-
-.. credential-adobe-commerce-access-token-end
+TBD
 
 **Access token secret**
 
-.. credential-adobe-commerce-access-token-secret-start
-
-xxxxx
-
-.. credential-adobe-commerce-access-token-secret-end
+TBD
 
 **Consumer key**
 
-.. credential-adobe-commerce-consumer-key-start
-
-xxxxx
-
-.. credential-adobe-commerce-consumer-key-end
+TBD
 
 **Consumer secret**
 
-.. credential-adobe-commerce-consumer-secret-start
-
-xxxxx
-
-.. credential-adobe-commerce-consumer-secret-end
+TBD
 
 **Hostname**
 
-.. credential-adobe-commerce-hostname-start
+TBD
 
-xxxxx
-
-.. credential-adobe-commerce-hostname-end
 
 
 
@@ -268,29 +252,49 @@ See SFTP.
 
 **ADOBE MARKETO**
 
-xxxxx
+The following settings are unique to Adobe Marketo.
+
+**Access token**
+
+Not a setting in Amperity, but the access token contains the client ID and secret.
+
+.. credential-adobe-marketo-access-token-start
+
+The `client ID and secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link| are provided by custom services within |destination-name|.
+
+.. credential-adobe-marketo-access-token-end
+
+**API limits**
+
+.. credential-adobe-marketo-api-limits-start
+
+You may experience rate limits when sending very large audience lists to the Adobe Marketo API.
+
+* Subscriptions are allocated 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
+
+* API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
+
+It is possible for Adobe Marketo to contain multiple audience lists with identical names. If the Adobe Marketo API returns more than one audience list, Amperity will update the first audience in that list.
+
+.. credential-adobe-market-api-limits-end
 
 **Client ID**
 
 .. credential-adobe-marketo-client-id-start
 
-xxxxx
+A client ID is a unique identifier. A client secret is a unique string. Together they are used to generate an access token that authorizes access to the Adobe Marketo REST API.
 
 .. credential-adobe-marketo-client-id-end
 
 **Client secret**
 
-.. credential-adobe-marketo-client-secret-start
-
-xxxxx
-
-.. credential-adobe-marketo-client-secret-end
+See client ID.
 
 **Subdomain**
 
 .. credential-adobe-marketo-subdomain-start
 
-xxxxx
+The `subdomain <https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/web-personalization/getting-started/add-subdomains-in-account-settings>`__ |ext_link| in |destination-name| in which Amperity will manage audiences.
 
 .. credential-adobe-marketo-subdomain-end
 
