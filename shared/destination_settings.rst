@@ -255,6 +255,14 @@ The length of time |duration| an audience member will belong to this segment, af
 
 .. setting-common-membership-duration-end
 
+**Name and description**
+
+.. setting-common-name-and-description-start
+
+Add a name and description for this destination.
+
+.. setting-common-name-and-description-end
+
 **Optional settings**
 
 .. setting-common-optional-settings-start
