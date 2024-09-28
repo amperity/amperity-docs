@@ -112,6 +112,13 @@ Configure credentials for |destination-name| before adding a destination.
 
 .. credential-configure-first-end
 
+**Name and description**
+
+.. credential-common-name-and-description-start
+
+Add a name and description for this credential.
+
+.. credential-common-name-and-description-end
 **SnapPass callout**
 
 .. credential-snappass-start
@@ -434,7 +441,7 @@ The IAM secret key is one part (of two) that allows Amperity to autheticate to a
 
 .. credential-amazon-s3-bucket-name-start
 
-The name of the Amazon S3 bucket.
+Required. The name of the Amazon S3 bucket.
 
 .. credential-amazon-s3-bucket-name-end
 
@@ -1770,7 +1777,7 @@ Secure File Transfer Protocol (SFTP) is a network connection that is configured 
 
 .. credential-sftp-host-public-key-start
 
-Optional. The host public key for |where-send|.
+The host public key for |where-send|.
 
 .. credential-sftp-host-public-key-end
 
@@ -1778,7 +1785,7 @@ Optional. The host public key for |where-send|.
 
 .. credential-sftp-hostname-start
 
-The hostname for |where-send|. For example: |sftp-hostname|.
+Required. The hostname for |where-send|. For example: |sftp-hostname|.
 
 .. credential-sftp-hostname-end
 
@@ -1794,7 +1801,7 @@ The passphrase that is associated with the username.
 
 .. credential-sftp-port-start
 
-Optional. The port number required by |where-send|. Use this setting only when the SFTP site uses a non-default port value.
+The port number required by |where-send|. Use this setting only when the SFTP site uses a non-default port value.
 
 .. credential-sftp-port-end
 
@@ -1802,7 +1809,7 @@ Optional. The port number required by |where-send|. Use this setting only when t
 
 .. credential-sftp-private-key-start
 
-Optional. A private key that is used to encrypt files that are sent to |where-send|.
+A private key that is used to encrypt files that are sent to |where-send|.
 
 .. credential-sftp-private-key-end
 
@@ -1816,7 +1823,7 @@ This setting is only required when the "private-key" credential type is selected
 
 .. credential-sftp-username-start
 
-A username with access to |where-send|. This username must be allowed to write data to the remote folder to which Amperity will send data.
+Required. A username with access to |where-send|. This username must be allowed to write data to the remote folder to which Amperity will send data.
 
 .. credential-sftp-username-end
 
@@ -2048,19 +2055,11 @@ See SFTP.
 
 **YAHOO DSP**
 
-**Short intro**
-
-.. credential-yahoo-dsp-intro-start
-
-Yahoo DSP is a demand-side platform (DSP) to which you can send audiences, and then advertise across the Yahoo brand ecosystem.
-
-.. credential-yahoo-dsp-intro-end
-
 **Site MDM ID**
 
 .. credential-yahoo-dsp-mdm-id-start
 
-The "Site MDM ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
+Required. The "Site MDM ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
 
 .. credential-yahoo-dsp-mdm-id-end
 
@@ -2074,7 +2073,7 @@ The "Site MDM ID" is the value of your brand's Master Data Management (MDM) ID i
 
 .. credential-zendesk-api-token-start
 
-xxxxx
+Required. Your brand's Zedesk API token.
 
 .. credential-zendesk-api-token-end
 
@@ -2083,6 +2082,6 @@ xxxxx
 
 .. credential-zendesk-email-address-start
 
-xxxxx
+Required. The email address for the Zendesk API user.
 
 .. credential-zendesk-email-address-end

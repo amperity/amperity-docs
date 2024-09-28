@@ -370,7 +370,7 @@ See common settings.
 
 A contact in |destination-name| is defined by an email address. A contact may have additional information, but cannot exist without an email address.
 
-Use a query or a campaign to define the information in the contacts list that will be managed by Amperity.
+Use a query or a campaign to define the information in the email list that will be managed by Amperity.
 
 .. setting-active-campaign-email-required-end
 
@@ -378,13 +378,13 @@ Use a query or a campaign to define the information in the contacts list that wi
 
 .. setting-active-campaign-group-name-start
 
-The name of the `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
+The name of the `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the email list.
 
 .. setting-active-campaign-group-name-end
 
 .. setting-active-campaign-group-name-access-start
 
-You must log into |destination-name| as a member of the specified user group to have access to the contacts list that is managed by Amperity.
+You must log into |destination-name| as a member of the specified user group to have access to the email list that is managed by Amperity.
 
 .. setting-active-campaign-group-name-access-end
 
@@ -400,7 +400,7 @@ The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/36
 
 .. setting-active-campaign-verbose-logging-start
 
-Enable verbose logging to return log details when |destination-name| rejects adding contacts to the contact list.
+Enable verbose logging to return log details when |destination-name| rejects adding contacts to the email list.
 
 When verbose logging setting is enabled, a list of rejected contacts is returned by the response from ActiveCampaign. For each rejected contact, a contact identifier is provided along with a string that describes the reason why the contact was rejected.
 
@@ -450,15 +450,23 @@ This section contains settings that are unique to Adobe Marketo.
 
 .. setting-adobe-marketo-folder-name-start
 
-TEMP: "Folder to upload Marketo list"
+Required. The name of the folder in |destination-name| in which a program that contains the audience list is located.
 
 .. setting-adobe-marketo-folder-name-end
+
+**List name**
+
+.. setting-adobe-marketo-list-name-start
+
+Required. The name of the audience list that is managed by Amperity.
+
+.. setting-adobe-marketo-list-name-end
 
 **Program name**
 
 .. setting-adobe-marketo-program-name-start
 
-TEMP: "Program to upload Marketo list"
+The name of the program in which the audience list that is managed by Amperity is located.
 
 .. setting-adobe-marketo-program-name-end
 
@@ -562,7 +570,7 @@ See Common.
 
 .. setting-amazon-s3-prefix-start
 
-The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
+Required. The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
 .. setting-amazon-s3-prefix-end
 
@@ -970,7 +978,7 @@ See Common.
 
 .. setting-google-cloud-storage-object-prefix-start
 
-The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
+Required. The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
 
 .. setting-google-cloud-storage-object-prefix-end
 
@@ -2008,6 +2016,14 @@ A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/
 
 **YAHOO DSP**
 
+**Short intro**
+
+.. setting-yahoo-dsp-intro-start
+
+Yahoo DSP is a demand-side platform (DSP) to which you can send audiences, and then advertise across the Yahoo brand ecosystem.
+
+.. setting-yahoo-dsp-intro-end
+
 **Segment name**
 
 .. setting-yahoo-dsp-segment-name-start
@@ -2027,6 +2043,6 @@ This section contains settings that are unique to Zendesk.
 
 .. setting-zendesk-subdomain-start
 
-The subdomain is part of your |destination-name| URL. For example: "socktown" is the subdomain for "socktown.zendesk.com".
+Required. The subdomain for your brand's Zendesk account. For example: "socktown" is the subdomain for "socktown.zendesk.com".
 
 .. setting-zendesk-subdomain-end
