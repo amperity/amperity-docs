@@ -14,7 +14,6 @@
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
 .. |data-template-config-settings-list| replace:: segment name and membership duration settings
 .. |data-template-config-settings-list-them-vs-it| replace:: them
-
 .. |sendto-link| replace:: |sendto_tdd|
 .. |channel-link| replace:: |campaign_tdd|
 .. |allow-for-what| replace:: audiences
