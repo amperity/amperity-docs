@@ -21,6 +21,7 @@ Site Index
    destination-adobe-customer-attributes
    destination-adobe-campaign
    destination-adobe-marketo
+   destination-amazon-ads
    destination-attentive-mobile
    destination-azure-blob
    destination-bazaar-voice
@@ -32,6 +33,8 @@ Site Index
    destination-epsilon-targeting
    destination-experian
    destination-gcs
+   destination-google-ads
+   destination-google-customer-match
    destination-infutor
    destination-kibo
    destination-koupon-media
@@ -50,6 +53,7 @@ Site Index
    destination-sftp
    destination-smg
    destination-sound-commerce
+   destination-tradedesk
    destination-vibes
    destination-yahoo-dsp
    destination_lorem_ipsum

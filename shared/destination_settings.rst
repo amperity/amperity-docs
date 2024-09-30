@@ -247,13 +247,19 @@ The primary key for the audience. Set to |audience-primary-key|.
 
 **Membership duration**
 
-Applies to Yahoo DSP and several other API-based destinations.
+Applies to Amazon Ads, Google Ads, Google Customer Match, The Trade Desk, Yahoo DSP.
 
 .. setting-common-membership-duration-start
 
-The length of time |duration| an audience member will belong to this segment, after which they are removed.
+The length of time |duration|, after which a customer will be removed from this audience. This value may be between |duration-value|. Set this value to "0" to remove audience member.
 
 .. setting-common-membership-duration-end
+
+.. setting-common-membership-duration-frequency-start
+
+To ensure customers stay in this audience ensure the frequency at which the audience is sent to |destination-name| is less than the membership duration.
+
+.. setting-common-membership-duration-frequency-end
 
 **Name and description**
 
@@ -326,7 +332,6 @@ If the path to the remote folder contains a space, use a backslash (\\) characte
 Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a test audience, and then verify the the results in |destination-name|. After the end-to-end workflow has been verified, push the destination from the sandbox to production.
 
 .. setting-common-sandbox-recommendation-end
-
 
 **Success file**
 
@@ -490,7 +495,7 @@ This section contains settings that are unique to Amazon Ads.
 
 .. setting-amazon-ads-amc-instance-start
 
-TEMP: "The Amazon Marketing Cloud instance"
+The instance within Amazon Marketing Cloud to which your brand will send audiences.
 
 .. setting-amazon-ads-amc-instance-end
 
@@ -498,7 +503,15 @@ TEMP: "The Amazon Marketing Cloud instance"
 
 .. setting-amazon-ads-audience-description-start
 
-TEMP: "The audience description to create for Amazon Ads"
+A description of the audience that is managed by Amperity.
+
+.. setting-amazon-ads-audience-description-end
+
+**Audience name**
+
+.. setting-amazon-ads-audience-description-start
+
+The name of the audience that is managed by Amperity.
 
 .. setting-amazon-ads-audience-description-end
 
@@ -506,17 +519,16 @@ TEMP: "The audience description to create for Amazon Ads"
 
 .. setting-amazon-ads-dsp-advertiser-start
 
-TEMP: "The Amazon Ads DSP advertiser"
+The name of the DSP advertiser within |destination-name|.
 
 .. setting-amazon-ads-dsp-advertiser-end
 
 **Membership duration**
 
-.. setting-amazon-ads-membership-duration-start
+Days. See common.
 
-TEMP: "The amount of time (in seconds) an audience member will belong to this audience, after which they are removed. Maximum value: 34,300,800."
 
-.. setting-amazon-ads-membership-duration-end
+
 
 
 
@@ -889,16 +901,15 @@ This section contains settings that are unique to Google Ads.
 
 .. setting-google-ads-audience-description-start
 
-TEMP: "The audience's description. Will be used if audience doesn't currently exist."
+A description of the audience that is managed by Amperity.
 
 .. setting-google-ads-audience-description-end
-
 
 **Audience name**
 
 .. setting-google-ads-audience-name-start
 
-TEMP: "xxxxx"
+The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist.
 
 .. setting-google-ads-audience-name-end
 
@@ -906,15 +917,17 @@ TEMP: "xxxxx"
 
 .. setting-google-ads-customer-id-start
 
-TEMP: "Customer ID of the Google Ads account"
+The customer ID for your brand's |destination-name| account. This value must be 10 digits and may not contain dashes.
 
 .. setting-google-ads-customer-id-end
 
 **Membership duration**
 
+See common.
+
 .. setting-google-ads-membership-duration-start
 
-TEMP: "The number of days until a user's membership expires from the audience if not re-added"
+Set this value to "10000" for unlimited audience membership.
 
 .. setting-google-ads-membership-duration-end
 
@@ -922,7 +935,7 @@ TEMP: "The number of days until a user's membership expires from the audience if
 
 .. setting-google-ads-mobile-app-id-start
 
-TEMP: "ID of iOS or Android app where mobile app ID was collected. For use with the mobile ID upload key type."
+When "Upload key type" is set to "Mobile ID", the ID for the iOS or Android app from which the mobile ID was collected.
 
 .. setting-google-ads-mobile-app-id-end
 
@@ -930,7 +943,7 @@ TEMP: "ID of iOS or Android app where mobile app ID was collected. For use with 
 
 .. setting-google-ads-upload-key-type-start
 
-TEMP: "The type of key to use for matching."
+The type of key to use for audience matching in |destination-name|. May be one of "Contact Info" or "Mobile ID".
 
 .. setting-google-ads-upload-key-type-end
 
@@ -1012,51 +1025,35 @@ This section contains settings that are unique to Google Customer Match.
 
 **Audience description**
 
-.. setting-google-customer-match-audience-description-start
+See Google Ads.
 
-TEMP: "The audience's description. Will be used if audience doesn't currently exist."
+**Audience name**
 
-.. setting-google-customer-match-audience-description-end
+See Google Ads.
 
 **Customer ID**
 
-.. setting-google-customer-match-customer-id-start
-
-TEMP: "Customer ID of the Google Customer Match account"
-
-.. setting-google-customer-match-customer-id-end
+See Google Ads.
 
 **Customer product**
 
 .. setting-google-customer-match-customer-product-start
 
-TEMP: "The type of google product; either google ads, display video advertiser or display video partner."
+The Google advertising product to which audiences will be sent. May be one of "Google Ads", "Display Video Advertiser", or "Display Video Partner".
 
 .. setting-google-customer-match-customer-product-end
 
 **Membership duration**
 
-.. setting-google-customer-match-membership-duration-start
-
-TEMP: "The number of days until a user's membership expires from the audience if not re-added."
-
-.. setting-google-customer-match-membership-duration-end
+See common.
 
 **Mobile app ID**
 
-.. setting-google-customer-match-mobile-app-id-start
-
-TEMP: "ID of iOS or Android App where mobile app ID was collected. For use with the mobile ID upload key type."
-
-.. setting-google-customer-match-mobile-app-id-end
+See Google Ads.
 
 **Upload key type**
 
-.. setting-google-customer-match-upload-key-type-start
-
-TEMP: "The type of key to use for matching."
-
-.. setting-google-customer-match-upload-key-type-end
+See Google Ads.
 
 
 
@@ -1862,23 +1859,13 @@ This section contains settings that are unique to The Trade Desk.
 
 **Membership duration**
 
-.. setting-the-trade-desk-membership-duration-start
-
-Membership duration defines the length of time (in days) at which individual audience members will belong to the segment in |destination-name|.
-
-.. setting-the-trade-desk-membership-duration-end
+See common.
 
 .. setting-the-trade-desk-membership-duration-minmax-start
 
 The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
 
 .. setting-the-trade-desk-membership-duration-minmax-end
-
-.. setting-the-trade-desk-membership-duration-settozero-start
-
-Set this value to "0" to remove all audience members.
-
-.. setting-the-trade-desk-membership-duration-settozero-end
 
 .. setting-the-trade-desk-membership-duration-example-start
 
@@ -1908,13 +1895,9 @@ This section contains settings that are unique to The Trade Desk (3P Marketplace
 
 **Membership duration**
 
-.. setting-the-trade-desk-3p-membership-duration-start
+See common.
 
-TEMP: "The length of time (in days) an audience member will belong to this segment, after which they are removed."
-
-QUESTION: This is the same as the standard The Trade Desk membership duration?
-
-.. setting-the-trade-desk-3p-membership-duration-end
+See extra info at The Trade Desk.
 
 
 
@@ -2023,6 +2006,10 @@ A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/
 Yahoo DSP is a demand-side platform (DSP) to which you can send audiences, and then advertise across the Yahoo brand ecosystem.
 
 .. setting-yahoo-dsp-intro-end
+
+**Membership duration**
+
+Days. See common.
 
 **Segment name**
 

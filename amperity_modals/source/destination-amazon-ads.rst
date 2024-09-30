@@ -2,19 +2,17 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |destination-name| replace:: Amazon Ads
+.. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
-.. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
+.. |duration| replace:: (in seconds)
+.. |duration-value| replace:: "0" - "34,300,800"
 
 
-Yahoo DSP
+Amazon Ads
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
+Amazon Ads is an online advertising platform that supports a variety of advertising options, including sponsored, search, display, video, and audio.
 
 
 Credentials
@@ -26,11 +24,11 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**Refresh token**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token--end
 
 
 Settings
@@ -52,11 +50,29 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Segment name**
+**Audience name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :start-after: .. setting-amazon-ads-audience-description-start
+   :end-before: .. setting-amazon-ads-audience-description-end
+
+**Audience description**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-amazon-ads-audience-description-start
+   :end-before: .. setting-amazon-ads-audience-description-end
+
+**DSP advertiser**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-amazon-ads-dsp-advertiser-start
+   :end-before: .. setting-amazon-ads-dsp-advertiser-end
+
+**AMC instance**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-amazon-ads-amc-instance-start
+   :end-before: .. setting-amazon-ads-amc-instance-end
 
 **Membership duration**
 
@@ -67,3 +83,4 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-membership-duration-frequency-start
    :end-before: .. setting-common-membership-duration-frequency-end
+ 
