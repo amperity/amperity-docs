@@ -95,7 +95,10 @@ The |source-name| data source requires the following configuration details:
 
        ::
 
-          crdl_subscribeStatusChange, open, crdl-pdm-actn-success, crdl_sms_delivered
+          crdl_subscribeStatusChange,
+          open,
+          crdl-pdm-actn-success,
+          crdl_sms_delivered
 
        Activity types (also known as "event types" within |source-name|) contain |ext_cordial_events_overview|. 
 

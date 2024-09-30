@@ -2,19 +2,16 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |destination-name| replace:: TikTok Ads
+.. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
-.. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
 
 
-Yahoo DSP
+TikTok Ads
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
+Send custom audiences to |destination-name| and find audiences who know about or have engaged with your brand, potential repeat customers, and lookalike audiences.
 
 
 Credentials
@@ -26,11 +23,16 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**Refresh token**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token-end
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-tiktok-ads-manager-oauth-requirements-start
+   :end-before: .. credential-tiktok-ads-manager-oauth-requirements-end
+
 
 
 Settings
@@ -52,18 +54,20 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Segment name**
+**Advertiser ID**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :start-after: .. setting-tiktok-ads-manager-advertiser-id-start
+   :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
-**Membership duration**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-start
-   :end-before: .. setting-common-membership-duration-end
+**Audience name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-tiktok-ads-manager-custom-audience-name-start
+   :end-before: .. setting-tiktok-ads-manager-custom-audience-name-end
+
+**User ID type**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-tiktok-ads-manager-user-id-type-start
+   :end-before: .. setting-tiktok-ads-manager-user-id-type-end

@@ -2,19 +2,16 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |destination-name| replace:: Snapchat
+.. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: email addresses, mobile advertiser IDs, or phone numbers
 .. |where-send| replace:: |destination-name|
-.. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
 
 
-Yahoo DSP
+Snapchat
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
+Send email addresses, mobile advertiser IDs, or phone numbers to |destination-name|, and then manage ads and advertising campaign.
 
 
 Credentials
@@ -26,11 +23,11 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**Refresh token**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token-end
 
 
 Settings
@@ -52,18 +49,14 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
+**Add account ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-snapchat-ad-account-id-start
+   :end-before: .. setting-snapchat-ad-account-id-end
+
 **Segment name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
-
-**Membership duration**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-start
-   :end-before: .. setting-common-membership-duration-end
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-snapchat-segment-name-start
+   :end-before: .. setting-snapchat-segment-name-end

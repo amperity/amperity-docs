@@ -2,19 +2,19 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |destination-name| replace:: The Trade Desk
+.. |what-send| replace:: email addresses or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
+.. |duration-value| replace:: "0" - "180"
 
 
-Yahoo DSP
+The Trade Desk
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
+|destination-name| is a platform for wide internet advertising and enables the use of UID 2.0 for first-party paid media advertising.
+
+Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring this destination.
 
 
 Credentials
@@ -26,11 +26,21 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**Advertiser ID**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-the-trade-desk-advertiser-id-start
+   :end-before: .. credential-the-trade-desk-advertiser-id-end
+
+**Advertiser secret**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-the-trade-desk-advertiser-secret-start
+   :end-before: .. credential-the-trade-desk-advertiser-secret-end
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-the-trade-desk-find-id-and-secret-start
+   :end-before: .. credential-the-trade-desk-find-id-and-secret-end
 
 
 Settings
@@ -55,8 +65,8 @@ Settings
 **Segment name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :start-after: .. setting-the-trade-desk-segment-name-start
+   :end-before: .. setting-the-trade-desk-segment-name-end
 
 **Membership duration**
 
@@ -65,5 +75,9 @@ Settings
    :end-before: .. setting-common-membership-duration-end
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-the-trade-desk-membership-duration-minmax-start
+   :end-before: .. setting-the-trade-desk-membership-duration-minmax-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-membership-duration-example-start
+   :end-before: .. setting-the-trade-desk-membership-duration-example-end

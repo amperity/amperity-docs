@@ -2,19 +2,16 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |destination-name| replace:: Sailthru
+.. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
-.. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
 
 
-Yahoo DSP
+Sailthru
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
+Send audience lists to the |destination-name| cross-channel marketing platform and deliver personalized experiences for your customers across email, web, and mobile channels.
 
 
 Credentials
@@ -26,11 +23,22 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**API key**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-sailthru-api-key-start
+   :end-before: .. credential-sailthru-api-key-end
+
+**API secret**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-sailthru-secret-start
+   :end-before: .. credential-sailthru-secret-end
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-sailthru-api-find-key-and-secret-start
+   :end-before: .. credential-sailthru-api-find-key-and-secret-end
+
 
 
 Settings
@@ -52,18 +60,14 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Segment name**
+**Audience primary key**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :start-after: .. setting-common-audience-primary-key-start
+   :end-before: .. setting-common-audience-primary-key-end
 
-**Membership duration**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-start
-   :end-before: .. setting-common-membership-duration-end
+**List name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-sailthru-list-name-start
+   :end-before: .. setting-sailthru-list-name-end

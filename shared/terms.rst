@@ -1363,7 +1363,7 @@ A completed segment is an active segment that has run successfully through Amper
 
 .. term-completion-start
 
-Completion is a simple percentage of data rows that contain some value within a column.
+Completion is the percentage of non-NULL values within a column.
 
 .. term-completion-end
 

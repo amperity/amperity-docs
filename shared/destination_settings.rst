@@ -247,13 +247,19 @@ The primary key for the audience. Set to |audience-primary-key|.
 
 **Membership duration**
 
-Applies to Yahoo DSP and several other API-based destinations.
+Applies to Amazon Ads, Google Ads, Google Customer Match, The Trade Desk, Yahoo DSP.
 
 .. setting-common-membership-duration-start
 
-The length of time |duration| an audience member will belong to this segment, after which they are removed.
+The length of time |duration|, after which a customer will be removed from this audience. This value may be between |duration-value|. Set this value to "0" to remove audience member.
 
 .. setting-common-membership-duration-end
+
+.. setting-common-membership-duration-frequency-start
+
+To ensure customers stay in this audience ensure the frequency at which the audience is sent to |destination-name| is less than the membership duration.
+
+.. setting-common-membership-duration-frequency-end
 
 **Name and description**
 
@@ -327,7 +333,6 @@ Use a sandbox to configure a destination for |destination-name|. Before promotin
 
 .. setting-common-sandbox-recommendation-end
 
-
 **Success file**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
@@ -370,7 +375,7 @@ See common settings.
 
 A contact in |destination-name| is defined by an email address. A contact may have additional information, but cannot exist without an email address.
 
-Use a query or a campaign to define the information in the contacts list that will be managed by Amperity.
+Use a query or a campaign to define the information in the email list that will be managed by Amperity.
 
 .. setting-active-campaign-email-required-end
 
@@ -378,13 +383,13 @@ Use a query or a campaign to define the information in the contacts list that wi
 
 .. setting-active-campaign-group-name-start
 
-The name of the `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the contact list.
+The name of the `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the email list.
 
 .. setting-active-campaign-group-name-end
 
 .. setting-active-campaign-group-name-access-start
 
-You must log into |destination-name| as a member of the specified user group to have access to the contacts list that is managed by Amperity.
+You must log into |destination-name| as a member of the specified user group to have access to the email list that is managed by Amperity.
 
 .. setting-active-campaign-group-name-access-end
 
@@ -400,7 +405,7 @@ The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/36
 
 .. setting-active-campaign-verbose-logging-start
 
-Enable verbose logging to return log details when |destination-name| rejects adding contacts to the contact list.
+Enable verbose logging to return log details when |destination-name| rejects adding contacts to the email list.
 
 When verbose logging setting is enabled, a list of rejected contacts is returned by the response from ActiveCampaign. For each rejected contact, a contact identifier is provided along with a string that describes the reason why the contact was rejected.
 
@@ -450,15 +455,23 @@ This section contains settings that are unique to Adobe Marketo.
 
 .. setting-adobe-marketo-folder-name-start
 
-TEMP: "Folder to upload Marketo list"
+Required. The name of the folder in |destination-name| in which a program that contains the audience list is located.
 
 .. setting-adobe-marketo-folder-name-end
+
+**List name**
+
+.. setting-adobe-marketo-list-name-start
+
+Required. The name of the audience list that is managed by Amperity.
+
+.. setting-adobe-marketo-list-name-end
 
 **Program name**
 
 .. setting-adobe-marketo-program-name-start
 
-TEMP: "Program to upload Marketo list"
+The name of the program in which the audience list that is managed by Amperity is located.
 
 .. setting-adobe-marketo-program-name-end
 
@@ -482,7 +495,7 @@ This section contains settings that are unique to Amazon Ads.
 
 .. setting-amazon-ads-amc-instance-start
 
-TEMP: "The Amazon Marketing Cloud instance"
+The instance within Amazon Marketing Cloud to which your brand will send audiences.
 
 .. setting-amazon-ads-amc-instance-end
 
@@ -490,7 +503,15 @@ TEMP: "The Amazon Marketing Cloud instance"
 
 .. setting-amazon-ads-audience-description-start
 
-TEMP: "The audience description to create for Amazon Ads"
+A description of the audience that is managed by Amperity.
+
+.. setting-amazon-ads-audience-description-end
+
+**Audience name**
+
+.. setting-amazon-ads-audience-description-start
+
+The name of the audience that is managed by Amperity.
 
 .. setting-amazon-ads-audience-description-end
 
@@ -498,17 +519,16 @@ TEMP: "The audience description to create for Amazon Ads"
 
 .. setting-amazon-ads-dsp-advertiser-start
 
-TEMP: "The Amazon Ads DSP advertiser"
+The name of the DSP advertiser within |destination-name|.
 
 .. setting-amazon-ads-dsp-advertiser-end
 
 **Membership duration**
 
-.. setting-amazon-ads-membership-duration-start
+Days. See common.
 
-TEMP: "The amount of time (in seconds) an audience member will belong to this audience, after which they are removed. Maximum value: 34,300,800."
 
-.. setting-amazon-ads-membership-duration-end
+
 
 
 
@@ -562,7 +582,7 @@ See Common.
 
 .. setting-amazon-s3-prefix-start
 
-The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
+Required. The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
 .. setting-amazon-s3-prefix-end
 
@@ -749,13 +769,13 @@ This section contains settings that are unique to Cordial.
 
 **Audience primary key**
 
-See common settings.
+See common.
 
 **List name**
 
 .. setting-cordial-list-name-start
 
-TEMP: "xxxxx"
+The name of the list in |destination-name| that is managed by Amperity. This list will be created by Amperity if it does not exist.
 
 .. setting-cordial-list-name-end
 
@@ -763,11 +783,7 @@ TEMP: "xxxxx"
 
 .. setting-cordial-subscription-status-start
 
-UI field name: "Do not set subscription status automatically"
-
-UI description: "Prevents updates without a channels.email.subscribeStatus from being automatically subscribed"
-
-TEMP: "Prevents updates without a channels.email.subscribeStatus from being automatically subscribed"
+Enable "Do not set subscription status automatically" to prevent updates without "channels.email.subscribeStatus" from being automatically subscribed in |destination-name|.
 
 .. setting-cordial-subscription-status-end
 
@@ -881,16 +897,15 @@ This section contains settings that are unique to Google Ads.
 
 .. setting-google-ads-audience-description-start
 
-TEMP: "The audience's description. Will be used if audience doesn't currently exist."
+A description of the audience that is managed by Amperity.
 
 .. setting-google-ads-audience-description-end
-
 
 **Audience name**
 
 .. setting-google-ads-audience-name-start
 
-TEMP: "xxxxx"
+The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist.
 
 .. setting-google-ads-audience-name-end
 
@@ -898,15 +913,17 @@ TEMP: "xxxxx"
 
 .. setting-google-ads-customer-id-start
 
-TEMP: "Customer ID of the Google Ads account"
+The customer ID for your brand's |destination-name| account. This value must be 10 digits and may not contain dashes.
 
 .. setting-google-ads-customer-id-end
 
 **Membership duration**
 
+See common.
+
 .. setting-google-ads-membership-duration-start
 
-TEMP: "The number of days until a user's membership expires from the audience if not re-added"
+Set this value to "10000" for unlimited audience membership.
 
 .. setting-google-ads-membership-duration-end
 
@@ -914,7 +931,7 @@ TEMP: "The number of days until a user's membership expires from the audience if
 
 .. setting-google-ads-mobile-app-id-start
 
-TEMP: "ID of iOS or Android app where mobile app ID was collected. For use with the mobile ID upload key type."
+When "Upload key type" is set to "Mobile ID", the ID for the iOS or Android app from which the mobile ID was collected.
 
 .. setting-google-ads-mobile-app-id-end
 
@@ -922,7 +939,7 @@ TEMP: "ID of iOS or Android app where mobile app ID was collected. For use with 
 
 .. setting-google-ads-upload-key-type-start
 
-TEMP: "The type of key to use for matching."
+The type of key to use for audience matching in |destination-name|. May be one of "Contact Info" or "Mobile ID".
 
 .. setting-google-ads-upload-key-type-end
 
@@ -970,7 +987,7 @@ See Common.
 
 .. setting-google-cloud-storage-object-prefix-start
 
-The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
+Required. The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
 
 .. setting-google-cloud-storage-object-prefix-end
 
@@ -1004,51 +1021,35 @@ This section contains settings that are unique to Google Customer Match.
 
 **Audience description**
 
-.. setting-google-customer-match-audience-description-start
+See Google Ads.
 
-TEMP: "The audience's description. Will be used if audience doesn't currently exist."
+**Audience name**
 
-.. setting-google-customer-match-audience-description-end
+See Google Ads.
 
 **Customer ID**
 
-.. setting-google-customer-match-customer-id-start
-
-TEMP: "Customer ID of the Google Customer Match account"
-
-.. setting-google-customer-match-customer-id-end
+See Google Ads.
 
 **Customer product**
 
 .. setting-google-customer-match-customer-product-start
 
-TEMP: "The type of google product; either google ads, display video advertiser or display video partner."
+The Google advertising product to which audiences will be sent. May be one of "Google Ads", "Display Video Advertiser", or "Display Video Partner".
 
 .. setting-google-customer-match-customer-product-end
 
 **Membership duration**
 
-.. setting-google-customer-match-membership-duration-start
-
-TEMP: "The number of days until a user's membership expires from the audience if not re-added."
-
-.. setting-google-customer-match-membership-duration-end
+See common.
 
 **Mobile app ID**
 
-.. setting-google-customer-match-mobile-app-id-start
-
-TEMP: "ID of iOS or Android App where mobile app ID was collected. For use with the mobile ID upload key type."
-
-.. setting-google-customer-match-mobile-app-id-end
+See Google Ads.
 
 **Upload key type**
 
-.. setting-google-customer-match-upload-key-type-start
-
-TEMP: "The type of key to use for matching."
-
-.. setting-google-customer-match-upload-key-type-end
+See Google Ads.
 
 
 
@@ -1548,7 +1549,7 @@ See common settings.
 
 .. setting-sailthru-list-name-start
 
-?????
+The name of the list in |destination-name| that is managed by Amperity. This list will be created by Amperity if it does not exist.
 
 .. setting-sailthru-list-name-end
 
@@ -1760,9 +1761,19 @@ This section contains settings that are unique to Snapchat.
 
 .. setting-snapchat-ad-account-id-start
 
-TEMP: "The ID of the ad account to create/update"
+The ID for the |destination-name| advertising account. This ID is available from the top-left menu in |destination-name|. Open that menu, choose "Add Accounts", and then copy the ID for the account to which Amperity will send audiences.
 
 .. setting-snapchat-ad-account-id-end
+
+**Segment name**
+
+.. setting-snapchat-segment-name-start
+
+The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist. The audience will be available from the |destination-name| "Audiences" page.
+
+.. setting-snapchat-segment-name-end
+
+
 
 
 
@@ -1854,23 +1865,13 @@ This section contains settings that are unique to The Trade Desk.
 
 **Membership duration**
 
-.. setting-the-trade-desk-membership-duration-start
-
-Membership duration defines the length of time (in days) at which individual audience members will belong to the segment in |destination-name|.
-
-.. setting-the-trade-desk-membership-duration-end
+See common.
 
 .. setting-the-trade-desk-membership-duration-minmax-start
 
 The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
 
 .. setting-the-trade-desk-membership-duration-minmax-end
-
-.. setting-the-trade-desk-membership-duration-settozero-start
-
-Set this value to "0" to remove all audience members.
-
-.. setting-the-trade-desk-membership-duration-settozero-end
 
 .. setting-the-trade-desk-membership-duration-example-start
 
@@ -1900,13 +1901,9 @@ This section contains settings that are unique to The Trade Desk (3P Marketplace
 
 **Membership duration**
 
-.. setting-the-trade-desk-3p-membership-duration-start
+See common.
 
-TEMP: "The length of time (in days) an audience member will belong to this segment, after which they are removed."
-
-QUESTION: This is the same as the standard The Trade Desk membership duration?
-
-.. setting-the-trade-desk-3p-membership-duration-end
+See extra info at The Trade Desk.
 
 
 
@@ -1936,7 +1933,7 @@ This section contains settings that are unique to TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-start
 
-TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads Advertiser ID"
+The advertiser ID for your |destination-name| account. This is a nineteen character string similar to “7654321098765432109” that you can find from the drop-down menu in the top right of TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-end
 
@@ -1944,7 +1941,7 @@ TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads
 
 .. setting-tiktok-ads-manager-custom-audience-name-start
 
-?????
+The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist.
 
 .. setting-tiktok-ads-manager-custom-audience-name-end
 
@@ -1952,7 +1949,7 @@ TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads
 
 .. setting-tiktok-ads-manager-user-id-type-start
 
-TEMP: "Audience primary key type." May be: IDFA, AAID, EMAIL, PHONE.
+The user ID type. This value must be one of the following: "AAID" (Google), "EMAIL" (email addresses), "IDFA" (Apple), or "PHONE" (phone numbers). Amperity is configured to send "EMAIL" and "PHONE" by default for campaigns.
 
 .. setting-tiktok-ads-manager-user-id-type-end
 
@@ -2008,6 +2005,18 @@ A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/
 
 **YAHOO DSP**
 
+**Short intro**
+
+.. setting-yahoo-dsp-intro-start
+
+Yahoo DSP is a demand-side platform (DSP) to which you can send audiences, and then advertise across the Yahoo brand ecosystem.
+
+.. setting-yahoo-dsp-intro-end
+
+**Membership duration**
+
+Days. See common.
+
 **Segment name**
 
 .. setting-yahoo-dsp-segment-name-start
@@ -2027,6 +2036,6 @@ This section contains settings that are unique to Zendesk.
 
 .. setting-zendesk-subdomain-start
 
-The subdomain is part of your |destination-name| URL. For example: "socktown" is the subdomain for "socktown.zendesk.com".
+Required. The subdomain for your brand's Zendesk account. For example: "socktown" is the subdomain for "socktown.zendesk.com".
 
 .. setting-zendesk-subdomain-end

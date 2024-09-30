@@ -2,20 +2,17 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |destination-name| replace:: Google Ads
+.. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
+.. |duration-value| replace:: "0" - "540"
 
 
-Yahoo DSP
+Google Ads
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
-
+Use Google Ads to create and publish search-based advertising that can be run across the Google advertising network.
 
 Credentials
 ==================================================
@@ -26,11 +23,11 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**Refresh token**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token-end
 
 
 Settings
@@ -52,11 +49,23 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Segment name**
+**Customer ID**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :start-after: .. setting-google-ads-customer-id-start
+   :end-before: .. setting-google-ads-customer-id-end
+
+**Audience name**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-google-ads-audience-name-start
+   :end-before: .. setting-google-ads-audience-name-end
+
+**Audience description**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-google-ads-audience-description-start
+   :end-before: .. setting-google-ads-audience-description-end
 
 **Membership duration**
 
@@ -67,3 +76,15 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-membership-duration-frequency-start
    :end-before: .. setting-common-membership-duration-frequency-end
+
+**Upload key type**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-google-ads-upload-key-type-start
+   :end-before: .. setting-google-ads-upload-key-type-end
+
+**Mobile app ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-google-ads-mobile-app-id-start
+   :end-before: .. setting-google-ads-mobile-app-id-end

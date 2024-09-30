@@ -4,20 +4,36 @@
 
 .. |destination-name| replace:: ActiveCampaign
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: CSV files
+.. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
 
 
 ActiveCampaign
 ==================================================
 
-|destination-name| is an automation platform for email and SMS marketing.
+|destination-name| is an automation platform for email and SMS marketing. Use the ActiveCampaign REST API to manage audiences in |destination-name|.
 
 
 Credentials
 ==================================================
 
-Amperity requires the `ActiveCampaign REST API key <https://developers.activecampaign.com/reference/authentication>`__ |ext_link| and `base URL <https://developers.activecampaign.com/reference/url>`__ |ext_link| to send audiences to |destination-name|.
+**Name and description**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-common-name-and-description-start
+   :end-before: .. credential-common-name-and-description-end
+
+**API key**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-active-campaign-api-key-start
+   :end-before: .. credential-active-campaign-api-key-end
+
+**Base URL**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-active-campaign-url-start
+   :end-before: .. credential-active-campaign-url-end
 
 
 Settings

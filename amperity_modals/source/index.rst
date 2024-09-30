@@ -7,73 +7,36 @@
 Site Index
 ==================================================
 
+.. TODO: The filenames for destination modals must start with "destination-" and then match exactly the unique plugin string.
 
-.. Hide the TOC from this file.
+.. TODO: Hide the TOC from this file.
 
 .. toctree::
    :hidden:
 
    404
-   credential-active-campaign
-   credential-acxiom
-   credential-adobe-campaign
-   credential-adobe-customer-attributes
-   credential-adobe-ecs
-   credential-adobe-marketo
-   credential-airship
-   credential-attentive-mobile
-   credential-azure-blob-connection-string
-   credential-azure-blob-shared-access-signature
-   credential-azure-blob-storage-uri
-   credential-bazaar-voice
-   credential-blue-core
-   credential-camelot-smm
-   credential-cross-country-computer
-   credential-epsilon-abacus
-   credential-epsilon-conversant
-   credential-epsilon-targeting
-   credential-experian-passphrase
-   credential-experian-private-key
-   credential-gcs-service-account-key
-   credential-iam-credential
-   credential-iam-role-to-role
-   credential-infutor
-   credential-kibo
-   credential-koupon-media
-   credential-liveramp
-   credential-neustar
-   credential-oracle-data-cloud
-   credential-oracle-responsys
-   credential-panda-printing
-   credential-passphrase
-   credential-pebble-post
-   credential-persado
-   credential-power-reviews
-   credential-private-key
-   credential-quad
-   credential-rr-donnelly
-   credential-sfmc-sftp
-   credential-smg
-   credential-sound-commerce
-   credential-vibes
-   credential-yahoo-dsp
    destination-active-campaign
    destination-acxiom
    destination-airship
    destination-adobe-ecs
    destination-adobe-customer-attributes
    destination-adobe-campaign
+   destination-adobe-marketo
+   destination-amazon-ads
    destination-attentive-mobile
    destination-azure-blob
    destination-bazaar-voice
    destination-blue-core
    destination-camelot-smm
+   destination-cordial
    destination-cross-country-computer
    destination-epsilon-abacus
    destination-epsilon-conversant
    destination-epsilon-targeting
    destination-experian
    destination-gcs
+   destination-google-ads
+   destination-google-customer-match
    destination-infutor
    destination-kibo
    destination-koupon-media
@@ -88,12 +51,17 @@ Site Index
    destination-quad
    destination-rr-donnelly
    destination-s3
+   destination-sailthru
    destination-sfmc-sftp
    destination-sftp
    destination-smg
+   destination-snapchat
    destination-sound-commerce
+   destination-tiktok
+   destination-tradedesk
    destination-vibes
    destination-yahoo-dsp
    destination_lorem_ipsum
+   destination-zendesk
    openapi
    semantics

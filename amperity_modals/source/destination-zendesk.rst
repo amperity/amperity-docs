@@ -2,19 +2,16 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |destination-name| replace:: Zendesk
+.. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
-.. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
 
 
-Yahoo DSP
+Zendesk
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
+|destination-name| is customer service platform. Use the Zendesk Users API to manage users in |destination-name|.
 
 
 Credentials
@@ -26,11 +23,17 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**API token**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-zendesk-api-token-start
+   :end-before: .. credential-zendesk-api-token-end
+
+**Email address**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-zendesk-email-address-start
+   :end-before: .. credential-zendesk-email-address-end
 
 
 Settings
@@ -52,18 +55,8 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Segment name**
+**Subdomain**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
-
-**Membership duration**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-start
-   :end-before: .. setting-common-membership-duration-end
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-zendesk-subdomain-start
+   :end-before: .. setting-zendesk-subdomain-end
