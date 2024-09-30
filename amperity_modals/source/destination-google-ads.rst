@@ -27,7 +27,7 @@ Credentials
 
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-oauth-refresh-token-start
-   :end-before: .. credential-oauth-refresh-token--end
+   :end-before: .. credential-oauth-refresh-token-end
 
 
 Settings
