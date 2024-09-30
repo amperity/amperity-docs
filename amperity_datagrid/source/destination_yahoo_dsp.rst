@@ -14,6 +14,7 @@
 .. |sendto-link| replace:: send query results
 .. |channel-link| replace:: send campaigns
 .. |duration| replace:: (in days)
+.. |duration-value| replace:: "0" - "90"
 .. |allow-for-what| replace:: audience lists
 .. |allow-for-duration| replace:: up to 48 hours
 
