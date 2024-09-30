@@ -100,7 +100,7 @@ Inbound prerequisites
 
 .. bridge-inbound-share-prerequisites-start
 
-Before you can create inbound sharing between Databricks and Amperity a recipient and share must be created in Databricks, after which tables are added to the share and access to the share is granted to the recipient. The user who performs these actions may use the Databricks CLI or the Databricks Catalog Explorer and must the **CREATE RECIPIENT**, **CREATE SHARE**, **USE CATALOG**, **USE SCHEMA**, and **SELECT** permissions, along with the ability to grant the recipient access to the share.
+Before you can create inbound sharing between Databricks and Amperity a recipient and share must be created in Databricks, after which tables are added to the share and access to the share is granted to the recipient. The user who performs these actions may use the Databricks CLI or the Databricks Catalog Explorer and must grant the **CREATE RECIPIENT**, **CREATE SHARE**, **USE CATALOG**, **USE SCHEMA**, and **SELECT** permissions, along with the ability to grant the recipient access to the share.
 
 .. list-table::
    :widths: 10 90
