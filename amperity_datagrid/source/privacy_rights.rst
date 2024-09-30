@@ -472,7 +472,7 @@ Create linkage tables
 
 In some cases a compliance request cannot directly match to source rows. This includes an untagged table for the **exact** strategy, and a non-stitched source table for the **connected_pii** strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
 
-.. note:: The main reason for using a linkage table rather than source keys is if the custom domain table to which you are linking is aggregating records using multiple keys since Amperity doees not allow source keys to be composed of multiple columns.
+.. note:: The main reason for using a linkage table rather than source keys is if the custom domain table to which you are linking is aggregating records using multiple keys since Amperity does not allow source keys to be composed of multiple columns.
 
 .. include:: ../../amperity_reference/source/domain_tables.rst
    :start-after: .. domain-tables-add-linkage-steps-start
