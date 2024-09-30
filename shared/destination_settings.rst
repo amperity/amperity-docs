@@ -769,13 +769,13 @@ This section contains settings that are unique to Cordial.
 
 **Audience primary key**
 
-See common settings.
+See common.
 
 **List name**
 
 .. setting-cordial-list-name-start
 
-TEMP: "xxxxx"
+The name of the list in |destination-name| that is managed by Amperity. This list will be created by Amperity if it does not exist.
 
 .. setting-cordial-list-name-end
 
@@ -783,11 +783,7 @@ TEMP: "xxxxx"
 
 .. setting-cordial-subscription-status-start
 
-UI field name: "Do not set subscription status automatically"
-
-UI description: "Prevents updates without a channels.email.subscribeStatus from being automatically subscribed"
-
-TEMP: "Prevents updates without a channels.email.subscribeStatus from being automatically subscribed"
+Enable "Do not set subscription status automatically" to prevent updates without "channels.email.subscribeStatus" from being automatically subscribed in |destination-name|.
 
 .. setting-cordial-subscription-status-end
 
@@ -1553,7 +1549,7 @@ See common settings.
 
 .. setting-sailthru-list-name-start
 
-?????
+The name of the list in |destination-name| that is managed by Amperity. This list will be created by Amperity if it does not exist.
 
 .. setting-sailthru-list-name-end
 
@@ -1765,9 +1761,19 @@ This section contains settings that are unique to Snapchat.
 
 .. setting-snapchat-ad-account-id-start
 
-TEMP: "The ID of the ad account to create/update"
+The ID for the |destination-name| advertising account. This ID is available from the top-left menu in |destination-name|. Open that menu, choose "Add Accounts", and then copy the ID for the account to which Amperity will send audiences.
 
 .. setting-snapchat-ad-account-id-end
+
+**Segment name**
+
+.. setting-snapchat-segment-name-start
+
+The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist. The audience will be available from the |destination-name| "Audiences" page.
+
+.. setting-snapchat-segment-name-end
+
+
 
 
 
@@ -1927,7 +1933,7 @@ This section contains settings that are unique to TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-start
 
-TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads Advertiser ID"
+The advertiser ID for your |destination-name| account. This is a nineteen character string similar to “7654321098765432109” that you can find from the drop-down menu in the top right of TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-end
 
@@ -1935,7 +1941,7 @@ TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads
 
 .. setting-tiktok-ads-manager-custom-audience-name-start
 
-?????
+The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist.
 
 .. setting-tiktok-ads-manager-custom-audience-name-end
 
@@ -1943,7 +1949,7 @@ TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads
 
 .. setting-tiktok-ads-manager-user-id-type-start
 
-TEMP: "Audience primary key type." May be: IDFA, AAID, EMAIL, PHONE.
+The user ID type. This value must be one of the following: "AAID" (Google), "EMAIL" (email addresses), "IDFA" (Apple), or "PHONE" (phone numbers). Amperity is configured to send "EMAIL" and "PHONE" by default for campaigns.
 
 .. setting-tiktok-ads-manager-user-id-type-end
 

@@ -7,8 +7,9 @@
 Site Index
 ==================================================
 
+.. TODO: The filenames for destination modals must start with "destination-" and then match exactly the unique plugin string.
 
-.. Hide the TOC from this file.
+.. TODO: Hide the TOC from this file.
 
 .. toctree::
    :hidden:
@@ -27,6 +28,7 @@ Site Index
    destination-bazaar-voice
    destination-blue-core
    destination-camelot-smm
+   destination-cordial
    destination-cross-country-computer
    destination-epsilon-abacus
    destination-epsilon-conversant
@@ -49,10 +51,13 @@ Site Index
    destination-quad
    destination-rr-donnelly
    destination-s3
+   destination-sailthru
    destination-sfmc-sftp
    destination-sftp
    destination-smg
+   destination-snapchat
    destination-sound-commerce
+   destination-tiktok
    destination-tradedesk
    destination-vibes
    destination-yahoo-dsp
