@@ -27,8 +27,10 @@ Site Index
    destination-azure-blob
    destination-bazaar-voice
    destination-blue-core
+   destination-braze
    destination-camelot-smm
    destination-cordial
+   destination-criteo
    destination-cross-country-computer
    destination-epsilon-abacus
    destination-epsilon-conversant
@@ -37,8 +39,10 @@ Site Index
    destination-gcs
    destination-google-ads
    destination-google-customer-match
+   destination-hubspot
    destination-infutor
    destination-kibo
+   destination-klaviyo
    destination-koupon-media
    destination-liveramp
    destination-neustar
@@ -47,6 +51,7 @@ Site Index
    destination-panda-printing
    destination-pebble-post
    destination-persado
+   destination-pinterest
    destination-power-reviews
    destination-quad
    destination-rr-donnelly

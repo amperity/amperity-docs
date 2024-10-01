@@ -380,6 +380,14 @@ It also contains information about the request type and request strategy.
 
 .. privacy-rights-inbound-requests-table-end
 
+**Inbound request table name**
+
+.. privacy-rights-inbound-requests-table-name-start
+
+Give the inbound requests table a name that makes sense for your brand and your workflow. The presence of **compliance/request** semantic tags identifies this table as a compliance request table within Amperity.
+
+.. privacy-rights-inbound-requests-table-name-end
+
 **Inbound request table columns**
 
 .. privacy-rights-inbound-requests-table-columns-start

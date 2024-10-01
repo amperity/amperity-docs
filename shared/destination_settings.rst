@@ -731,7 +731,7 @@ This section contains settings that are unique to Braze.
 
 .. setting-braze-instance-start
 
-TEMP: "The instance where the Braze account was provisioned"
+Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| in which your account was provisioned. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "EU-01", or "EU-02".
 
 .. setting-braze-instance-end
 
@@ -739,7 +739,7 @@ TEMP: "The instance where the Braze account was provisioned"
 
 .. setting-braze-profile-updates-start
 
-TEMP: "Only send updated audience profiles."
+To update audience profiles only when one (or more) values change, enable the **Only send updated audience profiles** option.
 
 .. setting-braze-profile-updates-end
 
@@ -747,7 +747,7 @@ TEMP: "Only send updated audience profiles."
 
 .. setting-braze-user-identifier-start
 
-TEMP: "The indentifier used to match users in Braze"
+The indentifier to use for matching users in |destination-name|. May be "external_id" or "braze_id".
 
 .. setting-braze-user-identifier-end
 
@@ -1091,7 +1091,7 @@ See common settings.
 
 .. setting-hubspot-list-name-start
 
-The list name to which the |destination-name| connector will write. This can be the name of an existing list or a new list.
+The list name to which Amperity will send contacts. This can be the name of an existing list or a new list.
 
 .. setting-hubspot-list-name-end
 
@@ -1151,15 +1151,21 @@ See common settings.
 
 .. setting-klaviyo-list-name-start
 
-xxxxx
+The list name to which Amperity will write the audience list. This can be the name of an existing list or a new list.
 
 .. setting-klaviyo-list-name-end
+
+.. setting-klaviyo-list-name-note-start
+
+|destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+
+.. setting-klaviyo-list-name-note-end
 
 **Update contacts?**
 
 .. setting-klaviyo-update-contacts-start
 
-TEMP: "Use full profile to update list"
+Send additional customer profile fields with an audience list, These fields are visible in |destination-name| from the "Customer Properties" section within individual profiles for members of that audience list.
 
 .. setting-klaviyo-update-contacts-end
 
@@ -1499,13 +1505,22 @@ This section contains settings that are unique to Pinterest.
 
 .. setting-pinterest-ad-account-id-start
 
-TEMP: "The Ad Account ID for Pinterest"
+Your brand's |destination-name| advertising account ID.
 
 .. setting-pinterest-ad-account-id-end
 
 **Audience primary key**
 
 See common settings.
+
+**List name**
+
+.. setting-pinterest-list-name-start
+
+The list name to which Amperity will send a list of SHA-256 hashed email addresses. This can be the name of an existing list or a new list.
+
+.. setting-pinterest-list-name-end
+
 
 
 

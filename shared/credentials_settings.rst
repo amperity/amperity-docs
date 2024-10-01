@@ -747,13 +747,11 @@ See SFTP.
 
 **BRAZE**
 
-xxxxx
-
 **API key**
 
 .. credential-braze-api-key-start
 
-xxxxx
+Required. The API key for your |destination-name| account.
 
 .. credential-braze-api-key-end
 
@@ -832,15 +830,7 @@ Required. The name of the Amazon S3 bucket.
 
 **CRITEO**
 
-xxxxx
-
-**OAuth flow**
-
-.. credential-criteo-oauth-start
-
-xxxxx
-
-.. credential-criteo-oauth-end
+See OAuth common.
 
 
 
@@ -1110,15 +1100,7 @@ See OAuth common.
 
 **HUBSPOT**
 
-xxxxx
-
-**OAuth flow**
-
-.. credential-hubspot-oauth-start
-
-xxxxx
-
-.. credential-hubspot-oauth-end
+See OAuth common.
 
 
 
@@ -1162,14 +1144,11 @@ See SFTP.
 
 **KLAVIYO**
 
-xxxxx
-
-
 **API key**
 
 .. credential-klaviyo-api-key-start
 
-xxxxx
+Required. The API key for your |destination-name| account.
 
 .. credential-klaviyo-api-key-end
 
@@ -1594,15 +1573,7 @@ See SFTP.
 
 **PINTEREST**
 
-xxxxx
-
-**OAuth flow**
-
-.. credential-pinterest-oauth-start
-
-xxxxx
-
-.. credential-pinterest-oauth-end
+See OAuth common.
 
 
 
