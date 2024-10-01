@@ -1151,15 +1151,21 @@ See common settings.
 
 .. setting-klaviyo-list-name-start
 
-xxxxx
+The list name to which Amperity will write the audience list. This can be the name of an existing list or a new list.
 
 .. setting-klaviyo-list-name-end
+
+.. setting-klaviyo-list-name-note-start
+
+|destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+
+.. setting-klaviyo-list-name-note-end
 
 **Update contacts?**
 
 .. setting-klaviyo-update-contacts-start
 
-TEMP: "Use full profile to update list"
+Send additional customer profile fields with an audience list, These fields are visible in |destination-name| from the "Customer Properties" section within individual profiles for members of that audience list.
 
 .. setting-klaviyo-update-contacts-end
 

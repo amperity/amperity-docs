@@ -2,16 +2,16 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Cordial
+.. |destination-name| replace:: Klaviyo
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: email lists
+.. |what-send| replace:: audience lists
 .. |where-send| replace:: |destination-name|
 
 
-Cordial
+Klaviyo
 ==================================================
 
-|destination-name| is a cross-channel marketing and data platform for audience segments, trends, and automated customer experiences.
+|destination-name| is an email platform for targeting, personalizing, measuring, and optimizing email and Facebook campaigns. Use Amperity to manage audience lists in |destination-name|.
 
 
 Credentials
@@ -26,14 +26,8 @@ Credentials
 **API key**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-cordial-api-key-start
-   :end-before: .. credential-cordial-api-key-end
-
-**API URL**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-cordial-api-url-start
-   :end-before: .. credential-cordial-api-url-end
+   :start-after: .. credential-klaviyo-api-key-start
+   :end-before: .. credential-klaviyo-api-key-end
 
 
 Settings
@@ -55,20 +49,24 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Audience primary key**
+**List name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-audience-primary-key-start
-   :end-before: .. setting-common-audience-primary-key-end
+   :start-after: .. setting-klaviyo-list-name-start
+   :end-before: .. setting-klaviyo-list-name-end
 
-**List name**
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-klaviyo-list-name-note-start
+   :end-before: .. setting-klaviyo-list-name-note-end
+
+**Update contacts**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-cordial-list-name-start
    :end-before: .. setting-cordial-list-name-end
 
-**Subscription status**
+**Audience primary key**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-cordial-subscription-status-start
-   :end-before: .. setting-cordial-subscription-status-end
+   :start-after: .. setting-common-audience-primary-key-start
+   :end-before: .. setting-common-audience-primary-key-end

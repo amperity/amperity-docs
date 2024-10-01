@@ -1144,14 +1144,11 @@ See SFTP.
 
 **KLAVIYO**
 
-xxxxx
-
-
 **API key**
 
 .. credential-klaviyo-api-key-start
 
-xxxxx
+Required. The API key for your |destination-name| account.
 
 .. credential-klaviyo-api-key-end
 
