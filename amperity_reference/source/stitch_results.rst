@@ -26,7 +26,7 @@ About Stitch
 
 .. _stitch-page:
 
-Stitch page
+About the Stitch page
 ==================================================
 
 .. include:: ../../shared/terms.rst
