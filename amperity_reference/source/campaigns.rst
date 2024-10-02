@@ -1543,21 +1543,14 @@ Filter campaigns
 
 .. campaigns-filter-campaigns-start
 
-You can filter campaigns on the **Campaigns** page.
+You can filter the list of campaigns that appear on the **Campaigns** page by using any combination of the following:
+
+* By cadence. Select **One-time** or **Recurring**.
+* By status. Select any combination of **Delivered**, **Draft**, **Error** and **Scheduled**.
+* By destination. Select any combination of destinations that have been configured for your tenant.
+* By user. Users can be filtered by author (who created the campaign?) and by most recent update (who last edited the campaign?). Select any combination of users in your tenant.
 
 .. campaigns-filter-campaigns-end
-
-**To filter campaigns**
-
-.. campaigns-filter-campaigns-steps-start
-
-#. From the **Campaigns** page, on the top of the page, select the filter from the filters menu.
-
-The filtered results appear on the **Campaigns** page.
-
-   .. tip:: You can filter campaigns by the following cadences: all, one-time, or recurring.
-
-.. campaigns-filter-campaigns-steps-end
 
 
 .. campaigns-organize-campaigns:
