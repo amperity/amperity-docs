@@ -5,6 +5,7 @@
 .. meta::
     :description lang=en:
          Return a list of ingest jobs from your tenant.
+
 .. meta::
     :content class=swiftype name=body data-type=text:
         Return a list of ingest jobs from your tenant.
