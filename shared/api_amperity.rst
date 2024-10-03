@@ -33,10 +33,17 @@ Available Endpoints
 
 .. image:: ../../images/api-request-get-ingest-jobs.png
    :width: 440 px
-   :alt: GET /ingest/jobs/{id}
+   :alt: GET /ingest/jobs
    :align: left
    :class: no-scaled-link
    :target: https://docs.amperity.com/api/endpoint_get_ingest_jobs.html
+
+.. image:: ../../images/api-request-get-ingest-jobs-id.png
+   :width: 440 px
+   :alt: GET /ingest/jobs/{id}
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_get_ingest_jobs_id.html
 
 .. image:: ../../images/api-request-get-segments.png
    :width: 440 px

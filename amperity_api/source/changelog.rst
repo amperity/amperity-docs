@@ -42,6 +42,7 @@ The Amperity API changelog lists breaking and non-breaking changes that were mad
 * Add :doc:`endpoint_get_campaign_drafts_list` endpoint.
 * Add :doc:`endpoint_get_campaigns_list` endpoint.
 * Add :doc:`endpoint_get_ingest_jobs` endpoint.
+* Add :doc:`endpoint_get_ingest_jobs_id` endpoint.
 * Add :doc:`endpoint_get_segments_list` endpoint.
 * Add :doc:`endpoint_get_workflows_list` endpoint.
 * Add :doc:`endpoint_get_workflows_fetch` endpoint.
