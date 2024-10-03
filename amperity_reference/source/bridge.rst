@@ -185,7 +185,7 @@ Configure Databricks
 
 .. bridge-inbound-share-configure-databricks-start
 
-To configure Databricks to share data with Amperity you will need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-databricks-inbound-share-add-bridge>` in Amperity.
+To configure Databricks to share data with Amperity you will need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-inbound-share-add-bridge>` in Amperity.
 
 .. note:: The following section briefly describes using the Databricks Catalog Explorer to configure Databricks to be ready to share data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
 
@@ -230,7 +230,7 @@ To configure Databricks to share data with Amperity you will need to `CREATE SHA
           :class: no-scaled-link
      - Open sharing uses token-based authentication.
 
-       The credentials file that contains the token is available from an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. Use a secure channel to share the activation link with the user who will download the credentials file, and then :ref:`configure Amperity for inbound sharing <bridge-databricks-inbound-share-add-bridge>`.
+       The credentials file that contains the token is available from an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. Use a secure channel to share the activation link with the user who will download the credentials file, and then :ref:`configure Amperity for inbound sharing <bridge-inbound-share-add-bridge>`.
 
        .. important:: You can download the credential file only once. Recipients should treat the downloaded credential as a secret and must not share it outside of their organization. If you have concerns that a credential may have been handled insecurely, you can `rotate credentials <https://docs.databricks.com/en/data-sharing/create-recipient.html#security-considerations-for-tokens>`__ |ext_link| at any time.
 
