@@ -424,7 +424,7 @@ Days of recorded history
 
 .. configure-stitch-general-performance-history-start
 
-You can configure the number of days that are stores for the **Unified Changes PKs** and **Unified Changes Clusters** tables. The default is thirty days.
+You can configure the number of days that are stores for the **Unified Changes PKs** and **Unified Changes Clusters** tables. The default is 365 days.
 
 To update the days of recorded history, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Performance**, update the value of the **Recorded days** field:
 
