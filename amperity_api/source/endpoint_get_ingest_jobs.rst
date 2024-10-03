@@ -89,11 +89,12 @@ A request to the **/ingest/jobs** endpoint is similar to:
 ::
 
    curl --request GET \
-          'https://app.amperity.com/api/ingest/jobs" \
+          'https://tenant.amperity.com/api/ingest/jobs" \
+          ?created_from=2024-10-01 \
+          ?created_to=2024-10-07' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
-
 
 (This example is formatted for readability in a narrow page layout.)
 
