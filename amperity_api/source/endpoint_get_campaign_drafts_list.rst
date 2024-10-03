@@ -99,8 +99,8 @@ A request to the **/campaign-drafts** endpoint is similar to:
    curl --request GET \
           'https://tenant.amperity.com/api/campaign-drafts \
           ?limit=12 \
-          &with_total=true \
-          &destination_data_template_id=ptg-1abcAB4C2' \
+          ?with_total=true \
+          ?destination_data_template_id=ptg-1abcAB4C2' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: unstable' \
         --header 'Authorization: Bearer token'

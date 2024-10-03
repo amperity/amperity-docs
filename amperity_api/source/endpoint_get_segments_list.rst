@@ -91,7 +91,7 @@ A request to the **/segments** endpoint is similar to:
    curl --request GET \
           'https://tenant.amperity.com/api/segments \
           ?limit=12 \
-          &with_total=true \
+          ?with_total=true \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'

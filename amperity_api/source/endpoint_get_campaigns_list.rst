@@ -91,8 +91,8 @@ A request to the **/campaigns** endpoint is similar to:
    curl --request GET \
           'https://tenant.amperity.com/api/campaigns \
           ?limit=12 \
-          &with_total=true \
-          &destination_data_template_id=ptg-1abcAB4C2' \
+          ?with_total=true \
+          ?destination_data_template_id=ptg-1abcAB4C2' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
