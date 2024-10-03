@@ -586,33 +586,27 @@ Click **Continue** to test the configuration (and validate the connection) to th
 
 
 
-**ATTENTIVE (API)**
+**ATTENTIVE** (API + SFTP)
 
-xxxxx
+This section contains credentials that are unique to Attentive SFTP + API connectors.
 
 **API key**
 
 .. credential-attentive-api-key-start
 
-xxxxx
+The API key for your |destination-name| account.
 
 .. credential-attentive-api-key-end
 
-
-
-
-
-**ATTENTIVE (SFTP)** / **ATTENTIVE MOBILE**
-
-**Hostname**
+**Hostname** (SFTP)
 
 See SFTP.
 
-**Passphrase**
+**Passphrase** (SFTP)
 
 See SFTP.
 
-**Username**
+**Username** (SFTP)
 
 See SFTP.
 
