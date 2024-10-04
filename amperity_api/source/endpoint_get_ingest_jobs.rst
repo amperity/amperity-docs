@@ -213,31 +213,37 @@ The **200** response returns a set of records, files, and feeds that were ingest
 .. code-block:: json
 
    {
-     "description" : "Ingest job details",
-     "example" : {
-       "id" : "isj-1f73r9u2",
-       "tables" : [ {
-         "errors" : 200,
-         "feed_id" : "df-5L6d1veh",
-         "read" : 1000,
-         "rejected" : 200,
-         "updated" : 200,
-         "started_at" : "2024-06-01T04:02:54.433Z",
-         "state" : "succeeded",
-         "ended_at" : "2024-06-01T04:02:57.433Z",
-         "files" : [ {
-           "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
-           "name" : "part0.avro",
-           "read" : 1000,
-           "errors" : 200
-         } ],
-         "inserted" : 400,
-         "table_name" : "My table",
-         "job_id" : "isj-1f73r9u2"
-       } ],
-       "workflow_id" : "wf-20240618-3423-b45"
-     },
-    }
+     "total": 0,
+     "data": [
+       {
+         "id": "isj-1f73r9u2",
+         "tables": [
+           {
+             "errors": 200,
+             "feed_id": "df-5L6d1veh",
+             "read": 1000,
+             "rejected": 200,
+             "updated": 200,
+             "started_at": "2024-06-01T04:02:54.433Z",
+             "state": "succeeded",
+             "ended_at": "2024-06-01T04:02:57.433Z",
+             "files": [
+               {
+                 "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
+                 "name": "part0.avro",
+                 "read": 1000,
+                 "errors": 200
+               }
+             ],
+             "inserted": 400,
+             "table_name": "My table",
+             "job_id": "isj-1f73r9u2"
+           }
+         ],
+         "workflow_id": "wf-20240618-3423-b45"
+       }
+     ],
+   }
 
 .. endpoint-get-ingest-jobs-response-200ok-end
 
@@ -260,9 +266,6 @@ A **200 OK** response contains the following parameters.
 
    * - **id**
      - The ingest job identifier.
-
-   * - **workflow_id**
-     - The Amperity internal identifier for the workflow that ran this job.
 
    * - **tables**
      - A summary of table details from this ingest job.
@@ -334,6 +337,15 @@ A **200 OK** response contains the following parameters.
        **files**
           A collection of file details, including a unique ID, the name of the file, the number of records ingested, and the number of errors.
 
+          .. code-block:: json
+
+             "files" : [ {
+               "file_id" : "cb-20241234-123452-AB1Ca/part0.avro",
+               "name" : "part0.avro",
+               "read" : 1000,
+               "errors" : 200
+             } ],
+
        **inserted**	
           The number of records that were inserted into the table.
 
@@ -342,5 +354,11 @@ A **200 OK** response contains the following parameters.
 
        **job_id**	
           The unique identifier for the ingest job.
+
+   * - **workflow_id**
+     - The Amperity internal identifier for the workflow that ran this job.
+
+   * - **next_token**
+     - The **next_token** parameter is included in the response, but is not available for use with the **ingest/jobs** endpoint. The **ingest/jobs** endpoint only returns a list of ingest jobs that occurred within the previous 7 days.
 
 .. endpoint-get-ingest-jobs-response-parameters-end
