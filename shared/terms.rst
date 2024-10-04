@@ -6938,7 +6938,7 @@ The average number of items purchased in any given transaction.
 
 .. term-update-dt-start
 
-Apply the **update-dt** semantic tag to columns in customer records that identify when the data was last updated. The field to which this semantic is applied must be a datetime field type. At least one customer record must have this semantic tag applied to ensure that the **update_dt** column is created in the **Unified Coalesced** table and to ensure that the **Merged Customers** table behaves correctly.
+Apply the **update-dt** semantic tag to columns in customer records that identify when the data was last updated in the source system. The field to which this semantic is applied must be a datetime field type. At least one customer record must have this semantic tag applied to ensure that the **update_dt** column is created in the **Unified Coalesced** table and to ensure that the **Merged Customers** table behaves correctly.
 
 .. term-update-dt-end
 
