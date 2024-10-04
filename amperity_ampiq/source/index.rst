@@ -175,6 +175,7 @@ Apply predictive analytics
    campaigns
    campaigns_reference
    churn_prevention
+   conditions_and_operators
    default_attributes
    destination_active_campaign
    destination_adobe_marketo
