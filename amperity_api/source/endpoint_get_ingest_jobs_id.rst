@@ -19,14 +19,14 @@
 GET /ingest/jobs/{id}
 ==================================================
 
-.. endpoint-get-ingest-jobs-start
+.. endpoint-get-ingest-jobs-id-start
 
 Use the **/ingest/jobs/{id}** endpoint to return a list of jobs from your tenant.
 
-.. endpoint-get-ingest-jobs-end
+.. endpoint-get-ingest-jobs-id-end
 
 
-.. _endpoint-get-ingest-jobs-http-methods:
+.. _endpoint-get-ingest-jobs-id-http-methods:
 
 Available HTTP methods
 ==================================================
@@ -38,25 +38,25 @@ Available HTTP methods
    :class: no-scaled-link
 
 
-.. _endpoint-get-ingest-jobs-prerequisites:
+.. _endpoint-get-ingest-jobs-id-prerequisites:
 
 Prerequisites
 ==================================================
 
-.. endpoint-get-ingest-jobs-prerequisites-start
+.. endpoint-get-ingest-jobs-id-prerequisites-start
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
 
-.. endpoint-get-ingest-jobs-prerequisites-end
+.. endpoint-get-ingest-jobs-id-prerequisites-end
 
 
-.. _endpoint-get-ingest-jobs-base-url:
+.. _endpoint-get-ingest-jobs-id-base-url:
 
 Base URL
 ==================================================
 
-.. endpoint-get-ingest-jobs-base-url-start
+.. endpoint-get-ingest-jobs-id-base-url-start
 
 All requests made to the **/ingest/jobs/{id}** endpoint should be directed to the following base URL:
 
@@ -64,10 +64,10 @@ All requests made to the **/ingest/jobs/{id}** endpoint should be directed to th
 
    https://{tenant-id}.amperity.com/api/ingest/jobs/{id}
 
-.. endpoint-get-ingest-jobs-base-url-end
+.. endpoint-get-ingest-jobs-id-base-url-end
 
 
-.. _endpoint-get-ingest-jobs-rate-limit:
+.. _endpoint-get-ingest-jobs-id-rate-limit:
 
 Rate limit
 ==================================================
@@ -77,12 +77,12 @@ Rate limit
    :end-before: .. rate-limits-end
 
 
-.. _endpoint-get-ingest-jobs-request:
+.. _endpoint-get-ingest-jobs-id-request:
 
 Requests
 ==================================================
 
-.. endpoint-get-ingest-jobs-request-start
+.. endpoint-get-ingest-jobs-id-request-start
 
 A request to the **/ingest/jobs/{id}** endpoint is similar to:
 
@@ -97,15 +97,15 @@ A request to the **/ingest/jobs/{id}** endpoint is similar to:
 
 (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-get-ingest-jobs-request-end
+.. endpoint-get-ingest-jobs-id-request-end
 
 
-.. _endpoint-get-ingest-jobs-request-parameters:
+.. _endpoint-get-ingest-jobs-id-request-parameters:
 
 Request parameters
 --------------------------------------------------
 
-.. endpoint-get-ingest-jobs-request-parameters-start
+.. endpoint-get-ingest-jobs-id-request-parameters-start
 
 The following table describes the parameters that may be used with the **ingest/jobs/{id}** endpoint.
 
@@ -130,27 +130,27 @@ The following table describes the parameters that may be used with the **ingest/
 
        .. note:: From the workflows page, on the right side, click **Recent Activity**, select **Ingest details** under the job, and copy the job id from the open dialog box.
 
-.. endpoint-get-ingest-jobs-request-parameters-end
+.. endpoint-get-ingest-jobs-id-request-parameters-end
 
 
-.. _endpoint-get-ingest-jobs-request-examples:
+.. _endpoint-get-ingest-jobs-id-request-examples:
 
 Request examples
 --------------------------------------------------
 
-.. endpoint-get-ingest-jobs-request-examples-start
+.. endpoint-get-ingest-jobs-id-request-examples-start
 
 The following examples show how to send requests to the **/ingest/jobs/{id}** endpoint.
 
-.. endpoint-get-ingest-jobs-request-examples-end
+.. endpoint-get-ingest-jobs-id-request-examples-end
 
 
-.. _endpoint-get-ingest-jobs-request-example-curl:
+.. _endpoint-get-ingest-jobs-id-request-example-curl:
 
 cURL
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. endpoint-get-ingest-jobs-request-example-curl-start
+.. endpoint-get-ingest-jobs-id-request-example-curl-start
 
 The following example shows how to use cURL to send a request to the **ingest/jobs/{id}** endpoint.
 
@@ -164,27 +164,27 @@ The following example shows how to use cURL to send a request to the **ingest/jo
 
 (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-get-ingest-jobs-request-example-curl-end
+.. endpoint-get-ingest-jobs-id-request-example-curl-end
 
 
-.. _endpoint-get-ingest-jobs-responses:
+.. _endpoint-get-ingest-jobs-id-responses:
 
 Responses
 ==================================================
 
-.. endpoint-get-ingest-jobs-responses-start
+.. endpoint-get-ingest-jobs-id-responses-start
 
 A response from the **/ingest/jobs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
-.. endpoint-get-ingest-jobs-responses-end
+.. endpoint-get-ingest-jobs-id-responses-end
 
 
-.. _endpoint-get-ingest-jobs-response-200ok:
+.. _endpoint-get-ingest-jobs-id-response-200ok:
 
 200 OK
 --------------------------------------------------
 
-.. endpoint-get-ingest-jobs-response-200ok-start
+.. endpoint-get-ingest-jobs-id-response-200ok-start
 
 The **200** response returns a set of jobs.
 
@@ -218,15 +218,15 @@ The **200** response returns a set of jobs.
      "workflow_id": "wf-20240618-3423-b45"
    }
 
-.. endpoint-get-ingest-jobs-response-200ok-end
+.. endpoint-get-ingest-jobs-id-response-200ok-end
 
 
-.. _endpoint-get-ingest-jobs-response-parameters:
+.. _endpoint-get-ingest-jobs-id-response-parameters:
 
 Response parameters
 --------------------------------------------------
 
-.. endpoint-get-ingest-jobs-response-parameters-start
+.. endpoint-get-ingest-jobs-id-response-parameters-start
 
 A **200 OK** response contains the following parameters.
 
@@ -314,4 +314,4 @@ A **200 OK** response contains the following parameters.
        **ended_at**	
           The date and time at which a job ended.
 
-.. endpoint-get-ingest-jobs-response-parameters-end
+.. endpoint-get-ingest-jobs-id-response-parameters-end
