@@ -532,8 +532,6 @@ Days. See common.
 
 
 
-
-
 **AMAZON S3**
 
 This section contains settings that are unique to Amazon S3.
@@ -598,35 +596,35 @@ See Common.
 
 
 
-**ATTENTIVE (API)**
+**ATTENTIVE** (API + SFTP)
 
 This section contains settings that are unique to Attentive (API).
 
-**Primary Identifier**
+See SFTP for any common file settings.
+
+**Client domain** (SFTP)
+
+.. setting-attentive-client-domain-start
+
+The client domain for your brand's instance of |destination-name|.
+
+.. setting-attentive-client-domain-end
+
+**Primary Identifier** (API)
 
 .. setting-attentive-primary-identifier-start
 
-TEMP: "The primary identifier within your |destination-name| account."
+The primary identifier that is used within your |destination-name| account. May be one of the following: "email" or "phone".
 
 .. setting-attentive-primary-identifier-end
 
+**Segment name** (SFTP)
 
+.. setting-attentive-segment-name-start
 
+The name of the segment in |destination-name| that is managed by Amperity.
 
-
-**ATTENTIVE (SFTP)**
-
-This section contains settings that are unique to Attentive (SFTP).
-
-See SFTP for all common file settings.
-
-**Client domain**
-
-.. setting-attentive-primary-identifier-start
-
-TEMP: "The client domain of the Attentive instance"
-
-.. setting-attentive-primary-identifier-end
+.. setting-attentive-segment-name-end
 
 
 
@@ -1209,7 +1207,7 @@ The name of the list that will be managed in |destination-name|. This is often, 
 
 .. setting-listrak-segment-name-start
 
-TEMP: "xxxxx"
+The name of segment in |destination-name| that is managed by Amperity.
 
 .. setting-listrak-segment-name-end
 

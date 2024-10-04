@@ -15,6 +15,7 @@ Site Index
    :hidden:
 
    404
+   destination_lorem_ipsum
    destination-active-campaign
    destination-acxiom
    destination-airship
@@ -23,6 +24,7 @@ Site Index
    destination-adobe-campaign
    destination-adobe-marketo
    destination-amazon-ads
+   destination-attentive-api
    destination-attentive-mobile
    destination-azure-blob
    destination-bazaar-voice
@@ -66,7 +68,6 @@ Site Index
    destination-tradedesk
    destination-vibes
    destination-yahoo-dsp
-   destination_lorem_ipsum
    destination-zendesk
    openapi
    semantics

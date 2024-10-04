@@ -4,10 +4,11 @@
 
 .. meta::
     :description lang=en:
-         Return a list of ingest jobs from your tenant. 
+         Return a list of ingest jobs from your tenant that occurred within the previous 7 days.
+
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Return a list of ingest jobs from your tenant. 
+        Return a list of ingest jobs from your tenant that occurred within the previous 7 days.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -15,12 +16,12 @@
 
 
 ==================================================
-GET /ingest/jobs/{id} 
+GET /ingest/jobs
 ==================================================
 
 .. endpoint-get-ingest-jobs-start
 
-Use the **/ingest/jobs/{id}** endpoint to return a list of jobs from your tenant. 
+Use the **/ingest/jobs** endpoint to return a list of jobs from your tenant that occurred within the previous 7 days.
 
 .. endpoint-get-ingest-jobs-end
 
@@ -32,7 +33,7 @@ Available HTTP methods
 
 .. image:: ../../images/api-request-get-ingest-jobs.png
    :width: 440 px
-   :alt: GET /ingest/jobs/{id}
+   :alt: GET /ingest/jobs
    :align: left
    :class: no-scaled-link
 
@@ -57,11 +58,11 @@ Base URL
 
 .. endpoint-get-ingest-jobs-base-url-start
 
-All requests made to the **/ingest/jobs/{id}** endpoint should be directed to the following base URL:
+All requests made to the **/ingest/jobs** endpoint should be directed to the following base URL:
 
 .. code-block:: rest
 
-   https://{tenant-id}.amperity.com/api/ingest/jobs/{id}
+   https://{tenant-id}.amperity.com/api/ingest/jobs
 
 .. endpoint-get-ingest-jobs-base-url-end
 
@@ -83,16 +84,17 @@ Requests
 
 .. endpoint-get-ingest-jobs-request-start
 
-A request to the **/ingest/jobs/{id}** endpoint is similar to:
+A request to the **/ingest/jobs** endpoint is similar to:
 
 ::
 
    curl --request GET \
-          'https://app.amperity.com/api/ingest/jobs/{id}" \
+          'https://tenant.amperity.com/api/ingest/jobs" \
+          ?created_from=2024-10-01 \
+          ?created_to=2024-10-07' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
-
 
 (This example is formatted for readability in a narrow page layout.)
 
@@ -106,7 +108,7 @@ Request parameters
 
 .. endpoint-get-ingest-jobs-request-parameters-start
 
-The following table describes the parameters that may be used with the **ingest/jobs{id}** endpoint.
+The following table describes the parameters that may be used with the **ingest/jobs** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -122,12 +124,31 @@ The following table describes the parameters that may be used with the **ingest/
 
        .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
 
-   * - **id**
-     - String. Required.
+   * - **created_from**
+     - Datetime. Optional.
 
-       The Amperity internal identifier for the injest job. For example **isj-20240701-48815-6dcXdk**.
+       Required. A timestamp that defines the start (inclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_to** request parameter.
 
-       .. note:: From the workflows page, on the right side, click **Recent Activity**, select **Ingest details** under the job, and copy the job id from the open dialog box.
+       This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
+
+       .. important:: Only ingest jobs that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **ingest/jobs** endpoint.)
+
+
+   * - **created_to**
+     - Datetime. Optional.
+
+       Required. A timestamp that defines the end (exclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_from** request parameter.
+
+       This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
+
+       .. important:: Only ingest jobs that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **ingest/jobs** endpoint.)
+
+   * - **with_total**
+     - Boolean. Optional.
+
+       Set this value to **true** to include a total count of all results. Default value: **false**.
+
+       .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
 
 .. endpoint-get-ingest-jobs-request-parameters-end
 
@@ -156,7 +177,9 @@ The following example shows how to use cURL to send a request to the **ingest/jo
 ::
 
    curl --request GET \
-          'https://tenant.amperity.com/api/ingest/jobs/{id}" \
+          'https://tenant.amperity.com/api/ingest/jobs" \
+          ?created_from=2024-10-01 \
+          ?created_to=2024-10-07' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
@@ -173,7 +196,7 @@ Responses
 
 .. endpoint-get-ingest-jobs-responses-start
 
-A response from the **/injest/job/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **/injest/jobs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-ingest-jobs-responses-end
 
@@ -185,36 +208,41 @@ A response from the **/injest/job/{id}** endpoint will match an :doc:`HTTP statu
 
 .. endpoint-get-ingest-jobs-response-200ok-start
 
-The **200** response returns a set of jobs.
+The **200** response returns a set of records, files, and feeds that were ingested during the specified range, similar to the following response example, but with a response section for each record, file, and feed.
 
 .. code-block:: json
 
    {
-     "id": "isj-1f73r9u2",
-     "tables": [
+     "total": 0,
+     "data": [
        {
-          "errors": 200,
-          "feed_id": "df-5L6d1veh",
-          "read": 1000,
-          "rejected": 200,
-          "updated": 200,
-          "started_at": "2024-06-01T04:02:54.433Z",
-          "state": "succeeded",
-          "ended_at": "2024-06-01T04:02:57.433Z",
-          "files": [
-            {
-              "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
-              "name": "part0.avro",
-              "read": 1000,
-              "errors": 200
-            }
+         "id": "isj-1f73r9u2",
+         "tables": [
+           {
+             "errors": 200,
+             "feed_id": "df-5L6d1veh",
+             "read": 1000,
+             "rejected": 200,
+             "updated": 200,
+             "started_at": "2024-06-01T04:02:54.433Z",
+             "state": "succeeded",
+             "ended_at": "2024-06-01T04:02:57.433Z",
+             "files": [
+               {
+                 "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
+                 "name": "part0.avro",
+                 "read": 1000,
+                 "errors": 200
+               }
+             ],
+             "inserted": 400,
+             "table_name": "My table",
+             "job_id": "isj-1f73r9u2"
+           }
          ],
-         "inserted": 400,
-         "table_name": "My table",
-         "job_id": "isj-1f73r9u2"
+         "workflow_id": "wf-20240618-3423-b45"
        }
      ],
-     "workflow_id": "wf-20240618-3423-b45"
    }
 
 .. endpoint-get-ingest-jobs-response-200ok-end
@@ -239,39 +267,32 @@ A **200 OK** response contains the following parameters.
    * - **id**
      - The ingest job identifier.
 
-   * - **workflow_id**
-     - The Amperity internal identifier for the workflow that ran this job.
-
    * - **tables**
      - A summary of table details from this ingest job.
 
-       The JSON array for this summary is similar to: 
+       The JSON array for this summary is similar to:
 
        .. code-block:: json
 
-          "tables": [
-            {
-              "errors": 200,
-              "feed_id": "df-5L6d1veh",
-              "read": 1000,
-              "rejected": 200,
-              "updated": 200,
-              "started_at": "2024-06-01T04:02:54.433Z",
-              "state": "succeeded",
-              "ended_at": "2024-06-01T04:02:57.433Z",
-              "files": [
-                {
-                  "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
-                  "name": "part0.avro",
-                  "read": 1000,
-                  "errors": 200
-                }
-              ],
-              "inserted": 400,
-              "table_name": "My table",
-              "job_id": "isj-1f73r9u2"
-            }
-          ],
+          "tables" : [ {
+            "errors" : 200,
+            "feed_id" : "df-5L6d1veh",
+            "read" : 1000,
+            "rejected" : 200,
+            "updated" : 200,
+            "started_at" : "2024-06-01T04:02:54.433Z",
+            "state" : "succeeded",
+            "ended_at" : "2024-06-01T04:02:57.433Z",
+            "files" : [ {
+              "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
+              "name" : "part0.avro",
+              "read" : 1000,
+              "errors" : 200
+            } ],
+            "inserted" : 400,
+            "table_name" : "My table",
+            "job_id" : "isj-1f73r9u2"
+          } ],
 
        where
 
@@ -284,16 +305,16 @@ A **200 OK** response contains the following parameters.
        **read**
           The number of rows ingested into this feed.
 
-       **rejected** 
+       **rejected**
           The number of duplicate rows that were not ingested.  
 
-       **updated** 
+       **updated**
           The total count of rows updated for this feed during the job.
 
-       **started_at** 
+       **started_at**
           The date and time at which a job started.
 
-       **state** 
+       **state**
           The current state of the job. For example:
 
           * Scheduled
@@ -310,7 +331,34 @@ A **200 OK** response contains the following parameters.
 
           .. note:: This is the same value that is visible from the **Status** column on each individual workflow page. Some values are only visible while a task is active.
 
-       **ended_at**	
+       **ended_at**
           The date and time at which a job ended.
+
+       **files**
+          A collection of file details, including a unique ID, the name of the file, the number of records ingested, and the number of errors.
+
+          .. code-block:: json
+
+             "files" : [ {
+               "file_id" : "cb-20241234-123452-AB1Ca/part0.avro",
+               "name" : "part0.avro",
+               "read" : 1000,
+               "errors" : 200
+             } ],
+
+       **inserted**	
+          The number of records that were inserted into the table.
+
+       **table_name**	
+          The name of the table.
+
+       **job_id**	
+          The unique identifier for the ingest job.
+
+   * - **workflow_id**
+     - The Amperity internal identifier for the workflow that ran this job.
+
+   * - **next_token**
+     - The **next_token** parameter is included in the response, but is not available for use with the **ingest/jobs** endpoint. The **ingest/jobs** endpoint only returns a list of ingest jobs that occurred within the previous 7 days.
 
 .. endpoint-get-ingest-jobs-response-parameters-end

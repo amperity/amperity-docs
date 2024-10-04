@@ -242,7 +242,7 @@ The following example shows how to use cURL to send a request to the **/workflow
    curl --request GET \
           'https://tenant.amperity.com/api/workflow/runs \
           ?limit=12 \
-          &with_total=true \
+          ?with_total=true \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'

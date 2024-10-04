@@ -109,9 +109,9 @@ A request to the **/audit-events** endpoint is similar to:
    curl --request GET \
           'https://tenant.amperity.com/api/audit-events \
           ?limit=10 \
-          &with_total=true \
-          &happened_start=2024-04-01 \
-          &happened_end=2024-04-10' \
+          ?with_total=true \
+          ?happened_start=2024-04-01 \
+          ?happened_end=2024-04-10' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
