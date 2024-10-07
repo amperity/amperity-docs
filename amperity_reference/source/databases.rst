@@ -13,12 +13,6 @@ Build databases against unified customer profiles built by Amperity to help your
 
 .. databases-overview-end
 
-
-.. _databases-customer-360-page:
-
-Customer 360 page
-==================================================
-
 .. databases-customer-360-page-start
 
 The **Customer 360** page provides:
@@ -29,108 +23,162 @@ The **Customer 360** page provides:
 
 .. databases-customer-360-page-end
 
-.. TODO: Update mockup
 
-.. image:: ../../images/mockup-customer360-tab.png
+.. _databases-profiles:
+
+Customer profiles
+==================================================
+
+.. databases-profiles-start
+
+Customer profile details are pulled from the **Customer 360** table that is located in your brand's primary customer 360 database. Customer profile details include:
+
+* Names (first name, last name), email address, physical address, phone numbers
+* Transaction details (first purchases, last purchases, total purchases, etc.)
+* Other custom profile values that are unique to your company
+
+These details can be accessed from the **Profile** tab on the **Customer 360** page.
+
+The **Profiles** tab shows the date on which the primary customer 360 database was last updated, how long it took to complete the update, and the number of customer profiles in the database.
+
+.. databases-profiles-end
+
+.. image:: ../../images/mockup-customer360-tab-customer-profile.png
    :width: 600 px
-   :alt: Customer 360 page
+   :alt: Customer 360 page, customer profile
    :align: left
    :class: no-scaled-link
 
+.. databases-profiles-context-start
 
-.. _databases-core:
+Each customer profile is a collection of common attributes (first name, last name, email, phone, etc.), transaction attributes (first purchase, last purchase, total purchases, etc.), and other custom values that are unique to each customer's data set. These details are summarized on the **Customer 360** page under **Customer Profile**.
 
-Core tables
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-core-tables-start
-   :end-before: .. term-core-tables-end
-
-.. databases-core-table-list-start
-
-There are two types of core tables:
-
-#. :ref:`Standard core tables <databases-core-table-type-standard>`
-#. :ref:`Custom core tables <databases-core-table-type-custom>`
-
-.. databases-core-table-list-end
+.. databases-profiles-context-end
 
 
-.. _databases-core-table-type-standard:
+.. _databases-profiles-about-attributes:
 
-Standard core tables
+About profile attributes
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-core-tables-standard-start
-   :end-before: .. term-core-tables-standard-end
+   :start-after: .. term-pii-start
+   :end-before: .. term-pii-end
 
-.. databases-core-table-type-standard-start
+.. databases-profiles-about-attributes-list-start
 
-Standard core tables belong to one of the following broad categories:
+PII profile attributes commonly available as part of the customer profile include:
 
 .. list-table::
-   :widths: 30 70
-   :header-rows: 0
+   :widths: 25 175 375
+   :header-rows: 1
 
-   * - **Stitched domain tables**
+   * - Icon
+     - Attribute Name
+     - Description
+
+   * - |fa-semantic-given-name|
+     - **First Name**
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-domain-table-stitched-start
-          :end-before: .. term-domain-table-stitched-end
+          :start-after: .. term-given-name-start
+          :end-before: .. term-given-name-end
 
-       .. image:: ../../images/howitworks-standard-core-table.png
-          :width: 440 px
-          :alt: Standard core tables.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../amperity_reference/source/domain_tables.rst
-          :start-after: .. domain-tables-stitched-context-start
-          :end-before: .. domain-tables-stitched-context-end
-
-   * - **Unified tables**
+   * - |fa-semantic-surname|
+     - **Last Name**
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-unified-tables-start
-          :end-before: .. term-unified-tables-end
+          :start-after: .. term-surname-start
+          :end-before: .. term-surname-end
 
-       The collection of unified tables that is generated within your tenant depends on the types of semantic tags that were applied to feeds and/or custom domain tables in the **Sources** tab.
-
-   * - **Stitch QA tables**
+   * - |fa-semantic-email|
+     - **Email**
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-stitch-qa-tables-start
-          :end-before: .. term-stitch-qa-tables-end
+          :start-after: .. term-email-start
+          :end-before: .. term-email-end
 
-       Some Stitch QA tables are required by databases that are configured as customer 360 databases; most are only available from databases that are configured as a Stitch QA database.
+   * - |fa-semantic-phone|
+     - **Phone**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-phone-start
+          :end-before: .. term-phone-end
 
-.. databases-core-table-type-standard-end
+   * - |fa-semantic-address|
+     - **Address**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-address-start
+          :end-before: .. term-address-end
+
+   * - |fa-semantic-city|
+     - **City**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-city-start
+          :end-before: .. term-city-end
+
+   * - |fa-semantic-state|
+     - **State**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-state-start
+          :end-before: .. term-state-end
+
+   * - |fa-semantic-postal|
+     - **Zip Code**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-postal-start
+          :end-before: .. term-postal-end
+
+   * - |fa-semantic-birthdate|
+     - **Birthdate**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-birthdate-start
+          :end-before: .. term-birthdate-end
+
+   * - |fa-semantic-gender|
+     - **Gender**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-gender-start
+          :end-before: .. term-gender-end
+
+.. databases-profiles-about-attributes-list-end
+
+.. databases-profiles-about-attributes-note-start
+
+.. note:: The profile attribute names that are shown in the profile attributes section are the same strings that were entered as friendly names when creating the **Customer 360** database table in the primary customer 360 database.
+
+   These strings will default to the same as the field name if not specified as friendly names, including lower-case strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
+
+.. databases-profiles-about-attributes-note-end
 
 
-.. _databases-core-table-type-custom:
+.. _databases-profiles-refresh-icons:
 
-Custom core tables
+Refresh customer profile icons
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-core-tables-custom-start
-   :end-before: .. term-core-tables-custom-end
+.. databases-profiles-refresh-icons-start
 
+Profile icons are shown on the **Profiles** tab in the **Customer 360** page. Use profile icons to assign a visual element to important fields in the customer profile.
 
-.. _databases-core-table-howtos:
+You can refresh these icons by updating the icons that are configured in the **Customer 360** table for the database that is configured as the primary customer 360 database for your tenant.
 
-Core table how-tos
---------------------------------------------------
+Open the **Customer 360** table, and then select the icon to show for the customer profile attribute from the **Icon** column on the **Configure and save** page within the **Database Editor**. Profile icons are applied automatically, but you may configure them when building or editing the **Customer 360** table.
 
-.. databases-core-table-howtos-start
+.. databases-profiles-refresh-icons-end
 
-* :ref:`databases-core-howtos-add-custom`
-* :ref:`databases-core-howtos-delete-custom`
-* :ref:`databases-core-howtos-edit-custom`
-* :ref:`databases-core-howtos-search`
-* :ref:`databases-core-howtos-view`
-* :ref:`databases-core-howtos-view-sql`
+**To apply icons to a field**
 
-.. databases-core-table-howtos-end
+.. databases-profiles-apply-icons-start
+
+#. Open the **Customer 360** table in the database editor.
+#. Click **Next**.
+#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the |ext_font_awesome| website.
+
+   .. include:: ../../shared/databases.rst
+      :start-after: .. databases-font-awesome-picker-useany-start
+      :end-before: .. databases-font-awesome-picker-useany-end
+
+#. Click **Refresh Semantics** to apply the a default icon to all profile attributes.
+#. Click **Save**.
+
+.. databases-profiles-apply-icons-end
 
 
 .. _databases-database:
@@ -143,8 +191,6 @@ Databases
 Use the **Databases** tab on the **Customer 360** page to define any number of individual databases. Each database will have its own collection of tables and attributes. Some databases may be configured as "customer 360" databases, and then others may be configured as a "Stitch QA" database or a custom database to support any of your brand's use cases.
 
 .. databases-database-end
-
-.. TODO: Update mockup
 
 .. image:: ../../images/mockup-customer360-tab-all-databases.png
    :width: 600 px
@@ -406,161 +452,108 @@ Database how-tos
 .. databases-database-table-howtos-end
 
 
-.. _databases-profiles:
+.. _databases-core:
 
-Customer profiles
+Core tables
 ==================================================
 
-.. databases-profiles-start
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-core-tables-start
+   :end-before: .. term-core-tables-end
 
-Customer profile details are pulled from the **Customer 360** table that is located in your brand's primary customer 360 database. Customer profile details include:
-
-* Names (first name, last name), email address, physical address, phone numbers
-* Transaction details (first purchases, last purchases, total purchases, etc.)
-* Other custom profile values that are unique to your company
-
-These details can be accessed from the **Profile** tab on the **Customer 360** page.
-
-The **Profiles** tab shows the date on which the primary customer 360 database was last updated, how long it took to complete the update, and the number of customer profiles in the database.
-
-.. databases-profiles-end
-
-.. image:: ../../images/mockup-customer360-tab-customer-profile.png
+.. image:: ../../images/mockup-customer360-tab-core-tables.png
    :width: 600 px
-   :alt: Customer 360 page, customer profile
+   :alt: Core tables, from the Customer 360 page.
    :align: left
    :class: no-scaled-link
 
-.. databases-profiles-context-start
+.. databases-core-table-list-start
 
-Each customer profile is a collection of common attributes (first name, last name, email, phone, etc.), transaction attributes (first purchase, last purchase, total purchases, etc.), and other custom values that are unique to each customer's data set. These details are summarized on the **Customer 360** page under **Customer Profile**.
+There are two types of core tables:
 
-.. databases-profiles-context-end
+#. :ref:`Standard core tables <databases-core-table-type-standard>`
+#. :ref:`Custom core tables <databases-core-table-type-custom>`
+
+.. databases-core-table-list-end
 
 
-.. _databases-profiles-about-attributes:
+.. _databases-core-table-type-standard:
 
-About profile attributes
+Standard core tables
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-pii-start
-   :end-before: .. term-pii-end
+   :start-after: .. term-core-tables-standard-start
+   :end-before: .. term-core-tables-standard-end
 
-.. databases-profiles-about-attributes-list-start
+.. databases-core-table-type-standard-start
 
-PII profile attributes commonly available as part of the customer profile include:
+Standard core tables belong to one of the following broad categories:
 
 .. list-table::
-   :widths: 25 175 375
-   :header-rows: 1
+   :widths: 30 70
+   :header-rows: 0
 
-   * - Icon
-     - Attribute Name
-     - Description
-
-   * - |fa-semantic-given-name|
-     - **First Name**
+   * - **Stitched domain tables**
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-given-name-start
-          :end-before: .. term-given-name-end
+          :start-after: .. term-domain-table-stitched-start
+          :end-before: .. term-domain-table-stitched-end
 
-   * - |fa-semantic-surname|
-     - **Last Name**
+       .. image:: ../../images/howitworks-standard-core-table.png
+          :width: 440 px
+          :alt: Standard core tables.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../amperity_reference/source/domain_tables.rst
+          :start-after: .. domain-tables-stitched-context-start
+          :end-before: .. domain-tables-stitched-context-end
+
+   * - **Unified tables**
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-surname-start
-          :end-before: .. term-surname-end
+          :start-after: .. term-unified-tables-start
+          :end-before: .. term-unified-tables-end
 
-   * - |fa-semantic-email|
-     - **Email**
+       The collection of unified tables that is generated within your tenant depends on the types of semantic tags that were applied to feeds and/or custom domain tables in the **Sources** tab.
+
+   * - **Stitch QA tables**
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-email-start
-          :end-before: .. term-email-end
+          :start-after: .. term-stitch-qa-tables-start
+          :end-before: .. term-stitch-qa-tables-end
 
-   * - |fa-semantic-phone|
-     - **Phone**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-phone-start
-          :end-before: .. term-phone-end
+       Some Stitch QA tables are required by databases that are configured as customer 360 databases; most are only available from databases that are configured as a Stitch QA database.
 
-   * - |fa-semantic-address|
-     - **Address**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-address-start
-          :end-before: .. term-address-end
-
-   * - |fa-semantic-city|
-     - **City**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-city-start
-          :end-before: .. term-city-end
-
-   * - |fa-semantic-state|
-     - **State**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-state-start
-          :end-before: .. term-state-end
-
-   * - |fa-semantic-postal|
-     - **Zip Code**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-postal-start
-          :end-before: .. term-postal-end
-
-   * - |fa-semantic-birthdate|
-     - **Birthdate**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-birthdate-start
-          :end-before: .. term-birthdate-end
-
-   * - |fa-semantic-gender|
-     - **Gender**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-gender-start
-          :end-before: .. term-gender-end
-
-.. databases-profiles-about-attributes-list-end
-
-.. databases-profiles-about-attributes-note-start
-
-.. note:: The profile attribute names that are shown in the profile attributes section are the same strings that were entered as friendly names when creating the **Customer 360** database table in the primary customer 360 database.
-
-   These strings will default to the same as the field name if not specified as friendly names, including lower-case strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
-
-.. databases-profiles-about-attributes-note-end
+.. databases-core-table-type-standard-end
 
 
-.. _databases-profiles-refresh-icons:
+.. _databases-core-table-type-custom:
 
-Refresh customer profile icons
+Custom core tables
 --------------------------------------------------
 
-.. databases-profiles-refresh-icons-start
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-core-tables-custom-start
+   :end-before: .. term-core-tables-custom-end
 
-Profile icons are shown on the **Profiles** tab in the **Customer 360** page. Use profile icons to assign a visual element to important fields in the customer profile.
 
-You can refresh these icons by updating the icons that are configured in the **Customer 360** table for the database that is configured as the primary customer 360 database for your tenant.
+.. _databases-core-table-howtos:
 
-Open the **Customer 360** table, and then select the icon to show for the customer profile attribute from the **Icon** column on the **Configure and save** page within the **Database Editor**. Profile icons are applied automatically, but you may configure them when building or editing the **Customer 360** table.
+Core table how-tos
+--------------------------------------------------
 
-.. databases-profiles-refresh-icons-end
+.. databases-core-table-howtos-start
 
-**To apply icons to a field**
+* :ref:`databases-core-howtos-add-custom`
+* :ref:`databases-core-howtos-delete-custom`
+* :ref:`databases-core-howtos-edit-custom`
+* :ref:`databases-core-howtos-search`
+* :ref:`databases-core-howtos-view`
+* :ref:`databases-core-howtos-view-sql`
 
-.. databases-profiles-apply-icons-start
+.. databases-core-table-howtos-end
 
-#. Open the **Customer 360** table in the database editor.
-#. Click **Next**.
-#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the |ext_font_awesome| website.
 
-   .. include:: ../../shared/databases.rst
-      :start-after: .. databases-font-awesome-picker-useany-start
-      :end-before: .. databases-font-awesome-picker-useany-end
 
-#. Click **Refresh Semantics** to apply the a default icon to all profile attributes.
-#. Click **Save**.
-
-.. databases-profiles-apply-icons-end
 
 
 .. _databases-database-howtos-databasese:
