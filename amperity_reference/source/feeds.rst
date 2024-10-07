@@ -161,9 +161,9 @@ Datetime formats in Amperity use a combination of symbols that are described in 
    * - **D**
      - The day of the year. For example, January 18th is 18 and February 1st is 32.
    * - **M**
-     - The month of the year. For example: August, Aug, or 08. Use text when 3 (or more) pattern characters are present, otherwise use numbers:
+     - The month of the year. For example: August, Aug, or 8. Use text when 3 (or more) pattern characters are present, otherwise use numbers:
 
-       * M outputs 08
+       * M outputs 8
        * MM outputs 08
        * MMM outputs Aug
        * MMMM (or more) outputs August
@@ -352,7 +352,7 @@ Apply a similar pattern to every data source your tenant chooses to bring into A
 
 .. feeds-semantic-tags-important-start
 
-.. tip:: Use semantic tags to define consistency across all of the data sources that your brand chooses to make available toAmperity.
+.. tip:: Use semantic tags to define consistency across all of the data sources that your brand chooses to make available to Amperity.
 
    Many brands often choose to provide a wide range of data sources, including those with quality and/or completeness issues; applying semantic tags to all data sources, including lower quality and/or incomplete data sources, makes them usable for building complete and accurate customer profiles.
 
@@ -789,7 +789,7 @@ Amperity may not have all of the semantics required by a customer. Before adding
 #. In the **Semantic** column, enter the names of custom semantics. They should use hyphens (and not underscores) and they should be entered the same way as a PII semantic, but without it appearing in the drop-down pick-list.
 #. Click **Activate**.
 
-.. note:: This may be done *during* the process of adding a feed also.
+.. note:: This may be done *during* the process of adding a feed, also.
 
 .. feeds-apply-semantic-tags-custom-steps-end
 
