@@ -415,7 +415,7 @@ Semantic tags are used to identify records and fields eligible for compliance ac
 
 .. _privacy-rights-semantic-tag-find-records:
 
-Identify records eligible for compliance actions
+Identify eligible records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. privacy-rights-semantic-tag-find-records-start
