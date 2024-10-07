@@ -347,7 +347,7 @@ You can configure compliance actions to support the following request strategies
 
 .. _privacy-rights-enable:
 
-Enable privacy rights workflows
+Enable workflows
 ==================================================
 
 .. privacy-rights-enable-start
@@ -415,7 +415,7 @@ Semantic tags are used to identify records and fields eligible for compliance ac
 
 .. _privacy-rights-semantic-tag-find-records:
 
-Identify records eligible for compliance actions
+Identify eligible records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. privacy-rights-semantic-tag-find-records-start
