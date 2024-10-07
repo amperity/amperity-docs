@@ -347,7 +347,7 @@ You can configure compliance actions to support the following request strategies
 
 .. _privacy-rights-enable:
 
-Enable privacy rights workflows
+Enable workflows
 ==================================================
 
 .. privacy-rights-enable-start
