@@ -2342,7 +2342,7 @@ The following table lists the tags available to this semantic group (with requir
              :end-before: .. related-order-dates-should-be-added-to-upc-end
 
    * - **order-discount-amount**
-     - String
+     - Decimal
      - |checkmark-required| **Required**
 
        .. include:: ../../shared/terms.rst
