@@ -227,6 +227,7 @@ The following sections describe the individual steps within the workflow that oc
 
           For the current Stitch run, associated records are visible in:
 
+          * **Unified Coalesced**
           * Other database tables
 
        .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
