@@ -1864,15 +1864,32 @@ See OAuth.
 
 **SNOWFLAKE**
 
-xxxxx
+These settings apply to destination *and* bridge.
 
-**xxxxx**
+**Account name**
 
-.. credential-snowflake-xxxxx-start
+.. credential-snowflake-account-name-start
 
-xxxxx
+The unique name of an account that exists within your brand's |destination-name| organization.
 
-.. credential-snowflake-xxxxx-end
+.. credential-snowflake-account-name-end
+
+**Organization**
+
+.. credential-snowflake-organization-start
+
+An `organization <https://docs.snowflake.com/en/user-guide/organizations>`__ is a first-class object in |destination-name| that links accounts and allows the use of secure data sharing.
+
+.. credential-snowflake-organization-end
+
+**Region**
+
+.. credential-snowflake-region-start
+
+The `region <https://docs.snowflake.com/en/user-guide/intro-regions>`__ in which your |destination-name| account is hosted.
+
+.. credential-snowflake-region-end
+
 
 
 
