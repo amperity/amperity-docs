@@ -118,7 +118,7 @@ There are four groups of tables in this diagram:
           :start-after: .. term-stitch-qa-start
           :end-before: .. term-stitch-qa-end
 
-       Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process ; the use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
+       Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process; the use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
 
    * - AmpIQ
 
