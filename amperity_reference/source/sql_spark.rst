@@ -362,16 +362,16 @@ A pattern that filters out unneeded rows and selects only necessary columns is m
 .. code-block:: sql
 
    SELECT
-     uct.amperity_id,
-     uct.first_name,
-     uct.last_name,
-     ecomm.last_order_date
+     uct.amperity_id
+     ,uct.first_name
+     ,uct.last_name
+     ,ecomm.last_order_date
    FROM
    (
      SELECT
-       amperity_id,
-       first_name,
-       last_name
+       amperity_id
+       ,first_name
+       ,last_name
      FROM Unified
      WHERE datasource <> 'Example'
      GROUP BY amperity_id
@@ -384,8 +384,8 @@ A pattern that filters out unneeded rows and selects only necessary columns is m
 
    SELECT
      uct.amperity_id,
-     uct.first_name,
-     uct.last_name,
+     ,uct.first_name
+     ,uct.last_name
      ecomm.last_order_date
    FROM Unified
    LEFT JOIN ecomm ON (ecomm.amperity_id = uct.amperity_id)
@@ -485,7 +485,7 @@ Formalisms
 
 .. sql-spark-recommendation-indentation-formalisms-start
 
-Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** statements can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible.
+Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly, use **IN()** instead of multiple **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** statements can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible.
 
 .. sql-spark-recommendation-indentation-formalisms-end
 
@@ -575,18 +575,18 @@ This example performs better and achieves the same result.
 .. code-block:: sql
 
    SELECT DISTINCT  
-     amperity_id,
-     FIRST_VALUE(LOWER(EMAIL_ADDRESS_)) OVER
+     amperity_id
+     ,FIRST_VALUE(LOWER(EMAIL_ADDRESS_)) OVER
        (PARTITION BY amperity_id ORDER BY merged_date DESC)
-       AS email_address,
-     FIRST_VALUE(merged_date) OVER
+       AS email_address
+     ,FIRST_VALUE(merged_date) OVER
        (PARTITION BY LOWER(EMAIL_ADDRESS_) ORDER BY merged_date DESC)
        AS mergeddate
      FROM (
        SELECT
-         amperity_id,
-         EMAIL_ADDRESS_,
-         CAST('2017-12-22' AS DATE) as merged_date
+         amperity_id
+         ,EMAIL_ADDRESS_
+         ,CAST('2017-12-22' AS DATE) as merged_date
        FROM FlatFiles_TevaSweepstakesDecember2017
        WHERE EMAIL_ADDRESS_ IS NOT NULL)
      WHERE merged_date IS NOT NULL)
@@ -603,7 +603,7 @@ Limit tables
 
 .. sql-spark-recommendation-limit-tables-start
 
-A database should only include tables that are useful to downstream activity, such as building segments or for a database export. As a general rule, segment authors should *never* use any tables with a name that starts with "Unified" to build a segment. Use the passthrough option to make available certain domain tables that contain data that is useful for segmentation.
+A database should only include tables that are useful to downstream activity, such as building segments or for a database export. As a general rule, segment authors must *never* use any tables with a name that starts with "Unified" to build a segment. Use the passthrough option to make available certain domain tables that contain data that is useful for segmentation.
 
 .. sql-spark-recommendation-limit-tables-end
 
@@ -664,7 +664,7 @@ For tables::
 When using an alias:
 
 * Assign names that clearly relate to the column or table.
-  .. importatn:: "Do not use an alias when its name matches the original column name.
+  .. important:: "Do not use an alias when its name matches the original column name.
 * Always use the **AS** keyword to ensure readability.
   .. tip:: Include the **AS** keyword when aliasing columns in a 'SELECT' statement.
 * For computed data--**SUM()** or **AVG()**--use the name you would give it were it a column defined in the schema.
@@ -1125,14 +1125,14 @@ after which you can use the **SELECT** statement to select individual columns fr
 
    SELECT
      c.unique_id AS `uuid`
-     a.address
-     a.address2
-     a.city
-     a.state
-     a.country
-     a.postal
-     a.postal4
-     e.email_address AS `email`
+     ,a.address
+     ,a.address2
+     ,a.city
+     ,a.state
+     ,a.country
+     ,a.postal
+     ,a.postal4
+     ,e.email_address AS `email`
    FROM customer_table c
    LEFT JOIN emails e ON e.unique_id = c.unique_id
    LEFT JOIN addresses a ON a.v = c.unique_id
@@ -1220,7 +1220,7 @@ USING() clause
 
 .. sql-spark-join-using-clause-start
 
-Use the **USING()** clause to use column names to specify the join criteria. Contents of the **USING()** clause **must** be wrapped in parentheses.
+The **USING()** clause can be applied on column names to specify the join criteria. Contents of the **USING()** clause **must** be wrapped in parentheses.
 
 For example:
 
