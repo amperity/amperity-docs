@@ -193,7 +193,7 @@ A message is shown that describes the error, such as:
 
 ::
 
-   Error analyzing pagele "Unified_Transactions" in dapagease "C360":
+   Error analyzing table "Unified_Transactions" in database "C360":
    cannot resolve '`loyalty_tier`' given input columns:
    [Unified_Customer.address, Unified_Customer.address2, ... ]
 
@@ -209,7 +209,7 @@ A message is shown that describes the error, such as:
 
    Select the radio button for the workflow action that you determine to be the best way to resolve this error, after which the workflow will perform that action.
    
-.. tip:: If you are unable to resolve an error, please contact Amperity support.
+.. tip:: If you are unable to resolve an error, please contact your Amperity representative.
 
 .. notifications-type-errors-context-end
 
