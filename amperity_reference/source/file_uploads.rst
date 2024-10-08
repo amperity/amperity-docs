@@ -33,7 +33,7 @@ Use the file upload feature on the **Customer 360** and **Queries** pages to upl
 
 .. file-uploads-overview-from-a-sandbox-start
 
-.. important:: Files that are uploaded to a sandbox will be copied to your production tenant when that sandbox is promoted.
+.. important:: Files that are uploaded to a sandbox are copied to your production tenant when that sandbox is promoted.
 
 .. file-uploads-overview-from-a-sandbox-end
 
@@ -48,8 +48,8 @@ File upload use cases
 You can use the CSV file upload feature to upload a CSV file to a database. The following examples shows several ways you can use this feature:
 
 * Upload an anonymous list of customers which the system then connects with known customers with Amperity IDs
-* Upload a reference file for quick rendition on the **Queries** page
-* Upload a list of customers who filled out a survey to include in a campaign that addresses their concerns
+* Upload a reference file to render on the **Queries** page
+* Upload a list of customers who filled out a survey in order to include in a campaign that addresses their concerns
 
 .. file-uploads-use-cases-end
 
@@ -126,7 +126,7 @@ Query output
 
 .. file-uploads-query-output-start
 
-Following are some ways that you can use this feature on the **Segments Editor** and on the **Campaigns** page: 
+The following are some ways that you can use this feature on the **Segments Editor** and on the **Campaigns** page: 
 
 * Create a complex view of customers on the **Segments** page by adding a query output to a segment, which can also be included or excluded in a campaign on the **Campaigns** page.
 * Create a custom join logic from an uploaded customer list for further segmentation in the **Segment Editor** and on the **Campaigns** page.
@@ -143,7 +143,7 @@ How-tos
 
 .. file-uploads-overview-start
 
-This section describes tasks related to uploading CVS files and adding query outputs to segments and campaigns in Amperity.
+This section describes tasks related to uploading CSV files and adding query outputs to segments and campaigns in Amperity.
 
 .. file-uploads-overview-end
 
@@ -164,7 +164,7 @@ Add lists
 
 .. file-uploads-add-lists-how-to-start
 
-You can add a customer list or source to the **Segments** and **Campaigns** pages.
+You can add a customer list or source to the **Segments** page and the **Campaigns** page.
 
 .. file-uploads-add-lists-how-to-end
 
@@ -225,7 +225,7 @@ You can select a query source from the **Campaigns** page.
 #. In the **Queries (Custom Tables)**, select a query source.
 #. Click **Save**.
 
-   .. note:: To delete a campaign associated with a query output, you will need to first delete the uploaded file before being able to delete the segment.
+   .. note:: To delete a campaign associated with a query output, you must first delete the uploaded file before being able to delete the segment.
 
 .. file-uploads-select-query-source-steps-end
 
@@ -258,7 +258,7 @@ You can add an uploaded file to a segment from the **Segment Editor**.
 #. From the **Condition** list, select **Is a member of...**.
 #. From the **Customer Lists** list, in the **File Uploads** section, select an uploaded file output.
 
-   .. note:: To delete a segment associated with a query output, you will need to first delete the uploaded file before being able to delete the segment.
+   .. note:: To delete a segment associated with a query output, you must first delete the uploaded file before being able to delete the segment.
    
 #. Click **Save As**.
 
@@ -347,7 +347,7 @@ You can upload a CSV file the **Customer 360** page.
 #. In the **Email** field, select a incoming field to have the data mapped to that field.
 #. Click **Save**.
 
-   .. note:: In order for the uploaded customer list to appear on the **Segment Editor**, you will need to add the Amperity ID field as a column or add the email field as a column to the .CSV file.
+   .. note:: In order for the uploaded customer list to appear on the **Segment Editor**, you will need to add the Amperity ID field as a column or add the email field as a column to the CSV file.
 
 .. file-uploads-via-c360-steps-end
 
@@ -371,7 +371,7 @@ You can upload a CSV file from the **Query Editor** page.
 
 .. file-uploads-via-queries-end
 
-**To upload a file via the Query editor**
+**To upload a file via the Query Editor**
 
 .. file-uploads-via-queries-steps-start
 
@@ -380,7 +380,7 @@ You can upload a CSV file from the **Query Editor** page.
 #. From the **Configure File** window, drag and drop a file in the window or click the window to browse for files on your computer.
 #. Wait a few moments for the file to upload.
 #. In the **File Identifier** field, select a file.
-#. Select **Make available in segment editor**.
+#. Select **Make available in Segment Editor**.
 #. In the **Email** field, select a incoming field to have the data mapped to that field.
 #. Click **Save**.
 
