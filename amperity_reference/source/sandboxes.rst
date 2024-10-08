@@ -551,9 +551,9 @@ Changes that are promoted to production from a sandbox may be restored to a prev
 
 #. In many situations you can use a sandbox workflow to quickly restore the state of production, especially when a sandbox was used to make small, iterative changes. First create a sandbox, and then make changes in that sandbox that returns your tenant to its previous state.
 
-#. In situations where this cannot be done using a sandbox workflow, please ask for assistance from your `Amperity Support <https://docs.amperity.com/support/index.html>`__ team.
+#. In situations where this cannot be done using a sandbox workflow, please ask for assistance from your Amperity representative or the `Amperity Support <https://docs.amperity.com/support/index.html>`__ pages.
 
-   .. important:: If Amperity Support restores your tenant all changes that were made to your tenant *after* the point in time to which your tenant will be restored will be lost. This includes changes made in production *and* changes that may have been promoted from other sandbox workflows.
+   .. important:: If your tenant is restored to a previous version, all changes that were made to your tenant *after* that version will be lost. This includes changes made in production *and* changes that may have been promoted from other sandbox workflows.
 
 .. sandboxes-howto-rollback-changes-end
 
