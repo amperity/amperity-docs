@@ -100,7 +100,7 @@ Orchestration groups
 
 Alerts are sent when:
 
-* A failure occurs within an orchestration group workflow, regardless of whether the orchestration group is configured to run after a courier group or run on a schedule
+* A failure occurs within an orchestration group workflow, regardless of whether the orchestration group is configured to run after a courier group or run on a schedule.
 * A failure occurs in an upstream courier group if your orchestration group is configured to run after a courier group. This is to let you know about potential delays to your orchestration group workflow.
 * A user cancels an automatically launched workflow
 * The orchestration group succeeds, if configured. This is only available for orchestration groups run on a schedule. Subscribe to courier group runtime alerts if your orchestration group is configured to run after a courier group and you want to know when it succeeds.
