@@ -70,7 +70,7 @@ Courier load operations
 
 .. ingest-queries-courier-load-operations-start
 
-An ingest query can be used to transform data prior to loading it to Amperity. For example, to remove errant commas, removing extra line breaks, flattening hierarchical data structures, joining data, or resolving other formatting issues. An ingest query is written in Spark SQL and should be tested prior to running it in Amperity. An ingest query must be added to a courier as a load operation.
+An ingest query can be used to transform data prior to loading it to Amperity. For example, to remove errant commas, removing extra line breaks, flattening hierarchical data structures, joining data, or resolving other formatting issues. Write an ingest query in Spark SQL and test the query prior to running it in Amperity. An ingest query must be added to a courier as a load operation.
 
 .. ingest-queries-courier-load-operations-end
 
@@ -104,7 +104,7 @@ where:
 
 * ``file`` is set to the name of the file (``FILE_NAME``) against which the ingest query will run.
 * ``FEED_ID`` is set to the ID for the feed for which the ingest query will run.
-* ``delimiter`` specifies the delimiter to use with CSV, TSV, and PSV files. (These default to ``,``, ``\t``, and ``|``. respectively if not otherwise specified.)
+* ``delimiter`` specifies the delimiter to use with CSV, TSV, and PSV files. (These default to ``,``, ``\t``, and ``|`` respectively if not otherwise specified.)
 * ``escape`` defines the character used for escaping quotes inside an already quoted value in the source file. The default escape character in Spark is the backslash (``\``).
 * ``multiline`` indicates the presence of records that cross multiple lines. Use only for CSV, TSV, or PSV file types and set to ``true`` only if that file has fields with newline characters in them.
 
