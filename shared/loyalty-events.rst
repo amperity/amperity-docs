@@ -1,4 +1,4 @@
-.. 
+..
 .. xxxxx
 ..
 
@@ -83,7 +83,7 @@ The date and time at which loyalty rewards were accrued.
 
 .. loyalty-event-award-id-start
 
-The unique ID for an award that is associated with a redemption or accural event.
+The unique ID for an award that is associated with a redemption or accrual event.
 
 .. loyalty-event-award-id-end
 
@@ -141,7 +141,7 @@ The date and time at which an order that used accrued or redeemed loyalty reward
 
 .. loyalty-event-order-id-start
 
-The unique ID for an order that is associated with a redemption or accural event.
+The unique ID for an order that is associated with a redemption or accrual event.
 
 .. loyalty-event-order-id-end
 
@@ -183,7 +183,7 @@ The date and time at which a reservation that used accrued or redeemed loyalty r
 
 .. loyalty-event-reservation-id-start
 
-The unique ID for a reservation that is associated with a redemption or accural event.
+The unique ID for a reservation that is associated with a redemption or accrual event.
 
 .. loyalty-event-reservation-id-end
 
