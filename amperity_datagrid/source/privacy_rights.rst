@@ -132,6 +132,20 @@ The following sections describe the individual steps within the workflow that oc
 
        When the DSAR request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
 
+       .. admonition:: When a record is matched in Unified Coalesced
+
+          For the current Stitch run, associated records are visible in:
+
+          * **Unified Coalesced**
+          * Other database tables
+          * Domain tables
+
+          For all future Stitch runs, associated records are visible in:
+
+          * **Unified Coalesced**
+          * Other database tables
+          * Domain tables
+
 .. privacy-rights-workflows-dsar-end
 
 
@@ -208,6 +222,13 @@ The following sections describe the individual steps within the workflow that oc
      - **Refresh reports**
 
        When the delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+
+       .. admonition:: When a record is matched in Unified Coalesced
+
+          For the current Stitch run, associated records are visible in:
+
+          * **Unified Coalesced**
+          * Other database tables
 
        .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
 
@@ -291,6 +312,20 @@ The following sections describe the individual steps within the workflow that oc
      - **Refresh reports**
 
        When the delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+
+       .. admonition:: When a record is matched in Unified Coalesced
+
+          For the current Stitch run, associated records are visible in:
+
+          * **Unified Coalesced**
+          * Other database tables
+          * Domain tables, with redaction
+
+          For all future Stitch runs, associated records are visible in:
+
+          * **Unified Coalesced**, with redaction
+          * Other database tables, with redaction
+          * Domain tables, with redaction
 
        .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
 
