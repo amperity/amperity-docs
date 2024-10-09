@@ -317,6 +317,7 @@ The following sections describe the individual steps within the workflow that oc
 
           For the current Stitch run, associated records are visible in:
 
+          * **Unified Coalesced**
           * Other database tables
           * Domain tables, with redaction
 
