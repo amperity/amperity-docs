@@ -1419,7 +1419,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        **When transactions data is available**
 
-       Use the **Order ID** field that is available from the **Unified Itemized Transactions** table:
+       Use the **Order ID** field that is available from the **Unified Itemized Transactions** or **Unified Transactions** tables:
 
        ::
 
@@ -1427,7 +1427,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        .. important:: The number of rows that results from the query will not be the same as the number of events that are uploaded to |destination-name|.
 
-          This is because itemized transactions within the query are grouped by **Order ID** as the data is sent to |destination-name|.
+          This is because transactions within the query are grouped by **Order ID** as the data is sent to |destination-name|.
 
           Grouping by **Order ID** ensures that individual events are combined to describe a complete transaction.
 
@@ -1446,7 +1446,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        **When transactions data is available**
 
-       Calculate **price** by dividing item revenue by item quantity. These fields are available from the **Unified Itemized Transactions** table:
+       Calculate **price** by dividing item revenue by item quantity. These fields are available from the **Unified Itemized Transactions** or **Unified Transactions** tables:
 
        ::
 
@@ -1462,7 +1462,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        **When transactions data is available**
 
-       Use the **Product ID** field that is available from the **Unified Itemized Transactions** table:
+       Use the **Product ID** field that is available from the **Unified Itemized Transactions** or **Unified Transactions** tables:
 
        ::
 
@@ -1478,7 +1478,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        **When transactions data is available**
 
-       Use the **Item Quantity** field from the **Unified Itemized Transactions** table to define **quantity**:
+       Use the **Item Quantity** field from the **Unified Itemized Transactions** or **Unified Transactions** tables to define **quantity**:
 
        ::
 
@@ -1494,7 +1494,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        **When transactions data is available**
 
-       Use the **Order Datetime** field from the **Unified Itemized Transactions** table to define **timestamp**:
+       Use the **Order Datetime** field from the **Unified Itemized Transactions** or **Unified Transactions** tables to define **timestamp**:
 
        ::
 

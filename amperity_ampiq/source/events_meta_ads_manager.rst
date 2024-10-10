@@ -51,7 +51,7 @@ Build a query
 
 .. events-meta-ads-manager-offline-events-build-query-start
 
-Use a query to build a combination of data from the **Unified Itemized Transactions** and **Customer 360** tables to represent the set of offline events that your brand wants to use within |destination-name|.
+Use a query to build a combination of data from the **Unified Itemized Transactions**, **Unified Transactions**, and **Customer 360** tables to represent the set of offline events that your brand wants to use within |destination-name|.
 
 A query that returns a collection offline events for use in |destination-name| is similar to:
 
@@ -81,7 +81,7 @@ A query that returns a collection offline events for use in |destination-name| i
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
    GROUP BY order_id
 
-The query **MUST** contain the following fields: **external_id**, **order_id**, **quantity**, **email** (OR **phone**), **product_id**, **timestamp**, **price**, and **currency**. When **action_source** is not specified the default value is "physical_store".
+The query **MUST** contain the following fields: **external_id**, **order_id**, **quantity**, **email** (OR **phone**), **timestamp**, **price**, and **currency**. When **action_source** is not specified the default value is "physical_store".
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
