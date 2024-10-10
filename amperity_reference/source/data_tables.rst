@@ -5506,7 +5506,7 @@ The **Unified Transactions** table contains the following columns:
 
        This value must be configured in the SQL template for the **Unified Transaction** table.
 
-   * - **Order canceled Quantity**
+   * - **Order Canceled Quantity**
      - Integer
      - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
 
@@ -5522,7 +5522,7 @@ The **Unified Transactions** table contains the following columns:
              :start-after: .. less-than-or-equal-to-zero-is-canceled-start
              :end-before: .. less-than-or-equal-to-zero-is-canceled-end
 
-   * - **Order canceled Revenue**
+   * - **Order Canceled Revenue**
      - Decimal
      - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
 
