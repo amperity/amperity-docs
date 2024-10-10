@@ -49,6 +49,7 @@ The default configuration is:
 
    :amperity.stitch.settings/badvalues-config [
    {:threshold 20, :proxy "given-name", :semantic "email"}
+   {:threshold 20, :proxy "surname", :semantic "email"}
    {:threshold 20, :proxy "given-name", :semantic "phone"}
    {:threshold 40, :proxy "given-name", :semantic "address"}]
 
