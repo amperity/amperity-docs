@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        Apply a common understanding to individual points of data across all of your data sources.
+        Apply semantic tags to build a common understanding of individual points of data across all of your data sources.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Apply a common understanding to individual points of data across all of your data sources.
+        Apply semantic tags to build a common understanding of individual points of data across all of your data sources.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
