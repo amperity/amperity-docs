@@ -3066,7 +3066,7 @@ Heap is a digital insights platform that helps you understand how and why custom
 
 .. term-hierarchical-comparison-start
 
-A hierarchical comparison is a step in the Stitch process that occurs after pairwise scoring to closely examine each group of records to identify edge cases, such as married couples with overlapping profile (PII) data or children with the same name as a parent who live at the same address.
+Hierarchical comparison is a step in the Stitch process that occurs after pairwise scoring. This step closely examines each group of records to identify edge cases, such as married couples with overlapping profile (PII) data or children with the same name as a parent who live at the same address.
 
 .. term-hierarchical-comparison-end
 
