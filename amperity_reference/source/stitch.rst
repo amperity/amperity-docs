@@ -932,7 +932,7 @@ A hierarchical comparison that identifies enough conflicting data will allow Amp
 
 .. stitch-hierarchical-comparison-diagram-two-records-start
 
-This example shows a group of records that has been identified by hierarchical comparison to represent two individuals, after which they are split into two groups of records.
+This example shows a group of records (shown in the diagram as record set B) that has been identified by hierarchical comparison to represent two individuals, after which they are split into two groups of records (shown in the diagram as record sets B1 and B2).
 
 .. stitch-hierarchical-comparison-diagram-split-records-end
 
