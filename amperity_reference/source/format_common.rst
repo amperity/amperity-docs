@@ -672,15 +672,28 @@ Any tool that is compliant with the OpenPGP standard, as defined by |ext_rfc4880
 
 .. caution:: The tenant and Amperity must use the same tool to encrypt and decrypt files.
 
-.. tip:: Use the following command to encrypt a file:
-
-   ::
-
-      $ gpg --encrypt --recipient s3@acme.amperity.com data.csv
-
-   This will encrypt a file named "data.csv" and will output a file named "data.csv.gpg". Change ``data.csv`` to the name of the file to be encrypted. Change ``s3@acme.amperity.com`` to the location in Amperity to which the data will be sent.
-
 .. format-common-pgp-encryption-end
+
+**Use PGP encryption with destinations**
+
+.. format-common-pgp-sources-start
+
+To use PGP encryption with destinations use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the public key that is used to encrypt data.
+
+.. caution:: Be sure to include the "BEGIN PGP PUBLIC KEY BLOCK" and "END PGP PUBLIC KEY BLOCK" header and footer in the key. Only users and systems with access to the private key will be able to decrypt this data. Use Snappass to share the public key.
+
+.. format-common-pgp-sources-end
+
+.. TODO: Saving this, for now.
+.. 
+.. .. tip:: Use the following command to encrypt a file:
+.. 
+..    ::
+.. 
+..       $ gpg --encrypt --recipient s3@acme.amperity.com data.csv
+.. 
+..    This will encrypt a file named "data.csv" and will output a file named "data.csv.gpg". Change ``data.csv`` to the name of the file to be encrypted. Change ``s3@acme.amperity.com`` to the location in Amperity to which the data will be sent.
+.. 
 
 
 .. _format-common-pgp-decryption:
@@ -697,15 +710,32 @@ Any tool that is compliant with the OpenPGP standard, `as defined by RFC4880 <ht
 
 .. caution:: The tenant and Amperity must use the same tool to encrypt and decrypt files.
 
-.. tip:: Use the following command to `decrypt a file <https://www.gnupg.org/gph/en/manual/x110.html>`__:
-
-   ::
-
-      $ gpg --decrypt --recipient [location]@acme.amperity.com data.csv.gpg
-
-   This will decrypt a file named "data.csv.gpg" and will output a file named "data.csv". Change ``data.csv`` to the name of the file to be decrypted. Change ``[location]`` to the parameter that indicates the cloud platform to which the data will be sent.
-
 .. format-common-pgp-decryption-end
+
+**Add PGP decryption to data sources**
+
+.. format-common-pgp-sources-start
+
+To use PGP decryption with data sources you must switch to using the legacy editor for couriers. This link is at the top of the page when you are creating a courier for SFTP, Amazon S3, and Microsoft Azure.
+
+For new keys, use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the private key that is used to decrypt data.
+
+.. caution:: Be sure to include the "BEGIN PGP PRIVATE KEY BLOCK" and "END PGP PRIVATE KEY BLOCK" header and footer in the key.
+
+   Anyone with access to the decryption key is capable of decrypting data that has been encrypted with the corresponding public key. Please keep both public and private keys confidential. Use Snappass to share the private key.
+
+.. format-common-pgp-sources-end
+
+.. TODO: Saving this, for now
+.. 
+.. .. tip:: Use the following command to `decrypt a file <https://www.gnupg.org/gph/en/manual/x110.html>`__:
+.. 
+..    ::
+.. 
+..       $ gpg --decrypt --recipient [location]@acme.amperity.com data.csv.gpg
+.. 
+..    This will decrypt a file named "data.csv.gpg" and will output a file named "data.csv". Change ``data.csv`` to the name of the file to be decrypted. Change ``[location]`` to the parameter that indicates the cloud platform to which the data will be sent.
+.. 
 
 
 .. _format-common-transfer-data:
