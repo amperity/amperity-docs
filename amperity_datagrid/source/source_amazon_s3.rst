@@ -44,9 +44,7 @@ Common scenarios include:
 
 .. source-amazon-s3-about-end
 
-.. caution:: This topic documents the new workflow for configuring Amperity to pull data from Amazon S3. This workflow is currently in the final stages of testing and validation and may be enabled for your tenant. Ask your Amperity representative to enable this configuration workflow.
-
-   The topic for :doc:`the legacy workflow is still available <source_amazon_s3_legacy>`. Certain file types -- XML and files that contain complex/nested JSON -- may require using the legacy workflow.
+.. note:: :doc:`The legacy courier workflow is required <source_amazon_s3_legacy>` for certain use cases: XML and files that contain complex/nested JSON, ingest queries, and couriers that support many feeds.
 
 .. source-amazon-s3-steps-to-pull-start
 
