@@ -125,9 +125,9 @@ The following table describes the parameters that may be used with the **ingest/
        .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
 
    * - **created_from**
-     - Datetime. Optional.
+     - Datetime. Required.
 
-       Required. A timestamp that defines the start (inclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_to** request parameter.
+       A timestamp that defines the start (inclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
@@ -135,9 +135,9 @@ The following table describes the parameters that may be used with the **ingest/
 
 
    * - **created_to**
-     - Datetime. Optional.
+     - Datetime. Required.
 
-       Required. A timestamp that defines the end (exclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_from** request parameter.
+       A timestamp that defines the end (exclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
