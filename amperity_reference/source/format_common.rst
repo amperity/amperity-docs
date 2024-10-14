@@ -678,7 +678,7 @@ Any tool that is compliant with the OpenPGP standard, as defined by |ext_rfc4880
 
 .. format-common-pgp-sources-start
 
-To use PGP encryption with destinations use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the public key that is used to encrypt data.
+To use PGP encryption with data sources use the **PGP credentials** setting to select a PGP credential. For new keys, use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the public key that is used to encrypt data.
 
 .. caution:: Be sure to include the "BEGIN PGP PUBLIC KEY BLOCK" and "END PGP PUBLIC KEY BLOCK" header and footer in the key. Only users and systems with access to the private key will be able to decrypt this data. Use Snappass to share the public key.
 
@@ -716,9 +716,9 @@ Any tool that is compliant with the OpenPGP standard, `as defined by RFC4880 <ht
 
 .. format-common-pgp-sources-start
 
-To use PGP decryption with data sources you must switch to using the legacy editor for couriers. This link is at the top of the page when you are creating a courier for SFTP, Amazon S3, and Microsoft Azure.
+To use PGP decryption with data sources use the **PGP credentials** setting to select a PGP credential. For new keys, use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the private key that is used to decrypt data.
 
-For new keys, use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the private key that is used to decrypt data.
+.. note:: Some data sources require you to switch to the legacy editor before you can configure PGP credentials. This link is at the top of the page when you are creating a courier and is named "Switch to legacy editor".
 
 .. caution:: Be sure to include the "BEGIN PGP PRIVATE KEY BLOCK" and "END PGP PRIVATE KEY BLOCK" header and footer in the key.
 
