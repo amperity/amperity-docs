@@ -44,6 +44,12 @@ along with the following graphs:
 **Campaigns**
    Shows the total number of campaigns that are run on a daily basis.
 
+   .. image:: ../../images/usage-campaigns.png
+      :width: 600 px
+      :alt: The Usage page shows the frequency at which campaigns are run.
+      :align: left
+      :class: no-scaled-link
+
 **Customer profiles**
    Shows the total number of customer profiles (Amperity IDs) that are sent to destinations on a daily basis using campaigns.
 
