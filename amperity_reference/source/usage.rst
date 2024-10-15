@@ -12,6 +12,14 @@ The **Usage** dashboard shows usage within Amperity across a broad range of feat
 
 .. usage-overview-end
 
+**Configure the time period**
+
+.. usage-time-period-start
+
+You can configure the time period that is used to display metrics and graphs on the **Usage** dashboard. From the dropdown in the top right of the page, select one of the following time periods: "Last 30 days", "Last calendar month", "Last 60 days", "Last 90 days", "Last complete quarter", "Last year from now", or "Last calendar year".
+
+.. usage-time-period-start
+
 
 .. _usage-activations:
 
@@ -31,7 +39,7 @@ The **Activations** section in the **Usage** dashboard contains the following me
 **Segments used**
    Shows the total number of segments that have been used in a campaign---including delivered and scheduled campaigns---as of the last date in the selected time period.
 
-along with the following categories:
+along with the following graphs:
 
 **Campaigns**
    Shows the total number of campaigns that are run on a daily basis.
