@@ -2093,6 +2093,14 @@ G
       :end-before: .. term-google-customer-match-end
 
 
+.. _g-google-enhanced-conversions:
+
+**Google Enhanced Conversions**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-google-enhanced-conversions-start
+      :end-before: .. term-google-enhanced-conversions-end
+
+
 .. _g-google-pubsub:
 
 **Google Pub/Sub**

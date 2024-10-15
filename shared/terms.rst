@@ -2971,6 +2971,15 @@ Looker is an enterprise platform for business intelligence, data applications, a
 .. term-google-looker-end
 
 
+**Google Enhanced Conversions**
+
+.. term-google-enhanced-conversions-start
+
+Google Enhanced Conversions improves the accuracy of conversion measurement by sending hashed first-party conversion data to Google using one-way SHA-256 hashing of first-party customer data.
+
+.. term-google-enhanced-conversions-end
+
+
 **Google Play**
 
 .. term-google-play-start
