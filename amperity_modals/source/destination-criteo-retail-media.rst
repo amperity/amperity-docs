@@ -4,7 +4,7 @@
 
 .. |destination-name| replace:: Criteo Retail Media
 .. |audience-primary-key| replace:: "Email"
-.. |what-send| replace:: audiences
+.. |what-send| replace:: audience segments
 .. |where-send| replace:: |destination-name|
 
 

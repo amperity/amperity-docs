@@ -566,4 +566,5 @@ Workflows
    stitch
    stitch_results
    uid2
+   usage
    workflows
