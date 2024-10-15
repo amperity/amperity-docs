@@ -824,7 +824,7 @@ This section contains settings that are unique to Criteo Retail Media.
 
 .. setting-criteo-account-id-start
 
-The account ID for the account in |destination-name| to which Amperity will send audiences.
+The account ID for the account in |destination-name| to which Amperity will send audience segments.
 
 .. setting-criteo-account-id-end
 
@@ -832,7 +832,7 @@ The account ID for the account in |destination-name| to which Amperity will send
 
 .. setting-criteo-retailer-id-start
 
-The retailer ID that is associated with the account in |destination-name| to which Amperity will send audiences.
+The retailer ID that is associated with the account in |destination-name| to which Amperity will send audience segments.
 
 .. setting-criteo-retailer-id-end
 
@@ -842,10 +842,10 @@ The retailer ID that is associated with the account in |destination-name| to whi
 
 The identifier type. May be set to "Email", "UserIdentifier", "IdentityLink", or "CustomerID".
 
-* Use "Email" to build audiences using email addresses.
-* Use "UserIdentifier" to build audiences using a unique identifier provided by your brand.
-* Use "IdentityLink" to build audiences using LiveRamp identity graph data.
-* Use "CustomerID" to build audiences using Criteo Retail Media-managed customer lists.
+* Use "Email" to build audience segments using email addresses.
+* Use "UserIdentifier" to build audience segments using a unique identifier provided by your brand.
+* Use "IdentityLink" to build audience segments using LiveRamp identity graph data.
+* Use "CustomerID" to build audience segments using Criteo Retail Media-managed customer lists.
 
 .. setting-criteo-identifier-type-end
 
