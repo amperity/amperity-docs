@@ -33,6 +33,7 @@ Site Index
    destination-camelot-smm
    destination-cordial
    destination-criteo
+   destination-criteo-retail-media
    destination-cross-country-computer
    destination-epsilon-abacus
    destination-epsilon-conversant

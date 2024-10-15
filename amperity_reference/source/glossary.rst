@@ -1133,6 +1133,14 @@ C
       :end-before: .. term-criteo-end
 
 
+.. _c-criteo-retail-media:
+
+**Criteo Retail Media**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-criteo-retail-media-start
+      :end-before: .. term-criteo-retail-media-end
+
+
 .. _c-cron:
 
 **cron**
@@ -2083,6 +2091,14 @@ G
    .. include:: ../../shared/terms.rst
       :start-after: .. term-google-customer-match-start
       :end-before: .. term-google-customer-match-end
+
+
+.. _g-google-enhanced-conversions:
+
+**Google Enhanced Conversions**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-google-enhanced-conversions-start
+      :end-before: .. term-google-enhanced-conversions-end
 
 
 .. _g-google-pubsub:

@@ -1596,6 +1596,15 @@ Criteo is a commerce media platform that helps marketers and media owners manage
 .. term-criteo-end
 
 
+**Criteo Retail Media**
+
+.. term-criteo-retail-media-start
+
+Criteo Retail Media allows marketers to build audiences in Criteo using their own first-party data, and then monetize those audiences by allowing others to use those audiences for their own marketing campaigns.
+
+.. term-criteo-retail-media-end
+
+
 **cron**
 
 .. term-cron-start
@@ -2960,6 +2969,15 @@ Google Customer Match uses first-party data that your customers have shared with
 Looker is an enterprise platform for business intelligence, data applications, and embedded analytics.
 
 .. term-google-looker-end
+
+
+**Google Enhanced Conversions**
+
+.. term-google-enhanced-conversions-start
+
+Google Enhanced Conversions improves the accuracy of conversion measurement by sending hashed first-party conversion data to Google using one-way SHA-256 hashing of first-party customer data.
+
+.. term-google-enhanced-conversions-end
 
 
 **Google Play**

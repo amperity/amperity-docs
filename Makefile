@@ -1,6 +1,6 @@
 BUILDDIR = build
-BUILD_COMMAND = sphinx-build -b html --jobs auto -W
-BUILD_HELP_COMMAND = sphinx-build -b text -W
+BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
+BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
 
 all: base ampiq amp360 datagrid reference api help modals contributing
 

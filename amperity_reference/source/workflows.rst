@@ -495,13 +495,44 @@ Context-specific resolutions
 
 Many workflows have context-specific resolutions that depend on upstream and downstream tasks within the workflow, but also may depend on steps that occur upstream or downstream from Amperity. It is impossible to predict the exact workflow steps that may be shown for any particular workflow action. In addition to :ref:`the most common workflow resolutions <workflows-common>`, and depending on the workflow, you may see any of the following context-specific workflow actions:
 
-* :ref:`Campaigns <workflows-context-campaigns>`
-* :ref:`Courier groups <workflows-context-courier-groups>`
-* :ref:`Databases <workflows-context-databases>`
-* :ref:`Destinations <workflows-context-destinations>`
-* :ref:`Scheduled orchestration groups <workflows-context-scheduled>`
-* :ref:`Sources <workflows-context-sources>`
-* :ref:`Stitch <workflows-context-stitch>`
+.. grid:: 2
+   :gutter: 3
+   :padding: 1
+
+   .. grid-item-card:: Campaigns
+      :link: workflows-context-campaigns
+      :link-type: ref
+      :shadow: sm
+
+   .. grid-item-card:: Courier groups
+      :link: workflows-context-courier-groups
+      :link-type: ref
+      :shadow: sm
+
+   .. grid-item-card:: Databases
+      :link: workflows-context-databases
+      :link-type: ref
+      :shadow: sm
+
+   .. grid-item-card:: Destinations
+      :link: workflows-context-destinations
+      :link-type: ref
+      :shadow: sm
+
+   .. grid-item-card:: Scheduled orchestration groups
+      :link: workflows-context-scheduled
+      :link-type: ref
+      :shadow: sm
+
+   .. grid-item-card:: Sources
+      :link: workflows-context-sources
+      :link-type: ref
+      :shadow: sm
+
+   .. grid-item-card:: Stitch
+      :link: workflows-context-stitch
+      :link-type: ref
+      :shadow: sm
 
 .. workflows-context-end
 
