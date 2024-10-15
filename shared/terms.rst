@@ -1596,6 +1596,15 @@ Criteo is a commerce media platform that helps marketers and media owners manage
 .. term-criteo-end
 
 
+**Criteo Retail Media**
+
+.. term-criteo-retail-media-start
+
+Criteo Retail Media allows marketers to build audiences in Criteo using their own first-party data, and then monetize those audiences by allowing others to use those audiences for their own marketing campaigns.
+
+.. term-criteo-retail-media-end
+
+
 **cron**
 
 .. term-cron-start

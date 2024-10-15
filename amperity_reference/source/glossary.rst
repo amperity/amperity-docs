@@ -1133,6 +1133,14 @@ C
       :end-before: .. term-criteo-end
 
 
+.. _c-criteo-retail-media:
+
+**Criteo Retail Media**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-criteo-retail-media-start
+      :end-before: .. term-criteo-retail-media-end
+
+
 .. _c-cron:
 
 **cron**
