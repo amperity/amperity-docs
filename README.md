@@ -20,3 +20,12 @@ From that page you may:
 1. Report an issue
 1. Request an update
 1. Suggest changes
+
+### Quick start using a Python Virtual Environment
+1. Clone the docs git repository
+2. Install serve if you don't have it by running ```brew install serve```
+3. Run ```python3 -m venv amperity-docs``` to create a new virtual env in the docs repository
+4. Navigate to the new virtual env and enable it by running ```cd amperity-docs && source bin/active```
+5. Install requirements by running ```pip install -r requirements.txt```
+
+This will keep all of the python requirements isolated to the virtual environment. If you ever have any issues with the repo delete the repository folder and re-run these instructions. 
