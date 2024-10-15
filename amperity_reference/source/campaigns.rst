@@ -19,10 +19,6 @@
 About campaigns
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-campaign-start
-   :end-before: .. term-campaign-end
-
 .. campaigns-overview-context-start
 
 Use the **Campaigns** page to build the audiences to which you want to send messages or offers. Configure the campaign to send those audiences to downstream marketing tools, such as email service providers, SMS providers, paid media, digital advertising, personalization, and more.
