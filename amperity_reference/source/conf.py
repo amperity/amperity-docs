@@ -46,7 +46,7 @@ sys.path.append(os.path.abspath('../../_ext'))
 # Cannot do this just yet:
 # extensions = ['sphinx.ext.todo', 'recommonmark']
 # because it breaks the search when RST and MD files are in the same location by truncating a SINGLE CHARACTER from the search result link :(
-extensions = ['sphinx.ext.todo']
+extensions = ['sphinx.ext.todo', 'sphinx_design']
 
 # autosummary_generate = True
 
@@ -153,6 +153,10 @@ html_favicon = "_static/favicon.png"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Path to custom CSS for sphinx-design library
+
+html_css_files = ['sphinx-design.css']
 
 # This setting overrides a version # stamp inserted at the bottom of every
 # page. It's just a hack, but it's the hack that achieves the desired behavior.
