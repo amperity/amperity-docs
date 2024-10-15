@@ -50,6 +50,12 @@ along with the following graphs:
 **Destinations**
    Shows the total number of destinations to which records are sent on a daily basis, along with the total number of destinations used.
 
+   .. image:: ../../images/usage-destinations.png
+      :width: 600 px
+      :alt: The Usage page shows the frequency at which data is sent to destinations.
+      :align: left
+      :class: no-scaled-link
+
 **Records**
    Shows the total number of records that are sent from Amperity on a daily basis, including how many records are sent to each type of connector, excluding records that are sent using Amperity Bridge.
 
