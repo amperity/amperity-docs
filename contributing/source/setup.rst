@@ -220,7 +220,8 @@ To set up your local authoring environment:
 
        .. code-block:: text
 
-          $ cd amperity-docs && source /bin/activate && pip install -r requirements.txt
+          $ cd amperity-docs && source /bin/activate \
+          && pip install -r requirements.txt
 
 
    * - .. image:: ../../images/steps-08.png
