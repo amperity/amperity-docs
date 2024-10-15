@@ -88,6 +88,7 @@ An inbound share is configured in a series of steps across Databricks and Amperi
 
 #. :ref:`Inbound prerequisites <bridge-inbound-share-prerequisites>`
 #. :ref:`Configure Databricks <bridge-inbound-share-configure-databricks>`
+#. :ref:`Configure subnet IDs <bridge-databricks-inbound-share-subnet-ids>` (Microsoft Azure only)
 #. :ref:`Add bridge <bridge-inbound-share-add-bridge>`
 
 .. bridge-inbound-share-links-end
@@ -161,7 +162,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :align: left
           :class: no-scaled-link
 
-     - The IP address for Amperity may need to be added to an allowlist.
+     - The IP address for Amperity may need to be added to an allowlist when :ref:`subnet IDs are not configured in a Microsoft Azure environment <bridge-databricks-inbound-share-subnet-ids>`.
 
        .. include:: ../../amperity_datagrid/source/send_data.rst
           :start-after: .. send-data-to-amperity-ip-allowlists-amperity-start
