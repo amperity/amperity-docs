@@ -12,6 +12,8 @@ The **Usage** dashboard shows usage within Amperity across a broad range of feat
 
 .. usage-overview-end
 
+.. _usage-time-period:
+
 **Configure the time period**
 
 .. usage-time-period-start
@@ -28,16 +30,16 @@ Activations
 
 .. usage-activations-start
 
-The **Activations** section in the **Usage** dashboard contains the following metrics and graphs:
+The **Activations** section in the **Usage** dashboard contains the following :ref:`time period-based <usage-time-period>` metrics:
 
 **Queries executed**
-   Shows the number of queries in the **Queries** tab have been run during the selected time period. This number is compared to the number of queries that were run in the previous time period.
+   Shows the number of queries in the **Queries** tab have been run during the selected time period. This number is compared to the number of queries that were run during the previous time period.
 
 **Segments available**
-   Shows the total number of segments that are available.
+   Shows the total number of segments that are available during the selected time period. This number is compared to the number of segments that were available during the previous time period.
 
 **Segments used**
-   Shows the total number of segments that have been used in a campaign---including delivered and scheduled campaigns---as of the last date in the selected time period.
+   Shows the total number of segments that have been used in a campaign---including delivered and scheduled campaigns---as of the last date in the selected time period. This number is compared to the number of segments that were used in campaigns during the previous time period.
 
 along with the following graphs:
 
