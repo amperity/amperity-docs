@@ -2066,7 +2066,7 @@ Delta Lake is an open source format that involves a metadata layer on top of col
 
 .. term-delta-sharing-start
 
-|ext_delta_sharing| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials to access individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
+|ext_delta_sharing| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
 
 .. term-delta-sharing-end
 
