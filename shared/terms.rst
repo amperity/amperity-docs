@@ -3175,15 +3175,6 @@ An inbound connection is a directional connection between Amperity Bridge and a 
 .. term-inbound-connection-end
 
 
-**inbound share**
-
-.. term-inbound-share-start
-
-An inbound share represents the configuration for how a shared dataset is made available from a lakehouse to Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
-
-.. term-inbound-share-end
-
-
 **Infutor**
 
 .. term-infutor-start
@@ -4533,15 +4524,6 @@ An order tax amount is the total amount of taxes that are associated with an ent
 An outbound connection is a directional connection between Amperity Bridge and a lakehouse that is shared between production and all sandboxes.
 
 .. term-outbound-connection-end
-
-
-**outbound share**
-
-.. term-outbound-share-start
-
-An outbound share represents the configuration for how a shared dataset is made available to a lakehouse from Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
-
-.. term-outbound-share-end
 
 
 **Outbrain**
