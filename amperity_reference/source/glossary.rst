@@ -2256,14 +2256,6 @@ I
       :end-before: .. term-inbound-connection-end 
 
 
-.. _i-inbound-share:
-
-**inbound share**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-inbound-share-start
-      :end-before: .. term-inbound-share-end
-
-
 .. _i-infutor:
 
 **Infutor**
@@ -3289,14 +3281,6 @@ O
    .. include:: ../../shared/terms.rst
       :start-after: .. term-outbound-connection-start
       :end-before: .. term-outbound-connection-end 
-
-
-.. _o-outbound-share:
-
-**outbound share**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-outbound-share-start
-      :end-before: .. term-outbound-share-end
 
 
 .. _o-overcluster:

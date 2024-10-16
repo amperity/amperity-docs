@@ -74,9 +74,7 @@ Inbound shares
    :start-after: .. term-bridge-start
    :end-before: .. term-bridge-end
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-inbound-share-start
-   :end-before: .. term-inbound-share-end
+An inbound share represents the configuration for how a shared dataset is made available from a lakehouse to Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
 
 .. bridge-inbound-share-start
 
@@ -406,9 +404,7 @@ Outbound shares
    :start-after: .. term-bridge-start
    :end-before: .. term-bridge-end
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-outbound-share-start
-   :end-before: .. term-outbound-share-end
+An outbound share represents the configuration for how a shared dataset is made available to a lakehouse from Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
 
 .. bridge-outbound-share-start
 

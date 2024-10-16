@@ -1041,7 +1041,7 @@ Braze is a leading marketing automation platform that allows users to create cus
 
 .. term-bridge-start
 
-A bridge represents a connection between Amperity and an external lakehouse. Each bridge may be configured for one inbound and one outbound connection.
+Amperity Bridge allows your brand to configure a bi-directional connection between Amperity and your data lakehouse.
 
 .. term-bridge-end
 
@@ -2066,7 +2066,7 @@ Delta Lake is an open source format that involves a metadata layer on top of col
 
 .. term-delta-sharing-start
 
-|ext_delta_sharing| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials to access individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
+|ext_delta_sharing| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
 
 .. term-delta-sharing-end
 
@@ -3173,15 +3173,6 @@ An inactive customer is one whose likelihood of returning to make another purcha
 An inbound connection is a directional connection between Amperity Bridge and a lakehouse that is shared between production and all sandboxes.
 
 .. term-inbound-connection-end
-
-
-**inbound share**
-
-.. term-inbound-share-start
-
-An inbound share represents the configuration for how a shared dataset is made available from a lakehouse to Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
-
-.. term-inbound-share-end
 
 
 **Infutor**
@@ -4533,15 +4524,6 @@ An order tax amount is the total amount of taxes that are associated with an ent
 An outbound connection is a directional connection between Amperity Bridge and a lakehouse that is shared between production and all sandboxes.
 
 .. term-outbound-connection-end
-
-
-**outbound share**
-
-.. term-outbound-share-start
-
-An outbound share represents the configuration for how a shared dataset is made available to a lakehouse from Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
-
-.. term-outbound-share-end
 
 
 **Outbrain**
