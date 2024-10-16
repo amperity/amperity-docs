@@ -1041,7 +1041,7 @@ Braze is a leading marketing automation platform that allows users to create cus
 
 .. term-bridge-start
 
-A bridge represents a connection between Amperity and an external lakehouse. Each bridge may be configured for one inbound and one outbound connection.
+Amperity Bridge allows your brand to configure a bi-directional connection between Amperity and your data lakehouse.
 
 .. term-bridge-end
 
