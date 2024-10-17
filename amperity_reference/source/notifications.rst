@@ -214,6 +214,16 @@ A message is shown that describes the error, such as:
 .. notifications-type-errors-context-end
 
 
+.. _notifications-type-errors-download-logs:
+
+Download ingest error logs
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_reference/source/feeds.rst
+   :start-after: .. feed-troubleshoot-ingest-errors-start
+   :end-before: .. feed-troubleshoot-ingest-errors-end
+
+
 .. _notifications-fields:
 
 Notification fields
