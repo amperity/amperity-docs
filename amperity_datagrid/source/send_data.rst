@@ -151,6 +151,16 @@ Amperity can ingest data from many types of data sources, such as:
 .. send-data-to-amperity-file-format-other-end
 
 
+.. _send-data-to-amperity-file-format-troubleshoot:
+
+Troubleshoot file ingest errors
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/feeds.rst
+   :start-after: .. feed-troubleshoot-ingest-errors-start
+   :end-before: .. feed-troubleshoot-ingest-errors-end
+
+
 .. _send-data-to-amperity-pull-vs-push:
 
 Pull vs. Push

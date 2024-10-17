@@ -400,15 +400,19 @@ Troubleshoot ingest errors
 
 .. feed-troubleshoot-ingest-errors-start
 
-When a file shows an error on ingest you can troubleshoot those errors by downloading error log CSV files from the **Ingest Details** page. There are two types of log files:
+When a file shows an error on ingest you can troubleshoot those errors by downloading CSV files that contain error logs from the **Ingest Details** page.
+
+The **Ingest Details** page is accessible from the **Recent activity** pane in the **Sources** page. Error logs are only available for download when errors are present.
+
+There are two types of error log files:
 
 #. A feed-level log file that describes the types and frequency of errors.
 
-   Open the actions menu (|fa-kebab|) for the feed, and then click **Download feed error log**.
+   From the **Ingest Details** page, open the actions menu (|fa-kebab|) for the feed, and then click **Download feed error log**.
 
 #. A file-level log that describes each error.
 
-   Expand the table row to show the file. Open the actions menu (|fa-kebab|) for the file, and then click **Download file error log**.
+   From the **Ingest Details** page, expand the table row to show the file, open the actions menu (|fa-kebab|) for the file, and then click **Download file error log**.
 
 .. feed-troubleshoot-ingest-errors-end
 

@@ -461,9 +461,27 @@ In addition to email, phone number and physical address can be used to identify 
 
 .. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in source tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
 
-Custom fields can also be used to identify records. If the inbound request table is tagged with the **compliance/request-custom-key** semantic, the values in there will be checked against any source table that has a field tagged with the **compliance/custom-field** semantic.
-
 .. privacy-rights-semantic-tag-find-records-end
+
+
+.. _privacy-rights-semantic-tag-custom-keys:
+
+Use custom keys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. privacy-rights-semantic-tag-custom-keys-start
+
+Custom fields can also be used for case-sensitive matching on records. When the inbound request table is tagged with the **compliance/request-custom-key** semantic, the values in that field will be checked against any source table that has a field tagged with the **compliance/custom-key** semantic.
+
+You may the following custom key pairs:
+
+::
+
+   compliance/custom-key and compliance/request-custom-key
+   compliance/custom-key-2 and compliance/request-custom-key-2
+   compliance/custom-key-3 and compliance/request-custom-key-3
+
+.. privacy-rights-semantic-tag-custom-keys-end
 
 
 .. _privacy-rights-semantic-tag-find-fields:

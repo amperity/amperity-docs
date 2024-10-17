@@ -57,7 +57,7 @@ A query that returns a collection offline events for use in |destination-name| i
 
 .. code-block:: sql
 
-   SELECT 
+   SELECT
      c360.amperity_id AS external_id
      ,c360.email AS email
      ,c360.phone AS phone
@@ -75,11 +75,10 @@ A query that returns a collection offline events for use in |destination-name| i
      ,uit.order_datetime AS timestamp
      ,CAST(uit.item_revenue / uit.item_quantity AS DOUBLE) AS price
      ,'USD' AS currency
-     ,action_source AS 'physical_store'
+     ,'physical_store' AS action_source 
    FROM Unified_Itemized_Transactions uit
    LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
-   GROUP BY order_id
 
 The query **MUST** contain the following fields: **external_id**, **order_id**, **quantity**, **email** (OR **phone**), **timestamp**, **price**, and **currency**. When **action_source** is not specified the default value is "physical_store".
 
