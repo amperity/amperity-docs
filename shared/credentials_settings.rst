@@ -1886,7 +1886,7 @@ An `organization <https://docs.snowflake.com/en/user-guide/organizations>`__ is 
 
 .. credential-snowflake-region-start
 
-The `region <https://docs.snowflake.com/en/user-guide/intro-regions>`__ in which your |destination-name| account is hosted.
+The `region <https://docs.snowflake.com/en/user-guide/intro-regions>`__ |ext_link| in which your |destination-name| account is hosted. Use the `CURRENT_REGION <https://docs.snowflake.com/en/sql-reference/functions/current_region>`__ |ext_link| argument in |destination-name| to return the value for your region.
 
 .. credential-snowflake-region-end
 
