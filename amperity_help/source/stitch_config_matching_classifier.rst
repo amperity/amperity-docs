@@ -2,6 +2,6 @@
 
 .. tooltip-stitch-config-matching-classifier-start
 
-Amperity prioritizes foreign key matching over separation key unmatching. This determines how Amperity applies the results of your blocking strategies when foreign keys are present. You may prioritize separation key unmatching over foreign key matching.
+Amperity prioritizes separation key unmatching over foreign key matching. This determines how Amperity applies the results of your blocking strategies when foreign keys are present. You may prioritize foreign key matching over separation key unmatching.
 
 .. tooltip-stitch-config-matching-classifier-end
