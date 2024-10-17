@@ -473,7 +473,7 @@ Use custom keys
 
 Custom fields can also be used for case-sensitive matching on records. When the inbound request table is tagged with the **compliance/request-custom-key** semantic, the values in that field will be checked against any source table that has a field tagged with the **compliance/custom-key** semantic.
 
-You may use more than one custom key semantic pair. For example:
+You may use more than one custom key semantic pair by appending a sequential numeric value to each custom key pair. For example:
 
 ::
 
