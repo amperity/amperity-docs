@@ -477,6 +477,7 @@ You may the following custom key pairs:
 
 ::
 
+   compliance/custom-key and compliance/request-custom-key
    compliance/custom-key-2 and compliance/request-custom-key-2
    compliance/custom-key-3 and compliance/request-custom-key-3
 
