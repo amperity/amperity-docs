@@ -241,7 +241,7 @@ Matching strategy
 
 The matching strategy classifier tells Stitch how to apply the results of the blocking strategies, including which groups to analyze and the order in which that analysis should take place, when foreign keys and separation keys are present.
 
-The default behavior :ref:`prioritizes foreign keys over separation keys <semantics-key-foreign-prioritize-matching>`.
+The default behavior :ref:`prioritizes separation keys over foreign keys <semantics-key-separation-prioritize-unmatching>`.
 
 .. configure-stitch-general-clustering-matching-strategy-end
 
