@@ -1470,7 +1470,7 @@ The matching strategy classifier tells Amperity how to apply the results of bloc
 
 .. semantics-key-separation-prioritize-unmatching-default-start
 
-The default behavior :ref:`prioritizes foreign key matching <semantics-key-foreign-prioritize-matching>`. Amperity derives separation keys for **sk-given-name** and **sk-generational-suffix**. You may configure Amperity to prioritize separation keys over foreign keys.
+The default behavior :ref:`prioritizes separation key unmatching <semantics-key-separation-prioritize-unmatching>`. Amperity derives separation keys for **sk-given-name** and **sk-generational-suffix**. You may configure Amperity to prioritize foreign keys over separation keys.
 
 .. semantics-key-separation-prioritize-unmatching-default-end
 
