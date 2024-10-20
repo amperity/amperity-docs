@@ -149,7 +149,10 @@ div.document {
   background-image: url(contents.png);
   background-repeat: repeat-x;
   max-width: 1295px;
-  margin: 0 auto;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
   width: 100%; }
 
 /* -- the vertical line between the topics and the TOC */
@@ -212,8 +215,6 @@ div.sphinxsidebarwrapper > ul > li {
 
 div.sphinxsidebar {
   display: none;
-  position: relative;
-  z-index: 1;
   margin: 0;
   padding: 0.5em 15px 15px 0;
   width: 275px;
@@ -4228,9 +4229,11 @@ nav.nav-main {
   width: 100%;
   min-height: 64px;
   margin-bottom: -3px;
-  vertical-align: middle;
   background: #0c0c0c;
-  border-bottom: 3px solid white; }
+  border-bottom: 3px solid white;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
   nav.nav-main h1 {
     margin: 0;
     padding: 15px 0 0 20px;
@@ -4246,7 +4249,7 @@ nav.nav-main {
       color: #0c0c0c; }
   @media (min-width: 1060px) {
     nav.nav-main {
-      position: relative;
+      position: fixed;
       padding: 11px 20px; }
       nav.nav-main h1 {
         padding: 0px 0; } }
@@ -4569,7 +4572,6 @@ svg.svg-inline--fa.fa-search.fa-w-16.icon-search {
     padding-left: 260px; } }
 .nav-docs {
   position: absolute;
-  z-index: 40;
   top: 0;
   margin-top: 10px;
   width: 100%;
