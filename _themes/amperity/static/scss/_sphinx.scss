@@ -62,7 +62,10 @@ div.document {
     background-image: url(contents.png);
     background-repeat: repeat-x;
     max-width: 1295px;
-    margin: 0 auto;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
     width: 100%;
 }
 
@@ -147,8 +150,8 @@ div.sphinxsidebarwrapper > ul > li {
 
 div.sphinxsidebar {
     display: none;
-    position: relative;
-    z-index: 1;
+//    position: relative;
+//    z-index: 1;
     margin: 0;
     padding: 0.5em 15px 15px 0;
     width: 275px;

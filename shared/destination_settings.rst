@@ -1266,7 +1266,7 @@ This section contains settings that are unique to Mailchimp.
 
 .. setting-mailchimp-data-center-start
 
-TEMP: "The data center to used to talk to the Mailchimp API"
+The data center ID. This is appended to the API key after the hyphen.
 
 .. setting-mailchimp-data-center-end
 
@@ -1274,10 +1274,25 @@ TEMP: "The data center to used to talk to the Mailchimp API"
 
 .. setting-mailchimp-list-id-start
 
-TEMP: "The id of the list to insert members"
+The audience ID to which Amperity will write. (This is sometimes referred to as the list ID.)
 
 .. setting-mailchimp-list-id-end
 
+**List name**
+
+.. setting-mailchimp-list-name-start
+
+The name of the list that will be managed by Amperity in |destination-name|.
+
+.. setting-mailchimp-list-name-end
+
+**Tag name**
+
+.. setting-mailchimp-tag-name-start
+
+A |ext_mailchimp_tags| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it will be associated to all audience members added by Amperity.
+
+.. setting-mailchimp-tag-name-end
 
 
 
@@ -1492,15 +1507,37 @@ This section contains settings that are unique to Oracle Eloqua.
 
 **Audience primary key**
 
-See common settings.
+.. setting-oracle-eloqua-audience-primary-key-start
+
+The primary key for the shared list: **C_EmailAddress**.
+
+An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list.
+
+Additional attributes may be sent. Some must be mapped to the |ext_oracle_eloqua_shared_lists_defaults|; |ext_oracle_eloqua_shared_lists_custom| may be defined.
+
+.. setting-oracle-eloqua-audience-primary-key-end
 
 **Shared list name**
 
 .. setting-oracle-eloqua-shared-list-name-start
 
-TEMP: "The shared list name in Eloqua to update. It will be created if it doesn't currently exist"
+The name of the shared list to be managed by Amperity.
+
+Use filename templates to configure Amperity to support managing more than one shared list. For example:
+
+* A timestamp at the end of a filename template---**Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv**---will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
+* A campaign that is configured only for campaign name and group name---**{{ campaign_name }} - {{ group_name }}**---will update the same shared list each time the audience is sent from Amperity.
 
 .. setting-oracle-eloqua-shared-list-name-end
+
+.. setting-oracle-eloqua-shared-list-name-caution-start
+
+You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
+
+This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This will generate the database name, which is typically (but not always) prefixed with **C_**.
+
+.. setting-oracle-eloqua-shared-list-name-caution-end
+
 
 
 

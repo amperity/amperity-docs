@@ -13,9 +13,12 @@ nav.nav-main {
   width: 100%;
   min-height: 64px;
   margin-bottom: -3px;
-  vertical-align: middle;
+//  vertical-align: middle;
   background: $amperity-brand-off-black;
   border-bottom: $nav-border;
+  position: fixed;
+  top: 0;
+  z-index: 1;
   h1 {
     margin: 0;
     padding: 15px 0 0 20px;
@@ -33,7 +36,7 @@ nav.nav-main {
     }
   }
   @media (min-width: $nav-breakpoint) {
-    position: relative;
+    position: fixed;
     padding: 11px 20px;
     h1 {
       padding: 0px 0;
