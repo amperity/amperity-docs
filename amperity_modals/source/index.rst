@@ -35,6 +35,7 @@ Site Index
    destination-criteo
    destination-criteo-retail-media
    destination-cross-country-computer
+   destination-eloqua
    destination-epsilon-abacus
    destination-epsilon-conversant
    destination-epsilon-targeting
@@ -47,7 +48,9 @@ Site Index
    destination-kibo
    destination-klaviyo
    destination-koupon-media
+   destination-listrak
    destination-liveramp
+   destination-mailchimp
    destination-neustar
    destination-oracle-data-cloud
    destination-oracle-responsys

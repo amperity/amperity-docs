@@ -1170,37 +1170,27 @@ See SFTP.
 
 **LISTRAK**
 
-xxxxx
+**Allowlist callout**
 
-**Email client ID**
+.. credential-listrak-allowlist-start
 
-.. credential-listrak-email-client-id-start
+The Amperity |ext_amperity_allowlist_ip_address| must be added to the allowlist for the |destination-name| integration.
 
-xxxxx
+.. credential-listrak-allowlist-end
 
-.. credential-listrak-email-client-id-end
+**Email client ID and client secret**
 
-**Email client secret**
+.. credential-listrak-email-client-id-secret-start
 
-.. credential-listrak-email-client-secret-start
+A client ID and secret for an email integration that is already set up in |destination-name|.
 
-xxxxx
+.. credential-listrak-email-client-id-secret-end
 
-.. credential-listrak-email-client-secret-end
-
-**SMS client ID**
-
-.. credential-listrak-sms-client-id-start
-
-xxxxx
-
-.. credential-listrak-sms-client-id-end
-
-**SMS client secret**
+**SMS client ID and client secret**
 
 .. credential-listrak-sms-client-secret-start
 
-xxxxx
+A client ID and secret for an SMS integration that is already set up in |destination-name|.
 
 .. credential-listrak-sms-client-secret-end
 
@@ -1228,13 +1218,11 @@ See SFTP.
 
 **MAILCHIMP**
 
-xxxxx
-
 **API key**
 
 .. credential-mailchimp-api-key-start
 
-xxxxx
+Required. The API key for your |destination-name| account.
 
 .. credential-mailchimp-api-key-end
 
@@ -1461,13 +1449,11 @@ See SFTP.
 
 **ORACLE ELOQUA**
 
-xxxxx
-
 **Company name**
 
 .. credential-oracle-eloqua-company-name-start
 
-xxxxx
+The name of your company, as used within your |destination-name| account.
 
 .. credential-oracle-eloqua-company-name-end
 
@@ -1475,7 +1461,7 @@ xxxxx
 
 .. credential-oracle-eloqua-password-start
 
-xxxxx
+The password associated with the |destination-name| username.
 
 .. credential-oracle-eloqua-password-end
 
