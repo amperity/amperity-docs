@@ -419,10 +419,6 @@ The following data sources may be configured to run as part of a courier group w
 Bridge syncs
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-bridge-start
-   :end-before: .. term-bridge-end
-
 .. courier-groups-bridge-syncs-start
 
 Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`quickly configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give your brand access to shared tables without replication.
