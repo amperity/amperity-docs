@@ -31,9 +31,11 @@ Send audiences to Adobe Marketo
    :start-after: .. channels-overview-list-intro-start
    :end-before: .. channels-overview-list-intro-end
 
-.. include:: ../../amperity_datagrid/source/destination_adobe_marketo.rst
-   :start-after: .. destination-adobe-marketo-api-note-start
-   :end-before: .. destination-adobe-marketo-api-note-end
+.. note::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-adobe-marketo-list-name-membership-start
+      :end-before: .. setting-adobe-marketo-list-name-membership-end
 
 .. channel-adobe-marketo-build-campaign-what-columns-start
 

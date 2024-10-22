@@ -51,6 +51,10 @@ Site Index
    destination-listrak
    destination-liveramp
    destination-mailchimp
+   destination-marketo
+   destination-meta-offline-events
+   destination-microsoft-dataverse
+   destination-microsoft-ads
    destination-neustar
    destination-oracle-data-cloud
    destination-oracle-responsys

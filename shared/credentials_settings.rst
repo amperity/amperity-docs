@@ -281,8 +281,6 @@ You may experience rate limits when sending very large audience lists to the Ado
 
 * API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
 
-It is possible for Adobe Marketo to contain multiple audience lists with identical names. If the Adobe Marketo API returns more than one audience list, Amperity will update the first audience in that list.
-
 .. credential-adobe-market-api-limits-end
 
 **Client ID**
@@ -336,16 +334,9 @@ See SFTP.
 
 **AMAZON ADS**
 
-xxxxx
-
-
 **OAuth flow**
 
-.. credential-amazon-ads-oauth-start
-
-xxxxx
-
-.. credential-amazon-ads-oauth-end
+See "OAuth common flows".
 
 
 
@@ -1026,15 +1017,9 @@ See OAuth common.
 
 **GOOGLE ANALYTICS** / **GOOGLE ANALYTICS 4**
 
-xxxxx
-
 **OAuth flow**
 
-.. credential-google-analytics-4-oauth-start
-
-xxxxx
-
-.. credential-google-analytics-4-oauth-end
+See "OAuth common flows".
 
 
 
@@ -1232,15 +1217,9 @@ Required. The API key for your |destination-name| account.
 
 **META ADS MANAGER**
 
-xxxxx
-
 **OAuth flow**
 
-.. credential-meta-ads-manager-oauth-start
-
-xxxxx
-
-.. credential-meta-ads-manager-oauth-end
+See "OAuth common flows".
 
 
 
@@ -1248,15 +1227,9 @@ xxxxx
 
 **META ADS MANAGER: OFFLINE EVENTS**
 
-xxxxx
-
 **OAuth flow**
 
-.. credential-meta-ads-manager-offline-events-oauth-start
-
-xxxxx
-
-.. credential-meta-ads-manager-offline-events-oauth-end
+See "OAuth common flows".
 
 
 
@@ -1264,15 +1237,9 @@ xxxxx
 
 **MICROSOFT ADVERTISING**
 
-xxxxx
-
 **OAuth flow**
 
-.. credential-microsoft-advertising-oauth-start
-
-xxxxx
-
-.. credential-microsoft-advertising-oauth-end
+See "OAuth common flows".
 
 
 
@@ -1280,31 +1247,27 @@ xxxxx
 
 **MICROSOFT DATAVERSE**
 
-xxxxx
+.. credential-microsoft-dataverse-requirements-start
+
+Microsoft Azure must be configured for your Power Apps application, after which your Power Apps application must be added to the Microsoft Power Platform.
+
+.. credential-microsoft-dataverse-requirements-end
 
 **Azure tenant ID**
 
 .. credential-microsoft-dataverse-azure-tenant-id-start
 
-xxxxx
+The Microsoft Azure tenant ID for your instance of |destination-name|.
 
 .. credential-microsoft-dataverse-azure-tenant-id-end
 
-**Azure client ID**
+**Azure client ID and client secret**
 
-.. credential-microsoft-dataverse-azure-client-id-start
+.. credential-microsoft-dataverse-azure-client-id-and-secret-start
 
-xxxxx
+A client ID and client secret for Microsoft Azure that has permission to access your instance of |destination-name|.
 
-.. credential-microsoft-dataverse-azure-client-id-end
-
-**Azure client secret**
-
-.. credential-microsoft-dataverse-azure-client-secret-start
-
-xxxxx
-
-.. credential-microsoft-dataverse-azure-client-secret-end
+.. credential-microsoft-dataverse-azure-client-id-and-secret-end
 
 
 

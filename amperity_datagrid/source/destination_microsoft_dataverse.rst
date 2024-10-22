@@ -381,7 +381,7 @@ Add data template
           :class: no-scaled-link
      - Under **Template Settings**, verify all template settings and make any required updates.
 
-       * **Dataverse Table Logical Name** The table name in Microsoft Dataverse. This is the table to which the connector will write data. For example: "abc123_customers"..
+       * **Dataverse Table Logical Name** The table name in Microsoft Dataverse. This is the table to which the connector will write data. For example: "abc123_customers".
 
        .. important:: Select **Truncate?** to truncate the table before loading data.
 

@@ -37,13 +37,11 @@ Send data to Adobe Marketo
    :start-after: .. term-adobe-marketo-start
    :end-before: .. term-adobe-marketo-end
 
-.. destination-adobe-marketo-api-note-start
+.. note::
 
-.. note:: Amperity uses the |destination-name| API to update the membership of audience lists in |destination-name| to match the membership of audience lists that are sent from Amperity. The membership of the list in |destination-name| will be updated to match the membership of the audience list that is sent from Amperity. Amperity will add a user when they do not exist in |destination-name|.
-
-   Amperity does not maintain smart lists and does not remove users from the |destination-name| database.
-
-.. destination-adobe-marketo-api-note-end
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-adobe-marketo-list-name-membership-start
+      :end-before: .. setting-adobe-marketo-list-name-membership-end
 
 .. destination-adobe-marketo-steps-to-send-start
 
