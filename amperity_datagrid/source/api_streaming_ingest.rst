@@ -541,7 +541,7 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 
    Specify the **File format**, which can be |format_xml|, |format_json|, or |format_ndjson|.
 
-   Set the **File tag**. This must be identical to the file tag within the load operation, but prefixed with a colon ``:``.
+   Set the **File tag**. This must be identical to the file tag within the load operation.
    
    Enter the **File pattern prefix**, which is useful for time based ingestion of streaming data. This setting may be configured to load data on an hourly basis. Possible values range from ``00`` - ``24``, each of which represents an hour in a 24 hour window. For example, use ``00`` to load data at 12:00 AM, ``08`` to load data at 8:00 AM, or ``12`` to load data at 12:00 PM. A courier may only be configured to use a single file pattern prefix.
    
