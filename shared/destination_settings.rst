@@ -467,6 +467,20 @@ Required. The name of the audience list that is managed by Amperity.
 
 .. setting-adobe-marketo-list-name-end
 
+.. setting-adobe-marketo-list-name-first-audience-start
+
+It is possible for Adobe Marketo to contain multiple audience lists with identical names. If the Adobe Marketo API returns more than one audience list, Amperity will update the first audience in that list.
+
+.. setting-adobe-marketo-list-name-first-audience-end
+
+.. setting-adobe-marketo-list-name-membership-start
+
+Amperity uses the |destination-name| API to update the membership of audience lists in |destination-name| to match the membership of audience lists that are sent from Amperity. The membership of the list in |destination-name| will be updated to match the membership of the audience list that is sent from Amperity. Amperity will add a user when they do not exist in |destination-name|.
+
+Amperity does not maintain smart lists and does not remove users from the |destination-name| database.
+
+.. setting-adobe-marketo-list-name-membership-end
+
 **Program name**
 
 .. setting-adobe-marketo-program-name-start
@@ -1337,7 +1351,9 @@ This section contains settings that are unique to Meta Ads Manager: Offline Even
 
 .. setting-meta-ads-manager-dataset-id-start
 
-TEMP: "The dataset to associate your offline events with."
+|ext_facebook_dataset| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+
+A |ext_facebook_dataset_create| in |destination-name| to support sending send offline events from Amperity.
 
 .. setting-meta-ads-manager-dataset-id-end
 
@@ -1349,26 +1365,35 @@ TEMP: "The dataset to associate your offline events with."
 
 This section contains settings that are unique to Microsoft Advertising.
 
-**Account ID**
+**Account and customer IDs**
 
-.. setting-microsoft-advertising-account-id-start
+.. setting-microsoft-advertising-account-and-customer-ids-start
 
-TEMP: "Microsoft Ads account ID"
+To get your customer and account IDs, sign into the Microsoft Advertising web application, and then click on the Campaigns page. The URL for the Campaigns page will contain two key-value pairs, one for the customer ID and the other for the account ID.
 
-.. setting-microsoft-advertising-account-id-end
+The URL is similar to:
+
+https://ui.ads.microsoft.com/campaign
+/Campaigns.m?cid=12345678&aid=9876543
+21#/customer/...
+
+The customer ID is the number in the URL that follows the cid parameter. For example: "12345678".
+
+The account ID is the number in the URL that follows the aid parameter. For example: "987654321".
+
+.. setting-microsoft-advertising-account-and-customer-ids-end
 
 **Audience primary key**
 
 See common settings.
 
-**Customer ID**
+**List name**
 
-.. setting-microsoft-advertising-customer-id-start
+.. setting-microsoft-advertising-list-name-start
 
-TEMP: "Customer ID for the Microsoft Ads account"
+The name of the list to be managed in Microsoft Advertising.
 
-.. setting-microsoft-advertising-customer-id-end
-
+.. setting-microsoft-advertising-list-name-end
 
 
 
@@ -1381,7 +1406,7 @@ This section contains settings that are unique to Microsoft Dataverse.
 
 .. setting-microsoft-dataverse-table-logical-name-start
 
-TEMP: "xxxxx"
+The table name in |destination-name|. This is the table to which the connector will write data. For example: "abc123_customers".
 
 .. setting-microsoft-dataverse-table-logical-name-end
 
@@ -1389,7 +1414,7 @@ TEMP: "xxxxx"
 
 .. setting-microsoft-dataverse-powerapps-name-start
 
-TEMP: "xxxxx"
+The environment name for your Power Apps application. For example: "socktown".
 
 .. setting-microsoft-dataverse-powerapps-name-end
 
@@ -1397,7 +1422,7 @@ TEMP: "xxxxx"
 
 .. setting-microsoft-dataverse-powerapps-region-start
 
-TEMP: "xxxxx"
+The environment region for your Power Apps application. For example: "crm".
 
 .. setting-microsoft-dataverse-powerapps-region-end
 
@@ -1405,7 +1430,7 @@ TEMP: "xxxxx"
 
 .. setting-microsoft-dataverse-truncate-table-start
 
-TEMP: "xxxxx"
+Select **Truncate?** to truncate the table before loading data.
 
 .. setting-microsoft-dataverse-truncate-table-end
 
