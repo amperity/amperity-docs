@@ -2,9 +2,9 @@
 .. https://docs.amperity.com/datagrid/
 .. 
 
-.. |destination-name| replace:: Criteo
+.. |destination-name| replace:: Criteo Audience API
 .. |destination-api| replace:: Criteo API
-.. |plugin-name| replace:: Criteo
+.. |plugin-name| replace:: Criteo Audience API
 .. |credential-type| replace:: **criteo**
 .. |what-send| replace:: audience lists
 .. |email-plus-send| replace:: additional attributes
@@ -22,18 +22,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Criteo.
+        Configure Amperity to send data to Criteo Audience API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Criteo.
+        Configure Amperity to send data to Criteo Audience API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Criteo
+        Send data to Criteo Audience API
 
 ==================================================
-Send data to Criteo
+Send data to Criteo Audience API
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -289,7 +289,7 @@ Add destination
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
           :width: 500 px
-          :alt: Settings for Criteo.
+          :alt: Settings for Criteo Audience API.
           :align: left
           :class: no-scaled-link
 

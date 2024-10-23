@@ -77,6 +77,10 @@ A sandbox is a copy of your production tenant in which you can safely make confi
    :align: left
    :class: no-scaled-link
 
+.. admonition:: What isn't copied to a sandbox?
+
+   **Versioned table histories** A sandbox is a copy of your production tenant. A database in a sandbox needs to be run before the tables in that database will contain data. The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
+
 All sandbox workflows follow the same pattern: create a sandbox, make iterative changes in the sandbox, review and validate all changes, promote validated changes to production.
 
 .. list-table::
@@ -106,6 +110,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
        .. important:: Data is not moved between production and a sandbox. Configuration state is copied from production, and then applied to the sandbox.
 
+       .. tip:: If a sandbox is created while a Stitch run is in progress, wait for the Stitch run to finish in production before running the database in the sandbox. This will allow the database in the sandbox to use the most recent Stitch outputs in production for the initial database refresh in the sandbox.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -181,12 +186,26 @@ Best practices
 
 Amperity recommends the following patterns when working with sandboxes:
 
+* :ref:`Activate queries <sandboxes-best-practice-activate-queries>`
 * :ref:`Continuous validation <sandboxes-best-practice-continuous-validation>`
 * :ref:`Data across environments <sandboxes-best-practice-data-across-environments>`
+* :ref:`Delete sandbox on promote <sandboxes-best-practice-delete-on-promote>`
 * :ref:`Run partial workflows <sandboxes-best-practice-partial-workflows>`
 * :ref:`Short-lived sandboxes <sandboxes-best-practice-short-lived>`
 
 .. sandboxes-best-practice-end
+
+
+.. _sandboxes-best-practice-activate-queries:
+
+Activate queries
+--------------------------------------------------
+
+.. sandboxes-best-practice-activate-queries-start
+
+Be sure to activate all queries that should be promoted from the sandbox to production. Any query in a draft state is not promoted.
+
+.. sandboxes-best-practice-activate-queries-end
 
 
 .. _sandboxes-best-practice-continuous-validation:
@@ -342,12 +361,6 @@ Delete a sandbox
 You can delete a sandbox from the list of sandboxes under **Sandboxes** on the **Users & Admin** page.
 
 .. sandboxes-howto-delete-sandbox-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/sandboxes.rst
-      :start-after: .. sandboxes-best-practice-delete-on-promote-start
-      :end-before: .. sandboxes-best-practice-delete-on-promote-end
 
 **To delete a sandbox**
 
