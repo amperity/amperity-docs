@@ -77,6 +77,10 @@ A sandbox is a copy of your production tenant in which you can safely make confi
    :align: left
    :class: no-scaled-link
 
+.. admonition:: What isn't copied to a sandbox?
+
+   **Versioned table histories** A sandbox is a copy of your production tenant. A database in a sandbox needs to be run before the tables in that database will contain data. The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
+
 All sandbox workflows follow the same pattern: create a sandbox, make iterative changes in the sandbox, review and validate all changes, promote validated changes to production.
 
 .. list-table::
@@ -181,12 +185,26 @@ Best practices
 
 Amperity recommends the following patterns when working with sandboxes:
 
+* :ref:`Activate queries <sandboxes-best-practice-activate-queries>`
 * :ref:`Continuous validation <sandboxes-best-practice-continuous-validation>`
 * :ref:`Data across environments <sandboxes-best-practice-data-across-environments>`
+* :ref:`Delete sandbox on promote <sandboxes-best-practice-delete-on-promote>`
 * :ref:`Run partial workflows <sandboxes-best-practice-partial-workflows>`
 * :ref:`Short-lived sandboxes <sandboxes-best-practice-short-lived>`
 
 .. sandboxes-best-practice-end
+
+
+.. _sandboxes-best-practice-activate-queries:
+
+Activate queries
+--------------------------------------------------
+
+.. sandboxes-best-practice-activate-queries-start
+
+Be sure to activate all queries that should be promoted from the sandbox to production. Any query in a draft state is not promoted.
+
+.. sandboxes-best-practice-activate-queries-end
 
 
 .. _sandboxes-best-practice-continuous-validation:
