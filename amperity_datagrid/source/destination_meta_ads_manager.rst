@@ -1369,6 +1369,16 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **website**
          Use when the offline conversion was made on a website.
 
+         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|; missing or empty values are filtered from the results.
+
+         * The value for **client_user_agent** must be the user agent for the browser corresponding to the event.
+
+         * The value for **event_id** is a unique advertiser ID.
+
+         * The value for **event_source_url** should be browser URL at which the event occurred.
+
+         **event_id** and **event_source_url** are `server event parameters <https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event/>`__ |ext_link| for the Conversions API.
+
        The value for **action_source** is used by the Conversions API to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the action source that best associates how your brand wants to use offline conversions within |destination-name|.
 
        When **action_source** is not specified the default value is "physical_store".
