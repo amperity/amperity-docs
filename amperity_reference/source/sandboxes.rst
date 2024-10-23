@@ -110,6 +110,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
        .. important:: Data is not moved between production and a sandbox. Configuration state is copied from production, and then applied to the sandbox.
 
+       .. tip:: If a sandbox is created while a Stitch run is in progress, wait for the Stitch run to finish in production before running the database in the sandbox. This will allow the database in the sandbox will use the most recent Stitch outputs in production for the initial database refresh in the sandbox.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
