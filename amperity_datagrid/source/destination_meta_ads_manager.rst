@@ -1373,7 +1373,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
          * The value for **client_user_agent** must be the user agent for the browser corresponding to the event.
 
-         * The value for **event_id** is a unique advertiser ID.
+         * The value for **event_id** is a unique string chosen by advertiser.
 
          * The value for **event_source_url** should be browser URL at which the event occurred.
 
