@@ -362,12 +362,6 @@ You can delete a sandbox from the list of sandboxes under **Sandboxes** on the *
 
 .. sandboxes-howto-delete-sandbox-end
 
-.. tip::
-
-   .. include:: ../../amperity_reference/source/sandboxes.rst
-      :start-after: .. sandboxes-best-practice-delete-on-promote-start
-      :end-before: .. sandboxes-best-practice-delete-on-promote-end
-
 **To delete a sandbox**
 
 .. sandboxes-howto-delete-sandbox-steps-start

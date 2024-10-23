@@ -60,9 +60,24 @@ Best practices
 
 .. TODO: Keep this header link the same as /reference/sandboxes.rst. A best practice must be added here if one is added to /reference/sandboxes.rst.
 
+Amperity recommends the following patterns when working with sandboxes:
+
+* :ref:`Activate queries <sandboxes-best-practice-activate-queries>`
+* :ref:`Continuous validation <sandboxes-best-practice-continuous-validation>`
+* :ref:`Data across environments <sandboxes-best-practice-data-across-environments>`
+* :ref:`Delete sandbox on promote <sandboxes-best-practice-delete-on-promote>`
+* :ref:`Run partial workflows <sandboxes-best-practice-partial-workflows>`
+* :ref:`Short-lived sandboxes <sandboxes-best-practice-short-lived>`
+
+
+.. _sandboxes-best-practice-activate-queries:
+
+Activate queries
+--------------------------------------------------
+
 .. include:: ../../amperity_reference/source/sandboxes.rst
-   :start-after: .. sandboxes-best-practice-start
-   :end-before: .. sandboxes-best-practice-end
+   :start-after: .. sandboxes-best-practice-activate-queries-start
+   :end-before: .. sandboxes-best-practice-activate-queries-end
 
 
 .. _sandboxes-best-practice-continuous-validation:
@@ -85,9 +100,9 @@ Data across environments
    :end-before: .. sandboxes-best-practice-data-across-environments-end
 
 
-.. _sandboxes-best-practice-delete-sandbox-on-promote:
+.. _sandboxes-best-practice-delete-on-promote:
 
-Data across environments
+Delete sandbox on promote
 --------------------------------------------------
 
 .. include:: ../../amperity_reference/source/sandboxes.rst
