@@ -288,14 +288,19 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Coupa using Fivetran.
 
-   * - **Criteo**
+   * - **Criteo Audience API**
      - 
      - |system-yes|
-     - Send audience lists from Amperity using the Criteo REST API.
+     - Send audience lists from Amperity using the Criteo Audience API.
 
        Send transactions data using SFTP.
 
        Send offline events to to track offline conversions from your marketing campaigns.
+
+   * - **Criteo Retail Audience API**
+     - 
+     - |system-yes|
+     - Send offline events to to track offline conversions from your marketing campaigns.
  
    * - **Cross Country Computer**
      - |system-yes|
