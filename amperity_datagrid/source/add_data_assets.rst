@@ -202,111 +202,11 @@ The NRF calendars data asset contains a |ext_nrf_454| that spans from 2016-2024 
 
 .. data-asset-fiscal-calendar-nrf-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+Add the NRF calendar data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "NRF_Calendar.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Add a courier for an Amazon S3 data source using the credentials for Amperity data assets. This courier should be run manually.
+.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
-       .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
-
-       **Object**
-
-       The object should define the name of the file as "NRF_Calendar.csv" and the file tag as "nrf":
-
-       ::
-
-          [
-            {
-              "object/type": "file",
-              "object/file-pattern": "'NRF_Calendar.csv'",
-              "object/land-as": {
-                "file/header-rows": 1,
-                "file/tag": "nrf",
-                "file/content-type": "text/csv"
-              }
-            }
-          ]
-
-       **Load Operations**
-
-       The feed ID should be configured to be an empty load operation, using "df-xxxxxx" as a placeholder and the file tag should be the same as the object ("nrf"):
-
-       ::
-
-          {
-            "df-xxxxxx": [
-              {
-                "type": "load",
-                "file": "nrf"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Run the courier. Set the date to the previous day (i.e. "yesterday").
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Add a feed using the **NRF_Calendar.csv** file that was pulled to your tenant.
-
-       Use **calendar_date** as the primary key. Apply semantic tags to incoming fields, and then rename all fields using underscores between words. The results should be similar to:
-
-       .. image:: ../../images/data-assets-feed-nrf-calendar.png
-          :width: 540 px
-          :alt: The NRF calendar data asset with semantic tags applied and fields renamed.
-          :align: left
-          :class: no-scaled-link
-
-       .. important:: Do not make this table available to Stitch or apply any semantic tags.
-
-       After semantic tags have been applied and after fields have been renamed to use underscores between words, activate the feed.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Edit the courier and update the empty feed ID to match the feed ID that was generated for the feed. For example, if the feed ID was "fGhiJi" update the load operation to:
-
-       ::
-
-          {
-            "df-fGhiJi": [
-              {
-                "type": "load",
-                "file": "nrf"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Re-run the courier, and then review the domain table that was built for this data asset.
-
-       After reviewing the data in the domain table, run Stitch.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - Add a passthrough table to your customer 360 database named **NRF Calendar**, and then run your customer 360 database to build the **NRF Calendar** table.
+Add a passthrough table to your customer 360 database named **NRF Calendar**, and then run your customer 360 database to build the **NRF Calendar** table.
 
 .. data-asset-fiscal-calendar-nrf-steps-end
 
@@ -441,107 +341,15 @@ Address standardization is a list of address variations for state and street nam
 
 .. data-asset-address-standardization-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+Add the address standardization data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "address_standardization_conversion.csv" file from the **Amperity Data Assets** Amazon S3 bucket. This file is located in the "householding" directory in the bucket.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Add a courier for an Amazon S3 data source using the credentials for Amperity data assets. This courier should be run manually.
+Use all three fields – **before**, **convert**, and **type** as the primary key.
 
-       .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
+.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
-       **Object**
+Add a passthrough table to your customer 360 database named **LookupTables AddressStandardization**, and then run your customer 360 database to build the **LookupTables AddressStandardization** table.
 
-       The object should define the path to the file using the "householding/" directory *and* the name of the file as "householding/address_standardization_conversion.csv" and the file tag as "add":
-
-       ::
-
-          [
-            {
-              "object/type": "file",
-              "object/file-pattern": "'householding/filename.csv'",
-              "object/land-as": {
-                "file/header-rows": 1,
-                "file/tag": "add",
-                "file/content-type": "text/csv"
-              }
-            }
-          ]
-
-       **Load Operations**
-
-       The feed ID should be configured to be an empty load operation, using "df-xxxxxx" as a placeholder and the file tag should be the same as the object ("add"):
-
-       ::
-
-          {
-            "df-xxxxxx": [
-              {
-                "type": "load",
-                "file": "nrf"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Run the courier. Set the date to the previous day (i.e. "yesterday").
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Add a feed using the **householding/address_standardization_conversion.csv** file that was pulled to your tenant.
-
-       Use all three fields -- **before**, **convert**, and **type** as the primary key.
-
-       .. important:: Do not make this table available to Stitch or apply any semantic tags.
-
-       Activate the feed.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Edit the courier and update the empty feed ID to match the feed ID that was generated for the feed. For example, if the feed ID was "mNopQr" update the load operation to:
-
-       ::
-
-          {
-            "df-mNopQr": [
-              {
-                "type": "load",
-                "file": "add"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Re-run the courier, and then review the domain table that was built for this data asset.
-
-       After reviewing the data in the domain table, run Stitch.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - Add a passthrough table to your customer 360 database named **LookupTables AddressStandardization**, and then run your customer 360 database to build the **LookupTables AddressStandardization** table.
-
-       .. important:: The **LookupTables AddressStandardization** table is used within the **Merged Households** SQL template in a series of LEFT JOIN operations that are used to standardize addresses. For example:
+.. important:: The **LookupTables AddressStandardization** table is used within the **Merged Households** SQL template in a series of LEFT JOIN operations that are used to standardize addresses. For example:
 
           .. code-block:: sql
 
@@ -598,184 +406,85 @@ The most important column is **gender_name_ratio**, which describes what proport
 
 .. data-asset-gender-name-ratios-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+Add the gender name ratios data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "gender_name_ratios.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Add a courier for an Amazon S3 data source using the credentials for Amperity data assets. This courier should be run manually.
+Use **given_name** as the primary key.
 
-       .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
+.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
-       **Object**
+You can add predicted gender to your customer 360 database in two ways, depending on how your brand wants to use predicted gender to build segments:
 
-       The object should define the name of the file as "gender_name_ratios.csv" and the file tag as "gnr":
+#. Extend the **Customer 360** and/or **Merged Customers** tables to include predicted gender (recommended).
+#. Add predicted gender values to your customer 360 database as a standalone table.
 
-       ::
+**Extend the Merged_Customers table (recommended)**
 
-          [
-            {
-              "object/type": "file",
-              "object/file-pattern": "'gender_name_ratios.csv'",
-              "object/land-as": {
-                "file/header-rows": 1,
-                "file/tag": "gnr",
-                "file/content-type": "text/csv"
-              }
-            }
-          ]
+.. note:: The steps are the same for both the **Customer 360** and **Merged Customers** tables.
 
-       **Load Operations**
+   Edit the **Merged Customers** table and extend the table for predicted gender.
 
-       The feed ID should be configured to be an empty load operation, using "df-xxxxxx" as a placeholder and the file tag should be the same as the object ("gnr"):
+Use a common table expression (CTE) to pull data from the domain table that contains predicted gender data ("Predictions_Gender"):
 
-       ::
+.. code-block:: sql
 
-          {
-            "df-xxxxxx": [
-              {
-                "type": "load",
-                "file": "gnr"
-              }
-            ]
-          }
+   predict_gender AS (
+     SELECT
+       mc.amperity_id
+       ,CASE
+         WHEN UPPER(ratios.predicted_gender) = 'M' THEN 'Male'
+         WHEN UPPER(ratios.predicted_gender) = 'F' THEN 'Female'
+         ELSE ratios.predicted_gender
+       END AS predicted_gender
+     FROM Merged_Customers AS mc
+     LEFT JOIN Predictions_Gender AS ratios
+     ON UPPER(
+       COALESCE(mc.given_name, SPLIT(mc.full_name,' ')[0])
+     ) = ratios.given_name
+   ),
 
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Run the courier. Set the date to the previous day (i.e. "yesterday").
+Update the list of columns in the **Merged Customers** table to include predicted gender and combined gender:
 
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Add a feed using the **gender_name_ratios.csv** file that was pulled to your tenant.
+.. code-block:: sql
 
-       Use **given_name** as the primary key.
+   ,pg.predicted_gender
+   ,COALESCE(mc.gender,pg.predicted_gender) AS combined_gender
 
-       .. important:: Do not make this table available to Stitch or apply any semantic tags.
+.. note:: The combined gender column uses the value from the **gender** column in the **Merged Customers** table when a value exists, and then uses the value from the **predicted_gender** column if the **gender** column in the **Merged Customers** table is empty. 
 
-       Activate the feed.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Edit the courier and update the empty feed ID to match the feed ID that was generated for the feed. For example, if the feed ID was "aBcdEf" update the load operation to:
-
-       ::
-
-          {
-            "df-aBcdEf": [
-              {
-                "type": "load",
-                "file": "gnr"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Re-run the courier, and then review the domain table that was built for this data asset.
-
-       After reviewing the data in the domain table, run Stitch.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - You can add predicted gender to your customer 360 database in two ways, depending on how your brand wants to use predicted gender to build segments:
-
-       #. Extend the **Customer 360** and/or **Merged Customers** tables to include predicted gender (recommended).
-       #. Add predicted gender values to your customer 360 database as a standalone table.
-
-       **Extend the Merged_Customers table (recommended)**
-
-       .. note:: The steps are the same for both the **Customer 360** and **Merged Customers** tables.
-
-       Edit the **Merged Customers** table and extend the table for predicted gender.
-
-       Use a common table expression (CTE) to pull data from the domain table that contains predicted gender data ("Predictions_Gender"):
-
-       .. code-block:: sql
-
-          predict_gender AS (
-            SELECT
-              mc.amperity_id
-              ,CASE
-                WHEN UPPER(ratios.predicted_gender) = 'M' THEN 'Male'
-                WHEN UPPER(ratios.predicted_gender) = 'F' THEN 'Female'
-                ELSE ratios.predicted_gender
-              END AS predicted_gender
-            FROM Merged_Customers AS mc
-            LEFT JOIN Predictions_Gender AS ratios
-            ON UPPER(
-              COALESCE(mc.given_name, SPLIT(mc.full_name,' ')[0])
-            ) = ratios.given_name
-          ),
-
-       Update the list of columns in the **Merged Customers** table to include predicted gender and combined gender:
-
-       .. code-block:: sql
-
-          ,pg.predicted_gender
-          ,COALESCE(mc.gender,pg.predicted_gender) AS combined_gender
-
-       .. note:: The combined gender column uses the value from the **gender** column in the **Merged Customers** table when a value exists, and then uses the value from the **predicted_gender** column if the **gender** column in the **Merged Customers** table is empty. 
-
-       Use a **LEFT JOIN** to join the values from the common table expression to the **Merged Customers** table:
+Use a **LEFT JOIN** to join the values from the common table expression to the **Merged Customers** table:
  
-       .. code-block:: sql
+.. code-block:: sql
 
-          LEFT JOIN predict_gender pg ON pg.amperity_id = mc.amperity_id
+   LEFT JOIN predict_gender pg ON pg.amperity_id = mc.amperity_id
 
-       **Add a table for predicted gender (optional)**
+**Add a table for predicted gender (optional)**
 
-       Your brand's use cases for predicted gender may prefer using a standalone table.
+Your brand's use cases for predicted gender may prefer using a standalone table.
 
-       #. Add a passthrough table to your customer 360 database named **Gender Name Ratios**.
-       #. Add a SQL table to your customer 360 database named **Predicted Gender**.
-       #. Choose **SQL** as the build mode, and then use SQL similar to:
+#. Add a passthrough table to your customer 360 database named **Gender Name Ratios**.
+#. Add a SQL table to your customer 360 database named **Predicted Gender**.
+#. Choose **SQL** as the build mode, and then use SQL similar to:
 
-          .. code-block:: sql
+   .. code-block:: sql
 
-             WITH ratios AS (
-               SELECT * 
-               FROM Gender_Name_Ratios 
-               WHERE gender_name_ratio >= 100
-             )
+      WITH ratios AS (
+        SELECT * 
+        FROM Gender_Name_Ratios 
+        WHERE gender_name_ratio >= 100
+      )
 
-             SELECT
-               mc.amperity_id
-               ,ratios.predicted_gender
-             FROM Merged_Customers AS mc
-             LEFT JOIN Gender_Name_Ratios AS ratios
-             ON UPPER(
-               COALESCE(mc.given_name, SPLIT(mc.full_name,' ')[0])
-             ) = ratios.given_name
+      SELECT
+        mc.amperity_id
+        ,ratios.predicted_gender
+      FROM Merged_Customers AS mc
+      LEFT JOIN Gender_Name_Ratios AS ratios
+      ON UPPER(
+        COALESCE(mc.given_name, SPLIT(mc.full_name,' ')[0])
+      ) = ratios.given_name
 
-          where "100" represents a 99% accuracy threshold. Increase or decrease this value as necessary.
+   where "100" represents a 99% accuracy threshold. Increase or decrease this value as necessary.
 
-          .. tip:: This table will be unique by Amperity ID and may be made available to the **Segment Editor** for use with campaigns.
-
-   * - .. image:: ../../images/steps-07.png
-          :width: 60 px
-          :alt: Step 7.
-          :align: left
-          :class: no-scaled-link
-     - Run the customer 360 database to rebuild the table (or tables) that contain predicted gender.
+   .. tip:: This table will be unique by Amperity ID and may be made available to the **Segment Editor** for use with campaigns.
 
 .. data-asset-gender-name-ratios-steps-end
 
@@ -811,105 +520,13 @@ The country lookup data asset provides a set of standardized names and codes for
 
 .. data-asset-lookup-table-row-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+Add the country lookups data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "lookup_country.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Add a courier for an Amazon S3 data source using the credentials for Amperity data assets. This courier should be run manually.
+Use **country_name** and **country_code** as the primary key.
 
-       .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
+.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
-       **Object**
-
-       The object should define the name of the file as "lookup_country.csv" and the file tag as "row":
-
-       ::
-
-          [
-            {
-              "object/type": "file",
-              "object/file-pattern": "'lookup_country.csv'",
-              "object/land-as": {
-                "file/header-rows": 1,
-                "file/tag": "row",
-                "file/content-type": "text/csv"
-              }
-            }
-          ]
-
-       **Load Operations**
-
-       The feed ID should be configured to be an empty load operation, using "df-xxxxxx" as a placeholder and the file tag should be the same as the object ("row"):
-
-       ::
-
-          {
-            "df-xxxxxx": [
-              {
-                "type": "load",
-                "file": "row"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Run the courier. Set the date to the previous day (i.e. "yesterday").
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Add a feed using the **lookup_country.csv** file that was pulled to your tenant.
-
-       Use **country_name** *and* **country_code** as the primary key.
-
-       .. important:: Do not make this table available to Stitch or apply any semantic tags.
-
-       Activate the feed.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Edit the courier and update the empty feed ID to match the feed ID that was generated for the feed. For example, if the feed ID was "kLmnOp" update the load operation to:
-
-       ::
-
-          {
-            "df-kLmnOp": [
-              {
-                "type": "load",
-                "file": "row"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Re-run the courier, and then review the domain table that was built for this data asset.
-
-       After reviewing the data in the domain table, run Stitch.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - Add a passthrough table to your customer 360 database named **Lookup Countries**, and then run your customer 360 database to build the **Lookup Countries** table.
+Add a passthrough table to your customer 360 database named **Lookup Countries**, and then run your customer 360 database to build the **Lookup Countries** table.
 
 .. data-asset-lookup-table-row-steps-end
 
@@ -929,105 +546,13 @@ The country lookup data asset provides a set of standardized names and codes for
 
 .. data-asset-lookup-table-usa-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+Add the United States lookup data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "lookup_us_state_territory.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Add a courier for an Amazon S3 data source using the credentials for Amperity data assets. This courier should be run manually.
+Use a combination of **US_State_Territory_Name**, **USPS_Code**, and **ISO_Code_2** as the primary key.
 
-       .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
+.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
-       **Object**
-
-       The object should define the name of the file as "lookup_us_state_territory.csv" and the file tag as "usa":
-
-       ::
-
-          [
-            {
-              "object/type": "file",
-              "object/file-pattern": "'lookup_us_state_territory.csv'",
-              "object/land-as": {
-                "file/header-rows": 1,
-                "file/tag": "usa",
-                "file/content-type": "text/csv"
-              }
-            }
-          ]
-
-       **Load Operations**
-
-       The feed ID should be configured to be an empty load operation, using "df-xxxxxx" as a placeholder and the file tag should be the same as the object ("usa"):
-
-       ::
-
-          {
-            "df-xxxxxx": [
-              {
-                "type": "load",
-                "file": "usa"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Run the courier. Set the date to the previous day (i.e. "yesterday").
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Add a feed using the **lookup_us_state_territory.csv** file that was pulled to your tenant.
-
-       Use **US_State_Territory_Name**, **USPS_Code**, and **ISO_Code_2** as the primary key.
-
-       .. important:: Do not make this table available to Stitch or apply any semantic tags.
-
-       Activate the feed.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Edit the courier and update the empty feed ID to match the feed ID that was generated for the feed. For example, if the feed ID was "pQrsTu" update the load operation to:
-
-       ::
-
-          {
-            "df-pQrsTu": [
-              {
-                "type": "load",
-                "file": "nrf"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Re-run the courier, and then review the domain table that was built for this data asset.
-
-       After reviewing the data in the domain table, run Stitch.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - Add a passthrough table to your customer 360 database named **Lookup USA**, and then run your customer 360 database to build the **Lookup USA** table.
+Add a passthrough table to your customer 360 database named **Lookup USA**, and then run your customer 360 database to build the **Lookup USA** table.
 
 .. data-asset-lookup-table-usa-steps-end
 
@@ -1054,105 +579,13 @@ The zip codes lookup data asset provides a list of zip codes that:
 
 .. data-asset-lookup-table-zip-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+Add the zip codes lookups data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "zip_code_database_small_business.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Add a courier for an Amazon S3 data source using the credentials for Amperity data assets. This courier should be run manually.
+Use **zip** as the primary key.
 
-       .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
+.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
-       **Object**
-
-       The object should define the name of the file as "zip_code_database_small_business.csv" and the file tag as "zcl":
-
-       ::
-
-          [
-            {
-              "object/type": "file",
-              "object/file-pattern": "'zip_code_database_small_business.csv'",
-              "object/land-as": {
-                "file/header-rows": 1,
-                "file/tag": "zcl",
-                "file/content-type": "text/csv"
-              }
-            }
-          ]
-
-       **Load Operations**
-
-       The feed ID should be configured to be an empty load operation, using "df-xxxxxx" as a placeholder and the file tag should be the same as the object ("zcl"):
-
-       ::
-
-          {
-            "df-xxxxxx": [
-              {
-                "type": "load",
-                "file": "zcl"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Run the courier. Set the date to the previous day (i.e. "yesterday").
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Add a feed using the **zip_code_database_small_business.csv** file that was pulled to your tenant.
-
-       Use **zip** as the primary key.
-
-       .. important:: Do not make this table available to Stitch or apply any semantic tags.
-
-       Activate the feed.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Edit the courier and update the empty feed ID to match the feed ID that was generated for the feed. For example, if the feed ID was "uCwxYz" update the load operation to:
-
-       ::
-
-          {
-            "df-uCwxYz": [
-              {
-                "type": "load",
-                "file": "zcl"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Re-run the courier, and then review the domain table that was built for this data asset.
-
-       After reviewing the data in the domain table, run Stitch.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - Add a passthrough table to your customer 360 database named **Lookup Zip Codes**, and then run your customer 360 database to build the **Lookup Zip Codes** table.
+Add a passthrough table to your customer 360 database named **Lookup Zip Codes**, and then run your customer 360 database to build the **Lookup Zip Codes** table.
 
 .. data-asset-lookup-table-zip-steps-end
 
@@ -1171,104 +604,12 @@ The normalization for United States data asset provides a list of long and abbre
 
 .. data-asset-lookup-table-normalization-usa-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+Add the normalization for United States data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "US_State_Normalization.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Add a courier for an Amazon S3 data source using the credentials for Amperity data assets. This courier should be run manually.
+Use **US_State_Abbrev** and **US_State_Long** as the primary key.
 
-       .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
+.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
-       **Object**
-
-       The object should define the name of the file as "US_State_Normalization.csv" and the file tag as "nus":
-
-       ::
-
-          [
-            {
-              "object/type": "file",
-              "object/file-pattern": "'US_State_Normalization.csv'",
-              "object/land-as": {
-                "file/header-rows": 1,
-                "file/tag": "nus",
-                "file/content-type": "text/csv"
-              }
-            }
-          ]
-
-       **Load Operations**
-
-       The feed ID should be configured to be an empty load operation, using "df-xxxxxx" as a placeholder and the file tag should be the same as the object ("nus"):
-
-       ::
-
-          {
-            "df-xxxxxx": [
-              {
-                "type": "load",
-                "file": "nus"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Run the courier. Set the date to the previous day (i.e. "yesterday").
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Add a feed using the **US_State_Normalization.csv** file that was pulled to your tenant.
-
-       Use **US_State_Abbrev** and **US_State_Long** as the primary key.
-
-       .. important:: Do not make this table available to Stitch or apply any semantic tags.
-
-       Activate the feed.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Edit the courier and update the empty feed ID to match the feed ID that was generated for the feed. For example, if the feed ID was "zAbcDe" update the load operation to:
-
-       ::
-
-          {
-            "df-zAbcDe": [
-              {
-                "type": "load",
-                "file": "nus"
-              }
-            ]
-          }
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Re-run the courier, and then review the domain table that was built for this data asset.
-
-       After reviewing the data in the domain table, run Stitch.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - Add a passthrough table to your customer 360 database named **Normalization United States**, and then run your customer 360 database to build the **Normalization United States** table.
+Add a passthrough table to your customer 360 database named **Normalization United States**, and then run your customer 360 database to build the **Normalization United States** table.
 
 .. data-asset-lookup-table-normalization-usa-steps-end

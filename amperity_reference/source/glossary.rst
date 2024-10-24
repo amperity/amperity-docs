@@ -689,14 +689,6 @@ B
       :end-before: .. term-braze-end
 
 
-.. _b-bridge:
-
-**bridge**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-bridge-start
-      :end-before: .. term-bridge-end
-
-
 .. _b-brightloom:
 
 **Brightloom**

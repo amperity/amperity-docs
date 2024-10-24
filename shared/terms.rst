@@ -1037,15 +1037,6 @@ Braze is a leading marketing automation platform that allows users to create cus
 .. term-braze-end
 
 
-**bridge**
-
-.. term-bridge-start
-
-Amperity Bridge allows your brand to configure a bi-directional connection between Amperity and your data lakehouse.
-
-.. term-bridge-end
-
-
 **Brightloom**
 
 .. term-brightloom-start

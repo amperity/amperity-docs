@@ -70,10 +70,6 @@ Inbound shares
    :start-after: .. term-delta-sharing-start
    :end-before: .. term-delta-sharing-end
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-bridge-start
-   :end-before: .. term-bridge-end
-
 An inbound share represents the configuration for how a shared dataset is made available from a lakehouse to Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
 
 .. bridge-inbound-share-start
@@ -298,9 +294,7 @@ For bridges that connect to Databricks environments running in Microsoft Azure a
 Add inbound bridge
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-bridge-start
-   :end-before: .. term-bridge-end
+Configure an inbound bridge to sync data in Databricks with Amperity.
 
 **To add an inbound bridge**
 
@@ -400,10 +394,6 @@ Outbound shares
    :start-after: .. term-delta-sharing-start
    :end-before: .. term-delta-sharing-end
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-bridge-start
-   :end-before: .. term-bridge-end
-
 An outbound share represents the configuration for how a shared dataset is made available to a lakehouse from Amperity, such as using the |ext_delta_sharing| open protocol to share data with Databricks.
 
 .. bridge-outbound-share-start
@@ -485,9 +475,7 @@ Before you can create outbound sharing between Amperity and Databricks you must 
 Add outbound bridge
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-bridge-start
-   :end-before: .. term-bridge-end
+Configure an inbound bridge to sync data in Amperity with Databricks.
 
 **To add an outbound bridge**
 
