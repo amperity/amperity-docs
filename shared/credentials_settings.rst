@@ -1892,7 +1892,6 @@ You can find the advertiser ID and secret key from the management console within
 
 
 
-
 **THE TRADE DESK: 3P MARKETPLACE**
 
 **Advertiser secret**
@@ -1907,7 +1906,7 @@ See The Trade Desk.
 
 .. credential-the-trade-desk-platform-api-token-start
 
-xxxxx
+A long-lived token that allows access to The Trade Desk Platform API.
 
 .. credential-the-trade-desk-platform-api-token-end
 
@@ -1915,7 +1914,7 @@ xxxxx
 
 .. credential-the-trade-desk-provider-id-start
 
-xxxxx
+The provider ID for your account with The Trade Desk. Ask your The Trade Desk representative for details.
 
 .. credential-the-trade-desk-provider-id-end
 
@@ -1932,6 +1931,7 @@ See The Trade Desk.
 **Advertiser secret**
 
 See The Trade Desk.
+
 
 
 

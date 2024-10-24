@@ -2029,7 +2029,13 @@ This section contains settings that are unique to The Trade Desk (3P Marketplace
 
 See common.
 
-See extra info at The Trade Desk.
+**Segment taxonomy ID**
+
+.. setting-the-trade-desk-3p-segment-taxonomy-id-start
+
+The taxonomy ID for a monetized segment in The Trade Desk.
+
+.. setting-the-trade-desk-3p-segment-taxonomy-id-end
 
 
 
@@ -2043,7 +2049,7 @@ This section contains settings that are unique to The Trade Desk: Offline Events
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-TEMP: "The tracking tag name to associate your offline events with."
+The name of the tracking tag for which offline events are associated.
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
 

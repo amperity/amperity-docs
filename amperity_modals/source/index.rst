@@ -74,6 +74,8 @@ Site Index
    destination-sound-commerce
    destination-tiktok
    destination-tradedesk
+   destination-tradedesk-offline
+   destination-tradedesk-3p
    destination-vibes
    destination-yahoo-dsp
    destination-zendesk
