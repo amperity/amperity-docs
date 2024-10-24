@@ -1807,6 +1807,12 @@ The following table lists the tags available to this semantic group:
        * MAN (is normalized to M)
        * NONE (is treated as NULL)
        * WOMAN (is normalized to F)
+       * X
+       * NONBINARY (is normalized to X)
+       * NON-BINARY (is normalized to X)
+       * ENBY (is normalized to X)
+       * NB (is normalized to X)
+       * OTHER (is normalized to X)
 
    * - **generational-suffix**
      - String
