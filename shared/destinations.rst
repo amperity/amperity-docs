@@ -471,6 +471,10 @@ Complete the following **SFTP Settings**:
 
 * Optional. Select **Include header row in output files** if headers should be included in the output.
 
+* Optional. Select **Row number** to include a row number column in the output file. Applies to CSV, TSV, PSV, and custom delimiter file types.
+
+  When enabled, you may specify the name of the row number column in the output file.
+
 * Optional. Select **Exclude Parquet extension from the directory name** for managing how |format_parquet_directories| are added to directories.
 
 .. destinations-destination-settings-sftp-end
@@ -505,6 +509,10 @@ Complete the following **SFTP Settings**:
    .. tip:: If a downstream sensor is listening for files sent from Amperity, configure that sensor to listen for the presence of the .DONE file.
 
 * Optional. Select **Include header row in output files** if headers should be included in the output.
+
+* Optional. Select **Row number** to include a row number column in the output file. Applies to CSV, TSV, PSV, and custom delimiter file types.
+
+  When enabled, you may specify the name of the row number column in the output file.
 
 * Optional. Select **Exclude Parquet extension from the directory name** for managing how |format_parquet_directories| are added to directories.
 
@@ -541,6 +549,10 @@ Complete the following **Amazon S3 Settings**:
 
 * Optional. Select **Include header row in output files** if headers should be included in the output.
 
+* Optional. Select **Row number** to include a row number column in the output file. Applies to CSV, TSV, PSV, and custom delimiter file types.
+
+  When enabled, you may specify the name of the row number column in the output file.
+
 * Optional. Select **Exclude Parquet extension from the directory name** for managing how |format_parquet_directories| are added to directories.
 
 .. destinations-destination-settings-amazon-s3-end
@@ -576,6 +588,10 @@ Complete the following **Azure Blob Storage Settings**:
    .. tip:: If a downstream sensor is listening for files sent from Amperity, configure that sensor to listen for the presence of the .DONE file.
 
 * Optional. Select **Include header row in output files** if headers should be included in the output.
+
+* Optional. Select **Row number** to include a row number column in the output file. Applies to CSV, TSV, PSV, and custom delimiter file types.
+
+  When enabled, you may specify the name of the row number column in the output file.
 
 * Optional. Select **Exclude Parquet extension from the directory name** for managing how |format_parquet_directories| are added to directories.
 
