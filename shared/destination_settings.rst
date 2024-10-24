@@ -2029,7 +2029,13 @@ This section contains settings that are unique to The Trade Desk (3P Marketplace
 
 See common.
 
-See extra info at The Trade Desk.
+**Segment taxonomy ID**
+
+.. setting-the-trade-desk-3p-segment-taxonomy-id-start
+
+The taxonomy ID for a monetized segment in The Trade Desk.
+
+.. setting-the-trade-desk-3p-segment-taxonomy-id-end
 
 
 
@@ -2043,7 +2049,7 @@ This section contains settings that are unique to The Trade Desk: Offline Events
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-TEMP: "The tracking tag name to associate your offline events with."
+The name of the tracking tag for which offline events are associated.
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
 
@@ -2094,13 +2100,29 @@ TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads
 
 .. setting-tiktok-ads-manager-offline-advertiser-id-end
 
+**Auto tracking?**
+
+.. setting-tiktok-ads-manager-offline-auto-tracking-start
+
+Select **Auto tracking** to use this event set for add tracking and attribution.
+
+.. setting-tiktok-ads-manager-offline-auto-tracking-end
+
 **Event set ID**
 
 .. setting-tiktok-ads-manager-offline-event-set-id-start
 
-TEMP: "Event Set ID"
+The event set ID is a nineteen character string similar to “7654321098765432109”
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
+
+**Event set name**
+
+.. setting-tiktok-ads-manager-offline-event-set-name-start
+
+The name of the offline events set in TikTok Ads Manager.
+
+.. setting-tiktok-ads-manager-offline-event-set-name-end
 
 
 
