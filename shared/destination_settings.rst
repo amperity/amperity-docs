@@ -337,7 +337,7 @@ Select to include a row number column in the output file. Applies to CSV, TSV, P
 
 .. setting-common-row-number-column-name-start
 
-If **Row Number** is enabled you may specify the name of the row number column in the output file. The name of this column must be less than 1028 characters and may only contain numbers, letters, underscores, and hyphens. Default value: "row_number".
+If **Row Number** is enabled you may use the **Column name** setting to specify the name of the row number column in the output file. The name of this column must be less than 1028 characters and may only contain numbers, letters, underscores, and hyphens. Default value: "row_number".
 
 .. setting-common-row-number-column-name-end
 
