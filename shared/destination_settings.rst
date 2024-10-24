@@ -335,15 +335,9 @@ Select to include a row number column in the output file. Applies to CSV, TSV, P
 
 .. setting-common-row-number-end
 
-**Row Number Column Name**
-
-Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP destinations.
-
 .. setting-common-row-number-column-name-start
 
-The name of the row number column in the output file. Defaults to "row_number". Only applies to CSV, TSV, PSV, and custom delimiter file types that have the row number setting enabled.
-
-The value of "row_number" must be less than 1028 characters and may only contain numbers, letters, underscores, and hyphens.
+If **Row Number** is enabled you may specify the name of the row number column in the output file. The name of this column must be less than 1028 characters and may only contain numbers, letters, underscores, and hyphens. Default value: "row_number".
 
 .. setting-common-row-number-column-name-end
 
