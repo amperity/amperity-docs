@@ -325,6 +325,22 @@ If the path to the remote folder contains a space, use a backslash (\\) characte
 
 .. setting-common-remote-folder-spaces-end
 
+**Row Number**
+
+Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP destinations.
+
+.. setting-common-row-number-start
+
+Select to include a row number column in the output file. Applies to CSV, TSV, PSV, and custom delimiter file types.
+
+.. setting-common-row-number-end
+
+.. setting-common-row-number-column-name-start
+
+If **Row Number** is enabled you may use the **Column name** setting to specify the name of the row number column in the output file. The name of this column must be less than 1028 characters and may only contain numbers, letters, underscores, and hyphens. Default value: "row_number".
+
+.. setting-common-row-number-column-name-end
+
 **Sandbox**
 
 .. setting-common-sandbox-recommendation-start
