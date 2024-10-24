@@ -331,7 +331,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP destin
 
 .. setting-common-row-number-start
 
-Enable to include a row number column in the output file. Only applies to CSV, TSV, PSV, and custom delimiter file types.
+Select to include a row number column in the output file. Applies to CSV, TSV, PSV, and custom delimiter file types.
 
 .. setting-common-row-number-end
 
