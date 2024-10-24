@@ -73,6 +73,7 @@ Site Index
    destination-snapchat
    destination-sound-commerce
    destination-tiktok
+   destination-tiktok-offline-events
    destination-tradedesk
    destination-tradedesk-offline
    destination-tradedesk-3p

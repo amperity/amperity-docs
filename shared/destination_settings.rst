@@ -2100,13 +2100,29 @@ TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads
 
 .. setting-tiktok-ads-manager-offline-advertiser-id-end
 
+**Auto tracking?**
+
+.. setting-tiktok-ads-manager-offline-auto-tracking-start
+
+Select **Auto tracking** to use this event set for add tracking and attribution.
+
+.. setting-tiktok-ads-manager-offline-auto-tracking-end
+
 **Event set ID**
 
 .. setting-tiktok-ads-manager-offline-event-set-id-start
 
-TEMP: "Event Set ID"
+The event set ID is a nineteen character string similar to “7654321098765432109”
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
+
+**Event set name**
+
+.. setting-tiktok-ads-manager-offline-event-set-name-start
+
+The name of the offline events set in TikTok Ads Manager.
+
+.. setting-tiktok-ads-manager-offline-event-set-name-end
 
 
 
