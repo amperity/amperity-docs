@@ -79,3 +79,4 @@ Site Index
    destination-zendesk
    openapi
    semantics
+   stitch_benchmarks

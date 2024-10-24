@@ -16,18 +16,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send audience segments to Criteo Retail Audience API.
+        Configure Amperity to send audiences to Criteo Retail Audience API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send audience segments to Criteo Retail Audience API.
+        Configure Amperity to send audiences to Criteo Retail Audience API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audience segments to Criteo Retail Audience API
+        Send audiences to Criteo Retail Audience API
 
 ====================================================
-Send audience segments to Criteo Retail Audience API
+Send audiences to Criteo Retail Audience API
 ====================================================
 
 .. include:: ../../shared/terms.rst
