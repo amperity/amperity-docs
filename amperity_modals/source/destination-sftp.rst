@@ -160,18 +160,6 @@ Settings
    :start-after: .. setting-common-quote-mode-none-start
    :end-before: .. setting-common-quote-mode-none-end
 
-**Row number**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-row-number-start
-   :end-before: .. setting-common-row-number-end
-
-**Row number column name**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-row-number-column-name-start
-   :end-before: .. setting-common-row-number-column-name-end
-
 **Success file**
 
 .. include:: ../../shared/destination_settings.rst
@@ -187,6 +175,16 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-header-start
    :end-before: .. setting-common-header-end
+
+**Row number**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-row-number-start
+   :end-before: .. setting-common-row-number-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-row-number-column-name-start
+   :end-before: .. setting-common-row-number-column-name-end
 
 **Use Zip64?**
 
