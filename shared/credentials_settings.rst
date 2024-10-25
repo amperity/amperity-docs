@@ -1275,29 +1275,19 @@ A client ID and client secret for Microsoft Azure that has permission to access 
 
 **MICROSOFT DYNAMICS 365 MARKETING**
 
-xxxxx
+**Azure client ID and client secret**
 
-**Azure client ID**
+.. credential-microsoft-dynamics-365-marketing-azure-client-id-and-secret-start
 
-.. credential-microsoft-dynamics-365-marketing-azure-client-id-start
+A client ID and client secret for Microsoft Azure that has permission to access your instance of |destination-name|.
 
-xxxxx
-
-.. credential-microsoft-dynamics-365-marketing-azure-client-id-end
-
-**Azure client secret**
-
-.. credential-microsoft-dynamics-365-marketing-azure-client-secret-start
-
-xxxxx
-
-.. credential-microsoft-dynamics-365-marketing-azure-client-secret-end
+.. credential-microsoft-dynamics-365-marketing-azure-client-id-and-secret-end
 
 **Azure tenant ID**
 
 .. credential-microsoft-dynamics-365-marketing-azure-tenant-id-start
 
-xxxxx
+The Microsoft Azure tenant ID for your instance of |destination-name|.
 
 .. credential-microsoft-dynamics-365-marketing-azure-tenant-id-end
 

@@ -35,6 +35,7 @@ Site Index
    destination-criteo
    destination-criteo-retail-media
    destination-cross-country-computer
+   destination-dynamics-365-marketing
    destination-eloqua
    destination-epsilon-abacus
    destination-epsilon-conversant

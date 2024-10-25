@@ -446,6 +446,13 @@ See SFTP.
 
 
 
+**ADOBE COMMERCE**
+
+(Not a destination.)
+
+
+
+
 
 **ADOBE CUSTOMER ATTRIBUTES**
 
@@ -1462,7 +1469,7 @@ This section contains settings that are unique to Microsoft Dynamics 365 Marketi
 
 .. setting-microsoft-dynamics-365-segment-name-start
 
-TEMP: "The name for your Dynamics 365 Marketing Segment."
+The name of the segment in |destination-name| that is managed by Amperity.
 
 .. setting-microsoft-dynamics-365-segment-name-end
 
@@ -1470,7 +1477,7 @@ TEMP: "The name for your Dynamics 365 Marketing Segment."
 
 .. setting-microsoft-dynamics-365-environment-name-start
 
-TEMP: "The unique name for your Power Apps environment. For example: “acme”."
+The environment name for your Power Apps application. For example: "socktown".
 
 .. setting-microsoft-dynamics-365-environment-name-end
 
@@ -1478,7 +1485,7 @@ TEMP: "The unique name for your Power Apps environment. For example: “acme”.
 
 .. setting-microsoft-dynamics-365-environment-region-start
 
-TEMP: "The region in which your data center is located. For example: “crm”."
+The environment region for your Power Apps application. For example: "crm".
 
 .. setting-microsoft-dynamics-365-environment-region-end
 
