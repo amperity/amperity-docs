@@ -22,7 +22,6 @@ Site Index
    destination-adobe-ecs
    destination-adobe-customer-attributes
    destination-adobe-campaign
-   destination-adobe-marketo
    destination-amazon-ads
    destination-attentive-api
    destination-attentive-mobile
