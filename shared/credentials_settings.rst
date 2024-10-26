@@ -390,7 +390,7 @@ For iam-credential:
 
 .. credential-amazon-s3-amperity-role-arn-start
 
-The intermediate IAM role ARN that is used to assume the target role. Amperity provides this value.
+The intermediate IAM role ARN (Amazon Resource Name) that is used to assume the target role. Amperity provides this value.
 
 .. credential-amazon-s3-amperity-role-arn-end
 
@@ -416,7 +416,7 @@ The IAM access key is one part (of two) that allows Amperity to autheticate to a
 
 .. credential-amazon-s3-iam-role-arn-start
 
-The IAM role ARN that is used by Amperity to access a customer-managed Amazon S3 bucket.
+The IAM role ARN (Amazon Resource Name) that is used by Amperity to access a customer-managed Amazon S3 bucket.
 
 .. credential-amazon-s3-iam-role-arn-end
 
@@ -440,7 +440,7 @@ Required. The name of the Amazon S3 bucket.
 
 .. credential-amazon-s3-target-role-arn-start
 
-The IAM role ARN that is used by Amperity to access a customer-managed Amazon S3 bucket.
+The IAM role ARN (Amazon Resource Name) that is used by Amperity to access a customer-managed Amazon S3 bucket.
 
 .. credential-amazon-s3-target-role-arn-end
 
@@ -513,7 +513,7 @@ The following steps describe how to configure Amperity to use cross-account role
 
 .. credential-amazon-s3-cross-account-roles-steps-settings-required-start
 
-You must provide the values for the **Target Role ARN** and **S3 Bucket Name** fields. Enter the target role ARN for the IAM role that Amperity will use to access the customer-managed Amazon S3 bucket, and then enter the name of the Amazon S3 bucket.
+You must provide the values for the **Target Role ARN** and **S3 Bucket Name** fields. Enter the target role ARN (Amazon Resource Name) for the IAM role that Amperity will use to access the customer-managed Amazon S3 bucket, and then enter the name of the Amazon S3 bucket.
 
 .. credential-amazon-s3-cross-account-roles-steps-settings-required-end
 
@@ -1215,7 +1215,7 @@ Required. The API key for your |destination-name| account.
 
 
 
-**META ADS MANAGER**
+**META ADS MANAGER** (Facebook)
 
 **OAuth flow**
 
@@ -1298,25 +1298,13 @@ The Microsoft Azure tenant ID for your instance of |destination-name|.
 
 **MICROSOFT DYNAMICS**
 
-xxxxx
+**Client ID and client secret**
 
+.. credential-microsoft-dynamics-client-id-and-secret-start
 
-**Client ID**
+A client ID and client secret that has permission to access your instance of |destination-name|.
 
-.. credential-microsoft-dynamics-client-id-start
-
-xxxxx
-
-.. credential-microsoft-dynamics-client-id-end
-
-**Client secret**
-
-.. credential-microsoft-dynamics-client-secret-start
-
-xxxxx
-
-.. credential-microsoft-dynamics-client-secret-end
-
+.. credential-microsoft-dynamics-client-id-and-secret-end
 
 
 
@@ -1655,31 +1643,21 @@ See SFTP.
 
 **SALESFORCE SALES CLOUD**
 
-xxxxx
-
-**Username**
-
-.. credential-salesforce-sales-cloud-username-start
-
-xxxxx
-
-.. credential-salesforce-sales-cloud-username-end
-
-**Password**
-
-.. credential-salesforce-sales-cloud-password-start
-
-xxxxx
-
-.. credential-salesforce-sales-cloud-password-end
-
 **Security token**
 
 .. credential-salesforce-sales-cloud-security-token-start
 
-xxxxx
+The Salesforce security token associated with the username. This setting is not required when IP range policies are configured.
 
 .. credential-salesforce-sales-cloud-security-token-end
+
+**Username and password**
+
+.. credential-salesforce-sales-cloud-username-and-password-start
+
+The username and password of a Salesforce account configured for API access.
+
+.. credential-salesforce-sales-cloud-username-and-password-end
 
 
 
@@ -1821,6 +1799,14 @@ An `organization <https://docs.snowflake.com/en/user-guide/organizations>`__ is 
 
 .. credential-snowflake-organization-end
 
+**Password**
+
+.. credential-snowflake-password-start
+
+The password for the username.
+
+.. credential-snowflake-password-end
+
 **Region**
 
 .. credential-snowflake-region-start
@@ -1828,6 +1814,65 @@ An `organization <https://docs.snowflake.com/en/user-guide/organizations>`__ is 
 The `region <https://docs.snowflake.com/en/user-guide/intro-regions>`__ |ext_link| in which your |destination-name| account is hosted. Use the `CURRENT_REGION <https://docs.snowflake.com/en/sql-reference/functions/current_region>`__ |ext_link| argument in |destination-name| to return the value for your region.
 
 .. credential-snowflake-region-end
+
+**Username**
+
+.. credential-snowflake-username-start
+
+A username with permission to access |destination-name|.
+
+.. credential-snowflake-username-end
+
+**SNOWFLAKE** (AWS-specific)
+
+**IAM access key**
+
+.. credential-snowflake-iam-access-key-start
+
+Required. The IAM access key (along with the secret key) that that allows Amperity to autheticate to Snowflake.
+
+.. credential-snowflake-iam-access-key-end
+
+**IAM role ARN**
+
+.. credential-snowflake-iam-role-arn-start
+
+The IAM role ARN (Amazon Resource Name) that is used by Amperity to access Snowflake.
+
+.. credential-snowflake-iam-role-arn-end
+
+**IAM secret key**
+
+.. credential-snowflake-iam-secret-key-start
+
+Requried. The IAM secret key (along with the access key) that allows Amperity to autheticate to Snowflake.
+
+.. credential-snowflake-iam-secret-key-end
+
+**SNOWFLAKE** (Azure-specific)
+
+**Account name**
+
+.. credential-snowflake-account-name-start
+
+The account name for Microsoft Azure Blob Storage.
+
+.. credential-snowflake-account-name-end
+
+**Shared access signature**
+
+.. credential-snowflake-shared-access-signature-start
+
+The shared access signature that allows access to a Microsoft Azure Blob Storage container.
+
+.. credential-snowflake-shared-access-signature-end
+
+
+
+
+
+
+
 
 
 

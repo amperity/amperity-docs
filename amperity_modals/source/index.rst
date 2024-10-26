@@ -35,11 +35,13 @@ Site Index
    destination-criteo-retail-media
    destination-cross-country-computer
    destination-dynamics-365-marketing
+   destination-dynamics
    destination-eloqua
    destination-epsilon-abacus
    destination-epsilon-conversant
    destination-epsilon-targeting
    destination-experian
+   destination-facebook
    destination-gcs
    destination-google-ads
    destination-google-customer-match
@@ -67,10 +69,13 @@ Site Index
    destination-rr-donnelly
    destination-s3
    destination-sailthru
+   destination-salesforce
    destination-sfmc-sftp
    destination-sftp
    destination-smg
    destination-snapchat
+   destination-snowflake
+   destination-snowflake-azure
    destination-sound-commerce
    destination-tiktok
    destination-tiktok-offline-events

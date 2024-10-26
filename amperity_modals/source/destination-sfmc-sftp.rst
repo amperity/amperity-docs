@@ -65,96 +65,36 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Remote folder**
+**Account ID**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-remote-folder-start
-   :end-before: .. setting-common-remote-folder-end
+   :start-after: .. setting-salesforce-marketing-cloud-account-id-start
+   :end-before: .. setting-salesforce-marketing-cloud-account-id-end
+
+**Import location**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-remote-folder-forward-slash-start
-   :end-before: .. setting-common-remote-folder-forward-slash-end
+   :start-after: .. setting-salesforce-marketing-cloud-import-location-start
+   :end-before: .. setting-salesforce-marketing-cloud-import-location-end
+
+**Folder name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-remote-folder-spaces-start
-   :end-before: .. setting-common-remote-folder-spaces-end
+   :start-after: .. setting-salesforce-marketing-cloud-folder-name-start
+   :end-before: .. setting-salesforce-marketing-cloud-folder-name-end
 
-**File format**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-file-format-start
-   :end-before: .. setting-common-file-format-end
+**Primary key**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-file-format-custom-delimiter-start
-   :end-before: .. setting-common-file-format-custom-delimiter-end
+   :start-after: .. setting-salesforce-marketing-cloud-primary-key-start
+   :end-before: .. setting-salesforce-marketing-cloud-primary-key-end
 
-**Escape character**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-escape-character-start
-   :end-before: .. setting-common-escape-character-end
+**Subscriber field**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-escape-character-unspecified-start
-   :end-before: .. setting-common-escape-character-unspecified-end
-
-**Filename template**
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-filename-template-start
-   :end-before: .. term-filename-template-end
+   :start-after: .. setting-salesforce-marketing-cloud-subscriber-field-start
+   :end-before: .. setting-salesforce-marketing-cloud-subscriber-field-end
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-vibes-filename-template-pattern-start
-   :end-before: .. setting-vibes-filename-template-pattern-end
-
-**Line ending**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-line-ending-start
-   :end-before: .. setting-common-line-ending-end
-
-**Compression**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-compression-start
-   :end-before: .. setting-common-compression-end
-
-**PGP public key**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-pgp-public-key-start
-   :end-before: .. setting-common-pgp-public-key-end
-
-**Quote mode**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-quote-mode-start
-   :end-before: .. setting-common-quote-mode-end
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-quote-mode-none-start
-   :end-before: .. setting-common-quote-mode-none-end
-
-**Success file**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-success-file-start
-   :end-before: .. setting-common-success-file-end
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-success-file-downstream-start
-   :end-before: .. setting-common-success-file-downstream-end
-
-**Header**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-header-start
-   :end-before: .. setting-common-header-end
-
-**Use Zip64?**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-use-zip64-start
-   :end-before: .. setting-common-use-zip64-end
+   :start-after: .. setting-salesforce-marketing-cloud-subscriber-field-important-start
+   :end-before: .. setting-salesforce-marketing-cloud-subscriber-field-important-end
