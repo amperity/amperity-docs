@@ -10,7 +10,7 @@
 Meta Ads Manager
 ==================================================
 
-|destination-name| is a unified ad creation tool that your brand can use to create and publish ads to Facebook, Messenger, Instagram and the Meta Audience Network..
+|destination-name| is a unified ad creation tool that your brand can use to create and publish ads to Facebook, Messenger, Instagram and the Meta Audience Network.
 
 
 Credentials
