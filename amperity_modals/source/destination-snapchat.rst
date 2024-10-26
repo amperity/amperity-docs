@@ -49,7 +49,7 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Add account ID**
+**Ad account ID**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-snapchat-ad-account-id-start
