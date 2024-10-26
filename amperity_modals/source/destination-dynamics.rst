@@ -11,7 +11,7 @@
 Microsoft Dynamics
 ==================================================
 
-|destination-name| is xxxxx.
+|destination-name| is a customer relationship management (CRM) software application that is focused on the supporting sales, marketing, and services. It is part of the Microsoft Dynamics family of business applications.
 
 
 Credentials
