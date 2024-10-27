@@ -1982,7 +1982,9 @@ The ID for the region in which the Snowflake account name is located. For exampl
 
 The table to which data will be loaded. This location is defined using a period-delimited list of Snowflake database name, Snowflake schema name, and Snowflake table name. For example:
 
-``SNOWFLAKE_DATABASE_NAME.SNOWFLAKE_SCHEMA.TABLE_NAME``
+::
+
+   SNOWFLAKE_DATABASE_NAME.SNOWFLAKE_SCHEMA.TABLE_NAME
 
 .. setting-snowflake-location-end
 
