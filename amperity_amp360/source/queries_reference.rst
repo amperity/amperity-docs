@@ -569,6 +569,27 @@ A leaky bucket ratio tracks the difference between the customers your brand wins
 
 The following query shows how to build a leaky bucket ratio by using columns in the **Customer Attributes** and **Transaction Attributes Extended** tables to find the difference between lost and won customers during the past month and the past year.
 
+.. note:: This example assumes that the **Churn Trigger Start Datetime** and **Churn Trigger** fields are enabled in the **Customer Attributes** table. Uncomment the following sections in the SQL for the **Customer Attributes** table:
+
+   .. code-block:: sql
+
+      /*
+      ,churn_triggers_cte AS (
+        SELECT
+          amperity_id
+          ,concat(current_event_status,' trigger') AS churn_trigger
+          ,event_status_start_datetime AS churn_trigger_start_datetime
+        FROM churn_triggers
+      )
+      */
+
+   and:
+
+   .. code-block:: sql
+
+      -- LEFT JOIN churn_triggers_cte ct ON ct.amperity_id = cl.amperity_id
+
+
 .. code-block:: sql
 
    WITH leaky_bucket AS (

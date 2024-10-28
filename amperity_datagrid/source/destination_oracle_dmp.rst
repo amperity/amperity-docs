@@ -6,7 +6,7 @@
 .. |plugin-name| replace:: SFTP
 .. |what-send| replace:: delimited files (CSV, PSV, and TSV)
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "oracle"
+.. |filter-the-list| replace:: "sftp"
 .. |sftp-type| replace:: **passphrase** or **private-key**
 .. |sftp-hostname| replace:: **sftp.bluekai.com**
 .. |file-format| replace:: CSV, TSV, or PSV

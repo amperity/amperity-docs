@@ -446,6 +446,13 @@ See SFTP.
 
 
 
+**ADOBE COMMERCE**
+
+(Not a destination.)
+
+
+
+
 
 **ADOBE CUSTOMER ATTRIBUTES**
 
@@ -1335,7 +1342,7 @@ This section contains settings that are unique to Meta Ads Manager.
 
 .. setting-meta-ads-manager-account-id-start
 
-TEMP: "Ad account ID"
+The account ID for your |destination-name| account.
 
 .. setting-meta-ads-manager-account-id-end
 
@@ -1343,7 +1350,7 @@ TEMP: "Ad account ID"
 
 .. setting-meta-ads-manager-custom-audience-name-start
 
-TEMP: "xxxxx"
+The name of the custom audience in |destination-name|.
 
 .. setting-meta-ads-manager-custom-audience-name-end
 
@@ -1351,7 +1358,13 @@ TEMP: "xxxxx"
 
 .. setting-meta-ads-manager-customer-file-source-start
 
-TEMP: "Where the data was sourced from for the custom audience (directly from users, 3rd party, or both)"
+A setting that describes how the information in the custom audience was originally collected. Select one of the following settings:
+
+USER_PROVIDED_ONLY
+
+PARTNER_PROVIDED_ONLY
+
+BOTH_USER_AND_PARTNER_PROVIDED
 
 .. setting-meta-ads-manager-customer-file-source-end
 
@@ -1462,7 +1475,7 @@ This section contains settings that are unique to Microsoft Dynamics 365 Marketi
 
 .. setting-microsoft-dynamics-365-segment-name-start
 
-TEMP: "The name for your Dynamics 365 Marketing Segment."
+The name of the segment in |destination-name| that is managed by Amperity.
 
 .. setting-microsoft-dynamics-365-segment-name-end
 
@@ -1470,7 +1483,7 @@ TEMP: "The name for your Dynamics 365 Marketing Segment."
 
 .. setting-microsoft-dynamics-365-environment-name-start
 
-TEMP: "The unique name for your Power Apps environment. For example: “acme”."
+The environment name for your Power Apps application. For example: "socktown".
 
 .. setting-microsoft-dynamics-365-environment-name-end
 
@@ -1478,7 +1491,7 @@ TEMP: "The unique name for your Power Apps environment. For example: “acme”.
 
 .. setting-microsoft-dynamics-365-environment-region-start
 
-TEMP: "The region in which your data center is located. For example: “crm”."
+The environment region for your Power Apps application. For example: "crm".
 
 .. setting-microsoft-dynamics-365-environment-region-end
 
@@ -1494,7 +1507,7 @@ This section contains settings that are unique to Microsoft Dynamics.
 
 .. setting-microsoft-dynamics-azure-ad-id-start
 
-TEMP: "The tenant identifier"
+The Active Directory tenant ID that is associated with your Microsoft Azure subscription.
 
 .. setting-microsoft-dynamics-azure-ad-id-end
 
@@ -1502,7 +1515,7 @@ TEMP: "The tenant identifier"
 
 .. setting-microsoft-dynamics-entity-start
 
-TEMP: "The dynamics entity"
+The `entity type <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/entitytypes?view=dataverse-latest&viewFallbackFrom=dynamics-ce-odata-9>`__ |ext_link| that defines the schema for data that is sent from Amperity.
 
 .. setting-microsoft-dynamics-entity-end
 
@@ -1510,7 +1523,9 @@ TEMP: "The dynamics entity"
 
 .. setting-microsoft-dynamics-url-start
 
-TEMP: "The URL of the customers Dynamics instance"
+The URL for your instance of |destination-name|. The URL must be the full URL, including ``https://``. For example:
+
+``https://<tenant-name>.crm.dynamics.com``
 
 .. setting-microsoft-dynamics-url-end
 
@@ -1693,7 +1708,7 @@ Note: There is an SFTP-based connector also.
 
 .. setting-salesforce-marketing-cloud-account-id-start
 
-TEMP: "xxxxx"
+The account ID for the business unit in |destination-name|.
 
 .. setting-salesforce-marketing-cloud-account-id-end
 
@@ -1701,7 +1716,7 @@ TEMP: "xxxxx"
 
 .. setting-salesforce-marketing-cloud-append-data-start
 
-TEMP: "Append onto the data extension"
+Enable to append instead of overwriting data.
 
 .. setting-salesforce-marketing-cloud-append-data-end
 
@@ -1709,7 +1724,7 @@ TEMP: "Append onto the data extension"
 
 .. setting-salesforce-marketing-cloud-folder-name-start
 
-TEMP: "Name of the folder you wish to send the data to"
+The directory within the |destination-name| SFTP site from which the Marketing Cloud SOAP API will get CSV files.
 
 .. setting-salesforce-marketing-cloud-folder-name-end
 
@@ -1717,7 +1732,7 @@ TEMP: "Name of the folder you wish to send the data to"
 
 .. setting-salesforce-marketing-cloud-import-location-start
 
-TEMP: "File transfer location object name that points to the import directory"
+The directory within the |destination-name| SFTP server into which data should be added. This is also the location from which the Marketing Cloud SOAP API will get the CSV files.
 
 .. setting-salesforce-marketing-cloud-import-location-end
 
@@ -1725,7 +1740,9 @@ TEMP: "File transfer location object name that points to the import directory"
 
 .. setting-salesforce-marketing-cloud-primary-key-start
 
-TEMP: "Field to be used as the customer primary key in SFMC"
+Set to one of the following: "subscriber_key" or "email".
+
+Use "subscriber_key" when a field can be mapped directly to the subscriber key in |destination-name|, or else use "email".
 
 .. setting-salesforce-marketing-cloud-primary-key-end
 
@@ -1733,9 +1750,15 @@ TEMP: "Field to be used as the customer primary key in SFMC"
 
 .. setting-salesforce-marketing-cloud-subscriber-field-start
 
-TEMP: "Field to be used as the customer subscriber field in SFMC" May be: "Subscriber key" or "Email address".
+Recommended. The subscriber key for |destination-name|.
 
 .. setting-salesforce-marketing-cloud-subscriber-field-end
+
+.. setting-salesforce-marketing-cloud-subscriber-field-important-start
+
+A subscriber key is configured as the “primary key” for the destination. There are two options: using the |destination-name| subscriber key or using email. One of these options must be specified before the destination can send data to |destination-name|.
+
+.. setting-salesforce-marketing-cloud-subscriber-field-important-end
 
 
 
@@ -1749,15 +1772,21 @@ This section contains settings that are unique to Salesforce Sales Cloud.
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-start
 
-TEMP: "Set to 'Yes' to connect to a Salesforce sandbox for testing rather than a production instance. (Note: this setting is ignored if a custom login url is specified)"
+Optional. Select this option if the destination is a sandbox instance (and not a production instance).
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-end
+
+.. setting-salesforce-sales-cloud-connect-to-sandbox-ignored-start
+
+A sandbox instance is ignored when a custom URL for Salesforce Sales Cloud logins is used.
+
+.. setting-salesforce-sales-cloud-connect-to-sandbox-ignored-end
 
 **Custom Salesforce login URL**
 
 .. setting-salesforce-sales-cloud-custom-login-url-start
 
-TEMP: "Login to Salesforce using a custom url. Specify the scheme and host part only. The path will be set automatically."
+Optional. The custom URL for |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``http://<hostname>`` or ``https://<hostname>``. The rest of the path is added automatically by Amperity.
 
 .. setting-salesforce-sales-cloud-custom-login-url-end
 
@@ -1765,7 +1794,7 @@ TEMP: "Login to Salesforce using a custom url. Specify the scheme and host part 
 
 .. setting-salesforce-sales-cloud-external-id-field-start
 
-TEMP: "The external ID field to use to identify existing objects to update when performing an upsert load."
+The external ID should be set to "Amperity_ID__c". (The "__c" identifies the field as a custom field in the Salesforce object.)
 
 .. setting-salesforce-sales-cloud-external-id-field-end
 
@@ -1773,15 +1802,21 @@ TEMP: "The external ID field to use to identify existing objects to update when 
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-start
 
-TEMP: "Whether or not batches of data should be loaded in parallel. Parallelism may increase performance, but it can also cause lock contention for highly overlapping data."
+When enabled, NULL values in data sent from Amperity will be ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-end
+
+.. setting-salesforce-sales-cloud-load-data-in-parallel-caution-start
+
+Enabling parallelism may cause Salesforce to process batches in parallel. This may improve performance, but comes with the risk of introducing failures due to locking. It is possible for more than one batch to attempt to obtain a lock on the same row, causing one (or both) batches to fail.
+
+.. setting-salesforce-sales-cloud-load-data-in-parallel-caution-end
 
 **Operation**
 
 .. setting-salesforce-sales-cloud-operation-start
 
-TEMP: "The type of API operation to perform with the input data."
+The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations will insert a new record or update an existing record, whereas insert and update operations insert or update (but not both).
 
 .. setting-salesforce-sales-cloud-operation-end
 
@@ -1789,7 +1824,7 @@ TEMP: "The type of API operation to perform with the input data."
 
 .. setting-salesforce-sales-cloud-salesforce-object-start
 
-TEMP: "The Salesforce object that the data should be loaded into."
+The name of the object in Salesforce Sales Cloud to which Amperity will send data.
 
 .. setting-salesforce-sales-cloud-salesforce-object-end
 
@@ -1797,7 +1832,7 @@ TEMP: "The Salesforce object that the data should be loaded into."
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
 
-TEMP: Convert empty fields in the data set to null values. When false empty fields will be ignored.
+Enable to use NULL values when fields are empty.
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
@@ -1913,7 +1948,7 @@ This section contains settings that are unique to Snowflake.
 
 .. setting-snowflake-account-name-start
 
-TEMP: "The name of the Snowflake account"
+The account name is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
 
 .. setting-snowflake-account-name-end
 
@@ -1921,7 +1956,7 @@ TEMP: "The name of the Snowflake account"
 
 .. setting-snowflake-create-table-start
 
-TEMP: "Create table if not present?"
+Use the Create table option when the table should be created in Snowflake if it is not already there.
 
 .. setting-snowflake-create-table-end
 
@@ -1929,7 +1964,7 @@ TEMP: "Create table if not present?"
 
 .. setting-snowflake-drop-table-start
 
-TEMP: "Drop table before loading data?"
+Use the Drop table option to overwrite the table and apply an updated schema when the upstream segment or table changes.
 
 .. setting-snowflake-drop-table-end
 
@@ -1937,23 +1972,29 @@ TEMP: "Drop table before loading data?"
 
 .. setting-snowflake-region-id-start
 
-TEMP: "The ID for the Snowflake region where the account is located"
+The ID for the region in which the Snowflake account name is located. For example: "us-west-2".
 
 .. setting-snowflake-region-id-end
 
 **Snowflake location**
 
-.. setting-snowflake-snowflake-location-start
+.. setting-snowflake-location-start
 
-TEMP: "The target Snowflake location to export data to (format: Database.Schema[.Table])."
+The table to which data will be loaded. This location is defined using a period-delimited list of Snowflake database name, Snowflake schema name, and Snowflake table name. For example:
 
-.. setting-snowflake-snowflake-location-end
+::
+
+   SNOWFLAKE_DATABASE_NAME.SNOWFLAKE_SCHEMA.TABLE_NAME
+
+.. setting-snowflake-location-end
 
 **Stage**
 
 .. setting-snowflake-stage-start
 
-TEMP: "The external stage used for staging the data. Case sensitive."
+The Snowflake stage name, which is created by the `CREATE STAGE <https://docs.snowflake.com/en/sql-reference/sql/create-stage>`__ |ext_link| command. For example:
+
+``AMPERITY_ABCDEF.CUSTOMER_360.AMP_PROD_STAGE``
 
 .. setting-snowflake-stage-end
 
@@ -1961,7 +2002,7 @@ TEMP: "The external stage used for staging the data. Case sensitive."
 
 .. setting-snowflake-truncate-table-start
 
-TEMP: "Truncate table before loading data?"
+Use the Truncate table option when the contents of the table should be emptied prior to loading data.
 
 .. setting-snowflake-truncate-table-end
 
@@ -1969,7 +2010,9 @@ TEMP: "Truncate table before loading data?"
 
 .. setting-snowflake-warehouse-start
 
-TEMP: "The Snowflake Virtual Warehouse to use when loading and transforming data"
+The name of the Snowflake data warehouse. This is created by the `CREATE WAREHOUSE <https://docs.snowflake.com/en/sql-reference/sql/create-warehouse>`__ |ext_link| command. For example:
+
+``AMPERITY_WH``
 
 .. setting-snowflake-warehouse-end
 
@@ -2029,7 +2072,13 @@ This section contains settings that are unique to The Trade Desk (3P Marketplace
 
 See common.
 
-See extra info at The Trade Desk.
+**Segment taxonomy ID**
+
+.. setting-the-trade-desk-3p-segment-taxonomy-id-start
+
+The taxonomy ID for a monetized segment in The Trade Desk.
+
+.. setting-the-trade-desk-3p-segment-taxonomy-id-end
 
 
 
@@ -2043,7 +2092,7 @@ This section contains settings that are unique to The Trade Desk: Offline Events
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-TEMP: "The tracking tag name to associate your offline events with."
+The name of the tracking tag for which offline events are associated.
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
 
@@ -2094,13 +2143,29 @@ TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads
 
 .. setting-tiktok-ads-manager-offline-advertiser-id-end
 
+**Auto tracking?**
+
+.. setting-tiktok-ads-manager-offline-auto-tracking-start
+
+Select **Auto tracking** to use this event set for add tracking and attribution.
+
+.. setting-tiktok-ads-manager-offline-auto-tracking-end
+
 **Event set ID**
 
 .. setting-tiktok-ads-manager-offline-event-set-id-start
 
-TEMP: "Event Set ID"
+The event set ID is a nineteen character string similar to “7654321098765432109”
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
+
+**Event set name**
+
+.. setting-tiktok-ads-manager-offline-event-set-name-start
+
+The name of the offline events set in TikTok Ads Manager.
+
+.. setting-tiktok-ads-manager-offline-event-set-name-end
 
 
 

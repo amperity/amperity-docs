@@ -2,15 +2,15 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Adobe Marketo
-.. |what-send| replace:: audience lists
+.. |destination-name| replace:: Meta Ads Manager
+.. |what-send| replace:: custom audiences
 .. |where-send| replace:: |destination-name|
 
 
-Adobe Marketo
+Meta Ads Manager
 ==================================================
 
-|destination-name| is marketing automation software that streamlines tasks and workflows. Use the Adobe Marketo REST API to manage audience lists in Adobe Marketo.
+|destination-name| is a unified ad creation tool that your brand can use to create and publish ads to Facebook, Messenger, Instagram and the Meta Audience Network.
 
 
 Credentials
@@ -22,21 +22,11 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Client ID and client secret**
+**Access token**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-adobe-marketo-client-id-start
-   :end-before: .. credential-adobe-marketo-client-id-end
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-adobe-marketo-access-token-start
-   :end-before: .. credential-adobe-marketo-access-token-end
-
-**Subdomain**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-adobe-marketo-subdomain-start
-   :end-before: .. credential-adobe-marketo-subdomain-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token-end
 
 
 Settings
@@ -58,20 +48,20 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Folder name**
+**Custom audience name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-adobe-marketo-folder-name-start
-   :end-before: .. setting-adobe-marketo-folder-name-end
+   :start-after: .. setting-meta-ads-manager-custom-audience-name-start
+   :end-before: .. setting-meta-ads-manager-custom-audience-name-end
 
-**Program name**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-adobe-marketo-program-name-start
-   :end-before: .. setting-adobe-marketo-program-name-end
-
-**List name**
+**Account ID**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-adobe-marketo-list-name-start
-   :end-before: .. setting-adobe-marketo-list-name-end
+   :start-after: .. setting-meta-ads-manager-account-id-start
+   :end-before: .. setting-meta-ads-manager-account-id-end
+
+**Customer file source**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-meta-ads-manager-customer-file-source-start
+   :end-before: .. setting-meta-ads-manager-customer-file-source-end

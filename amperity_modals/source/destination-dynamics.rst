@@ -2,16 +2,16 @@
 .. /markdown
 .. 
 
-.. |destination-name| replace:: Snapchat
+.. |destination-name| replace:: Microsoft Dynamics
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: email addresses, mobile advertiser IDs, or phone numbers
+.. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
 
 
-Snapchat
+Microsoft Dynamics
 ==================================================
 
-Send email addresses, mobile advertiser IDs, or phone numbers to |destination-name|, and then manage ads and advertising campaign.
+|destination-name| is a customer relationship management (CRM) software application that is focused on the supporting sales, marketing, and services. It is part of the Microsoft Dynamics family of business applications.
 
 
 Credentials
@@ -23,11 +23,11 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Refresh token**
+**Client ID and client secret**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-oauth-refresh-token-start
-   :end-before: .. credential-oauth-refresh-token-end
+   :start-after: .. credential-microsoft-dynamics-client-id-and-secret-start
+   :end-before: .. credential-microsoft-dynamics-client-id-and-secret-end
 
 
 Settings
@@ -49,14 +49,21 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Ad account ID**
+**Azure active directory ID**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-snapchat-ad-account-id-start
-   :end-before: .. setting-snapchat-ad-account-id-end
+   :start-after: .. setting-microsoft-dynamics-azure-ad-id-start
+   :end-before: .. setting-microsoft-dynamics-azure-ad-id-end
 
-**Segment name**
+**Dynamics URL**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-snapchat-segment-name-start
-   :end-before: .. setting-snapchat-segment-name-end
+   :start-after: .. setting-microsoft-dynamics-url-start
+   :end-before: .. setting-microsoft-dynamics-url-end
+
+**Dynamics entity**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-microsoft-dynamics-entity-start
+   :end-before: .. setting-microsoft-dynamics-entity-end
+

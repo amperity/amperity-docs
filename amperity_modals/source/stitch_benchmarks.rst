@@ -10,7 +10,7 @@ Stitch benchmarking
 
 This topic contains content groupings for cards that explain Stitch benchmarks.
 
-The title in this topic is the title of a card. The **xxxx-desc** is the visible description. The **xxxxx-more** is the "show more" content.
+Each H1 in this topic is the title of a card. The **xxxx-desc** is the visible description for that card and the **xxxxx-more** is the "show more" content.
 
 
 Size of largest cluster
