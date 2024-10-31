@@ -7,8 +7,8 @@
 .. |what-send| replace:: CSV files
 .. |email-plus-send| replace:: additional attributes
 .. |filter-the-list| replace:: "ado"
-.. |sftp-type| replace:: **adobe-aep**
-.. |sftp-hostname| replace:: **[tenant].aep.adobe.com**
+.. |sftp-type| replace:: **adobe-ecs**
+.. |sftp-hostname| replace:: **ftp5.adobe.net**
 .. |file-format| replace:: CSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
 .. |data-template-name| replace:: |destination-name|
