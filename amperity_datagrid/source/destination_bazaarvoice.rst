@@ -44,7 +44,7 @@ Send data to Bazaarvoice
 
 .. destination-bazaarvoice-start
 
-You can send data about brands, product categories, and products to support features that are powered by the product catalog in Bazaarvoice, such as:
+Send data about brands, product categories, and products to support features that are powered by the product catalog in Bazaarvoice, such as:
 
 * Updating the product catalog
 * Supporting downstream syndication of user-generated content based on product matches
