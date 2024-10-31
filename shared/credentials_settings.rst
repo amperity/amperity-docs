@@ -154,7 +154,6 @@ The `base URL <https://developers.activecampaign.com/reference/url>`__ |ext_link
 
 
 
-
 **ACXIOM**
 
 **Hostname**
@@ -1344,7 +1343,7 @@ See SFTP.
 
 **OAuth common flows**
 
-Applies to Amazon Ads, Criteo, Google Ads, Google Customer Match, HubSpot, Meta Ads Manager, Microsoft Advertising, Pinterest, Snapchat, The Trade Desk
+Applies to Amazon Ads, Criteo, Google Ads, Google Customer Match, HubSpot, Meta Ads Manager, Microsoft Advertising, Pinterest, Snapchat, TikTok Ads Manager
 
 **OAuth flow**
 
@@ -1364,6 +1363,13 @@ The value for the refresh token is updated automatically when a credential with 
 
 .. credential-oauth-refresh-token-end
 
+**Reauthorize token**
+
+.. credential-oauth-reauthorize-start
+
+You may need to reauthorize access to |destination-name|. This is necessary when an authorization token has expired or when it has been removed by someone with permission to manage access within |destination-name|. To reauthorize access to |destination-name|, follow the steps to configure OAuth and create a new credential.
+
+.. credential-oauth-reauthorize-end
 
 
 

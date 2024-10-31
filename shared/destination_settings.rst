@@ -84,10 +84,29 @@ Configure the following settings, and then click "Save".
 
 .. destinations-steps-business-users-start
 
-After this destination is configured, business users may configure Amperity to |sendto-link| and |channel-link| to |destination-name|.
+After this destination is configured, business users may configure Amperity to:
+
+* Use orchestrations to send query results
+* Use orchestrations and campaigns to send audiences
+* Use orchestrations and campaigns to send offline events
+
+to any configured destination.
 
 .. destinations-steps-business-users-end
 
+
+
+**COMMON API**
+
+This section contains details that are common to API-based destinations.
+
+**API allow-for note**
+
+.. allow-for-start
+
+Changes to |allow-for-what| are not immediately available in |destination-name|. Allow for |allow-for-duration| after the point at which Amperity has finished sending audience updates for them to be available.
+
+.. allow-for-end
 
 
 
@@ -504,6 +523,19 @@ Amperity does not maintain smart lists and does not remove users from the |desti
 
 .. setting-adobe-marketo-list-name-membership-end
 
+.. setting-adobe-marketo-list-name-limitations-start
+
+|destination-name| API has the following limitations:
+
+* Subscriptions are allocated 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
+* API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
+
+You may experience these rate limits when sending very large audience lists.
+
+It is possible for |destination-name| to have multiple audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity will update the first audience list in that list.
+
+.. setting-adobe-marketo-list-name-limitations-start
+
 **Program name**
 
 .. setting-adobe-marketo-program-name-start
@@ -532,7 +564,7 @@ This section contains settings that are unique to Amazon Ads.
 
 .. setting-amazon-ads-amc-instance-start
 
-The instance within Amazon Marketing Cloud to which your brand will send audiences.
+The `instance within Amazon Marketing Cloud <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| to which your brand will send audiences.
 
 .. setting-amazon-ads-amc-instance-end
 
@@ -548,7 +580,7 @@ A description of the audience that is managed by Amperity.
 
 .. setting-amazon-ads-audience-description-start
 
-The name of the audience that is managed by Amperity.
+The name of the audience that is managed by Amperity. Amperity will create a new audience if an audience in |destination-name| does not match exactly the name of the one sent from Amperity.
 
 .. setting-amazon-ads-audience-description-end
 
