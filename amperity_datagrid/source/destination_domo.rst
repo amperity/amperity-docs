@@ -39,7 +39,7 @@ Send data to Domo
 
 .. destination-domo-context-start
 
-You can use a variety of |ext_domo_business_intelligence| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to |destination-name| as a |ext_domo_dataset|. You may also send query results to :doc:`Databricks <destination_databricks>`, and then use the |ext_domo_databricks| to load data to |destination-name|.
+You can use a variety of |ext_domo_business_intelligence| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to |destination-name| as a |ext_domo_dataset|.
 
 .. destination-domo-context-end
 

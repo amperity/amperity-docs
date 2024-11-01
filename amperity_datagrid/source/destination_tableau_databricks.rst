@@ -82,7 +82,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Send an Apache Parquet, Apache Avro, CSV, or JSON file to :doc:`Databricks <destination_databricks>` as a Delta table from Amperity.
+     - Send an Apache Parquet, Apache Avro, CSV, or JSON file to `Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html>`__ |ext_link| as a Delta table from Amperity.
 
 
    * - .. image:: ../../images/steps-03.png

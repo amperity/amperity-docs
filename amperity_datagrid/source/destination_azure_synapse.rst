@@ -79,7 +79,6 @@ Enable downstream workflows
 
 Loading data to Azure Synapse Analytics enables downstream workflows, including the use of applications like:
 
-* :doc:`Databricks <destination_databricks_azure_synapse_analytics>`
 * :ref:`Microsoft Power BI <destination-powerbi-connect-to-azure>`
 * :doc:`Tableau <destination_tableau_azure_synapse_analytics>`
 
