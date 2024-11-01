@@ -193,7 +193,7 @@ An API issuer token enables your downstream workflow to programmatically issue n
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page. Under **API keys** click **Add API key**.
+     - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -232,7 +232,7 @@ An API key enables your downstream use cases to interact with the Amperity API.
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page. Under **API keys** click **Add API key**.
+     - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -271,7 +271,7 @@ An API key enables your downstream use cases to read data from the Profile API.
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page. Under **API keys** click **Add API key**.
+     - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -310,7 +310,7 @@ A write access token enables your upstream use cases to write data to the Stream
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page. Under **API keys** click **Add API key**.
+     - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -349,7 +349,7 @@ In situations where rotating an access key isn't enough, you can delete an API k
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page.
+     - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -403,7 +403,7 @@ API tokens can be rotated directly from Amperity.
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page.
+     - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -483,7 +483,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page.
+     - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -652,7 +652,7 @@ The selected action cannot be undone.
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Users & Activity** page.
+     - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
