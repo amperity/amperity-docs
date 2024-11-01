@@ -50,7 +50,6 @@ Workflows that make data available to analytics and BI tools are done in two bro
           :class: no-scaled-link
      - Use any of the following options:
 
-       #. Send data to :doc:`Databricks <destination_databricks>`.
        #. Send data from Amperity to cloud storage -- one of :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
        #. Send data to Snowflake.
        #. Send data to a cloud database -- :doc:`Amazon Redshift <destination_amazon_redshift>`, Azure Synapse Analytics, or Google BigQuery.
@@ -76,7 +75,6 @@ Analytics and BI tools
 The following sections lists some popular analytics and business intelligence tools alphabetically, and then each section describes the options that are available.
 
 * :ref:`Amazon QuickSight <sendto-analytics-bi-tool-amazon-quicksight>`
-* :ref:`Databricks <sendto-analytics-bi-tool-databricks>`
 * :ref:`Domo <sendto-analytics-bi-tool-domo>`
 * :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`
 * :ref:`Looker <sendto-analytics-bi-tool-looker>`
@@ -107,50 +105,6 @@ Amazon QuickSight
 .. sendto-analytics-bi-tool-amazon-quicksight-end
 
 
-.. _sendto-analytics-bi-tool-databricks:
-
-Databricks
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-databricks-start
-   :end-before: .. term-databricks-end
-
-.. include:: ../../amperity_datagrid/source/destination_databricks.rst
-   :start-after: .. destination-databricks-intro-start
-   :end-before: .. destination-databricks-intro-end
-
-.. image:: ../../images/destination-databricks-generic.png
-   :width: 600 px
-   :alt: Send data from Amperity to Databricks.
-   :align: left
-   :class: no-scaled-link
-
-.. sendto-analytics-bi-tool-databricks-after-start
-
-Access this data using Databricks SQL or by connecting external data visualization tools like :ref:`Tableau <sendto-tableau-connect-to-databricks>`, :doc:`Domo <destination_domo>`, or Looker to Databricks using a JDBC connection.
-
-All workflows that make data available to Databricks should be configured to update automatically on a daily (or weekly) schedule. This ensures that users in your organization who will work in Databricks always have access to the latest data.
-
-.. sendto-analytics-bi-tool-databricks-after-end
-
-.. sendto-analytics-bi-tool-databricks-links-start
-
-You can make data available to Databricks using any of the following cloud-based workflows:
-
-* |destination_databricks_amazon_redshift|
-* |destination_databricks_amazon_s3|
-* |destination_databricks_azure_blob_storage|
-* |destination_databricks_azure_synapse_analytics|
-* |destination_databricks_delta_table|
-* |destination_databricks_google_big_query|
-* |destination_databricks_snowflake|
-
-after which you can connect Databricks to any of those external locations or use the data in a Databricks Delta table to build advanced round-trip SQL queries and to build models against your data.
-
-.. sendto-analytics-bi-tool-databricks-links-end
-
-
 .. _sendto-analytics-bi-tool-domo:
 
 Domo
@@ -162,7 +116,7 @@ Domo
 
 .. sendto-analytics-bi-tool-domo-start
 
-You can use a variety of |ext_domo_business_intelligence| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to Domo as a |ext_domo_dataset|. You may also send query results to :doc:`Databricks <destination_databricks>`, and then use the |ext_domo_databricks| to load data to Domo.
+You can use a variety of |ext_domo_business_intelligence| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to Domo as a |ext_domo_dataset|.
 
 .. sendto-analytics-bi-tool-domo-end
 
@@ -180,7 +134,7 @@ Google BigQuery
 
 #. Send CSV or Parquet files from Amperity to :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
 #. Load |ext_google_bigquery_load_parquet| or |ext_google_bigquery_load_csv| from cloud storage or transfer Parquet and CSV |ext_google_bigquery_load_from_amazon_s3|.
-#. Enable downstream workflows in analytics and BI tools like :ref:`Databricks <sendto-analytics-bi-tool-databricks>`, :ref:`Microsoft Power BI <sendto-analytics-bi-tool-power-bi>`, or :ref:`Tableau <sendto-analytics-bi-tool-tableau>`. Support or enable real-time downstream workflows with |ext_google_pubsub_overview|.
+#. Enable downstream workflows in analytics and BI tools like :ref:`Microsoft Power BI <sendto-analytics-bi-tool-power-bi>`, or :ref:`Tableau <sendto-analytics-bi-tool-tableau>`. Support or enable real-time downstream workflows with |ext_google_pubsub_overview|.
 
 .. sendto-analytics-bi-tool-google-bigquery-end
 
@@ -194,7 +148,7 @@ Looker
    :start-after: .. term-google-looker-start
    :end-before: .. term-google-looker-end
 
-You can connect Looker to cloud databases, including |ext_google_looker_bi_amazon_redshift|, |ext_google_looker_bi_azure_synapse_analytics|, |ext_google_looker_bi_databricks|, |ext_google_looker_bi_google_bigquery|, and |ext_google_looker_bi_snowflake|.
+You can connect Looker to cloud databases, including |ext_google_looker_bi_amazon_redshift|, |ext_google_looker_bi_azure_synapse_analytics|, |ext_google_looker_bi_google_bigquery|, and |ext_google_looker_bi_snowflake|.
 
 .. sendto-analytics-bi-tool-looker-end
 
@@ -240,7 +194,7 @@ Sisense
 
 .. sendto-analytics-bi-tool-sisense-start
 
-Review the Sisense |ext_sisense_connector_list| and choose the option that works best for you. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :doc:`Databricks Delta Lake <destination_databricks>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
+Review the Sisense |ext_sisense_connector_list| and choose the option that works best for you. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
 
 .. sendto-analytics-bi-tool-sisense-end
 
@@ -260,7 +214,6 @@ Data is not sent from Amperity directly to Tableau. Tableau must connect to a lo
 
 #. Send a CSV file to an Amazon S3 bucket, after which it is :ref:`picked up by Amazon Redshift <sendto-tableau-connect-to-amazon-redshift>`.
 #. Send a CSV file to an Azure container, after which it is :ref:`picked up by Azure Synapse Analytics <sendto-tableau-connect-to-azure>`.
-#. Send Apache Parquet, Apache Avro, CSV, or JSON files to Databricks, and then :ref:`connect to that data from Tableau <sendto-tableau-connect-to-databricks>`.
 #. Send a CSV file to Google Cloud Storage, after which :ref:`data is transferred to Google BigQuery <sendto-tableau-connect-to-google-bigquery>`.
 #. Send Apache Parquet, Apache Avro, CSV, or JSON files to Snowflake, after which you then :ref:`connect to that data from Tableau <sendto-tableau-connect-to-snowflake>`.
 
@@ -290,7 +243,7 @@ ThoughtSpot
 
 .. sendto-analytics-bi-tool-thoughtspot-start
 
-Use |ext_thoughtspot_dataflow| connections to make data available to ThoughtSpot. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :doc:`Databricks Delta Lake <destination_databricks>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
+Use |ext_thoughtspot_dataflow| connections to make data available to ThoughtSpot. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
 
 .. sendto-analytics-bi-tool-thoughtspot-end
 
@@ -302,7 +255,7 @@ Yellowfin
 
 .. sendto-analytics-bi-tool-yellowfin-start
 
-Download |ext_yellowfin| for :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Databricks Delta Lake <destination_databricks>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake. Send data to any of these cloud storage locations, connect the JDBC driver to that source, and then open the data in Yellowfin.
+Download |ext_yellowfin| for :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake. Send data to any of these cloud storage locations, connect the JDBC driver to that source, and then open the data in Yellowfin.
 
 .. sendto-analytics-bi-tool-yellowfin-end
 
