@@ -27,23 +27,35 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Hostname**
+**API client ID and client secret**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-salesforce-marketing-cloud-api-client-secret-start
+   :end-before: .. credential-salesforce-marketing-cloud-api-client-secret-end
+
+**API authentication subdomain**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-salesforce-marketing-cloud-api-subdomain-start
+   :end-before: .. credential-salesforce-marketing-cloud-api-subdomain-end
+
+**SFTP hostname**
 
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-sftp-hostname-start
    :end-before: .. credential-sftp-hostname-end
 
-**Username**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-sftp-username-start
-   :end-before: .. credential-sftp-username-end
-
-**Passphrase**
+**SFTP passphrase**
 
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-sftp-passphrase-start
    :end-before: .. credential-sftp-passphrase-end
+
+**SFTP username**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-sftp-username-start
+   :end-before: .. credential-sftp-username-end
 
 
 Settings
@@ -98,3 +110,15 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-marketing-cloud-subscriber-field-important-start
    :end-before: .. setting-salesforce-marketing-cloud-subscriber-field-important-end
+
+**Append data**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-salesforce-marketing-cloud-append-data-start
+   :end-before: .. setting-salesforce-marketing-cloud-append-data-end
+
+**Data extension name**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-salesforce-marketing-cloud-data-extension-name-start
+   :end-before: .. setting-salesforce-marketing-cloud-data-extension-name-end
