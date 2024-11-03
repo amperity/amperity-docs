@@ -1392,11 +1392,9 @@ The name of the custom audience in |destination-name|.
 
 A setting that describes how the information in the custom audience was originally collected. Select one of the following settings:
 
-USER_PROVIDED_ONLY
-
-PARTNER_PROVIDED_ONLY
-
-BOTH_USER_AND_PARTNER_PROVIDED
+* USER_PROVIDED_ONLY
+* PARTNER_PROVIDED_ONLY
+* BOTH_USER_AND_PARTNER_PROVIDED
 
 .. setting-meta-ads-manager-customer-file-source-end
 
@@ -1412,9 +1410,9 @@ This section contains settings that are unique to Meta Ads Manager: Offline Even
 
 .. setting-meta-ads-manager-dataset-id-start
 
-|ext_facebook_dataset| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+`Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
 
-A |ext_facebook_dataset_create| in |destination-name| to support sending send offline events from Amperity.
+A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
 
 .. setting-meta-ads-manager-dataset-id-end
 
@@ -1748,9 +1746,20 @@ The account ID for the business unit in |destination-name|.
 
 .. setting-salesforce-marketing-cloud-append-data-start
 
-Enable to append instead of overwriting data.
+Enable this option to upsert new rows to the data extension and update existing rows.
+
+When not selected, data in the data extension is deleted, and then is updated to match the rows sent from Amperity.
 
 .. setting-salesforce-marketing-cloud-append-data-end
+
+**Data extension name**
+
+.. setting-salesforce-marketing-cloud-data-extension-name-start
+
+The name of the data extension in |destination-name| that is managed by Amperity.
+
+.. setting-salesforce-marketing-cloud-data-extension-name-end
+
 
 **Folder name**
 
