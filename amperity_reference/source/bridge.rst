@@ -171,7 +171,7 @@ You may delete any unused bridge.
 
 .. _bridge-howto-download-credentials:
 
-Download credentials for an outbound bridge
+Download credentials
 --------------------------------------------------
 
 .. bridge-howto-download-credentials-start
@@ -245,7 +245,7 @@ A sync that is not configured to run as part of a scheduled workflow may be sync
 
 .. _bridge-howto-upload-credentials:
 
-Upload credentials for an inbound bridge
+Upload credentials
 --------------------------------------------------
 
 .. bridge-howto-upload-credentials-start
