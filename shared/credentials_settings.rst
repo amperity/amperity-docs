@@ -154,7 +154,6 @@ The `base URL <https://developers.activecampaign.com/reference/url>`__ |ext_link
 
 
 
-
 **ACXIOM**
 
 **Hostname**
@@ -1344,7 +1343,7 @@ See SFTP.
 
 **OAuth common flows**
 
-Applies to Amazon Ads, Criteo, Google Ads, Google Customer Match, HubSpot, Meta Ads Manager, Microsoft Advertising, Pinterest, Snapchat, The Trade Desk
+Applies to Amazon Ads, Criteo, Google Ads, Google Customer Match, HubSpot, Meta Ads Manager, Microsoft Advertising, Pinterest, Snapchat, TikTok Ads Manager
 
 **OAuth flow**
 
@@ -1364,6 +1363,13 @@ The value for the refresh token is updated automatically when a credential with 
 
 .. credential-oauth-refresh-token-end
 
+**Reauthorize token**
+
+.. credential-oauth-reauthorize-start
+
+You may need to reauthorize access to |destination-name|. This is necessary when an authorization token has expired or when it has been removed by someone with permission to manage access within |destination-name|. To reauthorize access to |destination-name|, follow the steps to configure OAuth and create a new credential.
+
+.. credential-oauth-reauthorize-end
 
 
 
@@ -1604,19 +1610,23 @@ xxxxx
 
 **SALESFORCE MARKETING CLOUD**
 
-xxxxx
+**API client ID and client secret**
 
-**Credential type**
+.. credential-salesforce-marketing-cloud-api-client-secret-start
 
-.. credential-salesforce-marketing-cloud-credential-type-start
+The client ID and client secret for your brand's instance of the Marketing Cloud SOAP API.
 
-xxxxx
+.. credential-salesforce-marketing-cloud-api-client-secret-end
 
-(for non-SFTP destination)
+**API subdomain**
 
-.. credential-salesforce-marketing-cloud-credential-type-end
+.. credential-salesforce-marketing-cloud-api-subdomain-start
 
-**Hostname**
+The authentication subdomain for your brand's instance of the Marketing Cloud SOAP API.
+
+.. credential-salesforce-marketing-cloud-api-subdomain-end
+
+**SFTP hostname**
 
 .. credential-salesforce-marketing-cloud-hostname-start
 
@@ -1630,11 +1640,11 @@ The SFTP hostname is represented by a 28-character string that starts with the l
 
 .. credential-salesforce-marketing-cloud-hostname-context-end
 
-**Passphrase**
+**SFTP passphrase**
 
 See SFTP.
 
-**Username**
+**SFTP username**
 
 See SFTP.
 

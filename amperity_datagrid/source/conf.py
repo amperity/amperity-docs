@@ -179,9 +179,18 @@ html_sidebars = {
 html_additional_pages = {
     'add_customer_records': 'add_customer_records.html',
     'add_interactions_records': 'add_interactions_records.html',
+    'destination_databricks': 'destination_databricks.html',
+    'destination_databricks_amazon_redshift': 'destination_databricks_amazon_redshift.html',
+    'destination_databricks_amazon_s3': 'destination_databricks_amazon_s3.html',
+    'destination_databricks_azure_blob_storage': 'destination_databricks_azure_blob_storage.html',
+    'destination_databricks_azure_synapse_analytics': 'destination_databricks_azure_synapse_analytics.html',
+    'destination_databricks_delta_table': 'destination_databricks_delta_table.html',
+    'destination_databricks_google_big_query': 'destination_databricks_google_big_query.html',
+    'destination_databricks_snowflake': 'destination_databricks_snowflake.html',
     'destination_facebook_ads': 'destination_facebook_ads.html',
     'destination_google_customer_match': 'destination_google_customer_match.html',
     'destinations': 'destinations.html',
+    'source_databricks': 'source_databricks.html',
     'sources': 'sources.html',
 }
 

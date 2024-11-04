@@ -25,7 +25,10 @@ Site index
 Amperity Bridge
 ==================================================
 
-:doc:`About Amperity Bridge <bridge>` |fa-index-separator| :ref:`Outbound shares <bridge-outbound-shares>`
+:doc:`About Amperity Bridge <bridge>` |fa-index-separator| :ref:`Sync with Databricks <bridge-sync-databricks>`
+
+**How-tos**
+   :ref:`bridge-howto-add-inbound` |fa-index-separator| :ref:`bridge-howto-add-outbound` |fa-index-separator| :ref:`bridge-howto-add-scheduled-workflow` |fa-index-separator| :ref:`bridge-howto-delete` |fa-index-separator| :ref:`bridge-howto-download-credentials` |fa-index-separator| :ref:`bridge-howto-rename` |fa-index-separator| :ref:`bridge-howto-sync` |fa-index-separator| :ref:`bridge-howto-upload-credentials`
 
 
 .. _index-campaigns:
