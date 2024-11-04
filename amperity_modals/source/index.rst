@@ -70,7 +70,7 @@ Site Index
    destination-s3
    destination-sailthru
    destination-salesforce
-   destination-sfmc-sftp
+   destination-salesforce-marketing-cloud
    destination-sftp
    destination-smg
    destination-snapchat
@@ -80,7 +80,7 @@ Site Index
    destination-tiktok
    destination-tiktok-offline-events
    destination-tradedesk
-   destination-tradedesk-offline
+   destination-tradedesk-offline-events
    destination-tradedesk-3p
    destination-vibes
    destination-yahoo-dsp
