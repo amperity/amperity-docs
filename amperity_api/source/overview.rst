@@ -48,8 +48,6 @@ The Amperity API enables programmatic access to your Amperity tenant through a c
 Authentication
 ==================================================
 
-.. TODO: This section needs to have a quick overview of authentication, and then walk through the specific API key setup whatnots from the Amperity UX, similar to Profile and Streaming Ingest. This requires the DataGrid Operator key thing. Just need to flesh out the steps and make the diagrams to support.
-
 .. api-amperity-auth-start
 
 All requests that are made to Amperity API endpoints :doc:`must be authenticated by access tokens that are signed by Amperity-managed API keys <authentication>`.
