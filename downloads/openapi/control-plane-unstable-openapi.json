@@ -120,7 +120,7 @@
           "name" : "destination_data_template_id",
           "description" : "Use this parameter to restrict the list of campaigns that are returned to only campaigns that are configured to use specific data template.",
           "required" : false,
-          "x-example" : "ct-2QLLqXBEq",
+          "x-example" : "ptg-2QLLqXBEqq",
           "type" : "string"
         } ],
         "responses" : {

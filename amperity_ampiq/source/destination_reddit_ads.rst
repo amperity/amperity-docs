@@ -191,7 +191,7 @@ The following example describes the steps required to add a column to your custo
           :align: left
           :class: no-scaled-link
 
-     - .. important:: This step must be done by your **DataGrid Operator** and is required to enable the use of an attribute that contains a hashed email address within a campaign.
+     - .. important:: This step must be done by a user who is assigned the **DataGrid Operator** policy and is required to enable the use of an attribute that contains a hashed email address within a campaign.
 
        On the **Customer 360** page, open your customer 360 database in edit mode. Add the following line of SQL to your **Customer 360** table:
 

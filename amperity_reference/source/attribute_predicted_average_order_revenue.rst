@@ -39,7 +39,7 @@ About predicted CLV attributes
 
 .. attribute-predicted-average-order-revenue-about-clv-start
 
-AmpIQ provides a set of attributes that predict customer lifetime value (CLV) during the next 365 days.
+Amperity provides a set of attributes that predict customer lifetime value (CLV) during the next 365 days.
 
 Each of these attributes provides a score that is independent of other predicted CLV attributes:
 
@@ -103,7 +103,7 @@ After the attribute appears in your segment, specify an amount for predicted ave
 
 .. attribute-predicted-average-order-revenue-modeling-enabled-note-start
 
-.. note:: Predicted average order revenue is available to users of AmpIQ when predictive modeling is enabled for your tenant.
+.. note:: Predicted average order revenue is available when predictive modeling is enabled for your tenant.
 
 .. attribute-predicted-average-order-revenue-modeling-enabled-note-end
 

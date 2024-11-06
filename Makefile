@@ -12,11 +12,11 @@ base: static ## Build Amperity Documentation
 	$(BUILD_COMMAND) amperity_base/source $(BUILDDIR)/
 
 ampiq: static ## Build the /ampiq topic collection
-	# Building User Guides for AmpIQ pages...
+	# Building User Guides for Marketers...
 	$(BUILD_COMMAND) amperity_ampiq/source $(BUILDDIR)/ampiq
 
 amp360: static ## Build the /amp360 topic collection
-	# Building User Guides for Amp360 pages...
+	# Building User Guides for Analysts...
 	$(BUILD_COMMAND) amperity_amp360/source $(BUILDDIR)/amp360
 
 datagrid: static ## Build only the "/datagrid" section

@@ -35,7 +35,7 @@ Use the **Early Repeat Purchaser** attribute to build segments that support camp
 
 .. tip:: A one-time buyer could, in theory, make their elusive second purchase 60 days or 600 days after their first purchase. For early repeat purchaser to be a useful metric you cannot wait 600 days. Amperity defaults to 90 days; many customers choose to use a shorter time window.
 
-   To use a shorter time window, ask your DataGrid Operator to update the **Transaction Attributes Extended** table for your preferred value. For example, to use 60 days as the definition for an early repeat purchaser, change the current value to **60**:
+   To use a shorter time window, update the **Transaction Attributes Extended** table for your preferred value. For example, to use 60 days as the definition for an early repeat purchaser, change the current value to **60**:
 
    .. code-block:: sql
 

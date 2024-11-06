@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        An index for AmpID and DataGrid content with links to topics that cover all aspects of configuring Amperity.
+        An index for operators with links to topics that cover all aspects of configuring Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        An index for AmpID and DataGrid content with links to topics that cover all aspects of configuring Amperity.
+        An index for operators with links to topics that cover all aspects of configuring Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -104,7 +104,7 @@ Run Stitch
 Build databases
 ==================================================
 
-:doc:`Add customer profiles <add_customer_profiles>` |fa-index-separator| :doc:`Add transactions <add_transactions>` |fa-index-separator| :doc:`Enable AmpIQ <add_ampiq>` |fa-index-separator| :doc:`Enable predicted modeling <add_predicted_models>`
+:doc:`Add customer profiles <add_customer_profiles>` |fa-index-separator| :doc:`Add transactions <add_transactions>` |fa-index-separator| :doc:`Enable segments and campaigns <add_campaigns>` |fa-index-separator| :doc:`Enable predicted modeling <add_predicted_models>`
 
 
 .. _index-validate-results:
@@ -177,13 +177,12 @@ Automate workflows
 .. toctree::
    :hidden:
    
-   add_ampiq
+   add_campaigns
    add_customer_profiles
    add_data_assets
    add_email_engagement
    add_transactions
    add_predicted_models
-   ampid
    api_profile
    api_streaming_ingest
    blocklist_bad_values
@@ -196,7 +195,6 @@ Automate workflows
    data_first_party
    data_third_party
    databases
-   datagrid
    destination_active_campaign
    destination_acxiom
    destination_adobe_aep

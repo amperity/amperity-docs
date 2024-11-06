@@ -281,7 +281,7 @@ Profile edges link scores in the **Unified Scores** table to raw profiles
      CONCAT(us.amperity_id, us.pk1, us.pk2) AS "~id"
      ,CONCAT(us.pk1,source1) AS "~from"
      ,CONCAT(us.pk2,source2) AS "~to"
-     ,'AmpID Link' AS "~label"
+     ,'Amperity ID Link' AS "~label"
      ,us.score AS "score:Double"
    FROM Unified_Scores AS us
 
@@ -312,7 +312,7 @@ Customer 360 vertices are derived from the **Customer 360** table. Vertices can 
      ,cus.city AS "city:String"
      ,cus.state AS "state:String"
      ,cus.postal AS "postal:String"
-     ,'Amp360 Profile' AS "~label"
+     ,'Amperity Profile' AS "~label"
    FROM Customer_360 AS cus
 
 Vertices can be focused on customer profile *and* transactions:
@@ -345,7 +345,7 @@ Vertices can be focused on customer profile *and* transactions:
      ,cus.lifetime_average_order_value AS "lifelifetime_average_order_value:Double"
      ,cus.lifetime_average_item_price AS "lifetime_average_item_price:Double"
      ,cus.lifetime_average_num_items AS "lifetime_average_num_items:Double"
-     ,'Amp360 Profile' AS "~label"
+     ,'Amperity Profile' AS "~label"
    FROM Customer_360 AS cus
 
 .. graph-database-query-template-vertice-c360-end

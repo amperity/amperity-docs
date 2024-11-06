@@ -36,7 +36,7 @@ Use a sandbox to safely make changes to your production tenant:
 
 This is part three of a series of topics that describes how your brand can use sandboxes to safely make changes to your production tenant.
 
-.. note:: Users who have been assigned the **DataGrid Operator** or **DataGrid Administrator** policy, and then assigned the **Allow sandbox administration** policy option, are allowed to create sandboxes and promote changes to production from a sandbox.
+.. note:: Users who have been assigned the **DataGrid Operator** or **DataGrid Administrator** policies, and then assigned the **Allow sandbox administration** policy option, are allowed to create sandboxes and promote changes to production from a sandbox.
 
 .. sandbox-workflows-static-intro-end
 

@@ -130,8 +130,6 @@ After creating the |source-name| courier it will create a source named |source-n
 
 .. source-google-analytics-review-data-table-start
 
-.. TODO: Keep this sync'd with queries_reference.rst in Amp360, "Build reports for Google Analytics" section; a list of columns is in that topic and some fields in the query example.
-
 The following fields will be available:
 
 * **itemRevenue**

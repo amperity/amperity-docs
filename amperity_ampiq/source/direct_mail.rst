@@ -210,8 +210,6 @@ Use direct mail campaigns with PebblePost as part of marketing strategies to acq
 
 PebblePost has built-in reporting and measurement that can track the outcomes of your direct mail campaigns across points of sale, whether online, in-store, or over the phone.
 
-Ask your DataGrid Operator to enable PebblePost as a destination, and then send queries or campaigns directly to PebblePost from Amperity.
-
 .. direct-mail-sendto-channel-pebblepost-end
 
 

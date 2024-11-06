@@ -39,9 +39,9 @@ The **Merged Households** table generates a household ID (as a UUID) for records
 #. Update the name of the table template to append the brand name to the table name.
 #. Update the SQL in the table template for the correct name of the address standardization lookup table.
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly.
-#. Make the table available to the **Segment** editor in AmpIQ by selecting the **Make available in Visual Segment Editor** option.
+#. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
 
-   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor in AmpIQ and/or used with campaigns.
+   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor and used with campaigns.
 #. Click **Activate** to update the database with your changes.
 
 .. table-merged-households-steps-end

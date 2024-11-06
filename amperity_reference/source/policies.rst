@@ -875,7 +875,7 @@ The following table shows which policies enable user actions within the **Custom
      - |policy|
      - |policy|
 
-   * - Enable **AmpIQ**
+   * - Enable segments and campaigns
      - 
      - 
      - 
@@ -1222,7 +1222,7 @@ The following table shows which policies enable user actions within the **Querie
      - |policy|
      - |policy|
 
-   * - Make available to AmpIQ
+   * - Make available to segments and campaigns
      - |policy|
      - 
      - |policy|

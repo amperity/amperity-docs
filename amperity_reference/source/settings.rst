@@ -500,7 +500,7 @@ About BI Connect
 
 .. destination-bic-request-to-enable-start
 
-|bic| is available upon request for Amperity tenants who have licensed Amp360. After the data warehouse for |bic| is configured by Amperity for your tenant, you can send data from Amperity to the data warehouse, and then connect any of your BI tools to that data.
+|bic| is available upon request for licensed Amperity tenants. After the data warehouse for |bic| is configured by Amperity for your tenant, you can send data from Amperity to the data warehouse, and then connect any of your BI tools to that data.
 
 .. destination-bic-request-to-enable-end
 

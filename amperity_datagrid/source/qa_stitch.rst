@@ -62,7 +62,7 @@ The recommended way to add the Stitch QA database to your tenant is to use the "
 #. Name the database "Stitch QA".
 #. From the **Template** drop-down, select **Stitch QA**.
 #. Click **Create**. This opens the **Database Editor** page and shows a list of preconfigured database tables.
-#. Under **Database Type**, ensure that **Amp360** and **AmpIQ** are notselected.
+#. Under **Database Type**, ensure that **Amp360** and **AmpIQ** are not selected.
 #. Click the **Activate** button.
 #. Open the menu for the activated Stitch QA database, and then select **Run**.
 #. Take a few minutes to review the tables that are added by the "Stitch QA" database template.

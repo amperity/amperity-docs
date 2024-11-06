@@ -855,7 +855,7 @@ Use the **TABLESAMPLE BERNOULLI** clause to return a random sample of records. S
 
 will return a random sample of records from the **Customer 360** table at a 50% rate.
 
-The following example shows a segment for use with AmpIQ and campaigns that samples all customers with the surname "Smith" who do not have the given name "Joe" at a 30% rate:
+The following example shows a segment for use with campaigns that samples all customers with the surname "Smith" who do not have the given name "Joe" at a 30% rate:
 
 .. code-block:: sql
 

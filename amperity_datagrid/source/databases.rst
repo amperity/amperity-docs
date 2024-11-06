@@ -249,7 +249,7 @@ The following tables are added by the "Customer 360" template when transaction a
 * **Unified Itemized Transactions**
 * **Unified Transactions**
 
-These tables link brand interactions to customer profiles and are a specific requirement of AmpIQ.
+These tables link brand interactions to customer profiles and are a specific requirement for segments and campaigns.
 
 .. databases-manage-add-from-template-c360-interaction-records-end
 
@@ -381,9 +381,9 @@ If a table already contains an Amperity ID, you may use a passthrough table.
    .. note:: The name of the table is assigned automatically and defaults to the name of the table as shown in the drop-down menu. You may change the name of the table after selecting a table.
 #. Update the name of the passthrough table, if necessary.
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly. 
-#. Make the table available to the **Segment** editor in AmpIQ by selecting the **Make available in Visual Segment Editor** option.
+#. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
 
-   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor in AmpIQ and/or used with campaigns.
+   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor and used with campaigns.
 #. Click **Activate** to update the database with your changes.
 
 .. databases-tables-add-passthrough-steps-end
@@ -430,9 +430,9 @@ Add as SQL
 #. Set **Build Mode** to "SQL", and then define a SQL query using Spark SQL.
 #. Click **Validate** to verify that the SQL query runs correctly.
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly. 
-#. Make the table available to the **Segment** editor in AmpIQ by selecting the **Make available in Visual Segment Editor** option.
+#. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
 
-   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor in AmpIQ and/or used with campaigns.
+   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor and used with campaigns.
 #. Click **Activate** to update the database with your changes.
 
 .. databases-add-table-sql-steps-end
@@ -461,9 +461,9 @@ Use table templates to add tables to your database that use Amperity standard ta
 
    .. important:: Refer to the individual topic for each :ref:`standard table template <databases-tables-add-table-template-standard>` for more information about how to configure any required and/or recommended steps.
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly.
-#. Make the table available to the **Segment** editor in AmpIQ by selecting the **Make available in Visual Segment Editor** option.
+#. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
 
-   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor in AmpIQ and/or used with campaigns.
+   .. note:: Only tables that contain an Amperity ID may be made available to the **Segment** editor and used with campaigns.
 #. Click **Activate** to update the database with your changes.
 
 .. databases-tables-add-table-template-steps-end

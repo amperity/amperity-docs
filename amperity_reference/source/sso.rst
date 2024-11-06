@@ -266,7 +266,7 @@ Review the following sections to learn more about each policy:
 
 Add groups to your IdP that map to each of the policies in Amperity that you plan to use, and then add users to each group. Discuss with your Amperity Support team and/or representative if you have questions about mapping groups to policies.
 
-.. tip:: Use Amperity-specific prefixes for the group names in your IdP, such as **Amperity_DataGrid_Operator** or **Amperity_AmpIQ_User** to help identify the mapping.
+.. tip:: Use Amperity-specific prefixes for the group names in your IdP, such as **Amperity_Operators** or **Amperity_Users** to help identify the mapping.
 
 Provide the names of these groups to your Amperity Support team, after they will enter the names of these groups into Amperity to complete the mapping of groups to policies.
 

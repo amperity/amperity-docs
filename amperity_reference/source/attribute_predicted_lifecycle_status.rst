@@ -85,7 +85,7 @@ Choose the **is in list** attribute, and then set predicted lifecycle status to 
 
 .. attribute-predicted-lifecycle-status-modeling-enabled-note-start
 
-.. note:: Predicted lifecycle status is available to users of AmpIQ when predictive modeling is enabled for your tenant.
+.. note:: Predicted lifecycle status is available when predictive modeling is enabled for your tenant.
 
 .. attribute-predicted-lifecycle-status-modeling-enabled-note-end
 

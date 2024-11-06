@@ -46,7 +46,7 @@ The numbers in the following images refer to specific areas within the documenta
 
 .. docs-site-navigation-responsive-start
 
-On a tablet or mobile device, site navigation, search, and left-side navigation moves to the |bars| menu in the top-right corner. (The right-side navigation is not available when viewing the documentation from a tablet or mobile device.) Click the |bars| menu to search, browse the left-side navigation, and switch between the **AmpIQ**, **Amp360**, **DataGrid & AmpID**, and **Amperity A-Z** topic collections.
+On a tablet or mobile device, site navigation, search, and left-side navigation moves to the |bars| menu in the top-right corner. (The right-side navigation is not available when viewing the documentation from a tablet or mobile device.) Click the |bars| menu to search, browse the left-side navigation, and switch between the **User Guides**, **Operators Guide**, **API**, and **Amperity A-Z** topic collections.
 
 .. image:: ../../images/docs-responsive.png
    :width: 600 px
@@ -69,7 +69,7 @@ The site navigation runs across the top of the site and links together five topi
 #. Click the Amperity Documentation logo to return to a collection of overview topics.
 #. Click **User Guides** for information about AmpAi, building segments that define high value audiences, and then sending those audiences to various marketing channels to support any type of marketing campaign.
 #. Click **Operators Guide** for information about configuring Amperity for your tenant.
-#. Click **API** for information about Amperity's API endpoints. (You can learn more about the Profile API and Streaming Ingest API in the Operators Guide.)
+#. Click **API** for information about Amperity API endpoints. (You can learn more about the Profile API and Streaming Ingest API from the Operators Guide.)
 #. Click **Amperity A-Z** to open a topic collection that describes every aspect of Amperity.
 #. Click the |gift| icon for information about the latest features and improvements to Amperity.
 
@@ -90,13 +90,7 @@ Synonyms are applied to search results to associate commonly used search terms t
 A naming pattern is used to help you recognize reference content and user-focused content within the search results:
 
 * Topics in the **Amperity A-Z** collection start with "About", such as "About Couriers" or "About Semantic Tags".
-* Topics in the **DataGrid & AmpID**, **Amp360**, and **AmpIQ** topic collections start with *verbs*, such as "Manage Databases", "Send Query Results", and "Build Campaigns".
-
-.. tip:: The **DataGrid & AmpID**, **Amp360**, and **AmpIQ** topic collections document all of the activities you can do in Amperity.
-
-   * **DataGrid & AmpID** describes how to configure Amperity, including managing data sources and destinations, configuring Stitch and validating Stitch output, and building your customer 360 database.
-   * **Amp360** describes how to build queries against your customer 360 database, and then send those results to any configured downstream workflow.
-   * **AmpIQ** describes how to build advanced segments that identify your most value customers for use with any marketing campaign, and then describes how to use those segments to send results to any combination of marketing channels that have been configured for your tenant.
+* Topics in the **User Guides** and **Operators Guide** topic collections start with *verbs*, such as "Manage Databases", "Send Query Results", and "Build Campaigns".
 
 .. docs-cross-site-search-end
 
@@ -116,9 +110,8 @@ Left-side navigation
 
 The left-side navigation represents all of the topics within a topic collection and is organized in a way that keeps similar topics close together, either by component or by workflow.
 
-* **AmpIQ** represents a workflow that starts with building audiences (using segments and segment insights), and then configures those audiences as part of campaigns that support a variety of marketing channels, use cases, and outcomes.
-* **Amp360** represents a workflow that starts with building queries, and then sends those results to downstream workflows and BI tools.
-* **DataGrid & AmpID** represents a workflow that starts with sandboxes, and then moves left-to-right through Amperity.
+* **User Guides** describe marketer activities, such as building audiences (using segments and segment insights), and then configuring those audiences to be part of campaigns that support a variety of marketing channels, use cases, and outcomes and analytics, along with analytics activities like building queries, and then sending the results to downstream workflows and BI tools.
+* **Operators Guide** describes how to configure Amperity to support your brand's use cases.
 * **Amperity A-Z** is organized alphabetically.
 
 .. docs-left-side-navigation-end

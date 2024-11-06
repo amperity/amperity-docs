@@ -31,7 +31,7 @@ About the data model
 
 .. data-tables-data-model-start
 
-The data model represents the "out-of-the-box" tables that are available to every tenant. (AmpIQ tables are available only to tenants that have added AmpIQ to Amperity and have completed the process of enabling predictive attributes.)
+The data model represents the "out-of-the-box" tables that are available to every tenant.
 
 .. data-tables-data-model-end
 
@@ -49,7 +49,7 @@ Data model diagram
 
 .. data-tables-data-model-tables-start
 
-The following diagram shows the data model for core tables in Amperity. Color coded sections identify which groups of tables are associated with customer profiles, interactions records, Stitch QA, and AmpIQ.
+The following diagram shows the data model for core tables in Amperity. Color coded sections identify which groups of tables are associated with customer profiles, interactions records, Stitch QA, and predictive modeling.
 
 .. data-tables-data-model-tables-end
 
@@ -120,18 +120,14 @@ There are four groups of tables in this diagram:
 
        Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process; the use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
 
-   * - AmpIQ
+   * - Predictive models
 
        .. image:: ../../images/data_tables-ampiq.png
           :width: 20 px
-          :alt: The color associated with the AmpIQ table group.
+          :alt: The color associated with the predictive modeling table group.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-ampiq-start
-          :end-before: .. term-ampiq-end
-
-       AmpIQ tables are enabled for users of AmpIQ and are the results of the configuration and tuning of Amperity for predictive analytics. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1-to-1 or 1-to-many relationship between those three tables and AmpIQ tables. The :ref:`data-tables-predicted-clv-attributes` table contains one row per Amperity ID, whereas the :ref:`data-tables-affinity` table contains many rows per Amperity ID.
+     - Predictive modeling tables are the results of the configuration and tuning of Amperity for predictive analytics. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1-to-1 or 1-to-many relationship between those three tables and predictive modeling tables. The :ref:`data-tables-predicted-clv-attributes` table contains one row per Amperity ID, whereas the :ref:`data-tables-affinity` table contains many rows per Amperity ID.
 
        The :ref:`data-tables-campaign-recipients` table contains a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
 
@@ -871,7 +867,7 @@ The **Email Engagement Attributes** table contains the following columns:
 
    * - **Amperity ID**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-amperity-id-column-start
@@ -1215,7 +1211,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Amperity ID**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-amperity-id-column-start
@@ -1243,7 +1239,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Birthdate**
      - Date
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-birthdate-start
@@ -1253,7 +1249,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **City**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-city-start
@@ -1285,7 +1281,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Email**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-email-start
@@ -1303,7 +1299,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Gender**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-gender-start
@@ -1321,7 +1317,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Given Name**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-given-name-start
@@ -1341,7 +1337,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Phone**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-phone-start
@@ -1351,7 +1347,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Postal**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-postal-start
@@ -1361,7 +1357,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **State**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-state-start
@@ -1371,7 +1367,7 @@ The **Merged Customers** table contains the following columns:
 
    * - **Surname**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-surname-start
@@ -1718,7 +1714,7 @@ Predicted CLV Attributes
 
 .. data-tables-predicted-clv-attributes-link-to-table-start
 
-.. note:: See |table_predicted_clv_attributes| for more information about how this table is built and maintained within the customer 360 database and how it interacts with features within AmpIQ.
+.. note:: See |table_predicted_clv_attributes| for more information about how this table is built and maintained within the customer 360 database and how it interacts with features within predictive modeling.
 
 .. data-tables-predicted-clv-attributes-link-to-table-end
 
@@ -2364,8 +2360,6 @@ Customer flags
 
 .. data-tables-transaction-attributes-extended-customer-flags-start
 
-.. TODO: Do not use the word "column" in this paragraph, because it is also shared into ampiq/attributes.rst.
-
 Each record has a set of flags that indicate if a customer has purchased, the number of brand interactions, the number of brand channels, and if that customer is an early repeat purchaser.
 
 .. data-tables-transaction-attributes-extended-customer-flags-end
@@ -2440,8 +2434,6 @@ Customer orders
 --------------------------------------------------
 
 .. data-tables-transaction-attributes-extended-customer-orders-start
-
-.. TODO: Do not use the word "column" in this paragraph, because it is also shared into ampiq/attributes.rst.
 
 Each record contains a subset of order data from a customers first, second, and latest order. Each set of attributes is prefixed by first, second, or latest, depending on the order data that is being summarized.
 
@@ -2543,8 +2535,6 @@ Date differences
 
 .. data-tables-transaction-attributes-extended-date-differences-start
 
-.. TODO: Do not use the word "column" in this paragraph, because it is also shared into ampiq/attributes.rst.
-
 Each record contains three attributes that specify the number of days between certain events.
 
 .. data-tables-transaction-attributes-extended-date-differences-end
@@ -2595,8 +2585,6 @@ Time period rollups
 --------------------------------------------------
 
 .. data-tables-transaction-attributes-extended-period-rollups-start
-
-.. TODO: Do not use the word "column" in this paragraph, because it is also shared into ampiq/attributes.rst.
 
 Each record contains time period rollups of the customer's transaction history. The time periods used are lifetime, L12M (the 12 months of transaction history starting 12 months ago), LY12M (the 12 months of transaction history starting 24 months ago), and L30D (the last 30 days).
 
@@ -2920,8 +2908,6 @@ RFM
 
 .. data-tables-transaction-attributes-extended-rfm-start
 
-.. TODO: Do not use the word "column" in this paragraph, because it is also shared into ampiq/attributes.rst.
-
 Amperity calculates RFM scores against transactions that occurred within the last 12 months.
 
 Each of the recency (R), frequency (F), and monetary (M) scores are represented by a number between 0 and 9. The final RFM score is a concatenation of the individual scores: recency first, then frequency, monetary last. The final RFM score is a number between 0 and 999.
@@ -2929,8 +2915,6 @@ Each of the recency (R), frequency (F), and monetary (M) scores are represented 
 .. data-tables-transaction-attributes-extended-rfm-end
 
 .. data-tables-transaction-attributes-extended-optimize-start
-
-.. TODO: Do not use the word "column" in this paragraph, because it is also shared into ampiq/attributes.rst.
 
 .. note:: RFM uses approximate calculations to optimize the performance of the **Transaction Attributes Extended** table.
 
@@ -3228,7 +3212,7 @@ The **Unified Coalesced** table contains the following columns:
 
        Also in: **Customer 360**, **Merged Customers**, **Unified Customer**, **Unified Preprocessed Raw**
 
-   * - **address2**
+   * - **Address2**
      - String
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-address2-start
@@ -3647,7 +3631,7 @@ Unified Compliance Overview
      - String
      - **Optional**
        
-       The the address2 used as part of an address group to match to source table records, if provided.
+       The address2 field used as part of an address group to match to source table records, if provided.
 
    * - **Request City**
      - String
@@ -4131,7 +4115,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Is Return**
      - Boolean
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-is-return-start
@@ -4225,7 +4209,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Item Quantity**
      - Integer
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-item-quantity-start
@@ -4241,7 +4225,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Item Revenue**
      - Decimal
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-item-revenue-start
@@ -4293,7 +4277,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Order Datetime**
      - Datetime
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-date-start
@@ -4322,7 +4306,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Order Discount Amount**
      - Decimal
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-discount-amount-start
@@ -4340,7 +4324,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Order ID**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-id-start
@@ -4399,7 +4383,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Product ID**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-product-id-start
@@ -4417,7 +4401,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
        Values in this column depend on fields that are tagged with the **txn-item/product-id** semantic. The combination of **Order ID** and **Product ID** must be unique for each row in this table; product quantity is counted using **Item Quantity**.
 
-       .. important:: This column is recommended when using a product catalog. A product catalog is a requirement for certain predictive features of AmpIQ, such as for product affinity and audience sizes.
+       .. important:: This column is recommended when using a product catalog. A product catalog is a requirement for certain predictive features of Amperity, such as for product affinity and audience sizes.
 
    * - **Purchase Brand**
      - String
@@ -4433,7 +4417,7 @@ The **Unified Itemized Transactions** table contains the following columns:
 
    * - **Purchase Channel**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-purchase-channel-start
@@ -4563,7 +4547,7 @@ The **Unified Itemized Transactions** table contains the following columns:
      - Varies
      - You may extend the **Unified Itemized Transactions** table to define custom attributes for use with a product catalog.
 
-       .. important:: This column is recommended when using a product catalog. A product catalog is a requirement for certain predictive features of AmpIQ, such as for product affinity and audience sizes.
+       .. important:: This column is recommended when using a product catalog. A product catalog is a requirement for certain predictive features of Amperity, such as for product affinity and audience sizes.
 
        Add custom attributes to the **Unified Itemized Transactions** table by extending it to add columns that support using a product catalog. Custom attributes should include the columns to which product catalog semantic tags were applied, but may include additional custom attributes that are unique to your tenant and your brands.
 
@@ -5162,7 +5146,7 @@ The **Unified Product Catalog** table contains the following columns:
      - The ID for the brand name of a product or item.
    * - **Product Category**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling when joined to Unified Itemized Transactions.**
+     - |input-to-predictive-models| **This column is input to predictive modeling when joined to Unified Itemized Transactions.**
 
        A category to which the product belongs.
    * - **Product Category ID**
@@ -5194,7 +5178,7 @@ The **Unified Product Catalog** table contains the following columns:
      - The ID for the department to which a product or item belongs.
    * - **Product Description**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling when joined to Unified Itemized Transactions.**
+     - |input-to-predictive-models| **This column is input to predictive modeling when joined to Unified Itemized Transactions.**
 
        A description of the product.
    * - **Product Division**
@@ -5266,7 +5250,7 @@ The **Unified Product Catalog** table contains the following columns:
      - The style of a product or item.
    * - **Product Subcategory**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling when joined to Unified Itemized Transactions.**
+     - |input-to-predictive-models| **This column is input to predictive modeling when joined to Unified Itemized Transactions.**
 
        A subcategory or secondary variant to which a product belongs.
 
@@ -5435,7 +5419,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Amperity ID**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-amperity-id-column-start
@@ -5508,7 +5492,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Canceled Quantity**
      - Integer
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-canceled-quantity-start
@@ -5524,7 +5508,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Canceled Revenue**
      - Decimal
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-canceled-revenue-start
@@ -5560,7 +5544,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Datetime**
      - Datetime
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-date-start
@@ -5588,7 +5572,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Discount Amount**
      - Decimal
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-discount-amount-start
@@ -5626,7 +5610,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order ID**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-id-start
@@ -5697,7 +5681,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Quantity**
      - Integer
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-quantity-start
@@ -5725,7 +5709,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Returned Quantity**
      - Integer
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-returned-quantity-start
@@ -5747,7 +5731,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Returned Revenue**
      - Decimal
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-returned-revenue-start
@@ -5763,7 +5747,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Order Revenue**
      - Decimal
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-order-revenue-start
@@ -5829,7 +5813,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Purchase Brand**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-purchase-brand-start
@@ -5841,7 +5825,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Purchase Channel**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-purchase-channel-start
@@ -5849,7 +5833,7 @@ The **Unified Transactions** table contains the following columns:
 
    * - **Store ID**
      - String
-     - |input-to-ampiq-models| **This column is input to AmpIQ predictive modeling.**
+     - |input-to-predictive-models| **This column is input to predictive modeling.**
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-store-id-start
