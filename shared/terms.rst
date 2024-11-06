@@ -386,15 +386,6 @@ The |ext_aws_serverless_repository| is a managed repository for pre-built server
 .. term-amazon-serverless-repository-end
 
 
-**Amp360**
-
-.. term-amp360-start
-
-Amp360 merges behavioral, contextual, and transactional data into useful profiles, even when your data sources are incomplete, inconsistent, or lack linking keys.
-
-.. term-amp360-end
-
-
 **Amp360 User** (policy)
 
 .. term-amp360-user-policy-start
@@ -518,15 +509,6 @@ TBD
 .. term-amperity-lakehouse-end
 
 
-**AmpID**
-
-.. term-ampid-start
-
-AmpID resolves customer identities across all of your customer records by applying proprietary machine learning algorithms.
-
-.. term-ampid-end
-
-
 **AmpID User** (policy)
 
 .. term-ampid-policy-start
@@ -534,15 +516,6 @@ AmpID resolves customer identities across all of your customer records by applyi
 .. TODO: There is no AmpID User policy
 
 .. term-ampid-policy-end
-
-
-**AmpIQ**
-
-.. term-ampiq-start
-
-AmpIQ enables customer-centric marketing campaigns. Use segment insights to build high-value segments. Use those segments to add audiences to campaigns. Build campaigns that send those audiences to any combination of downstream marketing workflows.
-
-.. term-ampiq-end
 
 
 **AmpIQ User** (policy)
@@ -1969,15 +1942,6 @@ A Delta table is a table in a Delta Lake, which is an optimized storage layer th
 .. term-databricks-delta-table-end
 
 
-**DataGrid**
-
-.. term-datagrid-start
-
-DataGrid pulls all your customer data from any source--online, offline, historical, streaming--without requiring schema planning or ETL. DataGrid sends results of any size and type to any of your downstream applications and workflows.
-
-.. term-datagrid-end
-
-
 **DataGrid Operator** (policy)
 
 .. term-datagrid-operator-policy-start
@@ -2003,7 +1967,7 @@ The **DataGrid Administrator** policy allows full access to Amperity, including 
 
 .. term-datagrid-administrator-policy-assign-start
 
-Assign this policy to users who will make configuration changes using a sandbox, after which those changes will be reviewed by a user assigned the **Allow sandbox administration** policy. A DataGrid Administrator has visibility into *all resource groups*.
+Assign this policy to users who will make configuration changes using a sandbox, after which those changes will be reviewed by a user assigned the **Allow sandbox administration** policy. An administrator has visibility into *all resource groups*.
 
 .. term-datagrid-administrator-policy-assign-end
 
@@ -3866,7 +3830,7 @@ A match category is a classifier that is applied by Amperity to an individual re
      - Amperity has moderate confidence that these records match, due to weak or fuzzy matches between highly unique customer attributes (email, phone, address).
    * - **Weak**
      - Amperity lacks confidence, but if asked to guess, Amperity would assert these records do belong to the same individual, because they match on non-unique customer attributes (name, state, zip code).
-   * - **No conflict**
+   * - **Non-match**
      - Amperity has high confidence that these records do NOT match, because core profile data is in conflict.
 
 .. term-match-category-end
@@ -4577,7 +4541,7 @@ A pairwise connection is a pair of matching records within a block that have an 
 
 A score is assigned to every pairwise connection. The score is measured in two parts, separated by a period.
 
-The first part--the record pair score--correlates to the match category, which is a machine learning classifier that is applied by Amperity to individual record pairs. The record pair score corresponds to the classification: 5 for exact matches, 4 for excellent matches, 3 for high matches, 2 for moderate matches, 1 for weak matches, and 0 for no conflicts.
+The first part--the record pair score--correlates to the match category, which is a machine learning classifier that is applied by Amperity to individual record pairs. The record pair score corresponds to the classification: 5 for exact matches, 4 for excellent matches, 3 for high matches, 2 for moderate matches, 1 for weak matches, and 0 for non-matches.
 
 The second part--the record pair strength--is used by Stitch to help determine the quality of the record pair score. This value appears in the Stitch report as a two decimal number. A record pair strength by itself is not a direct indicator of the quality of a pairwise connection score.
 
@@ -4840,7 +4804,7 @@ Predicted average order revenue represents the average value of each order a cus
 
 .. term-predicted-models-start
 
-Predictive models are a feature of AmpIQ that predict customer behavior, such as customer lifetime value (pCLV), churn propensity, product affinity, and lifecycle events.
+Predictive models are a feature of Amperity that predict customer behavior, such as customer lifetime value (pCLV), churn propensity, product affinity, and lifecycle events.
 
 .. term-predicted-models-end
 
@@ -4849,7 +4813,7 @@ Predictive models are a feature of AmpIQ that predict customer behavior, such as
 
 .. term-predictive-models-start
 
-A predictive model is a feature of AmpIQ that predict customer behavior, such as predicted customer lifetime value (predicted CLV), churn propensity, product affinity, and lifecycle events.
+A predictive model is a feature of Amperity that predict customer behavior, such as predicted customer lifetime value (predicted CLV), churn propensity, product affinity, and lifecycle events.
 
 .. term-predictive-models-end
 
@@ -6072,7 +6036,7 @@ Standard tables include:
 * **Unified Scores**
 * **Unified Transactions**
 
-along with tables that are associated with predictive modeling and AmpIQ, such as **Predicted CLV Attributes**.
+along with tables that are associated with predictive modeling, such as **Predicted CLV Attributes**.
 
 .. term-standard-database-table-list-end
 
@@ -6793,7 +6757,7 @@ The **Unified Product Catalog** table contains a row for every item in your prod
 
 .. term-unified-product-catalog-table-with-ampiq-start
 
-.. important:: The **Unified Product Catalog** table represents the taxonomy for your products and brands. Attributes are added to the **Unified Product Catalog** table when **pc/** semantic tags are applied to your data sources. All **pc/** semantic tags are optional. Use the ones that best define the shape of your product catalog and best describe the individual items within it. The product ID is used as an input to AmpIQ predictive modeling.
+.. important:: The **Unified Product Catalog** table represents the taxonomy for your products and brands. Attributes are added to the **Unified Product Catalog** table when **pc/** semantic tags are applied to your data sources. All **pc/** semantic tags are optional. Use the ones that best define the shape of your product catalog and best describe the individual items within it. The product ID is used as an input to predictive modeling.
 
 .. term-unified-product-catalog-table-with-ampiq-end
 
@@ -7055,7 +7019,7 @@ The visual **Query Editor** is a user interface that allows creating queries usi
 
 .. term-visual-segment-editor-start
 
-The **Segment Editor** is the user interface for building segments in AmpIQ. This editor uses a series of drop-downs, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
+The **Segment Editor** is the user interface for building segments. This editor uses a series of drop-downs, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
 
 .. term-visual-segment-editor-end
 
