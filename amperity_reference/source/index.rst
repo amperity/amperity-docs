@@ -256,7 +256,7 @@ Policies
 Predictive models
 ==================================================
 
-:doc:`Churn propensity <model_churn_propensity>` |fa-index-separator| :doc:`Predicted CLV <model_predicted_clv>` |fa-index-separator| :doc:`Product affinity <model_product_affinity>`
+:doc:`Churn propensity <model_churn_propensity>` |fa-index-separator| :doc:`Predicted CLV <model_predicted_clv>` |fa-index-separator| :doc:`Product affinity <model_product_affinity>` |fa-index-separator| :doc:`Event propensity <model_event_propensity>`
 
 
 .. _index-sql-presto:
@@ -546,6 +546,7 @@ Workflows
    glossary
    ingest_queries
    model_churn_propensity
+   model_event_propensity
    model_predicted_clv
    model_product_affinity
    naming

@@ -95,7 +95,7 @@ Send offline events
 Apply predictive analytics
 ==================================================
 
-:doc:`Churn prevention <churn_prevention>` |fa-index-separator| :doc:`Predicted customer lifetime value <model_predicted_clv>`
+:doc:`Churn prevention <churn_prevention>` |fa-index-separator| :doc:`Predicted customer lifetime value <model_predicted_clv>` |fa-index-separator| :doc:`Event propensity <model_event_propensity>`
 
 
 .. Hide the TOC from this file.
@@ -212,6 +212,7 @@ Apply predictive analytics
    events_snapchat
    events_the_trade_desk
    events_tiktok_ads_manager
+   model_event_propensity
    model_predicted_churn
    model_predicted_clv
    model_predicted_product_affinity
