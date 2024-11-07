@@ -775,6 +775,11 @@
    <a href="https://docs.amperity.com/reference/format_xml.html">XML</a>
 
 
+.. |householding| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/householding">Merged Households</a>
+
+
 .. |passthrough_tables| raw:: html
 
    <a href="https://docs.amperity.com/reference/databases.html#add-passthrough-table">passthrough tables</a>
