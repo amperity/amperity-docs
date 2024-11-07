@@ -51,7 +51,7 @@ Use a query similar to the following to compare scores for two records:
    WHERE source1 = 'Table_Name' AND pk1 = '123abc456def'
    AND source2 = 'Table_Name' AND pk1 = '789ghi012jkl'
 
-where the values of **pk1** and **pk2** are the Amperity IDs for the records you want to compare.
+where the values of **pk1** and **pk2** are for the records you want to compare.
 
 .. table-stitch-scores-use-with-stitch-qa-compare-records-end
 

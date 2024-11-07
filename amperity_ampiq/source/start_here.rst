@@ -5,35 +5,47 @@
 
 .. meta::
     :description lang=en:
-        A landing page for the collection of content about AmpIQ.
+        A landing page for the collection of content about using Amperity to support your brand's marketing campaigns.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A landing page for the collection of content about AmpIQ.
+        A landing page for the collection of content about using Amperity to support your brand's marketing campaigns.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
         Start here
 
 ==================================================
-Start here
+Start here: Marketers
 ==================================================
 
-.. start-here-ampiq-intro-start
+.. start-here-intro-start
 
-Brands that ignore customer-centric marketing risk losing their most valuable customers. AmpIQ reduces the noise in behavioral data and provides out-of-the-box attributes, models, and insights that make it easy to find the right areas in which to focus, grow loyalty, and increase customer lifetime value.
+Brands that ignore customer-centric marketing risk losing their most valuable customers. Amperity reduces the noise in behavioral data and provides out-of-the-box attributes, models, and insights that make it easy to find the right areas in which to focus, grow loyalty, and increase customer lifetime value.
 
-.. start-here-ampiq-intro-end
+.. start-here-intro-end
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-ampiq-start
-   :end-before: .. term-ampiq-end
+.. start-here-about-start
 
-**Common workflows**
+Amperity promotes customer-centric marketing by enabling new insights on every customer, smart segmentation, and seamless campaign integration from an intuitive interface that makes it easy to apply the right segments, test and optimize, and then grow loyalty and lifetime value.
+
+* Generate customer- and segment-level insights, including for brand and channel behaviors, product preferences, revenue sizing, and recommended actions.
+* Enable out-of-the-box predictive models, segments, and personas designed to improve customer lifetime value with a visual interface that allows you to explore and create segments on your own.
+* Activate campigns across channels to optimize channel mix, drive improved experiences, and improve return on investment.
+* Apply closed-loop measurements, multivariate testing, and control groups to transactions, revenue gains, and key performance indicators for customers.
+* Send these results to any 100+ integrations and any of your downstream workflows, including to marketing, customer experience, advertising, and attribution tools.
+
+.. start-here-about-end
+
+
+.. _start-here-common-workflows:
+
+Common workflows
+==================================================
 
 .. start-here-ampiq-common-workflows-start
 
-Common AmpIQ workflows use a combination of segment insights and predictive attributes to define audiences, and then assign those audiences to campaigns that are split into a series of control and treatment groups that allow you to test and refine that campaign over time.
+Common marketing workflows use a combination of segment insights and predictive attributes to define audiences, and then assign those audiences to campaigns that are split into a series of control and treatment groups that allow you to test and refine that campaign over time.
 
 * Use segment insights to build high-value segments
 * Use recommended audience sizes to find the right number of customers for your campaign
@@ -43,6 +55,34 @@ Common AmpIQ workflows use a combination of segment insights and predictive attr
 * Review customer behavior by lifecycle status, such as "new", "active", "at risk", or "churned"
 
 .. start-here-ampiq-common-workflows-end
+
+
+.. _start-here-requirements:
+
+Requirements
+==================================================
+
+.. start-here-requirements-start
+
+Amperity has specific |add_ampiq_data_requirements| for data source quality, columns and tables, fields, and additional data sources.
+
+.. start-here-requirements-end
+
+
+.. _start-here-segments-tab:
+
+Sending campaigns
+==================================================
+
+.. start-here-static-intro-start
+
+Sending campaigns from Amperity is a combination of three things: segments, audiences, and destinations. The following series of topics describes how these work.
+
+* A :doc:`segment <segments>` defines the audience that you will use with your campaign.
+* A :doc:`campaign <campaigns>` breaks that audience down into sub-audiences that align to your marketing strategies and goals.
+* :doc:`Destinations <destinations>` are the locations and channels to which you will send those sub-audiences, after which you will perform specific marketing activities to support your marketing campaign.
+
+.. start-here-static-intro-end
 
 
 .. _start-here-example-use-cases:
@@ -85,7 +125,7 @@ The left-side navigation (from top to bottom) in this topic collection uses a ve
 
 The left-side navigation has sections for the following types of activities:
 
-#. Understanding marketing use cases that are enabled by AmpIQ.
+#. Understanding marketing use cases that are enabled by Amperity.
 #. Understanding which predicted attributes are available to you as an output of predictive modeling.
 #. Building segments using a visual segment editor. Use segment insights to identify high-value segments.
 #. Building campaigns with combinations of control groups, treatment groups, subaudiences, and exclusion lists.

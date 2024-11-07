@@ -21,7 +21,7 @@ Send data with orchestrations
 
 .. send-results-start
 
-You can send results from Amp360 using an orchestration that:
+You can send results from Amperity using an orchestration that:
 
 * :ref:`Sends query results <send-results-query>`
 * :ref:`Sends a data export <send-results-data-exports>`

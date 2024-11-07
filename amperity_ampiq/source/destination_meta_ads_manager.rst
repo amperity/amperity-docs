@@ -60,8 +60,6 @@ A |destination-name| destination works like this:
 
       |destination-name| uses OAuth to grant access to Amperity. You will need to reauthorize OAuth if the token expires or is removed.
 
-      Ask your DataGrid Operator to help resolve these issues if they occur.
-
    .. note::
 
       .. include:: ../../shared/destinations.rst

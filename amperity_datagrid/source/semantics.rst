@@ -1307,7 +1307,7 @@ Separation keys (sk)
 
 .. semantics-key-separation-about-start
 
-A record pair is assigned a no conflict score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
+A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
 
 .. note:: The following separation keys do not consider approximately matched values to be conflicting values:
 
@@ -1397,7 +1397,7 @@ Assign a unique separation key to each primary key to prevent clusters from bein
       * - etc.
         - ...
 
-When **sk-acme** and **sk-acmedulxe** appear in the same cluster, they will be scored as a no conflict and the records will be separated.
+When **sk-acme** and **sk-acmedulxe** appear in the same cluster, they will be scored as non-matching and the records will be separated.
 
 * Records with the same brand share a separation key, but those values are guaranteed to be different because they are primary keys.
 * Records with different brands will have no non-**NULL** separation keys in common and will use the standard classifier.
@@ -1518,7 +1518,7 @@ Define product catalogs
 
 .. semantics-product-catalog-define-start
 
-A :ref:`product catalog taxonomy <add-predicted-models-product-catalog>` must be defined to support predictive modeling for AmpIQ. Amperity provides a set of semantic tags for product catalog taxonomies that will generate the **Unified Product Catalog** table. The **product-id** semantic tag identifies the field against which predictions will be made must be joined to the **Unified Itemized Transactions** table.
+A :ref:`product catalog taxonomy <add-predicted-models-product-catalog>` must be defined to support predictive modeling. Amperity provides a set of semantic tags for product catalog taxonomies that will generate the **Unified Product Catalog** table. The **product-id** semantic tag identifies the field against which predictions will be made must be joined to the **Unified Itemized Transactions** table.
 
 .. semantics-product-catalog-define-end
 
@@ -1537,7 +1537,7 @@ ACME Beverages defines its product catalog taxonomy using a simple hierarchy:
 
 This taxonomy results in approximately 400 individual types of beverages that are spread across 6 top-level categories with approximately 5000 individual beverages by brand.
 
-When determining the correct size of a product catalog for use with AmpIQ predictive modeling you want to choose the node in the taxonomy that will provide between 20-2000 unique values. ACME Beverages chooses to use beverage type as the node within the taxonomy that is to be associated with predictive modeling for recommended audiences.
+When determining the correct size of a product catalog for use with predictive modeling you want to choose the node in the taxonomy that will provide between 20-2000 unique values. ACME Beverages chooses to use beverage type as the node within the taxonomy that is to be associated with predictive modeling for recommended audiences.
 
 By default, predictive modeling returns up to the top 50 values within the product catalog taxonomy, or the top 50 types of beverages within the product catalog. 
 

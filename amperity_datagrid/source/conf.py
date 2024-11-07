@@ -63,7 +63,7 @@ source_suffix = ['.rst']
 master_doc = 'index'
 
 # General information about the project.
-project = u'DataGrid + AmpID'
+project = u'Operators Guide'
 #copyright = u''
 
 # The version info for the project you're documenting, acts as replacement for
@@ -137,7 +137,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "DataGrid"
+html_title = "Operators Guide"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -177,8 +177,11 @@ html_sidebars = {
 # template names.
 #    '404': '/internal/404.html',
 html_additional_pages = {
+    'add_ampiq': 'add_ampiq.html',
     'add_customer_records': 'add_customer_records.html',
     'add_interactions_records': 'add_interactions_records.html',
+    'ampid': 'ampid.html',
+    'datagrid': 'datagrid.html',
     'destination_databricks': 'destination_databricks.html',
     'destination_databricks_amazon_redshift': 'destination_databricks_amazon_redshift.html',
     'destination_databricks_amazon_s3': 'destination_databricks_amazon_s3.html',
@@ -224,7 +227,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DataGrid'
+htmlhelp_basename = 'Operators Guide'
 
 
 # Edit this page on GitHub link

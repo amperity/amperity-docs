@@ -19,8 +19,6 @@
 Profile API
 ==================================================
 
-.. warning:: Ask your Amperity representative about how your tenant can get access to the Profile API.
-
 .. include:: ../../shared/terms.rst
    :start-after: .. term-profile-api-start
    :end-before: .. term-profile-api-end

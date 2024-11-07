@@ -272,14 +272,6 @@ A
       :end-before: .. term-amazon-s3-end
 
 
-.. _a-amp360:
-
-**Amp360**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-amp360-start
-      :end-before: .. term-amp360-end
-
-
 .. _a-amperity:
 
 **Amperity**
@@ -320,22 +312,6 @@ A
    .. include:: ../../shared/terms.rst
       :start-after: .. term-amperity-js-start
       :end-before: .. term-amperity-js-end
-
-
-.. _a-ampid:
-
-**AmpID**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-ampid-start
-      :end-before: .. term-ampid-end
-
-
-.. _a-ampiq:
-
-**AmpIQ**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-ampiq-start
-      :end-before: .. term-ampiq-end
 
 
 .. _a-amplitude:
@@ -1390,14 +1366,6 @@ D
    .. include:: ../../shared/terms.rst
       :start-after: .. term-databricks-start
       :end-before: .. term-databricks-end
-
-
-.. _d-datagrid:
-
-**DataGrid**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-datagrid-start
-      :end-before: .. term-datagrid-end
 
 
 .. _d-datalogix:

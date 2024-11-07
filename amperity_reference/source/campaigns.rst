@@ -203,7 +203,7 @@ For many |ampiq_destinations|, you may configure the list of attributes (i.e. fi
 
 .. campaigns-attribute-append-start
 
-You may append attributes that are available in any database table that is available to AmpIQ. Click the **+ Add attribute** link, and then name the attribute, specify from which table that attribute is sourced, and then specify the name of that attribute as it is defined in that table.
+You may append attributes that are available in any database table. Click the **+ Add attribute** link, and then name the attribute, specify from which table that attribute is sourced, and then specify the name of that attribute as it is defined in that table.
 
 .. campaigns-attribute-append-end
 
@@ -1517,7 +1517,7 @@ Enable Campaign Recipients table
 
 .. campaigns-enable-campaign-recipients-table-start
 
-The **Campaign Recipients** table can be enabled by a **DataGrid Administrator** directly from the **Campaigns** page. It may be enabled for each database that is configured in your tenant.
+The **Campaign Recipients** table can be enabled directly from the **Campaigns** page. It may be enabled for each database that is configured in your tenant.
 
 .. campaigns-enable-campaign-recipients-table-end
 

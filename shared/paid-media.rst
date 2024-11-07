@@ -7,12 +7,12 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
-This is a shared topic for Paid Media campaigns, mostly to allow for some content to be for DataGrid Operator and some for AmpIQ, but also maybe for Amp360, depends.
+This is a shared topic for Paid Media campaigns to share content across collections.
 
 
 **About paid media campaigns** (config)
 
-.. TODO: This is the intro for AmpIQ topics section titled "Match rates" and then for each paid media destination a callout in the "Data templates" section. Purpose is to explain, but also provide cross-site linking.
+.. TODO: This is the intro for segments and campaigns topics section titled "Match rates" and then for each paid media destination a callout in the "Data templates" section. Purpose is to explain, but also provide cross-site linking.
 
 .. paid-media-admonition-about-start
 
@@ -43,7 +43,7 @@ Amperity provides the right set of data to support your brand's paid media adver
 
 
 
-**What type of profile to send?** (AmpIQ)
+**What type of profile to send?** (segments / campaigns)
 
 .. paid-media-ampiq-about-start
 

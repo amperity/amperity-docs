@@ -167,7 +167,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. table-customer-attributes-recommended-starting-sql-note-start
 
-.. note:: If your tenant is not using transactions (or AmpIQ product features) or if your tenant does not have email and/or SMS opt-in status, make some (or all) of the following changes to the recommended starting SQL for the **Customer Attributes** table:
+.. note:: If your tenant is not using transactions or if your tenant does not have email and/or SMS opt-in status, make some (or all) of the following changes to the recommended starting SQL for the **Customer Attributes** table:
 
    #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN ta_cte ta** line in the "Extend for classifications" common table expression (CTE).
    #. Remove the "Extend for email opt-in status" section.
@@ -1129,7 +1129,7 @@ The **Customer Attributes** table can be configured to provide your customers' c
 
 You have two choices for defining churn events for this table:
 
-#. Use predicted modeling to define your customers' current churn status. This option is available when your tenant has AmpIQ predictive modeling enabled and a **Churn Events** table is configured for use in your tenant.
+#. Use predicted modeling to define your customers' current churn status. This option is available when your tenant has predictive modeling enabled and a **Churn Events** table is configured for use in your tenant.
 #. Use historical order history to define your customers' churn status. For example, you could configure the **Churn Events** table to define churn status as "active" as "within the past 60 days", "at risk" as "within the past 365 days", and so on, using SQL similar to:
 
    .. code-block:: sql

@@ -33,15 +33,11 @@ Address-based householding
 
 .. householding-address-based-note-start
 
-.. note:: This topic describes address-based householding as a starting point. An implementation of address-based householding can vary significantly from tenant to tenant, depending on the
+.. note:: This topic describes address-based householding as a starting point. An implementation of address-based householding can vary significantly across brand use cases, depending on the
 
    * Type and number of data sources
    * Number of addresses
    * Types of direct mail campaigns that will be based on the results
-   
-   along with other dependencies that may be tenant-specific.
-   
-   Please discuss address-based householding with your Amperity representative prior to adding it so they can help the scope and level of detail that may be required for your tenant.
 
 .. householding-address-based-note-end
 
@@ -86,7 +82,7 @@ The process for enabling address-based householding includes:
 
 .. householding-address-based-sections-tip-start
 
-.. tip:: Additional use cases for address-based householding include:
+.. tip:: Additional configuration options for address-based householding include:
 
    #. Joining the **Merged Households** table to the **Customer 360** table to add the **household_id** and **household_size** fields. This makes them available as profile attributes.
    #. Using a common table expression (CTE) to flag a single individual that is associated with an address as the primary contact.
@@ -205,7 +201,7 @@ This section walks through the default SQL template that is used to define how a
 
 .. _householding-address-build-segments:
 
-Build queries
+Build queries and segments
 ==================================================
 
 .. householding-address-build-segments-start

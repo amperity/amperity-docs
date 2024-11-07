@@ -937,7 +937,7 @@ Use a separation key (sk) for deterministic unmatching of records. This prevents
 
 .. semantics-key-separation-assign-pairs-start
 
-A record pair is assigned a no conflict score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
+A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
 
 .. note:: The following separation keys do not consider approximately matched values to be conflicting values:
 
@@ -1597,7 +1597,7 @@ The following table lists the tags available to this semantic group (with requir
           :start-after: .. term-product-id-start
           :end-before: .. term-product-id-end
 
-       .. important:: AmpIQ predictive modeling requires a product catalog to contain between 20-2000 unique product IDs. A product ID is often associated with a stock keeping unit (SKU).
+       .. important:: Predictive modeling requires a product catalog to contain between 20-2000 unique product IDs. A product ID is often associated with a stock keeping unit (SKU).
 
           .. include:: ../../shared/terms.rst
              :start-after: .. term-sku-start
@@ -1605,7 +1605,7 @@ The following table lists the tags available to this semantic group (with requir
 
           For example, a shirt with the same color and material, but with three different sizes would be represented by three unique SKUs and would also be represented by three unique product IDs.
 
-          Each customer has their own definition for product IDs and SKUs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition *and* meet the requirements for AmpIQ predictive modeling (if enabled).
+          Each customer has their own definition for product IDs and SKUs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition *and* meet the requirements for predictive modeling (if enabled).
 
    * - **product-material**
      - String

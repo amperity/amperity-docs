@@ -9,14 +9,14 @@
 
 .. sendtos-ask-to-configure-start
 
-.. note:: |destination-name| must be enabled before you can configure an orchestration to send query results. Ask your DataGrid Operator or Amperity representative to enable |destination-name| for your tenant.
+.. note:: |destination-name| must be enabled before you can configure an orchestration to send query results.
 
 .. sendtos-ask-to-configure-end
 
 
 .. sendtos-ask-to-configure-webhook-start
 
-.. note:: |destination-name| must be enabled as a webhook destination before you can configure an orchestration to send query results. Work with your DataGrid Operator or Amperity representative to configure |destination-name| for your tenant.
+.. note:: |destination-name| must be enabled as a webhook destination before you can configure an orchestration to send query results.
 
 .. sendtos-ask-to-configure-webhook-end
 

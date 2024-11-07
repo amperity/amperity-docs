@@ -5,18 +5,18 @@
 
 .. meta::
     :description lang=en:
-        An index for Amp360 content with links to topics about all aspects of Amp360, including queries and orchestrations, and then sending query results downstream to any destination.
+        About Amperity for analyst use cases, including queries and orchestrations, and then sending query results downstream to any destination.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        An index for Amp360 content with links to topics about all aspects of Amp360, including queries and orchestrations, and then sending query results downstream to any destination.
+        About Amperity for analyst use cases, including queries and orchestrations, and then sending query results downstream to any destination.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About Amp360
+        About Amperity
 
 ==================================================
-About Amp360
+About Amperity
 ==================================================
 
 
@@ -71,7 +71,6 @@ Analyze campaign results
 .. toctree::
    :hidden:
 
-   amp360
    analyze_campaigns
    databases
    destination_active_campaign

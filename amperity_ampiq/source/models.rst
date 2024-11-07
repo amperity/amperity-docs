@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        Predictive models for churn propensity, customer lifetime value, and product affinity may be enabled for use within AmpIQ.
+        Predictive models for churn propensity, customer lifetime value, and product affinity may be enabled for use within Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Predictive models for churn propensity, customer lifetime value, and product affinity may be enabled for use within AmpIQ.
+        Predictive models for churn propensity, customer lifetime value, and product affinity may be enabled for use within Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

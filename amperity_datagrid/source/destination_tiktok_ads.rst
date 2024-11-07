@@ -132,7 +132,7 @@ Get details
 
        The user ID type.
 
-       This value must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** *and* **PHONE** by default for AmpIQ campaigns.
+       This value must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** *and* **PHONE** by default for campaigns.
 
        .. tip:: The **EMAIL** (email addresses) user ID type most often leads to the best match rates.
 
@@ -342,7 +342,7 @@ Add destination
 
        If a custom audience already exists, the list of customers in that audience will be updated to match the list sent from Amperity. If a custom audience does not exist, Amperity will add it. Amperity does not delete custom audiences.
 
-       The user ID type must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** *and* **PHONE** by default for AmpIQ campaigns.
+       The user ID type must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** *and* **PHONE** by default for campaigns.
 
        .. note:: When the advertiser ID, custom audience, and the user ID type settings were are not configured as part of the destination, you must configure them as part of the data template before making this destination available to campaigns.
 

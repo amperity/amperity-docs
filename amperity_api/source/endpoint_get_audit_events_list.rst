@@ -110,8 +110,8 @@ A request to the **/audit-events** endpoint is similar to:
           'https://tenant.amperity.com/api/audit-events \
           ?limit=10 \
           ?with_total=true \
-          ?happened_start=2024-04-01 \
-          ?happened_end=2024-04-10' \
+          ?happened_from=2024-04-01 \
+          ?happened_tod=2024-04-10' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
@@ -162,8 +162,8 @@ The following example shows how to use cURL to send a request to the **/audit-ev
           'https://tenant.amperity.com/api/audit-events \
           ?limit=10 \
           &with_total=true \
-          &happened_start=2024-04-01 \
-          &happened_end=2024-04-10' \
+          &happened_from=2024-04-01 \
+          &happened_to=2024-04-10' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
@@ -200,8 +200,8 @@ The following example shows how to use Python to send a request to the **/audit-
 
    # Query parameters for time ranges
    payload = {
-     # 'happened_start': '',
-     # 'happened_end': ''
+     # 'happened_from': '',
+     # 'happened_to': ''
    }
 
    # Get the response from the endpoint
@@ -255,7 +255,7 @@ A successful request made to the **/audit-events** endpoint will return a respon
          "tenant": "socktown",
          "principal_name": "Socktown User",
          "object_id": "aud-20240409-55140-aBCDEFg1hiK",
-         "happened_at": "2024-04-09T15:19:00.636Z",
+         "happened_from": "2024-04-09T15:19:00.636Z",
          "tenant_family": "family",
          "principal_email": "user@socktown.com",
          "principal_id": "google-apps|user@socktown.com",

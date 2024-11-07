@@ -63,7 +63,7 @@ source_suffix = ['.rst']
 master_doc = 'index'
 
 # General information about the project.
-project = u'AmpIQ'
+project = u'User Guides'
 #copyright = u''
 
 # The version info for the project you're documenting, acts as replacement for
@@ -136,7 +136,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "AmpIQ"
+html_title = "User Guides"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -176,6 +176,7 @@ html_sidebars = {
 # template names.
 #    '404': '/internal/404.html',
 html_additional_pages = {
+    'ampiq': 'ampiq.html',
     'channel_active_campaign': 'channel_active_campaign.html',
     'channel_adobe_marketo': 'channel_adobe_marketo.html',
     'channel_amazon_s3': 'channel_amazon_s3.html',
@@ -232,7 +233,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'AmpIQ'
+htmlhelp_basename = 'User Guides'
 
 
 # Edit this page on GitHub link

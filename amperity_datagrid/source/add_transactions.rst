@@ -44,7 +44,7 @@ For each data source that your brand makes available to Amperity that contains t
 #. :ref:`Configure optional attributes <setup-transactions-extend-attributes>`
 #. :ref:`Refresh database <setup-transactions-refresh-database>`
 #. :ref:`Review C360 validations <setup-transactions-validate-database>`
-#. :ref:`Enable AmpIQ <setup-transactions-enable-ampiq>`
+#. :ref:`Enable segments and campaigns <setup-transactions-enable-segments-and-campaigns>`
 
 .. setup-transactions-end
 
@@ -720,13 +720,13 @@ Validation reports for transactions include:
 .. setup-transactions-validate-database-reports-transactions-end
 
 
-.. _setup-transactions-enable-ampiq:
+.. _setup-transactions-enable-segments-and-campaigns:
 
-Enable AmpIQ
+Enable segments and campaigns
 ==================================================
 
-.. database-interactions-enable-ampiq-start
+.. database-interactions-enable-segments-and-campaigns-start
 
-AmpIQ is a collection of features that may be enabled after interaction records are configured. Once enabled, predictive analytics, metrics cards, segment insights, and campaigns are available from within Amperity. Ask your Amperity representative about enabling AmpIQ.
+Segments and campaigns are a collection of features that may be enabled after interaction records are configured. Once enabled, predictive analytics, metrics cards, segment insights, and campaigns are available from within Amperity.
 
-.. database-interactions-enable-ampiq-end
+.. database-interactions-enable-segments-and-campaigns-end

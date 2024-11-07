@@ -1,28 +1,18 @@
-{% set active_product = active_product|default('DataGrid & AmpID') -%}
-{% set active_page_name = active_page_name|default('DataGrid & AmpID') -%}
+{% set active_product = active_product|default('Operators Guide') -%}
+{% set active_page_name = active_page_name|default('Operators Guide') -%}
 {% set active_page_icon = active_page_icon|default('<i class="far fa-circle fa-fw icon-left">') -%}
 {% set active_search_path = active_search_path|default('/search.html') -%}
 <!--{% set active_version = active_version|default('Latest') -%}-->
 {% set defaultNavItems = [
 
   {
-    "title": "Configure Amperity",
+    "title": "Operators Guide",
     "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
     "subItems": [
       {
         "title": "Start here",
         "hasSubItems": false,
         "url": "/datagrid/start_here.html"
-      },
-      {
-        "title": "About AmpID",
-        "hasSubItems": false,
-        "url": "/datagrid/ampid.html"
-      },
-      {
-        "title": "About DataGrid",
-        "hasSubItems": false,
-        "url": "/datagrid/datagrid.html"
       },
       {
         "title": "Spark SQL reference <i class='fas fa-external-link-square-alt'></i>",

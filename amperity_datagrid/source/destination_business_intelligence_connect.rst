@@ -46,7 +46,7 @@ Request to enable warehouse
 
 .. destination-bic-request-to-enable-start
 
-|bic| is available upon request for Amperity tenants who have licensed Amp360. After the data warehouse for |bic| is configured by Amperity for your tenant, you can send data from Amperity to the data warehouse, and then connect any of your BI tools to that data.
+|bic| is available upon request. After the data warehouse for |bic| is configured by Amperity for your tenant, you can send data from Amperity to the data warehouse, and then connect any of your BI tools to that data.
 
 .. destination-bic-request-to-enable-end
 
@@ -133,7 +133,7 @@ Service hours
 
 .. destination-bic-request-to-enable-service-hours-start
 
-|bic| is available to Amperity tenants licensed for Amp360. This license comes with 300 free annual hours of compute service time, enough to support light-to-moderate use of BI tools.
+|bic| is available to licensed Amperity tenants. This license comes with 300 free annual hours of compute service time, enough to support light-to-moderate use of BI tools.
 
 Customers can track their utilization against their free tier hours by requesting their usage hours from their Amperity account team.
 

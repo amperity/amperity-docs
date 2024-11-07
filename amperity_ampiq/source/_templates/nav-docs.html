@@ -1,16 +1,16 @@
-{% set active_product = active_product|default('AmpIQ') -%}
-{% set active_page_name = active_page_name|default('AmpIQ') -%}
+{% set active_product = active_product|default('User Guides') -%}
+{% set active_page_name = active_page_name|default('User Guides') -%}
 {% set active_page_icon = active_page_icon|default('<i class="far fa-circle fa-fw icon-left">') -%}
 {% set active_search_path = active_search_path|default('/search.html') -%}
 <!--{% set active_version = active_version|default('Latest') -%}-->
 {% set defaultNavItems = [
 
   {
-    "title": "Getting started",
+    "title": "User Guides",
     "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
     "subItems": [
       {
-        "title": "Start Here",
+        "title": "About user guides",
         "hasSubItems": false,
         "url": "/ampiq/user_guides.html"
       },
@@ -18,6 +18,11 @@
         "title": "Tools for marketers",
         "hasSubItems": true,
         "subItems": [
+          {
+            "title": "Start here",
+            "hasSubItems": false,
+            "url": "/ampiq/start_here.html"
+          },
           {
             "title": "1. Build segments",
             "hasSubItems": false,
@@ -39,6 +44,11 @@
         "title": "Tools for analysts",
         "hasSubItems": true,
         "subItems": [
+          {
+            "title": "Start here",
+            "hasSubItems": false,
+            "url": "/amp360/start_here.html"
+          },
           {
             "title": "1. Build queries",
             "hasSubItems": false,
@@ -116,7 +126,7 @@
           {
             "title": "Event propensity",
             "hasSubItems": false,
-            "url": "/internal/model_event_propensity.html"
+            "url": "/ampiq/model_event_propensity.html"
           },
           {
             "title": "Product affinity",

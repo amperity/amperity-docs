@@ -254,7 +254,7 @@
    <i class="fad fa-arrow-alt-circle-right" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #317a1c;"></i>
 
 
-.. |input-to-ampiq-models| raw:: html
+.. |input-to-predictive-models| raw:: html
 
    <i class="fad fa-arrow-alt-circle-right" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #317a1c;"></i>
 
@@ -466,7 +466,7 @@
 
 
 
-.. for attributes reference in AmpIQ
+.. for attributes references with segments and campaigns
 
 .. |attribute-profile| raw:: html
 

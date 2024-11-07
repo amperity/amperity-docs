@@ -4,22 +4,19 @@
 
 .. meta::
     :description lang=en:
-        An index for AmpIQ content with links to topics about all aspects of AmpIQ, including segments, campaigns, predictive modeling, and destinations for customer activation.
+        About Amperity for marketing use cases, including segments, campaigns, predictive modeling, and destinations for customer activation.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        An index for AmpIQ content with links to topics about all aspects of AmpIQ, including segments, campaigns, predictive modeling, and destinations for customer activation.
+        About Amperity for marketing use cases, including segments, campaigns, predictive modeling, and destinations for customer activation.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About AmpIQ
+        About Amperity
 
 ==================================================
-About AmpIQ
+About Amperity
 ==================================================
-
-:doc:`About AmpIQ <ampiq>`
-
 
 
 .. _index-tools-for-marketers:
@@ -98,7 +95,7 @@ Send offline events
 Apply predictive analytics
 ==================================================
 
-:doc:`Churn prevention <churn_prevention>` |fa-index-separator| :doc:`Predicted customer lifetime value <model_predicted_clv>`
+:doc:`Churn prevention <churn_prevention>` |fa-index-separator| :doc:`Predicted customer lifetime value <model_predicted_clv>` |fa-index-separator| :doc:`Event propensity <model_event_propensity>`
 
 
 .. Hide the TOC from this file.
@@ -106,7 +103,6 @@ Apply predictive analytics
 .. toctree::
    :hidden:
 
-   ampiq
    attribute_audience_sizes
    attribute_average_number_of_items_intervals
    attribute_average_price_intervals
@@ -216,6 +212,7 @@ Apply predictive analytics
    events_snapchat
    events_the_trade_desk
    events_tiktok_ads_manager
+   model_event_propensity
    model_predicted_churn
    model_predicted_clv
    model_predicted_product_affinity

@@ -42,7 +42,7 @@ About predicted CLV attributes
 
 .. attribute-predicted-order-frequency-about-clv-start
 
-AmpIQ provides a set of attributes that predict customer lifetime value (CLV) during the next 365 days.
+Amperity provides a set of attributes that predict customer lifetime value (CLV) during the next 365 days.
 
 #. :doc:`Predicted CLV <attribute_predicted_clv>` represents the total value of all orders a customer is predicted to make *if they return to make another purchase* during the next 365 days.
 
@@ -101,7 +101,7 @@ After the attribute appears in your segment, specify a frequency for predicted a
 
 .. attribute-predicted-order-frequency-modeling-enabled-note-start
 
-.. note:: Predicted order frequency is available to users of AmpIQ when predictive modeling is enabled for your tenant.
+.. note:: Predicted order frequency is available when predictive modeling is enabled for your tenant.
 
 .. attribute-predicted-order-frequency-modeling-enabled-note-end
 

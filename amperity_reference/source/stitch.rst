@@ -13,10 +13,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        How Stitch Works
+        How Stitch works
 
 ==================================================
-How Stitch Works
+How Stitch works
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -601,7 +601,7 @@ The remaining matching pairs that scored above threshold remain in groups. The f
 
 .. stitch-initial-scoring-note-start
 
-.. note:: Initial scoring uses the same scoring method as :ref:`pairwise comparison <stitch-pairwise-comparison>`, with exact, excellent, and high scores being "above threshold" and moderate, weak, and no conflict scores being "below threshold". The individual scoring methods are covered in greater detail in the following section about pairwise comparisons.
+.. note:: Initial scoring uses the same scoring method as :ref:`pairwise comparison <stitch-pairwise-comparison>`, with exact, excellent, and high scores being "above threshold" and moderate, weak, and non-matching scores being "below threshold". The individual scoring methods are covered in greater detail in the following section about pairwise comparisons.
 
 .. stitch-initial-scoring-note-end
 
@@ -863,24 +863,24 @@ This example shows a weak match between two records.
 
 .. _stitch-pairwise-comparison-none:
 
-No conflicts
+Non-match
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. stitch-pairwise-comparison-none-start
 
-A no conflict score is applied to records in which core profile data between records does not match or when a separation key is present for both pairs and the associated values are conflicting.
+A non-matching score is applied to records in which core profile data between records does not match or when a separation key is present for both pairs and the associated values are conflicting.
 
 .. stitch-pairwise-comparison-none-end
 
 .. image:: ../../images/howitworks-stitch-pairwise-07-none.png
    :width: 600 px
-   :alt: No conflicts between two records.
+   :alt: Non-matching scores between two records.
    :align: left
    :class: no-scaled-link
 
 .. stitch-pairwise-comparison-none-diagram-context-start
 
-This example shows no conflicts between two records.
+This example shows non-matching scores between two records.
 
 .. stitch-pairwise-comparison-none-diagram-context-end
 
@@ -892,7 +892,7 @@ All connections
 
 .. stitch-pairwise-comparison-all-start
 
-After pairwise comparisons are completed and scored, the connections that scored below threshold (moderate, weak, and no conflict) are dropped. What remains is a group of records that identifies a unique person and to which an Amperity ID is assigned.
+After pairwise comparisons are completed and scored, the connections that scored below threshold (moderate, weak, and non-matching) are dropped. What remains is a group of records that identifies a unique person and to which an Amperity ID is assigned.
 
 .. stitch-pairwise-comparison-all-end
 

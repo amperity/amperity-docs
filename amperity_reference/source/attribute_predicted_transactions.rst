@@ -37,7 +37,7 @@ About predicted CLV attributes
 
 .. attribute-predicted-transactions-about-clv-start
 
-AmpIQ provides a set of attributes that predict customer lifetime value (CLV) during the next 365 days.
+Amperity provides a set of attributes that predict customer lifetime value (CLV) during the next 365 days.
 
 Each of these attributes provides a score that is independent of other predicted CLV attributes:
 
@@ -99,7 +99,7 @@ After the attribute appears in your segment, specify a frequency for predicted p
 
 .. attribute-predicted-transactions-modeling-enabled-note-start
 
-.. note:: Predicted transactions are available to users of AmpIQ when predictive modeling is enabled for your tenant.
+.. note:: Predicted transactions are available when predictive modeling is enabled for your tenant.
 
 .. attribute-predicted-transactions-modeling-enabled-note-end
 

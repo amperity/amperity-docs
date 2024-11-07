@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        Enable AmpIQ for predictive modeling.
+        Enable Amperity for predictive modeling.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Enable AmpIQ for predictive modeling.
+        Enable Amperity for predictive modeling.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -29,7 +29,7 @@ Enable predictive models
 
 .. add-predicted-models-caution-start
 
-.. caution:: Predictive models are an optional component of AmpIQ. If you plan to enable predictive models for AmpIQ it is recommended to review the :ref:`data requirements <ampiq-data-requirements-fields>`, and then take steps to configure :ref:`columns and tables <ampiq-data-requirements-columns-and-tables>` for predictive models *at the same time* as AmpIQ.
+.. caution:: Predictive models are an optional component of Amperity. If you plan to enable predictive models it is recommended to review the :ref:`data requirements <add-campaigns-data-requirements-fields>`, and then take steps to configure :ref:`columns and tables <add-campaigns-data-requirements-columns-and-tables>` for predictive models *at the same time*.
 
 .. add-predicted-models-caution-end
 
@@ -114,7 +114,7 @@ What components of predictive models are visible within Amperity?
 Verify prerequisites
 ==================================================
 
-Predictive models have :ref:`the same prerequisites as AmpIQ <ampiq-enablement-verify-prerequisites>`.
+Verify that predictive models have :ref:`met all prerequisites <add-campaigns-verify-prerequisites>`.
 
 
 .. _add-predicted-models-data-requirements:
@@ -124,7 +124,7 @@ Data requirements
 
 .. add-predicted-models-data-requirements-start
 
-Predictive models have :ref:`the same requirements as AmpIQ <ampiq-data-requirements>`, along with the following additional requirements:
+Predictive models have :ref:`the same requirements as segments and campaigns <add-campaigns-data-requirements>`, along with the following additional requirements:
 
 #. Data sources must provide at least four years of historical data to support predictive models; five (or more) years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
 #. A defined product catalog with 20-2000 distinct values is required to support recommended audience sizes for product affinity.
@@ -190,7 +190,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-amperity-id-column-start
           :end-before: .. term-amperity-id-column-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -204,7 +204,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-birthdate-start
           :end-before: .. term-birthdate-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -215,7 +215,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-city-start
           :end-before: .. term-city-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -226,7 +226,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-country-start
           :end-before: .. term-country-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -237,7 +237,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-digital-channel-start
           :end-before: .. term-digital-channel-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Unified Itemized Transactions**
        * **Unified Transactions**
@@ -248,7 +248,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-email-start
           :end-before: .. term-email-end
 
-       AmpIQ expects this column to be available from the following table in the customer 360 database:
+       This column must be available from the following table in the customer 360 database:
 
        * **Merged Customers**
 
@@ -258,7 +258,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -269,7 +269,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-given-name-start
           :end-before: .. term-given-name-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -280,7 +280,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-order-id-start
           :end-before: .. term-order-id-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Unified Itemized Transactions**
        * **Unified Transactions**
@@ -291,7 +291,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-order-date-start
           :end-before: .. term-order-date-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Unified Itemized Transactions**
        * **Unified Transactions**
@@ -302,7 +302,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-order-revenue-start
           :end-before: .. term-order-revenue-end
 
-       AmpIQ expects this column to be available from the following table in the customer 360 database:
+       This column must be available from the following table in the customer 360 database:
 
        * **Unified Transactions**
 
@@ -312,7 +312,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-postal-start
           :end-before: .. term-postal-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -323,7 +323,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-brand-start
           :end-before: .. term-brand-end
 
-       AmpIQ expects this column to be available from the following table in the customer 360 database:
+       This column must be available from the following table in the customer 360 database:
 
        * **Unified Itemized Transactions**
        * **Unified Transactions**
@@ -334,7 +334,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-channel-start
           :end-before: .. term-channel-end
 
-       AmpIQ expects this column to be available from the following table in the customer 360 database:
+       This column must be available from the following table in the customer 360 database:
 
        * **Unified Itemized Transactions**
        * **Unified Transactions**
@@ -345,7 +345,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-state-start
           :end-before: .. term-state-end
 
-       AmpIQ expects this column to be available from the following tables in the customer 360 database:
+       This column must be available from the following tables in the customer 360 database:
 
        * **Merged Customers**
        * **Unified Customer**
@@ -356,7 +356,7 @@ The following columns are required by predictive models and must exist in the fo
           :start-after: .. term-surname-start
           :end-before: .. term-surname-end
 
-       AmpIQ expects this column to be available from the following table in the customer 360 database:
+       This column must be available from the following table in the customer 360 database:
 
        * **Merged Customers**
 
@@ -370,7 +370,7 @@ Request to enable
 
 .. add-predicted-models-request-to-enable-start
 
-After you have configured Amperity for the recommended patterns and workflows for data sources that contain interactions records, AmpIQ is enabled, and all verification steps have been completed, contact your Amperity representative and request to enable predictive models.
+After you have configured Amperity for the recommended patterns and workflows for data sources that contain interactions records, segments and campaigns are enabled, and all verification steps have been completed, contact your Amperity representative and request to enable predictive models.
 
 .. add-predicted-models-request-to-enable-end
 
@@ -390,7 +390,7 @@ After you have configured Amperity for the recommended patterns and workflows fo
 
 The typical process for setting up predictive models follows a series of general steps:
 
-#. (~1 week) Ensure that data is made available to Amperity that meets the semantic tagging requirements for AmpIQ (along with any :ref:`predicted-models-specific fields <add-predicted-models-data-requirements-fields>`), including for transactions, itemized transactions, and product catalog. Use domain SQL to perform pre-Stitch data transforms as necessary.
+#. (~1 week) Ensure that data is made available to Amperity that meets the semantic tagging requirements (along with any :ref:`predicted-models-specific fields <add-predicted-models-data-requirements-fields>`), including for transactions, itemized transactions, and product catalog. Use domain SQL to perform pre-Stitch data transforms as necessary.
 
    Verify that data is being processed correctly to the following tables in the customer 360 database: **Unified Transactions**, **Unified Itemized Transactions**, **Transaction Attributes**, and **Transaction Attributes Extended**.
 
@@ -402,12 +402,6 @@ Once this process is complete, the predicted attributes are available on a 1-day
 
 .. add-predicted-models-request-to-enable-process-end
 
-.. add-predicted-models-request-to-enable-process-important-start
-
-.. tip:: Ask in the #iq-office-hours Slack channel for specific details around the timing for predictive model enablement for your tenant. If you do not have access to that channel, you may ask your Amperity representative to ask on your behalf.
-
-.. add-predicted-models-request-to-enable-process-important-end
-
 
 .. _add-predicted-models-configure:
 
@@ -416,7 +410,7 @@ Configure predictive tables
 
 .. add-predicted-models-configure-start
 
-A series of predictive tables is added to your tenant under a feed in the **Sources** page named **Predicted**. This is done as part of the enablement process for predictive models within AmpIQ. These tables are refreshed automatically on a daily basis, are not processed by Stitch, and are made available to your customer 360 database, the **Queries** page, and the **Segments** page as passthrough tables:
+A series of predictive tables is added to your tenant under a feed in the **Sources** page named **Predicted**. This is done as part of the enablement process for predictive models. These tables are refreshed automatically on a daily basis, are not processed by Stitch, and are made available to your customer 360 database, the **Queries** page, and the **Segments** page as passthrough tables:
 
 * **Predicted Affinity ProductAttribute**
 * **Predicted Pclv**
@@ -494,7 +488,7 @@ A product catalog must be defined, and then joined to the **Unified Itemized Tra
 
    .. note:: Amperity documentation refers to this data source as the :doc:`Unified Product Catalog table <table_unified_product_catalog>`, but it may have a different name in your tenant.
 
-#. Apply the **product-id** semantic tag to product catalog data as required for AmpIQ predictive modeling; the **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
+#. Apply the **product-id** semantic tag to product catalog data as required by predictive modeling; the **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
 
    .. important:: Product affinity modeling requires the field that defines product categories -- **product-category** in the **Unified Product Catalog** table -- to contain between 20 and 2000 unique values.
 

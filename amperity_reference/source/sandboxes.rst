@@ -48,7 +48,7 @@ Allow sandbox administration
 
 .. sandboxes-policy-allow-sandbox-administration-important-start
 
-.. important:: A **DataGrid Operator** can create a sandbox, and then open that sandbox to make configuration changes. While working in a sandbox, a **DataGrid Operator** is assigned the **DataGrid Administrator** policy, which allows a user to have full access to the configuration state of the sandbox.
+.. important:: A user who is assigned to the **DataGrid Operator** policy can create a sandbox, and then open that sandbox to make configuration changes. While working in a sandbox, a **DataGrid Operator** is assigned the **DataGrid Administrator** policy, which allows a user to have full access to the configuration state of the sandbox.
 
    A user must be assigned the **Allow sandbox administration** policy option to do any of the following:
 

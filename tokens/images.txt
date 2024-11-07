@@ -1,6 +1,6 @@
 .. |image-test| raw:: html
 
-   <a class="reference internal image-reference" href="../internal/_images/mockup-campaigns-attributes-email.png"><img alt="This is a placeholder image for use with campaign topics in AmpIQ." class="align-left" src="../internal/_images/mockup-campaigns-attributes-email.png" style="width: 500px;" /></a>
+   <a class="reference internal image-reference" href="../internal/_images/mockup-campaigns-attributes-email.png"><img alt="This is a placeholder image for use with campaign topics." class="align-left" src="../internal/_images/mockup-campaigns-attributes-email.png" style="width: 500px;" /></a>
 
 
 

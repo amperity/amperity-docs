@@ -78,6 +78,8 @@ Configure Amperity Bridge to sync data with the following cloud databases:
 Databricks
 --------------------------------------------------
 
+.. TODO: Update /amperity_amp360/start_here/ last section with Snowflake when it's ready.
+
 .. bridge-sync-databricks-start
 
 Configure inbound and outbound shares in Amperity to enable `bi-directional syncing of data tables between Amperity and Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html>`__. 

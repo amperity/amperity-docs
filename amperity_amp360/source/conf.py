@@ -63,7 +63,7 @@ source_suffix = ['.rst']
 master_doc = 'index'
 
 # General information about the project.
-project = u'Amp360'
+project = u'User Guides'
 #copyright = u''
 
 # The version info for the project you're documenting, acts as replacement for
@@ -135,7 +135,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Amp360"
+html_title = "User Guides"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -175,6 +175,7 @@ html_sidebars = {
 # template names.
 #    '404': '/internal/404.html',
 html_additional_pages = {
+    'amp360': 'amp360.html',
     'bi_connect': 'bi_connect.html',
     'destination_facebook_ads': 'destination_facebook_ads.html',
     'sendto_active_campaign': 'sendto_active_campaign.html',
@@ -267,7 +268,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Amp360'
+htmlhelp_basename = 'User Guides'
 
 
 # Edit this page on GitHub link
