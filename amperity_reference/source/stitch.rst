@@ -13,10 +13,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        How Stitch Works
+        How Stitch works
 
 ==================================================
-How Stitch Works
+How Stitch works
 ==================================================
 
 .. include:: ../../shared/terms.rst
