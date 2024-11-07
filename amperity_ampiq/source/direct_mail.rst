@@ -33,7 +33,24 @@ Direct mail is an effective way to help your brand stand out in the age of digit
 
 Many direct-to-consumer companies prefer using direct mail because they can show the brand (and products) using a tangible format that customers can hold in their hands.
 
+The right mix of creative advertising, physical design of what is sent to the customer, offer, and frequency often leads to higher customer response rates when compared to digital and media advertising.
+
+Use householding to support a wide variety of householding use cases, such as:
+
+* Deduplicating physical addresses to ensure that only one catalog is sent to each address
+* Sending high-value customers periodic direct mail offers that are different from the quarterly catalogue
+* Expanding digital marketing campaigns to include non-digital customers and customers who do not have an email address
+* Aligning householding use cases to your larger marketing strategy
+
 .. direct-mail-context-end
+
+
+.. _direct-mail-householding-use-cases:
+
+Householding table
+==================================================
+
+Use the |householding| table to build customer profiles by household, and then use segments and queries to build audiences by household using all of the attributes in your customer 360 database.
 
 
 .. _direct-mail-build-audience:
@@ -76,8 +93,8 @@ By value tier
 To accurately budget for direct mail campaigns, marketers must determine the amount customers will spend. Use predicted CLV attributes to group customers into high-value and low-value categories based on their predicted spend in the coming year and then use these groupings to define effective segmentation strategies.
 
 .. include:: ../../shared/terms.rst
-      :start-after: .. term-pclv-start
-      :end-before: .. term-pclv-end
+   :start-after: .. term-pclv-start
+   :end-before: .. term-pclv-end
 
 .. include:: ../../amperity_reference/source/attribute_predicted_value_tier.rst
    :start-after: .. attribute-predicted-value-tier-start
