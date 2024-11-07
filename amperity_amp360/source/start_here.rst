@@ -5,23 +5,23 @@
 
 .. meta::
     :description lang=en:
-        A landing page for the collection of content about Amperity.
+        A landing page for the collection of content about using Amperity for analytics.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A landing page for the collection of content about Amperity.
+        A landing page for the collection of content about using Amperity for analytics.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
         Start here
 
 ==================================================
-Start here
+Start here: Analysts
 ==================================================
 
 .. start-here-start
 
-A user of Amperity should be comfortable using SQL to build databases and tables, design queries, understand what is required to synchronize a dataset with external systems and workflows (both upstream and downstream), and how to use attributes available from within Amperity to help their organizations learn more about their customers.
+Using Amperity for analytics requires being comfortable using SQL, including building databases and tables, designing queries, and using customer profile attributes and understanding what is required to synchronize results from Amperity to external systems and workflows that help your brand learn more about your customers.
 
 .. start-here-end
 
