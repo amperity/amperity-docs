@@ -33,7 +33,7 @@ Start here to learn how to configure Amperity for all of your use cases. Pull or
 
 .. start-here-about-start
 
-Amperity is a cloud-native high-performance infrastructure that runs at scale on your choice of Amazon AWS or Microsoft Azure.
+Amperity is a customer data cloud application that runs at scale on your choice of Amazon AWS or Microsoft Azure.
 
 * 100+ integration options to handle any type of data.
 * Pull unlimited amounts of structured and semi-structured raw data to Amperity from any source without the need for schema planning or pre-shaping data.
