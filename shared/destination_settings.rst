@@ -802,6 +802,12 @@ Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/admi
 
 .. setting-braze-instance-end
 
+.. setting-braze-instance-example-start
+
+For example, if your URL for |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
+
+.. setting-braze-instance-example-end
+
 **Profile updates?**
 
 .. setting-braze-profile-updates-start
@@ -810,6 +816,14 @@ To update audience profiles only when one (or more) values change, enable the **
 
 .. setting-braze-profile-updates-end
 
+.. setting-braze-profile-updates-usewhen-start
+
+Use the **Only send updated audience profiles** option to configure Amperity to :ref:`update audience profiles <destination-braze-attribute-updates>` only when one (or more) values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
+
+For use cases that require sending attributes that have values that are expected to change frequently, consider using additional queries to orchestrate specific sets of attributes at defined intervals so that your brand can maintain these values independently of your customer profiles.
+
+.. setting-braze-profile-updates-usewhen-end
+
 **User identifier**
 
 .. setting-braze-user-identifier-start
@@ -817,6 +831,12 @@ To update audience profiles only when one (or more) values change, enable the **
 The indentifier to use for matching users in |destination-name|. May be "external_id" or "braze_id".
 
 .. setting-braze-user-identifier-end
+
+.. setting-braze-user-identifier-about-start
+
+The |ext_braze_external_id| is a unique identifier for your customers, such as the Amperity ID. The |ext_braze_braze_id| is a unique identifier for existing |destination-name| customers.
+
+.. setting-braze-user-identifier-about-end
 
 
 
