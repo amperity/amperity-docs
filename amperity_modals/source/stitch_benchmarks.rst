@@ -22,11 +22,7 @@ Size of largest cluster
 
 **size-of-largest-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
-
-   Current show more: A higher than expected value may be an indication of overclustering records into Amperity IDs. On the other hand, a lower than expected value may indicate underclustering.Show less
-
-   Current tooltip: This test computes the percentage of a tenant's stitched records that are associated the largest Amperity ID. A larger percentage implies many records are being clustered into the same Amperity ID, usually because of bogus PII values. If, upon inspection, the largest cluster looks good, you may ignore this test.
+   A high percentage indicates overclustering, which is often associated with incomplete (or inaccurate) PII values. Review the cluster for accuracy and if it looks good, ignore this test.
 
 
 Shared name and phone
@@ -38,11 +34,8 @@ Shared name and phone
 
 **shared-name-phone-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
+   A large ratio indicates that a unique name and phone combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
 
-   Current show more: A higher than expected value may indicate underclustering of records into Amperity IDs. On the other hand, a lower than expected value may indicate overclustering.Show less
-
-   Current tooltip: This test computes, for every (name, phone) combination, a ratio of how many such combinations appear in multiple Amperity IDs, vs. only one Amperity ID. A large ratio implies that the same (name, phone) are being spread across multiple Amperity IDs more than we'd expect, which may indicate under-clustering.
 
 
 Small supersized clusters
@@ -54,12 +47,8 @@ Small supersized clusters
 
 **small-supersized-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
+   Supersized clusters are the main cause of underclustering. A large count indicates many records were not compared to each other during Stitch and potential connections may have been missed.
 
-   Current show more: Supersized components are the main cause of underclustering. Small ones are easier to address.Show less
-
-
-   Current tooltip: This test computes a count of how many medium-large (< 1000 recod) components there are in Stitch output. Counter-intuitively, because of how Stitch works, a large count implies many records were not compared to each other during Stitch, which means the pipeline may have missed potential connections and under-clustered records.
 
 
 Large supersized clusters
@@ -71,12 +60,8 @@ Large supersized clusters
 
 **large-supersized-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
+   Supersized clusters are the main cause of underclustering. A large count indicates many records were not compared to each other during Stitch and potential connections may have been missed.
 
-   Current show more: Supersized components are the main cause of underclustering. Large ones are harder to address.Show less
-
-
-   Current tooltip: This test computes a count of how many very large (> 1000 recod) components there are in Stitch output. Counter-intuitively, because of how Stitch works, a large count implies many records were not compared to each other during Stitch, which means the pipeline may have missed potential connections and under-clustered records.
 
 
 Many NULL records
@@ -88,11 +73,8 @@ Many NULL records
 
 **many-null-records-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
+   A larger percentage of sparse records indicates that the quality of PII that is provided to Stitch is lower than expected. Review data sources that contain PII along with the semantic tags that are applied.
 
-   Current show more: A higher than expected value may result in overclustering and a lower than expected value may result in underclustering.
-
-   Current tooltip: This test computes the percentage of records fed to Stitch that are sparse, which is defined as having null email and given name. A larger percentage means that the PII being fed into Stitch is less rich than we'd expect, and usually implies a problem with data capture or semantic tagging.
 
 
 Shared name and email address
@@ -104,11 +86,8 @@ Shared name and email address
 
 **shared-name-email-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
+   A large ratio indicates that a unique name and email address combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
 
-   Current show more: A higher than expected value may indicate underclustering of records into Amperity IDs. On the other hand, a lower than expected value may indicate overclustering.Show less
-
-   Current tooltip: This test computes, for every (name, email) combination, a ratio of how many such combinations appear in multiple Amperity IDs, vs. only one Amperity ID. A large ratio implies that the same (name, email) are being spread across multiple Amperity IDs more than we'd expect, which may indicate under-clustering.
 
 
 Shared name and physical address
@@ -120,11 +99,8 @@ Shared name and physical address
 
 **shared-name-address-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
+   A large ratio indicates that a unique name and physical address combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
 
-   Current show more: A higher than expected value may indicate underclustering of records into Amperity IDs. On the other hand, a lower than expected value may indicate overclustering.Show less
-
-   Current tooltip: This test computes, for every (name, address) combination, a ratio of how many such combinations appear in multiple Amperity IDs, vs. only one Amperity ID. A large ratio implies that the same (name, address) are being spread across multiple Amperity IDs more than we'd expect, which may indicate under-clustering.
 
 
 More than 3 given names
@@ -136,12 +112,8 @@ More than 3 given names
 
 **given-names-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
+   A large percentage indicates that different given names are appearing the same cluster, which indicates overclustering. Review the clusters for accuracy.
 
-   Current show more: A higher than expected value may indicate overclustering of records into Amperity IDs. On the other hand, a lower than expected value may indicate underclustering.Show less
-
-
-   Current tooltip: This test computes the percentage of Amperity IDs with more than three given names. A larger percentage implies that, with a relatively high frequency, different given names are ending up in the same Amperity ID, which may indicate that records have been over-clustered.
 
 
 More than 3 surnames
@@ -153,12 +125,7 @@ More than 3 surnames
 
 **surnames-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
-
-   Current show more: A higher than expected value may indicate overclustering of records into Amperity IDs. On the other hand, a lower than expected value may indicate underclustering.Show less
-
-
-   Current tooltip: This test computes the percentage of Amperity IDs with more than three surnames. A larger percentage implies that, with a relatively high frequency, different surnames are ending up in the same Amperity ID, which may indicate that records have been over-clustered.
+   A large percentage indicates that different surnames are appearing the same cluster, which indicates overclustering. Review the clusters for accuracy.
 
 
 More than 5 postal codes
@@ -170,8 +137,4 @@ More than 5 postal codes
 
 **postal-codes-more**
 
-   COMBINE INTO ONE COHESIVE PARAGRAPH:
-
-   Current show more: A higher than expected value may indicate overclustering of records into Amperity IDs. On the other hand, a lower than expected value may indicate underclustering.
-
-   Current tooltip: This test computes the percentage of Amperity IDs with more than five postal codes. A larger percentage implies that, with a relatively high frequency, different addresses are ending up in the same Amperity ID, which may indicate that records have been over-clustered.
+   A large percentage indicates that different postal codes are appearing the same cluster, which indicates overclustering. Review the clusters for accuracy.
