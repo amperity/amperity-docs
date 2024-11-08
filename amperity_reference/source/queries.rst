@@ -861,6 +861,7 @@ You may enable performance mode for any query that returns large result sets. Pe
    * Column names are output in lowercase.
    * Small queries may take longer.
    * Part file names in Apache Parquet orchestrations will have a different pattern.
+   * Date fields will be output as timestamps.
    * The **CURRENT_TIMESTAMP** function must be cast as a timestamp. For example:
 
      ::
