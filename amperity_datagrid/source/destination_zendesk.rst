@@ -115,7 +115,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - Send a test from Amperity.
 
-       .. important:: Be sure to send all fields from Amperity that will be required by |destination-name|.
+       .. important:: Be sure to send all fields from Amperity that will be required by |destination-name|. The "name", "email" or "external_id" fields must be included.
 
        From within |destination-name| verify that audience data has been loaded and is usable by all of the use cases you want to use within |destination-name| to build better customer experiences.
 
