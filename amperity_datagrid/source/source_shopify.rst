@@ -107,6 +107,8 @@ Follow the steps outlined within |source-name| documentation to |ext_shopify_res
    **read_orders**
 
    **read_products**
+
+   **locations_read**
 #. Click **Save**.
 
 .. source-shopify-configure-access-to-tables-steps-end
