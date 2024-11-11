@@ -153,7 +153,11 @@ Configure endpoints
 
 You can self-manage the endpoints your brand uses to stream data to Amperity.
 
+.. streaming-ingest-endpoints-end
+
 **To manage Streaming Ingest API endpoints**
+
+.. streaming-ingest-endpoints-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -210,7 +214,7 @@ You can self-manage the endpoints your brand uses to stream data to Amperity.
 
           POST /stream/v0/data/is-AbCDefGH HTTP/1.1
 
-.. streaming-ingest-endpoints-end
+.. streaming-ingest-endpoints-steps-end
 
 
 .. _streaming-ingest-rest-api-streams:
