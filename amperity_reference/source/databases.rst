@@ -1037,7 +1037,11 @@ The currency symbol to show for metrics and segment insights is configurable. Th
 #. Select a database and open it in **Edit** mode.
 #. In the right-side navigation pane, under **Currency**, select the currency symbol to show for metrics and segment insights for this database.
 
-   .. tip:: Choose "Custom symbol" to apply a currency symbol that is not in the drop-down list. For example, for South Korean Won (KRW) enter "|u-won|". If you want a space to be present in-between the currency symbol and the monetary value shown, use "Custom symbol" and then add a space after the currency symbol: "|u-won| ".
+   .. tip:: Choose "Custom symbol" to apply a currency symbol that is not in the drop-down list.
+
+      For example, to use South Korean Won (KRW) as the currency symbol, choose "Custom symbol", and then enter "|u-won|" in the **Custom currency symbol** field.
+
+      If you want a space to be present in-between the currency symbol and the monetary value shown, use "Custom symbol" and then add a space after the currency symbol: "|u-won| ".
 
    .. note:: Unicode, hex, HTML code, and HTML entity values are not supported.
 
