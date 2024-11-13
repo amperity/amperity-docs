@@ -116,6 +116,7 @@ rst_prolog = """
 .. include:: ../../tokens/external_links.txt
 .. include:: ../../tokens/internal_links.txt
 .. include:: ../../tokens/names.txt
+.. include:: ../../tokens/unicode.txt
 """
 
 # -- Options for HTML output ---------------------------------------------------

@@ -568,17 +568,18 @@ This section describes tasks related to building and managing databases in Amper
 .. databases-databases-howtos-databasese-end
 
 * :ref:`databases-database-howto-activate`
+* :ref:`databases-database-howto-add-table-override`
 * :ref:`databases-core-howtos-add-custom`
+* :ref:`databases-database-howto-add-table-custom`
 * :ref:`databases-database-howto-add-database-customer360`
 * :ref:`databases-database-howto-add-database-empty`
 * :ref:`databases-database-howto-add-database-passthrough`
-* :ref:`databases-database-howto-add-database-stitchqa`
-* :ref:`databases-database-howto-add-table-override`
-* :ref:`databases-database-howto-add-table-custom`
 * :ref:`databases-database-howto-add-table-passthrough`
+* :ref:`databases-database-howto-add-database-stitchqa`
 * :ref:`databases-database-howto-add-table-template`
 * :ref:`databases-database-howto-allow-tables-in-segments`
 * :ref:`databases-database-howto-apply-table-semantic`
+* :ref:`databases-database-howto-choose-currency`
 * :ref:`databases-database-howto-configure-permissions`
 * :ref:`databases-database-howto-pick-list`
 * :ref:`databases-database-howto-copy-table`
@@ -1013,6 +1014,36 @@ Apply table semantic tags
 A semantic tag associates a table in a database with a table requirement for the database. For example: "Customer 360", "Unified Customers", or "Unified Scores". Tags *should* be assigned by Amperity automatically as tables are built. You can see which tag is assigned to a table from the **Tag** column in the **Database Viewer** and can set the semantic tag in the table editor from the **Table semantics** dropdown.
 
 .. databases-database-howto-apply-table-semantic-end
+
+
+.. _databases-database-howto-choose-currency:
+
+Choose currency symbol
+--------------------------------------------------
+
+.. databases-database-howto-choose-currency-start
+
+The currency symbol to show for metrics and segment insights is configurable. The following currency symbols are in the dropdown list: Australian Dollar (AUD, |u-dollar|), Canadian Dollar (CAD, |u-dollar|), United States Dollar (USD, |u-dollar|), Mexican Peso (MXN, |u-peso|), British Pound (GBP, |u-pound|), Euro (EUR, |u-euro|), Indian Rupee (INR, |u-rupee|), and Japanese Yen (JPY, |u-yen|).
+
+.. tip:: You may configure custom currency symbols, for example South Korean Won (KRW, |u-won|).
+
+.. databases-database-howto-choose-currency-end
+
+**To choose the currency for a database**
+
+.. databases-database-howto-choose-currency-steps-start
+
+#. From the **Customer 360** page, open the **Databases** tab.
+#. Select a database and open it in **Edit** mode.
+#. In the right-side navigation pane, under **Currency**, select the currency symbol to show for metrics and segment insights for this database.
+
+   .. tip:: Choose "Custom symbol" to apply a currency symbol that is not in the drop-down list. For example, for South Korean Won (KRW) enter "|u-won|". If you want a space to be present in-between the currency symbol and the monetary value shown, use "Custom symbol" and then add a space after the currency symbol: "|u-won| ".
+
+   .. note:: Unicode, hex, HTML code, and HTML entity values are not supported.
+
+#. Click **Activate**.
+
+.. databases-database-howto-choose-currency-steps-end
 
 
 .. _databases-database-howto-configure-permissions:
