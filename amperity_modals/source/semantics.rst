@@ -53,9 +53,7 @@ Customer profiles (PII)
 
 **create-dt**
 
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-create-dt-start
-      :end-before: .. term-create-dt-end
+   Apply the "create-dt" semantic tag to columns in customer records that identify when the data was created.
 
 **email**
 
