@@ -794,6 +794,17 @@ Before a user can log into Amperity they must be added and a policy must be assi
 
 .. settings-users-add-end
 
+.. settings-users-add-sso-start
+
+.. TODO: Same as in /amperity_reference/sources/settings.rst, but with a link to this section.
+
+.. admonition:: Can users be added when single sign-on (SSO) is enabled?
+
+   Yes. You may configure Amperity to allow access to individual users as long as the domain name in that user's email address is different from the domain name used by your SSO provider.
+
+.. settings-users-add-sso-end
+
+
 **To add a user**
 
 .. settings-users-add-steps-start

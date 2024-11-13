@@ -81,8 +81,9 @@ Site Index
    destination-tiktok-offline-events
    destination-tradedesk
    destination-tradedesk-offline-events
-   destination-tradedesk-3p
+   destination-tradedesk-3rd-party
    destination-vibes
+   destination-webhook
    destination-yahoo-dsp
    destination-zendesk
    openapi
