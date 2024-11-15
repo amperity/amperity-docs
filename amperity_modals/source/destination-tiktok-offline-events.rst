@@ -72,6 +72,12 @@ Settings
    :start-after: .. setting-tiktok-ads-manager-offline-event-set-name-start
    :end-before: .. setting-tiktok-ads-manager-offline-event-set-name-end
 
+**Event source**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-tiktok-ads-manager-offline-event-source-start
+   :end-before: .. setting-tiktok-ads-manager-offline-event-source-end
+
 **Auto tracking?**
 
 .. include:: ../../shared/destination_settings.rst

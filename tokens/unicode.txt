@@ -2,3 +2,12 @@
 
 .. |u-copyright| unicode:: U+00A9
 .. |u-registered| unicode:: U+00AE
+
+
+.. |u-dollar| unicode:: U+00024
+.. |u-peso| unicode:: U+020B1
+.. |u-pound| unicode:: U+000A3
+.. |u-euro| unicode:: U+020AC
+.. |u-rupee| unicode:: U+020B9
+.. |u-yen| unicode:: U+000A5
+.. |u-won| unicode:: U+0C6D0

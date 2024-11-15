@@ -2216,7 +2216,7 @@ Select **Auto tracking** to use this event set for add tracking and attribution.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-start
 
-The event set ID is a nineteen character string similar to “7654321098765432109”
+The event set ID is a nineteen character string similar to “7654321098765432109”.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
 
@@ -2227,6 +2227,15 @@ The event set ID is a nineteen character string similar to “765432109876543210
 The name of the offline events set in TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-offline-event-set-name-end
+
+**Event source**
+
+.. setting-tiktok-ads-manager-offline-event-source-start
+
+The type of event to be uploaded to TikTok Ads Manager. May be one of “web” or "offline". Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
+
+.. setting-tiktok-ads-manager-offline-event-source-end
+
 
 
 
