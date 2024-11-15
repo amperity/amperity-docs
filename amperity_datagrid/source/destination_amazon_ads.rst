@@ -167,6 +167,15 @@ Amperity can send data to your brand's |ext_amazon_marketing_cloud_instance| whe
 
 .. destination-amazon-ads-about-amc-end
 
+.. _destination-european-union-user-consent:
+European Union user consent
+==================================================
+.. destination-european-union-user-consent-start
+
+.. important:: `Amazon Ads requires <https://advertising.amazon.com/resources/ad-policy/consent-signal-requirements>`__ |ext_link| that if personal information is transmitted to them to use any Amazon advertising services you must use the IAB European Transparency & Consent Framework or the Amazon consent signal. Not including these one these signals may result in lower match rates. 
+
+.. destination-european-union-user-consent-end
+
 
 .. _destination-amazon-ads-configure-oauth:
 
