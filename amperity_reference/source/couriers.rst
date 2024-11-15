@@ -1658,7 +1658,7 @@ Delete courier
 
 .. couriers-delete-start
 
-Use the **Delete** option to remove a courier from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this courier prior to deleting it. This action will *not* delete the feeds associated with the courier.
+Use the **Delete** option to remove a courier from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this courier before you delete it. This action will *not* delete the feeds associated with the courier.
 
 .. couriers-delete-end
 
