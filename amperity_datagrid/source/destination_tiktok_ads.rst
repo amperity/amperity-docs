@@ -592,6 +592,7 @@ Add destination
 
        The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the drop-down menu in the top right of |destination-name|.
 
+       The event source may be one of **web** or **offline**.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -912,29 +913,33 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - Field name
      - Description
 
+   * - **agent**
+     - Web events only. A non-hashed user agent from the user's device. This field should be sent along with **ip** when both are available. (Amperity renames this field to "(user_agent)" when events are sent to TikTok Ads Manager.)
 
    * - **brand**
-     - **Optional**. The brand name of the product item.
+     - The brand name of the product item.
 
 
    * - **content_category**
-     - **Optional**. A product category.
+     - A product category.
 
 
    * - **content_id**
-     - **Optional**. A product identifier.
+     - A product identifier.
 
 
    * - **content_name**
-     - **Optional**. The name of a product.
+     - The name of a product.
 
 
    * - **content_type**
-     - **Optional**. A product or product type.
+     - A product or product type.
 
+   * - **cookie_id**
+     - Web events only. A unique ID that matches website visitor events with ads on TikTok. (Amperity renames this field to "(ttp)" when events are sent to TikTok Ads Manager.)
 
    * - **currency**
-     - **Optional**. The |ext_iso_4217| code for the currency that is associated with the offline event. For example: "USD".
+     - The |ext_iso_4217| code for the currency that is associated with the offline event. For example: "USD".
 
 
    * - **email**
@@ -986,11 +991,14 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use offline events within |destination-name|.
 
+
    * - **event_channel**
-     - **Optional**. The event channel type. Must be one of the following values: **email**, **website**, **phone_call**, **in_store**, **crm**, or **other**.
+     - The event channel type. Must be one of the following values: **email**, **website**, **phone_call**, **in_store**, **crm**, or **other**.
+
 
    * - **event_id**
      - **Required**. The unique identifier for the offline event. |destination-name| recommends that the value for **event_id** be a string of 32 characters that includes any combination of numeric digits (0-9), uppercase letters (A-Z), and lowercase letters (a-z).
+
 
    * - **event_set_id**
      - **Required**. The event set ID. (The event set must exist before you can send data to it from Amperity.)
@@ -999,8 +1007,20 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
 
+
+   * - **event_source**
+     - The type of event to be uploaded to TikTok Ads Manager. May be one of “web” or "offline".
+
+       Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
+
+
+   * - **ip**
+     - Web events only. A non-hashed public IP address for the user's device. May be an IPv4 or an IPv6 address, full or compressed. This field should be sent along with **agent** when both are available. 
+
+
    * - **order_id**
-     - **Optional**. The unique ID for a transaction.
+     - The unique ID for a transaction.
+
 
    * - **phone**
      - **Recommended**.
@@ -1013,15 +1033,19 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **price**
-     - **Optional**. The price of a product or service.
+     - The price of a product or service.
 
 
    * - **quantity**
-     - **Optional**. The number of items associated with an offline event.
+     - The number of items associated with an offline event.
 
 
    * - **shop_id**
      - The unique ID for a physical store location or for your brand's website.
+
+
+   * - **tiktok_click_id**
+     - Web events only. A parameter that is appended to a landing page URL whenever a user clicks on an ad in TikTok. (Amperity renames this field to "ttclid" when events are sent to TikTok Ads Manager.)
 
 
    * - **timestamp**
@@ -1029,7 +1053,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **value**
-     - **Optional** The value associated with the offline event.
+     - The value associated with the offline event.
 
        .. note:: This value is required for revenue reports within |destination-name|.
 
