@@ -1635,11 +1635,6 @@
    <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" target="_blank">Pretty Good Privacy (PGP)</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_pingid| raw:: html
-
-   <a href="https://docs.pingidentity.com/" target="_blank">Ping Identity</a> <i class="fas fa-external-link-square-alt"></i>
-
-
 .. |ext_pinterest_api_authentication| raw:: html
 
    <a href="https://developers.pinterest.com/docs/getting-started/authentication/" target="_blank">authenticated Pinterest user</a> <i class="fas fa-external-link-square-alt"></i>

@@ -113,7 +113,7 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail two.
           :align: left
           :class: no-scaled-link
      - The customer list name to which the |destination-name| connector will send a list of SHA-256 hashed email addresses.
@@ -125,7 +125,7 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail three.
           :align: left
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Pinterest account <destination-pinterest-configure-oauth>`.

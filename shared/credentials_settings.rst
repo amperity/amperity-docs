@@ -1658,7 +1658,7 @@ See SFTP.
 
 .. credential-salesforce-sales-cloud-security-token-start
 
-The Salesforce security token associated with the username. This setting is not required when IP range policies are configured.
+The Salesforce security token associated with the username. This setting is not required when IP range policies are configured from the Salesforce admin console.
 
 .. credential-salesforce-sales-cloud-security-token-end
 

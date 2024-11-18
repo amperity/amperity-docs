@@ -90,9 +90,16 @@ After this destination is configured, business users may configure Amperity to:
 * Use orchestrations and campaigns to send audiences
 * Use orchestrations and campaigns to send offline events
 
-to any configured destination.
+to |destination-name|.
 
 .. destinations-steps-business-users-end
+
+.. destinations-steps-business-users-orchestration-only-start
+
+After this destination is configured, business users may configure Amperity to use orchestrations to send query results |destination-name|.
+
+.. destinations-steps-business-users-orchestration-only-end
+
 
 
 
