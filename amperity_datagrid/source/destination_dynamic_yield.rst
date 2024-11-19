@@ -69,121 +69,6 @@ Amperity can be configured to send product catalog data to |ext_dynamic_yield_s3
 
 .. destination-dynamic-yield-get-details-end
 
-.. _destination-dynamic-yield-credentials-role-to-role:
-
-Configure cross-account roles
-==================================================
-
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-cross-account-roles-overview-start
-   :end-before: .. sources-amazon-s3-cross-account-roles-overview-end
-
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-cross-account-roles-context-start
-   :end-before: .. sources-amazon-s3-cross-account-roles-context-end
-
-.. note::
-
-   .. include:: ../../shared/amazon-s3.rst
-      :start-after: .. sources-amazon-s3-cross-account-roles-setup-start
-      :end-before: .. sources-amazon-s3-cross-account-roles-setup-end
-
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-aws-access-point-start
-   :end-before: .. sources-amazon-s3-aws-access-point-end
-
-**To configure an S3 bucket for cross-account role assumption**
-
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-start
-   :end-before: .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-end
-
-.. destination-dynamic-yield-credentials-role-to-role-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/credentials.rst
-          :start-after: .. credentials-destinations-configure-start
-          :end-before: .. credentials-destinations-configure-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/credentials.rst
-          :start-after: .. credentials-destinations-configure-options-start
-          :end-before: .. credentials-destinations-configure-options-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-end
-
-       .. image:: ../../images/mockup-credentials-add-01-settings-amazon-s3-role-to-role.png
-          :width: 360 px
-          :alt: Select the iam-role-to-role credential type.
-          :align: left
-          :class: no-scaled-link
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-end
-
-       .. image:: ../../images/mockup-credentials-add-01-settings-amazon-s3-role-to-role-all.png
-          :width: 360 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-details-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-settings-details-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-end
-
-       .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-end
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-end
-
-.. destination-dynamic-yield-credentials-role-to-role-steps-end
-
 
 .. _destination-dynamic-yield-add-destination:
 
@@ -221,9 +106,7 @@ Add destination
 
        .. important:: Use the :doc:`Amazon S3 <destination_amazon_s3>` destination that is built into Amperity to send data to a password-protected Amazon S3 bucket that is managed by |destination-name|.
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       From the **Plugin** drop-down, start typing “s3” to filter the list, and then select Amazon S3.
 
 
    * - .. image:: ../../images/steps-02.png
