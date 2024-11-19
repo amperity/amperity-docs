@@ -51,7 +51,6 @@ Send data to Dynamic Yield
    :end-before: .. destinations-overview-list-intro-end
 
 #. :ref:`Get details <destination-dynamic-yield-get-details>`
-#. :ref:`Configure cross-account roles <destination-dynamic-yield-credentials-role-to-role>`
 #. :ref:`Add destination <destination-dynamic-yield-add-destination>`
 #. :ref:`Add data template <destination-dynamic-yield-add-data-template>`
 
