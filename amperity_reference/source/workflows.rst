@@ -702,11 +702,43 @@ Databases
 
 Some common workflow actions that your brand may see when generating databases include:
 
+* :ref:`Cannot bind inputs to resolved state <workflows-databases-inputs-unbound>`
 * Errors resolving column names in tables
 * Missing tables
 * SQL query alerts (including warning *and* failure thresholds)
 
 .. workflows-context-databases-end
+
+
+.. _workflows-databases-inputs-unbound:
+
+Cannot bind inputs to resolved state
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. workflows-databases-inputs-unbound-start
+
+Inputs to the database build process, such as source and custom domain tables, stitched tables, and core tables, must have a schema that matches the one that is expected by the database.
+
+If there is a schema mismatch you will see an error similar to:
+
+::
+
+   Failure binding configured inputs to resolved state
+
+that is followed by a list of tables, and then for each table a list of fields that are causing the mismatch.
+
+In many cases this error is caused because the database run is occuring too soon after the schema change and the expected state has not been refreshed to match the schema change. This means that in many cases, waiting a few minutes, and then re-running the workflow is all that is necessary to resolve the workflow error.
+
+In some cases, the workflow error description will contain:
+
+::
+
+   ... no action is required at this time. Amperity has been
+   notified and is working to resolve this error.
+
+In this situation you may use the **Contact Support** link to open a ticket for this error and to follow along with the resolution.
+
+.. workflows-databases-inputs-unbound-start
 
 
 .. _workflows-context-destinations:
