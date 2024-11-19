@@ -1626,6 +1626,13 @@ The authentication subdomain for your brand's instance of the Marketing Cloud SO
 
 .. credential-salesforce-marketing-cloud-api-subdomain-end
 
+
+.. credential-salesforce-marketing-cloud-api-subdomain-base-uri-start
+
+The authentication subdomain for the `SOAP base URI <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html>`__ |ext_link| is represented by a 28-character string that starts with the letters "mc", such as "mcabc123...".
+
+.. credential-salesforce-marketing-cloud-api-subdomain-base-uri-end
+
 **SFTP hostname**
 
 .. credential-salesforce-marketing-cloud-hostname-start

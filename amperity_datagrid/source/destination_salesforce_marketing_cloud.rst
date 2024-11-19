@@ -190,7 +190,7 @@ Get details
 
           Configure a data template for each busines unit to which you want to send data. When a single installed package has permissions to multiple business units, you must configure a data template for each business unit.
 
-          Amperity cannot send data to a shared business unit in Salesforce Marketing Cloud.
+          Amperity cannot send data to a shared business unit in |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
