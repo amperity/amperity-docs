@@ -170,7 +170,7 @@ Configure and run Stitch
 
 Stitch must be configured to run in a way that ensures that all data sources that contain customer records (names, email addresses, physical addresses, and other PII data) are made available to the Stitch process. The outcome of the Stitch process generates an Amperity ID for each unique customer record across all of your data.
 
-Stitch is largely a transparent process, but there are ways to tune how it understands your data. And you can explore the results of the Stitch process against your data directly from the **Stitch** page.
+Explore the results of the Stitch process against your data directly from the **Stitch** page.
 
 .. start-here-configure-and-run-stitch-end
 
