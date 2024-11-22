@@ -732,13 +732,13 @@ This error occurs when one of the following workflow tasks fails:
 #. "Updating custom domain tables"
 #. "Generating databases"
 
-This often occurs when one of the following schema migration workflow tasks that are running in a different workflow have not finished:
+This often occurs when one of the following schema migrations that are running in a different workflow have not finished:
 
 #. "Domain table schema migration"
 #. "Sandbox pull: update domain tables"
 #. "Sandbox promotion: update domain tables"
 
-To resolve this error, wait for the schema migration workflow to complete, and then re-run the database.
+To resolve this error, wait for the schema migrations to complete, and then re-run the database.
 
 If the error persists use the **Contact Support** link to open a support ticket for this error and to follow along with the resolution.
 
