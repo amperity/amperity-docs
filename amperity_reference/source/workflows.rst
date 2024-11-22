@@ -717,7 +717,7 @@ Cannot bind inputs to resolved state
 
 .. workflows-databases-inputs-unbound-start
 
-Inputs to the database build process, such as source and custom domain tables, stitched tables, and core tables, must have a schema that matches the one that is expected by the database.
+Inputs to the database build process, such as source and custom domain tables, Stitch output tables, and core tables, must have a schema that matches the one that is expected by the database.
 
 If there is a schema mismatch you will see an error similar to:
 
@@ -727,7 +727,9 @@ If there is a schema mismatch you will see an error similar to:
 
 that is followed by a list of tables, and then for each table a list of fields that are causing the mismatch.
 
-In many cases this error is caused because the database run is occuring too soon after the schema change and the expected state has not been refreshed to match the schema change. This means that in many cases, waiting a few minutes, and then re-running the workflow is all that is necessary to resolve the workflow error.
+This error can occur when the database is run after a schema change, but before the schema migration workflow has completed. Common causes of this error include domain table schema changes and schema changes that are promoted from a sandbox.
+
+In these situations you can resolve the schema mismatch error by waiting for the schema migration workflow to complete, and then re-running the database.
 
 In some cases, the workflow error description will contain:
 
