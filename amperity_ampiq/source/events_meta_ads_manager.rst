@@ -3,7 +3,7 @@
 .. 
 
 .. |destination-name| replace:: Meta Ads Manager
-.. |what-send| replace:: customer profiles
+.. |what-send| replace:: offline events
 .. |what-enable| replace:: **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE**
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
