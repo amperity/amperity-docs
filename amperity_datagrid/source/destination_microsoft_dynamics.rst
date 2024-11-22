@@ -71,35 +71,35 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
      - The client ID and client secret.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
      - The Azure Active Directory ID.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 3.
           :align: left
           :class: no-scaled-link
      - The login URL for |destination-name|, similar to "<tenant-name>.crm.dynamics.com".
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 4.
           :align: left
           :class: no-scaled-link
      - Admin credentials for portal.azure.com (if the customer wants Amperity to configure |destination-name| on their behalf).
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 5.
           :align: left
           :class: no-scaled-link
      - An application user that is assigned to a role with an access level that allows that user to modify and update records. (Some use cases require a user to delete records.)
@@ -108,7 +108,7 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 6.
           :align: left
           :class: no-scaled-link
      - The expiration date for the client secret: one of "expires in 1 year", "expires in 2 years", or "never expires".

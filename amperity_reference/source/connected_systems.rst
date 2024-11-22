@@ -668,7 +668,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Oracle DMP**
      - |system-yes|
      - |system-yes|
-     - Formerly known as BlueKai. Pull data to and send data from Amperity using SFTP.
+     - Formerly known as BlueKai. Deprecated.
 
    * - **Oracle Eloqua**
      - |system-yes|

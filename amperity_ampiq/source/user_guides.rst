@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        User guides describe how to use Amperity to build segments and campaigns, SQL queries against your brand's data, send to paid media, use offline events, and AmpAi.
+        User guides describe how to use Amperity to build segments and campaigns, SQL queries against your brand's data, send to paid media, use offline events, and AmpAI.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        User guides describe how to use Amperity to build segments and campaigns, SQL queries against your brand's data, send to paid media, use offline events, and AmpAi.
+        User guides describe how to use Amperity to build segments and campaigns, SQL queries against your brand's data, send to paid media, use offline events, and AmpAI.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -21,19 +21,19 @@ About user guides
 
 .. user-guides-start
 
-Amperity docs provides a collection of in-depth user guides to help your brand use Amperity to build segments and campaigns, build and run SQL queries against your brand's data, send audiences to paid media applications, use offline events to help track the success of your campaigns, use AmpAi features, and more.
+Amperity docs provides a collection of in-depth user guides to help your brand use Amperity to build segments and campaigns, build and run SQL queries against your brand's data, send audiences to paid media applications, use offline events to help track the success of your campaigns, use AmpAI features, and more.
 
 .. user-guides-end
 
 
 .. _user-guides-ampai:
 
-AmpAi
+AmpAI
 ==================================================
 
 .. user-guides-ampai-start
 
-AmpAi provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making. AmpAi includes Stitch, the AI Assistant, and predictive modeling.
+AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making. AmpAI includes Stitch, the AI Assistant, and predictive modeling.
 
 .. user-guides-ampai-end
 

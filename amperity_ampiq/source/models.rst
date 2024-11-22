@@ -132,6 +132,7 @@ The following predictive models can be enabled for your tenant:
 
 * :doc:`Churn propensity <model_predicted_churn>`
 * :doc:`Customer lifetime value <model_predicted_clv>`
+* :doc:`Event propensity <model_event_propensity>`
 * :doc:`Product affinity <model_predicted_product_affinity>`
 
 .. models-available-end

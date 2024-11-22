@@ -57,7 +57,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
           :class: no-scaled-link
      - **Custom audiences**
 
-       Send :ref:`custom audiences <destination-meta-ads-manager-custom-audiences>` to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
+       Send :ref:`custom audiences <destination-meta-ads-manager-custom-audiences>` to |destination-name| to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
        The |ext_facebook_marketing_api|, specifically the |ext_facebook_marketing_api_replace_users|, is used to send custom audiences.
 
@@ -296,7 +296,7 @@ Terms of service
 
 .. destination-meta-ads-manager-terms-of-service-start
 
-The |ext_facebook_tos| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
+The |ext_facebook_tos| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
 
 .. destination-meta-ads-manager-terms-of-service-end
 
@@ -310,7 +310,7 @@ The permissions error is similar to:
    customer list, please agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
 
-To resolve this error the terms of service must be signed by a business user who has a role in your Facebook Ads account.
+To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
 
 .. destination-meta-ads-manager-terms-of-service-error-end
 
@@ -730,7 +730,7 @@ Add destination
 
        |destination-name| requires using OAuth to :ref:`authorize Amperity to send offline events to your Meta Ads Manager account <destination-meta-ads-manager-configure-oauth>`.
 
-       .. note:: You may use the same credentials custom audiences and offline events.
+       .. note:: You may use the same credentials to send both custom audiences and offline events to |destination-name|.
 
 
    * - .. image:: ../../images/steps-03.png

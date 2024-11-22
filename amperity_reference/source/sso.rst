@@ -25,7 +25,7 @@ Amperity supports the use of single sign-on (SSO) to manage the users who can ac
 
 #. A better experience for your users who authenticate to your identity provider (IdP) with a familiar ID and password, after which they are authorized to access Amperity.
 
-#. Using any IdP that supports Security Assertion Markup Language (SAML), an open standard for exchanging authentication and authorization data between a service provider and an IdP. For example: Azure Active Directory, Auth0, Google G-suite, Okta, OneLogin, and |ext_pingid|.
+#. Using any IdP that supports Security Assertion Markup Language (SAML), an open standard for exchanging authentication and authorization data between a service provider and an IdP. For example: Azure Active Directory, Auth0, Google G-suite, Okta, OneLogin, and `Ping Identity <https://docs.pingidentity.com/>`__ |ext_link|.
 
 #. Simplified user management. Define groups in your IdP, and then map those groups to user policies in Amperity. Manage user access to Amperity by adding users to (or removing users from) these groups.
 

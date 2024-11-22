@@ -38,7 +38,7 @@ Send data to Zendesk
 
 .. destination-zendesk-start
 
-Amperity may be configured to create or update user records in |destination-name| by using the |destination-api| to |ext_zendesk_rest_api_create_or_update_users|. Use this connector to deliver a better customer support experience by pre-populating |destination-name| user records with customer records from Amperity, including:
+Amperity may be configured to create or update user records in |destination-name| by using the |destination-api| to `create or update users <https://developer.zendesk.com/api-reference/ticketing/users/users/#create-or-update-many-users>`__ |ext_link|. Use this connector to deliver a better customer support experience by pre-populating |destination-name| user records with customer records from Amperity, including:
 
 * Order history
 * Loyalty status
@@ -52,7 +52,7 @@ Use this data to show customer support representatives information related to pr
 
 .. destination-zendesk-note-start
 
-.. note:: Creating or updating records are |ext_zendesk_rest_api_rate_limits| to a maximum of 100 users per second.
+.. note:: Creating or updating records are `rate limited <https://developer.zendesk.com/rest_api/docs/support/introduction#endpoint-specific-rate-limits>`__ |ext_link| to a maximum of 100 users per second.
 
 .. destination-zendesk-note-end
 
@@ -140,7 +140,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The |ext_zendesk_rest_api_token|, which may be generated via the |destination-name| user interface by an administrator with **Token Access** enabled.
+     - The `Zendesk API token <https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token>`__ |ext_link|, which may be generated via the |destination-name| user interface by an administrator with **Token Access** enabled.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
