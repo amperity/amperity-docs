@@ -1809,6 +1809,12 @@ The unique name of an account that exists within your brand's |destination-name|
 
 .. credential-snowflake-account-name-end
 
+.. credential-snowflake-account-name-required-permissions-start
+
+.. important:: This role must be granted :ref:`write permission to Snowflake objects <source-snowflake-azure-configure-objects>`, :ref:`permission to access each table <source-snowflake-azure-configure-tables>`, and permission to :ref:`write table output to Azure Blob Storage <source-snowflake-azure-configure-storage-integration>`.
+
+.. credential-snowflake-account-name-required-permissions-end
+
 **Organization**
 
 .. credential-snowflake-organization-start

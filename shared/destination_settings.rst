@@ -2063,6 +2063,12 @@ The ID for the region in which the Snowflake account name is located. For exampl
 
 .. setting-snowflake-region-id-end
 
+.. setting-snowflake-region-id-location-start
+
+.. note:: The Amperity instance of Snowflake should be located in the same region as the customer's instance of Snowflake.
+
+.. setting-snowflake-region-id-location-end
+
 **Snowflake location**
 
 .. setting-snowflake-location-start
