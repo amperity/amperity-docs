@@ -727,9 +727,18 @@ If there is a schema mismatch you will see an error similar to:
 
 that is followed by a list of tables, and then for each table a list of fields that are causing the mismatch.
 
-This error can occur when a custom domain table is updated *or* when the database is run after a schema change, but before the schema migration workflow has completed. Common causes of this error include domain table schema changes and schema changes that are promoted from a sandbox.
+This error occurs when one of the following workflow tasks fails:
 
-In these situations you can resolve the schema mismatch error by waiting for the schema migration workflow to complete, and then re-running the database.
+#. "Updating custom domain tables"
+#. "Generating databases"
+
+This often occurs when one of the following schema migration workflow tasks that are running in a different workflow have not finished:
+
+#. "Domain table schema migration"
+#. "Sandbox pull: update domain tables"
+#. "Sandbox promotion: update domain tables"
+
+To resolve this error, wait for the schema migration workflow to complete, and then re-run the database.
 
 If the error persists use the **Contact Support** link to open a support ticket for this error and to follow along with the resolution.
 
