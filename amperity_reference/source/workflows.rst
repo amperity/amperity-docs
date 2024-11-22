@@ -731,14 +731,7 @@ This error can occur when the database is run after a schema change, but before 
 
 In these situations you can resolve the schema mismatch error by waiting for the schema migration workflow to complete, and then re-running the database.
 
-In some cases, the workflow error description will contain:
-
-::
-
-   ... no action is required at this time. Amperity has been
-   notified and is working to resolve this error.
-
-In this situation you may use the **Contact Support** link to open a ticket for this error and to follow along with the resolution.
+If the error persists use the **Contact Support** link to open a support ticket for this error and to follow along with the resolution.
 
 .. workflows-databases-inputs-unbound-start
 
