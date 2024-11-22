@@ -733,7 +733,7 @@ In these situations you can resolve the schema mismatch error by waiting for the
 
 If the error persists use the **Contact Support** link to open a support ticket for this error and to follow along with the resolution.
 
-.. workflows-databases-inputs-unbound-start
+.. workflows-databases-inputs-unbound-end
 
 
 .. _workflows-context-destinations:
