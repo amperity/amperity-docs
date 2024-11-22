@@ -89,7 +89,7 @@ Get details
           :class: no-scaled-link
      - The Azure Blob Storage account name and shared access signature for the dedicated role for use by Amperity.
 
-       .. important:: This role must be granted :ref:`write permission to Snowflake objects <source-snowflake-azure-configure-objects>`, :ref:`permission to access each table <source-snowflake-azure-configure-tables>`, and permission to :ref:`write table output to Azure Blob Storage <source-snowflake-azure-configure-storage-integration>`.
+       .. important:: This role must be granted :ref:`write permission to Snowflake objects <destination-snowflake-azure-configure-objects>`, :ref:`permission to access each table <destination-snowflake-azure-configure-tables>`, and permission to :ref:`write table output to Azure Blob Storage <destination-snowflake-azure-configure-storage-integration>`.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
