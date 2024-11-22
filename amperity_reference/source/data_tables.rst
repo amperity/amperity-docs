@@ -3128,7 +3128,7 @@ The **Unified Changes PKS** table contains the following columns:
 
    * - **Change Type**
      - String
-     - The type of change that occurred within the Stitch job. Possible values include: ``add``, ``delete``, and ``updated``:
+     - The type of change that occurred within the Stitch job. Possible values include: ``added``, ``deleted``, and ``updated``:
 
        * The ``added`` change type indicates a primary key was added to the cluster.
        * The ``deleted`` change type indicates a primary key was deleted from the cluster.
