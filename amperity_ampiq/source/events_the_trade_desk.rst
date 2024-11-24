@@ -50,7 +50,7 @@ Build a query
 
 .. events-the-trade-desk-offline-events-build-query-start
 
-Use a query to build a combinations of data from your **Customer 360** tables that best represent the set of offline events that your brand wants to use within |destination-name|.
+Use a query to build a combinations of data from your **Customer 360** database tables that best represent the set of offline events that your brand wants to use within |destination-name|.
 
 .. events-the-trade-desk-offline-events-build-query-end
 
@@ -79,7 +79,7 @@ A query that returns a collection offline event is similar to:
 
 The query **MUST** contain the following fields: **email** and **timestamp**.
 
-.. tip:: You may use **uid2** as an attribute when Amperity is configured as a |uid2_operator| for your brand. For example:
+.. tip:: You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand. For example:
 
    .. code-block:: sql
 

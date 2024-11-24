@@ -82,7 +82,7 @@ Build query
 
 .. sendto-the-trade-desk-build-query-start
 
-You may build a more refined list of email addresses, such as those associated with a high-value audience (historical or predicted), or those with affinities for certain products in your brand. You may use **uid2** as a source attribute when Amperity is configured as a |uid2_operator| for your brand.
+You may build a more refined list of email addresses, such as those associated with a high-value audience (historical or predicted), or those with affinities for certain products in your brand. You may use **uid2** as a source attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand.
 
 .. sendto-the-trade-desk-build-query-end
 

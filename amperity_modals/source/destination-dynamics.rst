@@ -66,4 +66,3 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dynamics-entity-start
    :end-before: .. setting-microsoft-dynamics-entity-end
-

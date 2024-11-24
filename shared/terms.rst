@@ -6342,7 +6342,7 @@ A tenant runs fully within an environment located in Amazon AWS *or* Azure.
 
 .. term-thetradedesk-start
 
-The Trade Desk is a platform for wide internet advertising and enables the use  of UID 2.0 for first-party paid media advertising.
+The Trade Desk is a platform for wide internet advertising and enables the use of UID 2.0 for first-party paid media advertising.
 
 .. term-thetradedesk-end
 
