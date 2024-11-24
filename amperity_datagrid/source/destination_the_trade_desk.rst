@@ -790,7 +790,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        .. note:: Amperity converts email addresses to a UID 2.0 value, and then sends them to |destination-name|, after which they are available from within |destination-name| as a **UID2** ID type. Rows that are sent to |destination-name| that do not have a UID 2.0 value or have an empty value are removed by |destination-name|.
 
-          You may use **uid2** as an attribute when Amperity is configured as a |uid2_operator| for your brand.
+          You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand.
 
    * - **eventname**
      - **Optional**; **Required** for sending product catalogs alongside offline events.
@@ -979,7 +979,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
    * - **uid2**
      - **Optional**
 
-       You may use **uid2** as an attribute when Amperity is configured as a |uid2_operator| for your brand.
+       You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand.
 
        For example:
 

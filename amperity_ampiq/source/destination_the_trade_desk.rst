@@ -243,7 +243,7 @@ Configure default attributes
 
    * - uid2
 
-       You may use **uid2** as a source attribute when Amperity is configured as a |uid2_operator| for your brand.
+       You may use **uid2** as a source attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand.
 
      - uid2
 
