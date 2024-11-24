@@ -50,7 +50,7 @@ Build a query
 
 .. events-the-trade-desk-offline-events-build-query-start
 
-Use a query to build a combinations of data from your **Customer 360** tables that best represent the set of offline events that your brand wants to use within |destination-name|.
+Use a query to build a combinations of data from your **Customer 360** database tables that best represent the set of offline events that your brand wants to use within |destination-name|.
 
 .. events-the-trade-desk-offline-events-build-query-end
 
