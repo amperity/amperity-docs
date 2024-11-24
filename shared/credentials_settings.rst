@@ -116,7 +116,7 @@ Configure credentials for |destination-name| before adding a destination.
 
 .. credential-common-name-and-description-start
 
-Add a name and description for this credential.
+The name and description for a credential.
 
 .. credential-common-name-and-description-end
 **SnapPass callout**

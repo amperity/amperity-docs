@@ -284,7 +284,7 @@ To ensure customers stay in this audience ensure the frequency at which the audi
 
 .. setting-common-name-and-description-start
 
-Add a name and description for this destination.
+The name and description for a destination.
 
 .. setting-common-name-and-description-end
 
@@ -292,7 +292,7 @@ Add a name and description for this destination.
 
 .. setting-common-optional-settings-start
 
-All other Amperity file formatt settings for |destination-name| are optional.
+All other Amperity file format settings for |destination-name| are optional.
 
 .. setting-common-optional-settings-end
 
@@ -2121,6 +2121,15 @@ The name of a segment in |destination-name|.
 
 .. setting-the-trade-desk-segment-name-end
 
+**UID 2.0 agreement**
+
+.. setting-the-trade-desk-uid2-agreement-start
+
+|destination-name| supports using `UID 2.0 <https://unifiedid.com/docs/intro>`__ |ext_link| to help establish your customers' identifies without using third-party data. UID 2.0 enables publisher websites, mobile apps, and Connected TV (CTV) apps to monetize through programmatic workflows, while offering user transparency and privacy controls that meet local market requirements.
+
+Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring Amperity to send offline events to |destination-name|.
+
+.. setting-the-trade-desk-uid2-agreement-end
 
 
 
@@ -2153,9 +2162,15 @@ This section contains settings that are unique to The Trade Desk: Offline Events
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-The name of the tracking tag for which offline events are associated.
+The name of the tracking tag for which offline events are associated. The name is a string, may have up to 256 characters, must be unique, and may not duplicate any previous name that was used for the same advertiser and offline data provider ID. The tracking tag name will appear in the UI for |destination-name| exactly as it is entered in Amperity.
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
+
+.. setting-the-trade-desk-offline-tracking-tag-name-context-start
+
+|destination-name| uses a combination of the tracking tag name, your brand's advertiser ID, and offline data provider ID to build a unique offline tracking tag ID. Use the offline tracking ID to help measure the success of your brand's marketing campaigns.
+
+.. setting-the-trade-desk-offline-tracking-tag-name-context-end
 
 
 
@@ -2219,6 +2234,14 @@ Select **Auto tracking** to use this event set for add tracking and attribution.
 The event set ID is a nineteen character string similar to “7654321098765432109”.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
+
+.. setting-tiktok-ads-manager-offline-event-set-id-context-start
+
+The event set must exist before you can send data to it from Amperity. You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the |destination-name| user interface.
+
+If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+
+.. setting-tiktok-ads-manager-offline-event-set-id-context-end
 
 **Event set name**
 
