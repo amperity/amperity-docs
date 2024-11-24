@@ -94,6 +94,13 @@ to any configured destination.
 
 .. destinations-steps-business-users-end
 
+.. destinations-steps-business-users-orchestration-only-start
+
+After this destination is configured, business users may configure Amperity to use orchestrations to send query results |destination-name|.
+
+.. destinations-steps-business-users-orchestration-only-end
+
+
 
 
 **COMMON API**
@@ -686,6 +693,14 @@ The client domain for your brand's instance of |destination-name|.
 The primary identifier that is used within your |destination-name| account. May be one of the following: "email" or "phone".
 
 .. setting-attentive-primary-identifier-end
+
+.. setting-attentive-primary-identifier-context-start
+
+|destination-name| accepts email addresses *or* phone numbers as the primary identifier. The set of data that is sent from Amperity **must** contain the primary identifier. For example, if your primary identifier is phone numbers, than the **phone** field must be included.
+
+You may send the non-primary email address or phone number as a custom attribute.
+
+.. setting-attentive-primary-identifier-context-end
 
 **Segment name** (SFTP)
 
@@ -2036,6 +2051,11 @@ Use the Drop table option to overwrite the table and apply an updated schema whe
 The ID for the region in which the Snowflake account name is located. For example: "us-west-2".
 
 .. setting-snowflake-region-id-end
+
+
+.. note:: The Amperity instance of Snowflake should be located in the same region as the customer's instance of Snowflake.
+
+.. setting-snowflake-region-id-location-end
 
 **Snowflake location**
 
