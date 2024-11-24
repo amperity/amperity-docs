@@ -210,7 +210,7 @@ Custom audiences
 
 Send custom audiences to manage audiences for |destination-name| demand-side platform, from which your brand can reach audiences throughout their entire digital journey and across every channel and device.
 
-This includes
+This includes:
 
 * Display advertising on major networks, in major newspapers, live sporting events, and in-store advertising
 * Video advertising on over-the-top (OTT) and connected TV (CTV) apps and platforms
