@@ -702,11 +702,47 @@ Databases
 
 Some common workflow actions that your brand may see when generating databases include:
 
+* :ref:`Cannot bind inputs to resolved state <workflows-databases-inputs-unbound>`
 * Errors resolving column names in tables
 * Missing tables
 * SQL query alerts (including warning *and* failure thresholds)
 
 .. workflows-context-databases-end
+
+
+.. _workflows-databases-inputs-unbound:
+
+Cannot bind inputs to resolved state
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. workflows-databases-inputs-unbound-start
+
+Inputs to the database build process, such as source and custom domain tables, Stitch output tables, and core tables, must have a schema that matches the one that is expected by the database.
+
+If there is a schema mismatch you will see an error similar to:
+
+::
+
+   Failure binding configured inputs to resolved state
+
+that is followed by a list of tables, and then for each table a list of fields that are causing the mismatch.
+
+This error occurs when one of the following workflow tasks fails:
+
+#. "Updating custom domain tables"
+#. "Generating databases"
+
+This often occurs when one of the following schema migrations that are running in a different workflow have not finished:
+
+#. "Domain table schema migration"
+#. "Sandbox pull: update domain tables"
+#. "Sandbox promotion: update domain tables"
+
+To resolve this error, wait for the schema migrations to complete, and then re-run the database.
+
+If the error persists use the **Contact Support** link to open a support ticket for this error and to follow along with the resolution.
+
+.. workflows-databases-inputs-unbound-end
 
 
 .. _workflows-context-destinations:

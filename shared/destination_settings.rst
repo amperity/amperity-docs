@@ -90,7 +90,7 @@ After this destination is configured, business users may configure Amperity to:
 * Use orchestrations and campaigns to send audiences
 * Use orchestrations and campaigns to send offline events
 
-to any configured destination.
+to |destination-name|.
 
 .. destinations-steps-business-users-end
 
@@ -1795,6 +1795,25 @@ The name of the data extension in |destination-name| that is managed by Amperity
 
 .. setting-salesforce-marketing-cloud-data-extension-name-end
 
+.. setting-salesforce-marketing-cloud-data-extension-name-context-campaigns-start
+
+For campaigns, use the **{campaign_name}** and **{group_name}** campaign template variables to assign campaign and treatment group names to your data extension.
+
+.. important:: The name of a data extension must be unique within |destination-name|.
+
+.. setting-salesforce-marketing-cloud-data-extension-name-context-campaigns-end
+
+.. setting-salesforce-marketing-cloud-data-extension-name-context-orchestrations-start
+
+For orchestrations, assign a name to the data extension that will be added (or updated) by Amperity.
+
+.. important:: The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
+
+::
+
+   ! @ # $ % ^ * ( ) = { } [ ] \ . < > / " : ? | , &
+
+.. setting-salesforce-marketing-cloud-data-extension-name-context-orchestrations-end
 
 **Folder name**
 
@@ -2052,6 +2071,7 @@ The ID for the region in which the Snowflake account name is located. For exampl
 
 .. setting-snowflake-region-id-end
 
+.. setting-snowflake-region-id-location-start
 
 .. note:: The Amperity instance of Snowflake should be located in the same region as the customer's instance of Snowflake.
 

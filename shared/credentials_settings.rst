@@ -1626,6 +1626,13 @@ The authentication subdomain for your brand's instance of the Marketing Cloud SO
 
 .. credential-salesforce-marketing-cloud-api-subdomain-end
 
+
+.. credential-salesforce-marketing-cloud-api-subdomain-base-uri-start
+
+The authentication subdomain for the `SOAP base URI <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html>`__ |ext_link| is represented by a 28-character string that starts with the letters "mc", such as "mcabc123...".
+
+.. credential-salesforce-marketing-cloud-api-subdomain-base-uri-end
+
 **SFTP hostname**
 
 .. credential-salesforce-marketing-cloud-hostname-start
@@ -1658,7 +1665,7 @@ See SFTP.
 
 .. credential-salesforce-sales-cloud-security-token-start
 
-The Salesforce security token associated with the username. This setting is not required when IP range policies are configured.
+The Salesforce security token associated with the username. This setting is not required when IP range policies are configured from the Salesforce admin console.
 
 .. credential-salesforce-sales-cloud-security-token-end
 
@@ -1801,6 +1808,12 @@ These settings apply to destination *and* bridge.
 The unique name of an account that exists within your brand's |destination-name| organization.
 
 .. credential-snowflake-account-name-end
+
+.. credential-snowflake-account-name-required-permissions-start
+
+.. important:: This role must be granted :ref:`write permission to Snowflake objects <source-snowflake-azure-configure-objects>`, :ref:`permission to access each table <source-snowflake-azure-configure-tables>`, and permission to :ref:`write table output to Azure Blob Storage <source-snowflake-azure-configure-storage-integration>`.
+
+.. credential-snowflake-account-name-required-permissions-end
 
 **Organization**
 

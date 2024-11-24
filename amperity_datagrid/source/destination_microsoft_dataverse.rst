@@ -70,7 +70,7 @@ Use |destination-name| to send rows of data from Amperity, and then add them to 
 A |destination-name| destination works like this:
 
 #. Use a query to build a table with rows of data that match the schema of a table in |destination-name|. The column names, data types, and column order must match the schema that is defined in |destination-name|.
-#. Configure the :ref:`Microsoft Dataverse destination <destination-salesforce-marketing-cloud-add-destination>` in Amperity.
+#. Configure the :ref:`Microsoft Dataverse destination <destination-microsoft-dataverse-add-destination>` in Amperity.
 #. Validated table rows are sent to |destination-name|.
 
 .. destination-microsoft-dataverse-howitworks-callouts-end

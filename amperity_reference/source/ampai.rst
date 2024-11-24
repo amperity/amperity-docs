@@ -5,27 +5,27 @@
 
 .. meta::
     :description lang=en:
-        AmpAi provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making.
+        AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        AmpAi provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making.
+        AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AmpAi
+        AmpAI
 
 ==================================================
-AmpAi
+AmpAI
 ==================================================
 
 .. ampai-overview-start
 
-AmpAi provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making.
+AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making.
 
 .. ampai-overview-end
 
-.. note:: Talk with your Amperity representative to learn more about how your brand can enable AmpAi for use across your tenant.
+.. note:: Talk with your Amperity representative to learn more about how your brand can enable AmpAI for use across your tenant.
 
 
 .. _ampai-stitch:

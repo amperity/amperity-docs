@@ -355,7 +355,7 @@ Add data template
 
        When enabled, NULL values in data sent from Amperity will be ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
 
-       .. caution:: Enabling parallelism may cause Salesforce to process batches in parallel. This *may* improve performance, but comes with the risk of introduce failures due to locking. It's possible for more than one batch to attempt to obtain a lock on the same row, causing one (or both) batches to fail..
+       .. caution:: Enabling parallelism may cause Salesforce to process batches in parallel. This *may* improve performance, but comes with the risk of introducing failures due to locking. It's possible for more than one batch to attempt to obtain a lock on the same row, causing one (or both) batches to fail.
 
 
    * - .. image:: ../../images/steps-05.png
