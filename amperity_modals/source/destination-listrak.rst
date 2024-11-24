@@ -15,9 +15,9 @@ Listrak
 
 Amperity can manage email and SMS lists in |destination-name|. You can send email and SMS lists to |destination-name| using any of the following processes:
 
-* The |ext_listrak_email_api|
-* The |ext_listrak_sms_api|
-* SFTP for email address and/or SMS lists, along with product catalogs, orders, and ordered items; see |ext_listrak_file_customers|, |ext_listrak_file_product|, |ext_listrak_file_orders|, and |ext_listrak_file_order_items| for more information.
+* The `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|
+* The `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|
+* SFTP for email address and/or SMS lists, along with product catalogs, orders, and ordered items; see `Customers <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Products <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Orders <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order items <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link| for more information.
 
 Additional attributes may be appended using any of these processes.
 
