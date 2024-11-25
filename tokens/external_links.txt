@@ -2169,12 +2169,12 @@
    <a href="https://docs.tibco.com/pub/sfire-analyst/11.3.0/doc/html/en-US/TIB_sfire-analyst_UsersGuide/connectors/snowflake/snowflake_accessing_data_from_snowflake.htm" target="_blank">TIBCO Spotfire</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tiktok_ads_business_center| raw:: html
+.. |xext_tiktok_ads_business_center| raw:: html
 
    <a href="https://business.tiktok.com/" target="_blank">TikTok Business Center</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tiktok_ads_learning_phase| raw:: html
+.. |xext_tiktok_ads_learning_phase| raw:: html
 
    <a href="https://ads.tiktok.com/help/article/learning-phase" target="_blank">learning phase</a> <i class="fas fa-external-link-square-alt"></i>
 
@@ -2184,52 +2184,52 @@
    <a href="https://business-api.tiktok.com/portal/docs?id=1758053486938113" target="_blank">offline events and parameters</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tiktok_ads_offline_events_attribution_window| raw:: html
+.. |xext_tiktok_ads_offline_events_attribution_window| raw:: html
 
    <a href="https://business-api.tiktok.com/portal/docs?id=1771101064635394" target="_blank">maximum attribution windows</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tiktok_ads_segment_api_custom_audience_list| raw:: html
+.. |xext_tiktok_ads_segment_api_custom_audience_list| raw:: html
 
    <a href="https://ads.tiktok.com/marketing_api/docs?id=1708578418908161" target="_blank">verify existing segments</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tiktok_ads_segment_api_segment_audience| raw:: html
+.. |xext_tiktok_ads_segment_api_segment_audience| raw:: html
 
    <a href="https://ads.tiktok.com/marketing_api/docs?id=1735136750113793" target="_blank">add or update</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tiktok_ads_segment_api_segment_mapping| raw:: html
+.. |xext_tiktok_ads_segment_api_segment_mapping| raw:: html
 
    <a href="https://ads.tiktok.com/marketing_api/docs?id=1735141667215361" target="_blank">map multiple advertising account IDs to the same business account</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tsv| raw:: html
+.. |xext_tsv| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Tab-separated_values" target="_blank">tab-separated values (TSV)</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tulip_file_importer| raw:: html
+.. |xext_tulip_file_importer| raw:: html
 
    <a href="https://docs.tulip.com/integrating/file-importer/overview/" target="_blank">File Importer</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tulip_file_importer_file_formatting| raw:: html
+.. |xext_tulip_file_importer_file_formatting| raw:: html
 
    <a href="https://docs.tulip.com/integrating/file-importer/overview/#important-considerations-for-performance-and-formatting" target="_blank">correct file formatting</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tulip_file_importer_naming_conventions| raw:: html
+.. |xext_tulip_file_importer_naming_conventions| raw:: html
 
    <a href="https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions" target="_blank">file naming conventions</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tulip_file_importer_sample_files| raw:: html
+.. |xext_tulip_file_importer_sample_files| raw:: html
 
    <a href="https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions" target="_blank">review the sample files</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tz_database_names| raw:: html
+.. |xext_tz_database_names| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">TZ database name</a> <i class="fas fa-external-link-square-alt"></i>
 

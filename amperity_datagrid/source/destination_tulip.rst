@@ -40,9 +40,9 @@ Send data to Tulip
 
 .. destination-tulip-start
 
-Use the |destination-name| |ext_tulip_file_importer| tool to send CSV files to |destination-name| using SFTP, after which the files are automatically uploaded to |destination-name| by the Bulk API.
+Use the |destination-name| `File Importer <https://docs.tulip.com/integrating/file-importer/overview/>`__ |ext_link| tool to send CSV files to |destination-name| using SFTP, after which the files are automatically uploaded to |destination-name| by the Bulk API.
 
-.. note:: |destination-name| supports the following entities: stores, employees, categories, products, variants, prices, inventory, customers, and order history. Review the |ext_tulip_file_importer_naming_conventions| for each entity, |ext_tulip_file_importer_sample_files|, and make sure your output has the |ext_tulip_file_importer_file_formatting|.
+.. note:: |destination-name| supports the following entities: stores, employees, categories, products, variants, prices, inventory, customers, and order history. Review the `file naming conventions <https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions>`__ for each entity, `review the sample files <https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions>`__ |ext_link|, and make sure your output has the `correct file formatting <https://docs.tulip.com/integrating/file-importer/overview/#important-considerations-for-performance-and-formatting>`__ |ext_link|.
 
 .. destination-tulip-end
 

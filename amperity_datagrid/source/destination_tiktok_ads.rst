@@ -63,7 +63,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
           :class: no-scaled-link
      - **Offline events**
 
-       :ref:`Offline events <destination-tiktok-ads-offline-events>` help your brand track offline conversions from your marketing campaigns. Support for |ext_tiktok_ads_offline_events| is part of the TikTok Events API.
+       :ref:`Offline events <destination-tiktok-ads-offline-events>` help your brand track offline conversions from your marketing campaigns. Support for `offline events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
        .. tip:: Offline events must have occurred within the previous 28 days. The maximum attribution windows for
 
@@ -247,7 +247,7 @@ A custom audience must have at least 1000 members in |destination-name| before i
 
 .. destination-tiktok-ads-api-note-start
 
-.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to |ext_tiktok_ads_segment_api_custom_audience_list|, |ext_tiktok_ads_segment_api_segment_audience| the list of customers to match the list of customers sent from Amperity, and then |ext_tiktok_ads_segment_api_segment_mapping|.
+.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to `verify existing segments <https://ads.tiktok.com/marketing_api/docs?id=1708578418908161.`__ |ext_link|, `add or update <https://ads.tiktok.com/marketing_api/docs?id=1735136750113793>`__ |ext_link| the list of customers to match the list of customers sent from Amperity, and then `map multiple advertising account IDs to the same business account <https://ads.tiktok.com/marketing_api/docs?id=1735141667215361>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -849,7 +849,7 @@ To resolve this error, determine the cause of the configuration issue.
 #. Open the Amperity **Destinations** page in a new browser tab.
 
    Review the configuration for the destination and data template that is associated with this workflow.
-#. Open |ext_tiktok_ads_business_center| and verify that the advertising account exists, is approved, and has a valid advertiser account ID.
+#. Open `TikTok Business Center <https://business.tiktok.com/>`__ |ext_link| and verify that the advertising account exists, is approved, and has a valid advertiser account ID.
 #. Update the configuration for Amperity to match the correct advertiser account ID.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
@@ -886,7 +886,7 @@ This business user *must* have permission to manage audiences, which requires th
 
 To resolve this error, verify that the business user is assigned to the **Operator** role.
 
-#. Open |ext_tiktok_ads_business_center|.
+#. Open `TikTok Business Center <https://business.tiktok.com/>`__ |ext_link|.
 
    Verify the role to which the business user that provides credentials for Amperity is assigned. The business user must be assigned to the **Operator** role.
 #. Open the Amperity **Credentials** page in a new tab, and regenerate the authorization link for the business user who is assigned to the **Operator** role.

@@ -6562,7 +6562,7 @@ An unqualified trivial duplicate is a set of records that do not have enough mat
 
 .. term-tsv-start
 
-A |ext_tsv| file is a delimited text file that uses a tab to separate values. A TSV file stores tabular data (numbers and text) in plain text. Each line of the file is a data record. Each record consists of one or more fields, separated by tabs. The use of the tab as a field separator is the source of the name for this file format.
+A `tab-separated values (TSV) <https://en.wikipedia.org/wiki/Tab-separated_values>`__ |ext_link| file is a delimited text file that uses a tab to separate values and stores tabular data (numbers and text) in plain text. Each line in the file is a data record. Each record consists of one or more fields, separated by tabs.
 
 .. term-tsv-end
 
