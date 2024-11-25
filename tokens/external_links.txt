@@ -2309,47 +2309,47 @@
    <a href="https://developer-platform.vibes.com/docs/standard-data-extracts-via-sftp" target="_blank">pull data</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_yellowfin| raw:: html
+.. |xext_yellowfin| raw:: html
 
    <a href="https://www.yellowfinbi.com/suite/connectors" target="_blank">JDBC drivers</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_youtube_ads_howitworks| raw:: html
+.. |xext_youtube_ads_howitworks| raw:: html
 
    <a href="https://www.youtube.com/intl/en_us/ads/how-it-works/" target="_blank">YouTube Ads</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_zendesk_rest_api_create_or_update_users| raw:: html
+.. |xext_zendesk_rest_api_create_or_update_users| raw:: html
 
    <a href="https://developer.zendesk.com/api-reference/ticketing/users/users/#create-or-update-many-users" target="_blank">create or update users</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_zendesk_rest_api_rate_limits| raw:: html
+.. |xext_zendesk_rest_api_rate_limits| raw:: html
 
    <a href="https://developer.zendesk.com/rest_api/docs/support/introduction#endpoint-specific-rate-limits" target="_blank">rate limited</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_zendesk_rest_api_token| raw:: html
+.. |xext_zendesk_rest_api_token| raw:: html
 
    <a href="https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token" target="_blank">Zendesk API token</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_zendesk_rest_api_user| raw:: html
+.. |xext_zendesk_rest_api_user| raw:: html
 
    <a href="https://developer.zendesk.com/rest_api/docs/support/users#json-format-for-agent-or-admin-requests" target="_blank">Zendesk Users API</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_zendesk_rest_api_tickets_users| raw:: html
+.. |xext_zendesk_rest_api_tickets_users| raw:: html
 
    <a href="https://developer.zendesk.com/api-reference/ticketing/users/users/" target="_blank">Zendesk Users API</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_zoho_amazon_s3_bucket| raw:: html
+.. |xext_zoho_amazon_s3_bucket| raw:: html
 
    <a href="https://www.zoho.com/analytics/help/import-data/cloud-drive.html" target="_blank">Amazon S3 bucket</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_zoho_data_feeds| raw:: html
+.. |xext_zoho_data_feeds| raw:: html
 
    <a href="https://www.zoho.com/analytics/help/import-data/feeds.html" target="_blank">import data from feeds</a> <i class="fas fa-external-link-square-alt"></i>
 

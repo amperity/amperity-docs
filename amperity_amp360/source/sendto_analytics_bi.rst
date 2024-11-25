@@ -255,7 +255,7 @@ Yellowfin
 
 .. sendto-analytics-bi-tool-yellowfin-start
 
-Download |ext_yellowfin| for :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake. Send data to any of these cloud storage locations, connect the JDBC driver to that source, and then open the data in Yellowfin.
+Download `Yellowfin <https://www.yellowfinbi.com/suite/connectors>`__ |ext_link| for :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake. Send data to any of these cloud storage locations, connect the JDBC driver to that location, and then open the data in Yellowfin.
 
 .. sendto-analytics-bi-tool-yellowfin-end
 
@@ -267,6 +267,6 @@ Zoho Analytics
 
 .. sendto-analytics-bi-tool-zoho-start
 
-You can |ext_zoho_data_feeds| or import data from an |ext_zoho_amazon_s3_bucket|.
+You can `import data from feeds <https://www.zoho.com/analytics/help/import-data/feeds.html>`__ |ext_link| or import data from an `Amazon S3 bucket <https://www.zoho.com/analytics/help/import-data/cloud-drive.html>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-zoho-end

@@ -55,7 +55,7 @@ Send data to DV360
    * Use |ext_google_ads|  to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
    * Run ads within |ext_google_search|.
    * Run ads within the |ext_google_shopping|.
-   * Send audiences to DV360, and then run video advertising campaigns in |ext_youtube_ads_howitworks| or on web pages using any of the |ext_dv360_placement_options|. DV360 supports advertiser and partner networks.
+   * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the |ext_dv360_placement_options|. DV360 supports advertiser and partner networks.
 
    Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 

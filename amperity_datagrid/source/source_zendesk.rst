@@ -35,7 +35,7 @@ Pull from Zendesk
 
 .. source-zendesk-about-start
 
-Use the |ext_zendesk_rest_api_tickets_users| to pull |what-pull| to Amperity, and then associate them to your customer profiles and transaction histories.
+Use the `Zendesk Users API <https://developer.zendesk.com/api-reference/ticketing/users/users/>`__ |ext_link| to pull |what-pull| to Amperity, and then associate them to your customer profiles and transaction histories.
 
 .. source-zendesk-about-end
 
@@ -128,7 +128,7 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. source-zendesk-review-data-start
 
-The feed and domain table will match the fields defined in the |ext_zendesk_rest_api_tickets_users|:
+The feed and domain table will match the fields defined in the `Zendesk Users API <https://developer.zendesk.com/api-reference/ticketing/users/users/>`__ |ext_link|:
 
 * **active**
 * **alias**
