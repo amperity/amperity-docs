@@ -2139,32 +2139,32 @@
    <a href="https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm" target="_blank">connect Tableau</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tellius_connectors| raw:: html
+.. |xext_tellius_connectors| raw:: html
 
    <a href="https://help.tellius.com/article/2ch9kda9f5-list-of-connectors-by-type" target="_blank">connector that is supported by Tellius</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_the_trade_desk_API| raw:: html
+.. |xext_the_trade_desk_API| raw:: html
 
    <a href="https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs" target="_blank">The Trade Desk API</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_the_trade_desk_uid_20| raw:: html
+.. |xext_the_trade_desk_uid_20| raw:: html
 
    <a href="https://unifiedid.com/docs/intro" target="_blank">UID 2.0</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_the_trade_desk_offline_events| raw:: html
+.. |xext_the_trade_desk_offline_events| raw:: html
 
    <a href="https://partner.thetradedesk.com/v3/portal/data/doc/DataOfflineMeasurement" target="_blank">Offline conversion events</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_thoughtspot_dataflow| raw:: html
+.. |xext_thoughtspot_dataflow| raw:: html
 
    <a href="https://docs.thoughtspot.com/software/latest/dataflow" target="_blank">DataFlow</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_tibco_spotfire_snowflake| raw:: html
+.. |xext_tibco_spotfire_snowflake| raw:: html
 
    <a href="https://docs.tibco.com/pub/sfire-analyst/11.3.0/doc/html/en-US/TIB_sfire-analyst_UsersGuide/connectors/snowflake/snowflake_accessing_data_from_snowflake.htm" target="_blank">TIBCO Spotfire</a> <i class="fas fa-external-link-square-alt"></i>
 

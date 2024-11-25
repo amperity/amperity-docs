@@ -231,7 +231,7 @@ Tellius
 
 Tellius is a platform for analytics and BI that unifies visual data intelligence, actionable insights, machine learning capabilities, and custom predictive models.
 
-You can send data to cloud storage and then move that data into a cloud database using any |ext_tellius_connectors|.
+You can send data to cloud storage and then move that data into a cloud database using any `connector that is supported by Tellius <https://help.tellius.com/article/2ch9kda9f5-list-of-connectors-by-type>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-tellius-end
 
@@ -243,7 +243,7 @@ ThoughtSpot
 
 .. sendto-analytics-bi-tool-thoughtspot-start
 
-Use |ext_thoughtspot_dataflow| connections to make data available to ThoughtSpot. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
+Use `DataFlow <https://docs.thoughtspot.com/software/latest/dataflow>`__ |ext_link| connections to make data available to ThoughtSpot. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
 
 .. sendto-analytics-bi-tool-thoughtspot-end
 
