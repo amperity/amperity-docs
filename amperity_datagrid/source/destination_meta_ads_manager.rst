@@ -1236,7 +1236,7 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Removes punctuation
-       * Updates special characters to |ext_utf8|
+       * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as SHA-256
    * - **First Name**
      - **FN**
@@ -1245,7 +1245,7 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Removes punctuation
-       * Updates special characters to |ext_utf8|
+       * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as SHA-256
    * - **First Initial**
      - **FI**

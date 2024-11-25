@@ -35,7 +35,7 @@ Pull from Vibes
 
 .. source-vibes-start
 
-You can use a batch process to |ext_vibes_pull_data| from Vibes to Amperity as TSV files for the following types of daily extracts:
+You can use a batch process to `pull data from Vibes <https://developer-platform.vibes.com/docs/standard-data-extracts-via-sftp>`__ |ext_link| to Amperity as TSV files for the following types of daily extracts:
 
 * Current subscribers
 * Messages

@@ -2294,17 +2294,17 @@
    <a href="https://unifiedid.com/docs/overviews/overview-data-providers#workflow-for-data-providers" target="_blank">third-party data</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_utf8| raw:: html
+.. |xext_utf8| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank">UTF-8 format</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_vibes_import_recipient_list| raw:: html
+.. |xext_vibes_import_recipient_list| raw:: html
 
    <a href="https://developer-platform.vibes.com/docs/recipient-list-import" target="_blank">recipient list</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_vibes_pull_data| raw:: html
+.. |xext_vibes_pull_data| raw:: html
 
    <a href="https://developer-platform.vibes.com/docs/standard-data-extracts-via-sftp" target="_blank">pull data</a> <i class="fas fa-external-link-square-alt"></i>
 

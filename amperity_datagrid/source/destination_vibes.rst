@@ -105,14 +105,14 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - A |destination-name| |ext_vibes_import_recipient_list| must be assigned a name similar to ``<filename>.recipient_list``. Define the |format_common_filename_template_pattern| to match the campaign name that is required by |destination-name|.
+     - A `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| must be assigned a name similar to ``<filename>.recipient_list``. Define the |format_common_filename_template_pattern| to match the campaign name that is required by |destination-name|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - Refer to the |destination-name| documentation if you plan to import a |ext_vibes_import_recipient_list| with included headers.
+     - Refer to the |destination-name| documentation if you plan to import a `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| with included headers.
 
 .. destination-vibes-get-details-end
 
@@ -314,7 +314,7 @@ Add data template
 
        .. important:: A filename template pattern is required for proper formatting for files sent to |destination-name|. By default this pattern includes the name of the query and the current date. Special characters and blank spaces in the query name are replaced by underscores in the file name.
 
-          A Vibes |ext_vibes_import_recipient_list| is assigned a name similar to ``<filename>.recipient_list``. The file naming pattern must create a file that matches the campaign name in the |destination-name| platform.
+          A `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| is assigned a name similar to ``<filename>.recipient_list``. The file naming pattern must create a file that matches the campaign name in the |destination-name| platform.
 
        .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
           :width: 500 px
