@@ -2234,62 +2234,62 @@
    <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">TZ database name</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_about| raw:: html
+.. |xext_uid2_about| raw:: html
 
    <a href="https://unifiedid.com/docs/intro" target="_blank">open-source framework</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_advertisers| raw:: html
+.. |xext_uid2_advertisers| raw:: html
 
    <a href="https://unifiedid.com/docs/overviews/overview-advertisers" target="_blank">advertisers</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_data_providers| raw:: html
+.. |xext_uid2_data_providers| raw:: html
 
    <a href="https://unifiedid.com/docs/overviews/overview-data-providers" target="_blank">data providers</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_endpoint_post_identity_buckets| raw:: html
+.. |xext_uid2_endpoint_post_identity_buckets| raw:: html
 
    <a href="https://unifiedid.com/docs/endpoints/post-identity-buckets" target="_blank">POST /identity/buckets</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_endpoint_post_identity_map| raw:: html
+.. |xext_uid2_endpoint_post_identity_map| raw:: html
 
    <a href="https://unifiedid.com/docs/endpoints/post-identity-map" target="_blank">POST /identity/map</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_first_party| raw:: html
+.. |xext_uid2_first_party| raw:: html
 
    <a href="https://unifiedid.com/docs/overviews/overview-advertisers#workflow-for-advertisers" target="_blank">first-party data</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_mapper_credentials| raw:: html
+.. |xext_uid2_mapper_credentials| raw:: html
 
    <a href="https://unifiedid.com/docs/getting-started/gs-credentials" target="_blank">Mapper credentials</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_operator| raw:: html
+.. |xext_uid2_operator| raw:: html
 
    <a href="https://unifiedid.com/docs/ref-info/ref-operators-public-private" target="_blank">UID2 Operator</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_participant_requirements| raw:: html
+.. |xext_uid2_participant_requirements| raw:: html
 
    <a href="https://unifiedid.com/docs/getting-started/gs-sharing#legal-requirements-for-uid2-sharing" target="_blank">requirement for UID2 sharing</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_participation_policy| raw:: html
+.. |xext_uid2_participation_policy| raw:: html
 
    <a href="https://unifiedid.com/docs/intro#participants" target="_blank">participation policy</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_request_access| raw:: html
+.. |xext_uid2_request_access| raw:: html
 
    <a href="https://unifiedid.com/request-access" target="_blank">Unified ID 2.0</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_uid2_third_party| raw:: html
+.. |xext_uid2_third_party| raw:: html
 
    <a href="https://unifiedid.com/docs/overviews/overview-data-providers#workflow-for-data-providers" target="_blank">third-party data</a> <i class="fas fa-external-link-square-alt"></i>
 
