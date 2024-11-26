@@ -610,7 +610,7 @@ JDBC driver
 
 .. destination-bic-connect-other-jdbc-start
 
-Download the |ext_snowflake_jdbc| to connect BI tools such as Databricks, SAP Business Objects, |ext_sql_workbench|, or |ext_sisense| to the |bic| data warehouse.
+Download the |ext_snowflake_jdbc| to connect BI tools such as Databricks, SAP Business Objects, `SQL Workbench <https://www.sql-workbench.eu/>`__ |ext_link|, or |ext_sisense| to the |bic| data warehouse.
 
 .. destination-bic-connect-other-jdbc-end
 
@@ -866,7 +866,7 @@ Tableau Desktop
 
 .. destination-bic-connect-other-odbc-tableau-steps-start
 
-#. Download and install the |ext_snowflake_odbc|, and then |ext_tableau_snowflake_bic| to the |bic| data warehouse.
+#. Download and install the |ext_snowflake_odbc|, and then `connect Tableau <https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
 #. Log in to Tableau. Select the **Connect** menu option, then **To A Server**, then **More..**, and then **Snowflake**. This opens the **Snowflake** configuration page.
 #. Select the **General** tab, and then enter the following information:
 
