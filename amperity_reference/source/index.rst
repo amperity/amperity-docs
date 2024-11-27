@@ -437,6 +437,7 @@ Workflows
 
    abbreviations
    ampai
+   amps
    api
    assistant
    attribute_audience_sizes
@@ -514,6 +515,7 @@ Workflows
    attribute_tax_amounts
    attribute_total_items
    attribute_total_items_intervals
+   attributes
    bridge
    campaigns
    connected_systems
