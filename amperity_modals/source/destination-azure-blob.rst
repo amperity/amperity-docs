@@ -17,6 +17,16 @@ Azure Blob Storage
    :end-before: .. setting-azure-blob-storage-about-end
 
 
+Credentials
+==================================================
+
+**Connection string** credentials a connection string and the name of the Azure Blob Storage container.
+
+**Shared access signature** credentials require the account name, a shared access signature, and the name of the Azure Blob Storage container.
+
+**Storage URI** credentials require a storage URI and the name of the Azure Blob Storage container.
+
+
 Settings
 ==================================================
 

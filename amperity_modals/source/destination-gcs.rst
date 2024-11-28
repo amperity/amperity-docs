@@ -17,6 +17,12 @@ Google Cloud Storage
    :end-before: .. setting-google-cloud-storage-about-end
 
 
+Credentials
+==================================================
+
+Google Cloud Storage credentials require the name of the storage bucket and the service account key.
+
+
 Settings
 ==================================================
 

@@ -17,6 +17,14 @@ Amazon S3
    :end-before: .. setting-amazon-s3-about-end
 
 
+Credentials
+==================================================
+
+**IAM role-to-role** credentials require the name of the Amazon S3 bucket and the target role ARN. Amperity will provide the values for the Amperity role ARN and the external ID.
+
+**IAM** credentials require the name of the Amazon S3 bucket, the IAM access key, and the IAM secret key. An IAM role ARN is optional.
+
+
 Settings
 ==================================================
 
@@ -52,7 +60,7 @@ Settings
    :start-after: .. setting-common-file-format-custom-delimiter-start
    :end-before: .. setting-common-file-format-custom-delimiter-end
 
-Apache Parquet files only:
+*Apache Parquet files only*
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-file-format-apache-parquet-start
