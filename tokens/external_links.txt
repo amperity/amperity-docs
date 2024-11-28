@@ -2079,12 +2079,12 @@
    <a href="https://docs.snowflake.net/manuals/sql-reference/sql/use.html" target="_blank">USE</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_snowflake_warehouse_overview| raw:: html
+.. |xext_snowflake_warehouse_overview| raw:: html
 
    <a href="https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html" target="_blank">warehouse object in Snowflake</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_sparksql_csv_caution| raw:: html
+.. |xext_sparksql_csv_caution| raw:: html
 
    <a href="https://issues.apache.org/jira/browse/SPARK-22236" target="_blank">SPARK-22236</a> <i class="fas fa-external-link-square-alt"></i>
 
