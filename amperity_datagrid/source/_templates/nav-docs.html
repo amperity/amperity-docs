@@ -107,13 +107,18 @@
         "url": "/datagrid/bridge.html"
       },
       {
-        "title": "Sync with ...",
+        "title": "Sync data with ...",
         "hasSubItems": true,
         "subItems": [
           {
             "title": "Databricks",
             "hasSubItems": false,
             "url": "/datagrid/bridge_databricks.html"
+          },
+          {
+            "title": "Snowflake",
+            "hasSubItems": false,
+            "url": "/datagrid/bridge_snowflake.html"
           },
         ],
       },
@@ -453,8 +458,19 @@
       },
       {
         "title": "Stream data to ...",
-        "hasSubItems": false,
-        "url": "/datagrid/api_streaming_ingest.html"
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Real-time tables",
+            "hasSubItems": false,
+            "url": "/datagrid/realtime.html"
+          },
+          {
+            "title": "Streaming Ingest API",
+            "hasSubItems": false,
+            "url": "/datagrid/api_streaming_ingest.html"
+          },
+        ],
       },
       {
         "title": "Reshape data on ingest",
