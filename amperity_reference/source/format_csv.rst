@@ -567,7 +567,7 @@ Load from ingest query
 
 .. format-csv-pull-couriers-load-operations-ingest-query-caution-start
 
-.. caution:: Spark does not correctly implement |ext_rfc4180| for escape characters in CSV files. The most common implementations of CSV files expect a double quote ``"`` as an escape character while Spark uses a backslash ``\``. For more information about this issue view the |ext_sparksql_csv_caution| issue within the Spark project.
+.. caution:: Spark does not correctly implement |ext_rfc4180| for escape characters in CSV files. The most common implementations of CSV files expect a double quote ``"`` as an escape character while Spark uses a backslash ``\``. For more information about this issue view the `SPARK-22236 <https://issues.apache.org/jira/browse/SPARK-22236>`__ |ext_link| issue within the Spark project.
 
    You can override this behavior when working with RFC-compliant CSV files by specifying an escape character in the courier load operations using ``'`` or ``"`` as the escape character.
 
