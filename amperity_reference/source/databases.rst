@@ -553,6 +553,169 @@ Core table how-tos
 .. databases-core-table-howtos-end
 
 
+.. _databases-realtime:
+
+Real time tables
+==================================================
+
+.. databases-realtime-start
+
+Real-time tables contain the data that is streamed to Amperity. Real-time tables are available alongside customer profiles in your brand's customer 360 database. Real-time tables complement the daily batch process that is used to build and maintain complete and durable customer profiles over longer timeframes by enabling use cases that require the use of data that is updated more frequently.
+
+.. databases-realtime-end
+
+.. image:: ../../images/mockup-customer360-tab-real-time-tables.png
+   :width: 600 px
+   :alt: Real-time tables, from the Customer 360 page.
+   :align: left
+   :class: no-scaled-link
+
+.. databases-realtime-howtos-start
+
+This section describes tasks related to managing real-time tables in Amperity:
+
+* :ref:`databases-realtime-howtos-add`
+* :ref:`databases-realtime-howtos-delete`
+* :ref:`databases-realtime-howtos-edit`
+* :ref:`databases-realtime-howtos-update-data-format`
+* :ref:`databases-realtime-howtos-update-schema`
+
+.. databases-realtime-howtos-end
+
+
+.. _databases-realtime-howtos-add:
+
+Add real-time table
+--------------------------------------------------
+
+.. databases-realtime-howtos-add-start
+
+A real-time table collects data that is streamed to Amperity, and then makes that streamed data available to databases and queries. Use the **Real-time tables** tab on the **Databases** page to manage real-time tables.
+
+.. databases-realtime-howtos-add-end
+
+**To add a real-time table**
+
+.. databases-realtime-howtos-add-steps-start
+
+#. Open the **Customer 360** page, and then select the **Real-time tables** tab.
+
+   Click **Add table**.
+
+
+#. In the **Create real-time table** dialog, do the following:
+
+   Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
+
+   Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that will be associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
+
+   .. note:: The schema for every real-time table contains two additional fields: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table).
+
+   Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
+
+   .. image:: ../../images/mockup-databases-table-realtime-add-01.png
+      :width: 580 px
+      :alt: Batch and streaming layers.
+      :align: left
+      :class: no-scaled-link
+
+   Click **Next**.
+
+
+#. In the **Create real-time table** dialog, continue:
+
+   Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
+
+   Select the databases for which this real-time table will be available from the **Queries** page.
+
+   .. image:: ../../images/mockup-databases-table-realtime-add-02.png
+      :width: 580 px
+      :alt: Batch and streaming layers.
+      :align: left
+      :class: no-scaled-link
+
+   Click **Active**.
+
+   .. important:: Real-time tables must be setto **Active** before they can be accessed from the **Queries** page.
+
+
+#. Run all of the databases for which this real-time table will be available. When this step is complete, open the **Queries** page and verify that the real-time table is available for queries and that data in the real-time table can be returned in the results.
+
+.. databases-realtime-howtos-add-steps-end
+
+
+.. _databases-realtime-howtos-delete:
+
+Delete real-time table
+--------------------------------------------------
+
+.. databases-realtime-howtos-delete-start
+
+Use the **Delete** option to remove a real-time table from Amperity. This should be done carefully. Verify that both upstream and downstream processes are not relying on the real-time table before you delete it.
+
+
+.. databases-realtime-howtos-delete-end
+
+**To delete a real-time table**
+
+.. databases-realtime-howtos-delete-steps-start
+
+#. Open the **Customer 360** page, and then select the **Real-time tables** tab.
+#. For a real-time table, open the |fa-kebab| menu and click **Delete**.
+#. Confirm that you want to delete the real-time table.
+
+.. databases-realtime-howtos-delete-steps-end
+
+
+.. _databases-realtime-howtos-edit:
+
+Edit real-time table name
+--------------------------------------------------
+
+.. databases-realtime-howtos-edit-start
+
+Use the **Edit** option to rename a real-time table.
+
+.. important:: You cannot change the schema or data format for a real-time table. To change the schema or data format, create a new real-time table, and then align that table to the data format and/or schema, and then associate that table with the correct streaming endpoint.
+
+.. databases-realtime-howtos-edit-end
+
+**To edit a real-time table**
+
+.. databases-realtime-howtos-edit-steps-start
+
+#. Open the **Customer 360** page, and then select the **Real-time tables** tab.
+#. For a real-time table, open the |fa-kebab| menu and click **Edit**.
+#. Rename the table, and then click **Save**.
+
+.. databases-realtime-howtos-edit-steps-end
+
+
+.. _databases-realtime-howtos-update-data-format:
+
+Update real-time data format
+--------------------------------------------------
+
+.. databases-realtime-howtos-update-data-format-start
+
+You cannot update the data format for a real-time table. Instead, create a new real-time table that defines the updated data format. You may associate this real-time table to an existing streaming endpoint or to a new streaming endpoint.
+
+.. databases-realtime-howtos-update-data-format-end
+
+
+.. _databases-realtime-howtos-update-schema:
+
+Update real-time table schema
+--------------------------------------------------
+
+.. databases-realtime-howtos-update-schema-start
+
+You cannot update the schema for a real-time table. Instead, create a new real-time table that defines the updated schema. You may associate this real-time table to an existing streaming endpoint or to a new streaming endpoint.
+
+.. databases-realtime-howtos-update-schema-end
+
+
+
 
 
 
