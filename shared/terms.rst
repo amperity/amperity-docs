@@ -4107,7 +4107,7 @@ The total amount of the gross sales minus deductions (i.e. returns, discounts, a
 
 .. term-neustar-start
 
-Neustar provides real-time information and analytics for the Internet, risk, digital performance, and defense, telecommunications, entertainment, and marketing industries, and also provides clearinghouse and directory services to the global communications and Internet industries.
+Neustar (a TransUnion company) provides real-time information and analytics for the Internet, risk, digital performance, and defense, telecommunications, entertainment, and marketing industries, and also provides clearinghouse and directory services to the global communications and Internet industries.
 
 .. term-neustar-end
 
@@ -5868,7 +5868,7 @@ A snapshot email is sent on a weekly basis from Amperity to provide a quick over
 
 .. term-snowflake-start
 
-Snowflake is an analytic data warehouse that is fast, easy to use, and flexible. Snowflake uses a SQL database engine that is designed for the cloud. Snowflake can provide tables as a data source to Amperity.
+Snowflake is an analytic data warehouse that is fast, easy to use, and flexible. Snowflake uses a SQL database engine that is designed for the cloud.
 
 .. term-snowflake-end
 
