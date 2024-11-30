@@ -5458,7 +5458,7 @@ SalesForce Sales Cloud brings customer information together into an integrated p
 
 .. term-sandbox-start
 
-A sandbox is a snapshot of the configuration state of your production tenant that is made available as a copy. Use a sandbox to safely make configuration changes, and then promote those changes back to your production tenant.
+A sandbox is a copy of your production tenant in which you can safely make configuration changes, validate the results, and then safely promote those changes to production.
 
 .. term-sandbox-end
 
