@@ -449,7 +449,7 @@ About credentials
 
 .. settings-credentials-start
 
-Use the **Credentials** page to view and manage credentials for data sources and destinations. Any credential that you add from the **Sources** or **Destinations** page is available from the **Credentials** page. You may also define credentials directly from this tab.
+Use the **Credentials** page to view and manage credentials for data sources and destinations. Any credential that you add from the **Sources** or **Destinations** page is :doc:`available from the Credentials page <credentials>`. You may also define credentials directly from this tab.
 
 .. settings-credentials-end
 
@@ -469,8 +469,8 @@ About integrations
 
 The following integrations may be configured from the **Integrations** tab on the **Settings** page:
 
-:ref:`BI Connect <settings-integration-bi-connect>`
-:ref:`Slack (send workflow alerts to Slack channels) <settings-integration-slack>`
+* :ref:`BI Connect <settings-integration-bi-connect>`
+* :ref:`Slack (send workflow alerts to Slack channels) <settings-integration-slack>`
 
 .. settings-integrations-end
 
@@ -571,9 +571,7 @@ About sandbox settings
    :start-after: .. term-sandbox-start
    :end-before: .. term-sandbox-end
 
-.. settings-sandboxes-start
-
-A sandbox is a copy of your production tenant in which you can safely make configuration changes, validate the results of those changes, and then from which you can safely promote those changes to production.
+.. settings-xsandboxes-start
 
 Amperity recommends :doc:`using a sandbox to make all configuration state changes <sandboxes>` to your brand's production tenant.
 
