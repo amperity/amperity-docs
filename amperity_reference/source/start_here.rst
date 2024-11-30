@@ -5,134 +5,106 @@
 
 .. meta::
     :description lang=en:
-        A landing page for the Amperity A-Z reference.
+        Amperity Customer Data Cloud helps your brand build accurate customer profiles.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A landing page for the Amperity A-Z reference.
+        Amperity Customer Data Cloud helps your brand build accurate customer profiles.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Start here
+        Amperity Customer Data Cloud
 
 ==================================================
-Start here
+About Customer Data Cloud
 ==================================================
 
 .. start-here-start
 
-Welcome to Amperity reference documentation! This collection of topics is about Amperity, ordered from A to Z.
+Amperity Customer Data Cloud helps your brand build accurate customer profiles that makes your brand's customer data usable to your entire business.
+
+Amperity Customer Data Cloud helps your brand
+
+* Quickly build accurate customer profiles
+* Build custom data models
+* Discover actionable data
+* Safely manage configuration changes
 
 .. start-here-end
 
+.. TODO: Get image from corpsite.
 
-.. _start-here-topics:
 
-Topics
+.. _start-here-accurate-customer-profiles:
+
+Accurate customer profiles
 ==================================================
 
-.. start-here-topics-start
+.. start-here-accurate-customer-profiles-start
 
-This set of topics covers the following components of Amperity and is organized alphabetically:
+Accurate customer profiles help your brand
 
-.. list-table::
-   :widths: 35 65
-   :header-rows: 1
+* Quickly `connect customers <https://docs.amperity.com/datagrid/add_customer_profiles.html>`__ across any number of data sources
+* Use deterministic and probabilistic matching
+* Find hidden connections across data sources that link customer profiles
 
-   * - Topic
-     - Description
+.. start-here-accurate-customer-profiles-end
 
-   * - **Amperity APIs**
-     - Amperity provides APIs for :ref:`interacting with your Amperity tenant <api-amperity>`, :ref:`streaming data to your tenant <api-streaming-ingest>`, and :ref:`building endpoints that are unique to your brand's customer data <api-profile>`.
 
-   * - **Bridge**
-     - Use a :doc:`bridge <bridge>` to share data between Amperity and a data lakehouse using industry-standard data formats.
+.. _start-here-custom-data-models:
 
-   * - **Campaigns**
-     - Use the :doc:`Campaigns page <campaigns>` to configure :ref:`one-time or recurring campaigns <campaigns-types>`. Use a combination of audiences, exclusion lists, control and treatment groups, and sub-audiences to build any type of campaign.
+Custom data models
+==================================================
 
-   * - **Courier groups**
-     - A :doc:`courier group <courier_groups>` is a list of one (or more) couriers that are run as a group. Use courier groups to define ad hoc and automatic schedules that bring data to Amperity.
+.. start-here-custom-data-models-start
 
-   * - **Couriers**
-     - A :doc:`courier <couriers>` brings data from external system to Amperity. A courier relies on a :doc:`feed <feeds>` to know which fileset to bring to Amperity for processing.
+Custom data models help your brand
 
-   * - **Credentials**
-     - The **Credentials** page provides a consolidated view for all credentials used to provide access to sources and destinations in your tenant.
+* Reduce the amount of code that is required to prepare data and resolve customer identity
+* Start with out-of-the-box tables and attributes that can be customized
+* Build an accurate customer 360 that contains high-value attributes that describe your customers
+* Use accurate customer profiles for marketing, analytics, customer service, and data management workflows
 
-   * - **Data exports**
-     - A database may be configured to :doc:`export one (or more) tables or an entire database <data_exports>` from Amperity.
+.. start-here-custom-data-models-end
 
-   * - **Data tables**
-     - A customer 360 database is built using :doc:`standard outputs of the Stitch process <data_tables>`.
 
-   * - **Data templates**
-     - A :doc:`data template <data_templates>` defines how columns in Amperity data structures are sent to downstream workflows.
+.. _start-here-actionable-data:
 
-   * - **Databases**
-     - The :doc:`Customer 360 page <databases>` enables the use of :doc:`Spark SQL <sql_spark>` to build any database or table based on your raw data combined with the standard outputs of the Stitch process, which provide the stable linking key known as the Amperity ID.
+Actionable data
+==================================================
 
-   * - **Domain tables**
-     - :doc:`Domain tables <domain_tables>` that contain :ref:`customer records <domain-tables-record-type-customer>` are made available to the Stitch process to identify unique individuals and assign them Amperity IDs.
- 
-       Domain tables that contain :ref:`interaction records <domain-tables-record-type-interaction>` are used to create attributes that are associated with the unique individuals who have been assigned Amperity IDs.
+.. start-here-actionable-data-start
 
-   * - **Feeds**
-     - A feed defines how data should be loaded to Amperity. Use the :ref:`Feed Editor <feed-editor>` to :ref:`standardize field types <feed-field-types>` and :ref:`apply semantic tags <feeds-semantic-tags>` to all of the incoming fields that contain customer and/or interaction records.
+Actionable data helps your brand
 
-   * - **File formats**
-     - Amperity supports :doc:`Apache Avro <format_avro>`, :doc:`Apache Parquet <format_parquet>`, :doc:`CBOR <format_cbor>`, :doc:`CSV <format_csv>`, :doc:`JSON <format_json>`, :doc:`NDJSON <format_ndjson>`, :doc:`PSV <format_psv>`, :doc:`streaming JSON <format_json_streaming>`, :doc:`TSV <format_tsv>`, and :doc:`XML <format_xml>` file formats.
+* Make better decisions about your customer data by enabling users to shape segments, write SQL, and explore data
+* Use people-based measurement to discover what creates customer engagement with your brand and what drives revenue across channels
+* Improve return on ad spend by using events data to measure conversion rates and to optimize each ad network's performance
+* Build high-quality lookalike audiences based on your brand's best customer profiles
+* Personalize website or in-app offers in real-time based on customer likes, preferences, and historical purchases
+* Build data assets and custom audiences
+* Use pre-built pipelines to activate your brand's data, automatically formatted to fit each downstream use case
+* Activate customer data directly from Amperity to ensure high-quality customer data flows to the teams and tools that need it
 
-   * - **Ingest queries**
-     - An :doc:`ingest query <ingest_queries>` is a SQL statement that may be applied to data prior to loading it to Amperity.
+.. start-here-actionable-data-end
 
-   * - **Orchestration groups**
-     - An :doc:`orchestration group <orchestration_groups>` defines the schedule that is used to send data from Amperity.
 
-   * - **Orchestrations**
-     - An :doc:`orchestration <orchestrations>` defines the relationship between query results and a destination.
+.. _start-here-configuration-workflows:
 
-   * - **Policies**
-     - A :doc:`policy <policies>` represents a set of actions that are available to a user when that policy is assigned to them. All actions within Amperity are controlled by a policy.
+Configuration workflows
+==================================================
 
-   * - **Predictive models**
-     - Amperity provides predictive models for :doc:`product affinity <model_product_affinity>`, :doc:`churn propensity <model_churn_propensity>`, and :doc:`predicted customer lifetime value <model_predicted_clv>`.
+.. start-here-configuration-changes-start
 
-   * - **Queries**
-     - Build :doc:`queries <queries>` against your databases using :doc:`Presto SQL <sql_presto>`, and then :doc:`use orchestrations <orchestrations>` to send those results to any downstream system or workflow.
+Built-in configuration workflows help your brand
 
-   * - **Recent activity**
-     - Use :doc:`recent activity <notifications>` to learn more about the state of workflows that are currently running in your tenant.
+* Connect :doc:`Amperity to your brand's data lakehouse <bridge>` in minutes using sharing keys instead of integrations
+* Ingest and normalize data regardless of source format or schema
+* Reduce risk by using :doc:`sandbox environments <sandboxes>` that track all changes, provide data validations, and automated promotion
+* Automate and monitor workflows to ensure data is always available
+* Get visibility into every data transformation
+* Access the state of workflows, ingest activity, user activity, segments, and campaigns programmatically using the `Amperity API <https://docs.amperity.com/api/start_here.html>`__.
+* Use rule-based controls to determine which users have access to customer data
+* Use built-in validation workflows and QA tooling to maintain accurate customer profiles
 
-   * - **Sandboxes**
-     - Use :doc:`sandboxes <sandboxes>` to safely make configuration changes to your production tenant.
-
-   * - **Segments**
-     - Use :doc:`segments <segments>` and segment insights to build audiences, and then :doc:`assign those audiences to campaigns <campaigns>`.
-
-   * - **Semantic tags**
-     - A :doc:`semantic tag <semantics>` standardizes profile (PII), transaction, and other important customer details across all columns in all data tables.
-
-   * - **Settings**
-     - The :doc:`Settings page <settings>` lets you manage users, configure SSO, define resource groups, and monitor user activity. 
-
-   * - **Single sign-on (SSO)**
-     - Amperity supports the use of :doc:`single sign-on (SSO) <sso>` to manage the users who can access your tenant. Learn more about :ref:`how it works with Amperity <sso-howitworks>`, and then request to :ref:`enable SSO for your tenant <sso-use-cases>`.
-
-   * - **SQL -- Presto SQL**
-     - Presto is a distributed SQL query engine that is designed to efficiently query vast amounts of data using distributed queries. Presto is used by the Amperity SQL segment editors to define segments, which are SQL queries that return data from stitched data tables.
-
-       Use the :doc:`Amperity Presto SQL reference <sql_presto>` to learn more about how you can use Presto SQL to build queries and segments that return data from your customer 360 database.
-
-   * - **SQL -- Spark SQL**
-     - Spark SQL is a high performance SQL query engine that is used by Amperity to ingest data, create domain tables, and extend the outcome of the Stitch process in your customer 360 database.
-
-       Use the :doc:`Amperity Spark SQL reference <sql_spark>` to learn more about how you can use Spark SQL to build ingest queries, custom domain tables, and database tables. You may also refer to the official |ext_sparksql_version_current| documentation for more information about functions that are not covered by the Amperity Spark SQL reference.
-
-   * - **Stitch**
-     - :doc:`Stitch <stitch>` uses patented algorithms to evaluate massive volumes of data to discover the hidden connections in your customer records that identify unique individuals. Stitch outputs a unified collection of data that assigns a unique identifier to each unique individual that is discovered within your customer records.
-
-   * - **Workflows**
-     - The :doc:`Workflow page <workflows>` provides a view of all of your tenant workflows.
-
-.. start-here-topics-end
+.. start-here-configuration-changes-end
