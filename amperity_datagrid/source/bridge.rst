@@ -16,7 +16,7 @@
 
 
 ==================================================
-Amperity Bridge
+Configure Amperity Bridge
 ==================================================
 
 .. include:: ../../shared/terms.rst
