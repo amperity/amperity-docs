@@ -16,7 +16,7 @@
         About data tables
 
 ==================================================
-About data tables
+About unified data tables
 ==================================================
 
 .. include:: ../../shared/terms.rst
