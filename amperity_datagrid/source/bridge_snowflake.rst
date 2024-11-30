@@ -6,7 +6,7 @@
 
 
 ==================================================
-Configure Snowflake bridge
+Configure bridge for Snowflake
 ==================================================
 
 .. bridge-snowflake-about-start

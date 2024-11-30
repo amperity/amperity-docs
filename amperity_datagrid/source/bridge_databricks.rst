@@ -6,7 +6,7 @@
 
 
 ==================================================
-Configure Databricks bridge
+Configure bridge for Databricks
 ==================================================
 
 .. include:: ../../shared/terms.rst
