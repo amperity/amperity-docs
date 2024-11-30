@@ -16,7 +16,7 @@
         Start here
 
 ==================================================
-Start here: Marketers
+About user guides
 ==================================================
 
 .. start-here-intro-start

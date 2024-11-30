@@ -152,27 +152,21 @@ html_sidebars = {
 }
 
 # Additional templates that should be rendered to pages, maps page names to
-# template names.
+# template names. Alphabetized by template filename.
 html_additional_pages = {
     'abbreviations': 'abbreviations.html',
-    'amp360': 'amp360.html',
-    'queries': 'amp360_queries.html',
-    'queries_usecases_visual': 'amp360_usecases_visual.html',
-    'ampid': 'ampid.html',
-    'ampiq': 'ampiq.html',
-    'ampiq_usecases': 'ampiq_usecases.html',
     'attributes': 'attributes.html',
-    'datagrid': 'datagrid_cardwall.html',
-    'destinations': 'destinations.html',
-    'destinations_analytics': 'channels_analytics.html',
-    'destinations_campaigns': 'channels_campaigns.html',
-    'glossary': 'glossary.html',
     'index': 'cardwall.html',
-    'purchase_behaviors': 'purchase_behaviors.html',
+    'analytics': 'channels_analytics.html',
+    'marketing_apps': 'channels_marketing_apps.html',
+    'paid_media': 'channels_paid_media.html',
+    'offline_events': 'channels_offline_events.html',
+    'connected_systems': 'connected_systems.html',
+    'destinations': 'destinations.html',
+    'glossary': 'glossary.html',
     'realtime': 'realtime.html',
     'sources': 'sources.html',
     'stitch': 'stitch.html',
-    'offline_events': 'offline_events.html',
 }
 
 #    '404': '404.html',
