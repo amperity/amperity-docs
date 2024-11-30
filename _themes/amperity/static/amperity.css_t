@@ -1703,7 +1703,7 @@ div.body a.card:hover {
   padding-left: 0.5rem;
   margin: 10px;
   border-radius: 4px;
-  background-color: #e9f6ea;
+  background-color: #ade5a3;
   min-width: 100%; }
 
 .container-cardgroup-warm-grey {
@@ -1875,7 +1875,7 @@ div.body a.card:hover {
   .card-group-green-title .card-group-green-box {
     display: flex;
     flex-direction: column;
-    background-color: #e9f6ea;
+    background-color: #ade5a3;
     width: 100%;
     height: 100%;
     border-radius: 4px;
