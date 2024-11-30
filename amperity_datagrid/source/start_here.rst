@@ -16,7 +16,7 @@
         Start here
 
 ==================================================
-Start here
+About the operators guide
 ==================================================
 
 .. start-here-start
