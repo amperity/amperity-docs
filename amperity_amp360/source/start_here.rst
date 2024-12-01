@@ -16,7 +16,7 @@
         Start here
 
 ==================================================
-About User Guides
+About tools for analysts
 ==================================================
 
 .. start-here-start

@@ -16,7 +16,7 @@
         Start here
 
 ==================================================
-About User Guides
+About tools for marketers
 ==================================================
 
 .. start-here-intro-start
@@ -64,7 +64,7 @@ Requirements
 
 .. start-here-requirements-start
 
-Amperity has specific |add_ampiq_data_requirements| for data source quality, columns and tables, fields, and additional data sources.
+Amperity has specific |add_campaigns_data_requirements| for data source quality, columns and tables, fields, and additional data sources.
 
 .. start-here-requirements-end
 
