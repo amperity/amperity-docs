@@ -44,8 +44,8 @@ Accurate customer profiles
 
 Accurate customer profiles help your brand
 
-* Quickly `connect customers <https://docs.amperity.com/datagrid/add_customer_profiles.html>`__ across any number of data sources
-* Use deterministic and probabilistic matching
+* Quickly connect customers across any number of data sources
+* Use deterministic matching or probabilistic matching
 * Find hidden connections across data sources that link customer profiles
 
 .. start-here-accurate-customer-profiles-end
@@ -98,12 +98,12 @@ Configuration workflows
 
 Built-in configuration workflows help your brand
 
-* Connect :doc:`Amperity to your brand's data lakehouse <bridge>` in minutes using sharing keys instead of integrations
+* Connect Amperity to your brand's data lakehouse in minutes using sharing keys instead of integrations
 * Ingest and normalize data regardless of source format or schema
-* Reduce risk by using :doc:`sandbox environments <sandboxes>` that track all changes, provide data validations, and automated promotion
+* Reduce risk by using sandbox environments that track all changes, provide data validations, and automated promotion
 * Automate and monitor workflows to ensure data is always available
 * Get visibility into every data transformation
-* Access the state of workflows, ingest activity, user activity, segments, and campaigns programmatically using the `Amperity API <https://docs.amperity.com/api/start_here.html>`__.
+* Access the state of workflows, ingest activity, user activity, segments, and campaigns programmatically using the Amperity API.
 * Use rule-based controls to determine which users have access to customer data
 * Use built-in validation workflows and QA tooling to maintain accurate customer profiles
 
