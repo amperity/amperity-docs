@@ -1909,11 +1909,6 @@
    <a href="https://docs.sendgrid.com/ui/managing-contacts/create-and-manage-contacts" target="_blank">SendGrid</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_sendoso| raw:: html
-
-   <a href="https://sendoso.com/" target="_blank">Sendoso</a> <i class="fas fa-external-link-square-alt"></i>
-
-
 .. |ext_sftp| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol" target="_blank">Secure File Transfer Protocol (SFTP)</a> <i class="fas fa-external-link-square-alt"></i>
