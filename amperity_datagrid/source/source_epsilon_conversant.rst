@@ -1,5 +1,5 @@
 .. 
-.. https://docs.amperity.com/configure/
+.. https://docs.amperity.com/datagrid/
 .. 
 
 .. |source-name| replace:: Epsilon Conversant

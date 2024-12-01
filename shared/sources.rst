@@ -64,7 +64,7 @@ ADD THIS TO END OF GET DETAILS FOR ALL SOURCES AND CLEAN UP GET DETAILS
 
 **TEMPLATE SECTIONS FOR DATA SOURCES**
 
-This topic contains the templated sections for all of the "Pull from xxxxx" topics in /configure/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
+This topic contains the templated sections for all of the "Pull from xxxxx" topics in /datagrid/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
 
 In certain cases, a source topic will require *some* customization within the templated sections. See the Salesforce Sales Cloud topic, **Run courier manually** section for how to do this.
 
