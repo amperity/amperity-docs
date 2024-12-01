@@ -16,7 +16,7 @@
         Start here
 
 ==================================================
-About user guides
+About User Guides
 ==================================================
 
 .. start-here-intro-start
