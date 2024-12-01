@@ -190,7 +190,7 @@ Attributes
 
 .. campaigns-attributes-start
 
-For many |ampiq_destinations|, you may configure the list of attributes (i.e. first name, last name, state, etc.) that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the drop-down menu to select the destination if there is more than one.
+For many |campaign_destinations|, you may configure the list of attributes (i.e. first name, last name, state, etc.) that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the drop-down menu to select the destination if there is more than one.
 
 .. campaigns-attributes-end
 
