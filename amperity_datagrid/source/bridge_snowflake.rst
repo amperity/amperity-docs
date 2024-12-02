@@ -19,7 +19,7 @@ Snowflake Bridge is a first-class integration that leverages secure data sharing
 
 .. admonition:: What is Secure Data Sharing?
 
-   `Secure Data Sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro>`__ |ext_link| enables data sharing betwween Snowflake accounts without copying or transferring data and instead relies on the services layer and metadata store within Snowflake. Your brand controls what data will be made available to Amperity directly from within your brand's Snowflake account.
+   `Secure Data Sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro>`__ |ext_link| enables data sharing between Snowflake accounts without copying or transferring data and instead relies on the services layer and metadata store within Snowflake. Your brand controls what data will be made available to Amperity directly from within your brand's Snowflake account.
 
 .. bridge-snowflake-what-is-data-sharing-end
 
