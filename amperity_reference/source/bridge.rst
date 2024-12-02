@@ -69,6 +69,7 @@ Sync data with ...
 Configure Amperity Bridge to sync data with the following cloud databases:
 
 * :ref:`bridge-sync-databricks`
+* :ref:`bridge-sync-snowflake`
 
 .. bridge-sync-end
 
@@ -77,8 +78,6 @@ Configure Amperity Bridge to sync data with the following cloud databases:
 
 Databricks
 --------------------------------------------------
-
-.. TODO: Update /amperity_amp360/start_here/ last section with Snowflake when it's ready.
 
 .. bridge-sync-databricks-start
 
@@ -92,6 +91,21 @@ Configure inbound and outbound shares in Amperity to enable `bi-directional sync
       :start-after: .. term-delta-sharing-start
       :end-before: .. term-delta-sharing-end
 
+
+.. _bridge-sync-snowflake:
+
+Snowflake
+--------------------------------------------------
+
+.. bridge-sync-snowflake-start
+
+Snowflake Bridge is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
+
+.. bridge-sync-snowflake-end
+
+.. include:: ../../amperity_datagrid/source/bridge_snowflake.rst
+   :start-after: .. bridge-snowflake-what-is-data-sharing-start
+   :end-before: .. bridge-snowflake-what-is-data-sharing-end
 
 
 .. _bridge-howtos:
