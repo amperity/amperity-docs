@@ -26,11 +26,6 @@
    <a href="https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/" target="_blank">SFTP tutorial</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_airship_upload_csv| raw:: html
-
-   <a href="https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/audience-lists/uploaded/" target="_blank">Airship</a> <i class="fas fa-external-link-square-alt"></i>
-
-
 .. |ext_alyce| raw:: html
 
    <a href="https://www.alyce.com/" target="_blank">Alyce</a> <i class="fas fa-external-link-square-alt"></i>
@@ -116,29 +111,9 @@
    <a href="https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units-" target="_blank">sign-up unit</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_attentive_mobile_api_custom_attributes| raw:: html
-
-   <a href="https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/" target="_blank">Custom Attributes API</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_attentive_mobile_api_donotsend| raw:: html
-
-   <a href="https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/" target="_blank">cannot contain any sensitive or special categories of information</a> <i class="fas fa-external-link-square-alt"></i>
-
-
 .. |ext_attentive_mobile_api_rate_limits| raw:: html
 
    <a href="https://docs.attentive.com/pages/api-rate-limits/" target="_blank">Attentive API rate limits</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_attentive_mobile_api_subscriptions| raw:: html
-
-   <a href="https://docs.attentive.com/openapi/reference/tag/Subscribers/" target="_blank">Subscriptions</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_attentive_mobile_upload_csv| raw:: html
-
-   <a href="https://help.attentivemobile.com/hc/en-us/articles/360051463212-Create-a-manual-segment" target="_blank">Attentive</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_aws_allowlist| raw:: html
@@ -314,11 +289,6 @@
 .. |ext_bluecore_data_types| raw:: html
 
    <a href="https://help.bluecore.com/en/articles/3552438-supported-data-types-for-importing" target="_blank">data type requirements for the Bluecore platform</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_bluecore_upload_csv| raw:: html
-
-   <a href="https://help.bluecore.com/en/articles/3552694-import-data" target="_blank">Bluecore</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_braze_api_endpoints| raw:: html
@@ -1209,11 +1179,6 @@
    <a href="https://tools.ietf.org/id/draft-knodel-terminology-00.html" target="_blank">Terminology, Power and Oppressive Language</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_iterable_upload_csv| raw:: html
-
-   <a href="https://support.iterable.com/hc/en-us/articles/205694345-CSV-List-Import-Best-Practices-" target="_blank">Iterable</a> <i class="fas fa-external-link-square-alt"></i>
-
-
 .. |ext_janusgraph| raw:: html
 
    <a href="https://janusgraph.org/" target="_blank">JanusGraph</a> <i class="fas fa-external-link-square-alt"></i>
@@ -1869,15 +1834,7 @@
    <a href="https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html" target="_blank">SOAP base URI for the authentication subdomain</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_salesforce_sfmc_ssjs| raw:: html
-
-   <a href="https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ssjs_serverSideJavaScript.html" target="_blank">Server-Side JavaScript (SSJS)</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_salesforce_sfmc_ampscript| raw:: html
-
-   <a href="https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ampscript.html" target="_blank">AMPscript</a> <i class="fas fa-external-link-square-alt"></i>
-
+.. TODO: Keep Salesforce Pardot A because it's in a variable in a source topic.
 
 .. |ext_salesforce_pardot| raw:: html
 
@@ -1902,11 +1859,6 @@
 .. |ext_sas_cas_jdbc| raw:: html
 
    <a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/casref/n1ldk5vubre9oen10bdqoqkfc1y7.htm" target="_blank">SAS Cloud Analytics Services</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_sendgrid_upload_csv| raw:: html
-
-   <a href="https://docs.sendgrid.com/ui/managing-contacts/create-and-manage-contacts" target="_blank">SendGrid</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_sftp| raw:: html

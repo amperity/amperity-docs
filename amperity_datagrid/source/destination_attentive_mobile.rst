@@ -81,7 +81,7 @@ An |destination-name| destination works like this:
 
    .. admonition:: Why are there two ways to send data to Attentive?
 
-      Amperity uses the |ext_attentive_mobile_api_subscriptions| and |ext_attentive_mobile_api_custom_attributes| endpoints in the |destination-api| to manage subscribers. Updates appear on the **Subscribers** page within your audience in |destination-name|.
+      Amperity uses the `Subscribers <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints in the |destination-api| to manage subscribers. Updates appear on the **Subscribers** page within your audience in |destination-name|.
 
       Amperity uses the |ext_attentive_mobile| process to manage segments. This process does not use an endpoint and is not subject to |ext_attentive_mobile_api_rate_limits|. Updates appear on the **Segments** page within your audience in |destination-name|.
 
@@ -311,9 +311,9 @@ Custom attributes (API)
 
 |destination-name| is your source of truth for your customers' subscription status, while Amperity is your source of truth for profile attributes that describe those customers.
 
-Amperity uses the |ext_attentive_mobile_api_custom_attributes| endpoint to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
+Amperity uses the `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoint to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
-.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes |ext_attentive_mobile_api_donotsend|.
+.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
 
 .. destination-attentive-attributes-end
 
