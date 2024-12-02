@@ -113,6 +113,10 @@ Snowflake Bridge is a first-class integration that leverages secure data sharing
 How-tos
 ==================================================
 
+.. bridge-howtos-start
+
+This section describes individual tasks that are related to managing bridges:
+
 * :ref:`bridge-howto-add-inbound`
 * :ref:`bridge-howto-add-outbound`
 * :ref:`bridge-howto-add-scheduled-workflow`
@@ -122,15 +126,22 @@ How-tos
 * :ref:`bridge-howto-sync`
 * :ref:`bridge-howto-upload-credentials`
 
+.. bridge-howtos-end
+
 
 .. _bridge-howto-add-inbound:
 
 Add inbound bridge
 --------------------------------------------------
 
+.. bridge-howto-add-inbound-start
+
 The steps for adding an inbound bridge depend on the location from which data will be synced to Amperity:
 
 * `Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#from-databricks>`__
+* `Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html#from-snowflake>`__
+
+.. bridge-howto-add-inbound-end
 
 
 .. _bridge-howto-add-outbound:
@@ -138,9 +149,13 @@ The steps for adding an inbound bridge depend on the location from which data wi
 Add outbound bridge
 --------------------------------------------------
 
+.. bridge-howto-add-outbound-start
+
 The steps for adding an outbound bridge depend on the location to which data will be synced from Amperity:
 
 * `Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#to-databricks>`__
+
+.. bridge-howto-add-outbound-end
 
 
 .. _bridge-howto-add-scheduled-workflow:
