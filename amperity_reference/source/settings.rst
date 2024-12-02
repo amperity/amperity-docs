@@ -24,6 +24,7 @@ About settings
 The **Settings** page lets you manage users, configure SSO, define resource groups, manage credentials for sources and destinations, and monitor user activity.
 
 * :ref:`Activity logs <settings-user-activity-logs>`
+* :ref:`AmpAI <settings-user-ampai>`
 * :ref:`Credentials <settings-credentials>`
 * :ref:`Integrations <settings-integrations>`
 * :ref:`Sandboxes <settings-sandboxes>`
@@ -440,6 +441,28 @@ The following table lists the most common event types, grouped by the component 
           A user opened a workflow resolution, and then skipped the task that caused the workflow failure.
 
 .. settings-user-activity-logs-event-types-end
+
+
+.. _settings-user-ampai:
+
+About AmpAI
+==================================================
+
+.. settings-user-ampai-start
+
+AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making. AmpAI features, including the AI Assistant, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** policy.
+
+.. settings-user-ampai-end
+
+**To disable AmpAI features**
+
+.. settings-user-ampai-steps-start
+
+#. From the **Settings** page, open the **AmpAI** tab.
+#. Under **Advanced settings**, select the **Disable AmpAI features** option to disable AmpAI features, including the AI Assistant.
+#. Click **Confirm**.
+
+.. settings-user-ampai-steps-end
 
 
 .. _settings-credentials:

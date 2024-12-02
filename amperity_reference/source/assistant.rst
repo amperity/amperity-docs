@@ -75,15 +75,15 @@ Use the AI Assistant to:
 Enable (or disable) the AI Assistant
 ==================================================
 
-.. include:: ../../amperity_reference/source/queries.rst
-   :start-after: .. queries-disable-ai-assistant-start
-   :end-before: .. queries-disable-ai-assistant-end
+.. include:: ../../amperity_reference/source/assistant.rst
+   :start-after: .. assistant-overview-start
+   :end-before: .. assistant-overview-end
 
 **To disable the AI Assistant**
 
-.. include:: ../../amperity_reference/source/queries.rst
-   :start-after: .. queries-disable-ai-assistant-steps-start
-   :end-before: .. queries-disable-ai-assistant-steps-end
+.. include:: ../../amperity_reference/source/settings.rst
+   :start-after: .. settings-user-ampai-steps-start
+   :end-before: .. settings-user-ampai-steps-end
 
 
 .. _assistant-howitworks:

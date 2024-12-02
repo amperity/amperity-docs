@@ -749,21 +749,13 @@ Disable AI Assistant
    :start-after: .. assistant-overview-start
    :end-before: .. assistant-overview-end
 
-.. queries-disable-ai-assistant-start
-
-The AI Assistant may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** policy.
-
-.. queries-disable-ai-assistant-end
+.. settings-user-ampai-assistant-end
 
 **To disable the AI Assistant**
 
-.. queries-disable-ai-assistant-steps-start
-
-#. From the **Queries** page, click **Query settings**.
-#. Under **AI Assistant settings**, select the **Disable AI Assistant** option to disable the AI Assistant.
-#. Click **Save**.
-
-.. queries-disable-ai-assistant-steps-end
+.. include:: ../../amperity_reference/source/settings.rst
+   :start-after: .. settings-user-ampai-steps-start
+   :end-before: .. settings-user-ampai-steps-end
 
 
 .. _queries-discard:
