@@ -102,11 +102,13 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
           :alt: Requirement 3.
           :align: left
           :class: no-scaled-link
-     - Before you can configure Amperity Bridge for data sharing with Snowflake you must :ref:`create a share in Snowflake <bridge-snowflake-sync-amperity-configure-snowflake-create-share>`, add a secure share identifier to that share, identify the correct account locator, and then add the :ref:`Amperity account locator ID <bridge-snowflake-sync-amperity-configure-snowflake-account-locator>` to the share.
+     - Before you can configure Amperity Bridge for data sharing with Snowflake you must `create a share in Snowflake <bridge-snowflake-sync-amperity-configure-snowflake-create-share>`, add a secure share identifier to that share, identify the region for your Snowflake account, and add the :ref:`locator ID <bridge-snowflake-sync-amperity-configure-snowflake-account-locator>` for the Amperity account in the same region as your Snowflake account and stack as your Amperity tenant.
+
+       Use the `CURRENT_REGION <https://docs.snowflake.com/en/sql-reference/functions/current_region>`__ |ext_link| function to return the name of the region for the account where the current user is logged in.
 
        Use the `CURRENT_ACCOUNT <https://docs.snowflake.com/en/sql-reference/functions/current_account>`__ |ext_link| argument in |destination-name| to return the locator ID for your Snowflake account.
 
-       .. important:: Secure data sharing should :ref:`only share secure views <bridge-snowflake-sync-amperity-configure-snowflake-secure-views>` with Amperity.
+       .. important:: When using secure data sharing to share views, Snowflake strongly recommends only :ref:`sharing secure views <bridge-snowflake-sync-amperity-configure-snowflake-secure-views>`. It is not recommended to share `non-secured views <https://docs.snowflake.com/en/user-guide/data-sharing-views#label-sharing-non-secure-view-limitations>`__ |ext_link|.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -136,7 +138,7 @@ Configure Snowflake
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-start
 
-Before you can configure Amperity Bridge for data sharing with Snowflake you must create a share in Snowflake, add a secure share identifier to that share, and then identify the correct account locator.
+Before you can configure Amperity Bridge for data sharing with Snowflake you must create a share in Snowflake, add a secure share identifier to that share, and then identify and add the correct account locator.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-end
 
@@ -168,7 +170,7 @@ To enable data sharing between Snowflake and Amperity `a share must be created i
 
 #. Copy the secure share identifier from the Snowflake user interface, and then save the share.
 
-#. Click **Add consumer**, and then configure the share to use the :ref:`Amperity account locator ID <bridge-snowflake-sync-amperity-configure-snowflake-account-locator>` as the consumer.
+#. Click **Add consumer**, and then configure the share to use the :ref:`Amperity account locator ID <bridge-snowflake-sync-amperity-configure-snowflake-account-locator>` in the same region as the consumer.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-create-share-steps-end
 
@@ -180,9 +182,7 @@ Configure secure views
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-secure-views-start
 
-Secure data sharing should `only share secure views <https://docs.snowflake.com/en/user-guide/views-secure#creating-secure-views>`__ |ext_link| with Amperity. Amperity recommends that all views that are shared with Amperity be configured as secure views in Snowflake.
-
-Alternately, your brand may choose to configure Snowflake to `allow sharing of non-secure views <https://docs.snowflake.com/en/user-guide/data-sharing-views>`__ |ext_link| with Amperity.
+When using secure data sharing to share views, Snowflake strongly recommends only `sharing secure views <https://docs.snowflake.com/en/user-guide/views-secure#creating-secure-views>`__ |ext_link|. It is not recommended to share `non-secured views <https://docs.snowflake.com/en/user-guide/data-sharing-views#label-sharing-non-secure-view-limitations>`__ with Amperity.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-secure-views-end
 
