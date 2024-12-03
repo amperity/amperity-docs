@@ -274,7 +274,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**. 
+     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
 
        Choose **Databricks**.
 
@@ -284,7 +284,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :align: left
           :class: no-scaled-link
 
-       This opens the **Add bridge** dialog box. 
+       This opens the **Add bridge** dialog box.
 
        .. image:: ../../images/bridge-inbound-name-description.png
           :width: 500 px
@@ -325,7 +325,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync. 
+       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync.
 
        When finished, click **Next**. This will open the **Domain table mapping** dialog box.
 
