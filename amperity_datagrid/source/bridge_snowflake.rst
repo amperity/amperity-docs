@@ -297,7 +297,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :class: no-scaled-link
      - Add the **Secure Share Identifier**.
 
-       When finished, click **Continue**. This will open the **Select tables to share** dialog box.
+       When finished, click **Continue**. This will open the **Select tables** dialog box.
 
 
    * - .. image:: ../../images/steps-05.png
@@ -305,7 +305,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Use the **Select tables to share** dialog box to select any combination of schemas and tables to be synced to Amperity.
+     - Use the **Select tables** dialog box to select any combination of schemas and tables to be synced to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
