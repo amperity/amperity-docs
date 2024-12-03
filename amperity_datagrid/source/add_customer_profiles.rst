@@ -16,7 +16,7 @@
         Customer profiles
 
 ==================================================
-Customer profiles
+Build customer profiles
 ==================================================
 
 .. include:: ../../shared/terms.rst

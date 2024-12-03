@@ -6,7 +6,7 @@
 
 
 ==================================================
-Configure Databricks bridge
+Configure bridge for Databricks
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -274,7 +274,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**. 
+     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
 
        Choose **Databricks**.
 
@@ -284,7 +284,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :align: left
           :class: no-scaled-link
 
-       This opens the **Add bridge** dialog box. 
+       This opens the **Add bridge** dialog box.
 
        .. image:: ../../images/bridge-inbound-name-description.png
           :width: 500 px
@@ -309,7 +309,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
 
        .. important:: You can download the credential file only once. Recipients should treat the downloaded credential as a secret and must not share it outside of their organization. If you have concerns that a credential may have been handled insecurely, you can `rotate credentials <https://docs.databricks.com/en/data-sharing/create-recipient.html#security-considerations-for-tokens>`__ |ext_link| at any time.
 
-       When finished, click **Continue**. This will open the **Select tables to share** dialog box.
+       When finished, click **Continue**. This will open the **Select tables** dialog box.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -317,7 +317,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Use the **Select tables to share** dialog box to select any combination of schemas and tables to be synced to Amperity.
+     - Use the **Select tables** dialog box to select any combination of schemas and tables to be synced to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
@@ -325,7 +325,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync. 
+       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync.
 
        When finished, click **Next**. This will open the **Domain table mapping** dialog box.
 
@@ -475,7 +475,7 @@ Configure an inbound bridge to sync data from Amperity to Databricks.
 
        Optional. You may restrict access to specific IPs or to a valid CIDR (for a range of IPs). Place separate entries on a new line. Expand **Advanced Settings** to restrict access.
 
-       When finished, click **Create**. This will open the **Select tables to share** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-databricks-sync-with-databricks-select-tables>` to share with Databricks.
+       When finished, click **Create**. This will open the **Select tables** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-databricks-sync-with-databricks-select-tables>` to share with Databricks.
 
 .. bridge-databricks-sync-with-databricks-add-bridge-steps-end
 
@@ -508,7 +508,7 @@ You can configure Amperity to share any combination of schemas and tables that a
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - After you have :ref:`configured the settings for the bridge <bridge-databricks-sync-with-databricks-add-bridge>`, click **Next** to open the **Select tables to share** dialog box.
+     - After you have :ref:`configured the settings for the bridge <bridge-databricks-sync-with-databricks-add-bridge>`, click **Next** to open the **Select tables** dialog box.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
@@ -528,7 +528,7 @@ You can configure Amperity to share any combination of schemas and tables that a
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - When a bridge is already configured, you may edit the list of schemas and tables that are shared. From the **Destinations** page, under **Outbound shares**, open the **Actions** for a bridge, and then click **Edit**. This will open the **Select tables to share** dialog box.
+     - When a bridge is already configured, you may edit the list of schemas and tables that are shared. From the **Destinations** page, under **Outbound shares**, open the **Actions** for a bridge, and then click **Edit**. This will open the **Select tables** dialog box.
 
 .. bridge-databricks-sync-with-databricks-select-tables-steps-end
 

@@ -76,7 +76,7 @@ The following list combines industry-standard abbreviations and initialisms with
    * - **CCPA**
      - California Consumer Privacy Act
    * - **CDC**
-     - Change Data Capture
+     - Customer Data Cloud
    * - **CDP**
      - Customer Data Platform
    * - **CE**

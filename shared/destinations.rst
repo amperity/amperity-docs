@@ -57,7 +57,7 @@ For example:
 
 **TEMPLATE SECTIONS FOR DESTINATIONS**
 
-This topic contains the templated sections for all of the "Send to xxxxx" topics in /configure/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
+This topic contains the templated sections for all of the "Send to xxxxx" topics in /datagrid/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
 In certain cases, a destination topic will require *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
 

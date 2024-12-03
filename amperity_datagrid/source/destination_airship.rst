@@ -35,8 +35,8 @@ Send data to Airship
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-urban-airship-start
-   :end-before: .. term-urban-airship-end
+   :start-after: .. term-airship-start
+   :end-before: .. term-airship-end
 
 .. destination-airship-start
 

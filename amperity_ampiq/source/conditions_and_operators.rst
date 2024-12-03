@@ -1,5 +1,5 @@
 .. 
-.. https://docs.amperity.com/reference/
+.. https://docs.amperity.com/ampiq/
 .. 
 
 

@@ -89,7 +89,7 @@ Map to Recipient List
 
 .. sendto-vibes-build-query-map-to-recipient-list-start
 
-A Vibes |ext_vibes_import_recipient_list| is a collection of references used as a target filter for messages. A recipient list must include one of the following fields that acts as the unique ID:
+A `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| is a collection of references used as a target filter for messages. A recipient list must include one of the following fields that acts as the unique ID:
 
 #. **person_id**; must be lowercase
 #. **person_key**; must be lowercase
@@ -150,7 +150,7 @@ Add orchestration
 
 .. sendto-vibes-add-orchestration-important-start
 
-.. important:: Refer to the |destination-name| documentation if you plan to import a |ext_vibes_import_recipient_list| with included headers.
+.. important:: Refer to the |destination-name| documentation if you plan to import a `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| with included headers.
 
 .. sendto-vibes-add-orchestration-important-end
 

@@ -6,9 +6,9 @@
    <a href="https://docs.amperity.com/api/start_here.html">Amperity API</a>
 
 
-.. |add_ampiq_data_requirements| raw:: html
+.. |add_campaigns_data_requirements| raw:: html
 
-   <a href="/datagrid/add_ampiq.html#data-requirements" target="_blank">data requirements</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="/datagrid/add_campaigns.html#data-requirements" target="_blank">data requirements</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |add_customer_360_database| raw:: html
@@ -16,7 +16,7 @@
    <a href="/datagrid/add_customer_profiles.html" target="_blank">customer 360 database</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ampiq_destinations| raw:: html
+.. |campaign_destinations| raw:: html
 
    <a href="https://docs.amperity.com/destinations_campaigns.html">destinations for customer activation</a>
 

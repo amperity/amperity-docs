@@ -139,7 +139,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
 #. Configure Snowflake objects for the correct database, tables, roles, and users.
 #. Send data to Snowflake from Amperity.
-#. Connect Tableau to |ext_tableau_snowflake|, and then access the data sent from Amperity.
+#. Connect Tableau to `Snowflake <https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm>`__ |ext_link|, and then access the data sent from Amperity.
 
    .. note:: The URL for the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Tableau user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Tableau to Snowflake.
 

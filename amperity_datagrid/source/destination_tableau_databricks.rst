@@ -98,7 +98,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Connect Tableau to |ext_tableau_databricks|, and then access the data sent from Amperity.
+     - Connect Tableau to `Databricks <https://help.tableau.com/current/pro/desktop/en-us/examples_databricks.htm>`__ |ext_link|, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-05.png

@@ -1239,7 +1239,7 @@ Links that open to a page outside of the Amperity Documentation require using a 
 
    .. tip:: Be sure to prefix with ``ext_``.
 
-For example: You should read all about |ext_stitchpatents| on the Amperity corpsite!
+For example: You should read all about `our patented method for identity resolution <https://amperity.com/resources/blog/breaking-the-rules-getting-patents-for-it>`__ |ext_link| on the Amperity corpsite!
 
 .. format-content-links-external-opens-new-tab-end
 

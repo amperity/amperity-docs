@@ -22,7 +22,7 @@ Send offline events to TikTok Ads Manager
 
 .. events-tiktok-ads-offline-events-start
 
-Send offline events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Support for |ext_tiktok_ads_offline_events| is part of the TikTok Events API.
+Send offline events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Support for `offline events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
 For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
 

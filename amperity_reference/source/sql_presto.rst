@@ -2408,7 +2408,7 @@ Use the **CURRENT_TIMESTAMP** function to return the current timestamp for the t
 
    CURRENT_TIMESTAMP AT TIME ZONE 'time/zone'+ interval '1' day
 
-where ``time/zone`` is a valid |ext_tz_database_names|, such as "America/Los_Angeles" or "America/New_York". 
+where ``time/zone`` is a valid `TZ database name <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`__ |ext_link|, such as "America/Los_Angeles" or "America/New_York". 
 
 .. sql-presto-function-current-timestamp-end
 

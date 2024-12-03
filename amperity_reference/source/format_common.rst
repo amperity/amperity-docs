@@ -595,7 +595,7 @@ Secure Shell (SSH) is a secure protocol that protects your files while they are 
 
 .. format-common-ssh-rsa-preferred-start
 
-.. important:: Amperity prefers using RSA as the encryption format for |ext_ssh_keys_about| that are used by SFTP connections to pull data to or send data from Amperity. Amperity prefers the size of the SSH key to be 4096 bits.
+.. important:: Amperity prefers using RSA as the encryption format for `generating SSH keys <https://www.ssh.com/academy/ssh/keygen>`__ |ext_link| that are used by SFTP connections to pull data to or send data from Amperity. Amperity prefers the size of the SSH key to be 4096 bits.
 
    Amperity also supports the ECDSA and EC25519 encryption formats.
 

@@ -20,7 +20,7 @@
         Direct mail 
 
 ==================================================
-Direct mail 
+Direct mail campaigns
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -251,6 +251,6 @@ Other direct mail channels are available as plugins through popular marketing au
      - |ext_postal_io| allows you to manage direct mail campaigns using customizable workflows and automated sends. Send query results or audience lists to Adobe Marketo, HubSpot, or Salesforce Marketing Cloud, and then use Postal.io to manage your direct mail campaign. 
 
    * - **Sendoso**
-     - |ext_sendoso| is a send management platform that uses automated and scaled solutions to help marketers manage effective direct mail campaigns. Send query results or audience lists to Adobe Marketo, HubSpot, or Salesforce Marketing Cloud, and then use Sendoso to manage your direct mail campaign. 
+     - `Sendoso <https://sendoso.com/>`__ |ext_link| is a send management platform that uses automated and scaled solutions to help marketers manage effective direct mail campaigns. Send query results or audience lists to Adobe Marketo, HubSpot, or Salesforce Marketing Cloud, and then use Sendoso to manage your direct mail campaign. 
 
 .. direct-mail-sendto-channel-other-end

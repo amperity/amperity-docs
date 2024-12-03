@@ -27,7 +27,7 @@ Send query results to Zendesk
 
 .. sendto-zendesk-start
 
-Amperity may be configured to create or update user records in Zendesk by using the Zendesk Users API to |ext_zendesk_rest_api_create_or_update_users|. Use this connector to deliver a better customer support experience by pre-populating Zendesk user records with customer records from Amperity, including:
+Amperity may be configured to create or update user records in Zendesk by using the Zendesk Users API to `create or update users <https://developer.zendesk.com/api-reference/ticketing/users/users/#create-or-update-many-users>`__ |ext_link|. Use this connector to deliver a better customer support experience by pre-populating Zendesk user records with customer records from Amperity, including:
 
 * Order history
 * Loyalty status
@@ -41,7 +41,7 @@ Use this data to show customer support representatives information related to pr
 
 .. sendto-zendesk-note-start
 
-.. note:: Creating or updating records are |ext_zendesk_rest_api_rate_limits| to a maximum of 100 users per second.
+.. note:: Creating or updating records are `rate limited <https://developer.zendesk.com/rest_api/docs/support/introduction#endpoint-specific-rate-limits>`__ |ext_link| to a maximum of 100 users per second.
 
 .. sendto-zendesk-note-end
 
@@ -69,7 +69,7 @@ Build query
 
 .. sendto-zendesk-map-results-start
 
-Results that are sent to Zendesk must be correctly mapped to the following attributes, as required by the |ext_zendesk_rest_api_user|:
+Results that are sent to Zendesk must be correctly mapped to the following attributes, as required by the `Zendesk Users API <https://developer.zendesk.com/rest_api/docs/support/users#json-format-for-agent-or-admin-requests>`__ |ext_link|:
 
 .. list-table::
    :widths: 140 140 320

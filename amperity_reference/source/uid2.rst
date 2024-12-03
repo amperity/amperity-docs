@@ -21,7 +21,7 @@ About Unified ID 2.0
 
 .. uid2-overview-start
 
-Unified ID 2.0 (UID2) is an |ext_uid2_about| that enables deterministic identity for advertising opportunities across the open internet for participants with access to the advertising ecosystem. UID2 is a standalone solution with a unique namespace and privacy controls that help participants meet local market requirements.
+Unified ID 2.0 (UID2) is an `open-source framework <https://unifiedid.com/docs/intro>`__ |ext_link| that enables deterministic identity for advertising opportunities across the open internet for participants with access to the advertising ecosystem. UID2 is a standalone solution with a unique namespace and privacy controls that help participants meet local market requirements.
 
 .. uid2-overview-end
 
@@ -80,9 +80,9 @@ The following sections describe at a high level the series of steps that are req
 
           Amperity uses the following UID2 endpoints when Amperity is configured to act as a UID2 Operator for your brand:
 
-          #. Amperity sends an API request to Unified ID 2.0 using the |ext_uid2_endpoint_post_identity_buckets| endpoint to identify salt buckets that have expired. All UID2 tokens associated with an expired salt bucket are refreshed.
+          #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/buckets <https://unifiedid.com/docs/endpoints/post-identity-buckets>`__ |ext_link| endpoint to identify salt buckets that have expired. All UID2 tokens associated with an expired salt bucket are refreshed.
 
-          #. Amperity sends an API request to Unified ID 2.0 using the |ext_uid2_endpoint_post_identity_map| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table.
+          #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/map <https://unifiedid.com/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table.
 
              The **POST /identity/map** endpoint responds with three values: a hashed email address, an advertising ID (the UID2 token), and a salt bucket ID.
 
@@ -126,7 +126,7 @@ Get access to UID2
 
 .. uid2-prerequisite-get-access-start
 
-To get access to the UID2 framework, you may sign up directly from the |ext_uid2_request_access| website or connect directly with your The Trade Desk representative (or UID2 administrator).
+To get access to the UID2 framework, you may sign up directly from the `Unified ID 2.0 <https://unifiedid.com/request-access>`__ |ext_link| website or connect directly with your The Trade Desk representative (or UID2 administrator).
 
 .. uid2-prerequisite-get-access-end
 
@@ -138,9 +138,9 @@ Participate in UID2
 
 .. uid2-prerequisite-participate-start
 
-You must agree to a UID2 participation policy, which is a |ext_uid2_participant_requirements|.
+You must agree to a UID2 participation policy, which is a `requirement for UID2 sharing <https://unifiedid.com/docs/getting-started/gs-sharing#legal-requirements-for-uid2-sharing>`__ |ext_link|.
 
-.. important:: Talk with your The Trade Desk representative if you are unsure of which |ext_uid2_participation_policy| is required to support your brand's UID2 use cases.
+.. important:: Talk with your The Trade Desk representative if you are unsure of which `participation policy <https://unifiedid.com/docs/intro#participants>`__ |ext_link| is required to support your brand's UID2 use cases.
 
 .. uid2-prerequisite-participate-end
 
@@ -152,11 +152,11 @@ Get Mapper credentials
 
 .. uid2-prerequisite-get-credentials-start
 
-Each participant in UID2 has its own set of unique |ext_uid2_mapper_credentials|, which allow access to specific areas within the UID2 ecosystem.
+Each participant in UID2 has its own set of unique `Mapper credentials <https://unifiedid.com/docs/getting-started/gs-credentials>`__ |ext_link|, which allow access to specific areas within the UID2 ecosystem.
 
 To configure Amperity to act as a UID2 Operator for your brand you must be a **Mapper** participant in Unified ID 2.0.
 
-A mapper participant is a broad category that includes |ext_uid2_advertisers|, |ext_uid2_data_providers|, data on-boarders, measurement providers, identity graph providers, third-party data providers, and any other organization that sends data to other participants *and* organizations that collect user data and push it to other UID2 participants.
+A mapper participant is a broad category that includes `advertisers <https://unifiedid.com/docs/overviews/overview-advertisers>`__ |ext_link|, `data providers <https://unifiedid.com/docs/overviews/overview-data-providers>`__ |ext_link|, data on-boarders, measurement providers, identity graph providers, third-party data providers, and any other organization that sends data to other participants *and* organizations that collect user data and push it to other UID2 participants.
 
 .. important:: Use your brand's **Mapper** participant credentials to configure Amperity to act as a UID2 Operator.
 
@@ -259,7 +259,7 @@ DSPs can receive UID2s from advertisers as first- and/or third-party data. Adver
           :alt: Advertisers and UID2
           :align: left
           :class: no-scaled-link
-     - Advertising with UID2 enables the use of use |ext_uid2_first_party| to build omnichannel campaigns across devices using a single identifier. Using UID2 as part of your advertising strategy will help your brand:
+     - Advertising with UID2 enables the use of use `first-party data <https://unifiedid.com/docs/overviews/overview-advertisers#workflow-for-advertisers>`__ |ext_link| to build omnichannel campaigns across devices using a single identifier. Using UID2 as part of your advertising strategy will help your brand:
 
        * Manage advertising frequency
        * Suppress audiences across channels and devices
@@ -273,6 +273,6 @@ DSPs can receive UID2s from advertisers as first- and/or third-party data. Adver
           :alt: Data providers and UID2
           :align: left
           :class: no-scaled-link
-     - Data providers can use UID2 to enable the use of |ext_uid2_third_party|. This approach to advertising can reduce identity fragmentation and connect third-party data to a more durable, omnichannel, cross-device identifier.
+     - Data providers can use UID2 to enable the use of `third-party data <https://unifiedid.com/docs/overviews/overview-data-providers#workflow-for-data-providers>`__ |ext_link|. This approach to advertising can reduce identity fragmentation and connect third-party data to a more durable, omnichannel, cross-device identifier.
 
 .. uid2-workflows-end

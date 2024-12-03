@@ -39,11 +39,11 @@ This is an example paragraph that shows how to use snippets to include content i
 .. The following group of terms are general. Use these in the glossary (always!) and use them as the first-level overview of concepts, sections, and other whatnots across the documentation.
 
 
-**Active Campaign**
+**ActiveCampaign**
 
 .. term-active-campaign-start
 
-Active Campaign is an automation platform for ecommerce, business-to-consumer, and business-to-business that helps you use email and SMS marketing to reach, nurture, convert, and grow your customer base.
+ActiveCampaign is an automation platform for ecommerce, business-to-consumer, and business-to-business that helps you use email and SMS marketing to reach, nurture, convert, and grow your customer base.
 
 .. term-active-campaign-end
 
@@ -253,11 +253,11 @@ An **Affinity** table associates individual customers to the products they are m
 
 **Airship**, **Urban Airship**
 
-.. term-urban-airship-start
+.. term-airship-start
 
 Airship is a customer engagement platform that helps marketers connect with their customers across every stage of the customer lifecycle.
 
-.. term-urban-airship-end
+.. term-airship-end
 
 
 **Airtable**
@@ -596,11 +596,11 @@ AppsFlyer is a mobile app tracking and attribution analytics platform that helps
 .. term-appsflyer-end
 
 
-**Attentive Mobile**
+**Attentive**, **Attentive Mobile**
 
 .. term-attentive-mobile-start
 
-Attentive Mobile is a personalized mobile messaging platform that improves brand engagement with mobile consumers.
+Attentive is a personalized messaging platform that improves brand engagement with mobile consumers.
 
 .. term-attentive-mobile-end
 
@@ -2282,7 +2282,7 @@ Dynamic Yield helps companies quickly build and test personalized, optimized, an
 
 .. term-dynamics-365-marketing-start
 
-Dynamics 365 Marketing helps you build personalized journeys across any touchpoint to strengthen your relationships with your customers. Dynamics 365 Marketing consists of two primary modules -- Real-time Marketing and Outbound Marketing -- along with event management capabilities. Create graphical emails and design interactive customer journeys to support all of your marketing campaigns.
+Dynamics 365 Marketing helps you build personalized journeys for real-time and outbound marketing, along with event management capabilities.
 
 .. term-dynamics-365-marketing-end
 
@@ -2858,7 +2858,7 @@ Google Analytics is an events- and session-based analytics service that collects
 
 .. term-google-audience-partner-start
 
-Google Audience Partner API uses first-party data that your customers have shared with you to enable advertising across Google -- including search and display advertising, the Shopping tab, Gmail, and YouTube -- to your customers and to similar audiences.
+Google Audience Partner API uses first-party data that your customers have shared with you to enable advertising across Google---including search and display advertising, the Shopping tab, Gmail, and YouTube---to your customers and to similar audiences.
 
 .. term-google-audience-partner-end
 
@@ -2912,7 +2912,7 @@ Google Cloud Functions is a serverless computing platform that runs code in resp
 
 .. term-google-customer-match-start
 
-Google Customer Match uses first-party data that your customers have shared with you to enable advertising across Google -- including search (Google Ads) and display advertising (Display & Video 360), the Shopping tab, Gmail, and YouTube -- to your customers and to similar audiences.
+Google Customer Match uses first-party data that your customers have shared with you to enable advertising across Google---including search (Google Ads) and display advertising (Display & Video 360), the Shopping tab, Gmail, and YouTube---to your customers and to similar audiences.
 
 .. term-google-customer-match-end
 
@@ -4107,7 +4107,7 @@ The total amount of the gross sales minus deductions (i.e. returns, discounts, a
 
 .. term-neustar-start
 
-Neustar provides real-time information and analytics for the Internet, risk, digital performance, and defense, telecommunications, entertainment, and marketing industries, and also provides clearinghouse and directory services to the global communications and Internet industries.
+Neustar (a TransUnion company) provides real-time information and analytics for the Internet, risk, digital performance, and defense, telecommunications, entertainment, and marketing industries, and also provides clearinghouse and directory services to the global communications and Internet industries.
 
 .. term-neustar-end
 
@@ -5458,7 +5458,7 @@ SalesForce Sales Cloud brings customer information together into an integrated p
 
 .. term-sandbox-start
 
-A sandbox is a snapshot of the configuration state of your production tenant that is made available as a copy. Use a sandbox to safely make configuration changes, and then promote those changes back to your production tenant.
+A sandbox is a copy of your production tenant in which you can safely make configuration changes, validate the results, and then safely promote those changes to production.
 
 .. term-sandbox-end
 
@@ -5868,7 +5868,7 @@ A snapshot email is sent on a weekly basis from Amperity to provide a quick over
 
 .. term-snowflake-start
 
-Snowflake is an analytic data warehouse that is fast, easy to use, and flexible. Snowflake uses a SQL database engine that is designed for the cloud. Snowflake can provide tables as a data source to Amperity.
+Snowflake is an analytic data warehouse that is fast, easy to use, and flexible. Snowflake uses a SQL database engine that is designed for the cloud.
 
 .. term-snowflake-end
 
@@ -6541,7 +6541,7 @@ Trino is a distributed SQL query engine that is designed to efficiently query va
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of nearly-identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records -- the trivial duplicates -- are not.
+A trivial duplicate is a set of nearly-identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records---the trivial duplicates---are not.
 
 .. term-trivial-duplicate-end
 
@@ -6562,7 +6562,7 @@ An unqualified trivial duplicate is a set of records that do not have enough mat
 
 .. term-tsv-start
 
-A |ext_tsv| file is a delimited text file that uses a tab to separate values. A TSV file stores tabular data (numbers and text) in plain text. Each line of the file is a data record. Each record consists of one or more fields, separated by tabs. The use of the tab as a field separator is the source of the name for this file format.
+A `tab-separated values (TSV) <https://en.wikipedia.org/wiki/Tab-separated_values>`__ |ext_link| file is a delimited text file that uses a tab to separate values and stores tabular data (numbers and text) in plain text. Each line in the file is a data record. Each record consists of one or more fields, separated by tabs.
 
 .. term-tsv-end
 
@@ -6812,7 +6812,7 @@ Unified ID 2.0 is an email address- and phone number-based unique identifier tha
 
 .. term-uniqueness-start
 
-Uniqueness divides the number of unique values -- cardinality -- by the number of rows in a table.
+Uniqueness divides the number of unique values---cardinality---by the number of rows in a table.
 
 .. term-uniqueness-end
 

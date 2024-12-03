@@ -33,7 +33,7 @@ Use segments to build high-value audiences for retargeting and lookalike modelin
 
 .. channel-tiktok-ads-important-learning-phase-start
 
-.. tip:: Start with a balanced and stable audience. Allow that audience to complete its |ext_tiktok_ads_learning_phase|, which is a process |destination-name| uses to optimize ad delivery for your audience.
+.. tip:: Start with a balanced and stable audience. Allow that audience to complete its `learning phase <https://ads.tiktok.com/help/article/learning-phase>`__ |ext_link|, which is a process |destination-name| uses to optimize ad delivery for your audience.
 
    Keep your audience stable during the learning phase and only make adjustments if your audience does not look like it will complete the learning phase, which typically ends after ~50 conversions.
 

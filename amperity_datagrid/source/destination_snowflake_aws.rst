@@ -134,7 +134,7 @@ Configure objects
 
 .. destination-snowflake-aws-configure-objects-start
 
-Amperity requires access to the customer's instance of Snowflake. This requires write permissions to a |ext_snowflake_warehouse_overview| via a role and a user.
+Amperity requires access to the customer's instance of Snowflake. This requires write permissions to a `warehouse object in Snowflake <https://docs.snowflake.net/manuals/user-guide/warehouses-overview.htm>`__ |ext_link| via a role and a user.
 
 The following objects must be created in the customer's instance of Snowflake:
 

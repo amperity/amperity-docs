@@ -16,7 +16,7 @@
         Churn prevention
 
 ==================================================
-Churn prevention
+Churn prevention campaigns
 ==================================================
 
 .. churn-prevention-about-start

@@ -1236,7 +1236,7 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Removes punctuation
-       * Updates special characters to |ext_utf8|
+       * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as SHA-256
    * - **First Name**
      - **FN**
@@ -1245,7 +1245,7 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Removes punctuation
-       * Updates special characters to |ext_utf8|
+       * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as SHA-256
    * - **First Initial**
      - **FI**
@@ -1353,7 +1353,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **physical_store**
          **Default** Use when the offline conversion was made in-person at a physical store location.
 
-         .. note:: When **action_source** is set to **physical_store** you may set the number of days for which events are sent to "62". For example:
+         .. note:: The first time transaction events are sent to |destination-name|, and when **action_source** is set to **physical_store**, up to 62 days of transactions data may be sent, after which Amperity should be configured to send updates that maintain a 7-day rolling window of transaction events.
+
+            For example, the initial send:
 
             ::
 
@@ -1361,7 +1363,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
                ...
                WHERE uit.order_datetime > (CURRENT_DATE - interval '62' day)
 
-            Use "62" for the initial send to |destination-name|, and then update "62" to "7" before the next send to maintain a 7-day rolling window.
+            Update "62" to "7" before the next send to maintain a 7-day rolling window.
 
        **system_generated**
          Use when the offline conversion occurred automatically, such as from a subscription renewal or monthly auto-pay.
