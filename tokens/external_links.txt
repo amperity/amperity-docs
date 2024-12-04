@@ -787,15 +787,12 @@
 
 .. |ext_download_postman_api_streaming| raw:: html
 
-   <a href="../downloads/postman/Amperity_Streaming_Ingest_REST_API.postman_collection.json" target="_blank">Postman collection for the Streaming Ingest REST API</a> <i class="fad fa-download"></i>
+   <a href="../downloads/postman/Amperity_Streaming_Ingest_REST_API.postman_collection.json" target="_blank">Postman collection for the Streaming Ingest REST API</a> <i class="fas fa-download"></i>
+
 
 .. |ext_download_postman_api_refresh| raw:: html
 
-   <a href="../downloads/postman/Amperity_Refresh_Token_API.postman_collection.json" target="_blank">Postman collection for the Refresh Token API</a> <i class="fad fa-download"></i>
-
-.. |ext_download_postman_api_profile| raw:: html
-
-   <a href="../downloads/postman/Amperity_Profile_API.postman_collection.json" target="_blank">Postman collection for the Profile API</a> <i class="fad fa-download"></i>
+   <a href="../downloads/postman/Amperity_Refresh_Token_API.postman_collection.json" target="_blank">Postman collection for the Refresh Token API</a> <i class="fas fa-download"></i>
 
 
 .. |ext_download_sales_transactions| raw:: html
@@ -838,19 +835,9 @@
    <a href="https://github.com/edn-format/edn" target="_blank">Extensible Data Notation (EDN)</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_facebook_audience| raw:: html
-
-   <a href="https://www.facebook.com/business/help/1409448922609084?id=571563249872422&ref=fbb_an" target="_blank">Audience Manager</a> <i class="fas fa-external-link-square-alt"></i>
-
-
 .. |ext_facebook_conversions_api_offline_events| raw:: html
 
    <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events" target="_blank">Conversions API for offline events</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_facebook_custom_audience| raw:: html
-
-   <a href="https://www.facebook.com/business/help/170456843145568?id=2469097953376494" target="_blank">Facebook Ads</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_facebook_dataset| raw:: html
@@ -868,12 +855,12 @@
    <a href="https://www.facebook.com/business/help/1492627900875762" target="_blank">Facebook Business Manager</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_facebook_global| raw:: html
+.. |xext_facebook_global| raw:: html
 
    <a href="https://www.facebook.com/business/help/407108559393196?id=369787570424415" target="_blank">a variety of ad placements across Facebook</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_facebook_instagram| raw:: html
+.. |xext_facebook_instagram| raw:: html
 
    <a href="https://www.facebook.com/business/help/1634705703469129?helpref=search&sr=2&query=create%20ads%20in%20instagram" target="_blank">place ads on Instagram</a> <i class="fas fa-external-link-square-alt"></i>
 
@@ -888,7 +875,7 @@
    <a href="https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#replace-api" target="_blank">Replace Users endpoint</a> <i class="fas fa-external-link-square-alt"></i>
 
 
-.. |ext_facebook_messenger| raw:: html
+.. |xext_facebook_messenger| raw:: html
 
    <a href="https://www.facebook.com/business/help/1420905584664062?id=274377816589261" target="_blank">place ads on Messenger</a> <i class="fas fa-external-link-square-alt"></i>
 
@@ -896,11 +883,6 @@
 .. |ext_facebook_tos| raw:: html
 
    <a href="https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/" target="_blank">custom audience terms of service</a> <i class="fas fa-external-link-square-alt"></i>
-
-
-.. |ext_facebook_whatsapp| raw:: html
-
-   <a href="https://www.facebook.com/business/help/447934475640650?id=371525583593535" target="_blank">open conversation threads in WhatsApp</a> <i class="fas fa-external-link-square-alt"></i>
 
 
 .. |ext_fiscal_calendar_download| raw:: html

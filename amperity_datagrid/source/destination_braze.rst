@@ -171,7 +171,7 @@ Customer attributes table
 
 .. destination-braze-table-start
 
-Build a table that contains all of the attributes in |destination-name| that your brand wants to manage from Amperity. The columns in this table must be correctly mapped to requirements for |ext_braze_user_profile_fields| and should contain the list of |ext_braze_custom_attributes| that will be maintained.
+Build a table that contains all of the attributes in |destination-name| that your brand wants to manage from Amperity. The columns in this table must be correctly mapped to requirements for `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and should contain the list of `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that will be maintained.
 
 **To add a Braze customer attributes table**
 
@@ -278,7 +278,7 @@ Get details
 
        * The API key for your instance of |destination-name|.
 
-         Open the |ext_braze_developer_console|. Under **REST API Key**, click **+ Create New API Key**, and then set the following permissions under **User Data**: "users.track", "users.export.segment", and "segments.list".
+         Open the `Developer Console <https://www.braze.com/docs/api/basics#creating-and-managing-rest-api-keys>`__ |ext_link|. Under **REST API Key**, click **+ Create New API Key**, and then set the following permissions under **User Data**: "users.track", "users.export.segment", and "segments.list".
 
          Save the API key.
 
@@ -298,11 +298,11 @@ Get details
             :align: left
             :class: no-scaled-link
 
-       * The |ext_braze_api_endpoints| from which your instance of |destination-name| is available.
+       * The `REST API endpoint <https://www.braze.com/docs/api/basics#endpoints>`__ |ext_link| from which your instance of |destination-name| is available.
 
          For example, if your URL for |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
 
-       * A list of |ext_braze_user_profile_fields| and/or |ext_braze_custom_attributes| that may be sent to |destination-name| from Amperity.
+       * A list of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and/or `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that may be sent to |destination-name| from Amperity.
 
 .. destination-braze-get-details-end
 
@@ -400,9 +400,9 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Select the |ext_braze_instances|.
+       Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link|.
 
-       Select the user identifier. The |ext_braze_external_id| is a unique identifier for your customers, such as the Amperity ID. The |ext_braze_braze_id| is a unique identifier for existing |destination-name| customers.
+       Select the user identifier. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers.
 
        To update audience profiles only when one (or more) values change, enable the **Only send updated audience profiles** option.
 
@@ -659,8 +659,8 @@ Missing required field
 
 A unique identifier must be provided to |destination-name|. There are two options:
 
-#. Recommended. The |ext_braze_external_id|, which is a unique identifier for your customers. This may be the Amperity ID or it may be some other unique identifier.
-#. The |ext_braze_braze_id|, which is a unique identifier for existing |destination-name| customers and may be available when |destination-name| is also a data source for your tenant.
+#. Recommended. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link|, which is a unique identifier for your customers. This may be the Amperity ID or it may be some other unique identifier.
+#. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link|, which is a unique identifier for existing |destination-name| customers and may be available when |destination-name| is also a data source for your tenant.
 
 .. destination-braze-workflow-actions-missing-required-field-end
 

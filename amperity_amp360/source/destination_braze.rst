@@ -59,7 +59,7 @@ Attributes in |destination-name| describe your customers.
 * :ref:`Profile attributes <destination-braze-profile-attributes>` describe who your customers are. For example: names, birthdates, email addresses, and phone numbers.
 * :ref:`Custom attributes <destination-braze-custom-attributes>` describe how your customers have interacted with your brand. For example: purchase histories, loyalty status, and value tiers.
 
-When |ext_braze_user_profile_fields| and |ext_braze_custom_attributes| are available in |destination-name| they can be used to build out audience |ext_braze_segments| and to apply |ext_braze_personalization| to your campaigns.
+When `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| are available in |destination-name| they can be used to build out audience `segments <https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/>`__ |ext_link| and to apply `personalization <https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid>`__ |ext_link| to your campaigns.
 
 .. destination-braze-ampiq-and-amp360-shared-intro-end
 
@@ -71,7 +71,7 @@ Customer profiles
 
 .. destination-braze-profile-attributes-start
 
-Customer profiles in |destination-name| are represented by a set of |ext_braze_user_profile_fields|. To update these fields in |destination-name| you must follow a strict naming convention when sending data from Amperity. These fields are also case sensitive (and are in lowercase).
+Customer profiles in |destination-name| are represented by a set of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link|. To update these fields in |destination-name| you must follow a strict naming convention when sending data from Amperity. These fields are also case sensitive (and are in lowercase).
 
 .. destination-braze-profile-attributes-end
 
@@ -105,7 +105,7 @@ An orchestration can send customer profile updates to |destination-name| as the 
 
 .. destination-braze-profile-attributes-table-start
 
-The following table describes the default |ext_braze_user_profile_fields| that are most commonly updated from Amperity:
+The following table describes the default `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| that are most commonly updated from Amperity:
 
 .. list-table::
    :widths: 30 30 40
@@ -232,7 +232,7 @@ About data points
 
 .. destination-braze-data-points-start
 
-|destination-name| uses |ext_braze_data_points| to determine when to update segment membership, to identify which types of messages should be sent, and how to apply message personalization.
+|destination-name| uses `data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/>`__ |ext_link| to determine when to update segment membership, to identify which types of messages should be sent, and how to apply message personalization.
 
 You can send custom attributes to |destination-name| from Amperity by attaching attributes from your customer profiles in Amperity, such as first and last names, email addresses, phone numbers, physical locations, SMS and email consent status, purchase histories, and so on.
 
@@ -240,7 +240,7 @@ Amperity tracks changes as they are sent to Braze and only sends list membership
 
 .. note:: Data points are part of the billing and pricing structure in your |destination-name| contract. Some data points are non-billable; many data points are billable.
 
-   Review the |ext_braze_data_points_billable|, and then review those lists against the attributes you will send to Braze from Amperity to understand which of those attributes are considered billable or non-billable data points.
+   Review the `lists of non-billable and billable data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/#data-points-1>`__ |ext_link|, and then review those lists against the attributes you will send to Braze from Amperity to understand which of those attributes are considered billable or non-billable data points.
 
 .. destination-braze-data-points-end
 
@@ -314,13 +314,13 @@ The **external_id** does not need to be associated with the Amperity ID. For exa
 
    You can use custom attributes directly within segments, and then use those segments to engage with your customers across a variety of channels, including:
 
-   * |ext_braze_usecase_content_cards|
-   * |ext_braze_usecase_email|
-   * |ext_braze_usecase_inapp|
-   * |ext_braze_usecase_push|
-   * |ext_braze_usecase_sms|
-   * |ext_braze_usecase_whatsapp|
-   * |ext_braze_usecase_webhooks|
+   * `Content cards <https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards>`__ |ext_link|
+   * `Email <https://www.braze.com/docs/user_guide/message_building_by_channel/email>`__ |ext_link|
+   * `In-app messaging <https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages>`__ |ext_link|
+   * `Push <https://www.braze.com/docs/user_guide/message_building_by_channel/push>`__ |ext_link|
+   * `SMS and MMS <https://www.braze.com/docs/user_guide/message_building_by_channel/sms>`__ |ext_link|
+   * `WhatsApp <https://www.braze.com/docs/user_guide/message_building_by_channel/whatsapp>`__ |ext_link|
+   * `Custom webhooks <https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks>`__ |ext_link|
 
 .. sendto-braze-build-segments-whatfor-end
 

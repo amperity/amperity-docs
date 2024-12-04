@@ -36,7 +36,7 @@ Send audiences to Oracle Eloqua
 
 .. destination-oracle-eloqua-context-start
 
-Send audiences from Amperity to manage |ext_oracle_eloqua_shared_lists|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
+Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
 
 Amperity will add and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list.
 
@@ -50,9 +50,9 @@ Amperity will add and remove audience members from a shared list, and then updat
 
 .. destination-oracle-eloqua-api-note-start
 
-.. important:: This destination uses the |ext_oracle_eloqua_api_bulk_loader| to send shared lists to |destination-name|.
+.. important:: This destination uses the `Bulk Loader API <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-develop/Developers/BulkAPI/Reference/bulk-limits.htm>`__ |ext_link| to send shared lists to |destination-name|.
 
-   Review the |ext_oracle_eloqua_api_bulk_loader_best_practices| to help ensure that Amperity will be successful when importing your shared lists to |destination-name|.
+   Review the `Bulk API best practices <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-develop/Developers/BulkAPI/BestPractices/best-practices.htm?Highlight=off-peak>`__ |ext_link| to help ensure that Amperity will be successful when importing your shared lists to |destination-name|.
 
 .. destination-oracle-eloqua-api-note-end
 
@@ -120,7 +120,7 @@ Get details
           :class: no-scaled-link
      - The primary key for the shared list: **C_EmailAddress**.
 
-       An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list. Additional attributes may be sent. Some must be mapped to the |ext_oracle_eloqua_shared_lists_defaults|; |ext_oracle_eloqua_shared_lists_custom| may be defined.
+       An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list. Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|; `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
 
 .. destination-oracle-eloqua-get-details-end
 
