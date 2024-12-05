@@ -802,12 +802,7 @@
 
 .. |ext_dv360_placement_options| raw:: html
 
-   <a href="https://support.google.com/displayvideo/answer/2697401?hl=en" target="_blank">available placement options</a> <i class="fad fa-external-link-square-alt"></i>
-
-
-.. |ext_dynamic_yield_s3| raw:: html
-
-   <a href="https://support.dynamicyield.com/hc/en-us/articles/360038581394-Product-Feeds#product-feeds-0-0" target="_blank">an Amazon S3 bucket</a> <i class="fas fa-external-link-square-alt"></i>
+   <a href="https://support.google.com/displayvideo/answer/2697401?hl=en" target="_blank">available placement options</a>
 
 
 .. |ext_e164_format| raw:: html

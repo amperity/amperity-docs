@@ -34,7 +34,7 @@ Pull from Dynamic Yield
 
 .. destination-dynamic-yield-s3-or-sftp-start
 
-.. note:: This topic explains how to configure Amperity to pull data from a password-protected Amazon S3 bucket that is managed by |source-name| using an Amazon S3 bucket. You must configure |source-name| to pull data from |ext_dynamic_yield_s3| bucket that is managed from |source-name|.
+.. note:: This topic explains how to configure Amperity to pull data from a password-protected Amazon S3 bucket that is managed by |source-name| using an Amazon S3 bucket. You must configure |source-name| to pull data from an `Amazon S3 <https://support.dynamicyield.com/hc/en-us/articles/360038581394-Product-Feeds#product-feeds-0-0>`__ |ext_link| bucket that is managed from |source-name|.
 
 .. destination-dynamic-yield-s3-or-sftp-end
 
