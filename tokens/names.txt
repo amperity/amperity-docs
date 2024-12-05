@@ -188,7 +188,7 @@
 
 .. |workflow-issue| raw:: html
 
-   <i class="fa-solid fa-triangle-exclamation" style="color: #FFFF00;"></i>
+   <i class="fa-solid fa-triangle-exclamation" style="color: #b2b520;"></i>
 
 
 .. |input-to-predictive-models| raw:: html
