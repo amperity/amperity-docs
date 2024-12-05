@@ -5,353 +5,256 @@
 .. |theme| replace:: Amperity
 .. |md| replace:: Markdown
 .. |rst| replace:: reStructuredText
-.. |company_success| replace:: Amperity Customer Success
 .. |bic| replace:: Business Intelligence Connect
 
-
-.. the following tag is used only internally; someday it should say "a member of the Amperity technical writing team (@docs)", but for now that team is only one person.
-
-.. |techwriting| replace:: James Scott (@james.scott in Slack)
 
 
 .. |fa-kebab| raw:: html
 
-   &nbsp;<i class="fa-solid fa-ellipsis-vertical fa-lg"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-ellipsis-vertical" style="color: #0c0c0c;"></i>&nbsp;
 
 
 .. |fa-help-circle| raw:: html
 
-   &nbsp;<i class="fas fa-circle-question fa-lg"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-circle-question" style="color: #0c0c0c;"></i>&nbsp;
 
 
-.. |fa-index-separator| raw:: html
-
-   <i class="fad fa-diamond" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #ffffff;"></i>
-
-
-
-.. |policy-pdf| raw:: html
-
-   &#x2605;
-
-.. |poliro-pdf| raw:: html
-
-   &#x2605; &#xae;
-
-
-.. FontAwesome icons won't build into PDFs, so just use a hex code (for stars)
+.. |fa-index-separator| unicode:: U+25CF
 
 
 .. |ext_link| raw:: html
 
-   <i class="fas fa-external-link-square-alt"></i>
+   <i class="fa-solid fa-external-link-square-alt"></i>
 
 
 .. |bars| raw:: html
 
-   <i class="fas fa-bars"></i>
+   <i class="fa-solid fa-bars" style=color="#0c0c0c"></i>
 
 
 .. |notification-running| raw:: html
 
-   &nbsp;<i class="fas fa-spinner" color="#0c0c0c"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-spinner" style=color="#0c0c0c"></i>&nbsp;
 
 
 .. |notification-complete| raw:: html
 
-   &nbsp;<i class="fas fa-check" color="#007552"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-check" style=color="#007552"></i>&nbsp;
 
 
 .. |notification-alert| raw:: html
 
-   &nbsp;<i class="fad fa-triangle-exclamation" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #ffd636;"></i>&nbsp;
+   <i class="fa-solid fa-triangle-exclamation" style="color: #ffd636;"></i>
 
 
 .. |notification-error| raw:: html
 
-   &nbsp;<i class="fad fa-circle-exclamation" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #e44f00;"></i>&nbsp;
+   <i class="fa-solid fa-circle-exclamation" style="color: #e44f00;"></i>
 
 
-
-.. |predicted| raw:: html
-
-   <i class="fad fa-square" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #dff200; --fa-secondary-color: #0c0c0c;"></i>
 
 
 .. |attribute-stop| raw:: html
 
-   <i class="fad fa-diamond-exclamation" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #e44f00;"></i>&nbsp;
+   <i class="fa-solid fa-diamond-exclamation" style="color: #e44f00;"></i>
 
 
 .. |attribute-recommended| raw:: html
 
-   <i class="fad fa-check-circle" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>&nbsp;
+   <i class="fa-solid fa-circle-check" style="color: #0c0c0c;"></i>
 
 
 .. |attribute-useful| raw:: html
 
-   <i class="fad fa-question-circle" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #ade5a3;"></i>&nbsp;
+   <i class="fa-solid fa-circle-question" style="color: #ade5a3;"></i>
 
-
-.. |circle-a-blue| raw:: html
-
-   <i class="fad fa-circle-a" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #00a6f2;"></i>
-
-
-.. |circle-c-blue| raw:: html
-
-   <i class="fad fa-circle-c" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #00a6f2;"></i>
-
-
-.. |circle-p-blue| raw:: html
-
-   <i class="fad fa-circle-p" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #00a6f2;"></i>
-
-
-.. |circle-t-blue| raw:: html
-
-   <i class="fad fa-circle-t" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #00a6f2;"></i>
-
-
-.. |circle-1-blue| raw:: html
-
-   <i class="fad fa-circle-1" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #00a6f2;"></i>
-
-
-.. |circle-2-blue| raw:: html
-
-   <i class="fad fa-circle-2" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #00a6f2;"></i>
-
-
-.. |circle-3-blue| raw:: html
-
-   <i class="fad fa-circle-3" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #00a6f2;"></i>
 
 
 .. |gift| raw:: html
 
-   <i class="fas fa-gift"></i>
+   <i class="fa-solid fa-gift" style="color: #0c0c0c;"></i>
 
 
 .. |policy| raw:: html
 
-   <i class="fad fa-check-circle" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
+   <i class="fa-solid fa-circle-check" style="color: #317a1c;"></i>
 
 
 .. policy table only for allowed action + read-only
 
 .. |poliro| raw:: html
 
-   <i class="fad fa-book-reader" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #5a5f66; --fa-secondary-color: #5a5f66;"></i>
+   <i class="fa-solid fa-book-open-reader" style="color: #5a5f66;"></i>
 
 
 .. policy table only allowed action + blocked action
 
 .. |polino| raw:: html
 
-   <i class="fad fa-ban" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #af3708; --fa-secondary-color: #af3708;"></i>
+   <i class="fa-solid fa-ban" style="color: #af3708;"></i>
 
 
 .. policy table for user management
 
 .. |polius| raw:: html
 
-   <i class="fad fa-users" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #317a1c; --fa-secondary-color: #317a1c;"></i>
+   <i class="fa-solid fa-users" style="color: #317a1c;"></i>
 
 
 .. for inline reference to allowed read-only actions
 
 .. |allowed-read-only-actions-icon| raw:: html
 
-   <i class="fad fa-book-reader" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #5a5f66; --fa-secondary-color: #5a5f66;"></i>
+   <i class="fa-solid fa-book-open-reader" style="color: #5a5f66;"></i>
 
 
 .. for inline reference to blocked actions
 
 .. |blocked-actions-icon| raw:: html
 
-   <i class="fad fa-ban" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #af3708; --fa-secondary-color: #af3708;"></i>
+   <i class="fa-solid fa-ban" style="color: #af3708;"></i>
 
 
 .. for no upload add-on policy
 
 .. |no-upload-policy| raw:: html
 
-   <i class="fas fa-upload" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #0c0c0c;"></i>
+   <i class="fa-solid fa-upload" style="color: #0c0c0c;"></i>
 
 
 .. for no download add-on policy
 
 .. |no-download-policy| raw:: html
 
-   <i class="fas fa-download" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #0c0c0c;"></i>
+   <i class="fa-solid fa-download" style="color: #0c0c0c;"></i>
 
 
 .. for inline reference to user management
 
 .. |manage-users-icon| raw:: html
 
-   <i class="fad fa-users" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #317a1c; --fa-secondary-color: #317a1c;"></i>
+   <i class="fa-solid fa-users" style="color: #0c0c0c;"></i>
 
 
 .. |system-yes| raw:: html
 
-   <i class="fad fa-badge-check fa-lg" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #8fdd7a;"></i>
+   <i class="fa-solid fa-badge-check" style="color: #317a1c;"></i>
 
 
 .. |checkmark-required| raw:: html
 
-   <i class="fad fa-badge-check" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
+   <i class="fa-solid fa-badge-check" style="color: #317a1c;"></i>
 
 
 .. |checkmark-recommended| raw:: html
 
-   <i class="fad fa-badge-check" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #007552;"></i>
+   <i class="fa-solid fa-badge-check" style="color: #007552;"></i>
 
 
 .. |policy-sandbox-validation-required| raw:: html
 
-   <i class="fad fa-circle-exclamation" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #af3708;"></i>
+   <i class="fa-solid fa-circle-exclamation" style="color: #af3708;"></i>
 
 
 .. |policy-sandbox-limited| raw:: html
 
-   <i class="fad fa-check-circle" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
+   <i class="fa-solid fa-circle-check" style="color: #0c0c0c;"></i>
 
 
 .. |policy-sandbox-allow-admin| raw:: html
 
-   <i class="fad fa-circle-plus" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #caefef;"></i>
+   <i class="fa-solid fa-circle-plus" style="color: #caefef;"></i>
 
 
 .. |workflow-failed| raw:: html
 
-   <i class="fad fa-circle-exclamation" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #e44f00;"></i>
+   <i class="fa-solid fa-circle-exclamation" style="color: #e44f00;"></i>
 
 
 .. |workflow-running| raw:: html
 
-   <i class="fad fa-spinner" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #c2cbd1;"></i>
+   <i class="fa-solid fa-spinner" style="color: #c2cbd1;"></i>
 
 
 .. |workflow-skipped| raw:: html
 
-   <i class="fa-regular fa-calendar-xmark" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #0c0c0c;"></i>
+   <i class="fa-regular fa-calendar-xmark" style="color: #0c0c0c;"></i>
 
 
 .. |workflow-succeeded| raw:: html
 
-   <i class="fad fa-check" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #317a1c; --fa-secondary-color: #ffffff;"></i>
+   <i class="fa-solid fa-check" style="color: #317a1c;"></i>
 
 
 .. |workflow-issue| raw:: html
 
-   <i class="fad fa-triangle-exclamation" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #b2b520;"></i>
-
-
-.. |setting-provided-by-amperity| raw:: html
-
-   <i class="fad fa-arrow-alt-circle-right" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #317a1c;"></i>
+   <i class="fa-solid fa-triangle-exclamation" style="color: #FFFF00;"></i>
 
 
 .. |input-to-predictive-models| raw:: html
 
-   <i class="fad fa-arrow-alt-circle-right" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #ffffff; --fa-secondary-color: #317a1c;"></i>
+   <i class="fa-solid fa-circle-arrow-right" style="color: #317a1c;"></i>
 
 
-.. |for-example| raw:: html
+.. |setting-provided-by-amperity| raw:: html
 
-   <i class="fad fa-arrow-alt-circle-right" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
+   <i class="fa-solid fa-circle-right" style="color: #317a1c;"></i>
 
 
 .. |giuthub-pencil| raw:: html
 
-   <i class="fas fa-pencil"></i>
+   <i class="fa-solid fa-pencil" style="color: #0c0c0c;"></i>
 
 .. |question| raw:: html
 
-   <i class="fas fa-question"></i>
+   <i class="fa-solid fa-question" style="color: #0c0c0c;"></i>
 
 
 .. |fa-checkbox| raw:: html
 
-   <i class="fas fa-check"></i>
+   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
 
 
-.. |fa-feed| raw:: html
 
-   <i class="fas fa-server"></i>
 
-.. |fa-domain-table| raw:: html
 
-   <i class="fas fa-table"></i>
 
-.. |fa-saved-query| raw:: html
 
-   <i class="fas fa-file-code"></i>
 
-.. |fa-courier| raw:: html
 
-   <i class="fas fa-cloud-download-alt"></i>
-
-.. |fa-courier-group| raw:: html
-
-   <i class="fas fa-calendar-alt"></i>
 
 
 
 .. |fa-sql-segment| raw:: html
 
-   <i class="fas fa-code"></i>
+   <i class="fa-solid fa-code" style="color: #0c0c0c;"></i>
 
 .. |fa-visual-segment| raw:: html
 
-   <i class="fas fa-sliders-h"></i>
-
-.. |fa-folder| raw:: html
-
-   <i class="fas fa-folder"></i>
-
-.. |fa-folder-open| raw:: html
-
-   <i class="fas fa-folder-open"></i>
-
-.. |fa-database-export| raw:: html
-
-   <i class="fas fa-database"></i>
-
-.. |fa-data-template| raw:: html
-
-   <i class="fas fa-file-alt"></i>
+   <i class="fa-solid fa-sliders-h" style="color: #0c0c0c;"></i>
 
 
-.. |fa-index-circle| raw:: html
 
-   <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i>
 
-.. |fa-meh| raw:: html
-
-   &nbsp;<i class="fas fa-meh"></i>&nbsp;
 
 .. |fa-trademark| raw:: html
 
-   <i class="fas fa-registered"></i>
+   <i class="fa-regular fa-registered" style="color: #0c0c0c;"></i>
 
-.. |fa-expando-checkbox| raw:: html
-
-   &nbsp;<i class="fas fa-check-square"></i>&nbsp;
 
 .. |fa-home| raw:: html
 
-   &nbsp;<i class="fas fa-home"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-house" style="color: #0c0c0c;"></i>&nbsp;
+
 
 .. |fa-star| raw:: html
 
-   &nbsp;<i class="fas fa-star"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-star" style="color: #0c0c0c;"></i>&nbsp;
+
 
 .. |fa-project-diagram| raw:: html
 
-   &nbsp;<i class="fas fa-project-diagram"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-project-diagram" style="color: #0c0c0c;"></i>&nbsp;
 
 
 
@@ -360,57 +263,53 @@
 
 .. |fa-check| raw:: html
 
-   <i class="fas fa-check"></i>
+   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
 
 
-.. |fa-gold-star| raw:: html
 
-   <span style="color: #ffd636;">
-   <i class="fas fa-star"></i>
-   </span>
 
 .. for Amperity UI
 
 
 .. |fa-segment-active| raw:: html
 
-   <i class="far fa-circle"></i>
+   <i class="fa-regular fa-circle" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-completed| raw:: html
 
-   <i class="fas fa-check"></i>
+   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-draft| raw:: html
 
-   <i class="fas fa-pencil-alt"></i>
+   <i class="fa-solid fa-pencil" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-error| raw:: html
 
-   <i class="fas fa-exclamation"></i>
+   <i class="fa-solid fa-exclamation" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-folder| raw:: html
 
-   <i class="fas fa-folder"></i>
+   <i class="fa-solid fa-folder" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-inactive| raw:: html
 
-   <i class="fas fa-minus-circle"></i>
+   <i class="fa-solid fa-circle-minus" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-running| raw:: html
 
-   <i class="fas fa-spinner"></i>
+   <i class="fa-solid fa-spinner" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-sql| raw:: html
 
-   <i class="fas fa-code"></i>
+   <i class="fa-solid fa-code" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-visual| raw:: html
 
-   <i class="fas fa-sliders-h"></i>
+   <i class="fa-solid fa-sliders-h" style="color: #0c0c0c;"></i>
 
 .. |fa-segment-waiting| raw:: html
 
-   <i class="fas fa-hourglass-end"></i>
+   <i class="fa-solid fa-hourglass-end" style="color: #0c0c0c;"></i>
 
 
 
@@ -418,72 +317,48 @@
 
 .. |fa-semantic-full-name| raw:: html
 
-   <i class="fas fa-address-book"></i>
+   <i class="fa-solid fa-address-book" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-given-name| raw:: html
 
-   <i class="fas fa-address-book"></i>
+   <i class="fa-solid fa-address-book" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-surname| raw:: html
 
-   <i class="fas fa-address-book"></i>
+   <i class="fa-solid fa-address-book" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-email| raw:: html
 
-   <i class="fas fa-envelope"></i>
+   <i class="fa-solid fa-envelope" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-phone| raw:: html
 
-   <i class="fas fa-phone"></i>
+   <i class="fa-solid fa-phone" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-address| raw:: html
 
-   <i class="fas fa-home"></i>
+   <i class="fa-solid fa-home" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-city| raw:: html
 
-   <i class="fas fa-city"></i>
+   <i class="fa-solid fa-city" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-company| raw:: html
 
-   <i class="fas fa-building"></i>
+   <i class="fa-solid fa-building" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-state| raw:: html
 
-   <i class="fas fa-road"></i>
+   <i class="fa-solid fa-road" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-postal| raw:: html
 
-   <i class="fas fa-hashtag"></i>
+   <i class="fa-solid fa-hashtag" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-birthdate| raw:: html
 
-   <i class="fas fa-birthday-cake"></i>
+   <i class="fa-solid fa-birthday-cake" style="color: #0c0c0c;"></i>
 
 .. |fa-semantic-gender| raw:: html
 
-   <i class="fas fa-venus-mars"></i>
-
-
-
-.. for attributes references with segments and campaigns
-
-.. |attribute-profile| raw:: html
-
-   <i class="fad fa-address-card fa-lg" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
-
-
-.. |attribute-purchase| raw:: html
-
-   <i class="fad fa-bag-shopping fa-lg" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
-
-
-.. |attribute-models| raw:: html
-
-   <i class="fad fa-circle-user fa-lg" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
-
-
-.. |attribute-other| raw:: html
-
-   <i class="fad fa-square-question fa-lg" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #0c0c0c; --fa-secondary-color: #dff200;"></i>
-
+   <i class="fa-solid fa-venus-mars" style="color: #0c0c0c;"></i>
