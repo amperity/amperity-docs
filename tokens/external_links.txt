@@ -795,9 +795,14 @@
    <a href="../downloads/postman/Amperity_Refresh_Token_API.postman_collection.json" target="_blank">Postman collection for the Refresh Token API</a> <i class="fas fa-download"></i>
 
 
+.. |ext_download_postman_api_profile| raw:: html
+
+   <a href="../downloads/postman/Amperity_Profile_API.postman_collection.json" target="_blank">Postman collection for the Profile API</a> <i class="fas fa-download"></i>
+
+
 .. |ext_download_sales_transactions| raw:: html
 
-   <a href="../downloads/xml/salestransactions.xml" target="_blank">example XML file</a> <i class="fad fa-download"></i>
+   <a href="../downloads/xml/salestransactions.xml" target="_blank">example XML file</a> <i class="fas fa-download"></i>
 
 
 .. |ext_dv360_placement_options| raw:: html
