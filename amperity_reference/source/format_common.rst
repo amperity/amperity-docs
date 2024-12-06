@@ -665,12 +665,10 @@ Encrypt files
 
 .. format-common-pgp-encryption-start
 
-Any tool that is compliant with the OpenPGP standard, as defined by |ext_rfc4880| may be used for PGP encryption.
+Any tool that is compliant with the OpenPGP standard, as defined by |ext_rfc4880| may be used for PGP encryption. For example:
 
 * GNU Privacy Guard. Available from |ext_gnupgorg|. Instructions for how to use GNU Privacy Guard are from that site.
 * GPG Tools. Available from |ext_gpgtoolsorg|. Instructions for how to use GPG Tools are from that site.
-
-.. caution:: The tenant and Amperity must use the same tool to encrypt and decrypt files.
 
 .. format-common-pgp-encryption-end
 
@@ -703,12 +701,10 @@ Decrypt files
 
 .. format-common-pgp-decryption-start
 
-Any tool that is compliant with the OpenPGP standard, `as defined by RFC4880 <https://tools.ietf.org/html/rfc4880>`__ may be used for PGP decryption.
+Any tool that is compliant with the OpenPGP standard, `as defined by RFC4880 <https://tools.ietf.org/html/rfc4880>`__ may be used for PGP decryption. For example:
 
 * GNU Privacy Guard. Available from https://www.gnupg.org/. Instructions for how to use GNU Privacy Guard are from that site.
 * GPG Tools. Available from https://gpgtools.org/. Instructions for how to use GPG Tools are from that site.
-
-.. caution:: The tenant and Amperity must use the same tool to encrypt and decrypt files.
 
 .. format-common-pgp-decryption-end
 
