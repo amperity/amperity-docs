@@ -1918,104 +1918,24 @@
    <a href="https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US" target="_blank">events file requirements</a>
 
 
-.. |ext_snappy| raw:: html
-
-   <a href="https://google.github.io/snappy/" target="_blank">Snappy</a>
 
 
-.. |ext_snowflake_account_identifier| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/admin-account-identifier.html" target="_blank">account identifier</a>
-
-
-.. |ext_snowflake_create| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create" target="_blank">CREATE</a>
-
-
-.. |ext_snowflake_create_role| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create-role.html" target="_blank">CREATE ROLE</a>
-
-
-.. |ext_snowflake_create_stage| raw:: html
-
-   <a href="https://docs.snowflake.com/en/sql-reference/sql/create-stage.html" target="_blank">CREATE STAGE</a>
-
-
-.. |ext_snowflake_create_user| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create-user.html" target="_blank">CREATE USER</a>
-
-
-.. |ext_snowflake_create_warehouse| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create-warehouse.html" target="_blank">CREATE WAREHOUSE</a>
-
-
-.. |ext_snowflake_data_sharing| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/data-sharing-intro.html" target="_blank">secure data sharing</a>
-
-
-.. |ext_snowflake_aws_iam_secrets_and_keys| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/data-load-s3-config-aws-iam-user" target="_blank">secrets and keys</a>
-
-
-.. |ext_snowflake_grant_role| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/grant-role.html" target="_blank">GRANT ROLE</a>
-
-
-.. |ext_snowflake_grant_select| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege-share.html" target="_blank">GRANT SELECT</a>
-
-
-.. |ext_snowflake_grant_usage| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html" target="_blank">GRANT USAGE</a>
-
+.. TODO: Keep this one as a consolidated external link.
 
 .. |ext_snowflake_jdbc| raw:: html
 
    <a href="https://docs.snowflake.com/en/user-guide/jdbc.html" target="_blank">Snowflake JDBC driver</a>
 
 
-.. |ext_snowflake_named_stage| raw:: html
 
-   <a href="https://docs.snowflake.net/manuals/user-guide/data-unload-s3.html" target="_blank">named stage</a>
 
+.. TODO: Keep this one as a consolidated external link.
 
 .. |ext_snowflake_odbc| raw:: html
 
    <a href="https://docs.snowflake.com/en/user-guide/odbc.html" target="_blank">Snowflake ODBC driver</a>
 
 
-.. |ext_snowflake_query_syntax| raw:: html
-
-   <a href="https://docs.snowflake.com/en/sql-reference/constructs.html" target="_blank">Snowflake query syntax</a>
-
-
-.. |ext_snowflake_sso_browser_based| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use.html#setting-up-browser-based-sso" target="_blank">a requirement for browser-based SSO</a>
-
-
-.. |ext_snowflake_use| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/sql-reference/sql/use.html" target="_blank">USE</a>
-
-
-.. |xext_snowflake_warehouse_overview| raw:: html
-
-   <a href="https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html" target="_blank">warehouse object in Snowflake</a>
-
-
-.. |xext_sparksql_csv_caution| raw:: html
-
-   <a href="https://issues.apache.org/jira/browse/SPARK-22236" target="_blank">SPARK-22236</a>
 
 
 .. TODO: Keep this one as a consolidated external link.

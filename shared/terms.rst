@@ -5859,7 +5859,7 @@ A snapshot email is sent on a weekly basis from Amperity to provide a quick over
 
 .. term-snappy-start
 
-|ext_snappy| is a compression library aims for high speeds and reasonable compression instead of maximum compression. Files that are compressed with snappy tend to be larger, but the process to compress (and decompress them) is significantly faster.
+`Snappy <https://google.github.io/snappy/>`__ |ext_link| is a compression library aims for high speeds and reasonable compression instead of maximum compression. Files that are compressed with snappy tend to be larger, but the process to compress (and decompress them) is significantly faster.
 
 .. term-snappy-end
 

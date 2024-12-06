@@ -153,7 +153,7 @@ Snowflake secure data sharing
 
 .. destination-bic-request-to-enable-data-sharing-start
 
-Snowflake |ext_snowflake_data_sharing| is not enabled by default. If your organization wants to use secure data sharing, your instance of Snowflake must be in the same region as the Amperity instance.
+Snowflake `secure data sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro.html>`__ |ext_link| is not enabled by default. If your organization wants to use secure data sharing, your instance of Snowflake must be in the same region as the Amperity instance.
 
 .. destination-bic-request-to-enable-data-sharing-end
 
@@ -616,7 +616,7 @@ Download the |ext_snowflake_jdbc| to connect BI tools such as Databricks, SAP Bu
 
 .. destination-bic-connect-other-jdbc-externalbrowser-start
 
-.. important:: BI tools that use the JDBC driver must set the **Authenticator** setting to **externalbrowser** as |ext_snowflake_sso_browser_based|. The location in which this setting is configured varies, depending on the BI tool. For example, SQL Workbench appends this setting to the URL for the |bic| data warehouse:
+.. important:: BI tools that use the JDBC driver must set the **Authenticator** setting to **externalbrowser** as `a requirement for browser-based SSO <https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use.html#setting-up-browser-based-sso>`__ |ext_link|. The location in which this setting is configured varies, depending on the BI tool. For example, SQL Workbench appends this setting to the URL for the |bic| data warehouse:
 
    ::
 
@@ -778,7 +778,7 @@ Download the |ext_snowflake_odbc| to connect BI tools such as `Adobe Campaign <h
 
 .. destination-bic-connect-other-odbc-externalbrowser-start
 
-.. important:: BI tools that use the ODBC driver must set the **Authenticator** setting to **externalbrowser** as |ext_snowflake_sso_browser_based|. The location in which this setting is configured varies, depending on the BI tool. For example, Tableau configures this setting from the **Advanced** tab as part of the workflow within Tableau that configures the connection to the |bic| data warehouse.
+.. important:: BI tools that use the ODBC driver must set the **Authenticator** setting to **externalbrowser** as `a requirement for browser-based SSO <https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use.html#setting-up-browser-based-sso>`__ |ext_link|. The location in which this setting is configured varies, depending on the BI tool. For example, Tableau configures this setting from the **Advanced** tab as part of the workflow within Tableau that configures the connection to the |bic| data warehouse.
 
 .. destination-bic-connect-other-odbc-externalbrowser-end
 
