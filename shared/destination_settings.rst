@@ -2167,7 +2167,7 @@ The name of a segment in |destination-name|.
 
 |destination-name| supports using `UID 2.0 <https://unifiedid.com/docs/intro>`__ |ext_link| to help establish your customers' identifies without using third-party data. UID 2.0 enables publisher websites, mobile apps, and Connected TV (CTV) apps to monetize through programmatic workflows, while offering user transparency and privacy controls that meet local market requirements.
 
-Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring Amperity to send offline events to |destination-name|.
+Your brand must have a UID 2.0 agreement in-place with The Trade Desk before configuring Amperity to send offline events to |destination-name|.
 
 .. setting-the-trade-desk-uid2-agreement-end
 
