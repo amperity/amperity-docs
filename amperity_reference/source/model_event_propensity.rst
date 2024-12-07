@@ -19,11 +19,9 @@
 Event propensity
 ==================================================
 
-.. model-event-propensity-start
-
-Event propensity is a predictive model that determines the likelihood that a customer will perform a revenue-generating event within the next 30 days.
-
-.. model-event-propensity-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-event-propensity-start
+   :end-before: .. term-event-propensity-end
 
 
 .. _model-event-propensity-use-cases:

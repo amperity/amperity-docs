@@ -2486,6 +2486,15 @@ An escape character is specific to a data format and allows certain character se
 .. term-escape-character-end
 
 
+**event propensity** (model)
+
+.. term-event-propensity-start
+
+Event propensity is a predictive model that determines the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+
+.. term-event-propensity-end
+
+
 **Eventbrite**
 
 .. term-eventbrite-start
@@ -4022,7 +4031,7 @@ A flag that indicates if a customer has interacted with more than one brand.
 .. term-multi-brand-end
 
 
-**multi-channel**
+**multi-channel** (field)
 
 .. term-multi-channel-start
 
@@ -4031,25 +4040,25 @@ Multi-purchase channel is a flag that indicates if a customer has purchased from
 .. term-multi-channel-end
 
 
-**multi-channel campaign**
+**multichannel campaign**
 
 .. term-multi-channel-campaign-start
 
-A multi-channel marketing campaign blends marketing strategies across channels (i.e. email, SMS, paid media, etc.) to provide customers a personalized experience, but with consistent messages, offers, and products across all channels.
+A multichannel marketing campaign blends marketing strategies across channels (i.e. email, SMS, paid media, etc.) to provide customers a personalized experience, but with consistent messages, offers, and products across all channels.
 
 .. term-multi-channel-campaign-end
 
 
-**multi-channel customer**
+**multichannel customer**
 
 .. term-multi-channel-customer-start
 
-A multi-channel customer shows activity in at least two channels during the last measured time period.
+A multichannel customer shows activity in at least two channels during the last measured time period.
 
 .. term-multi-channel-customer-end
 
 
-**multi-channel marketing**
+**multichannel marketing**
 
 .. term-multi-channel-marketing-start
 
@@ -5698,7 +5707,7 @@ A service provider (SP) is a system that accepts authentication responses from a
 
 .. term-sftp-start
 
-The |ext_sftp| is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
+The `Secure File Transfer Protocol (SFTP) <https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol>`__ |ext_link| is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
 
 .. term-sftp-end
 
@@ -5707,7 +5716,7 @@ The |ext_sftp| is a network protocol that provides file access, file transfer, a
 
 .. term-shared-access-signature-start
 
-A |ext_sas| is a URI that grants restricted access rights to Azure Storage resources.
+A `shared access signature (SAS) <https://docs.microsoft.com/en-us/rest/api/storageservices/delegate-access-with-shared-access-signature>`__ |ext_link| is a URI that grants restricted access rights to Azure Storage resources.
 
 .. term-shared-access-signature-end
 

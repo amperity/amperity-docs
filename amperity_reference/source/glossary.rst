@@ -1750,6 +1750,14 @@ E
       :end-before: .. term-escape-character-end
 
 
+.. _e-event-propensity:
+
+**event character**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-event-propensity-start
+      :end-before: .. term-event-propensity-end
+
+
 .. _e-evergage:
 
 **Evergage**
@@ -2855,7 +2863,7 @@ M
 
 .. _m-multi-channel:
 
-**multi-channel**
+**multichannel**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-start
       :end-before: .. term-multi-channel-end
@@ -2863,7 +2871,7 @@ M
 
 .. _m-multi-channel-campaign:
 
-**multi-channel campaign**
+**multichannel campaign**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-campaign-start
       :end-before: .. term-multi-channel-campaign-end
@@ -2871,7 +2879,7 @@ M
 
 .. _m-multi-channel-customer:
 
-**multi-channel customer**
+**multichannel customer**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-customer-start
       :end-before: .. term-multi-channel-customer-end
@@ -2879,7 +2887,7 @@ M
 
 .. _m-multi-channel-marketing:
 
-**multi-channel marketing**
+**multichannel marketing**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-marketing-start
       :end-before: .. term-multi-channel-marketing-end
