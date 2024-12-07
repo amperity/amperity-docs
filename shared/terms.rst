@@ -7028,7 +7028,7 @@ The **Segment Editor** is the user interface for building segments. This editor 
 
 .. term-walmart-connect-start
 
-Walmart Connect is an advertising platform that allows brands to reach shoppers across Walmart's digital and physical stores. Send audiences to the Walmart demand-side platform to reach audiences at Walmart.
+Walmart Connect is an advertising platform that allows brands to reach shoppers across Walmart's digital and physical stores. Send audiences to the Walmart demand-side platform to reach Walmart customers online and in-store.
 
 .. term-walmart-connect-end
 
