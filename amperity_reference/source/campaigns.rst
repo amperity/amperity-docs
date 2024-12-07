@@ -141,7 +141,7 @@ A recurring campaign has the following components:
 
 .. _campaigns-types-multi-channel:
 
-Multi-channel campaigns
+Multichannel campaigns
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst

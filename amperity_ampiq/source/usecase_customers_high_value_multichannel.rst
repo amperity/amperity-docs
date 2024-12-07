@@ -13,10 +13,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        High-value multi-channel customers
+        High-value multichannel customers
 
 ==================================================
-High-value multi-channel customers
+High-value multichannel customers
 ==================================================
 
 .. usecase-customers-high-value-multi-channel-start
@@ -33,7 +33,7 @@ The following sections describe using the the **Segment Editor** to build a segm
 
 .. usecase-customers-high-value-multi-channel-howitworks-end
 
-**HIGH-VALUE MULTI-CHANNEL CUSTOMERS**
+**HIGH-VALUE MULTICHANNEL CUSTOMERS**
 
 .. usecase-customers-high-value-multi-channel-howitworks-callouts-start
 
@@ -98,7 +98,7 @@ The following sections describe using the the **Segment Editor** to build a segm
           :alt: Save your segment.
           :align: left
           :class: no-scaled-link
-     - You're done! Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "High Value Multi-channel Purchases".
+     - You're done! Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "High Value Multichannel Purchases".
 
        .. image:: ../../images/usecases-dialog-save-new-high-value-multi-purchase.png
           :width: 440 px

@@ -1543,7 +1543,7 @@
 
 .. |usecase_customers_high_value_multichannel| raw:: html
 
-   <a href="https://docs.amperity.com/ampiq/usecase_customers_high_value_multichannel.html">High-value multi-channel customers</a>
+   <a href="https://docs.amperity.com/ampiq/usecase_customers_high_value_multichannel.html">High-value multichannel customers</a>
 
 
 .. |usecase_customers_lapsing| raw:: html

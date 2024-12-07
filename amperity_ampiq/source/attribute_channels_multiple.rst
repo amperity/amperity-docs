@@ -13,10 +13,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Multi-channel purchases?
+        Multichannel purchases?
 
 ==================================================
-Multi-channel purchases?
+Multichannel purchases?
 ==================================================
 
 .. include:: ../../shared/terms.rst

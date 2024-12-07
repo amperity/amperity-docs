@@ -112,7 +112,7 @@ Recurring
 
 .. _campaigns-types-multi-channel:
 
-Multi-channel
+Multichannel
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
