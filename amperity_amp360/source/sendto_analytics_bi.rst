@@ -194,7 +194,7 @@ Sisense
 
 .. sendto-analytics-bi-tool-sisense-start
 
-Review the Sisense |ext_sisense_connector_list| and choose the option that works best for you. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
+Review the Sisense `connectors list <https://www.sisense.com/data-connectors/>`__ |ext_link| and choose the option that works best for you. A variety of options are supported, including :doc:`Amazon Redshift <destination_amazon_redshift>`, :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, :ref:`Google BigQuery <sendto-analytics-bi-tool-google-bigquery>`, :doc:`Google Cloud Storage <destination_google_cloud_storage>`, and Snowflake.
 
 .. sendto-analytics-bi-tool-sisense-end
 

@@ -36,7 +36,7 @@ Send data to Salesforce Sales Cloud
 
 .. destination-salesforce-sales-cloud-api-note-start
 
-.. note:: This destination uses the |ext_salesforce_sales_cloud_soap_api|.
+.. note:: This destination uses the `Salesforce Sales Cloud SOAP API <https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_quickstart_intro.htm>`__ |ext_link|.
 
 .. destination-salesforce-sales-cloud-api-note-end
 

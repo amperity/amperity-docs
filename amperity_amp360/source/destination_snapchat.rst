@@ -164,7 +164,7 @@ Snapchat schema types
 
 .. sendto-snapchat-schema-types-start
 
-The following Amperity columns may be mapped to the corresponding schema type to |ext_snapchat_api_add_users| using |ext_snapchat_api_audience_match|.
+The following Amperity columns may be mapped to the corresponding schema type to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| using `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link|.
 
 .. note:: A row that contains a **NULL** value is automatically filtered out and will be shown in the error logs.
 

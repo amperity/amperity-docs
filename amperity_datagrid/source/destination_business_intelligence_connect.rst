@@ -610,7 +610,7 @@ JDBC driver
 
 .. destination-bic-connect-other-jdbc-start
 
-Download the |ext_snowflake_jdbc| to connect BI tools such as Databricks, SAP Business Objects, `SQL Workbench <https://www.sql-workbench.eu/>`__ |ext_link|, or |ext_sisense| to the |bic| data warehouse.
+Download the |ext_snowflake_jdbc| to connect BI tools such as Databricks, SAP Business Objects, `SQL Workbench <https://www.sql-workbench.eu/>`__ |ext_link|, or `Sisense <https://documentation.sisense.com/latest/managing-data/connectors/snowflake-online.htm>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-other-jdbc-end
 
@@ -826,7 +826,7 @@ SAP Business Objects
 
 .. destination-bic-connect-to-sap-business-objects-start
 
-Download the |ext_snowflake_jdbc|, and then configure |ext_sap_business_objects_snowflake| to connect to the |bic| data warehouse.
+Download the |ext_snowflake_jdbc|, and then configure `SAP Business Objects <https://blogs.sap.com/2018/11/20/how-to-set-up-sap-businessobjects-with-snowflake-using-jdbc/>`__ |ext_link| to connect to the |bic| data warehouse.
 
 .. destination-bic-connect-to-sap-business-objects-end
 
@@ -842,7 +842,7 @@ SAS Cloud Analytic Services
 
 .. destination-bic-connect-to-sas-start
 
-Download the |ext_snowflake_jdbc|, and then configure |ext_sas_cas_jdbc| to connect to the |bic| data warehouse.
+Download the |ext_snowflake_jdbc|, and then configure `SAS Cloud Analytics Services <https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/casref/n1ldk5vubre9oen10bdqoqkfc1y7.htm>`__ |ext_link| to connect to the |bic| data warehouse.
 
 .. destination-bic-connect-to-sas-end
 

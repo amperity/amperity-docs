@@ -1816,6 +1816,11 @@
    <a href="https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html" target="_blank">SOAP base URI for the authentication subdomain</a>
 
 
+
+
+
+
+
 .. TODO: Keep Salesforce Pardot A because it's in a variable in a source topic.
 
 .. |ext_salesforce_pardot| raw:: html
@@ -1823,99 +1828,23 @@
    <a href="https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html" target="_blank">Pardot API</a>
 
 
-.. |ext_salesforce_sales_cloud_soap_api| raw:: html
-
-   <a href="https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_quickstart_intro.htm" target="_blank">Salesforce Sales Cloud SOAP API</a>
 
 
-.. |ext_sap_business_objects_snowflake| raw:: html
-
-   <a href="https://blogs.sap.com/2018/11/20/how-to-set-up-sap-businessobjects-with-snowflake-using-jdbc/" target="_blank">SAP Business Objects</a>
 
 
-.. |ext_sas| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/rest/api/storageservices/delegate-access-with-shared-access-signature" target="_blank">shared access signature (SAS)</a>
 
 
-.. |ext_sas_cas_jdbc| raw:: html
-
-   <a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/casref/n1ldk5vubre9oen10bdqoqkfc1y7.htm" target="_blank">SAS Cloud Analytics Services</a>
 
 
-.. |ext_sftp| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol" target="_blank">Secure File Transfer Protocol (SFTP)</a>
 
 
-.. |ext_shopify_rest_admin_api| raw:: html
-
-   <a href="https://shopify.dev/docs/admin-api/rest/reference" target="_blank">Shopify REST Admin API</a>
 
 
-.. |ext_shopify_rest_admin_api_read_data| raw:: html
-
-   <a href="https://shopify.dev/docs/admin-api/access-scopes" target="_blank">read data from the Shopify Admin API</a>
-
-
-.. |ext_shopify_rest_admin_api_scope_read_customers| raw:: html
-
-   <a href="https://shopify.dev/api/admin-rest/2022-10/resources/customer" target="_blank">read_customers</a>
-
-
-.. |ext_shopify_rest_admin_api_scope_read_orders| raw:: html
-
-   <a href="https://shopify.dev/api/admin-rest/2022-10/resources/order" target="_blank">read_orders</a>
-
-
-.. |ext_shopify_rest_admin_api_scope_read_products| raw:: html
-
-   <a href="https://shopify.dev/api/admin-rest/2022-10/resources/product" target="_blank">read_products</a>
-
-
-.. |ext_shopify_rest_admin_api_scopes_steps| raw:: html
-
-   <a href="https://help.shopify.com/en/manual/apps/custom-apps#update-admin-api-scopes-for-a-custom-app" target="_blank">enable the required scopes</a>
-
-
-.. |ext_sisense| raw:: html
-
-   <a href="https://documentation.sisense.com/latest/managing-data/connectors/snowflake-online.htm" target="_blank">Sisense</a>
-
-
-.. |ext_sisense_connector_list| raw:: html
-
-   <a href="https://www.sisense.com/data-connectors/" target="_blank">connectors list</a>
-
+.. TODO: Keep this one as a consolidated external link.
 
 .. |ext_snappass| raw:: html
 
    <a href="https://snappass.amperity.com/" target="_blank">Snappass</a>
-
-
-.. |ext_snapchat_api_add_users| raw:: html
-
-   <a href="https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users" target="_blank">add users</a>
-
-
-.. |ext_snapchat_api_audience_match| raw:: html
-
-   <a href="https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match" target="_blank">Snap Audience Match</a>
-
-
-.. |ext_snapchat_marketing_api| raw:: html
-
-   <a href="https://marketingapi.snapchat.com/docs/" target="_blank">Snapchat Marketing API</a>
-
-
-.. |ext_snapchat_offline_conversions| raw:: html
-
-   <a href="https://businesshelp.snapchat.com/s/article/upload-offline-events" target="_blank">offline conversions</a>
-
-
-.. |ext_snapchat_offline_conversions_file_requirements| raw:: html
-
-   <a href="https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US" target="_blank">events file requirements</a>
 
 
 
