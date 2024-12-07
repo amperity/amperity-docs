@@ -942,7 +942,7 @@ C
    .. include:: ../../shared/terms.rst
       :start-after: .. term-compliance-detail-report-table-start
       :end-before: .. term-compliance-detail-report-table-end
-	  
+
 
 .. _c-cort:
 
@@ -1500,22 +1500,30 @@ D
    .. include:: ../../shared/terms.rst
       :start-after: .. term-digital-channel-start
       :end-before: .. term-digital-channel-end
-	  
-	  
+
+
 .. _d-direct-mail:
 
 **direct mail**
-  .. include:: ../../shared/terms.rst
-	 :start-after: .. term-direct-mail-start
-	 :end-before: .. term-direct-mail-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-direct-mail-start
+      :end-before: .. term-direct-mail-end
 
 
 .. _d-dii:
 
 **directly identifying information (DII)**
-  .. include:: ../../shared/terms.rst
-	 :start-after: .. term-dii-start
-	 :end-before: .. term-dii-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-dii-start
+      :end-before: .. term-dii-end
+
+
+.. _d-discount-sensitivity:
+
+**discount sensitivity**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-discount-sensitivity-start
+      :end-before: .. term-discount-sensitivity-end
 
 
 .. _d-display-advertising:
@@ -3928,9 +3936,10 @@ R
 .. _r-rsa:
 
 **RSA** (cryptography)
-  .. include:: ../../shared/terms.rst
-     :start-after: .. term-rsa-start
-     :end-before: .. term-rsa-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-rsa-start
+      :end-before: .. term-rsa-end
+
 
 .. _glossary-s:
 
@@ -4872,7 +4881,8 @@ U
    .. include:: ../../shared/terms.rst
       :start-after: .. term-unified-coalesced-table-start
       :end-before: .. term-unified-coalesced-table-end
-	  
+
+
 .. _u-unified-compliance:
 
 **Unified Compliance**

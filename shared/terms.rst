@@ -2143,6 +2143,15 @@ Direct mail is a marketing strategy that uses printed media to send offers and a
 .. term-direct-mail-end
 
 
+**discount sensitivity** (model)
+
+.. term-discount-sensitivity-start
+
+Discount sensitivity is a predictive model that categorizes customers into three behaviors: full price shopper, discount opportunist, and discount seeker.
+
+.. term-discount-sensitivity-end
+
+
 **display advertising**
 
 .. term-display-advertising-start
