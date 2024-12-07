@@ -373,7 +373,7 @@ View notifications
 
 .. stitch-view-notifications-start
 
-Notifications for Stitch reports that run in the **Stitches** page appear after Amperity creates clusters of records based on the connection between pairs, and then gives each cluster a unique Amperity ID. Notifications typically indicate successful outcomes. Less often, notifications contain details for non-successful outcomes, such as failures related to upstream or downstream processes.
+Notifications for Stitch reports that run in the **Stitch** page appear after Amperity creates clusters of records based on the connection between pairs, and then gives each cluster a unique Amperity ID. Notifications typically indicate successful outcomes. Less often, notifications contain details for non-successful outcomes, such as failures related to upstream or downstream processes.
 
 .. stitch-view-notifications-end
 

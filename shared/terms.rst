@@ -5859,7 +5859,7 @@ A snapshot email is sent on a weekly basis from Amperity to provide a quick over
 
 .. term-snappy-start
 
-|ext_snappy| is a compression library aims for high speeds and reasonable compression instead of maximum compression. Files that are compressed with snappy tend to be larger, but the process to compress (and decompress them) is significantly faster.
+`Snappy <https://google.github.io/snappy/>`__ |ext_link| is a compression library aims for high speeds and reasonable compression instead of maximum compression. Files that are compressed with snappy tend to be larger, but the process to compress (and decompress them) is significantly faster.
 
 .. term-snappy-end
 
@@ -7022,6 +7022,15 @@ The visual **Query Editor** is a user interface that allows creating queries usi
 The **Segment Editor** is the user interface for building segments. This editor uses a series of drop-downs, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
 
 .. term-visual-segment-editor-end
+
+
+**Walmart Connect**
+
+.. term-walmart-connect-start
+
+Walmart Connect is an advertising platform that allows brands to reach shoppers across Walmart's digital and physical stores. Send audiences to the Walmart demand-side platform to reach Walmart customers online and in-store.
+
+.. term-walmart-connect-end
 
 
 **warehouse**, **data warehouse**

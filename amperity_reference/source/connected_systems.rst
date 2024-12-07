@@ -983,6 +983,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull data to and send data from Amperity using SFTP.
 
+   * - **Walmart Connect**
+     - 
+     - |system-yes|
+     - Use The Trade Desk API to send audiences to the Walmart demand-side platform and reach Walmart customers online and in-store.
+
    * - **Webhook (destination)**
      - 
      - |system-yes|

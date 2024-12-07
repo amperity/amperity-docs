@@ -25,11 +25,11 @@ Pull from Braze
    
 .. source-braze-integration-start
 
-Response data from campaigns can be integrated using |ext_braze_currents|, which synchronizes response data to Amazon S3 in |format_avro| format.
+Response data from campaigns can be integrated using `Braze Currents <https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/>`__ |ext_link|, which synchronizes response data to Amazon S3 in |format_avro| format.
 
 To integrate Braze response data into Amperity:
 
-#. Configure a |ext_braze_currents_send_to_s3|.
+#. Configure a `Braze Current to send data to an Amazon S3 bucket <https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/>`__ |ext_link|.
 #. Configure Amperity to :doc:`read Apache Avro files from that Amazon S3 bucket <source_amazon_s3>`.
 #. Configure feeds and automate data loads using standard workflows.
 

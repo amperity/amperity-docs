@@ -114,7 +114,6 @@ pygments_style = 'friendly'
 # A string of reStructuredText that will be included at the beginning of every source file that is read.
 rst_prolog = """
 .. include:: ../../tokens/external_links.txt
-.. include:: ../../tokens/images.txt
 .. include:: ../../tokens/internal_links.txt
 .. include:: ../../tokens/names.txt
 """

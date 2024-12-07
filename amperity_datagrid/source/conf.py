@@ -115,7 +115,6 @@ pygments_style = 'friendly'
 rst_prolog = """
 .. include:: ../../tokens/external_links.txt
 .. include:: ../../tokens/fivetran_party.txt
-.. include:: ../../tokens/images.txt
 .. include:: ../../tokens/internal_links.txt
 .. include:: ../../tokens/names.txt
 """

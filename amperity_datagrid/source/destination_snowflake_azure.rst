@@ -126,7 +126,7 @@ Get details
           :alt: Detail seven.
           :align: left
           :class: no-scaled-link
-     - Your Snowflake |ext_snowflake_account_identifier| for :ref:`Snowflake secure data sharing <destination-snowflake-azure-get-details-data-sharing>`.
+     - Your Snowflake `account identifier <https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>`__ |ext_link| for :ref:`Snowflake secure data sharing <destination-snowflake-azure-get-details-data-sharing>`.
 
 .. destination-snowflake-azure-get-details-end
 
@@ -146,7 +146,7 @@ Snowflake secure data sharing
 
 .. destination-snowflake-azure-get-details-data-sharing-start
 
-Snowflake |ext_snowflake_data_sharing| is not enabled by default. If your organization wants to use secure data sharing, your instance of Snowflake must be in the same region as the Amperity instance and you must provide your Snowflake |ext_snowflake_account_identifier| to Amperity.
+Snowflake `secure data sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro.html>`__ |ext_link| is not enabled by default. If your organization wants to use secure data sharing, your instance of Snowflake must be in the same region as the Amperity instance and you must provide your Snowflake `account identifier <https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>`__ |ext_link| to Amperity.
 
 Amperity supports the following regions:
 
@@ -179,11 +179,11 @@ Amperity requires access to the customer's instance of Snowflake. This requires 
 
 The following objects must be created in the customer's instance of Snowflake:
 
-#. A role via |ext_snowflake_create_role|.
+#. A role via `CREATE ROLE <https://docs.snowflake.net/manuals/sql-reference/sql/create-role.html>`__ |ext_link|.
 
-   The role must be granted permission to the warehouse via |ext_snowflake_grant_usage|. 
+   The role must be granted permission to the warehouse via `GRANT USAGE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html>`__ |ext_link|. 
 
-#. A stage via |ext_snowflake_create_stage|.
+#. A stage via `CREATE STAGE <https://docs.snowflake.com/en/sql-reference/sql/create-stage.html>`__ |ext_link|.
 
    .. note:: The external stage is used by the Amperity destination to stage data that is sent from Amperity in the Azure container. Snowflake picks data up from this location.
 
@@ -191,10 +191,10 @@ The following objects must be created in the customer's instance of Snowflake:
 
    When sending data from Amperity to Snowflake you must configure an external stage that points to the URL for the Azure container that is included with Amperity.  (``URL = 'azure://account.blob.core.windows.net/container[/path/]'``).
 
-#. A warehouse via |ext_snowflake_create_warehouse|.
-#. A user via |ext_snowflake_create_user|.
+#. A warehouse via `CREATE WAREHOUSE <https://docs.snowflake.net/manuals/sql-reference/sql/create-warehouse.html>`__ |ext_link|.
+#. A user via `CREATE USER <https://docs.snowflake.net/manuals/sql-reference/sql/create-user.html>`__ |ext_link|.
 
-   The user must be added to the role via |ext_snowflake_grant_role|.
+   The user must be added to the role via `GRANT ROLE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-role.html>`__ |ext_link|.
 
 .. destination-snowflake-azure-configure-objects-end
 
@@ -295,7 +295,7 @@ Configure storage integration
 
 Amperity can send database table data to Snowflake. This output should be written to Azure Blob Storage via a storage integration configured in Snowflake. This requires the Azure tenant ID and the full path to each allowed storage location.
 
-For each database and schema to be output to the Amazon S3 bucket, specify a database and schema via |ext_snowflake_use|, create a stage via |ext_snowflake_create|, and then |ext_snowflake_grant_usage|.
+For each database and schema to be output to the Amazon S3 bucket, specify a database and schema via `USE <https://docs.snowflake.net/manuals/sql-reference/sql/use.html>`__ |ext_link|, create a stage via `CREATE <https://docs.snowflake.net/manuals/sql-reference/sql/create>`__ |ext_link|, and then `GRANT USAGE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html>`__ |ext_link|.
 
 .. destination-snowflake-azure-configure-storage-integration-end
 
@@ -330,7 +330,7 @@ Configure tables
 
 .. destination-snowflake-azure-configure-tables-start
 
-For each table to be sent from Amperity, the Amperity role in Snowflake must be given permission. This requires permissions on both the database and the schema that contain the table. Usage rights to the database and schema do not grant access to the entire database or schema. Additional table-specific grants are required via a combination of |ext_snowflake_grant_usage|, |ext_snowflake_use|, and |ext_snowflake_grant_select|.  
+For each table to be sent from Amperity, the Amperity role in Snowflake must be given permission. This requires permissions on both the database and the schema that contain the table. Usage rights to the database and schema do not grant access to the entire database or schema. Additional table-specific grants are required via a combination of `GRANT USAGE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html>`__ |ext_link|, `USE <https://docs.snowflake.net/manuals/sql-reference/sql/use.html>`__ |ext_link|, and `GRANT SELECT <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege-share.html>`__ |ext_link|.  
 
 .. destination-snowflake-azure-configure-tables-end
 

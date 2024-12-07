@@ -5175,6 +5175,14 @@ W
 ==================================================
 
 
+.. _w-walmart-connect:
+
+**Walmart Connect**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-walmart-connect-start
+      :end-before: .. term-walmart-connect-end
+
+
 .. _w-win-back-campaign:
 
 **win-back campaign**

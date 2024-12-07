@@ -450,7 +450,7 @@ About AmpAI
 
 .. settings-user-ampai-start
 
-AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making. AmpAI features, including the AI Assistant, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** policy.
+AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making. AmpAI features, including the AmpAI Assistant, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** policy.
 
 .. settings-user-ampai-end
 
@@ -459,7 +459,7 @@ AmpAI provides marketers, analysts, and data engineers with an AI-powered toolki
 .. settings-user-ampai-steps-start
 
 #. From the **Settings** page, open the **AmpAI** tab.
-#. Under **Advanced settings**, select the **Disable AmpAI features** option to disable AmpAI features, including the AI Assistant.
+#. Under **Advanced settings**, select the **Disable AmpAI features** option to disable AmpAI features, including the AmpAI Assistant.
 #. Click **Confirm**.
 
 .. settings-user-ampai-steps-end

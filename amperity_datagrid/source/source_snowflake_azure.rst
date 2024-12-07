@@ -359,7 +359,7 @@ Pull columns using Snowflake query syxtax
 
 .. source-snowflake-azure-add-courier-query-start
 
-You can use |ext_snowflake_query_syntax| to build a query that runs against one (or more) Snowflake tables.
+You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query that runs against one (or more) Snowflake tables.
 
 .. important:: A Snowflake query name must be unique. The name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
 
@@ -392,7 +392,7 @@ You can use |ext_snowflake_query_syntax| to build a query that runs against one 
 
    .. caution:: You must add a blank line to the end of the |source-name| query.
 
-   Use |ext_snowflake_query_syntax| to build a query to run against a table that is to be pulled to Amperity.
+   Use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query to run against a table that is to be pulled to Amperity.
 
    .. important:: The name of the query must be added to the **file** parameter within the load operations. For example:
 
