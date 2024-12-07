@@ -5,18 +5,18 @@
 
 .. meta::
     :description lang=en:
-        The AmpAI Assistant provides real-time insights while authoring SQL queries.
+        AmpAI Assistant provides real-time insights while authoring SQL queries.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The AmpAI Assistant provides real-time insights while authoring SQL queries.
+        AmpAI Assistant provides real-time insights while authoring SQL queries.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About the AmpAI Assistant
+        About AmpAI Assistant
 
 ==================================================
-About the  AmpAI Assistant
+About AmpAI Assistant
 ==================================================
 
 .. assistant-overview-start
@@ -72,16 +72,16 @@ Use the **AmpAI Assistant** to:
 
 .. _assistant-enable-disable:
 
-Enable (or disable) the AmpAI Assistant
+Enable (or disable) AmpAI Assistant
 ==================================================
 
 .. assistant-enable-disable-start
 
-AmpAI features, including the **AmpAI Assistant**, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
+AmpAI features, including **AmpAI Assistant**, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
 
 .. assistant-enable-disable-end
 
-**To disable the AmpAI Assistant**
+**To disable AmpAI Assistant**
 
 .. include:: ../../amperity_reference/source/settings.rst
    :start-after: .. settings-user-ampai-steps-start
@@ -90,16 +90,16 @@ AmpAI features, including the **AmpAI Assistant**, may be enabled (or disabled) 
 
 .. _assistant-howitworks:
 
-How the AmpAI Assistant works
+How AmpAI Assistant works
 ==================================================
 
 .. assistant-howitworks-start
 
-The **AmpAI Assistant** is powered by a private instance of OpenAI GPT-4.
+**AmpAI Assistant** is powered by a private instance of OpenAI GPT-4.
 
 Amperity uses the largest context window that is currently available, and then provides query, schema, results, and error information to the model to help ensure the best chance of generating highly relevant results.
 
-.. note:: More detail about how the **AmpAI Assistant** works, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
+.. note:: More detail about how **AmpAI Assistant** works, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
 
 .. assistant-howitworks-end
 
