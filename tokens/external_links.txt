@@ -166,16 +166,6 @@
    <a href="https://docs.aws.amazon.com/lambda/latest/dg/security-iam.html#security_iam_access-manage" target="_blank">use inline policies</a>
 
 
-.. |ext_aws_neptune| raw:: html
-
-   <a href="https://docs.aws.amazon.com/neptune/latest/userguide/intro.html" target="_blank">Amazon Neptune</a>
-
-
-.. |ext_aws_neptune_load_csv| raw:: html
-
-   <a href="https://docs.aws.amazon.com/neptune/latest/userguide/bulk-load-tutorial-format-gremlin.html" target="_blank">load CSV file</a>
-
-
 .. |ext_aws_pinpoint| raw:: html
 
    <a href="https://aws.amazon.com/pinpoint/" target="_blank">Amazon Pinpoint</a>
@@ -511,16 +501,6 @@
    <a href="https://support.cordial.com/hc/en-us/articles/4411361663501-System-events-reference-page" target="_blank">the full list of activity types</a>
 
 
-.. |ext_cosmosdb| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/" target="_blank">CosmosDB</a>
-
-
-.. |ext_cosmosdb_load_csv| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/import-data" target="_blank">load CSV file</a>
-
-
 .. |ext_criteo_api| raw:: html
 
    <a href="https://developers.criteo.com/marketing-solutions/docs" target="_blank">Criteo API</a>
@@ -734,16 +714,6 @@
 .. |ext_databricks_sql_reference_copy_into| raw:: html
 
    <a href="https://docs.databricks.com/spark/latest/spark-sql/language-manual/delta-copy-into.html" target="_blank">COPY INTO</a>
-
-
-.. |ext_datastax| raw:: html
-
-   <a href="https://www.datastax.com/" target="_blank">DataStax</a>
-
-
-.. |ext_datastax_load_csv| raw:: html
-
-   <a href="https://docs.datastax.com/en/dse/5.1/dse-dev/datastax_enterprise/graph/dgl/dglCSV.html" target="_blank">load CSV file</a>
 
 
 .. |ext_delta_sharing| raw:: html
@@ -1161,11 +1131,6 @@
    <a href="https://tools.ietf.org/id/draft-knodel-terminology-00.html" target="_blank">Terminology, Power and Oppressive Language</a>
 
 
-.. |ext_janusgraph| raw:: html
-
-   <a href="https://janusgraph.org/" target="_blank">JanusGraph</a>
-
-
 .. |ext_jodatime| raw:: html
 
    <a href="https://www.joda.org/joda-time/" target="_blank">Joda-Time</a>
@@ -1476,14 +1441,6 @@
    <a href="https://en.wikipedia.org/wiki/JSON_streaming#Line-delimited_JSON" target="_blank">Newline-delimited JSON (NDJSON)</a>
 
 
-.. |ext_neo4j| raw:: html
-
-   <a href="https://neo4j.com/" target="_blank">Neo4j</a>
-
-
-.. |ext_neo4j_load_csv| raw:: html
-
-   <a href="https://neo4j.com/developer/guide-import-csv/" target="_blank">load CSV file</a>
 
 
 .. |ext_nrf_454| raw:: html
@@ -1565,16 +1522,6 @@
 .. |ext_orc| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Apache_ORC" target="_blank">Optimized Row Columnar (ORC)</a>
-
-
-.. |ext_orientdb| raw:: html
-
-   <a href="https://orientdb.org/" target="_blank">OrientDB</a>
-
-
-.. |ext_orientdb_load_csv| raw:: html
-
-   <a href="https://www.orientdb.com/docs/2.2.x/Import-from-CSV-to-a-Graph.html" target="_blank">load CSV file</a>
 
 
 .. |ext_pgp| raw:: html
