@@ -339,7 +339,7 @@ You can upload a CSV file the **Customer 360** page.
 
 .. file-uploads-via-c360-steps-start
 
-#. From the **Customer 360** page, on a C360 table, lick on the more options button.
+#. From the **Customer 360** page, on a C360 table, click on the more options button.
 #. From the **Configure File** window, drag and drop a file in the window or click the window to browse for files on your computer.
 #. Wait a few moments for the file to upload.
 #. In the **File Identifier** field, select a file.
