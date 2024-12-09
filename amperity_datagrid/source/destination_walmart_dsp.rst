@@ -2,79 +2,81 @@
 .. https://docs.amperity.com/datagrid/
 .. 
 
-.. |destination-name| replace:: Oracle Eloqua
-.. |plugin-name| replace:: Oracle Eloqua
-.. |what-send| replace:: audiences
-.. |filter-the-list| replace:: "ora"
+.. |destination-name| replace:: Walmart DSP
+.. |destination-api| replace:: The Trade Desk API
+.. |plugin-name| replace:: The Trade Desk
+.. |what-send| replace:: audience lists
+.. |filter-the-list| replace:: "trad"
+.. |email-plus-send| replace:: additional attributes
+.. |credential-type| replace:: **tradedesk**
+.. |credential-details| replace:: the The Trade Desk API key and API secret
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: shared list name and primary key
+.. |data-template-config-settings-list| replace:: segment name and membership duration settings
 .. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_oracle_eloqua|
-.. |channel-link| replace:: |channel_oracle_eloqua|
+.. |sendto-link| replace:: send queries
+.. |channel-link| replace:: send campaigns
+.. |allow-for-what| replace:: audiences
+.. |allow-for-duration| replace:: up to 48 hours
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Oracle Eloqua.
+        Configure Amperity to send audiences to Walmart DSP.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Oracle Eloqua.
+        Configure Amperity to send audiences to Walmart DSP.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to Oracle Eloqua
+        Send audiences to Walmart DSP
 
 ==================================================
-Send audiences to Oracle Eloqua
+Send audiences to Walmart DSP
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-oracle-eloqua-start
-   :end-before: .. term-oracle-eloqua-end
+   :start-after: .. term-walmart-connect-start
+   :end-before: .. term-walmart-connect-end
 
-.. destination-oracle-eloqua-context-start
+.. destination-walmart-dsp-about-start
 
-Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
+.. admonition:: United States audiences only
 
-Amperity will add and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list.
+   Your brand should only send custom audiences that contain customers who reside within the United States to |destination-name|.
 
-.. destination-oracle-eloqua-context-end
+.. destination-walmart-dsp-about-end
 
-.. destination-oracle-eloqua-api-note-start
+.. destination-walmart-dsp-api-note-start
 
-.. note:: The first audience that is sent from Amperity to |destination-name| should be to a new or empty shared list.
+.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage audiences.
 
-.. destination-oracle-eloqua-api-note-end
+   .. include:: ../../shared/destinations.rst
+      :start-after: .. destinations-add-destinations-intro-allow-for-start
+      :end-before: .. destinations-add-destinations-intro-allow-for-end
 
-.. destination-oracle-eloqua-api-note-start
+.. destination-walmart-dsp-api-note-end
 
-.. important:: This destination uses the `Bulk Loader API <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-develop/Developers/BulkAPI/Reference/bulk-limits.htm>`__ |ext_link| to send shared lists to |destination-name|.
-
-   Review the `Bulk API best practices <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-develop/Developers/BulkAPI/BestPractices/best-practices.htm?Highlight=off-peak>`__ |ext_link| to help ensure that Amperity will be successful when importing your shared lists to |destination-name|.
-
-.. destination-oracle-eloqua-api-note-end
-
-.. destination-oracle-eloqua-steps-to-send-start
+.. destination-walmart-dsp-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-oracle-eloqua-get-details>`
-#. :ref:`Add destination <destination-oracle-eloqua-add-destination>`
-#. :ref:`Add data template <destination-oracle-eloqua-add-data-template>`
+#. :ref:`Get details <destination-walmart-dsp-get-details>`
+#. :ref:`Add destination <destination-walmart-dsp-add-destination>`
+#. :ref:`Add data template <destination-walmart-dsp-add-data-template>`
 
-.. destination-oracle-eloqua-steps-to-send-end
+.. destination-walmart-dsp-steps-to-send-end
 
 
-.. _destination-oracle-eloqua-get-details:
+.. _destination-walmart-dsp-get-details:
 
 Get details
 ==================================================
 
-.. destination-oracle-eloqua-get-details-start
+.. destination-walmart-dsp-get-details-start
 
 |destination-name| requires the following configuration details:
 
@@ -84,48 +86,74 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - Login information for |destination-name|. This includes:
+     - **UID 2.0 agreement**
 
-       * **Username** The username for your |destination-name| account.
-       * **Password** The password associated with your username.
-       * **Company name** The name of your company, as used with your |destination-name| account.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-unified-id-20-start
+          :end-before: .. term-unified-id-20-end
+
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-the-trade-desk-uid2-agreement-start
+          :end-before: .. setting-the-trade-desk-uid2-agreement-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The name of the shared list to be managed by Amperity.
+     - Configuration details for |destination-name|.
 
-       Use filename templates and/or data templates to configure Amperity to support managing more than one shared list. For example:
+       * The advertiser ID
+       * The advertiser secret
 
-       * A timestamp at the end of a filename template --- **Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv** --- will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
-       * A campaign that is configured only for campaign name and group name --- **{{ campaign_name }} - {{ group_name }}** --- will update the same shared list each time the audience is sent from Amperity.
+       .. tip:: You can find the advertiser ID and secret key from the management console within |destination-name|. Open **Preferences**, and then **First Party Data Credentials**. The advertiser ID and secret key are shown there.
 
-       .. caution:: You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
-
-          This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This will generate the database name, which is typically (but not always) prefixed with **C_**.
-
-          Use a query to build the results your brand wants to send to |destination-name|. Be sure to map each field in the query results to the database name in |destination-name|.
-
-          A campaign must use the **Edit Attributes** dialog box to configure the attributes to be sent, along with ensuring the correct database type mapping from |destination-name| is applied to each field.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - The primary key for the shared list: **C_EmailAddress**.
+     - The name of a segment in |destination-name|.
 
-       An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list. Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|; `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
+       Membership duration defines the length of time (in days) at which individual audience members will belong to the segment in |destination-name|. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
 
-.. destination-oracle-eloqua-get-details-end
+       .. tip:: Set this value to "0" to remove all audience members.
+
+       .. caution:: The membership duration is measured in days. Adjust the membership duration value to be greater than (or equal to) than the frequency at which your brand will send campaigns or orchestrations from Amperity.
+
+          For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
+
+          If a campaign is sent every 30 days, but the membership duration is 14, then the audience size for the last 16 days of the duration window will be 0.
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail three.
+          :align: left
+          :class: no-scaled-link
+     - You may use a query to build the list of email addresses or you may select the **email** attribute from the attribute editor in your campaigns.
+
+       .. important:: The **email** column is required and may not be aliased.
+
+       **Example query**
+
+       .. include:: ../../shared/sendtos.rst
+          :start-after: .. sendtos-build-query-email-only-start
+          :end-before: .. sendtos-build-query-email-only-end
+
+       .. include:: ../../amperity_amp360/source/destination_the_trade_desk.rst
+          :start-after: .. sendto-the-trade-desk-build-query-start
+          :end-before: .. sendto-the-trade-desk-build-query-end
 
 
-.. _destination-oracle-eloqua-add-destination:
+.. destination-walmart-dsp-get-details-end
+
+
+.. _destination-walmart-dsp-add-destination:
 
 Add destination
 ==================================================
@@ -136,7 +164,7 @@ Add destination
 
 **To add a destination**
 
-.. destination-oracle-eloqua-add-destination-steps-start
+.. destination-walmart-dsp-add-destination-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -151,7 +179,7 @@ Add destination
           :start-after: .. destinations-add-destination-start
           :end-before: .. destinations-add-destination-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
+       .. image:: ../../images/mockup-destinations-tab-add-01-select-the-trade-desk.png
           :width: 500 px
           :alt: Name, description, choose plugin.
           :align: left
@@ -171,7 +199,7 @@ Add destination
           :start-after: .. destinations-add-credentials-start
           :end-before: .. destinations-add-credentials-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
+       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-the-trade-desk.png
           :width: 500 px
           :alt: Choose an existing credential or add credential.
           :align: left
@@ -181,21 +209,15 @@ Add destination
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
+       .. image:: ../../images/mockup-destinations-tab-credentials-02-select-the-trade-desk.png
           :width: 500 px
-          :alt: Choose an existing credential or add credential.
+          :alt: Set the following credentials for The Trade Desk.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
+       Add the advertiser ID and secret key for your account with |destination-name|.
 
-       |destination-name| has the following settings:
-
-       * **Username** The username for your |destination-name| account.
-       * **Password** The password associated with your username.
-       * **Company name** The name of your company, as used with your |destination-name| account.
+       .. tip:: You can find the advertiser ID and secret key from the management console within |destination-name|. Open **Preferences**, and then **First Party Data Credentials**. The advertiser ID and secret key are shown there.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start
@@ -211,28 +233,19 @@ Add destination
           :start-after: .. destinations-destination-settings-start
           :end-before: .. destinations-destination-settings-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
+       .. image:: ../../images/mockup-destinations-tab-add-03-settings-the-trade-desk.png
           :width: 500 px
-          :alt: Settings for Dynamics 365 Marketing.
+          :alt: Settings for The Trade Desk.
           :align: left
           :class: no-scaled-link
 
-       The following settings are specific to |destination-name|:
+       Optional. You may define a segment name and membership duration (in days) for individual audience members. These may be left blank, and then specified with a data template.
 
-       .. list-table::
-          :widths: 180 320
-          :header-rows: 1
+       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than (or equal to) the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
 
-          * - **Setting**
-            - **Description**
-          * - **Shared List Name**
-            - The name of the shared list in |destination-name|. If the shared list does not exist, Amperity will create it.
+          For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
-              .. important:: Amperity does not create custom attributes for a shared list. A shared list that contains custom attributes must be created in |destination-name| along with any custom attributes before Amperity can send data.
-
-          * - **Audience Primary Key**
-            - This value must be set to **C_EmailAddress**.
-
+          Set this value to "0" to clear out the audience in the segment.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -265,10 +278,10 @@ Add destination
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-oracle-eloqua-add-destination-steps-end
+.. destination-walmart-dsp-add-destination-steps-end
 
 
-.. _destination-oracle-eloqua-add-data-template:
+.. _destination-walmart-dsp-add-data-template:
 
 Add data template
 ==================================================
@@ -277,9 +290,15 @@ Add data template
    :start-after: .. term-data-template-start
    :end-before: .. term-data-template-end
 
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add a data template**
 
-.. destination-oracle-eloqua-add-data-template-steps-start
+.. destination-walmart-dsp-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -294,7 +313,7 @@ Add data template
           :start-after: .. destinations-data-template-open-template-start
           :end-before: .. destinations-data-template-open-template-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
+       .. image:: ../../images/mockup-data-template-tab-add-01-details-the-trade-desk.png
           :width: 500 px
           :alt: Step 1
           :align: left
@@ -314,7 +333,7 @@ Add data template
           :start-after: .. destinations-data-template-business-users-start
           :end-before: .. destinations-data-template-business-users-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
+       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access-no-campaigns.png
           :width: 500 px
           :alt: Step 2.
           :align: left
@@ -334,11 +353,15 @@ Add data template
           :start-after: .. destinations-data-template-verify-config-settings-start
           :end-before: .. destinations-data-template-verify-config-settings-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
+       .. image:: ../../images/mockup-data-template-tab-add-03-settings-the-trade-desk.png
           :width: 500 px
           :alt: Verify settings for the data template.
           :align: left
           :class: no-scaled-link
+
+       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than (or equal to) the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
+
+          For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-note-start
@@ -364,4 +387,4 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-oracle-eloqua-add-data-template-steps-end
+.. destination-walmart-dsp-add-data-template-steps-end

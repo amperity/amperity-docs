@@ -942,7 +942,7 @@ C
    .. include:: ../../shared/terms.rst
       :start-after: .. term-compliance-detail-report-table-start
       :end-before: .. term-compliance-detail-report-table-end
-	  
+
 
 .. _c-cort:
 
@@ -1500,22 +1500,30 @@ D
    .. include:: ../../shared/terms.rst
       :start-after: .. term-digital-channel-start
       :end-before: .. term-digital-channel-end
-	  
-	  
+
+
 .. _d-direct-mail:
 
 **direct mail**
-  .. include:: ../../shared/terms.rst
-	 :start-after: .. term-direct-mail-start
-	 :end-before: .. term-direct-mail-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-direct-mail-start
+      :end-before: .. term-direct-mail-end
 
 
 .. _d-dii:
 
 **directly identifying information (DII)**
-  .. include:: ../../shared/terms.rst
-	 :start-after: .. term-dii-start
-	 :end-before: .. term-dii-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-dii-start
+      :end-before: .. term-dii-end
+
+
+.. _d-discount-sensitivity:
+
+**discount sensitivity**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-discount-sensitivity-start
+      :end-before: .. term-discount-sensitivity-end
 
 
 .. _d-display-advertising:
@@ -1748,6 +1756,14 @@ E
    .. include:: ../../shared/terms.rst
       :start-after: .. term-escape-character-start
       :end-before: .. term-escape-character-end
+
+
+.. _e-event-propensity:
+
+**event character**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-event-propensity-start
+      :end-before: .. term-event-propensity-end
 
 
 .. _e-evergage:
@@ -2855,7 +2871,7 @@ M
 
 .. _m-multi-channel:
 
-**multi-channel**
+**multichannel**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-start
       :end-before: .. term-multi-channel-end
@@ -2863,7 +2879,7 @@ M
 
 .. _m-multi-channel-campaign:
 
-**multi-channel campaign**
+**multichannel campaign**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-campaign-start
       :end-before: .. term-multi-channel-campaign-end
@@ -2871,7 +2887,7 @@ M
 
 .. _m-multi-channel-customer:
 
-**multi-channel customer**
+**multichannel customer**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-customer-start
       :end-before: .. term-multi-channel-customer-end
@@ -2879,7 +2895,7 @@ M
 
 .. _m-multi-channel-marketing:
 
-**multi-channel marketing**
+**multichannel marketing**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-channel-marketing-start
       :end-before: .. term-multi-channel-marketing-end
@@ -3920,9 +3936,10 @@ R
 .. _r-rsa:
 
 **RSA** (cryptography)
-  .. include:: ../../shared/terms.rst
-     :start-after: .. term-rsa-start
-     :end-before: .. term-rsa-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-rsa-start
+      :end-before: .. term-rsa-end
+
 
 .. _glossary-s:
 
@@ -4864,7 +4881,8 @@ U
    .. include:: ../../shared/terms.rst
       :start-after: .. term-unified-coalesced-table-start
       :end-before: .. term-unified-coalesced-table-end
-	  
+
+
 .. _u-unified-compliance:
 
 **Unified Compliance**
@@ -5173,6 +5191,14 @@ V
 
 W
 ==================================================
+
+
+.. _w-walmart-connect:
+
+**Walmart Connect**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-walmart-connect-start
+      :end-before: .. term-walmart-connect-end
 
 
 .. _w-win-back-campaign:

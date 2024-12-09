@@ -103,14 +103,13 @@ and then load that data to your preferred query database.
 
 The following graph databases support using Gremlin and importing CSV files directly:
 
-* |ext_aws_neptune| (|ext_aws_neptune_load_csv|)
-* |ext_cosmosdb| (|ext_cosmosdb_load_csv|)
-* |ext_datastax| (|ext_datastax_load_csv|)
-* |ext_neo4j| (|ext_neo4j_load_csv|)
-* |ext_orientdb| (|ext_orientdb_load_csv|)
+* `AWS Neptune <https://docs.aws.amazon.com/neptune/latest/userguide/intro.html>`__ |ext_link| (`load CSV file <https://docs.aws.amazon.com/neptune/latest/userguide/bulk-load-tutorial-format-gremlin.html>`__ |ext_link|)
+* `CosmoDB <https://docs.microsoft.com/en-us/azure/cosmos-db/>`__ |ext_link| (`load CSV file <https://docs.microsoft.com/en-us/azure/cosmos-db/import-data>`__ |ext_link|)
+* `DataStax <https://www.datastax.com/>`__ |ext_link| (`load CSV file <https://docs.datastax.com/en/dse/5.1/dse-dev/datastax_enterprise/graph/dgl/dglCSV.html>`__ |ext_link|)
+* `Neo4j <https://neo4j.com/>`__ |ext_link| (`load CSV file <https://neo4j.com/developer/guide-import-csv/>`__ |ext_link|)
+* `OrientDB <https://orientdb.org/>`__ |ext_link| (`load CSV file <https://www.orientdb.com/docs/2.2.x/Import-from-CSV-to-a-Graph.html>`__ |ext_link|)
 
-
-Other graph databases, such as |ext_janusgraph| require using APIs to convert, and then load the graph data.
+Other graph databases, such as `JanusGraph <https://janusgraph.org/>`__ |ext_link| require using APIs to convert, and then load the graph data.
 
 .. graph-database-workflow-send-data-end
 

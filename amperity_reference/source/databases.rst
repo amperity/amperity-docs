@@ -614,7 +614,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
    Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
    .. image:: ../../images/mockup-databases-table-realtime-add-01.png
-      :width: 580 px
+      :width: 420 px
       :alt: Batch and streaming layers.
       :align: left
       :class: no-scaled-link
@@ -629,7 +629,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
    Select the databases for which this real-time table will be available from the **Queries** page.
 
    .. image:: ../../images/mockup-databases-table-realtime-add-02.png
-      :width: 580 px
+      :width: 420 px
       :alt: Batch and streaming layers.
       :align: left
       :class: no-scaled-link

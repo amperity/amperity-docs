@@ -5,23 +5,23 @@
 
 .. meta::
     :description lang=en:
-        The AI Assistant provides real-time insights while authoring SQL queries.
+        AmpAI Assistant provides real-time insights while authoring SQL queries.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The AI Assistant provides real-time insights while authoring SQL queries.
+        AmpAI Assistant provides real-time insights while authoring SQL queries.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AI Assistant
+        About AmpAI Assistant
 
 ==================================================
-AI Assistant
+About AmpAI Assistant
 ==================================================
 
 .. assistant-overview-start
 
-The AI Assistant is a generative AI feature within the SQL **Query Editor** that provides real-time insights while you author SQL queries against any database in the **Customer 360** page.
+The **AmpAI Assistant** is a generative AI feature within the SQL **Query Editor** that provides real-time insights while you author SQL queries against any database in the **Customer 360** page.
 
 .. assistant-overview-end
 
@@ -33,7 +33,7 @@ The AI Assistant is a generative AI feature within the SQL **Query Editor** that
 
 .. assistant-usecases-start
 
-Use the AI Assistant to:
+Use the **AmpAI Assistant** to:
 
 * Ask for help while resolving a SQL error
 * Get advice on how to improve a query
@@ -44,9 +44,9 @@ Use the AI Assistant to:
 
 .. assistant-overview-important-start
 
-.. important:: As with all generative AI capabilities, the outputs of AI Assistant are probabilistic. Users should double check outputs for accuracy.
+.. important:: As with all generative AI capabilities, the outputs of **AmpAI Assistant** are probabilistic. Users should double check outputs for accuracy.
 
-   Review the |support_ai_assistant_privacy_faq| to learn more about how the AI Assistant interacts with GPT-4 and the Microsoft Azure OpenAI Service.
+   Review the |support_ai_assistant_privacy_faq| to learn more about how the **AmpAI Assistant** interacts with GPT-4 and the Microsoft Azure OpenAI Service.
 
 .. assistant-overview-important-end
 
@@ -63,7 +63,7 @@ Use the AI Assistant to:
              :alt: Amperity Learning Lab
              :align: left
              :class: no-scaled-link
-        - The AI Assistant is a generative AI-based feature that can help you build better SQL queries against the data in your Amperity tenant.
+        - The **AmpAI Assistant** is a generative AI-based feature that can help you build better SQL queries against the data in your Amperity tenant.
 
           Open **Learning Lab** to learn more about how the |ext_learning_lab_ai_assistant| can help you build better queries. Registration is required.
 
@@ -72,14 +72,16 @@ Use the AI Assistant to:
 
 .. _assistant-enable-disable:
 
-Enable (or disable) the AI Assistant
+Enable (or disable) AmpAI Assistant
 ==================================================
 
-.. include:: ../../amperity_reference/source/assistant.rst
-   :start-after: .. assistant-overview-start
-   :end-before: .. assistant-overview-end
+.. assistant-enable-disable-start
 
-**To disable the AI Assistant**
+AmpAI features, including **AmpAI Assistant**, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
+
+.. assistant-enable-disable-end
+
+**To disable AmpAI Assistant**
 
 .. include:: ../../amperity_reference/source/settings.rst
    :start-after: .. settings-user-ampai-steps-start
@@ -88,16 +90,16 @@ Enable (or disable) the AI Assistant
 
 .. _assistant-howitworks:
 
-How the AI Assistant works
+How AmpAI Assistant works
 ==================================================
 
 .. assistant-howitworks-start
 
-The AI Assistant is powered by a private instance of OpenAI GPT-4.
+**AmpAI Assistant** is powered by a private instance of OpenAI GPT-4.
 
 Amperity uses the largest context window that is currently available, and then provides query, schema, results, and error information to the model to help ensure the best chance of generating highly relevant results.
 
-.. note:: More detail about how the AI Assistant works, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
+.. note:: More detail about how **AmpAI Assistant** works, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
 
 .. assistant-howitworks-end
 
@@ -109,7 +111,7 @@ Examples
 
 .. assistant-examples-start
 
-The following examples show some of the ways you can use the AI Assistant while working in the SQL **Query Editor**.
+The following examples show some of the ways you can use the **AmpAI Assistant** while working in the SQL **Query Editor**.
 
 * :ref:`assistant-example-syntax`
 * :ref:`assistant-example-errors`
@@ -127,13 +129,13 @@ Ask questions about syntax
 
 .. assistant-example-syntax-start
 
-You can ask the AI Assistant to help you understand how specific types of syntax work in a SQL query.
+You can ask the **AmpAI Assistant** to help you understand how specific types of syntax work in a SQL query.
 
 **Question**
    "What is the syntax for a CASE statement?"
 
 **Answer**
-   The AI Assistant will respond similar to:
+   The **AmpAI Assistant** will respond similar to:
 
    .. image:: ../../images/assistant-example-syntax.png
       :width: 400 px
@@ -153,13 +155,13 @@ Ask for help resolving errors
 
 .. assistant-example-errors-start
 
-When you have an error in your query syntax you can ask the AI Assistant for help resolving the error.
+When you have an error in your query syntax you can ask the **AmpAI Assistant** for help resolving the error.
 
 **Question**
    "Can you help me resolve this error?"
 
 **Answer**
-   The AI Assistant will respond similar to:
+   The **AmpAI Assistant** will respond similar to:
 
    .. image:: ../../images/assistant-example-errors.png
       :width: 400 px
@@ -177,7 +179,7 @@ Build natural language queries
 
 .. assistant-example-natural-language-start
 
-You can use natural language---the same types of sentences you use when talking to co-workers and friends---to ask the AI Assistant to help you build queries against any database in the **Customer 360** page.
+You can use natural language---the same types of sentences you use when talking to co-workers and friends---to ask the **AmpAI Assistant** to help you build queries against any database in the **Customer 360** page.
 
 .. assistant-example-natural-language-end
 
@@ -193,7 +195,7 @@ Customers by lifetime spend
    "Who are my top 100 customers by lifetime spend?"
 
 **Answer**
-   The AI Assistant will respond similar to:
+   The **AmpAI Assistant** will respond similar to:
 
    .. image:: ../../images/assistant-example-syntax-natural-language.png
       :width: 400 px
@@ -201,9 +203,9 @@ Customers by lifetime spend
       :align: left
       :class: no-scaled-link
 
-   .. tip:: When "Tables and fields are valid" is shown for the SQL returned by the AI Assistant you can try running the query in the SQL **Query Editor**.
+   .. tip:: When "Tables and fields are valid" is shown for the SQL returned by the **AmpAI Assistant** you can try running the query in the SQL **Query Editor**.
 
-      Click the **Copy SQL** link in the response from the AI Assistant, paste the SQL into the SQL **Query Editor**, click the **Run query** button, and then (after the query is finished running) you can view the results.
+      Click the **Copy SQL** link in the response from the **AmpAI Assistant**, paste the SQL into the SQL **Query Editor**, click the **Run query** button, and then (after the query is finished running) you can view the results.
 
 .. assistant-example-natural-language-lifetime-spend-end
 
@@ -219,7 +221,7 @@ In-store shoppers
    "Show me everyone who shopped in-store over the last 30 days."
 
 **Answer**
-   The AI Assistant will respond similar to:
+   The **AmpAI Assistant** will respond similar to:
 
    .. image:: ../../images/assistant-example-syntax-thirty-days.png
       :width: 400 px

@@ -442,7 +442,11 @@ Before you can create outbound sharing between Amperity and Databricks you must 
 Add outbound bridge
 --------------------------------------------------
 
-Configure an inbound bridge to sync data from Amperity to Databricks.
+.. bridge-databricks-sync-with-databricks-add-bridge-start
+
+Configure an outbound bridge to sync data from Amperity to Databricks.
+
+.. bridge-databricks-sync-with-databricks-add-bridge-end
 
 **To add an outbound bridge**
 

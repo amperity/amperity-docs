@@ -88,7 +88,7 @@ Get details
           :class: no-scaled-link
      - The stage name, along with credentials that allow Amperity to pull data from a customer-managed Amazon S3 bucket, which is the :ref:`storage location <source-snowflake-aws-configure-storage-integration>` to which Snowflake stages data and from which Amperity pulls data.
 
-       Use |ext_snowflake_aws_iam_secrets_and_keys| to pull Snowflake table output from the customer-managed Amazon S3 bucket.
+       Use `secrets and keys <https://docs.snowflake.com/en/user-guide/data-load-s3-config-aws-iam-user>`__ |ext_link| to pull Snowflake table output from the customer-managed Amazon S3 bucket.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -195,13 +195,13 @@ Configure storage integration
 
 Amperity can ingest any type of data structure or data format that can be output from Snowflake. This output is written by Snowflake to a customer-managed Amazon S3 bucket,  from which Amperity pulls the data.
 
-Use |ext_snowflake_aws_iam_secrets_and_keys| to pull Snowflake table output from the customer-managed Amazon S3 bucket.
+Use `secrets and keys <https://docs.snowflake.com/en/user-guide/data-load-s3-config-aws-iam-user>`__ |ext_link| to pull Snowflake table output from the customer-managed Amazon S3 bucket.
 
 .. note:: You may need to mock the IAM role for the external ID and IAM user name. After the `named stage is created <https://docs.snowflake.net/manuals/user-guide/data-unload-s3.html>`__ in Snowflake, update the IAM role for the external ID and IAM user name.
 
    The IAM role is unique to the Snowflake account. The external ID is unique to the Snowflake stage.
 
-For each database and schema to be output to the Amazon S3 bucket, specify a database and schema via |ext_snowflake_use|, create a stage via |ext_snowflake_create|, and then |ext_snowflake_grant_usage|.
+For each database and schema to be output to the Amazon S3 bucket, specify a database and schema via `USE <https://docs.snowflake.net/manuals/sql-reference/sql/use.html>`__ |ext_link|, create a stage via `CREATE <https://docs.snowflake.net/manuals/sql-reference/sql/create>`__ |ext_link|, and then `GRANT USAGE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html>`__ |ext_link|.
 
 .. source-snowflake-aws-configure-storage-integration-end
 
@@ -359,7 +359,7 @@ Pull columns using Snowflake query syntax
 
 .. source-snowflake-aws-add-courier-query-start
 
-You can use |ext_snowflake_query_syntax| to build a query that runs against one (or more) Snowflake tables.
+You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query that runs against one (or more) Snowflake tables.
 
 .. important:: A Snowflake query name must be unique. The name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
 
@@ -392,7 +392,7 @@ You can use |ext_snowflake_query_syntax| to build a query that runs against one 
 
    .. caution:: You must add a blank line to the end of the |source-name| query.
 
-   Use |ext_snowflake_query_syntax| to build a query to run against a table that is to be pulled to Amperity.
+   Use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query to run against a table that is to be pulled to Amperity.
 
    .. important:: The name of the query must be added to the **file** parameter within the load operations. For example:
 

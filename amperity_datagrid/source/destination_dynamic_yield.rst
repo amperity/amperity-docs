@@ -40,7 +40,7 @@ Send data to Dynamic Yield
 
 .. destination-dynamic-yield-s3-or-sftp-start
 
-.. note:: This topic explains how to configure Amperity to send data to a password-protected Amazon S3 bucket that is managed by |destination-name|. You must configure |destination-name| to send data to an |ext_dynamic_yield_s3| bucket that is managed from |destination-name|.
+.. note:: This topic explains how to configure Amperity to send data to a password-protected Amazon S3 bucket that is managed by |destination-name|. You must configure |destination-name| to send data to an `Amazon S3 <https://support.dynamicyield.com/hc/en-us/articles/360038581394-Product-Feeds#product-feeds-0-0>`__ |ext_link| bucket that is managed from |destination-name|.
 
 .. destination-dynamic-yield-s3-or-sftp-end
 
@@ -64,7 +64,7 @@ Get details
 
 .. destination-dynamic-yield-get-details-start
 
-Amperity can be configured to send product catalog data to |ext_dynamic_yield_s3|. Send data from Amperity to a customer-managed Amazon S3 bucket :ref:`using cross-account roles <destination-domo-credentials-role-to-role>`, and then connect |destination-name| to that Amazon S3 bucket.
+Amperity can be configured to send product catalog data to an `Amazon S3 <https://support.dynamicyield.com/hc/en-us/articles/360038581394-Product-Feeds#product-feeds-0-0>`__ |ext_link| bucket. Send data from Amperity to a customer-managed Amazon S3 bucket :ref:`using cross-account roles <destination-domo-credentials-role-to-role>`, and then connect |destination-name| to that Amazon S3 bucket.
 
 .. destination-dynamic-yield-get-details-end
 

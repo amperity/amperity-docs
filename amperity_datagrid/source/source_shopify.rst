@@ -71,7 +71,7 @@ Get details
 #. Your |source-name| **Shop Name**.
 #. A list of tables to be pulled to Amperity from |source-name|.
 
-   This is done by configuring |source-name| to allow Amperity to |ext_shopify_rest_admin_api_read_data| using a set of authorization access scopes.
+   This is done by configuring |source-name| to allow Amperity to `read data from the Shopify Admin API <https://shopify.dev/docs/admin-api/access-scopes>`__ |ext_link| using a set of authorization access scopes.
 
 .. source-shopify-get-details-end
 
@@ -85,9 +85,9 @@ Configure authorization access scopes
 
 You must configure read access within |source-name| to allow Amperity to pull data from tables. The following authorization access scopes must be enabled:
 
-* |ext_shopify_rest_admin_api_scope_read_customers|, from which Amperity builds the :ref:`customer <source-shopify-review-data-customer>` and :ref:`customer address <source-shopify-review-data-customer-address>` feeds
-* |ext_shopify_rest_admin_api_scope_read_orders|, from which Amperity builds the :ref:`order <source-shopify-review-data-order>` and :ref:`order line <source-shopify-review-data-order-line>` feeds
-* |ext_shopify_rest_admin_api_scope_read_products|, from which Amperity builds the :ref:`product <source-shopify-review-data-product>` and :ref:`product variant <source-shopify-review-data-product-variant>` feeds
+* `read_customers <https://shopify.dev/api/admin-rest/2022-10/resources/customer>`__ |ext_link|, from which Amperity builds the :ref:`customer <source-shopify-review-data-customer>` and :ref:`customer address <source-shopify-review-data-customer-address>` feeds
+* `read_orders <https://shopify.dev/api/admin-rest/2022-10/resources/order>`__ |ext_link|, from which Amperity builds the :ref:`order <source-shopify-review-data-order>` and :ref:`order line <source-shopify-review-data-order-line>` feeds
+* `read_products <https://shopify.dev/api/admin-rest/2022-10/resources/product>`__ |ext_link|, from which Amperity builds the :ref:`product <source-shopify-review-data-product>` and :ref:`product variant <source-shopify-review-data-product-variant>` feeds
 
 .. source-shopify-configure-access-to-tables-end
 
@@ -95,7 +95,7 @@ You must configure read access within |source-name| to allow Amperity to pull da
 
 .. source-shopify-configure-access-to-tables-steps-start
 
-Follow the steps outlined within |source-name| documentation to |ext_shopify_rest_admin_api_scopes_steps| for your instance of |source-name|.
+Follow the steps outlined within |source-name| documentation to `enable the required scopes <https://help.shopify.com/en/manual/apps/custom-apps#update-admin-api-scopes-for-a-custom-app>`__ |ext_link| for your instance of |source-name|.
 
 #. Open the **Apps and sales channels** page in your |source-name| admin console.
 #. Click **Develop**, and then the name of the app you are using with Amperity.

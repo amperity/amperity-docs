@@ -833,7 +833,7 @@ To update audience profiles only when one (or more) values change, enable the **
 
 .. setting-braze-profile-updates-usewhen-start
 
-Use the **Only send updated audience profiles** option to configure Amperity to :ref:`update audience profiles <destination-braze-attribute-updates>` only when one (or more) values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
+Use the **Only send updated audience profiles** option to configure Amperity to update audience profiles only when one (or more) values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
 
 For use cases that require sending attributes that have values that are expected to change frequently, consider using additional queries to orchestrate specific sets of attributes at defined intervals so that your brand can maintain these values independently of your customer profiles.
 
@@ -849,7 +849,7 @@ The indentifier to use for matching users in |destination-name|. May be "externa
 
 .. setting-braze-user-identifier-about-start
 
-The |ext_braze_external_id| is a unique identifier for your customers, such as the Amperity ID. The |ext_braze_braze_id| is a unique identifier for existing |destination-name| customers.
+The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers.
 
 .. setting-braze-user-identifier-about-end
 
@@ -1394,7 +1394,7 @@ The name of the list that will be managed by Amperity in |destination-name|.
 
 .. setting-mailchimp-tag-name-start
 
-A |ext_mailchimp_tags| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it will be associated to all audience members added by Amperity.
+A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it will be associated to all audience members added by Amperity.
 
 .. setting-mailchimp-tag-name-end
 
@@ -1634,7 +1634,7 @@ The primary key for the shared list: **C_EmailAddress**.
 
 An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list.
 
-Additional attributes may be sent. Some must be mapped to the |ext_oracle_eloqua_shared_lists_defaults|; |ext_oracle_eloqua_shared_lists_custom| may be defined.
+Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|; `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
 
 .. setting-oracle-eloqua-audience-primary-key-end
 
@@ -2167,7 +2167,7 @@ The name of a segment in |destination-name|.
 
 |destination-name| supports using `UID 2.0 <https://unifiedid.com/docs/intro>`__ |ext_link| to help establish your customers' identifies without using third-party data. UID 2.0 enables publisher websites, mobile apps, and Connected TV (CTV) apps to monetize through programmatic workflows, while offering user transparency and privacy controls that meet local market requirements.
 
-Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring Amperity to send offline events to |destination-name|.
+Your brand must have a UID 2.0 agreement in-place with The Trade Desk before configuring Amperity to send offline events to |destination-name|.
 
 .. setting-the-trade-desk-uid2-agreement-end
 

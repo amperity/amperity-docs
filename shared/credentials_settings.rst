@@ -1923,7 +1923,7 @@ See SFTP.
 
 .. credential-the-trade-desk-advertiser-id-start
 
-The advertiser ID for your account with The Trade Desk.
+The advertiser ID for your account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-id-end
 
@@ -1931,7 +1931,7 @@ The advertiser ID for your account with The Trade Desk.
 
 .. credential-the-trade-desk-advertiser-secret-start
 
-The advertiser secret for your account with The Trade Desk.
+The advertiser secret for your account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-secret-end
 
@@ -1939,7 +1939,7 @@ The advertiser secret for your account with The Trade Desk.
 
 .. credential-the-trade-desk-find-id-and-secret-start
 
-You can find the advertiser ID and secret key from the management console within The Trade Desk. Open "Preferences", and then "First Party Data Credentials". The advertiser ID and secret key are shown there.
+You can find the advertiser ID and secret key from the management console within |destination-name|. Open "Preferences", and then "First Party Data Credentials". The advertiser ID and secret key are shown there.
 
 .. credential-the-trade-desk-find-id-and-secret-end
 

@@ -19,9 +19,9 @@
 Event propensity
 ==================================================
 
-.. include:: ../../amperity_reference/source/model_event_propensity.rst
-   :start-after: .. model-event-propensity-start
-   :end-before: .. model-event-propensity-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-event-propensity-start
+   :end-before: .. term-event-propensity-end
 
 
 .. _model-event-propensity-use-cases:

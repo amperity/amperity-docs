@@ -70,7 +70,7 @@ You will need to build a query that outputs fields that can be mapped to static 
 
 .. destination-oracle-eloqua-build-query-custom-attributes-start
 
-.. tip:: You can define |ext_oracle_eloqua_shared_lists_custom| with |destination-name|. These attributes **must** exist in |destination-name| before Amperity can send updates and must be different than the |ext_oracle_eloqua_shared_lists_defaults|.
+.. tip:: You can define `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| with |destination-name|. These attributes **must** exist in |destination-name| before Amperity can send updates and must be different than the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|.
 
    **To send custom attributes to Oracle Eloqua**
 

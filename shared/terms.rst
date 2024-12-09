@@ -2143,6 +2143,15 @@ Direct mail is a marketing strategy that uses printed media to send offers and a
 .. term-direct-mail-end
 
 
+**discount sensitivity** (model)
+
+.. term-discount-sensitivity-start
+
+Discount sensitivity is a predictive model that categorizes customers into three behaviors: full price shopper, discount opportunist, and discount seeker.
+
+.. term-discount-sensitivity-end
+
+
 **display advertising**
 
 .. term-display-advertising-start
@@ -2484,6 +2493,15 @@ An environment represents the cloud platform in which an Amperity tenant runs: A
 An escape character is specific to a data format and allows certain character sequences to be interpreted differently from characters that are not prefixed by that escape character.
 
 .. term-escape-character-end
+
+
+**event propensity** (model)
+
+.. term-event-propensity-start
+
+Event propensity is a predictive model that determines the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+
+.. term-event-propensity-end
 
 
 **Eventbrite**
@@ -4022,7 +4040,7 @@ A flag that indicates if a customer has interacted with more than one brand.
 .. term-multi-brand-end
 
 
-**multi-channel**
+**multi-channel** (field)
 
 .. term-multi-channel-start
 
@@ -4031,25 +4049,25 @@ Multi-purchase channel is a flag that indicates if a customer has purchased from
 .. term-multi-channel-end
 
 
-**multi-channel campaign**
+**multichannel campaign**
 
 .. term-multi-channel-campaign-start
 
-A multi-channel marketing campaign blends marketing strategies across channels (i.e. email, SMS, paid media, etc.) to provide customers a personalized experience, but with consistent messages, offers, and products across all channels.
+A multichannel marketing campaign blends marketing strategies across channels (i.e. email, SMS, paid media, etc.) to provide customers a personalized experience, but with consistent messages, offers, and products across all channels.
 
 .. term-multi-channel-campaign-end
 
 
-**multi-channel customer**
+**multichannel customer**
 
 .. term-multi-channel-customer-start
 
-A multi-channel customer shows activity in at least two channels during the last measured time period.
+A multichannel customer shows activity in at least two channels during the last measured time period.
 
 .. term-multi-channel-customer-end
 
 
-**multi-channel marketing**
+**multichannel marketing**
 
 .. term-multi-channel-marketing-start
 
@@ -5698,7 +5716,7 @@ A service provider (SP) is a system that accepts authentication responses from a
 
 .. term-sftp-start
 
-The |ext_sftp| is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
+The `Secure File Transfer Protocol (SFTP) <https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol>`__ |ext_link| is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
 
 .. term-sftp-end
 
@@ -5707,7 +5725,7 @@ The |ext_sftp| is a network protocol that provides file access, file transfer, a
 
 .. term-shared-access-signature-start
 
-A |ext_sas| is a URI that grants restricted access rights to Azure Storage resources.
+A `shared access signature (SAS) <https://docs.microsoft.com/en-us/rest/api/storageservices/delegate-access-with-shared-access-signature>`__ |ext_link| is a URI that grants restricted access rights to Azure Storage resources.
 
 .. term-shared-access-signature-end
 
@@ -5859,7 +5877,7 @@ A snapshot email is sent on a weekly basis from Amperity to provide a quick over
 
 .. term-snappy-start
 
-|ext_snappy| is a compression library aims for high speeds and reasonable compression instead of maximum compression. Files that are compressed with snappy tend to be larger, but the process to compress (and decompress them) is significantly faster.
+`Snappy <https://google.github.io/snappy/>`__ |ext_link| is a compression library aims for high speeds and reasonable compression instead of maximum compression. Files that are compressed with snappy tend to be larger, but the process to compress (and decompress them) is significantly faster.
 
 .. term-snappy-end
 
@@ -7022,6 +7040,15 @@ The visual **Query Editor** is a user interface that allows creating queries usi
 The **Segment Editor** is the user interface for building segments. This editor uses a series of drop-downs, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
 
 .. term-visual-segment-editor-end
+
+
+**Walmart Connect**
+
+.. term-walmart-connect-start
+
+Walmart Connect is an advertising platform that allows brands to reach shoppers across Walmart's digital and physical stores. Send audiences to the Walmart demand-side platform to reach Walmart customers online and in-store.
+
+.. term-walmart-connect-end
 
 
 **warehouse**, **data warehouse**

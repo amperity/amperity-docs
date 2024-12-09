@@ -28,7 +28,8 @@ Review ID resolution
 
 :doc:`About ID resolution <stitch_results>`
 
-**Explore Stitch results**: :ref:`About Stitch results <stitch-results-explore>` |fa-index-separator| :ref:`Explore by Amperity ID <stitch-results-explore-by-amperity-id>` |fa-index-separator| :ref:`Explore by data source <stitch-results-explore-by-data-source>` |fa-index-separator| :ref:`Explore previous results <stitch-results-explore-previous-results>` |fa-index-separator| :ref:`View cluster graph <stitch-results-explore-cluster-graph>` |fa-index-separator| :ref:`View deduplication rate <stitch-results-explore-deduplication-rate>` |fa-index-separator| :ref:`View pairwise connections <stitch-results-explore-pairwise-connections>` |fa-index-separator| :ref:`View Stitch metrics <stitch-results-explore-stitch-metrics>` |fa-index-separator| :ref:`View stitched records <stitch-results-explore-stitched-records>`
+**Explore Stitch results**
+   :ref:`About Stitch results <stitch-results-explore>` |fa-index-separator| :ref:`Explore by Amperity ID <stitch-results-explore-by-amperity-id>` |fa-index-separator| :ref:`Explore by data source <stitch-results-explore-by-data-source>` |fa-index-separator| :ref:`Explore previous results <stitch-results-explore-previous-results>` |fa-index-separator| :ref:`View cluster graph <stitch-results-explore-cluster-graph>` |fa-index-separator| :ref:`View deduplication rate <stitch-results-explore-deduplication-rate>` |fa-index-separator| :ref:`View pairwise connections <stitch-results-explore-pairwise-connections>` |fa-index-separator| :ref:`View Stitch metrics <stitch-results-explore-stitch-metrics>` |fa-index-separator| :ref:`View stitched records <stitch-results-explore-stitched-records>`
 
 .. _index-review-customer-360:
 

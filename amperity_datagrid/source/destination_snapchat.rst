@@ -41,7 +41,7 @@ Send data to Snapchat
 
 .. destination-snapchat-api-note-start
 
-.. note:: This destination uses the |ext_snapchat_api_audience_match| component within the |ext_snapchat_marketing_api| to |ext_snapchat_api_add_users| as a list of email addresses, mobile advertiser IDs, or phone numbers.
+.. note:: This destination uses the `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link| component within the `Snapchat Marketing API <https://marketingapi.snapchat.com/docs/>`__ |ext_link| to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| as a list of email addresses, mobile advertiser IDs, or phone numbers.
 
 .. destination-snapchat-api-note-end
 

@@ -13,10 +13,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        High-value multi-channel customers
+        High-value multichannel customers
 
 ==================================================
-High-value multi-channel customers
+High-value multichannel customers
 ==================================================
 
 .. include:: ../../amperity_ampiq/source/usecase_customers_high_value_multichannel.rst

@@ -1129,7 +1129,7 @@ Braze Connected Content
 
 .. profile-api-usecase-braze-start
 
-You can use the Profile API to make extended profile attributes available to Braze using |ext_braze_connected_content|.
+You can use the Profile API to make extended profile attributes available to Braze using `Connected Content <https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content>`__ |ext_link|.
 
 .. profile-api-usecase-braze-end
 
@@ -1455,9 +1455,6 @@ Server-side JavaScript in Salesforce
 AMPscript is a scripting language used by Salesforce Marketing Cloud to render content on a subscriber-by-subscriber basis in. Embed `AMPscript <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ampscript.html>`__ |ext_link| variables within HTML emails, text emails, landing pages, SMS messages, and push notifications. These variables are updated at the time a message or notification is sent to (or a page is shown to) a subscriber.
 
 Use Amperity unified customer profiles as values for variables defined by AMPscript. Use `Server-Side JavaScript (SSJS) <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ssjs_serverSideJavaScript.html>`__ |ext_link| to return data from a Profile API endpoint, and then make that data available to AMPscript.
-
-
-
 
 The following example shows how replace a variable with an email address from a Profile API endpoint just before sending a message.
 
