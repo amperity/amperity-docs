@@ -197,7 +197,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:name**
      - Non-default, use carefully. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
    * - **:phone**
-     - Non-default. This blocking strategy groups values associated with the **phone** semantic.
+     - Default. This blocking strategy groups values associated with the **phone** semantic.
 
 .. configure-stitch-general-clustering-blocking-list-end
 
