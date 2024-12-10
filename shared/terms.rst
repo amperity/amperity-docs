@@ -251,6 +251,7 @@ An **Affinity** table associates individual customers to the products they are m
 
 .. term-affinity-table-end
 
+
 **Airship**, **Urban Airship**
 
 .. term-airship-start
@@ -2152,6 +2153,15 @@ Discount sensitivity is a predictive model that categorizes customers into three
 .. term-discount-sensitivity-end
 
 
+**Discount Sensitivity table**
+
+.. term-discount-sensitivity-table-start
+
+An **Discount Sensitivity** table groups customers into three categories: full price shoppers, discount opportunists, and discount seekers. Use an **Discount Sensitivity** table to help deliver the right messages and offers to your customers at the price those customers are willing to pay.
+
+.. term-discount-sensitivity-table-end
+
+
 **display advertising**
 
 .. term-display-advertising-start
@@ -2502,6 +2512,23 @@ An escape character is specific to a data format and allows certain character se
 Event propensity is a predictive model that determines the likelihood that a customer will perform a revenue-generating event within the next 30 days.
 
 .. term-event-propensity-end
+
+
+**Event Propensity** (table)
+
+
+.. term-event-propensity-table-start
+
+An **Event Propensity** table associates individual customers to the events that, depending on the type of event, are most likely to lead to engagement with your brand.
+
+.. term-event-propensity-table-end)
+
+
+.. term-event-propensity-table-start
+
+An **Event Propensity** table associates individual customers to the events that, depending on the type of event, are most likely to lead to engagement with your brand.
+
+.. term-event-propensity-table-end
 
 
 **Eventbrite**
