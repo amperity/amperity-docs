@@ -11,8 +11,6 @@
 Snowflake (AWS)
 ==================================================
 
-`Snowflake (S3) <https://docs.amperity.com/downloads/markdown/snowflake.md>`__ | `Snowflake (Azure) <https://docs.amperity.com/downloads/markdown/snowflake-azure.md>`__
-
 Snowflake is an analytic data warehouse to which Amperity can send tabular data to customer-managed instances of Snowflake that are located in the same cloud platform as Amperity.
 
 
