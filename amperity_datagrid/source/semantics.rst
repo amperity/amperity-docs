@@ -215,7 +215,7 @@ Amperity will create columns in the **Unified Coalesced** table similar to:
    ------------------ ------------------ ------------------
     email              email_primary      email_alternate
    ------------------ ------------------ ------------------
-   jcurrie@home.com    jcurrie@home.com   justinc@work.com
+   jcurrie@home.com,   jcurrie@home.com   justinc@work.com
    justinc@work.com
    ------------------ ------------------ ------------------
 
@@ -238,7 +238,7 @@ Amperity will create columns in the **Unified Coalesced** table similar to:
    ------------------ ------------------ ------------------
     email              email_1            email_2
    ------------------ ------------------ ------------------
-   jcurrie@home.com    jcurrie@home.com   justinc@work.com
+   jcurrie@home.com,   jcurrie@home.com   justinc@work.com
    justinc@work.com
    ------------------ ------------------ ------------------
 
