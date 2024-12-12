@@ -51,7 +51,7 @@ Architectural details
 Amperity uses the following components to enable real-time tables: Apache Kafka, Apache Spark Structured Streaming, and Delta Tables.
 
 .. image:: ../../images/realtime_howitworks.png
-   :width: 420 px
+   :width: 360 px
    :alt: Architecture for batch and streaming layers.
    :align: left
    :class: no-scaled-link
