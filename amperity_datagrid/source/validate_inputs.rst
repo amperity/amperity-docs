@@ -73,7 +73,7 @@ Generate reports
 
 .. validate-inputs-generate-reports-start
 
-Input validation reports may be run from the **Sources** page. At the top of the page, open the **Tools** menu, and then click **Run validations**. The report will start running. The length of time it takes for the report to complete depends on the volume of data in your tenant.
+Input validation reports may be run from the **Sources** page. At the top of the page, open the **Tools** menu, and then click **Run validations**. The report will start running. The length of time it takes for the report to complete depends on the volume of data in your tenant. The completed report is available from the **Input validations report** notification that appears in the **Recent activity** pane after the reports are complete.
 
 The **Input validation report** dialog box shows all of the individual reports that apply to the current state of your tenant. Each report describes what causes the report to be visible, shows all associated semantic tags, and then returns a series of columns that shows the report status for each data source that was part of the individual report. A link to a query is provided. This query opens in the **Queries** page and can be used to run queries against domain table data that has been published to the **Queries** page.
 
@@ -93,7 +93,7 @@ Review reports
 
 .. validate-inputs-review-reports-start
 
-The list of input validation reports that will be available in your tenant depends on the outcomes of running the validations. Each report is available from the **Notifications** pane.
+The list of input validation reports that will be available in your tenant depends on the outcomes of running the validations. Each report is available from the **Input validations report** that will appear in the **Recent activity** pane after the reports are complete.
 
 .. validate-inputs-review-reports-end
 
