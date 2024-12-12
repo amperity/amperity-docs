@@ -58,7 +58,7 @@ Framework to Unify Data in Industrial Applications <https://docs.amperity.com/do
              :class: no-scaled-link
         - Learn more about how Stitch evaluates all of your brand's data to discover the hidden connections in your customer records that correctly identify all of your unique customers.
 
-          Open **Learning Lab** to learn more about |ext_learning_lab_stitch_howitworks|. Registration is required.
+          Open **Learning Lab** to learn more about `How Stitch Works <https://learn.amperity.com/how-stitch-works-1>`__ |ext_link|. Registration is required.
 
 .. stitch-learning-lab-end
 
@@ -228,7 +228,7 @@ Phone numbers
 
 .. stitch-preprocess-data-phone-start
 
-Amperity preprocesses phone numbers by removing parentheses, hyphens, and spaces, consolidating every phone number to a numeric string.
+Amperity preprocesses phone numbers by removing parentheses, hyphens, and spaces, consolidating every phone number to a numeric string. Stitch uses the last 10 digits of a phone number for identity resolution.
 
 .. list-table::
    :widths: 300 300
