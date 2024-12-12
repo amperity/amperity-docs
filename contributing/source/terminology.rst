@@ -33,7 +33,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-blacklist:
 
 **blacklist** / **whitelist**
-   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see |ext_itef_terminology|.  See **blocklist** / **allowlist**.
+   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|.  See **blocklist** / **allowlist**.
 
 
 .. _term-blocklist:
@@ -87,7 +87,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-master:
 
 **master** / **slave**
-   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see |ext_itef_terminology|. See **primary** / **replica**.
+   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|. See **primary** / **replica**.
 
 
 .. _term-multi-tenant:

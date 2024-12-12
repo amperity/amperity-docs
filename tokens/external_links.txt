@@ -1076,16 +1076,6 @@
    <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header" target="_blank">Deprecation Header</a>
 
 
-.. |ext_itef_sunset_header| raw:: html
-
-   <a href="https://datatracker.ietf.org/doc/html/rfc8594" target="_blank">Sunset Header</a>
-
-
-.. |ext_itef_terminology| raw:: html
-
-   <a href="https://tools.ietf.org/id/draft-knodel-terminology-00.html" target="_blank">Terminology, Power and Oppressive Language</a>
-
-
 .. |ext_jodatime| raw:: html
 
    <a href="https://www.joda.org/joda-time/" target="_blank">Joda-Time</a>
