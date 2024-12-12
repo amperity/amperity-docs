@@ -1271,7 +1271,7 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
        * Hashes data as SHA-256
    * - **Zip Code**
      - **ZIP**
-     - Use only the first five digits for the United States. Use |ext_postcodes_format| for United Kingdom.
+     - Use only the first five digits for the United States. Use `postcodes (area, district, sector) format <https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom>`__ |ext_link| for United Kingdom.
 
        For this key, the connector:
 

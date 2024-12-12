@@ -44,7 +44,7 @@ Use Amperity to manage audience lists in |destination-name|. Build a query using
 
 .. destination-sailthru-api-note-start
 
-.. note:: This destination uses the |ext_sailthru_api|.
+.. note:: This destination uses the `Sailthru API <https://getstarted.sailthru.com/developers/api-basics/introduction/>`__ |ext_link|.
 
 .. destination-sailthru-api-note-end
 
@@ -81,7 +81,7 @@ Get details
           :class: no-scaled-link
      - An API key and API secret.
 
-       .. tip:: You can find the API key and secret after you log in to |destination-name|. The |ext_sailthru_api_key_and_secret| are available after you authenticate to the |destination-name| API. (See the first item under "Setup – API & Postbacks" on that page.)
+       .. tip:: You can find the API key and secret after you log in to |destination-name|. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| are available after you authenticate to the |destination-name| API. (See the first item under "Setup – API & Postbacks" on that page.)
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -128,7 +128,7 @@ The following SQL query shows how to return results that map to |destination-nam
      ,state AS postal_state
    FROM Customer360
 
-.. note:: |destination-name| field names are case sensitive and cannot start with a number. Review the list of |ext_sailthru_extended_profile_attributes| that are supported by |destination-name|.
+.. note:: |destination-name| field names are case sensitive and cannot start with a number. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
 
 .. destination-sailthru-extended-profile-attributes-end
 
@@ -204,7 +204,7 @@ Add destination
        * API key
        * API secret
 
-       .. tip:: You can find the API key and secret after you log in to |destination-name|. The |ext_sailthru_api_key_and_secret| are available after you authenticate to the |destination-name| API. (See the first item under "Setup – API & Postbacks" on that page.)
+       .. tip:: You can find the API key and secret after you log in to |destination-name|. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| are available after you authenticate to the |destination-name| API. (See the first item under "Setup – API & Postbacks" on that page.)
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start

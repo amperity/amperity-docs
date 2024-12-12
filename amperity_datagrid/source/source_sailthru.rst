@@ -36,7 +36,7 @@ Pull from Sailthru
 
 .. source-sailthru-about-start
 
-Sailthru can send |ext_sailthru_email_event_stream| to Amperity using the |ext_sailthru_api_get_user_profile|. The user profile endpoint provides |what-pull| to Amperity. User profile events include data for clicks, email addresses, opens, optouts, signups, lifetime purchases and purchase price, devices, and views.
+Sailthru can send `email event data for campaigns and triggers <https://getstarted.sailthru.com/analytics/stc/event-stream/>`__ |ext_link| to Amperity using the `GET user profile data endpoint <https://getstarted.sailthru.com/developers/api/user/#GET_user_profile_data>`__ |ext_link|. The user profile endpoint provides |what-pull| to Amperity. User profile events include data for clicks, email addresses, opens, optouts, signups, lifetime purchases and purchase price, devices, and views.
 
 .. source-sailthru-about-end
 
@@ -64,7 +64,7 @@ Get details
 
 |source-name| requires the following configuration details:
 
-#. The |ext_sailthru_api_key_and_secret| for |source-name|.
+#. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| for |source-name|.
 #. The list name.
 
 .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
@@ -130,7 +130,7 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. source-sailthru-review-data-start
 
-The feed and domain table will match the fields defined in the |ext_sailthru_api_get_user_profile|:
+The feed and domain table will match the fields defined in the `GET user profile data endpoint <https://getstarted.sailthru.com/developers/api/user/#GET_user_profile_data>`__ |ext_link|:
 
 * **click_time**
 * **create_time**

@@ -27,7 +27,7 @@ Send query results to Mailchimp
 
 .. sendto-mailchimp-api-note-start
 
-.. note:: This destination uses the |ext_mailchimp_rest_api|.
+.. note:: This destination uses the `Mailchimp REST API <https://mailchimp.com/developer/guides/an-introduction-to-rest/>`__ |ext_link|.
 
 .. sendto-mailchimp-api-note-end
 

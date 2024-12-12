@@ -47,8 +47,8 @@ How this destination works
 
 Amperity can manage email and SMS lists in |destination-name|. You can send email and SMS lists to |destination-name| using any of the following processes:
 
-* The |ext_listrak_email_api|
-* The |ext_listrak_sms_api|
+* The `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|
+* The `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|
 * SFTP for email address and/or SMS lists, along with product catalogs, orders, and ordered items
 
 Additional attributes may be appended using any of these processes.
@@ -81,9 +81,9 @@ An |destination-name| destination works like this:
 
    .. tip:: Lists are available from the **Contacts** page within the Listrak user interface. If you are not sure which list (or lists) should be managed by Amperity, work with your Listrak representative to determine the best approach for list management.
 
-#. Use |ext_listrak_list_email| to build responsive email campaigns.
+#. Use `email lists <https://help.listrak.com/en/articles/1509335-listrak-email-lists-the-list-manager>`__ |ext_link| to build responsive email campaigns.
 
-#. Use |ext_listrak_list_sms| to grow your mobile list and engage with your customers.
+#. Use `SMS lists <https://help.listrak.com/en/articles/4853719-sms-lists-management-guide>`__ |ext_link| to grow your mobile list and engage with your customers.
 
 .. destination-listrak-howitworks-callouts-end
 
@@ -95,7 +95,7 @@ Email and SMS APIs
 
 .. destination-listrak-api-start
 
-Use Amperity to manage email address and phone number lists in |destination-name| using the |ext_listrak_email_api| or |ext_listrak_sms_api|.
+Use Amperity to manage email address and phone number lists in |destination-name| using the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| or `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|.
 
 Build a query or segment that returns an **email** field or **phone** field, and then send that list to |destination-name|.
 
@@ -291,14 +291,14 @@ SFTP
 
 .. destination-listrak-sftp-start
 
-Configure Amperity to send email addresses and/or phone numbers to |destination-name| using SFTP. This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| |ext_listrak_import_guide|.
+Configure Amperity to send email addresses and/or phone numbers to |destination-name| using SFTP. This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
 
 You can use SFTP to send the following sets of data to |destination-name|.
 
-#. |ext_listrak_file_customers|
-#. |ext_listrak_file_product|
-#. |ext_listrak_file_orders|
-#. |ext_listrak_file_order_items|
+#. `Customers <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|
+#. `Products <https://www.listrak.com/product-team/product-schema>`__ |ext_link|
+#. `Orders <https://www.listrak.com/product-team/order-schema>`__ |ext_link|
+#. `Order items <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|
 
 Work with your Listrak representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
 

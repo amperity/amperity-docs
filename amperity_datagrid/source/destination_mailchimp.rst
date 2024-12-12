@@ -39,7 +39,7 @@ Send data to Mailchimp
 
 .. destination-mailchimp-api-note-start
 
-.. note:: This destination uses the |ext_mailchimp_rest_api|.
+.. note:: This destination uses the `Mailchimp REST API <https://mailchimp.com/developer/guides/an-introduction-to-rest/>`__ |ext_link|.
 
 .. destination-mailchimp-api-note-end
 
@@ -102,7 +102,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - A |ext_mailchimp_tags| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it will be associated to all audience members added by Amperity.
+     - A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it will be associated to all audience members added by Amperity.
 
        .. important:: The tag name is configured as part of the orchestration from the **Tag Name** field.
 

@@ -40,7 +40,7 @@ Send data to Airship
 
 .. destination-airship-start
 
-You can send CSV files to Airship from Amperity using SFTP. The CSV files may contain |ext_airship_audience_lists| or |ext_airship_attributes|.
+You can send CSV files to Airship from Amperity using SFTP. The CSV files may contain `audience lists <https://docs.airship.com/guides/audience/audience-lists/>`__ |ext_link| or `attributes <https://docs.airship.com/guides/audience/attributes/>`__ |ext_link|.
 
 .. destination-airship-end
 
@@ -95,7 +95,7 @@ Get details
           :class: no-scaled-link
      - The port number for the SFTP site.
 
-       .. note:: Refer to the Airship |ext_airship_sftp| for more details.
+       .. note:: Refer to the Airship `SFTP tutorial <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/>`__ |ext_link| for more details.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -105,7 +105,7 @@ Get details
           :class: no-scaled-link
      - The public key to use for PGP encryption.
 
-       .. important:: Amperity will |ext_airship_pgp| on behalf of the customer.
+       .. important:: Amperity will `generate the PGP credentials <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/#generate-a-secure-key-for-airship>`__ |ext_link| on behalf of the customer.
 
 .. destination-airship-get-details-end
 

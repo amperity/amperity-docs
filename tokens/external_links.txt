@@ -6,31 +6,6 @@
    <a href="https://docs.amperity.com" target="_blank">LINK_TEXT</a>
 
 
-.. |ext_airship_attributes| raw:: html
-
-   <a href="https://docs.airship.com/guides/audience/attributes/" target="_blank">attributes</a>
-
-
-.. |ext_airship_audience_lists| raw:: html
-
-   <a href="https://docs.airship.com/guides/audience/audience-lists/" target="_blank">audience lists</a>
-
-
-.. |ext_airship_pgp| raw:: html
-
-   <a href="https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/#generate-a-secure-key-for-airship" target="_blank">generate the PGP credentials</a>
-
-
-.. |ext_airship_sftp| raw:: html
-
-   <a href="https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/" target="_blank">SFTP tutorial</a>
-
-
-.. |ext_alyce| raw:: html
-
-   <a href="https://www.alyce.com/" target="_blank">Alyce</a>
-
-
 .. |ext_amazon_ads_api| raw:: html
 
    <a href="https://advertising.amazon.com/API/docs/en-us/info/api-overview" target="_blank">Amazon Ads API</a>
@@ -785,26 +760,6 @@
    <a href="https://en.wikipedia.org/wiki/E.164" target="_blank">E.164 format</a>
 
 
-.. |ext_emarsys_data_exchange| raw:: html
-
-   <a href="https://help.emarsys.com/hc/en-us/articles/213705529-Data-exchange-resources" target="_blank">data exchange</a>
-
-
-.. |ext_experian_mosaic| raw:: html
-
-   <a href="https://www.experian.com/marketing-services/consumer-segmentation" target="_blank">Mosaic USA</a>
-
-
-.. |ext_experian_mosaic_types_and_groups| raw:: html
-
-   <a href="https://www.experian.com/assets/marketing-services/product-sheets/mosaic-usa.pdf" target="_blank">71 unique types and 19 groups</a>
-
-
-.. |ext_extensible_data_notation| raw:: html
-
-   <a href="https://github.com/edn-format/edn" target="_blank">Extensible Data Notation (EDN)</a>
-
-
 .. |ext_facebook_conversions_api_offline_events| raw:: html
 
    <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events" target="_blank">Conversions API for offline events</a>
@@ -1191,16 +1146,6 @@
    <a href="https://developers.klaviyo.com/en/reference/update_profile">Update Profile</a>
 
 
-.. |ext_koupon_media_channel_types| raw:: html
-
-   <a href="https://www.kouponmedia.com/creating-channel" target="_blank">Koupon Media channel types</a>
-
-
-.. |ext_koupon_media_privacy_policy| raw:: html
-
-   <a href="https://www.koupon.com/privacy" target="_blank">Koupon Media privacy policy</a>
-
-
 .. |ext_kustomer_api| raw:: html
 
    <a href="https://developer.kustomer.com/kustomer-api-docs/reference/introduction" target="_blank">Kustomer API</a>
@@ -1209,91 +1154,6 @@
 .. |ext_kustomer_api_key| raw:: html
 
    <a href="https://developer.kustomer.com/kustomer-api-docs/reference/authentication" target="_blank">Kustomer API key</a>
-
-
-.. |ext_learning_lab_ai_assistant| raw:: html
-
-   <a href="https://learn.amperity.com/the-amperity-ai-assistant" target="_blank">AI Assistant</a>
-
-
-.. |ext_learning_lab_bridge| raw:: html
-
-   <a href="https://learn.amperity.com/amperity-bridge-and-data-warehouses" target="_blank">Amperity Bridge</a>
-
-
-.. |ext_learning_lab_ingest_queries| raw:: html
-
-   <a href="https://learn.amperity.com/ingest-queries" target="_blank">ingest queries</a>
-
-
-.. |ext_learning_lab_models| raw:: html
-
-   <a href="https://learn.amperity.com/predictive-course" target="_blank">predictive modeling</a>
-
-
-.. |ext_learning_lab_profile_api| raw:: html
-
-   <a href="https://learn.amperity.com/profile-api" target="_blank">Profile API</a>
-
-
-.. |ext_learning_lab_query_alerts| raw:: html
-
-   <a href="https://learn.amperity.com/query-alerts" target="_blank">query alerts</a>
-
-
-.. |ext_learning_lab_sandboxes| raw:: html
-
-   <a href="https://learn.amperity.com/sandboxes-course" target="_blank">sandboxes</a>
-
-
-.. |ext_learning_lab_stitch_howitworks| raw:: html
-
-   <a href="https://learn.amperity.com/how-stitch-works-1" target="_blank">How Stitch Works</a>
-
-
-.. |ext_listrak_email_api| raw:: html
-
-   <a href="https://api.listrak.com/email" target="_blank">Listrak Email API</a>
-
-
-.. |ext_listrak_sms_api| raw:: html
-
-   <a href="https://api.listrak.com/sms" target="_blank">Listrak SMS API</a>
-
-
-.. |ext_listrak_file_customers| raw:: html
-
-   <a href="https://www.listrak.com/product-team/customer-schema" target="_blank">Customers</a>
-
-
-.. |ext_listrak_file_order_items| raw:: html
-
-   <a href="https://www.listrak.com/product-team/order-items-schema" target="_blank">Order items</a>
-
-
-.. |ext_listrak_file_orders| raw:: html
-
-   <a href="https://www.listrak.com/product-team/order-schema" target="_blank">Orders</a>
-
-
-.. |ext_listrak_file_product| raw:: html
-
-   <a href="https://www.listrak.com/product-team/product-schema" target="_blank">Products</a>
-
-
-.. |ext_listrak_import_guide| raw:: html
-
-   <a href="https://help.listrak.com/en/articles/1669274-file-import-guide" target="_blank">file import guide</a>
-
-
-.. |ext_listrak_list_email| raw:: html
-
-   <a href="https://help.listrak.com/en/articles/1509335-listrak-email-lists-the-list-manager" target="_blank">email lists</a>
-
-
-.. |ext_listrak_list_sms| raw:: html
-
-   <a href="https://help.listrak.com/en/articles/4853719-sms-lists-management-guide" target="_blank">SMS lists</a>
 
 
 .. |ext_liveramp_data_identifiers| raw:: html
@@ -1340,15 +1200,6 @@
 
    <a href="https://docs.liveramp.com/connect/en/formatting-column-based-files.html#headers-to-use-for-u-s--pii-data-files" target="_blank">output results that map to an audience in LiveRamp</a>
 
-
-.. |ext_mailchimp_rest_api| raw:: html
-
-   <a href="https://mailchimp.com/developer/guides/an-introduction-to-rest/" target="_blank">Mailchimp REST API</a>
-
-
-.. |ext_mailchimp_tags| raw:: html
-
-   <a href="https://mailchimp.com/help/getting-started-tags/" target="_blank">Mailchimp tag</a>
 
 
 .. |ext_marketing_cloud_sftp_guide| raw:: html
@@ -1574,21 +1425,6 @@
    <a href="https://help.pinterest.com/en/business/article/data-source-ingestion" target="_blank">product catalog available as a data source</a>
 
 
-.. |ext_postal_io| raw:: html
-
-   <a href="https://www.postal.io/" target="_blank">Postal.io</a>
-
-
-.. |ext_postcodes_format| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom" target="_blank">postcodes (area, district, sector) format</a>
-
-
-.. |ext_powerreviews_sftp| raw:: html
-
-   <a href="https://help.powerreviews.com/Content/Support%20Topics/Review%20Import%20Process.htm" target="_blank">review import process</a>
-
-
 .. |ext_presto_sql| raw:: html
 
    <a href="https://prestodb.io/docs/current/index.html" target="_blank">Presto SQL</a>
@@ -1629,11 +1465,6 @@
    <a href="https://help.pyramidanalytics.com/Content/Root/MainClient/apps/Model/Model%20Pro/Data%20Flow/Sources.htm?tocpath=Client%20Help%7CPro%20Client%7CPro%20Apps%7CModel%7CModel%20Pro%7CData%20Flow%7CSources%7C_____0" target="_blank">DataFlow sources</a>
 
 
-.. |ext_qlik_sense_snowflake| raw:: html
-
-   <a href="https://help.qlik.com/en-US/connectors/Subsystems/ODBC_connector_help/Content/Connectors_ODBC/Snowflake/Snowflake-connector.htm" target="_blank">Qlik to connect directly</a>
-
-
 .. |ext_rcfile| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/RCFile" target="_blank">Record Columnar File (RCFile)</a>
@@ -1662,46 +1493,6 @@
 .. |ext_rfc8259| raw:: html
 
    <a href="https://datatracker.ietf.org/doc/html/rfc8259" target="_blank">RFC 8259</a>
-
-
-.. |ext_reddit_ads_upload_customer_audience| raw:: html
-
-   <a href="https://redditinc.force.com/helpcenter/s/article/Overview-Custom-Audience-Customer-List-Targeting#csvUpload" target="_blank">customer audiences</a>
-
-
-.. |ext_reddit_communities| raw:: html
-
-   <a href="https://www.redditforbusiness.com/" target="_blank">the 100K+ active communities on Reddit</a>
-
-
-.. |ext_sailthru_api| raw:: html
-
-   <a href="https://getstarted.sailthru.com/developers/api-basics/introduction/" target="_blank">Sailthru API</a>
-
-
-.. |ext_sailthru_api_key_and_secret| raw:: html
-
-   <a href="https://getstarted.sailthru.com/account/management/settings/" target="_blank">API key and API secret</a>
-
-
-.. |ext_sailthru_api_get_user_profile| raw:: html
-
-   <a href="https://getstarted.sailthru.com/developers/api/user/#GET_user_profile_data" target="_blank">GET user profile data endpoint</a>
-
-
-.. |ext_sailthru_email_event_stream| raw:: html
-
-   <a href="https://getstarted.sailthru.com/analytics/stc/event-stream/" target="_blank">email event data for campaigns and triggers</a>
-
-
-.. |ext_sailthru_extended_profile_attributes| raw:: html
-
-   <a href="https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/" target="_blank">extended profile attributes</a>
-
-
-.. |ext_sailthru_email_event_s3_policy| raw:: html
-
-   <a href="https://getstarted.sailthru.com/analytics/stc/s3-bucket-policy-information/#Event_Stream_only_policy_for_S3" target="_blank">event stream-only policy for Amazon S3</a>
 
 
 .. |ext_salesforce_interaction_studio_csv_feed| raw:: html

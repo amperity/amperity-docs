@@ -541,7 +541,7 @@ Amperity provides direct connections to the most popular destinations across the
           :alt: Reddit Ads
           :align: left
           :class: no-scaled-link
-     - Reddit is home to unique communities, engaged conversations, and the best memes. Reddit Ads allows brands to find their community on Reddit, and then engage with your customers within |ext_reddit_communities| using targeted ads and promoted posts.
+     - Reddit is home to unique communities, engaged conversations, and the best memes. Reddit Ads allows brands to find their community on Reddit, and then engage with your customers within `the 100K+ active communities on Reddit <https://www.redditforbusiness.com/>`__ |ext_link| using targeted ads and promoted posts.
 
        Build audiences in Amperity, and then upload those audiences to |channel_reddit_ads|.
 

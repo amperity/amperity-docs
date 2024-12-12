@@ -49,7 +49,7 @@ Custom audiences
 
 .. destination-reddit-ads-audience-targeting-start
 
-Upload a |ext_reddit_ads_upload_customer_audience|, and then use that audience to engage with your customers within communities in Reddit.
+Upload a `customer audiences <https://redditinc.force.com/helpcenter/s/article/Overview-Custom-Audience-Customer-List-Targeting#csvUpload>`__ |ext_link|, and then use that audience to engage with your customers within communities in Reddit.
 
 The following examples show how to build the same audience using :ref:`a query that returns hashed email addresses <destination-reddit-ads-audience-targeting-query>` and a campaign that uses :ref:`an attribute for hashed email addresses <destination-reddit-ads-audience-targeting-database>` that is available from your customer 360 database.
 

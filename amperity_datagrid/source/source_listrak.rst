@@ -35,7 +35,7 @@ Pull from Listrak
 
 .. source-listrak-start
 
-Use the |ext_listrak_email_api| and |ext_listrak_sms_api| to pull |what-pull| from |source-name| to Amperity.
+Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| and `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link| to pull |what-pull| from |source-name| to Amperity.
 
 .. source-listrak-end
 
@@ -76,9 +76,9 @@ A |source-name| data source works like this:
 
 #. Configure Amperity to pull one (or both) of the following data sources:
 
-   Email subscription status using the |ext_listrak_email_api|.
+   Email subscription status using the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|.
 
-   SMS profiles, opt-in / opt-out status, and subscription status using the |ext_listrak_sms_api|.
+   SMS profiles, opt-in / opt-out status, and subscription status using the `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|.
 
    .. important:: You may configure one or both of these data sources.
 
@@ -98,7 +98,7 @@ Get details
 
 |source-name| requires the following configuration details:
 
-#. The client ID(s) and secret(s) for the |ext_listrak_email_api| **and/or** |ext_listrak_sms_api|. (You must configure at least one of email or SMS and may configure both.)
+#. The client ID(s) and secret(s) for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| **and/or** `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
 
    .. important:: The Amperity |ext_amperity_allowlist_ip_address| must also be added to the allowlist in |source-name|.
 
@@ -181,7 +181,7 @@ Email
 
 .. source-listrak-review-data-email-start
 
-The feed and domain table will match the fields defined in the |ext_listrak_email_api|:
+The feed and domain table will match the fields defined in the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|:
 
 * **emailAddress** (assigned the **email** and **ck** semantic tags)
 * **subscribeDate**
@@ -199,7 +199,7 @@ SMS
 
 .. source-listrak-review-data-sms-start
 
-The feed and domain table will match the fields defined in the |ext_listrak_sms_api|:
+The feed and domain table will match the fields defined in the `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|:
 
 * **birthday** (assigned the **birthdate** semantic tag)
 * **emailAddress** (assigned the **email** and **ck** semantic tags)

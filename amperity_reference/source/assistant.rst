@@ -65,7 +65,7 @@ Use the **AmpAI Assistant** to:
              :class: no-scaled-link
         - The **AmpAI Assistant** is a generative AI-based feature that can help you build better SQL queries against the data in your Amperity tenant.
 
-          Open **Learning Lab** to learn more about how the |ext_learning_lab_ai_assistant| can help you build better queries. Registration is required.
+          Open **Learning Lab** to learn more about how the `AmpAI Assistant <https://learn.amperity.com/the-amperity-ai-assistant>`__ |ext_link| can help you build better queries. Registration is required.
 
 .. assistant-learning-lab-end
 

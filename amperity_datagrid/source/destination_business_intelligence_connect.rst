@@ -810,7 +810,7 @@ Qlik Sense
 
 .. destination-bic-connect-to-qlik-start
 
-Configure |ext_qlik_sense_snowflake| to the |bic| data warehouse.
+Configure `Qlik to connect directly <https://help.qlik.com/en-US/connectors/Subsystems/ODBC_connector_help/Content/Connectors_ODBC/Snowflake/Snowflake-connector.htm>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-qlik-end
 

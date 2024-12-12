@@ -923,7 +923,7 @@ You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts
              :class: no-scaled-link
         - Sign up to receive query alerts when record counts in the query output contains errors that exceed a configured threshold.
 
-          Open **Learning Lab** to learn more about how |ext_learning_lab_query_alerts| work. Registration is required.
+          Open **Learning Lab** to learn more about how `query alerts <https://learn.amperity.com/query-alerts>`__ |ext_link| work. Registration is required.
 
 .. queries-enable-alerts-learning-lab-end
 
