@@ -31,7 +31,7 @@ Send query results to Koupon Media
 
 .. sendto-koupon-media-channel-types-start
 
-You can associate records in Amperity to the following |ext_koupon_media_channel_types|:
+You can associate records in Amperity to the following `Koupon Media channel types <https://www.kouponmedia.com/creating-channel>`__ |ext_link|:
 
 #. Web application channels
 #. Mobile application channels
@@ -129,7 +129,7 @@ A query sent to Koupon Media will result in defining a mapping of fields in Ampe
 
 where **'' AS CUSTOMFIELDx** adds the field required by the Koupon Media data structure, but without mapping it to a field and where, for example, **loyalty_id AS CUSTOMFIELD17** shows mapping the loyalty ID for customers to a field in Koupon Media.
 
-.. tip:: The types of data that may be sent to Koupon Media from Amperity include, but are not limited to, any of the types of data that are listed in the |ext_koupon_media_privacy_policy|, such as phone numbers, email addresses, clickstream data, and so on. As a general guideline, data sent from Amperity should comply with this policy.
+.. tip:: The types of data that may be sent to Koupon Media from Amperity include, but are not limited to, any of the types of data that are listed in the `Koupon Media privacy policy <https://www.koupon.com/privacy>`__ |ext_link|, such as phone numbers, email addresses, clickstream data, and so on. As a general guideline, data sent from Amperity should comply with this policy.
 
 .. sendto-koupon-media-build-query-map-to-channel-end
 

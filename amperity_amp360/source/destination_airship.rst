@@ -77,7 +77,7 @@ Map to audience lists
 
 .. sendto-airship-build-query-map-to-audience-lists-start
 
-Airship |ext_airship_audience_lists| are groups of devices, users, and addresses that can be targeted by channels and queries.
+Airship `audience lists <https://docs.airship.com/guides/audience/audience-lists/>`__ |ext_link| are groups of devices, users, and addresses that can be targeted by channels and queries.
 
 .. sendto-airship-build-query-map-to-audience-lists-end
 
@@ -89,7 +89,7 @@ Map to attributes
 
 .. sendto-airship-build-query-map-to-attributes-start
 
-Airship |ext_airship_attributes| are key-value pairs that are associated with audiences for better message targeting.
+Airship `attributes <https://docs.airship.com/guides/audience/attributes/>`__ |ext_link| are key-value pairs that are associated with audiences for better message targeting.
 
 .. sendto-airship-build-query-map-to-attributes-end
 
@@ -105,7 +105,7 @@ Add orchestration
 
 .. sendto-airship-add-orchestration-important-start
 
-.. important:: Airship |ext_airship_audience_lists| are groups of devices, users, and addresses that can be targeted by channels and queries and |ext_airship_attributes| are key-value pairs that are associated with audiences for better message targeting. Refer to the |ext_airship_sftp| for details about template patterns and file names.
+.. important:: Airship `audience lists <https://docs.airship.com/guides/audience/audience-lists/>`__ |ext_link| are groups of devices, users, and addresses that can be targeted by channels and queries and `attributes <https://docs.airship.com/guides/audience/attributes/>`__ |ext_link| are key-value pairs that are associated with audiences for better message targeting. Refer to the `SFTP tutorial <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/>`__ |ext_link| for details about template patterns and file names.
 
 .. sendto-airship-add-orchestration-important-end
 

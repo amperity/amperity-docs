@@ -251,6 +251,7 @@ An **Affinity** table associates individual customers to the products they are m
 
 .. term-affinity-table-end
 
+
 **Airship**, **Urban Airship**
 
 .. term-airship-start
@@ -2152,6 +2153,15 @@ Discount sensitivity is a predictive model that categorizes customers into three
 .. term-discount-sensitivity-end
 
 
+**Discount Sensitivity table**
+
+.. term-discount-sensitivity-table-start
+
+An **Discount Sensitivity** table groups customers into three categories: full price shoppers, discount opportunists, and discount seekers. Use an **Discount Sensitivity** table to help deliver the right messages and offers to your customers at the price those customers are willing to pay.
+
+.. term-discount-sensitivity-table-end
+
+
 **display advertising**
 
 .. term-display-advertising-start
@@ -2504,6 +2514,23 @@ Event propensity is a predictive model that determines the likelihood that a cus
 .. term-event-propensity-end
 
 
+**Event Propensity** (table)
+
+
+.. term-event-propensity-table-start
+
+An **Event Propensity** table associates individual customers to the events that, depending on the type of event, are most likely to lead to engagement with your brand.
+
+.. term-event-propensity-table-end)
+
+
+.. term-event-propensity-table-start
+
+An **Event Propensity** table associates individual customers to the events that, depending on the type of event, are most likely to lead to engagement with your brand.
+
+.. term-event-propensity-table-end
+
+
 **Eventbrite**
 
 .. term-eventbrite-start
@@ -2544,7 +2571,7 @@ Experian provides credit reporting services and scores to businesses and consume
 
 .. term-edn-start
 
-|ext_extensible_data_notation|, is a data format that is similar to JSON in structure and presentation and is used by Clojure to represent programs.
+`Extensible Data Notation (EDN) <https://github.com/edn-format/edn>`__ |ext_link|, is a data format that is similar to JSON in structure and presentation and is used by Clojure to represent programs.
 
 .. term-edn-end
 
@@ -4017,7 +4044,7 @@ Monetate offers solutions for customer segmentation and targeting, campaign test
 
 .. term-mosaic-usa-start
 
-|ext_experian_mosaic| is a consumer segmentation system from Experian that classifies US households into |ext_experian_mosaic_types_and_groups|, providing a 360-degree view of consumer choices, lifestyles, preferences, and habits.
+`Mosaic USA <https://www.experian.com/marketing-services/consumer-segmentation>`__ |ext_link| is a consumer segmentation system from Experian that classifies US households into `71 unique types and 19 groups <https://www.experian.com/assets/marketing-services/product-sheets/mosaic-usa.pdf>`__ |ext_link|, providing a 360-degree view of consumer choices, lifestyles, preferences, and habits.
 
 .. term-mosaic-usa-end
 
@@ -5273,7 +5300,7 @@ A recurring campaign is sent automatically based on an updated/refreshed audienc
 
 .. term-reddit-ads-start
 
-Reddit is home to unique communities, engaged conversations, and the best memes. Reddit Ads allows brands to find their community on Reddit, and then engage with your customers within |ext_reddit_communities| using targeted ads and promoted posts.
+Reddit is home to unique communities, engaged conversations, and the best memes. Reddit Ads allows brands to find their community on Reddit, and then engage with your customers within `the 100K+ active communities on Reddit <https://www.redditforbusiness.com/>`__ |ext_link| using targeted ads and promoted posts.
 
 .. term-reddit-ads-end
 

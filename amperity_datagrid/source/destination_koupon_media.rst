@@ -41,7 +41,7 @@ Send data to Koupon Media
 
 .. term-koupon-media-channel-types-start
 
-You can associate records in Amperity to the following |ext_koupon_media_channel_types|:
+You can associate records in Amperity to the following `Koupon Media channel types <https://www.kouponmedia.com/creating-channel>`__ |ext_link|:
 
 #. Web application channels
 #. Mobile application channels

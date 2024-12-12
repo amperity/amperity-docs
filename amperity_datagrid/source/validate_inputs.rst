@@ -28,9 +28,11 @@ Amperity includes a series of input validation reports that help your brand meas
 
 .. validate-inputs-overview-note-start
 
-.. note:: Input validation reports are meant to be informative and to provide a way for your brand to explore data. They do not have pass or fail thresholds and will not stop automated workflows within Amperity.
+.. note:: Input validation reports are meant to be informative and to provide a way for your brand to explore data and discover when data that is made available to Amperity is missing values or has values that do not match the expected format.
 
-   Some input validations measure against a single semantic tag, while others use a combination of semantic tags. All input validations are returned as a series of columns that describe the quality of your data as it relates to a specific report.
+   Input validation reports do not have pass or fail thresholds and will not stop automated workflows within Amperity.
+
+   Some input validations measure against a single semantic tag, while others use a combination of semantic tags. All input validations are returned as a series of columns that describe the quality of your data as it relates to a specific each report, with a row for each data source.
 
    You do not need to run Stitch *or* have a working customer 360 database to run input validations. Just publish the domain tables to make them available to the **Queries** page.
 
@@ -71,11 +73,9 @@ Generate reports
 
 .. validate-inputs-generate-reports-start
 
-Input validation reports are run automatically.
+Input validation reports may be run from the **Sources** page. At the top of the page, open the **Tools** menu, and then click **Run validations**. The report will start running. The length of time it takes for the report to complete depends on the volume of data in your tenant. The completed report is available from the **Input validations report** notification that appears in the **Recent activity** pane after the reports are complete.
 
-To open input validation reports, expand the **Notifications** pane, expand the most recent notification that is titled "Input Validation Report", and then click **View Report**.
-
-The **Input validation reports** dialog box will show you all of the individual reports that apply to the current state of your tenant. Each individual report describes what causes the report to be visible, which semantic tags were validated, and then returns a series of columns that shows the report status for each data source that was part of the individual report. A link to a query is provided. This query opens in the **Queries** page and can be used to run queries against domain table data that has been published to the **Queries** page.
+The **Input validation report** dialog box shows all of the individual reports that apply to the current state of your tenant. Each report describes what causes the report to be visible, shows all associated semantic tags, and then returns a series of columns that shows the report status for each data source that was part of the individual report. A link to a query is provided. This query opens in the **Queries** page and can be used to run queries against domain table data that has been published to the **Queries** page.
 
 .. validate-inputs-generate-reports-end
 
@@ -93,7 +93,7 @@ Review reports
 
 .. validate-inputs-review-reports-start
 
-The list of input validation reports that will be available in your tenant depends on the outcomes of running the validations. Each report is available from the **Notifications** pane.
+The list of input validation reports that will be available in your tenant depends on the outcomes of running the validations. Each report is available from the **Input validations report** that will appear in the **Recent activity** pane after the reports are complete.
 
 .. validate-inputs-review-reports-end
 
@@ -105,7 +105,19 @@ Customer profiles
 
 .. validate-inputs-review-reports-customer-profiles-start
 
-Email addresses and phone numbers are validated for the percentage of missing values, correctly formatted values, and the frequency at which unique values occur.
+Email addresses and phone numbers are validated for the percentage of missing values, correctly formatted values, and the frequency at which unique values occur. For example, for email addresses:
+
+* The percentage of customer profiles with missing email addresses.
+* The sum of email addresses that do not have a valid format.
+* The sum of unique email addresses by data source.
+* The uniqueness of email addresses by data source, compared across all data sources with email addresses.
+
+and for phone numbers:
+
+* The percentage of customer profiles with missing phone numbers.
+* The sum of phone numbers that do not have a valid format.
+* The uniqueness of phone numbers by data source, compared across all data sources with phone numbers.
+* The percentage of records with phone numbers that do not contain 10 digits.
 
 .. validate-inputs-review-reports-customer-profiles-end
 

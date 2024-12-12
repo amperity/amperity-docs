@@ -33,7 +33,7 @@ Use Amperity to manage |what-send| in Sailthru. Build a query using the **email*
 
 .. sendto-sailthru-api-note-start
 
-.. note:: This destination uses the |ext_sailthru_api|.
+.. note:: This destination uses the `Sailthru API <https://getstarted.sailthru.com/developers/api-basics/introduction/>`__ |ext_link|.
 
 .. sendto-sailthru-api-note-end
 

@@ -40,7 +40,7 @@ About ingest queries
 
           Amperity can ingest data in most formats; however, to be stored in a source domain table and used in processes like Stitch, data must be in a format that fits neatly into rows and columns. 
 
-          Open **Learning Lab** for |ext_learning_lab_ingest_queries|. Registration is required.
+          Open **Learning Lab** for `ingest queries <https://learn.amperity.com/ingest-queries>`__ |ext_link|. Registration is required.
 
 .. ingest-queries-learning-lab-end
 

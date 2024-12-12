@@ -77,7 +77,7 @@ Map to PowerReviews
 
 .. sendto-powerreviews-build-query-map-to-recipient-list-start
 
-You can send reviews data to PowerReviews from a query that maps data in the customer 360 database to required and optional fields in the PowerReviews data schema, as described in the |ext_powerreviews_sftp|.
+You can send reviews data to PowerReviews from a query that maps data in the customer 360 database to required and optional fields in the PowerReviews data schema, as described in the `review import process <https://help.powerreviews.com/Content/Support%20Topics/Review%20Import%20Process.htm>`__ |ext_link|.
 
 A SQL query built using Presto SQL as a query can return results for use with PowerReviews. Add a SQL table with a **SELECT** statement similar to:
 
@@ -99,7 +99,7 @@ A SQL query built using Presto SQL as a query can return results for use with Po
    FROM customer360
    LIMIT 2000
 
-.. note:: The fields in the example above represent custom fields in the customer 360 database that are built from data sources that contain reviews data for customers. This output must be mapped to the schema that is required by the PowerReviews |ext_powerreviews_sftp|.
+.. note:: The fields in the example above represent custom fields in the customer 360 database that are built from data sources that contain reviews data for customers. This output must be mapped to the schema that is required by the PowerReviews `review import process <https://help.powerreviews.com/Content/Support%20Topics/Review%20Import%20Process.htm>`__ |ext_link|.
 
 .. sendto-powerreviews-build-query-map-to-recipient-list-end
 

@@ -845,6 +845,26 @@ There are some options available as you determine the best way to configure Ampe
 .. semantics-profile-type-phone-options-end
 
 
+.. _semantics-profile-type-phone-last-10:
+
+Last 10 digits
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. TODO: THis is also in amperity_reference/semantics.rst for profile/phone.
+
+.. semantics-profile-type-phone-digits-start
+
+Amperity uses the last 10-digits of phone numbers for identity resolution.
+
+Use the `input validation report <https://docs.amperity.com/datagrid/validate_inputs.html>`__ to find data sources that contain records with phone numbers that exceed 10 digits.
+
+You should exclude extensions from phone numbers whenever possible. You may use a custom domain table to apply additional formatting to phone numbers, such as removing extensions.
+
+Alternately provide data sources to Amperity that have already removed the extensions or have moved them into a different field.
+
+.. semantics-profile-type-phone-digits-end
+
+
 .. _semantics-profile-type-phone-namespaces:
 
 Apply namespaces to phone

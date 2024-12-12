@@ -102,7 +102,7 @@ You can extend audiences that are sent to |destination-name| by including extend
    * - **state**
      - **postal_state**
 
-.. note:: |destination-name| field names are case sensitive and cannot start with a number. Review the list of |ext_sailthru_extended_profile_attributes| that are supported by |destination-name|.
+.. note:: |destination-name| field names are case sensitive and cannot start with a number. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
 
 .. destination-sailthru-additional-attributes-end
 

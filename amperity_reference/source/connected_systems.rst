@@ -794,7 +794,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull data to Amperity from Reddit Ads using Fivetran.
 
-       Send data using SFTP or cloud storage, then upload to Reddit Ads to engage with your customers within the |ext_reddit_communities|.
+       Send data using SFTP or cloud storage, then upload to Reddit Ads to engage with your customers within the `the 100K+ active communities on Reddit <https://www.redditforbusiness.com/>`__ |ext_link|.
 
    * - **RR Donnelly**
      - |system-yes|
