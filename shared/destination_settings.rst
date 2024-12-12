@@ -183,7 +183,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-escape-character-start
 
-The escape character to use in the file output.
+The escape character to use in the file output. Applies to CSV, TSV, PSV, and custom delimiter file types.
 
 .. setting-common-escape-character-end
 
