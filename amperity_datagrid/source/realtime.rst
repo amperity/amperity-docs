@@ -58,7 +58,7 @@ Amperity uses the following components to enable real-time tables: Apache Kafka,
 
 1. `Apache Kafka <https://kafka.apache.org/>`__ |ext_link| reliably handles real-time events and acts as the queuing and persistence layer for real-time tables.
 
-2. `Apache Spark Structured Streaming <https://spark.apache.org/streaming/>`__ |ext_link| moves data from Apache Kafka queues to the Amperity platform in real-time using fault-tolerant, low-latency stream processing that handle real-time data with precision.
+2. `Apache Spark Structured Streaming <https://spark.apache.org/streaming/>`__ |ext_link| moves data from Apache Kafka queues to the Amperity platform in real-time using fault-tolerant, low-latency stream processing that handles real-time data with precision.
 
 3. Real-time tables are stored as `Delta Lake tables <https://delta.io/>`__ |ext_link| and expose real-time data to the Amperity Activation layer.
 
