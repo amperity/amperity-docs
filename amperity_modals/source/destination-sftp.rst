@@ -163,8 +163,8 @@ Settings
 **Parquet extension**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-parquet-extension-start
-   :end-before: .. setting-parquet-extension-end
+   :start-after: .. setting-common-parquet-extension-start
+   :end-before: .. setting-common-parquet-extension-end
 
 **Success file**
 
