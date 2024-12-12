@@ -108,6 +108,12 @@ Apache Parquet files only:
    :start-after: .. setting-common-quote-mode-none-start
    :end-before: .. setting-common-quote-mode-none-end
 
+**Parquet extension**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-parquet-extension-start
+   :end-before: .. setting-parquet-extension-end
+
 **Success file**
 
 .. include:: ../../shared/destination_settings.rst

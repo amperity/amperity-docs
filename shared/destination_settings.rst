@@ -303,6 +303,16 @@ All other Amperity file format settings for |destination-name| are optional.
 
 .. setting-common-optional-settings-end
 
+**Parquet extension**
+
+Applies to: Apache Parquet files only.
+
+.. setting-common-parquet-extension-start
+
+Enable to remove the file extension from the directory name. Applies to Apache Parquet files only.
+
+.. setting-common-parquet-extension-end
+
 **PGP public key**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
