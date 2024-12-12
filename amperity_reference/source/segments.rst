@@ -276,7 +276,6 @@ These charts have a configurable date range and the displayed attributes charts 
 
 * :ref:`segments-change-comparison-dates`
 * :ref:`segments-change-date`
-* :ref:`segments-change-date`
 * :ref:`segments-compare`
 * :ref:`segments-customize-charts`
 * :ref:`segments-expand-graph`

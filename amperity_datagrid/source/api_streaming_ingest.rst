@@ -660,6 +660,8 @@ Add to courier group
    :start-after: .. term-courier-group-start
    :end-before: .. term-courier-group-end
 
+.. important:: Be sure to configure a courier that is associated with a streaming endpoint to have `a 24-hour offset <https://docs.amperity.com/reference/courier_groups.html#number-of-days>`__. This will ensure that all data that is streamed to the endpoint will be available to the scheduled workflow.
+
 **To add the courier to a courier group**
 
 .. include:: ../../shared/sources.rst

@@ -183,7 +183,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-escape-character-start
 
-The escape character to use in the file output.
+The escape character to use in the file output. Applies to CSV, TSV, PSV, and custom delimiter file types.
 
 .. setting-common-escape-character-end
 
@@ -302,6 +302,16 @@ The name and description for a destination.
 All other Amperity file format settings for |destination-name| are optional.
 
 .. setting-common-optional-settings-end
+
+**Parquet extension**
+
+Applies to: Apache Parquet files only.
+
+.. setting-common-parquet-extension-start
+
+Enable to remove the file extension from the directory name. Applies to Apache Parquet files only.
+
+.. setting-common-parquet-extension-end
 
 **PGP public key**
 
@@ -1646,8 +1656,9 @@ The name of the shared list to be managed by Amperity.
 
 Use filename templates to configure Amperity to support managing more than one shared list. For example:
 
-* A timestamp at the end of a filename template---**Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv**---will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
-* A campaign that is configured only for campaign name and group name---**{{ campaign_name }} - {{ group_name }}**---will update the same shared list each time the audience is sent from Amperity.
+1. A timestamp at the end of a filename template---**Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv**---will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
+
+2. A campaign that is configured only for campaign name and group name---**{{ campaign_name }} - {{ group_name }}**---will update the same shared list each time the audience is sent from Amperity.
 
 .. setting-oracle-eloqua-shared-list-name-end
 

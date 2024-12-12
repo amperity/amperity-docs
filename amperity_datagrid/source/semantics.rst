@@ -215,8 +215,11 @@ Amperity will create columns in the **Unified Coalesced** table similar to:
    ------------------ ------------------ ------------------
     email              email_primary      email_alternate
    ------------------ ------------------ ------------------
-   jcurrie@home.com    jcurrie@home.com   justinc@work.com
+   jcurrie@home.com,   jcurrie@home.com   justinc@work.com
    justinc@work.com
+   ------------------ ------------------ ------------------
+   clorenz@home.com,   clorenz@home.com   clorenz@work.com
+   clorenz@work.com
    ------------------ ------------------ ------------------
 
 .. semantics-profile-type-email-namespace-end
@@ -238,8 +241,11 @@ Amperity will create columns in the **Unified Coalesced** table similar to:
    ------------------ ------------------ ------------------
     email              email_1            email_2
    ------------------ ------------------ ------------------
-   jcurrie@home.com    jcurrie@home.com   justinc@work.com
+   jcurrie@home.com,   jcurrie@home.com   justinc@work.com
    justinc@work.com
+   ------------------ ------------------ ------------------
+   clorenz@home.com,   clorenz@home.com   clorenz@work.com
+   clorenz@work.com
    ------------------ ------------------ ------------------
 
 .. semantics-profile-type-email-ordinals-end
@@ -854,7 +860,7 @@ Last 10 digits
 
 .. semantics-profile-type-phone-digits-start
 
-Amperity uses the last 10-digits of phone numbers for identity resolution.
+Amperity uses the last 10 digits of phone numbers for identity resolution.
 
 Use the `input validation report <https://docs.amperity.com/datagrid/validate_inputs.html>`__ to find data sources that contain records with phone numbers that exceed 10 digits.
 

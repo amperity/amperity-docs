@@ -704,7 +704,7 @@ Each courier in a courier group may be configured to look for data during a time
 #. On the **Couriers** tab, click the **Add courier** link.
 #. Select the name of a courier from the drop-down list.
 
-   Next to **Load data** add an integer value and then select **Minutes**, **Hours**, **Days**, or **Weeks** to represent the amount of time order than the scheduled date and time for which the courier will look for data.
+   Next to **Load data** add an integer value and then select **Minutes**, **Hours**, **Days**, or **Weeks** to represent the amount of time older than the scheduled date and time for which the courier will look for data.
 #. Click **Save**.
 
 .. courier-groups-howto-add-courier-days-steps-end

@@ -1331,33 +1331,153 @@
         "url": "/reference/courier_groups.html"
       },
       {
-        "title": "Schedules",
+        "title": "Add a courier group",
         "hasSubItems": false,
-        "url": "/reference/courier_groups.html#schedules"
+        "url": "/reference/courier_groups.html#add-a-courier-group"
       },
       {
-        "title": "Wait times",
-        "hasSubItems": false,
-        "url": "/reference/courier_groups.html#wait-times"
+        "title": "Courier group settings",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Activate courier group",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#activate-courier-group"
+          },
+          {
+            "title": "Courier group alerts",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#courier-group-alerts"
+          },
+          {
+            "title": "Run types",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#run-types"
+          },
+          {
+            "title": "Schedules",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#schedules"
+          },
+          {
+            "title": "Time zones",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#time-zones"
+          },
+        ],
       },
       {
-        "title": "Offsets",
-        "hasSubItems": false,
-        "url": "/reference/courier_groups.html#offsets"
+        "title": "Add sources",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Bridge syncs",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#bridge-syncs"
+          },
+          {
+            "title": "Couriers",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Courier alerts",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#courier-alerts"
+              },
+              {
+                "title": "Number of days",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#number-of-days"
+              },
+              {
+                "title": "Wait times",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#wait-times"
+              },
+            ],
+          },
+          {
+            "title": "Streaming ingest",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#streaming-ingest"
+          },
+        ],
       },
       {
-        "title": "Time zones",
+        "title": "Review activations",
         "hasSubItems": false,
-        "url": "/reference/courier_groups.html#time-zones"
+        "url": "/reference/courier_groups.html#review-activations"
       },
       {
         "title": "How-tos",
         "hasSubItems": true,
         "subItems": [
           {
-            "title": "Add courier group",
+            "title": "Activate courier group",
             "hasSubItems": false,
-            "url": "/reference/courier_groups.html#add-courier-group"
+            "url": "/reference/courier_groups.html#activate-courier-group"
+          },
+          {
+            "title": "Add bridge to workflow",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#add-bridge-to-workflow"
+          },
+          {
+            "title": "Add courier to workflow",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Add courier",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#add-courier"
+              },
+              {
+                "title": "Set wait time",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#set-wait-time"
+              },
+              {
+                "title": "Set the number of days",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#set-the-number-of-days"
+              },
+              {
+                "title": "Alert when data is missing?",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#alert-when-data-is-missing"
+              },
+              {
+                "title": "Stop when data is missing?",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#stop-when-data-is-missing"
+              },
+            ],
+          },
+          {
+            "title": "Add to courier group",
+            "hasSubItems": true,
+            "subItems": [
+              {
+                "title": "Data export",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#add-data-export-to-courier-group"
+              },
+              {
+                "title": "Orchestration",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#add-orchestration-to-courier-group"
+              },
+              {
+                "title": "Orchestration group",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#add-orchestration-group-to-courier-group"
+              },
+              {
+                "title": "Profile API endpoint",
+                "hasSubItems": false,
+                "url": "/reference/courier_groups.html#add-profile-api-endpoint-to-courier-group"
+              },
+            ],
           },
           {
             "title": "Copy courier group",
@@ -1365,9 +1485,14 @@
             "url": "/reference/courier_groups.html#copy-courier-group"
           },
           {
-            "title": "Configure runtime alert",
+            "title": "Deactivate workflow",
             "hasSubItems": false,
-            "url": "/reference/courier_groups.html#configure-duration-alert"
+            "url": "/reference/courier_groups.html#deactivate-workflow"
+          },
+          {
+            "title": "Define schedule",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#define-schedule"
           },
           {
             "title": "Delete courier group",
@@ -1375,9 +1500,29 @@
             "url": "/reference/courier_groups.html#delete-courier-group"
           },
           {
-            "title": "Load data only for past day",
+            "title": "Edit courier group",
             "hasSubItems": false,
-            "url": "/reference/courier_groups.html#load-data-only-for-past-day"
+            "url": "/reference/courier_groups.html#edit-courier-group"
+          },
+          {
+            "title": "Notify when group runs slowly",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#notify-when-courier-group-runs-slowly"
+          },
+          {
+            "title": "Pull for previous 24 hours?",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#pull-files-for-previous-24-hours"
+          },
+          {
+            "title": "Remove bridge from group",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#remove-bridge-from-courier-group"
+          },
+          {
+            "title": "Remove courier from group",
+            "hasSubItems": false,
+            "url": "/reference/courier_groups.html#remove-courier-from-courier-group"
           },
           {
             "title": "Run courier group",
@@ -5025,35 +5170,9 @@
             "url": "/reference/semantics.html#product-catalog"
           },
           {
-            "title": "Profile (PII)",
-            "hasSubItems": true,
-            "subItems": [
-              {
-                "title": "About Profile (PII)",
-                "hasSubItems": false,
-                "url": "/reference/semantics.html#profile-pii"
-              },
-              {
-                "title": "Address groups",
-                "hasSubItems": false,
-                "url": "/reference/semantics.html#profile-pii"
-              },
-              {
-                "title": "Email addresses",
-                "hasSubItems": false,
-                "url": "/reference/semantics.html#profile-pii"
-              },
-              {
-                "title": "Names",
-                "hasSubItems": false,
-                "url": "/reference/semantics.html#profile-pii"
-              },
-              {
-                "title": "Phone numbers",
-                "hasSubItems": false,
-                "url": "/reference/semantics.html#profile-pii"
-              },
-            ],
+            "title": "Profiles (PII)",
+            "hasSubItems": false,
+            "url": "/reference/semantics.html#profile-pii"
           },
           {
             "title": "Stitch labels",

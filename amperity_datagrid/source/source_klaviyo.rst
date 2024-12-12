@@ -35,7 +35,7 @@ Pull from Klaviyo
 
 .. source-klaviyo-context-start
 
-Klaviyo can send |what-pull| to Amperity using the |ext_klaviyo_events_api|, which provides email events data for |ext_klaviyo_events_use_cases|.
+Klaviyo can send |what-pull| to Amperity using the `events API <https://developers.klaviyo.com/en/reference/get_events>`__ |ext_link|, which provides email events data for `opens, clicks (for email and SMS), bounces, opt-ins, unsubscribes, custom metrics, and more <https://developers.klaviyo.com/en/reference/events_api_overview#use-cases>`__ |ext_link|.
 
 .. source-klaviyo-context-end
 
@@ -63,7 +63,7 @@ Get details
 
 |source-name| requires the following configuration details:
 
-#. The |ext_klaviyo_api_key| for |source-name|.
+#. The `API key <https://developers.klaviyo.com/en/docs/retrieve-api-credentials>`__ |ext_link| for |source-name|.
 
 .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
 
