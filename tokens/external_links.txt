@@ -1091,51 +1091,6 @@
    <a href="https://jwt.io/" target="_blank">JSON Web Token (JWT)</a>
 
 
-.. |ext_kibo_destination_requirements| raw:: html
-
-   <a href="https://docs.kibocommerce.com/114237-customer-data/631062-customer-dataset-upload-requirements" target="_blank">customer dataset upload requirements</a>
-
-
-.. |ext_klaviyo_api_key| raw:: html
-
-   <a href="https://developers.klaviyo.com/en/docs/retrieve-api-credentials" target="_blank">API key</a>
-
-
-.. |ext_klaviyo_events_api| raw:: html
-
-   <a href="https://developers.klaviyo.com/en/reference/get_events" target="_blank">events API</a>
-
-
-.. |ext_klaviyo_events_use_cases| raw:: html
-
-   <a href="https://developers.klaviyo.com/en/reference/events_api_overview#use-cases" target="_blank">opens, clicks (for email and SMS), bounces, opt-ins, unsubscribes, custom metrics, and more</a>
-
-
-.. |ext_klaviyo_rate_limits| raw:: html
-
-   <a href="https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling#rate-limits">rate limits</a>
-
-
-.. |ext_klaviyo_rest_api| raw:: html
-
-   <a href="https://apidocs.klaviyo.com/reference/api-overview" target="_blank">Klaviyo REST API</a>
-
-
-.. |ext_klaviyo_segments_location_based| raw:: html
-
-   <a href="https://help.klaviyo.com/hc/en-us/articles/115005065887#create-a-location-based-segment1" target="_blank">location-based segments</a>
-
-
-.. |ext_klaviyo_sftp_import| raw:: html
-
-   <a href="https://developers.klaviyo.com/en/docs/use_klaviyos_sftp_import_tool" target="_blank">SFTP import tool</a>
-
-
-.. |ext_klaviyo_api_endpoint_update_profile| raw:: html
-
-   <a href="https://developers.klaviyo.com/en/reference/update_profile">Update Profile</a>
-
-
 .. |ext_kustomer_api| raw:: html
 
    <a href="https://developer.kustomer.com/kustomer-api-docs/reference/introduction" target="_blank">Kustomer API</a>

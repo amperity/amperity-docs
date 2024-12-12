@@ -45,11 +45,11 @@ Use Amperity to manage audience lists in Klaviyo. Build a query using the **emai
 
 .. destination-klaviyo-api-note-start
 
-.. note:: This destination uses the |ext_klaviyo_rest_api|.
+.. note:: This destination uses the `Klaviyo REST API <https://apidocs.klaviyo.com/reference/api-overview>`__ |ext_link|.
 
-   Amperity uses the |ext_klaviyo_api_endpoint_update_profile| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
+   Amperity uses the `Update Profile <https://developers.klaviyo.com/en/reference/update_profile>`__ |ext_link| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
 
-   Review the |ext_klaviyo_rate_limits| that are applied to endpoints in the |destination-name| REST API to manage customer profiles.
+   Review the `rate limits <https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling#rate-limits>`__ |ext_link| that are applied to endpoints in the |destination-name| REST API to manage customer profiles.
 
    Before sending a set of customer profiles to |destination-name|, and to help set expectations, you should review the rate limits and estimate the amount of time required to complete the process of adding your set of customer profiles to |destination-name|.
 
@@ -57,7 +57,7 @@ Use Amperity to manage audience lists in Klaviyo. Build a query using the **emai
 
 .. destination-klaviyo-csv-note-start
 
-   If you don't want to wait to load customer profiles, you may instead use the |ext_klaviyo_sftp_import| process. This approach is efficient and quick. It uses the :doc:`built-in SFTP connector in Amperity <destination_sftp>` and is capable of importing large sets of customer profiles.
+   If you don't want to wait to load customer profiles, you may instead use the `SFTP import tool <https://developers.klaviyo.com/en/docs/use_klaviyos_sftp_import_tool>`__ |ext_link| process. This approach is efficient and quick. It uses the :doc:`built-in SFTP connector in Amperity <destination_sftp>` and is capable of importing large sets of customer profiles.
 
    The CSV file that is imported to |destination-name| has specific requirements on formatting and must include one (or more) of the following fields: "Email", "PhoneNumber", and/or "ExternalID". When these fields are present in the CSV file they must have those exact names.
 
@@ -521,7 +521,7 @@ Customer profile parameters
 
 The following table describes the parameters that may be sent to |destination-name|. Use the **properties** field to define a series of custom properties (as key/value pairs) to represent offline events.
 
-Amperity uses the |ext_klaviyo_api_endpoint_update_profile| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
+Amperity uses the `Update Profile <https://developers.klaviyo.com/en/reference/update_profile>`__ |ext_link| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
 
 The list of customer profile parameters supported by |destination-name| are described in the following table. Parameters are listed alphabetically, but may be returned in any order.
 
@@ -623,7 +623,7 @@ The list of customer profile parameters supported by |destination-name| are desc
    * - **latitude**
      - **Optional**
 
-       A latitude coordinate that may be used to define |ext_klaviyo_segments_location_based| in |destination-name|.
+       A latitude coordinate that may be used to define `location-based segments <https://help.klaviyo.com/hc/en-us/articles/115005065887#create-a-location-based-segment1>`__ |ext_link| in |destination-name|.
 
        .. note:: This value should have a precision of four decimal places.
 
@@ -631,7 +631,7 @@ The list of customer profile parameters supported by |destination-name| are desc
    * - **longitude**
      - **Optional**
 
-       A longitude coordinate that may be used to define |ext_klaviyo_segments_location_based| in |destination-name|.
+       A longitude coordinate that may be used to define `location-based segments <https://help.klaviyo.com/hc/en-us/articles/115005065887#create-a-location-based-segment1>`__ |ext_link| in |destination-name|.
 
        .. note:: This value should have a precision of four decimal places.
 

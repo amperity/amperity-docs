@@ -100,7 +100,7 @@ Get details
    * Use double quotes around fields that include a comma
    * Include a header row for new datasets
 
-   Review the |ext_kibo_destination_requirements| for additional information. 
+   Review the `customer dataset upload requirements <https://docs.kibocommerce.com/114237-customer-data/631062-customer-dataset-upload-requirements>`__ |ext_link| for additional information. 
 
 .. destination-kibo-get-details-note-end
 
