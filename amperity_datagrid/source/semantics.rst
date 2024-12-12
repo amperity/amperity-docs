@@ -854,7 +854,7 @@ Last 10 digits
 
 .. semantics-profile-type-phone-digits-start
 
-Amperity uses the last 10-digits of phone numbers for identity resolution.
+Amperity uses the last 10 digits of phone numbers for identity resolution.
 
 Use the `input validation report <https://docs.amperity.com/datagrid/validate_inputs.html>`__ to find data sources that contain records with phone numbers that exceed 10 digits.
 
