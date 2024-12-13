@@ -5097,7 +5097,7 @@ The **Unified Preprocessed Raw** table contains the following columns:
 
 .. _data-tables-unified-product-catalog:
 
-Unified_Product_Catalog
+Unified Product Catalog
 ==================================================
 
 .. include:: ../../shared/terms.rst
