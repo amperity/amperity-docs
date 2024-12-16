@@ -1554,4 +1554,4 @@
 
 .. |ext_sparksql_version_current| raw:: html
 
-   <a href="https://archive.apache.org/dist/spark/docs/3.5.1/api/sql/index.html" target="_blank">Spark SQL, version 3.5.1</a>
+   <a href="https://archive.apache.org/dist/spark/docs/3.1.2/api/sql/index.html" target="_blank">Spark SQL, version 3.1.2</a>
