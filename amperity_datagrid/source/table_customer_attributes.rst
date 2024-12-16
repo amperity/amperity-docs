@@ -1129,8 +1129,19 @@ The **Customer Attributes** table can be configured to provide your customers' c
 
 You have two choices for defining churn events for this table:
 
-#. Use predicted modeling to define your customers' current churn status. This option is available when your tenant has predictive modeling enabled and a **Churn Events** table is configured for use in your tenant.
-#. Use historical order history to define your customers' churn status. For example, you could configure the **Churn Events** table to define churn status as "active" as "within the past 60 days", "at risk" as "within the past 365 days", and so on, using SQL similar to:
+#. Use predicted modeling to define your customers' current churn status. This option is available when your tenant has predictive modeling enabled and a :doc:`Churn Events <table_predicted_clv_attributes>` table is configured for use in your tenant.
+
+   .. note:: Churn status classifications for predictive modeling results in the **Churn Events** table are not configurable.
+
+      .. include:: ../../shared/models.rst
+         :start-after: .. models-churn-propensitity-tiers-repeat-start
+         :end-before: .. models-churn-propensitity-tiers-repeat-end
+
+      .. include:: ../../shared/models.rst
+         :start-after: .. models-churn-propensitity-tiers-onetime-start
+         :end-before: .. models-churn-propensitity-tiers-onetime-end
+
+#. Use historical order history to define your customers' churn status. For example, you could configure the **Customer Attributes** table to define churn status as "active" as "within the past 60 days", "at risk" as "within the past 365 days", and so on, using SQL similar to:
 
    .. code-block:: sql
 
