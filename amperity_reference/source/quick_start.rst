@@ -15,18 +15,50 @@ Quick start: Identity resolution
    :read-time: 10 min read; ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 
-Amperity is a customer data cloud that specializes in using AI to turn raw data into a growing library of robust unified datasets and durable customer profiles that are available to support all of your brand's use cases.
+.. quickstart-overview-start
+
+Amperity Customer Data Cloud specializes in using AI to turn raw data into a growing library of robust unified datasets and durable customer profiles that are available to support all of your brand's use cases.
 
 By the end of this guide you will know how to do the following:
 
-#. Connect your Databricks account and sync data to Amperity.
-#. Leverage AmpAI to understand and apply semantic tags to your data sources.
+#. Sync data from your Databricks account to Amperity.
+#. Apply semantic tags to your data sources using AmpAI.
 #. Build an identity graph that links disparate profile records together using a unique and persistent identifier.
-#. Sync unified tables to your Databricks account.
+#. Sync unified tables from Amperity to your Databricks account.
 
+.. quickstart-overview-end
+
+
+.. _quickstart-data-model:
+
+Quick Start data model
+==================================================
+
+.. quickstart-data-model-start
+
+The following diagram shows the data model for the sample data that is part of the Amperity Quick Start. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
+
+.. quickstart-data-model-end
+
+.. image:: ../../images/quickstart_sample_erd.png
+   :width: 600 px
+   :alt: The sample data model for Amperity Quick Start.
+   :align: left
+   :class: no-scaled-link
+
+.. data-tables-data-model-tables-note-start
+
+.. note:: Click this diagram to open it in your full browser window. Click `HERE <https://docs.amperity.com/reference/_images/quickstart_sample_erd.png>`__ |ext_link| to open this diagram in a new tab or right-click that link to save a copy to your computer.
+
+.. data-tables-data-model-tables-note-end
+
+
+.. _quickstart-prerequisites:
 
 Prerequisites
 ==================================================
+
+.. quickstart-prerequisites-start
 
 To follow-along with this quick start guide you will need:
 
@@ -39,10 +71,15 @@ To follow-along with this quick start guide you will need:
 
    .. note:: Amperity sample data contains ~10 million customer records. Additional time may be necessary for loading and processing data if you choose to use your own data instead of Amperity sample data assets, depending on the number of records.
 
+.. quickstart-prerequisites-end
 
+
+.. _quickstart-login:
 
 Log in to Amperity
 ==================================================
+
+.. quickstart-login-start
 
 To start using the Amperity quick start tenant, do the following:
 
@@ -52,11 +89,15 @@ To start using the Amperity quick start tenant, do the following:
 
    This opens the **Identity resolution** page that will walk you through steps for connecting to Databricks, adding semantic tags to synced tables, running Stitch, and then syncing unified tables back to Databricks.
 
+.. quickstart-login-end
 
 
+.. _quickstart-connect:
 
 Connect to Databricks
 ==================================================
+
+.. quickstart-connect-start
 
 Use Amperity Bridge to connect Databricks to Amperity. This guide uses Amperity sample data assets, but the steps for Databricks are *almost* the same if you want to use your own data.
 
@@ -67,9 +108,11 @@ You have two options:
 
    .. note:: For this option you will need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/datagrid/bridge_databricks.html#get-details>`__.
 
-.. TODO: Compare this to the draft quickstart content for additional context.
+.. quickstart-connect-end
 
 **To connect to Amperity sample data**
+
+.. quickstart-connect-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -124,11 +167,15 @@ You have two options:
 
        This will start the sync between Amperity and Databricks. Wait for the sync to finish before continuing to the next step. (Amperity sample data should sync in about 3 minutes.)
 
+.. quickstart-connect-steps-end
 
 
+.. _quickstart-semantics:
 
 Add semantic tags
 ==================================================
+
+.. quickstart-semantics-start
 
 Semantic tags are applied to fields in incoming data sources to indicate the type of data that is contained within those fields.
 
@@ -145,10 +192,14 @@ Connect the data, apply the semantic tag, and build customer profiles.
 
 You have two options:
 
-#. Let AmpAI apply semantic tags
+#. Let **AmpAI** apply semantic tags (this section)
 #. `Manually apply semantic tags <https://docs.amperity.com/datagrid/semantics.html>`__
 
+.. quickstart-semantics-end
+
 **To let AmpAI apply semantic tags**
+
+.. quickstart-semantics-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -161,31 +212,40 @@ You have two options:
           :class: no-scaled-link
      - In the **Identity resolution** quick start, if you are using Amperity sample data, next to **Identity tables**, click **AmpAI select**.
 
-       AmpAI will analyze the sample data and identify which tables contain PII, and then idenfity which semantic tags should be applied. You may change the tags AmpAI assigns to fields.
+       **AmpAI** will analyze the sample data and identify which tables contain PII, and then idenfity which semantic tags should be applied. You may change the tags **AmpAI** assigns to fields.
 
-       Click **Continue**. Wait for the AmpAI to finish applying semantic tags before continuing to the next step. This process will take up to 5 minutes to complete.
-
+       Click **Continue**. Wait for the **AmpAI** to finish applying semantic tags before continuing to the next step. This process will take up to 5 minutes to complete.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - When AmpAI is finished applying semantic tags, next to **Identify your fields**, click **Edit**.
+     - When **AmpAI** is finished applying semantic tags, next to **Identify your fields**, click **Edit**.
 
-       This opens the **Semantic tag** editor. For each table that AmpAI applied semantic tags a list of fields, field types, and semantic tags are shown.
+       This opens the **Semantic tag** editor. For each table that **AmpAI** applied semantic tags a list of fields, field types, and semantic tags are shown.
 
-       AmpAI correctly assigned semantic tags to all of the sample data tables, so you can click the **Save** button in the top right.
+       **AmpAI** will correctly assign semantic tags to all of the sample data tables, so you can click the **Save** button in the top right.
 
-       .. important:: If you are using your own data review the fields carefully. AmpAI will apply semantic tags for PII correctly most of the time, but it's good to double-check and be sure. If you think they are wrong, just remove the tag AmpAI applied and find the correct semantic tag.
+       .. important:: If you are using your own data review the fields carefully. **AmpAI** will apply semantic tags for PII correctly most of the time, but it's good to double-check and be sure. If you think they are wrong, just remove the tag **AmpAI** applied and find the correct semantic tag.
 
+.. quickstart-semantics-end
+
+
+.. _quickstart-run-stitch:
 
 Run Stitch
 ==================================================
 
+.. quickstart-run-stitch-start
+
 After all of the source tables to which semantic tags should be applied have semantic tags applied you are ready to run Stitch.
 
+.. quickstart-run-stitch-end
+
 **To build the identity graph**
+
+.. quickstart-run-stitch-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -256,18 +316,21 @@ After all of the source tables to which semantic tags should be applied have sem
 
        .. note:: Amperity sample data will show mostly abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and more actionable abnormal benchmarks.
 
+.. quickstart-run-stitch-steps-end
+
+
+.. _quickstart-create-database:
 
 Create database
 ==================================================
-
-Standard steps. Customer 360 page, Create Database button. Do the stuffs.
-
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-customer-360-database-start
    :end-before: .. term-customer-360-database-end
 
 **To create a Customer 360 database**
+
+.. quickstart-create-database-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -309,27 +372,35 @@ Standard steps. Customer 360 page, Create Database button. Do the stuffs.
 
        Wait for the data to finish loading before continuing to the next step. This process will 3-5 minutes to complete for Amperity sample data.
 
+.. quickstart-create-database-steps-end
 
+
+.. _quickstart-sync-to-databricks:
 
 Sync identity data to Databricks
 ==================================================
 
-.. important:: The Amperity quick start for identity resolution does not intend for you to load ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#to-databricks>`__.
+.. quickstart-sync-to-databricks-start
 
-Amperity can sync customer profiles to your brand's instance of Databricks.
+.. important:: The Amperity quick start for identity resolution does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#to-databricks>`__.
+
+Amperity can sync customer profiles to your Databricks account.
 
 .. note:: Additional configuration in Databricks is often required. Syncing data from Amperity to Databricks can use the same credentials; however, the configuration within Databricks is not the same as syncing data from Databricks to Amperity.
 
    To sync data to Databricks, `review the prerequisites <https://docs.amperity.com/datagrid/bridge_databricks.html#bridge-databricks-sync-with-databricks-prerequisites>`__, `add an outbound bridge <https://docs.amperity.com/datagrid/bridge_databricks.html#add-outbound-bridge>`__, `select tables to share with Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#select-tables-to-share>`__, `download the credentials file <https://docs.amperity.com/datagrid/bridge_databricks.html#download-credential-file>`__, `add the provider in Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#add-provider>`__, `add catalog from share <https://docs.amperity.com/datagrid/bridge_databricks.html#add-catalog-from-share>`__, and then `verify table sharing <https://docs.amperity.com/datagrid/bridge_databricks.html#verify-table-sharing>`__.
 
+.. quickstart-sync-to-databricks-end
 
+
+.. _quickstart-conclusion:
 
 Conclusion and next steps
 ==================================================
 
-This quick start guide describes how to connect Amperity to Databricks and to configure Amperity to perform identity resolution against data that is synced from Databricks.
+.. quickstart-conclusion-start
 
-.. TODO: Add links to topics
+This quick start guide describes how to connect Amperity to Databricks and to configure Amperity to perform identity resolution against data that is synced from Databricks.
 
 Amperity can do a lot more:
 
@@ -341,3 +412,5 @@ Amperity can do a lot more:
 * `Queries <https://docs.amperity.com/amp360/queries_reference.html>`__ and orchestrations
 * `Profile API <https://docs.amperity.com/datagrid/api_profile.html>`__
 * `Real-time tables <https://docs.amperity.com/datagrid/realtime.html>`__
+
+.. quickstart-conclusion-end

@@ -566,7 +566,7 @@ Workflows
    orchestration_groups
    orchestrations
    queries
-   quickstart
+   quick_start
    sandboxes
    segments
    segments_editor
