@@ -121,13 +121,6 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
        Copy the secure share identifier from the Snowflake user interface, and then share the identifier with the individual who will configure Amperity for secure data sharing with Snowflake.
 
 
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 5.
-          :align: left
-          :class: no-scaled-link
-     - 
-
 .. bridge-snowflake-sync-amperity-get-details-end
 
 
