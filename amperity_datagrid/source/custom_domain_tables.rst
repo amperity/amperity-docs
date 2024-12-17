@@ -48,6 +48,20 @@ Domain SQL
    :end-before: .. term-domain-sql-end
 
 
+.. _custom-domain-tables-run-history:
+
+Custom Domain Table Run History
+--------------------------------------------------
+
+.. custom-domain-tables-run-history-start
+
+Within the custom domain table run history allows you to see timeline information about custom domain tables that have been run, as well s the outcome of each table (whether it was succeeded, reused, or failed). 
+
+You can view the run history for custom domain tables by clicking on **View run history** from the |fa-kebab| menu from any custom domain table or from the **View run history** link for any custom domain table cards within **Recent Activity**.
+
+.. custom-domain-tables-run-history-end
+
+
 .. _custom-domain-tables-custom-sql-use-cases:
 
 Use cases
