@@ -48,7 +48,7 @@ Domain SQL
    :end-before: .. term-domain-sql-end
 
 
-.. _custom-domain-tables-run-history
+.. _custom-domain-tables-run-history:
 
 Custom Domain Table Run History
 --------------------------------------------------
