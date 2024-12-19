@@ -251,7 +251,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
 
-      Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
+       Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
        Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that will be associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to
 
@@ -286,7 +286,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Click **Active**.
 
-       .. important:: Real-time tables must be setto **Active** before they can be accessed from the **Queries** page.
+       .. important:: Real-time tables must be set to **Active** before they can be accessed from the **Queries** page.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
