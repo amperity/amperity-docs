@@ -102,6 +102,12 @@ Address standardization starts as a feed that loads a CSV file that contains a l
 
 .. householding-address-add-feed-end
 
+.. note::
+
+   .. include:: ../../amperity_datagrid/source/add_data_assets.rst
+      :start-after: .. data-asset-address-standardization-prerequisites-start
+      :end-before: .. data-asset-address-standardization-prerequisites-end
+
 **To add the address standardization data asset**
 
 .. include:: ../../amperity_datagrid/source/add_data_assets.rst
