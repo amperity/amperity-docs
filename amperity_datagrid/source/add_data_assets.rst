@@ -311,17 +311,21 @@ The following file-based data assets are available:
 
 .. data-asset-reference-end
 
+
+.. _data-asset-reference-enable:
+
+Enable file-based data assets
+--------------------------------------------------
+
 .. data-asset-files-request-to-enable-start
 
-.. admonition:: Request to enable access to file-based data assets
+Amperity makes CSV files available to your tenant from an Amazon S3 bucket. Create a support ticket and request to enable the "Amperity data assets Amazon S3 bucket" for your tenant. Use any of these options:
 
-   Amperity makes CSV files available to your tenant from an Amazon S3 bucket. Create a support ticket and request to enable the "Amperity data assets Amazon S3 bucket" for your tenant. Use any of these options:
+* The `Amperity Support Portal <../support/index.html>`__
+* The **Report a problem** option in Amperity
+* By sending an email to support@amperity.com
 
-   * The `Amperity Support Portal <../support/index.html>`__
-   * The **Report a problem** option in Amperity
-   * By sending an email to support@amperity.com
-
-   After the Amperity data assets Amazon S3 bucket is enabled, use a courier to pull individual data assets from that location to your tenant using an Amazon S3 data source.
+After the Amperity data assets Amazon S3 bucket is enabled, use a courier to pull individual data assets from that location to your tenant using an Amazon S3 data source.
 
 .. data-asset-files-request-to-enable-end
 
@@ -333,35 +337,39 @@ Address standardization
 
 .. data-asset-address-standardization-start
 
-Address standardization is a list of address variations for state and street names. Use this data asset with :doc:`address-based householding <householding>` workflows.
+Address standardization is a data asset that contains a list of address variations for state and street names within the United States. Use this data asset to support :doc:`address-based householding <householding>` workflows.
 
 .. data-asset-address-standardization-end
+
+.. data-asset-address-standardization-prerequisites-start
+
+The address standardization data asset is available from an Amazon S3 bucket named **Amperity Data Assets**. You may make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/datagrid/source_amazon_s3.html>`__ to load the "address_standardization_conversion.csv" file from the "/householding" directory in that bucket.
+
+.. data-asset-address-standardization-prerequisites-end
 
 **To add the address standardization data asset**
 
 .. data-asset-address-standardization-steps-start
 
-Add the address standardization data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "address_standardization_conversion.csv" file from the **Amperity Data Assets** Amazon S3 bucket. This file is located in the "householding" directory in the bucket.
+Add the address standardization data asset to your tenant by following the steps for :ref:`adding a data source and feed from an Amazon S3 bucket <source-amazon-s3-add-data-source>`. Click **Browse** and select the "address_standardization_conversion.csv" file from the **Amperity Data Assets** Amazon S3 bucket, which is located in the "householding" directory in the bucket.
 
 Use all three fields – **before**, **convert**, and **type** as the primary key.
-
-.. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
 Add a passthrough table to your customer 360 database named **LookupTables AddressStandardization**, and then run your customer 360 database to build the **LookupTables AddressStandardization** table.
 
 .. important:: The **LookupTables AddressStandardization** table is used within the **Merged Households** SQL template in a series of LEFT JOIN operations that are used to standardize addresses. For example:
 
-          .. code-block:: sql
+   .. code-block:: sql
 
-             LEFT JOIN (
-               SELECT
-                 UPPER(before) AS before
-                 ,UPPER(convert) AS converted
-               FROM LookupTables_AddressStandardization
-               WHERE type = 'STREET'
-             ) AS a7clean ON (a7clean.before = core.a7)
+      LEFT JOIN (
+        SELECT
+          UPPER(before) AS before
+          ,UPPER(convert) AS converted
+        FROM LookupTables_AddressStandardization
+        WHERE type = 'STREET'
+      ) AS a7clean ON (a7clean.before = core.a7)
 
-          You can name this table *anything* else, such as **Address Standardization USA**. If you use the **Merged Households** SQL template, you will need to update the LEFT JOIN sections within that template to contain the updated table name.
+   You can name this table *anything* else, such as **Address Standardization USA**. If you use the **Merged Households** SQL template, you will need to update the LEFT JOIN sections within that template to contain the updated table name.
 
 .. data-asset-address-standardization-steps-end
 

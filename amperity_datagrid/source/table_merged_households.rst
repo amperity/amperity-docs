@@ -38,6 +38,13 @@ The **Merged Households** table generates a household ID (as a UUID) for records
 #. Set **Build Mode** to "SQL", open the **Apply template** drop-down menu, and then select **Merged Households**.
 #. Update the name of the table template to append the brand name to the table name.
 #. Update the SQL in the table template for the correct name of the address standardization lookup table.
+
+   .. note::
+
+      .. include:: ../../amperity_datagrid/source/add_data_assets.rst
+         :start-after: .. data-asset-address-standardization-prerequisites-start
+         :end-before: .. data-asset-address-standardization-prerequisites-end
+
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly.
 #. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
 
