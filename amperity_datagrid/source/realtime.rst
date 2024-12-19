@@ -255,7 +255,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Define the schema for the real-time table. Each field in the schema must exist in the fields that are streamed to Amperity by the streaming source for this real-time table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. If you have an existing feed configured for streaming purposes, you may refer to the feed for schema details.
 
-       .. note:: If your data has complex types (e.g. nested JSON), choose **string** as the type. This will allow the real-time table to process the complex object and make it available for querying purposes.
+       .. note:: If your data has complex types, such as nested JSON, choose **string** as the type. This will allow the real-time table to process the complex object and make it available for querying purposes.
 
        .. image:: ../../images/mockup-databases-table-realtime-add-01.png
           :width: 420 px
