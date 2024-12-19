@@ -67,7 +67,7 @@ Use a query to build a combination of data from the your brand's customer 360 da
      ,TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(mc.email))))) AS emails
      ,'CompletePayment' AS event
      ,'website' AS event_channel
-     ,uit.order_id AS event_id
+     ,CAST(uit.order_id AS VARCHAR) AS event_id
      ,'7654321098765432109' AS event_set_id
      ,uit.order_id
      ,CONCAT('+1','',REGEXP_REPLACE(mc.phone,'[$\D\s]','')) AS phone
