@@ -1,6 +1,6 @@
-.. 
+..
 .. https://docs.amperity.com/
-.. 
+..
 
 ==================================================
 Real-time tables
@@ -251,17 +251,19 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
 
-       Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that will be associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
+      Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
-       .. note:: The schema for every real-time table contains two additional fields: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table).
+       Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that will be associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to
 
-       Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
+       .. note:: If your data has complex types (e.g. nested JSON), choose **string** as the type. This will allow the real-time table to process the complex object and make it available for querying purposes.
 
        .. image:: ../../images/mockup-databases-table-realtime-add-01.png
           :width: 420 px
           :alt: Batch and streaming layers.
           :align: left
           :class: no-scaled-link
+
+      .. note:: The schema for every real-time table will contain two additional fields at the query layer: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table). Use these fields to support filtering for recent data to join with data in batch layer database tables.
 
        Click **Next**.
 
