@@ -76,7 +76,6 @@ Real-time tables have the following limitations:
 
 #. Streamed data takes a few minutes to appear in a real-time table.
 #. Data that is available from a Profile API endpoint is current as of the most recent index refresh.
-#. Nested JSON schemas are not supported; flat JSON schemas are supported.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an upsert; data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
