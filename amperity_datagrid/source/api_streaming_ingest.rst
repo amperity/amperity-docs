@@ -1,9 +1,9 @@
-.. 
+..
 .. https://docs.amperity.com/datagrid/
-.. 
+..
 
 .. |source-name| replace:: Streaming Ingest
-.. |plugin-name| replace:: Sreaming Ingest
+.. |plugin-name| replace:: Streaming Ingest
 .. |feed-name| replace:: WebEvents
 .. |example-filename| replace:: filename_YYYY-MM-DD.json
 .. |domain-table-name| replace:: |source-name|:|feed-name|
@@ -415,7 +415,7 @@ Load stream data
 
 .. streaming-ingest-rest-api-stream-define-start
 
-Once data is sent to a stream, it is batched and collected to be made ready for ingest. Similar to loading files-based data, streamed data is loaded into feeds through couriers and is done from the **Sources** page. 
+Once data is sent to a stream, it is batched and collected to be made ready for ingest. Similar to loading files-based data, streamed data is loaded into feeds through couriers and is done from the **Sources** page.
 
 .. streaming-ingest-rest-api-stream-define-end
 
@@ -541,20 +541,20 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 #. Enter the name of the courier. For example: "|source-name|".
 #. A courier that pulls data that was streamed to Amperity by the Streaming Ingest API does not require a credential even though the configuration steps will ask you to provide a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming Ingest API".
 
-#. Under **Streaming Ingest Settings**, add the Stream ID which is available from the **Stream ID** column.
+#. Under **Streaming Ingest Settings**, add the Streaming Ingest endpoint ID which is available from the **Stream ID** column in the **Sources** page.
 
-   Specify the **File format**, which can be |format_xml|, |format_json|, or |format_ndjson|.
+   Specify the **File format**, which can be |format_xml|, |format_ndjson|, or |format_json|. If you are sending JSON data, Amperity will batch your data into |format_ndjson| so select that if you're sending JSON data.
 
-   Set the **File tag**. This must be identical to the file tag within the load operation.
-   
+   Set the **File tag**. This is usually just **streaming**. Set this within the file tag in load operations and the file tag text box.
+
    Enter the **File pattern prefix**, which is useful for time based ingestion of streaming data. This setting may be configured to load data on an hourly basis. Possible values range from ``00`` - ``24``, each of which represents an hour in a 24 hour window. For example, use ``00`` to load data at 12:00 AM, ``08`` to load data at 8:00 AM, or ``12`` to load data at 12:00 PM. A courier may only be configured to use a single file pattern prefix.
-   
+
 #. Set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
    .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
-   
+
 #. Click **Save**.
 
 .. source-streaming-ingest-legacy-add-courier-steps-end
