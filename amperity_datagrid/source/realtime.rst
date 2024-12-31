@@ -79,7 +79,6 @@ Real-time tables have the following limitations:
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an upsert; data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
-#. Data from real-time tables is not tracked within segments or campaigns and is not shown in segment metrics or tracking.
 
 .. realtime-howitworks-limitations-end
 
