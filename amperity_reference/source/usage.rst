@@ -44,7 +44,7 @@ The **Activations** section in the **Usage** dashboard contains the following :r
 along with the following graphs:
 
 **Campaigns**
-   Shows the total number of campaigns that are run on a daily basis.
+   Shows the total number of distinct campaigns that are run, by day. Recurring campaigns are counted each time they are run. Only successful campaign runs are counted.
 
    .. image:: ../../images/usage-campaigns.png
       :width: 600 px
