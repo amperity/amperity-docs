@@ -1,6 +1,6 @@
-..
+.. 
 .. https://docs.amperity.com/datagrid/
-..
+.. 
 
 .. |source-name| replace:: Streaming Ingest
 .. |plugin-name| replace:: Streaming Ingest
