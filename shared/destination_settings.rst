@@ -1340,7 +1340,7 @@ See common settings.
 
 .. setting-listrak-field-group-start
 
-TEMP: "The field group to use for audience and attribute fields"
+The name of a profile field group in |destination-name|, from which the collection of audience and attribute fields sent from Amperity will be available.
 
 .. setting-listrak-field-group-end
 
