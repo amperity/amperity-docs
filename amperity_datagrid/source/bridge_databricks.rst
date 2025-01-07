@@ -70,7 +70,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :alt: Requirement 1.
           :align: left
           :class: no-scaled-link
-     - The user who will create a recipient for sharing data from Databricks to Amperity must have The user who will create a recipient for sharing data from Databricks to Amperity must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks. permissions in Databricks.
+     - The user who will create a recipient for sharing data from Databricks to Amperity must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
 
        .. note:: If a Databricks notebook is used to create the recipient the cluster must use Databricks Runtime 11.3 LTS (or higher) and must be running in shared mode or single-cluster access mode.
 
