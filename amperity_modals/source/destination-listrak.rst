@@ -13,15 +13,11 @@ Listrak
 
 |destination-name| is an automation platform for email and SMS marketing. Use the ActiveCampaign REST API to manage audiences in |destination-name|.
 
-Amperity can manage email and SMS lists in |destination-name|. You can send email and SMS lists to |destination-name| using any of the following processes:
+Amperity can manage email and SMS lists in |destination-name| using this destination.
 
-* The `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|
-* The `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|
-* SFTP for email address and/or SMS lists, along with product catalogs, orders, and ordered items; see `Customers <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Products <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Orders <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order items <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link| for more information.
+Amperity automatically adds a field attribute to all email and SMS lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
 
-Additional attributes may be appended using any of these processes.
-
-Amperity automatically adds a field attribute to all contact lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
+Use SFTP to manage `Customer lists <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Product lists <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Order lists <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order item lists <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|.
 
 Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
 
