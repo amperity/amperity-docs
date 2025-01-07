@@ -81,6 +81,18 @@ Settings
    :start-after: .. setting-listrak-list-name-start
    :end-before: .. setting-listrak-list-name-end
 
+**Audience primary key**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-audience-primary-key-start
+   :end-before: .. setting-common-audience-primary-key-end
+
+**Field group**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-listrak-field-group-start
+   :end-before: .. setting-listrak-field-group-end
+
 **Segment name**
 
 .. include:: ../../shared/destination_settings.rst
