@@ -24,7 +24,7 @@ Site Index
    destination-adobe-campaign
    destination-amazon-ads
    destination-attentive-api
-   destination-attentive-mobile
+   destination-attentive
    destination-azure-blob
    destination-bazaar-voice
    destination-blue-core
