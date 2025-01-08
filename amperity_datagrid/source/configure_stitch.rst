@@ -186,6 +186,10 @@ In nearly all cases for all customers, the default blocking strategy should prov
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name** and **company**.
    * - **:dnf8**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first three characters in **surname**, and PO box values that are derived from **address**.
+   * - **:dnf9**
+     - Non-default. This blocking strategy groups values associated with the following semantics: the first three characters in **surname** and the full **address**.
+   * - **:dnf10**
+     - Non-default. This blocking strategy groups values associated with the following semantics: the full **phone** and **postal**.
    * - **:email**
      - Default. This blocking strategy groups values associated with the following semantics: the full email address in **email**.
    * - **:fk**
