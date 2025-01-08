@@ -134,7 +134,7 @@ To configure the blocking strategies that are used for your tenant, open the **S
    :align: left
    :class: no-scaled-link
 
-The default blocking strategies are: "dnf1", "dnf3", "dnf4", "dnf5", "dnf6", "dnf7", "dnf8", "email", and "fk". Click the "x" next to the name of any selected blocking strategy to remove it.
+The default blocking strategies are: "dnf1", "dnf3", "dnf4", "dnf5", "dnf6", "dnf7", "dnf8", "dnf9", "dnf10" "email", and "fk". Click the "x" next to the name of any selected blocking strategy to remove it.
 
 .. configure-stitch-general-clustering-blocking-default-end
 
@@ -186,6 +186,10 @@ In nearly all cases for all customers, the default blocking strategy should prov
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name** and **company**.
    * - **:dnf8**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first three characters in **surname**, and PO box values that are derived from **address**.
+   * - **:dnf9**
+     - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **surname** and the full **address**.
+   * - **:dnf10**
+     - Default. This blocking strategy groups values associated with the following semantics: the full **phone** and **postal**.
    * - **:email**
      - Default. This blocking strategy groups values associated with the following semantics: the full email address in **email**.
    * - **:fk**
