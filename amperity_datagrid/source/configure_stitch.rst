@@ -134,7 +134,7 @@ To configure the blocking strategies that are used for your tenant, open the **S
    :align: left
    :class: no-scaled-link
 
-The default blocking strategies are: "dnf1", "dnf3", "dnf4", "dnf5", "dnf6", "dnf7", "dnf8", "dnf9", "dnf10", "email", and "fk". Click the "x" next to the name of any selected blocking strategy to remove it.
+The default blocking strategies are: "dnf1", "dnf3", "dnf4", "dnf5", "dnf6", "dnf7", "dnf8", "email", and "fk". Click the "x" next to the name of any selected blocking strategy to remove it.
 
 .. configure-stitch-general-clustering-blocking-default-end
 
