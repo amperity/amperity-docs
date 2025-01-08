@@ -942,6 +942,14 @@ The account ID for the account in |destination-name| to which Amperity will send
 
 .. setting-criteo-account-id-end
 
+**Audience segment description**
+
+.. setting-criteo-audience-segment-description-start
+
+Optional. A description for the audience segment.
+
+.. setting-criteo-audience-segment-description-end
+
 **Retailer ID**
 
 .. setting-criteo-retailer-id-start
