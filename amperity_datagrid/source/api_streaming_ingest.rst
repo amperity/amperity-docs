@@ -1,6 +1,6 @@
-.. 
+..
 .. https://docs.amperity.com/datagrid/
-.. 
+..
 
 .. |source-name| replace:: Streaming Ingest
 .. |plugin-name| replace:: Streaming Ingest
@@ -386,7 +386,7 @@ The Streaming Ingest API has the following HTTP status codes:
    * - **413**
      - Request is too large.
 
-       .. note:: Amperity limits the maximum payload size to 254 kb.
+       .. note:: Amperity limits the maximum payload size to 500 kb.
      - No
    * - **429**
      - Request throttled.
