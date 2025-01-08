@@ -66,3 +66,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-criteo-identifier-type-start
    :end-before: .. setting-criteo-identifier-type-end
+
+**Audience segment description**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-criteo-audience-segment-description-start
+   :end-before: .. setting-criteo-audience-segment-description-end

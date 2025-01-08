@@ -942,6 +942,14 @@ The account ID for the account in |destination-name| to which Amperity will send
 
 .. setting-criteo-account-id-end
 
+**Audience segment description**
+
+.. setting-criteo-audience-segment-description-start
+
+Optional. A description for the audience segment.
+
+.. setting-criteo-audience-segment-description-end
+
 **Retailer ID**
 
 .. setting-criteo-retailer-id-start
@@ -1340,7 +1348,7 @@ See common settings.
 
 .. setting-listrak-field-group-start
 
-TEMP: "The field group to use for audience and attribute fields"
+The name of a profile field group in |destination-name|, from which the collection of audience and attribute fields sent from Amperity will be available.
 
 .. setting-listrak-field-group-end
 
