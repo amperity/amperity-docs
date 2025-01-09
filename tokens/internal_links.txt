@@ -68,7 +68,7 @@
 
 .. |apply_ordinals_to_address_groups| raw:: html
 
-   <a href="https://docs.amperity.com/datagrid/semantics.html#apply-ordinals-to-address-groups">Apply ordinals to address groups</a>
+   <a href="https://docs.amperity.com/datagrid/semantics.html#apply-ordinals-to-address-groups">ordinals are used with the address semantic tag</a>
 
 
 .. |attribute_compound_first_order| raw:: html
