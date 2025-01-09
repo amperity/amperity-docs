@@ -39,7 +39,7 @@ The streaming layer makes data available for use alongside those profiles to sup
 .. note:: The batch layer may also contain data that has arrived through the streaming layer. To support adding streamed data to your brand's customer profiles, configure a courier to pull the streamed data into the workflow.
 
 
-Data in real-time tables is retained for 1 week from when it was written to the table. If you want to keep data for longer than 1 week, bring the data into the batch layer by configuring a streaming ingest courier and running it as part of a regular workflow.
+.. important:: Data in real-time tables is retained for 1 week from when it was written to the table. If you want to keep data for longer than 1 week, bring the data into the batch layer by configuring a streaming ingest courier and running it as part of a regular workflow.
 
 .. realtime-howitworks-end
 
