@@ -66,6 +66,11 @@
    <a href="https://docs.amperity.com/datagrid/api_streaming_ingest.html">Streaming Ingest API</a>
 
 
+.. |apply_ordinals_to_address_groups| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/semantics.html#apply-ordinals-to-address-groups">Apply ordinals to address groups</a>
+
+
 .. |attribute_compound_first_order| raw:: html
 
    <a href="https://docs.amperity.com/reference/attribute_compound_first_order.html">First Order</a>
