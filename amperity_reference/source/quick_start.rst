@@ -28,6 +28,14 @@ By the end of this guide you will know how to do the following:
 
 .. quickstart-overview-end
 
+.. quickstart-free-trial-start
+
+.. admonition:: Sign up for a free trial of Amperity!
+
+   `Sign up for a free trial <https://amperity.com/trial>`__ |ext_link| to see how your brand can use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases. You may use trial data provided by Amperity or you may upload samples of your own customer data.
+
+.. quickstart-free-trial-end
+
 
 .. _quickstart-data-model:
 
