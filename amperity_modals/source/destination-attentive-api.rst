@@ -8,7 +8,7 @@
 .. |where-send| replace:: |destination-name|
 
 
-Attentive
+Attentive API
 ==================================================
 
 |destination-name| is an automation platform for email and SMS marketing. Use the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to extend customer profiles in |destination-name| with customer attributes from Amperity.
