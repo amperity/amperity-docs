@@ -800,7 +800,6 @@ Customer keys (ck)
 
    * Records may have NULL customer keys.
    * There may be only one customer key per data source.
-   * There may be multiple customer keys per Amperity ID. This is because customer keys may also be tagged as foreign keys.
 
 .. semantics-key-customer-tip-end
 
