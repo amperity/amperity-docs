@@ -39,7 +39,7 @@ The **Activations** section in the **Usage** dashboard contains the following :r
    Shows the total number of segments that are available during the selected time period. This number is compared to the number of segments that were available during the previous time period.
 
 **Segments used**
-   Shows the total number of segments that have been used in a campaign---including delivered and scheduled campaigns---as of the last date in the selected time period. This number is compared to the number of segments that were used in campaigns during the previous time period.
+   Shows the total number of segments that are in use by a campaign that ran during the selected time period. This number is compared to the number of segments that were used by campaigns that ran during the previous time period.
 
 along with the following graphs:
 
