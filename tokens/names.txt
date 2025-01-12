@@ -153,17 +153,17 @@
 
 .. |policy-sandbox-validation-required| raw:: html
 
-   <i class="fa-solid fa-circle-exclamation" style="color: #af3708;"></i>
-
-
-.. |policy-sandbox-limited| raw:: html
-
-   <i class="fa-solid fa-circle-check" style="color: #0c0c0c;"></i>
+   <i class="fa-regular fa-square-check" style="color: #0c0c0c;"></i>
 
 
 .. |policy-sandbox-allow-admin| raw:: html
 
-   <i class="fa-solid fa-circle-plus" style="color: #caefef;"></i>
+   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
+
+
+.. |policy-sandbox-limited| raw:: html
+
+   <i class="fa-solid fa-plus" style="color: #0c0c0c;"></i>
 
 
 .. |workflow-failed| raw:: html
