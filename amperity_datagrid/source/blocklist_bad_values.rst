@@ -781,13 +781,7 @@ When **address** is added to the bad-values blocklist, be sure to verify that re
 
 An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold (at least "40", but higher if necessary) for **address**, verify the results, and then adjust the threshold carefully until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
 
-When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group of **city**, **state** and **address** do not replace the **address** value on **Stitch_BadValues**. When multiple addresses are tagged each ordinal address group will be checked.
-
-.. ordinal-addresses-tip-start
-
-.. tip:: For more information about **address groups** review the |apply_ordinals_to_address_groups| section in the **Applying semantic tags** topic.
-
-.. ordinal-addresses-tip-end
+When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group---**address**, **city**, and **state**---does not replace the **address** value in the **Stitch_BadValues** table; the same address value may appear multiple times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
 
 .. bad-values-blocklist-advanced-addresses-context-end
 

@@ -13,6 +13,12 @@ HubSpot
 
 |destination-name| is a CRM platform built around dedicated hubs for marketing, sales, services, content management, and operations. Use Amperity to manage contact lists in HubSpot.
 
+**CAUTION**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-hubspot-dates-and-datetimes-start
+   :end-before: .. setting-hubspot-dates-and-datetimes-end
+
 
 Credentials
 ==================================================

@@ -48,6 +48,16 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-end
 
+.. destination-hubspot-dates-and-datetimes-start
+
+.. caution:: 
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-hubspot-dates-and-datetimes-start
+      :end-before: .. setting-hubspot-dates-and-datetimes-end
+
+.. destination-hubspot-dates-and-datetimes-end
+
 .. destination-hubspot-build-query-start
 
 .. important:: |destination-name| has |ext_hubspot_email_validation|. All email addresses that are sent to HubSpot must:

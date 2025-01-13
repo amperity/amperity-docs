@@ -1242,6 +1242,14 @@ This section contains settings that are unique to HubSpot.
 
 See common settings.
 
+**Dates / datetimes**
+
+.. setting-hubspot-dates-and-datetimes-start
+
+Attribute fields sent to |destination-name| from Amperity that contain values representing a specific day, month, and year `must be represented in UTC time and can be formatted as ISO 8601 strings or as EPOCH-timestamps in milliseconds <https://developers.hubspot.com/docs/guides/api/crm/properties>`__ |ext_link|.
+
+.. setting-hubspot-dates-and-datetimes-end
+
 **List name**
 
 .. setting-hubspot-list-name-start
