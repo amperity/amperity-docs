@@ -60,7 +60,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-     - To find customers who have purchased from your brand during the Christmas holiday season -- November 1 - December 31 -- you will need to add a date range to your segment. Choose the **Order Datetime** attribute from the **Unified Transactions** table, select the "is between" operator, and then set each date using the calendar picker:
+     - To find customers who have purchased from your brand during the Christmas holiday season -- November 1 - December 31 -- you will need to add a date range to your segment. Choose the **Has purchased** purchase, select the "between" operator, and then set each date using the calendar picker:
 
        .. image:: ../../images/usecase-holiday-shoppers-sms-order-datetime-calendar-picker.png
           :width: 250 px
@@ -70,7 +70,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
        The starting range should be set to November 1, in the previous year and the ending range should be set to December 31, also in the previous year:
 
-       .. image:: ../../images/usecase-holiday-shoppers-sms-order-datetime-2022.png
+       .. image:: ../../images/usecase-holiday-shoppers-sms-has-purchased.png
           :width: 540 px
           :alt: Find customers who made a purchase between November 1st and December 31st.
           :align: left
