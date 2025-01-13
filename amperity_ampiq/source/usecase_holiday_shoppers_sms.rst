@@ -86,36 +86,6 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Add additional date ranges.
           :align: left
           :class: no-scaled-link
-
-     - Optional. You can add additional date ranges to build an audience that spans multiple holiday seasons by adding additional **Order Datetime** ranges to your segment. For example, add a date range for the holiday season that occurred two years ago:
-
-       .. image:: ../../images/usecase-holiday-shoppers-sms-order-datetime-2021.png
-          :width: 540 px
-          :alt: Find customers who made a purchase between November 1st and December 31st.
-          :align: left
-          :class: no-scaled-link
-
-       Set the and/or slider that is in-between **Order Datetime** attributes to **OR**.
-
-       You can add more date ranges, depending on your use case and how far back you want to go. For example, add a date range for the holiday season that occurred three years ago:
-
-       .. image:: ../../images/usecase-holiday-shoppers-sms-order-datetime-2020.png
-          :width: 540 px
-          :alt: Find customers who made a purchase between November 1st and December 31st.
-          :align: left
-          :class: no-scaled-link
-
-       Be sure to keep the and/or sliders in-between **Order Datetime** attributes set to **OR**.
-
-       Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who have made a purchase between November 1st *and* December 31st for the larger time window.
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Find customers who have opted in to receive text messages.
-          :align: left
-          :class: no-scaled-link
-
      - Add an attribute that filters the holiday shoppers audience to only include customers who have opted-in to being sent SMS messages.
 
        Click **+Add section**, choose the **Is Opted Into SMS** attribute from the **Customer Attributes** table, and then select the "is true" operator:
@@ -133,9 +103,9 @@ The following sections describe using the **Segment Editor** to build a segment 
        .. tip:: For companies with multiple brands or are in multiple regions, you may use attributes that apply additional filters for brands, regions, or products within your product catalog.
 
 
-   * - .. image:: ../../images/steps-05.png
+   * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Save your segment.
+          :alt: Find customers who have opted in to receive text messages.
           :align: left
           :class: no-scaled-link
      - You're done! Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Holiday Shoppers - SMS"
@@ -154,9 +124,10 @@ The following sections describe using the **Segment Editor** to build a segment 
 
           For example: Attentive is a destination to which you can send lists of phone numbers for use with SMS campaigns. Edit the attributes that are sent to Attentive to include only the **phone** attribute, which will send the list of phone numbers that are associated with the customers in your segment.
 
-   * - .. image:: ../../images/steps-06.png
+
+   * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Segment insights page
+          :alt: Save your segment.
           :align: left
           :class: no-scaled-link
      - After your segment is saved the **Segment Overview** page opens and shows additional details, such as historical and predicted revenue, the percentage of customers that are reachable by email, by phone, on Facebook, and customer trends, such as purchases by channel, revenue by lifetime spend.
