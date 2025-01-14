@@ -217,6 +217,63 @@ Continuous validation
 
 As you make changes within a sandbox, Amperity will continuously run validations against those changes. If an issue is discovered a notification will appear along with a link to learn more about the validation issue and the steps that may be required to resolve it. You should fix validation issues as they arise to keep your sandbox ready to be promoted to production.
 
+* Required. Errors must be addressed before a sandbox can be promoted.
+* Recommended. Warnings should be addressed before promoting a sandbox.
+
+Sandbox validations are only available in a sandbox. Amperity recommends that all changes be made in sandboxes. This helps ensure that errors are not present in production and that causes of warnings can be investigated in a safe environment.
+
+.. important:: Drafts do not move between a sandbox and production and are not included in sandbox validations. Anything that should be promoted to production must be saved in a sandbox, and then validated.
+
+The following table describes examples of errors and warnings that may be shown by sandbox validations.
+
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Component
+     - Severity
+     - Description
+   * - **Couriers**
+     - Error
+     - Couriers will show an error when they refer to an ingest query that was renamed or deleted.
+
+   * - **Data exports**
+     - Error
+     - A database export will show an error when the tables to be exported are renamed or deleted.
+
+   * - **Databases**
+     - Error
+     - Database tables in databases that run automatically will show an error when:
+
+       * An upstream table or field was deleted or renamed
+       * A schema mismatch is present, such as a mismatch caused by data type changes
+
+   * - **Queries**
+     - Warning
+     - A query will show a warning when it is used with:
+
+       * An orchestration that is not configured for an orchestration group
+       * A segment that is not part of a scheduled campaign
+
+       The warning will appear if there is a missing field or table, such as when a query references a that field has been deleted or renamed.
+
+       .. note:: A query that is not configured for an orchestration, orchestration group, or used with a campaign is not included in sandbox validations.
+
+   * - **Queries**
+     - Error
+     - A query will show an error when it is used with:
+
+       * An orchestration that is configured for an orchestration group
+       * A segment that is part of a scheduled campaign
+
+       The error will appear if there is a missing field or table, such as when a query references a that field has been deleted or renamed.
+
+   * - **Segments**
+     - Error
+     - A segment will show an error when it is used with a scheduled campaign.
+
+       The error will appear if there is a missing field or table, such as when a segment references a that field has been deleted or renamed.
+
 .. sandboxes-best-practice-continuously-validate-changes-end
 
 
