@@ -3,7 +3,7 @@
 .. 
 
 .. |destination-name| replace:: TikTok Ads
-.. |what-send| replace:: email addresses, phone numbers, and advertising IDs (IDFAs for iOS devices or AAIDs for Android devices)
+.. |what-send| replace:: email addresses, phone numbers, or advertising IDs (IDFAs for iOS devices or AAIDs for Android devices)
 .. |allow-for-what| replace:: audience mapping
 .. |allow-for-duration| replace:: up to 10 hours
 

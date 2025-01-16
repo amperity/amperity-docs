@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **gender** attribute
+.. |what-choose| replace:: **gender**
+.. |what-find| replace:: "gender"
 
 
 .. meta::
@@ -23,16 +26,14 @@ Gender
    :start-after: .. term-gender-start
    :end-before: .. term-gender-end
 
-.. attribute-customer-profile-gender-start
-
-You can access gender directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Customer 360** table, select the **Gender** attribute, and then apply an condition.
-
-.. attribute-customer-profile-gender-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-gender-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_customer_profile_gender.rst

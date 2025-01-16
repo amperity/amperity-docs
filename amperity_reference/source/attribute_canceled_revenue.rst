@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **order cancelled revenue** attribute
+.. |what-choose| replace:: **order cancelled revenue**
+.. |what-find| replace:: "order cancel"
 
 
 .. meta::
@@ -29,36 +32,34 @@ Order canceled revenue
 Use in segments
 ==================================================
 
-.. attribute-canceled-revenue-start
-
-You can access canceled order revenue directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table, select the **Order canceled Revenue** attribute, and then apply a condition.
-
-.. attribute-canceled-revenue-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-canceled-revenue-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-canceled-revenue-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific amount of canceled order revenue, such as "17.99", "29.99", or "79.99".
 
-       .. tip:: Use the following conditions to return a range of canceled order revenue amounts instead of a specific canceled order revenue amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of canceled order revenue amounts instead of a specific canceled order revenue amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -103,13 +101,7 @@ Attributes for recommended audience sizes are available from the **Predicted Aff
    * - **Audience Size Large**
      - A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
 
-Combine these attributes with the **Product Attribute** attribute to build audiences for a specific product category, class, or brand. You can access these attributes directly from the segment editor:
-
-.. image:: ../../images/attribute-audience-size-medium.png
-   :width: 500 px
-   :alt: Audience sizes in the Predicted Affinity table.
-   :align: left
-   :class: no-scaled-link
+Combine these attributes with the **Product Attribute** attribute to build audiences for a specific product category, class, or brand.
 
 .. model-product-affinity-use-cases-recommended-audiences-attributes-end
 
@@ -139,12 +131,6 @@ Customer ranking identifies the top N customers who are most likely to purchase.
 
 .. model-product-affinity-use-cases-customer-ranking-attribute-start
 
-The **Ranking** attribute in the **Predicted Affinity** table ranks customer scores by product. A rank that is less than or equal to X will provide the top N customers with an affinity for this product. Combine this attribute with the **Product Attribute** attribute to build customer rankings for a specific product category, class, or brand. You can access this attribute directly from the segment editor:
+The **Ranking** attribute in the **Predicted Affinity** table ranks customer scores by product. A rank that is less than or equal to X will provide the top N customers with an affinity for this product. Combine this attribute with the **Product Attribute** attribute to build customer rankings for a specific product category, class, or brand.
 
 .. model-product-affinity-use-cases-customer-ranking-attribute-end
-
-.. image:: ../../images/attribute-customer-ranking.png
-   :width: 500 px
-   :alt: Ranking in the Predicted Affinity table.
-   :align: left
-   :class: no-scaled-link

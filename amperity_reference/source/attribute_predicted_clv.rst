@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -88,27 +86,9 @@ Use in segments
 
 .. attribute-predicted-clv-segment-start
 
-To apply predicted CLV to your segment, start with the **Predicted CLV Next 365** in the **Predicted CLV Attributes** table, and then set its condition to **is greater than or equal to**.
+To apply predicted CLV to your segment, start with the **Predicted CLV Next 365** in the **Predicted CLV Attributes** table, and then set its condition to **is greater than or equal to**. After the attribute appears in your segment, specify an amount for predicted customer lifetime value that aligns to the condition you selected.
 
 .. attribute-predicted-clv-segment-end
-
-.. image:: ../../images/attribute-predicted-clv.png
-   :width: 600 px
-   :alt: Choose the predicted CLV attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-predicted-clv-filters-start
-
-After the attribute appears in your segment, specify an amount for predicted customer lifetime value that aligns to the condition you selected. For example, to find customers for whom customer lifetime value is predicted to be greater than or equal to $2000:
-
-.. attribute-predicted-clv-filters-end
-
-.. image:: ../../images/attribute-predicted-clv-example.png
-   :width: 600 px
-   :alt: Find customers for whom customer lifetime value is predicted to be greater than or equal to $2000.
-   :align: left
-   :class: no-scaled-link
 
 .. attribute-predicted-clv-modeling-enabled-note-start
 
@@ -119,27 +99,27 @@ After the attribute appears in your segment, specify an amount for predicted cus
 
 .. _attribute-predicted-clv-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-predicted-clv-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific amount of predicted customer lifetime value, such as "117.99", "129.99", or "179.99".
 
-       .. tip:: Use the following conditions to return a range of predicted customer lifetime values instead of a specific predicted customer lifetime value: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of predicted customer lifetime values instead of a specific predicted customer lifetime value: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

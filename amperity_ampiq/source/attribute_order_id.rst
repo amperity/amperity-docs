@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: order ID attributes
+.. |what-choose| replace:: **first order ID**, **second order ID**, or **latest order ID**
+.. |what-find| replace:: "order ID"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Order IDs
    :start-after: .. attribute-datetimes-start
    :end-before: .. attribute-datetimes-end
 
-.. include:: ../../amperity_reference/source/attribute_order_id.rst
-   :start-after: .. attribute-order-id-base-start
-   :end-before: .. attribute-order-id-base-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-order-id-base-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_order_id.rst

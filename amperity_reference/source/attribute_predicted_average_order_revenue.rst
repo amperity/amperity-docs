@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -79,27 +77,9 @@ Use in segments
 
 .. attribute-predicted-average-order-revenue-segment-start
 
-To find predicted order frequencies, start with the **Predicted Average Order Value Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition.
+To find predicted order frequencies, start with the **Predicted Average Order Value Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition. After the attribute appears in your segment, specify an amount for predicted average order revenue that aligns to the condition you selected.
 
 .. attribute-predicted-average-order-revenue-segment-end
-
-.. image:: ../../images/attribute-predicted-average-order-value.png
-   :width: 600 px
-   :alt: Choose the predicted order frequency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-predicted-average-order-revenue-filters-start
-
-After the attribute appears in your segment, specify an amount for predicted average order revenue that aligns to the condition you selected. For example, to find customers for whom average order value is predicted to be greater than $200:
-
-.. attribute-predicted-average-order-revenue-filters-end
-
-.. image:: ../../images/attribute-predicted-average-order-value-example.png
-   :width: 600 px
-   :alt: Find customers for whom average order value is predicted to be greater than $200.
-   :align: left
-   :class: no-scaled-link
 
 .. attribute-predicted-average-order-revenue-modeling-enabled-note-start
 
@@ -110,27 +90,27 @@ After the attribute appears in your segment, specify an amount for predicted ave
 
 .. _attribute-predicted-average-order-revenue-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-predicted-average-order-revenue-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific amount of predicted average order revenue, such as "117.99", "129.99", or "179.99".
 
-       .. tip:: Use the following conditions to return a range of predicted average order revenue amounts instead of a specific predicted average order revenue amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of predicted average order revenue amounts instead of a specific predicted average order revenue amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: preferred store interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "preferred store"
 
 
 .. meta::
@@ -23,20 +26,14 @@ Preferred store intervals
    :start-after: .. attribute-stores-preferred-start
    :end-before: .. attribute-stores-preferred-end
 
-
-.. _attribute-stores-preferred-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_stores_preferred_intervals.rst
-   :start-after: .. attribute-stores-preferred-segment-start
-   :end-before: .. attribute-stores-preferred-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-stores-preferred-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_stores_preferred_intervals.rst

@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -89,13 +87,7 @@ Attributes that predict a customer's future purchase behavior are available from
    * - **Predicted Probability of Transaction Next 365d**
      - The probability that a customer will purchase again in the next 365 days.
 
-Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns. You can access these attributes directly from the Segment Editor:
-
-.. image:: ../../images/attribute-predicted-transactions.png
-   :width: 600 px
-   :alt: Choose the predicted probability of transactions attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
+Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns.
 
 .. model-churn-propensity-use-cases-spend-end
 
@@ -161,12 +153,6 @@ Attributes that predict a customer's likelihood to churn, along with their predi
        * Allocate resources more effectively by focusing on acquiring customers with high pCLV potential.
        * Implement strategies to retain and nurture high-value customers, maximizing their lifetime value.
 
-By combining various customer attributes, you can create highly targeted churn prevention and one-time buyer campaigns that focus on your most valuable customers at the optimal time. You can access these attributes directly from the segment editor:
-
-.. image:: ../../images/attribute-predicted-lifecycle-status.png
-   :width: 600 px
-   :alt: Choose the predicted lifecycle status attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
+By combining various customer attributes, you can create highly targeted churn prevention and one-time buyer campaigns that focus on your most valuable customers at the optimal time.
 
 .. model-churn-propensity-use-cases-churn-end

@@ -5,8 +5,7 @@
 .. |destination-name| replace:: Attentive
 
 
-==================================================
-Attentive Mobile
+Attentive
 ==================================================
 
 This is a legacy SFTP connector and should not be used to manage audiences in |destination-name|.

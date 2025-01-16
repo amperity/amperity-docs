@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. meta::
     :description lang=en:
@@ -18,13 +17,13 @@
 Has purchased
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_has_purchased.rst
-   :start-after: .. attribute-compound-has-purchased-start
-   :end-before: .. attribute-compound-has-purchased-end
+.. include:: ../../amperity_reference/source/attribute_purchase_behavior_has_purchased.rst
+   :start-after: .. attribute-purchase-behavior-has-purchased-start
+   :end-before: .. attribute-purchase-behavior-has-purchased-end
 
-.. include:: ../../amperity_ampiq/source/purchase_behavior_first_order.rst
-   :start-after: .. purchase-behavior-first-order-common-admonition-start
-   :end-before: .. purchase-behavior-first-order-common-admonition-end
+.. include:: ../../amperity_ampiq/source/purchase_behavior_first_purchase.rst
+   :start-after: .. purchase-behavior-first-purchase-common-admonition-start
+   :end-before: .. purchase-behavior-first-purchase-common-admonition-end
 
 
 .. _purchase-behavior-has-purchased-howitworks:
@@ -32,15 +31,15 @@ Has purchased
 How has purchased works
 ==================================================
 
-.. attribute-compound-has-purchased-howitworks-start
+.. attribute-purchase-behavior-has-purchased-howitworks-start
 
-.. include:: ../../amperity_reference/source/attribute_compound_has_purchased.rst
-   :start-after: .. attribute-compound-has-purchased-start
-   :end-before: .. attribute-compound-has-purchased-howitworks-end
+.. include:: ../../amperity_reference/source/attribute_purchase_behavior_has_purchased.rst
+   :start-after: .. attribute-purchase-behavior-has-purchased-start
+   :end-before: .. attribute-purchase-behavior-has-purchased-howitworks-end
 
 .. segments-behaviors-has-purchased-tip-start
 
-.. tip:: For more information about how **Has Purchased** works, including an explanation of the SQL that runs behind the **Segment Editor**, review the |attribute_compound_has_purchased| topic in the Amperity A-Z reference.
+.. tip:: For more information about how **Has Purchased** works, including an explanation of the SQL that runs behind the **Segment Editor**, review the |attribute_purchase_behavior_has_purchased| topic in the Amperity A-Z reference.
 
 .. segments-behaviors-has-purchased-tip-end
 
@@ -50,19 +49,9 @@ How has purchased works
 Use has purchased in a segment
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_has_purchased.rst
-   :start-after: .. attribute-compound-has-purchased-segments-start
-   :end-before: .. attribute-compound-has-purchased-segments-end
-
-.. image:: ../../images/attribute-compound-has-purchased.png
-   :width: 600 px
-   :alt: Use the has purchased attribute to find which customers have interacted with products, channels, or brands during the specified date range.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_compound_has_purchased.rst
-   :start-after: .. attribute-compound-has-purchased-segments-filters-start
-   :end-before: .. attribute-compound-has-purchased-segments-filters-end
+.. include:: ../../amperity_reference/source/attribute_purchase_behavior_has_purchased.rst
+   :start-after: .. attribute-purchase-behavior-has-purchased-segments-start
+   :end-before: .. attribute-purchase-behavior-has-purchased-segments-end
 
 
 .. _purchase-behavior-has-purchased-example-watch:
@@ -74,7 +63,7 @@ Example: Who has purchased a watch?
 
 The following example uses **Has Purchased** to return a list of customers who have purchased at least one watch within the previous two years:
 
-.. image:: ../../images/attribute-compound-has-purchased-example-segments.png
+.. image:: ../../images/attribute-purchase-behavior-has-purchased-example-segments.png
    :width: 600 px
    :alt: Who has purchased a watch?
    :align: left
@@ -88,9 +77,9 @@ The following example uses **Has Purchased** to return a list of customers who h
 Available conditions
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_has_purchased.rst
-   :start-after: .. attribute-compound-has-purchased-conditions-start
-   :end-before: .. attribute-compound-has-purchased-conditions-end
+.. include:: ../../amperity_reference/source/attribute_purchase_behavior_has_purchased.rst
+   :start-after: .. attribute-purchase-behavior-has-purchased-conditions-start
+   :end-before: .. attribute-purchase-behavior-has-purchased-conditions-end
 
 
 .. _purchase-behavior-has-purchased-filter-attributes:
@@ -98,6 +87,6 @@ Available conditions
 Filter attributes
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
-   :start-after: .. attribute-compound-first-order-filter-attributes-start
-   :end-before: .. attribute-compound-first-order-filter-attributes-end
+.. include:: ../../amperity_reference/source/attribute_purchase_behavior_first_purchase.rst
+   :start-after: .. attribute-purchase-behavior-first-purchase-filter-attributes-start
+   :end-before: .. attribute-purchase-behavior-first-purchase-filter-attributes-end

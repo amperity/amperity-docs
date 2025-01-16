@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -31,26 +29,10 @@ One and done?
    :start-after: .. attribute-one-and-done-find-start
    :end-before: .. attribute-one-and-done-find-end
 
-.. image:: ../../images/attribute-one-and-done.png
-   :width: 600 px
-   :alt: Choose the one and done attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_one_and_done.rst
-   :start-after: .. attribute-one-and-done-filters-start
-   :end-before: .. attribute-one-and-done-filters-end
-
-.. image:: ../../images/attribute-one-and-done-example.png
-   :width: 600 px
-   :alt: Find early repeat purchasers.
-   :align: left
-   :class: no-scaled-link
-
 
 .. _attribute-one-and-done-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_one_and_done.rst

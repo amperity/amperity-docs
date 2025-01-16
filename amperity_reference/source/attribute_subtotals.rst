@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: subtotal attributes
+.. |what-choose| replace:: **item subtotal**, **order subtotal**, or **unit subtotal**
+.. |what-find| replace:: "subtotal"
 
 
 .. meta::
@@ -41,36 +44,34 @@ Subtotals represents amounts before discounts are applied.
 Use in segments
 ==================================================
 
-.. attribute-subtotals-access-start
-
-You can access subtotal attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Subtotal** and **Unit Subtotal**) *or* the **Unified Transactions** table (for **Order Subtotal**), apply a condition, and then specify a value.
-
-.. attribute-subtotals-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-subtotals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-subtotals-conditions-start
 
-The following table lists the conditions that are available to subtotal attributes.
+The following table lists the operators that are available to subtotal attributes.
 
-.. note:: Subtotal attributes have a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Subtotal attributes have a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific subtotal amount, such as "17.99", "29.99", or "79.99".
 
-       .. tip:: Use the following conditions to return a range of subtotal amounts instead of a specific subtotal amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of subtotal amounts instead of a specific subtotal amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

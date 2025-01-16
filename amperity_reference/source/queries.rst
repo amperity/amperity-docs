@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
 
 .. meta::
     :description lang=en:

@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -75,27 +73,9 @@ Use in segments
 
 .. attribute-predicted-transactions-segment-start
 
-To find predicted probability of transactions, start with the **Predicted Probability of Transaction Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition. After the attribute appears in your segment, specify the probability of transaction that you want to use in your segment.
+To find predicted probability of transactions, start with the **Predicted Probability of Transaction Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition. After the attribute appears in your segment, specify the probability of transaction that you want to use in your segment. After the attribute appears in your segment, specify a frequency for predicted probability of transaction that aligns to the condition you selected.
 
 .. attribute-predicted-transactions-segment-end
-
-.. image:: ../../images/attribute-predicted-transactions.png
-   :width: 600 px
-   :alt: Choose the predicted probability of transactions attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-predicted-transactions-filters-start
-
-After the attribute appears in your segment, specify a frequency for predicted probability of transaction that aligns to the condition you selected. For example, to find customers whose likelihood to purchase is greater than or equal to 35%:
-
-.. attribute-predicted-transactions-filters-end
-
-.. image:: ../../images/attribute-predicted-transactions-example.png
-   :width: 600 px
-   :alt: Find customers whose likelihood to purchase is greater than or equal to 35%.
-   :align: left
-   :class: no-scaled-link
 
 .. attribute-predicted-transactions-modeling-enabled-note-start
 
@@ -106,27 +86,27 @@ After the attribute appears in your segment, specify a frequency for predicted p
 
 .. _attribute-predicted-transactions-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-predicted-transactions-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific probability of transaction, such as "1.2", "40.6", or "50.0".
 
-       .. tip:: Use the following conditions to return a range of probabilities instead of a specific probability: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of probabilities instead of a specific probability: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

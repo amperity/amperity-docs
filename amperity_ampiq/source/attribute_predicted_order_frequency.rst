@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -51,22 +49,6 @@ Use in segments
    :start-after: .. attribute-predicted-order-frequency-segment-start
    :end-before: .. attribute-predicted-order-frequency-segment-end
 
-.. image:: ../../images/attribute-predicted-order-frequency.png
-   :width: 600 px
-   :alt: Choose the predicted order frequency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_predicted_order_frequency.rst
-   :start-after: .. attribute-predicted-order-frequency-filters-start
-   :end-before: .. attribute-predicted-order-frequency-filters-end
-
-.. image:: ../../images/attribute-predicted-order-frequency-example.png
-   :width: 600 px
-   :alt: Find customers who are predicted to purchase between 5 and 10 times.
-   :align: left
-   :class: no-scaled-link
-
 .. include:: ../../amperity_reference/source/attribute_predicted_order_frequency.rst
    :start-after: .. attribute-predicted-order-frequency-modeling-enabled-note-start
    :end-before: .. attribute-predicted-order-frequency-modeling-enabled-note-end
@@ -74,7 +56,7 @@ Use in segments
 
 .. _attribute-predicted-order-frequency-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_predicted_order_frequency.rst

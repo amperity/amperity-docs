@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -104,27 +102,27 @@ Use in segments
 
 .. attribute-loyalty-membership-access-attributes-start
 
-You can access loyalty membership attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Loyalty** table, and then add the combination of loyalty membership attributes you want to use in your segment. Apply conditions and specify values for each attribute as necessary.
+You can access loyalty membership attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Loyalty** table, and then add the combination of loyalty membership attributes you want to use in your segment. Apply operators and specify values for each attribute as necessary.
 
 .. attribute-loyalty-membership-access-attributes-end
 
 
 .. _attribute-loyalty-membership-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-loyalty-membership-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Datetime data type. All Datetime data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a Datetime data type. All Datetime data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**

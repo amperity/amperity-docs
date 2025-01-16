@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: preferred channel interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "preferred purchase"
 
 
 .. meta::
@@ -23,20 +26,14 @@ Preferred channel intervals
    :start-after: .. attribute-channel-preferred-intervals-start
    :end-before: .. attribute-channel-preferred-intervals-end
 
-
-.. _attribute-channel-preferred-intervals-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_channels_preferred_intervals.rst
-   :start-after: .. attribute-channel-preferred-intervals-segment-start
-   :end-before: .. attribute-channel-preferred-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-channels-preferred-intervals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_channels_preferred_intervals.rst

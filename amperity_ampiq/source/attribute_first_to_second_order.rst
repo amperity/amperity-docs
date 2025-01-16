@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: first-to-second order attribute
+.. |what-choose| replace:: **first-to-second order**
+.. |what-find| replace:: "first to second"
 
 
 .. meta::
@@ -23,14 +26,14 @@ First-to-second order
    :start-after: .. term-first-to-second-order-days-start
    :end-before: .. term-first-to-second-order-days-end
 
-.. include:: ../../amperity_reference/source/attribute_first_to_second_order.rst
-   :start-after: .. attribute-days-between-orders-first-to-second-start
-   :end-before: .. attribute-days-between-orders-first-to-second-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-first-to-second-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_first_to_second_order.rst

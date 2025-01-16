@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: discount amount attributes
+.. |what-choose| replace:: **item discount amount**, **order discount amount**, or **unit discount amount**
+.. |what-find| replace:: "discount amount"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Discount amounts
    :start-after: .. attribute-discount-amounts-start
    :end-before: .. attribute-discount-amounts-end
 
-.. include:: ../../amperity_reference/source/attribute_discount_amounts.rst
-   :start-after: .. attribute-discount-amounts-access-start
-   :end-before: .. attribute-discount-amounts-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-discount-amounts-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_discount_amounts.rst

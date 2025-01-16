@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: customer engagement platforms
 
@@ -62,9 +61,9 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-     - Identify customers who purchased yesterday using the **Order Datetime** attribute from the **Unified Transactions** table. Select the "is between" operator, enable the **Use relative dates** checkbox, and then define the range as "today - 1 day" and "today":
+     - Identify customers who purchased yesterday using the **Has purchased** purchase behavior. Set the minimum number of purchases, select the "on" operator, and then define the range as "yesterday":
 
-       .. image:: ../../images/attribute-order-datetime-purchased-yesterday.png
+       .. image:: ../../images/attribute-has-purchased-yesterday.png
           :width: 540 px
           :alt: Find customers who purchased yesterday.
           :align: left

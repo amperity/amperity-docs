@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **order cancelled revenue** attribute
+.. |what-choose| replace:: **order cancelled revenue**
+.. |what-find| replace:: "order cancel"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Order canceled revenue
    :start-after: .. term-order-canceled-revenue-start
    :end-before: .. term-order-canceled-revenue-end
 
-.. include:: ../../amperity_reference/source/attribute_canceled_revenue.rst
-   :start-after: .. attribute-canceled-revenue-start
-   :end-before: .. attribute-canceled-revenue-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-canceled-revenue-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_canceled_revenue.rst

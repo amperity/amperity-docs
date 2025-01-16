@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Sailthru
 .. |what-send| replace:: email address lists
 .. |what-enable| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
+
 
 .. meta::
     :description lang=en:

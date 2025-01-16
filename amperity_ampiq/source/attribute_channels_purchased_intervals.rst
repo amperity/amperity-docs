@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: purchased channels interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "purchased channels"
 
 
 .. meta::
@@ -27,20 +30,14 @@ Purchased channel intervals
    :start-after: .. attribute-channel-purchased-intervals-start
    :end-before: .. attribute-channel-purchased-intervals-end
 
-
-.. _attribute-channel-purchased-intervals-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_channels_purchased_intervals.rst
-   :start-after: .. attribute-channel-purchased-intervals-segment-start
-   :end-before: .. attribute-channel-purchased-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-channel-purchased-intervals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_channels_purchased_intervals.rst

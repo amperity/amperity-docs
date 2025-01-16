@@ -1,6 +1,9 @@
-.. 
-.. https://docs.amperity.com/ampiq/
-.. 
+.. https://docs.amperity.com/reference/
+
+
+.. |what-access| replace:: the **multi purchase channel** attribute
+.. |what-choose| replace:: **multi-purchase channel**
+.. |what-find| replace:: "multi purchase channel"
 
 
 .. meta::
@@ -29,11 +32,9 @@ Multichannel purchases?
 Use in segments
 ==================================================
 
-.. attribute-channels-multi-purchase-start
-
-You can access multichannel purchases directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **Multi Purchase Channel** attribute, and then apply a condition.
-
-.. attribute-channels-multi-purchase-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-channels-multi-purchase-examples:
@@ -52,20 +53,20 @@ The following topics contain examples of using multi-purchase channel:
 
 .. _attribute-channels-multi-purchase-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-channels-multi-purchase-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is false**
      - |attribute-recommended| **More useful**

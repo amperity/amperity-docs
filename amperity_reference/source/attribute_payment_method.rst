@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **payment methods** attribute
+.. |what-choose| replace:: **payment methods**
+.. |what-find| replace:: "payment methods"
 
 
 .. meta::
@@ -29,29 +32,27 @@ Payment methods
 Use in segments
 ==================================================
 
-.. attribute-payment-method-start
-
-You can access payment methods directly from the **Segment Editor**. Add criteria to your segment, select the **Unified Itemized Transactions** table, select the **Payment Methods** attribute, apply a condition, and then specify a value.
-
-.. attribute-payment-method-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-payment-method-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-payment-method-conditions-start
 
-The following table lists the conditions that are available to the payment method attribute.
+The following table lists the operators that are available to the payment method attribute.
 
-.. note:: The payment method attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: The payment method attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

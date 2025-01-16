@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the names collection of attributes
+.. |what-choose| replace:: **given name** and **surname**
+.. |what-find| replace:: "given name", "surname", or "full name"
 
 
 .. meta::
@@ -38,16 +41,14 @@ A customer's name includes the following:
 
 .. attribute-customer-profile-names-end
 
-.. attribute-customer-profile-names-access-start
-
-You can access name attributes directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Customer 360** table, select a combination of **Given Name**, **Surname**, **Full Name**, and **Generational Suffix** attributes, apply a condition, and then specify a value.
-
-.. attribute-customer-profile-names-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-names-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_customer_profile_names.rst

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: total items interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "total items"
 
 
 .. meta::
@@ -44,29 +47,27 @@ Total items are available at the following intervals:
 Use in segments
 ==================================================
 
-.. attribute-total-items-intervals-segment-start
-
-You can access total items intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a total items interval attribute, apply a condition, and then specify a value.
-
-.. attribute-total-items-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-total-items-intervals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-total-items-intervals-conditions-start
 
-The following table lists the conditions that are available to total item interval attributes.
+The following table lists the operators that are available to total item interval attributes.
 
-.. note:: Total item interval attributes have an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Total item interval attributes have an Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with values that match the specified number of items in the interval.

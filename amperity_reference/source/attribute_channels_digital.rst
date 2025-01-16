@@ -1,6 +1,9 @@
-.. 
-.. https://docs.amperity.com/ampiq/
-.. 
+.. https://docs.amperity.com/reference/
+
+
+.. |what-access| replace:: the **digital channel** attribute
+.. |what-choose| replace:: **digital channel**
+.. |what-find| replace:: "digital channel"
 
 
 .. meta::
@@ -29,9 +32,11 @@ Digital channels
 Use in segments
 ==================================================
 
-.. attribute-channels-digital-start
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
-You can access digital channels directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table, select the **Digital Channel** attribute, apply a condition, and then specify a value.
+.. attribute-channels-digital-start
 
 For example, if your tenant had digital channels defined for "Email", "Paid media", "Paid search", "SMS", and "Streaming" the list of options would be:
 
@@ -40,20 +45,20 @@ For example, if your tenant had digital channels defined for "Email", "Paid medi
 
 .. _attribute-channels-digital-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-channels-digital-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

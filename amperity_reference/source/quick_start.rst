@@ -1,6 +1,17 @@
-.. 
-.. https://docs.amperity.com/internal/
-..
+.. https://docs.amperity.com/reference/
+
+
+.. meta::
+    :description lang=en:
+        Use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Quick start: Identity resolution
 
 ==================================================
 Quick start: Identity resolution

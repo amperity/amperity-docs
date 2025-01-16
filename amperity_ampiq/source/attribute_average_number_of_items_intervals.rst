@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: average number of items interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "average num items"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Average number of items
    :start-after: .. attribute-average-items-start
    :end-before: .. attribute-average-items-end
 
-.. include:: ../../amperity_reference/source/attribute_average_number_of_items_intervals.rst
-   :start-after: .. attribute-average-items-segments-start
-   :end-before: .. attribute-average-items-segments-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-average-items-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_average_number_of_items_intervals.rst

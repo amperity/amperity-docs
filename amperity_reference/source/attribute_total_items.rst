@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: total items attributes
+.. |what-choose| replace:: **first order total items**, **second order total items**, or **latest order total items**
+.. |what-find| replace:: "total items"
 
 
 .. meta::
@@ -31,29 +34,27 @@ Total items is a collection of attributes that represent the number of items tha
 Use in segments
 ==================================================
 
-.. attribute-total-items-ordered-start
-
-You can access total items attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select one of **First Order Total Items**, **Latest Order Latest Items**, or **Second Order Second Items**, apply a condition, and then specify a value.
-
-.. attribute-total-items-ordered-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-total-items-ordered-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-total-items-ordered-conditions-start
 
-The following table lists the conditions that are available to total items attributes.
+The following table lists the operators that are available to total items attributes.
 
-.. note:: Total items attributes have an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Total items attributes have an Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **is**

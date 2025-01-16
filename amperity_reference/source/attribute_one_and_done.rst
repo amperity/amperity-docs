@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -39,39 +37,27 @@ Use in segments
 
 .. attribute-one-and-done-find-start
 
-To find one-time buyers, start with the **One and Done** attribute in the **Transaction Attributes Extended** table, and then set its condition to **is true**.
+To find one-time buyers, start with the **One and Done** attribute in the **Transaction Attributes** table, and then set its condition to **is true**.
 
 .. attribute-one-and-done-find-end
-
-.. image:: ../../images/attribute-one-and-done.png
-   :width: 600 px
-   :alt: Choose the one and done attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-one-and-done-filters-start
-
-The attribute will appear in your segment like this:
-
-.. attribute-one-and-done-filters-end
 
 
 .. _attribute-one-and-done-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-one-and-done-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is false**
      - |attribute-recommended| **More useful**

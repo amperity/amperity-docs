@@ -200,6 +200,8 @@ html_additional_pages = {
     'channel_tiktok_ads': 'channel_tiktok_ads.html',
     'customer_lifetime_value': 'customer_lifetime_value.html',
     'destination_facebook_ads': 'destination_facebook_ads.html',
+    'purchase_behavior_first_order': 'purchase_behavior_first_order.html',
+    'purchase_behavior_repeat_order': 'purchase_behavior_repeat_order.html',
 }
 
 # If false, no module index is generated.

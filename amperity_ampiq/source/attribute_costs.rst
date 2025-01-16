@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: cost attributes
+.. |what-choose| replace:: **item cost**, **order cost**, or **unit cost**
+.. |what-find| replace:: "cost"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Costs
    :start-after: .. attribute-costs-start
    :end-before: .. attribute-costs-end
 
-.. include:: ../../amperity_reference/source/attribute_costs.rst
-   :start-after: .. attribute-costs-access-start
-   :end-before: .. attribute-costs-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-costs-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_costs.rst

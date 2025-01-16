@@ -1,6 +1,17 @@
-.. 
 .. https://docs.amperity.com/reference/
-..
+
+
+.. meta::
+    :description lang=en:
+        The Usage dashboard shows usage within Amperity across a broad range of features.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        The Usage dashboard shows usage within Amperity across a broad range of features.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Usage dashboard
 
 ==================================================
 About the Usage dashboard
@@ -39,12 +50,12 @@ The **Activations** section in the **Usage** dashboard contains the following :r
    Shows the total number of segments that are available during the selected time period. This number is compared to the number of segments that were available during the previous time period.
 
 **Segments used**
-   Shows the total number of segments that have been used in a campaign---including delivered and scheduled campaigns---as of the last date in the selected time period. This number is compared to the number of segments that were used in campaigns during the previous time period.
+   Shows the total number of segments that were used by campaigns that ran as of the last date in the selected time period. This number is compared to the number of segments that were used by campaigns that ran during the previous time period.
 
 along with the following graphs:
 
 **Campaigns**
-   Shows the total number of distinct campaigns that are run, by day. Recurring campaigns are counted each time they are run. Only successful campaign runs are counted.
+   Shows the total number of distinct campaigns that are run, by day. Campaigns that are sent more than once per day are counted once. Recurring campaigns are counted on the days they are run. Campaigns with more than one destination or sub-audience are counted once. Only successful campaign runs are counted.
 
    .. image:: ../../images/usage-campaigns.png
       :width: 600 px

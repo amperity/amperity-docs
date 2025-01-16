@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: DV360
 .. |what-send| replace:: customer profiles
@@ -8,6 +7,7 @@
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 .. |attributes-sent| replace:: |destination-name| accepts any combination of email address, phone number, first name, last name, zip code, and country attributes.
+
 
 .. meta::
     :description lang=en:

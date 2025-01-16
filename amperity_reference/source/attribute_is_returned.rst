@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: **is returned** attribute
+.. |what-choose| replace:: **is returned**
+.. |what-find| replace:: "return"
 
 
 .. meta::
@@ -19,9 +22,9 @@
 Is returned?
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-is-return-start
-   :end-before: .. term-is-return-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-is-return-access-segment:
@@ -38,20 +41,20 @@ You can access is return directly from the **Segment Editor**. To add this attri
 
 .. _attribute-is-return-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-is-return-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is false**
      - |attribute-recommended| **More useful**

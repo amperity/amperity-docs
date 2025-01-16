@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Walmart DSP
 .. |what-send| replace:: email addresses or UID2 tokens

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: order ID attributes
+.. |what-choose| replace:: **first order ID**, **second order ID**, or **latest order ID**
+.. |what-find| replace:: "order ID"
 
 
 .. meta::
@@ -43,29 +46,27 @@ Order IDs
 Use in segments
 ==================================================
 
-.. attribute-order-id-base-start
-
-You can access order ID attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source (for **First Order ID**, **Latest Order ID**, and **Second Order ID**) *or* the **Unified Transactions** table (for **Order ID**), apply a condition, and then specify a value.
-
-.. attribute-order-id-base-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-order-id-base-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-order-id-base-conditions-start
 
-The following table lists the conditions that are available to order ID attributes.
+The following table lists the operators that are available to order ID attributes.
 
-.. note:: Order ID attributes have a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Order ID attributes have a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

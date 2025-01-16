@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **email** attribute
+.. |what-choose| replace:: **email**
+.. |what-find| replace:: "email"
 
 
 .. meta::
@@ -29,29 +32,27 @@ Email addresses
 Use in segments
 ==================================================
 
-.. attribute-customer-profile-email-start
-
-You can access email addresses directly from the **Segment Editor**. To add this attribute to your segment, click **Add condition** and then **Add attribute**. Select the **Customer 360** table, select the **Email** attribute, and then apply an condition.
-
-.. attribute-customer-profile-email-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-email-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-customer-profile-email-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

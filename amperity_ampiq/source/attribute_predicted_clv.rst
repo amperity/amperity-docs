@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. meta::
     :description lang=en:
@@ -41,16 +40,6 @@ About predicted CLV attributes
    :end-before: .. attribute-predicted-clv-about-clv-example-end
 
 
-.. _attribute-predicted-clv-examples:
-
-Examples
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_predicted_clv.rst
-   :start-after: .. attribute-predicted-clv-examples-start
-   :end-before: .. attribute-predicted-clv-examples-end
-
-
 .. _attribute-predicted-clv-segment:
 
 Use in segments
@@ -60,22 +49,6 @@ Use in segments
    :start-after: .. attribute-predicted-clv-segment-start
    :end-before: .. attribute-predicted-clv-segment-end
 
-.. image:: ../../images/attribute-predicted-clv.png
-   :width: 600 px
-   :alt: Choose the predicted CLV attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_predicted_clv.rst
-   :start-after: .. attribute-predicted-clv-filters-start
-   :end-before: .. attribute-predicted-clv-filters-end
-
-.. image:: ../../images/attribute-predicted-clv-example.png
-   :width: 600 px
-   :alt: Find customers for whom customer lifetime value is predicted to be greater than or equal to $2000.
-   :align: left
-   :class: no-scaled-link
-
 .. include:: ../../amperity_reference/source/attribute_predicted_clv.rst
    :start-after: .. attribute-predicted-clv-modeling-enabled-note-start
    :end-before: .. attribute-predicted-clv-modeling-enabled-note-end
@@ -83,9 +56,19 @@ Use in segments
 
 .. _attribute-predicted-clv-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_predicted_clv.rst
    :start-after: .. attribute-predicted-clv-conditions-start
    :end-before: .. attribute-predicted-clv-conditions-end
+
+
+.. _attribute-predicted-clv-examples:
+
+Examples
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_predicted_clv.rst
+   :start-after: .. attribute-predicted-clv-examples-start
+   :end-before: .. attribute-predicted-clv-examples-end

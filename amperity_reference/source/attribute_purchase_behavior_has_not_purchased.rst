@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -19,11 +17,11 @@
 Has not purchased
 ==================================================
 
-.. attribute-compound-has-not-purchased-start
+.. attribute-purchase-behavior-has-not-purchased-start
 
 **Has Not Purchased** returns all orders that occurred during your chosen date range, and then identifies all of your customers that did not make a purchase within that date range. For example, return all customers who have not purchased within the previous 3 months:
 
-.. image:: ../../images/attribute-compound-has-not-purchased-example.png
+.. image:: ../../images/attribute-purchase-behavior-has-not-purchased-example.png
    :width: 600 px
    :alt: Find which customers have not interacted with products, channels, or brands during the specified date range.
    :align: left
@@ -31,9 +29,9 @@ Has not purchased
 
 After you specify a date range you may apply filters to focus in on specific products, brands, channels, and stores, i.e. "who hasn't purchased a specific product by a specific brand from a specific channel or store." For example, return a list of customers who have not purchased a wool product online during the previous 3 months.
 
-.. attribute-compound-has-not-purchased-end
+.. attribute-purchase-behavior-has-not-purchased-end
 
-.. attribute-compound-has-not-purchased-tip-start
+.. attribute-purchase-behavior-has-not-purchased-tip-start
 
 .. tip:: As you add filters to this attribute, the number of customer records that is returned gets larger.
 
@@ -43,15 +41,15 @@ After you specify a date range you may apply filters to focus in on specific pro
 
    **Has Not Purchased** compares the list of customers who did purchase to your total list of customers, and then returns the difference. In this example that difference is 992,000 customers.
 
-.. attribute-compound-has-not-purchased-tip-end
+.. attribute-purchase-behavior-has-not-purchased-tip-end
 
 
-.. _attribute-compound-has-not-purchased-howitworks:
+.. _attribute-purchase-behavior-has-not-purchased-howitworks:
 
 How this attribute works
 ==================================================
 
-.. attribute-compound-has-not-purchased-howitworks-start
+.. attribute-purchase-behavior-has-not-purchased-howitworks-start
 
 **Has Not Purchased** represents a common approach people use when they build segments: which of my customers have not purchased, and then associate that list of customers to your products and brands.
 
@@ -59,15 +57,15 @@ How this attribute works
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
-.. attribute-compound-has-not-purchased-howitworks-end
+.. attribute-purchase-behavior-has-not-purchased-howitworks-end
 
 
-.. _attribute-compound-has-not-purchased-howitworks-sql:
+.. _attribute-purchase-behavior-has-not-purchased-howitworks-sql:
 
 As SQL
 --------------------------------------------------
 
-.. attribute-compound-has-not-purchased-howitworks-compound-start
+.. attribute-purchase-behavior-has-not-purchased-howitworks-sql-start
 
 **Has Not Purchased** is built from standard columns that are output by Amperity. It uses two steps:
 
@@ -76,7 +74,7 @@ As SQL
 
 The following example returns all customers who have not purchased:
 
-.. image:: ../../images/attribute-compound-has-not-purchased-example.png
+.. image:: ../../images/attribute-purchase-behavior-has-not-purchased-example.png
    :width: 500 px
    :alt: Find which customers have not interacted with products, channels, or brands during the specified date range.
    :align: left
@@ -120,27 +118,27 @@ This list of customers from the **Unified Itemized Transactions** table is then 
 
 After comparing both lists, all of the customers in the **Merged Customers** table that were not in the results from the **Unified Itemized Transactions** table are returned as a list of Amperity IDs. These are the customers who have not purchased.
 
-.. attribute-compound-has-not-purchased-howitworks-compound-end
+.. attribute-purchase-behavior-has-not-purchased-howitworks-sql-end
 
-.. attribute-compound-has-not-purchased-view-the-real-sql-start
+.. attribute-purchase-behavior-has-not-purchased-view-the-real-sql-start
 
 .. note:: The SQL for **Has Not Purchased** is more complex than what is described in the previous section. This is due to the way this attribute returns *only* a list of Amperity IDs, uses a series of common table expressions (CTEs), and takes advantage of workflows that Amperity does behind the scenes to pre-filter the product, purchase, and store attributes.
 
    You can view the full SQL for **Has Not Purchased** from the **Segment Editor**. Start a new segment and add only this attribute (along with any required conditions and filter attributes), and then click the **View SQL** link at the top of the page.
 
-.. attribute-compound-has-not-purchased-view-the-real-sql-end
+.. attribute-purchase-behavior-has-not-purchased-view-the-real-sql-end
 
 
-.. _attribute-compound-has-not-purchased-howitworks-bubbles:
+.. _attribute-purchase-behavior-has-not-purchased-howitworks-bubbles:
 
 As a diagram
 --------------------------------------------------
 
-.. attribute-compound-has-not-purchased-howitworks-bubbles-start
+.. attribute-purchase-behavior-has-not-purchased-howitworks-bubbles-start
 
 The following diagram shows how **Has Not Purchased** works:
 
-.. image:: ../../images/attribute-compound-has-not-purchased-bubbles.png
+.. image:: ../../images/attribute-purchase-behavior-has-not-purchased-bubbles.png
    :width: 500 px
    :alt: Compare who purchased to who did not, return all who did not.
    :align: left
@@ -156,15 +154,15 @@ The numbers in this diagram represent:
 #. All of the customers who purchased, inclusive of purchase channel (3), product category (4), and product gender (5).
 #. All of the customers who did not purchase, and also the list of customers that is returned by **Has Not Purchased** during the date range that you choose.
 
-.. attribute-compound-has-not-purchased-howitworks-bubbles-end
+.. attribute-purchase-behavior-has-not-purchased-howitworks-bubbles-end
 
 
-.. _attribute-compound-has-not-purchased-howitworks-larger:
+.. _attribute-purchase-behavior-has-not-purchased-howitworks-larger:
 
 Why does the audience get larger?
 --------------------------------------------------
 
-.. attribute-compound-has-not-purchased-howitworks-larger-start
+.. attribute-purchase-behavior-has-not-purchased-howitworks-larger-start
 
 As you add filters to **Has Not Purchased** the size of the audience that is returned from the **Merged Customers** table gets larger. The best way to explain this is to use a series of diagrams.
 
@@ -172,7 +170,7 @@ This series of diagrams steps through and shows you why your audience gets large
 
 #. The following diagram shows just one filter (the white inner circle). Let's say that filter is purchase channel and that you chose "online":
 
-   .. image:: ../../images/attribute-compound-has-not-purchased-larger-1.png
+   .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-1.png
       :width: 500 px
       :alt: One filter attribute.
       :align: left
@@ -182,7 +180,7 @@ This series of diagrams steps through and shows you why your audience gets large
 
 #. The following diagram shows a *second* filter. Let's say this one adds product category and that you chose "shirts":
 
-   .. image:: ../../images/attribute-compound-has-not-purchased-larger-2.png
+   .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-2.png
       :width: 500 px
       :alt: Two filter attributes.
       :align: left
@@ -192,7 +190,7 @@ This series of diagrams steps through and shows you why your audience gets large
 
 #. The following diagram shows a *third* filter. Let's say this one adds product gender and that you chose "F":
 
-   .. image:: ../../images/attribute-compound-has-not-purchased-larger-3.png
+   .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-3.png
       :width: 500 px
       :alt: Three filter attributes.
       :align: left
@@ -200,42 +198,30 @@ This series of diagrams steps through and shows you why your audience gets large
 
    The results from the **Unified Itemized Transactions** table is now much smaller and the results for **Has Not Purchased** have grown larger, and now return "all of your customers who did not purchase a women's shirt from your website."
 
-.. attribute-compound-has-not-purchased-howitworks-larger-end
+.. attribute-purchase-behavior-has-not-purchased-howitworks-larger-end
 
 
-.. _attribute-compound-has-not-purchased-segments:
+.. _attribute-purchase-behavior-has-not-purchased-segments:
 
 Add to segments
 ==================================================
 
-.. attribute-compound-has-not-purchased-segments-start
+.. attribute-purchase-behavior-has-not-purchased-segments-start
 
-To find all customers who made their first order within a specified date range, start with the **Has Not Purchased** attribute located under **Purchase behaviors**:
+You can add the **Has not purchased** purchase behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **Has not purchased**.
 
-.. attribute-compound-has-not-purchased-segments-end
-
-.. image:: ../../images/attribute-compound-has-not-purchased.png
-   :width: 600 px
-   :alt: Use the has not purchased attribute to find which customers have not interacted with products, channels, or brands during the specified date range.
+.. image:: ../../images/attributes-picker-purchase-behavior-has-not-purchased.png
+   :width: 540 px
+   :alt: Select attributes.
    :align: left
    :class: no-scaled-link
 
-.. attribute-compound-has-not-purchased-segments-filters-start
+After the **Has not purchased** purchase behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
 
-After the attribute appears in your segment, choose a date range:
-
-.. image:: ../../images/attribute-compound-has-not-purchased-example.png
-   :width: 600 px
-   :alt: Find which customers have not interacted with products, channels, or brands during the specified date range.
-   :align: left
-   :class: no-scaled-link
-
-After you specify a value and date range you may apply filters to associate these customers to specific products, brands, channels, and stores.
-
-.. attribute-compound-has-not-purchased-segments-filters-end
+.. attribute-purchase-behavior-has-not-purchased-segments-end
 
 
-.. _attribute-compound-has-not-purchased-relative-dates:
+.. _attribute-purchase-behavior-has-not-purchased-relative-dates:
 
 About relative dates
 --------------------------------------------------
@@ -251,16 +237,16 @@ About relative dates
    :end-before: .. segments-editor-relative-date-values-end
 
 
-.. _attribute-compound-has-not-purchased-conditions:
+.. _attribute-purchase-behavior-has-not-purchased-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
-.. attribute-compound-has-not-purchased-conditions-start
+.. attribute-purchase-behavior-has-not-purchased-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -296,14 +282,14 @@ The following table lists the conditions that are available to this attribute.
    * - **on**
      - Returns a list of customers who have not purchased on the specified date.
 
-.. attribute-compound-has-not-purchased-conditions-end
+.. attribute-purchase-behavior-has-not-purchased-conditions-end
 
 
-.. _attribute-compound-has-not-purchased-filter-attributes:
+.. _attribute-purchase-behavior-has-not-purchased-filter-attributes:
 
 Filter attributes
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
-   :start-after: .. attribute-compound-first-order-filter-attributes-start
-   :end-before: .. attribute-compound-first-order-filter-attributes-end
+.. include:: ../../amperity_reference/source/attribute_purchase_behavior_first_purchase.rst
+   :start-after: .. attribute-purchase-behavior-first-purchase-filter-attributes-start
+   :end-before: .. attribute-purchase-behavior-first-purchase-filter-attributes-end

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: discount percent attributes
+.. |what-choose| replace:: **item discount percent**, **order discount percent**, or **unit discount percent**
+.. |what-find| replace:: "discount percent"
 
 
 .. meta::
@@ -32,16 +35,14 @@ Discount percent can be present for items order:
 
 .. attribute-discount-percent-end
 
-.. attribute-discount-percent-access-start
-
-You can access discount percent attributes directly from the **Segment Editor**. To add these attributes to your segments, click **Add criteria**, select the **Unified Itemized Transactions** table (for **Item Discount Percent**) *or* the **Unified Transactions** table (for **Order Discount Percent**), apply a condition, and then specify a value.
-
-.. attribute-discount-percent-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-discount-percents-item-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_discount_percents.rst

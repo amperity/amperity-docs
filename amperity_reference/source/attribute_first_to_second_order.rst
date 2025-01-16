@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: first-to-second order attribute
+.. |what-choose| replace:: **first-to-second order**
+.. |what-find| replace:: "first to second"
 
 
 .. meta::
@@ -29,29 +32,27 @@ First-to-second order
 Use in segments
 ==================================================
 
-.. attribute-days-between-orders-first-to-second-start
-
-You can access first-to-second order days directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **First To Second Order Days** attribute, apply a condition, and then specify a value.
-
-.. attribute-days-between-orders-first-to-second-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-first-to-second-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-first-to-second-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with dates that match the specified date.

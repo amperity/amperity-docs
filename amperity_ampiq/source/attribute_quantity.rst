@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: quantity attributes
+.. |what-choose| replace:: **item quantity**, **order quantity**, or **unit quantity**
+.. |what-find| replace:: "quantity"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Quantity
    :start-after: .. attribute-quantity-start
    :end-before: .. attribute-quantity-end
 
-.. include:: ../../amperity_reference/source/attribute_quantity.rst
-   :start-after: .. attribute-quantity-access-start
-   :end-before: .. attribute-quantity-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-quantity-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_quantity.rst

@@ -1,6 +1,4 @@
-.. 
-.. https://docs.amperity.com/datagrid/
-.. 
+.. https://docs.amperity.com/reference/
 
 
 .. meta::

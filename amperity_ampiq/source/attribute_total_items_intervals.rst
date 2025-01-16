@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: total items interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "total items"
 
 
 .. meta::
@@ -27,20 +30,14 @@ Total items intervals
    :start-after: .. attribute-total-items-intervals-list-start
    :end-before: .. attribute-total-items-intervals-list-end
 
-
-.. _attribute-total-items-intervals-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_total_items_intervals.rst
-   :start-after: .. attribute-total-items-intervals-segment-start
-   :end-before: .. attribute-total-items-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-total-items-intervals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_total_items_intervals.rst

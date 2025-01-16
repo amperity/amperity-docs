@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: largest order value interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "largest order"
 
 
 .. meta::
@@ -27,14 +30,14 @@ Largest order value
    :start-after: .. attribute-order-value-largest-list-start
    :end-before: .. attribute-order-value-largest-list-end
 
-.. include:: ../../amperity_reference/source/attribute_order_value_largest.rst
-   :start-after: .. attribute-order-value-largest-start
-   :end-before: .. attribute-order-value-largest-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-order-value-largest-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_order_value_largest.rst

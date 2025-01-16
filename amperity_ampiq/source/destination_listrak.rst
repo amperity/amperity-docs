@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Listrak
 .. |what-send| replace:: email address and SMS lists
 .. |what-enable| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires email addresses or phone numbers; you may include additional customer profile attributes, including the non-required email address or phone number.
+
 
 .. meta::
     :description lang=en:

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: RFM attributes
+.. |what-choose| replace:: **L12M frequency**, **L12M monetary**, or **L12M recency**
+.. |what-find| replace:: "L12M"
 
 
 .. meta::
@@ -72,9 +75,9 @@ Each RFM score is split into ten percentile groups. The lowest percentile is 1 a
 Recency, frequency, and monetary
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_rfm.rst
-   :start-after: .. attribute-rfm-individual-start
-   :end-before: .. attribute-rfm-individual-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-rfm-recency:
@@ -90,22 +93,6 @@ L12M Recency
    :start-after: .. attribute-rfm-recency-find-start
    :end-before: .. attribute-rfm-recency-find-end
 
-.. image:: ../../images/attribute-rfm-recency.png
-   :width: 600 px
-   :alt: Choose the L12M recency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_rfm.rst
-   :start-after: .. attribute-rfm-recency-filters-start
-   :end-before: .. attribute-rfm-recency-filters-end
-
-.. image:: ../../images/attribute-rfm-recency-example.png
-   :width: 600 px
-   :alt: Find approximate RFM recency.
-   :align: left
-   :class: no-scaled-link
-
 
 .. _attribute-rfm-frequency:
 
@@ -120,22 +107,6 @@ L12M Frequency
    :start-after: .. attribute-rfm-frequency-find-start
    :end-before: .. attribute-rfm-frequency-find-end
 
-.. image:: ../../images/attribute-rfm-frequency.png
-   :width: 600 px
-   :alt: Choose the L12M frequency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_rfm.rst
-   :start-after: .. attribute-rfm-frequency-filters-start
-   :end-before: .. attribute-rfm-frequency-filters-end
-
-.. image:: ../../images/attribute-rfm-frequency-example.png
-   :width: 600 px
-   :alt: Find approximate RFM frequency.
-   :align: left
-   :class: no-scaled-link
-
 
 .. _attribute-rfm-monetary:
 
@@ -149,22 +120,6 @@ L12M Monetary
 .. include:: ../../amperity_reference/source/attribute_rfm.rst
    :start-after: .. attribute-rfm-monetary-find-start
    :end-before: .. attribute-rfm-monetary-find-end
-
-.. image:: ../../images/attribute-rfm-monetary.png
-   :width: 600 px
-   :alt: Choose the L12M monetary attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_rfm.rst
-   :start-after: .. attribute-rfm-monetary-filters-start
-   :end-before: .. attribute-rfm-monetary-filters-end
-
-.. image:: ../../images/attribute-rfm-monetary-example.png
-   :width: 600 px
-   :alt: Find approximate RFM monetary.
-   :align: left
-   :class: no-scaled-link
 
 
 .. _attribute-rfm-score:
@@ -187,7 +142,7 @@ Combined score
 
 .. _attribute-rfm-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_rfm.rst

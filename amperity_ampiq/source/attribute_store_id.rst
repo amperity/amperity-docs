@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: store ID attributes
+.. |what-choose| replace:: **first store ID**, **second store ID**, or **latest store ID**
+.. |what-find| replace:: "store ID"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Store IDs
    :start-after: .. term-store-id-start
    :end-before: .. term-store-id-end
 
-.. include:: ../../amperity_reference/source/attribute_store_id.rst
-   :start-after: .. attribute-stores-id-start
-   :end-before: .. attribute-stores-id-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-stores-id-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_store_id.rst

@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -27,8 +25,8 @@ Repeat within 365 days?
 
 Use the following attributes as longer-term indicators of one-time buyers transitioning into becoming repeat customers:
 
-* :ref:`... of first order? <attribute-repeat-365-first>`
-* :ref:`... of second order? <attribute-repeat-365-second>`
+* :ref:`Of first order? <attribute-repeat-365-first>`
+* :ref:`Of second order? <attribute-repeat-365-second>`
 
 .. attribute-repeat-365-end
 
@@ -44,15 +42,17 @@ Of first order?
 
 .. attribute-repeat-365-first-start
 
-You can access if a customer made a second purchase within 365 days of their first purchase from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **First Order Is Retained** attribute, apply a condition, and then specify a value.
+You can identify if a customer made a second purchase within 365 days of their second purchase by adding the **first order is retained** attribute to a segment from the **Segment Editor**. Click **Add condition**, and then choose **Attributes**.
 
-.. attribute-repeat-365-first-end
-
-.. image:: ../../images/attribute-first-order-is-retained.png
-   :width: 600 px
-   :alt: Choose the first order is retained attribute from the Segment Editor.
+.. image:: ../../images/attributes-picker.png
+   :width: 540 px
+   :alt: Select attributes.
    :align: left
    :class: no-scaled-link
+
+Use the search feature to find "first order". This filters the list of available attributes. Choose **first order is retained** to add the attribute to a segment. Select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
+
+.. attribute-repeat-365-first-end
 
 
 .. _attribute-repeat-365-second:
@@ -64,35 +64,31 @@ Of second order?
    :start-after: .. term-second-order-is-retained-start
    :end-before: .. term-second-order-is-retained-end
 
-
-.. _attribute-repeat-365-second-segment:
-
-Use in segments
-==================================================
-
 .. attribute-repeat-365-second-start
 
-You can access if a customer made a third purchase within 365 days of their second purchase from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **Second Order Is Retained** attribute, and then apply an condition.
+You can identify if a customer made a third purchase within 365 days of their second purchase by adding the **second order is retained** attribute to a segment from the **Segment Editor**. Click **Add condition**, and then choose **Attributes**.
+
+Use the search feature to find "second order". This filters the list of available attributes. Choose **second order is retained** to add the attribute to a segment. Select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
 
 .. attribute-repeat-365-second-end
 
 
 .. _attribute-repeat-365-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-repeat-365-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Boolean data type. All Boolean data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is false**
      - |attribute-recommended| **More useful**

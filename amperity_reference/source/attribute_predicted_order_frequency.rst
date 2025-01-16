@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -77,27 +75,9 @@ Use in segments
 
 .. attribute-predicted-order-frequency-segment-start
 
-To find predicted order frequency, start with the **Predicted Order Frequency Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition.
+To find predicted order frequency, start with the **Predicted Order Frequency Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition. After the attribute appears in your segment, specify a frequency for predicted average order revenue that aligns to the condition you selected.
 
 .. attribute-predicted-order-frequency-segment-end
-
-.. image:: ../../images/attribute-predicted-order-frequency.png
-   :width: 600 px
-   :alt: Choose the predicted order frequency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-predicted-order-frequency-filters-start
-
-After the attribute appears in your segment, specify a frequency for predicted average order revenue that aligns to the condition you selected. For example, to find customers who are predicted to purchase between 5 and 10 times:
-
-.. attribute-predicted-order-frequency-filters-end
-
-.. image:: ../../images/attribute-predicted-order-frequency-example.png
-   :width: 600 px
-   :alt: Find customers who are predicted to purchase between 5 and 10 times.
-   :align: left
-   :class: no-scaled-link
 
 .. attribute-predicted-order-frequency-modeling-enabled-note-start
 
@@ -108,27 +88,27 @@ After the attribute appears in your segment, specify a frequency for predicted a
 
 .. _attribute-predicted-order-frequency-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-predicted-order-frequency-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific frequency of transaction, such as "1.2", "40.6", or "50.0".
 
-       .. tip:: Use the following conditions to return a range of frequencies instead of a specific frequency: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of frequencies instead of a specific frequency: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

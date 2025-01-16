@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **payment methods** attribute
+.. |what-choose| replace:: **payment methods**
+.. |what-find| replace:: "payment methods"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Payment methods
    :start-after: .. term-payment-method-start
    :end-before: .. term-payment-method-end
 
-.. include:: ../../amperity_reference/source/attribute_payment_method.rst
-   :start-after: .. attribute-payment-method-start
-   :end-before: .. attribute-payment-method-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-payment-method-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_payment_method.rst
