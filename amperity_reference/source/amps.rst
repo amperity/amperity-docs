@@ -1,6 +1,17 @@
-.. 
-.. https://docs.amperity.com/internal/
-..
+.. https://docs.amperity.com/reference/
+
+
+.. meta::
+    :description lang=en:
+        Amps are a normalized unit that measure total consumption across categories and features within the Amperity platform.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Amps are a normalized unit that measure total consumption across categories and features within the Amperity platform.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Amps dashboard
 
 ==================================================
 About the Amps dashboard
