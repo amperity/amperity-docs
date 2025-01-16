@@ -32,11 +32,9 @@ Email addresses
 Use in segments
 ==================================================
 
-.. attribute-customer-profile-email-start
-
-You can access email addresses directly from the **Segment Editor**. To add this attribute to your segment, click **Add condition** and then **Add attribute**. Select the **Customer 360** table, select the **Email** attribute, and then apply an condition.
-
-.. attribute-customer-profile-email-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-email-conditions:
