@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-..
 
 
 .. meta::
@@ -463,12 +461,6 @@ Workflows
    attribute_channels_preferred_intervals
    attribute_channels_purchased
    attribute_channels_purchased_intervals
-   attribute_compound_first_order
-   attribute_compound_has_not_purchased
-   attribute_compound_has_purchased
-   attribute_compound_most_frequent_order
-   attribute_compound_repeat_order
-   attribute_compound_total_value_of_orders
    attribute_costs
    attribute_currency
    attribute_customer_profile_addresses
@@ -510,6 +502,12 @@ Workflows
    attribute_predicted_value_tier
    attribute_product_catalogs
    attribute_profit_amounts
+   attribute_purchase_behavior_first_purchase
+   attribute_purchase_behavior_has_not_purchased
+   attribute_purchase_behavior_has_purchased
+   attribute_purchase_behavior_most_frequent_order
+   attribute_purchase_behavior_repeat_purchase
+   attribute_purchase_behavior_total_value_of_orders
    attribute_quantity
    attribute_repeat_365_days
    attribute_returned_quantity

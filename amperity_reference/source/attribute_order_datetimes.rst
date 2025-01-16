@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: order datetime attributes
+.. |what-choose| replace:: **first order datetime**, **second order datetime**, or **latest order datetime**
+.. |what-find| replace:: "order datetime"
 
 
 .. meta::
@@ -68,20 +71,20 @@ You can access datetime attributes directly from the **Segment Editor**. To add 
 
 .. _attribute-order-datetimes-conditions-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-order-datetimes-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Datetime data type. All Datetime data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a Datetime data type. All Datetime data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Avoid using the **is** condition with these attributes unless you intend to use a specific date, such as "2022-08-22" ("yyyy-mm-dd").

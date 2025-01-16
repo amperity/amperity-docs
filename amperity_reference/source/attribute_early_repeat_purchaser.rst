@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -22,8 +20,6 @@ Early repeat purchaser
 .. include:: ../../shared/terms.rst
    :start-after: .. term-early-repeat-purchasers-start
    :end-before: .. term-early-repeat-purchasers-end
-
-.. TODO: Gotta figure out how to single-source the semantic/column/attribute trifecta, if at all possible. They don't share the same formatting. Get rid of the semantic- and column-specific formatting in the terms?
 
 .. attribute-early-repeat-purchaser-start
 
@@ -55,45 +51,27 @@ Use in segments
 
 .. attribute-early-repeat-purchaser-segment-start
 
-To find early repeat purchasers, start with the **Early Repeat Purchaser** attribute in the **Transaction Attributes Extended** table, and then set its condition to **is true**.
+To find early repeat purchasers, start with the **Early Repeat Purchaser** attribute, and then set its condition to **is true**.
 
 .. attribute-early-repeat-purchaser-segment-end
-
-.. image:: ../../images/attribute-early-repeat-purchaser.png
-   :width: 600 px
-   :alt: Choose the early repeat purchaser attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-early-repeat-purchaser-filters-start
-
-The attribute will appear in your segment like this:
-
-.. attribute-early-repeat-purchaser-filters-end
-
-.. image:: ../../images/attribute-early-repeat-purchaser-example.png
-   :width: 600 px
-   :alt: Find early repeat purchasers.
-   :align: left
-   :class: no-scaled-link
 
 
 .. _attribute-early-repeat-purchaser-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-early-repeat-purchaser-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is false**
      - |attribute-recommended| **More useful**

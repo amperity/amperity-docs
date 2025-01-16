@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -39,27 +37,9 @@ Use in segments
 
 .. attribute-customer-ranking-segments-start
 
-To find customer rankings by product, start with the **Ranking** attribute in the **Predicted Affinity** table, and then set its condition to **is less than or equal to**. After the attribute appears in your segment, specify the number of customers you want to include in the ranking.
+To find customer rankings by product, start with the **Ranking** attribute in the **Predicted Affinity** table, and then set its condition to **is less than or equal to**. After the attribute appears in your segment, specify the number of customers you want to include in the ranking. After the attribute appears in your segment specify a value or range that matches the operator.
 
 .. attribute-customer-ranking-segments-end
-
-.. image:: ../../images/attribute-customer-ranking.png
-   :width: 600 px
-   :alt: Ranking in the Predicted Affinity table.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-customer-ranking-segments-filters-start
-
-After the attribute appears in your segment specify a value or range that matches the operator. For example, to use product affinity ranking to find your top 8000 customers:
-
-.. image:: ../../images/attribute-customer-ranking-example.png
-   :width: 600 px
-   :alt: A product affinity ranking of your top 8000 customers.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-customer-ranking-segments-filters-end
 
 .. attribute-customer-ranking-combine-with-product-start
 
@@ -69,20 +49,20 @@ After the attribute appears in your segment specify a value or range that matche
 
 .. _attribute-customer-ranking-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-customer-ranking-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with values that match the specified ranking.

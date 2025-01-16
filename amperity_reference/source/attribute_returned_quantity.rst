@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **order returned quantity** attribute
+.. |what-choose| replace:: **order returned quantity**
+.. |what-find| replace:: "order returned"
 
 
 .. meta::
@@ -29,29 +32,27 @@ Order returned quantity
 Use in segments
 ==================================================
 
-.. attribute-returned-quantity-start
-
-You can access returned quantities directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table, select the **Order Returned Quantity** attribute, and then apply a condition.
-
-.. attribute-returned-quantity-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-returned-quantity-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-returned-quantity-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has an Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with values that match the quantity of returned orders.

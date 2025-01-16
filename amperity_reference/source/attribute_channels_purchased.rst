@@ -1,6 +1,9 @@
-.. 
-.. https://docs.amperity.com/ampiq/
-.. 
+.. https://docs.amperity.com/reference/
+
+
+.. |what-access| replace:: purchase channel attributes
+.. |what-choose| replace:: **first order purchase channel**, **second order purchase channel**, or **latest order purchase channel**
+.. |what-find| replace:: "channel"
 
 
 .. meta::
@@ -43,29 +46,27 @@ The following topics contain examples of using purchase channels:
 Use in segments
 ==================================================
 
-.. attribute-channels-purchased-segments-start
-
-You can access the names of channels through which your customers made purchases directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Transactions** table (for **Purchase Channel**) *or* the **Transaction Attributes Extended** table (for **First Order Purchase Channel**, **Second Order Purchase Channel**, or **Latest Order Purchase Channel**), apply a condition, and then specify a value.
-
-.. attribute-channels-purchased-segments-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-channels-purchased-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-channels-purchased-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

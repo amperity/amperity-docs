@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: product catalog attributes
+.. |what-choose| replace:: a product catalog
+.. |what-find| replace:: "product"
 
 
 .. meta::
@@ -46,20 +49,20 @@ You can access product catalog attributes directly from the **Segment Editor**. 
 
 .. _attribute-product-category-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-product-category-conditions-start
 
-The following table lists the conditions that are available to product catalog attributes.
+The following table lists the operators that are available to product catalog attributes.
 
-.. note:: Product catalog attributes have a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Product catalog attributes have a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: list price attributes
+.. |what-choose| replace:: **item list price**, **order list price**, or **unit list price**
+.. |what-find| replace:: "list price"
 
 
 .. meta::
@@ -43,36 +46,34 @@ List prices
 Use in segments
 ==================================================
 
-.. attribute-list-prices-access-start
-
-You can access list price attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item List Price** and **Unit List Price**) *or* the **Unified Transactions** table (for **Order List Price**), apply a condition, and then specify a value.
-
-.. attribute-list-prices-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-list-prices-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-list-prices-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific list price, such as "9.99", "49.99", or "52.74".
 
-       .. tip:: Use the following conditions to return a range of list prices instead of a specific list price: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of list prices instead of a specific list price: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

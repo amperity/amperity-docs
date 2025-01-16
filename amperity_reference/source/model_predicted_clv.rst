@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -63,13 +61,7 @@ How much will customers spend?
 
 .. model-predicted-clv-use-cases-spend-start
 
-The **Predicted CLV Next 365d** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days. You can access this attribute directly from the segment editor:
-
-.. image:: ../../images/attribute-predicted-clv.png
-   :width: 600 px
-   :alt: Choose the predicted CLV attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
+The **Predicted CLV Next 365d** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days.
 
 After you select this attribute you can specify the type of values you want to use for this audience, such as:
 

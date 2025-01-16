@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the names collection of attributes
+.. |what-choose| replace:: **given name** and **surname**
+.. |what-find| replace:: "given name", "surname", or "full name"
 
 
 .. meta::
@@ -44,29 +47,27 @@ A customer's name includes the following:
 Use in segments
 ==================================================
 
-.. attribute-customer-profile-names-access-start
-
-You can access name attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Customer 360** table, select a combination of **Given Name**, **Surname**, **Full Name**, and **Generational Suffix** attributes, apply a condition, and then specify a value.
-
-.. attribute-customer-profile-names-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-names-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-customer-profile-names-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

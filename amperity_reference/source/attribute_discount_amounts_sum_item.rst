@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **sum of item discount amount** attribute
+.. |what-choose| replace:: **sum of item discount amount**
+.. |what-find| replace:: "item discount"
 
 
 .. meta::
@@ -29,36 +32,34 @@ Sum of item discounts
 Use in segments
 ==================================================
 
-.. attribute-discount-amounts-sum-of-items-start
-
-You can access the sum-of-item discount attribute directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table, select the **Sum of Item Discount Amount** attribute, and then apply a condition.
-
-.. attribute-discount-amounts-sum-of-items-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-discount-amounts-sum-of-items-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-discount-amounts-sum-of-items-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific total for all item discount amounts, such as "42.34", "18.00", or "8.50".
 
-       .. tip:: Use the following conditions to return a range of totals for all item discount amounts instead of a specific discount amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of totals for all item discount amounts instead of a specific discount amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**

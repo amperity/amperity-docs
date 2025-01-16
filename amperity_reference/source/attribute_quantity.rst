@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: quantity attributes
+.. |what-choose| replace:: **item quantity**, **order quantity**, or **unit quantity**
+.. |what-find| replace:: "quantity"
 
 
 .. meta::
@@ -38,29 +41,27 @@ Quantities are available for items and orders:
 Use in segments
 ==================================================
 
-.. attribute-quantity-access-start
-
-You can access quantity attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Quantity**) *or* the **Unified Transactions** table (for **Order Quantity**), apply a condition, and then specify a value.
-
-.. attribute-quantity-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-quantity-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-quantity-conditions-start
 
-The following table lists the conditions that are available to quantity attributes.
+The following table lists the operators that are available to quantity attributes.
 
-.. note:: Quantity attributes have an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Quantity attributes have an Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with quantities that match the specified quantity.

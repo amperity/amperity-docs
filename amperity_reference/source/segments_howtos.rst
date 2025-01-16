@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -169,7 +167,7 @@ Purchase behaviors are a feature of Amperity that are built on top of standard o
 
 Use purchase behaviors in segments to return a list of customers, *and then* filter that list of customers by any combination of brand, channel, individual items in your product catalog, and store.
 
-Purchase behaviors are available for :doc:`first order <attribute_compound_first_order>`, :doc:`has not purchased <attribute_compound_has_not_purchased>`, :doc:`has purchased <attribute_compound_has_purchased>`, :doc:`most frequent order <attribute_compound_most_frequent_order>`, :doc:`repeat order <attribute_compound_repeat_order>`, and :doc:`total value of orders <attribute_compound_total_value_of_orders>`.
+Purchase behaviors are available for :doc:`first purchase <attribute_purchase_behavior_first_purchase>`, :doc:`has not purchased <attribute_purchase_behavior_has_not_purchased>`, :doc:`has purchased <attribute_purchase_behavior_has_purchased>`, :doc:`most frequent order <attribute_purchase_behavior_most_frequent_order>`, :doc:`repeat purchase <attribute_purchase_behavior_repeat_purchase>`, and :doc:`total value of orders <attribute_purchase_behavior_total_value_of_orders>`.
 
 You can add purchase behaviors to segments from the **Segment Editor**.
 

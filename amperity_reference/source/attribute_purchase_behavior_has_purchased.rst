@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -19,11 +17,11 @@
 Has purchased
 ==================================================
 
-.. attribute-compound-has-purchased-start
+.. attribute-purchase-behavior-has-purchased-start
 
 **Has Purchased** returns a list of orders that meets the threshold that you define -- for example, exactly 4, less than 5, more than 2, or between 2 and 10 -- *and* occurred during your chosen date range. For example, return all customers who have purchased 3 (or more) times in the previous 2 years:
 
-.. image:: ../../images/attribute-compound-has-purchased-example.png
+.. image:: ../../images/attribute-purchase-behavior-has-purchased-example.png
    :width: 600 px
    :alt: Find which customers have interacted with products, channels, or brands during the specified date range.
    :align: left
@@ -31,15 +29,15 @@ Has purchased
 
 After you specify a value and date range you may apply filters to associate customers who have purchased with specific products, brands, channels, and stores. For example, return all customers who have purchased wool or cotton socks from your website.
 
-.. attribute-compound-has-purchased-end
+.. attribute-purchase-behavior-has-purchased-end
 
 
-.. _attribute-compound-has-purchased-howitworks:
+.. _attribute-purchase-behavior-has-purchased-howitworks:
 
 How this attribute works
 ==================================================
 
-.. attribute-compound-has-purchased-howitworks-start
+.. attribute-purchase-behavior-has-purchased-howitworks-start
 
 **Has Purchased** represents a common approach people use when they build segments: start with all orders, and then associate that list of orders to the products and brands your customers purchased.
 
@@ -47,15 +45,15 @@ How this attribute works
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
-.. attribute-compound-has-purchased-howitworks-end
+.. attribute-purchase-behavior-has-purchased-howitworks-end
 
-.. attribute-compound-has-purchased-howitworks-compound-start
+.. attribute-purchase-behavior-has-purchased-howitworks-sql-start
 
 .. admonition:: How does the SQL for Has Purchased work?
 
    **Has Purchased** is built from standard columns that are output by Amperity. The following example returns a list of customers who have purchased 3 (or more) times in the previous 2 years:
 
-   .. image:: ../../images/attribute-compound-has-purchased-example.png
+   .. image:: ../../images/attribute-purchase-behavior-has-purchased-example.png
       :width: 500 px
       :alt: Find which customers have interacted with products, channels, or brands during the specified date range.
       :align: left
@@ -94,50 +92,38 @@ With this attribute, you can focus less on SQL and more on finding answers that 
 
    This creates a list of customers who made *at least 3 purchases* during a specific time window. From here you can apply additional filters for your products, stores, channels, and brands.
 
-.. attribute-compound-has-purchased-howitworks-compound-end
+.. attribute-purchase-behavior-has-purchased-howitworks-sql-end
 
-.. attribute-compound-has-purchased-view-the-real-sql-start
+.. attribute-purchase-behavior-has-purchased-view-the-real-sql-start
 
 The SQL for **Has Purchased** is more complex than what is described in the previous section. This is due to the way this attribute returns *only* a list of Amperity IDs, uses a series of common table expressions (CTEs), and takes advantage of workflows that Amperity does behind the scenes to pre-filter the product, purchase, and store attributes.
 
 You can view the full SQL for **Has Purchased** from the **Segment Editor**. Start a new segment and add only this attribute (along with any required conditions and filter attributes), and then click the **View SQL** link at the top of the page.
 
-.. attribute-compound-has-purchased-view-the-real-sql-end
+.. attribute-purchase-behavior-has-purchased-view-the-real-sql-end
 
 
-.. _attribute-compound-has-purchased-segments:
+.. _attribute-purchase-behavior-has-purchased-segments:
 
 Add to segments
 ==================================================
 
-.. attribute-compound-has-purchased-segments-start
+.. attribute-purchase-behavior-has-purchased-segments-start
 
-To find all customers who made their first order within a specified date range, start with the **Has Purchased** attribute located under **Purchase behaviors**:
+You can add the **Has purchased** purchase behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **Has purchased**.
 
-.. attribute-compound-has-purchased-segments-end
-
-.. image:: ../../images/attribute-compound-has-purchased.png
-   :width: 600 px
-   :alt: Use the has purchased attribute to find which customers have interacted with products, channels, or brands during the specified date range.
+.. image:: ../../images/attributes-picker-purchase-behavior-has-purchased.png
+   :width: 540 px
+   :alt: Select attributes.
    :align: left
    :class: no-scaled-link
 
-.. attribute-compound-has-purchased-segments-filters-start
+After the **Has purchased** purchase behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
 
-After the attribute appears in your segment, set the purchase count and choose a date range:
-
-.. image:: ../../images/attribute-compound-has-purchased-example.png
-   :width: 600 px
-   :alt: Find which customers have interacted with products, channels, or brands during the specified date range.
-   :align: left
-   :class: no-scaled-link
-
-After you specify a purchase count and date range you may apply filters to associate these customers to specific products, brands, channels, and stores.
-
-.. attribute-compound-has-purchased-segments-filters-end
+.. attribute-purchase-behavior-has-purchased-segments-end
 
 
-.. _attribute-compound-has-purchased-relative-dates:
+.. _attribute-purchase-behavior-has-purchased-relative-dates:
 
 About relative dates
 --------------------------------------------------
@@ -153,16 +139,16 @@ About relative dates
    :end-before: .. segments-editor-relative-date-values-end
 
 
-.. _attribute-compound-has-purchased-conditions:
+.. _attribute-purchase-behavior-has-purchased-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
-.. attribute-compound-has-purchased-conditions-start
+.. attribute-purchase-behavior-has-purchased-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -182,14 +168,14 @@ The following table lists the conditions that are available to this attribute.
    * - **more than**
      - Returns a list of customers whose order threshold is more than the specified value.
 
-.. attribute-compound-has-purchased-conditions-end
+.. attribute-purchase-behavior-has-purchased-conditions-end
 
 
-.. _attribute-compound-has-purchased-filter-attributes:
+.. _attribute-purchase-behavior-has-purchased-filter-attributes:
 
 Filter attributes
 ==================================================
 
-.. include:: ../../amperity_reference/source/attribute_compound_first_order.rst
-   :start-after: .. attribute-compound-first-order-filter-attributes-start
-   :end-before: .. attribute-compound-first-order-filter-attributes-end
+.. include:: ../../amperity_reference/source/attribute_purchase_behavior_first_purchase.rst
+   :start-after: .. attribute-purchase-behavior-first-purchase-filter-attributes-start
+   :end-before: .. attribute-purchase-behavior-first-purchase-filter-attributes-end

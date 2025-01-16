@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: preferred channel interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "preferred purchase"
 
 
 .. meta::
@@ -38,29 +41,27 @@ Preferred channel intervals represent channels with the greatest number of order
 Use in segments
 ==================================================
 
-.. attribute-channel-preferred-intervals-segment-start
-
-You can access preferred channel interval attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a preferred purchase channel attribute, and then apply a condition.
-
-.. attribute-channel-preferred-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-channels-preferred-intervals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-channels-preferred-intervals-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: RFM attributes
+.. |what-choose| replace:: **L12M frequency**, **L12M monetary**, or **L12M recency**
+.. |what-find| replace:: "L12M"
 
 
 .. meta::
@@ -68,11 +71,9 @@ The following topics contain examples of using approximate RFM scores:
 Recency, frequency, and monetary
 ==================================================
 
-.. attribute-rfm-individual-start
-
-You can access individual RFM scores directly from the **Segment Editor**. To add any of these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select **L12M Frequency**, **L12M Monetary**, or **L12M Recency**, and then apply an condition.
-
-.. attribute-rfm-individual-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-rfm-recency:
@@ -86,33 +87,11 @@ L12M Recency
 
 .. attribute-rfm-recency-end
 
-.. include:: ../../amperity_ampiq/source/attribute_rfm.rst
-   :start-after: .. attribute-rfm-scoring-start
-   :end-before: .. attribute-rfm-scoring-end
-
 .. attribute-rfm-recency-find-start
 
-To find customers who purchased most recently, start with the **L12M Recency** attribute in the **Transaction Attributes Extended** table, set its condition to **is**, and then specify a percentile. For example, use "10" to find customers who are in the top 10% for most recent purchases.
+To find customers who purchased most recently, start with the **L12M Recency** attribute, set its operator to **is**, and then specify a percentile. For example, use "10" to find customers who are in the top 10% for most recent purchases.
 
 .. attribute-rfm-recency-find-end
-
-.. image:: ../../images/attribute-rfm-recency.png
-   :width: 600 px
-   :alt: Choose the L12M recency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-rfm-recency-filters-start
-
-The attribute will appear in your segment like this:
-
-.. attribute-rfm-recency-filters-end
-
-.. image:: ../../images/attribute-rfm-recency-example.png
-   :width: 600 px
-   :alt: Find approximate RFM recency.
-   :align: left
-   :class: no-scaled-link
 
 
 .. _attribute-rfm-frequency:
@@ -126,33 +105,11 @@ L12M Frequency
 
 .. attribute-rfm-frequency-end
 
-.. include:: ../../amperity_ampiq/source/attribute_rfm.rst
-   :start-after: .. attribute-rfm-scoring-start
-   :end-before: .. attribute-rfm-scoring-end
-
 .. attribute-rfm-frequency-find-start
 
-To find which customers purchased most frequently during the previous 12 months, start with the **L12M Frequency** attribute in the **Transaction Attributes Extended** table, set its condition to **is in list**, and then specify percentiles. For example, use "10" and "9" to find customers who are in the top 20% for purchase frequency.
+To find which customers purchased most frequently during the previous 12 months, start with the **L12M Frequency** attribute, set its operator to **is in list**, and then specify percentiles. For example, use "10" and "9" to find customers who are in the top 20% for purchase frequency.
 
 .. attribute-rfm-frequency-find-end
-
-.. image:: ../../images/attribute-rfm-frequency.png
-   :width: 600 px
-   :alt: Choose the L12M frequency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-rfm-frequency-filters-start
-
-The attribute will appear in your segment like this:
-
-.. attribute-rfm-frequency-filters-end
-
-.. image:: ../../images/attribute-rfm-frequency-example.png
-   :width: 600 px
-   :alt: Find approximate RFM frequency.
-   :align: left
-   :class: no-scaled-link
 
 
 .. _attribute-rfm-monetary:
@@ -166,33 +123,11 @@ L12M Monetary
 
 .. attribute-rfm-monetary-end
 
-.. include:: ../../amperity_ampiq/source/attribute_rfm.rst
-   :start-after: .. attribute-rfm-scoring-start
-   :end-before: .. attribute-rfm-scoring-end
-
 .. attribute-rfm-monetary-find-start
 
-To find customers who spent the most money during the previous 12 months, start with the **L12M Monetary** attribute in the **Transaction Attributes Extended** table, set its condition to **is**, and then specify a percentile. For example, use "10" to find customers who are in the top 10% for spend amount.
+To find customers who spent the most money during the previous 12 months, start with the **L12M Monetary** attribute, set its condition to **is**, and then specify a percentile. For example, use "10" to find customers who are in the top 10% for spend amount.
 
 .. attribute-rfm-monetary-find-end
-
-.. image:: ../../images/attribute-rfm-monetary.png
-   :width: 600 px
-   :alt: Choose the L12M monetary attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-rfm-monetary-filters-start
-
-The attribute will appear in your segment like this:
-
-.. attribute-rfm-monetary-filters-end
-
-.. image:: ../../images/attribute-rfm-monetary-example.png
-   :width: 600 px
-   :alt: Find approximate RFM monetary.
-   :align: left
-   :class: no-scaled-link
 
 
 .. _attribute-rfm-score:
@@ -263,20 +198,20 @@ The combined score returns customers who met each requirement. This is often a m
 
 .. _attribute-rfm-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-rfm-individual-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have an Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with an approximate RFM score that matches the specified score.

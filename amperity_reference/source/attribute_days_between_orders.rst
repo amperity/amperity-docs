@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **days since latest order** attribute
+.. |what-choose| replace:: **days since latest order**
+.. |what-find| replace:: "latest order"
 
 
 .. meta::
@@ -29,41 +32,27 @@ Days since latest order
 Use in segments
 ==================================================
 
-.. attribute-days-between-orders-start
-
-To find the number of days that have elapsed since a customer's most recent order, start with the **Days Since Latest Order** attribute in the **Transaction Attributes Extended** table, and then set its condition to **is between**.
-
-.. attribute-days-between-orders-end
-
-.. image:: ../../images/attribute-days-since-latest-order.png
-   :width: 600 px
-   :alt: Choose the days since latest order attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-days-between-orders-filters-start
-
-After the attribute appears in your segment, specify the number of days. For example, to find customers for whom 90 days have elapsed since their latest order:
-
-.. attribute-days-between-orders-filters-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-days-between-orders-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-days-between-orders-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with dates that match the specified date.

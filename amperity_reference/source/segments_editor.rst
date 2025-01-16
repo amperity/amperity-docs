@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -277,12 +275,12 @@ Purchase behaviors are a feature of Amperity that are built on top of standard o
 
 .. segments-editor-condition-purchase-behaviors-end
 
-* :doc:`First order <attribute_compound_first_order>`
-* :doc:`Has not purchased <attribute_compound_has_not_purchased>`
-* :doc:`Has purchased <attribute_compound_has_purchased>`
-* :doc:`Most frequent order <attribute_compound_most_frequent_order>`
-* :doc:`Repeat order <attribute_compound_repeat_order>`
-* :doc:`Total value of orders <attribute_compound_total_value_of_orders>`
+* :doc:`First purchase <attribute_purchase_behavior_first_purchase>`
+* :doc:`Has not purchased <attribute_purchase_behavior_has_not_purchased>`
+* :doc:`Has purchased <attribute_purchase_behavior_has_purchased>`
+* :doc:`Most frequent order <attribute_purchase_behavior_most_frequent_order>`
+* :doc:`Repeat purchase <attribute_purchase_behavior_repeat_purchase>`
+* :doc:`Total value of orders <attribute_purchase_behavior_total_value_of_orders>`
 
 
 .. _segments-editor-operators:

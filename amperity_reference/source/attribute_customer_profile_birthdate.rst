@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **birthdate** attribute
+.. |what-choose| replace:: **birthdate**
+.. |what-find| replace:: "birthdate"
 
 
 .. meta::
@@ -29,29 +32,27 @@ Birthdates
 Use in segments
 ==================================================
 
-.. attribute-customer-profile-birthdate-start
-
-You can access birthdates directly from the **Segment Editor**. To add this attribute to your segment, click **Add condition** and then **Add attribute**. Select the **Customer 360** table, select the **Birthdate** attribute, and then apply a condition.
-
-.. attribute-customer-profile-birthdate-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-birthdates-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-customer-profile-birthdate-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Date data type. All Date data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a Date data type. All Date data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Avoid using **is** condition with this attribute unless you intend to use a specific date, such as "2022-08-22" ("yyyy-mm-dd").

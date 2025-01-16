@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -61,27 +59,9 @@ Use in segments
 
 .. attribute-predicted-lifecycle-status-segment-start
 
-To find predicted lifecycle status, start with the **Predicted Customer Lifecycle Status** attribute in the **Predicted CLV Attributes** table, and then select the **is in list** condition. After the attribute appears in your segment, set the list values to include all of the thresholds you want to use in your segment.
+To find predicted lifecycle status, start with the **Predicted Customer Lifecycle Status** attribute in the **Predicted CLV Attributes** table, and then select the **is in list** condition. After the attribute appears in your segment, set the list values to include all of the thresholds you want to use in your segment. For example, choose the **is in list** attribute, and then set predicted lifecycle status to **Active**, **At risk**, and **Cooling down**.
 
 .. attribute-predicted-lifecycle-status-segment-end
-
-.. image:: ../../images/attribute-predicted-lifecycle-status.png
-   :width: 600 px
-   :alt: Choose the predicted lifecycle status attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-predicted-lifecycle-status-segment-list-options-start
-
-Choose the **is in list** attribute, and then set predicted lifecycle status to **Active**, **At risk**, and **Cooling down**:
-
-.. attribute-predicted-lifecycle-status-segment-list-options-end
-
-.. image:: ../../images/attribute-predicted-customer-lifecycle-status-is-in-list.png
-   :width: 600 px
-   :alt: The is in list condition for predicted lifecycle status.
-   :align: left
-   :class: no-scaled-link
 
 .. attribute-predicted-lifecycle-status-modeling-enabled-note-start
 
@@ -92,20 +72,20 @@ Choose the **is in list** attribute, and then set predicted lifecycle status to 
 
 .. _attribute-predicted-lifecycle-status-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-predicted-lifecycle-status-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

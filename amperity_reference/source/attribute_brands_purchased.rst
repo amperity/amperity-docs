@@ -1,6 +1,9 @@
-.. 
-.. https://docs.amperity.com/ampiq/
-.. 
+.. https://docs.amperity.com/reference/
+
+
+.. |what-access| replace:: purchased brands attributes
+.. |what-choose| replace:: **first order purchase brand**, **second order purchase brand**, or **latest order purchase brand**
+.. |what-find| replace:: "purchase brand"
 
 
 .. meta::
@@ -38,20 +41,20 @@ You can access the names of brands that were purchased by your customers directl
 
 .. _attribute-brands-purchased-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-brands-purchased-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
    * - **contains**

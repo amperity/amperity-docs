@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -93,24 +91,6 @@ To find large audience sizes, start with the **Audience Size Large** attribute i
 
 .. attribute-audience-sizes-large-end
 
-.. image:: ../../images/attribute-audience-size-large.png
-   :width: 600 px
-   :alt: Choose the large audience size attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-audience-sizes-large-segments-filters-start
-
-The attribute will appear in your segment like this:
-
-.. attribute-audience-sizes-large-segments-filters-end
-
-.. image:: ../../images/attribute-audience-size-large-example.png
-   :width: 600 px
-   :alt: A large audience size.
-   :align: left
-   :class: no-scaled-link
-
 .. attribute-audience-sizes-large-combine-with-product-start
 
 .. important:: Combine **Audience Size Large** attribute with the **Product Attribute** attribute to build an audience size for the selected product attribute. 
@@ -138,24 +118,6 @@ Medium audience sizes
 To find medium audience sizes, start with the **Audience Size Medium** attribute in the **Predicted Affinity** table, and then set its condition to **is true**.
 
 .. attribute-audience-sizes-medium-end
-
-.. image:: ../../images/attribute-audience-size-medium.png
-   :width: 600 px
-   :alt: Choose the medium audience size attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-audience-sizes-medium-segments-filters-start
-
-The attribute will appear in your segment like this:
-
-.. image:: ../../images/attribute-audience-size-medium-example.png
-   :width: 600 px
-   :alt: A medium audience size.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-audience-sizes-medium-segments-filters-end
 
 .. attribute-audience-sizes-medium-combine-with-product-start
 
@@ -185,24 +147,6 @@ To find small audience sizes, start with the **Audience Size Small** attribute i
 
 .. attribute-audience-sizes-small-end
 
-.. image:: ../../images/attribute-audience-size-small.png
-   :width: 600 px
-   :alt: Choose the small audience size attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-audience-sizes-small-segments-filters-start
-
-The attribute will appear in your segment like this:
-
-.. image:: ../../images/attribute-audience-size-small-example.png
-   :width: 600 px
-   :alt: A small audience size.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-audience-sizes-small-segments-filters-end
-
 .. attribute-audience-sizes-small-combine-with-product-start
 
 .. important:: Combine **Audience Size Small** attribute with the **Product Attribute** attribute to build an audience size for the selected product attribute. 
@@ -212,20 +156,20 @@ The attribute will appear in your segment like this:
 
 .. _attribute-audience-sizes-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-audience-sizes-conditions-start
 
-The following table lists the conditions that are available to audience size attributes.
+The following table lists the operators that are available to audience size attributes.
 
-.. note:: These attributes have a Boolean data type. All Boolean data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is false**
      - |attribute-recommended| **More useful**
