@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Adobe Customer Attributes
 .. |plugin-name| replace:: Adobe Customer Attributes

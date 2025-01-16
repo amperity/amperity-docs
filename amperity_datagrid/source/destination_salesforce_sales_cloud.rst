@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Salesforce Sales Cloud
 .. |plugin-name| replace:: Salesforce Sales Cloud

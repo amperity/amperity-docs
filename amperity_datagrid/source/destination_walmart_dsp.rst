@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Walmart DSP
 .. |destination-api| replace:: The Trade Desk API

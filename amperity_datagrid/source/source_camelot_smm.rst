@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Camelot SMM
 .. |feed-name| replace:: CustomerRecords

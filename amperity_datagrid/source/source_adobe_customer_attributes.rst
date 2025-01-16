@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Adobe Customer Attributes
 .. |feed-name| replace:: CustomerRecords

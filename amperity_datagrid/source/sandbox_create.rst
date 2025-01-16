@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
 
 
 .. meta::
@@ -14,7 +12,6 @@
 .. meta::
     :content class=swiftype name=title data-type=string:
         Create a sandbox
-
 
 ==================================================
 Create a sandbox

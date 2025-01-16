@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: BI Connect
 .. |what-send| replace:: databases, tables, and query results

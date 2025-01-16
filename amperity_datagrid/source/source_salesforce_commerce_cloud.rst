@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Salesforce Commerce Cloud
 .. |plugin-name| replace:: Salesforce Commerce Cloud

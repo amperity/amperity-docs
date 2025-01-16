@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-..
+
 
 .. |destination-name| replace:: Yahoo DSP
 .. |destination-api| replace:: Yahoo Ad Tech DataX API

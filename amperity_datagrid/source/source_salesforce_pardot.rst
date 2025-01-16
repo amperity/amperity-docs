@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Salesforce Pardot
 .. |plugin-name| replace:: Salesforce Pardot

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Microsoft Dynamics
 .. |plugin-name| replace:: Microsoft Dynamics

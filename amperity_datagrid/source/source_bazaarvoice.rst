@@ -1,8 +1,4 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
-
-.. https://knowledge.bazaarvoice.com/wp-content/conversations-prr/en_US/feed/export_feeds.html
 
 
 .. |source-name| replace:: Bazaarvoice
