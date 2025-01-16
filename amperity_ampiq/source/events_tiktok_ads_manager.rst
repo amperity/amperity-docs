@@ -1,8 +1,8 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: TikTok Ads
+
 
 .. meta::
     :description lang=en:

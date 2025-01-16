@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Salesforce Marketing Cloud
 .. |what-send| replace:: contact data
 .. |what-enable| replace:: **amperity_id**, **email**, **first_name**, and **last_name**
 .. |attributes-sent| replace:: |destination-name| allows a long list of (optional) attributes.
+
 
 .. meta::
     :description lang=en:

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Pinterest Ads Manager
 

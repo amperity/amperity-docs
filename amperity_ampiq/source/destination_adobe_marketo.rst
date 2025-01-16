@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Adobe Marketo
 .. |what-send| replace:: static audience lists
 .. |what-enable| replace:: email (required), along with any combination of first name, last name, phone, and company
 .. |attributes-sent| replace:: |destination-name| requires email addresses. You may also select any combination of phone number, first name, last name, and country attributes.
+
 
 .. meta::
     :description lang=en:

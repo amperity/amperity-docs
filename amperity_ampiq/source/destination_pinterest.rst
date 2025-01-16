@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Pinterest
 .. |destination-api| replace:: Pinterest API
@@ -8,6 +7,7 @@
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 .. |attributes-sent| replace:: |destination-name| requires email addresses; Amperity applies SHA-256 hashing to email addresses automatically.
+
 
 .. meta::
     :description lang=en:

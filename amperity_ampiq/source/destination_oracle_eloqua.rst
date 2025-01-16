@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Oracle Eloqua
 .. |what-send| replace:: audiences
@@ -8,6 +7,7 @@
 .. |attributes-sent| replace:: |destination-name| requires an email address. You may configure Amperity to send additional fields.
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
+
 
 .. meta::
     :description lang=en:

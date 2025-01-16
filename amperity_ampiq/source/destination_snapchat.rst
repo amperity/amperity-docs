@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Snapchat
 .. |what-send| replace:: email addresses, phone numbers, and mobile advertiser IDs
 .. |what-enable| replace:: **email**, **phone**, or **mobile-id**
 .. |attributes-sent| replace:: |destination-name| requires email addresses and phone numbers. You may also associate fields to mobile advertising IDs.
+
 
 .. meta::
     :description lang=en:

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: TikTok Ads
 .. |what-send| replace:: email addresses, phone numbers, and advertising IDs (IDFAs for iOS devices or AAIDs for Android devices)
@@ -8,6 +7,7 @@
 .. |allow-for-what| replace:: audience mapping
 .. |allow-for-duration| replace:: up to 10 hours
 .. |attributes-sent| replace:: Send one of the following attributes to |destination-name|: email address, phone number, or advertising ID (IDFA for iOS devices or AAID for Android devices).
+
 
 .. meta::
     :description lang=en:

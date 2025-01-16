@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Microsoft Ads
 .. |what-send| replace:: customer data
@@ -8,6 +7,7 @@
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
+
 
 .. meta::
     :description lang=en:

@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Klaviyo
 .. |what-send| replace:: email address lists
 .. |what-enable| replace:: **email** and customer profile attributes
 .. |attributes-sent| replace:: |destination-name| requires only email addresses. You may configure campaigns to send additional customer profile attributes.
+
 
 .. meta::
     :description lang=en:

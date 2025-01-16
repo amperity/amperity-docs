@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Reddit Ads
 .. |plugin-name| replace:: SFTP
+
 
 .. meta::
     :description lang=en:

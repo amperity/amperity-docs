@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. TODO: Q: What is a good timeline for measuring the conversion of a retail customer who has received a direct mail offer? A: 28 days, 30 days, 4 weeks, 1 month are all reasonable timelines.
 
@@ -104,12 +103,6 @@ To accurately budget for direct mail campaigns, marketers must determine the amo
    :start-after: .. attribute-predicted-value-tier-segment-start
    :end-before: .. attribute-predicted-value-tier-segment-end
 
-.. image:: ../../images/attribute-predicted-value-tier.png
-   :width: 600 px
-   :alt: Choose the predicted customer lifetime value tier attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
 .. direct-mail-build-audience-by-tier-end
 
 
@@ -129,12 +122,6 @@ By lifecycle status
 .. include:: ../../amperity_reference/source/attribute_predicted_lifecycle_status.rst
    :start-after: .. attribute-predicted-lifecycle-status-segment-start
    :end-before: .. attribute-predicted-lifecycle-status-segment-end
-
-.. image:: ../../images/attribute-predicted-lifecycle-status.png
-   :width: 600 px
-   :alt: Choose the predicted lifecycle status attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
 
 .. direct-mail-build-audience-by-status-start
 

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Meta Ads Manager
 .. |what-send| replace:: customer profiles
@@ -8,6 +7,7 @@
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
+
 
 .. meta::
     :description lang=en:

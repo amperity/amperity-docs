@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. |destination-name| replace:: Attentive
 .. |what-send| replace:: email address and phone numbers
@@ -8,6 +7,7 @@
 .. |attributes-sent| replace:: |destination-name| requires email addresses *or* phone numbers. You must choose one (and not the other). There are no optional fields.
 .. |allow-for-what| replace:: audience segments
 .. |allow-for-duration| replace:: up to 24 hours
+
 
 .. meta::
     :description lang=en:
