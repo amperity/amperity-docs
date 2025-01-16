@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Airship
 .. |plugin-name| replace:: Airship

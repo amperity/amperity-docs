@@ -1,6 +1,17 @@
-..
-.. https://docs.amperity.com/
-..
+.. https://docs.amperity.com/datagrid/
+
+
+.. meta::
+    :description lang=en:
+        Real-time tables enable use cases that require the use of time-sensitive data.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Real-time tables enable use cases that require the use of time-sensitive data.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Real-time tables
 
 ==================================================
 Real-time tables

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Koupon Media
 .. |feed-name| replace:: CustomerRecords

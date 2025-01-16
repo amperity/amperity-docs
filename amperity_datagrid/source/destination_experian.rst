@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Experian
 .. |plugin-name| replace:: Experian

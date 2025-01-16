@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: custom destination
 .. |plugin-namex| replace:: custom destination

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Klaviyo
 .. |destination-api| replace:: Klaviyo API

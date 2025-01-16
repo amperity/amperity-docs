@@ -1,10 +1,9 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Oracle OPERA
 .. |plugin-name| replace:: Oracle OPERA
-.. |feed-name| replace:: xxxxx
+.. |feed-name| replace:: Oracle OPERA
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |credential-type| replace:: **oracle-opera**
 .. |source-interface| replace:: |source-name|

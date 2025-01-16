@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Sailthru
 .. |destination-api| replace:: Sailthru API

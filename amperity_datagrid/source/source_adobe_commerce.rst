@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Adobe Commerce
 .. |plugin-name| replace:: Adobe Commerce

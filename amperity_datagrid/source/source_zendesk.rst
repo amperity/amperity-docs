@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Zendesk
 .. |plugin-name| replace:: Zendesk

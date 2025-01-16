@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Microsoft Dataverse
 .. |plugin-namex| replace:: Microsoft Dataverse

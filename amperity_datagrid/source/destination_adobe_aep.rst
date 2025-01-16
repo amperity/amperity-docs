@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Adobe Experience Platform
 .. |plugin-name| replace:: SFTP

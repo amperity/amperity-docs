@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Azure Blob Storage
 .. |plugin-name| replace:: Azure Blob Storage

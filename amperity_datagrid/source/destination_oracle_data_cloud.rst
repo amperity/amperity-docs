@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Oracle Data Cloud
 .. |plugin-name| replace:: Oracle Data Cloud

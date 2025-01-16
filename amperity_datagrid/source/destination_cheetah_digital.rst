@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Cheetah Digital
 .. |plugin-name| replace:: the plugin that matches the profile configured in |destination-name|

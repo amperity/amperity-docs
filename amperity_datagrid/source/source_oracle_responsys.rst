@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-..  
+
 
 .. |source-name| replace:: Oracle Responsys
 .. |plugin-name| replace:: Oracle Responsys

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Microsoft Power BI
 .. |plugin-name| replace:: Microsoft Power BI

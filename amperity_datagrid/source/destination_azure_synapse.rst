@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Azure Synapse Analytics
 .. |what-send| replace:: Apache Parquet files and delimited files (CSV, TSV, or PSV)

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Salesforce Marketing Cloud Personalization
 .. |plugin-name| replace:: SFTP

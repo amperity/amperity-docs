@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Kinesis Data Firehose
 .. |plugin-name| replace:: Amazon S3

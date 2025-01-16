@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/contributing/
-..
+
 
 ==================================================
 Workstation setup

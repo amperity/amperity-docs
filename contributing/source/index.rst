@@ -1,6 +1,5 @@
-.. 
-.. https://docs.amperity.com/internal/
-..
+.. https://docs.amperity.com/contributing/
+
 
 ==================================================
 About Amperity documentation

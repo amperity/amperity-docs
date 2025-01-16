@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Criteo Retail Media
 .. |plugin-name| replace:: "Criteo Retail Media"

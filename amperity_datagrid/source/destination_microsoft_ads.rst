@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Microsoft Advertising
 .. |destination-api| replace:: Microsoft Ads API

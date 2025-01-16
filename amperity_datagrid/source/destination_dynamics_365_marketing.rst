@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Dynamics 365 Marketing
 .. |plugin-name| replace:: Dynamics 365 Marketing

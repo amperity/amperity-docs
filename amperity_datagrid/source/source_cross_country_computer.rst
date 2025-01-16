@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Cross Country Computer
 .. |feed-name| replace:: CustomerRecords

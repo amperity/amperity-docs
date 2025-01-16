@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Adobe Campaign
 .. |feed-name| replace:: CustomerRecords

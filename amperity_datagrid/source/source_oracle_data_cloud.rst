@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Oracle Data Cloud
 .. |feed-name| replace:: CustomerRecords

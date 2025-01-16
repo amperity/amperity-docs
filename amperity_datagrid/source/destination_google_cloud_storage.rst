@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Google Cloud Storage
 .. |plugin-name| replace:: Google Cloud Storage

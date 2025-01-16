@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Salesforce Marketing Cloud
 .. |plugin-name| replace:: Salesforce Marketing Cloud
