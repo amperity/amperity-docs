@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **multi-brand purchases** attribute
+.. |what-choose| replace:: **multi-brand purchases**
+.. |what-find| replace:: "multi-brand"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Multi-brand purchases?
    :start-after: .. attribute-multibrand-start
    :end-before: .. attribute-multibrand-end
 
-.. include:: ../../amperity_reference/source/attribute_brands_multiple.rst
-   :start-after: .. attribute-multibrand-access-start
-   :end-before: .. attribute-multibrand-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-multibrand-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_brands_multiple.rst

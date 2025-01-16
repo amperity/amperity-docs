@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: order revenue interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "order revenue"
 
 
 .. meta::
@@ -23,6 +26,20 @@ Order revenue intervals
    :start-after: .. attribute-order-revenue-intervals-start
    :end-before: .. attribute-order-revenue-intervals-end
 
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
+
+
+.. _attribute-order-revenue-interval-conditions:
+
+Available operators
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_revenue_intervals.rst
+   :start-after: .. attribute-order-revenue-interval-conditions-start
+   :end-before: .. attribute-order-revenue-interval-conditions-end
+
 
 .. _attribute-order-revenue-intervals-examples:
 
@@ -32,23 +49,3 @@ Examples
 .. include:: ../../amperity_reference/source/attribute_revenue_intervals.rst
    :start-after: .. attribute-order-revenue-intervals-examples-start
    :end-before: .. attribute-order-revenue-intervals-examples-end
-
-
-.. _attribute-order-revenue-intervals-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_revenue_intervals.rst
-   :start-after: .. attribute-order-revenue-intervals-segment-start
-   :end-before: .. attribute-order-revenue-intervals-segment-end
-
-
-.. _attribute-order-revenue-interval-conditions:
-
-Available conditions
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_revenue_intervals.rst
-   :start-after: .. attribute-order-revenue-interval-conditions-start
-   :end-before: .. attribute-order-revenue-interval-conditions-end

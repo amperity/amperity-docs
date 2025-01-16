@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: average order value interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "average order"
 
 
 .. meta::
@@ -28,19 +31,14 @@ Average order value intervals
    :end-before: .. attribute-order-value-average-intervals-end
 
 
-.. _attribute-order-value-average-intervals-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_order_value_average.rst
-   :start-after: .. attribute-order-value-average-intervals-segment-start
-   :end-before: .. attribute-order-value-average-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-order-value-average-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_order_value_average.rst

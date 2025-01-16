@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **order returned revenue** attribute
+.. |what-choose| replace:: **order returned revenue**
+.. |what-find| replace:: "order returned"
 
 
 .. meta::
@@ -24,14 +27,14 @@ Order returned revenue
    :start-after: .. term-order-returned-revenue-start
    :end-before: .. term-order-returned-revenue-end
 
-.. include:: ../../amperity_reference/source/attribute_returned_revenue.rst
-   :start-after: .. attribute-returned-revenue-start
-   :end-before: .. attribute-returned-revenue-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-returned-revenue-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_returned_revenue.rst

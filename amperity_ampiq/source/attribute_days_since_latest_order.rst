@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **days since latest order** attribute
+.. |what-choose| replace:: **days since latest order**
+.. |what-find| replace:: "latest order"
 
 
 .. meta::
@@ -23,30 +26,14 @@ Days since latest order
    :start-after: .. term-days-since-last-order-start
    :end-before: .. term-days-since-last-order-end
 
-.. include:: ../../amperity_reference/source/attribute_days_between_orders.rst
-   :start-after: .. attribute-days-between-orders-start
-   :end-before: .. attribute-days-between-orders-end
-
-.. image:: ../../images/attribute-days-since-latest-order.png
-   :width: 600 px
-   :alt: Choose the days since latest order attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_days_between_orders.rst
-   :start-after: .. attribute-days-between-orders-filters-start
-   :end-before: .. attribute-days-between-orders-filters-end
-
-.. image:: ../../images/attribute-days-since-latest-order-example.png
-   :width: 600 px
-   :alt: Find customers for whom 90 days have elapsed since their latest order.
-   :align: left
-   :class: no-scaled-link
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-days-between-orders-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_days_between_orders.rst

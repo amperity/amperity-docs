@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: tax amount attributes
+.. |what-choose| replace:: **item tax amount**, **order tax amount**, or **unit tax amount**
+.. |what-find| replace:: "tax amount"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Tax amounts
    :start-after: .. attribute-tax-amounts-common-start
    :end-before: .. attribute-tax-amounts-common-end
 
-.. include:: ../../amperity_reference/source/attribute_tax_amounts.rst
-   :start-after: .. attribute-tax-amounts-start
-   :end-before: .. attribute-tax-amounts-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-tax-amounts-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_tax_amounts.rst

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: purchased brands attributes
+.. |what-choose| replace:: **first order purchase brand**, **second order purchase brand**, or **latest order purchase brand**
+.. |what-find| replace:: "purchase brand"
 
 
 .. meta::
@@ -23,20 +26,14 @@ Purchased brands
    :start-after: .. term-purchase-brand-start
    :end-before: .. term-purchase-brand-end
 
-
-.. _attribute-brands-purchased-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_brands_purchased.rst
-   :start-after: .. attribute-brands-purchased-segments-start
-   :end-before: .. attribute-brands-purchased-segments-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-brands-purchased-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_brands_purchased.rst

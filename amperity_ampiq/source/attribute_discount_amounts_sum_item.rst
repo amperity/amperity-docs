@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **sum of item discount amount** attribute
+.. |what-choose| replace:: **sum of item discount amount**
+.. |what-find| replace:: "item discount"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Sum of item discounts
    :start-after: .. term-sum-of-discount-amounts-start
    :end-before: .. term-sum-of-discount-amounts-end
 
-.. include:: ../../amperity_reference/source/attribute_discount_amounts_sum_item.rst
-   :start-after: .. attribute-discount-amounts-sum-of-items-start
-   :end-before: .. attribute-discount-amounts-sum-of-items-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-discount-amounts-sum-of-items-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_discount_amounts_sum_item.rst

@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -58,7 +56,7 @@ Of second order?
 
 .. _attribute-repeat-365-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_repeat_365_days.rst

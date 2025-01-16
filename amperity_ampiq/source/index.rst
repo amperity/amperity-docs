@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
 
 .. meta::
     :description lang=en:
@@ -45,7 +44,7 @@ Define audiences
    :doc:`Audience sizes <attribute_audience_sizes>` |fa-index-separator| :doc:`Customer ranking <attribute_customer_ranking>` |fa-index-separator| :doc:`Predicted average order revenue <attribute_predicted_average_order_revenue>` |fa-index-separator| :doc:`Predicted CLV <attribute_predicted_clv>` |fa-index-separator| :doc:`Predicted lifecycle status <attribute_predicted_lifecycle_status>` |fa-index-separator| :doc:`Predicted order frequency <attribute_predicted_order_frequency>` |fa-index-separator| :doc:`Predicted transactions <attribute_predicted_transactions>` |fa-index-separator| :doc:`Predicted value tiers <attribute_predicted_value_tier>`
 
 **Purchase behaviors**
-   :doc:`First orders <purchase_behavior_first_order>` |fa-index-separator| :doc:`Has not purchased <purchase_behavior_has_not_purchased>` |fa-index-separator| :doc:`Has purchased <purchase_behavior_has_purchased>` |fa-index-separator| :doc:`Most frequent orders <purchase_behavior_most_frequent_order>` |fa-index-separator| :doc:`Repeat orders <purchase_behavior_repeat_order>` |fa-index-separator| :doc:`Total value of orders <purchase_behavior_total_value_of_orders>`
+   :doc:`First purchases <purchase_behavior_first_purchase>` |fa-index-separator| :doc:`Has not purchased <purchase_behavior_has_not_purchased>` |fa-index-separator| :doc:`Has purchased <purchase_behavior_has_purchased>` |fa-index-separator| :doc:`Most frequent orders <purchase_behavior_most_frequent_order>` |fa-index-separator| :doc:`Repeat purchases <purchase_behavior_repeat_purchase>` |fa-index-separator| :doc:`Total value of orders <purchase_behavior_total_value_of_orders>`
 
 :doc:`Standard output <standard_output>`
 
@@ -220,11 +219,11 @@ Apply predictive analytics
    onetime_buyers
    paid_media
    people_based_measurement
-   purchase_behavior_first_order
+   purchase_behavior_first_purchase
    purchase_behavior_has_not_purchased
    purchase_behavior_has_purchased
    purchase_behavior_most_frequent_order
-   purchase_behavior_repeat_order
+   purchase_behavior_repeat_purchase
    purchase_behavior_total_value_of_orders
    recommended_audiences
    rfm

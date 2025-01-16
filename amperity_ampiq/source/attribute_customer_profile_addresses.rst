@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the collection of address attributes
+.. |what-choose| replace:: **address**, **city**, **state**, or **postal**
+.. |what-find| replace:: "address", "city", "state", or "postal"
 
 
 .. meta::
@@ -44,16 +47,14 @@ A customer's physical address includes the following:
 
 .. attribute-customer-profile-addresses-note-end
 
-.. attribute-customer-profile-addresses-access-start
-
-You can access address attributes directly from the **Segment Editor**. To add these attributes to your segment, click **Add criteria**, select the **Customer 360** table, select a combination of **Address**, **Address2**, **City**, **State**, and **Postal** attributes, apply a condition, and then specify a value.
-
-.. attribute-customer-profile-addresses-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-addresses-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_customer_profile_addresses.rst

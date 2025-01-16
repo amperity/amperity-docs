@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **digital channel** attribute
+.. |what-choose| replace:: **digital channel**
+.. |what-find| replace:: "digital channel"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Digital channels
    :start-after: .. term-digital-channel-start
    :end-before: .. term-digital-channel-end
 
-.. include:: ../../amperity_reference/source/attribute_channels_digital.rst
-   :start-after: .. attribute-channels-digital-start
-   :end-before: .. attribute-channels-digital-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-channels-digital-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_channels_digital.rst

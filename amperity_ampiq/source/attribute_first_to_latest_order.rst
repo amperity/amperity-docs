@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: first-to-latest order attribute
+.. |what-choose| replace:: **first-to-latest order**
+.. |what-find| replace:: "first to latest"
 
 
 .. meta::
@@ -23,14 +26,14 @@ First-to-latest order
    :start-after: .. term-first-to-latest-order-days-start
    :end-before: .. term-first-to-latest-order-days-end
 
-.. include:: ../../amperity_reference/source/attribute_first_to_latest_order.rst
-   :start-after: .. attribute-days-between-orders-first-to-latest-start
-   :end-before: .. attribute-days-between-orders-first-to-latest-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-first-to-latest-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_first_to_latest_order.rst

@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -51,22 +49,6 @@ Use in segments
    :start-after: .. attribute-predicted-transactions-segment-start
    :end-before: .. attribute-predicted-transactions-segment-end
 
-.. image:: ../../images/attribute-predicted-transactions.png
-   :width: 600 px
-   :alt: Choose the predicted probability of transactions attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_predicted_transactions.rst
-   :start-after: .. attribute-predicted-transactions-filters-start
-   :end-before: .. attribute-predicted-transactions-filters-end
-
-.. image:: ../../images/attribute-predicted-transactions-example.png
-   :width: 600 px
-   :alt: Find customers whose likelihood to purchase is greater than or equal to 35%.
-   :align: left
-   :class: no-scaled-link
-
 .. include:: ../../amperity_reference/source/attribute_predicted_transactions.rst
    :start-after: .. attribute-predicted-transactions-modeling-enabled-note-start
    :end-before: .. attribute-predicted-transactions-modeling-enabled-note-end
@@ -74,7 +56,7 @@ Use in segments
 
 .. _attribute-predicted-transactions-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_predicted_transactions.rst

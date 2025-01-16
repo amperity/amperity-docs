@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -45,22 +43,6 @@ Use in segments
    :start-after: .. attribute-predicted-lifecycle-status-segment-start
    :end-before: .. attribute-predicted-lifecycle-status-segment-end
 
-.. image:: ../../images/attribute-predicted-lifecycle-status.png
-   :width: 600 px
-   :alt: Choose the predicted lifecycle status attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_predicted_lifecycle_status.rst
-   :start-after: .. attribute-predicted-lifecycle-status-segment-list-options-start
-   :end-before: .. attribute-predicted-lifecycle-status-segment-list-options-end
-
-.. image:: ../../images/attribute-predicted-customer-lifecycle-status-is-in-list.png
-   :width: 600 px
-   :alt: The is in list condition for predicted lifecycle status.
-   :align: left
-   :class: no-scaled-link
-
 .. include:: ../../amperity_reference/source/attribute_predicted_lifecycle_status.rst
    :start-after: .. attribute-predicted-lifecycle-status-modeling-enabled-note-start
    :end-before: .. attribute-predicted-lifecycle-status-modeling-enabled-note-end
@@ -68,7 +50,7 @@ Use in segments
 
 .. _attribute-predicted-lifecycle-status-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_predicted_lifecycle_status.rst

@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -87,9 +85,3 @@ Customer ranking
 .. include:: ../../amperity_reference/source/model_product_affinity.rst
    :start-after: .. model-product-affinity-use-cases-customer-ranking-attribute-start
    :end-before: .. model-product-affinity-use-cases-customer-ranking-attribute-end
-
-.. image:: ../../images/attribute-customer-ranking.png
-   :width: 500 px
-   :alt: Ranking in the Predicted Affinity table.
-   :align: left
-   :class: no-scaled-link

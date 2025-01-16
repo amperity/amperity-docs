@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: store visits interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "stores"
 
 
 .. meta::
@@ -23,20 +26,14 @@ Store visit intervals
    :start-after: .. attribute-stores-visits-start
    :end-before: .. attribute-stores-visits-end
 
-
-.. _attribute-stores-visits-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_stores_visit_intervals.rst
-   :start-after: .. attribute-stores-visits-segment-start
-   :end-before: .. attribute-stores-visits-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-stores-visits-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_stores_visit_intervals.rst

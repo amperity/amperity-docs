@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -235,11 +233,11 @@ Purchase behaviors
 
 You can use any of the following purchase behaviors in your segments:
 
-* :doc:`First order <purchase_behavior_first_order>`
+* :doc:`First purchase <purchase_behavior_first_purchase>`
 * :doc:`Has not purchased <purchase_behavior_has_not_purchased>`
 * :doc:`Has purchased <purchase_behavior_has_purchased>`
 * :doc:`Most frequent order <purchase_behavior_most_frequent_order>`
-* :doc:`Repeat order <purchase_behavior_repeat_order>`
+* :doc:`Repeat purchase <purchase_behavior_repeat_purchase>`
 * :doc:`Total value of orders <purchase_behavior_total_value_of_orders>`
 
 .. note:: Your tenant must use Amperity standard field names, including for your product catalog, to use purchase behaviors in your segments.

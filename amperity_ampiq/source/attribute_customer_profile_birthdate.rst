@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **birthdate** attribute
+.. |what-choose| replace:: **birthdate**
+.. |what-find| replace:: "birthdate"
 
 
 .. meta::
@@ -23,16 +26,14 @@ Birthdates
    :start-after: .. term-birthdate-start
    :end-before: .. term-birthdate-end
 
-.. attribute-customer-profile-birthdate-start
-
-You can access birthdates directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Customer 360** table, select the **Birthdate** attribute, and then apply an condition.
-
-.. attribute-customer-profile-birthdate-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-birthdates-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_customer_profile_birthdate.rst

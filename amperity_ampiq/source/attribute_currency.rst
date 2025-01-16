@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: **currency** attribute
+.. |what-choose| replace:: **currency**
+.. |what-find| replace:: "currency"
 
 
 .. meta::
@@ -23,14 +26,14 @@ Currency
    :start-after: .. term-currency-start
    :end-before: .. term-currency-end
 
-.. include:: ../../amperity_reference/source/attribute_currency.rst
-   :start-after: .. attribute-currency-start
-   :end-before: .. attribute-currency-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-currency-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_currency.rst

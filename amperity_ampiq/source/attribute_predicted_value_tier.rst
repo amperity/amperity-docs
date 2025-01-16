@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -38,16 +36,6 @@ About predicted CLV attributes
    :end-before: .. attribute-predicted-value-tier-about-clv-example-end
 
 
-.. _attribute-predicted-value-tier-examples:
-
-Examples
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_predicted_value_tier.rst
-   :start-after: .. attribute-predicted-value-tier-examples-start
-   :end-before: .. attribute-predicted-value-tier-examples-end
-
-
 .. _attribute-predicted-value-tier-segment:
 
 Use in segments
@@ -57,22 +45,6 @@ Use in segments
    :start-after: .. attribute-predicted-value-tier-segment-start
    :end-before: .. attribute-predicted-value-tier-segment-end
 
-.. image:: ../../images/attribute-predicted-value-tier.png
-   :width: 600 px
-   :alt: Choose the predicted customer lifetime value tier attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_predicted_value_tier.rst
-   :start-after: .. attribute-predicted-value-tier-segment-list-options-start
-   :end-before: .. attribute-predicted-value-tier-segment-list-options-end
-
-.. image:: ../../images/attribute-predicted-value-tier-is-in-list.png
-   :width: 600 px
-   :alt: The is in list condition for predicted value tier.
-   :align: left
-   :class: no-scaled-link
-
 .. include:: ../../amperity_reference/source/attribute_predicted_value_tier.rst
    :start-after: .. attribute-predicted-value-tier-modeling-enabled-note-start
    :end-before: .. attribute-predicted-value-tier-modeling-enabled-note-end
@@ -80,9 +52,19 @@ Use in segments
 
 .. _attribute-predicted-value-tier-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_predicted_value_tier.rst
    :start-after: .. attribute-predicted-value-tier-conditions-start
    :end-before: .. attribute-predicted-value-tier-conditions-end
+
+
+.. _attribute-predicted-value-tier-examples:
+
+Examples
+==================================================
+
+.. include:: ../../amperity_reference/source/attribute_predicted_value_tier.rst
+   :start-after: .. attribute-predicted-value-tier-examples-start
+   :end-before: .. attribute-predicted-value-tier-examples-end

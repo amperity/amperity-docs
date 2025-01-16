@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
 
 
 .. meta::
@@ -51,22 +49,6 @@ Use in segments
    :start-after: .. attribute-predicted-average-order-revenue-segment-start
    :end-before: .. attribute-predicted-average-order-revenue-segment-end
 
-.. image:: ../../images/attribute-predicted-average-order-value.png
-   :width: 600 px
-   :alt: Choose the predicted order frequency attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../amperity_reference/source/attribute_predicted_average_order_revenue.rst
-   :start-after: .. attribute-predicted-average-order-revenue-filters-start
-   :end-before: .. attribute-predicted-average-order-revenue-filters-end
-
-.. image:: ../../images/attribute-predicted-average-order-value-example.png
-   :width: 600 px
-   :alt: Find customers for whom average order value is predicted to be greater than $200.
-   :align: left
-   :class: no-scaled-link
-
 .. include:: ../../amperity_reference/source/attribute_predicted_average_order_revenue.rst
    :start-after: .. attribute-predicted-average-order-revenue-modeling-enabled-note-start
    :end-before: .. attribute-predicted-average-order-revenue-modeling-enabled-note-end
@@ -74,7 +56,7 @@ Use in segments
 
 .. _attribute-predicted-average-order-revenue-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_predicted_average_order_revenue.rst

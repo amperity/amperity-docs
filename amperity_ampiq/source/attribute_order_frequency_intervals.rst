@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: order frequency interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "order frequency"
 
 
 .. meta::
@@ -23,20 +26,14 @@ Order frequency intervals
    :start-after: .. attribute-order-frequency-intervals-start
    :end-before: .. attribute-order-frequency-intervals-end
 
-
-.. _attribute-order-frequency-intervals-segment:
-
-Use in segments
-==================================================
-
-.. include:: ../../amperity_reference/source/attribute_order_frequency_intervals.rst
-   :start-after: .. attribute-order-frequency-intervals-segment-start
-   :end-before: .. attribute-order-frequency-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-order-frequency-interval-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_order_frequency_intervals.rst

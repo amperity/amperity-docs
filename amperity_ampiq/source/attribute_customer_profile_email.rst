@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/ampiq/
-.. 
+
+
+.. |what-access| replace:: the **email** attribute
+.. |what-choose| replace:: **email**
+.. |what-find| replace:: "email"
 
 
 .. meta::
@@ -23,16 +26,14 @@ Email addresses
    :start-after: .. term-email-start
    :end-before: .. term-email-end
 
-.. attribute-customer-profile-email-start
-
-You can access email addresses directly from the **Segment Editor**. To add this attribute to your segment, click **Add criteria**, select the **Customer 360** table, select the **Email** attribute, and then apply an condition.
-
-.. attribute-customer-profile-email-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-customer-profile-email-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_customer_profile_email.rst
