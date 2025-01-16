@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: The Trade Desk Offline Events
 .. |what-send| replace:: offline events

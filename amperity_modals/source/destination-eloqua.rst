@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Oracle Eloqua
 .. |audience-primary-key| replace:: "email"

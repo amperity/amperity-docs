@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: LiveRamp
 .. |file-format| replace:: CSV, TSV, or PSV

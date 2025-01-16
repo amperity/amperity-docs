@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: ActiveCampaign
 .. |audience-primary-key| replace:: "email"

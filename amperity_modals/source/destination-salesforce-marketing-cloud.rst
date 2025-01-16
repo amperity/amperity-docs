@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Salesforce Marketing Cloud
 .. |file-format| replace:: CSV

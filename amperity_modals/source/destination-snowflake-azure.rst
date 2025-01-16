@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Snowflake (Azure)
 .. |audience-primary-key| replace:: "email"

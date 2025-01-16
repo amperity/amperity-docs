@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Microsoft Dataverse
 .. |what-send| replace:: table rows that match a table schema

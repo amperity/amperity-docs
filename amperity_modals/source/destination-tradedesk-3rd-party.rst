@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: The Trade Desk 3rd Party
 .. |what-send| replace:: email addresses or UID2 tokens

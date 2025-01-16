@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Criteo Retail Media
 .. |audience-primary-key| replace:: "Email"

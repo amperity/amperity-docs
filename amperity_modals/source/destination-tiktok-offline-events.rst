@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: TikTok Ads Offline Events
 .. |audience-primary-key| replace:: "email"
