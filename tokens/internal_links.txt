@@ -71,34 +71,34 @@
    <a href="https://docs.amperity.com/datagrid/semantics.html#apply-ordinals-to-address-groups">ordinals are used with the address semantic tag</a>
 
 
-.. |attribute_compound_first_order| raw:: html
+.. |attribute_purchase_behavior_first_purchase| raw:: html
 
-   <a href="https://docs.amperity.com/reference/attribute_compound_first_order.html">First Order</a>
-
-
-.. |attribute_compound_has_not_purchased| raw:: html
-
-   <a href="https://docs.amperity.com/reference/attribute_compound_has_not_purchased.html">Has Not Purchased</a>
+   <a href="https://docs.amperity.com/reference/attribute_purchase_behavior_first_purchase.html">First purchase</a>
 
 
-.. |attribute_compound_has_purchased| raw:: html
+.. |attribute_purchase_behavior_has_not_purchased| raw:: html
 
-   <a href="https://docs.amperity.com/reference/attribute_compound_has_purchased.html">Has Purchased</a>
-
-
-.. |attribute_compound_most_frequent_order| raw:: html
-
-   <a href="https://docs.amperity.com/reference/attribute_compound_most_frequent_order.html">Most Frequent Order</a>
+   <a href="https://docs.amperity.com/reference/attribute_purchase_behavior_has_not_purchased.html">Has not purchased</a>
 
 
-.. |attribute_compound_repeat_order| raw:: html
+.. |attribute_purchase_behavior_has_purchased| raw:: html
 
-   <a href="https://docs.amperity.com/reference/attribute_compound_repeat_order.html">Repeat Order</a>
+   <a href="https://docs.amperity.com/reference/attribute_purchase_behavior_has_purchased.html">Has purchased</a>
 
 
-.. |attribute_compound_total_value_of_orders| raw:: html
+.. |attribute_purchase_behavior_most_frequent_order| raw:: html
 
-   <a href="https://docs.amperity.com/reference/attribute_compound_total_value_of_orders.html">Total Value of Orders</a>
+   <a href="https://docs.amperity.com/reference/attribute_purchase_behavior_most_frequent_order.html">Most frequent order</a>
+
+
+.. |attribute_purchase_behavior_repeat_purchase| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_purchase_behavior_repeat_purchase.html">Repeat purchase</a>
+
+
+.. |attribute_purchase_behavior_total_value_of_orders| raw:: html
+
+   <a href="https://docs.amperity.com/reference/attribute_purchase_behavior_total_value_of_orders.html">Total value of orders</a>
 
 
 .. |blocklist_bad_values| raw:: html
