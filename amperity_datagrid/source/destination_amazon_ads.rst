@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Amazon Ads
 .. |destination-api| replace:: Amazon Ads API

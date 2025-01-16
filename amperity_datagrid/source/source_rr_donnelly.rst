@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: RR Donnelly
 .. |feed-name| replace:: CustomerRecords

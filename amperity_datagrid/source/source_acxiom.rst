@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
 
 
 .. |source-name| replace:: Acxiom

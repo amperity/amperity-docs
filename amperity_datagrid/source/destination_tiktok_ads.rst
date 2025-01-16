@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: TikTok Ads Manager
 .. |destination-api| replace:: Segment API

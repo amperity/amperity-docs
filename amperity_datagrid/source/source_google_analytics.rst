@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Google Analytics
 .. |plugin-name| replace:: Google Analytics 4

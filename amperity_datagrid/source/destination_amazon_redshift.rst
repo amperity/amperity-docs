@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Amazon Redshift
 .. |plugin-namex| replace:: Amazon Redshift

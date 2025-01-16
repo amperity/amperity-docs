@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Epsilon Targeting
 .. |feed-name| replace:: CustomerRecords

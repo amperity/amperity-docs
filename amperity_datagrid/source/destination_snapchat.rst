@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Snapchat
 .. |destination-api| replace:: Snapchat Marketing API

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Meta Ads Manager
 .. |destination-api| replace:: Facebook Ads API

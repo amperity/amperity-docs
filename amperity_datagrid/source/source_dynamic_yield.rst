@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Dynamic Yield
 .. |plugin-name| replace:: Amazon S3

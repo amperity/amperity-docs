@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: Epsilon Conversant
 .. |feed-name| replace:: CustomerRecords

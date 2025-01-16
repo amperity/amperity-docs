@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-..
+
 
 .. |destination-name| replace:: ActiveCampaign
 .. |destination-api| replace:: ActiveCampaign API

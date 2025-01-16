@@ -1,6 +1,4 @@
-.. 
-.. https://docs.amperity.com/support/index.html
-..
+.. /downloads/markdown/
 
 
 ==================================================
@@ -88,5 +86,6 @@ Site Index
    destination-yahoo-dsp
    destination-zendesk
    openapi
+   quickstart-pk
    semantics
    stitch_benchmarks

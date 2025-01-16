@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |source-name| replace:: PowerReviews
 .. |feed-name| replace:: CustomerRecords

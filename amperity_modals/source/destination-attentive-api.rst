@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Attentive
 .. |audience-primary-key| replace:: "email" or "phone"

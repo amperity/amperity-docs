@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/datagrid/
-.. 
+
 
 .. |destination-name| replace:: Adobe Campaign
 .. |plugin-name| replace:: Adobe Campaign
