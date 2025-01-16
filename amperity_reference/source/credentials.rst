@@ -1,12 +1,10 @@
-.. 
 .. https://docs.amperity.com/reference/
-..
+
 
 .. |destination-name| replace:: the name of application for which credentials are configired
 .. |credential-type| replace:: selected
 .. |where-send| replace:: the application for which credentials are being configured
 .. |sftp-hostname| replace:: "sftp.acme.com"
-
 
 
 .. meta::

@@ -1,7 +1,17 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
+
+.. meta::
+    :description lang=en:
+        Use sandboxes to safely make changes to your production tenant.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Use sandboxes to safely make changes to your production tenant.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        About sandboxes
 
 ==================================================
 About sandboxes

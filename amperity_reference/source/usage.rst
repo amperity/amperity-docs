@@ -1,6 +1,17 @@
-.. 
 .. https://docs.amperity.com/reference/
-..
+
+
+.. meta::
+    :description lang=en:
+        The Usage dashboard shows usage within Amperity across a broad range of features.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        The Usage dashboard shows usage within Amperity across a broad range of features.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Usage dashboard
 
 ==================================================
 About the Usage dashboard
