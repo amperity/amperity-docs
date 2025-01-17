@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Attentive
 .. |what-send| replace:: audience segments
@@ -10,6 +9,7 @@
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
 .. |allow-for-what| replace:: audience segments
 .. |allow-for-duration| replace:: up to 24 hours
+
 
 .. meta::
     :description lang=en:

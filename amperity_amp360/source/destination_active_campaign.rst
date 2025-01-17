@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: ActiveCampaign
 .. |what-send| replace:: audience lists
 .. |allow-for-what| replace:: audience lists
 .. |allow-for-duration| replace:: up to 24 hours
+
 
 .. meta::
     :description lang=en:

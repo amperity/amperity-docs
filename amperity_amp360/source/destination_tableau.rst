@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Tableau
 .. |what-send| replace:: data
+
 
 .. meta::
     :description lang=en:

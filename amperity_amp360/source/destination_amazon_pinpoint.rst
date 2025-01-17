@@ -1,10 +1,10 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Amazon Pinpoint
 .. |what-send| replace:: phone numbers and SMS message strings
 .. |lambda-validate| replace:: phone numbers
+
 
 .. meta::
     :description lang=en:

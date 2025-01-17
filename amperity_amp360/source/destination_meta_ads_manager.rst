@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Meta Ads Manager
 .. |what-send| replace:: customer data
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
+
 
 .. meta::
     :description lang=en:

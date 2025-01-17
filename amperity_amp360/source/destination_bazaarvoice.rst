@@ -1,9 +1,5 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
 
-.. https://knowledge.bazaarvoice.com/wp-content/conversations-prr/en_US/feed/product_feeds.html
-.. 
 
 .. |destination-name| replace:: Bazaarvoice
 .. |what-send| replace:: CSV, TSV, or PSV files
@@ -11,6 +7,7 @@
 .. |sftp-hostname| replace:: **sftp.bazaarvoice.com**
 .. |file-format| replace:: CSV, TSV, or PSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
+
 
 .. meta::
     :description lang=en:

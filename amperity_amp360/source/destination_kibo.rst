@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Kibo
 .. |what-send| replace:: CSV files
@@ -8,6 +7,7 @@
 .. |sftp-hostname| replace:: **sftp.monetate.net**
 .. |file-format| replace:: CSV or TSV
 .. |encoding-method| replace:: Encoding method options include "Zip" or "GZip".
+
 
 .. meta::
     :description lang=en:

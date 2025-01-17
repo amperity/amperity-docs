@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: LiveRamp
 .. |what-send| replace:: CSV, TSV, or PSV files
@@ -8,6 +7,7 @@
 .. |sftp-hostname| replace:: **files.liveramp.com** or **sftp.liveramp.com**
 .. |file-format| replace:: CSV, TSV, or PSV
 .. |encoding-method| replace:: "GZip".
+
 
 .. meta::
     :description lang=en:

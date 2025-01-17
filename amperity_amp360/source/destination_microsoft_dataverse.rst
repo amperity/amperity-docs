@@ -1,10 +1,10 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Microsoft Dataverse
 .. |what-send| replace:: table rows that match a table schema
 .. |lambda-validate| replace:: validates that rows match the table schema
+
 
 .. meta::
     :description lang=en:

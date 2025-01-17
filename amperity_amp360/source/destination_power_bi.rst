@@ -1,10 +1,10 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Microsoft Power BI
 .. |plugin-name| replace:: Microsoft Power BI
 .. |what-send| replace:: data
+
 
 .. meta::
     :description lang=en:

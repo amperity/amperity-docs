@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Salesforce Marketing Cloud
 .. |what-send| replace:: contact data
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
+
 
 .. meta::
     :description lang=en:

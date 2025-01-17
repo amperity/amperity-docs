@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Azure Blob Storage
 .. |what-send| replace:: files
+
 
 .. meta::
     :description lang=en:

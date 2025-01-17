@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
 
 
 .. meta::

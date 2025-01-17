@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Persado
 .. |what-send| replace:: marketing campaign engagement and/or segment data files
@@ -8,6 +7,7 @@
 .. |sftp-hostname| replace:: **psftp.persado.com**
 .. |file-format| replace:: CSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
+
 
 .. meta::
     :description lang=en:

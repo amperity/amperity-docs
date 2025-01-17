@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Criteo
 .. |what-send| replace:: audiences
+
 
 .. meta::
     :description lang=en:

@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Adobe Marketo
 .. |what-send| replace:: static audience lists
+
 
 .. meta::
     :description lang=en:

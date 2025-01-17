@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Mailchimp
 .. |what-send| replace:: audience lists
+
 
 .. meta::
     :description lang=en:
