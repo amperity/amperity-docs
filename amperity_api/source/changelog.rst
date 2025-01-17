@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/api/
-..
+
 
 .. meta::
     :description lang=en:
