@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Klaviyo
 .. |what-send| replace:: CSV files
+
 
 .. meta::
     :description lang=en:

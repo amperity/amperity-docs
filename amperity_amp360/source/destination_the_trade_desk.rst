@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: The Trade Desk
 .. |what-send| replace:: email address lists

@@ -1,10 +1,10 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Throtle
 .. |plugin-name| replace:: Amazon S3
 .. |what-send| replace:: customer profile data
+
 
 .. meta::
     :description lang=en:

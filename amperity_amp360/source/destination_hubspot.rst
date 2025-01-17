@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: HubSpot
 .. |what-send| replace:: contact list updates
+
 
 .. meta::
     :description lang=en:

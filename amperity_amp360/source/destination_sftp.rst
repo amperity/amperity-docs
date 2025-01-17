@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: SFTP
 .. |what-send| replace:: files
@@ -8,6 +7,7 @@
 .. |sftp-hostname| replace:: **hostname**
 .. |file-format| replace:: File format options include Apache Parquet (recommended when supported by the downstream workflow), CSV, TSV, and PSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
+
 
 .. meta::
     :description lang=en:

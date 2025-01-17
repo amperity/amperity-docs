@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Sailthru
 .. |what-send| replace:: email address lists
+
 
 .. meta::
     :description lang=en:

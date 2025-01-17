@@ -1,10 +1,10 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Domo
 .. |what-send| replace:: data
 .. |allow-for-duration| replace:: up to one hour
+
 
 .. meta::
     :description lang=en:

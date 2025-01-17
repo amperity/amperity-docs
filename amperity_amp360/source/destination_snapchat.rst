@@ -1,9 +1,9 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Snapchat
 .. |what-send| replace:: email addresses, phone numbers, and mobile advertiser IDs
+
 
 .. meta::
     :description lang=en:

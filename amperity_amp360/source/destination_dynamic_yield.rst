@@ -1,10 +1,10 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Dynamic Yield
 .. |plugin-name| replace:: Amazon S3
 .. |what-send| replace:: CSV files
+
 
 .. meta::
     :description lang=en:

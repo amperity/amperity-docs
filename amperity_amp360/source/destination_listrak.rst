@@ -1,11 +1,11 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: Listrak
 .. |what-send| replace:: email address and SMS lists
 .. |credential-typex| replace:: **listrak**
 .. |credential-detailsx| replace:: the Listrak client ID and secret
+
 
 .. meta::
     :description lang=en:

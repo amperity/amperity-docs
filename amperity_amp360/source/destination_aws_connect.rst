@@ -1,10 +1,10 @@
-.. 
 .. https://docs.amperity.com/amp360/
-.. 
+
 
 .. |destination-name| replace:: AWS Connect
 .. |what-send| replace:: customer profiles
 .. |lambda-validate| replace:: phone numbers
+
 
 .. meta::
     :description lang=en:

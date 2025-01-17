@@ -3943,8 +3943,9 @@ div.body a.card:hover {
   cursor: pointer;
   width: auto;
   border: 0;
-  font-size: 14px;
-  background: #0c0c0c;
+  font-size: 15px;
+  font-weight: 700;
+  background: #09717f;
   color: #ffffff;
   padding: 10px 20px;
   margin: 0;
@@ -4070,13 +4071,13 @@ div.body a.card:hover {
   padding: 10px 20px 15px;
   background: #ffffff;
   margin: 0;
-  border: 1px solid #c2cbd1;
+  border: 1px solid #e8edef;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -moz-box-shadow: 2px 2px 2px 0 #c2cbd1;
-  -webkit-box-shadow: 2px 2px 2px 0 #c2cbd1;
-  box-shadow: 2px 2px 2px 0 #c2cbd1; }
+  -moz-box-shadow: 2px 2px 2px 0 #e8edef;
+  -webkit-box-shadow: 2px 2px 2px 0 #e8edef;
+  box-shadow: 2px 2px 2px 0 #e8edef; }
 
 #doorbell .form-control {
   display: block;
@@ -4085,7 +4086,7 @@ div.body a.card:hover {
   line-height: 1.42857143;
   color: #0c0c0c;
   background: #ffffff;
-  border: 1px solid #459aa8;
+  border: 1px solid #e8edef;
   border-radius: 4px; }
 
 #doorbell.doorbell-inline form {
@@ -4169,7 +4170,7 @@ div.body a.card:hover {
   vertical-align: middle;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-  border: 1px solid #0c0c0c;
+  border: 1px solid #09717f;
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
@@ -4180,7 +4181,7 @@ div.body a.card:hover {
   -ms-user-select: none;
   user-select: none;
   color: #ffffff;
-  background: #0c0c0c; }
+  background: #09717f; }
 
 #doorbell #doorbell-powered-by {
   margin-top: 5px;
@@ -4205,10 +4206,10 @@ div.body a.card:hover {
 
 #doorbell #doorbell-add-attachments-label-button {
   font-weight: normal;
-  border: 1px solid #c2cbd1;
+  border: 1px solid #e8edef;
   display: block;
   width: 96%;
-  color: #c2cbd1;
+  color: #e8edef;
   padding: 6px 2%;
   margin-bottom: 10px;
   cursor: pointer;
@@ -4239,7 +4240,7 @@ div.body a.card:hover {
   pointer-events: none; }
 
 #doorbell #doorbell-add-attachments-label-button:hover {
-  color: #c2cbd1; }
+  color: #e8edef; }
 
 #doorbell .captcha-container {
   margin-bottom: 10px; }
