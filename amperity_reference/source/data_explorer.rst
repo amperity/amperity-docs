@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About Data Explorer
+        About the Data Explorer
 
 ==================================================
-About Data Explorer
+About the Data Explorer
 ==================================================
 
 .. include:: ../../shared/terms.rst
