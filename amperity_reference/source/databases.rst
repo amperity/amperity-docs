@@ -1827,18 +1827,6 @@ A full-screen mode for the data explorer is available from most areas within Amp
 .. databases-database-howto-explore-steps-end
 
 
-.. _databases-database-howto-export-table:
-
-Export database table
---------------------------------------------------
-
-.. databases-database-howto-export-table-start
-
-The process for exporting tables is the same as :ref:`exporting databases <databases-database-howto-export-database>`.
-
-.. databases-database-howto-export-table-end
-
-
 .. _databases-database-howto-explore-data-lineage:
 
 Explore data lineage
@@ -1988,6 +1976,18 @@ Export database
 A database may be configured to :ref:`export one (or more) tables (or even the entire database) <data-exports-add>` from Amperity. Each database export must be assigned a unique name, and then is :ref:`configured to select one (or more) tables <data-exports-add-tables>` to be included in the export. A database export must be :ref:`associated with a configured destination and must be added to an orchestration <data-exports-add-to-orchestration>`.
 
 .. databases-database-howto-export-database-end
+
+
+.. _databases-database-howto-export-table:
+
+Export database table
+--------------------------------------------------
+
+.. databases-database-howto-export-table-start
+
+The process for exporting tables is the same as :ref:`exporting databases <databases-database-howto-export-database>`.
+
+.. databases-database-howto-export-table-end
 
 
 .. _databases-database-howto-hide-table:
