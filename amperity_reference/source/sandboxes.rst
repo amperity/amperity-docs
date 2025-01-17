@@ -237,7 +237,7 @@ Sandbox validations are only available in a sandbox. Amperity recommends that al
 The following table describes examples of errors and warnings that may be shown by sandbox validations.
 
 .. list-table::
-   :widths: 25 25 50
+   :widths: 16 16 68
    :header-rows: 1
 
    * - Component
