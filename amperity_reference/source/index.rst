@@ -529,6 +529,7 @@ Workflows
    courier_groups
    couriers
    credentials
+   data_explorer
    data_exports
    data_lineage
    data_tables
