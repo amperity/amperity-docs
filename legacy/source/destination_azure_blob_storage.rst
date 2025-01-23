@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
 .. |destination-name| replace:: Azure Blob Storage
@@ -17,18 +17,6 @@
 .. |sendto-link| replace:: |sendto_azure_blob_storage|
 .. |channel-link| replace:: |campaign_azure_blob_storage|
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
 Send data to Azure Blob Storage
@@ -89,7 +77,7 @@ Amperity prefers to send data to customer-managed cloud storage. This approach e
 
 Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
 
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
+.. note:: If you have already configured Azure Data Share for an Azure Blob Storage data source you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
 
 .. destination-azure-blob-storage-azure-data-share-end
 

@@ -1,0 +1,549 @@
+{% set active_product = active_product|default('Legacy') -%}
+{% set active_page_name = active_page_name|default('Legacy') -%}
+{% set active_page_icon = active_page_icon|default('<i class="far fa-circle fa-fw icon-left">') -%}
+{% set active_search_path = active_search_path|default('/search.html') -%}
+<!--{% set active_version = active_version|default('Latest') -%}-->
+{% set defaultNavItems = [
+
+  {
+    "title": "Legacy topics",
+    "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
+    "subItems": [
+      {
+        "title": "About legacy topics",
+        "hasSubItems": false,
+        "url": "/legacy/start_here.html"
+      },
+    ]
+  },
+
+
+  {
+    "title": "Sources",
+    "iconClass": "fas fa-layer-plus fa-fw",
+    "subItems": [
+      {
+        "title": "Amazon S3",
+        "hasSubItems": false,
+        "url": "/datagrid/source_amazon_s3.html"
+      },
+    ]
+  },
+
+
+  {
+    "title": "Destinations",
+    "iconClass": "fas fa-adjust fa-fw",
+    "subItems": [
+      {
+        "title": "Any SFTP site",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_sftp.html"
+      },
+      {
+        "title": "ActiveCampaign",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_active_campaign.html"
+      },
+      {
+        "title": "Acxiom",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_acxiom.html"
+      },
+      {
+        "title": "Adobe",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Adobe Campaign",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_campaign.html"
+          },
+          {
+            "title": "Adobe Customer Attributes",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_customer_attributes.html"
+          },
+          {
+            "title": "Adobe Experience Platform",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_aep.html"
+          },
+          {
+            "title": "Adobe Marketo",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_adobe_marketo.html"
+          },
+        ]
+      },
+      {
+        "title": "Airship",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_airship.html"
+      },
+      {
+        "title": "Amazon Ads",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_amazon_ads.html"
+      },
+      {
+        "title": "Amazon S3",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_amazon_s3.html"
+      },
+      {
+        "title": "Attentive Mobile",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Attentive Mobile",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_attentive_mobile.html"
+          },
+          {
+            "title": "Audience segments",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_attentive_mobile.html#audience-segments"
+          },
+          {
+            "title": "Custom attributes",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_attentive_mobile.html#custom-attributes-api"
+          },
+        ]
+      },
+      {
+        "title": "Azure Blob Storage",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_azure_blob_storage.html"
+      },
+      {
+        "title": "Bazaarvoice",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_bazaarvoice.html"
+      },
+      {
+        "title": "Bluecore",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_bluecore.html"
+      },
+      {
+        "title": "Braze",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_braze.html"
+      },
+      {
+        "title": "Cordial",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_cordial.html"
+      },
+      {
+        "title": "Criteo",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Criteo",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_criteo.html"
+          },
+          {
+            "title": "Criteo Retail Media",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_criteo_retail_media.html"
+          },
+        ]
+      },
+      {
+        "title": "DV360",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_dv360.html"
+      },
+      {
+        "title": "Dynamics 365 Marketing",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_dynamics_365_marketing.html"
+      },
+      {
+        "title": "Experian",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_experian.html"
+      },
+      {
+        "title": "Google",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Google Ads",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_google_ads.html"
+          },
+          {
+            "title": "Google Cloud Storage",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_google_cloud_storage.html"
+          },
+        ]
+      },
+      {
+        "title": "HubSpot",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_hubspot.html"
+      },
+      {
+        "title": "Infutor",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_infutor.html"
+      },
+      {
+        "title": "Kibo",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_kibo.html"
+      },
+      {
+        "title": "Klaviyo",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_klaviyo.html"
+      },
+      {
+        "title": "Koupon Media",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_koupon_media.html"
+      },
+      {
+        "title": "Listrak",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_listrak.html"
+      },
+      {
+        "title": "LiveRamp",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_liveramp.html"
+      },
+      {
+        "title": "Mailchimp",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_mailchimp.html"
+      },
+      {
+        "title": "Meta Ads Manager",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About Meta Ads Manager",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_meta_ads_manager.html"
+          },
+          {
+            "title": "Custom audiences",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_meta_ads_manager.html#custom-audiences"
+          },
+          {
+            "title": "Offline events",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_meta_ads_manager.html#offline-events"
+          },
+        ]
+      },
+      {
+        "title": "Microsoft",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Microsoft Advertising",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_microsoft_ads.html"
+          },
+          {
+            "title": "Microsoft Dataverse",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_microsoft_dataverse.html"
+          },
+          {
+            "title": "Microsoft Dynamics",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_microsoft_dynamics.html"
+          },
+          {
+            "title": "Microsoft PowerBI",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_power_bi.html"
+          },
+        ]
+      },
+      {
+        "title": "Monetate",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_monetate.html"
+      },
+      {
+        "title": "Neustar",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_neustar.html"
+      },
+      {
+        "title": "Oracle",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Data Cloud",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_oracle_data_cloud.html"
+          },
+          {
+            "title": "Eloqua",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_oracle_eloqua.html"
+          },
+          {
+            "title": "Responsys",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_oracle_responsys.html"
+          },
+        ]
+      },
+      {
+        "title": "PebblePost",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_pebblepost.html"
+      },
+      {
+        "title": "Persado",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_persado.html"
+      },
+      {
+        "title": "Pinterest",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_pinterest.html"
+      },
+      {
+        "title": "PowerReviews",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_powerreviews.html"
+      },
+      {
+        "title": "Sailthru",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_sailthru.html"
+      },
+      {
+        "title": "Salesforce",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Marketing Cloud",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_salesforce_marketing_cloud.html"
+          },
+          {
+            "title": "Sales Cloud",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_salesforce_sales_cloud.html"
+          },
+        ]
+      },
+      {
+        "title": "Snapchat",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_snapchat.html"
+      },
+      {
+        "title": "Snowflake",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "... on Amazon AWS",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_snowflake_aws.html"
+          },
+          {
+            "title": "... on Microsoft Azure",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_snowflake_azure.html"
+          },
+        ]
+      },
+      {
+        "title": "The Trade Desk",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About The Trade Desk",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_the_trade_desk.html"
+          },
+          {
+            "title": "Custom audiences",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_the_trade_desk.html#custom-audiences"
+          },
+          {
+            "title": "Offline events",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_the_trade_desk.html#offline-events"
+          },
+        ]
+      },
+      {
+        "title": "TikTok Ads Manager",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About TikTok Ads Manager",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_tiktok_ads.html"
+          },
+          {
+            "title": "Custom audiences",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_tiktok_ads.html#custom-audiences"
+          },
+          {
+            "title": "Offline events",
+            "hasSubItems": false,
+            "url": "/datagrid/destination_tiktok_ads.html#offline-events"
+          },
+        ]
+      },
+      {
+        "title": "Vibes",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_vibes.html"
+      },
+      {
+        "title": "Walmart DSP",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_walmart_dsp.html"
+      },
+      {
+        "title": "Webhook",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_webhook.html"
+      },
+      {
+        "title": "Yahoo DSL",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_yahoo_dsp.html"
+      },
+      {
+        "title": "Zendesk",
+        "hasSubItems": false,
+        "url": "/datagrid/destination_zendesk.html"
+      },
+    ]
+  },
+
+] -%}
+
+{% set navItems = navItems|default(defaultNavItems) -%}
+<nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+
+    {% block leftnav %}
+    {%- for item in navItems %}
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="{{ item.title }}">
+
+       {%- if item.image %}
+
+        <img class="icon-left" src="./_static/{{ item.image }}"></img> {{ item.title }}
+
+       {%- else %}
+
+        <i class="fa {{ item.iconClass }} icon-left"></i> {{ item.title }}
+
+       {%- endif %}
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items">
+
+        {%- for subItem in item.subItems %}
+        {%- if subItem.hasSubItems %}
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="{{ subItem.title }}">
+            {{ subItem.title }}
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2">
+
+            {%- for subItem2 in subItem.subItems %}
+            {%- if subItem2.hasSubItems %}
+
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                {%- for subItem3 in subItem2.subItems %}
+
+                <li>
+                  <a class="nav-docs-link" href="{{ subItem3.url }}" title="{{ subItem3.title }}">
+                    {{ subItem3.title }}
+                  </a>
+                </li>
+
+                {%- endfor %}
+
+              </ul>
+            </li>
+
+            {%- else %}
+
+            <li>
+              <a class="nav-docs-link" href="{{ subItem2.url }}" title="{{ subItem2.title }}">
+                {{ subItem2.title }}
+              </a>
+            </li>
+
+            {%- endif %}
+            {%- endfor %}
+
+          </ul>
+        
+        </li>
+
+        {%- else %}
+
+        <li>
+          <a class="nav-docs-link" href="{{ subItem.url }}" title="{{ subItem.title }}">
+            {{ subItem.title }}
+          </a>
+        </li>
+
+        {% endif %}
+        {%- endfor %}
+
+      </ul>
+    </li>
+    {%- endfor %}
+    {% endblock %}
+
+    <li class="main-item dark-item">
+      <a href="https://help.amperity.com"><i class="fas fa-life-ring fa-fw icon-left"></i>Help Center</a>
+    </li>
+
+    <li class="main-item dark-item">
+      <a href="https://learn.amperity.com"><i class="fas fa-graduation-cap fa-fw icon-left"></i>Learning Lab</a>
+    </li>
+
+    <!--<li class="main-item dark-item">
+      <a href="https://docs.amperity.com/" target="_blank"><i class="fas fa-pen-to-square fa-fw icon-left"></i>Contribute to docs</a>
+    </li>-->
+
+    <li class="main-item dark-item">
+      <a href="https://status.amperity.com/" target="_blank"><i class="fas fa-wave-pulse fa-fw icon-left"></i>System Status</a>
+    </li>
+
+    <li class="main-item dark-item">
+      <a href="https://www.amperity.com" target="_blank"><i class="fa regular fa-house fa-fw icon-left"></i>Amperity.com</a>
+    </li>
+
+  </ul>
+</nav>

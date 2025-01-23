@@ -1,135 +1,132 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
-.. |destination-name| replace:: Azure Blob Storage
-.. |plugin-name| replace:: Azure Blob Storage
-.. |what-send| replace:: files
+.. |destination-name| replace:: ActiveCampaign
+.. |destination-api| replace:: ActiveCampaign API
+.. |plugin-name| replace:: ActiveCampaign
+.. |what-send| replace:: audience lists
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "az"
-.. |azure-container-name| replace:: "Blob Storage"
-.. |azure-blob-prefix| replace:: "upload"
-.. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
+.. |filter-the-list| replace:: "act"
+.. |credential-type| replace:: active-campaign
+.. |credential-details| replace:: the ActiveCampaign API key and URL
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_azure_blob_storage|
-.. |channel-link| replace:: |campaign_azure_blob_storage|
+.. |sendto-link| replace:: |sendto_active_campaign|
+.. |channel-link| replace:: |campaign_active_campaign|
+.. |allow-for-what| replace:: audience lists
+.. |allow-for-duration| replace:: up to 24 hours
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
-Send data to Azure Blob Storage
+Send data to ActiveCampaign
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-blob-storage-start
-   :end-before: .. term-azure-blob-storage-end
+   :start-after: .. term-active-campaign-start
+   :end-before: .. term-active-campaign-end
 
-.. destination-azure-blob-storage-important-start
+.. destination-active-campaign-start
 
-.. important:: Use this destination to send data from Amperity to Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
+Use Amperity to manage audience lists in |destination-name|.
 
-.. destination-azure-blob-storage-important-end
+.. destination-active-campaign-end
 
-.. destination-azure-blob-storage-steps-to-send-start
+.. destination-active-campaign-api-note-start
+
+.. note:: This destination uses the `Active Campaign REST API <https://developers.activecampaign.com/reference/url>`__ |ext_link|.
+
+   .. include:: ../../shared/destinations.rst
+      :start-after: .. destinations-add-destinations-intro-allow-for-start
+      :end-before: .. destinations-add-destinations-intro-allow-for-end
+
+.. destination-active-campaign-api-note-end
+
+.. destination-active-campaign-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-azure-blob-storage-get-details>`
-#. :ref:`Add destination <destination-azure-blob-storage-add-destination>`
-#. :ref:`Add data template <destination-azure-blob-storage-add-data-template>`
+#. :ref:`Get details <destination-active-campaign-get-details>`
+#. :ref:`Add destination <destination-active-campaign-add-destination>`
+#. :ref:`Add data template <destination-active-campaign-add-data-template>`
 
-.. destination-azure-blob-storage-steps-to-send-end
+.. destination-active-campaign-steps-to-send-end
 
 
-.. _destination-azure-blob-storage-get-details:
+.. _destination-active-campaign-get-details:
 
 Get details
 ==================================================
 
-.. destination-amazon-s3-get-details-start
-
-Amperity can be configured to send data to |destination-name|. This may be done using :ref:`Azure Data Share (recommended) <destination-azure-blob-storage-azure-data-share>` or by using :ref:`Azure credentials <destination-azure-blob-storage-credentials>`.
-
-.. destination-amazon-s3-get-details-end
-
-
-.. _destination-azure-blob-storage-azure-data-share:
-
-Use Azure Data Share
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-data-share-start
-   :end-before: .. term-azure-data-share-end
-
-.. destination-azure-blob-storage-azure-data-share-start
-
-Amperity prefers to send data to customer-managed cloud storage. This approach ensures that customers can:
-
-* Use security policies managed in Azure Data Share to manage access to data
-* Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
-* Directly troubleshoot incomplete or missing files
-
-Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
-
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
-
-.. destination-azure-blob-storage-azure-data-share-end
-
-
-.. _destination-azure-blob-storage-credentials:
-
-Use credentials
---------------------------------------------------
-
-.. destination-azure-blob-storage-credentials-start
+.. destination-active-campaign-get-details-start
 
 |destination-name| requires the following configuration details:
 
-#. The name of the container.
-#. The blob prefix.
-#. The credential details.
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-   These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The API key for your instance of |destination-name|.
 
-   When Microsoft Azure is configured to use a shared access signature (SAS) to grant restricted access rights to Microsoft Azure storage resources, be sure to use the correct SAS token string for credentials within Amperity and that the SAS is assigned the following permissions within Microsoft Azure: READ, ADD, CREATE, WRITE, DELETE, and LIST.
 
-#. The public key to use for PGP encryption.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail two.
+          :align: left
+          :class: no-scaled-link
+     - The ActiveCampaign API endpoint URL, which is similar to ``https://<your-account>.api-us1.com/api/3/<resource>``.
 
-.. destination-azure-blob-storage-credentials-end
+       .. note:: |destination-name| API has the following limitations:
+
+          * API access is rate limited to 5 requests per second.
 
 
-.. _destination-azure-blob-storage-add-destination:
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail three.
+          :align: left
+          :class: no-scaled-link
+     - The name of a `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| that exists in |destination-name| and has permission to view and interact with the contact list.
+
+       .. important:: You must log into |destination-name| as a member of the specified user group to have access to the contact list that is managed by Amperity.
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail four.
+          :align: left
+          :class: no-scaled-link
+     - The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name|. This can be the name of an existing list or a new list.
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail five.
+          :align: left
+          :class: no-scaled-link
+     - A query that outputs the fields that must be mapped to the |destination-name| contacts.
+
+.. destination-active-campaign-get-details-end
+
+
+.. _destination-active-campaign-add-destination:
 
 Add destination
 ==================================================
 
-.. destination-azure-blob-storage-add-destination-start
-
-Azure Blob Storage is a destination that may be configured directly from Amperity.
-
-.. destination-azure-blob-storage-add-destination-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-intro-all-start
+   :end-before: .. destinations-add-destinations-intro-all-end
 
 **To add a destination**
 
-.. destination-azure-blob-storage-add-destination-steps-start
+.. destination-active-campaign-add-destination-start
 
 .. list-table::
    :widths: 10 90
@@ -186,10 +183,8 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        |destination-name| has the following settings:
 
-       * The name of the container.
-       * The blob prefix.
-       * Credential details. These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-       * The public key to use for PGP encryption.
+       * The API key for your instance of |destination-name|.
+       * The ActiveCampaign API endpoint URL, which is similar to ``https://<your-account>.api-us1.com/api/3/<resource>``.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start
@@ -207,14 +202,22 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
           :width: 500 px
-          :alt: Settings for Azure Blob Storage.
+          :alt: Settings for ActiveCampaign.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-azure-blob-storage-start
-          :end-before: .. destinations-destination-settings-azure-blob-storage-end
+       The following settings are specific to |destination-name|:
 
+       .. list-table::
+          :widths: 180 320
+          :header-rows: 1
+
+          * - **Setting**
+            - **Description**
+          * - **Group name**
+            - The name of a user group that exists in |destination-name| and has permission to view and interact with the contact list.
+          * - **Audience primary key**
+            - Select **email** as the audience primary key. (Amperity only sends a list of email addresses to |destination-name|.)
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -247,10 +250,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-azure-blob-storage-add-destination-steps-end
+.. destination-active-campaign-add-destination-end
 
 
-.. _destination-azure-blob-storage-add-data-template:
+.. _destination-active-campaign-add-data-template:
 
 Add data template
 ==================================================
@@ -261,7 +264,7 @@ Add data template
 
 **To add a data template**
 
-.. destination-azure-blob-storage-add-data-template-steps-start
+.. destination-active-campaign-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -320,16 +323,18 @@ Add data template
           :start-after: .. destinations-data-template-verify-config-settings-start
           :end-before: .. destinations-data-template-verify-config-settings-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
+       The following settings are specific to |destination-name|:
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
+       .. list-table::
+          :widths: 180 320
+          :header-rows: 1
 
+          * - **Setting**
+            - **Description**
+          * - **List name**
+            - The name of an email list in |destination-name|. This can be the name of an existing list or a new list.
+          * - **Enable verbose logs**
+            - Select this option to return a log file that contains a list of email addresses that were not accepted by |destination-name|.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -350,10 +355,10 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-azure-blob-storage-add-data-template-steps-end
+.. destination-active-campaign-add-data-template-steps-end
 
 
-.. _destination-azure-blob-storage-workflow-actions:
+.. _destination-active-campaign-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -362,7 +367,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-azure-blob-storage-workflow-actions-start
+.. destination-active-campaign-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -377,7 +382,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-one-a-start
           :end-before: .. workflow-actions-common-table-section-one-a-end
 
-       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
           :width: 500 px
           :alt: Review a notifications error.
           :align: left
@@ -398,7 +403,7 @@ Workflow actions
 
        .. image:: ../../images/mockups-workflow-failed.png
           :width: 500 px
-          :alt: The workflow tab, showing a workflow with errors.
+          :alt: The Workflow page, showing a workflow with errors.
           :align: left
           :class: no-scaled-link
 
@@ -411,7 +416,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-three-a-start
           :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+       .. image:: ../../images/workflow-actions-active-campaign-group-name.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -423,8 +428,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+       * :ref:`destination-active-campaign-workflow-actions-invalid-credentials`
+       * :ref:`destination-active-campaign-workflow-actions-invalid-group-name`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -436,7 +441,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-a-start
           :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+       .. image:: ../../images/workflow-actions-active-campaign-group-name-steps.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -446,10 +451,10 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-azure-blob-storage-workflow-actions-end
+.. destination-active-campaign-workflow-actions-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+.. _destination-active-campaign-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -459,27 +464,26 @@ Invalid credentials
    :end-before: .. workflow-actions-generic-invalid-credentials-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
+.. _destination-active-campaign-workflow-actions-invalid-group-name:
 
-Invalid permissions
+Invalid group name
 --------------------------------------------------
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-intro-start
-   :end-before: .. workflow-actions-azure-sas-intro-end
+.. destination-active-campaign-workflow-actions-invalid-group-name-start
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-whatis-start
-   :end-before: .. workflow-actions-azure-sas-whatis-end
+A `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| defines which set of users within |destination-name| have permission to interact with contacts in a contact list. For example: managing tags, defining list exclusions, or running campaigns.
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
-   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
+When the name of the user group defined in Amperity does not match the name of a user group defined in |destination-name|, Amperity will be unable to update the list of contacts for a contact list and a workflow action will be shown.
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-report-problem-start
-   :end-before: .. workflow-actions-azure-sas-report-problem-end
+.. destination-active-campaign-workflow-actions-invalid-group-name-end
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-steps-start
-   :end-before: .. workflow-actions-azure-sas-steps-end
+.. destination-active-campaign-workflow-actions-invalid-group-name-steps-start
+
+To resolve this error, verify the name of the user group in |destination-name|, and then update the data template in Amperity for the correct name of the user group.
+
+#. Log in to |destination-name| as a user assigned who is assigned to the **Admin** permission.
+#. Verify the name of the user group and/or create a user group with the name that is required by this workflow.
+#. Verify the name of the user group that is defined in the data template used by this workflow. Update this value if required.
+#. Return to the workflow action, and then click **Resolve** to retry.
+
+.. destination-active-campaign-workflow-actions-invalid-group-name-steps-start

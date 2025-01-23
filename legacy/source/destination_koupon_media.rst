@@ -1,135 +1,107 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
-.. |destination-name| replace:: Azure Blob Storage
-.. |plugin-name| replace:: Azure Blob Storage
-.. |what-send| replace:: files
+.. |destination-name| replace:: Koupon Media
+.. |plugin-name| replace:: Koupon Media
+.. |what-send| replace:: CSV files
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "az"
-.. |azure-container-name| replace:: "Blob Storage"
-.. |azure-blob-prefix| replace:: "upload"
-.. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
+.. |filter-the-list| replace:: "kou"
+.. |sftp-type| replace:: **koupon-media**
+.. |sftp-hostname| replace:: **sftp.kouponmedia.com**
+.. |file-format| replace:: CSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
+.. |data-template-config-settings-list| replace:: settings required by the SFTP site were
 .. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_azure_blob_storage|
-.. |channel-link| replace:: |campaign_azure_blob_storage|
+.. |sendto-link| replace:: |sendto_koupon_media|
+.. |channel-link| replace:: send campaign results
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
-Send data to Azure Blob Storage
+Send data to Koupon Media
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-blob-storage-start
-   :end-before: .. term-azure-blob-storage-end
+   :start-after: .. term-koupon-media-start
+   :end-before: .. term-koupon-media-end
 
-.. destination-azure-blob-storage-important-start
+.. term-koupon-media-channel-types-start
 
-.. important:: Use this destination to send data from Amperity to Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
+You can associate records in Amperity to the following `Koupon Media channel types <https://www.kouponmedia.com/creating-channel>`__ |ext_link|:
 
-.. destination-azure-blob-storage-important-end
+#. Web application channels
+#. Mobile application channels
+#. SMS channels
+#. Email channels
+#. Social channels
 
-.. destination-azure-blob-storage-steps-to-send-start
+.. term-koupon-media-channel-types-end
+
+.. destination-koupon-media-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-azure-blob-storage-get-details>`
-#. :ref:`Add destination <destination-azure-blob-storage-add-destination>`
-#. :ref:`Add data template <destination-azure-blob-storage-add-data-template>`
+#. :ref:`Get details <destination-koupon-media-get-details>`
+#. :ref:`Add destination <destination-koupon-media-add-destination>`
+#. :ref:`Add data template <destination-koupon-media-add-data-template>`
 
-.. destination-azure-blob-storage-steps-to-send-end
+.. destination-koupon-media-steps-to-send-end
 
 
-.. _destination-azure-blob-storage-get-details:
+.. _destination-koupon-media-get-details:
 
 Get details
 ==================================================
 
-.. destination-amazon-s3-get-details-start
+.. destination-koupon-media-get-details-start
 
-Amperity can be configured to send data to |destination-name|. This may be done using :ref:`Azure Data Share (recommended) <destination-azure-blob-storage-azure-data-share>` or by using :ref:`Azure credentials <destination-azure-blob-storage-credentials>`.
+The |destination-name| destination requires the following configuration details:
 
-.. destination-amazon-s3-get-details-end
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The username and passphrase.
 
-.. _destination-azure-blob-storage-azure-data-share:
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The remote folder to which Amperity will send data.
 
-Use Azure Data Share
---------------------------------------------------
+       .. important:: A "/" (forward slash) must be used as the first character for this value. For example: ``/incoming``.
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-data-share-start
-   :end-before: .. term-azure-data-share-end
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The public key to use for PGP encryption, if required.
 
-.. destination-azure-blob-storage-azure-data-share-start
-
-Amperity prefers to send data to customer-managed cloud storage. This approach ensures that customers can:
-
-* Use security policies managed in Azure Data Share to manage access to data
-* Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
-* Directly troubleshoot incomplete or missing files
-
-Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
-
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
-
-.. destination-azure-blob-storage-azure-data-share-end
-
-
-.. _destination-azure-blob-storage-credentials:
-
-Use credentials
---------------------------------------------------
-
-.. destination-azure-blob-storage-credentials-start
-
-|destination-name| requires the following configuration details:
-
-#. The name of the container.
-#. The blob prefix.
-#. The credential details.
-
-   These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-
-   When Microsoft Azure is configured to use a shared access signature (SAS) to grant restricted access rights to Microsoft Azure storage resources, be sure to use the correct SAS token string for credentials within Amperity and that the SAS is assigned the following permissions within Microsoft Azure: READ, ADD, CREATE, WRITE, DELETE, and LIST.
-
-#. The public key to use for PGP encryption.
-
-.. destination-azure-blob-storage-credentials-end
+.. destination-koupon-media-get-details-end
 
 
-.. _destination-azure-blob-storage-add-destination:
+.. _destination-koupon-media-add-destination:
 
 Add destination
 ==================================================
 
-.. destination-azure-blob-storage-add-destination-start
-
-Azure Blob Storage is a destination that may be configured directly from Amperity.
-
-.. destination-azure-blob-storage-add-destination-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-intro-all-start
+   :end-before: .. destinations-add-destinations-intro-all-end
 
 **To add a destination**
 
-.. destination-azure-blob-storage-add-destination-steps-start
+.. destination-koupon-media-add-destination-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -161,8 +133,8 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :align: left
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+          :start-after: .. destinations-add-credentials-sftp-start
+          :end-before: .. destinations-add-credentials-sftp-end
 
        .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
           :width: 500 px
@@ -174,22 +146,15 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
+       .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-intro-for-additional-settings-sftp-start
+          :end-before: .. destinations-intro-for-additional-settings-sftp-end
+
+       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-sftp.png
           :width: 500 px
-          :alt: Choose an existing credential or add credential.
+          :alt: Update the settings for the SFTP destination.
           :align: left
           :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       |destination-name| has the following settings:
-
-       * The name of the container.
-       * The blob prefix.
-       * Credential details. These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-       * The public key to use for PGP encryption.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start
@@ -205,15 +170,15 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-destination-settings-start
           :end-before: .. destinations-destination-settings-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
+       .. image:: ../../images/mockup-destinations-tab-add-03-settings-sftp.png
           :width: 500 px
-          :alt: Settings for Azure Blob Storage.
+          :alt: Settings for SFTP destinations.
           :align: left
           :class: no-scaled-link
 
        .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-azure-blob-storage-start
-          :end-before: .. destinations-destination-settings-azure-blob-storage-end
+          :start-after: .. destinations-destination-settings-sftp-start
+          :end-before: .. destinations-destination-settings-sftp-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -247,10 +212,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-azure-blob-storage-add-destination-steps-end
+.. destination-koupon-media-add-destination-steps-end
 
 
-.. _destination-azure-blob-storage-add-data-template:
+.. _destination-koupon-media-add-data-template:
 
 Add data template
 ==================================================
@@ -261,7 +226,7 @@ Add data template
 
 **To add a data template**
 
-.. destination-azure-blob-storage-add-data-template-steps-start
+.. destination-koupon-media-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -350,10 +315,10 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-azure-blob-storage-add-data-template-steps-end
+.. destination-koupon-media-add-data-template-steps-end
 
 
-.. _destination-azure-blob-storage-workflow-actions:
+.. _destination-koupon-media-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -362,7 +327,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-azure-blob-storage-workflow-actions-start
+.. destination-koupon-media-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -377,7 +342,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-one-a-start
           :end-before: .. workflow-actions-common-table-section-one-a-end
 
-       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
           :width: 500 px
           :alt: Review a notifications error.
           :align: left
@@ -411,7 +376,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-three-a-start
           :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+       .. image:: ../../images/workflow-actions-sftp-unavailable.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -423,8 +388,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+       * :ref:`destination-koupon-media-workflow-actions-invalid-credentials`
+       * :ref:`destination-koupon-media-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -436,7 +401,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-a-start
           :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+       .. image:: ../../images/workflow-actions-sftp-unavailable-steps.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -446,10 +411,10 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-azure-blob-storage-workflow-actions-end
+.. destination-koupon-media-workflow-actions-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+.. _destination-koupon-media-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -459,27 +424,11 @@ Invalid credentials
    :end-before: .. workflow-actions-generic-invalid-credentials-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
+.. _destination-koupon-media-workflow-actions-sftp-unavailable:
 
-Invalid permissions
+SFTP site unavailable
 --------------------------------------------------
 
 .. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-intro-start
-   :end-before: .. workflow-actions-azure-sas-intro-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-whatis-start
-   :end-before: .. workflow-actions-azure-sas-whatis-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
-   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-report-problem-start
-   :end-before: .. workflow-actions-azure-sas-report-problem-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-steps-start
-   :end-before: .. workflow-actions-azure-sas-steps-end
+   :start-after: .. workflow-actions-sftp-generic-unavailable-start
+   :end-before: .. workflow-actions-sftp-generic-unavailable-end

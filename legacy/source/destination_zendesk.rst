@@ -1,135 +1,170 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
-.. |destination-name| replace:: Azure Blob Storage
-.. |plugin-name| replace:: Azure Blob Storage
-.. |what-send| replace:: files
+.. |destination-name| replace:: Zendesk
+.. |destination-api| replace:: Zendesk Users API
+.. |plugin-name| replace:: Zendesk
+.. |what-send| replace:: audience data
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "az"
-.. |azure-container-name| replace:: "Blob Storage"
-.. |azure-blob-prefix| replace:: "upload"
-.. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
+.. |filter-the-list| replace:: "zen"
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_azure_blob_storage|
-.. |channel-link| replace:: |campaign_azure_blob_storage|
+.. |credential-type| replace:: **zendesk-api-token**
+.. |credential-details| replace:: the Zendesk User API token and the email address of the administrator who created the token
+.. |sendto-link| replace:: |sendto_zendesk|
+.. |channel-link| replace:: send campaign results
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
-Send data to Azure Blob Storage
+Send data to Zendesk
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-blob-storage-start
-   :end-before: .. term-azure-blob-storage-end
+   :start-after: .. term-zendesk-start
+   :end-before: .. term-zendesk-end
 
-.. destination-azure-blob-storage-important-start
+.. destination-zendesk-start
 
-.. important:: Use this destination to send data from Amperity to Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
+Amperity may be configured to create or update user records in |destination-name| by using the |destination-api| to `create or update users <https://developer.zendesk.com/api-reference/ticketing/users/users/#create-or-update-many-users>`__ |ext_link|. Use this connector to deliver a better customer support experience by pre-populating |destination-name| user records with customer records from Amperity, including:
 
-.. destination-azure-blob-storage-important-end
+* Order history
+* Loyalty status
+* Satisfaction survey results
+* Shopping preferences
+* and more
 
-.. destination-azure-blob-storage-steps-to-send-start
+Use this data to show customer support representatives information related to product recommendations, next best actions, and likelihood of churn.
+
+.. destination-zendesk-end
+
+.. destination-zendesk-note-start
+
+.. note:: Creating or updating records are `rate limited <https://developer.zendesk.com/rest_api/docs/support/introduction#endpoint-specific-rate-limits>`__ |ext_link| to a maximum of 100 users per second.
+
+.. destination-zendesk-note-end
+
+.. destination-zendesk-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-azure-blob-storage-get-details>`
-#. :ref:`Add destination <destination-azure-blob-storage-add-destination>`
-#. :ref:`Add data template <destination-azure-blob-storage-add-data-template>`
+#. :ref:`Get details <destination-zendesk-get-details>`
+#. :ref:`Add destination <destination-zendesk-add-destination>`
+#. :ref:`Add data template <destination-zendesk-add-data-template>`
 
-.. destination-azure-blob-storage-steps-to-send-end
+.. destination-zendesk-steps-to-send-end
 
 
-.. _destination-azure-blob-storage-get-details:
+.. _destination-zendesk-howitworks:
+
+How this destination works
+==================================================
+
+.. destination-zendesk-howitworks-start
+
+Amperity can send |what-send| to update user records in |destination-name|. The |what-send| is uploaded to |destination-name| using the |destination-api|.
+
+.. destination-zendesk-howitworks-end
+
+.. image:: ../../images/destination-zendesk.png
+   :width: 600 px
+   :alt: Send contact data from Amperity to Zendesk.
+   :align: left
+   :class: no-scaled-link
+
+.. destination-zendesk-howitworks-callouts-start
+
+A |destination-name| destination works like this:
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - Use a query to build a list of customers to be updated in |destination-name|.
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - Configure Amperity to send audience data to |destination-name|.
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - Send a test from Amperity.
+
+       .. important:: Be sure to send all fields from Amperity that will be required by |destination-name|. The **name**, **email** or **external_id** fields must be included.
+
+       From within |destination-name| verify that audience data has been loaded and is usable by all of the use cases you want to use within |destination-name| to build better customer experiences.
+
+.. destination-zendesk-howitworks-callouts-end
+
+
+.. _destination-zendesk-get-details:
 
 Get details
 ==================================================
 
-.. destination-amazon-s3-get-details-start
-
-Amperity can be configured to send data to |destination-name|. This may be done using :ref:`Azure Data Share (recommended) <destination-azure-blob-storage-azure-data-share>` or by using :ref:`Azure credentials <destination-azure-blob-storage-credentials>`.
-
-.. destination-amazon-s3-get-details-end
-
-
-.. _destination-azure-blob-storage-azure-data-share:
-
-Use Azure Data Share
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-data-share-start
-   :end-before: .. term-azure-data-share-end
-
-.. destination-azure-blob-storage-azure-data-share-start
-
-Amperity prefers to send data to customer-managed cloud storage. This approach ensures that customers can:
-
-* Use security policies managed in Azure Data Share to manage access to data
-* Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
-* Directly troubleshoot incomplete or missing files
-
-Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
-
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
-
-.. destination-azure-blob-storage-azure-data-share-end
-
-
-.. _destination-azure-blob-storage-credentials:
-
-Use credentials
---------------------------------------------------
-
-.. destination-azure-blob-storage-credentials-start
+.. destination-zendesk-get-details-start
 
 |destination-name| requires the following configuration details:
 
-#. The name of the container.
-#. The blob prefix.
-#. The credential details.
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-   These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The `Zendesk API token <https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token>`__ |ext_link|, which may be generated via the |destination-name| user interface by an administrator with **Token Access** enabled.
 
-   When Microsoft Azure is configured to use a shared access signature (SAS) to grant restricted access rights to Microsoft Azure storage resources, be sure to use the correct SAS token string for credentials within Amperity and that the SAS is assigned the following permissions within Microsoft Azure: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail two.
+          :align: left
+          :class: no-scaled-link
+     - The email address of the administrator who created the API token.
 
-#. The public key to use for PGP encryption.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail three.
+          :align: left
+          :class: no-scaled-link
+     - The subdomain of the |destination-name| instance.
 
-.. destination-azure-blob-storage-credentials-end
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail four.
+          :align: left
+          :class: no-scaled-link
+     - A query that outputs fields that are mapped to data requirements for the |destination-api|.
+
+.. destination-zendesk-get-details-end
 
 
-.. _destination-azure-blob-storage-add-destination:
+.. _destination-zendesk-add-destination:
 
 Add destination
 ==================================================
 
-.. destination-azure-blob-storage-add-destination-start
-
-Azure Blob Storage is a destination that may be configured directly from Amperity.
-
-.. destination-azure-blob-storage-add-destination-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-intro-all-start
+   :end-before: .. destinations-add-destinations-intro-all-end
 
 **To add a destination**
 
-.. destination-azure-blob-storage-add-destination-steps-start
+.. destination-zendesk-add-destination-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -186,10 +221,9 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        |destination-name| has the following settings:
 
-       * The name of the container.
-       * The blob prefix.
-       * Credential details. These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-       * The public key to use for PGP encryption.
+       * Credential name
+       * Zendesk User API token
+       * Email address of the administrator who created the token
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start
@@ -207,13 +241,20 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
           :width: 500 px
-          :alt: Settings for Azure Blob Storage.
+          :alt: Settings for Zendesk.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-azure-blob-storage-start
-          :end-before: .. destinations-destination-settings-azure-blob-storage-end
+       The following settings are specific to |destination-name|:
+
+       .. list-table::
+          :widths: 180 320
+          :header-rows: 1
+
+          * - **Setting**
+            - **Description**
+          * - **Subdomain**
+            - The subdomain is part of your |destination-name| URL. For example: "acme" is the subdomain for ``acme.zendesk.com``.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -247,10 +288,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-azure-blob-storage-add-destination-steps-end
+.. destination-zendesk-add-destination-steps-end
 
 
-.. _destination-azure-blob-storage-add-data-template:
+.. _destination-zendesk-add-data-template:
 
 Add data template
 ==================================================
@@ -261,7 +302,7 @@ Add data template
 
 **To add a data template**
 
-.. destination-azure-blob-storage-add-data-template-steps-start
+.. destination-zendesk-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -310,7 +351,6 @@ Add data template
           :start-after: .. destinations-data-template-business-users-allow-campaigns-start
           :end-before: .. destinations-data-template-business-users-allow-campaigns-end
 
-
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
@@ -319,16 +359,6 @@ Add data template
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
           :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -350,10 +380,10 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-azure-blob-storage-add-data-template-steps-end
+.. destination-zendesk-add-data-template-steps-end
 
 
-.. _destination-azure-blob-storage-workflow-actions:
+.. _destination-zendesk-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -362,7 +392,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-azure-blob-storage-workflow-actions-start
+.. destination-zendesk-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -377,7 +407,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-one-a-start
           :end-before: .. workflow-actions-common-table-section-one-a-end
 
-       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
           :width: 500 px
           :alt: Review a notifications error.
           :align: left
@@ -386,6 +416,7 @@ Workflow actions
        .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-b-start
           :end-before: .. workflow-actions-common-table-section-one-b-end
+
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -402,6 +433,7 @@ Workflow actions
           :align: left
           :class: no-scaled-link
 
+
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
@@ -411,7 +443,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-three-a-start
           :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+       .. image:: ../../images/workflow-actions-zendesk-403.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -423,8 +455,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+       * :ref:`destination-zendesk-workflow-actions-authorization-error`
+       * :ref:`destination-zendesk-workflow-actions-invalid-credentials`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -436,7 +468,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-a-start
           :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+       .. image:: ../../images/workflow-actions-zendesk-403-steps.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -446,10 +478,47 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-azure-blob-storage-workflow-actions-end
+.. destination-zendesk-workflow-actions-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+.. _destination-zendesk-workflow-actions-authorization-error:
+
+Authorization error
+--------------------------------------------------
+
+.. destination-zendesk-workflow-actions-authorization-error-start
+
+A 403 response means that Amperity is not able to access the Zendesk Users API. When a 403 response is received from Zendesk, a workflow action named "Authorization Error" is generated.
+
+Amperity uses two configuration settings -- |credential-details| -- to build a credentials string that is added to the request authorization header. The format for the credentials string is:
+
+::
+
+   {email_address}/token:{api_token}
+
+A 403 response from Zendesk indicates that the credentials string does not have the correct information. This could be for a number of reasons, including:
+
+* The wrong values for email address or API token are configured in Amperity.
+* The API token was deleted in Zendesk.
+* The email address for the user who generated the API token is no longer a valid email address within Zendesk or is not associated with a user who has permission to access the Zendesk Users API.
+
+.. destination-zendesk-workflow-actions-authorization-error-end
+
+.. destination-zendesk-workflow-actions-authorization-error-steps-start
+
+To resolve this error, you must provide a combination of email address and Zendesk API token that allows Amperity access to Zendesk.
+
+#. Open the Amperity **Credentials** page in a new tab.
+#. Verify that the individual who authorized access to Zendesk has the correct permissions to allow Amperity to access Zendesk.
+#. Update the values that build the credentials string as necessary.
+
+   .. tip:: You may need to generate a new API token in Zendesk, and then reconfigure Amperity with the updated API token string *and* the email address for the user that generated the newly-generated API token.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-zendesk-workflow-actions-authorization-error-steps-start
+
+
+.. _destination-zendesk-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -457,29 +526,3 @@ Invalid credentials
 .. include:: ../../shared/workflow-actions.rst
    :start-after: .. workflow-actions-generic-invalid-credentials-start
    :end-before: .. workflow-actions-generic-invalid-credentials-end
-
-
-.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
-
-Invalid permissions
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-intro-start
-   :end-before: .. workflow-actions-azure-sas-intro-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-whatis-start
-   :end-before: .. workflow-actions-azure-sas-whatis-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
-   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-report-problem-start
-   :end-before: .. workflow-actions-azure-sas-report-problem-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-steps-start
-   :end-before: .. workflow-actions-azure-sas-steps-end

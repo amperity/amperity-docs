@@ -1,135 +1,207 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
-.. |destination-name| replace:: Azure Blob Storage
-.. |plugin-name| replace:: Azure Blob Storage
+.. |destination-name| replace:: Google Cloud Storage
+.. |plugin-name| replace:: Google Cloud Storage
 .. |what-send| replace:: files
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "az"
-.. |azure-container-name| replace:: "Blob Storage"
-.. |azure-blob-prefix| replace:: "upload"
+.. |filter-the-list| replace:: "google"
 .. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
 .. |data-template-config-settings-list| replace:: settings required by |destination-name| were
 .. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_azure_blob_storage|
-.. |channel-link| replace:: |campaign_azure_blob_storage|
+.. |sendto-link| replace:: |sendto_google_cloud_storage|
+.. |channel-link| replace:: |campaign_google_cloud_storage|
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
-Send data to Azure Blob Storage
+Send data to Google Cloud Storage
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-blob-storage-start
-   :end-before: .. term-azure-blob-storage-end
+   :start-after: .. term-google-cloud-storage-start
+   :end-before: .. term-google-cloud-storage-end
 
-.. destination-azure-blob-storage-important-start
-
-.. important:: Use this destination to send data from Amperity to Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
-
-.. destination-azure-blob-storage-important-end
-
-.. destination-azure-blob-storage-steps-to-send-start
+.. destination-google-cloud-storage-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-azure-blob-storage-get-details>`
-#. :ref:`Add destination <destination-azure-blob-storage-add-destination>`
-#. :ref:`Add data template <destination-azure-blob-storage-add-data-template>`
+#. :ref:`Get details <destination-google-cloud-storage-get-details>`
+#. :ref:`Add destination <destination-google-cloud-storage-add-destination>`
+#. :ref:`Add data template <destination-google-cloud-storage-add-data-template>`
 
-.. destination-azure-blob-storage-steps-to-send-end
+.. destination-google-cloud-storage-steps-to-send-end
 
 
-.. _destination-azure-blob-storage-get-details:
+.. _destination-google-cloud-storage-get-details:
 
 Get details
 ==================================================
 
-.. destination-amazon-s3-get-details-start
-
-Amperity can be configured to send data to |destination-name|. This may be done using :ref:`Azure Data Share (recommended) <destination-azure-blob-storage-azure-data-share>` or by using :ref:`Azure credentials <destination-azure-blob-storage-credentials>`.
-
-.. destination-amazon-s3-get-details-end
-
-
-.. _destination-azure-blob-storage-azure-data-share:
-
-Use Azure Data Share
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-data-share-start
-   :end-before: .. term-azure-data-share-end
-
-.. destination-azure-blob-storage-azure-data-share-start
-
-Amperity prefers to send data to customer-managed cloud storage. This approach ensures that customers can:
-
-* Use security policies managed in Azure Data Share to manage access to data
-* Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
-* Directly troubleshoot incomplete or missing files
-
-Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
-
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
-
-.. destination-azure-blob-storage-azure-data-share-end
-
-
-.. _destination-azure-blob-storage-credentials:
-
-Use credentials
---------------------------------------------------
-
-.. destination-azure-blob-storage-credentials-start
+.. destination-google-cloud-storage-get-details-start
 
 |destination-name| requires the following configuration details:
 
-#. The name of the container.
-#. The blob prefix.
-#. The credential details.
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-   These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - A |destination-name| :ref:`service account key <destination-google-cloud-storage-service-account>` that is configured for the **Storage Object Admin** role.
 
-   When Microsoft Azure is configured to use a shared access signature (SAS) to grant restricted access rights to Microsoft Azure storage resources, be sure to use the correct SAS token string for credentials within Amperity and that the SAS is assigned the following permissions within Microsoft Azure: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The name of the |destination-name| bucket to which Amperity will send data and its prefix.
 
-#. The public key to use for PGP encryption.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The public key to use for PGP encryption.
 
-.. destination-azure-blob-storage-credentials-end
+.. destination-google-cloud-storage-get-details-end
+
+.. destination-google-cloud-storage-get-details-account-info-start
+
+.. admonition:: How do I find |destination-name| account information?
+
+   You can find all of this information after you log into |destination-name|.
+
+.. destination-google-cloud-storage-get-details-account-info-end
 
 
-.. _destination-azure-blob-storage-add-destination:
+.. _destination-google-cloud-storage-service-account:
+
+Service account
+==================================================
+
+.. destination-google-cloud-storage-service-account-start
+
+A service account must be configured to allow Amperity to send data to the Cloud Storage bucket:
+
+#. A :ref:`service account key <destination-google-cloud-storage-service-account-key>` must be created, and then downloaded for use when configuring Amperity.
+#. The **Storage Object Admin** :ref:`role must be assigned to the service account <destination-google-cloud-storage-service-account-role>`.
+
+.. destination-google-cloud-storage-service-account-end
+
+
+.. _destination-google-cloud-storage-service-account-key:
+
+Service account key
+--------------------------------------------------
+
+.. destination-google-cloud-storage-service-account-key-start
+
+A service account key must be downloaded so that it may be used to configure the destination in Amperity.
+
+.. destination-google-cloud-storage-service-account-key-end
+
+**To configure the service account key**
+
+.. destination-google-cloud-storage-service-account-key-steps-start
+
+#. Open the Cloud Platform console.
+#. Click **IAM**, and then **Admin**.
+#. Click the name of the project that is associated with the Cloud Storage bucket to which Amperity will send data.
+#. Click **Service Accounts**, and then select **Create Service Account**.
+#. In the **Name** field, give your service account a name. For example, "Amperity GCS Connection".
+#. In the **Description** field, enter a description that will remind you of the purpose of the role.
+#. Click **Create**.
+
+   .. important:: Click **Continue** and *skip every step* that allows adding additional service account permissions. These permissions will be added directly to the bucket.
+   
+#. From the **Service Accounts** page, click the name of the service account that was created for Amperity.
+#. Click **Add Key**, and then select **Create new key**.
+#. Select the **JSON** key type, and then click **Create**.
+
+   The key is downloaded as a JSON file to your local computer. This key is required to connect Amperity to your Cloud Storage bucket. If necessary, provide this key to your Amperity representative using |ext_snappass|.
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-snappass-start
+      :end-before: .. term-snappass-end
+
+.. destination-google-cloud-storage-service-account-key-steps-end
+
+**Example**
+
+.. destination-google-cloud-storage-service-account-key-example-start
+
+.. code-block:: json
+
+   {
+     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+     "client_email": "<<GCS_BUCKET_NAME>>@<<GCS_PROJECT_ID>>.iam.gserviceaccount.com",
+     "client_id": "redacted",
+     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/<<GCS_BUCKET_NAME>>%40<<GCS_PROJECT_ID>>.iam.gserviceaccount.com",
+     "private_key_id": "redacted",
+     "private_key": "redacted",
+     "project_id": "<<GCS_PROJECT_ID>>",
+     "token_uri": "https://oauth2.googleapis.com/token",
+     "type": "service_account"
+   }
+
+.. destination-google-cloud-storage-service-account-key-example-end
+
+
+.. _destination-google-cloud-storage-service-account-role:
+
+Service account role
+--------------------------------------------------
+
+.. destination-google-cloud-storage-service-account-role-start
+
+The **Storage Object Admin** role must be assigned to the service account.
+
+.. destination-google-cloud-storage-service-account-role-end
+
+**To configure the service account role**
+
+.. destination-google-cloud-storage-service-account-role-steps-start
+
+#. Open the Cloud Platform console.
+#. Click **Storage**, and then **Browser**.
+#. Click the name of the bucket from which Amperity will pull data.
+#. Click the **Permissions** tab, and then click **Add**.
+#. Enter the email address of the Cloud Storage service account.
+#. Under **Role**, choose **Storage Object Admin**.
+
+   .. important:: Amperity requires the **Storage Object Admin** role for the courier that is assigned to pull data from Cloud Storage.
+#. Click **Save**.
+
+.. destination-google-cloud-storage-service-account-role-steps-end
+
+
+.. _destination-google-cloud-storage-add-destination:
 
 Add destination
 ==================================================
 
-.. destination-azure-blob-storage-add-destination-start
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-intro-all-start
+   :end-before: .. destinations-add-destinations-intro-all-end
 
-Azure Blob Storage is a destination that may be configured directly from Amperity.
+.. destination-google-cloud-storage-add-destination-important-start
 
-.. destination-azure-blob-storage-add-destination-end
+.. important:: The bucket name must match the value of the ``<<GCS_BUCKET_NAME>>`` placeholder shown in the :ref:`service account key <destination-google-cloud-storage-service-account-key>` example.
+
+.. destination-google-cloud-storage-add-destination-important-end
 
 **To add a destination**
 
-.. destination-azure-blob-storage-add-destination-steps-start
+.. destination-google-cloud-storage-add-destination-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -186,15 +258,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        |destination-name| has the following settings:
 
-       * The name of the container.
-       * The blob prefix.
-       * Credential details. These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-       * The public key to use for PGP encryption.
+       * The name of the bucket to which Amperity will send data.
+       * The service account key.
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
-
+         The service account key is the contents of the JSON file downloaded from Cloud Storage. Open the JSON file in a text editor, select all of the content in the JSON file, copy it, and then paste it into the **Service Account Key** field.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
@@ -207,13 +274,13 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
           :width: 500 px
-          :alt: Settings for Azure Blob Storage.
+          :alt: Settings for Google Cloud Storage.
           :align: left
           :class: no-scaled-link
 
        .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-azure-blob-storage-start
-          :end-before: .. destinations-destination-settings-azure-blob-storage-end
+          :start-after: .. destinations-destination-settings-google-cloud-storage-start
+          :end-before: .. destinations-destination-settings-google-cloud-storage-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -247,10 +314,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-azure-blob-storage-add-destination-steps-end
+.. destination-google-cloud-storage-add-destination-steps-end
 
 
-.. _destination-azure-blob-storage-add-data-template:
+.. _destination-google-cloud-storage-add-data-template:
 
 Add data template
 ==================================================
@@ -261,7 +328,7 @@ Add data template
 
 **To add a data template**
 
-.. destination-azure-blob-storage-add-data-template-steps-start
+.. destination-google-cloud-storage-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -350,10 +417,10 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-azure-blob-storage-add-data-template-steps-end
+.. destination-google-cloud-storage-add-data-template-steps-end
 
 
-.. _destination-azure-blob-storage-workflow-actions:
+.. _destination-google-cloud-storage-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -362,7 +429,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-azure-blob-storage-workflow-actions-start
+.. source-google-cloud-storage-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -377,7 +444,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-one-a-start
           :end-before: .. workflow-actions-common-table-section-one-a-end
 
-       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
           :width: 500 px
           :alt: Review a notifications error.
           :align: left
@@ -398,7 +465,7 @@ Workflow actions
 
        .. image:: ../../images/mockups-workflow-failed.png
           :width: 500 px
-          :alt: The workflow tab, showing a workflow with errors.
+          :alt: The Workflow page, showing a workflow with errors.
           :align: left
           :class: no-scaled-link
 
@@ -411,7 +478,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-three-a-start
           :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+       .. image:: ../../images/workflow-actions-s3-generic-invalid-bucket-name.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -423,9 +490,7 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
-
+       * :ref:`destination-google-cloud-storage-workflow-actions-invalid-credentials`
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -436,7 +501,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-a-start
           :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+       .. image:: ../../images/workflow-actions-gcs-invalid-credentials-steps.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -446,10 +511,10 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-azure-blob-storage-workflow-actions-end
+.. destination-google-cloud-storage-workflow-actions-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+.. _destination-google-cloud-storage-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -457,29 +522,3 @@ Invalid credentials
 .. include:: ../../shared/workflow-actions.rst
    :start-after: .. workflow-actions-generic-invalid-credentials-start
    :end-before: .. workflow-actions-generic-invalid-credentials-end
-
-
-.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
-
-Invalid permissions
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-intro-start
-   :end-before: .. workflow-actions-azure-sas-intro-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-whatis-start
-   :end-before: .. workflow-actions-azure-sas-whatis-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
-   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-report-problem-start
-   :end-before: .. workflow-actions-azure-sas-report-problem-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-steps-start
-   :end-before: .. workflow-actions-azure-sas-steps-end

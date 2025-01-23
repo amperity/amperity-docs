@@ -1,135 +1,171 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
-.. |destination-name| replace:: Azure Blob Storage
-.. |plugin-name| replace:: Azure Blob Storage
-.. |what-send| replace:: files
+.. |destination-name| replace:: Snapchat
+.. |destination-api| replace:: Snapchat Marketing API
+.. |plugin-name| replace:: Snapchat
+.. |what-send| replace:: email addresses, phone numbers, and mobile advertiser IDs
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "az"
-.. |azure-container-name| replace:: "Blob Storage"
-.. |azure-blob-prefix| replace:: "upload"
-.. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
+.. |filter-the-list| replace:: "snap"
+.. |oauth-type| replace:: the OAuth credential you created for your |destination-name| account
+.. |settings-name| replace:: **Snapchat Settings**
+.. |what-settings| replace:: account ID, custom audience, and the customer file source
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
+.. |data-template-config-settings-list| replace:: account ID, custom audience, and the customer file source settings were
 .. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_azure_blob_storage|
-.. |channel-link| replace:: |campaign_azure_blob_storage|
+.. |sendto-link| replace:: |sendto_snapchat|
+.. |channel-link| replace:: |campaign_snapchat|
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
-Send data to Azure Blob Storage
+Send data to Snapchat
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-blob-storage-start
-   :end-before: .. term-azure-blob-storage-end
+   :start-after: .. term-snapchat-start
+   :end-before: .. term-snapchat-end
 
-.. destination-azure-blob-storage-important-start
+.. destination-snapchat-api-note-start
 
-.. important:: Use this destination to send data from Amperity to Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
+.. note:: This destination uses the `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link| component within the `Snapchat Marketing API <https://marketingapi.snapchat.com/docs/>`__ |ext_link| to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| as a list of email addresses, mobile advertiser IDs, or phone numbers.
 
-.. destination-azure-blob-storage-important-end
+.. destination-snapchat-api-note-end
 
-.. destination-azure-blob-storage-steps-to-send-start
+.. destination-snapchat-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-azure-blob-storage-get-details>`
-#. :ref:`Add destination <destination-azure-blob-storage-add-destination>`
-#. :ref:`Add data template <destination-azure-blob-storage-add-data-template>`
+#. :ref:`Get details <destination-snapchat-get-details>`
+#. :ref:`Authorize Amperity access to the customer's account <destination-snapchat-configure-oauth>`
+#. :ref:`Add destination <destination-snapchat-add-destination>`
+#. :ref:`Add data template <destination-snapchat-add-data-template>`
 
-.. destination-azure-blob-storage-steps-to-send-end
+.. destination-snapchat-steps-to-send-end
 
 
-.. _destination-azure-blob-storage-get-details:
+.. _destination-snapchat-get-details:
 
 Get details
 ==================================================
 
-.. destination-amazon-s3-get-details-start
-
-Amperity can be configured to send data to |destination-name|. This may be done using :ref:`Azure Data Share (recommended) <destination-azure-blob-storage-azure-data-share>` or by using :ref:`Azure credentials <destination-azure-blob-storage-credentials>`.
-
-.. destination-amazon-s3-get-details-end
-
-
-.. _destination-azure-blob-storage-azure-data-share:
-
-Use Azure Data Share
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-data-share-start
-   :end-before: .. term-azure-data-share-end
-
-.. destination-azure-blob-storage-azure-data-share-start
-
-Amperity prefers to send data to customer-managed cloud storage. This approach ensures that customers can:
-
-* Use security policies managed in Azure Data Share to manage access to data
-* Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
-* Directly troubleshoot incomplete or missing files
-
-Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
-
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
-
-.. destination-azure-blob-storage-azure-data-share-end
-
-
-.. _destination-azure-blob-storage-credentials:
-
-Use credentials
---------------------------------------------------
-
-.. destination-azure-blob-storage-credentials-start
+.. destination-snapchat-get-details-start
 
 |destination-name| requires the following configuration details:
 
-#. The name of the container.
-#. The blob prefix.
-#. The credential details.
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-   These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The account ID. (The account ID is shown in the **Snapchat Ads Manager**.)
 
-   When Microsoft Azure is configured to use a shared access signature (SAS) to grant restricted access rights to Microsoft Azure storage resources, be sure to use the correct SAS token string for credentials within Amperity and that the SAS is assigned the following permissions within Microsoft Azure: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The name of the custom audience to which Amperity will send data. Amperity will create the custom audience name if it does not already exist.
 
-#. The public key to use for PGP encryption.
+       .. tip:: The custom audience name is visible from the **Snapchat Audiences** page. This name should be clear and understandable to users of Snapchat. An audience with this will be created if it does not exist.
 
-.. destination-azure-blob-storage-credentials-end
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - :ref:`Authorize Amperity to send data to the customer's Snapchat account <destination-snapchat-configure-oauth>`. This requires activation in the Amperity |destination-name| account and approval in the customer's |destination-name| account.
+
+.. destination-snapchat-get-details-end
+
+.. destination-snapchat-get-details-account-info-start
+
+.. admonition:: How do I find Snapchat account information?
+
+   You can find all of this information and perform all of the required steps from within |destination-name|. Click the menu in the top-left corner, then **Ad Accounts**, and then copy the **Ad Account ID** of the account you want to send to.
+
+.. destination-snapchat-get-details-account-info-end
 
 
-.. _destination-azure-blob-storage-add-destination:
+.. _destination-snapchat-configure-oauth:
+
+Configure OAuth
+==================================================
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-oauth-start
+   :end-before: .. term-oauth-end
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-intro-start
+   :end-before: .. destinations-oauth-intro-end
+
+**To configure OAuth**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-1-start
+          :end-before: .. destinations-oauth-configure-step-1-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-2-start
+          :end-before: .. destinations-oauth-configure-step-2-end
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-3-start
+          :end-before: .. destinations-oauth-configure-step-3-end
+
+
+.. _destination-snapchat-reauthorize-amperity:
+
+Reauthorize Amperity
+--------------------------------------------------
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-reauthorize-start
+   :end-before: .. destinations-oauth-reauthorize-end
+
+
+.. _destination-snapchat-add-destination:
 
 Add destination
 ==================================================
 
-.. destination-azure-blob-storage-add-destination-start
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-intro-all-start
+   :end-before: .. destinations-add-destinations-intro-all-end
 
-Azure Blob Storage is a destination that may be configured directly from Amperity.
-
-.. destination-azure-blob-storage-add-destination-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-api-oauth-reminder-start
+   :end-before: .. destinations-add-destinations-api-oauth-reminder-end
 
 **To add a destination**
 
-.. destination-azure-blob-storage-add-destination-steps-start
+.. destination-snapchat-add-destination-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -184,16 +220,9 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-intro-for-additional-settings-start
           :end-before: .. destinations-intro-for-additional-settings-end
 
-       |destination-name| has the following settings:
-
-       * The name of the container.
-       * The blob prefix.
-       * Credential details. These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-       * The public key to use for PGP encryption.
-
        .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+          :start-after: .. destinations-intro-for-additional-settings-oauth-start
+          :end-before: .. destinations-intro-for-additional-settings-oauth-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -207,13 +236,20 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
           :width: 500 px
-          :alt: Settings for Azure Blob Storage.
+          :alt: Settings for Snapchat.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-azure-blob-storage-start
-          :end-before: .. destinations-destination-settings-azure-blob-storage-end
+       The following settings are specific to |destination-name|:
+
+       .. list-table::
+          :widths: 180 320
+          :header-rows: 1
+
+          * - **Setting**
+            - **Description**
+          * - **Account ID**
+            - Your advertising account ID for |destination-name|. (The account ID is shown in the **Snapchat Ads Manager**.)
 
 
    * - .. image:: ../../images/steps-04.png
@@ -247,10 +283,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-azure-blob-storage-add-destination-steps-end
+.. destination-snapchat-add-destination-steps-end
 
 
-.. _destination-azure-blob-storage-add-data-template:
+.. _destination-snapchat-add-data-template:
 
 Add data template
 ==================================================
@@ -259,9 +295,19 @@ Add data template
    :start-after: .. term-data-template-start
    :end-before: .. term-data-template-end
 
+.. include:: ../../amperity_ampiq/source/destination_snapchat.rst
+   :start-after: .. channel-snapchat-build-segment-note-start
+   :end-before: .. channel-snapchat-build-segment-note-end
+
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add a data template**
 
-.. destination-azure-blob-storage-add-data-template-steps-start
+.. destination-snapchat-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -295,6 +341,7 @@ Add data template
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
           :end-before: .. destinations-data-template-business-users-end
+
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
@@ -350,10 +397,10 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-azure-blob-storage-add-data-template-steps-end
+.. destination-snapchat-add-data-template-steps-end
 
 
-.. _destination-azure-blob-storage-workflow-actions:
+.. _destination-snapchat-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -362,7 +409,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-azure-blob-storage-workflow-actions-start
+.. destination-snapchat-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -377,7 +424,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-one-a-start
           :end-before: .. workflow-actions-common-table-section-one-a-end
 
-       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
           :width: 500 px
           :alt: Review a notifications error.
           :align: left
@@ -411,7 +458,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-three-a-start
           :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+       .. image:: ../../images/workflow-actions-snapchat-invalid-credentials.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -423,8 +470,7 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+       * :ref:`destination-snapchat-workflow-actions-invalid-credentials`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -436,7 +482,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-a-start
           :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+       .. image:: ../../images/workflow-actions-snapchat-invalid-credentials-steps.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -446,40 +492,25 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-azure-blob-storage-workflow-actions-end
+.. destination-snapchat-workflow-actions-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+.. _destination-snapchat-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-generic-invalid-credentials-start
-   :end-before: .. workflow-actions-generic-invalid-credentials-end
+.. destination-snapchat-workflow-actions-invalid-credentials-start
 
+The credentials that are defined in Amperity for |destination-name| are invalid and must be refreshed.
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
+.. destination-snapchat-workflow-actions-invalid-credentials-end
 
-Invalid permissions
---------------------------------------------------
+.. destination-snapchat-workflow-actions-invalid-credentials-steps-start
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-intro-start
-   :end-before: .. workflow-actions-azure-sas-intro-end
+To resolve this error, refresh the credentials for |destination-name|.
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-whatis-start
-   :end-before: .. workflow-actions-azure-sas-whatis-end
+#. Open the **Credentials** page, and then generate a new authorization link for the |destination-name| credential associated with this workflow.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
-   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-report-problem-start
-   :end-before: .. workflow-actions-azure-sas-report-problem-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-steps-start
-   :end-before: .. workflow-actions-azure-sas-steps-end
+.. destination-snapchat-workflow-actions-invalid-credentials-steps-start

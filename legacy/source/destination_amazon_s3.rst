@@ -1,135 +1,213 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
-.. |destination-name| replace:: Azure Blob Storage
-.. |plugin-name| replace:: Azure Blob Storage
+.. |destination-name| replace:: Amazon S3
+.. |plugin-name| replace:: Amazon S3
 .. |what-send| replace:: files
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "az"
-.. |azure-container-name| replace:: "Blob Storage"
-.. |azure-blob-prefix| replace:: "upload"
+.. |filter-the-list| replace:: "ama"
+.. |s3-bucket-name| replace:: "Amazon S3"
+.. |s3-prefix| replace:: "upload"
 .. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
 .. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
 .. |data-template-config-settings-list| replace:: settings required by |destination-name| were
 .. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_azure_blob_storage|
-.. |channel-link| replace:: |campaign_azure_blob_storage|
+.. |sendto-link| replace:: |sendto_amazon_s3|
+.. |channel-link| replace:: |campaign_amazon_s3|
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
-Send data to Azure Blob Storage
+Send data to Amazon S3
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-blob-storage-start
-   :end-before: .. term-azure-blob-storage-end
+   :start-after: .. term-amazon-s3-start
+   :end-before: .. term-amazon-s3-end
 
-.. destination-azure-blob-storage-important-start
-
-.. important:: Use this destination to send data from Amperity to Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
-
-.. destination-azure-blob-storage-important-end
-
-.. destination-azure-blob-storage-steps-to-send-start
+.. destination-amazon-s3-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-azure-blob-storage-get-details>`
-#. :ref:`Add destination <destination-azure-blob-storage-add-destination>`
-#. :ref:`Add data template <destination-azure-blob-storage-add-data-template>`
+#. :ref:`Get details <destination-amazon-s3-get-details>`
+#. :ref:`Add destination <destination-amazon-s3-add-destination>`
+#. :ref:`Add data template <destination-amazon-s3-add-data-template>`
 
-.. destination-azure-blob-storage-steps-to-send-end
+.. destination-amazon-s3-steps-to-send-end
 
 
-.. _destination-azure-blob-storage-get-details:
+.. _destination-amazon-s3-get-details:
 
 Get details
 ==================================================
 
 .. destination-amazon-s3-get-details-start
 
-Amperity can be configured to send data to |destination-name|. This may be done using :ref:`Azure Data Share (recommended) <destination-azure-blob-storage-azure-data-share>` or by using :ref:`Azure credentials <destination-azure-blob-storage-credentials>`.
+The |destination-name| destination requires the following configuration details:
 
-.. destination-amazon-s3-get-details-end
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-
-.. _destination-azure-blob-storage-azure-data-share:
-
-Use Azure Data Share
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-data-share-start
-   :end-before: .. term-azure-data-share-end
-
-.. destination-azure-blob-storage-azure-data-share-start
-
-Amperity prefers to send data to customer-managed cloud storage. This approach ensures that customers can:
-
-* Use security policies managed in Azure Data Share to manage access to data
-* Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
-* Directly troubleshoot incomplete or missing files
-
-Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
-
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
-
-.. destination-azure-blob-storage-azure-data-share-end
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The name of the S3 bucket to which Amperity will send data.
 
 
-.. _destination-azure-blob-storage-credentials:
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail two.
+          :align: left
+          :class: no-scaled-link
+     - For :ref:`cross-account role assumption <destination-amazon-s3-credentials-role-to-role>` you will need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
 
-Use credentials
---------------------------------------------------
+       .. note:: The values for the **Amperity Role ARN** and the **External ID** fields are provided automatically.
 
-.. destination-azure-blob-storage-credentials-start
+       .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-end
 
-|destination-name| requires the following configuration details:
+       .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-end
 
-#. The name of the container.
-#. The blob prefix.
-#. The credential details.
-
-   These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-
-   When Microsoft Azure is configured to use a shared access signature (SAS) to grant restricted access rights to Microsoft Azure storage resources, be sure to use the correct SAS token string for credentials within Amperity and that the SAS is assigned the following permissions within Microsoft Azure: READ, ADD, CREATE, WRITE, DELETE, and LIST.
-
-#. The public key to use for PGP encryption.
-
-.. destination-azure-blob-storage-credentials-end
+.. source-amazon-s3-get-details-end
 
 
-.. _destination-azure-blob-storage-add-destination:
+.. _destination-amazon-s3-credentials-role-to-role:
+
+Configure cross-account roles
+==================================================
+
+.. include:: ../../shared/amazon-s3.rst
+   :start-after: .. sources-amazon-s3-cross-account-roles-overview-start
+   :end-before: .. sources-amazon-s3-cross-account-roles-overview-end
+
+.. include:: ../../shared/amazon-s3.rst
+   :start-after: .. sources-amazon-s3-cross-account-roles-context-start
+   :end-before: .. sources-amazon-s3-cross-account-roles-context-end
+
+.. note::
+
+   .. include:: ../../shared/amazon-s3.rst
+      :start-after: .. sources-amazon-s3-cross-account-roles-setup-start
+      :end-before: .. sources-amazon-s3-cross-account-roles-setup-end
+
+.. include:: ../../shared/amazon-s3.rst
+   :start-after: .. sources-amazon-s3-aws-access-point-start
+   :end-before: .. sources-amazon-s3-aws-access-point-end
+
+**To configure an S3 bucket for cross-account role assumption**
+
+.. include:: ../../shared/amazon-s3.rst
+   :start-after: .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-start
+   :end-before: .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-end
+
+.. destination-amazon-s3-credentials-role-to-role-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-destinations-configure-start
+          :end-before: .. credentials-destinations-configure-end
+
+       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
+          :width: 500 px
+          :alt: Name, description, choose plugin.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-destinations-configure-options-start
+          :end-before: .. credentials-destinations-configure-options-end
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-end
+
+       .. image:: ../../images/mockup-credentials-add-01-settings-amazon-s3-role-to-role.png
+          :width: 360 px
+          :alt: Select the iam-role-to-role credential type.
+          :align: left
+          :class: no-scaled-link
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-end
+
+       .. image:: ../../images/mockup-credentials-add-01-settings-amazon-s3-role-to-role-all.png
+          :width: 360 px
+          :alt: Name, description, choose plugin.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-details-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-settings-details-end
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-end
+
+       .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-end
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step 4.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/amazon-s3.rst
+          :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
+          :end-before: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-end
+
+.. destination-amazon-s3-credentials-role-to-role-steps-end
+
+
+.. _destination-amazon-s3-add-destination:
 
 Add destination
 ==================================================
 
-.. destination-azure-blob-storage-add-destination-start
-
-Azure Blob Storage is a destination that may be configured directly from Amperity.
-
-.. destination-azure-blob-storage-add-destination-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-intro-all-start
+   :end-before: .. destinations-add-destinations-intro-all-end
 
 **To add a destination**
 
-.. destination-azure-blob-storage-add-destination-steps-start
+.. destination-amazon-s3-add-destination-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -160,40 +238,9 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       |destination-name| has the following settings:
-
-       * The name of the container.
-       * The blob prefix.
-       * Credential details. These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-       * The public key to use for PGP encryption.
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+     - .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-destinations-configure-already-configured-start
+          :end-before: .. credentials-destinations-configure-already-configured-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -205,15 +252,15 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-destination-settings-start
           :end-before: .. destinations-destination-settings-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
+       .. image:: ../../images/mockup-destinations-tab-add-03-settings-s3.png
           :width: 500 px
-          :alt: Settings for Azure Blob Storage.
+          :alt: Settings for Amazon S3.
           :align: left
           :class: no-scaled-link
 
        .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-azure-blob-storage-start
-          :end-before: .. destinations-destination-settings-azure-blob-storage-end
+          :start-after: .. destinations-destination-settings-amazon-s3-start
+          :end-before: .. destinations-destination-settings-amazon-s3-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -247,10 +294,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-azure-blob-storage-add-destination-steps-end
+.. destination-amazon-s3-add-destination-steps-end
 
 
-.. _destination-azure-blob-storage-add-data-template:
+.. _destination-amazon-s3-add-data-template:
 
 Add data template
 ==================================================
@@ -261,7 +308,7 @@ Add data template
 
 **To add a data template**
 
-.. destination-azure-blob-storage-add-data-template-steps-start
+.. destination-amazon-s3-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -350,10 +397,10 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-azure-blob-storage-add-data-template-steps-end
+.. destination-amazon-s3-add-data-template-steps-end
 
 
-.. _destination-azure-blob-storage-workflow-actions:
+.. _destination-amazon-s3-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -362,7 +409,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-azure-blob-storage-workflow-actions-start
+.. destination-amazon-s3-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -377,7 +424,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-one-a-start
           :end-before: .. workflow-actions-common-table-section-one-a-end
 
-       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
           :width: 500 px
           :alt: Review a notifications error.
           :align: left
@@ -398,7 +445,7 @@ Workflow actions
 
        .. image:: ../../images/mockups-workflow-failed.png
           :width: 500 px
-          :alt: The workflow tab, showing a workflow with errors.
+          :alt: The Workflow page, showing a workflow with errors.
           :align: left
           :class: no-scaled-link
 
@@ -411,7 +458,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-three-a-start
           :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+       .. image:: ../../images/workflow-actions-s3-generic-invalid-bucket-name.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -423,8 +470,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+       * :ref:`destination-amazon-s3-workflow-actions-invalid-bucket-name`
+       * :ref:`destination-amazon-s3-workflow-actions-invalid-credentials`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -436,7 +483,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-a-start
           :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+       .. image:: ../../images/workflow-actions-s3-generic-invalid-bucket-name-steps.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -446,10 +493,20 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-azure-blob-storage-workflow-actions-end
+.. destination-amazon-s3-workflow-actions-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+.. _destination-amazon-s3-workflow-actions-invalid-bucket-name:
+
+Invalid bucket name
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-s3-generic-incorrect-bucket-name-destination-start
+   :end-before: .. workflow-actions-s3-generic-incorrect-bucket-name-destination-end
+
+
+.. _destination-amazon-s3-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -457,29 +514,3 @@ Invalid credentials
 .. include:: ../../shared/workflow-actions.rst
    :start-after: .. workflow-actions-generic-invalid-credentials-start
    :end-before: .. workflow-actions-generic-invalid-credentials-end
-
-
-.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
-
-Invalid permissions
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-intro-start
-   :end-before: .. workflow-actions-azure-sas-intro-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-whatis-start
-   :end-before: .. workflow-actions-azure-sas-whatis-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
-   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-report-problem-start
-   :end-before: .. workflow-actions-azure-sas-report-problem-end
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-steps-start
-   :end-before: .. workflow-actions-azure-sas-steps-end

@@ -1,135 +1,135 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
-.. |destination-name| replace:: Azure Blob Storage
-.. |plugin-name| replace:: Azure Blob Storage
-.. |what-send| replace:: files
+.. |destination-name| replace:: Cordial
+.. |destination-api| replace:: Cordial API
+.. |plugin-name| replace:: Cordial
+.. |what-send| replace:: audience lists
 .. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "az"
-.. |azure-container-name| replace:: "Blob Storage"
-.. |azure-blob-prefix| replace:: "upload"
-.. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
+.. |filter-the-list| replace:: "cor"
+.. |credential-type| replace:: **cordial**
+.. |credential-details| replace:: the Cordial API key
 .. |data-template-name| replace:: |destination-name|
 .. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_azure_blob_storage|
-.. |channel-link| replace:: |campaign_azure_blob_storage|
+.. |sendto-link| replace:: |sendto_cordial|
+.. |channel-link| replace:: |campaign_cordial|
 
-
-.. meta::
-    :description lang=en:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Azure Blob Storage.
-
-.. meta::
-    :content class=swiftype name=title data-type=string:
-        Send data to Azure Blob Storage
 
 ==================================================
-Send data to Azure Blob Storage
+Send data to Cordial
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-blob-storage-start
-   :end-before: .. term-azure-blob-storage-end
+   :start-after: .. term-cordial-start
+   :end-before: .. term-cordial-end
 
-.. destination-azure-blob-storage-important-start
+.. destination-cordial-start
 
-.. important:: Use this destination to send data from Amperity to Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
+Use Amperity to manage contacts--attributes and list membership--in |destination-name| using the following REST APIs:
 
-.. destination-azure-blob-storage-important-end
+* |ext_cordial_api_account_contact_attributes| to create contact attributes. Attributes that do not exist in |destination-name| are added as custom contact attributes.
+* |ext_cordial_api_account_lists| to fetch, create, and clear account lists, to which contacts are associated. An account list is overwritten each time results are sent from Amperity. An email address is added when it is not already a contact, after which it is assigned the **subscribed** status. An email address that is already a contact will retain its assigned subscription status.
+* |ext_cordial_api_contact_imports| to import contacts to |destination-name|, and then associate contacts to the account list.
+* |ext_cordial_api_jobs| to monitor the import job for completion.
 
-.. destination-azure-blob-storage-steps-to-send-start
+Build a query or segment that contains the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
+
+.. destination-cordial-end
+
+.. destination-cordial-get-details-alternate-note-start
+
+.. note:: Amperity recommends using the |destination-api| to send |what-send| from Amperity to |destination-name|.
+
+   However, if you prefer to send a CSV or JSON file (one-time or recurring) instead of using the |destination-api| you may configure |ext_cordial_data_automations|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
+
+.. destination-cordial-get-details-alternate-note-end
+
+.. destination-cordial-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
-#. :ref:`Get details <destination-azure-blob-storage-get-details>`
-#. :ref:`Add destination <destination-azure-blob-storage-add-destination>`
-#. :ref:`Add data template <destination-azure-blob-storage-add-data-template>`
+#. :ref:`Get details <destination-cordial-get-details>`
+#. :ref:`Add destination <destination-cordial-add-destination>`
+#. :ref:`Add data template <destination-cordial-add-data-template>`
 
-.. destination-azure-blob-storage-steps-to-send-end
+.. destination-cordial-steps-to-send-end
 
 
-.. _destination-azure-blob-storage-get-details:
+.. _destination-cordial-get-details:
 
 Get details
 ==================================================
 
-.. destination-amazon-s3-get-details-start
-
-Amperity can be configured to send data to |destination-name|. This may be done using :ref:`Azure Data Share (recommended) <destination-azure-blob-storage-azure-data-share>` or by using :ref:`Azure credentials <destination-azure-blob-storage-credentials>`.
-
-.. destination-amazon-s3-get-details-end
-
-
-.. _destination-azure-blob-storage-azure-data-share:
-
-Use Azure Data Share
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-azure-data-share-start
-   :end-before: .. term-azure-data-share-end
-
-.. destination-azure-blob-storage-azure-data-share-start
-
-Amperity prefers to send data to customer-managed cloud storage. This approach ensures that customers can:
-
-* Use security policies managed in Azure Data Share to manage access to data
-* Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
-* Directly troubleshoot incomplete or missing files
-
-Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
-
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
-
-.. destination-azure-blob-storage-azure-data-share-end
-
-
-.. _destination-azure-blob-storage-credentials:
-
-Use credentials
---------------------------------------------------
-
-.. destination-azure-blob-storage-credentials-start
+.. destination-cordial-get-details-start
 
 |destination-name| requires the following configuration details:
 
-#. The name of the container.
-#. The blob prefix.
-#. The credential details.
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-   These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - A |destination-api| key and the URL for the |destination-name| API.
 
-   When Microsoft Azure is configured to use a shared access signature (SAS) to grant restricted access rights to Microsoft Azure storage resources, be sure to use the correct SAS token string for credentials within Amperity and that the SAS is assigned the following permissions within Microsoft Azure: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+       .. important:: Use the |ext_amperity_allowlist_ip_address| for Amperity to configure the allowlist for the |destination-api|.
 
-#. The public key to use for PGP encryption.
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The name of the contacts list.
 
-.. destination-azure-blob-storage-credentials-end
+       .. important:: The list name is configured as part of the data template.
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - The following REST API methods must be enabled:
+
+       ::
+
+           GET /accountcontractattributes
+           POST /accountcontractattributes
+
+           GET /accountlists
+           POST /accountlists
+           PUT /accountlists/{key}/clear
+
+           POST /contactimports
+
+           GET /jobs/{id}
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - A query or segment that returns the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes in |destination-name|.
+
+.. destination-cordial-get-details-end
 
 
-.. _destination-azure-blob-storage-add-destination:
+.. _destination-cordial-add-destination:
 
 Add destination
 ==================================================
 
-.. destination-azure-blob-storage-add-destination-start
-
-Azure Blob Storage is a destination that may be configured directly from Amperity.
-
-.. destination-azure-blob-storage-add-destination-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-add-destinations-intro-all-start
+   :end-before: .. destinations-add-destinations-intro-all-end
 
 **To add a destination**
 
-.. destination-azure-blob-storage-add-destination-steps-start
+.. destination-cordial-add-destination-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -186,10 +186,8 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        |destination-name| has the following settings:
 
-       * The name of the container.
-       * The blob prefix.
-       * Credential details. These vary depending on the chosen credential method: |ext_azure_config_connection_string|, |ext_azure_config_sas_token| token, or |ext_azure_storage_uri|.
-       * The public key to use for PGP encryption.
+       * The |destination-api| key.
+       * The URL for the |destination-name| API.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start
@@ -207,13 +205,9 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
           :width: 500 px
-          :alt: Settings for Azure Blob Storage.
+          :alt: Settings for Cordial.
           :align: left
           :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-azure-blob-storage-start
-          :end-before: .. destinations-destination-settings-azure-blob-storage-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -247,10 +241,10 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
-.. destination-azure-blob-storage-add-destination-steps-end
+.. destination-cordial-add-destination-steps-end
 
 
-.. _destination-azure-blob-storage-add-data-template:
+.. _destination-cordial-add-data-template:
 
 Add data template
 ==================================================
@@ -261,7 +255,7 @@ Add data template
 
 **To add a data template**
 
-.. destination-azure-blob-storage-add-data-template-steps-start
+.. destination-cordial-add-data-template-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -320,16 +314,6 @@ Add data template
           :start-after: .. destinations-data-template-verify-config-settings-start
           :end-before: .. destinations-data-template-verify-config-settings-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -350,10 +334,10 @@ Add data template
           :start-after: .. destinations-data-template-save-after-start
           :end-before: .. destinations-data-template-save-after-end
 
-.. destination-azure-blob-storage-add-data-template-steps-end
+.. destination-cordial-add-data-template-steps-end
 
 
-.. _destination-azure-blob-storage-workflow-actions:
+.. _destination-cordial-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -362,7 +346,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-azure-blob-storage-workflow-actions-start
+.. destination-cordial-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -411,7 +395,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-three-a-start
           :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+       .. image:: ../../images/workflow-actions-cordial-unique-list-name.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -423,8 +407,9 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+       * :ref:`destination-cordial-workflow-actions-invalid-credentials`
+       * :ref:`destination-cordial-workflow-actions-required-attributes-missing`
+       * :ref:`destination-cordial-workflow-actions-unique-list-name-required`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -436,7 +421,7 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-a-start
           :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+       .. image:: ../../images/workflow-actions-cordial-unique-list-name-steps.png
           :width: 300 px
           :alt: Choose a workflow action from the list of actions.
           :align: left
@@ -446,10 +431,10 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-azure-blob-storage-workflow-actions-end
+.. destination-cordial-workflow-actions-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+.. _destination-cordial-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -459,27 +444,73 @@ Invalid credentials
    :end-before: .. workflow-actions-generic-invalid-credentials-end
 
 
-.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
+.. _destination-cordial-workflow-actions-required-attributes-missing:
 
-Invalid permissions
+Required attributes are missing
 --------------------------------------------------
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-intro-start
-   :end-before: .. workflow-actions-azure-sas-intro-end
+.. destination-cordial-workflow-actions-required-attributes-missing-start
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-whatis-start
-   :end-before: .. workflow-actions-azure-sas-whatis-end
+|destination-name| will reject audiences when required attributes are missing.
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
-   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
+.. destination-cordial-workflow-actions-required-attributes-missing-end
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-report-problem-start
-   :end-before: .. workflow-actions-azure-sas-report-problem-end
+**For campaigns**
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-azure-sas-steps-start
-   :end-before: .. workflow-actions-azure-sas-steps-end
+.. destination-cordial-workflow-actions-required-attributes-missing-campaigns-steps-start
+
+To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the list of attributes is correct for each treatment group in this campaign that is sending data to |destination-name|.
+
+#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
+
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+
+   Update the attribute(s) in |destination-name| to no longer be required.
+
+   *or*
+
+   Add the missing attributes for each treatment group that is associated with this campaign.
+#. Open the **Campaigns** page, and then for each treatment group that is configured to send audiences to |destination-name|, edit the list of attributes to include all required attributes.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-cordial-workflow-actions-required-attributes-missing-campaigns-steps-start
+
+**For orchestrations**
+
+.. destination-cordial-workflow-actions-required-attributes-missing-orchestrations-steps-start
+
+To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the query used with this orchestration is returning all required attributes.
+
+#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
+
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+
+   Update the attribute(s) in |destination-name| to no longer be required.
+
+   *or*
+
+   Add the missing attributes to the results that are returned by the query that is associated with this orchestration.
+#. Open the **Queries** page, and then open the query used with this workflow. Update the query to return the list of attributes that are required by |destination-name|.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-cordial-workflow-actions-required-attributes-missing-orchestrations-steps-start
+
+
+.. _destination-cordial-workflow-actions-unique-list-name-required:
+
+Unique list name required
+--------------------------------------------------
+
+.. destination-cordial-workflow-actions-unique-list-name-required-start
+
+|destination-name| |ext_cordial_lists| must be unique.
+
+To resolve this error, verify that the name of the list is unique.
+
+#. Open the **Destinations** page, and then review the data template for the destination associated with this workflow error.
+#. Verify that the value of the **List Name** setting is a unique value within |destination-name|.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-cordial-workflow-actions-unique-list-name-required-end
