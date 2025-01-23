@@ -89,7 +89,7 @@ Amperity prefers to send data to customer-managed cloud storage. This approach e
 
 Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
 
-.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same process credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
+.. note:: If you have :ref:`already configured Azure Data Share for an Azure Blob Storage data source <source-azure-blob-storage-configure-azure-data-share>` you may use the same credential for this destination. If you have not configured Azure Data Share, ask your Amperity representative to help you with those configuration steps.
 
 .. destination-azure-blob-storage-azure-data-share-end
 
