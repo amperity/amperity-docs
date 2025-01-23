@@ -47,6 +47,9 @@ jobs:
       - run:
           name: Build Tooltips
           command: sphinx-build -b html --jobs auto -W amperity_help/source ./site-test/help/text
+      - run:
+          name: Build Contributing
+          command: sphinx-build -b html --jobs auto -W contributing/source ./site-test/contributing
 
 
 workflows:
