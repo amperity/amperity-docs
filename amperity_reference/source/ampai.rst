@@ -105,17 +105,17 @@ AmpAI supports two types of prompts for customization and iteration:
 
 #. **Production prompt**
 
-   The production prompt applies universally to all users and queries within AmpAI. Any changes to this prompt should be deliberate and well-tested using the prototype prompt.
+   The production prompt applies universally to all users and queries within AmpAI. Any changes to this prompt should be deliberate and well-tested using the draft prompt.
 
-#. **Prototype prompt**
+#. **Draft prompt**
 
-   The prototype prompt is a testing environment where changes can be made and evaluated without affecting all users. Changes to the prototype prompt only apply to your specific instance of AmpAI and not to any other users.
+   The draft prompt is a testing environment where changes can be made and evaluated without affecting all users. Changes to the draft prompt only apply to your specific instance of AmpAI and not to any other users.
 
-   Use the prototype prompt to test modifications until the changes are ready for deployment.
+   Use the draft prompt to test modifications until the changes are ready for deployment.
 
-   Click "Reset" to revert the prototype prompt to the current version of the production prompt.
+   Click "Revert prompt" to revert the draft prompt to the current version of the production prompt.
 
-   Click "Activate" to update the production prompt to match the current version of the prototype prompt. This will make the updates available to all users. 
+   Click "Activate draft" to update the production prompt to match the current version of the draft prompt. This will make the updates available to all users. 
 
 To maximize the effectiveness of custom prompts:
 
