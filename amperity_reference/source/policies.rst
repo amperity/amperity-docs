@@ -164,11 +164,12 @@ Policy options
 
 The following policy options are available:
 
-* :ref:`Allow API key admin <policies-api-key-administrator>`
-* :ref:`Allow Profile API admin <policies-profile-api-administrator>`
-* :ref:`Allow sandbox admin <policies-sandbox-administrator>`
+* :ref:`Allow API key administration <policies-api-key-administrator>`
+* :ref:`Allow Profile API administration <policies-profile-api-administrator>`
+* :ref:`Allow sandbox administration <policies-sandbox-administrator>`
 * :ref:`Allow source data deletion <policies-allow-source-data-deletion>`
-* :ref:`Allow user admin <policies-allow-user-administration>`
+* :ref:`Allow user administration <policies-allow-user-administration>`
+* :ref:`Restrict AI Assistant access <policies-option-restrict-ai-assistant>`
 * :ref:`Restrict data exports <policies-option-restrict-data-exports>`
 * :ref:`Restrict download access <policies-option-restrict-downloads>`
 * :ref:`Restrict PII access <policies-option-restrict-pii>`
@@ -185,7 +186,7 @@ The following policy options are available:
 
 .. _policies-api-key-administrator:
 
-Allow API key admin
+Allow API key administration
 --------------------------------------------------
 
 .. policies-api-key-administrator-start
@@ -197,7 +198,7 @@ The **Allow API key administration** policy allows full access to managing the A
 
 .. _policies-profile-api-administrator:
 
-Allow Profile API admin
+Allow Profile API administration
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
@@ -207,7 +208,7 @@ Allow Profile API admin
 
 .. _policies-sandbox-administrator:
 
-Allow sandbox admin
+Allow sandbox administration
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
@@ -233,14 +234,26 @@ The **Allow source data deletion** policy may be assigned to a **DataGrid Operat
 
 .. _policies-allow-user-administration:
 
-Allow user admin
+Allow user administration
 --------------------------------------------------
 
 .. policies-allow-user-administration-start
 
-The **Allow user administration** policy may be assigned to users to enable access to the **Users and Activity** page and :ref:`manage users <settings-users>`, :ref:`resource groups <settings-security-resource-groups>`, and :ref:`API keys <api-keys>`.
+The **Allow user administration** policy may be assigned to users to enable access to the :ref:`Users settings tab <policies-allowed-actions-settings-users>`, the :ref:`Security settings tab (for resource groups) <policies-allowed-actions-settings-security>`, and the :ref:`Activity log settings tab <policies-allowed-actions-settings-activity-log>`.
 
 .. policies-allow-user-administration-end
+
+
+.. _policies-option-restrict-ai-assistant:
+
+Restrict AI Assistant access
+--------------------------------------------------
+
+.. policies-option-restrict-data-exports-start
+
+The **Restrict AI Assistant access** policy option prevents users from interacting with **AmpAI** features on the **Queries** page.
+
+.. policies-option-restrict-data-exports-end
 
 
 .. _policies-option-restrict-data-exports:
@@ -282,7 +295,7 @@ This option may only be assigned to the **AmpIQ User** and **Amp360 User** polic
 
 .. policies-option-restrict-pii-context-start
 
-Users of Amperity who are assigned the **AmpIQ User** and/or **Amp360 User** policies *along with* the :ref:`Restrict PII access <policies-option-restrict-pii>` policy option are prevented from viewing PII when that data was marked as PII in the database table.
+Users of Amperity who are assigned the **AmpIQ User** and **Amp360 User** policies *along with* the :ref:`Restrict PII access <policies-option-restrict-pii>` policy option are prevented from viewing PII when that data was marked as PII in the database table.
 
 When the **PII** checkbox is selected, the following locations will not show PII values to users who do not have permission to view PII data:
 
@@ -307,6 +320,8 @@ Restrict upload access
 .. policies-option-restrict-upload-access-start
 
 The **Restrict upload access** policy option prevents users from uploading files to the **Customer 360**, **Queries**, or **Segments** pages.
+
+This option may only be assigned to the **AmpIQ User** and **Amp360 User** policies.
 
 .. policies-option-restrict-upload-access-end
 
@@ -382,7 +397,7 @@ Allowed actions
 
 .. policies-allowed-actions-start
 
-The following sections describe the set of actions that may be assigned to users of Amperity. These actions are grouped by page (:ref:`Sources <policies-allowed-actions-sources>`, :ref:`Stitch <policies-allowed-actions-stitch>`, :ref:`Customer 360 <policies-allowed-actions-databases>`, :ref:`Queries <policies-allowed-actions-queries>`, :ref:`Segments <policies-allowed-actions-segments>`, :ref:`Campaigns <policies-allowed-actions-campaigns>`, :ref:`Destinations <policies-allowed-actions-destinations>`, :ref:`Workflows <policies-allowed-actions-workflows>`, :ref:`Users & Activity <policies-allowed-actions-users-and-activity>`, and :ref:`Credentials <policies-allowed-actions-credentials>`) with additional sections for the :ref:`Data Explorer <policies-allowed-actions-data-explorer>` and :ref:`Sandboxes <policies-allowed-actions-sandboxes>`.
+The following sections describe the set of actions that may be assigned to users of Amperity. These actions are grouped by page (:ref:`Sources <policies-allowed-actions-sources>`, :ref:`Stitch <policies-allowed-actions-stitch>`, :ref:`Customer 360 <policies-allowed-actions-databases>`, :ref:`Queries <policies-allowed-actions-queries>`, :ref:`Segments <policies-allowed-actions-segments>`, :ref:`Campaigns <policies-allowed-actions-campaigns>`, :ref:`Destinations <policies-allowed-actions-destinations>`, :ref:`Workflows <policies-allowed-actions-workflows>`, and :ref:`Credentials <policies-allowed-actions-settings>`) with additional sections for the :ref:`Data Explorer <policies-allowed-actions-data-explorer>` and :ref:`Sandboxes <policies-allowed-actions-sandboxes>`.
 
 .. policies-allowed-actions-end
 
@@ -400,25 +415,29 @@ The following sections describe the set of actions that may be assigned to users
         - Allowed.
         - A user assigned to this policy can perform this action.
 
-      * - |allowed-read-only-actions-icon| 
+      * - |allowed-read-only-actions-icon|
         - Read-only.
         - A user assigned to this policy has read-only access.
 
-      * - |no-download-policy| 
+      * - |no-download-policy|
         - Optional.
         - This action may be restricted using the **Restrict download access** add-on policy.
 
-      * - |no-upload-policy| 
+      * - |no-upload-policy|
         - Optional.
         - This action may be restricted using the **Restrict upload access** add-on policy.
 
-      * - |polino| 
+      * - |polino|
         - Optional.
         - This action is allowed, but visibility of data may be restricted using the **Restrict PII access** add-on policy.
 
-      * - |polius| 
+      * - |polius|
         - Optional.
         - This action is allowed when a user is assigned the **User Administration** add-on policy.
+
+      * - |poliky|
+        - Optional.
+        - This action is allowed when a user is assigned the **API key administration** add-on policy or the **Profile API administration** add-on policy.
 
       * - |policy-sandbox-allow-admin|
         - Optional.
@@ -480,7 +499,7 @@ The following table lists the actions that are enabled within the **Sources** pa
      - 
      - |policy|
 
-   * - **COURIER GROUPS**
+   * - **Courier groups**
      - 
      - 
      - 
@@ -522,7 +541,7 @@ The following table lists the actions that are enabled within the **Sources** pa
      - |policy|
      - |policy|
 
-   * - **COURIERS**
+   * - **Couriers**
      - 
      - 
      - 
@@ -571,7 +590,7 @@ The following table lists the actions that are enabled within the **Sources** pa
      - |policy|
 
 
-   * - **DOMAIN TABLES**
+   * - **Domain tables**
      - 
      - 
      - 
@@ -626,7 +645,7 @@ The following table lists the actions that are enabled within the **Sources** pa
      - |policy|
 
 
-   * - **FEEDS**
+   * - **Feeds**
      - 
      - 
      - 
@@ -669,7 +688,7 @@ The following table lists the actions that are enabled within the **Sources** pa
      - |policy|
 
 
-   * - **INGEST SQL**
+   * - **Ingest SQL**
      - 
      - 
      - 
@@ -701,7 +720,7 @@ The following table lists the actions that are enabled within the **Sources** pa
      - |policy|
 
 
-   * - **NOTIFICATIONS**
+   * - **Notifications**
      - 
      - 
      - 
@@ -719,7 +738,57 @@ The following table lists the actions that are enabled within the **Sources** pa
      - |policy|
      - |policy|
 
-   * - **WORKFLOWS**
+
+   * - **Shares**
+     - 
+     - 
+     - 
+     - 
+
+   * - Add bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Delete bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Edit bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Rename bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Sync bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Upload credential
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - View bridges
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+
+   * - **Workflows**
      - 
      - 
      - 
@@ -775,7 +844,7 @@ The following table shows which policies enable user actions within the **Stitch
      - |policy|
      - |policy|
 
-   * - **STITCH**
+   * - **Stitch**
      - 
      - 
      - 
@@ -823,7 +892,7 @@ The following table shows which policies enable user actions within the **Stitch
      - 
      - |policy|
 
-   * - **NOTIFICATIONS**
+   * - **Notifications**
      - 
      - 
      - 
@@ -885,7 +954,7 @@ The following table shows which policies enable user actions within the **Custom
      - |policy|
      - |policy|
 
-   * - **DATABASE EDITOR**
+   * - **Database Editor**
      - 
      - 
      - 
@@ -945,7 +1014,7 @@ The following table shows which policies enable user actions within the **Custom
      - |policy|
 
 
-   * - **DATABASES**
+   * - **Databases**
      - 
      - 
      - 
@@ -1006,7 +1075,7 @@ The following table shows which policies enable user actions within the **Custom
      - |policy|
 
 
-   * - **DATA EXPORTS**
+   * - **Data exports**
      - 
      - 
      - 
@@ -1049,7 +1118,7 @@ The following table shows which policies enable user actions within the **Custom
      - |policy|
 
 
-   * - **NOTIFICATIONS**
+   * - **Notifications**
      - 
      - 
      - 
@@ -1099,7 +1168,7 @@ The following table shows which policies enable user actions within the **Querie
      - |policy|
      - |policy|
 
-   * - **QUERIES**
+   * - **Queries**
      - 
      - 
      - 
@@ -1154,7 +1223,7 @@ The following table shows which policies enable user actions within the **Querie
      - |policy|
 
 
-   * - **QUERY EDITOR**
+   * - **Query Editor**
      - 
      - 
      - 
@@ -1287,7 +1356,7 @@ The following table shows which policies enable user actions within the **Querie
      - |policy|
 
 
-   * - **NOTIFICATIONS**
+   * - **Notifications**
      - 
      - 
      - 
@@ -1337,7 +1406,7 @@ The following table shows which policies enable user actions within the **Segmen
      - |policy|
      - |policy|
 
-   * - **SEGMENTS**
+   * - **Segments**
      - 
      - 
      - 
@@ -1420,7 +1489,8 @@ The following table shows which policies enable user actions within the **Segmen
      - |policy|
      - |policy|
 
-   * - **SEGMENT EDITOR**
+
+   * - **Segment Editor**
      - 
      - 
      - 
@@ -1512,7 +1582,8 @@ The following table shows which policies enable user actions within the **Campai
      - |policy|
      - |policy|
 
-   * - **CAMPAIGNS**
+
+   * - **Campaigns**
      - 
      - 
      - 
@@ -1590,7 +1661,8 @@ The following table shows which policies enable user actions within the **Campai
      - |poliro|
      - |policy|
 
-   * - **CAMPAIGN EDITOR**
+
+   * - **Campaign Editor**
      - 
      - 
      - 
@@ -1651,7 +1723,7 @@ The following table shows which policies enable user actions within the **Campai
      - |policy|
 
 
-   * - **NOTIFICATIONS**
+   * - **Notifications**
      - 
      - 
      - 
@@ -1701,7 +1773,8 @@ The following table shows which policies enable user actions within the **Destin
      - |policy|
      - |policy|
 
-   * - **DESTINATIONS**
+
+   * - **Destinations**
      - 
      - 
      - 
@@ -1743,7 +1816,8 @@ The following table shows which policies enable user actions within the **Destin
      - |policy|
      - |policy|
 
-   * - **DATA TEMPLATES**
+
+   * - **Data templates**
      - 
      - 
      - 
@@ -1785,7 +1859,8 @@ The following table shows which policies enable user actions within the **Destin
      - |policy|
      - |policy|
 
-   * - **ORCHESTRATIONS**
+
+   * - **Orchestrations**
      - 
      - 
      - 
@@ -1846,7 +1921,7 @@ The following table shows which policies enable user actions within the **Destin
      - |policy|
 
 
-   * - **ORCHESTRATION GROUPS**
+   * - **Orchestration groups**
      - 
      - 
      - 
@@ -1883,7 +1958,7 @@ The following table shows which policies enable user actions within the **Destin
      - |policy|
 
 
-   * - **PROFILE API**
+   * - **Profile API**
      - 
      - 
      - 
@@ -1892,47 +1967,96 @@ The following table shows which policies enable user actions within the **Destin
    * - Add endpoint
      - 
      - 
-     - 
+     - |poliky|
      - |policy|
 
    * - Delete endpoint
      - 
      - 
-     - 
+     - |poliky|
      - |policy|
 
    * - Edit endpoint
      - 
      - 
-     - 
+     - |poliky|
      - |policy|
 
    * - Run endpoint
      - 
      - 
-     - 
+     - |poliky|
      - |policy|
 
    * - Set refresh schedule
      - 
      - 
-     - 
+     - |poliky|
      - |policy|
 
    * - View associated query
-     - |policy|
+     - 
      - 
      - |policy|
      - |policy|
 
    * - View Profile API endpoints
-     - |policy|
+     - 
      - 
      - |policy|
      - |policy|
 
 
-   * - **NOTIFICATIONS**
+   * - **Shares**
+     - 
+     - 
+     - 
+     - 
+
+   * - Add bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Delete bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Edit bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Rename bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Sync bridge
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Upload credential
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - View bridges
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+
+   * - **Notifications**
      - 
      - 
      - 
@@ -1953,18 +2077,18 @@ The following table shows which policies enable user actions within the **Destin
 .. policies-allowed-actions-destinations-table-end
 
 
-.. _policies-allowed-actions-users-and-activity:
+.. _policies-allowed-actions-settings:
 
-Users & Activity
+Settings
 --------------------------------------------------
 
-.. policies-allowed-actions-users-and-activity-start
+.. policies-allowed-actions-settings-start
 
-The following table shows which policies enable user actions within the **Users & Activity** page. (The |policy| icon indicates an allowed action.)
+The following table shows which policies enable user actions within the **Settings** page. (The |policy| icon indicates an allowed action.)
 
-.. policies-allowed-actions-users-and-activity-end
+.. policies-allowed-actions-settings-end
 
-.. policies-allowed-actions-users-and-activity-table-start
+.. policies-allowed-actions-settings-table-start
 
 .. list-table::
    :widths: 40 15 15 15 15
@@ -1976,37 +2100,425 @@ The following table shows which policies enable user actions within the **Users 
      - DataGrid Operator
      - DataGrid Admin
 
-   * - View **Users & Activity** page
+   * - View **Settings** page
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View :ref:`Activity log <policies-allowed-actions-settings-activity-log>` tab
      - |polius|
      - |polius|
      - |polius|
      - |policy|
 
-   * - **API KEYS**
+   * - View :ref:`AmpAI <policies-allowed-actions-settings-ampai>` tab
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View :ref:`Credentials <policies-allowed-actions-settings-credentials>` tab
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View :ref:`Integrations <policies-allowed-actions-settings-integrations>` tab
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View :ref:`Sandboxes <policies-allowed-actions-settings-sandboxes>` tab
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View :ref:`Security <policies-allowed-actions-settings-security>` tab
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View :ref:`Users <policies-allowed-actions-settings-users>` tab
+     - |polius|
+     - |polius|
+     - |polius|
+     - |policy|
+
+.. policies-allowed-actions-settings-table-end
+
+
+.. _policies-allowed-actions-settings-activity-log:
+
+Activity log tab
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. policies-allowed-actions-settings-activity-log-start
+
+The **Activity log** tab shows records of :ref:`all user activity that occured in your tenant <settings-user-activity-logs>`.
+
+.. policies-allowed-actions-settings-activity-log-end
+
+.. policies-allowed-actions-settings-activity-log-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - **Activity log**
+     - 
+     - 
+     - 
+     - 
+
+   * - Download activity logs
+     - |polius|
+     - |polius|
+     - |polius|
+     - |policy|
+
+   * - View activity logs
+     - |polius|
+     - |polius|
+     - |polius|
+     - |policy|
+
+.. policies-allowed-actions-settings-activity-log-table-end
+
+
+.. _policies-allowed-actions-settings-ampai:
+
+AmpAI tab
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. policies-allowed-actions-settings-ampai-start
+
+The **AmpAI** tab has configuration settings for AmpAI features, along with a record of conversations users in your tenant have had with AmpAI features.
+
+.. policies-allowed-actions-settings-ampai-end
+
+.. policies-allowed-actions-settings-ampai-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - **AmpAI**
+     - 
+     - 
+     - 
+     - 
+
+   * - Enable AmpAI
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - Disable AmpAI
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View AI conversations
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+.. policies-allowed-actions-settings-ampai-table-end
+
+
+.. _policies-allowed-actions-settings-credentials:
+
+Credentials tab
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. policies-allowed-actions-settings-credentials-start
+
+The **Credentials** tab shows a list of credentials that have been configured for sources and destinations. Credentials may be configured directly from the **Credentials** tab *or* may be configured as a step when adding sources and destinations.
+
+.. policies-allowed-actions-settings-credentials-end
+
+.. policies-allowed-actions-settings-credentials-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - **Credentials**
+     - 
+     - 
+     - 
+     - 
+
+   * - Add credential
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - Delete credential
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - Edit credential
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+   * - View credential
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+.. policies-allowed-actions-settings-credentials-table-end
+
+
+.. _policies-allowed-actions-settings-integrations:
+
+Integrations tab
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. policies-allowed-actions-settings-integrations-start
+
+The **Integrations** tab has the following integrations:
+
+* Slack. You can connect a Slack workspace to Amperity, after which :ref:`workflow alerts can be sent to configured channels <settings-integration-slack>`.
+
+.. policies-allowed-actions-settings-integrations-end
+
+.. policies-allowed-actions-settings-integrations-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - **Integrations**
+     - 
+     - 
+     - 
+     - 
+
+   * - Connect Slack workspace
+     - 
+     - 
+     - |policy|
+     - |policy|
+
+.. policies-allowed-actions-settings-integrations-table-end
+
+
+.. _policies-allowed-actions-settings-sandboxes:
+
+Sandboxes tab
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. policies-allowed-actions-settings-sandboxes-start
+
+The **Sandboxes** tab is available when a user is assigned the **Allow sandbox administration** add-on policy.
+
+.. important:: Most sandbox activity :ref:`occurs within a sandbox <policies-allowed-actions-sandboxes>`.
+
+.. policies-allowed-actions-settings-sandboxes-end
+
+.. policies-allowed-actions-settings-sandboxes-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - **Sandboxes**
+     - 
+     - 
+     - 
+     - 
+
+   * - Create sandbox
+     - 
+     - 
+     - |policy-sandbox-allow-admin|
+     - |policy-sandbox-allow-admin|
+
+.. policies-allowed-actions-settings-sandboxes-table-end
+
+
+.. _policies-allowed-actions-settings-security:
+
+Security tab
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. policies-allowed-actions-settings-security-start
+
+The **Security** tab has the following settings groups:
+
+* API keys. Available when a user is assigned the **Allow API key administration** add-on policy.
+* Resource groups. Available to users who are assigned the **DataGrid Operator** or **Datagrid Administrator** policies.
+* SSO group mappings. Available when a user is assigned the **Allow user administration** add-on policy.
+
+.. policies-allowed-actions-settings-security-end
+
+.. policies-allowed-actions-settings-security-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - **API keys**
      - 
      - 
      - 
      - 
 
    * - Generate API token
-     - |polius|
-     - |polius|
-     - |polius|
+     - 
+     - 
+     - |poliky|
      - |policy|
 
    * - Regenerate API token
-     - |polius|
-     - |polius|
-     - |polius|
+     - 
+     - 
+     - |poliky|
      - |policy|
 
    * - View API tokens
-     - |polius|
-     - |polius|
+     - 
+     - 
+     - |poliky|
+     - |policy|
+
+   * - **Resource groups**
+     - 
+     - 
+     - 
+     - 
+
+   * - Add resource group
+     - 
+     - 
      - |polius|
      - |policy|
 
-   * - **MANAGE USERS**
+   * - Delete resource group
+     - 
+     - 
+     - |polius|
+     - |policy|
+
+   * - Edit resource group
+     - 
+     - 
+     - |polius|
+     - |policy|
+
+   * - View resource groups
+     - 
+     - 
+     - |poliro|
+     - |policy|
+
+   * - **SSO group mapping**
+     - 
+     - 
+     - 
+     - 
+
+   * - Add SSO group mapping
+     - 
+     - 
+     - |polius|
+     - |policy|
+
+   * - Delete SSO group mapping
+     - 
+     - 
+     - |polius|
+     - |policy|
+
+   * - Edit SSO group mapping
+     - 
+     - 
+     - |polius|
+     - |policy|
+
+   * - View SSO group mapping
+     - 
+     - 
+     - |polius|
+     - |policy|
+
+.. policies-allowed-actions-settings-security-table-end
+
+
+.. _policies-allowed-actions-settings-users:
+
+Users tab
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. policies-allowed-actions-settings-users-start
+
+The **Users** tab is available when a user is assigned the **Allow user administration** add-on policy. (This add-on policy also allows access to user activity logs.)
+
+.. policies-allowed-actions-settings-users-end
+
+.. policies-allowed-actions-settings-users-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - **Manage users**
      - 
      - 
      - 
@@ -2048,7 +2560,7 @@ The following table shows which policies enable user actions within the **Users 
      - |polius|
      - |policy|
 
-.. policies-allowed-actions-users-and-activity-table-end
+.. policies-allowed-actions-settings-users-table-end
 
 
 .. _policies-allowed-actions-workflows:
@@ -2080,7 +2592,7 @@ The following table shows which policies enable user actions within the **Workfl
      - |policy|
      - |policy|
 
-   * - **WORKFLOWS**
+   * - **Workflows**
      - 
      - 
      - 
@@ -2105,68 +2617,6 @@ The following table shows which policies enable user actions within the **Workfl
      - |policy|
 
 .. policies-allowed-actions-workflows-table-end
-
-
-.. _policies-allowed-actions-credentials:
-
-Credentials
---------------------------------------------------
-
-.. policies-allowed-actions-credentials-start
-
-The following table shows which policies enable user actions within the **Credentials** page.
-
-.. policies-allowed-actions-credentials-end
-
-.. policies-allowed-actions-credentials-table-start
-
-.. list-table::
-   :widths: 40 15 15 15 15
-   :header-rows: 1
-
-   * - Actions
-     - Amp360 User
-     - AmpIQ User
-     - DataGrid Operator
-     - DataGrid Admin
-
-   * - View **Credentials** page
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - **CREDENTIALS**
-     - 
-     - 
-     - 
-     - 
-
-   * - Add credential
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Delete credential
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Edit credential
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - View credential
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-.. policies-allowed-actions-credentials-table-end
 
 
 .. _policies-allowed-actions-data-explorer:

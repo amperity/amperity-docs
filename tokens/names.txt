@@ -101,6 +101,14 @@
    <i class="fa-solid fa-users" style="color: #317a1c;"></i>
 
 
+
+.. policy table for API key management
+
+.. |poliky| raw:: html
+
+   <i class="fa-solid fa-key" style="color: #317a1c;"></i>
+
+
 .. for inline reference to allowed read-only actions
 
 .. |allowed-read-only-actions-icon| raw:: html
