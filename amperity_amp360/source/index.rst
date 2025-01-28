@@ -18,7 +18,6 @@ About Amperity
 ==================================================
 
 
-
 .. _index-review-id-resolution:
 
 Review ID resolution
