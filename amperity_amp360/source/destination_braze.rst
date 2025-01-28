@@ -79,7 +79,7 @@ Customer profiles in |destination-name| are represented by a set of `user profil
 
 .. admonition:: What about email and phone subscription status?
 
-   |destination-name| uses two fields to track email and phone subscription status: **email_subscribe** and **push_subscribe**. The values for these fields are not modified by Amperity *even when the fields are sent from Amperity with the correct values*. Braze is your source of truth for customer consent and for tracking email and phone subscription status.
+   |destination-name| uses two fields to track email and phone subscription status: **email_subscribe** and **push_subscribe**. Braze should be your source of truth for customer consent and for tracking email and phone subscription status.
 
 .. destination-braze-profile-attributes-admonition-consent-status-end
 
@@ -154,7 +154,7 @@ The following table describes the default `user profile fields <https://www.braz
 
 .. destination-braze-profile-attributes-note-start
 
-.. note:: Default user profile fields also exist for **alias_name**, **alias_label**, **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **facebook**, **language**, **marked_email_as_spam_at**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
+.. note:: Default user profile fields also exist for **alias_name**, **alias_label**, **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **email_subscribe**, **facebook**, **language**, **marked_email_as_spam_at**, **push_subscribe**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
 
    These fields are not commonly sent to |destination-name| from Amperity, but if your brand chooses to update these user profile fields from Amperity, be sure to use the exact name of the default field name, send the correct value (or values), and to use lowercase.
 

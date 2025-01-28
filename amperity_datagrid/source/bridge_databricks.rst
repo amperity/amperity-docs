@@ -69,9 +69,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :alt: Requirement 1.
           :align: left
           :class: no-scaled-link
-     - The user who will create a recipient for sharing data from Databricks to Amperity must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
-
-       .. note:: If a Databricks notebook is used to create the recipient the cluster must use Databricks Runtime 11.3 LTS (or higher) and must be running in shared mode or single-cluster access mode.
+     - Enable Delta Sharing on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -79,12 +77,22 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :alt: Requirement 2.
           :align: left
           :class: no-scaled-link
-     - The user who will create a share in the Unity Catalog metastore must have `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| permissions in Databricks.
+     - The user who will create a recipient for sharing data from Databricks to Amperity must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
+
+       .. note:: If a Databricks notebook is used to create the recipient the cluster must use Databricks Runtime 11.3 LTS (or higher) and must be running in shared mode or single-cluster access mode.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 3.
+          :align: left
+          :class: no-scaled-link
+     - The user who will create a share in the Unity Catalog metastore must have `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| permissions in Databricks.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 4.
           :align: left
           :class: no-scaled-link
 
@@ -97,7 +105,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Requirement 4.
+          :alt: Requirement 5.
           :align: left
           :class: no-scaled-link
 
@@ -113,7 +121,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Requirement 5.
+          :alt: Requirement 6.
           :align: left
           :class: no-scaled-link
 
@@ -129,7 +137,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Requirement 6.
+          :alt: Requirement 7.
           :align: left
           :class: no-scaled-link
      - For bridges that connect to Databricks environments running in Microsoft Azure and are using storage account firewalls, the :ref:`outbound subnet IDs <bridge-databricks-sync-with-amperity-subnet-ids>` for Amperity Bridge must be configured in Microsoft Azure using the Azure CLI.

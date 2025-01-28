@@ -1421,7 +1421,7 @@ Assign a unique separation key to each primary key to prevent clusters from bein
       * - etc.
         - ...
 
-When **sk-acme** and **sk-acmedulxe** appear in the same cluster, they will be scored as non-matching and the records will be separated.
+When **sk-brand-acme** and **sk-brand-acme-deluxe** appear in the same cluster, they will be scored as non-matching and the records will be separated.
 
 * Records with the same brand share a separation key, but those values are guaranteed to be different because they are primary keys.
 * Records with different brands will have no non-**NULL** separation keys in common and will use the standard classifier.
