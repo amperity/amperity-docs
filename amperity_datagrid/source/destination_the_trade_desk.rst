@@ -47,7 +47,7 @@ Send data to The Trade Desk
       :start-after: .. term-unified-id-20-start
       :end-before: .. term-unified-id-20-end
 
-   |destination-name| supports using `UID 2.0 <https://unifiedid.com/docs/intro>`__ |ext_link| to help establish your customers' identifies without using third-party data. UID 2.0 enables publisher websites, mobile apps, and Connected TV (CTV) apps to monetize through programmatic workflows, while offering user transparency and privacy controls that meet local market requirements.
+   |destination-name| supports using `UID 2.0 <https://unifiedid.com/docs/intro>`__ |ext_link| to help establish your customers' identities without using third-party data. UID 2.0 enables publisher websites, mobile apps, and Connected TV (CTV) apps to monetize through programmatic workflows, while offering user transparency and privacy controls that meet local market requirements.
 
 .. destination-the-trade-desk-whatis-20-end
 
