@@ -86,6 +86,8 @@ To follow-along with this quick start guide you will need:
 
    .. note:: More time may be required if you want to sync data from your Databricks account instead of using Amperity sample data.
 
+      To sync data from a Databricks account running in Microsoft Azure and are using storage account firewalls, an outbound subnet ID must be configured to allow Amperity Bridge to access your Databricks account. 
+
 #. Source data. Amperity provides a set of sample data that can be used to complete the steps in this guide. You may provide your own data if you have a Databricks account with customer profile data *and* permissions to configure your Databricks account to accept Delta Sharing with Amperity from the Databricks Unity Catalog.
 
    .. note:: Amperity sample data contains ~10 million customer records. Additional time may be necessary for loading and processing data if you choose to use your own data instead of Amperity sample data assets, depending on the number of records.
