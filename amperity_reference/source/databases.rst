@@ -1732,11 +1732,19 @@ Enable table versioning
 
 A version is created for all tables every time the customer 360 database is run, regardless of database run type (express, normal, or full). The **amperity_version** column is added to all versioned tables. The typical frequency at which the customer 360 database is run is "once per day", but this is not always the case.
 
-.. important:: The maximum number of versions is 10 and must have been created within the last 14 days.
-
-   Changes to columns within a table that is enabled for table versioning changes the schema and will cause incompatible versions to be dropped. To avoid this, add columns to the end of the table.
-
 .. databases-database-howto-enable-table-versioning-end
+
+.. databases-database-howto-enable-table-versioning-important-start
+
+.. important:: The maximum number of versions is 10. A version must have been created within the last 14 days.
+
+.. databases-database-howto-enable-table-versioning-important-end
+
+.. databases-database-howto-enable-table-versioning-caution-start
+
+.. caution:: Changes to columns within a table that is enabled for table versioning changes the schema and will cause incompatible versions to be dropped. To avoid this, add columns to the end of the table.
+
+.. databases-database-howto-enable-table-versioning-caution-end
 
 **To enable table versioning**
 

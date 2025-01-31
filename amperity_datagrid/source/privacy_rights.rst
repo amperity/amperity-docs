@@ -130,19 +130,19 @@ The following sections describe the individual steps within the workflow that oc
 
        When the DSAR request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
 
-       .. admonition:: When a record is matched in Unified Coalesced
+       .. admonition:: When a record is matched in Unified Compliance
 
           For the current Stitch run, associated records are visible in:
 
           * **Unified Coalesced**
           * Other database tables
-          * Domain tables
+          * Domain tables, including custom domain tables
 
           For all future Stitch runs, associated records are visible in:
 
           * **Unified Coalesced**
           * Other database tables
-          * Domain tables
+          * Domain tables, including custom domain tables
 
 .. privacy-rights-workflows-dsar-end
 
@@ -221,7 +221,7 @@ The following sections describe the individual steps within the workflow that oc
 
        When the delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
 
-       .. admonition:: When a record is matched in Unified Coalesced
+       .. admonition:: When a record is matched in Unified Compliance
 
           For the current Stitch run, associated records are visible in:
 
@@ -272,7 +272,7 @@ The following sections describe the individual steps within the workflow that oc
 
        The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
 
-       .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a CDT will find all corresponding records in source domain tables.
+       .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a custom domain table will find all corresponding records in source domain tables.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -311,19 +311,20 @@ The following sections describe the individual steps within the workflow that oc
 
        When the delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
 
-       .. admonition:: When a record is matched in Unified Coalesced
+       .. admonition:: When a record is matched in Unified Compliance
 
           For the current Stitch run, associated records are visible in:
 
-          * **Unified Coalesced**
           * Other database tables
           * Domain tables, with redaction
+          * Custom domain tables
 
           For all future Stitch runs, associated records are visible in:
 
           * **Unified Coalesced**, with redaction
           * Other database tables, with redaction
           * Domain tables, with redaction
+          * Custom domain tables, with redaction
 
        .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
 
@@ -507,7 +508,7 @@ In some cases a compliance request cannot directly match to source table rows. T
 
 **To configure source keys**
 
-For each CDT with PII data on the **Sources** page do the following:
+For each custom domain table with PII data on the **Sources** page do the following:
 
 #. Pick a column to tag with your source key. In most cases you want this value to be unique to a given record in a custom domain table and its upstream source table record. **pk** columns are often a good option if they are selected from the upstream source table.
 #. Pick a source key semantic, these follow the pattern **source/<source key name>**. For example: when tagging the primary key value from **Table_A** you might use **source/table-a-pk**.
@@ -529,9 +530,23 @@ Create linkage tables
    :start-after: .. term-linkage-table-start
    :end-before: .. term-linkage-table-end
 
+.. privacy-rights-build-linkage-tables-caution-start
+
+.. caution:: Linkage tables are an alternative to source keys and should only be used when links between custom domain tables and source tables are defined in SQL.
+
+.. privacy-rights-build-linkage-tables-caution-end
+
+.. privacy-rights-build-linkage-tables-start
+
 In some cases a compliance request cannot directly match to source rows. This includes an untagged table for the **exact** strategy, and a non-stitched source table for the **connected_pii** strategy. In these cases source rows should be linked to upstream custom domain tables which can be matched on.
 
-.. note:: The main reason for using a linkage table rather than source keys is if the custom domain table to which you are linking is aggregating records using multiple keys since Amperity does not allow source keys to be composed of multiple columns.
+.. privacy-rights-build-linkage-tables-end
+
+.. privacy-rights-build-linkage-tables-note-start
+
+.. note:: The main reason for using a linkage table instead of using source keys is when the custom domain table to which you are linking aggregates records using multiple keys. Amperity does not allow source keys to be composed of multiple columns.
+
+.. privacy-rights-build-linkage-tables-note-end
 
 .. include:: ../../amperity_reference/source/domain_tables.rst
    :start-after: .. domain-tables-add-linkage-steps-start
@@ -584,3 +599,115 @@ The **Unified Compliance** table contains the following columns:
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-unified-compliance-table-start
    :end-before: .. data-tables-unified-compliance-table-end
+
+
+.. _privacy-rights-record-not-found:
+
+Record not found?
+==================================================
+
+.. privacy-rights-record-not-found-start
+
+The Unified Compliance table is refreshed at the end of every Stitch run.
+
+A record in the **Unified Compliance** table must be assigned one of the following matching categories in the **Request Match Category** column:
+
+**direct**
+   Occurs when matches are made on PII.
+
+**connected**
+   Occurs when matches are made on the Amperity ID of a **direct** match.
+
+**source_key**
+   Occurs when matches are made from keys that are present in upstream data sources.
+
+**linkage_table**
+   Occurs when matches are identified by a custom domain table that traces records back to a source table that contained records with multiple keys.
+
+If a record is not found in the Unified Compliance table use the expected matching category to troubleshoot why a record is missing.
+
+.. privacy-rights-record-not-found-end
+
+
+.. _privacy-rights-record-not-found-direct:
+
+For direct matches
+----------------------------------------------------------
+
+.. privacy-rights-record-not-found-direct-start
+
+Verify that email, phone, or addresses match on the request when lowercase. An address must match on all of the following fields: address, address2, city, state, postal, and country.
+
+When the **compliance/custom-key** semantic tag is applied, **direct** matches must be exact and are case sensitive.
+
+.. privacy-rights-record-not-found-direct-end
+
+
+.. _privacy-rights-record-not-found-connected:
+
+For connected matches
+----------------------------------------------------------
+
+.. privacy-rights-record-not-found-connected-start
+
+Verify that the record is assigned an Amperity ID.
+
+.. privacy-rights-record-not-found-connected-end
+
+
+.. _privacy-rights-record-not-found-source-key:
+
+For source key matches
+----------------------------------------------------------
+
+.. privacy-rights-record-not-found-source-key-start
+
+Verify that the record is found in a source table and not a custom domain table.
+
+If the record is in a custom domain table, verify that the record exactly matches a source key value that exists in the **Unified Compliance** table and is assigned a **direct** or **connected** match.
+
+.. privacy-rights-record-not-found-source-key-end
+
+
+.. _privacy-rights-record-has-returned:
+
+Record has returned?
+==================================================
+
+.. privacy-rights-record-has-returned-start
+
+Amperity is not able to delete records from upstream data sources. It is recommended to design a workflow that ensures that records that appear in the **Unified Compliance** table are deleted from upstream data sources on a schedule that matches the frequency at which Stitch is run in your Amperity tenant. (The **Unified Compliance** table is refreshed as part of each Stitch run.)
+
+If records are not deleted in upstream data sources, and then the records in those upstream data sources are made available to Amperity, it is possible for records that have been flagged for deletion by previous privacy rights workflows will return.
+
+.. note:: If the request is still active the privacy rights workflow will continue to apply the results of that request.
+
+.. privacy-rights-record-has-returned-end
+
+
+.. _privacy-rights-record-has-returned-feeds:
+
+For feeds
+----------------------------------------------------------
+
+.. privacy-rights-record-has-returned-feeds-start
+
+Data sources that provide data to which privacy rights semantic tags are applied **should not** be configured to truncate and load data *unless** data is deleted from upstream sources on a schedule that matches the frequency at which Stitch is run in your Amperity tenant.
+
+.. privacy-rights-record-has-returned-feeds-end
+
+
+.. _privacy-rights-record-has-returned-versioned-tables:
+
+For versioned tables
+----------------------------------------------------------
+
+.. privacy-rights-record-has-returned-versioned-tables-start
+
+Older versions of database tables may contain records that were flagged for deletion by the current privacy rights workflow.
+
+.. privacy-rights-record-has-returned-versioned-tables-end
+
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-database-howto-enable-table-versioning-important-start
+   :end-before: .. databases-database-howto-enable-table-versioning-important-end

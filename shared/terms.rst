@@ -3659,7 +3659,7 @@ The lifetime number of individual items associated with the transaction, ignorin
 
 .. term-linkage-table-start
 
-A linkage table is a CDT used to trace records in a custom domain table back to their corresponding source table records so that privacy compliance actions can be applied. It is an alternative to source keys for advanced users who want to express links between their CDTs and source tables using SQL.
+A linkage table is a custom domain table that is used to trace records back to their corresponding source table records so that privacy compliance actions can be applied.
 
 .. term-linkage-table-end
 

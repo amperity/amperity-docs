@@ -77,6 +77,15 @@ Available versions
    :start-after: .. databases-database-howto-enable-table-versioning-start
    :end-before: .. databases-database-howto-enable-table-versioning-end
 
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-database-howto-enable-table-versioning-important-start
+   :end-before: .. databases-database-howto-enable-table-versioning-important-end
+
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-database-howto-enable-table-versioning-caution-start
+   :end-before: .. databases-database-howto-enable-table-versioning-caution-end
+
+
 **To enable table versioning**
 
 .. include:: ../../amperity_reference/source/databases.rst
