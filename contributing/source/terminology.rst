@@ -43,7 +43,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-datasource:
 
 **datasource** vs. **data source**
-   Use **datasource** as a single word to describe upstream sources from which Amperity is configured to pull data.
+   Use **data source** as two words to describe upstream sources from which Amperity is configured to pull data.
 
 
 .. _term-datasheet:
