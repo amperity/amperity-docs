@@ -43,7 +43,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-datasource:
 
 **datasource** vs. **data source**
-   Use **data source** as a single word to describe upstream sources from which Amperity is configured to pull data.
+   Use **data source** as two words to describe upstream sources from which Amperity is configured to pull data.
 
 
 .. _term-datasheet:
@@ -67,7 +67,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-e-commerce:
 
 **e-commerce** vs. **ecommerce** or **eCommerce**
-   It's **e-commerce**. Why? `Because Mirram-Webster says so <https://www.merriam-webster.com/dictionary/e-commerce>`__. It's arbitrary otherwise.
+   It's **e-commerce**. Why? `Because Merriam-Webster says so <https://www.merriam-webster.com/dictionary/e-commerce>`__. It's arbitrary otherwise.
 
 
 .. _term-excited:
