@@ -4285,6 +4285,95 @@ div.body a.card:hover {
     left: 10%;
     width: 80%;
     margin-left: 0; } }
+#feedback {
+  font-size: 14px;
+  padding-bottom: 1rem;
+  color: #212123; }
+
+@media print {
+  #feedback {
+    display: none; } }
+#feedback #feedback_comment_div {
+  display: none; }
+
+#feedback #feedback_title {
+  font-family: "Aribau Grotesk Bold", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  display: inline; }
+
+#feedback #feedback_answer {
+  display: inline-block; }
+
+#feedback #feedback_comment {
+  height: 6rem;
+  width: 100%;
+  padding: 10px; }
+
+#feedback .rating-list {
+  display: flex;
+  flex-direction: row-reverse;
+  list-style: none;
+  margin: 0 20px;
+  line-height: 1; }
+
+#feedback .rating-list li {
+  float: right;
+  color: #ddd;
+  padding: 10px 5px; }
+
+#feedback .rating-list li:hover, #feedback .rating-list li:hover ~ li {
+  color: #000000; }
+
+#feedback a {
+  margin-left: 12px;
+  color: #212123;
+  font-family: "Aribau Grotesk Bold", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  border-bottom-width: 2px;
+  border-color: #801ED7;
+  text-decoration: none;
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s; }
+
+@media (max-width: 400px) {
+  #feedback a {
+    margin-left: 16px; } }
+#feedback a:hover {
+  background-color: #801ED7; }
+
+#feedback a:hover img {
+  background-color: transparent; }
+
+#feedback button[type=submit] {
+  font-family: "Aribau Grotesk Regular", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1.25rem 1.5rem 1rem;
+  display: inline-block;
+  background-color: #202024;
+  color: #fff;
+  font-size: .875rem;
+  letter-spacing: .15em;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border-radius: 0px; }
+
+@media (min-width: 768px) {
+  #feedback button[type=submit] {
+    padding: 1rem 3rem; } }
+#feedback button[type=submit]:focus, #feedback button[type=submit]:hover {
+  color: #fff;
+  background-color: #3accdd; }
+
 .downloads .nav-main {
   margin-bottom: 20px; }
 
