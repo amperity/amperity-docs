@@ -457,6 +457,7 @@ The following sections show examples of ingest queries:
 * :ref:`ingest-queries-example-import-billing-as-address`
 * :ref:`ingest-queries-example-join-datasets`
 * :ref:`ingest-queries-example-parse-nested-records`
+* :ref:`ingest-queries-example-remove-characters`
 * :ref:`ingest-queries-example-remove-field`
 * :ref:`ingest-queries-example-select-fields`
 
@@ -584,6 +585,43 @@ Parse nested records
 .. include:: ../../amperity_reference/source/format_csv.rst
    :start-after: .. format-csv-pull-ingest-queries-nested-records-start
    :end-before: .. format-csv-pull-ingest-queries-nested-records-end
+
+
+.. _ingest-queries-example-remove-characters:
+
+Remove characters with regular expression
+--------------------------------------------------
+
+.. ingest-queries-example-remove-characters-start
+
+You can use a regular expression to remove characters. For example, removing double quotes (") *and* backslash (\) characters from an email address from a record similar to:
+
+::
+
+   12345,abcde,"email@gmail.com\",2025-01-30
+
+so that it 
+
+::
+
+   12345,abcde,email@gmail.com,2025-01-30
+
+A regular expression similar to the following will remove the double quotes (") *and* backslash (\) characters: 
+
+.. code-block:: sql
+
+   WITH test AS (
+     SELECT '12345,abcde,"foobar@gmail.com\",2025-01-30' AS test
+   )
+
+   SELECT
+     test
+     ,REGEXP_REPLACE(test, '[\"\\\\]', '') AS updated_test
+   FROM test
+
+.. important:: Be sure to carefully test regular expressions to ensure the result matches your use case.
+
+.. ingest-queries-example-remove-characters-end
 
 
 .. _ingest-queries-example-remove-field:

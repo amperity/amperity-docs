@@ -266,7 +266,11 @@ For bridges that connect to Databricks environments running in Microsoft Azure a
 Add inbound bridge
 --------------------------------------------------
 
+.. bridge-databricks-sync-with-amperity-add-bridge-start
+
 Configure an inbound bridge to sync data from Databricks to Amperity.
+
+.. bridge-databricks-sync-with-amperity-add-bridge-end
 
 **To add an inbound bridge**
 
