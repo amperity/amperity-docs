@@ -94,6 +94,12 @@ This topic describes the correct use of terms within Amperity documentation. Ref
    It's **multitenant**. Why? Because.
 
 
+.. _term-null:
+
+**NULL** vs. **Null** vs. **null**
+   **NULL** indicates something does not have a value. In Amperity documentation we use **NULL**. Why? Because the context of **NULL** in Amperity documentation is almost always a SQL context.
+
+
 .. _term-on-premises:
 
 **on-premises** vs. **on-premise**
