@@ -762,7 +762,7 @@
 
 .. |format_send_public_keys| raw:: html
 
-   <a href="https://docs.amperity.com/reference/format_common.html#public-keys-for-sftp">RSA key for public key credentials</a>
+   <a href="https://docs.amperity.com/reference/format_common.html#sftp-and-encryption">RSA key for public key credentials</a>
 
 
 .. |format_send_templates| raw:: html
