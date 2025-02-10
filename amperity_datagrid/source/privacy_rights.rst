@@ -31,7 +31,7 @@ A privacy rights workflow can help your organization stay in compliance with dat
      :start-after: .. term-australian-privacy-principles-start
      :end-before: .. term-australian-privacy-principles-end
 
-This topic describes how to configure Amperity to support a self-service privacy rights workflow that deletes consumer profile data based on inbound delete requests and requested compliance actions.
+This topic describes how to configure Amperity to support a self-service privacy rights workflow that deletes consumer profile data and discovers records for a data subject access request (DSAR) based on inbound compliance requests.
 
 .. privacy-rights-overview-end
 
@@ -111,7 +111,7 @@ The following sections describe the individual steps within the workflow that oc
 
           Using the the **exact** strategy for DSAR requests is recommended.
 
-          The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+          The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all records with the same Amperity ID as those direct matches. The request match category resulting from a match on Amperity ID will be **connected** and can be viewed from the **Unified_Compliance** table.
 
           A Stitch cluster often contains variations of email addresses, phone numbers, and address groups that are all associated with a single unique individual, but only one email address, phone number, or address group will match exactly to the values in the inbound request.
 
@@ -126,23 +126,16 @@ The following sections describe the individual steps within the workflow that oc
           :align: left
           :class: no-scaled-link
 
-     - **Refresh reports**
+     - **Result Reporting**
 
-       When the DSAR request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+       When the DSAR request is processed by Stitch the **Unified Compliance** and **Unified Compliance Overview** tables will report results.
 
        .. admonition:: When a record is matched in Unified Compliance
 
-          For the current Stitch run, associated records are visible in:
+          For the current Stitch run and all future runs, associated records are still visible in:
 
-          * **Unified Coalesced**
-          * Other database tables
-          * Domain tables, including custom domain tables
-
-          For all future Stitch runs, associated records are visible in:
-
-          * **Unified Coalesced**
-          * Other database tables
-          * Domain tables, including custom domain tables
+          * Database tables
+          * The **Domain tables** dataset and **Stitch tables** dataset
 
 .. privacy-rights-workflows-dsar-end
 
@@ -195,7 +188,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Suppress records**
 
-       Data in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table) that matches the inbound request is suppressed. All records that match values in the inbound request are set to **NULL**.
+       Data in Stitch output (**Unified Coalesced** table and core tables derived from **Unified Coalesced** such as **Unified Customer**) that matches the inbound request is suppressed. These suppressed rows are removed from the stitch output.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -208,7 +201,7 @@ The following sections describe the individual steps within the workflow that oc
 
        Data in source tables that matches the inbound request is deleted.
 
-       .. note:: Data that is deleted *today* is removed from the next refresh of Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+       .. note:: Data that is deleted *today* is removed from the domain data which will be input to the next workflow.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -217,18 +210,18 @@ The following sections describe the individual steps within the workflow that oc
           :align: left
           :class: no-scaled-link
 
-     - **Refresh reports**
+     - **Report results**
 
-       When the delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+       When a delete request is processed by Stitch the **Unified Compliance** and **Unified Compliance Overview** tables will report results.
 
        .. admonition:: When a record is matched in Unified Compliance
 
-          For the current Stitch run, associated records are visible in:
+          For the current Stitch run, associated records are still visible in:
 
-          * **Unified Coalesced**
-          * Other database tables
+          * Database tables which are not the **Unified Coalesced** table or core tables derived from **Unified Coalesced** such as **Unified Customer**
+          * CDT tables in the **Domain tables** dataset
 
-       .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
+       .. important:: Be sure to use the reported compliance results to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
 
 .. privacy-rights-workflows-delete-records-end
 
@@ -270,7 +263,7 @@ The following sections describe the individual steps within the workflow that oc
 
        The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
 
-       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all matching records in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+       The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that match the email address, phone number, or address group that is included in the inbound request *and* will find all records with the same Amperity ID as those direct matches. The request match category resulting from a match on Amperity ID will be **connected** and can be viewed from the **Unified_Compliance** table.
 
        .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a custom domain table will find all corresponding records in source domain tables.
 
@@ -283,7 +276,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Suppress records**
 
-       Data in Stitch output (core tables, stitched tables, and the **Unified Coalesced** table) that matches the inbound request is suppressed. All values in all columns that match the inbound request are set to **NULL**.
+       Data in Stitch output (**Unified Coalesced** table and core tables derived from **Unified Coalesced** such as **Unified Customer**) that matches the inbound request is suppressed. These suppressed rows are removed from the stitch output.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -294,11 +287,11 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Delete PII**
 
-       Column values in source tables that match the inbound request are deleted.
+       Column values tagged with **compliance/pii** in source tables that match the inbound request are deleted.
 
-       .. note:: Data that is deleted *today* is removed from the next refresh of Stitch output (core tables, stitched tables, and the **Unified Coalesced** table).
+       .. note:: Data that is deleted *today* is removed from the domain data which will be input to the next workflow.
 
-       .. important:: This step requires applying the **compliance/pii** semantic tag to all fields in all source tables that contain data that should be deleted when an inbound request asks Amperity to delete data.
+       .. important:: This step requires applying the **compliance/pii** semantic tag to all fields in all source tables that contain data that should be deleted when an inbound request asks Amperity to delete data. Applying **compliance/pii** to CDT fields will have no effect since the table is re-computed in each workflow.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -307,26 +300,24 @@ The following sections describe the individual steps within the workflow that oc
           :align: left
           :class: no-scaled-link
 
-     - **Refresh reports**
+     - **Report results**
 
-       When the delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
+       When a delete PII request is processed by Stitch the **Unified Compliance** and **Unified Compliance Overview** tables will report results.
 
        .. admonition:: When a record is matched in Unified Compliance
 
-          For the current Stitch run, associated records are visible in:
+          For the current Stitch run, associated records are still visible in:
 
-          * Other database tables
-          * Domain tables, with redaction
-          * Custom domain tables
+          * Database tables which are not the **Unified Coalesced** table or core tables derived from **Unified Coalesced** such as **Unified Customer**
+          * Source domain tables in the **Domain tables** dataset, with redaction
+          * CDT tables in the **Domain tables** dataset
 
           For all future Stitch runs, associated records are visible in:
 
-          * **Unified Coalesced**, with redaction
-          * Other database tables, with redaction
-          * Domain tables, with redaction
-          * Custom domain tables, with redaction
+          * Database tables, with redaction
+          * The **Domain tables** dataset and **Stitch tables** dataset, with redaction
 
-       .. important:: Be sure to use the compliance reports tables to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
+       .. important:: Be sure to use the reported compliance results to identify data that must be deleted from systems that provide data to Amperity. If data is not deleted from these systems in a timely manner, it is possible for customer data that was previously deleted by Amperity to be re-added to Amperity because the data is still present in the data that is provided to Amperity.
 
 .. privacy-rights-workflows-delete-pii-end
 
@@ -559,12 +550,12 @@ In some cases a compliance request cannot directly match to source rows. This in
 
 .. _privacy-rights-reports-tables:
 
-Reports tables
+Report tables
 ==================================================
 
 .. privacy-rights-reports-tables-start
 
-Amperity generates the following reports tables as part of a Stitch run. Each table contain the results of the most recent privacy rights workflow. These tables may be empty when no requests were made.
+Amperity generates the following tables reporting compliance results as part of a Stitch run. Each table contain the results of the most recent privacy rights workflow. These tables will be empty when no requests were made.
 
 .. privacy-rights-reports-tables-end
 
