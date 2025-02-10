@@ -616,11 +616,11 @@ The **Customer Attributes** table contains the following columns:
      - Boolean
      - A flag that indicates if the customer does not have personally identifiable information (PII) for name (given name, surname, full name), address (street address, city, state, postal code), email address, or phone number.
 
-   * - **Is Opted Into Email**
+   * - **Is Email Opted In**
      - Boolean
      - A flag that indicates if the customer has given consent to receive email communications from your brand.
 
-   * - **Is Opted Into SMS**
+   * - **Is SMS Opted In**
      - Boolean
      - A flag that indicates if the customer has given consent to receive SMS messages from your brand.
 
