@@ -483,7 +483,7 @@ Identify fields to delete
   
 The **delete** request type acts on entire rows of source tables, but it is possible to only delete PII from a record, while leaving the rest of the data intact.
 
-Any field that is tagged with the **compliance/pii** semantic will be replaced with **NULL** if its record is eligible for compliance actions and an inbound request with the **delete_pii** request type is ingested.
+Requests of type **delete_pii** will cause matching source table data tagged with **compliance/pii** to be replaced with **NULL**.
 
 
 .. _privacy-rights-configure-source-keys:
@@ -599,9 +599,9 @@ Record not found?
 
 .. privacy-rights-record-not-found-start
 
-The Unified Compliance table is refreshed at the end of every Stitch run.
+**Unified Compliance** and **Unified Compliance Overview** are refreshed at the end of every Stitch run.
 
-A record in the **Unified Compliance** table must be assigned one of the following matching categories in the **Request Match Category** column:
+A match in the **Unified Compliance** table will be assigned one of the following categories in the **Request Match Category** column:
 
 **direct**
    Occurs when matches are made on PII.
@@ -695,7 +695,7 @@ For versioned tables
 
 .. privacy-rights-record-has-returned-versioned-tables-start
 
-Older versions of database tables may contain records that were flagged for deletion by the current privacy rights workflow.
+Versioned database tables may contain historical data which has been deleted from the current domain data by Stitch.
 
 .. privacy-rights-record-has-returned-versioned-tables-end
 

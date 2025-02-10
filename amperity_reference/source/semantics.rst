@@ -171,7 +171,7 @@ The following table describes the semantic tags that are used for CCPA and/or GD
 
        Semantic tag: **compliance/request-id**
 
-       A unique identifier for an inbound request.
+       Usually a unique identifier for an inbound request. **Unified_Compliance_Overview** will report results for duplicates as if they were a single request.
 
        This identifier is used for validation purposes, allowing compliance actions to be easily linked to specific requests.
 
@@ -184,13 +184,13 @@ The following table describes the semantic tags that are used for CCPA and/or GD
        The request type for the compliance action. May be one of:
 
        **dsar**
-          Default. Generate a report without deleting data.
+          Report discovered records without deleting data.
 
        **delete**
-          Delete rows that are found by the request strategy.
+          Delete discovered records.
 
        **delete_pii**
-          Delete only personally identifiable information (PII) from rows that are found by the request strategy.
+          Delete only personally identifiable information (PII) from discovered records.
 
         .. important:: The delete_pii request type will only delete columns that are tagged with the **compliance/pii** semantic tag.
 
@@ -216,7 +216,7 @@ The following table describes the semantic tags that are used for CCPA and/or GD
 
        Find all records that match an email address. This action is case-insensitive.
 
-       The values in this field will be checked against any source table that has the **email** semantic tag.
+       The values in this field will be checked against any domain table that has the **email** semantic tag.
 
 
    * - **phone**
@@ -226,7 +226,7 @@ The following table describes the semantic tags that are used for CCPA and/or GD
 
        Find all records that match a phone number.
 
-       The values in this field will be checked against any source table that has the **phone** semantic tag.
+       The values in this field will be checked against any domain table that has the **phone** semantic tag.
 
 
    * - **address**
@@ -240,9 +240,9 @@ The following table describes the semantic tags that are used for CCPA and/or GD
         * **compliance/request-postal**
         * **compliance/request-country**
 
-       The values in these fields will be checked against any source table that has the **address**, **address2**, **city**, **state**, **postal**, and/or **country** semantic tags. If a source table only has some of these values tagged, the missing values will be treated as **NULL**. 
+       The values in these fields will be checked against any domain table that has the **address**, **address2**, **city**, **state**, **postal**, and/or **country** semantic tags. If a domain table only has some of these values tagged, the missing values will be treated as **NULL**. 
 
-        .. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in source tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
+        .. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in domain tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
 
    * - **custom-key**
      - **Optional**
@@ -251,7 +251,7 @@ The following table describes the semantic tags that are used for CCPA and/or GD
 
        Find all records that match a custom value. This action is case-insensitive.
 
-       The values in this field will be checked against any source table that has the **compliance/custom-key** semantic tag.
+       The values in this field will be checked against any domain table that has the **compliance/custom-key** semantic tag.
 
 .. semantics-compliance-request-table-end
 
