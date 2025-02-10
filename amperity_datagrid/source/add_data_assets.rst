@@ -93,7 +93,7 @@ SMS opt status
 
 .. data-asset-customer-consent-sms-start
 
-Apply **sms-opt** semantic tags to data sources, and then add the :doc:`SMS Opt Status <table_email_opt_status>` table to your customer 360 database as a passthrough table.
+Apply **sms-opt** semantic tags to data sources, and then add the :doc:`SMS Opt Status <table_sms_opt_status>` table to your customer 360 database as a passthrough table.
 
 .. data-asset-customer-consent-sms-end
 
