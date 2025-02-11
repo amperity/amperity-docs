@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Yahoo DSP
 .. |destination-api| replace:: Yahoo Ad Tech DataX API
 .. |plugin-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |what-send| replace:: **email** or **phone**
 .. |filter-the-list| replace:: "yah"
 .. |credential-type| replace:: yahoo-dsp
 .. |credential-details| replace:: the MDM ID
