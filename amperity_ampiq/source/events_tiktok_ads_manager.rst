@@ -64,7 +64,7 @@ Use a query to build a combination of data from the your brand's customer 360 da
      ,uit.product_name AS content_name
      ,'product' AS content_type
      ,'USD' AS currency
-     ,TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(mc.email))))) AS emails
+     ,'email' AS email
      ,'CompletePayment' AS event
      ,'website' AS event_channel
      ,CAST(uit.order_id AS VARCHAR) AS event_id
@@ -80,9 +80,9 @@ Use a query to build a combination of data from the your brand's customer 360 da
    LEFT JOIN Merged_Customers mc ON uit.amperity_id = mc.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
 
-and **MUST** contain the following fields: **emails**, **event**, **event_id**, and **event_set_id**. Review the list of supported offline events parameters while building the query.
+and **MUST** contain the following fields: **email**, **event**, **event_id**, and **event_set_id**. Review the list of supported offline events parameters while building the query.
 
-Fields that contain PII -- **emails** and **phone_numbers**, for example -- should have one-way SHA-256 hashing applied to them.
+Fields that contain PII---email address and phone numbers, for example---should have one-way SHA-256 hashing applied to them.
 
 .. note:: Currency must be in |ext_iso_4217|. For example: "EUR", "USD", or "JPY".
 
