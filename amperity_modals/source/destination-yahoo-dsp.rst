@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |what-send| replace:: email or phone
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "90"
