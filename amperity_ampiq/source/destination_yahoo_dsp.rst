@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: Yahoo DSP
 .. |what-send| replace:: audiences
-.. |what-enable| replace:: **email**
+.. |what-enable| replace:: **email** or **phone**
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
