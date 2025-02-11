@@ -6,7 +6,7 @@
 .. |what-enable| replace:: **email** or **phone**
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
-.. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
+.. |attributes-sent| replace:: |destination-name| requires an email address or phone number. There are no optional fields.
 
 
 .. meta::
@@ -211,5 +211,8 @@ Configure default attributes
 
    * - email
      - email
+
+   * - phone
+     - phone
 
 .. channel-yahoo-dsp-configure-default-attributes-end
