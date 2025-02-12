@@ -132,7 +132,22 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
+          :align: left
+          :class: no-scaled-link
+     - **UID 2.0 agreement**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-unified-id-20-start
+          :end-before: .. term-unified-id-20-end
+
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-the-trade-desk-uid2-agreement-start
+          :end-before: .. setting-the-trade-desk-uid2-agreement-end
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail two.
           :align: left
           :class: no-scaled-link
      - Configuration details for |destination-name|.
@@ -144,9 +159,10 @@ Get details
 
        .. important:: Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring this destination.
 
+
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail three.
           :align: left
           :class: no-scaled-link
      - The name of a segment in |destination-name|.
@@ -163,7 +179,7 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail three.
+          :alt: Detail four.
           :align: left
           :class: no-scaled-link
      - You may use a query to build the list of email addresses or you may select the **email** attribute from the attribute editor in your campaigns.
@@ -183,7 +199,7 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail four.
+          :alt: Detail five.
           :align: left
           :class: no-scaled-link
      - **The Trade Desk offline events only**
