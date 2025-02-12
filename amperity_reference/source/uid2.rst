@@ -31,7 +31,7 @@ How UID2 works
 
 .. uid2-howitworks-start
 
-Amperity may be configured as a UID2 Operator. A `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| is a participant in Unified ID 2.0 that is allowed to run the Operator Service. Operators may receive and store encryption keys and salts from the UID2 Core Service, salt and hash personal data to return raw UID2s, encrypt raw UID2s to generate UID2 tokens, and distribute UID2 token decryption keys.
+Amperity may be configured as a UID2 Operator. A `UID2 Operator <https://unifiedid.com/docs/ref-info/ref-operators-public-private>`__ |ext_link| is a participant in Unified ID 2.0 that is allowed to run the Operator Service. Operators may receive and store encryption keys and salts from the UID2 Core Service, salt and hash personal data to return raw UID2s, encrypt raw UID2s to generate UID2 tokens, and distribute UID2 token decryption keys.
 
 .. uid2-howitworks-end
 
