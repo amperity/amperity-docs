@@ -69,7 +69,7 @@ To set up your local authoring environment:
           :align: left
           :class: no-scaled-link
 
-     - Install Sphinx 7.3.7, which is the command-line tool that builds the documentation. Use Pip or Homebrew to install Sphinx:
+     - Install Sphinx 7.3.7, which is the command-line tool that builds the documentation. Open a terminal and use Pip or Homebrew to install Sphinx:
 
        .. code-block:: text
 
