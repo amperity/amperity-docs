@@ -251,6 +251,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Quick Service Restaurant
    * - **RCFile**
      - Record Columnar File
+   * - **REDS**
+     - Raw Event Data Stream
    * - **REST API**
      - Representational State Transfer API
    * - **RFM**
