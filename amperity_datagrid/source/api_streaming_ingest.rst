@@ -385,7 +385,7 @@ The Streaming Ingest API has the following HTTP status codes:
    * - **413**
      - Request is too large.
 
-       .. note:: Amperity limits the maximum payload size to 500 kb.
+       .. note:: Amperity limits the maximum payload size to 5MB.
      - No
    * - **429**
      - Request throttled.
