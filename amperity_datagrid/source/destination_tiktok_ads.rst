@@ -948,6 +948,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           :start-after: .. term-email-start
           :end-before: .. term-email-end
 
+       .. note:: Amperity automatically applies SHA-256 hashing to email addresses.
 
    * - **event**
      - **Required**
@@ -1029,6 +1030,8 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           :end-before: .. term-phone-end
 
        .. note:: A phone number must be in |ext_e164_format|, which represents a phone number as a number up to fifteen digits in length (without spaces) that starts with a + symbol. For example: +12061234567.
+
+       .. note:: Amperity automatically applies SHA-256 hashing to phone numbers.
 
 
    * - **price**
