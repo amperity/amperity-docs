@@ -43,28 +43,32 @@ Build a query
 
 .. events-criteo-build-query-start
 
-After the SFTP destination is configured, use a query to map a customer's email address and transactions data to the fields that can be sent to |destination-name|. For example:
+After the SFTP destination is configured, use a query to map a customer's email address and offline sales reporting data to the fields that can be sent to |destination-name|.
+
+.. important:: Review the requirements for `offline sales reporting <https://help.retailmedia.criteo.com/kb/guide/en/offline-sales-reporting-LTjBTYw7r3/Steps/3511218,3511256,3511259,3511257>`__ |ext_link| before building the query that your brand will use to send offline events to |destination-name|.
+
+The following example shows what a query that sends offline sales reporting to |destination-name| may look like for your brand.
 
 .. code-block:: sql
 
    SELECT
-     uit.amperity_id AS user_crmid
-     ,mc.email AS user_email
+     c.sha256_email AS user_key
+     ,'email' AS user_key_type
      ,uit.order_id AS event_id
-     ,uit.item_quantity AS event_item_quantity
-     ,uit.product_id AS event_item_id
-     ,uit.currency AS event_currency
-     ,uit.item_revenue AS event_item_price
-     ,uit.order_datetime AS event_timestamp
+     ,uit.item_quantity AS product_quantity
+     ,CONCAT('P', substr(prod.product_id, 1, 2, 3)) AS content_ids
+     ,uit.item_revenue AS product_value
+     ,CAST(uit.order_datetime AS timestamp) AS event_time
      ,uit.store_id AS store_id
-     --,uit.purchase_brand AS event_item_brand --optional
-     --,uit.product_category AS event_item_category --optional
-   FROM Merged_Customers mc
+   FROM Customer_360 c
    INNER JOIN Unified_Itemized_Transactions uit
-   ON mc.amperity_id = uit.amperity_id
-   WHERE mc.email IS NOT NULL
+   ON c.amperity_id = uit.amperity_id
+   JOIN Product_Catalog_Table prod 
+   ON uit.product_id = prod.ITEM_ID
+   WHERE c.email IS NOT NULL
    AND uit.is_return = false
    AND uit.is_cancellation = false
+   AND order_datetime > CURRENT_DATE - INTERVAL '1' DAY;
 
 Use an orchestration to send transactions to |destination-name| using the |destination_sftp| destination.
 
