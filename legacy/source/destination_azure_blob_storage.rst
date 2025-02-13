@@ -217,14 +217,6 @@ Azure Blob Storage is a destination that may be configured directly from Amperit
           :start-after: .. destinations-business-users-admonition-start
           :end-before: .. destinations-business-users-admonition-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-enable-start
-          :end-before: .. destinations-business-users-enable-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-allow-start
-          :end-before: .. destinations-business-users-allow-end
-
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
