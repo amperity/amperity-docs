@@ -58,17 +58,6 @@ Collection of standalone topics
    stitch_config_semantic_exclusions
    stitch_config_size_threshold
    stitch_config_skip_scores
-   stitch_evaluate_large_supersized_components
-   stitch_evaluate_largest_cluster_size
-   stitch_evaluate_multiple_addresses
-   stitch_evaluate_multiple_given_names
-   stitch_evaluate_multiple_surnames
-   stitch_evaluate_name_address_undercluster
-   stitch_evaluate_name_email_undercluster
-   stitch_evaluate_name_phone_undercluster
-   stitch_evaluate_small_supersized_components
-   stitch_evaluate_company_name_equality
-   stitch_evaluate_sparse_data
    term_uniqueness
    term_cardinality
    test-animated-image
