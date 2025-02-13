@@ -604,9 +604,10 @@ Complete the following **Azure Blob Storage Settings**:
 
 .. destinations-business-users-start
 
-Business users are assigned to the **Amp360 User** and/or **AmpIQ User** policies. (**Amp360 User** allows access to queries and orchestrations and **AmpIQ User** allows access to segments and campaigns.) A business user cannot select a destination that is not visible to them.
+By default a destination is available to all users who have permission to view personally identifiable information (PII).
 
-Business users -- including users assigned to the **DataGrid Operator** policy -- may have restricted access to PII.
+* A destination may be configured to restrict access to only users assigned to the **Datagrid Operator** and **Datagrid Administrator** policies. Enable the **Admin only** checkbox.
+* A destination may be configured to allow users with limited access to PII. Enable the **PII setting** checkbox.
 
 .. destinations-business-users-end
 
@@ -617,26 +618,6 @@ Business users -- including users assigned to the **DataGrid Operator** policy -
    Restricted PII access is enabled when the **Restrict PII access** policy option that prevents users who are assigned to that option from viewing data that is marked as PII anywhere in Amperity and from sending that data to any downstream workflow.
 
 .. destinations-business-users-admonition-end
-
-.. destinations-business-users-enable-start
-
-You can make this destination visible to orchestrations *and* allow users with restricted access to PII to use this destination by enabling one (or both) of the following options:
-
-.. image:: ../../images/mockup-destinations-tab-add-04-allow-access.png
-   :width: 500 px
-   :alt: Allow business users access to this destination.
-   :align: left
-   :class: no-scaled-link
-
-.. destinations-business-users-enable-end
-
-.. destinations-business-users-allow-start
-
-.. note:: To allow business users to use this destination with campaigns, you must enable the **Available to campaigns** option within the data template. This allows users to send campaign results from Amperity to |destination-name|.
-
-   The other two settings may be configured within the data template instead of the destination.
-
-.. destinations-business-users-allow-end
 
 
 .. TODO: This is Step "Save"; these are the same everywhere.

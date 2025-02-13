@@ -359,10 +359,6 @@ Add destination
           :start-after: .. destinations-business-users-admonition-start
           :end-before: .. destinations-business-users-admonition-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-enable-start
-          :end-before: .. destinations-business-users-enable-end
-
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
@@ -605,10 +601,6 @@ Add destination
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-admonition-start
           :end-before: .. destinations-business-users-admonition-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-enable-start
-          :end-before: .. destinations-business-users-enable-end
 
 
    * - .. image:: ../../images/steps-05.png

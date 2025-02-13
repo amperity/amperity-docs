@@ -190,14 +190,6 @@ Configure Amperity to send CSV, PSV, or TSV files directly to |destination-name|
           :start-after: .. destinations-business-users-admonition-start
           :end-before: .. destinations-business-users-admonition-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-enable-start
-          :end-before: .. destinations-business-users-enable-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-allow-start
-          :end-before: .. destinations-business-users-allow-end
-
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

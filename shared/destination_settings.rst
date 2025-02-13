@@ -84,7 +84,7 @@ Configure the following settings, and then click "Save".
 
 .. destinations-steps-business-users-start
 
-After this destination is configured, business users may configure Amperity to:
+After this destination is configured, users may configure Amperity to:
 
 * Use orchestrations to send query results
 * Use orchestrations and campaigns to send audiences
@@ -96,7 +96,7 @@ to |destination-name|.
 
 .. destinations-steps-business-users-orchestration-only-start
 
-After this destination is configured, business users may configure Amperity to use orchestrations to send query results |destination-name|.
+After this destination is configured, users may configure Amperity to use orchestrations to send query results |destination-name|.
 
 .. destinations-steps-business-users-orchestration-only-end
 
@@ -141,13 +141,16 @@ Applies to: all destinations.
 
 .. setting-common-business-user-access-allow-start
 
-Select the "Allow business users" option to allow access to |destination-name| for users who are assigned the "Amp360 User" and/or "AmpIQ User" policies.
+By default a destination is available to all users who have permission to view personally identifiable information (PII).
+
+* A destination may be configured to restrict access to only users assigned to the **Datagrid Operator** and **Datagrid Administrator** policies. Enable the **Admin only** checkbox.
+* A destination may be configured to allow users with limited access to PII. Enable the **PII setting** checkbox.
 
 .. setting-common-business-user-access-allow-end
 
 .. setting-common-business-user-access-restrict-pii-start
 
-Some business users may have restricted access to PII, which will prevent them from sending data to |destination-name|. Select the "Allow limited PII access" option to allow access to |destination-name| for users who are assigned the "Restrict PII access" policy option.
+Restricted PII access is enabled when the **Restrict PII access** policy option that prevents users who are assigned to that option from viewing data that is marked as PII anywhere in Amperity and from sending that data to any downstream workflow.
 
 .. setting-common-business-user-access-restrict-pii-end
 
