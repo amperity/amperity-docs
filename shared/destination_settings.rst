@@ -150,9 +150,7 @@ By default a destination is available to all users who have permission to view p
 
 .. setting-common-business-user-access-restrict-pii-start
 
-.. admonition:: What is restricted access to PII?
-
-   Restricted PII access is enabled when the **Restrict PII access** policy option that prevents users who are assigned to that option from viewing data that is marked as PII anywhere in Amperity and from sending that data to any downstream workflow.
+Restricted PII access is enabled when the **Restrict PII access** policy option that prevents users who are assigned to that option from viewing data that is marked as PII anywhere in Amperity and from sending that data to any downstream workflow.
 
 .. setting-common-business-user-access-restrict-pii-end
 
