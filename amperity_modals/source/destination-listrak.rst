@@ -2,19 +2,19 @@
 
 
 .. |destination-name| replace:: Listrak
-.. |audience-primary-key| replace:: "email" or "phone"
-.. |what-send| replace:: email and phone lists
+.. |audience-primary-key| replace:: "email" 
+.. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
 
 
 Listrak
 ==================================================
 
-|destination-name| is an automation platform for email and SMS marketing. Use the ActiveCampaign REST API to manage audiences in |destination-name|.
+|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.
 
-Amperity can manage email and SMS lists in |destination-name| using this destination.
+Amperity can manage email lists in |destination-name| using this destination.
 
-Amperity automatically adds a field attribute to all email and SMS lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
+Amperity automatically adds a field attribute to all email lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
 
 Use SFTP to manage `Customer lists <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Product lists <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Order lists <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order item lists <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|.
 
@@ -35,12 +35,6 @@ Credentials
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-listrak-email-client-id-secret-start
    :end-before: .. credential-listrak-email-client-id-secret-end
-
-**SMS client ID and client secret**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-listrak-sms-client-secret-start
-   :end-before: .. credential-listrak-sms-client-secret-end
 
 **Note**
 
@@ -69,8 +63,6 @@ Settings
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 **List name**
-
-(Applies to Email **and** SMS lists.)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-list-name-start
