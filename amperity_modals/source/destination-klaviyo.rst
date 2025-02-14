@@ -28,6 +28,10 @@ Credentials
    :start-after: .. credential-klaviyo-api-key-start
    :end-before: .. credential-klaviyo-api-key-end
 
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-klaviyo-api-key-scopes-start
+   :end-before: .. credential-klaviyo-api-key-scopes-end
+
 
 Settings
 ==================================================

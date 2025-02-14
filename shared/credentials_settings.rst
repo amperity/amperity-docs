@@ -1128,6 +1128,15 @@ Required. The API key for your |destination-name| account.
 
 .. credential-klaviyo-api-key-end
 
+.. credential-klaviyo-api-key-scopes-start
+
+The `private API key <https://developers.klaviyo.com/en/docs/authenticate_#private-key-authentication>`__ |ext_link| that is used for authentication must have the following scopes added:
+
+* **lists:write**
+* **profiles:write**
+
+.. credential-klaviyo-api-key-scopes-end
+
 
 
 
