@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Listrak
-.. |what-send| replace:: email address and SMS lists
+.. |what-send| replace:: email address
 .. |credential-typex| replace:: **listrak**
 .. |credential-detailsx| replace:: the Listrak client ID and secret
 
@@ -31,7 +31,7 @@ You can build queries that return |what-send|, along with returning additional p
 
 .. image:: ../../images/sendto-listrak.png
    :width: 600 px
-   :alt: Send email and SMS lists to Listrak.
+   :alt: Send email lists to Listrak.
    :align: left
    :class: no-scaled-link
 
@@ -67,7 +67,7 @@ Build query
 
 .. sendto-listrak-build-query-start
 
-.. tip:: |destination-name| requires an email address or a phone number; you may include additional customer profile attributes, including the non-required email address or phone number.
+.. tip:: |destination-name| requires an email address; you may include additional customer profile attributes, including the non-required email address.
 
 .. sendto-listrak-build-query-end
 

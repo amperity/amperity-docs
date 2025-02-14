@@ -2,9 +2,9 @@
 
 
 .. |destination-name| replace:: Listrak
-.. |what-send| replace:: email address and SMS lists
+.. |what-send| replace:: email address
 .. |what-enable| replace:: **email**
-.. |attributes-sent| replace:: |destination-name| requires email addresses or phone numbers; you may include additional customer profile attributes, including the non-required email address or phone number.
+.. |attributes-sent| replace:: |destination-name| requires email addresses; you may include additional customer profile attributes, including the non-required email address.
 
 
 .. meta::
@@ -31,7 +31,7 @@ You can build campaigns that send |what-send| to |destination-name|, and then ap
 
 .. image:: ../../images/channel-listrak.png
    :width: 600 px
-   :alt: Send email and SMS lists to Listrak.
+   :alt: Send email lists to Listrak.
    :align: left
    :class: no-scaled-link
 
