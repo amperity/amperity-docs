@@ -95,6 +95,11 @@ Get details
           :class: no-scaled-link
      - A private API key.
 
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-klaviyo-api-key-scopes-start
+          :end-before: .. credential-klaviyo-api-key-scopes-end
+
+
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
