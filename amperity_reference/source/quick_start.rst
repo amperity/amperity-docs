@@ -19,7 +19,7 @@ Quick start: Identity resolution
 
 .. article-info::
    :avatar: _static/amperity_circle.png
-   :avatar-link: https://docs.amperity.com/internal/try.html
+   :avatar-link: https://docs.amperity.com/reference/quick_start.html
    :avatar-outline: muted
    :author: Quick start: Identity resolution
    :date: |today|
