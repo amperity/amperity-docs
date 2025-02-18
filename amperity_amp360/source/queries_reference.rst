@@ -450,7 +450,7 @@ The following example shows how to return the days to second purchase starting f
        ,first_order_datetime
        ,second_order_datetime
        ,DATE_DIFF('day', first_order_datetime, second_order_datetime) AS "days_to_second_purchase"
-     FROM Transaction_Attributes
+     FROM Transaction_Attributes_Extended
      WHERE (
        (
          "amperity_id" IN (
@@ -509,7 +509,7 @@ The following example shows how build acquisition channel reports using the **Go
        SELECT
          amperity_id
          ,first_order_datetime
-       FROM Transaction_Attributes
+       FROM Transaction_Attributes_Extended
        WHERE first_order_datetime
        BETWEEN timestamp '2022-09-05 00:00:00'
        AND timestamp '2022-09-13 00:00:00') ta
@@ -686,7 +686,7 @@ The following query returns month-over-month revenue.
      GROUP BY 1,2) ut
    LEFT JOIN (
      SELECT amperity_id
-     FROM Transaction_Attributes
+     FROM Transaction_Attributes_Extended
      WHERE year(first_order_datetime)=2020) new_cust
    ON ut.amperity_id=new_cust.amperity_id
    GROUP BY 1
@@ -709,7 +709,7 @@ The following example shows how to return all one-and-done purchasers for a sing
      SELECT
        amperity_id
        ,one_and_done
-     FROM Transaction_Attributes
+     FROM Transaction_Attributes_Extended
      WHERE YEAR(first_order_datetime) = 2021
    ),
 
@@ -747,7 +747,7 @@ The following example shows how to return all one-and-done purchasers for a sing
    WITH one_and_dones_2022 AS (
      SELECT
        amperity_id
-     FROM Transaction_Attributes
+     FROM Transaction_Attributes_Extended
      WHERE one_and_done AND YEAR(first_order_datetime) = 2022
    )
 
@@ -1251,7 +1251,7 @@ Return 10th percentiles:
        amperity_id
        ,lifetime_order_revenue
        ,NTILE(10) OVER (ORDER BY lifetime_order_revenue) tier
-     FROM Transaction_Attributes
+     FROM Transaction_Attributes_Extended
    )
    GROUP BY 1
    ORDER BY 1
@@ -1269,7 +1269,7 @@ Return percentiles by 4:
        amperity_id
        ,lifetime_order_revenue
        ,NTILE(4) OVER (ORDER BY lifetime_order_revenue) tier
-     FROM Transaction_Attributes
+     FROM Transaction_Attributes_Extended
    )
    GROUP BY 1
    ORDER BY 1

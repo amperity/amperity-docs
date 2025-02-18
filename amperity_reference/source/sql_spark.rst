@@ -2110,14 +2110,14 @@ The following example is a common table expression that uses the **ABS()** funct
      SELECT
        c.amperity_id
        ,CASE
-         WHEN ABS(DATEDIFF(ta.latest_order_datetime, current_date)) <= 365 THEN 'active'
-         WHEN ABS(DATEDIFF(ta.latest_order_datetime, current_date)) > 365 THEN ''
-         AND ABS(DATEDIFF(ta.latest_order_datetime, current_date)) <= 730 THEN 'lapsed'
-         WHEN ABS(DATEDIFF(ta.latest_order_datetime, current_date)) > 730 THEN 'dormant'
+         WHEN ABS(DATEDIFF(tae.latest_order_datetime, current_date)) <= 365 THEN 'active'
+         WHEN ABS(DATEDIFF(tae.latest_order_datetime, current_date)) > 365 THEN ''
+         AND ABS(DATEDIFF(tae.latest_order_datetime, current_date)) <= 730 THEN 'lapsed'
+         WHEN ABS(DATEDIFF(tae.latest_order_datetime, current_date)) > 730 THEN 'dormant'
          ELSE 'prospect'
        END AS lifecycle_status
      FROM Customer_360 c
-     LEFT JOIN Transaction_Attributes ta ON c.amperity_id = ta.amperity_id
+     LEFT JOIN Transaction_Attributes_Extended tae ON c.amperity_id = tae.amperity_id
    ),
 
 .. sql-spark-function-abs-example-apply-status-by-date-range-end
@@ -2797,7 +2797,7 @@ Find early repeat purchasers
        WHEN DATEDIFF(CURRENT_DATE(), first_order_date) > 30 THEN false
      END AS early_repeat_purchaser
    FROM
-     Transaction_Attributes
+     Transaction_Attributes_Extended
 
 .. sql-spark-function-datediff-example-find-early-repeat-purchasers-end
 
