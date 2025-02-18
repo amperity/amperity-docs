@@ -29,7 +29,6 @@ Predictive models
 
    #. **Customer 360**
    #. **Merged Customers**
-   #. **Transaction Attributes**
    #. **Transaction Attributes Extended**
    #. **Unified Itemized Transactions** (updated to include product catalogs)
    #. **Unified Transactions**

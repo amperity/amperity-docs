@@ -38,7 +38,7 @@ For each data source that your brand makes available to Amperity that contains t
 #. :ref:`Apply transactions semantic tags <setup-transactions-apply-semantics>`
 #. :ref:`Review input validations <setup-transactions-input-validations>`
 #. :ref:`Associate to customer profiles <setup-transactions-associate-to-profiles>`
-#. :ref:`Extend database for transactions tables <setup-transactions-add-transaction-tables>`
+#. :ref:`Extend database for transactions <setup-transactions-add-transaction-tables>`
 #. :ref:`Configure optional attributes <setup-transactions-extend-attributes>`
 #. :ref:`Refresh database <setup-transactions-refresh-database>`
 #. :ref:`Review C360 validations <setup-transactions-validate-database>`
@@ -193,7 +193,6 @@ Extend your customer 360 database for transactions by adding the following table
 #. :ref:`Itemized transactions <setup-transactions-extend-database-uit>`
 #. :ref:`Unified transactions <setup-transactions-extend-database-ut>`
 #. :ref:`Extended attributes <setup-transactions-extend-database-tae>`
-#. :ref:`Transaction attributes <setup-transactions-extend-database-ta>`
 
 .. setup-transactions-add-transaction-tables-end
 
@@ -379,47 +378,6 @@ Extended attributes
        Review the :ref:`list of optional attributes <table-transaction-attributes-extended-extend-attributes>` to determine which attributes should be enabled for your tenant.
 
 .. setup-transactions-build-database-table-tae-checklist-end
-
-
-.. _setup-transactions-extend-database-ta:
-
-Transaction attributes
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-transaction-attributes-table-start
-   :end-before: .. term-transaction-attributes-table-end
-
-.. _setup-transactions-build-database-table-ta-checklist:
-
-**TRANSACTION ATTRIBUTES CHECKLIST**
-
-.. setup-transactions-build-database-table-ta-checklist-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/checklist-item.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - **Pre-requisite**
-
-       The **Transaction Attributes Extended** table must be configured and activated in your customer 360 database.
-
-
-   * - .. image:: ../../images/checklist-item.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - **Initial configuration only**
-
-       Add the :ref:`Transaction Attributes table <table-transaction-attributes-add>` to your customer 360 database.
-
-.. setup-transactions-build-database-table-ta-checklist-end
 
 
 .. _setup-transactions-extend-attributes:

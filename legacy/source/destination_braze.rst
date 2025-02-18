@@ -207,26 +207,26 @@ Build a table that contains all of the attributes in |destination-name| that you
             ,mc.country
             ,mc.birthdate AS dob
             ,mc.gender
-            ,ta.L30D_purchase_channels
-            ,ta.L30D_order_revenue
-            ,ta.L30D_order_frequency
-            ,ta.L3M_purchase_channels
-            ,ta.L3M_order_revenue
-            ,ta.L3M_order_frequency
-            ,ta.L12M_rfm_score
-            ,ta.L12M_recency
-            ,ta.L12M_frequency
-            ,ta.L12M_monetary
-            ,ta.lifetime_order_revenue
-            ,ta.one_and_done
-            ,ta.multi_purchase_channel
-            ,ta.first_to_second_order_days
-            ,ta.days_since_latest_order
-            ,ta.latest_order_datetime
-            ,ta.early_repeat_purchaser
+            ,tae.L30D_purchase_channels
+            ,tae.L30D_order_revenue
+            ,tae.L30D_order_frequency
+            ,tae.L3M_purchase_channels
+            ,tae.L3M_order_revenue
+            ,tae.L3M_order_frequency
+            ,tae.L12M_rfm_score
+            ,tae.L12M_recency
+            ,tae.L12M_frequency
+            ,tae.L12M_monetary
+            ,tae.lifetime_order_revenue
+            ,tae.one_and_done
+            ,tae.multi_purchase_channel
+            ,tae.first_to_second_order_days
+            ,tae.days_since_latest_order
+            ,tae.latest_order_datetime
+            ,tae.early_repeat_purchaser
           FROM Merged_Customers mc
-          LEFT JOIN Transaction_Attributes_Extended ta
-          ON mc.amperity_id = ta.amperity_id
+          LEFT JOIN Transaction_Attributes_Extended tae
+          ON mc.amperity_id = tae.amperity_id
           LEFT JOIN Customer_Attributes ca
           ON mc.amperity_id = ca.amperity_id
 

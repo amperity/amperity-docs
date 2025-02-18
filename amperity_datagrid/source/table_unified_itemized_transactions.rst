@@ -38,7 +38,6 @@ Unified Itemized Transactions table
    #. Unified Itemized Transactions (this topic)
    #. :doc:`Unified Transactions <table_unified_transactions>`
    #. :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>`
-   #. :doc:`Transaction Attributes <table_transaction_attributes>`
 
    The :doc:`Unified Product Catalog <table_unified_product_catalog>` table is optional and may be configured for use with building queries, database tables, and other non-audience workflows. Your brand's product catalog must be integrated into the **Unified Itemized Transactions** table before you can use product catalog attributes to build audiences, segments, and campaigns.
 

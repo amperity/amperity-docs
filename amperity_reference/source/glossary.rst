@@ -4762,14 +4762,6 @@ T
       :end-before: .. term-transaction-semantic-end
 
 
-.. _t-transaction-attributes:
-
-**Transaction Attributes**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-transaction-attributes-table-start
-      :end-before: .. term-transaction-attributes-table-end
-
-
 .. _t-transaction-attributes-extended:
 
 **Transaction Attributes Extended**

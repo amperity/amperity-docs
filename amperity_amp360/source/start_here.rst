@@ -192,11 +192,10 @@ There are four groups of tables in this diagram:
           :start-after: .. term-interaction-record-start
           :end-before: .. term-interaction-record-end
 
-       Interaction records rely on a series of tables: **Transaction Attributes**, **Transaction Attributes Extended**, **Unified Itemized Transactions**, **Unified Transactions**, and **Unified Product Catalog**.
+       Interaction records rely on a series of tables: **Transaction Attributes Extended**, **Unified Itemized Transactions**, **Unified Transactions**, and **Unified Product Catalog**.
 
-       Each Amperity ID in the **Customer 360** table can be associated to many rows in the **Unified Transactions** table, and then each Amperity ID in the **Unified Transactions** can be associated to many rows in the **Unified Itemized Transactions** table. Each Amperity ID in the **Customer 360** table is associated to one Amperity ID in the **Transaction Attributes** table.
+       Each Amperity ID in the **Customer 360** table can be associated to many rows in the **Unified Transactions** table, and then each Amperity ID in the **Unified Transactions** can be associated to many rows in the **Unified Itemized Transactions** table. Each Amperity ID in the **Customer 360** table is associated to one Amperity ID in the **Transaction Attributes Extended** table.
 
-       .. note:: The **Transaction Attributes** table has an associated "extended" table that captures additional attributes when data sources provide to Amperity the data required to complete the calculations for the attributes. It exists as a separate table in the customer 360 database, but should be viewed as a subset of transactions attributes data.
 
    * - Stitch results
 

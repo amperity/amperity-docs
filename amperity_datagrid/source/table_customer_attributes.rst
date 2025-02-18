@@ -28,7 +28,7 @@ This topic describes the starting point for the **Customer Attributes** table, a
 .. note:: This topic assumes that the data in your tenant has the following types of data already configured:
 
    #. Customer profile data sources, such as names, addresses, email addresses, and phone numbers. This data is made available from the the **Merged Customers** table and is required by the **Customer Attributes** table.
-   #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes** table (and is optional).
+   #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes Extended** table (and is optional).
    #. Customer consent data for email address and SMS/phone opt-in to receiving communication from your brand. This data is made available from the **Email Opt Status** and **SMS Opt Status** tables (and is optional).
 
 .. table-customer-attributes-end
@@ -159,7 +159,7 @@ Recommended starting SQL
 
 .. table-customer-attributes-recommended-starting-sql-start
 
-The following SQL represents a recommended starting point for the **Customer Attributes** table and assumes that you have already has the :doc:`SMS Opt Status <table_sms_opt_status>`, :doc:`Email Opt Status <table_email_opt_status>`, and :doc:`Transaction Attributes <table_transaction_attributes>` tables configured in your tenant.
+The following SQL represents a recommended starting point for the **Customer Attributes** table and assumes that you have already has the :doc:`SMS Opt Status <table_sms_opt_status>`, :doc:`Email Opt Status <table_email_opt_status>`, and :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` tables configured in your tenant.
 
 .. table-customer-attributes-recommended-starting-sql-end
 
@@ -167,12 +167,12 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. note:: If your tenant is not using transactions or if your tenant does not have email and/or SMS opt-in status, make some (or all) of the following changes to the recommended starting SQL for the **Customer Attributes** table:
 
-   #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN ta_cte ta** line in the "Extend for classifications" common table expression (CTE).
+   #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN tae_cte ta** line in the "Extend for classifications" common table expression (CTE).
    #. Remove the "Extend for email opt-in status" section.
    #. Remove the "Extend for SMS opt-in status" section.
    #. Remove the LEFT JOINs for email and SMS opt-in status in the "Extend for customer contactability" section.
 
-   If your tenant has the **Transaction Attributes**, **Email Opt Status**, and **SMS Opt Status** tables, you should be able to copy and paste the following SQL statement, and then validate it within your customer 360 database.
+   If your tenant has the **Transaction Attributes Extended**, **Email Opt Status**, and **SMS Opt Status** tables, you should be able to copy and paste the following SQL statement, and then validate it within your customer 360 database.
 
    The **contactable_phone**, **contactable_email**, **contactable_address**, **contactable_paid_social** and **contactable_global** attributes are required. These attributes :ref:`populate the Reachability card on the segment insights page <table-customer-attributes-optional-contactability>` in the Amperity user interface. When data cannot be made available to these fields they still must exist, but should be **NULL**.
 
@@ -180,7 +180,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. table-customer-attributes-recommended-starting-sql-tip-start
 
-.. tip:: Add the **Customer Attributes** table using the SQL template option to load a version of this table that does not have the **Transaction Attributes**, **Email Opt Status**, and **SMS Opt Status** tables pre-configured. You may copy and paste the following example into the SQL editor to use the pre-configured starting point described in this topic.
+.. tip:: Add the **Customer Attributes** table using the SQL template option to load a version of this table that does not have the **Transaction Attributes Extended**, **Email Opt Status**, and **SMS Opt Status** tables pre-configured. You may copy and paste the following example into the SQL editor to use the pre-configured starting point described in this topic.
 
 .. table-customer-attributes-recommended-starting-sql-tip-end
 
@@ -202,17 +202,17 @@ The following SQL represents a recommended starting point for the **Customer Att
    )
 
    -- -------------------------------------------------------
-   -- Extend for transaction attributes
+   -- Extend for transaction attributes extended
    -- -------------------------------------------------------
 
-   ,ta_cte AS (
+   ,tae_cte AS (
      SELECT 
        amperity_id
        ,lifetime_order_frequency
        ,lifetime_order_revenue
        ,latest_order_datetime
        ,first_order_datetime
-     FROM Transaction_Attributes 
+     FROM Transaction_Attributes_Extended 
    )
 
    -- -------------------------------------------------------
@@ -290,7 +290,7 @@ The following SQL represents a recommended starting point for the **Customer Att
          WHEN ta.latest_order_datetime IS NULL AND ta.first_order_datetime IS NULL THEN 'Prospect'
        END AS historical_purchaser_lifecycle_status
      FROM mc_cte mc
-     LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+     LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
    )
 
    -- -------------------------------------------------------
@@ -414,7 +414,7 @@ Customer states are typically defined as "new", "active", "lapsed", "dormant", a
 
 A customer who has never interacted with your brand, i.e. "never made a purchase" is assigned the value of "prospect".
 
-.. note:: This topic assumes that the :doc:`Transaction Attributes <table_transaction_attributes>` table is available to your customer 360 database and that it will be included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
+.. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it will be included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
 
 .. code-block:: sql
 
@@ -422,14 +422,14 @@ A customer who has never interacted with your brand, i.e. "never made a purchase
    -- Extend for transaction attributes
    -- -------------------------------------------------------
 
-   -- ,ta_cte AS (
+   -- ,tae_cte AS (
    --   SELECT 
    --     amperity_id
    --     ,lifetime_order_frequency
    --     ,lifetime_order_revenue
    --     ,latest_order_datetime
    --     ,first_order_datetime
-   --   FROM Transaction_Attributes 
+   --   FROM Transaction_Attributes_Extended 
    -- )
 
    ...
@@ -450,7 +450,7 @@ A customer who has never interacted with your brand, i.e. "never made a purchase
    --       WHEN ta.latest_order_datetime IS NULL AND ta.first_order_datetime IS NULL THEN 'Prospect'
    --     END AS historical_purchaser_lifecycle_status
      FROM mc_cte mc
-   --   LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+   --   LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
    )
 
 .. table-customer-attributes-recommended-update-transaction-attributes-end
@@ -769,7 +769,7 @@ Extend **classification_config** by adding a CASE statement and a LEFT JOIN simi
          ELSE false
        END AS is_likely_business
      FROM mc_cte mc
-     LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+     LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
      LEFT JOIN likely_businesses ON likely_businesses.amperity_id=mc.amperity_id
    )
 
@@ -933,7 +933,7 @@ A reseller is a customer who purchases large quantities of items from your brand
 
 .. note:: This utility query follows steps that are similar to ones described in the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` utility query: build the utility query in **Queries** page, add the updated query to the **Customer Attributes** table, extend the **classification_config** section, and then update the **customer_attributes_final** section.
 
-Review the **is_reseller** utility query, and then configure it to identify customers who are likely resellers. This query returns a list of supersized clusters from the **Unified Coalesced** table that have a record count that exceeds a configurable threshold, and then uses the **Transaction Attributes** table to associate those records with a configurable top percentage of revenue. A reseller is identified when they belong to that configurable percentage *and* are a supersized cluster with a record count that exceeds the configurable threshold.
+Review the **is_reseller** utility query, and then configure it to identify customers who are likely resellers. This query returns a list of supersized clusters from the **Unified Coalesced** table that have a record count that exceeds a configurable threshold, and then uses the **Transaction Attributes Extended** table to associate those records with a configurable top percentage of revenue. A reseller is identified when they belong to that configurable percentage *and* are a supersized cluster with a record count that exceeds the configurable threshold.
 
 The query starts by defining the revenue outlier threshold:
 
@@ -1047,7 +1047,7 @@ Households
       :start-after: .. table-merged-households-start
       :end-before: .. table-merged-households-end
 
-You can configure the **Customer Attributes** table to use specific columns from the **Merged Households** and **Transaction Attributes** tables to identify the primary buyer within a household.
+You can configure the **Customer Attributes** table to use specific columns from the **Merged Households** and **Transaction Attributes Extended** tables to identify the primary buyer within a household.
 
 Under the following section in the **Customer Attributes** SQL template:
 
@@ -1079,7 +1079,7 @@ configure the following SQL:
          ,household_size
        FROM merged_households 
      ) mh 
-     INNER JOIN transaction_attributes ta 
+     INNER JOIN transaction_attributes_extended ta 
      ON mh.amperity_id = ta.amperity_id
    )
 
@@ -1154,7 +1154,7 @@ You have two choices for defining churn events for this table:
             WHEN DATEDIFF(CURRENT_DATE, ta.latest_order_datetime) <= 730 THEN 'lost'
           END AS historical_churn_status
         FROM mc_cte mc
-        LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+        LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
       )
 
    Update the values for each threshold to align to your products and customer purchase histories and to the stages your brand uses within churn prevention campaigns.
@@ -1194,7 +1194,7 @@ Classifications
 
 .. table-customer-attributes-optional-classifications-start
 
-The recommended starting SQL, as described in this topic, configures using the **Transaction Attributes** table. This enables two flags that differentiate your customers into "purchasers" and "prospects". These flags are enabled by the following SQL in **classification_config**:
+The recommended starting SQL, as described in this topic, configures using the **Transaction Attributes Extended** table. This enables two flags that differentiate your customers into "purchasers" and "prospects". These flags are enabled by the following SQL in **classification_config**:
 
 .. code-block:: sql
 

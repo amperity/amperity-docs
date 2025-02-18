@@ -324,7 +324,7 @@ The **Customer Attributes** table contains the following columns:
      - Boolean
      - A flag that indicates if the customer is a known or likely reseller of a product.
 
-       .. tip:: A reseller should be defined as an early repeat purchaser with a high lifetime order frequency. Use the following fields from the **Transaction Attributes** table to define a reseller: 
+       .. tip:: A reseller should be defined as an early repeat purchaser with a high lifetime order frequency. Use the following fields from the **Transaction Attributes Extended** table to define a reseller: 
 
           * **Early Repeat Purchaser** (set to "true")
           * **Lifetime Order Frequency** (define an order frequency threshold, such as "greater than 50")
@@ -866,7 +866,7 @@ RFM
 
 .. standard-output-transaction-attributes-extended-rfm-note-start
 
-.. note:: RFM uses approximate calculations to optimize the performance of the **Transaction Attributes** table.
+.. note:: RFM uses approximate calculations to optimize the performance of the **Transaction Attributes Extended** table.
 
 .. standard-output-transaction-attributes-extended-rfm-note-end
 

@@ -190,7 +190,7 @@ The customer 360 database starts with the output of the Stitch process, which is
 
 The tables that the Stitch process outputs include:
 
-* **Transaction Attributes**
+* **Transaction Attributes Extended**
 * **Unified Transactions**
 * **Unified Itemized Transactions**
 * **Unified Profiles**
