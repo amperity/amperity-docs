@@ -6514,7 +6514,7 @@ The **Transaction Attributes** table describes the behavior and history of custo
 
 .. term-transaction-attributes-extended-table-start
 
-The **Transaction Attributes Extended** table contains additional attributes for customer flags, customer orders, data differences, time period rollups, and RFM scores, many of which are represented by duration (days, months, years, lifetime), order position (first, second, last), frequency, and revenue.
+The **Transaction Attributes Extended** table contains attributes for customer flags, customer orders, data differences, and time period rollups, many of which are represented by duration (days, months, years, lifetime), order position (first, second, last), frequency, and revenue.
 
 .. term-transaction-attributes-extended-table-end
 
