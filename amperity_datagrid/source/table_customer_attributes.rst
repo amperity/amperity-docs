@@ -167,7 +167,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. note:: If your tenant is not using transactions or if your tenant does not have email and/or SMS opt-in status, make some (or all) of the following changes to the recommended starting SQL for the **Customer Attributes** table:
 
-   #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN ta_cte ta** line in the "Extend for classifications" common table expression (CTE).
+   #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN tae_cte ta** line in the "Extend for classifications" common table expression (CTE).
    #. Remove the "Extend for email opt-in status" section.
    #. Remove the "Extend for SMS opt-in status" section.
    #. Remove the LEFT JOINs for email and SMS opt-in status in the "Extend for customer contactability" section.
@@ -202,17 +202,17 @@ The following SQL represents a recommended starting point for the **Customer Att
    )
 
    -- -------------------------------------------------------
-   -- Extend for transaction attributes
+   -- Extend for transaction attributes extended
    -- -------------------------------------------------------
 
-   ,ta_cte AS (
+   ,tae_cte AS (
      SELECT 
        amperity_id
        ,lifetime_order_frequency
        ,lifetime_order_revenue
        ,latest_order_datetime
        ,first_order_datetime
-     FROM Transaction_Attributes 
+     FROM Transaction_Attributes_Extended 
    )
 
    -- -------------------------------------------------------
@@ -290,7 +290,7 @@ The following SQL represents a recommended starting point for the **Customer Att
          WHEN ta.latest_order_datetime IS NULL AND ta.first_order_datetime IS NULL THEN 'Prospect'
        END AS historical_purchaser_lifecycle_status
      FROM mc_cte mc
-     LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+     LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
    )
 
    -- -------------------------------------------------------
@@ -422,14 +422,14 @@ A customer who has never interacted with your brand, i.e. "never made a purchase
    -- Extend for transaction attributes
    -- -------------------------------------------------------
 
-   -- ,ta_cte AS (
+   -- ,tae_cte AS (
    --   SELECT 
    --     amperity_id
    --     ,lifetime_order_frequency
    --     ,lifetime_order_revenue
    --     ,latest_order_datetime
    --     ,first_order_datetime
-   --   FROM Transaction_Attributes 
+   --   FROM Transaction_Attributes_Extended 
    -- )
 
    ...
@@ -450,7 +450,7 @@ A customer who has never interacted with your brand, i.e. "never made a purchase
    --       WHEN ta.latest_order_datetime IS NULL AND ta.first_order_datetime IS NULL THEN 'Prospect'
    --     END AS historical_purchaser_lifecycle_status
      FROM mc_cte mc
-   --   LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+   --   LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
    )
 
 .. table-customer-attributes-recommended-update-transaction-attributes-end
@@ -769,7 +769,7 @@ Extend **classification_config** by adding a CASE statement and a LEFT JOIN simi
          ELSE false
        END AS is_likely_business
      FROM mc_cte mc
-     LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+     LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
      LEFT JOIN likely_businesses ON likely_businesses.amperity_id=mc.amperity_id
    )
 
@@ -1079,7 +1079,7 @@ configure the following SQL:
          ,household_size
        FROM merged_households 
      ) mh 
-     INNER JOIN transaction_attributes ta 
+     INNER JOIN transaction_attributes_extended ta 
      ON mh.amperity_id = ta.amperity_id
    )
 
@@ -1154,7 +1154,7 @@ You have two choices for defining churn events for this table:
             WHEN DATEDIFF(CURRENT_DATE, ta.latest_order_datetime) <= 730 THEN 'lost'
           END AS historical_churn_status
         FROM mc_cte mc
-        LEFT JOIN ta_cte ta ON mc.amperity_id = ta.amperity_id
+        LEFT JOIN tae_cte ta ON mc.amperity_id = ta.amperity_id
       )
 
    Update the values for each threshold to align to your products and customer purchase histories and to the stages your brand uses within churn prevention campaigns.
@@ -1199,13 +1199,13 @@ The recommended starting SQL, as described in this topic, configures using the *
 .. code-block:: sql
 
    ,CASE
-     WHEN tae.lifetime_order_frequency >= 1
+     WHEN ta.lifetime_order_frequency >= 1
      THEN true
      ELSE false
    END AS is_purchaser
    ,CASE
-     WHEN tae.lifetime_order_frequency < 1
-     OR tae.lifetime_order_frequency IS NULL
+     WHEN ta.lifetime_order_frequency < 1
+     OR ta.lifetime_order_frequency IS NULL
      THEN true
      ELSE false
    END AS is_prospect
