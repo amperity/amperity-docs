@@ -2380,8 +2380,6 @@ Each record has a set of flags that indicate if a customer has purchased, the nu
 
        .. tip:: Use the **Early Repeat Purchaser** attribute as a leading indicator for overall conversion rate of one-time buyers to repeat customers, even when it does not capture the total number of one-time buyers who have returned to purchase again.
 
-       Also in: **Transaction Attributes**
-
    * - **Multi Purchase Brand**
      - Boolean
      - 
@@ -2390,8 +2388,6 @@ Each record has a set of flags that indicate if a customer has purchased, the nu
           :end-before: .. term-multi-brand-end
 
        This column is calculated from the **Purchase Brand** column in the **Unified Transactions** table, which is created when the **purchase-brand** semantic tag is applied to interaction records that contain transactions data.
-
-       Also in: **Transaction Attributes**
 
    * - **Multi Purchase Channel**
      - Boolean
@@ -2402,8 +2398,6 @@ Each record has a set of flags that indicate if a customer has purchased, the nu
 
        This column is calculated from the **Purchase Channel** column in the **Unified Transactions** table, which is created when the **purchase-channel** semantic tag is applied to interaction records that contain transactions data.
 
-       Also in: **Transaction Attributes**
-
    * - **One And Done**
      - Boolean
      - 
@@ -2412,8 +2406,6 @@ Each record has a set of flags that indicate if a customer has purchased, the nu
           :end-before: .. term-one-and-done-end
 
        .. important:: Amperity uses the range of data that is provided to it to identify one-time buyers. For example, if Amperity is provided data for the years 2015-2022, purchases made in 2014 are not used to identify one-time buyers.
-
-       Also in: **Transaction Attributes**
 
 .. data-tables-transaction-attributes-extended-customer-flags-table-end
 
@@ -2449,8 +2441,6 @@ Each record contains a subset of order data from a customers first, second, and 
        * **Second Order Datetime**
        * **Latest Order Datetime**
 
-       Also in: **Transaction Attributes**
-
    * - **<X> Order ID**
      - String
      - 
@@ -2459,8 +2449,6 @@ Each record contains a subset of order data from a customers first, second, and 
        * **First Order ID**
        * **Second Order ID**
        * **Latest Order ID**
-
-       Also in: **Transaction Attributes**
 
    * - **<X> Order Purchase Brand**
      - String
@@ -2471,8 +2459,6 @@ Each record contains a subset of order data from a customers first, second, and 
        * **Second Order Purchase Brand**
        * **Latest Order Purchase Brand**
 
-       Also in: **Transaction Attributes**
-
    * - **<X> Order Purchase Channel**
      - String
      - 
@@ -2482,8 +2468,6 @@ Each record contains a subset of order data from a customers first, second, and 
        * **Second Order Purchase Channel**
        * **Latest Order Purchase Channel**
 
-       Also in: **Transaction Attributes**
-
    * - **<X> Order Revenue**
      - Decimal
      - 
@@ -2492,8 +2476,6 @@ Each record contains a subset of order data from a customers first, second, and 
        * **First Order Revenue**
        * **Second Order Revenue**
        * **Latest Order Revenue**
-
-       Also in: **Transaction Attributes**
 
    * - **<X> Store ID**
      - String
@@ -2512,8 +2494,6 @@ Each record contains a subset of order data from a customers first, second, and 
        * **First Order Total Items**
        * **Second Order Total Items**
        * **Latest Order Total Items**
-
-       Also in: **Transaction Attributes**
 
 .. data-tables-transaction-attributes-extended-customer-orders-table-end
 
