@@ -137,7 +137,7 @@ Manage databases
    :ref:`About tables <databases-tables-manage>` |fa-index-separator| :ref:`Add as passthrough <databases-tables-add-passthrough>` |fa-index-separator| :ref:`Add as SQL <databases-tables-add-sql>` |fa-index-separator| :ref:`Add from table template <databases-tables-add-table-template>`
 
 **Standard table templates**
-   :doc:`Customer 360 <table_customer_360>` |fa-index-separator| :doc:`Customer Attributes <table_customer_attributes>` |fa-index-separator| :doc:`Email Engagement Attributes <table_email_engagement_attributes>` |fa-index-separator| :doc:`Email Opt Status <table_email_opt_status>` |fa-index-separator| :doc:`Merged Customers <table_merged_customers>` |fa-index-separator| :doc:`SMS Opt Status <table_sms_opt_status>` |fa-index-separator| :doc:`Transaction Attributes <table_transaction_attributes>` |fa-index-separator| :doc:`Unified Coalesced <table_unified_coalesced>` |fa-index-separator| :doc:`Unified Customer <table_unified_customers>` |fa-index-separator| :doc:`Unified Itemized Transactions <table_unified_itemized_transactions>` |fa-index-separator| :doc:`Unified Scores <table_unified_scores>` |fa-index-separator| :doc:`Unified Transactions <table_unified_transactions>`
+   :doc:`Customer 360 <table_customer_360>` |fa-index-separator| :doc:`Customer Attributes <table_customer_attributes>` |fa-index-separator| :doc:`Email Engagement Attributes <table_email_engagement_attributes>` |fa-index-separator| :doc:`Email Opt Status <table_email_opt_status>` |fa-index-separator| :doc:`Merged Customers <table_merged_customers>` |fa-index-separator| :doc:`SMS Opt Status <table_sms_opt_status>` |fa-index-separator| :doc:`Unified Coalesced <table_unified_coalesced>` |fa-index-separator| :doc:`Unified Customer <table_unified_customers>` |fa-index-separator| :doc:`Unified Itemized Transactions <table_unified_itemized_transactions>` |fa-index-separator| :doc:`Unified Scores <table_unified_scores>` |fa-index-separator| :doc:`Unified Transactions <table_unified_transactions>`
 
 **Validation alerts**
    :ref:`About validation alerts <databases-validation-alerts>` |fa-index-separator| :ref:`Implicit CROSS JOIN <databases-validation-alert-implicit-cross-join>` |fa-index-separator| :ref:`OVER without PARTITION BY <databases-validation-alert-over-without-partition-by>` |fa-index-separator| :ref:`Unescaped backslashes <databases-validation-alert-unescaped-backslashes>` |fa-index-separator| :ref:`Unintentional broadcast joins <databases-validation-alert-unintentional-broadcast-joins>`
@@ -414,7 +414,6 @@ Automate workflows
    table_stitch_blocklistvalues
    table_stitch_scores
    table_transaction_attributes_extended
-   table_transaction_attributes
    table_unified_changes_clusters
    table_unified_changes_pks
    table_unified_coalesced

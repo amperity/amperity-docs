@@ -946,7 +946,7 @@ Transaction attributes are a set of extended attributes that are based on inputs
 
 Transaction attributes provide the days in-between transaction events and time period rollups across prices, numbers of items within individual orders, average order values, order frequencies, and RFM scores.
 
-The following attributes are available from the **Transaction Attributes** and **Transaction Attributes Extended** tables.
+The following attributes are available from the **Transaction Attributes Extended** table.
 
 .. attributes-interactions-transactions-end
 

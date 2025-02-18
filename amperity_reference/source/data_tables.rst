@@ -99,11 +99,10 @@ There are four groups of tables in this diagram:
           :start-after: .. term-interaction-record-start
           :end-before: .. term-interaction-record-end
 
-       Interaction records rely on a series of tables: **Transaction Attributes**, **Transaction Attributes Extended**, **Unified Itemized Transactions**, **Unified Transactions**, and **Unified Product Catalog**.
+       Interaction records rely on a series of tables: **Transaction Attributes Extended**, **Unified Itemized Transactions**, **Unified Transactions**, and **Unified Product Catalog**.
 
-       Each Amperity ID in the **Customer 360** table can be associated to many rows in the **Unified Transactions** table, and then each Amperity ID in the **Unified Transactions** can be associated to many rows in the **Unified Itemized Transactions** table. Each Amperity ID in the **Customer 360** table is associated to one Amperity ID in the **Transaction Attributes** table.
+       Each Amperity ID in the **Customer 360** table can be associated to many rows in the **Unified Transactions** table, and then each Amperity ID in the **Unified Transactions** can be associated to many rows in the **Unified Itemized Transactions** table. Each Amperity ID in the **Customer 360** table is associated to one Amperity ID in the **Transaction Attributes Extended** table.
 
-       .. note:: The **Transaction Attributes** table has an associated "extended" table that captures additional attributes when data sources provide to Amperity the data required to complete the calculations for the attributes. It exists as a separate table in the customer 360 database, but should be viewed as a subset of transactions attributes data.
 
    * - Stitch results
 
@@ -646,7 +645,7 @@ The **Customer Attributes** table contains the following columns:
      - Boolean
      - A flag that indicates if the customer is a known or likely reseller of a product.
 
-       .. tip:: A reseller should be defined as an early repeat purchaser with a high lifetime order frequency. Use the following fields from the **Transaction Attributes** table to define a reseller: 
+       .. tip:: A reseller should be defined as an early repeat purchaser with a high lifetime order frequency. Use the following fields from the **Transaction Attributes Extended** table to define a reseller: 
 
           * **Early Repeat Purchaser** (set to ``true``)
           * **Lifetime Order Frequency** (define an order frequency threshold, such as "greater than 50")
@@ -2043,16 +2042,16 @@ The **Stitch Scores** table contains the following columns:
 
 .. _data-tables-transaction-attributes:
 
-Transaction Attributes
+Transaction Attributes Extended
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-transaction-attributes-table-start
-   :end-before: .. term-transaction-attributes-table-end
+   :start-after: .. term-transaction-attributes-extended-table-start
+   :end-before: .. term-transaction-attributes-extended-table-end
 
 .. data-tables-transaction-attributes-table-about-start
 
-The **Transaction Attributes** table contains the following columns:
+The **Transaction Attributes Extended** table contains the following columns:
 
 .. data-tables-transaction-attributes-table-about-end
 
@@ -2086,9 +2085,7 @@ The **Transaction Attributes** table contains the following columns:
 
        .. tip:: Use the **Early Repeat Purchaser** attribute as a leading indicator for overall conversion rate of one-time buyers to repeat customers, even when it does not capture the total number of one-time buyers who have returned to purchase again.
 
-       This column is calculated from the **First Order Datetime** and **Second Order Datetime** columns in the **Transaction Attributes** table.
-
-       Also in: **Transaction Attributes Extended**
+       This column is calculated from the **First Order Datetime** and **Second Order Datetime** columns in the **Transaction Attributes Extended** table.
 
    * - **First Order Datetime**  
      - Datetime
@@ -2098,8 +2095,6 @@ The **Transaction Attributes** table contains the following columns:
 
        This column is calculated from the **Order Datetime** column in the **Unified Transactions** table, which is created when the **order-datetime** semantic tag is applied to interaction records that contain transactions data.
 
-       Also in: **Transaction Attributes Extended**
-
    * - **First Order ID**  
      - String
      - .. include:: ../../shared/terms.rst
@@ -2107,8 +2102,6 @@ The **Transaction Attributes** table contains the following columns:
           :end-before: .. term-first-order-id-end
 
        This column is calculated from the **Order ID** column in the **Unified Transactions** and **Unified Itemized Transactions** tables, which is created when the **order-id** semantic tag is applied to interaction records that contain transactions and itemized transactions data.
-
-       Also in: **Transaction Attributes Extended**
 
    * - **First Order Is Retained**  
      - Boolean
@@ -2124,8 +2117,6 @@ The **Transaction Attributes** table contains the following columns:
 
        This column is calculated from the **Order Revenue** column in the **Unified Transactions** table, which is created when the **order-revenue** semantic tag is applied to interaction records that contain transactions data.
 
-       Also in: **Transaction Attributes Extended**
-
    * - **First Order Total Items**  
      - Integer
      - .. include:: ../../shared/terms.rst
@@ -2133,8 +2124,6 @@ The **Transaction Attributes** table contains the following columns:
           :end-before: .. term-first-order-total-items-end
 
        This column is calculated from the **Order Quantity** column in the **Unified Transactions** table, which is created when the **order-quantity** semantic tag is applied to interaction records that contain transactions data.
-
-       Also in: **Transaction Attributes Extended**
 
    * - **Latest Order Datetime**  
      - Datetime
@@ -2144,8 +2133,6 @@ The **Transaction Attributes** table contains the following columns:
 
        This column is calculated from the **Order Datetime** column in the **Unified Transactions** table, which is created when the **order-datetime** semantic tag is applied to interaction records that contain transactions data.
 
-       Also in: **Transaction Attributes Extended**
-
    * - **Latest Order ID**  
      - String
      - .. include:: ../../shared/terms.rst
@@ -2153,8 +2140,6 @@ The **Transaction Attributes** table contains the following columns:
           :end-before: .. term-latest-order-id-end
 
        This column is calculated from the **Order ID** column in the **Unified Transactions** and **Unified Itemized Transactions** tables, which is created when the **order-id** semantic tag is applied to interaction records that contain transactions and itemized transactions data.
-
-       Also in: **Transaction Attributes Extended**
 
    * - **Latest Order Revenue**  
      - Decimal
@@ -2164,8 +2149,6 @@ The **Transaction Attributes** table contains the following columns:
 
        This column is calculated from the **Order Revenue** column in the **Unified Transactions** table, which is created when the **order-revenue** semantic tag is applied to interaction records that contain transactions data.
 
-       Also in: **Transaction Attributes Extended**
-
    * - **Latest Order Total Items**  
      - Integer
      - .. include:: ../../shared/terms.rst
@@ -2173,8 +2156,6 @@ The **Transaction Attributes** table contains the following columns:
           :end-before: .. term-latest-order-total-items-end
 
        This column is calculated from the **Order Quantity** column in the **Unified Transactions** table, which is created when the **order-quantity** semantic tag is applied to interaction records that contain transactions data.
-
-       Also in: **Transaction Attributes Extended**
 
    * - **Lifetime Average Item Price**  
      - Decimal
@@ -2248,8 +2229,6 @@ The **Transaction Attributes** table contains the following columns:
 
        This column is calculated from the **Purchase Brand** column in the **Unified Transactions** table, which is created when the **purchase-brand** semantic tag is applied to interaction records that contain transactions data.
 
-       Also in: **Transaction Attributes Extended**
-
    * - **Multi Purchase Channel**  
      - Boolean
      - .. include:: ../../shared/terms.rst
@@ -2257,8 +2236,6 @@ The **Transaction Attributes** table contains the following columns:
           :end-before: .. term-multi-channel-end
 
        This column is calculated from the **Purchase Channel** column in the **Unified Transactions** table, which is created when the **purchase-channel** semantic tag is applied to interaction records that contain transactions data.
-
-       Also in: **Transaction Attributes Extended**
 
    * - **One And Done**  
      - Boolean
@@ -2268,9 +2245,7 @@ The **Transaction Attributes** table contains the following columns:
 
        .. important:: Amperity uses the range of data that is provided to it to identify one-time buyers. For example, if Amperity is provided data for the years 2015-2022, purchases made in 2014 are not used to identify one-time buyers.
 
-       This column is calculated from the **Lifetime Order Frequency** column in the **Transaction Attributes** table.
-
-       Also in: **Transaction Attributes Extended**
+       This column is calculated from the **Lifetime Order Frequency** column in the **Transaction Attributes Extended** table.
 
    * - **Second Order Datetime**  
      - Datetime
@@ -2280,8 +2255,6 @@ The **Transaction Attributes** table contains the following columns:
 
        This column is calculated from the **Order Datetime** column in the **Unified Transactions** and **Unified Itemized Transactions** tables, which is created when the **order-datetime** semantic tag is applied to interaction records that contain transactions and itemized transactions data.
 
-       Also in: **Transaction Attributes Extended**
-
    * - **Second Order ID**  
      - String
      - .. include:: ../../shared/terms.rst
@@ -2289,8 +2262,6 @@ The **Transaction Attributes** table contains the following columns:
           :end-before: .. term-second-order-id-end
 
        This column is calculated from the **Order ID** column in the **Unified Transactions** and **Unified Itemized Transactions** tables, which are created when the **order-id** semantic tag is applied to interaction records that contain transactions and itemized transactions data.
-
-       Also in: **Transaction Attributes Extended**
 
    * - **Second Order Is Retained**  
      - Boolean
@@ -2314,19 +2285,13 @@ The **Transaction Attributes** table contains the following columns:
 
        This column is calculated from the **Order Quantity** column in the **Unified Transactions** table, which is created when the **order-quantity** semantic tag is applied to interaction records that contain transactions data.
 
-       Also in: **Transaction Attributes Extended**
-
 .. data-tables-transaction-attributes-table-end
 
 
 .. _data-tables-transaction-attributes-extended:
 
-Transaction attributes, extended
+Transaction attributes, calculated
 ==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-transaction-attributes-extended-table-start
-   :end-before: .. term-transaction-attributes-extended-table-end
 
 .. data-tables-transaction-attributes-extended-start
 
@@ -2526,8 +2491,6 @@ Each record contains three attributes that specify the number of days between ce
           :start-after: .. term-days-since-last-order-start
           :end-before: .. term-days-since-last-order-end
 
-       This column is calculated from the **Latest Order Datetime** column in the **Transaction Attributes** table.
-
    * - **First To Latest Order Days**
      - Integer
      - 
@@ -2535,16 +2498,12 @@ Each record contains three attributes that specify the number of days between ce
           :start-after: .. term-first-to-latest-order-days-start
           :end-before: .. term-first-to-latest-order-days-end
 
-       This column is calculated from the **First Order Datetime** and **Latest Order Datetime** columns in the **Transaction Attributes** table.
-
    * - **First To Second Order Days**
      - Integer
      - 
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-first-to-second-order-days-start
           :end-before: .. term-first-to-second-order-days-end
-
-       This column is calculated from the **First Order Datetime** and **Second Order Datetime** columns in the **Transaction Attributes** table.
 
 .. data-tables-transaction-attributes-extended-date-differences-table-start
 

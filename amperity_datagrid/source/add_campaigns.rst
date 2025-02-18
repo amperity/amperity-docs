@@ -81,9 +81,9 @@ Verify each of the following items to ensure that Amperity is ready for enableme
 
 #. All data sources are processed successfully by Stitch.
 
-#. Stitch output includes the following tables specific to interactions records: **Transaction Attributes**, **Transaction Attributes Extended**, **Unified Itemized Transactions**, and **Unified Transactions**.
+#. Stitch output includes the following tables specific to interactions records: **Transaction Attributes Extended**, **Unified Itemized Transactions**, and **Unified Transactions**.
 
-#. The customer 360 database contains passthrough tables for  **Transaction Attributes**, and **Transaction Attributes Extended**.
+#. The customer 360 database contains passthrough tables for **Transaction Attributes Extended**.
 
    .. tip:: Add passthrough tables in the customer 360 database for each table that was defined in the **Sources** page using domain SQL.
 
@@ -91,7 +91,7 @@ Verify each of the following items to ensure that Amperity is ready for enableme
 
 #. The **Unified Transactions** table is added as a SQL table, into which attributes from the **Unified Itemized Transactions** table are rolled up.
 
-#. The **Customer 360** table is updated to select attributes from the **Transaction Attributes** table.
+#. The **Customer 360** table is updated to select attributes from the **Transaction Attributes Extended** table.
 
 #. The **Customer 360** table is updated to select attributes from other tables that you want to associate with segments and campaigns, such as for loyalty programs.
 
@@ -150,14 +150,14 @@ Columns and tables
 Amperity uses specific columns across the following tables to enable features to support segments and campaigns:
 
 * **Merged Customers**
-* **Transaction Attributes**
+* **Transaction Attributes Extended**
 * **Unified Customers**
 * **Unified Scores**
 * **Unified Transactions**
 
 The **Unified Customers** and **Unified Scores** tables are built as part of Stitch output when data sources with customer records have profile (PII) semantic tags applied.
 
-The **Transaction Attributes** and **Unified Transactions** are built as part of Stitch output when data sources with interactions records have transactions and itemized transactions semantic tags applied.
+The **Transaction Attributes Extended** and **Unified Transactions** are built as part of Stitch output when data sources with interactions records have transactions and itemized transactions semantic tags applied.
 
 The **Merged Customers** table is a version of the **Unified Customers** table that you must build in the customer 360 database to filter profile data. The **Merged Customers** table must be updated to roll-up transactions and itemized transactions.
 
@@ -223,7 +223,7 @@ The following columns must exist in the following tables as an output of the Sti
        * **Merged Customers**
        * **Unified Customers**
        * **Unified Transactions**
-       * **Transaction Attributes**
+       * **Transaction Attributes Extended**
 
    * - **birthdate**
      - *Predictive modeling*

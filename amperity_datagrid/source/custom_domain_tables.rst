@@ -23,7 +23,7 @@ About custom domain tables
 
 .. domain-tables-custom-links-start
 
-These semantic tags generate the :doc:`Unified Itemized Transactions <table_unified_itemized_transactions>` table, which is then used as the underlying reference for the :doc:`Unified Transactions <table_unified_transactions>`, :doc:`Transaction Attributes <table_transaction_attributes>`, and :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` tables.
+These semantic tags generate the :doc:`Unified Itemized Transactions <table_unified_itemized_transactions>` table, which is then used as the underlying reference for the :doc:`Unified Transactions <table_unified_transactions>` and :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` tables.
 
 .. domain-tables-custom-links-end
 

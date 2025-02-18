@@ -37,7 +37,7 @@ Use in segments
 
 .. attribute-one-and-done-find-start
 
-To find one-time buyers, start with the **One and Done** attribute in the **Transaction Attributes** table, and then set its condition to **is true**.
+To find one-time buyers, start with the **One and Done** attribute in the **Transaction Attributes Extended** table, and then set its condition to **is true**.
 
 .. attribute-one-and-done-find-end
 

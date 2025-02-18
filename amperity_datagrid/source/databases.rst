@@ -242,7 +242,6 @@ The following tables are added by the "Customer 360" template when profile seman
 The following tables are added by the "Customer 360" template when transaction and itemized transaction semantic tags are applied to interactions records:
 
 * **Customer Attributes**
-* **Transaction Attributes**
 * **Transaction Attributes Extended**
 * **Unified Itemized Transactions**
 * **Unified Transactions**
@@ -480,7 +479,6 @@ Table templates are available for all standard tables:
 * :doc:`Customer Attributes <table_customer_attributes>`
 * :doc:`Email Engagement Attributes <table_email_engagement_attributes>`
 * :doc:`Merged Customers <table_merged_customers>`
-* :doc:`Transaction Attributes <table_transaction_attributes>`
 * :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>`
 * :doc:`Unified Coalesced <table_unified_coalesced>`
 * :doc:`Unified Customer <table_unified_customers>`
@@ -500,7 +498,7 @@ Other templates
 
 Table templates are available for other tables:
 
-* :doc:`Customer360 <table_customer_360>` that joins **Transaction Attributes**
+* :doc:`Customer360 <table_customer_360>` that joins **Transaction Attributes Extended**
 * :doc:`Detailed Examples <table_detailed_examples>`
 * :doc:`Merged Households <table_merged_households>`; this table requires access to address standardization lookup tables.
 

@@ -150,14 +150,14 @@ Columns and tables
 Predictive models use specific columns across the following tables:
 
 * **Merged Customers**
-* **Transaction Attributes**
+* **Transaction Attributes Extended**
 * **Unified Customer**
 * **Unified Itemized Transactions**
 * **Unified Transactions**
 
 The **Unified Customer** table is built as part of Stitch output when data sources with customer records have profile (PII) semantic tags applied.
 
-The **Transaction Attributes**, **Unified Itemized Transactions**, and **Unified Transactions** are built as part of Stitch output when data sources with interactions records have transactions and itemized transactions semantic tags applied.
+The **Transaction Attributes Extended**, **Unified Itemized Transactions**, and **Unified Transactions** are built as part of Stitch output when data sources with interactions records have transactions and itemized transactions semantic tags applied.
 
 The **Merged Customers** table is a version of the **Unified Customer** table that you must build in the customer 360 database to filter profile data. The **Merged Customers** table must be updated to roll-up transactions and itemized transactions.
 
@@ -194,7 +194,7 @@ The following columns are required by predictive models and must exist in the fo
        * **Unified Customer**
        * **Unified Itemized Transactions**
        * **Unified Transactions**
-       * **Transaction Attributes**
+       * **Transaction Attributes Extended**
 
    * - **birthdate**
      - Predictive models
@@ -390,7 +390,7 @@ The typical process for setting up predictive models follows a series of general
 
 #. (~1 week) Ensure that data is made available to Amperity that meets the semantic tagging requirements (along with any :ref:`predicted-models-specific fields <add-predicted-models-data-requirements-fields>`), including for transactions, itemized transactions, and product catalog. Use domain SQL to perform pre-Stitch data transforms as necessary.
 
-   Verify that data is being processed correctly to the following tables in the customer 360 database: **Unified Transactions**, **Unified Itemized Transactions**, **Transaction Attributes**, and **Transaction Attributes Extended**.
+   Verify that data is being processed correctly to the following tables in the customer 360 database: **Unified Transactions**, **Unified Itemized Transactions**, and **Transaction Attributes Extended**.
 
 #. (~1 week) Amperity begins the process of training the models, validating backtesting, and optimizing predictions.
 
