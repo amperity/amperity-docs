@@ -6071,7 +6071,6 @@ Standard tables include:
 * **Email Engagement Summary**
 * **Lifecycle Events**
 * **Merged Customers**
-* **Transaction Attributes**
 * **Transaction Attributes Extended**
 * **Unified Customer**
 * **Unified Coalesced**
@@ -6206,7 +6205,7 @@ A stitched record is a unique output of the Stitch process that associates the A
 
 .. term-stitched-table-start
 
-A stitched table is a database table that is output by the Stitch process. The list of stitched tables created when PII semantics are present include **Unified Coalesced**, **Unified Scores**, and **Merged Customers**. The list of stitched tables created when transaction semantics are present include **Unified Transactions** and **Transaction Attributes**.
+A stitched table is a database table that is output by the Stitch process. The list of stitched tables created when PII semantics are present include **Unified Coalesced**, **Unified Scores**, **Unified_Changes_Clusters**, and **Unified_Changes_PKs**.
 
 .. term-stitched-table-end
 
@@ -6501,20 +6500,11 @@ A transactions semantic is a way to identify brands, channels, stores, orders, p
 .. term-transaction-semantic-end
 
 
-**Transaction Attributes**
-
-.. term-transaction-attributes-table-start
-
-The **Transaction Attributes** table describes the behavior and history of customer transactions, such as purchase history and frequency, brand preferences, order history, time between purchases, and so on.
-
-.. term-transaction-attributes-table-end
-
-
 **Transaction Attributes Extended**
 
 .. term-transaction-attributes-extended-table-start
 
-The **Transaction Attributes Extended** table contains attributes for customer flags, customer orders, data differences, and time period rollups, many of which are represented by duration (days, months, years, lifetime), order position (first, second, last), frequency, and revenue.
+The **Transaction Attributes Extended** table contains attributes for customer flags, customer orders, data differences, time period rollups, and RFM scores, many of which are represented by duration (days, months, years, lifetime), order position (first, second, last), frequency, and revenue.
 
 .. term-transaction-attributes-extended-table-end
 
