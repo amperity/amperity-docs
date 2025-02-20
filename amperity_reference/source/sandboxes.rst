@@ -122,6 +122,8 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
        .. tip:: If a sandbox is created while a Stitch run is in progress, wait for the Stitch run to finish in production before running the database in the sandbox. This will allow the database in the sandbox to use the most recent Stitch outputs in production for the initial database refresh in the sandbox.
 
+       .. note:: Configuration state for an inbound bridge is copied from production, and then applied to the sandbox. Configuration state for an outbound bridge **is not copied**. An outbound bridge must be configured within the sandbox.
+
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 3.
