@@ -761,6 +761,7 @@ The following settings are available for advanced configuration of Stitch:
 * :ref:`configure-stitch-advanced-profile-supersized-clusters`
 * :ref:`configure-stitch-advanced-profile-trivial-duplicates`
 * :ref:`configure-stitch-advanced-reports`
+* :ref:`configure-stitch-advanced-staple`
 
 .. configure-stitch-advanced-end
 
@@ -1347,3 +1348,27 @@ For example:
    }
 
 .. configure-stitch-advanced-reports-end
+
+
+.. _configure-stitch-advanced-staple:
+
+Staple
+--------------------------------------------------
+
+.. configure-stitch-advanced-staple-start
+
+Staple is a feature of Stitch designed to improve recall over sparse interaction data by lowering the threshold for matching certain fields if they only appear in one cluster.
+
+Use the **Advanced** tab to enable staple. Set the following setting to "True"
+
+::
+
+   :amperity.stitch.settings/enable-staple? False
+
+and then configure the semantics for which thresholds are lowered. **fk** and **phone** are the default values:
+
+::
+
+   :amperity.stitch.settings/staple-semantics #{"fk" "phone"}
+
+.. configure-stitch-advanced-staple-end
