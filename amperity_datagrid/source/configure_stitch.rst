@@ -1359,13 +1359,13 @@ Staple
 
 Staple is a feature of Stitch designed to improve recall over sparse interaction data by lowering the threshold for matching certain fields if they only appear in one cluster.
 
-Use the **Advanced** tab to enable staple. Set the following setting to "True"
+Use the **Advanced** tab to disable staple. Set the following setting to "False"
 
 ::
 
-   :amperity.stitch.settings/enable-staple? False
+   :amperity.stitch.settings/enable-staple? True
 
-and then configure the semantics for which thresholds are lowered. **fk** and **phone** are the default values:
+Configure the semantics for which thresholds are lowered using the **staple-semantics** setting. **fk** and **phone** are the default values:
 
 ::
 
