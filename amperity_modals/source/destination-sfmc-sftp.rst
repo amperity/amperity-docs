@@ -13,9 +13,9 @@
 Salesforce Marketing Cloud (SFTP)
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-salesforce-marketing-cloud-start
-   :end-before: .. setting-salesforce-marketing-cloud-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-salesforce-marketing-cloud-start
+   :end-before: .. term-salesforce-marketing-cloud-end
 
 
 Credentials
