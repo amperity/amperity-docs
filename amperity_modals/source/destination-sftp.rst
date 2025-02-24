@@ -127,10 +127,6 @@ Settings
    :start-after: .. term-filename-template-start
    :end-before: .. term-filename-template-end
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-vibes-filename-template-pattern-start
-   :end-before: .. setting-vibes-filename-template-pattern-end
-
 **Line ending**
 
 .. include:: ../../shared/destination_settings.rst
