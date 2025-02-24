@@ -12,9 +12,9 @@
 Salesforce Marketing Cloud
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-sftp-about-start
-   :end-before: .. setting-sftp-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-salesforce-marketing-cloud-start
+   :end-before: .. term-salesforce-marketing-cloud-end
 
 
 Credentials

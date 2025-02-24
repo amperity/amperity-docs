@@ -143,8 +143,9 @@ Applies to: all destinations.
 
 By default a destination is available to all users who have permission to view personally identifiable information (PII).
 
-* A destination may be configured to restrict access to only users assigned to the **Datagrid Operator** and **Datagrid Administrator** policies. Enable the **Admin only** checkbox.
-* A destination may be configured to allow users with limited access to PII. Enable the **PII setting** checkbox.
+Enable the **Admin only** checkbox to restrict access to only users assigned to the **Datagrid Operator** and **Datagrid Administrator** policies. 
+
+Enable the **PII setting** checkbox to allow users with limited access to PII access to this destination.
 
 .. setting-common-business-user-access-allow-end
 

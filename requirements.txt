@@ -3,6 +3,5 @@ Sphinx==7.3.7
 docutils==0.20
 hieroglyph==1.0
 PyJWT==2.4.0
-sphinxcontrib-redoc==1.6.0
 sphinxcontrib-video==0.2.0
 sphinx_design==0.6.1

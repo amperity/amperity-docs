@@ -1,21 +1,21 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: SFTP
-.. |file-format| replace:: Apache Parquet, CSV, Custom delimiter, JSON, NDJSON, PSV, or TSV
-.. |sftp-hostname| replace:: "sftp.acme.com"
+.. |destination-name| replace:: Salesforce Marketing Cloud
+.. |file-format| replace:: CSV
+.. |sftp-hostname| replace:: "[hostname].ftp.marketingcloudops.com"
 .. |remote-folder| replace:: "/folder/name"
-.. |sftp-port| replace:: "22"
-.. |what-send| replace:: Apache Parquet, CSV, JSON, NDJSON, PSV, or TSV files
-.. |where-send| replace:: any SFTP site
+.. |sftp-portx| replace:: "22"
+.. |what-send| replace:: CSV files
+.. |where-send| replace:: Salesforce Marketing Cloud
 
 
-SFTP
+Salesforce Marketing Cloud (SFTP)
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-sftp-about-start
-   :end-before: .. setting-sftp-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-salesforce-marketing-cloud-start
+   :end-before: .. term-salesforce-marketing-cloud-end
 
 
 Credentials
@@ -27,39 +27,17 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Hostname**
+**SFTP Hostname**
 
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-sftp-hostname-start
    :end-before: .. credential-sftp-hostname-end
-
-**Port**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-sftp-port-start
-   :end-before: .. credential-sftp-port-end
 
 **Username**
 
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-sftp-username-start
    :end-before: .. credential-sftp-username-end
-
-**Host public key**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-sftp-host-public-key-start
-   :end-before: .. credential-sftp-host-public-key-end
-
-**Private key**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-sftp-private-key-start
-   :end-before: .. credential-sftp-private-key-end
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-sftp-private-key-required-start
-   :end-before: .. credential-sftp-private-key-required-end
 
 **Passphrase**
 
@@ -154,12 +132,6 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-quote-mode-none-start
    :end-before: .. setting-common-quote-mode-none-end
-
-**Parquet extension**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-parquet-extension-start
-   :end-before: .. setting-common-parquet-extension-end
 
 **Success file**
 

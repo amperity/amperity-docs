@@ -70,6 +70,7 @@ Site Index
    destination-sailthru
    destination-salesforce
    destination-salesforce-marketing-cloud
+   destination-sfmc-sftp
    destination-sftp
    destination-smg
    destination-snapchat
