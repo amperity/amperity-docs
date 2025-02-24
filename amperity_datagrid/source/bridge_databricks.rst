@@ -382,6 +382,12 @@ A sync from Amperity to Databricks requires configuration steps to be made in bo
 
 .. bridge-databricks-sync-with-databricks-end
 
+.. bridge-databricks-sync-with-databricks-sandbox-start
+
+.. note:: Configuration state for an outbound bridge **is not copied** from production, and then applied to the sandbox. An outbound bridge must be configured within the sandbox.
+
+.. bridge-databricks-sync-with-databricks-sandbox-end
+
 .. bridge-databricks-sync-with-databricks-links-start
 
 #. :ref:`Get details <bridge-databricks-sync-with-databricks-prerequisites>`
