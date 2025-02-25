@@ -23,7 +23,7 @@ File format: DAT
 
 .. format-dat-important-start
 
-.. important:: This topic exists to show that, in addition to handling Apache Avro, Apache Parquet, CSV, JSON, NDJSON, PSV, TSV, and XML files, Amperity is also capable of collecting data from non-standard data sources.
+.. important:: This topic exists to show that Amperity is capable of collecting data from non-standard data sources, in addition to handling Apache Avro, Apache Parquet, CSV, JSON, NDJSON, PSV, TSV, and XML files.
 
 .. format-dat-important-end
 
