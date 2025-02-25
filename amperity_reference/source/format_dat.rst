@@ -21,6 +21,12 @@ File format: DAT
    :start-after: .. term-dat-start
    :end-before: .. term-dat-end
 
+.. format-dat-important-start
+
+.. important:: This topic exists to show that Amperity is capable of collecting data from non-standard data sources, in addition to handling Apache Avro, Apache Parquet, CSV, JSON, NDJSON, PSV, TSV, and XML files.
+
+.. format-dat-important-end
+
 .. format-dat-note-start
 
 .. note:: You can use an ingest query to parse individual fields out of a DAT file, and then configure a courier to load that query. Rename the fields in the ingest query, in a feed, or by using domain SQL.
