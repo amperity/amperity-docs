@@ -398,7 +398,7 @@ Spark SQL
 Stitch
 ==================================================
 
-:doc:`About Stitch <stitch>` |fa-index-separator| :ref:`Run Stitch <stitch-run>` |fa-index-separator| :ref:`Select domain tables <stitch-run-select-tables>`
+:doc:`About Stitch <stitch>` |fa-index-separator| :ref:`Run Stitch <stitch-run>` |fa-index-separator| :doc:`Stitch benchmarks <benchmarks>` |fa-index-separator| :ref:`Select domain tables <stitch-run-select-tables>`
 
 **Stitch results**
    :doc:`About Stitch results <stitch>` |fa-index-separator| :ref:`Explore Stitch results <stitch-explore-stitch-results>` |fa-index-separator| :ref:`Explore by Amperity ID <stitch-explore-by-amperity-id>` |fa-index-separator| :ref:`Explore by data source <stitch-explore-by-data-source>` |fa-index-separator| :ref:`Explore previous Stitch results <stitch-explore-previous-stitch-results>` |fa-index-separator| :ref:`Explore semantics <stitch-explore-semantics>` |fa-index-separator| :ref:`View cluster graph <stitch-explore-cluster-graph>` |fa-index-separator| :ref:`View deduplication rate <stitch-explore-deduplication-rate>` |fa-index-separator| :ref:`View pairwise connections <stitch-explore-pairwise-connections>` |fa-index-separator| :ref:`View Stitch metrics <stitch-explore-stitch-metrics>` |fa-index-separator| :ref:`View stitched records <stitch-explore-stitched-records>`
@@ -523,6 +523,7 @@ Workflows
    attribute_total_items
    attribute_total_items_intervals
    attributes
+   benchmarks
    bridge
    campaigns
    connected_systems
