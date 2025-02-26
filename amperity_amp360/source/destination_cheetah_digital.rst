@@ -1,24 +1,24 @@
 .. https://docs.amperity.com/amp360/
 
 
-.. |destination-name| replace:: Cheetah Digital
+.. |destination-name| replace:: Cheetah Digital by Marigold
 .. |what-send| replace:: customer profiles
 
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send query results from Amperity to Cheetah Digital.
+        Use orchestrations to send query results from Amperity to Cheetah Digital by Marigold.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send query results from Amperity to Cheetah Digital.
+        Use orchestrations to send query results from Amperity to Cheetah Digital by Marigold.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send query results to Cheetah Digital
+        Send query results to Cheetah Digital by Marigold
 
 ==================================================
-Send query results to Cheetah Digital
+Send query results to Cheetah Digital by Marigold
 ==================================================
 
 .. include:: ../../shared/terms.rst

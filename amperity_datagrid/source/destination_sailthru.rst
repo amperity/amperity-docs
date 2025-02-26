@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/datagrid/
 
 
-.. |destination-name| replace:: Sailthru
+.. |destination-name| replace:: Sailthru by Marigold
 .. |destination-api| replace:: Sailthru API
 .. |plugin-name| replace:: Sailthru
 .. |what-send| replace:: email address lists
@@ -17,18 +17,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Sailthru.
+        Configure Amperity to send data to Sailthru by Marigold.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Sailthru.
+        Configure Amperity to send data to Sailthru by Marigold.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Sailthru
+        Send data to Sailthru by Marigold
 
 ==================================================
-Send data to Sailthru
+Send data to Sailthru by Marigold
 ==================================================
 
 .. include:: ../../shared/terms.rst
