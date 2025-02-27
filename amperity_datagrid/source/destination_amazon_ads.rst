@@ -38,8 +38,6 @@ Send data to Amazon Ads
    :start-after: .. term-amazon-ads-start
    :end-before: .. term-amazon-ads-end
 
-.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
-
 .. destination-amazon-ads-start
 
 Amperity can manage audiences within |destination-name| for use with a variety of advertising and paid media channels, such as: 
