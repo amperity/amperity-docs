@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/datagrid/
 
 
-.. |destination-name| replace:: Cheetah Digital
+.. |destination-name| replace:: Cheetah Digital by Marigold
 .. |plugin-name| replace:: the plugin that matches the profile configured in |destination-name|
 .. |what-send| replace:: CSV, PSV, or TSV files
 .. |email-plus-send| replace:: additional attributes
@@ -22,18 +22,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Cheetah Digital.
+        Configure Amperity to send data to Cheetah Digital by Marigold.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Cheetah Digital.
+        Configure Amperity to send data to Cheetah Digital by Marigold.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Cheetah Digital
+        Send data to Cheetah Digital by Marigold
 
 ==================================================
-Send data to Cheetah Digital
+Send data to Cheetah Digital by Marigold
 ==================================================
 
 .. include:: ../../shared/terms.rst

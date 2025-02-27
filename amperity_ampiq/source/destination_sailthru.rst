@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/ampiq/
 
 
-.. |destination-name| replace:: Sailthru
+.. |destination-name| replace:: Sailthru by Marigold
 .. |what-send| replace:: email address lists
 .. |what-enable| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
@@ -9,18 +9,18 @@
 
 .. meta::
     :description lang=en:
-        Use segments and campaigns to send audiences from Amperity to Sailthru.
+        Use segments and campaigns to send audiences from Amperity to Sailthru by Marigold.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use segments and campaigns to send audiences from Amperity to Sailthru.
+        Use segments and campaigns to send audiences from Amperity to Sailthru by Marigold.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to Sailthru
+        Send audiences to Sailthru by Marigold
 
 ==================================================
-Send audiences to Sailthru
+Send audiences to Sailthru by Marigold
 ==================================================
 
 .. include:: ../../shared/terms.rst

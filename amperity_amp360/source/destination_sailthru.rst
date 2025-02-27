@@ -1,24 +1,24 @@
 .. https://docs.amperity.com/amp360/
 
 
-.. |destination-name| replace:: Sailthru
+.. |destination-name| replace:: Sailthru by Marigold
 .. |what-send| replace:: email address lists
 
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send query results from Amperity to Sailthru.
+        Use orchestrations to send query results from Amperity to Sailthru by Marigold.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send query results from Amperity to Sailthru.
+        Use orchestrations to send query results from Amperity to Sailthru by Marigold.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send query results to Sailthru
+        Send query results to Sailthru by Marigold
 
 ==================================================
-Send query results to Sailthru
+Send query results to Sailthru by Marigold
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -27,7 +27,7 @@ Send query results to Sailthru
 
 .. sendto-sailthru-start
 
-Use Amperity to manage |what-send| in Sailthru. Build a query using the **email** field and then send the results of that query to Sailthru. The audience list will be updated to match the query.
+Use Amperity to manage |what-send| in |destination-name|. Build a query using the **email** field and then send the results of that query to |destination-name|. The audience list will be updated to match the query.
 
 .. sendto-sailthru-end
 

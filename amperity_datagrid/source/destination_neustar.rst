@@ -38,6 +38,8 @@ Send data to Neustar
    :start-after: .. term-neustar-start
    :end-before: .. term-neustar-end
 
+.. note:: |destination-name| is now `TransUnion TruAudience <https://www.transunion.com/solution/truaudience>`__ |ext_link|.
+
 .. destination-neustar-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst
