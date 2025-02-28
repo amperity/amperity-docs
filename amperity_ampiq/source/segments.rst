@@ -185,7 +185,7 @@ The following sections describe the individual elements within the **Segment Edi
           :alt: Step 7.
           :align: left
           :class: no-scaled-link
-     - After your segment is saved the **Segment Overview** page opens and shows additional details, such as historical and predicted revenue, the percentage of customers that are reachable by email, by phone, on Facebook, and customer trends, such as purchases by channel, revenue by lifetime spend. Reachable customers have not necessarily opted into marketing through these contact methods. 
+     - After your segment is saved the **Segment Overview** page opens and shows additional details, such as historical and predicted revenue, the percentage of customers that are reachable by email, by phone, on Facebook, and customer trends, such as purchases by channel, revenue by lifetime spend. Reachable customers may not have opted into marketing through these contact methods.
 
        .. image:: ../../images/mockup-segments-tab-segment-insights-socktown.png
           :width: 800 px
