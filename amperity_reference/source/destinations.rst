@@ -40,7 +40,7 @@ Add destinations
 
 .. destinations-add-start
 
-xxxxx
+To add destinations to your Amperity tenant, do the following:
 
 #. :ref:`Get details <destinations-get-details>`
 #. :ref:`Configure credentials <destinations-configure-credentials>`
@@ -176,3 +176,6 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destinations-add-destination-steps-end
+
+
+
