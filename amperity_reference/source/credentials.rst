@@ -37,7 +37,7 @@ Use the **Credentials** page to view and manage credentials for data sources and
 
 .. credentials-context-start
 
-In some cases, surces and destinations may use the same credentials, such as for an SFTP site or Amazon S3 bucket.
+In some cases, sources and destinations may use the same credentials, such as for an SFTP site or Amazon S3 bucket.
 
 .. credentials-context-end
 

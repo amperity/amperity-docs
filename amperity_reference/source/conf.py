@@ -182,7 +182,6 @@ html_additional_pages = {
     'attribute_compound_most_frequent_order': 'attribute_compound_most_frequent_order.html',
     'attribute_compound_repeat_order': 'attribute_compound_repeat_order.html',
     'attribute_compound_total_value_of_orders': 'attribute_compound_total_value_of_orders.html',
-    'destinations': 'destinations-list.html',
     'release_notes': 'release_notes.html',
     'release_notes_2023': 'release_notes_2023.html',
     'sources': 'sources-list.html',
