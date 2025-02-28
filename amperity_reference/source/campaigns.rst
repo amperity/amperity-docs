@@ -229,51 +229,6 @@ All campaigns start with an audience. Choose a segment from the **Include** drop
 
 .. campaigns-audiences-tip-end
 
-
-.. _campaigns-control-groups:
-
-Control groups
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-control-group-start
-   :end-before: .. term-control-group-end
-
-.. campaigns-control-groups-note-start
-
-.. note:: A control group is a completely randomized sample of customers that is pulled from the original audience.
-
-.. campaigns-control-groups-note-end
-
-.. campaigns-control-groups-start
-
-A campaign typically has a single control group, unless sub-audiences are defined within the campaign. Each sub-audience may contain a control group.
-
-.. campaigns-control-groups-end
-
-.. campaigns-control-groups-consistent-membership-start
-
-.. admonition:: Does a control group have consistent audience membership?
-
-   Amperity attempts to maintain (but does not guarantee) consistent audience membership for control groups that are associated with recurring campaigns.
-
-   * When the audience size is unchanged across the campaigns that you send, the membership of the control group will be unchanged.
-
-   * When the audience size changes, the size of the control group also changes. Amperity IDs are added to the control group when the audience size gets bigger and are removed when the audience size gets smaller.
-
-   Audience members that are added to a control group may have belonged to a treatment group on the previous send.
-
-   Audience members that are removed from the control group will belong to a treatment group on the next send.
-
-   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a mostly static group of customers, but with small fluctuations in audience size.
-
-   #. Today the size of the audience for the segment is 1200 customers and the size of the control group is 20 percent, or 240 customers. The campaign is sent to 960 customers.
-   #. Next week the size of the audience is 1240, which means the size of the control group will be larger (248). The campaign is sent to 992 customers.
-   #. And the following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
-
-.. campaigns-control-groups-consistent-membership-end
-
-
 .. _campaigns-destinations:
 
 Destinations
@@ -328,6 +283,52 @@ Treatment groups
 You may configure more than one treatment group for each audience and sub-audience within a campaign.
 
 .. campaigns-treatment-groups-end
+
+
+.. _campaigns-control-groups:
+
+Control groups
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-control-group-start
+   :end-before: .. term-control-group-end
+
+Control groups can be used in combination with treatment groups to A/B test segments and sub-audiences. By observing the campaign performance against a treatment group as compared to a control group one can understand its effectiveness. 
+
+.. campaigns-control-groups-note-start
+
+.. note:: A control group is a completely randomized sample of customers that is pulled from the original audience.
+
+.. campaigns-control-groups-note-end
+
+.. campaigns-control-groups-start
+
+A campaign typically has a single control group, unless sub-audiences are defined within the campaign. Each sub-audience may contain a control group.
+
+.. campaigns-control-groups-end
+
+.. campaigns-control-groups-consistent-membership-start
+
+.. admonition:: Does a control group have consistent audience membership?
+
+   Amperity attempts to maintain (but does not guarantee) consistent audience membership for control groups that are associated with recurring campaigns.
+
+   * When the audience size is unchanged across the campaigns that you send, the membership of the control group will be unchanged.
+
+   * When the audience size changes, the size of the control group also changes. Amperity IDs are added to the control group when the audience size gets bigger and are removed when the audience size gets smaller.
+
+   Audience members that are added to a control group may have belonged to a treatment group on the previous send.
+
+   Audience members that are removed from the control group will belong to a treatment group on the next send.
+
+   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a mostly static group of customers, but with small fluctuations in audience size.
+
+   #. Today the size of the audience for the segment is 1200 customers and the size of the control group is 20 percent, or 240 customers. The campaign is sent to 960 customers.
+   #. Next week the size of the audience is 1240, which means the size of the control group will be larger (248). The campaign is sent to 992 customers.
+   #. And the following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
+
+.. campaigns-control-groups-consistent-membership-end
 
 
 .. _campaigns-sub-audiences:
