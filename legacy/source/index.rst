@@ -71,4 +71,5 @@ Site index
    destination_yahoo_dsp
    destination_zendesk
    source_amazon_s3
+   source_shopify
    start_here

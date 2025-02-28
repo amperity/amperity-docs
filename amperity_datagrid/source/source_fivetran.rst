@@ -87,10 +87,9 @@ A Fivetran-enabled data source generally works like this:
    * :doc:`Heap <source_heap>` (pull directly using an Amazon S3-based workflow)
    * :doc:`Klaviyo <source_klaviyo>` (pull directly using a REST API)
    * :doc:`Optimizely <source_optimizely>` (pull directly using an Amazon S3-based workflow)
-   * :doc:`Sailthru <source_sailthru>` (pull directly using a REST API)
+   * :doc:`Sailthru by Marigold <source_sailthru>` (pull directly using a REST API)
    * :doc:`Salesforce Marketing Cloud <source_salesforce_marketing_cloud>`
    * :doc:`SFTP <source_sftp>` (pull data from any SFTP site)
-   * :doc:`Shopify <source_shopify>` (pull directly using a REST API)
 
 .. source-fivetran-generic-documented-start
 
@@ -916,7 +915,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
 
    * - .. image:: ../../amperity_base/source/_static/connector-sailthru.svg
           :width: 140 px
-          :alt: Sailthru
+          :alt: Sailthru by Marigold
           :align: left
           :class: no-scaled-link
      - |fivetran_sailthru|

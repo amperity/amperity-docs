@@ -30,6 +30,8 @@ Pull from Shopify
    :start-after: .. term-shopify-start
    :end-before: .. term-shopify-end
 
+.. caution:: The API used by this connector is deprecated. New data sources cannot be configured using this connector.
+
 .. source-shopify-context-start
 
 Shopify is source of high quality data for both customer records *and* interaction records, including:
