@@ -33,7 +33,7 @@ With the rise of privacy-centric marketing strategies resulting in the demise of
 
 Capturing reliable data from across disparate silos in your organization to build unified customer profiles is essential to the future of your brand's acquisition strategy in paid media.
 
-Audiences built against unified customer profiles leads to significantly higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
+Audiences built against unified customer profiles lead to significantly higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
 
 .. paid-media-overview-context-end
 
@@ -631,6 +631,24 @@ Amperity provides direct connections to the most popular destinations across the
           :align: left
           :class: no-scaled-link
      - YouTube is an online video platform on which your brand can run in-stream, bumper, video, and discovery ads to build interest, brand awareness, and inspire your customers to take action. Use the |channel_google_dv360| destination to activate audiences using YouTube.
+
+
+.. _walmart-connect:
+
+.. list-table::
+   :widths: 40 60
+   :header-rows: 0
+
+   * - .. image:: ../../amperity_base/source/_static/connector-walmart-connect.png
+          :width: 140 px
+          :alt: Walmart DSP
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-walmart-connect-start
+          :end-before: .. term-walmart-connect-end
+
+       Use the |channel_walmart_dsp| destination to activate audiences using YouTube.
 
 .. paid-media-destinations-tables-end
 
