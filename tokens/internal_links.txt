@@ -416,6 +416,11 @@
    <a href="https://docs.amperity.com/ampiq/destination_yahoo_dsp.html">Yahoo DSP</a>
 
 
+.. |channel_walmart_dsp| raw:: html
+
+   <a href="https://docs.amperity.com/ampiq/destination_walmart_dsp.html">Walmart DSP</a>
+
+
 .. |credentials| raw:: html
 
    <a href="https://docs.amperity.com/reference/credentials.html">Credentials</a>
