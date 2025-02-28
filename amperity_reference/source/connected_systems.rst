@@ -879,7 +879,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Shopify**
      - |system-yes|
      - 
-     - Pull customer, order, product, and transaction data to Amperity.
+     - Pull customer, order, product, and transaction data to Amperity using Fivetran..
 
    * - **Service Management Group (SMG)**
      - |system-yes|

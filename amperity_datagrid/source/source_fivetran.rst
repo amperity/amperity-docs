@@ -90,7 +90,6 @@ A Fivetran-enabled data source generally works like this:
    * :doc:`Sailthru <source_sailthru>` (pull directly using a REST API)
    * :doc:`Salesforce Marketing Cloud <source_salesforce_marketing_cloud>`
    * :doc:`SFTP <source_sftp>` (pull data from any SFTP site)
-   * :doc:`Shopify <source_shopify>` (pull directly using a REST API)
 
 .. source-fivetran-generic-documented-start
 

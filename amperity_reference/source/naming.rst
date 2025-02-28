@@ -120,7 +120,6 @@ For example:
 * Amazon_S3_StateCodes
 * Braze_Audience
 * Sailthru_Responses
-* Shopify_Orders
 
 .. naming-database-tables-end
 
