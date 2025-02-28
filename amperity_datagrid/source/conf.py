@@ -193,6 +193,7 @@ html_additional_pages = {
     'destination_google_customer_match': 'destination_google_customer_match.html',
     'destinations': 'destinations.html',
     'source_databricks': 'source_databricks.html',
+    'source_shopify': 'source_shopify.html',
     'sources': 'sources.html',
 }
 
