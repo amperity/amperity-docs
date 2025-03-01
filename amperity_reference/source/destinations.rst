@@ -176,6 +176,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destinations-add-destination-steps-end
-
-
-
