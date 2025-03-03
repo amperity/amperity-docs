@@ -35,13 +35,6 @@ Send offline events to The Trade Desk
 
 .. events-the-trade-desk-overview-end
 
-.. events-the-trade-desk-usa-only-start
-
-.. important:: Your brand should only send offline events that occurred within the United States to |destination-name|.
-
-.. events-the-trade-desk-usa-only-end
-
-
 .. _events-the-trade-desk-build-segment:
 
 Build a query
