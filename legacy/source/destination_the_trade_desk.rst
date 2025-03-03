@@ -60,10 +60,6 @@ Your brand can send custom audiences and offline events to |destination-name|:
        * Video advertising on over-the-top (OTT) and connected TV (CTV) apps and platforms, such as Disney+, Major League Baseball, Hulu, Fox, Vevo, Paramount+, and more.
        * Audio advertising in-between songs and during podcasts across Spotify, Pandora, SoundCloud, iHeart, and more.
 
-       .. admonition:: United States audiences only
-
-          Your brand should only send custom audiences that contain customers who reside within the United States to |destination-name|.
-
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
@@ -75,10 +71,6 @@ Your brand can send custom audiences and offline events to |destination-name|:
        :ref:`Offline events <destination-the-trade-desk-offline-events>` help your brand track offline conversions---for in-store sales, place visits, and other events---for your marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
 
        .. tip:: Send offline events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
-
-       .. admonition:: United States audiences only
-
-          Your brand should only send offline events that occurred within the United States to |destination-name|.
 
 .. destination-the-trade-desk-custom-audiences-and-offline-events-end
 
@@ -204,12 +196,6 @@ This includes:
 * Audio advertising placed in-between songs and during podcasts
 
 .. destination-the-trade-desk-custom-audiences-end
-
-.. destination-the-trade-desk-custom-audiences-usaonly-start
-
-.. important:: Your brand should only send custom audiences that contain customers who reside within the United States to |destination-name|.
-
-.. destination-the-trade-desk-custom-audiences-usaonly-start
 
 
 .. _destination-the-trade-desk-custom-audiences-add-destination:
@@ -447,10 +433,6 @@ Offline events
 .. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-overview-start
    :end-before: .. events-the-trade-desk-overview-end
-
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
-   :start-after: .. events-the-trade-desk-usa-only-start
-   :end-before: .. events-the-trade-desk-usa-only-end
 
 
 .. _destination-the-trade-desk-offline-events-build-query:
