@@ -341,11 +341,9 @@ Sub-audiences
 
 .. campaigns-sub-audiences-start
 
+A sub-audience enables you to measure the performance of individual communications in a campaign. A sub-audience could represent a set of users for which you have a better understanding of their marketing preferences and you would like to send them specific messaging as part of a larger campaign. For example, you can see how the jackets sub-audience marketing email performed as compared to the t-shirts sub-audience marketing email within the same campaign. Additionally, each sub-audience can be configured to use its own control and treatment groups, providing even greater control and flexibility. 
+
 A sub-audience may define users by brand, most commonly purchased sub-brand, product affinity, product category, product type, demographics, etc.
-
-A sub-audience typically represents a set of users for which you have a better understanding of marketing preferences and will receive more specific messaging as part of the campaign. For example, you might split a spring sale email campaign by product affinity so you can send out an email showcasing shorts to customers with a high affinity for shorts and another email advertising t-shirts to customers with a high affinity for t-shirts.
-
-A sub-audience enables you to measure the performance of individual communications in a campaign. For example, you can see how the shorts sub-audience email performed as compared to the t-shirts sub-audience email within the same campaign. Each sub-audience can be configured to use its own control and treatment groups, providing even greater control and flexibility. 
 
 .. note:: The limit for number of sub-audiences per campaign is 60.
 
