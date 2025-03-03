@@ -85,18 +85,6 @@ You may build a more refined list of email addresses, such as those associated w
 
 .. sendto-the-trade-desk-build-query-end
 
-.. sendto-the-trade-desk-build-query-admonition-start
-
-.. admonition:: Which attributes should you use?
-
-   .. include:: ../../shared/channels.rst
-      :start-after: .. channels-build-segment-context-start
-      :end-before: .. channels-build-segment-context-end
-
-   Your brand should only send custom audiences that contain customers who reside within the United States and/or offline events that occurred within the United States to |destination-name|.
-
-.. sendto-the-trade-desk-build-query-admonition-end
-
 
 .. _sendto-the-trade-desk-add-orchestration:
 

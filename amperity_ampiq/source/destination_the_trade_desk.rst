@@ -65,16 +65,6 @@ Build a segment
    :start-after: .. channels-build-segment-start
    :end-before: .. channels-build-segment-end
 
-.. _attributes:
-
-.. admonition:: Which attributes should you use?
-
-   .. include:: ../../shared/channels.rst
-      :start-after: .. channels-build-segment-context-start
-      :end-before: .. channels-build-segment-context-end
-
-   Your brand should only send custom audiences that contain customers who reside within the United States and/or offline events that occurred within the United States to |destination-name|.
-
 
 .. _channel-the-trade-desk-build-campaign:
 
