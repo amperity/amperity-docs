@@ -294,7 +294,7 @@ Configure storage integration
 
 Amperity can send database table data to Snowflake. This output should be written to Azure Blob Storage via a storage integration configured in Snowflake. This requires the Azure tenant ID and the full path to each allowed storage location.
 
-For each database and schema to be output to the Amazon S3 bucket, specify a database and schema via `USE <https://docs.snowflake.com/en/sql-reference/sql/use>`__ |ext_link|, create a stage via `CREATE <https://docs.snowflake.com/en/user-guide/data-load-s3-create-stage>`__ |ext_link|, and then `GRANT USAGE <https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>`__ |ext_link|.
+For each database and schema to be output to the Azure Blob Storage bucket, specify a database and schema via `USE <https://docs.snowflake.com/en/sql-reference/sql/use>`__ |ext_link|, create a stage via `CREATE <https://docs.snowflake.com/en/user-guide/data-load-s3-create-stage>`__ |ext_link|, and then `GRANT USAGE <https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>`__ |ext_link|.
 
 .. destination-snowflake-azure-configure-storage-integration-end
 

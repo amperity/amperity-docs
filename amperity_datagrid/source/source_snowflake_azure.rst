@@ -333,7 +333,7 @@ You can pull entire tables from |source-name| to Amperity.
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the username and password. This should be the Amperity username and password created in Snowflake for the :ref:`user security object <source-snowflake-azure-configure-storage-integration>`.
-#. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket used for :ref:`Snowflake stages <source-snowflake-azure-configure-storage-integration>`. Add the Amazon Resource Name (ARN) if the IAM role is provisioned for cross-account access.
+#. Add the credentials for the role with permission to access the Azure Blob Storage bucket used for :ref:`Snowflake stages <source-snowflake-azure-configure-storage-integration>`.
 #. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`Snowflake tables <source-snowflake-azure-configure-tables>` to be sent to Amperity:
 
    ::
@@ -373,7 +373,7 @@ You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the username and password. This should be the Amperity username and password created in Snowflake for the :ref:`user security object <source-snowflake-azure-configure-storage-integration>`.
-#. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket used for :ref:`Snowflake stages <source-snowflake-azure-configure-storage-integration>`. Add the Amazon Resource Name (ARN) if the IAM role is provisioned for cross-account access.
+#. Add the credentials for the role with permission to access the Azure Blob Storage bucket used for :ref:`Snowflake stages <source-snowflake-azure-configure-storage-integration>`.
 #. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`one (or more) Snowflake tables against which a query that uses Snowflake query syntax will be run <source-snowflake-azure-configure-tables>` to be sent to Amperity:
 
    ::
