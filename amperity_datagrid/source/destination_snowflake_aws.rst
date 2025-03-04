@@ -133,13 +133,13 @@ Configure objects
 
 .. destination-snowflake-aws-configure-objects-start
 
-Amperity requires access to the customer's instance of Snowflake. This requires write permissions to a `warehouse object in Snowflake <https://docs.snowflake.net/manuals/user-guide/warehouses-overview.htm>`__ |ext_link| via a role and a user.
+Amperity requires access to the customer's instance of Snowflake. This requires write permissions to a `warehouse object in Snowflake <https://docs.snowflake.com/en/user-guide/warehouses-overview>`__ |ext_link| via a role and a user.
 
 The following objects must be created in the customer's instance of Snowflake:
 
-#. A role via `CREATE ROLE <https://docs.snowflake.net/manuals/sql-reference/sql/create-role.html>`__ |ext_link|.
+#. A role via `CREATE ROLE <https://docs.snowflake.com/en/sql-reference/sql/create-role>`__ |ext_link|.
 
-   The role must be granted permission to the warehouse via `GRANT USAGE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html>`__ |ext_link|. 
+   The role must be granted permission to the warehouse via `GRANT USAGE <https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>`__ |ext_link|. 
 
 #. An external stage via `CREATE STAGE <https://docs.snowflake.com/en/sql-reference/sql/create-stage.html>`__ |ext_link|.
 
@@ -149,10 +149,10 @@ The following objects must be created in the customer's instance of Snowflake:
 
    When sending data from Amperity to Snowflake you must configure an external stage that points to the URL for the Amazon S3 bucket that is included with Amperity. (``URL = 's3://bucket[/path/]'``)
 
-#. A warehouse via `CREATE WAREHOUSE <https://docs.snowflake.net/manuals/sql-reference/sql/create-warehouse.html>`__ |ext_link|.
-#. A user via `CREATE USER <https://docs.snowflake.net/manuals/sql-reference/sql/create-user.html>`__ |ext_link|.
+#. A warehouse via `CREATE WAREHOUSE <https://docs.snowflake.com/en/sql-reference/sql/create-warehouse>`__ |ext_link|.
+#. A user via `CREATE USER <https://docs.snowflake.com/en/sql-reference/sql/create-user>`__ |ext_link|.
 
-   The user must be added to the role via `GRANT ROLE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-role.html>`__ |ext_link|.
+   The user must be added to the role via `GRANT ROLE <https://docs.snowflake.com/en/sql-reference/sql/grant-role>`__ |ext_link|.
 
 .. destination-snowflake-aws-configure-objects-end
 
@@ -255,11 +255,11 @@ Amperity can send database table data to Snowflake. This output is written by Am
 
 Use `secrets and keys <https://docs.snowflake.com/en/user-guide/data-load-s3-config-aws-iam-user>`__ |ext_link| to send table output to the customer-managed Amazon S3 bucket.
 
-.. note:: You may need to mock the IAM role for the external ID and IAM user name. After the `named stage <https://docs.snowflake.net/manuals/user-guide/data-unload-s3.html>`__ |ext_link| is created in Snowflake, update the IAM role for the external ID and IAM user name.
+.. note:: You may need to mock the IAM role for the external ID and IAM user name. After the `named stage <https://docs.snowflake.com/en/user-guide/data-unload-s3>`__ |ext_link| is created in Snowflake, update the IAM role for the external ID and IAM user name.
 
    The IAM role is unique to the Snowflake account. The external ID is unique to the Snowflake stage.
 
-For each database and schema to be output to the Amazon S3 bucket, specify a database and schema via `USE <https://docs.snowflake.net/manuals/sql-reference/sql/use.html>`__ |ext_link|, create a stage via `CREATE <https://docs.snowflake.net/manuals/sql-reference/sql/create>`__ |ext_link|, and then `GRANT USAGE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html>`__ |ext_link|.
+For each database and schema to be output to the Amazon S3 bucket, specify a database and schema via `USE <https://docs.snowflake.com/en/sql-reference/sql/use>`__ |ext_link|, create a stage via `CREATE <https://docs.snowflake.com/en/user-guide/data-load-s3-create-stage>`__ |ext_link|, and then `GRANT USAGE <https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>`__ |ext_link|.
 
 .. destination-snowflake-aws-configure-storage-integration-end
 
@@ -290,7 +290,7 @@ Configure tables
 
 .. destination-snowflake-aws-configure-tables-start
 
-For each table to be sent from Amperity, the Amperity role in Snowflake must be given permission. This requires permissions on both the database and the schema that contain the table. Usage rights to the database and schema do not grant access to the entire database or schema. Additional table-specific grants are required via a combination of `GRANT USAGE <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege.html>`__ |ext_link|, `USE <https://docs.snowflake.net/manuals/sql-reference/sql/use.html>`__ |ext_link|, and `GRANT SELECT <https://docs.snowflake.net/manuals/sql-reference/sql/grant-privilege-share.html>`__ |ext_link|. 
+For each table to be sent from Amperity, the Amperity role in Snowflake must be given permission. This requires permissions on both the database and the schema that contain the table. Usage rights to the database and schema do not grant access to the entire database or schema. Additional table-specific grants are required via a combination of `GRANT USAGE <https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>`__ |ext_link|, `USE <https://docs.snowflake.com/en/sql-reference/sql/use>`__ |ext_link|, and `GRANT SELECT <https://docs.snowflake.com/en/sql-reference/sql/grant-privilege-share>`__ |ext_link|. 
 
 .. destination-snowflake-aws-configure-tables-end
 
