@@ -368,14 +368,14 @@ Apply a similar pattern to every data source your tenant chooses to bring into A
 .. feeds-semantic-tags-caution-end
 
 
-.. _feeds-semantic-types:
+.. _feeds-semantic-groups:
 
-Semantic types
+Semantic groups
 --------------------------------------------------
 
-.. feeds-semantic-types-start
+.. feeds-semantic-groups-start
 
-Amperity supports the following types of semantic tags:
+Amperity supports the following groups of semantic tags:
 
 * :ref:`Personally identifiable information (PII) <semantics-profile>`
 * Product catalogs
@@ -388,7 +388,7 @@ Amperity supports the following types of semantic tags:
 
 in addition to supporting the use of :ref:`keys <semantics-keys>`, :ref:`Stitch labels <semantics-stitch-labels>`, and :ref:`blocklists <semantics-blocklists>` to further define how data should be understood by Amperity.
 
-.. feeds-semantic-types-end
+.. feeds-semantic-groups-end
 
 
 .. _feed-troubleshoot-ingest-errors:
