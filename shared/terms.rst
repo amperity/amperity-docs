@@ -5698,7 +5698,7 @@ A semantic tag standardizes profile (PII), transaction, and other important cust
 
 .. term-semantic-type-start
 
-A semantic type is directly associated with data values that appear in customer data tables. Semantic types exist for columns that contain values like first names, email addresses, home addresses, cities, phone numbers, and so on. Amperity has many built-in semantic types, including groupings for personally identifiable information (PII), transactions, itemized transactions, and other consumer behaviors.
+A semantic group is directly associated with data values that appear in customer data tables. Semantic groups exist for columns that contain values like first names, email addresses, home addresses, cities, phone numbers, and so on. Amperity has many built-in semantic groups, including for personally identifiable information (PII), transactions, itemized transactions, and other consumer behaviors.
 
 .. term-semantic-type-end
 
