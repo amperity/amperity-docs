@@ -1,9 +1,105 @@
 <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
 
 {% if display_github %}
-    <a href="{{ github_path }}{{ pagename }}.rst" target="_blank" class="edit-in-github"><img src="_static/edit-in-github.png" alt="alt" width="90%"/>
-  </a>
+    <div class="github-edit"><a href="{{ github_path }}{{ pagename }}.rst" class="edit-in-github"><img src="_static/edit-in-github.png" alt="alt" width="90%"/>
+  </a></div>
+
+<style>
+.github-edit {
+    margin-left: -6px;
+}
+</style>
+
 {% endif %}
+
+
+{% macro feedback_buttons() %}
+<div class="feedback-container">
+    <script>
+    function sendFeedback(type) {
+        // Push event to dataLayer for Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'page_feedback',
+            'feedback_type': type,
+            'page_path': window.location.pathname
+        });
+
+        // Optional: Add user acknowledgment
+        alert(`Thank you for your feedback on this documentation page!`);
+    }
+    </script>
+
+    <div class="feedback-buttons"> Is this page helpful?
+        <button 
+            class="feedback-button up" 
+            onclick="sendFeedback('thumbs_up')" 
+            aria-label="This page is helpful"
+        >
+          <i class="fa-solid fa-thumbs-up"></i>
+        </button>
+        <button 
+            class="feedback-button down" 
+            onclick="sendFeedback('thumbs_down')" 
+            aria-label="This page is unhelpful"
+        >
+          <i class="fa-solid fa-thumbs-down"></i>
+        </button>
+    </div>
+</div>
+
+<style>
+	
+.feedback-container {
+    border-left: 3px solid #0c0c0c;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-top: .6rem;
+    margin-right: 20px;
+    padding-bottom: 2rem;
+    background-color: #edff95;
+    height: 0px;
+    text-align: left;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-bottomright: 2px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.feedback-buttons {
+    background-color: #edff95;
+    padding-left: 15px;
+    color: #0c0c0c;
+    font-weight: 600;
+}
+
+.feedback-button.up {
+    background-color: #edff95;
+    border: 0px;
+    color: #0c0c0c;
+}
+
+.feedback-button.down {
+    background-color: #edff95;
+    border: 0px;
+    color: #0c0c0c;
+}
+
+</style>
+
+{% endmacro %}
+
+{# Add this in your base.html or custom template #}
+{{ feedback_buttons() }}
+
 
 <!-- This is an example of how to add an image above the right-side nav bar. It could be below also. -->
 
