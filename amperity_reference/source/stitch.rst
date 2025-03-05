@@ -282,7 +282,7 @@ Union of tables
 
 .. stitch-union-of-tables-start
 
-All records from all tables that contain customer profile data are merged into a single virtual table that aligns all of the data that is associated with all defined semantic types.
+All records from all tables that contain customer profile data are merged into a single virtual table that aligns all of the data that is associated with all defined semantic groups.
 
 .. stitch-union-of-tables-end
 
