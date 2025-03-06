@@ -19,10 +19,24 @@
     function sendFeedback(type) {
         // Push event to dataLayer for Google Tag Manager
         window.dataLayer = window.dataLayer || [];
+
+        // Define the correct element class based on the feedback type
+        let elementClass = '';
+        if (type === 'thumbs_up') {
+            elementClass = 'feedback-thumbs-up';
+        } else if (type === 'thumbs_down') {
+            elementClass = 'feedback-thumbs-down';
+        }
+
+        // Push event to dataLayer with specific values
         window.dataLayer.push({
-            'event': 'page_feedback',
+            'event': 'feedback_click',
             'feedback_type': type,
-            'page_path': window.location.pathname
+            'feedback_element_id': 'thumbs-' + type.replace('_', '-'),
+            'feedback_element_class': elementClass,
+            'page_path': window.location.pathname,
+            'page_title': document.title,
+            'timestamp': new Date().toISOString()
         });
 
         // Show message in the feedback message area
