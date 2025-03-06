@@ -41,13 +41,13 @@
 
         // Show message in the feedback message area
         const messageElement = document.getElementById('feedback-message');
-        messageElement.textContent = 'Thank you! Use the Feedback button to send additional comments.';
+        messageElement.textContent = 'Thanks! Use the feedback button below to comment.';
         messageElement.style.display = 'block';
         
         // Hide the message after a few seconds
         setTimeout(function() {
             messageElement.style.display = 'none';
-        }, 5000);
+        }, 4000);
     }
     </script>
 
@@ -134,12 +134,14 @@
     background-color: #edff95;
     border: 0px;
     color: #0c0c0c;
+    cursor: pointer;
 }
 
 .feedback-button.down {
     background-color: #edff95;
     border: 0px;
     color: #0c0c0c;
+    cursor: pointer;
 }
 
 /* Added styling for the feedback message */
