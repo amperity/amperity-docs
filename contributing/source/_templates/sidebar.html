@@ -25,29 +25,40 @@
             'page_path': window.location.pathname
         });
 
-        // Optional: Add user acknowledgment
-        alert(`Thank you for your feedback on this documentation page!`);
+        // Show message in the feedback message area
+        const messageElement = document.getElementById('feedback-message');
+        messageElement.textContent = 'Thank you! Use the Feedback button to send additional comments.';
+        messageElement.style.display = 'block';
+        
+        // Hide the message after a few seconds
+        setTimeout(function() {
+            messageElement.style.display = 'none';
+        }, 5000);
     }
     </script>
 
     <div class="feedback-buttons"> Is this page helpful?
-        <button 
+        <div class="feedback-thumbs-up"><button 
             id="thumbs-up" 
             class="feedback-button up" 
             onclick="sendFeedback('thumbs_up')" 
             aria-label="This page is helpful"
         >
           <i class="fa-solid fa-thumbs-up"></i>
-        </button>
-        <button 
+        </button></div>
+        <div class="feedback-thumbs-down"><button 
             id="thumbs-down" 
             class="feedback-button down" 
             onclick="sendFeedback('thumbs_down')" 
             aria-label="This page is unhelpful"
         >
           <i class="fa-solid fa-thumbs-down"></i>
-        </button>
+        </button></div>
     </div>
+
+    <!-- Feedback response -->
+    <div id="feedback-message" class="feedback-message"></div>
+
 </div>
 
 <style>
@@ -58,9 +69,9 @@
     margin-bottom: 0rem;
     padding-top: .6rem;
     margin-right: 20px;
-    padding-bottom: 2rem;
+    padding-bottom: .7rem;
     background-color: #edff95;
-    height: 0px;
+    height: auto;
     text-align: left;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -78,9 +89,31 @@
 
 .feedback-buttons {
     background-color: #edff95;
-    padding-left: 15px;
+    padding-left: 10px;
     color: #0c0c0c;
     font-weight: 600;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+
+.feedback-thumbs-up {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-top: .2rem;
+    padding-left: .7rem;
+    margin-right: 2px;
+    height: 10px;
+    text-align: center;
+}
+
+.feedback-thumbs-down {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-top: .2rem;
+    padding-left: .1rem;
+    margin-right: 2px;
+    height: 10px;
+    text-align: center;
 }
 
 .feedback-button.up {
@@ -93,6 +126,16 @@
     background-color: #edff95;
     border: 0px;
     color: #0c0c0c;
+}
+
+/* Added styling for the feedback message */
+.feedback-message {
+    display: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #0c0c0c;
+    background-color: #edff95;
 }
 
 </style>
