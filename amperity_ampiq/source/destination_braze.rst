@@ -338,14 +338,14 @@ The following sections describe using the **Segment Editor** to build update |de
 
 .. _channel-braze-build-campaign:
 
-Build a campaign
+Add to a campaign
 ==================================================
 
 .. include:: ../../shared/channels.rst
    :start-after: .. channels-build-campaign-start
    :end-before: .. channels-build-campaign-end
 
-**To build a campaign**
+**To add Braze to a campaign**
 
 .. list-table::
    :widths: 10 90
@@ -360,12 +360,6 @@ Build a campaign
           :start-after: .. channels-build-campaign-steps-open-page-start
           :end-before: .. channels-build-campaign-steps-open-page-end
 
-       .. image:: ../../images/mockup-campaigns-name-generic.png
-          :width: 250 px
-          :alt: Open the campaign builder and give your campaign a name.
-          :align: left
-          :class: no-scaled-link
-
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -373,59 +367,23 @@ Build a campaign
           :align: left
           :class: no-scaled-link
      - .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-audience-start
-          :end-before: .. channels-build-campaign-steps-audience-end
+          :start-after: .. channels-build-campaign-steps-destinations-start
+          :end-before: .. channels-build-campaign-steps-destinations-end
 
-       .. image:: ../../images/mockup-campaigns-select-audience-from-segment-generic.png
+       .. image:: ../../images/mockup-campaigns-destination-braze.png
           :width: 500 px
-          :alt: Choose the audience to use with your campaign.
+          :alt: Add a destination for Braze.
           :align: left
           :class: no-scaled-link
 
        .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-audience-tip-start
-          :end-before: .. channels-build-campaign-steps-audience-tip-end
+          :start-after: .. channels-build-campaign-steps-destinations-note-start
+          :end-before: .. channels-build-campaign-steps-destinations-note-end
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-exclusions-start
-          :end-before: .. channels-build-campaign-steps-exclusions-end
-
-       .. image:: ../../images/mockup-campaigns-select-exclusions-from-segment-generic.png
-          :width: 500 px
-          :alt: Exclude some customers from this campaign.
-          :align: left
-          :class: no-scaled-link
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-subaudiences-start
-          :end-before: .. channels-build-campaign-steps-subaudiences-end
-
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-destinations-start
-          :end-before: .. channels-build-campaign-steps-destinations-end
-
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
           :align: left
           :class: no-scaled-link
      - .. include:: ../../shared/channels.rst
@@ -445,34 +403,7 @@ Build a campaign
        .. important:: Custom attributes may be sent in addition to the list of customer profile attributes that specifically match |destination-name| default attributes. Ask your Amperity representative for help configuring your tenant to match the list of custom attributes that you want to send to |destination-name| from Amperity.
 
 
-   * - .. image:: ../../images/steps-07.png
-          :width: 60 px
-          :alt: Step 7.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-timing-start
-          :end-before: .. channels-build-campaign-steps-timing-end
 
-
-   * - .. image:: ../../images/steps-08.png
-          :width: 60 px
-          :alt: Step 8.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-launch-date-start
-          :end-before: .. channels-build-campaign-steps-launch-date-end
-
-
-   * - .. image:: ../../images/steps-09.png
-          :width: 60 px
-          :alt: Step 9.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/channels.rst
-          :start-after: .. channels-build-campaign-steps-schedule-start
-          :end-before: .. channels-build-campaign-steps-schedule-end
 
 
 .. _channel-braze-configure-default-attributes:
