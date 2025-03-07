@@ -103,8 +103,6 @@ Get details
 
 #. The Email list name **and/or** SMS list name. (This depends on which REST APIs are configured.)
 
-   .. important:: For SMS integrations with more than one provisioned short code, a list that matches the provided name should exist for each short code.
-
 .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-listrak-get-details-end
