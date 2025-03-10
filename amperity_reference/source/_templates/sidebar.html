@@ -22,10 +22,13 @@
 
         // Define the correct element class based on the feedback type
         let elementClass = '';
+        let feedbackMessage = '';
         if (type === 'thumbs_up') {
             elementClass = 'feedback-thumbs-up';
+            feedbackMessage = 'Thanks! Use the feedback button below to comment.';
         } else if (type === 'thumbs_down') {
             elementClass = 'feedback-thumbs-down';
+            feedbackMessage = 'Thanks! Use the feedback button below to let us know how we can improve.';
         }
 
         // Push event to dataLayer with specific values
@@ -41,13 +44,13 @@
 
         // Show message in the feedback message area
         const messageElement = document.getElementById('feedback-message');
-        messageElement.textContent = 'Thanks! Use the feedback button below to comment.';
+        messageElement.textContent = feedbackMessage;
         messageElement.style.display = 'block';
         
         // Hide the message after a few seconds
         setTimeout(function() {
             messageElement.style.display = 'none';
-        }, 4000);
+        }, 5000);
     }
     </script>
 
@@ -83,8 +86,8 @@
     margin-bottom: 0rem;
     padding-top: .6rem;
     margin-right: 20px;
-    padding-bottom: .7rem;
-    background-color: #edff95;
+    padding-bottom: .6rem;
+    background-color: #ddf85b;
     height: auto;
     text-align: left;
     -webkit-border-top-left-radius: 3px;
@@ -102,7 +105,7 @@
 }
 
 .feedback-buttons {
-    background-color: #edff95;
+    background-color: #ddf85b;
     padding-left: 10px;
     color: #0c0c0c;
     font-weight: 600;
@@ -113,32 +116,29 @@
 .feedback-thumbs-up {
     margin-top: 0rem;
     margin-bottom: 0rem;
-    padding-top: .2rem;
-    padding-left: .7rem;
-    margin-right: 2px;
-    height: 10px;
+    padding-top: .1rem;
+    padding-left: .6rem;
     text-align: center;
 }
 
 .feedback-thumbs-down {
     margin-top: 0rem;
     margin-bottom: 0rem;
-    padding-top: .2rem;
+    padding-top: .3rem;
     padding-left: .1rem;
     margin-right: 2px;
-    height: 10px;
     text-align: center;
 }
 
 .feedback-button.up {
-    background-color: #edff95;
+    background-color: #ddf85b;
     border: 0px;
     color: #0c0c0c;
     cursor: pointer;
 }
 
 .feedback-button.down {
-    background-color: #edff95;
+    background-color: #ddf85b;
     border: 0px;
     color: #0c0c0c;
     cursor: pointer;
@@ -149,9 +149,13 @@
     display: none;
     padding: 10px 15px;
     margin-top: 10px;
+    margin-bottom: -10px;
     font-weight: 500;
     color: #0c0c0c;
     background-color: #edff95;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottomright: 2px;
+    border-bottom-right-radius: 3px;
 }
 
 </style>
