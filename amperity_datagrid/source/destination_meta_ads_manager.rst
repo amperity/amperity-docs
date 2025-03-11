@@ -423,9 +423,9 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       Enter a name for the destination and provide a description. For example: "|destination-name|" and "This sends |what-send| to |destination-name|".
+
+       From the **Plugin** drop-down, start typing |filter-the-list| to filter the list, and then select |plugin-name|.
 
 
    * - .. image:: ../../images/steps-02.png
