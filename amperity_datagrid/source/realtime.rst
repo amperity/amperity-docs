@@ -254,7 +254,6 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Click **Add table**.
 
-
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
