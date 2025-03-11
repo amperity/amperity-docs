@@ -336,7 +336,7 @@ Open the **Destinations** tab to configure a destination for |destination-name|.
 
 Enter a name for the destination and provide a description. For example: "|destination-name|" and "This sends |what-send| to |destination-name|".
 
-From the **Plugin** drop-down, start typing |filter-the-list| to filter the list, and then select |destination-name|.
+From the **Plugin** drop-down, start typing |filter-the-list| to filter the list, and then select |plugin-name|.
 
 .. destinations-add-name-and-description-end
 
