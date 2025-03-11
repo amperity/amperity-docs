@@ -261,11 +261,11 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
           :class: no-scaled-link
      - In the **Create real-time table** dialog, do the following:
 
+       Ensure that the real-time table is set to **Active**.
+
        Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
 
        Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
-
-       Ensure that the real-time table is set to **Active**.
 
        Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
