@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Meta Ads Manager
-.. |destination-api| replace:: Facebook Ads API
+.. |destination-api| replace:: Marketing API
 .. |plugin-name| replace:: Facebook
 .. |what-send| replace:: customer data
 .. |email-plus-send| replace:: additional attributes
