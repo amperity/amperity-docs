@@ -88,11 +88,12 @@ Real-time table limitations
 
 Real-time tables have the following limitations:
 
-#. Streamed data takes a few minutes to appear in a real-time table.
-#. Data that is available from a Profile API endpoint is current as of the most recent index refresh.
+#. Streamed data takes up to 2 minutes to appear in a real-time table.
+#. Events that partially match the schema for a real-time table will appear in a real-time table; events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
-#. Data is loaded to real-time tables as an upsert; data may not be deleted from a real-time table.
+#. Data is loaded to real-time tables as an append; data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
+#. Real-time tables may be used with the Profile API, but data that is available from a Profile API endpoint is only as current as of the most recent refresh of the index for that Profile API endpoint.
 
 .. realtime-howitworks-limitations-end
 
@@ -253,7 +254,6 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Click **Add table**.
 
-
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
@@ -261,7 +261,11 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
           :class: no-scaled-link
      - In the **Create real-time table** dialog, do the following:
 
+       Ensure that the real-time table is set to **Active**.
+
        Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
+
+       Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
 
        Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
@@ -277,35 +281,16 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        .. note:: The schema for every real-time table will contain two additional fields at the query layer: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table). Use these fields to support filtering for recent data to join with data in batch layer database tables.
 
-       Click **Next**.
+       Click **Save**.
 
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - In the **Create real-time table** dialog, continue:
 
-       Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
-
-       Select the databases for which this real-time table will be available from the **Queries** page.
-
-       .. image:: ../../images/mockup-databases-table-realtime-add-02.png
-          :width: 420 px
-          :alt: Batch and streaming layers.
-          :align: left
-          :class: no-scaled-link
-
-       Click **Active**, then **Save**.
-
-       .. important:: Real-time tables must be set to **Active** before they can be accessed from the **Queries** page.
-
-   * - .. image:: ../../images/steps-02.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Run all of the databases for which this real-time table will be available. When this step is complete, open the **Queries** page and verify that the real-time table is available for queries and that data in the real-time table can be returned in the results.
+
+     - Run any database to make the real-time table available for querying. When this step is complete, open the **Queries** page and verify that the real-time table is available for queries and that data in the real-time table can be returned in the results.
 
 .. realtime-configure-real-time-table-steps-end
 
