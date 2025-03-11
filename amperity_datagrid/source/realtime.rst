@@ -89,11 +89,11 @@ Real-time table limitations
 Real-time tables have the following limitations:
 
 #. Streamed data takes up to 2 minutes to appear in a real-time table.
-#. Events that don't match the schema defined in a real-time table will not appear in a real-time table. Events that partially match a real-time table schema will appear in a real-time table.
+#. Events that partially match the schema for a real-time table will appear in a real-time table; events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an append; data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
-#. Real-time tables may be used with Profile API, but data that is available from a Profile API endpoint is only as current as of the most recent Profile API index refresh.
+#. Real-time tables may be used with the Profile API, but data that is available from a Profile API endpoint is only as current as of the most recent refresh of the index for that Profile API endpoint.
 
 .. realtime-howitworks-limitations-end
 
