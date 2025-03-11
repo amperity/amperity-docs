@@ -44,7 +44,7 @@ Open the **Destinations** page, and then click the **Add destination** button.
 To configure a destination for |destination-name|, do one of the following:
 
 #. Click the row in which |destination-name| is located. Destinations are listed alphabetically and you can scroll up and down the list.
-#. Search for |destination-name|. Start typing |filter-the-list|. The list will filter to show only matching destinations.
+#. Search for |destination-name|. Start typing |filter-the-list|. The list will filter to show only matching destinations. Select |plugin-name|.
 
 .. destinations-steps-add-destinations-select-end
 
