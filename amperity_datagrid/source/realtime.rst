@@ -283,6 +283,13 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Click **Save**.
 
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+
      - Run any database to make the real-time table available for querying. When this step is complete, open the **Queries** page and verify that the real-time table is available for queries and that data in the real-time table can be returned in the results.
 
 .. realtime-configure-real-time-table-steps-end
