@@ -1,6 +1,7 @@
 .. https://docs.amperity.com/reference/
 
 .. |destination-name| replace:: a destination
+.. |plugin-name| replace:: the plugin for the destination
 .. |filter-the-list| replace:: the first three characters of the destination
 
 .. meta::
