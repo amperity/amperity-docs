@@ -87,7 +87,7 @@ Settings
    :start-after: .. setting-the-trade-desk-membership-duration-example-start
    :end-before: .. setting-the-trade-desk-membership-duration-example-end
 
-**Segment taxonomy ID**
+**Segment taxonomy ID** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-3p-segment-taxonomy-id-start

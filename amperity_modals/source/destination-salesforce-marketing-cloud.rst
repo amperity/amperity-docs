@@ -116,7 +116,7 @@ Settings
    :start-after: .. setting-salesforce-marketing-cloud-append-data-start
    :end-before: .. setting-salesforce-marketing-cloud-append-data-end
 
-**Data extension name**
+**Data extension name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-marketing-cloud-data-extension-name-start

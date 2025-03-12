@@ -65,7 +65,7 @@ Settings
    :start-after: setting-microsoft-dynamics-365-environment-name-start
    :end-before: setting-microsoft-dynamics-365-environment-name-end
 
-**Marketing segment name**
+**Marketing segment name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: setting-microsoft-dynamics-365-segment-name-start

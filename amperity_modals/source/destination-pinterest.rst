@@ -60,7 +60,7 @@ Settings
    :start-after: .. setting-pinterest-ad-account-id-start
    :end-before: .. setting-pinterest-ad-account-id-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-pinterest-list-name-start

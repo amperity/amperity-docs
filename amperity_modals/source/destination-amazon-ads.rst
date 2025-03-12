@@ -49,13 +49,13 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-amazon-ads-audience-description-start
    :end-before: .. setting-amazon-ads-audience-description-end
 
-**Audience description**
+**Audience description** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-amazon-ads-audience-description-start

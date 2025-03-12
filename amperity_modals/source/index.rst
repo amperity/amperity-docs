@@ -44,6 +44,7 @@ Site Index
    destination-gcs
    destination-google-ads
    destination-google-customer-match
+   destination-google-enhanced-conversions
    destination-hubspot
    destination-infutor
    destination-kibo

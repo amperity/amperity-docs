@@ -64,7 +64,7 @@ Settings
    :start-after: .. setting-klaviyo-list-name-start
    :end-before: .. setting-klaviyo-list-name-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-klaviyo-list-name-start

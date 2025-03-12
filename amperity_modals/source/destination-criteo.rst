@@ -54,7 +54,7 @@ Settings
    :start-after: .. setting-criteo-advertiser-id-start
    :end-before: .. setting-criteo-advertiser-id-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-criteo-audience-name-start

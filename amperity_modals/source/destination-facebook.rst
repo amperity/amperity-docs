@@ -47,7 +47,7 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Custom audience name**
+**Custom audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-meta-ads-manager-custom-audience-name-start
