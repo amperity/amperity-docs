@@ -59,7 +59,7 @@ Settings
    :start-after: .. setting-tiktok-ads-manager-advertiser-id-start
    :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-tiktok-ads-manager-custom-audience-name-start

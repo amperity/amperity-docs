@@ -75,7 +75,7 @@ Settings
    :start-after: .. setting-salesforce-sales-cloud-salesforce-object-start
    :end-before: .. setting-salesforce-sales-cloud-salesforce-object-end
 
-**Operation**
+**Operation** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-sales-cloud-operation-start

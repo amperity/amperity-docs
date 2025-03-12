@@ -1,19 +1,17 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email or phone
+.. |destination-name| replace:: Google Enhanced Conversions
+.. |what-send| replace:: offline events
 .. |where-send| replace:: |destination-name|
-.. |duration| replace:: (in days)
-.. |duration-value| replace:: "0" - "90"
 
 
-Yahoo DSP
+Google Enhanced Conversions
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-intro-start
-   :end-before: .. setting-yahoo-dsp-intro-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-google-enhanced-conversions-start
+   :end-before: .. term-google-enhanced-conversions-end
 
 
 Credentials
@@ -25,11 +23,11 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Seat MDM ID**
+**Refresh token**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-yahoo-dsp-mdm-id-start
-   :end-before: .. credential-yahoo-dsp-mdm-id-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token-end
 
 
 Settings
@@ -51,18 +49,14 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Segment name** (Required at orchestration)
+**Conversion action name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :start-after: .. setting-google-enhanced-conversions-action-name-start
+   :end-before: .. setting-google-enhanced-conversions-action-name-end
 
-**Membership duration**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-start
-   :end-before: .. setting-common-membership-duration-end
+**Customer ID**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-google-enhanced-conversions-customer-id-start
+   :end-before: .. setting-google-enhanced-conversions-customer-id-end

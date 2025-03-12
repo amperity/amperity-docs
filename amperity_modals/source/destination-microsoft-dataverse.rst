@@ -71,7 +71,7 @@ Settings
    :start-after: .. setting-microsoft-dataverse-powerapps-name-start
    :end-before: .. setting-microsoft-dataverse-powerapps-name-end
 
-**Dataverse table logical name**
+**Dataverse table logical name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dataverse-table-logical-name-start

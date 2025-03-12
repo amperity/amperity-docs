@@ -64,7 +64,7 @@ Settings
    :start-after: .. setting-active-campaign-group-name-access-start
    :end-before: .. setting-active-campaign-group-name-access-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-active-campaign-list-name-start

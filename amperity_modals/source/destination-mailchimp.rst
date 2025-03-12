@@ -54,19 +54,19 @@ Settings
    :start-after: .. setting-mailchimp-data-center-start
    :end-before: .. setting-mailchimp-data-center-end
 
-**List ID**
+**List ID** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-mailchimp-list-id-start
    :end-before: .. setting-mailchimp-list-id-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-active-campaign-list-name-start
    :end-before: .. setting-active-campaign-list-name-end
 
-**Tag name**
+**Tag name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-mailchimp-tag-name-start

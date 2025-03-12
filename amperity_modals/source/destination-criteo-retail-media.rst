@@ -66,7 +66,7 @@ Settings
    :start-after: .. setting-criteo-identifier-type-start
    :end-before: .. setting-criteo-identifier-type-end
 
-**Audience segment description**
+**Audience segment description** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-criteo-audience-segment-description-start

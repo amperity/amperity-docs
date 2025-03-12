@@ -54,13 +54,13 @@ Settings
    :start-after: .. setting-google-ads-customer-id-start
    :end-before: .. setting-google-ads-customer-id-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-ads-audience-name-start
    :end-before: .. setting-google-ads-audience-name-end
 
-**Audience description**
+**Audience description** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-ads-audience-description-start

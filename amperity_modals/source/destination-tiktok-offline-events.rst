@@ -59,7 +59,7 @@ Settings
    :start-after: .. setting-tiktok-ads-manager-advertiser-id-start
    :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
-**Event set ID**
+**Event set ID** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-tiktok-ads-manager-offline-event-set-id-start

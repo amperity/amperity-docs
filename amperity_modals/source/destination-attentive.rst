@@ -69,7 +69,7 @@ Settings
    :start-after: .. setting-attentive-client-domain-start
    :end-before: .. setting-attentive-client-domain-end
 
-**Segment name**
+**Segment name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-attentive-segment-name-start

@@ -74,7 +74,7 @@ Settings
    :start-after: .. setting-adobe-marketo-program-name-start
    :end-before: .. setting-adobe-marketo-program-name-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-adobe-marketo-list-name-start

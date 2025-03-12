@@ -60,7 +60,7 @@ Settings
    :start-after: .. setting-microsoft-dynamics-url-start
    :end-before: .. setting-microsoft-dynamics-url-end
 
-**Dynamics entity**
+**Dynamics entity** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dynamics-entity-start

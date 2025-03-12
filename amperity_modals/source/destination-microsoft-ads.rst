@@ -53,7 +53,7 @@ Settings
    :start-after: .. setting-microsoft-advertising-account-and-customer-ids-start
    :end-before: .. setting-microsoft-advertising-account-and-customer-ids-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-advertising-list-name-start

@@ -54,7 +54,7 @@ Settings
    :start-after: .. setting-snapchat-ad-account-id-start
    :end-before: .. setting-snapchat-ad-account-id-end
 
-**Segment name**
+**Segment name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-snapchat-segment-name-start
