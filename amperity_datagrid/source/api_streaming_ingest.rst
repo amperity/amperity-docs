@@ -52,6 +52,22 @@ A stream may only be one payload type.
 .. streaming-ingest-rest-api-overview-end
 
 
+.. _streaming-ingest-limits:
+
+Limits
+==================================================
+
+.. streaming-ingest-limits-start
+
+The Streaming Ingest API has the following limits, all set at the tenant level (sandboxes are their own separate tenants):
+
+Requests per second: 1000 requests per second (rps). You will receive a 429 Too Many Requests response when this is exceeded. No additional burst capacity beyond 1000 rps is currently supported.
+
+Payload size: 5 MB maximum. You will receive a 413 Payload Too Large response when this is exceeded.
+
+.. streaming-ingest-limits-end
+
+
 .. _streaming-ingest-rest-api-keys-and-jwt:
 
 API Keys and JWTs
@@ -390,7 +406,7 @@ The Streaming Ingest API has the following HTTP status codes:
    * - **429**
      - Request throttled.
 
-       .. note:: The request limit is set above the expected traffic volume.
+       .. note:: Amperity limits streaming ingest to 1000rps.
      - Yes
    * - **500**
      - Internal error.
