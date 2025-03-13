@@ -73,9 +73,9 @@ The Streaming Ingest API has the following rate limits.
        Requests to the Streaming Ingest API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
 
    * - **Payload size**
-     - The maximim payload size may not exceed 5 MB.
+     - The maximum payload size may not exceed 5 MB.
 
-       Attempts to post more than 5 MB will fail with an HTTP 413 Payload Too Large status code. 
+       Attempts to post more than 5 MB will fail with an HTTP 413 Payload Too Large status code.
 
 .. streaming-ingest-rate-limits-end
 
@@ -413,7 +413,7 @@ The Streaming Ingest API has the following HTTP status codes:
    * - **413**
      - Request is too large.
 
-       .. note:: The maximim payload size :ref:`may not exceed 5 MB <streaming-ingest-rate-limits>`.
+       .. note:: The maximum payload size :ref:`may not exceed 5 MB <streaming-ingest-rate-limits>`.
      - No
    * - **429**
      - Request throttled.
