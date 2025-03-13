@@ -52,6 +52,34 @@ A stream may only be one payload type.
 .. streaming-ingest-rest-api-overview-end
 
 
+.. _streaming-ingest-rate-limits:
+
+Rate limits
+==================================================
+
+.. streaming-ingest-rate-limits-start
+
+The Streaming Ingest API has the following rate limits.
+
+.. note:: Rate limits are not shared between production and sandboxes; each sandbox has its own rate limit.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 0
+
+   * - **Requests per second**
+     - The number of requests may not exceed 1000 requests per second.
+
+       Requests to the Streaming Ingest API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
+
+   * - **Payload size**
+     - The maximum payload size may not exceed 5 MB.
+
+       Attempts to post more than 5 MB will fail with an HTTP 413 Payload Too Large status code.
+
+.. streaming-ingest-rate-limits-end
+
+
 .. _streaming-ingest-rest-api-keys-and-jwt:
 
 API Keys and JWTs
@@ -385,12 +413,12 @@ The Streaming Ingest API has the following HTTP status codes:
    * - **413**
      - Request is too large.
 
-       .. note:: Amperity limits the maximum payload size to 5MB.
+       .. note:: The maximum payload size :ref:`may not exceed 5 MB <streaming-ingest-rate-limits>`.
      - No
    * - **429**
      - Request throttled.
 
-       .. note:: The request limit is set above the expected traffic volume.
+       .. note:: The number of requests :ref:`may not exceed 1000 requests per second <streaming-ingest-rate-limits>`.
      - Yes
    * - **500**
      - Internal error.
