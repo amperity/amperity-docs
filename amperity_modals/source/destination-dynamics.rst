@@ -65,3 +65,15 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dynamics-entity-start
    :end-before: .. setting-microsoft-dynamics-entity-end
+
+**Operation** (Required at orchestration)
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-microsoft-dynamics-operation-start
+   :end-before: .. setting-microsoft-dynamics-operation-end
+
+**ID field** (Required at orchestration)
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-microsoft-dynamics-id-field-start
+   :end-before: .. setting-microsoft-dynamics-id-field-end
