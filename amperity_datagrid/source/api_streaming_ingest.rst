@@ -52,20 +52,32 @@ A stream may only be one payload type.
 .. streaming-ingest-rest-api-overview-end
 
 
-.. _streaming-ingest-limits:
+.. _streaming-ingest-rate-limits:
 
-Limits
+Rate limits
 ==================================================
 
-.. streaming-ingest-limits-start
+.. streaming-ingest-rate-limits-start
 
-The Streaming Ingest API has the following limits, all set at the tenant level (sandboxes are their own separate tenants):
+The Streaming Ingest API has the following rate limits.
 
-Requests per second: 1000 requests per second (rps). You will receive a 429 Too Many Requests response when this is exceeded. No additional burst capacity beyond 1000 rps is currently supported.
+.. note:: Rate limits are not shared between production and sandboxes; each sandbox has its own rate limit.
 
-Payload size: 5 MB maximum. You will receive a 413 Payload Too Large response when this is exceeded.
+.. list-table::
+   :widths: 30 70
+   :header-rows: 0
 
-.. streaming-ingest-limits-end
+   * - **Requests per second**
+     - The number of requests may not exceed 1000 requests per second.
+
+       Requests to the Streaming Ingest API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
+
+   * - **Payload size**
+     - The maximim payload size may not exceed 5 MB.
+
+       Attempts to post more than 5 MB will fail with an HTTP 413 Payload Too Large status code. 
+
+.. streaming-ingest-rate-limits-end
 
 
 .. _streaming-ingest-rest-api-keys-and-jwt:
@@ -401,12 +413,12 @@ The Streaming Ingest API has the following HTTP status codes:
    * - **413**
      - Request is too large.
 
-       .. note:: Amperity limits the maximum payload size to 5MB.
+       .. note:: The maximim payload size :ref:`may not exceed 5 MB <streaming-ingest-rate-limits>`.
      - No
    * - **429**
      - Request throttled.
 
-       .. note:: Amperity limits streaming ingest to 1000rps.
+       .. note:: The number of requests :ref:`may not exceed 1000 requests per second <streaming-ingest-rate-limits>`.
      - Yes
    * - **500**
      - Internal error.
