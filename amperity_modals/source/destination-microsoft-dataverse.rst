@@ -77,7 +77,7 @@ Settings
    :start-after: .. setting-microsoft-dataverse-table-logical-name-start
    :end-before: .. setting-microsoft-dataverse-table-logical-name-end
 
-**Truncate table?**
+**Truncate table?** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dataverse-truncate-table-start
