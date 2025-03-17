@@ -51,9 +51,9 @@ Use the **Bad values** tab in the **Stitch settings** dialog to configure values
 
 Values can be configured to be:
 
-* Detected automatically using a threshold and an association between two fields. The value is ignored when the first field exceeds the configired threshold as it relates to the second field.
+* Detected automatically using a threshold and an association between two fields. The value is ignored when the first field exceeds the configured threshold as it relates to the second field.
 
-  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist, ignored by Stitch, after which it will not be used for identity resolution.
+  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it will not be used for identity resolution.
 
   Automatic detection is available for `all fields to which customer profile semantic tags were applied <https://docs.amperity.com/datagrid/semantics.html#profiles>`__, such as **email**, **phone**, **address**, **given-name** and for fields that contain foreign keys.
 
