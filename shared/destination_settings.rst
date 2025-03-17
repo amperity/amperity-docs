@@ -1624,6 +1624,22 @@ The URL for your instance of |destination-name|. The URL must be the full URL, i
 
 .. setting-microsoft-dynamics-url-end
 
+**Operation**
+
+.. setting-microsoft-dynamics-operation-start
+
+The operation to perform. Use "Upsert" to create or update records. Use "Delete" to remove all records.
+
+.. setting-microsoft-dynamics-operation-end
+
+**ID field**
+
+.. setting-microsoft-dynamics-id-field-start
+
+The field to use for upsert or delete operations.
+
+.. setting-microsoft-dynamics-id-field-end
+
 
 
 
@@ -2134,7 +2150,7 @@ The Snowflake stage name, which is created by the `CREATE STAGE <https://docs.sn
 
 .. setting-snowflake-truncate-table-start
 
-Use the Truncate table option when the contents of the table should be emptied prior to loading data.
+Use the "Truncate table" option when the contents of the table should be emptied prior to loading data.
 
 .. setting-snowflake-truncate-table-end
 

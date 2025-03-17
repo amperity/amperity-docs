@@ -32,40 +32,76 @@ Amperity should be configured to ignore these types of fake values when they app
 .. blocklist-bad-values-important-end
 
 
+.. _bad-values-blocklist-config:
+
+Bad values
+==================================================
+
+.. TODO: Sync this with a forthcoming update for the "Stitch settings" dialog box.
+
+.. bad-values-blocklist-config-start
+
+Use the **Bad values** tab in the **Stitch settings** dialog to configure values that should be ignored by Stitch during identity resolution.
+
+.. image:: ../../images/mockup-stitch-settings-bad-values.png
+   :width: 520 px
+   :alt: The Bad values tab in the Stitch settings dialog box.
+   :align: left
+   :class: no-scaled-link
+
+Values can be configured to be:
+
+* Detected automatically using a threshold and an association between two fields. The value is ignored when the first field exceeds the configured threshold as it relates to the second field.
+
+  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it will not be used for identity resolution.
+
+  Automatic detection is available for `all fields to which customer profile semantic tags were applied <https://docs.amperity.com/datagrid/semantics.html#profiles>`__, such as **email**, **phone**, **address**, **given-name** and for fields that contain foreign keys.
+
+* Detected manually. Specific values can be added for email addresses, phone numbers, given names, and surnames.
+
+.. tip:: Review the documentation for managing `bad values <https://docs.amperity.com/datagrid/blocklist_bad_values.html>`__ for additional options for managing a bad-values blocklist.
+
+.. bad-values-blocklist-config-end
+
+
 .. _bad-values-blocklist-automatic:
 
 Automatic bad value detection
-==================================================
+--------------------------------------------------
 
 .. bad-values-blocklist-automatic-start
 
-Amperity is configured to automatically apply blocklists to email addresses, phone numbers, and physical addresses when a bad value is discovered at a frequency that exceeds the defined threshold.
+Automatic detection uses rules that define thresholds above which values are ignored automatically. Rules can be defined to look for values in fields created by customer profile semantic tags (**address**, **birthdate**, **city**, **company**, **email**, **gender**, **generational-suffix**, **given-name**, **phone**, **postal**, **state**, and **surname**), along with foreign keys (**fk-**) and Post Office boxes.
 
-The default configuration is:
+For example:
 
-.. code-block:: clojure
+.. image:: ../../images/mockup-stitch-settings-bad-values-automatic.png
+   :width: 440 px
+   :alt: Ignore any email with more than 8 given names
+   :align: left
+   :class: no-scaled-link
 
-   :amperity.stitch.settings/badvalues-config [
-   {:threshold 20, :proxy "given-name", :semantic "email"}
-   {:threshold 20, :proxy "surname", :semantic "email"}
-   {:threshold 20, :proxy "given-name", :semantic "phone"}
-   {:threshold 40, :proxy "given-name", :semantic "address"}]
+will automatically ignore an email address that is associated with 8 (or more) distinct values for **given_name**.
 
-How the default configuration works:
+.. note:: Default thresholds are set for the following combinations:
 
-#. An email address is added to the bad-values blocklist when the same email addresses is associated with more than 20 distinct given names.
-#. A phone number is added to the bad-values blocklist when the same phone number is associated with more than 20 distinct given names.
-#. A physical addresses is added to the bad-values blocklist when the same physical addresses is associated with more than 40 distinct given names.
-
-The threshold values can be increased or decreased as needed for your tenant.
-
-You can add blocklist items using the following syntax:
-
-.. code-block:: clojure
-
-   {:threshold 00, :proxy "semantic-name", :semantic "semantic-name"}
+   #. Ignore any email address with more than 20 given names.
+   #. Ignore any email address with more than 20 surnames.
+   #. Ignore any phone number with more than 20 given names.
+   #. Ignore any physical address with more than 40 given names.
 
 .. bad-values-blocklist-automatic-end
+
+
+.. _bad-values-blocklist-values-to-ignore:
+
+.. bad-values-blocklist-values-to-ignore-start
+
+Values can be added to the bad-values blocklist manually for email addresses, phone numbers, given names, and surnames. Type the value into the field, and then hit enter to manually add a value to the bad-values blocklist.
+
+.. tip:: If a value needs to be removed from the bad-values blocklist click the "X" icon next to the value.
+
+.. bad-values-blocklist-values-to-ignore-end
 
 
 .. _bad-values-blocklist-automatic-disable:
@@ -75,7 +111,7 @@ Disable automatic bad value detection
 
 .. bad-values-blocklist-automatic-disable-start
 
-You can disable automatic bad-value blocklists by editing the configuration to be empty square brackets:
+You can disable automatic bad-value blocklists by updating the configuration to add the following setting with empty square brackets:
 
 .. code-block:: clojure
 

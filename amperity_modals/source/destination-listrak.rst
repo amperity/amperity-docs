@@ -80,7 +80,7 @@ Settings
    :start-after: .. setting-listrak-field-group-start
    :end-before: .. setting-listrak-field-group-end
 
-**Segment name**
+**Segment name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-segment-name-start
