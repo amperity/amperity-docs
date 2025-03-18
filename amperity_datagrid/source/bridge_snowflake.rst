@@ -207,21 +207,24 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
    * - aws-prod
      - azure_westus2
      - PZ39828
-   * - az-prod
+   * - aws-prod-cc1
      - aws_us_west_2
-     - BCB42530
+     - EXB14788
+   * - az-prod
+     - azure_centralus
+     - MC75461
    * - az-prod
      - azure_eastus2
      - DSA38111
    * - az-prod
-     - azure_centralus
-     - MC75461
-   * - aws-prod-cc1
      - aws_us_west_2
-     - EXB14788
+     - BCB42530
    * - az-prod-en1
      - aws_us_west_2
      - WKB77434
+   * - az-prod
+     - azure_westeurope
+     - RN08588
 
 .. important:: If the account ID / region ID pair does ot exist in your stack please contact Amperity Support.
 
