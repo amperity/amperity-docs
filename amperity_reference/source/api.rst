@@ -119,6 +119,8 @@ About Amperity API keys
 
 Amperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity.
 
+API keys are tenant-specific and are neither pulled nor promoted in the sandbox experience.
+
 Access to the Amperity API requires using |ext_jwt| access tokens that are signed by Amperity-managed API keys.
 
 .. api-keys-end
