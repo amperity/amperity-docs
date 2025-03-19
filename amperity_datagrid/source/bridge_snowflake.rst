@@ -19,7 +19,7 @@ Snowflake Bridge is a first-class integration that leverages secure data sharing
 
 .. admonition:: What is Secure Data Sharing?
 
-   `Secure Data Sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro>`__ |ext_link| enables data sharing betwween Snowflake accounts without copying or transferring data and instead relies on the services layer and metadata store within Snowflake. Your brand controls what data will be made available to Amperity directly from within your brand's Snowflake account.
+   `Secure Data Sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro>`__ |ext_link| enables data sharing between Snowflake accounts without copying or transferring data and instead relies on the services layer and metadata store within Snowflake. Your brand controls what data will be made available to Amperity directly from within your brand's Snowflake account.
 
 .. bridge-snowflake-what-is-data-sharing-end
 
@@ -174,7 +174,7 @@ Configure secure views
 
 Secure data sharing should `only share secure views <https://docs.snowflake.com/en/user-guide/views-secure#creating-secure-views>`__ |ext_link| with Amperity. Amperity recommends that all views that are shared with Amperity be configured as secure views in Snowflake.
 
-Alternately, your brand may choose to configure Snowflake to `allow sharing of non-secure views <https://docs.snowflake.com/en/user-guide/data-sharing-views>`__ |ext_link| with Amperity.
+Alternatively, your brand may choose to configure Snowflake to `allow sharing of non-secure views <https://docs.snowflake.com/en/user-guide/data-sharing-views>`__ |ext_link| with Amperity.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-secure-views-end
 
@@ -360,7 +360,7 @@ A sync from Amperity to Snowflake requires configuration steps to be made in bot
 
 .. bridge-snowflake-sync-with-databricks-sandbox-start
 
-.. note:: Configuration state for an outbound bridge **is not copied** from production, and then applied to the sandbox. An outbound bridge must be configured within the sandbox.
+.. note:: Configuration state for an outbound bridge **is not copied** from production and then applied to the sandbox. An outbound bridge must be configured within the sandbox.
 
 .. bridge-snowflake-sync-with-databricks-sandbox-end
 
