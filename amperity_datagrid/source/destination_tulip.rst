@@ -1,20 +1,18 @@
 .. https://docs.amperity.com/datagrid/
 
 
+
 .. |destination-name| replace:: Tulip
 .. |plugin-name| replace:: SFTP
-.. |what-send| replace:: files
-.. |email-plus-send| replace:: tables for stores, employees, categories, products, variants, prices, inventory, customers, and order history
+.. |credential-type| replace:: "passphrase"
+.. |required-credentials| replace:: "username" and "passphrase"
+.. |what-send| replace:: CSV files
+.. |where-send| replace:: Tulip
+.. |sftp-hostname| replace:: "hostname"
+.. |remote-folder| replace:: "/folder/name"
+.. |sftp-port| replace:: "port"
 .. |filter-the-list| replace:: "sftp"
-.. |sftp-type| replace:: **passphrase** or **private-key**
-.. |sftp-hostname| replace:: **hostname**
-.. |file-format| replace:: Use a CSV file
-.. |encoding-method| replace:: Set the encoding method to "None".
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by the SFTP site were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: send query results to |destination-name|
+
 
 
 .. meta::
@@ -52,8 +50,8 @@ Use the |destination-name| `File Importer <https://docs.tulip.com/integrating/fi
    :end-before: .. destinations-overview-list-intro-end
 
 #. :ref:`Get details <destination-tulip-get-details>`
+#. :ref:`Add credentials <destination-tulip-credentials>`
 #. :ref:`Add destination <destination-tulip-add-destination>`
-#. :ref:`Add data template <destination-tulip-add-data-template>`
 
 .. destination-tulip-steps-to-send-end
 
@@ -65,7 +63,11 @@ Get details
 
 .. destination-tulip-get-details-start
 
-|destination-name| requires the following configuration details:
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
+
+.. destination-tulip-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -73,30 +75,147 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The name of the SFTP site.
+     - **Credential settings**
+
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-get-details-both-types-start
+          :end-before: .. credential-get-details-both-types-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The SSH key.
+     - **Required configuration settings**
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The remote folder to which Amperity will send data.
+       **File format**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
 
-       .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
 
-.. note:: The name of the SFTP site, SSH key, and remote folder are provided by |destination-name| support after the File Importer is activated in the |destination-name| **Admin Console**.
+       **Remote folder**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+       .. note::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-optional-settings-start
+             :end-before: .. setting-common-optional-settings-end
 
 .. destination-tulip-get-details-end
+
+
+.. _destination-tulip-credentials:
+
+Configure credentials
+==================================================
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
+
+**To configure credentials for Tulip**
+
+.. destination-tulip-credentials-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-multiple-start
+          :end-before: .. credential-steps-select-type-multiple-end
+
+       From the **Credential type** drop-down, select |credential-type|.
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - The settings that are available for a credential are determined by the credential type and by the settings that are required by the SFTP site. The following credential settings are available for SFTP sites.
+
+       Configure the settings that are required by the SFTP site to which Amperity will connect, and then click **Save**.
+
+       **Host public key**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-host-public-key-start
+             :end-before: .. credential-sftp-host-public-key-end
+
+       **Hostname**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-hostname-start
+             :end-before: .. credential-sftp-hostname-end
+
+       **Passphrase**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-passphrase-start
+             :end-before: .. credential-sftp-passphrase-end
+
+       **Port**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-port-start
+             :end-before: .. credential-sftp-port-end
+
+       **Private key**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-private-key-start
+             :end-before: .. credential-sftp-private-key-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-private-key-required-start
+             :end-before: .. credential-sftp-private-key-required-end
+
+       **Username**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-username-start
+             :end-before: .. credential-sftp-username-end
+
+
+.. destination-tulip-credentials-steps-end
 
 
 .. _destination-tulip-add-destination:
@@ -104,25 +223,13 @@ Get details
 Add destination
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
 
-.. destination-tulip-add-destination-important-start
+**To add a destination for Tulip**
 
-.. important:: The file prefix the filename generated by Amperity *must* match the file prefix required by |destination-name| for that entity. For example, inventory must have **TIN_** as a prefix, orders must have **TOR_** as a prefix, and customers must have **TCU_** as a prefix. In addition, all files must be CSV files and end with **.csv**.
-
-   Use **YYYYMMDD** for the datetime formatting.
-
-   Include header rows.
-
-   The sequence of files that are sent to |destination-name| does matter. Heirarchy is used to determine, for example, categories and sub-categories; stores should be loaded before employees because an employee is assigned to a store.
-
-.. destination-tulip-add-destination-important-end
-
-**To add a destination**
-
-.. destination-tulip-add-destination-steps-start
+.. destination-tulip-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -133,19 +240,19 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-sftp.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -153,33 +260,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-sftp-start
-          :end-before: .. destinations-add-credentials-sftp-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-sftp-start
-          :end-before: .. destinations-intro-for-additional-settings-sftp-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-sftp.png
-          :width: 500 px
-          :alt: Update the settings for the SFTP destination.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -187,19 +276,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-sftp.png
-          :width: 500 px
-          :alt: Settings for SFTP destinations.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-sftp-start
-          :end-before: .. destinations-destination-settings-sftp-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -207,13 +296,130 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Compression**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-compression-start
+             :end-before: .. setting-common-compression-end
+
+
+       **Escape character**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-start
+             :end-before: .. setting-common-escape-character-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-unspecified-start
+             :end-before: .. setting-common-escape-character-unspecified-end
+
+
+       **File format**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
+
+          **Apache Parquet files only**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-apache-parquet-start
+             :end-before: .. setting-common-file-format-apache-parquet-end
+
+
+       **Filename template**
+
+          .. include:: ../../shared/terms.rst
+             :start-after: .. term-filename-template-start
+             :end-before: .. term-filename-template-end
+
+
+       **Header**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-header-start
+             :end-before: .. setting-common-header-end
+
+
+       **Line ending**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-line-ending-start
+             :end-before: .. setting-common-line-ending-end
+
+
+       **PGP public key**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-pgp-public-key-start
+             :end-before: .. setting-common-pgp-public-key-end
+
+
+       **Quote mode**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-start
+             :end-before: .. setting-common-quote-mode-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-none-start
+             :end-before: .. setting-common-quote-mode-none-end
+
+
+       **Remote folder**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+
+       **Success file**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-start
+             :end-before: .. setting-common-success-file-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-downstream-start
+             :end-before: .. setting-common-success-file-downstream-end
+
+
+       **Use Zip64?**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-use-zip64-start
+             :end-before: .. setting-common-use-zip64-end
+
+
+       **Row Number**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-row-number-start
+             :end-before: .. setting-common-row-number-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-row-number-column-name-start
+             :end-before: .. setting-common-row-number-column-name-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -221,25 +427,24 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
-
-.. destination-tulip-add-destination-steps-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
 
-.. _destination-tulip-add-data-template:
+.. destination-tulip-add-steps-end
 
-Add data template
+
+.. _destination-tulip-workflow-actions:
+
+Workflow actions
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
 
-**To add a data template**
-
-.. destination-tulip-add-data-template-steps-start
+.. destination-tulip-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -247,81 +452,101 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
           :width: 500 px
-          :alt: Step 1
+          :alt: Review a notifications error.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
+       .. image:: ../../images/mockups-workflow-failed.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: The workflow tab, showing a workflow with errors.
           :align: left
           :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
+       .. image:: ../../images/workflow-actions-sftp-unavailable.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-tulip-workflow-actions-invalid-credentials`
+       * :ref:`destination-tulip-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
+       .. image:: ../../images/workflow-actions-sftp-unavailable-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-queries-only-start
-          :end-before: .. destinations-data-template-save-after-queries-only-end
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-tulip-add-data-template-steps-end
+.. destination-tulip-workflow-actions-end
+
+
+.. _destination-tulip-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-tulip-workflow-actions-sftp-unavailable:
+
+SFTP site unavailable
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-sftp-generic-unavailable-start
+   :end-before: .. workflow-actions-sftp-generic-unavailable-end
+
