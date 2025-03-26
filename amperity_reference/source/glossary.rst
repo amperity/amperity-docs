@@ -1376,6 +1376,14 @@ D
    See :ref:`Oracle Data Cloud <o-oracle-data-cloud>`.
 
 
+.. _d-dataset:
+
+**dataset**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-dataset-start
+      :end-before: .. term-dataset-end
+
+
 .. _d-days-since-last-order:
 
 **days since last order**
