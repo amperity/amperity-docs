@@ -11,6 +11,7 @@ Site index
 .. toctree::
    :hidden:
 
+   configure_stitch
    data_templates
    destination_active_campaign
    destination_acxiom
