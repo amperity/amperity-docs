@@ -17,6 +17,8 @@
 Send data to Microsoft Dataverse
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_microsoft_dataverse.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-dataverse-start
    :end-before: .. term-microsoft-dataverse-end

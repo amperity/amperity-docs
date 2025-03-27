@@ -22,6 +22,8 @@
 Send data to any SFTP site
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_sftp.html>`__ |ext_link|.
+
 .. destination-sftp-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst

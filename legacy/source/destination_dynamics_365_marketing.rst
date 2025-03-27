@@ -17,6 +17,8 @@
 Send segments to Dynamics 365 Marketing
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_dynamics_365_marketing.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-dynamics-365-marketing-start
    :end-before: .. term-dynamics-365-marketing-end

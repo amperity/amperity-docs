@@ -22,6 +22,8 @@
 Send data to Monetate
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_kibo.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-monetate-start
    :end-before: .. term-monetate-end

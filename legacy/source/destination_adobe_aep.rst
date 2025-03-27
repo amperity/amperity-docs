@@ -22,6 +22,8 @@
 Send data to Adobe Experience Platform
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_adobe_aep.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-adobe-aep-start
    :end-before: .. term-adobe-aep-end

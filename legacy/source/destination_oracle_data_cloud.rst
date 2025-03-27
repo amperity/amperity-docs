@@ -22,6 +22,8 @@
 Send data to Oracle Data Cloud
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_oracle_data_cloud.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-oracle-data-cloud-start
    :end-before: .. term-oracle-data-cloud-end

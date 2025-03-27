@@ -17,6 +17,8 @@
 Send audiences to Oracle Eloqua
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_oracle_eloqua.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-oracle-eloqua-start
    :end-before: .. term-oracle-eloqua-end

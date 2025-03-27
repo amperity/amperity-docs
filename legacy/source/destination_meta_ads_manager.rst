@@ -25,6 +25,8 @@
 Send data to Meta Ads Manager
 ==================================================
 
+.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-meta-ads-manager-start
    :end-before: .. term-meta-ads-manager-end
