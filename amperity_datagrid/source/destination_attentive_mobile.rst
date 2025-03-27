@@ -32,6 +32,8 @@
 Send email and phone lists to Attentive
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_attentive_mobile.html>`__ |ext_link|.
+
 .. destination-attentive-segments-start
 
 Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.

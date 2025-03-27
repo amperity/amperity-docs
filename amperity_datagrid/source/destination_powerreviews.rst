@@ -30,6 +30,8 @@
 Send customer profiles to PowerReviews
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_powerreviews.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-powerreviews-start
    :end-before: .. term-powerreviews-end

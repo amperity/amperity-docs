@@ -29,15 +29,11 @@
 Send audiences to Amazon Ads
 ==================================================
 
-Amazon Ads is an online advertising platform that supports a variety of advertising options, including sponsored, search, display, video, and audio.
-
-.. destination-amazon-ads-ask-start
-
-.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
-
-.. destination-amazon-ads-ask-end
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_amazon_ads.html>`__ |ext_link|.
 
 .. destination-amazon-ads-start
+
+Amazon Ads is an online advertising platform that supports a variety of advertising options, including sponsored, search, display, video, and audio.
 
 Amperity can manage audiences within |destination-name| for use with a variety of advertising and paid media channels, such as: 
 
@@ -48,6 +44,12 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 * Access to a secure, privacy-safe, and cloud-based clean room solution when the instance name for your brand's |ext_amazon_marketing_cloud| account is configured.
 
 .. destination-amazon-ads-end
+
+.. destination-amazon-ads-ask-start
+
+.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
+
+.. destination-amazon-ads-ask-end
 
 .. destination-amazon-ads-api-note-start
 

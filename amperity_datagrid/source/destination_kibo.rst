@@ -30,6 +30,8 @@
 Send customer profiles to Kibo
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_kibo.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-kibo-start
    :end-before: .. term-kibo-end

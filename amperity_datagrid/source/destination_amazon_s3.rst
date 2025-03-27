@@ -27,6 +27,8 @@
 Send data to Amazon S3
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_amazon_s3.html>`__ |ext_link|.
+
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-amazon-s3-about-start
    :end-before: .. setting-amazon-s3-about-end

@@ -28,6 +28,8 @@
 Send audiences to Oracle Eloqua
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_oracle_eloqua.html>`__ |ext_link|.
+
 .. destination-oracle-eloqua-about-start
 
 |destination-name| is an automation platform for email and SMS marketing. Use the Oracle Eloqua REST API to manage audiences in |destination-name|.

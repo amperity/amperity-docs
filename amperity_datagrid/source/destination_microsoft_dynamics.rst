@@ -28,6 +28,8 @@
 Send email lists to Microsoft Dynamics
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_microsoft_dynamics.html>`__ |ext_link|.
+
 .. destination-microsoft-dynamics-about-start
 
 |destination-name| is a customer relationship management (CRM) software application that is focused on the supporting sales, marketing, and services. It is part of the Microsoft Dynamics family of business applications.

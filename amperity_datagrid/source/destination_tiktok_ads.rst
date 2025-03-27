@@ -30,6 +30,8 @@
 Send email lists to TikTok Ads
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_tiktok_ads.html>`__ |ext_link|.
+
 .. destination-tiktok-ads-custom-audiences-start
 
 Custom audiences help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences.

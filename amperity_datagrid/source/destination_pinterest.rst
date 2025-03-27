@@ -31,6 +31,8 @@
 Send email lists to Pinterest
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_pinterest.html>`__ |ext_link|.
+
 .. destination-pinterest-about-start
 
 |destination-name| is a visual discovery engine on which your brand can engage with your customers. Send a list of products that are in your product catalog to |destination-name| to enable pins, and then send a list of customers with whom your brand wants to engage.

@@ -28,6 +28,8 @@
 Send email and phone lists to Listrak
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_listrak.html>`__ |ext_link|.
+
 .. destination-listtrak-about-start
 
 |destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.

@@ -30,6 +30,8 @@
 Send customer profiles to Microsoft Advertising
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_microsoft_ads.html>`__ |ext_link|.
+
 .. destination-microsoft-ads-start
 
 Microsoft Advertising is a pay-per-click partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels, including Bing, Microsoft Audience Network, Microsoft News, Microsoft Edge, and Outlook.

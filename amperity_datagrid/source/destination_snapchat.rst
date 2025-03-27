@@ -28,6 +28,8 @@
 Send audience lists to Snapchat
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_snapchat.html>`__ |ext_link|.
+
 .. destination-snapchat-about-start
 
 Send email addresses, mobile advertiser IDs, or phone numbers to |destination-name|, and then manage ads and advertising campaign.

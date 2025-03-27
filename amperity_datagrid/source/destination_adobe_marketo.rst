@@ -28,6 +28,8 @@
 Send static audience lists to Adobe Marketo
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_adobe_marketo.html>`__ |ext_link|.
+
 |destination-name| is marketing automation software that streamlines, automates, and measures marketing tasks and workflows. An email address must be sent to |destination-name|. You may also send first names, last names, company names, and phone numbers.
 
 .. note::

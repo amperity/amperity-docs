@@ -29,11 +29,17 @@
 Send custom audiences to Meta Ads Manager
 ==================================================
 
+.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_meta_ads_manager.html>`__ |ext_link|.
+
+.. destination-meta-ads-manager-start
+
 Send custom audiences to |destination-name| to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
 The |ext_facebook_marketing_api|, specifically the |ext_facebook_marketing_api_replace_users|, is used to send custom audiences.
 
 This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
+
+.. destination-meta-ads-manager-end
 
 .. note::
 
