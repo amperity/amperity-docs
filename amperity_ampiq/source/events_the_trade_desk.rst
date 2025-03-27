@@ -96,6 +96,6 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
 Offline events paramaters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
-   :start-after: .. destination-the-trade-desk-parameters-offline-events-start
-   :end-before: .. destination-the-trade-desk-parameters-offline-events-end
+.. include:: ../../amperity_datagrid/source/events_the_trade_desk.rst
+   :start-after: .. events-the-trade-desk-parameters-offline-start
+   :end-before: .. events-the-trade-desk-parameters-offline-end

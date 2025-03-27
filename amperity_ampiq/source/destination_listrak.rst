@@ -29,15 +29,9 @@ You can build campaigns that send |what-send| to |destination-name|, and then ap
 
 .. channel-listrak-end
 
-.. image:: ../../images/channel-listrak.png
-   :width: 600 px
-   :alt: Send email lists to Listrak.
-   :align: left
-   :class: no-scaled-link
-
 .. include:: ../../amperity_datagrid/source/destination_listrak.rst
-   :start-after: .. destination-listrak-howitworks-note-start
-   :end-before: .. destination-listrak-howitworks-note-end
+   :start-after: .. destination-listtrak-context-start
+   :end-before: .. destination-listtrak-context-end
 
 .. include:: ../../shared/channels.rst
    :start-after: .. channels-overview-list-intro-start
