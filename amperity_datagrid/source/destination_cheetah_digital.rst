@@ -142,7 +142,7 @@ Configure credentials
    :start-after: .. credential-snappass-start
    :end-before: .. credential-snappass-end
 
-**To configure credentials for Tulip**
+**To configure credentials for Cheetah Digital**
 
 .. destination-cheetah-digital-credentials-steps-start
 
@@ -233,7 +233,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Tulip**
+**To add a destination for Cheetah Digital**
 
 .. destination-cheetah-digital-add-steps-start
 

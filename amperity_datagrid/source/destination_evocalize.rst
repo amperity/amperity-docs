@@ -216,7 +216,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for SFTP**
+**To add a destination for Evocalize**
 
 .. destination-evocalize-add-steps-start
 
