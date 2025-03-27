@@ -31,18 +31,6 @@ Send data to Throtle
    :start-after: .. term-throtle-start
    :end-before: .. term-throtle-end
 
-.. destination-throtle-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-throtle-get-details>`
-#. :ref:`Configure cross-account roles <destination-throtle-credentials-role-to-role>`
-#. :ref:`Add destination <destination-throtle-add-destination>`
-
-.. destination-throtle-steps-to-send-end
-
 
 .. _destination-throtle-get-details:
 
@@ -172,7 +160,7 @@ Configure cross-account roles
 .. destination-throtle-credentials-role-to-role-steps-end
 
 
-.. _destination-throtle-add-destination:
+.. _destination-throtle-add:
 
 Add destination
 ==================================================

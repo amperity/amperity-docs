@@ -37,18 +37,6 @@ Configure Amperity to send data to a customer-managed Amazon S3 bucket, and then
 
 .. destination-optimizely-about-end
 
-.. destination-optimizely-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-optimizely-get-details>`
-#. :ref:`Configure cross-account roles <destination-optimizely-credentials-role-to-role>`
-#. :ref:`Add destination <destination-optimizely-add-destination>`
-
-.. destination-optimizely-steps-to-send-end
-
 
 .. _destination-optimizely-get-details:
 
@@ -178,7 +166,7 @@ Configure cross-account roles
 .. destination-optimizely-credentials-role-to-role-steps-end
 
 
-.. _destination-optimizely-add-destination:
+.. _destination-optimizely-add:
 
 Add destination
 ==================================================

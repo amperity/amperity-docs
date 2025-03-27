@@ -36,18 +36,6 @@ You can use a variety of |ext_domo_business_intelligence| to analyze data in Dom
 
 .. destination-domo-context-end
 
-.. destination-domo-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-domo-get-details>`
-#. :ref:`Configure cross-account roles <destination-domo-credentials-role-to-role>`
-#. :ref:`Add destination <destination-domo-add-destination>`
-
-.. destination-domo-steps-to-send-end
-
 
 .. _destination-domo-get-details:
 
@@ -177,7 +165,7 @@ Configure cross-account roles
 .. destination-domo-credentials-role-to-role-steps-end
 
 
-.. _destination-domo-add-destination:
+.. _destination-domo-add:
 
 Add destination
 ==================================================

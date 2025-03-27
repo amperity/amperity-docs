@@ -36,17 +36,6 @@ Send data to Dynamic Yield
 
 .. destination-dynamic-yield-s3-or-sftp-end
 
-.. destination-dynamic-yield-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-dynamic-yield-get-details>`
-#. :ref:`Add destination <destination-dynamic-yield-add-destination>`
-
-.. destination-dynamic-yield-steps-to-send-end
-
 
 .. _destination-dynamic-yield-get-details:
 
@@ -176,7 +165,7 @@ Configure cross-account roles
 .. destination-dynamic-yield-credentials-role-to-role-steps-end
 
 
-.. _destination-dynamic-yield-add-destination:
+.. _destination-dynamic-yield-add:
 
 Add destination
 ==================================================

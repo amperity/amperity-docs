@@ -42,18 +42,6 @@ Use |ext_salesforce_sfmc_personalization_etl_data_feeds| to send |what-send| to 
 
 .. destination-salesforce-marketing-cloud-personalization-intro-end
 
-.. destination-salesforce-marketing-cloud-personalization-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-salesforce-marketing-cloud-personalization-get-details>`
-#. :ref:`Add credential <destination-salesforce-marketing-cloud-personalization-credentials>`
-#. :ref:`Add destination <destination-salesforce-marketing-cloud-personalization-add-destination>`
-
-.. destination-salesforce-marketing-cloud-personalization-steps-to-send-end
-
 
 .. _destination-salesforce-marketing-cloud-personalization-get-details:
 
@@ -217,7 +205,7 @@ Configure credentials
 .. destination-salesforce-marketing-cloud-personalization-credentials-steps-end
 
 
-.. _destination-salesforce-marketing-cloud-personalization-add-destination:
+.. _destination-salesforce-marketing-cloud-personalization-add:
 
 Add destination
 ==================================================

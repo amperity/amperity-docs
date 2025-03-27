@@ -39,18 +39,6 @@ You can send |what-send| files to |destination-name| using |ext_cheetah_digital_
 
 .. destination-cheetah-digital-context-end
 
-.. destination-cheetah-digital-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-cheetah-digital-get-details>`
-#. :ref:`Add credentials <destination-cheetah-digital-credentials>`
-#. :ref:`Add destination <destination-cheetah-digital-add-destination>`
-
-.. destination-cheetah-digital-steps-to-send-end
-
 
 .. _destination-cheetah-digital-get-details:
 
@@ -224,7 +212,7 @@ Configure credentials
 .. destination-cheetah-digital-credentials-steps-end
 
 
-.. _destination-cheetah-digital-add-destination:
+.. _destination-cheetah-digital-add:
 
 Add destination
 ==================================================

@@ -1,104 +1,50 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: Attentive
-.. |destination-api| replace:: Custom Attributes API
-.. |plugin-name| replace:: Attentive
-.. |what-send| replace:: audiences
-.. |email-plus-send| replace:: additional attributes
+.. |destination-api| replace:: SFTP
+.. |plugin-name| replace:: "Attentive"
+.. |credential-type| replace:: "attentive-mobile"
+.. |required-credentials| replace:: "username", "hostname", and "passphrase"
+.. |what-send| replace:: CSV files
+.. |where-send| replace:: |destination-name|
+.. |sftp-hostname| replace:: "ftp5.attentivemobile.com"
+.. |remote-folder| replace:: "/folder"
+.. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "att"
-.. |sftp-type| replace:: **attentive mobile**
-.. |sftp-hostname| replace:: **sftp.attentivemobile.com**
-.. |file-format| replace:: CSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
-.. |sendto-link| replace:: |sendto_attentive_mobile|
-.. |channel-link| replace:: |campaign_attentive_mobile|
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
-.. |credential-type| replace:: Attentive API
-.. |credential-details| replace:: the Attentive API key, sign-up unit ID, and primary identifier
-
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Attentive.
+        Configure Amperity to send email and phone lists to Attentive.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Attentive.
+        Configure Amperity to send email and phone lists to Attentive.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Attentive
+        Send email and phone lists to Attentive
 
 ==================================================
-Send data to Attentive
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-attentive-mobile-start
-   :end-before: .. term-attentive-mobile-end
-
-.. destination-attentive-mobile-start
-
-Amperity can manage an audience in |destination-name| and attributes about that audience.
-
-#. Send :ref:`audience segments <destination-attentive-segments>` to |destination-name| using a SFTP-based process.
-#. Send customer attributes about that audience using the :ref:`Custom Attributes API <destination-attentive-attributes>`.
-
-.. destination-attentive-mobile-end
-
-
-.. _destination-attentive-howitworks:
-
-How this destination works
-==================================================
-
-.. destination-attentive-howitworks-start
-
-Amperity can manage audiences in |destination-name| and provide attributes about the customers who belong to those audiences. A segment is the list of customers to which you will send emails or messages. A subscriber is a customer for which you have an opt-in/out status. You can only send emails or messages to customers who have opted-in.
-
-.. destination-attentive-howitworks-end
-
-.. image:: ../../images/destination-attentive-mobile-combined.png
-   :width: 600 px
-   :alt: Send subscriber lists and subscriber opt-on/out status from Amperity to Attentive.
-   :align: left
-   :class: no-scaled-link
-
-.. destination-attentive-howitworks-callouts-start
-
-An |destination-name| destination works like this:
-
-#. Use a query or segment to a) build a list of subscribers for whom you have opt-in/out data, and then b) build a segment that contains a list of customers to whom you want to send email or SMS messages.
-
-#. Configure destinations that manage :ref:`audience segments <destination-attentive-segments>`, and then provide :ref:`attributes about the customers <destination-attentive-attributes>` who belong to those audiences.
-
-   .. admonition:: Why are there two ways to send data to Attentive?
-
-      Amperity uses the `Subscribers <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints in the |destination-api| to manage subscribers. Updates appear on the **Subscribers** page within your audience in |destination-name|.
-
-      Amperity uses the |ext_attentive_mobile| process to manage segments. This process does not use an endpoint and is not subject to |ext_attentive_mobile_api_rate_limits|. Updates appear on the **Segments** page within your audience in |destination-name|.
-
-#. Send a test from Amperity, and then from within |destination-name| verify that the **Subscribers** page has the updated subscriber opt-in/out status and that the **Segments** page has the list of customers that you sent from Amperity.
-
-.. destination-attentive-howitworks-callouts-end
-
-
-.. _destination-attentive-segments:
-
-Audience segments
+Send email and phone lists to Attentive
 ==================================================
 
 .. destination-attentive-segments-start
 
-Amperity uses the |ext_attentive_mobile| process to manage segments. This process does not use an endpoint and is not subject to |ext_attentive_mobile_api_rate_limits|. Updates appear on the **Segments** page within your audience in |destination-name|.
+Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
 
 .. destination-attentive-segments-end
+
+.. destination-attentive-sftp-and-api-start
+
+.. admonition:: Why are there two ways to send data to Attentive?
+
+   Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
+
+.. destination-attentive-sftp-and-api-end
 
 .. note::
 
@@ -106,27 +52,17 @@ Amperity uses the |ext_attentive_mobile| process to manage segments. This proces
       :start-after: .. destinations-add-destinations-intro-allow-for-start
       :end-before: .. destinations-add-destinations-intro-allow-for-end
 
-.. destination-attentive-segments-steps-to-send-start
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-attentive-segments-get-details>`
-#. :ref:`Add destination <destination-attentive-segments-add-destination>`
-#. :ref:`Add data template <destination-attentive-add-data-template>`
-
-.. destination-attentive-segments-steps-to-send-end
-
-
-.. _destination-attentive-segments-get-details:
+.. _destination-attentive-mobile-get-details:
 
 Get details
---------------------------------------------------
+==================================================
 
-.. destination-attentive-segments-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details for audience segments:
+.. destination-attentive-mobile-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -134,60 +70,71 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The username and passphrase with permission to write data to Attentive Mobile using their SFTP process.
+     - **Credential settings**
+
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-get-details-passphrase-start
+          :end-before: .. credential-get-details-passphrase-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The remote folder to which Amperity will send data: ``/uploads``.
+     - **Required configuration settings**
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The public key to use for PGP encryption, if required.
+       **File format**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file.
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - Do not include header rows in output.
+          Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file.
 
-.. destination-attentive-segments-get-details-end
+       **Remote folder**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+       .. note::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-optional-settings-start
+             :end-before: .. setting-common-optional-settings-end
+
+.. destination-attentive-mobile-get-details-table-end
 
 
-.. _destination-attentive-segments-add-destination:
+.. _destination-attentive-mobile-credentials:
 
-Add destination
---------------------------------------------------
+Configure credentials
+==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-.. destination-attentive-segments-add-destination-important-start
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-.. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+**To configure credentials for Attentive**
 
-.. destination-attentive-segments-add-destination-important-end
-
-**To add a destination**
-
-.. destination-attentive-segments-add-destination-steps-start
+.. destination-attentive-mobile-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -198,19 +145,9 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -218,33 +155,9 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-sftp-start
-          :end-before: .. destinations-add-credentials-sftp-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-sftp-start
-          :end-before: .. destinations-intro-for-additional-settings-sftp-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-sftp.png
-          :width: 500 px
-          :alt: Update the settings for the SFTP destination.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -252,19 +165,108 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-sftp.png
-          :width: 500 px
-          :alt: Settings for SFTP destinations.
+       **Hostname**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-hostname-start
+             :end-before: .. credential-sftp-hostname-end
+
+       **Passphrase**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-passphrase-start
+             :end-before: .. credential-sftp-passphrase-end
+
+       **Username**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-username-start
+             :end-before: .. credential-sftp-username-end
+
+
+.. destination-attentive-mobile-credentials-steps-end
+
+
+.. _destination-attentive-mobile-add:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination for Attentive**
+
+.. destination-attentive-mobile-add-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
+
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-sftp.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-sftp-start
-          :end-before: .. destinations-destination-settings-sftp-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
+
+       .. tip::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
+
+       .. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+
+       .. admonition:: Configure business user access
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -272,13 +274,100 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Compression**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-compression-start
+             :end-before: .. setting-common-compression-end
+
+
+       **Escape character**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-start
+             :end-before: .. setting-common-escape-character-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-unspecified-start
+             :end-before: .. setting-common-escape-character-unspecified-end
+
+
+       **File format**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+          Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file.
+
+
+       **Filename template**
+          .. include:: ../../shared/terms.rst
+             :start-after: .. term-filename-template-start
+             :end-before: .. term-filename-template-end
+
+
+       **Header**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-header-start
+             :end-before: .. setting-common-header-end
+
+
+       **Line ending**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-line-ending-start
+             :end-before: .. setting-common-line-ending-end
+
+
+       **PGP public key**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-pgp-public-key-start
+             :end-before: .. setting-common-pgp-public-key-end
+
+
+       **Quote mode**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-start
+             :end-before: .. setting-common-quote-mode-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-none-start
+             :end-before: .. setting-common-quote-mode-none-end
+
+
+       **Remote folder**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+
+       **Success file**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-start
+             :end-before: .. setting-common-success-file-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-downstream-start
+             :end-before: .. setting-common-success-file-downstream-end
+
+
+       **Use Zip64?**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-use-zip64-start
+             :end-before: .. setting-common-use-zip64-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -286,310 +375,12 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-attentive-segments-add-destination-steps-end
 
-
-.. _destination-attentive-attributes:
-
-Custom attributes (API)
-==================================================
-
-.. destination-attentive-attributes-start
-
-|destination-name| is your source of truth for your customers' subscription status, while Amperity is your source of truth for profile attributes that describe those customers.
-
-Amperity uses the `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoint to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
-
-.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
-
-.. destination-attentive-attributes-end
-
-.. destination-attentive-attributes-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-attentive-attributes-get-details>`
-#. :ref:`Add destination <destination-attentive-attributes-add-destination>`
-#. :ref:`Add data template <destination-attentive-add-data-template>`
-
-.. destination-attentive-attributes-steps-to-send-end
-
-
-.. _destination-attentive-attributes-get-details:
-
-Get details
---------------------------------------------------
-
-.. destination-attentive-attributes-get-details-start
-
-The |destination-name| Custom Attributes API requires the following configuration details for sending audience subscribers:
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The |destination-name| API key.
-
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The ID for the |ext_attentive_mobile_signup_units|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
-
-.. destination-attentive-attributes-get-details-end
-
-
-.. _destination-attentive-attributes-add-destination:
-
-Add destination
---------------------------------------------------
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
-
-.. destination-attentive-attributes-add-destination-important-start
-
-.. important:: |destination-name| accepts email addresses *or* phone numbers as the primary identifier. The set of data that is sent from Amperity **must** contain the primary identifier. For example, if your primary identifier is phone numbers, than the **phone** field must be included.
-
-   You may send the non-primary email address or phone number as a custom attribute.
-
-.. destination-attentive-attributes-add-destination-important-end
-
-**To add a destination**
-
-.. destination-attentive-attributes-add-destination-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       |destination-name| has the following settings:
-
-       * The |destination-name| API key.
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Settings for Campaign Monitor.
-          :align: left
-          :class: no-scaled-link
-
-       The following settings are specific to |destination-name|:
-
-       .. list-table::
-          :widths: 180 320
-          :header-rows: 1
-
-          * - **Setting**
-            - **Description**
-          * - **Primary identifier**
-            - The ID for the |ext_attentive_mobile_signup_units|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
-
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
-
-.. destination-attentive-attributes-add-destination-steps-end
-
-
-.. _destination-attentive-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-attentive-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-attentive-add-data-template-steps-end
+.. destination-attentive-mobile-add-steps-end
 
 
 .. _destination-attentive-add-data-template-about:
@@ -661,3 +452,7 @@ The following table shows how your segment name will appear in |destination-name
 .. important:: The filename template, as used with |destination-name| (and unlike how it is used with other destinations), **does not** build a file name. Instead the filename template defines which strings (campaign and/or treatment group) will be used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
 
 .. destination-attentive-add-data-template-important-end
+
+
+
+.. TODO: Add workflow resolutions from existing topics HERE.

@@ -1,34 +1,33 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
 
 
 
 .. |destination-name| replace:: Tulip
-.. |plugin-name| replace:: SFTP
-.. |credential-type| replace:: "passphrase"
-.. |required-credentials| replace:: "username" and "passphrase"
+.. |plugin-name| replace:: "Tulip"
+.. |credential-type| replace:: "private-key"
+.. |required-credentials| replace:: "username", "hostname", and "private key"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: Tulip
-.. |sftp-hostname| replace:: "hostname"
+.. |sftp-hostname| replace:: , which is similar to "sftp-tulip-staging.tulipretail.com"
 .. |remote-folder| replace:: "/folder/name"
-.. |sftp-port| replace:: "port"
+.. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "sftp"
-
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Tulip.
+        Configure Amperity to send customer profiles to Tulip.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Tulip.
+        Configure Amperity to send customer profiles to Tulip.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Tulip
+        Send customer profiles to Tulip
 
 ==================================================
-Send data to Tulip
+Send customer profiles to Tulip
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -39,29 +38,19 @@ Send data to Tulip
 
 Use the |destination-name| `File Importer <https://docs.tulip.com/integrating/file-importer/overview/>`__ |ext_link| tool to send CSV files to |destination-name| using SFTP, after which the files are automatically uploaded to |destination-name| by the Bulk API.
 
-.. note:: |destination-name| supports the following entities: stores, employees, categories, products, variants, prices, inventory, customers, and order history. Review the `file naming conventions <https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions>`__ for each entity, `review the sample files <https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions>`__ |ext_link|, and make sure your output has the `correct file formatting <https://docs.tulip.com/integrating/file-importer/overview/#important-considerations-for-performance-and-formatting>`__ |ext_link|.
+.. note:: |destination-name| supports the following entities: stores, employees, categories, products, variants, prices, inventory, customers, and order history. Review the `file naming conventions <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#file-naming-conventions>`__ |ext_link| for each entity, `review the sample files <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#supported-csv-file-types>`__ |ext_link|, and make sure your output has the `correct file formatting <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#important-considerations-for-performance-and-formatting>`__ |ext_link|.
 
 .. destination-tulip-end
 
-.. destination-tulip-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-tulip-get-details>`
-#. :ref:`Add credentials <destination-tulip-credentials>`
-#. :ref:`Add destination <destination-tulip-add-destination>`
-
-.. destination-tulip-steps-to-send-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-file-configure-start
+   :end-before: .. setting-common-file-configure-end
 
 
 .. _destination-tulip-get-details:
 
 Get details
 ==================================================
-
-.. destination-tulip-get-details-start
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-get-details-start
@@ -81,9 +70,10 @@ Get details
      - **Credential settings**
 
        .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-get-details-both-types-start
-          :end-before: .. credential-get-details-both-types-end
+          :start-after: .. credential-get-details-private-key-start
+          :end-before: .. credential-get-details-private-key-end
 
+       .. note:: The name of the SFTP site, SSH key, and remote folder are provided by |destination-name| support after the File Importer is activated in the |destination-name| **Admin Console**.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -120,7 +110,7 @@ Get details
              :start-after: .. setting-common-optional-settings-start
              :end-before: .. setting-common-optional-settings-end
 
-.. destination-tulip-get-details-end
+.. destination-tulip-get-details-table-end
 
 
 .. _destination-tulip-credentials:
@@ -131,6 +121,12 @@ Configure credentials
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-configure-first-start
    :end-before: .. credential-configure-first-end
+
+.. destination-tulip-credentials-context-start
+
+.. note:: The name of the SFTP site, SSH key, and remote folder are provided by |destination-name| support after the File Importer is activated in the |destination-name| **Admin Console**.
+
+.. destination-tulip-credentials-context-end
 
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-snappass-start
@@ -153,6 +149,7 @@ Configure credentials
           :start-after: .. credential-steps-add-credential-start
           :end-before: .. credential-steps-add-credential-end
 
+
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
@@ -169,56 +166,30 @@ Configure credentials
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - The settings that are available for a credential are determined by the credential type and by the settings that are required by the SFTP site. The following credential settings are available for SFTP sites.
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
 
-       Configure the settings that are required by the SFTP site to which Amperity will connect, and then click **Save**.
-
-       **Host public key**
-
+       **Username**
           .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-sftp-host-public-key-start
-             :end-before: .. credential-sftp-host-public-key-end
+             :start-after: .. credential-sftp-username-start
+             :end-before: .. credential-sftp-username-end
 
        **Hostname**
-          |checkmark-required| **Required**
-
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-hostname-start
              :end-before: .. credential-sftp-hostname-end
 
-       **Passphrase**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-sftp-passphrase-start
-             :end-before: .. credential-sftp-passphrase-end
-
-       **Port**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-sftp-port-start
-             :end-before: .. credential-sftp-port-end
-
        **Private key**
-
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-private-key-start
              :end-before: .. credential-sftp-private-key-end
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-sftp-private-key-required-start
-             :end-before: .. credential-sftp-private-key-required-end
-
-       **Username**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-sftp-username-start
-             :end-before: .. credential-sftp-username-end
 
 
 .. destination-tulip-credentials-steps-end
 
 
-.. _destination-tulip-add-destination:
+.. _destination-tulip-add:
 
 Add destination
 ==================================================
@@ -226,6 +197,18 @@ Add destination
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
+
+.. destination-tulip-add-destination-important-start
+
+.. important:: The file prefix the filename generated by Amperity *must* match the file prefix required by |destination-name| for that entity. For example, inventory must have **TIN_** as a prefix, orders must have **TOR_** as a prefix, and customers must have **TCU_** as a prefix. In addition, all files must be CSV files and end with **.csv**.
+
+   Use **YYYYMMDD** for the datetime formatting.
+
+   Include header rows.
+
+   The sequence of files that are sent to |destination-name| does matter. Heirarchy is used to determine, for example, categories and sub-categories; stores should be loaded before employees because an employee is assigned to a store.
+
+.. destination-tulip-add-destination-important-end
 
 **To add a destination for Tulip**
 
@@ -301,14 +284,12 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Compression**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-compression-start
              :end-before: .. setting-common-compression-end
 
 
        **Escape character**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-escape-character-start
              :end-before: .. setting-common-escape-character-end
@@ -319,54 +300,38 @@ Add destination
 
 
        **File format**
-
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
 
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-file-format-custom-delimiter-start
-             :end-before: .. setting-common-file-format-custom-delimiter-end
-
-          **Apache Parquet files only**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-file-format-apache-parquet-start
-             :end-before: .. setting-common-file-format-apache-parquet-end
-
 
        **Filename template**
-
           .. include:: ../../shared/terms.rst
              :start-after: .. term-filename-template-start
              :end-before: .. term-filename-template-end
 
 
        **Header**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-header-start
              :end-before: .. setting-common-header-end
 
 
        **Line ending**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-line-ending-start
              :end-before: .. setting-common-line-ending-end
 
 
        **PGP public key**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-pgp-public-key-start
              :end-before: .. setting-common-pgp-public-key-end
 
 
        **Quote mode**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-quote-mode-start
              :end-before: .. setting-common-quote-mode-end
@@ -377,7 +342,6 @@ Add destination
 
 
        **Remote folder**
-
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -394,7 +358,6 @@ Add destination
 
 
        **Success file**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-start
              :end-before: .. setting-common-success-file-end
@@ -405,21 +368,9 @@ Add destination
 
 
        **Use Zip64?**
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start
              :end-before: .. setting-common-use-zip64-end
-
-
-       **Row Number**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-row-number-start
-             :end-before: .. setting-common-row-number-end
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-row-number-column-name-start
-             :end-before: .. setting-common-row-number-column-name-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -435,118 +386,4 @@ Add destination
 .. destination-tulip-add-steps-end
 
 
-.. _destination-tulip-workflow-actions:
-
-Workflow actions
-==================================================
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-common-table-intro-start
-   :end-before: .. workflow-actions-common-table-intro-end
-
-.. destination-tulip-workflow-actions-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-a-start
-          :end-before: .. workflow-actions-common-table-section-one-a-end
-
-       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
-          :width: 500 px
-          :alt: Review a notifications error.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-b-start
-          :end-before: .. workflow-actions-common-table-section-one-b-end
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step two.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-two-start
-          :end-before: .. workflow-actions-common-table-section-two-end
-
-       .. image:: ../../images/mockups-workflow-failed.png
-          :width: 500 px
-          :alt: The workflow tab, showing a workflow with errors.
-          :align: left
-          :class: no-scaled-link
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step three.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-a-start
-          :end-before: .. workflow-actions-common-table-section-three-a-end
-
-       .. image:: ../../images/workflow-actions-sftp-unavailable.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-b-start
-          :end-before: .. workflow-actions-common-table-section-three-b-end
-
-       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
-
-       * :ref:`destination-tulip-workflow-actions-invalid-credentials`
-       * :ref:`destination-tulip-workflow-actions-sftp-unavailable`
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step four.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-a-start
-          :end-before: .. workflow-actions-common-table-section-four-a-end
-
-       .. image:: ../../images/workflow-actions-sftp-unavailable-steps.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-b-start
-          :end-before: .. workflow-actions-common-table-section-four-b-end
-
-.. destination-tulip-workflow-actions-end
-
-
-.. _destination-tulip-workflow-actions-invalid-credentials:
-
-Invalid credentials
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-generic-invalid-credentials-start
-   :end-before: .. workflow-actions-generic-invalid-credentials-end
-
-
-.. _destination-tulip-workflow-actions-sftp-unavailable:
-
-SFTP site unavailable
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-sftp-generic-unavailable-start
-   :end-before: .. workflow-actions-sftp-generic-unavailable-end
-
+.. TODO: Add workflow resolutions from existing topics HERE.

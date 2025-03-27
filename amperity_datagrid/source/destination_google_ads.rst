@@ -1,41 +1,34 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: Google Ads
 .. |destination-api| replace:: Google Ads API
-.. |plugin-name| replace:: Google Ads
-.. |what-send| replace:: customer data
+.. |plugin-name| replace:: "Google Customer Match"
+.. |credential-type| replace:: "google-customer-match"
+.. |required-credentials| replace:: "refresh token"
+.. |what-send| replace:: audiences
+.. |where-send| replace:: |destination-name|
+.. |duration| replace:: (in days)
+.. |duration-value| replace:: "0" - "540"
 .. |filter-the-list| replace:: "google"
-.. |email-plus-send| replace:: additional attributes
-.. |credential-type| replace:: **google-customer-match**
-.. |credential-details| replace:: the Google Audience Partner API refresh token
-.. |oauth-type| replace:: the OAuth credential you created for your |destination-name| account
-.. |settings-name| replace:: **Google Ads Settings**
-.. |what-settings| replace:: customer ID
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: customer ID setting was
-.. |data-template-config-settings-list-them-vs-it| replace:: it
-.. |sendto-link| replace:: |sendto_google_ads|
-.. |channel-link| replace:: |campaign_google_ads|
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 
-
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Google Ads.
+        Configure Amperity to send audiences to Google Ads.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Google Ads.
+        Configure Amperity to send audiences to Google Ads.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Google Ads
+        Send audiences to Google Ads
 
 ==================================================
-Send data to Google Ads
+Send audiences to Google Ads
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -46,15 +39,15 @@ Send data to Google Ads
 
 .. admonition:: What is Google Customer Match?
 
-   Google Customer Match is a unified ad creation tool that you can use to create and publish search, display, and video ads across the Google-owned paid media ecosystem.
+   |plugin-name| is a unified ad creation tool that you can use to create and publish search, display, and video ads across the Google-owned paid media ecosystem.
 
    For example:
 
-   * Use Discovery campaigns to |ext_google_gmail_ads|.
-   * Use |ext_google_ads| to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
-   * Run ads within |ext_google_search|.
-   * Run ads within the |ext_google_shopping|.
-   * Send audiences to :doc:`DV360 <destination_dv360>`, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the |ext_dv360_placement_options|. DV360 supports advertiser and partner networks.
+   * Use Discovery campaigns to `reach customers in the Promotions and Social tabs in Gmail <https://support.google.com/google-ads/answer/9176876>`__ |ext_link|.
+   * Use `Google Ads <https://support.google.com/google-ads/answer/2567043>`__ |ext_link| to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
+   * Run ads within `search results on Google.com <https://support.google.com/google-ads/answer/9510373>`__ |ext_link|.
+   * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
+   * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
    Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
@@ -68,7 +61,7 @@ Send data to Google Ads
 
 .. destination-google-ads-api-note-start
 
-.. note:: This destination uses the |ext_google_audience_partner_api|.
+.. note:: This destination uses the `Google Audience Partner API <https://support.google.com/google-ads/answer/7361372?hl=en>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -76,28 +69,17 @@ Send data to Google Ads
 
 .. destination-google-ads-api-note-end
 
-.. destination-google-ads-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-google-ads-get-details>`
-#. :ref:`Authorize Amperity access to the customer's account <destination-google-ads-configure-oauth>`
-#. :ref:`Add destination <destination-google-ads-add-destination>`
-#. :ref:`Add data template <destination-google-ads-add-data-template>`
-
-.. destination-google-ads-steps-to-send-end
-
 
 .. _destination-google-ads-get-details:
 
 Get details
 ==================================================
 
-.. destination-google-ads-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-google-ads-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -105,65 +87,96 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - Configuration details for |destination-name|.
+     - **Credential settings**
 
-       The name of the product to which Amperity will send data: "Google Ads".
+       **Refresh token**
 
-       The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Google Ads" account.
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
 
-       .. note:: The customer ID must be 10 digits and may not contain dashes.
-
-       A refresh token that is generated from the OAuth process that :ref:`authorizes Amperity to send data to the selected product <destination-google-ads-configure-oauth>`. This must be a Google account with permission to access the configured customer ID and product within Google.
-
-       .. important:: OAuth for "Google Ads" *must* be completed within Google prior to configuring OAuth in Amperity.
+          .. important:: Authentication for "Google Ads" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity will create it.
+     - **Review user consent policy**
 
-       The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
-
-       .. tip:: Set this value to "0" to remove all audience members.
-
-       The **Upload key type** must be set to one of :ref:`Contact Info <destination-google-ads-api-matching-contact>`, :ref:`User ID <destination-google-ads-api-matching-user>`, or :ref:`Mobile ID <destination-google-ads-api-matching-mobile>`.
-
-       If the **Upload key type** is set to "Mobile ID", use the **Mobile app ID** setting to provide the ID for the iOS or Android app from which the mobile ID was collected.
+       :ref:`Review the user consent policy <destination-dv360-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail three.
+          :alt: Detail 3.
           :align: left
           :class: no-scaled-link
-     - :ref:`Review the user consent policy <destination-google-ads-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
+     - **Required configuration settings**
+
+       **Customer ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-customer-id-start
+             :end-before: .. setting-google-ads-customer-id-end
+
+       **Audience name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-name-start
+             :end-before: .. setting-google-ads-audience-name-end
+
+       **Audience description** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-description-start
+             :end-before: .. setting-google-ads-audience-description-end
+
+       **Membership duration**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-start
+             :end-before: .. setting-common-membership-duration-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-frequency-start
+             :end-before: .. setting-common-membership-duration-frequency-end
+
+       **Upload key type**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-upload-key-type-start
+             :end-before: .. setting-google-ads-upload-key-type-end
+
+       **Mobile app ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-mobile-app-id-start
+             :end-before: .. setting-google-ads-mobile-app-id-end
+
+.. destination-google-ads-get-details-end
 
 
-.. destination-dv360-get-details-end
+.. _destination-google-ads-credentials:
 
-
-.. _destination-google-ads-configure-oauth:
-
-Configure OAuth
+Configure credentials
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-oauth-start
-   :end-before: .. term-oauth-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-oauth-intro-start
-   :end-before: .. destinations-oauth-intro-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-.. important:: OAuth for "Google Ads" *must* be completed within Google prior to configuring OAuth in Amperity.
+**To configure credentials for Google Ads**
 
-**To configure OAuth**
+.. destination-google-ads-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -174,27 +187,35 @@ Configure OAuth
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-1-start
-          :end-before: .. destinations-oauth-configure-step-1-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-2-start
-          :end-before: .. destinations-oauth-configure-step-2-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-3-start
-          :end-before: .. destinations-oauth-configure-step-3-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Refresh token**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
+
+.. destination-google-ads-credentials-steps-end
 
 
 .. _destination-google-ads-reauthorize-amperity:
@@ -207,22 +228,18 @@ Reauthorize Amperity
    :end-before: .. destinations-oauth-reauthorize-end
 
 
-.. _destination-google-ads-add-destination:
+.. _destination-google-ads-add:
 
 Add destination
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-api-oauth-reminder-start
-   :end-before: .. destinations-add-destinations-api-oauth-reminder-end
+**To add a destination for Google Ads**
 
-**To add a destination**
-
-.. destination-google-ads-add-destination-steps-start
+.. destination-google-ads-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -233,19 +250,19 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select-google-ads.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -253,33 +270,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-google-ads.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-02-select-google-ads.png
-          :width: 500 px
-          :alt: Set the following credentials for Google Ads.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-oauth-refresh-token-start
-          :end-before: .. destinations-intro-for-additional-settings-oauth-refresh-token-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -287,48 +286,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-google-ads.png
-          :width: 500 px
-          :alt: Settings for Google Ads.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
 
-       The following settings are specific to |destination-name|:
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
 
-       .. list-table::
-          :widths: 180 320
-          :header-rows: 1
-
-          * - **Setting**
-            - **Description**
-          * - **Audience name**
-            - The name of an audience in |destination-name|. If the audience does not exist, Amperity will create it.
-
-          * - **Audience description**
-            - An optional description of the audience.
-
-          * - **Customer ID**
-            - The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Google Ads" account.
-
-              .. note:: The customer ID must be 10 digits and may not contain dashes.
-
-          * - **Customer product**
-            - The name of the product to which Amperity will send data. Choose "Google Ads".
-
-          * - **Membership duration**
-            - The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
-
-              .. tip:: Set this value to "0" to remove all audience members.
-
-          * - **Upload key type**
-            - The **Upload key type** must be set to one of :ref:`Contact Info <destination-google-ads-api-matching-contact>`, :ref:`User ID <destination-google-ads-api-matching-user>`, or :ref:`Mobile ID <destination-google-ads-api-matching-mobile>`.
-
-          * - **Mobile app ID**
-            - If the **Upload key type** is set to "Mobile ID", use the **Mobile app ID** setting to provide the ID for the iOS or Android app from which the mobile ID was collected.
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -336,13 +306,49 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Customer ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-customer-id-start
+             :end-before: .. setting-google-ads-customer-id-end
+
+       **Audience name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-name-start
+             :end-before: .. setting-google-ads-audience-name-end
+
+       **Audience description** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-description-start
+             :end-before: .. setting-google-ads-audience-description-end
+
+       **Membership duration**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-start
+             :end-before: .. setting-common-membership-duration-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-frequency-start
+             :end-before: .. setting-common-membership-duration-frequency-end
+
+       **Upload key type**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-upload-key-type-start
+             :end-before: .. setting-google-ads-upload-key-type-end
+
+       **Mobile app ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-mobile-app-id-start
+             :end-before: .. setting-google-ads-mobile-app-id-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -350,362 +356,13 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-google-ads-add-destination-steps-end
+.. destination-google-ads-add-steps-end
 
-
-.. _destination-google-ads-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-.. admonition:: About paid media campaigns
-
-   .. include:: ../../shared/paid-media.rst
-      :start-after: .. paid-media-admonition-about-start
-      :end-before: .. paid-media-admonition-about-end
-
-**To add a data template**
-
-.. destination-google-ads-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details-google-ads.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings-google-ads.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-google-ads-add-data-template-steps-end
-
-
-.. _source-google-ads-workflow-actions:
-
-Workflow actions
-==================================================
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-common-table-intro-start
-   :end-before: .. workflow-actions-common-table-intro-end
-
-.. source-google-ads-workflow-actions-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-a-start
-          :end-before: .. workflow-actions-common-table-section-one-a-end
-
-       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
-          :width: 500 px
-          :alt: Review a notifications error.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-b-start
-          :end-before: .. workflow-actions-common-table-section-one-b-end
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step two.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-two-start
-          :end-before: .. workflow-actions-common-table-section-two-end
-
-       .. image:: ../../images/mockups-workflow-failed.png
-          :width: 500 px
-          :alt: The Workflow page, showing a workflow with errors.
-          :align: left
-          :class: no-scaled-link
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step three.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-a-start
-          :end-before: .. workflow-actions-common-table-section-three-a-end
-
-       .. image:: ../../images/workflow-actions-google-ads-2fa-required.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-b-start
-          :end-before: .. workflow-actions-common-table-section-three-b-end
-
-       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
-
-       * :ref:`source-google-ads-workflow-actions-cannot-update-audience`
-       * :ref:`source-google-ads-workflow-actions-expired-token`
-       * :ref:`source-google-ads-workflow-actions-incomplete-account-setup`
-       * :ref:`source-google-ads-workflow-actions-invalid-credentials`
-       * :ref:`source-google-ads-workflow-actions-missing-required-attributes`
-       * :ref:`source-google-ads-workflow-actions-2fa-required`
-       * :ref:`source-google-ads-workflow-actions-user-cannot-access-audience`
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step four.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-a-start
-          :end-before: .. workflow-actions-common-table-section-four-a-end
-
-       .. image:: ../../images/workflow-actions-google-ads-2fa-required-steps.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-b-start
-          :end-before: .. workflow-actions-common-table-section-four-b-end
-
-.. source-google-ads-workflow-actions-end
-
-
-.. _source-google-ads-workflow-actions-cannot-update-audience:
-
-Cannot update audience
---------------------------------------------------
-
-.. source-google-ads-workflow-actions-cannot-update-audience-start
-
-Amperity uses a refresh token that is generated from your |destination-name| user account to access audiences that are associated with your |destination-name| customer ID. The user for whom the refresh token is created must have permission to update audiences in the |destination-name| account that is associated with the customer ID.
-
-To resolve this error, verify that the user account can update audiences.
-
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
-#. Verify that the user has permission to update audiences that are associated with the customer ID.
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. source-google-ads-workflow-actions-cannot-update-audience-start
-
-
-.. _source-google-ads-workflow-actions-expired-token:
-
-Expired token
---------------------------------------------------
-
-.. source-google-ads-workflow-actions-expired-token-start
-
-The token used with |destination-name| has expired.
-
-To resolve this error, refresh the token that is used with |destination-name|.
-
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
-#. Refresh the token that is associated with your |destination-name| account.
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. source-google-ads-workflow-actions-expired-token-start
-
-
-.. _source-google-ads-workflow-actions-incomplete-account-setup:
-
-Incomplete account setup
---------------------------------------------------
-
-.. source-google-ads-workflow-actions-incomplete-account-setup-start
-
-Amperity cannot send data to an account in |destination-name| that is not set up completely. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
-
-To resolve this error, verify that your |destination-name| account is set up correctly.
-
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
-#. Verify the current state of your account. Complete any steps that are required to set up your |destination-name| account.
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. source-google-ads-workflow-actions-incomplete-account-setup-start
-
-
-.. _source-google-ads-workflow-actions-invalid-credentials:
-
-Invalid credentials
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-generic-invalid-credentials-start
-   :end-before: .. workflow-actions-generic-invalid-credentials-end
-
-
-.. _source-google-ads-workflow-actions-missing-required-attributes:
-
-Missing required field(s)
---------------------------------------------------
-
-.. destination-google-ads-workflow-actions-missing-required-field-start
-
-One (or more) required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <destination-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
-
-.. destination-google-ads-workflow-actions-missing-required-field-end
-
-**For campaigns**
-
-.. destination-google-ads-workflow-actions-missing-required-field-campaigns-steps-start
-
-To resolve this error, update the list of attributes to include all required fields.
-
-#. Open the **Campaigns** page, and then open the segment used with this workflow.
-#. Verify that :ref:`all required attributes are associated with each treatment group that is being sent to <destination-google-ads-api-matching-contact>` |destination-name|. Update the list of attributes if required.
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. destination-google-ads-workflow-actions-missing-required-field-campaigns-steps-start
-
-**For orchestrations**
-
-.. destination-google-ads-workflow-actions-missing-required-field-orchestrations-steps-start
-
-To resolve this error, update the results of the query to include all required fields.
-
-#. Open the **Queries** page, and then open the query used with this workflow.
-#. Verify that :ref:`all required attributes are included in the query results <destination-google-ads-api-matching-contact>`. Update the query if required.
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. destination-google-ads-workflow-actions-missing-required-field-orchestrations-steps-start
-
-
-.. _source-google-ads-workflow-actions-2fa-required:
-
-Two-factor authentication required
---------------------------------------------------
-
-.. destination-google-ads-workflow-actions-missing-required-field-start
-
-|destination-name| requires two-factor authentication to be enabled.
-
-To resolve this error, ensure that two-factor authentication is enabled for your |destination-name| account.
-
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
-#. Verify that two-factor authentication is enabled for your account.
-
-   Click on your username.
-
-   Click on **Manage Account**. Under **Security** enable the option for two-step verification.
-
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. destination-google-ads-workflow-actions-missing-required-field-end
-
-
-.. _source-google-ads-workflow-actions-user-cannot-access-audience:
-
-User cannot access audience
---------------------------------------------------
-
-.. source-google-ads-workflow-actions-user-cannot-access-audience-start
-
-When the |destination-name| user account that is associated with the Amperity workflow does not have |ext_google_ads_permissions| the linked client account, Amperity will be unable to complete the workflow.
-
-To resolve this error, verify the permissions associated with the user account in |destination-name|.
-
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
-#. Verify that |destination-name| user account that is associated with the Amperity workflow has |ext_google_ads_permissions| the linked client account.
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. source-google-ads-workflow-actions-user-cannot-access-audience-start
-
+.. TODO: Add workflow resolutions from existing topics HERE.
 
 .. _destination-google-ads-api-matching:
 
@@ -882,3 +539,4 @@ A list can be matched to advertiser-generated and assigned user IDs and/or to cu
        * Optional. Hashes data as SHA-256
 
 .. destination-google-ads-api-matching-user-end
+
