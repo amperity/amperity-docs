@@ -108,15 +108,9 @@ Get details
           :class: no-scaled-link
      - **Kibo requirements**
 
-       Files sent to |destination-name| must:
-
-       * Not exceed 10 GB uncompressed or 100 million rows
-       * Contain at least one column and may not contain more than 30
-       * Include a single row per unique identifier
-       * Use double quotes around fields that include a comma
-       * Include a header row for new datasets
-
-       Review the `customer dataset upload requirements <https://docs.kibocommerce.com/114237-customer-data/631062-customer-dataset-upload-requirements>`__ |ext_link| for additional information. 
+       .. include:: ../../amperity_amp360/source/destination_kibo.rst
+          :start-after: .. destination-kibo-get-details-note-start
+          :end-before: .. destination-kibo-get-details-note-end 
 
 .. destination-kibo-get-details-table-end
 

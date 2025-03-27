@@ -47,6 +47,18 @@ Amperity can manage audiences within |destination-name| demand-side platform, fr
 
 .. TODO: Single-source these following two sections across all The Trade Desk destinations.
 
+.. destination-the-trade-desk-whatis-20-start
+
+.. admonition:: What is UID 2.0?
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-unified-id-20-start
+      :end-before: .. term-unified-id-20-end
+
+   |destination-name| supports using `UID 2.0 <https://unifiedid.com/docs/intro>`__ |ext_link| to help establish your customers' identifies without using third-party data. UID 2.0 enables publisher websites, mobile apps, and Connected TV (CTV) apps to monetize through programmatic workflows, while offering user transparency and privacy controls that meet local market requirements.
+
+.. destination-the-trade-desk-whatis-20-end
+
 .. destination-the-trade-desk-api-note-start
 
 .. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage audiences and send offline events.

@@ -269,4 +269,312 @@ Add destination
 
 .. destination-klaviyo-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+
+.. _destination-klaviyo-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-klaviyo-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-klaviyo-maximum-lists.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-klaviyo-workflow-actions-invalid-credentials`
+       * :ref:`destination-klaviyo-workflow-actions-maximum-lists`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-klaviyo-maximum-lists-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-klaviyo-workflow-actions-end
+
+
+.. _destination-klaviyo-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-klaviyo-workflow-actions-maximum-lists:
+
+Maximum number of lists exceeded
+--------------------------------------------------
+
+.. destination-klaviyo-workflow-actions-maximum-lists-start
+
+|destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+
+.. destination-klaviyo-workflow-actions-maximum-lists-end
+
+.. destination-klaviyo-workflow-actions-maximum-lists-steps-start
+
+To resolve this error, verify the number of lists and/or segments associated with your |destination-name| account.
+
+#. Log into |destination-name| and verify the number of lists and/or segments that are associated with your |destination-name| account.
+#. Remove unused lists and/or segments.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-klaviyo-workflow-actions-maximum-lists-steps-start
+
+
+.. _destination-klaviyo-customer-profile-parameters:
+
+Customer profile parameters
+==================================================
+
+.. destination-klaviyo-customer-profile-parameters-start
+
+The following table describes the parameters that may be sent to |destination-name|. Use the **properties** field to define a series of custom properties (as key/value pairs) to represent offline events.
+
+Amperity uses the `Update Profile <https://developers.klaviyo.com/en/reference/update_profile>`__ |ext_link| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
+
+The list of customer profile parameters supported by |destination-name| are described in the following table. Parameters are listed alphabetically, but may be returned in any order.
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Field name
+     - Description
+
+   * - **address1**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-address-start
+          :end-before: .. term-address-end
+
+
+   * - **address2**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-address2-start
+          :end-before: .. term-address2-end
+
+
+   * - **city**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-city-start
+          :end-before: .. term-city-end
+
+
+   * - **country**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-country-start
+          :end-before: .. term-country-end
+
+
+   * - **email**
+     - **Required**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-email-start
+          :end-before: .. term-email-end
+
+       .. important:: An email address is used by |destination-name| to generate a unique customer identifier for each customer profile that exists within |destination-name|.
+
+          This email address is most often found in the **email** field in the **Merged Customers** table, but may be located elsewhere depending on how your brand has configured your customer 360 database and depending on the downstream use cases your brand wants to enable within |destination-name|.
+
+
+   * - **external_id**
+     - **Optional**
+
+       A unique identifier that associates |destination-name| profiles with customer profiles that exist within an external system.
+
+       For example, a unique ID for a point-of-sale system or the Amperity ID.
+
+
+   * - **first_name**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-given-name-start
+          :end-before: .. term-given-name-end
+
+
+   * - **image**
+     - **Optional**
+
+       A URL that points to the location of a profile image for this customer profile.
+
+
+   * - **ip**
+     - **Optional**
+
+       An IP address that is associated with this customer profile.
+
+
+   * - **last_event_date**
+     - **Optional**
+
+       A timestamp for an event that is associated with this customer profile.
+
+       For example, the date and time of the most recent transaction from your brand's website or store.
+
+
+   * - **last_name**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-surname-start
+          :end-before: .. term-surname-end
+
+
+   * - **latitude**
+     - **Optional**
+
+       A latitude coordinate that may be used to define `location-based segments <https://help.klaviyo.com/hc/en-us/articles/115005065887#create-a-location-based-segment1>`__ |ext_link| in |destination-name|.
+
+       .. note:: This value should have a precision of four decimal places.
+
+
+   * - **longitude**
+     - **Optional**
+
+       A longitude coordinate that may be used to define `location-based segments <https://help.klaviyo.com/hc/en-us/articles/115005065887#create-a-location-based-segment1>`__ |ext_link| in |destination-name|.
+
+       .. note:: This value should have a precision of four decimal places.
+
+
+   * - **organization**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-company-start
+          :end-before: .. term-company-end
+
+
+   * - **phone_number**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-phone-start
+          :end-before: .. term-phone-end
+
+       .. note:: A phone number must be in |ext_e164_format|, which represents a phone number as a number up to fifteen digits in length (without spaces) that starts with a + symbol. For example: +12061234567.
+
+
+   * - **properties**
+     - **Optional**
+
+       A series of custom properties represented as key/value pairs for additional data that your brand wants to associate with this customer profile.
+
+       For example, a store ID or the name (or SKU) of the most recent product purchase associated with this customer profile.
+
+
+   * - **region**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-state-start
+          :end-before: .. term-state-end
+
+
+   * - **timezone**
+     - **Optional**
+
+       The name of a timezome. |destination-name| recommends using the name of a timezone in the |ext_iana_timezone|.
+
+
+   * - **title**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-title-start
+          :end-before: .. term-title-end
+
+
+   * - **zip**
+     - **Optional**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-postal-start
+          :end-before: .. term-postal-end
+
+.. destination-klaviyo-customer-profile-parameters-end

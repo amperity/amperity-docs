@@ -368,14 +368,13 @@ Review the :ref:`Conversions API parameters <events-meta-ads-manager-conversions
 
 .. events-meta-ads-manager-offline-events-parameters-end
 
+
 .. _events-meta-ads-manager-conversions:
 
 Conversions API parameters
 ==================================================
 
-.. TODO: Sync this with the updated events topics.
-
-.. destination-meta-ads-manager-conversion-api-parameters-start
+.. events-meta-ads-manager-conversion-api-parameters-start
 
 The following table describes each of the parameters that are required by |destination-name| for offline events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with offline events that are returned by the query and sent to |destination-name|.
 
@@ -607,5 +606,4 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - Optional profile attributes
      - You may include any of the profile attributes that are supported by the Marketing API, including **Gender**, **Birthdate**, **First Name**, **Last Name**, **City**, **State**, **Zip Code**, and **Country Code**.
 
-.. destination-meta-ads-manager-conversion-api-parameters-end
-
+.. events-meta-ads-manager-conversion-api-parameters-end
