@@ -498,6 +498,8 @@ Configure an outbound bridge to sync data from Amperity to Databricks.
 
        When finished, click **Create**. This will open the **Select tables** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-databricks-sync-with-databricks-select-tables>` to share with Databricks.
 
+       .. important:: Changes to the token lifetime or allowed IP addresses will only take effect for *new* credentials.
+
 .. bridge-databricks-sync-with-databricks-add-bridge-steps-end
 
 
