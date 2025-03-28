@@ -51,7 +51,7 @@ The **Unified Paid Media** table is an optional table for the customer 360 datab
 
 .. table-unified-paid-media-add-table-note-end
 
-**To add the Merged Customers table**
+**To add the Unified Paid Media table**
 
 .. table-unified-paid-media-add-steps-start
 
