@@ -1,40 +1,36 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: Adobe Marketo
-.. |destination-api| replace:: Marketo API
-.. |plugin-name| replace:: Marketo
+.. |plugin-name| replace:: "Marketo"
+.. |credential-type| replace:: "marketo"
+.. |required-credentials| replace:: "client ID", "client secret", and "subdomain"
+.. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: static audience lists
-.. |filter-the-list| replace:: "ado"
-.. |credential-type| replace:: **marketo**
-.. |credential-details| replace:: the client ID, client secret, and subdomain
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_adobe_marketo|
-.. |channel-link| replace:: |campaign_adobe_marketo|
+.. |where-send| replace:: |destination-name|
+.. |filter-the-list| replace:: "adobe"
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Adobe Marketo.
+        Configure Amperity to send static audience lists to Adobe Marketo.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Adobe Marketo.
+        Configure Amperity to send static audience lists to Adobe Marketo.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Adobe Marketo
+        Send static audience lists to Adobe Marketo
 
 ==================================================
-Send data to Adobe Marketo
+Send static audience lists to Adobe Marketo
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-adobe-marketo-start
-   :end-before: .. term-adobe-marketo-end
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_adobe_marketo.html>`__ |ext_link|.
+
+|destination-name| is marketing automation software that streamlines, automates, and measures marketing tasks and workflows. An email address must be sent to |destination-name|. You may also send first names, last names, company names, and phone numbers.
 
 .. note::
 
@@ -42,27 +38,17 @@ Send data to Adobe Marketo
       :start-after: .. setting-adobe-marketo-list-name-membership-start
       :end-before: .. setting-adobe-marketo-list-name-membership-end
 
-.. destination-adobe-marketo-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-adobe-marketo-get-details>`
-#. :ref:`Add destination <destination-adobe-marketo-add-destination>`
-#. :ref:`Add data template <destination-adobe-marketo-add-data-template>`
-
-.. destination-adobe-marketo-steps-to-send-end
-
 
 .. _destination-adobe-marketo-get-details:
 
 Get details
 ==================================================
 
-.. destination-adobe-marketo-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-adobe-marketo-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -70,51 +56,49 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
+     - **Credential settings**
 
+       **Client ID and client secret**
+          |checkmark-required| **Required**
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The subdomain used with |destination-name|.
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-adobe-marketo-client-id-start
+             :end-before: .. credential-adobe-marketo-client-id-end
 
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-adobe-marketo-access-token-start
+             :end-before: .. credential-adobe-marketo-access-token-end
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The audience name.
+       **Subdomain**
+          |checkmark-required| **Required**
 
-.. note:: |destination-name| API has the following limitations:
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-adobe-marketo-subdomain-start
+             :end-before: .. credential-adobe-marketo-subdomain-end
 
-   * Subscriptions are allocated 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
-   * API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
-
-   You may experience these rate limits when sending very large audience lists.
-
-   It is possible for |destination-name| to have multiple audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity will update the first audience list in that list.
 
 .. destination-adobe-marketo-get-details-end
 
 
-.. _destination-adobe-marketo-add-destination:
+.. _destination-adobe-marketo-credentials:
 
-Add destination
+Configure credentials
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-**To add a destination**
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-.. destination-adobe-marketo-add-destination-steps-start
+**To configure credentials for Adobe Marketo**
+
+.. destination-adobe-marketo-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -125,19 +109,84 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Client ID and client secret**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-adobe-marketo-client-id-start
+             :end-before: .. credential-adobe-marketo-client-id-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-adobe-marketo-access-token-start
+             :end-before: .. credential-adobe-marketo-access-token-end
+
+       **Subdomain**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-adobe-marketo-subdomain-start
+             :end-before: .. credential-adobe-marketo-subdomain-end
+
+.. destination-adobe-marketo-credentials-steps-end
+
+
+.. _destination-adobe-marketo-add:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination for Adobe Marketo**
+
+.. destination-adobe-marketo-add-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
+
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -145,38 +194,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       |destination-name| has the following settings:
-
-       * The The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
-       * The subdomain used with |destination-name|.
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -184,15 +210,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Settings for Adobe Marketo.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -200,13 +230,31 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Folder name**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-adobe-marketo-folder-name-start
+             :end-before: .. setting-adobe-marketo-folder-name-end
+
+       **Program name**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-adobe-marketo-program-name-start
+             :end-before: .. setting-adobe-marketo-program-name-end
+
+       **List name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-adobe-marketo-list-name-start
+             :end-before: .. setting-adobe-marketo-list-name-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-adobe-marketo-list-name-first-audience-start
+             :end-before: .. setting-adobe-marketo-list-name-first-audience-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -214,115 +262,10 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-adobe-marketo-add-destination-steps-end
+.. destination-adobe-marketo-add-steps-end
 
-
-.. _destination-adobe-marketo-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-adobe-marketo-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. include:: ../../amperity_amp360/source/destination_adobe_marketo.rst
-          :start-after: .. sendto-adobe-marketo-add-orchestration-important-start
-          :end-before: .. sendto-adobe-marketo-add-orchestration-important-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-adobe-marketo-add-data-template-steps-end
+.. TODO: Add workflow resolutions from existing topics HERE.

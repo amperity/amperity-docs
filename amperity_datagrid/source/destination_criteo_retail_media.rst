@@ -1,4 +1,5 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: Criteo Retail Media
@@ -9,25 +10,25 @@
 .. |where-send| replace:: |destination-name|
 .. |audience-primary-key| replace:: "email"
 .. |filter-the-list| replace:: "crit"
-.. |sendto-link| replace:: send query results
-.. |channel-link| replace:: send campaigns
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send audiences to Criteo Retail Media.
+        Configure Amperity to send audience segments to Criteo Retail Media.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send audiences to Criteo Retail Media.
+        Configure Amperity to send audience segments to Criteo Retail Media.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to Criteo Retail Media
+        Send audience segments to Criteo Retail Media
 
-====================================================
-Send audiences to Criteo Retail Media
-====================================================
+==================================================
+Send audience segments to Criteo Retail Media
+==================================================
+
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_criteo_retail_media.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-criteo-retail-media-start
@@ -86,7 +87,7 @@ Get details
 
 .. _destination-criteo-retail-media-credentials:
 
-Use OAuth
+Configure credentials
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -131,6 +132,16 @@ Use OAuth
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
           :end-before: .. destinations-oauth-configure-step-3-end
+
+
+.. _destination-criteo-retail-media-reauthorize-amperity:
+
+Reauthorize Amperity
+--------------------------------------------------
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-reauthorize-start
+   :end-before: .. destinations-oauth-reauthorize-end
 
 
 .. _destination-criteo-retail-media-add:
@@ -197,13 +208,13 @@ Add destination
 
        .. admonition:: Configure business user access
 
-          #. .. include:: ../../shared/destination_settings.rst
-                :start-after: .. setting-common-business-user-access-allow-start
-                :end-before: .. setting-common-business-user-access-allow-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
 
-          #. .. include:: ../../shared/destination_settings.rst
-                :start-after: .. setting-common-business-user-access-restrict-pii-start
-                :end-before: .. setting-common-business-user-access-restrict-pii-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -235,6 +246,13 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-identifier-type-start
              :end-before: .. setting-criteo-identifier-type-end
+
+       **Audience segment description** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-criteo-audience-segment-description-start
+             :end-before: .. setting-criteo-audience-segment-description-end
+
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

@@ -191,6 +191,7 @@ html_additional_pages = {
     'destination_databricks_snowflake': 'destination_databricks_snowflake.html',
     'destination_facebook_ads': 'destination_facebook_ads.html',
     'destination_google_customer_match': 'destination_google_customer_match.html',
+    'destination_monetate': 'destination_monetate.html',
     'destinations': 'destinations.html',
     'source_databricks': 'source_databricks.html',
     'source_shopify': 'source_shopify.html',

@@ -57,9 +57,19 @@ You may need to build a query that shapes the data so that fields in the output 
 
 .. sendto-kibo-build-query-end
 
-.. include:: ../../amperity_datagrid/source/destination_kibo.rst
-   :start-after: .. destination-kibo-get-details-note-start
-   :end-before: .. destination-kibo-get-details-note-end
+.. destination-kibo-get-details-note-start
+
+.. note:: Files sent to |destination-name| must:
+
+   * Not exceed 10 GB uncompressed or 100 million rows
+   * Contain at least one column and may not contain more than 30
+   * Include a single row per unique identifier
+   * Use double quotes around fields that include a comma
+   * Include a header row for new datasets
+
+   Review the `customer dataset upload requirements <https://docs.kibocommerce.com/114237-customer-data/631062-customer-dataset-upload-requirements>`__ |ext_link| for additional information. 
+
+.. destination-kibo-get-details-note-end
 
 
 .. _sendto-kibo-add-orchestration:

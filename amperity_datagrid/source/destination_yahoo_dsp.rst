@@ -1,17 +1,15 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: Yahoo DSP
-.. |destination-api| replace:: Yahoo Ad Tech DataX API
-.. |plugin-name| replace:: Yahoo DSP
-.. |what-send| replace:: **email** or **phone**
-.. |filter-the-list| replace:: "yah"
-.. |credential-type| replace:: yahoo-dsp
-.. |credential-details| replace:: the MDM ID
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |sendto-link| replace:: send query results
-.. |channel-link| replace:: send campaigns
+.. |plugin-name| replace:: "Yahoo DSP"
+.. |credential-type| replace:: "yahoo-dsp"
+.. |required-credentials| replace:: "seat MDM ID"
+.. |what-send| replace:: audiences
+.. |where-send| replace:: |destination-name|
+.. |audience-primary-key| replace:: "email" or "phone"
+.. |filter-the-list| replace:: "yahoo"
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "90"
 .. |allow-for-what| replace:: audience lists
@@ -20,19 +18,21 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Yahoo DSP.
+        Configure Amperity to send audiences to Yahoo DSP.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Yahoo DSP.
+        Configure Amperity to send audiences to Yahoo DSP.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Yahoo DSP
+        Send audiences to Yahoo DSP
 
 ==================================================
-Send data to Yahoo DSP
+Send audiences to Yahoo DSP
 ==================================================
+
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_yahoo_dsp.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-yahoo-dsp-start
@@ -62,27 +62,17 @@ Send data to Yahoo DSP
 
 .. destination-active-campaign-api-note-end
 
-.. destination-yahoo-dsp-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-yahoo-dsp-get-details>`
-#. :ref:`Add destination <destination-yahoo-dsp-add-destination>`
-#. :ref:`Add data template <destination-yahoo-dsp-add-data-template>`
-
-.. destination-yahoo-dsp-steps-to-send-end
-
 
 .. _destination-yahoo-dsp-get-details:
 
 Get details
 ==================================================
 
-.. destination-yahoo-dsp-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-yahoo-dsp-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -90,38 +80,37 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - Your brand's MDM ID.
+     - **Credential settings**
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-yahoo-dsp-mdm-id-start
-          :end-before: .. credential-yahoo-dsp-mdm-id-end
+       **Seat MDM ID**
+          |checkmark-required| **Required**
 
-       .. tip:: You can find your brand's **Site MDM ID** from the |destination-name| user interface. Log in to |destination-name|, then navigate to the **Advertisers** page. Open your brand's profile. The **Site MDM ID** is available from the **MDM ID** field.
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-yahoo-dsp-mdm-id-start
+             :end-before: .. credential-yahoo-dsp-mdm-id-end
 
-          .. image:: ../../images/destination-yahoo-site-mdm-id.png
-             :width: 360 px
-             :alt: Location of Yahoo DSP site MDM ID
-             :align: left
-             :class: no-scaled-link
-
+          .. tip:: You can find your brand's **Site MDM ID** from the |destination-name| user interface. Log in to |destination-name|, then navigate to the **Advertisers** page. Open your brand's profile. The **Site MDM ID** is available from the **MDM ID** field.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The name of a segment in |destination-name|. This can be the name of an existing segment or be a new segment.
+     - **Required configuration settings**
 
+       None. The segment name will be applied automatically if not specified. Membership duration defaults to 30 days.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail 3.
           :align: left
           :class: no-scaled-link
-     - To ensure that audiences are compliant with General Data Protection Regulation (GDPR) requirements for "information storage and access" and "personalization" features within the `transparency consent framework <https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md#what-are-the-purposes-and-features-being-supported->`__ |ext_link| you must include the following fields:
+     - **General Data Protection Regulation (GDPR) requirements**
+
+       To ensure that audiences are compliant with General Data Protection Regulation (GDPR) requirements for "information storage and access" and "personalization" features within the `transparency consent framework <https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md#what-are-the-purposes-and-features-being-supported->`__ |ext_link| you must include the following fields:
 
        * **storage-consent**
        * **personalization-consent**
@@ -132,21 +121,26 @@ Get details
 
        .. important:: If your brand knows your audience contains users who reside in the Europe and are protected by GDPR consent requirements you should include these fields in the audience to ensure that your brand meets GDPR consent requirements.
 
-.. destination-yahoo-dsp-get-details-end
+
+.. destination-yahoo-dsp-get-details-table-end
 
 
-.. _destination-yahoo-dsp-add-destination:
+.. _destination-yahoo-dsp-add-credentials:
 
-Add destination
+Configure credentials
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-**To add a destination**
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-.. destination-yahoo-dsp-add-destination-start
+**To configure credentials for Yahoo DSP**
+
+.. destination-yahoo-dsp-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -157,19 +151,9 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -177,41 +161,9 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       |destination-name| has the following settings:
-
-       * **Seat MDM ID**
-
-         .. include:: ../../shared/credentials_settings.rst
-            :start-after: .. credential-yahoo-dsp-mdm-id-start
-            :end-before: .. credential-yahoo-dsp-mdm-id-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -219,45 +171,113 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Settings for Yahoo DSP.
+       **Seat MDM ID**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-yahoo-dsp-mdm-id-start
+             :end-before: .. credential-yahoo-dsp-mdm-id-end
+
+.. destination-yahoo-dsp-credentials-steps-end
+
+
+.. _destination-yahoo-dsp-add:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination for Yahoo DSP**
+
+.. destination-yahoo-dsp-add-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
+
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-yahoo-dsp.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       The following settings are specific to |destination-name|:
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
-       .. list-table::
-          :widths: 180 320
-          :header-rows: 1
 
-          * - **Setting**
-            - **Description**
-          * - **Segment name**
-            - .. include:: ../../shared/destination_settings.rst
-                 :start-after: .. setting-yahoo-dsp-segment-name-start
-                 :end-before: .. setting-yahoo-dsp-segment-name-start
-          * - **Membership duration**
-            - .. include:: ../../shared/destination_settings.rst
-                 :start-after: .. setting-common-membership-duration-start
-                 :end-before: .. setting-common-membership-duration-end
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
+
+       .. tip::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
+
+       .. admonition:: Configure business user access
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
+
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Segment name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-yahoo-dsp-segment-name-start
+             :end-before: .. setting-yahoo-dsp-segment-name-start
+
+       **Membership duration**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-start
+             :end-before: .. setting-common-membership-duration-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -265,117 +285,8 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-yahoo-dsp-add-destination-end
-
-
-.. _destination-yahoo-dsp-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-yahoo-dsp-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       The following settings are specific to |destination-name|:
-
-       .. list-table::
-          :widths: 180 320
-          :header-rows: 1
-
-          * - **Setting**
-            - **Description**
-          * - **Segment name**
-            - .. include:: ../../shared/destination_settings.rst
-                 :start-after: .. setting-yahoo-dsp-segment-name-start
-                 :end-before: .. setting-yahoo-dsp-segment-name-start
-          * - **Membership duration**
-            - .. include:: ../../shared/destination_settings.rst
-                 :start-after: .. setting-common-membership-duration-start
-                 :end-before: .. setting-common-membership-duration-end
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-yahoo-dsp-add-data-template-steps-end
+.. destination-yahoo-dsp-add-steps-end

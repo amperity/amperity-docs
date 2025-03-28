@@ -1,38 +1,36 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: LiveRamp
-.. |plugin-name| replace:: LiveRamp
-.. |what-send| replace:: CSV, TSV, or PSV files
-.. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "liv"
-.. |sftp-type| replace:: **liveramp**
-.. |sftp-hostname| replace:: **files.liveramp.com** or **sftp.liveramp.com**
-.. |file-format| replace:: CSV, TSV, or PSV
-.. |encoding-method| replace:: "GZip".
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by the SFTP site were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_liveramp|
-.. |channel-link| replace:: |campaign_liveramp|
+.. |plugin-name| replace:: "LiveRamp"
+.. |credential-type| replace:: "liveramp"
+.. |required-credentials| replace:: "username", "hostname", and "passphrase"
+.. |what-send| replace:: CSV files
+.. |where-send| replace:: |destination-name|
+.. |sftp-hostname| replace:: "sftp.liveramp.com"
+.. |remote-folder| replace:: "/folder"
+.. |sftp-port| replace:: "22"
+.. |filter-the-list| replace:: "live"
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to LiveRamp.
+        Configure Amperity to send customer profiles to LiveRamp.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to LiveRamp.
+        Configure Amperity to send customer profiles to LiveRamp.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to LiveRamp
+        Send customer profiles to LiveRamp
 
 ==================================================
-Send data to LiveRamp
+Send customer profiles to LiveRamp
 ==================================================
+
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_liveramp.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-liveramp-start
@@ -40,26 +38,18 @@ Send data to LiveRamp
 
 .. destination-liveramp-start
 
-You can associate records in Amperity to an audience in LiveRamp by sending a combination of identifier data and query data. LiveRamp uses:
+You can associate records in Amperity to an audience in |destination-name| by sending a combination of identifier data and query data. |destination-name| uses:
 
-* Identifier data to match records to other |ext_liveramp_data_identifiers| in the LiveRamp Identity Graph.
-* Segment data to group records into |ext_liveramp_data_segments| based on certain attributes for downstream targeting, measurement, and personalization. 
+* Identifier data to match records to other `identifiers <https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#identifier-data>`__ |ext_link| in the LiveRamp Identity Graph.
+* Segment data to group records into `segments <https://docs.liveramp.com/connect/en/segment-data.html>`__ |ext_link| based on certain attributes for downstream targeting, measurement, and personalization. 
 
-LiveRamp requires an audience ID. This may be a client customer ID from another application, it may be the LiveRamp audience ID itself (from LiveRamp data that was imported to Amperity), or it may be the Amperity ID.
+|destination-name| requires an audience ID. This may be a client customer ID from another application, it may be the |destination-name| audience ID itself (from |destination-name| data that was imported to Amperity), or it may be the Amperity ID.
 
 .. destination-liveramp-end
 
-.. destination-liveramp-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-liveramp-get-details>`
-#. :ref:`Add destination <destination-liveramp-add-destination>`
-#. :ref:`Add data template <destination-liveramp-add-data-template>`
-
-.. destination-liveramp-steps-to-send-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-file-configure-start
+   :end-before: .. setting-common-file-configure-end
 
 
 .. _destination-liveramp-get-details:
@@ -67,9 +57,11 @@ LiveRamp requires an audience ID. This may be a client customer ID from another 
 Get details
 ==================================================
 
-.. destination-liveramp-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-liveramp-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -77,103 +69,98 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The username and passphrase.
+     - **Credential settings**
+
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-get-details-passphrase-start
+          :end-before: .. credential-get-details-passphrase-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The remote folder to which Amperity will send data.
+     - **Required configuration settings**
 
-       .. important:: A "/" (forward slash) must be used as the first character for this value. For example: ``/uploads/tenant-name``.
+       **File format**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
+
+       **Header**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-header-start
+             :end-before: .. setting-common-header-end
+
+          .. important:: |destination-name| requires a header row to be present in CSV, TSV, and PSV files.
+
+       **Remote folder**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+       .. note::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-optional-settings-start
+             :end-before: .. setting-common-optional-settings-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The |destination-name| public key to use for |ext_liveramp_gpg|.
+     - **LiveRamp file preferences**
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - |destination-name| requires a header row to be present in CSV, TSV, and PSV files.
+       Sending data to |destination-name| should follow recommendations for |ext_liveramp_upload_data|.
 
-.. destination-liveramp-get-details-end
+       Review |destination-name| |ext_liveramp_file_limitations|.
+
+       |destination-name| supports the following |ext_liveramp_file_formats|:
+
+       * CSV
+       * PSV
+       * TSV
+
+       .. important:: Be sure to enable the **Include header row in output files** option for the Amperity destination.
+
+       |destination-name| prefers |ext_liveramp_gpg| and GZip compression.
+
+.. destination-liveramp-get-details-table-end
 
 
-.. _destination-liveramp-file-preferences:
+.. _destination-liveramp-credentials:
 
-File preferences
+Configure credentials
 ==================================================
 
-.. destination-liveramp-file-preferences-start
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-Sending data to LiveRamp should follow recommendations for |ext_liveramp_upload_data|.
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-.. destination-liveramp-file-preferences-end
+**To configure credentials for LiveRamp**
 
-
-.. _destination-liveramp-file-limitations:
-
-File limitations
---------------------------------------------------
-
-.. destination-liveramp-file-limitations-start
-
-Review LiveRamp |ext_liveramp_file_limitations|.
-
-.. destination-liveramp-file-limitations-end
-
-
-.. _destination-liveramp-file-format:
-
-File formats
---------------------------------------------------
-
-.. destination-liveramp-file-format-start
-
-LiveRamp supports the following |ext_liveramp_file_formats|:
-
-* CSV
-* PSV
-* TSV
-
-.. important:: Be sure to enable the **Include header row in output files** option for the Amperity destination.
-
-.. destination-liveramp-file-format-end
-
-
-.. _destination-liveramp-file-encryption:
-
-GPG encryption
---------------------------------------------------
-
-.. destination-liveramp-file-encryption-start
-
-LiveRamp prefers |ext_liveramp_gpg| and GZip compression.
-
-.. destination-liveramp-file-encryption-end
-
-
-.. _destination-liveramp-add-destination:
-
-Add destination
-==================================================
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
-
-**To add a destination**
-
-.. destination-liveramp-add-destination-steps-start
+.. destination-liveramp-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -184,19 +171,9 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -204,33 +181,9 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-sftp-start
-          :end-before: .. destinations-add-credentials-sftp-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-sftp-start
-          :end-before: .. destinations-intro-for-additional-settings-sftp-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-sftp.png
-          :width: 500 px
-          :alt: Update the settings for the SFTP destination.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -238,19 +191,106 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-sftp.png
-          :width: 500 px
-          :alt: Settings for SFTP destinations.
+       **Hostname**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-hostname-start
+             :end-before: .. credential-sftp-hostname-end
+
+       **Passphrase**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-passphrase-start
+             :end-before: .. credential-sftp-passphrase-end
+
+       **Username**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-username-start
+             :end-before: .. credential-sftp-username-end
+
+
+.. destination-liveramp-credentials-steps-end
+
+
+.. _destination-liveramp-add:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination for LiveRamp**
+
+.. destination-liveramp-add-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
+
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-sftp.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-sftp-start
-          :end-before: .. destinations-destination-settings-sftp-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
+
+       .. tip::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
+
+       .. admonition:: Configure business user access
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -258,13 +298,100 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Compression**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-compression-start
+             :end-before: .. setting-common-compression-end
+
+
+       **Escape character**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-start
+             :end-before: .. setting-common-escape-character-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-unspecified-start
+             :end-before: .. setting-common-escape-character-unspecified-end
+
+
+       **File format**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+
+       **Filename template**
+          .. include:: ../../shared/terms.rst
+             :start-after: .. term-filename-template-start
+             :end-before: .. term-filename-template-end
+
+
+       **Header**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-header-start
+             :end-before: .. setting-common-header-end
+
+          .. important:: |destination-name| requires a header row to be present in CSV, TSV, and PSV files.
+
+
+       **Line ending**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-line-ending-start
+             :end-before: .. setting-common-line-ending-end
+
+
+       **PGP public key**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-pgp-public-key-start
+             :end-before: .. setting-common-pgp-public-key-end
+
+
+       **Quote mode**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-start
+             :end-before: .. setting-common-quote-mode-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-none-start
+             :end-before: .. setting-common-quote-mode-none-end
+
+
+       **Remote folder**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+
+       **Success file**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-start
+             :end-before: .. setting-common-success-file-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-downstream-start
+             :end-before: .. setting-common-success-file-downstream-end
+
+
+       **Use Zip64?**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-use-zip64-start
+             :end-before: .. setting-common-use-zip64-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -272,117 +399,12 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
-
-.. destination-liveramp-add-destination-steps-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
 
-.. _destination-liveramp-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-.. admonition:: About paid media campaigns
-
-   .. include:: ../../shared/paid-media.rst
-      :start-after: .. paid-media-admonition-about-start
-      :end-before: .. paid-media-admonition-about-end
-
-**To add a data template**
-
-.. destination-liveramp-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
+.. destination-liveramp-add-steps-end
 
 
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-liveramp-add-data-template-steps-end
+.. TODO: Add workflow resolutions from existing topics HERE.

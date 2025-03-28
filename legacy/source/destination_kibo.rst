@@ -22,6 +22,8 @@
 Send data to Kibo
 ==================================================
 
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_kibo.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-kibo-start
    :end-before: .. term-kibo-end

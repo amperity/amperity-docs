@@ -1,21 +1,14 @@
 .. https://docs.amperity.com/datagrid/
 
 
+
 .. |destination-name| replace:: Throtle
-.. |plugin-name| replace:: Amazon S3
-.. |what-send| replace:: customer profile data
-.. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "thr"
-.. |s3-bucket-name| replace:: "throtle-import"
-.. |s3-prefix| replace:: "upload"
-.. |file-format| replace:: CSV, TSV, or PSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_throtle|
-.. |channel-link| replace:: send campaign results
+.. |plugin-name| replace:: "Amazon S3"
+.. |credential-type| replace:: "iam-role-to-role"
+.. |required-credentials| replace:: "iam-role-to-role"
+.. |what-send| replace:: CSV, TSV, or PSV files
+.. |where-send| replace:: an Amazon S3 bucket
+.. |filter-the-list| replace:: "amaz"
 
 
 .. meta::
@@ -37,19 +30,6 @@ Send data to Throtle
 .. include:: ../../shared/terms.rst
    :start-after: .. term-throtle-start
    :end-before: .. term-throtle-end
-
-.. destination-throtle-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-throtle-get-details>`
-#. :ref:`Configure cross-account roles <destination-throtle-credentials-role-to-role>`
-#. :ref:`Add destination <destination-throtle-add-destination>`
-#. :ref:`Add data template <destination-throtle-add-data-template>`
-
-.. destination-throtle-steps-to-send-end
 
 
 .. _destination-throtle-get-details:
@@ -180,24 +160,18 @@ Configure cross-account roles
 .. destination-throtle-credentials-role-to-role-steps-end
 
 
-.. _destination-throtle-add-destination:
+.. _destination-throtle-add:
 
 Add destination
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
 
-.. destination-throtle-add-destination-important-start
+**To add a destination for Throtle**
 
-.. important:: You must use |s3-prefix| for the prefix value. The name of the |plugin-name| bucket is provided to you by |destination-name|.
-
-.. destination-throtle-add-destination-important-end
-
-**To add a destination**
-
-.. destination-throtle-add-destination-steps-start
+.. destination-throtle-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -208,21 +182,19 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-s3.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. important:: Use the :doc:`Amazon S3 <destination_amazon_s3>` destination that is built into Amperity to send data to a customer-managed Amazon S3 bucket, from which |destination-name| is configured to pull data.
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -230,38 +202,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       |destination-name| has the following settings:
-
-       * The Amazon Resource Name (ARN) for a role with cross-account access.
-       * The name of the |plugin-name| bucket.
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -269,19 +218,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Settings for Optimizely.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-amazon-s3-start
-          :end-before: .. destinations-destination-settings-amazon-s3-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -289,13 +238,100 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Compression**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-compression-start
+             :end-before: .. setting-common-compression-end
+
+
+       **Escape character**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-start
+             :end-before: .. setting-common-escape-character-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-unspecified-start
+             :end-before: .. setting-common-escape-character-unspecified-end
+
+
+       **File format**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
+
+          **Apache Parquet files only**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-apache-parquet-start
+             :end-before: .. setting-common-file-format-apache-parquet-end
+
+
+       **Filename template**
+          .. include:: ../../shared/terms.rst
+             :start-after: .. term-filename-template-start
+             :end-before: .. term-filename-template-end
+
+
+       **Header**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-header-start
+             :end-before: .. setting-common-header-end
+
+
+       **PGP public key**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-pgp-public-key-start
+             :end-before: .. setting-common-pgp-public-key-end
+
+
+       **Quote mode**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-start
+             :end-before: .. setting-common-quote-mode-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-none-start
+             :end-before: .. setting-common-quote-mode-none-end
+
+       **S3 prefix**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-s3-prefix-start
+             :end-before: .. setting-amazon-s3-prefix-end
+
+       **Success file**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-start
+             :end-before: .. setting-common-success-file-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-downstream-start
+             :end-before: .. setting-common-success-file-downstream-end
+
+
+       **Use Zip64?**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-use-zip64-start
+             :end-before: .. setting-common-use-zip64-end
+
+
+       **Row Number**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-row-number-start
+             :end-before: .. setting-common-row-number-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-row-number-column-name-start
+             :end-before: .. setting-common-row-number-column-name-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -303,111 +339,8 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-throtle-add-destination-steps-end
-
-
-.. _destination-throtle-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-throtle-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-throtle-add-data-template-steps-end
+.. destination-throtle-add-steps-end

@@ -1982,6 +1982,15 @@ Datalogix, now a component of Oracle Data Cloud, connects offline purchase signa
 .. term-datalogix-end
 
 
+**dataset**
+
+.. term-dataset-start
+
+A dataset is a collection of data that is grouped together to support all of the use cases required by a high-level goal. A dataset may be comprised of smaller datasets, as if they are building blocks.
+
+.. term-dataset-end
+
+
 **datasource** (column name)
 
 .. term-datasource-start

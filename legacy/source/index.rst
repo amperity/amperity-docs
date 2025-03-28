@@ -11,6 +11,7 @@ Site index
 .. toctree::
    :hidden:
 
+   configure_stitch
    data_templates
    destination_active_campaign
    destination_acxiom
@@ -66,7 +67,6 @@ Site index
    destination_the_trade_desk
    destination_tiktok_ads
    destination_walmart_dsp
-   destination_webhook
    destination_vibes
    destination_yahoo_dsp
    destination_zendesk

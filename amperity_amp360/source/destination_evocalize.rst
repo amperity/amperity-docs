@@ -29,6 +29,12 @@ Send query results to Evocalize
    :start-after: .. term-evocalize-start
    :end-before: .. term-evocalize-end
 
+.. sendto-evocalize-cloud-storage-load-using-api-start
+
+Provide customer data to |destination-name| in CSV format, and then use the `POST management/v1/audience <https://api-docs.evocalize.com/#upload-audience-data-csv>`__ |ext_link| to upload the audience to |destination-name|.
+
+.. sendto-evocalize-cloud-storage-load-using-api-end
+
 .. sendto-evocalize-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst

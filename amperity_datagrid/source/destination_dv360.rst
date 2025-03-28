@@ -1,42 +1,38 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: DV360
 .. |destination-api| replace:: Google Audience Partner API
-.. |plugin-name| replace:: Google Customer Match
+.. |plugin-name| replace:: "Google Customer Match"
+.. |credential-type| replace:: "google-customer-match"
+.. |required-credentials| replace:: "refresh token"
 .. |what-send| replace:: customer profiles
+.. |where-send| replace:: |destination-name|
+.. |duration| replace:: (in days)
+.. |duration-value| replace:: "0" - "540"
 .. |filter-the-list| replace:: "google"
-.. |email-plus-send| replace:: additional attributes
-.. |credential-type| replace:: **google-customer-match**
-.. |credential-details| replace:: the Google Audience Partner API refresh token
-.. |oauth-typex| replace:: the OAuth credential you created for your |destination-name| account
-.. |settings-name| replace:: **Settings**
-.. |what-settings| replace:: product name and customer ID
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: |what-settings| settings were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_google_customer_match|
-.. |channel-link| replace:: |campaign_google_dv360|
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to DV360.
+        Configure Amperity to send customer profiles to DV360.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to DV360.
+        Configure Amperity to send customer profiles to DV360.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to DV360
+        Send customer profiles to DV360
 
 ==================================================
-Send data to DV360
+Send customer profiles to DV360
 ==================================================
+
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_dv360.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-dv360-start
@@ -50,11 +46,11 @@ Send data to DV360
 
    For example:
 
-   * Use Discovery campaigns to |ext_google_gmail_ads|.
-   * Use |ext_google_ads|  to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
-   * Run ads within |ext_google_search|.
-   * Run ads within the |ext_google_shopping|.
-   * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the |ext_dv360_placement_options|. DV360 supports advertiser and partner networks.
+   * Use Discovery campaigns to `reach customers in the Promotions and Social tabs in Gmail <https://support.google.com/google-ads/answer/9176876>`__ |ext_link|.
+   * Use `Google Ads <https://support.google.com/google-ads/answer/2567043>`__ |ext_link| to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
+   * Run ads within `search results on Google.com <https://support.google.com/google-ads/answer/9510373>`__ |ext_link|.
+   * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
+   * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
    Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
@@ -68,7 +64,7 @@ Send data to DV360
 
 .. destination-dv360-api-note-start
 
-.. note:: This destination uses the |ext_google_audience_partner_api|.
+.. note:: This destination uses the `Google Audience Partner API <https://support.google.com/google-ads/answer/7361372?hl=en>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -76,27 +72,17 @@ Send data to DV360
 
 .. destination-dv360-api-note-end
 
-.. destination-dv360-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-dv360-get-details>`
-#. :ref:`Add destination <destination-dv360-add-destination>`
-#. :ref:`Add data template <destination-dv360-add-data-template>`
-
-.. destination-dv360-steps-to-send-end
-
 
 .. _destination-dv360-get-details:
 
 Get details
 ==================================================
 
-.. destination-dv360-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-dv360-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -104,28 +90,28 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - Configuration details for |destination-name|.
+     - **Credential settings**
 
-       The name of the product to which Amperity will send data: "Display Video Advertiser" or "Display Video Partner".
+       **Refresh token**
 
-       The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Display Video Advertiser" or "Display Video Partner" account.
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
 
-       .. note:: The customer ID must be 10 digits and may not contain dashes.
-
-       A refresh token that is generated from the authentication process that authorizes Amperity to send data to the selected product. This must be a Google account with permission to access the configured customer ID and product within Google.
-
-       .. important:: Authentication for "Display Video Advertiser" and/or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
+          .. important:: Authentication for "Display Video Advertiser" and/or "Display Video Partner" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - Amperity must be |ext_google_display_and_video_partners_linked| before audience lists can be sent from Amperity to partners or advertisers.
+     - **DV360 configuration**
+
+          Amperity must be `configured as a linked account in DV360 <https://support.google.com/displayvideo/answer/9134175?hl=en>`__ |ext_link| before audience lists can be sent from Amperity to partners or advertisers.
 
        #. In DV360, open **Advertiser Settings**, and then select **Linked Accounts**.
        #. Click **Link New Account**, and then select **External Data Partner**.
@@ -133,49 +119,99 @@ Get details
        #. Confirm Amperity as a linked external data partner, and then click **Create Link**.
 
 
+       .. admonition:: What are advertisers? What are partners?
+
+          **Display & Video 360 Advertisers**
+
+          `Display & Video 360 Advertisers <https://support.google.com/displayvideo/answer/2696883>`__ |ext_link| represent individual businesses that run advertising campaigns.
+
+          Use your `Advertiser ID <https://support.google.com/displayvideo/answer/11415707?hl=en&ref_topic=6027410>`__ |ext_link| to identify the customer ID to which Amperity should send data.
+
+          **Display & Video 360 Partners**
+
+          `Display & Video 360 Partners <https://support.google.com/displayvideo/answer/7622449>`__ |ext_link| represent agencies, trading desks, and large individual advertisers. Multiple advertisers are often grouped under a single partner.
+
+          Use your partner ID to identify the customer ID to which Amperity should send data.
+
+       After choosing the type of advertising your brand will run on DV360, add your customer ID.
+
+
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail 3.
           :align: left
           :class: no-scaled-link
-     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity will create it.
+     - **Review user consent policy**
 
-       The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
-
-       .. tip:: Set this value to "0" to remove all audience members.
-
-       The **Upload key type** must be set to one of :ref:`Contact Info <destination-dv360-api-matching-contact>` or :ref:`Mobile ID <destination-dv360-api-matching-mobile>`.
-
-       If the **Upload key type** is set to "Mobile ID", use the **Mobile app ID** setting to provide the ID for the iOS or Android app from which the mobile ID was collected.
+       :ref:`Review the user consent policy <destination-dv360-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail three.
+          :alt: Detail 4.
           :align: left
           :class: no-scaled-link
-     - :ref:`Review the user consent policy <destination-dv360-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
+     - **Required configuration settings**
 
+       **Customer ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-customer-id-start
+             :end-before: .. setting-google-ads-customer-id-end
+
+       **Audience name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-name-start
+             :end-before: .. setting-google-ads-audience-name-end
+
+       **Audience description** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-description-start
+             :end-before: .. setting-google-ads-audience-description-end
+
+       **Membership duration**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-start
+             :end-before: .. setting-common-membership-duration-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-frequency-start
+             :end-before: .. setting-common-membership-duration-frequency-end
+
+       **Upload key type**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-upload-key-type-start
+             :end-before: .. setting-google-ads-upload-key-type-end
+
+       **Mobile app ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-mobile-app-id-start
+             :end-before: .. setting-google-ads-mobile-app-id-end
 
 .. destination-dv360-get-details-end
 
 
-.. _destination-dv360-add-destination:
+.. _destination-dv360-credentials:
 
-Add destination
+Configure credentials
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-api-oauth-reminder-start
-   :end-before: .. destinations-add-destinations-api-oauth-reminder-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-**To add a destination**
+**To configure credentials for Google Ads**
 
-.. destination-dv360-add-destination-steps-start
+.. destination-dv360-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -186,19 +222,82 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select-dv360.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Refresh token**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
+
+.. destination-dv360-credentials-steps-end
+
+
+.. _destination-dv360-reauthorize-amperity:
+
+Reauthorize Amperity
+--------------------------------------------------
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-reauthorize-start
+   :end-before: .. destinations-oauth-reauthorize-end
+
+
+.. _destination-dv360-add:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination for Google Ads**
+
+.. destination-dv360-add-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
+
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       Enter a name for the destination and provide a description. For example: "|destination-name|" and "This sends |what-send| to |destination-name|".
-
-       From the **Plugin** drop-down, start typing |filter-the-list| to filter the list, and then select Google Customer Match.
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -206,33 +305,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-dv360.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       To create a new credential for |destination-name|, generate an authorization link, and then use that link to log into your |destination-name| account. After you have completed that process, you will be provided a refresh token. Add the value for the refresh token to the **Refresh Token** setting in Amperity.
-
-       .. important:: Authentication for "Display Video Advertiser" and/or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-02-select-dv360.png
-          :width: 500 px
-          :alt: Set the following credentials for DV360.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -240,39 +321,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-dv360-advertiser-or-partner.png
-          :width: 500 px
-          :alt: Settings for DV360: advertiser or partner?
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
 
-       Choose "Display Video Advertiser" or "Display Video Partner".
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
 
-       .. admonition:: What are advertisers? What are partners?
-
-          **Display & Video 360 Advertisers**
-
-          |ext_google_display_and_video_advertisers| represent individual businesses that run advertising campaigns.
-
-          Use your |ext_google_display_and_video_advertisers_id| to identify the customer ID to which Amperity should send data.
-
-          **Display & Video 360 Partners**
-
-          |ext_google_display_and_video_partners| represent agencies, trading desks, and large individual advertisers. Multiple advertisers are often grouped under a single partner.
-
-          Use your partner ID to identify the customer ID to which Amperity should send data.
-
-       After choosing the type of advertising your brand will run on DV360, add your customer ID.
-
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-dv360.png
-          :width: 500 px
-          :alt: Settings for DV360.
-          :align: left
-          :class: no-scaled-link
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -280,13 +341,49 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Customer ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-customer-id-start
+             :end-before: .. setting-google-ads-customer-id-end
+
+       **Audience name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-name-start
+             :end-before: .. setting-google-ads-audience-name-end
+
+       **Audience description** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-audience-description-start
+             :end-before: .. setting-google-ads-audience-description-end
+
+       **Membership duration**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-start
+             :end-before: .. setting-common-membership-duration-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-frequency-start
+             :end-before: .. setting-common-membership-duration-frequency-end
+
+       **Upload key type**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-upload-key-type-start
+             :end-before: .. setting-google-ads-upload-key-type-end
+
+       **Mobile app ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-ads-mobile-app-id-start
+             :end-before: .. setting-google-ads-mobile-app-id-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -294,120 +391,13 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-dv360-add-destination-steps-end
+.. destination-dv360-add-steps-end
 
-
-.. _destination-dv360-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-.. admonition:: About paid media campaigns
-
-   .. include:: ../../shared/paid-media.rst
-      :start-after: .. paid-media-admonition-about-start
-      :end-before: .. paid-media-admonition-about-end
-
-**To add a data template**
-
-.. destination-dv360-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details-dv360.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings-dv360.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-dv360-add-data-template-steps-end
+.. TODO: Add workflow resolutions from existing topics HERE.
 
 
 .. _destination-dv360-api-matching:

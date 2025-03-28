@@ -1,35 +1,35 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/internal/
+
 
 
 .. |destination-name| replace:: HubSpot
 .. |destination-api| replace:: HubSpot API
-.. |plugin-name| replace:: HubSpot
-.. |what-send| replace:: contact list updates
-.. |email-plus-send| replace:: additional attributes
+.. |plugin-name| replace:: "HubSpot"
+.. |credential-type| replace:: "hubspot"
+.. |required-credentials| replace:: "refresh token"
+.. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: email lists
+.. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "hub"
-.. |credential-type| replace:: **hubspot**
-.. |credential-details| replace:: the HubSpot API key
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |sendto-link| replace:: |sendto_hubspot|
-.. |channel-link| replace:: |campaign_hubspot|
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to HubSpot.
+        Configure Amperity to send email lists to HubSpot.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to HubSpot.
+        Configure Amperity to send email lists to HubSpot.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to HubSpot
+        Send email lists to HubSpot
 
 ==================================================
-Send data to HubSpot
+Send email lists to HubSpot
 ==================================================
+
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_hubspot.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-hubspot-start
@@ -59,7 +59,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
 .. destination-hubspot-build-query-start
 
-.. important:: |destination-name| has |ext_hubspot_email_validation|. All email addresses that are sent to HubSpot must:
+.. important:: |destination-name| has `specific requirements for email address validation <https://developers.hubspot.com/docs/api/faq>`__ |ext_link|. All email addresses that are sent to |destination-name| must:
 
    #. Have a valid format, as defined by |ext_rfc2822|.
    #. May not contain quotation marks in the local part of the address, which is the part to the left of the @ symbol.
@@ -73,28 +73,17 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
 .. destination-hubspot-build-query-end
 
-.. destination-hubspot-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-hubspot-get-details>`
-#. :ref:`Authorize Amperity access to the customer's account <destination-hubspot-configure-oauth>`
-#. :ref:`Add destination <destination-hubspot-add-destination>`
-#. :ref:`Add data template <destination-hubspot-add-data-template>`
-
-.. destination-hubspot-steps-to-send-end
-
 
 .. _destination-hubspot-get-details:
 
 Get details
 ==================================================
 
-.. destination-hubspot-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-hubspot-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -102,42 +91,38 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - :ref:`Authorize Amperity to send data to the customer's Hubspot account <destination-hubspot-configure-oauth>`.
+     - **Credential settings**
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The list name to which the |destination-name| connector will write. This can be the name of an existing list or a new list.
+       **Refresh token**
+          |checkmark-required| **Required**
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - A query that outputs the fields that must be mapped to the |destination-name| contacts.
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
+
 
 .. destination-hubspot-get-details-end
 
 
-.. _destination-hubspot-configure-oauth:
+.. _destination-hubspot-credentials:
 
-Configure OAuth
+Configure credentials
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-oauth-start
-   :end-before: .. term-oauth-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-oauth-intro-start
-   :end-before: .. destinations-oauth-intro-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-**To configure OAuth**
+**To configure credentials for HubSpot**
+
+.. destination-hubspot-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -148,41 +133,60 @@ Configure OAuth
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-1-start
-          :end-before: .. destinations-oauth-configure-step-1-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-2-start
-          :end-before: .. destinations-oauth-configure-step-2-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-3-start
-          :end-before: .. destinations-oauth-configure-step-3-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Refresh token**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
+
+.. destination-hubspot-credentials-steps-end
 
 
-.. _destination-hubspot-add-destination:
+.. _destination-hubspot-reauthorize-amperity:
+
+Reauthorize Amperity
+--------------------------------------------------
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-reauthorize-start
+   :end-before: .. destinations-oauth-reauthorize-end
+
+
+.. _destination-hubspot-add:
 
 Add destination
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination**
+**To add a destination for HubSpot**
 
-.. destination-hubspot-add-destination-steps-start
+.. destination-hubspot-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -193,19 +197,19 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -213,33 +217,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-oauth-start
-          :end-before: .. destinations-intro-for-additional-settings-oauth-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -247,15 +233,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Settings for Hubspot.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -263,115 +253,31 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Audience primary key**
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-audience-primary-key-start
+             :end-before: .. setting-common-audience-primary-key-end
+
+       **List name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-hubspot-list-name-start
+             :end-before: .. setting-hubspot-list-name-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-hubspot-add-destination-steps-end
+.. destination-hubspot-add-steps-end
 
-
-.. _destination-hubspot-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-hubspot-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-hubspot-add-data-template-steps-end
+.. TODO: Add workflow resolutions from existing topics HERE.
