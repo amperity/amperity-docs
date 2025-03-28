@@ -1521,8 +1521,8 @@ The **Campaign Recipients** table can be enabled directly from the **Campaigns**
 
 .. campaigns-enable-campaign-recipients-table-steps-start
 
-#. Click the **Campaign settings** link next to the **Create campaign** button, and then open the **Advanced** tab.
-#. Under **Campaign Recipients**, select the databases for which the **Campaign Recipients** table should be enabled.
+#. Click the **Campaign settings** link next to the **Create campaign** button, and then open the **Campaign Recipients** tab.
+#. Select the databases for which the **Campaign Recipients** table should be enabled.
 #. Click **Save**.
 
 .. campaigns-enable-campaign-recipients-table-steps-end
