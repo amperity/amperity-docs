@@ -1763,7 +1763,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-company-start
           :end-before: .. term-company-end
 
-       .. note:: Do not use the **company** semantic tag when data that belongs to a business is stitched. This field should be applied to fields that represent an individual's employer.
+       .. note:: Do not use the **company** semantic tag when data that belongs to a business is stitched. The **company** semantic tag should be applied to fields that represent an individual's employer.
 
           Use the **full-name** semantic tag on the business name when stitching data that belongs to a business.
 
