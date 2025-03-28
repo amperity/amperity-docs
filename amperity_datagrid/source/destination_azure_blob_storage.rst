@@ -27,7 +27,7 @@
 Send data to Azure Blob Storage
 ==================================================
 
-.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_azure_blob_storage.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_azure_blob_storage.html>`__ |ext_link|.
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-azure-blob-storage-about-start

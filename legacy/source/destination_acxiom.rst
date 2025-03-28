@@ -22,7 +22,7 @@
 Send data to Acxiom
 ==================================================
 
-.. note:: This topic contains information for configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination for sending query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_acxiom.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_acxiom.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-acxiom-start

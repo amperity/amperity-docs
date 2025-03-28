@@ -28,7 +28,7 @@
 Send data to Snowflake (AWS)
 ==================================================
 
-.. note:: This topic contains information for configuring a destination for sending query results to |destination-name| using orchestrations. To configure a destination for sending audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_snowflake_aws.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_snowflake_aws.html>`__ |ext_link|.
 
 Snowflake is an analytic data warehouse to which Amperity can send tabular data to customer-managed instances of Snowflake that are located in the same cloud platform as Amperity.
 
