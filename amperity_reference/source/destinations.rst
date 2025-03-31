@@ -177,3 +177,35 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destinations-add-destination-steps-end
+
+.. _destinations-premium-connectors:
+
+Premium connectors
+--------------------------------------------------
+
+.. destinations-premium-connectors-start
+
+The following set of connectors are designated as premium connectors. A monthly surcharge is incurred for any premium connectors used in that month.
+
+* Amazon Ads
+* Criteo Audience API
+* Criteo Retail Audience API
+* Facebook
+* Google Ads
+* Google Customer Match
+* Google Enhanced Conversions
+* LiveRamp
+* Meta Ads Offline Events
+* Microsoft Ads
+* Microsoft Invest
+* Neustar
+* Pinterest
+* Snapchat
+* The Trade Desk
+* The Trade Desk 3P Marketplace
+* The Trade Desk Offline Events
+* TikTok Ads
+* TikTok Ads Offline Events
+* Yahoo DSP
+
+.. destinations-premium-connectors-end
