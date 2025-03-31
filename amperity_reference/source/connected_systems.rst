@@ -272,10 +272,10 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Campaign Manager using Fivetran.
 
-   * - **Cheetah Digital**
+   * - **Cheetah Digital by Marigold**
      - |system-yes|
      - |system-yes|
-     - Pull data to and send data from Amperity using SFTP *or* Amazon S3.
+     - Pull data to and send data from Amperity using SFTP.
 
    * - **Cordial**
      - |system-yes|
@@ -805,7 +805,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Sage Interact using Fivetran.
 
-   * - **Sailthru**
+   * - **Sailthru by Marigold**
      - |system-yes|
      - |system-yes|
      - Pull data to Amperity from Sailthru using Amazon S3.
