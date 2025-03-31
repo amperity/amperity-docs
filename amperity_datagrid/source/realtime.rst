@@ -427,10 +427,44 @@ Example use cases
 
 Real-time tables support many different types of use cases, including:
 
+* :ref:`realtime-example-behavioral`
+* :ref:`realtime-example-personalization`
 * :ref:`realtime-example-redemption-reminders`
 * :ref:`realtime-example-suppress-recent-transactions`
+* :ref:`realtime-example-suppression`
 
 .. realtime-examples-end
+
+
+.. _realtime-example-behavioral:
+
+Behavioral
+--------------------------------------------------
+.. realtime-example-behavioral-start
+
+Behavioral use cases include:
+
+* Following-up cart abandonments based on products a customer has viewed.
+* Sending communications after a transaction has occurred.
+* Sending an upsell or cross-sell based on browsing activity.
+
+.. realtime-example-behavioral-end
+
+
+.. _realtime-example-personalization:
+
+Personalization
+--------------------------------------------------
+
+.. realtime-example-personalization-start
+
+Personalization use cases include:
+
+* Personalized email or push notifications that contain the most recent profile information.
+* Combine real-time inventory data and profile preferences to upsell or cross-sell distressed inventory.
+* Ensure that support centers have the latest set of transactions that are associated with a profile.
+
+.. realtime-example-personalization-end
 
 
 .. _realtime-example-redemption-reminders:
@@ -459,6 +493,22 @@ A winback campaign is an important part of a retailer's marketing strategy. Cust
 Use real-time tables to capture recent transactions, and then use the real-time table to exclude customers who have purchased recently from the winback campaign.
 
 .. realtime-example-suppress-recent-transactions-end
+
+
+.. _realtime-example-suppression:
+
+Suppression
+--------------------------------------------------
+
+.. realtime-example-suppression-start
+
+Suppression use cases include:
+
+* Suppressing customers from an audience after they have made a purchase.
+* Suppressing customers who have cancelled recently to ensure they do not receive pre-trip reminders.
+* Suppressing customers who have received specific targeted offers from receiving a better offer within a certain timeframe.
+
+.. realtime-example-suppression-end
 
 
 .. _realtime-add-to-batch-workflow:
