@@ -237,6 +237,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Post-interaction Email
    * - **PII**
      - Personally Identifiable Information
+   * - **PIPEDA**
+     - Personal Information Protection and Electronic Documents Act
    * - **PLCC**
      - Private Label Credit Card
    * - **POS**

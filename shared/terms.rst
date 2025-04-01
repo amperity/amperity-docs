@@ -4747,6 +4747,15 @@ Pinterest is a visual discovery engine on which your brand can engage with your 
 .. term-pinterest-end
 
 
+**PIPEDA**, **Personal Information Protection and Electronic Documents Act**
+
+.. term-pipeda-start
+
+The `Personal Information Protection and Electronic Documents Act (PIPEDA) <https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/>`__ |ext_link| is a Canadian federal privacy law for how private sector organizations collect, use and disclose personal information in the course of commercial business.
+
+.. term-pipeda-end
+
+
 **pk** (semantic)
 
 .. term-pk-start
