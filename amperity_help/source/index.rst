@@ -37,6 +37,7 @@ Collection of standalone topics
    destination_google_ads_id_mobile_app
    destination_google_ads_membership_duration
    destination_google_ads_upload_key_type
+   destination_premium_connectors
    file_patterns
    query_performance_mode
    relative_dates

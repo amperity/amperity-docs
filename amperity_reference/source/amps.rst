@@ -47,7 +47,7 @@ Consumption categories
 
 .. amps-consumption-categories-start
 
-Amps consumption is tracked in 5 categories---Sources, Stitch, Databases, Analytics, and Activation---and is broken down into 12 feature areas.
+Amps consumption is tracked in 5 categories---Sources, Stitch, Databases, Analytics, and Activation---and is broken down into 18 feature areas.
 
 .. list-table::
    :widths: 30 70
@@ -68,21 +68,33 @@ Amps consumption is tracked in 5 categories---Sources, Stitch, Databases, Analyt
    * - **Stitch**
      - Stitch
 
+       Stitch report
+
    * - **Databases**
      - Databases
 
+       Real time tables
+
    * - **Analytics**
-     - BI Connect
+     - Advanced analytics
+
+       BI Connect
 
        Predictive modeling
 
-       Segmentation (queries and segments)
+       Queries
+
+       Segments
+
+       Spark SQL sessions
 
    * - **Activation**
      - Campaigns
 
        Orchestrations
 
+       Premium connectors
+       
        Profile API
 
 .. amps-consumption-categories-end
@@ -259,6 +271,38 @@ Monitor Amps consumption for the **Predictive modeling** feature by:
 * Review each predictive modeling job, including when the next inference and training jobs will run. Use the **Predictive models** page to access individual jobs for each predictive model that is enabled in your tenant
 
 .. amps-consumption-feature-predictive-modeling-end
+
+.. _destinations-premium-connectors:
+
+Premium connectors
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. destinations-premium-connectors-start
+
+The following set of connectors are designated as premium connectors. Using any of these connectors incurs an Amps surcharge for that month.
+
+* Amazon Ads
+* Criteo Audience API
+* Criteo Retail Audience API
+* Facebook
+* Google Ads
+* Google Customer Match
+* Google Enhanced Conversions
+* LiveRamp
+* Meta Ads Offline Events
+* Microsoft Ads
+* Microsoft Invest
+* Neustar
+* Pinterest
+* Snapchat
+* The Trade Desk
+* The Trade Desk 3P Marketplace
+* The Trade Desk Offline Events
+* TikTok Ads
+* TikTok Ads Offline Events
+* Yahoo DSP
+
+.. destinations-premium-connectors-end
 
 
 .. _amps-consumption-feature-profile-api:
