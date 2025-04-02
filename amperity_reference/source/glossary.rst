@@ -3428,6 +3428,14 @@ P
       :end-before: .. term-pinterest-end
 
 
+.. _p-pipeda:
+
+**PIPEDA**, **Personal Information Protection and Electronic Documents Act**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-pipeda-start
+      :end-before: .. term-pipeda-end
+
+
 .. _p-policy:
 
 **policy**
