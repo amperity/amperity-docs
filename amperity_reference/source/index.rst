@@ -182,6 +182,20 @@ Domain tables
    :ref:`domain-tables-add` |fa-index-separator| :ref:`domain-tables-add-custom` |fa-index-separator| :ref:`domain-tables-delete` |fa-index-separator| :ref:`domain-tables-delete-records` |fa-index-separator| :ref:`domain-tables-edit` |fa-index-separator| :ref:`domain-tables-explore` |fa-index-separator| :ref:`domain-tables-explore-sample-data` |fa-index-separator| :ref:`domain-tables-explore-schema` |fa-index-separator| :ref:`domain-tables-purge` |fa-index-separator| :ref:`domain-tables-rename` |fa-index-separator| :ref:`domain-tables-search` |fa-index-separator| :ref:`domain-tables-view` |fa-index-separator| :ref:`domain-tables-history`
 
 
+.. _index-euid:
+
+European Unified ID (EUID)
+==================================================
+
+:doc:`About European Unified ID (EUID) <euid>` |fa-index-separator| :ref:`How EUID works <euid-howitworks>` |fa-index-separator| :ref:`About EUID workflows <euid-workflows>`
+
+**Prerequisites**
+   :ref:`About prerequisites <euid-prerequisites>` |fa-index-separator| :ref:`Get access to EUID <euid-prerequisite-get-access>` |fa-index-separator| :ref:`Participate in EUID <euid-prerequisite-participate>` |fa-index-separator| :ref:`Get Mapper credentials <euid-prerequisite-get-credentials>`
+
+**Configure Amperity**
+   :ref:`Configure Amperity <euid-configure-amperity>` |fa-index-separator| :ref:`Add Mapper credentials <euid-configure-amperity-add-credentials>` |fa-index-separator| :ref:`Enable EUID token generation <euid-configure-amperity-enable-euid>` |fa-index-separator| :ref:`Add EUID table to database <euid-configure-amperity-add-euid-table>`
+
+
 .. _index-feeds:
 
 Feeds
@@ -540,6 +554,7 @@ Workflows
    docs
    domain_tables
    downloads
+   euid
    feeds
    file_uploads
    format_avro
