@@ -31,7 +31,7 @@ How EUID works
 
 .. euid-howitworks-start
 
-Amperity may be configured as a EUID Operator. A `EUID Operator <https://euid.eu/docs/guides/integration-options-private-operator>`__ |ext_link| is a participant in EUID that is allowed to run the Operator Service. Operators may receive and store encryption keys and salts from the EUID Core Service, salt and hash personal data to return raw EUIDs, encrypt raw EUIDs to generate EUID tokens, and distribute EUID token decryption keys.
+Amperity may be configured as a EUID Operator. A `EUID Operator <https://euid.eu/docs/category/advertiserdata-provider-integrations>`__ |ext_link| is a participant in EUID that is allowed to run the Operator Service. Operators may receive and store encryption keys and salts from the EUID Core Service, salt and hash personal data to return raw EUIDs, encrypt raw EUIDs to generate EUID tokens, and distribute EUID token decryption keys.
 
 .. euid-howitworks-end
 
