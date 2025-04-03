@@ -1099,6 +1099,61 @@ The **Email Engagement Summary** table contains the following columns:
 .. data-tables-email-engagement-summary-table-end
 
 
+.. _data-tables-euid:
+
+EUID
+==================================================
+
+.. include:: ../../amperity_reference/source/euid.rst
+   :start-after: .. euid-overview-start
+   :end-before: .. euid-overview-end
+
+.. data-tables-euid-start
+
+The **EUID** table contains the results of EUID token generation when enabled for your tenant.
+
+.. data-tables-euid-end
+
+.. data-tables-euid-table-about-start
+
+The **EUID** table contains the following columns:
+
+.. data-tables-euid-table-about-end
+
+.. data-tables-euid-table-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Bucket ID**
+     - String
+     - A unique identifier for the salt bucket that is used to ensure that expired EUID tokens are refreshed. This value is returned in the response from the **POST /identity/map** endpoint.
+
+       .. note:: Each EUID token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily. Amperity `monitors salt buckets <https://euid.eu/docs/guides/integration-advertiser-dataprovider-endpoints#5-monitor-for-salt-bucket-rotations-for-your-stored-raw-euids>`__ on a daily basis to determine which EUID tokens need to be refreshed.
+
+
+   * - **Email**
+     - String
+     - The email address for the customer. Amperity gets this value from the **email** field in the **Unified Coalesced** table.
+
+
+   * - **Normalized Email**
+     - String
+     - The normalized email address that was sent from Amperity to the **POST /identity/map** endpoint for mapping. This value is returned in the response from the **POST /identity/map** endpoint.
+
+
+   * - **EUID**
+     - String
+     - The raw EUID value for the customer. This value, when encrypted, may be used as a EUID token. This value is returned in the response from the **POST /identity/map** endpoint.
+
+.. data-tables-euid-table-end
+
+
 .. _data-tables-fiscal-calendar:
 
 Fiscal Calendar

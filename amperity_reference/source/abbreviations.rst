@@ -147,6 +147,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Email Service Provider
    * - **ETL**
      - Extract, Transform and Load
+   * - **EUID**
+     - European Unified ID
    * - **FAQ**
      - Frequently Asked Question
    * - **FTP**
