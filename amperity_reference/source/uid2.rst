@@ -101,6 +101,20 @@ The following sections describe at a high level the series of steps that are req
 .. uid2-howitworks-table-end
 
 
+.. _uid2-howitworks-euid:
+
+About EUID
+--------------------------------------------------
+
+.. uid2-howitworks-euid-start
+
+EUID is an open-source, standalone solution with its own unique namespace that builds on the UID2 framework. The main differences between UID2 and EUID result from more stringent European and UK data protection laws relating to consent practices, rights for data subjects, and obligations between participants. Otherwise, EUID follows the same `guiding principles <https://euid.eu/docs/intro#guiding-principles>`__ |ext_link| as UID2.
+
+.. important:: Your brand must `request access to EUID <https://euid.eu/request-access>`__ |ext_link| and complete the required steps, after which your brand will be able to configure Amperity to use the same configuration pattern that enable sending UID2 tokens for sending EUID tokens to audiences that are located in the European Union.
+
+.. uid2-howitworks-euid-end
+
+
 .. _uid2-prerequisites:
 
 Prerequisites
