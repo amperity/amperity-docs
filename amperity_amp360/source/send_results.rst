@@ -51,26 +51,6 @@ Send query results
    :end-before: .. orchestrations-add-steps-end
 
 
-.. _send-results-edit-data-template:
-
-Edit data template
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-.. include:: ../../amperity_reference/source/data_templates.rst
-   :start-after: .. data-templates-edit-start
-   :end-before: .. data-templates-edit-end
-
-**To edit a data template**
-
-.. include:: ../../amperity_reference/source/data_templates.rst
-   :start-after: .. data-templates-edit-steps-start
-   :end-before: .. data-templates-edit-steps-end
-
-
 .. _send-results-data-exports:
 
 Send data exports

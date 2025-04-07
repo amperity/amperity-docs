@@ -375,7 +375,9 @@ Amperity supports the following file formats when sending files from Amperity:
 Campaign template patterns
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/data_templates.rst
+.. TODO: Deprecate this when campaign revamp is complete.
+
+.. include:: ../../legacy/source/data_templates.rst
    :start-after: .. data-templates-campaigns-start
    :end-before: .. data-templates-campaigns-end
 
@@ -385,7 +387,7 @@ Campaign template patterns
 Campaign names
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_reference/source/data_templates.rst
+.. include:: ../../legacy/source/data_templates.rst
    :start-after: .. data-templates-campaigns-campaign-name-start
    :end-before: .. data-templates-campaigns-campaign-name-end
 
@@ -395,7 +397,7 @@ Campaign names
 Group names
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_reference/source/data_templates.rst
+.. include:: ../../legacy/source/data_templates.rst
    :start-after: .. data-templates-campaigns-group-name-start
    :end-before: .. data-templates-campaigns-group-name-end
 
@@ -405,7 +407,7 @@ Group names
 List names
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_reference/source/data_templates.rst
+.. include:: ../../legacy/source/data_templates.rst
    :start-after: .. data-templates-campaigns-list-name-start
    :end-before: .. data-templates-campaigns-list-name-end
 
@@ -422,36 +424,6 @@ Filename template patterns
 .. include:: ../../shared/terms.rst
    :start-after: .. term-joda-time-start
    :end-before: .. term-joda-time-end
-
-
-.. _format-common-send-file-template-pattern-for-orchestrations:
-
-Text variables
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../amperity_reference/source/data_templates.rst
-   :start-after: .. data-templates-files-common-template-text-start
-   :end-before: .. data-templates-files-common-template-text-end
-
-
-.. _format-common-send-file-template-pattern-filter:
-
-Filters
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../amperity_reference/source/data_templates.rst
-   :start-after: .. data-templates-files-common-template-filters-start
-   :end-before: .. data-templates-files-common-template-filters-end
-
-
-.. _format-common-send-file-template-pattern-token:
-
-Tokens
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../amperity_reference/source/data_templates.rst
-   :start-after: .. data-templates-files-common-template-tokens-start
-   :end-before: .. data-templates-files-common-template-tokens-end
 
 
 .. _format-common-send-file-compression:

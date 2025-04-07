@@ -131,23 +131,6 @@ Data tables
    :ref:`Campaign Recipients <data-tables-campaign-recipients>` |fa-index-separator| :ref:`Customer 360 <data-tables-customer-360>` |fa-index-separator| :ref:`Customer Attributes <data-tables-customer-attributes>` |fa-index-separator| :ref:`Detailed Examples <data-tables-detailed-examples>` |fa-index-separator| :ref:`Email Engagement Attributes <data-tables-email-engagement-attributes>` |fa-index-separator| :ref:`Email Engagement Summary <data-tables-email-engagement-summary>` |fa-index-separator| :ref:`Merged Customers <data-tables-merged-customers>` |fa-index-separator| :ref:`Predicted Affinity <data-tables-affinity>` |fa-index-separator| :ref:`Predicted CLV Attributes <data-tables-predicted-clv-attributes>` |fa-index-separator| :ref:`Stitch Blocking Keys <data-tables-stitch-blocking-keys>` |fa-index-separator| :ref:`Stitch Scores <data-tables-stitch-scores>` |fa-index-separator| :ref:`Transaction Attributes <data-tables-transaction-attributes>` |fa-index-separator| :ref:`Transaction Attributes Extended <data-tables-transaction-attributes-extended>` |fa-index-separator| :ref:`Unified Changes Clusters <data-tables-unified-changes-clusters>` |fa-index-separator| :ref:`Unified Changes PKS <data-tables-unified-changes-pks>` |fa-index-separator| :ref:`Unified Coalesced <data-tables-unified-coalesced>` |fa-index-separator| :ref:`Unified Customer <data-tables-unified-customers>` |fa-index-separator| :ref:`Unified Email Events <data-tables-unified-email-events-table>` |fa-index-separator| :ref:`Unified Itemized Transactions <data-tables-unified-itemized-transactions>` |fa-index-separator| :ref:`Unified Preprocessed Raw <data-tables-unified-preprocessed-raw>` |fa-index-separator| :ref:`Unified Product Catalog <data-tables-unified-product-catalog>` |fa-index-separator| :ref:`Unified Scores <data-tables-unified-scores>` |fa-index-separator| :ref:`Unified Transactions <data-tables-unified-transactions>`
 
 
-.. _index-data-templates:
-
-Data templates
-==================================================
-
-:doc:`About data templates <data_templates>` |fa-index-separator| :ref:`File templates <data-templates-files>`
-
-**Common settings**
-   :ref:`data-templates-files-common-done` |fa-index-separator| :ref:`data-templates-files-common-encoding-methods` |fa-index-separator| :ref:`data-templates-files-common-escape-characters` |fa-index-separator| :ref:`data-templates-files-common-formats` |fa-index-separator| :ref:`data-templates-files-common-template` |fa-index-separator| :ref:`data-templates-files-common-header-rows` |fa-index-separator| :ref:`data-templates-files-common-line-endings` |fa-index-separator| :ref:`data-templates-files-common-quote-mode`
-
-**Specific settings**
-   :ref:`data-templates-files-specific-s3` |fa-index-separator| :ref:`data-templates-files-specific-azure-blob-storage` |fa-index-separator| :ref:`data-templates-files-specific-google-cloud-storage` |fa-index-separator| :ref:`data-templates-files-specific-sftp` |fa-index-separator| :ref:`API templates <data-templates-api>` |fa-index-separator| :ref:`Snowflake templates <data-templates-snowflake>`
-
-**How-tos**
-   :ref:`data-templates-add` |fa-index-separator| :ref:`data-templates-allow-to-send-queries` |fa-index-separator| :ref:`data-templates-allow-to-send-pii` |fa-index-separator| :ref:`data-templates-delete` |fa-index-separator| :ref:`data-templates-edit` |fa-index-separator| :ref:`data-templates-enable-success-file` |fa-index-separator| :ref:`data-templates-map-to-external-schemas` |fa-index-separator| :ref:`data-templates-make-available-to-campaigns`
-
-
 .. _index-databases:
 
 Databases
@@ -548,7 +531,6 @@ Workflows
    data_exports
    data_lineage
    data_tables
-   data_templates
    databases
    destinations
    docs
