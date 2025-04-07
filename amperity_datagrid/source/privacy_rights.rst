@@ -221,7 +221,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Results**
 
-       When a delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated and all rows in the inbound requests table are removed.
+       When a delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated and all rows in inbound requests tables that were processed by the delete request workflow are removed.
 
        .. admonition:: When a record is matched in Unified Compliance
 
@@ -317,7 +317,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Results**
 
-       When a delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated and all rows in the inbound requests table are removed.
+       When a delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated and all rows in inbound requests tables that were processed by the delete PII request workflow are removed.
 
        .. admonition:: When a record is matched in Unified Compliance
 
@@ -413,7 +413,7 @@ An inbound request table contains information about the compliance request type 
 
 If multiple identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
 
-All rows in an inbound request table are removed at the end of delete request or delete PII request workflow.
+All rows in inbound request tables that are processed by a delete request or delete PII request workflow are removed.
 
 .. note:: An address group is a single entity. A compliance action must match all fields within the address group: address, address2, city, state, postal, and country. It is important for addresses in incoming data to be standardized before they can be used for matching in compliance requests.
 
