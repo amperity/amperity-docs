@@ -417,7 +417,16 @@ All rows in inbound request tables that are processed by a delete request or del
 
 .. note:: An address group is a single entity. A compliance action must match all fields within the address group: address, address2, city, state, postal, and country. It is important for addresses in incoming data to be standardized before they can be used for matching in compliance requests.
 
-.. tip:: You may use a custom domain table to transform an inbound request table into the needed format. If you intend to use only a single **request_type** or **request_strategy**, those can be hard-coded in the custom domain table, rather than be included as part of the inbound request.
+.. admonition:: Inbound requests and custom domain tables
+
+   You may use a custom domain table to transform an inbound request table into the needed format. If you intend to use only a single **request_type** or **request_strategy**, those can be hard-coded in the custom domain table, rather than be included as part of the inbound request.
+
+   Inputs to inbound request tables that
+
+   #. Rely on custom domain tables
+   #. Are present at the time Stitch starts a delete or delete PII request workflow
+
+   are removed from the inbound requests table. Inputs that are added to the inbound requests table after the workflow starts will be processed in the next workflow.
 
 .. privacy-rights-inbound-requests-table-end
 
