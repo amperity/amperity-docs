@@ -721,6 +721,7 @@ This section describes tasks related to building campaigns in Amperity:
 * :ref:`campaigns-enable-campaign-recipients-table`
 * :ref:`campaigns-filter-a-campaign`
 * :ref:`campaigns-remove-sub-audience`
+* :ref:`campaigns-run-as-part-of-workflow`
 * :ref:`campaigns-schedule-campaign`
 * :ref:`campaigns-search-campaigns`
 * :ref:`campaigns-select-destinations`
@@ -1674,6 +1675,24 @@ You can remove a sub-audience from the **Edit Campaign** page.
 The sub-audience is removed from the **Edit Campaign** page.
 
 .. campaigns-remove-sub-audience-steps-end
+
+
+.. _campaigns-run-as-part-of-workflow:
+
+Run as part of a workflow
+--------------------------------------------------
+
+.. campaigns-run-as-part-of-workflow-start
+
+A recurring campaign can be configured to run as part of a scheduled workflow when the schedule is set to **Run as part of workflow** and an active courier group is selected from the drop-down menu.
+
+.. image:: ../../images/mockup-activation-scheduled-campaign.png
+   :width: 420 px
+   :alt: Add a campaign as part of a scheduled workgroup.
+   :align: center
+   :class: no-scaled-link
+
+.. campaigns-run-as-part-of-workflow-end
 
 
 .. _campaigns-schedule-campaign:

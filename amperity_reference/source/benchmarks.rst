@@ -15,7 +15,7 @@
         Stitch benchmarks
 
 ==================================================
-About Stitch benchmarks (BETA)
+About Stitch benchmarks
 ==================================================
 
 .. stitch-benchmark-start
@@ -283,6 +283,7 @@ Depending on the outcome of reviewing and grading benchmark check examples, a se
       Amperity will make a recommendation for when to rate each example as "good", but cannot identify without input which examples in the random sample represent "good" or "poor" identity decisions.
 
 .. stitch-benchmark-cards-grade-and-calibrate-howitworks-end
+
 
 .. _stitch-benchmark-check-update-config:
 

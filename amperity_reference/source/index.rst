@@ -233,7 +233,7 @@ Orchestrations
 :doc:`About orchestrations <orchestrations>`
 
 **How-tos**
-   :ref:`orchestrations-add` |fa-index-separator| :ref:`orchestrations-assign-database-export` |fa-index-separator| :ref:`orchestrations-assign-query` |fa-index-separator| :ref:`orchestrations-delete` |fa-index-separator| :ref:`orchestrations-edit` |fa-index-separator| :ref:`orchestrations-run-manually` |fa-index-separator| :ref:`orchestrations-run-scheduled-always-run` |fa-index-separator| :ref:`orchestrations-run-scheduled-wait-for-changes` |fa-index-separator| :ref:`orchestrations-run-unscheduled-wait-for-changes`
+   :ref:`orchestrations-add` |fa-index-separator| :ref:`orchestrations-assign-database-export` |fa-index-separator| :ref:`orchestrations-assign-query` |fa-index-separator| :ref:`orchestrations-delete` |fa-index-separator| :ref:`orchestrations-edit` |fa-index-separator|  :ref:`orchestrations-run-automatic` |fa-index-separator| :ref:`orchestrations-run-manually`
 
 .. _index-policies:
 
