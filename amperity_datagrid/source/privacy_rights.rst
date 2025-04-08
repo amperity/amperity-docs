@@ -221,7 +221,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Results**
 
-       When a delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated and all rows in inbound requests tables that were processed by the delete request workflow are removed.
+       When a delete request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
 
        .. admonition:: When a record is matched in Unified Compliance
 
@@ -317,7 +317,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Results**
 
-       When a delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated and all rows in inbound requests tables that were processed by the delete PII request workflow are removed.
+       When a delete PII request workflow is finished the **Unified Compliance** and **Unified Compliance Overview** tables are updated.
 
        .. admonition:: When a record is matched in Unified Compliance
 
@@ -409,24 +409,15 @@ Inbound requests table
 
 .. privacy-rights-inbound-requests-table-start
 
-An inbound request table contains information about the compliance request type and request strategy. It must contain at least one field that is used to identify matching records: this is most commonly email address, but phone number, address, and custom fields such as a customer key or loyalty ID can also be used.
+An inbound request table contains information about compliance requests. It must contain at least one field that is used to identify matching records: this is most commonly email address, but phone number, address, and custom fields such as a customer key or loyalty ID can also be used.
 
 If multiple identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
 
-All rows in inbound request tables that are processed by a delete request or delete PII request workflow are removed.
-
 .. note:: An address group is a single entity. A compliance action must match all fields within the address group: address, address2, city, state, postal, and country. It is important for addresses in incoming data to be standardized before they can be used for matching in compliance requests.
 
-.. admonition:: Inbound requests and custom domain tables
+It also contains information about the request type and request strategy.
 
-   You may use a custom domain table to transform an inbound request table into the needed format. If you intend to use only a single **request_type** or **request_strategy**, those can be hard-coded in the custom domain table, rather than be included as part of the inbound request.
-
-   Inputs to inbound request tables that
-
-   #. Rely on custom domain tables
-   #. Are present at the time Stitch starts a delete or delete PII request workflow
-
-   are removed from the inbound requests table. Inputs that are added to the inbound requests table after the workflow starts will be processed in the next workflow.
+.. tip:: You may use a custom domain table to transform an inbound request table into the needed format. If you intend to use only a single **request_type** or **request_strategy**, those can be hard-coded in the custom domain table, rather than be included as part of the inbound request.
 
 .. privacy-rights-inbound-requests-table-end
 
