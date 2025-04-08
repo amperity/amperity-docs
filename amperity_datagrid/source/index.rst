@@ -183,11 +183,11 @@ Automate workflows
 
 :doc:`About workflows <workflows>`
 
-**Courier groups**
-   :ref:`About courier groups <workflows-courier-groups>` |fa-index-separator| :ref:`Duration thresholds <workflows-courier-group-duration-thresholds>` |fa-index-separator| :ref:`Missing files <workflows-courier-group-missing-files>`
+**Couriers**
+   :ref:`About couriers <workflows-couriers>` |fa-index-separator| :ref:`Duration thresholds <workflows-courier-group-duration-thresholds>` |fa-index-separator| :ref:`Missing files <workflows-courier-group-missing-files>`
 
-**Orchestration groups**
-   :ref:`About orchestration groups <workflows-orchestration-groups>` |fa-index-separator|  :ref:`Run after courier group <workflows-orchestration-group-run-after>` |fa-index-separator| :ref:`Run on a schedule <workflows-orchestration-group-run-on-schedule>`
+**Automate workflows**
+   :ref:`Couriers <workflows-couriers>` |fa-index-separator| :ref:`Bridges <workflows-bridges>` |fa-index-separator| :ref:`About activations <workflows-activations>` |fa-index-separator| :ref:`Orchestrations <workflows-orchestrations>` |fa-index-separator| :ref:`Profile API indexes <workflows-profile-api>` |fa-index-separator| :ref:`Recurring campaigns <workflows-campaigns>`
 
 
 .. Hide the TOC from this file.
