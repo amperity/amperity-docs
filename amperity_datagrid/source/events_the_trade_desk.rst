@@ -78,16 +78,7 @@ Get details
           :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - **UID 2.0 agreement**
-
-          .. include:: ../../shared/terms.rst
-             :start-after: .. term-unified-id-20-start
-             :end-before: .. term-unified-id-20-end
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-the-trade-desk-uid2-agreement-start
-             :end-before: .. setting-the-trade-desk-uid2-agreement-end
-
+     - A `UID 2.0 agreement <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| and / or a `European Unified ID (EUID) agreement <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -372,7 +363,7 @@ A query that returns a collection offline event is similar to:
 
 The query **MUST** contain the following fields: **email** and **timestamp**.
 
-.. tip:: You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ for your brand. For example:
+.. tip:: You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand. For example:
 
    .. code-block:: sql
 
@@ -382,6 +373,8 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
       FROM Unified_Itemized_Transactions uit
       LEFT JOIN UID2 uid2 ON uit.amperity_id = uid2.uid2
       WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
+
+   You may use **euid** as a source attribute when your brand is a participant in `European Unified ID (EUID) <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
 
 .. caution:: Review the list of offline events parameters that may be sent to |destination-name|. Compare these parameters to the fields that are available from your brand's customer 360 database to determine which fields are available to be sent to |destination-name|.
 
@@ -451,9 +444,24 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The email address that is associated with the offline event.
 
-       .. note:: Amperity converts email addresses to a UID 2.0 value, and then sends them to |destination-name|, after which they are available from within |destination-name| as a **UID2** ID type. Rows that are sent to |destination-name| that do not have a UID 2.0 value or have an empty value are removed by |destination-name|.
+       .. note:: Amperity converts email addresses to a UID 2.0 value, and then sends them to |destination-name|, after which they are available from within |destination-name| as a **UID2** or **EUID** ID type. Rows that are sent to |destination-name| that do not have a UID 2.0 value or have an empty value are removed by |destination-name|.
 
-          You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ for your brand.
+   * - **euid**
+     - **Optional**
+
+       You may use **euid** as an attribute when is a participant in `European Unified ID (EUID) <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
+
+       For example:
+
+       .. code-block:: sql
+
+          SELECT 
+            euid.euid
+            ,uit.order_datetime AS timestamp
+          FROM Unified_Itemized_Transactions uit
+          LEFT JOIN EUID euid ON uit.amperity_id = euid.euid
+          WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
+
 
    * - **eventname**
      - **Optional**; **Required** for sending product catalogs alongside offline events.
@@ -642,7 +650,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
    * - **uid2**
      - **Optional**
 
-       You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ for your brand.
+       You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand.
 
        For example:
 

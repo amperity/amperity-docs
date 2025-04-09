@@ -437,6 +437,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
 
+       .. note:: This value is specified from the **Event source** setting in the destination that is configured to send offline events to |destination-name|. This value should not be specified in the query that returns the set of offline events.
 
    * - **ip**
      - Web events only. A non-hashed public IP address for the user's device. May be an IPv4 or an IPv6 address, full or compressed. This field should be sent along with **agent** when both are available. 

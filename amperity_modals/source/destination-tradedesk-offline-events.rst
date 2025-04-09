@@ -13,7 +13,7 @@ The Trade Desk Offline Events
 
 Send offline measurement data to The Trade Desk, and then use that data for attribution and targeting.
 
-Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring this destination.
+Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 
 
 Credentials
