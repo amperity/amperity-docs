@@ -86,9 +86,12 @@ Get details
           :class: no-scaled-link
      - **Meta Ads Manager settings**
 
-       `Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+       **Dataset ID**
+          |checkmark-required| **May be required at orchestration**
 
-       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-meta-ads-manager-dataset-id-start
+             :end-before: .. setting-meta-ads-manager-dataset-id-end
 
 
 .. events-meta-ads-manager-get-details-table-end
@@ -241,19 +244,6 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
-
-       `Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
-
-       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
           :end-before: .. destinations-steps-name-and-description-end
@@ -279,10 +269,11 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Dataset ID**
+          |checkmark-required| **May be required at orchestration**
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-meta-ads-manager-dataset-id-start
-          :end-before: .. setting-meta-ads-manager-dataset-id-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-meta-ads-manager-dataset-id-start
+             :end-before: .. setting-meta-ads-manager-dataset-id-end
 
 
    * - .. image:: ../../images/steps-05.png

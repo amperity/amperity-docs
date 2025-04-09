@@ -543,12 +543,12 @@
 
 .. |destination_meta_ads_manager_custom_audiences| raw:: html
 
-   <a href="https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#custom-audiences">custom audiences</a>
+   <a href="https://docs.amperity.com/datagrid/destination_meta_ads_manager.html">custom audiences</a>
 
 
 .. |destination_meta_ads_manager_offline_events| raw:: html
 
-   <a href="https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#offline-events">offline events</a>
+   <a href="https://docs.amperity.com/datagrid/events_meta_ads_manager.html">offline events</a>
 
 
 .. |destination_microsoft_dynamics| raw:: html

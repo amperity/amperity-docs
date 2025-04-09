@@ -116,41 +116,40 @@ About Meta Ads Manager
 
 Audiences sent to Meta Ads Manager have access to Facebook, Messenger, Instagram and the Meta Audience Network.
 
-.. 
-.. .. list-table::
-..    :widths: 30 70
-..    :header-rows: 0
-.. 
-..    * - .. image:: ../../amperity_base/source/_static/connector-facebook-ads.svg
-..           :width: 140 px
-..           :alt: Facebook Ads
-..           :align: left
-..           :class: no-scaled-link
-..      - Use Meta Ads Manager to configure `a variety of ad placements across Facebook <https://www.facebook.com/business/help/407108559393196?id=369787570424415>`__ |ext_link|.
-.. 
-..    * - .. image:: ../../amperity_base/source/_static/connector-instagram.svg
-..           :width: 140 px
-..           :alt: Instagram
-..           :align: left
-..           :class: no-scaled-link
-..      - Use Meta Ads Manager to configure objectives that `place ads on Instagram <https://www.facebook.com/business/help/1634705703469129?helpref=search&sr=2&query=create%20ads%20in%20instagram>`__ |ext_link|.
-.. 
-..    * - .. image:: ../../amperity_base/source/_static/connector-facebook-messenger.svg
-..           :width: 140 px
-..           :alt: Facebook Messenger
-..           :align: left
-..           :class: no-scaled-link
-..      - Use Meta Ads Manager to configure objectives that `place ads on Messenger <https://www.facebook.com/business/help/1420905584664062?id=274377816589261>`__ |ext_link|.
-.. 
-..    * - .. image:: ../../amperity_base/source/_static/connector-whatsapp.svg
-..           :width: 140 px
-..           :alt: WhatsApp
-..           :align: left
-..           :class: no-scaled-link
-..      - Use `Audience Manager <https://www.facebook.com/business/help/1409448922609084?id=571563249872422&ref=fbb_an>`__ |ext_link| to reach users who are not on Facebook or Instagram, but are on mobile apps that are within the audience network. For example, creating ads that `open conversation threads in WhatsApp <https://www.facebook.com/business/help/447934475640650?id=371525583593535>`__ |ext_link|.
-.. 
-.. .. destination-meta-ads-manager-meta-ads-manager-end
-.. 
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 0
+
+   * - .. image:: ../../amperity_base/source/_static/connector-facebook-ads.svg
+          :width: 140 px
+          :alt: Facebook Ads
+          :align: left
+          :class: no-scaled-link
+     - Use Meta Ads Manager to configure `a variety of ad placements across Facebook <https://www.facebook.com/business/help/407108559393196?id=369787570424415>`__ |ext_link|.
+
+   * - .. image:: ../../amperity_base/source/_static/connector-instagram.svg
+          :width: 140 px
+          :alt: Instagram
+          :align: left
+          :class: no-scaled-link
+     - Use Meta Ads Manager to configure objectives that `place ads on Instagram <https://www.facebook.com/business/help/1634705703469129?helpref=search&sr=2&query=create%20ads%20in%20instagram>`__ |ext_link|.
+
+   * - .. image:: ../../amperity_base/source/_static/connector-facebook-messenger.svg
+          :width: 140 px
+          :alt: Facebook Messenger
+          :align: left
+          :class: no-scaled-link
+     - Use Meta Ads Manager to configure objectives that `place ads on Messenger <https://www.facebook.com/business/help/1420905584664062?id=274377816589261>`__ |ext_link|.
+
+   * - .. image:: ../../amperity_base/source/_static/connector-whatsapp.svg
+          :width: 140 px
+          :alt: WhatsApp
+          :align: left
+          :class: no-scaled-link
+     - Use `Audience Manager <https://www.facebook.com/business/help/1409448922609084?id=571563249872422&ref=fbb_an>`__ |ext_link| to reach users who are not on Facebook or Instagram, but are on mobile apps that are within the audience network. For example, creating ads that `open conversation threads in WhatsApp <https://www.facebook.com/business/help/447934475640650?id=371525583593535>`__ |ext_link|.
+
+.. destination-meta-ads-manager-meta-ads-manager-end
 
 
 .. _destination-meta-ads-manager-credentials:
