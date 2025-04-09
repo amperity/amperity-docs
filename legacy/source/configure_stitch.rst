@@ -1096,11 +1096,7 @@ or:
 Supersized clusters
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
-
-.. include:: ../../amperity_help/source/stitch_config_cluster_size.rst
-   :start-after: .. tooltip-stitch-config-supersized-clusters-start
-   :end-before: .. tooltip-stitch-config-supersized-clusters-end
+A supersized cluster is a cluster of records that is discovered during the Stitch process that has more than 64 matching records. A supersized cluster does not typically represent a unique individual and is not worthy of further analysis. You may configure the threshold at which Stitch will discover a supersized cluster.
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-start
 
