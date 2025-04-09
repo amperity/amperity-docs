@@ -8,6 +8,10 @@
 .. |bic| replace:: Business Intelligence Connect
 
 
+.. |fa-drag| raw:: html
+
+   &nbsp;<i class="fa-solid fa-grip-dots-vertical" style="color: #0c0c0c;"></i>&nbsp;
+
 
 .. |fa-kebab| raw:: html
 
