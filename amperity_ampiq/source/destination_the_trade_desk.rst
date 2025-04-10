@@ -162,5 +162,10 @@ Configure default attributes
 
      - uid2
 
+   * - euid
+
+       You may use **euid** as a source attribute when your brand is a participant in `European Unified ID (EUID) <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
+
+     - euid
 
 .. channel-the-trade-desk-configure-default-attributes-end

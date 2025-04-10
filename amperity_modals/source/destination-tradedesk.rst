@@ -11,9 +11,9 @@
 The Trade Desk
 ==================================================
 
-|destination-name| is a platform for wide internet advertising and enables the use of UID 2.0 for first-party paid media advertising.
+|destination-name| is a platform for wide internet advertising and enables the use of UID 2.0 (UID2) and European Unified ID (EUID) for first-party paid media advertising.
 
-Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring this destination.
+Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 
 
 Credentials

@@ -13,7 +13,7 @@ The Trade Desk 3rd Party
 
 Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting.
 
-Your brand must have a UID 2.0 agreement in-place with |destination-name| before configuring this destination.
+Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 
 
 Credentials

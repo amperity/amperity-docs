@@ -7,7 +7,7 @@
 .. |plugin-name| replace:: "The Trade Desk"
 .. |credential-type| replace:: "tradedesk"
 .. |required-credentials| replace:: "advertiser ID" and "advertiser secret"
-.. |what-send| replace:: email addresses or UID2 tokens
+.. |what-send| replace:: email addresses, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
@@ -92,16 +92,7 @@ Get details
           :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - **UID 2.0 agreement**
-
-       .. include:: ../../shared/terms.rst
-          :start-after: .. term-unified-id-20-start
-          :end-before: .. term-unified-id-20-end
-
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-uid2-agreement-start
-          :end-before: .. setting-the-trade-desk-uid2-agreement-end
-
+     - A `UID 2.0 agreement <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| and / or a `European Unified ID (EUID) agreement <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
