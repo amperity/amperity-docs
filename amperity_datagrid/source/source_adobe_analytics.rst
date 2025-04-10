@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. |source-name| replace:: Adobe Analytics
