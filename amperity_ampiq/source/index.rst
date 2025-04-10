@@ -86,7 +86,7 @@ Choose destinations
 Send offline events
 ==================================================
 
-:doc:`events_criteo` |fa-index-separator| :doc:`events_meta_ads_manager` |fa-index-separator| :doc:`events_pinterest` |fa-index-separator| :doc:`events_snapchat` |fa-index-separator| :doc:`events_the_trade_desk` |fa-index-separator| :doc:`events_tiktok_ads_manager`
+:doc:`events_criteo` |fa-index-separator| :doc:`events_google_enhanced_conversions` |fa-index-separator| :doc:`events_meta_ads_manager` |fa-index-separator| :doc:`events_pinterest` |fa-index-separator| :doc:`events_snapchat` |fa-index-separator| :doc:`events_the_trade_desk` |fa-index-separator| :doc:`events_tiktok_ads_manager`
 
 
 .. _index-predictive-analytics:
@@ -206,6 +206,7 @@ Apply predictive analytics
    direct_mail
    events
    events_criteo
+   events_google_enhanced_conversions
    events_meta_ads_manager
    events_pinterest
    events_snapchat

@@ -32,6 +32,19 @@ Send offline events to Google Enhanced Conversions
    :start-after: .. term-google-enhanced-conversions-start
    :end-before: .. term-google-enhanced-conversions-end
 
+.. destination-google-enhanced-conversions-about-start
+
+When a customer purchases something from your brand's website, you likely collect some first-party data from that customer to complete the transaction. For example, a physical address, an email address, a phone number, and a full name.
+
+First-party customer data that is associated with transactions can be sent to |destination-name|, after which it can be used to enhance conversion measurement in Google Ads. For example:
+
+* Track sales and events that happen on a website.
+* Track sales that happen from a website.
+* Match customers to their Google accounts, which were signed-in to when they engaged with one of your ads.
+* Attribute engagment with a Google Ads campaign by matching data collected on your website with the signed-in Google accounts that engaged with your ads.
+
+.. destination-google-enhanced-conversions-about-end
+
 
 .. _destination-google-enhanced-conversions-get-details:
 
@@ -53,6 +66,24 @@ Get details
           :alt: Detail 1.
           :align: left
           :class: no-scaled-link
+     - **Configure Google Ads**
+
+       Enable enhanced conversions for leads in Google Ads:
+
+       #. `Enable conversion tracking in Google Ads <https://developers.google.com/google-ads/api/docs/conversions/enhanced-conversions/leads-setup>`__ |ext_link|.
+       #. Accept customer data terms and opt-in to enhanced conversions for leads.
+       #. Set up tagging through Google Tag Manager.
+       #. Create at least one ConversionAction.
+
+          The conversion_action_type must be set to **UPLOAD_CLICKS**.
+
+       #. `Configure Google tag settings <https://support.google.com/google-ads/answer/11021502#configure>`__ |ext_link| to enable enhanced conversions for leads.
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 2.
+          :align: left
+          :class: no-scaled-link
      - **Credential settings**
 
        **Refresh token**
@@ -66,7 +97,7 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail 2.
+          :alt: Detail 3.
           :align: left
           :class: no-scaled-link
      - **Required configuration settings**

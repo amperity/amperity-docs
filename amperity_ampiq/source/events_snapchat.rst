@@ -53,7 +53,7 @@ For example:
      ,uit.order_id AS transaction_id
      ,uit.item_quantity AS quantity
    FROM Merged_Customers mc
-   INNER JOIN Unified_Itemizzed_Transactions uit
+   INNER JOIN Unified_Itemized_Transactions uit
    ON mc.amperity_id = uit.amperity_id
    WHERE mc.email IS NOT NULL
 

@@ -32,6 +32,7 @@ Offline events share similar use cases across marketing platforms; however, each
 * :ref:`Braze <events-braze>` and :ref:`Klaviyo <events-klaviyo>` support offline events when sent as custom attributes for any audience.
 * :ref:`Criteo <events-criteo>`, :ref:`Pinterest <events-pinterest>`, and :ref:`Snapchat <events-snapchat>` support offline events for transactions, which must be sent separately from audiences using SFTP.
 * :ref:`Meta Ads Manager <events-meta-ads-manager>`, :ref:`The Trade Desk <events-the-trade-desk>`, and :ref:`TikTok Ads Manager <events-tiktok-ads-manager>` each support a complex set of offline events that are sent to REST API endpoints and typically require using SQL to return the unique sets of offline events that are required by each platform.
+* :ref:`Google Enhanced Conversions <events-google-enhanced-conversions>` to associate first-party customer data with transactions.
 
 Your brand may need to experiment with how offline events are provided to the marketing platforms from which your campaigns are run. Amperity is flexible; you may take any approach that works. For example: using a database tables that consolidates offline events, configuring default attributes to represent offline events for campaigns, or by using SQL to handle more complex sets of offline events.
 
@@ -85,6 +86,22 @@ Amperity provides direct connections to the most popular destinations across the
      - Use the :doc:`Criteo destination <destination_criteo>` to send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
 
        .. tip:: Use your brand's :doc:`offline transactions data <events_criteo>` to optimize advertising targeting algorithms in Criteo. Review the |ext_criteo_sftp|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
+
+
+.. _events-google-enhanced-conversions:
+
+.. list-table::
+   :widths: 40 60
+   :header-rows: 0
+
+   * - .. image:: ../../amperity_base/source/_static/connector-google-ads.svg
+          :width: 140 px
+          :alt: Criteo
+          :align: left
+          :class: no-scaled-link
+     - Use the :doc:`Google Ads destination <destination_google_ads>` to send audiences to Google Ads.
+
+       .. tip:: Use your brand's :doc:`offline transactions data <events_google_enhanced_conversions>` to enhance conversion measurement in Google Ads by associating first-party customer data with transactions.
 
 
 .. _events-klaviyo:

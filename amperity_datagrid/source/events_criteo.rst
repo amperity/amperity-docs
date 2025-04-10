@@ -29,7 +29,7 @@ Send offline events to Criteo
 
 .. events-criteo-overview-start
 
-You can send transactions data (offline events) to |destination-name| as a CSV or TSV file using SFTP.
+A large percentage of retail sales take place in stores. By providing transactions data (offline events) for sales that occurred in stores to |destination-name| your brand can use the |destination-name| identity graph to deterministically match online shoppers and offline sales. You can send offline events to |destination-name| as a CSV or TSV file using SFTP.
 
 Review the |ext_criteo_sftp|, and then configure Amperity to connect to |destination-name| using the |destination_sftp| destination.
 
