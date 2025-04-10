@@ -2984,7 +2984,7 @@ Looker is an enterprise platform for business intelligence, data applications, a
 
 .. term-google-enhanced-conversions-start
 
-Google Enhanced Conversions improves the accuracy of conversion measurement by sending hashed first-party conversion data to Google using one-way SHA-256 hashing of first-party customer data.
+`Google Enhanced Conversions <https://support.google.com/google-ads/answer/9888656?hl=en>`__ |ext_link| improves the accuracy of conversion measurement by sending hashed first-party conversion data to Google using one-way SHA-256 hashing of first-party customer data.
 
 .. term-google-enhanced-conversions-end
 

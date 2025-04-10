@@ -55,7 +55,6 @@ The default audience list in |destination-name| requires only an email address. 
 #. From the **Object Type** drop-down, select **Query**.
 #. From the **Object** drop-down, select the query for which results will be sent to |destination-name|.
 #. From the **Destination** drop-down, select a destination that is configured for sending data to |destination-name|.
-#. From the **Data Template** drop-down, select a data template.
 #. Verify all settings.
 #. Set the workflow to **Manual**. (You can change this to automatic later, after verifying the end-to-end workflow.)
 #. Click **Save**.

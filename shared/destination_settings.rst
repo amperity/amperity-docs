@@ -1222,7 +1222,7 @@ This section contains settings that are unique to Google Enhanced Conversions.
 
 .. setting-google-enhanced-conversions-action-name-start
 
-TEMP: "Name of the Conversion Action. Will be created if it doesn't exist."
+The name of the conversion action.
 
 .. setting-google-enhanced-conversions-action-name-end
 
@@ -1230,7 +1230,7 @@ TEMP: "Name of the Conversion Action. Will be created if it doesn't exist."
 
 .. setting-google-enhanced-conversions-customer-id-start
 
-TEMP: "Customer ID of the Google Enhanced Conversions account; might just be Google Ads account"
+The Customer ID of the Google Enhanced Conversions account.
 
 .. setting-google-enhanced-conversions-customer-id-end
 
