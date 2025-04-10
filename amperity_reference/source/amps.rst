@@ -25,7 +25,7 @@ The number of Amps consumed depends on the actions that are performed and how mu
 
 You can access the **Amps** dashboard from the |fa-kebab| menu that is located in the top-level navigation next to the name of your Amperity tenant.
 
-  .. note:: The dashboard may exclude up to 24 hours of data, to allow time for data processing and validation.
+.. note:: The dashboard may exclude up to 24 hours of data, to allow time for data processing and validation.
 
 .. amps-overview-start
 
