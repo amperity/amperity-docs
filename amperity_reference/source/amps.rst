@@ -319,6 +319,7 @@ Amps consumption for the **Profile API** feature is determined by:
 Monitor Amps consumption for the **Profile API** feature by:
 
 * Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows.
+
 .. amps-consumption-feature-profile-api-end
 
 
