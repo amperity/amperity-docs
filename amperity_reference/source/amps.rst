@@ -19,11 +19,13 @@ About the Amps dashboard
 
 .. amps-overview-start
 
-Amps are a normalized unit that measures total consumption across all categories and features within the Amperity platform that are used by your brand.
+Amps are a normalized unit that measures total consumption across all categories and features within the Amperity platform.
 
 The number of Amps consumed depends on the actions that are performed and how much data processing was required to support those actions.
 
 You can access the **Amps** dashboard from the |fa-kebab| menu that is located in the top-level navigation next to the name of your Amperity tenant.
+
+  .. note:: The dashboard may exclude up to 24 hours of data, to allow time for data processing and validation.
 
 .. amps-overview-start
 
@@ -35,7 +37,7 @@ About Amps consumption
 
 .. amps-consumption-start
 
-Amps consumption is measured across your entire production environment. Running workflows, storing data, and querying data across all environments, including usage within sandboxes, will consume Amps. Amps consumption is assigned to the day on which consumption started.
+Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started.
 
 .. amps-consumption-end
 
@@ -47,7 +49,7 @@ Consumption categories
 
 .. amps-consumption-categories-start
 
-Amps consumption is tracked in 5 categories---Sources, Stitch, Databases, Analytics, and Activation---and is broken down into 18 feature areas.
+Amps and storage (TB) consumption is tracked in 5 categories---Sources, Stitch, Databases, Analytics, and Activation---and is further broken down into product features.
 
 .. list-table::
    :widths: 30 70
@@ -107,7 +109,7 @@ Consumption by feature
 
 .. amps-consumption-features-start
 
-This section describes each feature in-depth, and what actions you can take to influence your Amps consumption. It includes information on what specifically drives Amps consumption in that area, and areas of the product where you can monitor your tenant's Amps consumption by feature.
+This section describes each feature in-depth, and what actions you can take to influence your Amps and storage consumption. It includes information on what specifically drives consumption in that area, and areas of the product where you can monitor your tenant's Amps consumption by feature.
 
 .. amps-consumption-features-end
 
