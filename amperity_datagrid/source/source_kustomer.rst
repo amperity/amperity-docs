@@ -58,23 +58,40 @@ Get details
    :start-after: .. sources-get-details-fivetran-overview-start
    :end-before: .. sources-get-details-fivetran-overview-end
 
-#. .. include:: ../../shared/sources.rst
-      :start-after: .. sources-get-details-fivetran-request-to-enable-start
-      :end-before: .. sources-get-details-fivetran-request-to-enable-end
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-get-details-fivetran-request-to-enable-start
+   :end-before: .. sources-get-details-fivetran-request-to-enable-end
 
-#. A |ext_kustomer_api_key|, along with the **org.user.read** role for that API key.
+The |source-name| data source requires the following configuration details:
 
-   .. include:: ../../shared/sources.rst
-      :start-after: .. sources-get-details-fivetran-connect-start
-      :end-before: .. sources-get-details-fivetran-connect-end
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-   .. include:: ../../shared/sources.rst
-      :start-after: .. sources-get-details-fivetran-does-not-store-data-start
-      :end-before: .. sources-get-details-fivetran-does-not-store-data-end
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail one.
+          :align: left
+          :class: no-scaled-link
+     - A |ext_kustomer_api_key|, along with the **org.user.read** role for that API key.
 
-#. .. include:: ../../shared/sources.rst
-      :start-after: .. sources-get-details-fivetran-access-to-snowflake-start
-      :end-before: .. sources-get-details-fivetran-access-to-snowflake-start
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-get-details-fivetran-connect-start
+          :end-before: .. sources-get-details-fivetran-connect-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-get-details-fivetran-does-not-store-data-start
+          :end-before: .. sources-get-details-fivetran-does-not-store-data-end
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-get-details-fivetran-access-to-snowflake-start
+          :end-before: .. sources-get-details-fivetran-access-to-snowflake-start
 
 .. source-kustomer-get-details-end
 
