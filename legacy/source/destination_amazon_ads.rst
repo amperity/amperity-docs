@@ -127,7 +127,7 @@ Get details
                ,surname AS 'lastname'
            FROM Customer_360
 
-       You may also use an **amperity_id** but it should be labeled as an **external_id**.
+       You may also use an **amperity_id** but it should be labeled as an **extern_id**.
 
        .. code-block:: sql
 
