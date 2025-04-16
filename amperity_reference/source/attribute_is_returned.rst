@@ -22,9 +22,9 @@
 Is returned?
 ==================================================
 
-.. include:: ../../shared/attributes.rst
-   :start-after: .. attributes-use-in-segments-start
-   :end-before: .. attributes-use-in-segments-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-is-return-start
+   :end-before: .. term-is-return-end
 
 
 .. _attribute-is-return-access-segment:
@@ -32,11 +32,9 @@ Is returned?
 Use in segments
 ==================================================
 
-.. attribute-is-return-start
-
-You can access is return directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table, select the **Is Return** attribute, and then apply a condition.
-
-.. attribute-is-return-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-is-return-conditions:
