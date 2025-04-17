@@ -199,9 +199,9 @@ html_additional_pages = {
     'destination_monetate': 'destination_monetate.html',
     'destinations': 'destinations.html',
     'source_databricks': 'source_databricks.html',
-    'source_shopify': 'source_shopify.html',
     'sources': 'sources.html',
 }
+
 
 # If false, no module index is generated.
 html_domain_indices = False

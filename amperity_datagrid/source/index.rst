@@ -376,6 +376,7 @@ Automate workflows
    source_salesforce_sales_cloud
    source_sftp_amperity
    source_sftp
+   source_shopify
    source_smg
    source_soundcommerce
    source_square

@@ -126,7 +126,7 @@ Your brand can configure |source-name| to send events `to an Amazon S3 bucket <h
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - When finished configuring the current click **Launch current**. Allow for up to 30 minutes for the current to start sending events data.
+     - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 
 
    * - .. image:: ../../images/steps-06.png
@@ -206,7 +206,7 @@ Your brand can configure |source-name| to send events `to an Azure Blob Storage 
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - When finished configuring the current click **Launch current**. Allow for up to 30 minutes for the current to start sending events data.
+     - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 
 
    * - .. image:: ../../images/steps-06.png
@@ -287,7 +287,7 @@ Your brand can configure |source-name| to send events `to a Google Cloud Storage
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - When finished configuring the current click **Launch current**. Allow for up to 30 minutes for the current to start sending events data.
+     - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 
 
    * - .. image:: ../../images/steps-06.png
@@ -379,6 +379,6 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
           :alt: Step 6.
           :align: left
           :class: no-scaled-link
-     - When finished configuring the current click **Launch current**. Allow for up to 30 minutes for the current to start sending events data.
+     - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 
 .. source-braze-streaming-api-steps-end
