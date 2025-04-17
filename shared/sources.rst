@@ -7,11 +7,6 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
-.. tip::
-
-   .. include:: ../../amperity_configure/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
 
 **Example entities list**
 
