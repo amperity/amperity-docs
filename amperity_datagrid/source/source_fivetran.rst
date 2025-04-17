@@ -34,7 +34,6 @@ Fivetran is a third-party application that collects data from a wide variety of 
 
    #. Customers may choose to centralize their data on Snowflake, regardless of the built-in sources that Amperity offers.
    #. Customers may require data sources that are not built-in to Amperity, but are availble from Fivetran.
-   #. Customers may require the ability to use SQL to query against a Snowflake table before loading data to Amperity. (This is a feature that is built into Snowflake data source in Amperity.)
 
 .. source-fivetran-why-end
 
@@ -113,7 +112,7 @@ Amperity does not document every Fivetran-enabled data source workflow on its ow
 
    All configuration requirements for connecting a data source to Fivetran are specified in Fivetran documentation. Be sure to review those requirements. In a scenario where your Amperity representative will configure Fivetran on your behalf, you will need to provide to your Amperity representative those details.
 
-   Amperity uses a well-documented Snowflake connector (:doc:`Snowflake on AWS <source_snowflake_aws>` or :doc:`Snowflake on Azure <source_snowflake_azure>`) to pull data from Fivetran for all Fivetran-enabled data sources.
+   Amperity uses Snowflake to pull data from Fivetran for all Fivetran-enabled data sources.
 
 .. source-fivetran-sources-important-end
 
