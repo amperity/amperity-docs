@@ -111,9 +111,11 @@ Get details
 Snowflake secure data sharing
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/destination_business_intelligence_connect.rst
-   :start-after: .. destination-bic-request-to-enable-data-sharing-start
-   :end-before: .. destination-bic-request-to-enable-data-sharing-end
+.. destination-bic-request-to-enable-data-sharing-start
+
+Snowflake `secure data sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro.html>`__ |ext_link| is not enabled by default. If your organization wants to use secure data sharing, your instance of Snowflake must be in the same region as the Amperity instance.
+
+.. destination-bic-request-to-enable-data-sharing-end
 
 
 .. _destination-snowflake-aws-configure-objects:
