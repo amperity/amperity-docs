@@ -113,7 +113,7 @@ Amperity does not document every Fivetran-enabled data source workflow on its ow
 
    All configuration requirements for connecting a data source to Fivetran are specified in Fivetran documentation. Be sure to review those requirements. In a scenario where your Amperity representative will configure Fivetran on your behalf, you will need to provide to your Amperity representative those details.
 
-   Amperity uses a well-documented Snowflake connector (:doc:`Snowflake on AWS <source_snowflake_aws>` or :doc:`Snowflake on Azure <source_snowflake_azure>`) to pull data from Fivetran for all Fivetran-enabled data sources.
+   Amperity uses Snowflake to pull data from Fivetran for all Fivetran-enabled data sources.
 
 .. source-fivetran-sources-important-end
 
