@@ -34,7 +34,6 @@ Fivetran is a third-party application that collects data from a wide variety of 
 
    #. Customers may choose to centralize their data on Snowflake, regardless of the built-in sources that Amperity offers.
    #. Customers may require data sources that are not built-in to Amperity, but are availble from Fivetran.
-   #. Customers may require the ability to use SQL to query against a Snowflake table before loading data to Amperity. (This is a feature that is built into Snowflake data source in Amperity.)
 
 .. source-fivetran-why-end
 
