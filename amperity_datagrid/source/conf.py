@@ -176,6 +176,11 @@ html_sidebars = {
 # template names.
 #    '404': '/internal/404.html',
 html_additional_pages = {
+    'source_snowflake_aws': 'source_snowflake_aws.html',
+    'source_snowflake_azure': 'source_snowflake_azure.html',
+    'destination_snowflake_aws': 'destination_snowflake_aws.html',
+    'destination_snowflake_azure': 'destination_snowflake_azure.html',
+    'destination_business_intelligence_connect': 'destination_business_intelligence_connect.html',
     'add_ampiq': 'add_ampiq.html',
     'add_customer_records': 'add_customer_records.html',
     'add_interactions_records': 'add_interactions_records.html',
