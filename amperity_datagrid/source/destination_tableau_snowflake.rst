@@ -68,20 +68,10 @@ The steps required to configure Amperity to send data that is accessible to Tabl
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Configure Snowflake objects for the correct database, tables, roles, and users. (Refer to the :ref:`Amazon S3 <destination-snowflake-aws-configure-objects>` or :ref:`Azure <destination-snowflake-azure-configure-objects>` topic, as appropriate for your tenant.)
-
-       .. note:: Snowflake can be configured to run in Amazon AWS or Azure. When using the Amazon Data Warehouse you will use the same cloud platform as your Amperity tenant. When using your own instance of Snowflake, you should use the same Amazon S3 bucket or Azure Blob Storage container that is included with your tenant when configuring Snowflake for data sharing, but then connect Tableau directly to your own instance of Snowflake.
+     - Configure Snowflake to sync data using :doc:`Amperity Bridge <bridge_snowflake>`.
 
 
    * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - Send data to Snowflake from Amperity. (Refer to the :doc:`Amazon S3 <destination_snowflake_aws>` or :doc:`Azure <destination_snowflake_azure>` topic, as appropriate for your tenant.)
-
-
-   * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
           :align: left
@@ -90,17 +80,17 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
        .. note:: The URL for the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Tableau user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Tableau to Snowflake.
 
-   * - .. image:: ../../images/steps-04.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step 3.
           :align: left
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Tableau.
 
 
-   * - .. image:: ../../images/steps-05.png
+   * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step 4.
           :align: left
           :class: no-scaled-link
      - Configure Amperity to automate this workflow for a regular (daily) refresh of data.
