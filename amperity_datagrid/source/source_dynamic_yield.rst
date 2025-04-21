@@ -103,6 +103,10 @@ The |source-name| destination requires the following configuration details:
           :class: no-scaled-link
      - A list of objects (by filename and file type) in the S3 bucket to be sent to Amperity and a sample for each file to simplify feed creation.
 
+       .. include:: ../../amperity_reference/source/format_csv.rst
+          :start-after: .. format-csv-file-sizes-start
+          :end-before: .. format-csv-file-sizes-end
+
 .. source-dynamic-yield-get-details-end
 
 
