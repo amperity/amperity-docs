@@ -1205,9 +1205,9 @@ You must embed the external link naturally within a sentence:
 
 .. code-block:: rst
 
-   `some link text here <https://docs.amperity.com>`__ |ext_link|
+   `some link text here <https://www.amperity.com>`__ |ext_link|
 
-For example: `https://docs.amperity.com <https://docs.amperity.com>`__ |ext_link|.
+For example: `https://docs.amperity.com <https://www.amperity.com>`__ |ext_link|.
 
 Use a double underscore (``__``) at the end of the external link and append with ``|ext_link|``.
 
