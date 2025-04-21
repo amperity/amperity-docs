@@ -109,7 +109,7 @@ The |source-name| data source requires the following configuration details:
 
        .. include:: ../../amperity_reference/source/format_csv.rst
           :start-after: .. format-csv-file-sizes-start
-          :end-before: .. .. format-csv-file-sizes-end
+          :end-before: .. format-csv-file-sizes-end
 
 .. source-acxiom-get-details-end
 

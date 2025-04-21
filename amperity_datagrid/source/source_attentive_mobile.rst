@@ -145,7 +145,7 @@ The |source-name| data source requires the following configuration details:
 
        .. include:: ../../amperity_reference/source/format_csv.rst
           :start-after: .. format-csv-file-sizes-start
-          :end-before: .. .. format-csv-file-sizes-end
+          :end-before: .. format-csv-file-sizes-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

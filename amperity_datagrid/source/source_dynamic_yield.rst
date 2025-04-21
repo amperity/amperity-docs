@@ -105,7 +105,7 @@ The |source-name| destination requires the following configuration details:
 
        .. include:: ../../amperity_reference/source/format_csv.rst
           :start-after: .. format-csv-file-sizes-start
-          :end-before: .. .. format-csv-file-sizes-end
+          :end-before: .. format-csv-file-sizes-end
 
 .. source-dynamic-yield-get-details-end
 
