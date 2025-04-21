@@ -1344,8 +1344,8 @@ The **Merged Customers** table contains the following columns:
    * - **Full Name**
      - String
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-full-name-start
-          :end-before: .. term-full-name-end
+          :start-after: .. term-full-name-unified-coalesced-start
+          :end-before: .. term-full-name-unified-coalesced-end
 
        Also in: **Unified Coalesced**, **Unified Customer**
 
@@ -3338,8 +3338,6 @@ The **Unified Coalesced** table contains the following columns:
           :start-after: .. term-full-name-unified-coalesced-start
           :end-before: .. term-full-name-unified-coalesced-end
 
-       Values in this column depend on fields that are tagged with the **Full Name** semantic.
-
        Also in: **Merged Customers**, **Unified Customer**
 
    * - **Gender**
@@ -3800,10 +3798,8 @@ The **Unified Customer** table contains the following columns:
    * - **Full Name**
      - String
      - .. include:: ../../shared/terms.rst
-          :start-after: .. term-full-name-start
-          :end-before: .. term-full-name-end
-
-       Values in this column depend on fields that are tagged with the **full-name** semantic.
+          :start-after: .. term-full-name-unified-coalesced-start
+          :end-before: .. term-full-name-unified-coalesced-end
 
        Also in: **Merged Customers**, **Unified Coalesced**
 
