@@ -156,7 +156,7 @@ Get details
 
            If both **extern_id** and **amperity_id** are provided, only **extern_id** will be used.
 
-       A phone number must be in `E164 format <https://en.wikipedia.org/wiki/E.164>`_.
+       A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
        All personally identifiable information (PII)—email, phone, address, and so on—is sent to |destination-name| as SHA-256 hashed data.
 
