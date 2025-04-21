@@ -1199,7 +1199,7 @@ External
 
 .. format-content-links-external-start
 
-Use external links for links that leave the Amperity docs site. These will generally take the form of a fully qualified URL: ``https://docs.amperity.com``.
+Use external links for links that leave the Amperity docs site. These will generally take the form of a fully qualified URL: ``https://www.amperity.com``.
 
 You must embed the external link naturally within a sentence:
 
@@ -1207,7 +1207,7 @@ You must embed the external link naturally within a sentence:
 
    `some link text here <https://www.amperity.com>`__ |ext_link|
 
-For example: `https://docs.amperity.com <https://www.amperity.com>`__ |ext_link|.
+For example: `https://www.amperity.com <https://www.amperity.com>`__ |ext_link|.
 
 Use a double underscore (``__``) at the end of the external link and append with ``|ext_link|``.
 
