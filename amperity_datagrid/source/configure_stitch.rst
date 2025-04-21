@@ -776,9 +776,7 @@ The following settings are available for advanced configuration of Stitch:
        :amperity.stitch.settings/pre-processing-profiles
        #{:normalize-gender :prioritize-src-gender},
        :amperity.stitch.settings/soft-trivial-dupe-semantic-exclusions #{},
-       :amperity.stitch.settings/soft-trivial-dupe-size-threshold 10,
-       :amperity.stitch.settings/supersized-cluster-min-size 500,
-       :amperity.stitch.settings/supersized-partition-max-depth 4}
+       :amperity.stitch.settings/soft-trivial-dupe-size-threshold 10}
 
    Advanced configuration settings are described in more detail below. You may also override general configuration settings.
 
@@ -1120,16 +1118,6 @@ These records are grouped together in the following ways:
 All four groups of records transitively connect into a single connected cluster with a size of 100.
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-end
-
-.. configure-stitch-advanced-profile-supersized-clusters-start
-
-A graph partition exists when a cluster has 64 (or more) connections. This value is configurable and may be higher or lower than 64. To change the value at which a graph partition exists, update the following advanced configuration setting:
-
-.. code-block:: clojure
-
-   :amperity.stitch.settings/supersized-cluster-min-size 64
-
-.. configure-stitch-advanced-profile-supersized-clusters-end
 
 
 .. _configure-stitch-advanced-profile-trivial-duplicates:
