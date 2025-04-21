@@ -1102,7 +1102,7 @@ Supersized clusters
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-start
 
-A graph partition, sometimes referred to as a "supersized cluster", is created when multiple transitive connections are present across a group of records. For example, individuals named Mary Johnson and Jeffrey Johnson with the following records:
+A supersized cluster typically results from transitive connections spanning what should be unrelated records. For example, individuals named Mary Johnson and Jeffrey Johnson with the following records:
 
 #. Mary Johnson, maryjohnson @gmail.com, 50 1st Avenue, New York, NY, with 50 connected records.
 #. Jeffrey Johnson, jeffjohnson @gmail.com, 50 1st Avenue, New York, NY, with 25 connected records.
@@ -1118,6 +1118,16 @@ These records are grouped together in the following ways:
 All four groups of records transitively connect into a single connected cluster with a size of 100.
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-end
+
+.. configure-stitch-advanced-profile-supersized-clusters-start
+
+Amperity defines a supersized cluster as any cluster with 500 (or more) connections. Stitch will partition supersized clusters into separate graph partitions. To change this threshold to a higher or lower value, update the following advanced configuration setting:
+
+.. code-block:: clojure
+
+   :amperity.stitch.settings/supersized-cluster-min-size 64
+
+.. configure-stitch-advanced-profile-supersized-clusters-end
 
 
 .. _configure-stitch-advanced-profile-trivial-duplicates:
