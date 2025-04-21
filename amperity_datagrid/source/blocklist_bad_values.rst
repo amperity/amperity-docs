@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. meta::
@@ -748,7 +748,7 @@ There are more ways to do blocklists:
 
 .. _bad-values-blocklist-advanced-per-data-source:
 
-Per-data source
+By data source
 --------------------------------------------------
 
 .. bad-values-blocklist-advanced-per-data-source-start
@@ -760,7 +760,7 @@ You can create a group of bad-values queries, with one query per data source. Th
 
 .. _bad-values-blocklist-advanced-per-database:
 
-Per-database
+By database
 --------------------------------------------------
 
 .. bad-values-blocklist-advanced-per-database-start

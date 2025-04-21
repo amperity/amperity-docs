@@ -11,6 +11,7 @@ Site index
 .. toctree::
    :hidden:
 
+   configure_stitch
    data_templates
    destination_active_campaign
    destination_acxiom
@@ -26,6 +27,7 @@ Site index
    destination_bazaarvoice
    destination_bluecore
    destination_braze
+   destination_business_intelligence_connect
    destination_cordial
    destination_criteo
    destination_criteo_retail_media
@@ -66,10 +68,11 @@ Site index
    destination_the_trade_desk
    destination_tiktok_ads
    destination_walmart_dsp
-   destination_webhook
    destination_vibes
    destination_yahoo_dsp
    destination_zendesk
    source_amazon_s3
    source_shopify
+   source_snowflake_aws.rst
+   source_snowflake_azure.rst
    start_here

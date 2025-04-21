@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. meta::
@@ -37,9 +37,9 @@ An automated workflow is configured to run these steps automatically, and then s
 .. workflows-about-end
 
 
-.. _workflows-courier-groups:
+.. _workflows-couriers:
 
-Courier groups
+Couriers
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -134,44 +134,81 @@ Wait for missing files
    :end-before: .. courier-groups-source-courier-alerts-end
 
 
-.. _workflows-orchestration-groups:
+.. _workflows-bridges:
 
-Orchestration groups
+Bridges
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-orchestration-group-start
-   :end-before: .. term-orchestration-group-end
+.. workflows-bridges-start
+
+A bridge may be configured to run as part of a scheduled workflow. Use the **Bridges** tab in the **Scheduled workflows** dialog to add one or more bridges.
+
+.. workflows-bridges-end
 
 
-.. _workflows-orchestration-group-run-after:
+.. _workflows-activations:
 
-Run after courier group
+Activations
+==================================================
+
+Activations are orchestrations, campaigns, and Profile API indexes that are configured to be run as part of a scheduled workflow.
+
+
+.. _workflows-orchestrations:
+
+Orchestrations
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/orchestration_groups.rst
-   :start-after: .. orchestration-groups-courier-group-constraints-start
-   :end-before: .. orchestration-groups-courier-group-constraints-end
+.. TODO: Set this to be an include.
 
-**To configure an orchestration group to run after a courier group**
+.. orchestrations-run-automatic-start
 
-.. include:: ../../amperity_reference/source/orchestration_groups.rst
-   :start-after: .. orchestration-groups-courier-group-constraints-steps-start
-   :end-before: .. orchestration-groups-courier-group-constraints-steps-end
+An orchestration can be configured to run after a courier when the run mode is set to **Automatic** and an active courier group is selected from the drop-down menu.
+
+.. image:: ../../images/mockup-activation-scheduled-orchestration.png
+   :width: 420 px
+   :alt: Add an orchestration to a scheduled workgroup.
+   :align: center
+   :class: no-scaled-link
+
+.. orchestrations-run-automatic-start
 
 
-.. _workflows-orchestration-group-run-on-schedule:
+.. _workflows-profile-api:
 
-Run on a schedule
+Profile API indexes
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/orchestration_groups.rst
-   :start-after: .. orchestration-groups-run-on-a-schedule-start
-   :end-before: .. orchestration-groups-run-on-a-schedule-end
+.. TODO: Set this to be an include.
 
-**To configure an orchestration group to run on a schedule**
+.. profile-api-enable-run-as-workflow-start
 
-.. include:: ../../amperity_reference/source/orchestration_groups.rst
-   :start-after: .. orchestration-groups-run-on-a-schedule-steps-start
-   :end-before: .. orchestration-groups-run-on-a-schedule-steps-end
+A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the drop-down menu.
 
+.. image:: ../../images/mockup-activation-scheduled-profile-api.png
+   :width: 420 px
+   :alt: Refresh a Profile API index as part of a scheduled workgroup.
+   :align: center
+   :class: no-scaled-link
+
+.. profile-api-enable-run-as-workflow-end
+
+
+.. _workflows-campaigns:
+
+Recurring campaigns
+--------------------------------------------------
+
+.. TODO: Set this to be an include.
+
+.. campaigns-run-as-part-of-workflow-start
+
+A recurring campaign can be configured to run as part of a scheduled workflow when the schedule is set to **Run as part of workflow** and an active courier group is selected from the drop-down menu.
+
+.. image:: ../../images/mockup-activation-scheduled-campaign.png
+   :width: 420 px
+   :alt: Add a campaign as part of a scheduled workgroup.
+   :align: center
+   :class: no-scaled-link
+
+.. campaigns-run-as-part-of-workflow-end

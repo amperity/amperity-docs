@@ -36,8 +36,8 @@ You can build queries that return |what-send|, along with returning additional p
    :class: no-scaled-link
 
 .. include:: ../../amperity_datagrid/source/destination_listrak.rst
-   :start-after: .. destination-listrak-howitworks-note-start
-   :end-before: .. destination-listrak-howitworks-note-end
+   :start-after: .. destination-listtrak-context-start
+   :end-before: .. destination-listtrak-context-end
 
 .. sendto-listrak-steps-to-send-start
 

@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. meta::
@@ -44,7 +44,7 @@ Manage sources
    :doc:`About Amperity Bridge <bridge>` |fa-index-separator| :doc:`Databricks <bridge_databricks>`
 
 **Pull data**
-   :doc:`Any SFTP site <source_sftp>` |fa-index-separator| :doc:`Acxiom <source_acxiom>` |fa-index-separator| :doc:`Adobe Analytics <source_adobe_analytics>` |fa-index-separator| :doc:`Adobe Campaign <source_adobe_campaign>` |fa-index-separator| :doc:`Adobe Commerce <source_adobe_commerce>` |fa-index-separator| :doc:`Adobe Customer Attributes <source_adobe_customer_attributes>` |fa-index-separator| :doc:`Amazon Kinesis Data Firehose <source_amazon_kinesis_data_firehose>` |fa-index-separator| :doc:`Amazon S3 <source_amazon_s3>` |fa-index-separator| :doc:`Attentive Mobile <source_attentive_mobile>` |fa-index-separator| :doc:`Azure Blob Storage <source_azure_blob_storage>` |fa-index-separator| :doc:`BazaarVoice <source_bazaarvoice>` |fa-index-separator| :doc:`Bluecore <source_bluecore>` |fa-index-separator| :doc:`Braze <source_braze>` |fa-index-separator| :doc:`Camelot SMM <source_camelot_smm>` |fa-index-separator| :doc:`Cheetah Digital <source_cheetah_digital>` |fa-index-separator| :doc:`Cordial <source_cordial>` |fa-index-separator| :doc:`Cross Country Computer <source_cross_country_computer>` |fa-index-separator| :doc:`Dynamic Yield <source_dynamic_yield>` |fa-index-separator| :doc:`Emarsys <source_emarsys>` |fa-index-separator| :doc:`Epsilon Abacus <source_epsilon_abacus>` |fa-index-separator| :doc:`Epsilon Conversant <source_epsilon_conversant>` |fa-index-separator| :doc:`Epsilon Targeting <source_epsilon_targeting>` |fa-index-separator| :doc:`Experian <source_experian>` |fa-index-separator| :doc:`Google Analytics <source_google_analytics>` |fa-index-separator| :doc:`Google Cloud Storage <source_google_cloud_storage>` |fa-index-separator| :doc:`Heap <source_heap>` |fa-index-separator| :doc:`HubSpot <source_hubspot>` |fa-index-separator| :doc:`Infutor <source_infutor>` |fa-index-separator| :doc:`Koupon Media <source_koupon_media>` |fa-index-separator| :doc:`Klaviyo <source_klaviyo>` |fa-index-separator| :doc:`Kustomer <source_kustomer>` |fa-index-separator| :doc:`Listrak <source_listrak>` |fa-index-separator| :doc:`Microsoft Dataverse <source_microsoft_dataverse>` |fa-index-separator| :doc:`Monetate <source_monetate>` |fa-index-separator| :doc:`Neustar <source_neustar>` |fa-index-separator| :doc:`Optimizely <source_optimizely>` |fa-index-separator| :doc:`Oracle Data Cloud <source_oracle_data_cloud>` |fa-index-separator| :doc:`Oracle Opera <source_oracle_opera>` |fa-index-separator| :doc:`Oracle Responsys <source_oracle_responsys>` |fa-index-separator| :doc:`PowerReviews <source_powerreviews>` |fa-index-separator| :doc:`PebblePost <source_pebblepost>` |fa-index-separator| :doc:`Quad <source_quad>` |fa-index-separator| :doc:`RR Donnelly <source_rr_donnelly>` |fa-index-separator| :doc:`Sailthru <source_sailthru>` |fa-index-separator| :doc:`Salesforce Commerce Cloud <source_salesforce_commerce_cloud>` |fa-index-separator| :doc:`Salesforce Marketing Cloud <source_salesforce_marketing_cloud>` |fa-index-separator| :doc:`Salesforce Pardot <source_salesforce_pardot>` |fa-index-separator| :doc:`Salesforce Sales Cloud <source_salesforce_sales_cloud>` |fa-index-separator| :doc:`SFTP (in Amperity) <source_sftp_amperity>` |fa-index-separator| :doc:`SMG <source_smg>` |fa-index-separator| :doc:`Snowflake (on Amazon AWS) <source_snowflake_aws>` |fa-index-separator| :doc:`Snowflake (on Microsoft Azure) <source_snowflake_azure>` |fa-index-separator| :doc:`SoundCommerce <source_soundcommerce>` |fa-index-separator| :doc:`Square <source_square>` |fa-index-separator| :doc:`Vibes <source_vibes>` |fa-index-separator| :doc:`Zendesk <source_zendesk>`
+   :doc:`Any SFTP site <source_sftp>` |fa-index-separator| :doc:`Acxiom <source_acxiom>` |fa-index-separator| :doc:`Adobe Analytics <source_adobe_analytics>` |fa-index-separator| :doc:`Adobe Campaign <source_adobe_campaign>` |fa-index-separator| :doc:`Adobe Commerce <source_adobe_commerce>` |fa-index-separator| :doc:`Adobe Customer Attributes <source_adobe_customer_attributes>` |fa-index-separator| :doc:`Amazon Kinesis Data Firehose <source_amazon_kinesis_data_firehose>` |fa-index-separator| :doc:`Amazon S3 <source_amazon_s3>` |fa-index-separator| :doc:`Attentive Mobile <source_attentive_mobile>` |fa-index-separator| :doc:`Azure Blob Storage <source_azure_blob_storage>` |fa-index-separator| :doc:`BazaarVoice <source_bazaarvoice>` |fa-index-separator| :doc:`Bluecore <source_bluecore>` |fa-index-separator| :doc:`Braze <source_braze>` |fa-index-separator| :doc:`Camelot SMM <source_camelot_smm>` |fa-index-separator| :doc:`Cheetah Digital <source_cheetah_digital>` |fa-index-separator| :doc:`Cordial <source_cordial>` |fa-index-separator| :doc:`Cross Country Computer <source_cross_country_computer>` |fa-index-separator| :doc:`Dynamic Yield <source_dynamic_yield>` |fa-index-separator| :doc:`Emarsys <source_emarsys>` |fa-index-separator| :doc:`Epsilon Abacus <source_epsilon_abacus>` |fa-index-separator| :doc:`Epsilon Conversant <source_epsilon_conversant>` |fa-index-separator| :doc:`Epsilon Targeting <source_epsilon_targeting>` |fa-index-separator| :doc:`Experian <source_experian>` |fa-index-separator| :doc:`Google Analytics <source_google_analytics>` |fa-index-separator| :doc:`Google Cloud Storage <source_google_cloud_storage>` |fa-index-separator| :doc:`Heap <source_heap>` |fa-index-separator| :doc:`HubSpot <source_hubspot>` |fa-index-separator| :doc:`Infutor <source_infutor>` |fa-index-separator| :doc:`Koupon Media <source_koupon_media>` |fa-index-separator| :doc:`Klaviyo <source_klaviyo>` |fa-index-separator| :doc:`Kustomer <source_kustomer>` |fa-index-separator| :doc:`Listrak <source_listrak>` |fa-index-separator| :doc:`Microsoft Dataverse <source_microsoft_dataverse>` |fa-index-separator| :doc:`Neustar <source_neustar>` |fa-index-separator| :doc:`Optimizely <source_optimizely>` |fa-index-separator| :doc:`Oracle Data Cloud <source_oracle_data_cloud>` |fa-index-separator| :doc:`Oracle Opera <source_oracle_opera>` |fa-index-separator| :doc:`Oracle Responsys <source_oracle_responsys>` |fa-index-separator| :doc:`PowerReviews <source_powerreviews>` |fa-index-separator| :doc:`PebblePost <source_pebblepost>` |fa-index-separator| :doc:`Quad <source_quad>` |fa-index-separator| :doc:`RR Donnelly <source_rr_donnelly>` |fa-index-separator| :doc:`Sailthru <source_sailthru>` |fa-index-separator| :doc:`Salesforce Commerce Cloud <source_salesforce_commerce_cloud>` |fa-index-separator| :doc:`Salesforce Marketing Cloud <source_salesforce_marketing_cloud>` |fa-index-separator| :doc:`Salesforce Pardot <source_salesforce_pardot>` |fa-index-separator| :doc:`Salesforce Sales Cloud <source_salesforce_sales_cloud>` |fa-index-separator| :doc:`SFTP (in Amperity) <source_sftp_amperity>` |fa-index-separator| :doc:`SMG <source_smg>` |fa-index-separator| :doc:`SoundCommerce <source_soundcommerce>` |fa-index-separator| :doc:`Square <source_square>` |fa-index-separator| :doc:`Vibes <source_vibes>` |fa-index-separator| :doc:`Zendesk <source_zendesk>`
 
 :doc:`Recommendations for sending data to Amperity <send_data>`
 
@@ -164,13 +164,13 @@ Configure destinations
    :doc:`Active Campaign <destination_active_campaign>` |fa-index-separator| :doc:`Adobe Campaign <destination_adobe_campaign>` |fa-index-separator| :doc:`Airship <destination_airship>` |fa-index-separator| :doc:`Amazon Pinpoint <destination_amazon_pinpoint>` |fa-index-separator| :doc:`Braze <destination_braze>` |fa-index-separator| :doc:`Cheetah Digital <destination_cheetah_digital>` |fa-index-separator| :doc:`Cordial <destination_cordial>` |fa-index-separator| :doc:`Dynamic Yield <destination_dynamic_yield>` |fa-index-separator| :doc:`HubSpot <destination_hubspot>` |fa-index-separator| :doc:`Klaviyo <destination_klaviyo>` |fa-index-separator| :doc:`Listrak <destination_listrak>` |fa-index-separator| :doc:`LiveRamp <destination_liveramp>` |fa-index-separator| :doc:`Mailchimp <destination_mailchimp>` |fa-index-separator| :doc:`PebblePost <destination_pebblepost>` |fa-index-separator| :doc:`Sailthru <destination_sailthru>` |fa-index-separator| :doc:`Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>`
 
 **Business operations**
-   :doc:`Acxiom <destination_acxiom>` |fa-index-separator| :doc:`Adobe Customer Attributes <destination_adobe_customer_attributes>` |fa-index-separator| :doc:`Adobe Experience Platform <destination_adobe_aep>` |fa-index-separator| :doc:`Adobe Marketo <destination_adobe_marketo>` |fa-index-separator| :doc:`AWS Connect <destination_aws_connect>` |fa-index-separator| :doc:`Attentive <destination_attentive_mobile>` |fa-index-separator| :doc:`BazaarVoice <destination_bazaarvoice>` |fa-index-separator| :doc:`Bluecore <destination_bluecore>` |fa-index-separator| :doc:`Dynamics 365 Marketing <destination_dynamics_365_marketing>` |fa-index-separator| :doc:`Evocalize <destination_evocalize>` |fa-index-separator| :doc:`Experian <destination_experian>` |fa-index-separator| :doc:`Infutor <destination_infutor>` |fa-index-separator| :doc:`Koupon Media <destination_koupon_media>` |fa-index-separator| :doc:`Monetate <destination_monetate>` |fa-index-separator| :doc:`Neustar <destination_neustar>` |fa-index-separator| :doc:`Optimizely <destination_optimizely>` |fa-index-separator| :doc:`Oracle Data Cloud <destination_oracle_data_cloud>` |fa-index-separator| :doc:`Oracle Responsys <destination_oracle_responsys>` |fa-index-separator| :doc:`Persado <destination_persado>` |fa-index-separator| :doc:`PowerReviews <destination_powerreviews>` |fa-index-separator| :doc:`Salesforce Sales Cloud <destination_salesforce_sales_cloud>` |fa-index-separator| :doc:`Throtle <destination_throtle>` |fa-index-separator| :doc:`Tulip <destination_tulip>` |fa-index-separator| :doc:`Vibes <destination_vibes>` |fa-index-separator| :doc:`Zendesk <destination_zendesk>`
+   :doc:`Acxiom <destination_acxiom>` |fa-index-separator| :doc:`Adobe Customer Attributes <destination_adobe_customer_attributes>` |fa-index-separator| :doc:`Adobe Experience Platform <destination_adobe_aep>` |fa-index-separator| :doc:`Adobe Marketo <destination_adobe_marketo>` |fa-index-separator| :doc:`AWS Connect <destination_aws_connect>` |fa-index-separator| :doc:`Attentive <destination_attentive_mobile>` |fa-index-separator| :doc:`BazaarVoice <destination_bazaarvoice>` |fa-index-separator| :doc:`Bluecore <destination_bluecore>` |fa-index-separator| :doc:`Dynamics 365 Marketing <destination_dynamics_365_marketing>` |fa-index-separator| :doc:`Evocalize <destination_evocalize>` |fa-index-separator| :doc:`Experian <destination_experian>` |fa-index-separator| :doc:`Infutor <destination_infutor>` |fa-index-separator| :doc:`Koupon Media <destination_koupon_media>` |fa-index-separator| :doc:`Neustar <destination_neustar>` |fa-index-separator| :doc:`Optimizely <destination_optimizely>` |fa-index-separator| :doc:`Oracle Data Cloud <destination_oracle_data_cloud>` |fa-index-separator| :doc:`Oracle Responsys <destination_oracle_responsys>` |fa-index-separator| :doc:`Persado <destination_persado>` |fa-index-separator| :doc:`PowerReviews <destination_powerreviews>` |fa-index-separator| :doc:`Salesforce Sales Cloud <destination_salesforce_sales_cloud>` |fa-index-separator| :doc:`Throtle <destination_throtle>` |fa-index-separator| :doc:`Tulip <destination_tulip>` |fa-index-separator| :doc:`Vibes <destination_vibes>` |fa-index-separator| :doc:`Zendesk <destination_zendesk>`
 
 **Analytics**
-   :doc:`BI Connect <destination_business_intelligence_connect>` |fa-index-separator| :doc:`Domo <destination_domo>` |fa-index-separator| :doc:`Microsoft Dynamics <destination_microsoft_dynamics>` |fa-index-separator| :doc:`Microsoft Power BI <destination_power_bi>` |fa-index-separator| :doc:`Tableau <destination_tableau>`
+   :doc:`Domo <destination_domo>` |fa-index-separator| :doc:`Microsoft Dynamics <destination_microsoft_dynamics>` |fa-index-separator| :doc:`Microsoft Power BI <destination_power_bi>` |fa-index-separator| :doc:`Tableau <destination_tableau>`
 
 **Cloud data**
-   :doc:`Amazon Redshift <destination_amazon_redshift>` |fa-index-separator| :doc:`Azure Synapse <destination_azure_synapse>` |fa-index-separator| :doc:`Google BigQuery <destination_google_bigquery>` |fa-index-separator| :doc:`Microsoft Dataverse <destination_microsoft_dataverse>` |fa-index-separator| :doc:`Snowflake (on Amazon AWS) <destination_snowflake_aws>` |fa-index-separator| :doc:`Snowflake (on Azure) <destination_snowflake_azure>`
+   :doc:`Amazon Redshift <destination_amazon_redshift>` |fa-index-separator| :doc:`Azure Synapse <destination_azure_synapse>` |fa-index-separator| :doc:`Google BigQuery <destination_google_bigquery>` |fa-index-separator| :doc:`Microsoft Dataverse <destination_microsoft_dataverse>`
 
 **Custom**
    :doc:`Webhook <destination_webhook>`
@@ -183,11 +183,11 @@ Automate workflows
 
 :doc:`About workflows <workflows>`
 
-**Courier groups**
-   :ref:`About courier groups <workflows-courier-groups>` |fa-index-separator| :ref:`Duration thresholds <workflows-courier-group-duration-thresholds>` |fa-index-separator| :ref:`Missing files <workflows-courier-group-missing-files>`
+**Couriers**
+   :ref:`About couriers <workflows-couriers>` |fa-index-separator| :ref:`Duration thresholds <workflows-courier-group-duration-thresholds>` |fa-index-separator| :ref:`Missing files <workflows-courier-group-missing-files>`
 
-**Orchestration groups**
-   :ref:`About orchestration groups <workflows-orchestration-groups>` |fa-index-separator|  :ref:`Run after courier group <workflows-orchestration-group-run-after>` |fa-index-separator| :ref:`Run on a schedule <workflows-orchestration-group-run-on-schedule>`
+**Automate workflows**
+   :ref:`Couriers <workflows-couriers>` |fa-index-separator| :ref:`Bridges <workflows-bridges>` |fa-index-separator| :ref:`About activations <workflows-activations>` |fa-index-separator| :ref:`Orchestrations <workflows-orchestrations>` |fa-index-separator| :ref:`Profile API indexes <workflows-profile-api>` |fa-index-separator| :ref:`Recurring campaigns <workflows-campaigns>`
 
 
 .. Hide the TOC from this file.
@@ -226,27 +226,32 @@ Automate workflows
    destination_amazon_redshift
    destination_amazon_s3
    destination_attentive_mobile
+   destination_attentive_mobile_api
    destination_aws_connect
    destination_azure_blob_storage
    destination_azure_synapse
    destination_bazaarvoice
    destination_bluecore
    destination_braze
-   destination_business_intelligence_connect
+   destination_camelot_smm
    destination_cheetah_digital
    destination_cordial
    destination_criteo
    destination_criteo_retail_media
+   destination_cross_country_computer
    destination_domo
    destination_dv360
    destination_dynamic_yield
    destination_dynamics_365_marketing
+   destination_epsilon_abacus
+   destination_epsilon_conversant
+   destination_epsilon_targeting
    destination_evocalize
    destination_experian
-   destination_meta_ads_manager
    destination_google_ads
    destination_google_bigquery
    destination_google_cloud_storage
+   destination_google_customer_match
    destination_hubspot
    destination_infutor
    destination_kibo
@@ -255,28 +260,31 @@ Automate workflows
    destination_listrak
    destination_liveramp
    destination_mailchimp
+   destination_meta_ads_manager
    destination_microsoft_ads
    destination_microsoft_dataverse
    destination_microsoft_dynamics
-   destination_monetate
    destination_neustar
    destination_optimizely
    destination_oracle_data_cloud
    destination_oracle_eloqua
    destination_oracle_responsys
+   destination_panda_printing
    destination_pebblepost
    destination_persado
    destination_pinterest
    destination_power_bi
    destination_powerreviews
+   destination_quad
+   destination_rr_donnelly
    destination_sailthru
    destination_salesforce_marketing_cloud
    destination_salesforce_marketing_cloud_personalization
    destination_salesforce_sales_cloud
    destination_sftp
+   destination_smg
    destination_snapchat
-   destination_snowflake_aws
-   destination_snowflake_azure
+   destination_soundcommerce
    destination_tableau
    destination_tableau_amazon_redshift
    destination_tableau_azure_synapse_analytics
@@ -284,6 +292,7 @@ Automate workflows
    destination_tableau_google_big_query
    destination_tableau_snowflake
    destination_the_trade_desk
+   destination_the_trade_desk_3p
    destination_throtle
    destination_tiktok_ads
    destination_tulip
@@ -293,6 +302,11 @@ Automate workflows
    destination_yahoo_dsp
    destination_zendesk
    domain_data
+   events_criteo
+   events_google_enhanced_conversions
+   events_meta_ads_manager
+   events_the_trade_desk
+   events_tiktok_ads
    feeds
    filtered_360_databases
    graph_database
@@ -362,9 +376,8 @@ Automate workflows
    source_salesforce_sales_cloud
    source_sftp_amperity
    source_sftp
+   source_shopify
    source_smg
-   source_snowflake_aws
-   source_snowflake_azure
    source_soundcommerce
    source_square
    source_vibes

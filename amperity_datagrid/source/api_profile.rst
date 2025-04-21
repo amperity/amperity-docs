@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. meta::
@@ -518,6 +518,7 @@ The Profile API must be configured for use in Amperity. This is done in a series
 #. :ref:`profile-api-enable-copy-tenant-id`
 #. :ref:`profile-api-enable-validate-endpoint`
 #. :ref:`profile-api-enable-build-usecase`
+#. :ref:`profile-api-enable-run-as-workflow`
 
 .. profile-api-enable-api-end
 
@@ -835,6 +836,24 @@ After you have verified that a specific endpoint is accessible and that it conta
 The Amperity Profile API can be accessed using cURL, Postman, or any other mechanism that can access a REST API and provide the access token that is required by the request.
 
 .. profile-api-enable-build-usecase-end
+
+
+.. _profile-api-enable-run-as-workflow:
+
+Run as part of a workflow
+--------------------------------------------------
+
+.. profile-api-enable-run-as-workflow-start
+
+A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the drop-down menu.
+
+.. image:: ../../images/mockup-activation-scheduled-profile-api.png
+   :width: 420 px
+   :alt: Refresh a Profile API index as part of a scheduled workgroup.
+   :align: center
+   :class: no-scaled-link
+
+.. profile-api-enable-run-as-workflow-end
 
 
 .. _profile-api-response-times:

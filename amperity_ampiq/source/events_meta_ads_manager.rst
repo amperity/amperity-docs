@@ -128,6 +128,14 @@ Add orchestration
    :start-after: .. sendtos-ask-to-configure-start
    :end-before: .. sendtos-ask-to-configure-end
 
+.. admonition:: What is a dataset ID?
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-meta-ads-manager-dataset-id-start
+      :end-before: .. setting-meta-ads-manager-dataset-id-end
+
+   A dataset ID may need to be configured for the orchestration.
+
 **To add an orchestration**
 
 .. include:: ../../shared/sendtos.rst
@@ -148,15 +156,11 @@ Run orchestration
    :start-after: .. destinations-oauth-warning-about-reauthorize-start
    :end-before: .. destinations-oauth-warning-about-reauthorize-end
 
-**To add an orchestration**
+**To run the orchestration**
 
 .. include:: ../../shared/sendtos.rst
-   :start-after: .. sendtos-add-orchestration-generic-start
-   :end-before: .. sendtos-add-orchestration-generic-end
-
-.. include:: ../../amperity_amp360/source/destination_meta_ads_manager.rst
-   :start-after: .. sendto-meta-ads-manager-run-orchestration-warning-start
-   :end-before: .. sendto-meta-ads-manager-run-orchestration-warning-end
+   :start-after: .. sendtos-run-orchestration-steps-start
+   :end-before: .. sendtos-run-orchestration-steps-end
 
 
 .. _events-meta-ads-manager-conversions:
@@ -164,6 +168,6 @@ Run orchestration
 Conversions API parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
-   :start-after: .. destination-meta-ads-manager-conversion-api-parameters-start
-   :end-before: .. destination-meta-ads-manager-conversion-api-parameters-end
+.. include:: ../../amperity_datagrid/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-conversion-api-parameters-start
+   :end-before: .. events-meta-ads-manager-conversion-api-parameters-end

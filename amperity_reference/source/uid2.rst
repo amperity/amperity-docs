@@ -14,7 +14,7 @@
         About Unified ID 2.0 (UID2)
 
 ==================================================
-About Unified ID 2.0
+About Unified ID 2.0 (UID2)
 ==================================================
 
 .. uid2-overview-start

@@ -254,6 +254,6 @@ Facebook Marketing API keys
 Conversions API parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
-   :start-after: .. destination-meta-ads-manager-conversion-api-parameters-start
-   :end-before: .. destination-meta-ads-manager-conversion-api-parameters-end
+.. include:: ../../amperity_datagrid/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-conversion-api-parameters-start
+   :end-before: .. events-meta-ads-manager-conversion-api-parameters-end

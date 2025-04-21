@@ -54,10 +54,8 @@ This section describes tasks related to managing orchestrations in Amperity:
 * :ref:`orchestrations-assign-query`
 * :ref:`orchestrations-delete`
 * :ref:`orchestrations-edit`
+* :ref:`orchestrations-run-automatic`
 * :ref:`orchestrations-run-manually`
-* :ref:`orchestrations-run-scheduled-always-run`
-* :ref:`orchestrations-run-scheduled-wait-for-changes`
-* :ref:`orchestrations-run-unscheduled-wait-for-changes`
 * :ref:`orchestrations-view-notifications`
 
 .. orchestrations-howtos-end
@@ -202,12 +200,28 @@ Amperity sends the results to any number of downstream workflows via orchestrati
 
 Orchestrations can be run in the following ways:
 
-* :ref:`Manually <orchestrations-run-manually>`
-* :ref:`Scheduled, always run <orchestrations-run-scheduled-always-run>`
-* :ref:`Scheduled, but wait for upstream data changes <orchestrations-run-scheduled-wait-for-changes>`
-* :ref:`Wait for upstream data changes <orchestrations-run-unscheduled-wait-for-changes>`
+* :ref:`Automatic <orchestrations-run-automatic>`
+* :ref:`Manual <orchestrations-run-manually>`
 
 .. orchestrations-run-options-end
+
+
+.. _orchestrations-run-automatic:
+
+Automatically
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. orchestrations-run-automatic-start
+
+An orchestration can be configured to run after a courier when the run mode is set to **Automatic** and an active courier group is selected from the drop-down menu.
+
+.. image:: ../../images/mockup-activation-scheduled-orchestration.png
+   :width: 420 px
+   :alt: Add an orchestration to a scheduled workgroup.
+   :align: center
+   :class: no-scaled-link
+
+.. orchestrations-run-automatic-start
 
 
 .. _orchestrations-run-manually:

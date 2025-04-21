@@ -47,7 +47,7 @@ Consumption categories
 
 .. amps-consumption-categories-start
 
-Amps consumption is tracked in 5 categories---Sources, Stitch, Databases, Analytics, and Activation---and is broken down into 12 feature areas.
+Amps consumption is tracked in 5 categories---Sources, Stitch, Databases, Analytics, and Activation---and is broken down into 18 feature areas.
 
 .. list-table::
    :widths: 30 70
@@ -68,21 +68,33 @@ Amps consumption is tracked in 5 categories---Sources, Stitch, Databases, Analyt
    * - **Stitch**
      - Stitch
 
+       Stitch report
+
    * - **Databases**
      - Databases
 
+       Real time tables
+
    * - **Analytics**
-     - BI Connect
+     - Advanced analytics
+
+       BI Connect
 
        Predictive modeling
 
-       Segmentation (queries and segments)
+       Queries
+
+       Segments
+
+       Spark SQL sessions
 
    * - **Activation**
      - Campaigns
 
        Orchestrations
 
+       Premium connectors
+       
        Profile API
 
 .. amps-consumption-categories-end
@@ -260,6 +272,38 @@ Monitor Amps consumption for the **Predictive modeling** feature by:
 
 .. amps-consumption-feature-predictive-modeling-end
 
+.. _destinations-premium-connectors:
+
+Premium connectors
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. destinations-premium-connectors-start
+
+The following set of connectors are designated as premium connectors. Using any of these connectors incurs an Amps surcharge for that month.
+
+* Amazon Ads
+* Criteo Audience API
+* Criteo Retail Audience API
+* Facebook
+* Google Ads
+* Google Customer Match
+* Google Enhanced Conversions
+* LiveRamp
+* Meta Ads Offline Events
+* Microsoft Ads
+* Microsoft Invest
+* Neustar
+* Pinterest
+* Snapchat
+* The Trade Desk
+* The Trade Desk 3P Marketplace
+* The Trade Desk Offline Events
+* TikTok Ads
+* TikTok Ads Offline Events
+* Yahoo DSP
+
+.. destinations-premium-connectors-end
+
 
 .. _amps-consumption-feature-profile-api:
 
@@ -270,15 +314,11 @@ Profile API
 
 Amps consumption for the **Profile API** feature is determined by:
 
-* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint
-* The frequency at which each Profile API index is refreshed
-* The width of each Profile API index (where width refers to the number of columns, or response parameters, that are available in the index; wider indexes consume more Amps)
-* The number of indexes that are refreshed automatically by a courier group
+* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint.
 
 Monitor Amps consumption for the **Profile API** feature by:
 
-* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows, including not only the number of indexes, but also including the amount data that is made available from each index; Amps consumption is affected by the length of time it takes to run the query to generate the index and also the number of fields that are added to the index. `Complex queries will consume more Amps; queries that return large numbers of columns and/or rows will consume more Amps <https://docs.amperity.com/datagrid/api_profile.html#index-response-times>`__
-* Monitoring the history of Profile API index refreshes from the **Workflows** page
+* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows.
 
 .. amps-consumption-feature-profile-api-end
 
@@ -344,7 +384,7 @@ Amps consumption for the **Source transforms** feature is determined by:
 * Changes to source transform runtimes often cause variable Amps consumption
 * Larger compute resources
 
-.. note:: Source transforms were previously referred to as "custom domain tables".
+.. note:: Source transforms are also referred to as "custom domain tables".
 
 Monitor Amps consumption for the **Source transforms** feature by:
 

@@ -17,6 +17,8 @@
 Send data to Snowflake on Amazon AWS
 ==================================================
 
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_snowflake_aws.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-snowflake-start
    :end-before: .. term-snowflake-end
@@ -109,9 +111,11 @@ Get details
 Snowflake secure data sharing
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/destination_business_intelligence_connect.rst
-   :start-after: .. destination-bic-request-to-enable-data-sharing-start
-   :end-before: .. destination-bic-request-to-enable-data-sharing-end
+.. destination-bic-request-to-enable-data-sharing-start
+
+Snowflake `secure data sharing <https://docs.snowflake.com/en/user-guide/data-sharing-intro.html>`__ |ext_link| is not enabled by default. If your organization wants to use secure data sharing, your instance of Snowflake must be in the same region as the Amperity instance.
+
+.. destination-bic-request-to-enable-data-sharing-end
 
 
 .. _destination-snowflake-aws-configure-objects:

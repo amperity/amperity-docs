@@ -412,6 +412,64 @@ Amperity can sync customer profiles to your Databricks account.
 .. quickstart-sync-to-databricks-end
 
 
+.. _quickstart-merge-policy:
+
+Merge policy
+==================================================
+
+.. TODO: Currently in review
+
+.. merge-policy-intro-start
+
+Merge policy defines how the **Merged Customers** table will be maintained by Amperity. The **Merged Customers** table collects PII data from all source datasets, and then collapses the best data into single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
+
+Use merge policy to tell Amperity which tables are the most reliable sources of customer profile data.
+
+.. merge-policy-intro-end
+
+.. quickstart-merge-policy-steps-start
+
+**To define merge policy**
+
+.. quickstart-merge-policy-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - Source priority can be defined for names, physical addresses, email addresses, phone numbers, birthdates, and gender.
+
+       To configure source priority for profile attributes open the **Profile Builder**. For each profile attribute, use the |fa-drag| icon to move the list of tables into the desired order, and then click **Save**.
+
+       .. admonition:: How source priority works
+
+          Tables A, B, and C all contain a field with email addresses to which the **email** semantic tag is applied. They are ranked 1) table A, 2) table B, and 3) table C.
+
+          If the value in table A is "justin@email.com" then the priority for email address is table A and the value "justin@email.com".
+
+          If the value in table A is NULL and the value in table B is "justinc@email.com" then the priority for email address is table B and the value "justinc@email.com".
+
+          If the values in tables A and B are NULL and the value in table C is "justin.c@email.com" then the priority for email address is table C and the value "justin.c@email.com".
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - Source table precedence can also be defined for data sources that contain semantic tags that are not grouped by profile attribute. Precedence determines which tables are more likely to contain high quality customer profile data, as determined by your brand.
+
+       The list of domain tables under **Source_Priority** must contain *at least one* domain table that has been made available to Stitch *and* contains fields to which profile semantic tags have been applied.
+
+       To configure source table precedence, open the **Profile Builder**. Under **Source table precedence**, use the |fa-drag| icon to move the list of tables into the desired order, and then click **Save**.
+
+.. quickstart-merge-policy-steps-end
+
+
 .. _quickstart-conclusion:
 
 Conclusion and next steps

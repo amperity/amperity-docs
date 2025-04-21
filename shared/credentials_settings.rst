@@ -1312,6 +1312,11 @@ A client ID and client secret that has permission to access your instance of |de
 
 .. credential-microsoft-dynamics-client-id-and-secret-end
 
+.. credential-microsoft-dynamics-client-id-and-secret-expiration-start
+
+The expiration date for the client secret must be set to "expires in 1 year", "expires in 2 years", or "never expires".
+
+.. credential-microsoft-dynamics-client-id-and-secret-expiration-end
 
 
 

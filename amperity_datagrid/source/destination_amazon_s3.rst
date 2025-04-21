@@ -1,30 +1,23 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
+
 
 
 .. |destination-name| replace:: Amazon S3
-.. |plugin-name| replace:: Amazon S3
-.. |what-send| replace:: files
-.. |email-plus-send| replace:: additional attributes
-.. |filter-the-list| replace:: "ama"
-.. |s3-bucket-name| replace:: "Amazon S3"
-.. |s3-prefix| replace:: "upload"
-.. |file-format| replace:: Apache Parquet (recommended), CSV, TSV, or PSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_amazon_s3|
-.. |channel-link| replace:: |campaign_amazon_s3|
+.. |plugin-name| replace:: "Amazon S3"
+.. |credential-type| replace:: "iam-credential" or "iam-role-to-role"
+.. |required-credentials| replace:: "iam-credential" or "iam-role-to-role"
+.. |what-send| replace:: Apache Parquet (recommended), CSV, JSON, NDJSON, PSV, or TSV files
+.. |where-send| replace:: any Amazon S3 bucket
+.. |filter-the-list| replace:: "amaz"
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to any Amazon S3 bucket.
+        Configure Amperity to send data in any file format to an Amazon S3 bucket.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to any Amazon S3 bucket.
+        Configure Amperity to send data in any file format to an Amazon S3 bucket.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -34,21 +27,15 @@
 Send data to Amazon S3
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-amazon-s3-start
-   :end-before: .. term-amazon-s3-end
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_amazon_s3.html>`__ |ext_link|.
 
-.. destination-amazon-s3-steps-to-send-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-amazon-s3-about-start
+   :end-before: .. setting-amazon-s3-about-end
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-amazon-s3-get-details>`
-#. :ref:`Add destination <destination-amazon-s3-add-destination>`
-#. :ref:`Add data template <destination-amazon-s3-add-data-template>`
-
-.. destination-amazon-s3-steps-to-send-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-file-configure-start
+   :end-before: .. setting-common-file-configure-end
 
 
 .. _destination-amazon-s3-get-details:
@@ -56,9 +43,11 @@ Send data to Amazon S3
 Get details
 ==================================================
 
-.. destination-amazon-s3-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-The |destination-name| destination requires the following configuration details:
+.. destination-amazon-s3-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -66,62 +55,106 @@ The |destination-name| destination requires the following configuration details:
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The name of the S3 bucket to which Amperity will send data.
+     - **Amazon S3 bucket details**
+
+       You will need to know the following details about the |destination-name| bucket to which Amperity will send data.
+
+       #. The name of the |destination-name| bucket. An S3 prefix is sometimes required.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - For :ref:`cross-account role assumption <destination-amazon-s3-credentials-role-to-role>` you will need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
+     - **Credential types and settings**
 
-       .. note:: The values for the **Amperity Role ARN** and the **External ID** fields are provided automatically.
+       Amperity supports the following credential types for |destination-name|:
 
-       .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-end
+       #. :ref:`IAM role-to-role (recommended) <destination-amazon-s3-credentials-role-to-role>`
 
-       .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-end
+          For cross-account role assumption you will need the value for the IAM role ARN that allows Amperity to add data to an Amazon S3 bucket that is managed by your brand.
 
-.. source-amazon-s3-get-details-end
+          The values for the **Amperity Role ARN** and the **External ID** fields are provided by Amperity.
+
+       #. :ref:`IAM credentials <destination-amazon-s3-credentials-iam>`
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: left
+          :class: no-scaled-link
+     - **Required configuration settings**
+
+       **File format**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
+
+       .. note::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-optional-settings-start
+             :end-before: .. setting-common-optional-settings-end
+
+.. destination-amazon-s3-get-details-table-end
+
+
+.. _destination-amazon-s3-credentials:
+
+Configure credentials
+==================================================
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
+
+Amperity supports the following credential types for |destination-name|:
+
+#. :ref:`IAM role-to-role (recommended) <destination-amazon-s3-credentials-role-to-role>`
+#. :ref:`IAM credentials <destination-amazon-s3-credentials-iam>`
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
 
 .. _destination-amazon-s3-credentials-role-to-role:
 
-Configure cross-account roles
-==================================================
+IAM role-to-role
+--------------------------------------------------
 
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-cross-account-roles-overview-start
-   :end-before: .. sources-amazon-s3-cross-account-roles-overview-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-amazon-s3-cross-account-roles-overview-start
+   :end-before: .. credential-amazon-s3-cross-account-roles-overview-end
 
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-cross-account-roles-context-start
-   :end-before: .. sources-amazon-s3-cross-account-roles-context-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-amazon-s3-cross-account-roles-context-start
+   :end-before: .. credential-amazon-s3-cross-account-roles-context-end
 
-.. note::
+.. note:: 
 
-   .. include:: ../../shared/amazon-s3.rst
-      :start-after: .. sources-amazon-s3-cross-account-roles-setup-start
-      :end-before: .. sources-amazon-s3-cross-account-roles-setup-end
+   .. include:: ../../shared/credentials_settings.rst
+      :start-after: .. credential-amazon-s3-cross-account-roles-setup-start
+      :end-before: .. credential-amazon-s3-cross-account-roles-setup-end
 
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-aws-access-point-start
-   :end-before: .. sources-amazon-s3-aws-access-point-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-amazon-s3-aws-access-point-start
+   :end-before: .. credential-amazon-s3-aws-access-point-end
 
 **To configure an S3 bucket for cross-account role assumption**
 
-.. include:: ../../shared/amazon-s3.rst
-   :start-after: .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-start
-   :end-before: .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-end
-
-.. destination-amazon-s3-credentials-role-to-role-steps-start
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-amazon-s3-cross-account-roles-steps-intro-done-by-admins-start
+   :end-before: .. credential-amazon-s3-cross-account-roles-steps-intro-done-by-admins-end
 
 .. list-table::
    :widths: 10 90
@@ -132,45 +165,28 @@ Configure cross-account roles
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials.rst
-          :start-after: .. credentials-destinations-configure-start
-          :end-before: .. credentials-destinations-configure-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/credentials.rst
-          :start-after: .. credentials-destinations-configure-options-start
-          :end-before: .. credentials-destinations-configure-options-end
-
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
    * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-end
-
-       .. image:: ../../images/mockup-credentials-add-01-settings-amazon-s3-role-to-role.png
-          :width: 360 px
-          :alt: Select the iam-role-to-role credential type.
-          :align: left
-          :class: no-scaled-link
-
-
-   * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-multiple-start
+          :end-before: .. credential-steps-select-type-multiple-end
+
+       From the **Credential type** drop-down, select **iam-role-to-role**.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - The settings that are available for a credential are determined by the credential type. For the **iam-role-to-role** credential type, configure the following settings, and then click **Save**.
 
        .. image:: ../../images/mockup-credentials-add-01-settings-amazon-s3-role-to-role-all.png
           :width: 360 px
@@ -178,101 +194,47 @@ Configure cross-account roles
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-details-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-settings-details-end
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-amazon-s3-cross-account-roles-steps-settings-required-start
+          :end-before: .. credential-amazon-s3-cross-account-roles-steps-settings-required-end
 
+       **Amazon S3 bucket name**
+          |checkmark-required| **Required**
 
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-bucket-name-start
+             :end-before: .. credential-amazon-s3-bucket-name-end
 
-       .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-policy-example-end
+          .. note:: 
 
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/amazon-s3.rst
-          :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
-          :end-before: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-end
+             .. include:: ../../shared/credentials_settings.rst
+                :start-after: .. credential-amazon-s3-trust-policy-start
+                :end-before: .. credential-amazon-s3-trust-policy-end
 
-.. destination-amazon-s3-credentials-role-to-role-steps-end
+       **Target role ARN**
+          |checkmark-required| **Required**
 
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-target-role-arn-start
+             :end-before: .. credential-amazon-s3-target-role-arn-end
 
-.. _destination-amazon-s3-add-destination:
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-cross-account-roles-steps-settings-provided-start
+             :end-before: .. credential-amazon-s3-cross-account-roles-steps-settings-provided-end
 
-Add destination
-==================================================
+       **Amperity role ARN**
+          |setting-provided-by-amperity| **Provided by Amperity**
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-amperity-role-arn-start
+             :end-before: .. credential-amazon-s3-amperity-role-arn-end
 
-**To add a destination**
+       **External ID**
+          |setting-provided-by-amperity| **Provided by Amperity**
 
-.. destination-amazon-s3-add-destination-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/credentials.rst
-          :start-after: .. credentials-destinations-configure-already-configured-start
-          :end-before: .. credentials-destinations-configure-already-configured-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-s3.png
-          :width: 500 px
-          :alt: Settings for Amazon S3.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-amazon-s3-start
-          :end-before: .. destinations-destination-settings-amazon-s3-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-external-id-start
+             :end-before: .. credential-amazon-s3-external-id-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -280,13 +242,13 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-amazon-s3-cross-account-roles-steps-policy-example-intro-start
+          :end-before: .. credential-amazon-s3-cross-account-roles-steps-policy-example-intro-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-amazon-s3-cross-account-roles-steps-policy-example-start
+          :end-before: .. credential-amazon-s3-cross-account-roles-steps-policy-example-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -294,25 +256,33 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
-
-.. destination-amazon-s3-add-destination-steps-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-amazon-s3-cross-account-roles-steps-save-credentials-start
+          :end-before: .. credential-amazon-s3-cross-account-roles-steps-save-credentials-end
 
 
-.. _destination-amazon-s3-add-data-template:
+.. destination-amazon-s3-credentials-role-to-role-steps-end
 
-Add data template
-==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
+.. _destination-amazon-s3-credentials-iam:
 
-**To add a data template**
+IAM credentials
+--------------------------------------------------
 
-.. destination-amazon-s3-add-data-template-steps-start
+.. destination-amazon-s3-credentials-iam-start
+
+IAM credentials require an access key, which is in two parts:
+
+#. An access key ID
+#. A secret access key
+
+Both parts are required to authenticate requests to Amazon AWS resources.
+
+.. destination-amazon-s3-credentials-iam-end
+
+**To configure an S3 bucket for IAM credentials**
+
+.. destination-amazon-s3-credentials-iam-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -323,97 +293,76 @@ Add data template
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-multiple-start
+          :end-before: .. credential-steps-select-type-multiple-end
 
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
+       From the **Credential type** drop-down, select **iam-credential**.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
+     - The settings that are available for a credential are determined by the credential type. For the **iam-credential** credential type, configure the following settings, and then click **Save**.
 
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
+       .. image:: ../../images/mockup-credentials-add-01-settings-amazon-s3-iam-all.png
+          :width: 360 px
+          :alt: Name, description, choose plugin.
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
+       **IAM access key**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-iam-access-key-start
+             :end-before: .. credential-amazon-s3-iam-access-key-end
+
+       **IAM secret key**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-iam-secret-key-start
+             :end-before: .. credential-amazon-s3-iam-secret-key-end
+
+       **IAM role ARN**
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-iam-role-arn-start
+             :end-before: .. credential-amazon-s3-iam-role-arn-end
+
+       **Amazon S3 bucket name**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-bucket-name-start
+             :end-before: .. credential-amazon-s3-bucket-name-end
 
 
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-amazon-s3-add-data-template-steps-end
+.. destination-amazon-s3-credentials-iam-steps-end
 
 
-.. _destination-amazon-s3-workflow-actions:
+.. _destination-amazon-s3-add:
 
-Workflow actions
+Add destination
 ==================================================
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-common-table-intro-start
-   :end-before: .. workflow-actions-common-table-intro-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
 
-.. destination-amazon-s3-workflow-actions-start
+**To add a destination for Amazon S3**
+
+.. destination-amazon-s3-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -421,100 +370,173 @@ Workflow actions
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step one.
+          :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-a-start
-          :end-before: .. workflow-actions-common-table-section-one-a-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
-          :width: 500 px
-          :alt: Review a notifications error.
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-s3.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-b-start
-          :end-before: .. workflow-actions-common-table-section-one-b-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
+
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step two.
+          :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-two-start
-          :end-before: .. workflow-actions-common-table-section-two-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockups-workflow-failed.png
-          :width: 500 px
-          :alt: The Workflow page, showing a workflow with errors.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
+
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step three.
+          :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-a-start
-          :end-before: .. workflow-actions-common-table-section-three-a-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/workflow-actions-s3-generic-invalid-bucket-name.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
 
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-b-start
-          :end-before: .. workflow-actions-common-table-section-three-b-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
 
-       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
-
-       * :ref:`destination-amazon-s3-workflow-actions-invalid-bucket-name`
-       * :ref:`destination-amazon-s3-workflow-actions-invalid-credentials`
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step four.
+          :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-a-start
-          :end-before: .. workflow-actions-common-table-section-four-a-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. image:: ../../images/workflow-actions-s3-generic-invalid-bucket-name-steps.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
+       **Compression**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-compression-start
+             :end-before: .. setting-common-compression-end
+
+
+       **Escape character**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-start
+             :end-before: .. setting-common-escape-character-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-unspecified-start
+             :end-before: .. setting-common-escape-character-unspecified-end
+
+
+       **File format**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
+
+          **Apache Parquet files only**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-apache-parquet-start
+             :end-before: .. setting-common-file-format-apache-parquet-end
+
+
+       **Filename template**
+          .. include:: ../../shared/terms.rst
+             :start-after: .. term-filename-template-start
+             :end-before: .. term-filename-template-end
+
+
+       **Header**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-header-start
+             :end-before: .. setting-common-header-end
+
+
+       **PGP public key**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-pgp-public-key-start
+             :end-before: .. setting-common-pgp-public-key-end
+
+
+       **Quote mode**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-start
+             :end-before: .. setting-common-quote-mode-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-none-start
+             :end-before: .. setting-common-quote-mode-none-end
+
+       **S3 prefix**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-s3-prefix-start
+             :end-before: .. setting-amazon-s3-prefix-end
+
+       **Success file**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-start
+             :end-before: .. setting-common-success-file-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-downstream-start
+             :end-before: .. setting-common-success-file-downstream-end
+
+
+       **Use Zip64?**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-use-zip64-start
+             :end-before: .. setting-common-use-zip64-end
+
+
+       **Row Number**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-row-number-start
+             :end-before: .. setting-common-row-number-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-row-number-column-name-start
+             :end-before: .. setting-common-row-number-column-name-end
+
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step 5.
           :align: left
           :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-b-start
-          :end-before: .. workflow-actions-common-table-section-four-b-end
-
-.. destination-amazon-s3-workflow-actions-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
 
-.. _destination-amazon-s3-workflow-actions-invalid-bucket-name:
-
-Invalid bucket name
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-s3-generic-incorrect-bucket-name-destination-start
-   :end-before: .. workflow-actions-s3-generic-incorrect-bucket-name-destination-end
+.. destination-amazon-s3-add-steps-end
 
 
-.. _destination-amazon-s3-workflow-actions-invalid-credentials:
-
-Invalid credentials
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-generic-invalid-credentials-start
-   :end-before: .. workflow-actions-generic-invalid-credentials-end
+.. TODO: Add workflow resolutions from existing topics HERE.

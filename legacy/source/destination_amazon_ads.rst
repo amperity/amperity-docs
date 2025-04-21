@@ -21,6 +21,8 @@
 Send data to Amazon Ads
 ==================================================
 
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_amazon_ads.html>`__ |ext_link|.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amazon-ads-start
    :end-before: .. term-amazon-ads-end
@@ -108,33 +110,57 @@ Get details
           :alt: Detail three.
           :align: left
           :class: no-scaled-link
-     - Use a query to return an audience that contains any of the following attributes:
+     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that contains any of the following attributes:
 
        .. code-block:: sql
 
-          SELECT
-            ,amperity_id
-            ,email
-            ,phone
-            ,address
-            ,city
-            ,state
-            ,postal
-            ,country
-            ,given_name AS 'firstname'
-            ,surname AS 'lastname'
-          FROM Customer_360
+           SELECT
+               ,extern_id
+               ,email
+               ,phone
+               ,address
+               ,city
+               ,state
+               ,postal
+               ,country
+               ,given_name AS 'firstname'
+               ,surname AS 'lastname'
+           FROM Customer_360
 
-       .. important:: The following columns are required:
+       You may also use an **amperity_id** but it should be labeled as an **extern_id**.
 
-          * **amperity_id**
-          * If first and last names are returned, the column names must be **firstname** and **lastname**
-          * **country** is required by the :ref:`Digital Markets Act <destination-amazon-ads-workflow-actions-missing-required-field>`.
+       .. code-block:: sql
 
-       A phone number must be in |ext_e164_format| format. Amperity applies hashing to the PII by default.
+           SELECT
+               ,amperity_id AS extern_id
+               ,email
+               ,phone
+               ,address
+               ,city
+               ,state
+               ,postal
+               ,country
+               ,given_name AS 'firstname'
+               ,surname AS 'lastname'
+           FROM Customer_360
 
-       All personally identifiable information (PII)---email, phone, address, and so on---is sent to |destination-name| as SHA-256 hashed data.
+       .. important::
 
+           The following columns are required:
+    
+           * **extern_id** (recommended) or **amperity_id** (supported for existing integrations)
+           * If first and last names are returned, the column names must be **firstname** and **lastname**
+           * **country** is required by the Digital Markets Act
+
+       .. note::
+
+           If both **extern_id** and **amperity_id** are provided, only **extern_id** will be used.
+
+       A phone number must be in `E164 format`_ format.
+
+       All personally identifiable information (PII)—email, phone, address, and so on—is sent to |destination-name| as SHA-256 hashed data.
+
+.. _E164 format: https://link-to-e164-documentation
 .. destination-amazon-ads-get-details-end
 
 

@@ -131,23 +131,6 @@ Data tables
    :ref:`Campaign Recipients <data-tables-campaign-recipients>` |fa-index-separator| :ref:`Customer 360 <data-tables-customer-360>` |fa-index-separator| :ref:`Customer Attributes <data-tables-customer-attributes>` |fa-index-separator| :ref:`Detailed Examples <data-tables-detailed-examples>` |fa-index-separator| :ref:`Email Engagement Attributes <data-tables-email-engagement-attributes>` |fa-index-separator| :ref:`Email Engagement Summary <data-tables-email-engagement-summary>` |fa-index-separator| :ref:`Merged Customers <data-tables-merged-customers>` |fa-index-separator| :ref:`Predicted Affinity <data-tables-affinity>` |fa-index-separator| :ref:`Predicted CLV Attributes <data-tables-predicted-clv-attributes>` |fa-index-separator| :ref:`Stitch Blocking Keys <data-tables-stitch-blocking-keys>` |fa-index-separator| :ref:`Stitch Scores <data-tables-stitch-scores>` |fa-index-separator| :ref:`Transaction Attributes <data-tables-transaction-attributes>` |fa-index-separator| :ref:`Transaction Attributes Extended <data-tables-transaction-attributes-extended>` |fa-index-separator| :ref:`Unified Changes Clusters <data-tables-unified-changes-clusters>` |fa-index-separator| :ref:`Unified Changes PKS <data-tables-unified-changes-pks>` |fa-index-separator| :ref:`Unified Coalesced <data-tables-unified-coalesced>` |fa-index-separator| :ref:`Unified Customer <data-tables-unified-customers>` |fa-index-separator| :ref:`Unified Email Events <data-tables-unified-email-events-table>` |fa-index-separator| :ref:`Unified Itemized Transactions <data-tables-unified-itemized-transactions>` |fa-index-separator| :ref:`Unified Preprocessed Raw <data-tables-unified-preprocessed-raw>` |fa-index-separator| :ref:`Unified Product Catalog <data-tables-unified-product-catalog>` |fa-index-separator| :ref:`Unified Scores <data-tables-unified-scores>` |fa-index-separator| :ref:`Unified Transactions <data-tables-unified-transactions>`
 
 
-.. _index-data-templates:
-
-Data templates
-==================================================
-
-:doc:`About data templates <data_templates>` |fa-index-separator| :ref:`File templates <data-templates-files>`
-
-**Common settings**
-   :ref:`data-templates-files-common-done` |fa-index-separator| :ref:`data-templates-files-common-encoding-methods` |fa-index-separator| :ref:`data-templates-files-common-escape-characters` |fa-index-separator| :ref:`data-templates-files-common-formats` |fa-index-separator| :ref:`data-templates-files-common-template` |fa-index-separator| :ref:`data-templates-files-common-header-rows` |fa-index-separator| :ref:`data-templates-files-common-line-endings` |fa-index-separator| :ref:`data-templates-files-common-quote-mode`
-
-**Specific settings**
-   :ref:`data-templates-files-specific-s3` |fa-index-separator| :ref:`data-templates-files-specific-azure-blob-storage` |fa-index-separator| :ref:`data-templates-files-specific-google-cloud-storage` |fa-index-separator| :ref:`data-templates-files-specific-sftp` |fa-index-separator| :ref:`API templates <data-templates-api>` |fa-index-separator| :ref:`Snowflake templates <data-templates-snowflake>`
-
-**How-tos**
-   :ref:`data-templates-add` |fa-index-separator| :ref:`data-templates-allow-to-send-queries` |fa-index-separator| :ref:`data-templates-allow-to-send-pii` |fa-index-separator| :ref:`data-templates-delete` |fa-index-separator| :ref:`data-templates-edit` |fa-index-separator| :ref:`data-templates-enable-success-file` |fa-index-separator| :ref:`data-templates-map-to-external-schemas` |fa-index-separator| :ref:`data-templates-make-available-to-campaigns`
-
-
 .. _index-databases:
 
 Databases
@@ -180,6 +163,20 @@ Domain tables
 
 **How-tos**
    :ref:`domain-tables-add` |fa-index-separator| :ref:`domain-tables-add-custom` |fa-index-separator| :ref:`domain-tables-delete` |fa-index-separator| :ref:`domain-tables-delete-records` |fa-index-separator| :ref:`domain-tables-edit` |fa-index-separator| :ref:`domain-tables-explore` |fa-index-separator| :ref:`domain-tables-explore-sample-data` |fa-index-separator| :ref:`domain-tables-explore-schema` |fa-index-separator| :ref:`domain-tables-purge` |fa-index-separator| :ref:`domain-tables-rename` |fa-index-separator| :ref:`domain-tables-search` |fa-index-separator| :ref:`domain-tables-view` |fa-index-separator| :ref:`domain-tables-history`
+
+
+.. _index-euid:
+
+European Unified ID (EUID)
+==================================================
+
+:doc:`About European Unified ID (EUID) <euid>` |fa-index-separator| :ref:`How EUID works <euid-howitworks>` |fa-index-separator| :ref:`About EUID workflows <euid-workflows>`
+
+**Prerequisites**
+   :ref:`About prerequisites <euid-prerequisites>` |fa-index-separator| :ref:`Get access to EUID <euid-prerequisite-get-access>` |fa-index-separator| :ref:`Participate in EUID <euid-prerequisite-participate>` |fa-index-separator| :ref:`Get Mapper credentials <euid-prerequisite-get-credentials>`
+
+**Configure Amperity**
+   :ref:`Configure Amperity <euid-configure-amperity>` |fa-index-separator| :ref:`Add Mapper credentials <euid-configure-amperity-add-credentials>` |fa-index-separator| :ref:`Enable EUID token generation <euid-configure-amperity-enable-euid>` |fa-index-separator| :ref:`Add EUID table to database <euid-configure-amperity-add-euid-table>`
 
 
 .. _index-feeds:
@@ -236,7 +233,7 @@ Orchestrations
 :doc:`About orchestrations <orchestrations>`
 
 **How-tos**
-   :ref:`orchestrations-add` |fa-index-separator| :ref:`orchestrations-assign-database-export` |fa-index-separator| :ref:`orchestrations-assign-query` |fa-index-separator| :ref:`orchestrations-delete` |fa-index-separator| :ref:`orchestrations-edit` |fa-index-separator| :ref:`orchestrations-run-manually` |fa-index-separator| :ref:`orchestrations-run-scheduled-always-run` |fa-index-separator| :ref:`orchestrations-run-scheduled-wait-for-changes` |fa-index-separator| :ref:`orchestrations-run-unscheduled-wait-for-changes`
+   :ref:`orchestrations-add` |fa-index-separator| :ref:`orchestrations-assign-database-export` |fa-index-separator| :ref:`orchestrations-assign-query` |fa-index-separator| :ref:`orchestrations-delete` |fa-index-separator| :ref:`orchestrations-edit` |fa-index-separator|  :ref:`orchestrations-run-automatic` |fa-index-separator| :ref:`orchestrations-run-manually`
 
 .. _index-policies:
 
@@ -534,12 +531,12 @@ Workflows
    data_exports
    data_lineage
    data_tables
-   data_templates
    databases
    destinations
    docs
    domain_tables
    downloads
+   euid
    feeds
    file_uploads
    format_avro

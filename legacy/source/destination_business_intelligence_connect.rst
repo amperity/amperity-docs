@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/legacy/
 
 
 .. |destination-name| replace:: BI Connect

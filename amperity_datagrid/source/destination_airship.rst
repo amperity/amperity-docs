@@ -1,37 +1,36 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
+
 
 
 .. |destination-name| replace:: Airship
-.. |plugin-name| replace:: Airship
+.. |plugin-name| replace:: "Airship"
+.. |credential-type| replace:: "airship"
+.. |required-credentials| replace:: "username", "hostname", and "private key"
 .. |what-send| replace:: CSV files
+.. |where-send| replace:: |destination-name|
+.. |sftp-hostname| replace:: "sftp.airship.com"
+.. |remote-folder| replace:: "/folder"
+.. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "air"
-.. |sftp-type| replace:: **sftp**
-.. |sftp-hostname| replace:: **sftp.airship.com**
-.. |file-format| replace:: CSV
-.. |encoding-method| replace:: Encoding method options include "Tar", "Tgz", "Zip", "GZip", and "None".
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by the SFTP site were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: send query results to |destination-name|
-.. |channel-link| replace:: send campaign results
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Airship.
+        Configure Amperity to send customer profiles to Airship.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Airship.
+        Configure Amperity to send customer profiles to Airship.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Airship
+        Send customer profiles to Airship
 
 ==================================================
-Send data to Airship
+Send customer profiles to Airship
 ==================================================
+
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_airship.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-airship-start
@@ -43,17 +42,9 @@ You can send CSV files to Airship from Amperity using SFTP. The CSV files may co
 
 .. destination-airship-end
 
-.. destination-airship-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-airship-get-details>`
-#. :ref:`Add Airship destination <destination-airship-add-destination>`
-#. :ref:`Add data template <destination-airship-add-data-template>`
-
-.. destination-airship-steps-to-send-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-file-configure-start
+   :end-before: .. setting-common-file-configure-end
 
 
 .. _destination-airship-get-details:
@@ -61,9 +52,11 @@ You can send CSV files to Airship from Amperity using SFTP. The CSV files may co
 Get details
 ==================================================
 
-.. destination-airship-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-airship-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -71,56 +64,79 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The username, passphrase, and hostname for the SFTP site.
+     - **Credential settings**
 
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-get-details-private-key-start
+          :end-before: .. credential-get-details-private-key-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The remote folder to which Amperity will send data.
+     - **Required configuration settings**
 
-       .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
+       **File format**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-custom-delimiter-start
+             :end-before: .. setting-common-file-format-custom-delimiter-end
+
+       **Remote folder**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+       .. note::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-optional-settings-start
+             :end-before: .. setting-common-optional-settings-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The port number for the SFTP site.
+     - **Specific port number**
 
-       .. note:: Refer to the Airship `SFTP tutorial <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/>`__ |ext_link| for more details.
-
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail one.
-          :align: left
-          :class: no-scaled-link
-     - The public key to use for PGP encryption.
-
-       .. important:: Amperity will `generate the PGP credentials <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/#generate-a-secure-key-for-airship>`__ |ext_link| on behalf of the customer.
-
-.. destination-airship-get-details-end
+       Refer to the Airship `SFTP tutorial <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/>`__ |ext_link| for more details.
 
 
-.. _destination-airship-add-destination:
+.. destination-airship-get-details-table-end
 
-Add destination
+
+.. _destination-airship-credentials:
+
+Configure credentials
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-**To add a destination**
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-.. destination-airship-add-destination-steps-start
+**To configure credentials for Airship**
+
+.. destination-airship-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -131,19 +147,9 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -151,33 +157,9 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-sftp-start
-          :end-before: .. destinations-add-credentials-sftp-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-sftp-start
-          :end-before: .. destinations-intro-for-additional-settings-sftp-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials-sftp.png
-          :width: 500 px
-          :alt: Update the settings for the SFTP destination.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -185,19 +167,99 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings-sftp.png
-          :width: 500 px
-          :alt: Settings for SFTP destinations.
+       **Username**
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-username-start
+             :end-before: .. credential-sftp-username-end
+
+       **Hostname**
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-hostname-start
+             :end-before: .. credential-sftp-hostname-end
+
+       **Private key**
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-private-key-start
+             :end-before: .. credential-sftp-private-key-end
+
+.. destination-airship-credentials-steps-end
+
+
+.. _destination-airship-add:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination for Airship**
+
+.. destination-airship-add-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
+
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-sftp.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-sftp-start
-          :end-before: .. destinations-destination-settings-sftp-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
+
+       .. tip::
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
+
+       .. admonition:: Configure business user access
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -205,13 +267,99 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Compression**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-compression-start
+             :end-before: .. setting-common-compression-end
+
+
+       **Escape character**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-start
+             :end-before: .. setting-common-escape-character-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-escape-character-unspecified-start
+             :end-before: .. setting-common-escape-character-unspecified-end
+
+
+       **File format**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-start
+             :end-before: .. setting-common-file-format-end
+
+
+       **Filename template**
+          .. include:: ../../shared/terms.rst
+             :start-after: .. term-filename-template-start
+             :end-before: .. term-filename-template-end
+
+
+       **Header**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-header-start
+             :end-before: .. setting-common-header-end
+
+
+       **Line ending**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-line-ending-start
+             :end-before: .. setting-common-line-ending-end
+
+
+       **PGP public key**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-pgp-public-key-start
+             :end-before: .. setting-common-pgp-public-key-end
+
+          .. important:: Amperity will `generate the PGP credentials <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/#generate-a-secure-key-for-airship>`__ |ext_link| on behalf of the customer.
+
+       **Quote mode**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-start
+             :end-before: .. setting-common-quote-mode-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-quote-mode-none-start
+             :end-before: .. setting-common-quote-mode-none-end
+
+
+       **Remote folder**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-start
+             :end-before: .. setting-common-remote-folder-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-forward-slash-start
+             :end-before: .. setting-common-remote-folder-forward-slash-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-remote-folder-spaces-start
+             :end-before: .. setting-common-remote-folder-spaces-end
+
+
+       **Success file**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-start
+             :end-before: .. setting-common-success-file-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-success-file-downstream-start
+             :end-before: .. setting-common-success-file-downstream-end
+
+
+       **Use Zip64?**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-use-zip64-start
+             :end-before: .. setting-common-use-zip64-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -219,227 +367,12 @@ Add destination
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
-
-.. destination-airship-add-destination-steps-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
 
-.. _destination-airship-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-airship-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
+.. destination-airship-add-steps-end
 
 
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-queries-only-start
-          :end-before: .. destinations-data-template-save-after-queries-only-end
-
-.. destination-airship-add-data-template-steps-end
-
-
-.. _destination-airship-workflow-actions:
-
-Workflow actions
-==================================================
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-common-table-intro-start
-   :end-before: .. workflow-actions-common-table-intro-end
-
-.. destination-airship-workflow-actions-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-a-start
-          :end-before: .. workflow-actions-common-table-section-one-a-end
-
-       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
-          :width: 500 px
-          :alt: Review a notifications error.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-b-start
-          :end-before: .. workflow-actions-common-table-section-one-b-end
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step two.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-two-start
-          :end-before: .. workflow-actions-common-table-section-two-end
-
-       .. image:: ../../images/mockups-workflow-failed.png
-          :width: 500 px
-          :alt: The workflow tab, showing a workflow with errors.
-          :align: left
-          :class: no-scaled-link
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step three.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-a-start
-          :end-before: .. workflow-actions-common-table-section-three-a-end
-
-       .. image:: ../../images/workflow-actions-sftp-unavailable.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-b-start
-          :end-before: .. workflow-actions-common-table-section-three-b-end
-
-       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
-
-       * :ref:`destination-airship-workflow-actions-invalid-credentials`
-       * :ref:`destination-airship-workflow-actions-sftp-unavailable`
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step four.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-a-start
-          :end-before: .. workflow-actions-common-table-section-four-a-end
-
-       .. image:: ../../images/workflow-actions-sftp-unavailable-steps.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-b-start
-          :end-before: .. workflow-actions-common-table-section-four-b-end
-
-.. destination-airship-workflow-actions-end
-
-
-.. _destination-airship-workflow-actions-invalid-credentials:
-
-Invalid credentials
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-generic-invalid-credentials-start
-   :end-before: .. workflow-actions-generic-invalid-credentials-end
-
-
-.. _destination-airship-workflow-actions-sftp-unavailable:
-
-SFTP site unavailable
---------------------------------------------------
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-sftp-generic-unavailable-start
-   :end-before: .. workflow-actions-sftp-generic-unavailable-end
+.. TODO: Add workflow resolutions from existing topics HERE.

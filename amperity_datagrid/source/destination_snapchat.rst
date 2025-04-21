@@ -1,42 +1,40 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
+
 
 
 .. |destination-name| replace:: Snapchat
-.. |destination-api| replace:: Snapchat Marketing API
-.. |plugin-name| replace:: Snapchat
-.. |what-send| replace:: email addresses, phone numbers, and mobile advertiser IDs
-.. |email-plus-send| replace:: additional attributes
+.. |plugin-name| replace:: "Snapchat"
+.. |credential-type| replace:: "snapchat"
+.. |required-credentials| replace:: "refresh token"
+.. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: email addresses, mobile advertiser IDs, or phone numbers
+.. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "snap"
-.. |oauth-type| replace:: the OAuth credential you created for your |destination-name| account
-.. |settings-name| replace:: **Snapchat Settings**
-.. |what-settings| replace:: account ID, custom audience, and the customer file source
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: account ID, custom audience, and the customer file source settings were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: |sendto_snapchat|
-.. |channel-link| replace:: |campaign_snapchat|
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Snapchat.
+        Configure Amperity to send audience lists to Snapchat.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Snapchat.
+        Configure Amperity to send audience lists to Snapchat.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Snapchat
+        Send audience lists to Snapchat
 
 ==================================================
-Send data to Snapchat
+Send audience lists to Snapchat
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-snapchat-start
-   :end-before: .. term-snapchat-end
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_snapchat.html>`__ |ext_link|.
+
+.. destination-snapchat-about-start
+
+Send email addresses, mobile advertiser IDs, or phone numbers to |destination-name|, and then manage ads and advertising campaign.
+
+.. destination-snapchat-about-end
 
 .. destination-snapchat-api-note-start
 
@@ -44,28 +42,16 @@ Send data to Snapchat
 
 .. destination-snapchat-api-note-end
 
-.. destination-snapchat-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-snapchat-get-details>`
-#. :ref:`Authorize Amperity access to the customer's account <destination-snapchat-configure-oauth>`
-#. :ref:`Add destination <destination-snapchat-add-destination>`
-#. :ref:`Add data template <destination-snapchat-add-data-template>`
-
-.. destination-snapchat-steps-to-send-end
-
-
 .. _destination-snapchat-get-details:
 
 Get details
 ==================================================
 
-.. destination-snapchat-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-snapchat-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -73,52 +59,69 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The account ID. (The account ID is shown in the **Snapchat Ads Manager**.)
+     - **Credential settings**
+
+       **Refresh token**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 2.
+          :align: left
+          :class: no-scaled-link
+     - **Required configuration settings**
+
+       **Ad account ID**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-snapchat-ad-account-id-start
+             :end-before: .. setting-snapchat-ad-account-id-end
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
           :align: left
           :class: no-scaled-link
      - The name of the custom audience to which Amperity will send data. Amperity will create the custom audience name if it does not already exist.
 
        .. tip:: The custom audience name is visible from the **Snapchat Audiences** page. This name should be clear and understandable to users of Snapchat. An audience with this will be created if it does not exist.
 
+
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
+          :alt: Detail 4.
           :align: left
           :class: no-scaled-link
-     - :ref:`Authorize Amperity to send data to the customer's Snapchat account <destination-snapchat-configure-oauth>`. This requires activation in the Amperity |destination-name| account and approval in the customer's |destination-name| account.
+     - :ref:`Authorize Amperity to send data to the customer's Snapchat account <destination-snapchat-credentials>`. This requires activation in the Amperity |destination-name| account and approval in the customer's |destination-name| account.
 
 .. destination-snapchat-get-details-end
 
-.. destination-snapchat-get-details-account-info-start
 
-.. admonition:: How do I find Snapchat account information?
+.. _destination-snapchat-credentials:
 
-   You can find all of this information and perform all of the required steps from within |destination-name|. Click the menu in the top-left corner, then **Ad Accounts**, and then copy the **Ad Account ID** of the account you want to send to.
-
-.. destination-snapchat-get-details-account-info-end
-
-
-.. _destination-snapchat-configure-oauth:
-
-Configure OAuth
+Configure credentials
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-oauth-start
-   :end-before: .. term-oauth-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-oauth-intro-start
-   :end-before: .. destinations-oauth-intro-end
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-**To configure OAuth**
+**To configure credentials for Snapchat**
+
+.. destination-snapchat-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -129,27 +132,36 @@ Configure OAuth
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-1-start
-          :end-before: .. destinations-oauth-configure-step-1-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-2-start
-          :end-before: .. destinations-oauth-configure-step-2-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-3-start
-          :end-before: .. destinations-oauth-configure-step-3-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Refresh token**
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
+
+.. destination-snapchat-credentials-steps-end
 
 
 .. _destination-snapchat-reauthorize-amperity:
@@ -162,22 +174,18 @@ Reauthorize Amperity
    :end-before: .. destinations-oauth-reauthorize-end
 
 
-.. _destination-snapchat-add-destination:
+.. _destination-snapchat-add:
 
 Add destination
 ==================================================
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
 
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-api-oauth-reminder-start
-   :end-before: .. destinations-add-destinations-api-oauth-reminder-end
+**To add a destination for Snapchat**
 
-**To add a destination**
-
-.. destination-snapchat-add-destination-steps-start
+.. destination-snapchat-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -188,19 +196,19 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -208,33 +216,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-oauth-start
-          :end-before: .. destinations-intro-for-additional-settings-oauth-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -242,26 +232,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Settings for Snapchat.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
 
-       The following settings are specific to |destination-name|:
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
 
-       .. list-table::
-          :widths: 180 320
-          :header-rows: 1
-
-          * - **Setting**
-            - **Description**
-          * - **Account ID**
-            - Your advertising account ID for |destination-name|. (The account ID is shown in the **Snapchat Ads Manager**.)
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -269,252 +252,32 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Ad account ID**
+          |checkmark-required| **Required**
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-snapchat-ad-account-id-start
+             :end-before: .. setting-snapchat-ad-account-id-end
+
+       **Segment name** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-snapchat-segment-name-start
+             :end-before: .. setting-snapchat-segment-name-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-start
+          :end-before: .. destinations-steps-business-users-end
 
-.. destination-snapchat-add-destination-steps-end
+.. destination-snapchat-add-steps-end
 
-
-.. _destination-snapchat-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-.. include:: ../../amperity_ampiq/source/destination_snapchat.rst
-   :start-after: .. channel-snapchat-build-segment-note-start
-   :end-before: .. channel-snapchat-build-segment-note-end
-
-.. admonition:: About paid media campaigns
-
-   .. include:: ../../shared/paid-media.rst
-      :start-after: .. paid-media-admonition-about-start
-      :end-before: .. paid-media-admonition-about-end
-
-**To add a data template**
-
-.. destination-snapchat-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-allow-campaigns-start
-          :end-before: .. destinations-data-template-business-users-allow-campaigns-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-start
-          :end-before: .. destinations-data-template-save-after-end
-
-.. destination-snapchat-add-data-template-steps-end
-
-
-.. _destination-snapchat-workflow-actions:
-
-Workflow actions
-==================================================
-
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-common-table-intro-start
-   :end-before: .. workflow-actions-common-table-intro-end
-
-.. destination-snapchat-workflow-actions-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-a-start
-          :end-before: .. workflow-actions-common-table-section-one-a-end
-
-       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
-          :width: 500 px
-          :alt: Review a notifications error.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-one-b-start
-          :end-before: .. workflow-actions-common-table-section-one-b-end
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step two.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-two-start
-          :end-before: .. workflow-actions-common-table-section-two-end
-
-       .. image:: ../../images/mockups-workflow-failed.png
-          :width: 500 px
-          :alt: The workflow tab, showing a workflow with errors.
-          :align: left
-          :class: no-scaled-link
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step three.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-a-start
-          :end-before: .. workflow-actions-common-table-section-three-a-end
-
-       .. image:: ../../images/workflow-actions-snapchat-invalid-credentials.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-three-b-start
-          :end-before: .. workflow-actions-common-table-section-three-b-end
-
-       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
-
-       * :ref:`destination-snapchat-workflow-actions-invalid-credentials`
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step four.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-a-start
-          :end-before: .. workflow-actions-common-table-section-four-a-end
-
-       .. image:: ../../images/workflow-actions-snapchat-invalid-credentials-steps.png
-          :width: 300 px
-          :alt: Choose a workflow action from the list of actions.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/workflow-actions.rst
-          :start-after: .. workflow-actions-common-table-section-four-b-start
-          :end-before: .. workflow-actions-common-table-section-four-b-end
-
-.. destination-snapchat-workflow-actions-end
-
-
-.. _destination-snapchat-workflow-actions-invalid-credentials:
-
-Invalid credentials
---------------------------------------------------
-
-.. destination-snapchat-workflow-actions-invalid-credentials-start
-
-The credentials that are defined in Amperity for |destination-name| are invalid and must be refreshed.
-
-.. destination-snapchat-workflow-actions-invalid-credentials-end
-
-.. destination-snapchat-workflow-actions-invalid-credentials-steps-start
-
-To resolve this error, refresh the credentials for |destination-name|.
-
-#. Open the **Credentials** page, and then generate a new authorization link for the |destination-name| credential associated with this workflow.
-#. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. destination-snapchat-workflow-actions-invalid-credentials-steps-start
+.. TODO: Add workflow resolutions from existing topics HERE.

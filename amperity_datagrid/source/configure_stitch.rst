@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. meta::
@@ -1099,8 +1099,8 @@ Supersized clusters
 .. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
 
 .. include:: ../../amperity_help/source/stitch_config_cluster_size.rst
-   :start-after: .. tooltip-stitch-config-supersized-clusters-start
-   :end-before: .. tooltip-stitch-config-supersized-clusters-end
+   :start-after: .. tooltip-stitch-config-graph-partitions-start
+   :end-before: .. tooltip-stitch-config-graph-partitions-end
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-start
 

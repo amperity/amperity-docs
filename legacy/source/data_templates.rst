@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/reference/
+.. https://docs.amperity.com/legacy/
 
 
 .. meta::
@@ -35,7 +35,7 @@ Data templates that are made available to campaigns may use variables to apply c
 
 .. note:: A date is automatically appended to the filename for one-time campaigns.
 
-.. important:: Campaign templates use the same :ref:`tokens <data-templates-files-common-template-tokens>` and :ref:`Joda-Time filters <data-templates-files-common-template-filters>` as file-based templates.
+.. important:: Campaign templates use the same tokens and Joda-Time filters as file-based templates.
 
 .. data-templates-campaigns-end
 

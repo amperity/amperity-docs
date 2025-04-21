@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. meta::
@@ -30,6 +30,9 @@ A privacy rights workflow can help your organization stay in compliance with dat
 * .. include:: ../../shared/terms.rst
      :start-after: .. term-australian-privacy-principles-start
      :end-before: .. term-australian-privacy-principles-end
+* .. include:: ../../shared/terms.rst
+     :start-after: .. term-pipeda-start
+     :end-before: .. term-pipeda-end
 
 This topic describes how to configure Amperity to support a self-service privacy rights workflow that deletes consumer profile data and discovers records for a data subject access request (DSAR), depending on the :ref:`type of inbound compliance request <privacy-rights-workflows>`.
 

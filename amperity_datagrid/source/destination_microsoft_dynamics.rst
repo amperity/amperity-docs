@@ -1,58 +1,46 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
+
 
 
 .. |destination-name| replace:: Microsoft Dynamics
-.. |plugin-name| replace:: Microsoft Dynamics
-.. |what-send| replace:: data
+.. |plugin-name| replace:: "Microsoft Dynamics"
+.. |credential-type| replace:: "dynamics"
+.. |required-credentials| replace:: "client ID" and "client secret"
+.. |audience-primary-key| replace:: "email"
+.. |what-send| replace:: email lists
+.. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "micro"
-.. |credential-type| replace:: "azure-application"
-.. |data-template-name| replace:: |destination-name|
-.. |data-template-description| replace:: Send |what-send| to |destination-name|.
-.. |data-template-config-settings-list| replace:: settings required by |destination-name| were
-.. |data-template-config-settings-list-them-vs-it| replace:: them
-.. |sendto-link| replace:: send query results to |destination-name|
-.. |channel-link| replace:: send campaign results
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Microsoft Dynamics.
+        Configure Amperity to send email lists to Microsoft Dynamics.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Microsoft Dynamics.
+        Configure Amperity to send email lists to Microsoft Dynamics.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Microsoft Dynamics
+        Send email lists to Microsoft Dynamics
 
 ==================================================
-Send data to Microsoft Dynamics
+Send email lists to Microsoft Dynamics
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-microsoft-dynamics-start
-   :end-before: .. term-microsoft-dynamics-end
+.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_microsoft_dynamics.html>`__ |ext_link|.
+
+.. destination-microsoft-dynamics-about-start
+
+|destination-name| is a customer relationship management (CRM) software application that is focused on the supporting sales, marketing, and services. It is part of the Microsoft Dynamics family of business applications.
+
+.. destination-microsoft-dynamics-about-end
 
 .. destination-microsoft-dynamics-api-note-start
 
-.. note:: This destination uses the |ext_microsoft_dynamics_web_api|.
+.. note:: This destination uses the `Microsoft Dynamics Web API <https://learn.microsoft.com/en-us/previous-versions/dynamicscrm-2016/developers-guide/mt607689(v=crm.8)>`__ |ext_link|.
 
 .. destination-microsoft-dynamics-api-note-end
-
-.. destination-microsoft-dynamics-steps-to-send-start
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-overview-list-intro-start
-   :end-before: .. destinations-overview-list-intro-end
-
-#. :ref:`Get details <destination-microsoft-dynamics-get-details>`
-#. :ref:`Configure Microsoft Dynamics <destination-microsoft-dynamics-configure>`
-#. :ref:`Build a query <destination-microsoft-dynamics-build-query>`
-#. :ref:`Add destination <destination-microsoft-dynamics-add-destination>`
-#. :ref:`Add data template <destination-microsoft-dynamics-add-data-template>`
-
-.. destination-microsoft-dynamics-steps-to-send-end
 
 
 .. _destination-microsoft-dynamics-get-details:
@@ -60,9 +48,11 @@ Send data to Microsoft Dynamics
 Get details
 ==================================================
 
-.. destination-microsoft-dynamics-get-details-start
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
 
-|destination-name| requires the following configuration details:
+.. destination-microsoft-dynamics-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -73,70 +63,68 @@ Get details
           :alt: Detail 1.
           :align: left
           :class: no-scaled-link
-     - The client ID and client secret.
+     - **Credential settings**
+
+       **Client ID and client secret**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-microsoft-dynamics-client-id-and-secret-start
+             :end-before: .. credential-microsoft-dynamics-client-id-and-secret-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-microsoft-dynamics-client-id-and-secret-expiration-start
+             :end-before: .. credential-microsoft-dynamics-client-id-and-secret-expiration-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The Azure Active Directory ID.
+     - **Required configuration settings**
+
+       **Azure active directory ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-azure-ad-id-start
+             :end-before: .. setting-microsoft-dynamics-azure-ad-id-end
+
+       **Dynamics URL**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-url-start
+             :end-before: .. setting-microsoft-dynamics-url-end
+
+       **Dynamics entity** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-entity-start
+             :end-before: .. setting-microsoft-dynamics-entity-end
+
+       **Operation** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-operation-start
+             :end-before: .. setting-microsoft-dynamics-operation-end
+
+       **ID field** (Required at orchestration)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-id-field-start
+             :end-before: .. setting-microsoft-dynamics-id-field-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail 3.
+          :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - The login URL for |destination-name|, similar to "<tenant-name>.crm.dynamics.com".
+     - **Microsoft Dynamics configuration**
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 4.
-          :align: left
-          :class: no-scaled-link
-     - Admin credentials for portal.azure.com (if the customer wants Amperity to configure |destination-name| on their behalf).
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 5.
-          :align: left
-          :class: no-scaled-link
-     - An application user that is assigned to a role with an access level that allows that user to modify and update records. (Some use cases require a user to delete records.)
+       An application user that is assigned to a role with an access level that allows that user to modify and update records. (Some use cases require a user to delete records.) Admin credentials for portal.azure.com (if the customer wants Amperity to configure |destination-name| on their behalf).
 
        .. note:: A single tenant account type should be all that is required for Amperity to send data to |destination-name|.
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 6.
-          :align: left
-          :class: no-scaled-link
-     - The expiration date for the client secret: one of "expires in 1 year", "expires in 2 years", or "never expires".
-
 .. destination-microsoft-dynamics-get-details-end
-
-.. destination-microsoft-dynamics-get-details-account-info-start
-
-.. admonition:: How do I find |destination-name| account information?
-
-   You can find all of this information from your |destination-name| instance in Microsoft Azure.
-
-   #. The registered application in Microsoft Azure will have the |destination-name| client ID, client secret, and Azure Active Directory ID.
-   #. The login URL is similar to "https://<tenant-name>.crm.dynamics.com".
-   #. The application user is added to the customer's instance of |destination-name|.
-
-.. destination-microsoft-dynamics-get-details-account-info-end
-
-
-.. _destination-microsoft-dynamics-configure:
-
-Configure Microsoft Dynamics
-==================================================
-
-.. destination-facebook-ads-configure-account-access-start
-
-|destination-name| requires :ref:`an application to be created in Microsoft Azure <destination-microsoft-dynamics-configure-azure>`, and then :ref:`add an application user to Microsoft Dynamics <destination-microsoft-dynamics-configure-user>`
-
-.. destination-facebook-ads-configure-account-access-end
 
 
 .. _destination-microsoft-dynamics-configure-azure:
@@ -199,30 +187,22 @@ An application user with permission to modify and update records is required.
 .. destination-microsoft-dynamics-configure-user-steps-end
 
 
-.. _destination-microsoft-dynamics-build-query:
+.. _destination-microsoft-dynamics-credentials:
 
-Build query
+Configure credentials
 ==================================================
 
-.. destination-microsoft-dynamics-build-query-start
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
 
-You will need to build a query that outputs fields that can be mapped to |destination-name|.
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
 
-.. destination-microsoft-dynamics-build-query-end
+**To configure credentials for Microsoft Dynamics**
 
-
-.. _destination-microsoft-dynamics-add-destination:
-
-Add destination
-==================================================
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-add-destinations-intro-all-start
-   :end-before: .. destinations-add-destinations-intro-all-end
-
-**To add a destination**
-
-.. destination-microsoft-dynamics-add-destination-steps-start
+.. destination-microsoft-dynamics-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -233,19 +213,70 @@ Add destination
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-destination-start
-          :end-before: .. destinations-add-destination-end
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-01-select.png
-          :width: 500 px
-          :alt: Name, description, choose plugin.
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Client ID and client secret**
+
+          A client ID and client secret that has permission to access your instance of |destination-name|.
+
+.. destination-microsoft-dynamics-credentials-steps-end
+
+
+.. _destination-microsoft-dynamics-add:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination for Microsoft Dynamics**
+
+.. destination-microsoft-dynamics-add-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-start
+          :end-before: .. destinations-steps-add-destinations-end
+
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
+          :width: 380 px
+          :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-name-and-description-start
-          :end-before: .. destinations-add-name-and-description-end
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-add-destinations-select-start
+          :end-before: .. destinations-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -253,37 +284,15 @@ Add destination
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-credentials-start
-          :end-before: .. destinations-add-credentials-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-select-credential-start
+          :end-before: .. destinations-steps-select-credential-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-02-credentials.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
+       .. tip::
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-add-new-or-select-existing-start
-          :end-before: .. destinations-add-new-or-select-existing-end
-
-       .. image:: ../../images/mockup-destinations-tab-credentials-01-select.png
-          :width: 500 px
-          :alt: Choose an existing credential or add credential.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-intro-for-additional-settings-start
-          :end-before: .. destinations-intro-for-additional-settings-end
-
-       |destination-name| has the following settings:
-
-       * Client ID and secret
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-settings-start
-          :end-before: .. destinations-save-settings-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. destinations-steps-test-connection-start
+             :end-before: .. destinations-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -291,33 +300,19 @@ Add destination
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-destination-settings-start
-          :end-before: .. destinations-destination-settings-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
 
-       .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Settings for Microsoft Dynamics.
-          :align: left
-          :class: no-scaled-link
+       .. admonition:: Configure business user access
 
-       The following settings are specific to |destination-name|:
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
 
-       .. list-table::
-          :widths: 180 320
-          :header-rows: 1
-
-          * - **Setting**
-            - **Description**
-          * - **Active Directory ID**
-            - The Active Directory tenant ID that is associated with your Microsoft Azure subscription.
-
-          * - **Dynamics URL**
-            - The URL for your instance of |destination-name|.  The URL must be the full URL, including ``https://``. For example:
-
-              ::
-
-                 https://<tenant-name>.crm.dynamics.com
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
 
 
    * - .. image:: ../../images/steps-04.png
@@ -325,120 +320,38 @@ Add destination
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-start
-          :end-before: .. destinations-business-users-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-business-users-admonition-start
-          :end-before: .. destinations-business-users-admonition-end
+       **Azure active directory ID**
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-azure-ad-id-start
+             :end-before: .. setting-microsoft-dynamics-azure-ad-id-end
+
+       **Dynamics URL**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-url-start
+             :end-before: .. setting-microsoft-dynamics-url-end
+
+       **Dynamics entity**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-dynamics-entity-start
+             :end-before: .. setting-microsoft-dynamics-entity-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-save-start
-          :end-before: .. destinations-save-end
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-orchestration-only-start
+          :end-before: .. destinations-steps-business-users-orchestration-only-end
 
-.. destination-microsoft-dynamics-add-destination-steps-end
-
-
-.. _destination-microsoft-dynamics-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-microsoft-dynamics-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-.. destination-microsoft-dynamics-add-data-template-steps-end
+.. destination-microsoft-dynamics-add-steps-end
 
 
 .. _destination-microsoft-dynamics-web-api:
@@ -450,11 +363,14 @@ Common Data Service Web API
 
 .. note:: |destination-name| is a complex system. Even though Amperity has a built-in connector that supports sending data to entities within |destination-name|, there are more than 400 possible entities to which you can send data, such as sending segments to :doc:`Dynamics 365 Marketing <destination_dynamics_365_marketing>`, with each of these entities having its own schema that requires a unique mapping of data in a data template.
 
-The |ext_common_data_service_web_api| (version 8.2 and higher or version 9.0) is the API to which Amperity can send data.
+The `Common Data Service Web API <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9>`__ |ext_link| (version 8.2 and higher or version 9.0) is the API to which Amperity can send data.
 
 * |destination-name| is not strict about required fields, in that you may choose to not send fields to |destination-name| even when they are marked as required.
 * |destination-name| is strict about extra fields, in that you should not send fields to |destination-name| that do not already exist in the entity's schema. Use the **include** section in the data template mapping to drop fields that should not be sent to |destination-name|.
 
-Review the entities in the Common Data Service Web API prior to configuring a data template. Some of the entities that are more focused toward marketing and user activity include |ext_common_data_service_web_api_contact|, |ext_common_data_service_web_api_list|, |ext_common_data_service_web_api_campaign|, |ext_common_data_service_web_api_campaignactivity|, |ext_common_data_service_web_api_campaignresponse|, or |ext_common_data_service_web_api_customeraddress|. Any of the entities found in the |ext_common_data_service_web_api_entittype_reference| may be configured as a destination, depending on your use case.
+Review the entities in the Common Data Service Web API prior to configuring a data template. Some of the entities that are more focused toward marketing and user activity include `Contact <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact>`__ |ext_link|, `List <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/list>`__ |ext_link|, `Campaign <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaign>`__ |ext_link|, `CampaignActivity <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignactivity>`__ |ext_link|, `CampaignResponse <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignresponse>`__ |ext_link|, or `CustomerAddress <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/customeraddress>`__ |ext_link|. Any of the entities found in the `Web API EntityType Reference <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/entitytypes?view=dynamics-ce-odata-9>`__ |ext_link| may be configured as a destination, depending on your use case.
 
 .. destination-microsoft-dynamics-web-api-end
+
+
+.. TODO: Add workflow resolutions from existing topics HERE.

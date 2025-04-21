@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 
 
 .. meta::
@@ -265,19 +265,27 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
 
-       Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
-
-       Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
-
-       Define the schema for the real-time table. Each field in the schema must exist in the fields that are streamed to Amperity by the streaming source for this real-time table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. If you have an existing feed configured for streaming purposes, you may refer to the feed for schema details.
-
-       .. note:: If your data has complex types, such as nested JSON, choose **string** as the type. This will allow the real-time table to process the complex object and make it available for querying purposes.
-
        .. image:: ../../images/mockup-databases-table-realtime-add-01.png
           :width: 420 px
           :alt: Batch and streaming layers.
           :align: left
           :class: no-scaled-link
+
+       Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
+
+       Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
+
+       .. note:: If your data has complex types, such as nested JSON, choose **string** as the type. This will allow the real-time table to process the complex object and make it available for querying purposes.
+
+       Define the schema for the real-time table. Click **+ Add field** too add a field. Give the field a name and choose a data type. Drag-and-drop the fields into the order you want:
+
+       .. image:: ../../images/mockup-databases-table-realtime-add-02.png
+          :width: 380 px
+          :alt: Drag-and-drop schema elements into the desired order.
+          :align: left
+          :class: no-scaled-link
+
+       Each field in the schema must exist in the fields that are streamed to Amperity by the streaming source for this real-time table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. If you have an existing feed configured for streaming purposes, you may refer to the feed for schema details.
 
        .. note:: The schema for every real-time table will contain two additional fields at the query layer: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table). Use these fields to support filtering for recent data to join with data in batch layer database tables.
 
@@ -419,10 +427,44 @@ Example use cases
 
 Real-time tables support many different types of use cases, including:
 
+* :ref:`realtime-example-behavioral`
+* :ref:`realtime-example-personalization`
 * :ref:`realtime-example-redemption-reminders`
 * :ref:`realtime-example-suppress-recent-transactions`
+* :ref:`realtime-example-suppression`
 
 .. realtime-examples-end
+
+
+.. _realtime-example-behavioral:
+
+Behavioral
+--------------------------------------------------
+.. realtime-example-behavioral-start
+
+Behavioral use cases include:
+
+* Following-up cart abandonments based on products a customer has viewed.
+* Sending communications after a transaction has occurred.
+* Sending an upsell or cross-sell based on browsing activity.
+
+.. realtime-example-behavioral-end
+
+
+.. _realtime-example-personalization:
+
+Personalization
+--------------------------------------------------
+
+.. realtime-example-personalization-start
+
+Personalization use cases include:
+
+* Personalized email or push notifications that contain the most recent profile information.
+* Combine real-time inventory data and profile preferences to upsell or cross-sell distressed inventory.
+* Ensure that support centers have the latest set of transactions that are associated with a profile.
+
+.. realtime-example-personalization-end
 
 
 .. _realtime-example-redemption-reminders:
@@ -451,6 +493,22 @@ A winback campaign is an important part of a retailer's marketing strategy. Cust
 Use real-time tables to capture recent transactions, and then use the real-time table to exclude customers who have purchased recently from the winback campaign.
 
 .. realtime-example-suppress-recent-transactions-end
+
+
+.. _realtime-example-suppression:
+
+Suppression
+--------------------------------------------------
+
+.. realtime-example-suppression-start
+
+Suppression use cases include:
+
+* Suppressing customers from an audience after they have made a purchase.
+* Suppressing customers who have cancelled recently to ensure they do not receive pre-trip reminders.
+* Suppressing customers who have received specific targeted offers from receiving a better offer within a certain timeframe.
+
+.. realtime-example-suppression-end
 
 
 .. _realtime-add-to-batch-workflow:

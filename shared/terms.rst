@@ -1982,6 +1982,15 @@ Datalogix, now a component of Oracle Data Cloud, connects offline purchase signa
 .. term-datalogix-end
 
 
+**dataset**
+
+.. term-dataset-start
+
+A dataset is a collection of data that is grouped together to support all of the use cases required by a high-level goal. A dataset may be comprised of smaller datasets, as if they are building blocks.
+
+.. term-dataset-end
+
+
 **datasource** (column name)
 
 .. term-datasource-start
@@ -2975,7 +2984,7 @@ Looker is an enterprise platform for business intelligence, data applications, a
 
 .. term-google-enhanced-conversions-start
 
-Google Enhanced Conversions improves the accuracy of conversion measurement by sending hashed first-party conversion data to Google using one-way SHA-256 hashing of first-party customer data.
+`Google Enhanced Conversions <https://support.google.com/google-ads/answer/9888656?hl=en>`__ |ext_link| improves the accuracy of conversion measurement by sending hashed first-party conversion data to Google using one-way SHA-256 hashing of first-party customer data.
 
 .. term-google-enhanced-conversions-end
 
@@ -4736,6 +4745,15 @@ A PII table collects all of the fields from the **Unified Coalesced** table that
 Pinterest is a visual discovery engine on which your brand can engage with your customers. Send a list of products that are in your product catalog to Pinterest to enable pins, and then send a list of customers with whom your brand wants to engage.
 
 .. term-pinterest-end
+
+
+**PIPEDA**, **Personal Information Protection and Electronic Documents Act**
+
+.. term-pipeda-start
+
+The `Personal Information Protection and Electronic Documents Act (PIPEDA) <https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/>`__ |ext_link| is a Canadian federal privacy law for how private sector organizations collect, use and disclose personal information in the course of commercial business.
+
+.. term-pipeda-end
 
 
 **pk** (semantic)

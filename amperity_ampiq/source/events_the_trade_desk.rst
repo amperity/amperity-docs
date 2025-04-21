@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: The Trade Desk
-.. |what-send| replace:: email address lists
+.. |what-send| replace:: offline events
 .. |what-enable| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
 .. |allow-for-what| replace:: audiences
@@ -82,6 +82,8 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
       LEFT JOIN UID2 uid2 ON uit.amperity_id = uid2.uid2
       WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
 
+   You may use **euid** as a source attribute when your brand is a participant in `European Unified ID (EUID) <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
+
 .. caution:: Review the list of offline events parameters that may be sent to |destination-name|. Compare these parameters to the fields that are available from your brand's customer 360 database to determine which fields are available to be sent to |destination-name|.
 
    Some parameters, such as **city**, **region** (which represents a state within the United States), and **country**, must be associated with the location in which the offline event occurred, not the location at which the customer associated with the offline event resides.
@@ -96,6 +98,6 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
 Offline events paramaters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
-   :start-after: .. destination-the-trade-desk-parameters-offline-events-start
-   :end-before: .. destination-the-trade-desk-parameters-offline-events-end
+.. include:: ../../amperity_datagrid/source/events_the_trade_desk.rst
+   :start-after: .. events-the-trade-desk-parameters-offline-start
+   :end-before: .. events-the-trade-desk-parameters-offline-end
