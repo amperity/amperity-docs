@@ -384,7 +384,7 @@ Amps consumption for the **Source transforms** feature is determined by:
 * Changes to source transform runtimes often cause variable Amps consumption
 * Larger compute resources
 
-.. note:: Source transforms were previously referred to as "custom domain tables".
+.. note:: Source transforms are also referred to as "custom domain tables".
 
 Monitor Amps consumption for the **Source transforms** feature by:
 
