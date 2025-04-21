@@ -37,7 +37,7 @@ About Amps consumption
 
 .. amps-consumption-start
 
-Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started.
+Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started.
 
 .. amps-consumption-end
 
@@ -316,11 +316,15 @@ Profile API
 
 Amps consumption for the **Profile API** feature is determined by:
 
-* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint.
+* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint
+* The frequency at which each Profile API index is refreshed
+* The width of each Profile API index (where width refers to the number of columns, or response parameters, that are available in the index; wider indexes consume more Amps)
+* The number of indexes that are refreshed automatically by a courier group
 
 Monitor Amps consumption for the **Profile API** feature by:
 
-* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows.
+* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows, including not only the number of indexes, but also including the amount data that is made available from each index; Amps consumption is affected by the length of time it takes to run the query to generate the index and also the number of fields that are added to the index. `Complex queries will consume more Amps; queries that return large numbers of columns and/or rows will consume more Amps <https://docs.amperity.com/datagrid/api_profile.html#index-response-times>`__
+* Monitoring the history of Profile API index refreshes from the **Workflows** page
 
 .. amps-consumption-feature-profile-api-end
 
@@ -386,7 +390,7 @@ Amps consumption for the **Source transforms** feature is determined by:
 * Changes to source transform runtimes often cause variable Amps consumption
 * Larger compute resources
 
-.. note:: Source transforms are also referred to as "custom domain tables".
+.. note:: Source transforms were previously referred to as "custom domain tables".
 
 Monitor Amps consumption for the **Source transforms** feature by:
 
@@ -501,14 +505,16 @@ The consumption of Amps depends on implementation details and the complexity of 
 
 .. _amps-review-consumption:
 
-Review Amps consumption
+Review consumption
 ==================================================
 
 .. amps-review-consumption-start
 
-At a high level Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows, storing data, or segmentation, along with the amount of storage that is required to support those compute resources.
+Consumption is measured in Amps and Storage (TB).
+Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or segmentation.
+Storage (TB) measures the storage that is required to support those compute resources, and is measured in Terabytes.
 
-For example:
+Some examples of factors that affect consumption measurement are:
 
 * The amount of data that is processed.
 * The amount of data that is stored.
@@ -522,7 +528,7 @@ For example:
 
 .. _amps-review-consumption-compute:
 
-Amps and compute
+Amps consumption
 --------------------------------------------------
 
 .. amps-review-consumption-compute-start
@@ -536,7 +542,7 @@ The following features have configurable compute settings: ingest, source transf
 
 .. _amps-review-consumption-storage:
 
-Amps and storage
+Storage consumption
 --------------------------------------------------
 
 .. amps-review-consumption-storage-start
@@ -561,22 +567,24 @@ Consumption dashboard
 
 .. amps-review-consumption-dashboard-start
 
-The Amps consumption dashboard shows your brand's total Amps consumption across configurable time periods along with a breakdown of Amps consumption by category and by feature.
+The Amps consumption dashboard shows your brand's total Amps and storage (TB) consumption across configurable time periods along with a breakdown of Amps consumption by category and by feature.
 
 .. amps-review-consumption-dashboard-end
 
 
 .. _amps-review-consumption-dashboard-summary:
 
-Contract summary
+Current contract
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. amps-review-consumption-dashboard-summary-start
 
-The **Contract summary** shows the quantity of Amps your brand has consumed and the quantity of Amps that remain within your brand's current contract period. Amps consumption is shown with two milestones:
+The **Current contract** section shows the state of the tenant for the current contract period. It displays the following information:
 
-#. Your current contract end date, along with the projected Amps consumption rate on that date.
-#. A projection of when 100% of your brand's Amps limit will be reached based on current consumption rates.
+#. Currency capacity consumed against the total capacity purchased
+#. Time remaining in the current contract period
+#. Overall Amps vs storage (TB) breakdown
+#. Consumption broken down by environment
 
 .. amps-review-consumption-dashboard-summary-end
 
@@ -588,7 +596,7 @@ Consumption breakdown
 
 .. amps-review-consumption-dashboard-breakdown-start
 
-The **Consumption breakdown** section shows Amps consumption by category and by feature. You can filter by time period, view Amps at daily, weekly, or monthly scales, and filter by production tenant or by sandbox.
+The **Consumption breakdown** section shows Amps consumption by category and by feature. You can choose to view the dashboared for Amps or Storage (TB) in the filter bar. You can also filter by time period, view Amps at daily, weekly, or monthly scales, and filter by production tenant or by sandbox.
 
 The **Consumption breakdown** can be filtered by date range, by tenant type, shown daily, weekly, or monthly.
 
@@ -602,7 +610,9 @@ Each option is set independently:
 
 * Use the **Date range** dropdown to select one of the following values: **Last 2 weeks**, **Last 30 days**, **Last 90 days**, **Year to date**, **Current contract period**, or **Lifetime**.
 * Use the **Granularity** field to set the granularity of the charts shown for Amps consumption. Choose one of **Daily**, **Weekly**, or **Monthly**.
-* Use the **Tenant** dropdown to view Amps for all tenants, only your production tenant, or only sandboxes. Choose one of **All**, **Production**, or **Sandbox**.
+* Use the **Type** field to set the unit of information that the dashboard displays. Choose one of **Amps** or **Storage (TB)**.
+* Use the **Category** dropdown to view the dashboard for a selected product category. Choose one of **All**, **Sources**, **Stitch**, **Databases**, **Analytics**, or **Activation**.
+* Use the **Environment** field to view the dashboard for all tenants, only your production tenant, only sandboxes, or a specific sandbox. Choose one of **All**, **Production**, or **Sandbox**.
 
 For example, set the date range to "Last 90 days", and then choose "weekly" and "sandboxes" to view Amps consumption for all sandboxes during the last 90 days, with consumption shown by week.
 
