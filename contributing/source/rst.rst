@@ -1199,17 +1199,17 @@ External
 
 .. format-content-links-external-start
 
-Use external links for links that stay within the Amperity knowledge center. These will generally take the form of a relative URL: ``../tutorials/start_here.html``.
+Use external links for links that leave the Amperity docs site. These will generally take the form of a fully qualified URL: ``https://www.amperity.com``.
 
 You must embed the external link naturally within a sentence:
 
 .. code-block:: rst
 
-   `some link text here <../tutorials/start_here.html>`__
+   `some link text here <https://www.amperity.com>`__ |ext_link|
 
-For example: `some link text here <../tutorials/start_here.html>`__
+For example: `https://www.amperity.com <https://www.amperity.com>`__ |ext_link|.
 
-Use a double underscore (``__``) at the end of the external link.
+Use a double underscore (``__``) at the end of the external link and append with ``|ext_link|``.
 
 .. format-content-links-external-end
 
@@ -1249,7 +1249,7 @@ Reference
 
 .. format-content-links-reference-start
 
-There are two ways to link to internal headers across the doc set.
+There are two ways to link to headers that exist within the same docs collection.
 
 First, a pre-requisite: the header to which the link is targeted must have an anchor. For example:
 
@@ -1295,7 +1295,7 @@ Topic
 
 .. format-content-links-topic-start
 
-To link to internal topic use the following format:
+To link to topic that exists within the same docs collection use the following format:
 
 .. code-block:: rst
 
