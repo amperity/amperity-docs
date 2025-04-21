@@ -2811,6 +2811,18 @@ A combination of given name (first name) and surname (last name) for a customer.
 
 .. term-full-name-ampid-end
 
+- or -
+
+.. term-full-name-unified-coalesced-start
+
+A combination of given name (first name) and surname (last name) for a customer. Can be populated in the following ways; the first non-nil value will be selected:
+
+#. A value tagged with ``full-name``.
+#. A concatenation of values tagged with ``given-name`` and ``surname`` if they both exist.
+#. A value tagged with ``given-name``.
+#. A value tagged with ``surname``.
+
+.. term-full-name-unified-coalesced-end
 
 **gender**
 
