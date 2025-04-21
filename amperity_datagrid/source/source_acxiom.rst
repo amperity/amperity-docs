@@ -107,6 +107,10 @@ The |source-name| data source requires the following configuration details:
 
        The location must contain the list of files (by filename and file type, e.g. "accounts.csv", "customers.ndjson", "email-list.tsv", and so on) that are to be pulled to Amperity. A sample of each file is used during feed creation.
 
+       .. include:: ../../amperity_reference/source/format_csv.rst
+          :start-after: .. format-csv-file-sizes-start
+          :end-before: .. .. format-csv-file-sizes-end
+
 .. source-acxiom-get-details-end
 
 

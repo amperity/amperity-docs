@@ -31,6 +31,18 @@ File format: CSV
 .. format-csv-tip-end
 
 
+.. _format-csv-file-sizes:
+
+File sizes
+==================================================
+
+.. format-csv-file-sizes-start
+
+The size of a CSV file should not exceed 10 GB. A CSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity.
+
+.. format-csv-file-sizes-end
+
+
 .. _format-csv-double-quotes:
 
 Double quotes

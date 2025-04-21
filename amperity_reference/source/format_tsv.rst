@@ -31,6 +31,18 @@ File format: TSV
 .. format-tsv-tip-end
 
 
+.. _format-tsv-file-sizes:
+
+File sizes
+==================================================
+
+.. format-tsv-file-sizes-start
+
+The size of a TSV file should not exceed 10 GB. A TSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity.
+
+.. format-tsv-file-sizes-end
+
+
 .. _format-tsv-pull:
 
 Pull TSV files

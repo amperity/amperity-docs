@@ -31,6 +31,18 @@ File format: PSV
 .. format-psv-tip-end
 
 
+.. _format-psv-file-sizes:
+
+File sizes
+==================================================
+
+.. format-psv-file-sizes-start
+
+The size of a PSV file should not exceed 10 GB. A PSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity.
+
+.. format-psv-file-sizes-end
+
+
 .. _format-psv-pull:
 
 Pull PSV files
