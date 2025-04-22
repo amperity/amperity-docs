@@ -161,7 +161,7 @@ Amps consumption for the **Campaigns** feature is determined by:
 
 * The frequency at which campaigns are run
 * The complexity of SQL queries that are used by a campaign
-* The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, and then uses additional segments to apply subaudiences by destination and use case; each segment that is run within a campaign will consume Amps
+* The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output; each segment that is run within a campaign will consume Amps
 * The amount of data being sent from Amperity to a downstream location
 * The size of the **Campaign Recipients** table
 
@@ -169,9 +169,9 @@ Monitor Amps consumption for the **Campaigns** feature by:
 
 * Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes will take longer to run and will consume more Amps
 * Monitoring workflows that contain recurring campaigns from the **Workflows** page
-* Monitoring the frequency and runtime duration for campaigns (including all segments that run as part of that campaign) that are run automatically from the **Usage** page
+* Monitoring the frequency and runtime duration for campaigns that are run automatically from the **Usage** page
 * Reviewing the customer profiles and records sent from the **Usage** page
-* Limiting the number of Amperity IDs that are maintained in the **Campaign Recipients** table by ensuring that campaigns sent from Amperity are actively used by your brand's downstream use cases
+* Limiting the number of records that are maintained in the **Campaign Recipients** table by ensuring that campaigns sent from Amperity are actively used by your brand's downstream use cases
 
 .. amps-consumption-feature-campaigns-end
 
@@ -187,7 +187,7 @@ Amps consumption for the **Databases** feature is determined by:
 
 * The frequency at which a database is run
 * The number of tables in a database
-* The length of time it takes to build the database
+* The length of time it takes to run the database
 * Calculating extended transactions attributes
 * The number of custom tables that are used by analytics and marketing activities
 * Larger compute settings for SQL resources
@@ -533,7 +533,7 @@ Amps consumption
 
 .. amps-review-consumption-compute-start
 
-Some features consume more Amps than others. Compute-intensive features, such as running Spark SQL and Presto SQL queries, processing data, and algorithims, such as Stitch or predictive models, will consume Amps at a higher rate. Compute includes actions like loading data, querying data, running databases, refreshing predictive models, and running Stitch. Consumption of Amps based on compute depends on the features that are in use, the frequency at which they are run, and the amount of time it takes for the process to finish. Compute consumption can vary from day to day.
+Some features consume more Amps than others. Compute-intensive features, such as running Spark SQL and Presto SQL queries, processing data, and algorithms, such as Stitch or predictive models, will consume Amps at a higher rate. Compute includes actions like loading data, querying data, running databases, refreshing predictive models, and running Stitch. Consumption of Amps based on compute depends on the features that are in use, the frequency at which they are run, and the amount of time it takes for the process to finish. Compute consumption can vary from day to day.
 
 The following features have configurable compute settings: ingest, source transforms, Stitch, Stitch reports, databases, and Spark SQL queries. Your brand can explicitly set the compute sizes for these tasks in your workflows. Changes to compute settings will affect Amps consumption. Contact your Amperity representative with questions around how to best configure compute resource sizing within your tenant.
 
@@ -709,15 +709,17 @@ To reduce Amps consumption for the **Sources** category:
 
 * Use Amperity Bridge to sync data to Amperity. A sync is more efficient and typically consumes Amps at a lower rate than loading files. Amperity Bridge connects to your Lakehouse quickly and efficiently.
 
-* Partitioned CSV files, when available, can be ingested in parallel, running more quickly than non-partitioned CSV files. Modern file format, such as Apache Parquet, can be processed even more quickly.
+* Partitioned CSV files, when available, can be ingested in parallel, running more quickly than non-partitioned CSV files. Modern file formats, such as Apache Parquet, can be processed even more quickly.
 
 * Ingesting data incrementally is faster than ingesting full historical data.
 
-* Removing unused source tables. The amount of data that is stored will consume Amps. While storage costs do not typically lead to high Amps consumption, deleting unused source tables can help reduce Amps consumption.
+* Remove unused source tables. The amount of data that is stored will consume Amps. While storage costs do not typically lead to high Amps consumption, deleting unused source tables can help reduce Amps consumption.
 
   .. note:: Amperity maintains a short buffer period to ensure data can be restored, should it need to be. After deleting unused source tables lower Amps consumption will show in the dashboard after the buffer period has been passed.
 
-* Source transforms (previously referred to as "custom domain tables") can be difficult to optimize depending on the use case. If your tenant is having trouble optimizing SQL queries that belong to the **Sources** category, please ask your Amperity representatitve for assistance.
+* Remove older records. Processing smaller tables consumes fewer Amps.
+
+* Source transforms (previously referred to as "custom domain tables") can be difficult to optimize. Refer to the **Database** section for tips on how to improve Spark SQL performance, or ask your Amperity representative for assistance.
 
 .. amps-reduce-category-sources-end
 
@@ -731,9 +733,11 @@ Stitch
 
 To reduce Amps consumption for the **Stitch** category:
 
-* Review all of the foreign keys (FKs) that are applied to all source tables that are made available to Stitch. Poorly configured foreign keys (FKs) can lead to higher frequencies of interconnected records, which may increase the duration of the Stitch run and lead to higher Amps consumption
+* Review bad-value blocklist settings. Bad values can lead to overclustering, and increased Amps consumption.
 
-* As your brand adds more records Amps consumption will change. More complete records typically consume more Amps than sparse records. Depending on the type of data added, it may be helpful to adjust the compute resourcing. Please ask your Amperity representatitve for assistance with adjusting compute resourcing for the **Stitch** category.
+* Review all of the foreign keys (FKs) that are applied to all source tables that are made available to Stitch. Poorly configured foreign keys (FKs) can lead to higher frequencies of interconnected records, which may increase the duration of the Stitch run and lead to higher Amps consumption. Consider adding automated bad-value detection for foreign keys.
+
+* As your brand adds more records Amps consumption will change. More complete records typically consume more Amps than sparse records. Depending on the type of data added, it may be helpful to adjust the compute resourcing. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Stitch** category.
 
 .. amps-reduce-category-stitch-end
 
@@ -747,11 +751,15 @@ Databases
 
 To reduce Amps consumption for the **Databases** category:
 
-* More complex SQL, including broadcast JOIN operations, will consume more Amps because they take longer.
+* Databases and source transforms run on Apache Spark and use Spark SQL. Review the run history to identify the longest-running tables.
 
-* Review database run history to understand how table runtimes change over time. Compare the run history to record count changes and to changes to the SQL that runs custom tables to help understand how Amps consumption is affected over time.
+* Complex SQL over large datasets tends to consume more Amps. Consider opportunities to simplify the logic and filter or pre-aggregate incoming data.
 
-* Databases run on Apache Spark and use Spark SQL. Databases that run slowly may have inefficient compute settings. Please ask your Amperity representatitve for assistance with adjusting compute resourcing for the **Databases** category.
+* Spark performance suffers in the presence of "skew", or poorly-distributed data that is used for joins, aggregations, or window function partitions. Check the distribution of values used in joining keys.
+
+* Duplication in joins can result in higher Amps consumption, as later operations must process a larger amount of data. Check for uniqueness in joining keys, and consider aggregating before joining to prevent duplication. 
+
+* Review compute settings. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Databases** category.
 
 .. amps-reduce-category-databases-end
 
@@ -765,7 +773,7 @@ Analytics
 
 To reduce Amps consumption for the **Analytics** category:
 
-* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Please ask your Amperity representatitve for assistance with adjusting compute resourcing for predictive modeling.
+* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Please ask your Amperity representative for assistance with adjusting compute resourcing for predictive modeling.
 
 .. amps-reduce-category-analytics-end
 
@@ -779,7 +787,11 @@ Activation
 
 To reduce Amps consumption for the **Activation** category:
 
-* Review the requirements for each destination to which Amperity is configured to send data. The length of time required to send data to a destination consumes Amps. Certain connectors, such as Attentive and Google Ads, take longer than others.
+* Review SQL used in orchestrated queries. Complex operations over large datasets tend to consume more Amps.
+
+* Review segments used for campaigns. Complex operations over large datasets tend to consume more Amps.
+
+* Review the premium connectors in use. Unlike other consumption types, premium connectors consume Amps at a fixed monthly rate.
 
 .. amps-reduce-category-activation-end
 
@@ -805,8 +817,8 @@ Compute settings for each category may be adjusted to one of XS (smallest), S, M
 
 .. note:: The compute resources for the **Ingest** category cannot be adjusted because ingest dynamically scales to the type and amount of data that is being pulled into the Amperity platform.
 
-Fine-tuning compute resource sizes is a balance between efficiency and cost. For example, increasing compute resources might speed up a job while consuming Amps at the same rate. If the efficiency of compute resources is low, perhaps caused by inefficient SQL operations, increasing compute resources may increase Amps consumption significantly. All changes to compute resources should be made in a sandbox and fully tested before promoting them to your production tenant.
+Fine-tuning compute resource sizes is a balance between speed and cost. For well-distributed jobs, increasing compute resources might reduce runtime while consuming Amps at the same rate. For inefficient SQL operations, increasing compute resources may increase Amps consumption significantly, without significant runtime reduction. All changes to compute resources should be made in a sandbox and fully tested before promoting them to your production tenant.
 
-.. important:: Only a **Datagrid Administrator** can modify compute resource sizes. Please ask your Amperity representatitve for assistance for any questions around adjusting compute resources.
+.. important:: Only a **Datagrid Administrator** can modify compute resource sizes. Please ask your Amperity representative for assistance with any questions around adjusting compute resources.
 
 .. amps-reduce-adjust-compute-end
