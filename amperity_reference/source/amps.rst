@@ -390,7 +390,7 @@ Amps consumption for the **Source transforms** feature is determined by:
 * Changes to source transform runtimes often cause variable Amps consumption
 * Larger compute resources
 
-.. note:: Source transforms were previously referred to as "custom domain tables".
+.. note:: Source transforms are also referred to as "custom domain tables".
 
 Monitor Amps consumption for the **Source transforms** feature by:
 
@@ -581,7 +581,7 @@ Current contract
 
 The **Current contract** section shows the state of the tenant for the current contract period. It displays the following information:
 
-#. Currency capacity consumed against the total capacity purchased
+#. Capacity consumed against the total capacity purchased
 #. Time remaining in the current contract period
 #. Overall Amps vs storage (TB) breakdown
 #. Consumption broken down by environment
