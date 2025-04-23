@@ -637,6 +637,36 @@
       },
       "additionalProperties" : false,
       "required" : [ "data" ]
+    },
+    "WorkflowRunRequest" : {
+      "description" : "Fields used to launch a workflow",
+      "type" : "object",
+      "properties" : {
+        "api_version" : {
+          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
+          "type" : "string"
+        },
+        "config_id" : {
+          "description" : "Configuration ID of the workflow to plan.",
+          "type" : "string"
+        },
+        "range_from" : {
+          "description" : "A timestamp indicating the date (inclusive) from which to look for files. Must be in ISO-8061 format and in UTC. If included without ‘range_to’, indicates a specific day from which to look for files.",
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "range_to" : {
+          "description" : "A timestamp indicating the date (exclusive) up to which to look for files. Must be in ISO-8061 format and in UTC. When included with ‘range_from’, defines a closed:open (i.e. inclusive from, exclusive to) date range within which to look for files.",
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "run_mode" : {
+          "description" : "Indicates the workflow run mode. Acceptable values are: ‘source’ (source data refresh only), ‘refresh‘ (partial workflow up to databases), ‘full’ (full workflow including activations).",
+          "type" : "string"
+        }
+      },
+      "additionalProperties" : false,
+      "required" : [ "config_id" ]
     }
   },
   "produces" : [ "application/json" ],
@@ -768,7 +798,7 @@
           "name" : "destination_data_template_id",
           "description" : "Use this parameter to restrict the list of campaigns that are returned to only campaigns that are configured to use specific data template.",
           "required" : false,
-          "x-example" : "ptg-2QLLqXBEqq",
+          "x-example" : "ptg-2QLLqXBEq",
           "type" : "string"
         } ],
         "responses" : {
@@ -1140,6 +1170,12 @@
               "$ref" : "#/definitions/ErrorResponse"
             }
           },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
           "200" : {
             "description" : "List of workflows",
             "schema" : {
@@ -1149,6 +1185,69 @@
         },
         "description" : "Return a list of workflows that exist within the date ranges defined in the request.",
         "summary" : "List workflows",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "tags" : [ "Workflow" ]
+      },
+      "post" : {
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "WorkflowRunRequest",
+          "description" : "Fields used to launch a workflow",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/WorkflowRunRequest"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "401" : {
+            "description" : "Authentication Required",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "403" : {
+            "description" : "Not Authorized",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "404" : {
+            "description" : "Not Found"
+          },
+          "405" : {
+            "description" : "Method Not Allowed",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "201" : {
+            "description" : "Workflow details for newly launched workflow",
+            "schema" : {
+              "$ref" : "#/definitions/Workflow"
+            }
+          }
+        },
+        "description" : "Runs a new workflow, based on the inputs provided",
+        "summary" : "Run workflow",
         "produces" : [ "application/json" ],
         "consumes" : [ "application/json" ],
         "tags" : [ "Workflow" ]
