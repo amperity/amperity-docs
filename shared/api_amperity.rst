@@ -66,11 +66,18 @@ Available Endpoints
    :class: no-scaled-link
    :target: https://docs.amperity.com/api/endpoint_get_workflows_fetch.html
 
+.. image:: ../../images/api-post-workflow-run-start.png
+   :width: 440 px
+   :alt: POST /workflow/runs
+   :align: left
+   :class: no-scaled-link
+   :target: https://docs.amperity.com/api/endpoint_post_workflows_start.html
+
 .. image:: ../../images/api-post-workflow-run-stop.png
    :width: 440 px
    :alt: POST /workflow/runs/{id}/stop
    :align: left
    :class: no-scaled-link
    :target: https://docs.amperity.com/api/endpoint_post_workflows_stop.html
-
+   
 .. term-http-methods-end

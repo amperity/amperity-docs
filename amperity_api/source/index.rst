@@ -43,7 +43,7 @@ Requests and responses
 Endpoints
 ==================================================
 
-:doc:`endpoint_get_audit_events_list` |fa-index-separator| :doc:`endpoint_get_campaign_drafts_list` |fa-index-separator| :doc:`endpoint_get_campaigns_list` |fa-index-separator| :doc:`endpoint_get_ingest_jobs` |fa-index-separator| :doc:`endpoint_get_ingest_jobs_id` |fa-index-separator|  :doc:`endpoint_get_segments_list` |fa-index-separator| :doc:`endpoint_get_workflows_list` |fa-index-separator| :doc:`endpoint_get_workflows_fetch`
+:doc:`endpoint_get_audit_events_list` |fa-index-separator| :doc:`endpoint_get_campaign_drafts_list` |fa-index-separator| :doc:`endpoint_get_campaigns_list` |fa-index-separator| :doc:`endpoint_get_ingest_jobs` |fa-index-separator| :doc:`endpoint_get_ingest_jobs_id` |fa-index-separator|  :doc:`endpoint_get_segments_list` |fa-index-separator| :doc:`endpoint_get_workflows_fetch` |fa-index-separator| :doc:`endpoint_get_workflows_list` |fa-index-separator| :doc:`endpoint_post_workflows_start` |fa-index-separator| :doc:`endpoint_post_workflows_stop` 
 
 
 .. Hide the TOC from this file.
@@ -61,6 +61,7 @@ Endpoints
    endpoint_get_segments_list
    endpoint_get_workflows_fetch
    endpoint_get_workflows_list
+   endpoint_post_workflows_start
    endpoint_post_workflows_stop
    overview
    rate_limits
