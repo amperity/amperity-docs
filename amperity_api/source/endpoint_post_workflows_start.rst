@@ -99,11 +99,10 @@ A request to the **POST /workflow/runs** endpoint is similar to:
 
    curl --request POST \ 
           "https://app.amperity.com/api/workflow/runs" \
-          ?config_id=abc-123 \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token'
-
+        --data "config_id=cg-123ABc4DE"
 
 (This example is formatted for readability in a narrow page layout.)
 
