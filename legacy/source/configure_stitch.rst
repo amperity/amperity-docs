@@ -792,7 +792,7 @@ Automatic bad value detection
 
 .. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-automatic-start
    :end-before: .. bad-values-blocklist-automatic-end
 
@@ -802,7 +802,7 @@ Automatic bad value detection
 Disable automatic bad value detection
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-automatic-disable-start
    :end-before: .. bad-values-blocklist-automatic-disable-end
 
