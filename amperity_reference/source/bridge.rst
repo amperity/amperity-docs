@@ -102,7 +102,7 @@ Snowflake Bridge is a first-class integration that leverages secure data sharing
 
 .. bridge-sync-snowflake-end
 
-.. include:: ../../amperity_datagrid/source/bridge_snowflake.rst
+.. include:: ../../amperity_operator/source/bridge_snowflake.rst
    :start-after: .. bridge-snowflake-what-is-data-sharing-start
    :end-before: .. bridge-snowflake-what-is-data-sharing-end
 

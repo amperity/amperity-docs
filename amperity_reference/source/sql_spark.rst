@@ -2226,7 +2226,7 @@ Coalesce to 1 (non-NULL) values
 Multiple delimiter types
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-advanced-custom-domain-tables-start
    :end-before: .. bad-values-blocklist-advanced-custom-domain-tables-end
 

@@ -203,7 +203,7 @@ All Opted In Emails
    :start-after: .. term-all-opted-in-emails-table-start
    :end-before: .. term-all-opted-in-emails-table-end
 
-.. include:: ../../amperity_datagrid/source/table_all_opted_in_emails.rst
+.. include:: ../../amperity_operator/source/table_all_opted_in_emails.rst
    :start-after: .. table-all-opted-in-emails-use-in-segments-warning-start
    :end-before: .. table-all-opted-in-emails-use-in-segments-warning-end
 
@@ -3326,7 +3326,7 @@ The **Unified Coalesced** table contains the following columns:
 
        A column is added for each foreign key that is defined in the **Sources** page.
 
-       .. include:: ../../amperity_datagrid/source/semantics.rst
+       .. include:: ../../amperity_operator/source/semantics.rst
           :start-after: .. semantics-key-foreign-tip-start
           :end-before: .. semantics-key-foreign-tip-end
 
@@ -3789,7 +3789,7 @@ The **Unified Customer** table contains the following columns:
 
        A column is added for each foreign key that is defined in the **Sources** page.
 
-       .. include:: ../../amperity_datagrid/source/semantics.rst
+       .. include:: ../../amperity_operator/source/semantics.rst
           :start-after: .. semantics-key-foreign-tip-start
           :end-before: .. semantics-key-foreign-tip-end
 
@@ -4974,7 +4974,7 @@ The **Unified Preprocessed Raw** table contains the following columns:
 
        A column is added for each foreign key that is defined in the **Sources** page.
 
-       .. include:: ../../amperity_datagrid/source/semantics.rst
+       .. include:: ../../amperity_operator/source/semantics.rst
           :start-after: .. semantics-key-foreign-note-trivial-duplicates-start
           :end-before: .. semantics-key-foreign-note-trivial-duplicates-end
 
