@@ -49,7 +49,7 @@ A |destination-name| destination works like this:
 
    .. important::
 
-      .. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+      .. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
          :start-after: .. destination-meta-ads-manager-terms-of-service-start
          :end-before: .. destination-meta-ads-manager-terms-of-service-end
 
@@ -65,7 +65,7 @@ A |destination-name| destination works like this:
 
    .. admonition:: What is Meta Ads Manager?
 
-      .. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+      .. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
          :start-after: .. destination-meta-ads-manager-meta-ads-manager-start
          :end-before: .. destination-meta-ads-manager-meta-ads-manager-end
 
@@ -244,7 +244,7 @@ Run orchestration
 Facebook Marketing API keys
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+.. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
    :start-after: .. destination-meta-ads-manager-api-keys-start
    :end-before: .. destination-meta-ads-manager-api-keys-end
 
@@ -254,6 +254,6 @@ Facebook Marketing API keys
 Conversions API parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-conversion-api-parameters-start
    :end-before: .. events-meta-ads-manager-conversion-api-parameters-end

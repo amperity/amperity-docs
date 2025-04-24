@@ -387,13 +387,13 @@ The numbers in the previous diagram represent a scenario that builds a query, an
 Log in to Amperity
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-log-in-amperity-start
    :end-before: .. start-here-log-in-amperity-end
 
 **To log in to Amperity**
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-log-in-amperity-steps-start
    :end-before: .. start-here-log-in-amperity-steps-end
 
@@ -403,6 +403,6 @@ Log in to Amperity
 Supported browsers
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-tenant-browsers-start
    :end-before: .. start-here-tenant-browsers-end

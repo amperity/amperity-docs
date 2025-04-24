@@ -35,7 +35,7 @@ You can build queries that return |what-send|, along with returning additional p
    :align: left
    :class: no-scaled-link
 
-.. include:: ../../amperity_datagrid/source/destination_listrak.rst
+.. include:: ../../amperity_operator/source/destination_listrak.rst
    :start-after: .. destination-listtrak-context-start
    :end-before: .. destination-listtrak-context-end
 

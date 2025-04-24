@@ -45,11 +45,11 @@ Amperity can manage audiences for |destination-name| demand-side platform, from 
 
 .. destination-the-trade-desk-start
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
+.. include:: ../../amperity_operator/source/destination_the_trade_desk.rst
    :start-after: .. destination-the-trade-desk-whatis-20-start
    :end-before: .. destination-the-trade-desk-whatis-20-end
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
+.. include:: ../../amperity_operator/source/destination_the_trade_desk.rst
    :start-after: .. destination-the-trade-desk-api-note-start
    :end-before: .. destination-the-trade-desk-api-note-end
 
