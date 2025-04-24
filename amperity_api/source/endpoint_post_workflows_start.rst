@@ -88,12 +88,11 @@ A request to the **POST /workflow/runs** endpoint is similar to:
 .. code-block:: rest
 
    curl --request POST \ 
-          "https://app.amperity.com/api/workflow/runs" \
+          'https://app.amperity.com/api/workflow/runs' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
-        --data "config_id=cg-123ABc4DE"
-        --data "run_mode=source"
+        --header 'Authorization: Bearer token' \
+        --data '{"config_id"="cg-123ABc4DE"}'
 
 (This example is formatted for readability in a narrow page layout.)
 
@@ -123,39 +122,53 @@ The following table describes the parameters that may be used with the **POST /w
 
        .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
 
+
    * - **config_id**
      - String. Required.
 
-       The configuration ID of the workflow. This may be the ID for a courier group, orchestration group, or campaign. 
-	   
-	   You can find the ID for the workflow to be run in the following locations:
+       The configuration ID of the workflow. This may be the ID for a courier group, orchestration group, or campaign.
 
-	   * From the **Sources** page, open the menu in the same row as the courier group, then select **Copy ID**.
-	   * From the **Destinations** page, open the menu in the same row as the orchestration group, then select **Copy ID**.
-	   * From the **Campaigns** page, open the menu in the same row as the campaign, then select **Copy ID**.
+       You can find the ID for the workflow to be run in the following locations:
+
+       * From the **Sources** page, open the menu in the same row as the courier group, and then select **Copy ID**.
+       * From the **Destinations** page, open the menu in the same row as the orchestration group, and then select **Copy ID**.
+       * From the **Campaigns** page, open the menu in the same row as the campaign, and then select **Copy ID**.
+
 
    * - **range_from**
-     - String. Optional.
+     - String. Required for file-based workflows. Courier groups only.
 
-	   A timestamp that defines the start (inclusive) of the time window in which one (or more) workflows started to run. See the created_to request parameter.
+       .. important:: A value for **range_from** must be specified for any courier group that is configured to pull files from cloud storage (SFTP, Amazon S3, Azure Blob Storage, or Google Cloud Storage).
 
-	   This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO 8601 format and is in Coordinated Universal Time (UTC). 
-	   
-	   If included without ‘range_to’, indicates a specific day from which to look for files.
+       A timestamp that defines the start (inclusive) of the time window in which one (or more) courier group workflows started to run. See the **range_to** request parameter.
+
+       This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
+
+       .. tip:: Use with **range_to** to define a date range within which to look for files. This date range will be inclusive of **range_from** and exclusive of **range_to**.
+
+          Use without **range_to** to define a specific day on which to run the workflow.
+
 
    * - **range_to**
-     - String. Optional.
+     - String. Optional. Courier groups only.
 
-	   A timestamp that defines the end (exclusive) of the time window in which one (or more) workflows started to run. See the created_from request parameter.
+       .. important:: A value for **range_from** must be specified when **range_to** is included in the request.
 
-	   This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO 8601 format and is in Coordinated Universal Time (UTC). 
-	   
-	   When included with ‘range_from’, defines a closed:open (i.e. inclusive from, exclusive to) date range within which to look for files.
+       A timestamp that defines the end (exclusive) of the time window in which one (or more) courier group workflows started to run. See the **range_from** request parameter.
+
+       This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
+
 
    * - **run_mode**
-     - String. Optional.
+     - String. Optional. Courier groups only.
 
-       Indicates the workflow run mode. Acceptable values are: ‘source’ (source data refresh only), ‘refresh‘ (partial workflow up to databases), ‘full’ (full workflow including activations).
+       Indicates the run mode for the courier group workflow. Possible values: **full**, **refresh**, or **source**.
+
+       * Use **full** to pull data, refresh domain tables, run Stitch, update databases, then send workflow results downstream. All activations, including orchestrations, campaigns, and journeys, that are associated with this workflow will be run.
+       * Use **refresh** to pull data, refresh domain tables, run Stitch, and then update databases.
+       * Use **source** to pull data and refresh domain tables.
+
+       .. tip:: **run_mode** will default to the run mode that is configured for the scheduled workflow. You may override the configured setting by providing a value for **run_mode** in the request.
 
 .. endpoint-post-workflows-start-request-parameters-end
 
@@ -172,28 +185,53 @@ The following examples show how to send requests to the **POST /workflow/runs** 
 .. endpoint-post-workflows-start-request-examples-end
 
 
-.. _endpoint-post-workflows-start-request-example-curl:
+.. _endpoint-post-workflows-start-request-example-curl-courier-group:
 
-cURL
+cURL, run courier group
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. endpoint-post-workflows-start-request-example-curl-start
+.. endpoint-post-workflows-start-request-example-curl-courier-group-start
 
-The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint.
+The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run a courier group.
 
 ::
 
    curl --request POST \ 
-          "https://app.amperity.com/api/workflow/runs" \
+          'https://app.amperity.com/api/workflow/runs' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
-        --data "config_id=cg-123ABc4DE"
-        --data "run_mode=source"
+        --header 'Authorization: Bearer token' \
+        --data '{"config_id"="cg-123ABc4DE"}' \
+        --data '{"range_from"="YYYY-MM-DD"}' \
+        --data '{"range_to"="YYYY-MM-DD"}' \
+        --data '{"run_mode"="full"}'
 
 (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-post-workflows-start-request-example-curl-end
+.. endpoint-post-workflows-start-request-example-curl-courier-group-end
+
+
+.. _endpoint-post-workflows-start-request-example-curl-other:
+
+cURL, run orchestration or campaign
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. endpoint-post-workflows-start-request-example-curl-other-start
+
+The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run an orchestration or a campaign.
+
+::
+
+   curl --request POST \ 
+          'https://app.amperity.com/api/workflow/runs' \
+        --header 'amperity-tenant: tenant' \
+        --header 'api-version: 2024-04-01' \
+        --header 'Authorization: Bearer token' \
+        --data '{"config_id"="cg-123ABc4DE"}'
+
+(This example is formatted for readability in a narrow page layout.)
+
+.. endpoint-post-workflows-start-request-example-curl-other-end
 
 
 .. _endpoint-post-workflows-start-request-python:
@@ -224,6 +262,8 @@ The following example shows how to use Python to send a request to the **POST /w
    # Body of the request
    body = {
      "config_id": "cg-2efo5X8vo",
+     "range_from": "YYYY-MM-DD",
+     "range_to": "YYYY-MM-DD",
      "run_mode": "source"
    }
 
@@ -264,7 +304,7 @@ The **200** response returns details for the workflow that was started, similar 
      "task_instances":[],
      "id":"wf-123456A-78901-2bcd3e",
      "name":"Daily",
-     "principal_name":"Run from Databricks",
+     "principal_name":"Daniel Kuhlman",
      "principal_id":"abc-EFghIjKL1Mn",
      "type":"courier.group/run",
      "launched_version":"abc-123456A-78901-2bcd3",
@@ -314,7 +354,7 @@ A **200 OK** response contains the following parameters.
      - A unique identifier for the Amperity user who started the workflow. For example: "google-apps|socktown@socktown.com".
 
    * - **principal_name**
-     - The name of the Amperity user who started the workflow. For example: "Daniel Kulhman" or "Automated workflow".
+     - The name of the Amperity user who started the workflow. For example: "Daniel Kuhlman" or "Automated workflow".
 
    * - **state**
      - The state of the workflow.
