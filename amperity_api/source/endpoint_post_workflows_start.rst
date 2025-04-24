@@ -140,9 +140,9 @@ The following table describes the parameters that may be used with the **POST /w
 
        .. important:: A value for **range_from** must be specified for any courier group that is configured to pull files from cloud storage (SFTP, Amazon S3, Azure Blob Storage, or Google Cloud Storage).
 
-       A timestamp that defines the start (inclusive) of the time window in which one (or more) courier group workflows started to run. See the **range_to** request parameter.
+       A timestamp that defines the start (inclusive) of the time window for which couriers in the workflow should pull data. See the **range_to** request parameter.
 
-       This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
+       A timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
 
        .. tip:: Use with **range_to** to define a date range within which to look for files. This date range will be inclusive of **range_from** and exclusive of **range_to**.
 
@@ -154,9 +154,9 @@ The following table describes the parameters that may be used with the **POST /w
 
        .. important:: A value for **range_from** must be specified when **range_to** is included in the request.
 
-       A timestamp that defines the end (exclusive) of the time window in which one (or more) courier group workflows started to run. See the **range_from** request parameter.
+       A timestamp that defines the end (exclusive) of the time window for which couriers in the workflow should pull data. See the **range_from** request parameter.
 
-       This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
+       A timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
 
 
    * - **run_mode**
@@ -185,6 +185,29 @@ The following examples show how to send requests to the **POST /workflow/runs** 
 .. endpoint-post-workflows-start-request-examples-end
 
 
+.. _endpoint-post-workflows-start-request-example-curl-campaign:
+
+cURL, run campaign
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. endpoint-post-workflows-start-request-example-curl-campaign-start
+
+The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run a campaign.
+
+::
+
+   curl --request POST \ 
+          'https://app.amperity.com/api/workflow/runs' \
+        --header 'amperity-tenant: tenant' \
+        --header 'api-version: 2024-04-01' \
+        --header 'Authorization: Bearer token' \
+        --data '{"config_id"="cc-123ABc4DE"}'
+
+(This example is formatted for readability in a narrow page layout.)
+
+.. endpoint-post-workflows-start-request-example-curl-campaign-end
+
+
 .. _endpoint-post-workflows-start-request-example-curl-courier-group:
 
 cURL, run courier group
@@ -211,14 +234,14 @@ The following example shows how to use cURL to send a request to the **POST /wor
 .. endpoint-post-workflows-start-request-example-curl-courier-group-end
 
 
-.. _endpoint-post-workflows-start-request-example-curl-other:
+.. _endpoint-post-workflows-start-request-example-curl-orchestration:
 
-cURL, run orchestration or campaign
+cURL, run orchestration
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. endpoint-post-workflows-start-request-example-curl-other-start
+.. endpoint-post-workflows-start-request-example-curl-orchestration-start
 
-The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run an orchestration or a campaign.
+The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run an orchestration.
 
 ::
 
@@ -227,11 +250,11 @@ The following example shows how to use cURL to send a request to the **POST /wor
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token' \
-        --data '{"config_id"="cg-123ABc4DE"}'
+        --data '{"config_id"="og-123ABc4DE"}'
 
 (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-post-workflows-start-request-example-curl-other-end
+.. endpoint-post-workflows-start-request-example-curl-orchestration-end
 
 
 .. _endpoint-post-workflows-start-request-python:
