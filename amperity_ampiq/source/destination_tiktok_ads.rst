@@ -57,7 +57,7 @@ You can access your audiences from within TikTok Ads Manager by clicking **Asset
 
 .. channel-tiktok-ads-where-are-my-audiences-end
 
-.. include:: ../../amperity_datagrid/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_operator/source/destination_tiktok_ads.rst
    :start-after: .. destination-tiktok-ads-api-note-start
    :end-before: .. destination-tiktok-ads-api-note-end
 

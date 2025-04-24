@@ -27,7 +27,7 @@ Send offline events to Google Enhanced Conversions
    :start-after: .. term-google-enhanced-conversions-start
    :end-before: .. term-google-enhanced-conversions-end
 
-.. include:: ../../amperity_datagrid/source/events_google_enhanced_conversions.rst
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
    :start-after: .. destination-google-enhanced-conversions-about-start
    :end-before: .. destination-google-enhanced-conversions-about-end
 

@@ -27,7 +27,7 @@ Send offline events to Criteo
    :start-after: .. term-criteo-start
    :end-before: .. term-criteo-end
 
-.. include:: ../../amperity_datagrid/source/events_criteo.rst
+.. include:: ../../amperity_operator/source/events_criteo.rst
    :start-after: .. events-criteo-overview-start
    :end-before: .. events-criteo-overview-end
 
@@ -37,6 +37,6 @@ Send offline events to Criteo
 Build a query
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/events_criteo.rst
+.. include:: ../../amperity_operator/source/events_criteo.rst
    :start-after: .. events-criteo-build-query-start
    :end-before: .. events-criteo-build-query-end

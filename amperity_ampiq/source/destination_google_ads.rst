@@ -33,7 +33,7 @@ Send audiences to Google Ads
    :start-after: .. channels-overview-list-intro-start
    :end-before: .. channels-overview-list-intro-end
 
-.. include:: ../../amperity_datagrid/source/destination_google_ads.rst
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
    :start-after: .. destination-google-ads-api-note-start
    :end-before: .. destination-google-ads-api-note-end
 
@@ -201,7 +201,7 @@ Contact Info Matching
    :start-after: .. term-pii-start
    :end-before: .. term-pii-end
 
-.. include:: ../../amperity_datagrid/source/destination_google_ads.rst
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
    :start-after: .. destination-google-ads-api-matching-contact-list-start
    :end-before: .. destination-google-ads-api-matching-contact-list-end
 
@@ -211,7 +211,7 @@ Contact Info Matching
 European Union user consent
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/destination_google_ads.rst
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
    :start-after: .. destination-google-ads-api-matching-eu-consent-start
    :end-before: .. destination-google-ads-api-matching-eu-consent-end
 
@@ -221,7 +221,7 @@ European Union user consent
 Mobile Device ID Matching
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/destination_google_ads.rst
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
    :start-after: .. destination-google-ads-api-matching-mobile-list-start
    :end-before: .. destination-google-ads-api-matching-mobile-list-end
 
@@ -231,6 +231,6 @@ Mobile Device ID Matching
 User ID Matching
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/destination_google_ads.rst
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
    :start-after: .. destination-google-ads-api-matching-user-start
    :end-before: .. destination-google-ads-api-matching-user-end

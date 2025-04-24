@@ -29,7 +29,7 @@ You can build campaigns that send |what-send| to |destination-name|, and then ap
 
 .. channel-listrak-end
 
-.. include:: ../../amperity_datagrid/source/destination_listrak.rst
+.. include:: ../../amperity_operator/source/destination_listrak.rst
    :start-after: .. destination-listtrak-context-start
    :end-before: .. destination-listtrak-context-end
 

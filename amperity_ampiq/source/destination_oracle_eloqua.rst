@@ -31,7 +31,7 @@ You can use segments and campaigns to manage shared lists in |destination-name|.
 
 .. channel-oracle-eloqua-end
 
-.. include:: ../../amperity_datagrid/source/destination_oracle_eloqua.rst
+.. include:: ../../amperity_operator/source/destination_oracle_eloqua.rst
    :start-after: .. destination-oracle-eloqua-api-note-start
    :end-before: .. destination-oracle-eloqua-api-note-end
 

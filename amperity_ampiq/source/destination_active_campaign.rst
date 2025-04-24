@@ -29,7 +29,7 @@ Send audiences to ActiveCampaign
    :start-after: .. term-active-campaign-start
    :end-before: .. term-active-campaign-end
 
-.. include:: ../../amperity_datagrid/source/destination_active_campaign.rst
+.. include:: ../../amperity_operator/source/destination_active_campaign.rst
    :start-after: .. destination-active-campaign-api-note-start
    :end-before: .. destination-active-campaign-api-note-end
 

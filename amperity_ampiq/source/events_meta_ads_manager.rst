@@ -168,6 +168,6 @@ Run orchestration
 Conversions API parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-conversion-api-parameters-start
    :end-before: .. events-meta-ads-manager-conversion-api-parameters-end
