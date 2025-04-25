@@ -3442,6 +3442,60 @@ A journey is a milestone (or series of milestones) that a customer goes through 
 .. term-journey-end
 
 
+**journey node: Activate**
+
+.. term-journey-node-activate-start
+
+An activate node sends an audience to one or more destinations.
+
+.. term-journey-node-activate-end
+
+
+**journey node: Conditional split**
+
+.. term-journey-node-conditional-split-start
+
+A conditional split node splits a journey into branching paths, where each path is defined by one or more segments.
+
+.. term-journey-node-conditional-split-end
+
+
+**journey node: Delay**
+
+.. term-journey-node-delay-start
+
+A delay node defines the length of time to wait before the next step in a journey begins.
+
+.. term-journey-node-delay-end
+
+
+**journey node: Individual split**
+
+.. term-journey-node-individual-split-start
+
+An individual split node represents each path in a journey that is defined by a conditional or percent split.
+
+.. term-journey-node-individual-split-end
+
+
+**journey node: Percent split**
+
+.. term-journey-node-percent-split-start
+
+A percent split node splits a journey into branching paths, where each path applies to a randomly selected percentage of the audience that entered the branch.
+
+.. term-journey-node-percent-split-end
+
+
+**journey node: Start**
+
+.. term-journey-node-start-start
+
+A start node displays the starting segments in a journey along with any exclusions.
+
+.. term-journey-node-start-end
+
+
 **journey orchestration**
 
 .. term-journey-orchestration-start
