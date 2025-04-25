@@ -835,6 +835,66 @@ The **Detailed Examples** table contains the following columns, as its starting 
 .. data-tables-detailed-examples-table-end
 
 
+.. _data-tables-predicted-discount-sensitivity:
+
+Discount sensitivity
+==================================================
+
+.. TODO: Update the terms.rst entry after this moves into amperity-docs.
+
+.. term-discount-sensitivity-table-start
+
+An **Discount Sensitivity** table groups customers into three categories: full price shoppers, discount opportunists, and discount seekers. Use an **Discount Sensitivity** table to help deliver the right messages and offers to your customers at the price those customers are willing to pay.
+
+.. term-discount-sensitivity-table-end
+
+.. data-tables-discount-sensitivity-link-to-table-start
+
+.. note:: See |table_discount_sensitivity| for more information about how this table is built and maintained within the customer 360 database.
+
+.. data-tables-discount-sensitivity-link-to-table-end
+
+.. data-tables-discount-sensitivity-table-about-start
+
+The **Discount Sensitivity** table contains the following columns:
+
+.. data-tables-discount-sensitivity-table-about-end
+
+.. data-tables-discount-sensitivity-table-start
+
+.. list-table::
+   :widths: 30 15 55
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Amperity ID**
+     - String
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-amperity-id-column-start
+          :end-before: .. term-amperity-id-column-end
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-amperity-id-format-start
+          :end-before: .. term-amperity-id-format-end
+
+   * - **Discount Segment**
+     - String
+     - The discount sensitivity grouping to which this customer belongs. Possible values:
+
+       * **Full Price Shopper** The customer has a low discount sensitivity and is more likely to pay higher prices.
+
+       * **Discount Opportunist** The customer has a medium discount sensitivity and is more likley to respond to a discounted price.
+
+       * **Discount Seeker** The customer has a high discount sensitivity and is less willing to pay MSRP and is more likely to respond to discounted prices.
+
+       * **No Recent Purchase** The customer does not have a recent purchase event within the modeling window and is not assigned a discount propensity. The default length of the modeling window is 3 years.
+
+.. data-tables-discount-sensitivity-table-end
+
+
 .. _data-tables-email-engagement-attributes:
 
 Email Engagement Attributes
@@ -1152,6 +1212,90 @@ The **EUID** table contains the following columns:
      - The raw EUID value for the customer. This value, when encrypted, may be used as a EUID token. This value is returned in the response from the **POST /identity/map** endpoint.
 
 .. data-tables-euid-table-end
+
+
+.. _data-tables-predicted-event-propensity:
+
+Event propensity
+==================================================
+
+.. TODO: Update the terms.rst entry after this moves into amperity-docs.
+
+.. term-event-propensity-table-start
+
+An **Event Propensity** table associates individual customers to the events that, depending on the type of event, are most likely to lead to engagement with your brand.
+
+.. term-event-propensity-table-end
+
+.. data-tables-event-propensity-link-to-table-start
+
+.. note:: See |table_event_propensity| for more information about how this table is built and maintained within the customer 360 database.
+
+.. data-tables-event-propensity-link-to-table-end
+
+.. data-tables-event-propensity-table-about-start
+
+The **Event Propensity** table contains the following columns:
+
+.. data-tables-event-propensity-table-about-end
+
+.. data-tables-event-propensity-table-start
+
+.. list-table::
+   :widths: 30 15 55
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Amperity ID**
+     - String
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-amperity-id-column-start
+          :end-before: .. term-amperity-id-column-end
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-amperity-id-format-start
+          :end-before: .. term-amperity-id-format-end
+
+   * - **Audience Size Large**
+     - Boolean
+     - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is large.
+
+       A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+   * - **Audience Size Medium**
+     - Boolean
+     - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is medium.
+
+       A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
+   * - **Audience Size Small**
+     - Boolean
+     - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
+
+       A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+
+   * - **Ranking**
+     - Integer
+     - A ranking of customers by their score for this event. A rank that is less than or equal to X will provide the top N customers with an propensity for this event.
+
+   * - **Score**
+     - Float
+     - The strength of a customers's propensity for this event, shown as an uncalibrated probability.
+
+       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking and/or audience size, and should not be used in segments.
+
+          Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with higher propensity.
+
+   * - **Target Value**
+     - Integer
+     - TBD
+
+   * - **Revenue Event Days Since Last Event**
+     - Integer
+     - TBD
+
+.. data-tables-event-propensity-table-end
 
 
 .. _data-tables-fiscal-calendar:
