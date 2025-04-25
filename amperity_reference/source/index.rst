@@ -553,6 +553,7 @@ Workflows
    format_xml
    glossary
    ingest_queries
+   journeys
    model_churn_propensity
    model_event_propensity
    model_predicted_clv

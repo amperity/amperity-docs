@@ -212,6 +212,8 @@ Apply predictive analytics
    events_snapchat
    events_the_trade_desk
    events_tiktok_ads_manager
+   journeys
+   journeys_reference
    model_event_propensity
    model_predicted_churn
    model_predicted_clv
