@@ -1451,6 +1451,16 @@
    <a href="https://docs.amperity.com/operator/table_merged_customers.html">Merged Customers</a>
 
 
+.. |table_discount_sensitivity| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_discount_sensitivity.html">Discount Sensitivity</a>
+
+
+.. |table_event_propensity| raw:: html
+
+   <a href="https://docs.amperity.com/datagrid/table_event_propensity.html">Event Propensity</a>
+
+
 .. |table_predicted_affinity| raw:: html
 
    <a href="https://docs.amperity.com/operator/table_predicted_affinity.html">Predicted Affinity</a>
