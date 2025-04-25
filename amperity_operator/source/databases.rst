@@ -14,7 +14,7 @@
         About databases
 
 ==================================================
-About databases
+About the Customer 360 database
 ==================================================
 
 .. databases-start

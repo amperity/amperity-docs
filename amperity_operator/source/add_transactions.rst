@@ -3,18 +3,18 @@
 
 .. meta::
     :description lang=en:
-        Add transaction records to your tenant.
+        Add transactions data to your tenant.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Add transaction records to your tenant.
+        Add transactions data to your tenant.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Add transaction records
+        Add transactions data
 
 ==================================================
-Add transaction records
+Add transactions data
 ==================================================
 
 .. setup-transactions-intro-start

@@ -7,7 +7,7 @@
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Add data sources that contain PII to Amperity.
+        Add data sources that contain PII to Amperity and build customer profiles.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
