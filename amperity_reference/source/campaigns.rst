@@ -188,7 +188,7 @@ Attributes
 
 .. campaigns-attributes-start
 
-For many |campaign_destinations|, you may configure the list of attributes (i.e. first name, last name, state, etc.) that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the drop-down menu to select the destination if there is more than one.
+For many |campaign_destinations|, you may configure the list of attributes (i.e. first name, last name, state, etc.) that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the dropdown menu to select the destination if there is more than one.
 
 .. campaigns-attributes-end
 
@@ -213,7 +213,7 @@ Audiences
 
 .. campaigns-audiences-start
 
-All campaigns start with an audience. Choose a segment from the **Include** drop-down list. The customers in that list will become the audience for this campaign.
+All campaigns start with an audience. Choose a segment from the **Include** dropdown list. The customers in that list will become the audience for this campaign.
 
 .. campaigns-audiences-end
 
@@ -301,7 +301,7 @@ Exclusion lists
 
 Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
 
-When you need to exclude audience members, choose one (or more) segments from the **Exclude** drop-down list. The customers in an exclusion list will be removed from the audience for this campaign.
+When you need to exclude audience members, choose one (or more) segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
 .. note:: When you select multiple exclusion lists, audience members will be excluded when they belong to *either* list. This is the same behavior as when the **OR** operator is used in SQL. "Exclude customers from this audience when they belong to segment A *OR* segment B."
 
@@ -756,9 +756,9 @@ You can add a sub-audience to a campaign on the **Edit Campaign** page.
 #. From the **Campaigns** page, in the **Sub-audiences and Destinations** section, click **Add Sub-audience**.
 #. From the **Source** menu, select **Create custom criteria**.
 #. From the **Audience Builder** window, To add these attributes to your segment, click **Add condition**.
-#. From the **Sources** drop-down list, select a source.
-#. From the **Attributes** drop-down list, select an attribute.
-#. From the **Operators** drop-down list, select an operator.
+#. From the **Sources** dropdown list, select a source.
+#. From the **Attributes** dropdown list, select an attribute.
+#. From the **Operators** dropdown list, select an operator.
 #. To add these attributes to your segment, click **Add condition** to add more criteria.
 #. When done setting your criteria, click **Save**.
 
@@ -1115,11 +1115,11 @@ You can configure default attributes from the **Campaigns** page.
 
 #. From the **Campaigns** page, in the top-right corner of the page, click **Default attributes**.
 #. From the **Default attributes** window, click **Add default attributes**.
-#. From the **Destination attributes** window, select the database from the **Database** drop-down.
-#. Select the destination from the **Destination** drop-down.
+#. From the **Destination attributes** window, select the database from the **Database** dropdown.
+#. Select the destination from the **Destination** dropdown.
 #. Click **Add attribute**.
-#. Select the source from the drop-down.
-#. Select the attribute from the drop-down.
+#. Select the source from the dropdown.
+#. Select the attribute from the dropdown.
 #. Enter the destination attribute name in the field.
 #. Click **Save**.
 
@@ -1381,7 +1381,7 @@ You can download a recipients list from a delivered campaign on the **Campaigns*
 
 #. From the **Campaigns** page, click the more options button on a delivered campaign.
 #. In the menu, click **Download Recipients**.
-#. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date:** drop-down menu.
+#. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date:** dropdown menu.
 #. Click **Download**. An .CSV file downloads to your Downloads folder on your computer.
 #. Open the .CSV file in a program and then view the recipients list.
 
@@ -1684,7 +1684,7 @@ Run as part of a workflow
 
 .. campaigns-run-as-part-of-workflow-start
 
-A recurring campaign can be configured to run as part of a scheduled workflow when the schedule is set to **Run as part of workflow** and an active courier group is selected from the drop-down menu.
+A recurring campaign can be configured to run as part of a scheduled workflow when the schedule is set to **Run as part of workflow** and an active courier group is selected from the dropdown menu.
 
 .. image:: ../../images/mockup-activation-scheduled-campaign.png
    :width: 420 px
