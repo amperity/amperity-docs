@@ -114,9 +114,21 @@ Get details
           :class: no-scaled-link
      - **Required fields for Zendesk**
 
-       Be sure to send all fields from Amperity that will be required by |destination-name|. The **name**, **email** or **external_id** fields must be included.
+       Be sure to send all fields from Amperity that will be required by |destination-name|.
+
+       .. important:: Fields must exist in |destination-name| and should follow a "user_fields.[field_name]" naming pattern, where "field_name" is the name of the field that is sent to |destination-name| from Amperity.
+
+       The **name**, **email** or **external_id** fields must be included.
+
+       Values for states should be 2 uppercase letters only.
+
+       Phone numbers should start with "+1" and contain only digits.
+
+       Floating point numbers must be in **DECIMAL(10,2)** format.
 
        From within |destination-name| verify that audience data has been loaded and is usable by all of the use cases you want to use within |destination-name| to build better customer experiences.
+
+
 
 .. destination-zendesk-get-details-end
 
