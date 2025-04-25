@@ -2807,6 +2807,6 @@ The following table shows which policies can perform user actions within sandbox
      - |policy-sandbox-allow-admin|
 
 
-.. note:: All users can access `sandboxes <https://docs.amperity.com/datagrid/sandboxes.html>`__ they have access to in their tenant from the drop-down menu on the top-right corner of the Amperity platform.
+.. note:: All users can access `sandboxes <https://docs.amperity.com/operator/sandboxes.html>`__ they have access to in their tenant from the drop-down menu on the top-right corner of the Amperity platform.
 
 .. policies-allowed-actions-sandboxes-table-end

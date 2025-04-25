@@ -57,7 +57,7 @@ For example:
 
 **TEMPLATE SECTIONS FOR DESTINATIONS**
 
-This topic contains the templated sections for all of the "Send to xxxxx" topics in /datagrid/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
+This topic contains the templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
 In certain cases, a destination topic will require *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
 
@@ -320,7 +320,7 @@ DESTINATIONS
 DESTINATIONS
 DESTINATIONS
 
-.. TODO: This is the sections for the templated content for adding destinations in /datagrid/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
+.. TODO: This is the sections for the templated content for adding destinations in /operator/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.
 
@@ -647,7 +647,7 @@ DATA TEMPLATES
 DATA TEMPLATES
 DATA TEMPLATES
 
-.. TODO: This is the sections for the templated content for adding data templates to destinations in /datagrid/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step 4 as much as possible for consistency.
+.. TODO: This is the sections for the templated content for adding data templates to destinations in /operator/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step 4 as much as possible for consistency.
 
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.

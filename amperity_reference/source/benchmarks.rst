@@ -1,5 +1,5 @@
 .. 
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/operator/
 .. 
 
 .. meta::

@@ -1165,7 +1165,7 @@ See SFTP.
 
 .. credential-listrak-allowlist-start
 
-The Amperity `IP address for allowlists <https://docs.amperity.com/datagrid/send_data.html#ip-allowlists>`__ |ext_link| must be added to the allowlist for the |destination-name| integration.
+The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must be added to the allowlist for the |destination-name| integration.
 
 .. credential-listrak-allowlist-end
 

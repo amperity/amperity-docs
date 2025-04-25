@@ -323,7 +323,7 @@ Amps consumption for the **Profile API** feature is determined by:
 
 Monitor Amps consumption for the **Profile API** feature by:
 
-* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows, including not only the number of indexes, but also including the amount data that is made available from each index; Amps consumption is affected by the length of time it takes to run the query to generate the index and also the number of fields that are added to the index. `Complex queries will consume more Amps; queries that return large numbers of columns and/or rows will consume more Amps <https://docs.amperity.com/datagrid/api_profile.html#index-response-times>`__
+* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows, including not only the number of indexes, but also including the amount data that is made available from each index; Amps consumption is affected by the length of time it takes to run the query to generate the index and also the number of fields that are added to the index. `Complex queries will consume more Amps; queries that return large numbers of columns and/or rows will consume more Amps <https://docs.amperity.com/operator/api_profile.html#index-response-times>`__
 * Monitoring the history of Profile API index refreshes from the **Workflows** page
 
 .. amps-consumption-feature-profile-api-end

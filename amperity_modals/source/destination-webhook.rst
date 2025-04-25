@@ -21,4 +21,4 @@ This template enables two use cases:
 #. A serverless application that is deployed directly to your AWS Lambda instance from the AWS Serverless Application Repository. **This is the recommended use case when a serverless application is available for the destination.**
 #. A starting point from which you may build a custom Lambda function that is uploaded to your AWS Lambda instance.
 
-More information about setting up and configuring a custom webhook is available from the `Amperity Docs site <https://docs.amperity.com/datagrid/destination_webhook.html>`__ |ext_link|.
+More information about setting up and configuring a custom webhook is available from the `Amperity Docs site <https://docs.amperity.com/operator/destination_webhook.html>`__ |ext_link|.

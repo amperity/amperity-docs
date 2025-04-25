@@ -1843,7 +1843,7 @@ The following table lists the tags available to this semantic group:
 
           Amperity uses the last 10-digits of phone numbers for identity resolution.
 
-          Use the `input validation report <https://docs.amperity.com/datagrid/validate_inputs.html>`__ to find data sources that contain records with phone numbers that exceed 10 digits.
+          Use the `input validation report <https://docs.amperity.com/operator/validate_inputs.html>`__ to find data sources that contain records with phone numbers that exceed 10 digits.
 
           You should exclude extensions from phone numbers whenever possible. You may use a custom domain table to apply additional formatting to phone numbers, such as removing extensions.
 

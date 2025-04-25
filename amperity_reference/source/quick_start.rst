@@ -125,7 +125,7 @@ You have two options:
 #. Use the provided quick start data assets
 #. Use your own data from your own instance of Databricks
 
-   .. note:: For this option you will need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/datagrid/bridge_databricks.html#get-details>`__.
+   .. note:: For this option you will need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
 
 .. quickstart-connect-end
 
@@ -212,7 +212,7 @@ Connect the data, apply the semantic tag, and build customer profiles.
 You have two options:
 
 #. Let **AmpAI** apply semantic tags (this section)
-#. `Manually apply semantic tags <https://docs.amperity.com/datagrid/semantics.html>`__
+#. `Manually apply semantic tags <https://docs.amperity.com/operator/semantics.html>`__
 
 .. quickstart-semantics-end
 
@@ -401,13 +401,13 @@ Sync identity data to Databricks
 
 .. quickstart-sync-to-databricks-start
 
-.. important:: The Amperity quick start for identity resolution does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#to-databricks>`__.
+.. important:: The Amperity quick start for identity resolution does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
 
 Amperity can sync customer profiles to your Databricks account.
 
 .. note:: Additional configuration in Databricks is often required. Syncing data from Amperity to Databricks can use the same credentials; however, the configuration within Databricks is not the same as syncing data from Databricks to Amperity.
 
-   To sync data to Databricks, `review the prerequisites <https://docs.amperity.com/datagrid/bridge_databricks.html#bridge-databricks-sync-with-databricks-prerequisites>`__, `add an outbound bridge <https://docs.amperity.com/datagrid/bridge_databricks.html#add-outbound-bridge>`__, `select tables to share with Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#select-tables-to-share>`__, `download the credentials file <https://docs.amperity.com/datagrid/bridge_databricks.html#download-credential-file>`__, `add the provider in Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#add-provider>`__, `add catalog from share <https://docs.amperity.com/datagrid/bridge_databricks.html#add-catalog-from-share>`__, and then `verify table sharing <https://docs.amperity.com/datagrid/bridge_databricks.html#verify-table-sharing>`__.
+   To sync data to Databricks, `review the prerequisites <https://docs.amperity.com/operator/bridge_databricks.html#bridge-databricks-sync-with-databricks-prerequisites>`__, `add an outbound bridge <https://docs.amperity.com/operator/bridge_databricks.html#add-outbound-bridge>`__, `select tables to share with Databricks <https://docs.amperity.com/operator/bridge_databricks.html#select-tables-to-share>`__, `download the credentials file <https://docs.amperity.com/operator/bridge_databricks.html#download-credential-file>`__, `add the provider in Databricks <https://docs.amperity.com/operator/bridge_databricks.html#add-provider>`__, `add catalog from share <https://docs.amperity.com/operator/bridge_databricks.html#add-catalog-from-share>`__, and then `verify table sharing <https://docs.amperity.com/operator/bridge_databricks.html#verify-table-sharing>`__.
 
 .. quickstart-sync-to-databricks-end
 
@@ -481,13 +481,13 @@ This quick start guide describes how to connect Amperity to Databricks and to co
 
 Amperity can do a lot more:
 
-* `Automate identity resolution <https://docs.amperity.com/datagrid/workflows.html#courier-groups>`__
+* `Automate identity resolution <https://docs.amperity.com/operator/workflows.html#courier-groups>`__
 * `Automate syncing <https://docs.amperity.com/reference/bridge.html#add-bridge-to-scheduled-workflow>`__
 * Semantic tagging for `transactions <https://docs.amperity.com/reference/semantics.html#transactions>`__, `loyalty programs <https://docs.amperity.com/reference/semantics.html#loyalty-programs>`__, and more
 * Destinations for `paid media <https://docs.amperity.com/paid_media.html>`__, `marketing automation <https://docs.amperity.com/marketing_apps.html>`__, `offline events <https://docs.amperity.com/offline_events.html>`__
 * `Segments <https://docs.amperity.com/ampiq/segments_reference.html>`__ and `campaigns <https://docs.amperity.com/ampiq/campaigns_reference.html>`__
 * `Queries <https://docs.amperity.com/amp360/queries_reference.html>`__ and orchestrations
-* `Profile API <https://docs.amperity.com/datagrid/api_profile.html>`__
-* `Real-time tables <https://docs.amperity.com/datagrid/realtime.html>`__
+* `Profile API <https://docs.amperity.com/operator/api_profile.html>`__
+* `Real-time tables <https://docs.amperity.com/operator/realtime.html>`__
 
 .. quickstart-conclusion-end

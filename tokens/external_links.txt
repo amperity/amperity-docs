@@ -33,17 +33,12 @@
 
 .. |ext_amperity_allowlist_ip_address| raw:: html
 
-   <a href="https://docs.amperity.com/datagrid/send_data.html#ip-allowlists" target="_blank">IP address for allowlists</a>
+   <a href="https://docs.amperity.com/operator/send_data.html#ip-allowlists" target="_blank">IP address for allowlists</a>
 
 
 .. |ext_amperity_data_tables_png| raw:: html
 
    <a href="https://docs.amperity.com/reference/_images/data_tables.png" target="_blank">HERE</a>
-
-
-.. |ext_amperity_lambda_runner| raw:: html
-
-   <a href="https://github.com/amperity/amperity-lambda-runner" target="_blank">amperity-lambda-runner</a>
 
 
 .. |ext_amperity_support_ticket| raw:: html

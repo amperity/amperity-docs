@@ -335,7 +335,7 @@ Export databases and tables
 Sync with data lakehouses
 ==================================================
 
-Configure inbound and outbound shares in Amperity to enable bi-directional syncing of data tables between `Amperity and Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html>`__ and `Amperity and Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html>`__.
+Configure inbound and outbound shares in Amperity to enable bi-directional syncing of data tables between `Amperity and Databricks <https://docs.amperity.com/operator/bridge_databricks.html>`__ and `Amperity and Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html>`__.
 
 
 .. _start-here-about-this-collection:
