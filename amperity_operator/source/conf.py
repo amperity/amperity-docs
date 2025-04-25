@@ -175,9 +175,9 @@ html_sidebars = {
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
 #    '404': '/internal/404.html',
-#html_additional_pages = {
-#    'xxxxx': 'xxxxx.html',
-#}
+html_additional_pages = {
+    'add_customer_profiles': 'add_customer_profiles.html',
+}
 
 # If false, no module index is generated.
 html_domain_indices = False
