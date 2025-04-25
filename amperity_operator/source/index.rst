@@ -196,7 +196,6 @@ Automate workflows
    activation_ids
    add_campaigns
    add_customer_data
-   add_data_assets
    add_email_engagement
    add_predicted_models
    add_transactions
@@ -211,6 +210,7 @@ Automate workflows
    command_shell
    configure_stitch
    custom_domain_tables
+   data_assets
    data_first_party
    data_third_party
    databases

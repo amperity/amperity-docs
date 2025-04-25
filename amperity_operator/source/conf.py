@@ -177,6 +177,7 @@ html_sidebars = {
 #    '404': '/internal/404.html',
 html_additional_pages = {
     'add_customer_profiles': 'add_customer_profiles.html',
+    'add_data_assets': 'add_data_assets.html',
 }
 
 # If false, no module index is generated.
