@@ -39,7 +39,7 @@ The **Merged Households** table generates a household ID (as a UUID) for records
 
    .. note::
 
-      .. include:: ../../amperity_operator/source/add_data_assets.rst
+      .. include:: ../../amperity_operator/source/data_assets.rst
          :start-after: .. data-asset-address-standardization-prerequisites-start
          :end-before: .. data-asset-address-standardization-prerequisites-end
 

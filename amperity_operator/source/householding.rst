@@ -102,13 +102,13 @@ Address standardization starts as a feed that loads a CSV file that contains a l
 
 .. note::
 
-   .. include:: ../../amperity_operator/source/add_data_assets.rst
+   .. include:: ../../amperity_operator/source/data_assets.rst
       :start-after: .. data-asset-address-standardization-prerequisites-start
       :end-before: .. data-asset-address-standardization-prerequisites-end
 
 **To add the address standardization data asset**
 
-.. include:: ../../amperity_operator/source/add_data_assets.rst
+.. include:: ../../amperity_operator/source/data_assets.rst
    :start-after: .. data-asset-address-standardization-steps-start
    :end-before: .. data-asset-address-standardization-steps-end
 

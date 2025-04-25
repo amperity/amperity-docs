@@ -49,13 +49,13 @@ Gender prediction based on the **gender_name_ratios.csv** file (an Amperity data
 
 .. predict-gender-add-data-asset-csv-end
 
-.. include:: ../../amperity_operator/source/add_data_assets.rst
+.. include:: ../../amperity_operator/source/data_assets.rst
    :start-after: .. data-asset-gender-name-ratios-start
    :end-before: .. data-asset-gender-name-ratios-end
 
 **To add the gender_name_ratios.csv data asset**
 
-.. include:: ../../amperity_operator/source/add_data_assets.rst
+.. include:: ../../amperity_operator/source/data_assets.rst
    :start-after: .. data-asset-gender-name-ratios-steps-start
    :end-before: .. data-asset-gender-name-ratios-steps-end
 
