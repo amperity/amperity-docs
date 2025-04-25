@@ -36,9 +36,6 @@ Product updates
 .. 
 
 
-Spring 2025
-==================================================
-
 Product updates for Spring 2025.
 
 **Activation IDs**
@@ -46,6 +43,9 @@ Product updates for Spring 2025.
 
 **Benchmarks**
    :bdg-success:`NEW` `Stitch benchmarks <https://docs.amperity.com/operator/benchmarks.html>`__ are heuristic scores that define the expectations for the quality of customer profiles. Use benchmarks to explore data quality and configuration changes that can help improve the quality of customer profiles in your tenant.
+
+**Bring your own storage**
+   :bdg-success:`NEW` For new tenants, `use your own AWS storage bucket <https://docs.amperity.com/operator/storage.html>`__ with no significant architecture changes required. 
 
 **Complex types in source data**
    :bdg-success:`NEW` Amperity can ingest, process, and utilize complex data structures like arrays and structs directly from source systems without flattening.
