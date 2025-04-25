@@ -57,10 +57,10 @@ The **Email Opt Status** table is a recommended table for the customer 360 datab
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Email Opt Status".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the **Email Opt Status** table.
+#. From the **Source Table** dropdown, select the **Email Opt Status** table.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. From the **Table Semantics** drop-down, select **Email Opt Status**.
+#. From the **Table Semantics** dropdown, select **Email Opt Status**.
 
    .. important:: Remove any automatically applied customer profile semantic tags, such as **email**, before saving the table.
 

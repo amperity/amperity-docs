@@ -101,7 +101,7 @@ Add table
 #. Verify that semantic tags---**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.---were applied to all PII fields correctly.
 
    .. tip:: You can clear incorrectly tagged semantics individually or for the entire table. To clear semantic tags for the entire table, under **Semantic Suggestions** click **Clear semantics**.
-#. From the **Table Semantics** drop-down, select **Merged Customers**.
+#. From the **Table Semantics** dropdown, select **Merged Customers**.
 #. Under **Version History**, select **Enable table version history**.
 #. Click **Save**.
 

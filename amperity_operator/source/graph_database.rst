@@ -76,7 +76,7 @@ The query templates for the graph database are added to, and then accessed from 
 
 #. From the **Queries** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Name the folder "Graph Database".
-#. From the **Template** drop-down, select **Graph Database**.
+#. From the **Template** dropdown, select **Graph Database**.
 #. Click **Create**. This will create a folder, into which a collection of draft Graph Database queries are added.
 #. Take a few minutes to review the queries that are added by the "Graph Database" query template.
 

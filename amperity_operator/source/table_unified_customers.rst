@@ -47,13 +47,13 @@ The **Unified Customer** table is a required table for the customer 360 database
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified_Customer".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the **Unified Customer** table.
+#. From the **Source Table** dropdown, select the **Unified Customer** table.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
 #. Verify that semantic tags--**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.--were applied to all PII fields correctly.
 
    .. tip:: You can clear incorrectly tagged semantics individually or for the entire table. To clear semantic tags for the entire table, under **Semantic Suggestions** click **Clear semantics**.
-#. From the **Table Semantics** drop-down, select **Unified Customer**.
+#. From the **Table Semantics** dropdown, select **Unified Customer**.
 #. Click **Save**.
 
 .. table-unified-customers-add-steps-end

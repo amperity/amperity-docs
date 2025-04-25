@@ -634,7 +634,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
 #. In the **Create real-time table** dialog, continue:
 
-   Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
+   Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the dropdown list.
 
    Select the databases for which this real-time table will be available from the **Queries** page.
 
@@ -1210,7 +1210,7 @@ The currency symbol to show for metrics and segment insights is configurable. Th
 #. Select a database and open it in **Edit** mode.
 #. In the right-side navigation pane, under **Currency**, select the currency symbol to show for metrics and segment insights for this database.
 
-   .. tip:: Choose "Custom symbol" to apply a currency symbol that is not in the drop-down list.
+   .. tip:: Choose "Custom symbol" to apply a currency symbol that is not in the dropdown list.
 
       For example, to use South Korean Won (KRW) as the currency symbol, choose "Custom symbol", and then enter "|u-won|" in the **Custom currency symbol** field.
 
@@ -1319,7 +1319,7 @@ Configure pick-lists
 
 .. databases-database-howto-pick-list-start
 
-A pick-list is a pre-generated list of available options for a column and is presented as a drop-down list in the visual **Query Editor**. A pick-list is configured when building tables in the **Customer 360** page.
+A pick-list is a pre-generated list of available options for a column and is presented as a dropdown list in the visual **Query Editor**. A pick-list is configured when building tables in the **Customer 360** page.
 
 .. databases-database-howto-pick-list-end
 
@@ -2242,7 +2242,7 @@ Set validation rules
 
 A field in a database table may be flagged as required, as unique, or as both required *and* unique. These flags are validated by Amperity. When the validation conditions are not met a warning is raised.
 
-Use flags to help ensure that data within Amperity remains healthy and to help ensure that downstream workflows are built on top of the correct data. Database field semantics are preceded by a **db/** in the drop-down menu for semantics in the **Database Editor**.
+Use flags to help ensure that data within Amperity remains healthy and to help ensure that downstream workflows are built on top of the correct data. Database field semantics are preceded by a **db/** in the dropdown menu for semantics in the **Database Editor**.
 
 .. databases-database-howto-set-validation-rules-end
 

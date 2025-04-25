@@ -7129,7 +7129,7 @@ visual **Query Editor**
 
 .. term-visual-query-editor-start
 
-The visual **Query Editor** is a user interface that allows creating queries using Presto SQL without having to write SQL. The visual **Query Editor** is combination of filters for ``WHERE`` and ``AND`` clauses organized as a series of configurable drop-down menus and pick-lists that build SQL queries that run against tables in the customer 360 database.
+The visual **Query Editor** is a user interface that allows creating queries using Presto SQL without having to write SQL. The visual **Query Editor** is combination of filters for ``WHERE`` and ``AND`` clauses organized as a series of configurable dropdown menus and pick-lists that build SQL queries that run against tables in the customer 360 database.
 
 .. term-visual-query-editor-end
 
@@ -7138,7 +7138,7 @@ The visual **Query Editor** is a user interface that allows creating queries usi
 
 .. term-visual-segment-editor-start
 
-The **Segment Editor** is the user interface for building segments. This editor uses a series of drop-downs, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
+The **Segment Editor** is the user interface for building segments. This editor uses a series of dropdowns, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
 
 .. term-visual-segment-editor-end
 

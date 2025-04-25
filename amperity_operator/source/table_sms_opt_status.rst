@@ -57,10 +57,10 @@ The **SMS Opt Status** table is a recommended table for the customer 360 databas
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "SMS Opt Status".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the **SMS Opt Status** table.
+#. From the **Source Table** dropdown, select the **SMS Opt Status** table.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. From the **Table Semantics** drop-down, select **SMS Opt Status**.
+#. From the **Table Semantics** dropdown, select **SMS Opt Status**.
 
    .. important:: Remove any automatically applied customer profile semantic tags, such as **phone**, before saving the table.
 

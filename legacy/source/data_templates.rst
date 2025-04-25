@@ -302,7 +302,7 @@ Custom delimiters
 
 .. data-templates-files-common-formats-delimiters-start
 
-Some formats will accept a custom delimiter. From the **File format** drop-down, select "Custom delimiter" and then in the **Delimiter** box type a single character to use as a custom delimiter.
+Some formats will accept a custom delimiter. From the **File format** dropdown, select "Custom delimiter" and then in the **Delimiter** box type a single character to use as a custom delimiter.
 
 .. data-templates-files-common-formats-delimiters-end
 

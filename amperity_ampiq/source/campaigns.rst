@@ -86,7 +86,7 @@ The following sections describe the steps you'll follow to set up and configure 
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - All campaigns start with an audience. Choose a segment from the **Include** drop-down list. The customers in that list will become the audience for this campaign.
+     - All campaigns start with an audience. Choose a segment from the **Include** dropdown list. The customers in that list will become the audience for this campaign.
 
        .. image:: ../../images/mockup-campaigns-select-audience-from-segment.png
           :width: 650 px
@@ -104,7 +104,7 @@ The following sections describe the steps you'll follow to set up and configure 
           :class: no-scaled-link
      - Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
 
-       When you need to exclude audience members, choose one (or more) segments from the **Exclude** drop-down list. The customers in an exclusion list will be removed from the audience for this campaign.
+       When you need to exclude audience members, choose one (or more) segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
        .. image:: ../../images/mockup-campaigns-select-exclusions-from-segment.png
           :width: 650 px

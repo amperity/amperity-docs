@@ -259,7 +259,7 @@ Browse the |source-name| bucket to select a file, and then review the settings f
 
        **Use a new feed**
 
-       To use a new feed, choose the **Create new feed** option, select an existing source from the **Source** drop-down *or* type the name of a new data source, and then enter the name of the feed.
+       To use a new feed, choose the **Create new feed** option, select an existing source from the **Source** dropdown *or* type the name of a new data source, and then enter the name of the feed.
 
        .. image:: ../../images/mockup-sources-add-04-feed-new.png
           :width: 380 px

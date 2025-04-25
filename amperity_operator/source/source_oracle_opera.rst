@@ -196,7 +196,7 @@ Add courier
 
    This automatically selects |credential-type| as the **Credential Type**.
 
-#. From the **Credential** drop-down, select **Create a new credential**. Configure the credential using the **Client ID** and **Client secret**.
+#. From the **Credential** dropdown, select **Create a new credential**. Configure the credential using the **Client ID** and **Client secret**.
 
 #. Under **Oracle Opera Settings** configure the **Gateway URL**, **Application key**, **Enterprise ID**, and **Chain code**.
 

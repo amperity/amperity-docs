@@ -206,7 +206,7 @@ Enable EUID token generation
 
 .. euid-configure-amperity-enable-euid-start
 
-EUID token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **EUID Generation** dialog box. Select the **Enable EUID generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** drop-down.
+EUID token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **EUID Generation** dialog box. Select the **Enable EUID generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
 
 .. image:: ../../images/mockup-databases-enable-euid.png
    :width: 460 px

@@ -70,7 +70,7 @@ Attributes will vary tenant-to-tenant, but typically include profile information
          :start-after: .. databases-font-awesome-picker-useany-start
          :end-before: .. databases-font-awesome-picker-useany-end
 
-#. From the **Table Semantics** drop-down, select **Customer 360**.
+#. From the **Table Semantics** dropdown, select **Customer 360**.
 #. Leave everything else unchanged.
 #. Click **Save**.
 

@@ -122,7 +122,7 @@ Add table
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
 #. Verify that the **db/required** and **db/unique** database field semantics were applied to the **amperity_id** column.
-#. From the **Table Semantics** drop-down, select **Customer Attributes**.
+#. From the **Table Semantics** dropdown, select **Customer Attributes**.
 #. Click **Save**.
 
 .. table-customer-attributes-add-steps-end

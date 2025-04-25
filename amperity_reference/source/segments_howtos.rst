@@ -1142,7 +1142,7 @@ Up to five segments may be configured to show in the list of recommended segment
 
        This opens the **Configure recommended segments** dialog box.
 
-       For each recommended segment, use the drop-down list to choose a segment
+       For each recommended segment, use the dropdown list to choose a segment
 
        .. image:: ../../images/mockup-segments-recommended-select.png
           :width: 380 px
@@ -1184,7 +1184,7 @@ Up to five segments may be configured to show in the list of recommended segment
           :align: left
           :class: no-scaled-link
 
-       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." drop-down.
+       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." dropdown.
 
        .. image:: ../../images/mockup-segments-recommended-choose-database.png
           :width: 420 px

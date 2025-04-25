@@ -77,12 +77,12 @@ Use the **Add Orchestration** button to add an orchestration to Amperity. An orc
 .. orchestrations-add-steps-start
 
 #. From the **Destinations** page click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** drop-down, select **Query** or **Database Export**.
-#. From the **Object** drop-down, select the name of the query or database export that will be sent to a destination.
+#. From the **Object Type** dropdown, select **Query** or **Database Export**.
+#. From the **Object** dropdown, select the name of the query or database export that will be sent to a destination.
 
    .. note:: This name will also be the name of the orchestration.
-#. From the **Destination** drop-down, select the name of a destination that is configured to send data.
-#. From the **Data Template** drop-down, select a data template.
+#. From the **Destination** dropdown, select the name of a destination that is configured to send data.
+#. From the **Data Template** dropdown, select a data template.
 #. Verify any destination-specific settings.
 
    .. admonition:: Settings are determined by the destination and data template
@@ -213,7 +213,7 @@ Automatically
 
 .. orchestrations-run-automatic-start
 
-An orchestration can be configured to run after a courier when the run mode is set to **Automatic** and an active courier group is selected from the drop-down menu.
+An orchestration can be configured to run after a courier when the run mode is set to **Automatic** and an active courier group is selected from the dropdown menu.
 
 .. image:: ../../images/mockup-activation-scheduled-orchestration.png
    :width: 420 px

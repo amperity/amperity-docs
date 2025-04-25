@@ -114,7 +114,7 @@ Get details
 
        #. In DV360, open **Advertiser Settings**, and then select **Linked Accounts**.
        #. Click **Link New Account**, and then select **External Data Partner**.
-       #. Select "Amperity" from the drop-down menu, and then click **Link**.
+       #. Select "Amperity" from the dropdown menu, and then click **Link**.
        #. Confirm Amperity as a linked external data partner, and then click **Create Link**.
 
 

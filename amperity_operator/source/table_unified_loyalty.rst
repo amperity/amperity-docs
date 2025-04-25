@@ -51,10 +51,10 @@ The **Unified Loyalty** table is an optional table for the customer 360 database
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified Loyalty".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the **Unified Loyalty** table.
+#. From the **Source Table** dropdown, select the **Unified Loyalty** table.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. From the **Table Semantics** drop-down, select **Unified Loyalty**.
+#. From the **Table Semantics** dropdown, select **Unified Loyalty**.
 #. Under **Version History**, select **Enable table version history**.
 #. Click **Save**.
 
@@ -73,7 +73,7 @@ The following examples show how you can analyze retention rates and customer val
 * :ref:`table-unified-loyalty-example-retention-analysis`
 * :ref:`table-unified-loyalty-example-value-analysis`
 
-.. tip:: Add these queries directly to your tenant from the **Queries** page. Click **Create**, select **Folder**, and then choose from the drop-down list **Analytics Reports**.
+.. tip:: Add these queries directly to your tenant from the **Queries** page. Click **Create**, select **Folder**, and then choose from the dropdown list **Analytics Reports**.
 
 .. table-unified-loyalty-examples-end
 

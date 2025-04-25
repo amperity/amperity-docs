@@ -100,7 +100,7 @@ Add courier
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
-#. From the **Credential** drop-down, select **Create a new credential**.
+#. From the **Credential** dropdown, select **Create a new credential**.
 #. Enter the username, password, and security token.
 
 #. Under **Salesforce Sales Cloud Settings** configure **Queries** to specify the tables (and object names) from which Amperity will pull data. For example:

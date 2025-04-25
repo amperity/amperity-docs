@@ -164,7 +164,7 @@ Configure credentials
           :start-after: .. credential-steps-select-type-multiple-start
           :end-before: .. credential-steps-select-type-multiple-end
 
-       From the **Credential type** drop-down, select |credential-type|.
+       From the **Credential type** dropdown, select |credential-type|.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px

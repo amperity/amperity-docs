@@ -81,7 +81,7 @@ Use activation IDs in segments
 .. TODO: Need an intro here.
 
 #. Create a segment.
-#. In the **Segment Editor** select the activation ID from the **Activation ID** drop-down.
+#. In the **Segment Editor** select the activation ID from the **Activation ID** dropdown.
 
    .. important:: Tables and lists are limited to only those that contain a field that matches the selected activation ID.
 

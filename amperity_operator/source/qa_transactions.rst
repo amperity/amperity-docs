@@ -43,7 +43,7 @@ The recommended way to add transactions QA queries to your tenant is to use the 
 
 #. From the **Segments** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Enter the name for the folder. For example: Transactions QA.
-#. From the **Template** drop-down, select **Transactions QA**.
+#. From the **Template** dropdown, select **Transactions QA**.
 #. Click **Create**. This will create a folder, into which a collection of draft queries are added. Review the queries for more information about how each query works.
 
 .. database-interactions-transactions-query-qa-steps-end

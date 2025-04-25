@@ -206,7 +206,7 @@ Enable UID2 token generation
 
 .. uid2-configure-amperity-enable-uid2-start
 
-UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 Generation** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** drop-down.
+UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 Generation** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
 
 .. image:: ../../images/mockup-databases-enable-uid2.png
    :width: 460 px

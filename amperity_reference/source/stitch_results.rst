@@ -211,7 +211,7 @@ Explore previous Stitch results
 
 .. stitch-explore-previous-stitch-results-start
 
-You can explore previous Stitch results from the **Stitch** tab. From the **Stitch** tab, next to the **Stitch** page title, select a result from the drop-down menu to view the Stitch results for that Stitch run.
+You can explore previous Stitch results from the **Stitch** tab. From the **Stitch** tab, next to the **Stitch** page title, select a result from the dropdown menu to view the Stitch results for that Stitch run.
 
 .. stitch-explore-previous-stitch-results-end
 

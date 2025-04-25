@@ -45,10 +45,10 @@ The **Unified Loyalty Events** table is an optional table for the customer 360 d
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified Loyalty Events".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the **Unified Loyalty Events** table.
+#. From the **Source Table** dropdown, select the **Unified Loyalty Events** table.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. From the **Table Semantics** drop-down, select **Unified Loyalty Events**.
+#. From the **Table Semantics** dropdown, select **Unified Loyalty Events**.
 #. Under **Version History**, select **Enable table version history**.
 #. Click **Save**.
 

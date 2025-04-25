@@ -215,7 +215,7 @@ Add courier
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter a name for the credential, the IAM access key, and the IAM secret key. Click **Save**.
 #. Under **Settings**, add the name of the S3 bucket to which the Firehose delivery stream will write.
 #. Configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity. For example, the files from two different streams: "customer-records" and "transaction-records".

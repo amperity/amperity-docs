@@ -552,7 +552,7 @@ Add as visual query
 .. queries-add-via-visual-editor-steps-start
 
 #. From the **Queries** page, click **Create**, and then select **Visual query**. This opens the **Visual Query Editor**.
-#. Define the query using the drop-down menus and buttons.
+#. Define the query using the dropdown menus and buttons.
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
 
@@ -614,7 +614,7 @@ A docked mode for the data explorer is available from the **Queries** page when 
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor.
 
    .. tip:: The query does not need to be in edit mode to browse tables and columns.
-#. Under **Database**, select a database from the drop-down menu. The list of tables is updated to show the tables in that database.
+#. Under **Database**, select a database from the dropdown menu. The list of tables is updated to show the tables in that database.
 #. Under **Table**, expand the name of a table. Details include the number of records in the table, a list of columns, and for each column its data type.
 
 .. queries-browse-table-columns-steps-end
@@ -657,7 +657,7 @@ You can convert a query to a segment on the **Queries** page.
 .. queries-convert-query-to-segment-steps-start
 
 #. From the **Queries** page, click **Create**, and then select **Visual query**. This opens the **Visual Query Editor**.
-#. Define the query using the drop-down menus and buttons.
+#. Define the query using the dropdown menus and buttons.
 #. In the **Query Details** pane, select the **Make query available for segment editor** checkbox.
 #. Click **Activate**.
 #. From the **Activate Query** dialog box, click **Activate**.
@@ -685,7 +685,7 @@ You can copy the name of a column from the list of tables available to the **SQL
 .. queries-copy-column-names-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor**.
-#. Under **Database**, select a database from the drop-down menu. The list of tables is updated to show the tables in that database.
+#. Under **Database**, select a database from the dropdown menu. The list of tables is updated to show the tables in that database.
 #. Under **Table**, expand the name of a table.
 #. Click a column name to copy it.
 #. Paste the column name into SQL query.
@@ -711,7 +711,7 @@ When adding a table, it's often necessary to reference many columns within that 
 .. queries-copy-select-statement-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor**.
-#. Under **Database**, select a database from the drop-down menu. The list of tables is updated to show the tables in that database.
+#. Under **Database**, select a database from the dropdown menu. The list of tables is updated to show the tables in that database.
 #. Under **Table**, to the left of the table name click the icon to copy the **SELECT** statement.
 #. Paste the **SELECT** statement into SQL query.
 
@@ -1145,7 +1145,7 @@ You may build queries against domain tables in your tenant, including custom dom
 .. queries-query-domain-tables-steps-start
 
 #. From the **Queries** page, open the query editor.
-#. From the **Database** drop-down menu, under **Other datasets**, select "Domain tables". This will refresh the list of tables available for queries to be the list of domain tables in your tenant.
+#. From the **Database** dropdown menu, under **Other datasets**, select "Domain tables". This will refresh the list of tables available for queries to be the list of domain tables in your tenant.
 
    .. note:: This includes all domain tables, including custom domain tables.
 #. Build a query against any combination of domain tables.

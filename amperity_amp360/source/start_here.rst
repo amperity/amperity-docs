@@ -266,7 +266,7 @@ Queries also enable you to write SQL that can be used to perform QA against vari
 
 .. start-here-queries-tab-sql-interfaces-start
 
-The **Queries** page provides a SQL interface for building queries. Use the visual editor to build queries with drop-downs and picklists. Use the SQL editor (and Presto SQL) to build more advanced queries. The **Queries** page keeps a list of all queries, in both active and draft states.
+The **Queries** page provides a SQL interface for building queries. Use the visual editor to build queries with dropdowns and picklists. Use the SQL editor (and Presto SQL) to build more advanced queries. The **Queries** page keeps a list of all queries, in both active and draft states.
 
 Both editors can access all tables in the customer 360 database, which contains all of your important customer attributes, along with passthrough tables that bring data that was pulled to Amperity from the domain tables to the customer 360.
 

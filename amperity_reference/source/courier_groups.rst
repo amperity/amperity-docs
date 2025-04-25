@@ -652,7 +652,7 @@ Add courier
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
+#. Select the name of a courier from the dropdown list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
 #. Click **Save**.
 
 .. courier-groups-howto-add-courier-add-steps-end
@@ -675,7 +675,7 @@ A wait time is a constraint placed on a courier group that defines an extended t
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list.
+#. Select the name of a courier from the dropdown list.
 
    Next to **Wait** add an integer value and then select **Seconds**, **Minutes**, **Hours**, or **Days** to represent the amount of time a courier should wait for data.
 #. Click **Save**.
@@ -700,7 +700,7 @@ Each courier in a courier group may be configured to look for data during a time
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list.
+#. Select the name of a courier from the dropdown list.
 
    Next to **Load data** add an integer value and then select **Minutes**, **Hours**, **Days**, or **Weeks** to represent the amount of time older than the scheduled date and time for which the courier will look for data.
 #. Click **Save**.

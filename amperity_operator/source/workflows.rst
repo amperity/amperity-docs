@@ -289,7 +289,7 @@ Orchestrations
 
 .. orchestrations-run-automatic-start
 
-An orchestration can be configured to run after a courier when the run mode is set to **Automatic** and an active courier group is selected from the drop-down menu.
+An orchestration can be configured to run after a courier when the run mode is set to **Automatic** and an active courier group is selected from the dropdown menu.
 
 .. image:: ../../images/mockup-activation-scheduled-orchestration.png
    :width: 420 px
@@ -309,7 +309,7 @@ Profile API indexes
 
 .. profile-api-enable-run-as-workflow-start
 
-A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the drop-down menu.
+A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the dropdown menu.
 
 .. image:: ../../images/mockup-activation-scheduled-profile-api.png
    :width: 420 px
@@ -329,7 +329,7 @@ Recurring campaigns
 
 .. campaigns-run-as-part-of-workflow-start
 
-A recurring campaign can be configured to run as part of a scheduled workflow when the schedule is set to **Run as part of workflow** and an active courier group is selected from the drop-down menu.
+A recurring campaign can be configured to run as part of a scheduled workflow when the schedule is set to **Run as part of workflow** and an active courier group is selected from the dropdown menu.
 
 .. image:: ../../images/mockup-activation-scheduled-campaign.png
    :width: 420 px

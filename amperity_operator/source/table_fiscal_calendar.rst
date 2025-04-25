@@ -45,10 +45,10 @@ The **Fiscal Calendar** table is generated when fiscal calendar semantic tags ar
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Fiscal_Calendar".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the **Fiscal Calendar** table.
+#. From the **Source Table** dropdown, select the **Fiscal Calendar** table.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. From the **Table Semantics** drop-down, select **Fiscal Calendar**.
+#. From the **Table Semantics** dropdown, select **Fiscal Calendar**.
 #. Under **Version History**, select **Enable table version history**.
 #. Click **Save**.
 

@@ -55,10 +55,10 @@ The **Transaction Attributes Extended** table is a required table for the custom
 
 #. Open your customer 360 database in edit mode, and then click **Add Table**.
 #. Name the table "Transaction_Attributes_Extended" (with underscores).
-#. Set the build mode to **SQL**, and then select "Transaction Attributes Extended" from the **Apply template** drop-down.
+#. Set the build mode to **SQL**, and then select "Transaction Attributes Extended" from the **Apply template** dropdown.
 #. Review the :ref:`list of optional attributes <table-transaction-attributes-extended-extend-attributes>` to determine if any of those should be enabled for your tenant.
 #. Click **Next** to validate the SQL.
-#. Select "Transaction Attributes Extended" from the **Table Semantics** drop-down, and then add a description for the table. (The description is available as a tooltip in other locations in Amperity.
+#. Select "Transaction Attributes Extended" from the **Table Semantics** dropdown, and then add a description for the table. (The description is available as a tooltip in other locations in Amperity.
 #. Click **Save**.
 
 .. table-transaction-attributes-extended-add-steps-end

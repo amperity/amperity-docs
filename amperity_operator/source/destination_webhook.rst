@@ -255,7 +255,7 @@ Add the API gateway
 #. Open the AWS Lambda console.
 #. Open the Lambda function for the custom destination.
 #. Click **Add trigger**.
-#. From the drop-down menu, select "API Gateway", and then select the following:
+#. From the dropdown menu, select "API Gateway", and then select the following:
 
    .. list-table::
       :widths: 200 400

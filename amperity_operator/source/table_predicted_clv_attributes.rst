@@ -96,7 +96,7 @@ as a passthrough table
 
 #. From the **Customer 360** page, under **All Databases**, select the menu for a database, and then click **Edit**.
 #. Click **Add Table**.
-#. Set **Build Mode** to "Passthrough", and then select the **Predicted CLV Attributes** table from the drop-down menu.
+#. Set **Build Mode** to "Passthrough", and then select the **Predicted CLV Attributes** table from the dropdown menu.
 #. Hide the table from the **Visual Segment Editor** by verifying that **Show in VSE?** is unselected.
 #. Click **Activate** to update the customer 360 database with your changes.
 

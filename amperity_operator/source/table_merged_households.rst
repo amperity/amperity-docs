@@ -33,7 +33,7 @@ The **Merged Households** table generates a household ID (as a UUID) for records
 
 #. From the **Customer 360** page, under **All Databases**, open the menu for a database, and then click **Edit**.
 #. Click **Add Table**.
-#. Set **Build Mode** to "SQL", open the **Apply template** drop-down menu, and then select **Merged Households**.
+#. Set **Build Mode** to "SQL", open the **Apply template** dropdown menu, and then select **Merged Households**.
 #. Update the name of the table template to append the brand name to the table name.
 #. Update the SQL in the table template for the correct name of the address standardization lookup table.
 

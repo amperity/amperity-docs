@@ -691,7 +691,7 @@ An index must be defined for each query that is used to generate an endpoint for
           :align: left
           :class: no-scaled-link
 
-       Use the drop-down lists to define the field that determines sort order, and then choose a direction (ascending or descending). The field that determines sort order may be the same field that is used as the lookup key.
+       Use the dropdown lists to define the field that determines sort order, and then choose a direction (ascending or descending). The field that determines sort order may be the same field that is used as the lookup key.
 
        Use the **LIMIT** setting to define the maximum number of matching records that may be in the list. This value must be at least 1 and cannot be more than 10.
 
@@ -845,7 +845,7 @@ Run as part of a workflow
 
 .. profile-api-enable-run-as-workflow-start
 
-A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the drop-down menu.
+A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the dropdown menu.
 
 .. image:: ../../images/mockup-activation-scheduled-profile-api.png
    :width: 420 px

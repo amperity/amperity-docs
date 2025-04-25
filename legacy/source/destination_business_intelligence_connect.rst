@@ -339,9 +339,9 @@ The following steps describe how to configure a destination for |bic| when it is
 
 #. From the **Destinations** page, click **Add Destination**. This opens the **Add Destination** dialog box.
 #. Enter the name of the destination and a description. For example: "BI Connect" and "This sends data to the BI Connect data warehouse".
-#. From the **Plugin** drop-down, select **Snowflake**.
-#. From the **Credential Type** drop-down, select a credential type: "aws-snowflake".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Plugin** dropdown, select **Snowflake**.
+#. From the **Credential Type** dropdown, select a credential type: "aws-snowflake".
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter the username and password. This is the service account username and password.
 #. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket.
 #. Under **Snowflake Settings**, enter the Snowflake account name, Amazon AWS region ID, Snowflake stage name, and Snowflake data warehouse name.
@@ -378,9 +378,9 @@ The following steps describe how to configure a destination for |bic| when it is
 
 #. From the **Destinations** page, click **Add Destination**. This opens the **Add Destination** dialog box.
 #. Enter the name of the destination and a description. For example: "Snowflake" and "This sends data to Snowflake".
-#. From the **Plugin** drop-down, select **Snowflake**.
-#. From the **Credential Type** drop-down, select a credential type: "azure-snowflake".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Plugin** dropdown, select **Snowflake**.
+#. From the **Credential Type** dropdown, select a credential type: "azure-snowflake".
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter the username and password. This is the service account username and password.
 #. Add the Azure Blob Storage account name and shared access signature for the AZURE_ROLE with permission to access Azure Bob Storage.
 #. Under **Snowflake Settings**, enter the Snowflake account name, the region identifier, Snowflake stage name, and Snowflake data warehouse name.

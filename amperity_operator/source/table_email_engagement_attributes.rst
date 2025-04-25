@@ -65,7 +65,7 @@ The **Email Engagement Attributes** table is a table that contains one email add
 #. Verify that **email-attribute** :ref:`semantic tags <table-email-engagement-attributes-semantic-tags>` are applied to all fields.
 #. Review picklists to ensure they have the desired sorting parameters.
 #. Add friendly names for any field.
-#. From the **Table Semantics** drop-down, select **Email Engagement Attributes**.
+#. From the **Table Semantics** dropdown, select **Email Engagement Attributes**.
 #. Click **Save**.
 
 .. table-email-engagement-attributes-add-steps-end

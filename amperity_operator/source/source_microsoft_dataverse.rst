@@ -94,7 +94,7 @@ Add courier
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the name of the courier. For example: "|source-name|".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** page.
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** page.
 #. Enter a name for the credential, the |credential-details|. Click **Save**.
 #. Under **Dataverse Settings**, add the catalog, database and logical table name.
 

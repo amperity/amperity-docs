@@ -84,7 +84,7 @@ Use OAuth to configure Amperity to send |what-send| to |destination-name|.
 
 Open the **Destinations** tab and click **Add Destination**. The **Add Destination** dialog box opens.
 
-Select |destination-name| from the **Plugin** drop-down, and then from the **Credential** drop-down, select **Create a new credential**.
+Select |destination-name| from the **Plugin** dropdown, and then from the **Credential** dropdown, select **Create a new credential**.
 
 This opens the **Create New Credential** dialog box.
 
@@ -106,7 +106,7 @@ Verify the credential is on the page, and then return to the **Destinations** ta
 
 Open the **Destinations** tab and click **Add Destination**. The **Add Destination** dialog box opens.
 
-Select |destination-name| from the **Plugin** drop-down, and then from the **Credential** drop-down, select the credential that is authorized to access |destination-name|.
+Select |destination-name| from the **Plugin** dropdown, and then from the **Credential** dropdown, select the credential that is authorized to access |destination-name|.
 
 .. note:: The value for the **Refresh Token** setting is updated automatically after you select the credential.
 
@@ -226,9 +226,9 @@ Use a webhook destination to send query results from Amperity to a Lambda functi
 
 #. From the **Destinations** tab, click **Add Destination**. This opens the **Add Destination** dialog box.
 #. Enter the name of the destination and a description. For example, "|destination-name|" and "Send |what-send| in |destination-name|".
-#. From the **Plugin** drop-down, select "Webhook".
+#. From the **Plugin** dropdown, select "Webhook".
 #. The "webhook" credential type is selected automatically.
-#. From the **Credential** drop-down, select a credential that has already been configured for this destination *or* click **Create a new credential**, which opens the **Create New Credential** dialog box. For new credentials, enter a name for the credential, the API key, and the webhook URL. (The webhook URL is the endpoint for the API gateway.) Click **Save**.
+#. From the **Credential** dropdown, select a credential that has already been configured for this destination *or* click **Create a new credential**, which opens the **Create New Credential** dialog box. For new credentials, enter a name for the credential, the API key, and the webhook URL. (The webhook URL is the endpoint for the API gateway.) Click **Save**.
 
    .. tip:: The API key and webhook URL settings are available from your AWS Lambda console. Log in to your AWS Lambda console, and then click **Configuration**. The API key is in the **Details** section and the webhook URL is in the **Triggers** section.
 
@@ -336,7 +336,7 @@ Open the **Destinations** tab to configure a destination for |destination-name|.
 
 Enter a name for the destination and provide a description. For example: "|destination-name|" and "This sends |what-send| to |destination-name|".
 
-From the **Plugin** drop-down, start typing |filter-the-list| to filter the list, and then select |destination-name|.
+From the **Plugin** dropdown, start typing |filter-the-list| to filter the list, and then select |destination-name|.
 
 .. destinations-add-name-and-description-end
 
@@ -363,11 +363,11 @@ The credential type is set automatically to |sftp-type|. You may use an existing
 
 .. destinations-add-new-or-select-existing-start
 
-Select an existing credential from the **Credential** drop-down.
+Select an existing credential from the **Credential** dropdown.
 
 -- or -- 
 
-Select **Create a new credential** from the **Credential** drop-down. This opens the **Credential** dialog box.
+Select **Create a new credential** from the **Credential** dropdown. This opens the **Credential** dialog box.
 
 .. destinations-add-new-or-select-existing-end
 
@@ -389,7 +389,7 @@ Enter the name for the credential, and then add a description.
       .. note:: Send the URL to an individual who can provide these credentials, and then ask them to log into |destination-name| on your behalf.
 
    #. When complete, you will be redirected to the **Credentials** page in Amperity.
-   #. Verify the credential is on the page, and then return to the **Destinations** tab. From the **Plugin** drop-down, select the |destination-name|, and then use the credential that was just created.
+   #. Verify the credential is on the page, and then return to the **Destinations** tab. From the **Plugin** dropdown, select the |destination-name|, and then use the credential that was just created.
 
 .. destinations-intro-for-additional-settings-oauth-end
 
@@ -404,7 +404,7 @@ Enter the name for the credential, and then add a description.
       .. note:: Send the URL to an individual who can provide these credentials, and then ask them to log into |destination-name| on your behalf.
 
    #. When complete, you will be redirected to the **Credentials** page in Amperity.
-   #. Verify the credential is on the page, and then return to the **Destinations** tab. From the **Plugin** drop-down, select the |destination-name|, and then use the credential that was just created.
+   #. Verify the credential is on the page, and then return to the **Destinations** tab. From the **Plugin** dropdown, select the |destination-name|, and then use the credential that was just created.
 
       .. note:: The value for the **Refresh Token** setting will be updated automatically after you select the credential.
 
@@ -413,7 +413,7 @@ Enter the name for the credential, and then add a description.
 
 .. destinations-intro-for-additional-settings-sftp-start
 
-Enter the name for the credential, and then add a description. Select |sftp-hostname| from the **HOSTNAME** drop-down list. Enter the username and passphrase.
+Enter the name for the credential, and then add a description. Select |sftp-hostname| from the **HOSTNAME** dropdown list. Enter the username and passphrase.
 
 .. destinations-intro-for-additional-settings-sftp-end
 
@@ -451,7 +451,7 @@ Complete the following **SFTP Settings**:
 
    .. tip:: If the path to the remote folder contains a space, use a backslash (\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
 
-* The **File format**. Select the file format -- |file-format| -- from the drop-down list.
+* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -461,7 +461,7 @@ Complete the following **SFTP Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the drop-down, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -490,7 +490,7 @@ Complete the following **SFTP Settings**:
 
    The object prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
-* The **File format**. Select the file format -- |file-format| -- from the drop-down list.
+* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -500,7 +500,7 @@ Complete the following **SFTP Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the drop-down, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -529,7 +529,7 @@ Complete the following **Amazon S3 Settings**:
 
    The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
-* The **File format**. Select the file format -- |file-format| -- from the drop-down list.
+* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -539,7 +539,7 @@ Complete the following **Amazon S3 Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the drop-down, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -569,7 +569,7 @@ Complete the following **Azure Blob Storage Settings**:
 
    The name of the container and blob prefix. For example: |azure-container-name| and |azure-blob-prefix|.
 
-* The **File format**. Select the file format -- |file-format| -- from the drop-down list.
+* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -579,7 +579,7 @@ Complete the following **Azure Blob Storage Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the drop-down, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 

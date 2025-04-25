@@ -61,10 +61,10 @@ The **Unified Transactions** table is a required table for the customer 360 data
 
 #. Open your customer 360 database in edit mode, and then click **Add Table**.
 #. Name the table "Unified_Transactions" (with underscores).
-#. Set the build mode to **SQL**, and then select "Unified Transactions" from the **Apply template** drop-down.
+#. Set the build mode to **SQL**, and then select "Unified Transactions" from the **Apply template** dropdown.
 #. Review the :ref:`list of optional attributes <table-unified-transactions-extend-attributes>` to determine if any of those should be enabled for your tenant.
 #. Click **Next** to validate the SQL.
-#. Select "Unified Transactions" from the **Table Semantics** drop-down, and then add a description for the table. (The description is available as a tooltip in other locations in Amperity.
+#. Select "Unified Transactions" from the **Table Semantics** dropdown, and then add a description for the table. (The description is available as a tooltip in other locations in Amperity.
 #. Click **Save**.
 
 .. table-unified-transactions-add-steps-end

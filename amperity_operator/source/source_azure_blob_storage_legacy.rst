@@ -236,7 +236,7 @@ Credentials options to access Azure Blob Storage include shared access signature
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**. You may switch to using **azure-blob-storage-uri** or **azure-blob-shared-access-signature**.
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter a name for the credential, any credential type-specific settings, and then click **Save**.
 
    For the "azure-blob-connection-string" credential type, enter the name of the credential and the connection string.

@@ -58,7 +58,7 @@ The recommended way to add the Stitch QA database to your tenant is to use the "
 
 #. From the **Customer 360** page click **Create Database**.
 #. Name the database "Stitch QA".
-#. From the **Template** drop-down, select **Stitch QA**.
+#. From the **Template** dropdown, select **Stitch QA**.
 #. Click **Create**. This opens the **Database Editor** page and shows a list of preconfigured database tables.
 #. Under **Database Type**, ensure that **Amp360** and **AmpIQ** are not selected.
 #. Click the **Activate** button.
@@ -107,7 +107,7 @@ The recommended way to add Stitch QA queries to your tenant is to use the "Stitc
 
 #. From the **Queries** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Name the folder "Stitch QA".
-#. From the **Template** drop-down, select **Stitch QA**.
+#. From the **Template** dropdown, select **Stitch QA**.
 #. Click **Create**. This will create a folder, into which a collection of draft Stitch QA queries are added.
 #. Take a few minutes to review the queries that are added by the "Stitch QA" query template.
 

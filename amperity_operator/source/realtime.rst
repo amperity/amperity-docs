@@ -271,7 +271,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
           :align: left
           :class: no-scaled-link
 
-       Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
+       Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the dropdown list.
 
        Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 

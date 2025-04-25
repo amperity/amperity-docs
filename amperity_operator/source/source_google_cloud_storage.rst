@@ -236,7 +236,7 @@ Add courier
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter a name for the credential, the Cloud Storage bucket name, and the service account key. Click **Save**.
 
    .. important:: The bucket name must match the value of the **<<GCS_BUCKET_NAME>>** placeholder shown in the :ref:`service account key <source-google-cloud-storage-service-account-key>` example.

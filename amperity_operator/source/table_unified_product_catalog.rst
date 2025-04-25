@@ -45,13 +45,13 @@ The **Unified Product Catalog** table is a required table for the customer 360 d
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified_Product_Catalog".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the **Unified Product Catalog** table.
+#. From the **Source Table** dropdown, select the **Unified Product Catalog** table.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
 #. Verify that semantic tags were applied correctly.
 
    .. tip:: You can clear incorrectly tagged semantics individually or for the entire table. To clear semantic tags for the entire table, under **Semantic Suggestions** click **Clear semantics**.
-#. From the **Table Semantics** drop-down, select **Unified Product Catalog**.
+#. From the **Table Semantics** dropdown, select **Unified Product Catalog**.
 #. Click **Save**.
 
 .. table-unified-product-catalog-add-steps-end

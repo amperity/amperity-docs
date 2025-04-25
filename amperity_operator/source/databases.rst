@@ -208,7 +208,7 @@ Use the :ref:`Customer 360 <databases-manage-add-from-template-c360>`, :ref:`Pas
 
 #. From the **Customer 360** page click **Create Database**.
 #. Enter the name of the database.
-#. From the **Template** drop-down, select "Customer 360", "Passthrough", or "Stitch QA".
+#. From the **Template** dropdown, select "Customer 360", "Passthrough", or "Stitch QA".
 #. Click **Create**.
 
 .. databases-manage-add-from-template-steps-end
@@ -373,9 +373,9 @@ If a table already contains an Amperity ID, you may use a passthrough table.
 
 #. From the **Customer 360** page, under **All Databases**, open the menu for a database, and then click **Edit**.
 #. Click **Add Table**.
-#. Set **Build Mode** to "Passthrough", and then select a table from the drop-down menu.
+#. Set **Build Mode** to "Passthrough", and then select a table from the dropdown menu.
 
-   .. note:: The name of the table is assigned automatically and defaults to the name of the table as shown in the drop-down menu. You may change the name of the table after selecting a table.
+   .. note:: The name of the table is assigned automatically and defaults to the name of the table as shown in the dropdown menu. You may change the name of the table after selecting a table.
 #. Update the name of the passthrough table, if necessary.
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly. 
 #. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
@@ -452,7 +452,7 @@ Use table templates to add tables to your database that use Amperity standard ta
 
 #. From the **Customer 360** page, under **All Databases**, open the menu for a database, and then click **Edit**.
 #. Click **Add Table**.
-#. Set **Build Mode** to "SQL", open the **Apply template** drop-down menu, and then select a table template.
+#. Set **Build Mode** to "SQL", open the **Apply template** dropdown menu, and then select a table template.
 #. Update the name of the table template, if necessary.
 #. Update the SQL in the table template to support your use case.
 
@@ -650,7 +650,7 @@ A database may be configured to export one (or more) tables (or even the entire 
 #. Click **Create New Export**. This opens the **Add Export** dialog box.
 #. Add the name of the database export, and then click **Add**. This will add a draft database export to the **Database Exports** page.
 #. Open the menu for the draft database export, and then select **Edit**.
-#. From the **Database** drop-down, select a database.
+#. From the **Database** dropdown, select a database.
 #. From the **Entities** list, select one (or more) database tables to add to the database export.
 
    For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.

@@ -97,7 +97,7 @@ The **All Opted-In Emails** table requires the **Email Opt Status** table, after
 #. Select **Make available in Visual Segment Editor**. This ensures the table is available from the **Edit Attributes** dialog in the campaign editor.
 
    .. important:: You should not use attributes in this table to build segments.
-#. Leave the **Table Semantics** drop-down empty.
+#. Leave the **Table Semantics** dropdown empty.
 #. Click **Save**.
 
 .. table-all-opted-in-emails-add-table-steps-end

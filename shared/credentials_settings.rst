@@ -52,7 +52,7 @@ Assign the credential a name and description that ensures other users of Amperit
 
 .. credential-steps-select-type-end
 
-Notes: When a source or destination supports more than one credential type, use the "multiple" inclusion block, and then add "From the **Credential type** drop-down, select **credential-name**." See the Amazon S3 destination topic for an example.
+Notes: When a source or destination supports more than one credential type, use the "multiple" inclusion block, and then add "From the **Credential type** dropdown, select **credential-name**." See the Amazon S3 destination topic for an example.
 
 .. credential-steps-select-type-multiple-start
 

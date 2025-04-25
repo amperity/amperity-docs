@@ -201,8 +201,8 @@ This section has an introduction to entities lists and a note about required/opt
 
    This automatically selects |credential-type| as the **Credential Type**. Add the hostname for the location from which data is pulled. For example: |sftp-hostname|.
 #. Enter the name of the courier. For example: "|source-name|".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** page.
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. Enter a name for the credential (typically "|source-name|"), and then enter the username and password required to access this location.
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** page.
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. Enter a name for the credential (typically "|source-name|"), and then enter the username and password required to access this location.
 #. Under **Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
 
    .. note:: If the file is contained within a ZIP archive, you may need to specify the fully qualified filename within the ZIP archive. For example, to import a file named "items.csv" you may need to specify "export\items.csv".
@@ -337,7 +337,7 @@ This section has an introduction to entities lists and a note about required/opt
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the name of the courier. For example: "|source-name|".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** page.
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** page.
 #. Enter a name for the credential and add the configuration settings. Click **Save**.
 #. Under **Amazon S3 Settings**, add the name of the Amazon S3 bucket and prefix.
 #. Under **Amazon S3 Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
@@ -500,7 +500,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 #. Under **Sample File**, select **Select existing file**, and then choose from the list of files. For example: "|example-filename|".
 
-   .. tip:: The list of files that is available from this drop-down menu is sorted from newest to oldest.
+   .. tip:: The list of files that is available from this dropdown menu is sorted from newest to oldest.
 #. Select **Load sample file on feed activation**.
 #. Click **Continue**. This opens the **Feed Editor** page.
 #. Select the primary key.
@@ -661,8 +661,8 @@ Run the courier again. This time, because the load operations are present and th
          :start-after: .. courier-groups-timezones-downstream-start
          :end-before: .. courier-groups-timezones-downstream-end
 
-#. Add at least one courier to the courier group. Select the name of the courier from the **Courier** drop-down. Click **+ Add Courier** to add more couriers.
-#. Click **Add a courier group constraint**, and then select a courier group from the drop-down list.
+#. Add at least one courier to the courier group. Select the name of the courier from the **Courier** dropdown. Click **+ Add Courier** to add more couriers.
+#. Click **Add a courier group constraint**, and then select a courier group from the dropdown list.
 
    .. include:: ../../amperity_reference/source/courier_groups.rst
       :start-after: .. courier-groups-schedule-wait-time-start

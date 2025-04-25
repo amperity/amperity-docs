@@ -66,7 +66,7 @@ Database tables and databases can be sent from Amperity as a data export. A data
 #. Click **Create New Export**. This opens the **Add Export** dialog box.
 #. Add the name of the data export, and then click **Add**. This will add a draft data export to the **Database Exports** page.
 #. Open the menu for the draft data export, and then select **Edit**.
-#. From the **Database** drop-down, select a database.
+#. From the **Database** dropdown, select a database.
 #. From the **Entities** list, select one (or more) database tables to add to the data export.
 #. Click **Activate**.
 
@@ -113,7 +113,7 @@ Add to orchestration
 .. data-exports-add-to-orchestration-steps-start
 
 #. From the **Destinations** page click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** drop-down, select **Database Export**.
+#. From the **Object Type** dropdown, select **Database Export**.
 #. Select a destination and complete the rest of the orchestration settings.
 #. Click **Save**.
 
@@ -180,7 +180,7 @@ The database associated with a data export may be switched to any other database
 
 #. From the **Customer 360** page click **Configure Exports**. This opens the **Database Exports** page.
 #. Open the menu for a data export, and then select **Edit**.
-#. From the **Databases** drop-down menu, pick another database.
+#. From the **Databases** dropdown menu, pick another database.
 #. From the **Entities** list, select one (or more) database tables to add to the data export.
 
    For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.

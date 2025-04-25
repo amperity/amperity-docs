@@ -264,7 +264,7 @@ The **Email Ampid Assignment** table identifies the best email address to use fo
           :class: no-scaled-link
      - **Initial configuration only**
 
-       Add the :doc:`Email Ampid Assignemnt <table_email_ampid_assignment>` table to your customer 360 database. Use the **SQL** build mode option, and then select "Email Ampid Assigment" from the **Template** drop-down.
+       Add the :doc:`Email Ampid Assignemnt <table_email_ampid_assignment>` table to your customer 360 database. Use the **SQL** build mode option, and then select "Email Ampid Assigment" from the **Template** dropdown.
 
    * - .. image:: ../../images/checklist-caution.png
           :width: 60 px
@@ -313,7 +313,7 @@ Individual rows within the **Merged Customers** table represent unique customer 
           :class: no-scaled-link
      - **Initial configuration only**
 
-       :ref:`Add the Merged Customers table <table-merged-customers-add-table>` to your customer 360 database. Use the **SQL** build mode option, and then select "Merged Customers" from the **Template** drop-down.
+       :ref:`Add the Merged Customers table <table-merged-customers-add-table>` to your customer 360 database. Use the **SQL** build mode option, and then select "Merged Customers" from the **Template** dropdown.
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
@@ -390,13 +390,13 @@ Individual rows within the **Customer 360** table represent customer profiles (a
           :class: no-scaled-link
      - **Initial configuration only**
 
-       :ref:`Add the Customer 360 table <table-customer360-add>` to your customer 360 database. Use the **SQL** build mode option, and then select "Customer 360" from the **Template** drop-down.
+       :ref:`Add the Customer 360 table <table-customer360-add>` to your customer 360 database. Use the **SQL** build mode option, and then select "Customer 360" from the **Template** dropdown.
 
        *- or -*
 
        You may extend the **Customer 360** table to include attributes from the **Unified Transactions** and **Transaction Attributes Extended** tables.
 
-       Use the **SQL** build mode option, select "Customer 360 with Transaction Attributes" from the **Template** drop-down, and then uncomment the attributes you want to include. You may add any attribute in the **Unified Transactions** and **Transaction Attributes Extended** tables to the **Customer 360** table.
+       Use the **SQL** build mode option, select "Customer 360 with Transaction Attributes" from the **Template** dropdown, and then uncomment the attributes you want to include. You may add any attribute in the **Unified Transactions** and **Transaction Attributes Extended** tables to the **Customer 360** table.
 
    * - .. image:: ../../images/checklist-caution.png
           :width: 60 px
@@ -438,7 +438,7 @@ To make data available in your customer 360 database you must activate, and then
           :class: no-scaled-link
      - **Multi-brand databases only**
 
-       Use the **SQL** build mode option, select "Database Key" from the **Template** drop-down, and then configure the SQL in that template to support the brand that should be associated with this customer 360 database.
+       Use the **SQL** build mode option, select "Database Key" from the **Template** dropdown, and then configure the SQL in that template to support the brand that should be associated with this customer 360 database.
 
        .. important:: Add the **Database Key** table *before* running the customer 360 database.
 

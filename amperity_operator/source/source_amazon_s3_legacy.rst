@@ -269,7 +269,7 @@ For example:
 #. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 #. Enter the name of the courier. For example: "|source-name|".
-#. Credentials allow Amperity to connect to |source-name|. Give the courier a name, and then select a credential from the **Credential** drop-down.
+#. Credentials allow Amperity to connect to |source-name|. Give the courier a name, and then select a credential from the **Credential** dropdown.
 
 #. Under **Amazon S3 Settings**, add the name of the Amazon S3 bucket and prefix.
 #. Under **Amazon S3 Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.

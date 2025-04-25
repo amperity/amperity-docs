@@ -54,7 +54,7 @@ The following groups of semantic tags are available: |semantics_customer_profile
          :start-after: .. term-update-dt-start
          :end-before: .. term-update-dt-end
 
-      The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with the LAST UPDATED FIELD drop-down list.
+      The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with the LAST UPDATED FIELD dropdown list.
 #. Apply any other semantic tags, such as for transactions, itemized transactions, or custom semantic tags, as appropriate.
 
    .. important:: Semantic tags for interactions records (transactions, itemized transactions, loyalty profiles, email events, and so on) may need to be reshaped prior to applying semantic tags. Use custom domain tables and reshape the data using domain SQL prior to applying semantic tags.
@@ -100,7 +100,7 @@ Semantic tagging is done while configuring a feed. A feed tells Amperity how to 
 
 Custom semantic tags allow for additional tagging of certain types of fields, such as a field that identifies a loyalty membership ID. Use foreign keys to apply consistently across customer tables for certain types of identifiers.
 
-One custom semantic tag is required by the **Merged Customers** table: **update-dt**. Use the **Last updated field** drop-down in the **Feed Editor** to specify the field to which this tag will be applied.
+One custom semantic tag is required by the **Merged Customers** table: **update-dt**. Use the **Last updated field** dropdown in the **Feed Editor** to specify the field to which this tag will be applied.
 
 .. important:: Make sure that you do not miss any opportunities to correctly tag customer data for all semantics, custom semantics, and foreign keys. Make sure the application of custom semantics is done consistently across all data sources. Verify that custom semantics and foreign keys do not have any typos or misspellings.
 
@@ -1524,7 +1524,7 @@ Product catalogs
 
 .. semantics-product-catalog-start
 
-Product catalog semantics should be applied to data sources that contain product catalog data. Product semantics may applied alongside other semanztics, depending on the data source. Use the built-in list of semantics when building a feed. Product semantics are prefixed with **pc/** in the semantics drop-down menu in the **Feed Editor**.
+Product catalog semantics should be applied to data sources that contain product catalog data. Product semantics may applied alongside other semanztics, depending on the data source. Use the built-in list of semantics when building a feed. Product semantics are prefixed with **pc/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-product-catalog-end
 

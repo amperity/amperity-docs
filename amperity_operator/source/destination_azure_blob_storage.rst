@@ -190,7 +190,7 @@ Connection string
           :start-after: .. credential-steps-select-type-multiple-start
           :end-before: .. credential-steps-select-type-multiple-end
 
-       From the **Credential type** drop-down, select **azure-blob-connection-string**.
+       From the **Credential type** dropdown, select **azure-blob-connection-string**.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -280,7 +280,7 @@ Shared access signature
           :start-after: .. credential-steps-select-type-multiple-start
           :end-before: .. credential-steps-select-type-multiple-end
 
-       From the **Credential type** drop-down, select **azure-blob-shared-access-signature**.
+       From the **Credential type** dropdown, select **azure-blob-shared-access-signature**.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -367,7 +367,7 @@ Storage URI
           :start-after: .. credential-steps-select-type-multiple-start
           :end-before: .. credential-steps-select-type-multiple-end
 
-       From the **Credential type** drop-down, select **azure-blob-storage-uri**.
+       From the **Credential type** dropdown, select **azure-blob-storage-uri**.
 
 
    * - .. image:: ../../images/steps-03.png

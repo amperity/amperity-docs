@@ -177,7 +177,7 @@ IAM role-to-role
           :start-after: .. credential-steps-select-type-multiple-start
           :end-before: .. credential-steps-select-type-multiple-end
 
-       From the **Credential type** drop-down, select **iam-role-to-role**.
+       From the **Credential type** dropdown, select **iam-role-to-role**.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -305,7 +305,7 @@ Both parts are required to authenticate requests to Amazon AWS resources.
           :start-after: .. credential-steps-select-type-multiple-start
           :end-before: .. credential-steps-select-type-multiple-end
 
-       From the **Credential type** drop-down, select **iam-credential**.
+       From the **Credential type** dropdown, select **iam-credential**.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px

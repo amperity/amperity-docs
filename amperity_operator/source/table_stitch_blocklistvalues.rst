@@ -41,7 +41,7 @@ Add table
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Stitch_BlocklistValues".
 #. Set the build mode to **Passthrough**.
-#. From the **Source Table** drop-down, select the table associated with the bad-values blocklist.
+#. From the **Source Table** dropdown, select the table associated with the bad-values blocklist.
 #. Click **Next**.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
 #. Leave everything else unchanged.
