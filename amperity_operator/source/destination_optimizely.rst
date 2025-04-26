@@ -32,7 +32,7 @@ Send data to Optimizely
 
 .. destination-optimizely-about-start
 
-Configure Amperity to send data to a customer-managed Amazon S3 bucket, and then configure |destination-name| to |ext_optimizely_data_service_import|.
+Configure Amperity to send data to a customer-managed Amazon S3 bucket, and then configure |destination-name| to `import data using Amazon S3 <https://docs.developers.optimizely.com/optimizely-data-platform/docs/import-data-using-amazon-s3>`__ |ext_link|.
 
 .. destination-optimizely-about-end
 

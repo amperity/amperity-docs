@@ -592,4 +592,133 @@ Add destination
 .. destination-azure-blob-storage-add-steps-end
 
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+.. _destination-azure-blob-storage-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-azure-blob-storage-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-azure-invalid-permissions.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
+       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-azure-invalid-permissions-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-azure-blob-storage-workflow-actions-end
+
+
+.. _destination-azure-blob-storage-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-azure-blob-storage-workflow-actions-invalid-permissions:
+
+Invalid permissions
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-azure-sas-intro-start
+   :end-before: .. workflow-actions-azure-sas-intro-end
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-azure-sas-whatis-start
+   :end-before: .. workflow-actions-azure-sas-whatis-end
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-azure-sas-invalid-permissions-start
+   :end-before: .. workflow-actions-azure-sas-invalid-permissions-end
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-azure-sas-report-problem-start
+   :end-before: .. workflow-actions-azure-sas-report-problem-end
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-azure-sas-steps-start
+   :end-before: .. workflow-actions-azure-sas-steps-end

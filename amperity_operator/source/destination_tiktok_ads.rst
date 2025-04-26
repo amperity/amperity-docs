@@ -319,4 +319,168 @@ Add destination
 
 .. destination-tiktok-ads-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+
+.. _destination-tiktok-ads-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-tiktok-ads-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-tiktok-ads-advertiser-not-found.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-tiktok-ads-workflow-actions-advertiser-not-found`
+       * :ref:`destination-tiktok-ads-workflow-actions-invalid-credentials`
+       * :ref:`destination-tiktok-ads-workflow-actions-missing-advertiser-permissions`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-tiktok-ads-advertiser-not-found-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-tiktok-ads-workflow-actions-end
+
+
+.. _destination-tiktok-ads-workflow-actions-advertiser-not-found:
+
+Advertiser not found
+--------------------------------------------------
+
+.. destination-tiktok-ads-workflow-actions-advertiser-not-found-start
+
+Amperity may only send data to an advertiser account ID that already exists within |destination-name|. When Amperity cannot find the advertiser account ID within |destination-name|, this may be due to any of the following:
+
+#. An Amperity configuration issue related to the destination *or* the data template that is associated with that destination.
+#. An advertiser account ID that is not associated with an approved advertising account in |destination-name|.
+
+.. destination-tiktok-ads-workflow-actions-advertiser-not-found-end
+
+.. destination-tiktok-ads-workflow-actions-advertiser-not-found-steps-start
+
+To resolve this error, determine the cause of the configuration issue.
+
+#. Open the Amperity **Destinations** page in a new browser tab.
+
+   Review the configuration for the destination and data template that is associated with this workflow.
+#. Open `TikTok Business Center <https://business.tiktok.com/>`__ |ext_link| and verify that the advertising account exists, is approved, and has a valid advertiser account ID.
+#. Update the configuration for Amperity to match the correct advertiser account ID.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-tiktok-ads-workflow-actions-advertiser-not-found-steps-start
+
+
+.. _destination-tiktok-ads-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-tiktok-ads-workflow-actions-missing-advertiser-permissions:
+
+Missing advertiser permissions
+--------------------------------------------------
+
+.. destination-tiktok-ads-workflow-actions-missing-advertiser-permissions-start
+
+The business user that is associated with your |destination-name| account is the same business user that provides credentials for Amperity to manage audiences in |destination-name|.
+
+This business user *must* have permission to manage audiences, which requires that business user to be assigned to one of the following roles:
+
+* Admin
+* Operator (recommended)
+
+.. destination-tiktok-ads-workflow-actions-missing-advertiser-permissions-end
+
+.. destination-tiktok-ads-workflow-actions-missing-advertiser-permissions-steps-start
+
+To resolve this error, verify that the business user is assigned to the **Operator** role.
+
+#. Open `TikTok Business Center <https://business.tiktok.com/>`__ |ext_link|.
+
+   Verify the role to which the business user that provides credentials for Amperity is assigned. The business user must be assigned to the **Operator** role.
+#. Open the Amperity **Credentials** page in a new tab, and regenerate the authorization link for the business user who is assigned to the **Operator** role.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-tiktok-ads-workflow-actions-missing-advertiser-permissions-steps-start

@@ -298,4 +298,219 @@ Add destination
 
 .. destination-microsoft-ads-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+
+.. _destination-microsoft-ads-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-braze-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-microsoft-ads-not-authorized.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-microsoft-ads-workflow-actions-email-address-required`
+       * :ref:`destination-microsoft-ads-workflow-actions-expired-credentials`
+       * :ref:`destination-microsoft-ads-workflow-actions-invalid-credentials`
+       * :ref:`destination-microsoft-ads-workflow-actions-must-accept-terms`
+       * :ref:`destination-microsoft-ads-workflow-actions-not-authorized`
+       * :ref:`destination-microsoft-ads-workflow-actions-mfa-required`
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-microsoft-ads-not-authorized-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-microsoft-ads-workflow-actions-end
+
+
+.. _destination-microsoft-ads-workflow-actions-email-address-required:
+
+Email address required
+--------------------------------------------------
+
+.. destination-microsoft-ads-workflow-actions-email-address-required-start
+
+|destination-name| requires an email address to be present in the data that is sent from Amperity. The email address must be in a field named "Email".
+
+.. destination-microsoft-ads-workflow-actions-email-address-required-end
+
+**For campaigns**
+
+.. destination-microsoft-ads-workflow-actions-email-address-required-campaigns-steps-start
+
+To resolve this error, verify that "Email" is included in the list of attributes that are being sent to |destination-name|.
+
+#. Open the **Campaigns** page, and then open the segment used with this workflow.
+#. Verify that "Email" is included in the list of attributes for each treatment group that sends audiences to |destination-name|. Update the list of attributes for each treatment group if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-microsoft-ads-workflow-actions-email-address-required-campaigns-steps-start
+
+**For orchestrations**
+
+.. destination-microsoft-ads-workflow-actions-email-address-required-orchestrations-steps-start
+
+To resolve this error, verify that the "Email" column is included in the query results.
+
+#. Open the **Queries** page, and then open the query used with this workflow.
+#. Verify that "Email" is included in the query results. Update the query if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-microsoft-ads-workflow-actions-email-address-required-orchestrations-steps-start
+
+
+.. _destination-microsoft-ads-workflow-actions-expired-credentials:
+
+Expired credentials
+--------------------------------------------------
+
+.. destination-microsoft-ads-workflow-actions-expired-credentials-start
+
+The credentials for your |destination-name| account may have expired. This may require :ref:`creating a new credential <destination-microsoft-ads-workflow-actions-invalid-credentials>` for this destination.
+
+.. destination-microsoft-ads-workflow-actions-expired-credentials-end
+
+
+.. _destination-microsoft-ads-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-microsoft-ads-workflow-actions-must-accept-terms:
+
+Must accept terms and conditions
+--------------------------------------------------
+
+.. destination-microsoft-ads-workflow-actions-must-accept-terms-start
+
+You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
+
+To resolve this error, you must agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
+
+#. Log in to the |destination-name| web application, and then agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-microsoft-ads-workflow-actions-must-accept-terms-end
+
+
+.. _destination-microsoft-ads-workflow-actions-not-authorized:
+
+Not authorized
+--------------------------------------------------
+
+.. destination-microsoft-ads-workflow-actions-not-authorized-start
+
+Amperity must have access to the correct combination of `account and customer IDs <https://learn.microsoft.com/en-us/advertising/guides/get-started>`__ |ext_link| in |destination-name|. 
+
+To resolve this error, verify the account and customer IDs in |destination-name|, and then update the destination associated with this workflow for the correct values.
+
+#. Open the **Destinations** page, and then open the destination that is used with this workflow. Review the **Account ID** and **Customer ID** fields that are configured in Amperity.
+#. Log in to the |destination-name| web application, and then find the `account and customer IDs <https://learn.microsoft.com/en-us/advertising/guides/get-started>`__ |ext_link| that are associated with your user account.
+#. Compare the **Account ID** and **Customer ID** fields configured in Amperity to the account and customer IDs that exist in |destination-name|. Update the configuration for this destination in Amperity as required.
+
+   .. note:: This may require :ref:`creating a new credential <destination-microsoft-ads-workflow-actions-invalid-credentials>` for this destination.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-microsoft-ads-workflow-actions-not-authorized-end
+
+
+.. _destination-microsoft-ads-workflow-actions-mfa-required:
+
+Two-step authentication required
+--------------------------------------------------
+
+.. destination-microsoft-ads-workflow-actions-mfa-required-start
+
+|destination-name| requires `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| to be enabled before Amperity can send data.
+
+.. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request wasn't made by the identity owner. For example: a login attempt from a device that is not trusted.
+
+To resolve this error, ensure that multi-factor authentication is enabled for your |destination-name| account.
+
+#. Log in to the |destination-name| web application.
+#. Verify that `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| is enabled for your |destination-name| account.
+
+   .. note:: This may require :ref:`creating a new credential <destination-microsoft-ads-workflow-actions-invalid-credentials>` for this destination.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-microsoft-ads-workflow-actions-mfa-required-end

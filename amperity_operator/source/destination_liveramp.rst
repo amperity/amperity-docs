@@ -125,13 +125,13 @@ Get details
           :alt: Detail 2.
           :align: left
           :class: no-scaled-link
-     - **LiveRamp file preferences**
+     - **LiveRamp file prefer`file limitations <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|ences**
 
-       Sending data to |destination-name| should follow recommendations for |ext_liveramp_upload_data|.
+       Sending data to |destination-name| should follow recommendations for `uploading data <https://docs.liveramp.com/connect/en/uploading-data.html>`__ |ext_link|.
 
-       Review |destination-name| |ext_liveramp_file_limitations|.
+       Review |destination-name| `file limitations <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|.
 
-       |destination-name| supports the following |ext_liveramp_file_formats|:
+       |destination-name| supports the following `file formats <https://docs.liveramp.com/connect/en/formatting-file-data.html>`__ |ext_link|:
 
        * CSV
        * PSV
@@ -139,7 +139,7 @@ Get details
 
        .. important:: Be sure to enable the **Include header row in output files** option for the Amperity destination.
 
-       |destination-name| prefers |ext_liveramp_gpg| and GZip compression.
+       |destination-name| prefers `GPG encryption <https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html>`__ |ext_link| and GZip compression.
 
 .. destination-liveramp-get-details-table-end
 

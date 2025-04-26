@@ -317,4 +317,181 @@ Add destination
 
 .. destination-cordial-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+
+.. _destination-cordial-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-cordial-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error-sources.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-cordial-unique-list-name.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-cordial-workflow-actions-invalid-credentials`
+       * :ref:`destination-cordial-workflow-actions-required-attributes-missing`
+       * :ref:`destination-cordial-workflow-actions-unique-list-name-required`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-cordial-unique-list-name-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-cordial-workflow-actions-end
+
+
+.. _destination-cordial-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-cordial-workflow-actions-required-attributes-missing:
+
+Required attributes are missing
+--------------------------------------------------
+
+.. destination-cordial-workflow-actions-required-attributes-missing-start
+
+|destination-name| will reject audiences when required attributes are missing.
+
+.. destination-cordial-workflow-actions-required-attributes-missing-end
+
+**For campaigns**
+
+.. destination-cordial-workflow-actions-required-attributes-missing-campaigns-steps-start
+
+To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the list of attributes is correct for each treatment group in this campaign that is sending data to |destination-name|.
+
+#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
+
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+
+   Update the attribute(s) in |destination-name| to no longer be required.
+
+   *or*
+
+   Add the missing attributes for each treatment group that is associated with this campaign.
+#. Open the **Campaigns** page, and then for each treatment group that is configured to send audiences to |destination-name|, edit the list of attributes to include all required attributes.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-cordial-workflow-actions-required-attributes-missing-campaigns-steps-start
+
+**For orchestrations**
+
+.. destination-cordial-workflow-actions-required-attributes-missing-orchestrations-steps-start
+
+To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the query used with this orchestration is returning all required attributes.
+
+#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
+
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+
+   Update the attribute(s) in |destination-name| to no longer be required.
+
+   *or*
+
+   Add the missing attributes to the results that are returned by the query that is associated with this orchestration.
+#. Open the **Queries** page, and then open the query used with this workflow. Update the query to return the list of attributes that are required by |destination-name|.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-cordial-workflow-actions-required-attributes-missing-orchestrations-steps-start
+
+
+.. _destination-cordial-workflow-actions-unique-list-name-required:
+
+Unique list name required
+--------------------------------------------------
+
+.. destination-cordial-workflow-actions-unique-list-name-required-start
+
+|destination-name| |ext_cordial_lists| must be unique.
+
+To resolve this error, verify that the name of the list is unique.
+
+#. Open the **Destinations** page, and then review the data template for the destination associated with this workflow error.
+#. Verify that the value of the **List Name** setting is a unique value within |destination-name|.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-cordial-workflow-actions-unique-list-name-required-end

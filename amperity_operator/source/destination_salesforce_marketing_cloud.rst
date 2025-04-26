@@ -533,4 +533,278 @@ Add destination
 .. destination-salesforce-marketing-cloud-add-steps-end
 
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+.. _destination-salesforce-marketing-cloud-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-sfmc-nopk.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type`
+       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location`
+       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name`
+       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder`
+       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-invalid-credentials`
+       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key`
+       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-sfmc-nopk-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-end
+
+
+.. _destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type:
+
+Import location has wrong type
+--------------------------------------------------
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type-start
+
+The import location within the |destination-name| SFTP site must be set to "Enhanced FTP Site Import Directory", which is the standard location type for file imports within |destination-name|. If this location is not set to the standard location type for file imports, Amperity will be unable to send data.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type-steps-start
+
+To resolve this error, you must verify that the import directory within |destination-name| is set to "Enhanced FTP Site Import Directory".
+
+#. Open the |ext_salesforce_sfmc_management_console|, find the |ext_salesforce_sfmc_data_extension_file_location|, and then verify that it is configured for the "Enhanced FTP Site Import Directory" location type.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type-steps-end
+
+
+.. _destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location:
+
+Import location not found
+--------------------------------------------------
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location-start
+
+The name of the directory into which Amperity will add data must be discoverable to Amperity. If Amperity cannot find that directory, CSV files will not be uploaded to the |destination-name| SFTP site.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location-steps-start
+
+To resolve this error, you must ensure that the import location within the |destination-name| SFTP site matches the import location that is configured in Amperity.
+
+#. Verify import location within |destination-name|.
+#. Verify import location as it is configured for the destination within Amperity. Make any necessary changes.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location-steps-end
+
+
+.. _destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name:
+
+Incorrect data extension name
+--------------------------------------------------
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name-start
+
+The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
+
+::
+
+   ! @ # $ % ^ * ( ) = { } [ ] \ . < > / " : ? | , &
+
+The name of a data extension in |destination-name| must be globally unique across folders in |destination-name| *and also* must match the primary key of that data extension, as it is configured in Amperity.
+
+.. important:: You cannot change the primary key that is associated with a data extension from within |destination-name|.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name-steps-start
+
+To resolve this error, you must delete or rename the data extension in |destination-name|, and then re-apply the primary key by resending the workflow from Amperity.
+
+#. Open the |ext_salesforce_sfmc_management_console|, and then |ext_salesforce_sfmc_management_console_data_extension_delete_rename|.
+#. Open the data template that is associated with this workflow.
+#. Edit the data extension name in the data template so that its name is globally unique within |destination-name|, and then save the data template.
+
+   .. tip:: The name of the data extension may require updating in |destination-name|.
+
+      **To update the data extension in Salesforce Marketing Cloud**
+
+      #. Open the |ext_salesforce_sfmc_management_console|.
+      #. Select **Audience Builder**, and then choose **Contact Builder**.
+      #. Open **Data Extensions**.
+      #. Search for the data extension for which this error is associated, and then rename the data extension or delete the data extension.
+
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name-steps-end
+
+
+.. _destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder:
+
+Incorrect folder
+--------------------------------------------------
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder-start
+
+The name of the directory within the |destination-name| SFTP site must match the folder name that is configured in Amperity. When the folder name does not match, the Marketing Cloud SOAP API will unable to get CSV files from that directory and the data extension will not be updated.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder-steps-start
+
+To resolve this error, you must ensure that the name of the folder name within the |destination-name| SFTP site matches the folder name that is configured in Amperity.
+
+#. Verify the folder name within |destination-name|.
+#. Verify the folder name as it is configured for the destination within Amperity. Make any necessary changes.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder-steps-end
+
+
+.. _destination-salesforce-marketing-cloud-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-invalid-credentials-note-start
+
+.. note:: In some situations the user account that is associated with the Amperity workflow will require a new password and security token. When a new password and security token are created in |destination-name|, be sure to update the credentials for this workflow in Amperity.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-invalid-credentials-note-end
+
+
+.. _destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key:
+
+Missing primary key
+--------------------------------------------------
+
+.. destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key-start
+
+The **primary_key** field is typically used to specify the :ref:`subscriber key <destination-salesforce-marketing-cloud-subscriber-key>` that is used with this destination.
+
+There are two options: using the |destination-name| subscriber key or using email addresses. One of these options must be specified before Amperity can send data to |destination-name|.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key-steps-start
+
+To resolve this error, you must configure the primary key.
+
+#. Open the Amperity **Credentials** page in a new tab.
+#. For a query, open the **Queries** page, and then update the query to return the field -- **subscriber_key** or **email** -- that matches the **Primary Key** setting in the data template. Validate, and then activate the query.
+
+   For a campaign, open the **Campaigns** page, and then update the campaign and ensure the primary key is in the list of attributes that are sent to |destination-name|. Activate the campaign.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key-steps-end
+
+
+.. _destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable:
+
+SFTP unavailable
+--------------------------------------------------
+
+.. destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable-start
+
+Amperity must be able to connect to the SFTP site that is used with |destination-name|.
+
+.. note:: An SFTP site may be unavailable even when Amperity is configured correctly. For example, the SFTP site is down or there is not enough free space available within the SFTP site. Amperity cannot send data to an SFTP site that is unavailable.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable-end
+
+.. destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable-steps-start
+
+To resolve this error, you must verify the configuration settings for SFTP.
+
+#. Open the Amperity **Credentials** page in a new tab.
+#. Find the credentials for the SFTP site that is associated with |destination-name|, and then verify the configuration for the hostname, username, and passphrase. Make any necessary changes.
+
+   .. note:: If the SFTP site is unavailable due to external reasons, such as not enough free space or the SFTP site is down, you must resolve those issues before Amperity will be able to send data to that SFTP site.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable-steps-end

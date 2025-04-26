@@ -363,7 +363,247 @@ Add destination
 
 .. destination-google-ads-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+
+.. _source-google-ads-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. source-google-ads-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The Workflow page, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-google-ads-2fa-required.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`source-google-ads-workflow-actions-cannot-update-audience`
+       * :ref:`source-google-ads-workflow-actions-expired-token`
+       * :ref:`source-google-ads-workflow-actions-incomplete-account-setup`
+       * :ref:`source-google-ads-workflow-actions-invalid-credentials`
+       * :ref:`source-google-ads-workflow-actions-missing-required-attributes`
+       * :ref:`source-google-ads-workflow-actions-2fa-required`
+       * :ref:`source-google-ads-workflow-actions-user-cannot-access-audience`
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-google-ads-2fa-required-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. source-google-ads-workflow-actions-end
+
+
+.. _source-google-ads-workflow-actions-cannot-update-audience:
+
+Cannot update audience
+--------------------------------------------------
+
+.. source-google-ads-workflow-actions-cannot-update-audience-start
+
+Amperity uses a refresh token that is generated from your |destination-name| user account to access audiences that are associated with your |destination-name| customer ID. The user for whom the refresh token is created must have permission to update audiences in the |destination-name| account that is associated with the customer ID.
+
+To resolve this error, verify that the user account can update audiences.
+
+#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Verify that the user has permission to update audiences that are associated with the customer ID.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. source-google-ads-workflow-actions-cannot-update-audience-start
+
+
+.. _source-google-ads-workflow-actions-expired-token:
+
+Expired token
+--------------------------------------------------
+
+.. source-google-ads-workflow-actions-expired-token-start
+
+The token used with |destination-name| has expired.
+
+To resolve this error, refresh the token that is used with |destination-name|.
+
+#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Refresh the token that is associated with your |destination-name| account.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. source-google-ads-workflow-actions-expired-token-start
+
+
+.. _source-google-ads-workflow-actions-incomplete-account-setup:
+
+Incomplete account setup
+--------------------------------------------------
+
+.. source-google-ads-workflow-actions-incomplete-account-setup-start
+
+Amperity cannot send data to an account in |destination-name| that is not set up completely. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
+
+To resolve this error, verify that your |destination-name| account is set up correctly.
+
+#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Verify the current state of your account. Complete any steps that are required to set up your |destination-name| account.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. source-google-ads-workflow-actions-incomplete-account-setup-start
+
+
+.. _source-google-ads-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _source-google-ads-workflow-actions-missing-required-attributes:
+
+Missing required field(s)
+--------------------------------------------------
+
+.. destination-google-ads-workflow-actions-missing-required-field-start
+
+One (or more) required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <destination-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
+
+.. destination-google-ads-workflow-actions-missing-required-field-end
+
+**For campaigns**
+
+.. destination-google-ads-workflow-actions-missing-required-field-campaigns-steps-start
+
+To resolve this error, update the list of attributes to include all required fields.
+
+#. Open the **Campaigns** page, and then open the segment used with this workflow.
+#. Verify that :ref:`all required attributes are associated with each treatment group that is being sent to <destination-google-ads-api-matching-contact>` |destination-name|. Update the list of attributes if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-google-ads-workflow-actions-missing-required-field-campaigns-steps-start
+
+**For orchestrations**
+
+.. destination-google-ads-workflow-actions-missing-required-field-orchestrations-steps-start
+
+To resolve this error, update the results of the query to include all required fields.
+
+#. Open the **Queries** page, and then open the query used with this workflow.
+#. Verify that :ref:`all required attributes are included in the query results <destination-google-ads-api-matching-contact>`. Update the query if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-google-ads-workflow-actions-missing-required-field-orchestrations-steps-start
+
+
+.. _source-google-ads-workflow-actions-2fa-required:
+
+Two-factor authentication required
+--------------------------------------------------
+
+.. destination-google-ads-workflow-actions-missing-required-field-start
+
+|destination-name| requires two-factor authentication to be enabled.
+
+To resolve this error, ensure that two-factor authentication is enabled for your |destination-name| account.
+
+#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Verify that two-factor authentication is enabled for your account.
+
+   Click on your username.
+
+   Click on **Manage Account**. Under **Security** enable the option for two-step verification.
+
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-google-ads-workflow-actions-missing-required-field-end
+
+
+.. _source-google-ads-workflow-actions-user-cannot-access-audience:
+
+User cannot access audience
+--------------------------------------------------
+
+.. source-google-ads-workflow-actions-user-cannot-access-audience-start
+
+When the |destination-name| user account that is associated with the Amperity workflow does not have |ext_google_ads_permissions| the linked client account, Amperity will be unable to complete the workflow.
+
+To resolve this error, verify the permissions associated with the user account in |destination-name|.
+
+#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Verify that |destination-name| user account that is associated with the Amperity workflow has |ext_google_ads_permissions| the linked client account.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. source-google-ads-workflow-actions-user-cannot-access-audience-start
+
 
 .. _destination-google-ads-api-matching:
 

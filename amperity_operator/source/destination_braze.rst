@@ -685,4 +685,158 @@ Add destination
 
 .. destination-braze-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+
+.. _destination-braze-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-braze-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-braze-missing-field.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-braze-workflow-actions-invalid-credentials`
+       * :ref:`destination-braze-workflow-actions-missing-required-field`
+       * :ref:`destination-braze-workflow-actions-status-401`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-braze-missing-field-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-braze-workflow-actions-end
+
+
+.. _destination-braze-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-braze-workflow-actions-missing-required-field:
+
+Missing required field
+--------------------------------------------------
+
+.. destination-braze-workflow-actions-missing-required-field-start
+
+A unique identifier must be provided to |destination-name|. There are two options:
+
+#. Recommended. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link|, which is a unique identifier for your customers. This may be the Amperity ID or it may be some other unique identifier.
+#. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link|, which is a unique identifier for existing |destination-name| customers and may be available when |destination-name| is also a data source for your tenant.
+
+.. destination-braze-workflow-actions-missing-required-field-end
+
+**For campaigns**
+
+.. destination-braze-workflow-actions-missing-required-field-campaigns-steps-start
+
+To resolve this error, verify that "external_id" or "braze_id" are included in the list of attributes that are being sent to |destination-name|.
+
+#. Open the **Campaigns** page, and then open the segment used with this workflow.
+#. Verify that "external_id" or "braze_id" is included in the list of attributes for each treatment group that sends audiences to |destination-name|. Update the list of attributes for each treatment group if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-braze-workflow-actions-missing-required-field-campaigns-steps-start
+
+**For orchestrations**
+
+.. destination-braze-workflow-actions-missing-required-field-orchestrations-steps-start
+
+To resolve this error, verify that "external_id" or "braze_id" are included in the query results.
+
+#. Open the **Queries** page, and then open the query used with this workflow.
+#. Verify that "external_id" or "braze_id" is included in the query results. Update the query if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-braze-workflow-actions-missing-required-field-orchestrations-steps-start
+
+
+.. _destination-braze-workflow-actions-status-401:
+
+Status 401 error
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-status-401-start
+   :end-before: .. workflow-actions-generic-status-401-end

@@ -182,8 +182,7 @@ Get details
 
        All personally identifiable information (PII)—email, phone, address, and so on—is sent to |destination-name| as SHA-256 hashed data.
 
-
-
+.. destination-amazon-ads-get-details-table-end
 
 
 .. _destination-amazon-ads-about-amc:
@@ -404,7 +403,130 @@ Add destination
 Workflow actions
 ==================================================
 
-.. TODO: Add the rest of workflow actions when this gets moved into the docs site.
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-amazon-ads-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The Workflow page, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-amazon-ads-group-name.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-amazon-ads-workflow-actions-invalid-advertiser-id`
+       * :ref:`destination-amazon-ads-workflow-actions-invalid-credentials`
+       * :ref:`destination-amazon-ads-workflow-actions-missing-required-field`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-amazon-ads-group-name-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-amazon-ads-workflow-actions-end
+
+
+.. _destination-amazon-ads-workflow-actions-invalid-advertiser-id:
+
+Invalid advertiser account ID
+--------------------------------------------------
+
+.. destination-amazon-ads-workflow-actions-invalid-advertiser-id-start
+
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action will be shown.
+
+.. destination-amazon-ads-workflow-actions-invalid-advertiser-id-end
+
+.. destination-amazon-ads-workflow-actions-invalid-advertiser-id-steps-start
+
+To resolve this error, verify that the advertiser account ID exists in |destination-name|, and then update Amperity for the correct advertiser ID (if necessary).
+
+#. Open the |destination-name| management console and verify your advertiser account ID.
+#. Open the **Destinations** page in Amperity, and then open the destination for |destination-name| that is associated with this workflow.
+#. Update the destination for the correct advertiser account ID.
+#. Return to the workflow action, and then click **Resolve** to retry.
+
+.. destination-amazon-ads-workflow-actions-invalid-advertiser-id-steps-start
+
+
+.. _destination-amazon-ads-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
 
 .. _destination-amazon-ads-workflow-actions-missing-required-field:
 
@@ -416,3 +538,13 @@ Missing required field
 |destination-name| requires the **country** field to be included in query results. This helps |destination-name| identify if user data was collected within a country that is regulated by the |ext_digital_markets_act|, a European Union regulation that seeks to make the digital economy fairer and more equitable for all participants.
 
 .. destination-amazon-ads-workflow-actions-missing-required-field-end
+
+.. destination-amazon-ads-workflow-actions-missing-required-field-steps-start
+
+To resolve this error, verify that **country** is included in the query results.
+
+#. Open the **Queries** page, and then open the query used with this workflow.
+#. Verify that "country" is included in the query results. Update the query if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-amazon-ads-workflow-actions-missing-required-field-steps-start

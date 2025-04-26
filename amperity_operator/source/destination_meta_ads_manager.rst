@@ -360,7 +360,285 @@ Add destination
 
 .. destination-meta-ads-manager-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+
+.. _destination-meta-ads-manager-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-meta-ads-manager-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. image:: ../../images/workflow-actions-meta-ads-manager-missing-extern-id.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-meta-ads-manager-workflow-actions-authorization-error`
+       * :ref:`destination-meta-ads-manager-workflow-actions-cannot-create-ads`
+       * :ref:`destination-meta-ads-manager-workflow-actions-extern-id-missing`
+       * :ref:`destination-meta-ads-manager-workflow-actions-invalid-credentials`
+       * :ref:`destination-meta-ads-manager-workflow-actions-maximum-audiences`
+       * :ref:`destination-meta-ads-manager-workflow-actions-facebook-terms`
+       * :ref:`destination-meta-ads-manager-workflow-actions-business-account`
+       * :ref:`destination-meta-ads-manager-workflow-actions-security-challenge`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: left
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. image:: ../../images/workflow-actions-meta-ads-manager-missing-extern-id-steps.png
+          :width: 300 px
+          :alt: Choose a workflow action from the list of actions.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-meta-ads-manager-workflow-actions-end
+
+
+.. _destination-meta-ads-manager-workflow-actions-authorization-error:
+
+Authorization error
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-oauth-start
+   :end-before: .. term-oauth-end
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-reauthorize-start
+   :end-before: .. destinations-oauth-reauthorize-end
+
+
+.. _destination-meta-ads-manager-workflow-actions-cannot-create-ads:
+
+Cannot create ads
+--------------------------------------------------
+
+.. destination-meta-ads-manager-workflow-actions-cannot-create-ads-start
+
+The advertising account that is used by this workflow must have permission to create ads.
+
+.. destination-meta-ads-manager-workflow-actions-cannot-create-ads-end
+
+.. destination-meta-ads-manager-workflow-actions-cannot-create-ads-steps-start
+
+To resolve this error, update the user permissions in |destination-name| to ensure that the advertising account can create ads.
+
+#. Log into |destination-name| and verify the user permissions for the account.
+#. Update the user permissions to ensure that the **Create and edit ads** permission is assigned to the advertising account used by this workflow.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-cannot-create-ads-steps-start
+
+
+.. _destination-meta-ads-manager-workflow-actions-extern-id-missing:
+
+EXTERN_ID is missing
+--------------------------------------------------
+
+.. destination-meta-ads-manager-workflow-actions-extern-id-missing-start
+
+An **EXTERN_ID** is a unique ID used within |destination-name|, such as a loyalty ID, a customer ID, an external ID, or the Amperity ID.
+
+Amperity will be unable to send orchestrations or campaigns when **EXTERN_ID** is not included within an audience that is sent to |destination-name|.
+
+.. destination-meta-ads-manager-workflow-actions-extern-id-missing-end
+
+**For campaigns**
+
+.. destination-meta-ads-manager-workflow-actions-extern-id-missing-campaigns-steps-start
+
+To resolve this error, verify that **EXTERN_ID** is included in the list of attributes that are being sent to |destination-name|.
+
+#. Open the **Campaigns** page, and then open the segment used with this workflow.
+#. Verify that **EXTERN_ID** is included in the list of attributes for each treatment group that sends audiences to |destination-name|. Update the list of attributes for each treatment group if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-extern-id-missing-campaigns-steps-start
+
+**For orchestrations**
+
+.. destination-meta-ads-manager-workflow-actions-extern-id-missing-orchestrations-steps-start
+
+To resolve this error, verify that **EXTERN_ID** is included in the query results.
+
+#. Open the **Queries** page, and then open the query used with this workflow.
+#. Verify that **EXTERN_ID** is included in the query results. Update the query if required.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-extern-id-missing-orchestrations-steps-start
+
+
+.. _destination-meta-ads-manager-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-meta-ads-manager-workflow-actions-maximum-audiences:
+
+Maximum custom audiences exceeded
+--------------------------------------------------
+
+.. destination-meta-ads-manager-workflow-actions-maximum-audiences-start
+
+|destination-name| supports having up to 500 custom audiences in your account at any given time. Amperity will be unable to create custom audiences when this limit is exceeded.
+
+.. destination-meta-ads-manager-workflow-actions-maximum-audiences-end
+
+.. destination-meta-ads-manager-workflow-actions-maximum-audiences-steps-start
+
+To resolve this error, verify the number of custom-audiences associated with your |destination-name| account.
+
+#. Log into |destination-name| and verify the number of custom audiences that are associated with your |destination-name| account.
+#. Remove custom audiences that are not in active use.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-maximum-audiences-steps-start
+
+
+.. _destination-meta-ads-manager-workflow-actions-facebook-terms:
+
+Must agree to Facebook terms
+--------------------------------------------------
+
+.. destination-meta-ads-manager-workflow-actions-facebook-terms-start
+
+The |ext_facebook_tos| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
+
+When the business user has not agreed to Facebook terms, an error similar to the following is shown:
+
+::
+
+   Permissions error: To create or edit an audience with an uploaded customer list,
+   please agree to the Custom Audience terms at
+   https://business.facebook.com/ads/manage/customaudiences/tos/?act=1234567890123456.
+
+.. destination-meta-ads-manager-workflow-actions-facebook-terms-end
+
+.. destination-meta-ads-manager-workflow-actions-facebook-terms-steps-start
+
+To resolve this error, log into |destination-name| as the business user associated with this workflow and agree to the terms of service.
+
+#. Follow the instructions in the error message, and then open the provided link in a new tab.
+#. Log in as the business user associated with this workflow, and then agree to the Facebook terms of service.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-facebook-terms-steps-start
+
+
+.. _destination-meta-ads-manager-workflow-actions-business-account:
+
+Must belong to business account
+--------------------------------------------------
+
+.. destination-meta-ads-manager-workflow-actions-business-account-start
+
+The advertising account used to enable workflows to be sent to |destination-name| from Amperity requires the advertising account to *also* belong to a business account. When an advertising account does not also belong to a business account, Amperity workflows will be unable to create or edit a custom audience.
+
+.. destination-meta-ads-manager-workflow-actions-business-account-end
+
+.. destination-meta-ads-manager-workflow-actions-business-account-steps-start
+
+To resolve this error, verify that the advertising account also belongs to a business account.
+
+#. Log into |destination-name| and verify the configuration for the advertising account to ensure that it also belongs to a business account.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-business-account-steps-start
+
+
+.. _destination-meta-ads-manager-workflow-actions-security-challenge:
+
+Security challenge
+--------------------------------------------------
+
+.. destination-meta-ads-manager-workflow-actions-security-challenge-start
+
+Sometimes |destination-name| will issue a security challenge to the advertising account and/or business account associated with this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-security-challenge-end
+
+.. destination-meta-ads-manager-workflow-actions-security-challenge-steps-start
+
+To resolve this error, complete the steps that are required to resolve the security challenge.
+
+#. Log into |destination-name| using the link provided in the workflow action, and then follow the instructions to resolve the security challenge.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-meta-ads-manager-workflow-actions-security-challenge-steps-start
 
 
 .. _destination-meta-ads-manager-api-keys:
