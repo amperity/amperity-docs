@@ -58,14 +58,14 @@ The following sections describe at a high level the series of steps that are req
 
        #. :ref:`Request access to EUID <euid-prerequisite-get-access>`.
        #. :ref:`Agree to the EUID participation policy <euid-prerequisite-participate>`.
-       #. :ref:`Get an API key <euid-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID operator for your brand.
+       #. :ref:`Get an API key <euid-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID Operator for your brand.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Image panel 2.
           :align: left
           :class: no-scaled-link
-     - After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID operator for your brand.
+     - After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID Operator for your brand.
 
        #. :ref:`Add your brand's credentials for EUID to Amperity <euid-configure-amperity-add-credentials>`.
        #. :ref:`Enable EUID <euid-configure-amperity-enable-euid>`.
@@ -112,7 +112,7 @@ Before your brand can configure Amperity to generate EUID tokens you must do the
 
 #. :ref:`Get access to EUID <euid-prerequisite-get-access>`.
 #. Agree to :ref:`a EUID participation policy <euid-prerequisite-participate>`, which is a legal requirement for EUID sharing.
-#. :ref:`Get an API key <euid-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID operator for your brand.
+#. :ref:`Get an API key <euid-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID Operator for your brand.
 
 .. euid-prerequisites-end
 
@@ -168,7 +168,7 @@ Configure Amperity
 
 .. euid-configure-amperity-start
 
-After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID operator for your brand.
+After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID Operator for your brand.
 
 #. :ref:`Add your brand's Mapper credentials for EUID to Amperity <euid-configure-amperity-add-credentials>`.
 #. :ref:`Enable EUID <euid-configure-amperity-enable-euid>`.
