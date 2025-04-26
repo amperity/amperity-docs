@@ -239,6 +239,10 @@ The following sections describe the steps you'll follow to set up and configure 
           :alt: Step 9.
           :align: left
           :class: no-scaled-link
-     - When your campaign is ready, click the **Schedule** button in the top right corner of the **Campaigns** page.
+     - .. include:: ../../amperity_reference/source/campaigns.rst
+          :start-after: .. campaigns-test-campaign-start
+          :end-before: .. campaigns-test-campaign-end
+
+       When your campaign is ready, click the **Schedule** button in the top right corner of the **Campaigns** page.
 
 .. campaigns-howitworks-callouts-end
