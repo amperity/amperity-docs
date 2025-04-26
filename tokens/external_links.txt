@@ -106,26 +106,6 @@
    <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool" target="_blank">Load data from Azure Blob Storage</a>
 
 
-.. |ext_azure_synapse_analytics_load_from_amazon_s3| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/azure/data-factory/connector-amazon-simple-storage-service" target="_blank">Load data from Amazon S3</a>
-
-
-.. |ext_azure_synapse_analytics_load_from_azure_blob_storage| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage" target="_blank">load data from Azure Blob Storage</a>
-
-
-.. |ext_azure_synapse_analytics_load_from_cloud_storage| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/azure/data-factory/connector-google-cloud-storage" target="_blank">Load data from Cloud Storage</a>
-
-
-
-
-
-
-
 
 
 .. |ext_braze_api_endpoints| raw:: html
@@ -870,32 +850,6 @@
 .. |ext_google_shopping| raw:: html
 
    <a href="https://support.google.com/google-ads/answer/2454022" target="_blank">Shopping tab on Google.com</a>
-
-
-
-.. |ext_gpgtoolsorg| raw:: html
-
-   <a href="https://gpgtools.org/" target="_blank">https://gpgtools.org/</a>
-
-
-.. |ext_gzip| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Gzip" target="_blank">gzip</a>
-
-
-.. |ext_haversine_formula| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank">Haversine formula</a>
-
-
-.. |ext_heap_connect_for_s3| raw:: html
-
-   <a href="https://help.heap.io/integrations/data-warehouses/s3/" target="_blank">Heap Connect for S3</a>
-
-
-.. |ext_hungarian_notation| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Hungarian_notation" target="_blank">Hungarian notation</a>
 
 
 .. |ext_hubspot_api| raw:: html

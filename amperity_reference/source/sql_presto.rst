@@ -101,7 +101,7 @@ General
 
 * Using reserved keyword names as identifiers.
 * CamelCase, with the exception of the table name. CamelCase is difficult to scan quickly.
-* Descriptive prefixes or |ext_hungarian_notation| such as ``sp_`` or ``tbl``.
+* Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
 * Object-oriented design principles with SQL or database structures.

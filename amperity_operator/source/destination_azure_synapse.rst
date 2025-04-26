@@ -62,9 +62,9 @@ Load data to Azure Synapse Analytics
 
 Load data from your preferred cloud storage location to Azure Synapse Analytics.
 
-* |ext_azure_synapse_analytics_load_from_amazon_s3| to Azure Synapse Analytics.
-* Use Azure Data Factory to |ext_azure_synapse_analytics_load_from_azure_blob_storage| to Azure Synapse Analytics.
-* |ext_azure_synapse_analytics_load_from_cloud_storage| to Azure Synapse Analytics.
+* `Load data from Amazon S3 <https://docs.microsoft.com/en-us/azure/data-factory/connector-amazon-simple-storage-service>`__ |ext_link| to Azure Synapse Analytics.
+* Use Azure Data Factory to `Load data from Azure Blob Storage <https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage>`__ |ext_link| to Azure Synapse Analytics.
+* `Load data from Cloud Storage <https://docs.microsoft.com/en-us/azure/data-factory/connector-google-cloud-storage>`__ |ext_link| to Azure Synapse Analytics.
 
 .. destination-azure-synapse-configure-end
 

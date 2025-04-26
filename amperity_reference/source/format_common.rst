@@ -638,7 +638,7 @@ Encrypt files
 Any tool that is compliant with the OpenPGP standard, as defined by |ext_rfc4880| may be used for PGP encryption. For example:
 
 * GNU Privacy Guard. Available from |ext_gnupgorg|. Instructions for how to use GNU Privacy Guard are from that site.
-* GPG Tools. Available from |ext_gpgtoolsorg|. Instructions for how to use GPG Tools are from that site.
+* GPG Tools. Available from `https://gpgtools.org/ <https://gpgtools.org/>`__ |ext_link|. Instructions for how to use GPG Tools are from that site.
 
 .. format-common-pgp-encryption-end
 

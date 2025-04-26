@@ -67,7 +67,7 @@ Example
 
 .. calculate-nearest-store-example-start
 
-A very simple example of calculating nearest stores starts with a common table expression that uses a |ext_haversine_formula| to calculate latitude and longitude. United States zip codes are joined to a table that contains data about the physical location of stores, after which stores are ranked by distance. The store with the highest rank is the closest store.
+A very simple example of calculating nearest stores starts with a common table expression that uses a `Haversine formula <https://en.wikipedia.org/wiki/Haversine_formula>`__ |ext_link| to calculate latitude and longitude. United States zip codes are joined to a table that contains data about the physical location of stores, after which stores are ranked by distance. The store with the highest rank is the closest store.
 
 .. calculate-nearest-store-example-end
 

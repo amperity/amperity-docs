@@ -3060,7 +3060,7 @@ Gravity is a cloud accounting business management application built on the Micro
 
 .. term-gzip-start
 
-|ext_gzip| is a file format used for file compression and decompression.
+`gzip <https://en.wikipedia.org/wiki/Gzip>`__ |ext_link| is a file format used for file compression and decompression.
 
 .. term-gzip-end
 
