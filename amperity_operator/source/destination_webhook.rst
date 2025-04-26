@@ -90,11 +90,11 @@ Serverless destinations
 
 .. destination-webhook-serverless-start
 
-Amperity provides a |ext_aws_serverless_repository| that encapsulates all of the configuration to build your own custom destination.
+Amperity provides a `AWS Serverless Application Repository <https://serverlessrepo.aws.amazon.com/applications>`__ |ext_link| that encapsulates all of the configuration to build your own custom destination.
 
 This template enables two use cases:
 
-#. A serverless application that is deployed directly to your AWS Lambda instance from the |ext_aws_serverless_repository|. **This is the recommended use case when a serverless application is available for the destination.**
+#. A serverless application that is deployed directly to your AWS Lambda instance from the `AWS Serverless Application Repository <https://serverlessrepo.aws.amazon.com/applications>`__ |ext_link|. **This is the recommended use case when a serverless application is available for the destination.**
 #. A starting point from which you may build a custom Lambda function that is uploaded to your AWS Lambda instance.
 
 Amperity also provides a set of Lambda functions developed using this model that you can use for the following destinations:

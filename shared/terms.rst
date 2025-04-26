@@ -346,7 +346,7 @@ Amazon Marketing Cloud (AMC) is a secure, privacy-safe, and cloud-based clean ro
 
 .. term-amazon-pinpoint-start
 
-|ext_aws_pinpoint| is a flexible and scalable communications service for inbound and outbound marketing. Use Amazon Pinpoint to connect with your customers over a variety of channels, such as email, SMS, push, voice, in-app messaging.
+`Amazon Pinpoint <https://aws.amazon.com/pinpoint/>`__ |ext_link| is a flexible and scalable communications service for inbound and outbound marketing. Use Amazon Pinpoint to connect with your customers over a variety of channels, such as email, SMS, push, voice, in-app messaging.
 
 .. term-amazon-pinpoint-end
 
@@ -382,7 +382,7 @@ Amazon Simple Storage Service (Amazon S3) stores customer data files of any size
 
 .. term-amazon-serverless-repository-start
 
-The |ext_aws_serverless_repository| is a managed repository for pre-built serverless applications. Find an application, configure it, and then deploy it to your Amazon AWS account.
+The `AWS Serverless Application Repository <https://serverlessrepo.aws.amazon.com/applications>`__ |ext_link| is a managed repository for pre-built serverless applications. Find an application, configure it, and then deploy it to your Amazon AWS account.
 
 .. term-amazon-serverless-repository-end
 

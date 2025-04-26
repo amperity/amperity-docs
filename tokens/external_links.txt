@@ -21,11 +21,6 @@
    <a href="https://advertising.amazon.com/solutions/products/amazon-marketing-cloud" target="_blank">Amazon Marketing Cloud (AMC)</a>
 
 
-.. |ext_amazon_marketing_cloud_instance| raw:: html
-
-   <a href="https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works" target="_blank">instance of Amazon Marketing Cloud (AMC)</a>
-
-
 .. |ext_amperity_assistant_privacy_faq| raw:: html
 
    <a href="https://docs.amperity.com/support/ai_assistant.html" target="_blank">AI Assistant Privacy FAQ</a>
@@ -106,101 +101,6 @@
    <a href="https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#cross-account-delivery-s3" target="_blank">cross-account role</a>
 
 
-.. |ext_aws_kinesis_delivery_stream| raw:: html
-
-   <a href="https://docs.aws.amazon.com/firehose/latest/dev/basic-create.html" target="_blank">delivery stream</a>
-
-
-.. |ext_aws_kinesis_delivery_failures| raw:: html
-
-   <a href="https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#retry" target="_blank">data storage time for Kinesis Data Firehose is 24 hours</a>
-
-
-.. |ext_aws_kinesis_delivery_frequency| raw:: html
-
-   <a href="https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#frequency" target="_blank">frequency of delivery</a>
-
-
-.. |ext_aws_kinesis_filename_patterns| raw:: html
-
-   <a href="https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#s3-object-name" target="_blank">filename patterns</a>
-
-
-.. |ext_aws_kinesis_record_separators| raw:: html
-
-   <a href="https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#format" target="_blank">a record separator</a>
-
-
-.. |ext_aws_lambda_policies| raw:: html
-
-   <a href="https://docs.aws.amazon.com/lambda/latest/dg/security-iam.html#security_iam_access-manage" target="_blank">use inline policies</a>
-
-
-.. |ext_aws_pinpoint| raw:: html
-
-   <a href="https://aws.amazon.com/pinpoint/" target="_blank">Amazon Pinpoint</a>
-
-
-.. |ext_aws_quicksight_s3| raw:: html
-
-   <a href="https://docs.aws.amazon.com/quicksight/latest/user/create-a-data-set-s3.html" target="_blank">dataset using Amazon S3 files</a>
-
-
-.. |ext_aws_quicksight_vpc| raw:: html
-
-   <a href="https://docs.aws.amazon.com/quicksight/latest/user/vpc-connection-supported-data-sources.html" target="_blank">VPC data source</a>
-
-
-.. |ext_aws_s3_to_redshift| raw:: html
-
-   <a href="https://docs.aws.amazon.com/redshift/latest/dg/t_Loading-data-from-S3.html" target="_blank">Load data from Amazon S3</a>
-
-
-.. |ext_aws_s3putobjectacl| raw:: html
-
-   <a href="https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3" target="_blank">s3:PutObjectAcl</a>
-
-
-.. |ext_aws_serverless_repository| raw:: html
-
-   <a href="https://serverlessrepo.aws.amazon.com/applications" target="_blank">AWS Serverless Application Repository</a>
-
-
-.. |ext_aws_lambda_serverless_repository_aws_connect| raw:: html
-
-  <a href="https://serverlessrepo.aws.amazon.com/applications/us-east-1/884752987182/amperity-aws-connect-runner" target="_blank">amperity-aws-connect-runner</a>
-
-
-.. |ext_aws_lambda_serverless_repository_pinpoint| raw:: html
-
-  <a href="https://serverlessrepo.aws.amazon.com/applications/us-east-1/884752987182/amperity-amazon-pinpoint-runner" target="_blank">amperity-amazon-pinpoint-runner</a>
-
-
-.. |ext_aws_lambda_serverless_repository_redshift| raw:: html
-
-  <a href="https://serverlessrepo.aws.amazon.com/applications/us-east-1/884752987182/amperity-amazon-redshift-runner" target="_blank">amperity-amazon-redshift-runner</a>
-
-
-.. |ext_azure_config_connection_string| raw:: html
-
-   <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account" target="_blank">connection string</a>
-
-
-.. |ext_azure_config_sas_token| raw:: html
-
-   <a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli" target="_blank">shared access signature (SAS)</a>
-
-
-.. |ext_azure_storage_explorer| raw:: html
-
-   <a href="https://azure.microsoft.com/en-in/products/storage/storage-explorer/" target="_blank">Azure Storage Explorer</a>
-
-
-.. |ext_azure_storage_uri| raw:: html
-
-   <a href="https://learn.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata" target="_blank">storage URI</a>
-
-
 .. |ext_azure_synapse_analytics_load_table_from_blob_storage| raw:: html
 
    <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool" target="_blank">Load data from Azure Blob Storage</a>
@@ -221,34 +121,11 @@
    <a href="https://docs.microsoft.com/en-us/azure/data-factory/connector-google-cloud-storage" target="_blank">Load data from Cloud Storage</a>
 
 
-.. |baby_names| raw:: html
-
-   <a href="https://www.ssa.gov/oact/babynames/limits.html" target="_blank">popularity and frequency of baby names</a>
 
 
-.. |ext_bazaarvoice_column_definitions| raw:: html
-
-   <a href="https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Collect/catalog_home.html#upload" target="_blank">column definitions</a>
 
 
-.. |ext_bazaarvoice_file_formats| raw:: html
 
-   <a href="https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Collect/catalog_home.html#upload" target="_blank">file formats</a>
-
-
-.. |ext_bazaarvoice_product_catalog| raw:: html
-
-   <a href="https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Collect/catalog_home.html#upload" target="_blank">product catalog</a>
-
-
-.. |ext_bing_ads_api| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/advertising/guides/?view=bingads-13" target="_blank">Bing Ads API</a>
-
-
-.. |ext_bluecore_data_types| raw:: html
-
-   <a href="https://help.bluecore.com/en/articles/3552438-supported-data-types-for-importing" target="_blank">data type requirements for the Bluecore platform</a>
 
 
 .. |ext_braze_api_endpoints| raw:: html

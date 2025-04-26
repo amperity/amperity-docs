@@ -387,7 +387,7 @@ Use the gender name ratios data asset to use :doc:`gender prediction <predict_ge
 
 The **gender_name_ratios.csv** file contains a list of baby names from the past ~130 years, along with their associated gender.
 
-The source of the data in the **gender_name_ratios.csv** file is from United States Social Security Administration records for |baby_names|. These records were used to generate the **gender_name_ratios.csv** file, which is similar to:
+The source of the data in the **gender_name_ratios.csv** file is from United States Social Security Administration records for `popularity and frequency of baby names <https://www.ssa.gov/oact/babynames/limits.html>`__ |ext_link|. These records were used to generate the **gender_name_ratios.csv** file, which is similar to:
 
 .. code-block:: text
 

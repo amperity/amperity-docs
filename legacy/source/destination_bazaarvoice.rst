@@ -100,7 +100,7 @@ File preferences
 
 .. destination-bazaarvoice-file-preferences-start
 
-Sending data to Bazaarvoice is should follow recommendations for the |ext_bazaarvoice_product_catalog|.
+Sending data to Bazaarvoice is should follow recommendations for the `product catalog <https://docs.bazaarvoice.com/articles/vibe/upload-a-product-catalog-file>`__ |ext_link|.
 
 .. destination-bazaarvoice-file-preferences-end
 
@@ -112,7 +112,7 @@ File formats
 
 .. destination-bazaarvoice-file-format-start
 
-Bazaarvoice supports the following |ext_bazaarvoice_file_formats|:
+Bazaarvoice supports the following `file formats <https://docs.bazaarvoice.com/articles/ratings-reviews-legacy-prr/product_feeds>`__ |ext_link|:
 
 * CSV
 * PSV

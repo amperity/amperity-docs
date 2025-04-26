@@ -125,9 +125,9 @@ You may configure any supported data producer to use |source-name| services to a
 
 #. Create a |ext_aws_cross_account_role| IAM role in the customer's Amazon AWS account.
 
-   This role is required to grant |source-name| access to the Amazon S3 bucket that is part of the Amperity tenant. This role must have |ext_aws_s3putobjectacl| configured as part of the list of allowed |source-name| actions.
+   This role is required to grant |source-name| access to the Amazon S3 bucket that is part of the Amperity tenant. This role must have `s3:PutObjectAcl <https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3>`__ |ext_link| configured as part of the list of allowed |source-name| actions.
 #. Configure the |ext_aws_bucket_policy| in the Amperity S3 bucket to allow the IAM role access to the Amperity S3 bucket.
-#. Create a |source-name| |ext_aws_kinesis_delivery_stream| in the customer's cloud infrastructure that uses this IAM role.
+#. Create a |source-name| `delivery stream <https://docs.aws.amazon.com/firehose/latest/dev/basic-create.html>`__ |ext_link| in the customer's cloud infrastructure that uses this IAM role.
 #. Configure the delivery stream to send data to the Amperity S3 bucket.
 #. Configure applications to send data to the delivery stream.
 #. Amperity requires data to be encrypted. This may be done with a policy on the Amperity S3 bucket that is configured by Amperity.
@@ -142,7 +142,7 @@ Record separators
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-record-separators-start
 
-Data records are delivered to Amazon S3 as an Amazon S3 object. If you need to ensure that individual records are available to Amperity in |source-name|, you will need to configure the delivery stream to add |ext_aws_kinesis_record_separators| at the end of each data record.
+Data records are delivered to Amazon S3 as an Amazon S3 object. If you need to ensure that individual records are available to Amperity in |source-name|, you will need to configure the delivery stream to add `a record separator <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#format>`__ |ext_link| at the end of each data record.
 
 When using the |source-name| connector, which only accepts NDJSON files, you will need to ensure that each data record is followed by a newline character.
 
@@ -156,7 +156,7 @@ Filename patterns
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-filename-patterns-start
 
-Recommended |ext_aws_kinesis_filename_patterns| include:
+Recommended `filename patterns <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#s3-object-name>`__ |ext_link| include:
 
 * Using the YYYY/MM/DD/HH format when writing objects to |source-name|. This prefix will create a logical hierarchy in the bucket by year, then month, then date, and finally hour.
 * Using the default |source-name| object naming pattern that increments (by an increase of 1) a random string at the end of the object's filename.
@@ -171,7 +171,7 @@ Delivery frequency
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-delivery-frequency-start
 
-The |source-name| buffer size and interval will determine the |ext_aws_kinesis_delivery_frequency|. Incoming records will be concatenated based on the frequency of the delivery stream. 
+The |source-name| buffer size and interval will determine the `frequency of delivery <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#frequency>`__ |ext_link|. Incoming records will be concatenated based on the frequency of the delivery stream. 
 
 .. warning:: If data fails to deliver to |source-name|, |source-name| will retry for up to 24 hours. If data fails to deliver within 24 hours, the data will be lost, unless it is successfully delivered to a backup location. (You can re-send data if it's backed up.)
 
@@ -185,7 +185,7 @@ Delivery failures
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-delivery-failures-start
 
-|source-name| will retry for up to 24 hours. The maximum |ext_aws_kinesis_delivery_failures|. Data will be lost if delivery does not succeed within 24 hours. Consider using a secondary |source-name| bucket as a backup for data that cannot be lost.
+|source-name| will retry for up to 24 hours. The maximum `data storage time for Kinesis Data Firehose is 24 hours <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#retry>`__ |ext_link|. Data will be lost if delivery does not succeed within 24 hours. Consider using a secondary |source-name| bucket as a backup for data that cannot be lost.
 
 .. note:: Delivery retries may introduce duplicates.
 

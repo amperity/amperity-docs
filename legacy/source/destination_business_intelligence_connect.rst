@@ -577,7 +577,7 @@ Amazon QuickSight
 
 .. destination-bic-connect-to-amazon-quicksight-start
 
-Configure Amazon QuickSight to connect to the |bic| data warehouse as a |ext_aws_quicksight_vpc|.
+Configure Amazon QuickSight to connect to the |bic| data warehouse as a `VPC data source <https://docs.aws.amazon.com/quicksight/latest/user/vpc-connection-supported-data-sources.html>`__ |ext_link|.
 
 .. destination-bic-connect-to-amazon-quicksight-end
 

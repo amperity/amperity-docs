@@ -81,7 +81,7 @@ Get details
      - Configuration details for |destination-name|.
 
        #. An |destination-name| demand-side platform (DSP) advertiser.
-       #. Optional. Your brand's |ext_amazon_marketing_cloud_instance|.
+       #. Optional. Your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link|.
 
           .. important:: If an instance for Amazon Marketing Cloud **is not** configured, the connector will skip adding audience members to Amazon Marketing Cloud.
 
@@ -175,7 +175,7 @@ Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign 
 
 Audience analysis takes place within Amazon Marketing Cloud, including across dimensions like audiences, device, time, or campaigns. Results are aggregated and may be exported as anonymous reports.
 
-Amperity can send data to your brand's |ext_amazon_marketing_cloud_instance| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination will send data.
+Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination will send data.
 
 .. destination-amazon-ads-about-amc-end
 

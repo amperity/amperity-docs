@@ -86,7 +86,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - |ext_aws_s3_to_redshift| to Amazon Redshift.
+     - `Load data from Amazon S3 <https://docs.aws.amazon.com/redshift/latest/dg/t_Loading-data-from-S3.html>`__ |ext_link| to Amazon Redshift.
 
 
    * - .. image:: ../../images/steps-04.png

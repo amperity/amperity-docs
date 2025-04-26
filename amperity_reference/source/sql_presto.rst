@@ -182,7 +182,7 @@ Formalisms
 
 .. sql-presto-style-guide-indentation-formalisms-start
 
-Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple OR clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
+Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
 
 .. code-block:: sql
 
@@ -1319,7 +1319,7 @@ INTERSECT clause
 
 .. sql-presto-intersect-start
 
-Use the **INTERSECT** clause to return only the rows that are in the result sets of both the first and the second queries. 
+Use the **INTERSECT** clause to return only the rows that are in the result sets of both the first and the second queries.
 
 For example, to find all rows in both tables A and B:
 

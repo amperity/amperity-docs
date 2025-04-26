@@ -98,7 +98,7 @@ Amazon QuickSight
 .. sendto-analytics-bi-tool-amazon-quicksight-start
 
 #. Send CSV or TSV files from Amperity to :doc:`Amazon S3 <destination_amazon_s3>`.
-#. Configure Amazon AWS to create a |ext_aws_quicksight_s3|.
+#. Configure Amazon AWS to create a `dataset using Amazon S3 files <https://docs.aws.amazon.com/quicksight/latest/user/create-a-data-set-s3.html>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-amazon-quicksight-end
 

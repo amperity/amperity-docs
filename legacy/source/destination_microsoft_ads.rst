@@ -45,7 +45,7 @@ Use the |ext_microsoft_ads_api_customer_list| to push customer data to the |dest
 
 .. destination-microsoft-ads-api-note-start
 
-.. note:: This destination uses the |ext_bing_ads_api|.
+.. note:: This destination uses the `Bing Ads API <https://docs.microsoft.com/en-us/advertising/guides/?view=bingads-13>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start

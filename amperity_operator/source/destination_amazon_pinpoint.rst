@@ -147,7 +147,7 @@ Serverless application
 
 .. term-amazon-serverless-repository-start
 
-The |ext_aws_serverless_repository| is a managed repository for pre-built serverless applications. Find an application, configure it, and then deploy it to your Amazon AWS account.
+The `AWS Serverless Application Repository <https://serverlessrepo.aws.amazon.com/applications>`__ |ext_link| is a managed repository for pre-built serverless applications. Find an application, configure it, and then deploy it to your Amazon AWS account.
 
 .. term-amazon-serverless-repository-end
 
@@ -162,8 +162,8 @@ Amperity manages a pre-built serverless application for Amazon Pinpoint. Use thi
 .. destination-amazon-pinpoint-configure-serverless-steps-start
 
 #. Log in to your Amazon AWS account.
-#. Open the |ext_aws_serverless_repository|.
-#. Search for the |ext_aws_lambda_serverless_repository_pinpoint|, and then open it. On the "amperity-amazon-pinpoint-runner" page, click **Deploy** to deploy the application to your Amazon AWS account.
+#. Open the `AWS Serverless Application Repository <https://serverlessrepo.aws.amazon.com/applications>`__ |ext_link|.
+#. Search for the `amperity-amazon-pinpoint-runner <https://serverlessrepo.aws.amazon.com/applications/us-east-1/884752987182/amperity-amazon-pinpoint-runner>`__ |ext_link|, and then open it. On the "amperity-amazon-pinpoint-runner" page, click **Deploy** to deploy the application to your Amazon AWS account.
 #. Open the AWS Lambda console, and then open the "amperity-amazon-pinpoint-runner" Lambda function, and then click **Configure**.
 #. On the **Configuration** page, click **Environment variables**, and then click **Edit**.
 #. Add the following values for each key-pair:
@@ -387,7 +387,7 @@ Define inline policy
 
 .. destination-amazon-pinpoint-manual-define-policy-start
 
-You can |ext_aws_lambda_policies| to manage access to the Lambda function in AWS Lambda.
+You can `use inline policies <https://docs.aws.amazon.com/lambda/latest/dg/security-iam.html#security_iam_access-manage>`__ |ext_link| to manage access to the Lambda function in AWS Lambda.
 
 **To define an inline policy**
 

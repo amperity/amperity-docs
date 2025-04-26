@@ -79,7 +79,9 @@ Map to Bluecore platform
 
 .. sendto-bluecore-build-query-map-to-platform-start
 
-Review the |ext_bluecore_data_types| to verify all of the requirements for sending query results to Bluecore. The following sections show an example of sending data to Bluecore using the purchases data type.
+Review the .. |ext_bluecore_data_types| raw:: html
+
+`data type requirements for the Bluecore platform <https://help.bluecore.com/en/articles/9621372-data-types-overview>`__ |ext_link| to verify all of the requirements for sending query results to Bluecore. The following sections show an example of sending data to Bluecore using the purchases data type.
 
 .. sendto-bluecore-build-query-map-to-platform-end
 
