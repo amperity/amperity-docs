@@ -306,7 +306,7 @@ Individual split
 Add a node
 --------------------------------------------------
 
-.. .. journeys-node-add-start
+.. journeys-node-add-start
 
 .. list-table::
    :widths: 25 75
