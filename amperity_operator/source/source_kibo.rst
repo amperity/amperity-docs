@@ -1,8 +1,8 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |source-name| replace:: Monetate
-.. |plugin-name| replace:: Monetate
+.. |source-name| replace:: Kibo
+.. |plugin-name| replace:: Kibo
 .. |feed-name| replace:: Customers
 .. |example-filename| replace:: filename_YYYY-MM-DD.csv
 .. |domain-table-name| replace:: |source-name|:|feed-name|
@@ -14,23 +14,25 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to pull data from Monetate.
+        Configure Amperity to pull data from Kibo.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to pull data from Monetate.
+        Configure Amperity to pull data from Kibo.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Pull from Monetate
+        Pull from Kibo
 
 ==================================================
-Pull from Monetate
+Pull from Kibo
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-monetate-start
-   :end-before: .. term-monetate-end
+   :start-after: .. term-kibo-start
+   :end-before: .. term-kibo-end
+
+.. note:: Kibo was previously known as Monetate.
 
 .. include:: ../../amperity_operator/source/source_sftp.rst
    :start-after: .. source-sftp-common-start

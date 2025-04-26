@@ -361,12 +361,12 @@ Automate workflows
    source_heap
    source_hubspot
    source_infutor
+   source_kibo
    source_klaviyo
    source_koupon_media
    source_kustomer
    source_listrak
    source_microsoft_dataverse
-   source_monetate
    source_neustar
    source_optimizely
    source_oracle_data_cloud
