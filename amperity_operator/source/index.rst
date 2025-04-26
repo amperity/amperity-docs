@@ -193,7 +193,6 @@ Automate workflows
 .. toctree::
    :hidden:
 
-   activation_ids
    add_campaigns
    add_customer_data
    add_email_engagement
