@@ -728,6 +728,7 @@ This section describes tasks related to building campaigns in Amperity:
 * :ref:`campaigns-send-metadata`
 * :ref:`campaigns-set-launch-date`
 * :ref:`campaigns-set-delivery-schedule`
+* :ref:`campaigns-test-campaign`
 * :ref:`campaigns-view-campaign`
 * :ref:`campaigns-view-campaign-history`
 * :ref:`campaigns-view-delivery-summary`
@@ -1076,6 +1077,28 @@ You can build an audience in a campaign on the **Edit Campaign** page.
 The recipients group and control group appear in the **All Recipients** table in the **Sub-audiences and Destinations** section.
 
 .. campaigns-build-audience-steps-end
+
+
+.. _campaigns-choose-activation-id:
+
+Choose activation ID
+--------------------------------------------------
+
+.. campaigns-choose-activation-id-start
+
+The activation ID that is used within a campaign is determined by the activation ID that is present in the segment that defines the starting audience for the campaign.
+
+Additional segments that are used for inclusions and exclusions must have a matching activation ID.
+
+Campaign audience counts are updated to reflect the count for records that match the activation ID.
+
+The language that is used within the **Campaign Editor** is updated to match the friendly, singular, and plural names of the activation ID.
+
+For example, the "Customers" column that is associated with audiences (and sub-audiences) is updated to "Email addresses" when the plural name is "email addresses" and the count of customers at the top of the **Campaign Editor** is updated to show "Total email addresses".
+
+Attributes that are useable within campaigns are limited to only attributes that are available from tables that match the activation ID.
+
+.. campaigns-choose-activation-id-end
 
 
 .. _campaigns-choose-campaign-type:
@@ -1821,6 +1844,26 @@ You can set a delivery schedule on the **Edit Campaign** page.
 #. From the **Edit Campaign** page, in the **Recipient List Delivery** section, either select **Schedule delivery** *or* **Deliver ASAP** from the menu.
 
 .. campaigns-set-delivery-schedule-steps-end
+
+
+.. _campaigns-test-campaign:
+
+Test a campaign
+--------------------------------------------------
+
+.. campaigns-test-campaign-start
+
+Click the **Campaign test** link in the top of the **Campaign Editor** to open the **Campaign tests** dialog box. Configure the number of records to use with the test, and then click **Run test**.
+
+This runs the campaign exactly the same as if it were run in a production workflow. A sample file is output that shows what the results of this campaign will look like downstream.
+
+.. campaigns-test-campaign-end
+
+.. campaigns-test-campaign-view-history-start
+
+A history of campaign tests is also available.
+
+.. campaigns-test-campaign-view-history-end
 
 
 .. _campaigns-unschedule-campaign:
