@@ -7,6 +7,7 @@
 .. |credential-type| replace:: "zendesk"
 .. |required-credentials| replace:: "email address" and "API token"
 .. |audience-primary-key| replace:: "email"
+.. |credential-details| replace:: the Zendesk User API token and the email address of the administrator who created the token
 .. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "zen"
