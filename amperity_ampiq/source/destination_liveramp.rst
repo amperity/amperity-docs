@@ -67,7 +67,7 @@ Add to a campaign
    :start-after: .. sendto-liveramp-start
    :end-before: .. sendto-liveramp-end
 
-.. important:: |ext_liveramp_no_pii| -- government-issued identification numbers (like social security numbers), financial and customer account numbers, birthdates, gender, email addresses, names (first, last, and full), and similar data -- should be excluded from campaigns that are sent to |destination-name|.
+.. important:: `LiveRamp terms of service restrict PII data <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link| -- government-issued identification numbers (like social security numbers), financial and customer account numbers, birthdates, gender, email addresses, names (first, last, and full), and similar data -- should be excluded from campaigns that are sent to |destination-name|.
 
 .. include:: ../../shared/channels.rst
    :start-after: .. channels-build-campaign-important-filedrop-start

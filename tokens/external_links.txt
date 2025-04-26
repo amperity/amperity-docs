@@ -927,77 +927,6 @@
    <a href="https://developer.kustomer.com/kustomer-api-docs/reference/authentication" target="_blank">Kustomer API key</a>
 
 
-.. |ext_liveramp_data_identifiers| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#identifier-data" target="_blank">identifiers</a>
-
-
-.. |ext_liveramp_data_segments| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/segment-data.html" target="_blank">segments</a>
-
-
-.. |ext_liveramp_file_formats| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/formatting-file-data.html" target="_blank">file formats</a>
-
-
-.. |ext_liveramp_file_limitations| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html" target="_blank">file limitations</a>
-
-
-.. |ext_liveramp_upload_data| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/uploading-data.html" target="_blank">uploading data</a>
-
-
-.. |ext_liveramp_gpg| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html" target="_blank">GPG encryption</a>
-
-
-.. |ext_liveramp_hash_fields| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/hashing-identifiers.html" target="_blank">Hash fields that must be sent to LiveRamp</a>
-
-
-.. |ext_liveramp_no_pii| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html" target="_blank">LiveRamp terms of service restrict PII data</a>
-
-
-.. |ext_liveramp_usa| raw:: html
-
-   <a href="https://docs.liveramp.com/connect/en/formatting-column-based-files.html#headers-to-use-for-u-s--pii-data-files" target="_blank">output results that map to an audience in LiveRamp</a>
-
-
-
-.. |ext_microsoft_ads_get_ids| raw:: html
-
-   <a href="https://learn.microsoft.com/en-us/advertising/guides/get-started" target="_blank">account and customer IDs</a>
-
-
-.. |ext_microsoft_ads_api_customer_list| raw:: html
-
-   <a href="https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list" target="_blank">Customer List Record - Bulk API</a>
-
-
-.. |ext_microsoft_ads_customer_match_terms| raw:: html
-
-   <a href="https://advertiseonbing-blob.azureedge.net/blob/bingads/media/page/o/doc/microsoft-advertising_customer-match_terms-of-use_november-2022.pdf" target="_blank">Customer Match Terms of Use</a>
-
-
-.. |ext_microsoft_ads_two_step_verification| raw:: html
-
-   <a href="https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4" target="_blank">two-step verification</a>
-
-
-.. |ext_microsoft_audience_network| raw:: html
-
-   <a href="https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network" target="_blank">Microsoft Audience Network</a>
-
-
 .. |ext_microsoft_dynamics_web_api| raw:: html
 
    <a href="https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/developers-guide/mt607689%28v%3dcrm.8%29" target="_blank">Microsoft Dynamics Web API</a>
@@ -1031,43 +960,6 @@
 .. |ext_microsoft_power_bi_service_to_snowflake| raw:: html
 
    <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/service-connect-snowflake" target="_blank">Power BI Service</a>
-
-
-.. |ext_microsoft_power_platform_console| raw:: html
-
-   <a href="https://admin.powerplatform.microsoft.com/" target="_blank">Microsoft Power Platform console</a>
-
-
-
-.. |ext_optimizely_customer_profiles| raw:: html
-
-   <a href="https://docs.developers.optimizely.com/web/docs/customer-profiles" target="_blank">customer profiles</a>
-
-
-.. |ext_optimizely_data_service_import| raw:: html
-
-   <a href="https://docs.developers.optimizely.com/optimizely-data-platform/docs/import-data-using-amazon-s3" target="_blank">import data using Amazon S3</a>
-
-
-
-.. |ext_optimizely_data_service| raw:: html
-
-   <a href="https://docs.developers.optimizely.com/web/docs/access-optimizely-export-data-via-amazon-s3" target="_blank">Optimizely data service</a>
-
-
-.. |ext_optimizely_enriched_events_export| raw:: html
-
-   <a href="https://docs.developers.optimizely.com/web/docs/enriched-events-export" target="_blank">enriched exports events</a>
-
-
-.. |ext_optimizely_list_attributes| raw:: html
-
-   <a href="https://docs.developers.optimizely.com/web/docs/list-attributes" target="_blank">list attributes</a>
-
-
-.. |ext_optimizely_no_pii| raw:: html
-
-   <a href="https://help.optimizely.com/Account_Settings/PII%3A_Personally_identifiable_information_in_Optimizely" target="_blank">Optimizely terms of service prohibit PII data</a>
 
 
 .. |ext_oracle_analytics_desktop_snowflake| raw:: html

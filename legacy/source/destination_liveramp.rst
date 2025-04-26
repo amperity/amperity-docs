@@ -30,12 +30,12 @@ Send data to LiveRamp
 
 .. destination-liveramp-start
 
-You can associate records in Amperity to an audience in LiveRamp by sending a combination of identifier data and query data. LiveRamp uses:
+You can associate records in Amperity to an audience in |destination-name| by sending a combination of identifier data and query data. |destination-name| uses:
 
-* Identifier data to match records to other |ext_liveramp_data_identifiers| in the LiveRamp Identity Graph.
-* Segment data to group records into |ext_liveramp_data_segments| based on certain attributes for downstream targeting, measurement, and personalization. 
+* Identifier data to match records to other `identifiers <https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#identifier-data>`__ |ext_link| in the |destination-name| Identity Graph.
+* Segment data to group records into `segments <https://docs.liveramp.com/connect/en/segment-data.html>`__ |ext_link| based on certain attributes for downstream targeting, measurement, and personalization. 
 
-LiveRamp requires an audience ID. This may be a client customer ID from another application, it may be the LiveRamp audience ID itself (from LiveRamp data that was imported to Amperity), or it may be the Amperity ID.
+|destination-name| requires an audience ID. This may be a client customer ID from another application, it may be the |destination-name| audience ID itself (from |destination-name| data that was imported to Amperity), or it may be the Amperity ID.
 
 .. destination-liveramp-end
 
@@ -86,7 +86,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The |destination-name| public key to use for |ext_liveramp_gpg|.
+     - The |destination-name| public key to use for `GPG encryption <https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html>`__ |ext_link|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -105,7 +105,7 @@ File preferences
 
 .. destination-liveramp-file-preferences-start
 
-Sending data to LiveRamp should follow recommendations for |ext_liveramp_upload_data|.
+Sending data to |destination-name| should follow recommendations for `uploading data <https://docs.liveramp.com/connect/en/uploading-data.html>`__ |ext_link|.
 
 .. destination-liveramp-file-preferences-end
 
@@ -117,7 +117,7 @@ File limitations
 
 .. destination-liveramp-file-limitations-start
 
-Review LiveRamp |ext_liveramp_file_limitations|.
+Review |destination-name| `file limitations <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|.
 
 .. destination-liveramp-file-limitations-end
 
@@ -129,7 +129,7 @@ File formats
 
 .. destination-liveramp-file-format-start
 
-LiveRamp supports the following |ext_liveramp_file_formats|:
+|destination-name| supports the following `file formats <https://docs.liveramp.com/connect/en/formatting-file-data.html>`__ |ext_link|:
 
 * CSV
 * PSV
@@ -147,7 +147,7 @@ GPG encryption
 
 .. destination-liveramp-file-encryption-start
 
-LiveRamp prefers |ext_liveramp_gpg| and GZip compression.
+|destination-name| prefers `GPG encryption <https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html>`__ |ext_link| and GZip compression.
 
 .. destination-liveramp-file-encryption-end
 

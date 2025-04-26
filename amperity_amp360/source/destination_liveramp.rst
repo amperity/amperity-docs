@@ -33,8 +33,8 @@ Send query results to LiveRamp
 
 You can associate records in Amperity to an audience in |destination-name| by sending a combination of identifier data and query data. |destination-name| uses:
 
-* Identifier data to match records to other |ext_liveramp_data_identifiers| in the |destination-name| Identity Graph.
-* Segment data to group records into |ext_liveramp_data_segments| based on certain attributes for downstream targeting, measurement, and personalization. 
+* Identifier data to match records to other `identifiers <https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#identifier-data>`__ |ext_link| in the |destination-name| Identity Graph.
+* Segment data to group records into `segments <https://docs.liveramp.com/connect/en/segment-data.html>`__ |ext_link| based on certain attributes for downstream targeting, measurement, and personalization. 
 
 |destination-name| requires an audience ID. This may be a client customer ID from another application, it may be the |destination-name| audience ID itself (from |destination-name| data that was imported to Amperity), or it may be the Amperity ID.
 
@@ -100,11 +100,11 @@ LiveRamp and PII data
 
 .. sendto-liveramp-build-query-pii-start
 
-|ext_liveramp_no_pii| -- government-issued identification numbers (like social security numbers), financial and customer account numbers, birthdates, gender, email addresses, names (first, last, and full), and similar data -- should be excluded from query data that is sent to |destination-name|.
+`LiveRamp terms of service restrict PII data <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link| -- government-issued identification numbers (like social security numbers), financial and customer account numbers, birthdates, gender, email addresses, names (first, last, and full), and similar data -- should be excluded from query data that is sent to |destination-name|.
 
 Because the data sent to |destination-name| contains the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
 
-|ext_liveramp_hash_fields| by using :ref:`one-way SHA-256 hashing <sendto-liveramp-build-query-sha-256>` or by :ref:`casting the value to a random unique identifier (UUID) <sendto-liveramp-build-query-cast-as-uuid>`.
+`Hash fields that must be sent to LiveRamp <https://docs.liveramp.com/connect/en/hashing-identifiers.html>`__ |ext_link| by using :ref:`one-way SHA-256 hashing <sendto-liveramp-build-query-sha-256>` or by :ref:`casting the value to a random unique identifier (UUID) <sendto-liveramp-build-query-cast-as-uuid>`.
 
 .. sendto-liveramp-build-query-pii-end
 
@@ -160,7 +160,7 @@ Map to audience
 
 .. sendto-liveramp-build-query-map-to-audience-start
 
-A SQL query can |ext_liveramp_usa|. Add a SQL query with a **SELECT** statement similar to:
+A SQL query can `output results that map to an audience in LiveRamp <https://docs.liveramp.com/connect/en/formatting-column-based-files.html#headers-to-use-for-u-s--pii-data-files>`__ |ext_link|. Add a SQL query with a **SELECT** statement similar to:
 
 .. code-block:: sql
 
@@ -195,7 +195,7 @@ Add orchestration
 
 .. sendto-liveramp-add-orchestration-important-start
 
-.. important:: Sending data to |destination-name| should follow recommendations for |ext_liveramp_upload_data|. Review |destination-name| |ext_liveramp_file_limitations|. |destination-name| prefers |ext_liveramp_gpg| and GZip compression. |destination-name| supports the following |ext_liveramp_file_formats|:
+.. important:: Sending data to |destination-name| should follow recommendations for `uploading data <https://docs.liveramp.com/connect/en/uploading-data.html>`__ |ext_link|. Review |destination-name| `file limitations <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|. |destination-name| prefers `GPG encryption <https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html>`__ |ext_link| and GZip compression. |destination-name| supports the following `file formats <https://docs.liveramp.com/connect/en/formatting-file-data.html>`__ |ext_link|:
 
    * CSV
    * PSV

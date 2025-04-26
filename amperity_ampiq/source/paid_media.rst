@@ -482,7 +482,7 @@ Amperity provides direct connections to the most popular destinations across the
           :class: no-scaled-link
      - Microsoft Advertising is a pay-per-click advertising platform that displays ads based on keywords in a user’s search query. Build audiences in Amperity, and then send them to |channel_microsoft_ads| to open up paid media advertising options across the Microsoft Advertising network.
 
-       This network includes Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk), |ext_microsoft_audience_network|, Microsoft News, Microsoft Edge, along with access to external partners, such as Yahoo.com.
+       This network includes Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk), `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|, Microsoft News, Microsoft Edge, along with access to external partners, such as Yahoo.com.
 
 
 .. _neustar:

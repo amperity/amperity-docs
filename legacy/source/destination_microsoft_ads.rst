@@ -31,10 +31,10 @@ Send data to Microsoft Advertising
 
 .. destination-microsoft-ads-about-start
 
-Use the |ext_microsoft_ads_api_customer_list| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
+Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
 
 * Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk)
-* |ext_microsoft_audience_network|
+* `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|
 * Microsoft News
 * Microsoft Edge
 * Outlook.com
@@ -595,11 +595,11 @@ Must accept terms and conditions
 
 .. destination-microsoft-ads-workflow-actions-must-accept-terms-start
 
-You must accept the |ext_microsoft_ads_customer_match_terms| before you can use the |ext_microsoft_ads_api_customer_list|. You must select the **I accept** option from within the |destination-name| web application.
+You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
 
-To resolve this error, you must agree to the |ext_microsoft_ads_customer_match_terms|.
+To resolve this error, you must agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
 
-#. Log in to the |destination-name| web application, and then agree to the |ext_microsoft_ads_customer_match_terms|.
+#. Log in to the |destination-name| web application, and then agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-microsoft-ads-workflow-actions-must-accept-terms-end
@@ -612,12 +612,12 @@ Not authorized
 
 .. destination-microsoft-ads-workflow-actions-not-authorized-start
 
-Amperity must have access to the correct combination of |ext_microsoft_ads_get_ids| in |destination-name|. 
+Amperity must have access to the correct combination of `account and customer IDs <https://learn.microsoft.com/en-us/advertising/guides/get-started>`__ |ext_link| in |destination-name|. 
 
 To resolve this error, verify the account and customer IDs in |destination-name|, and then update the destination associated with this workflow for the correct values.
 
 #. Open the **Destinations** page, and then open the destination that is used with this workflow. Review the **Account ID** and **Customer ID** fields that are configured in Amperity.
-#. Log in to the |destination-name| web application, and then find the |ext_microsoft_ads_get_ids| that are associated with your user account.
+#. Log in to the |destination-name| web application, and then find the `account and customer IDs <https://learn.microsoft.com/en-us/advertising/guides/get-started>`__ |ext_link| that are associated with your user account.
 #. Compare the **Account ID** and **Customer ID** fields configured in Amperity to the account and customer IDs that exist in |destination-name|. Update the configuration for this destination in Amperity as required.
 
    .. note:: This may require :ref:`creating a new credential <destination-microsoft-ads-workflow-actions-invalid-credentials>` for this destination.
@@ -633,14 +633,14 @@ Two-step authentication required
 
 .. destination-microsoft-ads-workflow-actions-mfa-required-start
 
-|destination-name| requires |ext_microsoft_ads_two_step_verification| to be enabled before Amperity can send data.
+|destination-name| requires `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| to be enabled before Amperity can send data.
 
 .. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request wasn't made by the identity owner. For example: a login attempt from a device that is not trusted.
 
 To resolve this error, ensure that multi-factor authentication is enabled for your |destination-name| account.
 
 #. Log in to the |destination-name| web application.
-#. Verify that |ext_microsoft_ads_two_step_verification| is enabled for your |destination-name| account.
+#. Verify that `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| is enabled for your |destination-name| account.
 
    .. note:: This may require :ref:`creating a new credential <destination-microsoft-ads-workflow-actions-invalid-credentials>` for this destination.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.

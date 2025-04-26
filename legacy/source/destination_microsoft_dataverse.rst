@@ -134,7 +134,7 @@ To send data to |destination-name|, you need to configure an application in Micr
 
 .. destination-microsoft-dataverse-application-power-steps-start
 
-#. Open the |ext_microsoft_power_platform_console|, click **Environments**, and then click on your environment.
+#. Open the `Microsoft Power Platform console <https://admin.powerplatform.microsoft.com/>`__ |ext_link|, click **Environments**, and then click on your environment.
 #. Click **Settings**, then **Users and permissions**, and then **Application users**.
 #. Click **New app user**, and then select the application you just created, your business unit, and then under **Security roles** click the **Edit** button.
 #. Select the following settings:
