@@ -973,21 +973,6 @@
 
 
 
-.. |ext_marketing_cloud_sftp_guide| raw:: html
-
-   <a href="https://help.salesforce.com/articleView?id=mc_es_enhanced_ftp_guide.htm" target="_blank">Marketing Cloud SFTP Guide</a>
-
-
-.. |ext_marketing_cloud_file_location_guide| raw:: html
-
-   <a href="https://help.salesforce.com/articleView?id=sf.mc_overview_create_file_transfer_location.htm&type=5" target="_blank">Marketing Cloud File Location Guide</a>
-
-
-.. |ext_meta_events_manager| raw:: html
-
-   <a href="https://www.facebook.com/business/help/898185560232180?id=565900110447546" target="_blank">Meta Events Manager</a>
-
-
 .. |ext_microsoft_ads_get_ids| raw:: html
 
    <a href="https://learn.microsoft.com/en-us/advertising/guides/get-started" target="_blank">account and customer IDs</a>
@@ -1052,22 +1037,6 @@
 
    <a href="https://admin.powerplatform.microsoft.com/" target="_blank">Microsoft Power Platform console</a>
 
-
-.. |ext_ncoa| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/National_Change_Of_Address" target="_blank">National Change of Address (NCOA)</a>
-
-
-.. |ext_ndjson| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/JSON_streaming#Line-delimited_JSON" target="_blank">Newline-delimited JSON (NDJSON)</a>
-
-
-
-
-.. |ext_nrf_454| raw:: html
-
-   <a href="https://nrf.com/resources/4-5-4-calendar" target="_blank">4-5-4 fiscal calendar</a>
 
 
 .. |ext_optimizely_customer_profiles| raw:: html

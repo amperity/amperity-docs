@@ -205,7 +205,7 @@ Get details
 
        .. note:: The account ID is also referred to as the member ID within |destination-name|.
 
-       .. important:: Review the |ext_marketing_cloud_file_location_guide| to configure a File Transfer Location with Location Type "Marketing Cloud Enhanced FTP Site Import Directory".
+       .. important:: Review the `Marketing Cloud File Location Guide <https://help.salesforce.com/s/articleView?id=mktg.mc_overview_create_file_transfer_location.htm&type=5>`__ |ext_link| to configure a File Transfer Location with Location Type "Marketing Cloud Enhanced FTP Site Import Directory".
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -223,7 +223,7 @@ Get details
           :alt: Detail six.
           :align: left
           :class: no-scaled-link
-     - Review the |ext_marketing_cloud_sftp_guide| to answer questions about configuring and managing |destination-name|.
+     - Review the `Marketing Cloud SFTP Guide <https://help.salesforce.com/articleView?id=mc_es_enhanced_ftp_guide.htm>`__ |ext_link| to answer questions about configuring and managing |destination-name|.
 
        .. tip:: Configuration details for |destination-name| are available from within Salesforce.
 

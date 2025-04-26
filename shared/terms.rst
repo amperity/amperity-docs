@@ -4191,7 +4191,7 @@ A multi-touch attribution identifies each marketing channel that the customer ha
 
 .. term-ncoa-start
 
-|ext_ncoa| is a secure dataset of approximately 160 million permanent change-of-address (COA) records consisting of the names and addresses of individuals, families, and businesses who have filed a change-of-address with the United States Postal Service (USPS).
+`National Change of Address (NCOA) <https://en.wikipedia.org/wiki/National_Change_Of_Address>`__ |ext_link| is a secure dataset of approximately 160 million permanent change-of-address (COA) records consisting of the names and addresses of individuals, families, and businesses who have filed a change-of-address with the United States Postal Service (USPS).
 
 .. term-ncoa-end 
 
@@ -4218,7 +4218,7 @@ The total amount of the gross sales minus deductions (i.e. returns, discounts, a
 
 .. term-ndjson-start
 
-|ext_ndjson| is a data format for structured data that defines the structure of JSON data using lines as separators. Each line in a NDJSON file is a valid JSON value.
+`Newline-delimited JSON (NDJSON) <https://en.wikipedia.org/wiki/JSON_streaming#Line-delimited_JSON>`__ |ext_link| is a data format for structured data that defines the structure of JSON data using lines as separators. Each line in a NDJSON file is a valid JSON value.
 
 .. term-ndjson-end
 

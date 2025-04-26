@@ -39,7 +39,7 @@ Transaction events that occurred within the previous seven days *and* contain po
 
 .. note:: Offline events are not immediately available in |destination-name|. Allow for up to 24 hours after the point at which Amperity has finished sending offline events for them to be available.
 
-   Offline events that are sent to |destination-name| can be accessed from |ext_meta_events_manager|.
+   Offline events that are sent to |destination-name| can be accessed from `Meta Events Manager <https://www.facebook.com/business/help/898185560232180?id=565900110447546>`__ |ext_link|.
 
 .. events-meta-ads-manager-allowfor-end
 
