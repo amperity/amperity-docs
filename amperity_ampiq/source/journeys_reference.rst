@@ -1,9 +1,21 @@
 .. https://docs.amperity.com/internal/
 
 
+.. meta::
+    :description lang=en:
+        Build automated, multi-step marketing interactions across channels.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Build automated, multi-step marketing interactions across channels.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        About journeys
+
 
 ==================================================
-Journeys
+About journeys
 ==================================================
 
 .. include:: ../../amperity_reference/source/journeys.rst
