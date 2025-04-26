@@ -383,7 +383,7 @@ This section describes all tasks related to building segments in Amperity:
 * :ref:`segments-change-comparison-dates`
 * :ref:`segments-segment-database-source`
 * :ref:`segments-change-date`
-* :ref:`segments-choose-andor-start`
+* :ref:`segments-choose-andor`
 * :ref:`segments-compare`
 * :ref:`segments-select-segment-comparison-chart`
 * :ref:`segments-copy-column`
