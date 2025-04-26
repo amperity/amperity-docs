@@ -147,6 +147,8 @@ Individual split
    :end-before: .. journeys-node-split-individual-end
 
 
+.. _journeys-add-node:
+
 Add a node
 --------------------------------------------------
 
@@ -155,228 +157,23 @@ Add a node
    :end-before: .. journeys-node-add-end
 
 
-.. _journeys-howtos:
+.. _journeys-configure-destination-attributes:
 
-How-tos
-==================================================
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-start
-   :end-before: .. journeys-howtos-end
-
-.. journeys-howtos-list-start
-
-* :ref:`journeys-howtos-add`
-* :ref:`journeys-howtos-node-activate`
-* :ref:`journeys-howtos-node-conditional-split`
-* :ref:`journeys-howtos-node-delay`
-* :ref:`journeys-howtos-node-percent-split`
-* :ref:`journeys-howtos-delete`
-* :ref:`journeys-howtos-edit`
-* :ref:`journeys-howtos-edit-destination-attributes`
-* :ref:`journeys-howtos-edit-starting-audience`
-* :ref:`journeys-howtos-edit-exit-criteria`
-* :ref:`journeys-howtos-interact`
-* :ref:`journeys-howtos-name`
-* :ref:`journeys-howtos-set-run-frequency`
-* :ref:`journeys-howtos-view-node-configuration`
-
-.. journeys-howtos-list-start
-
-
-.. _journeys-howtos-add:
-
-Add a journey
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-about-start
-   :end-before: .. journeys-about-end
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howitworks-steps-start
-   :end-before: .. journeys-howitworks-steps-end
-
-.. include:: ../../amperity_ampiq/source/journeys.rst
-   :start-after: .. journeys-howitworks-callouts-start
-   :end-before: .. journeys-howitworks-callouts-end
-
-
-.. _journeys-howtos-node-activate:
-
-Add activate nodes
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-journey-node-activate-start
-   :end-before: .. term-journey-node-activate-end
-
-**To add an Activate node to a journey** 
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-node-activate-steps-start
-   :end-before: .. journeys-howtos-node-activate-steps-end
-
-
-.. _journeys-howtos-node-conditional-split:
-
-Add conditional split nodes
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-journey-node-conditional-split-start
-   :end-before: .. term-journey-node-conditional-split-end
-
-**To add a Conditional Split node to a journey**
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-node-conditional-split-steps-start
-   :end-before: .. journeys-howtos-node-conditional-split-steps-end
-
-
-.. _journeys-howtos-node-delay:
-
-Add delay nodes
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-journey-node-delay-start
-   :end-before: .. term-journey-node-delay-end
-
-**To add a Delay node to a journey**
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-node-delay-steps-start
-   :end-before: .. journeys-howtos-node-delay-steps-end
-
-
-.. _journeys-howtos-node-percent-split:
-
-Add percent split nodes
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-journey-node-percent-split-start
-   :end-before: .. term-journey-node-percent-split-end
-
-**To add a Percent Split node to a journey**
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-node-percent-split-steps-start
-   :end-before: .. journeys-howtos-node-percent-split-steps-end
-
-
-.. _journeys-howtos-delete:
-
-Delete node
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-delete-start
-   :end-before: .. journeys-howtos-delete-end
-
-**To delete a node from a journey**
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-delete-steps-start
-   :end-before: .. journeys-howtos-delete-steps-ende
-
-
-.. _journeys-howtos-edit:
-
-Edit existing node
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-edit-start
-   :end-before: .. journeys-howtos-edit-end
-
-**To edit node configuration**
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-edit-steps-start
-   :end-before: .. journeys-howtos-edit-steps-end
-
-
-.. _journeys-howtos-edit-destination-attributes:
-
-Edit destination attributes
+Configure destination attributes
 --------------------------------------------------
 
 .. include:: ../../amperity_reference/source/journeys.rst
    :start-after: .. journeys-howtos-edit-destination-attributes-start
    :end-before: .. journeys-howtos-edit-destination-attributes-end
 
-**To edit attributes**
+**To configure destination attributes**
 
 .. include:: ../../amperity_reference/source/journeys.rst
    :start-after: .. journeys-howtos-edit-destination-attributes-steps-start
    :end-before: .. journeys-howtos-edit-destination-attributes-steps-end
 
 
-.. _journeys-howtos-edit-starting-audience:
-
-Edit starting audience 
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-edit-starting-audience-start
-   :end-before: .. journeys-howtos-edit-starting-audience-end
-
-**To edit the starting audience** 
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-edit-starting-audience-steps-start
-   :end-before: .. journeys-howtos-edit-starting-audience-steps-end
-
-
-.. _journeys-howtos-edit-exit-criteria:
-
-Edit exit criteria
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-edit-exit-criteria-start
-   :end-before: .. journeys-howtos-edit-exit-criteria-end
-
-**To edit exit conditions**
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-edit-exit-criteria-steps-start
-   :end-before: .. journeys-howtos-edit-exit-criteria-steps-end
-
-
-.. _journeys-howtos-interact:
-
-Interact with Journeys canvas
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-interact-start
-   :end-before: .. journeys-howtos-interact-end
-
-
-.. _journeys-howtos-name:
-
-Name a journey
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-name-start
-   :end-before: .. journeys-howtos-name-end
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-name-tip-start
-   :end-before: .. journeys-howtos-name-tip-end
-
-**To name a journey** 
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-name-steps-start
-   :end-before: .. journeys-howtos-name-steps-end
-
-
-.. _journeys-howtos-set-run-frequency:
+.. _journeys-set-run-frequency:
 
 Set run frequency
 --------------------------------------------------
@@ -396,17 +193,9 @@ Set run frequency
    :end-before: .. journeys-howtos-set-run-frequency-end
 
 
-.. _journeys-howtos-view-node-configuration:
+.. _journeys-howtos:
 
-View node configuration
---------------------------------------------------
+How-tos
+==================================================
 
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-view-node-configuration-start
-   :end-before: .. journeys-howtos-view-node-configuration-end
 
-**To view the configuration for a node**
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-view-node-configuration-steps-start
-   :end-before: .. journeys-howtos-view-node-configuration-steps-end
