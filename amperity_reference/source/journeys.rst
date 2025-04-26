@@ -572,7 +572,7 @@ The attributes that are sent to each destination that are configured for activat
 
 .. journeys-howtos-edit-destination-attributes-end
 
-**To edit attributes**
+**To edit destination attributes**
 
 .. journeys-howtos-edit-destination-attributes-steps-start
 
