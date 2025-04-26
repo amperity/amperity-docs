@@ -132,6 +132,16 @@ Campaign features
    :end-before: .. campaigns-features-end
 
 
+.. _campaigns-activation-ids:
+
+Activation IDs
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/campaigns.rst
+   :start-after: .. campaigns-choose-activation-id-start
+   :end-before: .. campaigns-choose-activation-id-end
+
+
 .. _campaigns-attributes:
 
 Attributes
@@ -226,20 +236,6 @@ Exclusion lists
    :class: no-scaled-link
 
 
-.. _campaigns-treatment-groups:
-
-Treatment groups
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-treatment-group-start
-   :end-before: .. term-treatment-group-end
-
-.. include:: ../../amperity_reference/source/campaigns.rst
-   :start-after: .. campaigns-treatment-groups-start
-   :end-before: .. campaigns-treatment-groups-end
-
-
 .. _campaigns-sub-audiences:
 
 Sub-audiences
@@ -252,6 +248,16 @@ Sub-audiences
 .. include:: ../../amperity_reference/source/campaigns.rst
    :start-after: .. campaigns-sub-audiences-start
    :end-before: .. campaigns-sub-audiences-end
+
+
+.. _campaigns-tests:
+
+Tests
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/campaigns.rst
+   :start-after: .. campaigns-test-campaign-start
+   :end-before: .. campaigns-test-campaign-end
 
 
 .. _campaigns-timing-and-launch:
@@ -278,6 +284,20 @@ Timing and launch dates
    :alt: Give your campaign a name.
    :align: left
    :class: no-scaled-link
+
+
+.. _campaigns-treatment-groups:
+
+Treatment groups
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-treatment-group-start
+   :end-before: .. term-treatment-group-end
+
+.. include:: ../../amperity_reference/source/campaigns.rst
+   :start-after: .. campaigns-treatment-groups-start
+   :end-before: .. campaigns-treatment-groups-end
 
 
 .. _campaigns-reference-campaign-notifications:
