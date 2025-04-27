@@ -84,7 +84,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_load_csv_to_synapse| to Azure Synapse Analytics.
+     - `Load CSV data from Azure Blob Storage <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool>`__ |ext_link| to Azure Synapse Analytics.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -92,7 +92,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_connect_synapse| to an Azure Synapse Analytics workspac, and then access the data sent from Amperity.
+     - `Connect Microsoft Power BI <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/tutorial-connect-power-bi-desktop>`__ |ext_link| to an Azure Synapse Analytics workspac, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -161,7 +161,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_load_bigquery|, and then access the data sent from Amperity.
+     - `Connect Microsoft Power BI to Google BigQuery <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-bigquery>`__ |ext_link|, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -220,7 +220,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the |ext_microsoft_power_bi_desktop_to_snowflake| or from the |ext_microsoft_power_bi_service_to_snowflake|.
+     - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| or from the `Power BI Service <https://docs.microsoft.com/en-us/power-bi/connect-data/service-connect-snowflake>`__ |ext_link|.
 
        .. note:: The URL for the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Microsoft Power BI to Snowflake.
 

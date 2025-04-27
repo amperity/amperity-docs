@@ -54,7 +54,7 @@ This can be a big challenge.
 
           First, we describe how we got here. Next, we discuss the building blocks you will need. Then we outline methods for analyzing one-time buyers and how to build programs based on those insights. We conclude with measurement techniques that can help you measure both top-line and customer lifetime value.
 
-          |ext_custora_one_and_not_done|
+          `Open the PDF to read the whole book <https://docs.amperity.com/downloads/pdf/One%20and%20(not)%20done.pdf>`__ |ext_link|
 
 .. onetime-buyers-custora-end
 

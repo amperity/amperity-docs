@@ -26,7 +26,7 @@ Send offline conversions to Pinterest
 
 .. events-pinterest-overview-start
 
-Upload a CSV file that contains |ext_pinterest_offline_conversions| to |destination-name|, after which |destination-name| will match campaigns to these conversions so your brand can review total conversions in |destination-name| as they relate to all active campaigns.
+Upload a CSV file that contains `offline conversions <https://help.pinterest.com/en/business/article/upload-conversions-with-ads-manager>`__ |ext_link| to |destination-name|, after which |destination-name| will match campaigns to these conversions so your brand can review total conversions in |destination-name| as they relate to all active campaigns.
 
 .. events-pinterest-overview-end
 
@@ -44,7 +44,7 @@ Build a query
 
 .. events-pinterest-build-query-start
 
-Use a query to return the fields that align to the customer and event data fields supported by |destination-name| for use with |ext_pinterest_offline_conversions|.
+Use a query to return the fields that align to the customer and event data fields supported by |destination-name| for use with `offline conversions <https://help.pinterest.com/en/business/article/upload-conversions-with-ads-manager>`__ |ext_link|.
 
 For example:
 

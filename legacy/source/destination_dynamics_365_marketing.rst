@@ -41,7 +41,7 @@ Send static segments to Dynamics 365 Marketing from Amperity, and then manage co
 
 .. destination-dynamics-365-marketing-api-note-start
 
-.. note:: This destination uses the |ext_microsoft_dynamics_web_api_segments| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it will be truncated, and then loaded.
+.. note:: This destination uses the `Microsoft Dynamics Segmentation API <https://learn.microsoft.com/en-us/dynamics365/marketing/developer/extend-segments>`__ |ext_link| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it will be truncated, and then loaded.
 
 .. destination-dynamics-365-marketing-api-note-end
 

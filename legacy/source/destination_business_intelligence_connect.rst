@@ -644,7 +644,7 @@ Databricks
 .. destination-bic-connect-other-jdbc-databricks-steps-start
 
 #. Download and install the |ext_snowflake_jdbc|.
-#. Configure Databricks to |ext_databricks_from_jdbc| to |bic|.
+#. Configure Databricks to `use the JDBC driver to connect <https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html>`__ |ext_link| to |bic|.
 #. Enter the following information:
 
    .. list-table::
@@ -755,7 +755,7 @@ Microsoft PowerBI
 
 .. destination-bic-connect-to-microsoft-powerbi-start
 
-Download the |ext_snowflake_odbc|, and then connect Microsoft |ext_microsoft_power_bi_desktop_to_snowflake| to the |bic| data warehouse.
+Download the |ext_snowflake_odbc|, and then connect Microsoft `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-microsoft-powerbi-end
 
@@ -793,7 +793,7 @@ Oracle Business Analytics
 
 .. destination-bic-connect-to-oracle-business-analytics-start
 
-Use |ext_oracle_analytics_desktop_snowflake| to connect directly to the |bic| data warehouse.
+Use `Oracle Analytics Desktop <https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/connect-snowflake-data-warehouse.html>`__ |ext_link| to connect directly to the |bic| data warehouse.
 
 .. destination-bic-connect-to-oracle-business-analytics-end
 

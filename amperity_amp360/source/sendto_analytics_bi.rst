@@ -180,7 +180,7 @@ Pyramid Analytics
 
 .. sendto-analytics-bi-tool-pyramid-analytics-start
 
-Pyramid Analytics supports using |ext_pyramid_analytics_sources| to pull data from :doc:`Amazon S3 <destination_amazon_s3>` and :doc:`Azure Blob Storage <destination_azure_blob_storage>`.
+Pyramid Analytics supports using `DataFlow sources <https://help.pyramidanalytics.com/Content/Root/MainClient/apps/Model/Model%20Pro/Data%20Flow/Sources.htm?tocpath=Client%20Help%7CPro%20Client%7CPro%20Apps%7CModel%7CModel%20Pro%7CData%20Flow%7CSources%7C_____0>`__ |ext_link| to pull data from :doc:`Amazon S3 <destination_amazon_s3>` and :doc:`Azure Blob Storage <destination_azure_blob_storage>`.
 
 .. sendto-analytics-bi-tool-pyramid-analytics-end
 

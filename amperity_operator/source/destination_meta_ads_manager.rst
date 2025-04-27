@@ -734,7 +734,7 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
      - .. warning:: Do not pass this column. The connector will use the first character of the normalized first name.
    * - **US States**
      - **ST**
-     - A two-character |ext_ansi_abbreviation_code| for US states.
+     - A two-character `ANSI abbreviation code <https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations>`__ |ext_link| for US states.
 
        For this key, the connector:
 

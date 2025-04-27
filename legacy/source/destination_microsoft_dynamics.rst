@@ -26,7 +26,7 @@ Send data to Microsoft Dynamics
 
 .. destination-microsoft-dynamics-api-note-start
 
-.. note:: This destination uses the |ext_microsoft_dynamics_web_api|.
+.. note:: This destination uses the `Microsoft Dynamics Web API <https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/developers-guide/mt607689%28v%3dcrm.8%29>`__ |ext_link|.
 
 .. destination-microsoft-dynamics-api-note-end
 

@@ -556,7 +556,7 @@ An anonymous visitor is an individual who visits a website, but does not sign up
 
 .. term-apache-avro-start
 
-|ext_apacheavro| is a row-oriented remote procedure call and data serialization framework developed within the Apache Hadoop ecosystem. Avro uses JSON to define data types and protocols, and serializes data in a compact binary format.
+`Apache Avro <https://en.wikipedia.org/wiki/Apache_Avro>`__ |ext_link| is a row-oriented remote procedure call and data serialization framework developed within the Apache Hadoop ecosystem. Avro uses JSON to define data types and protocols, and serializes data in a compact binary format.
 
 .. term-apache-avro-end
 
@@ -574,7 +574,7 @@ Apache Kafka is an open-source distributed event streaming platform used for hig
 
 .. term-apache-parquet-start
 
-|ext_apacheparquet| is a free and open-source column-oriented data storage format developed within the Apache Hadoop ecosystem. It is similar to RCFile and ORC, but provides more efficient data compression and encoding schemes with enhanced performance and can better handle large amounts of complex bulk data.
+`Apache Parquet <https://en.wikipedia.org/wiki/Apache_Parquet>`__ |ext_link| is a free and open-source column-oriented data storage format developed within the Apache Hadoop ecosystem. It is similar to RCFile and ORC, but provides more efficient data compression and encoding schemes with enhanced performance and can better handle large amounts of complex bulk data.
 
 .. term-apache-parquet-end
 
@@ -674,7 +674,7 @@ A small audience represents the percentage of the total audience that was requir
 
 .. term-australian-privacy-principles-start
 
-The |ext_app| is a law that covers data protection and privacy in Australia. It governs a broad set of standards, including rights and obligations around the collection, use and disclosure of personal information, the integrity and correction of personal information, and the rights of individuals to access their personal information.
+`Australian Privacy Principles (APP) <https://www.oaic.gov.au/privacy/australian-privacy-principles>`__ |ext_link| is a law that covers data protection and privacy in Australia. It governs a broad set of standards, including rights and obligations around the collection, use and disclosure of personal information, the integrity and correction of personal information, and the rights of individuals to access their personal information.
 
 .. term-australian-privacy-principles-end
 
