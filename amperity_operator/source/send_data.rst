@@ -275,7 +275,7 @@ You can add Amperity services to allowlists that may be required by upstream sys
 
 .. warning:: Using an IP allowlist is not recommended. Many issues can arise when an IP address is on an allowlist within Amazon AWS or Microsoft Azure because both services use their own internal networks for routing.
 
-   * Amazon AWS recommends against using allowlists on the SourceIP condition because it |ext_aws_allowlist|
+   * Amazon AWS recommends against using allowlists on the SourceIP condition because it `denies access to AWS services that make calls on your behalf <https://aws.amazon.com/premiumsupport/knowledge-center/iam-restrict-calls-ip-addresses/>`__ |ext_link|
    * Microsoft Azure suggests that using IP allowlists for shared access signature (SAS) tokens is only recommended for use with IP addresses that are located outside of Microsoft Azure.
 
 .. send-data-to-amperity-ip-allowlists-warning-end

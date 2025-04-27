@@ -146,7 +146,7 @@ Google Analytics
 
 .. data-source-first-party-raw-clickstream-google-analytics-start
 
-Clickstream data from Google Analytics |ext_google_analytics_fields|, with sets of fields available for:
+Clickstream data from Google Analytics `contains a predefined series of fields <https://support.google.com/analytics/answer/3437719?hl=en>`__ |ext_link|, with sets of fields available for:
 
 * Identifiers, such as client ID, user ID, visit ID, along with dates and times
 * Totals, such as hits, page views, bounces, time on screen

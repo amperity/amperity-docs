@@ -35,7 +35,7 @@ Send data to Cheetah Digital by Marigold
 
 .. destination-cheetah-digital-context-start
 
-You can send |what-send| files to |destination-name| using |ext_cheetah_digital_sftp_s3|.
+You can send |what-send| files to |destination-name| using `SFTP <https://docs.cheetahces.com/en-us/messaging/product/index.htm?#t=60_Data_Integration%2FFTP_Profiles.htm%23>`__ |ext_link|.
 
 .. destination-cheetah-digital-context-end
 

@@ -85,7 +85,7 @@ Amperity provides direct connections to the most popular destinations across the
           :class: no-scaled-link
      - Use the :doc:`Criteo destination <destination_criteo>` to send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
 
-       .. tip:: Use your brand's :doc:`offline transactions data <events_criteo>` to optimize advertising targeting algorithms in Criteo. Review the |ext_criteo_sftp|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
+       .. tip:: Use your brand's :doc:`offline transactions data <events_criteo>` to optimize advertising targeting algorithms in Criteo. Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
 
 
 .. _events-google-enhanced-conversions:

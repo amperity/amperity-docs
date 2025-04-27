@@ -651,7 +651,7 @@ The import location within the |destination-name| SFTP site must be set to "Enha
 
 To resolve this error, you must verify that the import directory within |destination-name| is set to "Enhanced FTP Site Import Directory".
 
-#. Open the |ext_salesforce_sfmc_management_console|, find the |ext_salesforce_sfmc_data_extension_file_location|, and then verify that it is configured for the "Enhanced FTP Site Import Directory" location type.
+#. Open the `Salesforce Marketing Cloud management console <https://mc.exacttarget.com/cloud/>`__ |ext_link|, find the `file location <https://help.salesforce.com/s/articleView?id=sf.mc_overview_create_file_transfer_location.htm&type=5>`__ |ext_link|, and then verify that it is configured for the "Enhanced FTP Site Import Directory" location type.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type-steps-end
@@ -702,7 +702,7 @@ The name of a data extension in |destination-name| must be globally unique acros
 
 To resolve this error, you must delete or rename the data extension in |destination-name|, and then re-apply the primary key by resending the workflow from Amperity.
 
-#. Open the |ext_salesforce_sfmc_management_console|, and then |ext_salesforce_sfmc_management_console_data_extension_delete_rename|.
+#. Open the `Salesforce Marketing Cloud management console <https://mc.exacttarget.com/cloud/>`__ |ext_link|, and then `delete or rename the data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link|.
 #. Open the data template that is associated with this workflow.
 #. Edit the data extension name in the data template so that its name is globally unique within |destination-name|, and then save the data template.
 
@@ -710,7 +710,7 @@ To resolve this error, you must delete or rename the data extension in |destinat
 
       **To update the data extension in Salesforce Marketing Cloud**
 
-      #. Open the |ext_salesforce_sfmc_management_console|.
+      #. Open the `Salesforce Marketing Cloud management console <https://mc.exacttarget.com/cloud/>`__ |ext_link|.
       #. Select **Audience Builder**, and then choose **Contact Builder**.
       #. Open **Data Extensions**.
       #. Search for the data extension for which this error is associated, and then rename the data extension or delete the data extension.

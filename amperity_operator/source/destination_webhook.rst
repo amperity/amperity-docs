@@ -248,7 +248,7 @@ Add the API gateway
 
 .. destination-webhook-manual-add-gateway-start
 
-|ext_aws_api_gateway| provides tools for creating and documenting web APIs that route HTTP requests to AWS Lambda functions. An API gateway is required to use webhook destinations.
+`Amazon API Gateway <https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html>`__ |ext_link| provides tools for creating and documenting web APIs that route HTTP requests to AWS Lambda functions. An API gateway is required to use webhook destinations.
 
 **To add an API gateway**
 

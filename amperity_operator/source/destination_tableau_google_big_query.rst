@@ -86,7 +86,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - |ext_google_bigquery_transfer_from_cloud_storage| to Google BigQuery.
+     - `Transfer data from Cloud Storage <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer>`__ |ext_link| to Google BigQuery.
 
 
    * - .. image:: ../../images/steps-04.png

@@ -29,10 +29,10 @@ Send data to Cordial
 
 Use Amperity to manage contacts--attributes and list membership--in |destination-name| using the following REST APIs:
 
-* |ext_cordial_api_account_contact_attributes| to create contact attributes. Attributes that do not exist in |destination-name| are added as custom contact attributes.
-* |ext_cordial_api_account_lists| to fetch, create, and clear account lists, to which contacts are associated. An account list is overwritten each time results are sent from Amperity. An email address is added when it is not already a contact, after which it is assigned the **subscribed** status. An email address that is already a contact will retain its assigned subscription status.
-* |ext_cordial_api_contact_imports| to import contacts to |destination-name|, and then associate contacts to the account list.
-* |ext_cordial_api_jobs| to monitor the import job for completion.
+* `Account Contract Attributes <https://support.cordial.com/hc/en-us/articles/204570347-Account-Contact-Attributes>`__ |ext_link| to create contact attributes. Attributes that do not exist in |destination-name| are added as custom contact attributes.
+* `Account Lists <https://support.cordial.com/hc/en-us/articles/204570497-Account-Lists>`__ |ext_link| to fetch, create, and clear account lists, to which contacts are associated. An account list is overwritten each time results are sent from Amperity. An email address is added when it is not already a contact, after which it is assigned the **subscribed** status. An email address that is already a contact will retain its assigned subscription status.
+* `Contact Imports <https://support.cordial.com/hc/en-us/articles/203886058-Contact-Imports>`__ |ext_link| to import contacts to |destination-name|, and then associate contacts to the account list.
+* `Jobs <https://support.cordial.com/hc/en-us/articles/204570807-Jobs>`__ |ext_link| to monitor the import job for completion.
 
 Build a query or segment that contains the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
 
@@ -42,7 +42,7 @@ Build a query or segment that contains the **email** field, along with any other
 
 .. note:: Amperity recommends using the |destination-api| to send |what-send| from Amperity to |destination-name|.
 
-   However, if you prefer to send a CSV or JSON file (one-time or recurring) instead of using the |destination-api| you may configure |ext_cordial_data_automations|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
+   However, if you prefer to send a CSV or JSON file (one-time or recurring) instead of using the |destination-api| you may configure `Cordial Data Automations <https://support.cordial.com/hc/en-us/articles/360029407471>`__ |ext_link|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
 
 .. destination-cordial-get-details-alternate-note-end
 
@@ -455,7 +455,7 @@ Required attributes are missing
 
 To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the list of attributes is correct for each treatment group in this campaign that is sending data to |destination-name|.
 
-#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
 #. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
@@ -476,7 +476,7 @@ To resolve this error, verify the attributes that are required by |destination-n
 
 To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the query used with this orchestration is returning all required attributes.
 
-#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
 #. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
@@ -499,7 +499,7 @@ Unique list name required
 
 .. destination-cordial-workflow-actions-unique-list-name-required-start
 
-|destination-name| |ext_cordial_lists| must be unique.
+|destination-name| `list names <https://support.cordial.com/hc/en-us/articles/115005528428-Lists>`__ |ext_link| must be unique.
 
 To resolve this error, verify that the name of the list is unique.
 

@@ -121,7 +121,7 @@ Add orchestration
 
 .. sendto-attentive-mobile-add-orchestration-important-start
 
-.. important:: Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+.. important:: Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
 
 .. sendto-attentive-mobile-add-orchestration-important-end
 

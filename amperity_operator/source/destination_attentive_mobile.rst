@@ -96,7 +96,7 @@ Get details
              :start-after: .. setting-common-file-format-custom-delimiter-start
              :end-before: .. setting-common-file-format-custom-delimiter-end
 
-          Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file.
+          Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file.
 
        **Remote folder**
           .. include:: ../../shared/destination_settings.rst
@@ -257,7 +257,7 @@ Add destination
           :start-after: .. destinations-steps-name-and-description-start
           :end-before: .. destinations-steps-name-and-description-end
 
-       .. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+       .. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
 
        .. admonition:: Configure business user access
 
@@ -302,7 +302,7 @@ Add destination
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
 
-          Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file.
+          Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file.
 
 
        **Filename template**

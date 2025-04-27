@@ -94,7 +94,7 @@ You must configure Amperity to send data to a Cloud Storage bucket that your org
 The steps required to configure Amperity to send data that is accessible to Power BI from Google BigQuery requires completion of a series of short workflows, some of which must be done outside of Amperity.
 
 #. Send CSV data to :doc:`Google Cloud Storage <destination_google_cloud_storage>` from Amperity.
-#. |ext_google_bigquery_transfer_from_cloud_storage| to Google BigQuery.
+#. `Transfer data from Cloud Storage <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer>`__ |ext_link| to Google BigQuery.
 #. `Connect Microsoft Power BI to Google BigQuery <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-bigquery>`__ |ext_link|, and then access the data sent from Amperity.
 #. Validate the workflow within Amperity and the data within Microsoft Power BI.
 #. Configure Amperity to automate this workflow for a regular (daily) refresh of data.

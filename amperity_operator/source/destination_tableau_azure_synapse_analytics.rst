@@ -86,7 +86,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - |ext_azure_synapse_analytics_load_table_from_blob_storage| to Azure Synapse Analytics.
+     - `Load data from Azure Blob Storage <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool>`__ |ext_link| to Azure Synapse Analytics.
 
 
    * - .. image:: ../../images/steps-04.png

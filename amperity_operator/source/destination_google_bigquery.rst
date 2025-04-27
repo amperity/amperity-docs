@@ -59,9 +59,9 @@ Configure Google BigQuery
 
 Load your preferred data format from your preferred cloud storage location to Google BigQuery.
 
-* Load |ext_google_bigquery_load_parquet| from Cloud Storage to Google BigQuery.
-* Load |ext_google_bigquery_load_csv| from Cloud Storage to Google BigQuery.
-* Transfer Parquet and CSV |ext_google_bigquery_load_from_amazon_s3| to Google BigQuery.
+* Load `Parquet files <https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-parquet>`__ |ext_link| from Cloud Storage to Google BigQuery.
+* Load `CSV files <https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv>`__ |ext_link| from Cloud Storage to Google BigQuery.
+* Transfer Parquet and CSV `files from Amazon S3 <https://cloud.google.com/bigquery-transfer/docs/s3-transfer>`__ |ext_link| to Google BigQuery.
 
 .. destination-google-bigquery-configure-end
 
@@ -75,7 +75,7 @@ Enable downstream workflows
 
 Loading data to Google BigQuery enables downstream workflows, including the use of applications like:
 
-* |ext_google_analytics_hub|
+* `Google Analytics Hub <https://cloud.google.com/bigquery/docs/analytics-hub-introduction>`__ |ext_link|
 * `Google Pub/Sub <https://cloud.google.com/pubsub/docs/overview>`__ |ext_link| to support or enable real-time downstream workflows
 * :ref:`Microsoft Power BI <destination-powerbi-connect-to-google-bigquery>`
 * :doc:`Tableau <destination_tableau_google_big_query>`

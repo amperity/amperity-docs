@@ -1033,7 +1033,7 @@ Brightloom is a customer growth platform (CGP) company for restaurants, retailer
 
 .. term-byte-order-mark-start
 
-The |ext_byteordermark| is an optional usage of the special Unicode character "U+FEFF BYTE ORDER MARK". This character is used as a magic number at the start of a file to indicate byte order and character encoding in the file.
+A `byte order mark (BOM) <https://en.wikipedia.org/wiki/Byte_order_mark>`__ |ext_link| is an optional usage of the special Unicode character "U+FEFF BYTE ORDER MARK". This character is used as a magic number at the start of a file to indicate byte order and character encoding in the file.
 
 .. term-byte-order-mark-end
 
@@ -1042,7 +1042,7 @@ The |ext_byteordermark| is an optional usage of the special Unicode character "U
 
 .. term-ccpa-start
 
-The |ext_ccpa| is a law that covers data protection and privacy in the state of California. It gives control to individuals over their personal data and addresses the transfer of personal data, including providing for the ability to request removal of data.
+The `California Consumer Privacy Act (CCPA) <https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act>`__ |ext_link| is a law that covers data protection and privacy in the state of California. It gives control to individuals over their personal data and addresses the transfer of personal data, including providing for the ability to request removal of data.
 
 .. term-ccpa-end
 
@@ -1574,7 +1574,7 @@ Criteo Retail Media allows marketers to build audiences in Criteo using their ow
 
 .. term-cron-start
 
-|ext_cron| is a time-based job scheduler that uses cron syntax to automate scheduled jobs to run periodically at fixed times, dates, or intervals.
+`Cron <https://en.wikipedia.org/wiki/Cron>`__ |ext_link| is a time-based job scheduler that uses cron syntax to automate scheduled jobs to run periodically at fixed times, dates, or intervals.
 
 .. term-cron-end
 
@@ -1597,7 +1597,7 @@ Cron syntax specifies the fixed time, date, or interval at which cron will run. 
     │ │ │ │ │
     * * * * * command to execute
 
-For example, ``30 8 * * *`` represents "run at 8:30 AM every day" and ``30 8 * * 0`` represents "run at 8:30 AM every Sunday". Amperity validates your cron syntax and shows you the results. You may also use |ext_crontabguru| to validate cron syntax.
+For example, ``30 8 * * *`` represents "run at 8:30 AM every day" and ``30 8 * * 0`` represents "run at 8:30 AM every Sunday". Amperity validates your cron syntax and shows you the results. You may also use `crontab guru <https://crontab.guru/>`__ |ext_link| to validate cron syntax.
 
 .. term-crontab-syntax-end
 
@@ -1615,7 +1615,7 @@ Cross Country Computer specializes in strategic solutions for companies that are
 
 .. term-csv-start
 
-A |ext_csv| file, defined by |ext_rfc4180|, is a delimited text file that uses a comma to separate values. A CSV file stores tabular data (numbers and text) in plain text. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format.
+A `comma-separated values (CSV) <https://en.wikipedia.org/wiki/Comma-separated_values>`__ |ext_link| file, defined by `RFC 4180 <https://tools.ietf.org/html/rfc4180>`__ |ext_link|, is a delimited text file that uses a comma to separate values. A CSV file stores tabular data (numbers and text) in plain text. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format.
 
 .. term-csv-end
 
@@ -5249,7 +5249,7 @@ Raw UID2 values are unencrypted alphanumeric identifiers that are created from a
 
 .. term-rcfile-start
 
-|ext_rcfile| is a data placement structure that determines how to store relational tables on computer clusters using the MapReduce framework.
+`Record Columnar File (RCFile) <https://en.wikipedia.org/wiki/RCFile>`__ |ext_link| is a data placement structure that determines how to store relational tables on computer clusters using the MapReduce framework.
 
 .. term-rcfile-end
 

@@ -131,7 +131,7 @@ Google BigQuery
 .. sendto-analytics-bi-tool-google-bigquery-start
 
 #. Send CSV or Parquet files from Amperity to :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
-#. Load |ext_google_bigquery_load_parquet| or |ext_google_bigquery_load_csv| from cloud storage or transfer Parquet and CSV |ext_google_bigquery_load_from_amazon_s3|.
+#. Load `Parquet files <https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-parquet>`__ |ext_link| or `CSV files <https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv>`__ |ext_link| from cloud storage or transfer Parquet and CSV `files from Amazon S3 <https://cloud.google.com/bigquery-transfer/docs/s3-transfer>`__ |ext_link|.
 #. Enable downstream workflows in analytics and BI tools like :ref:`Microsoft Power BI <sendto-analytics-bi-tool-power-bi>`, or :ref:`Tableau <sendto-analytics-bi-tool-tableau>`. Support or enable real-time downstream workflows with `Google Pub/Sub <https://cloud.google.com/pubsub/docs/overview>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-google-bigquery-end
@@ -166,7 +166,7 @@ Data is not sent from Amperity directly to Microsoft Power BI. Microsoft Power B
 
 #. Send a CSV file to an Azure container, after which it is :ref:`picked up by Azure Synapse Analytics <sendto-powerbi-connect-to-azure>`.
 #. Send a CSV file to Google Cloud Storage, after which it is :ref:`transferred to Google BigQuery <sendto-powerbi-connect-to-google-bigquery>`
-#. Send data to |ext_google_bigquery_supported_connectors|.
+#. Send data to `any supported connector <https://learn.microsoft.com/en-us/power-query/connectors/>`__ |ext_link|.
 
 Microsoft Power BI may be configured to connect directly to Snowflake, Google BigQuery, or Azure Synapse Analytics. The destination workflow in Amperity may be configured to send data on a regular basis to ensure that the data available to the Microsoft Power BI user is up to date.
 

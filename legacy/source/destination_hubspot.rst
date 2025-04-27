@@ -51,7 +51,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
 .. important:: |destination-name| has `specific requirements for email address validation <https://developers.hubspot.com/docs/api/faq>`__ |ext_link|. All email addresses that are sent to HubSpot must:
 
-   #. Have a valid format, as defined by |ext_rfc2822|.
+   #. Have a valid format, as defined by `RFC 2822 <https://tools.ietf.org/html/rfc2822>`__ |ext_link|.
    #. May not contain quotation marks in the local part of the address, which is the part to the left of the @ symbol.
    #. Must end in a valid top-level domain (TLD), as listed at `https://data.iana.org/TLD/tlds-alpha-by-domain.txt <https://data.iana.org/TLD/tlds-alpha-by-domain.txt>`__ |ext_link| and may contain Unicode characters within the TLD.
 

@@ -81,7 +81,7 @@ The |source-name| data source requires the following configuration details:
           :class: no-scaled-link
      - Optional. The |source-name| audience key.
 
-       Use an audience key to configure Amperity to pull contacts from a specific audience from |source-name|. This value should be the |ext_cordial_audience| in |source-name|.
+       Use an audience key to configure Amperity to pull contacts from a specific audience from |source-name|. This value should be the `name of an audience <https://support.cordial.com/hc/en-us/articles/115005532168-Audience-Builder>`__ |ext_link| in |source-name|.
 
        .. note:: When this field is empty, Amperity will pull all contacts.
 
@@ -99,7 +99,7 @@ The |source-name| data source requires the following configuration details:
           crdl-pdm-actn-success,
           crdl_sms_delivered
 
-       Activity types (also known as "event types" within |source-name|) contain |ext_cordial_events_overview|. 
+       Activity types (also known as "event types" within |source-name|) contain `behavioral data records for all contacts <https://support.cordial.com/hc/en-us/articles/115005528508-Events>`__ |ext_link|. 
 
        |source-name| provides the following groupings of activity types, each with a unique subset of activity types:
 
@@ -111,7 +111,7 @@ The |source-name| data source requires the following configuration details:
        * REST API
        * Other events
 
-       Review |ext_cordial_system_events| to determine the right combination of activity types for your brand to pull to Amperity.
+       Review `the full list of activity types <https://support.cordial.com/hc/en-us/articles/4411361663501-System-events-reference-page>`__ |ext_link| to determine the right combination of activity types for your brand to pull to Amperity.
 
        .. note:: When this field is empty, Amperity will pull all activity types.
 
@@ -142,11 +142,11 @@ Add courier
 
 #. Under **Settings**, configure one or both of the following:
 
-   Use **Audience key** to configure Amperity to pull contacts from a specific audience from |source-name|. This value should be the |ext_cordial_audience| in |source-name|.
+   Use **Audience key** to configure Amperity to pull contacts from a specific audience from |source-name|. This value should be the `name of an audience <https://support.cordial.com/hc/en-us/articles/115005532168-Audience-Builder>`__ |ext_link| in |source-name|.
 
    .. note:: When this field is empty, Amperity will pull all contacts.
 
-   Use **List of activity types** to enter a comma-separated list of activity types. Review |ext_cordial_system_events| to determine the right combination of activity types for your brand to pull to Amperity. For example:
+   Use **List of activity types** to enter a comma-separated list of activity types. Review `the full list of activity types <https://support.cordial.com/hc/en-us/articles/4411361663501-System-events-reference-page>`__ |ext_link| to determine the right combination of activity types for your brand to pull to Amperity. For example:
 
    ::
 

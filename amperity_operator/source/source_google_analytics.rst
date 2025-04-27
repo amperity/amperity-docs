@@ -32,7 +32,7 @@ Pull from Google Analytics
 
 .. source-google-analytics-start
 
-Amperity can be configured to pull Google Analytics 4 (GA4) property reports using the |ext_google_analytics_batchget| endpoint.
+Amperity can be configured to pull Google Analytics 4 (GA4) property reports using the `batchRunReports <https://developers.google.com/analytics/devguides/reporting/data/v1/rest/v1beta/properties/batchRunReports>`__ |ext_link| endpoint.
 
 .. source-google-analytics-end
 

@@ -123,10 +123,10 @@ You may configure any supported data producer to use |source-name| services to a
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-steps-start
 
-#. Create a |ext_aws_cross_account_role| IAM role in the customer's Amazon AWS account.
+#. Create a `cross-account role <https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#cross-account-delivery-s3>`__ |ext_link| IAM role in the customer's Amazon AWS account.
 
    This role is required to grant |source-name| access to the Amazon S3 bucket that is part of the Amperity tenant. This role must have `s3:PutObjectAcl <https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3>`__ |ext_link| configured as part of the list of allowed |source-name| actions.
-#. Configure the |ext_aws_bucket_policy| in the Amperity S3 bucket to allow the IAM role access to the Amperity S3 bucket.
+#. Configure the `bucket policy <https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html>`__ |ext_link| in the Amperity S3 bucket to allow the IAM role access to the Amperity S3 bucket.
 #. Create a |source-name| `delivery stream <https://docs.aws.amazon.com/firehose/latest/dev/basic-create.html>`__ |ext_link| in the customer's cloud infrastructure that uses this IAM role.
 #. Configure the delivery stream to send data to the Amperity S3 bucket.
 #. Configure applications to send data to the delivery stream.

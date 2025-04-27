@@ -98,7 +98,14 @@ Get details
                 :start-after: .. setting-attentive-primary-identifier-context-start
                 :end-before: .. setting-attentive-primary-identifier-context-end
 
-.. TODO: What is this? "The ID for the |ext_attentive_mobile_signup_units|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit."
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: left
+          :class: no-scaled-link
+     - **Sign-up units**
+
+       The ID for the `sign-up unit <https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units->`__ |ext_link|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
 
 .. destination-attentive-api-get-details-end
 

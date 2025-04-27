@@ -35,9 +35,9 @@ Send data to Marketing Cloud Personalization
 
 .. destination-salesforce-marketing-cloud-personalization-intro-start
 
-Use |ext_salesforce_sfmc_personalization_etl_data_feeds| to send |what-send| to |destination-name| using the built-in |plugin-name| destination in Amperity.
+Use `ETL data feeds <https://help.salesforce.com/s/articleView?id=sf.mc_pers_etl_integration_about.htm&type=5>`__ |ext_link| to send |what-send| to |destination-name| using the built-in |plugin-name| destination in Amperity.
 
-.. important:: Review the |ext_salesforce_sfmc_personalization_formatting_requirements| before configuring Amperity.
+.. important:: Review the `requirements for using ETL data feeds with CSV files <https://help.salesforce.com/s/articleView?id=sf.mc_pers_etl_user_profile_object_data_feed.htm&type=5>`__ |ext_link| before configuring Amperity.
 
 .. destination-salesforce-marketing-cloud-personalization-intro-end
 

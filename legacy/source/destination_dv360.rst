@@ -58,7 +58,7 @@ Send data to DV360
 
 .. destination-dv360-api-note-start
 
-.. note:: This destination uses the |ext_google_audience_partner_api|.
+.. note:: This destination uses the `Google Audience Partner API <https://support.google.com/google-ads/answer/7361372?hl=en>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start

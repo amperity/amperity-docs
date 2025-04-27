@@ -6,339 +6,102 @@
    <a href="https://docs.amperity.com" target="_blank">LINK_TEXT</a>
 
 
+.. TODO: Amperity link.
 
 .. |ext_amperity_assistant_privacy_faq| raw:: html
 
    <a href="https://docs.amperity.com/support/ai_assistant.html" target="_blank">AI Assistant Privacy FAQ</a>
 
 
+.. TODO: Amperity link.
+
 .. |ext_amperity_data_tables_png| raw:: html
 
    <a href="https://docs.amperity.com/reference/_images/data_tables.png" target="_blank">HERE</a>
 
+
+.. TODO: Amperity link.
 
 .. |ext_amperity_support_ticket| raw:: html
 
    <a href="https://docs.amperity.com/support/index.html" target="_blank">support ticket</a>
 
 
+.. TODO: Amperity link.
+
 .. |ext_amperity_system_status| raw:: html
 
    <a href="https://status.amperity.com/" target="_blank">Status page</a>
 
 
-.. |ext_attentive_mobile| raw:: html
-
-   <a href="https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload" target="_blank">subscriber segment upload</a>
-
-
-.. |ext_attentive_mobile_signup_units| raw:: html
-
-   <a href="https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units-" target="_blank">sign-up unit</a>
-
-
-.. |ext_attentive_mobile_api_rate_limits| raw:: html
-
-   <a href="https://docs.attentive.com/pages/api-rate-limits/" target="_blank">Attentive API rate limits</a>
-
-
-.. |ext_aws_allowlist| raw:: html
-
-   <a href="https://aws.amazon.com/premiumsupport/knowledge-center/iam-restrict-calls-ip-addresses/" target="_blank">denies access to AWS services that make calls on your behalf</a>
-
-
-.. |ext_aws_api_gateway| raw:: html
-
-   <a href="https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html" target="_blank">Amazon API Gateway</a>
-
-
-.. |ext_aws_bucket_policy| raw:: html
-
-   <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html" target="_blank">bucket policy</a>
-
-
-.. |ext_aws_cross_account_role| raw:: html
-
-   <a href="https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#cross-account-delivery-s3" target="_blank">cross-account role</a>
-
-
-.. |ext_azure_synapse_analytics_load_table_from_blob_storage| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool" target="_blank">Load data from Azure Blob Storage</a>
-
-
-.. |ext_byteordermark| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Byte_order_mark" target="_blank">byte order mark (BOM)</a>
-
-
-.. |ext_ccpa| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act" target="_blank">California Consumer Privacy Act (CCPA)</a>
-
-
-.. |ext_cheetah_digital_sftp_s3| raw:: html
-
-   <a href="https://docs.cheetahces.com/en-us/messaging/product/index.htm?#t=60_Data_Integration%2FFTP_Profiles.htm%23" target="_blank">SFTP</a>
-
-
-.. |ext_cordial_api_account_contact_attributes| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/204570347-Account-Contact-Attributes" target="_blank">Account Contract Attributes</a>
-
-
-.. |ext_cordial_api_account_lists| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/204570497-Account-Lists" target="_blank">Account Lists</a>
-
-
-.. |ext_cordial_api_contact_imports| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/203886058-Contact-Imports" target="_blank">Contact Imports</a>
-
-
-.. |ext_cordial_api_jobs| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/204570807-Jobs" target="_blank">Jobs</a>
-
-
-.. |ext_cordial_audience| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/115005532168-Audience-Builder" target="_blank">name of an audience</a>
-
-
-.. |ext_cordial_data_automations| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/360029407471" target="_blank">Cordial Data Automations</a>
-
-
-.. |ext_cordial_events_overview| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/115005528508-Events" target="_blank">behavioral data records for all contacts</a>
-
-
-.. |ext_cordial_jobs| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget" target="_blank">open Jobs</a>
-
-
-.. |ext_cordial_lists| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/115005528428-Lists" target="_blank">list names</a>
-
-
-.. |ext_cordial_system_events| raw:: html
-
-   <a href="https://support.cordial.com/hc/en-us/articles/4411361663501-System-events-reference-page" target="_blank">the full list of activity types</a>
-
-
-.. |ext_criteo_api| raw:: html
-
-   <a href="https://developers.criteo.com/marketing-solutions/docs" target="_blank">Criteo API</a>
-
-
-.. |ext_criteo_oauth_consent| raw:: html
-
-   <a href="https://consent.criteo.com/" target="_blank">revoke access for Amperity</a>
-
-
-.. |ext_criteo_portfolio| raw:: html
-
-   <a href="https://developers.criteo.com/marketing-solutions/docs/authorization-requests" target="_blank">select the portfolios</a>
-
-
-.. |ext_criteo_sftp| raw:: html
-
-   <a href="https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585" target="_blank">requirements for using SFTP to send transactions data to Criteo</a>
-
-
-.. |ext_cron| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">Cron</a>
-
-
-.. |ext_crontabguru| raw:: html
-
-   <a href="https://crontab.guru/" target="_blank">crontab guru</a>
-
-
-.. |ext_csv| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">comma-separated values (CSV)</a>
-
-
-.. |ext_domo_snowflake_oauth| raw:: html
-
-   <a href="https://domohelp.domo.com/hc/en-us/articles/360061552054-Snowflake-OAuth-Connector" target="_blank">Snowflake Oauth connector</a>
-
+.. TODO: This is a download.
 
 .. |ext_download_postman_api_streaming| raw:: html
 
    <a href="../downloads/postman/Amperity_Streaming_Ingest_REST_API.postman_collection.json" target="_blank">Postman collection for the Streaming Ingest REST API</a> <i class="fas fa-download"></i>
 
 
+.. TODO: This is a download.
+
 .. |ext_download_postman_api_refresh| raw:: html
 
    <a href="../downloads/postman/Amperity_Refresh_Token_API.postman_collection.json" target="_blank">Postman collection for the Refresh Token API</a> <i class="fas fa-download"></i>
 
+
+.. TODO: This is a download.
 
 .. |ext_download_postman_api_profile| raw:: html
 
    <a href="../downloads/postman/Amperity_Profile_API.postman_collection.json" target="_blank">Postman collection for the Profile API</a> <i class="fas fa-download"></i>
 
 
+.. TODO: This is a download.
+
 .. |ext_download_sales_transactions| raw:: html
 
    <a href="../downloads/xml/salestransactions.xml" target="_blank">example XML file</a> <i class="fas fa-download"></i>
 
+
+.. TODO: Keep this one as a consolidated external link.
 
 .. |ext_e164_format| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/E.164" target="_blank">E.164 format</a>
 
 
+.. TODO: This is a download.
+
 .. |ext_fiscal_calendar_download| raw:: html
 
    <a href="https://docs.amperity.com/downloads/csv/fiscal_calendar.csv" target="_blank">download an extended fiscal calendar (CSV file)</a>
 
+
+.. TODO: This is a download.
 
 .. |ext_gender_name_csv| raw:: html
 
    <a href="https://drive.google.com/file/d/1ZbqpmTbUxdO1vmDrAM3lL9VFqalb9qA8/view" target="_blank">gender_name_ratios.csv</a>
 
 
-.. |ext_google_analytics_batchget| raw:: html
-
-   <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/rest/v1beta/properties/batchRunReports" target="_blank">batchRunReports</a>
-
-
-.. |ext_google_analytics_fields| raw:: html
-
-   <a href="https://support.google.com/analytics/answer/3437719?hl=en" target="_blank">contains a predefined series of fields</a>
-
-
-.. |ext_google_analytics_hub| raw:: html
-
-   <a href="https://cloud.google.com/bigquery/docs/analytics-hub-introduction" target="_blank">Google Analytics Hub</a>
-
-
-.. |ext_google_audience_partner_api| raw:: html
-
-   <a href="https://support.google.com/google-ads/answer/7361372?hl=en" target="_blank">Google Audience Partner API</a>
-
-
-.. |ext_google_bigquery_load_parquet| raw:: html
-
-   <a href="https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-parquet" target="_blank">Parquet files</a>
-
-
-.. |ext_google_bigquery_load_csv| raw:: html
-
-   <a href="https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv" target="_blank">CSV files</a>
-
-
-.. |ext_google_bigquery_load_from_amazon_s3| raw:: html
-
-   <a href="https://cloud.google.com/bigquery-transfer/docs/s3-transfer" target="_blank">files from Amazon S3</a>
-
-
-.. |ext_google_bigquery_supported_connectors| raw:: html
-
-   <a href="https://learn.microsoft.com/en-us/power-query/connectors/" target="_blank">any supported connector</a>
-
-
-.. |ext_google_bigquery_transfer_from_cloud_storage| raw:: html
-
-   <a href="https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer" target="_blank">Transfer data from Cloud Storage</a>
-
+.. TODO: Keep this one as a consolidated external link.
 
 .. |ext_iso_31661alpha2| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 alpha-2</a>
 
 
+.. TODO: Keep this one as a consolidated external link.
+
 .. |ext_iso_4217| raw:: html
 
    <a href="https://www.iso.org/iso-4217-currency-codes.html" target="_blank">ISO 4217</a>
 
 
+.. TODO: Keep this one as a consolidated external link.
+
 .. |ext_iso_8601| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>
-
-
-.. |ext_rcfile| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/RCFile" target="_blank">Record Columnar File (RCFile)</a>
-
-
-.. |ext_rfc2822| raw:: html
-
-   <a href="https://tools.ietf.org/html/rfc2822" target="_blank">RFC 2822</a>
-
-
-.. |ext_rfc4180| raw:: html
-
-   <a href="https://tools.ietf.org/html/rfc4180" target="_blank">RFC 4180</a>
-
-
-.. |ext_rfc4880| raw:: html
-
-   <a href="https://tools.ietf.org/html/rfc4880" target="_blank">RFC 4880</a>
-
-
-.. |ext_rfc7519| raw:: html
-
-   <a href="https://tools.ietf.org/html/rfc7519" target="_blank">RFC 7519</a>
-
-
-.. |ext_rfc8259| raw:: html
-
-   <a href="https://datatracker.ietf.org/doc/html/rfc8259" target="_blank">RFC 8259</a>
-
-
-.. |ext_salesforce_interaction_studio_csv_feed| raw:: html
-
-   <a href="https://doc.evergage.com/display/EKB/CSV+Feed+Requirements" target="_blank">CSV feed requirements</a>
-
-
-.. |ext_salesforce_sfmc_data_extension| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5" target="_blank">data extension</a>
-
-
-.. |ext_salesforce_sfmc_data_extension_file_location| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_overview_create_file_transfer_location.htm&type=5" target="_blank">file location</a>
-
-
-.. |ext_salesforce_sfmc_import_definition| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_cab_imports.htm&type=5" target="_blank">import definition</a>
-
-
-.. |ext_salesforce_sfmc_management_console| raw:: html
-
-   <a href="https://mc.exacttarget.com/cloud/" target="_blank">Salesforce Marketing Cloud management console</a>
-
-
-.. |ext_salesforce_sfmc_management_console_data_extension_delete_rename| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5" target="_blank">delete or rename the data extension</a>
-
-
-.. |ext_salesforce_sfmc_personalization_etl_data_feeds| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_pers_etl_integration_about.htm&type=5" target="_blank">ETL data feeds</a>
-
-
-.. |ext_salesforce_sfmc_personalization_etl_file_requirements| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_pers_etl_file_requirements.htm&type=5" target="_blank">CSV file requirements</a>
-
-.. |ext_salesforce_sfmc_personalization_formatting_requirements| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_pers_etl_user_profile_object_data_feed.htm&type=5" target="_blank">requirements for using ETL data feeds with CSV files</a>
 
 
 .. TODO: Keep this one as a consolidated external link.

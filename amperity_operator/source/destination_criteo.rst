@@ -35,7 +35,7 @@ Send audiences to Criteo
 
 .. destination-criteo-api-note-start
 
-.. note:: This destination uses the |ext_criteo_api|.
+.. note:: This destination uses the `Criteo API <https://developers.criteo.com/marketing-solutions/docs>`__ |ext_link|.
 
 .. destination-criteo-api-note-end
 
@@ -79,7 +79,7 @@ Send transactions data
 
 You can send transactions data (offline events) to |destination-name| as a CSV or TSV file using SFTP.
 
-Review the |ext_criteo_sftp|, and then configure Amperity to connect to |destination-name| using the |destination_sftp| destination.
+Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to connect to |destination-name| using the |destination_sftp| destination.
 
 .. events-criteo-overview-end
 
@@ -141,9 +141,9 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-       .. important:: When configuring OAuth for |destination-name| you must |ext_criteo_portfolio| to which access will be granted.
+       .. important:: When configuring OAuth for |destination-name| you must `select the portfolios <https://developers.criteo.com/marketing-solutions/docs/authorization-requests>`__ |ext_link| to which access will be granted.
 
-          |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, |ext_criteo_oauth_consent|, and then reconfigure OAuth using the newly-generated link.
+          |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly-generated link.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -188,9 +188,9 @@ Configure credentials
 
 .. destination-criteo-configure-oauth-must-select-portfolios-start
 
-.. important:: When configuring OAuth for |destination-name| you must |ext_criteo_portfolio| to which access will be granted.
+.. important:: When configuring OAuth for |destination-name| you must `select the portfolios <https://developers.criteo.com/marketing-solutions/docs/authorization-requests>`__ |ext_link| to which access will be granted.
 
-   |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, |ext_criteo_oauth_consent|, and then reconfigure OAuth using the newly-generated link.
+   |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly-generated link.
 
 .. destination-criteo-configure-oauth-must-select-portfolios-end
 

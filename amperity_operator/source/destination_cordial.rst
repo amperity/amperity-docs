@@ -442,7 +442,7 @@ Required attributes are missing
 
 To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the list of attributes is correct for each treatment group in this campaign that is sending data to |destination-name|.
 
-#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
 #. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
@@ -463,7 +463,7 @@ To resolve this error, verify the attributes that are required by |destination-n
 
 To resolve this error, verify the attributes that are required by |destination-name|, and then verify that the query used with this orchestration is returning all required attributes.
 
-#. Open the |destination-name| management console, and then |ext_cordial_jobs|.
+#. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
 #. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
@@ -486,7 +486,7 @@ Unique list name required
 
 .. destination-cordial-workflow-actions-unique-list-name-required-start
 
-|destination-name| |ext_cordial_lists| must be unique.
+|destination-name| `list names <https://support.cordial.com/hc/en-us/articles/115005528428-Lists>`__ |ext_link| must be unique.
 
 To resolve this error, verify that the name of the list is unique.
 

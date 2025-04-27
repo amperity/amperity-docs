@@ -51,7 +51,7 @@ Get details
 
 .. source-cheetah-digital-get-details-start
 
-Configure |source-name| to use |ext_cheetah_digital_sftp_s3|:
+Configure |source-name| to use `SFTP <https://docs.cheetahces.com/en-us/messaging/product/index.htm?#t=60_Data_Integration%2FFTP_Profiles.htm%23>`__ |ext_link|:
 
 .. list-table::
    :widths: 10 90
