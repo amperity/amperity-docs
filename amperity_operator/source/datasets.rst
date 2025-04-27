@@ -28,39 +28,71 @@ For example, data that is streamed to Amperity to provide the underlying data th
 .. datasets-about-end
 
 
-.. _datasets-customer-profile:
+.. _datasets-sources:
 
-Customer profile
+Data sources
 ==================================================
 
-.. TODO: Add link to databases.rst for "most often represented by the Customer 360 database" and filtered_360_databases.rst for "filtering databases by brand".
+.. TODO: Link to sources cardwall, bridge overview, and individual source datasets.
+
+.. datasets-sources-start
+
+Each `data source <https://docs.amperity.com/sources.html>`__ or :doc:`data asset <data_assets>` that is made available to your Amperity tenant acts as a dataset that can be used as a building block for customer profiles. The combination of source datasets is unique to your brand and depends on what types of data your brand wants to make available to Amperity.
+
+.. datasets-sources-end
+
+
+.. _datasets-customer-profile:
+
+Customer profiles
+==================================================
 
 .. datasets-customer-360-start
 
 A customer profile dataset contains a collection of unified customer profiles that your brand can use to build audiences that enable any marketing workflow.
 
-A customer profile dataset is most often represented by the **Customer 360** database in your Amperity tenant. This may be configured to filter databases by brand.
+A customer profile dataset is most often represented by the **Customer 360** database in your Amperity tenant. This may be configured to :doc:`filter databases by brand <filtered_360_databases>`.
 
 .. datasets-customer-360-end
+
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-profiles-start
+   :end-before: .. databases-profiles-end
+
+.. image:: ../../images/mockup-customer360-tab-customer-profile.png
+   :width: 600 px
+   :alt: Customer 360 page, customer profile
+   :align: left
+   :class: no-scaled-link
+
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-profiles-context-start
+   :end-before: .. databases-profiles-context-end
+
+
+.. _datasets-flexible-merge-rules:
+
+Flexible merge rules
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-flexible-merge-rules-start
+   :end-before: .. databases-flexible-merge-rules-end
 
 
 .. _datasets-realtime:
 
-Real-time
+Real-time tables
 ==================================================
 
-.. TODO: Add link to realtime.rst for "real-time dataset contains data that is streamed to Amperity".
-
-.. datasets-realtime-start
-
-A real-time dataset contains data that is streamed to Amperity, processed quickly within Amperity, and then made avaialable to use cases that require access to time-sensitive data that is updated more frequently than batched workflows.
-
-.. datasets-realtime-end
+.. include:: ../../amperity_operator/source/realtime.rst
+   :start-after: .. real-time-about-start
+   :end-before: .. real-time-about-end
 
 
 .. _datasets-stitched:
 
-Stitched
+Stitched tables
 ==================================================
 
 .. datasets-stitched-start
@@ -77,61 +109,10 @@ A stitched dataset contains a collection of unified customer profiles that are m
 Standard core tables
 --------------------------------------------------
 
-.. TODO: Hook the following section in as an include.
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-core-tables-standard-start
+   :end-before: .. term-core-tables-standard-end
 
-.. TODO: Need to move some content about core tables into the operators guide.
-
-.. databases-core-table-type-standard-start
-
-Standard core tables belong to one of the following broad categories:
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 0
-
-   * - **Stitched domain tables**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-domain-table-stitched-start
-          :end-before: .. term-domain-table-stitched-end
-
-       .. image:: ../../images/howitworks-standard-core-table.png
-          :width: 440 px
-          :alt: Standard core tables.
-          :align: left
-          :class: no-scaled-link
-
-       Stitched versions of domain tables have an added column for the Amperity ID and replace the source domain table within Amperity for all downstream use cases, but are otherwise identical to the source domain table.
-
-   * - **Unified tables**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-unified-tables-start
-          :end-before: .. term-unified-tables-end
-
-       The collection of unified tables that is generated within your tenant depends on the types of semantic tags that were applied to feeds and/or custom domain tables in the **Sources** tab.
-
-   * - **Stitch QA tables**
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-stitch-qa-tables-start
-          :end-before: .. term-stitch-qa-tables-end
-
-       Some Stitch QA tables are required by databases that are configured as customer 360 databases; most are only available from databases that are configured as a Stitch QA database.
-
-.. databases-core-table-type-standard-end
-
-
-.. _datasets-sources:
-
-Source
-==================================================
-
-.. TODO: Link to sources cardwall, bridge overview, and individual source datasets.
-
-.. datasets-sources-start
-
-Each data source or data asset that is made available to your Amperity tenant acts as a dataset that can be used as a building block for a stitched dataset, a real-time dataset, or a customer 360 dataset.
-
-The list of possible source datasets is unique to your brand and depends on what types of data your brand wants to make available to Amperity.
-
-Amperity provides a collection of standard source datasets, such as fiscal calendars, common nicknames, standardizations, that your brand can use to simplify how your brand's data is understood by Amperity.
-
-.. datasets-sources-end
+.. include:: ../../amperity_reference/source/databases.rst
+   :start-after: .. databases-core-table-type-standard-start
+   :end-before: .. databases-core-table-type-standard-end
