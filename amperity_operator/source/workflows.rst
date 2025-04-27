@@ -14,7 +14,7 @@
         Automate workflows
 
 ==================================================
-Automate workflows
+About scheduled workflows
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -37,30 +37,26 @@ An automated workflow is configured to run these steps automatically, and then s
 .. workflows-about-end
 
 
-.. _workflows-configure-scheduled:
+.. _workflows-configure-automation-settings:
 
-Scheduled workflows
+Automation settings
 ==================================================
 
-.. workflows-configure-scheduled-start
+.. workflows-configure-automation-settings-start
 
 A workflow can be configured to run at defined intervals, such as daily or weekly, and then can be configured to run specific couriers, bridges, and activations.
 
-.. workflows-configure-scheduled-end
+.. workflows-configure-automation-settings-end
 
 
 .. _workflows-configure-activate:
 
-Activate
+Set to active
 --------------------------------------------------
 
-.. courier-groups-setting-activate-start
-
-A courier group must be activated in order for it to run on an end-to-end schedule that pulls data to Amperity using couriers, syncs data using bridges, runs Stitch, refreshes databases, and then runs any orchestration, orchestration group, campaign, or profile API endpoint that is associated with the courier group.
-
-A courier group that is deactivated may be run manually.
-
-.. courier-groups-setting-activate-end
+.. include:: ../../amperity_reference/source/courier_groups.rst
+   :start-after: .. courier-groups-setting-activate-start
+   :end-before: .. courier-groups-setting-activate-end
 
 
 .. _workflows-configure-name:
@@ -77,7 +73,7 @@ Give the workflow a clear and succinct name that is meaningful. This name will a
 
 .. _workflows-configure-schedule:
 
-Schedule
+Define schedule
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
@@ -92,42 +88,26 @@ Schedule
    :start-after: .. term-crontab-syntax-start
    :end-before: .. term-crontab-syntax-end
 
-.. courier-groups-schedules-start
+.. include:: ../../amperity_reference/source/courier_groups.rst
+   :start-after: .. courier-groups-schedules-start
+   :end-before: .. courier-groups-schedules-end
 
-Amperity uses cron syntax to schedule the time at which a courier group is available for transferring files from a customer data source location to Amperity. A courier group that is scheduled runs automatically. Schedules are in UTC.
+.. include:: ../../amperity_reference/source/courier_groups.rst
+   :start-after: .. courier-groups-schedules-note-start
+   :end-before: .. courier-groups-schedules-note-end
 
-.. courier-groups-schedules-end
+.. include:: ../../amperity_reference/source/courier_groups.rst
+   :start-after: .. courier-groups-schedules-context-start
+   :end-before: .. courier-groups-schedules-context-end
 
-.. courier-groups-schedules-note-start
-
-.. note:: Scheduling a courier group is optional. When a courier group is not assigned a schedule, it may be run manually on an ad hoc basis.
-
-.. courier-groups-schedules-note-end
-
-.. courier-groups-schedules-context-start
-
-A courier group that is scheduled to run on a daily basis will check for files on a daily basis.
-
-A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
-
-When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
-
-To use this approach, it is recommended to configure your upstream systems to make their files available to the courier group on a schedule that ensures they will be available to the courier group within a 24-hour window. This window is based on the schedule that is defined for the courier group.
-
-Configure the courier group to run at the end of that 24-hour window, and then enable the **Only retrieve files dropped in the past day?** option, which forces the courier group to only look for files that were made available within the previous 24 hours.
-
-.. courier-groups-schedules-context-end
-
-.. courier-groups-schedules-tip-start
-
-.. tip:: Daylight savings time can affect a schedule. Be sure to set the schedule to be stable and not require changes over time. For example: if a schedule is set to 12:30 AM, and then you fall back, the schedule may become 11:30 PM (fall back) or 1:30 AM (spring forward).
-
-.. courier-groups-schedules-tip-end
+.. include:: ../../amperity_reference/source/courier_groups.rst
+   :start-after: .. courier-groups-schedules-tip-start
+   :end-before: .. courier-groups-schedules-tip-end
 
 
 .. _workflows-configure-alerts:
 
-Alerts
+Configure alerts
 --------------------------------------------------
 
 .. workflows-configure-alerts-start
@@ -142,25 +122,12 @@ The following alerts can be configured:
 
 .. _workflows-configure-run-type:
 
-Run type
+Set the run type
 --------------------------------------------------
 
-.. courier-groups-run-types-start
-
-A courier group can be configured with any of the following run types:
-
-**Full**
-   A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
-
-**Refresh**
-   A refresh workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
-
-   .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
-
-**Source**
-   An source workflow refreshes domain tables, but does not run Stitch.
-
-.. courier-groups-run-types-end
+.. include:: ../../amperity_reference/source/courier_groups.rst
+   :start-after: .. courier-groups-run-types-start
+   :end-before: .. courier-groups-run-types-end
 
 
 .. _workflows-couriers:
@@ -285,19 +252,9 @@ Activations are orchestrations, campaigns, and Profile API indexes that are conf
 Orchestrations
 --------------------------------------------------
 
-.. TODO: Set this to be an include.
-
-.. orchestrations-run-automatic-start
-
-An orchestration can be configured to run after a courier when the run mode is set to **Automatic** and an active courier group is selected from the dropdown menu.
-
-.. image:: ../../images/mockup-activation-scheduled-orchestration.png
-   :width: 420 px
-   :alt: Add an orchestration to a scheduled workgroup.
-   :align: center
-   :class: no-scaled-link
-
-.. orchestrations-run-automatic-start
+.. include:: ../../amperity_reference/source/orchestrations.rst
+   :start-after: .. orchestrations-run-automatic-start
+   :end-before: .. orchestrations-run-automatic-start
 
 
 .. _workflows-profile-api:
@@ -305,19 +262,9 @@ An orchestration can be configured to run after a courier when the run mode is s
 Profile API indexes
 --------------------------------------------------
 
-.. TODO: Set this to be an include.
-
-.. profile-api-enable-run-as-workflow-start
-
-A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the dropdown menu.
-
-.. image:: ../../images/mockup-activation-scheduled-profile-api.png
-   :width: 420 px
-   :alt: Refresh a Profile API index as part of a scheduled workgroup.
-   :align: center
-   :class: no-scaled-link
-
-.. profile-api-enable-run-as-workflow-end
+.. include:: ../../amperity_operator/source/api_profile.rst
+   :start-after: .. profile-api-enable-run-as-workflow-start
+   :end-before: .. profile-api-enable-run-as-workflow-end
 
 
 .. _workflows-campaigns:
@@ -325,16 +272,6 @@ A Profile API index can be configured to be refreshed as part of a scheduled wor
 Recurring campaigns
 --------------------------------------------------
 
-.. TODO: Set this to be an include.
-
-.. campaigns-run-as-part-of-workflow-start
-
-A recurring campaign can be configured to run as part of a scheduled workflow when the schedule is set to **Run as part of workflow** and an active courier group is selected from the dropdown menu.
-
-.. image:: ../../images/mockup-activation-scheduled-campaign.png
-   :width: 420 px
-   :alt: Add a campaign as part of a scheduled workgroup.
-   :align: center
-   :class: no-scaled-link
-
-.. campaigns-run-as-part-of-workflow-end
+.. include:: ../../amperity_reference/source/campaigns.rst
+   :start-after: .. campaigns-run-as-part-of-workflow-start
+   :end-before: .. campaigns-run-as-part-of-workflow-end

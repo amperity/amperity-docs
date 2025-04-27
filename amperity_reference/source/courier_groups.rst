@@ -161,7 +161,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-     - Define how the courier group will run: a **Full workflow**, a **Partial workflow**, or an **Ingest only** workflow.
+     - Define how the courier group will run: a **Full**, a **Refresh**, or an **Source** workflow.
 
        .. image:: ../../images/mockups-workflow-courier-group-run-types.png
           :width: 400 px
@@ -169,11 +169,13 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-       A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
+       A **Full** workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-       A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+       A **Refresh** workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
-       An ingest-only workflow refreshes domain tables, but does not run Stitch.
+       .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
+
+       A **Source** workflow refreshes domain tables, but does not run Stitch.
 
 
    * - .. image:: ../../images/steps-06.png
@@ -258,9 +260,9 @@ Activate courier group
 
 .. courier-groups-setting-activate-start
 
-A courier group :ref:`must be activated <courier-groups-howto-activate>` in order for it to run on an end-to-end schedule that pulls data to Amperity using couriers, syncs data using bridges, runs Stitch, refreshes databases, and then runs any orchestration, orchestration group, campaign, or profile API endpoint that is associated with the courier group.
+A courier group must be activated in order for it to run on an end-to-end schedule that pulls data to Amperity using couriers, syncs data using bridges, runs Stitch, refreshes databases, and then runs any orchestration, orchestration group, campaign, or profile API endpoint that is associated with the courier group.
 
-A courier group that is :ref:`deactivated <courier-groups-howto-deactivate>` may be run manually.
+A courier group that is deactivated may be run manually.
 
 .. courier-groups-setting-activate-end
 
@@ -290,16 +292,16 @@ Run types
 
 A courier group can be configured with any of the following run types:
 
-**Full workflow**
+**Full**
    A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-**Partial workflow**
-   A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+**Refresh**
+   A refresh workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
    .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
 
-**Ingest-only workflow**
-   An ingest-only workflow refreshes domain tables, but does not run Stitch.
+**Source**
+   A source workflow refreshes domain tables, but does not run Stitch.
 
 .. courier-groups-run-types-end
 
