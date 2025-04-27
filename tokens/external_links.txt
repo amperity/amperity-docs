@@ -233,51 +233,6 @@
    <a href="https://docs.cheetahces.com/en-us/messaging/product/index.htm?#t=60_Data_Integration%2FFTP_Profiles.htm%23" target="_blank">SFTP</a>
 
 
-.. |ext_clienteling| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Clienteling" target="_blank">a technique used by retail sales associates to establish long-term relationships</a>
-
-
-.. |ext_common_data_service_web_api| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9" target="_blank">Common Data Service Web API</a>
-
-
-.. |ext_common_data_service_web_api_contact| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact" target="_blank">Contact</a>
-
-
-.. |ext_common_data_service_web_api_list| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/list" target="_blank">List</a>
-
-
-.. |ext_common_data_service_web_api_campaign| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaign" target="_blank">Campaign</a>
-
-
-.. |ext_common_data_service_web_api_campaignactivity| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignactivity" target="_blank">CampaignActivity</a>
-
-
-.. |ext_common_data_service_web_api_campaignresponse| raw:: html
-
-   <a href="CampaignResponse <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignresponse" target="_blank">CampaignResponse</a>
-
-
-.. |ext_common_data_service_web_api_customeraddress| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/customeraddress" target="_blank">CustomerAddress</a>
-
-
-.. |ext_common_data_service_web_api_entittype_reference| raw:: html
-
-   <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/entitytypes?view=dynamics-ce-odata-9" target="_blank">Web API EntityType Reference</a>
-
-
 .. |ext_cordial_api_account_contact_attributes| raw:: html
 
    <a href="https://support.cordial.com/hc/en-us/articles/204570347-Account-Contact-Attributes" target="_blank">Account Contract Attributes</a>
@@ -543,40 +498,6 @@
    <a href="https://docs.databricks.com/spark/latest/spark-sql/language-manual/delta-copy-into.html" target="_blank">COPY INTO</a>
 
 
-.. |ext_delta_sharing| raw:: html
-
-   <a href="https://delta.io/sharing/" target="_blank">Delta Sharing</a>
-
-
-.. |ext_digital_markets_act| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Digital_Markets_Act" target="_blank">Digital Markets Act</a>
-
-
-.. |ext_domo_business_intelligence| raw:: html
-
-   <a href="https://www.domo.com/business-intelligence" target="_blank">data visualization workflows</a>
-
-
-.. |ext_domo_databricks| raw:: html
-
-   <a href="https://domo-support.domo.com/s/article/4420495020567?language=en_US" target="_blank">Databricks Connector</a>
-
-.. |ext_domo_dataset| raw:: html
-
-   <a href="https://domohelp.domo.com/hc/en-us/articles/360042926274-Adding-a-DataSet-Using-a-Connector" target="_blank">DataSet</a>
-
-
-.. |ext_domo_s3_connector| raw:: html
-
-   <a href="https://domohelp.domo.com/hc/en-us/articles/360043436393-Amazon-S3-Connector" target="_blank">send data to a customer-managed Amazon S3 bucket</a>
-
-
-.. |ext_domo_snowflake| raw:: html
-
-   <a href="https://domohelp.domo.com/hc/en-us/articles/360042931814-Snowflake-Connector" target="_blank">Snowflake connector</a>
-
-
 .. |ext_domo_snowflake_oauth| raw:: html
 
    <a href="https://domohelp.domo.com/hc/en-us/articles/360061552054-Snowflake-OAuth-Connector" target="_blank">Snowflake Oauth connector</a>
@@ -600,11 +521,6 @@
 .. |ext_download_sales_transactions| raw:: html
 
    <a href="../downloads/xml/salestransactions.xml" target="_blank">example XML file</a> <i class="fas fa-download"></i>
-
-
-.. |ext_dv360_placement_options| raw:: html
-
-   <a href="https://support.google.com/displayvideo/answer/2697401?hl=en" target="_blank">available placement options</a>
 
 
 .. |ext_e164_format| raw:: html
@@ -847,40 +763,6 @@
    <a href="https://support.google.com/google-ads/answer/9510373" target="_blank">search results on Google.com</a>
 
 
-.. |ext_google_shopping| raw:: html
-
-   <a href="https://support.google.com/google-ads/answer/2454022" target="_blank">Shopping tab on Google.com</a>
-
-
-.. |ext_hubspot_api| raw:: html
-
-   <a href="https://developers.hubspot.com/docs/api/overview" target="_blank">HubSpot API</a>
-
-
-.. |ext_hubspot_email_validation| raw:: html
-
-   <a href="https://developers.hubspot.com/docs/api/faq" target="_blank">specific requirements for email address validation</a>
-
-
-.. |ext_hubspot_super_admin| raw:: html
-
-   <a href="https://knowledge.hubspot.com/settings/hubspot-user-permissions-guide#super-admin" target="_blank">Super Admin level privileges</a>
-
-
-.. |ext_iana_timezone| raw:: html
-
-   <a href="https://www.iana.org/time-zones" target="_blank">IANA Time Zone Database</a>
-
-
-.. |ext_iana_valid_tld| raw:: html
-
-   <a href="https://data.iana.org/TLD/tlds-alpha-by-domain.txt" target="_blank">https://data.iana.org/TLD/tlds-alpha-by-domain.txt</a>
-
-
-.. |ext_infutor| raw:: html
-
-   <a href="https://infutor.com/" target="_blank">Infutor</a>
-
 
 .. |ext_iso_31661alpha2| raw:: html
 
@@ -895,36 +777,6 @@
 .. |ext_iso_8601| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>
-
-
-.. |ext_itef_deprecation_header| raw:: html
-
-   <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header" target="_blank">Deprecation Header</a>
-
-
-.. |ext_jodatime| raw:: html
-
-   <a href="https://www.joda.org/joda-time/" target="_blank">Joda-Time</a>
-
-
-.. |ext_jodatime_datetime_format_friendly| raw:: html
-
-   <a href="https://www.joda.org/joda-time/key_format.html" target="_blank">Joda-Time pattern-based formatting</a>
-
-
-.. |ext_jwt| raw:: html
-
-   <a href="https://jwt.io/" target="_blank">JSON Web Token (JWT)</a>
-
-
-.. |ext_kustomer_api| raw:: html
-
-   <a href="https://developer.kustomer.com/kustomer-api-docs/reference/introduction" target="_blank">Kustomer API</a>
-
-
-.. |ext_kustomer_api_key| raw:: html
-
-   <a href="https://developer.kustomer.com/kustomer-api-docs/reference/authentication" target="_blank">Kustomer API key</a>
 
 
 .. |ext_microsoft_dynamics_web_api| raw:: html
@@ -975,41 +827,6 @@
 .. |ext_oracle_eloqua_api_bulk_loader_best_practices| raw:: html
 
    <a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-develop/Developers/BulkAPI/BestPractices/best-practices.htm?Highlight=off-peak" target="_blank">Bulk API Best Practices</a>
-
-
-.. |ext_oracle_eloqua_shared_lists| raw:: html
-
-   <a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm" target="_blank">shared lists</a>
-
-
-.. |ext_oracle_eloqua_shared_lists_custom| raw:: html
-
-   <a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm" target="_blank">custom attributes</a>
-
-
-.. |ext_oracle_eloqua_shared_lists_defaults| raw:: html
-
-   <a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm" target="_blank">default attributes</a>
-
-
-.. |ext_oracle_responsys_connect| raw:: html
-
-   <a href="https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm" target="_blank">Connect</a>
-
-
-.. |ext_oracle_responsys_connect_help_center| raw:: html
-
-   <a href="https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm" target="_blank">Oracle Responsys help center page</a>
-
-
-.. |ext_orc| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Apache_ORC" target="_blank">Optimized Row Columnar (ORC)</a>
-
-
-.. |ext_pgp| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" target="_blank">Pretty Good Privacy (PGP)</a>
 
 
 .. |ext_pinterest_api_authentication| raw:: html
@@ -1171,52 +988,11 @@
    <a href="https://help.salesforce.com/s/articleView?id=sf.mc_pers_etl_user_profile_object_data_feed.htm&type=5" target="_blank">requirements for using ETL data feeds with CSV files</a>
 
 
-.. |ext_salesforce_sfmc_personalization_limits| raw:: html
-
-   <a href="https://help.salesforce.com/s/articleView?id=sf.mc_pers_limits.htm&type=5" target="_blank">personalization limits</a>
-
-
-.. |ext_salesforce_sfmc_soap_api| raw:: html
-
-   <a href="https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/soap_tech_articles_de.html" target="_blank">Marketing Cloud SOAP API</a>
-
-
-.. |ext_salesforce_sfmc_soap_api_subdomain| raw:: html
-
-   <a href="https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html" target="_blank">SOAP base URI for the authentication subdomain</a>
-
-
-
-
-
-
-
-.. TODO: Keep Salesforce Pardot A because it's in a variable in a source topic.
-
-.. |ext_salesforce_pardot| raw:: html
-
-   <a href="https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html" target="_blank">Pardot API</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .. TODO: Keep this one as a consolidated external link.
 
 .. |ext_snappass| raw:: html
 
    <a href="https://snappass.amperity.com/" target="_blank">Snappass</a>
-
-
 
 
 .. TODO: Keep this one as a consolidated external link.
@@ -1226,15 +1002,11 @@
    <a href="https://docs.snowflake.com/en/user-guide/jdbc.html" target="_blank">Snowflake JDBC driver</a>
 
 
-
-
 .. TODO: Keep this one as a consolidated external link.
 
 .. |ext_snowflake_odbc| raw:: html
 
    <a href="https://docs.snowflake.com/en/user-guide/odbc.html" target="_blank">Snowflake ODBC driver</a>
-
-
 
 
 .. TODO: Keep this one as a consolidated external link.

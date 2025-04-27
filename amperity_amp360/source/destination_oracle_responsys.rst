@@ -31,7 +31,7 @@ Send query results to Oracle Responsys
 
 .. sendto-oracle-responsys-important-start
 
-.. important:: After files are delivered to |destination-name| from Amperity you must configure an job (one time or recurring) that imports this data into a :ref:`profile list or profile extension table <sendto-oracle-responsys-import>` using |ext_oracle_responsys_connect|.
+.. important:: After files are delivered to |destination-name| from Amperity you must configure an job (one time or recurring) that imports this data into a :ref:`profile list or profile extension table <sendto-oracle-responsys-import>` using `Connect <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link|.
 
 .. sendto-oracle-responsys-important-end
 
@@ -104,7 +104,7 @@ Import results to Reponsys
 
 .. sendto-oracle-responsys-import-start
 
-After these files are delivered to |destination-name| you must import this data into a profile list or profile extension table using |ext_oracle_responsys_connect|.
+After these files are delivered to |destination-name| you must import this data into a profile list or profile extension table using `Connect <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link|.
 
 * A profile list stores information for all customers, and then maintains a profile.
 * A profile extension table stores additional attributes that define behavioral, demographic, or profile preference characteristics for your customer profiles.
@@ -113,7 +113,7 @@ After these files are delivered to |destination-name| you must import this data 
 
 **To import results to Oracle Responsys**
 
-.. tip:: See the |ext_oracle_responsys_connect_help_center| for complete steps on importing results from Amperity. This section provides an overview, and then highlights specific settings as they relate to how you configured your results to be sent from Amperity.
+.. tip:: See the `Oracle Responsys help center page <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link| for complete steps on importing results from Amperity. This section provides an overview, and then highlights specific settings as they relate to how you configured your results to be sent from Amperity.
 
 #. From the **Data** side navigation bar, select **Connect** > **Create Job** > **Import Profile Data**. Add the required details to describe the job, and then click **Done**.
 #. Connect to a server.

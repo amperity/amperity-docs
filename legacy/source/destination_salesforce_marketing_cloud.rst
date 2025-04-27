@@ -89,7 +89,7 @@ A |destination-name| destination works like this:
 
        .. admonition:: When does Amperity use an API?
 
-          Amperity uses the |ext_salesforce_sfmc_soap_api| to manage the installed package and manage the |ext_salesforce_sfmc_import_definition| process, which gets the contact data from the |what-send| that were sent from Amperity and then either adds a data extension or updates an existing data extension.
+          Amperity uses the `Marketing Cloud SOAP API <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/soap_tech_articles_de.html>`__ |ext_link| to manage the installed package and manage the |ext_salesforce_sfmc_import_definition| process, which gets the contact data from the |what-send| that were sent from Amperity and then either adds a data extension or updates an existing data extension.
 
        .. note:: You may configure Amperity to send |what-send| to |destination-name| using only SFTP. This will place the |what-send| in the configured SFTP location, but will require configuring the |ext_salesforce_sfmc_data_extension| and |ext_salesforce_sfmc_import_definition| and any process that moves that data from the SFTP location to the data extension.
 
@@ -158,7 +158,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - For the installed package: the API client ID, API client secret, and the |ext_salesforce_sfmc_soap_api_subdomain|.
+     - For the installed package: the API client ID, API client secret, and the `SOAP base URI for the authentication subdomain <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html>`__ |ext_link|.
 
        .. admonition:: What is the authentication subdomain for the SOAP base URI?
 

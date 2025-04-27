@@ -87,7 +87,7 @@ API Keys and JWTs
 
 .. streaming-ingest-rest-api-keys-and-jwt-start
 
-Amperity uses a |ext_jwt| for authentication to the Streaming Ingest API. A single access token may be used to access any endpoint in your tenant's Streaming Ingest API.
+Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Streaming Ingest API. A single access token may be used to access any endpoint in your tenant's Streaming Ingest API.
 
 The access token is self-generated from the Amperity user interface and authorizes write access to the Streaming Ingest API for your tenant. A self-generated access token ensures that only your team has access to the token and supports organizational security policies like periodic access token rotation.
 

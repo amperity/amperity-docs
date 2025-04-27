@@ -6,7 +6,7 @@
 .. |feed-name| replace:: OnlinePromotions
 .. |example-filename| replace:: tablename_YYYY-MM-DD.csv
 .. |domain-table-name| replace:: |source-name|:|feed-name|
-.. |source-interface| replace:: the |ext_salesforce_pardot|
+.. |source-interface| replace:: the `Pardot API <https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html>`__ |ext_link|
 .. |what-pull| replace:: prospect, opportunity, and visitor data
 
 

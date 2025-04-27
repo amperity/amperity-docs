@@ -451,7 +451,7 @@ Access token
 
 .. profile-api-enable-api-jwt-start
 
-Amperity uses a |ext_jwt| for authentication to the Profile API. A single access token may be used to access any endpoint in your tenant's Profile API.
+Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Profile API. A single access token may be used to access any endpoint in your tenant's Profile API.
 
 The access token is self-generated from the Amperity user interface and authorizes requests to all endpoints in the Profile API for your tenant. A self-generated access token ensures that only your team has access to the token and supports organizational security policies like periodic access token rotation.
 

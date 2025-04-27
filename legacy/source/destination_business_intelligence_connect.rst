@@ -593,7 +593,7 @@ Domo
 
 .. destination-bic-connect-to-domo-start
 
-Configure Domo to connect to the |bic| data warehouse using the |ext_domo_snowflake| or the |ext_domo_snowflake_oauth|.
+Configure Domo to connect to the |bic| data warehouse using the `Snowflake connector <https://domohelp.domo.com/hc/en-us/articles/360042931814-Snowflake-Connector>`__ |ext_link| or the `Snowflake connector <https://domohelp.domo.com/hc/en-us/articles/360061552054-Snowflake-OAuth-Connector>`__ |ext_link|.
 
 .. destination-bic-connect-to-domo-end
 

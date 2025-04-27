@@ -6,7 +6,7 @@
 .. |feed-name| replace:: Customer
 .. |example-filename| replace:: tablename_YYYY-MM-DD.csv
 .. |domain-table-name| replace:: |source-name|:|feed-name|
-.. |source-interface| replace:: the |ext_kustomer_api|
+.. |source-interface| replace:: the `Kustomer API <https://developer.kustomer.com/kustomer-api-docs/reference/introduction>`__ |ext_link|
 .. |what-pull| replace:: customer experience, service, and support data
 
 
@@ -73,7 +73,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - A |ext_kustomer_api_key|, along with the **org.user.read** role for that API key.
+     - A `Kustomer API key <https://developer.kustomer.com/kustomer-api-docs/reference/authentication>`__ |ext_link|, along with the **org.user.read** role for that API key.
 
        .. include:: ../../shared/sources.rst
           :start-after: .. sources-get-details-fivetran-connect-start

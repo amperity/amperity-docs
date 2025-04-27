@@ -32,7 +32,7 @@ Send data to Domo
 
 .. destination-domo-context-start
 
-You can use a variety of |ext_domo_business_intelligence| to analyze data in Domo. Send query results from Amperity as |what-send| to a customer-managed Amazon S3 bucket, and then load that data to |destination-name| as a |ext_domo_dataset|.
+You can use a variety of `data visualization workflows <https://www.domo.com/business-intelligence>`__ |ext_link| to analyze data in Domo. Send query results from Amperity as |what-send| to a customer-managed Amazon S3 bucket, and then load that data to |destination-name| as a `DataSet <https://domohelp.domo.com/hc/en-us/articles/360042926274-Adding-a-DataSet-Using-a-Connector>`__ |ext_link|.
 
 .. destination-domo-context-end
 
@@ -44,7 +44,7 @@ Get details
 
 .. destination-domo-get-details-start
 
-Amperity can be configured to |ext_domo_s3_connector|. Send data from Amperity to a customer-managed Amazon S3 bucket :ref:`using cross-account roles <destination-domo-credentials-role-to-role>`, and then connect |destination-name| to that Amazon S3 bucket.
+Amperity can be configured to `send data to a customer-managed Amazon S3 bucket <https://domohelp.domo.com/hc/en-us/articles/360043436393-Amazon-S3-Connector>`__ |ext_link|. Send data from Amperity to a customer-managed Amazon S3 bucket :ref:`using cross-account roles <destination-domo-credentials-role-to-role>`, and then connect |destination-name| to that Amazon S3 bucket.
 
 .. destination-domo-get-details-end
 

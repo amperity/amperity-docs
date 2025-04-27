@@ -2425,6 +2425,15 @@ J
 K
 ==================================================
 
+
+.. _k-kibo:
+
+**Kibo**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-kibo-start
+      :end-before: .. term-kibo-end
+
+
 .. _k-klaviyo:
 
 **Klaviyo**
@@ -2846,9 +2855,7 @@ M
 .. _m-monetate:
 
 **Monetate**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-monetate-start
-      :end-before: .. term-monetate-end
+   See :ref:`Kibo <k-kibo>`
 
 
 .. _m-mosaic-usa:

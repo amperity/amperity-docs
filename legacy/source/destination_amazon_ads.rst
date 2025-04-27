@@ -606,7 +606,7 @@ Missing required field
 
 .. destination-amazon-ads-workflow-actions-missing-required-field-start
 
-|destination-name| requires the **country** field to be included in query results. This helps |destination-name| identify if user data was collected within a country that is regulated by the |ext_digital_markets_act|, a European Union regulation that seeks to make the digital economy fairer and more equitable for all participants.
+|destination-name| requires the **country** field to be included in query results. This helps |destination-name| identify if user data was collected within a country that is regulated by the `Digital Markets Act <https://en.wikipedia.org/wiki/Digital_Markets_Act>`__ |ext_link|, a European Union regulation that seeks to make the digital economy fairer and more equitable for all participants.
 
 .. destination-amazon-ads-workflow-actions-missing-required-field-end
 

@@ -32,7 +32,7 @@ Acquiring third-party data should be an important part of the effort to better u
 
 When third-party data is provided to Amperity alongside rich sets of first-party data, Amperity can support many use cases that can become part of your brand's strategy to build a complete understanding of your customers.
 
-.. note:: Amperity does not directly license third-party data sources and instead offers a solution that can work with third-party data vendors, such as |ext_infutor| (a recommended partner of Amperity) or the third-party data vendor of your choice. Amperity is focused on first-party data; it is the responsibility of the customer to determine which types of third-party data will be provided to Amperity.
+.. note:: Amperity does not directly license third-party data sources and instead offers a solution that can work with third-party data vendors, such as `Infutor <https://infutor.com/>`__ |ext_link| (a recommended partner of Amperity) or the third-party data vendor of your choice. Amperity is focused on first-party data; it is the responsibility of the customer to determine which types of third-party data will be provided to Amperity.
 
 .. data-third-party-end
 

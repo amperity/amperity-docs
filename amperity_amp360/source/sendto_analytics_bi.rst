@@ -114,7 +114,7 @@ Domo
 
 .. sendto-analytics-bi-tool-domo-start
 
-You can use a variety of |ext_domo_business_intelligence| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to Domo as a |ext_domo_dataset|.
+You can use a variety of `data visualization workflows <https://www.domo.com/business-intelligence>`__ |ext_link| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to Domo as a `DataSet <https://domohelp.domo.com/hc/en-us/articles/360042926274-Adding-a-DataSet-Using-a-Connector>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-domo-end
 

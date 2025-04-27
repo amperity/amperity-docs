@@ -250,7 +250,7 @@ Date components
 
 .. couriers-files-patterns-date-components-start
 
-Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match |ext_jodatime_datetime_format_friendly|, but should generally be limited to the following patterns:
+Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link|, but should generally be limited to the following patterns:
 
 .. list-table::
    :widths: 200 200 200

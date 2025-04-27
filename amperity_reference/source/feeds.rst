@@ -128,7 +128,7 @@ Datetime formats
 
 .. feed-field-type-datetime-formats-start
 
-The datetime format should be configured to match the pattern for datetimes are formatted in the raw data. This pattern is often similar to "yyyy-MM-dd-HH-mm-ss", but these patterns do vary. Amperity uses |ext_jodatime_datetime_format_friendly| to configure the exact datetime pattern that is present in your data.
+The datetime format should be configured to match the pattern for datetimes are formatted in the raw data. This pattern is often similar to "yyyy-MM-dd-HH-mm-ss", but these patterns do vary. Amperity uses `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link| to configure the exact datetime pattern that is present in your data.
  
 #. It is recommended to configure datetime values using Joda-Time pattern-based formatting for all datetime fields for all of your data sources.
 

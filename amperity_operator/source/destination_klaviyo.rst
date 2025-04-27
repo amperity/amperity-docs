@@ -560,7 +560,7 @@ The list of customer profile parameters supported by |destination-name| are desc
    * - **timezone**
      - **Optional**
 
-       The name of a timezome. |destination-name| recommends using the name of a timezone in the |ext_iana_timezone|.
+       The name of a timezome. |destination-name| recommends using the name of a timezone in the `IANA Time Zone Database <https://www.iana.org/time-zones>`__ |ext_link|.
 
 
    * - **title**

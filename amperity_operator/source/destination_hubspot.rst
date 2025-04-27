@@ -62,7 +62,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
    #. Have a valid format, as defined by |ext_rfc2822|.
    #. May not contain quotation marks in the local part of the address, which is the part to the left of the @ symbol.
-   #. Must end in a valid top-level domain (TLD), as listed at |ext_iana_valid_tld| and may contain Unicode characters within the TLD.
+   #. Must end in a valid top-level domain (TLD), as listed at `https://data.iana.org/TLD/tlds-alpha-by-domain.txt <https://data.iana.org/TLD/tlds-alpha-by-domain.txt>`__ |ext_link| and may contain Unicode characters within the TLD.
 
    If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import will fail and return a 400 error.
 
