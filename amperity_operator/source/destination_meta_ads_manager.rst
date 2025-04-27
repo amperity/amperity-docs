@@ -34,7 +34,7 @@ Send custom audiences to Meta Ads Manager
 
 Send custom audiences to |destination-name| to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-The |ext_facebook_marketing_api|, specifically the |ext_facebook_marketing_api_replace_users|, is used to send custom audiences.
+The `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link|, specifically the `Replace Users endpoint <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#replace-api>`__ |ext_link|, is used to send custom audiences.
 
 This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
 
@@ -228,7 +228,7 @@ Terms of service
 
 .. destination-meta-ads-manager-terms-of-service-start
 
-The |ext_facebook_tos| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
 
 .. destination-meta-ads-manager-terms-of-service-end
 
@@ -576,7 +576,7 @@ Must agree to Facebook terms
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-start
 
-The |ext_facebook_tos| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
 
 When the business user has not agreed to Facebook terms, an error similar to the following is shown:
 
@@ -648,7 +648,7 @@ Facebook Marketing API keys
 
 .. destination-meta-ads-manager-api-keys-start
 
-The following Amperity columns should be mapped to the corresponding |ext_facebook_marketing_api| keys when they are present in query data:
+The following Amperity columns should be mapped to the corresponding `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link| keys when they are present in query data:
 
 .. list-table::
    :widths: 130 130 340

@@ -45,7 +45,7 @@ A |destination-name| destination works like this:
 
 #. Build a custom audience using a segment.
 
-   .. note:: You can |sendto_meta_ads_manager_offline_events| to |destination-name| using the |ext_facebook_conversions_api_offline_events|.
+   .. note:: You can |sendto_meta_ads_manager_offline_events| to |destination-name| using the `Conversions API for offline events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
 
       Offline events are sent as a collection of transaction details that occurred within the previous seven days, after which Amperity can be configured to maintain a 7-day rolling window of those events.
 

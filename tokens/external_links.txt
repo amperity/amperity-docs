@@ -67,118 +67,6 @@
    <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool" target="_blank">Load data from Azure Blob Storage</a>
 
 
-
-
-.. |ext_braze_api_endpoints| raw:: html
-
-   <a href="https://www.braze.com/docs/api/basics#endpoints" target="_blank">REST API endpoint</a>
-
-
-.. |ext_braze_currents| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/" target="_blank">Braze Currents</a>
-
-
-.. |ext_braze_currents_send_to_s3| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/" target="_blank">Braze Current to send data to an Amazon S3 bucket</a>
-
-
-.. |ext_braze_custom_attributes| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/" target="_blank">custom attributes</a>
-
-
-.. |ext_braze_data_points| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/data_points/" target="_blank">data points</a>
-
-
-.. |ext_braze_data_points_billable| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/data_points/#data-points-1" target="_blank">lists of non-billable and billable data points</a>
-
-
-.. |ext_braze_developer_console| raw:: html
-
-   <a href="https://www.braze.com/docs/api/basics#creating-and-managing-rest-api-keys" target="_blank">Developer Console</a>
-
-
-.. |ext_braze_braze_id| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id" target="_blank">braze_id</a>
-
-
-.. |ext_braze_connected_content| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content" target="_blank">Connected Content</a>
-
-
-.. |ext_braze_external_id| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id" target="_blank">external_id</a>
-
-
-.. |ext_braze_instances| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances" target="_blank">Braze instance</a>
-
-
-.. |ext_braze_personalization| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid" target="_blank">personalization</a>
-
-
-.. |ext_braze_segments| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/" target="_blank">segments</a>
-
-
-.. |ext_braze_upload_csv| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#csv" target="_blank">Braze</a>
-
-
-.. |ext_braze_user_profile_fields| raw:: html
-
-   <a href="https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields" target="_blank">user profile fields</a>
-
-
-.. |ext_braze_usecase_content_cards| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/content_cards" target="_blank">Content cards</a>
-
-
-.. |ext_braze_usecase_email| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/email" target="_blank">Email</a>
-
-
-.. |ext_braze_usecase_inapp| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages" target="_blank">In-app messaging</a>
-
-
-.. |ext_braze_usecase_push| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push" target="_blank">Push</a>
-
-
-.. |ext_braze_usecase_sms| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/sms" target="_blank">SMS and MMS</a>
-
-
-.. |ext_braze_usecase_whatsapp| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/whatsapp" target="_blank">WhatsApp</a>
-
-
-.. |ext_braze_usecase_webhooks| raw:: html
-
-   <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks" target="_blank">Custom webhooks</a>
-
-
 .. |ext_byteordermark| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Byte_order_mark" target="_blank">byte order mark (BOM)</a>
@@ -309,85 +197,14 @@
    <a href="https://en.wikipedia.org/wiki/E.164" target="_blank">E.164 format</a>
 
 
-.. |ext_facebook_conversions_api_offline_events| raw:: html
-
-   <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events" target="_blank">Conversions API for offline events</a>
-
-
-.. |ext_facebook_dataset| raw:: html
-
-   <a href="https://www.facebook.com/business/help/750785952855662?id=490360542427371" target="_blank">Datasets allow you to connect and manage event data</a>
-
-
-.. |ext_facebook_dataset_create| raw:: html
-
-   <a href="https://www.facebook.com/business/help/5818684664831465?id=490360542427371" target="_blank">dataset ID must be configured</a>
-
-
-.. |ext_facebook_find_account_id| raw:: html
-
-   <a href="https://www.facebook.com/business/help/1492627900875762" target="_blank">Facebook Business Manager</a>
-
-
-.. |ext_facebook_marketing_api| raw:: html
-
-   <a href="https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences" target="_blank">Facebook Marketing API</a>
-
-
-.. |ext_facebook_marketing_api_replace_users| raw:: html
-
-   <a href="https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#replace-api" target="_blank">Replace Users endpoint</a>
-
-
-
-.. |ext_facebook_tos| raw:: html
-
-   <a href="https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/" target="_blank">custom audience terms of service</a>
-
-
 .. |ext_fiscal_calendar_download| raw:: html
 
    <a href="https://docs.amperity.com/downloads/csv/fiscal_calendar.csv" target="_blank">download an extended fiscal calendar (CSV file)</a>
 
 
-.. |ext_font_awesome| raw:: html
-
-   <a href="https://fontawesome.com/v5/search" target="_blank">Font Awesome</a>
-
-
-.. |ext_gdpr| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation" target="_blank">General Data Protection Regulation (GDPR)</a>
-
-
 .. |ext_gender_name_csv| raw:: html
 
    <a href="https://drive.google.com/file/d/1ZbqpmTbUxdO1vmDrAM3lL9VFqalb9qA8/view" target="_blank">gender_name_ratios.csv</a>
-
-
-.. |ext_gladly_bulk_import| raw:: html
-
-   <a href="https://connect.gladly.com/docs/help-documentation/article/bulk-user-upload/" target="_blank">Bulk User Upload/Edit</a>
-
-
-.. |ext_gnupgorg| raw:: html
-
-   <a href="https://www.gnupg.org/" target="_blank">https://www.gnupg.org/</a>
-
-
-.. |ext_google_ads| raw:: html
-
-   <a href="https://support.google.com/google-ads/answer/2567043" target="_blank">Google Ads</a>
-
-
-.. |ext_google_ads_management_console| raw:: html
-
-   <a href="https://ads.google.com" target="_blank">Google Ads management console</a>
-
-
-.. |ext_google_ads_permissions| raw:: html
-
-   <a href="https://support.google.com/google-ads/answer/9977851?sjid=9166665541180738738-NA" target="_blank">permission to view, edit, and manage</a>
 
 
 .. |ext_google_analytics_batchget| raw:: html

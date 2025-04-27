@@ -571,7 +571,7 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
       LEFT JOIN Predicted_CLV_Attributes pa ON pa.amperity_id = mc.amperity_id
 
 #. Click **Next**.
-#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the |ext_font_awesome| website.
+#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the `Font Awesome <https://fontawesome.com/v5/search>`__ |ext_link| website.
 
    .. include:: ../../shared/databases.rst
       :start-after: .. databases-font-awesome-picker-useany-start

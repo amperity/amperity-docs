@@ -2845,7 +2845,7 @@ The gender that is associated with a unique Amperity ID.
 
 .. term-gdpr-start
 
-The |ext_gdpr| is a law that covers data protection and privacy in the European Union (EU) and the European Economic Area (EEA). It gives control to individuals over their personal data and addresses the transfer of personal data outside the EU and EEA areas. GDPR simplifies the regulatory environment for international business by unifying regulation within the EU.
+The `General Data Protection Regulation (GDPR) <https://en.wikipedia.org/wiki/General_Data_Protection_Regulation>`__ |ext_link| is a law that covers data protection and privacy in the European Union (EU) and the European Economic Area (EEA). It gives control to individuals over their personal data and addresses the transfer of personal data outside the EU and EEA areas. GDPR simplifies the regulatory environment for international business by unifying regulation within the EU.
 
 .. term-gdpr-end
 

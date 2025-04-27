@@ -179,7 +179,7 @@ Open the **Customer 360** table, and then select the icon to show for the custom
 
 #. Open the **Customer 360** table in the database editor.
 #. Click **Next**.
-#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the |ext_font_awesome| website.
+#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the `Font Awesome <https://fontawesome.com/v5/search>`__ |ext_link| website.
 
    .. include:: ../../shared/databases.rst
       :start-after: .. databases-font-awesome-picker-useany-start

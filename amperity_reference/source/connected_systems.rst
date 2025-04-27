@@ -410,7 +410,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Gladly using Fivetran.
 
-       Amperity does not orchestrate data directly to Gladly. The best way to send data to Gladly is to orchestrate to Amazon S3, SFTP, or other cloud storage, and then follow the |ext_gladly_bulk_import| process to manage audience profiles.
+       Amperity does not orchestrate data directly to Gladly. The best way to send data to Gladly is to orchestrate to Amazon S3, SFTP, or other cloud storage, and then follow the `Bulk User Upload/Edit <https://connect.gladly.com/docs/help-documentation/article/bulk-user-upload/>`__ |ext_link| process to manage audience profiles.
 
    * - **Gmail**
      - 

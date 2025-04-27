@@ -41,7 +41,7 @@ Send data to Google Ads
    For example:
 
    * Use Discovery campaigns to `reach customers in the Promotions and Social tabs in Gmail <https://support.google.com/google-ads/answer/9176876>`__ |ext_link|.
-   * Use |ext_google_ads| to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
+   * Use `Google Ads <https://support.google.com/google-ads/answer/2567043>`__ |ext_link| to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
    * Run ads within `search results on Google.com <https://support.google.com/google-ads/answer/9510373>`__ |ext_link|.
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to :doc:`DV360 <destination_dv360>`, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
@@ -567,7 +567,7 @@ Amperity uses a refresh token that is generated from your |destination-name| use
 
 To resolve this error, verify that the user account can update audiences.
 
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Open the `Google Ads management console <https://ads.google.com>`__ |ext_link|, and then sign in to your |destination-name| account.
 #. Verify that the user has permission to update audiences that are associated with the customer ID.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
@@ -585,7 +585,7 @@ The token used with |destination-name| has expired.
 
 To resolve this error, refresh the token that is used with |destination-name|.
 
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Open the `Google Ads management console <https://ads.google.com>`__ |ext_link|, and then sign in to your |destination-name| account.
 #. Refresh the token that is associated with your |destination-name| account.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
@@ -603,7 +603,7 @@ Amperity cannot send data to an account in |destination-name| that is not set up
 
 To resolve this error, verify that your |destination-name| account is set up correctly.
 
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Open the `Google Ads management console <https://ads.google.com>`__ |ext_link|, and then sign in to your |destination-name| account.
 #. Verify the current state of your account. Complete any steps that are required to set up your |destination-name| account.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
@@ -667,7 +667,7 @@ Two-factor authentication required
 
 To resolve this error, ensure that two-factor authentication is enabled for your |destination-name| account.
 
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
+#. Open the `Google Ads management console <https://ads.google.com>`__ |ext_link|, and then sign in to your |destination-name| account.
 #. Verify that two-factor authentication is enabled for your account.
 
    Click on your username.
@@ -686,12 +686,12 @@ User cannot access audience
 
 .. source-google-ads-workflow-actions-user-cannot-access-audience-start
 
-When the |destination-name| user account that is associated with the Amperity workflow does not have |ext_google_ads_permissions| the linked client account, Amperity will be unable to complete the workflow.
+When the |destination-name| user account that is associated with the Amperity workflow does not have `permission to view, edit, and manage <https://support.google.com/google-ads/answer/9977851?sjid=9166665541180738738-NA>`__ |ext_link| the linked client account, Amperity will be unable to complete the workflow.
 
 To resolve this error, verify the permissions associated with the user account in |destination-name|.
 
-#. Open the |ext_google_ads_management_console|, and then sign in to your |destination-name| account.
-#. Verify that |destination-name| user account that is associated with the Amperity workflow has |ext_google_ads_permissions| the linked client account.
+#. Open the `Google Ads management console <https://ads.google.com>`__ |ext_link|, and then sign in to your |destination-name| account.
+#. Verify that |destination-name| user account that is associated with the Amperity workflow has `permission to view, edit, and manage <https://support.google.com/google-ads/answer/9977851?sjid=9166665541180738738-NA>`__ |ext_link| the linked client account.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. source-google-ads-workflow-actions-user-cannot-access-audience-start

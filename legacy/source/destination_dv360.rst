@@ -41,7 +41,7 @@ Send data to DV360
    For example:
 
    * Use Discovery campaigns to `reach customers in the Promotions and Social tabs in Gmail <https://support.google.com/google-ads/answer/9176876>`__ |ext_link|.
-   * Use |ext_google_ads|  to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
+   * Use `Google Ads <https://support.google.com/google-ads/answer/2567043>`__ |ext_link|  to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
    * Run ads within `search results on Google.com <https://support.google.com/google-ads/answer/9510373>`__ |ext_link|.
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.

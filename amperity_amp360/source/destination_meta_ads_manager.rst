@@ -29,7 +29,7 @@ You can use queries and orchestrations to build custom audiences in |destination
 
 Use |destination_meta_ads_manager_custom_audiences| in |destination-name| to advertise to customers on Facebook, Instagram, and Messenger, along with using the Meta Audience Network to extend your advertising beyond Facebook and reach new audiences on apps and mobile devices, such as WhatsApp.
 
-You may configure Amperity to send |destination_meta_ads_manager_offline_events| to |destination-name|. Offline events should be a set of transaction events that occurred within the previous 7 days. Offline events sent to |destination-name| using the |ext_facebook_conversions_api_offline_events| are matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp and ca help your brand track offline conversions for your marketing campaigns.
+You may configure Amperity to send |destination_meta_ads_manager_offline_events| to |destination-name|. Offline events should be a set of transaction events that occurred within the previous 7 days. Offline events sent to |destination-name| using the `Conversions API for offline events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link| are matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp and ca help your brand track offline conversions for your marketing campaigns.
 
 .. sendto-meta-ads-manager-howitworks-end
 

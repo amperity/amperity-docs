@@ -48,7 +48,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
        Send :ref:`custom audiences <destination-meta-ads-manager-custom-audiences>` to |destination-name| to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-       The |ext_facebook_marketing_api|, specifically the |ext_facebook_marketing_api_replace_users|, is used to send custom audiences.
+       The `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link|, specifically the `Replace Users endpoint <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#replace-api>`__ |ext_link|, is used to send custom audiences.
 
        This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
 
@@ -220,7 +220,7 @@ Get details
 
        .. admonition:: How do I find Facebook Ads account information?
 
-          You can find all of this information and perform all of the required steps from within |ext_facebook_find_account_id|. Click **Business Settings**, then **Ad Accounts**, and then the Facebook Ads account name. The account ID is visible under **Details**.
+          You can find all of this information and perform all of the required steps from within `Facebook Business Manager <https://www.facebook.com/business/help/1492627900875762>`__ |ext_link|. Click **Business Settings**, then **Ad Accounts**, and then the Facebook Ads account name. The account ID is visible under **Details**.
 
        .. note:: You may use the same credentials to send offline events.
 
@@ -248,7 +248,7 @@ Get details
           :alt: Detail three.
           :align: left
           :class: no-scaled-link
-     - Acccept the |ext_facebook_tos|.
+     - Acccept the `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link|.
 
        .. important:: :ref:`Terms of service <destination-meta-ads-manager-terms-of-service>` must be signed by each business user that is associated with your Facebook Ads account.
 
@@ -269,9 +269,9 @@ Get details
           :class: no-scaled-link
      - **Meta Ads Manager offline events only**
 
-       |ext_facebook_dataset| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+       `Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
 
-       A |ext_facebook_dataset_create| in |destination-name| to support sending send offline events from Amperity.
+       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
 
        A :ref:`query that defines the set of offline events <destination-meta-ads-manager-offline-events-build-query>` to be sent to |destination-name|.
 
@@ -285,7 +285,7 @@ Terms of service
 
 .. destination-meta-ads-manager-terms-of-service-start
 
-The |ext_facebook_tos| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
 
 .. destination-meta-ads-manager-terms-of-service-end
 
@@ -370,7 +370,7 @@ Custom audiences
 
 Send custom audiences to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-The |ext_facebook_marketing_api|, specifically the |ext_facebook_marketing_api_replace_users|, is used to send custom audiences.
+The `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link|, specifically the `Replace Users endpoint <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#replace-api>`__ |ext_link|, is used to send custom audiences.
 
 This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
 
@@ -729,9 +729,9 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       |ext_facebook_dataset| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+       `Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
 
-       A |ext_facebook_dataset_create| in |destination-name| to support sending send offline events from Amperity.
+       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -1071,7 +1071,7 @@ Must agree to Facebook terms
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-start
 
-The |ext_facebook_tos| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
 
 When the business user has not agreed to Facebook terms, an error similar to the following is shown:
 
@@ -1143,7 +1143,7 @@ Facebook Marketing API keys
 
 .. destination-meta-ads-manager-api-keys-start
 
-The following Amperity columns should be mapped to the corresponding |ext_facebook_marketing_api| keys when they are present in query data:
+The following Amperity columns should be mapped to the corresponding `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link| keys when they are present in query data:
 
 .. list-table::
    :widths: 130 130 340
