@@ -40,9 +40,9 @@ Send data to DV360
 
    For example:
 
-   * Use Discovery campaigns to |ext_google_gmail_ads|.
+   * Use Discovery campaigns to `reach customers in the Promotions and Social tabs in Gmail <https://support.google.com/google-ads/answer/9176876>`__ |ext_link|.
    * Use |ext_google_ads|  to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
-   * Run ads within |ext_google_search|.
+   * Run ads within `search results on Google.com <https://support.google.com/google-ads/answer/9510373>`__ |ext_link|.
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
@@ -115,7 +115,7 @@ Get details
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - Amperity must be |ext_google_display_and_video_partners_linked| before audience lists can be sent from Amperity to partners or advertisers.
+     - Amperity must be `configured as a linked account in DV360 <https://support.google.com/displayvideo/answer/9134175?hl=en>`__ |ext_link| before audience lists can be sent from Amperity to partners or advertisers.
 
        #. In DV360, open **Advertiser Settings**, and then select **Linked Accounts**.
        #. Click **Link New Account**, and then select **External Data Partner**.
@@ -246,13 +246,13 @@ Add destination
 
           **Display & Video 360 Advertisers**
 
-          |ext_google_display_and_video_advertisers| represent individual businesses that run advertising campaigns.
+          `Display & Video 360 Advertisers <https://support.google.com/displayvideo/answer/2696883>`__ |ext_link| represent individual businesses that run advertising campaigns.
 
-          Use your |ext_google_display_and_video_advertisers_id| to identify the customer ID to which Amperity should send data.
+          Use your `Advertiser ID <https://support.google.com/displayvideo/answer/11415707?hl=en&ref_topic=6027410>`__ |ext_link| to identify the customer ID to which Amperity should send data.
 
           **Display & Video 360 Partners**
 
-          |ext_google_display_and_video_partners| represent agencies, trading desks, and large individual advertisers. Multiple advertisers are often grouped under a single partner.
+          `Display & Video 360 Partners <https://support.google.com/displayvideo/answer/7622449>`__ |ext_link| represent agencies, trading desks, and large individual advertisers. Multiple advertisers are often grouped under a single partner.
 
           Use your partner ID to identify the customer ID to which Amperity should send data.
 
@@ -497,9 +497,9 @@ European Union user consent
 
 .. destination-dv360-api-matching-eu-consent-start
 
-The Google Ads API uses the |ext_google_consent_object| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
+The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must |ext_google_consent_object_faq| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy.
+.. important:: Customers must `send the the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy.
 
 .. list-table::
    :widths: 130 130 340

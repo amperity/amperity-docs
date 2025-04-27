@@ -76,7 +76,7 @@ Enable downstream workflows
 Loading data to Google BigQuery enables downstream workflows, including the use of applications like:
 
 * |ext_google_analytics_hub|
-* |ext_google_pubsub_overview| to support or enable real-time downstream workflows
+* `Google Pub/Sub <https://cloud.google.com/pubsub/docs/overview>`__ |ext_link| to support or enable real-time downstream workflows
 * :ref:`Microsoft Power BI <destination-powerbi-connect-to-google-bigquery>`
 * :doc:`Tableau <destination_tableau_google_big_query>`
 

@@ -703,9 +703,9 @@ European Union user consent
 
 .. destination-google-ads-api-matching-eu-consent-start
 
-The Google Ads API uses the |ext_google_consent_object| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
+The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must |ext_google_consent_object_faq| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
+.. important:: Customers must `send the the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
 
 .. list-table::
    :widths: 130 130 340

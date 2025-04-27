@@ -99,7 +99,7 @@ Get details
 
 #. The client ID(s) and secret(s) for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| **and/or** `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
 
-   .. important:: The Amperity |ext_amperity_allowlist_ip_address| must also be added to the allowlist in |source-name|.
+   .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist in |source-name|.
 
 #. The Email list name **and/or** SMS list name. (This depends on which REST APIs are configured.)
 

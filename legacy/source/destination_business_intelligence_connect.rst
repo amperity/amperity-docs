@@ -739,7 +739,7 @@ Looker
 
 .. destination-bic-connect-to-looker-start
 
-Configure |ext_google_looker_snowflake| to the |bic| data warehouse.
+Configure `Looker to connect directly <https://docs.looker.com/setup-and-management/connecting-to-db>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-looker-end
 

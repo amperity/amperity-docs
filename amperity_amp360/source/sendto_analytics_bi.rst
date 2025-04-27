@@ -132,7 +132,7 @@ Google BigQuery
 
 #. Send CSV or Parquet files from Amperity to :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
 #. Load |ext_google_bigquery_load_parquet| or |ext_google_bigquery_load_csv| from cloud storage or transfer Parquet and CSV |ext_google_bigquery_load_from_amazon_s3|.
-#. Enable downstream workflows in analytics and BI tools like :ref:`Microsoft Power BI <sendto-analytics-bi-tool-power-bi>`, or :ref:`Tableau <sendto-analytics-bi-tool-tableau>`. Support or enable real-time downstream workflows with |ext_google_pubsub_overview|.
+#. Enable downstream workflows in analytics and BI tools like :ref:`Microsoft Power BI <sendto-analytics-bi-tool-power-bi>`, or :ref:`Tableau <sendto-analytics-bi-tool-tableau>`. Support or enable real-time downstream workflows with `Google Pub/Sub <https://cloud.google.com/pubsub/docs/overview>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-google-bigquery-end
 
@@ -146,7 +146,7 @@ Looker
    :start-after: .. term-google-looker-start
    :end-before: .. term-google-looker-end
 
-You can connect Looker to cloud databases, including |ext_google_looker_bi_amazon_redshift|, |ext_google_looker_bi_azure_synapse_analytics|, |ext_google_looker_bi_google_bigquery|, and |ext_google_looker_bi_snowflake|.
+You can connect Looker to cloud databases, including `Amazon Redshift <https://cloud.google.com/looker/docs/db-config-amazon-redshift>`__ |ext_link|, `Azure Synapse Analytics <https://cloud.google.com/looker/docs/db-config-microsoft-azure-synapse-analytics>`__ |ext_link|, `Google BigQuery <https://cloud.google.com/looker/docs/db-config-google-bigquery>`__ |ext_link|, and `Snowflake <https://cloud.google.com/looker/docs/db-config-snowflake>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-looker-end
 

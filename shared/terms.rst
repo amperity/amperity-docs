@@ -2969,7 +2969,7 @@ Google Cloud Functions is a serverless computing platform that runs code in resp
 
 .. term-google-cloud-storage-start
 
-|ext_google_cloud_storage| is an online file storage web service for storing and accessing data on Google Cloud Platform infrastructure.
+`Google Cloud Storage <https://cloud.google.com/iam/docs/keys-create-delete#creating>`__ |ext_link| is an online file storage web service for storing and accessing data on Google Cloud Platform infrastructure.
 
 .. term-google-cloud-storage-end
 

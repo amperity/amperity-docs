@@ -111,7 +111,7 @@ Get details
           :class: no-scaled-link
      - A client ID and secret for an email integration *and/or* a client ID and secret for an SMS integration. These integrations must already be set up in |destination-name|.
 
-       .. important:: The Amperity |ext_amperity_allowlist_ip_address| must also be added to the allowlist of the |destination-name| integration.
+       .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist of the |destination-name| integration.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

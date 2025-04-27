@@ -79,7 +79,7 @@ Get details
           :class: no-scaled-link
      - A |destination-api| key and the URL for the |destination-name| API.
 
-       .. important:: Use the |ext_amperity_allowlist_ip_address| for Amperity to configure the allowlist for the |destination-api|.
+       .. important:: Use the `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| for Amperity to configure the allowlist for the |destination-api|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

@@ -6,29 +6,10 @@
    <a href="https://docs.amperity.com" target="_blank">LINK_TEXT</a>
 
 
-.. |ext_amazon_ads_api| raw:: html
-
-   <a href="https://advertising.amazon.com/API/docs/en-us/info/api-overview" target="_blank">Amazon Ads API</a>
-
-
-.. |ext_amazon_ads_refresh_token| raw:: html
-
-   <a href="https://advertising.amazon.com/API/docs/en-us/getting-started/retrieve-access-token" target="_blank">refresh token</a>
-
-
-.. |ext_amazon_marketing_cloud| raw:: html
-
-   <a href="https://advertising.amazon.com/solutions/products/amazon-marketing-cloud" target="_blank">Amazon Marketing Cloud (AMC)</a>
-
 
 .. |ext_amperity_assistant_privacy_faq| raw:: html
 
    <a href="https://docs.amperity.com/support/ai_assistant.html" target="_blank">AI Assistant Privacy FAQ</a>
-
-
-.. |ext_amperity_allowlist_ip_address| raw:: html
-
-   <a href="https://docs.amperity.com/operator/send_data.html#ip-allowlists" target="_blank">IP address for allowlists</a>
 
 
 .. |ext_amperity_data_tables_png| raw:: html
@@ -666,102 +647,6 @@
 .. |ext_google_bigquery_transfer_from_cloud_storage| raw:: html
 
    <a href="https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer" target="_blank">Transfer data from Cloud Storage</a>
-
-
-.. |ext_google_cloud_storage| raw:: html
-
-   <a href="https://cloud.google.com/iam/docs/keys-create-delete#creating" target="_blank">Google Cloud Storage</a>
-
-
-.. |ext_google_cloud_storage_bucket| raw:: html
-
-   <a href="https://cloud.google.com/storage/docs/buckets" target="_blank">Buckets</a>
-
-
-.. |ext_google_cloud_storage_service_account_key| raw:: html
-
-   <a href="https://cloud.google.com/iam/docs/keys-create-delete" target="_blank">creating the service account key-pair</a>
-
-
-.. |ext_google_display_and_video_advertisers| raw:: html
-
-   <a href="https://support.google.com/displayvideo/answer/2696883" target="_blank">Display & Video 360 Advertisers</a>
-
-
-.. |ext_google_display_and_video_advertisers_id| raw:: html
-
-   <a href="https://support.google.com/displayvideo/answer/11415707?hl=en&ref_topic=6027410" target="_blank">Advertiser ID</a>
-
-
-.. |ext_google_display_and_video_partners| raw:: html
-
-   <a href="https://support.google.com/displayvideo/answer/7622449" target="_blank">Display & Video 360 Partners</a>
-
-
-.. |ext_google_display_and_video_partners_linked| raw:: html
-
-   <a href="https://support.google.com/displayvideo/answer/9134175?hl=en" target="_blank">configured as a linked account in DV360</a>
-
-
-.. |ext_google_consent_object| raw:: html
-
-   <a href="https://developers.google.com/google-ads/api/reference/rpc/v15/Consent" target="_blank">Consent object</a>
-
-
-.. |ext_google_consent_object_faq| raw:: html
-
-   <a href="https://support.google.com/google-ads/answer/14310715" target="_blank">send the the required user consent signals</a>
-
-
-.. |ext_google_gmail_ads| raw:: html
-
-   <a href="https://support.google.com/google-ads/answer/9176876" target="_blank">reach customers in the Promotions and Social tabs in Gmail</a>
-
-
-.. |ext_google_looker_snowflake| raw:: html
-
-   <a href="https://docs.looker.com/setup-and-management/connecting-to-db" target="_blank">Looker to connect directly</a>
-
-
-.. |ext_google_looker_bi_amazon_redshift| raw:: html
-
-   <a href="https://cloud.google.com/looker/docs/db-config-amazon-redshift" target="_blank">Amazon Redshift</a>
-
-
-.. |ext_google_looker_bi_azure_synapse_analytics| raw:: html
-
-   <a href="https://cloud.google.com/looker/docs/db-config-microsoft-azure-synapse-analytics" target="_blank">Azure Synapse Analytics</a>
-
-
-.. |ext_google_looker_bi_databricks| raw:: html
-
-   <a href="https://cloud.google.com/looker/docs/db-config-databricks" target="_blank">Databricks</a>
-
-
-.. |ext_google_looker_bi_google_bigquery| raw:: html
-
-   <a href="https://cloud.google.com/looker/docs/db-config-google-bigquery" target="_blank">Google BigQuery</a>
-
-
-.. |ext_google_looker_bi_snowflake| raw:: html
-
-   <a href="https://cloud.google.com/looker/docs/db-config-snowflake" target="_blank">Snowflake</a>
-
-
-.. |ext_google_pubsub_overview| raw:: html
-
-   <a href="https://cloud.google.com/pubsub/docs/overview" target="_blank">Google Pub/Sub</a>
-
-
-.. |ext_google_pubsub_stream| raw:: html
-
-   <a href="https://cloud.google.com/pubsub/docs/pubsub-dataflow#stream_messages_from_to" target="_blank">use Pub/Sub to stream messages</a>
-
-
-.. |ext_google_search| raw:: html
-
-   <a href="https://support.google.com/google-ads/answer/9510373" target="_blank">search results on Google.com</a>
-
 
 
 .. |ext_iso_31661alpha2| raw:: html

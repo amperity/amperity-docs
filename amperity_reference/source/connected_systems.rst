@@ -328,7 +328,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **DV360**
      - 
      - |system-yes|
-     - Send data to Google Customer Match, and then enable ads for display and video using the |ext_google_display_and_video_advertisers| and |ext_google_display_and_video_partners| networks.
+     - Send data to Google Customer Match, and then enable ads for display and video using the `Display & Video 360 Advertisers <https://support.google.com/displayvideo/answer/2696883>`__ |ext_link| and `Display & Video 360 Partners <https://support.google.com/displayvideo/answer/7622449>`__ |ext_link| networks.
 
    * - **Domo**
      - 
