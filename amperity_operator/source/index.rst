@@ -193,6 +193,7 @@ Automate workflows
 .. toctree::
    :hidden:
 
+   activation_ids
    add_campaigns
    add_customer_data
    add_email_engagement
@@ -301,7 +302,6 @@ Automate workflows
    destination_webhook
    destination_yahoo_dsp
    destination_zendesk
-   domain_data
    events_criteo
    events_google_enhanced_conversions
    events_meta_ads_manager
@@ -389,6 +389,7 @@ Automate workflows
    source_square
    source_vibes
    source_zendesk
+   sources
    start_here
    stitch_labels
    stitch_nicknames
