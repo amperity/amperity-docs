@@ -686,3 +686,15 @@ Enable segments and campaigns
 Segments and campaigns are a collection of features that may be enabled after interaction records are configured. Once enabled, predictive analytics, metrics cards, segment insights, and campaigns are available from within Amperity.
 
 .. database-interactions-enable-segments-and-campaigns-end
+
+
+.. _setup-transactions-more-transactions-data:
+
+More transactions data
+==================================================
+
+.. setup-transactions-more-transactions-data-start
+
+Many brands add transactions to their tenant over time. Adding new transactions (and data for other customer interactions) generally follow the same steps that were used for previous transactions. More sources helps Amperity build better profiles *and* helps your brand undersand how your customers' preferences for how they interact with your brand.
+
+.. setup-transactions-more-transactions-data-end
