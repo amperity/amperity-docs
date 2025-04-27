@@ -14,17 +14,17 @@
         Review domain data
 
 ==================================================
-Review domain data
+About source data
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-domain-table-start
-   :end-before: .. term-domain-table-end
+.. include:: ../../amperity_operator/source/datasets.rst
+   :start-after: .. datasets-sources-start
+   :end-before: .. datasets-sources-end
 
 
 .. _domain-data-review:
 
-Review domain data
+Review source data
 ==================================================
 
 .. domain-data-review-start
@@ -173,7 +173,7 @@ Interaction records often :ref:`require data to be reshaped using domain SQL (an
 
 .. _domain-data-reshape:
 
-Reshape domain data
+Reshape source data
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -189,7 +189,7 @@ Reshape domain data
 
 .. _domain-data-spark-sql:
 
-About domain SQL
+About Spark SQL
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
