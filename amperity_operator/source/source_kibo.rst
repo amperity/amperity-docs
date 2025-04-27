@@ -38,24 +38,24 @@ Pull from Kibo
    :start-after: .. source-sftp-common-start
    :end-before: .. source-sftp-common-end
 
-.. source-monetate-steps-to-pull-start
+.. source-kibo-steps-to-pull-start
 
 .. include:: ../../shared/sources.rst
    :start-after: .. sources-overview-list-intro-start
    :end-before: .. sources-overview-list-intro-end
 
-#. :ref:`Get details <source-monetate-get-details>`
-#. :ref:`Add data source <source-monetate-add-data-source>`
+#. :ref:`Get details <source-kibo-get-details>`
+#. :ref:`Add data source <source-kibo-add-data-source>`
 
-.. source-monetate-steps-to-pull-end
+.. source-kibo-steps-to-pull-end
 
 
-.. _source-monetate-get-details:
+.. _source-kibo-get-details:
 
 Get details
 ==================================================
 
-.. source-monetate-get-details-start
+.. source-kibo-get-details-start
 
 The |source-name| data source requires the following configuration details:
 
@@ -113,25 +113,25 @@ The |source-name| data source requires the following configuration details:
           :start-after: .. format-csv-file-sizes-start
           :end-before: .. format-csv-file-sizes-end
 
-.. source-monetate-get-details-end
+.. source-kibo-get-details-end
 
 
-.. _source-monetate-add-data-source:
+.. _source-kibo-add-data-source:
 
 Add data source and feed
 ==================================================
 
-.. source-monetate-add-data-source-intro-start-start
+.. source-kibo-add-data-source-intro-start-start
 
 Add a data source that pulls data from an |source-name| bucket for each file that you want to pull to Amperity.
 
 Browse the |source-name| bucket to select a file, and then review the settings for that file. Define the feed schema, and then activate the feed. Run the courier manually, and then review the data that is added to the domain table that is associated with the feed.
 
-.. source-monetate-add-data-source-intro-end
+.. source-kibo-add-data-source-intro-end
 
 **To add a data source for any SFTP site**
 
-.. source-monetate-add-data-source-steps-start
+.. source-kibo-add-data-source-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -348,10 +348,10 @@ Browse the |source-name| bucket to select a file, and then review the settings f
        * If the data should be loaded to Amperity on a regular basis, add the courier to a courier group that runs on the desired schedule.
        * If the data will be a foundation for custom domain tables, use Spark SQL to build out that customization.
 
-.. source-monetate-add-data-source-steps-end
+.. source-kibo-add-data-source-steps-end
 
 
-.. _source-monetate-workflow-actions:
+.. _source-kibo-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -360,7 +360,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. source-monetate-workflow-actions-start
+.. source-kibo-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -421,12 +421,12 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |source-name|, including:
 
-       * :ref:`source-monetate-workflow-actions-bad-archive`
-       * :ref:`source-monetate-workflow-actions-invalid-credentials`
-       * :ref:`source-monetate-workflow-actions-missing-file`
-       * :ref:`source-monetate-workflow-actions-sftp-unavailable`
-       * :ref:`source-monetate-workflow-actions-pgp-error`
-       * :ref:`source-monetate-workflow-actions-unable-to-decompress-archive`
+       * :ref:`source-kibo-workflow-actions-bad-archive`
+       * :ref:`source-kibo-workflow-actions-invalid-credentials`
+       * :ref:`source-kibo-workflow-actions-missing-file`
+       * :ref:`source-kibo-workflow-actions-sftp-unavailable`
+       * :ref:`source-kibo-workflow-actions-pgp-error`
+       * :ref:`source-kibo-workflow-actions-unable-to-decompress-archive`
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -447,10 +447,10 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. source-monetate-workflow-actions-end
+.. source-kibo-workflow-actions-end
 
 
-.. _source-monetate-workflow-actions-bad-archive:
+.. _source-kibo-workflow-actions-bad-archive:
 
 Bad archive
 --------------------------------------------------
@@ -460,7 +460,7 @@ Bad archive
    :end-before: .. workflow-actions-files-generic-bad-archive-end
 
 
-.. _source-monetate-workflow-actions-invalid-credentials:
+.. _source-kibo-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -470,7 +470,7 @@ Invalid credentials
    :end-before: .. workflow-actions-generic-invalid-credentials-source-end
 
 
-.. _source-monetate-workflow-actions-missing-file:
+.. _source-kibo-workflow-actions-missing-file:
 
 Missing file
 --------------------------------------------------
@@ -480,7 +480,7 @@ Missing file
    :end-before: .. workflow-actions-files-generic-missing-file-end
 
 
-.. _source-monetate-workflow-actions-pgp-error:
+.. _source-kibo-workflow-actions-pgp-error:
 
 PGP error
 --------------------------------------------------
@@ -490,7 +490,7 @@ PGP error
    :end-before: .. workflow-actions-generic-pgp-error-end
 
 
-.. _source-monetate-workflow-actions-sftp-unavailable:
+.. _source-kibo-workflow-actions-sftp-unavailable:
 
 SFTP site unavailable
 --------------------------------------------------
@@ -500,7 +500,7 @@ SFTP site unavailable
    :end-before: .. workflow-actions-sftp-generic-unavailable-end
 
 
-.. _source-monetate-workflow-actions-unable-to-decompress-archive:
+.. _source-kibo-workflow-actions-unable-to-decompress-archive:
 
 Unable to decompress archive
 --------------------------------------------------

@@ -178,6 +178,7 @@ html_additional_pages = {
     'amp360': 'amp360.html',
     'bi_connect': 'bi_connect.html',
     'destination_facebook_ads': 'destination_facebook_ads.html',
+    'destination_monetate': 'destination_monetate.html',
     'sendto_active_campaign': 'sendto_active_campaign.html',
     'sendto_acxiom': 'sendto_acxiom.html',
     'sendto_adobe_aep': 'sendto_adobe_aep.html',
