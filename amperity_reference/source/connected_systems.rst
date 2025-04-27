@@ -515,9 +515,9 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - Pull data to Amperity using SFTP.
 
    * - **Kibo**
-     -
      - |system-yes|
-     - Send data to and from Amperity using SFTP.
+     - |system-yes|
+     - Send data to and from Amperity using SFTP. Previously known as Monetate.
 
    * - **Klaviyo**
      - |system-yes|
@@ -633,11 +633,6 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - 
      - Pull data to Amperity from Mixpanel using Fivetran.
-
-   * - **Monetate**
-     - |system-yes|
-     - |system-yes|
-     - Send data to and from Amperity using SFTP.
 
    * - **MongoDB**
      - |system-yes|
