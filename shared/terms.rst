@@ -1223,7 +1223,7 @@ The Command Line for Amperity (CLAMP) is the command-line interface to Amperity 
 
 .. term-clienteling-start
 
-Clienteling is |ext_clienteling| with key customers based on data about their preferences, behaviors and purchases.
+Clienteling is `a technique used by retail sales associates to establish long-term relationships <https://en.wikipedia.org/wiki/Clienteling>`__ |ext_link| with key customers based on data about their preferences, behaviors and purchases.
 
 .. term-clienteling-end
 
@@ -2031,7 +2031,7 @@ Delta Lake is an open source format that involves a metadata layer on top of col
 
 .. term-delta-sharing-start
 
-|ext_delta_sharing| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
+`Delta Sharing <https://delta.io/sharing/>`__ |ext_link| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
 
 .. term-delta-sharing-end
 
@@ -3428,7 +3428,7 @@ Jitter tracks changes to Amperity IDs across Stitch runs.
 
 .. term-joda-time-start
 
-|ext_jodatime| is an open-source date and time library that is used by Amperity to establish consistency in filename patterns. The recommended pattern is "Segment_Name_MM-dd-YYYY", where "Segment_Name" is the name of the segment and "MM-dd-YYYY" will append the current date.
+`Joda-Time <https://www.joda.org/joda-time/>`__ |ext_link| is an open-source date and time library that is used by Amperity to establish consistency in filename patterns. The recommended pattern is "Segment_Name_MM-dd-YYYY", where "Segment_Name" is the name of the segment and "MM-dd-YYYY" will append the current date.
 
 .. term-joda-time-end
 
@@ -4416,7 +4416,7 @@ Oracle Responsys is an email marketing product that helps improve conversions, s
 
 .. term-orc-start
 
-|ext_orc| is columnar-storage file format similar to Parquet. It is the file format that is the Stitch process outputs to the customer 360 database.
+`Optimized Row Columnar (ORC) <https://en.wikipedia.org/wiki/Apache_ORC>`__ |ext_link| is columnar-storage file format similar to Parquet. It is the file format that is the Stitch process outputs to the customer 360 database.
 
 .. term-orc-end
 
@@ -4764,7 +4764,7 @@ Personally identifiable information (PII) is any data that could potentially ide
 
 .. term-pgp-start
 
-|ext_pgp| is an encryption program that provides cryptographic privacy and authentication for data communication by signing, encrypting, and decrypting data files and formats. Amperity supports PGP encryption.
+`Pretty Good Privacy (PGP) <https://en.wikipedia.org/wiki/Pretty_Good_Privacy>`__ |ext_link| is an encryption program that provides cryptographic privacy and authentication for data communication by signing, encrypting, and decrypting data files and formats. Amperity supports PGP encryption.
 
 .. term-pgp-end
 
