@@ -89,19 +89,9 @@ High
 Review interpretations
 ==================================================
 
-.. stitch-benchmark-cards-interpretations-start
-
-Interpretations are provided by each benchmark check. They describe the result and provide an explanation of how to interpret it. For example:
-
-"This score is above the typical range for most brands. A large percentage indicates that different postal codes are appearing in the same cluster, which indicates overclustering."
-
-or:
-
-"This score is far above the typical range for most brands. A large ratio indicates that a unique name and physical address combination appears in multiple clusters, which indicates underclustering."
-
-When a benchmark score is above the optimal range or high it is recommended to review and grade a set of 10 example clusters, after which the benchmark check will make a series of recommendations that can lead to improved benchmark results.
-
-.. stitch-benchmark-cards-interpretations-end
+.. include:: ../../amperity_reference/source/benchmarks.rst
+   :start-after: .. stitch-benchmark-cards-interpretations-start
+   :end-before: .. stitch-benchmark-cards-interpretations-end
 
 
 .. _benchmarks-grade:
@@ -109,39 +99,15 @@ When a benchmark score is above the optimal range or high it is recommended to r
 Grade and calibrate
 ==================================================
 
-.. stitch-benchmark-cards-grade-and-calibrate-start
-
-All benchmark checks include example Amperity IDs that can be reviewed and graded. You should periodically review and grade examples for benchmark checks with high results. This helps ensure that Stitch is always building the highest quality customer profiles and can lead to incremental improvements over time.
-
-Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. Stitch configuration settings can be updated directly in the benchmark check.
-
-.. stitch-benchmark-cards-grade-and-calibrate-end
+.. include:: ../../amperity_reference/source/benchmarks.rst
+   :start-after: .. stitch-benchmark-cards-grade-and-calibrate-start
+   :end-before: .. stitch-benchmark-cards-grade-and-calibrate-end
 
 .. TODO: Need mockup here that shows one of the review/grade pages.
 
-.. stitch-benchmark-cards-grade-and-calibrate-howitworks-start
-
-.. admonition:: How does Amperity choose which records are available for grading?
-
-   Amperity uses `stratified random sampling <https://en.wikipedia.org/wiki/Stratified_randomization>`__ |ext_link| to select the examples. A fresh set of examples is generated during each Stitch run.
-
-   #. All clusters (or groups of clusters) that are flagged by the check are collected.
-
-      For example, with the **Amperity IDs with many surnames** check, all clusters with more than 3 surnames are collected.
-
-   #. A rules-based approach is used to determine which of these clusters are likely to be "good" identity decisions and which are likely to be "poor" identity decisions.
-
-      The percentage of clusters that are likely to be "good" identity decisions and the percentage likely to be "poor" identity decisions are identified.
-
-      For example: 70% good, 30% poor.
-
-   #. 10 examples are selected at random using the same rate of "good" and "poor" clusters.
-
-      For example, 7 records will represent "good" identity decisions and 3 records will represent "poor".
-
-      Amperity will make a recommendation for when to rate each example as "good", but cannot identify without input which examples in the random sample represent "good" or "poor" identity decisions.
-
-.. stitch-benchmark-cards-grade-and-calibrate-howitworks-end
+.. include:: ../../amperity_reference/source/benchmarks.rst
+   :start-after: .. stitch-benchmark-cards-grade-and-calibrate-howitworks-start
+   :end-before: .. stitch-benchmark-cards-grade-and-calibrate-howitworks-end
 
 
 .. _benchmarks-revisit-benchmarks:

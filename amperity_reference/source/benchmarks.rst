@@ -234,11 +234,11 @@ Interpretations
 
 Interpretations are provided by each benchmark check. They describe the result and provide an explanation of how to interpret it. For example:
 
-"This score is above the typical range for most brands. A large percentage indicates that different postal codes are appearing in the same cluster, which indicates overclustering."
+"This is above the expected range and may be an indication of overclustering. A large percentage indicates that different given names are appearing the same cluster, which indicates overclustering."
 
 or:
 
-"This score is far above the typical range for most brands. A large ratio indicates that a unique name and physical address combination appears in multiple clusters, which indicates underclustering."
+"This is far above the expected range and may be an indication of overclustering. A large percentage indicates that different postal codes are appearing the same cluster, which indicates overclustering."
 
 When a benchmark score is above the optimal range or high it is recommended to review and grade a set of 10 example clusters, after which the benchmark check will make a series of recommendations that can lead to improved benchmark results.
 
@@ -254,7 +254,7 @@ Grade and calibrate
 
 All benchmark checks include example Amperity IDs that can be reviewed and graded. You should periodically review and grade examples for benchmark checks with high results. This helps ensure that Stitch is always building the highest quality customer profiles and can lead to incremental improvements over time.
 
-Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. :ref:`Stitch configuration settings can be updated directly <stitch-benchmark-check-update-config>` in the benchmark check.
+Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. Stitch configuration settings can be updated directly in the benchmark check.
 
 .. stitch-benchmark-cards-grade-and-calibrate-end
 
