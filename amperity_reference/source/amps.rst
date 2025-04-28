@@ -163,9 +163,12 @@ Amps consumption for the **Campaigns** feature is determined by:
 * The complexity of SQL queries that are used by a campaign
 * The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output; each segment that is run within a campaign will consume Amps
 * The amount of data being sent from Amperity to a downstream location
+
+Storage for the **Campaigns** feature is determined by:
+
 * The size of the **Campaign Recipients** table
 
-Monitor Amps consumption for the **Campaigns** feature by:
+Monitor consumption for the **Campaigns** feature by:
 
 * Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes will take longer to run and will consume more Amps
 * Monitoring workflows that contain recurring campaigns from the **Workflows** page
@@ -186,13 +189,16 @@ Databases
 Amps consumption for the **Databases** feature is determined by:
 
 * The frequency at which a database is run
-* The number of tables in a database
 * The length of time it takes to run the database
 * Calculating extended transactions attributes
-* The number of custom tables that are used by analytics and marketing activities
 * Larger compute settings for SQL resources
 
-Monitor Amps consumption for the **Databases** feature by:
+Storage for the **Databases** feature is determined by:
+* The number of tables in a database
+* * The number of custom tables that are used by analytics and marketing activities
+* The number of records in each table
+
+Monitor consumption for the **Databases** feature by:
 
 * Monitoring the database runtime and run history
 * Monitoring individual table runtimes and histories
@@ -211,12 +217,14 @@ Ingest
 
 Amps consumption for the **Ingest** feature is determined by:
 
-* The volume of data that is loaded to Amperity
 * The frequency at which data is loaded to Amperity
 * The amount of time it takes to ingest data; time affects Amps consumption more than volume or frequency because large file formats take longer to load than partitioned files of the same size
 * The use of ingest queries that preprocess data prior to ingest
 
-Monitor Amps consumption for the **Ingest** feature by:
+Storage for the **Ingest** feature is determined by:
+* The volume of data that is loaded to Amperity
+
+Monitor consumption for the **Ingest** feature by:
 
 * Monitoring the aggregate number of records ingested from the **Usage** page
 * Monitoring ingest runtimes from the **Workflows** page
@@ -261,11 +269,14 @@ Amps consumption for the **Predictive modeling** feature is determined by:
 * The frequency at which predictions (including training and inference) are run
 * The number of courier groups that are associated with predictive modeling
 * The number of predictive models that are enabled; adding models will increase Amps consumption
+
+Storage for the **Predictive modeling** feature is determined by:
+
 * The amount of data that is configured and made available to predictive modeling
 
   .. note:: Amperity trains models every two weeks; Amps consumption for predictive modeling increases during model training.
 
-Monitor Amps consumption for the **Predictive modeling** feature by:
+Monitor consumption for the **Predictive modeling** feature by:
 
 * Monitoring workflows that contain predictive modeling tasks from the **Workflows** page
 * Reviewing the record count for tables that are used by predictive modeling
@@ -280,6 +291,11 @@ Premium connectors
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. destinations-premium-connectors-start
+
+Premium connectors are connectors that have an additional amps charge to use. You will not be charged for creating a destination, only for actually using it. This charge is a flat fee and it is measured per month so if you use it once or many times in a month, the charge is the same: 25K amps per connector per month.
+For example, if you use 3 premium connectors in one month and 4 the next, this would be 75K amps in the first month and 100K amps the second month.
+
+Premium connectors do not consume any storage.
 
 The following set of connectors are designated as premium connectors. Using any of these connectors incurs an Amps surcharge for that month.
 
@@ -316,18 +332,37 @@ Profile API
 
 Amps consumption for the **Profile API** feature is determined by:
 
-* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint
-* The frequency at which each Profile API index is refreshed
-* The width of each Profile API index (where width refers to the number of columns, or response parameters, that are available in the index; wider indexes consume more Amps)
-* The number of indexes that are refreshed automatically by a courier group
+* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint.
 
 Monitor Amps consumption for the **Profile API** feature by:
 
-* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows, including not only the number of indexes, but also including the amount data that is made available from each index; Amps consumption is affected by the length of time it takes to run the query to generate the index and also the number of fields that are added to the index. `Complex queries will consume more Amps; queries that return large numbers of columns and/or rows will consume more Amps <https://docs.amperity.com/datagrid/api_profile.html#index-response-times>`__
-* Monitoring the history of Profile API index refreshes from the **Workflows** page
+* Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows.
 
 .. amps-consumption-feature-profile-api-end
 
+.. _amps-consumption-feature-queries:
+
+Queries
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-consumption-feature-queries-start
+
+Amps consumption for the **Queries** feature is determined by:
+
+* The number of automated queries run as a part of analytics jobs
+* The bytes scanned by each query
+* The duration of each query
+
+Storgae for the **Queries** feature is determined by:
+
+* 
+
+Monitor Amps consumption for the **Queries** feature by:
+
+* Monitoring the number of queries that are executed from the **Usage** page
+* Verifying the amount of data scanned by a query
+
+.. amps-consumption-feature-queries-end
 
 .. _amps-consumption-feature-segmentation:
 
@@ -400,6 +435,22 @@ Monitor Amps consumption for the **Source transforms** feature by:
 
 .. amps-consumption-feature-source-transforms-end
 
+.. _amps-consumption-feature-spark-sql-sessions:
+
+Spark SQL sessions
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-consumption-feature-spark-sql-sessions-start
+
+Amps consumption for the **Spark SQL sessions** feature is determined by:
+
+*
+
+Monitor Amps consumption for the **Spark SQL sessions** feature by:
+
+* 
+
+.. amps-consumption-feature-spark-sql-sessions-end
 
 .. _amps-consumption-feature-stitch:
 
