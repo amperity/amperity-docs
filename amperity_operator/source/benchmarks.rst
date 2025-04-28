@@ -17,17 +17,9 @@
 About Stitch benchmarks
 ==================================================
 
-.. stitch-benchmark-checks-start
-
-Stitch collects data that your brand has provided to Amperity, runs, and then outputs a series of tables that contain the results. There is no "ground truth" dataset for your brand against which Amperity can compare Amperity IDs to validate identity, which prevents using standard error metrics to evaluate the quality of Stitch output.
-
-A benchmark check is a heuristic that defines how often Amperity IDs are expected to meet a certain condition. For example, Amperity expects no more than 0.011% of your Amperity IDs to be associated with more than three given names.
-
-Each benchmark check measures the percentage of Amperity IDs meeting its respective condition and compares the result against the optimal range. A benchmark check result can fall into the optimal range, above the optimal range, or far above the optimal range (high).
-
-For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. Is is possible for an Amperity ID to be correclty associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, name changes, and so on. A higher than expected rate of Amperity IDs (generally) associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
-
-.. stitch-benchmark-checks-end
+.. include:: ../../amperity_reference/source/benchmarks.rst
+   :start-after: .. stitch-benchmark-checks-start
+   :end-before: .. stitch-benchmark-checks-end
 
 
 .. _benchmarks-about-results:
@@ -38,8 +30,8 @@ About benchmark results
 .. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
-   :start-after: .. stitch-benchmark-results-optimal-start
-   :end-before: .. stitch-benchmark-results-optimal-end
+   :start-after: .. stitch-benchmark-results-start
+   :end-before: .. stitch-benchmark-results-end
 
 .. image:: ../../images/mockup-stitch-benchmarks-tab.png
    :width: 600 px
@@ -121,7 +113,7 @@ You should revisit benchmark scores on a regular basis. The frequency is determi
 
 #. A newly-configured tenant should have benchmark scores reviewed after every Stitch run. Reduce the frequency when you are satisfied with each benchmark score.
 #. Review benchmark scores after adding a data source that contains customer profile data that is used with identity resolution.
-#. On a production tenants with consistent data sources you may revisit benchmark scores less frequently.
+#. On a production tenant with consistent data sources you may revisit benchmark scores less frequently.
 
 .. benchmarks-revisit-benchmarks-end
 

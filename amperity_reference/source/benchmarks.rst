@@ -66,7 +66,7 @@ A benchmark check is a heuristic that defines how often Amperity IDs are expecte
 
 Each benchmark check measures the percentage of Amperity IDs meeting its respective condition and compares the result against the optimal range. A benchmark check result can fall into the optimal range, above the optimal range, or far above the optimal range (high).
 
-For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. Is is possible for an Amperity ID to be correclty associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, name changes, and so on. A higher than expected rate of Amperity IDs (generally) associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
+For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. It is possible for an Amperity ID to be correctly associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, name changes, and so on. A higher-than-expected rate of Amperity IDs (generally) associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
 
 .. stitch-benchmark-checks-end
 
@@ -102,7 +102,7 @@ For example, it is expected that most, but not all, Amperity IDs should not have
 Benchmark results
 ==================================================
 
-.. stitch-benchmark-results-optimal-start
+.. stitch-benchmark-results-start
 
 Amperity uses benchmark checks to provide insight into the quality of your Stitch results. Results fall into one of the following categories:
 
@@ -110,7 +110,7 @@ Amperity uses benchmark checks to provide insight into the quality of your Stitc
 * :ref:`Above optimal range <stitch-benchmark-results-above-optimal>`
 * :ref:`High <stitch-benchmark-results-high>`
 
-.. stitch-benchmark-results-optimal-end
+.. stitch-benchmark-results-end
 
 
 .. _stitch-benchmark-results-optimal:
@@ -162,7 +162,7 @@ High
 
 .. stitch-benchmark-results-high-start
 
-High results do not need to be fixed, but they should be researched and investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
+High results do not need to be fixed, but they should be investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
 
 Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Next steps**, and then review the list of options that are available to help improve this particular benchmark result.
 
