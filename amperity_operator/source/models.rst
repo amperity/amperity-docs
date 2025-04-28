@@ -26,7 +26,6 @@ Available models
 The following out-of-the-box models are configurable directly within Amperity by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policies:
 
 * :ref:`Churn propensity <model-churn-propensity>`
-* :ref:`Discount sensitivity <model-discount-sensitivity>`
 * :ref:`Event propensity (EPM) <model-event-propensity>`
 * :ref:`Predicted CLV <model-predicted-clv>`
 * :ref:`Product affinity <model-product-affinity>`
@@ -37,7 +36,7 @@ The following out-of-the-box models are configurable directly within Amperity by
 
    When optimizing for accuracy you should include all possible fields that are relevant for modeling, including required and optional fields in **Unified Transactions**. This may require using SQL to extend the table to support these additional features.
 
-   Review the list of fields that are used by :ref:`churn propensity, discount sensitivity, predicted CLV, and product affinity modeling <models-fields-used-by-all-models>` and by :ref:`event propensity modeling <models-fields-used-by-epm>` to determine what features may be required for :ref:`additional model accuracy <models-extend>`.
+   Review the list of fields that are used by :ref:`churn propensity, predicted CLV, and product affinity modeling <models-fields-used-by-all-models>` and by :ref:`event propensity modeling <models-fields-used-by-epm>` to determine what features may be required for :ref:`additional model accuracy <models-extend>`.
 
 .. models-list-end
 
@@ -61,24 +60,6 @@ Use :doc:`churn propensity <model_churn_propensity>` scores to churn prevention 
 By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
 
 .. model-churn-propensity-about-end
-
-
-.. _model-discount-sensitivity:
-
-Discount sensitivity
---------------------------------------------------
-
-.. model-discount-sensitivity-about-start
-
-Use :doc:`discount sensitivity <model_discount_sensitivity>` groupings to build marketing campaigns around your customers' recent preferences for discounts:
-
-* A full price shopper is a customer who is likely willing to pay the manufacturer's suggested price for an item.
-* A discount opportunist is a customer who is more likely to purchase when a discount is available.
-* A discount seeker is a customer who is unlikely to purchase without a discount being available.
-
-.. model-discount-sensitivity-about-end
-
-.. important:: Ask your Amperity representative about how your brand can enable discount sensitivity modeling.
 
 
 .. _model-event-propensity:
@@ -138,7 +119,7 @@ Fields used by all models (except EPM)
 
 .. models-fields-used-by-all-models-start
 
-The churn, pCLV, affinity, and discount sensitivity models start with a set of fields from the **Merged_Customers**, **Unified_Itemized_Transactions**, and **Unified_Transactions** tables from the database in which the model is built. EPM uses fields from **Merged Customers**, as well as the custom input tables selected during configuration.
+The churn, pCLV, and affinity models start with a set of fields from the **Merged_Customers**, **Unified_Itemized_Transactions**, and **Unified_Transactions** tables from the database in which the model is built. EPM uses fields from **Merged Customers**, as well as the custom input tables selected during configuration.
 
 .. note::
   The churn and pCLV models now support custom input tables for transactions and transaction items. These tables should have the same field names as **Unified_Transactions** and **Unified_Itemized_Transactions**, but can have custom logic, such as filtering or aliasing, depending on the data your brand wants to use to model churn and pCLV.
@@ -231,7 +212,7 @@ Extending models
 
 .. models-extend-start
 
-You can build predictive models from the **Customer 360** page. Each database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You can only activate one churn/pCLV and discount sensitivity model per database, but you may have any number of product affinity and event propensity models.
+You can build predictive models from the **Customer 360** page. Each database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You can only activate one churn/pCLV model per database, but you may have any number of product affinity and event propensity models.
 
 .. warning:: Currently, even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged_Customers**, **Unified_Itemized_Transactions**, and **Unified_Transactions** in your database due to automated back-end validations.
 
@@ -268,7 +249,6 @@ Build a model
 Predictive models are configurable in Amperity:
 
 * :ref:`Build a churn propensity model <model-churn-propensity-configure>`
-* :ref:`Build a discount sensitivity model <model-discount-sensitivity-configure>`
 * :ref:`Build a event propensity model <model-event-propensity-configure>`
 * :ref:`Build a predicted CLV <model-predicted-clv-configure>`
 * :ref:`Build a product affinity model <model-product-affinity-configure>`
@@ -309,7 +289,6 @@ Add a model
 These are captured in the "Build a model" section for each of the five model-specific pages. Links for now:
 
 #. :ref:`model-churn-propensity-configure`
-#. :ref:`model-discount-sensitivity-configure`
 #. :ref:`model-event-propensity-configure`
 #. :ref:`model-predicted-clv-configure`
 #. :ref:`model-product-affinity-configure`

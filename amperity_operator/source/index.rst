@@ -315,7 +315,6 @@ Automate workflows
    ingest_queries
    merge_policy
    model_churn_propensity
-   model_discount_sensitivity
    model_event_propensity
    model_predicted_clv
    model_product_affinity
@@ -420,7 +419,6 @@ Automate workflows
    table_customer_360
    table_customer_attributes
    table_detailed_examples
-   table_discount_sensitivity
    table_email_ampid_assignment
    table_email_engagement_attributes
    table_email_engagement_summary

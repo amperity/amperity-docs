@@ -835,66 +835,6 @@ The **Detailed Examples** table contains the following columns, as its starting 
 .. data-tables-detailed-examples-table-end
 
 
-.. _data-tables-predicted-discount-sensitivity:
-
-Discount sensitivity
-==================================================
-
-.. TODO: Update the terms.rst entry after this moves into amperity-docs.
-
-.. term-discount-sensitivity-table-start
-
-An **Discount Sensitivity** table groups customers into three categories: full price shoppers, discount opportunists, and discount seekers. Use an **Discount Sensitivity** table to help deliver the right messages and offers to your customers at the price those customers are willing to pay.
-
-.. term-discount-sensitivity-table-end
-
-.. data-tables-discount-sensitivity-link-to-table-start
-
-.. note:: See |table_discount_sensitivity| for more information about how this table is built and maintained within the customer 360 database.
-
-.. data-tables-discount-sensitivity-link-to-table-end
-
-.. data-tables-discount-sensitivity-table-about-start
-
-The **Discount Sensitivity** table contains the following columns:
-
-.. data-tables-discount-sensitivity-table-about-end
-
-.. data-tables-discount-sensitivity-table-start
-
-.. list-table::
-   :widths: 30 15 55
-   :header-rows: 1
-
-   * - Column name
-     - Data type
-     - Description
-
-   * - **Amperity ID**
-     - String
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-amperity-id-column-start
-          :end-before: .. term-amperity-id-column-end
-
-       .. include:: ../../shared/terms.rst
-          :start-after: .. term-amperity-id-format-start
-          :end-before: .. term-amperity-id-format-end
-
-   * - **Discount Segment**
-     - String
-     - The discount sensitivity grouping to which this customer belongs. Possible values:
-
-       * **Full Price Shopper** The customer has a low discount sensitivity and is more likely to pay higher prices.
-
-       * **Discount Opportunist** The customer has a medium discount sensitivity and is more likley to respond to a discounted price.
-
-       * **Discount Seeker** The customer has a high discount sensitivity and is less willing to pay MSRP and is more likely to respond to discounted prices.
-
-       * **No Recent Purchase** The customer does not have a recent purchase event within the modeling window and is not assigned a discount propensity. The default length of the modeling window is 3 years.
-
-.. data-tables-discount-sensitivity-table-end
-
-
 .. _data-tables-email-engagement-attributes:
 
 Email Engagement Attributes
