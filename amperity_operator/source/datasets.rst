@@ -116,3 +116,25 @@ Standard core tables
 .. include:: ../../amperity_reference/source/databases.rst
    :start-after: .. databases-core-table-type-standard-start
    :end-before: .. databases-core-table-type-standard-end
+
+
+.. _databases-stitched-custom-core:
+
+Custom core tables
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-core-tables-custom-start
+   :end-before: .. term-core-tables-custom-end
+
+.. TODO: Almost the same as multiple-360-databases-custom-core-tables. Keep in sync.
+
+.. databases-stitched-custom-core-start
+
+Custom core tables are reusable across databases, including :doc:`filtered 360 databases <filtered_360_databases>`. Core tables store SQL logic that can be referenced by multiple databases, but can be adapted to provide database-specific logic as well. 
+
+For example, the **Customer Attributes** table typically requires customization to align features within that table to how your brand defines churn prevention status indicators, historical purchase lifecycles, and customer types. This table can be extended to support custom features, and each marketing unit may have different requirements.
+
+If each brand has unique requirements, then each filtered 360 database may require its own customized version of the **Customer Attributes** table, with each maintained separately.
+
+.. databases-stitched-custom-core-end
