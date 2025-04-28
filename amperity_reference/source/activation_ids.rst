@@ -1,7 +1,6 @@
-.. https://docs.amperity.com/operator/
+.. https://docs.amperity.com/reference/
 
 
-.. meta::
     :description lang=en:
         An activation ID is a unique identifier that is used for precise segmentation and campaign targeting.
 
@@ -12,7 +11,6 @@
 .. meta::
     :content class=swiftype name=title data-type=string:
         Activation IDs
-
 
 ==================================================
 About activation IDs

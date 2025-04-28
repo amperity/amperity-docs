@@ -1,9 +1,20 @@
-.. https://docs.amperity.com/internal/
+.. https://docs.amperity.com/reference/
 
 
+.. meta::
+    :description lang=en:
+        A journey is an automated sequence that connects customers across channels and your brand's marketing campaigns.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        A journey is an automated sequence that connects customers across channels and your brand's marketing campaigns.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        About journeys
 
 ==================================================
-Journeys
+About journeys
 ==================================================
 
 .. TODO: Next paragraph is a future glossary term. terms.rst, reused.
@@ -154,10 +165,6 @@ The following building blocks are available to users for building journeys:
 Journey start
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-journey-node-start-start
-   :end-before: .. term-journey-node-start-end
-
 .. journeys-node-start-start
 
 .. list-table::
@@ -168,9 +175,29 @@ Journey start
           :alt: Journey start
           :align: left
           :class: no-scaled-link
-     - Appears when you create the journey. Displays the starting segment (or segments) and notes if there are any exclusions.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-journey-node-start-start
+          :end-before: .. term-journey-node-start-end
 
        To edit inclusions, exclusions, or exit conditions, click on the **Journey setup** sidebar.
+
+
+
+**ALTERNATE**
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-node-start-start
+   :end-before: .. term-journey-node-start-end
+
+.. image:: ../../images/mockup-journeys-canvas-start.png
+   :width: 280 px
+   :alt: Start node
+   :align: left
+   :class: no-scaled-link
+
+To edit inclusions, exclusions, or exit conditions, click on the **Journey setup** sidebar.
+
+Click this button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
 
 .. journeys-node-start-end
 
@@ -195,6 +222,22 @@ Activate
           :end-before: .. term-journey-node-activate-end
 
        You can rename the activate node.
+
+
+**ALTERNATE**
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-node-activate-start
+   :end-before: .. term-journey-node-activate-end
+
+.. image:: ../../images/mockup-journeys-canvas-activate.png
+   :width: 280 px
+   :alt: Activate node
+   :align: left
+   :class: no-scaled-link
+
+You can rename the activate node.
+
 
 .. journeys-node-activate-end
 
@@ -224,6 +267,31 @@ Delay
 
        You can rename the delay node.
 
+
+**ALTERNATE**
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-node-delay-start
+   :end-before: .. term-journey-node-delay-end
+
+.. image:: ../../images/mockup-journeys-canvas-delay.png
+   :width: 280 px
+   :alt: Delay node
+   :align: left
+   :class: no-scaled-link
+
+Choose a combination of an integer plus "days", "weeks", or "months" to designate how long to wait before the next step in the journey begins.
+
+.. image:: ../../images/mockup-journeys-canvas-delay-options.png
+   :width: 480 px
+   :alt: Delay node
+   :align: left
+   :class: no-scaled-link
+
+A delay is applied to a single parent node.
+
+You can rename the delay node.
+
 .. journeys-node-delay-end
 
 
@@ -249,6 +317,23 @@ Conditional split
        These segments may already exist or may be defined within this journey using custom criteria.
 
        You can rename the individual conditional split node and rename the "Everyone else" sub-audience.
+
+
+**ALTERNATE**
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-node-conditional-split-start
+   :end-before: .. term-journey-node-conditional-split-end
+
+.. image:: ../../images/mockup-journeys-canvas-conditional-split.png
+   :width: 440 px
+   :alt: Conditional split node
+   :align: left
+   :class: no-scaled-link
+
+These segments may already exist or may be defined within this journey using custom criteria.
+
+You can rename the individual conditional split node and rename the "Everyone else" sub-audience.
 
 .. journeys-node-split-conditional-end
 
@@ -276,6 +361,23 @@ Percent split
 
        You can rename the percent split node and rename the individual paths.
 
+
+**ALTERNATE**
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-node-percent-split-start
+   :end-before: .. term-journey-node-percent-split-end
+
+.. image:: ../../images/mockup-journeys-canvas-percent-split.png
+   :width: 440 px
+   :alt: Percent split node
+   :align: left
+   :class: no-scaled-link
+
+The percentage of all individual nodes under a percent split must add up to 100% of the audience, including the control group.
+
+You can rename the percent split node and rename the individual paths.
+
 .. journeys-node-split-percent-end
 
 
@@ -300,6 +402,21 @@ Individual split
 
        .. note:: To edit sub-audiences conditions and naming, click into the parent node.
 
+
+**ALTERNATE**
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-node-individual-split-start
+   :end-before: .. term-journey-node-individual-split-end
+
+.. image:: ../../images/mockup-journeys-canvas-individual-split-examples.png
+   :width: 440 px
+   :alt: Individual split nodes
+   :align: left
+   :class: no-scaled-link
+
+.. note:: To edit sub-audiences conditions and naming, click into the parent node.
+
 .. journeys-node-split-individual-end
 
 
@@ -316,9 +433,18 @@ Add a node
           :alt: Add node
           :align: left
           :class: no-scaled-link
-     - A node to represent each path defined by a split.
+     - Click the plus button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
 
-       Click this button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
+
+**ALTERNATE**
+
+Click the plus button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
+
+.. image:: ../../images/mockup-journeys-canvas-plus.png
+   :width: 280 px
+   :alt: Delay node
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-node-add-end
 
@@ -505,7 +631,7 @@ Add percent split nodes
 
    Click the "Add path" link to add more treatments. Each treatment should have a unique name and a percentage value.
 
-.. important:: The percentages for all paths and the control group must add up to 100%.
+   .. important:: The percentages for all paths and the control group must add up to 100%.
 
    **Configure control group** Choose a name and percentage for the control group, or keep the default name of "Control Group" and the value of 10%. 
    
