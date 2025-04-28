@@ -74,6 +74,8 @@ Custom core tables
    :start-after: .. term-core-tables-custom-start
    :end-before: .. term-core-tables-custom-end
 
+.. TODO: Almost the same as databases-stitched-custom-core. Keep in sync.
+
 .. multiple-360-databases-custom-core-tables-start
 
 .. admonition:: Sharing tables across filtered 360 databases
