@@ -4,13 +4,25 @@
 .. |destination-name| replace:: Snowflake
 
 
+.. meta::
+    :description lang=en:
+        Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Configure bridge for Snowflake
+
 ==================================================
-Configure Snowflake bridge
+Configure bridge for Snowflake
 ==================================================
 
 .. bridge-snowflake-about-start
 
-Snowflake Bridge is a first-class integration that leverages secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
+Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
 
 .. bridge-snowflake-about-end
 
