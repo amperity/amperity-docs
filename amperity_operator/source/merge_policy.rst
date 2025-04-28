@@ -19,7 +19,7 @@ About merge policy
 
 .. merge-policy-intro-start
 
-Merge policy defines how the **Merged Customers** table will be maintained by Amperity. The **Merged Customers** table collects PII data from all source datasets, and then collapses the best data into single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
+Merge policy defines how the **Merged Customers** table will be maintained by Amperity. The **Merged Customers** table collects personally identifiable information (PII) data from all source datasets, and then collapses the best data into a single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
 
 Use merge policy to tell Amperity which tables are the most reliable sources of customer profile data.
 
@@ -57,7 +57,7 @@ Source priority can be defined for names, physical addresses, email addresses, p
    * - **Phone**
      - **phone**
 
-Data sources that contain fields to which profile semantic tags were applied can be assigned a source priority for each profile attribute group. Source priority means that higher ranked data source will be preferred over lower ranked data sources during the identity resolution process.
+Data sources that contain fields to which profile semantic tags were applied can be assigned a source priority for each profile attribute group. Source priority means that higher ranked data sources will be preferred over lower ranked data sources during the identity resolution process.
 
 .. admonition:: How source priority works
 
