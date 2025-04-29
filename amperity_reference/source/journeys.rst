@@ -94,7 +94,11 @@ Every journey starts with an audience that is defined by one or more segments th
 
 Choose a segment from the **Select inclusion segments** dropdown list. The customers in that list will become the audience for this campaign.
 
-.. TODO: add screenshot
+.. image:: ../../images/mockup-journeys-canvas-inclusion.png
+   :width: 380 px
+   :alt: Include a segment
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-setup-who-enters-end
 
@@ -110,7 +114,11 @@ Sometimes a journey needs to exclude certain members of your audience. For examp
 
 When you need to exclude audience members, choose one or more segments from the **Select exclusion segments** dropdown list. The customers in an exclusion list will be removed from the audience for this journey.
 
-.. TODO: add screenshot
+.. image:: ../../images/mockup-journeys-canvas-exclusion.png
+   :width: 380 px
+   :alt: Exclude a segment
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-setup-who-is-excluded-end
 
