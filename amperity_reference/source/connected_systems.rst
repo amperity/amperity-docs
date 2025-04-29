@@ -309,16 +309,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Databricks**
      - |system-yes|
      - |system-yes|
-     - Pull tables directly from Databricks.
-
-       Send files from Amperity to Amazon Redshift, Amazon S3, Azure Blob Storage, Azure Synapse Analytics, Google Cloud Storage, and Snowflake, and then connect Databricks to that data.
-
-       Use Amperity Bridge to configure shared tables between Databricks and Amperity.
-
-   * - **Databricks (Delta tables)**
-     - 
-     - |system-yes|
-     - Send JSON files directly to Databricks and load them as Delta tables.
+     - Sync data between Amperity and Databricks using Amperity Bridge.
 
    * - **Delighted**
      - |system-yes|
@@ -891,7 +882,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Snowflake**
      - |system-yes|
      - |system-yes|
-     - Share table data with Amperity.
+     - Sync data between Amperity and Snowflake using Amperity Bridge.
 
    * - **Snowplow Analytics**
      - |system-yes|
