@@ -240,7 +240,7 @@ Each predictive model allows for additional fields to be added to support your b
 
    This includes adding fields and features to the model configuration, and also ensuring that the database tables that contain those fields and features are available within the database in which the model is built.
 
-   Add all possible fields that are relevant for modeling, including all optional fields are available from the **Unifie_Itemized_Transactions** table.
+   Add all possible fields that are relevant for modeling, including all optional fields that are available from the **Unified Itemized Transactions** table.
 
    Ensure that the **Customer Attributes** table contains all possible exceptions that your brand may want to use.
 
