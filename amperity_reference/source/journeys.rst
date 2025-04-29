@@ -527,9 +527,9 @@ Add activate nodes
 
 #. From the **Journeys** canvas, select the plus symbol, and then choose **Activate**.
 
-   .. image:: ../../images/journey-node-icon-activate.png
-      :width: 60px
-      :alt: Activate
+   .. image:: ../../images/mockup-journeys-canvas-plus-activate.png
+      :width: 280 px
+      :alt: Activate node
       :align: left
       :class: no-scaled-link
 
@@ -563,9 +563,9 @@ Add conditional split nodes
 
 #. From the **Journeys** canvas, select the plus symbol, and then choose **Conditional split**.
 
-   .. image:: ../../images/journey-node-icon-conditional-split.png
-      :width: 60px
-      :alt: Conditional Split
+   .. image:: ../../images/mockup-journeys-canvas-plus-conditional-split.png
+      :width: 280 px
+      :alt: Conditional split node
       :align: left
       :class: no-scaled-link
 
@@ -597,9 +597,9 @@ Add delay nodes
 
 #. From the **Journeys** canvas, select the plus symbol, and then choose **Delay**.
 
-   .. image:: ../../images/journey-node-icon-delay.png
-      :width: 60px
-      :alt: Delay
+   .. image:: ../../images/mockup-journeys-canvas-plus-delay.png
+      :width: 280 px
+      :alt: Delay node
       :align: left
       :class: no-scaled-link
 
@@ -629,9 +629,9 @@ Add percent split nodes
 
 #. From the **Journeys** canvas, select the plus symbol, and then choose **Percent split**.
 
-   .. image:: ../../images/journey-node-icon-percent-split.png
-      :width: 60px
-      :alt: Percent Split
+   .. image:: ../../images/mockup-journeys-canvas-plus-percent-split.png
+      :width: 280 px
+      :alt: Percent split node
       :align: left
       :class: no-scaled-link
 
