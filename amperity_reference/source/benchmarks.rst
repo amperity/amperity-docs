@@ -1,5 +1,5 @@
 .. 
-.. https://docs.amperity.com/operator/
+.. https://docs.amperity.com/reference/
 .. 
 
 .. meta::
