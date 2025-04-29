@@ -19,7 +19,7 @@ About offline events
 
 .. offline-events-overview-start
 
-The paths your customers take before they visit your brand's app or website can be complex. One customer might learn about your brand from a display ad on TikTok, another customer learns from watching a TV show, and another hears about your brand during a conversation with a friend. Attributing these types of customer activities to your brand's marketing campaigns is not easy, but when they can be attributed it can give your brand more ways to find new customers.
+The paths your customers take before they visit your brand's app or website can be complex. One customer might learn about your brand from a display ad on TikTok, another customer learns from watching a TV show, and another hears about your brand during a conversation with a friend. Attributing these types of customer activities to your brand's marketing campaigns is not easy, but when they can be attributed it can give you more ways to find new customers.
 
 .. offline-events-overview-end
 

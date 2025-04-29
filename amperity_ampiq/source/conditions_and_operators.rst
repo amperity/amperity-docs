@@ -369,7 +369,7 @@ Recent shoppers w/exclusions
 
 .. segments-and-vs-or-recent-customers-plus-exclusions-start
 
-New customers can become repeat customers. Identifying new customers, and then associating them to product categories and a variety of order behaviors can give your brand a series of useful segments.
+New customers can become repeat customers. Identifying new customers, and then associating them to product categories and a variety of order behaviors can give you a series of useful segments.
 
 .. image:: ../../images/segments-and-or-recent-customers-plus-exclusions-conditions.png
    :width: 340 px

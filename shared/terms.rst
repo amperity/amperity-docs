@@ -443,7 +443,7 @@ Amperity is a cloud application that ingests all customer data in its native for
 
 .. term-amperity-bridge-start
 
-Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats. Each bridge can be quickly configured to enable inbound and/or outbound connections that give your brand access to shared tables without replicating data.
+Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats. Each bridge can be quickly configured to enable inbound and/or outbound connections that give you access to shared tables without replicating data.
 
 .. term-amperity-bridge-end
 

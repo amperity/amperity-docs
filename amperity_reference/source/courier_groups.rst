@@ -421,7 +421,7 @@ Bridge syncs
 
 .. courier-groups-bridge-syncs-start
 
-Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`quickly configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give your brand access to shared tables without replication.
+Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`quickly configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give you access to shared tables without replication.
 
 .. courier-groups-bridge-syncs-end
 
