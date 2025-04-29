@@ -26,6 +26,9 @@ About journeys
    :start-after: .. journeys-about-context-start
    :end-before: .. journeys-about-context-end
 
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-about-enable-start
+   :end-before: .. journeys-about-enable-end
 
 .. _journeys-howitworks:
 

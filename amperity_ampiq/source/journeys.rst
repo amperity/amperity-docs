@@ -25,6 +25,10 @@ Create journeys
    :start-after: .. journeys-howitworks-start
    :end-before: .. journeys-howitworks-end
 
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-about-enable-start
+   :end-before: .. journeys-about-enable-end
+
 .. journeys-howitworks-steps-start
 
 The following sections describe the steps you'll follow to set up and configure a journey.

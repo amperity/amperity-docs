@@ -31,6 +31,12 @@ By using **Journeys**, marketers can implement cross-channel strategies, improve
 
 .. journeys-about-context-end
 
+.. journeys-about-enable-start
+
+.. note:: Ask your Amperity representative about how your brand can enable journeys.
+
+.. journeys-about-enable-end
+
 
 .. _journeys-howitworks:
 
