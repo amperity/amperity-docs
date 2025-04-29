@@ -125,6 +125,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Stream data to an Amazon S3 bucket, and then pull it to Amperity.
 
+   * - **Amazon Marketing Cloud**
+     - 
+     - |system-yes|
+     - Amperity can send data to your brand’s instance of Amazon Marketing Cloud (AMC) when `the instance name is configured alongside the demand-side platform (DSP) advertiser <https://docs.amperity.com/operator/destination_amazon_ads.html#about-amazon-marketing-cloud-amc>`__ to which Amperity sends data.
+
    * - **Amazon Pinpoint**
      - 
      - |system-yes|
@@ -300,7 +305,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - |system-yes|
      - Send offline events to to track offline conversions from your marketing campaigns.
- 
+
    * - **Cross Country Computer**
      - |system-yes|
      - |system-yes|
