@@ -228,13 +228,13 @@ You can build predictive models from the **Customer 360** page. Each database th
 
 Each predictive model allows for additional fields to be added to support your brand's use cases. There are two approaches:
 
-#. Optimize for implementation speed.
+#. **Optimize for implementation speed**
 
    If your brand wants to optimize for implementation speed the default fields, along with any required extensions, are accurate enough to start with.
 
    You can revisit a model that was optimized for implementation speed at a later time, and then make changes to extend them for model accuracy later.
 
-#. :bdg-success:`Recommended` Optimize for model accuracy.
+#. :bdg-success:`Recommended` **Optimize for model accuracy**
 
    If your brand wants to optimize for model accuracy you should plan to extend each model as much as possible.
 
