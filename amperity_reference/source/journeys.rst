@@ -138,8 +138,11 @@ Some customers should exit a journey when a particular criterion has been fulfil
 
 Exit conditions are defined using a segment. One or more segments that define exit conditions may be added to a journey using the **Select exit segments** dropdown.
 
-.. TODO: add screenshot
-
+.. image:: ../../images/mockup-journeys-canvas-exit-conditions.png
+   :width: 380 px
+   :alt: Choose exit conditions
+   :align: left
+   :class: no-scaled-link
 .. journeys-exit-conditions-end
 
 
