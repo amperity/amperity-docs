@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Databases built against unified customer profiles help your brand better understand your customers.
+        Databases built from unified customer profiles help your brand better understand your customers.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Databases built against unified customer profiles help your brand better understand your customers.
+        Databases built from unified customer profiles help your brand better understand your customers.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

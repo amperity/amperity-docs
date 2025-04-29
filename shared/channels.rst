@@ -159,7 +159,7 @@ Amperity pre-selects the list of attributes that may be sent to |destination-nam
 
 .. channels-build-campaign-steps-edit-attributes-note-start
 
-.. note:: The **Merged Customers** table is the default table from which data is sent to |destination-name|, even though segments are often built against the **Customer 360** table. This is by design. The **Merged Customers** table is the underlying table for customer profile data and is the source for all customer profile data that exists within the **Customer 360** table.
+.. note:: The **Merged Customers** table is the default table from which data is sent to |destination-name|, even though segments are often built from the **Customer 360** table. This is by design. The **Merged Customers** table is the underlying table for customer profile data and is the source for all customer profile data that exists within the **Customer 360** table.
 
 .. channels-build-campaign-steps-edit-attributes-note-end
 

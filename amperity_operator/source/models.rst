@@ -2,11 +2,11 @@
 
 
     :description lang=en:
-        Amperity predictive modeling is built against your brand's customer profiles and behavioral history to give your brand insights into customer purchasing behavior.
+        Amperity predictive modeling is built from your brand's customer profiles and behavioral history to give your brand insights into customer purchasing behavior.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity predictive modeling is built against your brand's customer profiles and behavioral history to give your brand insights into customer purchasing behavior.
+        Amperity predictive modeling is built from your brand's customer profiles and behavioral history to give your brand insights into customer purchasing behavior.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

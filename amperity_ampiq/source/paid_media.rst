@@ -33,7 +33,7 @@ With the rise of privacy-centric marketing strategies resulting in the demise of
 
 Capturing reliable data from across disparate silos in your organization to build unified customer profiles is essential to the future of your brand's acquisition strategy in paid media.
 
-Audiences built against unified customer profiles lead to significantly higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
+Audiences built from unified customer profiles lead to significantly higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
 
 .. paid-media-overview-context-end
 

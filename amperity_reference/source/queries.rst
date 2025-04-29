@@ -1136,7 +1136,7 @@ Query domain data
 
 You may build queries against domain tables in your tenant, including custom domain tables.
 
-.. note:: Queries that are built against domain tables may not be activated.
+.. note:: Queries that are built from domain tables may not be activated.
 
 .. queries-query-domain-tables-end
 
