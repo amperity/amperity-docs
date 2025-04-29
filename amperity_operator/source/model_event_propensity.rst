@@ -28,9 +28,6 @@ Use event propensity modeling to associate individual customers to specific even
 
 .. model-event-propensity-about-end
 
-.. TODO: This whole model seems kinda broken. Or very non-intuitive. If I just follow what the config asks me to do, say select UIT table or Transaction Attributes table, there's a datetime field and then I have to pick the same table again and use the same fields why? but then I can't actually start the validation so dunno. I don't know how this one is supposed to work at all and I can't imagine a customer muddling their way through the current config. Docs won't save them.
-
-.. TODO: This aligns to the old Custora "“Predict Anything” (General Event-based Modeling): Custora uses an autonomous machine learning pipeline to predict any binary behavior (e.g., opening a store credit card, joining the loyalty program). This approach consists of maintaining a basket of different probabilistic models, which are automatically fitted on the incoming data stream – and dynamically evaluated for accuracy and model performance." no?
 
 .. _model-event-propensity-use-cases:
 
@@ -56,16 +53,9 @@ Recommended audience sizes
    :start-after: .. term-recommended-audience-size-start
    :end-before: .. term-recommended-audience-size-end
 
-.. model-event-propensity-use-cases-recommended-audiences-about-start
-
-Recommended audience sizes are calculated for 30-day window. An event curve is generated, along with corresponding audience sizes that show what size audience is required to capture 50%, 70%, and 90% of purchases for a given revenue-generating event during the previous 30 days.
-
-Audience sizes are inclusive of all smaller audience sizes.
-
-* A medium audience size (70%) includes all of your customers who are in the small audience size (50%).
-* A large audience size (90%) includes all of your customers who are in the small and medium audiences.
-
-.. model-event-propensity-use-cases-recommended-audiences-about-end
+.. include:: ../../amperity_reference/source/model_event_propensity.rst
+   :start-after: .. model-event-propensity-use-cases-recommended-audiences-about-start
+   :end-before: .. model-event-propensity-use-cases-recommended-audiences-about-end
 
 .. image:: ../../images/use-cases-recommended-audience-size-all-events.png
    :width: 600 px
@@ -73,36 +63,13 @@ Audience sizes are inclusive of all smaller audience sizes.
    :align: left
    :class: no-scaled-link
 
-.. model-event-propensity-recommended-audiences-usecase-start
+.. include:: ../../amperity_reference/source/model_event_propensity.rst
+   :start-after: .. model-event-propensity-recommended-audiences-usecase-start
+   :end-before: .. model-event-propensity-recommended-audiences-usecase-end
 
-Recommended audience sizes for event propensity modeling identify customers who are most likely to perform a revenue-generating event. Use recommended audience sizes to find customers who are likely to:
-
-* Join your brand's loyalty program
-* Sign up for your brand's credit card
-* Make a repeat booking for a car rental, airline ticket, or hotel stay
-
-.. model-event-propensity-recommended-audiences-usecase-end
-
-.. model-event-propensity-use-cases-recommended-audiences-attributes-start
-
-Attributes for recommended audience sizes are available from the **Event Propensity** table:
-
-.. list-table::
-   :widths: 35 65
-   :header-rows: 1
-
-   * - Attribute Name
-     - Description
-   * - **Audience Size Small**
-     - A small audience is predicted to incude ~50% of customers who are likely to perform a revenue-generating event.
-   * - **Audience Size Medium**
-     - A medium audience is predicted to include ~70%of customers who are likely to perform a revenue-generating event
-   * - **Audience Size Large**
-     - A large audience is predicted to include ~90%of customers who are likely to perform a revenue-generating event
-
-Combine these attributes with the **Target Event** attribute to build audiences for a specific revenue-generating event. You can access these attributes directly from the segment editor.
-
-.. model-event-propensity-use-cases-recommended-audiences-attributes-end
+.. include:: ../../amperity_reference/source/model_event_propensity.rst
+   :start-after: .. model-event-propensity-use-cases-recommended-audiences-attributes-start
+   :end-before: .. model-event-propensity-use-cases-recommended-audiences-attributes-end
 
 
 .. _model-event-propensity-use-cases-customer-ranking:
@@ -110,17 +77,13 @@ Combine these attributes with the **Target Event** attribute to build audiences 
 Customer ranking
 --------------------------------------------------
 
-.. model-event-propensity-use-cases-customer-ranking-start
+.. include:: ../../amperity_reference/source/model_event_propensity.rst
+   :start-after: .. model-event-propensity-use-cases-customer-ranking-start
+   :end-before: .. model-event-propensity-use-cases-customer-ranking-end
 
-Use customer ranking to define an audience using the top N customers. Use customer ranking as an alternate to recommended audience sizes when an audience is too large (or small) or if a recommended audience size is unavailable for a specific event.
-
-.. model-event-propensity-use-cases-customer-ranking-end
-
-.. model-event-propensity-use-cases-customer-ranking-attribute-start
-
-The **Ranking** attribute in the **Event Propensity** table ranks customer scores by event. A rank that is less than or equal to X will provide the top N customers with a propensity for this event. Combine this attribute with the **Target Event** attribute to build customer rankings for a specific revenue-generating event. You can access this attribute directly from the segment editor.
-
-.. model-event-propensity-use-cases-customer-ranking-attribute-end
+.. include:: ../../amperity_reference/source/model_event_propensity.rst
+   :start-after: .. model-event-propensity-use-cases-customer-ranking-attribute-start
+   :end-before: .. model-event-propensity-use-cases-customer-ranking-attribute-end
 
 
 .. _model-event-propensity-configure:
@@ -200,7 +163,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
      - Configure revenue events.
 
        #. From the **Revenue event table** dropdown, select the table in which revenue-generating events are located.
-       #. From the **Revenue event date** dropdown, select the field that contains the date on which the regenue-generating event occurs.
+       #. From the **Revenue event date** dropdown, select the field that contains the date on which the revenue-generating event occurs.
        #. From the **Revenue event realization date** dropdown, select the field that differentiates between revenue generation and realization. For example, a hotel booking (generation) and a hotel stay (realization).
        #. From the **Event revenue** dropdown, select the field that captures the revenue from the realized event date.
 

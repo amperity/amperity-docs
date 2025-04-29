@@ -1229,11 +1229,11 @@ The **Event Propensity** table contains the following columns:
 
    * - **Target Value**
      - Integer
-     - TBD
+     - 
 
    * - **Revenue Event Days Since Last Event**
      - Integer
-     - TBD
+     - 
 
 .. data-tables-event-propensity-table-end
 

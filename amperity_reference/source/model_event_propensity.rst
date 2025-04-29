@@ -86,9 +86,9 @@ Attributes for recommended audience sizes are available from the **Event Propens
    * - **Audience Size Small**
      - A small audience is predicted to incude ~50% of customers who are likely to perform a revenue-generating event.
    * - **Audience Size Medium**
-     - A medium audience is predicted to include ~70%of customers who are likely to perform a revenue-generating event
+     - A medium audience is predicted to include ~70% of customers who are likely to perform a revenue-generating event
    * - **Audience Size Large**
-     - A large audience is predicted to include ~90%of customers who are likely to perform a revenue-generating event
+     - A large audience is predicted to include ~90% of customers who are likely to perform a revenue-generating event
 
 Combine these attributes with the **Target Event** attribute to build audiences for a specific revenue-generating event. You can access these attributes directly from the segment editor.
 

@@ -129,12 +129,11 @@ Fields used by all models (except EPM)
 
 .. models-fields-used-by-all-models-start
 
-The churn, pCLV, and affinity models start with a set of fields from the **Merged_Customers**, **Unified_Itemized_Transactions**, and **Unified_Transactions** tables from the database in which the model is built. EPM uses fields from **Merged Customers**, as well as the custom input tables selected during configuration.
+The churn, pCLV, and affinity models start with a set of fields from the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables from the database in which the model is built. EPM uses fields from **Merged Customers**, as well as the custom input tables selected during configuration.
 
-.. note::
-  The churn and pCLV models now support custom input tables for transactions and transaction items. These tables should have the same field names as **Unified_Transactions** and **Unified_Itemized_Transactions**, but can have custom logic, such as filtering or aliasing, depending on the data your brand wants to use to model churn and pCLV.
+The churn and pCLV models support custom input tables for transactions and transaction items. These tables should have the same field names as **Unified Transactions** and **Unified Itemized Transactions**, but can have custom logic, such as filtering or aliasing, depending on the data your brand wants to use to model churn and pCLV.
 
-You may further customize predictive models, such as excluding certain types of customers and adding custom features that support your brand's use cases. Customer exlusions are based off of the **Customer_Attributes** table, and custom features are based off of additional fields that may exist on **Unified_Itemized_Transactions**.
+You may customize predictive models, such as excluding certain types of customers and adding custom features that support your brand's use cases. Customer exlusions are based off of the **Customer Attributes** table, and custom features are based off of additional fields that may exist on **Unified Itemized Transactions**.
 
 You do not need to configure the following fields:
 
@@ -202,7 +201,7 @@ Fields used by event propensity
 
 .. models-fields-used-by-epm-start
 
-EPM is highly configurable, with the only table used by default being **Merged_Customers**. The model requires that you select two other data assets with event-level data: one containing the target event, and one containing a revenue generating event.
+EPM is highly configurable, with the only table used by default being **Merged Customers**. The model requires that you select two other data assets with event-level data: one containing the target event, and one containing a revenue generating event.
 
 The target event is the event we want to model, e.g. loyalty program signups, credit card signups, repeat bookings. The data asset should have one row per event, and **must have a field for the event's date or timestamp**.
 
@@ -224,7 +223,7 @@ Extending models
 
 You can build predictive models from the **Customer 360** page. Each database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You can only activate one churn/pCLV model per database, but you may have any number of product affinity and event propensity models.
 
-.. warning:: Currently, even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged_Customers**, **Unified_Itemized_Transactions**, and **Unified_Transactions** in your database due to automated back-end validations.
+.. warning:: Currently, even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** in your database due to automated back-end validations.
 
 Each predictive model allows for additional fields to be added to support your brand's use cases. There are two approaches:
 
