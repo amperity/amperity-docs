@@ -206,7 +206,7 @@ EPM is highly configurable, with the only table used by default being **Merged_C
 
 The target event is the event we want to model, e.g. loyalty program signups, credit card signups, repeat bookings. The data asset should have one row per event, and **must have a field for the event's date or timestamp**.
 
-A revenue generating event is an event in which a customer spends money with your brand, e.g. a retail transaction or a booking. The data asset should also have one row per event, and **must have fields for an event's date or timestammp and revenue amount**. You may also select other fields from the revenue generating event that you think would be helpful for modeling (e.g. purchase or booking channel)
+A revenue generating event is an event in which a customer spends money with your brand, e.g. a retail transaction or a booking. The data asset should also have one row per event, and **must have fields for an event's date or timestamp and revenue amount**. You may also select other fields from the revenue generating event that you think would be helpful for modeling (e.g. purchase or booking channel)
 
 Additionally, you may configure custom events as further inputs to the model. Custom event data assets are also expected to be one row per event.
 
