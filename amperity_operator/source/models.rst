@@ -230,7 +230,7 @@ Each predictive model allows for additional fields to be added to support your b
 
 #. Optimize for implementation speed.
 
-   If your brand wants to optmize for implementation speed the default fields, along with any required extensions, are accurate enough to start with.
+   If your brand wants to optimize for implementation speed the default fields, along with any required extensions, are accurate enough to start with.
 
    You can revisit a model that was optimized for implementation speed at a later time, and then make changes to extend them for model accuracy later.
 
