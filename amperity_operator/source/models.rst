@@ -60,7 +60,7 @@ Churn propensity
 
 .. model-churn-propensity-about-start
 
-Use :doc:`churn propensity <model_churn_propensity>` scores to churn prevention campaigns. Every customer has a unique purchase history. Instead of relying on hard-coded RFM analyses, Amperity's model uncovers each user's underlying purchase patterns and makes predictions about their likelihood to re-engage with your brand, whether they're a daily, monthly, or seasonal shopper.
+Every customer has a unique purchase history. Instead of relying on hard-coded RFM analyses, use :doc:`churn propensity <model_churn_propensity>` scores to uncover each user's underlying purchase patterns and make predictions about their likelihood to re-engage with your brand, whether they're a daily, monthly, or seasonal shopper.
 
 * Identify customers who are likely to churn
 * Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
