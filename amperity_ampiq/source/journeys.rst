@@ -79,6 +79,12 @@ The following sections describe the steps you'll follow to set up and configure 
 
        On the **Journeys** canvas, under an existing node, click the plus symbol and then choose **Activate**.
 
+       .. image:: ../../images/mockup-journeys-canvas-plus-activate.png
+          :width: 280 px
+          :alt: Activate node
+          :align: left
+          :class: no-scaled-link
+
        Name the activate node and then choose one or more destinations from the dropdown menu.
 
 

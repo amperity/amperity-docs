@@ -179,24 +179,6 @@ Journey start
 
 .. journeys-node-start-start
 
-.. list-table::
-   :widths: 25 75
-
-   * - .. image:: ../../images/journey-node-icon-start.png
-          :width: 60px
-          :alt: Journey start
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-journey-node-start-start
-          :end-before: .. term-journey-node-start-end
-
-       To edit inclusions, exclusions, or exit conditions, click on the **Journey setup** sidebar.
-
-
-
-**ALTERNATE**
-
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-node-start-start
    :end-before: .. term-journey-node-start-end
@@ -207,9 +189,7 @@ Journey start
    :align: left
    :class: no-scaled-link
 
-To edit inclusions, exclusions, or exit conditions, click on the **Journey setup** sidebar.
-
-Click this button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
+To edit inclusions, exclusions, or exit conditions, click on the **Journey setup** sidebar. Click the plus button underneath to add nodes to the journey.
 
 .. journeys-node-start-end
 
@@ -220,23 +200,6 @@ Activate
 --------------------------------------------------
 
 .. journeys-node-activate-start
-
-.. list-table::
-   :widths: 25 75
-
-   * - .. image:: ../../images/journey-node-icon-activate.png
-          :width: 60px
-          :alt: Activate
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-journey-node-activate-start
-          :end-before: .. term-journey-node-activate-end
-
-       You can rename the activate node.
-
-
-**ALTERNATE**
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-node-activate-start
@@ -250,7 +213,6 @@ Activate
 
 You can rename the activate node.
 
-
 .. journeys-node-activate-end
 
 
@@ -260,27 +222,6 @@ Delay
 --------------------------------------------------
 
 .. journeys-node-delay-start
-
-.. list-table::
-   :widths: 25 75
-
-   * - .. image:: ../../images/journey-node-icon-delay.png
-          :width: 60px
-          :alt: Delay
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-journey-node-delay-start
-          :end-before: .. term-journey-node-delay-end
-
-       Choose a combination of an integer plus "days", "weeks", or "months" to designate how long to wait before the next step in the journey begins.
-
-       A delay is applied to a single parent node.
-
-       You can rename the delay node.
-
-
-**ALTERNATE**
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-node-delay-start
@@ -295,7 +236,7 @@ Delay
 Choose a combination of an integer plus "days", "weeks", or "months" to designate how long to wait before the next step in the journey begins.
 
 .. image:: ../../images/mockup-journeys-canvas-delay-options.png
-   :width: 480 px
+   :width: 500 px
    :alt: Delay node
    :align: left
    :class: no-scaled-link
@@ -313,25 +254,6 @@ Conditional split
 --------------------------------------------------
 
 .. journeys-node-split-conditional-start
-
-.. list-table::
-   :widths: 25 75
-
-   * - .. image:: ../../images/journey-node-icon-conditional-split.png
-          :width: 60px
-          :alt: Conditional Split
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-journey-node-conditional-split-start
-          :end-before: .. term-journey-node-conditional-split-end
-
-       These segments may already exist or may be defined within this journey using custom criteria.
-
-       You can rename the individual conditional split node and rename the "Everyone else" sub-audience.
-
-
-**ALTERNATE**
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-node-conditional-split-start
@@ -357,25 +279,6 @@ Percent split
 
 .. journeys-node-split-percent-start
 
-.. list-table::
-   :widths: 25 75
-
-   * - .. image:: ../../images/journey-node-icon-percent-split.png
-          :width: 60px
-          :alt: Percentage Split
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-journey-node-percent-split-start
-          :end-before: .. term-journey-node-percent-split-end
-
-       The percentage of all individual nodes under a percent split must add up to 100% of the audience, including the control group.
-
-       You can rename the percent split node and rename the individual paths.
-
-
-**ALTERNATE**
-
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-node-percent-split-start
    :end-before: .. term-journey-node-percent-split-end
@@ -400,23 +303,6 @@ Individual split
 
 .. journeys-node-split-individual-start
 
-.. list-table::
-   :widths: 25 75
-
-   * - .. image:: ../../images/journey-node-icon-individual-split.png
-          :width: 60px
-          :alt: Individual Split
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-journey-node-individual-split-start
-          :end-before: .. term-journey-node-individual-split-end
-
-       .. note:: To edit sub-audiences conditions and naming, click into the parent node.
-
-
-**ALTERNATE**
-
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-node-individual-split-start
    :end-before: .. term-journey-node-individual-split-end
@@ -436,19 +322,6 @@ Add a node
 --------------------------------------------------
 
 .. journeys-node-add-start
-
-.. list-table::
-   :widths: 25 75
-
-   * - .. image:: ../../images/journey-node-icon-add.png
-          :width: 60px
-          :alt: Add node
-          :align: left
-          :class: no-scaled-link
-     - Click the plus button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
-
-
-**ALTERNATE**
 
 Click the plus button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
 
