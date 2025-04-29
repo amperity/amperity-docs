@@ -565,7 +565,6 @@ Workflows
    orchestration_groups
    orchestrations
    queries
-   quick_start
    sandboxes
    segments
    segments_editor
@@ -576,6 +575,7 @@ Workflows
    sql_presto
    sql_spark
    sso
+   start
    start_here
    system_status
    stitch

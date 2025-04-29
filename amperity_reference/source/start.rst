@@ -11,24 +11,24 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Quick start: Identity resolution
+        Identity resolution agent
 
 ==================================================
-Quick start: Identity resolution
+Identity resolution agent
 ==================================================
 
 .. article-info::
    :avatar: _static/amperity_circle.png
-   :avatar-link: https://docs.amperity.com/reference/quick_start.html
+   :avatar-link: https://docs.amperity.com/reference/start.html
    :avatar-outline: muted
-   :author: Quick start: Identity resolution
+   :author: Identity resolution agent
    :date: |today|
    :read-time: 10 min read; ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 
-.. quickstart-overview-start
+.. start-overview-start
 
-Amperity Customer Data Cloud specializes in using AI to turn raw data into a growing library of robust unified datasets and durable customer profiles that are available to support all of your brand's use cases.
+Amperity specializes in using AI to turn raw data into a growing library of robust unified datasets and durable customer profiles that are available to support all of your brand's use cases.
 
 By the end of this guide you will know how to do the following:
 
@@ -37,31 +37,31 @@ By the end of this guide you will know how to do the following:
 #. Build an identity graph that links disparate profile records together using a unique and persistent identifier.
 #. Sync unified tables from Amperity to your Databricks account.
 
-.. quickstart-overview-end
+.. start-overview-end
 
-.. quickstart-free-trial-start
+.. start-free-trial-start
 
 .. admonition:: Sign up for a free trial of Amperity!
 
    `Sign up for a free trial <https://amperity.com/trial>`__ |ext_link| to see how your brand can use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases. You may use trial data provided by Amperity or you may upload samples of your own customer data.
 
-.. quickstart-free-trial-end
+.. start-free-trial-end
 
 
-.. _quickstart-data-model:
+.. _start-data-model:
 
-Quick Start data model
+Identity resolution agent data model
 ==================================================
 
-.. quickstart-data-model-start
+.. start-data-model-start
 
-The following diagram shows the data model for the sample data that is part of the Amperity Quick Start. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
+The following diagram shows the data model for the sample data that is part of the Identity resolution agent. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
 
-.. quickstart-data-model-end
+.. start-data-model-end
 
 .. image:: ../../images/quickstart_sample_erd.png
    :width: 600 px
-   :alt: The sample data model for Amperity Quick Start.
+   :alt: The sample data model for Amperity Identity resolution agent.
    :align: left
    :class: no-scaled-link
 
@@ -72,17 +72,17 @@ The following diagram shows the data model for the sample data that is part of t
 .. data-tables-data-model-tables-note-end
 
 
-.. _quickstart-prerequisites:
+.. _start-prerequisites:
 
 Prerequisites
 ==================================================
 
-.. quickstart-prerequisites-start
+.. start-prerequisites-start
 
-To follow-along with this quick start guide you will need:
+To follow-along with this guide you will need:
 
 #. Access to an Amperity account.
-#. Approximately ~1 hour of time to complete all of the steps within the quick start guide.
+#. Approximately ~1 hour of time to complete all of the steps within the guide.
 
    .. note:: More time may be required if you want to sync data from your Databricks account instead of using Amperity sample data.
 
@@ -90,17 +90,17 @@ To follow-along with this quick start guide you will need:
 
    .. note:: Amperity sample data contains ~10 million customer records. Additional time may be necessary for loading and processing data if you choose to use your own data instead of Amperity sample data assets, depending on the number of records.
 
-.. quickstart-prerequisites-end
+.. start-prerequisites-end
 
 
-.. _quickstart-login:
+.. _start-login:
 
 Log in to Amperity
 ==================================================
 
-.. quickstart-login-start
+.. start-login-start
 
-To start using the Amperity quick start tenant, do the following:
+To start using Amperity, do the following:
 
 #. Log in to `Amperity <https://app.amperity.com>`__.
 #. Open the **Quick Start** page. This is located in the left-side menu at the top.
@@ -108,30 +108,30 @@ To start using the Amperity quick start tenant, do the following:
 
    This opens the **Identity resolution** page that will walk you through steps for connecting to Databricks, adding semantic tags to synced tables, running Stitch, and then syncing unified tables back to Databricks.
 
-.. quickstart-login-end
+.. start-login-end
 
 
-.. _quickstart-connect:
+.. _start-connect:
 
 Connect to Databricks
 ==================================================
 
-.. quickstart-connect-start
+.. start-connect-start
 
 Use Amperity Bridge to connect Databricks to Amperity. This guide uses Amperity sample data assets, but the steps for Databricks are *almost* the same if you want to use your own data.
 
 You have two options:
 
-#. Use the provided quick start data assets
+#. Use the provided data assets
 #. Use your own data from your own instance of Databricks
 
    .. note:: For this option you will need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
 
-.. quickstart-connect-end
+.. start-connect-end
 
 **To connect to Amperity sample data**
 
-.. quickstart-connect-steps-start
+.. start-connect-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -142,7 +142,7 @@ You have two options:
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - In the **Identity resolution** quick start, next to **Inbound sharing data** click **Add bridge**.
+     - In **Identity resolution**, next to **Inbound sharing data** click **Add bridge**.
 
        .. image:: ../../images/bridge-inbound-choose-amperity-sample-data.png
           :width: 320 px
@@ -186,15 +186,15 @@ You have two options:
 
        This will start the sync between Amperity and Databricks. Wait for the sync to finish before continuing to the next step. (Amperity sample data should sync in about 3 minutes.)
 
-.. quickstart-connect-steps-end
+.. start-connect-steps-end
 
 
-.. _quickstart-semantics:
+.. _start-semantics:
 
 Add semantic tags
 ==================================================
 
-.. quickstart-semantics-start
+.. start-semantics-start
 
 Semantic tags are applied to fields in incoming data sources to indicate the type of data that is contained within those fields.
 
@@ -214,11 +214,11 @@ You have two options:
 #. Let **AmpAI** apply semantic tags (this section)
 #. `Manually apply semantic tags <https://docs.amperity.com/operator/semantics.html>`__
 
-.. quickstart-semantics-end
+.. start-semantics-end
 
 **To let AmpAI apply semantic tags**
 
-.. quickstart-semantics-steps-start
+.. start-semantics-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -229,7 +229,7 @@ You have two options:
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - In the **Identity resolution** quick start, if you are using Amperity sample data, next to **Identity tables**, click **AmpAI select**.
+     - In **Identity resolution**, if you are using Amperity sample data, next to **Identity tables**, click **AmpAI select**.
 
        **AmpAI** will analyze the sample data and identify which tables contain PII, and then idenfity which semantic tags should be applied. You may change the tags **AmpAI** assigns to fields.
 
@@ -248,23 +248,23 @@ You have two options:
 
        .. important:: If you are using your own data review the fields carefully. **AmpAI** will apply semantic tags for PII correctly most of the time, but it's good to double-check and be sure. If you think they are wrong, just remove the tag **AmpAI** applied and find the correct semantic tag.
 
-.. quickstart-semantics-end
+.. start-semantics-end
 
 
-.. _quickstart-run-stitch:
+.. _start-run-stitch:
 
 Run Stitch
 ==================================================
 
-.. quickstart-run-stitch-start
+.. start-run-stitch-start
 
 After all of the source tables to which semantic tags should be applied have semantic tags applied you are ready to run Stitch.
 
-.. quickstart-run-stitch-end
+.. start-run-stitch-end
 
 **To build the identity graph**
 
-.. quickstart-run-stitch-steps-start
+.. start-run-stitch-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -275,7 +275,7 @@ After all of the source tables to which semantic tags should be applied have sem
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - In the **Identity resolution** quick start, next to **Generate Amperity IDs**, click **Run Stitch**.
+     - In **Identity resolution**, next to **Generate Amperity IDs**, click **Run Stitch**.
 
        Wait for the Stitch to finish running before continuing to the next step. This process will 20-30 minutes to complete for Amperity sample data.
 
@@ -286,11 +286,11 @@ After all of the source tables to which semantic tags should be applied have sem
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - The **Identity resolution** quick start will refresh to show high-level results of identity resolution similar to:
+     - **Identity resolution agent** will refresh to show high-level results of identity resolution similar to:
 
        .. image:: ../../images/quick-start-identity-resolution-results.png
           :width: 320 px
-          :alt: Results of identity resolution in Amperity quick start.
+          :alt: Results of identity resolution.
           :align: left
           :class: no-scaled-link
 
@@ -335,10 +335,10 @@ After all of the source tables to which semantic tags should be applied have sem
 
        .. note:: Amperity sample data will show mostly abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and more actionable abnormal benchmarks.
 
-.. quickstart-run-stitch-steps-end
+.. start-run-stitch-steps-end
 
 
-.. _quickstart-create-database:
+.. _start-create-database:
 
 Create database
 ==================================================
@@ -349,7 +349,7 @@ Create database
 
 **To create a Customer 360 database**
 
-.. quickstart-create-database-steps-start
+.. start-create-database-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -391,17 +391,17 @@ Create database
 
        Wait for the data to finish loading before continuing to the next step. This process will 3-5 minutes to complete for Amperity sample data.
 
-.. quickstart-create-database-steps-end
+.. start-create-database-steps-end
 
 
-.. _quickstart-sync-to-databricks:
+.. _start-sync-to-databricks:
 
 Sync identity data to Databricks
 ==================================================
 
-.. quickstart-sync-to-databricks-start
+.. start-sync-to-databricks-start
 
-.. important:: The Amperity quick start for identity resolution does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
+.. important:: The Amperity identity resolution agent does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
 
 Amperity can sync customer profiles to your Databricks account.
 
@@ -409,10 +409,10 @@ Amperity can sync customer profiles to your Databricks account.
 
    To sync data to Databricks, `review the prerequisites <https://docs.amperity.com/operator/bridge_databricks.html#bridge-databricks-sync-with-databricks-prerequisites>`__, `add an outbound bridge <https://docs.amperity.com/operator/bridge_databricks.html#add-outbound-bridge>`__, `select tables to share with Databricks <https://docs.amperity.com/operator/bridge_databricks.html#select-tables-to-share>`__, `download the credentials file <https://docs.amperity.com/operator/bridge_databricks.html#download-credential-file>`__, `add the provider in Databricks <https://docs.amperity.com/operator/bridge_databricks.html#add-provider>`__, `add catalog from share <https://docs.amperity.com/operator/bridge_databricks.html#add-catalog-from-share>`__, and then `verify table sharing <https://docs.amperity.com/operator/bridge_databricks.html#verify-table-sharing>`__.
 
-.. quickstart-sync-to-databricks-end
+.. start-sync-to-databricks-end
 
 
-.. _quickstart-merge-policy:
+.. _start-merge-policy:
 
 Merge policy
 ==================================================
@@ -427,11 +427,11 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 
 .. merge-policy-intro-end
 
-.. quickstart-merge-policy-steps-start
+.. start-merge-policy-steps-start
 
 **To define merge policy**
 
-.. quickstart-merge-policy-steps-start
+.. start-merge-policy-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -467,17 +467,17 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 
        To configure source table precedence, open the **Profile Builder**. Under **Source table precedence**, use the |fa-drag| icon to move the list of tables into the desired order, and then click **Save**.
 
-.. quickstart-merge-policy-steps-end
+.. start-merge-policy-steps-end
 
 
-.. _quickstart-conclusion:
+.. _start-conclusion:
 
 Conclusion and next steps
 ==================================================
 
-.. quickstart-conclusion-start
+.. start-conclusion-start
 
-This quick start guide describes how to connect Amperity to Databricks and to configure Amperity to perform identity resolution against data that is synced from Databricks.
+This guide describes how to connect Amperity to Databricks and to configure Amperity to perform identity resolution against data that is synced from Databricks.
 
 Amperity can do a lot more:
 
@@ -490,4 +490,4 @@ Amperity can do a lot more:
 * `Profile API <https://docs.amperity.com/operator/api_profile.html>`__
 * `Real-time tables <https://docs.amperity.com/operator/realtime.html>`__
 
-.. quickstart-conclusion-end
+.. start-conclusion-end
