@@ -260,7 +260,7 @@ Predictive models are configurable in Amperity:
 
 * :ref:`Build a churn propensity model <model-churn-propensity-configure>`
 * :ref:`Build a event propensity model <model-event-propensity-configure>`
-* :ref:`Build a predicted CLV <model-predicted-clv-configure>`
+* :ref:`Build a predicted CLV model <model-predicted-clv-configure>`
 * :ref:`Build a product affinity model <model-product-affinity-configure>`
 
 .. models-build-end
@@ -283,12 +283,16 @@ This section describes individual tasks that are related to building predictive 
 Activate a model
 --------------------------------------------------
 
+.. models-howtows-activate-steps-start
+
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
 #. In the row with the model you want to edit, from the |fa-kebab| menu, select **Edit**.
-#. This opens page for selected model in edit mode.
-#. Press **Activate** at top right-hand-size of the model configuration page
+#. This opens the page for selected model in edit mode.
+#. Press **Activate** at top right-hand-side of the model configuration page
 #. Select a courier group. The model will run at the same frequency as the courier group.
+
+.. models-howtows-activate-steps-end
 
 
 .. _models-howtows-add:
@@ -296,12 +300,16 @@ Activate a model
 Add a model
 --------------------------------------------------
 
-These are captured in the "Build a model" section for each of the five model-specific pages. Links for now:
+.. models-howtows-add-steps-start
+
+These are captured in the "Build a model" section for each of the five model-specific pages:
 
 #. :ref:`model-churn-propensity-configure`
 #. :ref:`model-event-propensity-configure`
 #. :ref:`model-predicted-clv-configure`
 #. :ref:`model-product-affinity-configure`
+
+.. models-howtows-add-steps-end
 
 
 .. _models-howtows-delete:
@@ -309,9 +317,13 @@ These are captured in the "Build a model" section for each of the five model-spe
 Delete a model
 --------------------------------------------------
 
+.. models-howtows-delete-steps-start
+
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
 #. In the row with the model you want to delete, from the |fa-kebab| menu, select **Delete**. Confirm by clicking **Delete**.
+
+.. models-howtows-delete-steps-end
 
 
 .. _models-howtows-edit:
@@ -319,10 +331,14 @@ Delete a model
 Edit a model
 --------------------------------------------------
 
+.. models-howtows-edit-steps-start
+
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
 #. In the row with the model you want to edit, from the |fa-kebab| menu, select **Edit**.
 #. This opens page for selected model in edit mode.
+
+.. models-howtows-edit-steps-end
 
 
 .. _models-howtows-pause:
@@ -330,11 +346,15 @@ Edit a model
 Pause a model
 --------------------------------------------------
 
+.. models-howtows-pause-steps-start
+
 A paused model will not run as part of a courier group workflow, even if that workflow is scheduled. You may activate a paused workflow without redefining the schedule (if a schedule exists).
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
 #. In the row with the model you want to pause, from the |fa-kebab| menu, select **Pause**. Confirm that you want to pause the model by clicking **Pause**.
+
+.. models-howtows-pause-steps-end
 
 
 .. _models-howtows-promote-from-sandbox:
@@ -342,25 +362,29 @@ A paused model will not run as part of a courier group workflow, even if that wo
 Promote from a sandbox
 --------------------------------------------------
 
-.. TODO: ROUGH NOTES
+.. models-howtows-promote-from-sandbox-steps-start
 
 The following steps are needed to prepare a model for sandbox promotion.
 
-#. Create a sandbox
-#. Run the database(s) in which your brand intends to activate models
-#. :ref:`Add models <models-howtows-add>`
-#. Kick off a model validations in the lower left-hand-side of the page. When complete, confirm that validation metrics are passing.
-#. :ref:`Kick off training jobs <models-howtows-view-jobs>`
-#. :ref:`When the training jobs are complete, kick off inference jobs <models-howtows-view-jobs>`
+#. Create a sandbox.
+#. Run the database(s) in which your brand intends to activate models.
+#. :ref:`Add models <models-howtows-add>`.
+#. Start model validations from the lower left-hand-side of the page. When complete, confirm that validation metrics are passing.
+#. :ref:`Start the training jobs <models-howtows-view-jobs>`.
+#. :ref:`When the training jobs are complete, start inference jobs <models-howtows-view-jobs>`.
 #. When the inference job is complete, re-run the database to populate the predictive data asset.
-#. :ref:`Active the model <models-howtows-activate>`
+#. :ref:`Activate the model <models-howtows-activate>`.
 #. Promote the sandbox.
+
+.. models-howtows-promote-from-sandbox-steps-end
 
 
 .. _models-howtows-schedule:
 
 Schedule a model
 --------------------------------------------------
+
+.. models-howtows-schedule-steps-start
 
 A model must be associated with a scheduled courier group workflow.
 
@@ -371,11 +395,15 @@ A model must be associated with a scheduled courier group workflow.
 #. The **Inference job cadence** is the frequency at which predictions are generated. The default is daily.
 #. Click **Save**.
 
+.. models-howtows-schedule-steps-end
+
 
 .. _models-howtows-view-jobs:
 
 View jobs
 --------------------------------------------------
+
+.. models-howtows-view-jobs-steps-start
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
@@ -383,15 +411,21 @@ View jobs
 #. You can run the full predictive workflow or individual jobs by type.
 #. The results for each job are shown on the right side, including past run dates, run status, and the number of records in the results.
 
+.. models-howtows-view-jobs-steps-end
+
 
 .. _models-howtows-view-model-configuration:
 
 View model configuration
 --------------------------------------------------
 
+.. models-howtows-view-model-configuration-steps-start
+
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
 #. In the row with the model you want to schedule, from the |fa-kebab| menu, select **View**. This opens the page for selected model.
+
+.. models-howtows-view-model-configuration-steps-end
 
 
 .. _models-howtows-view-model-versions:
@@ -399,7 +433,11 @@ View model configuration
 View model versions
 --------------------------------------------------
 
+.. models-howtows-view-model-versions-steps-start
+
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
 #. In the row with the model you want to schedule, from the |fa-kebab| menu, select **View**. This opens the page for selected model.
 #. A dropdown menu at top of the page lists the current configuration as the default. Earlier configurations are available from the same dropdown.
+
+.. models-howtows-view-model-versions-steps-end
