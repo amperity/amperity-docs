@@ -143,6 +143,7 @@ Exit conditions are defined using a segment. One or more segments that define ex
    :alt: Choose exit conditions
    :align: left
    :class: no-scaled-link
+
 .. journeys-exit-conditions-end
 
 
@@ -482,7 +483,7 @@ This section describes tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-edit`
 * :ref:`journeys-howtos-edit-destination-attributes`
 * :ref:`journeys-howtos-edit-starting-audience`
-* :ref:`journeys-howtos-edit-exit-criteria`
+* :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-interact`
 * :ref:`journeys-howtos-name`
 * :ref:`journeys-howtos-set-run-frequency`
@@ -741,28 +742,40 @@ The starting audience for a journey can be edited.
 #. From the **Journeys** canvas, open the **Journey setup** sidebar.
 #. Under **Journey entry** use the dropdown menus to edit the included and excluded segments.
 
+   .. image:: ../../images/mockup-journeys-canvas-inclusion-exclusion.png
+      :width: 380 px
+      :alt: Edit starting audience
+      :align: left
+      :class: no-scaled-link
+
 .. journeys-howtos-edit-starting-audience-steps-end
 
 
-.. _journeys-howtos-edit-exit-criteria:
+.. _journeys-howtos-edit-exit-conditions:
 
-Edit exit criteria
+Edit exit conditions
 --------------------------------------------------
 
-.. journeys-howtos-edit-exit-criteria-start
+.. journeys-howtos-edit-exit-conditions-start
 
 The exit criteria for a journey can be edited.
 
-.. journeys-howtos-edit-exit-criteria-end
+.. journeys-howtos-edit-exit-conditions-end
 
 **To edit exit conditions**
 
-.. journeys-howtos-edit-exit-criteria-steps-start
+.. journeys-howtos-edit-exit-conditions-steps-start
 
 #. From the **Journeys** canvas, open the **Journey setup** sidebar.
 #. Under **Exit conditions** use the dropdown menus to edit the segments that should exit the journey.
 
-.. journeys-howtos-edit-exit-criteria-steps-end
+   .. image:: ../../images/mockup-journeys-canvas-exit-conditions.png
+      :width: 380 px
+      :alt: Choose exit conditions
+      :align: left
+      :class: no-scaled-link
+
+.. journeys-howtos-edit-exit-conditions-steps-end
 
 
 .. _journeys-howtos-interact:
