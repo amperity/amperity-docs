@@ -102,8 +102,8 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
    * - **Amazon Ads**
      - |system-yes|
-     - 
-     - Pull data to Amperity from Amazon Ads using Fivetran.
+     - |system-yes|
+     - Pull data to Amperity from Amazon Ads using Fivetran. Send audiences to Amazon Ads and advertise across Amazon-associated paid media.
 
    * - **Amazon Aurora**
      - |system-yes|
@@ -938,8 +938,13 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Send contact lists to Throtle using Amazon S3.
 
-   * - **TikTok Ads**
+   * - **The Trade Desk**
+     - 
      - |system-yes|
+     - Send UID2 and EUID identifiers to The Trade Desk for paid media advertising.
+
+   * - **TikTok Ads**
+     - 
      - |system-yes|
      - Pull data to Amperity from TikTok Ads using Fivetran.
 
@@ -1043,8 +1048,8 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
    * - **Zendesk**
      - |system-yes|
-     - 
-     - Pull customer service data from Zendesk using the Zendesk Support API.
+     - |system-yes|
+     - Pull customer service data from Zendesk using the Zendesk Support API. Send audiences and customer attributes to Zendesk to improve support personalization experiences.
 
    * - **Zoho Analytics**
      - 
