@@ -17,7 +17,7 @@
 Review customer 360
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/databases.rst
+.. include:: ../../amperity_operator/source/databases.rst
    :start-after: .. databases-start
    :end-before: .. databases-end
 
@@ -27,7 +27,7 @@ Review customer 360
 About table types
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/databases.rst
+.. include:: ../../amperity_operator/source/databases.rst
    :start-after: .. databases-table-types-start
    :end-before: .. databases-table-types-end
 
@@ -51,7 +51,7 @@ Standard tables
 Source and custom tables
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/databases.rst
+.. include:: ../../amperity_operator/source/databases.rst
    :start-after: .. databases-table-type-source-and-custom-start
    :end-before: .. databases-table-type-source-and-custom-end
 
@@ -75,6 +75,6 @@ QA tables
 Review customer profiles
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/databases.rst
+.. include:: ../../amperity_operator/source/databases.rst
    :start-after: .. databases-customer-profile-start
    :end-before: .. databases-customer-profile-end

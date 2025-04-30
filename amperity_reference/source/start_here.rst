@@ -3,25 +3,23 @@
 
 .. meta::
     :description lang=en:
-        Amperity Customer Data Cloud helps your brand build accurate customer profiles.
+        Amperity helps your brand build accurate customer profiles.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity Customer Data Cloud helps your brand build accurate customer profiles.
+        Amperity helps your brand build accurate customer profiles.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Amperity Customer Data Cloud
+        About Amperity
 
 ==================================================
-About Customer Data Cloud
+About Amperity
 ==================================================
 
 .. start-here-start
 
-Amperity Customer Data Cloud helps your brand build accurate customer profiles that makes your brand's customer data usable to your entire business.
-
-Amperity Customer Data Cloud helps your brand
+Amperity helps your brand build accurate customer profiles that makes your brand's customer data usable to your entire business.
 
 * Quickly build accurate customer profiles
 * Build custom data models

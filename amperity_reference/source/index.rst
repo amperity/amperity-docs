@@ -330,7 +330,7 @@ Segments
 
 
 **How-tos**:
-   :ref:`segments-add-attribute-from-table` |fa-index-separator| :ref:`segments-add-conditions` |fa-index-separator| :ref:`segments-add-exclusion` |fa-index-separator| :ref:`segments-add-folders` |fa-index-separator| :ref:`segments-add-purchase-behaviors` |fa-index-separator| :ref:`segments-add-query-segment` |fa-index-separator| :ref:`segments-add-section` |fa-index-separator| :ref:`segments-add-segments-segment` |fa-index-separator| :ref:`segments-add-subfolders` |fa-index-separator| :ref:`segments-add-files-segment` |fa-index-separator| :ref:`segments-bulk-delete-segments` |fa-index-separator| :ref:`segments-bulk-move-segment` |fa-index-separator| :ref:`segments-choose-andor-start` |fa-index-separator| :ref:`segments-change-comparison-dates` |fa-index-separator| :ref:`segments-change-date` |fa-index-separator| :ref:`segments-baseline-chart-source` |fa-index-separator| :ref:`segments-segment-database-source` |fa-index-separator| :ref:`segments-comment` |fa-index-separator| :ref:`segments-compare` |fa-index-separator| :ref:`segments-configure-segments` |fa-index-separator| :ref:`segments-copy-column` |fa-index-separator| :ref:`segments-copy-segment-id` |fa-index-separator| :ref:`segments-copy-sql-query` |fa-index-separator| :ref:`segments-create-campaign` |fa-index-separator| :ref:`segments-create-customer-list` |fa-index-separator| :ref:`segments-create-new-segment-from-overlap` |fa-index-separator| :ref:`segments-create-sql-segment-in-folder` |fa-index-separator| :ref:`segments-visual-segment-in-folder` |fa-index-separator| :ref:`segments-customize-charts` |fa-index-separator| :ref:`segments-delete-segment` |fa-index-separator| :ref:`segments-download-segment` |fa-index-separator| :ref:`segments-duplicate-segment` |fa-index-separator| :ref:`segments-edit-segment` |fa-index-separator| :ref:`segments-edit-segment-editor` |fa-index-separator| :ref:`segments-expand-graph` |fa-index-separator| :ref:`segments-explore-copy` |fa-index-separator| :ref:`segments-format-segment` |fa-index-separator| :ref:`segments-move-segment` |fa-index-separator| :ref:`segments-organize-segments` |fa-index-separator| :ref:`segments-rename-segment` |fa-index-separator| :ref:`segments-rerun-segment` |fa-index-separator| :ref:`segments-save-segments-to-folder` |fa-index-separator| :ref:`segments-search-segment` |fa-index-separator| :ref:`segments-select-segment-comparison-chart` |fa-index-separator| :ref:`segments-select-database` |fa-index-separator| :ref:`segments-select-multi-values` |fa-index-separator| :ref:`segments-set-default-charts` |fa-index-separator| :ref:`segments-show-columns` |fa-index-separator| :ref:`segments-switch-sql-segment` |fa-index-separator| :ref:`segments-use-relative-dates` |fa-index-separator| :ref:`segments-view-segment` |fa-index-separator| :ref:`segments-view-edit-history` |fa-index-separator| :ref:`segments-view-matching-records` |fa-index-separator| :ref:`segments-view-segment-overlap` |fa-index-separator| :ref:`segments-view-SQL-attribute-charts` |fa-index-separator| :ref:`segments-view-SQL-revenue-tree` |fa-index-separator| :ref:`segments-view-segment-stats-SQL`
+   :ref:`segments-add-attribute-from-table` |fa-index-separator| :ref:`segments-add-conditions` |fa-index-separator| :ref:`segments-add-exclusion` |fa-index-separator| :ref:`segments-add-folders` |fa-index-separator| :ref:`segments-add-purchase-behaviors` |fa-index-separator| :ref:`segments-add-query-segment` |fa-index-separator| :ref:`segments-add-section` |fa-index-separator| :ref:`segments-add-segments-segment` |fa-index-separator| :ref:`segments-add-subfolders` |fa-index-separator| :ref:`segments-add-files-segment` |fa-index-separator| :ref:`segments-bulk-delete-segments` |fa-index-separator| :ref:`segments-bulk-move-segment` |fa-index-separator| :ref:`segments-choose-andor` |fa-index-separator| :ref:`segments-change-comparison-dates` |fa-index-separator| :ref:`segments-change-date` |fa-index-separator| :ref:`segments-baseline-chart-source` |fa-index-separator| :ref:`segments-segment-database-source` |fa-index-separator| :ref:`segments-comment` |fa-index-separator| :ref:`segments-compare` |fa-index-separator| :ref:`segments-configure-segments` |fa-index-separator| :ref:`segments-copy-column` |fa-index-separator| :ref:`segments-copy-segment-id` |fa-index-separator| :ref:`segments-copy-sql-query` |fa-index-separator| :ref:`segments-create-campaign` |fa-index-separator| :ref:`segments-create-customer-list` |fa-index-separator| :ref:`segments-create-new-segment-from-overlap` |fa-index-separator| :ref:`segments-create-sql-segment-in-folder` |fa-index-separator| :ref:`segments-visual-segment-in-folder` |fa-index-separator| :ref:`segments-customize-charts` |fa-index-separator| :ref:`segments-delete-segment` |fa-index-separator| :ref:`segments-download-segment` |fa-index-separator| :ref:`segments-duplicate-segment` |fa-index-separator| :ref:`segments-edit-segment` |fa-index-separator| :ref:`segments-edit-segment-editor` |fa-index-separator| :ref:`segments-expand-graph` |fa-index-separator| :ref:`segments-explore-copy` |fa-index-separator| :ref:`segments-format-segment` |fa-index-separator| :ref:`segments-move-segment` |fa-index-separator| :ref:`segments-organize-segments` |fa-index-separator| :ref:`segments-rename-segment` |fa-index-separator| :ref:`segments-rerun-segment` |fa-index-separator| :ref:`segments-save-segments-to-folder` |fa-index-separator| :ref:`segments-search-segment` |fa-index-separator| :ref:`segments-select-segment-comparison-chart` |fa-index-separator| :ref:`segments-select-database` |fa-index-separator| :ref:`segments-select-multi-values` |fa-index-separator| :ref:`segments-set-default-charts` |fa-index-separator| :ref:`segments-show-columns` |fa-index-separator| :ref:`segments-switch-sql-segment` |fa-index-separator| :ref:`segments-use-relative-dates` |fa-index-separator| :ref:`segments-view-segment` |fa-index-separator| :ref:`segments-view-edit-history` |fa-index-separator| :ref:`segments-view-matching-records` |fa-index-separator| :ref:`segments-view-segment-overlap` |fa-index-separator| :ref:`segments-view-SQL-attribute-charts` |fa-index-separator| :ref:`segments-view-SQL-revenue-tree` |fa-index-separator| :ref:`segments-view-segment-stats-SQL`
 
 
 .. _index-semantics:
@@ -440,6 +440,7 @@ Workflows
    :hidden:
 
    abbreviations
+   activation_ids
    ampai
    amps
    api
@@ -553,6 +554,7 @@ Workflows
    format_xml
    glossary
    ingest_queries
+   journeys
    model_churn_propensity
    model_event_propensity
    model_predicted_clv
@@ -563,7 +565,6 @@ Workflows
    orchestration_groups
    orchestrations
    queries
-   quick_start
    sandboxes
    segments
    segments_editor
@@ -574,10 +575,12 @@ Workflows
    sql_presto
    sql_spark
    sso
+   start
    start_here
    system_status
    stitch
    stitch_results
    uid2
+   updates
    usage
    workflows

@@ -27,7 +27,7 @@ Send query results to Criteo
 
 .. sendto-criteo-api-note-start
 
-.. note:: This destination uses the |ext_criteo_api|.
+.. note:: This destination uses the `Criteo API <https://developers.criteo.com/marketing-solutions/docs>`__ |ext_link|.
 
 .. sendto-criteo-api-note-end
 

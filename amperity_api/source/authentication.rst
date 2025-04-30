@@ -94,7 +94,7 @@ Access tokens
 
 .. authentication-access-tokens-start
 
-Access to the Amperity API requires using |ext_jwt| access tokens that are signed by Amperity-managed API keys.
+Access to the Amperity API requires using `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| access tokens that are signed by Amperity-managed API keys.
 
 .. authentication-access-tokens-end
 

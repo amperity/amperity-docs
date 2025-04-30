@@ -34,7 +34,8 @@ This section describes tasks related to building segments in Amperity:
 * :ref:`segments-change-comparison-dates`
 * :ref:`segments-segment-database-source`
 * :ref:`segments-change-date`
-* :ref:`segments-choose-andor-start`
+* :ref:`segments-choose-activation-id`
+* :ref:`segments-choose-andor`
 * :ref:`segments-compare`
 * :ref:`segments-select-segment-comparison-chart`
 * :ref:`segments-copy-column`
@@ -294,12 +295,44 @@ You can change the date range for all the insight details charts.
 .. segments-change-date-steps-end
 
 
-.. _segments-choose-andor-start:
+.. _segments-choose-activation-id:
+
+Choose activation ID
+==================================================
+
+.. segments-choose-activation-id-start
+
+You can configure a segment to use any activation ID that is configured in your tenant.
+
+Tables and lists are limited to only those that contain a field that matches the selected activation ID.
+
+For example, if the activation ID is "email_id" then only tables with a field named **email_id** will be available for use with segments or campaigns.
+
+The language that is used within the **Segment Editor** is updated to match the friendly, singular, and plural names of the selected activation ID.
+
+For example, the "Include customers with ALL of the following ..." statement is updated to "Include email addresses with ALL of the following ..." when the plural name is "email addresses".
+
+Segment insights are updated to only show the count for records that match the selected activation ID and the language is updatedf.
+
+.. segments-choose-activation-id-end
+
+**To choose an activation ID**
+
+.. segments-choose-activation-id-steps-start
+
+#. Create a segment.
+#. In the **Segment Editor** select an activation ID from the **Activation ID** dropdown. The language in the **Segment Editor** is updated to match the configured activation ID.
+#. Build the rest of the segment as you would normally, and then click **Save**.
+
+.. segments-choose-activation-id-steps-end
+
+
+.. _segments-choose-andor:
 
 Choose AND/OR from toggle
 ==================================================
 
-.. segments-choose-andor-start
+.. segments-choose-andor
 
 When you add a condition, select either **AND** or **OR**  on the toggle for the conditional operator.
 
@@ -1142,7 +1175,7 @@ Up to five segments may be configured to show in the list of recommended segment
 
        This opens the **Configure recommended segments** dialog box.
 
-       For each recommended segment, use the drop-down list to choose a segment
+       For each recommended segment, use the dropdown list to choose a segment
 
        .. image:: ../../images/mockup-segments-recommended-select.png
           :width: 380 px
@@ -1184,7 +1217,7 @@ Up to five segments may be configured to show in the list of recommended segment
           :align: left
           :class: no-scaled-link
 
-       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." drop-down.
+       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." dropdown.
 
        .. image:: ../../images/mockup-segments-recommended-choose-database.png
           :width: 420 px

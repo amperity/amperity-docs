@@ -477,7 +477,7 @@ Open a sandbox
 
 .. sandboxes-howto-open-sandbox-start
 
-A sandbox is accessible from the **Users and Activity** page *or* from the drop-down menu in the top-right of your tenant.
+A sandbox is accessible from the **Users and Activity** page *or* from the dropdown menu in the top-right of your tenant.
 
 .. sandboxes-howto-open-sandbox-end
 
@@ -490,7 +490,7 @@ A sandbox is accessible from the **Users and Activity** page *or* from the drop-
 
    This will open the sandbox in a new page in your Web browser.
 
-   .. tip:: To open a sandbox in the *same page*, click the menu in the top-right of your tenant, and then from the drop-down list that appears, select a sandbox.
+   .. tip:: To open a sandbox in the *same page*, click the menu in the top-right of your tenant, and then from the dropdown list that appears, select a sandbox.
 
 .. sandboxes-howto-open-sandbox-steps-end
 

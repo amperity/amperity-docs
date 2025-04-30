@@ -339,9 +339,9 @@ The following steps describe how to configure a destination for |bic| when it is
 
 #. From the **Destinations** page, click **Add Destination**. This opens the **Add Destination** dialog box.
 #. Enter the name of the destination and a description. For example: "BI Connect" and "This sends data to the BI Connect data warehouse".
-#. From the **Plugin** drop-down, select **Snowflake**.
-#. From the **Credential Type** drop-down, select a credential type: "aws-snowflake".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Plugin** dropdown, select **Snowflake**.
+#. From the **Credential Type** dropdown, select a credential type: "aws-snowflake".
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter the username and password. This is the service account username and password.
 #. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket.
 #. Under **Snowflake Settings**, enter the Snowflake account name, Amazon AWS region ID, Snowflake stage name, and Snowflake data warehouse name.
@@ -378,9 +378,9 @@ The following steps describe how to configure a destination for |bic| when it is
 
 #. From the **Destinations** page, click **Add Destination**. This opens the **Add Destination** dialog box.
 #. Enter the name of the destination and a description. For example: "Snowflake" and "This sends data to Snowflake".
-#. From the **Plugin** drop-down, select **Snowflake**.
-#. From the **Credential Type** drop-down, select a credential type: "azure-snowflake".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Plugin** dropdown, select **Snowflake**.
+#. From the **Credential Type** dropdown, select a credential type: "azure-snowflake".
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter the username and password. This is the service account username and password.
 #. Add the Azure Blob Storage account name and shared access signature for the AZURE_ROLE with permission to access Azure Bob Storage.
 #. Under **Snowflake Settings**, enter the Snowflake account name, the region identifier, Snowflake stage name, and Snowflake data warehouse name.
@@ -577,7 +577,7 @@ Amazon QuickSight
 
 .. destination-bic-connect-to-amazon-quicksight-start
 
-Configure Amazon QuickSight to connect to the |bic| data warehouse as a |ext_aws_quicksight_vpc|.
+Configure Amazon QuickSight to connect to the |bic| data warehouse as a `VPC data source <https://docs.aws.amazon.com/quicksight/latest/user/vpc-connection-supported-data-sources.html>`__ |ext_link|.
 
 .. destination-bic-connect-to-amazon-quicksight-end
 
@@ -593,7 +593,7 @@ Domo
 
 .. destination-bic-connect-to-domo-start
 
-Configure Domo to connect to the |bic| data warehouse using the |ext_domo_snowflake| or the |ext_domo_snowflake_oauth|.
+Configure Domo to connect to the |bic| data warehouse using the `Snowflake connector <https://domohelp.domo.com/hc/en-us/articles/360042931814-Snowflake-Connector>`__ |ext_link| or the `Snowflake connector <https://domohelp.domo.com/hc/en-us/articles/360061552054-Snowflake-OAuth-Connector>`__ |ext_link|.
 
 .. destination-bic-connect-to-domo-end
 
@@ -644,7 +644,7 @@ Databricks
 .. destination-bic-connect-other-jdbc-databricks-steps-start
 
 #. Download and install the |ext_snowflake_jdbc|.
-#. Configure Databricks to |ext_databricks_from_jdbc| to |bic|.
+#. Configure Databricks to `use the JDBC driver to connect <https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html>`__ |ext_link| to |bic|.
 #. Enter the following information:
 
    .. list-table::
@@ -739,7 +739,7 @@ Looker
 
 .. destination-bic-connect-to-looker-start
 
-Configure |ext_google_looker_snowflake| to the |bic| data warehouse.
+Configure `Looker to connect directly <https://docs.looker.com/setup-and-management/connecting-to-db>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-looker-end
 
@@ -755,7 +755,7 @@ Microsoft PowerBI
 
 .. destination-bic-connect-to-microsoft-powerbi-start
 
-Download the |ext_snowflake_odbc|, and then connect Microsoft |ext_microsoft_power_bi_desktop_to_snowflake| to the |bic| data warehouse.
+Download the |ext_snowflake_odbc|, and then connect Microsoft `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-microsoft-powerbi-end
 
@@ -793,7 +793,7 @@ Oracle Business Analytics
 
 .. destination-bic-connect-to-oracle-business-analytics-start
 
-Use |ext_oracle_analytics_desktop_snowflake| to connect directly to the |bic| data warehouse.
+Use `Oracle Analytics Desktop <https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/connect-snowflake-data-warehouse.html>`__ |ext_link| to connect directly to the |bic| data warehouse.
 
 .. destination-bic-connect-to-oracle-business-analytics-end
 

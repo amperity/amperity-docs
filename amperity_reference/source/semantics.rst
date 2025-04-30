@@ -120,7 +120,7 @@ Blocklist
 
 .. semantics-blocklists-table-about-start
 
-The following table describes recommended patterns to use when defining semantic tags for a |blocklist_bad_values|. Blocklist semantics are prefixed with **blv/** in the semantics drop-down menu in the **Feed Editor**.
+The following table describes recommended patterns to use when defining semantic tags for a |blocklist_bad_values|. Blocklist semantics are prefixed with **blv/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-blocklists-table-about-end
 
@@ -153,7 +153,7 @@ Compliance
 
 .. semantics-compliance-about-start
 
-The following table describes the semantic tags that are used for CCPA and/or GDPR compliance workflows. Compliance semantics are prefixed with **compliance/** in the semantics drop-down menu in the **Feed Editor**.
+The following table describes the semantic tags that are used for CCPA and/or GDPR compliance workflows. Compliance semantics are prefixed with **compliance/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-compliance-about-end
 
@@ -393,7 +393,7 @@ Email events
 
 .. semantics-email-events-start
 
-Apply email event semantic tags to data sources that contain data for raw email events. Use the built-in list of semantics when building a feed or custom domain table. Email event semantics are prefixed with **email-event/** in the semantics drop-down menu in the **Feed Editor**.
+Apply email event semantic tags to data sources that contain data for raw email events. Use the built-in list of semantics when building a feed or custom domain table. Email event semantics are prefixed with **email-event/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-email-events-end
 
@@ -496,7 +496,7 @@ Email summary
 
 .. semantics-email-summary-start
 
-Apply email summary semantic tags to data sources that contain email summary data for how customers interact with emails sent to them from your brands. Use the built-in list of semantics when building a feed. Email summary semantics are prefixed with **email-summary/** in the semantics drop-down menu in the **Feed Editor**.
+Apply email summary semantic tags to data sources that contain email summary data for how customers interact with emails sent to them from your brands. Use the built-in list of semantics when building a feed. Email summary semantics are prefixed with **email-summary/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-email-summary-end
 
@@ -675,7 +675,7 @@ Fiscal calendar
 
 .. semantics-fiscal-calendar-start
 
-Fiscal calendar semantics should be applied to data sources that contain the days, weeks, months, and holidays that define your brand's fiscal calendar. Fiscal calendar semantics are prefixed with **fiscal/** in the semantics drop-down menu in the **Feed Editor**.
+Fiscal calendar semantics should be applied to data sources that contain the days, weeks, months, and holidays that define your brand's fiscal calendar. Fiscal calendar semantics are prefixed with **fiscal/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-fiscal-calendar-end
 
@@ -977,7 +977,7 @@ Loyalty events
 
 .. semantics-loyalty-events-start
 
-Apply loyalty events semantic tags to data sources that contain data that captures customer interactions with your brand's loyalty program. Loyalty events semantics are prefixed with **loy-event/** in the semantics drop-down menu in the **Feed Editor**.
+Apply loyalty events semantic tags to data sources that contain data that captures customer interactions with your brand's loyalty program. Loyalty events semantics are prefixed with **loy-event/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-loyalty-events-end
 
@@ -1152,7 +1152,7 @@ Loyalty profiles
 
 .. semantics-loyalty-profiles-start
 
-Apply loyalty profile semantic tags to data sources that contain data that provides details about customers who belong to your brand's loyalty program. Loyalty profile semantics are prefixed with **loy/** in the semantics drop-down menu in the **Feed Editor**.
+Apply loyalty profile semantic tags to data sources that contain data that provides details about customers who belong to your brand's loyalty program. Loyalty profile semantics are prefixed with **loy/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-loyalty-profiles-end
 
@@ -1328,7 +1328,7 @@ Email opt-in status
 
 .. semantics-optin-email-start
 
-Apply email opt-in status semantic tags to data sources that contain data that indicates when customers have given their consent to your brand for using their email address as part of your marketing campaign. Email opt-in status semantics are prefixed with **email-opt/** in the semantics drop-down menu in the **Feed Editor**.
+Apply email opt-in status semantic tags to data sources that contain data that indicates when customers have given their consent to your brand for using their email address as part of your marketing campaign. Email opt-in status semantics are prefixed with **email-opt/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-optin-email-end
 
@@ -1401,7 +1401,7 @@ SMS opt-in status
 
 .. semantics-optin-sms-start
 
-Apply SMS opt-in status semantic tags to data sources that contain data that indicates when customers have given their consent to your brand for using their phone number as part of your marketing campaign. SMS opt-in status semantics are prefixed with **sms-opt/** in the semantics drop-down menu in the **Feed Editor**.
+Apply SMS opt-in status semantic tags to data sources that contain data that indicates when customers have given their consent to your brand for using their phone number as part of your marketing campaign. SMS opt-in status semantics are prefixed with **sms-opt/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-optin-sms-end
 
@@ -1474,7 +1474,7 @@ Product catalog
 
 .. semantics-product-catalog-start
 
-Product catalog semantics may be applied to data sources that contain product catalog data. Product semantics may applied alongside other semantics, depending on the data source. Use the built-in list of semantics when building a feed. Product catalog semantics are prefixed with **pc/** in the semantics drop-down menu in the **Feed Editor**. Use the combination of product semantic tags that best describes the structure of your product catalog.
+Product catalog semantics may be applied to data sources that contain product catalog data. Product semantics may applied alongside other semantics, depending on the data source. Use the built-in list of semantics when building a feed. Product catalog semantics are prefixed with **pc/** in the semantics dropdown menu in the **Feed Editor**. Use the combination of product semantic tags that best describes the structure of your product catalog.
 
 .. semantics-product-catalog-end
 
@@ -1843,7 +1843,7 @@ The following table lists the tags available to this semantic group:
 
           Amperity uses the last 10-digits of phone numbers for identity resolution.
 
-          Use the `input validation report <https://docs.amperity.com/datagrid/validate_inputs.html>`__ to find data sources that contain records with phone numbers that exceed 10 digits.
+          Use the `input validation report <https://docs.amperity.com/operator/validate_inputs.html>`__ to find data sources that contain records with phone numbers that exceed 10 digits.
 
           You should exclude extensions from phone numbers whenever possible. You may use a custom domain table to apply additional formatting to phone numbers, such as removing extensions.
 
@@ -1954,7 +1954,7 @@ Email
 
 .. semantics-subscriber-status-email-start
 
-Use email subscriber status semantic tags to consolidate opt-in and opt-out data for email addresses into a single table. Email semantics are prefixed with **email-opt/** in the semantics drop-down menu in the **Feed Editor**.
+Use email subscriber status semantic tags to consolidate opt-in and opt-out data for email addresses into a single table. Email semantics are prefixed with **email-opt/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-subscriber-status-email-end
 
@@ -2009,7 +2009,7 @@ Phone (SMS)
 
 .. semantics-subscriber-status-sms-start
 
-Use phone (SMS) subscriber status semantic tags to consolidate opt-in and opt-out data for phone numbers into a single table. Phone (SMS) semantics are prefixed with **sms-opt/** in the semantics drop-down menu in the **Feed Editor**.
+Use phone (SMS) subscriber status semantic tags to consolidate opt-in and opt-out data for phone numbers into a single table. Phone (SMS) semantics are prefixed with **sms-opt/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-subscriber-status-sms-end
 
@@ -2070,7 +2070,7 @@ Transactions
 
 Itemized transaction semantics should be applied to data sources that contain records for individual items in a transaction. Itemized transaction semantics may applied alongside other semantics, depending on the data source. Use the built-in list of semantics when building a feed.
 
-Itemized transaction semantics are prefixed with **txn-item/** in the semantics drop-down menu in the **Feed Editor**.
+Itemized transaction semantics are prefixed with **txn-item/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-itemized-transactions-end
 

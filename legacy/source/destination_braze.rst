@@ -18,7 +18,7 @@
 Send data to Braze
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_braze.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_braze.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-braze-start
@@ -97,7 +97,7 @@ About data points
 
 .. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
 
-.. important:: `Connected Content <https://docs.amperity.com/datagrid/api_profile.html#braze-connected-content>`__ does not write data to user profiles, which means you can use Connected Content to dynamically populate values into messages without consuming data points.
+.. important:: `Connected Content <https://docs.amperity.com/operator/api_profile.html#braze-connected-content>`__ does not write data to user profiles, which means you can use Connected Content to dynamically populate values into messages without consuming data points.
 
 .. profile-api-usecase-braze-connected-content-does-not-use-data-points-end
 

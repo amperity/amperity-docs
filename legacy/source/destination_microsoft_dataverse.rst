@@ -17,7 +17,7 @@
 Send data to Microsoft Dataverse
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_microsoft_dataverse.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_microsoft_dataverse.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-dataverse-start
@@ -134,7 +134,7 @@ To send data to |destination-name|, you need to configure an application in Micr
 
 .. destination-microsoft-dataverse-application-power-steps-start
 
-#. Open the |ext_microsoft_power_platform_console|, click **Environments**, and then click on your environment.
+#. Open the `Microsoft Power Platform console <https://admin.powerplatform.microsoft.com/>`__ |ext_link|, click **Environments**, and then click on your environment.
 #. Click **Settings**, then **Users and permissions**, and then **Application users**.
 #. Click **New app user**, and then select the application you just created, your business unit, and then under **Security roles** click the **Edit** button.
 #. Select the following settings:

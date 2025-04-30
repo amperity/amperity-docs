@@ -27,7 +27,7 @@
 Send data to Attentive
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_attentive_mobile.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_attentive_mobile.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-attentive-mobile-start
@@ -72,7 +72,7 @@ An |destination-name| destination works like this:
 
       Amperity uses the `Subscribers <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints in the |destination-api| to manage subscribers. Updates appear on the **Subscribers** page within your audience in |destination-name|.
 
-      Amperity uses the |ext_attentive_mobile| process to manage segments. This process does not use an endpoint and is not subject to |ext_attentive_mobile_api_rate_limits|. Updates appear on the **Segments** page within your audience in |destination-name|.
+      Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
 
 #. Send a test from Amperity, and then from within |destination-name| verify that the **Subscribers** page has the updated subscriber opt-in/out status and that the **Segments** page has the list of customers that you sent from Amperity.
 
@@ -86,7 +86,7 @@ Audience segments
 
 .. destination-attentive-segments-start
 
-Amperity uses the |ext_attentive_mobile| process to manage segments. This process does not use an endpoint and is not subject to |ext_attentive_mobile_api_rate_limits|. Updates appear on the **Segments** page within your audience in |destination-name|.
+Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
 
 .. destination-attentive-segments-end
 
@@ -148,7 +148,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file.
+     - Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -171,7 +171,7 @@ Add destination
 
 .. destination-attentive-segments-add-destination-important-start
 
-.. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the |ext_attentive_mobile| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+.. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
 
 .. destination-attentive-segments-add-destination-important-end
 
@@ -337,7 +337,7 @@ The |destination-name| Custom Attributes API requires the following configuratio
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The ID for the |ext_attentive_mobile_signup_units|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
+     - The ID for the `sign-up unit <https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units->`__ |ext_link|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
 
 .. destination-attentive-attributes-get-details-end
 
@@ -449,7 +449,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Primary identifier**
-            - The ID for the |ext_attentive_mobile_signup_units|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
+            - The ID for the `sign-up unit <https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units->`__ |ext_link|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
 
 
    * - .. image:: ../../images/steps-04.png

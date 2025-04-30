@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built against source data tables to support any use case.
+        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built from source data tables to support any use case.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built against source data tables to support any use case.
+        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built from source data tables to support any use case.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -360,7 +360,7 @@ Standardize values for USA states
 Update blocklists
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-advanced-custom-domain-tables-start
    :end-before: .. bad-values-blocklist-advanced-custom-domain-tables-end
 
@@ -459,7 +459,7 @@ Add custom domain table
 
 .. domain-tables-custom-add-start
 
-A custom domain table is table that is created from a Spark SQL query built against one (or more) source domain tables to build a table with reshaped data. The custom domain table is made available to downstream processes, such as Stitch or the customer 360 database, in the same manner as source domain tables.
+A custom domain table is table that is created from a Spark SQL query built from one (or more) source domain tables to build a table with reshaped data. The custom domain table is made available to downstream processes, such as Stitch or the customer 360 database, in the same manner as source domain tables.
 
 Feeds quickly load data and apply a standard schema to customer data. Use a custom domain table to load this data in its raw form, and then reshape it to support any downstream workflow. For example:
 

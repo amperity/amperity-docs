@@ -327,7 +327,7 @@ To resolve this error, determine the cause for the invalid permissions error.
 
    Verify that the SAS token was configured correctly within Amperity.
 
-   Verify the permissions that have been assigned to the SAS token. This can be done from the Microsoft Azure Portal or by using |ext_azure_storage_explorer|. The policy for the SAS token must be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+   Verify the permissions that have been assigned to the SAS token. This can be done from the Microsoft Azure Portal or by using `Azure Storage Explorer <https://azure.microsoft.com/en-in/products/storage/storage-explorer/>`__ |ext_link|. The policy for the SAS token must be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
 
    Verify that the SAS token and/or the signing key associated with the SAS token is valid (and has not expired). If either have expired, generate a new SAS token (using a new signing key, if necessary).
 

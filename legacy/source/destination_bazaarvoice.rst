@@ -22,7 +22,7 @@
 Send data to Bazaarvoice
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_bazaarvoice.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_bazaarvoice.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-bazaarvoice-start
@@ -100,7 +100,7 @@ File preferences
 
 .. destination-bazaarvoice-file-preferences-start
 
-Sending data to Bazaarvoice is should follow recommendations for the |ext_bazaarvoice_product_catalog|.
+Sending data to Bazaarvoice is should follow recommendations for the `product catalog <https://docs.bazaarvoice.com/articles/vibe/upload-a-product-catalog-file>`__ |ext_link|.
 
 .. destination-bazaarvoice-file-preferences-end
 
@@ -112,7 +112,7 @@ File formats
 
 .. destination-bazaarvoice-file-format-start
 
-Bazaarvoice supports the following |ext_bazaarvoice_file_formats|:
+Bazaarvoice supports the following `file formats <https://docs.bazaarvoice.com/articles/ratings-reviews-legacy-prr/product_feeds>`__ |ext_link|:
 
 * CSV
 * PSV

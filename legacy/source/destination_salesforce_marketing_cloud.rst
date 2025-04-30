@@ -20,7 +20,7 @@
 Send data to Salesforce Marketing Cloud
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-marketing-cloud-start
@@ -73,7 +73,7 @@ A |destination-name| destination works like this:
 
        .. admonition:: What is a data extension?
 
-          A |ext_salesforce_sfmc_data_extension| is a table that stores data about your contacts. The fields that are available from your data extension match the columns and/or attributes that are sent from Amperity.
+          A `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| is a table that stores data about your contacts. The fields that are available from your data extension match the columns and/or attributes that are sent from Amperity.
 
           Within |destination-name|, use the data in the data extension as a data source. Run queries, pull a subset of contacts from the data extension, and then send offers to that subset of contacts.
 
@@ -89,9 +89,9 @@ A |destination-name| destination works like this:
 
        .. admonition:: When does Amperity use an API?
 
-          Amperity uses the |ext_salesforce_sfmc_soap_api| to manage the installed package and manage the |ext_salesforce_sfmc_import_definition| process, which gets the contact data from the |what-send| that were sent from Amperity and then either adds a data extension or updates an existing data extension.
+          Amperity uses the `Marketing Cloud SOAP API <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/soap_tech_articles_de.html>`__ |ext_link| to manage the installed package and manage the `import definition <https://help.salesforce.com/s/articleView?id=sf.mc_cab_imports.htm&type=5>`__ |ext_link| process, which gets the contact data from the |what-send| that were sent from Amperity and then either adds a data extension or updates an existing data extension.
 
-       .. note:: You may configure Amperity to send |what-send| to |destination-name| using only SFTP. This will place the |what-send| in the configured SFTP location, but will require configuring the |ext_salesforce_sfmc_data_extension| and |ext_salesforce_sfmc_import_definition| and any process that moves that data from the SFTP location to the data extension.
+       .. note:: You may configure Amperity to send |what-send| to |destination-name| using only SFTP. This will place the |what-send| in the configured SFTP location, but will require configuring the `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| and `import definition <https://help.salesforce.com/s/articleView?id=sf.mc_cab_imports.htm&type=5>`__ |ext_link| and any process that moves that data from the SFTP location to the data extension.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -158,7 +158,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - For the installed package: the API client ID, API client secret, and the |ext_salesforce_sfmc_soap_api_subdomain|.
+     - For the installed package: the API client ID, API client secret, and the `SOAP base URI for the authentication subdomain <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html>`__ |ext_link|.
 
        .. admonition:: What is the authentication subdomain for the SOAP base URI?
 
@@ -205,7 +205,7 @@ Get details
 
        .. note:: The account ID is also referred to as the member ID within |destination-name|.
 
-       .. important:: Review the |ext_marketing_cloud_file_location_guide| to configure a File Transfer Location with Location Type "Marketing Cloud Enhanced FTP Site Import Directory".
+       .. important:: Review the `Marketing Cloud File Location Guide <https://help.salesforce.com/s/articleView?id=mktg.mc_overview_create_file_transfer_location.htm&type=5>`__ |ext_link| to configure a File Transfer Location with Location Type "Marketing Cloud Enhanced FTP Site Import Directory".
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -223,7 +223,7 @@ Get details
           :alt: Detail six.
           :align: left
           :class: no-scaled-link
-     - Review the |ext_marketing_cloud_sftp_guide| to answer questions about configuring and managing |destination-name|.
+     - Review the `Marketing Cloud SFTP Guide <https://help.salesforce.com/articleView?id=mc_es_enhanced_ftp_guide.htm>`__ |ext_link| to answer questions about configuring and managing |destination-name|.
 
        .. tip:: Configuration details for |destination-name| are available from within Salesforce.
 
@@ -689,7 +689,7 @@ The import location within the |destination-name| SFTP site must be set to "Enha
 
 To resolve this error, you must verify that the import directory within |destination-name| is set to "Enhanced FTP Site Import Directory".
 
-#. Open the |ext_salesforce_sfmc_management_console|, find the |ext_salesforce_sfmc_data_extension_file_location|, and then verify that it is configured for the "Enhanced FTP Site Import Directory" location type.
+#. Open the `Salesforce Marketing Cloud management console <https://mc.exacttarget.com/cloud/>`__ |ext_link|, find the `file location <https://help.salesforce.com/s/articleView?id=sf.mc_overview_create_file_transfer_location.htm&type=5>`__ |ext_link|, and then verify that it is configured for the "Enhanced FTP Site Import Directory" location type.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type-steps-end
@@ -740,7 +740,7 @@ The name of a data extension in |destination-name| must be globally unique acros
 
 To resolve this error, you must delete or rename the data extension in |destination-name|, and then re-apply the primary key by resending the workflow from Amperity.
 
-#. Open the |ext_salesforce_sfmc_management_console|, and then |ext_salesforce_sfmc_management_console_data_extension_delete_rename|.
+#. Open the `Salesforce Marketing Cloud management console <https://mc.exacttarget.com/cloud/>`__ |ext_link|, and then `delete or rename the data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link|.
 #. Open the data template that is associated with this workflow.
 #. Edit the data extension name in the data template so that its name is globally unique within |destination-name|, and then save the data template.
 
@@ -748,7 +748,7 @@ To resolve this error, you must delete or rename the data extension in |destinat
 
       **To update the data extension in Salesforce Marketing Cloud**
 
-      #. Open the |ext_salesforce_sfmc_management_console|.
+      #. Open the `Salesforce Marketing Cloud management console <https://mc.exacttarget.com/cloud/>`__ |ext_link|.
       #. Select **Audience Builder**, and then choose **Contact Builder**.
       #. Open **Data Extensions**.
       #. Search for the data extension for which this error is associated, and then rename the data extension or delete the data extension.

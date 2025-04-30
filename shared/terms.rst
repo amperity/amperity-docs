@@ -346,7 +346,7 @@ Amazon Marketing Cloud (AMC) is a secure, privacy-safe, and cloud-based clean ro
 
 .. term-amazon-pinpoint-start
 
-|ext_aws_pinpoint| is a flexible and scalable communications service for inbound and outbound marketing. Use Amazon Pinpoint to connect with your customers over a variety of channels, such as email, SMS, push, voice, in-app messaging.
+`Amazon Pinpoint <https://aws.amazon.com/pinpoint/>`__ |ext_link| is a flexible and scalable communications service for inbound and outbound marketing. Use Amazon Pinpoint to connect with your customers over a variety of channels, such as email, SMS, push, voice, in-app messaging.
 
 .. term-amazon-pinpoint-end
 
@@ -382,7 +382,7 @@ Amazon Simple Storage Service (Amazon S3) stores customer data files of any size
 
 .. term-amazon-serverless-repository-start
 
-The |ext_aws_serverless_repository| is a managed repository for pre-built serverless applications. Find an application, configure it, and then deploy it to your Amazon AWS account.
+The `AWS Serverless Application Repository <https://serverlessrepo.aws.amazon.com/applications>`__ |ext_link| is a managed repository for pre-built serverless applications. Find an application, configure it, and then deploy it to your Amazon AWS account.
 
 .. term-amazon-serverless-repository-end
 
@@ -443,7 +443,7 @@ Amperity is a cloud application that ingests all customer data in its native for
 
 .. term-amperity-bridge-start
 
-Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats. Each bridge can be quickly configured to enable inbound and/or outbound connections that give your brand access to shared tables without replicating data.
+Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats. Each bridge can be quickly configured to enable inbound and/or outbound connections that give you access to shared tables without replicating data.
 
 .. term-amperity-bridge-end
 
@@ -556,7 +556,7 @@ An anonymous visitor is an individual who visits a website, but does not sign up
 
 .. term-apache-avro-start
 
-|ext_apacheavro| is a row-oriented remote procedure call and data serialization framework developed within the Apache Hadoop ecosystem. Avro uses JSON to define data types and protocols, and serializes data in a compact binary format.
+`Apache Avro <https://en.wikipedia.org/wiki/Apache_Avro>`__ |ext_link| is a row-oriented remote procedure call and data serialization framework developed within the Apache Hadoop ecosystem. Avro uses JSON to define data types and protocols, and serializes data in a compact binary format.
 
 .. term-apache-avro-end
 
@@ -574,7 +574,7 @@ Apache Kafka is an open-source distributed event streaming platform used for hig
 
 .. term-apache-parquet-start
 
-|ext_apacheparquet| is a free and open-source column-oriented data storage format developed within the Apache Hadoop ecosystem. It is similar to RCFile and ORC, but provides more efficient data compression and encoding schemes with enhanced performance and can better handle large amounts of complex bulk data.
+`Apache Parquet <https://en.wikipedia.org/wiki/Apache_Parquet>`__ |ext_link| is a free and open-source column-oriented data storage format developed within the Apache Hadoop ecosystem. It is similar to RCFile and ORC, but provides more efficient data compression and encoding schemes with enhanced performance and can better handle large amounts of complex bulk data.
 
 .. term-apache-parquet-end
 
@@ -674,7 +674,7 @@ A small audience represents the percentage of the total audience that was requir
 
 .. term-australian-privacy-principles-start
 
-The |ext_app| is a law that covers data protection and privacy in Australia. It governs a broad set of standards, including rights and obligations around the collection, use and disclosure of personal information, the integrity and correction of personal information, and the rights of individuals to access their personal information.
+`Australian Privacy Principles (APP) <https://www.oaic.gov.au/privacy/australian-privacy-principles>`__ |ext_link| is a law that covers data protection and privacy in Australia. It governs a broad set of standards, including rights and obligations around the collection, use and disclosure of personal information, the integrity and correction of personal information, and the rights of individuals to access their personal information.
 
 .. term-australian-privacy-principles-end
 
@@ -1033,7 +1033,7 @@ Brightloom is a customer growth platform (CGP) company for restaurants, retailer
 
 .. term-byte-order-mark-start
 
-The |ext_byteordermark| is an optional usage of the special Unicode character "U+FEFF BYTE ORDER MARK". This character is used as a magic number at the start of a file to indicate byte order and character encoding in the file.
+A `byte order mark (BOM) <https://en.wikipedia.org/wiki/Byte_order_mark>`__ |ext_link| is an optional usage of the special Unicode character "U+FEFF BYTE ORDER MARK". This character is used as a magic number at the start of a file to indicate byte order and character encoding in the file.
 
 .. term-byte-order-mark-end
 
@@ -1042,7 +1042,7 @@ The |ext_byteordermark| is an optional usage of the special Unicode character "U
 
 .. term-ccpa-start
 
-The |ext_ccpa| is a law that covers data protection and privacy in the state of California. It gives control to individuals over their personal data and addresses the transfer of personal data, including providing for the ability to request removal of data.
+The `California Consumer Privacy Act (CCPA) <https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act>`__ |ext_link| is a law that covers data protection and privacy in the state of California. It gives control to individuals over their personal data and addresses the transfer of personal data, including providing for the ability to request removal of data.
 
 .. term-ccpa-end
 
@@ -1223,7 +1223,7 @@ The Command Line for Amperity (CLAMP) is the command-line interface to Amperity 
 
 .. term-clienteling-start
 
-Clienteling is |ext_clienteling| with key customers based on data about their preferences, behaviors and purchases.
+Clienteling is `a technique used by retail sales associates to establish long-term relationships <https://en.wikipedia.org/wiki/Clienteling>`__ |ext_link| with key customers based on data about their preferences, behaviors and purchases.
 
 .. term-clienteling-end
 
@@ -1574,7 +1574,7 @@ Criteo Retail Media allows marketers to build audiences in Criteo using their ow
 
 .. term-cron-start
 
-|ext_cron| is a time-based job scheduler that uses cron syntax to automate scheduled jobs to run periodically at fixed times, dates, or intervals.
+`Cron <https://en.wikipedia.org/wiki/Cron>`__ |ext_link| is a time-based job scheduler that uses cron syntax to automate scheduled jobs to run periodically at fixed times, dates, or intervals.
 
 .. term-cron-end
 
@@ -1597,7 +1597,7 @@ Cron syntax specifies the fixed time, date, or interval at which cron will run. 
     │ │ │ │ │
     * * * * * command to execute
 
-For example, ``30 8 * * *`` represents "run at 8:30 AM every day" and ``30 8 * * 0`` represents "run at 8:30 AM every Sunday". Amperity validates your cron syntax and shows you the results. You may also use |ext_crontabguru| to validate cron syntax.
+For example, ``30 8 * * *`` represents "run at 8:30 AM every day" and ``30 8 * * 0`` represents "run at 8:30 AM every Sunday". Amperity validates your cron syntax and shows you the results. You may also use `crontab guru <https://crontab.guru/>`__ |ext_link| to validate cron syntax.
 
 .. term-crontab-syntax-end
 
@@ -1615,7 +1615,7 @@ Cross Country Computer specializes in strategic solutions for companies that are
 
 .. term-csv-start
 
-A |ext_csv| file, defined by |ext_rfc4180|, is a delimited text file that uses a comma to separate values. A CSV file stores tabular data (numbers and text) in plain text. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format.
+A `comma-separated values (CSV) <https://en.wikipedia.org/wiki/Comma-separated_values>`__ |ext_link| file, defined by `RFC 4180 <https://tools.ietf.org/html/rfc4180>`__ |ext_link|, is a delimited text file that uses a comma to separate values. A CSV file stores tabular data (numbers and text) in plain text. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format.
 
 .. term-csv-end
 
@@ -2031,7 +2031,7 @@ Delta Lake is an open source format that involves a metadata layer on top of col
 
 .. term-delta-sharing-start
 
-|ext_delta_sharing| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
+`Delta Sharing <https://delta.io/sharing/>`__ |ext_link| is an open protocol for simple and secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system and regardless of which computing platforms are used.
 
 .. term-delta-sharing-end
 
@@ -2845,7 +2845,7 @@ The gender that is associated with a unique Amperity ID.
 
 .. term-gdpr-start
 
-The |ext_gdpr| is a law that covers data protection and privacy in the European Union (EU) and the European Economic Area (EEA). It gives control to individuals over their personal data and addresses the transfer of personal data outside the EU and EEA areas. GDPR simplifies the regulatory environment for international business by unifying regulation within the EU.
+The `General Data Protection Regulation (GDPR) <https://en.wikipedia.org/wiki/General_Data_Protection_Regulation>`__ |ext_link| is a law that covers data protection and privacy in the European Union (EU) and the European Economic Area (EEA). It gives control to individuals over their personal data and addresses the transfer of personal data outside the EU and EEA areas. GDPR simplifies the regulatory environment for international business by unifying regulation within the EU.
 
 .. term-gdpr-end
 
@@ -2969,7 +2969,7 @@ Google Cloud Functions is a serverless computing platform that runs code in resp
 
 .. term-google-cloud-storage-start
 
-|ext_google_cloud_storage| is an online file storage web service for storing and accessing data on Google Cloud Platform infrastructure.
+`Google Cloud Storage <https://cloud.google.com/iam/docs/keys-create-delete#creating>`__ |ext_link| is an online file storage web service for storing and accessing data on Google Cloud Platform infrastructure.
 
 .. term-google-cloud-storage-end
 
@@ -3060,7 +3060,7 @@ Gravity is a cloud accounting business management application built on the Micro
 
 .. term-gzip-start
 
-|ext_gzip| is a file format used for file compression and decompression.
+`gzip <https://en.wikipedia.org/wiki/Gzip>`__ |ext_link| is a file format used for file compression and decompression.
 
 .. term-gzip-end
 
@@ -3428,7 +3428,7 @@ Jitter tracks changes to Amperity IDs across Stitch runs.
 
 .. term-joda-time-start
 
-|ext_jodatime| is an open-source date and time library that is used by Amperity to establish consistency in filename patterns. The recommended pattern is "Segment_Name_MM-dd-YYYY", where "Segment_Name" is the name of the segment and "MM-dd-YYYY" will append the current date.
+`Joda-Time <https://www.joda.org/joda-time/>`__ |ext_link| is an open-source date and time library that is used by Amperity to establish consistency in filename patterns. The recommended pattern is "Segment_Name_MM-dd-YYYY", where "Segment_Name" is the name of the segment and "MM-dd-YYYY" will append the current date.
 
 .. term-joda-time-end
 
@@ -3440,6 +3440,60 @@ Jitter tracks changes to Amperity IDs across Stitch runs.
 A journey is a milestone (or series of milestones) that a customer goes through as they experience a brand.
 
 .. term-journey-end
+
+
+**journey node: Activate**
+
+.. term-journey-node-activate-start
+
+An activate node sends an audience to one or more destinations.
+
+.. term-journey-node-activate-end
+
+
+**journey node: Conditional split**
+
+.. term-journey-node-conditional-split-start
+
+A conditional split node splits a journey into branching paths, where each path is defined by one or more segments.
+
+.. term-journey-node-conditional-split-end
+
+
+**journey node: Delay**
+
+.. term-journey-node-delay-start
+
+A delay node defines the length of time to wait before the next step in a journey begins.
+
+.. term-journey-node-delay-end
+
+
+**journey node: Individual split**
+
+.. term-journey-node-individual-split-start
+
+An individual split node represents each path in a journey that is defined by a conditional or percent split.
+
+.. term-journey-node-individual-split-end
+
+
+**journey node: Percent split**
+
+.. term-journey-node-percent-split-start
+
+A percent split node splits a journey into branching paths, where each path applies to a randomly selected percentage of the audience that entered the branch.
+
+.. term-journey-node-percent-split-end
+
+
+**journey node: Start**
+
+.. term-journey-node-start-start
+
+A start node displays the starting segments in a journey along with any exclusions.
+
+.. term-journey-node-start-end
 
 
 **journey orchestration**
@@ -4137,7 +4191,7 @@ A multi-touch attribution identifies each marketing channel that the customer ha
 
 .. term-ncoa-start
 
-|ext_ncoa| is a secure dataset of approximately 160 million permanent change-of-address (COA) records consisting of the names and addresses of individuals, families, and businesses who have filed a change-of-address with the United States Postal Service (USPS).
+`National Change of Address (NCOA) <https://en.wikipedia.org/wiki/National_Change_Of_Address>`__ |ext_link| is a secure dataset of approximately 160 million permanent change-of-address (COA) records consisting of the names and addresses of individuals, families, and businesses who have filed a change-of-address with the United States Postal Service (USPS).
 
 .. term-ncoa-end 
 
@@ -4164,7 +4218,7 @@ The total amount of the gross sales minus deductions (i.e. returns, discounts, a
 
 .. term-ndjson-start
 
-|ext_ndjson| is a data format for structured data that defines the structure of JSON data using lines as separators. Each line in a NDJSON file is a valid JSON value.
+`Newline-delimited JSON (NDJSON) <https://en.wikipedia.org/wiki/JSON_streaming#Line-delimited_JSON>`__ |ext_link| is a data format for structured data that defines the structure of JSON data using lines as separators. Each line in a NDJSON file is a valid JSON value.
 
 .. term-ndjson-end
 
@@ -4362,7 +4416,7 @@ Oracle Responsys is an email marketing product that helps improve conversions, s
 
 .. term-orc-start
 
-|ext_orc| is columnar-storage file format similar to Parquet. It is the file format that is the Stitch process outputs to the customer 360 database.
+`Optimized Row Columnar (ORC) <https://en.wikipedia.org/wiki/Apache_ORC>`__ |ext_link| is columnar-storage file format similar to Parquet. It is the file format that is the Stitch process outputs to the customer 360 database.
 
 .. term-orc-end
 
@@ -4710,7 +4764,7 @@ Personally identifiable information (PII) is any data that could potentially ide
 
 .. term-pgp-start
 
-|ext_pgp| is an encryption program that provides cryptographic privacy and authentication for data communication by signing, encrypting, and decrypting data files and formats. Amperity supports PGP encryption.
+`Pretty Good Privacy (PGP) <https://en.wikipedia.org/wiki/Pretty_Good_Privacy>`__ |ext_link| is an encryption program that provides cryptographic privacy and authentication for data communication by signing, encrypting, and decrypting data files and formats. Amperity supports PGP encryption.
 
 .. term-pgp-end
 
@@ -5195,7 +5249,7 @@ Raw UID2 values are unencrypted alphanumeric identifiers that are created from a
 
 .. term-rcfile-start
 
-|ext_rcfile| is a data placement structure that determines how to store relational tables on computer clusters using the MapReduce framework.
+`Record Columnar File (RCFile) <https://en.wikipedia.org/wiki/RCFile>`__ |ext_link| is a data placement structure that determines how to store relational tables on computer clusters using the MapReduce framework.
 
 .. term-rcfile-end
 
@@ -7075,7 +7129,7 @@ visual **Query Editor**
 
 .. term-visual-query-editor-start
 
-The visual **Query Editor** is a user interface that allows creating queries using Presto SQL without having to write SQL. The visual **Query Editor** is combination of filters for ``WHERE`` and ``AND`` clauses organized as a series of configurable drop-down menus and pick-lists that build SQL queries that run against tables in the customer 360 database.
+The visual **Query Editor** is a user interface that allows creating queries using Presto SQL without having to write SQL. The visual **Query Editor** is combination of filters for ``WHERE`` and ``AND`` clauses organized as a series of configurable dropdown menus and pick-lists that build SQL queries that run against tables in the customer 360 database.
 
 .. term-visual-query-editor-end
 
@@ -7084,7 +7138,7 @@ The visual **Query Editor** is a user interface that allows creating queries usi
 
 .. term-visual-segment-editor-start
 
-The **Segment Editor** is the user interface for building segments. This editor uses a series of drop-downs, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
+The **Segment Editor** is the user interface for building segments. This editor uses a series of dropdowns, picklists, conditions, and values to define an attribute profile. Refresh segment insights to see how many customers match the profile, and then activate it as a segment.
 
 .. term-visual-segment-editor-end
 

@@ -9,7 +9,7 @@
 
 .. databases-font-awesome-picker-useany-start
 
-You may use any icon in the |ext_font_awesome| library.
+You may use any icon in the `Font Awesome <https://fontawesome.com/v5/search>`__ |ext_link| library.
 
 Icon identifiers start with ``fa-``, and then a unique string. For example: ``fa-home`` (for |fa-home|), ``fa-star`` (for |fa-star|), and ``fa-project-diagram`` for (|fa-project-diagram|).
 

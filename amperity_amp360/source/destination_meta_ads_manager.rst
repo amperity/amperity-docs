@@ -29,7 +29,7 @@ You can use queries and orchestrations to build custom audiences in |destination
 
 Use |destination_meta_ads_manager_custom_audiences| in |destination-name| to advertise to customers on Facebook, Instagram, and Messenger, along with using the Meta Audience Network to extend your advertising beyond Facebook and reach new audiences on apps and mobile devices, such as WhatsApp.
 
-You may configure Amperity to send |destination_meta_ads_manager_offline_events| to |destination-name|. Offline events should be a set of transaction events that occurred within the previous 7 days. Offline events sent to |destination-name| using the |ext_facebook_conversions_api_offline_events| are matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp and ca help your brand track offline conversions for your marketing campaigns.
+You may configure Amperity to send |destination_meta_ads_manager_offline_events| to |destination-name|. Offline events should be a set of transaction events that occurred within the previous 7 days. Offline events sent to |destination-name| using the `Conversions API for offline events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link| are matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp and ca help your brand track offline conversions for your marketing campaigns.
 
 .. sendto-meta-ads-manager-howitworks-end
 
@@ -49,7 +49,7 @@ A |destination-name| destination works like this:
 
    .. important::
 
-      .. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+      .. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
          :start-after: .. destination-meta-ads-manager-terms-of-service-start
          :end-before: .. destination-meta-ads-manager-terms-of-service-end
 
@@ -65,7 +65,7 @@ A |destination-name| destination works like this:
 
    .. admonition:: What is Meta Ads Manager?
 
-      .. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+      .. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
          :start-after: .. destination-meta-ads-manager-meta-ads-manager-start
          :end-before: .. destination-meta-ads-manager-meta-ads-manager-end
 
@@ -244,7 +244,7 @@ Run orchestration
 Facebook Marketing API keys
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_meta_ads_manager.rst
+.. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
    :start-after: .. destination-meta-ads-manager-api-keys-start
    :end-before: .. destination-meta-ads-manager-api-keys-end
 
@@ -254,6 +254,6 @@ Facebook Marketing API keys
 Conversions API parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-conversion-api-parameters-start
    :end-before: .. events-meta-ads-manager-conversion-api-parameters-end

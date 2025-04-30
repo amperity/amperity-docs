@@ -31,11 +31,11 @@ Use a segment to build an audience that meets the criteria for how your brand wa
 
 .. destination-pinterest-end
 
-.. include:: ../../amperity_datagrid/source/destination_pinterest.rst
+.. include:: ../../amperity_operator/source/destination_pinterest.rst
    :start-after: .. destination-pinterest-shared-start
    :end-before: .. destination-pinterest-shared-end
 
-.. include:: ../../amperity_datagrid/source/destination_pinterest.rst
+.. include:: ../../amperity_operator/source/destination_pinterest.rst
    :start-after: .. destination-pinterest-api-note-start
    :end-before: .. destination-pinterest-api-note-end
 
@@ -177,7 +177,7 @@ Product catalogs
 
 .. destination-pinterest-product-catalogs-start
 
-To make your |ext_pinterest_product_catalog_data_source| to |destination-name|, for the purpose of enabling Pins, configure an SFTP server with the file that contains the product catalog in a location that is accessible as a URL by a user-agent.
+To make your `product catalog available as a data source <https://help.pinterest.com/en/business/article/data-source-ingestion>`__ |ext_link| to |destination-name|, for the purpose of enabling Pins, configure an SFTP server with the file that contains the product catalog in a location that is accessible as a URL by a user-agent.
 
 Provide that URL to |destination-name|. |destination-name| will validate the file and create a product Pin for each item in your product catalog that passes validation, up to 20 million rows.
 

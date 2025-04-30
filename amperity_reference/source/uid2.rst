@@ -58,14 +58,14 @@ The following sections describe at a high level the series of steps that are req
 
        #. :ref:`Request access to UID2 <uid2-prerequisite-get-access>`.
        #. :ref:`Agree to the UID2 participation policy <uid2-prerequisite-participate>`.
-       #. :ref:`Get an API key <uid2-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 operator for your brand.
+       #. :ref:`Get an API key <uid2-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 Operator for your brand.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Image panel 2.
           :align: left
           :class: no-scaled-link
-     - After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 operator for your brand.
+     - After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 Operator for your brand.
 
        #. :ref:`Add your brand's credentials for UID2 to Amperity <uid2-configure-amperity-add-credentials>`.
        #. :ref:`Enable UID2 <uid2-configure-amperity-enable-uid2>`.
@@ -112,7 +112,7 @@ Before your brand can configure Amperity to generate UID2 tokens you must do the
 
 #. :ref:`Get access to UID2 <uid2-prerequisite-get-access>`.
 #. Agree to :ref:`a UID2 participation policy <uid2-prerequisite-participate>`, which is a legal requirement for UID2 sharing.
-#. :ref:`Get an API key <uid2-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 operator for your brand.
+#. :ref:`Get an API key <uid2-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 Operator for your brand.
 
 .. uid2-prerequisites-end
 
@@ -168,7 +168,7 @@ Configure Amperity
 
 .. uid2-configure-amperity-start
 
-After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 operator for your brand.
+After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 Operator for your brand.
 
 #. :ref:`Add your brand's Mapper credentials for UID2 to Amperity <uid2-configure-amperity-add-credentials>`.
 #. :ref:`Enable UID2 <uid2-configure-amperity-enable-uid2>`.
@@ -206,7 +206,7 @@ Enable UID2 token generation
 
 .. uid2-configure-amperity-enable-uid2-start
 
-UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 Generation** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** drop-down.
+UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 Generation** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
 
 .. image:: ../../images/mockup-databases-enable-uid2.png
    :width: 460 px

@@ -33,7 +33,7 @@ With the rise of privacy-centric marketing strategies resulting in the demise of
 
 Capturing reliable data from across disparate silos in your organization to build unified customer profiles is essential to the future of your brand's acquisition strategy in paid media.
 
-Audiences built against unified customer profiles lead to significantly higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
+Audiences built from unified customer profiles lead to significantly higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
 
 .. paid-media-overview-context-end
 
@@ -326,7 +326,7 @@ Amperity provides direct connections to the most popular destinations across the
           :class: no-scaled-link
      - Criteo is a commerce media platform that helps marketers and media owners manage and scale campaigns. Use the |channel_criteo| destination to send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
 
-       .. tip:: Use your brand's offline transactions data to optimize advertising targeting algorithms in Criteo. Review the |ext_criteo_sftp|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
+       .. tip:: Use your brand's offline transactions data to optimize advertising targeting algorithms in Criteo. Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
 
 
 .. _dv360:
@@ -482,7 +482,7 @@ Amperity provides direct connections to the most popular destinations across the
           :class: no-scaled-link
      - Microsoft Advertising is a pay-per-click advertising platform that displays ads based on keywords in a user’s search query. Build audiences in Amperity, and then send them to |channel_microsoft_ads| to open up paid media advertising options across the Microsoft Advertising network.
 
-       This network includes Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk), |ext_microsoft_audience_network|, Microsoft News, Microsoft Edge, along with access to external partners, such as Yahoo.com.
+       This network includes Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk), `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|, Microsoft News, Microsoft Edge, along with access to external partners, such as Yahoo.com.
 
 
 .. _neustar:

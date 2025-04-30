@@ -19,7 +19,7 @@ About offline events
 
 .. offline-events-overview-start
 
-The paths your customers take before they visit your brand's app or website can be complex. One customer might learn about your brand from a display ad on TikTok, another customer learns from watching a TV show, and another hears about your brand during a conversation with a friend. Attributing these types of customer activities to your brand's marketing campaigns is not easy, but when they can be attributed it can give your brand more ways to find new customers.
+The paths your customers take before they visit your brand's app or website can be complex. One customer might learn about your brand from a display ad on TikTok, another customer learns from watching a TV show, and another hears about your brand during a conversation with a friend. Attributing these types of customer activities to your brand's marketing campaigns is not easy, but when they can be attributed it can give you more ways to find new customers.
 
 .. offline-events-overview-end
 
@@ -85,7 +85,7 @@ Amperity provides direct connections to the most popular destinations across the
           :class: no-scaled-link
      - Use the :doc:`Criteo destination <destination_criteo>` to send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
 
-       .. tip:: Use your brand's :doc:`offline transactions data <events_criteo>` to optimize advertising targeting algorithms in Criteo. Review the |ext_criteo_sftp|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
+       .. tip:: Use your brand's :doc:`offline transactions data <events_criteo>` to optimize advertising targeting algorithms in Criteo. Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
 
 
 .. _events-google-enhanced-conversions:

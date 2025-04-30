@@ -131,7 +131,7 @@ You may also use audience size and customer ranking independently of each other,
 
 .. recommended-audiences-howto-end
 
-.. include:: ../../amperity_datagrid/source/table_predicted_affinity.rst
+.. include:: ../../amperity_operator/source/table_predicted_affinity.rst
    :start-after: .. table-affinity-refresh-frequency-note-start
    :end-before: .. table-affinity-refresh-frequency-note-start
 

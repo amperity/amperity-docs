@@ -67,7 +67,7 @@ Do one of the following to select |source-name|:
 
 .. credentials-destinations-configure-options-start
 
-Select |destination-name| from the **Plugin** drop-down.
+Select |destination-name| from the **Plugin** dropdown.
 
 .. credentials-destinations-configure-options-end
 
@@ -78,14 +78,14 @@ Select |destination-name| from the **Plugin** drop-down.
 
 .. credentials-sources-configure-credential-createx-start
 
-Credentials allow Amperity to connect to |source-name|. Give the courier a name, and then select **Create a new credential** from the **Credential** drop-down.
+Credentials allow Amperity to connect to |source-name|. Give the courier a name, and then select **Create a new credential** from the **Credential** dropdown.
 
 .. credentials-sources-configure-credential-createx-end
 
 
 .. credentials-destinations-configure-credential-createx-start
 
-Credentials allow Amperity to connect to |destination-name|. Give the destination a name, and then select **Create a new credential** from the **Credential** drop-down.
+Credentials allow Amperity to connect to |destination-name|. Give the destination a name, and then select **Create a new credential** from the **Credential** dropdown.
 
 .. credentials-destinations-configure-credential-createx-end
 
@@ -97,14 +97,14 @@ Credentials allow Amperity to connect to |destination-name|. Give the destinatio
 
 .. credentials-sources-configure-already-configured-start
 
-Credentials allow Amperity to connect to |source-name| and must exist before a courier can be configured to pull data from |source-name|. Select an existing credential from the **Credential** drop-down, and then click **Continue**.
+Credentials allow Amperity to connect to |source-name| and must exist before a courier can be configured to pull data from |source-name|. Select an existing credential from the **Credential** dropdown, and then click **Continue**.
 
 .. credentials-sources-configure-already-configured-end
 
 
 .. credentials-destinations-configure-already-configured-start
 
-Credentials allow Amperity to connect to |destination-name| and must exist before Amperity can be configured to send data to |destination-name|. Select an existing credential from the **Credential** drop-down, and then click **Continue**.
+Credentials allow Amperity to connect to |destination-name| and must exist before Amperity can be configured to send data to |destination-name|. Select an existing credential from the **Credential** dropdown, and then click **Continue**.
 
 .. credentials-destinations-configure-already-configured-end
 

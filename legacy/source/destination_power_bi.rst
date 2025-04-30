@@ -13,7 +13,7 @@
 Send data to Microsoft Power BI
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_power_bi.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_power_bi.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-powerbi-start
@@ -72,7 +72,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_load_csv_to_synapse| to Azure Synapse Analytics.
+     - `Load CSV data from Azure Blob Storage <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool>`__ |ext_link| to Azure Synapse Analytics.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -80,7 +80,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_connect_synapse| to an Azure Synapse Analytics workspac, and then access the data sent from Amperity.
+     - `Connect Microsoft Power BI <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/tutorial-connect-power-bi-desktop>`__ |ext_link| to an Azure Synapse Analytics workspac, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -141,7 +141,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - |ext_google_bigquery_transfer_from_cloud_storage| to Google BigQuery.
+     - `Transfer data from Cloud Storage <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer>`__ |ext_link| to Google BigQuery.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -149,7 +149,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_load_bigquery|, and then access the data sent from Amperity.
+     - `Connect Microsoft Power BI to Google BigQuery <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-bigquery>`__ |ext_link|, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -220,7 +220,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the |ext_microsoft_power_bi_desktop_to_snowflake| or from the |ext_microsoft_power_bi_service_to_snowflake|.
+     - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| or from the `Power BI Service <https://docs.microsoft.com/en-us/power-bi/connect-data/service-connect-snowflake>`__ |ext_link|.
 
        .. note:: The URL for the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Microsoft Power BI to Snowflake.
 

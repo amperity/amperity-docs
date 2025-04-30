@@ -128,7 +128,7 @@ Datetime formats
 
 .. feed-field-type-datetime-formats-start
 
-The datetime format should be configured to match the pattern for datetimes are formatted in the raw data. This pattern is often similar to "yyyy-MM-dd-HH-mm-ss", but these patterns do vary. Amperity uses |ext_jodatime_datetime_format_friendly| to configure the exact datetime pattern that is present in your data.
+The datetime format should be configured to match the pattern for datetimes are formatted in the raw data. This pattern is often similar to "yyyy-MM-dd-HH-mm-ss", but these patterns do vary. Amperity uses `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link| to configure the exact datetime pattern that is present in your data.
  
 #. It is recommended to configure datetime values using Joda-Time pattern-based formatting for all datetime fields for all of your data sources.
 
@@ -733,7 +733,7 @@ Review the :doc:`complete list of semantics <semantics>` (including :ref:`profil
       :start-after: .. term-update-dt-start
       :end-before: .. term-update-dt-end
 
-   The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with :ref:`the LAST UPDATED FIELD drop-down list <feeds-set-last-updated-field>`.
+   The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with :ref:`the LAST UPDATED FIELD dropdown list <feeds-set-last-updated-field>`.
 
 .. feeds-apply-semantic-tags-pii-end
 
@@ -752,7 +752,7 @@ Review the :doc:`complete list of semantics <semantics>` (including :ref:`profil
          :start-after: .. term-update-dt-start
          :end-before: .. term-update-dt-end
 
-      The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with :ref:`the LAST UPDATED FIELD drop-down list <feeds-set-last-updated-field>`.
+      The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with :ref:`the LAST UPDATED FIELD dropdown list <feeds-set-last-updated-field>`.
 
 #. Click **Activate**.
 
@@ -805,7 +805,7 @@ Amperity may not have all of the semantics required by a customer. Before adding
 .. feeds-apply-semantic-tags-custom-steps-start
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
-#. In the **Semantic** column, enter the names of custom semantics. They should use hyphens (and not underscores) and they should be entered the same way as a PII semantic, but without it appearing in the drop-down pick-list.
+#. In the **Semantic** column, enter the names of custom semantics. They should use hyphens (and not underscores) and they should be entered the same way as a PII semantic, but without it appearing in the dropdown pick-list.
 #. Click **Activate**.
 
 .. note:: This may be done *during* the process of adding a feed, also.
@@ -999,7 +999,7 @@ At least one field must be set as a primary key. Any feed that contains customer
 .. feeds-configure-set-primary-key-steps-start
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
-#. From the **Primary Key** drop-down, select a field from the list.
+#. From the **Primary Key** dropdown, select a field from the list.
 #. Click **Activate**.
 
 .. feeds-configure-set-primary-key-steps-end
@@ -1134,7 +1134,7 @@ You may edit the primary key. Pick a new one or add more fields to be primary ke
 .. feeds-edit-change-primary-key-steps-start
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Edit Feed** page opens.
-#. From the **Primary Key** drop-down, select a field from the list.
+#. From the **Primary Key** dropdown, select a field from the list.
 #. If prompted, select **Yes, purge the data from my domain table when I activate**.
 #. Click **Activate**.
 

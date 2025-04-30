@@ -129,13 +129,13 @@ and then assign this query to a destination that sends results to |destination-n
    * Do not use double-quotes around field values.
    * Avoid including leading and trailing spaces in field values because they will be included with the value when stored in the |destination-name| database.
 
-   Refer to |ext_bazaarvoice_product_catalog| for additional details.
+   Refer to `product catalog <https://docs.bazaarvoice.com/articles/vibe/upload-a-product-catalog-file>`__ |ext_link| for additional details.
 
 .. sendto-bazaarvoice-build-query-map-to-product-catalog-note-end
 
 .. sendto-bazaarvoice-build-query-map-to-product-catalog-important-start
 
-.. important:: |destination-name| requires the **ExternalId**, **ProductUrl**, and **ImageURL** fields to be in the results. The **Brand**, **BrandExternalId**, **Category**, and **CategoryExternalId** fields are recommended. Refer to the |ext_bazaarvoice_column_definitions| for complete details.
+.. important:: |destination-name| requires the **ExternalId**, **ProductUrl**, and **ImageURL** fields to be in the results. The **Brand**, **BrandExternalId**, **Category**, and **CategoryExternalId** fields are recommended. Refer to the `column definitions <https://docs.bazaarvoice.com/articles/ratings-reviews/text_feed>`__ |ext_link| for complete details.
 
 .. sendto-bazaarvoice-build-query-map-to-product-catalog-important-end
 
@@ -151,7 +151,7 @@ Add orchestration
 
 .. sendto-bazaarvoice-add-orchestration-important-start
 
-.. important:: Sending data to |destination-name| should follow recommendations for the |ext_bazaarvoice_product_catalog|. |destination-name| supports the following |ext_bazaarvoice_file_formats|:
+.. important:: Sending data to |destination-name| should follow recommendations for the `product catalog <https://docs.bazaarvoice.com/articles/vibe/upload-a-product-catalog-file>`__ |ext_link|. |destination-name| supports the following `file formats <https://docs.bazaarvoice.com/articles/ratings-reviews-legacy-prr/product_feeds>`__ |ext_link|:
 
    * CSV
    * PSV

@@ -52,9 +52,9 @@ The default audience list in |destination-name| requires only an email address. 
 .. sendtos-add-orchestration-generic-start
 
 #. From the **Destinations** tab, click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** drop-down, select **Query**.
-#. From the **Object** drop-down, select the query for which results will be sent to |destination-name|.
-#. From the **Destination** drop-down, select a destination that is configured for sending data to |destination-name|.
+#. From the **Object Type** dropdown, select **Query**.
+#. From the **Object** dropdown, select the query for which results will be sent to |destination-name|.
+#. From the **Destination** dropdown, select a destination that is configured for sending data to |destination-name|.
 #. Verify all settings.
 #. Set the workflow to **Manual**. (You can change this to automatic later, after verifying the end-to-end workflow.)
 #. Click **Save**.
@@ -65,12 +65,12 @@ The default audience list in |destination-name| requires only an email address. 
 .. sendtos-add-orchestration-snowflake-start
 
 #. From the **Destinations** tab, click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** drop-down, select **Database Export** or **Query**.
-#. From the **Object** drop-down, select the object to be exported to Snowflake.
+#. From the **Object Type** dropdown, select **Database Export** or **Query**.
+#. From the **Object** dropdown, select the object to be exported to Snowflake.
 
    .. note:: This name will also be the name of the orchestration.
-#. From the **Destination** drop-down, select the name of the destination that is configured to send data to Snowflake.
-#. From the **Data Template** drop-down, select the data template that maps a database export or query to a table in Snowflake.
+#. From the **Destination** dropdown, select the name of the destination that is configured to send data to Snowflake.
+#. From the **Data Template** dropdown, select the data template that maps a database export or query to a table in Snowflake.
 #. Verify the **Snowflake Location** has the correct namespace, including the appended Amperity table name. This should be a period-delimited list of the Snowflake database name, the Snowflake schema name, and the Snowflake table name:
 
    ::

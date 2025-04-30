@@ -25,11 +25,11 @@ Send query results to Klaviyo
    :start-after: .. term-klaviyo-start
    :end-before: .. term-klaviyo-end
 
-.. include:: ../../amperity_datagrid/source/destination_klaviyo.rst
+.. include:: ../../amperity_operator/source/destination_klaviyo.rst
    :start-after: .. destination-klaviyo-api-note-start
    :end-before: .. destination-klaviyo-api-note-end
 
-.. include:: ../../amperity_datagrid/source/destination_klaviyo.rst
+.. include:: ../../amperity_operator/source/destination_klaviyo.rst
    :start-after: .. destination-klaviyo-csv-note-start
    :end-before: .. destination-klaviyo-csv-note-end
 
@@ -153,6 +153,6 @@ Run orchestration
 Customer profile parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_klaviyo.rst
+.. include:: ../../amperity_operator/source/destination_klaviyo.rst
    :start-after: .. destination-klaviyo-customer-profile-parameters-start
    :end-before: .. destination-klaviyo-customer-profile-parameters-end

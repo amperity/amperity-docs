@@ -119,7 +119,7 @@ Destinations are the locations to which you will send the lists of customers tha
           :class: no-scaled-link
      - Each sub-audience that is configured for your campaign will have at least one destination associated with it. For each destination that is configured you must specify the set of attributes that will be sent from Amperity to that destination.
 
-       Click the **Edit Attributes** link to open the attributes editor. From the drop-down select each of the destinations that has been configured for this sub-audience, and then select which attributes will be sent to that destination.
+       Click the **Edit Attributes** link to open the attributes editor. From the dropdown select each of the destinations that has been configured for this sub-audience, and then select which attributes will be sent to that destination.
 
        For example, if you are sending a treatment group to Attentive to support an SMS-based marketing campaign, you will need to send a list of phone numbers from Amperity to Attentive.
 

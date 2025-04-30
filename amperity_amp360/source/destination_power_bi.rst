@@ -62,8 +62,8 @@ You may use the Azure Blob Storage container that comes with your Amperity tenan
 The steps required to configure Amperity to send data that is accessible to Microsoft Power BI from Azure Synapse Analytics requires completion of a series of short workflows, some of which must be done outside of Amperity.
 
 #. Send CSV data to an :doc:`Azure Blob Storage <destination_azure_blob_storage>` container from Amperity.
-#. |ext_microsoft_power_bi_load_csv_to_synapse| to Azure Synapse Analytics.
-#. |ext_microsoft_power_bi_connect_synapse| to an Azure Synapse Analytics workspace, and then access the data sent from Amperity.
+#. `Load CSV data from Azure Blob Storage <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool>`__ |ext_link| to Azure Synapse Analytics.
+#. `Connect Microsoft Power BI <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/tutorial-connect-power-bi-desktop>`__ |ext_link| to an Azure Synapse Analytics workspace, and then access the data sent from Amperity.
 #. Validate the workflow within Amperity and the data within Microsoft Power BI.
 #. Configure Amperity to automate this workflow for a regular (daily) refresh of data.
 
@@ -94,8 +94,8 @@ You must configure Amperity to send data to a Cloud Storage bucket that your org
 The steps required to configure Amperity to send data that is accessible to Power BI from Google BigQuery requires completion of a series of short workflows, some of which must be done outside of Amperity.
 
 #. Send CSV data to :doc:`Google Cloud Storage <destination_google_cloud_storage>` from Amperity.
-#. |ext_google_bigquery_transfer_from_cloud_storage| to Google BigQuery.
-#. |ext_microsoft_power_bi_load_bigquery|, and then access the data sent from Amperity.
+#. `Transfer data from Cloud Storage <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer>`__ |ext_link| to Google BigQuery.
+#. `Connect Microsoft Power BI to Google BigQuery <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-bigquery>`__ |ext_link|, and then access the data sent from Amperity.
 #. Validate the workflow within Amperity and the data within Microsoft Power BI.
 #. Configure Amperity to automate this workflow for a regular (daily) refresh of data.
 

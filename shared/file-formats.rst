@@ -25,6 +25,6 @@ You may reference the following sections while configuring this data source:
 
 .. formats-json-rfc-8259-start
 
-JSON files that are used as source data with Amperity must follow |ext_rfc8259|, which requires using (at a minimum) the UTF-8 encoding format.
+JSON files that are used as source data with Amperity must follow `RFC 8259 <https://datatracker.ietf.org/doc/html/rfc8259>`__ |ext_link|, which requires using (at a minimum) the UTF-8 encoding format.
 
 .. formats-json-rfc-8259-end

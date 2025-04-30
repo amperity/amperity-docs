@@ -161,7 +161,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-     - Define how the courier group will run: a **Full workflow**, a **Partial workflow**, or an **Ingest only** workflow.
+     - Define how the courier group will run: a **Full**, a **Refresh**, or an **Source** workflow.
 
        .. image:: ../../images/mockups-workflow-courier-group-run-types.png
           :width: 400 px
@@ -169,11 +169,13 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-       A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
+       A **Full** workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-       A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+       A **Refresh** workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
-       An ingest-only workflow refreshes domain tables, but does not run Stitch.
+       .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
+
+       A **Source** workflow refreshes domain tables, but does not run Stitch.
 
 
    * - .. image:: ../../images/steps-06.png
@@ -258,9 +260,9 @@ Activate courier group
 
 .. courier-groups-setting-activate-start
 
-A courier group :ref:`must be activated <courier-groups-howto-activate>` in order for it to run on an end-to-end schedule that pulls data to Amperity using couriers, syncs data using bridges, runs Stitch, refreshes databases, and then runs any orchestration, orchestration group, campaign, or profile API endpoint that is associated with the courier group.
+A courier group must be activated in order for it to run on an end-to-end schedule that pulls data to Amperity using couriers, syncs data using bridges, runs Stitch, refreshes databases, and then runs any orchestration, orchestration group, campaign, or profile API endpoint that is associated with the courier group.
 
-A courier group that is :ref:`deactivated <courier-groups-howto-deactivate>` may be run manually.
+A courier group that is deactivated may be run manually.
 
 .. courier-groups-setting-activate-end
 
@@ -290,16 +292,16 @@ Run types
 
 A courier group can be configured with any of the following run types:
 
-**Full workflow**
+**Full**
    A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-**Partial workflow**
-   A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+**Refresh**
+   A refresh workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
    .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
 
-**Ingest-only workflow**
-   An ingest-only workflow refreshes domain tables, but does not run Stitch.
+**Source**
+   A source workflow refreshes domain tables, but does not run Stitch.
 
 .. courier-groups-run-types-end
 
@@ -419,7 +421,7 @@ Bridge syncs
 
 .. courier-groups-bridge-syncs-start
 
-Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`quickly configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give your brand access to shared tables without replication.
+Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`quickly configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give you access to shared tables without replication.
 
 .. courier-groups-bridge-syncs-end
 
@@ -652,7 +654,7 @@ Add courier
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
+#. Select the name of a courier from the dropdown list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
 #. Click **Save**.
 
 .. courier-groups-howto-add-courier-add-steps-end
@@ -675,7 +677,7 @@ A wait time is a constraint placed on a courier group that defines an extended t
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list.
+#. Select the name of a courier from the dropdown list.
 
    Next to **Wait** add an integer value and then select **Seconds**, **Minutes**, **Hours**, or **Days** to represent the amount of time a courier should wait for data.
 #. Click **Save**.
@@ -700,7 +702,7 @@ Each courier in a courier group may be configured to look for data during a time
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list.
+#. Select the name of a courier from the dropdown list.
 
    Next to **Load data** add an integer value and then select **Minutes**, **Hours**, **Days**, or **Weeks** to represent the amount of time older than the scheduled date and time for which the courier will look for data.
 #. Click **Save**.

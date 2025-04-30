@@ -788,7 +788,7 @@ Databases and tables
 
 You can use any database table that is available to the **Segments** page to build attribute groups. The tables are shown in the bottom right corner of the **Segment Editor**.
 
-#. You may change the selected database by choosing another one from the drop-down menu.
+#. You may change the selected database by choosing another one from the dropdown menu.
 #. The list of tables is refreshed to show the tables in that database.
 
 .. image:: ../../images/mockup-segments-tab-database-and-tables.png

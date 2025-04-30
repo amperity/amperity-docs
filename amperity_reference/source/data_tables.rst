@@ -203,7 +203,7 @@ All Opted In Emails
    :start-after: .. term-all-opted-in-emails-table-start
    :end-before: .. term-all-opted-in-emails-table-end
 
-.. include:: ../../amperity_datagrid/source/table_all_opted_in_emails.rst
+.. include:: ../../amperity_operator/source/table_all_opted_in_emails.rst
    :start-after: .. table-all-opted-in-emails-use-in-segments-warning-start
    :end-before: .. table-all-opted-in-emails-use-in-segments-warning-end
 
@@ -1152,6 +1152,90 @@ The **EUID** table contains the following columns:
      - The raw EUID value for the customer. This value, when encrypted, may be used as a EUID token. This value is returned in the response from the **POST /identity/map** endpoint.
 
 .. data-tables-euid-table-end
+
+
+.. _data-tables-predicted-event-propensity:
+
+Event propensity
+==================================================
+
+.. TODO: Update the terms.rst entry after this moves into amperity-docs.
+
+.. term-event-propensity-table-start
+
+An **Event Propensity** table associates individual customers to the events that, depending on the type of event, are most likely to lead to engagement with your brand.
+
+.. term-event-propensity-table-end
+
+.. data-tables-event-propensity-link-to-table-start
+
+.. note:: See |table_event_propensity| for more information about how this table is built and maintained within the customer 360 database.
+
+.. data-tables-event-propensity-link-to-table-end
+
+.. data-tables-event-propensity-table-about-start
+
+The **Event Propensity** table contains the following columns:
+
+.. data-tables-event-propensity-table-about-end
+
+.. data-tables-event-propensity-table-start
+
+.. list-table::
+   :widths: 30 15 55
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Amperity ID**
+     - String
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-amperity-id-column-start
+          :end-before: .. term-amperity-id-column-end
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-amperity-id-format-start
+          :end-before: .. term-amperity-id-format-end
+
+   * - **Audience Size Large**
+     - Boolean
+     - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is large.
+
+       A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+   * - **Audience Size Medium**
+     - Boolean
+     - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is medium.
+
+       A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
+   * - **Audience Size Small**
+     - Boolean
+     - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
+
+       A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+
+   * - **Ranking**
+     - Integer
+     - A ranking of customers by their score for this event. A rank that is less than or equal to X will provide the top N customers with an propensity for this event.
+
+   * - **Score**
+     - Float
+     - The strength of a customers's propensity for this event, shown as an uncalibrated probability.
+
+       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking and/or audience size, and should not be used in segments.
+
+          Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with higher propensity.
+
+   * - **Target Value**
+     - Integer
+     - 
+
+   * - **Revenue Event Days Since Last Event**
+     - Integer
+     - 
+
+.. data-tables-event-propensity-table-end
 
 
 .. _data-tables-fiscal-calendar:
@@ -3326,7 +3410,7 @@ The **Unified Coalesced** table contains the following columns:
 
        A column is added for each foreign key that is defined in the **Sources** page.
 
-       .. include:: ../../amperity_datagrid/source/semantics.rst
+       .. include:: ../../amperity_operator/source/semantics.rst
           :start-after: .. semantics-key-foreign-tip-start
           :end-before: .. semantics-key-foreign-tip-end
 
@@ -3789,7 +3873,7 @@ The **Unified Customer** table contains the following columns:
 
        A column is added for each foreign key that is defined in the **Sources** page.
 
-       .. include:: ../../amperity_datagrid/source/semantics.rst
+       .. include:: ../../amperity_operator/source/semantics.rst
           :start-after: .. semantics-key-foreign-tip-start
           :end-before: .. semantics-key-foreign-tip-end
 
@@ -4974,7 +5058,7 @@ The **Unified Preprocessed Raw** table contains the following columns:
 
        A column is added for each foreign key that is defined in the **Sources** page.
 
-       .. include:: ../../amperity_datagrid/source/semantics.rst
+       .. include:: ../../amperity_operator/source/semantics.rst
           :start-after: .. semantics-key-foreign-note-trivial-duplicates-start
           :end-before: .. semantics-key-foreign-note-trivial-duplicates-end
 

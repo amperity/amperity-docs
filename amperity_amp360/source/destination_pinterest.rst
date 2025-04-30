@@ -31,11 +31,11 @@ Use a query to build an audience that meets the criteria for how your brand want
 
 .. destination-pinterest-end
 
-.. include:: ../../amperity_datagrid/source/destination_pinterest.rst
+.. include:: ../../amperity_operator/source/destination_pinterest.rst
    :start-after: .. destination-pinterest-shared-start
    :end-before: .. destination-pinterest-shared-end
 
-.. include:: ../../amperity_datagrid/source/destination_pinterest.rst
+.. include:: ../../amperity_operator/source/destination_pinterest.rst
    :start-after: .. destination-pinterest-api-note-start
    :end-before: .. destination-pinterest-api-note-end
 

@@ -33,11 +33,11 @@ Send audiences to Microsoft Advertising
    :start-after: .. channels-overview-list-intro-start
    :end-before: .. channels-overview-list-intro-end
 
-.. include:: ../../amperity_datagrid/source/destination_microsoft_ads.rst
+.. include:: ../../amperity_operator/source/destination_microsoft_ads.rst
    :start-after: .. destination-microsoft-ads-about-start
    :end-before: .. destination-microsoft-ads-about-end
 
-.. include:: ../../amperity_datagrid/source/destination_microsoft_ads.rst
+.. include:: ../../amperity_operator/source/destination_microsoft_ads.rst
    :start-after: .. destination-microsoft-ads-api-note-start
    :end-before: .. destination-microsoft-ads-api-note-end
 

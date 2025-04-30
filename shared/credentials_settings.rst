@@ -52,7 +52,7 @@ Assign the credential a name and description that ensures other users of Amperit
 
 .. credential-steps-select-type-end
 
-Notes: When a source or destination supports more than one credential type, use the "multiple" inclusion block, and then add "From the **Credential type** drop-down, select **credential-name**." See the Amazon S3 destination topic for an example.
+Notes: When a source or destination supports more than one credential type, use the "multiple" inclusion block, and then add "From the **Credential type** dropdown, select **credential-name**." See the Amazon S3 destination topic for an example.
 
 .. credential-steps-select-type-multiple-start
 
@@ -1165,7 +1165,7 @@ See SFTP.
 
 .. credential-listrak-allowlist-start
 
-The Amperity `IP address for allowlists <https://docs.amperity.com/datagrid/send_data.html#ip-allowlists>`__ |ext_link| must be added to the allowlist for the |destination-name| integration.
+The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must be added to the allowlist for the |destination-name| integration.
 
 .. credential-listrak-allowlist-end
 

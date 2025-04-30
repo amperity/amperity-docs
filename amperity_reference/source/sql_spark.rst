@@ -111,7 +111,7 @@ General
 * Columns aliased to the same name. For example, avoid ``email AS email``.
 * Quotes (``" "``) around column names unless using them is necessary.
 * CamelCase, with the exception of the table name. CamelCase is more difficult to scan quickly.
-* Descriptive prefixes or |ext_hungarian_notation| such as ``sp_`` or ``tbl``.
+* Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
 * Object-oriented design principles with SQL or database structures.
@@ -2226,7 +2226,7 @@ Coalesce to 1 (non-NULL) values
 Multiple delimiter types
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-advanced-custom-domain-tables-start
    :end-before: .. bad-values-blocklist-advanced-custom-domain-tables-end
 

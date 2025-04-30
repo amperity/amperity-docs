@@ -40,7 +40,7 @@ About the Segments page
 
 You can view a list of active segments along with recommended segments highlighted across the top of the page.
 
-Click **Create Segment** to open the **Segment Editor**. Build your segment using a series of drop-downs and picklists. Refresh **Segment insights** to see how many customers match and to see how much value they bring to your brand. Activate the segment when you're ready to use it in marketing campaigns.
+Click **Create Segment** to open the **Segment Editor**. Build your segment using a series of dropdowns and picklists. Refresh **Segment insights** to see how many customers match and to see how much value they bring to your brand. Activate the segment when you're ready to use it in marketing campaigns.
 
 You can reorder the list of segments alphabetically by **Name**  and **Status**. Or, you can reorder the date **Last updated**. Quickly view which campaigns a segment is activated under **Used in**.
 
@@ -105,7 +105,7 @@ Up to five segments may be configured to show in the list of recommended segment
 
        This opens the **Configure recommended segments** dialog box.
 
-       For each recommended segment, use the drop-down list to choose a segment
+       For each recommended segment, use the dropdown list to choose a segment
 
        .. image:: ../../images/mockup-segments-recommended-select.png
           :width: 380 px
@@ -147,7 +147,7 @@ Up to five segments may be configured to show in the list of recommended segment
           :align: left
           :class: no-scaled-link
 
-       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." drop-down.
+       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." dropdown.
 
        .. image:: ../../images/mockup-segments-recommended-choose-database.png
           :width: 420 px
@@ -256,7 +256,7 @@ The **Breakdown** tab contains insight charts for customer behaviors and custome
 
 These charts have a configurable date range and the displayed attributes charts are customizable. To customize the breakdown charts displayed on the **Breakdown** tab, click the **Customize** link, select up to six charts on the **Customize Breakdown Charts** window, and then click **Apply**.
 
-.. note:: Compare by % of Purchasers, % of Revenue, or Revenue/Purchaser in the breakdown charts by selecting one of these options from the **Compare by:** drop-down menu.
+.. note:: Compare by % of Purchasers, % of Revenue, or Revenue/Purchaser in the breakdown charts by selecting one of these options from the **Compare by:** dropdown menu.
 
 .. tip:: You can expand a breakdown chart by clicking the icon and then clicking **Expand**.
 
@@ -383,7 +383,7 @@ This section describes all tasks related to building segments in Amperity:
 * :ref:`segments-change-comparison-dates`
 * :ref:`segments-segment-database-source`
 * :ref:`segments-change-date`
-* :ref:`segments-choose-andor-start`
+* :ref:`segments-choose-andor`
 * :ref:`segments-compare`
 * :ref:`segments-select-segment-comparison-chart`
 * :ref:`segments-copy-column`

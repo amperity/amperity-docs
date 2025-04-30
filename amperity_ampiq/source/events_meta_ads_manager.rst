@@ -29,7 +29,7 @@ Send offline events to Meta Ads Manager
 
 Send offline events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Offline events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the |ext_facebook_conversions_api_offline_events|.
+Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for offline events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
 
 .. important:: The first time transaction events are sent to |destination-name|, and when **action_source** is set to **physical_store**, up to 62 days of transactions data may be sent, after which Amperity should be configured to send updates that maintain a 7-day rolling window of transaction events.
 
@@ -39,7 +39,7 @@ Transaction events that occurred within the previous seven days *and* contain po
 
 .. note:: Offline events are not immediately available in |destination-name|. Allow for up to 24 hours after the point at which Amperity has finished sending offline events for them to be available.
 
-   Offline events that are sent to |destination-name| can be accessed from |ext_meta_events_manager|.
+   Offline events that are sent to |destination-name| can be accessed from `Meta Events Manager <https://www.facebook.com/business/help/898185560232180?id=565900110447546>`__ |ext_link|.
 
 .. events-meta-ads-manager-allowfor-end
 
@@ -168,6 +168,6 @@ Run orchestration
 Conversions API parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-conversion-api-parameters-start
    :end-before: .. events-meta-ads-manager-conversion-api-parameters-end

@@ -26,7 +26,7 @@
 Send data to DV360
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_dv360.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dv360.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-dv360-start
@@ -40,11 +40,11 @@ Send data to DV360
 
    For example:
 
-   * Use Discovery campaigns to |ext_google_gmail_ads|.
-   * Use |ext_google_ads|  to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
-   * Run ads within |ext_google_search|.
-   * Run ads within the |ext_google_shopping|.
-   * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the |ext_dv360_placement_options|. DV360 supports advertiser and partner networks.
+   * Use Discovery campaigns to `reach customers in the Promotions and Social tabs in Gmail <https://support.google.com/google-ads/answer/9176876>`__ |ext_link|.
+   * Use `Google Ads <https://support.google.com/google-ads/answer/2567043>`__ |ext_link|  to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
+   * Run ads within `search results on Google.com <https://support.google.com/google-ads/answer/9510373>`__ |ext_link|.
+   * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
+   * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
    Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
@@ -58,7 +58,7 @@ Send data to DV360
 
 .. destination-dv360-api-note-start
 
-.. note:: This destination uses the |ext_google_audience_partner_api|.
+.. note:: This destination uses the `Google Audience Partner API <https://support.google.com/google-ads/answer/7361372?hl=en>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -115,11 +115,11 @@ Get details
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - Amperity must be |ext_google_display_and_video_partners_linked| before audience lists can be sent from Amperity to partners or advertisers.
+     - Amperity must be `configured as a linked account in DV360 <https://support.google.com/displayvideo/answer/9134175?hl=en>`__ |ext_link| before audience lists can be sent from Amperity to partners or advertisers.
 
        #. In DV360, open **Advertiser Settings**, and then select **Linked Accounts**.
        #. Click **Link New Account**, and then select **External Data Partner**.
-       #. Select "Amperity" from the drop-down menu, and then click **Link**.
+       #. Select "Amperity" from the dropdown menu, and then click **Link**.
        #. Confirm Amperity as a linked external data partner, and then click **Create Link**.
 
 
@@ -188,7 +188,7 @@ Add destination
 
        Enter a name for the destination and provide a description. For example: "|destination-name|" and "This sends |what-send| to |destination-name|".
 
-       From the **Plugin** drop-down, start typing |filter-the-list| to filter the list, and then select Google Customer Match.
+       From the **Plugin** dropdown, start typing |filter-the-list| to filter the list, and then select Google Customer Match.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -246,13 +246,13 @@ Add destination
 
           **Display & Video 360 Advertisers**
 
-          |ext_google_display_and_video_advertisers| represent individual businesses that run advertising campaigns.
+          `Display & Video 360 Advertisers <https://support.google.com/displayvideo/answer/2696883>`__ |ext_link| represent individual businesses that run advertising campaigns.
 
-          Use your |ext_google_display_and_video_advertisers_id| to identify the customer ID to which Amperity should send data.
+          Use your `Advertiser ID <https://support.google.com/displayvideo/answer/11415707?hl=en&ref_topic=6027410>`__ |ext_link| to identify the customer ID to which Amperity should send data.
 
           **Display & Video 360 Partners**
 
-          |ext_google_display_and_video_partners| represent agencies, trading desks, and large individual advertisers. Multiple advertisers are often grouped under a single partner.
+          `Display & Video 360 Partners <https://support.google.com/displayvideo/answer/7622449>`__ |ext_link| represent agencies, trading desks, and large individual advertisers. Multiple advertisers are often grouped under a single partner.
 
           Use your partner ID to identify the customer ID to which Amperity should send data.
 
@@ -497,9 +497,9 @@ European Union user consent
 
 .. destination-dv360-api-matching-eu-consent-start
 
-The Google Ads API uses the |ext_google_consent_object| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
+The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must |ext_google_consent_object_faq| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy.
+.. important:: Customers must `send the the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy.
 
 .. list-table::
    :widths: 130 130 340

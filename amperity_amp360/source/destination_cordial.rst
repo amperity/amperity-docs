@@ -25,7 +25,7 @@ Send query results to Cordial
    :start-after: .. term-cordial-start
    :end-before: .. term-cordial-end
 
-.. include:: ../../amperity_datagrid/source/destination_cordial.rst
+.. include:: ../../amperity_operator/source/destination_cordial.rst
    :start-after: .. destination-cordial-start
    :end-before: .. destination-cordial-end
 

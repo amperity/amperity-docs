@@ -266,7 +266,7 @@ Queries also enable you to write SQL that can be used to perform QA against vari
 
 .. start-here-queries-tab-sql-interfaces-start
 
-The **Queries** page provides a SQL interface for building queries. Use the visual editor to build queries with drop-downs and picklists. Use the SQL editor (and Presto SQL) to build more advanced queries. The **Queries** page keeps a list of all queries, in both active and draft states.
+The **Queries** page provides a SQL interface for building queries. Use the visual editor to build queries with dropdowns and picklists. Use the SQL editor (and Presto SQL) to build more advanced queries. The **Queries** page keeps a list of all queries, in both active and draft states.
 
 Both editors can access all tables in the customer 360 database, which contains all of your important customer attributes, along with passthrough tables that bring data that was pulled to Amperity from the domain tables to the customer 360.
 
@@ -335,7 +335,7 @@ Export databases and tables
 Sync with data lakehouses
 ==================================================
 
-Configure inbound and outbound shares in Amperity to enable bi-directional syncing of data tables between `Amperity and Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html>`__ and `Amperity and Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html>`__.
+Configure inbound and outbound shares in Amperity to enable bi-directional syncing of data tables between `Amperity and Databricks <https://docs.amperity.com/operator/bridge_databricks.html>`__ and `Amperity and Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html>`__.
 
 
 .. _start-here-about-this-collection:
@@ -387,13 +387,13 @@ The numbers in the previous diagram represent a scenario that builds a query, an
 Log in to Amperity
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-log-in-amperity-start
    :end-before: .. start-here-log-in-amperity-end
 
 **To log in to Amperity**
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-log-in-amperity-steps-start
    :end-before: .. start-here-log-in-amperity-steps-end
 
@@ -403,6 +403,6 @@ Log in to Amperity
 Supported browsers
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-tenant-browsers-start
    :end-before: .. start-here-tenant-browsers-end
