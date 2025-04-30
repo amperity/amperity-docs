@@ -307,7 +307,7 @@ Streaming API
 
 .. source-braze-streaming-api-start
 
-Your brand can configure |source-name| to send events to an :doc:`Amperity Streaming API endpoint <api_streaming_ingest>` using a `custom currents export <https://www.braze.com/docs/user_guide/data/braze_currents/setting_up_currents>`__ |ext_link|.
+Your brand can configure |source-name| to send events to an :doc:`Amperity Streaming API endpoint <api_streaming>` using a `custom currents export <https://www.braze.com/docs/user_guide/data/braze_currents/setting_up_currents>`__ |ext_link|.
 
 .. source-braze-streaming-api-end
 
@@ -324,7 +324,7 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Log in to Amperity and configure a :doc:`Streaming API endpoint <api_streaming_ingest>` to send events data to Amperity using |source-name|.
+     - Log in to Amperity and configure a :doc:`Streaming API endpoint <api_streaming>` to send events data to Amperity using |source-name|.
 
        You will need to :ref:`add an API key <streaming-ingest-api-enable-add-api-key>` and :ref:`generate an access (bearer) token <streaming-ingest-api-enable-generate-access-token>` for |source-name|.
 

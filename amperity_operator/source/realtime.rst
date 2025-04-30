@@ -142,15 +142,15 @@ Add streaming endpoint
 
 Streaming endpoints are managed from the **Sources** page.
 
-.. note:: Each streaming endpoint requires an `API key and access token <https://docs.amperity.com/operator/api_streaming_ingest.html#api-keys-and-jwts>`__. Use the API key and access token within the POST request that is made by the upstream programmatic workflow.
+.. note:: Each streaming endpoint requires an `API key and access token <https://docs.amperity.com/operator/api_streaming.html#api-keys-and-jwts>`__. Use the API key and access token within the POST request that is made by the upstream programmatic workflow.
 
 .. realtime-add-streaming-endpoint-end
 
-.. TODO: Gotta update api_streaming_ingest.rst with a "Send to real-time tables" section.
+.. TODO: Gotta update api_streaming.rst with a "Send to real-time tables" section.
 
-.. TODO: Gotta update api_streaming_ingest.rst to say "#. JSON (preferred), which converts streaming data to NDJSON; required for real-time tables" instead of "#. JSON (preferred), which converts streaming data to NDJSON"
+.. TODO: Gotta update api_streaming.rst to say "#. JSON (preferred), which converts streaming data to NDJSON; required for real-time tables" instead of "#. JSON (preferred), which converts streaming data to NDJSON"
 
-.. TODO: Link to api_streaming_ingest page, and then add admonition about setting up the keys. Just link to each section.
+.. TODO: Link to api_streaming page, and then add admonition about setting up the keys. Just link to each section.
 
 .. TODO: Update part of step two with this: ":ref:`Use this identifier in the path for the POST request <streaming-ingest-rest-api-streams>` when sending data to the Streaming Ingest API endpoint."
 
@@ -330,7 +330,7 @@ Create API key and access token
 
 .. realtime-configure-api-key-access-token-start
 
-Configure a Streaming Ingest API endpoint to collect data that will be streamed to Amperity, including creating an `API key and access token <https://docs.amperity.com/operator/api_streaming_ingest.html#api-keys-and-jwts>`__. Each endpoint has a unique stream ID that is used to associate the stream to a real-time table.
+Configure a Streaming Ingest API endpoint to collect data that will be streamed to Amperity, including creating an `API key and access token <https://docs.amperity.com/operator/api_streaming.html#api-keys-and-jwts>`__. Each endpoint has a unique stream ID that is used to associate the stream to a real-time table.
 
 .. realtime-configure-api-key-access-token-end
 
@@ -342,7 +342,7 @@ Configure the POST request
 
 .. realtime-configure-post-request-start
 
-Before you can stream data to Amperity using the Streaming Ingest API you must configure an `API key and access token <https://docs.amperity.com/operator/api_streaming_ingest.html#api-keys-and-jwts>`__ for that endpoint. Each endpoint is assigned a unique stream ID that is used to associate the stream to a real-time table.
+Before you can stream data to Amperity using the Streaming Ingest API you must configure an `API key and access token <https://docs.amperity.com/operator/api_streaming.html#api-keys-and-jwts>`__ for that endpoint. Each endpoint is assigned a unique stream ID that is used to associate the stream to a real-time table.
 
 The stream ID, API access key, and access token are required to ensure that your upstream workflow is sending data to the correct streaming endpoint (stream ID) and is authorized to stream data to Amperity (access token).
 
