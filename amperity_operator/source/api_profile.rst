@@ -447,7 +447,7 @@ and then use the lookup key in your workflow to return individual attribute valu
 Access token
 --------------------------------------------------
 
-.. TODO: We will want to update to be closer to this section: https://docs.amperity.com/operator/api_streaming_ingest.html#api-keys-and-jwts after we have the self-service access token feature in-place.
+.. TODO: We will want to update to be closer to this section: https://docs.amperity.com/operator/api_streaming.html#api-keys-and-jwts after we have the self-service access token feature in-place.
 
 .. profile-api-enable-api-jwt-start
 

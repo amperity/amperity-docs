@@ -63,7 +63,7 @@
 
 .. |api_streaming_ingest| raw:: html
 
-   <a href="https://docs.amperity.com/operator/api_streaming_ingest.html">Streaming Ingest API</a>
+   <a href="https://docs.amperity.com/operator/api_streaming.html">Streaming API</a>
 
 
 .. |apply_ordinals_to_address_groups| raw:: html

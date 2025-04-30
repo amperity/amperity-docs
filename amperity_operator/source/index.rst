@@ -200,7 +200,7 @@ Automate workflows
    add_predicted_models
    add_transactions
    api_profile
-   api_streaming_ingest
+   api_streaming
    benchmarks
    blocklist_bad_values
    bridge_databricks
