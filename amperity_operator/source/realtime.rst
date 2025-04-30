@@ -98,6 +98,18 @@ Real-time tables have the following limitations:
 .. realtime-howitworks-limitations-end
 
 
+.. _realtime-failed-events:
+
+Failed events
+--------------------------------------------------
+
+.. realtime-failed-events-start
+
+Events that fail to process into a real-time table are added to a table with the same name as the real-time table that is appended with ``_failed``. For example, a real-time table named **Reservations** will capture failed events in a table named **Reservations_failed**.
+
+.. realtime-failed-events-end
+
+
 .. _realtime-enable:
 
 Enable real-time workflows
@@ -287,7 +299,13 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Each field in the schema must exist in the fields that are streamed to Amperity by the streaming source for this real-time table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. If you have an existing feed configured for streaming purposes, you may refer to the feed for schema details.
 
-       .. note:: The schema for every real-time table will contain two additional fields at the query layer: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table). Use these fields to support filtering for recent data to join with data in batch layer database tables.
+       .. note:: The schema for every real-time table will contain the following additional fields at the query layer:
+
+          * **_received_at** The time at which data arrived at the streaming endpoint.
+          * **_written_at** The time at which data was written to the real-time table.
+          * **_request_id** The unique ID that is assigned by Amperity to the event.
+
+       Use these fields to support filtering for recent data to join with data in batch layer database tables.
 
        Click **Save**.
 
@@ -518,18 +536,18 @@ Add to batch workflow
 
 .. realtime-add-to-batch-workflow-start
 
-To include data that is streamed to Amperity in your batch workflow, such as including customer profile updates or certain transaction details, you can use a courier to pull the data from the streaming layer to the batch layer using a similar series of steps for all data sources in the batch layer.
+To include data that is streamed to Amperity in your batch workflow, such as including customer profile updates or certain transaction details, do the following:
 
-#. `Add courier <https://docs.amperity.com/operator/api_streaming_ingest.html#add-courier>`__
+#. Add a custom domain table.
 
-#. `Get sample file <https://docs.amperity.com/operator/api_streaming_ingest.html#get-sample-files>`__
+#. Use the following SQL to bring the real-time data into the batch layer:
 
-#. `Add feed <https://docs.amperity.com/operator/api_streaming_ingest.html#add-feeds>`__
+   .. code-block::
 
-#. `Add load operation <https://docs.amperity.com/operator/api_streaming_ingest.html#add-load-operations>`__
+      SELECT * FROM realtime_table
 
-#. `Run courier and validate data is loaded to the domain table <https://docs.amperity.com/operator/api_streaming_ingest.html#run-courier-manually>`__
+   where ``realtime_table`` is the name of the real-time table from which data will be pulled into the batch layer.
 
-#. `Add to courier group <https://docs.amperity.com/operator/api_streaming_ingest.html#add-to-courier-group>`__
+#. Make this table available to Stitch.
 
 .. realtime-add-to-batch-workflow-end
