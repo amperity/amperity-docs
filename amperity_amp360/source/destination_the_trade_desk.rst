@@ -35,7 +35,7 @@ Use Amperity to manage email addresses in |destination-name|. Build a query usin
 
 .. destination-the-trade-desk-start
 
-.. TODO: This must be manually kept in sync across /datagrid/destination_the_trade_desk.rst and /ampiq/destination_the_trade_desk.rst.
+.. TODO: This must be manually kept in sync across /operator/destination_the_trade_desk.rst and /ampiq/destination_the_trade_desk.rst.
 
 Amperity can manage audiences for |destination-name| demand-side platform, from which your brand can reach audiences throughout their entire digital journey and across every channel and device, including:
 
@@ -45,11 +45,11 @@ Amperity can manage audiences for |destination-name| demand-side platform, from 
 
 .. destination-the-trade-desk-start
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
+.. include:: ../../amperity_operator/source/destination_the_trade_desk.rst
    :start-after: .. destination-the-trade-desk-whatis-20-start
    :end-before: .. destination-the-trade-desk-whatis-20-end
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
+.. include:: ../../amperity_operator/source/destination_the_trade_desk.rst
    :start-after: .. destination-the-trade-desk-api-note-start
    :end-before: .. destination-the-trade-desk-api-note-end
 

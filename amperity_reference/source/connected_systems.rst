@@ -102,8 +102,8 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
    * - **Amazon Ads**
      - |system-yes|
-     - 
-     - Pull data to Amperity from Amazon Ads using Fivetran.
+     - |system-yes|
+     - Pull data to Amperity from Amazon Ads using Fivetran. Send audiences to Amazon Ads and advertise across Amazon-associated paid media.
 
    * - **Amazon Aurora**
      - |system-yes|
@@ -124,6 +124,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - 
      - Stream data to an Amazon S3 bucket, and then pull it to Amperity.
+
+   * - **Amazon Marketing Cloud**
+     - 
+     - |system-yes|
+     - Amperity can send data to your brand’s instance of Amazon Marketing Cloud (AMC) when `the instance name is configured alongside the demand-side platform (DSP) advertiser <https://docs.amperity.com/operator/destination_amazon_ads.html#about-amazon-marketing-cloud-amc>`__ to which Amperity sends data.
 
    * - **Amazon Pinpoint**
      - 
@@ -300,7 +305,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - |system-yes|
      - Send offline events to to track offline conversions from your marketing campaigns.
- 
+
    * - **Cross Country Computer**
      - |system-yes|
      - |system-yes|
@@ -309,16 +314,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Databricks**
      - |system-yes|
      - |system-yes|
-     - Pull tables directly from Databricks.
-
-       Send files from Amperity to Amazon Redshift, Amazon S3, Azure Blob Storage, Azure Synapse Analytics, Google Cloud Storage, and Snowflake, and then connect Databricks to that data.
-
-       Use Amperity Bridge to configure shared tables between Databricks and Amperity.
-
-   * - **Databricks (Delta tables)**
-     - 
-     - |system-yes|
-     - Send JSON files directly to Databricks and load them as Delta tables.
+     - Sync data between Amperity and Databricks using Amperity Bridge.
 
    * - **Delighted**
      - |system-yes|
@@ -328,7 +324,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **DV360**
      - 
      - |system-yes|
-     - Send data to Google Customer Match, and then enable ads for display and video using the |ext_google_display_and_video_advertisers| and |ext_google_display_and_video_partners| networks.
+     - Send data to Google Customer Match, and then enable ads for display and video using the `Display & Video 360 Advertisers <https://support.google.com/displayvideo/answer/2696883>`__ |ext_link| and `Display & Video 360 Partners <https://support.google.com/displayvideo/answer/7622449>`__ |ext_link| networks.
 
    * - **Domo**
      - 
@@ -410,7 +406,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Gladly using Fivetran.
 
-       Amperity does not orchestrate data directly to Gladly. The best way to send data to Gladly is to orchestrate to Amazon S3, SFTP, or other cloud storage, and then follow the |ext_gladly_bulk_import| process to manage audience profiles.
+       Amperity does not orchestrate data directly to Gladly. The best way to send data to Gladly is to orchestrate to Amazon S3, SFTP, or other cloud storage, and then follow the `Bulk User Upload/Edit <https://connect.gladly.com/docs/help-documentation/article/bulk-user-upload/>`__ |ext_link| process to manage audience profiles.
 
    * - **Gmail**
      - 
@@ -515,9 +511,9 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - Pull data to Amperity using SFTP.
 
    * - **Kibo**
-     -
      - |system-yes|
-     - Send data to and from Amperity using SFTP.
+     - |system-yes|
+     - Send data to and from Amperity using SFTP. Previously known as Monetate.
 
    * - **Klaviyo**
      - |system-yes|
@@ -633,11 +629,6 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - 
      - Pull data to Amperity from Mixpanel using Fivetran.
-
-   * - **Monetate**
-     - |system-yes|
-     - |system-yes|
-     - Send data to and from Amperity using SFTP.
 
    * - **MongoDB**
      - |system-yes|
@@ -879,7 +870,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Shopify**
      - |system-yes|
      - 
-     - Pull customer, order, product, and transaction data to Amperity using Fivetran..
+     - Pull customer, order, product, and transaction data to Amperity using Fivetran.
 
    * - **Service Management Group (SMG)**
      - |system-yes|
@@ -896,7 +887,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Snowflake**
      - |system-yes|
      - |system-yes|
-     - Share table data with Amperity.
+     - Sync data between Amperity and Snowflake using Amperity Bridge.
 
    * - **Snowplow Analytics**
      - |system-yes|
@@ -943,8 +934,13 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Send contact lists to Throtle using Amazon S3.
 
-   * - **TikTok Ads**
+   * - **The Trade Desk**
+     - 
      - |system-yes|
+     - Send UID2 and EUID identifiers to The Trade Desk for paid media advertising.
+
+   * - **TikTok Ads**
+     - 
      - |system-yes|
      - Pull data to Amperity from TikTok Ads using Fivetran.
 
@@ -1048,8 +1044,8 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
    * - **Zendesk**
      - |system-yes|
-     - 
-     - Pull customer service data from Zendesk using the Zendesk Support API.
+     - |system-yes|
+     - Pull customer service data from Zendesk using the Zendesk Support API. Send audiences and customer attributes to Zendesk to improve support personalization experiences.
 
    * - **Zoho Analytics**
      - 

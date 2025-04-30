@@ -26,7 +26,7 @@ Send query results to Domo
    :start-after: .. term-domo-start
    :end-before: .. term-domo-end
 
-.. include:: ../../amperity_datagrid/source/destination_domo.rst
+.. include:: ../../amperity_operator/source/destination_domo.rst
    :start-after: .. destination-domo-context-start
    :end-before: .. destination-domo-context-end
 

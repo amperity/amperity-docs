@@ -250,7 +250,7 @@ Date components
 
 .. couriers-files-patterns-date-components-start
 
-Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match |ext_jodatime_datetime_format_friendly|, but should generally be limited to the following patterns:
+Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link|, but should generally be limited to the following patterns:
 
 .. list-table::
    :widths: 200 200 200
@@ -1592,9 +1592,9 @@ Use SnapPass to securely share configuration data with your Amperity representat
 
 #. From the **Sources** page, click **Add Courier**. The **Add Courier** page opens.
 #. Enter the name of the courier.
-#. From the **Plugin** drop-down, select a plugin.
+#. From the **Plugin** dropdown, select a plugin.
 
-   .. note:: The settings for a courier will vary, depending on the courier selected from the **Plugin** drop-down.
+   .. note:: The settings for a courier will vary, depending on the courier selected from the **Plugin** dropdown.
 
 #. Enter the credentials for the courier type.
 #. Enter any courier-specific settings.
@@ -1643,7 +1643,7 @@ Add to courier group
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
+#. Select the name of a courier from the dropdown list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
 #. Click **Save**.
 
 .. couriers-add-to-courier-group-steps-end

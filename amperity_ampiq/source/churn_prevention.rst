@@ -42,7 +42,7 @@ Brands use churn prevention campaigns to win back customers who have not purchas
 
           This book focuses on retention, and how to build a churn prevention machine that keeps your customers engaged for the long run.
 
-          |ext_custora_its_not_you|
+          `Open the PDF to read the whole book <https://docs.amperity.com/downloads/pdf/It's%20not%20you,%20it's%20my%20data.pdf>`__ |ext_link|
 
 .. churn-prevention-custora-end
 

@@ -50,7 +50,7 @@ Double quotes
 
 .. format-csv-double-quotes-start
 
-|ext_rfc4180| has the following guidelines for the use of double quotes in CSV files:
+`RFC 4180 <https://tools.ietf.org/html/rfc4180>`__ |ext_link| has the following guidelines for the use of double quotes in CSV files:
 
 * A field may or may not be enclosed by double quotes. When a field is not enclosed by double quotes, double quotes may not appear inside a field.
 * A field that contains line breaks (CRLF), double quotes, and/or commas should be enclosed in double quotes.
@@ -577,7 +577,7 @@ Load from ingest query
 
 .. format-csv-pull-couriers-load-operations-ingest-query-caution-start
 
-.. caution:: Spark does not correctly implement |ext_rfc4180| for escape characters in CSV files. The most common implementations of CSV files expect a double quote ``"`` as an escape character while Spark uses a backslash ``\``. For more information about this issue view the `SPARK-22236 <https://issues.apache.org/jira/browse/SPARK-22236>`__ |ext_link| issue within the Spark project.
+.. caution:: Spark does not correctly implement `RFC 4180 <https://tools.ietf.org/html/rfc4180>`__ |ext_link| for escape characters in CSV files. The most common implementations of CSV files expect a double quote ``"`` as an escape character while Spark uses a backslash ``\``. For more information about this issue view the `SPARK-22236 <https://issues.apache.org/jira/browse/SPARK-22236>`__ |ext_link| issue within the Spark project.
 
    You can override this behavior when working with RFC-compliant CSV files by specifying an escape character in the courier load operations using ``'`` or ``"`` as the escape character.
 

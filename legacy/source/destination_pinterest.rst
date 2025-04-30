@@ -20,7 +20,7 @@
 Send data to Pinterest Ads
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_pinterest_ads.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_pinterest_ads.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-pinterest-start
@@ -52,13 +52,13 @@ When a customer list is not associated with an audience in |destination-name|, A
 
    Amperity uses a combination of endpoints in the |destination-api|:
 
-   * The |ext_pinterest_api_create_audience| endpoint to create an audience that can be used to reach specific groups of users in |destination-name|. This converts a customer list into the **CUSTOMER_LIST** audience type.
+   * The `create audience <https://developers.pinterest.com/docs/api/v5/#operation/audiences/create>`__ |ext_link| endpoint to create an audience that can be used to reach specific groups of users in |destination-name|. This converts a customer list into the **CUSTOMER_LIST** audience type.
 
-   * The |ext_pinterest_api_create_customer_list| endpoint to create a customer list from a list of SHA-256 hashed email addresses sent to |destination-name| from Amperity.
+   * The `create customer list <https://developers.pinterest.com/docs/api/v5/#operation/customer_lists/create>`__ |ext_link| endpoint to create a customer list from a list of SHA-256 hashed email addresses sent to |destination-name| from Amperity.
 
-   * The |ext_pinterest_api_update_customer_list| endpoint to manage the list of email addresses in a customer list.
+   * The `update customer list <https://developers.pinterest.com/docs/api/v5/#operation/customer_lists/update>`__ |ext_link| endpoint to manage the list of email addresses in a customer list.
 
-   |destination-name| applies |ext_pinterest_api_standard_access_rate_limits|; Amperity can read from existing customer lists at up to 1000 calls per minute and can write to customer lists at up to 400 calls per minute.
+   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link|; Amperity can read from existing customer lists at up to 1000 calls per minute and can write to customer lists at up to 400 calls per minute.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -120,7 +120,7 @@ Get details
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Pinterest account <destination-pinterest-configure-oauth>`.
 
-       All |destination-api| endpoints may only be accessed by an |ext_pinterest_api_authentication|. |destination-name| identifies this user based on the access token that is passed with each request.
+       All |destination-api| endpoints may only be accessed by an `authenticated Pinterest user <https://developers.pinterest.com/docs/getting-started/authentication/>`__ |ext_link|. |destination-name| identifies this user based on the access token that is passed with each request.
 
 .. destination-pinterest-get-details-end
 

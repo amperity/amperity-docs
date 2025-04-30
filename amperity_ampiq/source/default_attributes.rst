@@ -72,9 +72,9 @@ The following sections describe the steps you'll follow to configure the default
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Choose the **Default attributes** tab, and then from the **Database** drop-down, select the database that contains the attributes that your brand sends to downstream workflows.
+     - Choose the **Default attributes** tab, and then from the **Database** dropdown, select the database that contains the attributes that your brand sends to downstream workflows.
 
-       Then from the **Destinations** drop-down, choose the destination for which default attributes will be configured.
+       Then from the **Destinations** dropdown, choose the destination for which default attributes will be configured.
 
 
    * - .. image:: ../../images/steps-03.png

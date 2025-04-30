@@ -67,7 +67,7 @@ Optimizely and PII data
 
 .. sendto-optimizely-build-query-pii-start
 
-|ext_optimizely_no_pii| -- names, social security numbers, email addresses, and similar data -- from being collected by or sent to |destination-name| services for use with customer profiles or any other feature. It is important to ensure that queries and database exports from Amperity comply with requirements for using |destination-name| services.
+Optimizely terms of service prohibit PII data -- names, social security numbers, email addresses, and similar data -- from being collected by or sent to |destination-name| services for use with customer profiles or any other feature. It is important to ensure that queries and database exports from Amperity comply with requirements for using |destination-name| services.
 
 Because the data sent to |destination-name| contains the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
 
@@ -115,7 +115,7 @@ Customer profiles
 
 .. sendto-optimizely-build-query-customer-profiles-start
 
-|ext_optimizely_customer_profiles| are a collection of customer attributes, such as demographic data, behavioral characteristics, or any other information particular to your industry and customers. Customer profiles provide a consolidated, dynamic view of your customers, enabling you to refine this view as you obtain more information and to take action based on this view.
+`customer profiles <https://docs.developers.optimizely.com/web/docs/customer-profiles>`__ |ext_link| are a collection of customer attributes, such as demographic data, behavioral characteristics, or any other information particular to your industry and customers. Customer profiles provide a consolidated, dynamic view of your customers, enabling you to refine this view as you obtain more information and to take action based on this view.
 
 You can export any combination of attributes from Amperity for use with customer profiles. This requires exporting an ID that is mapped to the |destination-name| **customerId** field, after which you can join the Amperity ID, and any collection of customer profile attributes to that output result, before sending to |destination-name|.
 
@@ -227,7 +227,7 @@ List attributes
 
 .. sendto-optimizely-build-query-list-attributes-start
 
-A |ext_optimizely_list_attributes| targets users who are already part of a defined audience that exists in a downstream system that is not in |destination-name|. All the list attribute requires is a CSV file that contains unique IDs in a single column. This may be the Amperity ID or it may be some other unique ID. The ID that is set to the |destination-name| list attribute must be the ID that is required by the external downstream system.
+A `list attributes <https://docs.developers.optimizely.com/web/docs/list-attributes>`__ |ext_link| targets users who are already part of a defined audience that exists in a downstream system that is not in |destination-name|. All the list attribute requires is a CSV file that contains unique IDs in a single column. This may be the Amperity ID or it may be some other unique ID. The ID that is set to the |destination-name| list attribute must be the ID that is required by the external downstream system.
 
 .. sendto-optimizely-build-query-list-attributes-end
 

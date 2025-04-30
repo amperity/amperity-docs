@@ -52,7 +52,7 @@ To configure a destination for |destination-name|, do one of the following:
 
 .. destinations-steps-select-credential-start
 
-Select the credential for |destination-name| from the **Credential** drop-down, and then click **Continue**.
+Select the credential for |destination-name| from the **Credential** dropdown, and then click **Continue**.
 
 .. destinations-steps-select-credential-end
 
@@ -2271,7 +2271,7 @@ This section contains settings that are unique to TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-start
 
-The advertiser ID for your |destination-name| account. This is a nineteen character string similar to “7654321098765432109” that you can find from the drop-down menu in the top right of TikTok Ads Manager.
+The advertiser ID for your |destination-name| account. This is a nineteen character string similar to “7654321098765432109” that you can find from the dropdown menu in the top right of TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-end
 

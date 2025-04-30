@@ -45,12 +45,12 @@ Common workflows
 
 Common marketing workflows use a combination of segment insights and predictive attributes to define audiences, and then assign those audiences to campaigns that are split into a series of control and treatment groups that allow you to test and refine that campaign over time.
 
-* Use segment insights to build high-value segments
-* Use recommended audience sizes to find the right number of customers for your campaign
-* Perform opportunity sizing on a per-segment basis
+* Use segment insights to build high-value segments.
+* Use recommended audience sizes to find the right number of customers for your campaign.
+* Perform opportunity sizing on a per-segment basis.
 * Build segments by customer value, i.e. "top 1%", "top 5%", "top 10%", etc.
-* Use predicted modeling attributes to build campaigns based on future customer behavior, such as for predicted customer lifetime value (pCLV), churn propensity, next best product, and discount sensitivity
-* Review customer behavior by lifecycle status, such as "new", "active", "at risk", or "churned"
+* Use predicted modeling attributes to build campaigns based on future customer behavior, such as for predicted customer lifetime value (pCLV), churn propensity, and next best product.
+* Review customer behavior by lifecycle status, such as "new", "active", "at risk", or "churned".
 
 .. start-here-ampiq-common-workflows-end
 
@@ -162,13 +162,13 @@ The numbers in the previous diagram represent a scenario that builds an audience
 Log in to Amperity
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-log-in-amperity-start
    :end-before: .. start-here-log-in-amperity-end
 
 **To log in to Amperity**
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-log-in-amperity-steps-start
    :end-before: .. start-here-log-in-amperity-steps-end
 
@@ -178,6 +178,6 @@ Log in to Amperity
 Supported browsers
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/start_here.rst
+.. include:: ../../amperity_operator/source/start_here.rst
    :start-after: .. start-here-tenant-browsers-start
    :end-before: .. start-here-tenant-browsers-end

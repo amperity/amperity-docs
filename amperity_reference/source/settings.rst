@@ -733,7 +733,7 @@ A database that is assigned permission to a custom resource group allows users a
 .. settings-security-resource-groups-database-permissions-steps-start
 
 #. From the **Customer 360** page, under **All Databases**, click the ellipses menu for a database, and then click **Change Permissions**. This opens the **Permissions** dialog box.
-#. Click **Standard Access**, and then select a custom resource group from the drop-down list.
+#. Click **Standard Access**, and then select a custom resource group from the dropdown list.
 #. Click **Save**.
 
 .. settings-security-resource-groups-database-permissions-steps-end

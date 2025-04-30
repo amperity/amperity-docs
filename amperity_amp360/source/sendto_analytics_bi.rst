@@ -98,7 +98,7 @@ Amazon QuickSight
 .. sendto-analytics-bi-tool-amazon-quicksight-start
 
 #. Send CSV or TSV files from Amperity to :doc:`Amazon S3 <destination_amazon_s3>`.
-#. Configure Amazon AWS to create a |ext_aws_quicksight_s3|.
+#. Configure Amazon AWS to create a `dataset using Amazon S3 files <https://docs.aws.amazon.com/quicksight/latest/user/create-a-data-set-s3.html>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-amazon-quicksight-end
 
@@ -114,7 +114,7 @@ Domo
 
 .. sendto-analytics-bi-tool-domo-start
 
-You can use a variety of |ext_domo_business_intelligence| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to Domo as a |ext_domo_dataset|.
+You can use a variety of `data visualization workflows <https://www.domo.com/business-intelligence>`__ |ext_link| to analyze data in Domo. Send query results from Amperity to a customer-managed Amazon S3 bucket, and then load that data to Domo as a `DataSet <https://domohelp.domo.com/hc/en-us/articles/360042926274-Adding-a-DataSet-Using-a-Connector>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-domo-end
 
@@ -131,8 +131,8 @@ Google BigQuery
 .. sendto-analytics-bi-tool-google-bigquery-start
 
 #. Send CSV or Parquet files from Amperity to :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
-#. Load |ext_google_bigquery_load_parquet| or |ext_google_bigquery_load_csv| from cloud storage or transfer Parquet and CSV |ext_google_bigquery_load_from_amazon_s3|.
-#. Enable downstream workflows in analytics and BI tools like :ref:`Microsoft Power BI <sendto-analytics-bi-tool-power-bi>`, or :ref:`Tableau <sendto-analytics-bi-tool-tableau>`. Support or enable real-time downstream workflows with |ext_google_pubsub_overview|.
+#. Load `Parquet files <https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-parquet>`__ |ext_link| or `CSV files <https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv>`__ |ext_link| from cloud storage or transfer Parquet and CSV `files from Amazon S3 <https://cloud.google.com/bigquery-transfer/docs/s3-transfer>`__ |ext_link|.
+#. Enable downstream workflows in analytics and BI tools like :ref:`Microsoft Power BI <sendto-analytics-bi-tool-power-bi>`, or :ref:`Tableau <sendto-analytics-bi-tool-tableau>`. Support or enable real-time downstream workflows with `Google Pub/Sub <https://cloud.google.com/pubsub/docs/overview>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-google-bigquery-end
 
@@ -146,7 +146,7 @@ Looker
    :start-after: .. term-google-looker-start
    :end-before: .. term-google-looker-end
 
-You can connect Looker to cloud databases, including |ext_google_looker_bi_amazon_redshift|, |ext_google_looker_bi_azure_synapse_analytics|, |ext_google_looker_bi_google_bigquery|, and |ext_google_looker_bi_snowflake|.
+You can connect Looker to cloud databases, including `Amazon Redshift <https://cloud.google.com/looker/docs/db-config-amazon-redshift>`__ |ext_link|, `Azure Synapse Analytics <https://cloud.google.com/looker/docs/db-config-microsoft-azure-synapse-analytics>`__ |ext_link|, `Google BigQuery <https://cloud.google.com/looker/docs/db-config-google-bigquery>`__ |ext_link|, and `Snowflake <https://cloud.google.com/looker/docs/db-config-snowflake>`__ |ext_link|.
 
 .. sendto-analytics-bi-tool-looker-end
 
@@ -166,7 +166,7 @@ Data is not sent from Amperity directly to Microsoft Power BI. Microsoft Power B
 
 #. Send a CSV file to an Azure container, after which it is :ref:`picked up by Azure Synapse Analytics <sendto-powerbi-connect-to-azure>`.
 #. Send a CSV file to Google Cloud Storage, after which it is :ref:`transferred to Google BigQuery <sendto-powerbi-connect-to-google-bigquery>`
-#. Send data to |ext_google_bigquery_supported_connectors|.
+#. Send data to `any supported connector <https://learn.microsoft.com/en-us/power-query/connectors/>`__ |ext_link|.
 
 Microsoft Power BI may be configured to connect directly to Snowflake, Google BigQuery, or Azure Synapse Analytics. The destination workflow in Amperity may be configured to send data on a regular basis to ensure that the data available to the Microsoft Power BI user is up to date.
 
@@ -180,7 +180,7 @@ Pyramid Analytics
 
 .. sendto-analytics-bi-tool-pyramid-analytics-start
 
-Pyramid Analytics supports using |ext_pyramid_analytics_sources| to pull data from :doc:`Amazon S3 <destination_amazon_s3>` and :doc:`Azure Blob Storage <destination_azure_blob_storage>`.
+Pyramid Analytics supports using `DataFlow sources <https://help.pyramidanalytics.com/Content/Root/MainClient/apps/Model/Model%20Pro/Data%20Flow/Sources.htm?tocpath=Client%20Help%7CPro%20Client%7CPro%20Apps%7CModel%7CModel%20Pro%7CData%20Flow%7CSources%7C_____0>`__ |ext_link| to pull data from :doc:`Amazon S3 <destination_amazon_s3>` and :doc:`Azure Blob Storage <destination_azure_blob_storage>`.
 
 .. sendto-analytics-bi-tool-pyramid-analytics-end
 

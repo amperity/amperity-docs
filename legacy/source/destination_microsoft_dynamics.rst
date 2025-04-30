@@ -18,7 +18,7 @@
 Send data to Microsoft Dynamics
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_microsoft_dynamics.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_microsoft_dynamics.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-dynamics-start
@@ -26,7 +26,7 @@ Send data to Microsoft Dynamics
 
 .. destination-microsoft-dynamics-api-note-start
 
-.. note:: This destination uses the |ext_microsoft_dynamics_web_api|.
+.. note:: This destination uses the `Microsoft Dynamics Web API <https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/developers-guide/mt607689%28v%3dcrm.8%29>`__ |ext_link|.
 
 .. destination-microsoft-dynamics-api-note-end
 
@@ -440,11 +440,11 @@ Common Data Service Web API
 
 .. note:: |destination-name| is a complex system. Even though Amperity has a built-in connector that supports sending data to entities within |destination-name|, there are more than 400 possible entities to which you can send data, such as sending segments to :doc:`Dynamics 365 Marketing <destination_dynamics_365_marketing>`, with each of these entities having its own schema that requires a unique mapping of data in a data template.
 
-The |ext_common_data_service_web_api| (version 8.2 and higher or version 9.0) is the API to which Amperity can send data.
+The `common data services Web API <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9>`__ |ext_link| (version 8.2 and higher or version 9.0) is the API to which Amperity can send data.
 
 * |destination-name| is not strict about required fields, in that you may choose to not send fields to |destination-name| even when they are marked as required.
 * |destination-name| is strict about extra fields, in that you should not send fields to |destination-name| that do not already exist in the entity's schema. Use the **include** section in the data template mapping to drop fields that should not be sent to |destination-name|.
 
-Review the entities in the Common Data Service Web API prior to configuring a data template. Some of the entities that are more focused toward marketing and user activity include |ext_common_data_service_web_api_contact|, |ext_common_data_service_web_api_list|, |ext_common_data_service_web_api_campaign|, |ext_common_data_service_web_api_campaignactivity|, |ext_common_data_service_web_api_campaignresponse|, or |ext_common_data_service_web_api_customeraddress|. Any of the entities found in the |ext_common_data_service_web_api_entittype_reference| may be configured as a destination, depending on your use case.
+Review the entities in the Common Data Service Web API prior to configuring a data template. Some of the entities that are more focused toward marketing and user activity include `Contact <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact>`__ |ext_link|, `List <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/list>`__ |ext_link|, `Campaign <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaign>`__ |ext_link|, `CampaignActivity <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignactivity>`__ |ext_link|, `CampaignResponse <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignresponse>`__ |ext_link|, or `CustomerAddress <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/customeraddress>`__ |ext_link|. Any of the entities found in the `Web API EntityType Reference <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/entitytypes?view=dynamics-ce-odata-9>`__ |ext_link| may be configured as a destination, depending on your use case.
 
 .. destination-microsoft-dynamics-web-api-end

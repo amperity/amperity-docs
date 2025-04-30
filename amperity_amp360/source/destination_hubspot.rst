@@ -31,7 +31,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
 .. sendto-hubspot-end
 
-.. include:: ../../amperity_datagrid/source/destination_hubspot.rst
+.. include:: ../../amperity_operator/source/destination_hubspot.rst
    :start-after: .. destination-hubspot-contain-only-numbers-letters-underscores-start
    :end-before: .. destination-hubspot-contain-only-numbers-letters-underscores-end
 
@@ -61,7 +61,7 @@ Build query
    :start-after: .. sendtos-build-query-email-only-start
    :end-before: .. sendtos-build-query-email-only-end
 
-.. include:: ../../amperity_datagrid/source/destination_hubspot.rst
+.. include:: ../../amperity_operator/source/destination_hubspot.rst
    :start-after: .. destination-hubspot-build-query-start
    :end-before: .. destination-hubspot-build-query-end
 

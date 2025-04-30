@@ -59,7 +59,7 @@ Use Amperity to manage |what-send| in |destination-name|. Build a query using th
 Extended profile attributes
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_sailthru.rst
+.. include:: ../../amperity_operator/source/destination_sailthru.rst
    :start-after: .. destination-sailthru-extended-profile-attributes-start
    :end-before: .. destination-sailthru-extended-profile-attributes-end
 

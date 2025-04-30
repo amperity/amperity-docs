@@ -789,7 +789,7 @@ Common to destinations
 The following destination-specific workflow actions are common across destinations:
 
 * :ref:`Invalid credentials <workflows-common-update-credentials>`
-* `SFTP site unavailable <https://docs.amperity.com/datagrid/destination_sftp.html#sftp-site-unavailable>`__ (SFTP destinations only)
+* `SFTP site unavailable <https://docs.amperity.com/operator/destination_sftp.html#sftp-site-unavailable>`__ (SFTP destinations only)
 
 .. workflows-context-destination-common-end
 
@@ -803,8 +803,8 @@ to ActiveCampaign
 
 Amperity provides the following destination-specific workflow actions for ActiveCampaign:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_active_campaign.html#invalid-credentials>`__
-* `Invalid group name <https://docs.amperity.com/datagrid/destination_active_campaign.html#invalid-group-name>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_active_campaign.html#invalid-credentials>`__
+* `Invalid group name <https://docs.amperity.com/operator/destination_active_campaign.html#invalid-group-name>`__
 
 .. workflows-context-destination-active-campaign-end
 
@@ -818,9 +818,9 @@ to Amazon Ads
 
 Amperity provides the following destination-specific workflow actions for Amazon Ads:
 
-* `Invalid advertiser account ID <https://docs.amperity.com/datagrid/destination_amazon_ads.html#invalid-advertiser-account-id>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_amazon_ads.html#invalid-credentials>`__
-* `Missing required field <https://docs.amperity.com/datagrid/destination_amazon_ads.html#missing-required-field>`__
+* `Invalid advertiser account ID <https://docs.amperity.com/operator/destination_amazon_ads.html#invalid-advertiser-account-id>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_amazon_ads.html#invalid-credentials>`__
+* `Missing required field <https://docs.amperity.com/operator/destination_amazon_ads.html#missing-required-field>`__
 
 .. workflows-context-destination-amazon-ads-end
 
@@ -834,8 +834,8 @@ to Amazon S3
 
 Amperity provides the following destination-specific workflow actions for Amazon S3:
 
-* `Invalid bucket name <https://docs.amperity.com/datagrid/destination_amazon_s3.html#invalid-bucket-name>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_amazon_s3.html#invalid-credentials>`__
+* `Invalid bucket name <https://docs.amperity.com/operator/destination_amazon_s3.html#invalid-bucket-name>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_amazon_s3.html#invalid-credentials>`__
 
 .. workflows-context-destination-amazon-s3-end
 
@@ -849,8 +849,8 @@ to Azure Blob Storage
 
 Amperity provides the following destination-specific workflow actions for Azure Blob Storage:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_azure_blob_storage.html#invalid-credentials>`__
-* `Invalid permissions <https://docs.amperity.com/datagrid/destination_azure_blob_storage.html#invalid-permissions>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_azure_blob_storage.html#invalid-credentials>`__
+* `Invalid permissions <https://docs.amperity.com/operator/destination_azure_blob_storage.html#invalid-permissions>`__
 
 .. workflows-context-destination-azure-blob-storage-end
 
@@ -864,9 +864,9 @@ to Braze
 
 Amperity provides the following destination-specific workflow actions for Braze:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_braze.html#invalid-credentials>`__
-* `Missing required field <https://docs.amperity.com/datagrid/destination_braze.html#missing-required-field>`__
-* `Status 401 error <https://docs.amperity.com/datagrid/destination_braze.html#status-401-error>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_braze.html#invalid-credentials>`__
+* `Missing required field <https://docs.amperity.com/operator/destination_braze.html#missing-required-field>`__
+* `Status 401 error <https://docs.amperity.com/operator/destination_braze.html#status-401-error>`__
 
 .. workflows-context-destination-braze-end
 
@@ -880,9 +880,9 @@ to Cordial
 
 Amperity provides the following destination-specific workflow actions for Cordial:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_cordial.html#invalid-credentials>`__
-* `Required attributes are missing <https://docs.amperity.com/datagrid/destination_cordial.html#required-attributes-are-missing>`__
-* `Unique list name required <https://docs.amperity.com/datagrid/destination_cordial.html#unique-list-name-required>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_cordial.html#invalid-credentials>`__
+* `Required attributes are missing <https://docs.amperity.com/operator/destination_cordial.html#required-attributes-are-missing>`__
+* `Unique list name required <https://docs.amperity.com/operator/destination_cordial.html#unique-list-name-required>`__
 
 .. workflows-context-destination-cordial-end
 
@@ -896,13 +896,13 @@ to Google Ads
 
 Amperity provides the following destination-specific workflow actions for Google Ads:
 
-* `Cannot update audience <https://docs.amperity.com/datagrid/destination_google_ads.html#cannot-update-audience>`__
-* `Expired token <https://docs.amperity.com/datagrid/destination_google_ads.html#expired-token>`__
-* `Incomplete account setup <https://docs.amperity.com/datagrid/destination_google_ads.html#incomplete-account-setup>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_google_ads.html#invalid-credentials>`__
-* `Missing required field(s) <https://docs.amperity.com/datagrid/destination_google_ads.html#missing-required-field-s>`__
-* `Two-factor authentication required <https://docs.amperity.com/datagrid/destination_google_ads.html#two-factor-authentication-required>`__
-* `User cannot access audience <https://docs.amperity.com/datagrid/destination_google_ads.html#user-cannot-access-audience>`__
+* `Cannot update audience <https://docs.amperity.com/operator/destination_google_ads.html#cannot-update-audience>`__
+* `Expired token <https://docs.amperity.com/operator/destination_google_ads.html#expired-token>`__
+* `Incomplete account setup <https://docs.amperity.com/operator/destination_google_ads.html#incomplete-account-setup>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_google_ads.html#invalid-credentials>`__
+* `Missing required field(s) <https://docs.amperity.com/operator/destination_google_ads.html#missing-required-field-s>`__
+* `Two-factor authentication required <https://docs.amperity.com/operator/destination_google_ads.html#two-factor-authentication-required>`__
+* `User cannot access audience <https://docs.amperity.com/operator/destination_google_ads.html#user-cannot-access-audience>`__
 
 .. note:: Workflow actions for Google Ads are often identical to workflow actions for DV360.
 
@@ -918,8 +918,8 @@ to Klaviyo
 
 Amperity provides the following destination-specific workflow actions for Klaviyo:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_klaviyo.html#invalid-credentials>`__
-* `Maximum number of lists exceeded <https://docs.amperity.com/datagrid/destination_klaviyo.html#maximum-number-of-lists-exceeded>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_klaviyo.html#invalid-credentials>`__
+* `Maximum number of lists exceeded <https://docs.amperity.com/operator/destination_klaviyo.html#maximum-number-of-lists-exceeded>`__
 
 .. workflows-context-destination-klaviyo-end
 
@@ -949,14 +949,14 @@ to Meta Ads Manager
 
 Amperity provides the following destination-specific workflow actions for Meta Ads Manager:
 
-* `Authorization error <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#authorization-error>`__
-* `Cannot create ads <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#cannot-create-ads>`__
-* `EXTERN_ID is missing <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#extern-id-is-missing>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#invalid-credentials>`__
-* `Maximum custom audiences exceeded <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#maximum-custom-audiences-exceeded>`__
-* `Must agree to Facebook terms <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#must-agree-to-facebook-terms>`__
-* `Must belong to business account <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#must-belong-to-business-account>`__
-* `Security challenge <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html#security-challenge>`__
+* `Authorization error <https://docs.amperity.com/operator/destination_meta_ads_manager.html#authorization-error>`__
+* `Cannot create ads <https://docs.amperity.com/operator/destination_meta_ads_manager.html#cannot-create-ads>`__
+* `EXTERN_ID is missing <https://docs.amperity.com/operator/destination_meta_ads_manager.html#extern-id-is-missing>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_meta_ads_manager.html#invalid-credentials>`__
+* `Maximum custom audiences exceeded <https://docs.amperity.com/operator/destination_meta_ads_manager.html#maximum-custom-audiences-exceeded>`__
+* `Must agree to Facebook terms <https://docs.amperity.com/operator/destination_meta_ads_manager.html#must-agree-to-facebook-terms>`__
+* `Must belong to business account <https://docs.amperity.com/operator/destination_meta_ads_manager.html#must-belong-to-business-account>`__
+* `Security challenge <https://docs.amperity.com/operator/destination_meta_ads_manager.html#security-challenge>`__
 
 .. workflows-context-destination-meta-ads-manager-end
 
@@ -970,12 +970,12 @@ to Microsoft Advertising
 
 Amperity provides the following destination-specific workflow actions for Microsoft Advertising:
 
-* `Email address required <https://docs.amperity.com/datagrid/destination_microsoft_ads.html#email-address-required>`__
-* `Expired credentials <https://docs.amperity.com/datagrid/destination_microsoft_ads.html#expired-credentials>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_microsoft_ads.html#invalid-credentials>`__
-* `Must accept terms and conditions <https://docs.amperity.com/datagrid/destination_microsoft_ads.html#must-accept-terms-and-conditions>`__
-* `Not authorized <https://docs.amperity.com/datagrid/destination_microsoft_ads.html#not-authorized>`__
-* `Two-step authentication required <https://docs.amperity.com/datagrid/destination_microsoft_ads.html#two-step-authentication-required>`__
+* `Email address required <https://docs.amperity.com/operator/destination_microsoft_ads.html#email-address-required>`__
+* `Expired credentials <https://docs.amperity.com/operator/destination_microsoft_ads.html#expired-credentials>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_microsoft_ads.html#invalid-credentials>`__
+* `Must accept terms and conditions <https://docs.amperity.com/operator/destination_microsoft_ads.html#must-accept-terms-and-conditions>`__
+* `Not authorized <https://docs.amperity.com/operator/destination_microsoft_ads.html#not-authorized>`__
+* `Two-step authentication required <https://docs.amperity.com/operator/destination_microsoft_ads.html#two-step-authentication-required>`__
 
 .. workflows-context-destination-microsoft-advertising-end
 
@@ -989,8 +989,8 @@ to Oracle Data Cloud
 
 Amperity provides the following destination-specific workflow actions for Oracle Data Cloud:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_oracle_data_cloud.html#invalid-credentials>`__
-* `SFTP site unavailable <https://docs.amperity.com/datagrid/destination_oracle_data_cloud.html#sftp-site-unavailable>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_oracle_data_cloud.html#invalid-credentials>`__
+* `SFTP site unavailable <https://docs.amperity.com/operator/destination_oracle_data_cloud.html#sftp-site-unavailable>`__
 
 .. workflows-context-destination-oracle-data-cloud-end
 
@@ -1004,8 +1004,8 @@ to Oracle DMP
 
 Amperity provides the following destination-specific workflow actions for Oracle DMP:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_oracle_dmp.html#invalid-credentials>`__
-* `SFTP site unavailable <https://docs.amperity.com/datagrid/destination_oracle_dmp.html#sftp-site-unavailable>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_oracle_dmp.html#invalid-credentials>`__
+* `SFTP site unavailable <https://docs.amperity.com/operator/destination_oracle_dmp.html#sftp-site-unavailable>`__
 
 .. workflows-context-destination-oracle-dmp-end
 
@@ -1019,13 +1019,13 @@ to Salesforce Marketing Cloud
 
 Amperity provides the following destination-specific workflow actions for Salesforce Marketing Cloud:
 
-* `Import location has wrong type <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html#import-location-has-wrong-type>`__
-* `Import location not found <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html#import-location-not-found>`__
-* `Incorrect data extension name <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html#incorrect-data-extension-name>`__
-* `Incorrect folder <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html#incorrect-folder>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html#invalid-credentials>`__
-* `Missing primary key <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html#missing-primary-key>`__
-* `SFTP unavailable <https://docs.amperity.com/datagrid/destination_salesforce_marketing_cloud.html#sftp-unavailable>`_
+* `Import location has wrong type <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html#import-location-has-wrong-type>`__
+* `Import location not found <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html#import-location-not-found>`__
+* `Incorrect data extension name <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html#incorrect-data-extension-name>`__
+* `Incorrect folder <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html#incorrect-folder>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html#invalid-credentials>`__
+* `Missing primary key <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html#missing-primary-key>`__
+* `SFTP unavailable <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html#sftp-unavailable>`_
 
 .. workflows-context-destination-salesforce-marketing-cloud-end
 
@@ -1039,7 +1039,7 @@ to Snapchat
 
 Amperity provides the following destination-specific workflow actions for Snapchat:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_snapchat.html#invalid-credentials>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_snapchat.html#invalid-credentials>`__
 
 .. workflows-context-destination-snapchat-end
 
@@ -1053,9 +1053,9 @@ to TikTok Ads
 
 Amperity provides the following destination-specific workflow actions for TikTok Ads:
 
-* `Advertiser not found <https://docs.amperity.com/datagrid/destination_tiktok_ads.html#advertiser-not-found>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_tiktok_ads.html#invalid-credentials>`__
-* `Missing advertiser permissions <https://docs.amperity.com/datagrid/destination_tiktok_ads.html#missing-advertiser-permissions>`__
+* `Advertiser not found <https://docs.amperity.com/operator/destination_tiktok_ads.html#advertiser-not-found>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_tiktok_ads.html#invalid-credentials>`__
+* `Missing advertiser permissions <https://docs.amperity.com/operator/destination_tiktok_ads.html#missing-advertiser-permissions>`__
 
 .. workflows-context-destination-tiktok-ads-end
 
@@ -1069,8 +1069,8 @@ to Zendesk
 
 Amperity provides the following destination-specific workflow actions for Zendesk:
 
-* `Authorization error <https://docs.amperity.com/datagrid/destination_zendesk.html#authorization-error>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/destination_zendesk.html#invalid-credentials>`__
+* `Authorization error <https://docs.amperity.com/operator/destination_zendesk.html#authorization-error>`__
+* `Invalid credentials <https://docs.amperity.com/operator/destination_zendesk.html#invalid-credentials>`__
 
 .. workflows-context-destination-zendesk-end
 
@@ -1132,10 +1132,10 @@ Common to file-based sources
 
 The following source-specific workflow actions are common across file-based data sources, including Amazon S3, Azure Blob Storage, Google Cloud Storage, and any SFTP site:
 
-* `Bad archive <https://docs.amperity.com/datagrid/source_sftp.html#bad-archive>`__
-* `Missing files <https://docs.amperity.com/datagrid/source_sftp.html#missing-file>`__
-* `PGP error <https://docs.amperity.com/datagrid/source_sftp.html#pgp-error>`__
-* `Cannot decompress archive <https://docs.amperity.com/datagrid/source_sftp.html#unable-to-decompress-archive>`__
+* `Bad archive <https://docs.amperity.com/operator/source_sftp.html#bad-archive>`__
+* `Missing files <https://docs.amperity.com/operator/source_sftp.html#missing-file>`__
+* `PGP error <https://docs.amperity.com/operator/source_sftp.html#pgp-error>`__
+* `Cannot decompress archive <https://docs.amperity.com/operator/source_sftp.html#unable-to-decompress-archive>`__
 
 .. note:: These link to the SFTP source page, but the resolutions for common source alerts is identical across all SFTP and cloud storage data sources.
 
@@ -1151,8 +1151,8 @@ from Amazon S3
 
 In addition to all `common source workflow alerts <workflows-context-source-common>`, Amperity provides the following destination-specific workflow actions for Amazon S3:
 
-* `Invalid bucket name <https://docs.amperity.com/datagrid/source_amazon_s3.html#invalid-bucket-name>`__
-* `Invalid credentials <https://docs.amperity.com/datagrid/source_amazon_s3.html#invalid-credentials>`__
+* `Invalid bucket name <https://docs.amperity.com/operator/source_amazon_s3.html#invalid-bucket-name>`__
+* `Invalid credentials <https://docs.amperity.com/operator/source_amazon_s3.html#invalid-credentials>`__
 
 .. workflows-context-source-amazon-s3-end
 
@@ -1166,8 +1166,8 @@ from Azure Blob Storage
 
 In addition to all `common source workflow alerts <workflows-context-source-common>`, Amperity provides the following destination-specific workflow actions for Azure Blob Storage:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/source_azure_blob_storage.html#invalid-credentials>`__
-* `Invalid permissions <https://docs.amperity.com/datagrid/source_azure_blob_storage.html#invalid-permissions>`__
+* `Invalid credentials <https://docs.amperity.com/operator/source_azure_blob_storage.html#invalid-credentials>`__
+* `Invalid permissions <https://docs.amperity.com/operator/source_azure_blob_storage.html#invalid-permissions>`__
 
 .. workflows-context-source-azure-blob-storage-end
 
@@ -1181,7 +1181,7 @@ from Google Cloud Storage
 
 In addition to all `common source workflow alerts <workflows-context-source-common>`, Amperity provides the following destination-specific workflow actions for Google Cloud Storage:
 
-* `Invalid credentials <https://docs.amperity.com/datagrid/source_google_cloud_storage.html#invalid-credentials>`__
+* `Invalid credentials <https://docs.amperity.com/operator/source_google_cloud_storage.html#invalid-credentials>`__
 
 .. workflows-context-source-google-cloud-storage-end
 
@@ -1195,8 +1195,8 @@ from SFTP
 
 In addition to all `common source workflow alerts <workflows-context-source-common>`, Amperity provides the following destination-specific workflow actions for SFTP sites:
 
-* `Invalid SFTP credentials <https://docs.amperity.com/datagrid/source_sftp.html#invalid-credentials>`__
-* `SFTP site unavailable <https://docs.amperity.com/datagrid/source_sftp.html#sftp-site-unavailable>`__
+* `Invalid SFTP credentials <https://docs.amperity.com/operator/source_sftp.html#invalid-credentials>`__
+* `SFTP site unavailable <https://docs.amperity.com/operator/source_sftp.html#sftp-site-unavailable>`__
 
 .. workflows-context-source-sftp-end
 

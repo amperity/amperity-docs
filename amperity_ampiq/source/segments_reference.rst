@@ -180,6 +180,22 @@ Segment names
    :end-before: .. segments-editor-names-important-end
 
 
+.. _segments-reference-activation-ids:
+
+Activation IDs
+==================================================
+
+.. include:: ../../amperity_reference/source/segments_howtos.rst
+   :start-after: .. segments-choose-activation-id-start
+   :end-before: .. segments-choose-activation-id-end
+
+**To choose an activation ID**
+
+.. include:: ../../amperity_reference/source/segments_howtos.rst
+   :start-after: .. segments-choose-activation-id-steps-start
+   :end-before: .. segments-choose-activation-id-steps-end
+
+
 .. _segments-reference-inclusions-exclusions:
 
 Inclusions and exclusions

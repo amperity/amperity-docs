@@ -20,7 +20,7 @@
 Send data to Klaviyo
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_klaviyo.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_klaviyo.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-klaviyo-start
@@ -658,7 +658,7 @@ The list of customer profile parameters supported by |destination-name| are desc
    * - **timezone**
      - **Optional**
 
-       The name of a timezome. |destination-name| recommends using the name of a timezone in the |ext_iana_timezone|.
+       The name of a timezome. |destination-name| recommends using the name of a timezone in the `IANA Time Zone Database <https://www.iana.org/time-zones>`__ |ext_link|.
 
 
    * - **title**

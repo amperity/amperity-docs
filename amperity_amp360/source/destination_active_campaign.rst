@@ -33,7 +33,7 @@ Use Amperity to manage audience lists in |destination-name|. Build a query using
 
 .. sendto-active-campaign-end
 
-.. include:: ../../amperity_datagrid/source/destination_active_campaign.rst
+.. include:: ../../amperity_operator/source/destination_active_campaign.rst
    :start-after: .. destination-active-campaign-api-note-start
    :end-before: .. destination-active-campaign-api-note-end
 

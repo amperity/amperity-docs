@@ -31,11 +31,11 @@ Send audiences to HubSpot
    :start-after: .. channels-overview-list-intro-start
    :end-before: .. channels-overview-list-intro-end
 
-.. include:: ../../amperity_datagrid/source/destination_hubspot.rst
+.. include:: ../../amperity_operator/source/destination_hubspot.rst
    :start-after: .. destination-hubspot-contain-only-numbers-letters-underscores-start
    :end-before: .. destination-hubspot-contain-only-numbers-letters-underscores-end
 
-.. include:: ../../amperity_datagrid/source/destination_hubspot.rst
+.. include:: ../../amperity_operator/source/destination_hubspot.rst
    :start-after: .. destination-hubspot-build-query-start
    :end-before: .. destination-hubspot-build-query-end
 

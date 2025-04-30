@@ -33,7 +33,7 @@ The **SQL Segment Editor** in the **Queries** and **Segment** tabs uses Presto S
 
 This reference is focused on how Presto SQL is used with Amperity and is not focused on anything that you would not expect to do from the **Queries** and **Segment** tabs in Amperity.
 
-Please refer to this reference first, and then to the official |ext_presto_sql| documentation.
+Please refer to this reference first, and then to the official `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| documentation.
 
 .. sql-presto-why-should-i-use-this-end
 
@@ -47,12 +47,12 @@ Amazon AWS vs. Azure
 
 Amperity uses different versions of Presto SQL, depending on if the tenant runs in Amazon AWS or Microsoft Azure.
 
-* Tenants that run in Amazon AWS run |ext_presto_sql_aws|.
-* Tenants in Azure run Trino, version 346: |ext_presto_sql_azure_release_notes|, |ext_presto_sql_azure_reference_select| (for current version), |ext_presto_sql_azure_reference_functions| (for current version).
+* Tenants that run in Amazon AWS run `Athena engine version 2 <https://docs.aws.amazon.com/athena/latest/ug/engine-versions-reference.html#engine-versions-reference-0002>`__ |ext_link|.
+* Tenants in Azure run Trino, version 346: `release notes <https://trino.io/docs/current/release/release-346.html>`__ |ext_link|, `SELECT statement reference <https://trino.io/docs/current/sql/select.html>`__ |ext_link| (for current version), `functions reference <https://trino.io/docs/current/functions.html>`__ |ext_link| (for current version).
 
 Amperity behaves the same on either platform when using Presto SQL to build segments from within the **Segments** tab, with the following exceptions:
 
-#. The way Presto SQL handles |ext_presto_sql_fixed_precision| was changed in Presto SQL version 0.198. A decimal without an explicit type specifier--for example, 1.2--is parsed as a ``DOUBLE`` on tenants that run in Amazon AWS and as a ``DECIMAL`` on tenants that run in Azure.
+#. The way Presto SQL handles `fixed precision rounding for a DECIMAL data type <https://prestodb.io/docs/current/language/types.html#fixed-precision>`__ |ext_link| was changed in Presto SQL version 0.198. A decimal without an explicit type specifier--for example, 1.2--is parsed as a ``DOUBLE`` on tenants that run in Amazon AWS and as a ``DECIMAL`` on tenants that run in Azure.
 
 .. sql-presto-aws-vs-azure-end
 
@@ -101,7 +101,7 @@ General
 
 * Using reserved keyword names as identifiers.
 * CamelCase, with the exception of the table name. CamelCase is difficult to scan quickly.
-* Descriptive prefixes or |ext_hungarian_notation| such as ``sp_`` or ``tbl``.
+* Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
 * Object-oriented design principles with SQL or database structures.
@@ -182,7 +182,7 @@ Formalisms
 
 .. sql-presto-style-guide-indentation-formalisms-start
 
-Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple OR clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
+Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
 
 .. code-block:: sql
 
@@ -746,7 +746,7 @@ A **SELECT** statement can be complex, depending on the type of query you need t
 
 The rest of this topic describes the clauses, expressions, functions, and operators that are the most commonly used within the **SQL Segment Editor** in Amperity. More functionality than what is described in this topic is supported, as the segment editors use Presto SQL.
 
-.. important:: Not all of the functionality described in the official documentation for |ext_presto_sql| should be used in the **SQL Segment Editor**.
+.. important:: Not all of the functionality described in the official documentation for `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| should be used in the **SQL Segment Editor**.
 
 .. sql-presto-select-statement-about-end
 
@@ -1319,7 +1319,7 @@ INTERSECT clause
 
 .. sql-presto-intersect-start
 
-Use the **INTERSECT** clause to return only the rows that are in the result sets of both the first and the second queries. 
+Use the **INTERSECT** clause to return only the rows that are in the result sets of both the first and the second queries.
 
 For example, to find all rows in both tables A and B:
 
@@ -1973,7 +1973,7 @@ A function is a SQL statement that accepts input parameters, performs actions, a
 
 .. sql-presto-functions-note-start
 
-.. note:: This section highlights a very small subset of |ext_presto_sql_functions|, many of which can be useful depending on the type of query.
+.. note:: This section highlights a very small subset of `the complete list of functions available in Presto SQL <https://prestodb.io/docs/current/functions.html>`__ |ext_link|, many of which can be useful depending on the type of query.
 
 .. sql-presto-functions-note-end
 

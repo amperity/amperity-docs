@@ -21,7 +21,7 @@
 Send data to Amazon Ads
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_amazon_ads.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amazon-ads-start
@@ -37,13 +37,13 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 * Sponsored display ads that reach audiences as they browse, research, or buy products on Amazon, on Twitch, or by using Amazon DSP, a demand-side platform that allows you to programmatically buy ads to reach new and existing audiences on and off Amazon.
 * Video ads for streaming TV and online video. Streaming TV ads can appear on Twitch, live sports events, top TV and network broadcaster apps, and curated news on Fire TV. Online video ads reach audiences on Amazon-owned sites, including IMDb.com and Twitch and may appear on third-party sites through Amazon Publisher Direct.
 * Audio ads that are heard during breaks in premium audio content, including first-party Amazon Music ad-supported tiers, connected TV environments, Twitch News, Alexa-enabled devices, and third-party sites through Amazon Publisher Direct.
-* Access to a secure, privacy-safe, and cloud-based clean room solution when the instance name for your brand's |ext_amazon_marketing_cloud| account is configured.
+* Access to a secure, privacy-safe, and cloud-based clean room solution when the instance name for your brand's `Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/solutions/products/amazon-marketing-cloud>`__ |ext_link| account is configured.
 
 .. destination-amazon-ads-end
 
 .. destination-amazon-ads-api-note-start
 
-.. note:: This destination uses the |ext_amazon_ads_api| to manage audiences. If the audience does not exist, Amperity will create it. If the audience exists, Amperity will update the list of members to match the list that is sent.
+.. note:: This destination uses the `Amazon Ads API <https://advertising.amazon.com/API/docs/en-us/info/api-overview>`__ |ext_link| to manage audiences. If the audience does not exist, Amperity will create it. If the audience exists, Amperity will update the list of members to match the list that is sent.
 
 .. destination-amazon-ads-api-note-end
 
@@ -81,13 +81,13 @@ Get details
      - Configuration details for |destination-name|.
 
        #. An |destination-name| demand-side platform (DSP) advertiser.
-       #. Optional. Your brand's |ext_amazon_marketing_cloud_instance|.
+       #. Optional. Your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link|.
 
           .. important:: If an instance for Amazon Marketing Cloud **is not** configured, the connector will skip adding audience members to Amazon Marketing Cloud.
 
              If an Amazon Marketing Cloud instance is configured, the connector will attempt to use an existing connection for Amazon Marketing Cloud *or* will create a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
-       .. note:: The |ext_amazon_ads_refresh_token| is provided :ref:`after the OAuth process is completed <destination-amazon-ads-configure-oauth>`.
+       .. note:: The `refresh token <https://advertising.amazon.com/API/docs/en-us/getting-started/retrieve-access-token>`__ |ext_link| is provided :ref:`after the OAuth process is completed <destination-amazon-ads-configure-oauth>`.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -175,7 +175,7 @@ Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign 
 
 Audience analysis takes place within Amazon Marketing Cloud, including across dimensions like audiences, device, time, or campaigns. Results are aggregated and may be exported as anonymous reports.
 
-Amperity can send data to your brand's |ext_amazon_marketing_cloud_instance| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination will send data.
+Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination will send data.
 
 .. destination-amazon-ads-about-amc-end
 
@@ -606,7 +606,7 @@ Missing required field
 
 .. destination-amazon-ads-workflow-actions-missing-required-field-start
 
-|destination-name| requires the **country** field to be included in query results. This helps |destination-name| identify if user data was collected within a country that is regulated by the |ext_digital_markets_act|, a European Union regulation that seeks to make the digital economy fairer and more equitable for all participants.
+|destination-name| requires the **country** field to be included in query results. This helps |destination-name| identify if user data was collected within a country that is regulated by the `Digital Markets Act <https://en.wikipedia.org/wiki/Digital_Markets_Act>`__ |ext_link|, a European Union regulation that seeks to make the digital economy fairer and more equitable for all participants.
 
 .. destination-amazon-ads-workflow-actions-missing-required-field-end
 

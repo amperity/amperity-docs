@@ -1,5 +1,5 @@
 .. 
-.. https://docs.amperity.com/datagrid/
+.. https://docs.amperity.com/reference/
 .. 
 
 .. meta::
@@ -66,7 +66,7 @@ A benchmark check is a heuristic that defines how often Amperity IDs are expecte
 
 Each benchmark check measures the percentage of Amperity IDs meeting its respective condition and compares the result against the optimal range. A benchmark check result can fall into the optimal range, above the optimal range, or far above the optimal range (high).
 
-For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. Is is possible for an Amperity ID to be correclty associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, name changes, and so on. A higher than expected rate of Amperity IDs (generally) associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
+For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. It is possible for an Amperity ID to be correctly associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, name changes, and so on. A higher-than-expected rate of Amperity IDs (generally) associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
 
 .. stitch-benchmark-checks-end
 
@@ -102,7 +102,7 @@ For example, it is expected that most, but not all, Amperity IDs should not have
 Benchmark results
 ==================================================
 
-.. stitch-benchmark-results-optimal-start
+.. stitch-benchmark-results-start
 
 Amperity uses benchmark checks to provide insight into the quality of your Stitch results. Results fall into one of the following categories:
 
@@ -110,7 +110,7 @@ Amperity uses benchmark checks to provide insight into the quality of your Stitc
 * :ref:`Above optimal range <stitch-benchmark-results-above-optimal>`
 * :ref:`High <stitch-benchmark-results-high>`
 
-.. stitch-benchmark-results-optimal-end
+.. stitch-benchmark-results-end
 
 
 .. _stitch-benchmark-results-optimal:
@@ -162,7 +162,7 @@ High
 
 .. stitch-benchmark-results-high-start
 
-High results do not need to be fixed, but they should be researched and investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
+High results do not need to be fixed, but they should be investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
 
 Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Next steps**, and then review the list of options that are available to help improve this particular benchmark result.
 
@@ -234,11 +234,11 @@ Interpretations
 
 Interpretations are provided by each benchmark check. They describe the result and provide an explanation of how to interpret it. For example:
 
-"This score is above the typical range for most brands. A large percentage indicates that different postal codes are appearing in the same cluster, which indicates overclustering."
+"This is above the expected range and may be an indication of overclustering. A large percentage indicates that different given names are appearing the same cluster, which indicates overclustering."
 
 or:
 
-"This score is far above the typical range for most brands. A large ratio indicates that a unique name and physical address combination appears in multiple clusters, which indicates underclustering."
+"This is far above the expected range and may be an indication of overclustering. A large percentage indicates that different postal codes are appearing the same cluster, which indicates overclustering."
 
 When a benchmark score is above the optimal range or high it is recommended to review and grade a set of 10 example clusters, after which the benchmark check will make a series of recommendations that can lead to improved benchmark results.
 
@@ -254,7 +254,7 @@ Grade and calibrate
 
 All benchmark checks include example Amperity IDs that can be reviewed and graded. You should periodically review and grade examples for benchmark checks with high results. This helps ensure that Stitch is always building the highest quality customer profiles and can lead to incremental improvements over time.
 
-Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. :ref:`Stitch configuration settings can be updated directly <stitch-benchmark-check-update-config>` in the benchmark check.
+Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. Stitch configuration settings can be updated directly in the benchmark check.
 
 .. stitch-benchmark-cards-grade-and-calibrate-end
 

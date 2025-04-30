@@ -121,7 +121,7 @@ Amperity API keys are synthetic identities that are bound to your tenant and ena
 
 API keys are tenant-specific and are neither pulled nor promoted in the sandbox experience.
 
-Access to the Amperity API requires using |ext_jwt| access tokens that are signed by Amperity-managed API keys.
+Access to the Amperity API requires using `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| access tokens that are signed by Amperity-managed API keys.
 
 .. api-keys-end
 
@@ -429,7 +429,7 @@ About access tokens
 
 .. api-keys-access-tokens-start
 
-Amperity uses a |ext_jwt| for authentication to the Amperity API. These access tokens are issued from API keys which are authorized to perform certain actions with Amperity.
+Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Amperity API. These access tokens are issued from API keys which are authorized to perform certain actions with Amperity.
 
 Because a JWT access token automatically expires, tokens should be refreshed on a regular basis.
 

@@ -125,7 +125,7 @@ The combination of blocking keys is what creates the ideal recall rate without c
 
 .. configure-stitch-general-clustering-blocking-default-start
 
-To configure the blocking strategies that are used for your tenant, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) blocking strategies from the **Blocking Strategies** drop-down:
+To configure the blocking strategies that are used for your tenant, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) blocking strategies from the **Blocking Strategies** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-blocking-strategy.png
    :width: 380 px
@@ -217,7 +217,7 @@ Case-sensitive foreign keys
 
 .. configure-stitch-general-clustering-case-sensitive-start
 
-To specify which foreign keys are case-sensitive, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) case-sensitive foreign keys from the **Case-sensitive foreign keys** drop-down:
+To specify which foreign keys are case-sensitive, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) case-sensitive foreign keys from the **Case-sensitive foreign keys** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-case-sensitive.png
    :width: 380 px
@@ -252,7 +252,7 @@ The default behavior prioritizes separation keys over foreign keys.
 
 .. configure-stitch-general-clustering-matching-strategy-steps-start
 
-To change the matching strategy classifier, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select a matching threshold from the **Matching strategy classifier** drop-down:
+To change the matching strategy classifier, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select a matching threshold from the **Matching strategy classifier** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-matching-strategy-classifier.png
    :width: 380 px
@@ -358,7 +358,7 @@ In general, a lower threshold will lead to more matches and fuzzier matched pair
 
 For each threshold, all the matches that are equal to or stronger than the weakest matching type will be clustered together. For example, if the threshold 3.0 is chosen, 
 
-To change the matching threshold, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select a matching threshold from the **Thresholds** drop-down:
+To change the matching threshold, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select a matching threshold from the **Thresholds** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-general-clustering-matching-thresholds.png
    :width: 380 px
@@ -402,7 +402,7 @@ Allowed empty tables
 
 .. configure-stitch-general-performance-empty-tables-start
 
-To allow empty tables, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Performance**, from the **Allow empty tables** drop-down, select one (or more) tables:
+To allow empty tables, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Performance**, from the **Allow empty tables** dropdown, select one (or more) tables:
 
 .. image:: ../../images/mockup-stitch-settings-general-allow-empty-tables.png
    :width: 380 px
@@ -792,7 +792,7 @@ Automatic bad value detection
 
 .. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-automatic-start
    :end-before: .. bad-values-blocklist-automatic-end
 
@@ -802,7 +802,7 @@ Automatic bad value detection
 Disable automatic bad value detection
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-automatic-disable-start
    :end-before: .. bad-values-blocklist-automatic-disable-end
 

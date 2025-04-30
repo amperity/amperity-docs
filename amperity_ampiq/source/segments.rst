@@ -56,9 +56,22 @@ The following sections describe the individual elements within the **Segment Edi
        * When adding an audience from the **Segments** page. The **Create Segment** button in the top right corner of the page opens the **Segment Editor**.
        * When adding a sub-audience from within the campaigns editor. The **Add sub-audience** link opens a version of this editor---called **Audience Builder**---that does not contain segment insights.
 
+       .. note::
+
+          .. include:: ../../amperity_reference/source/segments_howtos.rst
+             :start-after: .. segments-choose-activation-id-start
+             :end-before: .. segments-choose-activation-id-end
+
+          **To use an activation ID in a segment**
+
+          .. include:: ../../amperity_reference/source/segments_howtos.rst
+             :start-after: .. segments-choose-activation-id-steps-start
+             :end-before: .. segments-choose-activation-id-steps-end
+
+
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step 3.
           :align: left
           :class: no-scaled-link
 
@@ -84,7 +97,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step 4.
           :align: left
           :class: no-scaled-link
 
@@ -123,7 +136,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step 5.
           :align: left
           :class: no-scaled-link
      - .. include:: ../../amperity_ampiq/source/segments_reference.rst
@@ -132,7 +145,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step 6.
           :align: left
           :class: no-scaled-link
      - Add as many attributes to your segment as you need.
@@ -157,7 +170,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step 7.
           :align: left
           :class: no-scaled-link
      - When you are done building your segment, click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment.
@@ -182,7 +195,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step 8.
           :align: left
           :class: no-scaled-link
      - After your segment is saved the **Segment Overview** page opens and shows additional details, such as historical and predicted revenue, the percentage of customers that are reachable by email, by phone, on Facebook, and customer trends, such as purchases by channel, revenue by lifetime spend. Reachable customers may not have opted into marketing through these contact methods.

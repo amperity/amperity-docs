@@ -100,6 +100,6 @@ Fields that contain PII---email address and phone numbers, for example---should 
 Offline events parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/events_tiktok_ads.rst
+.. include:: ../../amperity_operator/source/events_tiktok_ads.rst
    :start-after: .. events-tiktok-ads-offline-events-parameters-start
    :end-before: .. events-tiktok-ads-offline-events-parameters-end

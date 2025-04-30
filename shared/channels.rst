@@ -24,7 +24,7 @@ This topic describes the steps that are required to configure campaigns to send 
 
 .. channels-build-segment-start
 
-Use the **Segment Editor** to build any audience using a series of drop-downs and picklists.
+Use the **Segment Editor** to build any audience using a series of dropdowns and picklists.
 
 As you define the attribute profile for an audience be sure to refresh segment insights to see how many customers match your audience and to see how much value they bring to your business.
 
@@ -50,7 +50,7 @@ When the list of customers who belong to this audience is sent to |destination-n
 .. channels-build-segment-steps-start
 
 #. From the **Segments** tab, click **Create Segment**. This opens the **Segment Editor**.
-#. Select a table that contains the attributes you want to use, and then use the drop-downs, picklists, conditions, and values to define the attribute profile.
+#. Select a table that contains the attributes you want to use, and then use the dropdowns, picklists, conditions, and values to define the attribute profile.
 
    .. note:: The **Customer 360** table is the default. For many segments it's the only table you will need.
 #. When more than one attribute is present within an attribute group use **AND** or **OR** to filter values on more than one condition.
@@ -159,7 +159,7 @@ Amperity pre-selects the list of attributes that may be sent to |destination-nam
 
 .. channels-build-campaign-steps-edit-attributes-note-start
 
-.. note:: The **Merged Customers** table is the default table from which data is sent to |destination-name|, even though segments are often built against the **Customer 360** table. This is by design. The **Merged Customers** table is the underlying table for customer profile data and is the source for all customer profile data that exists within the **Customer 360** table.
+.. note:: The **Merged Customers** table is the default table from which data is sent to |destination-name|, even though segments are often built from the **Customer 360** table. This is by design. The **Merged Customers** table is the underlying table for customer profile data and is the source for all customer profile data that exists within the **Customer 360** table.
 
 .. channels-build-campaign-steps-edit-attributes-note-end
 

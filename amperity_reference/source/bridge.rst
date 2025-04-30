@@ -49,7 +49,7 @@ Advantages of Amperity Bridge include:
              :alt: Amperity Learning Lab
              :align: left
              :class: no-scaled-link
-        - Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be quickly configured for inbound and outbound shares to give your brand access to shared tables without replication.
+        - Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be quickly configured for inbound and outbound shares to give you access to shared tables without replication.
 
           Start with an overview of data warehouses, compare Databricks and Snowflake, and then learn how Amperity Bridge shares data between Amperity and Databricks.
 
@@ -80,7 +80,7 @@ Databricks
 
 .. bridge-sync-databricks-start
 
-Configure inbound and outbound shares in Amperity to enable `bi-directional syncing of data tables between Amperity and Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html>`__. 
+Configure inbound and outbound shares in Amperity to enable `bi-directional syncing of data tables between Amperity and Databricks <https://docs.amperity.com/operator/bridge_databricks.html>`__. 
 
 .. bridge-sync-databricks-end
 
@@ -98,11 +98,11 @@ Snowflake
 
 .. bridge-sync-snowflake-start
 
-Snowflake Bridge is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
+Snowflake Bridge is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
 
 .. bridge-sync-snowflake-end
 
-.. include:: ../../amperity_datagrid/source/bridge_snowflake.rst
+.. include:: ../../amperity_operator/source/bridge_snowflake.rst
    :start-after: .. bridge-snowflake-what-is-data-sharing-start
    :end-before: .. bridge-snowflake-what-is-data-sharing-end
 
@@ -137,8 +137,8 @@ Add inbound bridge
 
 The steps for adding an inbound bridge depend on the location from which data will be synced to Amperity:
 
-* `Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#from-databricks>`__
-* `Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html#from-snowflake>`__
+* `Databricks <https://docs.amperity.com/operator/bridge_databricks.html#from-databricks>`__
+* `Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#from-snowflake>`__
 
 .. bridge-howto-add-inbound-end
 
@@ -152,8 +152,8 @@ Add outbound bridge
 
 The steps for adding an outbound bridge depend on the location to which data will be synced from Amperity:
 
-* `Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#to-databricks>`__
-* `Databricks <https://docs.amperity.com/datagrid/bridge_snowflake.html#to-snowflake>`__
+* `Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__
+* `Databricks <https://docs.amperity.com/operator/bridge_snowflake.html#to-snowflake>`__
 
 .. bridge-howto-add-outbound-end
 

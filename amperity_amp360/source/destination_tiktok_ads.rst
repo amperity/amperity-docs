@@ -43,7 +43,7 @@ Use queries to build high-value audiences for retargeting and lookalike modeling
    :align: left
    :class: no-scaled-link
 
-.. include:: ../../amperity_datagrid/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_operator/source/destination_tiktok_ads.rst
    :start-after: .. destination-tiktok-ads-api-note-start
    :end-before: .. destination-tiktok-ads-api-note-end
 
@@ -156,6 +156,6 @@ Run orchestration
 Offline events parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/events_tiktok_ads.rst
+.. include:: ../../amperity_operator/source/events_tiktok_ads.rst
    :start-after: .. events-tiktok-ads-offline-events-parameters-start
    :end-before: .. events-tiktok-ads-offline-events-parameters-end

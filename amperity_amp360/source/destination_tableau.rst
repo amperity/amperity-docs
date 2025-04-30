@@ -45,13 +45,13 @@ Connect to Amazon Redshift
    :start-after: .. term-amazon-redshift-start
    :end-before: .. term-amazon-redshift-end
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_amazon_redshift.rst
+.. include:: ../../amperity_operator/source/destination_tableau_amazon_redshift.rst
    :start-after: .. destination-tableau-amazon-redshift-workflow-start
    :end-before: .. destination-tableau-amazon-redshift-workflow-end
 
 **To connect Tableau to Amazon Redshift**
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_amazon_redshift.rst
+.. include:: ../../amperity_operator/source/destination_tableau_amazon_redshift.rst
    :start-after: .. destination-tableau-amazon-redshift-steps-start
    :end-before: .. destination-tableau-amazon-redshift-steps-end
 
@@ -65,13 +65,13 @@ Connect to Azure Synapse Analytics
    :start-after: .. term-azure-synapse-analytics-start
    :end-before: .. term-azure-synapse-analytics-end
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_azure_synapse_analytics.rst
+.. include:: ../../amperity_operator/source/destination_tableau_azure_synapse_analytics.rst
    :start-after: .. destination-tableau-azure-synapse-analytics-workflow-start
    :end-before: .. destination-tableau-azure-synapse-analytics-workflow-end
 
 **To connect Tableau to Azure Synapse Analytics**
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_azure_synapse_analytics.rst
+.. include:: ../../amperity_operator/source/destination_tableau_azure_synapse_analytics.rst
    :start-after: .. destination-tableau-azure-synapse-analytics-steps-start
    :end-before: .. destination-tableau-azure-synapse-analytics-steps-end
 
@@ -91,13 +91,13 @@ Connect to Databricks
       :start-after: .. term-databricks-delta-table-start
       :end-before: .. term-databricks-delta-table-end
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_databricks.rst
+.. include:: ../../amperity_operator/source/destination_tableau_databricks.rst
    :start-after: .. destination-tableau-databricks-start
    :end-before: .. destination-tableau-databricks-end
 
 **To connect Tableau to Databricks**
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_databricks.rst
+.. include:: ../../amperity_operator/source/destination_tableau_databricks.rst
    :start-after: .. destination-tableau-databricks-steps-start
    :end-before: .. destination-tableau-databricks-steps-end
 
@@ -111,13 +111,13 @@ Connect to Google BigQuery
    :start-after: .. term-google-bigquery-start
    :end-before: .. term-google-bigquery-end
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_google_big_query.rst
+.. include:: ../../amperity_operator/source/destination_tableau_google_big_query.rst
    :start-after: .. destination-tableau-google-big-query-workflow-start
    :end-before: .. destination-tableau-google-big-query-workflow-end
 
 **To connect Tableau to Google BigQuery**
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_google_big_query.rst
+.. include:: ../../amperity_operator/source/destination_tableau_google_big_query.rst
    :start-after: .. destination-tableau-google-big-query-steps-start
    :end-before: .. destination-tableau-google-big-query-steps-end
 
@@ -127,7 +127,7 @@ Connect to Google BigQuery
 Connect to Snowflake
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_tableau_snowflake.rst
+.. include:: ../../amperity_operator/source/destination_tableau_snowflake.rst
    :start-after: .. destination-tableau-snowflake-workflow-start
    :end-before: .. destination-tableau-snowflake-workflow-end
 

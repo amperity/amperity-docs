@@ -93,7 +93,7 @@ The following sections describe the steps you'll follow to use an orchestration 
 
        When you select the data template, the template-specific settings are shown, many of which are preconfigured with the correct configuration settings.
 
-       In this example, query results are sent to a customer-managed Amazon S3 bucket, from which the data is loaded to Domo as a |ext_domo_dataset|. No updates are required for the template-specific settings because the data template has already configured them with the correct settings.
+       In this example, query results are sent to a customer-managed Amazon S3 bucket, from which the data is loaded to Domo as a `DataSet <https://domohelp.domo.com/hc/en-us/articles/360042926274-Adding-a-DataSet-Using-a-Connector>`__ |ext_link|. No updates are required for the template-specific settings because the data template has already configured them with the correct settings.
 
        .. image:: ../../images/mockup-orchestrations-select-template-settings-123.png
           :width: 540 px

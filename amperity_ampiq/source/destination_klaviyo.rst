@@ -27,7 +27,7 @@ Send audiences to Klaviyo
    :start-after: .. term-klaviyo-start
    :end-before: .. term-klaviyo-end
 
-.. include:: ../../amperity_datagrid/source/destination_klaviyo.rst
+.. include:: ../../amperity_operator/source/destination_klaviyo.rst
    :start-after: .. destination-klaviyo-api-note-start
    :end-before: .. destination-klaviyo-api-note-end
 
@@ -160,6 +160,6 @@ Configure default attributes
 Customer profile parameters
 ==================================================
 
-.. include:: ../../amperity_datagrid/source/destination_klaviyo.rst
+.. include:: ../../amperity_operator/source/destination_klaviyo.rst
    :start-after: .. destination-klaviyo-customer-profile-parameters-start
    :end-before: .. destination-klaviyo-customer-profile-parameters-end

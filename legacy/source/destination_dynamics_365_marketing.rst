@@ -17,7 +17,7 @@
 Send segments to Dynamics 365 Marketing
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_dynamics_365_marketing.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dynamics_365_marketing.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-dynamics-365-marketing-start
@@ -41,7 +41,7 @@ Send static segments to Dynamics 365 Marketing from Amperity, and then manage co
 
 .. destination-dynamics-365-marketing-api-note-start
 
-.. note:: This destination uses the |ext_microsoft_dynamics_web_api_segments| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it will be truncated, and then loaded.
+.. note:: This destination uses the `Microsoft Dynamics Segmentation API <https://learn.microsoft.com/en-us/dynamics365/marketing/developer/extend-segments>`__ |ext_link| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it will be truncated, and then loaded.
 
 .. destination-dynamics-365-marketing-api-note-end
 

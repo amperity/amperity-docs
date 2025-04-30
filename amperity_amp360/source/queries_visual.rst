@@ -19,7 +19,7 @@ About the visual Query Editor
 
 .. queries-visual-start
 
-The visual **Query Editor** is a user interface within the **Queries** page that helps you build queries without having to write SQL. The visual **Query Editor** is combination of filters for tables (and the attributes within those tables) that are organized as a series of configurable drop-down menus and pick-lists that build SQL queries that run against the tables in your customer 360 database.
+The visual **Query Editor** is a user interface within the **Queries** page that helps you build queries without having to write SQL. The visual **Query Editor** is combination of filters for tables (and the attributes within those tables) that are organized as a series of configurable dropdown menus and pick-lists that build SQL queries that run against the tables in your customer 360 database.
 
 .. queries-visual-start
 

@@ -20,7 +20,7 @@
 Send data to Listrak
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_listrak.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_listrak.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-listrak-start
@@ -111,7 +111,7 @@ Get details
           :class: no-scaled-link
      - A client ID and secret for an email integration *and/or* a client ID and secret for an SMS integration. These integrations must already be set up in |destination-name|.
 
-       .. important:: The Amperity |ext_amperity_allowlist_ip_address| must also be added to the allowlist of the |destination-name| integration.
+       .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist of the |destination-name| integration.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

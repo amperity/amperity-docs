@@ -92,7 +92,7 @@ An orchestration group may be configured to run only after a courier group has r
           :class: no-scaled-link
      - Under **Run options**, select **Run after courier group**.
 
-       Select a courier group from the drop-down menu.
+       Select a courier group from the dropdown menu.
 
        .. image:: ../../images/mockup-orchestration-group-run-after-courier-group.png
           :width: 360 px

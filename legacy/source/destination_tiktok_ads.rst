@@ -22,7 +22,7 @@
 Send data to TikTok Ads Manager
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_tiktok_ads.html>`__ |ext_link|.
+.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_tiktok_ads.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-tiktok-ads-start
@@ -95,7 +95,7 @@ Get details
           :class: no-scaled-link
      - The advertiser ID for your |destination-name| account.
 
-       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the drop-down menu in the top right of |destination-name|.
+       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the dropdown menu in the top right of |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -327,7 +327,7 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the drop-down menu in the top right of |destination-name|.
+       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the dropdown menu in the top right of |destination-name|.
 
        If a custom audience already exists, the list of customers in that audience will be updated to match the list sent from Amperity. If a custom audience does not exist, Amperity will add it. Amperity does not delete custom audiences.
 
@@ -575,7 +575,7 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the drop-down menu in the top right of |destination-name|.
+       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the dropdown menu in the top right of |destination-name|.
 
        The event source may be one of **web** or **offline**.
 

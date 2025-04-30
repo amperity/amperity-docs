@@ -33,11 +33,11 @@ Send audiences to Walmart DSP
    :start-after: .. channels-overview-list-intro-start
    :end-before: .. channels-overview-list-intro-end
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
+.. include:: ../../amperity_operator/source/destination_the_trade_desk.rst
    :start-after: .. destination-the-trade-desk-whatis-20-start
    :end-before: .. destination-the-trade-desk-whatis-20-end
 
-.. include:: ../../amperity_datagrid/source/destination_the_trade_desk.rst
+.. include:: ../../amperity_operator/source/destination_the_trade_desk.rst
    :start-after: .. destination-the-trade-desk-api-note-start
    :end-before: .. destination-the-trade-desk-api-note-end
 
