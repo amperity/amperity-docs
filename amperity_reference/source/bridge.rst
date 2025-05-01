@@ -153,7 +153,7 @@ Add outbound bridge
 The steps for adding an outbound bridge depend on the location to which data will be synced from Amperity:
 
 * `Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__
-* `Databricks <https://docs.amperity.com/operator/bridge_snowflake.html#to-snowflake>`__
+* `Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#to-snowflake>`__
 
 .. bridge-howto-add-outbound-end
 
