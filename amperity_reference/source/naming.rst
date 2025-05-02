@@ -42,6 +42,29 @@ Use the following naming conventions to ensure that your tenant is configured wi
 .. naming-important-end
 
 
+.. _naming-general:
+
+General
+==================================================
+
+.. naming-general-start
+
+Use a system that ensures information can be understood by all users of Amperity *and* all users of the marketing applications to which Amperity sends data.
+
+Establish naming conventions around the following:
+
+* Region names
+* Brand or business unit names
+* Audience classifications, such as "buyer" or "prospect"
+* Specific channel types
+
+Apply these naming conventions to folders, in addition to campaigns, segments, journeys, and queries.
+
+.. tip:: Only use abbreviations when the abbreviation is understood by users within your tenant. For example, "INTL" for "Internal use".
+
+.. naming-general-end
+
+
 .. _naming-campaigns:
 
 Campaigns
@@ -56,6 +79,7 @@ For example:
 * Mothers Day Cross Channel
 * Google Ads Midwest High AOV
 
+Campaign names may appear in downstream marketing applications and are often used as the name of the file that is sent from Amperity.
 
 .. tip:: Consider using a consistent prefix for any of the following patterns:
 
@@ -201,9 +225,66 @@ For example:
 * Braze
 * Direct_Mail
 
+Up to 5 levels of folders are available. For example:
+
+::
+
+   Socktown_Paid_Media
+   |- Loyalty_Email
+      |- Loyalty_Email_Optin
+   |- Loyalty_SMS
+      |- Loyalty_SMS_Optin
+
+   Socktown_High_Value
+   |- Purchases
+      |- Purchase_30d
+      |- Purchase_90d
+      |- Purchase_365d
+
+   ...
+
+Use folders to group segments and queries by users within your tenant. For example:
+
+::
+
+   Sam
+   |- query_name
+   |- query_name
+
+or:
+
+::
+
+   Jackson
+   |- segment_name
+   |- segment_name
+
 .. tip:: Use short folder names as often as possible.
 
 .. naming-folders-end
+
+
+.. _naming-journeys:
+
+Journeys
+==================================================
+
+.. naming-journeys-start
+
+Use a name that describes the purpose of the journey.
+
+For example:
+
+* New product offers
+* Discount shoppers
+
+Journey names may appear in downstream marketing applications.
+
+Nodes within a journey, such as conditional splits, percentage splits, and delays may be given names that are specific to the journey.
+
+Names of segments that are added to the journey use the segment name use the existing segment name, but can also be given names that are specific to the journey.
+
+.. naming-journeys-end
 
 
 .. _naming-queries:
@@ -239,6 +320,8 @@ For example:
 * Birthdays_Under_40
 * High_AOV_Active_Loyal
 * High_CLV_Historical
+
+Segment names can appear in campaigns and journeys.
 
 .. tip:: Prefix a segment in a folder with that folder name as often as possible. Braze_Birthdays_Under_40.
 
