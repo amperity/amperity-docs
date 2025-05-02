@@ -125,7 +125,7 @@ Access to the Amperity API requires using `JSON Web Token (JWT) <https://jwt.io/
 
 .. api-keys-sandboxes-start
 
-API keys are tenant-specific and are neither pulled nor promoted in the sandbox experience.
+API keys are tenant-specific and are not pulled to a sandbox *or* promoted from a sandbox to production. API keys must be created in a sandbox to use an Amperity API endpoint, stream data using the Streaming API, or access Profile API indexes.
 
 .. api-keys-sandboxes-end
 
