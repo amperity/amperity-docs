@@ -357,7 +357,7 @@ Timing and launch dates
 
 .. campaigns-timing-and-launch-start
 
-A campaign can be configured to be sent once or on a recurring basis. A campaign can also be scheduled (i.e. "to be sent at the time you choose in the future") or to be sent as soon as possible.
+A campaign can be configured to be delivered once or on a recurring basis. The campaign delivery date is the time at which an audience is sent to configured destinations. A campaign can be scheduled to be sent at the time in the future be sent as soon as possible.
 
 .. campaigns-timing-and-launch-end
 
@@ -369,7 +369,7 @@ A campaign can be configured to be sent once or on a recurring basis. A campaign
 
 .. campaigns-timing-and-launch-dates-start
 
-Enter the date on which you plan to launch your campaign. This date helps Amperity improve results tracking and campaign results measurement.
+Enter the date on which you plan to launch your campaign. The campaign launch date represents the time at which the audience is expected to be available for marketing activity in the downstream marketing application. This date is used by Amperity for results tracking and campaign results measurement.
 
 .. campaigns-timing-and-launch-dates-end
 
@@ -378,6 +378,26 @@ Enter the date on which you plan to launch your campaign. This date helps Amperi
    :alt: Give your campaign a name.
    :align: left
    :class: no-scaled-link
+
+.. campaigns-timing-and-launch-dates-admonition-start
+
+.. admonition:: How soon will audiences be available downstream?
+
+   Amperity sends audiences to marketing applications that are configured for a campaign. Some marketing applications analyze the audiences, make optimizations, or build lookalike audiences, after which they are made available for marketing activities.
+
+   Campaign launch timing should allow for the amount of time it takes for the audience to become available for marketing activity in the marketing application to which the audience was sent.
+
+   This length of time can vary.
+
+   Cloud storage solutions, such as Amazon S3, Azure Blob Storage, Google Cloud Storage, and many SFTP sites is often the fastest and audiences are available within 1 hour of delivery.
+
+   Email service providers and other marketing automation platforms, such as ActiveCampaign, Braze, HubSpot, Klaviyo, and Salesforce Marketing Cloud should allow for 12-24 hours.
+
+   Paid media platforms, such as Amazon Ads, Google Ads, Meta Ads Manager, The Trade Desk, Reddit Ads, Snapchat, and TikTok Ads Manager often require 24-48 hours.
+
+   Campaigns can be configured to be refreshed as part of any scheduled workflow that is configured in Amperity.
+
+.. campaigns-timing-and-launch-dates-admonition-end
 
 
 .. _campaigns-download-recipients:

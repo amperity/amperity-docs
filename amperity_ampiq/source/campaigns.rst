@@ -233,6 +233,10 @@ The following sections describe the steps you'll follow to set up and configure 
           :align: left
           :class: no-scaled-link
 
+       .. include:: ../../amperity_reference/source/campaigns.rst
+          :start-after: .. campaigns-timing-and-launch-dates-admonition-start
+          :end-before: .. campaigns-timing-and-launch-dates-admonition-end
+
 
    * - .. image:: ../../images/steps-09.png
           :width: 60 px
