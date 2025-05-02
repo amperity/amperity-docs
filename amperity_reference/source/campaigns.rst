@@ -397,7 +397,7 @@ Enter the date on which you plan to launch your campaign. The campaign launch da
 
    Campaigns can be configured to be refreshed as part of any scheduled workflow that is configured in Amperity.
 
-.. campaigns-timing-and-launch-dates-admonition-start
+.. campaigns-timing-and-launch-dates-admonition-end
 
 
 .. _campaigns-download-recipients:
