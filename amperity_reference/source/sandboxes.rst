@@ -87,10 +87,6 @@ A sandbox is a copy of your production tenant in which you can safely make confi
    :align: left
    :class: no-scaled-link
 
-.. admonition:: What isn't copied to a sandbox?
-
-   **Versioned table histories** A sandbox is a copy of your production tenant. A database in a sandbox needs to be run before the tables in that database will contain data. The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
-
 All sandbox workflows follow the same pattern: create a sandbox, make iterative changes in the sandbox, review and validate all changes, promote validated changes to production.
 
 .. list-table::
@@ -187,6 +183,28 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
 
 .. sandboxes-about-sandbox-workflows-end
+
+
+.. _sandboxes-not-copied:
+
+What is not copied to a sandbox?
+==================================================
+
+.. sandboxes-not-copied-start
+
+Some objects are not copied to a sandbox:
+
+#. Versioned table histories are not copied to a sandbox.
+
+   A sandbox is a copy of your production tenant. A database in a sandbox must be run before tables in that database will contain data.
+
+   The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
+
+#. .. include:: ../../amperity_reference/source/api.rst
+      :start-after: .. api-keys-sandboxes-start
+      :end-before: .. api-keys-sandboxes-end
+
+.. sandboxes-not-copied-end
 
 
 .. _sandboxes-best-practice:
