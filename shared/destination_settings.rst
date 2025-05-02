@@ -84,13 +84,11 @@ Configure the following settings, and then click "Save".
 
 .. destinations-steps-business-users-start
 
-After this destination is configured, users may configure Amperity to:
+After this destination is configured:
 
 * Use orchestrations to send query results
 * Use orchestrations and campaigns to send audiences
 * Use orchestrations and campaigns to send offline events
-
-to |destination-name|.
 
 .. destinations-steps-business-users-end
 
