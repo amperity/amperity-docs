@@ -21,7 +21,7 @@ Requirements
 
 A text editor.
 
-EditPad Pro is recommended for PCs and TextMate is recommended for MacOS. You may use your preferred text editor as long as it supports the following:
+EditPad Pro is recommended for PCs and TextMate is recommended for macOS. You may use your preferred text editor as long as it supports the following:
 
 #. Line wrapping
 #. Does not automatically remove spaces at the end of strings.
