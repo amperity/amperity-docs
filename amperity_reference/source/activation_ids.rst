@@ -63,6 +63,51 @@ Additional activation IDs may be configured.
 .. activation-ids-configure-steps-end
 
 
+.. _activation-ids-configure-default-attributes:
+
+About default attributes and activation IDs
+==================================================
+
+.. activation-ids-configure-default-attributes-start
+
+Default attributes are applied automatically when a destination is selected within a campaign.
+
+Each default attribute is associated with a database *and* an activation ID. The list of tables from which attributes may be selected is filtered to match only those tables with a matching activation ID.
+
+Configure default attributes for each combination of destination + activation ID that will be used with campaigns. For example, configure default attributes for each of the following combinations:
+
+* Send to Braze from the **C360** database for **Loyalty ID**.
+* Send to Braze from the **C360** database for **Customer ID**.
+* Send to Meta Ads Manager from the **C360** database for **Customer ID**. Map the **Customer ID** field to **EXTERN_ID**.
+* Send to The Trade Desk from the C360 database for **email**, which is sent as a UID2 token from Amperity.
+* And so on.
+
+.. activation-ids-configure-default-attributes-end
+
+**To configure default attributes**
+
+.. activation-ids-configure-default-attributes-steps-start
+
+#. Open the **Activations** page and select the **Campaigns** tab.
+#. Click **Settings**.
+
+#. On the **Default attributes** tab, click **Add default attributes**. This opens the **Configure attributes** dialog.
+
+#. Under **Configure attributes** do the following:
+
+   Select a destination from the **Destination** dropdown.
+
+   Select a database from the **Databases** dropdown.
+
+   Select a configured activation ID from the **Activation ID** dropdown.
+
+#. Under **Default attributes** click **Add attribute**. Select a table, and then choose an attribute.
+
+#. After all default attributes are configured click **Save**.
+
+.. activation-ids-configure-default-attributes-steps-end
+
+
 .. _activation-ids-use-in-segments:
 
 Use in segments

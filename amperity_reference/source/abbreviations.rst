@@ -311,8 +311,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Tab-Separated Values
    * - **UI**
      - User Interface
-   * - **UID**
-     - Unified ID
+   * - **UID2**
+     - Unified ID 2.0
    * - **UPC**
      - Universal Product Code
    * - **UPT**

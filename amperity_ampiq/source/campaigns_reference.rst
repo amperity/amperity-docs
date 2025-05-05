@@ -144,7 +144,7 @@ Activation IDs
 
 .. _campaigns-attributes:
 
-Attributes
+Audience attributes
 --------------------------------------------------
 
 .. include:: ../../amperity_reference/source/campaigns.rst
@@ -200,6 +200,22 @@ Control groups
 .. include:: ../../amperity_reference/source/campaigns.rst
    :start-after: .. campaigns-control-groups-consistent-membership-start
    :end-before: .. campaigns-control-groups-consistent-membership-end
+
+
+.. _campaigns-default-attributes:
+
+Default attributes
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/activation_ids.rst
+   :start-after: .. activation-ids-configure-default-attributes-start
+   :end-before: .. activation-ids-configure-default-attributes-end
+
+**To configure default attributes**
+
+.. include:: ../../amperity_reference/source/activation_ids.rst
+   :start-after: .. activation-ids-configure-default-attributes-steps-start
+   :end-before: .. activation-ids-configure-default-attributes-steps-end
 
 
 .. _campaigns-destinations:
