@@ -183,7 +183,7 @@ Campaigns have the following features:
 
 .. _campaigns-attributes:
 
-Attributes
+Audience attributes
 --------------------------------------------------
 
 .. campaigns-attributes-start
@@ -272,6 +272,22 @@ A campaign typically has a single control group, unless sub-audiences are define
    #. And the following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
 
 .. campaigns-control-groups-consistent-membership-end
+
+
+.. _campaigns-default-attributes:
+
+Default attributes
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/activation_ids.rst
+   :start-after: .. activation-ids-configure-default-attributes-start
+   :end-before: .. activation-ids-configure-default-attributes-end
+
+**To configure default attributes**
+
+.. include:: ../../amperity_reference/source/activation_ids.rst
+   :start-after: .. activation-ids-configure-default-attributes-steps-start
+   :end-before: .. activation-ids-configure-default-attributes-steps-end
 
 
 .. _campaigns-destinations:
@@ -416,20 +432,6 @@ The download recipients feature allows you to download and see your recipients l
 .. tip:: Downloaded files can enable ad hoc workflows in any downstream tool that supports directly uploading and/or using CSV files. For example, marketing applications like `Airship <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/audience-lists/uploaded/>`__ |ext_link|, `Attentive <https://help.attentivemobile.com/hc/en-us/articles/360051463212-Create-a-manual-segment>`__ |ext_link|, `Bluecore <https://help.bluecore.com/en/articles/3552694-import-data>`__ |ext_link|, `Braze <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#csv>`__ |ext_link|, `Facebook Ads <https://www.facebook.com/business/help/170456843145568?id=2469097953376494>`__ |ext_link|, `Iterable <https://support.iterable.com/hc/en-us/articles/205694345-CSV-List-Import-Best-Practices->`__ |ext_link|, |channel_pinterest|, |channel_reddit_ads|, and `SendGrid <https://docs.sendgrid.com/ui/managing-contacts/create-and-manage-contacts>`__ |ext_link| all support directly uploading CSV files. Downloaded CSV files can be opened directly in Microsoft Excel and Google Sheets.
 
 .. campaigns-download-recipients-manual-workflows-end
-
-
-.. _campaigns-default-attributes:
-
-Default attributes
-==================================================
-
-.. include:: ../../amperity_ampiq/source/default_attributes.rst
-   :start-after: .. campaigns-default-attributes-overview-start
-   :end-before: .. campaigns-default-attributes-overview-end
-
-.. include:: ../../amperity_ampiq/source/default_attributes.rst
-   :start-after: .. campaigns-default-attributes-steps-start
-   :end-before: .. campaigns-default-attributes-steps-end
 
 
 .. _campaigns-reference-campaign-notifications:
@@ -1557,11 +1559,11 @@ Enable Campaign Recipients table
 
 .. campaigns-enable-campaign-recipients-table-start
 
-The **Campaign Recipients** table can be enabled directly from the **Campaigns** page. It may be enabled for each database that is configured in your tenant.
+A **Campaign Recipients** table can be enabled directly from the **Campaigns** page. It may be enabled for each combination of database + activation that is configured in your tenant.
 
 .. campaigns-enable-campaign-recipients-table-end
 
-**To enable the Campaign Recipients table**
+**To enable Campaign Recipients tables**
 
 .. campaigns-enable-campaign-recipients-table-steps-start
 

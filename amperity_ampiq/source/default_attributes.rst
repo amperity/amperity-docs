@@ -58,7 +58,7 @@ The following sections describe the steps you'll follow to configure the default
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Default attributes for each destination are configured from the **Campaigns** page. Click the **Campaign settings** link next to the **Create campaign** button to open the editor from which you can configure default attributes.
+     - Default attributes for each destination are configured from the **Campaigns** tab in the **Activations** page. Click **Settings** to open the **Configure attributes** dialog.
 
        .. image:: ../../images/mockup-campaigns-default-attributes.png
           :width: 650 px
@@ -72,9 +72,15 @@ The following sections describe the steps you'll follow to configure the default
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Choose the **Default attributes** tab, and then from the **Database** dropdown, select the database that contains the attributes that your brand sends to downstream workflows.
+     - On the **Default attributes** tab, click **Add default attributes**. This opens the **Configure attributes** dialog.
 
-       Then from the **Destinations** dropdown, choose the destination for which default attributes will be configured.
+       Under **Configure attributes** do the following:
+
+       Select a destination from the **Destination** dropdown.
+
+       Select a database from the **Databases** dropdown.
+
+       Select a configured activation ID from the **Activation ID** dropdown.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -82,7 +88,7 @@ The following sections describe the steps you'll follow to configure the default
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - After you have selected a database and a destination, a list of attributes is shown. For example, the list of attributes that may be sent to Meta Ads Manager:
+     - Under **Default attributes** click **Add attribute**. Select a table, and then choose an attribute. For example, the list of attributes that may be sent to Meta Ads Manager:
 
        .. image:: ../../images/mockup-campaigns-default-attributes-meta-ads-manager.png
           :width: 650 px
