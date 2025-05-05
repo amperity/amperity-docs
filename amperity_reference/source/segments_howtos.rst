@@ -302,7 +302,7 @@ Choose activation ID
 
 .. segments-choose-activation-id-start
 
-You can configure a segment to use any activation ID that is configured in your tenant.
+You can configure a segment to use any activation ID that is configured in the selected database.
 
 Tables and lists are limited to only those that contain a field that matches the selected activation ID.
 
