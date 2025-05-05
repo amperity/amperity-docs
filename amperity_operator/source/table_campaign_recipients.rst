@@ -46,7 +46,7 @@ Add table
    :start-after: .. campaigns-enable-campaign-recipients-table-start
    :end-before: .. campaigns-enable-campaign-recipients-table-end
 
-**To enable the Campaign Recipients table**
+**To enable Campaign Recipients tables**
 
 .. include:: ../../amperity_reference/source/campaigns.rst
    :start-after: .. campaigns-enable-campaign-recipients-table-steps-start
