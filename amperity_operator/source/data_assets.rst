@@ -317,15 +317,80 @@ Enable file-based data assets
 
 .. data-asset-files-request-to-enable-start
 
-Amperity makes CSV files available to your tenant from an Amazon S3 bucket. Create a support ticket and request to enable the "Amperity data assets Amazon S3 bucket" for your tenant. Use any of these options:
-
-* The `Amperity Support Portal <../support/index.html>`__
-* The **Report a problem** option in Amperity
-* By sending an email to support@amperity.com
-
-After the Amperity data assets Amazon S3 bucket is enabled, use a courier to pull individual data assets from that location to your tenant using an Amazon S3 data source.
+Amperity makes CSV files available to your tenant from a bridge. 
 
 .. data-asset-files-request-to-enable-end
+
+**To add reference data**
+
+.. data-asset-reference-enable-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
+
+       Choose **Reference data**.
+
+       .. image:: ../../images/bridge-inbound-choose-reference-data.png
+          :width: 320 px
+          :alt: Add a bridge for a sync.
+          :align: left
+          :class: no-scaled-link
+
+       This opens the **Add bridge** dialog box.
+
+       .. image:: ../../images/bridge-inbound-name-description.png
+          :width: 500 px
+          :alt: Add a bridge for a sync.
+          :align: left
+          :class: no-scaled-link
+
+       Add a name and description for the bridge *or* select an existing bridge, and then click **Confirm**.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - Use the **Select tables** dialog box to select any combination of reference data to be synced to Amperity.
+
+       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync.
+
+       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step 4.
+          :align: left
+          :class: no-scaled-link
+     - Map the reference data tables that are synced to domain tables in Amperity.
+
+       .. image:: ../../images/bridge-map-inbound-to-domain-reference-data.png
+          :width: 500 px
+          :alt: Map inbound synced tables to domain tables.
+          :align: left
+          :class: no-scaled-link
+
+       Tables that are synced with Amperity are added as domain tables.
+
+       * The names of synced tables must be unique among all domain tables.
+       * Primary keys should not be assigned.
+       * Semantic tags should not be applied.
+
+       When finished, click **Save and sync**. This will start a workflow that synchronizes reference data to Amperity and will create the mapped domain table names.
+
+       You can manually sync tables with Amperity using the **Sync** option from the **Actions** menu for the bridge.
+
+.. data-asset-reference-enable-steps-end
 
 
 .. _data-asset-address-standardization:
