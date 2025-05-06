@@ -14,32 +14,200 @@
         Amps dashboard
 
 ==================================================
-About the Amps dashboard
+About Amps consumption
 ==================================================
 
-.. amps-overview-start
 
-Amps are a normalized unit that measures total consumption across all categories and features within the Amperity platform.
+.. _amps-consumption:
 
-The number of Amps consumed depends on the actions that are performed and how much data processing was required to support those actions.
+.. amps-consumption-start
+
+Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`.
+
+.. amps-consumption-end
+
+Consumption overview
+==================================================
+
+.. amps-review-consumption-start
+
+Consumption is measured in Amps and Storage (TB).
+Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or sending campaigns.
+The storage that is required to support those compute resources is measured in terabytes (TB).
+
+Some examples of consumption drivers are:
+
+* The amount of data that is processed.
+* The amount of data that is stored.
+* The complexity of operations, such as complex SQL join operations, and the memory that is required to complete those operations.
+* The amount of time it takes to run a workflow.
+* The size of the compute resources that are available in your tenant.
+
+.. amps-review-consumption-end
+
+
+.. _amps-review-consumption-compute:
+
+Amps consumption
+--------------------------------------------------
+
+.. amps-review-consumption-compute-start
+
+Some features consume more Amps than others. Compute-intensive features, such as running Spark SQL and Presto SQL queries, processing data, and algorithms, such as Stitch or predictive models, will consume Amps at a higher rate. Compute includes actions like loading data, querying data, running databases, refreshing predictive models, and running Stitch. Consumption of Amps based on compute depends on the features that are in use, the frequency at which they are run, and the amount of time it takes for the process to finish. Compute consumption can vary from day to day.
+
+The following features have configurable compute settings:
+
+* Ingest
+* Source transforms
+* Stitch
+* Stitch reports
+* Databases
+* Spark SQL queries
+
+Your brand can explicitly set the compute sizes for these tasks in your workflows. Changes to compute settings will affect Amps consumption. Contact your Amperity representative with questions around how to best configure compute resource sizing within your tenant.
+
+.. amps-review-consumption-compute-end
+
+
+.. _amps-review-consumption-storage:
+
+Storage consumption
+--------------------------------------------------
+
+.. amps-review-consumption-storage-start
+
+The rate at which source tables consume Amps is a combination of how much data is being loaded to Amperity and the file type for that data. For example, a large CSV file consumes more Amps than an Apache Parquet file when both tables contain similar record counts.
+
+More data---more rows, more fields, more complete data---will drive Amps consumption. Source tables that are transformed in Amperity prior to Stitch will consume Amps based on the complexity of Spark SQL that is used to perform the transformation.
+
+Storage is typically stable after the implementation period has completed. Storage (by itself) typically consumes Amps at a lower rate when compared to running workflows and processing data.
+
+.. note:: Deleting source tables will lead to lower Amps consumption. Amperity maintains a short buffer period to ensure data can be restored, should it need to be, after which the lower Amps consumption will show in the dashboard.
+
+.. important:: A sandbox is a replica of your production environment. It starts as an exact duplicate of the configuration of your production tenant at the time it is created. It starts with access to the same data that is stored in your production tenant. If new data is ingested into the sandbox, added storage will increase your Amps consumption.
+
+.. important:: Amps drive consumption at a larger magnitude than storage. When optimizing your brand's consumption, monitor for ways to reduce Amps consumption over storage.
+
+.. amps-review-consumption-storage-end
+
+
+.. _amps-review-consumption-dashboard:
+
+Consumption dashboard
+--------------------------------------------------
+
+.. amps-review-consumption-dashboard-start
+
+The Amps consumption dashboard shows your brand's total Amps and storage (TB) consumption across configurable time periods along with a breakdown of Amps consumption by category and by feature.
 
 You can access the **Amps** dashboard from the |fa-kebab| menu that is located in the top-level navigation next to the name of your Amperity tenant.
 
 .. note:: The dashboard may exclude up to 24 hours of data, to allow time for data processing and validation.
 
-.. amps-overview-start
+
+.. amps-review-consumption-dashboard-end
 
 
-.. _amps-consumption:
+.. _amps-review-consumption-dashboard-summary:
 
-About Amps consumption
-==================================================
+Current contract
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. amps-consumption-start
+.. amps-review-consumption-dashboard-summary-start
 
-Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started.
+The **Current contract** section shows the state of the tenant for the current contract period. It displays the following information:
 
-.. amps-consumption-end
+#. Capacity consumed against the total capacity purchased
+#. Time remaining in the current contract period
+#. Overall Amps vs storage (TB) breakdown
+#. Consumption broken down by environment
+
+.. amps-review-consumption-dashboard-summary-end
+
+
+.. _amps-review-consumption-dashboard-breakdown:
+
+Consumption breakdown
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-review-consumption-dashboard-breakdown-start
+
+The **Consumption breakdown** section shows Amps consumption by category and by feature. You can choose to view the dashboared for Amps or Storage (TB) in the filter bar. You can also filter by time period, view Amps at daily, weekly, or monthly scales, and filter by production tenant or by sandbox.
+
+The **Consumption breakdown** can be filtered by date range, by tenant type, shown daily, weekly, or monthly.
+
+.. image:: ../../images/amps-consumption-filters.png
+   :width: 420 px
+   :alt: The Amps consumption breakdown, default view.
+   :align: left
+   :class: no-scaled-link
+
+Each option is set independently:
+
+* Use the **Date range** dropdown to select one of the following values: **Last 2 weeks**, **Last 30 days**, **Last 90 days**, **Year to date**, **Current contract period**, or **Lifetime**.
+* Use the **Granularity** field to set the granularity of the charts shown for Amps consumption. Choose one of **Daily**, **Weekly**, or **Monthly**.
+* Use the **Type** field to set the unit of information that the dashboard displays. Choose one of **Amps** or **Storage (TB)**.
+* Use the **Category** dropdown to view the dashboard for a selected product category. Choose one of **All**, **Sources**, **Stitch**, **Databases**, **Analytics**, or **Activation**.
+* Use the **Environment** field to view the dashboard for all tenants, only your production tenant, only sandboxes, or a specific sandbox. Choose one of **All**, **Production**, or **Sandbox**.
+
+For example, set the date range to "Last 90 days", and then choose "weekly" and "sandboxes" to view Amps consumption for all sandboxes during the last 90 days, with consumption shown by week.
+
+.. amps-review-consumption-dashboard-breakdown-end
+
+
+.. _amps-review-consumption-dashboard-default:
+
+Default view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-review-consumption-dashboard-default-start
+
+The default view shows total Amps, including your production tenant and all sandboxes. Filters are applied to all categories and features within the **Consumption breakdown** section.
+
+.. image:: ../../images/amps-consumption-default-view.png
+   :width: 600 px
+   :alt: The Amps consumption breakdown, default view.
+   :align: left
+   :class: no-scaled-link
+
+.. amps-review-consumption-dashboard-default-end
+
+
+.. _amps-review-consumption-dashboard-category:
+
+By category
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-review-consumption-dashboard-category-start
+
+Consumption breakdown by category shows which category---Sources, Stitch, Databases, Analytics, or Activation---has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+
+.. image:: ../../images/amps-consumption-category-view.png
+   :width: 600 px
+   :alt: The Amps consumption breakdown, default view.
+   :align: left
+   :class: no-scaled-link
+
+.. amps-review-consumption-dashboard-category-end
+
+
+.. _amps-review-consumption-dashboard-feature:
+
+By feature
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-review-consumption-dashboard-feature-start
+
+Consumption breakdown by category shows which feature---BI Connect, Bridge, Campaigns, Databases, Ingest, Orchestrations, Predictive modeling, Profile API, Segmentation, Source Tables, Source Transforms, or Stitch---has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+
+.. amps-review-consumption-dashboard-feature-end
+
+.. image:: ../../images/amps-consumption-feature-view.png
+   :width: 600 px
+   :alt: The Amps consumption breakdown, default view.
+   :align: left
+   :class: no-scaled-link
+
 
 
 .. _amps-consumption-categories:
@@ -163,9 +331,13 @@ Amps consumption for the **Campaigns** feature is determined by:
 * The complexity of SQL queries that are used by a campaign
 * The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output; each segment that is run within a campaign will consume Amps
 * The amount of data being sent from Amperity to a downstream location
+
+
+Storage for the **Campaigns** feature is primarily determined by:
+
 * The size of the **Campaign Recipients** table
 
-Monitor Amps consumption for the **Campaigns** feature by:
+Monitor consumption for the **Campaigns** feature by:
 
 * Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes will take longer to run and will consume more Amps
 * Monitoring workflows that contain recurring campaigns from the **Workflows** page
@@ -186,13 +358,16 @@ Databases
 Amps consumption for the **Databases** feature is determined by:
 
 * The frequency at which a database is run
-* The number of tables in a database
 * The length of time it takes to run the database
 * Calculating extended transactions attributes
-* The number of custom tables that are used by analytics and marketing activities
 * Larger compute settings for SQL resources
 
-Monitor Amps consumption for the **Databases** feature by:
+Storage for the **Databases** feature is determined by:
+* The number of tables in a database
+* The number of custom tables that are used by analytics and marketing activities
+* The number of records in each table
+
+Monitor consumption for the **Databases** feature by:
 
 * Monitoring the database runtime and run history
 * Monitoring individual table runtimes and histories
@@ -211,12 +386,14 @@ Ingest
 
 Amps consumption for the **Ingest** feature is determined by:
 
-* The volume of data that is loaded to Amperity
 * The frequency at which data is loaded to Amperity
 * The amount of time it takes to ingest data; time affects Amps consumption more than volume or frequency because large file formats take longer to load than partitioned files of the same size
 * The use of ingest queries that preprocess data prior to ingest
 
-Monitor Amps consumption for the **Ingest** feature by:
+Storage for the **Ingest** feature is determined by:
+* The volume of data that is loaded to Amperity
+
+Monitor consumption for the **Ingest** feature by:
 
 * Monitoring the aggregate number of records ingested from the **Usage** page
 * Monitoring ingest runtimes from the **Workflows** page
@@ -261,11 +438,14 @@ Amps consumption for the **Predictive modeling** feature is determined by:
 * The frequency at which predictions (including training and inference) are run
 * The number of courier groups that are associated with predictive modeling
 * The number of predictive models that are enabled; adding models will increase Amps consumption
+
+Storage for the **Predictive modeling** feature is determined by:
+
 * The amount of data that is configured and made available to predictive modeling
 
   .. note:: Amperity trains models every two weeks; Amps consumption for predictive modeling increases during model training.
 
-Monitor Amps consumption for the **Predictive modeling** feature by:
+Monitor consumption for the **Predictive modeling** feature by:
 
 * Monitoring workflows that contain predictive modeling tasks from the **Workflows** page
 * Reviewing the record count for tables that are used by predictive modeling
@@ -281,7 +461,8 @@ Premium connectors
 
 .. destinations-premium-connectors-start
 
-The following set of connectors are designated as premium connectors. Using any of these connectors incurs an Amps surcharge for that month.
+Premium connectors are connectors that have an additional amps charge to use. You will not be charged for creating a destination, only for actually using it. This charge is a flat fee and it is measured per month so if you use it once or many times in a month, the charge is the same: 25K amps per connector per month.
+For example, if you use 3 premium connectors in one month and 4 the next, this would be 75K amps in the first month and 100K amps the second month. Premium connectors do not consume any storage. The following connectors are premium:
 
 * Amazon Ads
 * Criteo Audience API
@@ -316,43 +497,34 @@ Profile API
 
 Amps consumption for the **Profile API** feature is determined by:
 
-* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint
-* The frequency at which each Profile API index is refreshed
-* The width of each Profile API index (where width refers to the number of columns, or response parameters, that are available in the index; wider indexes consume more Amps)
-* The number of indexes that are refreshed automatically by a courier group
+* The number of individual Profile API indexes that are enabled in your tenant; each index is made available as an endpoint that is always available to downstream workflows that make API requests to that endpoint.
 
 Monitor Amps consumption for the **Profile API** feature by:
 
 * Ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows, including not only the number of indexes, but also including the amount data that is made available from each index; Amps consumption is affected by the length of time it takes to run the query to generate the index and also the number of fields that are added to the index. `Complex queries will consume more Amps; queries that return large numbers of columns and/or rows will consume more Amps <https://docs.amperity.com/operator/api_profile.html#index-response-times>`__
 * Monitoring the history of Profile API index refreshes from the **Workflows** page
 
+
 .. amps-consumption-feature-profile-api-end
 
+.. _amps-consumption-feature-queries:
 
-.. _amps-consumption-feature-segmentation:
-
-Segmentation
+Queries
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. amps-consumption-feature-segmentation-start
+.. amps-consumption-feature-queries-start
 
-Amps consumption for the **Segmentation** feature is determined by:
+Amps consumption for the **Queries** feature is determined by:
 
-* The frequency at which automated or ad hoc data analysis is performed for segments and queries
-* The total daily runtime for all query and segment calculations
-* Complex SQL in queries may cause longer runtimes
-* Using Spark SQL to run queries (more expensive) instead of Presto SQL (less expensive)
-* Larger compute settings for SQL resources
+* The number of ad-hoc queries
+* The complexity of each query as measured by the number of bytes scanned
 
-Monitor Amps consumption for the **Segmentation** feature by:
+Monitor Amps consumption for the **Queries** feature by:
 
-* Monitoring the number of queries and segments that are run from the **Usage** page
-* Reviewing the duration of the query and segment runtimes
-* Verifying the amount of data scanned by a query or segment
-* Knowing which queries and segments are run automatically; this information is available from the courier group configuration in the **Sources** page, where segments are run when they are required by a recurring campaign and queries are run when they are required by an orchestration or orchestration group
+* Monitoring the number of queries that are executed from the **Usage** page
+* Verifying the amount of data scanned by a query
 
-.. amps-consumption-feature-segmentation-end
-
+.. amps-consumption-feature-queries-end
 
 .. _amps-consumption-feature-source-tables:
 
@@ -400,6 +572,20 @@ Monitor Amps consumption for the **Source transforms** feature by:
 
 .. amps-consumption-feature-source-transforms-end
 
+.. _amps-consumption-feature-spark-sql-sessions:
+
+Spark SQL sessions
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-consumption-feature-spark-sql-sessions-start
+
+Amps consumption for the **Spark SQL sessions** feature is determined by:
+
+* The size of the compute settings for the Spark SQL session
+* The number of Spark SQL sessions that are run
+* The length of each session
+
+.. amps-consumption-feature-spark-sql-sessions-end
 
 .. _amps-consumption-feature-stitch:
 
@@ -423,255 +609,87 @@ Monitor Amps consumption for the **Stitch** feature by:
 .. amps-consumption-feature-stitch-end
 
 
-.. _amps-consumption-example:
+.. .. _amps-consumption-example:
 
-Example of Amps consumption
---------------------------------------------------
+.. Example of Amps consumption
+.. --------------------------------------------------
 
-.. amps-consumption-example-start
+.. .. amps-consumption-example-start
 
-A customer that uses Amperity for ID resolution and activation would require using the following features: Ingest, Sources, Stitch, Databases, Segments, and Campaigns.
+.. A customer that uses Amperity for ID resolution and activation would require using the following features: Ingest, Sources, Stitch, Databases, Segments, and Campaigns.
 
-The consumption of Amps depends on implementation details and the complexity of use cases. The following table details a scenario where Amps are consumed at a rate of 3000 per day.
+.. The consumption of Amps depends on implementation details and the complexity of use cases. The following table details a scenario where Amps are consumed at a rate of 3000 per day.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+.. .. list-table::
+..    :widths: 30 70
+..    :header-rows: 1
 
-   * - Feature
-     - Description
+..    * - Feature
+..      - Description
 
-   * - **Ingest**
-     - Compute setting: X-small
+..    * - **Ingest**
+..      - Compute setting: X-small
 
-       Frequency: Once per day
+..        Frequency: Once per day
 
-       Runtime: 3 minutes
+..        Runtime: 3 minutes
 
-       Records: 100 thousand
+..        Records: 100 thousand
 
-       Other factors: 1 feed
+..        Other factors: 1 feed
 
-       **Cost**: **20 Amps**
-
-
-   * - **Sources**
-     - Records: 400 million
-
-       Number of tables: 97
-
-       Runtime: 3 minutes
-
-       Average field count: 32
-
-       **Cost**: **10 Amps**
+..        **Cost**: **20 Amps**
 
 
-   * - **Stitch**
-     - Compute setting: Medium
+..    * - **Sources**
+..      - Records: 400 million
 
-       Frequency: Once per day
+..        Number of tables: 97
 
-       Runtime: 19 minutes
+..        Runtime: 3 minutes
 
-       Records: 25 million
+..        Average field count: 32
 
-       **Cost**: **2700 Amps**
-
-
-   * - **Databases**
-     - Compute setting: Small
-
-       Frequency: Once per day
-
-       Runtime: 13 minutes
-
-       Records: 5 billion
-
-       Other factors: 11 customer 360 attributes
-
-       **Cost**: **450 Amps**
+..        **Cost**: **10 Amps**
 
 
-   * - **Campaigns**
-     - Frequency: 37 per day
+..    * - **Stitch**
+..      - Compute setting: Medium
 
-       Average runtime: 11 minutes
+..        Frequency: Once per day
 
-       **Cost**: **277 Amps**
+..        Runtime: 19 minutes
 
-.. amps-consumption-example-end
+..        Records: 25 million
+
+..        **Cost**: **2700 Amps**
+
+
+..    * - **Databases**
+..      - Compute setting: Small
+
+..        Frequency: Once per day
+
+..        Runtime: 13 minutes
+
+..        Records: 5 billion
+
+..        Other factors: 11 customer 360 attributes
+
+..        **Cost**: **450 Amps**
+
+
+..    * - **Campaigns**
+..      - Frequency: 37 per day
+
+..        Average runtime: 11 minutes
+
+..        **Cost**: **277 Amps**
+
+.. .. amps-consumption-example-end
 
 
 .. _amps-review-consumption:
-
-Review consumption
-==================================================
-
-.. amps-review-consumption-start
-
-Consumption is measured in Amps and Storage (TB).
-Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or segmentation.
-Storage (TB) measures the storage that is required to support those compute resources, and is measured in Terabytes.
-
-Some examples of factors that affect consumption measurement are:
-
-* The amount of data that is processed.
-* The amount of data that is stored.
-* The complexity of operations, such as complex SQL join operations, and the memory that is required to complete those operations.
-* The amount of time it takes to run a workflow.
-* The size of the compute resources that are available in your tenant.
-* The number of sandboxes that are in use.
-
-.. amps-review-consumption-end
-
-
-.. _amps-review-consumption-compute:
-
-Amps consumption
---------------------------------------------------
-
-.. amps-review-consumption-compute-start
-
-Some features consume more Amps than others. Compute-intensive features, such as running Spark SQL and Presto SQL queries, processing data, and algorithms, such as Stitch or predictive models, will consume Amps at a higher rate. Compute includes actions like loading data, querying data, running databases, refreshing predictive models, and running Stitch. Consumption of Amps based on compute depends on the features that are in use, the frequency at which they are run, and the amount of time it takes for the process to finish. Compute consumption can vary from day to day.
-
-The following features have configurable compute settings: ingest, source transforms, Stitch, Stitch reports, databases, and Spark SQL queries. Your brand can explicitly set the compute sizes for these tasks in your workflows. Changes to compute settings will affect Amps consumption. Contact your Amperity representative with questions around how to best configure compute resource sizing within your tenant.
-
-.. amps-review-consumption-compute-end
-
-
-.. _amps-review-consumption-storage:
-
-Storage consumption
---------------------------------------------------
-
-.. amps-review-consumption-storage-start
-
-The rate at which source tables consume Amps is a combination of how much data is being loaded to Amperity and the file type for that data. For example, a large CSV file consumes more Amps than an Apache Parquet file when both tables contain similar record counts.
-
-More data---more rows, more fields, more complete data---will drive Amps consumption. Source tables that are transformed in Amperity prior to Stitch will consume Amps based on the complexity of Spark SQL that is used to perform the transformation.
-
-Storage is typically stable after the implementation period has completed. Storage (by itself) typically consumes Amps at a lower rate when compared to running workflows and processing data.
-
-.. note:: Deleting source tables will lead to lower Amps consumption. Amperity maintains a short buffer period to ensure data can be restored, should it need to be, after which the lower Amps consumption will show in the dashboard.
-
-.. important:: A sandbox is a replica of your production environment. It starts as an exact duplicate of the configuration of your production tenant at the time it is created. It starts with access to the same data that is stored in your production tenant. If new data is ingested into the sandbox, added storage will increase your Amps consumption.
-
-.. amps-review-consumption-storage-end
-
-
-.. _amps-review-consumption-dashboard:
-
-Consumption dashboard
---------------------------------------------------
-
-.. amps-review-consumption-dashboard-start
-
-The Amps consumption dashboard shows your brand's total Amps and storage (TB) consumption across configurable time periods along with a breakdown of Amps consumption by category and by feature.
-
-.. amps-review-consumption-dashboard-end
-
-
-.. _amps-review-consumption-dashboard-summary:
-
-Current contract
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-review-consumption-dashboard-summary-start
-
-The **Current contract** section shows the state of the tenant for the current contract period. It displays the following information:
-
-#. Capacity consumed against the total capacity purchased
-#. Time remaining in the current contract period
-#. Overall Amps vs storage (TB) breakdown
-#. Consumption broken down by environment
-
-.. amps-review-consumption-dashboard-summary-end
-
-
-.. _amps-review-consumption-dashboard-breakdown:
-
-Consumption breakdown
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-review-consumption-dashboard-breakdown-start
-
-The **Consumption breakdown** section shows Amps consumption by category and by feature. You can choose to view the dashboared for Amps or Storage (TB) in the filter bar. You can also filter by time period, view Amps at daily, weekly, or monthly scales, and filter by production tenant or by sandbox.
-
-The **Consumption breakdown** can be filtered by date range, by tenant type, shown daily, weekly, or monthly.
-
-.. image:: ../../images/amps-consumption-filters.png
-   :width: 420 px
-   :alt: The Amps consumption breakdown, default view.
-   :align: left
-   :class: no-scaled-link
-
-Each option is set independently:
-
-* Use the **Date range** dropdown to select one of the following values: **Last 2 weeks**, **Last 30 days**, **Last 90 days**, **Year to date**, **Current contract period**, or **Lifetime**.
-* Use the **Granularity** field to set the granularity of the charts shown for Amps consumption. Choose one of **Daily**, **Weekly**, or **Monthly**.
-* Use the **Type** field to set the unit of information that the dashboard displays. Choose one of **Amps** or **Storage (TB)**.
-* Use the **Category** dropdown to view the dashboard for a selected product category. Choose one of **All**, **Sources**, **Stitch**, **Databases**, **Analytics**, or **Activation**.
-* Use the **Environment** field to view the dashboard for all tenants, only your production tenant, only sandboxes, or a specific sandbox. Choose one of **All**, **Production**, or **Sandbox**.
-
-For example, set the date range to "Last 90 days", and then choose "weekly" and "sandboxes" to view Amps consumption for all sandboxes during the last 90 days, with consumption shown by week.
-
-.. amps-review-consumption-dashboard-breakdown-end
-
-
-.. _amps-review-consumption-dashboard-default:
-
-Default view
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. amps-review-consumption-dashboard-default-start
-
-The default view shows total Amps, including your production tenant and all sandboxes. Filters are applied to all categories and features within the **Consumption breakdown** section.
-
-.. image:: ../../images/amps-consumption-default-view.png
-   :width: 600 px
-   :alt: The Amps consumption breakdown, default view.
-   :align: left
-   :class: no-scaled-link
-
-.. amps-review-consumption-dashboard-default-end
-
-
-.. _amps-review-consumption-dashboard-category:
-
-By category
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. amps-review-consumption-dashboard-category-start
-
-Consumption breakdown by category shows which category---Sources, Stitch, Databases, Analytics, or Activation---has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
-
-.. image:: ../../images/amps-consumption-category-view.png
-   :width: 600 px
-   :alt: The Amps consumption breakdown, default view.
-   :align: left
-   :class: no-scaled-link
-
-.. amps-review-consumption-dashboard-category-end
-
-
-.. _amps-review-consumption-dashboard-feature:
-
-By feature
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. amps-review-consumption-dashboard-feature-start
-
-Consumption breakdown by category shows which feature---BI Connect, Bridge, Campaigns, Databases, Ingest, Orchestrations, Predictive modeling, Profile API, Segmentation, Source Tables, Source Transforms, or Stitch---has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
-
-.. amps-review-consumption-dashboard-feature-end
-
-.. image:: ../../images/amps-consumption-feature-view.png
-   :width: 600 px
-   :alt: The Amps consumption breakdown, default view.
-   :align: left
-   :class: no-scaled-link
-
 
 
 .. _amps-reduce:
