@@ -9,11 +9,11 @@
 
 .. meta::
     :description lang=en:
-        Use segments and campaigns to send audiences to Criteo Retail Media for us with offline and onsite display campaigns.
+        Use segments and campaigns to send audiences to Criteo Retail Media for use with offline and onsite display campaigns.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use segments and campaigns to send audiences to Criteo Retail Media for us with offline and onsite display campaigns.
+        Use segments and campaigns to send audiences to Criteo Retail Media for use with offline and onsite display campaigns.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
