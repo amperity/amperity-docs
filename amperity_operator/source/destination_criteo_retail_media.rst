@@ -9,7 +9,8 @@
 .. |where-send| replace:: |destination-name|
 .. |audience-primary-key| replace:: "email"
 .. |filter-the-list| replace:: "crit"
-
+.. |allow-for-what| replace:: offline or onsite display audiences
+.. |allow-for-duration| replace:: up to 24 hours
 
 .. meta::
     :description lang=en:
@@ -32,6 +33,18 @@ Send audience segments to Criteo Retail Media
 .. include:: ../../shared/terms.rst
    :start-after: .. term-criteo-retail-media-start
    :end-before: .. term-criteo-retail-media-end
+
+.. destination-criteo-retail-media-offline-vs-online-start
+
+.. important:: |destination-name| supports offsite and onsite display campaigns. These audiences must be sent independently and require specific configurations. Review the requirements for offline and online campaigns, and then configure a destination for each use case. A minimum match rate of 0.1% is required, calculated as (number of matches / total lines) before the audience is usable in |destination-name|.
+
+.. destination-criteo-retail-media-offline-vs-online-start
+
+.. note::
+
+   .. include:: ../../shared/destinations.rst
+      :start-after: .. destinations-add-destinations-intro-allow-for-start
+      :end-before: .. destinations-add-destinations-intro-allow-for-end
 
 
 .. _destination-criteo-retail-media-get-details:
@@ -80,6 +93,32 @@ Get details
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-identifier-type-start
              :end-before: .. setting-criteo-identifier-type-end
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: left
+          :class: no-scaled-link
+     - **Offsite campaigns only**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-criteo-retail-media-offsite-start
+          :end-before: .. term-criteo-retail-media-offsite-end
+
+       To configure offsite campaigns use one of "Email" or "UserIdentifier" for the identifier type. If "UserIdentifier", the value may be one of the following: "IDFA", "AAID", "LiveRamp ID", or "Criteo Cookie ID".
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 4.
+          :align: left
+          :class: no-scaled-link
+     - **Onsite display campaigns only**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-criteo-retail-media-onsite-start
+          :end-before: .. term-criteo-retail-media-onsite-end
+
+       To configure onsite display campaigns use the "CustomerID" identifier type.
 
 .. destination-criteo-retail-media-get-details-table-end
 
@@ -204,6 +243,8 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
           :end-before: .. destinations-steps-name-and-description-end
+
+       .. important:: Be sure the name of the destination includes a reference to the type of audience that will be sent from Amperity. For example: "Criteo Onsite Display" or "Criteo Retail Media Offsite".
 
        .. admonition:: Configure business user access
 
