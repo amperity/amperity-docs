@@ -1577,7 +1577,7 @@ Criteo Retail Media allows marketers to build audiences in Criteo using their ow
 
 .. term-criteo-retail-media-onsite-start
 
-`Onsite display campaigns <https://help.retailmedia.criteo.com/kb/guide/en/what-is-onsite-display-g7j3MjzMPq>`__ |ext_link| try to reach, influence, and engage shoppers at the point-of-purchase with custom display ad formats. Advertisers can choose which shoppers to target based on real-time browsing and searching behavior, and analyze engagement and conversions via enhanced reporting capabilities.
+`Onsite display campaigns <https://help.retailmedia.criteo.com/kb/guide/en/what-is-onsite-display-g7j3MjzMPq>`__ |ext_link| try to reach, influence, and engage shoppers at the point of purchase with custom display ad formats. Advertisers can choose which shoppers to target based on real-time browsing and searching behavior, and analyze engagement and conversions via enhanced reporting capabilities.
 
 .. term-criteo-retail-media-onsite-end
 
