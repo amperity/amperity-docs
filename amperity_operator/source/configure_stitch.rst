@@ -237,7 +237,7 @@ Visual vs. Code views
 
 .. configure-stitch-rules-code-start
 
-Use the **Visual** view to configure a prioritized collection of rules that are used for deterministic identity resolution. Use the **Code** view to configure :ref:`advanced seettings <configure-stitch-advanced>` or to override general settings.
+Use the **Visual** view to configure a prioritized collection of rules that are used for deterministic identity resolution. Use the **Code** view to configure advanced seettings or to override general settings.
 
 The **Code** view uses Extensible Data Notation (EDN) formatting and is similar to:
 
@@ -365,9 +365,13 @@ To force Stitch to run, open the **Stitch** page, and then click **Stitch settin
    :align: left
    :class: no-scaled-link
 
+.. configure-stitch-general-stitch-force-end
+
+.. configure-stitch-general-stitch-force-note-start
+
 .. note:: When this setting is enabled, the :ref:`one-to-one Stitch setting <configure-stitch-general-one-to-one>` is forced to be disabled.
 
-.. configure-stitch-general-stitch-force-end
+.. configure-stitch-general-stitch-force-note-end
 
 
 .. _configure-stitch-general-stitch-ignore-jitter:
@@ -577,13 +581,17 @@ Stable ID assignment can be a resource-intensive process, in particular when:
 #. Updating existing data sources with large numbers of rows on a periodic (monthly, quarterly, etc.) basis.
 #. Data contains a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
 
+.. configure-stitch-general-stitch-stable-id-end
+
+.. configure-stitch-general-stitch-stable-id-links-start
+
 You can configure the stable ID assignment process in the following ways:
 
 #. :ref:`Disable stable IDs <configure-stitch-general-stitch-stable-id-disable>`
 #. :ref:`Increase the number of partitions that are available to stable ID assignment <configure-stitch-general-stitch-stable-id-partitions>`
 #. :ref:`Stop building the Unified Changes table (temporarily) <configure-stitch-general-stitch-skip-changes>`
 
-.. configure-stitch-general-stitch-stable-id-end
+.. configure-stitch-general-stitch-stable-id-links-end
 
 
 .. _configure-stitch-general-stitch-stable-id-disable:
