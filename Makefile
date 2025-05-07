@@ -2,7 +2,7 @@ BUILDDIR = build
 BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
 BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
 
-all: base ampiq amp360 datagrid operator reference api tooltips modals contributing legacy
+all: base ampiq amp360 datagrid operator reference api tooltips modals contributing legacy llmkb
 
 static:
 	cp -vr downloads $(BUILDDIR)/
@@ -47,9 +47,13 @@ contributing: static ## Build only the "/contributing" section
 	# Building Contributing pages...
 	$(BUILD_COMMAND) contributing/source $(BUILDDIR)/contributing
 
-legacy: static ## Build only the "/legacy" section
+legacy: static ## Build only the "/llm_kb" section
 	# Building Legacy pages...
 	$(BUILD_COMMAND) legacy/source $(BUILDDIR)/legacy
+
+llmkb: static ## Build only the "/legacy" section
+	# Building Legacy pages...
+	$(BUILD_COMMAND) llm_kb/source $(BUILDDIR)/llmkb
 
 clean: ## Flush the entire build directory
 	# Cleaning out build directory...
