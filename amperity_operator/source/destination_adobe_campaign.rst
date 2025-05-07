@@ -7,7 +7,7 @@
 .. |required-credentials| replace:: "username", "hostname", and "private key"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
-.. |sftp-hostname| replace:: "[value].campaign.adobe.com"
+.. |sftp-hostname| replace:: "account.campaign.adobe.com"
 .. |remote-folder| replace:: "/folder"
 .. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "adobe"
@@ -163,8 +163,6 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-hostname-start
              :end-before: .. credential-sftp-hostname-end
-
-          .. note:: The **.campaign.adobe.com** location is appended automatically.
 
        **Private key**
           .. include:: ../../shared/credentials_settings.rst
