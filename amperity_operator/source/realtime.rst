@@ -548,6 +548,8 @@ To include data that is streamed to Amperity in your batch workflow, such as inc
 
    where ``realtime_table`` is the name of the real-time table from which data will be pulled into the batch layer.
 
-#. Make this table available to Stitch.
+#. Make this table available to Stitch. You may also semantically tag fields for Stitch to process.
+
+The real-time table data will be snapshotted and included as an input to Stitch whenever Stitch is run. Any events that arrive after a snapshot is taken for a current run of Stitch will only be included in the next Stitch run.
 
 .. realtime-add-to-batch-workflow-end
