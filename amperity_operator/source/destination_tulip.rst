@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Tulip
+        Configure destination for Tulip
 
 ==================================================
-Send customer profiles to Tulip
+Configure destination for Tulip
 ==================================================
 
 .. include:: ../../shared/terms.rst

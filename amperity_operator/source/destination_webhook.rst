@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data using a Webhook
+        Configure destination for Webhook
 
 ==================================================
-Send data using a Webhook
+Configure destination for Webhook
 ==================================================
 
 .. term-webhook-destination-start

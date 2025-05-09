@@ -24,10 +24,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send custom attributes to Attentive
+        Configure destination for Attentive (attributes)
 
 ==================================================
-Send custom attributes to Attentive
+Configure destination for Attentive (attributes)
 ==================================================
 
 .. destination-attentive-mobile-api-attributes-start

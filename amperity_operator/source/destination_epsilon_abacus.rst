@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Epsilon Abacus
+        Configure destination for Epsilon Abacus
 
 ==================================================
-Send customer profiles to Epsilon Abacus
+Configure destination for Epsilon Abacus
 ==================================================
 
 .. include:: ../../shared/terms.rst

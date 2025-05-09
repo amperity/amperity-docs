@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to SMG
+        Configure destination for SMG
 
 ==================================================
-Send customer profiles to SMG
+Configure destination for SMG
 ==================================================
 
 .. include:: ../../shared/terms.rst

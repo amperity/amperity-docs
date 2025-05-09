@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Quad
+        Configure destination for Quad
 
 ==================================================
-Send customer profiles to Quad
+Configure destination for Quad
 ==================================================
 
 .. include:: ../../shared/terms.rst

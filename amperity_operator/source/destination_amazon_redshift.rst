@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Amazon Redshift
+        Configure destination for Amazon Redshift
 
 ==================================================
-Send data to Amazon Redshift
+Configure destination for Amazon Redshift
 ==================================================
 
 .. include:: ../../shared/terms.rst

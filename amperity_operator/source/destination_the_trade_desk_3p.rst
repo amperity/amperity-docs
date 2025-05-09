@@ -23,11 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to The Trade Desk 3rd-party Marketplace
+        Configure destination for The Trade Desk 3rd-party Marketplace
 
-======================================================
-Send audiences to The Trade Desk 3rd-party Marketplace
-======================================================
+==============================================================
+Configure destination for The Trade Desk 3rd-party Marketplace
+==============================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-thetradedesk-start

@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Dynamic Yield
+        Configure destination for Dynamic Yield
 
 ==================================================
-Send data to Dynamic Yield
+Configure destination for Dynamic Yield
 ==================================================
 
 .. include:: ../../shared/terms.rst

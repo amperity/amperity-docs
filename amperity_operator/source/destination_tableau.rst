@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Tableau
+        Configure destination for Tableau
 
 ==================================================
-Send data to Tableau
+Configure destination for Tableau
 ==================================================
 
 .. destination-tableau-start

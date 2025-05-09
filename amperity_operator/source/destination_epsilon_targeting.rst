@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Epsilon Targeting
+        Configure destination for Epsilon Targeting
 
 ==================================================
-Send customer profiles to Epsilon Targeting
+Configure destination for Epsilon Targeting
 ==================================================
 
 .. include:: ../../shared/terms.rst

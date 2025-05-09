@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to AWS Connect
+        Configure destination for AWS Connect
 
 ==================================================
-Send data to AWS Connect
+Configure destination for AWS Connect
 ==================================================
 
 .. include:: ../../shared/terms.rst
