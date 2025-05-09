@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to LiveRamp
+        Configure destination for LiveRamp
 
 ==================================================
-Send customer profiles to LiveRamp
+Configure destination for LiveRamp
 ==================================================
 
 .. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_liveramp.html>`__ |ext_link|.

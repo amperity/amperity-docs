@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Adobe Experience Platform
+        Configure destination for Adobe Experience Platform
 
 ===================================================
-Send customer profiles to Adobe Experience Platform
+Configure destination for Adobe Experience Platform
 ===================================================
 
 .. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_adobe_aep.html>`__ |ext_link|.

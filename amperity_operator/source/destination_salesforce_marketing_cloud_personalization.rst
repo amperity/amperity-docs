@@ -23,11 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Marketing Cloud Personalization
+        Configure destination for Salesforce Marketing Cloud Personalization
 
-==================================================
-Send data to Marketing Cloud Personalization
-==================================================
+====================================================================
+Configure destination for Salesforce Marketing Cloud Personalization
+====================================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-marketing-cloud-personalization-start

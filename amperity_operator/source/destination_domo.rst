@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Domo
+        Configure destination for Domo
 
 ==================================================
-Send data to Domo
+Configure destination for Domo
 ==================================================
 
 .. include:: ../../shared/terms.rst

@@ -24,10 +24,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Vibes
+        Configure destination for Vibes
 
 ==================================================
-Send customer profiles to Vibes
+Configure destination for Vibes
 ==================================================
 
 .. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_vibes.html>`__ |ext_link|.

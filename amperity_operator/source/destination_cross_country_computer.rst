@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Cross Country Computer
+        Configure destination for Cross Country Computer
 
 ==================================================
-Send customer profiles to Cross Country Computer
+Configure destination for Cross Country Computer
 ==================================================
 
 .. include:: ../../shared/terms.rst

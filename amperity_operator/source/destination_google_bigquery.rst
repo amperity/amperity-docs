@@ -18,10 +18,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Google BigQuery
+        Configure destination for Google BigQuery
 
 ==================================================
-Send data to Google BigQuery
+Configure destination for Google BigQuery
 ==================================================
 
 .. include:: ../../shared/terms.rst

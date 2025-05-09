@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to Google Customer Match
+        Configure destination for Google Customer Match
 
 ==================================================
-Send audiences to Google Customer Match
+Configure destination for Google Customer Match
 ==================================================
 
 .. destination-google-customer-match-start

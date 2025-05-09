@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Google Cloud Storage
+        Configure destination for Google Cloud Storage
 
 ==================================================
-Send data to Google Cloud Storage
+Configure destination for Google Cloud Storage
 ==================================================
 
 .. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_google_cloud_storage.html>`__ |ext_link|.

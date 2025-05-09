@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Camelot SMM
+        Configure destination for Camelot SMM
 
 ==================================================
-Send customer profiles to Camelot SMM
+Configure destination for Camelot SMM
 ==================================================
 
 .. include:: ../../shared/terms.rst

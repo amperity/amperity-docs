@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Evocalize
+        Configure destination for Evocalize
 
 ==================================================
-Send customer profiles to Evocalize
+Configure destination for Evocalize
 ==================================================
 
 .. include:: ../../shared/terms.rst

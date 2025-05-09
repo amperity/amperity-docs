@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to Epsilon Conversant
+        Configure destination for Epsilon Conversant
 
 ==================================================
-Send customer profiles to Epsilon Conversant
+Configure destination for Epsilon Conversant
 ==================================================
 
 .. include:: ../../shared/terms.rst

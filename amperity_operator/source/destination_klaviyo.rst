@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audience lists to Klaviyo
+        Configure destination for Klaviyo
 
 ==================================================
-Send audience lists to Klaviyo
+Configure destination for Klaviyo
 ==================================================
 
 .. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_klaviyo.html>`__ |ext_link|.

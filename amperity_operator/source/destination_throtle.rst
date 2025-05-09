@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Throtle
+        Configure destination for Throtle
 
 ==================================================
-Send data to Throtle
+Configure destination for Throtle
 ==================================================
 
 .. include:: ../../shared/terms.rst

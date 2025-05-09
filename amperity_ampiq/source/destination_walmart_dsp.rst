@@ -19,7 +19,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to The Trade Desk
+        Send audiences to Walmart DSP
 
 ==================================================
 Send audiences to Walmart DSP

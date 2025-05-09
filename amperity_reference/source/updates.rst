@@ -36,7 +36,8 @@ Product updates
 .. 
 
 
-Product updates for Spring 2025.
+Product updates for Spring 2025
+==================================================
 
 **Activation IDs**
    :bdg-success:`NEW` Define and manage multiple `activation identifiers <https://docs.amperity.com/operator/activation_ids.html>`__ to support multiple channels and a variety of downstream audience requirements.

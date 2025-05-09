@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to RR Donnelly
+        Configure destination for RR Donnelly
 
 ==================================================
-Send customer profiles to RR Donnelly
+Configure destination for RR Donnelly
 ==================================================
 
 .. include:: ../../shared/terms.rst

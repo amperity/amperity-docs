@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send customer profiles to SoundCommerce
+        Configure destination for SoundCommerce
 
 ==================================================
-Send customer profiles to SoundCommerce
+Configure destination for SoundCommerce
 ==================================================
 
 .. include:: ../../shared/terms.rst

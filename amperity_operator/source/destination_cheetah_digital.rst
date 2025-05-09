@@ -23,11 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Cheetah Digital by Marigold
+        Configure destination for Cheetah Digital by Marigold
 
-==================================================
-Send data to Cheetah Digital by Marigold
-==================================================
+=====================================================
+Configure destination for Cheetah Digital by Marigold
+=====================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-cheetah-digital-start

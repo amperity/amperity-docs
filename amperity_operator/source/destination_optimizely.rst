@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Optimizely
+        Configure destination for Optimizely
 
 ==================================================
-Send data to Optimizely
+Configure destination for Optimizely
 ==================================================
 
 .. include:: ../../shared/terms.rst

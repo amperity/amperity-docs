@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Amazon Pinpoint
+        Configure destination for Amazon Pinpoint
 
 ==================================================
-Send data to Amazon Pinpoint
+Configure destination for Amazon Pinpoint
 ==================================================
 
 .. term-amazon-pinpoint-start

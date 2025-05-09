@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Panda Printing
+        Configure destination for Panda Printing
 
 ==================================================
-Send data to Panda Printing
+Configure destination for Panda Printing
 ==================================================
 
 .. include:: ../../shared/terms.rst

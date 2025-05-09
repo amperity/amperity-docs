@@ -18,10 +18,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send data to Azure Synapse Analytics
+        Configure destination for Azure Synapse Analytics
 
 ==================================================
-Send data to Azure Synapse Analytics
+Configure destination for Azure Synapse Analytics
 ==================================================
 
 .. include:: ../../shared/terms.rst
