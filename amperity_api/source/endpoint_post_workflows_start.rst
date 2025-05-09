@@ -246,7 +246,7 @@ The following example shows how to use cURL to send a request to the **POST /wor
 ::
 
    curl --request POST \ 
-          'https://app.amperity.com/api/workflow/runs' \
+          'https://{tenant-id}.amperity.com/api/workflow/runs' \
         --header 'amperity-tenant: tenant' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer token' \
@@ -271,20 +271,20 @@ The following example shows how to use Python to send a request to the **POST /w
    import requests
 
    # Your API endpoint
-   url = "https://app.amperity.com/api/workflow/runs"
+   url = "https://{tenant-id}.amperity.com/api/workflow/runs"
 
-   bearer_token = dbutils.secrets.get(scope = "tenant-bridge-api-access", key = "tenant-bridge-api-access")
+   bearer_token = dbutils.secrets.get(scope = "my-api-key", key = "my-api-key")
 
    # Headers including authorization and custom headers
    headers = {
      "Authorization": f"Bearer {bearer_token}",
-     "amperity-tenant": "bridge",
+     "amperity-tenant": "{tenant-id}",
      "api-version": "2024-04-01"
    }
 
    # Body of the request
    body = {
-     "config_id": "cg-2efo5X8vo",
+     "config_id": "cg-123ABc4DE",
      "range_from": "YYYY-MM-DD",
      "range_to": "YYYY-MM-DD",
      "run_mode": "source"
