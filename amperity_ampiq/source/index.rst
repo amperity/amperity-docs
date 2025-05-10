@@ -181,6 +181,7 @@ Apply predictive analytics
    destination_cheetah_digital
    destination_cordial
    destination_criteo
+   destination_criteo_retail_media
    destination_dv360
    destination_meta_ads_manager
    destination_google_ads

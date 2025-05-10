@@ -19,7 +19,9 @@ Stitch QA
 
 .. qa-stitch-about-start
 
-Stitch QA is a process that monitors the quality of Stitch results. Stitch QA has three components: a Stitch QA database, a set of queries to run against the Stitch QA database, and a prescribed workflow to follow while analyzing the results of those queries.
+Stitch QA is an optional process that uses a dedicated database and a series of SQL queries to monitor the quality of Stitch results.
+
+Stitch QA has three components: a Stitch QA database, a set of queries to run against the Stitch QA database, and a prescribed workflow to follow while analyzing the results of those queries.
 
 Use these results to identify over- and underclustering, to identify values to be blocklisted or labeled, or to discover situations where tuning Stitch to match your tenant's data is necessary.
 

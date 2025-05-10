@@ -13,11 +13,11 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send audiences to Criteo.
+        Configure Amperity to send audiences to Criteo Retail Media for use with offline and onsite display campaigns.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send audiences to Criteo.
+        Configure Amperity to send audiences to Criteo Retail Media for use with offline and onsite display campaigns.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
