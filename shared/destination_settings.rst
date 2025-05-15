@@ -964,12 +964,15 @@ The retailer ID that is associated with the account in |destination-name| to whi
 
 .. setting-criteo-identifier-type-start
 
-The identifier type. May be set to "Email", "UserIdentifier", "IdentityLink", or "CustomerID".
+The identifier type. The correct value depends on the type of campaign.
+
+For offsite campaigns must be one of the following identifiers:
 
 * Use "Email" to build audience segments using email addresses.
-* Use "UserIdentifier" to build audience segments using a unique identifier provided by your brand.
 * Use "IdentityLink" to build audience segments using LiveRamp identity graph data.
-* Use "CustomerID" to build audience segments using Criteo Retail Media-managed customer lists.
+* Use "UserIdentifier" to build audience segments using a unique identifier provided by your brand. The user identifier may be one of the following: "IDFA", "AAID", "LiveRamp ID", or "Criteo Cookie ID".
+
+For onsite display campaigns choose the "CustomerID" identifier.
 
 .. setting-criteo-identifier-type-end
 
