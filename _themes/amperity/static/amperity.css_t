@@ -4370,14 +4370,14 @@ nav.nav-main {
   -webkit-padding-start: 10px; }
   .nav-links a {
     display: inline-block;
-    color: inherit;
+    color: #ffffff;
     transition: all 0.4s ease; }
   .nav-links li {
     display: block;
     clear: both; }
   .nav-links a:hover,
   .nav-links .is-active a {
-    color: #dff200; }
+    color: #caefef; }
 
 @media (max-width: 1060px) {
   .nav-links {
@@ -4413,9 +4413,9 @@ nav.nav-main {
     padding-bottom: 3px;
     border-bottom: 2px solid transparent; }
     .nav-link a:hover {
-      border-bottom: 2px solid #dff200; }
+      border-bottom: 2px solid #caefef; }
   .nav-link.is-active a {
-    border-bottom: 2px solid #dff200; } }
+    border-bottom: 2px solid #caefef; } }
 .sublinks {
   margin: 0;
   clear: both;
@@ -4439,7 +4439,7 @@ nav.nav-main {
     clear: both; }
   .sublinks a:hover,
   .sublinks .is-active a {
-    color: #5a5f66; }
+    color: #ffffff; }
 
 @media (max-width: 1060px) {
   .sublinks {
