@@ -18,12 +18,12 @@ Enable predictive models
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-predicted-models-start
-   :end-before: .. term-predicted-models-end
+   :start-after: .. term-predictive-models-start
+   :end-before: .. term-predictive-models-end
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-predicted-attribute-start
-   :end-before: .. term-predicted-attribute-end
+   :start-after: .. term-predictive-attribute-start
+   :end-before: .. term-predictive-attribute-end
 
 .. add-predicted-models-caution-start
 
