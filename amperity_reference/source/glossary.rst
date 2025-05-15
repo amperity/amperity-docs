@@ -525,21 +525,6 @@ A
       :end-before: .. term-azure-data-factory-end
 
 
-.. _a-azure-data-lake-storage:
-
-**Azure Data Lake Storage**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-azure-data-lake-storage-start
-      :end-before: .. term-azure-data-lake-storage-end
-
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-azure-data-lake-storage-gen1-start
-      :end-before: .. term-azure-data-lake-storage-gen1-end
-
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-azure-data-lake-storage-gen2-start
-      :end-before: .. term-azure-data-lake-storage-gen2-end
-
 .. _a-azure-data-share:
 
 **Azure Data Share**

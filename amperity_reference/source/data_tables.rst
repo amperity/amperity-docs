@@ -1156,7 +1156,7 @@ The **EUID** table contains the following columns:
 
 .. _data-tables-predicted-event-propensity:
 
-Event propensity
+Event Propensity
 ==================================================
 
 .. TODO: Update the terms.rst entry after this moves into amperity-docs.
@@ -3633,7 +3633,6 @@ Unified Compliance
      - A series of column names. Each added PII column matches the name of a column in which matching records were found.
 
 .. data-tables-unified-compliance-table-end
-
 
 
 .. _data-tables-unified-compliance-overview-table:
