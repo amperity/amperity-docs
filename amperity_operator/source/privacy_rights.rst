@@ -19,7 +19,7 @@ Privacy rights
 
 .. privacy-rights-overview-start
 
-A privacy rights workflow can help your organization stay in compliance with data protection and privacy regulations, such as those required by California Consumer Privacy Act (CCPA) or General Data Protection Regulation (GDPR).
+A privacy rights workflow can help your organization stay in compliance with data protection and privacy regulations, such as those required by California Consumer Privacy Act (CCPA), General Data Protection Regulation (GDPR), or Personal Information Protection and Electronic Documents Act (PIPEDA).
 
 * .. include:: ../../shared/terms.rst
      :start-after: .. term-ccpa-start
