@@ -689,7 +689,6 @@ The following sections provide examples for load settings and load operations by
 
 * :ref:`couriers-example-apache-avro`
 * :ref:`couriers-example-apache-parquet`
-* :ref:`couriers-example-campaign-monitor`
 * :ref:`couriers-example-cbor`
 * :ref:`couriers-example-csv`
 * :ref:`couriers-example-json`
