@@ -969,6 +969,7 @@ The identifier type. The correct value depends on the type of campaign.
 For offsite campaigns must be one of the following identifiers:
 
 * Use "Email" to build audience segments using email addresses.
+* Use "IdentityLink" to build audience segments using LiveRamp identity graph data.
 * Use "UserIdentifier" to build audience segments using a unique identifier provided by your brand. The user identifier may be one of the following: "IDFA", "AAID", "LiveRamp ID", or "Criteo Cookie ID".
 
 For onsite display campaigns choose the "CustomerID" identifier.
