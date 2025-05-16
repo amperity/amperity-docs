@@ -32,7 +32,7 @@ Configure destination for MoEngage
 
 You can configure Amperity to send CSV files to |destination-name| for the following import types:
 
-* A list of users who are already registered on |destination-name|.
+* A list of users who are registered on |destination-name|.
 * A list of anonymous users who are not registered on |destination-name|.
 * Standard events, such as campaign interactions, along with user-defined events.
 
@@ -107,7 +107,7 @@ Get details
 
           <event-file-name>_{{now|format:'dd-MM-yyyy'}}.csv
 
-       .. tip:: Use the same name for "<event-file-name>" as the name of the event type in |destination-name|.
+       .. tip:: Use the same name for "<event-file-name>" in the filename template as the name of the event type in |destination-name|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -222,13 +222,6 @@ Add destination
           |checkmark-required| **Required**
 
           Enable header rows.
-
-
-       **S3 prefix**
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-amazon-s3-prefix-start
-             :end-before: .. setting-amazon-s3-prefix-end
-
 
 
    * - .. image:: ../../images/steps-05.png
