@@ -4118,6 +4118,15 @@ A mobile interactions table is represents the history a customer has with mobile
 .. term-mobile-interactions-table-end
 
 
+**MoEngage**
+
+.. term-moengage-start
+
+MoEngage is a cross-channel customer engagement platform built for marketers and product owners who value agility over complexity. Use real-time insights and personalized cross-channel communications to adapt to evolving customer expectations.
+
+.. term-moengage-end
+
+
 **Monetate**
 
 .. term-monetate-start

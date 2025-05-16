@@ -2837,6 +2837,14 @@ M
       :end-before: .. term-mobile-interactions-table-end
 
 
+.. _m-moengage:
+
+**MoEngage**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-moengage-start
+      :end-before: .. term-moengage-end
+
+
 .. _m-monetate:
 
 **Monetate**
