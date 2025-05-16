@@ -3875,22 +3875,6 @@ R
       :end-before: .. term-request-datasource-end
 
 
-.. _r-request_email:
-
-**request email**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-request-email-start
-      :end-before: .. term-request-email-end
-
-
-.. _r-request_id:
-
-**request id**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-request-id-start
-      :end-before: .. term-request-id-end
-
-
 .. _r-request_strategy:
 
 **request strategy**
@@ -4312,15 +4296,7 @@ S
 **SoundCommerce**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-soundcommerce-start
-      :end-before: .. term-soundcommerce-end
-
-
-.. _s-source-database-table:
-
-**source database table**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-source-database-table-start
-      :end-before: .. term-source-database-table-end
+      :end-before: .. term-soundcommerce-end 
 
 
 .. _s-sources-id:
