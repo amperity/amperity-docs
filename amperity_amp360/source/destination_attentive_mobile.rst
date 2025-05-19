@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Attentive
-.. |what-send| replace:: audience segments
+.. |what-send| replace:: email address **OR** phone numbers, but not both, in the same audience
 .. |sftp-type| replace:: **attentive-mobile**
 .. |sftp-hostname| replace:: **sftp.attentivemobile.com**
 .. |file-format| replace:: CSV
