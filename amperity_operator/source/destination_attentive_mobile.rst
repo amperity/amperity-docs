@@ -6,7 +6,7 @@
 .. |plugin-name| replace:: "Attentive"
 .. |credential-type| replace:: "attentive-mobile"
 .. |required-credentials| replace:: "username", "hostname", and "passphrase"
-.. |what-send| replace:: CSV files
+.. |what-send| replace:: CSV files with email addresses **OR** phone numbers, but not both,
 .. |where-send| replace:: |destination-name|
 .. |sftp-hostname| replace:: "ftp5.attentivemobile.com"
 .. |remote-folder| replace:: "/folder"

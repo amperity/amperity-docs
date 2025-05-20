@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Attentive
-.. |what-send| replace:: email address and phone numbers
+.. |what-send| replace:: email address **OR** phone numbers, but not both, in the same audience
 .. |what-enable| replace:: **email** or **phone**
 .. |attributes-sent| replace:: |destination-name| requires email addresses *or* phone numbers. You must choose one (and not the other). There are no optional fields.
 .. |allow-for-what| replace:: audience segments
@@ -29,9 +29,9 @@ Send audiences to Attentive
 
 You can use segments and campaigns to manage audience segments in |destination-name|. Each audience in |destination-name| has two components: subscribers and segments.
 
-An audience segment is the list of customers to which you will send SMS messages and/or emails. Amperity is your source of truth for your customers who will belong to audience segments in |destination-name|. Send this list to |destination-name| from Amperity.
+An audience segment is the list of customers to which you will send SMS messages or emails. Amperity is your source of truth for your customers who will belong to audience segments in |destination-name|. Send this list to |destination-name| from Amperity.
 
-A subscriber is a customer for which you have an opt-in/out status. You can only send SMS messages and/or emails to customers who have opted-in. |destination-name| is your source of truth for your audience's opt-in/out and subscriber status.
+A subscriber is a customer for which you have an opt-in out status. You can only send SMS messages or emails to customers who have opted-in. |destination-name| is your source of truth for your audience's opt-in or opt-out and subscriber status.
 
 .. channel-attentive-end
 
@@ -182,19 +182,11 @@ Configure default attributes
 
 .. channel-attentive-configure-default-attributes-start
 
-|destination-name| has the following requirements for attributes.
+Send a CSV file with one of the following attributes to |destination-name|:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 1
+* **email**
+* **phone**
 
-   * - **Source attribute**
-     - **Destination attribute**
-
-   * - email
-     - email
-
-   * - phone
-     - phone
+.. important:: An email address *and* a phone number cannot both be in the same CSV file.
 
 .. channel-attentive-configure-default-attributes-end

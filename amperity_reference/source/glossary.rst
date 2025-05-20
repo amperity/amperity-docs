@@ -1068,14 +1068,6 @@ C
       :end-before: .. term-courier-group-schedule-end
 
 
-.. _c-courier-plugin:
-
-**courier plugin**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-courier-plugin-start
-      :end-before: .. term-courier-plugin-end
-
-
 .. _c-criteo:
 
 **Criteo**
@@ -3047,14 +3039,6 @@ O
    .. include:: ../../shared/terms.rst
       :start-after: .. term-one-and-done-start
       :end-before: .. term-one-and-done-end
-
-
-.. _o-oracle-bronto:
-
-**Oracle Bronto** (Deprecated)
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-oracle-bronto-start
-      :end-before: .. term-oracle-bronto-end
 
 
 .. _o-oracle-business-analytics:
