@@ -38,7 +38,7 @@ File sizes
 
 .. format-psv-file-sizes-start
 
-The size of a PSV file cannot exceed 10 GB. A PSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity. The total number of PSV files in a single ingest job cannot exceed 500k.
+The size of a PSV file cannot exceed 10 GB. A PSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity. The total number of PSV files in a single ingest job cannot exceed 500,000.
 
 .. format-psv-file-sizes-end
 

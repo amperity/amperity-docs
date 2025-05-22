@@ -38,7 +38,7 @@ File sizes
 
 .. format-csv-file-sizes-start
 
-The size of a CSV file cannot exceed 10 GB. A CSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity. The total number of CSV files in a single ingest job cannot exceed 500k.
+The size of a CSV file cannot exceed 10 GB. A CSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity. The total number of CSV files in a single ingest job cannot exceed 500,000.
 
 .. format-csv-file-sizes-end
 
