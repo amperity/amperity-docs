@@ -38,7 +38,7 @@ File sizes
 
 .. format-tsv-file-sizes-start
 
-The size of a TSV file should not exceed 10 GB. A TSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity.
+The size of a TSV file cannot exceed 10 GB. A TSV file that is larger than 10 GB must be split into smaller files before it is made available to Amperity. The total number of TSV files in a single ingest job cannot exceed 500,000.
 
 .. format-tsv-file-sizes-end
 
