@@ -379,7 +379,7 @@ Add passthrough tables
 
 .. realtime-add-passthrough-tables-start
 
-Add real-time tables to databases as passthrough tables. Open a database in edit mode. For each real-time table, set the build mode to "Passthrough" and select the real-time table from the **Source tables** dropdown. Click **Next** and then **Save**.
+Add real-time tables to databases as passthrough tables. Open a database in edit mode. For each real-time table, set the build mode to "Passthrough" and select the real-time table from the **Source tables** dropdown. Select all of the fields in the real-time table. Click **Next** and then **Save**.
 
 .. realtime-add-passthrough-tables-end
 
