@@ -45,7 +45,7 @@ These layers are shown in the following diagram:
 
 The batch layer builds and maintains customer profiles that are durable and complete over long timeframes. The batch layer uses semantic tagging to standardize data into a collection of standard output tables for customer profiles, transactions, loyalty programs, product catalogs, and other types of data that your brand has made available to Amperity.
 
-The streaming layer makes data available for use alongside those profiles to support use cases that cannot wait for the batch layer to finish maintaining customer profiles. To support real-time use cases, configure a real-time table for each stream, and then use a query to build a profile API endpoint that can be accessed programmatically by downstream workflows.
+The streaming layer makes data available for use alongside those profiles to support use cases that cannot wait for the batch layer to finish maintaining customer profiles. To support real-time use cases, configure a real-time table for each stream, add real-time tables to a database as passthrough tables, and then use a query to build a profile API endpoint that can be accessed programmatically by downstream workflows.
 
 .. note:: The batch layer may also contain data that has arrived through the streaming layer. To support adding streamed data to your brand's customer profiles, configure a courier to pull the streamed data into the workflow.
 
@@ -125,6 +125,7 @@ To enable a real-time workflow:
 #. :ref:`Configure real-time table <realtime-configure-real-time-table>`
 #. :ref:`Create API key and access token <realtime-configure-api-key-access-token>`
 #. :ref:`Configure the POST request <realtime-configure-post-request>`
+#. :ref:`Add real-time tables to database as passthrough table <realtime-add-passthrough-tables>`
 #. :ref:`Run each database for which the streaming endpoint will be included <realtime-run-database>`
 #. :ref:`Start streaming data to the streaming endpoint <realtime-stream-data>`
 #. :ref:`Build a query against the real-time table, and then verify data is returned <realtime-build-query>`
@@ -371,6 +372,18 @@ The ``--data-raw`` section contains the list of fields and field values that are
 .. realtime-configure-post-request-end
 
 
+.. _realtime-add-passthrough-tables:
+
+Add passthrough tables
+--------------------------------------------------
+
+.. realtime-add-passthrough-tables-start
+
+Add real-time tables to databases as passthrough tables. Open a database in edit mode. For each real-time table, set the build mode to "Passthrough" and select the real-time table from the **Source tables** dropdown. Click **Next** and then **Save**.
+
+.. realtime-add-passthrough-tables-end
+
+
 .. _realtime-run-database:
 
 Run database
@@ -378,7 +391,7 @@ Run database
 
 .. realtime-run-database-start
 
-Run each of the databases from which the real-time table will be available to queries. Use the **Normal** run option, which will refresh the database, add the real-time table, and make the real-time table available to accept data from the streaming endpoint.
+Run each of the databases from which the real-time table will be available to queries. Use the **Normal** run option, which will refresh the database and make the real-time table available to accept data from the streaming endpoint.
 
 .. realtime-run-database-end
 
