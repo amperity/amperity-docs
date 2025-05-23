@@ -2,12 +2,12 @@
 
 
 .. |destination-name| replace:: MoEngage
-.. |plugin-name| replace:: "Amazon S3"
+.. |plugin-name| replace:: "MoEngage"
 .. |credential-type| replace:: "iam-role-to-role"
 .. |required-credentials| replace:: "iam-role-to-role"
 .. |what-send| replace:: CSV file in UTF-8 format
 .. |where-send| replace:: an Amazon S3 bucket
-.. |filter-the-list| replace:: "amaz"
+.. |filter-the-list| replace:: "moen"
 
 
 .. meta::
