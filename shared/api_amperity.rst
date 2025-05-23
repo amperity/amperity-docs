@@ -7,9 +7,6 @@
 
 .. term-http-methods-start
 
-Available Endpoints
---------------------------------------------------
-
 .. image:: ../../images/api-request-get-audit-events.png
    :width: 440 px
    :alt: GET /audit-events
