@@ -22,16 +22,16 @@ About the Amperity API
 
 The Amperity API enables programmatic access to your Amperity tenant by using a collection of RESTful endpoints that support API-first use cases for integrations, applications, and custom workflows. Use Amperity API endpoints to streamline workflows, enhance marketing strategies, and unlock the value of your brand's customer data.
 
-.. start-here-endpoints-start
+
+.. _start-here-endpoints:
+
+Available Endpoints
+==================================================
 
 .. include:: ../../shared/api_amperity.rst
    :start-after: .. term-http-methods-start
    :end-before: .. term-http-methods-end
 
-.. start-here-endpoints-end
-
-
-.. start-here-end
 
 .. _start-here-openapi-specification:
 
@@ -148,7 +148,3 @@ Rate Limits
 .. include:: ../../amperity_api/source/rate_limits.rst
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
-
-
-.. _start-here-endpoints:
-
