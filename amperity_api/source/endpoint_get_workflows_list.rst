@@ -442,6 +442,4 @@ A **200 OK** response contains the following parameters.
 
        .. note:: This is the same value that is visible from the **Type** box on each individual workflow page and from the **Type** column on the **Workflows** page.
 
-
 .. endpoint-get-workflows-list-response-parameters-end
-
