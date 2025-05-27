@@ -213,15 +213,43 @@ Each **Summary** tab contains the following details:
       :align: left
       :class: no-scaled-link
 
-   The revenue tree shows the following segment insights:
+   The revenue tree is built as a series of calculations from fields in the **Transactions Attributes Extended** table. The revenue tree has the following segment insights:
 
-   * Net revenue
-   * Customers
-   * Revenue per customer
-   * Orders per customer
-   * Average order value
-   * Units per transaction
-   * Average unit revenue
+
+   * **Net revenue**
+
+     Net revenue is the sum of all order revenue in the past year.
+
+
+   * **Customers**
+
+     All customers, unique by Amperity ID, in the past year.
+
+
+   * **Revenue per customer**
+
+     Revenue per customer is net revenue divided by customers.
+
+
+   * **Orders per customer**
+
+     Orders per customer is order frequency divided by customers.
+
+
+   * **Average order value**
+
+     Average order value is net revenue divided by order frequency.
+
+
+   * **Units per transaction**
+
+     Units per transaction is the quantity of purchased items divided by order frequency.
+
+
+   * **Average unit revenue**
+
+     Average unit revenue is net revenue divided by the quanity of purchased items.
+
 
    .. note:: Historical revenue represents the sum of order revenue for all customers who made at least one purchase during the previous year.
 
