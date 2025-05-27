@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900);
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -110,7 +110,7 @@ table {
 /* -- IMPORTANT -- color is the color of the text on div.document;
 	 must be $amperity-brand-slate or $amperity-brand-slate */
 body {
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.00em;
@@ -4301,7 +4301,7 @@ nav.nav-main {
     margin: 0;
     padding: 15px 0 0 20px;
     text-transform: uppercase;
-    font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
@@ -4333,7 +4333,7 @@ nav.nav-main {
     margin: 0;
     padding: 15px 0 0 20px;
     text-transform: uppercase;
-    font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
@@ -4361,7 +4361,7 @@ nav.nav-main {
   color: #ffffff;
   background: #0c0c0c;
   line-height: 2;
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 500;
   font-size: 15px;
   text-transform: none;
@@ -4423,7 +4423,7 @@ nav.nav-main {
   color: #0c0c0c;
   background: #e8edef;
   line-height: 2;
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 500;
   font-size: 15px;
   text-transform: none;
@@ -4642,7 +4642,7 @@ svg.svg-inline--fa.fa-search.fa-w-16.icon-search {
   background: white;
   font-size: 15px;
   color: #0c0c0c;
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 500; }
   @media (min-width: 1060px) {
     .nav-docs {
