@@ -11,11 +11,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Versions
+        Amperity API versions
 
 
 ==================================================
-Amperity API Versions
+Amperity API versions
 ==================================================
 
 .. versioning-start

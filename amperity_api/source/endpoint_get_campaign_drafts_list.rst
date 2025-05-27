@@ -11,7 +11,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        GET /campaigns
+        GET /campaign-drafts
 
 
 ==================================================

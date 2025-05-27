@@ -420,5 +420,4 @@ A **200 OK** response contains the following parameters.
 
        .. note:: This parameter only applies to workflows that use SQL to write tables to storage.
 
-
 .. endpoint-post-workflows-stop-response-parameters-end
