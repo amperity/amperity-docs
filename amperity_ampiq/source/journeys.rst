@@ -47,9 +47,9 @@ The following sections describe the steps you'll follow to set up and configure 
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Journeys** canvas. This is available from the **Campaigns** page when you click the **Create** button in the top right. Select **Journeys**.
+     - Open the **Journeys** canvas. This is available on the **Activations** page. Select the **Journeys** button on the top left and then click **Create journey**.
 
-       Add a name for the journey and a description.
+       Add a name for the journey.
 
 
    * - .. image:: ../../images/steps-02.png

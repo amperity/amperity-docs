@@ -84,10 +84,42 @@ Journey setup
 
 **Journeys** require that segments are available and that at least one destination has been configured.
 
-Access the **Journeys** canvas from the **Campaigns** page. Click **Create campaign**, and then select **Journey**.
+Access the **Journeys** canvas by selecting **Journeys** at the top of the **Activations** page, and then click **Create journey**.
 
 .. journeys-setup-end
 
+
+Name a journey
+--------------------------------------------------
+
+.. journeys-setup-name-start
+
+Enter a name in the **Journey Name** field.
+
+A journey should be assigned a name that makes it easy to find and for other Amperity users to understand.
+
+.. journeys-setup-name-end
+
+.. journeys-setup-name-tip-start
+
+.. tip:: Use good naming patterns to ensure that you can always find your journeys in the various applications to which you will send them. The journey name will *always* appear in the filename that is sent to any destination.
+
+   Avoid duplication between journey and treatment group names.
+
+   Avoid using the names of destinations as journey names unless the journey is sent to *only* that destination.
+
+   Use a naming pattern that ensures the journey name works across every treatment group that is configured within any sub-audience.
+
+   If brand names and/or region names apply to all sub-audiences in the journey, consider using them within the journey name.
+
+   Some examples:
+
+   * "Birthdays_Under_40"
+   * "Acme_Churn"
+   * "Churn_HighValue_Early"
+   * "Socktown_High_AOV"
+
+.. journeys-setup-name-tip-end
 
 .. _journeys-setup-who-enters:
 
@@ -364,7 +396,7 @@ This section describes tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-edit-starting-audience`
 * :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-interact`
-* :ref:`journeys-howtos-name`
+* :ref:`journeys-howtos-rename`
 * :ref:`journeys-howtos-set-run-frequency`
 * :ref:`journeys-howtos-view-node-configuration`
 
@@ -673,47 +705,23 @@ The **Journeys** canvas supports the following user interactions:
 .. journeys-howtos-interact-end
 
 
-.. _journeys-howtos-name:
+.. _journeys-howtos-rename:
 
-Name a journey
+Rename a journey
 --------------------------------------------------
 
-.. journeys-howtos-name-start
+.. journeys-howtos-rename-start
 
 A journey should be assigned a name that makes it easy to find and for other users of Amperity to understand.
 
-.. journeys-howtos-name-end
+.. journeys-howtos-rename-end
 
-.. journeys-howtos-name-tip-start
+.. journeys-howtos-rename-steps-start
 
-.. tip:: Use good naming patterns to ensure that you can always find your journeys in the various applications to which you will send them. The journey name will *always* appear in the filename that is sent to any destination.
+#. From the **Journeys** canvas, click into the text of the current journey name at the top.
+#. Enter a new name.
 
-   Avoid duplication between journey and treatment group names.
-
-   Avoid using the names of destinations as journey names unless the journey is sent to *only* that destination.
-
-   Use a naming pattern that ensures the journey name works across every treatment group that is configured within any sub-audience.
-
-   If brand names and/or region names apply to all sub-audiences in the journey, consider using them within the journey name.
-
-   Some examples:
-
-   * "Birthdays_Under_40"
-   * "Acme_Churn"
-   * "Churn_HighValue_Early"
-   * "Socktown_High_AOV"
-
-.. journeys-howtos-name-tip-end
-
-**To name a journey** 
-
-.. journeys-howtos-name-steps-start
-
-#. From the **Journeys** canvas, open the **Journey setup** sidebar.
-#. In the **Name** field, enter a name for the journey.
-#. In the **Description** field you can set a journey description.
-
-.. journeys-howtos-name-steps-end
+.. journeys-howtos-rename-steps-end
 
 
 .. _journeys-howtos-set-run-frequency:
