@@ -12,7 +12,7 @@
 
 .. databases-font-awesome-picker-useany-start
 
-You may use any icon in the |ext_font_awesome| library.
+You may use many icons in the `Font Awesome <https://fontawesome.com/icons>`__ |ext_link| library.
 
 Icon identifiers start with ``fa-``, and then a unique string. For example:
 
