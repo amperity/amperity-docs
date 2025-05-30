@@ -3,14 +3,23 @@
 ..
 
 
+.. vale off
 
 **TEMPLATE SECTIONS FOR CHANNELS**
 
+.. vale on
+
+.. vale off
+
 .. channels-overview-list-intro-start
 
-This topic describes the steps that are required to configure campaigns to send |what-send| to |destination-name|.
+This topic describes the steps required to configure campaigns to send |what-send| to |destination-name|.
 
 .. channels-overview-list-intro-end
+
+.. vale on
+
+.. vale off
 
 .. channels-overview-note-start
 
@@ -18,15 +27,20 @@ This topic describes the steps that are required to configure campaigns to send 
 
 .. channels-overview-note-end
 
+.. vale on
 
+
+.. vale off
 
 **BUILD SEGMENT**
 
+.. vale on
+
 .. channels-build-segment-start
 
-Use the **Segment Editor** to build any audience using a series of dropdowns and picklists.
+Use the **Segment Editor** to build any audience using a series of drop-downs and picklists.
 
-As you define the attribute profile for an audience be sure to refresh segment insights to see how many customers match your audience and to see how much value they bring to your business.
+As you define the attribute profile for an audience be sure to refresh segment insights to view audience size and to see the value it brings to your business.
 
 When the segment is ready, activate it, and then use it use it in a campaign to send to your preferred destinations for customer activation.
 
@@ -36,7 +50,7 @@ When the segment is ready, activate it, and then use it use it in a campaign to 
 
 You can use any attribute that is in your customer 360 database to define your audience.
 
-When the list of customers who belong to this audience is sent to |destination-name| as part of a campaign you will be required to choose specific attributes to send.
+When sending the list of customers who belong to this audience to |destination-name| as part of a campaign you must choose specific attributes to send.
 
 |destination-name| supports the following attributes: |what-send|.
 
@@ -50,19 +64,23 @@ When the list of customers who belong to this audience is sent to |destination-n
 .. channels-build-segment-steps-start
 
 #. From the **Segments** tab, click **Create Segment**. This opens the **Segment Editor**.
-#. Select a table that contains the attributes you want to use, and then use the dropdowns, picklists, conditions, and values to define the attribute profile.
 
-   .. note:: The **Customer 360** table is the default. For many segments it's the only table you will need.
+#. Select a table that has the attributes you want to use, and then use the drop-downs, picklists, conditions, and values to define the attribute profile.
+
+   .. note:: The **Customer 360** table is the default.
+
 #. When more than one attribute is present within an attribute group use **AND** or **OR** to filter values on more than one condition.
-#. Click **Add section** to add additional attribute groups.
 
-   Each attribute group has the same requirement for using **AND** or **OR** to filter values. There is another **AND** versus **OR** choice that must be made in-between each each attribute group.
+#. Click **Add section** to add more attribute groups.
 
-#. For each attribute group that is added to the segment, select the database table that contains the attributes, and then select attributes.
+   Each attribute group has the same ability to use **AND** or **OR** to filter values for attributes within the attribute group and between each attribute group.
 
-   .. tip:: Any table that is listed in the lower right may be used to build the attribute profile. Open the **Data Explorer** to learn more about the individual attributes within these tables.
+#. For each attribute group added to the segment, select the database table that has the attributes, and then select attributes.
 
-#. To view updated segment insights based on the currently-defined attributes, click **REFRESH**. This will validate the segment, after which segment insights are updated to match the condition-value pairs associated to all of the attributes in the segment.
+   .. tip:: Use any table shown in the lower right to build the attribute profile. Open the **Data Explorer** to learn more about the individual attributes within these tables.
+
+#. To view updated segment insights, click **REFRESH**. This validates the segment, after which segment insights update to match the condition-value pairs for the attributes in the segment.
+
 #. When the segment returns the parameters that meets the goals for your campaign, click **Save**, and then give your segment a name.
 
 .. channels-build-segment-steps-end
@@ -77,31 +95,33 @@ When the list of customers who belong to this audience is sent to |destination-n
 
 .. channels-configure-default-attributes-start
 
-Each unique destination that is configured to send data to |destination-name| may be configured to have a set of default attributes that will sent to |destination-name| every time this destination is associated with a treatment group in an active campaign.
+Each unique destination configured to send treatment group audiences to |destination-name| has a set of default attributes.
 
-Default attributes may be configured for a destination by clicking the **Default attributes** link next to the **Create campaign** button on the **Campaigns** page.
+Configure default attributes by clicking the **Default attributes** link next to the **Create campaign** button on the **Campaigns** page.
 
-The source table is set to **Merged Customers** for most attributes. Your brand may configure each attribute to be pulled from the source table that best represents how your brand wants to use the attribute in |destination-name|.
+The source table defaults to the **Merged Customers** table for most attributes. This is configurable.
 
 .. channels-configure-default-attributes-end
 
 
 
 
-
+.. vale off
 
 **BUILD CAMPAIGN**
 
+.. vale on
+
 .. channels-build-campaign-start
 
-Use the campaign editor to configure Amperity to send data to |destination-name|. Add a segment, define exclusions and sub-audiences, and then define the audiences that will be sent to |destination-name|.
+Use the campaign editor to configure Amperity to send data to |destination-name|. Add a segment, define exclusions and sub-audiences, and then define each audience sent to |destination-name|.
 
 .. channels-build-campaign-end
 
 
 .. channels-build-campaign-important-email-or-phone-start
 
-.. important:: |destination-name| supports using |what-send| to identify subscribers. However, a list sent to |destination-name| from Amperity cannot contain a mixture of the two, only one or the other. Verify which attribute you are using within |destination-name| to identify subscribers, and then ensure that only the matching attribute is selected.
+.. important:: |destination-name| supports using |what-send| to identify subscribers. A list sent to |destination-name| from Amperity cannot contain a mixture of the two, only one or the other. Verify which attribute you are using within |destination-name| to identify subscribers, and then ensure to select only the matching attribute.
 
 .. channels-build-campaign-important-email-or-phone-end
 
@@ -147,11 +167,11 @@ Assign |destination-name| as a destination for at least one treatment group.
 
 .. channels-build-campaign-steps-edit-attributes-start
 
-Click **Edit attributes** to review the attributes that Amperity will send to |destination-name|.
+Click **Edit attributes** to review the attributes that Amperity sends to |destination-name|.
 
 |attributes-sent|
 
-Amperity pre-selects the list of attributes that may be sent to |destination-name|. The **Edit attributes** page for |destination-name| is similar to:
+Amperity pre-selects the list of attributes sent to |destination-name|. The **Edit attributes** page for |destination-name| is similar to:
 
 .. channels-build-campaign-steps-edit-attributes-end
 
@@ -159,7 +179,7 @@ Amperity pre-selects the list of attributes that may be sent to |destination-nam
 
 .. channels-build-campaign-steps-edit-attributes-note-start
 
-.. note:: The **Merged Customers** table is the default table from which data is sent to |destination-name|, even though segments are often built from the **Customer 360** table. This is by design. The **Merged Customers** table is the underlying table for customer profile data and is the source for all customer profile data that exists within the **Customer 360** table.
+.. note:: The **Merged Customers** table is the default table for sending data to |destination-name|, even though segments are often built against the **Customer 360** table. This is by design. The **Merged Customers** table is the underlying table for customer profile data and is the source for all customer profile data that exists within the **Customer 360** table.
 
 .. channels-build-campaign-steps-edit-attributes-note-end
 

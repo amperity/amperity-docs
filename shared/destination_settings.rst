@@ -3,6 +3,7 @@
 .. 
 
 
+.. vale off
 
 **LOREM IPSUM**
 
@@ -26,8 +27,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 .. setting-lorem-ipsum-alt-end
 
+.. vale on
 
-**STEPS**
+
+
+**Steps**
 
 **Step 01a**
 
@@ -43,8 +47,8 @@ Open the **Destinations** page, and then click the **Add destination** button.
 
 To configure a destination for |destination-name|, do one of the following:
 
-#. Click the row in which |destination-name| is located. Destinations are listed alphabetically and you can scroll up and down the list.
-#. Search for |destination-name|. Start typing |filter-the-list|. The list will filter to show only matching destinations. Select |plugin-name|.
+#. Click the row in which |destination-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+#. Search for |destination-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
 
 .. destinations-steps-add-destinations-select-end
 
@@ -84,17 +88,17 @@ Configure the following settings, and then click "Save".
 
 .. destinations-steps-business-users-start
 
-After this destination is configured:
+After configuring this destination users may use:
 
-* Use orchestrations to send query results
-* Use orchestrations and campaigns to send audiences
-* Use orchestrations and campaigns to send offline events
+* Orchestrations to send query results
+* Orchestrations and campaigns to send audiences
+* Orchestrations and campaigns to send offline events
 
 .. destinations-steps-business-users-end
 
 .. destinations-steps-business-users-orchestration-only-start
 
-After this destination is configured, users may configure Amperity to use orchestrations to send query results |destination-name|.
+After configuring this destination users may use orchestrations to send query results |destination-name|.
 
 .. destinations-steps-business-users-orchestration-only-end
 
@@ -103,7 +107,7 @@ After this destination is configured, users may configure Amperity to use orches
 
 **COMMON API**
 
-This section contains details that are common to API-based destinations.
+Details common to API-based destinations.
 
 **API allow-for note**
 
@@ -117,7 +121,7 @@ Changes to |allow-for-what| are not immediately available in |destination-name|.
 
 **COMMON**
 
-This section contains settings that are identical across more than one destination.
+Settings across more than one destination.
 
 .. TODO: Compare Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP for common settings.
 
@@ -141,15 +145,15 @@ Applies to: all destinations.
 
 By default a destination is available to all users who have permission to view personally identifiable information (PII).
 
-Enable the **Admin only** checkbox to restrict access to only users assigned to the **Datagrid Operator** and **Datagrid Administrator** policies. 
+Enable the **Admin only** checkbox to restrict access to only users assigned to the **Datagrid Operator** and **Datagrid Administrator** policies.
 
-Enable the **PII setting** checkbox to allow users with limited access to PII access to this destination.
+Enable the **PII setting** checkbox to allow limited access to PII for this destination.
 
 .. setting-common-business-user-access-allow-end
 
 .. setting-common-business-user-access-restrict-pii-start
 
-Restricted PII access is enabled when the **Restrict PII access** policy option that prevents users who are assigned to that option from viewing data that is marked as PII anywhere in Amperity and from sending that data to any downstream workflow.
+Use the **Restrict PII access** policy option to prevent users from viewing data marked as PII anywhere in Amperity and from sending data to downstream workflows.
 
 .. setting-common-business-user-access-restrict-pii-end
 
@@ -163,11 +167,11 @@ The compression format to apply to the file. May be one of "GZIP", "None", "TAR"
 
 .. setting-common-compression-end
 
-**Configure** (in intro)
+**Configure** in intro
 
 .. setting-common-file-configure-start
 
-Amperity can be configured to send |what-send| to |where-send|.
+Configure Amperity to send |what-send| to |where-send|.
 
 .. setting-common-file-configure-end
 
@@ -189,11 +193,16 @@ The escape character to use in the file output. Applies to CSV, TSV, PSV, and cu
 
 .. setting-common-escape-character-end
 
+.. vale off
+
 .. setting-common-escape-character-unspecified-start
 
-When an escape character is not specified *and* the quote mode is "None" files may be sent with unescaped and unquoted data. When an escape character is not specified, you should select a non-"None" option as the quote mode.
+When an escape character is not specified *and* the quote mode is "None" files are sent with unescaped and unquoted data. When an escape character is not specified, you should select a non-"None" option as the quote mode.
 
 .. setting-common-escape-character-unspecified-end
+
+.. vale on
+
 
 **File format**
 
@@ -211,11 +220,16 @@ Some file formats allow a custom delimiter. Choose the "Custom delimiter" file f
 
 .. setting-common-file-format-custom-delimiter-end
 
+.. vale off
+
 .. setting-common-file-format-apache-parquet-start
 
 The extension for Apache Parquet files may be excluded from the directory name.
 
 .. setting-common-file-format-apache-parquet-end
+
+.. vale on
+
 
 **Filename template**
 
@@ -225,7 +239,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
    :start-after: .. term-filename-template-start
    :end-before: .. term-filename-template-end
 
-**Get details** (common intro)
+**Get details** common intro
 
 .. setting-common-get-details-start
 
@@ -235,11 +249,9 @@ Review the following details before configuring credentials for |destination-nam
 
 .. setting-common-get-details-file-specific-start
 
-File-specific details to ensure that all files that are sent from Amperity are configured correctly for downstream workflows.
+Review file-specific details to ensure correct configuration for all files sent from Amperity to downstream workflows. For example, configure Apache Parquet to exclude the extension from the directory name. Some files require specific escape characters and others may have unique delimiters.
 
-For example, Apache Parquet can be configured to exclude the extension from the directory name, some files require specific escape characters, and others may have unique delimiters.
-
-Each file that is sent from Amperity may be configured for its own unique requirements.
+Each file sent from Amperity has its own unique requirements.
 
 .. setting-common-get-details-file-specific-end
 
@@ -265,7 +277,7 @@ The line ending to use in file output. May be one of "LF" or "CRLF".
 
 **List name**
 
-Applies to ActiveCampaign, Cordial, HubSpot, Klaviyo, Listrak and others. Try to come up with some type of template.
+Applies to ActiveCampaign, Cordial, HubSpot, Klaviyo, Listrak and others. Try to come up with a template.
 
 .. setting-common-list-name-start
 
@@ -277,15 +289,20 @@ The primary key for the audience. Set to |audience-primary-key|.
 
 Applies to Amazon Ads, Google Ads, Google Customer Match, The Trade Desk, Yahoo DSP.
 
+.. vale off
+
 .. setting-common-membership-duration-start
 
-The length of time |duration|, after which a customer will be removed from this audience. This value may be between |duration-value|. Set this value to "0" to remove audience member.
+The length of time |duration|, after which a customer is removed from this audience. This value may be between |duration-value|. Set this value to "0" to remove all audience members.
 
 .. setting-common-membership-duration-end
 
+.. vale on
+
+
 .. setting-common-membership-duration-frequency-start
 
-To ensure customers stay in this audience ensure the frequency at which the audience is sent to |destination-name| is less than the membership duration.
+To ensure customers stay in this audience ensure the frequency at which Amperity sends the audience to |destination-name| is less than the membership duration.
 
 .. setting-common-membership-duration-frequency-end
 
@@ -321,7 +338,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-pgp-public-key-start
 
-The PGP public key that Amperity will use to encrypt files.
+The PGP public key that Amperity uses to encrypt files.
 
 .. setting-common-pgp-public-key-end
 
@@ -337,7 +354,7 @@ The quote mode to use within the file. May be one of "all fields", "all non-NULL
 
 .. setting-common-quote-mode-none-start
 
-Unescaped, unquoted files may occur when quote mode is set to "None" and an escape character is not specified.
+Unescaped, unquoted files may occur when quote mode is "None" and an escape character is not specified.
 
 .. setting-common-quote-mode-none-end
 
@@ -347,21 +364,26 @@ Applies to: Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-remote-folder-start
 
-The remote folder to which Amperity will send data.
+The remote folder to which Amperity sends data.
 
 .. setting-common-remote-folder-end
 
 .. setting-common-remote-folder-forward-slash-start
 
-A "/" (forward slash) must be used as the first character for this value. For example: |remote-folder|. For example: |remote-folder|.
+Use a forward slash--"/"--as the first character for this value. For example: |remote-folder|. For example: |remote-folder|.
 
 .. setting-common-remote-folder-forward-slash-end
 
+.. vale off
+.. off because this sentence needs to show the escape character behavior and using a code block prevents that
+
 .. setting-common-remote-folder-spaces-start
 
-If the path to the remote folder contains a space, use a backslash (\\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
+If the path to the remote folder has a space, use a backslash (\\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
 
 .. setting-common-remote-folder-spaces-end
+
+.. vale on
 
 **Row Number**
 
@@ -375,7 +397,7 @@ Select to include a row number column in the output file. Applies to CSV, TSV, P
 
 .. setting-common-row-number-column-name-start
 
-If **Row Number** is enabled you may use the **Column name** setting to specify the name of the row number column in the output file. The name of this column must be less than 1028 characters and may only contain numbers, letters, underscores, and hyphens. Default value: "row_number".
+Use the **Column name** setting to specify the name of the row number column in the output file. The name of this column must have fewer than 1028 characters and may only contain numbers, letters, underscores, and hyphens. Default value: "row_number".
 
 .. setting-common-row-number-column-name-end
 
@@ -383,7 +405,7 @@ If **Row Number** is enabled you may use the **Column name** setting to specify 
 
 .. setting-common-sandbox-recommendation-start
 
-Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a test audience, and then verify the the results in |destination-name|. After the end-to-end workflow has been verified, push the destination from the sandbox to production.
+Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a test audience, and then verify the results in |destination-name|. After verifying the end-to-end workflow, push the destination from the sandbox to production.
 
 .. setting-common-sandbox-recommendation-end
 
@@ -409,7 +431,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-use-zip64-start
 
-Enable to apply Zip64 data compression to very large files.
+Enable to apply Zip64 data compression to large files.
 
 .. setting-common-use-zip64-end
 
@@ -419,7 +441,7 @@ Enable to apply Zip64 data compression to very large files.
 
 **ACTIVECAMPAIGN**
 
-This section contains settings that are unique to ActiveCampaign.
+Settings unique to ActiveCampaign.
 
 **Audience primary key**
 
@@ -427,9 +449,9 @@ See common settings.
 
 .. setting-active-campaign-email-required-start
 
-A contact in |destination-name| is defined by an email address. A contact may have additional information, but cannot exist without an email address.
+A contact in |destination-name| is an email address. A contact may have more information, but cannot exist without an email address.
 
-Use a query or a campaign to define the information in the email list that will be managed by Amperity.
+Use a query or a campaign to define the information in the email list managed by Amperity.
 
 .. setting-active-campaign-email-required-end
 
@@ -437,13 +459,13 @@ Use a query or a campaign to define the information in the email list that will 
 
 .. setting-active-campaign-group-name-start
 
-The name of the `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| to which Amperity will send data. This group must exist in |destination-name| and must have permission to view and interact with the email list.
+The name of the `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| to which Amperity sends data. This group must exist in |destination-name| and must have permission to view and interact with the email list.
 
 .. setting-active-campaign-group-name-end
 
 .. setting-active-campaign-group-name-access-start
 
-You must log into |destination-name| as a member of the specified user group to have access to the email list that is managed by Amperity.
+You must log into |destination-name| as a member of the specified user group to have access to the email list managed by Amperity.
 
 .. setting-active-campaign-group-name-access-end
 
@@ -451,7 +473,7 @@ You must log into |destination-name| as a member of the specified user group to 
 
 .. setting-active-campaign-list-name-start
 
-The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| that will be managed by Amperity.
+The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| managed by Amperity.
 
 .. setting-active-campaign-list-name-end
 
@@ -461,7 +483,7 @@ The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/36
 
 Enable verbose logging to return log details when |destination-name| rejects adding contacts to the email list.
 
-When verbose logging setting is enabled, a list of rejected contacts is returned by the response from ActiveCampaign. For each rejected contact, a contact identifier is provided along with a string that describes the reason why the contact was rejected.
+A list of rejected contacts returned by the response from ActiveCampaign lists each rejected contact with a contact identifier and a string that describes the rejection.
 
 .. setting-active-campaign-verbose-logging-end
 
@@ -486,7 +508,7 @@ See SFTP.
 
 **ADOBE COMMERCE**
 
-(Not a destination.)
+Not a destination.
 
 
 
@@ -510,13 +532,13 @@ See SFTP.
 
 **ADOBE MARKETO**
 
-This section contains settings that are unique to Adobe Marketo.
+Settings unique to Adobe Marketo.
 
 **Folder name**
 
 .. setting-adobe-marketo-folder-name-start
 
-Required. The name of the folder in |destination-name| in which a program that contains the audience list is located.
+Required. The name of the folder in |destination-name| in which a program that has the audience list is located.
 
 .. setting-adobe-marketo-folder-name-end
 
@@ -524,21 +546,21 @@ Required. The name of the folder in |destination-name| in which a program that c
 
 .. setting-adobe-marketo-list-name-start
 
-Required. The name of the audience list that is managed by Amperity.
+Required. The name of the audience list managed by Amperity.
 
 .. setting-adobe-marketo-list-name-end
 
 .. setting-adobe-marketo-list-name-first-audience-start
 
-It is possible for Adobe Marketo to contain multiple audience lists with identical names. If the Adobe Marketo API returns more than one audience list, Amperity will update the first audience in that list.
+It is possible for Adobe Marketo to contain many audience lists with the same name. If the Adobe Marketo API returns more than one audience list, Amperity updates the first audience in that list.
 
 .. setting-adobe-marketo-list-name-first-audience-end
 
 .. setting-adobe-marketo-list-name-membership-start
 
-Amperity uses the |destination-name| API to update the membership of audience lists in |destination-name| to match the membership of audience lists that are sent from Amperity. The membership of the list in |destination-name| will be updated to match the membership of the audience list that is sent from Amperity. Amperity will add a user when they do not exist in |destination-name|.
+Amperity uses the |destination-name| API to update the membership of audience lists in |destination-name| to match the membership of audience lists sent from Amperity. The membership updates to match the membership of the audience list sent from Amperity. Amperity adds a user when they do not exist in |destination-name|.
 
-Amperity does not maintain smart lists and does not remove users from the |destination-name| database.
+Amperity does not keep smart lists and does not remove users from the |destination-name| database.
 
 .. setting-adobe-marketo-list-name-membership-end
 
@@ -546,12 +568,12 @@ Amperity does not maintain smart lists and does not remove users from the |desti
 
 |destination-name| API has the following limitations:
 
-* Subscriptions are allocated 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
+* Subscriptions can make up to 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
 * API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
 
-You may experience these rate limits when sending very large audience lists.
+You may experience these rate limits when sending large audience lists.
 
-It is possible for |destination-name| to have multiple audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity will update the first audience list in that list.
+It is possible for |destination-name| to have many audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity updates the first audience list in that list.
 
 .. setting-adobe-marketo-list-name-limitations-start
 
@@ -559,7 +581,7 @@ It is possible for |destination-name| to have multiple audience lists with dupli
 
 .. setting-adobe-marketo-program-name-start
 
-The name of the program in which the audience list that is managed by Amperity is located.
+The name of the program in which the audience list managed by Amperity is located.
 
 .. setting-adobe-marketo-program-name-end
 
@@ -577,13 +599,13 @@ See SFTP.
 
 **AMAZON ADS**
 
-This section contains settings that are unique to Amazon Ads.
+Settings unique to Amazon Ads.
 
 **AMC instance**
 
 .. setting-amazon-ads-amc-instance-start
 
-The `instance within Amazon Marketing Cloud <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| to which your brand will send audiences.
+The `instance within Amazon Marketing Cloud <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| to which your brand sends audiences.
 
 .. setting-amazon-ads-amc-instance-end
 
@@ -591,7 +613,7 @@ The `instance within Amazon Marketing Cloud <https://advertising.amazon.com/API/
 
 .. setting-amazon-ads-audience-description-start
 
-A description of the audience that is managed by Amperity.
+A description of the audience managed by Amperity.
 
 .. setting-amazon-ads-audience-description-end
 
@@ -599,7 +621,7 @@ A description of the audience that is managed by Amperity.
 
 .. setting-amazon-ads-audience-description-start
 
-The name of the audience that is managed by Amperity. Amperity will create a new audience if an audience in |destination-name| does not match exactly the name of the one sent from Amperity.
+The name of the audience managed by Amperity. Amperity creates a new audience if an audience in |destination-name| does not match exactly the name of the one sent from Amperity.
 
 .. setting-amazon-ads-audience-description-end
 
@@ -622,13 +644,13 @@ Days. See common.
 
 **AMAZON S3**
 
-This section contains settings that are unique to Amazon S3.
+Settings unique to Amazon S3.
 
 Applies to: Amazon S3, Cheetah Digital, Domo, Optimizely.
 
 .. setting-amazon-s3-about-start
 
-Amazon Simple Storage Service (|destination-name|) can store data files of any size for any file format that is supported by Amperity.
+Amazon Simple Storage Service--|destination-name|--can store data files of any size for any file format supported by Amperity.
 
 .. setting-amazon-s3-about-end
 
@@ -668,7 +690,7 @@ See Common.
 
 .. setting-amazon-s3-prefix-start
 
-Required. The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
+Required. The S3 prefix is a string used to filter results to include only objects whose names begin with this prefix. When set, this value returns a list of object names relative to the root of the bucket.
 
 .. setting-amazon-s3-prefix-end
 
@@ -686,7 +708,7 @@ See Common.
 
 **ATTENTIVE** (API + SFTP)
 
-This section contains settings that are unique to Attentive (API).
+Settings unique to Attentive (API).
 
 See SFTP for any common file settings.
 
@@ -702,13 +724,13 @@ The client domain for your brand's instance of |destination-name|.
 
 .. setting-attentive-primary-identifier-start
 
-The primary identifier that is used within your |destination-name| account. May be one of the following: "email" or "phone".
+The primary identifier used within your |destination-name| account. May be one of the following: "email" or "phone".
 
 .. setting-attentive-primary-identifier-end
 
 .. setting-attentive-primary-identifier-context-start
 
-|destination-name| accepts email addresses *or* phone numbers as the primary identifier. The set of data that is sent from Amperity **must** contain the primary identifier. For example, if your primary identifier is phone numbers, than the **phone** field must be included.
+|destination-name| accepts email addresses *or* phone numbers as the primary identifier. The set of data sent from Amperity **must** contain the primary identifier. For example, if your primary identifier is phone numbers, than include the **phone** field.
 
 You may send the non-primary email address or phone number as a custom attribute.
 
@@ -718,7 +740,7 @@ You may send the non-primary email address or phone number as a custom attribute
 
 .. setting-attentive-segment-name-start
 
-The name of the segment in |destination-name| that is managed by Amperity.
+The name of the segment in |destination-name| managed by Amperity.
 
 .. setting-attentive-segment-name-end
 
@@ -728,13 +750,13 @@ The name of the segment in |destination-name| that is managed by Amperity.
 
 **AZURE BLOB STORAGE**
 
-This section contains settings that are unique to Azure Blob Storage.
+Settings unique to Azure Blob Storage.
 
 Applies to: Azure Blob Storage.
 
 .. setting-azure-blob-storage-about-start
 
-Microsoft |destination-name| can store data files of any size for any file format that is supported by Amperity.
+Microsoft |destination-name| can store data files of any size for any file format supported by Amperity.
 
 .. setting-azure-blob-storage-about-end
 
@@ -806,11 +828,11 @@ See SFTP.
 
 .. setting-bluecore-header-start
 
-|destination-name| requires a header row to be present in |what-send|. The header row cannot start with a number or contain any special characters other than underscores ( _ ) and must be less than 30 characters in length.
+|destination-name| requires a header row to be present in |what-send|. The header row cannot start with a number or contain any special characters other than underscores ``_`` and must be less than 30 characters in length.
 
 |destination-name| recommends the following file naming convention: "<company_name>_<data_type>_<date>.csv".
 
-Consider naming queries that are sent to the |destination-name| platform in a way that satisfies the "<company_name>_<data_type>" component of the recommended naming pattern.
+Consider naming queries sent to the |destination-name| platform in a way that satisfies the "<company_name>_<data_type>" part of the recommended naming pattern.
 
 .. setting-bluecore-header-end
 
@@ -819,19 +841,19 @@ Consider naming queries that are sent to the |destination-name| platform in a wa
 
 **BRAZE**
 
-This section contains settings that are unique to Braze.
+Settings unique to Braze.
 
 **Instance**
 
 .. setting-braze-instance-start
 
-Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| in which your account was provisioned. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "EU-01", or "EU-02".
+Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| for your account. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "EU-01", or "EU-02".
 
 .. setting-braze-instance-end
 
 .. setting-braze-instance-example-start
 
-For example, if your URL for |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
+For example, if your URL of |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
 
 .. setting-braze-instance-example-end
 
@@ -839,15 +861,15 @@ For example, if your URL for |destination-name| is ``https://dashboard-03.braze.
 
 .. setting-braze-profile-updates-start
 
-To update audience profiles only when one (or more) values change, enable the **Only send updated audience profiles** option.
+To update audience profiles only when one or more values change, enable the **Only send updated audience profiles** option.
 
 .. setting-braze-profile-updates-end
 
 .. setting-braze-profile-updates-usewhen-start
 
-Use the **Only send updated audience profiles** option to configure Amperity to update audience profiles only when one (or more) values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
+Use the **Only send updated audience profiles** option to configure Amperity to update audience profiles only when one or more values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
 
-For use cases that require sending attributes that have values that are expected to change frequently, consider using additional queries to orchestrate specific sets of attributes at defined intervals so that your brand can maintain these values independently of your customer profiles.
+For use cases that require sending attributes that have changing values, consider using queries to orchestrate specific sets of attributes at defined intervals.
 
 .. setting-braze-profile-updates-usewhen-end
 
@@ -855,7 +877,7 @@ For use cases that require sending attributes that have values that are expected
 
 .. setting-braze-user-identifier-start
 
-The indentifier to use for matching users in |destination-name|. May be "external_id" or "braze_id".
+The identifier to use for matching users in |destination-name|. May be "external_id" or "braze_id".
 
 .. setting-braze-user-identifier-end
 
@@ -879,7 +901,7 @@ See SFTP.
 
 **CORDIAL**
 
-This section contains settings that are unique to Cordial.
+Settings unique to Cordial.
 
 **Audience primary key**
 
@@ -889,7 +911,7 @@ See common.
 
 .. setting-cordial-list-name-start
 
-The name of the list in |destination-name| that is managed by Amperity. This list will be created by Amperity if it does not exist.
+The name of the list in |destination-name| managed by Amperity. Amperity creates the list when it does not exist.
 
 .. setting-cordial-list-name-end
 
@@ -897,7 +919,7 @@ The name of the list in |destination-name| that is managed by Amperity. This lis
 
 .. setting-cordial-subscription-status-start
 
-Enable "Do not set subscription status automatically" to prevent updates without "channels.email.subscribeStatus" from being automatically subscribed in |destination-name|.
+Enable "Do not set subscription status automatically" to prevent subscriptions when "channels.email.subscribeStatus" is not set.
 
 .. setting-cordial-subscription-status-end
 
@@ -907,13 +929,13 @@ Enable "Do not set subscription status automatically" to prevent updates without
 
 **CRITEO**
 
-This section contains settings that are unique to Criteo.
+Settings unique to Criteo.
 
 **Advertiser ID**
 
 .. setting-criteo-advertiser-id-start
 
-The unique ID for the advertiser account in |destination-name| to which Amperity will send audiences.
+The unique ID for the advertiser account in |destination-name| to which Amperity sends audiences.
 
 .. setting-criteo-advertiser-id-end
 
@@ -921,7 +943,7 @@ The unique ID for the advertiser account in |destination-name| to which Amperity
 
 .. setting-criteo-audience-name-start
 
-The name of the audience that will be sent to |destination-name|.
+The name of the audience sent to |destination-name|.
 
 .. setting-criteo-audience-name-end
 
@@ -934,13 +956,13 @@ See common settings.
 
 **CRITEO RETAIL MEDIA**
 
-This section contains settings that are unique to Criteo Retail Media.
+Settings unique to Criteo Retail Media.
 
 **Account ID**
 
 .. setting-criteo-account-id-start
 
-The account ID for the account in |destination-name| to which Amperity will send audience segments.
+The account ID for the account in |destination-name| to which Amperity sends audience segments.
 
 .. setting-criteo-account-id-end
 
@@ -956,7 +978,7 @@ Optional. A description for the audience segment.
 
 .. setting-criteo-retailer-id-start
 
-The retailer ID that is associated with the account in |destination-name| to which Amperity will send audience segments.
+The retailer ID associated with the account in |destination-name| to which Amperity sends audience segments.
 
 .. setting-criteo-retailer-id-end
 
@@ -964,7 +986,7 @@ The retailer ID that is associated with the account in |destination-name| to whi
 
 .. setting-criteo-identifier-type-start
 
-The identifier type. The correct value depends on the type of campaign.
+The identifier type. The correct value depends on the campaign.
 
 For offsite campaigns must be one of the following identifiers:
 
@@ -988,13 +1010,13 @@ See SFTP.
 
 **DATABRICKS**
 
-This section contains settings that are unique to Databricks.
+Settings unique to Databricks.
 
 **Catalog name**
 
 .. setting-databricks-catalog-name-start
 
-TEMP: "The catalog name to use for Databricks"
+The catalog name to use for Databricks.
 
 .. setting-databricks-catalog-name-end
 
@@ -1002,7 +1024,7 @@ TEMP: "The catalog name to use for Databricks"
 
 .. setting-databricks-schema-name-start
 
-TEMP: "The schema name to use for Databricks"
+The schema name to use for Databricks.
 
 .. setting-databricks-schema-name-end
 
@@ -1010,7 +1032,7 @@ TEMP: "The schema name to use for Databricks"
 
 .. setting-databricks-table-name-start
 
-TEMP: "The table name to create/use for Databricks"
+The table name to use for Databricks.
 
 .. setting-databricks-table-name-end
 
@@ -1051,13 +1073,13 @@ See SFTP.
 
 **GOOGLE ADS**
 
-This section contains settings that are unique to Google Ads.
+Settings unique to Google Ads.
 
 **Audience description**
 
 .. setting-google-ads-audience-description-start
 
-A description of the audience that is managed by Amperity.
+A description of the audience managed by Amperity.
 
 .. setting-google-ads-audience-description-end
 
@@ -1065,7 +1087,7 @@ A description of the audience that is managed by Amperity.
 
 .. setting-google-ads-audience-name-start
 
-The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist.
+The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist.
 
 .. setting-google-ads-audience-name-end
 
@@ -1091,7 +1113,7 @@ Set this value to "10000" for unlimited audience membership.
 
 .. setting-google-ads-mobile-app-id-start
 
-When "Upload key type" is set to "Mobile ID", the ID for the iOS or Android app from which the mobile ID was collected.
+When the value of "Upload key type" is "Mobile ID", the mobile ID for the iOS or Android app.
 
 .. setting-google-ads-mobile-app-id-end
 
@@ -1099,7 +1121,7 @@ When "Upload key type" is set to "Mobile ID", the ID for the iOS or Android app 
 
 .. setting-google-ads-upload-key-type-start
 
-The type of key to use for audience matching in |destination-name|. May be one of "Contact Info" or "Mobile ID".
+The key to use for audience matching in |destination-name|. May be one of "Contact Info" or "Mobile ID".
 
 .. setting-google-ads-upload-key-type-end
 
@@ -1109,13 +1131,13 @@ The type of key to use for audience matching in |destination-name|. May be one o
 
 **GOOGLE CLOUD STORAGE**
 
-This section contains settings that are unique to Google Cloud Storage.
+Settings unique to Google Cloud Storage.
 
 Applies to: Google Cloud Storage.
 
 .. setting-google-cloud-storage-about-start
 
-|destination-name| can store data files of any size for any file format that is supported by Amperity.
+|destination-name| can store data files of any size for any file format supported by Amperity.
 
 .. setting-google-cloud-storage-about-end
 
@@ -1177,7 +1199,7 @@ See Common.
 
 **GOOGLE CUSTOMER MATCH**
 
-This section contains settings that are unique to Google Customer Match.
+Settings unique to Google Customer Match.
 
 **Audience description**
 
@@ -1195,7 +1217,7 @@ See Google Ads.
 
 .. setting-google-customer-match-customer-product-start
 
-The Google advertising product to which audiences will be sent. May be one of "Google Ads", "Display Video Advertiser", or "Display Video Partner".
+The Google advertising product to which Amperity sends audiences. May be one of "Google Ads", "Display Video Advertiser", or "Display Video Partner".
 
 .. setting-google-customer-match-customer-product-end
 
@@ -1217,7 +1239,7 @@ See Google Ads.
 
 **GOOGLE ENHANCED CONVERSIONS**
 
-This section contains settings that are unique to Google Enhanced Conversions.
+Settings unique to Google Enhanced Conversions.
 
 **Conversion action name**
 
@@ -1241,7 +1263,7 @@ The Customer ID of the Google Enhanced Conversions account.
 
 **HUBSPOT**
 
-This section contains settings that are unique to HubSpot.
+Settings unique to HubSpot.
 
 **Audience primary key**
 
@@ -1251,7 +1273,7 @@ See common settings.
 
 .. setting-hubspot-dates-and-datetimes-start
 
-Attribute fields sent to |destination-name| from Amperity that contain values representing a specific day, month, and year `must be represented in UTC time and can be formatted as ISO 8601 strings or as EPOCH-timestamps in milliseconds <https://developers.hubspot.com/docs/guides/api/crm/properties>`__ |ext_link|.
+Attributes sent to |destination-name| with values for a specific day, month, and year `must be in UTC and formatted as ISO 8601 strings or as EPOCH-timestamps in milliseconds <https://developers.hubspot.com/docs/guides/api/crm/properties>`__ |ext_link|.
 
 .. setting-hubspot-dates-and-datetimes-end
 
@@ -1259,7 +1281,7 @@ Attribute fields sent to |destination-name| from Amperity that contain values re
 
 .. setting-hubspot-list-name-start
 
-The list name to which Amperity will send contacts. This can be the name of an existing list or a new list.
+The list name to which Amperity sends contacts. This can be the name of an existing list or a new list.
 
 .. setting-hubspot-list-name-end
 
@@ -1273,17 +1295,22 @@ See SFTP.
 
 **Escape character**
 
+.. vale off
+
 .. setting-infutor-escape-character-start
 
-An escape character must be specified because |destination-name| requires that quotations be removed from files.
+An escape character must be specified because |destination-name| requires removing quotations from files.
 
 .. setting-infutor-escape-character-end
+
+.. vale on
+
 
 **Quote mode**
 
 .. setting-infutor-quote-mode-start
 
-Quotations must be removed from files. If an escape character is not specified and quote mode is set to “None” (as required by |destination-name|) this may result in unescaped, unquoted files.
+Remove quotations from files. If an escape character is not specified and quote mode is "None", as required by |destination-name|, this may result in unescaped, unquoted files.
 
 .. setting-infutor-quote-mode-end
 
@@ -1291,7 +1318,7 @@ Quotations must be removed from files. If an escape character is not specified a
 
 .. setting-infutor-public-key-start
 
-Data that contains PII must be encrypted using public key encryption before it is transmitted to |destination-name| using SFTP.
+Use public key encryption to encrypt data that has PII before using SFTP to send it to |destination-name|.
 
 .. setting-infutor-public-key-end
 
@@ -1309,7 +1336,7 @@ See SFTP.
 
 **KLAVIYO**
 
-This section contains settings that are unique to Klaviyo.
+Settings unique to Klaviyo.
 
 **Audience primary key**
 
@@ -1319,13 +1346,13 @@ See common settings.
 
 .. setting-klaviyo-list-name-start
 
-The list name to which Amperity will write the audience list. This can be the name of an existing list or a new list.
+The list name to which Amperity writes the audience list. This can be the name of an existing list or a new list.
 
 .. setting-klaviyo-list-name-end
 
 .. setting-klaviyo-list-name-note-start
 
-|destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+|destination-name| supports up to 1000 lists and segments in your account at any given time.
 
 .. setting-klaviyo-list-name-note-end
 
@@ -1333,7 +1360,7 @@ The list name to which Amperity will write the audience list. This can be the na
 
 .. setting-klaviyo-update-contacts-start
 
-Send additional customer profile fields with an audience list, These fields are visible in |destination-name| from the "Customer Properties" section within individual profiles for members of that audience list.
+Send customer profile fields with an audience list, These fields are visible in |destination-name| from the "Customer Properties" section within individual profiles for members of that audience list.
 
 .. setting-klaviyo-update-contacts-end
 
@@ -1351,7 +1378,7 @@ See SFTP.
 
 **LISTRAK**
 
-This section contains settings that are unique to Listrak.
+Settings unique to Listrak.
 
 **Audience primary key**
 
@@ -1361,23 +1388,27 @@ See common settings.
 
 .. setting-listrak-field-group-start
 
-The name of a profile field group in |destination-name|, from which the collection of audience and attribute fields sent from Amperity will be available.
+The name of a profile field group in |destination-name|, from which the collection of audience and attribute fields sent from Amperity is available.
 
 .. setting-listrak-field-group-end
 
 **List name**
 
+.. vale off
+
 .. setting-listrak-list-name-start
 
-The name of the list that will be managed in |destination-name|. This is often, but not always, named "Master List".
+The name of the list managed in |destination-name|. This is often, but not always, named "Master List".
 
 .. setting-listrak-list-name-end
+
+.. vale on
 
 **Segment name**
 
 .. setting-listrak-segment-name-start
 
-The name of segment in |destination-name| that is managed by Amperity.
+The name of segment in |destination-name| managed by Amperity.
 
 .. setting-listrak-segment-name-end
 
@@ -1395,13 +1426,13 @@ See SFTP.
 
 **MAILCHIMP**
 
-This section contains settings that are unique to Mailchimp.
+Settings unique to Mailchimp.
 
 **Data center**
 
 .. setting-mailchimp-data-center-start
 
-The data center ID. This is appended to the API key after the hyphen.
+The data center ID appends to the API key after the hyphen.
 
 .. setting-mailchimp-data-center-end
 
@@ -1409,7 +1440,7 @@ The data center ID. This is appended to the API key after the hyphen.
 
 .. setting-mailchimp-list-id-start
 
-The audience ID to which Amperity will write. (This is sometimes referred to as the list ID.)
+The audience ID to which Amperity writes data. This is sometimes referred to as the list ID.
 
 .. setting-mailchimp-list-id-end
 
@@ -1417,7 +1448,7 @@ The audience ID to which Amperity will write. (This is sometimes referred to as 
 
 .. setting-mailchimp-list-name-start
 
-The name of the list that will be managed by Amperity in |destination-name|.
+The name of the list that by Amperity in |destination-name|.
 
 .. setting-mailchimp-list-name-end
 
@@ -1425,7 +1456,7 @@ The name of the list that will be managed by Amperity in |destination-name|.
 
 .. setting-mailchimp-tag-name-start
 
-A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it will be associated to all audience members added by Amperity.
+A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to apply to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it applies to all audience members added by Amperity.
 
 .. setting-mailchimp-tag-name-end
 
@@ -1434,7 +1465,7 @@ A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link
 
 **META ADS MANAGER**
 
-This section contains settings that are unique to Meta Ads Manager.
+Settings unique to Meta Ads Manager.
 
 **Account ID**
 
@@ -1456,7 +1487,7 @@ The name of the custom audience in |destination-name|.
 
 .. setting-meta-ads-manager-customer-file-source-start
 
-A setting that describes how the information in the custom audience was originally collected. Select one of the following settings:
+A setting that describes how to collect custom audience information. Select one of the following settings:
 
 * USER_PROVIDED_ONLY
 * PARTNER_PROVIDED_ONLY
@@ -1470,15 +1501,15 @@ A setting that describes how the information in the custom audience was original
 
 **META ADS MANAGER: OFFLINE EVENTS**
 
-This section contains settings that are unique to Meta Ads Manager: Offline Events.
+Settings unique to Meta Ads Manager: Offline Events.
 
 **Dataset ID**
 
 .. setting-meta-ads-manager-dataset-id-start
 
-`Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+`Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources--such as from websites, mobile apps, physical store locations or business chats--from one location.
 
-A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
+A `dataset ID configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| supports sending send offline events from Amperity.
 
 .. setting-meta-ads-manager-dataset-id-end
 
@@ -1488,25 +1519,32 @@ A `dataset ID must be configured <https://www.facebook.com/business/help/5818684
 
 **MICROSOFT ADVERTISING**
 
-This section contains settings that are unique to Microsoft Advertising.
+Settings unique to Microsoft Advertising.
 
 **Account and customer IDs**
 
+.. vale off
+
 .. setting-microsoft-advertising-account-and-customer-ids-start
 
-To get your customer and account IDs, sign into the Microsoft Advertising web application, and then click on the Campaigns page. The URL for the Campaigns page will contain two key-value pairs, one for the customer ID and the other for the account ID.
+To get your customer and account IDs, sign into the Microsoft Advertising web application, and then click on the Campaigns page. The URL of the Campaigns page has two key-value pairs, one for the customer ID and the other for the account ID.
 
 The URL is similar to:
 
-https://ui.ads.microsoft.com/campaign
-/Campaigns.m?cid=12345678&aid=9876543
-21#/customer/...
+::
 
-The customer ID is the number in the URL that follows the cid parameter. For example: "12345678".
+   https://ui.ads.microsoft.com/campaign
+   /Campaigns.m?cid=12345678&aid=9876543
+   21#/customer/...
 
-The account ID is the number in the URL that follows the aid parameter. For example: "987654321".
+The customer ID is the number in the URL that follows the "cid" parameter. For example: "12345678".
+
+The account ID is the number in the URL that follows the "aid" parameter. For example: "987654321".
 
 .. setting-microsoft-advertising-account-and-customer-ids-end
+
+.. vale on
+
 
 **Audience primary key**
 
@@ -1516,7 +1554,7 @@ See common settings.
 
 .. setting-microsoft-advertising-list-name-start
 
-The name of the list to be managed in Microsoft Advertising.
+The name of the list in Microsoft Advertising.
 
 .. setting-microsoft-advertising-list-name-end
 
@@ -1525,13 +1563,13 @@ The name of the list to be managed in Microsoft Advertising.
 
 **MICROSOFT DATAVERSE**
 
-This section contains settings that are unique to Microsoft Dataverse.
+Settings unique to Microsoft Dataverse.
 
 **Dataverse table logical name**
 
 .. setting-microsoft-dataverse-table-logical-name-start
 
-The table name in |destination-name|. This is the table to which the connector will write data. For example: "abc123_customers".
+The table name in |destination-name|. This is the table to which the connector writes data. For example: "abc123_customers".
 
 .. setting-microsoft-dataverse-table-logical-name-end
 
@@ -1545,11 +1583,16 @@ The environment name for your Power Apps application. For example: "socktown".
 
 **Power Apps environment region**
 
+.. vale off
+
 .. setting-microsoft-dataverse-powerapps-region-start
 
 The environment region for your Power Apps application. For example: "crm".
 
 .. setting-microsoft-dataverse-powerapps-region-end
+
+.. vale on
+
 
 **Truncate table?**
 
@@ -1565,13 +1608,13 @@ Select **Truncate?** to truncate the table before loading data.
 
 **MICROSOFT DYNAMICS 365 MARKETING**
 
-This section contains settings that are unique to Microsoft Dynamics 365 Marketing.
+Settings unique to Microsoft Dynamics 365 Marketing.
 
 **Dynamics 365 marketing segment name**
 
 .. setting-microsoft-dynamics-365-segment-name-start
 
-The name of the segment in |destination-name| that is managed by Amperity.
+The name of the segment in |destination-name| managed by Amperity.
 
 .. setting-microsoft-dynamics-365-segment-name-end
 
@@ -1585,25 +1628,28 @@ The environment name for your Power Apps application. For example: "socktown".
 
 **Power Apps environment region**
 
+.. vale off
+
 .. setting-microsoft-dynamics-365-environment-region-start
 
 The environment region for your Power Apps application. For example: "crm".
 
 .. setting-microsoft-dynamics-365-environment-region-end
 
+.. vale on
 
 
 
 
 **MICROSOFT DYNAMICS**
 
-This section contains settings that are unique to Microsoft Dynamics.
+Settings unique to Microsoft Dynamics.
 
 **Azure Active Directory ID**
 
 .. setting-microsoft-dynamics-azure-ad-id-start
 
-The Active Directory tenant ID that is associated with your Microsoft Azure subscription.
+The Active Directory tenant ID associated with your Microsoft Azure subscription.
 
 .. setting-microsoft-dynamics-azure-ad-id-end
 
@@ -1611,7 +1657,7 @@ The Active Directory tenant ID that is associated with your Microsoft Azure subs
 
 .. setting-microsoft-dynamics-entity-start
 
-The `entity type <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/entitytypes?view=dataverse-latest&viewFallbackFrom=dynamics-ce-odata-9>`__ |ext_link| that defines the schema for data that is sent from Amperity.
+The `entity type <https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/entitytypes?view=dataverse-latest&viewFallbackFrom=dynamics-ce-odata-9>`__ |ext_link| that defines the schema for data.
 
 .. setting-microsoft-dynamics-entity-end
 
@@ -1619,7 +1665,7 @@ The `entity type <https://learn.microsoft.com/en-us/power-apps/developer/data-pl
 
 .. setting-microsoft-dynamics-url-start
 
-The URL for your instance of |destination-name|. The URL must be the full URL, including ``https://``. For example:
+The URL of your instance of |destination-name|. The URL must be the full URL, including ``https://``. For example:
 
 ``https://<tenant-name>.crm.dynamics.com``
 
@@ -1671,7 +1717,7 @@ See SFTP.
 
 **ORACLE ELOQUA**
 
-This section contains settings that are unique to Oracle Eloqua.
+Settings unique to Oracle Eloqua.
 
 **Audience primary key**
 
@@ -1679,9 +1725,9 @@ This section contains settings that are unique to Oracle Eloqua.
 
 The primary key for the shared list: **C_EmailAddress**.
 
-An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list.
+Map email address values to the database type **C_EmailAddress** before sending shared list audiences to |destination-name|.
 
-Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|; `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
+You may send audience attributes. Some attributes must map to `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|. You may define `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link|.
 
 .. setting-oracle-eloqua-audience-primary-key-end
 
@@ -1689,25 +1735,27 @@ Additional attributes may be sent. Some must be mapped to the `default attribute
 
 .. setting-oracle-eloqua-shared-list-name-start
 
-The name of the shared list to be managed by Amperity.
+The name of the shared list.
 
 Use filename templates to configure Amperity to support managing more than one shared list. For example:
 
-1. A timestamp at the end of a filename template---**Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv**---will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
+1. A timestamp at the end of a filename template--**Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv**--creates a new shared list each time Amperity sends an audience. The filename always has "Early Purchasers", but each send has a unique datestamp.
 
-2. A campaign that is configured only for campaign name and group name---**{{ campaign_name }} - {{ group_name }}**---will update the same shared list each time the audience is sent from Amperity.
+2. A campaign configured only for campaign name and group name--**{{ campaign_name }} - {{ group_name }}**--updates the same shared list each time Amperity sends the audience.
 
 .. setting-oracle-eloqua-shared-list-name-end
 
+.. vale off
+
 .. setting-oracle-eloqua-shared-list-name-caution-start
 
-You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
+You may add custom attributes to the shared list as long as each custom attribute maps to the database name assigned to the custom contact field by |destination-name|.
 
-This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This will generate the database name, which is typically (but not always) prefixed with **C_**.
+This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This generates the database name, which is typically, but not always, prefixed with **C_**.
 
 .. setting-oracle-eloqua-shared-list-name-caution-end
 
-
+.. vale on
 
 
 
@@ -1738,7 +1786,7 @@ See SFTP.
 
 **PINTEREST**
 
-This section contains settings that are unique to Pinterest.
+Settings unique to Pinterest.
 
 **Ad account ID**
 
@@ -1756,7 +1804,7 @@ See common settings.
 
 .. setting-pinterest-list-name-start
 
-The list name to which Amperity will send a list of SHA-256 hashed email addresses. This can be the name of an existing list or a new list.
+The list name to which Amperity sends a list of SHA-256 hashed email addresses. This can be the name of an existing list or a new list.
 
 .. setting-pinterest-list-name-end
 
@@ -1791,9 +1839,7 @@ See SFTP.
 
 **SAILTHRU**
 
-This section contains settings that are unique to Sailthru.
-
-Now called Marigold Engage.
+Settings unique to Sailthru by Marigold Engage.
 
 **Audience primary key**
 
@@ -1803,7 +1849,7 @@ See common settings.
 
 .. setting-sailthru-list-name-start
 
-The name of the list in |destination-name| that is managed by Amperity. This list will be created by Amperity if it does not exist.
+The name of the list in |destination-name| managed by Amperity. Amperity creates the list if it does not exist.
 
 .. setting-sailthru-list-name-end
 
@@ -1813,7 +1859,7 @@ The name of the list in |destination-name| that is managed by Amperity. This lis
 
 **SALESFORCE MARKETING CLOUD**
 
-This section contains settings that are unique to Salesforce Marketing Cloud.
+Settings unique to Salesforce Marketing Cloud.
 
 Note: There is an SFTP-based connector also.
 
@@ -1827,25 +1873,30 @@ The account ID for the business unit in |destination-name|.
 
 **Append data**
 
+.. vale off
+
 .. setting-salesforce-marketing-cloud-append-data-start
 
 Enable this option to upsert new rows to the data extension and update existing rows.
 
-When not selected, data in the data extension is deleted, and then is updated to match the rows sent from Amperity.
+When disabled, data in the data extension is deleted, and then updated to match the rows sent from Amperity.
 
 .. setting-salesforce-marketing-cloud-append-data-end
+
+.. vale on
+
 
 **Data extension name**
 
 .. setting-salesforce-marketing-cloud-data-extension-name-start
 
-The name of the data extension in |destination-name| that is managed by Amperity.
+The name of the data extension in |destination-name| managed by Amperity.
 
 .. setting-salesforce-marketing-cloud-data-extension-name-end
 
 .. setting-salesforce-marketing-cloud-data-extension-name-context-campaigns-start
 
-For campaigns, use the **{campaign_name}** and **{group_name}** campaign template variables to assign campaign and treatment group names to your data extension.
+For campaigns, use the **{campaign_name}** and **{group_name}** campaign template variables and assign campaign and treatment group names to your data extension.
 
 .. important:: The name of a data extension must be unique within |destination-name|.
 
@@ -1853,9 +1904,9 @@ For campaigns, use the **{campaign_name}** and **{group_name}** campaign templat
 
 .. setting-salesforce-marketing-cloud-data-extension-name-context-orchestrations-start
 
-For orchestrations, assign a name to the data extension that will be added (or updated) by Amperity.
+For orchestrations, assign a name to the data extension.
 
-.. important:: The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
+.. important:: The name of a data extension must be unique within |destination-name|, should use underscores--``_``--instead of spaces, and may not contain *any* of the following characters:
 
 ::
 
@@ -1867,7 +1918,7 @@ For orchestrations, assign a name to the data extension that will be added (or u
 
 .. setting-salesforce-marketing-cloud-folder-name-start
 
-The directory within the |destination-name| SFTP site from which the Marketing Cloud SOAP API will get CSV files.
+The directory within the |destination-name| SFTP site from which the Marketing Cloud SOAP API finds CSV files.
 
 .. setting-salesforce-marketing-cloud-folder-name-end
 
@@ -1875,7 +1926,7 @@ The directory within the |destination-name| SFTP site from which the Marketing C
 
 .. setting-salesforce-marketing-cloud-import-location-start
 
-The directory within the |destination-name| SFTP server into which data should be added. This is also the location from which the Marketing Cloud SOAP API will get the CSV files.
+The directory within the |destination-name| SFTP server into which Amperity adds data. This is also the location from which the Marketing Cloud SOAP API finds the CSV files.
 
 .. setting-salesforce-marketing-cloud-import-location-end
 
@@ -1885,7 +1936,7 @@ The directory within the |destination-name| SFTP server into which data should b
 
 Set to one of the following: "subscriber_key" or "email".
 
-Use "subscriber_key" when a field can be mapped directly to the subscriber key in |destination-name|, or else use "email".
+Use "subscriber_key" when a field maps directly to the subscriber key in |destination-name|, otherwise use "email".
 
 .. setting-salesforce-marketing-cloud-primary-key-end
 
@@ -1899,7 +1950,7 @@ Recommended. The subscriber key for |destination-name|.
 
 .. setting-salesforce-marketing-cloud-subscriber-field-important-start
 
-A subscriber key is configured as the “primary key” for the destination. There are two options: using the |destination-name| subscriber key or using email. One of these options must be specified before the destination can send data to |destination-name|.
+A subscriber key is the "primary key" for the destination. Choose the |destination-name| subscriber key or choose email.
 
 .. setting-salesforce-marketing-cloud-subscriber-field-important-end
 
@@ -1909,19 +1960,19 @@ A subscriber key is configured as the “primary key” for the destination. The
 
 **SALESFORCE SALES CLOUD**
 
-This section contains settings that are unique to Salesforce Sales Cloud.
+Settings unique to Salesforce Sales Cloud.
 
 **Connect to sandbox instance?**
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-start
 
-Optional. Select this option if the destination is a sandbox instance (and not a production instance).
+Optional. Select this option if the destination is a sandbox instance and not a production instance.
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-end
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-ignored-start
 
-A sandbox instance is ignored when a custom URL for Salesforce Sales Cloud logins is used.
+Ignore a sandbox instance when using a custom URL of Salesforce Sales Cloud logins.
 
 .. setting-salesforce-sales-cloud-connect-to-sandbox-ignored-end
 
@@ -1929,29 +1980,34 @@ A sandbox instance is ignored when a custom URL for Salesforce Sales Cloud login
 
 .. setting-salesforce-sales-cloud-custom-login-url-start
 
-Optional. The custom URL for |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``http://<hostname>`` or ``https://<hostname>``. The rest of the path is added automatically by Amperity.
+Optional. The custom URL of |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``http://<hostname>`` or ``https://<hostname>``. Amperity automatically adds the rest of the path.
 
 .. setting-salesforce-sales-cloud-custom-login-url-end
 
 **External ID field**
 
+.. vale off
+
 .. setting-salesforce-sales-cloud-external-id-field-start
 
-The external ID should be set to "Amperity_ID__c". (The "__c" identifies the field as a custom field in the Salesforce object.)
+Configure the external ID as "Amperity_ID__c". The "__c" identifies the field as a custom field in the Salesforce object.
 
 .. setting-salesforce-sales-cloud-external-id-field-end
+
+.. vale on
+
 
 **Load data in parallel?**
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-start
 
-When enabled, NULL values in data sent from Amperity will be ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
+When enabled, "Upsert" operations ignore "NULL" values in data sent from Amperity. If a field has a "NULL" value and there is a value in the corresponding Salesforce object, the operation keeps the value in the Salesforce object.
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-end
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-caution-start
 
-Enabling parallelism may cause Salesforce to process batches in parallel. This may improve performance, but comes with the risk of introducing failures due to locking. It is possible for more than one batch to attempt to obtain a lock on the same row, causing one (or both) batches to fail.
+Enabling parallelism may cause Salesforce to process batches in parallel. This may improve performance, but comes with the risk of introducing failures due to locking. It is possible for more than one batch to try to get a lock on the same row, causing one or both batches to fail.
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-caution-end
 
@@ -1959,7 +2015,7 @@ Enabling parallelism may cause Salesforce to process batches in parallel. This m
 
 .. setting-salesforce-sales-cloud-operation-start
 
-The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations will insert a new record or update an existing record, whereas insert and update operations insert or update (but not both).
+The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations insert a new record or update an existing record, whereas insert and update operations insert or update, but not both.
 
 .. setting-salesforce-sales-cloud-operation-end
 
@@ -1967,7 +2023,7 @@ The operation may be one of the following: "Insert", "Upsert" (recommended), "Up
 
 .. setting-salesforce-sales-cloud-salesforce-object-start
 
-The name of the object in Salesforce Sales Cloud to which Amperity will send data.
+The name of the object in Salesforce Sales Cloud to which Amperity sends data.
 
 .. setting-salesforce-sales-cloud-salesforce-object-end
 
@@ -1975,7 +2031,7 @@ The name of the object in Salesforce Sales Cloud to which Amperity will send dat
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
 
-Enable to use NULL values when fields are empty.
+Enable to use "NULL" values when fields are empty.
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
@@ -1985,9 +2041,13 @@ Enable to use NULL values when fields are empty.
 
 **SFTP**
 
-This section contains settings that are unique to SFTP.
+Settings unique to SFTP.
 
-Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airship, BazaarVoice, Bluecore, Evocalize, Experian, Infutor, Kibo (Monetate), Koupon Media, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, PowerReviews, Quad, RR Donnelly, Salesforce Marketing Cloud, SMG, SoundCommerce, SFTP, Vibes.
+.. vale off
+
+Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airship, BazaarVoice, Bluecore, Evocalize, Experian, Infutor, Kibo, Koupon Media, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, PowerReviews, Quad, RR Donnelly, Salesforce Marketing Cloud, SMG, SoundCommerce, SFTP, Vibes.
+
+.. vale on
 
 **About**
 
@@ -2059,13 +2119,13 @@ See SFTP.
 
 **SNAPCHAT**
 
-This section contains settings that are unique to Snapchat.
+Settings unique to Snapchat.
 
 **Ad account ID**
 
 .. setting-snapchat-ad-account-id-start
 
-The ID for the |destination-name| advertising account. This ID is available from the top-left menu in |destination-name|. Open that menu, choose "Add Accounts", and then copy the ID for the account to which Amperity will send audiences.
+The ID for the |destination-name| advertising account. This ID is available from the top-left menu in |destination-name|. Open that menu, choose "Add Accounts", and then copy the ID for the account to which Amperity sends audiences.
 
 .. setting-snapchat-ad-account-id-end
 
@@ -2073,7 +2133,7 @@ The ID for the |destination-name| advertising account. This ID is available from
 
 .. setting-snapchat-segment-name-start
 
-The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist. The audience will be available from the |destination-name| "Audiences" page.
+The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist. The audience is available from the |destination-name| "Audiences" page.
 
 .. setting-snapchat-segment-name-end
 
@@ -2085,21 +2145,25 @@ The name of the audience in |destination-name| that is managed by Amperity. This
 
 **SNOWFLAKE**
 
-This section contains settings that are unique to Snowflake.
+Settings unique to Snowflake.
 
 **Account name**
 
+.. vale off
+
 .. setting-snowflake-account-name-start
 
-The account name is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
+The account name is found within the URL of the Snowflake instance and is a character string before ``snowflakecomputing.com``. For example: "ab12345".
 
 .. setting-snowflake-account-name-end
+
+.. vale on
 
 **Create table?**
 
 .. setting-snowflake-create-table-start
 
-Use the Create table option when the table should be created in Snowflake if it is not already there.
+Use the **Create table** option to create the table in Snowflake if it is not already there.
 
 .. setting-snowflake-create-table-end
 
@@ -2107,11 +2171,13 @@ Use the Create table option when the table should be created in Snowflake if it 
 
 .. setting-snowflake-drop-table-start
 
-Use the Drop table option to overwrite the table and apply an updated schema when the upstream segment or table changes.
+Use the **Drop table** option to overwrite the table and apply an updated schema when the upstream segment or table changes.
 
 .. setting-snowflake-drop-table-end
 
 **Region ID**
+
+.. vale off
 
 .. setting-snowflake-region-id-start
 
@@ -2119,17 +2185,25 @@ The ID for the region in which the Snowflake account name is located. For exampl
 
 .. setting-snowflake-region-id-end
 
+.. vale on
+
+
+.. vale off
+
 .. setting-snowflake-region-id-location-start
 
 .. note:: The Amperity instance of Snowflake should be located in the same region as the customer's instance of Snowflake.
 
 .. setting-snowflake-region-id-location-end
 
+.. vale on
+
+
 **Snowflake location**
 
 .. setting-snowflake-location-start
 
-The table to which data will be loaded. This location is defined using a period-delimited list of Snowflake database name, Snowflake schema name, and Snowflake table name. For example:
+The table to which Amperity loads data. Define this location using a period-delimited list of Snowflake database name, Snowflake schema name, and Snowflake table name. For example:
 
 ::
 
@@ -2141,7 +2215,7 @@ The table to which data will be loaded. This location is defined using a period-
 
 .. setting-snowflake-stage-start
 
-The Snowflake stage name, which is created by the `CREATE STAGE <https://docs.snowflake.com/en/sql-reference/sql/create-stage>`__ |ext_link| command. For example:
+The Snowflake stage name created by the `CREATE STAGE <https://docs.snowflake.com/en/sql-reference/sql/create-stage>`__ |ext_link| command. For example:
 
 ``AMPERITY_ABCDEF.CUSTOMER_360.AMP_PROD_STAGE``
 
@@ -2151,7 +2225,7 @@ The Snowflake stage name, which is created by the `CREATE STAGE <https://docs.sn
 
 .. setting-snowflake-truncate-table-start
 
-Use the "Truncate table" option when the contents of the table should be emptied prior to loading data.
+Use the **Truncate table** option to empty the contents of the table before loading data.
 
 .. setting-snowflake-truncate-table-end
 
@@ -2159,7 +2233,7 @@ Use the "Truncate table" option when the contents of the table should be emptied
 
 .. setting-snowflake-warehouse-start
 
-The name of the Snowflake data warehouse. This is created by the `CREATE WAREHOUSE <https://docs.snowflake.com/en/sql-reference/sql/create-warehouse>`__ |ext_link| command. For example:
+The name of the Snowflake data warehouse created by the `CREATE WAREHOUSE <https://docs.snowflake.com/en/sql-reference/sql/create-warehouse>`__ |ext_link| command. For example:
 
 ``AMPERITY_WH``
 
@@ -2179,11 +2253,13 @@ See SFTP.
 
 **THE TRADE DESK**
 
-This section contains settings that are unique to The Trade Desk.
+Settings unique to The Trade Desk.
 
 **Membership duration**
 
 See common.
+
+.. vale off
 
 .. setting-the-trade-desk-membership-duration-minmax-start
 
@@ -2191,13 +2267,16 @@ The minimum value should be "7" because |destination-name| uses the previous sev
 
 .. setting-the-trade-desk-membership-duration-minmax-end
 
+.. vale on
+
+
 .. setting-the-trade-desk-membership-duration-example-start
 
-The membership duration is measured in days. Adjust the membership duration value to be greater than (or equal to) than the frequency at which your brand will send campaigns or orchestrations from Amperity.
+The membership duration is in days. Adjust the membership duration value to be greater than or equal to than the frequency at which your brand sends campaigns or orchestrations from Amperity.
 
-For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
+For example: if your brand sends a campaign to |destination-name| every 30 days, then set membership duration to "30". If your brand sends a campaign every 14 days, then set membership duration to "14".
 
-If a campaign is sent every 30 days, but the membership duration is 14, then the audience size for the last 16 days of the duration window will be 0.
+If your brand sends a campaign every 30 days, but the membership duration is 14, then the audience size for the last 16 days of the duration window is "0".
 
 .. setting-the-trade-desk-membership-duration-example-end
 
@@ -2224,7 +2303,7 @@ Your brand must have a UID 2.0 agreement in-place with The Trade Desk before con
 
 **THE TRADE DESK: 3P MARKETPLACE**
 
-This section contains settings that are unique to The Trade Desk (3P Marketplace).
+Settings unique to The Trade Desk: 3P Marketplace.
 
 **Membership duration**
 
@@ -2244,13 +2323,13 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 
 **THE TRADE DESK: OFFLINE EVENTS**
 
-This section contains settings that are unique to The Trade Desk: Offline Events.
+Settings unique to The Trade Desk: Offline Events.
 
 **Tracking tag name**
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-The name of the tracking tag for which offline events are associated. The name is a string, may have up to 256 characters, must be unique, and may not duplicate any previous name that was used for the same advertiser and offline data provider ID. The tracking tag name will appear in the UI for |destination-name| exactly as it is entered in Amperity.
+The name of the tracking tag for offline events. The name is a string, may have up to 256 characters, must be unique, and may not duplicate any previous advertiser name or offline data provider ID. The tracking tag name appears in the UI for |destination-name| exactly as it is in Amperity.
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
 
@@ -2266,13 +2345,13 @@ The name of the tracking tag for which offline events are associated. The name i
 
 **TIKTOK ADS MANAGER**
 
-This section contains settings that are unique to TikTok Ads Manager.
+Settings unique to TikTok Ads Manager.
 
 **Advertiser ID**
 
 .. setting-tiktok-ads-manager-advertiser-id-start
 
-The advertiser ID for your |destination-name| account. This is a nineteen character string similar to “7654321098765432109” that you can find from the dropdown menu in the top right of TikTok Ads Manager.
+The advertiser ID for your |destination-name| account. This is a nineteen character string similar to "7654321098765432109" that you can find from the dropdown menu in the top right of TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-advertiser-id-end
 
@@ -2280,7 +2359,7 @@ The advertiser ID for your |destination-name| account. This is a nineteen charac
 
 .. setting-tiktok-ads-manager-custom-audience-name-start
 
-The name of the audience in |destination-name| that is managed by Amperity. This audience will be created by Amperity if it does not exist.
+The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist.
 
 .. setting-tiktok-ads-manager-custom-audience-name-end
 
@@ -2288,7 +2367,7 @@ The name of the audience in |destination-name| that is managed by Amperity. This
 
 .. setting-tiktok-ads-manager-user-id-type-start
 
-The user ID type. This value must be one of the following: "AAID" (Google), "EMAIL" (email addresses), "IDFA" (Apple), or "PHONE" (phone numbers). Amperity is configured to send "EMAIL" and "PHONE" by default for campaigns.
+The user ID type. This value must be one of the following: "AAID" (Google), "EMAIL" (email addresses), "IDFA" (Apple), or "PHONE" (phone numbers). "EMAIL" and "PHONE" are the default values for campaigns.
 
 .. setting-tiktok-ads-manager-user-id-type-end
 
@@ -2297,13 +2376,13 @@ The user ID type. This value must be one of the following: "AAID" (Google), "EMA
 
 **TIKTOK ADS MANAGER: OFFLINE EVENTS**
 
-This section contains settings that are unique to TikTok Ads Manager: Offline Events.
+Settings unique to TikTok Ads Manager: Offline Events.
 
 **Advertiser ID**
 
 .. setting-tiktok-ads-manager-offline-advertiser-id-start
 
-TEMP: "The advertiser ID of the TikTok Ads account you want to use. + TikTok Ads Advertiser ID"
+The advertiser ID for the TikTok Ads account.
 
 .. setting-tiktok-ads-manager-offline-advertiser-id-end
 
@@ -2319,7 +2398,7 @@ Select **Auto tracking** to use this event set for add tracking and attribution.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-start
 
-The event set ID is a nineteen character string similar to “7654321098765432109”.
+The event set ID is a nineteen character string similar to "7654321098765432109".
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
 
@@ -2327,7 +2406,11 @@ The event set ID is a nineteen character string similar to “765432109876543210
 
 The event set must exist before you can send data to it from Amperity. You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the |destination-name| user interface.
 
-If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+Add an event set ID if it does not exist.
+
+Open the TikTok Ads Manager user interface. Choose **Assets**, then **Events**, and then from the **Offline** box select **Manage**.
+
+Each event set has its own card. The event set ID is located under the name of the event set.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-context-end
 
@@ -2343,7 +2426,7 @@ The name of the offline events set in TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-offline-event-source-start
 
-The type of event to be uploaded to TikTok Ads Manager. May be one of “web” or "offline". Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
+The event uploaded to TikTok Ads Manager. May be one of "web" or "offline". Use "web" for events that took place on your website and collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and measured by an offline event set ID.
 
 .. setting-tiktok-ads-manager-offline-event-source-end
 
@@ -2359,7 +2442,7 @@ See SFTP.
 
 .. setting-vibes-filename-template-pattern-start
 
-A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| must be assigned a name similar to "<filename>.recipient_list".
+A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| must have a name similar to "<filename>.recipient_list".
 
 .. setting-vibes-filename-template-pattern-end
 
@@ -2402,7 +2485,7 @@ The name of the segment in |destination-name|. This can be the name of an existi
 
 **ZENDESK**
 
-This section contains settings that are unique to Zendesk.
+Settings unique to Zendesk.
 
 **Subdomain**
 
