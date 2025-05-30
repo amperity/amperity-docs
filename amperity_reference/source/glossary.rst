@@ -701,14 +701,6 @@ C
       :end-before: .. term-campaign-end
 
 
-.. _c-campaign-monitor:
-
-**Campaign Monitor**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-campaign-monitor-start
-      :end-before: .. term-campaign-monitor-end
-
-
 .. _c-campaign-type:
 
 **campaign type**
