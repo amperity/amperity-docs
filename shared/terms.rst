@@ -4487,7 +4487,7 @@ An orchestration defines the relationship between query results and a destinatio
 
 .. term-orchestration-group-start
 
-An orchestration group is one or more orchestrations scheduled using a cron expression string to define schedule frequency. For example, schedule an orchestration group to run at 8:30 AM every day of the week: "30 8 * * *".
+An orchestration group is one or more orchestrations scheduled using a cron expression string to define schedule frequency. For example, schedule an orchestration group to run at 8:30 AM every day of the week: ``30 8 * * *``.
 
 .. term-orchestration-group-end
 
