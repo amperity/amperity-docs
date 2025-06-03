@@ -29,7 +29,7 @@ Why should I use this reference?
 
 .. sql-spark-why-should-i-use-this-start
 
-The **Sources** and **Databases** tabs use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built almost exclusively by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available, though you may use additional functionality within Spark SQL as necessary.
+The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available, though you may use additional functionality within Spark SQL as necessary.
 
 Please refer to this reference first, and then to the official |ext_sparksql_version_current| documentation.
 
