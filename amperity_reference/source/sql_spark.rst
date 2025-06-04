@@ -29,7 +29,7 @@ Why should I use this reference?
 
 .. sql-spark-why-should-i-use-this-start
 
-The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available, though you may use additional functionality within Spark SQL as necessary.
+The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables and custom domain tables are built by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available, though you may use additional functionality within Spark SQL as necessary.
 
 Please refer to this reference first, and then to the official |ext_sparksql_version_current| documentation.
 
@@ -45,7 +45,7 @@ About Spark SQL
 
 Use Spark SQL to define all SQL queries related to the following areas of Amperity:
 
-* Ingesting data, including ingest queries
+* Ingesting data
 * Processing data into domain tables
 * Building custom domain tables
 * Loading data into Stitch
@@ -128,7 +128,7 @@ Add comments
 
 .. sql-spark-recommendation-add-comments-start
 
-Be sure to add comments to all SQL code that defines database tables or performs any type of pre-ingest processing, such as an ingest query.
+Be sure to add comments to all SQL code that defines database tables or performs any type of post-ingest processing, such as building custom domain tables.
 
 Code comments should describe:
 
@@ -429,39 +429,6 @@ An identifier is a string that associates a database, table, or column to its pa
    database_name.table_name.column_name
 
 .. sql-spark-recommendation-identifiers-end
-
-**To use table identifiers to flatten nested XML data**
-
-.. sql-spark-recommendation-identifiers-example-ingest-query-start
-
-.. note:: This example uses an |ext_download_sales_transactions| as the data source for sales transactions.
-
-Use identifiers and aliases to flatten nested XML data with an ingest query, similar to:
-
-.. code-block:: sql
-
-   SELECT
-     salesTransactionId AS id
-     ,type
-     ,dateTime AS salesDateTime
-     ,salesOrder.salesOrderId AS salesOrderId
-     ,salesOrder.channelType AS channelType
-     ,salesOrder.orderSummary.totalAmount AS totalAmount
-   FROM PosXml
-
-returns a table similar to:
-
-.. code-block:: mysql
-
-   ----- ------ ---------------------- -------------- ------------- -------------
-    id    type   salesDateTime          salesOrderId   channelType   totalAmount
-   ----- ------ ---------------------- -------------- ------------- -------------
-    ABC   Add    2020-11-15T04:54:34Z   A1zyBCxwvDu    Cafe          120
-    DEF   Add    2020-11-15T04:55:25Z   B1yxCDwvuEt    Cafe          14
-    GHI   Add    2020-11-15T04:57:12Z   C1xwDEvutFs    Cafe          27
-   ----- ------ ---------------------- -------------- ------------- -------------
-
-.. sql-spark-recommendation-identifiers-example-ingest-query-end
 
 
 .. _sql-spark-recommendation-indentation:
@@ -2921,35 +2888,6 @@ Use the **EXPLODE(expression)** function to use "expression" to:
 .. sql-spark-function-explode-end
 
 
-.. _sql-spark-function-explode-example-load-xml-as-ingest-query:
-
-Load XML data as ingest query
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. sql-spark-function-explode-example-load-xml-as-ingest-query-start
-
-.. note:: This example uses an |ext_download_sales_transactions| as the data source for sales transactions.
-
-Use the **EXPLODE()** function to process sales transaction data into a table using an ingest query similar to:
-
-.. code-block:: sql
-
-   WITH explodedData AS (
-     SELECT
-       salesTransactionId
-       ,EXPLODE(salesOrder.tenders.tender) AS tender FROM PosXml
-   )
-
-   SELECT
-     salesTransactionId
-     ,tender.type AS type
-     ,tender.amount AS amount
-   FROM
-     explodedData
-
-.. sql-spark-function-explode-example-load-xml-as-ingest-query-end
-
-
 .. _sql-spark-function-first-value:
 
 FIRST_VALUE()
@@ -3014,7 +2952,7 @@ Build birthdate
 
 .. sql-spark-function-if-example-build-birthdate-start
 
-If incoming data contains birthdate data split by day, month, and year, you can build a complete birthdate using an ingest query. For example, incoming data has the following fields:
+If incoming data contains birthdate data split by day, month, and year, you can build a complete birthdate using a custom domain table. For example, incoming data has the following fields:
 
 .. code-block:: mysql
 
@@ -3379,27 +3317,6 @@ NULLIF()
 Use the **NULLIF(expression1, expression2)** function to return **NULL** if "expression1" is equal to "expression2".
 
 .. sql-spark-function-nullif-end
-
-
-.. _sql-spark-function-nullif-example-ingest-query:
-
-Return NULL for empty string values
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. sql-spark-function-nullif-example-ingest-query-start
-
-The following **SELECT** statement is an ingest query that returns **NULL** if the field is empty after trimming whitespace from before and after the initial value:
-
-.. code-block:: sql
-
-   SELECT
-     NULLIF(TRIM(BrandName),'') AS BrandName
-     ,NULLIF(TRIM(AttributeName),'') AS AttributeName
-     ,NULLIF(TRIM(Priority),'') AS Priority
-   FROM
-     Customer_Table
-
-.. sql-spark-function-nullif-example-ingest-query-end
 
 
 .. _sql-spark-function-ntile-example-bucket-rfm-scores:
@@ -3919,29 +3836,6 @@ The following example returns phone numbers from multiple tables, and then remov
 .. sql-spark-function-substring-example-remove-country-codes-end
 
 
-.. _sql-spark-function-substr-example-parse-fields-from-dat-file:
-
-Parse fields from DAT file
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. sql-spark-function-substr-example-parse-fields-from-dat-file-start
-
-The following example shows an ingest query that parses fields from a DAT file. Each field (fields 1-6) has a starting point within the DAT file (1, 21, 52, 63, 69, 70) and a length (20, 30, 10, 15, 1, 140). Use an ordinal ( _c0 ) to define each source field within the DAT file.
-
-.. code-block:: none
-
-   SELECT
-     ,NULLIF(TRIM(SUBSTR(`_c0`,1,20)),'') AS Field1
-     ,NULLIF(TRIM(SUBSTR(`_c0`,21,30)),'') AS Field2
-     ,NULLIF(TRIM(SUBSTR(`_c0`,52,10)),'') AS Field3
-     ,NULLIF(TRIM(SUBSTR(`_c0`,63,15)),'') AS Field4
-     ,NULLIF(TRIM(SUBSTR(`_c0`,69,1)),'') AS Field5
-     ,NULLIF(TRIM(SUBSTR(`_c0`,70,140)),'') AS Field6
-   FROM DAT_FILE_NAME
-
-.. sql-spark-function-substr-example-parse-fields-from-dat-file-end
-
-
 .. _sql-spark-function-sum:
 
 SUM()
@@ -3970,12 +3864,6 @@ Use the **COALESCE()** function to map fields with **NULL** values to zero prior
 
 TO_DATE()
 --------------------------------------------------
-
-.. sql-spark-function-to-date-ingest-warning-start
-
-.. caution:: Do not use this function when writing ingest queries. Instead, use the datetime picker in the **Feed Editor** to define a date.
-
-.. sql-spark-function-to-date-ingest-warning-end
 
 .. sql-spark-function-to-date-start
 
@@ -4052,12 +3940,6 @@ The following example shows two ways to do this:
 
 TO_TIMESTAMP()
 --------------------------------------------------
-
-.. sql-spark-function-to-timestamp-ingest-warning-start
-
-.. caution:: Do not use this function when writing ingest queries. Instead, use the datetime picker in the **Feed Editor** to define a timestamp.
-
-.. sql-spark-function-to-timestamp-ingest-warning-end
 
 .. sql-spark-function-to-timestamp-start
 
