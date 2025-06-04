@@ -38,8 +38,8 @@ Pull Parquet files
 To pull Parquet files to Amperity:
 
 #. Select a :ref:`filedrop data source <format-parquet-pull-data-sources>`.
-#. Define a :ref:`feed to associate fields in the Parquet file with semantic tags <format-parquet-pull-feeds>`; in some situations you may need to use an :ref:`ingest query to transform data in the Parquet file <format-parquet-pull-ingest-queries>` prior to loading it to Amperity.
-#. Configure a courier for :ref:`the location and name of the Parquet file <format-parquet-pull-couriers-load-settings>`, and then for :ref:`the name of an ingest query <format-parquet-pull-couriers-load-operations>`.
+#. Configure a courier for :ref:`the location and name of the Parquet file <format-parquet-pull-couriers>`.
+#. Define a :ref:`feed to associate fields in the Parquet file with semantic tags <format-parquet-pull-feeds>`.
 
 .. format-parquet-pull-end
 
@@ -57,7 +57,7 @@ Data sources
 
 .. format-parquet-pull-data-sources-start
 
-Pull Apache Parquet files to Amperity using any filedrop data source:
+Pull Apache Parquet files to Amperity using one of the following data sources:
 
 * |source_sftp_any|
 * |source_amazon_s3|
@@ -75,12 +75,73 @@ Load data
 
 .. format-parquet-pull-load-data-start
 
-For most Parquet files, use a feed to associate fields in the Parquet file with semantic tags. In some situations, an ingest query may be necessary to transform data prior to loading it to Amperity.
+Use a feed to associate fields in the Apache Parquet file with semantic tags and a courier to pull the Apache Parquet file from its upstream data source.
 
+* :ref:`Couriers <format-parquet-pull-couriers>`
 * :ref:`Feeds <format-parquet-pull-feeds>`
-* :ref:`Ingest queries <format-parquet-pull-ingest-queries>`
 
 .. format-parquet-pull-load-data-end
+
+
+.. _format-parquet-pull-couriers:
+
+Couriers
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-courier-start
+   :end-before: .. term-courier-end
+
+.. format-parquet-pull-couriers-start
+
+A courier must specify the location of the Apache Parquet file, and then define how that file is to be pulled to Amperity.
+
+#. :ref:`File settings <format-parquet-pull-couriers-file-settings>`
+#. :ref:`Feed selection <format-parquet-pull-couriers-feed-selection>`
+
+.. format-parquet-pull-couriers-end
+
+
+.. _format-parquet-pull-couriers-file-settings:
+
+File settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. format-parquet-pull-couriers-file-settings-start
+
+Use the **File settings** section of the courier configuration page to specify the path to the Apache Parquet file and to define formattting within the file.
+
+.. format-parquet-pull-couriers-file-settings-start
+
+.. format-parquet-pull-couriers-load-settings-partition-start
+
+.. note:: Apache Parquet files are partitioned, where a single logical Parquet file is comprised of multiple physical files in a directory structure, each of them representing a partition.
+
+   Parquet partitioning optionally permits for data to be nested in a directory structure determined by the value of partitioning columns. Amperity only detects Parquet partition files one directory level below the configured file pattern. For example:
+
+   .. code-block:: none
+
+       "path/to/file-YYYY-MM-dd.parquet/part-0000.parquet"
+
+.. format-parquet-pull-couriers-load-settings-partition-end
+
+
+.. _format-parquet-pull-couriers-feed-selection:
+
+Feed selection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. format-parquet-pull-couriers-feed-selection-start
+
+Use the **Feed selection** section of the courier configuration page to identify the feed for which this courier pulls data, and then files are loaded.
+
+From the **Load type** dropdown select one of:
+
+* **Load** Use this option to load data to the associated domain table.
+* **Spark** Use this option to load data when the Apache Parquet file contains complex types, such as **structs**, **arrays**, or **maps**.
+* **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
+
+.. format-parquet-pull-couriers-feed-selection-end
 
 
 .. _format-parquet-pull-feeds:
@@ -94,142 +155,9 @@ Feeds
 
 .. format-parquet-pull-feeds-start
 
-Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand how field relationships should be understood when those values are present across your data sources.
+Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand values that exist across data sources.
 
 .. format-parquet-pull-feeds-end
-
-
-.. _format-parquet-pull-ingest-queries:
-
-Ingest queries
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-ingest-query-start
-   :end-before: .. term-ingest-query-end
-
-.. format-parquet-pull-ingest-queries-start
-
-Use :doc:`Spark SQL <sql_spark>` to :doc:`define an ingest query <ingest_queries>` for the Parquet file. Use a **SELECT** statement to specify which fields should be pulled to Amperity. Apply transforms to those fields as necessary.
-
-.. format-parquet-pull-ingest-queries-end
-
-
-.. _format-parquet-pull-couriers:
-
-Couriers
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-start
-   :end-before: .. term-courier-end
-
-.. format-parquet-pull-couriers-start
-
-A courier must specify the location of the Parquet file, and then define how that file is to be pulled to Amperity. This is done using a combination of configuration blocks:
-
-#. :ref:`Load settings <format-parquet-pull-couriers-load-settings>`
-#. :ref:`Load operations <format-parquet-pull-couriers-load-operations>`
-
-.. format-parquet-pull-couriers-end
-
-
-.. _format-parquet-pull-couriers-load-settings:
-
-Load settings
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. format-parquet-pull-couriers-load-settings-start
-
-Use courier load settings to specify the path to the Parquet file, a file tag (which can be the same as the name of the Parquet file), and the ``"application/x-parquet"`` content type.
-
-.. format-parquet-pull-couriers-load-settings-end
-
-.. format-parquet-pull-couriers-load-settings-block-start
-
-.. code-block:: none
-
-   {
-     "object/type": "file",
-     "object/file-pattern": "'path/to/file'-YYYY-MM-dd'.parquet/'",
-     "object/land-as": {
-       "file/tag": "FILE_NAME",
-       "file/content-type": "application/x-parquet"
-     }
-   }
-
-.. format-parquet-pull-couriers-load-settings-block-end
-
-.. format-parquet-pull-couriers-load-settings-partition-start
-
-.. note:: Apache Parquet files are almost always partitioned, where a single logical Parquet file is comprised of multiple physical files in a directory structure, each of them representing a partition.
-
-   Parquet partitioning optionally permits for data to be nested in a directory structure determined by the value of partitioning columns. Amperity only detects Parquet partition files one directory level below the configured file pattern. For example:
-
-   .. code-block:: none
-
-       "path/to/file-YYYY-MM-dd.parquet/part-0000.parquet"
-
-.. format-parquet-pull-couriers-load-settings-partition-end
-
-
-.. _format-parquet-pull-couriers-load-operations:
-
-Load operations
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. format-parquet-pull-couriers-load-operations-start
-
-Use courier load operations to associate a feed ID to the courier, apply the same file tag as the one used for load settings. Load operations for an ingest query may specify a series of options.
-
-.. format-parquet-pull-couriers-load-operations-end
-
-
-.. _format-parquet-pull-couriers-load-operations-feed:
-
-Load from feed
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. format-parquet-pull-couriers-load-operations-feed-start
-
-.. code-block:: none
-
-   {
-     "FEED_ID": [
-       {
-         "type": "OPERATION",
-         "file": "FILE_NAME"
-       }
-     ]
-   }
-
-.. format-parquet-pull-couriers-load-operations-feed-end
-
-
-.. _format-parquet-pull-couriers-load-operations-ingest-query:
-
-Load from ingest query
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. format-parquet-pull-couriers-load-operations-ingest-query-start
-
-.. code-block:: none
-
-   {
-     "FEED_ID": [
-       {
-         "type": "spark-sql",
-         "spark-sql-files": [
-           {
-             "file": "FILE_NAME"
-           }
-         ],
-         "spark-sql-query": "INGEST_QUERY_NAME"
-       }
-     ]
-   }
-
-.. format-parquet-pull-couriers-load-operations-ingest-query-end
 
 
 .. _format-parquet-destination:
@@ -263,7 +191,7 @@ Amperity overwrites Apache Parquet files when they are sent to the same location
 
 .. format-parquet-destination-links-start
 
-Amperity can send Apache Parquet files to downstream workflows using any filedrop destination:
+Amperity can send Apache Parquet files to downstream workflows any of the following destinations:
 
 * |destination_sftp_any|
 * |destination_amazon_s3|
