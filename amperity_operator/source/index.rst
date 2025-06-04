@@ -47,12 +47,6 @@ Manage sources
 
 :doc:`Recommendations for sending data to Amperity <send_data>`
 
-**Reshape data on ingest**
-   :doc:`About ingest queries <ingest_queries>` |fa-index-separator| :ref:`About Spark SQL <ingest-queries-spark-sql>` |fa-index-separator| :ref:`About load operations for ingest queries <ingest-queries-courier-load-operations>` |fa-index-separator| :ref:`Add ingest query <ingest-queries-add>` |fa-index-separator| :ref:`Add load operation <ingest-queries-add-to-courier-as-load-operation>`
-
-**Example ingest queries**
-   :ref:`ingest-queries-example-build-birthdate` |fa-index-separator| :ref:`ingest-queries-example-concatenate-columns` |fa-index-separator| :ref:`ingest-queries-example-explode-transactions` |fa-index-separator| :ref:`ingest-queries-example-find-records` |fa-index-separator| :ref:`ingest-queries-example-flatten-with-identifiers` |fa-index-separator| :ref:`ingest-queries-example-import-billing-as-address` |fa-index-separator| :ref:`ingest-queries-example-join-datasets` |fa-index-separator| :ref:`ingest-queries-example-load-xml-data` |fa-index-separator| :ref:`ingest-queries-example-parse-nested-records` |fa-index-separator| :ref:`ingest-queries-example-remove-field` |fa-index-separator| :ref:`ingest-queries-example-select-fields`
-
 
 .. _index-apply-semantic-tags:
 
@@ -313,7 +307,6 @@ Automate workflows
    graph_database
    historical_data
    householding
-   ingest_queries
    merge_policy
    model_churn_propensity
    model_event_propensity
