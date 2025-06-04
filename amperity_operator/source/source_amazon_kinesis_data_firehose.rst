@@ -201,12 +201,6 @@ Add courier
    :start-after: .. term-courier-start
    :end-before: .. term-courier-end
 
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
 **To add a courier**
 
 .. source-amazon-kinesis-data-firehose-add-courier-steps-start

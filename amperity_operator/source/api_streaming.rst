@@ -553,12 +553,6 @@ Add courier
 
 The Streaming Ingest courier pulls your data from the location that the Streaming Ingest API streams data to Amperity. A courier is required for each data stream.
 
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
 **To add a courier for Streaming Ingest**
 
 .. source-streaming-ingest-legacy-add-courier-steps-start

@@ -31,9 +31,8 @@ Pull NDJSON files
 
 To pull NDJSON files to Amperity:
 
-#. Select a :ref:`filedrop data source <format-ndjson-pull-data-sources>`.
-#. Use an :ref:`ingest query <format-ndjson-pull-ingest-queries>` to select fields from the NDJSON file to pull to Amperity.
-#. Configure a courier for :ref:`the location and name of the NDJSON file <format-ndjson-pull-couriers-load-settings>`, and then for :ref:`the name of an ingest query <format-ndjson-pull-couriers-load-operations>`.
+#. Select a :ref:`data source <format-ndjson-pull-data-sources>`.
+#. Configure a courier for :ref:`the location and name of the NDJSON file <format-ndjson-pull-couriers>`.
 #. Define a :ref:`feed to associate the fields that were selected from the NDJSON file with semantic tags <format-ndjson-pull-feed>` for customer profiles and interactions, as necessary.
 
 .. format-ndjson-pull-end
@@ -46,7 +45,7 @@ Data sources
 
 .. format-ndjson-pull-data-sources-start
 
-Pull NDJSON files to Amperity using any filedrop data source:
+Pull NDJSON files to Amperity using one of the following data sources:
 
 * |source_sftp_any|
 * |source_amazon_s3|
@@ -57,28 +56,25 @@ Pull NDJSON files to Amperity using any filedrop data source:
 .. format-ndjson-pull-data-sources-end
 
 
-.. _format-ndjson-pull-ingest-queries:
+.. _format-ndjson-pull-load-data:
 
-Ingest queries
+Load data
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-ingest-query-start
-   :end-before: .. term-ingest-query-end
+.. format-ndjson-pull-load-data-start
 
-.. format-ndjson-pull-ingest-queries-start
+Use a feed to associate fields in the NDJSON file with semantic tags and a courier to pull the NDJSON file from its upstream data source.
 
-Use :doc:`Spark SQL <sql_spark>` to :doc:`define an ingest query <ingest_queries>` for NDJSON files that contain nested data using a **SELECT** statement to specify which fields should be pulled to Amperity. Apply transforms to those fields as necessary.
+* :ref:`Couriers <format-ndjson-pull-couriers>`
+* :ref:`Feeds <format-ndjson-pull-feed>`
 
-.. note:: An ingest query is not required for simple NDJSON files that do not have nested values. Simple NDJSON files may be loaded to a feed directly.
-
-.. format-ndjson-pull-ingest-queries-end
+.. format-ndjson-pull-load-data-end
 
 
 .. _format-ndjson-pull-couriers:
 
 Couriers
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
@@ -86,77 +82,47 @@ Couriers
 
 .. format-ndjson-pull-couriers-start
 
-A courier must specify the location of the NDJSON file, and then define how that file is to be pulled to Amperity. This is done using a combination of configuration blocks:
+A courier must specify the location of the NDJSON file, and then define how that file is to be pulled to Amperity.
 
-#. :ref:`Load settings <format-ndjson-pull-couriers-load-settings>`
-#. :ref:`Load operations <format-ndjson-pull-couriers-load-operations>`
+#. :ref:`File settings <format-ndjson-pull-couriers-file-settings>`
+#. :ref:`Feed selection <format-ndjson-pull-couriers-feed-selection>`
 
 .. format-ndjson-pull-couriers-end
 
 
-.. _format-ndjson-pull-couriers-load-settings:
+.. _format-ndjson-pull-couriers-file-settings:
 
-Load settings
-++++++++++++++++++++++++++++++++++++++++++++++++++
+File settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-ndjson-pull-couriers-load-settings-start
+.. format-ndjson-pull-couriers-file-settings-start
 
-Use courier load settings to specify the path to the NDJSON file, a file tag (which can be the same as the name of the NDJSON file), and the ``"application/x-ndjson"`` content type.
+Use the **File settings** section of the courier configuration page to specify the path to the NDJSON file and to define formattting within the file.
 
-.. format-ndjson-pull-couriers-load-settings-end
-
-.. format-ndjson-pull-couriers-load-settings-block-start
-
-.. code-block:: none
-
-   {
-     "object/type": "file",
-     "object/file-pattern": "'path/to/file'-YYYY-MM-dd'.ndjson'",
-     "object/land-as": {
-        "file/tag": "FILE_NAME",
-        "file/content-type": "application/x-ndjson"
-     }
-   },
-
-.. format-ndjson-pull-couriers-load-settings-block-end
+.. format-ndjson-pull-couriers-file-settings-start
 
 
-.. _format-ndjson-pull-couriers-load-operations:
+.. _format-ndjson-pull-couriers-feed-selection:
 
-Load operations
-++++++++++++++++++++++++++++++++++++++++++++++++++
+Feed selection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-ndjson-pull-couriers-load-operations-start
+.. format-ndjson-pull-couriers-feed-selection-start
 
-Use courier load operations to associate a feed ID to the courier, apply the same file tag as the one used for load settings, and the name of the ingest query.
+Use the **Feed selection** section of the courier configuration page to identify the feed for which this courier pulls data, and then which files are loaded.
 
-.. format-ndjson-pull-couriers-load-operations-end
+From the **Load type** dropdown select one of:
 
-.. format-ndjson-pull-couriers-load-operations-block-start
+* **Load** Use this option to load data to the associated domain table.
+* **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
-.. code-block:: none
-
-   {
-     "FEED_ID": [
-       {
-         "type": "spark-sql",
-         "spark-sql-files": [
-           {
-             "file": "FILE_NAME"
-           }
-         ],
-         "spark-sql-query": "INGEST_QUERY_NAME"
-       }
-     ]
-   }
-
-.. format-ndjson-pull-couriers-load-operations-block-end
+.. format-ndjson-pull-couriers-feed-selection-end
 
 
 .. _format-ndjson-pull-feed:
 
 Feeds
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-feed-start
@@ -164,7 +130,7 @@ Feeds
 
 .. format-ndjson-pull-feeds-start
 
-Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand how field relationships should be understood when those values are present across your data sources.
+Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand values that exist across data sources.
 
 .. format-ndjson-pull-feeds-end
 
@@ -176,7 +142,7 @@ Send NDJSON files
 
 .. format-ndjson-destination-links-start
 
-Amperity can send NDJSON files to downstream workflows using any filedrop destination:
+Amperity can send NDJSON files to downstream workflows using any of the following destinations:
 
 * |destination_sftp_any|
 * |destination_amazon_s3|

@@ -43,9 +43,9 @@ Pull DAT files
 
 To pull DAT files to Amperity:
 
-#. Select a :ref:`filedrop data source <format-dat-pull-data-sources>`.
-#. Use an :ref:`ingest query <format-dat-pull-ingest-queries>` to parse the fields in the DAT file.
-#. Configure a courier for :ref:`the location and name of the DAT file <format-dat-pull-couriers-load-settings>`, and then for :ref:`the name of an ingest query <format-dat-pull-couriers-load-operations>`.
+#. Select a :ref:`data source <format-dat-pull-data-sources>`.
+#. Use an ingest query to parse the fields in the DAT file.
+#. Configure a courier for :ref:`the location and name of the DAT file <format-dat-pull-couriers>`.
 #. Define a :ref:`feed to associate the fields that were selected from the DAT file with semantic tags <format-dat-pull-feed>` for customer profiles and interactions or use domain SQL to transform this data into a shape that is usable within Amperity.
 
 .. format-dat-pull-end
@@ -58,7 +58,7 @@ Data sources
 
 .. format-dat-pull-data-sources-start
 
-Pull DAT files to Amperity using any filedrop data source:
+Pull DAT files to Amperity using one of the following data sources:
 
 * |source_sftp_any|
 * |source_amazon_s3|
@@ -80,13 +80,26 @@ Ingest queries
 
 .. format-dat-pull-ingest-queries-start
 
-Use :doc:`Spark SQL <sql_spark>` to :doc:`define an ingest query <ingest_queries>` for the DAT file that parses the individual fields. This can be done using the **SUBSTR()** function to identify the positions for each field within the DAT file. Use other functions, such as **TRIM()** and **NULLIF()** as necessary to ensure the data that is parsed from the DAT file is as clean as possible. Use a **SELECT** statement to specify which fields should be pulled to Amperity. Apply transforms to those fields as necessary.
+Use Spark SQL to define an ingest query for the DAT file that parses the individual fields. This can be done using the **SUBSTR()** function to identify the positions for each field within the DAT file. Use other functions, such as **TRIM()** and **NULLIF()** as necessary to ensure the data that is parsed from the DAT file is as clean as possible. Use a **SELECT** statement to specify which fields should be pulled to Amperity. Apply transforms to those fields as necessary.
 
 .. format-dat-pull-ingest-queries-end
 
-.. include:: ../../amperity_reference/source/sql_spark.rst
-   :start-after: .. sql-spark-function-substr-example-parse-fields-from-dat-file-start
-   :end-before: .. sql-spark-function-substr-example-parse-fields-from-dat-file-end
+.. sql-spark-function-substr-example-parse-fields-from-dat-file-start
+
+The following example shows an ingest query that parses fields from a DAT file. Each field (fields 1-6) has a starting point within the DAT file (1, 21, 52, 63, 69, 70) and a length (20, 30, 10, 15, 1, 140). Use an ordinal ( _c0 ) to define each source field within the DAT file.
+
+.. code-block:: none
+
+   SELECT
+     ,NULLIF(TRIM(SUBSTR(`_c0`,1,20)),'') AS Field1
+     ,NULLIF(TRIM(SUBSTR(`_c0`,21,30)),'') AS Field2
+     ,NULLIF(TRIM(SUBSTR(`_c0`,52,10)),'') AS Field3
+     ,NULLIF(TRIM(SUBSTR(`_c0`,63,15)),'') AS Field4
+     ,NULLIF(TRIM(SUBSTR(`_c0`,69,1)),'') AS Field5
+     ,NULLIF(TRIM(SUBSTR(`_c0`,70,140)),'') AS Field6
+   FROM DAT_FILE_NAME
+
+.. sql-spark-function-substr-example-parse-fields-from-dat-file-end
 
 .. format-dat-pull-ingest-queries-important-start
 
@@ -202,7 +215,7 @@ Feeds
 
 .. format-dat-pull-feeds-start
 
-Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand how field relationships should be understood when those values are present across your data sources.
+Apply profile (PII) semantics to customer records and transaction, and product catalog semantics to interaction records. Use blocking key (bk), foreign key (fk), and separation key (sk) semantic tags to define how Amperity should understand values that exist across data sources.
 
 .. format-dat-pull-feeds-end
 

@@ -71,6 +71,8 @@ Site index
    destination_vibes
    destination_yahoo_dsp
    destination_zendesk
+   format_dat
+   ingest_queries
    source_amazon_s3
    source_shopify
    source_snowflake_aws.rst
