@@ -857,22 +857,6 @@ For example, if your URL of |destination-name| is ``https://dashboard-03.braze.c
 
 .. setting-braze-instance-example-end
 
-**Profile updates?**
-
-.. setting-braze-profile-updates-start
-
-To update audience profiles only when one or more values change, enable the **Only send updated audience profiles** option.
-
-.. setting-braze-profile-updates-end
-
-.. setting-braze-profile-updates-usewhen-start
-
-Use the **Only send updated audience profiles** option to configure Amperity to update audience profiles only when one or more values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
-
-For use cases that require sending attributes that have changing values, consider using queries to orchestrate specific sets of attributes at defined intervals.
-
-.. setting-braze-profile-updates-usewhen-end
-
 **User identifier**
 
 .. setting-braze-user-identifier-start

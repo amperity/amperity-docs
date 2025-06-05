@@ -484,16 +484,6 @@ Get details
              :start-after: .. setting-braze-user-identifier-about-start
              :end-before: .. setting-braze-user-identifier-about-end
 
-       **Profile updates?**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-braze-profile-updates-start
-             :end-before: .. setting-braze-profile-updates-end
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-braze-profile-updates-usewhen-start
-             :end-before: .. setting-braze-profile-updates-usewhen-end
-
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
@@ -663,16 +653,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-braze-user-identifier-about-start
              :end-before: .. setting-braze-user-identifier-about-end
-
-       **Profile updates?**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-braze-profile-updates-start
-             :end-before: .. setting-braze-profile-updates-end
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-braze-profile-updates-usewhen-start
-             :end-before: .. setting-braze-profile-updates-usewhen-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
