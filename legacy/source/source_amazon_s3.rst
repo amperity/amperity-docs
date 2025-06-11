@@ -209,12 +209,6 @@ Add courier
    :start-after: .. term-courier-start
    :end-before: .. term-courier-end
 
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
 **Example entities list**
 
 .. include:: ../../shared/sources.rst
