@@ -65,7 +65,7 @@ Couriers
 :doc:`About couriers <couriers>`
 
 **File couriers**
-   :ref:`About file couriers <couriers-files>` |fa-index-separator| :ref:`Load settings <couriers-files-load-settings>` |fa-index-separator| :ref:`File patterns <couriers-files-patterns>` |fa-index-separator| :ref:`Wildcards <couriers-files-patterns-wildcards>` |fa-index-separator| :ref:`Wildcards within archives <couriers-files-patterns-wildcards-within-archives>` |fa-index-separator| :ref:`Literal strings <couriers-files-patterns-literal-strings>` |fa-index-separator| :ref:`Date components <couriers-files-patterns-date-components>` |fa-index-separator| :ref:`File compression / archive <couriers-files-patterns-compression>` |fa-index-separator| :ref:`Input examples <couriers-load-settings-input-examples>` |fa-index-separator| :ref:`for single files <couriers-load-settings-input-example-single>` |fa-index-separator| :ref:`for multiple files <couriers-load-settings-input-example-multiple>`
+   :ref:`About file couriers <couriers-files>` |fa-index-separator| :ref:`Load settings <couriers-files-load-settings>` |fa-index-separator| :ref:`File patterns <couriers-files-patterns>` |fa-index-separator| :ref:`Wildcards <couriers-files-patterns-wildcards>` |fa-index-separator| :ref:`Literal strings <couriers-files-patterns-literal-strings>` |fa-index-separator| :ref:`Date components <couriers-files-patterns-date-components>` |fa-index-separator| :ref:`Input examples <couriers-load-settings-input-examples>` |fa-index-separator| :ref:`for single files <couriers-load-settings-input-example-single>` |fa-index-separator| :ref:`for multiple files <couriers-load-settings-input-example-multiple>`
 
 **API couriers**
    :ref:`About API couriers <couriers-api>`
@@ -74,10 +74,7 @@ Couriers
    :ref:`About Snowflake couriers <couriers-snowflake>` |fa-index-separator| :ref:`Table lists <couriers-snowflake-table-list>` |fa-index-separator| :ref:`Stage names <couriers-snowflake-stage-name>` |fa-index-separator| :ref:`Load operations <couriers-snowflake-load-operation>`
 
 **Load operation types**
-   :ref:`couriers-load-operation-type-empty` |fa-index-separator| :ref:`couriers-load-operation-type-incorrect-feed-id` |fa-index-separator| :ref:`couriers-load-operation-type-load-files` |fa-index-separator| :ref:`couriers-load-operation-type-load-ingest-query` |fa-index-separator| :ref:`couriers-load-operation-type-truncate-then-load`
-
-**Examples**
-   :ref:`couriers-example-apache-avro` |fa-index-separator| :ref:`couriers-example-apache-parquet` |fa-index-separator| :ref:`couriers-example-cbor` |fa-index-separator| :ref:`couriers-example-csv` |fa-index-separator| :ref:`couriers-example-json` |fa-index-separator| :ref:`couriers-example-ndjson` |fa-index-separator| :ref:`couriers-example-psv` |fa-index-separator| :ref:`couriers-example-salesforce-commerce-cloud` |fa-index-separator| :ref:`couriers-example-salesforce-sales-cloud` |fa-index-separator| :ref:`couriers-example-snowflake` |fa-index-separator| :ref:`couriers-example-tsv` |fa-index-separator| :ref:`couriers-example-xml`
+   :ref:`couriers-load-operation-type-load-files` |fa-index-separator| :ref:`couriers-load-operation-type-spark` |fa-index-separator| :ref:`couriers-load-operation-type-truncate-then-load`
 
 **How-tos**
    :ref:`couriers-add` |fa-index-separator| :ref:`couriers-add-as-copy` |fa-index-separator| :ref:`couriers-add-to-courier-group` |fa-index-separator| :ref:`couriers-delete` |fa-index-separator| :ref:`couriers-edit` |fa-index-separator| :ref:`couriers-load-data-only` |fa-index-separator| :ref:`Run and only load files <couriers-run-only-load-files>` |fa-index-separator| :ref:`Run for a specific day <couriers-run-for-specific-day>` |fa-index-separator| :ref:`Run for a time period <couriers-run-for-time-period>` |fa-index-separator| :ref:`Run, but skip missing files <couriers-run-skip-missing-files>` |fa-index-separator| :ref:`couriers-run-restart-job` |fa-index-separator| :ref:`couriers-view`
@@ -198,24 +195,7 @@ Feeds
 File formats
 ==================================================
 
-:doc:`About file formats <format_common>` |fa-index-separator| :doc:`Apache Avro <format_avro>` |fa-index-separator| :doc:`Apache Parquet <format_parquet>` |fa-index-separator| :doc:`CBOR <format_cbor>` |fa-index-separator| :doc:`CSV <format_csv>` |fa-index-separator| :doc:`DAT <format_dat>` |fa-index-separator| :doc:`JSON <format_json>` |fa-index-separator| :doc:`NDJSON <format_ndjson>` |fa-index-separator| :doc:`PSV <format_psv>` |fa-index-separator| :doc:`Streaming JSON <format_json_streaming>` |fa-index-separator| :doc:`TSV <format_tsv>` |fa-index-separator| :doc:`XML <format_xml>`
-
-
-.. _index-ingest-queries:
-
-Ingest queries
-==================================================
-
-:doc:`About ingest queries <ingest_queries>` |fa-index-separator| :ref:`Spark SQL <ingest-queries-spark-sql>`
-
-**Example courier load operations**
-   :ref:`ingest-queries-example-apache-avro` |fa-index-separator| :ref:`ingest-queries-example-apache-parquet` |fa-index-separator| :ref:`ingest-queries-example-cbor` |fa-index-separator| :ref:`ingest-queries-example-csv` |fa-index-separator| :ref:`ingest-queries-example-json` |fa-index-separator| :ref:`ingest-queries-example-ndjson` |fa-index-separator| :ref:`ingest-queries-example-psv` |fa-index-separator| :ref:`ingest-queries-example-json-streaming` |fa-index-separator| :ref:`ingest-queries-example-tsv` |fa-index-separator| :ref:`ingest-queries-example-xml`
-
-**Example ingest queries**
-   :ref:`ingest-queries-example-build-birthdate` |fa-index-separator| :ref:`ingest-queries-example-concatenate-columns` |fa-index-separator| :ref:`ingest-queries-example-explode-transactions` |fa-index-separator| :ref:`ingest-queries-example-find-records` |fa-index-separator| :ref:`ingest-queries-example-flatten-with-identifiers` |fa-index-separator| :ref:`ingest-queries-example-import-billing-as-address` |fa-index-separator| :ref:`ingest-queries-example-join-datasets` |fa-index-separator| :ref:`ingest-queries-example-parse-nested-records` |fa-index-separator| :ref:`ingest-queries-example-remove-field` |fa-index-separator| :ref:`ingest-queries-example-select-fields`
-
-**How-tos**
-   :ref:`ingest-queries-add` |fa-index-separator| :ref:`ingest-queries-add-to-courier-as-load-operation` |fa-index-separator| :ref:`ingest-queries-delete` |fa-index-separator| :ref:`ingest-queries-edit`
+:doc:`About file formats <format_common>` |fa-index-separator| :doc:`Apache Avro <format_avro>` |fa-index-separator| :doc:`Apache Parquet <format_parquet>` |fa-index-separator| :doc:`CBOR <format_cbor>` |fa-index-separator| :doc:`CSV <format_csv>` |fa-index-separator| :doc:`JSON <format_json>` |fa-index-separator| :doc:`NDJSON <format_ndjson>` |fa-index-separator| :doc:`PSV <format_psv>` |fa-index-separator| :doc:`Streaming JSON <format_json_streaming>` |fa-index-separator| :doc:`TSV <format_tsv>` |fa-index-separator| :doc:`XML <format_xml>`
 
 
 .. _index-orchestration-groups:
@@ -544,7 +524,6 @@ Workflows
    format_cbor
    format_common
    format_csv
-   format_dat
    format_json_streaming
    format_json
    format_ndjson
@@ -553,7 +532,6 @@ Workflows
    format_tsv
    format_xml
    glossary
-   ingest_queries
    journeys
    model_churn_propensity
    model_event_propensity

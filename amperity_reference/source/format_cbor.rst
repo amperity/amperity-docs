@@ -37,10 +37,9 @@ Pull CBOR files
 
 To pull CBOR files to Amperity:
 
-#. Select a :ref:`filedrop data source <format-cbor-pull-data-sources>` or identify the location at which the Streaming Ingest API has put the CBOR file.
-#. Use an :ref:`ingest query <format-cbor-pull-ingest-queries>` to select fields from the CBOR file to pull to Amperity.
-#. Configure a courier for :ref:`the location and name of the CBOR file <format-cbor-pull-couriers-load-settings>`, and then for :ref:`the name of an ingest query <format-cbor-pull-couriers-load-operations>`.
-#. Define a :ref:`feed to associate the fields that were selected from the CBOR file with semantic tags <format-cbor-pull-feed>` for customer profiles and interactions, as necessary.
+#. Select a :ref:`data source <format-cbor-pull-data-sources>`.
+#. Configure a courier for :ref:`the location and name of the CBOR file <format-cbor-pull-couriers>`.
+#. Define a :ref:`feed to associate fields in the CBOR file with semantic tags <format-cbor-pull-feed>`.
 
 .. format-cbor-pull-end
 
@@ -52,7 +51,7 @@ Data sources
 
 .. format-cbor-pull-data-sources-start
 
-Pull CBOR files to Amperity using any filedrop data source:
+Pull CBOR files to Amperity using one of the following data sources:
 
 * |source_sftp_any|
 * |source_amazon_s3|
@@ -63,26 +62,25 @@ Pull CBOR files to Amperity using any filedrop data source:
 .. format-cbor-pull-data-sources-end
 
 
-.. _format-cbor-pull-ingest-queries:
+.. _format-cbor-pull-load-data:
 
-Ingest queries
+Load data
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-ingest-query-start
-   :end-before: .. term-ingest-query-end
+.. format-cbor-pull-load-data-start
 
-.. format-cbor-pull-ingest-queries-start
+Use a feed to associate fields in the CBOR file with semantic tags and a courier to pull the CBOR file from its upstream data source.
 
-Use :doc:`Spark SQL <sql_spark>` to :doc:`define an ingest query <ingest_queries>` for the CBOR file. Use a **SELECT** statement to specify which fields should be pulled to Amperity. Apply transforms to those fields as necessary.
+* :ref:`Couriers <format-cbor-pull-couriers>`
+* :ref:`Feeds <format-cbor-pull-feed>`
 
-.. format-cbor-pull-ingest-queries-end
+.. format-cbor-pull-load-data-end
 
 
 .. _format-cbor-pull-couriers:
 
 Couriers
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
@@ -90,149 +88,41 @@ Couriers
 
 .. format-cbor-pull-couriers-start
 
-A courier must specify the location of the CBOR file, and then define how that file is to be pulled to Amperity. This is done using a combination of configuration blocks:
+A courier must specify the location of the CBOR file, and then define how that file is to be pulled to Amperity.
 
-#. :ref:`Load settings <format-cbor-pull-couriers-load-settings>`
-#. :ref:`Load operations <format-cbor-pull-couriers-load-operations>`
+#. :ref:`File settings <format-cbor-pull-couriers-file-settings>`
+#. :ref:`Feed selection <format-cbor-pull-couriers-feed-selection>`
 
 .. format-cbor-pull-couriers-end
 
 
-.. _format-cbor-pull-couriers-load-settings:
+.. _format-cbor-pull-couriers-file-settings:
 
-Load settings
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. format-cbor-pull-couriers-load-operations-start
-
-Use courier load settings to specify the path to the CBOR file, a file tag (which can be the same as the name of the CBOR file), and the ``"application/ingest-pack+cbor"`` content type.
-
-.. format-cbor-pull-couriers-load-operations-end
-
-
-.. _format-cbor-pull-couriers-load-settings-aws-block:
-
-for Amazon AWS
+File settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-cbor-pull-couriers-load-settings-aws-block-start
+.. format-cbor-pull-couriers-file-settings-start
 
-.. code-block:: none
+Use the **File settings** section of the courier configuration page to specify the path to the CBOR file and to define formattting within the file.
 
-   {
-     "object/type": "file",
-     "object/file-pattern": "'ingest/stream/TENANT/STREAM_ID/'yyyy-MM-dd'/'*'.cbor'",
-     "object/land-as": {
-        "file/header-rows": 1,
-        "file/tag": "FILE_NAME",
-        "file/content-type": "application/ingest-pack+cbor"
-     }
-   },
-
-.. format-cbor-pull-couriers-load-settings-aws-block-end
+.. format-cbor-pull-couriers-file-settings-start
 
 
-.. _format-cbor-pull-couriers-load-settings-azure-block:
+.. _format-cbor-pull-couriers-feed-selection:
 
-for Microsoft Azure
+Feed selection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-cbor-pull-couriers-load-settings-azure-block-start
+.. format-cbor-pull-couriers-feed-selection-start
 
-.. code-block:: none
+Use the **Feed selection** section of the courier configuration page to identify the feed for which this courier pulls data, and then files are loaded.
 
-   {
-     "object/type": "file",
-     "object/file-pattern": "'STREAM_ID/'yyyy-MM-dd'/'*'.cbor'",
-     "object/land-as": {
-        "file/header-rows": 1,
-        "file/tag": "FILE_NAME",
-        "file/content-type": "application/ingest-pack+cbor"
-     }
-   },
+From the **Load type** dropdown select one of:
 
-.. format-cbor-pull-couriers-load-settings-azure-block-end
+* **Load** Use this option to load data to the associated domain table.
+* **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
-
-.. _format-cbor-pull-couriers-load-operations:
-
-Load operations
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. format-cbor-pull-couriers-load-operations-start
-
-Use courier load operations to associate a feed ID to the courier, apply the same file tag as the one used for load settings, the element within the CBOR schema to be treated as a row in a table, and the name of the ingest query.
-
-.. format-cbor-pull-couriers-load-operations-end
-
-.. format-cbor-pull-couriers-load-operations-block-start
-
-.. code-block:: none
-
-   {
-     "FEED_ID": [
-       {
-         "type": "spark-sql",
-         "spark-sql-files": [
-           {
-             "file": "FILE_NAME",
-             "options": {
-               "rowTag": "row"
-             },
-             "schema": {
-               "fields": [
-                 {
-                   "metadata": {},
-                   "name": "field-1",
-                   "type": "string",
-                   "nullable": true
-                 },
-                 ...
-                 {
-                   "metadata": {},
-                   "name": "nested-group-1",
-                   "type": {
-                     "fields": [
-                       {
-                         "metadata": {},
-                         "name": "field-a",
-                         "type": "string",
-                         "nullable": true
-                       },
-                       {
-                         "metadata": {},
-                         "name": "nested-group-a",
-                         "type": {
-                           "fields": [
-                             ...
-                           ],
-                           "type": "struct"
-                         },
-                         "nullable": true
-                       },
-                       {
-                         "metadata": {},
-                         "name": "field-xyz",
-                         "type": "string",
-                         "nullable": true
-                       },
-                     ],
-                     "type": "struct"
-                   }
-                   "type": "struct"
-                 }
-                 ...
-               }
-               ...
-             ]
-           }
-         ],
-         "spark-sql-query": "INGEST_QUERY_NAME"
-       }
-     ]
-   }
-
-.. format-cbor-pull-couriers-load-operations-block-end
+.. format-cbor-pull-couriers-feed-selection-end
 
 .. format-cbor-pull-couriers-load-operations-important-start
 
@@ -250,7 +140,7 @@ Use courier load operations to associate a feed ID to the courier, apply the sam
 .. _format-cbor-pull-feed:
 
 Feeds
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-feed-start
@@ -258,7 +148,7 @@ Feeds
 
 .. format-cbor-pull-feeds-start
 
-Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand how field relationships should be understood when those values are present across your data sources.
+Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand values that exist across data sources.
 
 .. format-cbor-pull-feeds-end
 

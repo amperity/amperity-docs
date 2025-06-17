@@ -37,9 +37,8 @@ Pull XML files
 
 To pull XML files to Amperity:
 
-#. Select a :ref:`filedrop data source <format-xml-pull-data-sources>`.
-#. Use a :ref:`ingest query <format-xml-pull-ingest-queries>` to select fields from the XML file to pull to Amperity.
-#. Configure a courier for :ref:`the location and name of the XML file <format-xml-pull-couriers-load-settings>`, and then for :ref:`the name of an ingest query <format-xml-pull-couriers-load-operations>`.
+#. Select a :ref:`data source <format-xml-pull-data-sources>`.
+#. Configure a courier for :ref:`the location and name of the XML file <format-xml-pull-couriers>`.
 #. Define a :ref:`feed to associate the fields that were selected from the XML file with semantic tags <format-xml-pull-feed>` for customer profiles and interactions, as necessary.
 
 .. format-xml-pull-end
@@ -52,7 +51,7 @@ Data sources
 
 .. format-xml-pull-data-sources-start
 
-Pull XML files to Amperity using any filedrop data source:
+Pull XML files to Amperity using one of the following data sources:
 
 * |source_sftp_any|
 * |source_amazon_s3|
@@ -63,36 +62,25 @@ Pull XML files to Amperity using any filedrop data source:
 .. format-xml-pull-data-sources-end
 
 
-.. _format-xml-pull-ingest-queries:
+.. _format-xml-pull-load-data:
 
-Ingest queries
+Load data
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-ingest-query-start
-   :end-before: .. term-ingest-query-end
+.. format-xml-pull-load-data-start
 
-.. format-xml-pull-ingest-queries-start
+Use a feed to associate fields in the XML file with semantic tags and a courier to pull the XML file from its upstream data source.
 
-Use :doc:`Spark SQL <sql_spark>` to :doc:`define an ingest query <ingest_queries>` for the XML file. Use a **SELECT** statement to specify which fields should be pulled to Amperity. Apply transforms to those fields as necessary.
+* :ref:`Couriers <format-xml-pull-couriers>`
+* :ref:`Feeds <format-xml-pull-feed>`
 
-.. format-xml-pull-ingest-queries-end
-
-
-.. _format-xml-pull-ingest-queries-explode-interactions:
-
-Explode interactions data
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../amperity_reference/source/sql_spark.rst
-   :start-after: .. sql-spark-function-explode-example-load-xml-as-ingest-query-start
-   :end-before: .. sql-spark-function-explode-example-load-xml-as-ingest-query-end
+.. format-xml-pull-load-data-end
 
 
 .. _format-xml-pull-couriers:
 
 Couriers
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
@@ -100,113 +88,48 @@ Couriers
 
 .. format-xml-pull-couriers-start
 
-A courier must specify the location of the XML file, and then define how that file is to be pulled to Amperity. This is done using a combination of configuration blocks:
+A courier must specify the location of the XML file, and then define how that file is to be pulled to Amperity.
 
-#. :ref:`Load settings <format-xml-pull-couriers-load-settings>`
-#. :ref:`Load operations <format-xml-pull-couriers-load-operations>`
+#. :ref:`File settings <format-xml-pull-couriers-file-settings>`
+#. :ref:`Feed selection <format-xml-pull-couriers-feed-selection>`
 
 .. format-xml-pull-couriers-end
 
 
-.. _format-xml-pull-couriers-load-settings:
+.. _format-xml-pull-couriers-file-settings:
 
-Load settings
-++++++++++++++++++++++++++++++++++++++++++++++++++
+File settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-xml-pull-couriers-load-settings-start
+.. format-xml-pull-couriers-file-settings-start
 
-Use courier load settings to specify the path to the XML file, a file tag (which can be the same as the name of the XML file), and the ``"application/xml"`` content type.
+Use the **File settings** section of the courier configuration page to specify the path to the XML file and to define formattting within the file.
 
-.. format-xml-pull-couriers-load-settings-end
-
-.. format-xml-pull-couriers-load-settings-block-start
-
-.. code-block:: none
-
-   {
-     "object/type": "file",
-     "object/file-pattern": "'path/to/file'-YYYY-MM-dd'.xml'",
-     "object/land-as": {
-       "file/tag": "FILE_NAME",
-       "file/content-type": "application/xml"
-     }
-   }
-
-.. format-xml-pull-couriers-load-settings-block-end
+.. format-xml-pull-couriers-file-settings-start
 
 
-.. _format-xml-pull-couriers-load-operations:
+.. _format-xml-pull-couriers-feed-selection:
 
-Load operations
-++++++++++++++++++++++++++++++++++++++++++++++++++
+Feed selection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-xml-pull-couriers-load-operations-start
+.. format-xml-pull-couriers-feed-selection-start
 
-Use courier load operations to associate a feed ID to the courier, apply the same file tag as the one used for load settings, the element within the XML schema to be treated as a row in a table, and the name of the ingest query.
+Use the **Feed selection** section of the courier configuration page to identify the feed for which this courier pulls data, and then files are loaded.
 
-.. format-xml-pull-couriers-load-operations-end
+From the **Load type** dropdown select one of:
 
-.. format-xml-pull-couriers-load-operations-block-start
+* **Load** Use this option to load data to the associated domain table.
+* **Spark** Use this option to load data when the XML file contains complex types, such as within the **complexType** element.
+* **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
-.. code-block:: none
-
-   {
-     "FEED_ID": [
-       {
-         "type": "spark-sql",
-         "spark-sql-files": [
-           {
-             "file": "FILE_NAME",
-             "options": {
-               "rowTag": "row"
-             }
-           }
-         ],
-         "spark-sql-query": "INGEST_QUERY_NAME"
-       }
-     ]
-   }
-
-.. format-xml-pull-couriers-load-operations-block-end
-
-.. format-xml-pull-couriers-load-operations-rowtag-start
-
-.. tip:: Set ``ROW`` to the element in the XML schema that should be treated as a row in a table. For example, if the XML schema contained:
-
-   .. code-block:: none
-
-      <salesTransactions>
-        <salesTransaction> ... </salesTransaction>
-      </salesTransactions>
-
-   then use ``salesTransaction`` as the value for ``rowTag``. The default value is ``row``.
-
-   .. code-block:: none
-
-      {
-        "df-5Jagkabc": [
-          {
-            "type": "spark-sql",
-            "spark-sql-files": [
-              {
-                "file": "PosXml",
-                "options": {
-                  "rowTag": "salesTransaction"
-                }
-              }
-            ],
-            "spark-sql-query": "API_Test_Headers"
-          }
-        ]
-      }
-
-.. format-xml-pull-couriers-load-operations-rowtag-start
+.. format-xml-pull-couriers-feed-selection-end
 
 
 .. _format-xml-pull-feed:
 
 Feeds
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-feed-start
@@ -214,7 +137,7 @@ Feeds
 
 .. format-xml-pull-feeds-start
 
-Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand how field relationships should be understood when those values are present across your data sources.
+Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand values that exist across data sources.
 
 .. format-xml-pull-feeds-end
 

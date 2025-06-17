@@ -118,213 +118,6 @@ where:
 .. ingest-queries-courier-load-operations-structure-block-end
 
 
-.. _ingest-queries-examples:
-
-Examples
---------------------------------------------------
-
-.. ingest-queries-examples-start
-
-The following file formats can be loaded to Amperity using ingest queries:
-
-* :ref:`ingest-queries-example-apache-avro`
-* :ref:`ingest-queries-example-apache-parquet`
-* :ref:`ingest-queries-example-cbor`
-* :ref:`ingest-queries-example-csv`
-* :ref:`ingest-queries-example-json`
-* :ref:`ingest-queries-example-ndjson`
-* :ref:`ingest-queries-example-psv`
-* :ref:`ingest-queries-example-json-streaming`
-* :ref:`ingest-queries-example-tsv`
-* :ref:`ingest-queries-example-xml`
-
-.. ingest-queries-examples-end
-
-
-.. _ingest-queries-example-apache-avro:
-
-Apache Avro
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-apache-avro-start
-   :end-before: .. term-apache-avro-end
-
-.. include:: ../../amperity_reference/source/format_avro.rst
-   :start-after: .. format-avro-pull-ingest-queries-start
-   :end-before: .. format-avro-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_avro.rst
-   :start-after: .. format-avro-pull-couriers-load-operations-ingest-query-start
-   :end-before: .. format-avro-pull-couriers-load-operations-ingest-query-end
-
-
-.. _ingest-queries-example-apache-parquet:
-
-Apache Parquet
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-apache-parquet-start
-   :end-before: .. term-apache-parquet-end
-
-.. include:: ../../amperity_reference/source/format_parquet.rst
-   :start-after: .. format-parquet-pull-ingest-queries-start
-   :end-before: .. format-parquet-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_parquet.rst
-   :start-after: .. format-parquet-pull-couriers-load-operations-ingest-query-start
-   :end-before: .. format-parquet-pull-couriers-load-operations-ingest-query-end
-
-
-.. _ingest-queries-example-cbor:
-
-CBOR
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-cbor-start
-   :end-before: .. term-cbor-end
-
-.. include:: ../../amperity_reference/source/format_cbor.rst
-   :start-after: .. format-cbor-pull-ingest-queries-start
-   :end-before: .. format-cbor-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_cbor.rst
-   :start-after: .. format-cbor-pull-couriers-load-operations-block-start
-   :end-before: .. format-cbor-pull-couriers-load-operations-block-end
-
-
-.. _ingest-queries-example-csv:
-
-CSV
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-csv-start
-   :end-before: .. term-csv-end
-
-.. include:: ../../amperity_reference/source/format_csv.rst
-   :start-after: .. format-csv-pull-ingest-queries-start
-   :end-before: .. format-csv-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_csv.rst
-   :start-after: .. format-csv-pull-couriers-load-operations-ingest-query-start
-   :end-before: .. format-csv-pull-couriers-load-operations-ingest-query-end
-
-.. include:: ../../amperity_reference/source/format_csv.rst
-   :start-after: .. format-csv-pull-couriers-load-operations-ingest-query-caution-start
-   :end-before: .. format-csv-pull-couriers-load-operations-ingest-query-caution-end
-
-
-.. _ingest-queries-example-json:
-
-JSON
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-json-start
-   :end-before: .. term-json-end
-
-.. include:: ../../amperity_reference/source/format_json.rst
-   :start-after: .. format-json-pull-ingest-queries-start
-   :end-before: .. format-json-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_json.rst
-   :start-after: .. format-json-pull-couriers-load-operations-block-start
-   :end-before: .. format-json-pull-couriers-load-operations-block-end
-
-
-.. _ingest-queries-example-ndjson:
-
-NDJSON
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-ndjson-start
-   :end-before: .. term-ndjson-end
-
-.. include:: ../../amperity_reference/source/format_ndjson.rst
-   :start-after: .. format-ndjson-pull-ingest-queries-start
-   :end-before: .. format-ndjson-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_ndjson.rst
-   :start-after: .. format-ndjson-pull-couriers-load-operations-block-start
-   :end-before: .. format-ndjson-pull-couriers-load-operations-block-end
-
-
-.. _ingest-queries-example-psv:
-
-PSV
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-psv-start
-   :end-before: .. term-psv-end
-
-.. include:: ../../amperity_reference/source/format_psv.rst
-   :start-after: .. format-psv-pull-ingest-queries-start
-   :end-before: .. format-psv-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_psv.rst
-   :start-after: .. format-psv-pull-couriers-load-operations-ingest-query-start
-   :end-before: .. format-psv-pull-couriers-load-operations-ingest-query-end
-
-
-.. _ingest-queries-example-json-streaming:
-
-Streaming JSON
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-streaming-json-start
-   :end-before: .. term-streaming-json-end
-
-.. include:: ../../amperity_reference/source/format_json_streaming.rst
-   :start-after: .. format-json-streaming-pull-ingest-queries-start
-   :end-before: .. format-json-streaming-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_json_streaming.rst
-   :start-after: .. format-json-streaming-pull-couriers-load-operations-block-start
-   :end-before: .. format-json-streaming-pull-couriers-load-operations-block-end
-
-
-.. _ingest-queries-example-tsv:
-
-TSV
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-tsv-start
-   :end-before: .. term-tsv-end
-
-.. include:: ../../amperity_reference/source/format_tsv.rst
-   :start-after: .. format-tsv-pull-ingest-queries-start
-   :end-before: .. format-tsv-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_tsv.rst
-   :start-after: .. format-tsv-pull-couriers-load-operations-ingest-query-start
-   :end-before: .. format-tsv-pull-couriers-load-operations-ingest-query-end
-
-
-.. _ingest-queries-example-xml:
-
-XML
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-xml-start
-   :end-before: .. term-xml-end
-
-.. include:: ../../amperity_reference/source/format_xml.rst
-   :start-after: .. format-xml-pull-ingest-queries-start
-   :end-before: .. format-xml-pull-ingest-queries-end
-
-.. include:: ../../amperity_reference/source/format_xml.rst
-   :start-after: .. format-xml-pull-couriers-load-operations-block-start
-   :end-before: .. format-xml-pull-couriers-load-operations-block-end
-
-
 .. _ingest-queries-howtos:
 
 How-tos
@@ -360,12 +153,7 @@ An ingest query allows transformations to be done against customer data prior to
 #. From the **Sources** page, click **Add SQL Query**. This opens the **Add SQL Query** dialog box.
 #. Enter the name of the SQL query. This name must be unique.
 #. Enter a description for the SQL query.
-#. Under **SQL Query** define a SQL query using Spark SQL syntax. For example:
-
-   .. include:: ../../amperity_reference/source/ingest_queries.rst
-      :start-after: .. ingest-queries-examples-concatenate-columns-example-start
-      :end-before: .. ingest-queries-examples-concatenate-columns-example-end
-
+#. Under **SQL Query** define a SQL query using Spark SQL syntax.
 #. Click **Save**.
 
 .. ingest-queries-add-steps-end
@@ -375,23 +163,11 @@ An ingest query allows transformations to be done against customer data prior to
 
 Add to courier as load operation
 --------------------------------------------------
-
-.. include:: ../../amperity_reference/source/ingest_queries.rst
-   :start-after: .. ingest-queries-courier-load-operations-start
-   :end-before: .. ingest-queries-courier-load-operations-end
-
-**To add an ingest query to courier load operations**
-
 .. ingest-queries-add-to-courier-as-load-operation-steps-start
 
 #. From the **Sources**, click **Add Courier**. The **Add Courier** dialog box opens.
 #. Complete the steps for naming the courier, choosing a plugin, and applying all necessary credentials and configuration settings.
-#. Under **Settings**, under **Load Operations**, add a load operation:
-
-   .. include:: ../../amperity_reference/source/ingest_queries.rst
-      :start-after: .. ingest-queries-courier-load-operations-structure-block-start
-      :end-before: .. ingest-queries-courier-load-operations-structure-block-end
-
+#. Under **Settings**, under **Load Operations**, add a load operation.
 #. Click **Save**.
 
 .. ingest-queries-add-to-courier-as-load-operation-steps-end
@@ -449,8 +225,6 @@ Example ingest queries
 
 The following sections show examples of ingest queries:
 
-* :ref:`ingest-queries-example-build-birthdate`
-* :ref:`ingest-queries-example-concatenate-columns`
 * :ref:`ingest-queries-example-explode-transactions`
 * :ref:`ingest-queries-example-find-records`
 * :ref:`ingest-queries-example-flatten-with-identifiers`
@@ -464,34 +238,33 @@ The following sections show examples of ingest queries:
 .. ingest-queries-examples-end
 
 
-.. _ingest-queries-example-build-birthdate:
-
-Build birthdate
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/sql_spark.rst
-   :start-after: .. sql-spark-function-if-example-build-birthdate-start
-   :end-before: .. sql-spark-function-if-example-build-birthdate-end
-
-
-.. _ingest-queries-example-concatenate-columns:
-
-Concatenate columns
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/sql_spark.rst
-   :start-after: .. sql-spark-function-concat-ws-example-build-single-field-start
-   :end-before: .. sql-spark-function-concat-ws-example-build-single-field-end
-
-
 .. _ingest-queries-example-explode-transactions:
 
 Explode transactions
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/sql_spark.rst
-   :start-after: .. sql-spark-function-explode-example-load-xml-as-ingest-query-start
-   :end-before: .. sql-spark-function-explode-example-load-xml-as-ingest-query-end
+.. sql-spark-function-explode-example-load-xml-as-ingest-query-start
+
+.. note:: This example uses an |ext_download_sales_transactions| as the data source for sales transactions.
+
+Use the **EXPLODE()** function to process sales transaction data into a table using an ingest query similar to:
+
+.. code-block:: sql
+
+   WITH explodedData AS (
+     SELECT
+       salesTransactionId
+       ,EXPLODE(salesOrder.tenders.tender) AS tender FROM PosXml
+   )
+
+   SELECT
+     salesTransactionId
+     ,tender.type AS type
+     ,tender.amount AS amount
+   FROM
+     explodedData
+
+.. sql-spark-function-explode-example-load-xml-as-ingest-query-end
 
 
 .. _ingest-queries-example-find-records:
@@ -523,9 +296,20 @@ The following example finds records in an incoming table that have been marked a
 Flatten with identifiers
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/sql_spark.rst
-   :start-after: .. sql-spark-recommendation-identifiers-example-ingest-query-start
-   :end-before: .. sql-spark-recommendation-identifiers-example-ingest-query-end
+.. sql-spark-function-nullif-example-ingest-query-start
+
+The following **SELECT** statement is an ingest query that returns **NULL** if the field is empty after trimming whitespace from before and after the initial value:
+
+.. code-block:: sql
+
+   SELECT
+     NULLIF(TRIM(BrandName),'') AS BrandName
+     ,NULLIF(TRIM(AttributeName),'') AS AttributeName
+     ,NULLIF(TRIM(Priority),'') AS Priority
+   FROM
+     Customer_Table
+
+.. sql-spark-function-nullif-example-ingest-query-end
 
 
 .. _ingest-queries-example-import-billing-as-address:
@@ -582,9 +366,55 @@ Use a JOIN operation to join two datasets into a rectangular dataset, similar to
 Parse nested records
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/format_csv.rst
-   :start-after: .. format-csv-pull-ingest-queries-nested-records-start
-   :end-before: .. format-csv-pull-ingest-queries-nested-records-end
+.. format-csv-pull-ingest-queries-nested-records-start
+
+Occasionally, a CSV file will contain nested records. For example, a field within the CSV file contains JSON data similar to:
+
+.. code-block:: none
+
+   [{"street": "123 Main Street", "apt": "101", "city": "Seattle", "state": "WA", "zip": "98101"}]
+
+which is JSON data in a nested format:
+
+.. code-block:: none
+
+   [
+     {
+       "street": "123 Main Street",
+       "apt": "101",
+       "city": "Seattle",
+       "state": "WA",
+       "zip": "98101"
+     }
+   ]
+
+There are two general approaches to take when a CSV file contains nested records:
+
+#. Recommended. The customer should update the process for how the data is provided to Amperity to ensure the file does not contain nested records.
+#. If the file cannot be provided without nested records, use an ingest query to flatten the data in these fields prior to loading it to Amperity.
+
+   .. note:: This will increase the preprocessing effort required by Amperity. Large datasets will take more time and this approach should be avoided with very large datasets and should be used carefully with datasets that will be processed on a daily basis.
+
+For example:
+
+.. code-block:: sql
+
+   WITH explodedData AS (
+     SELECT
+       table_id
+       ,EXPLODE(combined_address) AS address FROM Source
+   )
+
+   SELECT
+     table_id
+     ,address.street AS address
+     ,address.apt AS address2
+     ,address.city AS city
+     ,address.state AS state
+     ,address.zip AS postal
+   FROM Source
+
+.. format-csv-pull-ingest-queries-nested-records-end
 
 
 .. _ingest-queries-example-remove-characters:
