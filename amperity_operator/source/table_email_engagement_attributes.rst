@@ -49,7 +49,7 @@ The **Email Engagement Attributes** table is a table that contains one email add
 
 .. table-email-engagement-attributes-add-end
 
-**To add the Customer360 table**
+**To add the Email Engagement Attributes table**
 
 .. table-email-engagement-attributes-add-steps-start
 
@@ -61,7 +61,6 @@ The **Email Engagement Attributes** table is a table that contains one email add
 #. Step through the table, and then apply any necessary customizations.
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. Verify that the **db/required** and **db/unique** database field semantics were applied to the **amperity_id** column.
 #. Verify that **email-attribute** :ref:`semantic tags <table-email-engagement-attributes-semantic-tags>` are applied to all fields.
 #. Review picklists to ensure they have the desired sorting parameters.
 #. Add friendly names for any field.

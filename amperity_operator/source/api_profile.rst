@@ -795,7 +795,7 @@ Copy the tenant ID
 
 The :ref:`GET indexes <profile-api-howitworks-endpoints-get-indexes>` and :ref:`GET indexes/{index-id} <profile-api-howitworks-endpoints-get-index>` endpoints require the tenant ID to be in the URL for the request.
 
-The tenant ID is available from the **Profile API** list. For the endpoint, open the actions menu, and then select "Copy tenant ID".
+The tenant ID is available from the **API keys** list that is located on the **Security** tab in the **Settings** page. For the API key, open the actions menu, and then select "Copy tenant ID".
 
 .. image:: ../../images/api-keys-copy-tenant-id.png
    :width: 500 px
@@ -1124,12 +1124,12 @@ The following sections describe some ways to use the Profile API:
 * :ref:`Braze Connected Content <profile-api-usecase-braze>`
 * :ref:`Hashed email profiles <profile-api-usecase-hashed-email-address-profiles>`
 * :ref:`Loyalty profiles <profile-api-usecase-loyalty-profiles>`
+* :ref:`Moveable Ink Studio <profile-api-usecase-moveable-ink-studio>`
 * :ref:`Server-side JavaScript in Salesforce Marketing Cloud <profile-api-usecase-ssjs-ssmc>`
 * :ref:`Wireless access points <profile-api-usecase-hashed-email-address-profiles-wireless>`
 
 .. 
 .. * :ref:`MetaRouter <profile-api-usecase-metarouter>`
-.. * :ref:`Moveable Ink <profile-api-usecase-moveable-ink>`
 .. * :ref:`Recent purchases <profile-api-usecase-recent-purchases>`
 .. * :ref:`Website personalization <profile-api-usecase-website-personalization>`
 .. 
@@ -1460,6 +1460,20 @@ This message could be extended to include promos or offers or any type of additi
    {{ end }}
 
 .. profile-api-usecase-loyalty-profiles-end
+
+
+.. _profile-api-usecase-moveable-ink-studio:
+
+Moveable Ink Studio
+--------------------------------------------------
+
+.. include:: ../../amperity_operator/source/destination_moveableink.rst
+   :start-after: .. destination-moveableink-intro-start
+   :end-before: .. destination-moveableink-intro-end
+
+.. include:: ../../amperity_operator/source/destination_moveableink.rst
+   :start-after: .. destination-moveableink-configure-start
+   :end-before: .. destination-moveableink-configure-end
 
 
 .. _profile-api-usecase-ssjs-ssmc:

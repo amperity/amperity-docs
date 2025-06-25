@@ -260,6 +260,7 @@ Automate workflows
    destination_microsoft_dataverse
    destination_microsoft_dynamics
    destination_moengage
+   destination_moveableink
    destination_neustar
    destination_optimizely
    destination_oracle_data_cloud
