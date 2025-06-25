@@ -129,14 +129,15 @@ Customer ranking identifies the top N customers who are most likely to purchase.
 * Drive up conversion rates
 * Drive down opt-outs
 
-Note that extreme outliers are typically excluded from predictive modeling. Examples of common exclusions include:
+.. note::  
+   Extreme outliers are typically excluded from predictive modeling. Examples of common exclusions include:
 
-* employees of your business
-* test accounts
-* resellers who purchase in bulk
-* other use cases identified during predictive implementations
+   * Employees of your business
+   * Test accounts
+   * Resellers who purchase in bulk
+   * Other use cases identified during predictive implementations
 
-The models are not trained on this data and scores are not generated for these users. 
+   The models are not trained on this data and scores are not generated for these users. 
 
 .. model-product-affinity-use-cases-customer-ranking-topn-end
 
