@@ -478,7 +478,7 @@ Generate access tokens
 
 .. api-keys-access-tokens-generate-start
 
-Access tokens that enable authentication to the Amperity API are managed directly from the **Users & Activity** page in Amperity.
+Access tokens that enable authentication to the Amperity API are managed directly from the **Settings** page in Amperity.
 
 **To generate access tokens**
 
