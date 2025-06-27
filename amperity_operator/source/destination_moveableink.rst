@@ -6,11 +6,11 @@
 
 .. meta::
     :description lang=en:
-        Use Moveable Ink to design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+        Use Moveable Ink to design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use Moveable Ink to design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+        Use Moveable Ink to design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -20,9 +20,7 @@
 Real-time datasets in Moveable Ink Studio
 ==================================================
 
-.. TODO: Make the following sentence a glossary term in docsv2.
-
-|destination-name| helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+|destination-name| helps marketers design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. destination-moveableink-intro-start
 
