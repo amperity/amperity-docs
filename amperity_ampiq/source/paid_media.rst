@@ -499,20 +499,6 @@ Amperity provides direct connections to the most popular destinations across the
      - Send your high-value audiences to Neustar to reach and engage your customers seamlessly across all marketing channels.
 
 
-.. _oracle-dmp:
-
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
-
-   * - .. image:: ../../amperity_base/source/_static/connector-oracle.svg
-          :width: 140 px
-          :alt: Oracle DMP (BlueKai)
-          :align: left
-          :class: no-scaled-link
-     - Send your high-value audiences to Oracle DMP to activate audiences across digital advertising channels. Use your audiences to build personalized and contextual advertising campaigns that engage with your customers.
-
-
 .. _pinterest:
 
 .. list-table::
