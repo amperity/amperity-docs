@@ -4186,6 +4186,15 @@ Monetate offers solutions for customer segmentation and targeting, campaign test
 .. term-mosaic-usa-end
 
 
+**Moveable Ink**
+
+.. term-moveable-ink-start
+
+Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+
+.. term-moveable-ink-end
+
+
 **MSRP**, **manufacturer's suggested retail price**
 
 .. term-msrp-start

@@ -2,12 +2,10 @@
 
 
 ==================================================
-Workstation setup
+Set up your writing environment
 ==================================================
 
-Local development of documentation for Amperity can be done on your workstation and requires some configuration.
-
-
+Local development of documentation for Amperity is done on your workstation and requires some configuration.
 
 
 Requirements
@@ -16,8 +14,6 @@ Requirements
 * Python 3.9
 * Sphinx 7.3.7
 * docutils 0.20
-* sphinxcontrib-redoc 1.6.0 (builds the OpenAPI specification for the Ampeity API)
-* sphinxcontrib-video 0.2.0 (allows embedding videos on pages)
 
 A text editor.
 
@@ -29,110 +25,67 @@ EditPad Pro is recommended for PCs and TextMate is recommended for macOS. You ma
 
 
 
-
-.. _contributing-set-up-environment:
-
-Set up your environment
+Pull the Amperity docs repo
 ==================================================
 
-.. contributing-set-up-environment-start
+Download the following GitHub repo using GitHub Desktop:
 
-To set up your local authoring environment:
+https://github.com/amperity/amperity-docs
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+This repo contains a functioning version of Amperity docs with the Shibuya theme applied with some layout/theme tweaks and updated navigation. It's not done, but it's functional and works.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
+Create Python virtual environment
+==================================================
 
-     - Choose your favorite text editor. On a Mac, TextMate is recommended.
+Run the following commands to create a Python virtual environment:
 
-       .. important:: On a Mac, please do not use the built-in TextEdit application to make changes to files in the documentation repo. Its behavior is inconsistent, sometimes unreliable, and *can* introduce unwanted formatting behaviors and build outcomes.
+#. $ ``cd documents/github/amperity-docs-test``
+#. $ ``python3 -m venv .venv``
+#. $ ``source .venv/bin/activate``
+#. $.venv ``python3 -m pip install sphinx``
+#. $.venv ``sphinx-build --version``
 
+   Returns something like:
 
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-     - `Install GitHub Desktop (recommended) <https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop>`__ or use your preferred tool of choice for interacting with GitHub repos.
+   "sphinx-build 7.4.7"
 
 
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
+Note. The ``$.venv`` isn't part of the command you should run. This just means "In the Python virtual environment, run this command".
 
-     - Install Sphinx 7.3.7, which is the command-line tool that builds the documentation. Open a terminal and use Pip or Homebrew to install Sphinx:
+Install dependencies
+==================================================
 
-       .. code-block:: text
+In the same virtual environment, run the following commands:
 
-          $ pip3 install sphinx==7.3.7
+#. $.venv ``pip install shibuya``
+#. $.venv ``pip install sphinx-togglebutton``
+#. $.venv ``pip install sphinx_sitemap``
+#. $.venv ``pip install sphinxcontrib-mermaid``
+#. $.venv ``pip install sphinxcontrib-video``
+#. $.venv ``pip install sphinxcontrib-youtube``
+#. $.venv ``pip install sphinx-copybutton``
+#. $.venv ``pip install sphinx_design``
 
-       *or*
 
-       .. code-block:: text
+Build the docs
+==================================================
 
-          $ brew install sphinx-doc==7.3.7
+Open a new command shell window, and then run the following commands:
 
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
+#. $ ``cd documents/github/amperity-docs``
+#. $ ``make``
+#. $ ``make serve``
+#. Open another command shell to run the ``make`` command and regular docs development.
 
-     - Install Serve, which enables viewing the docs in localhost. On a Mac, use Homebrew:
 
-       .. code-block:: text
 
-          $ brew install serve
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-
-     - Pull down the docs repo. Use GitHub Desktop to clone the docs repo, using ``https://github.com/amperity/amperity-docs`` as the URL value.
-
-       .. tip:: Put the docs repo into the same location on your local machine as your Amperity apps repo. For example: ``/documents/github/amperity-docs``.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-
-     - Open a terminal and ``cd`` to the docs repo. For example:
-
-       .. code-block:: text
-
-          $ cd documents/github/amperity-docs
-
-   * - .. image:: ../../images/steps-07.png
-          :width: 60 px
-          :alt: Step 7.
-          :align: left
-          :class: no-scaled-link
-
-     - Run ``make``. This will build the documentation locally on your machine.
-
-       .. note:: If you get an error similar to "make: sphinx-build: No such file or directory" verify that your $PATH variable is updated to match the location on your machine into which Homebrew or Pip installed Sphinx.
-
-       Run ``make serve``, and then open ``http://localhost:8080/`` to view the documenation.
-
-.. contributing-set-up-environment-end
 
 .. _contributing-set-up-environment-venv:
 
 Set up your environment (Python venv)
 ==================================================
+
+.. TODO: Make this the "default" and let's get rid of the more convoluted steps that use the built-in macOS Pythonisms.
 
 .. contributing-set-up-environment-venv-start
 

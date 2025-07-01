@@ -1,553 +1,745 @@
 .. https://docs.amperity.com/contributing/
 
 
+.. meta::
+    :description lang=en:
+        How to format technical content for the Amperity docs site.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        How to format technical content for the Amperity docs site.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Formatting guide
+
+
 ==================================================
 Formatting guide
 ==================================================
 
-.. TODO: The HTML codes from this page https://www.toptal.com/designers/htmlarrows/arrows/ can be used in the nav-docs file inline with the TOC elements. Which can be useful.
-
-This is the formatting guide for |rst| as it may be used with |theme|.
-
-* :ref:`format-content-admonitions`
-* :ref:`format-content-code-blocks`
-* :ref:`Headers (Levels 1-4) <format-content-header-h1>`
-* :ref:`format-content-images`
-* :ref:`format-content-includes`
-* :ref:`format-content-inline-markup`
-* :ref:`format-content-links`
-* :ref:`format-content-lists`
-* :ref:`format-content-tables`
-* :ref:`format-content-toctree`
-* :ref:`format-content-tokens`
-* :ref:`format-content-topic-title`
-* :ref:`format-content-additional-resources`
+This guide describes all of the formatting options available to Amperity documentation.
 
 
-.. _format-content-admonitions:
+.. _rst-admonitions:
 
 Admonitions
 ==================================================
 
-.. format-content-admonitions-start
+.. rst-admonitions-start
 
-Admonitions are notes and warnings, and other types of alerts that give readers a visible way to identify certain types of content messages. Use notes and warnings often, the rest sparingly or only when you need them.
+An admonition is a way of calling attention to information in a topic.
 
-.. format-content-admonitions-end
+An admonition is configured like this:
+
+.. code-block:: none
+
+   .. admonition-name:: Content in admonition.
+
+      where the value for ``admonition-name`` is one of :ref:`attention <rst-admonition-attention>`, :ref:`caution <rst-admonition-caution>`, :ref:`danger <rst-admonition-danger>`, :ref:`error <rst-admonition-error>`, :ref:`hint <rst-admonition-hint>`, :ref:`important <rst-admonition-important>`, :ref:`note <rst-admonition-note>`, :ref:`tip <rst-admonition-tip>`, :ref:`warning <rst-admonition-warning>`, or a custom string that defines a :ref:`custom admonition <rst-admonition-custom>`.
+
+      If more than one paragraph is needed ensure the formatting aligns vertically to the right edge of the admonition name.
+
+and will appear in the docs like this:
+
+.. admonition:: Content in admonition.
+
+   where ``admonition-name`` is one of :ref:`attention <rst-admonition-attention>`, :ref:`caution <rst-admonition-caution>`, :ref:`danger <rst-admonition-danger>`, :ref:`error <rst-admonition-error>`, :ref:`hint <rst-admonition-hint>`, :ref:`important <rst-admonition-important>`, :ref:`note <rst-admonition-note>`, :ref:`tip <rst-admonition-tip>`, :ref:`warning <rst-admonition-warning>`, or a custom string for a :ref:`custom admonition <rst-admonition-custom>`.
+
+   If more than one paragraph is needed ensure the formatting aligns with the admonition name.
+
+.. rst-admonitions-end
 
 
-.. _format-content-admonition-attention:
+.. _rst-admonition-attention:
 
 Attention
 --------------------------------------------------
 
-.. format-content-attention-start
+.. rst-admonition-attention-start
 
-Use ``.. attention::`` occasionally, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. attention:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. attention:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. attention:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. attention:: Lorem ipsum dolor set atemit.
 
-.. format-content-attention-end
+.. rst-admonition-attention-end
 
 
-.. _format-content-admonition-caution:
+.. _rst-admonition-caution:
 
 Caution
 --------------------------------------------------
 
-.. format-content-caution-start
+.. rst-admonition-caution-start
 
-Use ``.. caution::`` when it's appropriate, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. caution:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. caution:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. caution:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. caution:: Lorem ipsum dolor set atemit.
 
-.. format-content-caution-end
+.. rst-admonition-caution-end
 
 
-.. _format-content-admonition-custom:
+.. _rst-admonition-custom:
 
 Custom admonitions
 --------------------------------------------------
 
-.. format-content-custom-start
+.. rst-admonition-custom-start
 
-|theme| uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.
+A custom admonition is similar to built-in admonitions with two differences: a custom title and the ability to use the color applied to any built-in admonitions instead of the default theme color.
 
-For a custom admonition, use ``.. admonition:: some string`` as shown here:
+.. rst-admonition-custom-end
 
-.. code-block:: rst
+**Custom titles**
 
-   .. admonition:: Ut enim ad minim veniam
+.. rst-admonition-custom-titles-start
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Do this for a custom title:
 
-Which will appear in the documentation like this:
+.. code-block::
 
-.. admonition:: Ut enim ad minim veniam
+   .. admonition:: Custom title
 
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor set atemit.
 
-.. format-content-custom-end
+**For this**
+
+.. admonition:: Custom title
+
+   Lorem ipsum dolor set atemit.
+
+.. rst-admonition-custom-titles-end
+
+**Custom titles and custom colors**
+
+.. rst-admonition-custom-colors-start
+
+Do this for a custom title and to use the color for the :ref:`hint <rst-admonition-hint>` admonition:
+
+.. code-block::
+
+   .. admonition:: Custom title
+      :class: hint
+
+      Lorem ipsum dolor set atemit with "danger" colors.
+
+**For this**
+
+.. admonition:: Custom title
+   :class: hint
+
+   Lorem ipsum dolor set atemit with "danger" colors.
+
+.. rst-admonition-custom-colors-end
 
 
-.. _format-content-admonition-danger:
+.. _rst-admonition-danger:
 
 Danger
 --------------------------------------------------
 
-.. format-content-danger-start
+.. rst-admonition-danger-start
 
-Use ``.. danger::`` sparingly, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. danger:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. danger:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. danger:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. danger:: Lorem ipsum dolor set atemit.
 
-.. format-content-danger-end
+.. rst-admonition-danger-end
 
 
-.. _format-content-admonition-error:
+.. _rst-admonition-error:
 
 Error
 --------------------------------------------------
 
-.. format-content-error-start
+.. rst-admonition-error-start
 
-Use ``.. error::`` when it's appropriate, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. error:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. error:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. error:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. error:: Lorem ipsum dolor set atemit.
 
-.. format-content-error-end
+.. rst-admonition-error-end
 
 
-.. _format-content-admonition-hint:
+.. _rst-admonition-hint:
 
 Hint
 --------------------------------------------------
 
-.. format-content-hint-start
+.. rst-admonition-hint-start
 
-Use ``.. hint::`` when it's appropriate, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. hint:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. hint:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. hint:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. hint:: Lorem ipsum dolor set atemit.
 
-.. format-content-hint-end
+.. rst-admonition-hint-end
 
 
-.. _format-content-admonition-important:
+.. _rst-admonition-important:
 
 Important
 --------------------------------------------------
 
-.. format-content-important-start
+.. rst-admonition-important-start
 
-Use ``.. important::`` when it's appropriate, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. important:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. important:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. important:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. important:: Lorem ipsum dolor set atemit.
 
-.. format-content-important-end
+.. rst-admonition-important-end
 
 
-.. _format-content-admonition-note:
+.. _rst-admonition-note:
 
 Note
 --------------------------------------------------
 
-.. format-content-note-start
+.. rst-admonition-note-start
 
-Use ``.. note::`` as your first-choice admonition, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. note:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. note:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. note:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. note:: Lorem ipsum dolor set atemit.
 
-.. format-content-note-end
+.. rst-admonition-note-end
 
 
-.. _format-content-admonition-tip:
+.. _rst-admonition-tip:
 
 Tip
 --------------------------------------------------
 
-.. format-content-tip-start
+.. rst-admonition-tip-start
 
-Use ``.. tip::`` when it's appropriate, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. tip:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. tip:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. tip:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. tip:: Lorem ipsum dolor set atemit.
 
-.. format-content-tip-end
+.. rst-admonition-tip-end
 
 
-.. _format-content-admonition-warning:
+.. _rst-admonition-warning:
 
 Warning
 --------------------------------------------------
 
-.. format-content-warning-start
+.. rst-admonition-warning-start
 
-Use ``.. warning::`` when it's appropriate, as shown here:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. warning:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   .. warning:: Lorem ipsum dolor set atemit.
 
-to create an admonition like this:
+**For this**
 
-.. warning:: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+.. warning:: Lorem ipsum dolor set atemit.
 
-.. format-content-warning-end
+.. rst-admonition-warning-end
 
 
-.. _format-content-code-blocks:
+.. _rst-anchor-references:
+
+Anchor references
+==================================================
+
+Anchor references allow topics to link to headers within topics that are in the same content collection. For example, topics in the Amperity reference may use anchor references to sections in any other topic in the Amperity reference.
+
+.. code-block:: none
+
+   .. _rst-anchor-references:
+
+   Anchor references
+   ==================================================
+
+The anchor reference is the ``.. _rst-anchor-references:`` syntax above the header. They are formatted with this pattern:
+
+.. code-block:: none
+
+   dot dot space underscore hyphen-separated-string colon
+
+The "hyphen separated string" must be in lowercase and must follow this pattern:
+
+.. code-block:: none
+
+   filename - section - subsection
+
+For example, the filename of this topic is ``rst.rst`` and the section is titled "Anchor references", which means the anchor reference is ``.. _rst-anchor-references:``.
+
+
+.. _rst-article-info:
+
+Article information
+==================================================
+
+.. rst-article-info-start
+
+Add article information to the top of a topic when it is appropriate, such as for tutorials or for topics that a customer is expected to read.
+
+**Do this**
+
+.. code-block:: none
+
+   .. article-info::
+      :avatar: _static/amperity_circle.png
+      :avatar-link: https://docs.amperity.com/reference/start.html
+      :avatar-outline: muted
+      :author: Identity resolution agent
+      :date: |today|
+      :read-time: 10 min read; ~1 hour to complete
+      :class-container: sd-p-2 sd-outline-muted sd-rounded-1
+
+**For this**
+
+.. article-info::
+   :avatar: _static/amperity_circle.png
+   :avatar-link: https://docs.amperity.com/reference/start.html
+   :avatar-outline: muted
+   :author: Identity resolution agent
+   :date: |today|
+   :read-time: 10 min read; ~1 hour to complete
+   :class-container: sd-p-2 sd-outline-muted sd-rounded-1
+
+Update the values for ``:author:`` and ``:read-time`` to be specific to the topic.
+
+.. rst-article-info-end
+
+
+.. _rst-badges:
+
+Badges
+==================================================
+
+.. TODO: For now this is the full list. We might want to pare this down.
+
+.. rst-badges-start
+
+Badges make available a colored block of text that can be used inline within paragraphs, lists, and tables. Badges do not replace admonitions. Instead use badges as a way to draw the reader's eye to information.
+
+The syntax for a badge is
+
+.. code-block:: none
+
+   :bdg-info:`string`
+
+where "string" is a user-defined string. This string may be one of "Required", "Recommended", "Info", "Warning", "Caution", "Custom" (a custom string), "Alt-custom" (an optional badge that uses a custom string), or "Inline highlight".
+
+* :bdg-info:`Required` Use this badge only for Amperity-specific requirements.
+
+* :bdg-success:`Recommended` Use this badge only for Amperity-specific recommendations.
+
+* :bdg-light:`Info` Use sparingly, and not as a replacement for an admonition.
+
+* :bdg-warning:`Warning` Use sparingly, and not as a replacement for an admonition.
+
+* :bdg-danger:`Caution` Use sparingly, and not as a replacement for an admonition.
+
+* :bdg-secondary:`Custom` Use sparingly.
+
+* :bdg-dark:`Alt-custom` Use sparingly.
+
+* :bdg-muted:`Inline highlight` Use in certain spots where bold or italics isn't enough to call attention to an important phrase.
+
+.. rst-badges-end
+
+
+.. _rst-buttons:
+
+Buttons
+==================================================
+
+.. rst-buttons-start
+
+Buttons are like badges, but are bigger and link to somewhere.
+
+.. note:: Not an official formatting option. Under consideration.
+
+.. TODO: Need to decide if we're gonna use these. I think we should keep them as a formatting option, but severely limit their use.
+
+.. button-link:: https://docs.amperity.com
+
+.. button-link:: https://docs.amperity.com
+
+    Button text
+
+.. button-link:: https://docs.amperity.com
+    :color: primary
+    :shadow:
+
+.. button-link:: https://docs.amperity.com
+    :color: primary
+    :outline:
+
+.. button-link:: https://docs.amperity.com
+    :color: secondary
+    :expand:
+
+.. rst-buttons-end
+
+
+.. _rst-card-carousel:
+
+Card carousel
+==================================================
+
+.. TODO: FWIW, this isn't amazing. Will keep the functionality, but looking for a useful use case.
+
+.. rst-card-carousel-start
+
+.. caution:: This formatting option is currently unused. Please ask the Amperity docs team before using it.
+
+Use the ``.. card-carousel::`` directive to create a horizontal scrolling set of cards. Set an integer value between 1 and 4 to configure the number of visible cards on the page.
+
+**Do this**
+
+.. code-block:: none
+
+   .. card-carousel:: 2
+
+      .. card:: Card 1
+
+         Lorem ipsum dolor set atemit.
+
+      .. card:: Card 2
+
+         Lorem ipsum dolor set atemit.
+
+      .. card:: Card 3
+
+         Lorem ipsum dolor set atemit.
+
+      .. card:: Card 4
+
+         Lorem ipsum dolor set atemit.
+
+**For this**
+
+.. card-carousel:: 2
+
+   .. card:: Card 1
+
+      Lorem ipsum dolor set atemit.
+
+   .. card:: Card 2
+
+      Lorem ipsum dolor set atemit.
+
+   .. card:: Card 3
+
+      Lorem ipsum dolor set atemit.
+
+   .. card:: Card 4
+
+      Lorem ipsum dolor set atemit.
+
+**Example carousel**
+
+.. card-carousel:: 2
+
+   .. card:: **Step 1**
+
+      `Create a sandbox <https://docs.amperity.com/operator/sandbox_create.html>`__.
+
+   .. card:: **Step 2**
+
+      `Access the sandbox <https://docs.amperity.com/operator/sandbox_open.html>`__.
+
+   .. card:: **Step 3**
+
+      Make configuration changes in the sandbox.
+
+   .. card:: **Step 4**
+
+      Run the updated workflow from within the sandbox, including sandbox validations, to verify changes.
+
+   .. card:: **Step 5**
+
+      `Promote configuration changes <https://docs.amperity.com/operator/sandbox_promote.html>`__ to your production tenant.
+
+.. rst-card-carousel-end
+
+
+.. _rst-cards:
+
+Cards
+==================================================
+
+.. rst-cards-start
+
+Use the following card types:
+
+* :ref:`Clickable cards <rst-cards-clickable>`
+* :ref:`Standalone card <rst-cards-standalone>`
+
+.. note:: Cards are also used in :ref:`grids <rst-grids>`.
+
+.. rst-cards-end
+
+
+.. _rst-cards-clickable:
+
+Clickable cards
+--------------------------------------------------
+
+.. rst-cards-clickable-start
+
+Use the ``.. card::`` directive to add a clickable card to a page, and the configure the type of link.
+
+* Use the ``:link:`` attribute to define the URL, anchor reference, or topic filename.
+* Use the ``:link-type:`` attribute to define ``:doc:`` or ``:ref:`` link types.
+* Optional. Use the ``:link-alt:`` attribute to add alt text on hover.
+
+The following types of clickable cards are available:
+
+* :ref:`Cards with cross-site links <rst-cards-clickable-cross-site>`
+* :ref:`Cards with external links <rst-cards-clickable-external>`
+* :ref:`Cards with links to topic headings within the same collection <rst-cards-clickable-reference>`
+* :ref:`Cards with links to topics within the same collection <rst-cards-clickable-topic>`
+
+.. rst-cards-clickable-end
+
+
+.. _rst-cards-clickable-cross-site:
+
+Cards with cross-site links
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-cards-clickable-cross-site-start
+
+Cards can link to pages in Amperity documentation that are not within the same collection.
+
+**Do this**
+
+.. code-block:: none
+
+   .. card:: Card with cross-site link
+      :link: https://docs.amperity.com/operators/api_profile.html
+      :link-alt: Profile API
+
+      This card links to https://docs.amperity.com/operators/api_profile.html.
+
+**For this**
+
+.. card:: Card with cross-site link
+   :link: https://docs.amperity.com/operators/api_profile.html
+   :link-alt: Profile API
+
+   This card links to https://docs.amperity.com/operators/api_profile.html.
+
+
+.. rst-cards-clickable-cross-site-end
+
+
+.. _rst-cards-clickable-external:
+
+Cards with external links
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-cards-clickable-external-start
+
+Cards can link to external web pages.
+
+**Do this**
+
+.. code-block:: none
+
+   .. card:: Card with external link
+      :link: https://docs.amperity.com
+
+      This card links to https://docs.amperity.com.
+
+**For this**
+
+.. card:: Card with external link
+   :link: https://docs.amperity.com
+
+   This card links to https://docs.amperity.com.
+
+.. rst-cards-clickable-external-end
+
+
+.. _rst-cards-clickable-reference:
+
+Cards that link to sections
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-cards-clickable-reference-start
+
+Cards can link to topic headings within the same collection.
+
+**Do this**
+
+.. code-block:: none
+
+   .. card:: Card that links to topic heading within the same collection
+      :link: rst-cards-standalone
+      :link-type: ref
+      :link-alt: Standalone cards
+
+**For this**
+
+.. card:: Card that links to topic heading within the same collection
+   :link: rst-cards-standalone
+   :link-type: ref
+   :link-alt: Standalone cards
+
+.. rst-cards-clickable-reference-end
+
+
+.. _rst-cards-clickable-topic:
+
+Cards that link to topics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-cards-clickable-topic-start
+
+Cards can link to topics within the same collection.
+
+**Do this**
+
+.. code-block:: none
+
+   .. card:: Card that links to topic within the same collection
+      :link: styles
+      :link-type: doc
+
+      This is a card that uses a ``:doc:`` link to the Amperity Style Guide.
+
+**For this**
+
+.. card:: Card that links to topic within the same collection
+   :link: styles
+   :link-type: doc
+
+   This is a card that uses a ``:doc:`` link to the Amperity Style Guide.
+
+.. rst-cards-clickable-topic-end
+
+
+.. _rst-cards-standalone:
+
+Standalone cards
+--------------------------------------------------
+
+.. rst-cards-standalone-start
+
+Use the ``.. card::`` directive to add a standalone card to a page. This acts like an :ref:`admonition <rst-admonitions>`, but without a title and with a neutral border that applies a subtle callout to a paragraph.
+
+**Do this**
+
+.. code-block:: none
+
+   .. card:: What is UID2?
+
+      .. include:: ../../amperity_reference/source/uid2.rst
+         :start-after: .. uid2-overview-start
+         :end-before: .. uid2-overview-end
+
+**For this**
+
+.. card:: What is UID2?
+
+   .. include:: ../../amperity_reference/source/uid2.rst
+      :start-after: .. uid2-overview-start
+      :end-before: .. uid2-overview-end
+
+.. rst-cards-standalone-end
+
+
+.. _rst-code-blocks:
 
 Code blocks
 ==================================================
 
-.. format-content-code-blocks-start
+.. rst-code-blocks-start
 
-For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the ``.. code-block::`` directive.
-
-.. note:: Code block types in the |theme| are generalized. For example: the ``text`` type is used for general text files **including** configuration files and the ``sql`` type is used for general data tables.
-
-Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it's pseudocode, is formatted correctly.
-
-.. format-content-code-blocks-end
-
-.. format-content-code-blocks-warning-start
-
-.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, a Sphinx build may fail.
-
-   For example, if a code block contains YAML and Jinja and is defined by a ``.. code-block:: yaml`` code block, the build will fail because Jinja templating is not YAML.
-
-   Use a ``none`` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block does not check against a lexer.
-
-.. format-content-code-blocks-warning-end
-
-
-.. _format-content-code-block-command-shell:
-
-Command shell
---------------------------------------------------
-
-.. format-content-code-block-command-shell-start
-
-For command shell blocks, assign ``console`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: console
-
-      $ service stop
-
-to create a code block like this:
-
-.. code-block:: console
-
-   $ service stop
-
-.. format-content-code-block-command-shell-end
-
-
-.. _format-content-code-block-config-file:
-
-Config file
---------------------------------------------------
-
-.. format-content-code-block-config-file-start
-
-For generic configuration file blocks, assign ``text`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: text
-
-      spark.setting.hours 1h
-      spark.setting.option -User.timezone=UTC
-      spark.setting.memory 20g
-
-to create a code block like this:
-
-.. code-block:: text
-
-   spark.setting.hours 1h
-   spark.setting.option -User.timezone=UTC
-   spark.setting.memory 20g
-
-.. note:: We're using ``text`` because there are not specific lexers available for all of the various configuration files. The ``text`` lexer allows us to style the code block similar to all of the others, but will not apply any highlighting to the formatting within the code block.
-
-.. format-content-code-block-config-file-end
-
-
-.. _format-content-code-block-data-table:
-
-Data table
---------------------------------------------------
-
-.. format-content-code-block-data-table-start
-
-Table blocks are used to show the inputs and outputs of processing data. For table code blocks, assign ``mysql`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: mysql
-
-      --------- ---------
-       column1   column2 
-      --------- ---------
-       value     value   
-       value     value   
-       value     value  
-      --------- ---------
-
-to create a code block like this:
-
-.. code-block:: mysql
-
-   --------- ---------
-    column1   column2 
-   --------- ---------
-    value     value   
-    value     value   
-    value     value  
-   --------- ---------
-
-.. format-content-code-block-data-table-end
-
-
-.. _format-content-code-block-html:
-
-HTML
---------------------------------------------------
-
-.. format-content-code-block-html-start
-
-For HTML code blocks, assign ``html`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: html
-
-      <div class="admonition warning">
-        <p class="first admonition-title">Custom warning</p>
-        <p class="last">The text for a custom warning that is built from raw HTML.</p>
-      </div>
-
-to create a code block like this:
-
-.. code-block:: html
-
-   <div class="admonition warning">
-     <p class="first admonition-title">Custom warning</p>
-     <p class="last">The text for a custom warning that is built from raw HTML.</p>
-   </div>
-
-.. format-content-code-block-html-end
-
-
-.. _format-content-code-block-json:
-
-JSON
---------------------------------------------------
-
-.. format-content-code-block-json-start
-
-For JSON code blocks, assign ``json`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: json
-      
-      {
-        "foo": [
-          {
-            "one": "12345",
-            "two": "abcde",
-            "three": "words"
-          },
-        ]
-      }
-
-to create a code block like this:
-
-.. code-block:: json
-      
-   {
-     "foo": [
-       {
-         "one": "12345",
-         "two": "abcde",
-         "three": "words"
-       },
-     ],
-   }
-
-.. format-content-code-block-json-end
-
-
-.. _format-content-code-block-json-jinja:
-
-JSON w/Jinja
---------------------------------------------------
-
-.. format-content-code-block-json-jinja-start
-
-For JSON code blocks that refuse to parse when ``json`` is assigned to the code block, try ``django`` which supports non-standard JSON structures, such as those that combined JSON and Jinja templating:
-
-.. code-block:: rst
-
-   .. code-block:: django
-
-      {% extends "!nav-docs.html" %}
-      {% set some_jinja = "12345" %}
-      {% set navItems = [
-        {
-          "title": "Start Here",
-          "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
-          "subItems": [
-            {
-              "title": "Start Here",
-              "hasSubItems": false,
-              "url": "/some_file.html"
-            },
-            {
-              "title": "FAQ",
-              "hasSubItems": false,
-              "url": "/faq.html"
-            },
-            {
-              "title": "Additional Resources",
-              "hasSubItems": false,
-              "url": "/resources.html"
-            },
-          ]
-        },
-      ] -%}
-
-to create a code block like this:
-
-.. code-block:: django
-
-   {% extends "!nav-docs.html" %}
-   {% set some_jinja = "12345" %}
-   {% set navItems = [
-     {
-       "title": "Start Here",
-       "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
-       "subItems": [
-         {
-           "title": "Start Here",
-           "hasSubItems": false,
-           "url": "/some_file.html"
-         },
-         {
-           "title": "FAQ",
-           "hasSubItems": false,
-           "url": "/faq.html"
-         },
-         {
-           "title": "Additional Resources",
-           "hasSubItems": false,
-           "url": "/resources.html"
-         },
-       ]
-     },
-   ] -%}
-
-.. format-content-code-block-json-jinja-end
-
-
-.. _format-content-code-block-none:
-
-None
---------------------------------------------------
-
-.. format-content-code-block-none-start
-
-For text that needs to be formatted as if it were a code block, but isn't actually code, assign ``none`` as the name of the code block:
-
-.. code-block:: rst
-
-   .. code-block:: none
-
-      This is a none block. It's formatted as if it were code, but isn't actually code.
-
-      Can include code-like things:
-
-      function_foo()
-        does: something
-      end
-
-to create a code block like this:
+The ``.. code-block::`` directive is defined by Sphinx:
 
 .. code-block:: none
 
-   This is a none block. It's formatted as if it were code, but isn't actually code.
+   .. code-block:: language
+      :linenos:
+      :emphasize-lines: 2,10-15
+      :caption: sphinx.ext.todo
+      :class: dark-code
 
-   Can include code-like things:
+      extensions = [
+        "sphinx.ext.todo",
+      ]
+      todo_include_todos = True
 
-   function_foo()
-     does: something
-   end
+where "language" is one of the :ref:`code language highlight options <rst-code-language-highlights>`.
 
-.. format-content-code-block-none-end
+* Use ``:linenos:`` to :ref:`add line numbers <rst-code-block-line-numbers>` to the left side of a code block.
+* Use ``:emphasize-lines:`` to :ref:`add emphasis to lines <rst-code-block-line-emphasis>` in a code block.
+* Use ``:caption:`` to :ref:`add a title <rst-code-block-captions>` to a code block.
+* Use ``:class:`` with a value of "dark-code" to force a code sample to always be shown in :ref:`dark mode formatting <rst-code-block-dark-code>`.
+
+.. rst-code-blocks-end
 
 
-.. _format-content-code-block-python:
+.. _rst-code-block-captions:
 
-Python
+Caption
 --------------------------------------------------
 
-.. format-content-code-block-python-start
+.. rst-code-block-captions-start
 
-For Python code blocks, such as those that may show how to use an Amperity API endpoint, assign ``python`` as the name of the code block:
+A caption is the title for a code block. Use the ``:caption:`` attribute to apply a string that becomes the title of the code block.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: python
+      :caption: campaigns.py
 
       import requests
       import json
@@ -588,9 +780,10 @@ For Python code blocks, such as those that may show how to use an Amperity API e
 
       print("CSV file generated successfully.")
 
-to create a code block like this:
+**For this**
 
 .. code-block:: python
+   :caption: campaigns.py
 
    import requests
    import json
@@ -631,48 +824,637 @@ to create a code block like this:
 
    print("CSV file generated successfully.")
 
-.. format-content-code-block-python-end
+.. rst-code-language-python-end
 
+.. _rst-code-block-dark-code:
 
-.. _format-content-code-block-rest-api:
-
-REST API
+Dark code
 --------------------------------------------------
 
-.. format-content-code-block-rest-api-start
+.. rst-code-block-dark-code-start
 
-For REST API code blocks that show how to use an endpoint, assign ``rest`` as the name of the code block:
+You can force code blocks to always use their dark code styles using the ``:class:`` with its value set to "dark-mode".
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: python
+      :class: dark-code
+
+      html_theme_options = {
+          "dark_code": True
+      }
+
+**For this**
+
+.. code-block:: python
+   :class: dark-code
+
+   html_theme_options = {
+       "dark_code": True
+   }
+
+.. rst-code-block-dark-code-end
+
+
+.. _rst-code-block-line-emphasis:
+
+Line emphasis
+--------------------------------------------------
+
+.. rst-code-block-line-emphasis-start
+
+Emphasize specific lines within a code block using the ``:emphasize-lines:`` attribute. Use a dash for sequential emphasis and a comma for separated emphasis. For example:
+
+* ``:emphasize-lines: 3-5`` will emphasize lines 3 through 5.
+* ``:emphasize-lines: 3, 5`` will emphasize lines 3 and 5, but not 4.
+* ``:emphasize-lines: 1, 3, 5-7, 25`` will emphasize only lines 1, 3, 5, 6, 7, and 24.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: django
+      :emphasize-lines: 1, 3, 5-7, 25
+
+      {% extends "!nav-docs.html" %}
+      {% set some_jinja = "12345" %}
+      {% set navItems = [
+        {
+          "title": "Start Here",
+          "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
+          "subItems": [
+            {
+              "title": "Start Here",
+              "hasSubItems": false,
+              "url": "/some_file.html"
+            },
+            {
+              "title": "FAQ",
+              "hasSubItems": false,
+              "url": "/faq.html"
+            },
+            {
+              "title": "Additional Resources",
+              "hasSubItems": false,
+              "url": "/resources.html"
+            },
+          ]
+        },
+      ] -%}
+
+**For this**
+
+.. code-block:: django
+   :emphasize-lines: 1, 3, 5-7, 25
+
+   {% extends "!nav-docs.html" %}
+   {% set some_jinja = "12345" %}
+   {% set navItems = [
+     {
+       "title": "Start Here",
+       "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
+       "subItems": [
+         {
+           "title": "Start Here",
+           "hasSubItems": false,
+           "url": "/some_file.html"
+         },
+         {
+           "title": "FAQ",
+           "hasSubItems": false,
+           "url": "/faq.html"
+         },
+         {
+           "title": "Additional Resources",
+           "hasSubItems": false,
+           "url": "/resources.html"
+         },
+       ]
+     },
+   ] -%}
+
+.. rst-code-block-line-emphasis-end
+
+
+.. _rst-code-block-line-numbers:
+
+Line numbers
+--------------------------------------------------
+
+.. rst-code-block-line-numbers-start
+
+Add line numbers to code blocks using the ``:linenos:`` attribute.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: json
+      :linenos:
+
+      {
+        "foo": [
+          {
+            "one": "12345",
+            "two": "abcde",
+            "three": "words"
+          },
+        ],
+      }
+
+**For this**
+
+.. code-block:: json
+   :linenos:
+
+   {
+     "foo": [
+       {
+         "one": "12345",
+         "two": "abcde",
+         "three": "words"
+       },
+     ],
+   }
+
+.. tip:: This attribute is sometimes picky and the build breaks and you discover that it works fine with FOUR spaces instead of THREE (with everything aligned with the FOUR spaces instead of THREE). Ask for help from the docs team if you run into this issue.
+
+.. rst-code-block-line-numbers-end
+
+
+.. _rst-code-language-highlights:
+
+Code language highlights
+==================================================
+
+.. rst-code-language-highlights-start
+
+Amperity uses the following code language highlights for differentiation within documentation. The highlighting is for the use case within the technical content, not for matching a specific code language.
+
+* :ref:`Command shells <rst-code-language-command>`
+* :ref:`Config files <rst-code-language-config>`
+* :ref:`Data tables <rst-code-language-data-table>`
+* :ref:`HTML <rst-code-language-html>`
+* :ref:`JSON <rst-code-language-json>`
+* :ref:`JSON with Jinja <rst-code-language-json-with-jinja>`
+* :ref:`None <rst-code-language-none>`
+* :ref:`Python <rst-code-language-python>`
+* :ref:`REST APIs <rst-code-language-rest-api>`
+* :ref:`reStructuredText <rst-code-language-rst>`
+* :ref:`Ruby <rst-code-language-ruby>`
+* :ref:`Shell scripts <rst-code-language-shell>`
+* :ref:`SQL queries <rst-code-language-sql>`
+* :ref:`YAML <rst-code-language-yaml>`
+* :ref:`YAML with Jinja <rst-code-language-yaml-with-jinja>`
+
+.. rst-code-language-highlights-end
+
+
+.. _rst-code-language-command:
+
+Command shells
+--------------------------------------------------
+
+.. rst-code-language-command-start
+
+Assign ``console`` as the name of the code block for code blocks with command lines.
+
+.. important:: Do not use the ``:linenos:`` attribute with command shells.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: console
+
+      $ service stop
+
+**For this**
+
+.. code-block:: console
+
+   $ service stop
+
+.. rst-code-language-command-end
+
+
+.. _rst-code-language-config:
+
+Config files
+--------------------------------------------------
+
+.. rst-code-language-config-start
+
+Assign ``text`` as the name of the code block for code blocks with configuration settings.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: text
+      :linenos:
+
+      spark.setting.hours 1h
+      spark.setting.option -User.timezone=UTC
+      spark.setting.memory 20g
+
+**For this**
+
+.. code-block:: text
+   :linenos:
+
+   spark.setting.hours 1h
+   spark.setting.option -User.timezone=UTC
+   spark.setting.memory 20g
+
+.. rst-code-language-config-end
+
+
+.. _rst-code-language-data-table:
+
+Data tables
+--------------------------------------------------
+
+.. rst-code-language-data-table-start
+
+Assign ``mysql`` as the name of the code block for code blocks that show the inputs and outputs of processing data.
+
+.. important:: Do not use the ``:linenos:`` attribute with data tables.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: mysql
+
+      --------- ---------
+       column1   column2 
+      --------- ---------
+       value     value   
+       value     value   
+       value     value   
+      --------- ---------
+
+**For this**
+
+.. code-block:: mysql
+
+   --------- ---------
+    column1   column2 
+   --------- ---------
+    value     value   
+    value     value   
+    value     value   
+   --------- ---------
+
+.. rst-code-language-data-table-end
+
+
+.. _rst-code-language-html:
+
+HTML
+--------------------------------------------------
+
+.. rst-code-language-html-start
+
+Assign ``html`` as the name of the code block for code blocks with HTML.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: html
+      :linenos:
+
+      <div class="admonition warning">
+        <p class="first admonition-title">Custom warning</p>
+        <p class="last">The text for a custom warning that is built from raw HTML.</p>
+      </div>
+
+**For this**
+
+.. code-block:: html
+   :linenos:
+
+   <div class="admonition warning">
+     <p class="first admonition-title">Custom warning</p>
+     <p class="last">The text for a custom warning that is built from raw HTML.</p>
+   </div>
+
+.. rst-code-language-html-end
+
+
+.. _rst-code-language-json:
+
+JSON
+--------------------------------------------------
+
+.. rst-code-language-json-start
+
+Assign ``json`` as the name of the code block for code blocks with JSON structures.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: json
+      :linenos:
+
+      {
+        "foo": [
+          {
+            "one": "12345",
+            "two": "abcde",
+            "three": "words"
+          },
+        ]
+      }
+
+**For this**
+
+.. code-block:: json
+   :linenos:
+
+   {
+     "foo": [
+       {
+         "one": "12345",
+         "two": "abcde",
+         "three": "words"
+       },
+     ],
+   }
+
+.. rst-code-language-json-end
+
+
+.. _rst-code-language-json-with-jinja:
+
+JSON with Jinja
+--------------------------------------------------
+
+.. rst-code-language-json-with-jinja-start
+
+Some code blocks will refuse to parse when ``json`` is assigned to the code block. For these code blocks try using ``django``, which supports non-standard JSON structures, such as those that combined JSON and Jinja templating.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: django
+      :linenos:
+
+      {% extends "!nav-docs.html" %}
+      {% set some_jinja = "12345" %}
+      {% set navItems = [
+        {
+          "title": "Start Here",
+          "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
+          "subItems": [
+            {
+              "title": "Start Here",
+              "hasSubItems": false,
+              "url": "/some_file.html"
+            },
+            {
+              "title": "FAQ",
+              "hasSubItems": false,
+              "url": "/faq.html"
+            },
+            {
+              "title": "Additional Resources",
+              "hasSubItems": false,
+              "url": "/resources.html"
+            },
+          ]
+        },
+      ] -%}
+
+**For this**
+
+.. code-block:: django
+   :linenos:
+
+   {% extends "!nav-docs.html" %}
+   {% set some_jinja = "12345" %}
+   {% set navItems = [
+     {
+       "title": "Start Here",
+       "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
+       "subItems": [
+         {
+           "title": "Start Here",
+           "hasSubItems": false,
+           "url": "/some_file.html"
+         },
+         {
+           "title": "FAQ",
+           "hasSubItems": false,
+           "url": "/faq.html"
+         },
+         {
+           "title": "Additional Resources",
+           "hasSubItems": false,
+           "url": "/resources.html"
+         },
+       ]
+     },
+   ] -%}
+
+.. rst-code-language-json-with-jinja-end
+
+
+.. _rst-code-language-none:
+
+None
+--------------------------------------------------
+
+.. rst-code-language-none-start
+
+Assign ``none`` as the name of the code block for situations that require code block-like formatting or in any situation where another code block name creates a build error.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: none
+      :linenos:
+
+      This is a none block. It's formatted as if it were code, but isn't actually code.
+
+      Can include code-like things:
+
+      function_foo()
+        does: something
+      end
+
+**For this**
+
+.. code-block:: none
+   :linenos:
+
+   This is a none block. It's formatted as if it were code, but isn't actually code.
+
+   Can include code-like things:
+
+   function_foo()
+     does: something
+   end
+
+.. rst-code-language-none-end
+
+
+.. _rst-code-language-python:
+
+Python
+--------------------------------------------------
+
+.. rst-code-language-python-start
+
+Assign ``python`` as the name of the code block for Python code samples.
+
+**Do this**
+
+.. code-block:: none
+
+   .. code-block:: python
+      :linenos:
+
+      import requests
+      import json
+      import csv
+
+      # URL for Campaigns endpoint
+      url = "https://tenant-name.amperity.com/api/campaigns"
+
+      # Required headers
+      headers = {
+        'accept': 'application/json',
+        'authorization': 'Bearer token', # add token here
+        'amperity-tenant': 'tenant-name',
+        'api-version': 'version'
+      }
+
+      # Query parameter for data template IDs
+      payload = {
+        # 'destination_data_template_id': ''
+      }
+
+      # Get the response from the Campaigns endpoint
+      response = requests.request("GET", url, headers=headers, params=payload)
+      response_json = response.json()
+
+      # Extract headers from the first data entry
+      headers = list(response_json["data"][0].keys())
+
+      # Specify the output CSV file path
+      csv_file_path = "campaigns.csv"
+
+      # Write data to a CSV file
+      with open(csv_file_path, mode='w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=headers)
+        writer.writeheader()
+        for entry in response_json["data"]:
+          writer.writerow(entry)
+
+      print("CSV file generated successfully.")
+
+**For this**
+
+.. code-block:: python
+   :linenos:
+
+   import requests
+   import json
+   import csv
+
+   # URL for Campaigns endpoint
+   url = "https://tenant-name.amperity.com/api/campaigns"
+
+   # Required headers
+   headers = {
+     'accept': 'application/json',
+     'authorization': 'Bearer token', # add token here
+     'amperity-tenant': 'tenant-name',
+     'api-version': 'version'
+   }
+
+   # Query parameter for data template IDs
+   payload = {
+     # 'destination_data_template_id': ''
+   }
+
+   # Get the response from the Campaigns endpoint
+   response = requests.request("GET", url, headers=headers, params=payload)
+   response_json = response.json()
+
+   # Extract headers from the first data entry
+   headers = list(response_json["data"][0].keys())
+
+   # Specify the output CSV file path
+   csv_file_path = "campaigns.csv"
+
+   # Write data to a CSV file
+   with open(csv_file_path, mode='w', newline='') as file:
+     writer = csv.DictWriter(file, fieldnames=headers)
+     writer.writeheader()
+     for entry in response_json["data"]:
+       writer.writerow(entry)
+
+   print("CSV file generated successfully.")
+
+.. rst-code-language-python-end
+
+
+.. _rst-code-language-rest-api:
+
+REST APIs
+--------------------------------------------------
+
+.. rst-code-language-rest-api-start
+
+Assign ``rest`` as the name of the code block for code blocks with simple REST API examples.
+
+.. important:: Do not use the ``:linenos:`` attribute with REST API examples unless the request or response has more than one line.
+
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: rest
-      
+      :linenos:
+
       https://www.yoursite.com/endpoint/{some_endpoint}
 
-to create a code block like this:
+**For this**
 
 .. code-block:: rest
-      
+   :linenos:
+
    https://www.yoursite.com/endpoint/{some_endpoint}
 
+.. note:: Use the :ref:`rst-code-language-json` code block style for the JSON request/response part of the REST API.
 
-.. note:: Use the :ref:`format-content-code-block-json` code block style for the JSON request/response part of the REST API.
-
-.. format-content-code-block-rest-api-end
+.. rst-code-language-rest-api-end
 
 
-.. _format-content-code-block-rst:
+.. _rst-code-language-rst:
 
 reStructuredText
 --------------------------------------------------
 
-.. format-content-code-block-rst-start
+.. rst-code-language-rst-start
 
-For reStructuredText code blocks, assign ``rst`` as the name of the code block:
+Assign ``rst`` as the name of the code block for code blocks with reStructuredText formatting.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: rst
+      :linenos:
 
       This is some *reStructured* **Text** formatting.
 
@@ -680,9 +1462,10 @@ For reStructuredText code blocks, assign ``rst`` as the name of the code block:
 
          that has some(code);
 
-to create a code block like this:
+**For this**
 
 .. code-block:: rst
+   :linenos:
 
    This is some *reStructured* **Text** formatting.
 
@@ -690,21 +1473,24 @@ to create a code block like this:
 
       that has some(code);
 
-.. format-content-code-block-rst-end
+.. rst-code-language-rst-end
 
 
-.. _format-content-code-block-ruby:
+.. _rst-code-language-ruby:
 
 Ruby
 --------------------------------------------------
 
-.. format-content-code-block-ruby-start
+.. rst-code-language-ruby-start
 
-For Ruby code blocks, such as those that may show how to use an Amperity API endpoint, assign ``ruby`` as the name of the code block:
+Assign ``ruby`` as the name of the code block for Ruby code samples.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: ruby
+      :linenos:
 
       require 'uri'
       require 'net/http'
@@ -724,9 +1510,10 @@ For Ruby code blocks, such as those that may show how to use an Amperity API end
       response = http.request(request)
       puts response.read_body
 
-to create a code block like this:
+**For this**
 
 .. code-block:: ruby
+   :linenos:
 
    require 'uri'
    require 'net/http'
@@ -746,103 +1533,122 @@ to create a code block like this:
    response = http.request(request)
    puts response.read_body
 
-.. format-content-code-block-ruby-end
+.. rst-code-language-ruby-end
 
 
-.. _format-content-code-block-script:
+.. _rst-code-language-shell:
 
-Shell script
+Shell scripts
 --------------------------------------------------
 
-.. format-content-code-block-script-start
+.. rst-code-language-shell-start
 
-For shell script blocks, assign ``bash`` as the name of the code block:
+Assign ``bash`` as the name of the code block for code blocks with shell script examples.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: bash
+      :linenos:
 
       # The product and version information.
       readonly MARKUP_PRODUCT="markup-app"
       readonly MARKUP_VERSION="1.23.45-6"
       readonly MARKUP_RELEASE_DATE="2019-04-01"
 
-to create a code block like this:
+**For this**
 
 .. code-block:: bash
+   :linenos:
 
    # The product and version information.
    readonly MARKUP_PRODUCT="markup-app"
    readonly MARKUP_VERSION="1.23.45-6"
    readonly MARKUP_RELEASE_DATE="2019-04-01"
 
-.. format-content-code-block-script-end
+.. rst-code-language-shell-end
 
 
-.. _format-content-code-block-sql:
+.. _rst-code-language-sql:
 
-SQL query
+SQL queries
 --------------------------------------------------
 
-.. format-content-code-block-sql-start
+.. rst-code-language-sql-start
 
-For SQL statements, assign ``sql`` as the name of the code block:
+Assign ``sql`` as the name of the code block for code blocks with Spark SQL or Presto SQL examples.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: sql
+      :linenos:
 
-      SELECT * FROM Customers WHERE Last_Name='Smith';
+      SELECT * 
+      FROM Customers
+      WHERE Last_Name='Smith'
 
-to create a code block like this:
+**For this**
 
 .. code-block:: sql
+   :linenos:
 
-   SELECT * FROM Customers WHERE Last_Name='Smith';
+   SELECT * 
+   FROM Customers
+   WHERE Last_Name='Smith'
 
-.. format-content-code-block-sql-end
+.. rst-code-language-sql-end
 
 
-.. _format-content-code-block-yaml:
+.. _rst-code-language-yaml:
 
 YAML
 --------------------------------------------------
 
-.. format-content-code-block-yaml-start
+.. rst-code-language-yaml-start
 
-For YAML code blocks, assign ``yaml`` as the name of the code block:
+Assign ``yaml`` as the name of the code block for code blocks with YAML.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: yaml
+      :linenos:
 
       config:
         - some_setting: 'value'
         - some_other_setting: 12345
 
-to create a code block like this:
+**For this**
 
 .. code-block:: yaml
+   :linenos:
 
    config:
      - some_setting: 'value'
      - some_other_setting: 12345
 
-.. format-content-code-block-yaml-end
+.. rst-code-language-yaml-end
 
 
-.. _format-content-code-block-yaml-jinja:
+.. _rst-code-language-yaml-with-jinja:
 
-YAML w/Jinja
+YAML with Jinja
 --------------------------------------------------
 
-.. format-content-code-block-yaml-jinja-start
+.. rst-code-language-yaml-with-jinja-start
 
-For YAML code blocks that also embed Jinja templating, the standard ``yaml`` block will not work because the code block is not parsable as YAML. Instead, these code blocks must be able to parse a mix of YAML and Jinja templating. Assign ``salt`` as the name of the code block:
+Assign ``salt`` as the name of the code block for code blocks with YAML that embeds Jinja templating.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
 
    .. code-block:: salt
+      :linenos:
 
       {%- set some_jinja = "12345" %}
 
@@ -850,9 +1656,10 @@ For YAML code blocks that also embed Jinja templating, the standard ``yaml`` blo
         - some_setting: 'value'
         - some_other_setting: {{ some_jinja }}
 
-to create a code block like this:
+**For this**
 
 .. code-block:: salt
+   :linenos:
 
    {%- set some_jinja = "12345" %}
 
@@ -864,491 +1671,854 @@ to create a code block like this:
 
    Using ``salt`` seems like an odd way to specify a code block that contains both Jinja and YAML.
 
-   SaltStack is a configuration management tool similar to Ansible, Chef, and Puppet. SaltStack uses a mix of Jinja and YAML to define system states that are to be configured and maintained. The ``salt`` lexer exists in Pygments originally because of how SaltStack defines system states, their use of Python and documentation built via Sphinx, and the need for a lexer that could parse a file with code samples that contain both Jinja and YAML.
+   SaltStack is a configuration management tool similar to Ansible, Chef, and Puppet. SaltStack uses a mix of Jinja and YAML to define system states. The ``salt`` lexer exists in Pygments originally because of how SaltStack defines system states, their use of Python and documentation built via Sphinx, and the need for a lexer that could parse a file with code samples that contain both Jinja and YAML.
 
-.. format-content-code-block-yaml-jinja-end
+.. rst-code-language-yaml-with-jinja-end
 
 
-.. _format-content-header-h1:
+.. _rst-code-with-sidebar:
 
-Header (level 1)
+Code block with sidebar
 ==================================================
 
-.. note:: The CSS for |theme| understands headers below H4; however it's recommended to not use headers below that level for some (aesthetic) reasons:
+.. rst-code-with-sidebar-start
 
-   #. The left-side navigation supports 3 levels.
-   #. The right-side navigation, while built automatically from the headers that exist on that page, indents each header level, and then wraps the text when the header is longer than the width of the right-side column.
+Code blocks can be configured to have a sidebar on the right side. In general do not use sidebars with code samples. The width of the topic just isn't wide enough in most cases. This formatting option should be used sparingly and only if it improves understanding technical content.
 
-   As such, H4 headers are as much formatting as they are organization. Anything below H4 is recommended to be formatted as **Bold** so that it doesn't appear in the right-side navigation, but still looks on the page as if it were an H5 header. Headers formatted via **Bold** cannot be linked from the left-side navigation because only headers generate an anchor reference. Consider also reformatting the structure of your page to minimize the depth of the header levels.
+.. sidebar:: A sidebar caption.
 
-.. format-content-header-h1-start
+   Some sidebar content.
 
-An H1 header appears in the documentation like this:
+   * A list
+   * Is OK.
 
-.. code-block:: rst
+   And more content.
 
-   H1 headers
-   ==================================================
-   An H1 header appears in the documentation like this.
+   The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
 
-Which will appear in the documentation like the actual header for this section.
+.. code-block:: none
+   :caption: Chuck Data
 
-.. format-content-header-h1-end
+                                                             
+                               .:::::::::                    
+                             -----------=++                  
+                           -***::::--::----:*#=              
+                         .**- %%%+:::+:---::#@@@             
+                        .:*+:.%++++==+:::==+#-+@             
+                        :#-.:===============*#%%             
+                      -:%:  .@@-        :@@=                 
+                    :-:+=:-: ==%    +++. ==%    +#*          
+                      ::::=+=      +++++-     .+++           
+                    :--::+++++++@@@%   +@@@++++++%:...       
+                   :+#*::=++++=@@@@@@ @@@@@@*+++%%%%-        
+                  :::::#::=*#+=-@@@.. ..-@@-++*#%@           
+                  ..:=*:::=*%%%*----@@@*---+#%%%%            
+                   +=::::--+%%%%###++++++##%%%%%@            
+                 :+::::::=++#%%%%%%%%%%%%%%%%#*+@            
+                #:::::::-++++%%%%%%@@@@@@%%%%*++%@           
+              .=-:::::::-++++*%%%@@@@@@@@@%%+++++@           
+              -*::::::::--=+++#%%@@@@@@@@@%#==+++@           
+             =+::------::--=++--#%%@@@@@@%%-++++%@           
+            *=:::---=+++-::--=+::+%%@@@%#+:=+++*%            
+            *=::---=++++++-::-    .%%%%:    =+#@             
+            *=::---=+++++#%#=    :+@@@@#-    =-              
+            *=::----=++++#%%%%  @@@@@@@@@@  --.              
+            **-:::----===:*%%@@@@@@@@@@@@@%-=*=              
+          ++-*+:::-------:*%%@@@@@@@@@@@@#--+#=              
+      :==--:::=#::::::::::*%%%@@@@@@@@%%*=--++-              
+     ==----::::-*:::::::::*%%%%@@@@@@%#-:::--                
+    #-::::::*#=   :        -%%%%%%%%%                        
+    :------          ......:-------  .........               
+
+      ________  ___  ___  ___  ___  ________  ___  __ 
+     |\   ____\|\  \|\  \|\  \|\  \|\   ____\|\  \|\  \      
+     \ \  \___|\ \  \\\  \ \  \\\  \ \  \___|\ \  \/  /|_    
+      \ \  \    \ \   __  \ \  \\\  \ \  \    \ \   ___  \
+       \ \  \____\ \  \ \  \ \  \\\  \ \  \____\ \  \\ \  \  
+        \ \_______\ \__\ \__\ \_______\ \_______\ \__\\ \__\ 
+         \|_______|\|__|\|__|\|_______|\|_______|\|__| \|__| 
+
+       ________  ________  _________  ________               
+      |\   ___ \|\   __  \|\___   ___\\   __  \
+      \ \  \_|\ \ \  \|\  \|___ \  \_\ \  \|\  \             
+       \ \  \ \\ \ \   __  \   \ \  \ \ \   __  \
+        \ \  \_\\ \ \  \ \  \   \ \  \ \ \  \ \  \           
+         \ \_______\ \__\ \__\   \ \__\ \ \__\ \__\
+          \|_______|\|__|\|__|    \|__|  \|__|\|__|          
+
+.. rst-code-with-sidebar-end
 
 
-.. _format-content-header-h2:
+.. _rst-dropdowns:
 
-Header (level 2)
+Dropdowns
+==================================================
+
+.. rst-dropdowns-start
+
+A dropdown shows a title string and a box that expands when the reader clicks it.
+
+**Do this**
+
+.. code-block:: none
+
+   .. dropdown:: Dropdown title
+      :icon: code
+
+      Dropdown content
+
+**For this**
+
+.. dropdown:: Dropdown title
+   :icon: code
+
+   Dropdown content
+
+.. tip:: Dropdowns should be used to present information that a reader does not need to see immediately and the title should clearly identify what information will appear.
+
+   Dropdowns should not be used when a section title should appear in the right-side navigation.
+
+   Content within a dropdown cannot be included elsewhere *unless* the entire dropdown is included. Inclusions may be used within a dropdown.
+
+.. rst-dropdowns-end
+
+
+.. _rst-dropdowns-open:
+
+Expanded dropdowns
 --------------------------------------------------
 
-.. format-content-header-h2-start
+.. rst-dropdowns-open-start
 
-An H2 header appears in the documentation like this:
+Use the ``:open:`` attribute to configure a dropdown to be expanded by default.
 
-.. code-block:: rst
+**Do this**
 
-   H2 headers
+.. code-block:: none
+
+   .. dropdown:: Dropdown title
+      :open:
+
+      This is the content of a dropdown that is configured to be expanded by default.
+
+**For this**
+
+.. dropdown:: Dropdown title
+   :open: 
+
+   This is the content of a dropdown that is configured to be expanded by default.
+
+.. tip:: Use an expanded dropdown within a series of dropdowns to show the best option *or* the default.
+
+.. rst-dropdowns-open-end
+
+
+.. _rst-figures:
+
+Figures
+==================================================
+
+.. rst-figures-start
+
+Use the ``.. figure::`` directive for images that require dark mode *and* light mode versions. Use the ``.. images::`` directive for images that do not require both versions.
+
+A figure requires two image configurations. Use the ``:figclass:`` attribute to specify "light-only" or "dark-only". Be sure to configure the correct image path for dark and light mode.
+
+**Do this**
+
+.. code-block:: none
+
+   .. figure:: ../../amperity_base/source/_static/connector-braze.png
+      :figclass: light-only
+      :width: 140 px
+      :align: left
+
+   .. figure:: ../../amperity_base/source/_static/connector-braze-dark.png
+      :figclass: dark-only
+      :width: 140 px
+      :align: left
+
+**For this**
+
+.. figure:: ../../amperity_base/source/_static/connector-braze.png
+   :figclass: light-only
+   :width: 140 px
+   :align: left
+
+.. figure:: ../../amperity_base/source/_static/connector-braze-dark.png
+   :figclass: dark-only
+   :width: 140 px
+   :align: left
+
+.. rst-figures-done
+
+
+.. _rst-grids:
+
+Grids -- TODO
+==================================================
+
+
+.. _rst-grids-items:
+
+Grid items
+--------------------------------------------------
+
+.. grid:: 1 2 3 3
+    :outline:
+
+    .. grid-item::
+
+        Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. 
+
+    .. grid-item::
+
+        Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. 
+
+    .. grid-item::
+
+        Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. 
+
+
+
+.. _rst-grids-cards:
+
+Grid cards
+--------------------------------------------------
+
+.. grid:: 1 1 2 2
+    :padding: 0
+    :gutter: 2
+
+    .. grid-item-card:: Tutorial
+        :link: /install/
+
+        If you're new to Python and Sphinx, this is a great place to start.
+
+    .. grid-item-card:: Customisation
+        :link: /customisation/
+
+        Tailor configurations to meet your specific requirements with customizable settings.
+
+    .. grid-item-card:: References
+        :link: /writing/
+
+        Learn the syntax of reStructuredText and examine how it is formatted.
+
+    .. grid-item-card:: Contributing
+        :link: /contributing/
+
+        Your contributions can make a meaningful impact and help drive the project forward!
+
+
+
+.. _rst-grids-surface:
+
+Surface grids
+--------------------------------------------------
+
+By adding a class of ``surface``, a card would be rendered:
+
+.. code-block:: none
+
+    .. grid:: 1 1 2 3
+        :class-row: surface
+
+.. grid:: 1 1 2 3
+    :gutter: 2
+    :padding: 0
+    :class-container: surface
+
+    .. grid-item-card:: :octicon:`star` Beautiful Design
+
+        A visually stunning and modern design that makes your documentation
+        look professional and appealing.
+
+    .. grid-item-card:: :octicon:`zap` Responsive Layout
+
+        Look great on all devices, from desktops to smartphones, without
+        compromising on readability or functionality.
+
+    .. grid-item-card:: :octicon:`moon` Light/Dark Mode
+
+        Users can switch between light and dark modes according to their
+        preference.
+
+    .. grid-item-card:: :octicon:`paintbrush` Customizable Colors
+        :link: /customisation/colors/
+
+        Customize the colors to match your brand or personal preferences
+        with radix colors.
+
+    .. grid-item-card:: :octicon:`beaker` Jupyter Integration
+        :link: /extensions/nbsphinx/
+
+        Great CSS/UI for lots of Jupyter related extensions, enhance your
+        AI documentation.
+
+    .. grid-item-card:: :octicon:`browser` Multiple Layouts
+        :link: /writing/meta/#layout
+
+        Layouts of landing page, simple one page, and three-column
+        documentation page.
+
+
+
+
+.. _rst-header-levels:
+
+Header levels
+==================================================
+
+.. rst-header-levels-start
+
+Up to four header levels may be used within a topic.
+
+* H1 headers are identified with equals symbols: ``=====``
+* H2 headers are identified with dash symbols ``-----``
+* H3 headers are identified with plus symbols ``+++++``
+* H4 headers are identified with carat symbols ``^^^^^``
+
+All header lengths :ref:`must be 50 characters <rst-header-markup-length>`.
+
+Headers are configured like this:
+
+.. code-block:: none
+
+   H1
+   ==================================================
+
+   H2
    --------------------------------------------------
-   An H2 header appears in the documentation like this.
 
-Which will appear in the documentation like the actual header for this section.
-
-.. format-content-header-h2-end
-
-
-.. _format-content-header-h3:
-
-Header (level 3)
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. format-content-header-h3-start
-
-An H3 header appears in the documentation like this:
-
-.. code-block:: rst
-
-   H3 headers
+   H3
    ++++++++++++++++++++++++++++++++++++++++++++++++++
-   An H3 header appears in the documentation like this.
 
-Which will appear in the documentation like the actual header for this section.
-
-.. format-content-header-h3-end
-
-
-.. _format-content-header-h4:
-
-Header (level 4)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. format-content-header-h4-start
-
-An H4 header appears in the documentation like this:
-
-.. code-block:: rst
-
-   H4 headers
+   H4
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   An H4 header appears in the documentation like this.
 
-Which will appear in the documentation like the actual header for this section.
+.. rst-header-levels-important-start
 
-.. format-content-header-h4-end
+.. note:: There is not an H5 header level. Instead use bold strings like headers. See :ref:`custom admonitions <rst-admonition-custom>` for an example of using bold strings in place of H5 headers.
+
+.. rst-header-levels-important-end
 
 
-.. _format-content-header-markup-length:
+.. _rst-header-markup-length:
 
 Header markup length
 ==================================================
 
-.. format-content-header-markup-length-start
+.. rst-header-markup-length-start
 
-Sphinx requires the length of the header to be at least the same length as the content string that defines the header.
+All headers must be 50 characters long. This helps identify the header structure within a file.
 
-Amperity documentation uses a consistent header length: 50 characters. This makes it easier to scan the structure of the content within a topic.
-
-.. format-content-header-markup-length-end
+.. rst-header-markup-length-end
 
 
-.. _format-content-images:
+.. _rst-icons:
+
+Icons -- TOOD
+==================================================
+
+
+Font Awesome
+--------------------------------------------------
+
+.. TODO: Need to re-enable Font Awesome icons.
+
+https://docs.fontawesome.com/web/setup/host-yourself/svg-js
+
+
+Lucide
+--------------------------------------------------
+
+https://lucide.dev/
+
+
+Octicon
+--------------------------------------------------
+
+https://primer.style/octicons/
+
+- alert: :octicon:`alert`
+- bell: :octicon:`bell`
+- book: :octicon:`book`
+- clock: :octicon:`clock`
+- browser: :octicon:`browser`
+
+
+.. _rst-images:
 
 Images
 ==================================================
 
-.. format-content-images-start
+.. rst-images-start
 
-Images may be embedded in the documentation using the ``.. image::`` directive. For example:
+Add images to the documentation using the ``.. images::`` directive.
 
-.. code-block:: rst
+* Use ``:width:`` to set the width of an image in pixels or percent.
+* Use ``:alt:`` to provide alt text for the image.
+* Use ``:align:`` to configure the location of the image on the page. Always set this value to "left".
+* Use ``:no-scaled-link:`` to prevent the image from being clickable.
 
-   .. image:: ../../images/amp-amperity-bridge-alt.png
-      :width: 280 px
-      :alt: Amperity Bridge
-      :align: left
-      :class: no-scaled-link
+.. important:: You must use :ref:`figures <rst-figures>` for images that require differentiation between dark and light mode.
 
-with the ``:width:`` and ``:align:`` attributes being aligned underneath ``image`` in the block. The ``no-scaled-link`` class option prevents images from being clickable.
+**Do this**
 
-This image will appear in the documentation like this:
+.. code-block:: none
 
-.. image:: ../../images/amp-amperity-bridge-alt.png
-   :width: 280 px
-   :alt: Amperity Bridge
+   .. code-block:: rst
+
+      .. image:: ../../amperity_base/source/_static/card-chuck-data.png
+         :width: 100 px
+         :alt: Chuck Data
+         :align: left
+         :class: no-scaled-link
+
+**For this**
+
+.. image:: ../../amperity_base/source/_static/card-chuck-data.png
+   :width: 100 px
+   :alt: Chuck Data
    :align: left
    :class: no-scaled-link
 
-Images should be SVG when only HTML output is desired. Printing to PDF from HTML pages requires PNG images.
-
-.. format-content-images-end
+.. rst-images-end
 
 
-.. _format-content-includes:
+.. _rst-inclusions:
 
-Includes
+Inclusions
 ==================================================
 
-.. format-content-includes-start
+.. rst-inclusions-start
 
-Inclusions are a great way to single-source content. Write it in one place, publish it in many. There are two ways to handle inclusions, though both require using the ``.. includes::`` directive.
+Amperity content is designed to be reusable across content collections.
 
-#. :ref:`format-content-include-via-file`
-#. :ref:`format-content-include-via-snippet`
+Content can be included
 
-.. format-content-includes-end
+* :ref:`From a file <rst-inclusions-from-file>`
+* :ref:`From a section within a topic <rst-inclusions-from-topic>`
+
+.. rst-inclusions-end
 
 
-.. _format-content-include-via-file:
+.. _rst-inclusions-from-file:
 
-via file
+from a file
 --------------------------------------------------
 
-.. format-content-include-via-files-start
+.. rst-inclusions-from-file-start
 
-Inclusions may be done from standalone files. These standalone files are typically kept as a standalone file located in a dedicated directory within the docs repository, such as ``/shared/some_file.rst``.
+The ``/shared`` directory in Amperity docs has a collection of files that contain shareable content.
 
-The ``.. includes::`` is used to declare the path to that file. At build time, the contents of the included file are built into the location specified by the ``.. includes::`` directive.
+.. code-block:: none
+   :caption: /shared directory contents
+
+   credentials_settings.rst
+   destinations_settings.rst
+   terms.rst
+
+Inside these topics are reusable paragraphs. ``terms.rst`` contains **ALL** of the glossary terms used across **ALL** Amperity documentation. From ``terms.rst`` they are shared into the `glossary <https://docs.amperity.com/reference/glossary.html>`__ and also into any other topic that needs that term.
 
 For example:
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. include:: ../../shared/some-file.rst
+   **Moveable Ink**
 
-will pull in the contents of that file right into the location of the directive.
+   .. term-moveable-ink-start
 
-.. format-content-include-via-files-end
+   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+
+   .. term-moveable-ink-end
+
+Moveable Ink is an entry in the ``terms.rst`` file. The title of the term--**Moveable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
+
+The glossary term for Moveable Ink is:
+
+.. code-block:: none
+
+   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+
+The section references are:
+
+#. ".. term-moveable-ink-start"
+#. ".. term-moveable-ink-end"
+
+To include the glossary term for Moveable Ink into a topic, such as into the Amperity glossary or into topics that `mention Moveable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
+
+.. code-block:: none
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-moveable-ink-start
+      :end-before: .. term-moveable-ink-end
+
+* The value for ``.. include::`` is the relative path to the file with the sharable content.
+* Use the section reference start string--".. term-moveable-ink-start"--as the value for the ``:start-after:`` attribute.
+* Use the section reference end string--".. term-moveable-ink-end"--as the value for the ``:end-before:`` attribute.
+
+**Do this**
+
+.. code-block:: none
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-moveable-ink-start
+      :end-before: .. term-moveable-ink-end
+
+**For this**
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-moveable-ink-start
+   :end-before: .. term-moveable-ink-end
+
+.. rst-inclusions-from-file-end
+
+.. rst-inclusions-from-file-glossary-start
+
+.. admonition:: Glossary terms
+
+   The Amperity glossary formats inclusions differently than other topics. Each glossary term has a unique anchor reference and is formatted as a defintion list.
+
+   .. code-block:: none
+
+      .. _m-moveable-ink:
+
+      **Moveable Ink**
+         .. include:: ../../shared/terms.rst
+            :start-after: .. term-moveable-ink-start
+            :end-before: .. term-moveable-ink-end
+
+.. rst-inclusions-from-file-glossary-end
 
 
-.. _format-content-include-via-snippet:
+.. _rst-inclusions-from-topic:
 
-via snippet
+from a topic
 --------------------------------------------------
 
-.. format-content-include-via-snippet-start
+.. rst-inclusions-from-topic-start
 
-Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.
+Every section in every topic in every collection is configured for sharing and may be reused.
 
-.. warning:: Snippets may not be used within the same file. What this means is the source of the snippet may not also be the target for that snippet. This will cause a build error.
+For example:
 
-These types of inclusions require two steps:
+.. code-block:: none
+   :caption: /amperity_reference/source/uid2.rst
 
-#. Declare a start and an end for the snippet; this declaration must be unique across the entire documentation repository.
+   .. uid2-overview-start
 
-   .. tip:: To help ensure unique snippet identifiers are built in the output, ensure that the snippet identifiers are directly assocaited with the name of the source directory and source file. These identifiers don't have to be long (though they can be), but they must be unique within a doc set.
+   Unified ID 2.0 (UID2) is an `open-source framework <https://unifiedid.com/docs/intro>`__ |ext_link| that enables deterministic identity for advertising opportunities across the open internet for participants with access to the advertising ecosystem. UID2 is a standalone solution with a unique namespace and privacy controls that help participants meet local market requirements.
 
-      For example, a file locatated at ``internal_docs/source/tips.rst`` should have snippet identifiers like ``.. internal-docs-tips-some-identifier-start`` or ``.. internal-docs-tips-some-identifier-end``.
-#. Specify the ``.. includes::`` directive, along with the ``:start-after:`` and ``:end-before:`` attributes.
+   .. uid2-overview-end
 
-   The ``:start-after:`` and ``:end-before:`` attributes effectively use a unique code comment located in the file defined by the ``.. includes::`` directive to know the start and end of the snippet to be included.
+The section references are:
 
-For example, a snippet is defined in ``docs/source/snippet.rst``:
+#. ".. uid2-overview-start"
+#. ".. uid2-overview-end"
 
-.. code-block:: rst
+To include the paragraph into another topic, such as into this section, use the ``.. include::`` directive.
 
-   This is the file named snippet.rst. It has a few paragraphs and a
-   reusable snippet.
+.. code-block:: none
 
-   Paragraph one.
+   .. include:: ../../amperity_reference/source/uid2.rst
+      :start-after: .. uid2-overview-start
+      :end-before: .. uid2-overview-end
 
-   .. docs-snippet-p2-start
+* The value for ``.. include::`` is the relative path to the file with the sharable content. All content collections have a ``/source/`` directory within the path.
+* Use the section reference start string--".. uid2-overview-start"--as the value for the ``:start-after:`` attribute.
+* Use the section reference end string--".. uid2-overview-end"--as the value for the ``:end-before:`` attribute.
 
-   Paragraph two.
+**Do this**
 
-   .. docs-snippet-p2-end
+.. code-block:: none
 
-   Paragraph three.
+   .. include:: ../../amperity_reference/source/uid2.rst
+      :start-after: .. uid2-overview-start
+      :end-before: .. uid2-overview-end
 
-This snippet can be included in other files like this:
+**For this**
 
-.. code-block:: rst
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-overview-start
+   :end-before: .. uid2-overview-end
 
-   Some content.
-
-   .. include:: ../../docs/source/snippet.rst
-      :start-after: .. docs-snippet-p2-start
-      :end-before: .. docs-snippet-p2-end
-
-   Some more content.
-
-This should result in a file that looks similar to:
-
-.. code-block:: rst
-
-   Some content.
-
-   Paragraph two.
-
-   Some more content.
-
-.. format-content-include-via-snippet-end
-
-.. format-content-include-via-snippet-hint-start
-
-.. hint:: Snippets may be sourced from large files that contain lists. For example, let's say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.
-
-   In this case, all glossary terms can be created and managed from a single file like ``shared/terms.rst`` in which the snippet start-end pairs are defined and the glossary terms are managed. Then each ``glossary.rst`` file across the docs set can use the ``.. includes::`` directive to pull in the terms it needs.
-
-.. format-content-include-via-snippet-hint-end
+.. rst-inclusions-from-topic-end
 
 
-.. _format-content-inline-markup:
+.. _rst-inclusions-start-and-end-policy:
+
+Start and end policy
+--------------------------------------------------
+
+.. rst-inclusions-start-and-end-policy-start
+
+Adding the :ref:`section reference <rst-section-references>` start and end strings is a step completed during topic development. All content is written to be reusable even if it is not reused.
+
+.. rst-inclusions-start-and-end-policy-end
+
+
+.. _rst-inline-markup:
 
 Inline markup
 ==================================================
 
-.. format-content-inline-markup-start
+.. rst-inline-markup-start
 
-Paragraphs, lists, and other strings of text behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs, lists, tables, and so on:
+Paragraphs, lists, and other strings of text behave here like they do in any text editor, with line breaks before and after. Use any of these formatting options within paragraphs, lists, and tables:
 
-* :ref:`format-content-inline-markup-bold`
-* :ref:`format-content-inline-markup-italics`
-* :ref:`format-content-inline-markup-code`
+* :ref:`Bold <rst-inline-markup-bold>`
+* :ref:`Code strings <rst-inline-markup-code>`
+* :ref:`Italics <rst-inline-markup-italic>`
 
-.. format-content-inline-markup-end
+.. rst-inline-markup-end
 
 
-.. _format-content-inline-markup-bold:
+.. _rst-inline-markup-bold:
 
 Bold
 --------------------------------------------------
 
-.. format-content-inline-markup-bold-start
+.. rst-inline-markup-bold-start
 
 Use two asterisks (``**``) around the word to apply bold formatting: ``**bold**``. For example: **this is bold content**.
 
-You may not use bold in headers or within the text strings for hyperlinks.
+.. caution:: You may not use bold in headers or within the text strings for hyperlinks.
 
-.. format-content-inline-markup-bold-end
-
-
-.. _format-content-inline-markup-italics:
-
-Italics
---------------------------------------------------
-
-.. format-content-inline-markup-italics-start
-
-Use a single asterisk (``*``) around the word to apply italics formatting: ``*italics*``. For example: *this is italicized content*.
-
-You may not use italics in headers or within the text strings for hyperlinks.
-
-.. format-content-inline-markup-italics-end
+.. rst-inline-markup-bold-end
 
 
-.. _format-content-inline-markup-code:
+.. _rst-inline-markup-code:
 
 Code strings
 --------------------------------------------------
 
-.. format-content-inline-markup-code-start
+.. rst-inline-markup-code-start
 
-Use two backticks around the code string to apply formatting to inline code strings. This will present them in a monospaced, bold format. For example:
+Use two backticks around an inline code string.
 
-.. code-block:: rst
+**Do this**
 
-   ``inline code string``
+.. code-block:: none
 
-renders like this: ``inline code string``.
+   This is an ``inline() code*string``.
 
-.. note:: An inline code string should only be used within lists and paragraphs for function names, commands for command-line tools, values, and so on, and only in a way where the contents of that code string reads normally in a sentence. Use the code-block directive for blocks of code or a none block for things that should be presented as code blocks, but might not be actual code blocks and/or may be incomplete code blocks.
+**For this**
 
-.. format-content-inline-markup-code-end
+This is an ``inline() code*string``.
+
+.. tip:: Use sparingly. For SQL function and operator names use bold emphasis.
+
+.. rst-inline-markup-code-end
 
 
-.. _format-content-links:
+.. _rst-inline-markup-italic:
+
+Italics
+--------------------------------------------------
+
+.. rst-inline-markup-italic-start
+
+Use a single asterisk (``*``) around the word to apply italics formatting: ``*italics*``. For example: *this is italicized content*.
+
+.. caution:: You may not use italics in headers or within the text strings for hyperlinks.
+
+.. rst-inline-markup-italic-end
+
+
+.. _rst-links:
 
 Links
 ==================================================
 
-.. format-content-links-start
+.. rst-links-start
 
-There are three types of links:
+Use the following types of links within documentation.
 
-#. :ref:`External <format-content-links-external>`
-#. :ref:`External, with icon and opens in new tab <format-content-links-external-opens-new-tab>`
-#. :ref:`Reference <format-content-links-reference>`
-#. :ref:`Topic <format-content-links-topic>`
+* :ref:`Cross-site links <rst-links-cross-site>`
+* :ref:`External links <rst-links-external>`
+* :ref:`Links to topic headings within the same collection <rst-links-reference>`
+* :ref:`Links to topics within the same collection <rst-links-topic>`
 
-.. format-content-links-end
+.. rst-links-end
 
 
-.. _format-content-links-external:
+.. _rst-links-cross-site:
+
+Cross-site
+--------------------------------------------------
+
+.. rst-links-cross-site-start
+
+A cross-site link is a link to a page in Amperity docs that is not in the same docs collection. The syntax for a cross-site link is:
+
+.. code-block:: none
+
+   `string <URL>`__ |ext_link|
+
+* Replace "string" with text.
+* Replace "URL" with the full URL. For example: ``https://docs.amperity.com/`` or ``https://docs.amperity.com/reference/sso.html#use-cases``.
+* Be sure to append the double underscores.
+* Do not add ``|ext_link|`` to the end because the reader will not leave the Amperity docs site.
+
+**Do this**
+
+.. code-block:: none
+
+   `Use cases for single sign-on (SSO) <https://docs.amperity.com/reference/sso.html#use-cases>`__
+
+**For this**
+
+`Use cases for single sign-on (SSO) <https://docs.amperity.com/reference/sso.html#use-cases>`__
+
+.. rst-links-cross-site-end
+
+
+.. _rst-links-external:
 
 External
 --------------------------------------------------
 
-.. format-content-links-external-start
+.. rst-links-external-start
 
-Use external links for links that leave the Amperity docs site. These will generally take the form of a fully qualified URL: ``https://www.amperity.com``.
+An external link is a link to a page that exists outside Amperity documentation. The syntax for an external link is:
 
-You must embed the external link naturally within a sentence:
+.. code-block:: none
 
-.. code-block:: rst
+   `string <URL>`__ |ext_link|
 
-   `some link text here <https://www.amperity.com>`__ |ext_link|
+* Replace "string" with text.
+* Replace "URL" with the full URL. For example: ``https://wwww.braze.com/docs/`` or ``https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content``.
+* Be sure to append the double underscores.
+* Use ``|ext_link|`` to apply an icon that indicates the link will take the reader from the Amperity docs site.
 
-For example: `https://www.amperity.com <https://www.amperity.com>`__ |ext_link|.
+**Do this**
 
-Use a double underscore (``__``) at the end of the external link and append with ``|ext_link|``.
+.. code-block:: none
 
-.. format-content-links-external-end
+   `Braze documentation <https://www.braze.com/docs/>`__ |ext_link|
+
+**For this**
+
+`Braze documentation <https://www.braze.com/docs/>`__ |ext_link|
+
+.. rst-links-external-end
 
 
-.. _format-content-links-external-opens-new-tab:
+.. _rst-links-reference:
 
-External, opens new tab
+Headers in same site
 --------------------------------------------------
 
-.. format-content-links-external-opens-new-tab-start
+.. rst-links-reference-start
 
-Links that open to a page outside of the Amperity Documentation require using a token to ensure that ``target="_blank"`` can be added to the link.
+A reference link is a link to an :ref:`anchor reference <rst-anchor-references>` located within the same document collection. The anchor reference must be unique.
 
-**To use a link that opens in a new tab**
+**Do this**
 
-#. Open the file /tokens/external_links.txt.
-#. Review the list of links. Use one that exists already if you can. Add the ``|ext_linkname|`` to your topic.
-#. If the link is new, add the following:
+.. code-block:: none
 
-   ::
+   :ref:`rst-links-reference`
 
-      .. |ext_linkname| raw:: html
+or:
 
-         <a href="href_goes_here" target="_blank">the string people see in the topic</a> <i class="fas fa-external-link-square-alt"></i>
+.. code-block:: none
 
-   .. tip:: Be sure to prefix with ``ext_``.
+   :ref:`Headers in same site <rst-links-reference>`
 
-For example: You should read all about `our patented method for identity resolution <https://amperity.com/resources/blog/breaking-the-rules-getting-patents-for-it>`__ |ext_link| on the Amperity corpsite!
+**For this**
 
-.. format-content-links-external-opens-new-tab-end
+:ref:`rst-links-reference`
+
+or
+
+:ref:`Headers in same site <rst-links-reference>`
+
+A reference link without the "string" value will use the header string just below the anchor reference. Use the "string" value to blend reference links into the language you use in a paragraph, a list, or a table.
+
+.. important:: You cannot use reference links to link to a section in a topic located in another document collection. Use an :ref:`external link within the docs site <rst-links-cross-site>` to define the link.
+
+.. note:: The link in the example is self-referential. You should not do this.
+
+.. rst-links-reference-end
 
 
-.. _format-content-links-reference:
+.. _rst-links-topic:
 
-Reference
+Topics in same site
 --------------------------------------------------
 
-.. format-content-links-reference-start
+.. rst-links-topic-start
 
-There are two ways to link to headers that exist within the same docs collection.
+A topic link is a link to a topic, such as to the :doc:`Amperity Style Guide <styles>` located within the same document collection. The topic reference must be a filename.
 
-First, a pre-requisite: the header to which the link is targeted must have an anchor. For example:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   .. _anchor-name:
+   :doc:`styles`
 
-   Internal Reference
-   --------------------------------------------------
-   There are two ways to link to internal headers across the doc set.
-   First, a pre-requisite: the header that is the target of the link
-   must be tagged:
+or:
 
-where the internal reference is the ``.. _anchor-name:``. The string "anchor-name" must be unique across the entire doc set, so the required pattern for these is <file-name-header-name>, like this:
+.. code-block:: none
 
-.. code-block:: rst
+   :doc:`Amperity Style Guide <styles>`
 
-   .. _format-content-code-block-yaml:
+**For this**
 
-and then there are two ways to link to that anchor. The first will pull in the header name as the link:
+:doc:`styles`
 
-.. code-block:: rst
+or:
 
-   :ref:`format-content-code-block-yaml`
+:doc:`Amperity Style Guide <styles>`
 
-and the second will use the string you put there and will not pull in the header name as the link:
+.. important:: You cannot use topic links to link to a topic located in another document collection. Use an :ref:`external link within the docs site <rst-links-cross-site>` to define the link.
 
-.. code-block:: rst
-
-   This links to some information about using
-   :ref:`YAML code blocks <format-content-code-block-yaml>`
-   in your documentation.
-
-These first example renders like this: :ref:`format-content-code-block-yaml`. The second example is preferred and looks like the next sentence. This links to some information about using :ref:`YAML code blocks <format-content-code-block-yaml>` in your documentation.
-
-.. format-content-links-reference-end
+.. rst-links-topic-end
 
 
-.. _format-content-links-topic:
-
-Topic
---------------------------------------------------
-
-.. format-content-links-topic-start
-
-To link to topic that exists within the same docs collection use the following format:
-
-.. code-block:: rst
-
-   :doc:`a string that introduces the link and/or topic title <filename>`
-
-and the second uses a string to replace (and override) the header name as the link:
-
-.. code-block:: rst
-
-   This links to some information about using :doc:`blocks </blocks>`
-   to build a pipeline.
-
-.. important:: You *must* put a string in the "a string that introduces the link and/or topic title" part of the format. If you don't, because of how we're using the ``.. rubric`` directive to hide the topic title from the right-side nav, you'll get a link to the first header in the topic. LOL.
-
-.. format-content-links-topic-end
-
-
-.. _format-content-lists:
+.. _rst-lists:
 
 Lists
 ==================================================
 
-.. format-content-lists-start
+.. rst-lists-start
 
-Three types of lists are available:
+Use the following types of lists to organize information in topics.
 
-* :ref:`format-content-list-definition`
-* :ref:`format-content-list-ordered`
-* :ref:`format-content-list-unordered`
+* :ref:`Definition lists <rst-list-definition>`
+* :ref:`Horizontal lists <rst-list-horizontal>`
+* :ref:`Options lists <rst-list-options>`
+* :ref:`Ordered lists <rst-list-ordered>`
+* :ref:`Tables as lists <rst-list-table>`
+* :ref:`Unordered lists <rst-list-unordered>`
 
-.. format-content-lists-end
+.. rst-lists-end
 
 
-.. _format-content-list-definition:
+.. _rst-list-definition:
 
-Definition list
+Definition lists
 --------------------------------------------------
 
-.. format-content-list-definition-start
+.. rst-list-definition-start
 
-A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list should be used to describe settings, such as command line parameters, API arguments, glossary terms, and so on.
+A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase.
 
-For example:
+**Do this**
 
-.. code-block:: rst
+.. code-block:: none
 
-   **list_item_one**
-      The description must be indented three spaces.
+   .. code-block:: rst
 
-   **list_item_two**
-      The description must be indented three spaces.
+      **list_item_one**
+         The description must be indented three spaces.
 
-Which will appear in the documentation like this:
+      **list_item_two**
+         The description must be indented three spaces.
+
+**For this**
 
 **list_item_one**
    The description must be indented three spaces.
@@ -1356,37 +2526,104 @@ Which will appear in the documentation like this:
 **list_item_two**
    The description must be indented three spaces.
 
-.. format-content-list-definition-end
-
-.. format-content-list-definition-complex-start
-
-.. note:: A definition list may contain a definition list. For example, some configuration settings (already in a definition list) have specific additional settings that must also be in a definition lists. These must be indented and must use the correct amount of whitespace.
-
-.. format-content-list-definition-complex-start
-
-.. format-content-list-definition-warning-start
-
-.. warning:: A definition list title may not contain :ref:`inline markup <format-content-inline-markup>`.
-
-.. format-content-list-definition-warning-start
+.. rst-list-definition-end
 
 
-.. _format-content-list-ordered:
+.. _rst-list-horizontal:
 
-Ordered list
+Horizontal lists
 --------------------------------------------------
 
-.. format-content-list-ordered-start
+.. rst-list-horizontal-start
 
-An ordered list has each list item preceded by ``#.`` followed by a space. For example:
+Using ``.. hlist::`` directive to define a list that is organized horizontally.
 
-.. code-block:: rst
+**Do this**
+
+.. code-block:: none
+
+   .. hlist::
+      :columns: 3
+
+      * A list of
+      * short items
+      * that should be
+      * displayed
+      * horizontally
+
+**For this**
+
+.. hlist::
+   :columns: 3
+
+   * A list of
+   * short items
+   * that should be
+   * displayed
+   * horizontally
+
+.. rst-list-horizontal-end
+
+
+.. _rst-list-options:
+
+Options lists
+--------------------------------------------------
+
+.. rst-list-options-start
+
+Use an options list to show options for command-line tools or for other types of information that benefit from this type of presentation.
+
+**Do this**
+
+.. code-block:: none
+
+   -a         Output all.
+   -b         Output both (this description is quite long).
+   -c arg     Output just arg.
+   --long     Output all day long.
+
+   -p         This option has two paragraphs in the description. This is the first.
+
+              This is the second.  Blank lines may be omitted between options (as above) or left in (as here and below).
+
+   -f FILE, --file=FILE  These two options are synonyms; both have arguments.
+
+
+**For this**
+
+-a         Output all.
+-b         Output both (this description is quite long).
+-c arg     Output just arg.
+--long     Output all day long.
+
+-p         This option has two paragraphs in the description. This is the first.
+
+           This is the second.  Blank lines may be omitted between options (as above) or left in (as here and below).
+
+-f FILE, --file=FILE  These two options are synonyms; both have arguments.
+
+.. rst-list-options-end
+
+
+.. _rst-list-ordered:
+
+Ordered lists
+--------------------------------------------------
+
+.. rst-list-ordered-start
+
+An ordered list has each list item preceded by ``#.`` followed by a space.
+
+**Do this**
+
+.. code-block:: none
 
    #. one
    #. two
    #. three
 
-Which will appear in the documentation like this:
+**For this**
 
 #. one
 #. two
@@ -1418,15 +2655,17 @@ Which will appear in the documentation like this:
    6. six
    7. seven
 
-.. format-content-list-ordered-end
+.. rst-list-ordered-end
 
 
-.. _format-content-list-table:
+.. _rst-list-table:
 
-Table list
+Tables as lists
 --------------------------------------------------
 
-.. format-content-list-table-start
+.. rst-list-table-start
+
+See :ref:`list tables <rst-tables-list>`.
 
 A table list uses a table without a header row, and then only two columns, one for an image, and the other for the text for the step. For example:
 
@@ -1547,121 +2786,424 @@ Which will appear in the documentation like this:
           :class: no-scaled-link
      - You should try not to build a table list with seven steps. But in rare cases, this is far as you're allowed to go.
 
-
-**Example: A variety of left-side icons**
-
-This is an example of a table-list:
-
-.. list-table::
-   :widths: 80 520
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: left
-          :class: no-scaled-link
-     - 1-9, plus 0
-
-   * - .. image:: ../../images/steps-arrow-off-black-alt.png
-          :width: 60 px
-          :alt: Step one.
-          :align: left
-          :class: no-scaled-link
-     - Arrow, for some types of unordered lists. Refer to the overview of |destination_meta_ads_manager| for an example.
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Step one.
-          :align: left
-          :class: no-scaled-link
-     - Checkmark, for "you must know/do this" unordered lists, like a "Get details" section in a source or destination topic.
-
-.. format-content-list-table-end
+.. rst-list-table-end
 
 
-.. _format-content-list-unordered:
+.. _rst-list-unordered:
 
-Unordered list
+Unordered lists
 --------------------------------------------------
 
-.. format-content-list-unordered-start
+.. rst-list-unordered-start
 
-An unordered list has each list item preceded by a single asterisk (``*``) followed by a space. For example:
+An unordered list has each list item preceded by a single asterisk (``*``) followed by a space.
 
-.. code-block:: rst
+**Do this**
 
-   * one
-   * two
-   * three
+.. code-block:: none
 
-Which will appear in the documentation like this:
+   * Item one
+   * Item two
 
-* one
-* two
-* three
+**For this**
 
-.. format-content-list-unordered-end
+* Item one
+* Item two
+
+.. rst-list-unordered-end
 
 
-.. _format-content-meta-tag:
+.. _rst-lists-within-lists:
+
+Lists within lists
+==================================================
+
+.. rst-lists-within-lists-start
+
+Do not use lists within lists unless the list-within-a-list is in a :ref:`list table <rst-tables-list>`.
+
+.. rst-lists-within-lists-end
+
+
+.. _rst-menu-selection:
+
+Menu selection
+==================================================
+
+.. TODO: Just to see what this one looks like. Currently we do not use this pattern at all.
+
+.. rst-menu-selection-start
+
+Use a menu selection to display a shorter and more direct path for clicking through objects in a user interface.
+
+**Do this**
+
+.. code-block:: none
+
+   :menuselection:`Settings --> Security tab --> API key button --> Add API key`
+
+**For this**
+
+:menuselection:`Settings --> Security tab --> API key button --> Add API key`
+
+.. rst-menu-selection-end
+
+
+.. _rst-meta-tags:
 
 Meta tags
 ==================================================
 
-.. format-content-meta-tag-start
+.. rst-meta-tags-start
 
-Each topic should have a ``meta`` tag that provides the description of the topic for use by external search engines, such as Google.
+Three meta tags exist at the top of every file. The first one is for general search crawlers and the second two are for Swiftype, which is the search tool used for searching within the docs site. The first two can be identical. The third is set to match the topic title.
 
-::
+For example:
+
+.. code-block:: none
 
    .. meta::
        :description lang=en:
-           This topic describes how to use orchestrations to send query results from Amperity to Adobe Experience Platform.
+           How to format technical content for the Amperity docs site.
 
-.. format-content-meta-tag-end
+   .. meta::
+       :content class=swiftype name=body data-type=text:
+           How to format technical content for the Amperity docs site.
+
+   .. meta::
+       :content class=swiftype name=title data-type=string:
+           Formatting guide
+
+.. rst-meta-tags-end
 
 
-.. _format-content-tables:
+.. _rst-page-layouts:
+
+Page layouts
+==================================================
+
+.. rst-page-layouts-start
+
+All pages in Amperity documentation are configured to use the default page layout. This builds pages with:
+
+* A left sidebar with a global table of contents.
+* A right sidebar with a topic-specific table of contents.
+* A center that displays the page content.
+
+Use the landing page layout for the root page on a docs collection. This layout omits the right and left sidebars and gives the page access to the full width of the browser window.
+
+Put the ``:layout:`` attribute at the top of the file, just below the :ref:`topic location string <rst-topic-location>` and set its value to "landing".
+
+For example:
+
+.. code-block:: none
+
+   .. https://docs.amperity.com/contributing/
+
+   :layout: landing
+
+Make sure there is a row in-between the topic location string and ``:layout:`` and two rows in-between ``:layout:`` and any :ref:`meta tags <rst-meta-tags>`.
+
+.. rst-page-layouts-end
+
+
+.. _rst-page-redirects:
+
+Page redirects
+==================================================
+
+.. rst-page-redirects-start
+
+Pages can be redirected from the current URL to a different URL. This is useful when a page is deleted to ensure that readers are redirected to the new page.
+
+Use the ``redirects.html`` template to create a redirect.
+
+.. code-block:: salt
+   :linenos:
+   :caption: /contributing/_templates/redirects.html
+
+   {#
+     Redirect template.
+     Add to html_additional_pages the filename pair for this page.
+     Remove from Sphinx RST collection.
+     Update URL for the target URL.
+   #}
+   {%- block doctype -%}
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   {%- endblock %}
+
+   <html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+       <meta http-equiv="Refresh" content="0; url='https://www.amperity.com'" />
+     </head>
+     <body role="document"></body>
+   </html>
+
+**To add a redirect**
+
+#. Copy the ``/contributing/_templates/redirects.html``.
+#. Paste it into the ``_templates`` directory for the document collection in which topic to be redirected is located. Rename the file to be the name of the file to be redirected.
+#. Open ``redirects.html`` in TextMate. Update the **url** value in line 13 to be the full URL of the page to which a reader is redirected.
+#. Open the ``conf.py`` file located in the ``/sources/`` directory for the document collection in which the topic to be redirected is located. Find the **html_additional_pages** section and add the filename of the redirect to the list of additional pages.
+
+   .. code-block:: python
+
+      html_additional_pages = {
+        "filename": "filename.html",
+        "new-redirect": "new-redirect.html",
+      }
+
+   .. important:: Use the filename of the redirect on both sides. The names must be in quotes, separated by a colon, the right side must have ".html" appended, and the entire row followed by a comma.
+#. Save the changes and then run a local build. Open the build output and double-click the new redirect file and verify that it redirects you to the correct page.
+
+.. rst-page-redirects-end
+
+
+.. _rst-section-references:
+
+Section references
+==================================================
+
+.. rst-section-references-start
+
+Amperity single-sources content when it makes sense to do so using :ref:`inclusions <rst-inclusions>`. Inclusions require a content boundary--a start and an end--and an identifier that is unique within the content collection. 
+
+A section references defines a unique content boundary for reusing content.
+
+Section references follow the same naming pattern as :ref:`anchor references <rst-anchor-references>`, and then append ``-start`` or ``-end`` to the pattern to define the start and end of the content boundary.
+
+.. rst-section-references-end
+
+.. rst-section-references-example-start
+
+For example
+
+.. code-block:: none
+   :linenos:
+
+   .. _rst-section-references:
+
+   Section references
+   ==================================================
+
+   .. rst-section-references-start
+
+   Amperity single-sources content when it makes sense to do so using :ref:`inclusions <rst-inclusions>`. Inclusions require a content boundary--a start and an end--and an identifier that is unique within the content collection. 
+
+   A section references defines a unique content boundary.
+
+   Section references follow the same naming pattern as :ref:`anchor references <rst-anchor-references>`, and then append ``-start`` or ``-end`` to the pattern to define the start and end of the content boundary.
+
+   .. rst-section-references-end
+
+* ``.. rst-section-references-start``--line 6--defines the start of the content boundary
+* ``.. rst-section-references-end``--line 14--defines the end of the content boundary
+* An :ref:`inclusion <rst-inclusions>` will include the content between the bounaries--lines 8-12--in the topic at the location of the ``.. include::`` directive.
+
+.. important:: Everything within the content boundary is included, including images, formatting, and links. If a link cannot be resolved after it is included Sphinx will stop building and return an error.
+
+.. rst-section-references-example-end
+
+
+.. _rst-see-also:
+
+See also
+==================================================
+
+.. rst-see-also-start
+
+See also is not an :ref:`admonition <rst-admonitions>`, but it behaves like one.
+
+.. seealso::
+
+   * A `command-line AI for customer data <https://www.chuckdata.ai/>`__.
+   * :ref:`Additional resources <rst-additional-resources>` for an in-page example of when a See also block can be useful.
+
+.. caution:: **Use "See also" sparingly** and only to reference meaningful content that could not be linked to from within the topic.
+
+.. rst-see-also-end
+
+
+.. _rst-tabs:
+
+Tabs
+==================================================
+
+Use tabs selectively, such as for showing request code samples for APIs.
+
+**Do this**
+
+.. code-block:: none
+
+   .. tab-set::
+
+      .. tab-item:: cURL
+
+         The following example shows how to use cURL to send a request to the **GET /campaigns** endpoint.
+
+         .. code-block:: bash
+            :linenos:
+
+            curl --request GET \
+                   'https://tenant.amperity.com/api/campaigns \
+                   ?limit=12 \
+                   &with_total=true \
+                   &destination_data_template_id=ptg-1abcAB4C2' \
+                 --header 'amperity-tenant: tenant' \
+                 --header 'api-version: 2024-04-01' \
+                 --header 'Authorization: Bearer token'
+
+         (This example is formatted for readability in a narrow page layout.)
+
+      .. tab-item:: Python
+
+         The following example shows how to use Python to send a request to the **GET /campaigns** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
+
+         .. code-block:: python
+            :linenos:
+
+            import requests
+            import json
+            import csv
+
+            # URL for Campaigns endpoint
+            url = "https://tenant-name.amperity.com/api/campaigns"
+
+            # Required headers
+            headers = {
+              'accept': 'application/json',
+              'authorization': 'Bearer token', # add token here
+              'amperity-tenant': 'tenant-name',
+              'api-version': 'version'
+            }
+
+            # Query parameter for data template IDs
+            payload = {
+              # 'destination_data_template_id': ''
+            }
+
+            # Get the response from the Campaigns endpoint
+            response = requests.request("GET", url, headers=headers, params=payload)
+            response_json = response.json()
+
+            # Extract headers from the first data entry
+            headers = list(response_json["data"][0].keys())
+
+            # Specify the output CSV file path
+            csv_file_path = "campaigns.csv"
+
+            # Write data to a CSV file
+            with open(csv_file_path, mode='w', newline='') as file:
+              writer = csv.DictWriter(file, fieldnames=headers)
+              writer.writeheader()
+              for entry in response_json["data"]:
+                writer.writerow(entry)
+
+            print("CSV file generated successfully.")
+
+**For this**
+
+.. tab-set::
+
+   .. tab-item:: cURL
+
+      The following example shows how to use cURL to send a request to the **GET /campaigns** endpoint.
+
+      .. code-block:: bash
+         :linenos:
+
+         curl --request GET \
+                'https://tenant.amperity.com/api/campaigns \
+                ?limit=12 \
+                &with_total=true \
+                &destination_data_template_id=ptg-1abcAB4C2' \
+              --header 'amperity-tenant: tenant' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer token'
+
+      (This example is formatted for readability in a narrow page layout.)
+
+   .. tab-item:: Python
+
+      The following example shows how to use Python to send a request to the **GET /campaigns** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
+
+      .. code-block:: python
+         :linenos:
+
+         import requests
+         import json
+         import csv
+
+         # URL for Campaigns endpoint
+         url = "https://tenant-name.amperity.com/api/campaigns"
+
+         # Required headers
+         headers = {
+           'accept': 'application/json',
+           'authorization': 'Bearer token', # add token here
+           'amperity-tenant': 'tenant-name',
+           'api-version': 'version'
+         }
+
+         # Query parameter for data template IDs
+         payload = {
+           # 'destination_data_template_id': ''
+         }
+
+         # Get the response from the Campaigns endpoint
+         response = requests.request("GET", url, headers=headers, params=payload)
+         response_json = response.json()
+
+         # Extract headers from the first data entry
+         headers = list(response_json["data"][0].keys())
+
+         # Specify the output CSV file path
+         csv_file_path = "campaigns.csv"
+
+         # Write data to a CSV file
+         with open(csv_file_path, mode='w', newline='') as file:
+           writer = csv.DictWriter(file, fieldnames=headers)
+           writer.writeheader()
+           for entry in response_json["data"]:
+             writer.writerow(entry)
+
+         print("CSV file generated successfully.")
+
+
+.. _rst-tables:
 
 Tables
 ==================================================
 
-.. format-content-tables-start
+.. rst-tables-start
 
-Tables are always fun! This theme supports the following table types:
+Tables are always fun! Amperity docs use the following table types:
 
-* :ref:`CSV tables <format-content-table-csv>`
-* :ref:`Grid tables <format-content-table-grid>`
-* :ref:`List tables <format-content-table-list>`
-* :ref:`Simple tables <format-content-table-simple>`
+* :ref:`CSV tables <rst-tables-csv>`
+* :ref:`Grid tables <rst-tables-grid>`
+* :ref:`List tables <rst-tables-list>`
+* :ref:`Simple tables <rst-tables-simple>`
 
-You can see from the examples below that there are slight differences between how you can set up the tables to get various table structures. Some table types are more fun than others.
+Each table type requires very different approaches and not all of them are ideal for all table types.
 
-.. format-content-tables-end
+.. admonition:: In general:
+   :class: caution
+
+   * Use list tables as much as possible.
+   * Keep the number of columns to 4 or fewer.
+   * Use a header row.
+
+.. rst-tables-end
 
 
-.. _format-content-table-csv:
+.. _rst-tables-csv:
 
 CSV table
 --------------------------------------------------
 
-.. format-content-table-csv-start
+.. rst-tables-csv-start
 
-Tables may be built from a CSV file as long as the CSV file is available to Sphinx at build time. For example:
-
-.. code-block:: rst
-
-   .. csv-table::
-      :file: ../../misc/test.csv
-      :widths: 30, 70
-      :header-rows: 1
-
-with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath ``csv-table`` in the block. The ``:file:`` must be the path to a CSV file that is available to Sphinx at build time.
-
-.. note:: |theme| has an example of a CSV file in the ``/misc`` directory. In fact, it's the same one for the ``:file`` parameter used in this example!
-
-A CSV file is similar to:
+Use a CSV file that contains tabular information to build a table. For example, a CSV file that contains:
 
 .. code-block:: rst
 
@@ -1669,19 +3211,43 @@ A CSV file is similar to:
    12345,67890
    abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz
 
-where the first line in the CSV file is the header row.
+The ``.. csv-table::`` directive has the following attributes:
 
-.. format-content-table-csv-end
+* Use ``:file:`` to configure the path to the file. This file **must** be available to Sphinx at build time.
+* Use ``:widths:`` to configure column widths as a percentage. All widths must add up to 100%.
+* Use ``:header-rows:`` with a value of "1" to use the first row in the CSV file as the header row. Set this to "0" if there should not be a header row.
+
+**Do this**
+
+.. code-block:: none
+
+   .. csv-table::
+      :file: _static/test.csv
+      :widths: 30, 70
+      :header-rows: 1
+
+**For this**
+
+.. csv-table::
+   :file: _static/test.csv
+   :widths: 30, 70
+   :header-rows: 1
+
+.. rst-tables-csv-end
 
 
-.. _format-content-table-grid:
+.. _rst-tables-grid:
 
 Grid table
 --------------------------------------------------
 
-.. format-content-table-grid-start
+.. rst-tables-grid-start
 
-Grid tables are built by physically spacing out the table in the text file, similar to how it will appear on the page. These are easy when they are small.
+`Grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`__ |ext_link| are built by physically spacing out the table within the topic, similar to how it will appear on the page. These are easy when they are small.
+
+Amperity documentation uses a grid table in a single location: `the tables that list the allowed actions for policies <https://docs.amperity.com/reference/policies.html#allowed-actions>`__ |ext_link|.
+
+**Do this**
 
 .. code-block:: none
 
@@ -1697,7 +3263,7 @@ Grid tables are built by physically spacing out the table in the text file, simi
    | body row 4 |            | - blocks. | 
    +------------+------------+-----------+
 
-builds as:
+**For this**
 
 +------------+------------+-----------+ 
 | Header 1   | Header 2   | Header 3  | 
@@ -1711,19 +3277,26 @@ builds as:
 | body row 4 |            | - blocks. | 
 +------------+------------+-----------+
 
-.. format-content-table-grid-end
+.. rst-tables-grid-end
 
 
-.. _format-content-table-list:
+.. _rst-tables-list:
 
 List table
 --------------------------------------------------
 
-.. format-content-table-list-start
+.. rst-tables-list-start
 
-A list-table is built using the ``.. list-table::`` directive.
+A list table is built using the ``.. list-table::`` directive with the following attributes:
 
-.. code-block:: rst
+* Use ``:widths:`` to configure column widths as a percentage. All widths must add up to 100%.
+* Use ``:header-rows:`` with a value of "1" to use the first row in the list table as the header row. Set this to "0" if there should not be a header row.
+
+.. important:: The vertical alignment of a list table is important. Each row is delimited with a ``*`` character. Each column is delimited with a ``-`` character.
+
+**Do this**
+
+.. code-block:: none
 
    .. list-table::
       :widths: 30 70
@@ -1736,7 +3309,17 @@ A list-table is built using the ``.. list-table::`` directive.
       * - **item2**
         - description
 
-with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath ``list-table`` in the block. The number of rows (identified by the dashes (``-``) must equal the number of integers specified by ``:widths:``. The integers specified by ``:widths:`` specifies each column's width, from left to right in pixels *or* in percentages. When ``:widths:`` specifies percentages, the total for all column widths must equal 100. Table widths should not exceed 600 pixels, as a general rule.
+          More information about **item2**. Note the vertical alignment.
+
+          You can use
+
+          #. Lists
+          #. Images
+          #. And other formatting options
+
+          inside columns in a list table.
+
+For this
 
 .. list-table::
    :widths: 30 70
@@ -1749,17 +3332,29 @@ with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath 
    * - **item2**
      - description
 
-.. format-content-table-list-end
+       More information about **item2**. Note the vertical alignment.
+
+       You can use
+
+       #. Lists
+       #. Images
+       #. And other formatting options
+
+       inside columns in a list table.
+
+.. rst-tables-list-end
 
 
-.. _format-content-table-simple:
+.. _rst-tables-simple:
 
 Simple table
 --------------------------------------------------
 
-.. format-content-table-simple-start
+.. rst-tables-simple-start
 
 Simple tables are simple. The markup is focused mostly on the vertical layout. Like grid tables, they are easy when they are small.
+
+**Do this**
 
 .. code-block:: none
 
@@ -1774,7 +3369,7 @@ Simple tables are simple. The markup is focused mostly on the vertical layout. L
    True   True   True 
    =====  =====  ======
 
-builds as:
+**For this**
 
 =====  =====  ====== 
    Inputs     Output 
@@ -1787,96 +3382,402 @@ False  True   True
 True   True   True 
 =====  =====  ======
 
-.. format-content-table-simple-end
+.. rst-tables-simple-end
 
 
-.. _format-content-toctree:
+.. _rst-thematic-break:
 
-Toctree
+Thematic break
 ==================================================
 
-.. format-content-toctree-start
+.. rst-thematic-break-start
 
-A Sphinx project must declare all of the topics that are part of it within a directive named ``toctree``.
+Add an `<hr>` tag into a topic using four hyphen characters: ``----``.
 
-.. note:: Because |theme| doesn't build its left navigation automatically from the header structures in topics and because there's no previous/next linking, there's no reason to put a ``toctree`` on more than one page. Instead, just put the ``toctree`` on the root page for the project (default root page name is ``index.rst``), and then add to that ``toctree`` an alphabetical list of every other topic in the collection.
-
-A toctree is similar to:
+**Do this**
 
 .. code-block:: none
 
-   .. Hide the TOC from this file.
+   ----
+
+**For this**
+
+----
+
+.. rst-thematic-break-end
+
+
+.. _rst-toctrees:
+
+Toctrees
+==================================================
+
+.. TODO: Uuuugh. This section will need some work as toctrees are specific creatures. But the gist is correct and the User Guides show good patterns. Look at the grid_x topics for 2nd-level navigation toctrees.
+
+.. rst-toctrees-start
+
+All topics that appear in the left-side navigation must belong to a toctree. 
+
+Use the ``.. toctree::`` directive to define a toctree. For example:
+
+.. code-block:: none
 
    .. toctree::
       :hidden:
 
-      test
+      Formatting guide <rst>
+      Style guide <styles>
+      Set up your workstation <setup>
+      Terminology <terminology>
 
-which defines the list of files--in this case just ``test.rst``--in the documentation collection. Be sure to keep ``:hidden:`` as a property of ``toctree``.
+You can use more than one toctree. For example, the topic for "Formatting guide" could have an additional toctree that will show those pages as childred of "Formatting guide" in the left-side navigation.
 
-View the ``index.rst`` file in the ``/markup_theme`` directory to see a full and complete example of a toctree.
-
-.. format-content-toctree-end
+.. rst-toctrees-end
 
 
-.. _format-content-tokens:
+.. _rst-toctrees-orphans:
+
+Orphans
+--------------------------------------------------
+
+.. rst-toctrees-orphans-start
+
+Topics that belong to a document collection but **do not appear in the left-side navigation** are configured as orphans. This prevents a Sphinx error that occurs when a topic in the content collection is not listed in the :ref:`toctree <rst-toctrees>`.
+
+Put the ``:orphan:`` attribute at the top of the file, just below the :ref:`topic location string <rst-topic-location>`.
+
+For example:
+
+.. code-block:: none
+
+   .. https://docs.amperity.com/contributing/
+
+   :orphan:
+
+Make sure there is a row in-between the topic location string and ``:orphan:`` and two rows in-between ``:orphan:`` and any :ref:`meta tags <rst-meta-tags>`.
+
+.. rst-toctrees-orphans-end
+
+
+.. _rst-todo:
+
+TODO
+==================================================
+
+.. TODO: Keep this todo. It is an example.
+
+.. rst-todo-start
+
+A TODO is not an :ref:`admonition <rst-admonitions>`, but it behaves like one. TODO is configured for use within Amperity docs.
+
+**Do this**
+
+.. code-block:: none
+
+   .. todo: This is a TODO.
+
+.. important:: A TODO has a single colon in the syntax: ``.. todo:``.
+
+   The content in a TODO is not printed in the docs output. Use sparingly. Be clear to help ensure that another technical writer knows what to do with the TODO.
+
+.. rst-todo-end
+
+.. rst-todo-tip-start
+
+.. tip:: For an example of a TODO in this topic, look at the source code for this section.
+
+.. rst-todo-tip-end
+
+
+.. _rst-tokens:
 
 Tokens
 ==================================================
 
-.. format-content-tokens-start
+.. rst-tokens-start
 
-Tokens are defined in the file ``names.txt`` located in the ``/tokens`` directory. Each token is defined similar to:
+Amperity docs use tokens for variables, strings, and icons that have common use across docs sets:
 
-.. code-block:: rst
+* :ref:`Global tokens <rst-tokens-global>`
+* :ref:`Topic-specific tokens <rst-tokens-topic>`
 
-   .. |company_name| replace:: YourCompanyName
+.. note:: Tokens are used deliberately to solve build and maintanence problems. For example, a URL that is used in lots of places is harder to update if it changes. Icons from some libraries, such as Font Awesome, do not display inline in reStructuredText and need to be converted to raw HTML, and inline Unicode characters will parse literally.
 
-When used in a sentence, use the ``|company_name|`` token to replace the string that follows ``replace::``. For example: use ``|theme|`` to add |theme|.
-
-.. warning:: Tokens may not be used in the left-side navigation template (``nav-docs.html``).
-
-The following example tokens exist at ``/tokens/names.txt``:
-
-* ``|company_name|`` => |company_name|
-* ``|theme|`` => |theme|
-* ``|md|`` => |md|
-* ``|rst|`` => |rst|
-
-Use tokens in headers or topic titles carefully. Sphinx will build them correctly in the topic, but anchor references from the left-side navigation will not work unless the anchor reference specifies the token. For example, a token named ``|abc|`` used for a title must be specified in the left navigation as ``"url": "/path/to/file.html#abc"``. Tokens cannot be used within :ref:`inline markup <format-content-inline-markup>`.
-
-.. note:: Too many tokens can really slow builds down. Sphinx will check each file for the presence of tokens, and then check the tokens file to up each token for matching strings. The point at which tokens can slow builds down depends on a) the number of tokens and b) the number of files in each documentation collection. It should be stated that slower builds don't start to become noticeable until there are a couplefew hundred tokens and documentation collections with 60+ topics, some of which are very long reference topics. For small doc sets you may never notice any performance issues and the points at which you may notice performance issues, the benefits of using tokens and reusable strings may outweigh slower build times.
-.. format-content-tokens-end
+.. rst-tokens-end
 
 
-.. _format-content-topic-title:
+.. _rst-tokens-global:
+
+Global tokens
+--------------------------------------------------
+
+.. warning:: FontAwesome library is currently not working. TODO to either fix or replace.
+
+.. rst-tokens-global-start
+
+Global tokens are used sparingly. Examples of global tokens include:
+
+* Common URLs, such as for |ext_snappass|.
+* Inline icons for Font Awesome, such as |notification-error|, |policy|, and |checkmark-required|.
+* Unicode characters, such as |u-dollar|, |u-peso|, |u-pound|, |u-euro|, |u-rupee|, |u-yen|, and |u-won|.
+
+The source for global tokens is a text file located in the ``/shared`` directory. Each global token is defined using the ``.. raw`` directive or ``.. unicode`` directive. The variable is declared between pipe characters (``|``) as part of the directive, along with what to convert the variable to within the topic.
+
+**For URLs**
+
+.. code-block:: none
+   :caption: /shared/external_links.txt
+
+   .. |ext_snappass| raw:: html
+
+      <a href="https://snappass.amperity.com/" target="_blank">Snappass</a>
+
+**For icons**
+
+.. code-block:: none
+   :caption: /shared/names.txt
+
+   .. |notification-error| raw:: html
+
+      <i class="fa-solid fa-circle-exclamation" style="color: #e44f00;"></i>
+
+**For Unicode characters**
+
+.. code-block:: none
+   :caption: /shared/unicode.txt
+
+   .. |u-dollar| unicode:: U+00024
+   .. |u-peso| unicode:: U+020B1
+   .. |u-pound| unicode:: U+000A3
+   .. |u-euro| unicode:: U+020AC
+   .. |u-rupee| unicode:: U+020B9
+   .. |u-yen| unicode:: U+000A5
+   .. |u-won| unicode:: U+0C6D0
+
+**Use global tokens in paragraphs**
+
+**Do this**
+
+.. code-block:: none
+
+   * Common URLs, such as for |ext_snappass|.
+   * Inline icons for Font Awesome, such as |notification-error|, |policy|, and |checkmark-required|.
+   * Unicode characters, such as |u-dollar|, |u-peso|, |u-pound|, |u-euro|, |u-rupee|, |u-yen|, and |u-won|.
+
+**For this**
+
+* Common URLs, such as for |ext_snappass|.
+* Inline icons for Font Awesome, such as |notification-error|, |policy|, and |checkmark-required|.
+* Unicode characters, such as |u-dollar|, |u-peso|, |u-pound|, |u-euro|, |u-rupee|, |u-yen|, and |u-won|.
+
+.. rst-tokens-global-end
+
+
+.. _rst-tokens-topic:
+
+Topic-specific tokens
+--------------------------------------------------
+
+.. rst-tokens-topic-start
+
+Topic-specific tokens provide values to templates that build common sections across source, destination, and campaign topics. For example, at the top of the `Braze destination topic <https://docs.amperity.com/operator/destination_braze>`__ |ext_link|:
+
+.. code-block:: none
+   :caption: /amperity_operator/source/destination_braze.rst
+
+   .. |destination-name| replace:: Braze
+   .. |plugin-name| replace:: "Braze"
+   .. |credential-type| replace:: "braze"
+   .. |required-credentials| replace:: "API key"
+   .. |audience-primary-key| replace:: "email"
+   .. |what-send| replace:: email lists
+   .. |where-send| replace:: |destination-name|
+   .. |filter-the-list| replace:: "braz"
+
+These provide Braze-specific values for steps and descriptions that are common to all destinations and are documented using a shared template for the common sections.
+
+The ``.. |destination-name| replace:: Braze`` entry is also used to ensure that "Braze" is spelled correctly throughout the topic.
+
+.. rst-tokens-topic-end
+
+
+.. _rst-topic-location:
+
+Topic location
+==================================================
+
+.. rst-topic-location-start
+
+The topic location is a string added to the top of each file as a comment. All topics in the same content collection should have an identical string. For topics in the ``contributing`` collection:
+
+.. code-block:: none
+
+   .. https://docs.amperity.com/contributing/
+
+This string helps a technical writer know which collection a topic is in when they are editing multiple files across collections in the same text editor.
+
+.. rst-topic-location-end
+
+
+.. _rst-topic-titles:
 
 Topic titles
 ==================================================
 
-.. format-content-tokens-start
+.. rst-topic-titles-start
 
-A topic title header appears in the documentation like this:
+Topic titles must be configured like this:
 
-.. code-block:: rst
+.. code-block:: none
 
    ==================================================
    Topic title
    ==================================================
 
-Which will appear in the documentation like the actual topic title for this topic.
+The length of topic titles is :ref:`the same as header lengths <rst-header-markup-length>`: 50 characters.
 
-.. warning:: Do not use rubric for topic titles. When you do it looks great in the right-side navigation, but not so great in search results. Boo.
-
-.. format-content-tokens-end
+.. rst-topic-titles-end
 
 
-.. _format-content-additional-resources:
+.. _rst-topic-titles-hide-breadcrumb:
+
+Hide breadcrumb
+--------------------------------------------------
+
+.. rst-topic-titles-hide-breadcrumb-start
+
+Hiding the breadcrumb may be necessary for certain topics. Put the ``:hide_breadcrumbs: true`` attribute at the top of the file, just below the :ref:`topic location string <rst-topic-location>` and below the ``:orphan:`` attribute if present.
+
+For example:
+
+.. code-block:: none
+
+   .. https://docs.amperity.com/contributing/
+
+   :orphan:
+
+   :hide_breadcrumbs: true
+
+   .. meta::
+   .. meta::
+   .. meta::
+
+   ==================================================
+   Title
+   ==================================================
+
+.. rst-topic-titles-hide-breadcrumb-end
+
+
+.. _rst-variables:
+
+Variables
+==================================================
+
+.. rst-variables-start
+
+xxxxx
+
+.. rst-variables-end
+
+
+.. _rst-video:
+
+Video
+==================================================
+
+.. rst-video-start
+
+The following video formats can be embedded in a topic:
+
+* :ref:`URL-based videos <rst-video-url>`
+* :ref:`YouTube videos <rst-video-youtube>`
+
+.. rst-video-end
+
+.. rst-video-border-start
+
+.. note:: All videos must be wrapped in the ``.. container:: video-1`` border class. This applies standardized border to all videos.
+
+.. rst-video-border-end
+
+
+.. _rst-video-url:
+
+URL-based videos
+--------------------------------------------------
+
+.. rst-video-url-start
+
+The `sphinxcontrib-video <https://sphinxcontrib-video.readthedocs.io/>`__ |ext_link| extension enables embedding URL-based videos within topics. The ``:width:`` property should always be set to "100%". The ``.. video::`` directive only requires the full URL to a video.
+
+The following MIME types are supported: MP4, OGM, OGV, OGG, and WEBM.
+
+**Do this**
+
+.. code-block:: none
+
+   .. container:: video-1
+
+      .. video:: https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm
+         :width: 100%
+
+**For this**
+
+.. container:: video-1
+
+   .. video:: https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm
+      :width: 100%
+
+.. note:: Do not use the following directive attributes: ``:autoplay:``, ``:nocontrols:``, ``:controlslist:``, ``:height:``, ``:loop:``, ``:poster:``, ``:playsinline:``, ``:class:``, ``:align:``, ``:caption:``, or ``:figwidth:``.
+
+.. rst-video-url-end
+
+
+.. _rst-video-youtube:
+
+YouTube videos
+--------------------------------------------------
+
+.. rst-video-youtube-start
+
+The `sphinxcontrib-youtube <https://sphinxcontrib-youtube.readthedocs.io/>`__ |ext_link| extension enables embedding YouTube videos within topics. The ``:width:`` property should always be set to "100%". The ``.. youtube::`` directive requires the unique YouTube ID for the video.
+
+**Do this**
+
+.. code-block:: none
+
+   .. container:: video-1
+
+      .. youtube:: E3BBaLPYukA
+         :width: 100%
+
+**For this**
+
+.. container:: video-1
+
+   .. youtube:: E3BBaLPYukA
+      :width: 100%
+
+.. rst-video-youtube-end
+
+
+.. _rst-additional-resources:
 
 Additional resources
 ==================================================
 
-The following resources may be useful:
+.. rst-additional-resources-start
 
-* `Google Developer Documentation Style Guide <https://developers.google.com/style/>`_
+.. seealso::
 
+   * :doc:`Amperity style guide <styles>`
+   * `Sphinx <https://www.sphinx-doc.org/en/master/>`__
+   * `Docutils directives library <https://docutils.sourceforge.io/docs/ref/rst/directives.html>`__
+   * `Shibuya theme <https://shibuya.lepture.com/>`__
+   * `Lucide icon library <https://lucide.dev/icons/>`__
+   * `Octicons icon library <https://primer.style/octicons/>`__
+   * `Coolers <https://coolors.co/>`__
+   * `Radix colors <https://www.radix-ui.com/colors/custom>`__
+
+.. rst-additional-resources-end
