@@ -1,0 +1,20 @@
+:root {
+  --syntax-light-pre-bg: #dff200;
+  --syntax-light-cap-bg: #dff200;
+  --syntax-light-highlight-bg: #dff200;
+  --syntax-dark-pre-bg: #dff200;
+  --syntax-dark-cap-bg: #dff200;
+  --syntax-dark-highlight-bg: #dff200;
+}
+
+.yue .align-left{
+  clear:left;
+/*  float:left; */  /* don't float text around images */
+  margin:0 1rem 1rem
+}
+
+.yue .align-right{
+  clear:right;
+/*  float:right; */  /* don't float text around images */
+  margin:0 1rem 1rem
+}
