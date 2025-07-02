@@ -1,5 +1,9 @@
 .. https://docs.amperity.com/contributing/
 
+.. |destination-name| replace:: Amperity
+.. |duration| replace:: (in weeks)
+.. |duration-value| replace:: "2", "4", or "6"
+
 
 .. meta::
     :description lang=en:
@@ -46,7 +50,7 @@ and will appear in the docs like this:
 
    where ``admonition-name`` is one of :ref:`attention <rst-admonition-attention>`, :ref:`caution <rst-admonition-caution>`, :ref:`danger <rst-admonition-danger>`, :ref:`error <rst-admonition-error>`, :ref:`hint <rst-admonition-hint>`, :ref:`important <rst-admonition-important>`, :ref:`note <rst-admonition-note>`, :ref:`tip <rst-admonition-tip>`, :ref:`warning <rst-admonition-warning>`, or a custom string for a :ref:`custom admonition <rst-admonition-custom>`.
 
-   If more than one paragraph is needed ensure the formatting aligns with the admonition name.
+   If an admonition requires more than one paragraph align the formatting with the "a" in ``.. admonition::``.
 
 .. rst-admonitions-end
 
@@ -727,7 +731,7 @@ where "language" is one of the :ref:`code language highlight options <rst-code-l
 
 .. _rst-code-block-captions:
 
-Caption
+Captions
 --------------------------------------------------
 
 .. rst-code-block-captions-start
@@ -991,7 +995,7 @@ Code language highlights
 
 .. rst-code-language-highlights-start
 
-Amperity uses the following code language highlights for differentiation within documentation. The highlighting is for the use case within the technical content, not for matching a specific code language.
+Amperity uses the following code language highlights for differentiation within documentation. The highlighting applies to the use case within the technical content and is not always intended to match a specific code language.
 
 * :ref:`Command shells <rst-code-language-command>`
 * :ref:`Config files <rst-code-language-config>`
@@ -2018,7 +2022,7 @@ All headers must be 50 characters long. This helps identify the header structure
 
 .. _rst-icons:
 
-Icons -- TOOD
+Icons -- TODO
 ==================================================
 
 
@@ -2071,7 +2075,7 @@ Add images to the documentation using the ``.. images::`` directive.
    .. code-block:: rst
 
       .. image:: ../../amperity_base/source/_static/card-chuck-data.png
-         :width: 100 px
+         :width: 400 px
          :alt: Chuck Data
          :align: left
          :class: no-scaled-link
@@ -2079,7 +2083,7 @@ Add images to the documentation using the ``.. images::`` directive.
 **For this**
 
 .. image:: ../../amperity_base/source/_static/card-chuck-data.png
-   :width: 100 px
+   :width: 400 px
    :alt: Chuck Data
    :align: left
    :class: no-scaled-link
@@ -3521,7 +3525,7 @@ Global tokens are used sparingly. Examples of global tokens include:
 * Inline icons for Font Awesome, such as |notification-error|, |policy|, and |checkmark-required|.
 * Unicode characters, such as |u-dollar|, |u-peso|, |u-pound|, |u-euro|, |u-rupee|, |u-yen|, and |u-won|.
 
-The source for global tokens is a text file located in the ``/shared`` directory. Each global token is defined using the ``.. raw`` directive or ``.. unicode`` directive. The variable is declared between pipe characters (``|``) as part of the directive, along with what to convert the variable to within the topic.
+The source for global tokens is a text file located in the ``/shared`` directory. Each global token is defined using the ``.. raw::`` directive or ``.. unicode::`` directive. The variable is declared between pipe characters (``|``) as part of the directive, along with what to convert the variable to within the topic.
 
 **For URLs**
 
@@ -3676,7 +3680,110 @@ Variables
 
 .. rst-variables-start
 
-xxxxx
+Variables are a way to write content that applies to many topics. Variables rely on topic-specific :ref:`tokens <rst-tokens-topic>`.
+
+For example, some destinations for paid media, including Amazon Ads, Google Ads, Google Customer Match, The Trade Desk, and Yahoo DSP, have a configuration setting named **Membership duration**. Use this setting to configure the length of time after which customers are removed from an audience. Each destination has its own preference for defining this measurement and lengths vary.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Destination
+     - Variables
+   * - **Amazon Ads**
+     - Amazon Ads allows customers to be removed between *0-34,300,800 seconds*. The `Yahoo DSP <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ topic uses the following variables:
+
+       .. code-block:: none
+
+          .. |duration| replace:: (in seconds)
+          .. |duration-value| replace:: "0" - "34,300,800"
+
+   * - **Google Ads**
+
+       **Google Customer Match**
+     - Google Ads and Google Customer Match allows customers to be removed between *0-540 days*. The `Google Ads <https://docs.amperity.com/operator/destination_ads.html>`__ and Google Customer Match topics use the following variables:
+
+       .. code-block:: none
+
+          .. |duration| replace:: (in days)
+          .. |duration-value| replace:: "0" - "540"
+
+   * - **The Trade Desk**
+     - The Trade Desk allows customers to be removed between *0-180 days*. The `The Trade Desk <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ topic uses the following variables:
+
+       .. code-block:: none
+
+          .. |duration| replace:: (in days)
+          .. |duration-value| replace:: "0" - "180"
+
+   * - **Yahoo DSP**
+     - Yahoo DSP allows customers to be removed between *0-90 days*. The `Yahoo DSP <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ topic uses the following variables:
+
+       .. code-block:: none
+
+          .. |duration| replace:: (in days)
+          .. |duration-value| replace:: "0" - "90"
+
+
+The challenge is to come up with a description for **Membership duration** that can be used in *all* topics for destinations that have configure audience membership lengths.
+
+The following descriptions are located in the ``/shared/destination_settings.rst`` file. There are two paragraphs, each bracketed by :ref:`section references <rst-section-references>`.
+
+.. code-block:: none
+   :caption: /shared/destination_settings.rst
+
+   .. setting-common-membership-duration-start
+
+   The length of time |duration|, after which a customer is removed from this audience. This value may be between |duration-value|. Set this value to "0" to remove all audience members.
+
+   .. setting-common-membership-duration-end
+
+   .. setting-common-membership-duration-frequency-start
+
+   To ensure customers stay in this audience ensure the frequency at which Amperity sends the audience to |destination-name| is less than the membership duration.
+
+   .. setting-common-membership-duration-frequency-end
+
+This topic will use the following example variables to show how variables work within this topic.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Destination
+     - Variables
+   * - **Amperity**
+     - .. code-block:: none
+
+          .. |destination-name| replace:: Amperity
+          .. |duration| replace:: (in weeks)
+          .. |duration-value| replace:: "2", "4", or "6"
+
+These variables are located at the top of this file. View the source to see them.
+
+Use an :ref:`inclusion <rst-inclusions>` to include the shared descriptions into any topic that has the **Membership duration** setting.
+
+**Do this**
+
+.. code-block:: none
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-common-membership-duration-start
+      :end-before: .. setting-common-membership-duration-end
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-common-membership-duration-frequency-start
+      :end-before: .. setting-common-membership-duration-frequency-end
+
+**For this**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-membership-duration-start
+   :end-before: .. setting-common-membership-duration-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-membership-duration-frequency-start
+   :end-before: .. setting-common-membership-duration-frequency-end
 
 .. rst-variables-end
 
@@ -3690,6 +3797,7 @@ Video
 
 The following video formats can be embedded in a topic:
 
+* :ref:`Arcade videos <rst-video-arcade>`
 * :ref:`URL-based videos <rst-video-url>`
 * :ref:`YouTube videos <rst-video-youtube>`
 
@@ -3697,9 +3805,36 @@ The following video formats can be embedded in a topic:
 
 .. rst-video-border-start
 
-.. note:: All videos must be wrapped in the ``.. container:: video-1`` border class. This applies standardized border to all videos.
+.. note:: All URL-based and YouTube videos must be wrapped in the ``.. container:: video-1`` border class. This applies standardized borders to all videos.
 
 .. rst-video-border-end
+
+
+.. _rst-video-arcade:
+
+Arcade videos
+--------------------------------------------------
+
+.. rst-video-arcade-start
+
+Use the ``.. raw::`` directive to embed Arcade videos within an iframe.
+
+**Do this**
+
+.. code-block:: none
+   :caption: Arcade video with HTML embed code 
+
+   .. raw:: html
+
+       <!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(50.34722222222222% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/OUDT8aWyHWX9jV2HaQvY?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Predicted Churn V8_Arcade" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
+**For this**
+
+.. raw:: html
+
+    <!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(50.34722222222222% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/OUDT8aWyHWX9jV2HaQvY?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Predicted Churn V8_Arcade" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
+.. rst-video-arcade-end
 
 
 .. _rst-video-url:
