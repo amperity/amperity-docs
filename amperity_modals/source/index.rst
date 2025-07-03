@@ -50,6 +50,7 @@ Site Index
    destination-kibo
    destination-klaviyo
    destination-koupon-media
+   destination-linkedin-dmp
    destination-listrak
    destination-liveramp
    destination-mailchimp

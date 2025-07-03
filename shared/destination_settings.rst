@@ -1382,6 +1382,46 @@ See SFTP.
 
 
 
+**LINKEDIN DMP**
+
+Settings unique to LinkedIn DMP.
+
+**Account ID**
+
+.. setting-linkedin-dmp-account-id-start
+
+The account ID for your |destination-name| account.
+
+.. setting-linkedin-dmp-account-id-end
+
+**Identifier type**
+
+.. setting-linkedin-dmp-identifier-type-start
+
+The name of the identifier type must be one of the following: 1) **email** 2) **firstname** and **lastname**. Including any other fields will return an error. Map the output of query results and segments before sending to LinkedIn.
+
+.. setting-linkedin-dmp-identifier-type-end
+
+**Segment description**
+
+.. setting-linkedin-dmp-segment-description-start
+
+A description of the audience segment.
+
+.. setting-linkedin-dmp-segment-description-end
+
+**Segment name**
+
+.. setting-linkedin-dmp-segment-name-start
+
+The name of segment in |destination-name|.
+
+.. setting-linkedin-dmp-segment-name-end
+
+
+
+
+
 **LISTRAK**
 
 Settings unique to Listrak.
