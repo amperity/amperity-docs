@@ -349,6 +349,12 @@ Add destination
              :end-before: .. setting-common-success-file-downstream-end
 
 
+       **Split outputs**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-split-outputs-start
+             :end-before: .. setting-common-split-outputs-end
+
+
        **Use Zip64?**
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start

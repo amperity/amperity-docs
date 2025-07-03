@@ -280,3 +280,13 @@ Amperity can send CSV files to downstream workflows using any of the following d
 * |destination_google_cloud_storage|
 
 .. format-csv-destination-links-end
+
+
+.. _format-csv-destination-split-outputs-start:
+
+Split outputs
+--------------------------------------------------
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-split-outputs-start
+   :end-before: .. setting-common-split-outputs-end
