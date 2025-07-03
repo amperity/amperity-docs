@@ -409,6 +409,28 @@ Use a sandbox to configure a destination for |destination-name|. Before promotin
 
 .. setting-common-sandbox-recommendation-end
 
+
+**Split outputs**
+
+.. setting-common-split-outputs-start
+
+Split delimiter-separated output--CSV, PSV, TSV, or files with custom delimiters--into multiple files to ensure downstream file limits are not exceeded.
+
+Choose "Rows" and set "Rows limit" to a value between "50000" and "10000000". This is the maximum number of rows for split output files.
+
+Choose "Megabytes" and set "Megabytes limit" to a value between "1 MB" and "2000 MB". This is the maximum file size.
+
+Additional configuration is required for filename templates.
+
+Set the value of "Split filename template" to "{{file_number}}.csv" to apply a unique seven digit left-padded integer to the filename. For example: "0000001.csv", "0000002.csv", and "0000003.csv".
+
+Use the "Split file directory template" to name the directory into which split files are added.
+
+For example: if the value of "Split file directory template" is {{now|format:'YYYY'}}.tgz and the value of "Split filename template" is "{{file_number}}.csv" Amperity will output a gzipped tarball named "2025.tgz" with subfiles named "0000001.csv", "0000002.csv", and "0000003.csv".
+
+.. setting-common-split-outputs-end
+
+
 **Success file**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.

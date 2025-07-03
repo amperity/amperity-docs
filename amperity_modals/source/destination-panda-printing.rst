@@ -152,6 +152,12 @@ Settings
    :start-after: .. setting-common-header-start
    :end-before: .. setting-common-header-end
 
+**Split outputs**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-split-outputs-start
+   :end-before: .. setting-common-split-outputs-end
+
 **Use Zip64?**
 
 .. include:: ../../shared/destination_settings.rst
