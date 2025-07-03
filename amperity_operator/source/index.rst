@@ -252,6 +252,7 @@ Automate workflows
    destination_kibo
    destination_klaviyo
    destination_koupon_media
+   destination_linkedin_dmp
    destination_listrak
    destination_liveramp
    destination_mailchimp
