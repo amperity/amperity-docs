@@ -1,23 +1,23 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Moveable Ink
+.. |destination-name| replace:: Movable Ink
 
 
 .. meta::
     :description lang=en:
-        Use Moveable Ink to design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
+        Use Movable Ink to design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use Moveable Ink to design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
+        Use Movable Ink to design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Make profiles available to Moveable Ink
+        Make profiles available to Movable Ink
 
 ==================================================
-Real-time datasets in Moveable Ink Studio
+Real-time datasets in Movable Ink Studio
 ==================================================
 
 |destination-name| helps marketers design dynamic creative for personalized content experiences that combine business logic with access to real-time customer profiles.
@@ -26,9 +26,9 @@ Real-time datasets in Moveable Ink Studio
 
 .. TODO: No inclusions. This is shared into the Profile API reference also.
 
-Use the Profile API to make real-time customer profile data available to Moveable Ink Studio. Moveable Ink Studio helps your brand scale 1:1 content personalization by automatically transforming data into personalized content unique to each customer at the moment of engagement.
+Use the Profile API to make real-time customer profile data available to Movable Ink Studio. Movable Ink Studio helps your brand scale 1:1 content personalization by automatically transforming data into personalized content unique to each customer at the moment of engagement.
 
-Combine the Profile API with Moveable Ink Studio to design campaigns and customer interactions that access the most current customer profile details and generate personalized content at scale.
+Combine the Profile API with Movable Ink Studio to design campaigns and customer interactions that access the most current customer profile details and generate personalized content at scale.
 
 * Automatically transform data into unique composite images for each customer in real-time
 * Streamline steps in onboarding processes
@@ -64,7 +64,7 @@ Review the following details before configuring Profile API endpoints for use wi
      - **To configure Profile API endpoints in Amperity**
 
        * :ref:`Build a query <destination-moveableink-configure-profile-api-query>`
-       * :ref:`Add an API key for Moveable Ink <destination-moveableink-configure-profile-api-key>`
+       * :ref:`Add an API key for Movable Ink <destination-moveableink-configure-profile-api-key>`
        * :ref:`Generate an access token <destination-moveableink-configure-profile-api-token>`
        * :ref:`Add the Profile API index <destination-moveableink-configure-profile-api-index>`
        * :ref:`Copy the lookup key <destination-moveableink-configure-profile-api-lookup-key>`
@@ -82,7 +82,7 @@ Review the following details before configuring Profile API endpoints for use wi
 
        A user with access to |destination-name| and who is assigned to the **Manager** role is required to configure the Amperity integration with |destination-name|.
 
-       :ref:`Log in to Moveable Ink and finish the steps <destination-moveableink-configure>` that are required for this integration.
+       :ref:`Log in to Movable Ink and finish the steps <destination-moveableink-configure>` that are required for this integration.
 
 .. destination-moveableink-get-details-table-end
 
@@ -177,14 +177,14 @@ Copy the tenant ID
 
 .. _destination-moveableink-configure:
 
-Configure Moveable Ink Studio
+Configure Movable Ink Studio
 ==================================================
 
 .. destination-moveableink-configure-start
 
-After Amperity is configured with a query that makes results available from a Profile API endpoint you can configure Moveable Ink to connect to that endpoint. The user who configures the integration must be assigned to the **Manager** role in Moveable Ink Studio.
+After Amperity is configured with a query that makes results available from a Profile API endpoint you can configure Movable Ink to connect to that endpoint. The user who configures the integration must be assigned to the **Manager** role in Movable Ink Studio.
 
-**To add the Amperity integration to Moveable Ink Studio**
+**To add the Amperity integration to Movable Ink Studio**
 
 .. list-table::
    :widths: 10 90
@@ -195,7 +195,7 @@ After Amperity is configured with a query that makes results available from a Pr
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Log in to Moveable Ink.
+     - Log in to Movable Ink.
 
        Expand **Data** and open the **Integrations Gallery**.
 
@@ -206,7 +206,7 @@ After Amperity is configured with a query that makes results available from a Pr
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - The following settings are required to configure a connection between Moveable Ink Studio and a Profile API endpoint:
+     - The following settings are required to configure a connection between Movable Ink Studio and a Profile API endpoint:
 
        **Integration name**
 
@@ -214,7 +214,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **Bearer token**
 
-       A :ref:`bearer token <destination-moveableink-configure-profile-api-token>` allows Moveable Ink Studio access to Profile API endpoints.
+       A :ref:`bearer token <destination-moveableink-configure-profile-api-token>` allows Movable Ink Studio access to Profile API endpoints.
 
        **Tenant subdomain**
 
@@ -226,7 +226,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **Index ID**
 
-       The index ID is a unique ID for each Profile API endpoint to which Moveable Ink Studio will make requests. For example: "ix-2BmokYMVR". This value can be copied from the Amperity user interface :ref:`after the Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
+       The index ID is a unique ID for each Profile API endpoint to which Movable Ink Studio will make requests. For example: "ix-2BmokYMVR". This value can be copied from the Amperity user interface :ref:`after the Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
 
        **User ID**
 
@@ -236,11 +236,11 @@ After Amperity is configured with a query that makes results available from a Pr
 
        The tenant ID is the :ref:`unique ID for your Amperity tenant <destination-moveableink-configure-profile-api-tenant>`.
 
-       When the settings are added correctly the Moveable Ink Studio user interface will display a successful connection with a 200 OK response.
+       When the settings are added correctly the Movable Ink Studio user interface will display a successful connection with a 200 OK response.
 
        .. image:: ../../images/moveable-ink-connection.png
           :width: 500 px
-          :alt: Configure Moveable Ink to connect to an Amperity Profile API endpoint.
+          :alt: Configure Movable Ink to connect to an Amperity Profile API endpoint.
           :align: left
           :class: no-scaled-link
 
@@ -250,7 +250,7 @@ After Amperity is configured with a query that makes results available from a Pr
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Click **Next** and configure how the fields in the Profile API index should be shown within Moveable Ink Studio.
+     - Click **Next** and configure how the fields in the Profile API index should be shown within Movable Ink Studio.
 
        .. image:: ../../images/moveable-ink-datafields.png
           :width: 500 px
@@ -264,6 +264,6 @@ After Amperity is configured with a query that makes results available from a Pr
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Click **Save**. The integration is added to the list of active integrations and is available for use within Moveable Ink Studio.
+     - Click **Save**. The integration is added to the list of active integrations and is available for use within Movable Ink Studio.
 
 .. destination-moveableink-configure-end
