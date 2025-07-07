@@ -4186,11 +4186,11 @@ Monetate offers solutions for customer segmentation and targeting, campaign test
 .. term-mosaic-usa-end
 
 
-**Moveable Ink**
+**Movable Ink**
 
 .. term-moveable-ink-start
 
-Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. term-moveable-ink-end
 

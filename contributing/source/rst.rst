@@ -34,23 +34,23 @@ Admonitions
 
 An admonition is a way of calling attention to information in a topic.
 
-An admonition is configured like this:
+**Do this**
 
 .. code-block:: none
 
-   .. admonition-name:: Content in admonition.
+   .. admonition-name:: Name of custom admonition.
 
-      where the value for ``admonition-name`` is one of :ref:`attention <rst-admonition-attention>`, :ref:`caution <rst-admonition-caution>`, :ref:`danger <rst-admonition-danger>`, :ref:`error <rst-admonition-error>`, :ref:`hint <rst-admonition-hint>`, :ref:`important <rst-admonition-important>`, :ref:`note <rst-admonition-note>`, :ref:`tip <rst-admonition-tip>`, :ref:`warning <rst-admonition-warning>`, or a custom string that defines a :ref:`custom admonition <rst-admonition-custom>`.
+      The value for ``admonition-name`` is one of :ref:`attention <rst-admonition-attention>`, :ref:`caution <rst-admonition-caution>`, :ref:`danger <rst-admonition-danger>`, :ref:`error <rst-admonition-error>`, :ref:`hint <rst-admonition-hint>`, :ref:`important <rst-admonition-important>`, :ref:`note <rst-admonition-note>`, :ref:`tip <rst-admonition-tip>`, :ref:`warning <rst-admonition-warning>`, or a custom string that defines a :ref:`custom admonition <rst-admonition-custom>`.
 
-      If more than one paragraph is needed ensure the formatting aligns vertically to the right edge of the admonition name.
+      If more than one paragraph is needed ensure the formatting of the paragraph aligns vertically to the first character in "admonition-name".
 
-and will appear in the docs like this:
+**For this**
 
-.. admonition:: Content in admonition.
+.. admonition:: Name of custom admonition.
 
-   where ``admonition-name`` is one of :ref:`attention <rst-admonition-attention>`, :ref:`caution <rst-admonition-caution>`, :ref:`danger <rst-admonition-danger>`, :ref:`error <rst-admonition-error>`, :ref:`hint <rst-admonition-hint>`, :ref:`important <rst-admonition-important>`, :ref:`note <rst-admonition-note>`, :ref:`tip <rst-admonition-tip>`, :ref:`warning <rst-admonition-warning>`, or a custom string for a :ref:`custom admonition <rst-admonition-custom>`.
+   The value for ``admonition-name`` is one of :ref:`attention <rst-admonition-attention>`, :ref:`caution <rst-admonition-caution>`, :ref:`danger <rst-admonition-danger>`, :ref:`error <rst-admonition-error>`, :ref:`hint <rst-admonition-hint>`, :ref:`important <rst-admonition-important>`, :ref:`note <rst-admonition-note>`, :ref:`tip <rst-admonition-tip>`, :ref:`warning <rst-admonition-warning>`, or a custom string for a :ref:`custom admonition <rst-admonition-custom>`.
 
-   If an admonition requires more than one paragraph align the formatting with the "a" in ``.. admonition::``.
+   If more than one paragraph is needed ensure the formatting of the paragraph aligns vertically to the first character in "admonition-name".
 
 .. rst-admonitions-end
 
@@ -356,44 +356,6 @@ Update the values for ``:author:`` and ``:read-time`` to be specific to the topi
 .. rst-article-info-end
 
 
-.. _rst-badges:
-
-Badges
-==================================================
-
-.. TODO: For now this is the full list. We might want to pare this down.
-
-.. rst-badges-start
-
-Badges make available a colored block of text that can be used inline within paragraphs, lists, and tables. Badges do not replace admonitions. Instead use badges as a way to draw the reader's eye to information.
-
-The syntax for a badge is
-
-.. code-block:: none
-
-   :bdg-info:`string`
-
-where "string" is a user-defined string. This string may be one of "Required", "Recommended", "Info", "Warning", "Caution", "Custom" (a custom string), "Alt-custom" (an optional badge that uses a custom string), or "Inline highlight".
-
-* :bdg-info:`Required` Use this badge only for Amperity-specific requirements.
-
-* :bdg-success:`Recommended` Use this badge only for Amperity-specific recommendations.
-
-* :bdg-light:`Info` Use sparingly, and not as a replacement for an admonition.
-
-* :bdg-warning:`Warning` Use sparingly, and not as a replacement for an admonition.
-
-* :bdg-danger:`Caution` Use sparingly, and not as a replacement for an admonition.
-
-* :bdg-secondary:`Custom` Use sparingly.
-
-* :bdg-dark:`Alt-custom` Use sparingly.
-
-* :bdg-muted:`Inline highlight` Use in certain spots where bold or italics isn't enough to call attention to an important phrase.
-
-.. rst-badges-end
-
-
 .. _rst-buttons:
 
 Buttons
@@ -411,19 +373,19 @@ Buttons are like badges, but are bigger and link to somewhere.
 
 .. button-link:: https://docs.amperity.com
 
-    Button text
+   Button text
 
 .. button-link:: https://docs.amperity.com
-    :color: primary
-    :shadow:
+   :color: primary
+   :shadow:
 
 .. button-link:: https://docs.amperity.com
-    :color: primary
-    :outline:
+   :color: primary
+   :outline:
 
 .. button-link:: https://docs.amperity.com
-    :color: secondary
-    :expand:
+   :color: secondary
+   :expand:
 
 .. rst-buttons-end
 
@@ -522,7 +484,7 @@ Use the following card types:
 * :ref:`Clickable cards <rst-cards-clickable>`
 * :ref:`Standalone card <rst-cards-standalone>`
 
-.. note:: Cards are also used in :ref:`grids <rst-grids>`.
+.. note:: Cards are used in :ref:`grids <rst-grids>`.
 
 .. rst-cards-end
 
@@ -709,10 +671,10 @@ The ``.. code-block::`` directive is defined by Sphinx:
 .. code-block:: none
 
    .. code-block:: language
-      :linenos:
-      :emphasize-lines: 2,10-15
       :caption: sphinx.ext.todo
       :class: dark-code
+      :emphasize-lines: 2,10-15
+      :linenos:
 
       extensions = [
         "sphinx.ext.todo",
@@ -744,6 +706,7 @@ A caption is the title for a code block. Use the ``:caption:`` attribute to appl
 
    .. code-block:: python
       :caption: campaigns.py
+      :linenos:
 
       import requests
       import json
@@ -788,6 +751,7 @@ A caption is the title for a code block. Use the ``:caption:`` attribute to appl
 
 .. code-block:: python
    :caption: campaigns.py
+   :linenos:
 
    import requests
    import json
@@ -912,6 +876,7 @@ Emphasize specific lines within a code block using the ``:emphasize-lines:`` att
 
 .. code-block:: django
    :emphasize-lines: 1, 3, 5-7, 25
+   :linenos:
 
    {% extends "!nav-docs.html" %}
    {% set some_jinja = "12345" %}
@@ -1701,9 +1666,8 @@ Code blocks can be configured to have a sidebar on the right side. In general do
    The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
 
 .. code-block:: none
-   :caption: Chuck Data
+   :caption: Welcome to Chuck Data
 
-                                                             
                                .:::::::::                    
                              -----------=++                  
                            -***::::--::----:*#=              
@@ -1734,13 +1698,13 @@ Code blocks can be configured to have a sidebar on the right side. In general do
     #-::::::*#=   :        -%%%%%%%%%                        
     :------          ......:-------  .........               
 
-      ________  ___  ___  ___  ___  ________  ___  __ 
-     |\   ____\|\  \|\  \|\  \|\  \|\   ____\|\  \|\  \      
-     \ \  \___|\ \  \\\  \ \  \\\  \ \  \___|\ \  \/  /|_    
+      ________  ___  ___  ___  ___  ________  ___  __
+     |\   ____\|\  \|\  \|\  \|\  \|\   ____\|\  \|\  \
+     \ \  \___|\ \  \\\  \ \  \\\  \ \  \___|\ \  \/  /|_
       \ \  \    \ \   __  \ \  \\\  \ \  \    \ \   ___  \
-       \ \  \____\ \  \ \  \ \  \\\  \ \  \____\ \  \\ \  \  
-        \ \_______\ \__\ \__\ \_______\ \_______\ \__\\ \__\ 
-         \|_______|\|__|\|__|\|_______|\|_______|\|__| \|__| 
+       \ \  \____\ \  \ \  \ \  \\\  \ \  \____\ \  \\ \  \
+        \ \_______\ \__\ \__\ \_______\ \_______\ \__\\ \__\
+         \|_______|\|__|\|__|\|_______|\|_______|\|__| \|__|
 
        ________  ________  _________  ________               
       |\   ___ \|\   __  \|\___   ___\\   __  \
@@ -1778,7 +1742,7 @@ A dropdown shows a title string and a box that expands when the reader clicks it
 
    Dropdown content
 
-.. tip:: Dropdowns should be used to present information that a reader does not need to see immediately and the title should clearly identify what information will appear.
+.. tip:: Dropdowns should be used to present information that a reader does not need to see immediately and the title should clearly identify what information appears.
 
    Dropdowns should not be used when a section title should appear in the right-side navigation.
 
@@ -1967,6 +1931,16 @@ By adding a class of ``surface``, a card would be rendered:
         documentation page.
 
 
+Grids with FontAwesome
+--------------------------------------------------
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: |u-euro| Setup guide
+      :link: setup.html
 
 
 .. _rst-header-levels:
@@ -2017,6 +1991,8 @@ Header markup length
 
 All headers must be 50 characters long. This helps identify the header structure within a file.
 
+All header strings cannot exceed the 50 character limit of the header and should be closer to 25 characters. This helps header structures be clean and organized and makes them easier to scan.
+
 .. rst-header-markup-length-end
 
 
@@ -2032,6 +2008,41 @@ Font Awesome
 .. TODO: Need to re-enable Font Awesome icons.
 
 https://docs.fontawesome.com/web/setup/host-yourself/svg-js
+
+
+The currency symbol to show for metrics and segment insights is configurable. The following currency symbols are in the dropdown list:
+
+.. list-table::
+   :widths: 50 25 25
+   :header-rows: 0
+
+   * - **Australian Dollar**
+     - AUD
+     - |u-dollar|
+   * - **Canadian Dollar**
+     - CAD
+     - |u-dollar|
+   * - **United States Dollar**
+     - USD
+     - |u-dollar|
+   * - **Mexican Peso**
+     - MXN
+     - |u-peso|
+   * - **British Pound**
+     - GBP
+     - |u-pound|
+   * - **Euro**
+     - EUR
+     - |u-euro|
+   * - **Indian Rupee**
+     - INR
+     - |u-rupee|
+   * - **Japanese Yen**
+     - JPY
+     - |u-yen|
+
+.. tip:: You may configure custom currency symbols, for example South Korean Won (KRW, |u-won|).
+
 
 
 Lucide
@@ -2130,28 +2141,28 @@ For example:
 
 .. code-block:: none
 
-   **Moveable Ink**
+   **Movable Ink**
 
    .. term-moveable-ink-start
 
-   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
    .. term-moveable-ink-end
 
-Moveable Ink is an entry in the ``terms.rst`` file. The title of the term--**Moveable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
+Movable Ink is an entry in the ``terms.rst`` file. The title of the term--**Movable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
 
-The glossary term for Moveable Ink is:
+The glossary term for Movable Ink is:
 
 .. code-block:: none
 
-   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 The section references are:
 
 #. ".. term-moveable-ink-start"
 #. ".. term-moveable-ink-end"
 
-To include the glossary term for Moveable Ink into a topic, such as into the Amperity glossary or into topics that `mention Moveable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
+To include the glossary term for Movable Ink into a topic, such as into the Amperity glossary or into topics that `mention Movable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
 
 .. code-block:: none
 
@@ -2189,7 +2200,7 @@ To include the glossary term for Moveable Ink into a topic, such as into the Amp
 
       .. _m-moveable-ink:
 
-      **Moveable Ink**
+      **Movable Ink**
          .. include:: ../../shared/terms.rst
             :start-after: .. term-moveable-ink-start
             :end-before: .. term-moveable-ink-end
@@ -2272,11 +2283,273 @@ Inline markup
 
 Paragraphs, lists, and other strings of text behave here like they do in any text editor, with line breaks before and after. Use any of these formatting options within paragraphs, lists, and tables:
 
+* :ref:`Badges <rst-inline-markup-badges>`
 * :ref:`Bold <rst-inline-markup-bold>`
 * :ref:`Code strings <rst-inline-markup-code>`
 * :ref:`Italics <rst-inline-markup-italic>`
 
 .. rst-inline-markup-end
+
+
+.. _rst-inline-markup-badges:
+
+Badges
+--------------------------------------------------
+
+.. rst-inline-markup-badges-start
+
+Badges are colored block of solid or outlined text for use inline within paragraphs, lists, and tables. Badges are not admonitions. Use badges sparingly as a way to draw the reader's eye to information. For example, to call out :bdg-light:`New`, :bdg-success:`Updated`, or :bdg-warning:`Deprecated` features or for :bdg-primary:`Required` or :bdg-muted:`Optional` configuration settings.
+
+**Do this**
+
+.. code-block:: none
+
+   :bdg-light:`New`
+
+   :bdg-success:`Updated`
+
+   :bdg-warning:`Deprecated`
+
+**For this**
+
+:bdg-light:`New`
+
+:bdg-success:`Updated`
+
+:bdg-warning:`Deprecated`
+
+.. rst-inline-markup-badges-start
+
+
+.. _rst-inline-markup-badge-types:
+
+Badge types
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-inline-markup-badges-types-start
+
+The following table shows the available badge types by color. The theme-defined badge names, such as ``:bdg-primary:`` and ``:bdg-info-line:`` are mapped to Amperity-defined accent colors. The examples use "Solid" and "Outlined" as placeholder names. The name is a writer-defined string for the badge. Keep badge names short. One or two words.
+
+.. list-table::
+   :widths: 50 275 275
+   :header-rows: 1
+
+   * - Accent color
+     - Solid badge
+     - Outlined badge
+
+   * - .. image:: _static/accent-dusk.png
+          :width: 50px
+          :alt: dusk
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-primary:`Solid`
+
+       **For this**
+
+       :bdg-primary:`Solid`
+
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-primary-line:`Outlined`
+
+       **For this**
+
+       :bdg-primary-line:`Outlined`
+
+
+   * - .. image:: _static/accent-prime-orange.png
+          :width: 50px
+          :alt: prime-orange
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-secondary:`Solid`
+
+       **For this**
+
+       :bdg-secondary:`Solid`
+
+     - 
+
+
+   * - .. image:: _static/accent-heat-map-green.png
+          :width: 50px
+          :alt: heat-map-green
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-success:`Solid`
+
+       **For this**
+
+       :bdg-success:`Solid`
+
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-success-line:`Outlined`
+
+       **For this**
+
+       :bdg-success-line:`Outlined`
+
+
+   * - .. image:: _static/accent-lagoon.png
+          :width: 50px
+          :alt: lagoon
+          :align: center
+          :class: no-scaled-link
+
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-info:`Solid`
+
+       **For this**
+
+       :bdg-info:`Solid`
+
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-info-line:`Outlined`
+
+       **For this**
+
+       :bdg-info-line:`Outlined`
+
+
+   * - .. image:: _static/accent-deep-pink.png
+          :width: 50px
+          :alt: deep-pink
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-danger:`Solid`
+
+       **For this**
+
+       :bdg-danger:`Solid`
+
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-danger-line:`Outlined`
+
+       **For this**
+
+       :bdg-danger-line:`Outlined`
+
+
+   * - .. image:: _static/accent-deep-red.png
+          :width: 50px
+          :alt: deep-red
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-warning:`Solid`
+
+       **For this**
+
+       :bdg-warning:`Solid`
+
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-warning-line:`Outlined`
+
+       **For this**
+
+       :bdg-warning-line:`Outlined`
+
+
+   * - .. image:: _static/accent-pebble.png
+          :width: 50px
+          :alt: pebble
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-dark:`Solid`
+
+       **For this**
+
+       :bdg-dark:`Solid`
+
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-dark-line:`Outlined`
+
+       **For this**
+
+       :bdg-dark-line:`Outlined`
+
+
+   * - .. image:: _static/accent-butternut.png
+          :width: 50px
+          :alt: butternut
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-light:`Solid`
+
+       **For this**
+
+       :bdg-light:`Solid`
+
+     - 
+
+
+   * - .. image:: _static/accent-cloud.png
+          :width: 50px
+          :alt: cloud
+          :align: center
+          :class: no-scaled-link
+     - **Do this**
+
+       .. code-block:: none
+
+          :bdg-muted:`Solid`
+
+       **For this**
+
+       :bdg-muted:`Solid`
+
+     - 
+
+.. rst-inline-markup-badges-types-end
+
 
 
 .. _rst-inline-markup-bold:
@@ -2340,12 +2613,57 @@ Links
 
 Use the following types of links within documentation.
 
+* :ref:`Badges as links <rst-links-badges>`
 * :ref:`Cross-site links <rst-links-cross-site>`
 * :ref:`External links <rst-links-external>`
 * :ref:`Links to topic headings within the same collection <rst-links-reference>`
 * :ref:`Links to topics within the same collection <rst-links-topic>`
 
 .. rst-links-end
+
+
+.. _rst-links-badges:
+
+Badges as links
+--------------------------------------------------
+
+.. rst-links-badges-start
+
+A badge, in certain situtions, may be used in place of a :ref:`cross-site <rst-links-cross-site>` or :ref:`external <rst-links-external>` link.
+
+**Do this**
+
+.. code-block:: none
+
+   :bdg-link-primary:`https://docs.amperity.com`
+
+   :bdg-link-primary-line:`https://docs.amperity.com`
+
+**For this**
+
+:bdg-link-primary:`https://docs.amperity.com`
+
+:bdg-link-primary-line:`https://docs.amperity.com`
+
+
+.. tip:: Review the list of :ref:`badge types <rst-inline-markup-badge-types>`. The difference between using a badge inline versus a link is:
+
+   **This**
+
+   .. code-block:: none
+
+      :bdg-primary:`https://docs.amperity.com`
+
+      :bdg-link-primary-line:`https://docs.amperity.com`
+
+
+   **For this**
+
+   :bdg-primary:`https://docs.amperity.com`
+
+   :bdg-link-primary-line:`https://docs.amperity.com`
+
+.. rst-links-badges-end
 
 
 .. _rst-links-cross-site:
@@ -2623,41 +2941,43 @@ An ordered list has each list item preceded by ``#.`` followed by a space.
 
 .. code-block:: none
 
-   #. one
-   #. two
-   #. three
+   #. One
+   #. Two
+   #. Three
 
 **For this**
 
-#. one
-#. two
-#. three
+#. One
+#. Two
+#. Three
 
-.. tip:: You can create ordered lists that start with specific numbers, like this:
+.. tip:: You can create ordered lists that start with specific numbers.
+
+   **Do this**
 
    .. code-block:: rst
 
-      2. two
-      3. three
-      4. four
+      2. Two
+      3. Three
+      4. Four
 
-   which will appear in the documentation like this:
+   **For this**
 
-   2. two
-   3. three
-   4. four
+   2. Two
+   3. Three
+   4. Four
 
-   A list that does not start at 1 must specify sequential numbers with the list, but can be spread across paragraphs like this:
+   A list that does not start at 1 must specify sequential numbers with the list, but can be spread across paragraphs. For example:
 
-   2. two
-   3. three
-   4. four
+   2. Two
+   3. Three
+   4. Four
 
    some more text.
 
-   5. five
-   6. six
-   7. seven
+   5. Five
+   6. Six
+   7. Seven
 
 .. rst-list-ordered-end
 
@@ -2671,7 +2991,9 @@ Tables as lists
 
 See :ref:`list tables <rst-tables-list>`.
 
-A table list uses a table without a header row, and then only two columns, one for an image, and the other for the text for the step. For example:
+A table list uses a table without a header row, and then only two columns, one for an image, and the other for the text for the step.
+
+**Do this**
 
 .. code-block:: rst
 
@@ -2682,23 +3004,43 @@ A table list uses a table without a header row, and then only two columns, one f
       * - .. image:: ../../images/steps-01.png
              :width: 60 px
              :alt: Step one.
-             :align: left
+             :align: center
              :class: no-scaled-link
-        - description
+        - An intro for a series of steps.
+
+          #. Step one.
+          #. Step two.
+          #. Step three.
+          #. Click **Resolve** to retry.
       * - .. image:: ../../images/steps-02.png
              :width: 60 px
              :alt: Step two.
-             :align: left
+             :align: center
              :class: no-scaled-link
-        - description
+        - An intro for a different series of steps. Lorem ipsum dolor set atemit.
+
+          #. Step one.
+          #. Step two.
+          #. Step three.
+          #. Click **Save**.
       * - .. image:: ../../images/steps-03.png
              :width: 60 px
              :alt: Step two.
-             :align: left
+             :align: center
              :class: no-scaled-link
-        - description
+        - Troubleshoot random authorization error!
 
-Which will appear in the documentation like this:
+          #. Do this.
+          #. Do that.
+          #. Check out this diagram:
+
+             .. image:: ../../images/modal-file-uploads.png
+                :width: 320 px
+                :alt: Step six.
+                :align: left
+                :class: no-scaled-link
+
+**For this**
 
 .. list-table::
    :widths: 80 520
@@ -2707,7 +3049,7 @@ Which will appear in the documentation like this:
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - An intro for a series of steps.
 
@@ -2719,7 +3061,7 @@ Which will appear in the documentation like this:
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - An intro for a different series of steps. Lorem ipsum dolor set atemit.
 
@@ -2731,45 +3073,9 @@ Which will appear in the documentation like this:
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
-          :class: no-scaled-link
-     - An intro for another different series of steps.
-
-       #. Step one.
-       #. Step two.
-       #. Step three.
-       #. Click **Save**.
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Troubleshoot random authorization error!
-
-       #. Step one.
-       #. Step two.
-       #. Step three.
-       #. Click **Activate**.
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step five.
-          :align: left
-          :class: no-scaled-link
-     - Five steps is probably starting to get a little long ...
-
-       #. Step one.
-       #. Step two.
-       #. Step three.
-       #. Click **Save**.
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step six.
-          :align: left
-          :class: no-scaled-link
-     - A sixth step is here for the infrequent use case that needs a sixth step.
 
        #. Do this.
        #. Do that.
@@ -2780,15 +3086,6 @@ Which will appear in the documentation like this:
              :alt: Step six.
              :align: left
              :class: no-scaled-link
-
-       #. Click **Save**.
-
-   * - .. image:: ../../images/steps-07.png
-          :width: 60 px
-          :alt: Step seven.
-          :align: left
-          :class: no-scaled-link
-     - You should try not to build a table list with seven steps. But in rare cases, this is far as you're allowed to go.
 
 .. rst-list-table-end
 
@@ -2881,6 +3178,219 @@ For example:
 .. rst-meta-tags-end
 
 
+.. _rst-navigation:
+
+Navigation
+==================================================
+
+.. rst-navigation-start
+
+The Amperity docs site has the following navigation areas that help readers discover content:
+
+* :ref:`Left-side <rst-navigation-left>`
+* :ref:`Right-side <rst-navigation-right>`
+* :ref:`Search <rst-navigation-search>`
+* :ref:`Top <rst-navigation-top>`
+
+.. rst-navigation-end
+
+
+.. _rst-navigation-left:
+
+Left-side -- TODO
+--------------------------------------------------
+
+.. rst-navigation-left-start
+
+.. TODO: Need to figure out how to show this within the contributing guide. The Style Guide might work with broken out standalone topics? Some of them will be really short though. Maybe groupings.
+
+The left-side navigation shows the table of contents for the entire topic collection.
+
+This structure is built from a series of :ref:`toctree <rst-toctrees>` elements located within the current content collection.
+
+.. rst-navigation-left-end
+
+
+.. _rst-navigation-right:
+
+Right-side
+--------------------------------------------------
+
+.. rst-navigation-right-start
+
+The right-side navigation shows the table of contents for the current page. This structure is built automatically using the :ref:`header structure <rst-navigation>` within the topic.
+
+In smaller screen sizes the right-side menu collapses and can be accessed from a hamburger icon that appears in the breadcrumb.
+
+.. rst-navigation-right-end
+
+
+.. _rst-navigation-search:
+
+Search
+--------------------------------------------------
+
+.. TODO: Update this for Kapa.ai when it's available.
+
+.. rst-navigation-search-start
+
+The search menu is located in the navigation bar. It can be accessed by clicking the search box *or* by hitting the forward slash key--``/``--on your keyboard.
+
+.. rst-navigation-search-end
+
+
+.. _rst-navigation-top:
+
+Top
+--------------------------------------------------
+
+.. rst-navigation-top-start
+
+The top navigation contains the following clickable elements, from left to right:
+
+* A site logo that links to the root of the docs site.
+* Menus for Guides, APIs, Connections, and Reference.
+* A search box.
+* A link to the `Amperity docs repository on GitHub.com <https://github.com/amperity/amperity-docs>`__ |ext_link|.
+* A link to the `Amperity corpsite <https://www.amperity.com>`__ |ext_link|.
+* A toggle that switches colors to dark, light, or system mode.
+
+In smaller screen sizes the top navigation collapses to show only the site logo, the toggle for switching color modes, and a hamburger icon that opens the menus.
+
+.. rst-navigation-top-end
+
+
+.. _rst-navigation-top-nav-links:
+
+Menu navigation links
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-navigation-top-nav-links-start
+
+The navigation links in the top menus are :doc:`managed from the conf.py file <configuration>` in each docs directory.
+
+.. important:: If the navigation links are updated those updates **MUST** be made in all of the documentation directories: ``amperity_api``, ``amperity_base``, ``amperity_operator``, ``amperity_reference``, ``amperity_user``, and ``contributing``.
+
+.. code-block:: salt
+   :caption: /contributing/source/conf.py
+
+   "nav_links": [
+     {
+       "title": "Guides",
+       "children": [
+         {
+           "title": "Users",
+           "url": "../user/index",
+           "summary": "Audiences, campaigns, journeys, activations."
+         },
+         {
+           "title": "Operators",
+           "url": "../operator/index",
+           "summary": "Configuration, SQL queries, analytics, databases."
+         },
+       ]
+     },
+     {
+       "title": "APIs",
+       "children": [
+         {
+           "title": "Amperity API",
+           "url": "../api/overview",
+           "summary": "Programmatic access to your Amperity tenant."
+         },
+         {
+           "title": "Profile API",
+           "url": "../operator/api_profile",
+           "summary": "Endpoints for unified customer profiles."
+         },
+         {
+           "title": "Streaming API",
+           "url": "../operator/api_streaming",
+           "summary": "Stream from external systems in real-time."
+         },
+       ]
+     },
+     {
+       "title": "Connections",
+       "children": [
+         {
+           "title": "Bridge",
+           "url": "../operator/grid_bridge",
+           "summary": "Share data directly with data warehouses."
+         },
+         {
+           "title": "Campaigns",
+           "url": "../operator/grid_campaigns",
+           "summary": "Send audiences to marketing workflows."
+         },
+         {
+           "title": "Destinations",
+           "url": "../operator/grid_destinations",
+           "summary": "Send data to any downstream system."
+         },
+         {
+           "title": "Offline events",
+           "url": "../operator/grid_events",
+           "summary": "Measure marketing efforts across channels."
+         },
+         {
+           "title": "Sources",
+           "url": "../operator/grid_sources",
+           "summary": "Pull data from any upstream system."
+         },
+       ]
+     },
+     {
+       "title": "Reference",
+       "url": "../reference/start_here",
+     },
+   ]
+
+Each grouping in the navigation is a set of links to a standalone topic or to a root topic in a collection. All links in the navigation links structure must take the reader to a page in Amperity technical documentation.
+
+For example, the section of the ``nav-links`` structure that builds the "Guides" navigation menu with the "Users" and "Operators" options has the following structure:
+
+.. code-block:: none
+   :caption: /contributing/source/conf.py
+
+   {
+     "title": "Guides",
+     "children": [
+       {
+         "title": "Users",
+         "url": "../user/index",
+         "summary": "Audiences, campaigns, journeys, activations."
+       },
+       {
+         "title": "Operators",
+         "url": "../operator/index",
+         "summary": "Configuration, SQL queries, analytics, databases."
+       },
+     ]
+   },
+
+The elements between the brackets--``[ ]``--define each of the child menu items. Each child menu item has three attributes:
+
+.. code-block:: none
+
+   {
+     "title": "Users",
+     "url": "../user/index",
+     "summary": "Audiences, campaigns, journeys, activations."
+   },
+
+* ``"title"`` is the string readers will see in the menu. This, ideally, is a single word or a feature name.
+* ``"url"`` is the relative path of the URL to the topic. The ``.html`` suffix is not required.
+
+  :bdg-success:`Optional` The value for URL can be a fully qualified URL, such as ``https://docs.amperity.com/contributing/rst.html``.
+
+  .. tip:: The architecture of the Amperity docs site ensures that the path to any topic from the navigation menu is *the same* for all content collections.
+
+* ``"summary"`` is a short string that appears below the title. This string must not wrap in the menu. Keep it short.
+
+.. rst-navigation-top-nav-links-end
+
+
 .. _rst-page-layouts:
 
 Page layouts
@@ -2925,6 +3435,7 @@ Use the ``redirects.html`` template to create a redirect.
 .. code-block:: salt
    :linenos:
    :caption: /contributing/_templates/redirects.html
+   :emphasize-lines: 13
 
    {#
      Redirect template.
@@ -2947,7 +3458,7 @@ Use the ``redirects.html`` template to create a redirect.
 
 #. Copy the ``/contributing/_templates/redirects.html``.
 #. Paste it into the ``_templates`` directory for the document collection in which topic to be redirected is located. Rename the file to be the name of the file to be redirected.
-#. Open ``redirects.html`` in TextMate. Update the **url** value in line 13 to be the full URL of the page to which a reader is redirected.
+#. Open the redirect file in TextMate. Update the **url** value in line 13 to be the full URL of the page to which a reader is redirected.
 #. Open the ``conf.py`` file located in the ``/sources/`` directory for the document collection in which the topic to be redirected is located. Find the **html_additional_pages** section and add the filename of the redirect to the list of additional pages.
 
    .. code-block:: python
@@ -3023,7 +3534,7 @@ See also is not an :ref:`admonition <rst-admonitions>`, but it behaves like one.
    * A `command-line AI for customer data <https://www.chuckdata.ai/>`__.
    * :ref:`Additional resources <rst-additional-resources>` for an in-page example of when a See also block can be useful.
 
-.. caution:: **Use "See also" sparingly** and only to reference meaningful content that could not be linked to from within the topic.
+.. caution:: **Use "See also" sparingly** and only to reference meaningful content that could not be linked to from within the topic. The :ref:`additional resources <rst-additional-resources>` section at the end of this topic is an example of a good "See also".
 
 .. rst-see-also-end
 
@@ -3190,7 +3701,7 @@ Tables are always fun! Amperity docs use the following table types:
 
 Each table type requires very different approaches and not all of them are ideal for all table types.
 
-.. admonition:: In general:
+.. admonition:: In general
    :class: caution
 
    * Use list tables as much as possible.
@@ -3247,7 +3758,7 @@ Grid table
 
 .. rst-tables-grid-start
 
-`Grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`__ |ext_link| are built by physically spacing out the table within the topic, similar to how it will appear on the page. These are easy when they are small.
+`Grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`__ |ext_link| are built by physically spacing out the table within the topic, similar to how it appears on the page. These are easy when they are small.
 
 Amperity documentation uses a grid table in a single location: `the tables that list the allowed actions for policies <https://docs.amperity.com/reference/policies.html#allowed-actions>`__ |ext_link|.
 
@@ -3323,7 +3834,7 @@ A list table is built using the ``.. list-table::`` directive with the following
 
           inside columns in a list table.
 
-For this
+**For this**
 
 .. list-table::
    :widths: 30 70
@@ -3425,13 +3936,14 @@ All topics that appear in the left-side navigation must belong to a toctree.
 Use the ``.. toctree::`` directive to define a toctree. For example:
 
 .. code-block:: none
+   :caption: /contributing/setup/index.rst
 
    .. toctree::
       :hidden:
 
+      Workstation setup <setup>
       Formatting guide <rst>
       Style guide <styles>
-      Set up your workstation <setup>
       Terminology <terminology>
 
 You can use more than one toctree. For example, the topic for "Formatting guide" could have an additional toctree that will show those pages as childred of "Formatting guide" in the left-side navigation.
@@ -3691,7 +4203,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
    * - Destination
      - Variables
    * - **Amazon Ads**
-     - Amazon Ads allows customers to be removed between *0-34,300,800 seconds*. The `Yahoo DSP <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ topic uses the following variables:
+     - Amazon Ads allows customers to be removed between *0-34,300,800 seconds*. The `Amazon Ads <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ topic uses the following variables:
 
        .. code-block:: none
 
@@ -3737,6 +4249,8 @@ The following descriptions are located in the ``/shared/destination_settings.rst
    The length of time |duration|, after which a customer is removed from this audience. This value may be between |duration-value|. Set this value to "0" to remove all audience members.
 
    .. setting-common-membership-duration-end
+
+
 
    .. setting-common-membership-duration-frequency-start
 
@@ -3803,12 +4317,6 @@ The following video formats can be embedded in a topic:
 
 .. rst-video-end
 
-.. rst-video-border-start
-
-.. note:: All URL-based and YouTube videos must be wrapped in the ``.. container:: video-1`` border class. This applies standardized borders to all videos.
-
-.. rst-video-border-end
-
 
 .. _rst-video-arcade:
 
@@ -3852,17 +4360,13 @@ The following MIME types are supported: MP4, OGM, OGV, OGG, and WEBM.
 
 .. code-block:: none
 
-   .. container:: video-1
-
-      .. video:: https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm
-         :width: 100%
+   .. video:: https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm
+      :width: 100%
 
 **For this**
 
-.. container:: video-1
-
-   .. video:: https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm
-      :width: 100%
+.. video:: https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm
+   :width: 100%
 
 .. note:: Do not use the following directive attributes: ``:autoplay:``, ``:nocontrols:``, ``:controlslist:``, ``:height:``, ``:loop:``, ``:poster:``, ``:playsinline:``, ``:class:``, ``:align:``, ``:caption:``, or ``:figwidth:``.
 
@@ -3882,17 +4386,13 @@ The `sphinxcontrib-youtube <https://sphinxcontrib-youtube.readthedocs.io/>`__ |e
 
 .. code-block:: none
 
-   .. container:: video-1
-
-      .. youtube:: E3BBaLPYukA
-         :width: 100%
+   .. youtube:: E3BBaLPYukA
+      :width: 100%
 
 **For this**
 
-.. container:: video-1
-
-   .. youtube:: E3BBaLPYukA
-      :width: 100%
+.. youtube:: E3BBaLPYukA
+   :width: 100%
 
 .. rst-video-youtube-end
 
