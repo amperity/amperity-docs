@@ -1124,7 +1124,7 @@ The following sections describe some ways to use the Profile API:
 * :ref:`Braze Connected Content <profile-api-usecase-braze>`
 * :ref:`Hashed email profiles <profile-api-usecase-hashed-email-address-profiles>`
 * :ref:`Loyalty profiles <profile-api-usecase-loyalty-profiles>`
-* :ref:`Moveable Ink Studio <profile-api-usecase-moveable-ink-studio>`
+* :ref:`Movable Ink Studio <profile-api-usecase-moveable-ink-studio>`
 * :ref:`Server-side JavaScript in Salesforce Marketing Cloud <profile-api-usecase-ssjs-ssmc>`
 * :ref:`Wireless access points <profile-api-usecase-hashed-email-address-profiles-wireless>`
 
@@ -1464,7 +1464,7 @@ This message could be extended to include promos or offers or any type of additi
 
 .. _profile-api-usecase-moveable-ink-studio:
 
-Moveable Ink Studio
+Movable Ink Studio
 --------------------------------------------------
 
 .. include:: ../../amperity_operator/source/destination_moveableink.rst
