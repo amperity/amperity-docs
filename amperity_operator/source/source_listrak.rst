@@ -103,7 +103,7 @@ Get details
 
 #. The Email list name **and/or** SMS list name. (This depends on which REST APIs are configured.)
 
-#. Additional customer profile fields can be pulled to Amperity using the :ref:`Additional fields <source-listrak-get-details-additional-fields>` setting.
+#. Pull additional customer profile fields to Amperity using the :ref:`Additional fields <source-listrak-get-details-additional-fields>` setting.
 
 .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
 
@@ -117,7 +117,7 @@ Additional fields
 
 .. source-listrak-get-details-additional-fields-start
 
-Additional customer profile fields can be pulled to Amperity using the **Additional fields** setting.
+Pull additional customer profile fields to Amperity using the **Additional fields** setting.
 
 #. Get a list of segmentation field IDs, also referred to as `custom profile fields <https://help.listrak.com/en/articles/10507490-profile-fields-in-the-nextgen-platform>`__ |ext_link|, from the |source-name| user interface.
 
