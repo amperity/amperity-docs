@@ -123,7 +123,7 @@ Pull additional customer profile fields to Amperity using the **Additional field
 
    For example, `create a custom profile group with custom profile fields <https://help.listrak.com/en/articles/2647683-creating-email-profile-fields>`__ |ext_link|. Make a list of the unique IDs for the custom profile fields. These values are the segmentation field IDs.
 
-   Custom profile fields can be accessed programmatically using the `SegmentationFieldGroup <https://api.listrak.com/email#operation/SegmentationFieldGroup_GetSegmentationFieldGroupResource>`__ |ext_link| and `SegmentationField <https://api.listrak.com/email#operation/SegmentationField_GetSegmentationFieldResource>`__ |ext_link| endpoints in the Listrak API.
+   Access custom profile fields programmatically using the `SegmentationFieldGroup <https://api.listrak.com/email#operation/SegmentationFieldGroup_GetSegmentationFieldGroupResource>`__ |ext_link| and `SegmentationField <https://api.listrak.com/email#operation/SegmentationField_GetSegmentationFieldResource>`__ |ext_link| endpoints in the Listrak API.
 
    .. note:: The segmentation field ID is the unique value assigned to ``segmentationFieldID`` properties in |source-name|. A collection of segmentation field IDs are created for profile groups in the |source-name| user interface.
 
