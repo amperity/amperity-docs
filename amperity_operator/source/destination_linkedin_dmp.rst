@@ -228,7 +228,7 @@ Add destination
           :start-after: .. destinations-steps-add-destinations-start
           :end-before: .. destinations-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
+       .. image:: ../../images/mockup-destinations-add-01-select-destination-linkedin-dmp.png
           :width: 380 px
           :alt: Add 
           :align: left
