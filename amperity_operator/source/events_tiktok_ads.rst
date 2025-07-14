@@ -25,7 +25,7 @@
         Send offline events to TikTok Ads
 
 ==================================================
-Send offline events to TikTok Ads
+Configure offline events for TikTok Ads
 ==================================================
 
 .. events-tiktok-ads-start

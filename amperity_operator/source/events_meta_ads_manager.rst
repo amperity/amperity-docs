@@ -25,7 +25,7 @@
         Send offline events to Meta Ads Manager
 
 ==================================================
-Send offline events to Meta Ads Manager
+Configure offline events for Meta Ads Manager
 ==================================================
 
 .. TODO: Sync this with the updated events topics.
