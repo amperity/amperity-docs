@@ -23,9 +23,9 @@
     :content class=swiftype name=title data-type=string:
         Send offline events to Google Enhanced Conversions
 
-==================================================
-Send offline events to Google Enhanced Conversions
-==================================================
+========================================================
+Configure offline events for Google Enhanced Conversions
+========================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-google-enhanced-conversions-start

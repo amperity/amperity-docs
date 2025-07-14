@@ -27,7 +27,7 @@
         Send offline events to The Trade Desk
 
 ==================================================
-Send offline events to The Trade Desk
+Configure offline events for The Trade Desk
 ==================================================
 
 .. include:: ../../shared/terms.rst

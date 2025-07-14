@@ -20,7 +20,7 @@
         Send offline events to Criteo
 
 ==================================================
-Send offline events to Criteo
+Configure offline events for Criteo
 ==================================================
 
 .. include:: ../../shared/terms.rst
