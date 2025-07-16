@@ -8,6 +8,7 @@
 .. |where-send| replace:: |destination-name|
 .. |required-credentials| replace:: "Customer ID"
 .. |credential-type| replace:: "google-ads"
+.. |filter-the-list| replace:: "google"
 
 
 .. meta::
