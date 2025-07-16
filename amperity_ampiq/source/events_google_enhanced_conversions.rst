@@ -5,6 +5,7 @@
 .. |what-send| replace:: first-party customer data that is associated with transactions
 .. |what-enablex| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires first-party data that is associated with transactions.
+.. |where-send| replace:: |destination-name|
 
 
 .. meta::
