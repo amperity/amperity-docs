@@ -7,6 +7,7 @@
 .. |attributes-sent| replace:: |destination-name| requires first-party data that is associated with transactions.
 .. |where-send| replace:: |destination-name|
 .. |required-credentials| replace:: "Customer ID"
+.. |credential-type| replace:: "google-ads"
 
 
 .. meta::
