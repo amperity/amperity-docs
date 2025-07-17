@@ -393,8 +393,6 @@ This process may be used to invalidate outstanding tokens issued without expiry 
 
 .. note:: If you rotate your tokens too quickly you may run into issues where previously-issued access tokens are not deposed for a long enough time, which prevents newly-issued tokens from being distributed.
 
-API tokens can be rotated directly from Amperity.
-
 .. api-keys-api-token-rotate-end
 
 **To rotate API keys**
@@ -419,13 +417,9 @@ API tokens can be rotated directly from Amperity.
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Under **API keys** find the index, and then from the **Actions** menu select "Rotate API token".
+     - Under **API keys** find the index, and then from the **Actions** menu select "Generate token".
 
-       .. image:: ../../images/api-keys-rotate-api-token.png
-          :width: 500 px
-          :alt: Rotate an API token.
-          :align: left
-          :class: no-scaled-link
+       Set the token expiration length. Enable the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously-provisioned tokens that are associated with the current API key to expire in 30 days.
 
 .. api-keys-api-token-rotate-steps-end
 
