@@ -358,7 +358,7 @@ Update the values for ``:author:`` and ``:read-time`` to be specific to the topi
 
 .. _rst-buttons:
 
-Buttons
+Buttons -- TODO
 ==================================================
 
 .. rst-buttons-start
@@ -386,6 +386,14 @@ Buttons are like badges, but are bigger and link to somewhere.
 .. button-link:: https://docs.amperity.com
    :color: secondary
    :expand:
+
+
+.. container:: buttons
+
+   `User Guides <../user/index.html>`_
+   `Operators Guide <../operator/index.html>`_
+   `Guided Setup <start.html>`_
+
 
 .. rst-buttons-end
 
@@ -2043,6 +2051,10 @@ The currency symbol to show for metrics and segment insights is configurable. Th
 
 .. tip:: You may configure custom currency symbols, for example South Korean Won (KRW, |u-won|).
 
+|fa-github|
+
+|system-yes|
+
 
 
 Lucide
@@ -2141,28 +2153,28 @@ For example:
 
 .. code-block:: none
 
-   **Movable Ink**
+   **Moveable Ink**
 
    .. term-moveable-ink-start
 
-   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
    .. term-moveable-ink-end
 
-Movable Ink is an entry in the ``terms.rst`` file. The title of the term--**Movable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
+Moveable Ink is an entry in the ``terms.rst`` file. The title of the term--**Moveable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
 
-The glossary term for Movable Ink is:
+The glossary term for Moveable Ink is:
 
 .. code-block:: none
 
-   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 The section references are:
 
 #. ".. term-moveable-ink-start"
 #. ".. term-moveable-ink-end"
 
-To include the glossary term for Movable Ink into a topic, such as into the Amperity glossary or into topics that `mention Movable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
+To include the glossary term for Moveable Ink into a topic, such as into the Amperity glossary or into topics that `mention Moveable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
 
 .. code-block:: none
 
@@ -2200,7 +2212,7 @@ To include the glossary term for Movable Ink into a topic, such as into the Ampe
 
       .. _m-moveable-ink:
 
-      **Movable Ink**
+      **Moveable Ink**
          .. include:: ../../shared/terms.rst
             :start-after: .. term-moveable-ink-start
             :end-before: .. term-moveable-ink-end
@@ -2338,7 +2350,7 @@ The following table shows the available badge types by color. The theme-defined 
      - Solid badge
      - Outlined badge
 
-   * - .. image:: _static/accent-dusk.png
+   * - .. image:: _static/accents/accent-dusk.png
           :width: 50px
           :alt: dusk
           :align: center
@@ -2364,7 +2376,7 @@ The following table shows the available badge types by color. The theme-defined 
        :bdg-primary-line:`Outlined`
 
 
-   * - .. image:: _static/accent-prime-orange.png
+   * - .. image:: _static/accents/accent-prime-orange.png
           :width: 50px
           :alt: prime-orange
           :align: center
@@ -2382,7 +2394,7 @@ The following table shows the available badge types by color. The theme-defined 
      - 
 
 
-   * - .. image:: _static/accent-heat-map-green.png
+   * - .. image:: _static/accents/accent-heat-map-green.png
           :width: 50px
           :alt: heat-map-green
           :align: center
@@ -2408,7 +2420,7 @@ The following table shows the available badge types by color. The theme-defined 
        :bdg-success-line:`Outlined`
 
 
-   * - .. image:: _static/accent-lagoon.png
+   * - .. image:: _static/accents/accent-lagoon.png
           :width: 50px
           :alt: lagoon
           :align: center
@@ -2435,7 +2447,7 @@ The following table shows the available badge types by color. The theme-defined 
        :bdg-info-line:`Outlined`
 
 
-   * - .. image:: _static/accent-deep-pink.png
+   * - .. image:: _static/accents/accent-deep-pink.png
           :width: 50px
           :alt: deep-pink
           :align: center
@@ -2461,7 +2473,7 @@ The following table shows the available badge types by color. The theme-defined 
        :bdg-danger-line:`Outlined`
 
 
-   * - .. image:: _static/accent-deep-red.png
+   * - .. image:: _static/accents/accent-deep-red.png
           :width: 50px
           :alt: deep-red
           :align: center
@@ -2487,7 +2499,7 @@ The following table shows the available badge types by color. The theme-defined 
        :bdg-warning-line:`Outlined`
 
 
-   * - .. image:: _static/accent-pebble.png
+   * - .. image:: _static/accents/accent-pebble.png
           :width: 50px
           :alt: pebble
           :align: center
@@ -2513,7 +2525,7 @@ The following table shows the available badge types by color. The theme-defined 
        :bdg-dark-line:`Outlined`
 
 
-   * - .. image:: _static/accent-butternut.png
+   * - .. image:: _static/accents/accent-butternut.png
           :width: 50px
           :alt: butternut
           :align: center
@@ -2531,7 +2543,7 @@ The following table shows the available badge types by color. The theme-defined 
      - 
 
 
-   * - .. image:: _static/accent-cloud.png
+   * - .. image:: _static/accents/accent-cloud.png
           :width: 50px
           :alt: cloud
           :align: center
@@ -3267,7 +3279,7 @@ Menu navigation links
 
 .. rst-navigation-top-nav-links-start
 
-The navigation links in the top menus are managed from the conf.py file in each docs directory.
+The navigation links in the top menus are :doc:`managed from the conf.py file <configuration>` in each docs directory.
 
 .. important:: If the navigation links are updated those updates **MUST** be made in all of the documentation directories: ``amperity_api``, ``amperity_base``, ``amperity_operator``, ``amperity_reference``, ``amperity_user``, and ``contributing``.
 
