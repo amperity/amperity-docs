@@ -10,17 +10,17 @@
 
 .. |fa-drag| raw:: html
 
-   &nbsp;<i class="fa-solid fa-grip-dots-vertical" style="color: #0c0c0c;"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-grip-dots-vertical"></i>&nbsp;
 
 
 .. |fa-kebab| raw:: html
 
-   &nbsp;<i class="fa-solid fa-ellipsis-vertical" style="color: #0c0c0c;"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;
 
 
 .. |fa-help-circle| raw:: html
 
-   &nbsp;<i class="fa-solid fa-circle-question" style="color: #0c0c0c;"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-circle-question"></i>&nbsp;
 
 
 .. |fa-index-separator| unicode:: U+25CF
@@ -33,76 +33,76 @@
 
 .. |bars| raw:: html
 
-   <i class="fa-solid fa-bars" style=color="#0c0c0c"></i>
+   <i class="fa-solid fa-bars"></i>
 
 
 .. |notification-running| raw:: html
 
-   &nbsp;<i class="fa-solid fa-spinner" style=color="#0c0c0c"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-spinner"></i>&nbsp;
 
 
 .. |notification-complete| raw:: html
 
-   &nbsp;<i class="fa-solid fa-check" style=color="#007552"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-check"></i>&nbsp;
 
 
 .. |notification-alert| raw:: html
 
-   <i class="fa-solid fa-triangle-exclamation" style="color: #ffd636;"></i>
+   <i class="fa-solid fa-triangle-exclamation"></i>
 
 
 .. |notification-error| raw:: html
 
-   <i class="fa-solid fa-circle-exclamation" style="color: #e44f00;"></i>
+   <i class="fa-solid fa-circle-exclamation"></i>
 
 
 
 
 .. |attribute-stop| raw:: html
 
-   <i class="fa-solid fa-diamond-exclamation" style="color: #e44f00;"></i>
+   <i class="fa-solid fa-diamond-exclamation"></i>
 
 
 .. |attribute-recommended| raw:: html
 
-   <i class="fa-solid fa-circle-check" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-circle-check"></i>
 
 
 .. |attribute-useful| raw:: html
 
-   <i class="fa-solid fa-circle-question" style="color: #ade5a3;"></i>
+   <i class="fa-solid fa-circle-question"></i>
 
 
 
 .. |gift| raw:: html
 
-   <i class="fa-solid fa-gift" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-gift"></i>
 
 
 .. |policy| raw:: html
 
-   <i class="fa-solid fa-circle-check" style="color: #317a1c;"></i>
+   <i class="fa-solid fa-circle-check"></i>
 
 
 .. policy table only for allowed action + read-only
 
 .. |poliro| raw:: html
 
-   <i class="fa-solid fa-book-open-reader" style="color: #5a5f66;"></i>
+   <i class="fa-solid fa-book-open-reader"></i>
 
 
 .. policy table only allowed action + blocked action
 
 .. |polino| raw:: html
 
-   <i class="fa-solid fa-ban" style="color: #af3708;"></i>
+   <i class="fa-solid fa-ban"></i>
 
 
 .. policy table for user management
 
 .. |polius| raw:: html
 
-   <i class="fa-solid fa-users" style="color: #317a1c;"></i>
+   <i class="fa-solid fa-users"></i>
 
 
 
@@ -110,121 +110,127 @@
 
 .. |poliky| raw:: html
 
-   <i class="fa-solid fa-key" style="color: #317a1c;"></i>
+   <i class="fa-solid fa-key"></i>
 
 
 .. for inline reference to allowed read-only actions
 
 .. |allowed-read-only-actions-icon| raw:: html
 
-   <i class="fa-solid fa-book-open-reader" style="color: #5a5f66;"></i>
+   <i class="fa-solid fa-book-open-reader"></i>
 
 
 .. for inline reference to blocked actions
 
 .. |blocked-actions-icon| raw:: html
 
-   <i class="fa-solid fa-ban" style="color: #af3708;"></i>
+   <i class="fa-solid fa-ban"></i>
 
 
 .. for no upload add-on policy
 
 .. |no-upload-policy| raw:: html
 
-   <i class="fa-solid fa-upload" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-upload"></i>
 
 
 .. for no download add-on policy
 
 .. |no-download-policy| raw:: html
 
-   <i class="fa-solid fa-download" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-download"></i>
 
 
 .. for inline reference to user management
 
 .. |manage-users-icon| raw:: html
 
-   <i class="fa-solid fa-users" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-users"></i>
+
+
+.. |fa-github| raw:: html
+
+   <i class="fa-brands fa-github"></i>
 
 
 .. |system-yes| raw:: html
 
-   <i class="fa-solid fa-badge-check" style="color: #317a1c;"></i>
+   <i class="fas fa-badge-check"></i>
 
 
 .. |checkmark-required| raw:: html
 
-   <i class="fa-solid fa-badge-check" style="color: #317a1c;"></i>
+   <i class="fa-solid fa-badge-check"></i>
 
 
 .. |checkmark-recommended| raw:: html
 
-   <i class="fa-solid fa-badge-check" style="color: #007552;"></i>
+   <i class="fa-solid fa-badge-check"></i>
 
 
 .. |policy-sandbox-validation-required| raw:: html
 
-   <i class="fa-regular fa-square-check" style="color: #0c0c0c;"></i>
+   <i class="fa-regular fa-square-check"></i>
 
 
 .. |policy-sandbox-allow-admin| raw:: html
 
-   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-check"></i>
 
 
 .. |policy-sandbox-limited| raw:: html
 
-   <i class="fa-solid fa-plus" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-plus"></i>
 
 
 .. |workflow-failed| raw:: html
 
-   <i class="fa-solid fa-circle-exclamation" style="color: #e44f00;"></i>
+   <i class="fa-solid fa-circle-exclamation"></i>
 
 
 .. |workflow-running| raw:: html
 
-   <i class="fa-solid fa-spinner" style="color: #c2cbd1;"></i>
+   <i class="fa-solid fa-spinner"></i>
 
 
 .. |workflow-skipped| raw:: html
 
-   <i class="fa-regular fa-calendar-xmark" style="color: #0c0c0c;"></i>
+   <i class="fa-regular fa-calendar-xmark"></i>
 
 
 .. |workflow-succeeded| raw:: html
 
-   <i class="fa-solid fa-check" style="color: #317a1c;"></i>
+   <i class="fa-solid fa-check"></i>
 
 
 .. |workflow-issue| raw:: html
 
-   <i class="fa-solid fa-triangle-exclamation" style="color: #b2b520;"></i>
+   <i class="fa-solid fa-triangle-exclamation"></i>
 
 
 .. |input-to-predictive-models| raw:: html
 
-   <i class="fa-solid fa-circle-arrow-right" style="color: #317a1c;"></i>
+   <i class="fa-solid fa-circle-arrow-right"></i>
 
 
 .. |setting-provided-by-amperity| raw:: html
 
-   <i class="fa-solid fa-circle-right" style="color: #317a1c;"></i>
+   <i class="fa-solid fa-circle-right"></i>
 
 
 .. |giuthub-pencil| raw:: html
 
-   <i class="fa-solid fa-pencil" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-pencil"></i>
+
 
 .. |question| raw:: html
 
-   <i class="fa-solid fa-question" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-question"></i>
 
 
 .. |fa-checkbox| raw:: html
 
-   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-check"></i>
 
 
 
@@ -239,11 +245,11 @@
 
 .. |fa-sql-segment| raw:: html
 
-   <i class="fa-solid fa-code" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-code"></i>
 
 .. |fa-visual-segment| raw:: html
 
-   <i class="fa-solid fa-sliders-h" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-sliders-h"></i>
 
 
 
@@ -251,31 +257,23 @@
 
 .. |fa-trademark| raw:: html
 
-   <i class="fa-regular fa-registered" style="color: #0c0c0c;"></i>
+   <i class="fa-regular fa-registered"></i>
 
 
 .. |fa-home| raw:: html
 
-   &nbsp;<i class="fa-solid fa-house" style="color: #0c0c0c;"></i>&nbsp;
+   &nbsp;<i class="fa-solid fa-house"></i>&nbsp;
 
-
-.. |fa-star| raw:: html
-
-   &nbsp;<i class="fa-solid fa-star" style="color: #0c0c0c;"></i>&nbsp;
 
 
 .. |fa-project-diagram| raw:: html
 
-   &nbsp;<i class="fa-solid fa-project-diagram" style="color: #0c0c0c;"></i>&nbsp;
-
-
-
-
+   &nbsp;<i class="fa-solid fa-project-diagram"></i>&nbsp;
 
 
 .. |fa-check| raw:: html
 
-   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-check"></i>
 
 
 
@@ -285,92 +283,364 @@
 
 .. |fa-segment-active| raw:: html
 
-   <i class="fa-regular fa-circle" style="color: #0c0c0c;"></i>
+   <i class="fa-regular fa-circle"></i>
 
 .. |fa-segment-completed| raw:: html
 
-   <i class="fa-solid fa-check" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-check"></i>
 
 .. |fa-segment-draft| raw:: html
 
-   <i class="fa-solid fa-pencil" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-pencil"></i>
 
 .. |fa-segment-error| raw:: html
 
-   <i class="fa-solid fa-exclamation" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-exclamation"></i>
 
 .. |fa-segment-folder| raw:: html
 
-   <i class="fa-solid fa-folder" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-folder"></i>
 
 .. |fa-segment-inactive| raw:: html
 
-   <i class="fa-solid fa-circle-minus" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-circle-minus"></i>
 
 .. |fa-segment-running| raw:: html
 
-   <i class="fa-solid fa-spinner" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-spinner"></i>
 
 .. |fa-segment-sql| raw:: html
 
-   <i class="fa-solid fa-code" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-code"></i>
 
 .. |fa-segment-visual| raw:: html
 
-   <i class="fa-solid fa-sliders-h" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-sliders-h"></i>
 
 .. |fa-segment-waiting| raw:: html
 
-   <i class="fa-solid fa-hourglass-end" style="color: #0c0c0c;"></i>
-
-
-
-
+   <i class="fa-solid fa-hourglass-end"></i>
 
 .. |fa-semantic-full-name| raw:: html
 
-   <i class="fa-solid fa-address-book" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-address-book"></i>
 
 .. |fa-semantic-given-name| raw:: html
 
-   <i class="fa-solid fa-address-book" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-address-book"></i>
 
 .. |fa-semantic-surname| raw:: html
 
-   <i class="fa-solid fa-address-book" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-address-book"></i>
 
 .. |fa-semantic-email| raw:: html
 
-   <i class="fa-solid fa-envelope" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-envelope"></i>
 
 .. |fa-semantic-phone| raw:: html
 
-   <i class="fa-solid fa-phone" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-phone"></i>
 
 .. |fa-semantic-address| raw:: html
 
-   <i class="fa-solid fa-home" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-home"></i>
 
 .. |fa-semantic-city| raw:: html
 
-   <i class="fa-solid fa-city" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-city"></i>
 
 .. |fa-semantic-company| raw:: html
 
-   <i class="fa-solid fa-building" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-building"></i>
 
 .. |fa-semantic-state| raw:: html
 
-   <i class="fa-solid fa-road" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-road"></i>
 
 .. |fa-semantic-postal| raw:: html
 
-   <i class="fa-solid fa-hashtag" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-hashtag"></i>
 
 .. |fa-semantic-birthdate| raw:: html
 
-   <i class="fa-solid fa-birthday-cake" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-birthday-cake"></i>
 
 .. |fa-semantic-gender| raw:: html
 
-   <i class="fa-solid fa-venus-mars" style="color: #0c0c0c;"></i>
+   <i class="fa-solid fa-venus-mars"></i>
+
+
+.. |fa-hexagon-check| raw:: html
+
+   &nbsp;<i class="fa-solid fa-hexagon-check"></i>&nbsp;
+
+
+.. |fa-list-check| raw:: html
+
+   &nbsp;<i class="fa-solid fa-list-check"></i>&nbsp;
+
+
+.. |fa-asterisk| raw:: html
+
+   &nbsp;<i class="fa-solid fa-asterisk"></i>&nbsp;
+
+
+.. |fa-object-group| raw:: html
+
+   &nbsp;<i class="fa-solid fa-object-group"></i>&nbsp;
+
+
+.. |fa-browser| raw:: html
+
+   &nbsp;<i class="fa-regular fa-browser"></i>&nbsp;
+
+
+.. |fa-ruler-horizontal| raw:: html
+
+   &nbsp;<i class="fa-solid fa-ruler-horizontal"></i>&nbsp;
+
+
+.. |fa-square-poll-horizontal| raw:: html
+
+   &nbsp;<i class="fa-regular fa-square-poll-horizontal"></i>&nbsp;
+
+
+.. |fa-rotate-right| raw:: html
+
+   &nbsp;<i class="fa-solid fa-rotate-right"></i>&nbsp;
+
+
+.. |fa-shuffle| raw:: html
+
+   &nbsp;<i class="fa-solid fa-shuffle"></i>&nbsp;
+
+
+.. |fa-star| raw:: html
+
+   &nbsp;<i class="fa-solid fa-star"></i>&nbsp;
+
+
+.. |fa-shield-check| raw:: html
+
+   &nbsp;<i class="fa-solid fa-shield-check"></i>&nbsp;
+
+
+.. |fa-gears| raw:: html
+
+   &nbsp;<i class="fa-solid fa-gears"></i>&nbsp;
+
+
+.. |fa-tags| raw:: html
+
+   &nbsp;<i class="fa-solid fa-tags"></i>&nbsp;
+
+
+.. |fa-user-group| raw:: html
+
+   &nbsp;<i class="fa-solid fa-user-group"></i>&nbsp;
+
+
+.. |fa-clone| raw:: html
+
+   &nbsp;<i class="fa-solid fa-clone"></i>&nbsp;
+
+
+.. |fa-bell| raw:: html
+
+   &nbsp;<i class="fa-solid fa-bell"></i>&nbsp;
+
+
+.. |fa-border-outer| raw:: html
+
+   &nbsp;<i class="fa-solid fa-border-outer"></i>&nbsp;
+
+
+.. |fa-angles-right| raw:: html
+
+   &nbsp;<i class="fa-solid fa-angles-right"></i>&nbsp;
+
+
+.. |fa-calculator-simple| raw:: html
+
+   &nbsp;<i class="fa-solid fa-calculator-simple"></i>&nbsp;
+
+
+.. |fa-user-shield| raw:: html
+
+   &nbsp;<i class="fa-solid fa-user-shield"></i>&nbsp;
+
+
+.. |fa-arrow-right-to-line| raw:: html
+
+   &nbsp;<i class="fa-solid fa-arrow-right-to-line"></i>&nbsp;
+
+
+.. |fa-arrow-right-from-line| raw:: html
+
+   &nbsp;<i class="fa-solid fa-arrow-right-from-line"></i>&nbsp;
+
+
+.. |fa-id-card| raw:: html
+
+   &nbsp;<i class="fa-solid fa-id-card"></i>&nbsp;
+
+
+.. |fa-send-back| raw:: html
+
+   &nbsp;<i class="fa-solid fa-send-back"></i>&nbsp;
+
+
+.. |fa-send-backward| raw:: html
+
+   &nbsp;<i class="fa-solid fa-send-backward"></i>&nbsp;
+
+
+.. |fa-sitemap| raw:: html
+
+   &nbsp;<i class="fa-solid fa-sitemap"></i>&nbsp;
+
+
+.. |fa-loader| raw:: html
+
+   &nbsp;<i class="fa-solid fa-loader"></i>&nbsp;
+
+
+.. |fa-circle-user| raw:: html
+
+   &nbsp;<i class="fa-solid fa-circle-user"></i>&nbsp;
+
+
+.. |fa-users-between-lines| raw:: html
+
+   &nbsp;<i class="fa-solid fa-users-between-lines"></i>&nbsp;
+
+
+.. |fa-circle-up| raw:: html
+
+   &nbsp;<i class="fa-solid fa-circle-up"></i>&nbsp;
+
+
+.. |fa-files| raw:: html
+
+   &nbsp;<i class="fa-solid fa-files"></i>&nbsp;
+
+
+.. |fa-grid| raw:: html
+
+   &nbsp;<i class="fa-solid fa-grid"></i>&nbsp;
+
+
+.. |fa-table-cells-large| raw:: html
+
+   &nbsp;<i class="fa-solid fa-table-cells-large"></i>&nbsp;
+
+
+.. |fa-layer-group| raw:: html
+
+   &nbsp;<i class="fa-solid fa-layer-group"></i>&nbsp;
+
+
+.. |fa-table-cells| raw:: html
+
+   &nbsp;<i class="fa-solid fa-table-cells"></i>&nbsp;
+
+
+.. |fa-game-board-simple| raw:: html
+
+   &nbsp;<i class="fa-solid fa-game-board-simple"></i>&nbsp;
+
+
+.. |fa-expand| raw:: html
+
+   &nbsp;<i class="fa-solid fa-expand"></i>&nbsp;
+
+
+.. |fa-chart-line| raw:: html
+
+   &nbsp;<i class="fa-solid fa-chart-line"></i>&nbsp;
+
+
+.. |fa-line-columns| raw:: html
+
+   &nbsp;<i class="fa-solid fa-line-columns"></i>&nbsp;
+
+
+.. |fa-square-plus| raw:: html
+
+   &nbsp;<i class="fa-solid fa-square-plus"></i>&nbsp;
+
+
+.. |fa-square-user| raw:: html
+
+   &nbsp;<i class="fa-solid fa-square-user"></i>&nbsp;
+
+
+.. |fa-hexagon-nodes| raw:: html
+
+   &nbsp;<i class="fa-solid fa-hexagon"></i>&nbsp;
+
+
+.. |fa-address-card| raw:: html
+
+   &nbsp;<i class="fa-solid fa-address-card"></i>&nbsp;
+
+
+.. |fa-badge-check| raw:: html
+
+   &nbsp;<i class="fa-solid fa-badge-check"></i>&nbsp;
+
+
+.. |fa-circle-nodes| raw:: html
+
+   &nbsp;<i class="fa-solid fa-circle-nodes"></i>&nbsp;
+
+
+.. |fa-sparkles| raw:: html
+
+   &nbsp;<i class="fa-solid fa-sparkles"></i>&nbsp;
+
+
+.. |fa-bullseye-pointer| raw:: html
+
+   &nbsp;<i class="fa-regular fa-bullseye-pointer"></i>&nbsp;
+
+
+.. |fa-user-plus| raw:: html
+
+   &nbsp;<i class="fa-solid fa-user-plus"></i>&nbsp;
+
+
+.. |fa-square-sliders| raw:: html
+
+   &nbsp;<i class="fa-solid fa-square-sliders"></i>&nbsp;
+
+
+.. |fa-object-exclude| raw:: html
+
+   &nbsp;<i class="fa-solid fa-object-exclude"></i>&nbsp;
+
+
+.. |fa-outlet| raw:: html
+
+   &nbsp;<i class="fa-solid fa-outlet"></i>&nbsp;
+
+
+.. |fa-wave-pulse| raw:: html
+
+   &nbsp;<i class="fa-solid fa-wave-pulse"></i>&nbsp;
+
+
+.. |fa-code| raw:: html
+
+   &nbsp;<i class="fa-solid fa-code"></i>&nbsp;
+
+
+.. |fa-book-open| raw:: html
+
+   &nbsp;<i class="fa-solid fa-book-open"></i>&nbsp;
+
+
+.. |fa-arrow-right-arrow-left| raw:: html
+
+   &nbsp;<i class="fa-solid fa-arrow-right-arrow-left"></i>&nbsp;
+
