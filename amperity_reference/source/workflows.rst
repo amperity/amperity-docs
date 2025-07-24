@@ -121,6 +121,22 @@ Alerts are sent when:
 
 .. campaign-automated-alert-details-end
 
+Journeys
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-automated-alert-details-start
+
+Alerts are sent when:
+
+* A failure occurs within a journey execution or within any of the journey nodes  
+* A user cancels an automatically launched workflow
+* The journey succeeds, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group success alerts if your campaign is configured to run after a courier group and you want to know when it succeeds.
+* The journey runtime exceeds a threshold, if configured.
+
+Alerts on specific journeys are limited to failure only
+
+.. journeys-automated-alert-details-end
+
 .. automated-workflow-alerts-end
 
 Workflow run alerts
