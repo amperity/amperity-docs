@@ -1,13 +1,13 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: Ditdigital
+.. |destination-name| replace:: Dotdigital
 .. |audience-primary-key| replace:: "email" or "mobile_number"
 .. |what-send| replace:: customer lists
 .. |where-send| replace:: |destination-name|
 
 
-Ditdigital
+Dotdigital
 ==================================================
 
 |destination-name| is a cross-channel marketing platform for building customer connections and personalized campaigns across channels.
