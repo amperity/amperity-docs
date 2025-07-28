@@ -33,6 +33,7 @@ Site Index
    destination-criteo
    destination-criteo-retail-media
    destination-cross-country-computer
+   destination-dotdigital
    destination-dynamics-365-marketing
    destination-dynamics
    destination-eloqua
