@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Ditdigital
-.. |audience-primary-key| replace:: "email", "mobile_number", or "amperity_id"
+.. |audience-primary-key| replace:: "email" or "mobile_number"
 .. |what-send| replace:: customer lists
 .. |where-send| replace:: |destination-name|
 
@@ -57,5 +57,5 @@ The identifier for the list managed by Amperity.
 
 **Contact identifier type**
 
-The primary identifier for matching contacts in |destination-name|. Use "email" for email campaigns. Use "mobile_number" for SMS campaigns. Use "amperity_id" for custom identifiers.
+The primary identifier for matching contacts in |destination-name|. Use "email" for email campaigns. Use "mobile_number" for SMS campaigns.
 
