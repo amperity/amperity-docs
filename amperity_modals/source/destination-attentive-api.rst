@@ -53,3 +53,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-attentive-primary-identifier-start
    :end-before: .. setting-attentive-primary-identifier-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

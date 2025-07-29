@@ -65,3 +65,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-hubspot-list-name-start
    :end-before: .. setting-hubspot-list-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

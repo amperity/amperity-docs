@@ -24,12 +24,16 @@ Credentials
 
 **API username**
 
-The username for the API user with permission to access |destination-name|. The API user must have permission to manage address books (lists), create and update contacts, manage data fields, and access account information.
-
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-dotdigital-api-username-start
+   :end-before: .. credential-dotdigital-api-username-end
 
 **API password**
 
-The password for the API user.
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-dotdigital-api-password-start
+   :end-before: .. credential-dotdigital-api-password-end
+
 
 
 Settings
@@ -53,9 +57,18 @@ Settings
 
 **List name**
 
-The identifier for the list managed by Amperity.
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-list-name-start
+   :end-before: .. setting-common-list-name-end
 
 **Contact identifier type**
 
-The primary identifier for matching contacts in |destination-name|. Use "email" for email campaigns. Use "mobile_number" for SMS campaigns.
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-dotdigital-contact-identifier-type-start
+   :end-before: .. setting-dotdigital-contact-identifier-type-end
 
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

@@ -121,3 +121,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-marketing-cloud-data-extension-name-start
    :end-before: .. setting-salesforce-marketing-cloud-data-extension-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

@@ -58,3 +58,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-meta-ads-manager-dataset-id-start
    :end-before: .. setting-meta-ads-manager-dataset-id-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end
