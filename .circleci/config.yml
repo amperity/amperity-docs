@@ -16,8 +16,11 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       - run:
-          name: Install Sphinx-copybutton
+          name: Install Sphinx-copybutton plugin
           command: pip install sphinx-copybutton
+      - run:
+          name: Install Sphinx-mermaid plugin
+          command: pip install sphinxcontrib-mermaid
       - run:
           name: What is here?
           command: |
