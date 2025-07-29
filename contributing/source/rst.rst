@@ -459,11 +459,11 @@ Use the ``.. card-carousel::`` directive to create a horizontal scrolling set of
 
    .. card:: **Step 1**
 
-      `Create a sandbox <https://docs.amperity.com/operator/sandbox_create.html>`__.
+      `Create a sandbox <../operator/sandbox_create.html>`__.
 
    .. card:: **Step 2**
 
-      `Access the sandbox <https://docs.amperity.com/operator/sandbox_open.html>`__.
+      `Access the sandbox <../operator/sandbox_open.html>`__.
 
    .. card:: **Step 3**
 
@@ -475,7 +475,7 @@ Use the ``.. card-carousel::`` directive to create a horizontal scrolling set of
 
    .. card:: **Step 5**
 
-      `Promote configuration changes <https://docs.amperity.com/operator/sandbox_promote.html>`__ to your production tenant.
+      `Promote configuration changes <../operator/sandbox_promote.html>`__ to your production tenant.
 
 .. rst-card-carousel-end
 
@@ -3169,7 +3169,7 @@ Meta tags
 
 .. rst-meta-tags-start
 
-Three meta tags exist at the top of every file. The first one is for general search crawlers and the second two are for Swiftype, which is the search tool used for searching within the docs site. The first two can be identical. The third is set to match the topic title.
+Three meta tags exist at the top of every file. The first one is for general search crawlers and the second two are for Swiftype, which is the search tool used for index-based searching scoped to the contents of the docs site. The first two meta tag descriptions should be identical. The third meta tag description should be identical to the topic title.
 
 For example:
 
@@ -3209,7 +3209,7 @@ The Amperity docs site has the following navigation areas that help readers disc
 
 .. _rst-navigation-left:
 
-Left-side -- TODO
+Left-side
 --------------------------------------------------
 
 .. rst-navigation-left-start
@@ -3219,6 +3219,47 @@ Left-side -- TODO
 The left-side navigation shows the table of contents for the entire topic collection.
 
 This structure is built from a series of :ref:`toctree <rst-toctrees>` elements located within the current content collection.
+
+For example:
+
+.. code-block:: none
+
+   .. toctree::
+      :caption: Section 1
+      :maxdepth: 2
+      :hidden:
+
+      Topic A <filename_a>
+      Topic B <filename_b>
+
+This will build a left-side navigation that have a section named "Section 1" with two subtopics: "Topic A" and "Topic B". The formatting for each topic is
+
+.. code-block:: none
+
+   String <filename>
+
+Use "string" to define how the link will appear in the left-side navigation. The filename must be between angle brackets.
+
+**Do this**
+
+.. code-block:: none
+
+   .. toctree::
+      :caption: Connections
+      :maxdepth: 2
+      :hidden:
+
+      Bridges <grid_bridge>
+      Campaigns <grid_campaigns>
+      Destinations <grid_destinations>
+      Offline events <grid_events>
+      Profile API endpoints <api_profile>
+      Sources <grid_sources>
+      Streaming API endpoints <api_streaming>
+
+**For this**
+
+Click `this link <../operator/grid_connections>`__ to view the connections tree in the operators guide.
 
 .. rst-navigation-left-end
 
@@ -3246,7 +3287,7 @@ Search
 
 .. rst-navigation-search-start
 
-The search menu is located in the navigation bar. It can be accessed by clicking the search box *or* by hitting the forward slash key--``/``--on your keyboard.
+An index-based search menu is located in the navigation bar. It can be accessed by clicking the search box *or* by hitting the forward slash key--``/``--on your keyboard.
 
 .. rst-navigation-search-end
 
@@ -3279,7 +3320,7 @@ Menu navigation links
 
 .. rst-navigation-top-nav-links-start
 
-The navigation links in the top menus are managed from the conf.py file in each docs directory.
+The navigation links in the top menus are :doc:`managed from the conf.py file <configuration>` in each docs directory.
 
 .. important:: If the navigation links are updated those updates **MUST** be made in all of the documentation directories: ``amperity_api``, ``amperity_base``, ``amperity_operator``, ``amperity_reference``, ``amperity_user``, and ``contributing``.
 
@@ -3959,6 +4000,8 @@ Use the ``.. toctree::`` directive to define a toctree. For example:
       Terminology <terminology>
 
 You can use more than one toctree. For example, the topic for "Formatting guide" could have an additional toctree that will show those pages as childred of "Formatting guide" in the left-side navigation.
+
+Toctree elements can also be embedded in non-index files. For example, the Operator and User guides use a series of "grid" topics, with filenames that start with ``grid_x.rst``, to build out a layered experience for topics that should appear in the left-side navigation.
 
 .. rst-toctrees-end
 
