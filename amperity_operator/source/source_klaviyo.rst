@@ -9,7 +9,7 @@
 .. |source-interface| replace:: |source-name|
 .. |what-pull| replace:: email engagement metrics
 .. |credential-fields| replace:: the name of the credential, a description, the |source-name| API key
-.. |box-names| replace:: Email Metrics and List Membership
+.. |box-names| replace:: Email Metrics
 
 
 .. meta::
@@ -82,21 +82,17 @@ Add courier
 
 .. source-klaviyo-add-courier-start
 
-#. From the **Sources** page, click **Add Courier**. The **Add Courier** page opens.
+#. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
-#. Enter the name of the courier. For example: "|source-name|".
 
-   From the **Credential** field, select an existing credential or select **Create a new credential**.
+   This automatically selects |credential-type| as the **Credential Type**.
+#. Enter the name of the courier. For example: "|source-name|".
+#. From the **Credential** field, select an existing credential or select **Create a new credential**.
 
    To add a credential, enter |credential-fields|. Click **Save**.
 
-   When finished click **Continue**.
-
-#. Add the **List name** that will be pulled to Amperity.
 #. Under **Select Data**, enable |box-names|.
 #. Click **Create**.
-
-   Amperity will create a feed and domain table for each selected data source: :ref:`Klaviyo_Email_Metrics <source-klaviyo-review-data-email>` and :ref:`Klaviyo_List_Membership <source-klaviyo-review-data-list>`.
 
 .. source-klaviyo-add-courier-end
 
@@ -119,24 +115,18 @@ Run courier manually
 
 .. _source-klaviyo-review-data:
 
-Review feeds and domain tables
+Review feed and domain table
 ==================================================
 
 .. sources-add-courier-review-feed-and-domain-table-start
 
-After running the |source-name| courier feeds are created automatically with a pre-defined list of fields. You may apply semantic tags to these fields and you may make the domain table available to Stitch, depending on your use case.
+After running the |source-name| courier a feed is created automatically with a pre-defined list of fields. You may apply semantic tags to these fields and you may make the domain table available to Stitch, depending on your use cases. A domain table named |domain-table-name| will be added.
 
 .. sources-add-courier-review-feed-and-domain-table-end
 
+.. source-klaviyo-review-data-start
 
-.. _source-klaviyo-review-data-email:
-
-Klaviyo_Email_Metrics table
---------------------------------------------------
-
-.. source-klaviyo-review-data-email-start
-
-A feed and domain table are created for the **Klaviyo_Email_Metrics** data source with the following fields and semantic tags:
+The feed and domain table will pull in the following fields:
 
 * **emailAddress** (assigned the **email-event/email** semantic tag)
 * **eventDateTime** (assigned the **email-event/event-datetime** semantic tag)
@@ -145,24 +135,7 @@ A feed and domain table are created for the **Klaviyo_Email_Metrics** data sourc
 * **metricId**
 * **sendId** (assigned the **email-event/send-id** semantic tag)
 
-.. source-klaviyo-review-data-email-end
-
-
-.. _source-klaviyo-review-data-list:
-
-Klaviyo_List_Membership table
-----------------------------------------------------
-
-.. source-klaviyo-review-data-list-start
-
-A feed and domain table are created for the **Klaviyo_List_Membership** data source with the following fields and semantic tags:
-
-* **email**
-* **id** (assigned the **pk** semantic tag)
-* **list_id**
-* **phone**
-
-.. source-klaviyo-review-data-list-end
+.. source-klaviyo-review-data-end
 
 
 .. _source-klaviyo-add-to-courier-group:

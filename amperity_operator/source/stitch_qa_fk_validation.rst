@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -71,6 +72,7 @@ Names, multiple IDs
 Use any of the following **SELECT** statements to look for name IDs with multiple Amperity IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      name_id
@@ -101,6 +103,7 @@ Names, different IDs
 Use any of the following **SELECT** statements to look for name IDs with different Amperity IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      v1.name_id
@@ -137,16 +140,19 @@ Inspect Names
 Use any of the following **SELECT** statements to inspect name IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source_v2
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source
@@ -156,6 +162,7 @@ Use any of the following **SELECT** statements to inspect name IDs. Update **nam
    )
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source_v2
@@ -177,6 +184,7 @@ Multiple Amperity IDs
 Use any of the following **SELECT** statements to look for foreign keys that have multiple Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
     fk_field_name
@@ -207,6 +215,7 @@ Different Amperity IDs
 Use any of the following **SELECT** statements to look for foreign keys that have different Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      v1.fk_field_name
@@ -243,6 +252,7 @@ Inspect keys between tables
 Use any of the following **SELECT** statements to inspect foreign keys between tables. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)
@@ -250,6 +260,7 @@ Use any of the following **SELECT** statements to inspect foreign keys between t
      data_source
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)
@@ -261,6 +272,7 @@ Use any of the following **SELECT** statements to inspect foreign keys between t
    )
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)
@@ -271,6 +283,7 @@ Use any of the following **SELECT** statements to inspect foreign keys between t
    )
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)

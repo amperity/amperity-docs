@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -65,6 +66,7 @@ Configure query
 #. You can run this query against multiple semantics. For example, **email**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       SELECT
@@ -83,6 +85,7 @@ Configure query
 #. You can run this query against multiple semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
 
    .. code-block:: sql
+      :linenos:
 
       /*
       SELECT
@@ -100,6 +103,7 @@ Configure query
    For example, to run this statement for **given-name** and **surname**:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         amperity_id

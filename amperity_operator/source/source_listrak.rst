@@ -138,6 +138,7 @@ Pull additional customer profile fields to Amperity using the **Additional field
 #. Use SQL to convert the segmentation field IDs to meaningful column names. For example, a series of segmentation field IDs for individual months combined into a field named "birthday_month".
 
    .. code-block:: sql
+      :linenos:
 
       ,MAX(CASE
         WHEN val.segmentationFieldID = 5101 AND val.value = "1" THEN "January"

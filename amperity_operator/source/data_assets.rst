@@ -423,6 +423,7 @@ Add a passthrough table to your customer 360 database named **LookupTables Addre
 .. important:: The **LookupTables AddressStandardization** table is used within the **Merged Households** SQL template in a series of LEFT JOIN operations that are used to standardize addresses. For example:
 
    .. code-block:: sql
+      :linenos:
 
       LEFT JOIN (
         SELECT
@@ -497,6 +498,7 @@ You can add predicted gender to your customer 360 database in two ways, dependin
 Use a common table expression (CTE) to pull data from the domain table that contains predicted gender data ("Predictions_Gender"):
 
 .. code-block:: sql
+   :linenos:
 
    predict_gender AS (
      SELECT
@@ -537,6 +539,7 @@ Your brand's use cases for predicted gender may prefer using a standalone table.
 #. Choose **SQL** as the build mode, and then use SQL similar to:
 
    .. code-block:: sql
+      :linenos:
 
       WITH ratios AS (
         SELECT * 

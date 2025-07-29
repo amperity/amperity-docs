@@ -131,6 +131,7 @@ Use a query similar to the following to join fields in the **Unified Preprocesse
 .. table-unified-preprocessed-raw-cleaned-vs-uncleaned-sql-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      upr.amperity_id AS "upr_amperity_id"

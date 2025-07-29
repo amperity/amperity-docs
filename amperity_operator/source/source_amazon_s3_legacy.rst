@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. |source-name| replace:: Amazon S3
 .. |plugin-name| replace:: Amazon S3

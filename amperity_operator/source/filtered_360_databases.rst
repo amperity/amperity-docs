@@ -89,6 +89,7 @@ Custom core tables
    Another option is to extend the custom core table to support database-specific logic, such as by using a **CASE** statement to enable different thresholds for considering customers "lapsed" by marketing unit. For example:
 
    .. code-block:: sql
+      :linenos:
 
       CASE
         WHEN database_key = 'ACME Essentials' THEN 730
@@ -98,6 +99,7 @@ Custom core tables
    Each filtered 360 database can then reference the custom core table:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT *
       FROM Customer_Attributes_Core ca
@@ -139,6 +141,7 @@ For each table in the filtered 360 database that contains data the **database_ke
 For example, to filter the **Unified Coalesced** table use SQL similar to:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT *
    FROM Unified_Coalesced uc

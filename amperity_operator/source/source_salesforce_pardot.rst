@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Pull from Pardot
+        Pull from Salesforce Pardot
 
 ==================================================
-Pull from Pardot
+Pull from Salesforce Pardot
 ==================================================
 
 .. include:: ../../shared/terms.rst

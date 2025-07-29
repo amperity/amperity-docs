@@ -502,6 +502,7 @@ Extend the **Unified Itemized Transactions** to include the taxonomy that define
 The following example extends the **Unified Itemized Transactions** table using a table named **Unified Product Catalog** that has columns for each of the optional product catalog semantic tags:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      uit.*
@@ -514,6 +515,7 @@ The following example extends the **Unified Itemized Transactions** table using 
 Some brands require a single parameter to define a taxonomy and some require more than one. The following example shows a taxonomy that defines custom attributes for a class and subclass:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      uit.*,
@@ -553,6 +555,7 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
 #. Edit the **Customer 360** table to update the **SELECT** statement for attributes from the **Predicted CLV Attributes** table, similar to:
 
    .. code-block:: sql
+      :linenos:
 
       -- Predicted Attributes from Predicted_CLV_Attributes pa
       ,pa.predicted_probability_of_transaction_next_365d AS `predicted_probability_of_transaction_next_365d`

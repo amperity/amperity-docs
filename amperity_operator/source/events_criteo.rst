@@ -1,7 +1,6 @@
 .. https://docs.amperity.com/operator/
 
 
-
 .. |destination-name| replace:: Criteo
 .. |what-send| replace:: email address lists
 .. |what-enable| replace:: **email**
@@ -46,6 +45,7 @@ Build a query
 After the SFTP destination is configured, use a query to map a customer's email address and transactions data to the fields that can be sent to |destination-name|. For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      uit.amperity_id AS user_crmid

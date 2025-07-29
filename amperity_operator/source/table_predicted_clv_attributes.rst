@@ -64,6 +64,7 @@ The **Days Since Last Order** and **Historical Order Frequency Lifetime** column
 #. Set **Build Mode** to "SQL", and then use a **SELECT** statement similar to the following to define the schema:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         amperity_id AS `amperity_id`

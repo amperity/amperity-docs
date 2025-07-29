@@ -80,6 +80,7 @@ A very simple example of calculating nearest stores starts with a common table e
 .. calculate-nearest-store-example-sql-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH
      distance_cte AS (

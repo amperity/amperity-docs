@@ -187,6 +187,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 .. table-customer-attributes-recommended-starting-sql-code-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH mc_cte AS (
      SELECT
@@ -417,6 +418,7 @@ A customer who has never interacted with your brand, i.e. "never made a purchase
 .. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it will be included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for transaction attributes
@@ -493,6 +495,7 @@ The **Customer Attributes** table provides a list of customers who have complete
 .. note:: This topic assumes that the **Email Opt Status** table is available to your customer 360 database and that it will be included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their email address with your marketing campaigns.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Email opt-in status
@@ -528,6 +531,7 @@ The **Customer Attributes** table provides a list of customers who have complete
 .. note:: This topic assumes that the **SMS Opt Status** table is available to your customer 360 database and that it will be included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their phone number with your marketing campaigns.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- SMS opt-in status
@@ -620,6 +624,7 @@ Review the utility query, and then configure it to identify likely business emai
 The first is the **likely_business** CTE. Update the values in the CASE statement to match known business address patterns that exist in your tenant:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN given_name LIKE 'inc'
@@ -645,6 +650,7 @@ The first is the **likely_business** CTE. Update the values in the CASE statemen
 The second is for when you need to define exceptions for names that should not match known business address patterns:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN given_name IN ('name1','name2','name3','...') THEN true
@@ -657,6 +663,7 @@ The second is for when you need to define exceptions for names that should not m
 After you have defined business address patterns and exceptions, return the list of likely businesses:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *
@@ -688,6 +695,7 @@ When the query is ready, under the following section in the **Customer Attribute
 add the updated **is_likely_business** query:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for business email addresses
@@ -750,6 +758,7 @@ add the updated **is_likely_business** query:
 Extend **classification_config** by adding a CASE statement and a LEFT JOIN similar to:
 
 .. code-block:: sql
+   :linenos:
 
    ,classification_config AS (
      SELECT
@@ -776,6 +785,7 @@ Extend **classification_config** by adding a CASE statement and a LEFT JOIN simi
 Add the likely businesses to **customer_attributes_final**:
 
 .. code-block:: sql
+   :linenos:
 
    ,customer_attributes_final AS (
      SELECT DISTINCT
@@ -811,6 +821,7 @@ A customer is an employee when they are employed (or were employed) by your bran
 Review the **is_employee** utility query, and then configure it to identify customers who have an email address that is associated with your brand.
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN email LIKE '%domain.com'
@@ -821,6 +832,7 @@ Review the **is_employee** utility query, and then configure it to identify cust
 and then allows you to define exceptions:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN email IN ('email1','email2','email3','...') THEN true
@@ -854,6 +866,7 @@ A gift giver is a customer who purchased an item for someone else.
 The **is_gift_giver** utility query returns product descriptions from the **Unified Itemized Transactions** table, and then analyzes those descriptions for indicators of product purchases that were gifts. Review the **is_gift_giver** utility query, and then configure it to match the approaches your brand uses to identify purchases that are gifts.
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN product_description LIKE '%gift%'
@@ -864,6 +877,7 @@ The **is_gift_giver** utility query returns product descriptions from the **Unif
 and then allows you to define exceptions:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN product_description IN ('description1','description2','description3','...') THEN true
@@ -899,6 +913,7 @@ Review the **is_outlier** utility query, and then configure it to identify custo
 The query starts by defining the revenue outlier threshold:
 
 .. code-block:: sql
+   :linenos:
 
    WITH outlier_param AS (
      SELECT
@@ -938,6 +953,7 @@ Review the **is_reseller** utility query, and then configure it to identify cust
 The query starts by defining the revenue outlier threshold:
 
 .. code-block:: sql
+   :linenos:
 
    WITH outlier_param AS (
      SELECT
@@ -949,6 +965,7 @@ The query starts by defining the revenue outlier threshold:
 The following CTE identifies supersized clusters that exceed the defined threshold. In the following example, the threshold is "50":
 
 .. code-block:: sql
+   :linenos:
 
    ,uc_cte AS (
      SELECT 
@@ -989,6 +1006,7 @@ A test account is an email address that does not belong to a customer, such as `
 Review the **is_test_accounts** utility query, and then configure it to identify email addresses that do not belong to a customer and are likely test email accounts. Use a CASE statement to define the patterns that identify test accounts. For example:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN given_name LIKE 'test'
@@ -1008,6 +1026,7 @@ Review the **is_test_accounts** utility query, and then configure it to identify
 and then allows you to define exceptions:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN given_name IN ('name1','name2','...') THEN true
@@ -1060,6 +1079,7 @@ Under the following section in the **Customer Attributes** SQL template:
 configure the following SQL:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for households
@@ -1093,6 +1113,7 @@ configure the following SQL:
 and then extend **classification_config** for primary buyers:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN pb.amperity_id IS NULL
@@ -1113,7 +1134,7 @@ and then extend **classification_config** for primary buyers:
 Churn prevention
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/churn_prevention.rst
+.. include:: ../../amperity_user/source/churn_prevention.rst
    :start-after: .. churn-prevention-about-start
    :end-before: .. churn-prevention-about-about-end
 
@@ -1142,6 +1163,7 @@ You have two choices for defining churn events for this table:
 #. Use historical order history to define your customers' churn status. For example, you could configure the **Customer Attributes** table to define churn status as "active" as "within the past 60 days", "at risk" as "within the past 365 days", and so on, using SQL similar to:
 
    .. code-block:: sql
+      :linenos:
 
       ,historical_churn_classification AS (
         SELECT
@@ -1170,6 +1192,7 @@ If your brand will use the **Customer Attributes** table as part of your churn p
 with:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for churn prevention
@@ -1197,6 +1220,7 @@ Classifications
 The recommended starting SQL, as described in this topic, configures using the **Transaction Attributes Extended** table. This enables two flags that differentiate your customers into "purchasers" and "prospects". These flags are enabled by the following SQL in **classification_config**:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN ta.lifetime_order_frequency >= 1
@@ -1213,6 +1237,7 @@ The recommended starting SQL, as described in this topic, configures using the *
 and both attributes must be available in the list of customer attributes:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for customer attributes
@@ -1254,6 +1279,7 @@ The **contactable_phone**, **contactable_email**, **contactable_address**, **con
 The following example shows the configuration for contactability, including for when customer consent for email addresses and phone numbers is available:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for contactability
@@ -1305,6 +1331,7 @@ The following example shows the configuration for contactability, including for 
 .. note:: If your tenant does not have access to email and SMS consent status, update the configuration for the **contactable_email** and **contactable_phone** columns to:
 
    .. code-block:: sql
+      :linenos:
 
       ,CASE
         WHEN mc.email_completion = 1
@@ -1330,6 +1357,7 @@ Extended customer attributes
 The list of customer attributes must be extended to include all of the updates you have made. Review the section for :ref:`business email addresses <table-customer-attributes-optional-email-categories-business>` for an example of adding an attribute to this list.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for customer attributes

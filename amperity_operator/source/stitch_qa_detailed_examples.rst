@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -55,6 +56,7 @@ Configure query
    Add matched records for one (or more) of the **full-name**, **generational-suffix**, **gender**, **address2**, **company**, and **title** semantic fields. For example:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 5,6,7,8,15,16,27,28,29,30
 
        ,t1.given_name AS given_name_a
@@ -93,6 +95,7 @@ Configure query
 #. When customer keys are present, uncomment the matching records:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3,4
 
       ,t1.pk AS pk_a
@@ -103,6 +106,7 @@ Configure query
 #. Update the matching records for all foreign keys:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 1,2
 
       -- ,t1.fk_field_name AS fk_field_name_a
@@ -111,6 +115,7 @@ Configure query
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       t1.fk_customer_id AS fk_customer_id_a,
       t2.fk_customer_id AS fk_customer_id_b,
@@ -120,6 +125,7 @@ Configure query
 #. Rows may be numbered by case (default) or by Amperity ID.
 
    .. code-block:: sql
+      :linenos:
 
       ROW_NUMBER() OVER (PARTITION BY scores.score
                          ORDER BY scores.amperity_id
@@ -135,6 +141,7 @@ Configure query
 #. Set the case count limit to be greater than "1" to return more examples of each feature:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       Filtered_Examples AS (
@@ -148,6 +155,7 @@ Configure query
 #. Set the score count limit:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       Filtered_Examples AS (
@@ -161,6 +169,7 @@ Configure query
    For example, to include **email**, **given_name**, **address**, and **phone**:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3,4,5,6
 
       SELECT *
@@ -176,6 +185,7 @@ Configure query
 #. To return coverage statistics, uncomment the **SELECT** statement under coverage stats:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         SUM(score_count) AS example_coverage
@@ -188,6 +198,7 @@ Configure query
 #. If using the :doc:`bad-values blocklist <blocklist_bad_values>` you may apply those blocklist values to the results of this query. This requires uncommenting two sections of this query. First, uncomment the matching records:
 
    .. code-block:: sql
+      :linenos:
 
       ,t1.has_blv as has_blv_a
       ,t2.has_blv as has_blv_b
@@ -205,6 +216,7 @@ Configure query
    and then enable them to be part of the **LEFT JOIN** operations for unified scores:
    
    .. code-block:: sql
+      :linenos:
 
       AND has_blv IS null
       AND blv_surname IS null

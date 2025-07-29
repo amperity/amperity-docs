@@ -58,6 +58,7 @@ To add a **Event Propensity** table you must extend the customer 360 database to
 #. Add the following SQL:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT 
         r.product_attribute AS `product_sub_category`

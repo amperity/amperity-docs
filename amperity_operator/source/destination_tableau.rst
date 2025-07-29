@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Tableau
+        Configure destinations for Tableau
 
 ==================================================
-Configure destination for Tableau
+Configure destinations for Tableau
 ==================================================
 
 .. destination-tableau-start
@@ -25,9 +25,9 @@ Tableau connects to Amperity data indirectly. You must first configure Amperity 
 
 * :doc:`Amazon Redshift <destination_tableau_amazon_redshift>`
 * :doc:`Azure Synapse Analytics <destination_tableau_azure_synapse_analytics>`
-* :doc:`Databricks <destination_tableau_databricks>`
+* :doc:`Databricks <bridge_databricks>`
 * :doc:`Google BigQuery <destination_tableau_google_big_query>`
-* :doc:`Snowflake <destination_tableau_snowflake>`
+* :doc:`Snowflake <bridge_snowflake>`
 
 after which you can connect Tableau to that data, and then start building dashboards and charts, analyzing data, defining stories, and enabling any other data visualization use case your organization requires.
 

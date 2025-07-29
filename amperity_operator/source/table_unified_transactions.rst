@@ -80,6 +80,7 @@ Multiple Amperity IDs
 The following section (located near the top of the SQL) prioritizes order IDs when order IDs are associated with more than one Amperity ID. This may be customized.
 
 .. code-block:: sql
+   :linenos:
 
    amp_priority AS (
      SELECT DISTINCT
@@ -151,6 +152,7 @@ Fiscal calendars
 #. Uncomment the following section, which is located around line 45:
 
    .. code-block:: sql
+      :linenos:
 
       ,fc.fiscal_year AS fiscal_year
       ,fc.fiscal_quarter AS fiscal_quarter
@@ -191,6 +193,7 @@ Net order revenue
 #. Uncomment the following section, which is located around line 45:
 
    .. code-block:: sql
+      :linenos:
 
       ,order_revenue
         + order_returned_revenue
@@ -226,6 +229,7 @@ Order costs
 #. Uncomment the following section, which is located around line 30:
 
    .. code-block:: sql
+      :linenos:
 
       ,SUM(
         IF(
@@ -276,6 +280,7 @@ When itemized discount amount values are consistent across records:
 #. Uncomment the following section, which is located around line 30:
 
    .. code-block:: sql
+      :linenos:
 
       ,MAX(
         IF(
@@ -306,6 +311,7 @@ When itemized discount amount values are pro-rated across records:
 #. Uncomment the following section, which is located around line 30, and then change the **MAX()** function to **SUM()**:
 
    .. code-block:: sql
+      :linenos:
 
       ,SUM(
         IF(

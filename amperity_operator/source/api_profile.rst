@@ -148,7 +148,8 @@ where
 
 The response returns a list of endpoints (indexes) that are available within your tenant's Profile API. For example, a list of three indexes (Braze User Profiles, Product Catalog, and Hashed Email Profiles) will have a response similar to:
 
-::
+.. code-block:: salt
+   :linenos:
 
    {"indexes":
      [
@@ -251,7 +252,8 @@ where all of the parameters are the same as the example request for a single uni
 
 The structure of the response depends on the attributes that are available within the index. The body of the response is similar to:
 
-::
+.. code-block:: salt
+   :linenos:
 
    {"attributes"
      {"value" {"attribute": "value"}, "lookup-key" "lookup-key-value"},
@@ -262,7 +264,8 @@ The structure of the response depends on the attributes that are available withi
 
 For example, an index that uses "loyalty_id" as the lookup key, and returns "firstname", "lastname" for loyalty ID "a-01234-b" for a customer named "Dennis Terrell" will have a response similar to:
 
-::
+.. code-block:: salt
+   :linenos:
 
    {
      "attributes": {
@@ -281,7 +284,8 @@ For example, an index that uses "loyalty_id" as the lookup key, and returns "fir
 
 An index that returns multiple matching records will have a response similar to:
 
-::
+.. code-block:: salt
+   :linenos:
 
    {
      "attributes": {
@@ -430,6 +434,8 @@ and then use the lookup key in your workflow to return individual attribute valu
 
 .. profile-api-howitworks-index-ids-end
 
+.. profile-api-howitworks-index-ids-tip-start
+
 .. tip:: You can copy the full URL from the **Destinations** page (under **Profile API**, from the |fa-kebab| menu for an endpoint, select **Copy URL**), and then use the copied URL in the request.
 
    .. image:: ../../images/api-profile-endpoint-copy-url.png
@@ -440,6 +446,7 @@ and then use the lookup key in your workflow to return individual attribute valu
 
    The copied URL contains the correct values for the selected endpoint's **{tenant-domain}** and **{index-id}**.
 
+.. profile-api-howitworks-index-ids-tip-end
 
 
 .. _profile-api-howitworks-access-tokens:
@@ -1124,7 +1131,7 @@ The following sections describe some ways to use the Profile API:
 * :ref:`Braze Connected Content <profile-api-usecase-braze>`
 * :ref:`Hashed email profiles <profile-api-usecase-hashed-email-address-profiles>`
 * :ref:`Loyalty profiles <profile-api-usecase-loyalty-profiles>`
-* :ref:`Movable Ink Studio <profile-api-usecase-moveable-ink-studio>`
+* :ref:`Moveable Ink Studio <profile-api-usecase-moveable-ink-studio>`
 * :ref:`Server-side JavaScript in Salesforce Marketing Cloud <profile-api-usecase-ssjs-ssmc>`
 * :ref:`Wireless access points <profile-api-usecase-hashed-email-address-profiles-wireless>`
 
@@ -1464,7 +1471,7 @@ This message could be extended to include promos or offers or any type of additi
 
 .. _profile-api-usecase-moveable-ink-studio:
 
-Movable Ink Studio
+Moveable Ink Studio
 --------------------------------------------------
 
 .. include:: ../../amperity_operator/source/destination_moveableink.rst

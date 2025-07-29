@@ -14,8 +14,10 @@
         Enable segments and campaigns
 
 
+.. TODO: adjust for a world where Activations tab replaces Campaigns in all tenants
+
 ==================================================
-Enable segments and campaigns
+Enable activations
 ==================================================
 
 .. add-campaigns-steps-start

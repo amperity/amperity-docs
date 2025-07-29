@@ -23,13 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Oracle Data Cloud
+        Configure destinations for Oracle Data Cloud
 
 ==================================================
-Configure destination for Oracle Data Cloud
+Configure destinations for Oracle Data Cloud
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_oracle_data_cloud.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-oracle-data-cloud-start

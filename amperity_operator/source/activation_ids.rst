@@ -15,7 +15,7 @@
 
 
 ==================================================
-About activation IDs
+Configure activation IDs
 ==================================================
 
 .. include:: ../../amperity_reference/source/activation_ids.rst

@@ -18,10 +18,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Azure Synapse Analytics
+        Configure destinations for Azure Synapse Analytics
 
 ==================================================
-Configure destination for Azure Synapse Analytics
+Configure destinations for Azure Synapse Analytics
 ==================================================
 
 .. include:: ../../shared/terms.rst

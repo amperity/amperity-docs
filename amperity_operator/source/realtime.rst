@@ -19,7 +19,7 @@ Real-time tables
 
 .. real-time-about-start
 
-Real-time tables contain data that is streamed to Amperity. Real-time tables are available alongside customer profiles in your brand's customer 360 database. Real-time tables complement the daily batch process that is used to build and maintain complete and durable customer profiles over longer timeframes by enabling use cases that require the use of time-sensitive data that is updated more frequently.
+Real-time tables contain data that is streamed to Amperity. Real-time tables are available alongside customer profiles in your brand's customer 360 database. Real-time tables complement the daily batch process that builds and maintains complete and durable customer profiles over longer timeframes by enabling use cases that require the use of time-sensitive data that is updated more frequently.
 
 .. real-time-about-end
 
@@ -426,6 +426,7 @@ To make a query that references real-time tables available to the segments and c
 For example, a query that returns data from a real-time table named **Winback_Suppressions** can be joined to the **Customer 360** table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      c360.amperity_id

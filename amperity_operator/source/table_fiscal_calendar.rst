@@ -65,6 +65,7 @@ Extend transactions
 Extend the **Unified Transactions** table by joining the **Fiscal Calendar** table using SQL similar to:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      rollup_uit.*

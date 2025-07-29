@@ -140,6 +140,7 @@ Net order revenue
 #. Uncomment one (or more) of the following extended attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(txn.first_order.net_order_revenue IGNORE NULLS) AS first_net_order_revenue
       ,FIRST(txn.second_order.net_order_revenue IGNORE NULLS) AS second_net_order_revenue
@@ -188,6 +189,7 @@ Order costs
 #. Uncomment one (or more) of the following extended attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(txn.first_order.order_cost IGNORE NULLS) AS first_order_cost
       ,FIRST(txn.latest_order.order_cost IGNORE NULLS) AS latest_order_cost
@@ -204,6 +206,7 @@ Order costs
 #. Find the **SELECT** statement at the end of the SQL template, and then for each of the attributes enabled within "attrs", uncomment the line to add the extended attribute to the **Transaction Attributes Extended** table:
 
    .. code-block:: sql
+      :linenos:
 
       ,CAST(attrs.first_order_cost AS decimal(38,2)) AS first_order_cost
       ,CAST(attrs.latest_order_cost AS decimal(38,2)) AS latest_order_cost
@@ -278,6 +281,7 @@ RFM
 #. In the **attrs** block of SQL, uncomment the calculations for RFM attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(rfm.recency) AS L12M_recency
       ,FIRST(rfm.frequency) AS L12M_frequency
@@ -293,6 +297,7 @@ RFM
 #. Find the **SELECT** statement at the end of the SQL template, and then uncomment the following extended attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,attrs.L12M_rfm_score
       ,attrs.L12M_recency

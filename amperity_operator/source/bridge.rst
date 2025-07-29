@@ -72,6 +72,7 @@ Sync data with ...
 Amperity Bridge supports syncing tables with the following applications:
 
 * :ref:`bridge-sync-data-with-databricks`
+* :ref:`bridge-sync-data-with-google-bigquery`
 * :ref:`bridge-sync-data-with-snowflake`
 
 .. bridge-sync-data-with-end
@@ -92,6 +93,17 @@ You can configure Amperity Bridge for data sharing that :ref:`syncs Databricks w
 
 .. bridge-sync-data-with-databricks-end
 
+
+.. _bridge-sync-data-with-google-bigquery:
+
+Google BigQuery
+--------------------------------------------------
+
+.. bridge-sync-data-with-google-bigquery-start
+
+You can configure Amperity Bridge for data sharing that :ref:`syncs Google BigQuery with Amperity <bridge-google-bigquery-sync-with-amperity>`.
+
+.. bridge-sync-data-with-google-bigquery-end
 
 
 .. _bridge-sync-data-with-snowflake:

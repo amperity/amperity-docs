@@ -23,13 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for SFTP
+        Configure destinations for SFTP
 
 ==================================================
-Configure destination for SFTP
+Configure destinations for SFTP
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_sftp.html>`__ |ext_link|.
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-sftp-about-start
@@ -330,9 +328,10 @@ Add destination
              :end-before: .. setting-common-file-format-custom-delimiter-end
 
           **Apache Parquet files only**
-             .. include:: ../../shared/destination_settings.rst
-                :start-after: .. setting-common-file-format-apache-parquet-start
-                :end-before: .. setting-common-file-format-apache-parquet-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-file-format-apache-parquet-start
+             :end-before: .. setting-common-file-format-apache-parquet-end
 
 
        **Filename template**

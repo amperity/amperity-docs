@@ -68,6 +68,7 @@ To add a **Predicted Affinity** table you must extend the customer 360 database 
 #. Add the following SQL:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT 
         r.product_attribute AS `product_sub_category`
@@ -100,7 +101,7 @@ How to use the Predicted_Affinity table
    :start-after: .. term-product-affinity-start
    :end-before: .. term-product-affinity-end
 
-.. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+.. include:: ../../amperity_user/source/recommended_audiences.rst
    :start-after: .. recommended-audiences-howto-start
    :end-before: .. recommended-audiences-howto-end
 
@@ -116,7 +117,7 @@ Recommended audience sizes are refreshed on a weekly basis.
 Validate campaigns that use product affinity
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+.. include:: ../../amperity_user/source/recommended_audiences.rst
    :start-after: .. recommended-audiences-howto-validate-campaigns-start
    :end-before: .. recommended-audiences-howto-validate-campaigns-end
 

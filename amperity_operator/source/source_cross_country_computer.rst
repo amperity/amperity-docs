@@ -123,15 +123,11 @@ The |source-name| data source requires the following configuration details:
 Add data source and feed
 ==================================================
 
-.. source-ccc-add-data-source-intro-start-start
+.. include:: ../../shared/sources.rst
+   :start-after: .. sources-steps-00-intro-start
+   :end-before: .. sources-steps-00-intro-end
 
-Add a data source that pulls data from an |source-name| bucket for each file that you want to pull to Amperity.
-
-Browse the |source-name| bucket to select a file, and then review the settings for that file. Define the feed schema, and then activate the feed. Run the courier manually, and then review the data that is added to the domain table that is associated with the feed.
-
-.. source-ccc-add-data-source-intro-end
-
-**To add a data source for any SFTP site**
+**To add a data source for Cross Country Computer**
 
 .. source-ccc-add-data-source-steps-start
 
@@ -144,20 +140,13 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Sources** page to configure |source-name|.
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-open-dialog-start
+          :end-before: .. sources-steps-01-open-dialog-end
 
-       Click the **Add courier** button to open the **Add courier** dialog box.
-
-       .. image:: ../../images/mockup-sources-add-01-select-source-sftp.png
-          :width: 380 px
-          :alt: Add 
-          :align: left
-          :class: no-scaled-link
-
-       Select |source-name|. Do one of the following:
-
-       #. Click the row in which |source-name| is located. Sources are listed alphabetically.
-       #. Search for |source-name|. Start typing |filter-the-list|. The list will filter to show only matching sources.
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-select-source-start
+          :end-before: .. sources-steps-01-select-source-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -187,7 +176,9 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Select the file that will be pulled to Amperity, either directly (by going into the SFTP site and selecting it) or by providing a filename pattern.
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-select-file-start
+          :end-before: .. sources-steps-03-select-file-end
 
        .. image:: ../../images/mockup-sources-add-03-file-settings.png
           :width: 380 px
@@ -195,11 +186,13 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :align: left
           :class: no-scaled-link
 
-       Click **Browse** to open the **File browser**. Select the file that will be pulled to Amperity, and then click **Accept**.
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-start
+          :end-before: .. sources-steps-03-browse-end
 
-       Use a filename pattern to define files that will be loaded on a recurring basis, but will have small changes to the filename over time, such as having a datestamp appended to the filename.
-
-       .. note:: For a new feed, this file is *also* used as the sample file that is used to define the schema. For an existing feed, this file must match the schema that has already been defined.
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-note-start
+          :end-before: .. sources-steps-03-browse-note-end
 
        .. image:: ../../images/mockup-sources-add-03-file-browser-sftp.png
           :width: 500 px
@@ -207,8 +200,9 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :align: left
           :class: no-scaled-link
 
-
-       Use the **PGP credential** setting to specify the credentials to use for an encrypted file.
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-pgp-start
+          :end-before: .. sources-steps-03-pgp-end
 
        .. image:: ../../images/mockup-sources-add-03-pgp-credential.png
           :width: 500 px
@@ -222,7 +216,9 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Review the file.
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-start
+          :end-before: .. sources-steps-04-review-end
 
        .. image:: ../../images/mockup-sources-add-03-file-formatting.png
           :width: 380 px
@@ -230,9 +226,21 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :align: left
           :class: no-scaled-link
 
-       The contents of the file may be viewable in their raw format. You may need to adjust the value for the **Header Row** setting to "0".
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-contents-start
+          :end-before: .. sources-steps-04-review-contents-end
 
        .. important:: Files provided to Amperity from |source-name| are in a raw text format. Amperity may show formatting details. Use a custom domain table to define a schema for the contents of the text file, after which you may apply semantic tags.
+
+          Adjust the value for the **Header Row** setting to "0" to view the contents of the file in its raw format.
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-pgp-start
+          :end-before: .. sources-steps-04-review-pgp-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-formatting-details-start
+          :end-before: .. sources-steps-04-review-formatting-details-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -240,56 +248,68 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :alt: Step 5.
           :align: left
           :class: no-scaled-link
-     - A feed defines the schema for a file that is loaded to Amperity, after which that data is ready for use with downstream workflows within Amperity.
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-options-start
+          :end-before: .. sources-steps-05-feed-options-end
 
-       **Use a new feed and the truncate and load option**
 
-       To use a new feed, choose the **Create new feed** option, select an existing source from the **Source** dropdown *or* type the name of a new data source, and then enter the name of the feed.
+       **New feed**
 
-       .. image:: ../../images/mockup-sources-add-04-feed-new.png
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-new-start
+          :end-before: .. sources-steps-05-feed-new-end
+
+
+       **Existing feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-existing-start
+          :end-before: .. sources-steps-05-feed-existing-end
+
+
+       **Pull data**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-start
+          :end-before: .. sources-steps-05-load-types-end
+
+       .. image:: ../../images/mockup-sources-add-04-feed-load-type.png
           :width: 380 px
           :alt: Add 
           :align: left
           :class: no-scaled-link
 
-       Use the **Truncate and load** option. This will delete all rows in the associated domain table prior to loading data each time the courier is run.
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-upsert-start
+          :end-before: .. sources-steps-05-load-type-upsert-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-truncate-start
+          :end-before: .. sources-steps-05-load-type-truncate-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-note-start
+          :end-before: .. sources-steps-05-load-types-note-end
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step 6.
           :align: left
           :class: no-scaled-link
-     - .. include:: ../../amperity_reference/source/domain_tables.rst
-          :start-after: .. domain-tables-custom-sql-use-case-fixed-width-fields-start
-          :end-before: .. domain-tables-custom-sql-use-case-fixed-width-fields-end
-
-       .. note:: The file provided by |source-name| will contain fields that are unique to your workflow; the SQL that is required to apply formatting to each of the fixed-width fields will vary.
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-06-feed-editor-start
+          :end-before: .. sources-steps-06-feed-editor-end
 
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
-          :class: no-scaled-link
-     - Use the feed editor to do all of the following:
-
-       * Set the primary key
-       * Choose the field that best presents when the data in the table was last updated; if there is not an obvious choice, use the "Generate an updated field" option.
-       * For each field in the incoming data, validate the field name and semantic tag columns in the feed. Make any necessary adjustments.
-       * For tables that contain customer records, enable the "Make available to Stitch" to ensure the values in this data source are used for identity resolution.
-
-       When finished, click **Activate**.
-
-
-   * - .. image:: ../../images/steps-08.png
-          :width: 60 px
           :alt: Step 7.
           :align: left
           :class: no-scaled-link
-     - Find the courier related to the feed that was just activated, and then run it manually.
-
-       On the **Sources** page, under **Couriers**, find the courier you want to run and then select **Run** from the actions menu.
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-courier-start
+          :end-before: .. sources-steps-07-courier-end
 
        .. image:: ../../images/mockup-courier-add-07-menu-run.png
           :width: 380 px
@@ -297,7 +317,9 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :align: left
           :class: no-scaled-link
 
-       Select a date from the calendar picker that is before today, but after the date on which the file was added to the |source-name| bucket.
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-calendar-start
+          :end-before: .. sources-steps-07-calendar-end
 
        .. image:: ../../images/mockup-courier-add-07-menu-load-data.png
           :width: 380 px
@@ -305,13 +327,9 @@ Browse the |source-name| bucket to select a file, and then review the settings f
           :align: left
           :class: no-scaled-link
 
-       Leave the load options in the **Run courier** dialog box unselected, and then click **Run**.
-
-       After the courier has run successfully, inspect the domain table that contains the data that was loaded to Amperity. After you have verified that the data is correct, you may do any of the following:
-
-       * If the data contains customer records, edit the feed and make that data available to Stitch.
-       * If the data should be loaded to Amperity on a regular basis, add the courier to a courier group that runs on the desired schedule.
-       * If the data will be a foundation for custom domain tables, use Spark SQL to build out that customization.
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-run-start
+          :end-before: .. sources-steps-07-run-end
 
 .. source-ccc-add-data-source-steps-end
 

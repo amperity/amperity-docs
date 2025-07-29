@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -65,6 +66,7 @@ Configure query
    Uncomment the following lines and replace them with the names of unique foreign keys, one pair of lines per unique foreign key or customer key:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3,4
 
       t1.amperity_id AS amp_id_a,
@@ -83,6 +85,7 @@ Configure query
    For example, for foreign keys named **fk-customer-id** and **fk-campaign**, with the latter concatenated against the **EmailList** data source:
 
    .. code-block:: sql
+      :linenos:
 
       t1.amperity_id AS amp_id_a,
       t2.amperity_id AS amp_id_b,
@@ -96,6 +99,7 @@ Configure query
 #. Update the INNER JOIN for the same set of foreign keys:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
@@ -106,6 +110,7 @@ Configure query
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       INNER JOIN Unified_Coalesced AS t2
         ON  t1.amperity_id = t2.amperity_id
@@ -118,6 +123,7 @@ Configure query
    Add the following pair of lines for each added semantic value:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3,4
 
       t1.email AS email_a,
@@ -128,6 +134,7 @@ Configure query
    For example, to add **address** and **loyalty** (a custom semantic typically associated with loyalty programs):
 
    .. code-block:: sql
+      :linenos:
 
       t1.email AS email_a,
       t2.email AS email_b,
@@ -139,6 +146,7 @@ Configure query
 #. Replace **100** with the value that best represents the definition of high-frequency email:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       LEFT JOIN (
@@ -149,6 +157,7 @@ Configure query
    and then set the value for **high_freq_email** to NULL or TRUE:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
@@ -158,6 +167,7 @@ Configure query
 #. Update the INNER JOIN for all foreign keys:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
@@ -168,6 +178,7 @@ Configure query
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       INNER JOIN Unified_Coalesced AS t2
         ON  t1.amperity_id = t2.amperity_id
@@ -184,6 +195,7 @@ Configure query
    Uncomment the following line and replace **unmatched_field** with the names of the field for which you want to explore unmatched values. Add a line for each field:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 7
 
       INNER JOIN Unified_Coalesced AS t2
@@ -197,6 +209,7 @@ Configure query
    For example, to add **address** and **loyalty** to the list of conditions:
 
    .. code-block:: sql
+      :linenos:
 
       INNER JOIN Unified_Coalesced AS t2
         ON  t1.amperity_id = t2.amperity_id

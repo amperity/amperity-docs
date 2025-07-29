@@ -59,6 +59,7 @@ SQL query for PII table
 Use a SQL query similar to:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id AS amperity_id

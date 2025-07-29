@@ -1,6 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 
+.. meta::
     :description lang=en:
         Amperity predictive modeling is built from your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior.
 
@@ -11,7 +12,6 @@
 .. meta::
     :content class=swiftype name=title data-type=string:
         Predictive models
-
 
 ==================================================
 About predictive models

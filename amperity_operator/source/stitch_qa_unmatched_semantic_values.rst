@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -65,6 +66,7 @@ Configure query
 #. Update the list of matching fields to contain any additional semantic or custom fields required by your tenant:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 10
 
       SELECT DISTINCT
@@ -81,6 +83,7 @@ Configure query
    For example, to add **address**:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT DISTINCT
         ,t1.amperity_id AS amp_id_a
@@ -97,6 +100,7 @@ Configure query
 #. Update the matching records for all foreign keys:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 1,2
 
       -- ,t1.fk_field_name AS fk_field_name_a
@@ -105,6 +109,7 @@ Configure query
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       ,t1.fk_customer_id AS fk_customer_id_a
       ,t2.fk_customer_id AS fk_customer_id_b
@@ -114,6 +119,7 @@ Configure query
 #. Update the high-frequency value--"100"--for this semantic:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 7
 
       FROM
@@ -129,6 +135,7 @@ Configure query
 #. Update the **INNER JOIN** for any required additional filtering to be done prior to returning matching conditions:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6,7
 
       INNER JOIN
@@ -142,6 +149,7 @@ Configure query
    For example, to require given name and surname to match when email addresses do not match:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6,7
 
       INNER JOIN
@@ -155,6 +163,7 @@ Configure query
 #. If using the :doc:`bad-values blocklist <blocklist_bad_values>` you may apply those blocklist values to the results of this query:
 
    .. code-block:: sql
+      :linenos:
 
       -- EXCLUDE ENTIRE ROW
       -- AND t1.has_blv IS NULL
@@ -168,6 +177,7 @@ Configure query
    Uncomment the following line to exclude on the entire row:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2
 
       -- EXCLUDE ENTIRE ROW
@@ -182,6 +192,7 @@ Configure query
    Uncomment the following line to exclude on email addresses only:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6
 
       -- EXCLUDE ENTIRE ROW
