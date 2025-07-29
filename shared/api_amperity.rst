@@ -7,74 +7,24 @@
 
 .. term-http-methods-start
 
-.. image:: ../../images/api-request-get-audit-events.png
-   :width: 440 px
-   :alt: GET /audit-events
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_audit_events_list.html
+* `GET /audit-events <https://docs.amperity.com/api/endpoint_get_audit_events_list.html>`__
 
-.. image:: ../../images/api-request-get-campaigns-drafts.png
-   :width: 440 px
-   :alt: GET /campaign-drafts
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_campaign_drafts_list.html
+* `GET /campaign-drafts <https://docs.amperity.com/api/endpoint_get_campaign_drafts_list.html>`__
 
-.. image:: ../../images/api-request-get-campaigns.png
-   :width: 440 px
-   :alt: GET /campaigns
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_campaigns_list.html
+* `GET /campaigns <https://docs.amperity.com/api/endpoint_get_campaigns_list.html>`__
 
-.. image:: ../../images/api-request-get-ingest-jobs.png
-   :width: 440 px
-   :alt: GET /ingest/jobs
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_ingest_jobs.html
+* `GET /ingest/jobs <https://docs.amperity.com/api/endpoint_get_ingest_jobs.html>`__
 
-.. image:: ../../images/api-request-get-ingest-jobs-id.png
-   :width: 440 px
-   :alt: GET /ingest/jobs/{id}
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_ingest_jobs_id.html
+* `GET /ingest/jobs/{id} <https://docs.amperity.com/api/endpoint_get_ingest_jobs_id.html>`__
 
-.. image:: ../../images/api-request-get-segments.png
-   :width: 440 px
-   :alt: GET /segments
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_segments_list.html
+* `GET /segments <https://docs.amperity.com/api/endpoint_get_segments_list.html>`__
 
-.. image:: ../../images/api-request-get-workflow-runs-list.png
-   :width: 440 px
-   :alt: GET /workflow/runs/
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_workflows_list.html
+* `GET /workflow/runs/ <https://docs.amperity.com/api/endpoint_get_workflows_list.html>`__
 
-.. image:: ../../images/api-request-get-workflow-runs-fetch.png
-   :width: 440 px
-   :alt: GET /workflow/runs/{id}
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_get_workflows_fetch.html
+* `GET /workflow/runs/{id} <https://docs.amperity.com/api/endpoint_get_workflows_fetch.html>`__
 
-.. image:: ../../images/api-post-workflow-run-start.png
-   :width: 440 px
-   :alt: POST /workflow/runs
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_post_workflows_start.html
+* `POST /workflow/runs <https://docs.amperity.com/api/endpoint_post_workflows_start.html>`__
 
-.. image:: ../../images/api-post-workflow-run-stop.png
-   :width: 440 px
-   :alt: POST /workflow/runs/{id}/stop
-   :align: left
-   :class: no-scaled-link
-   :target: https://docs.amperity.com/api/endpoint_post_workflows_stop.html
-   
+* `POST /workflow/runs/{id}/stop <https://docs.amperity.com/api/endpoint_post_workflows_stop.html>`__
+
 .. term-http-methods-end

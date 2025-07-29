@@ -37,9 +37,15 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 .. destinations-steps-add-destinations-start
 
-Open the **Destinations** page, and then click the **Add destination** button.
+Open the **Destinations** page, select the **New destinations** button, and then select **Orchestration**.
 
 .. destinations-steps-add-destinations-end
+
+.. campaigns-steps-add-destinations-start
+
+Open the **Destinations** page, select the **New destinations** button, and then select **Campaign**.
+
+.. campaigns-steps-add-destinations-end
 
 **Step 01b**
 
@@ -52,6 +58,15 @@ To configure a destination for |destination-name|, do one of the following:
 
 .. destinations-steps-add-destinations-select-end
 
+.. campaigns-steps-add-destinations-select-start
+
+To configure a campaign for |destination-name|, do one of the following:
+
+#. Click the row in which |destination-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+#. Search for |destination-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
+
+.. campaigns-steps-add-destinations-select-end
+
 **Step 02a**
 
 .. destinations-steps-select-credential-start
@@ -59,6 +74,12 @@ To configure a destination for |destination-name|, do one of the following:
 Select the credential for |destination-name| from the **Credential** dropdown, and then click **Continue**.
 
 .. destinations-steps-select-credential-end
+
+.. campaigns-steps-select-credential-start
+
+Select the credential for |destination-name| from the **Credential** dropdown, and then click **Continue**.
+
+.. campaigns-steps-select-credential-end
 
 **Step 02b**
 
@@ -68,6 +89,12 @@ Click the "Test connection" link on the "Configure destination" page to verify t
 
 .. destinations-steps-test-connection-end
 
+.. campaigns-steps-test-connection-start
+
+Click the "Test connection" link on the "Configure destination" page to verify that Amperity can connect to |destination-name|.
+
+.. campaigns-steps-test-connection-end
+
 **Step 03**
 
 .. destinations-steps-name-and-description-start
@@ -76,6 +103,12 @@ In the "Destination settings" dialog box, assign the destination a name and desc
 
 .. destinations-steps-name-and-description-end
 
+.. campaigns-steps-name-and-description-start
+
+In the "Destination settings" dialog box, assign the destination a name and description that ensures other users of Amperity can recognize when to use this destination.
+
+.. campaigns-steps-name-and-description-end
+
 **Step 04**
 
 .. destinations-steps-settings-start
@@ -83,6 +116,26 @@ In the "Destination settings" dialog box, assign the destination a name and desc
 Configure the following settings, and then click "Save".
 
 .. destinations-steps-settings-end
+
+.. campaigns-steps-settings-start
+
+Configure the following settings, and then click "Save".
+
+.. campaigns-steps-settings-end
+
+.. campaigns-steps-campaign-settings-start
+
+Under **Campaign settings** select one of the following:
+
+* **Send audience list as separate files**
+
+  This option sends a standalone file for each treatment group sending an audience to |destination-name|.
+
+* **Send audience lists as a single file**
+
+  This option consolidates all treatment groups into a single file before sending the audience to |destination-name|.
+
+.. campaigns-steps-campaign-settings-end
 
 **Step 05**
 
@@ -102,6 +155,17 @@ After configuring this destination users may use orchestrations to send query re
 
 .. destinations-steps-business-users-orchestration-only-end
 
+.. campaigns-steps-business-users-start
+
+After configuring this destination users may send campaigns to |destination-name|.
+
+.. campaigns-steps-business-users-end
+
+.. campaigns-steps-business-users-orchestration-only-start
+
+After configuring this destination users may send campaigns to |destination-name|.
+
+.. campaigns-steps-business-users-orchestration-only-end
 
 
 
@@ -281,7 +345,7 @@ Applies to ActiveCampaign, Cordial, HubSpot, Klaviyo, Listrak and others. Try to
 
 .. setting-common-list-name-start
 
-The primary key for the audience. Set to |audience-primary-key|.
+The name of the list managed by Amperity.
 
 .. setting-common-list-name-end
 
@@ -370,7 +434,7 @@ The remote folder to which Amperity sends data.
 
 .. setting-common-remote-folder-forward-slash-start
 
-Use a forward slash--"/"--as the first character for this value. For example: |remote-folder|. For example: |remote-folder|.
+Use a forward slash--"/"--as the first character for this value. For example: |remote-folder|.
 
 .. setting-common-remote-folder-forward-slash-end
 
@@ -1041,6 +1105,27 @@ The schema name to use for Databricks.
 The table name to use for Databricks.
 
 .. setting-databricks-table-name-end
+
+
+
+
+
+**DOTDIGITAL**
+
+Settings unique to Dotdigital.
+
+**List name**
+
+See common list name.
+
+**Contact identifier type**
+
+.. setting-dotdigital-contact-identifier-type-start
+
+The primary identifier for matching contacts in |destination-name|. Use "email" for email campaigns. Use "mobile_number" for SMS campaigns.
+
+.. setting-dotdigital-contact-identifier-type-end
+
 
 
 

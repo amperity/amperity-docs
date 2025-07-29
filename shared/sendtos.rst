@@ -31,6 +31,7 @@
 The default audience list in |destination-name| requires only an email address. This requires a simple ``SELECT`` statement that returns only the Amperity ID and its associated email address:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ,amperity_id AS "Amperity ID"
@@ -51,8 +52,8 @@ The default audience list in |destination-name| requires only an email address. 
 
 .. sendtos-add-orchestration-generic-start
 
-#. From the **Destinations** tab, click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** dropdown, select **Query**.
+#. Open the **Activations** page, select the **Orchestrations** tab, and then click the **Add orchestration** button. This opens the **Add orchestration** dialog box.
+#. From the **Object type** dropdown, select **Query**.
 #. From the **Object** dropdown, select the query for which results will be sent to |destination-name|.
 #. From the **Destination** dropdown, select a destination that is configured for sending data to |destination-name|.
 #. Verify all settings.
@@ -64,13 +65,13 @@ The default audience list in |destination-name| requires only an email address. 
 
 .. sendtos-add-orchestration-snowflake-start
 
-#. From the **Destinations** tab, click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** dropdown, select **Database Export** or **Query**.
+#. Open the **Activations** page, select the **Orchestrations** tab, and then click the **Add orchestration** button. This opens the **Add orchestration** dialog box.
+#. From the **Object type** dropdown, select **Query**.
 #. From the **Object** dropdown, select the object to be exported to Snowflake.
 
    .. note:: This name will also be the name of the orchestration.
 #. From the **Destination** dropdown, select the name of the destination that is configured to send data to Snowflake.
-#. From the **Data Template** dropdown, select the data template that maps a database export or query to a table in Snowflake.
+#. From the **Data template** dropdown, select the data template that maps a database export or query to a table in Snowflake.
 #. Verify the **Snowflake Location** has the correct namespace, including the appended Amperity table name. This should be a period-delimited list of the Snowflake database name, the Snowflake schema name, and the Snowflake table name:
 
    ::
@@ -103,7 +104,7 @@ Run the orchestration manually to validate that it works.
 
 .. sendtos-run-orchestration-steps-start
 
-#. From the **Destinations** tab, under **Orchestrations**, open the |fa-kebab| menu for the |destination-name| orchestration, and then select **Run**.
+#. Open the **Activations** page, select the **Orchestrations** tab, and then open the |fa-kebab| menu for the |destination-name| orchestration. Select **Run**.
 #. The **Status** column for the orchestration will update to say "Waiting to start...", after which the notifications pane will update to include a notification that shows the current status.
 #. When the orchestration has run successfully, the status is updated to "Completed".
 

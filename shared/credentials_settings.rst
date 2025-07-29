@@ -887,6 +887,27 @@ See SFTP.
 
 
 
+**Dotdigital**
+
+**API username**
+
+.. credential-dotdigital-api-username-start
+
+The username for the API user with permission to access |destination-name|. The API user must have permission to access account information, create and update contacts, manage address books, and manage data fields.
+
+.. credential-dotdigital-api-username-end
+
+**API password**
+
+.. credential-dotdigital-api-password-start
+
+The password for the API user.
+
+.. credential-dotdigital-api-password-end
+
+
+
+
 
 **EPSILON ABACUS**
 

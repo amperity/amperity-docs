@@ -120,7 +120,8 @@ Review the following sample policy, and then add a similar policy to the custome
 
 The policy for the customer-managed Amazon S3 bucket is unique, but will be similar to:
 
-::
+.. code-block:: salt
+   :linenos:
 
    {
      "Statement": [

@@ -7,48 +7,6 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
-
-**Example entities list**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-entities-list-intro-start
-   :end-before: .. sources-add-courier-entities-list-intro-end
-
-.. source-xxxxx-add-courier-entities-list-start
-
-For example:
-
-::
-
-   [
-     {
-       "object/type": "file",
-       "object/file-pattern": "'/path/to/customer-record.csv'",
-       "object/land-as": {
-         "file/header-rows": 1,
-         "file/tag": "customer-record-files",
-         "file/content-type": "text/csv"
-       }
-     }
-   ]
-
-.. source-xxxxx-add-courier-entities-list-end
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-entities-list-note-start
-   :end-before: .. sources-add-courier-entities-list-note-end
-
-**To add a courier**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-sftp-start
-   :end-before: .. sources-add-courier-sftp-end
-
-
-
-
-
-
 ADD THIS TO END OF GET DETAILS FOR ALL SOURCES AND CLEAN UP GET DETAILS
 
 
@@ -136,88 +94,9 @@ USE THIS FOR ALL SOURCES THAT ALLOW OAUTH
 
 
 
-**Filedrop requirements**
-
-TODO: Consolidate the "requirements" into the Get Details sections, as much as possible.
-
-.. sources-filedrop-requirements-start
-
-Amperity must connect to, and then pull data from |source-name|. Configure the courier that will pull data to Amperity with credentials--username and passphrase--that have permission to read data from |source-name|.
-
-.. sources-filedrop-requirements-end
-
-.. sources-filedrop-requirements-use-snappass-start
-
-.. tip:: Use SnapPass to share credentials between individuals who are responsible for configuring this courier.
-
-.. sources-filedrop-requirements-use-snappass-end
-
-
 
 
 **Add courier**
-
-
-
-THERE ARE STEPS FOR SFTP ... maybe can consolidate for SFTP/Azure/S3/GCP
-THERE ARE STEPS FOR APIs << these might be unique or at least have unique settings
-THERE ARE STEPS FOR SNOWFLAKE << these are repetitive except potentially the S3 vs. Azure
-THERE ARE STEPS FOR FIVETRAN? << these should be repetitive? "To add a courier for table objects" << these are Snowflakey, but should be their own pattern
-THERE ARE SNOWFLAKES? << Many :(
-THERE IS AN OAUTH vs. NOT-OAUTH STEPS ALSO variance with specific credentials steps, already created
-
-
-
-
-
-
-
-
-
-SFTP COURIERS
-SFTP COURIERS
-SFTP COURIERS
-
-This section applies ONLY to data sources that use SFTP.
-
-.. sources-add-courier-entities-list-intro-sftp-only-start
-
-An entites list defines the list of files to be pulled to Amperity, along with any file-specific details (such as file name, file type, if header rows are required, and so on).
-
-.. sources-add-courier-entities-list-intro-sftp-only-end
-
-.. sources-add-courier-entities-list-note-sftp-only-start
-
-.. note:: You may configure files as required (``"object/optional": false``) or optional (``"object/optional": true``.) A courier will fail if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
-
-.. sources-add-courier-entities-list-note-sftp-only-end
-
-This section has an introduction to entities lists and a note about required/optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. This section applies to SFTP connectors only.
-
-.. sources-add-courier-sftp-only-start
-
-#. From the **Sources** tab, click **Add Courier**. The **Select integration** page opens.
-#. Find, and then click the row that contains |plugin-name|. The **Add Courier** page opens.
-
-   This automatically selects |credential-type| as the **Credential Type**. Add the hostname for the location from which data is pulled. For example: |sftp-hostname|.
-#. Enter the name of the courier. For example: "|source-name|".
-#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** page.
-#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. Enter a name for the credential (typically "|source-name|"), and then enter the username and password required to access this location.
-#. Under **Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
-
-   .. note:: If the file is contained within a ZIP archive, you may need to specify the fully qualified filename within the ZIP archive. For example, to import a file named "items.csv" you may need to specify "export\items.csv".
-#. Under **Settings** set the load operations to a string that is obviously incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
-
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the feed is configured and activated you can edit the courier, and then update the feed ID with the correct identifier.
-
-   .. caution:: If load operations are not set to ``{}`` the validation test for the courier configuration settings will fail.
-#. Click **Save**.
-
-.. sources-add-courier-sftp-only-end
-
-SFTP COURIERS
-SFTP COURIERS
-SFTP COURIERS
 
 
 
@@ -735,3 +614,262 @@ After running the |source-name| courier it will create a series of feeds and dom
 Select a time period to be run, and then click **Run**.
 
 .. sources-verify-feeds-and-domain-tables-end
+
+
+
+
+
+
+
+
+**REVAMPED SOURCES**
+
+
+**STEP 00**
+
+.. sources-steps-00-intro-start
+
+Add a data source that pulls data from |source-name|.
+
+Configure Amperity to pull one or more files, and then for each file review the settings, define the schema, activate the courier, and then run a manual workflow. Review the data that is added to the domain table.
+
+.. sources-steps-00-intro-end
+
+
+
+**STEP 01**
+
+.. sources-steps-01-open-dialog-start
+
+Open the **Sources** page to configure |source-name|.
+
+Click the **Add courier** button to open the **Add courier** dialog box.
+
+.. sources-steps-01-open-dialog-end
+
+<image in-between>
+
+.. sources-steps-01-select-source-start
+
+Select |source-name|. Do one of the following:
+
+#. Click the row in which |source-name| is located. Sources are listed alphabetically.
+#. Search for |source-name|. Start typing |filter-the-list|. The list will filter to show only matching sources.
+
+.. sources-steps-01-select-source-end
+
+
+
+**STEP 02**
+
+(shared in from credentials)
+
+
+
+**STEP 03**
+
+.. sources-steps-03-select-file-start
+
+Select the file that will be pulled to Amperity, either directly (by going into the SFTP site and selecting it) or by providing a filename pattern.
+
+.. sources-steps-03-select-file-end
+
+<image in-between>
+
+.. sources-steps-03-browse-start
+
+Click **Browse** to open the **File browser**. Select the file that will be pulled to Amperity, and then click **Accept**.
+
+Use a filename pattern to define files that will be loaded on a recurring basis, but will have small changes to the filename over time, such as having a datestamp appended to the filename.
+
+.. sources-steps-03-browse-end
+
+.. sources-steps-03-browse-note-start
+
+.. note:: For a new feed, this file is *also* used as the sample file that is used to define the schema. For an existing feed, this file must match the schema that has already been defined.
+
+.. sources-steps-03-browse-note-end
+
+<image in-between>
+
+.. sources-steps-03-pgp-start
+
+Use the **PGP credential** setting to specify the credentials to use for an encrypted file.
+
+.. sources-steps-03-pgp-end
+
+
+
+**STEP 04**
+
+.. sources-steps-04-review-start
+
+Review the file.
+
+.. sources-steps-04-review-end
+
+<image in-between>
+
+.. sources-steps-04-review-contents-start
+
+The contents of the file may be viewed as a table and in the raw format. Switch between these views using the **Table** and **Raw** buttons, and then click **Refresh** to view the file in that format.
+
+.. sources-steps-04-review-contents-end
+
+.. sources-steps-04-review-pgp-start
+
+.. note:: PGP encrypted files can be previewed. Apache Parquet PGP encrypted files must be less than 500 MB to be previewed.
+
+.. sources-steps-04-review-pgp-end
+
+.. sources-steps-04-review-formatting-details-start
+
+Amperity will infer formatting details, and then adds these details to a series of settings located along the left side of the file view. File settings include:
+
+* Delimiter
+* Compression
+* Escape character
+* Quote character
+* Header row
+
+Review the file, and then update these settings, if necessary.
+
+.. sources-steps-04-review-formatting-details-end
+
+.. sources-steps-04-file-types-start
+
+.. note:: Amperity supports the following file types: |format_avro|, |format_parquet|, |format_csv|, DSV, |format_json|, |format_ndjson|, |format_psv|, |format_tsv|, and |format_xml|.
+
+   Refer to those reference pages for details about each of the individual file formats.
+
+   Files that contain nested JSON (or "complex JSON") or XML may require using the legacy courier configuration.
+
+.. sources-steps-04-file-types-end
+
+
+
+**STEP 05**
+
+.. sources-steps-05-feed-options-start
+
+A feed defines the schema for a file that is loaded to Amperity, after which that data is loaded into a domain table and ready for use with workflows within Amperity.
+
+.. sources-steps-05-feed-options-end
+
+**New feed**
+
+.. sources-steps-05-feed-new-start
+
+To use a new feed, choose the **Create new feed** option, select an existing source from the **Source** dropdown *or* type the name of a new data source, and then enter the name of the feed.
+
+.. image:: ../../images/mockup-sources-add-04-feed-new.png
+   :width: 380 px
+   :alt: Add 
+   :align: left
+   :class: no-scaled-link
+
+After you choose a load type and save the courier configuration, you will configure the feed using the data within the sample file.
+
+.. sources-steps-05-feed-new-end
+
+**Existing feed**
+
+.. sources-steps-05-feed-existing-start
+
+To use an existing feed, choose the **Use existing feed** option to use an existing schema.
+
+.. image:: ../../images/mockup-sources-add-04-feed-existing.png
+   :width: 380 px
+   :alt: Add 
+   :align: left
+   :class: no-scaled-link
+
+This option requires this file to match all of the feed-specific settings, such as incoming field names, field types, and primary keys. The data within the file may be different
+
+.. sources-steps-05-feed-existing-end
+
+**Pull data**
+
+.. sources-steps-05-load-types-start
+
+Define how Amperity will pull data from |source-name| and how it is loaded to a domain table.
+
+.. sources-steps-05-load-types-end
+
+<image in-between>
+
+**Load type: Upsert**
+
+.. sources-steps-05-load-type-upsert-start
+
+Use the **Upsert** option to use the selected file update existing records and insert records that do not exist.
+
+.. sources-steps-05-load-type-upsert-end
+
+**Load type: Truncate and upsert**
+
+.. sources-steps-05-load-type-truncate-start
+
+Use the **Truncate and upsert** option to delete all records in the existing table, and then insert records.
+
+.. sources-steps-05-load-type-truncate-end
+
+**Note**
+
+.. sources-steps-05-load-types-note-start
+
+.. note:: When a file is loaded to a domain table using an existing file, the file that is loaded *must* have the same schema as the existing feed. The data in the file may be new.
+
+.. sources-steps-05-load-types-note-end
+
+
+
+**STEP 06**
+
+.. sources-steps-06-feed-editor-start
+
+Use the feed editor to do all of the following:
+
+* Set the primary key
+* Choose the field that best presents when the data in the table was last updated; if there is not an obvious choice, use the "Generate an updated field" option.
+* For each field in the incoming data, validate the field name and semantic tag columns in the feed. Make any necessary adjustments.
+* For tables that contain customer records, enable the "Make available to Stitch" to ensure the values in this data source are used for identity resolution.
+
+When finished, click **Activate**.
+
+.. sources-steps-06-feed-editor-end
+
+
+
+**STEP 07**
+
+.. sources-steps-07-courier-start
+
+Find the courier related to the feed that was just activated, and then run it manually.
+
+On the **Sources** page, under **Couriers**, find the courier you want to run and then select **Run** from the actions menu.
+
+.. sources-steps-07-courier-end
+
+<image in-between>
+
+.. sources-steps-07-calendar-start
+
+Select a date from the calendar picker that is before today, but after the date on which the file was added to the |source-name| bucket.
+
+.. sources-steps-07-calendar-end
+
+<image in-between>
+
+.. sources-steps-07-run-start
+
+Leave the load options in the **Run courier** dialog box unselected, and then click **Run**.
+
+After the courier has run successfully, inspect the domain table that contains the data that was loaded to Amperity. After you have verified that the data is correct, you may do any of the following:
+
+* If the data contains customer records, edit the feed and make that data available to Stitch.
+* If the data should be loaded to Amperity on a regular basis, add the courier to a courier group that runs on the desired schedule.
+* If the data will be a foundation for custom domain tables, use Spark SQL to build out that customization.
+
+.. sources-steps-07-run-end
+

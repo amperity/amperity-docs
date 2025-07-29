@@ -110,7 +110,7 @@ Acxiom collects, analyzes, and sells information about customers and businesses 
 .. 
 .. notes
 .. there are two definitions:
-.. the first is associated with the customer profile and applies to the Sources tab and the Unified Coalesced table
+.. the first is associated with the customer profile and applies to the Sources page and the Unified Coalesced table
 .. the second is associated with merged PII data, the customer 360 database, and segmentation
 .. 
 
@@ -152,7 +152,7 @@ Address-based householding is a process that standardizes addresses, pairs them 
 .. 
 .. notes
 .. there are two definitions:
-.. the first is associated with the customer profile and applies to the Sources tab and the Unified Coalesced table
+.. the first is associated with the customer profile and applies to the Sources page and the Unified Coalesced table
 .. the second is associated with merged PII data, the customer 360 database, and segmentation
 .. 
 
@@ -723,7 +723,7 @@ An automatic query is an active query configured to run whenever upstream data c
 
 .. term-automatic-segment-start
 
-An automatic segment is an active segment configured to run whenever upstream data changes. Configure an automatic segment from the **Segments** tab.
+An automatic segment is an active segment configured to run whenever upstream data changes. Configure an automatic segment from the **Segments** page.
 
 .. term-automatic-segment-end
 
@@ -2245,6 +2245,15 @@ Domo is a cloud-based, self-service BI tool that helps you visualize data from a
 .. term-domo-end
 
 
+**Dotdigital**
+
+.. term-dotdigital-start
+
+Dotdigital is a cross-channel marketing platform for building customer connections and personalized campaigns across channels.
+
+.. term-dotdigital-end
+
+
 **downstream**
 
 .. term-downstream-start
@@ -3494,7 +3503,7 @@ A conditional split node splits a journey into branching paths, where each path 
 
 .. term-journey-node-delay-start
 
-A delay node defines the length of time to wait before the next step in a journey begins.
+A delay node defines a minimum amount of time that customers must wait before moving to the next step in a journey.
 
 .. term-journey-node-delay-end
 
@@ -3558,6 +3567,8 @@ A JSON Web Token (JWT) is a compact, URL-safe means of representing claims trans
 
 
 **Kibo**
+
+.. TODO: Is back to Monetate.
 
 .. term-kibo-start
 
@@ -4170,6 +4181,8 @@ MoEngage is a cross-channel customer engagement platform built for marketers and
 
 **Monetate**
 
+.. TODO: Is now Kibo. Is now back to Monetate.
+
 .. term-monetate-start
 
 Monetate offers solutions for customer segmentation and targeting, campaign testing and optimization, 1:1 personalization, audience insights, and customer recommendations.
@@ -4186,11 +4199,11 @@ Monetate offers solutions for customer segmentation and targeting, campaign test
 .. term-mosaic-usa-end
 
 
-**Movable Ink**
+**Moveable Ink**
 
 .. term-moveable-ink-start
 
-Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. term-moveable-ink-end
 
@@ -5517,7 +5530,7 @@ The compliance request. Possible values: **delete**, **delete_pii**, or **dsar**
 
 .. term-resource-group-start
 
-A resource group represents one or more databases in the **Customer 360** tab. Users with access to a resource group can build queries and segments against that database and can send data from that database to downstream workflows.
+A resource group represents one or more databases in the **Customer 360** page. Users with access to a resource group can build queries and segments against that database and can send data from that database to downstream workflows.
 
 .. term-resource-group-end
 
