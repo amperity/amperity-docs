@@ -108,7 +108,7 @@ Completed
 
 .. notifications-type-completed-start
 
-A completed notification -- indicated by the |notification-complete| icon -- is shown when the workflow has finished running and all steps in that workflow were successful. This is the most common type of notification that you will see in the notification pane in your daily production tenant.
+A completed notification--indicated by the |notification-complete| icon--is shown when the workflow has finished running and all steps in that workflow were successful. This is the most common type of notification that you will see in the notification pane in your daily production tenant.
 
 .. notifications-type-completed-end
 
@@ -136,7 +136,7 @@ Warnings
 
 .. notifications-type-warnings-start
 
-A warning notification -- indicated by the |notification-alert| icon -- is shown when a workflow is able to complete all steps, but detects issues with one (or more) steps within the workflow.
+A warning notification--indicated by the |notification-alert| icon--is shown when a workflow is able to complete all steps, but detects issues with one (or more) steps within the workflow.
 
 .. notifications-type-warnings-end
 
@@ -173,7 +173,7 @@ Errors
 
 .. notifications-type-errors-start
 
-An error notification -- indicated by the |notification-error| icon -- is shown when a workflow is unable to complete all steps.
+An error notification--indicated by the |notification-error| icon--is shown when a workflow is unable to complete all steps.
 
 .. notifications-type-errors-end
 

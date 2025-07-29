@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -267,7 +268,7 @@ An orchestration group can be configured to be run manually.
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page, and then from the **Orchestrations** section, click the **Add orchestration group** link.
 
@@ -275,7 +276,7 @@ An orchestration group can be configured to be run manually.
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - In the **Add orchestration group** dialog box, give the orchestration group a name, and then move the slider to enabled.
 
@@ -283,7 +284,7 @@ An orchestration group can be configured to be run manually.
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Under **Run options**, select **Run manually**.
 
@@ -297,7 +298,7 @@ An orchestration group can be configured to be run manually.
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - To run the orchestration group, on the **Destinations** page, and then from the actions menu for that orchestration group, select the **Run** menu option.
 
@@ -311,7 +312,7 @@ An orchestration group can be configured to be run manually.
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Click **Save**.
 

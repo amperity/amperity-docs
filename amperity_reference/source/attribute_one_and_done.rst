@@ -19,7 +19,7 @@ One and done?
 
 .. TODO: The following sections are the first paragraph and the "One and Done attribute" sections from the onetime_buyers topic. Keep these synchronized.
 
-.. include:: ../../amperity_ampiq/source/onetime_buyers.rst
+.. include:: ../../amperity_user/source/onetime_buyers.rst
    :start-after: .. onetime-buyers-about-start
    :end-before: .. onetime-buyers-about-end
 

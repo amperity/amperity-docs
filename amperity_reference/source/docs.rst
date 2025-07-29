@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -11,10 +12,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        How to use this site
+        About this site
 
 ==================================================
-How to use this site
+About this site
 ==================================================
 
 .. docs-about-start

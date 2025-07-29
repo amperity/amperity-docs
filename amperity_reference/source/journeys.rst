@@ -33,6 +33,8 @@ By using **Journeys**, marketers can implement cross-channel strategies, improve
 
 .. journeys-about-enable-start
 
+.. TODO: determine if this note is still necessary after GA -- is journeys automatically enabled everywhere?
+
 .. note:: Ask your Amperity representative about how your brand can enable journeys.
 
 .. journeys-about-enable-end
@@ -130,7 +132,7 @@ Who enters?
 
 Every journey starts with an audience that is defined by one or more segments that determine which users enter this journey.
 
-Choose a segment from the **Select inclusion segments** dropdown list. The customers in that list will become the audience for this campaign.
+Choose one or more segments from the **Select inclusion segments** dropdown list. The customers in that list will become the audience for this campaign.
 
 .. image:: ../../images/mockup-journeys-canvas-inclusion.png
    :width: 380 px
@@ -140,6 +142,22 @@ Choose a segment from the **Select inclusion segments** dropdown list. The custo
 
 .. journeys-setup-who-enters-end
 
+.. journeys-setup-who-enters-note-start
+
+.. note:: When adding multiple inclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the inclusion category in order to be considered part of it. 
+
+.. journeys-setup-who-enters-note-end
+
+.. important:: **Segment filtering by database**
+
+   Each journey is associated with a specific database. This database is set automatically when you select your first inclusion segment.
+   
+   Once that first inclusion segment is selected:
+   
+   * The journey is tied to the same database as that segment
+   * All other segments--whether inclusion, exlcusion, or exit--are filtered to only show segments from that database.
+   
+   To change the database associated with a journey, you must first remove all inclusion segments. Then, when you select a new first inclusion segment from a different database, the journey's database will update accordingly.
 
 .. _journeys-setup-who-is-excluded:
 
@@ -160,6 +178,11 @@ When you need to exclude audience members, choose one or more segments from the 
 
 .. journeys-setup-who-is-excluded-end
 
+.. journeys-setup-who-is-excluded-note-start
+
+.. note:: When adding multiple exclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the exclusion category in order to be considered part of it. 
+
+.. journeys-setup-who-is-excluded-note-end
 
 .. _journeys-exit-conditions:
 
@@ -182,6 +205,12 @@ Exit conditions are defined using a segment. One or more segments that define ex
    :align: left
    :class: no-scaled-link
 
+.. journeys-setup-who-is-excluded-note-start
+
+.. note:: When adding multiple exit condition segments, all segments are unioned, so a customer only needs to match one of the segments in the exit conditions category in order to be considered part of it. 
+
+.. journeys-setup-who-is-excluded-note-end
+
 .. journeys-exit-conditions-end
 
 
@@ -198,7 +227,7 @@ After establishing the audience and starting conditions of the journey, you will
 
 .. journeys-node-types-start
 
-The following building blocks are available to users for building journeys:
+The following building blocks are available to users for creating journeys:
 
 * :ref:`journeys-node-start`
 * :ref:`journeys-node-activate`
@@ -251,6 +280,10 @@ Activate
 
 You can rename the activate node.
 
+You can configure a single activation node to send to multiple destinations at once, and this is generally recommended for simplicity and efficiency.
+
+.. tip:: If you are activating to several destinations and each one uses different custom attributes, you'll need to create a separate activation node for each destination to assign those attributes correctly.
+
 .. journeys-node-activate-end
 
 
@@ -282,6 +315,12 @@ Choose a combination of an integer plus "days", "weeks", or "months" to designat
 A delay is applied to a single parent node.
 
 You can rename the delay node.
+
+.. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs. 
+   
+   For example, if a delay node is set to 3 days but the journey is scheduled to run weekly, customers will remain at the delay node until the next scheduled run, potentially waiting up to 7 days. 
+   
+   If a journey is set to run only once, customers will not move beyond the delay node after it executes. 
 
 .. journeys-node-delay-end
 
@@ -397,7 +436,7 @@ This section describes tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-interact`
 * :ref:`journeys-howtos-rename`
-* :ref:`journeys-howtos-set-run-frequency`
+* :ref:`journeys-howtos-schedule-a-journey`
 * :ref:`journeys-howtos-view-node-configuration`
 
 .. journeys-howtos-list-start
@@ -418,7 +457,7 @@ Follow this sequence when building a journey:
 
 .. journeys-howitworks-steps-end
 
-.. include:: ../../amperity_ampiq/source/journeys.rst
+.. include:: ../../amperity_user/source/journeys.rst
    :start-after: .. journeys-howitworks-callouts-start
    :end-before: .. journeys-howitworks-callouts-end
 
@@ -448,7 +487,7 @@ Add activate nodes
 
    **Name** Give the node a custom name or keep the "Activate" default name.
 
-   **Destination** Choose a destination from the dropdown menu.
+   **Destination** Choose one or more destinations from the dropdown menu.
 
    A summary of details is shown. Click the **Attributes** tab to review the list of attributes that are sent.
 
@@ -458,6 +497,7 @@ Add activate nodes
 
 .. journeys-howtos-node-activate-steps-end
 
+.. tip:: You can add multiple destinations to a single activation node. However, if your destinations require different custom attributes, use separate activation nodes for each destination.
 
 .. _journeys-howtos-node-conditional-split:
 
@@ -634,6 +674,7 @@ The attributes that are sent to each destination that are configured for activat
 
 .. journeys-howtos-edit-destination-attributes-steps-end
 
+.. note:: If you have multiple destinations in a single activation node and your destinations require different custom attributes, use separate activation nodes for each destination.
 
 .. _journeys-howtos-edit-starting-audience:
 
@@ -698,10 +739,10 @@ Interact with Journeys canvas
 
 The **Journeys** canvas supports the following user interactions:
 
-* Drag the journey using a mouse or a trackpad.
-* Zoom by using the **+** / **-** buttons in the bottom left or pinching on a trackpad.
+* Drag the journey using a mouse or a trackpad. You may do this directly on the canvas or on the minimap in the lower right. 
+* Zoom by using the **+** / **-** buttons in the bottom left or pinching/expanding on a trackpad.
 * Center the canvas by clicking the square icon in the bottom left.
-
+ 
 .. journeys-howtos-interact-end
 
 
@@ -724,18 +765,35 @@ A journey should be assigned a name that makes it easy to find and for other use
 .. journeys-howtos-rename-steps-end
 
 
-.. _journeys-howtos-set-run-frequency:
+.. TODO: add: Set journey description
 
-Set run frequency
+.. _journeys-howtos-schedule-a-journey:
+
+Schedule a journey
 --------------------------------------------------
 
-.. journeys-howtos-set-run-frequency-start
+.. journeys-howtos-schedule-a-journey-start
 
 A journey may be configured to run once, daily, weekly, monthly, or quarterly.
 
-.. journeys-howtos-set-run-frequency-end
+.. journeys-howtos-schedule-a-journey-end
 
-.. journeys-howtos-set-run-frequency-note-start
+**To set the run frequency for a journey**
+
+.. journeys-howtos-schedule-a-journey-steps-start
+
+#. From the **Journeys** canvas, click the **Edit schedule** link in the top navigation.
+#. From the **Recurrence** dropdown menu choose one of the options: "once", "every 3 hours", "every 6 hours", "twice daily", "daily", "weekly", "monthly", or "quarterly".
+
+.. journeys-howtos-schedule-a-journey-end
+
+.. journeys-howtos-schedule-a-journey-important-admonition-start
+
+.. important:: Delay nodes require the journey to run again in order to progress. For journeys set to run only once, customers will not move beyond delay nodes. Use recurring schedules to ensure customers continue through the journey after delay node wait periods.
+
+.. journeys-howtos-schedule-a-journey-important-admonition-end
+
+.. journeys-howtos-schedule-a-journey-note-start
 
 .. note:: When a journey is set to run on a recurring schedule, only customers who have newly qualified for the **inclusion** segment since the last run will enter the journey.
 
@@ -747,16 +805,7 @@ A journey may be configured to run once, daily, weekly, monthly, or quarterly.
 
    To prevent this, use an **exclusion** segment to filter out users who have already participated, or who meet other disqualifying conditions.
 
-.. journeys-howtos-set-run-frequency-note-end
-
-**To set the run frequency for a journey**
-
-.. journeys-howtos-set-run-frequency-steps-start
-
-#. From the **Journeys** canvas, click the **Schedule** link in the top navigation.
-#. From the **Recurrence** dropdown menu choose one of "once", "daily", "weekly", "monthly", or "quarterly".
-
-.. journeys-howtos-set-run-frequency-end
+.. journeys-howtos-schedule-a-journey-note-end
 
 
 .. _journeys-howtos-view-node-configuration:

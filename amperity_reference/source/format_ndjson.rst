@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: NDJSON
+        NDJSON files
 
 ==================================================
-File format: NDJSON
+NDJSON files
 ==================================================
 
 .. include:: ../../shared/terms.rst

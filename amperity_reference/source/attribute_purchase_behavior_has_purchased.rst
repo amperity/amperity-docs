@@ -19,7 +19,7 @@ Has purchased
 
 .. attribute-purchase-behavior-has-purchased-start
 
-**Has Purchased** returns a list of orders that meets the threshold that you define -- for example, exactly 4, less than 5, more than 2, or between 2 and 10 -- *and* occurred during your chosen date range. For example, return all customers who have purchased 3 (or more) times in the previous 2 years:
+**Has Purchased** returns a list of orders that meets the threshold that you define--for example, exactly 4, less than 5, more than 2, or between 2 and 10--*and* occurred during your chosen date range. For example, return all customers who have purchased 3 (or more) times in the previous 2 years:
 
 .. image:: ../../images/attribute-purchase-behavior-has-purchased-example.png
    :width: 600 px
@@ -68,7 +68,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
         ,COUNT(DISTINCT order_id) AS purchase_count
       FROM Unified_Itemized_Transactions
 
-   and finds all of the distinct orders that were made by all customers -- the "purchase count" -- and then returns all orders that match the date range:
+   and finds all of the distinct orders that were made by all customers--the "purchase count"--and then returns all orders that match the date range:
 
    ::
 

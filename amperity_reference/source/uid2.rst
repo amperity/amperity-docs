@@ -255,7 +255,7 @@ DSPs can receive UID2s from advertisers as first- and/or third-party data. Adver
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Advertisers and UID2
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Advertising with UID2 enables the use of use `first-party data <https://unifiedid.com/docs/overviews/overview-advertisers#workflow-for-advertisers>`__ |ext_link| to build omnichannel campaigns across devices using a single identifier. Using UID2 as part of your advertising strategy will help your brand:
 
@@ -269,7 +269,7 @@ DSPs can receive UID2s from advertisers as first- and/or third-party data. Adver
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Data providers and UID2
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Data providers can use UID2 to enable the use of `third-party data <https://unifiedid.com/docs/overviews/overview-data-providers#workflow-for-data-providers>`__ |ext_link|. This approach to advertising can reduce identity fragmentation and connect third-party data to a more durable, omnichannel, cross-device identifier.
 

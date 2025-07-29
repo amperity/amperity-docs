@@ -155,7 +155,7 @@ There are three user-level policy options associated with AmpAI:
 
 #. **Enable prompt administration**
 
-   Allows users to update the custom prompt. By default, this policy option is enabled for users assigned the **DataGrid Operator** and **DataGrid Administrator** policies.
+   Allows users to update the custom prompt. By default, this policy option is enabled for users assigned the **Datagrid Operator** and **Datagrid Administrator** policies.
 
 .. ampai-permissions-and-policies-end
 
@@ -179,7 +179,7 @@ Audit conversations
 
 .. ampai-audit-start
 
-**AmpAI** and **AmpAI Assistant** conversations can be audited by users assigned the **DataGrid Operator** and **DataGrid Administrator** policies from the **Settings** page.
+**AmpAI** and **AmpAI Assistant** conversations can be audited by users assigned the **Datagrid Operator** and **Datagrid Administrator** policies from the **Settings** page.
 
 The **AmpAI** tab on the **Settings** page logs the questions that are asked to **AmpAI** and the **AmpAI Assistant** under **AI Conversations**.
 

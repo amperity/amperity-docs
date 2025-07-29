@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Data lineage
+        About data lineage
 
 ==================================================
-Data lineage
+About data lineage
 ==================================================
 
 .. include:: ../../shared/terms.rst

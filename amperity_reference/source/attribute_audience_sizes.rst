@@ -41,7 +41,7 @@ Audience size attributes include:
 
 .. important::
 
-   .. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+   .. include:: ../../amperity_user/source/recommended_audiences.rst
       :start-after: .. recommended-audience-sizes-low-purchase-frequencies-start
       :end-before: .. recommended-audience-sizes-low-purchase-frequencies-end
 
@@ -55,7 +55,7 @@ About the purchase curve
    :start-after: .. term-purchase-curve-start
    :end-before: .. term-purchase-curve-end
 
-.. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+.. include:: ../../amperity_user/source/recommended_audiences.rst
    :start-after: .. recommended-audiences-purchase-curve-about-start
    :end-before: .. recommended-audiences-purchase-curve-about-end
 
@@ -65,7 +65,7 @@ About the purchase curve
    :align: left
    :class: no-scaled-link
 
-.. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+.. include:: ../../amperity_user/source/recommended_audiences.rst
    :start-after: .. recommended-audiences-purchase-curve-context-start
    :end-before: .. recommended-audiences-purchase-curve-context-end
 

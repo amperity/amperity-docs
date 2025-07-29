@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -100,15 +101,22 @@ Use the **Add Orchestration** button to add an orchestration to Amperity. An orc
 Assign database export
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/data_exports.rst
-   :start-after: .. data-exports-add-start
-   :end-before: .. data-exports-add-end
+.. data-exports-add-start
+
+Database tables and databases can be sent from Amperity as a data export. A data export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page.
+
+.. data-exports-add-end
 
 **To assign a database export to an orchestration**
 
-.. include:: ../../amperity_reference/source/data_exports.rst
-   :start-after: .. data-exports-add-to-orchestration-steps-start
-   :end-before: .. data-exports-add-to-orchestration-steps-end
+.. data-exports-add-to-orchestration-steps-start
+
+#. From the **Destinations** page click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
+#. From the **Object Type** dropdown, select **Database Export**.
+#. Select a destination and complete the rest of the orchestration settings.
+#. Click **Save**.
+
+.. data-exports-add-to-orchestration-steps-end
 
 
 .. _orchestrations-assign-query:

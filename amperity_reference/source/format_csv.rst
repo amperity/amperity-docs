@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: CSV
+        CSV files
 
 ==================================================
-File format: CSV
+CSV files
 ==================================================
 
 .. include:: ../../shared/terms.rst

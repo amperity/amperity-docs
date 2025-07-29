@@ -11,7 +11,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About European Union ID (EUID)
+        European Union ID (EUID)
 
 ==================================================
 About European Union ID (EUID)

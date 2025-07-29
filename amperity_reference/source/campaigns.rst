@@ -61,9 +61,11 @@ Use the **Campaigns** page to activate a variety of use cases across your market
 How campaigns work
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/campaigns.rst
-   :start-after: .. campaigns-howitworks-start
-   :end-before: .. campaigns-howitworks-end
+.. campaigns-howitworks-start
+
+A campaign is defined in the **Campaigns** page, from which you configure the audience and sub-audiences that will be associated with the campaign, the downstream locations to which the campaign will be sent, and the time at which the campaign is to begin.
+
+.. campaigns-howitworks-end
 
 .. image:: ../../images/mockup-campaigns-editor.png
    :width: 600 px
@@ -77,7 +79,7 @@ Follow this sequence when building a campaign:
 
 .. campaigns-howitworks-steps-end
 
-.. include:: ../../amperity_ampiq/source/campaigns.rst
+.. include:: ../../amperity_user/source/campaigns.rst
    :start-after: .. campaigns-howitworks-callouts-start
    :end-before: .. campaigns-howitworks-callouts-end
 
@@ -295,11 +297,11 @@ Default attributes
 Destinations
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/destinations.rst
+.. include:: ../../amperity_user/source/destinations.rst
    :start-after: .. destinations-howitworks-start
    :end-before: .. destinations-howitworks-end
 
-.. include:: ../../amperity_ampiq/source/destinations.rst
+.. include:: ../../amperity_user/source/destinations.rst
    :start-after: .. destinations-howitworks-callouts-start
    :end-before: .. destinations-howitworks-callouts-end
 

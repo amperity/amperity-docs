@@ -19,21 +19,9 @@ Loyalty balances
 
 .. attribute-loyalty-balances-overview-start
 
-Loyalty programs can help companies increase customer loyalty and provide incentives for customers to continue to interact with their brand. Point-based loyalty programs provide reward points to their members, which can be accrued based on money spent in a loyalty balance.
+Point-based loyalty programs provide reward points to their members, which can be accrued based on money spent in a loyalty balance.
 
 .. attribute-loyalty-balances-overview-end
-
-.. attribute-loyalty-balances-links-start
-
-Amperity provides the following attributes to build audiences that help brands better understand how to bring more value to their customers through their loyalty program:
-
-* :doc:`Loyalty balances <attribute_loyalty_balances>`
-* :doc:`Loyalty membership <attribute_loyalty_membership>`
-* :doc:`Loyalty profiles <attribute_loyalty_profiles>`
-* :doc:`Loyalty spend <attribute_loyalty_spend>`
-* :doc:`Loyalty tiers <attribute_loyalty_tiers>`
-
-.. attribute-loyalty-balances-links-end
 
 
 .. _attribute-loyalty-balances-attributes:

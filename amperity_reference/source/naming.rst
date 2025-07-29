@@ -60,7 +60,7 @@ Establish naming conventions around the following:
 
 Apply these naming conventions to folders, in addition to campaigns, segments, journeys, and queries.
 
-.. tip:: Only use abbreviations when the abbreviation is understood by users within your tenant. For example, "INTL" for "Internal use".
+.. tip:: Only use abbreviations when the abbreviation is understood by users within your tenant.
 
 .. naming-general-end
 

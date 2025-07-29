@@ -29,7 +29,7 @@ Why should I use this reference?
 
 .. sql-spark-why-should-i-use-this-start
 
-The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables and custom domain tables are built by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available, though you may use additional functionality within Spark SQL as necessary.
+The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built almost exclusively by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available, though you may use additional functionality within Spark SQL as necessary.
 
 Please refer to this reference first, and then to the official |ext_sparksql_version_current| documentation.
 
@@ -45,7 +45,7 @@ About Spark SQL
 
 Use Spark SQL to define all SQL queries related to the following areas of Amperity:
 
-* Ingesting data
+* Ingesting data, including ingest queries
 * Processing data into domain tables
 * Building custom domain tables
 * Loading data into Stitch
@@ -128,7 +128,7 @@ Add comments
 
 .. sql-spark-recommendation-add-comments-start
 
-Be sure to add comments to all SQL code that defines database tables or performs any type of post-ingest processing, such as building custom domain tables.
+Be sure to add comments to all SQL code that defines database tables or performs any type of pre-ingest processing, such as an ingest query.
 
 Code comments should describe:
 
@@ -154,6 +154,7 @@ For example, a **pos** table that contains over a million rows of POS data with 
 **Do this**
 
 .. code-block:: sql
+   :linenos:
 
    SELECT *
    FROM pos
@@ -165,6 +166,7 @@ This will filter out records with "no@email.com", and then join them.
 **Not this**
 
 .. code-block:: sql
+   :linenos:
 
    SELECT *
    FROM pos
@@ -203,6 +205,7 @@ Commas
 Commas are used as separators in SQL queries and are typically added at the end of a line, like this:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      amperity_id AS amperity_id,
@@ -227,6 +230,7 @@ Adding the comma at the start of the row is recommended for two reasons:
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      amperity_id AS amperity_id
@@ -358,6 +362,7 @@ A pattern that filters out unneeded rows and selects only necessary columns is m
 **Do this**
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      uct.amperity_id
@@ -379,6 +384,7 @@ A pattern that filters out unneeded rows and selects only necessary columns is m
 **Not this**
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      uct.amperity_id,
@@ -402,6 +408,7 @@ Filter NULL values, then join
 In some cases the presence of **NULL** values can cause skew when joined to other tables. You can reduce skew by filtering out **NULL** values prior to the join operation. For example:
 
 .. code-block:: sql
+   :linenos:
 
    LEFT JOIN (
      SELECT *
@@ -429,6 +436,40 @@ An identifier is a string that associates a database, table, or column to its pa
    database_name.table_name.column_name
 
 .. sql-spark-recommendation-identifiers-end
+
+**To use table identifiers to flatten nested XML data**
+
+.. sql-spark-recommendation-identifiers-example-ingest-query-start
+
+.. note:: This example uses an |ext_download_sales_transactions| as the data source for sales transactions.
+
+Use identifiers and aliases to flatten nested XML data with an ingest query, similar to:
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT
+     salesTransactionId AS id
+     ,type
+     ,dateTime AS salesDateTime
+     ,salesOrder.salesOrderId AS salesOrderId
+     ,salesOrder.channelType AS channelType
+     ,salesOrder.orderSummary.totalAmount AS totalAmount
+   FROM PosXml
+
+returns a table similar to:
+
+.. code-block:: mysql
+
+   ----- ------ ---------------------- -------------- ------------- -------------
+    id    type   salesDateTime          salesOrderId   channelType   totalAmount
+   ----- ------ ---------------------- -------------- ------------- -------------
+    ABC   Add    2020-11-15T04:54:34Z   A1zyBCxwvDu    Cafe          120
+    DEF   Add    2020-11-15T04:55:25Z   B1yxCDwvuEt    Cafe          14
+    GHI   Add    2020-11-15T04:57:12Z   C1xwDEvutFs    Cafe          27
+   ----- ------ ---------------------- -------------- ------------- -------------
+
+.. sql-spark-recommendation-identifiers-example-ingest-query-end
 
 
 .. _sql-spark-recommendation-indentation:
@@ -523,6 +564,7 @@ Limit the work done by a SQL query to improve overall performance. The following
 **Do this**
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id,
@@ -538,6 +580,7 @@ This example performs better and achieves the same result.
 **Not this**
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT  
      amperity_id
@@ -879,6 +922,172 @@ The following keywords are reserved and must be double-quoted to be used as an i
 .. sql-spark-reserved-keywords-end
 
 
+.. _sql-spark-skew:
+
+Skew
+--------------------------------------------------
+
+.. sql-spark-skew-start
+
+When Spark SQL runs domain tables and database tables it partitions the work and distributes each partition to an individual executor. When each partition is roughly equal in size each executor is assigned a roughly equal amount of work.
+
+Skew occurs when one partition is assigned a greater amount of work than other partitions. All of the executors assigned lesser amounts of work will finish first, and then wait for the executor that was assigned the greater amount of work to finish.
+
+Skew increases the amount of time it takes to finish processing. Small amounts of skew are common and are sometimes unavoidable. Large amounts of skew can lead to increased costs and increased runtimes.
+
+.. sql-spark-skew-end
+
+
+.. _sql-spark-skew-common-causes:
+
+Common causes of skew
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-spark-skew-common-causes-start
+
+Common causes of skew include:
+
+* Unintended duplication of values in upstream tables. Removing this duplication helps prevent skew.
+* Values that are not needed in the final output, such as a **NULL** value or a placeholder for a **NULL** value, such as "1900-01-01". Filter these values out to prevent them from causing skew.
+
+  If these values are required, one approach is to replace them with a primary key. For example:
+
+  .. code-block:: none
+
+     COALESCE(NULLIF({field}, ‘{bad_value}’), _uuid_pk)
+
+  .. note:: Replacing a value that causes skew with primary key works because:
+
+     * A primary key is an extremely well-distributed field. All records have a unique primary key, which ensures that distribution of work is even across executors.
+     * The value of a primary key will never match to a value on the other side of a **JOIN** operation. The non-match is the same result as what would happen with the bad **NULL** or placeholder value the primary key replaced.
+
+.. sql-spark-skew-common-causes-end
+
+
+.. _sql-spark-skew-avoiding:
+
+Avoiding skew
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-spark-skew-avoiding-start
+
+To avoid large amounts of skew:
+
+* Ensure :ref:`window functions <sql-spark-with-clause>` are partitioned by fields in a **PARTITION BY()** clause.
+
+  .. caution:: A window function without a **PARTITION BY()** clause is calculated by a single executor.
+
+* Ensure that fields that are used to join tables within :ref:`JOIN operations <sql-spark-join-clause>` are well-distributed.
+
+.. sql-spark-skew-avoiding-end
+
+
+.. _sql-spark-skew-avoiding-join-operations:
+
+JOIN operations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. sql-spark-skew-avoiding-join-operations-start
+
+One-to-many and many-to-many :ref:`JOIN operations <sql-spark-join-clause>` result in tables with duplicated results. This is sometimes the intended outcome, but more often it is unintended.
+
+One-to-many and many-to-many **JOIN** operations often cause incorrect aggregate calculations. High duplication rates lead to skew, increased costs, and increased runtimes. A small amount of duplication repeated across many **JOIN** operations can cause exponential growth in the number of records for a given join key.
+
+Avoid duplication in **JOIN** operations by:
+
+* Setting good values for primary keys, especially for domain tables.
+* Avoiding using all fields in the table as primary key values. This may introduce bad data or lead to higher rates of duplication.
+* Confirming the uniqueness of fields before using them in a **JOIN** operation.
+* Avoiding the use of :ref:`DISTINCT <sql-spark-select-distinct-statement>` statements. Use the :ref:`GROUP BY <sql-spark-group-by-clause>` clause instead.
+
+  Fields in a **GROUP BY** clause are always unique by grouping and can be used in a **JOIN** operation without risk of duplication.
+* Using the **db/unique** semantic tag on fields that are supposed to be unique.
+
+  This semantic tag adds an extra check to ensure that table results are unique by that field. If unexpected duplication occurs it will show as a warning in database notiications.
+
+The following SQL query can help find **JOIN** operations with high duplication rates.
+
+.. code-block:: none
+   :linenos:
+
+   SELECT
+     {field1}
+     ,COUNT(*)
+   FROM {table}
+   GROUP BY 1
+   ORDER BY 2 DESC
+   LIMIT 100
+
+.. sql-spark-skew-avoiding-join-operations-end
+
+.. sql-spark-skew-avoiding-join-operations-note-start
+
+.. note:: **JOIN** operations are processed in the defined order. Even when join keys are unique for each table and are evenly distributed, they can cause skew when more than two tables are joined. For example:
+
+   .. code-block:: none
+      :linenos:
+      :emphasize-lines: 2
+
+      SELECT
+        {field1}
+        ,{field2}
+        ,{field3}
+      FROM {tableA} a
+      LEFT JOIN {tableB} b
+      ON a.{joinkey}1 = b.{joinkey}1
+      LEFT JOIN {tableC} c
+      ON b.{joinkey}2 = c.{joinkey}2
+
+   If "Table A" has a lot of keys that are not present in "Table B" then the **LEFT JOIN** operation between those tables will result in an intermediate table with many records where the value is **NULL**. This will create skew during the second **JOIN** operation between tables B and C.
+
+.. sql-spark-skew-avoiding-join-operations-note-end
+
+
+.. _sql-spark-skew-avoiding-partition-by:
+
+PARTITION BY clauses
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. sql-spark-skew-avoiding-partition-by-start
+
+Use a query to help identify which field is causing skew in a **PARTITION BY** clause :ref:`within a window function <sql-spark-window-functions>`. Run the following query for each ``{field}`` in the **PARTITION BY** clause:
+
+.. code-block:: none
+   :linenos:
+   :emphasize-lines: 2-5
+
+   SELECT
+     {field1}
+     ,{field2}
+     ,{field3}
+     ,{field4}
+     ,COUNT(*)
+   FROM {table}
+   GROUP BY 1,2,3,4
+   ORDER BY 5 DESC
+   LIMIT 100
+
+Fields that appear more often are sources of skew. A field that appears significantly more often than others may be causing a high amount of skew and should be filtered out or :ref:`converted to a primary key <sql-spark-skew-common-causes>`.
+
+.. sql-spark-skew-avoiding-partition-by-end
+
+
+.. _sql-spark-skew-avoiding-frequency-cardinality:
+
+High frequency, low cardinality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. sql-spark-skew-avoiding-frequency-cardinality-start
+
+In some situations a **JOIN** operation must be done using a high frequency or low cardinality field. For example the "action type" for email engagement data may have a small number of types: "send", "open", "click". A **JOIN** operation on the "action type" will cause a single executor to process all of the "send" action types.
+
+Salting and hashing the joining keys can turn high frequency or low cardinality fields into values that can be spread across a greater number of executors. This will reduce skew, but will also increase the total amount of data that needs processing.
+
+Ask your Amperity representative about using salting and hashing to mitigate skew with high frequency or low cardinality fields.
+
+.. sql-spark-skew-avoiding-frequency-cardinality-end
+
+
 .. _sql-spark-recommendation-subqueries:
 
 Subqueries
@@ -958,6 +1167,7 @@ Always include newlines/vertical space:
 Putting commas and conjunctions at the start of the line makes it easier to comment out a single line without disturbing the rest of the query
 
 .. code-block:: sql
+   :linenos:
 
    SELECT a.title
      ,a.release_date
@@ -965,7 +1175,7 @@ Putting commas and conjunctions at the start of the line makes it easier to comm
      ,a.production_date
    FROM albums AS a
    WHERE a.title = 'Charcoal Lane'
-     OR a.title = 'The New Danger';
+     OR a.title = 'The New Danger'
 
 .. sql-spark-recommendation-whitespace-line-spacing-end
 
@@ -980,6 +1190,7 @@ Spaces
 Spaces should be used to line up the code so that the root keywords all start on the same character boundary, and also so that this makes it easy to keep track of where you are in a query that may be multiple layers deep.
 
 .. code-block:: sql
+   :linenos:
 
    (SELECT f.species_name
      ,AVG(f.height) AS `average_height`
@@ -1008,6 +1219,7 @@ Although not exhaustive always include spaces:
 * surrounding apostrophes ( ' ) where not within parentheses or with a trailing comma or semicolon.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT a.title, a.release_date, a.recording_date
    FROM albums AS a
@@ -1024,7 +1236,7 @@ WITH clause
 
 .. sql-spark-with-clause-start
 
-The **WITH** clause defines a common table expression (CTE).
+The **WITH** clause defines a common table expression (CTE), also referred to as a "window function".
 
 .. sql-spark-with-clause-end
 
@@ -1052,7 +1264,7 @@ LATERAL VIEW clause
 
 .. sql-spark-lateral-view-clause-start
 
-The **LATERAL VIEW** clause generates a virtual table containing one (or more) rows, where each row is applied to the original output row.
+The **LATERAL VIEW** clause generates a virtual table containing one or more rows, where each row is applied to the original output row.
 
 Use **LATERAL VIEW OUTER** to return **NULL** if the input array or map is empty or **NULL**.
 
@@ -1061,14 +1273,15 @@ Use **LATERAL VIEW OUTER** to return **NULL** if the input array or map is empty
 For example, the following common table expression generates virtual tables for email and physical addresses:
 
 .. code-block:: sql
+   :linenos:
 
    WITH
      emails AS (
-       SELECT 
+       SELECT
          unique_id
          ,UPPER(em.email_address) AS email_address
        FROM customer_table
-       LATERAL VIEW OUTER EXPLODE(email) as em
+       LATERAL VIEW OUTER EXPLODE(email) AS em
      ),
      addresses AS (
        SELECT
@@ -1081,12 +1294,13 @@ For example, the following common table expression generates virtual tables for 
          ,ad.zip AS `postal`
          ,ad.zip4 AS `postal4`
        FROM customer_table
-       LATERAL VIEW OUTER EXPLODE(address) as ad
+       LATERAL VIEW OUTER EXPLODE(address) AS ad
      ),
 
 after which you can use the **SELECT** statement to select individual columns from the virtual tables, and then join them:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      c.unique_id AS `uuid`
@@ -1143,18 +1357,20 @@ The **FROM** clause specifies the name of the data table against which the SQL q
 
 .. _sql-spark-join-clause:
 
-JOIN
+JOIN operations
 ==================================================
 
 .. sql-spark-join-clause-start
 
 Spark SQL supports all **JOIN** operations available in standard SQL.
 
-.. warning:: Joining on fields with many matching values is slow. The query processor in Spark SQL finds the match between each possible pair of matching values and the number of pairs goes up by the product of the matching duplicates in each table.
+.. warning:: Joining on fields with many matching values can be slow and can :ref:`introduce skew <sql-spark-skew>`. Spark SQL finds the match between each possible pair of matching values and the number of pairs goes up by the product of the matching duplicates in each table.
 
    Joining two tables with 1 million records in each table, where each record in one table matches only 1 record in the other will result in 1 million pairs.
 
    Joining two tables with 1 million records in each table, where all the records match will result in 1 trillion records.
+
+   :ref:`One-to-many and many-to-many JOIN operations <sql-spark-skew-avoiding-join-operations>` often cause incorrect aggregate calculations. High duplication rates lead to skew, increased costs, and increased runtimes.
 
 .. sql-spark-join-clause-end
 
@@ -1171,6 +1387,7 @@ Use the **ON()** clause to specify the join criteria. Contents of the **ON()** c
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    FULL JOIN table_name AS tn
    ON (Members.`amperity_id` = tn.`Members_PK`)
@@ -1190,6 +1407,7 @@ The **USING()** clause can be applied on column names to specify the join criter
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    FULL JOIN table_name AS tn
    USING (column_name)
@@ -1212,7 +1430,7 @@ A Cartesian product in Amperity between any two tables is often a very, very lar
 
 .. tip:: Take steps to avoid implicit cross-joins:
 
-   #. Use the **ON()** or **USING()** clauses with any JOIN statement.
+   #. Use the **ON()** or **USING()** clauses with any **JOIN** statement.
    #. For situations where you need to run a **SELECT** statement like 
 
       ::
@@ -1261,9 +1479,10 @@ For example:
 
 .. code-block:: sql
 
-   SELECT * FROM (VALUES 1, 2) t("left") 
-     LEFT JOIN (VALUES 1, 1) u("right") 
-     ON t."left" = u."right";
+   SELECT *
+   FROM (VALUES 1, 2) t("left")
+   LEFT JOIN (VALUES 1, 1) u("right")
+   ON t."left" = u."right";
 
 will return a table similar to:
 
@@ -1425,7 +1644,7 @@ EXISTS expression
 
 .. sql-spark-where-clause-expression-exists-start
 
-The **EXISTS** expression returns **TRUE** when the subquery to which it refers returns one (or more) rows, or returns **FALSE**.
+The **EXISTS** expression returns **TRUE** when the subquery to which it refers returns one or more rows, or returns **FALSE**.
 
 .. sql-spark-where-clause-expression-exists-end
 
@@ -1552,19 +1771,30 @@ The following queries are equivalent. They both group the output by the nationke
 
 .. code-block:: sql
 
-   SELECT count(*), nationkey FROM customer GROUP BY 2;
+   SELECT
+     COUNT(*)
+     ,nationkey
+   FROM customer
+   GROUP BY 2
 
 is equivalent to:
 
 .. code-block:: sql
 
-   SELECT count(*), nationkey FROM customer GROUP BY nationkey;
+   SELECT
+     COUNT(*)
+     ,nationkey
+   FROM customer
+   GROUP BY nationkey
 
 **GROUP BY** clauses can group output by input column names not appearing in the output of a select statement. For example, the following query generates row counts for the customer table using the input column "mktsegment":
 
 .. code-block:: sql
 
-   SELECT count(*) FROM customer GROUP BY mktsegment;
+   SELECT
+     COUNT(*)
+   FROM customer
+   GROUP BY mktsegment
 
 returns a table similar to:
 
@@ -1596,9 +1826,13 @@ The **HAVING** clause is used to sort a result set by one or more output express
 For example:
 
 .. code-block:: sql
+   :linenos:
 
-   SELECT COUNT(*), segment, key,
-          CAST(SUM(actual_loyalty) AS bigint) AS loyalty
+   SELECT
+     COUNT(*)
+     ,segment
+     ,key
+     ,CAST(SUM(actual_loyalty) AS bigint) AS loyalty
    FROM Customer360
    GROUP BY segment, key
    HAVING SUM(actual_loyalty) > 5700000
@@ -1636,7 +1870,7 @@ Window functions are a way to evaluate rows around each row as it is being evalu
 
 .. tip:: When a **WINDOWS** function is too long, add a new code line to improve readability.
 
-   That said, an **OVER()** clause that does not contain both **PARTITION BY** and **ORDER BY** may run into situations where a window function without **PARTITION BY** will result in Spark running 50 million rows through a single partition, which can cause a significant reduction in performance.
+   That said, an **OVER()** clause that does not contain both **PARTITION BY** and **ORDER BY** may run into situations where a window function without **PARTITION BY** will result in Spark SQL running 50 million rows through a single partition, which can cause a significant reduction in performance.
 
 A common use in Amperity might look like this:
 
@@ -1644,8 +1878,8 @@ A common use in Amperity might look like this:
 
    FIRST_VALUE(LOWER(EMAIL_ADDRESS_)) OVER (
      PARTITION BY amperity_id
-     ORDER BY merged_date DESC)
-     AS email_address,
+     ORDER BY merged_date DESC
+   ) AS email_address,
 
 It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Or, more briefly, "Give me the most recent email address for each customer." The window function bits do the following:
 
@@ -1669,7 +1903,7 @@ The **ORDER BY** clause is used to sort a result set by one or more output expre
 
 .. code-block:: none
 
-    ORDER BY expression [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...]
+   ORDER BY expression [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...]
 
 Each expression may be composed of output columns or it may be an ordinal number selecting an output column by position (starting at one).
 
@@ -1691,7 +1925,9 @@ The **LIMIT** clause restricts the number of rows in the result set. The followi
 
 .. code-block:: sql
 
-   SELECT orderdate FROM orders LIMIT 5;
+   SELECT orderdate
+   FROM orders
+   LIMIT 5
 
 returns a table similar to:
 
@@ -1732,13 +1968,13 @@ Use the **BETWEEN** operator to test if a value falls within the specified range
 
 .. code-block:: none
 
-   SELECT 3 BETWEEN 2 AND 6;
+   SELECT 3 BETWEEN 2 AND 6
 
 The statement shown above is equivalent to the following statement:
 
 .. code-block:: none
 
-   SELECT 3 >= 2 AND 3 <= 6;
+   SELECT 3 >= 2 AND 3 <= 6
 
 **Presence of NULL evaluates to NULL**
 
@@ -1746,13 +1982,13 @@ The presence of **NULL** will result in the statement evaluating to **NULL**:
 
 .. code-block:: none
 
-   SELECT NULL BETWEEN 2 AND 4;
+   SELECT NULL BETWEEN 2 AND 4
 
 and:
 
 .. code-block:: none
 
-   SELECT 2 BETWEEN NULL AND 6;
+   SELECT 2 BETWEEN NULL AND 6
 
 **String arguments must be of same type**
 
@@ -1760,13 +1996,13 @@ Use the **BETWEEN** operator to evaluate string arguments as long as the value, 
 
 .. code-block:: none
 
-   SELECT 'Paul' BETWEEN 'John' AND 'Ringo';
+   SELECT 'Paul' BETWEEN 'John' AND 'Ringo'
 
 whereas this query will produce an error:
 
 .. code-block:: none
 
-   SELECT '2.3' BETWEEN 'John' AND '35.2';
+   SELECT '2.3' BETWEEN 'John' AND '35.2'
 
 .. sql-spark-operator-between-end
 
@@ -1838,7 +2074,7 @@ Use **ANY** together with comparison operators in the following way:
 
 .. code-block:: none
 
-    expression operator ANY ( subquery )
+   expression operator ANY ( subquery )
 
 For example:
 
@@ -1872,7 +2108,7 @@ Use **SOME** together with comparison operators in the following way:
 
 .. code-block:: none
 
-    expression operator SOME ( subquery )
+   expression operator SOME ( subquery )
 
 For example:
 
@@ -1909,13 +2145,13 @@ Using **NULL** with **IS NULL** evaluates to **TRUE**:
 
 .. code-block:: none
 
-   select NULL IS NULL;
+   SELECT NULL IS NULL
 
 But any other constant does not evaluate to **FALSE**:
 
 .. code-block:: none
 
-   SELECT 3.0 IS NULL;
+   SELECT 3.0 IS NULL
 
 .. sql-spark-operator-is-null-end
 
@@ -1933,13 +2169,13 @@ Using **NULL** with **IS NOT NULL** evaluates to **FALSE**:
 
 .. code-block:: none
 
-   select NULL IS NOT NULL;
+   SELECT NULL IS NOT NULL
 
 But any other constant evaluates **TRUE**:
 
 .. code-block:: none
 
-   SELECT 3.0 IS NOT NULL;
+   SELECT 3.0 IS NOT NULL
 
 .. sql-spark-operator-is-not-null-end
 
@@ -1956,6 +2192,7 @@ The **PIVOT** operator allows data to be reshaped into a new table. Use values f
 For example, a transactions table has a field with three values: **PUR** (purchases), **RET** (returns), and **OTH** (other). Use **PIVOT** to return a table that contains columns named **Purchases**, **Returns**, and **Other**, each containing the sum for that value in the transactions table, and then a row for each Amperity ID and brand:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -2072,6 +2309,7 @@ Coalesce to empty (non-NULL) values
 The following example is a common table expression that uses the **ABS()** function within a **CASE** statement to determine the how many days have passed since a customer's most recent purchase, and then to apply a lifecycle status to each set of customers who fall into each range: active, lapsed, dormant, prospect, or no status.
 
 .. code-block:: sql
+   :linenos:
 
    customer_lifecycle_status AS (
      SELECT
@@ -2084,7 +2322,8 @@ The following example is a common table expression that uses the **ABS()** funct
          ELSE 'prospect'
        END AS lifecycle_status
      FROM Customer_360 c
-     LEFT JOIN Transaction_Attributes_Extended tae ON c.amperity_id = tae.amperity_id
+     LEFT JOIN Transaction_Attributes_Extended tae
+     ON c.amperity_id = tae.amperity_id
    ),
 
 .. sql-spark-function-abs-example-apply-status-by-date-range-end
@@ -2219,7 +2458,8 @@ Add columns (accounting for NULL values)
 
 .. sql-spark-function-coalesce-example-add-column-account-for-null-start
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    COALESCE(order_quantity,0)
      + COALESCE(canceled_quantity,0)
@@ -2242,13 +2482,16 @@ The following example standardizes values for all fifty states in the United Sta
 #. The correct spelled out value
 #. Other variations that appear in the data, which may be common (or known) abbreviations, misspellings, slang, or shortcuts
 
+.. TODO: The following code block blows up if the directive is set to "sql". Keep it set to "none".
+
 .. code-block:: none
+   :linenos:
 
    CASE
      WHEN UPPER(TRIM(COALESCE(state))) IN ('AL','ALABAMA', 'BAMA') THEN 'AL'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('AK','ALASKA') THEN 'AK'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('AZ','ARIZONA') THEN 'AZ'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('AR','ARKANSAS') THEN 'AR'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('AR','ARKANSAS') THEN 'AR'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('CA','CALIF','CALIFORNIA','CALIFORNIZ','CALIFRONIA') THEN 'CA'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('CO','COLORADO') THEN 'CO'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('CT','CONNECTICUT', 'CONNETICUT') THEN 'CT'
@@ -2259,42 +2502,42 @@ The following example standardizes values for all fifty states in the United Sta
      WHEN UPPER(TRIM(COALESCE(state))) IN ('ID','IDAHO') THEN 'ID'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('IL','ILLINOIS') THEN 'IL'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('IN','INDIANA') THEN 'IN'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('IA','IOWA') THEN 'IA'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('IA','IOWA') THEN 'IA'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('KS','KANSAS') THEN 'KS'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('KY','KENTUCKY') THEN 'KY'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('LA','LOUISIANA', 'LOUSIANA') THEN 'LA'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('LA','LOUISIANA', 'LOUSIANA') THEN 'LA'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('ME','MAINE') THEN 'ME'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('MD','MARYLAND') THEN 'MD'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('MA','MASS','MASSACHUSETES','MASSACHUSETTS','MASSACHUSETTES') THEN 'MA'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('MI','MICHIGAN') THEN 'MI'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('MN','MINNESOTA') THEN 'MN'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('MS','MISSISSIPPI') THEN 'MS'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('MS','MISSISSIPPI') THEN 'MS'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('MO','MISSOURI') THEN 'MO'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('MT','MONTANA') THEN 'MT'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('NE','NEBRASKA') THEN 'NE'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('NE','NEBRASKA') THEN 'NE'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('NV','NEVADA') THEN 'NV'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('NH','NEW HAMPSHIRE') THEN 'NH'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('NJ','NEW JERSEY', 'JERSEY') THEN 'NJ'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('NM','NEW MEXICO') THEN 'NM'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('NM','NEW MEXICO') THEN 'NM'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('NY','NEW YORK') THEN 'NY'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('NC','NORTH CAROLINA') THEN 'NC'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('ND','NORTH DAKOTA') THEN 'ND'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('ND','NORTH DAKOTA') THEN 'ND'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('OH','OHIO') THEN 'OH'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('OK','OKLAHOMA') THEN 'OK'       
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('OK','OKLAHOMA') THEN 'OK'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('OR','ORE','OREGON','OREGONE') THEN 'OR'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('PA','PENNSYLVANIA') THEN 'PA'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('RI','RHODE ISLAND') THEN 'RI'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('SC','SOUTH CAROLINA') THEN 'SC'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('SD','SOUTH DAKOTA') THEN 'SD'     
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('TN','TENNESSEE') THEN 'TN'         
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('SD','SOUTH DAKOTA') THEN 'SD'
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('TN','TENNESSEE') THEN 'TN'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('TX','TEXAS') THEN 'TX'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('UT','UTAH') THEN 'UT'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('VT','VERMONT') THEN 'VT'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('VA','VIRGINIA') THEN 'VA'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('WA','WASHINGTON') THEN 'WA'
      WHEN UPPER(TRIM(COALESCE(state))) IN ('WV','WEST VIRGINIA') THEN 'WV'
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('WI','WISCONSIN') THEN 'WI'  
-     WHEN UPPER(TRIM(COALESCE(state))) IN ('WY','WYOMING') THEN 'WY'         
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('WI','WISCONSIN') THEN 'WI'
+     WHEN UPPER(TRIM(COALESCE(state))) IN ('WY','WYOMING') THEN 'WY'
    ELSE NULL
 
 .. sql-spark-function-coalesce-example-standardize-values-for-usa-states-end
@@ -2324,11 +2567,11 @@ Return array of ordered IDs
 Collect a list from the **Unified Transactions** table, and then returned it as an array of order IDs:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COLLECT_LIST(ut.order_id) AS array_order_ids 
-   FROM
-     Unified_Transactions AS ut 
+   FROM Unified_Transactions AS ut 
 
 .. sql-spark-function-collect-list-example-return-array-of-ordered-ids-end
 
@@ -2396,7 +2639,8 @@ Add a +1 to phone numbers
 
 The following **CASE** statement uses the **TRIM()** function to find empty or NULL phone numbers, sets them to **NULL**, and then standardizes all phone numbers to add a +1:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    CASE
      WHEN TRIM(phone) LIKE ''
@@ -2438,9 +2682,11 @@ The following example shows how to use a **CASE** statement to do the following:
 #. Return as the **postal** field, to which the **postal** semantic tag may be applied.
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
-     WHEN zip_code != '(NULL)' AND zip_code_plus_four != '(NULL)'
+     WHEN zip_code != '(NULL)'
+     AND zip_code_plus_four != '(NULL)'
      THEN CONCAT_WS('-',zip_code, zip_code_plus_four)
 
      WHEN zip_code != '(NULL)'
@@ -2462,6 +2708,7 @@ Combine five- and four-digit postal codes
 The following example concatenates columns into a single field, where "ACME" represents a hardcoded value present in the filename.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      'ACME' AS Brand_Name
@@ -2497,6 +2744,7 @@ Use the **COUNT(expression)** function to return the number of non-NULL rows for
 or:
 
 .. code-block:: sql
+   :linenos:
 
    -- Join for one-time customers
    LEFT JOIN (
@@ -2505,8 +2753,7 @@ or:
        ,CASE
           WHEN COUNT(*) = 1 THEN '1X Customer'
           WHEN COUNT(*) > 1 THEN 'Repeat Customer'
-       END
-       AS repeat_purchaser
+       END AS repeat_purchaser
      FROM Unified_Transactions
      GROUP BY amperity_id
    ) AS onetime ON onetime.amperity_id = customers.amperity_id
@@ -2602,6 +2849,7 @@ Compare dates by date range
 The following SELECT statement returns all orders between November 22, 2019 and November 21, 2020. The **DATE()** function compares the value of the **order_datetime** field in customer data to the date range.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -2609,9 +2857,9 @@ The following SELECT statement returns all orders between November 22, 2019 and 
      ,COUNT(DISTINCT order_id) AS orders
      ,SUM(order_revenue) AS order_revenue
    FROM Unified_Transactions
-   WHERE amperity_id IS NOT NULL AND
-     DATE(order_datetime) >= DATE('2019-11-22') AND
-     DATE(order_datetime) <= DATE('2020-11-21')
+   WHERE amperity_id IS NOT NULL
+   AND DATE(order_datetime) >= DATE('2019-11-22')
+   AND DATE(order_datetime) <= DATE('2020-11-21')
 
 .. sql-spark-function-date-example-compare-dates-by-date-range-end
 
@@ -2640,6 +2888,7 @@ To do the type conversion for every row, use:
 For example, to return **order_datetime** as a date (and not a datetime) for each Amperity ID:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ut.amperity_id
@@ -2755,16 +3004,16 @@ Find early repeat purchasers
 .. sql-spark-function-datediff-example-find-early-repeat-purchasers-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
-     amperity_id,
-     CASE
+     amperity_id
+     ,CASE
        WHEN DATEDIFF(second_order_date, first_order_date) <= 30 THEN true
        WHEN DATEDIFF(second_order_date, first_order_date) > 30 THEN false
        WHEN DATEDIFF(CURRENT_DATE(), first_order_date) > 30 THEN false
      END AS early_repeat_purchaser
-   FROM
-     Transaction_Attributes_Extended
+   FROM Transaction_Attributes_Extended
 
 .. sql-spark-function-datediff-example-find-early-repeat-purchasers-end
 
@@ -2777,14 +3026,13 @@ Find transactions within 30 days
 .. sql-spark-function-datediff-example-find-transactions-within-30-days-start
 
 .. code-block:: sql
+   :linenos:
 
    L30D_transactions AS (
      SELECT
        *
-     FROM
-       Unified_Transactions
-     WHERE
-       DATEDIFF(CURRENT_DATE(), order_date) <= 30
+     FROM Unified_Transactions
+     WHERE DATEDIFF(CURRENT_DATE(), order_date) <= 30
    ),
 
 .. sql-spark-function-datediff-example-find-transactions-within-30-days-end
@@ -2798,6 +3046,7 @@ Categorize by named age group
 .. sql-spark-function-datediff-example-categorize-by-named-age-group-start
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN DATEDIFF(CURRENT_DATE(), customers.birth_dt) < 7300 THEN 'Gen Z'
@@ -2837,6 +3086,7 @@ Identify email not using US-ASCII
 The following **CASE** statement decodes customer emails, identifies customer emails that are not encoded using the US-ASCII character set, and then sets them to **NULL**.
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN UPPER(DECODE(UNBASE64(customer_email),'US-ASCII')) = 'UNDEFINED'
@@ -2888,6 +3138,36 @@ Use the **EXPLODE(expression)** function to use "expression" to:
 .. sql-spark-function-explode-end
 
 
+.. _sql-spark-function-explode-example-load-xml-as-ingest-query:
+
+Load XML data as ingest query
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-spark-function-explode-example-load-xml-as-ingest-query-start
+
+.. note:: This example uses an |ext_download_sales_transactions| as the data source for sales transactions.
+
+Use the **EXPLODE()** function to process sales transaction data into a table using an ingest query similar to:
+
+.. code-block:: sql
+   :linenos:
+
+   WITH explodedData AS (
+     SELECT
+       salesTransactionId
+       ,EXPLODE(salesOrder.tenders.tender) AS tender
+     FROM PosXml
+   )
+
+   SELECT
+     salesTransactionId
+     ,tender.type AS type
+     ,tender.amount AS amount
+   FROM explodedData
+
+.. sql-spark-function-explode-example-load-xml-as-ingest-query-end
+
+
 .. _sql-spark-function-first-value:
 
 FIRST_VALUE()
@@ -2912,20 +3192,20 @@ Prioritize Amperity ID by order ID
 The following SQL prioritizes the Amperity ID by the most recent order ID:
 
 .. code-block:: sql
+   :linenos:
 
-   WITH
-     amp_priority AS (
-       SELECT DISTINCT
-         ut.order_id
-         ,ut.datasource
-         ,FIRST_VALUE(uc.amperity_id) OVER (
-           PARTITION BY ut.order_id, ut.datasource
-           ORDER BY uc.update_dt DESC
-         ) AS amperity_id
-       FROM (SELECT amperity_id, datasource, update_dt FROM Unified_Coalesced) uc
-       JOIN (SELECT amperity_id, datasource, order_id FROM Unified_Transactions) ut
-       ON uc.amperity_id = ut.amperity_id
-     )
+   WITH amp_priority AS (
+     SELECT DISTINCT
+       ut.order_id
+       ,ut.datasource
+       ,FIRST_VALUE(uc.amperity_id) OVER (
+         PARTITION BY ut.order_id, ut.datasource
+         ORDER BY uc.update_dt DESC
+       ) AS amperity_id
+     FROM (SELECT amperity_id, datasource, update_dt FROM Unified_Coalesced) uc
+     JOIN (SELECT amperity_id, datasource, order_id FROM Unified_Transactions) ut
+     ON uc.amperity_id = ut.amperity_id
+   )
 
    SELECT t.* FROM table_name t
    JOIN amp_priority ap ON t.order_id=ap.order_id
@@ -2952,7 +3232,7 @@ Build birthdate
 
 .. sql-spark-function-if-example-build-birthdate-start
 
-If incoming data contains birthdate data split by day, month, and year, you can build a complete birthdate using a custom domain table. For example, incoming data has the following fields:
+If incoming data contains birthdate data split by day, month, and year, you can build a complete birthdate using an ingest query. For example, incoming data has the following fields:
 
 .. code-block:: mysql
 
@@ -2967,11 +3247,14 @@ If incoming data contains birthdate data split by day, month, and year, you can 
 The following example uses the **IF()** function to concatenate three fields together using a forward slash ( / ) as a separator:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *
-     ,IF(birth_month != '0' AND birth_day != '0' AND  birth_year != '0', 
-         birth_month||'/'||birth_day||'/'||birth_year, NULL) AS birthdate
+     ,IF(
+       birth_month != '0' AND birth_day != '0' AND  birth_year != '0', 
+       birth_month||'/'||birth_day||'/'||birth_year, NULL
+     ) AS birthdate
    FROM Source_Table
 
 .. sql-spark-function-if-example-build-birthdate-end
@@ -3093,7 +3376,8 @@ Return states as 2 characters
 
 The following example uses the **LENGTH()** function to identify columns with two character values for states (AK, AL, AR, etc.), and then sets columns without two character values to **NULL**:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    CASE
      WHEN LENGTH(state) = 2
@@ -3222,14 +3506,13 @@ Months between order and today
 .. sql-spark-function-months-between-example-order-and-today-start
 
 .. code-block:: sql
+   :linenos:
 
    L12M_transactions AS (
      SELECT
        *
-     FROM
-       Unified_Transactions
-     WHERE
-       MONTHS_BETWEEN(CURRENT_DATE(), order_date) <= 12
+     FROM Unified_Transactions
+     WHERE MONTHS_BETWEEN(CURRENT_DATE(), order_date) <= 12
    ),
 
 .. sql-spark-function-months-between-example-order-and-today-end
@@ -3271,6 +3554,7 @@ Compute ntiles over large datasets
 The following example shows a window function that divides rows into 10 buckets and uses a combination of **PARTITION BY** and the **LEFT()** function to define the buckets using the first characters of the Amperity ID:
 
 .. code-block:: sql
+   :linenos:
 
    Top_10 AS (
      SELECT DISTINCT
@@ -3319,6 +3603,27 @@ Use the **NULLIF(expression1, expression2)** function to return **NULL** if "exp
 .. sql-spark-function-nullif-end
 
 
+.. _sql-spark-function-nullif-example-ingest-query:
+
+Return NULL for empty string values
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-spark-function-nullif-example-ingest-query-start
+
+The following **SELECT** statement is an ingest query that returns **NULL** if the field is empty after trimming whitespace from before and after the initial value:
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT
+     NULLIF(TRIM(BrandName),'') AS BrandName
+     ,NULLIF(TRIM(AttributeName),'') AS AttributeName
+     ,NULLIF(TRIM(Priority),'') AS Priority
+   FROM Customer_Table
+
+.. sql-spark-function-nullif-example-ingest-query-end
+
+
 .. _sql-spark-function-ntile-example-bucket-rfm-scores:
 
 Bucket RFM scores
@@ -3327,6 +3632,7 @@ Bucket RFM scores
 .. sql-spark-function-ntile-example-bucket-rfm-scores-start
 
 .. code-block:: sql
+   :linenos:
 
    L12M_rfm AS (
      SELECT
@@ -3334,16 +3640,13 @@ Bucket RFM scores
        ,NTILE(5) OVER (PARTITION BY amperity_id ORDER BY b.order_date ASC) AS `L12M_recency_score`
        ,NTILE(5) OVER (PARTITION BY amperity_id ORDER BY a.L12M_order_frequency ASC) AS `L12M_frequency_score`
        ,NTILE(5) OVER (PARTITION BY amperity_id ORDER BY a.L12M_order_total_amount ASC) AS `L12M_monetary_score`
-     FROM
-       L12M_attributes AS `a`
+     FROM L12M_attributes AS `a`
      JOIN (
        SELECT
          amperity_id
          ,order_date
-       FROM
-         latest_order
-       WHERE
-         MONTHS_BETWEEN(CURRENT_DATE(), order_date) <= 12
+       FROM latest_order
+       WHERE MONTHS_BETWEEN(CURRENT_DATE(), order_date) <= 12
      ) AS `b` ON a.amperity_id = b.amperity_id
    )
 
@@ -3412,6 +3715,7 @@ Use the **REGEXP_EXTRACT()** function to:
 The following example shows part of a **SELECT** statement that extracts first and last names from the **BILLING_NAME** field, and then adds columns for first and last names:
 
 .. code-block:: sql
+   :linenos:
 
    ,REGEXP_EXTRACT(TRIM(BILLING_NAME),'(^\\S*)',1) AS GIVEN_NAME
    ,REGEXP_EXTRACT(TRIM(BILLING_NAME),'((?<=\\s).*)',1) AS SURNAME
@@ -3510,6 +3814,7 @@ Validate email addresses
 The following example shows using the **RLIKE()** function within a **CASE** statement to return valid email addresses:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN email RLIKE('^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$')
@@ -3530,6 +3835,7 @@ Validate phone numbers
 The following example shows using the **RLIKE()** function within a **CASE** statement to return valid phone numbers:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN phone RLIKE('^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$')
@@ -3613,7 +3919,8 @@ Some segments send results downstream to support CCPA and/or GDPR workflows. Som
 
 For example, to hash the name, email, and phone fields in a table named "tohash_ccpa":
 
-.. code-block:: sql 
+.. code-block:: sql
+   :linenos:
 
    SELECT
      *
@@ -3712,6 +4019,7 @@ The "location" field needs to be split into individual city, state, and country 
 Use domain SQL similar to the following:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      location
@@ -3809,6 +4117,7 @@ Remove country code from phone numbers
 The following example returns phone numbers from multiple tables, and then removes "+1 ", "+1-", "1 " and "1-".
 
 .. code-block:: none
+   :linenos:
 
    SELECT
      COALESCE(email,'NULL')||COALESCE(phone,'NULL') AS pk
@@ -3817,23 +4126,49 @@ The following example returns phone numbers from multiple tables, and then remov
    FROM (
      SELECT
        sms.email
-       ,CASE WHEN sms.phone LIKE '+1%' THEN SUBSTRING(sms.phone,3) 
-             WHEN sms.phone LIKE '1%' THEN SUBSTRING(sms.phone,2) 
-             ELSE sms.phone
+       ,CASE
+         WHEN sms.phone LIKE '+1%' THEN SUBSTRING(sms.phone,3) 
+         WHEN sms.phone LIKE '1%' THEN SUBSTRING(sms.phone,2) 
+         ELSE sms.phone
        END AS phone
      FROM Attentive_Mobile_SMS sms
      UNION
      SELECT
        sub.Email
-       ,CASE WHEN sub.phone LIKE '+1%' THEN SUBSTRING(sub.phone,3) 
-             WHEN sub.phone LIKE '1%' THEN SUBSTRING(sub.phone,2) 
-             ELSE sub.phone
+       ,CASE
+         WHEN sub.phone LIKE '+1%' THEN SUBSTRING(sub.phone,3) 
+         WHEN sub.phone LIKE '1%' THEN SUBSTRING(sub.phone,2) 
+         ELSE sub.phone
        END AS phone 
      FROM Attentive_Mobile_Subscribers sub
    )
    GROUP BY 1
 
 .. sql-spark-function-substring-example-remove-country-codes-end
+
+
+.. _sql-spark-function-substr-example-parse-fields-from-dat-file:
+
+Parse fields from DAT file
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-spark-function-substr-example-parse-fields-from-dat-file-start
+
+The following example shows an ingest query that parses fields from a DAT file. Each field (fields 1-6) has a starting point within the DAT file (1, 21, 52, 63, 69, 70) and a length (20, 30, 10, 15, 1, 140). Use an ordinal, such as "_c0", to define each source field within the DAT file.
+
+.. code-block:: none
+   :linenos:
+
+   SELECT
+     ,NULLIF(TRIM(SUBSTR(`_c0`,1,20)),'') AS Field1
+     ,NULLIF(TRIM(SUBSTR(`_c0`,21,30)),'') AS Field2
+     ,NULLIF(TRIM(SUBSTR(`_c0`,52,10)),'') AS Field3
+     ,NULLIF(TRIM(SUBSTR(`_c0`,63,15)),'') AS Field4
+     ,NULLIF(TRIM(SUBSTR(`_c0`,69,1)),'') AS Field5
+     ,NULLIF(TRIM(SUBSTR(`_c0`,70,140)),'') AS Field6
+   FROM DAT_FILE_NAME
+
+.. sql-spark-function-substr-example-parse-fields-from-dat-file-end
 
 
 .. _sql-spark-function-sum:
@@ -3864,6 +4199,12 @@ Use the **COALESCE()** function to map fields with **NULL** values to zero prior
 
 TO_DATE()
 --------------------------------------------------
+
+.. sql-spark-function-to-date-ingest-warning-start
+
+.. caution:: Do not use this function when writing ingest queries. Instead, use the datetime picker in the **Feed Editor** to define a date.
+
+.. sql-spark-function-to-date-ingest-warning-end
 
 .. sql-spark-function-to-date-start
 
@@ -3909,6 +4250,7 @@ The following example shows two ways to do this:
 #. The second **TO_DATE()** function shows to handle birthdates that occur after the year 2000.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      customer_id
@@ -3940,6 +4282,12 @@ The following example shows two ways to do this:
 
 TO_TIMESTAMP()
 --------------------------------------------------
+
+.. sql-spark-function-to-timestamp-ingest-warning-start
+
+.. caution:: Do not use this function when writing ingest queries. Instead, use the datetime picker in the **Feed Editor** to define a timestamp.
+
+.. sql-spark-function-to-timestamp-ingest-warning-end
 
 .. sql-spark-function-to-timestamp-start
 
@@ -4000,6 +4348,7 @@ Clean phone numbers
 The following example uses the **TRIM()** function to find empty or NULL phone numbers, sets them to **NULL**, and then standardizes all phone numbers to add a +1:
 
 .. code-block:: none
+   :linenos:
 
    CASE
      WHEN TRIM(phone) LIKE ''

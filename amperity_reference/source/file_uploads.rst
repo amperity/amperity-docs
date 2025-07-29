@@ -14,7 +14,7 @@
         File uploads
 
 ==================================================
-File uploads
+About file uploads
 ==================================================
 
 .. file-uploads-overview-start
@@ -72,6 +72,7 @@ The following example shows SQL in the **Query Editor** that returns a series of
    :class: no-scaled-link
 
 .. code-block:: sql
+   :linenos:
 
    WITH file_upload AS (
       SELECT
@@ -106,6 +107,7 @@ Example inbound request
 The following example shows a inbound request for a customer list in the form of a CSV file:
 
 .. code-block:: none
+   :linenos:
 
    customer,email
    John Doe,john.doe@abc.com

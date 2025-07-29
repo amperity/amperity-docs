@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -120,22 +121,6 @@ Alerts are sent when:
 
 
 .. campaign-automated-alert-details-end
-
-Journeys
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. journeys-automated-alert-details-start
-
-Alerts are sent when:
-
-* A failure occurs within a journey execution or within any of the journey nodes  
-* A user cancels an automatically launched workflow
-* The journey succeeds, if configured.
-* The journey runtime exceeds a threshold, if configured.
-
-Alerts on specific journeys are limited to failure only
-
-.. journeys-automated-alert-details-end
 
 .. automated-workflow-alerts-end
 

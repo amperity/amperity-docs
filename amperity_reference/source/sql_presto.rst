@@ -119,6 +119,7 @@ Commas
 Commas are used as separators in SQL queries and are often added at the end of a line, like this:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      amperity_id AS amperity_id,
@@ -143,6 +144,7 @@ Adding the comma at the start of the row is recommended for two reasons:
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      amperity_id AS amperity_id
@@ -185,6 +187,7 @@ Formalisms
 Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT CASE postcode
      WHEN 'BN1' THEN 'Brighton'
@@ -208,6 +211,7 @@ Joins
 Joins should be aligned with the **FROM** clause and grouped with a new line where necessary. Indenting the **ON** and **AND** statements in a **JOIN** is optional, but can make it easier to see individual joins when many are present.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT r.last_name
    FROM riders AS r
@@ -231,6 +235,7 @@ Subqueries
 Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner—this is especially true where you have nested subqueries.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT r.last_name,
      (SELECT MAX(YEAR(championship_date))
@@ -302,6 +307,7 @@ When using an alias:
 The following example shows using aliases to add clarity to a **SELECT** statement that selects columns from more than one table. The "c360" alias refers to the ``Customer360`` table and the "el" alias refers to the ``Email_List`` table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT c360.email, c360.given_name, c360.surname, el.status
    FROM Customer360 c360
@@ -427,6 +433,7 @@ Reserved words
 Always use uppercase for the reserved keywords like **SELECT** and **WHERE**. It is best to avoid the abbreviated keywords and use the full length ones where available (prefer **ABSOLUTE** to **ABS**). Do not use database server specific keywords where an ANSI SQL keyword already exists performing the same function. This helps to make code more portable.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT model_num
    FROM Phones AS p
@@ -577,6 +584,7 @@ Always include newlines/vertical space:
 Putting commas and conjunctions at the start of the line makes it easier to comment out a single line without disturbing the rest of the query
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      a.title
@@ -600,6 +608,7 @@ Spaces
 Spaces should be used to line up the code so that the root keywords all start on the same character boundary, and also so that  This makes it easy to keep track of where you are in a query that may be multiple layers deep.
 
 .. code-block:: sql
+   :linenos:
 
    (SELECT f.species_name
      ,AVG(f.height) AS `average_height`
@@ -628,6 +637,7 @@ Although not exhaustive always include spaces:
 * surrounding apostrophes (``'``), but not within parentheses or with a trailing comma or semicolon.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      a.title
@@ -650,6 +660,7 @@ Example SELECT statement
 The following example shows selecting the Amperity ID, purchase date, and order ID, and then uses two window functions to rank by transaction totals, and then put in descending order to sort the most recent purchase date first:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      t.Amperity_Id,
@@ -687,14 +698,15 @@ The **WITH** clause defines a common table expression (CTE).
 
 The following example shows using multiple CTEs:
 
-.. code-block:: 
+.. code-block:: sql
+   :linenos:
 
    WITH new_in_21 AS (
      SELECT
        amperity_id
        ,one_and_done
      FROM Transaction_Attributes
-     WHERE YEAR(first_order_datetime) = 2021
+     WHERE YEAR(first_order_datetime) = 2025
    ),
 
    product_categories AS (
@@ -708,8 +720,12 @@ The following example shows using multiple CTEs:
 
    SELECT
      product_category
-     ,COUNT(distinct amperity_id) customer_count
-     ,1.0000*SUM(CASE when one_and_done THEN 1 ELSE 0 END) / COUNT(DISTINCT amperity_id) pct_one_done
+     ,COUNT(DISTINCT amperity_id) customer_count
+     ,1.0000*SUM(CASE
+       WHEN one_and_done
+       THEN 1
+       ELSE 0
+     END) / COUNT(DISTINCT amperity_id) pct_one_done
    FROM product_categories
    GROUP BY 1
    ORDER BY 3 DESC
@@ -733,15 +749,18 @@ The **SELECT** statement defines a set of data to be returned from a data table.
 A **SELECT** statement can be complex, depending on the type of query you need to make. For example, the following **SELECT** statement ranks transactions by Amperity ID and by largest dollar totals:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
-     t.orderid,
-     t.Amperity_Id, 
-     t.transactiontotal,
-     rank() OVER (partition by t.Amperity_Id order BY t.transactiontotal DESC) AS rank
-   FROM
-     TransactionsEcomm t
-   ORDER BY t.Amperity_Id, rank asc 
+     t.orderid
+     ,t.amperity_id
+     ,t.transactiontotal
+     ,RANK() OVER (
+       PARTITION BY t.amperity_id
+       ORDER BY t.transactiontotal DESC
+     ) AS rank
+   FROM TransactionsEcomm t
+   ORDER BY t.amperity_id, rank ASC 
    LIMIT 100
 
 The rest of this topic describes the clauses, expressions, functions, and operators that are the most commonly used within the **SQL Segment Editor** in Amperity. More functionality than what is described in this topic is supported, as the segment editors use Presto SQL.
@@ -775,6 +794,7 @@ EXISTS predicate
 The **EXISTS** predicate determines if a subquery returns any rows:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT name
    FROM nation
@@ -793,6 +813,7 @@ IN predicate
 The **IN** predicate determines if any values produced by the subquery are equal to the provided expression. The result of **IN** follows the standard rules for **NULL** values. The subquery must produce exactly one column:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT name
    FROM nation
@@ -813,6 +834,7 @@ Use the **SELECT DISTINCT** statement instead of **SELECT** to return only disti
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      amperity_id
@@ -846,6 +868,7 @@ TABLESAMPLE BERNOULLI clause
 Use the **TABLESAMPLE BERNOULLI** clause to return a random sample of records. Specify the size of the random sample within parentheses. For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -856,6 +879,7 @@ will return a random sample of records from the **Customer 360** table at a 50% 
 The following example shows a segment for use with campaigns that samples all customers with the surname "Smith" who do not have the given name "Joe" at a 30% rate:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      "amperity_id"
@@ -896,6 +920,7 @@ The **LEFT JOIN** clause joins rows from two tables. For a **LEFT JOIN**, each r
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT * FROM (VALUES 1, 2) t("left") 
      LEFT JOIN (VALUES 1, 1) u("right") 
@@ -936,6 +961,7 @@ The **WHERE** clause filters records, and then returns only records that match t
    **Do**
 
    .. code-block:: sql
+      :linenos:
 
       AND (c360.email IS NOT NULL OR c360.phone IS NOT NULL)
       AND (
@@ -1017,7 +1043,8 @@ Simple form
 
 The simple form searches each value expression from left to right until it finds one that equals expression:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    CASE expression
      WHEN value THEN result
@@ -1029,7 +1056,8 @@ The result for the matching value is returned.
 
 If no match is found, the result from the **ELSE** clause is returned if it exists, otherwise **NULL** is returned:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    SELECT a,
      CASE a
@@ -1051,6 +1079,7 @@ Searched form
 The searched form evaluates each boolean condition from left to right until one is true and returns the matching result:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN condition THEN result
@@ -1061,6 +1090,7 @@ The searched form evaluates each boolean condition from left to right until one 
 If no conditions are true, the result from the **ELSE** clause is returned if it exists, otherwise **NULL** is returned:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT a, b,
      CASE
@@ -1082,6 +1112,7 @@ Group states by time zones
 The following **CASE** expression groups states by North American time zone:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN state = 'HI' THEN 'Hawaii'
@@ -1094,7 +1125,7 @@ The following **CASE** expression groups states by North American time zone:
      WHEN state = 'GU' THEN 'Guam'
      WHEN state = 'VI' THEN 'US Virgin Islands'
      WHEN state = 'AS' THEN 'American Samoa'
-     ELSE '' END AS time_zone
+   ELSE '' END AS time_zone
 
 .. sql-presto-case-searched-example-group-states-by-timezone-end
 
@@ -1156,11 +1187,12 @@ The **CUBE** operator generates all possible groupings for the specified group o
 For example, the following query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
-      amperity_id
-      ,purchase_brand
-      ,SUM(order_revenue) AS total_order_revenue
+     amperity_id
+     ,purchase_brand
+     ,SUM(order_revenue) AS total_order_revenue
    FROM Unified_Transactions
    --WHERE amperity_id = '12345-abcde'
    GROUP BY CUBE(amperity_id, purchase_brand)
@@ -1196,6 +1228,7 @@ The **ROLLUP** operator generates all possible subtotals for the specified group
 For example, the following query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -1234,6 +1267,7 @@ The **HAVING** clause sorts a result set by one or more output expressions. Use 
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(*)
@@ -1302,6 +1336,7 @@ For example, to compare two tables and find out which rows are in table B, but n
    Use a query similar to the following to verify that 0 rows is accurate:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT COUNT(*)
       FROM (
@@ -1371,6 +1406,7 @@ The **UNION** clause supports two arguments: **ALL** and **DISTINCT**. Use **UNI
 For example, the following query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -1432,6 +1468,7 @@ The **UNNEST** clause expands an **ARRAY** or **MAP** into a relation.
 Use the UNNEST clause in the SQL segment to expand phone and/or email addresses so that the query looks at individual bad values. The following example shows using an **UNNEST** clause to expand email addresses that are part of a bad-values blocklist SQL query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      REGEXP_REPLACE(v.value,'\+.*@','@') AS value
@@ -1473,6 +1510,7 @@ To return a table with one column and three rows:
 To return a table with two columns and three rows:
 
 .. code-block:: sql
+   :linenos:
 
    VALUES
      (1, 'a'),
@@ -1482,6 +1520,7 @@ To return a table with two columns and three rows:
 To return table with column ID and name:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT * FROM (
      VALUES
@@ -1493,6 +1532,7 @@ To return table with column ID and name:
 To add a table with column ID and name:
 
 .. code-block:: sql
+   :linenos:
 
    CREATE TABLE example AS
    SELECT * FROM (
@@ -1548,11 +1588,14 @@ A window function has the following components:
 
 For example:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    SELECT input_1, input_2, input_3,
-     window_function() OVER (PARTITION BY input_2
-                             ORDER BY input_3 DESC, _uuid_pk) AS rnk
+     window_function() OVER (
+       PARTITION BY input_2
+       ORDER BY input_3 DESC, _uuid_pk
+     ) AS rnk
    FROM table_name
    ORDER BY input_2, rnk
 
@@ -1569,6 +1612,7 @@ Rolling 7-day window
 The following example shows a rolling seven day window for order revenue.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *
@@ -1576,7 +1620,11 @@ The following example shows a rolling seven day window for order revenue.
      SELECT
        purchase_channel
        ,order_day
-       ,SUM(order_revenue) OVER (PARTITION BY purchase_channel ORDER BY order_day ROWS BETWEEN 6 preceding AND current row) rolling_7_day_revenue
+       ,SUM(order_revenue) OVER (
+         PARTITION BY purchase_channel
+         ORDER BY order_day
+         ROWS BETWEEN 6 preceding AND current row
+       ) rolling_7_day_revenue
      FROM (
        SELECT
          purchase_channel
@@ -1604,6 +1652,7 @@ Retention rate, previous year
 The following example shows how to use a rolling 1-year window to return the values necessary for calculating retention rate during the previous year.
 
 .. code-block:: sql
+   :linenos:
 
    WITH customers AS (
      SELECT DISTINCT amperity_id AS amperity_id
@@ -2050,6 +2099,7 @@ Aggregate order IDs
 The following SQL query uses the **ARRAY_JOIN()** and **ARRAY_AGG()** functions to aggregate an array of order IDs using a comma as the delimiter:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 3
 
    SELECT
@@ -2072,6 +2122,7 @@ Sort in chronological order
 The following SQL query uses the **ARRAY_AGG()** function to sort a list of products in chronological order:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      sub.amperity_id
@@ -2132,6 +2183,7 @@ Join order IDs
 The following SQL query uses the **ARRAY_JOIN()** and **ARRAY_AGG()** functions to aggregate an array of order IDs using a comma as the delimiter:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 3
 
    SELECT
@@ -2166,6 +2218,7 @@ Return mean
 The following example returns the mean.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      product_category
@@ -2344,6 +2397,7 @@ Count customers by state
 The following example counts customers in the United States, and then also in California, Oregon, Washington, Alaska, and Hawaii who also belong to the loyalty program (which is indicated when ``loyalty_id`` is not **NULL**):
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      state
@@ -2380,6 +2434,7 @@ Birthdays, tomorrow
 The following example returns all users who have a birthday tomorrow:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      amperity_id
@@ -2453,6 +2508,7 @@ Calculate purchase day
 .. sql-presto-function-date-diff-example-calculate-purchase-decay-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ,t.amperity_id
@@ -2600,6 +2656,7 @@ One and dones, by year
 The following example shows using a common table expression to identify all one-and-done purchasers for a single calendar year:
 
 .. code-block:: sql
+   :linenos:
 
    WITH one_and_dones_2022 AS (
      SELECT
@@ -2626,6 +2683,7 @@ Find guests who canceled last month
 The following example uses member, consumer, and confirmation IDs, along with the reservation confirmation number and the checkin date to return all customers who canceled their stay one month ago:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      g.amperity_id AS AMPERITY_ID
@@ -2652,6 +2710,7 @@ Find tomorrow's birthdays
 .. sql-presto-function-day-month-year-example-find-birthdays-tomorrow-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -2775,6 +2834,7 @@ Find earliest dates
 .. sql-presto-function-least-example-find-earliest-dates-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -2834,6 +2894,7 @@ Collapse rows by Amperity ID
 The following SQL will collapse all rows with Amperity IDs in the **Unified Coalesced** table into a single row per Amperity ID:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id AS amperity_id
@@ -2887,6 +2948,7 @@ Replace NULL with 0
 Wrap the **MIN()** function to replace **NULL** values with ``0``:
 
 .. code-block:: sql
+   :linenos:
 
    MIN(CASE 
      WHEN field IS NULL THEN 0
@@ -2956,6 +3018,7 @@ Percentiles by 10
 The following example shows how to return 10th percentiles.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      tier*.1 AS tier
@@ -2983,6 +3046,7 @@ Percentiles by 4
 The following example shows how to return the 25th, median, and 75th percentiles.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      tier*.25 tier
@@ -3034,6 +3098,7 @@ Percent rank of all purchases
 The following example shows how to return the percent rank of all purchases.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      amperity_id
@@ -3080,6 +3145,7 @@ Rank by Amperity ID
 The following SQL query uses the **RANK()** function to find the largest transactions by Amperity ID, and then returns them in ascending order:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 6,9,12
 
    WITH ranked_transactions AS (
@@ -3132,6 +3198,7 @@ Validate email addresses
 The following example shows using the **REGEXP_LIKE()** function within a **CASE** statement to return valid email addresses:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN REGEXP_LIKE(email, '^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$')
@@ -3152,6 +3219,7 @@ Validate phone numbers
 The following example shows using the **REGEXP_LIKE()** function within a **CASE** statement to return valid phone numbers:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN REGEXP_LIKE(phone, '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$')
@@ -3198,6 +3266,7 @@ Remove spaces
 .. sql-presto-function-regexp-replace-example-remove-spaces-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      REGEXP_REPLACE(AddressLine1, '(\s*)([ ])', '')
@@ -3216,6 +3285,7 @@ Keep A-z, 0-9 from string
 .. sql-presto-function-regexp-replace-example-keep-az09-from-string-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      REGEXP_REPLACE(AddressLine1, '(\s*)([^a-zA-Z0-9])', '')
@@ -3234,6 +3304,7 @@ Keep alphabetical characters
 .. sql-presto-function-regexp-replace-example-keep-alphabetical-characters-start
 
 .. code-block:: sql
+   :linenos:
 
    ,REGEXP_REPLACE(LOWER(given_name), '[^a-zA-Z]+', '') AS given_name
    ,REGEXP_REPLACE(LOWER(surname), '[^a-zA-Z]+', '') AS surname
@@ -3292,6 +3363,7 @@ Clean up semantic values
 .. sql-presto-function-regexp-replace-example-clean-up-semantic-values-start
 
 .. code-block:: sql
+   :linenos:
 
    ,REGEXP_REPLACE(LOWER(phone), '[^0-9]+', '') AS phone
    ,REGEXP_REPLACE(LOWER(address), '[.]+', '') AS address
@@ -3311,6 +3383,8 @@ Formatting for Facebook Ads
 
 .. note:: Facebook Ads has specific requirements for data formatting and naming of certain fields. Destinations and campaigns configured for Facebook Ads automatically apply the correct formatting to fields that are required by Facebook Ads. This example shows the regular expression formatting for those fields.
 
+.. TODO: The following block should not be in a code-block.
+
 ::
 
    ,REGEXP_REPLACE(LOWER(given_name), '[.,\/#!$%\^&\*;:{}=\-_`~()@'\"+ ]', '') AS FN
@@ -3321,6 +3395,26 @@ Formatting for Facebook Ads
    ,REGEXP_REPLACE(LOWER(email), '[^a-z]', '') AS EMAIL
 
 .. sql-presto-function-regexp-replace-example-formatting-for-facebook-ads-end
+
+
+.. _sql-presto-function-regexp-replace-example-capitalize-first-letter:
+
+Capitalize the first character
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-regexp-replace-example-capitalize-first-letter-start
+
+Presto SQL does not have a function that is equivalent to the **INITCAP** function in Spark SQL. To format the first character in a string as uppercase and the rest of the string as lowercase, use the **REGEXP_REPLACE()** function.
+
+For example:
+
+.. code-block:: sql
+
+   REGEXP_REPLACE('new york', '(\p{L})(\p{L}*)', x -> UPPER(x[1]) || LOWER(x[2]))
+
+.. note:: The ``\p{L}`` matches any character in any language, such as with accent characters found in non-English languages.
+
+.. sql-presto-function-regexp-replace-example-capitalize-first-letter-end
 
 
 .. _sql-presto-function-replace:
@@ -3495,6 +3589,7 @@ Total revenue, descending order
 The following example uses the **SUM()** function to return total revenue, returns, and quantity, groups them, and then arranges the results in descending order:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      purchase_brand
