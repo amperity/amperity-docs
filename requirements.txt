@@ -4,7 +4,7 @@ shibuya==2025.4.25
 sphinx_design==0.6.1
 sphinx-togglebutton==0.3.2
 sphinx_sitemap==2.6.0
-sphinxcontrib-mermaid 1.0.0
+sphinxcontrib-mermaid
 sphinxcontrib-video==0.4.1
 sphinxcontrib-youtube==1.4.1
 
