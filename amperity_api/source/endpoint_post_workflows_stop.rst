@@ -13,28 +13,15 @@
     :content class=swiftype name=title data-type=string:
         POST /workflow/runs/{id}/stop
 
-
 ==================================================
-POST /workflow/runs/{id}/stop 
+POST /workflow/runs/{id}/stop
 ==================================================
 
 .. endpoint-post-workflows-stop-start
 
-Use the **workflow/runs/{id}/stop** to stop a running workflow. 
+Use the **POST workflow/runs/{id}/stop** to stop a running workflow. 
 
 .. endpoint-post-workflows-stop-end
-
-
-.. _endpoint-post-workflows-stop-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-post-workflow-run-stop.png
-   :width: 440 px
-   :alt: POST /workflow/runs/{id}/stop
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-post-workflows-stop-prerequisites:
@@ -57,7 +44,7 @@ Base URL
 
 .. endpoint-post-workflows-stop-base-url-start
 
-All requests made to the **workflow/runs/{id}/stop** endpoint should be directed to the following base URL:
+Direct all requests to the **POST workflow/runs/{id}/stop** endpoint should be directed to the following base URL:
 
 .. code-block:: rest
 
@@ -83,15 +70,15 @@ Requests
 
 .. endpoint-post-workflows-stop-request-start
 
-A request to the **workflow/runs/{id}/stop** endpoint is similar to:
+A request to the **POST workflow/runs/{id}/stop** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request POST \ 
-          "https://app.amperity.com/api/workflow/runs/{id}/stop" \
-        --header 'amperity-tenant: tenant' \
+          "https://app.amperity.com/api/workflow/runs/{id}/stop' \
+        --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
 
 (This example is formatted for readability in a narrow page layout.)
@@ -106,7 +93,7 @@ Request parameters
 
 .. endpoint-post-workflows-stop-request-parameters-start
 
-The following table describes the parameters that may be used with the **workflow/runs/{id}/stop** endpoint.
+The following table describes the parameters that may be used with the **POST workflow/runs/{id}/stop** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -140,31 +127,29 @@ Request examples
 
 .. endpoint-post-workflows-stop-request-examples-start
 
-The following examples show how to send requests to the **workflow/runs/{id}/stop** endpoint.
+The following examples show how to send requests to the **POST workflow/runs/{id}/stop** endpoint.
 
 .. endpoint-post-workflows-stop-request-examples-end
 
+.. endpoint-post-workflows-stop-request-examples-tabs-start
 
-.. _endpoint-post-workflows-stop-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-post-workflows-stop-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **POST workflow/runs/{id}/stop** endpoint.
 
-The following example shows how to use cURL to send a request to the **workflow/runs/{id}/stop** endpoint.
+      .. code-block:: bash
 
-::
+         curl --request GET \
+                'https://tenant.amperity.com/api/workflow/runs/{id}/stop' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs/{id}/stop" \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+      (This example is formatted for readability in a narrow page layout.)
 
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-post-workflows-stop-request-example-curl-end
+.. endpoint-post-workflows-stop-request-examples-tabs-end
 
 
 .. _endpoint-post-workflows-stop-responses:
@@ -174,7 +159,7 @@ Responses
 
 .. endpoint-post-workflows-stop-responses-start
 
-A response from the **workflow/runs/{id}/stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was stopped. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **POST workflow/runs/{id}/stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was stopped. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-stop-responses-end
 
@@ -189,6 +174,7 @@ A response from the **workflow/runs/{id}/stop** endpoint will match an :doc:`HTT
 The **200** response returns details for the workflow that was stopped.
 
 .. code-block:: json
+   :linenos:
 
    {
      "id":"wf-20240801-65278-x9E9U",

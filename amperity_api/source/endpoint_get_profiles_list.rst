@@ -3,57 +3,57 @@
 
 .. meta::
     :description lang=en:
-         Return a list of segments from your tenant.
+         Return a list of customer profiles from your tenant.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Return a list of segments from your tenant.
+         Return a list of customer profiles from your tenant.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        GET /segments
+        GET /indexes/{id}/profiles
 
 ==================================================
-GET /segments
+GET /indexes/{id}/profiles
 ==================================================
 
-.. endpoint-get-segments-list-start
+.. endpoint-get-profiles-list-start
 
-Use the **GET /segments** endpoint to return a list of segments from your tenant.
+Use the **GET /indexes/{id}/profiles** endpoint to return a paginated list of customer profiles.
 
-.. endpoint-get-segments-list-end
+.. endpoint-get-profiles-list-end
 
 
-.. _endpoint-get-segments-list-prerequisites:
+.. _endpoint-get-profiles-list-prerequisites:
 
 Prerequisites
 ==================================================
 
-.. endpoint-get-segments-list-prerequisites-start
+.. endpoint-get-profiles-list-prerequisites-start
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
 
-.. endpoint-get-segments-list-prerequisites-end
+.. endpoint-get-profiles-list-prerequisites-end
 
 
-.. _endpoint-get-segments-list-base-url:
+.. _endpoint-get-profiles-list-base-url:
 
 Base URL
 ==================================================
 
-.. endpoint-get-segments-list-base-url-start
+.. endpoint-get-profiles-list-base-url-start
 
-Direct all requests to the **GET /segments** endpoint to the following base URL:
+Direct all requests to the **GET /indexes/{id}/profiles** endpoint to the following base URL:
 
 ::
 
-   https://{tenant-id}.amperity.com/api/segments/
+   https://{tenant-id}.amperity.com/api/indexes/
 
-.. endpoint-get-segments-list-base-url-end
+.. endpoint-get-profiles-list-base-url-end
 
 
-.. _endpoint-get-segments-list-rate-limit:
+.. _endpoint-get-profiles-list-rate-limit:
 
 Rate limit
 ==================================================
@@ -63,38 +63,38 @@ Rate limit
    :end-before: .. rate-limits-end
 
 
-.. _endpoint-get-segments-list-request:
+.. _endpoint-get-profiles-list-request:
 
 Requests
 ==================================================
 
-.. endpoint-get-segments-list-request-start
+.. endpoint-get-profiles-list-request-start
 
-A request to the **GET /segments** endpoint is similar to:
+A request to the **GET /indexes/{id}/profiles** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/segments \
-          ?limit=12 \
-          ?with_total=true' \
+          'https://tenant.amperity.com/api/indexes/{id}/profiles \
+          ?limit=100 \
+          &with_total=true' \
         --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
 (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-get-segments-list-request-end
+.. endpoint-get-profiles-list-request-end
 
 
-.. _endpoint-get-segments-list-request-parameters:
+.. _endpoint-get-profiles-list-request-parameters:
 
 Request parameters
 --------------------------------------------------
 
-.. endpoint-get-segments-list-request-parameters-start
+.. endpoint-get-profiles-list-request-parameters-start
 
-The following table describes the parameters that may be used with the **GET /segments** endpoint.
+The following table describes the parameters that may be used with the **GET /indexes/{id}/profiles** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -136,44 +136,44 @@ The following table describes the parameters that may be used with the **GET /se
 
        .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
 
-.. endpoint-get-segments-list-request-parameters-end
+.. endpoint-get-profiles-list-request-parameters-end
 
 
-.. _endpoint-get-segments-list-request-examples:
+.. _endpoint-get-profiles-list-request-examples:
 
 Request examples
 --------------------------------------------------
 
-.. endpoint-get-segments-list-request-examples-start
+.. endpoint-get-profiles-list-request-examples-start
 
-The following examples show how to send requests to the **GET /segments** endpoint.
+The following examples show how to send requests to the **GET /indexes/{id}/profiles** endpoint.
 
-.. endpoint-get-segments-list-request-examples-end
+.. endpoint-get-profiles-list-request-examples-end
 
 
-.. endpoint-get-segments-list-request-examples-tabs-start
+.. endpoint-get-profiles-list-request-examples-tabs-start
 
 .. tab-set::
 
    .. tab-item:: cURL
 
-      The following example shows how to use cURL to send a request to the **GET /segments** endpoint.
+      The following example shows how to use cURL to send a request to the **GET /indexes/{id}/profiles** endpoint.
 
       .. code-block:: bash
 
          curl --request GET \
-                'https://tenant.amperity.com/api/segments \
-                ?limit=12 \
+                'https://tenant.amperity.com/api/indexes/{id}/profiles \
+                ?limit=100 \
                 &with_total=true' \
-              --header 'amperity-tenant: {tenant}' \
-              --header 'api-version: 2024-04-01' \
-              --header 'Authorization: Bearer {token}'
+                --header 'amperity-tenant: {tenant}' \
+                --header 'api-version: 2024-04-01' \
+                --header 'Authorization: Bearer {token}'
 
       (This example is formatted for readability in a narrow page layout.)
 
    .. tab-item:: Python
 
-      The following example shows how to use Python to send a request to the **GET /segments** endpoint. This example converts the JSON response into a CSV file named "segments.csv".
+      The following example shows how to use Python to send a request to the **GET /indexes/{id}/profiles** endpoint. This example converts the JSON response into a CSV file named "profiles.csv".
 
       .. code-block:: python
          :linenos:
@@ -182,18 +182,18 @@ The following examples show how to send requests to the **GET /segments** endpoi
          import json
          import csv
 
-         # URL for Segments endpoint
-         url = "https://tenant-name.amperity.com/api/segments"
+         # URL for Campaigns endpoint
+         url = "https://tenant-name.amperity.com/api/indexes/{id}/profiles"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
            'amperity-tenant': '{tenant}',
-           'api-version': 'version'
+           'api-version': '{version}'
          }
 
-         # Get the response from the Segments endpoint
+         # Get the response from the Profiles endpoint
          response = requests.request("GET", url, headers=headers, params=payload)
          response_json = response.json()
 
@@ -201,7 +201,7 @@ The following examples show how to send requests to the **GET /segments** endpoi
          headers = list(response_json["data"][0].keys())
 
          # Specify the output CSV file path
-         csv_file_path = "segments.csv"
+         csv_file_path = "profiles.csv"
 
          # Write data to a CSV file
          with open(csv_file_path, mode='w', newline='') as file:
@@ -212,29 +212,29 @@ The following examples show how to send requests to the **GET /segments** endpoi
 
          print("CSV file generated successfully.")
 
-.. endpoint-get-segments-list-request-examples-tabs-end
+.. endpoint-get-profiles-list-request-examples-tabs-end
 
 
-.. _endpoint-get-segments-list-responses:
+.. _endpoint-get-profiles-list-responses:
 
 Responses
 ==================================================
 
-.. endpoint-get-segments-list-responses-start
+.. endpoint-get-profiles-list-responses-start
 
-A response from the **GET /segments** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /indexes/{id}/profiles** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
-.. endpoint-get-segments-list-responses-end
+.. endpoint-get-profiles-list-responses-end
 
 
-.. _endpoint-get-segments-list-response-200ok:
+.. _endpoint-get-profiles-list-response-200ok:
 
 200 OK
 --------------------------------------------------
 
-.. endpoint-get-segments-list-response-200ok-start
+.. endpoint-get-profiles-list-response-200ok-start
 
-The **200** response returns a set of segments.
+The **200** response returns a set of customer profile indexes.
 
 .. code-block:: json
    :linenos:
@@ -244,25 +244,29 @@ The **200** response returns a set of segments.
      "next_token": "ABCa1bcdDEe2f3G",
      "data": [
        {
-         "id": "ab-1CDEfGHI",
-         "name": "Holiday Segment"
+         "id": "cl-abc123",
+         "name": "Loyalty Members",
+         "created_at": "2025-04-25T20:30:00Z"
+         "updated_at": "2025-07-26T20:30:00Z"
        },
        {
-         "id": "cd-2FGHiJKL",
-         "name": "Returning Customers"
-       }
+         "id": "cl-def456",
+         "name": "Online Shoppers",
+         "created_at": "2025-04-25T20:30:00Z"
+         "updated_at": "2025-07-26T20:30:00Z"
+       },
      ]
    }
 
-.. endpoint-get-segments-list-response-200ok-end
+.. endpoint-get-profiles-list-response-200ok-end
 
 
-.. _endpoint-get-segments-list-response-parameters:
+.. _endpoint-get-profiles-list-response-parameters:
 
 Response parameters
 --------------------------------------------------
 
-.. endpoint-get-segments-list-response-parameters-start
+.. endpoint-get-profiles-list-response-parameters-start
 
 A **200 OK** response contains the following parameters.
 
@@ -276,20 +280,26 @@ A **200 OK** response contains the following parameters.
    * - **data**
      - A JSON array of values for the current page of results. The array of values includes the following properties:
 
+       **created_at**
+          The date and time on which the profile index was created. The date and time must be in `RFC3339 format <https://www.rfc-editor.org/rfc/rfc3339>`__ |ext_link|.
+
        **id**
-          The Amperity internal identifier for the segment.
+          The Amperity internal identifier for the campaign.
+
+         "id": "cl-def456",
+         "name": "Online Shoppers",
+         "created_at": "2025-04-25T20:30:00Z"
+         "updated_at": "2025-07-26T20:30:00Z"
 
        **name**
-          The name of the segment.
+          The name of the campaign.
 
    * - **next_token**
      - The cursor value to use in a subsequent request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 
-   * - **total**
-     - The total count of all results. This property is only returned when **with_total** is set to **true** in a request.
+   * - **updated_at**
+     -    The date and time on which the profile index was updated. The date and time must be in `RFC3339 format <https://www.rfc-editor.org/rfc/rfc3339>`__ |ext_link|.
 
-       .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
-
-.. endpoint-get-segments-list-response-parameters-end
+.. endpoint-get-profiles-list-response-parameters-end

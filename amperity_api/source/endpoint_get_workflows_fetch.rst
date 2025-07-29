@@ -13,28 +13,15 @@
     :content class=swiftype name=title data-type=string:
         GET /workflow/runs/{id}
 
-
 ==================================================
 GET /workflow/runs/{id}
 ==================================================
 
 .. endpoint-get-workflows-fetch-start
 
-Use the **/workflow/runs/{id}** endpoint to return details for a specific workflow.
+Use the **GET /workflow/runs/{id}** endpoint to return details for a specific workflow.
 
 .. endpoint-get-workflows-fetch-end
-
-
-.. _endpoint-get-workflows-fetch-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-request-get-workflow-runs-fetch.png
-   :width: 440 px
-   :alt: GET /workflow/runs/{id}
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-get-workflows-fetch-prerequisites:
@@ -57,7 +44,7 @@ Base URL
 
 .. endpoint-get-workflows-fetch-base-url-start
 
-All requests made to the **/workflow/runs/{id}** endpoint should be directed to the following base URL:
+Direct all requests to the **GET /workflow/runs/{id}** endpoint to the following base URL:
 
 ::
 
@@ -83,16 +70,16 @@ Requests
 
 .. endpoint-get-workflows-fetch-request-start
 
-A request to the **/workflow/runs/{id}** endpoint is similar to:
+A request to the **GET /workflow/runs/{id}** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
           'https://tenant.amperity.com/api/workflow/runs/{id} \
-          ?view=overview \
-        --header 'amperity-tenant: tenant' \
+          ?view=overview' \
+        --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
 (This example is formatted for readability in a narrow page layout.)
 
@@ -106,7 +93,7 @@ Request parameters
 
 .. endpoint-get-workflows-fetch-request-parameters-start
 
-The following table describes the parameters that may be used with the **/workflow/runs/{id}** endpoint.
+The following table describes the parameters that may be used with the **GET /workflow/runs/{id}** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -130,7 +117,7 @@ The following table describes the parameters that may be used with the **/workfl
 
        The workflow ID must be in the URL. For example: **/workflow/runs/wf-20240603-12345-MNabc**.
 
-       Use the :doc:`/workflow/runs <endpoint_get_workflows_list>` endpoint to get a list of workflow IDs or copy the ID from the **Workflows** page in Amperity.
+       Use the :doc:`endpoint_get_workflows_list` endpoint to get a list of workflow IDs or copy the ID from the **Workflows** page in Amperity.
 
 
    * - **view**
@@ -152,32 +139,30 @@ Request examples
 
 .. endpoint-get-workflows-fetch-request-examples-start
 
-The following examples show how to send requests to the **/workflow/runs/{id}** endpoint.
+The following examples show how to send requests to the **GET /workflow/runs/{id}** endpoint.
 
 .. endpoint-get-workflows-fetch-request-examples-end
 
+.. endpoint-get-workflows-fetch-request-examples-tabs-start
 
-.. _endpoint-get-workflows-fetch-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-get-workflows-fetch-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **GET /workflow/runs/{id}** endpoint.
 
-The following example shows how to use cURL to send a request to the **/workflow/runs/{id}** endpoint.
+      .. code-block:: python
 
-.. code-block:: rest
+         curl --request GET \
+                'https://tenant.amperity.com/api/workflow/runs/{id} \
+                ?view=overview' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs/{id} \
-          ?view=overview \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+      (This example is formatted for readability in a narrow page layout.)
 
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-get-workflows-fetch-request-example-curl-end
+.. endpoint-get-workflows-fetch-request-examples-tabs-end
 
 
 .. _endpoint-get-workflows-fetch-responses:
@@ -187,7 +172,7 @@ Responses
 
 .. endpoint-get-workflows-fetch-responses-start
 
-A response from the **/workflow/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /workflow/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-fetch-responses-end
 
@@ -204,6 +189,7 @@ The **200** response returns details for the named workflow.
 **Overview**
 
 .. code-block:: json
+   :linenos:
 
    {
      "type": "campaign.fetch",
@@ -220,6 +206,7 @@ The **200** response returns details for the named workflow.
 .. important:: The list of :ref:`response parameters that are returned <endpoint-get-workflows-fetch-response-parameters>` in the response will vary, depending on the state of the workflow, the number of tasks that were initiated by the workflow, and if an error occurred.
 
 .. code-block:: json
+   :linenos:
 
    {
      "task_instances": [],

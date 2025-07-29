@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/api/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -13,9 +14,8 @@
     :content class=swiftype name=title data-type=string:
         Amperity API versions
 
-
 ==================================================
-Amperity API versions
+Versioning
 ==================================================
 
 .. versioning-start

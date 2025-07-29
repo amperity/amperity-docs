@@ -13,28 +13,15 @@
     :content class=swiftype name=title data-type=string:
         GET /workflow/runs
 
-
 ==================================================
 GET /workflow/runs
 ==================================================
 
 .. endpoint-get-workflows-list-start
 
-Use the **/workflow/runs** endpoint to return a list of workflows that exist within the date range defined in the request.
+Use the **GET /workflow/runs** endpoint to return a list of workflows that exist within the date range defined in the request.
 
 .. endpoint-get-workflows-list-end
-
-
-.. _endpoint-get-workflows-list-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-request-get-workflow-runs-list.png
-   :width: 440 px
-   :alt: GET /workflow/runs/
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-get-workflows-list-prerequisites:
@@ -57,7 +44,7 @@ Base URL
 
 .. endpoint-get-workflows-list-base-url-start
 
-All requests made to the **/workflow/runs** endpoint should be directed to the following base URL:
+Direct all requests to the **GET /workflow/runs** endpoint to the following base URL:
 
 ::
 
@@ -83,17 +70,17 @@ Requests
 
 .. endpoint-get-workflows-list-request-start
 
-A request to the **/workflow/runs** endpoint is similar to:
+A request to the **GET /workflow/runs** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
           'https://tenant.amperity.com/api/workflow/runs \
           ?limit=12 \
-          &with_total=true \
-        --header 'amperity-tenant: tenant' \
+          &with_total=true' \
+        --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
 (This example is formatted for readability in a narrow page layout.)
 
@@ -107,7 +94,7 @@ Request parameters
 
 .. endpoint-get-workflows-list-request-parameters-start
 
-The following table describes the parameters that may be used with the **/workflow/runs** endpoint.
+The following table describes the parameters that may be used with the **GET /workflow/runs** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -132,7 +119,7 @@ The following table describes the parameters that may be used with the **/workfl
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
 
 
    * - **created_to**
@@ -142,7 +129,7 @@ The following table describes the parameters that may be used with the **/workfl
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
 
 
    * - **ended_from**
@@ -152,7 +139,7 @@ The following table describes the parameters that may be used with the **/workfl
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
 
 
    * - **ended_to**
@@ -162,7 +149,7 @@ The following table describes the parameters that may be used with the **/workfl
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
 
 
    * - **limit**
@@ -222,33 +209,31 @@ Request examples
 
 .. endpoint-get-workflows-list-request-examples-start
 
-The following examples show how to send requests to the **/workflow/runs** endpoint.
+The following examples show how to send requests to the **GET /workflow/runs** endpoint.
 
 .. endpoint-get-workflows-list-request-examples-end
 
+.. endpoint-get-workflows-list-request-examples-tabs-start
 
-.. _endpoint-get-workflows-list-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-get-workflows-list-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **GET /workflow/runs** endpoint.
 
-The following example shows how to use cURL to send a request to the **/workflow/runs** endpoint.
+      .. code-block:: bash
 
-.. code-block:: rest
+         curl --request GET \
+                'https://tenant.amperity.com/api/workflow/runs \
+                ?limit=12 \
+                ?with_total=true' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs \
-          ?limit=12 \
-          ?with_total=true \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+      (This example is formatted for readability in a narrow page layout.)
 
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-get-workflows-list-request-example-curl-end
+.. endpoint-get-workflows-list-request-examples-tabs-end
 
 
 .. _endpoint-get-workflows-list-responses:
@@ -258,7 +243,7 @@ Responses
 
 .. endpoint-get-workflows-list-responses-start
 
-A response from the **/workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-list-responses-end
 
@@ -273,6 +258,7 @@ A response from the **/workflow/runs** endpoint will match an :doc:`HTTP status 
 The **200** response returns a list of workflows.
 
 .. code-block:: json
+   :linenos:
 
    {
      "error": {
