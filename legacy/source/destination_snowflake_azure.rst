@@ -351,12 +351,6 @@ Database tables (or even entire databases) can be sent from Amperity to Snowflak
 
 .. destination-snowflake-azure-database-export-end
 
-**To add a database export for Snowflake**
-
-.. include:: ../../amperity_reference/source/data_exports.rst
-   :start-after: .. data-exports-add-steps-start
-   :end-before: .. data-exports-add-steps-end
-
 
 .. _destination-snowflake-azure-add-destination:
 

@@ -3320,7 +3320,7 @@ Menu navigation links
 
 .. rst-navigation-top-nav-links-start
 
-The navigation links in the top menus are :doc:`managed from the conf.py file <configuration>` in each docs directory.
+The navigation links in the top menus are managed from the conf.py file in each docs directory.
 
 .. important:: If the navigation links are updated those updates **MUST** be made in all of the documentation directories: ``amperity_api``, ``amperity_base``, ``amperity_operator``, ``amperity_reference``, ``amperity_user``, and ``contributing``.
 

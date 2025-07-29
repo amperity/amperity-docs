@@ -61,7 +61,7 @@ Build query
    #. You may send only one of only one **email**, **mobile_id**, or **phone**. 
    #. Amperity ensure that fields are mapped correctly to the schema types required by Snapchat.
    #. Amperity applies SHA-256 hashing automatically.
-   #. Audience targeting in |destination-name| requires at least 1000 unique customers. Be sure your query returns at least 1000 unique customers.
+   #. Audience targeting in |destination-name| requires at least 1000 unique customers. Be sure your audience includes at least 1000 unique customers.
 
 .. sendto-snapchat-build-query-note-end
 

@@ -67,7 +67,6 @@ Site index
    destination_snowflake_azure
    destination_the_trade_desk
    destination_tiktok_ads
-   destination_walmart_dsp
    destination_vibes
    destination_yahoo_dsp
    destination_zendesk

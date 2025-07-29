@@ -17,6 +17,8 @@
 Profile API
 ==================================================
 
+.. important:: The Profile API documented on this page (right now) will be deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__. The use cases in this topic are true, but should be built using the new endpoints.
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-profile-api-start
    :end-before: .. term-profile-api-end
