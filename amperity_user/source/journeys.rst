@@ -19,17 +19,13 @@
 Design journeys
 ==================================================
 
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-about-start
-   :end-before: .. journeys-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-start
+   :end-before: .. term-journey-end
 
 .. include:: ../../amperity_reference/source/journeys.rst
    :start-after: .. journeys-howitworks-start
    :end-before: .. journeys-howitworks-end
-
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-about-enable-start
-   :end-before: .. journeys-about-enable-end
 
 .. journeys-howitworks-steps-start
 

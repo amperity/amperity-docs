@@ -3088,6 +3088,15 @@ Gravity is a cloud accounting business management application built on the Micro
 .. term-gravity-end
 
 
+**gross sales**
+
+.. term-gross-sales-start
+
+The total amount of sales without any deductions removed from the total.
+
+.. term-gross-sales-end
+
+
 **gzip**
 
 .. term-gzip-start
@@ -3436,15 +3445,6 @@ Iterable enables brands to create, execute and optimize campaigns across email, 
 .. term-iterable-end
 
 
-**gross sales**
-
-.. term-gross-sales-start
-
-The total amount of sales without any deductions removed from the total.
-
-.. term-gross-sales-end
-
-
 **Java Database Connectivity (JDBC)**
 
 .. term-jdbc-start
@@ -3476,7 +3476,7 @@ Jitter tracks changes to Amperity IDs across Stitch runs.
 
 .. term-journey-start
 
-A journey is a milestone or series of milestones that a customer goes through as they experience a brand.
+A journey is an automated sequence for connecting with customers across channels like email, paid media, SMS, and direct mail. Each step in a journey represents a decision point or action: send a message, wait for further customer engagement, or split the audience onto different paths.
 
 .. term-journey-end
 

@@ -17,27 +17,15 @@
 About journeys
 ==================================================
 
-.. TODO: Next paragraph is a future glossary term. terms.rst, reused.
-
-.. journeys-about-start
-
-A journey is an automated sequence for connecting with customers across channels like email, paid media, SMS, and direct mail. Each step in a journey represents a decision point or action: send a message, wait for further customer engagement, or split the audience onto different paths.
-
-.. journeys-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-start
+   :end-before: .. term-journey-end
 
 .. journeys-about-context-start
 
 By using **Journeys**, marketers can implement cross-channel strategies, improve targeting precision, and activate the right message at the right moment to drive better engagement and higher conversions.
 
 .. journeys-about-context-end
-
-.. journeys-about-enable-start
-
-.. TODO: determine if this note is still necessary after GA -- is journeys automatically enabled everywhere?
-
-.. note:: Ask your Amperity representative about how your brand can enable journeys.
-
-.. journeys-about-enable-end
 
 
 .. _journeys-howitworks:
@@ -630,7 +618,7 @@ Add percent split nodes
 
    .. important:: The percentages for all paths and the control group must add up to 100%.
 
-   **Configure control group** Choose a name and percentage for the control group, or keep the default name of "Control Group" and the value of 10%. 
+   **Configure control group** Choose a name and percentage for the control group, or keep the default name of "Control Group" and the value of 10%.
    
    .. tip:: Uncheck "Include control" to disable the control group.
 
@@ -645,7 +633,7 @@ Allow re-entry
 
 .. journeys-howtos-allow-reentry-start
 
-If a journey is set to recur, you can allow the same customer to re-enter the journey on its next run if the customer has both previously exited the journey and once again qualifies for the inclusion segment. 
+If a journey is set to recur, you can allow the same customer to re-enter the journey on its next run if the customer has both previously exited the journey and once again qualifies for the inclusion segment.
 
 .. journeys-howtos-allow-reentry-end
 
@@ -664,13 +652,14 @@ If a journey is set to recur, you can allow the same customer to re-enter the jo
 
    For example, if the segment had 1,500 members at launch, all 1,500 would enter the journey.
 
-   On the next run, if the segment has grown to 1,700, only the 200 new members--—those who joined the segment after the previous run---are guaranteed to be included.
+   On the next run, if the segment has grown to 1,700, only the 200 new members--those who joined the segment after the previous run--are guaranteed to be included.
 
    If you have selected **Allow re-entry** customers who have previously exited the journey must re-qualify for the inclusion segment. For example, if the segment is based on a time window, such as "purchased in the last 7 days", and they meet the criteria again, they can re-enter.
 
    To prevent this, use an **exclusion** segment to filter out users who have already participated, or who meet other disqualifying conditions.
 
 .. journeys-howtos-allow-reentry-note-end
+
 
 .. _journeys-howtos-delete:
 
@@ -741,7 +730,12 @@ The attributes that are sent to each destination that are configured for activat
 
 .. journeys-howtos-edit-destination-attributes-steps-end
 
+.. journeys-howtos-edit-destination-attributes-note-start
+
 .. note:: If you have multiple destinations in a single activation node and your destinations require different custom attributes, use separate activation nodes for each destination.
+
+.. journeys-howtos-edit-destination-attributes-note-end
+
 
 .. _journeys-howtos-edit-starting-audience:
 
@@ -806,7 +800,7 @@ Interact with Journeys canvas
 
 The **Journeys** canvas supports the following user interactions:
 
-* Drag the journey using a mouse or a trackpad. You may do this directly on the canvas or on the minimap in the lower right. 
+* Drag the journey using a mouse or a trackpad. You may do this directly on the canvas or on the minimap in the lower right.
 * Zoom by using the **+** / **-** buttons in the bottom left or pinching/expanding on a trackpad.
 * Center the canvas by clicking the square icon in the bottom left.
  
@@ -826,8 +820,8 @@ You can monitor journey status and determine how to resolve errors on the `Workf
 
 .. journeys-howtos-monitor-resolve-steps-start
 
-#. Go to the **Workflows** page at the top level of your Amperity tenant. If you are starting from within the **Journeys** canvas you'll need to exit by clicking the X on the upper left. 
-#. Locate the name of your journey and click in to monitor status and get guidance on resolving errors. 
+#. Go to the **Workflows** page at the top level of your Amperity tenant. If you are starting from within the **Journeys** canvas you'll need to exit by clicking the X on the upper left.
+#. Locate the name of your journey and click in to monitor status and get guidance on resolving errors.
 
 .. journeys-howtos-monitor-resolve-steps-end
 
@@ -840,6 +834,7 @@ You may receive workflow alerts related to your journeys.
    :end-before: .. journeys-automated-alert-details-end
 
 .. journeys-howtos-monitor-resolve-workflow-alerts-end
+
 
 .. _journeys-howtos-rename:
 
@@ -890,6 +885,13 @@ Saving a journey initiates the workflow, allowing you to view results and return
 
 .. journeys-howtos-save-a-journey-tip-end
 
+.. journeys-howtos-save-a-journey-note-start
+
+.. note:: You can save a journey with validation errors as long as it is not scheduled to run. However, if saving the journey would result in it being scheduled, and validation errors are still present, you won't be able to save it until those errors are resolved.
+
+.. journeys-howtos-save-a-journey-note-end
+
+
 .. _journeys-howtos-schedule-a-journey:
 
 Schedule a journey
@@ -921,7 +923,6 @@ A journey may be configured to run once, daily, weekly, monthly, or quarterly.
 .. note:: Once you have saved a journey, the **Edit schedule** option becomes **View schedule**. To make changes to the schedule, click **Edit** on the top right of the **Journeys** canvas.
 
 .. journeys-howtos-schedule-a-journey-note-end
-
 
 
 .. _journeys-howtos-view-journey-participant-numbers:
@@ -958,7 +959,7 @@ A delay node will have an additional icon.
 
 .. journeys-howtos-view-participant-numbers-tip-start
 
-.. tip:: Once you have saved a journey, it defaults to **View** mode. To exit **View** mode and make changes, click **Edit** on the top right of the **Journeys** canvas. 
+.. tip:: Once you have saved a journey, it defaults to **View** mode. To exit **View** mode and make changes, click **Edit** on the top right of the **Journeys** canvas.
 
 .. journeys-howtos-view-participant-numbers-tip-end
 

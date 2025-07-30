@@ -19,17 +19,14 @@
 About journeys
 ==================================================
 
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-about-start
-   :end-before: .. journeys-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-start
+   :end-before: .. term-journey-end
 
 .. include:: ../../amperity_reference/source/journeys.rst
    :start-after: .. journeys-about-context-start
    :end-before: .. journeys-about-context-end
 
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-about-enable-start
-   :end-before: .. journeys-about-enable-end
 
 .. _journeys-howitworks:
 
