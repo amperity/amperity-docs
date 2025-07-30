@@ -166,6 +166,9 @@ Only users from an allowed domain may access Amperity. Amperity maintains a list
 
 .. settings-users-allow-domains-steps-end
 
+
+.. _settings-users-multifactor-authentication:
+
 Multi-factor authentication
 ==================================================
 
