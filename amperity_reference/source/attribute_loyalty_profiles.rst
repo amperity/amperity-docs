@@ -19,21 +19,9 @@ Loyalty profiles
 
 .. attribute-loyalty-profiles-overview-start
 
-Loyalty programs help brands increase customer loyalty and provide incentives for customers to continue to interact with brands. Loyalty programs may require their members to provide their PII, which is used by companies to offer more personalized incentives to their customers.
+Loyalty programs may require their members to provide their PII, which is used by companies to offer more personalized incentives to their customers.
 
 .. attribute-loyalty-profiles-overview-end
-
-.. attribute-loyalty-profiles-links-start
-
-Amperity provides the following attributes to build audiences that help brands better understand how to bring more value to their customers through their loyalty program:
-
-* :doc:`Loyalty balances <attribute_loyalty_balances>`
-* :doc:`Loyalty membership <attribute_loyalty_membership>`
-* :doc:`Loyalty profiles <attribute_loyalty_profiles>`
-* :doc:`Loyalty spend <attribute_loyalty_spend>`
-* :doc:`Loyalty tiers <attribute_loyalty_tiers>`
-
-.. attribute-loyalty-profiles-links-end
 
 
 .. _attribute-loyalty-profiles-segment:

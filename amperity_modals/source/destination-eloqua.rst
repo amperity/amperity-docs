@@ -80,3 +80,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-oracle-eloqua-audience-primary-key-start
    :end-before: .. setting-oracle-eloqua-audience-primary-key-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

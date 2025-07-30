@@ -43,7 +43,7 @@ How policies work
 
 Actions within Amperity are controlled by policies, which act as containers for a set of actions. All tenants share a set of global policies with groups for standard policies and administrator policies. Each tenant assigns one (or more) policies to every user in their tenant, after which each user may also be assigned any of the policy options.
 
-Each user has a set of assigned actions that are determined by their assigned policy (or policies). Policy assignment may be managed using SSO (recommended) or may be :ref:`managed from the Amperity user interface <settings-security-resource-groups>` by users who are assigned the **Allow user administration** policy option.
+Each user has a set of assigned actions that are determined by their assigned policy (or policies). Policy assignment may be managed using SSO (recommended) or may be :doc:`managed from the Amperity user interface <resource_groups>` by users who are assigned the **Allow user administration** policy option.
 
 The access model in Amperity defines actions as short strings that contain a resource type and an associated verb. A policy is a series of statements that allow or deny actions. For example: ``pii:download`` is an action. ``pii`` is the resource type and ``download`` is the associated verb. A user that is authorized to perform this action may run a query or segment, and then click the **Download** button to download the results.
 
@@ -2158,7 +2158,7 @@ Activity log tab
 
 .. policies-allowed-actions-settings-activity-log-start
 
-The **Activity log** tab shows records of :ref:`all user activity that occured in your tenant <settings-user-activity-logs>`.
+The **Activity log** tab shows records of :doc:`all user activity that occured in your tenant <activity_logs>`.
 
 .. policies-allowed-actions-settings-activity-log-end
 
@@ -2310,7 +2310,7 @@ Integrations tab
 
 The **Integrations** tab has the following integrations:
 
-* Slack. You can connect a Slack workspace to Amperity, after which :ref:`workflow alerts can be sent to configured channels <settings-integration-slack>`.
+* Slack. You can connect a Slack workspace to Amperity, after which :doc:`workflow alerts can be sent to configured channels <integrations>`.
 
 .. policies-allowed-actions-settings-integrations-end
 

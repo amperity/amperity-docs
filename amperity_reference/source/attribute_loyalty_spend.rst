@@ -19,21 +19,9 @@ Loyalty spend
 
 .. attribute-loyalty-spend-overview-start
 
-Loyalty programs help brands increase customer loyalty and provide incentives for customers to continue to interact with brands. Through loyalty spend, brands can incentivize customers to spend more with their brands through personalized discounts, loyalty tiers, and rewards.
+Brands can incentivize customers to spend more with their brands through personalized discounts, loyalty tiers, and rewards.
 
 .. attribute-loyalty-spend-overview-end
-
-.. attribute-loyalty-spend-links-start
-
-Amperity provides the following attributes to build audiences that help brands better understand how to bring more value to their customers through their loyalty program:
-
-* :doc:`Loyalty balances <attribute_loyalty_balances>`
-* :doc:`Loyalty membership <attribute_loyalty_membership>`
-* :doc:`Loyalty profiles <attribute_loyalty_profiles>`
-* :doc:`Loyalty spend <attribute_loyalty_spend>`
-* :doc:`Loyalty tiers <attribute_loyalty_tiers>`
-
-.. attribute-loyalty-spend-links-end
 
 
 .. _attribute-loyalty-spend-attributes:

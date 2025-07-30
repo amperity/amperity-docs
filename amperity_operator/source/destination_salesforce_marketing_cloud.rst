@@ -23,13 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Salesforce Marketing Cloud
+        Configure destinations for Salesforce Marketing Cloud
 
-====================================================
-Configure destination for Salesforce Marketing Cloud
-====================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_salesforce_marketing_cloud.html>`__ |ext_link|.
+=====================================================
+Configure destinations for Salesforce Marketing Cloud
+=====================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-marketing-cloud-start
@@ -70,7 +68,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Optional. Configure a data extension in |destination-name|.
 
@@ -86,7 +84,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure permissions for the installed package to allow business units to read from and write to the data extension.
 
@@ -100,7 +98,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use a query or segment to build a list of contacts.
 
@@ -110,7 +108,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure the :ref:`Salesforce Marketing Cloud destination <destination-salesforce-marketing-cloud-add>` in Amperity.
 
@@ -126,7 +124,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step five.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Send a test from Amperity.
 
@@ -136,7 +134,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
           :alt: Step six.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - From within |destination-name| verify the data that has been loaded to the data extension is correct and that you can run a query against it.
 
@@ -161,7 +159,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -189,7 +187,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Data extension configuration**
 
@@ -208,7 +206,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Business unit configuration**
 
@@ -222,7 +220,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The :ref:`subscriber key <destination-salesforce-marketing-cloud-subscriber-key>` for |destination-name|. (The use of the subscriber key is recommended.)
 
@@ -232,7 +230,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Review the `Marketing Cloud SFTP Guide <https://help.salesforce.com/articleView?id=mc_es_enhanced_ftp_guide.htm>`__ |ext_link| to answer questions about configuring and managing |destination-name|.
 
@@ -262,7 +260,7 @@ The use of the subscriber key within Amperity will vary, depending on if the sub
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - When a subscriber key is available, ensure that it is made available to the **Customer 360**, **Queries**, and **Segments** pages and that it may be included in queries and segments that will be sent to |destination-name|.
 
@@ -273,8 +271,8 @@ The use of the subscriber key within Amperity will vary, depending on if the sub
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Detail three.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The **primary key** field **must** be set to **subscriber_key** or **email** as part of the configuration of the data template that is used for this destination.
 
@@ -319,7 +317,7 @@ Configure credentials
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -329,7 +327,7 @@ Configure credentials
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -339,7 +337,7 @@ Configure credentials
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -404,7 +402,7 @@ Add destination
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -424,7 +422,7 @@ Add destination
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -440,7 +438,7 @@ Add destination
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -460,7 +458,7 @@ Add destination
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -523,7 +521,7 @@ Add destination
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
@@ -551,7 +549,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -571,7 +569,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -587,7 +585,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -617,7 +615,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

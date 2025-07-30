@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
 
 .. meta::
     :description lang=en:
@@ -39,7 +38,7 @@ Stitch benchmarks are available from the **Stitch** page in your Amperity tenant
 .. image:: ../../images/mockup-stitch-benchmarks-tab.png
    :width: 600 px
    :alt: The Stitch benchmark status page.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 The outcome of Stitch benchmark checks are grouped by color on the **Benchmarks** tab.
@@ -127,7 +126,7 @@ For most tenants, most of the time, nothing needs to be done when benchmark chec
 .. image:: ../../images/mockup-stitch-benchmarks-score-optimal.png
    :width: 380 px
    :alt: Optimal score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. stitch-benchmark-results-optimal-end
@@ -149,7 +148,7 @@ In many cases nothing needs to be done with benchmark checks that fall above the
 .. image:: ../../images/mockup-stitch-benchmarks-score-outside.png
    :width: 380 px
    :alt: Outside optinal range score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. stitch-benchmark-results-above-optimal-end
@@ -169,7 +168,7 @@ Review and grade the results for benchmark checks with high results by assigning
 .. image:: ../../images/mockup-stitch-benchmarks-score-abnormal.png
    :width: 380 px
    :alt: Abnormal score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. important:: Use a sandbox to make configuration changes to Stitch, and then compare the benchmark results in the sandbox to the high benchmark results in production. Also compare other benchmark results to determine if changes affected the overall quality of benchmark results.
@@ -203,7 +202,7 @@ Benchmark details show specific information about the condition, such as *The pe
 .. image:: ../../images/mockup-stitch-benchmarks-tab-details.png
    :width: 420 px
    :alt: Each benchmark shows score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 
@@ -221,7 +220,7 @@ Benchmark results are refreshed after every Stitch run. You can view the 5 previ
 .. image:: ../../images/mockup-stitch-benchmarks-tab-history.png
    :width: 420 px
    :alt: Each benchmark tracks a history of scores.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 

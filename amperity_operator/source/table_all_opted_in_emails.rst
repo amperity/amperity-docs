@@ -85,6 +85,7 @@ The **All Opted-In Emails** table requires the **Email Opt Status** table, after
    The minimum requirement for this table is to SELECT all attributes from the **Email Opt Status** table:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         *
@@ -121,6 +122,7 @@ You can extend the **All Opted-In Emails** table to contain specific sets of att
 For example, to extend the **All Opted-In Emails** table to support a single brand in Europe, update the SQL for the **All Opted In Emails** table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *

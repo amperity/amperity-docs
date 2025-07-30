@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: PSV
+        PSV files
 
 ==================================================
-File format: PSV
+PSV files
 ==================================================
 
 .. include:: ../../shared/terms.rst

@@ -283,8 +283,9 @@ Blocking keys
 
    In some cases, large clusters are split even with matching PII because of this limit. For example:
 
-   .. code-block:: none
-   
+   .. code-block:: sql
+      :linenos:
+
       SELECT
         COUNT(*)
       FROM Unified_Preprocessed_Raw
@@ -293,6 +294,7 @@ Blocking keys
    For example, the following query returns 185 rows:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT COUNT(*)
       FROM Unified_Preprocessed_Raw
@@ -462,11 +464,17 @@ When foreign key matching is the priority, Amperity scores record pairs in the f
 
 .. configure-stitch-advanced-matching-strategy-fk-end
 
-.. image:: ../../images/classifier-fk-match.png
+.. figure:: ../../images/classifier-fk-match.png
    :width: 450 px
-   :alt: Foreign key matching priority.
+   :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-fk-match-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 .. configure-stitch-advanced-matching-strategy-start
 
@@ -474,11 +482,17 @@ Amperity is configured by default to prioritize foreign key matching over separa
 
 .. configure-stitch-advanced-matching-strategy-end
 
-.. image:: ../../images/classifier-sk-unmatch.png
+.. figure:: ../../images/classifier-sk-unmatch.png
    :width: 450 px
    :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-sk-unmatch-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 
 .. _qa-stitch-look-for-foreign-keys-trivial-duplicates:

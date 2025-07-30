@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: XML
+        XML files
 
 ==================================================
-File format: XML
+XML files
 ==================================================
 
 .. include:: ../../shared/terms.rst

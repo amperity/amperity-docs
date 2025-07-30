@@ -218,6 +218,7 @@ This option starts with semantically tagging raw email events data, and then add
 #. Use Spark SQL to build a custom domain table that maps the incoming fields to the following field names: **Sent**, **Open**, **Click**, **Unsubscribe**, **Optin**, **Bounce**, and **Converted**. For example:
 
    .. code-block:: sql
+      :linenos:
 
       ,CASE 
         WHEN EventType = 'Sent' THEN 'Sent'
@@ -324,6 +325,7 @@ Salesforce Marketing Cloud
 .. add-email-engagement-example-custom-domain-table-salesforce-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH union_data AS (
    SELECT
@@ -429,6 +431,7 @@ Oracle Responsys
 .. add-email-engagement-example-custom-domain-table-responsys-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH union_data AS (
      SELECT

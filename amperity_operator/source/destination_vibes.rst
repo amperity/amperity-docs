@@ -24,13 +24,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Vibes
+        Configure destinations for Vibes
 
 ==================================================
-Configure destination for Vibes
+Configure destinations for Vibes
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_vibes.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-vibes-start
@@ -71,7 +69,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -82,7 +80,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -118,7 +116,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| must be assigned a name similar to ``<filename>.recipient_list``. Define the |format_common_filename_template_pattern| to match the campaign name that is required by |destination-name|.
 
@@ -126,7 +124,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Refer to the |destination-name| documentation if you plan to import a `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| with included headers.
 
@@ -134,7 +132,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A filename template pattern is required for proper formatting for files sent to |destination-name|. By default this pattern includes the name of the query and the current date. Special characters and blank spaces in the query name are replaced by underscores in the file name.
 
@@ -168,7 +166,7 @@ Configure credentials
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -178,7 +176,7 @@ Configure credentials
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -188,7 +186,7 @@ Configure credentials
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -239,7 +237,7 @@ Add destination
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -259,7 +257,7 @@ Add destination
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -275,7 +273,7 @@ Add destination
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -295,7 +293,7 @@ Add destination
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -407,7 +405,7 @@ Add destination
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
@@ -435,7 +433,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -454,7 +452,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -469,7 +467,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -494,7 +492,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

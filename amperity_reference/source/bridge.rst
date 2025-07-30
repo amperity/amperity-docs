@@ -68,6 +68,7 @@ Sync data with ...
 Configure Amperity Bridge to sync data with the following cloud databases:
 
 * :ref:`bridge-sync-databricks`
+* :ref:`bridge-sync-google-bigquery`
 * :ref:`bridge-sync-snowflake`
 
 .. bridge-sync-end
@@ -75,12 +76,12 @@ Configure Amperity Bridge to sync data with the following cloud databases:
 
 .. _bridge-sync-databricks:
 
-Databricks
+Amperity Bridge for Databricks
 --------------------------------------------------
 
 .. bridge-sync-databricks-start
 
-Configure inbound and outbound shares in Amperity to enable `bi-directional syncing of data tables between Amperity and Databricks <https://docs.amperity.com/operator/bridge_databricks.html>`__. 
+Configure inbound and outbound shares in Amperity to enable `bi-directional syncing of data tables between Amperity and Databricks <../operator/bridge_databricks.html>`__.
 
 .. bridge-sync-databricks-end
 
@@ -91,14 +92,26 @@ Configure inbound and outbound shares in Amperity to enable `bi-directional sync
       :end-before: .. term-delta-sharing-end
 
 
+.. _bridge-sync-google-bigquery:
+
+Amperity Bridge for Google BigQuery
+--------------------------------------------------
+
+.. bridge-sync-google-bigquery-start
+
+Configure inbound and outbound shares in Amperity to enable `inbound syncing of data tables between Amperity and Google BigQuery <../operator/bridge_google_bigquery.html>`__.
+
+.. bridge-sync-google-bigquery-end
+
+
 .. _bridge-sync-snowflake:
 
-Snowflake
+Amperity Bridge for Snowflake
 --------------------------------------------------
 
 .. bridge-sync-snowflake-start
 
-Snowflake Bridge is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
+Amperity Bridge for Snowflake is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <../operator/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
 
 .. bridge-sync-snowflake-end
 
@@ -137,8 +150,9 @@ Add inbound bridge
 
 The steps for adding an inbound bridge depend on the location from which data will be synced to Amperity:
 
-* `Databricks <https://docs.amperity.com/operator/bridge_databricks.html#from-databricks>`__
-* `Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#from-snowflake>`__
+* `Amperity Bridge for Databricks <../operator/bridge_databricks.html#from-databricks>`__
+* `Amperity Bridge for Google BigQuery <../operator/bridge_google_bigquery.html#from-google-bigquery>`__
+* `Amperity Bridge for Snowflake <../operator/bridge_snowflake.html#from-snowflake>`__
 
 .. bridge-howto-add-inbound-end
 
@@ -152,15 +166,15 @@ Add outbound bridge
 
 The steps for adding an outbound bridge depend on the location to which data will be synced from Amperity:
 
-* `Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__
-* `Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#to-snowflake>`__
+* `Amperity Bridge for Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__
+* `Amperity Bridge for Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#to-snowflake>`__
 
 .. bridge-howto-add-outbound-end
 
 
 .. _bridge-howto-add-scheduled-workflow:
 
-Add bridge to scheduled workflow
+Add a bridge to a scheduled workflow
 --------------------------------------------------
 
 .. include:: ../../amperity_reference/source/courier_groups.rst

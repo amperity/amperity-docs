@@ -22,13 +22,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Meta Ads Manager
+        Configure destinations for Meta Ads Manager
 
 ==================================================
-Configure destination for Meta Ads Manager
+Configure destinations for Meta Ads Manager
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_meta_ads_manager.html>`__ |ext_link|.
 
 .. destination-meta-ads-manager-start
 
@@ -65,7 +63,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -80,7 +78,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Meta Ads Manager settings**
 
@@ -123,28 +121,28 @@ Audiences sent to Meta Ads Manager have access to Facebook, Messenger, Instagram
    * - .. image:: ../../amperity_base/source/_static/connector-facebook-ads.svg
           :width: 140 px
           :alt: Facebook Ads
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure `a variety of ad placements across Facebook <https://www.facebook.com/business/help/407108559393196?id=369787570424415>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-instagram.svg
           :width: 140 px
           :alt: Instagram
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure objectives that `place ads on Instagram <https://www.facebook.com/business/help/1634705703469129?helpref=search&sr=2&query=create%20ads%20in%20instagram>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-facebook-messenger.svg
           :width: 140 px
           :alt: Facebook Messenger
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure objectives that `place ads on Messenger <https://www.facebook.com/business/help/1420905584664062?id=274377816589261>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-whatsapp.svg
           :width: 140 px
           :alt: WhatsApp
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use `Audience Manager <https://www.facebook.com/business/help/1409448922609084?id=571563249872422&ref=fbb_an>`__ |ext_link| to reach users who are not on Facebook or Instagram, but are on mobile apps that are within the audience network. For example, creating ads that `open conversation threads in WhatsApp <https://www.facebook.com/business/help/447934475640650?id=371525583593535>`__ |ext_link|.
 
@@ -175,7 +173,7 @@ Configure credentials
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -184,7 +182,7 @@ Configure credentials
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -193,7 +191,7 @@ Configure credentials
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -267,7 +265,7 @@ Add destination
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -287,7 +285,7 @@ Add destination
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -303,7 +301,7 @@ Add destination
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -323,7 +321,7 @@ Add destination
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -351,7 +349,7 @@ Add destination
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
@@ -379,7 +377,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -398,7 +396,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -413,7 +411,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -444,7 +442,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

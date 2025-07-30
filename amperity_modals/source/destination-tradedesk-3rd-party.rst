@@ -92,3 +92,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-3p-segment-taxonomy-id-start
    :end-before: .. setting-the-trade-desk-3p-segment-taxonomy-id-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

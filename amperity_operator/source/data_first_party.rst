@@ -163,6 +163,7 @@ Clickstream data from Google Analytics `contains a predefined series of fields <
 Use a Spark SQL query similar to:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      _c1 AS clientId,

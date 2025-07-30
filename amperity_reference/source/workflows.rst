@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -66,6 +67,9 @@ Workflow alerts may be configured to be :ref:`sent to an email address <workflow
 
 .. workflows-discover-alerts-end
 
+
+.. _automated-workflow-alerts:
+
 Automated workflow alerts
 --------------------------------------------------
 
@@ -73,7 +77,10 @@ Automated workflow alerts
 
 Configure automated workflow alerts by workflow type within the **Automated workflow alerts** dialog in the workflow page. Use this as your default set of recipients to receive alerts for regularly occurring workflows.
 
-Here is a more detailed breakdown of automated workflow alerts by workflow type:
+.. automated-workflow-alerts-end
+
+
+.. _courier-group-automated-alert-details:
 
 Courier groups
 ++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -91,6 +98,9 @@ Alerts are sent when:
 
 .. courier-group-automated-alert-details-end
 
+
+.. _orchestration-group-automated-alert-details:
+
 Orchestration groups
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -105,6 +115,9 @@ Alerts are sent when:
 
 .. orchestration-group-automated-alert-details-end
 
+
+.. _campaign-automated-alert-details:
+
 Campaigns
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -118,8 +131,10 @@ Alerts are sent when:
 * The campaign succeeds, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group success alerts if your campaign is configured to run after a courier group and you want to know when it succeeds.
 * The campaign runtime exceeds a threshold, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group runtime alerts if your campaign is configured to run after a courier group and you want to know when it runs long.
 
-
 .. campaign-automated-alert-details-end
+
+
+.. _journeys-automated-alert-details:
 
 Journeys
 ++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -130,14 +145,15 @@ Alerts are sent when:
 
 * A failure occurs within a journey execution or within any of the journey nodes  
 * A user cancels an automatically launched workflow
-* The journey succeeds, if configured.
+* The journey succeeds, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group success alerts if your campaign is configured to run after a courier group and you want to know when it succeeds.
 * The journey runtime exceeds a threshold, if configured.
 
 Alerts on specific journeys are limited to failure only
 
 .. journeys-automated-alert-details-end
 
-.. automated-workflow-alerts-end
+
+.. _workflow-run-alerts:
 
 Workflow run alerts
 --------------------------------------------------

@@ -13,28 +13,15 @@
     :content class=swiftype name=title data-type=string:
         GET /segments
 
-
 ==================================================
 GET /segments
 ==================================================
 
 .. endpoint-get-segments-list-start
 
-Use the **/segments** endpoint to return a list of segments from your tenant.
+Use the **GET /segments** endpoint to return a list of segments from your tenant.
 
 .. endpoint-get-segments-list-end
-
-
-.. _endpoint-get-segments-list-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-request-get-segments.png
-   :width: 440 px
-   :alt: GET /segments
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-get-segments-list-prerequisites:
@@ -57,7 +44,7 @@ Base URL
 
 .. endpoint-get-segments-list-base-url-start
 
-All requests made to the **/segments** endpoint should be directed to the following base URL:
+Direct all requests to the **GET /segments** endpoint to the following base URL:
 
 ::
 
@@ -83,17 +70,17 @@ Requests
 
 .. endpoint-get-segments-list-request-start
 
-A request to the **/segments** endpoint is similar to:
+A request to the **GET /segments** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
           'https://tenant.amperity.com/api/segments \
           ?limit=12 \
-          ?with_total=true \
-        --header 'amperity-tenant: tenant' \
+          ?with_total=true' \
+        --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
 (This example is formatted for readability in a narrow page layout.)
 
@@ -107,7 +94,7 @@ Request parameters
 
 .. endpoint-get-segments-list-request-parameters-start
 
-The following table describes the parameters that may be used with the **/segments** endpoint.
+The following table describes the parameters that may be used with the **GET /segments** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -159,81 +146,73 @@ Request examples
 
 .. endpoint-get-segments-list-request-examples-start
 
-The following examples show how to send requests to the **/segments** endpoint.
+The following examples show how to send requests to the **GET /segments** endpoint.
 
 .. endpoint-get-segments-list-request-examples-end
 
 
-.. _endpoint-get-segments-list-request-example-curl:
+.. endpoint-get-segments-list-request-examples-tabs-start
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+.. tab-set::
 
-.. endpoint-get-segments-list-request-example-curl-start
+   .. tab-item:: cURL
 
-The following example shows how to use cURL to send a request to the **/segments** endpoint.
+      The following example shows how to use cURL to send a request to the **GET /segments** endpoint.
 
-.. code-block:: rest
+      .. code-block:: bash
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/segments \
-          ?limit=12 \
-          &with_total=true \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+         curl --request GET \
+                'https://tenant.amperity.com/api/segments \
+                ?limit=12 \
+                &with_total=true' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+      (This example is formatted for readability in a narrow page layout.)
 
-.. endpoint-get-segments-list-request-example-curl-end
+   .. tab-item:: Python
 
+      The following example shows how to use Python to send a request to the **GET /segments** endpoint. This example converts the JSON response into a CSV file named "segments.csv".
 
-.. _endpoint-get-segments-list-request-python:
+      .. code-block:: python
+         :linenos:
 
-Python
-++++++++++++++++++++++++++++++++++++++++++++++++++
+         import requests
+         import json
+         import csv
 
-.. endpoint-get-segments-list-request-python-start
+         # URL for Segments endpoint
+         url = "https://tenant-name.amperity.com/api/segments"
 
-The following example shows how to use Python to send a request to the **/segments** endpoint. This example converts the JSON response into a CSV file named "segments.csv".
+         # Required headers
+         headers = {
+           'accept': 'application/json',
+           'authorization': 'Bearer {token}', # add token here
+           'amperity-tenant': '{tenant}',
+           'api-version': 'version'
+         }
 
-.. code-block:: python
+         # Get the response from the Segments endpoint
+         response = requests.request("GET", url, headers=headers, params=payload)
+         response_json = response.json()
 
-   import requests
-   import json
-   import csv
+         # Extract headers from the first data entry
+         headers = list(response_json["data"][0].keys())
 
-   # URL for Segments endpoint
-   url = "https://tenant-name.amperity.com/api/segments"
+         # Specify the output CSV file path
+         csv_file_path = "segments.csv"
 
-   # Required headers
-   headers = {
-     'accept': 'application/json',
-     'authorization': 'Bearer token', # add token here
-     'amperity-tenant': 'tenant-name',
-     'api-version': 'version'
-   }
+         # Write data to a CSV file
+         with open(csv_file_path, mode='w', newline='') as file:
+           writer = csv.DictWriter(file, fieldnames=headers)
+           writer.writeheader()
+           for entry in response_json["data"]:
+             writer.writerow(entry)
 
-   # Get the response from the Segments endpoint
-   response = requests.request("GET", url, headers=headers, params=payload)
-   response_json = response.json()
+         print("CSV file generated successfully.")
 
-   # Extract headers from the first data entry
-   headers = list(response_json["data"][0].keys())
-
-   # Specify the output CSV file path
-   csv_file_path = "segments.csv"
-
-   # Write data to a CSV file
-   with open(csv_file_path, mode='w', newline='') as file:
-     writer = csv.DictWriter(file, fieldnames=headers)
-     writer.writeheader()
-     for entry in response_json["data"]:
-       writer.writerow(entry)
-
-   print("CSV file generated successfully.")
-
-.. endpoint-get-segments-list-request-python-end
+.. endpoint-get-segments-list-request-examples-tabs-end
 
 
 .. _endpoint-get-segments-list-responses:
@@ -243,7 +222,7 @@ Responses
 
 .. endpoint-get-segments-list-responses-start
 
-A response from the **/segments** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /segments** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-segments-list-responses-end
 
@@ -258,6 +237,7 @@ A response from the **/segments** endpoint will match an :doc:`HTTP status code 
 The **200** response returns a set of segments.
 
 .. code-block:: json
+   :linenos:
 
    {
      "total": 0,

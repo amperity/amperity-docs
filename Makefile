@@ -2,38 +2,42 @@ BUILDDIR = build
 BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
 BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
 
-all: base ampiq amp360 datagrid operator reference api tooltips modals contributing legacy llmkb
+all: base user operator api reference amp360 ampiq contributing tooltips modals legacy llmkb
 
 static:
 	cp -vr downloads $(BUILDDIR)/
 
-base: static ## Build Amperity Documentation
-	# Building amperity_base/source...
+base: static ## Build only the "/user" section
+	# Building base pages...
 	$(BUILD_COMMAND) amperity_base/source $(BUILDDIR)/
 
-ampiq: static ## Build the /ampiq topic collection
-	# Building User Guides for Marketers...
-	$(BUILD_COMMAND) amperity_ampiq/source $(BUILDDIR)/ampiq
-
-amp360: static ## Build the /amp360 topic collection
-	# Building User Guides for Analysts...
-	$(BUILD_COMMAND) amperity_amp360/source $(BUILDDIR)/amp360
-
-datagrid: static ## Build only the "/datagrid" section
-	# Building Operators Guide pages...
-	$(BUILD_COMMAND) amperity_datagrid/source $(BUILDDIR)/datagrid
+user: static ## Build only the "/user" section
+	# Building User Guides pages...
+	$(BUILD_COMMAND) amperity_user/source $(BUILDDIR)/user
 
 operator: static ## Build only the "/operator" section
 	# Building Operators Guide pages...
 	$(BUILD_COMMAND) amperity_operator/source $(BUILDDIR)/operator
 
+api: static ## Build only the "/api" section
+	# Building Amperity API pages...
+	$(BUILD_COMMAND) amperity_api/source $(BUILDDIR)/api
+
 reference: static ## Build only the "/reference" section
 	# Building A-Z Reference pages...
 	$(BUILD_COMMAND) amperity_reference/source $(BUILDDIR)/reference
 
-api: static ## Build only the "/api" section
-	# Building Amperity API pages...
-	$(BUILD_COMMAND) amperity_api/source $(BUILDDIR)/api
+amp360: static ## Build only the "/amp360" section
+	# Building redirects for Amp360 pages...
+	$(BUILD_COMMAND) amperity_amp360/source $(BUILDDIR)/amp360
+
+ampiq: static ## Build only the "/ampiq" section
+	# Building redirects for AmpIQ pages...
+	$(BUILD_COMMAND) amperity_ampiq/source $(BUILDDIR)/ampiq
+
+contributing: static ## Build only the "/contributing" section
+	# Building redirects for Contributing pages...
+	$(BUILD_COMMAND) contributing/source $(BUILDDIR)/contributing
 
 tooltips: static ## Build only the "/tooltips" section
 	# Building tooltips pages...

@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Dynamic Yield
+        Configure destinations for Dynamic Yield
 
 ==================================================
-Configure destination for Dynamic Yield
+Configure destinations for Dynamic Yield
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -87,7 +87,7 @@ Configure cross-account roles
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-destinations-configure-start
@@ -107,7 +107,7 @@ Configure cross-account roles
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
@@ -123,7 +123,7 @@ Configure cross-account roles
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
@@ -143,7 +143,7 @@ Configure cross-account roles
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
@@ -156,7 +156,7 @@ Configure cross-account roles
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
@@ -185,7 +185,7 @@ Add destination
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -205,7 +205,7 @@ Add destination
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -221,7 +221,7 @@ Add destination
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -241,7 +241,7 @@ Add destination
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -349,7 +349,7 @@ Add destination
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
@@ -377,7 +377,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -396,7 +396,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -411,7 +411,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -436,7 +436,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

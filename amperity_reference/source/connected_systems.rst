@@ -14,7 +14,7 @@
         Amperity and connected systems
 
 ==================================================
-Amperity and connected systems
+About connected systems
 ==================================================
 
 .. connected-systems-start

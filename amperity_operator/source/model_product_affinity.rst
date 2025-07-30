@@ -1,8 +1,6 @@
 .. https://docs.amperity.com/operator/
 
 
-
-
 .. meta::
     :description lang=en:
         Product affinity represents product taxonomies that contain between 20 and 2000 unique values for brands, categories, and sub-categories.
@@ -129,16 +127,6 @@ Customer ranking identifies the top N customers who are most likely to purchase.
 * Drive up conversion rates
 * Drive down opt-outs
 
-.. note::  
-   Extreme outliers are typically excluded from predictive modeling. Examples of common exclusions include:
-
-   * Employees of your business
-   * Test accounts
-   * Resellers who purchase in bulk
-   * Other use cases identified during predictive implementations
-
-   The models are not trained on this data and scores are not generated for these users. 
-
 .. model-product-affinity-use-cases-customer-ranking-topn-end
 
 .. model-product-affinity-use-cases-customer-ranking-attribute-start
@@ -176,14 +164,14 @@ You can build a product affinity model from the **Customer 360** page. Each data
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, select a database, and then open the bottom (|fa-kebab|) menu and select **Predictive models**. This opens the **Predictive models page**.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Next to **Product affinity**, click **Add model**.
 
@@ -192,7 +180,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use the **Customer exclusions** field to use fields in the **Customer Attributes** table to identify customers who have purchase patterns that should be excluded from product affinity modeling.
 
@@ -208,7 +196,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the pCLV model.
 
@@ -217,7 +205,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure values.
 
@@ -229,7 +217,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
           :alt: Step 6.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Set product thresholds.
 
@@ -241,7 +229,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
           :alt: Step 7.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Define audience sizes. Each size is defined as a percentage of the total number of customers in the audience that are required to meet an individual audience size. The product affinity model will select which customers need to be in the audience so that it captures each threshold within the next 30 days. Default values: "0.5" (small), "0.7" (medium), and "0.9" (large).
 
@@ -249,7 +237,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
           :alt: Step 8.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Click **Start validation**.
 

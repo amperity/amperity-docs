@@ -215,6 +215,7 @@ The default **Merged Households** table (as described in this topic) makes avail
 As a SELECT statement, the **Merged Household** table is similar to:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id AS "amperity_id"
@@ -242,6 +243,7 @@ Merged Households template
 .. householding-address-sql-template-start
 
 .. code-block:: sql
+   :linenos:
 
    -------------------------------------------------------------------------
    -- Merged_Households query                                             --

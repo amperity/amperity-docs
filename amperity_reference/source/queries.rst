@@ -241,11 +241,11 @@ Cardinality vs. uniqueness
 
 .. queries-data-explorer-full-screen-cardinality-start
 
-Use cardinality and uniqueness to help guide the creation of well-behaved JOIN operations when authoring SQL queries.
+Use cardinality and uniqueness to help guide the creation of well-behaved **JOIN** operations when authoring SQL queries.
 
-* Avoid using JOIN operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
-* Columns with low uniqueness values as keys on both sides of a JOIN operation will run more slowly and is less likely to return the desired results.
-* Empty fields (i.e. NULL values) are counted as duplicates, i.e. "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
+* Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
+* Columns with low uniqueness values as keys on both sides of a **JOIN** operation will run more slowly and is less likely to return the desired results.
+* Empty fields, such as NULL values, are counted as duplicates or "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. queries-data-explorer-full-screen-cardinality-end
 
@@ -444,6 +444,7 @@ You can add a comments to a SQL query to explain sections or to prevent executio
 For example, compare a SQL query without comments:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -455,6 +456,7 @@ For example, compare a SQL query without comments:
 to a SQL query with comments:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -752,7 +754,7 @@ Disable AI Assistant
 
 **To disable the AI Assistant**
 
-.. include:: ../../amperity_reference/source/settings.rst
+.. include:: ../../amperity_reference/source/ampai_settings.rst
    :start-after: .. settings-user-ampai-steps-start
    :end-before: .. settings-user-ampai-steps-end
 

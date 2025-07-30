@@ -60,3 +60,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-linkedin-dmp-segment-description-start
    :end-before: .. setting-linkedin-dmp-segment-description-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

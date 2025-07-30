@@ -143,6 +143,7 @@ A Stitch labels table is a CSV file that is maintained as a local file, and then
 #. Use the **SQL Query Editor** to run a query similar to:
 
    .. code-block::
+      :linenos:
 
       SELECT
         *

@@ -20,21 +20,25 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for MoEngage
+        Configure destinations for MoEngage
 
 ==================================================
-Configure destination for MoEngage
+Configure destinations for MoEngage
 ==================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-moengage-start
    :end-before: .. term-moengage-end
 
+.. destination-moengage-about-start
+
 You can configure Amperity to send CSV files to |destination-name| for the following import types:
 
 * A list of users who registered on |destination-name|.
 * A list of anonymous users not registered on |destination-name|.
 * Standard events, such as campaign interactions, along with user-defined events.
+
+.. destination-moengage-about-end
 
 
 .. _destination-moengage-get-details:
@@ -46,7 +50,7 @@ Get details
    :start-after: .. setting-common-get-details-start
    :end-before: .. setting-common-get-details-end
 
-.. destination-pinterest-get-details-table-start
+.. destination-moengage-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -55,7 +59,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Configure an Amazon S3 bucket**
 
@@ -67,7 +71,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Review file import requirements**
 
@@ -112,7 +116,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Enable S3 imports in MoEngage**
 
@@ -126,7 +130,7 @@ Get details
 
        Review the imported file, and then map columns in the imported file to |destination-name| attributes.
 
-.. destination-pinterest-get-details-table-start
+.. destination-moengage-get-details-table-start
 
 
 .. _destination-moengage-add:
@@ -149,7 +153,7 @@ Add destination
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -169,7 +173,7 @@ Add destination
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -185,7 +189,7 @@ Add destination
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -205,7 +209,7 @@ Add destination
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -227,7 +231,7 @@ Add destination
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start

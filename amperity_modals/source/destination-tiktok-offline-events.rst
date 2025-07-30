@@ -82,3 +82,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-tiktok-ads-manager-offline-auto-tracking-start
    :end-before: .. setting-tiktok-ads-manager-offline-auto-tracking-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

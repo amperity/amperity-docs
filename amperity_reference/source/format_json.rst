@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: JSON
+        JSON files
 
 ==================================================
-File format: JSON
+JSON files
 ==================================================
 
 .. include:: ../../shared/terms.rst

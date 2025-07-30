@@ -1,6 +1,6 @@
 # README
 
-This repository contains the source files for Amperity documentation (https://docs.amperity.com). This site hosts all business user, tenant operator, and API documentation for the Amperity customer data platform.
+This repository contains the source files for Amperity documentation (https://docs.amperity.com). This site hosts all business user, tenant operator, reference, and API documentation for the Amperity customer data platform.
 
 If you'd like to help improve the documentation you can:
 

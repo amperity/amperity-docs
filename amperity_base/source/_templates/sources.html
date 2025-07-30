@@ -1,717 +1,1068 @@
-{#
-    basic/search.html
-    ~~~~~~~~~~~~~~~~~
-
-    Template for the search page.
-
-    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
-#}
-{%- extends "layout.html" -%}
-{%- set title = _('Amperity Docs') -%}
-
-{%- block extra_meta %}
-<meta content="A cardwall with links to topics that describe how to configure Amperity to pull data from a variety of data sources." lang="en" name="description" xml:lang="en" />
-<meta class="swiftype" content="A cardwall with links to topics that describe how to configure Amperity to pull data from a variety of data sources." data-type="text" name="body" />
-<meta class="swiftype" content="Sources" data-type="string" name="title" />
-{%- endblock %}
-
-{%- block scripts %}
-    {{ super() }}
-    <script type="text/javascript" src="{{ pathto('_static/searchtools.js', 1) }}"></script>
-{%- endblock %}
-
-{%- block content %}
-
-    <div class="document markup-docs">
-    {%- block document %}
-      <div class="documentcardwrapper">
-        <div class="cardwrapper">
-          <div class="body" role="main">
-            {% block body %}
-
-<div class="container-cardgroup-midnight">
-
-  <div class="card-group-midnight-title">
-    <div class="card-group-midnight-box">
-      <div class="card-group-midnight-info">
-        <h4 class="card-group-midnight-subtitle">Sources</h4>
-        <p class="card-group-midnight-intro">A source is any external system from which Amperity can pull customer profile and interaction records.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_acxiom.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-acxiom.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Axciom</h4>
-        <p class="card-intro">Pull data from Axciom using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_adobe_analytics.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Adobe Analytics</h4>
-        <p class="card-intro">Pull clickstream data from Adobe Analytics using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_adobe_campaign.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Adobe Campaign</h4>
-        <p class="card-intro">Pull data from Adobe Campaign using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_adobe_commerce.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Adobe Commerce</h4>
-        <p class="card-intro">Pull customer, order, and transaction data from Adobe Commerce.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_adobe_customer_attributes.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-adobe-aec.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Adobe Customer Attributes</h4>
-        <p class="card-intro">Pull data from Adobe Customer Attributes using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_amazon_s3.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-amazon-s3.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Amazon S3</h4>
-        <p class="card-intro">Pull any type of data from any Amazon S3 bucket.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_attentive_mobile.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-attentive.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Attentive</h4>
-        <p class="card-intro">Pull customer SMS data from Attentive using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_azure_blob_storage.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-azure.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Azure Blob Storage</h4>
-        <p class="card-intro">Pull any type of data from Azure Blob Storage.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_bazaarvoice.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-bazaarvoice.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Bazaarvoice</h4>
-        <p class="card-intro">Pull data from Bazaarvoice using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_bluecore.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-bluecore.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Bluecore</h4>
-        <p class="card-intro">Pull audience exports from Bluecore using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_braze.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-braze.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Braze</h4>
-        <p class="card-intro">Pull events data to Amperity using Braze Currents.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_camelot_smm.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-camelot-smm.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Camelot SMM</h4>
-        <p class="card-intro">Pull data from Camelot SMM using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_cheetah_digital.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-cheetah.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Cheetah Digital</h4>
-        <p class="card-intro">Pull customer profiles from Cheetah Digital using SFTP or Amazon S3.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_cordial.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-cordial.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Cordial</h4>
-        <p class="card-intro">Pull email contact and activity data using the Cordial REST API.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_cross_country_computer.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-ccc.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Cross Country Computer</h4>
-        <p class="card-intro">Pull data from Cross Country Computer using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/bridge_databricks.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-databricks.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Databricks</h4>
-        <p class="card-intro">Sync data between Databricks and Amperity using Delta Sharing.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_dynamic_yield.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-dynamic-yield.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Dynamic Yield</h4>
-        <p class="card-intro">Pull data from Dynamic Yield using Amazon S3.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_emarsys.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-emarsys.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Emarsys</h4>
-        <p class="card-intro">Pull data from Emarsys using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_epsilon_abacus.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-epsilon.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Epsilon Abacus</h4>
-        <p class="card-intro">Pull data from Epsilon Abacus using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_epsilon_conversant.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-epsilon.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Epsilon Conversant</h4>
-        <p class="card-intro">Pull data from Epsilon Conversant using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_epsilon_targeting.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-epsilon.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Epsilon Targeting</h4>
-        <p class="card-intro">Pull data from Epsilon Targeting using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_experian.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-experian.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Experian</h4>
-        <p class="card-intro">Pull data from Experian using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-
-  <div class="cards">
-    <a href="/operator/source_fivetran.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-fivetran.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Fivetran</h4>
-        <p class="card-intro">Pull data from hundreds of sources using Fivetran + Snowflake.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_google_analytics.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-analytics.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Google Analytics</h4>
-        <p class="card-intro">Pull Google Analytics 4 (GA4) property reports from Google Analytics.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_google_cloud_storage.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-google-cloud.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Google Cloud Storage</h4>
-        <p class="card-intro">Pull any type of data from Google Cloud Storage.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_heap.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-heap.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Heap</h4>
-        <p class="card-intro">Pull clicksteam data from Heap using Amazon S3.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_hubspot.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-hubspot.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">HubSpot</h4>
-        <p class="card-intro">Pull marketing data for customers, campaigns, and email activity from HubSpot.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_infutor.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-infutor.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Infutor</h4>
-        <p class="card-intro">Pull data from Infutor using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_sftp.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-iterable.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Iterable</h4>
-        <p class="card-intro">Pull data from Iterable using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_klaviyo.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-klaviyo.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Klaviyo</h4>
-        <p class="card-intro">Pull data about email and Facebook campaigns from Klaviyo.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_amazon_kinesis_data_firehose.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-aws-kinesis.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Kinesis Data Firehose</h4>
-        <p class="card-intro">Stream data to an Amazon S3 bucket, and then pull it to Amperity.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_koupon_media.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-koupon-media.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Koupon Media</h4>
-        <p class="card-intro">Pull data from Koupon Media using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_kustomer.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-kustomer.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Kustomer</h4>
-        <p class="card-intro">Pull customer experience, service, and support data from Kustomer.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_listrak.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-listrak.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Listrak</h4>
-        <p class="card-intro">Pull email and SMS events data from Listrak using a REST API.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/api_streaming.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-metarouter.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">MetaRouter</h4>
-        <p class="card-intro">Use the Streaming Ingest API to pull event and profile data to Amperity.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_microsoft_dataverse.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-microsoft-dataverse.png"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Microsoft Dataverse</h4>
-        <p class="card-intro">Pull tables from Microsoft Dataverse.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_monetate.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-monetate.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Monetate</h4>
-        <p class="card-intro">Pull data from Monetate using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_neustar.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-neustar.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Neustar</h4>
-        <p class="card-intro">Pull data from Neustar using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_optimizely.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-optimizely.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Optimizely</h4>
-        <p class="card-intro">Pull enriched events--IDs, tags, names--from Optimizely using Amazon S3.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_oracle_data_cloud.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Oracle Data Cloud</h4>
-        <p class="card-intro">Pull data from Oracle Data Cloud using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_oracle_opera.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Oracle OPERA</h4>
-        <p class="card-intro">Push profile and events data to Amperity from a Streaming API.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_oracle_responsys.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-oracle.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Oracle Responsys</h4>
-        <p class="card-intro">Pull data from Oracle Responsys using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_pebblepost.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-pebblepost.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">PebblePost</h4>
-        <p class="card-intro">Pull data from PebblePost using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_powerreviews.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-powerreviews.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">PowerReviews</h4>
-        <p class="card-intro">Pull data from PowerReviews using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_quad.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-quad.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Quad</h4>
-        <p class="card-intro">Pull data from Quad using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_rr_donnelly.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-rr-donnelly.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">RR Donnelly</h4>
-        <p class="card-intro">Pull data from RR Donnelly using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_sailthru.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-sailthru.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">SailThru</h4>
-        <p class="card-intro">Pull hourly event data about email campaigns from SailThru.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_salesforce_commerce_cloud.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Commerce Cloud</h4>
-        <p class="card-intro">Pull customer data from Salesforce Commerce Cloud using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_salesforce_marketing_cloud.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Marketing Cloud</h4>
-        <p class="card-intro">Pull omnichannel customer engagement data from Salesforce Marketing Cloud.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_salesforce_pardot.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Salesforce Pardot</h4>
-        <p class="card-intro">Pull activity data (prospect, opportunity, visitor) from Salesforce Pardot.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_salesforce_sales_cloud.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-salesforce.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Salesforce Sales Cloud</h4>
-        <p class="card-intro">Pull customer data from Salesforce Sales Cloud using their SOAP API.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_sftp.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-sftp.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">SFTP</h4>
-        <p class="card-intro">Pull any type of data from Amperity from any SFTP site.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_shopify.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-shopify.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Shopify</h4>
-        <p class="card-intro">Pull customer, order, product, and transaction data from Shopify.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_smg.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-smg.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">SMG</h4>
-        <p class="card-intro">Pull data from SMG using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/bridge_snowflake.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-snowflake.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Snowflake</h4>
-        <p class="card-intro">Sync data between Snowflake and Amperity using Secure Data Sharing.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_soundcommerce.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-soundcommerce.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">SoundCommerce</h4>
-        <p class="card-intro">Pull data from SoundCommerce using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/api_streaming.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-api-streaming-ingest.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Streaming Ingest API</h4>
-        <p class="card-intro">Stream data from external systems directly to Amperity.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_vibes.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-vibes.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Vibes</h4>
-        <p class="card-intro">Pull data from Vibes using SFTP.</p>
-      </div>
-    </div></a>
-  </div>
-
-  <div class="cards">
-    <a href="/operator/source_zendesk.html" class="card"><div class="card-item">
-      <div class="card-image"><img id="markup" height="80" src="_static/connector-zendesk.svg"/>
-      </div>
-      <div class="card-info">
-        <h4 class="card-title">Zendesk</h4>
-        <p class="card-intro">Pull customer service data from Zendesk using the Zendesk Support API.</p>
-      </div>
-    </div></a>
-  </div>
-
-</div>
-
-
+{% extends "layout.html" %}
+{%- block htmltitle -%}
+  <title>Destinations</title>
 {% endblock %}
+{% block themestyles %}
+<style>
+  h1.headline {
+    margin: 4rem 0 6rem;
+    text-align: center;
+    font-size: 3.2rem;
+  }
 
-          </div>
-          {%- block footer %}
-          <div class="footer" role="contentinfo">
-            {%- if show_copyright %}
-              {%- if hasdoc('copyright') %}
-                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-              {%- else %}
-                {% trans copyright=copyright|e %}&copy; Copyright: {{ copyright }}{% endtrans %}
-              {%- endif %}
-            {%- endif %}
-            </div>
-          {%- endblock %}
+  .cardwall {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  a.card {
+    display: block;
+    text-decoration: none !important;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-bottom: 0px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  a.card:hover {
+    transform: translateY(-2px);
+    /*box-shadow: 0 8px 25px var(--accent-9);*/
+    text-decoration: none !important;
+    color: inherit;
+    border-radius: 6px;
+  }
+
+  a.card:visited,
+  a.card:active,
+  a.card:focus {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  .card-content {
+    border-radius: 6px;
+    border: 3.4px solid;
+    border-color: var(--sy-c-border);
+    padding: 1.2rem;
+    background: var(--sy-c-bg);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a.card:hover .card-content {
+    border-color: var(--accent-9);
+  }
+
+  .card-image {
+    width: 100%;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-title {
+    font-family: var(--sy-f-sys), sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--sy-c-text);
+    margin-bottom: 0.3rem;
+    text-align: left;
+  }
+
+  .card-description {
+    font-family: var(--sy-f-text);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--sy-c-text);
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  /* Responsive design */
+  @media (max-width: 1200px) {
+    .cardwall {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cardwall {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cardwall {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>
+{% endblock %}
+{% block body %}
+<h1 class="headline">Sources</h1>
+
+<section>
+
+  <!--<p class="section-subtitle"></p>-->
+  
+  <div class="cardwall">
+
+
+    <a href="/operator/source_acxiom.html" class="card">
+      <div class="card-content" title="Axciom">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-acxiom.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-acxiom-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Axciom</div>
+        <div class="card-description">
+          Pull data from Axciom using SFTP.
         </div>
       </div>
-  {%- endblock %}
+    </a>
 
-      <div class="clearer"></div>
-    </div>
-{%- endblock %}
+
+    <a href="/operator/source_adobe_analytics.html" class="card">
+      <div class="card-content" title="Adobe Analytics">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <div class="card-title">Adobe Analytics</div>
+        <div class="card-description">
+          Pull clickstream data from Adobe Analytics using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_adobe_campaign.html" class="card">
+      <div class="card-content" title="Adobe Campaign">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <div class="card-title">Adobe Campaign</div>
+        <div class="card-description">
+          Pull data from Adobe Campaign using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_adobe_commerce.html" class="card">
+      <div class="card-content" title="Adobe Commerce">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <div class="card-title">Adobe Commerce</div>
+        <div class="card-description">
+          Pull customer, order, and transaction data from Adobe Commerce.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_adobe_customer_attributes.html" class="card">
+      <div class="card-content" title="Adobe Customer Attributes">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-adobe-aec.png" class="card-image" />
+        </figure>
+        <div class="card-title">Adobe Customer Attributes</div>
+        <div class="card-description">
+          Pull data from Adobe Customer Attributes using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_amazon_s3.html" class="card">
+      <div class="card-content" title="Amazon S3">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-amazon-s3.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-amazon-s3.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Amazon S3</div>
+        <div class="card-description">
+          Pull any type of data from any Amazon S3 bucket.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_attentive_mobile.html" class="card">
+      <div class="card-content" title="Attentive">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-attentive.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-attentive-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Attentive</div>
+        <div class="card-description">
+          Pull customer SMS data from Attentive using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_azure_blob_storage.html" class="card">
+      <div class="card-content" title="Azure Blob Storage">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-microsoft-azure.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-microsoft-azure.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Azure Blob Storage</div>
+        <div class="card-description">
+          Pull any type of data from Azure Blob Storage.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_bazaarvoice.html" class="card">
+      <div class="card-content" title="Bazaarvoice">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-bazaarvoice.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-bazaarvoice-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Bazaarvoice</div>
+        <div class="card-description">
+          Pull data from Bazaarvoice using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_bluecore.html" class="card">
+      <div class="card-content" title="Bluecore">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-bluecore.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-bluecore-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Bluecore</div>
+        <div class="card-description">
+          Pull audience exports from Bluecore using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_braze.html" class="card">
+      <div class="card-content" title="Braze">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-braze.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-braze-dark.png" class="card-image" />
+        </figure>
+        <div class="card-title">Braze</div>
+        <div class="card-description">
+          Pull events data to Amperity using Braze Currents.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_camelot_smm.html" class="card">
+      <div class="card-content" title="Camelot SMM">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-camelot-smm.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-camelot-smm.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Camelot SMM</div>
+        <div class="card-description">
+          Pull data from Camelot SMM using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_cheetah_digital.html" class="card">
+      <div class="card-content" title="Cheetah Digital by Marigold">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-cheetah.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-cheetah-dark.png" class="card-image" />
+        </figure>
+        <div class="card-title">Cheetah Digital by Marigold</div>
+        <div class="card-description">
+          Pull customer profiles from Cheetah Digital using SFTP or Amazon S3.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_cordial.html" class="card">
+      <div class="card-content" title="Cordial">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-cordial.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-cordial-dark.png" class="card-image" />
+        </figure>
+        <div class="card-title">Cordial</div>
+        <div class="card-description">
+          Pull email contact and activity data using the Cordial REST API.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_cross_country_computer.html" class="card">
+      <div class="card-content" title="Cross Country Computer">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-ccc.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-ccc.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Cross Country Computer</div>
+        <div class="card-description">
+          Pull data from Cross Country Computer using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/bridge_databricks.html" class="card">
+      <div class="card-content" title="Databricks">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-databricks.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-databricks-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Databricks</div>
+        <div class="card-description">
+          Sync data between Databricks and Amperity using Delta Sharing.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_dynamic_yield.html" class="card">
+      <div class="card-content" title="Dynamic Yield">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-dynamic-yield.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-dynamic-yield-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Dynamic Yield</div>
+        <div class="card-description">
+          Pull data from Dynamic Yield using Amazon S3.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_emarsys.html" class="card">
+      <div class="card-content" title="Emarsys">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-emarsys.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-emarsys.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Emarsys</div>
+        <div class="card-description">
+          Pull data from Emarsys using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_epsilon_abacus.html" class="card">
+      <div class="card-content" title="Epsilon Abacus">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-epsilon.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-epsilon.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Epsilon Abacus</div>
+        <div class="card-description">
+          Pull data from Epsilon Abacus using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_epsilon_conversant.html" class="card">
+      <div class="card-content" title="Epsilon Conversant">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-epsilon.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-epsilon.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Epsilon Conversant</div>
+        <div class="card-description">
+          Pull data from Epsilon Conversant using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_epsilon_targeting.html" class="card">
+      <div class="card-content" title="Epsilon Targeting">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-epsilon.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-epsilon.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Epsilon Targeting</div>
+        <div class="card-description">
+          Pull data from Epsilon Targeting using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_experian.html" class="card">
+      <div class="card-content" title="Experian">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-experian.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-experian.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Experian</div>
+        <div class="card-description">
+          Pull data from Experian using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_fivetran.html" class="card">
+      <div class="card-content" title="Fivetran">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-fivetran.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-fivetran.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Fivetran</div>
+        <div class="card-description">
+          Pull data from hundreds of sources using Fivetran.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_google_analytics.html" class="card">
+      <div class="card-content" title="Google Analytics">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-google-analytics.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-google-analytics.png" class="card-image" />
+        </figure>
+        <div class="card-title">Google Analytics</div>
+        <div class="card-description">
+          Pull Google Analytics 4 (GA4) property reports from Google Analytics.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_google_cloud_storage.html" class="card">
+      <div class="card-content" title="Google Cloud Storage">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-google-cloud.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-google-cloud.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Google Cloud Storage</div>
+        <div class="card-description">
+          Pull any type of data from Google Cloud Storage.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_heap.html" class="card">
+      <div class="card-content" title="Heap">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-heap.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-heap.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Heap</div>
+        <div class="card-description">
+          Pull clicksteam data from Heap using Amazon S3.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_hubspot.html" class="card">
+      <div class="card-content" title="HubSpot">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-hubspot.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-hubspot-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">HubSpot</div>
+        <div class="card-description">
+          Pull marketing data for customers, campaigns, and email activity from HubSpot.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_infutor.html" class="card">
+      <div class="card-content" title="Infutor">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-infutor.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-infutor-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Infutor</div>
+        <div class="card-description">
+          Pull data from Infutor using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_sftp.html" class="card">
+      <div class="card-content" title="Iterable">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-iterable.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-iterable-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Iterable</div>
+        <div class="card-description">
+          Pull data from Iterable using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_amazon_kinesis_data_firehose.html" class="card">
+      <div class="card-content" title="Kinesis Data Firehose">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-aws-kinesis.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-aws-kinesis.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Kinesis Data Firehose</div>
+        <div class="card-description">
+          Stream data to an Amazon S3 bucket, and then pull it to Amperity.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_klaviyo.html" class="card">
+      <div class="card-content" title="Klaviyo">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-klaviyo.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-klaviyo-dark.png" class="card-image" />
+        </figure>
+        <div class="card-title">Klaviyo</div>
+        <div class="card-description">
+          Pull data about email and Facebook campaigns from Klaviyo.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_koupon_media.html" class="card">
+      <div class="card-content" title="Koupon Media">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-koupon-media.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-koupon-media.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Koupon Media</div>
+        <div class="card-description">
+          Pull data from Koupon Media using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_kustomer.html" class="card">
+      <div class="card-content" title="Kustomer">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-kustomer.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-kustomer-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Kustomer</div>
+        <div class="card-description">
+          Pull customer experience, service, and support data from Kustomer.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_listrak.html" class="card">
+      <div class="card-content" title="Listrak">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-listrak.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-listrak-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Listrak</div>
+        <div class="card-description">
+          Pull email and SMS events data from Listrak using a REST API.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/api_streaming.html" class="card">
+      <div class="card-content" title="MetaRouter">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-metarouter.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-metarouter-dark.png" class="card-image" />
+        </figure>
+        <div class="card-title">MetaRouter</div>
+        <div class="card-description">
+          Use the Streaming Ingest API to pull event and profile data to Amperity.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_microsoft_dataverse.html" class="card">
+      <div class="card-content" title="Microsoft Dataverse">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-microsoft-dataverse.png" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-microsoft-dataverse.png" class="card-image" />
+        </figure>
+        <div class="card-title">Microsoft Dataverse</div>
+        <div class="card-description">
+          Pull tables from Microsoft Dataverse.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_monetate.html" class="card">
+      <div class="card-content" title="Monetate">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-monetate.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-monetate.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Monetate</div>
+        <div class="card-description">
+          Pull data from Monetate using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_neustar.html" class="card">
+      <div class="card-content" title="Neustar">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-neustar.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-neustar.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Neustar</div>
+        <div class="card-description">
+          Pull data from Neustar using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_optimizely.html" class="card">
+      <div class="card-content" title="Optimizely">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-optimizely.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-optimizely-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Optimizely</div>
+        <div class="card-description">
+          Pull enriched events--IDs, tags, names--from Optimizely using Amazon S3.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_oracle_data_cloud.html" class="card">
+      <div class="card-content" title="Oracle Data Cloud">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-oracle.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-oracle.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Oracle Data Cloud</div>
+        <div class="card-description">
+          Pull data from Oracle Data Cloud using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_oracle_opera.html" class="card">
+      <div class="card-content" title="Oracle OPERA">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-oracle.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-oracle.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Oracle OPERA</div>
+        <div class="card-description">
+          Push profile and events data to Amperity from a Streaming API.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_oracle_responsys.html" class="card">
+      <div class="card-content" title="Oracle Responsys">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-oracle.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-oracle.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Oracle Responsys</div>
+        <div class="card-description">
+          Pull data from Oracle Responsys using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_pebblepost.html" class="card">
+      <div class="card-content" title="PebblePost">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-pebblepost.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-pebblepost-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">PebblePost</div>
+        <div class="card-description">
+          Pull data from PebblePost using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_powerreviews.html" class="card">
+      <div class="card-content" title="PowerReviews">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-powerreviews.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-powerreviews.svg" class="card-image" />
+        </figure>
+        <div class="card-title">PowerReviews</div>
+        <div class="card-description">
+          Pull data from PowerReviews using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_quad.html" class="card">
+      <div class="card-content" title="Quad">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-quad.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-quad.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Quad</div>
+        <div class="card-description">
+          Pull data from Quad using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_rr_donnelly.html" class="card">
+      <div class="card-content" title="RR Donnelly">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-rr-donnelly.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-rr-donnelly.svg" class="card-image" />
+        </figure>
+        <div class="card-title">RR Donnelly</div>
+        <div class="card-description">
+          Pull data from RR Donnelly using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_sailthru.html" class="card">
+      <div class="card-content" title="Sailthru by Marigold">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-sailthru.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-sailthru-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Sailthru by Marigold</div>
+        <div class="card-description">
+          Pull hourly event data about email campaigns from Sailthru.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_salesforce_commerce_cloud.html" class="card">
+      <div class="card-content" title="Salesforce Commerce Cloud">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Commerce Cloud</div>
+        <div class="card-description">
+          Pull customer data from Salesforce Commerce Cloud using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_salesforce_marketing_cloud.html" class="card">
+      <div class="card-content" title="Salesforce Marketing Cloud">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Marketing Cloud</div>
+        <div class="card-description">
+          Pull omnichannel customer engagement data from Salesforce Marketing Cloud.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_salesforce_pardot.html" class="card">
+      <div class="card-content" title="Salesforce Pardot">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Salesforce Pardot</div>
+        <div class="card-description">
+          Pull activity data (prospect, opportunity, visitor) from Salesforce Pardot.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_salesforce_sales_cloud.html" class="card">
+      <div class="card-content" title="Salesforce Sales Cloud">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-salesforce.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Salesforce Sales Cloud</div>
+        <div class="card-description">
+          Pull customer data from Salesforce Sales Cloud using their SOAP API.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_sftp.html" class="card">
+      <div class="card-content" title="SFTP">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-sftp.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-sftp-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">SFTP</div>
+        <div class="card-description">
+          Pull any type of data from Amperity from any SFTP site.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_shopify.html" class="card">
+      <div class="card-content" title="Shopify">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-shopify.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-shopify-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Shopify</div>
+        <div class="card-description">
+          Pull customer, order, product, and transaction data from Shopify.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_smg.html" class="card">
+      <div class="card-content" title="SMG">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-smg.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-smg.svg" class="card-image" />
+        </figure>
+        <div class="card-title">SMG</div>
+        <div class="card-description">
+          Pull data from SMG using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/bridge_snowflake.html" class="card">
+      <div class="card-content" title="Snowflake">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-snowflake.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-snowflake.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Snowflake</div>
+        <div class="card-description">
+          Sync data between Snowflake and Amperity using Secure Data Sharing.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_soundcommerce.html" class="card">
+      <div class="card-content" title="SoundCommerce">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-soundcommerce.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-soundcommerce.svg" class="card-image" />
+        </figure>
+        <div class="card-title">SoundCommerce</div>
+        <div class="card-description">
+          Pull data from SoundCommerce using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/api_streaming.html" class="card">
+      <div class="card-content" title="Streaming Ingest API">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-api-streaming-ingest.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-api-streaming-ingest-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Streaming Ingest API</div>
+        <div class="card-description">
+          Stream data from external systems directly to Amperity.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_vibes.html" class="card">
+      <div class="card-content" title="Vibes">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-vibes.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-vibes.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Vibes</div>
+        <div class="card-description">
+          Pull data from Vibes using SFTP.
+        </div>
+      </div>
+    </a>
+
+
+    <a href="/operator/source_zendesk.html" class="card">
+      <div class="card-content" title="Zendesk">
+        <figure class="light-only align-center">
+          <img src="/_static/connector-zendesk.svg" class="card-image" />
+        </figure>
+        <figure class="dark-only align-center">
+          <img src="/_static/connector-zendesk-dark.svg" class="card-image" />
+        </figure>
+        <div class="card-title">Zendesk</div>
+        <div class="card-description">
+          Pull customer service data from Zendesk using the Zendesk Support API.
+        </div>
+      </div>
+    </a>
+
+
+</section>
+
+{% endblock %}

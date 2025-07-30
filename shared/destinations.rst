@@ -63,11 +63,15 @@ In certain cases, a destination topic will require *some* customization within t
 
 .. destinations-overview-list-intro-start
 
-This topic describes the steps that are required to send |what-send| to |destination-name| from Amperity:
+This topic describes the steps that are required to send |what-send| to |destination-name| from Amperity.
 
 .. destinations-overview-list-intro-end
 
+.. campaigns-overview-list-intro-start
 
+This topic describes the steps that are required to send campaigns to |destination-name| from Amperity.
+
+.. campaigns-overview-list-intro-end
 
 
 

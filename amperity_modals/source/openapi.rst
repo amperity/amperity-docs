@@ -105,7 +105,7 @@ Access to the Amperity API requires using JWT access tokens that are signed by A
 Base URL
 ==================================================
 
-.. include:: ../../amperity_api/source/overview.rst
+.. include:: ../../amperity_api/source/base_url.rst
    :start-after: .. api-amperity-base-url-start
    :end-before: .. api-amperity-base-url-end
 
@@ -114,16 +114,16 @@ Requests
 
 .. TODO: Do list tables work when converting from RST > Markdown using Pandoc? Keep an eye here.
 
-.. include:: ../../amperity_api/source/overview.rst
+.. include:: ../../amperity_api/source/requests.rst
    :start-after: .. api-amperity-request-format-start
    :end-before: .. api-amperity-request-format-end
 
 Responses
 ==================================================
 
-.. include:: ../../amperity_api/source/overview.rst
-   :start-after: .. api-amperity-response-format-start
-   :end-before: .. api-amperity-response-format-end
+.. include:: ../../amperity_api/source/responses.rst
+   :start-after: .. status_codes-start
+   :end-before: .. status_codes-end
 
 Pagination
 ==================================================

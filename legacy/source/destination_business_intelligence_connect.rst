@@ -301,12 +301,6 @@ Database tables (or even entire databases) can be sent from Amperity to Snowflak
 
 .. destination-snowflake-aws-database-export-end
 
-**To add a database export for Snowflake**
-
-.. include:: ../../amperity_reference/source/data_exports.rst
-   :start-after: .. data-exports-add-steps-start
-   :end-before: .. data-exports-add-steps-end
-
 
 .. _destination-bic-send-to-data-warehouse-queries:
 
@@ -609,7 +603,7 @@ JDBC driver
 
 .. destination-bic-connect-other-jdbc-start
 
-Download the |ext_snowflake_jdbc| to connect BI tools such as Databricks, SAP Business Objects, `SQL Workbench <https://www.sql-workbench.eu/>`__ |ext_link|, or `Sisense <https://documentation.sisense.com/latest/managing-data/connectors/snowflake-online.htm>`__ |ext_link| to the |bic| data warehouse.
+Download the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link| to connect BI tools such as Databricks, SAP Business Objects, `SQL Workbench <https://www.sql-workbench.eu/>`__ |ext_link|, or `Sisense <https://documentation.sisense.com/latest/managing-data/connectors/snowflake-online.htm>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-other-jdbc-end
 
@@ -643,7 +637,7 @@ Databricks
 
 .. destination-bic-connect-other-jdbc-databricks-steps-start
 
-#. Download and install the |ext_snowflake_jdbc|.
+#. Download and install the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|.
 #. Configure Databricks to `use the JDBC driver to connect <https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html>`__ |ext_link| to |bic|.
 #. Enter the following information:
 
@@ -689,7 +683,7 @@ SQL Workbench
 
 .. destination-bic-connect-other-jdbc-sql-workbench-steps-start
 
-#. Download and install the |ext_snowflake_jdbc|.
+#. Download and install the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|.
 #. In SQL Workbench, choose **File**, **Connect Window**, and then **Create a New Connection Profile**. This opens the **Connection Profile** pane.
 #. Enter the following information:
 
@@ -755,7 +749,7 @@ Microsoft PowerBI
 
 .. destination-bic-connect-to-microsoft-powerbi-start
 
-Download the |ext_snowflake_odbc|, and then connect Microsoft `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| to the |bic| data warehouse.
+Download the `Snowflake ODBC driver <https://docs.snowflake.com/en/user-guide/odbc.html>`__ |ext_link|, and then connect Microsoft `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-microsoft-powerbi-end
 
@@ -771,7 +765,7 @@ ODBC driver
 
 .. destination-bic-connect-other-odbc-start
 
-Download the |ext_snowflake_odbc| to connect BI tools such as `Adobe Campaign <https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/accessing-external-database/configure-fda/config-databases/configure-fda-snowflake.html?lang=en>`__ |ext_link|, Microsoft PowerBI, SAP Business Objects, Tableau, or `TIBCO Spotfire <https://docs.tibco.com/pub/sfire-analyst/11.3.0/doc/html/en-US/TIB_sfire-analyst_UsersGuide/connectors/snowflake/snowflake_accessing_data_from_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
+Download the `Snowflake ODBC driver <https://docs.snowflake.com/en/user-guide/odbc.html>`__ |ext_link| to connect BI tools such as `Adobe Campaign <https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/accessing-external-database/configure-fda/config-databases/configure-fda-snowflake.html?lang=en>`__ |ext_link|, Microsoft PowerBI, SAP Business Objects, Tableau, or `TIBCO Spotfire <https://docs.tibco.com/pub/sfire-analyst/11.3.0/doc/html/en-US/TIB_sfire-analyst_UsersGuide/connectors/snowflake/snowflake_accessing_data_from_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-other-odbc-end
 
@@ -825,7 +819,7 @@ SAP Business Objects
 
 .. destination-bic-connect-to-sap-business-objects-start
 
-Download the |ext_snowflake_jdbc|, and then configure `SAP Business Objects <https://blogs.sap.com/2018/11/20/how-to-set-up-sap-businessobjects-with-snowflake-using-jdbc/>`__ |ext_link| to connect to the |bic| data warehouse.
+Download the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|, and then configure `SAP Business Objects <https://blogs.sap.com/2018/11/20/how-to-set-up-sap-businessobjects-with-snowflake-using-jdbc/>`__ |ext_link| to connect to the |bic| data warehouse.
 
 .. destination-bic-connect-to-sap-business-objects-end
 
@@ -841,7 +835,7 @@ SAS Cloud Analytic Services
 
 .. destination-bic-connect-to-sas-start
 
-Download the |ext_snowflake_jdbc|, and then configure `SAS Cloud Analytics Services <https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/casref/n1ldk5vubre9oen10bdqoqkfc1y7.htm>`__ |ext_link| to connect to the |bic| data warehouse.
+Download the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|, and then configure `SAS Cloud Analytics Services <https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/casref/n1ldk5vubre9oen10bdqoqkfc1y7.htm>`__ |ext_link| to connect to the |bic| data warehouse.
 
 .. destination-bic-connect-to-sas-end
 
@@ -865,7 +859,7 @@ Tableau Desktop
 
 .. destination-bic-connect-other-odbc-tableau-steps-start
 
-#. Download and install the |ext_snowflake_odbc|, and then `connect Tableau <https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
+#. Download and install the `Snowflake ODBC driver <https://docs.snowflake.com/en/user-guide/odbc.html>`__ |ext_link|, and then `connect Tableau <https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
 #. Log in to Tableau. Select the **Connect** menu option, then **To A Server**, then **More..**, and then **Snowflake**. This opens the **Snowflake** configuration page.
 #. Select the **General** tab, and then enter the following information:
 

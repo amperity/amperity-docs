@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for SoundCommerce
+        Configure destinations for SoundCommerce
 
 ==================================================
-Configure destination for SoundCommerce
+Configure destinations for SoundCommerce
 ==================================================
 
 .. include:: ../../shared/terms.rst

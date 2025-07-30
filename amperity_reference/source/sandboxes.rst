@@ -96,7 +96,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Sandboxes are created from the **Users & Admin** page. Find the **Sandboxes** section, and then click **Create sandbox**.
 
@@ -122,8 +122,8 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step 2.
+          :align: center
           :class: no-scaled-link
      - Sandbox configuration works the same way as it does in production with all of the same features and functionality. The main difference is that users in a sandbox are assigned the **DataGrid Administrator** policy, which gives them full access to the configuration state within the sandbox.
 
@@ -171,7 +171,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - When the sandbox is ready to be promoted, click **Promote**. Enter a merge message for this set of configuration state changes.
 

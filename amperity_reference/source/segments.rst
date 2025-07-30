@@ -93,7 +93,7 @@ Up to five segments may be configured to show in the list of recommended segment
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - From the **Segments** page, under **Recommended segments**, click **Configure**.
 
@@ -124,7 +124,7 @@ Up to five segments may be configured to show in the list of recommended segment
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Up to five recommended segments may be configured.
 
@@ -137,7 +137,7 @@ Up to five segments may be configured to show in the list of recommended segment
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - When your tenant has more than one database, you can select the list of recommended segments for *each database*.
 

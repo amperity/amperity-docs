@@ -11,7 +11,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Databases
+        About databases
 
 ==================================================
 About databases
@@ -725,10 +725,6 @@ You cannot update the schema for a real-time table. Instead, create a new real-t
 .. databases-realtime-howtos-update-schema-end
 
 
-
-
-
-
 .. _databases-database-howtos-databasese:
 
 How-tos
@@ -1196,7 +1192,36 @@ Choose currency symbol
 
 .. databases-database-howto-choose-currency-start
 
-The currency symbol to show for metrics and segment insights is configurable. The following currency symbols are in the dropdown list: Australian Dollar (AUD, |u-dollar|), Canadian Dollar (CAD, |u-dollar|), United States Dollar (USD, |u-dollar|), Mexican Peso (MXN, |u-peso|), British Pound (GBP, |u-pound|), Euro (EUR, |u-euro|), Indian Rupee (INR, |u-rupee|), and Japanese Yen (JPY, |u-yen|).
+The currency symbol to show for metrics and segment insights is configurable. The following currency symbols are in the dropdown list:
+
+.. list-table::
+   :widths: 50 25 25
+   :header-rows: 0
+
+   * - **Australian Dollar**
+     - AUD
+     - |u-dollar|
+   * - **Canadian Dollar**
+     - CAD
+     - |u-dollar|
+   * - **United States Dollar**
+     - USD
+     - |u-dollar|
+   * - **Mexican Peso**
+     - MXN
+     - |u-peso|
+   * - **British Pound**
+     - GBP
+     - |u-pound|
+   * - **Euro**
+     - EUR
+     - |u-euro|
+   * - **Indian Rupee**
+     - INR
+     - |u-rupee|
+   * - **Japanese Yen**
+     - JPY
+     - |u-yen|
 
 .. tip:: You may configure custom currency symbols, for example South Korean Won (KRW, |u-won|).
 
@@ -1269,7 +1294,7 @@ Allow resource group
 
 .. databases-database-howto-configure-permission-resource-group-start
 
-A database that is configured for **Standard** access may restrict access to a datbase to only users who belong to a :ref:`resource group <settings-security-resource-groups>` that is configured in Amperity.
+A database that is configured for **Standard** access may restrict access to a datbase to only users who belong to a :doc:`resource group <resource_groups>` that is configured in Amperity.
 
 .. databases-database-howto-configure-permission-resource-group-end
 
@@ -1290,7 +1315,7 @@ A database that is configured for **Standard** access may restrict access to a d
 Allow everyone
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_reference/source/settings.rst
+.. include:: ../../amperity_reference/source/resource_groups.rst
    :start-after: .. settings-security-resource-groups-all-start
    :end-before: .. settings-security-resource-groups-all-end
 

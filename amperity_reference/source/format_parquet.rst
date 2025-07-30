@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: Apache Parquet
+        Apache Parquet files
 
 ==================================================
-File format: Apache Parquet
+Apache Parquet files
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -167,7 +167,7 @@ Send Parquet files
 
 .. format-parquet-destination-start
 
-Apache Parquet is the recommended format for any customer environment that supports the use of Parquet. This is because Parquet data embeds data-typing and avoids escape character and data formatting issues that can be present in other formats like CSV and TSV formats. Parquet is highly compact--file sizes can be up to 20 times smaller--and a format that systems can load and use quickly.
+Apache Parquet is the recommended format for any customer environment that supports the use of Parquet. This is because Parquet data embeds data-typing and avoids escape character and data formatting issues that can be present in other formats like CSV and TSV formats. Parquet is highly compact--file sizes can be up to 20 times smaller--and is a format that systems can load and use quickly.
 
 .. format-parquet-destination-end
 

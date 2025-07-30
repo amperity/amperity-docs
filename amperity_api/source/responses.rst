@@ -13,9 +13,8 @@
     :content class=swiftype name=title data-type=string:
         Amperity API response codes
 
-
 ==================================================
-Amperity API response codes
+Responses
 ==================================================
 
 .. status_codes-start
@@ -75,6 +74,7 @@ When a request returns a fatal client error, the standard error response will in
 For example:
 
 .. code-block:: json
+   :linenos:
 
    {
      "status": 400,

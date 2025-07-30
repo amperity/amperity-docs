@@ -230,7 +230,7 @@ A custom audience must have at least 1000 members in |destination-name| before i
 
 .. destination-tiktok-ads-custom-audiences-end
 
-.. include:: ../../amperity_ampiq/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_user/source/destination_tiktok_ads.rst
    :start-after: .. channel-tiktok-ads-important-one-time-delivery-start
    :end-before: .. channel-tiktok-ads-important-one-time-delivery-end
 
@@ -371,7 +371,7 @@ Add data template
    :start-after: .. term-data-template-start
    :end-before: .. term-data-template-end
 
-.. include:: ../../amperity_ampiq/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_user/source/destination_tiktok_ads.rst
    :start-after: .. channel-tiktok-ads-important-one-time-delivery-start
    :end-before: .. channel-tiktok-ads-important-one-time-delivery-end
 
@@ -480,11 +480,11 @@ Add data template
 Offline events
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/events_tiktok_ads_manager.rst
+.. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
    :start-after: .. events-tiktok-ads-offline-events-start
    :end-before: .. events-tiktok-ads-offline-events-end
 
-.. include:: ../../amperity_ampiq/source/events_tiktok_ads_manager.rst
+.. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
    :start-after: .. events-tiktok-ads-offline-events-allowfor-start
    :end-before: .. events-tiktok-ads-offline-events-allowfor-end
 
@@ -494,7 +494,7 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_tiktok_ads_manager.rst
+.. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
    :start-after: .. events-tiktok-ads-offline-events-build-query-start
    :end-before: .. events-tiktok-ads-offline-events-build-query-end
 

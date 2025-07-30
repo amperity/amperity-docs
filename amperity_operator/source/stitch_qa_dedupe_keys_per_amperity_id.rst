@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -97,6 +98,7 @@ Configure query
 #. By default, the deduplication key count is 2 (or more). You can adjust this value higher:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6
 
       SELECT
@@ -111,6 +113,7 @@ Configure query
 #. To return the distribution of deduplication keys by Amperity ID, first use ``/*`` and ``*/`` to comment out the size investigation **SELECT** statement:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 1,7
 
       /*SELECT

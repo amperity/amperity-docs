@@ -18,10 +18,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Google BigQuery
+        Configure destinations for Google BigQuery
 
 ==================================================
-Configure destination for Google BigQuery
+Configure destinations for Google BigQuery
 ==================================================
 
 .. include:: ../../shared/terms.rst

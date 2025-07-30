@@ -92,6 +92,7 @@ Use a query to analyze customer retention rates by loyalty status. The following
 * Customer value differences among groups
 
 .. code-block:: sql
+   :linenos:
 
    WITH loyalty_members AS (
      SELECT DISTINCT
@@ -164,6 +165,7 @@ Use a query to analyze customer value by loyalty status. The following example f
 * Average order value for all purchases in the previous 12 months
 
 .. code-block:: sql
+   :linenos:
 
     WITH loyalty_members AS (
      SELECT DISTINCT

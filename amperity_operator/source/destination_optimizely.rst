@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Optimizely
+        Configure destinations for Optimizely
 
 ==================================================
-Configure destination for Optimizely
+Configure destinations for Optimizely
 ==================================================
 
 .. include:: ../../shared/terms.rst

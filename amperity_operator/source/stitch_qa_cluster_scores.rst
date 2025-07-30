@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -60,6 +61,7 @@ Configure query
 #. The query is configured for a single Amperity ID. Replace **amp_id** with an Amperity ID:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       FROM Unified_Coalesced uc1
@@ -74,6 +76,7 @@ Configure query
 #. To run the query for multiple Amperity IDs, update the query to input a list of IDs, and then replace each **amp_id** with an Amperity ID:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       FROM Unified_Coalesced uc1

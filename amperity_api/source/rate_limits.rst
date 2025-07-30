@@ -13,7 +13,6 @@
     :content class=swiftype name=title data-type=string:
         Amperity API rate limits
 
-
 ==================================================
 Rate limits
 ==================================================

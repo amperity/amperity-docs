@@ -6,23 +6,23 @@
 
 .. meta::
     :description lang=en:
-        Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
+        Amperity Bridge for Snowflake is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
+        Amperity Bridge for Snowflake is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure bridge for Snowflake
+        Configure Amperity Bridge for Snowflake
 
 ==================================================
-Configure bridge for Snowflake
+Configure Amperity Bridge for Snowflake
 ==================================================
 
 .. bridge-snowflake-about-start
 
-Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
+Amperity Bridge for Snowflake is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
 
 .. bridge-snowflake-about-end
 
@@ -36,7 +36,7 @@ Snowflake Bridge is a first-class integration that uses secure data sharing to e
 
 .. bridge-snowflake-switch-to-bridge-start
 
-.. tip:: Amperity Bridge shares data directly with Snowflake. A bridge does not require a courier or a database export to be configured. A bridge can be configured to run automatically as part of any scheduled workflow.
+.. tip:: Amperity Bridge for Snowflake shares data directly with Snowflake. A bridge does not require a courier or a database export to be configured. A bridge can be configured to run automatically as part of any scheduled workflow.
 
    If your brand is currently using BI Connect to make data available in Snowflake your brand should consider moving the BI Connect workflow to Amperity Bridge. This will increase the speed at which This will allow your brand to self-service the data that is shared between Amperity and Snowflake directly from within your Snowflake account.
 
@@ -79,7 +79,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The organization name and account name for your brand's |destination-name| account.
 
@@ -101,7 +101,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-snowflake-region-start
@@ -111,7 +111,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Before you can configure Amperity Bridge for data sharing with Snowflake you must :ref:`create a share in Snowflake <bridge-snowflake-sync-amperity-configure-snowflake-create-share>`, add a secure share identifier to that share, identify the correct account locator, and then add the :ref:`Amperity account locator ID <bridge-snowflake-sync-amperity-configure-snowflake-account-locator>` to the share.
 
@@ -123,7 +123,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A secure share identifier in Snowflake is a unique string---A-Z, 0-9, $, and _ (underscores)---that is added when creating a share. This string must configured in Amperity to enable the bridge.
 
@@ -268,7 +268,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Open the **Sources** page. Under **Inbound shares** click **Add bridge**. 
 
@@ -294,7 +294,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure the organization, account name, and region.
 
@@ -314,7 +314,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Add the **Secure Share Identifier**.
 
@@ -324,7 +324,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use the **Select tables** dialog box to select any combination of schemas and tables to be synced to Amperity.
 
@@ -342,7 +342,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Map the tables that are synced from Snowflake to domain tables in Amperity.
 
@@ -411,7 +411,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The organization name and account name for your brand's |destination-name| account.
 
@@ -433,7 +433,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-snowflake-region-start
@@ -443,7 +443,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Requirement 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A user with the `ACCOUNTADMIN role <https://docs.snowflake.com/en/user-guide/security-access-privileges-shares>`__ |ext_link| must :ref:`create a database in Snowflake using the data that was shared from Amperity <bridge-snowflake-sync-with-snowflake-configure>`.
 
@@ -472,7 +472,7 @@ Configure an outbound bridge to sync data from Amperity to Snowflake.
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page. Under **Outbound shares** click **Add bridge**. This opens the **Create bridge** dialog box.
 
@@ -480,7 +480,7 @@ Configure an outbound bridge to sync data from Amperity to Snowflake.
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Add a name and description for the bridge *or* select an existing bridge.
 
@@ -525,7 +525,7 @@ You can configure Amperity to share any combination of schemas and tables that a
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - After you have :ref:`configured the settings for the bridge <bridge-snowflake-sync-with-snowflake-add-bridge>`, click **Next** to open the **Select tables** dialog box.
 
@@ -566,7 +566,7 @@ After tables have been shared you will need to create a database in Snowflake us
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - `Access the consumer listings that are available in your Snowflake account <https://docs.snowflake.com/en/user-guide/data-exchange-using#access-consumer-listings>`__ |ext_link|.
 
@@ -576,7 +576,7 @@ After tables have been shared you will need to create a database in Snowflake us
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - `Switch the role to the ACCOUNTADMIN role <https://docs.snowflake.com/en/user-guide/security-access-privileges-shares>`__ |ext_link|.
 
@@ -584,7 +584,7 @@ After tables have been shared you will need to create a database in Snowflake us
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - `Create the database in Snowflake from data that was shared from Amperity <https://docs.snowflake.com/en/user-guide/data-share-consumers#creating-a-database-from-a-share>`__ |ext_link|.
 
@@ -619,7 +619,7 @@ Verify that the tables shared from Amperity are available from a database in Sno
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - From the **Snowsight** user interface in Snowflake, expand **Data**, then expand **Databases**, and then find the database that was created for sharing Amperity data.
 
@@ -627,7 +627,7 @@ Verify that the tables shared from Amperity are available from a database in Sno
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Open the database, and then verify that the tables you shared from Amperity are available in the database.
 

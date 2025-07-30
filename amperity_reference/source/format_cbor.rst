@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: CBOR
+        CBOR files
 
 ==================================================
-File format: CBOR
+CBOR files
 ==================================================
 
 .. include:: ../../shared/terms.rst

@@ -103,6 +103,7 @@ Return versions by datetime
 Use **datetime** to return a version that is on a specific date. For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT * 
    FROM table_a_versioned AS a
@@ -125,6 +126,7 @@ Use **created_at** to return a version at its time of creation.
 The following query returns all records from the Customer360 table with addresses that changed between yesterday and today:
 
 .. code-block:: sql
+   :linenos:
 
    WITH Customer360_yesterday AS (
      SELECT *

@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Amazon Pinpoint
+        Configure destinations for Amazon Pinpoint
 
 ==================================================
-Configure destination for Amazon Pinpoint
+Configure destinations for Amazon Pinpoint
 ==================================================
 
 .. term-amazon-pinpoint-start
@@ -102,23 +102,23 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Amazon Pinpoint must be enabled in your Amazon AWS account and be configured to send SMS messages to your customers. (SMS messages are configured to be sent using the PROMOTIONAL message type in Amazon Pinpoint.)
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - A Lambda function must be uploaded to AWS Lambda that is running in your Amazon AWS account, and then configured to be available to Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - A webhook destination that is configured in your Amperity tenant that sends query results to a Lambda function running in AWS Lambda.
 
@@ -450,7 +450,7 @@ Add data template
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -458,7 +458,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-01-details.png
           :width: 500 px
-          :alt: Step 1
+          :alt: Add details.
           :align: left
           :class: no-scaled-link
 
@@ -470,7 +470,7 @@ Add data template
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -479,7 +479,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Allow access.
           :align: left
           :class: no-scaled-link
 
@@ -491,7 +491,7 @@ Add data template
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -513,7 +513,7 @@ Add data template
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -69,6 +70,7 @@ Configure query
 #. When customer keys are available, update the common table expression to use both customer and primary keys, instead of just primary keys. Change the following:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2
 
       SELECT DISTINCT amperity_id,
@@ -78,6 +80,7 @@ Configure query
    to:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2
 
        SELECT DISTINCT amperity_id,
@@ -87,6 +90,7 @@ Configure query
 #. You may adjust the query to count clusters of any size. The default cluster sizes are:
 
    .. code-block:: sql
+      :linenos:
 
       WHEN cluster_size = 1 THEN '1'
       WHEN cluster_size = 2 THEN '2'
@@ -105,6 +109,7 @@ Configure query
    For example, to use cluster sizes of 6, 7, 8, 9, update to:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6,7,8,9
 
       WHEN cluster_size = 1 THEN '1'
@@ -128,6 +133,7 @@ Configure query
    or to use a cluster size of 5000:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 12,13
 
       WHEN cluster_size = 1 THEN '1'
@@ -151,6 +157,7 @@ Configure query
 #. The threshold for supersized clusters is specified in the **CASE** statements to be greater than 63. Uncomment the following **SELECT** statement:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 1,2,3,4
 
       SELECT *

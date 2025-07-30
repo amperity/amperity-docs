@@ -289,9 +289,9 @@ Add data template
    :start-after: .. term-data-template-start
    :end-before: .. term-data-template-end
 
-.. include:: ../../amperity_ampiq/source/destination_snapchat.rst
-   :start-after: .. channel-snapchat-build-segment-note-start
-   :end-before: .. channel-snapchat-build-segment-note-end
+.. include:: ../../amperity_user/source/destination_snapchat.rst
+   :start-after: .. sendto-snapchat-build-query-note-start
+   :end-before: .. sendto-snapchat-build-query-note-end
 
 .. admonition:: About paid media campaigns
 

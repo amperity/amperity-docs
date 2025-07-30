@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -56,6 +57,7 @@ Configure query
 #. Update the common table expression for any calculated fields required by your tenant:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6
 
       SELECT DISTINCT
@@ -74,6 +76,7 @@ Configure query
    For example, to add **email_domain** as a calculated field:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6
 
       SELECT DISTINCT
@@ -92,6 +95,7 @@ Configure query
 #. Extend the **WHERE** clause in the common table expression as necessary. For example:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       WHERE
@@ -103,6 +107,7 @@ Configure query
 #. Update the list of fields to contain any additional semantic or custom fields required by your tenant:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 20
 
       SELECT
@@ -129,6 +134,7 @@ Configure query
    For example, to add **postal** and **gender**:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         uc1.amperity_id AS amp_1
@@ -157,6 +163,7 @@ Configure query
 #. Update the list of fields for all foreign keys:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 1,2
 
        -- ADD MATCHING PAIRS FOR FOREIGN KEYS
@@ -166,6 +173,7 @@ Configure query
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       ,t1.fk_customer_id AS fk_customer_id_1
       ,t2.fk_customer_id AS fk_customer_id_2
@@ -175,6 +183,7 @@ Configure query
 #. If using the :doc:`bad-values blocklist <blocklist_bad_values>` you may apply those blocklist values to the results of this query. Uncomment the following rows:
 
    .. code-block:: sql
+      :linenos:
 
       -- AND blv_surname IS NULL
       -- AND blv_given_name IS NULL

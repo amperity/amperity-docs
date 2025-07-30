@@ -97,6 +97,7 @@ Transaction attributes, such as those that capture purchase history or those tha
 The following block shows the default list of attributes used for ranking Amperity IDs. These rankings may be extended to include additional attributes.
 
 .. code-block:: sql
+   :linenos:
 
    ,attrs_by_amp AS (
      SELECT
@@ -164,6 +165,7 @@ Email attributes, such as those that capture consent status and engagement with 
 The following block shows the default list of attributes used for ranking email addresses. These rankings may be extended to include additional attributes.
 
 .. code-block:: sql
+   :linenos:
 
    ,all_attrs AS (
      SELECT
@@ -226,6 +228,7 @@ The **ORDER BY** clause lists the attributes that determine priority. You may ex
 .. note:: The following block shows the recommended priority for ranking email addresses. This block is commented out in the SQL template and must be uncommented and updated before this table can be activated.
 
 .. code-block:: sql
+   :linenos:
 
    ,amp_email_ranking AS (
      SELECT *
@@ -274,6 +277,7 @@ The **ORDER BY** clause lists the attributes that determine priority. You may ex
 .. note:: The following block shows the recommended priority for ranking Amperity IDs. This block is commented out in the SQL template and must be uncommented and updated before this table can be activated.
 
 .. code-block:: sql
+   :linenos:
 
    ,email_amp_ranking AS (
      SELECT *

@@ -222,6 +222,7 @@ Some data sources do not contain fields for complete birthdates and instead cont
 The following example shows an ``IF`` statement within a ``SELECT`` statement that finds the values in day, month, and year fields, and then combines them into a field that captures the birthdate value as ``DD/MM/YYYY``:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *
@@ -264,6 +265,7 @@ Some data sources contain fixed-width fields. Use a combination of the **TRIM()*
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      TRIM(SUBSTR(col_1, 2, 35)) AS NAME_LINE1,
@@ -313,6 +315,7 @@ Reference custom domain tables
 A custom domain table may reference another custom domain table. For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      order_id
@@ -503,17 +506,18 @@ Example: Unified transactions
 .. domain-tables-add-custom-example-unified-transactions-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH uit_rollup AS (
      SELECT
-       order_id,
-       MIN(order_datetime) AS order_datetime,
-       SUM(IF(is_return IS NULL AND is_cancellation IS NULL, COALESCE(item_quantity, 1), 0)) AS order_quantity,
-       SUM(IF(is_return IS NULL AND is_cancellation IS NULL, item_revenue, 0)) AS sum_item_revenue,
-       SUM(IF(is_return = TRUE, COALESCE(item_quantity, -1), 0)) AS order_returned_quantity,
-       SUM(IF(is_return = TRUE, item_revenue, 0)) AS order_returned_revenue,
-       SUM(IF(is_cancellation = TRUE, COALESCE(item_quantity, -1), 0)) AS order_canceled_quantity,
-       SUM(IF(is_cancellation = TRUE, item_revenue, 0)) AS order_canceled_revenue
+       order_id
+       ,MIN(order_datetime) AS order_datetime
+       ,SUM(IF(is_return IS NULL AND is_cancellation IS NULL COALESCE(item_quantity, 1), 0)) AS order_quantity
+       ,SUM(IF(is_return IS NULL AND is_cancellation IS NULL, item_revenue, 0)) AS sum_item_revenue
+       ,SUM(IF(is_return = TRUE, COALESCE(item_quantity, -1), 0)) AS order_returned_quantity
+       ,SUM(IF(is_return = TRUE, item_revenue, 0)) AS order_returned_revenue
+       ,SUM(IF(is_cancellation = TRUE, COALESCE(item_quantity, -1), 0)) AS order_canceled_quantity
+       ,SUM(IF(is_cancellation = TRUE, item_revenue, 0)) AS order_canceled_revenue
      FROM
        Unified_Itemized_Transactions
      GROUP BY 1)
@@ -557,6 +561,7 @@ Example: Loyalty programs
 .. domain-tables-add-custom-example-loyalty-cte-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH Loyalty_cte AS (
      SELECT
@@ -587,6 +592,7 @@ Example: Loyalty programs
 .. domain-tables-add-custom-example-loyalty-last-updated-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH info_from_last_update AS (
      SELECT 

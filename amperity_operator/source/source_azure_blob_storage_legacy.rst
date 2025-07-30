@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. |source-name| replace:: Azure Blob Storage
 .. |plugin-name| replace:: Azure Blob Storage

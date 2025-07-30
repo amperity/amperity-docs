@@ -113,20 +113,6 @@
 
 .. TODO: Keep this one as a consolidated external link.
 
-.. |ext_snowflake_jdbc| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/jdbc.html" target="_blank">Snowflake JDBC driver</a>
-
-
-.. TODO: Keep this one as a consolidated external link.
-
-.. |ext_snowflake_odbc| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/odbc.html" target="_blank">Snowflake ODBC driver</a>
-
-
-.. TODO: Keep this one as a consolidated external link.
-
 .. |ext_sparksql_version_current| raw:: html
 
    <a href="https://archive.apache.org/dist/spark/docs/3.5.1/api/sql/index.html" target="_blank">Spark SQL, version 3.5.1</a>

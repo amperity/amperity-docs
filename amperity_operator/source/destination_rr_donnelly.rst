@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for RR Donnelly
+        Configure destinations for RR Donnelly
 
 ==================================================
-Configure destination for RR Donnelly
+Configure destinations for RR Donnelly
 ==================================================
 
 .. include:: ../../shared/terms.rst

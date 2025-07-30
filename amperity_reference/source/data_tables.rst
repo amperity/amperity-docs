@@ -14,7 +14,7 @@
         About data tables
 
 ==================================================
-About unified data tables
+About data tables
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -3011,7 +3011,7 @@ Each of the recency (R), frequency (F), and monetary (M) scores are represented 
           :start-after: .. attribute-rfm-recency-start
           :end-before: .. attribute-rfm-recency-end
 
-       .. include:: ../../amperity_ampiq/source/attribute_rfm.rst
+       .. include:: ../../amperity_user/source/rfm.rst
           :start-after: .. attribute-rfm-scoring-start
           :end-before: .. attribute-rfm-scoring-end
 
@@ -3022,7 +3022,7 @@ Each of the recency (R), frequency (F), and monetary (M) scores are represented 
           :start-after: .. attribute-rfm-frequency-start
           :end-before: .. attribute-rfm-frequency-end
 
-       .. include:: ../../amperity_ampiq/source/attribute_rfm.rst
+       .. include:: ../../amperity_user/source/rfm.rst
           :start-after: .. attribute-rfm-scoring-start
           :end-before: .. attribute-rfm-scoring-end
  
@@ -3033,7 +3033,7 @@ Each of the recency (R), frequency (F), and monetary (M) scores are represented 
           :start-after: .. attribute-rfm-monetary-start
           :end-before: .. attribute-rfm-monetary-end
 
-       .. include:: ../../amperity_ampiq/source/attribute_rfm.rst
+       .. include:: ../../amperity_user/source/rfm.rst
           :start-after: .. attribute-rfm-scoring-start
           :end-before: .. attribute-rfm-scoring-end
 

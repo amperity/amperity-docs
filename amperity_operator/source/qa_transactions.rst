@@ -69,6 +69,7 @@ for item-level rollups
 .. qa-transaction-rollup-validation-queries-item-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ,YEAR(order_datetime) AS order_year
@@ -96,6 +97,7 @@ for order-level rollups
 .. qa-transaction-rollup-validation-queries-order-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ,YEAR(order_datetime)

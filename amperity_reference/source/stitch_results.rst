@@ -14,7 +14,7 @@
         About Stitch
 
 ==================================================
-About Stitch
+About Stitch results
 ==================================================
 
 .. include:: ../../shared/terms.rst

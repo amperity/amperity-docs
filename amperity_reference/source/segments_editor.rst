@@ -109,7 +109,7 @@ Exclusions define conditions that determine which customers will not belong to a
 AND vs. OR
 ==================================================
 
-.. TODO: We'll keep this intro, might need to edit it after the bubbles diagrams are ready. For now, as-is.
+.. TODO: We'll keep this intro for now, as-is.
 
 .. segments-editor-and-vs-or-intro-start
 
@@ -118,7 +118,7 @@ AND and OR are used in SQL languages to specify how results should be filtered w
 * Use AND to return a smaller (and more specific) list of customers. A customer must match all conditions to belong to the list.
 * Use OR to return a larger (and more broad) list of customers. A customer may match any condition to belong to the list.
 
-Amperity uses AND and OR to help you choose which type of behavior -- larger audiences or smaller audiences -- you want to use in your segment.
+Amperity uses AND and OR to help you choose which type of behavior--larger audiences or smaller audiences--you want to use in your segment.
 
 The AND and OR conditions may be set in two locations:
 
@@ -142,7 +142,7 @@ The following examples describe how AND and OR conditions work.
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Single attribute.
-          :align: left
+          :align: center
           :class: no-scaled-link
 
      - "I want to build an audience that returns customers who have an email address."
@@ -159,7 +159,7 @@ The following examples describe how AND and OR conditions work.
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Two attributes, AND condition.
-          :align: left
+          :align: center
           :class: no-scaled-link
 
      - "I want to build an audience that returns customers who have an email address **AND** customers have opted in to receiving email messages from my brand."
@@ -176,7 +176,7 @@ The following examples describe how AND and OR conditions work.
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Two attributes, OR condition.
-          :align: left
+          :align: center
           :class: no-scaled-link
 
      - "I want to build an audience that returns customers who have an email address **OR** customers who have phone number."
@@ -193,7 +193,7 @@ The following examples describe how AND and OR conditions work.
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Two groups of attributes with OR conditions, AND in-between.
-          :align: left
+          :align: center
           :class: no-scaled-link
 
      - "I want to build an audience that returns a customer's email address **OR** a customer's phone number **AND** customers have opted in to receiving messages from my brand from to their email address **OR** phone number."
@@ -294,7 +294,7 @@ An operator defines how results from a column in a data source will be returned.
 
 For example: From your customer 360 table, return all customer records that contain email addresses that are similar to "gmail.com". The data source is your customer 360 table, the attribute is the **email** field in that table, and the **is like** operator allows you to use "gmail.com" to look for values that contain "gmail.com", and then return a list of customers who have "gmail.com" in their email address.
 
-In SQL, an operator is expressed using the ``WHERE`` clause. The following example returns a list of customers who have "gmail.com" in their email address:
+In SQL, an operator is expressed using the **WHERE** clause. The following example returns a list of customers who have "gmail.com" in their email address:
 
 ::
 
@@ -304,7 +304,7 @@ In SQL, an operator is expressed using the ``WHERE`` clause. The following examp
      Customer360
    WHERE email LIKE "gmail.com"
 
-In the **Segment Editor** you define operators using a series of picklists that do not require knowledge of SQL or how to define a ``WHERE`` clause:
+In the **Segment Editor** you define operators using a series of picklists that do not require knowledge of SQL or how to define a **WHERE** clause:
 
 .. image:: ../../images/mockup-segments-inclusions-double.png
    :width: 520 px
@@ -615,7 +615,7 @@ String
 
 .. segments-editor-operator-string-start
 
-A String data type represents many things, such as identifiers, names (of people, places, and products), phone numbers, etc.
+A String data type represents many things, such as identifiers, names of people, places, and products, and phone numbers.
 
 A String data type accepts A-Z, a-Z, underscores, and hyphens.
 
@@ -673,7 +673,7 @@ A field with a **NOT NULL** value is a field with a value that is not empty. A v
 
 **Examples**
 
-For example, if you have 100 customers, 99 of which have provided a value for their phone number (even if some of those phone numbers are invalid phone numbers), 1 of which has not provided any value at all. The customer record that does not have a phone number is empty and is a **NULL** value. 
+For example, if you have 100 customers, 99 of which have provided a value for their phone number (even if some of those phone numbers are invalid phone numbers), 1 of which has not provided any value at all. The customer record that does not have a phone number is empty and is a **NULL** value.
 
 Amperity returns 1 record when the "is NULL" operator is used and 99 records when the "is not NULL" operator is used, even if 2 of them contained spaces instead of numbers and 4 of them were "555-555-1234".
 
@@ -754,7 +754,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 Segment insights
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/segments_reference.rst
+.. include:: ../../amperity_user/source/segments_reference.rst
    :start-after: .. segments-reference-segment-insights-start
    :end-before: .. segments-reference-segment-insights-end
 
@@ -809,7 +809,7 @@ SQL Editor
 
 .. segments-editor-sql-start
 
-The **Segment Editor** is an optional interface that allows you to build an attribute profile using Presto SQL. Start with a ``SELECT`` statement that returns the Amperity ID, and then apply a series of ``WHERE`` statements to define one (or more) attribute groups that match specific conditions and values.
+The **Segment Editor** is an optional interface that allows you to build an attribute profile using Presto SQL. Start with a **SELECT** statement that returns the Amperity ID, and then apply a series of **WHERE** statements to define one or more attribute groups that match specific conditions and values.
 
 .. segments-editor-sql-end
 
@@ -817,9 +817,9 @@ The **Segment Editor** is an optional interface that allows you to build an attr
 
 The **Segment Editor** has the following requirements:
 
-#. The *only* field that can be returned by the ``SELECT`` statement is **amperity_id**.
-#. All conditions and values must be contained within a ``WHERE`` clause.
-#. A ``WHERE`` clause must use one of the following conditions: ``AND`` or ``OR``.
+#. The *only* field that can be returned by the **SELECT** statement is **amperity_id**.
+#. All conditions and values must be contained within a **WHERE** clause.
+#. A **WHERE** clause must use one of the following conditions: **AND** or **OR**.
 
 .. segments-editor-sql-requirements-end
 
@@ -827,9 +827,10 @@ The **Segment Editor** has the following requirements:
 
 .. segments-editor-sql-example-start
 
-For example, a segment that uses the ``OR`` condition to return customers whose first name begins with "Mi", last name begins with "Smi", and who reside in California:
+For example, a segment that uses the **OR** condition to return customers whose first name begins with "Mi", last name begins with "Smi", and who reside in California:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      "amperity_id"
@@ -842,9 +843,10 @@ For example, a segment that uses the ``OR`` condition to return customers whose 
         OR (LOWER("surname") like '%smi%')
      )
 
-The following example is identical to the previous example, but shows each condition in its own ``WHERE`` clause, using ``UNION ALL`` between each clause to group the results together:
+The following example is identical to the previous example, but shows each condition in its own **WHERE** clause, using **UNION ALL** between each clause to group the results together:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      "amperity_id"
@@ -879,4 +881,3 @@ The following example is identical to the previous example, but shows each condi
      )
 
 .. segments-editor-sql-example-end
-

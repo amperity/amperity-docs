@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: Apache Avro
+        Apache Avro files
 
 ==================================================
-File format: Apache Avro
+Apache Avro files
 ==================================================
 
 .. include:: ../../shared/terms.rst

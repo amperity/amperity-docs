@@ -77,14 +77,14 @@ After you select this attribute you can specify the type of values you want to u
 Which customers are the most valuable?
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/usecase_predicted_top_10_percent.rst
+.. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-start
    :end-before: .. usecase-predicted-top-10-percent-end
 
-.. include:: ../../amperity_ampiq/source/usecase_predicted_top_10_percent.rst
+.. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-howitworks-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-end
 
-.. include:: ../../amperity_ampiq/source/usecase_predicted_top_10_percent.rst
+.. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-howitworks-callouts-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-callouts-end

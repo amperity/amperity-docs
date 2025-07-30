@@ -112,11 +112,11 @@ Get details
 Send transactions data
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_criteo.rst
+.. include:: ../../amperity_user/source/events_criteo.rst
    :start-after: .. events-criteo-overview-start
    :end-before: .. events-criteo-overview-end
 
-.. include:: ../../amperity_ampiq/source/events_criteo.rst
+.. include:: ../../amperity_user/source/events_criteo.rst
    :start-after: .. events-criteo-build-query-start
    :end-before: .. events-criteo-build-query-end
 

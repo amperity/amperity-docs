@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Webhook
+        Configure destinations for Webhook
 
 ==================================================
-Configure destination for Webhook
+Configure destinations for Webhook
 ==================================================
 
 .. term-webhook-destination-start
@@ -390,7 +390,7 @@ Add data template
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -399,7 +399,7 @@ Add data template
        .. image:: ../../images/mockup-data-template-tab-add-01-details.png
           :width: 500 px
           :alt: Step 1
-          :align: left
+          :align: center
           :class: no-scaled-link
 
        .. include:: ../../shared/destinations.rst
@@ -410,7 +410,7 @@ Add data template
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -419,7 +419,7 @@ Add data template
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
 
        .. include:: ../../shared/destinations.rst
@@ -430,7 +430,7 @@ Add data template
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -452,7 +452,7 @@ Add data template
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

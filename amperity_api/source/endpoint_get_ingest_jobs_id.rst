@@ -13,28 +13,15 @@
     :content class=swiftype name=title data-type=string:
         GET /ingest/jobs/{id}
 
-
 ==================================================
 GET /ingest/jobs/{id}
 ==================================================
 
 .. endpoint-get-ingest-jobs-id-start
 
-Use the **/ingest/jobs/{id}** endpoint to return a list of jobs from your tenant.
+Use the **GET /ingest/jobs/{id}** endpoint to return a list of jobs from your tenant.
 
 .. endpoint-get-ingest-jobs-id-end
-
-
-.. _endpoint-get-ingest-jobs-id-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-request-get-ingest-jobs-id.png
-   :width: 440 px
-   :alt: GET /ingest/jobs/{id}
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-get-ingest-jobs-id-prerequisites:
@@ -57,7 +44,7 @@ Base URL
 
 .. endpoint-get-ingest-jobs-id-base-url-start
 
-All requests made to the **/ingest/jobs/{id}** endpoint should be directed to the following base URL:
+Direct all requests to the **GET /ingest/jobs/{id}** endpoint to the following base URL:
 
 .. code-block:: rest
 
@@ -83,15 +70,15 @@ Requests
 
 .. endpoint-get-ingest-jobs-id-request-start
 
-A request to the **/ingest/jobs/{id}** endpoint is similar to:
+A request to the **GET /ingest/jobs/{id}** endpoint is similar to:
 
 ::
 
    curl --request GET \
-          'https://app.amperity.com/api/ingest/jobs/{id}" \
-        --header 'amperity-tenant: tenant' \
+          'https://app.amperity.com/api/ingest/jobs/{id}' \
+        --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
 
 (This example is formatted for readability in a narrow page layout.)
@@ -106,7 +93,7 @@ Request parameters
 
 .. endpoint-get-ingest-jobs-id-request-parameters-start
 
-The following table describes the parameters that may be used with the **ingest/jobs/{id}** endpoint.
+The following table describes the parameters that may be used with the **GET /ingest/jobs/{id}** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -139,31 +126,29 @@ Request examples
 
 .. endpoint-get-ingest-jobs-id-request-examples-start
 
-The following examples show how to send requests to the **/ingest/jobs/{id}** endpoint.
+The following examples show how to send requests to the **GET /ingest/jobs/{id}** endpoint.
 
 .. endpoint-get-ingest-jobs-id-request-examples-end
 
+.. endpoint-get-ingest-jobs-id-request-examples-tabs-start
 
-.. _endpoint-get-ingest-jobs-id-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-get-ingest-jobs-id-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **GET /ingest/jobs/{id}** endpoint.
 
-The following example shows how to use cURL to send a request to the **ingest/jobs/{id}** endpoint.
+      .. code-block:: bash
 
-::
+         curl --request GET \
+                'https://tenant.amperity.com/api/ingest/jobs/{id}' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/ingest/jobs/{id}" \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+      (This example is formatted for readability in a narrow page layout.)
 
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-get-ingest-jobs-id-request-example-curl-end
+.. endpoint-get-ingest-jobs-id-request-examples-tabs-end
 
 
 .. _endpoint-get-ingest-jobs-id-responses:
@@ -173,7 +158,7 @@ Responses
 
 .. endpoint-get-ingest-jobs-id-responses-start
 
-A response from the **/ingest/jobs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /ingest/jobs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-ingest-jobs-id-responses-end
 
@@ -188,6 +173,7 @@ A response from the **/ingest/jobs/{id}** endpoint will match an :doc:`HTTP stat
 The **200** response returns a set of jobs.
 
 .. code-block:: json
+   :linenos:
 
    {
      "id": "isj-1f73r9u2",

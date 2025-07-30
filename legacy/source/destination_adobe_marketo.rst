@@ -281,7 +281,7 @@ Add data template
           :start-after: .. destinations-data-template-verify-config-settings-start
           :end-before: .. destinations-data-template-verify-config-settings-end
 
-       .. include:: ../../amperity_amp360/source/destination_adobe_marketo.rst
+       .. include:: ../../amperity_user/source/destination_adobe_marketo.rst
           :start-after: .. sendto-adobe-marketo-add-orchestration-important-start
           :end-before: .. sendto-adobe-marketo-add-orchestration-important-end
 

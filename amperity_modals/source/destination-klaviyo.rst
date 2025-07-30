@@ -73,3 +73,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-klaviyo-list-name-note-start
    :end-before: .. setting-klaviyo-list-name-note-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

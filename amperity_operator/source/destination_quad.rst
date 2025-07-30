@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Quad
+        Configure destinations for Quad
 
 ==================================================
-Configure destination for Quad
+Configure destinations for Quad
 ==================================================
 
 .. include:: ../../shared/terms.rst

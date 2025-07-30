@@ -17,25 +17,15 @@
 About journeys
 ==================================================
 
-.. TODO: Next paragraph is a future glossary term. terms.rst, reused.
-
-.. journeys-about-start
-
-A journey is an automated sequence for connecting with customers across channels like email, paid media, SMS, and direct mail. Each step in a journey represents a decision point or action: send a message, wait for further customer engagement, or split the audience onto different paths.
-
-.. journeys-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-start
+   :end-before: .. term-journey-end
 
 .. journeys-about-context-start
 
 By using **Journeys**, marketers can implement cross-channel strategies, improve targeting precision, and activate the right message at the right moment to drive better engagement and higher conversions.
 
 .. journeys-about-context-end
-
-.. journeys-about-enable-start
-
-.. note:: Ask your Amperity representative about how your brand can enable journeys.
-
-.. journeys-about-enable-end
 
 
 .. _journeys-howitworks:
@@ -128,9 +118,9 @@ Who enters?
 
 .. journeys-setup-who-enters-start
 
-Every journey starts with an audience that is defined by one or more segments that determine which users enter this journey.
+Every journey starts with an audience defined by one or more segments that determine which users enter this journey.
 
-Choose a segment from the **Select inclusion segments** dropdown list. The customers in that list will become the audience for this campaign.
+Choose one or more segments from the **Select inclusion segments** dropdown list. The customers in that list will become the audience for this campaign.
 
 .. image:: ../../images/mockup-journeys-canvas-inclusion.png
    :width: 380 px
@@ -140,6 +130,24 @@ Choose a segment from the **Select inclusion segments** dropdown list. The custo
 
 .. journeys-setup-who-enters-end
 
+.. journeys-setup-who-enters-note-start
+
+.. note:: When adding multiple inclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the inclusion category in order to be considered part of it. 
+
+.. journeys-setup-who-enters-note-end
+
+.. important:: **Segment filtering by database**
+
+   Each journey is associated with a specific database. This database is set automatically when you select your first inclusion segment.
+   
+   Once that first inclusion segment is selected:
+   
+   * The journey is tied to the same database as that segment
+   * Viability of the journey depends on the database functioning with no errors.
+   * All other segments--whether inclusion, exlcusion, or exit--are filtered to only show segments from that database.
+   * Similarly, the activation ID associated with the initial segment determines the activation ID for all other segments to ensure consistency across the journey. For example, if the initial segment activates based on email, then other segments will only include customers with valid email addresses. 
+   
+   To change the database associated with a journey, you must first remove all inclusion segments. Then, when you select a new first inclusion segment from a different database, the journey's database will update accordingly.
 
 .. _journeys-setup-who-is-excluded:
 
@@ -160,6 +168,11 @@ When you need to exclude audience members, choose one or more segments from the 
 
 .. journeys-setup-who-is-excluded-end
 
+.. journeys-setup-who-is-excluded-note-start
+
+.. note:: When adding multiple exclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the exclusion category in order to be considered part of it. 
+
+.. journeys-setup-who-is-excluded-note-end
 
 .. _journeys-exit-conditions:
 
@@ -182,6 +195,12 @@ Exit conditions are defined using a segment. One or more segments that define ex
    :align: left
    :class: no-scaled-link
 
+.. journeys-setup-who-is-excluded-note-start
+
+.. note:: When adding multiple exit condition segments, all segments are unioned, so a customer only needs to match one of the segments in the exit conditions category in order to be considered part of it. 
+
+.. journeys-setup-who-is-excluded-note-end
+
 .. journeys-exit-conditions-end
 
 
@@ -198,7 +217,7 @@ After establishing the audience and starting conditions of the journey, you will
 
 .. journeys-node-types-start
 
-The following building blocks are available to users for building journeys:
+The following building blocks are available to users for creating journeys:
 
 * :ref:`journeys-node-start`
 * :ref:`journeys-node-activate`
@@ -251,6 +270,33 @@ Activate
 
 You can rename the activate node.
 
+You can configure a single activation node to send to multiple destinations at once, and this is generally recommended for simplicity and efficiency.
+
+.. journeys-node-activate-note-start
+
+.. note:: If you are activating to several destinations and each one uses different custom attributes, you'll need to create a separate activation node for each destination to assign those attributes correctly.
+
+.. journeys-node-activate-note-end
+
+.. journeys-node-activate-filename-conflict-tip-start
+
+.. tip:: **Avoid activation file naming conflicts**
+
+   Running a journey generates a file for every activation node. The filename is constructed using:
+   
+   * the **journey name**
+   * the **activation node name**
+   
+   If multiple activation nodes have the same filename, it will cause an error. 
+   
+   To avoid this error, make sure each activation node within a journey has a unique name. Renaming the node will automatically update the generated filename.
+   
+   You can check an activation node's path and file name in the **Node configuration** panel on the righthand side of the **Journeys** canvas, under "Destination Summary". 
+
+.. journeys-node-activate-filename-conflict-tip-end 
+
+.. TODO: add screenshot
+
 .. journeys-node-activate-end
 
 
@@ -282,6 +328,12 @@ Choose a combination of an integer plus "days", "weeks", or "months" to designat
 A delay is applied to a single parent node.
 
 You can rename the delay node.
+
+.. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs. 
+   
+   For example, if a delay node is set to 3 days but the journey is scheduled to run weekly, customers will remain at the delay node until the next scheduled run, potentially waiting up to 7 days. 
+   
+   If a journey is set to run only once, customers will not move beyond the delay node after it executes. 
 
 .. journeys-node-delay-end
 
@@ -390,14 +442,18 @@ This section describes tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-node-conditional-split`
 * :ref:`journeys-howtos-node-delay`
 * :ref:`journeys-howtos-node-percent-split`
+* :ref:`journeys-howtos-allow-reentry`
 * :ref:`journeys-howtos-delete`
 * :ref:`journeys-howtos-edit`
 * :ref:`journeys-howtos-edit-destination-attributes`
 * :ref:`journeys-howtos-edit-starting-audience`
 * :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-interact`
+* :ref:`journeys-howtos-monitor-resolve`
 * :ref:`journeys-howtos-rename`
-* :ref:`journeys-howtos-set-run-frequency`
+* :ref:`journeys-howtos-save-a-journey`
+* :ref:`journeys-howtos-schedule-a-journey`
+* :ref:`journeys-howtos-view-journey-participant-numbers`
 * :ref:`journeys-howtos-view-node-configuration`
 
 .. journeys-howtos-list-start
@@ -418,7 +474,7 @@ Follow this sequence when building a journey:
 
 .. journeys-howitworks-steps-end
 
-.. include:: ../../amperity_ampiq/source/journeys.rst
+.. include:: ../../amperity_user/source/journeys.rst
    :start-after: .. journeys-howitworks-callouts-start
    :end-before: .. journeys-howitworks-callouts-end
 
@@ -448,7 +504,7 @@ Add activate nodes
 
    **Name** Give the node a custom name or keep the "Activate" default name.
 
-   **Destination** Choose a destination from the dropdown menu.
+   **Destination** Choose one or more destinations from the dropdown menu.
 
    A summary of details is shown. Click the **Attributes** tab to review the list of attributes that are sent.
 
@@ -458,6 +514,7 @@ Add activate nodes
 
 .. journeys-howtos-node-activate-steps-end
 
+.. tip:: You can add multiple destinations to a single activation node. However, if your destinations require different custom attributes, use separate activation nodes for each destination.
 
 .. _journeys-howtos-node-conditional-split:
 
@@ -524,6 +581,11 @@ Add delay nodes
 
 .. journeys-howtos-node-delay-steps-end
 
+.. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs. 
+   
+   For example, if a delay node is set to 3 days but the journey is scheduled to run weekly, customers will remain at the delay node until the next scheduled run, potentially waiting up to 7 days. 
+   
+   If a journey is set to run only once, customers will not move beyond the delay node after it executes.
 
 .. _journeys-howtos-node-percent-split:
 
@@ -556,13 +618,47 @@ Add percent split nodes
 
    .. important:: The percentages for all paths and the control group must add up to 100%.
 
-   **Configure control group** Choose a name and percentage for the control group, or keep the default name of "Control Group" and the value of 10%. 
+   **Configure control group** Choose a name and percentage for the control group, or keep the default name of "Control Group" and the value of 10%.
    
    .. tip:: Uncheck "Include control" to disable the control group.
 
 #. Continue building the journey or, if finished, click **Save**.
 
 .. journeys-howtos-node-percent-split-steps-end
+
+.. _journeys-howtos-allow-reentry:
+
+Allow re-entry
+--------------------------------------------------
+
+.. journeys-howtos-allow-reentry-start
+
+If a journey is set to recur, you can allow the same customer to re-enter the journey on its next run if the customer has both previously exited the journey and once again qualifies for the inclusion segment.
+
+.. journeys-howtos-allow-reentry-end
+
+**To allow re-entry into a journey**
+
+.. journeys-howtos-allow-reentry-start
+
+#. From the **Journeys** canvas, open the **Journey setup** sidebar.
+#. Click the box on the lower left for **Allow re-entry**.
+
+.. journeys-howtos-allow-reentry-end
+
+.. journeys-howtos-allow-reentry-note-start
+
+.. note:: When a journey is set to run on a recurring schedule, only customers who have newly qualified for the **inclusion** segment since the last run will enter the journey.
+
+   For example, if the segment had 1,500 members at launch, all 1,500 would enter the journey.
+
+   On the next run, if the segment has grown to 1,700, only the 200 new members--those who joined the segment after the previous run--are guaranteed to be included.
+
+   If you have selected **Allow re-entry** customers who have previously exited the journey must re-qualify for the inclusion segment. For example, if the segment is based on a time window, such as "purchased in the last 7 days", and they meet the criteria again, they can re-enter.
+
+   To prevent this, use an **exclusion** segment to filter out users who have already participated, or who meet other disqualifying conditions.
+
+.. journeys-howtos-allow-reentry-note-end
 
 
 .. _journeys-howtos-delete:
@@ -634,6 +730,12 @@ The attributes that are sent to each destination that are configured for activat
 
 .. journeys-howtos-edit-destination-attributes-steps-end
 
+.. journeys-howtos-edit-destination-attributes-note-start
+
+.. note:: If you have multiple destinations in a single activation node and your destinations require different custom attributes, use separate activation nodes for each destination.
+
+.. journeys-howtos-edit-destination-attributes-note-end
+
 
 .. _journeys-howtos-edit-starting-audience:
 
@@ -698,11 +800,40 @@ Interact with Journeys canvas
 
 The **Journeys** canvas supports the following user interactions:
 
-* Drag the journey using a mouse or a trackpad.
-* Zoom by using the **+** / **-** buttons in the bottom left or pinching on a trackpad.
+* Drag the journey using a mouse or a trackpad. You may do this directly on the canvas or on the minimap in the lower right.
+* Zoom by using the **+** / **-** buttons in the bottom left or pinching/expanding on a trackpad.
 * Center the canvas by clicking the square icon in the bottom left.
-
+ 
 .. journeys-howtos-interact-end
+
+
+.. _journeys-howtos-monitor-resolve:
+
+Monitor status & resolve errors
+--------------------------------------------------
+
+.. journeys-howtos-monitor-resolve-start
+
+You can monitor journey status and determine how to resolve errors on the `Workflows page <https://docs.amperity.com/reference/workflows.html>`__.
+
+.. journeys-howtos-monitor-resolve-end
+
+.. journeys-howtos-monitor-resolve-steps-start
+
+#. Go to the **Workflows** page at the top level of your Amperity tenant. If you are starting from within the **Journeys** canvas you'll need to exit by clicking the X on the upper left.
+#. Locate the name of your journey and click in to monitor status and get guidance on resolving errors.
+
+.. journeys-howtos-monitor-resolve-steps-end
+
+.. journeys-howtos-monitor-resolve-workflow-alerts-start
+
+You may receive workflow alerts related to your journeys.
+
+.. include:: ../../amperity_reference/source/workflows.rst
+   :start-after: .. journeys-automated-alert-details-start
+   :end-before: .. journeys-automated-alert-details-end
+
+.. journeys-howtos-monitor-resolve-workflow-alerts-end
 
 
 .. _journeys-howtos-rename:
@@ -716,6 +847,8 @@ A journey should be assigned a name that makes it easy to find and for other use
 
 .. journeys-howtos-rename-end
 
+**To rename a journey**
+
 .. journeys-howtos-rename-steps-start
 
 #. From the **Journeys** canvas, click into the text of the current journey name at the top.
@@ -724,39 +857,111 @@ A journey should be assigned a name that makes it easy to find and for other use
 .. journeys-howtos-rename-steps-end
 
 
-.. _journeys-howtos-set-run-frequency:
+.. TODO: add: Set journey description
 
-Set run frequency
+.. _journeys-howtos-save-a-journey:
+
+Save a journey
 --------------------------------------------------
 
-.. journeys-howtos-set-run-frequency-start
+.. journeys-howtos-save-a-journey-start
+
+Saving a journey initiates the workflow, allowing you to view results and return later to make additional edits.
+
+.. journeys-howtos-save-a-journey-end
+
+**To save a journey**
+
+.. journeys-howtos-save-a-journey-steps-start
+
+#. From the **Journeys** canvas, click the **Save** button in the top right.
+#. Use the caret button to **Save as**.
+
+.. journeys-howtos-save-a-journey-steps-end
+
+.. journeys-howtos-save-a-journey-tip-start
+
+.. tip:: Saving a journey takes you from **Edit** to **View** mode. In **View** mode, click **Edit** in the upper right to make further changes. Saving again takes you back to **View** mode.
+
+.. journeys-howtos-save-a-journey-tip-end
+
+.. journeys-howtos-save-a-journey-note-start
+
+.. note:: You can save a journey with validation errors as long as it is not scheduled to run. However, if saving the journey would result in it being scheduled, and validation errors are still present, you won't be able to save it until those errors are resolved.
+
+.. journeys-howtos-save-a-journey-note-end
+
+
+.. _journeys-howtos-schedule-a-journey:
+
+Schedule a journey
+--------------------------------------------------
+
+.. journeys-howtos-schedule-a-journey-start
 
 A journey may be configured to run once, daily, weekly, monthly, or quarterly.
 
-.. journeys-howtos-set-run-frequency-end
+.. journeys-howtos-schedule-a-journey-end
 
-.. journeys-howtos-set-run-frequency-note-start
+**To schedule a journey**
 
-.. note:: When a journey is set to run on a recurring schedule, only customers who have newly qualified for the **inclusion** segment since the last run will enter the journey.
+.. journeys-howtos-schedule-a-journey-steps-start
 
-   For example, if the segment had 1,500 members at launch, all 1,500 would enter the journey.
+#. From the **Journeys** canvas, click **Edit schedule** in the top navigation.
+#. From the **Recurrence** dropdown menu choose one of the options: "once", "every 3 hours", "every 6 hours", "twice daily", "daily", "weekly", "monthly", or "quarterly".
 
-   On the next run, if the segment has grown to 1,700, only the 200 new members--—those who joined the segment after the previous run---will be included.
+.. journeys-howtos-schedule-a-journey-steps-end
 
-   Keep in mind that customers can re-enter a recurring journey if the segment is based on a time window, such as "purchased in the last 7 days", and they meet the criteria again.
+.. journeys-howtos-schedule-a-journey-important-admonition-start
 
-   To prevent this, use an **exclusion** segment to filter out users who have already participated, or who meet other disqualifying conditions.
+.. important:: Delay nodes require the journey to run again in order to progress. For journeys set to run only once, customers will not move beyond delay nodes. Use recurring schedules to ensure customers continue through the journey after delay node wait periods.
 
-.. journeys-howtos-set-run-frequency-note-end
+.. journeys-howtos-schedule-a-journey-important-admonition-end
 
-**To set the run frequency for a journey**
+.. journeys-howtos-schedule-a-journey-note-start
 
-.. journeys-howtos-set-run-frequency-steps-start
+.. note:: Once you have saved a journey, the **Edit schedule** option becomes **View schedule**. To make changes to the schedule, click **Edit** on the top right of the **Journeys** canvas.
 
-#. From the **Journeys** canvas, click the **Schedule** link in the top navigation.
-#. From the **Recurrence** dropdown menu choose one of "once", "daily", "weekly", "monthly", or "quarterly".
+.. journeys-howtos-schedule-a-journey-note-end
 
-.. journeys-howtos-set-run-frequency-end
+
+.. _journeys-howtos-view-journey-participant-numbers:
+
+View journey participant numbers
+--------------------------------------------------
+
+.. journeys-howtos-view-journey-participant-numbers-start
+
+In **View** mode on the **Journeys** canvas you can see  how many total people have moved through any journey that has run at least once and how many have moved through each node in the current run.
+
+Nodes will have icons and numbers, representing journey participants.
+
+   .. image:: ../../images/mockup-journeys-view-participant-numbers.png
+      :width: 280 px
+      :alt: View journey participant numbers
+      :align: left
+      :class: no-scaled-link
+	  
+* The people icon on the left displays how many total participants have moved through the journey across all runs to date.
+* The circular arrow on the right displays how many partipants have moved through that node on the current run, as of last evaluation.
+
+A delay node will have an additional icon.
+
+   .. image:: ../../images/mockup-journeys-view-participant-numbers-delay.png
+      :width: 280 px
+      :alt: View journey participant numbers on delay node
+      :align: left
+      :class: no-scaled-link
+	  
+* The clock icon displays the number of journey participants currently waiting at that node. 
+
+.. journeys-howtos-view-journey-participant-numbers-end
+
+.. journeys-howtos-view-participant-numbers-tip-start
+
+.. tip:: Once you have saved a journey, it defaults to **View** mode. To exit **View** mode and make changes, click **Edit** on the top right of the **Journeys** canvas.
+
+.. journeys-howtos-view-participant-numbers-tip-end
 
 
 .. _journeys-howtos-view-node-configuration:

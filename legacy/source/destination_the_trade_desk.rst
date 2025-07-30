@@ -158,7 +158,7 @@ Get details
           :start-after: .. sendtos-build-query-email-only-start
           :end-before: .. sendtos-build-query-email-only-end
 
-       .. include:: ../../amperity_amp360/source/destination_the_trade_desk.rst
+       .. include:: ../../amperity_user/source/destination_the_trade_desk.rst
           :start-after: .. sendto-the-trade-desk-build-query-start
           :end-before: .. sendto-the-trade-desk-build-query-end
 
@@ -432,7 +432,7 @@ Add data template
 Offline events
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-overview-start
    :end-before: .. events-the-trade-desk-overview-end
 
@@ -442,15 +442,15 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-offline-events-build-query-start
    :end-before: .. events-the-trade-desk-offline-events-build-query-end
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-offline-events-build-query-tip-start
    :end-before: .. events-the-trade-desk-offline-events-build-query-tip-end
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-offline-events-build-query-example-start
    :end-before: .. events-the-trade-desk-offline-events-build-query-retail-end
 

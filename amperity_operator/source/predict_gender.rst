@@ -70,6 +70,7 @@ Adjust accuracy threshold
 The default accuracy threshold for gender prediction is ~95%. This means that for any given name it has a 20:1 likelihood of being associated with a specific gender. If greater accuracy is required for a use case, add a custom **gender_name_ratio** threshold to the query:
 
 .. code-block:: sql
+   :linenos:
 
    WITH ratios AS (
      SELECT * 

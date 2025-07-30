@@ -49,7 +49,7 @@ Amperity can send :ref:`customer profile and custom attributes <destination-braz
 About custom attributes
 ==================================================
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
+.. include:: ../../amperity_user/source/destination_braze.rst
    :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
    :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
 
@@ -59,19 +59,19 @@ About custom attributes
 Customer profiles
 --------------------------------------------------
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
+.. include:: ../../amperity_user/source/destination_braze.rst
    :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
    :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
+.. include:: ../../amperity_user/source/destination_braze.rst
    :start-after: .. destination-braze-profile-attributes-admonition-consent-status-start
    :end-before: .. destination-braze-profile-attributes-admonition-consent-status-end
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
+.. include:: ../../amperity_user/source/destination_braze.rst
    :start-after: .. destination-braze-profile-attributes-table-start
    :end-before: .. destination-braze-profile-attributes-table-end
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
+.. include:: ../../amperity_user/source/destination_braze.rst
    :start-after: .. destination-braze-profile-attributes-note-start
    :end-before: .. destination-braze-profile-attributes-note-end
 
@@ -81,7 +81,7 @@ Customer profiles
 Custom attributes
 --------------------------------------------------
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
+.. include:: ../../amperity_user/source/destination_braze.rst
    :start-after: .. destination-braze-custom-attributes-start
    :end-before: .. destination-braze-custom-attributes-end
 
@@ -91,7 +91,7 @@ Custom attributes
 About data points
 --------------------------------------------------
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
+.. include:: ../../amperity_user/source/destination_braze.rst
    :start-after: .. destination-braze-data-points-start
    :end-before: .. destination-braze-data-points-end
 

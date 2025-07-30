@@ -79,6 +79,7 @@ SQL reference
 .. table-detailed-examples-sql-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH Filtered_Scores AS (
      SELECT

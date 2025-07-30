@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -67,6 +68,7 @@ Configure query
    For **email**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       SELECT
@@ -83,6 +85,7 @@ Configure query
    For **phone**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       SELECT
@@ -99,6 +102,7 @@ Configure query
    For **address**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       SELECT
@@ -117,6 +121,7 @@ Configure query
 #. If you need to run the query against multiple semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
 
    .. code-block:: sql
+      :linenos:
 
       /*
       SELECT
@@ -141,6 +146,7 @@ Configure query
    For example, to run this statement for **email**, **phone**, and **address**:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         LOWER(email)
@@ -164,6 +170,7 @@ Configure query
 #. Use the following query to use those values to find the related Amperity IDs: 
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       SELECT

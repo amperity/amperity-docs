@@ -23,10 +23,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for SMG
+        Configure destinations for SMG
 
 ==================================================
-Configure destination for SMG
+Configure destinations for SMG
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -341,6 +341,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-downstream-start
              :end-before: .. setting-common-success-file-downstream-end
+
+
+       **Split outputs**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-split-outputs-start
+             :end-before: .. setting-common-split-outputs-end
 
 
        **Use Zip64?**

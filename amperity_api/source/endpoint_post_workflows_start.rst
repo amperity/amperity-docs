@@ -13,28 +13,15 @@
     :content class=swiftype name=title data-type=string:
         POST /workflow/runs
 
-
 ==================================================
-POST /workflow/runs 
+POST /workflow/runs/
 ==================================================
 
 .. endpoint-post-workflows-start-start
 
-Use the **POST /workflow/runs** endpoint to start a workflow. 
+Use the **POST /workflow/runs/** endpoint to start a workflow. 
 
 .. endpoint-post-workflows-start-end
-
-
-.. _endpoint-post-workflows-start-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-post-workflow-run-start.png
-   :width: 440 px
-   :alt: POST /workflow/runs
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-post-workflows-start-prerequisites:
@@ -57,7 +44,7 @@ Base URL
 
 .. endpoint-post-workflows-start-base-url-start
 
-All requests made to the **POST /workflow/runs** endpoint should be directed to the following base URL:
+Direct all requests to the **POST /workflow/runs/** endpoint should be directed to the following base URL:
 
 .. code-block:: rest
 
@@ -83,15 +70,15 @@ Requests
 
 .. endpoint-post-workflows-start-request-start
 
-A request to the **POST /workflow/runs** endpoint is similar to:
+A request to the **POST /workflow/runs/** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request POST \ 
           'https://app.amperity.com/api/workflow/runs' \
-        --header 'amperity-tenant: tenant' \
+        --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token' \
+        --header 'Authorization: Bearer {token}' \
         --data '{"config_id"="cg-123ABc4DE"}'
 
 (This example is formatted for readability in a narrow page layout.)
@@ -106,7 +93,7 @@ Request parameters
 
 .. endpoint-post-workflows-start-request-parameters-start
 
-The following table describes the parameters that may be used with the **POST /workflow/runs** endpoint.
+The following table describes the parameters that may be used with the **POST /workflow/runs/** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -180,124 +167,102 @@ Request examples
 
 .. endpoint-post-workflows-start-request-examples-start
 
-The following examples show how to send requests to the **POST /workflow/runs** endpoint.
+The following examples show how to send requests to the **POST /workflow/runs/** endpoint.
 
 .. endpoint-post-workflows-start-request-examples-end
 
+.. endpoint-post-workflows-start-request-examples-tabs-start
 
-.. _endpoint-post-workflows-start-request-example-curl-campaign:
+.. tab-set::
 
-cURL, run campaign
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL, run campaign
 
-.. endpoint-post-workflows-start-request-example-curl-campaign-start
+      The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run a campaign.
 
-The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run a campaign.
+      .. code-block:: bash
 
-::
+         curl --request POST \ 
+                'https://app.amperity.com/api/workflow/runs' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}' \
+              --data '{"config_id"="cc-123ABc4DE"}'
 
-   curl --request POST \ 
-          'https://app.amperity.com/api/workflow/runs' \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token' \
-        --data '{"config_id"="cc-123ABc4DE"}'
+      (This example is formatted for readability in a narrow page layout.)
 
-(This example is formatted for readability in a narrow page layout.)
+   .. tab-item:: cURL, run orchestration
 
-.. endpoint-post-workflows-start-request-example-curl-campaign-end
+      The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run an orchestration.
 
+      .. code-block:: bash
 
-.. _endpoint-post-workflows-start-request-example-curl-courier-group:
+         curl --request POST \ 
+                'https://app.amperity.com/api/workflow/runs' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}' \
+              --data '{"config_id"="og-123ABc4DE"}'
 
-cURL, run courier group
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. endpoint-post-workflows-start-request-example-curl-courier-group-start
-
-The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run a courier group.
-
-::
-
-   curl --request POST \ 
-          'https://app.amperity.com/api/workflow/runs' \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token' \
-        --data '{"config_id"="cg-123ABc4DE"}' \
-        --data '{"range_from"="YYYY-MM-DD"}' \
-        --data '{"range_to"="YYYY-MM-DD"}' \
-        --data '{"run_mode"="full"}'
-
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-post-workflows-start-request-example-curl-courier-group-end
+      (This example is formatted for readability in a narrow page layout.)
 
 
-.. _endpoint-post-workflows-start-request-example-curl-orchestration:
+   .. tab-item:: cURL, run workflow
 
-cURL, run orchestration
-++++++++++++++++++++++++++++++++++++++++++++++++++
+      The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run a courier group.
 
-.. endpoint-post-workflows-start-request-example-curl-orchestration-start
+      .. code-block:: bash
 
-The following example shows how to use cURL to send a request to the **POST /workflow/runs** endpoint to run an orchestration.
+         curl --request POST \ 
+                'https://app.amperity.com/api/workflow/runs' \
+              --header 'amperity-tenant: {tenant}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}' \
+              --data '{"config_id"="cg-123ABc4DE"}' \
+              --data '{"range_from"="YYYY-MM-DD"}' \
+              --data '{"range_to"="YYYY-MM-DD"}' \
+              --data '{"run_mode"="full"}'
 
-::
+      (This example is formatted for readability in a narrow page layout.)
 
-   curl --request POST \ 
-          'https://app.amperity.com/api/workflow/runs' \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token' \
-        --data '{"config_id"="og-123ABc4DE"}'
+   .. tab-item:: Python
 
-(This example is formatted for readability in a narrow page layout.)
+      The following example shows how to use Python to send a request to the **POST /workflow/runs/** endpoint.
 
-.. endpoint-post-workflows-start-request-example-curl-orchestration-end
+      .. code-block:: python
+         :linenos:
 
+         import requests
 
-.. _endpoint-post-workflows-start-request-python:
+         # Your API endpoint
+         url = "https://app.amperity.com/api/workflow/runs"
 
-Python
-++++++++++++++++++++++++++++++++++++++++++++++++++
+         bearer_token = dbutils.secrets.get(scope = "tenant-bridge-api-access", key = "tenant-bridge-api-access")
 
-.. endpoint-post-workflows-start-request-python-start
+         # Headers including authorization and custom headers
+         headers = {
+           "Authorization": f"Bearer {token}",
+           "amperity-tenant": "{tenant}",
+           "api-version": "2024-04-01"
+         }
 
-The following example shows how to use Python to send a request to the **POST /workflow/runs** endpoint.
+         # Body of the request
+         body = {
+           "config_id": "cg-2efo5X8vo",
+           "range_from": "YYYY-MM-DD",
+           "range_to": "YYYY-MM-DD",
+           "run_mode": "source"
+         }
 
-.. code-block:: python
+         # Make the POST request
+         response = requests.post(url, headers=headers, json=body)
 
-   import requests
+         # Print the response
+         print("Status Code:", response.status_code)
+         print("Response Body:", response.text)
 
-   # Your API endpoint
-   url = "https://app.amperity.com/api/workflow/runs"
+      (This example is formatted for readability in a narrow page layout.)
 
-   bearer_token = dbutils.secrets.get(scope = "tenant-bridge-api-access", key = "tenant-bridge-api-access")
-
-   # Headers including authorization and custom headers
-   headers = {
-     "Authorization": f"Bearer {bearer_token}",
-     "amperity-tenant": "bridge",
-     "api-version": "2024-04-01"
-   }
-
-   # Body of the request
-   body = {
-     "config_id": "cg-2efo5X8vo",
-     "range_from": "YYYY-MM-DD",
-     "range_to": "YYYY-MM-DD",
-     "run_mode": "source"
-   }
-
-   # Make the POST request
-   response = requests.post(url, headers=headers, json=body)
-
-   # Print the response
-   print("Status Code:", response.status_code)
-   print("Response Body:", response.text)
-
-.. endpoint-post-workflows-start-request-python-end
+.. endpoint-post-workflows-start-request-examples-tabs-end
 
 
 .. _endpoint-post-workflows-start-responses:
@@ -307,7 +272,7 @@ Responses
 
 .. endpoint-post-workflows-start-responses-start
 
-A response from the **POST /workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **POST /workflow/runs/** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-start-responses-end
 
@@ -322,6 +287,7 @@ A response from the **POST /workflow/runs** endpoint will match an :doc:`HTTP st
 The **200** response returns details for the workflow that was started, similar to:
 
 .. code-block:: json
+   :linenos:
 
    {
      "task_instances":[],

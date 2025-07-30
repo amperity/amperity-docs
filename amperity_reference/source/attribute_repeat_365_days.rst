@@ -17,7 +17,7 @@
 Repeat within 365 days?
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/onetime_buyers.rst
+.. include:: ../../amperity_user/source/onetime_buyers.rst
    :start-after: .. onetime-buyers-about-start
    :end-before: .. onetime-buyers-about-end
 

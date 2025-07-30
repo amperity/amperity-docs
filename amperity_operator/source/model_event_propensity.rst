@@ -1,7 +1,6 @@
 .. https://docs.amperity.com/operator/
 
 
-
 .. meta::
     :description lang=en:
         What is the likelihood that a customer will perform a revenue-generating event within the next 30 days?
@@ -114,14 +113,14 @@ You can build an event propensity model from the **Customer 360** page. Each dat
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, select a database, and then open the bottom (|fa-kebab|) menu and select **Predictive models**. This opens the **Predictive models page**.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Next to **Event propensity**, click **Add model**.
 
@@ -130,7 +129,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure the target event.
 
@@ -142,7 +141,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use the **Customer exclusions** field to use fields in the **Customer Attributes** table to identify customers who have purchase patterns that should be excluded from event propensity modeling.
 
@@ -158,7 +157,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure revenue events.
 
@@ -170,7 +169,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
           :alt: Step 6.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use the **Additional event** field to add more events to the event propensity model.
 
@@ -180,7 +179,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
           :alt: Step 7.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Click **Start validation**.
 

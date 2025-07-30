@@ -81,9 +81,9 @@ html_favicon = "_static/icon-light.svg"
 
 html_theme_options = {
     "logo_target": "/",
-    "light_logo": "_static/logo-light.png",
-    "dark_logo": "_static/logo-dark.png",
-    "accent_color": "blue",
+    "light_logo": "_static/logo-light.svg",
+    "dark_logo": "_static/logo-dark.svg",
+    "accent_color": "violet",
 #    "og_image_url": "https://shibuya.lepture.com/icon.png",
 #    "twitter_creator": "lepture",
 #    "twitter_site": "lepture",
@@ -137,7 +137,7 @@ html_theme_options = {
             "title": "Connections",
             "children": [
                 {
-                    "title": "Bridge",
+                    "title": "Amperity Bridge",
                     "url": "../operator/grid_bridge",
                     "summary": "Share data directly with data warehouses."
                 },
@@ -165,7 +165,7 @@ html_theme_options = {
         },
         {
             "title": "Reference",
-            "url": "../reference/start_here",
+            "url": "../reference/index",
         },
     ]
 }

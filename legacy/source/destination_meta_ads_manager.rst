@@ -65,11 +65,11 @@ Your brand can send custom audiences and offline events to |destination-name|:
           :class: no-scaled-link
      - **Offline events**
 
-       .. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+       .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-overview-start
           :end-before: .. events-meta-ads-manager-overview-end
 
-       .. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+       .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-allowfor-start
           :end-before: .. events-meta-ads-manager-allowfor-end
 
@@ -626,11 +626,11 @@ Add data template
 Offline events
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-overview-start
    :end-before: .. events-meta-ads-manager-overview-end
 
-.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-allowfor-start
    :end-before: .. events-meta-ads-manager-allowfor-end
 
@@ -640,7 +640,7 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-offline-events-build-query-start
    :end-before: .. events-meta-ads-manager-offline-events-build-query-end
 

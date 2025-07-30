@@ -11,20 +11,20 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Amps dashboard
+        Amps consumption
 
 ==================================================
 About Amps consumption
 ==================================================
-
-
-.. _amps-consumption:
 
 .. amps-consumption-start
 
 Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`.
 
 .. amps-consumption-end
+
+
+.. _amps-consumption-overview:
 
 Consumption overview
 ==================================================
@@ -209,7 +209,6 @@ Consumption breakdown by category shows which feature---BI Connect, Bridge, Camp
    :class: no-scaled-link
 
 
-
 .. _amps-consumption-categories:
 
 Consumption categories
@@ -332,7 +331,6 @@ Amps consumption for the **Campaigns** feature is determined by:
 * The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output; each segment that is run within a campaign will consume Amps
 * The amount of data being sent from Amperity to a downstream location
 
-
 Storage for the **Campaigns** feature is primarily determined by:
 
 * The size of the **Campaign Recipients** table
@@ -454,6 +452,7 @@ Monitor consumption for the **Predictive modeling** feature by:
 
 .. amps-consumption-feature-predictive-modeling-end
 
+
 .. _destinations-premium-connectors:
 
 Premium connectors
@@ -507,6 +506,7 @@ Monitor Amps consumption for the **Profile API** feature by:
 
 .. amps-consumption-feature-profile-api-end
 
+
 .. _amps-consumption-feature-queries:
 
 Queries
@@ -525,6 +525,7 @@ Monitor Amps consumption for the **Queries** feature by:
 * Verifying the amount of data scanned by a query
 
 .. amps-consumption-feature-queries-end
+
 
 .. _amps-consumption-feature-source-tables:
 
@@ -572,6 +573,7 @@ Monitor Amps consumption for the **Source transforms** feature by:
 
 .. amps-consumption-feature-source-transforms-end
 
+
 .. _amps-consumption-feature-spark-sql-sessions:
 
 Spark SQL sessions
@@ -586,6 +588,7 @@ Amps consumption for the **Spark SQL sessions** feature is determined by:
 * The length of each session
 
 .. amps-consumption-feature-spark-sql-sessions-end
+
 
 .. _amps-consumption-feature-stitch:
 
@@ -607,89 +610,6 @@ Monitor Amps consumption for the **Stitch** feature by:
 * Viewing the number of profiles that are stitched over time from the **Usage** page
 
 .. amps-consumption-feature-stitch-end
-
-
-.. .. _amps-consumption-example:
-
-.. Example of Amps consumption
-.. --------------------------------------------------
-
-.. .. amps-consumption-example-start
-
-.. A customer that uses Amperity for ID resolution and activation would require using the following features: Ingest, Sources, Stitch, Databases, Segments, and Campaigns.
-
-.. The consumption of Amps depends on implementation details and the complexity of use cases. The following table details a scenario where Amps are consumed at a rate of 3000 per day.
-
-.. .. list-table::
-..    :widths: 30 70
-..    :header-rows: 1
-
-..    * - Feature
-..      - Description
-
-..    * - **Ingest**
-..      - Compute setting: X-small
-
-..        Frequency: Once per day
-
-..        Runtime: 3 minutes
-
-..        Records: 100 thousand
-
-..        Other factors: 1 feed
-
-..        **Cost**: **20 Amps**
-
-
-..    * - **Sources**
-..      - Records: 400 million
-
-..        Number of tables: 97
-
-..        Runtime: 3 minutes
-
-..        Average field count: 32
-
-..        **Cost**: **10 Amps**
-
-
-..    * - **Stitch**
-..      - Compute setting: Medium
-
-..        Frequency: Once per day
-
-..        Runtime: 19 minutes
-
-..        Records: 25 million
-
-..        **Cost**: **2700 Amps**
-
-
-..    * - **Databases**
-..      - Compute setting: Small
-
-..        Frequency: Once per day
-
-..        Runtime: 13 minutes
-
-..        Records: 5 billion
-
-..        Other factors: 11 customer 360 attributes
-
-..        **Cost**: **450 Amps**
-
-
-..    * - **Campaigns**
-..      - Frequency: 37 per day
-
-..        Average runtime: 11 minutes
-
-..        **Cost**: **277 Amps**
-
-.. .. amps-consumption-example-end
-
-
-.. _amps-review-consumption:
 
 
 .. _amps-reduce:

@@ -383,6 +383,7 @@ The name of the query should contain the word "blocklist" to help clearly identi
 For example, a SQL query that returns values that appear more than 20 times for **email** and **phone** is similar to:
 
 .. code-block:: sql
+   :linenos:
 
    WITH
 
@@ -611,6 +612,7 @@ When using the bad-values blocklist, you must update the **Merged Customers** ta
 #. Find the **Unified_Prioritized** section, and then update the first value blocks for **email** and **phone** to add the **.blv** entries:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 5,15
 
       ,FIRST_VALUE(email_struct)
@@ -636,6 +638,7 @@ When using the bad-values blocklist, you must update the **Merged Customers** ta
 #. Find the SELECT statement that builds the **Merged Customers** table, and then add the columns for **email_internal**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6,14
 
       ,up.email_struct.email
@@ -1051,6 +1054,7 @@ This SQL query provides a working example of a bad-values blocklist that looks f
 .. TODO: The following example for addresses does NOT include postal because city and state are equivalently precise, but postal can come in 5 & 9 digit forms while representing the same address.
 
 .. code-block:: sql
+   :linenos:
 
    -- QUERY NAME: Blocklist Values
    -- DESCRIPTION: Use this query to verify the presence of blocklisted values.

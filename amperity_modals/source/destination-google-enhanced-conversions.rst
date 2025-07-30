@@ -60,3 +60,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-enhanced-conversions-customer-id-start
    :end-before: .. setting-google-enhanced-conversions-customer-id-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

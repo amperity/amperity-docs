@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/api/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -13,9 +14,8 @@
     :content class=swiftype name=title data-type=string:
         Amperity API versions
 
-
 ==================================================
-Amperity API versions
+Versioning
 ==================================================
 
 .. versioning-start
@@ -132,6 +132,7 @@ New versions of the Amperity API are released periodically. Each version of an e
 Current versions:
 
 * **2024-04-01** The current version of the Amperity API.
+* **2025-07-31** The current version of the Profile API.
 
 .. versioning-supported-versions-end
 

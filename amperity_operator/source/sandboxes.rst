@@ -22,6 +22,22 @@ About sandboxes
    :start-after: .. term-sandbox-start
    :end-before: .. term-sandbox-end
 
+.. TODO: Need some kind of intro here for the grid?
+
+.. grid:: 1 1 2 3
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Create sandbox
+      :link: sandbox_create.html
+
+   .. grid-item-card:: Open sandbox
+      :link: sandbox_open.html
+
+   .. grid-item-card:: Promote changes
+      :link: sandbox_promote.html
+
 
 .. _sandboxes-policy-allow-sandbox-administration:
 

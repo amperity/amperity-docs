@@ -44,6 +44,7 @@ Compare records
 Use a query similar to the following to compare scores for two records:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT * FROM Stitch_Scores
    WHERE source1 = 'Table_Name' AND pk1 = '123abc456def'

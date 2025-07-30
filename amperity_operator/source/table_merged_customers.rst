@@ -148,7 +148,8 @@ The following query represents the recommended starting point for the **Merged C
 .. table-merged-customers-sql-query-recommended-start
 
 .. code-block:: sql
-   :name: sql-merged-customers
+   :caption: sql-merged-customers
+   :linenos:
 
    WITH
      Source_Priority AS (
@@ -402,6 +403,7 @@ Update the list of domain tables under **Source_Priority** to contain *at least 
 .. table-merged-customers-sql-query-required-update-source-priority-sql-start
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 5,6
 
    WITH
@@ -433,6 +435,7 @@ Use the field priority table to assign priorities for individual fields that are
 .. table-merged-customers-sql-query-required-update-field-priority-sql-start
 
 .. code-block:: sql
+   :linenos:
 
    ,Field_Priority AS (
      SELECT *
@@ -474,6 +477,7 @@ The database in this tenant also includes three other tables: **Table D**, **Tab
 .. table-merged-customers-sql-query-required-update-example-query-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH
      Source_Priority AS (
@@ -557,6 +561,7 @@ When your tenant is not using the **Email Ampid Assignment** table you must repl
 with:
 
 .. code-block:: sql
+   :linenos:
 
    ,NAMED_STRUCT(
      'email', email
@@ -589,6 +594,7 @@ When your tenant is not using the **Email Ampid Assignment** table you must repl
 with:
 
 .. code-block:: sql
+   :linenos:
 
    ,FIRST(email_struct)
      OVER (
@@ -620,6 +626,7 @@ Replace email completion
 When your tenant is not using the **Email Ampid Assignment** table you must replace the following SQL:
 
 .. code-block:: sql
+   :linenos:
 
     -- Get email completion from Email Ampid Assignment table
     ,email_ampid_assignment.email
@@ -632,13 +639,14 @@ When your tenant is not using the **Email Ampid Assignment** table you must repl
 with:
 
 .. code-block:: sql
+   :linenos:
 
-     ,up.email_struct.email
-     ,up.email_struct.pk AS `email_pk`
-     ,up.email_struct.update_dt AS `email_update_dt`
-     ,up.email_struct.datasource AS `email_datasource`
-     ,up.email_struct.priority AS `email_priority`
-     ,up.email_struct.completion AS `email_completion`
+   ,up.email_struct.email
+   ,up.email_struct.pk AS `email_pk`
+   ,up.email_struct.update_dt AS `email_update_dt`
+   ,up.email_struct.datasource AS `email_datasource`
+   ,up.email_struct.priority AS `email_priority`
+   ,up.email_struct.completion AS `email_completion`
 
 .. note:: If your tenant is using the bad-values blocklist you must also add the following line:
 
@@ -659,6 +667,7 @@ Undo LEFT JOIN
 When your tenant is not using the **Email Ampid Assignment** table you must remove the following **LEFT JOIN** at the bottom of the SQL template:
 
 .. code-block:: sql
+   :linenos:
 
    LEFT JOIN email_ampid_assignment
    ON email_ampid_assignment.amperity_id = up.amperity_id
@@ -728,6 +737,7 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Find the **Field_Priority** section and update it to add the **email_internal** column to the field priority list:
 
    .. code-block:: sql
+      :linenos:
 
       ,Field_Priority AS (
         SELECT *
@@ -740,6 +750,7 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Find the **Unified_Structs** sections, and then add a named struct for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6
 
       ,NAMED_STRUCT(
@@ -754,6 +765,7 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Find the **Unified_Prioritized** section, and then add a first value block for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(email_internal_struct)
         OVER (
@@ -767,6 +779,7 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Find the SELECT statement that builds the **Merged Customers** table, and then add the columns for **email_internal**:
 
    .. code-block:: sql
+      :linenos:
 
       ,up.email_internal_struct.email_internal
       ,up.email_internal_struct.pk AS `email_internal_pk`
@@ -803,6 +816,7 @@ Field priority is only necessary when a custom PII semantic is tagged in multipl
 #. Find the **Unified_Structs** sections, and then add a named struct for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
 
       ,NAMED_STRUCT(
         'email_internal', email_internal
@@ -816,6 +830,7 @@ Field priority is only necessary when a custom PII semantic is tagged in multipl
 #. Find the **Unified_Prioritized** section, and then add a first value block for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(email_internal_struct)
         OVER (
@@ -829,6 +844,7 @@ Field priority is only necessary when a custom PII semantic is tagged in multipl
 #. Find the SELECT statement that builds the **Merged Customers** table, and then add the columns for **email_internal**:
 
    .. code-block:: sql
+      :linenos:
 
       ,up.email_internal_struct.email_internal
       ,up.email_internal_struct.pk AS `email_internal_pk`
@@ -857,6 +873,7 @@ You can measure how much data a single feed contributes to the larger set of dat
 The **Merged Customers** table is already configured to provide this data. For example:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 11
 
    SELECT
@@ -918,6 +935,7 @@ The following example shows how to extend the **Merged Customers** table to conc
 #. Find the **Unified_Preprocessed** section and add the highlighted line:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       ,Unified_Preprocessed AS (
@@ -930,6 +948,7 @@ The following example shows how to extend the **Merged Customers** table to conc
 #. Find the **NAMED_STRUCT** with the **name** column, and then update it to use the coalesced column **full_name_p**. This must be done in the following locations:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4,12
 
       ,NAMED_STRUCT(
@@ -975,6 +994,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Find the **Unified_Preprocessed** section and add the highlighted line:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       ,Unified_Preprocessed AS (
@@ -989,6 +1009,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Find the **NAMED_STRUCT** with the **email** column, and then update it to use the coalesced column **email_p**. This must be done in the following locations:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       ,NAMED_STRUCT(
@@ -1028,6 +1049,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Find the **Unified_Preprocessed** section and add the highlighted line:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       ,Unified_Preprocessed AS (
@@ -1042,6 +1064,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Find the **NAMED_STRUCT** with the **phone** column, and then update it to use the coalesced column **phone_p**. This must be done in the following locations:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       ,NAMED_STRUCT(

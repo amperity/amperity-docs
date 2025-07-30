@@ -95,7 +95,8 @@ Recommended starting point
 The following query is the starting point for the **Unified Paid Media** table.
 
 .. code-block:: sql
-   :name: sql-unified-paid-media
+   :caption: sql-unified-paid-media
+   :linenos:
 
    WITH pii_row_limit AS (
      SELECT 10 AS limit
@@ -381,6 +382,7 @@ The **Unified Paid Media** table is configured by default to include a ranked li
 You can configure the row limit by changing a value in the **pii_row_limit** common table expression at the start of the query. For example, a value of "3" will include the top 3 ranked phone numbers, email addresses, and physical addresses for each unique Amperity ID:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 2
 
    WITH pii_row_limit AS (
@@ -417,7 +419,8 @@ Amperity uses a **CASE** statement ot define standardized state and province cod
 
 The default **CASE** statement located in the **address_and_details_prep** common table expression standardizes states, provinces, and territories into two digit codes:
 
-::
+.. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN TRIM(LOWER(state)) IN ('alabama','al') THEN 'AL'

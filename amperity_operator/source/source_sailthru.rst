@@ -12,7 +12,6 @@
 .. |box-names| replace:: Users
 
 
-
 .. meta::
     :description lang=en:
         Configure Amperity to pull data from Sailthru.

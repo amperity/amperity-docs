@@ -756,7 +756,7 @@ The following settings are available for advanced configuration of Stitch:
 
 .. configure-stitch-advanced-configuration-warning-start
 
-.. note:: The editor for Stitch report settings uses Extensible Data Notation (EDN) formatting:
+.. note:: The editor for Stitch settings uses Extensible Data Notation (EDN) formatting:
 
    ::
 
@@ -999,11 +999,17 @@ When foreign key matching is the priority, Amperity scores record pairs in the f
 
 .. configure-stitch-advanced-clustering-matching-strategy-fk-end
 
-.. image:: ../../images/classifier-fk-match.png
+.. figure:: ../../images/classifier-fk-match.png
    :width: 450 px
-   :alt: Foreign key matching priority.
+   :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-fk-match-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 
 .. _configure-stitch-advanced-clustering-matching-strategy-sk:
@@ -1033,11 +1039,17 @@ When separation key unmatching is the priority, Amperity scores record pairs in 
 
 .. configure-stitch-advanced-clustering-matching-strategy-sk-end
 
-.. image:: ../../images/classifier-sk-unmatch.png
+.. figure:: ../../images/classifier-sk-unmatch.png
    :width: 450 px
    :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-sk-unmatch-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 
 .. _configure-stitch-advanced-clustering-matching-thresholds:

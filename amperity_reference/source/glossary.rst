@@ -1527,6 +1527,14 @@ D
       :end-before: .. term-domo-end
 
 
+.. _d-dotdigital:
+
+**Dotdigital**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-dotdigital-start
+      :end-before: .. term-dotdigital-end
+
+
 .. _d-downstream:
 
 **downstream**
@@ -2841,6 +2849,14 @@ M
    .. include:: ../../shared/terms.rst
       :start-after: .. term-mosaic-usa-start
       :end-before: .. term-mosaic-usa-end
+
+
+.. _m-moveable-ink:
+
+**Moveable Ink**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-moveable-ink-start
+      :end-before: .. term-moveable-ink-end
 
 
 .. _m-msrp:
