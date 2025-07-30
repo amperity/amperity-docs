@@ -6,23 +6,23 @@
 
 .. meta::
     :description lang=en:
-        Google BigQuery Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Google BigQuery.
+        Amperity Bridge for Google BigQuery is a first-class integration that uses BigQuery Sharing to enable inbound data access to Amperity from Google BigQuery.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Google BigQuery Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Google BigQuery.
+        Amperity Bridge for Google BigQuery is a first-class integration that uses BigQuery Sharing to enable inbound data access to Amperity from Google BigQuery.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure bridge for Google BigQuery
+        Configure Amperity Bridge for Google BigQuery
 
 ==================================================
-Configure bridge for Google BigQuery
+Configure Amperity Bridge for Google BigQuery
 ==================================================
 
 .. bridge-google-bigquery-about-start
 
-Google BigQuery bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Google BigQuery without copying data or scheduling ETL workloads.
+Amperity Bridge for Google BigQuery is a first-class integration enables inbound data access to Amperity from Google BigQuery without copying data or scheduling ETL workloads.
 
 .. bridge-google-bigquery-about-end
 

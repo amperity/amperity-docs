@@ -3367,7 +3367,7 @@ The navigation links in the top menus are managed from the conf.py file in each 
        "title": "Connections",
        "children": [
          {
-           "title": "Bridge",
+           "title": "Amperity Bridge",
            "url": "../operator/grid_bridge",
            "summary": "Share data directly with data warehouses."
          },

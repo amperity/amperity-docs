@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure bridge
+        Configure Amperity Bridge
 
 ==================================================
-Configure bridge
+Configure Amperity Bridge
 ==================================================
 
 .. bridge-about-start
@@ -33,13 +33,13 @@ Amperity Bridge enables inbound and outbound data sharing between Amperity and a
    .. grid-item-card:: About Amperity Bridge
       :link: bridge.html
 
-   .. grid-item-card:: Databricks
+   .. grid-item-card:: Amperity Bridge for Databricks
       :link: bridge_databricks.html
 
-   .. grid-item-card:: Google BigQuery
+   .. grid-item-card:: Amperity Bridge for Google BigQuery
       :link: bridge_google_bigquery.html
 
-   .. grid-item-card:: Snowflake
+   .. grid-item-card:: Amperity Bridge for Snowflake
       :link: bridge_snowflake.html
 
 .. bridge-about-grid-end

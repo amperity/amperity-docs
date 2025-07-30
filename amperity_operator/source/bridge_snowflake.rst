@@ -6,23 +6,23 @@
 
 .. meta::
     :description lang=en:
-        Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
+        Amperity Bridge for Snowflake is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
+        Amperity Bridge for Snowflake is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure bridge for Snowflake
+        Configure Amperity Bridge for Snowflake
 
 ==================================================
-Configure bridge for Snowflake
+Configure Amperity Bridge for Snowflake
 ==================================================
 
 .. bridge-snowflake-about-start
 
-Snowflake Bridge is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
+Amperity Bridge for Snowflake is a first-class integration that uses secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
 
 .. bridge-snowflake-about-end
 
@@ -36,7 +36,7 @@ Snowflake Bridge is a first-class integration that uses secure data sharing to e
 
 .. bridge-snowflake-switch-to-bridge-start
 
-.. tip:: Amperity Bridge shares data directly with Snowflake. A bridge does not require a courier or a database export to be configured. A bridge can be configured to run automatically as part of any scheduled workflow.
+.. tip:: Amperity Bridge for Snowflake shares data directly with Snowflake. A bridge does not require a courier or a database export to be configured. A bridge can be configured to run automatically as part of any scheduled workflow.
 
    If your brand is currently using BI Connect to make data available in Snowflake your brand should consider moving the BI Connect workflow to Amperity Bridge. This will increase the speed at which This will allow your brand to self-service the data that is shared between Amperity and Snowflake directly from within your Snowflake account.
 
