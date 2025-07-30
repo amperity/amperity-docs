@@ -77,6 +77,8 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    :maxdepth: 2
    :hidden:
 
+   GET /indexes <endpoint_get_profile_index>
+   GET /indexes/{id} <endpoint_get_profile_index_id>
    GET /indexes/{id}/profiles <endpoint_get_profiles_list>
    GET /indexes/{id}/profiles/{id} <endpoint_get_profile>
 

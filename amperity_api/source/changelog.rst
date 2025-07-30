@@ -25,7 +25,7 @@ The Amperity API changelog lists breaking and non-breaking changes that were mad
 
 .. _changelog-current:
 
-2024-04-01
+Amperity API: 2024-04-01
 ==================================================
 
 .. changelog-current-start
@@ -48,3 +48,24 @@ The Amperity API changelog lists breaking and non-breaking changes that were mad
 * Add :doc:`endpoint_post_workflows_stop` endpoint.
 
 .. changelog-current-end
+
+
+.. _changelog-profile-api-current:
+
+Profile API: 2024-04-01
+==================================================
+
+.. changelog-profile-api-current-start
+
+**Breaking changes**
+
+* None
+
+**Non-breaking changes**
+
+* Add :doc:`endpoint_get_profile_index` endpoint.
+* Add :doc:`endpoint_get_profile_index_id` endpoint.
+* Add :doc:`endpoint_get_profiles_list` endpoint.
+* Add :doc:`endpoint_get_profile` endpoint.
+
+.. changelog-profile-api-current-end

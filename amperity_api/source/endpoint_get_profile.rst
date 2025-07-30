@@ -77,7 +77,7 @@ A request to the **GET /indexes/{id}/profiles/{id}** endpoint is similar to:
    curl --request GET \
           'https://tenant.amperity.com/api/indexes/{id}/profiles/{id} \
         --header 'amperity-tenant: {tenant}' \
-        --header 'api-version: 2024-04-01' \
+        --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
 (This example is formatted for readability in a narrow page layout.)
@@ -104,7 +104,7 @@ The following table describes the parameters that may be used with the **GET /in
    * - **api_version**
      - String. Optional.
 
-       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2024-04-01**.
+       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2025-07-31**.
 
        .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
 
@@ -136,7 +136,7 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
          curl --request GET \
                 'https://tenant.amperity.com/api/indexes/{id}/profiles/{id} \
                 --header 'amperity-tenant: {tenant}' \
-                --header 'api-version: 2024-04-01' \
+                --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 
       (This example is formatted for readability in a narrow page layout.)

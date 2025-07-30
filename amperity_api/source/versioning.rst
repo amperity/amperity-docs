@@ -132,6 +132,7 @@ New versions of the Amperity API are released periodically. Each version of an e
 Current versions:
 
 * **2024-04-01** The current version of the Amperity API.
+* **2025-07-31** The current version of the Profile API.
 
 .. versioning-supported-versions-end
 

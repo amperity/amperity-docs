@@ -139,7 +139,7 @@ html_theme_options = {
             "title": "Connections",
             "children": [
                 {
-                    "title": "Bridge",
+                    "title": "Amperity Bridge",
                     "url": "../operator/grid_bridge",
                     "summary": "Share data directly with data warehouses."
                 },
