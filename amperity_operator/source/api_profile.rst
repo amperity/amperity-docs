@@ -752,6 +752,8 @@ Generate the endpoint
 
 An index must be generated before the endpoint will be available to your tenant's Profile API.
 
+.. note:: The user interface for the Profile API shows a spinner icon (|notification-running|) when an index is being refreshed.
+
 **To generate an index for a Profile API endpoint**
 
 .. list-table::
