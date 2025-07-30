@@ -46,17 +46,17 @@ Summer 2025
 **AI Assistant**
    :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Segments** page.
 
+**Amperity Bridge for Google BigQuery (inbound)**
+   :bdg-success:`NEW` Configure Amperity to sync data with `Google BigQuery <../operator/bridge_google_bigquery.html>`__.
+
 **Configure destinations**
    :bdg-light:`UPDATED` The configuration steps for `destinations <../operator/grid_destinations.html>`__ have been updated with dedicated configuration paths for `campaigns <../operator/grid_campaigns.html>`__.
 
 **Destination topics**
    :bdg-success:`NEW` New destinations for `Dotdigital <../operator/destination_dotdigital.html>`__, `MoEngage <../operator/destination_moengage.html>`__, `Movable Ink <../operator/destination_moveableink.html>`__, and `LinkedIn DMP  <../operator/destination_linkedin_dmp.html>`__.
 
-**Google BigQuery**
-   :bdg-success:`NEW` Configure Amperity to sync data with `Google BigQuery <../operator/bridge_google_bigquery.html>`__.
-
 **Journeys**
-   :bdg-success:`NEW` Use the activation canvas to build a series of audiences for :doc:`multi-touch journeys <journeys>` to support your brand's marketing ecosystem.
+   :bdg-light:`UPDATED` Use the activation canvas to build a series of audiences for :doc:`multi-touch journeys <journeys>` to support your brand's marketing ecosystem.
 
 **Multi-factor authentication**
    :bdg-success:`NEW` Added support to :ref:`enforce multi-factor authentication (MFA) <settings-users-multifactor-authentication>` for all username-password users on non-SSO tenants.
@@ -67,7 +67,12 @@ Summer 2025
 **Profile API**
    :bdg-light:`UPDATED` The Profile API is updated to support flexible, multi-criteria search that allows systems to look up profiles using any combination of available fields from a single endpoint.
 
-   :bdg-success:`NEW` Two endpoints for the Profile API: `GET /indexes/{id}/profiles <../api/endpoint_get_profiles_list.html>`__ and `GET /indexes/{id}/profiles/{id} <../api/endpoint_get_profile.html>`__.
+   :bdg-success:`NEW` The following endpoints are new:
+
+   * `GET /indexes <../api/endpoint_get_profile_index.html>`__ 
+   * `GET /indexes/{id} <../api/endpoint_get_profile_index_id.html>`__ 
+   * `GET /indexes/{id}/profiles <../api/endpoint_get_profiles_list.html>`__ 
+   * `GET /indexes/{id}/profiles/{id} <../api/endpoint_get_profile.html>`__.
 
 .. updates-2025-summer-end
 
@@ -103,7 +108,7 @@ Spring 2025
 **Merge policy settings**
    :bdg-success:`NEW` Use a `drag-and-drop editor to define merge policy settings <../operator/merge_policy.html>`__ for all customer profile attributes and for all source tables that contain customer PII. This replaces the need to use SQL to define priority and determines how records are added to the **Merged Customers** table.
 
-**Outbound Snowflake bridge**
+**Amperity Bridge for Snowflake (outbound)**
    :bdg-success:`NEW` Use Secure Data Sharing to make unified customer data available in `Snowflake <../operator/bridge_snowflake.html>`__.
 
 **Real-time tables**
@@ -128,7 +133,7 @@ Fall 2024
 **Amazon S3 storage**
    :bdg-success:`NEW` Configure a new tenant to use your brand's `Amazon S3 storage <../operator/storage.html>`__.
 
-**Inbound Snowflake bridge**
+**Amperity Bridge for Snowflake (inbound)**
    :bdg-success:`NEW` Use Secure Data Sharing to make `Snowflake <../operator/bridge_snowflake.html>`__ data available to unified customer profiles.
 
 **Real-time tables**
