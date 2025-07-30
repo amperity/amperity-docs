@@ -44,13 +44,13 @@ Summer 2025
 .. updates-2025-summer-start
 
 **AI Assistant**
-   :bdg-success:`NEW` The `AI Assistant <assistant>`__ is available in the **Segments** page.
+   :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Segments** page.
 
 **Configure destinations**
-   :bdg-light:`UPDATED` The configuration steps for destinations have been updated with dedicated configuration paths for `campaigns <../operator/grid_campaigns.html>`__.
+   :bdg-light:`UPDATED` The configuration steps for `destinations <../operator/grid_destinations.html>`__ have been updated with dedicated configuration paths for `campaigns <../operator/grid_campaigns.html>`__.
 
 **Destination topics**
-   :bdg-success:`NEW` New destinations for `Dotdigital <../operator/destination_dotdigital.html>`__, `MoEngage <../operator/destination_moengage.html>`__, `Movable Ink <../operator/destination_movableink.html>`__, and `LinkedIn DMP  <../operator/destination_linkedin_dmp.html>`__.
+   :bdg-success:`NEW` New destinations for `Dotdigital <../operator/destination_dotdigital.html>`__, `MoEngage <../operator/destination_moengage.html>`__, `Movable Ink <../operator/destination_moveableink.html>`__, and `LinkedIn DMP  <../operator/destination_linkedin_dmp.html>`__.
 
 **Google BigQuery**
    :bdg-success:`NEW` Configure Amperity to sync data with `Google BigQuery <../operator/bridge_google_bigquery.html>`__.
@@ -59,7 +59,7 @@ Summer 2025
    :bdg-success:`NEW` Use the activation canvas to build a series of audiences for :doc:`multi-touch journeys <journeys>` to support your brand's marketing ecosystem.
 
 **Multi-factor authentication**
-   :bdg-success:`NEW` Added support to `enforce multi-factor authentication (MFA) <..reference/users.html#multi-factor-authentication>`__ for all username-password users on non-SSO tenants.
+   :bdg-success:`NEW` Added support to :ref:`enforce multi-factor authentication (MFA) <settings-users-multifactor-authentication>` for all username-password users on non-SSO tenants.
 
 **Offline events**
    :bdg-success:`NEW` Configure Amperity to send offline events to `Google Enhanced Conversions <../operator/events_google_enhanced_conversions.html>`__.
