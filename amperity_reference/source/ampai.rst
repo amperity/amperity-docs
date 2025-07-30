@@ -149,13 +149,17 @@ There are three user-level policy options associated with AmpAI:
 
    Prevents users from accessing the **AmpAI** page.
 
-#. **Restrict AmpAI Assistant access**
+#. **Restrict Queries AI Assistant access**
 
    Prevents users from accessing the **AmpAI Assistant** from within the **Queries** page.
+   
+#. **Restrict Segments AI Assistant access**
 
-#. **Enable prompt administration**
+   Prevents users from accessing the **AmpAI Assistant** from within the **Segments** page.
 
-   Allows users to update the custom prompt. By default, this policy option is enabled for users assigned the **Datagrid Operator** and **Datagrid Administrator** policies.
+#. **Allow prompt administration**
+
+   Allows users to update the custom prompt. **Datagrid Operators** and **Datagrid Administrators** always have the ability to modify prompts.
 
 .. ampai-permissions-and-policies-end
 
@@ -167,7 +171,7 @@ Disable AmpAI features
 
 .. ampai-disable-start
 
-**AmpAI** and the **AmpAI Assistant** can be disabled for all users. Open the **Settings** page, select the **AmpAI** tab, and then click **Disable AmpAI features**.
+**AmpAI** and the **AmpAI Assistants** can be disabled for all users. Open the **Settings** page, select the **AmpAI** tab, and then click **Disable AmpAI features**.
 
 .. ampai-disable-end
 
@@ -181,7 +185,7 @@ Audit conversations
 
 **AmpAI** and **AmpAI Assistant** conversations can be audited by users assigned the **Datagrid Operator** and **Datagrid Administrator** policies from the **Settings** page.
 
-The **AmpAI** tab on the **Settings** page logs the questions that are asked to **AmpAI** and the **AmpAI Assistant** under **AI Conversations**.
+The **AmpAI** tab on the **Settings** page logs the questions that are asked to **AmpAI** and the **AmpAI Assistants** under **AI Conversations**.
 
 The **Activity log** tab on the **Settings** page logs when **AmpAI Assistant** questions are asked using the "amperity.query.exec/sampled" action.
 

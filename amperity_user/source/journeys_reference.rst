@@ -198,16 +198,15 @@ Schedule a journey
    :start-after: .. journeys-howtos-schedule-a-journey-start
    :end-before: .. journeys-howtos-schedule-a-journey-end
 
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-howtos-schedule-a-journey-note-start
-   :end-before: .. journeys-howtos-schedule-a-journey-note-end
-
 **To schedule a journey**
 
 .. include:: ../../amperity_reference/source/journeys.rst
    :start-after: .. journeys-howtos-schedule-a-journey-steps-start
-   :end-before: .. journeys-howtos-schedule-a-journey-end
+   :end-before: .. journeys-howtos-schedule-a-journey-steps-end
 
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-howtos-schedule-a-journey-important-admonition-start
+   :end-before: .. journeys-howtos-schedule-a-journey-important-admonition-end
 
 
 
