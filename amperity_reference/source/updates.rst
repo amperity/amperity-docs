@@ -56,16 +56,18 @@ Summer 2025
    :bdg-success:`NEW` Configure Amperity to sync data with `Google BigQuery <../operator/bridge_google_bigquery.html>`__.
 
 **Journeys**
-   :bdg-success:`NEW` Use the activation canvas to build a series of audiences to support multi-touch journeys across your brand's marketing ecosystem.
+   :bdg-success:`NEW` Use the activation canvas to build a series of audiences for :doc:`multi-touch journeys <journeys>` to support your brand's marketing ecosystem.
 
 **Multi-factor authentication**
-   :bdg-success:`NEW` Added support to enforce multi-factor authentication (MFA) for all username-password users on non-SSO tenants.
+   :bdg-success:`NEW` Added support to `enforce multi-factor authentication (MFA) <..reference/users.html#multi-factor-authentication>`__ for all username-password users on non-SSO tenants.
 
 **Offline events**
    :bdg-success:`NEW` Configure Amperity to send offline events to `Google Enhanced Conversions <../operator/events_google_enhanced_conversions.html>`__.
 
 **Profile API**
    :bdg-light:`UPDATED` The Profile API is updated to support flexible, multi-criteria search that allows systems to look up profiles using any combination of available fields from a single endpoint.
+
+   :bdg-success:`NEW` Two endpoints for the Profile API: `GET /indexes/{id}/profiles <../api/endpoint_get_profiles_list.html>`__ and `GET /indexes/{id}/profiles/{id} <../api/endpoint_get_profile.html>`__.
 
 .. updates-2025-summer-end
 
