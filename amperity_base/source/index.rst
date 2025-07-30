@@ -22,7 +22,7 @@ Amperity Docs
 
 Welcome to Amperity documentation. Use the navigation at the top to browse directly to user guides, the operators guide, API references, and the complete Amperity reference. Learn how to `connect your brand's data to Amperity <sources.html>`__ and how to connect Amperity to `your brand's marketing workflows <destinations.html>`__.
 
-Click "/" on your keyboard to search the docs site.
+Type or enter "/" on your keyboard to search the docs site.
 
 .. docs-intro-e
 
