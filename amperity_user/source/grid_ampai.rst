@@ -34,7 +34,7 @@ AmpAI features include the AmpAI Assistant, predictive modeling, and identity re
       :link: ../reference/ampai.html
 
 
-   .. grid-item-card:: AmpAI Assistant
+   .. grid-item-card:: AmpAI Assistants
       :link: ../reference/assistant.html
 
 
