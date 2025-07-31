@@ -52,7 +52,7 @@ Amperity API: 2024-04-01
 
 .. _changelog-profile-api-current:
 
-Profile API: 2024-04-01
+Profile API: 2025-07-31
 ==================================================
 
 .. changelog-profile-api-current-start
