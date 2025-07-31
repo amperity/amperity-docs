@@ -12,6 +12,7 @@ Site index
    :hidden:
 
    configure_stitch
+   couriers
    data_templates
    destination_active_campaign
    destination_acxiom
