@@ -232,7 +232,7 @@ Components
    :maxdepth: 3
    :hidden:
 
-   Sources <page_sources>
+   Sources <sources>
    Stitch <page_stitch>
    Customer profiles <page_customer_profiles>
    Audiences <page_audiences>
