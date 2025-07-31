@@ -90,7 +90,7 @@ html_theme_options = {
 
 #    "discussion_url": "https://amperity-docs.discourse.group/",
 #    "twitter_url": "https://amperity.com",
-    "github_url": "https://github.com/amperity/amperity-docs",
+#    "github_url": "https://github.com/amperity/amperity-docs",
 
 #    "carbon_ads_code": "CE7DKK3W",
 #    "carbon_ads_placement": "shibuya",
