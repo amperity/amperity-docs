@@ -103,14 +103,6 @@ The following table describes the parameters that may be used with the **GET /in
    * - Parameter
      - Description
 
-   * - **api_version**
-     - String. Optional.
-
-       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2025-07-31**.
-
-       .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
-
-
    * - **limit**
      - Integer. Optional.
 
