@@ -190,7 +190,7 @@ html_context = {
 #        "buysellads_placement": "shibuya",
 #        "buysellads_container_selector": ".yue > section > section",
 #    "display_github": True, # Integrate GitHub
-#    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_reference/source/", # Path in the checkout to the docs root
+    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_reference/source/", # Path in the checkout to the docs root
 }
 
 
