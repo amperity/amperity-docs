@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -203,7 +204,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
 
 .. toctree::
    :caption: Sources
-   :maxdepth: 2
+   :maxdepth: 3
    :hidden:
 
    About data sources <sources>
