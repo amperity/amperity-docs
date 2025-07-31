@@ -160,7 +160,7 @@ html_theme_options = {
                 },
                 {
                     "title": "Sources",
-                    "url": "../operator/grid_sources",
+                    "url": "../sources",
                     "summary": "Pull data from any upstream system."
                 },
             ]
