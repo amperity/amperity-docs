@@ -190,6 +190,7 @@ html_context = {
 #        "buysellads_code": "CE7DKK3M",
 #        "buysellads_placement": "shibuya",
 #        "buysellads_container_selector": ".yue > section > section",
+    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_base/source/", # Path in the checkout to the docs root
 }
 
 
