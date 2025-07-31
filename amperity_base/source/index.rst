@@ -57,7 +57,7 @@ Type or enter "/" on your keyboard to search the docs site.
    .. grid-item-card:: |fa-object-exclude| Guided setup
       :link: /reference/start.html
 
-      Follow a guided setup that lands data from your data warehouse and builds complete customer profiles.
+      Guided setup to land data from your data warehouse and build complete customer profiles.
 
 
    .. grid-item-card:: |fa-wave-pulse| Activations
