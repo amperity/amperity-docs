@@ -265,3 +265,14 @@
   text-decoration: none !important;
   color: #d9feff !important
 }
+
+
+/* Override Swiftype highlights */
+
+.st-ui-result em {
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-color: #0c0c0c !important;
+  color: #0c0c0c !important;
+  background-color: #dff200 !important;
+}
