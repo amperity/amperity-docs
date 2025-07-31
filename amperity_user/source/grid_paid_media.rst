@@ -100,7 +100,7 @@ Activate audiences using paid media for any of the following scenarios.
 
 .. _grid-paid-media-activate-audiences:
 
-Activate audiences
+Find lookalike audiences
 ==================================================
 
 .. grid-paid-media-activate-audiences-start
