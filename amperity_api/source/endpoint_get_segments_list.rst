@@ -1,7 +1,5 @@
 .. https://docs.amperity.com/api/
 
-:canonical: https://docs.amperity.com/api/endpoint_get_segments_list.html
-
 
 .. meta::
     :description lang=en:

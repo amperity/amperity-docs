@@ -1,7 +1,5 @@
 .. https://docs.amperity.com/api/
 
-:canonical: https://docs.amperity.com/api/index.html
-
 
 .. meta::
     :description lang=en:
