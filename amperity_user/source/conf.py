@@ -58,7 +58,7 @@ html_css_files = [
 html_title = "Amperity"
 html_theme = "shibuya"
 #html_theme_path = ['../../_themes/']
-html_baseurl = "https://docs.amperity.com/"
+html_baseurl = "https://docs.amperity.com/user/"
 sitemap_url_scheme = "user/{link}"
 
 html_copy_source = False
