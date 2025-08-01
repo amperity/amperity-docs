@@ -92,21 +92,7 @@ Request parameters
 
 .. endpoint-get-profile-request-parameters-start
 
-The following table describes the parameters that may be used with the **GET /indexes/{id}/profiles/{id}** endpoint.
-
-.. list-table::
-   :widths: 35 65
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **api_version**
-     - String. Optional.
-
-       A :ref:`supported version of the Amperity API <versioning-supported-versions>`. For example: **2025-07-31**.
-
-       .. note:: You may use the **api-version** request header instead of the **api_version** request parameter.
+The **GET /indexes/{id}/profiles/{id}** endpoint does not have any request parameters.
 
 .. endpoint-get-profile-request-parameters-end
 

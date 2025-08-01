@@ -184,13 +184,13 @@ html_theme_options = {
 #    )
 #else:
 html_context = {
-    "source_type": "github",
-    "source_user": "amperity",
-    "source_repo": "amperity-docs",
+#    "source_type": "github",
+#    "source_user": "amperity",
+#    "source_repo": "amperity-docs",
 #        "buysellads_code": "CE7DKK3M",
 #        "buysellads_placement": "shibuya",
 #        "buysellads_container_selector": ".yue > section > section",
-    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_base/source/", # Path in the checkout to the docs root
+#    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_base/source/", # Path in the checkout to the docs root
 }
 
 

@@ -1,33 +1,5 @@
 {%- if page_source_suffix -%}
 
-{%- set editurl = edit_source_link(pagename + page_source_suffix) -%}
-
-<style>
-  .edit-in-github{
-    border-top:1px solid var(--sy-c-divider);
-    margin:1rem 0;
-    padding:.5rem 0;
-    font-size:.8rem;
-    font-weight:600
-  }
-
-  .edit-this-page a{
-    color:var(--sy-c-text)
-  }
-
-  .edit-this-page a:hover{
-    color:var(--sy-c-link-hover)
-  }
-
-  .edit-this-page a:after{
-    content:" →"
-  }
-</style>
-
-{%- if editurl -%}
-<div class="edit-in-github">
-    <a href="{{ github_path }}{{ pagename }}.rst" target="_blank" class="edit-in-github">{{ _("Edit this page on GitHub") }}
-</div>
-{%- endif -%}
+<!--{%- set editurl = edit_source_link(pagename + page_source_suffix) -%}-->
 
 {%- endif -%}
