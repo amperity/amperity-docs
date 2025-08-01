@@ -886,7 +886,16 @@ Any query can be configured to send workflow alerts when configured thresholds a
 Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. There are two alert levels (you may enable one or both):
 
 #. **Warn when** record counts exceed the configured threshold. The workflow will continue running.
+
+   .. tip:: Use this threshold for queries that are not associated with an orchestration.
+
 #. **Fail when** record counts exceed the configured threshold. The workflow is stopped.
+
+   .. caution:: A query with a configured query alert is always run **even if the query is not associated with an orchestration**.
+
+      A query that runs and fails when record counts exceed the configured threshold will stop a workflow.
+
+      Use the **Warn when** threshold for queries that are not associated with an orchestration. This will prevent that query from stopping the workflow when record counts exceed the configured alert threshold.
 
 You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one (or more) courier groups and/or scheduled orchestration groups.
 
