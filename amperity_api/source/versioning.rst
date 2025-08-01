@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/api/
 
+:canonical: https://docs.amperity.com/api/versioning.html
+
 :orphan:
 
 .. meta::

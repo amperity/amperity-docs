@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/api/
 
+:canonical: https://docs.amperity.com/api/endpoint_get_profile_index_id.html
+
 
 .. meta::
     :description lang=en:
