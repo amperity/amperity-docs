@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/api/
 
+:canonical: https://docs.amperity.com/api/endpoint_post_workflows_start.html
+
 
 .. meta::
     :description lang=en:
