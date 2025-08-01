@@ -47,6 +47,8 @@ Profile API
 
 The Amperity Profile API enforces a rate limit of 2000 requests per second across the entire tenant, including sandboxes.
 
+Requests to the Profile API that exceed 2000 requests per second may return an error response with an HTTP 429 status code.
+
 Rate limit increases are supported and requests for increased rate limits will be reviewed on a case-by-case basis. Reach out to Amperity Support or your Customer Success Manager for details.
 
 .. rate-limits-profile-end
