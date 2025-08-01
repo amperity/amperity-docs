@@ -96,3 +96,9 @@ Type or enter "/" on your keyboard to search the docs site.
       A complete reference for Amperity documentation.
 
 .. docs-intro-grid-end
+
+
+.. toctree::
+   :hidden:
+
+   404
