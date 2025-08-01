@@ -77,7 +77,8 @@ A request to the **GET /indexes/{id}/profiles** endpoint is similar to:
    curl --request GET \
           'https://tenant.amperity.com/api/indexes/{id}/profiles \
           ?limit=100 \
-          &with_total=true' \
+          &with_total=true \
+          &filter[<attribute>]=<value>' \
         --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
@@ -102,6 +103,48 @@ The following table describes the parameters that may be used with the **GET /in
 
    * - Parameter
      - Description
+
+   * - **filter**
+     - String. Optional.
+
+       One or more index attributes that are configured to be available as filter request properties. Each filter limits the response to include properties that match the attribute and value for each filter.
+
+       .. code-block:: none
+
+          filter[<attribute>]=<value>
+
+       where:
+
+       * ``[<attribute>]`` is the name of a field in the index.
+       * ``<value>`` is the value to be returned in the response.
+
+       For example:
+
+       .. code-block:: none
+
+          filter[first_name]=Daniel
+
+       Apply additional filters to the request to narrow the response to return a specific set of profile attributes.
+
+       For example, to return a profile for "Daniel Kulhman":
+
+       .. code-block:: none
+
+          filter[first_name]=Daniel \
+          &filter[last_name]=Kulhman
+
+       A complete request for "Daniel Kulhman" is similar to:
+
+       .. code-block:: bash
+
+          curl --request GET \
+                 'https://tenant.amperity.com/api/indexes/{id}/profiles \
+                 &filter[first_name]=Daniel \
+                 &filter[last_name]=Kulhman' \
+                 --header 'amperity-tenant: {tenant}' \
+                 --header 'api-version: 2025-07-31' \
+                 --header 'Authorization: Bearer {token}'
+
 
    * - **limit**
      - Integer. Optional.
@@ -156,7 +199,8 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
          curl --request GET \
                 'https://tenant.amperity.com/api/indexes/{id}/profiles \
                 ?limit=100 \
-                &with_total=true' \
+                &with_total=true \
+                &filter[<attribute>]=<value>' \
                 --header 'amperity-tenant: {tenant}' \
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
@@ -175,7 +219,7 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
          import csv
 
          # URL for Campaigns endpoint
-         url = "https://tenant-name.amperity.com/api/indexes/{id}/profiles"
+         url = "https://tenant-name.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>"
 
          # Required headers
          headers = {
