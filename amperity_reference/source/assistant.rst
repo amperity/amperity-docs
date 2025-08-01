@@ -23,7 +23,7 @@ About AmpAI Assistants
 There are two **AmpAI Assistants**:
 
 * **Queries AI Assistant** helps users author SQL queries and resolve errors
-* **Segents AI Assistant** helps users build segments
+* **Segments AI Assistant** helps users build segments
 
 These assistants are generative AI features within Amperity that lets users input commands in natural language. 
 
