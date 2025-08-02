@@ -228,9 +228,6 @@ Send campaigns to any of the following marketing applications and workflows.
    .. grid-item-card:: Pinterest
       :link: campaign_pinterest.html
 
-   .. grid-item-card:: Reddit Ads
-      :link: campaign_reddit_ads.html
-
    .. grid-item-card:: Sailthru
       :link: campaign_sailthru.html
 
@@ -285,7 +282,6 @@ Send campaigns to any of the following marketing applications and workflows.
    Neustar <campaign_neustar>
    Oracle Eloqua <campaign_oracle_eloqua>
    Pinterest <campaign_pinterest>
-   Reddit Ads <campaign_reddit_ads>
    Sailthru <campaign_sailthru>
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
    SFTP <campaign_sftp>

@@ -1736,7 +1736,7 @@ A recurring campaign can be configured to run as part of a scheduled workflow wh
 .. image:: ../../images/mockup-activation-scheduled-campaign.png
    :width: 420 px
    :alt: Add a campaign as part of a scheduled workgroup.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. campaigns-run-as-part-of-workflow-end
