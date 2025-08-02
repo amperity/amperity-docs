@@ -25,20 +25,11 @@ About ingest queries
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   Ingest queries are a powerful tool that flatten hierarchical, unstructured data like JSON and XML.
 
-      * - .. image:: ../../images/learning-lab-ingest-queries.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Ingest queries are a powerful tool that flatten hierarchical, unstructured data like JSON and XML.
+   Amperity can ingest data in most formats; however, to be stored in a source domain table and used in processes like Stitch, data must be in a format that fits neatly into rows and columns.
 
-          Amperity can ingest data in most formats; however, to be stored in a source domain table and used in processes like Stitch, data must be in a format that fits neatly into rows and columns. 
-
-          Open **Learning Lab** for `ingest queries <https://learn.amperity.com/ingest-queries>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** for `ingest queries <https://learn.amperity.com/ingest-queries>`__ |ext_link|. Registration is required.
 
 .. ingest-queries-learning-lab-end
 

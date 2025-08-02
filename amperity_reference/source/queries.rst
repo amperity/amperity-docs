@@ -922,18 +922,7 @@ You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
-
-      * - .. image:: ../../images/learning-lab-query-alerts.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Sign up to receive query alerts when record counts in the query output contains errors that exceed a configured threshold.
-
-          Open **Learning Lab** to learn more about how `query alerts <https://learn.amperity.com/query-alerts>`__ |ext_link| work. Registration is required.
+   Open **Learning Lab** to learn more about how `query alerts <https://learn.amperity.com/query-alerts>`__ |ext_link| work. Registration is required.
 
 .. queries-enable-alerts-learning-lab-end
 
