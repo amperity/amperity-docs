@@ -226,7 +226,7 @@ An orchestration can be configured to run after a courier when the run mode is s
 .. image:: ../../images/mockup-activation-scheduled-orchestration.png
    :width: 420 px
    :alt: Add an orchestration to a scheduled workgroup.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. orchestrations-run-automatic-start
