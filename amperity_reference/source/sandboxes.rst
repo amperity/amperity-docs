@@ -25,20 +25,11 @@ About sandboxes
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   Ensure data is always available in production by making changes in a sandbox.
 
-      * - .. image:: ../../images/learning-lab-sandboxes.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Ensure data is always available in production by making changes in a sandbox.
+   Each sandbox tracks changes, provides validation workflows and audit tools (that don't need to be configured or customized), and automates monitoring and alerts for changes in the sandbox.
 
-          Each sandbox tracks changes, provides validation workflows and audit tools (that don't need to be configured or customized), and automates monitoring and alerts for changes in the sandbox.
-
-          Open **Learning Lab** to learn more about how `sandboxes <https://learn.amperity.com/sandboxes-course>`__ |ext_link| work. Registration is required.
+   Open **Learning Lab** to learn more about how `sandboxes <https://learn.amperity.com/sandboxes-course>`__ |ext_link| work. Registration is required.
 
 .. sandboxes-learning-lab-end
 

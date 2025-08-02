@@ -65,20 +65,9 @@ Use the **Segments AI Assistant** in the **Segment Editor** to:
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   The **AmpAI Assistants** are generative AI features that can help you build better SQL queries and generate customer segments based on the data in your Amperity tenant.
 
-      * - .. image:: ../../images/learning-lab-ai-assistant.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - The **AmpAI Assistants** are generative AI features that can help you build better SQL queries and generate customer segments based on the data in your Amperity tenant.
-
-          Open **Learning Lab** to learn more about how the `AmpAI Assistant <https://learn.amperity.com/the-amperity-ai-assistant>`__ |ext_link| can help you build better queries and segments. Registration is required.
-
-.. TODO: update learning lab links when available
+   Open **Learning Lab** to learn more about how the `AmpAI Assistant <https://learn.amperity.com/the-amperity-ai-assistant>`__ |ext_link| can help you build better queries and segments. Registration is required.
 
 .. assistant-learning-lab-end
 
