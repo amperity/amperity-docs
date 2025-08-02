@@ -19,16 +19,55 @@ About data sources
 
 .. sources-about-start
 
-Pull data from upstream marketing applications and workflows to Amperity.
+Use the **Sources** page to configure how your brand pulls data to Amperity.
 
 .. sources-about-end
 
+.. sources-about-grid-start
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Amperity Bridge
+      :link: bridge.html
+
+   .. grid-item-card:: Feeds
+      :link: feeds.html
+
+   .. grid-item-card:: Semantics
+      :link: semantics.html
+
+   .. grid-item-card:: Domain tables
+      :link: domain_tables.html
+
+   .. grid-item-card:: Couriers
+      :link: couriers.html
+
+   .. grid-item-card:: Courier groups
+      :link: courier_groups.html
+
+.. sources-about-grid-end
+
+
+.. _sources-list:
+
+Data sources
+==================================================
+
+.. sources-list-about-start
+
+Pull data from upstream marketing applications and workflows to Amperity.
+
+.. sources-list-about-end
+
+.. sources-list-grid-start
 
 .. grid:: 1 1 2 3
    :gutter: 2
    :padding: 0
    :class-row: surface
-
 
    .. grid-item-card:: Acxiom
       :link: ../operator/source_acxiom.html
@@ -194,3 +233,16 @@ Pull data from upstream marketing applications and workflows to Amperity.
 
    .. grid-item-card:: Zendesk
       :link: ../operator/source_zendesk.html
+
+.. sources-list-grid-end
+
+.. toctree::
+   :caption: Sources page
+   :maxdepth: 2
+   :hidden:
+
+   Feeds <feeds>
+   Semantics <semantics>
+   Domain tables <domain_tables>
+   Couriers <couriers>
+   Courier groups <courier_groups>
