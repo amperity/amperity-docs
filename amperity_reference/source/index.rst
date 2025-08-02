@@ -38,7 +38,7 @@ Key concepts
    :class-row: surface
 
    .. grid-item-card:: |fa-arrow-right-to-line| Sources
-      :link: ../sources.html
+      :link: sources.html
 
       Pull data to Amperity from any data source. APIs, cloud-based storage, sharing, SFTP.
 
