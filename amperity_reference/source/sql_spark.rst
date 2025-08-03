@@ -1026,7 +1026,7 @@ The following SQL query can help find **JOIN** operations with high duplication 
 
    .. code-block:: none
       :linenos:
-      :emphasize-lines: 2
+      :emphasize-lines: 2-4
 
       SELECT
         {field1}
