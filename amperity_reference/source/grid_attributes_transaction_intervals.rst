@@ -25,7 +25,7 @@ Time-period rollups for every customer's transaction history.
 
 .. grid-attributes-intervals-grid-start
 
-.. grid:: 1 1 2 3
+.. grid:: 1 1 2 2
    :gutter: 2
    :padding: 0
    :class-row: surface

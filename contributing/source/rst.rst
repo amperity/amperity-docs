@@ -1897,10 +1897,10 @@ By adding a class of ``surface``, a card would be rendered:
 
 .. code-block:: none
 
-    .. grid:: 1 1 2 3
+    .. grid:: 1 1 2 2
         :class-row: surface
 
-.. grid:: 1 1 2 3
+.. grid:: 1 1 2 2
     :gutter: 2
     :padding: 0
     :class-container: surface

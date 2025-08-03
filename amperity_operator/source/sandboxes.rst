@@ -24,7 +24,7 @@ About sandboxes
 
 .. TODO: Need some kind of intro here for the grid?
 
-.. grid:: 1 1 2 3
+.. grid:: 1 1 2 2
    :gutter: 2
    :padding: 0
    :class-row: surface

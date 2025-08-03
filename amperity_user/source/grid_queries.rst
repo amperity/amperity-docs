@@ -76,7 +76,7 @@ Send query results to downstream workflows and to support all of your brand's ma
 
 .. grid-queries-destinations-about-grid-start
 
-.. grid:: 1 1 2 3
+.. grid:: 1 1 2 2
    :gutter: 2
    :padding: 0
    :class-row: surface

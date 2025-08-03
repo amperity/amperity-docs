@@ -25,7 +25,7 @@ Data assets are a collection of CSV files and SQL templates that add support for
 
 .. more-data-assets-about-grid-start
 
-.. grid:: 1 1 2 3
+.. grid:: 1 1 2 2
    :gutter: 2
    :padding: 0
    :class-row: surface
