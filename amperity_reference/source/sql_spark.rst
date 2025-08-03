@@ -1038,7 +1038,7 @@ The following SQL query can help find **JOIN** operations with high duplication 
       LEFT JOIN {tableC} c
       ON b.{joinkey}2 = c.{joinkey}2
 
-   If "Table A" has a lot of keys that are not present in "Table B" then the **LEFT JOIN** operation between those tables will result in an intermediate table with many records where the value is **NULL**. This will create skew during the second **JOIN** operation between tables B and C.
+   If "Table A" has many keys that are not present in "Table B" then the **LEFT JOIN** operation between those tables will result in an intermediate table with many records where the value is **NULL**. This will create skew during the second **JOIN** operation between tables B and C.
 
 .. sql-spark-skew-avoiding-join-operations-note-end
 
