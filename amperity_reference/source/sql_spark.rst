@@ -948,7 +948,7 @@ Common causes of skew
 Common causes of skew include:
 
 * Unintended duplication of values in upstream tables. Removing this duplication helps prevent skew.
-* Values that are not needed in the final output, including **NULL** values or placeholder for **NULL** values, such as "1900-01-01". Filter these values out to prevent them from causing skew.
+* Values that are not needed in the final output, including **NULL** values or placeholders for **NULL** values, such as "1900-01-01". Filter these values out to prevent them from causing skew.
 
   If these values are required, one approach is to replace them with a primary key. For example:
 
