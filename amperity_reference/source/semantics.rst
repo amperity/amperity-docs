@@ -1163,6 +1163,8 @@ Apply loyalty profile semantic tags to data sources that contain data that provi
    #. The **fk-loyalty-id** semantic tag is applied to the same source field as the **loy/loyalty-id** field.
    #. The **loy/email** semantic tag is applied to fields that contain email addresses.
    #. The **loy/birthdate** semantic tag is applied to fields that contain birthdates.
+   
+   (Source tables for loyalty profiles and events should not be made available to Stitch.)
 
 .. semantics-loyalty-profiles-make-available-to-stitch-end
 
