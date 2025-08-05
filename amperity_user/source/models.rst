@@ -40,20 +40,11 @@ Predictive models
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   Amperity provides a set of predictive models.
 
-      * - .. image:: ../../images/learning-lab-models.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Amperity provides a set of predictive models.
+   Churn propensity predicts the likelihood of customer activity. Predicted CLV predicts the order value for purchases made within the next year. Product affinity predicts who is likely to purchase.
 
-          Churn propensity predicts the likelihood of customer activity. Predicted CLV predicts the order value for purchases made within the next year. Product affinity predicts who is likely to purchase.
-
-          Open **Learning Lab** to learn more about how `predictive modeling <https://learn.amperity.com/predictive-course>`__ |ext_link| can help your brand. Registration is required.
+   Open **Learning Lab** to learn more about how `predictive modeling <https://learn.amperity.com/predictive-course>`__ |ext_link| can help your brand. Registration is required.
 
 .. models-learning-lab-end
 

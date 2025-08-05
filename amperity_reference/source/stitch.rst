@@ -45,18 +45,9 @@ Framework to Unify Data in Industrial Applications <https://docs.amperity.com/do
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   Learn more about how Stitch evaluates all of your brand's data to discover the hidden connections in your customer records that correctly identify all of your unique customers.
 
-      * - .. image:: ../../images/learning-lab-stitch-howitworks.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Learn more about how Stitch evaluates all of your brand's data to discover the hidden connections in your customer records that correctly identify all of your unique customers.
-
-          Open **Learning Lab** to learn more about `How Stitch Works <https://learn.amperity.com/how-stitch-works-1>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** to learn more about `How Stitch Works <https://learn.amperity.com/how-stitch-works-1>`__ |ext_link|. Registration is required.
 
 .. stitch-learning-lab-end
 
