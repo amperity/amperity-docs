@@ -852,7 +852,7 @@ A Profile API index can be configured to be refreshed as part of a scheduled wor
 .. image:: ../../images/mockup-activation-scheduled-profile-api.png
    :width: 420 px
    :alt: Refresh a Profile API index as part of a scheduled workgroup.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. profile-api-enable-run-as-workflow-end

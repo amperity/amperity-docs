@@ -948,7 +948,7 @@ Common causes of skew
 Common causes of skew include:
 
 * Unintended duplication of values in upstream tables. Removing this duplication helps prevent skew.
-* Values that are not needed in the final output, including **NULL** values or placeholder for **NULL** values, such as "1900-01-01". Filter these values out to prevent them from causing skew.
+* Values that are not needed in the final output, including **NULL** values or placeholders for **NULL** values, such as "1900-01-01". Filter these values out to prevent them from causing skew.
 
   If these values are required, one approach is to replace them with a primary key. For example:
 
@@ -1026,7 +1026,7 @@ The following SQL query can help find **JOIN** operations with high duplication 
 
    .. code-block:: none
       :linenos:
-      :emphasize-lines: 2
+      :emphasize-lines: 2-4
 
       SELECT
         {field1}
@@ -1038,7 +1038,7 @@ The following SQL query can help find **JOIN** operations with high duplication 
       LEFT JOIN {tableC} c
       ON b.{joinkey}2 = c.{joinkey}2
 
-   If "Table A" has a lot of keys that are not present in "Table B" then the **LEFT JOIN** operation between those tables will result in an intermediate table with many records where the value is **NULL**. This will create skew during the second **JOIN** operation between tables B and C.
+   If "Table A" has many keys that are not present in "Table B" then the **LEFT JOIN** operation between those tables will result in an intermediate table with many records where the value is **NULL**. This will create skew during the second **JOIN** operation between tables B and C.
 
 .. sql-spark-skew-avoiding-join-operations-note-end
 

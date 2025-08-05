@@ -76,7 +76,7 @@ Send query results to downstream workflows and to support all of your brand's ma
 
 .. grid-queries-destinations-about-grid-start
 
-.. grid:: 1 1 2 3
+.. grid:: 1 1 2 2
    :gutter: 2
    :padding: 0
    :class-row: surface
@@ -227,6 +227,9 @@ Send query results to downstream workflows and to support all of your brand's ma
 
    .. grid-item-card:: PowerReviews
       :link: destination_powerreviews.html
+
+   .. grid-item-card:: Reddit Ads
+      :link: destination_reddit_ads.html
 
    .. grid-item-card:: Sailthru
       :link: destination_sailthru.html
@@ -489,6 +492,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Persado <destination_persado>
    Pinterest <destination_pinterest>
    PowerReviews <destination_powerreviews>
+   Reddit Ads <destination_reddit_ads>
    Sailthru <destination_sailthru>
    Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>
    SFTP <destination_sftp>

@@ -25,7 +25,7 @@ Predict customer behavior, such as customer lifetime value, churn propensity, pr
 
 .. grid-attributes-predictive-grid-start
 
-.. grid:: 1 1 2 3
+.. grid:: 1 1 2 2
    :gutter: 2
    :padding: 0
    :class-row: surface

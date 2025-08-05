@@ -7,11 +7,11 @@
 
 .. meta::
     :description lang=en:
-        Use segments and campaigns to send audiences from Amperity to Reddit Ads.
+        Use queries and orchestrations to send audiences from Amperity to Reddit Ads.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use segments and campaigns to send audiences from Amperity to Reddit Ads.
+        Use queries and orchestrations to send audiences from Amperity to Reddit Ads.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
