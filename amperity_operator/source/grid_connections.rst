@@ -49,7 +49,7 @@ Set up inbound and outbound connections between Amperity and other applications 
       :link: api_profile.html
 
    .. grid-item-card:: Sources
-      :link: ../sources.html
+      :link: grid_sources.html
 
    .. grid-item-card:: Streaming API endpoints
       :link: api_streaming.html
@@ -59,7 +59,7 @@ Set up inbound and outbound connections between Amperity and other applications 
 
 .. toctree::
    :caption: Connections
-   :maxdepth: 2
+   :maxdepth: 3
    :hidden:
 
    Bridges <grid_bridge>
@@ -67,4 +67,5 @@ Set up inbound and outbound connections between Amperity and other applications 
    Destinations <grid_destinations>
    Offline events <grid_events>
    Profile API endpoints <api_profile>
+   Sources <grid_sources>
    Streaming API endpoints <api_streaming>
