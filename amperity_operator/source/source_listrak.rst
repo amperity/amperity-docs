@@ -79,7 +79,7 @@ A |source-name| data source works like this:
 
    SMS profiles, opt-in / opt-out status, and subscription status using the `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|.
 
-   .. important:: You may configure one or both of these data sources.
+   .. important:: You may configure one or both of these data sources. In the case of both, you must configure them separately.
 
 #. Amperity pulls data from |source-name| using REST APIs, and then loads this data to Amperity as a feed that automatically assigns semantic tags to fields that contain customer PII.
 #. Domain tables within Amperity are refreshed.
