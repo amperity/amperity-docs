@@ -49,7 +49,7 @@ Set up inbound and outbound connections between Amperity and other applications 
       :link: api_profile.html
 
    .. grid-item-card:: Sources
-      :link: grid_sources.html
+      :link: sources.html
 
    .. grid-item-card:: Streaming API endpoints
       :link: api_streaming.html
@@ -67,5 +67,5 @@ Set up inbound and outbound connections between Amperity and other applications 
    Destinations <grid_destinations>
    Offline events <grid_events>
    Profile API endpoints <api_profile>
-   Sources <grid_sources>
+   Sources <sources>
    Streaming API endpoints <api_streaming>
