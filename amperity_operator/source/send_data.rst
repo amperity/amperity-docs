@@ -15,7 +15,7 @@
         General advice
 
 ==================================================
-General advice
+General advice for sending data
 ==================================================
 
 .. send-data-to-amperity-start
