@@ -68,7 +68,7 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       You must configure this destination for email or SMS:
+       You must configure this destination for email:
 
        **Email client ID and client secret**
 
@@ -91,8 +91,6 @@ Get details
 
        **List name**
           |checkmark-required| **Required**
-
-          (Applies to Email **and** SMS lists.)
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-list-name-start
@@ -188,7 +186,7 @@ Configure credentials
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
-       You must configure this destination for email or SMS:
+       You must configure this destination for email:
 
        **Email client ID and client secret**
 
@@ -283,8 +281,6 @@ Add destination
 
        **List name**
           |checkmark-required| **Required**
-
-          (Applies to Email **and** SMS lists.)
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-list-name-start
