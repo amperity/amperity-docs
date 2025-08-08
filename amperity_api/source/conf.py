@@ -60,7 +60,7 @@ html_title = "Amperity API"
 html_theme = "shibuya"
 #html_theme_path = ['../../_themes/']
 html_baseurl = "https://docs.amperity.com/api/"
-sitemap_url_scheme = "api/{link}"
+sitemap_url_scheme = "{link}"
 
 html_copy_source = False
 html_show_sourcelink = False

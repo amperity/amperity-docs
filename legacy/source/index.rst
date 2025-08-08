@@ -11,6 +11,7 @@ Site index
 .. toctree::
    :hidden:
 
+   api_profile
    configure_stitch
    couriers
    data_templates
