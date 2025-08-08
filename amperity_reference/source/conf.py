@@ -59,7 +59,7 @@ html_title = "Amperity"
 html_theme = "shibuya"
 #html_theme_path = ['../../_themes/']
 html_baseurl = "https://docs.amperity.com/reference/"
-sitemap_url_scheme = "reference/{link}"
+sitemap_url_scheme = "{link}"
 
 html_copy_source = False
 html_show_sourcelink = False
