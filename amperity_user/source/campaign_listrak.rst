@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Listrak
 .. |what-send| replace:: email address
 .. |what-enable| replace:: **email**
-.. |attributes-sent| replace:: |destination-name| requires email addresses; you may include additional customer profile attributes, including the non-required email address.
+.. |attributes-sent| replace:: |destination-name| requires email addresses; you may include additional customer profile attributes.
 
 
 .. meta::
@@ -127,9 +127,6 @@ Add to a campaign
        .. include:: ../../shared/channels.rst
           :start-after: .. channels-build-campaign-steps-edit-attributes-note-start
           :end-before: .. channels-build-campaign-steps-edit-attributes-note-end
-
-
-
 
 
 .. _channel-listrak-configure-default-attributes:
