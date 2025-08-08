@@ -447,8 +447,6 @@ and then use the lookup key in your workflow to return individual attribute valu
 Access token
 --------------------------------------------------
 
-.. TODO: We will want to update to be closer to this section: https://docs.amperity.com/operator/api_streaming.html#api-keys-and-jwts after we have the self-service access token feature in-place.
-
 .. profile-api-enable-api-jwt-start
 
 Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Profile API. A single access token may be used to access any endpoint in your tenant's Profile API.
@@ -1126,7 +1124,6 @@ The following sections describe some ways to use the Profile API:
 * :ref:`Braze Connected Content <profile-api-usecase-braze>`
 * :ref:`Hashed email profiles <profile-api-usecase-hashed-email-address-profiles>`
 * :ref:`Loyalty profiles <profile-api-usecase-loyalty-profiles>`
-* :ref:`Moveable Ink Studio <profile-api-usecase-moveable-ink-studio>`
 * :ref:`Server-side JavaScript in Salesforce Marketing Cloud <profile-api-usecase-ssjs-ssmc>`
 * :ref:`Wireless access points <profile-api-usecase-hashed-email-address-profiles-wireless>`
 
@@ -1462,20 +1459,6 @@ This message could be extended to include promos or offers or any type of additi
    {{ end }}
 
 .. profile-api-usecase-loyalty-profiles-end
-
-
-.. _profile-api-usecase-moveable-ink-studio:
-
-Moveable Ink Studio
---------------------------------------------------
-
-.. include:: ../../amperity_operator/source/destination_moveableink.rst
-   :start-after: .. destination-moveableink-intro-start
-   :end-before: .. destination-moveableink-intro-end
-
-.. include:: ../../amperity_operator/source/destination_moveableink.rst
-   :start-after: .. destination-moveableink-configure-start
-   :end-before: .. destination-moveableink-configure-end
 
 
 .. _profile-api-usecase-ssjs-ssmc:
