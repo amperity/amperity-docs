@@ -5133,7 +5133,11 @@ A product recommendation predicts which products a given customer is most likely
 
 .. term-profile-api-start
 
-The Profile API is a RESTful API for building custom indexes against unified customer profiles to enable any downstream workflow.
+The Profile API enables your brand to access customer profiles using a collection of RESTful API endpoints to build and support real-time use cases:
+
+* Identify returning customers
+* Personalize welcome messages and emails
+* Extend customer profiles for campaigns managed from Braze, Movable Ink, Criteo, Salesforce Marketing Cloud, and other downstream marketing applications.
 
 .. term-profile-api-end
 

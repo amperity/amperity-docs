@@ -25,12 +25,6 @@ Profile API
 
 .. admonition:: Amperity Learning Lab
 
-   The Profile API enables your brand to access customer profiles using a collection of RESTful API endpoints to build and support real-time use cases:
-
-   * Identify returning customers
-   * Personalize welcome messages and emails
-   * Extend customer profiles for campaigns managed from Braze, Movable Ink, Criteo, Salesforce Marketing Cloud, or other downstream marketing applications.
-
    Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://learn.amperity.com/profile-api>`__ |ext_link|. Registration is required.
 
 .. api-profile-learning-lab-end
