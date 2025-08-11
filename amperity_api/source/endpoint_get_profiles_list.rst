@@ -126,24 +126,9 @@ The following table describes the parameters that may be used with the **GET /in
 
        Apply additional filters to the request to narrow the response to return a specific set of profile attributes.
 
-       For example, to return a profile for "Daniel Kulhman":
-
-       .. code-block:: none
-
-          filter[first_name]=Daniel \
-          &filter[last_name]=Kulhman
-
-       A complete request for "Daniel Kulhman" is similar to:
-
-       .. code-block:: bash
-
-          curl --request GET \
-                 'https://tenant.amperity.com/api/indexes/{id}/profiles \
-                 &filter[first_name]=Daniel \
-                 &filter[last_name]=Kulhman' \
-                 --header 'amperity-tenant: {tenant}' \
-                 --header 'api-version: 2025-07-31' \
-                 --header 'Authorization: Bearer {token}'
+	   .. include:: ../../amperity_operator/source/api_profile.rst
+	      :start-after: .. profile-api-howitworks-filter-fields-example-start
+	      :end-before: .. profile-api-howitworks-filter-fields-example-end
 
 
    * - **limit**
