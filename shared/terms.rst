@@ -5133,7 +5133,7 @@ A product recommendation predicts which products a given customer is most likely
 
 .. term-profile-api-start
 
-The Profile API is a RESTful API that supports building custom endpoints against unified customer profiles to enable any downstream workflow.
+The Profile API is a RESTful API for building custom indexes against unified customer profiles to enable any downstream workflow.
 
 .. term-profile-api-end
 
