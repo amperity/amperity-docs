@@ -24,38 +24,34 @@ EditPad Pro is recommended for PCs and TextMate is recommended for macOS. You ma
 #. Does not use tabs instead of spaces
 
 
-
 Pull the Amperity docs repo
 ==================================================
 
-Download the following GitHub repo using GitHub Desktop:
+Download the https://github.com/amperity/amperity-docs GitHub repo using GitHub Desktop.
 
-https://github.com/amperity/amperity-docs
-
-This repo contains a functioning version of Amperity docs with the Shibuya theme applied with some layout/theme tweaks and updated navigation. It's not done, but it's functional and works.
 
 Create Python virtual environment
 ==================================================
 
-Run the following commands to create a Python virtual environment:
+Run the following commands to create a Python virtual environment.
 
-#. $ ``cd documents/github/amperity-docs-test``
+#. $ ``cd documents/github/amperity-docs``
 #. $ ``python3 -m venv .venv``
 #. $ ``source .venv/bin/activate``
-#. $.venv ``python3 -m pip install sphinx``
-#. $.venv ``sphinx-build --version``
+#. (.venv) $ ``python3 -m pip install sphinx``
+#. (.venv) $ ``sphinx-build --version``
 
    Returns something like:
 
    "sphinx-build 7.4.7"
 
+.. note:: ``(.venv)`` isn't part of the command you should run. This just means "From the Python virtual environment, run the command after ``$``."
 
-Note. The ``$.venv`` isn't part of the command you should run. This just means "In the Python virtual environment, run this command".
 
 Install dependencies
 ==================================================
 
-In the same virtual environment, run the following commands:
+In the same virtual environment, run the following commands to install the theme and a collection of plugins required by the theme.
 
 #. $.venv ``pip install shibuya``
 #. $.venv ``pip install sphinx-togglebutton``
@@ -70,13 +66,24 @@ In the same virtual environment, run the following commands:
 Build the docs
 ==================================================
 
-Open a new command shell window, and then run the following commands:
+Open a new command shell window, and then run the following commands.
 
 #. $ ``cd documents/github/amperity-docs``
 #. $ ``make``
-#. $ ``make serve``
-#. Open another command shell to run the ``make`` command and regular docs development.
 
+   This will build all of the docs and place the output in the ``/build`` directory within the ``amperity-docs`` repo.
+
+
+View the docs in localhost
+==================================================
+
+Open a new command shell window, and then run the following commands.
+
+#. $ ``cd documents/github/amperity-docs``
+#. $ ``make serve``
+
+   This starts a local server for the contents of the ``/build`` directory.
+#. Open a browser and enter the following URL: ``http://localhost:8080/``.
 
 
 .. _contributing-set-up-environment-venv:
