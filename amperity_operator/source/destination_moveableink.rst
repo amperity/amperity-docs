@@ -69,7 +69,7 @@ Review the following details before configuring Profile API endpoints for use wi
        * :ref:`Add an API key for Moveable Ink <destination-moveableink-configure-profile-api-key>`
        * :ref:`Generate an access token <destination-moveableink-configure-profile-api-token>`
        * :ref:`Add the Profile API index <destination-moveableink-configure-profile-api-index>`
-       * :ref:`Copy the lookup key <destination-moveableink-configure-profile-api-lookup-key>`
+       * :ref:`Copy the profile ID field <destination-moveableink-configure-profile-id-field>`
        * :ref:`Copy the index ID <destination-moveableink-configure-profile-api-index-id>`
        * :ref:`Generate the endpoint <destination-moveableink-configure-profile-api-generate>`
        * :ref:`Copy the tenant ID <destination-moveableink-configure-profile-api-tenant>`
@@ -133,18 +133,24 @@ An index must be defined for each query that is used to generate an endpoint for
 .. api-profile-add-index-end
 
 .. include:: ../../amperity_operator/source/api_profile.rst
-   :start-after: .. api-profile-add-index-steps-start
-   :end-before: .. api-profile-add-index-steps-end
+   :start-after: .. profile-api-howitworks-indexes-start
+   :end-before: .. profile-api-howitworks-indexes-end
 
 
-.. _destination-moveableink-configure-profile-api-lookup-key:
+.. _destination-moveableink-configure-profile-id-field:
 
-Copy the lookup key
+Copy the profile ID field
 ==================================================
 
 .. include:: ../../amperity_operator/source/api_profile.rst
-   :start-after: .. profile-api-howitworks-lookup-keys-start
-   :end-before: .. profile-api-howitworks-lookup-keys-end
+   :start-after: .. profile-api-howitworks-profile-id-field-start
+   :end-before: .. profile-api-howitworks-profile-id-field-end
+
+**Verify the list of filter fields**
+
+.. include:: ../../amperity_operator/source/api_profile.rst
+   :start-after: .. profile-api-howitworks-filter-fields-start
+   :end-before: .. profile-api-howitworks-filter-fields-end
 
 
 .. _destination-moveableink-configure-profile-api-index-id:
@@ -232,7 +238,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **User ID**
 
-       The user ID is a field within the Profile API index that is configured as the :ref:`lookup key <destination-moveableink-configure-profile-api-lookup-key>`.
+       The user ID is a field within the Profile API index that is configured as the :ref:`profile ID field <destination-moveableink-configure-profile-id-field>`.
 
        **Tenant ID**
 
