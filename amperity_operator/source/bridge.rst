@@ -104,9 +104,6 @@ Amperity Bridge for Snowflake
 
 .. bridge-sync-data-with-snowflake-start
 
-Amperity Bridge for Snowflake Bridge is a first-class bi-directional integration that leverages secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
-
 Amperity Bridge for Snowflake is a first-class integration that leverages secure data sharing to enable :doc:`bi-directional data access between Amperity and Snowflake <bridge_snowflake>` without copying data or scheduling ETL workloads.
 
 .. bridge-sync-data-with-snowflake-end
-.. 
