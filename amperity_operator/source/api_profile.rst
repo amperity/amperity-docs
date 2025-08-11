@@ -25,12 +25,11 @@ Profile API
 
 .. admonition:: Amperity Learning Lab
 
-   The Profile API enables your brand to access customer profile indexes using a collection of RESTful API endpoints to build and support real-time use cases:
+   The Profile API enables your brand to access customer profiles using a collection of RESTful API endpoints to build and support real-time use cases:
 
    * Identify returning customers
-   * Customize welcome messages
-   * Personalize emails
-   * Extend customer profiles for campaigns managed from Braze, Moveable Ink, Criteo, Salesforce Marketing Cloud, or other downstream marketing applications.
+   * Personalize welcome messages and emails
+   * Extend customer profiles for campaigns managed from Braze, Movable Ink, Criteo, Salesforce Marketing Cloud, or other downstream marketing applications.
 
    Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://learn.amperity.com/profile-api>`__ |ext_link|. Registration is required.
 
@@ -46,10 +45,12 @@ How the Profile API works
 
 Use the profile endpoints in the Amperity API to access customer profile indexes in your Amperity tenant. Any collection of customer profile attributes that can be included in a customer 360 table can be accessed from a Profile API endpoint.
 
+Each endpoint is defined by a query that you build in the **Queries** page, after which it may be generated as an index within the Profile API. A query defines an index, which is set of fields that exists within your unified customer profiles.
+
 Use Profile API endoints to support use cases, such as:
 
 * Loyalty programs
-* Personalization for omnichannel customers that log into your website
+* Personalize the experience for omnichannel customers that log into your website
 * Using extended profile attributes with downstream systems, such as Braze, Cordial, and Salesforce Marketing Cloud
 * Most recent purchases, favorite products, or other aspects of your product catalog
 * Real-time personalization for websites
@@ -288,7 +289,9 @@ Profile ID field
 
 .. profile-api-howitworks-profile-id-field-start
 
-A profile ID is a unique identifier for individual customer profiles. A request to the Profile API that returns a unique profile is identified by the profile ID and returns the collection of filter fields defined for the index.
+A profile ID is a unique identifier for individual customer profiles. Use the **GET /indexes/{id}/profiles** endpoint to access customer profiles using 1:1 lookups to enable personalization scenarios.
+
+A request to the **GET /indexes/{id}/profiles** endpoint returns a unique profile identified by the profile ID and any filter fields included in the request.
 
 The value for the lookup key must be a unique identifier. For example:
 
@@ -316,7 +319,7 @@ Filter fields
 
 .. profile-api-howitworks-filter-fields-start
 
-Filter fields allow requests to the **GET /indexes/{id}/profiles** endpoint to be filtered on each field that is included in the request.
+Filter fields allow requests to the **GET /indexes/{id}/profiles** endpoint to be filtered on each field that is included in the request. Use filter fields to support use cases with multiple matching fields, such as "Get all profiles associated with a reservation ID".
 
 Filter fields must be defined in the query and the name of the filter field is the same as the name of the field in the query.
 
