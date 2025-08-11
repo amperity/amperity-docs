@@ -49,6 +49,11 @@ An |destination-name| destination works like this:
 
 #. Use a query to build a list of customers that will be sent SMS messages or emails.
 #. Configure Amperity to use an orchestration to send audience segments to |destination-name|.
+
+   .. include:: ../../amperity_operator/source/destination_attentive_mobile_api.rst
+      :start-after: .. destination-attentive-mobile-api-attributes-important-start
+      :end-before: .. destination-attentive-mobile-api-attributes-important-end
+
 #. Send a test audience from Amperity, and then from within |destination-name| verify that the **Segments** page has the list of customers that you sent from Amperity.
 
    .. note::

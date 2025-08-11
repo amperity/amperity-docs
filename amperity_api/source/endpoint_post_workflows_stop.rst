@@ -75,7 +75,7 @@ A request to the **POST workflow/runs/{id}/stop** endpoint is similar to:
 .. code-block:: rest
 
    curl --request POST \ 
-          "https://app.amperity.com/api/workflow/runs/{id}/stop' \
+          'https://app.amperity.com/api/workflow/runs/{id}/stop' \
         --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'

@@ -17,25 +17,19 @@
 Profile API
 ==================================================
 
-.. important:: The Profile API documented on this page (right now) will be deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__. The use cases in this topic are true, but should be built using the new endpoints.
-
 .. include:: ../../shared/terms.rst
    :start-after: .. term-profile-api-start
    :end-before: .. term-profile-api-end
-
-.. api-profile-about-start
-
-The Profile API is unique to your tenant. The endpoints that are enabled for your use cases do not exist until you build them.
-
-.. api-profile-about-start
 
 .. api-profile-learning-lab-start
 
 .. admonition:: Amperity Learning Lab
 
-   The Profile API enables your brand to build a collection of RESTful API endpoints that are uniquely specific to your brand's use cases.
+   The Profile API enables your brand to access customer profiles using a collection of RESTful API endpoints to build and support real-time use cases:
 
-   For example, identify returning customers, customize welcome messages, personalize emails, or extend the profiles your brand uses for campaigns in Braze, Criteo, or Salesforce Marketing Cloud.
+   * Identify returning customers
+   * Personalize welcome messages and emails
+   * Extend customer profiles for campaigns managed from Braze, Movable Ink, Criteo, Salesforce Marketing Cloud, or other downstream marketing applications.
 
    Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://learn.amperity.com/profile-api>`__ |ext_link|. Registration is required.
 
@@ -49,19 +43,18 @@ How the Profile API works
 
 .. profile-api-howitworks-start
 
-Each endpoint is defined by a query that you build in the **Queries** page, after which it may be generated as an index within the Profile API. A query defines an index, which is set of fields that exists within your unified customer profiles. A unique identifier acts as the lookup key to that index for the downstream workflow.
+Use the profile endpoints in the Amperity API to access customer profile indexes in your Amperity tenant. Any collection of customer profile attributes that can be included in a customer 360 table can be accessed from a Profile API endpoint.
 
-You can build as many endpoints as your downstream workflows require. Each individual endpoint can represent any section of your unified customer profiles:
+Each endpoint is defined by a query that you build in the **Queries** page, after which it may be generated as an index within the Profile API. A query defines an index, which is set of fields that exists within your unified customer profiles.
+
+Use Profile API endoints to support use cases, such as:
 
 * Loyalty programs
-* Profiles built from hashed email addresses to support personalization for omnichannel customers
-* Extended profile attributes for use with downstream systems, such as Braze, Cordial, and Salesforce Marketing Cloud
+* Personalize the experience for omnichannel customers that log into your website
+* Using extended profile attributes with downstream systems, such as Braze, Cordial, and Salesforce Marketing Cloud
 * Most recent purchases, favorite products, or other aspects of your product catalog
-* Personalization for websites, product suggestions, etc.
-
-Any set of results that you can return with a query in Amperity can be enabled for use as an endpoint for your tenant's Profile API. Use any unique identifier in your unified customer profiles as the lookup key, use that lookup key to access individual attributes located at that endpoint, and then the on-demand access to your unified customer profiles to light up your use cases.
-
-.. tip:: :ref:`Use more (smaller) indexes instead of fewer (larger) indexes! <profile-api-response-times>` Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
+* Real-time personalization for websites
+* Product suggestions
 
 .. profile-api-howitworks-end
 
@@ -75,9 +68,10 @@ Profile API endpoints
 
 The Profile API has the following endpoints:
 
-* :ref:`GET indexes <profile-api-howitworks-endpoints-get-indexes>`
-* :ref:`GET indexes/{index-id} <profile-api-howitworks-endpoints-get-index>`
-* :ref:`Profile API responses <profile-api-howitworks-endpoints-responses>`
+* :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes>`
+* :ref:`GET /indexes/{id} <profile-api-howitworks-endpoints-get-indexes-id>`
+* :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes-id-profiles>`
+* :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes-id-profiles-id>`
 
 .. profile-api-howitworks-endpoints-end
 
@@ -97,253 +91,173 @@ The Profile API has the following endpoints:
 
 .. _profile-api-howitworks-endpoints-get-indexes:
 
-GET indexes
+GET /indexes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. profile-api-howitworks-endpoints-get-indexes-start
+.. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
+   :start-after: .. endpoint-get-profile-index-start
+   :end-before: .. endpoint-get-profile-index-end
 
-Use the **indexes** endpoint to get a list of indexes that exist in your tenant's Profile API.
+**Base URL**
 
-The URL for this endpoint is:
-
-::
-
-   https://{tenant-domain}/attribute/v0/indexes
-
-.. tip:: You can copy the full URL from the **Destinations** page (under **Profile API**, from the |fa-kebab| menu for an endpoint, select **Copy URL**), and then use the copied URL in the request.
-
-   .. image:: ../../images/api-profile-endpoint-copy-url.png
-      :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
-      :align: left
-      :class: no-scaled-link
-
-   The copied URL contains the correct value for the selected endpoint's **{tenant-domain}**; change the **{index-id}** to "indexes".
+.. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
+   :start-after: .. endpoint-get-profile-index-base-url-start
+   :end-before: .. endpoint-get-profile-index-base-url-end
 
 **cURL example**
 
-::
+.. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
+   :start-after: .. endpoint-get-profile-index-request-start
+   :end-before: .. endpoint-get-profile-index-request-end
 
-   curl -H "X-AMPERITY-TENANT: {tenant-id}" \
-        -H "Authorization: Bearer ${access-token}" \
-        -H "Content-Type: application/json" \
-        'https://{tenant-domain}/attribute/v0/indexes'
+**Request parameters**
 
-where
-
-* **{tenant-id}** is the name of your tenant
-* **{access-token}** is the access token
-* **{tenant-domain}** is the domain name for your tenant
-
-.. note:: The URL should not have a trailing slash.
+.. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
+   :start-after: .. endpoint-get-profile-index-request-parameters-start
+   :end-before: .. endpoint-get-profile-index-request-parameters-end
 
 **Response**
 
-The response returns a list of endpoints (indexes) that are available within your tenant's Profile API. For example, a list of three indexes (Braze User Profiles, Product Catalog, and Hashed Email Profiles) will have a response similar to:
+.. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
+   :start-after: .. endpoint-get-profile-index-response-200ok-start
+   :end-before: .. endpoint-get-profile-index-response-200ok-end
 
-.. code-block:: salt
-   :linenos:
-
-   {"indexes":
-     [
-       {"id":"ix-aBCdeFgh",
-         "name":"Braze User Profiles",
-         "field":"external_id",
-         "build": {
-           "created_at":"2023-05-31T08:15:00.000Z",
-           "updated_at":"2023-05-31T08:15:00.000Z",
-           "build_id":"idb-ABc12dE3FG4"
-         }
-       },
-       {"id":"ix-1AbcD234E",
-         "name":"Product Catalog",
-         "field":"product_id",
-         "build": {
-           "created_at":"2023-05-31T09:30:00.000Z",
-           "updated_at":"2023-06-01T09:30:00.000Z",
-           "build_id":"idb-12abcD3EFG4"
-         }
-       },
-       {"id":"ix-01AbcdE23",
-         "name":"Hashed Email Profiles",
-         "field":"hashed_email",
-         "build": {
-           "created_at":"2023-05-31T10:45:00.000Z",
-           "updated_at":"2023-06-01T10:45:00.000Z",
-           "build_id":"idb-acbdEFGHIj1"
-         }
-       }
-     ]
-   }
-
-.. profile-api-howitworks-endpoints-get-indexes-end
+.. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
+   :start-after: .. endpoint-get-profile-index-response-parameters-start
+   :end-before: .. endpoint-get-profile-index-response-parameters-end
 
 
-.. _profile-api-howitworks-endpoints-get-index:
+.. _profile-api-howitworks-endpoints-get-indexes-id:
 
-GET indexes/{index-id}
+GET /indexes/{id}
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. profile-api-howitworks-endpoints-get-index-start
+.. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
+   :start-after: .. endpoint-get-profile-index-id-start
+   :end-before: .. endpoint-get-profile-index-id-end
 
-Use the **indexes/{index-id}** endpoint to use the lookup key for **{index-id}** to access individual attributes associated with that lookup key.
+**Base URL**
 
-The URL for this endpoint is:
+.. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
+   :start-after: .. endpoint-get-profile-index-id-base-url-start
+   :end-before: .. endpoint-get-profile-index-id-base-url-end
 
-::
+**cURL example**
 
-   https://{tenant-domain}/attribute/v0/indexes/{index-id}
+.. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
+   :start-after: .. endpoint-get-profile-index-id-request-start
+   :end-before: .. endpoint-get-profile-index-id-request-end
 
-where **{index-id}** :ref:`matches the index ID <profile-api-howitworks-index-ids>` that is configured for that endpoint in Amperity. Individual attributes are available from **{index-id}** by using the lookup key for that index to return specific named attributes.
+**Request parameters**
 
-.. tip:: You can copy the full URL from the **Destinations** page (under **Profile API**, from the |fa-kebab| menu for an endpoint, select **Copy URL**), and then use the copied URL in the request.
+.. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
+   :start-after: .. endpoint-get-profile-index-id-request-parameters-start
+   :end-before: .. endpoint-get-profile-index-id-request-parameters-end
 
-   .. image:: ../../images/api-profile-endpoint-copy-url.png
-      :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
-      :align: left
-      :class: no-scaled-link
+**Response**
 
-   The copied URL contains the correct values for the selected endpoint's **{tenant-domain}** and **{index-id}**. Append the lookup key using **?key={key-value}** to the copied URL to return a single unique record *or* a list of attributes associated with that row.
+.. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
+   :start-after: .. endpoint-get-profile-index-id-response-200ok-start
+   :end-before: .. endpoint-get-profile-index-id-response-200ok-end
 
-**cURL example for a single unique record**
-
-::
-
-   curl -H "X-AMPERITY-TENANT: {tenant-id}" \
-        -H "Authorization: Bearer ${access-token}" \
-        -H "Content-Type: application/json" \
-        'https://{tenant-domain}/attribute/v0/indexes/{index-id}\
-        ?key={key-value}'
-
-where
-
-* **{tenant-id}** is the name of your tenant
-* **{access-token}** is the access token
-* **{tenant-domain}** is the domain name for your tenant
-* **{index-id}** is the index ID for the endpoint
-* **{key-value}** is the lookup key for the request
-
-  If an attribute is not unique for the specified lookup key value, a value will be returned, but it may not be the value you were expecting.
-
-.. note:: The URL should not have a trailing slash.
-
-**cURL example for multiple matching records**
-
-::
-
-   curl -H "X-AMPERITY-TENANT: {tenant-id}" \
-        -H "Authorization: Bearer ${access-token}" \
-        -H "Content-Type: application/json" \
-        'https://{tenant-domain}/attribute/v0/indexes/{index-id}\
-        ?key={key-value}\
-        &all_matches=true'
-
-where all of the parameters are the same as the example request for a single unique record *with the addition of the* **all_matches=true** paramater, which returns all matching records :ref:`up to the configured limit for this endpoint <profile-api-enable-add-index>`. Each returned record will contain its own list of attributes.
-
-**Responses**
-
-The structure of the response depends on the attributes that are available within the index. The body of the response is similar to:
-
-.. code-block:: salt
-   :linenos:
-
-   {"attributes"
-     {"value" {"attribute": "value"}, "lookup-key" "lookup-key-value"},
-     "metadata" {
-       "build-id" "build-id-value",
-       "index-id" "index-id-value"}
-   }
-
-For example, an index that uses "loyalty_id" as the lookup key, and returns "firstname", "lastname" for loyalty ID "a-01234-b" for a customer named "Dennis Terrell" will have a response similar to:
-
-.. code-block:: salt
-   :linenos:
-
-   {
-     "attributes": {
-       "value": {
-         "loyalty_id": "a-01234-b",
-         "firstname": "Dennis",
-         "lastname": "Terrell"
-       },
-       "key": "a-01234-b"
-     },
-     "metadata": {
-       "build-id": "idb-1ABcD2EFGhI",
-       "index-id": "ix-aBCdeFgh"
-     }
-   }
-
-An index that returns multiple matching records will have a response similar to:
-
-.. code-block:: salt
-   :linenos:
-
-   {
-     "attributes": {
-       "value": [
-         { 
-           "loyalty_id": "a-01234-b",
-           "lastname": "Warren",
-           "firstname": "Steven"
-         },
-         {
-           "loyalty_id": "c-56789-d",
-           "lastname": "Warren",
-           "firstname": "Josh"
-         }
-       ],
-       "key": "Warren"
-     },
-     "metadata": {
-       "build-id": "idb-1ABcD2EFGhI",
-       "index-id": "ix-aBCdeFgh"
-     }
-   }
-
-.. profile-api-howitworks-endpoints-get-index-end
+.. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
+   :start-after: .. endpoint-get-profile-index-id-response-parameters-start
+   :end-before: .. endpoint-get-profile-index-id-response-parameters-end
 
 
-.. _profile-api-howitworks-endpoints-responses:
+.. _profile-api-howitworks-endpoints-get-indexes-id-profiles:
 
-Profile API responses
+GET /indexes/{id}/profiles
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. profile-api-howitworks-endpoints-responses-start
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-start
+   :end-before: .. endpoint-get-profiles-list-end
 
-The Profile API returns the following HTTP status codes:
+**Base URL**
 
-**HTTP status codes**
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-base-url-start
+   :end-before: .. endpoint-get-profiles-list-base-url-end
 
-.. list-table::
-   :widths: 20 80
-   :header-rows: 1
+**cURL example**
 
-   * - Status code
-     - Description
-   * - **200 OK**
-     - The requested value(s) for the specified lookup key were returned successfully.
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-request-start
+   :end-before: .. endpoint-get-profiles-list-request-end
 
-   * - **401 Unauthorized**
-     - Verify the access token, index ID, and {tenant-id} used to make the request.
+**Request parameters**
 
-   * - **403 Forbidden**
-     - Verify that the API key has access to the Profile API endpoint.
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-request-parameters-start
+   :end-before: .. endpoint-get-profiles-list-request-parameters-end
 
-   * - **404 Not Found**
-     - The requested value was not found. For example:
+**Response**
 
-       * 404: No value found for key: "key-value".
-       * 404: No build found for index-id: "index-id".
-       * 404: No node found for build-id: "build-id".
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-response-200ok-start
+   :end-before: .. endpoint-get-profiles-list-response-200ok-end
 
-       .. note:: A 404 Not Found status code will be returned when the URL contains a trailing slash.
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-response-parameters-start
+   :end-before: .. endpoint-get-profiles-list-response-parameters-end
 
-   * - **503 Service Unavailable**
-     - A generic error has occurred. The service may be unavailable. Verify the configuration of the request and the expected response values and try again.
 
-.. profile-api-howitworks-endpoints-responses-end
+.. _profile-api-howitworks-endpoints-get-indexes-id-profiles-id:
+
+GET /indexes/{id}/profiles/{id}
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_api/source/endpoint_get_profile.rst
+   :start-after: .. endpoint-get-profile-start
+   :end-before: .. endpoint-get-profile-end
+
+**Base URL**
+
+.. include:: ../../amperity_api/source/endpoint_get_profile.rst
+   :start-after: .. endpoint-get-profile-base-url-start
+   :end-before: .. endpoint-get-profile-base-url-end
+
+**cURL example**
+
+.. include:: ../../amperity_api/source/endpoint_get_profile.rst
+   :start-after: .. endpoint-get-profile-request-start
+   :end-before: .. endpoint-get-profile-request-end
+
+**Request parameters**
+
+.. include:: ../../amperity_api/source/endpoint_get_profile.rst
+   :start-after: .. endpoint-get-profile-request-parameters-start
+   :end-before: .. endpoint-get-profile-request-parameters-end
+
+**Response**
+
+.. include:: ../../amperity_api/source/endpoint_get_profile.rst
+   :start-after: .. endpoint-get-profile-response-200ok-start
+   :end-before: .. endpoint-get-profile-response-200ok-end
+
+.. include:: ../../amperity_api/source/endpoint_get_profile.rst
+   :start-after: .. endpoint-get-profile-response-parameters-start
+   :end-before: .. endpoint-get-profile-response-parameters-end
+
+
+.. _profile-api-howitworks-indexes:
+
+Indexes
+--------------------------------------------------
+
+.. profile-api-howitworks-indexes-start
+
+An index defines a list of customer profile attributes that can be accused from a Profile API endpoint.
+
+The fields that are available from an index are defined by a query.
+
+* The attribute associated with the :ref:`profile ID field <profile-api-howitworks-profile-id-field>` must contain a unique identifier.
+* All attributes associated with :ref:`filter fields <profile-api-howitworks-filter-fields>` should have unique names
+
+Add an index from the **Profile API** tab on the **Destinations** page. Click the **Add index** button to configure the index settings.
+
+.. profile-api-howitworks-indexes-end
 
 
 .. _profile-api-howitworks-queries:
@@ -353,51 +267,86 @@ Queries
 
 .. profile-api-howitworks-queries-start
 
-A query defines the list of attributes that will be available from a Profile API endpoint, along with providing the lookup key that requests will use to return attribute values for the specified lookup key. Use the **Queries** page to build the query. Group all of the queries that support your tenant's Profile API use cases into the same folder.
+Each index is associated with a single query. The query must have a field that contains a unique identifier and at least one other field that can be returned by the request to the Profile API endpoint.
 
-.. tip:: All attribute names within a query that is used to build an endpoint for the Profile API should be unique to ensure that all attributes are unique by lookup key value in the index.
+The field with the unique identifier is the :ref:`profile ID field <profile-api-howitworks-profile-id-field>`.
 
-There are two requirements for queries that are used to define Profile API endpoints:
+.. tip:: Do not use non-hashed email addresses as a unique value for an index.
 
-#. One field must be usable as the lookup key for the index. The value for this field must be a unique identifier. For example, the Amperity ID, a loyalty ID, a customer ID, a unique identifier in a downstream workflow (such as the "external_id" used in Braze), a non-hashed email address, a hashed email address, and so on.
+Other fields may be configured as :ref:`filter fields <profile-api-howitworks-filter-fields>`. These fields may be included in the request to filter the request to the :ref:`GET /indexes/{id}/profiles <profile-api-howitworks-endpoints-get-indexes-id-profiles>` endpoint.
 
-   Use the unique identifier that works best for your use case. Each endpoint may specify its own lookup key. For example, for website personalization you might use a customer ID or a loyalty ID, but when building your marketing campaigns in Braze that bring your customers to that website, you could use the Braze "external_id" for the index.
-
-#. There must be at least one attribute in that query that can be returned by the request to the endpoint for the specified lookup key. There is no practical limit to the number of attributes that can be in the index, but it is recommended to keep the list of attributes specific to your use case.
-
-   Plan to use a variety of indexes to support a variety of use cases instead of using a single, large index. Some indexes, with the right combination of attributes, may be used to support multiple workflows.
+All fields in the query are returned by a request to the **GET /indexes/{id}/profiles** endpoint.
 
 .. profile-api-howitworks-queries-end
 
 
-.. _profile-api-howitworks-lookup-keys:
+.. _profile-api-howitworks-profile-id-field:
 
-Lookup keys
+Profile ID field
 --------------------------------------------------
 
-.. profile-api-howitworks-lookup-keys-start
+.. TODO: Shared with Movable Ink. No reference links.
 
-The lookup key for an index is the primary key for that index. The field in the index that acts as the lookup key must be a field that provides a unique identifier, such as the Amperity ID, a loyalty program ID, an ID that is unique in the downstream location from which the Profile API will be used to enable use cases, or some other identifier that allows a request to return a series of attributes that are associated with that unique identifier.
+.. profile-api-howitworks-profile-id-field-start
 
-Each endpoint must have a lookup key. You can find the lookup key for any endpoint from the **Lookup Key** column in the **Profile API** list:
+A profile ID is a unique identifier for individual customer profiles. Use the **GET /indexes/{id}/profiles** endpoint to access customer profiles using 1:1 lookups to enable personalization scenarios.
 
-.. image:: ../../images/api-profile-destinations-list-lookup-key.png
-   :width: 500 px
-   :alt: Copy the index ID for an endpoint in the Amperity Profile API.
-   :align: left
-   :class: no-scaled-link
+A request to the **GET /indexes/{id}/profiles** endpoint returns a unique profile identified by the profile ID and any filter fields included in the request.
 
-.. important:: The lookup key in the request must have an exact match within the index.
+The value for the lookup key must be a unique identifier. For example:
 
-   For example: "Dennis" must match with an uppercase "D" and "Dennis " must match with both an uppercase "D" *and* a trailing character.
+* A loyalty program ID
+* A hashed email address that is generated after a customer logs into a website using their email address
 
-   Because each endpoint is defined using SQL within the **Query Editor**, the point at which you will define the consistency for how your downstream use case will access that data is from within the **Query Editor**.
+  .. important:: Do not use non-hashed email addresses as a lookup key.
 
-   This should be done *before* making that query available to the Profile API.
+* A customer ID
+* A unique identifier used by a downstream workflow, such as the "external_id" field in Braze
 
-   Formatting requirements are often determined by how the downstream use case will access the Profile API endpoint. These requirements include the tools that you will use to access the Profile API and also the individuals within your organization who need to understand how that information should be accessed.
+.. TODO: Is this note still true?
 
-.. profile-api-howitworks-lookup-keys-end
+.. note:: A request made to the Profile API must have an exact match to a profile ID field value within the index. For example: "Dennis" must match with an uppercase "D" and "Dennis " must match with both an uppercase "D" *and* a trailing character.
+
+.. profile-api-howitworks-profile-id-field-end
+
+
+.. _profile-api-howitworks-filter-fields:
+
+Filter fields
+--------------------------------------------------
+
+.. TODO: Shared with Movable Ink. No reference links.
+
+.. profile-api-howitworks-filter-fields-start
+
+Filter fields allow requests to the **GET /indexes/{id}/profiles** endpoint to be filtered on each field that is included in the request. Use filter fields to support use cases with multiple matching fields, such as "Get all profiles associated with a reservation ID".
+
+Filter fields must be defined in the query and the name of the filter field is the same as the name of the field in the query.
+
+.. profile-api-howitworks-filter-fields-end
+
+.. profile-api-howitworks-filter-fields-example-start
+
+For example, to return a profile for "Daniel Kulhman":
+
+.. code-block:: none
+
+   filter[first_name]=Daniel \
+   &filter[last_name]=Kulhman
+
+A complete request for "Daniel Kulhman" is similar to:
+
+.. code-block:: bash
+
+   curl --request GET \
+        'https://tenant.amperity.com/api/indexes/{id}/profiles \
+        &filter[first_name]=Daniel \
+        &filter[last_name]=Kulhman' \
+        --header 'amperity-tenant: {tenant}' \
+        --header 'api-version: 2025-07-31' \
+        --header 'Authorization: Bearer {token}'
+
+.. profile-api-howitworks-filter-fields-example-end
 
 
 .. _profile-api-howitworks-index-ids:
@@ -407,37 +356,31 @@ Index IDs
 
 .. profile-api-howitworks-index-ids-start
 
-The index ID is a unique identifier for an endpoint. To make a request to an endpoint you must include the index ID in the URL for the request.
-
-The index ID is available from the **Profile API** list. For the endpoint, open the actions menu, and then select "Copy index ID".
-
-.. image:: ../../images/api-profile-destinations-list-index-ids.png
-   :width: 500 px
-   :alt: Copy the index ID for an endpoint in the Amperity Profile API.
-   :align: left
-   :class: no-scaled-link
-
-To make a request to a specific index, add the index ID to the end of the request URL:
+The index ID is a unique identifier for an index. To make a request to an endpoint add the index ID to the end of the request URL:
 
 ::
 
-   https://{tenant-domain}/attribute/v0/indexes/{index-id}
+   https://tenant.amperity.com/api/indexes?index-id={id}
 
-and then use the lookup key in your workflow to return individual attribute values in that index.
+The index ID is available from:
+
+* The **Profile API** tab on the **Destinations** page. For each endpoint, open the actions menu, and then select "Copy ID". 
+
+   .. image:: ../../images/api-profile-destinations-list-index-ids.png
+      :width: 500 px
+      :alt: Copy the index ID for an endpoint in the Amperity Profile API.
+      :align: left
+      :class: no-scaled-link
+
+* Returned by the :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes>` endpoint.
 
 .. profile-api-howitworks-index-ids-end
 
 .. profile-api-howitworks-index-ids-tip-start
 
-.. tip:: You can copy the full URL from the **Destinations** page (under **Profile API**, from the |fa-kebab| menu for an endpoint, select **Copy URL**), and then use the copied URL in the request.
+.. tip:: You can copy the URL for the :ref:`GET /indexes/{id}/profiles <profile-api-howitworks-endpoints-get-indexes-id-profiles>` endpoint from the **Profile API** tab on the **Destinations** page. From the |fa-kebab| menu for an endpoint, select **Copy URL**.
 
-   .. image:: ../../images/api-profile-endpoint-copy-url.png
-      :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
-      :align: left
-      :class: no-scaled-link
-
-   The copied URL contains the correct values for the selected endpoint's **{tenant-domain}** and **{index-id}**.
+   The copied URL contains the correct values for the selected endpoint's **{tenant}** and **{index-id}** request parameters.
 
 .. profile-api-howitworks-index-ids-tip-end
 
@@ -447,13 +390,11 @@ and then use the lookup key in your workflow to return individual attribute valu
 Access token
 --------------------------------------------------
 
-.. TODO: We will want to update to be closer to this section: https://docs.amperity.com/operator/api_streaming.html#api-keys-and-jwts after we have the self-service access token feature in-place.
-
 .. profile-api-enable-api-jwt-start
 
-Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Profile API. A single access token may be used to access any endpoint in your tenant's Profile API.
+Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Profile API.
 
-The access token is self-generated from the Amperity user interface and authorizes requests to all endpoints in the Profile API for your tenant. A self-generated access token ensures that only your team has access to the token and supports organizational security policies like periodic access token rotation.
+The access token is self-generated from the Amperity user interface and authorizes requests to all indexes in the Profile API for your tenant. A self-generated access token ensures that only your team has access to the token and supports organizational security policies like periodic access token rotation.
 
 .. image:: ../../images/api-keys-generate-access-token.png
    :width: 500 px
@@ -461,9 +402,7 @@ The access token is self-generated from the Amperity user interface and authoriz
    :align: left
    :class: no-scaled-link
 
-The access token must be available to each request made to the Profile API.
-
-.. TODO: Add here some info about the self-serve token once it's in the UI. The image steps step-by-step.
+The access token must be provided within each request made to the Profile API.
 
 .. profile-api-enable-api-jwt-end
 
@@ -475,9 +414,9 @@ Tenant ID
 
 .. profile-api-howitworks-tenant-id-start
 
-The tenant ID is a unique identifier for your tenant. To make a request to an endpoint you must include the tenant ID in the URL for the request.
+The tenant ID is a unique identifier for your tenant. To make a request to an index you must include the tenant ID in the URL for the request.
 
-The tenant ID is available from the **Profile API** list. For the endpoint, open the actions menu, and then select "Copy tenant ID".
+The tenant ID is available from the **Profile API** list. For the index, open the actions menu, and then select "Copy tenant ID".
 
 .. image:: ../../images/api-keys-copy-tenant-id.png
    :width: 500 px
@@ -493,11 +432,9 @@ The tenant ID is available from the **Profile API** list. For the endpoint, open
 Rate limit
 ==================================================
 
-.. profile-api-rate-limit-start
-
-The Profile API does not currently enforce a rate limit. A rate limit will be introduced at a point in the near future.
-
-.. profile-api-rate-limit-end
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-profile-start
+   :end-before: .. rate-limits-profile-end
 
 
 .. _profile-api-enable:
@@ -509,7 +446,6 @@ Configure the Profile API
 
 The Profile API must be configured for use in Amperity. This is done in a series of steps:
 
-#. :ref:`profile-api-enable-request`
 #. :ref:`profile-api-enable-build-query`
 #. :ref:`profile-api-enable-add-api-key`
 #. :ref:`profile-api-enable-generate-access-token`
@@ -522,56 +458,6 @@ The Profile API must be configured for use in Amperity. This is done in a series
 
 .. profile-api-enable-api-end
 
-.. profile-api-enable-api-note-start
-
-.. note:: For endpoints that are running in your production environment that are actively being used with workflows, you should be careful about making changes to the list of attributes that are available in the index and to the values that are contained within those attributes. There are two approaches you could take:
-
-   #. Use a sandbox to make changes directly to the "production" index, but run it from the sandbox to validate the changes and the effects those changes may have on the downstream workflow. This approach allows you to keep the same index ID in place and helps prevent disruption to any live Profile API integrations.
-
-   #. Build a new index that contains the changes, and then test those changes incrementally downstream on individual locations within the workflow. This requires updating the index ID in the downstream workflow.
-
-.. profile-api-enable-api-note-end
-
-
-.. _profile-api-enable-request:
-
-Request to enable
---------------------------------------------------
-
-.. profile-api-enable-request-start
-
-To enable the Profile API for your tenant:
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ (or send email to support@amperity.com) and request enabling the Profile API for your tenant.
-
-       Support will enable the Profile API on your tenant and will let you know when the process is completed.
-
-       .. important:: Your support representative will use SnapPass to provide the temporary access token for the Profile API. (Amperity is building an interface that will allow you to self-generate the access token for the Profile API. This will ensure that only your team has access to the tokens and will make it easier to follow your organization's security policies, such as periodically refreshing the access tokens.)
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - After the Profile API is enabled, the Destinations page is updated to show the list of endpoints available to the Profile API:
-
-       .. image:: ../../images/api-profile-destinations-list-empty.png
-          :width: 500 px
-          :alt: A list of endpoints for the Amperity Profile API.
-          :align: left
-          :class: no-scaled-link
-
-.. profile-api-enable-request-end
-
 
 .. _profile-api-enable-build-query:
 
@@ -580,11 +466,7 @@ Build a query
 
 .. profile-api-enable-build-query-start
 
-Build a query that contains the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to light up these workflows. Consider your goals for each workflow, build a query that returns the list of attributes (and lookup key) that enables that workflow.
-
-.. TODO: This admonition is the paragraph as the intro for the use cases section. Is fine for now.
-
-.. important:: The Profile API can support an unlimited number of potential use cases. All you need to do is imagine the use case, identify the requirements for building that use case for your downstream workflow, and then build a query in Amperity that can be used to generate an index that contains the attributes you need to light up that use case.
+Build a query that contains the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to define an index.
 
 .. profile-api-enable-build-query-end
 
@@ -633,21 +515,15 @@ An index must be defined for each query that is used to generate an endpoint for
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Open the **Destinations** page and click the **Add Index** button. This button is located to the right of the **Profile API** section header.
+     - Open the **Profile API** tab on the **Destinations** page. Click the **Add Index** button. This button is located to the right of the **Profile API** section header.
 
        This opens the **Add Index** dialog box.
 
-       .. image:: ../../images/api-profile-add-index-dialog-name.png
-          :width: 500 px
-          :alt: Add an index to the Profile API.
-          :align: left
-          :class: no-scaled-link
+       Give the index a name that clearly describes how it will be used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
 
-       Give the endpoint a name that clearly describes how it will be used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
+       Use a description to help other users in your tenant know what use case(s) this index enables.
 
-       Use a description to help other users in your tenant know what use case(s) this endpoint enables.
-
-       .. note:: The name of the index is informational only. Endpoints are listed alphabetically by name; endpoint names are not used within requests.
+       .. note:: The name of the index is informational only. Indexes are listed alphabetically by name; index names are not used within requests.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -655,81 +531,11 @@ An index must be defined for each query that is used to generate an endpoint for
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Select the query that will be used to generate the fields in the index, and then choose the field in that index that will be used as the lookup key.
+     - Select the query that will be used to generate the fields in the index, choose the field in that index that will be used as the profile ID field, and then choose additional filtering fields.
 
-       .. image:: ../../images/api-profile-add-index-dialog-query-lookup.png
-          :width: 500 px
-          :alt: Select the query from which the index is built, and then set the lookup key.
-          :align: left
-          :class: no-scaled-link
+       Define the run options, either as part of a scheduled workflow or manually.
 
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - Select the type of response this endpoint will provide.
-
-       **A single unique record**
-
-       Select the **Unique record** option to configure this endpoint to return only a single unique record.
-
-       .. image:: ../../images/api-profile-add-index-dialog-response-unique.png
-          :width: 500 px
-          :alt: Configure an endpoint to respond with unique records.
-          :align: left
-          :class: no-scaled-link
-
-       **A list of up to 10 matching records**
-
-       Select the **List of matching records** option to configure this endpoint to return a list of up to 10 matching records.
-
-       .. image:: ../../images/api-profile-add-index-dialog-response-many.png
-          :width: 500 px
-          :alt: Configure an endpoint to respond with unique records.
-          :align: left
-          :class: no-scaled-link
-
-       Use the dropdown lists to define the field that determines sort order, and then choose a direction (ascending or descending). The field that determines sort order may be the same field that is used as the lookup key.
-
-       Use the **LIMIT** setting to define the maximum number of matching records that may be in the list. This value must be at least 1 and cannot be more than 10.
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - Choose the method by which the index will be generated (over time). There are two options: after a courier group run or manually.
-
-       Choose **None** when setting up an index for the first time or for an index that requires asynchronous or infrequent regeneration.
-
-       .. image:: ../../images/api-profile-add-index-dialog-schedule-none.png
-          :width: 500 px
-          :alt: Configure an endpoint to regenerate manually.
-          :align: left
-          :class: no-scaled-link
-
-       .. tip:: After you have tested and validated downstream use cases for the index and have identified the frequency at which the index requires regeneration, you may switch from manual to running the index after the specified courier group has completed. The index will be regenerated at same frequency as the courier group run. For example: daily, weekly, or monthly.
-
-          .. image:: ../../images/api-profile-add-index-dialog-schedule-after-courier-group.png
-             :width: 500 px
-             :alt: Configure an endpoint to regenerate after a courier group run.
-             :align: left
-             :class: no-scaled-link
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 5.
-          :align: left
-          :class: no-scaled-link
-     - Save the index.
-
-       If this save is for an initial test of the endpoint and contains only a small number of rows of data, the amount of time it can take to generate the index is measured in minutes. Use the **LIMIT** clause in the query to control the size of the index.
-
-       .. note:: A very large index that is generated for the first time can take a while (up to 6 hours). Please allow the index to finish generating before trying to access it from a downstream workflow.
+       Save the index.
 
 .. api-profile-add-index-steps-end
 
@@ -741,7 +547,7 @@ Generate the endpoint
 
 .. profile-api-enable-generate-endpoint-start
 
-An index must be generated before the endpoint will be available to your tenant's Profile API.
+An index must be generated to make it available from the Profile API.
 
 .. note:: The user interface for the Profile API shows a spinner icon (|notification-running|) when an index is being refreshed.
 
@@ -795,14 +601,9 @@ Copy the tenant ID
 
 .. profile-api-enable-copy-tenant-id-start
 
-The :ref:`GET indexes <profile-api-howitworks-endpoints-get-indexes>` and :ref:`GET indexes/{index-id} <profile-api-howitworks-endpoints-get-index>` endpoints require the tenant ID to be in the URL for the request.
+The tenant ID is a unique identifier for your tenant. To make a request to an index you must include the tenant ID in the URL for the request.
 
-The tenant ID is available from the **API keys** list that is located on the **Security** tab in the **Settings** page. For the API key, open the actions menu, and then select "Copy tenant ID".
-
-.. image:: ../../images/api-keys-copy-tenant-id.png
-   :width: 500 px
-   :alt: Generate an access token for a Profile API endpoint.
-   :align: left
+The tenant ID is available from the **Profile API** list. For the index, open the actions menu, and then select "Copy tenant ID".
 
 .. profile-api-enable-copy-tenant-id-end
 
@@ -816,10 +617,7 @@ Validate the endpoint
 
 After the index has generated, validate the endpoint to verify that it is in the list of indexes, and then contains the data that is required by your workflow.
 
-The most direct way to validate the endpoints is to use cURL commands:
-
-#. Run the :ref:`GET indexes <profile-api-howitworks-endpoints-get-indexes>` command to verify the index is in the list of indexes.
-#. Run the :ref:`GET indexes/{index-id} <profile-api-howitworks-endpoints-get-index>` command to verify that a lookup key returns a single unique attribute or a list of attributes for that key.
+The most direct way to validate the endpoints is to use cURL commands to access the Profile API endpoints.
 
 .. important:: The steps to validate the endpoint may be different, depending on the downstream application or toolkit being used to enable your use case. For example, :ref:`Braze Connected Content <profile-api-usecase-braze-validate-connected-content>` has its own syntax (Liquid) for building the interface that interacts with the endpoint in your tenant's Profile API.
 
@@ -847,269 +645,9 @@ Run as part of a workflow
 
 .. profile-api-enable-run-as-workflow-start
 
-A Profile API index can be configured to be refreshed as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the dropdown menu.
-
-.. image:: ../../images/mockup-activation-scheduled-profile-api.png
-   :width: 420 px
-   :alt: Refresh a Profile API index as part of a scheduled workgroup.
-   :align: left
-   :class: no-scaled-link
+A Profile API index can be configured to run as part of a scheduled workflow when the schedule is set to **Run after courier group** and an active courier group is selected from the dropdown menu.
 
 .. profile-api-enable-run-as-workflow-end
-
-
-.. _profile-api-response-times:
-
-Index response times
-==================================================
-
-.. profile-api-response-times-start
-
-The number of columns that are available from a Profile API endpoint determines:
-
-* The length of time it takes to build (or rebuild) an index
-* The response time for requests that are made to an index
-
-The performance of each index depends on the number of columns and the number of rows in that index. As the number of columns and rows increase, the performance of that index will decrease. The size of the index has a greater effect on the length of time it takes to build (or rebuild) an index than the response times for requests that are made to that index.
-
-.. important:: It is recommended to keep the size of an index to less than 10 columns and fewer than 100M rows. Use more (smaller) indexes instead of fewer (larger) indexes! Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
-
-   The following sections show response times for :ref:`5 column <profile-api-response-times-5-columns>`, :ref:`10 column <profile-api-response-times-10-columns>`, and :ref:`30 column <profile-api-response-times-30-columns>` index sizes and a range of output rows.
-
-   Response times were measured using simulated traffic across multiple Profile API endpoints simultaneously from US-East to US-West. Response times for US-West to US-West were less than 50ms. Use these response times as an indicator for the types of response times you will see for your tenant's set of Profile API endpoints.
-
-.. profile-api-response-times-start
-
-.. _profile-api-response-percentiles:
-
-.. profile-api-response-percentiles-start
-
-.. admonition:: About response percentiles
-
-   Response percentiles divide individual response times into groups based on distribution: p90, and p99. Response percentiles are shown in ms (milliseconds).
-
-   * **p90**
-
-     90% of the simulated response times were below this value.
-
-   * **p99**
-
-     99% of the simulated response times were below this value.
-
-.. profile-api-response-percentiles-end
-
-
-.. _profile-api-response-times-5-columns:
-
-5 column indexes
---------------------------------------------------
-
-.. profile-api-response-times-5-columns-start
-
-The following table shows response times for a 5 column index sizes with output at 1, 10, 100, and 300 million rows.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 1
-
-   * - **1M rows**
-     - **10M rows**
-     - **100M rows**
-     - **300M rows**
-
-   * - **Build time**
-
-       2 minutes
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: ~ 100 ms
-          * - p99: > 150 ms
-
-     - **Build time**
-
-       8 minutes
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: ~ 100 ms
-          * - p99: > 150 ms
-
-     - **Build time**
-
-       < 1 hour
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: < 200 ms
-          * - p99: > 200 ms
-
-     - **Build time**
-
-       < 3 hours
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: < 200 ms
-          * - p99: > 400 ms
-
-.. profile-api-response-times-5-columns-end
-
-
-.. _profile-api-response-times-10-columns:
-
-10 column indexes
---------------------------------------------------
-
-.. profile-api-response-times-10-columns-start
-
-The following table shows response times for a 10 column index sizes with output at 1, 10, 100, and 300 million rows.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 1
-
-   * - **1M rows**
-     - **10M rows**
-     - **100M rows**
-     - **300M rows**
-
-   * - **Build time**
-
-       2 minutes
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: ~ 100 ms
-          * - p99: < 200 ms
-
-
-     - **Build time**
-
-       8 minutes
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: ~ 100 ms
-          * - p99: < 200 ms
-
-
-     - **Build time**
-
-       < 1 hour
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: < 200 ms
-          * - p99: > 200 ms
-
-
-     - **Build time**
-
-       < 3 hours
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: < 200 ms
-          * - p99: > 400 ms
-
-.. profile-api-response-times-10-columns-end
-
-
-.. _profile-api-response-times-30-columns:
-
-30 column indexes
---------------------------------------------------
-
-.. profile-api-response-times-30-columns-start
-
-The following table shows response times for a 30 column index sizes with output at 1, 10, 100, and 300 million rows.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 1
-
-   * - **1M rows**
-     - **10M rows**
-     - **100M rows**
-     - **300M rows**
-
-   * - **Build time**
-
-       2 minutes
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: ~ 100 ms
-          * - p99: > 150 ms
-
-
-     - **Build time**
-
-       12 minutes
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: ~ 100 ms
-          * - p99: > 200 ms
-
-
-     - **Build time**
-
-       2 hours
-
-       **Responses**
-
-       .. list-table::
-          :widths: 100
-          :header-rows: 0
-
-          * - p90: ~ 200 ms
-          * - p99: > 200 ms
-
-     - Out of scope.
-
-.. profile-api-response-times-30-columns-end
 
 
 .. _profile-api-usecases:
@@ -1119,7 +657,7 @@ Use cases
 
 .. profile-api-usecases-start
 
-The Profile API can support an unlimited number of potential use cases. All you need to do is imagine the use case, identify the requirements for building that use case for your downstream workflow, and then build a query in Amperity that can be used to generate an index that contains the attributes you need to light up that use case.
+The Profile API can support any number of potential use cases. All you need to do is define the use case, identify the requirements for building that use case for your downstream workflow, and then access the customer profile data using the Profile API endpoints.
 
 The following sections describe some ways to use the Profile API:
 
@@ -1167,12 +705,13 @@ You can use the Profile API to make extended profile attributes available to Bra
    .. code-block:: none
 
       {% connected_content
-        https://{tenant-domain}/attribute/v0/indexes/ix-aBCdeFgh?lookup-key={{${external_id}}}
+        https://{tenant-id}.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>
       %}
+
 
       {{result text}}
 
-   This will return the set of attributes at the "/ix-aBCdeFgh" index for the specified "external_id".
+   This will return the set of attributes at the "{id}" index for the specified "filter".
 
 .. profile-api-usecase-braze-validate-in-preview-editor-end
 
@@ -1189,30 +728,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Build an index that contains the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles. For example: loyalty ID and loyalty tier, predicted CLV tiers, and the rest of the customer profile (address, state, postal, and full name):
-
-       .. code-block:: sql
-
-          SELECT
-            amperity_id AS external_id
-            ,given_name AS first_name
-            ,surname AS last_name
-            ,full_name
-            ,generational_suffix AS gs
-            ,email
-            ,phone
-            ,address
-            ,city AS home_city
-            ,state
-            ,postal
-            ,country
-            ,birthdate AS dob
-            ,gender
-            ,loyalty_id
-            ,loyalty_tier
-            ,loyalty_points
-            ,pclv_tier
-          FROM Customer_360
+     - Build an index that contains the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -1253,7 +769,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
        ::
 
           {% connected_content
-             https://{tenant-domain}/attribute/v0/indexes/ix-1aBcDEFgh
+             https://{tenant-id}.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>
              :method post
              :headers {
                "Authorization": "Bearer {{auth.token}}",
@@ -1271,7 +787,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
        ::
 
           {% connected_content
-             https://{tenant-domain}/attribute/v0/indexes/index-id
+             https://tenant.amperity.com/api/indexes
              :method get
              :headers {
                "Authorization": "Bearer {{auth.token}}",
@@ -1343,7 +859,7 @@ and, most importantly, a hashed email can be used to associate a user to a unifi
 
    A workflow that relies on hashed email addresses must use a consistent hashing algorithm at each point in the downstream workflow.
 
-Build a query that includes a hashed email address. For example:
+Build a column in a customer 360 table that includes a hashed email address. For example:
 
 .. code-block:: sql
 
@@ -1509,7 +1025,7 @@ Load the values from the Profile API endpoint using SSJS. This will make those v
      var email = Variable.GetValue("@Email");
 
      //Set up Amperity Profile API call
-     var url = 'https://{tenant-domain}/attribute/v0/indexes/$INDEX-ID';
+     var url = 'https://tenant.amperity.com/api/indexes/{id}';
      var contentType = 'application/json';
      var payload = '{"key":"' + email + '"}';
      var names = ["X-Amperity-Tenant", "Authorization"];

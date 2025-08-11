@@ -75,7 +75,7 @@ A request to the **GET /indexes/{id}** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/indexes/{id} \
+          'https://tenant.amperity.com/api/indexes \
           ?index-id={id} \
         --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2025-07-31' \
@@ -133,7 +133,7 @@ The following examples show how to send requests to the **GET /indexes/{id}** en
       .. code-block:: bash
 
          curl --request GET \
-                'https://tenant.amperity.com/api/indexes/{id} \
+                'https://tenant.amperity.com/api/indexes/ \
                 ?index-id={id} \
                 --header 'amperity-tenant: {tenant}' \
                 --header 'api-version: 2025-07-31' \
