@@ -29,11 +29,11 @@ Use queries to build high-value audiences for retargeting and lookalike modeling
 
 .. sendto-tiktok-ads-howitworks-end
 
-.. include:: ../../amperity_user/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_user/source/campaign_tiktok_ads.rst
    :start-after: .. channel-tiktok-ads-important-learning-phase-start
    :end-before: .. channel-tiktok-ads-important-learning-phase-end
 
-.. include:: ../../amperity_user/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_user/source/campaign_tiktok_ads.rst
    :start-after: .. channel-tiktok-ads-important-one-time-delivery-start
    :end-before: .. channel-tiktok-ads-important-one-time-delivery-end
 
