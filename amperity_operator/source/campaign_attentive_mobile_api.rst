@@ -16,11 +16,11 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send campaigns to Attentive.
+        Configure Amperity to use campaigns to send customer attributes to Attentive.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send campaigns to Attentive.
+        Configure Amperity to use campaigns to send customer attributes to Attentive.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -36,9 +36,15 @@ Configure campaigns for Attentive (attributes)
 
 Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
-.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
-
 .. campaign-attentive-mobile-api-attributes-end
+
+.. include:: ../../amperity_operator/source/destination_attentive_mobile_api.rst
+   :start-after: .. destination-attentive-mobile-api-attributes-caution-start
+   :end-before: .. destination-attentive-mobile-api-attributes-caution-end
+
+.. include:: ../../amperity_operator/source/destination_attentive_mobile_api.rst
+   :start-after: .. destination-attentive-mobile-api-attributes-important-start
+   :end-before: .. destination-attentive-mobile-api-attributes-important-end
 
 .. campaign-attentive-sftp-and-api-start
 

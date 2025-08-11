@@ -36,9 +36,21 @@ Configure destinations for Attentive (attributes)
 
 Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
+.. destination-attentive-mobile-api-attributes-end
+
+.. destination-attentive-mobile-api-attributes-caution-start
+
 .. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
 
-.. destination-attentive-mobile-api-attributes-end
+.. destination-attentive-mobile-api-attributes-caution-end
+
+.. destination-attentive-mobile-api-attributes-important-start
+
+.. important:: Field names and field values are case sensitive in |destination-name|. For example, field names like "Favorite color" and "Favorite Color" are treated as different custom attributes and field values like "Blue" and "blue" are treated as different values.
+
+   Queries that are run in `performance mode <../reference/queries.html#enable-performance-mode>`__ **automatically convert field names to lowercase**. If a query must be run in performance mode, consider using the `LOWER() <../reference/sql_presto.html#lower>`__ function to ensure consistent capitalization is applied to field names.
+
+.. destination-attentive-mobile-api-attributes-important-end
 
 .. destination-attentive-sftp-and-api-start
 

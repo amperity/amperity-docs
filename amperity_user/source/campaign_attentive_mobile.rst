@@ -52,6 +52,8 @@ An |destination-name| destination works like this:
       :start-after: .. channels-build-campaign-important-email-or-phone-start
       :end-before: .. channels-build-campaign-important-email-or-phone-end
 
+   .. important:: Field names and field values are case sensitive in |destination-name|. For example, field names like "Favorite color" and "Favorite Color" are treated as different custom attributes and field values like "Blue" and "blue" are treated as different values.
+
 #. Send a test audience from Amperity, and then from within |destination-name| verify that the **Segments** page has the list of customers that you sent from Amperity.
 
    .. note::
