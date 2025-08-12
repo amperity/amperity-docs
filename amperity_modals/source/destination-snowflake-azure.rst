@@ -84,17 +84,41 @@ Settings
    :start-after: .. setting-snowflake-stage-start
    :end-before: .. setting-snowflake-stage-end
 
+For example:
+
+::
+
+   AMPERITY_ABCDEF. \
+   CUSTOMER_360. \
+   AMP_PROD_STAGE
+
+
 **Warehouse**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-snowflake-warehouse-start
    :end-before: .. setting-snowflake-warehouse-end
 
+For example:
+
+::
+
+   AMPERITY_WH
+
+
 **Snowflake location**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-snowflake-location-start
    :end-before: .. setting-snowflake-location-end
+
+For example:
+
+::
+
+   SNOWFLAKE_DATABASE_NAME. \
+   SNOWFLAKE_SCHEMA.TABLE_NAME
+
 
 **Create table?**
 

@@ -2346,9 +2346,7 @@ The table to which Amperity loads data. Define this location using a period-deli
 
 .. setting-snowflake-stage-start
 
-The Snowflake stage name created by the `CREATE STAGE <https://docs.snowflake.com/en/sql-reference/sql/create-stage>`__ |ext_link| command. For example:
-
-``AMPERITY_ABCDEF.CUSTOMER_360.AMP_PROD_STAGE``
+The Snowflake stage name created by the `CREATE STAGE <https://docs.snowflake.com/en/sql-reference/sql/create-stage>`__ |ext_link| command.
 
 .. setting-snowflake-stage-end
 
