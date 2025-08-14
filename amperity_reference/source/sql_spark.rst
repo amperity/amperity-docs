@@ -29,9 +29,9 @@ Why should I use this reference?
 
 .. sql-spark-why-should-i-use-this-start
 
-The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built almost exclusively by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available, though you may use additional functionality within Spark SQL as necessary.
+The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built almost exclusively by using a **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available.
 
-Please refer to this reference first, and then to the official |ext_sparksql_version_current| documentation.
+Please refer to this reference first, and then to the official Spark SQL documentation for `SELECT statements <https://spark.apache.org/docs/3.5.5/sql-ref-syntax.html#data-retrieval-statements>`__ |ext_link| and the `list of built-in functions <https://spark.apache.org/docs/latest/api/sql/index.html>`__ |ext_link|.
 
 .. sql-spark-why-should-i-use-this-end
 
@@ -98,18 +98,21 @@ General
 * Store ISO-8601 compliant date and time information (YYYY-MM-DD HH:MM:SS.SSSSS).
 * Try to use only standard SQL functions instead of vendor-specific functions for reasons of portability.
 * Keep code succinct and devoid of redundant SQL, such as unnecessary quoting or parentheses or **WHERE** clauses that can otherwise be derived.
-* Convert string values to lowercase. For example: **LOWER("column_name") = 'value'**.
+* Convert string values to lowercase. For example: **LOWER(column_name) = 'value'**.
 * Code review complex SQL statements.
 * Treat varchars as string values.
 * Use one-way SHA-256 hashes for fields that contain PII data.
-* Ensure that window functions are complete and use **OVER()** along with **PARTITION BY** and **ORDER BY**.
-* Use backticks around column names when they contain spaces or special characters, when they are fully numeric, or when the column name is also a :ref:`reserved word <sql-spark-recommendation-reserved-words>`.
+* Ensure that window functions are complete and use **OVER()** and **PARTITION BY**.
+
+  **ORDER BY** is not required when a window function has aggregate functions, such as **AVG()** or **SUM()**.
+
+* Use single backticks around column names when they contain spaces or special characters, when they are fully numeric, or when the column name is also a :ref:`reserved word <sql-spark-recommendation-reserved-words>`.
 
 **Avoid**
 
 * Reserved keyword names that are used as identifiers.
 * Columns aliased to the same name. For example, avoid ``email AS email``.
-* Quotes (``" "``) around column names unless using them is necessary.
+* Quotes (``" "``) around column names.
 * CamelCase, with the exception of the table name. CamelCase is more difficult to scan quickly.
 * Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
@@ -138,43 +141,6 @@ Code comments should describe:
 * Non-obvious actions within the SQL statement. For example, when inserting static text as a date value or when joining on fields that appear to have different data types.
 
 .. sql-spark-recommendation-add-comments-end
-
-
-.. _sql-spark-recommendation-avoid-low-cardinality:
-
-Avoid low cardinality
---------------------------------------------------
-
-.. sql-spark-recommendation-avoid-low-cardinality-start
-
-A **JOIN** operation will run slowly, use more memory, and return lower quality results when many rows on both sides of the operation contain the same value. (It's fine if one side contains many rows with the same value.)
-
-For example, a **pos** table that contains over a million rows of POS data with an email column where 50% of the rows have the email address "no@email.com". In addition, a **loyaltyProgram** table with 100,000 rows, also 50% "no@email.com".
-
-**Do this**
-
-.. code-block:: sql
-   :linenos:
-
-   SELECT *
-   FROM pos
-   LEFT JOIN loyaltyTable AS l ON (pos.email = l.email)
-   WHERE pos.email <> 'no@email.com'
-
-This will filter out records with "no@email.com", and then join them.
-
-**Not this**
-
-.. code-block:: sql
-   :linenos:
-
-   SELECT *
-   FROM pos
-   LEFT JOIN loyaltyTable AS l ON (pos.email = l.email)
-
-This will cause the query processor to try and match every "no@email.com" email in the **pos** table to every email in the **loyaltyProgram** table, which results in 500,000 * 50,000 matches, or 25,000,000,000 records.
-
-.. sql-spark-recommendation-avoid-low-cardinality-end
 
 
 .. _sql-spark-recommendation-avoid-multiple-passes:
@@ -272,38 +238,6 @@ Use a backslash ( ``\`` ) as an escape character for strings that contain single
 .. sql-spark-recommendation-escape-characters-end
 
 
-.. _sql-spark-recommendation-daisy-chain-left-joins:
-
-Daisy-chain LEFT JOINs
---------------------------------------------------
-
-.. sql-spark-recommendation-daisy-chain-left-joins-start
-
-Daisy-chain the **ON** conditions when joining several tables together with a **LEFT JOIN**.
-
-**Do this**
-
-.. code-block:: sql
-
-   FROM tableA AS a
-   LEFT JOIN tableB AS b ON (a.key = b.key)
-   LEFT JOIN tableC AS c ON (b.key = c.key)
-
-This allows the query processor to prune from the right when executing the query, only evaluating the rows of table A against the rows of table B (with whatever columns came along from table C).
-
-**Not this**
-
-.. code-block:: sql
-
-   FROM tableA as A
-   LEFT JOIN tableB AS b ON (a.key = b.key)
-   LEFT JOIN tableC AS c ON (a.key = c.key)
-
-If b.key and c.key are unique, the query will work as expected. If "b.key" and "c.key" are not unique in their source tables, the query will run for a long time and return the wrong data because the system will return rows for all matching pairs of "b.key" and "c.key" for each value of "a.key". An acceptable workaround in situations like this is to first aggregate table B and table C on the key in a subquery, and then join to table A.
-
-.. sql-spark-recommendation-daisy-chain-left-joins-end
-
-
 .. _sql-spark-recommendation-faster-operations-are-better:
 
 Faster operations are better
@@ -311,41 +245,38 @@ Faster operations are better
 
 .. sql-spark-recommendation-faster-operations-are-better-start
 
-The cost of operations in Spark SQL depends on many things.
+The costs of operations in Spark SQL depends on many things. In general, faster operations are better because they cost less.
 
-.. list-table::
-   :widths: 100 500
-   :header-rows: 1
+The following types of actions have a minimal affect on Spark SQL performance:
 
-   * - Cost
-     - Discussion
-   * - **Minimal**
-     - A query will run fastest when:
+* **COALESCE()** runs across rows, but generally stops when it finds the first value.
+* Row-atomic functions, such as **CONCAT()**, operate on a single row, which keeps the dataset small.
+* Value-atomic functions, such as type conversions and **TRIM()**, operate on a single value.
+* **UNION** appends one set of rows to another, without deduplication.
 
-       * **SELECT** statements are restricted to specific columns.
-       * **WHERE** clauses are restricted to specific rows.
-       * **JOIN** clauses on more than one field run faster when fewer rows are evaluated.
 
-   * - **Low**
-     - The following actions have a minimal affect on Spark SQL performance:
+A query runs faster when:
 
-       * Value-atomic functions, such as type conversions and **TRIM()**, operate on a single value.
-       * Row-atomic functions, such as **CONCAT()**, operate on a single row, which keeps the dataset small.
-       * **COALESCE()** runs across rows, but generally stops when it finds the first value.
-       * **UNION** appends one set of rows to another, without deduplication effort.
+* **SELECT** statements are restricted to specific columns
+* **WHERE** clauses are restricted to specific rows
+* **JOIN** clauses on more than one field evaluate fewer rows
 
-   * - **Medium**
-     - The following actions will reduce the performance of Spark SQL in various ways. They are often necessary, but should be used carefully and with consideration of the performance cost:
 
-       * **SELECT DISTINCT** operations require building at least one index over the data and may require shuffling work between workers. SELECT DISTINCT operations should be done at the outermost level of a query against data that has already had some deduplication performed against it.
-	   
-         .. note:: **SELECT DISTINCT** operations that remove duplicates using a single subquery can be done in that location, often with a reasonable performance cost.
+A query runs slower when:
 
-       * Windowing functions, such as **OVER**, **PARTITION BY**, and **ORDER BY**, break the dataset up into pieces that are parallelizable, but a significant amount of work may be required on each piece and there may be many pieces, so the aggregate cost can still be very high.
-   * - **Expensive**
-     - The following actions are expensive:
+* A **JOIN** operation :ref:`introduces skew <sql-spark-skew-avoiding-join-operations>`.
 
-       * A global **ORDER BY** can be difficult to partition effectively and results in significant shuffles of data across workers. This type of operation is generally unnecessary because database contents are not rendered directly.
+* **SELECT DISTINCT** operations are present. Use **DISTINCT** only when necessary.
+
+  A **SELECT DISTINCT** operation requires building at least one index over the dataset.  may require data to be shuffled between workers, which is expensive.
+
+  When a **SELECT DISTINCT** operation is needed, try to use it against deduplicated data.
+
+  .. note:: A **UNION** operation deduplicates data, a **UNION ALL** operation does not.
+
+* A **PARTITION BY** clause in a window function :ref:`introduces skew <sql-spark-skew-avoiding-partition-by>`.
+
+* A global **ORDER BY** operation can be difficult to partition and may require shuffling data across workers.
 
 .. sql-spark-recommendation-faster-operations-are-better-end
 
@@ -387,10 +318,10 @@ A pattern that filters out unneeded rows and selects only necessary columns is m
    :linenos:
 
    SELECT
-     uct.amperity_id,
+     uct.amperity_id
      ,uct.first_name
      ,uct.last_name
-     ecomm.last_order_date
+     ,ecomm.last_order_date
    FROM Unified
    LEFT JOIN ecomm ON (ecomm.amperity_id = uct.amperity_id)
    WHERE Unified.datasource <> 'Example'
@@ -405,7 +336,7 @@ Filter NULL values, then join
 
 .. sql-spark-recommendation-filter-null-values-then-join-start
 
-In some cases the presence of **NULL** values can cause skew when joined to other tables. You can reduce skew by filtering out **NULL** values prior to the join operation. For example:
+In some cases the presence of **NULL** values can cause skew when joined to other tables. You can reduce skew by filtering out **NULL** values prior to the **JOIN** operation. For example:
 
 .. code-block:: sql
    :linenos:
@@ -414,62 +345,10 @@ In some cases the presence of **NULL** values can cause skew when joined to othe
      SELECT *
      FROM Merged_Customers
      WHERE email IS NOT NULL
-     AND phone IS NOT NULL
    ) mc
-   on table_A.email = mc.email
-   or table_A.phone = mc.phone
+   ON table_A.email = mc.email
 
 .. sql-spark-recommendation-filter-null-values-then-join-end
-
-
-.. _sql-spark-recommendation-identifiers:
-
-Identifiers
---------------------------------------------------
-
-.. sql-spark-recommendation-identifiers-start
-
-An identifier is a string that associates a database, table, or column to its parent and child objects within the same database or table. An identifier is qualified using a dot separator ( . ) and is often referred to as "dot notation". For example:
-
-.. code-block:: none
-
-   database_name.table_name.column_name
-
-.. sql-spark-recommendation-identifiers-end
-
-**To use table identifiers to flatten nested XML data**
-
-.. sql-spark-recommendation-identifiers-example-ingest-query-start
-
-.. note:: This example uses an |ext_download_sales_transactions| as the data source for sales transactions.
-
-Use identifiers and aliases to flatten nested XML data with an ingest query, similar to:
-
-.. code-block:: sql
-   :linenos:
-
-   SELECT
-     salesTransactionId AS id
-     ,type
-     ,dateTime AS salesDateTime
-     ,salesOrder.salesOrderId AS salesOrderId
-     ,salesOrder.channelType AS channelType
-     ,salesOrder.orderSummary.totalAmount AS totalAmount
-   FROM PosXml
-
-returns a table similar to:
-
-.. code-block:: mysql
-
-   ----- ------ ---------------------- -------------- ------------- -------------
-    id    type   salesDateTime          salesOrderId   channelType   totalAmount
-   ----- ------ ---------------------- -------------- ------------- -------------
-    ABC   Add    2020-11-15T04:54:34Z   A1zyBCxwvDu    Cafe          120
-    DEF   Add    2020-11-15T04:55:25Z   B1yxCDwvuEt    Cafe          14
-    GHI   Add    2020-11-15T04:57:12Z   C1xwDEvutFs    Cafe          27
-   ----- ------ ---------------------- -------------- ------------- -------------
-
-.. sql-spark-recommendation-identifiers-example-ingest-query-end
 
 
 .. _sql-spark-recommendation-indentation:
@@ -520,38 +399,6 @@ Subqueries should be aligned to the line above them, but then follow standard in
 .. sql-spark-recommendation-indentation-subqueries-end
 
 
-.. _sql-spark-recommendation-limit-expensive-operations:
-
-Limit expensive operations
---------------------------------------------------
-
-.. sql-spark-recommendation-limit-expensive-operations-start
-
-Apache Spark breaks problems into little parts, works on each little part, and then rolls them back together. This means that operations that can be easily done in chunks, like "find everyone named 'Justin'", run much faster than operations over the whole dataset, like "give me a list of unique first names."
-
-.. tip:: This behavior also affects operations like **ORDER BY** for similar reasons. In order for Spark to determine the correct order it breaks problems into little parts, works on each little part, and then rolls them back together.
-
-The following diagram shows how Apache Spark finds everyone named Justin:
-
-.. image:: ../../images/sql-spark-expensive-operations-good.png
-   :width: 500 px
-   :alt: Limit expensive load operations.
-   :align: left
-   :class: no-scaled-link
-
-The following diagram shows how Apache Spark finds a list of unique first names. Each worker must deduplicate first names, be recombined, and then broken into pieces (again), after which more deduplication is performed.
-
-This process continues until there is no overlap between record sets for each worker. Apache Spark has to break the work apart and bring it back together again several times to get to a final set of unique names:
-
-.. image:: ../../images/sql-spark-expensive-operations-bad.png
-   :width: 500 px
-   :alt: Limit expensive load operations.
-   :align: left
-   :class: no-scaled-link
-
-.. sql-spark-recommendation-limit-expensive-operations-end
-
-
 .. _sql-spark-recommendation-limit-extra-work:
 
 Limit extra work
@@ -574,6 +421,7 @@ Limit the work done by a SQL query to improve overall performance. The following
      CAST('2017-12-22' AS DATE) as merged_date
    FROM FlatFiles_CampsiteGawEmailListDec2017
    WHERE EMAIL IS NOT NULL
+   ORDER BY merged_date
 
 This example performs better and achieves the same result.
 
@@ -614,23 +462,6 @@ Limit tables
 A database should only include tables that are useful to downstream activity, such as building segments or for a database export. As a general rule, segment authors must *never* use any tables with a name that starts with "Unified" to build a segment. Use the passthrough option to make available certain domain tables that contain data that is useful for segmentation.
 
 .. sql-spark-recommendation-limit-tables-end
-
-
-.. _sql-spark-recommendation-load-sizes:
-
-Load sizes
---------------------------------------------------
-
-.. sql-spark-recommendation-load-sizes-start
-
-Apache Spark prefers load sizes to range between 1-10000 files and file sizes to range between 1-1000 MB. Apache Spark will parse 100 x 10 MB files faster than 10 x 100 MB files and much faster than 1 x 10000 MB file. When loading large files to Amperity, as a general guideline to optimize the performance of Apache Spark, look to create situations where:
-
-* The number of individual files is below 3000.
-* The range of individual file sizes is below 100 MB.
-
-Put differently, Apache Spark will parse 3000 x 100 MB files faster than 300 x 1000 MB files and much faster than 30 x 10000 MB files.
-
-.. sql-spark-recommendation-load-sizes-end
 
 
 .. _sql-spark-recommendation-naming-conventions:
@@ -787,10 +618,7 @@ NULL values
 
 .. sql-spark-style-guide-null-values-start
 
-Functions may fail when they encounter a **NULL** value and others may return **NULL** values if any of their arguments return **NULL** values.
-
-* Use the **COALESCE()** function to convert to a zero-length string when using the **CONCAT()** and **SUM()** functions.
-* Use the **COALESCE()** function to to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because 1 is the identity for multiplication, use **COALESCE(myColumn, 1)**
+Functions may fail when they encounter a **NULL** value and others may return **NULL** values if any of their arguments return **NULL** values. `Spark SQL handles NULL values in a variety of ways. <https://spark.apache.org/docs/3.5.5/sql-ref-null-semantics.html>`__ |ext_link|
 
 .. sql-spark-style-guide-null-values-end
 
@@ -802,7 +630,7 @@ One-way SHA-256 hashes
 
 .. sql-spark-recommendation-one-way-sha256-hashes-start
 
-Apply one-way SHA-256 hashes to fields that contain PII data. A one-way hash ensures that data can no longer be recognizable as valid PII, yet still allows that data to identified by downstream processes.
+Apply one-way SHA-256 hashes to fields that contain PII data. A one-way hash ensures that data can no longer be recognizable as valid PII, but still allows that data to identified by downstream processes.
 
 .. sql-spark-recommendation-one-way-sha256-hashes-end
 
@@ -817,7 +645,7 @@ A one-way SHA-256 hash has the following syntax:
 and uses the following Spark SQL functions:
 
 * **SHA2()** hashes data with a one-way SHA-256 hash.
-* **LOWER()** sets all characters to lowercase. 
+* **LOWER()** sets all characters to lowercase.
 * **TRIM()** removes leading and trailing whitespace.
 * **FIELD** is the name of the field that contains PII data.
 
@@ -1121,22 +949,6 @@ A subquery can be useful for shaping data prior to running a query. A subquery i
 .. sql-spark-recommendation-subqueries-end
 
 
-.. _sql-spark-recommendation-temporary-tables:
-
-Temporary tables
---------------------------------------------------
-
-.. sql-spark-recommendation-temporary-tables-start
-
-A temporary table is a table that is built from another table in the database and can be a useful way to processes repeatable tasks one time as opposed to using a subquery that runs many times. A temporary table is built into the database, which means it will be visible to users who have access to authoring segments. This is not always a desired outcome.
-
-Consider using a temporary table in place of a subquery, but only when that subquery is being run multiple times.
-
-.. caution:: If you need to use a temporary table, be sure to use a naming convention for the table that makes it obvious to segment authors that it is not a table that should be used for segmentation. For example, prefix a temporary table with ``ZZ_TEMP_`` so that it appears at the end of the list of tables. Column names within the temporary table should be easy to comprehend.
-
-.. sql-spark-recommendation-temporary-tables-end
-
-
 .. _sql-spark-recommendation-whitespace:
 
 Whitespace
@@ -1236,23 +1048,25 @@ WITH clause
 
 .. sql-spark-with-clause-start
 
-The **WITH** clause defines a common table expression (CTE), also referred to as a "window function".
+The **WITH** clause defines a `common table expression (CTE) <https://spark.apache.org/docs/3.5.5/sql-ref-syntax-qry-select-cte.html>`__ |ext_link|.
 
 .. sql-spark-with-clause-end
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-cte-start
-   :end-before: .. term-cte-end
-
 .. sql-spark-with-clause-context-start
 
-A window function is often used to group subsets of data prior to running a query. A window function should always include the **OVER** and **PARTITION BY** clauses to optimize the performance of your query.
+Use **WITH** clause to group subsets of data prior to running a query. A **WITH** clause should always include the **OVER** and **PARTITION BY** clauses.
 
 .. sql-spark-with-clause-context-end
 
+.. sql-spark-with-clause-note-order-by-start
+
+.. note:: **ORDER BY** is not required when a **WITH** clause has aggregate functions, such as **AVG()** or **SUM()**.
+
+.. sql-spark-with-clause-note-order-by-end
+
 .. sql-spark-with-clause-caution-start
 
-.. caution:: A window function with an **OVER** statement that does not include a **PARTITION BY** clause often leads to performance issues when the **OVER** statement is asked to run across a large number of rows.
+.. caution:: A **WITH** clause with an **OVER** statement that does not include a **PARTITION BY** clause often leads to performance issues when the **OVER** statement is asked to run across a large number of rows.
 
 .. sql-spark-with-clause-caution-end
 
@@ -1866,11 +1680,7 @@ Window functions
 
 Window functions are a way to evaluate rows around each row as it is being evaluated. There's great flexibility in controlling how the windows are made (i.e. which other rows to consider), but for most uses I've seen in Amperity databases, we use a relatively small subset to group the rows in the data set by the unique values of some field (i.e. like a **GROUP BY**) and then select a row from that group. In addition to great flexibility on which rows to include in a group, there's a powerful set of functions you can run across the group as well, and again the portions we generally use in Amperity are relatively small. So, you can use the info below for guidelines of what to write, and can learn more of the expressiveness available at your leisure. 
 
-.. caution:: From a performance point of view, window functions tend to be relatively performant as long as the **OVER()** function contains both **PARTITION BY** and **ORDER BY** and will run quickly in Spark and have performance similar to a **JOIN** operation.
-
-.. tip:: When a **WINDOWS** function is too long, add a new code line to improve readability.
-
-   That said, an **OVER()** clause that does not contain both **PARTITION BY** and **ORDER BY** may run into situations where a window function without **PARTITION BY** will result in Spark SQL running 50 million rows through a single partition, which can cause a significant reduction in performance.
+.. caution:: From a performance point of view, window functions tend to be relatively performant when the **OVER()** function has both **PARTITION BY** and **ORDER BY**.
 
 A common use in Amperity might look like this:
 
@@ -1907,7 +1717,7 @@ The **ORDER BY** clause is used to sort a result set by one or more output expre
 
 Each expression may be composed of output columns or it may be an ordinal number selecting an output column by position (starting at one).
 
-The default sort order is ascending (ASC). NULL values will sort first when the sort order is ascending and will sort last when the sort order is descending (DESC). Use NULLS FIRST to sort NULL values first, regardless of sort order. Use NULLS LAST to sort NULL values last, regardless of sort order.
+The default sort order is ascending (**ASC**). **NULL** values will sort first when the sort order is ascending and will sort last when the sort order is descending (**DESC**). Use **NULLS FIRST** to sort **NULL** values first, regardless of sort order. Use **NULLS LAST** to sort **NULL** values last, regardless of sort order.
 
 The **ORDER BY** clause is evaluated as the last step of a query after any **GROUP BY** or **HAVING** clause.
 
@@ -3410,6 +3220,8 @@ LOWER()
 .. sql-spark-function-lower-start
 
 Use the **LOWER(string)** function to convert "string" to lowercase.
+
+For sting values with spaces, use a single backtick character before and after the string value. For example: **LOWER(`string value`)**.
 
 .. sql-spark-function-lower-end
 
