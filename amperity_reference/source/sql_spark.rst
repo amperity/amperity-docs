@@ -268,7 +268,7 @@ A query runs slower when:
 
 * **SELECT DISTINCT** operations are present. Use **DISTINCT** only when necessary.
 
-  A **SELECT DISTINCT** operation requires building at least one index over the dataset.  may require data to be shuffled between workers, which is expensive.
+  A **SELECT DISTINCT** operation requires building at least one index over the dataset and may require data to be shuffled between workers, which is expensive.
 
   When a **SELECT DISTINCT** operation is needed, try to use it against deduplicated data.
 
