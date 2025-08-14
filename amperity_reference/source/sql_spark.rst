@@ -260,7 +260,6 @@ A query runs faster when:
 
 * **SELECT** statements are restricted to specific columns
 * **WHERE** clauses are restricted to specific rows
-* **JOIN** clauses on more than one field evaluate fewer rows
 
 
 A query runs slower when:
