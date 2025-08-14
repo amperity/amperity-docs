@@ -1050,12 +1050,6 @@ The **WITH** clause defines a `common table expression (CTE) <https://spark.apac
 
 .. sql-spark-with-clause-end
 
-.. sql-spark-with-clause-context-start
-
-Use **WITH** clause to group subsets of data prior to running a query.
-
-.. sql-spark-with-clause-context-end
-
 .. sql-spark-with-clause-caution-start
 
 .. caution:: A window function with an **OVER** statement that does not include a **PARTITION BY** clause often leads to performance issues when the **OVER** statement is asked to run across a large number of rows.
