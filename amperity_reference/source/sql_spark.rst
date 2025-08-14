@@ -104,15 +104,16 @@ General
 * Use one-way SHA-256 hashes for fields that contain PII data.
 * Ensure that window functions are complete and use **OVER()** and **PARTITION BY**.
 
-  **ORDER BY** is not required when a window function has aggregate functions, such as **AVG()** or **SUM()**.
+  .. note:: **ORDER BY** is not required when a window function has aggregate functions, such as **AVG()** or **SUM()**, but the behavior of the window function can change. For example:
+
+     * If **ORDER BY** is included, **SUM()** calculates the running sum within a partition in order.
+     * If **ORDER BY** is excluded, **SUM()** calculates the sum of all values within a partition.
 
 * Use single backticks around column names when they contain spaces or special characters, when they are fully numeric, or when the column name is also a :ref:`reserved word <sql-spark-recommendation-reserved-words>`.
 
 **Avoid**
 
 * Reserved keyword names that are used as identifiers.
-* Columns aliased to the same name. For example, avoid ``email AS email``.
-* Quotes (``" "``) around column names.
 * CamelCase, with the exception of the table name. CamelCase is more difficult to scan quickly.
 * Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
@@ -268,9 +269,7 @@ A query runs slower when:
 
 * **SELECT DISTINCT** operations are present. Use **DISTINCT** only when necessary.
 
-  A **SELECT DISTINCT** operation requires building at least one index over the dataset and may require data to be shuffled between workers, which is expensive.
-
-  When a **SELECT DISTINCT** operation is needed, try to use it against deduplicated data.
+  A **SELECT DISTINCT** operation may require data to be shuffled between workers, which is expensive.
 
   .. note:: A **UNION** operation deduplicates data, a **UNION ALL** operation does not.
 
@@ -1054,19 +1053,13 @@ The **WITH** clause defines a `common table expression (CTE) <https://spark.apac
 
 .. sql-spark-with-clause-context-start
 
-Use **WITH** clause to group subsets of data prior to running a query. A **WITH** clause should always include the **OVER** and **PARTITION BY** clauses.
+Use **WITH** clause to group subsets of data prior to running a query.
 
 .. sql-spark-with-clause-context-end
 
-.. sql-spark-with-clause-note-order-by-start
-
-.. note:: **ORDER BY** is not required when a **WITH** clause has aggregate functions, such as **AVG()** or **SUM()**.
-
-.. sql-spark-with-clause-note-order-by-end
-
 .. sql-spark-with-clause-caution-start
 
-.. caution:: A **WITH** clause with an **OVER** statement that does not include a **PARTITION BY** clause often leads to performance issues when the **OVER** statement is asked to run across a large number of rows.
+.. caution:: A window function with an **OVER** statement that does not include a **PARTITION BY** clause often leads to performance issues when the **OVER** statement is asked to run across a large number of rows.
 
 .. sql-spark-with-clause-caution-end
 
@@ -1680,7 +1673,7 @@ Window functions
 
 Window functions are a way to evaluate rows around each row as it is being evaluated. There's great flexibility in controlling how the windows are made (i.e. which other rows to consider), but for most uses I've seen in Amperity databases, we use a relatively small subset to group the rows in the data set by the unique values of some field (i.e. like a **GROUP BY**) and then select a row from that group. In addition to great flexibility on which rows to include in a group, there's a powerful set of functions you can run across the group as well, and again the portions we generally use in Amperity are relatively small. So, you can use the info below for guidelines of what to write, and can learn more of the expressiveness available at your leisure. 
 
-.. caution:: From a performance point of view, window functions tend to be relatively performant when the **OVER()** function has both **PARTITION BY** and **ORDER BY**.
+.. caution:: From a performance point of view, window functions tend to be relatively performant when the **OVER()** function includes a **PARTITION BY** clause over a well-distributed field.
 
 A common use in Amperity might look like this:
 
@@ -3220,8 +3213,6 @@ LOWER()
 .. sql-spark-function-lower-start
 
 Use the **LOWER(string)** function to convert "string" to lowercase.
-
-For sting values with spaces, use a single backtick character before and after the string value. For example: **LOWER(`string value`)**.
 
 .. sql-spark-function-lower-end
 
