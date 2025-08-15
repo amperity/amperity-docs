@@ -136,6 +136,9 @@ The following table describes recommended patterns to use when defining semantic
    * - **blv/datasource**
      - String
      - Apply to the ``datasource`` column in the bad-values blocklist table.
+   * - **blv/is-preprocessed**
+     - Boolean
+     - Optional. Indicates to Stitch that bad values are preprocessed and should not be transformed. For example, use this semantic tag to prevent "iPhone Max Black 5G" from blocklisting anyone with "Max" or "Black" in their first or last names.
    * - **blv/semantic**
      - String
      - Apply to the ``semantic`` column in the bad-values blocklist table.
