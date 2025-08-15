@@ -644,6 +644,657 @@ A Profile API index can be configured to run as part of a scheduled workflow whe
 .. profile-api-enable-run-as-workflow-end
 
 
+.. _profile-api-response-times:
+
+Index response times
+==================================================
+
+.. profile-api-response-times-start
+
+The number of rows and filter fields available from a Profile API endpoint determine:
+
+* The length of time it takes to build (or rebuild) an index
+* The response time for requests that are made to an index
+
+As the number of rows and filter fields increase, the performance of that index will decrease. Large indexes with 5 or more filter fields will have decreased performance.
+
+The size of the index has a greater effect on the length of time required to build or refresh an index than the response times for requests that are made to that index.
+
+.. note:: Response times were measured using simulated traffic across multiple endpoints simultaneously from US-East to US-West. Use these response times as an indicator for the types of response times you will see for your tenant's use of Profile API endpoints.
+
+.. profile-api-response-times-start
+
+.. _profile-api-response-percentiles:
+
+.. profile-api-response-percentiles-start
+
+.. admonition:: About response percentiles
+
+   Response percentiles divide individual response times into groups based on distribution: p95, and p99. Response percentiles are shown in milliseconds (ms).
+
+   * **p950**
+
+     95% of the simulated response times were below this value.
+
+   * **p99**
+
+     99% of the simulated response times were below this value.
+
+.. profile-api-response-percentiles-end
+
+
+.. _profile-api-response-times-5-columns-0-filters:
+
+5 columns 0 filters
+--------------------------------------------------
+
+.. profile-api-response-times-5-columns-0-filters-start
+
+The following table shows response times for a 5 column index with zero filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 0
+     - 0
+     - 0
+
+   * - **Workflow duration**
+     - 2m 43s
+     - 3m 40s
+     - 26m
+
+   * - **Median latency (ms)**
+     - 41 ms
+     - 36 ms
+     - 60 ms
+
+   * - **P95 latency (ms)**
+     - 74 ms
+     - 48 ms
+     - 84 ms
+
+   * - **P99 latency (ms)**
+     - 97 ms
+     - 58 ms
+     - 110 ms
+
+   * - **Requests per second**
+     - 1000
+     - 1000
+     - 1000
+
+.. profile-api-response-times-5-columns-0-filters-end
+
+
+.. _profile-api-response-times-5-columns-1-filter:
+
+5 columns 1 filter
+--------------------------------------------------
+
+.. profile-api-response-times-5-columns-1-filter-start
+
+The following table shows response times for a 5 column index with 1 filter field and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 1
+     - 1
+     - 1
+
+   * - **Workflow duration**
+     - 2m 25s
+     - 3m 19s
+     - 29m
+
+   * - **Median latency (ms)**
+     - 63 ms
+     - 71 ms
+     - 68 ms
+
+   * - **P95 latency (ms)**
+     - 140 ms
+     - 150 ms
+     - 240 ms
+
+   * - **P99 latency (ms)**
+     - 210 ms
+     - 200 ms
+     - 380 ms
+
+   * - **Requests per second**
+     - 1000
+     - 1000
+     - 1000
+
+.. profile-api-response-times-5-columns-1-filter-end
+
+
+.. _profile-api-response-times-5-columns-3-filters:
+
+5 columns 3 filters
+--------------------------------------------------
+
+.. profile-api-response-times-5-columns-3-filters-start
+
+The following table shows response times for a 5 column index with 3 filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 3
+     - 3
+     - 3
+
+   * - **Workflow duration**
+     - 3m 2s
+     - 4m 59s
+     - 34m
+
+   * - **Median latency (ms)**
+     - 1000 ms
+     - 8300 ms
+     - 26000 ms
+
+   * - **P95 latency (ms)**
+     - 3500 ms
+     - 19000 ms
+     - 44000 ms
+
+   * - **P99 latency (ms)**
+     - 5300 ms
+     - 24000 ms
+     - 46000 ms
+
+   * - **Requests per second**
+     - 330
+     - 40
+     - 4
+
+.. profile-api-response-times-5-columns-3-filters-end
+
+
+.. _profile-api-response-times-10-columns-0-filters:
+
+10 columns 0 filters
+--------------------------------------------------
+
+.. profile-api-response-times-10-columns-0-filters-start
+
+The following table shows response times for a 10 column index with zero filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 0
+     - 0
+     - 0
+
+   * - **Workflow duration**
+     - 2m 25s
+     - 3m 40s
+     - 42m
+
+   * - **Median latency (ms)**
+     - 36 ms
+     - 29 ms
+     - 57 ms
+
+   * - **P95 latency (ms)**
+     - 48 ms
+     - 52 ms
+     - 100 ms
+
+   * - **P99 latency (ms)**
+     - 62 ms
+     - 110 ms
+     - 130 ms
+
+   * - **Requests per second**
+     - 1000
+     - 1000
+     - 1000
+
+.. profile-api-response-times-10-columns-0-filters-end
+
+
+.. _profile-api-response-times-10-columns-1-filter:
+
+10 columns 1 filter
+--------------------------------------------------
+
+.. profile-api-response-times-10-columns-1-filter-start
+
+The following table shows response times for a 10 column index with 1 filter field and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 1
+     - 1
+     - 1
+
+   * - **Workflow duration**
+     - 2m 29s
+     - 3m 50s
+     - 43m
+
+   * - **Median latency (ms)**
+     - 84 ms
+     - 72 ms
+     - 90 ms
+
+   * - **P95 latency (ms)**
+     - 150 ms
+     - 200 ms
+     - 290 ms
+
+   * - **P99 latency (ms)**
+     - 200 ms
+     - 320 ms
+     - 440 ms
+
+   * - **Requests per second**
+     - 1000
+     - 1000
+     - 1000
+
+.. profile-api-response-times-10-columns-1-filter-end
+
+
+.. _profile-api-response-times-10-columns-3-filters:
+
+10 columns 3 filters
+--------------------------------------------------
+
+.. profile-api-response-times-10-columns-3-filters-start
+
+The following table shows response times for a 10 column index with 3 filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 3
+     - 3
+     - 3
+
+   * - **Workflow duration**
+     - 3m 14s
+     - 5m
+     - 50m
+
+   * - **Median latency (ms)**
+     - 420 ms
+     - 6600 ms
+     - 27000 ms
+
+   * - **P95 latency (ms)**
+     - 1400 ms
+     - 15000 ms
+     - 40000 ms
+
+   * - **P99 latency (ms)**
+     - 2300 ms
+     - 19000 ms
+     - 43000 ms
+
+   * - **Requests per second**
+     - 300
+     - 50
+     - 5
+
+.. profile-api-response-times-10-columns-3-filters-end
+
+
+.. _profile-api-response-times-10-columns-5-filters:
+
+10 columns 5 filters
+--------------------------------------------------
+
+.. profile-api-response-times-10-columns-5-filters-start
+
+The following table shows response times for a 10 column index with 5 filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 5
+     - 5
+     - 5
+
+   * - **Workflow duration**
+     - 2m 32s
+     - 4m 10s
+     - 49m
+
+   * - **Median latency (ms)**
+     - 390 ms
+     - 3000 ms
+     - 33000 ms
+
+   * - **P95 latency (ms)**
+     - 1500 ms
+     - 11000 ms
+     - 50000 ms
+
+   * - **P99 latency (ms)**
+     - 2200 ms
+     - 15000 ms
+     - 55000 ms
+
+   * - **Requests per second**
+     - 300
+     - 40
+     - 5
+
+.. profile-api-response-times-10-columns-5-filters-end
+
+
+.. _profile-api-response-times-30-columns-0-filters:
+
+30 columns 0 filters
+--------------------------------------------------
+
+.. profile-api-response-times-30-columns-0-filters-start
+
+The following table shows response times for a 30 column index with zero filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 0
+     - 0
+     - 0
+
+   * - **Workflow duration**
+     - 2m 50s
+     - 7m 14s
+     - 2h
+
+   * - **Median latency (ms)**
+     - 48 ms
+     - 36 ms
+     - 48 ms
+
+   * - **P95 latency (ms)**
+     - 89 ms
+     - 91 ms
+     - 120 ms
+
+   * - **P99 latency (ms)**
+     - 170 ms
+     - 160 ms
+     - 180 ms
+
+   * - **Requests per second**
+     - 1000
+     - 1000
+     - 1000
+
+.. profile-api-response-times-30-columns-0-filters-end
+
+
+.. _profile-api-response-times-30-columns-1-filter:
+
+30 columns 1 filter
+--------------------------------------------------
+
+.. profile-api-response-times-30-columns-1-filter-start
+
+The following table shows response times for a 30 column index with 1 filter field and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 1
+     - 1
+     - 1
+
+   * - **Workflow duration**
+     - 2m 32s
+     - 5m 39s
+     - --
+
+   * - **Median latency (ms)**
+     - 84 ms
+     - 800 ms
+     - --
+
+   * - **P95 latency (ms)**
+     - 150 ms
+     - 3700 ms
+     - --
+
+   * - **P99 latency (ms)**
+     - 200 ms
+     - 6600 ms
+     - --
+
+   * - **Requests per second**
+     - 1000
+     - 700
+     - --
+
+.. profile-api-response-times-30-columns-1-filter-end
+
+
+.. _profile-api-response-times-30-columns-3-filters:
+
+30 columns 3 filters
+--------------------------------------------------
+
+.. profile-api-response-times-30-columns-3-filters-start
+
+The following table shows response times for a 30 column index with 3 filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 3
+     - 3
+     - 3
+
+   * - **Workflow duration**
+     - 3m 14s
+     - 6m 51s
+     - --
+
+   * - **Median latency (ms)**
+     - 420 ms
+     - 1900 ms
+     - --
+
+   * - **P95 latency (ms)**
+     - 1400 ms
+     - 11000 ms
+     - --
+
+   * - **P99 latency (ms)**
+     - 2300 ms
+     - 15000 ms
+     - --
+
+   * - **Requests per second**
+     - 300
+     - 40
+     - --
+
+.. profile-api-response-times-30-columns-3-filters-end
+
+
+.. _profile-api-response-times-30-columns-5-filters:
+
+30 columns 5 filters
+--------------------------------------------------
+
+.. profile-api-response-times-30-columns-5-filters-start
+
+The following table shows response times for a 30 column index with 5 filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 5
+     - 5
+     - 5
+
+   * - **Workflow duration**
+     - 2m 32s
+     - 6m 38s
+     - --
+
+   * - **Median latency (ms)**
+     - 390 ms
+     - 3400 ms
+     - --
+
+   * - **P95 latency (ms)**
+     - 1500 ms
+     - 8700 ms
+     - --
+
+   * - **P99 latency (ms)**
+     - 2200 ms
+     - 11000 ms
+     - --
+
+   * - **Requests per second**
+     - 300
+     - 40
+     - --
+
+.. profile-api-response-times-30-columns-5-filters-end
+
+
+.. _profile-api-response-times-30-columns-10-filters:
+
+30 columns 10 filters
+--------------------------------------------------
+
+.. profile-api-response-times-30-columns-10-filters-start
+
+The following table shows response times for a 30 column index with 10 filter fields and outputs at 1, 10, and 100 million rows. All response times are in milliseconds.
+
+.. list-table::
+   :widths: 40 20 20 20
+   :header-rows: 1
+
+   * - 
+     - **1M rows**
+     - **10M rows**
+     - **100M rows**
+
+   * - **Filter fields**
+     - 10
+     - 10
+     - 10
+
+   * - **Workflow duration**
+     - 2m 42s
+     - 6m 54s
+     - --
+
+   * - **Median latency (ms)**
+     - 550 ms
+     - 3400 ms
+     - --
+
+   * - **P95 latency (ms)**
+     - 3800 ms
+     - 22000 ms
+     - --
+
+   * - **P99 latency (ms)**
+     - 9700 ms
+     - 26000 ms
+     - --
+
+   * - **Requests per second**
+     - 150
+     - 20
+     - --
+
+.. profile-api-response-times-30-columns-10-filters-end
+
+
 .. _profile-api-usecases:
 
 Use cases
