@@ -136,6 +136,10 @@ The following table describes recommended patterns to use when defining semantic
    * - **blv/datasource**
      - String
      - Apply to the ``datasource`` column in the bad-values blocklist table.
+   * - **blv/is-preprocessed**
+     - Boolean
+     - Optional. Use when the provided bad value is already standardized and requires no further preprocessing. For example, assign this semantic tag to "iPhone Max Black 5G" to prevent blocklisting anyone with "Max" or "Black" in their first or last names.
+
    * - **blv/semantic**
      - String
      - Apply to the ``semantic`` column in the bad-values blocklist table.

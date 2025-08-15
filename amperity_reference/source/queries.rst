@@ -846,6 +846,14 @@ You may enable performance mode for any query that returns large result sets. Pe
 
 .. queries-enable-performance-mode-end
 
+.. queries-enable-performance-mode-note-about-copies-start
+
+.. note:: If you make a copy of a query that is enabled for performance mode, performance mode is disabled in the copy. You must re-enable performance mode in the copied query.
+
+.. queries-enable-performance-mode-note-about-copies-end
+
+.. queries-enable-performance-mode-important-start
+
 .. important:: Performance mode is significantly faster than running a query in non-performance mode, but has the following limitations:
 
    * Sort order is not guaranteed because results are written in parallel to many files.
@@ -861,7 +869,7 @@ You may enable performance mode for any query that returns large result sets. Pe
 
         CAST(CURRENT_TIMESTAMP AS timestamp)
 
-.. sql-presto-function-current-timestamp-important-end
+.. queries-enable-performance-mode-important-end
 
 **To enable performance mode**
 

@@ -115,4 +115,4 @@
 
 .. |ext_sparksql_version_current| raw:: html
 
-   <a href="https://archive.apache.org/dist/spark/docs/3.5.1/api/sql/index.html" target="_blank">Spark SQL, version 3.5.1</a>
+   <a href="https://spark.apache.org/docs/3.5.5/sql-ref-syntax.html#data-retrieval-statements" target="_blank">Spark SQL, version 3.5.5</a>

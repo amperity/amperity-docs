@@ -55,7 +55,7 @@ html_css_files = [
     "custom.css",
     "shibuya.css",
 ]
-html_title = "Amperity"
+html_title = "User Guides"
 html_theme = "shibuya"
 #html_theme_path = ['../../_themes/']
 html_baseurl = "https://docs.amperity.com/user/"
