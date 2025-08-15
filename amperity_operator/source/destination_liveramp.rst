@@ -123,7 +123,7 @@ Get details
           :alt: Detail 3.
           :align: center
           :class: no-scaled-link
-     - **LiveRamp file prefer`file limitations <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|ences**
+     - **LiveRamp file preferences**
 
        Sending data to |destination-name| should follow recommendations for `uploading data <https://docs.liveramp.com/connect/en/uploading-data.html>`__ |ext_link|.
 
