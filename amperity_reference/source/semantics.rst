@@ -823,8 +823,6 @@ Foreign keys (fk)
 
 A foreign key semantic tag may be applied to any column in any data source, but should be associated with a field that can also act as a primary key for that data source *and* is present in other tables.
 
-A foreign key may be used once within a table. A table may have more than one foreign key. For example, if a data source contains customer and audience identifiers, apply **fk-customer** to the customer identifier and **fk-audience** to the audience identifier.
-
 .. semantics-key-foreign-end
 
 .. semantics-key-foreign-default-start
