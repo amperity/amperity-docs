@@ -61,8 +61,6 @@ Profile API
 
 The |api_profile| is unique to your tenant. The endpoints that are enabled for your use cases do not exist until the results of queries that have been defined by your brand have been published to the Profile API as an index. A :ref:`set of actions are available <api-profile-actions>` for each endpoint that your brand enables when using the Profile API.
 
-.. warning:: The Profile API is currently in a closed beta. Ask your Amperity representative about potential use cases that are enabled by the Profile API and for information about how (and when) your brand can get access to the Profile API.
-
 .. api-profile-about-start
 
 .. api-keys-important-profile-api-start
