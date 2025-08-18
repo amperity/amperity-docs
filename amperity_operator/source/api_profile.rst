@@ -660,7 +660,7 @@ As the number of rows and filter fields increase, the performance of that index 
 
 The size of the index has a greater effect on the length of time required to build or refresh an index than the response times for requests that are made to that index.
 
-.. note:: Response times were measured using simulated traffic across multiple endpoints simultaneously from US-East to US-West. Use these response times as an indicator for the types of response times you will see for your tenant's use of Profile API endpoints.
+.. note:: Response times were measured using traffic across multiple endpoints simultaneously from US-East to US-West. Use these response times as an indicator for the types of response times you will see for your tenant's use of Profile API endpoints.
 
 .. profile-api-response-times-start
 
@@ -674,11 +674,11 @@ The size of the index has a greater effect on the length of time required to bui
 
    * **p950**
 
-     95% of the simulated response times were below this value.
+     95% of the response times were below this value.
 
    * **p99**
 
-     99% of the simulated response times were below this value.
+     99% of the response times were below this value.
 
 .. profile-api-response-percentiles-end
 
