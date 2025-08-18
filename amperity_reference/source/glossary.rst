@@ -717,6 +717,14 @@ C
       :end-before: .. term-campaign-recipients-table-end
 
 
+.. _c-campaign-recipients-summary-table:
+
+**Campaign Recipients Summary**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-campaign-recipients-summary-table-start
+      :end-before: .. term-campaign-recipients-summary-table-end
+
+
 .. _c-campaigns-tab:
 
 **Campaigns tab**
