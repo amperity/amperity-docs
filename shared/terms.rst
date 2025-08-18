@@ -1072,6 +1072,15 @@ The **Campaign Recipients** table has a list of Amperity IDs associated with cam
 .. term-campaign-recipients-table-end
 
 
+**Campaign Recipients Summary**
+
+.. term-campaign-recipients-summary-table-start
+
+The **Campaign Recipients Summary** table stores one record for each unique combination of campaign, treatment, destination, and audience member.
+
+.. term-campaign-recipients-summary-table-end
+
+
 **Campaigns** page
 
 .. term-campaigns-tab-start

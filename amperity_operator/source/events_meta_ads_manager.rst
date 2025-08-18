@@ -458,7 +458,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
-   * - **email** *and/or* **phone**
+   * - **email** or **phone**
      - **Required**
 
        You must send an email address *or* a phone number to |destination-name|; you may configure the query to send both.
@@ -508,14 +508,17 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
           ,uit.order_id AS order_id
 
-       .. important:: The number of rows that results from the query will not be the same as the number of events that are uploaded to |destination-name|.
+       or:
 
-          This is because transactions within the query are grouped by **Order ID** as the data is sent to |destination-name|.
+       ::
 
-          Grouping by **Order ID** ensures that individual events are combined to describe a complete transaction.
+          ,ut.order_id AS order_id
 
-          Amperity performs the **GROUP BY** action automatically if a **GROUP BY** clause is not set to "order_id".
+       .. important:: The number of rows that results from the query may not be the same as the number of events that are uploaded to |destination-name|. This depends on the table from which the order ID is returned.
 
+          #. Transactions from the **Unified Itemized Transactions** table group items by order ID to ensure that individual events are combined to describe a complete transaction. |destination-name| processes each item as a unique conversion. For example, an order ID with three individual items is attributed by |destination-name| as three conversions.
+
+          #. Transactions from the **Unified Transactions** table are already grouped by order ID. |destination-name| processes each order as a single conversion.
 
    * - **phone**
      - See **email**.

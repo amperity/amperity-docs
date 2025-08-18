@@ -3592,10 +3592,227 @@ See also is not an :ref:`admonition <rst-admonitions>`, but it behaves like one.
 .. rst-see-also-end
 
 
+.. _rst-tables:
+
+Tables
+==================================================
+
+.. rst-tables-start
+
+Tables are always fun! Amperity docs use the following table types:
+
+* :ref:`CSV tables <rst-tables-csv>`
+* :ref:`Grid tables <rst-tables-grid>`
+* :ref:`List tables <rst-tables-list>`
+* :ref:`Simple tables <rst-tables-simple>`
+
+Each table type requires very different approaches and not all of them are ideal for all table types.
+
+.. admonition:: In general
+   :class: caution
+
+   * Use list tables as much as possible.
+   * Keep the number of columns to 4 or fewer.
+   * Use a header row.
+
+.. rst-tables-end
+
+
+.. _rst-tables-csv:
+
+CSV table
+--------------------------------------------------
+
+.. rst-tables-csv-start
+
+Use a CSV file that contains tabular information to build a table. For example, a CSV file that contains:
+
+.. code-block:: rst
+
+   Header1,Header2
+   12345,67890
+   abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz
+
+The ``.. csv-table::`` directive has the following attributes:
+
+* Use ``:file:`` to configure the path to the file. This file **must** be available to Sphinx at build time.
+* Use ``:widths:`` to configure column widths as a percentage. All widths must add up to 100%.
+* Use ``:header-rows:`` with a value of "1" to use the first row in the CSV file as the header row. Set this to "0" if there should not be a header row.
+
+**Do this**
+
+.. code-block:: none
+
+   .. csv-table::
+      :file: _static/test.csv
+      :widths: 30, 70
+      :header-rows: 1
+
+**For this**
+
+.. csv-table::
+   :file: _static/test.csv
+   :widths: 30, 70
+   :header-rows: 1
+
+.. rst-tables-csv-end
+
+
+.. _rst-tables-grid:
+
+Grid table
+--------------------------------------------------
+
+.. rst-tables-grid-start
+
+`Grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`__ |ext_link| are built by physically spacing out the table within the topic, similar to how it appears on the page. These are easy when they are small.
+
+Amperity documentation uses a grid table in a single location: `the tables that list the allowed actions for policies <https://docs.amperity.com/reference/policies.html#allowed-actions>`__ |ext_link|.
+
+**Do this**
+
+.. code-block:: none
+
+   +------------+------------+-----------+ 
+   | Header 1   | Header 2   | Header 3  | 
+   +============+============+===========+ 
+   | body row 1 | column 2   | column 3  | 
+   +------------+------------+-----------+ 
+   | body row 2 | Cells may span columns.| 
+   +------------+------------+-----------+ 
+   | body row 3 | Cells may  | - Cells   | 
+   +------------+ span rows. | - contain | 
+   | body row 4 |            | - blocks. | 
+   +------------+------------+-----------+
+
+**For this**
+
++------------+------------+-----------+ 
+| Header 1   | Header 2   | Header 3  | 
++============+============+===========+ 
+| body row 1 | column 2   | column 3  | 
++------------+------------+-----------+ 
+| body row 2 | Cells may span columns.| 
++------------+------------+-----------+ 
+| body row 3 | Cells may  | - Cells   | 
++------------+ span rows. | - contain | 
+| body row 4 |            | - blocks. | 
++------------+------------+-----------+
+
+.. rst-tables-grid-end
+
+
+.. _rst-tables-list:
+
+List table
+--------------------------------------------------
+
+.. rst-tables-list-start
+
+A list table is built using the ``.. list-table::`` directive with the following attributes:
+
+* Use ``:widths:`` to configure column widths as a percentage. All widths must add up to 100%.
+* Use ``:header-rows:`` with a value of "1" to use the first row in the list table as the header row. Set this to "0" if there should not be a header row.
+
+.. important:: The vertical alignment of a list table is important. Each row is delimited with a ``*`` character. Each column is delimited with a ``-`` character.
+
+**Do this**
+
+.. code-block:: none
+
+   .. list-table::
+      :widths: 30 70
+      :header-rows: 1
+
+      * - columnName
+        - columnName
+      * - **item1**
+        - description
+      * - **item2**
+        - description
+
+          More information about **item2**. Note the vertical alignment in the formatting.
+
+          You can use
+
+          #. Lists
+          #. Images
+          #. And other formatting options
+
+          inside columns in a list table.
+
+**For this**
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - columnName
+     - columnName
+   * - **item1**
+     - description
+   * - **item2**
+     - description
+
+       More information about **item2**. Note the vertical alignment in the formatting.
+
+       You can use
+
+       #. Lists
+       #. Images
+       #. And other formatting options
+
+       inside columns in a list table.
+
+.. rst-tables-list-end
+
+
+.. _rst-tables-simple:
+
+Simple table
+--------------------------------------------------
+
+.. rst-tables-simple-start
+
+Simple tables are simple. The markup is focused mostly on the vertical layout. Like grid tables, they are easy when they are small.
+
+**Do this**
+
+.. code-block:: none
+
+   =====  =====  ====== 
+      Inputs     Output 
+   ------------  ------ 
+     A      B    A or B 
+   =====  =====  ====== 
+   False  False  False 
+   True   False  True 
+   False  True   True 
+   True   True   True 
+   =====  =====  ======
+
+**For this**
+
+=====  =====  ====== 
+   Inputs     Output 
+------------  ------ 
+  A      B    A or B 
+=====  =====  ====== 
+False  False  False 
+True   False  True 
+False  True   True 
+True   True   True 
+=====  =====  ======
+
+.. rst-tables-simple-end
+
+
 .. _rst-tabs:
 
 Tabs
 ==================================================
+
+.. rst-tabs-start
 
 Use tabs selectively, such as for showing request code samples for APIs.
 
@@ -3737,220 +3954,7 @@ Use tabs selectively, such as for showing request code samples for APIs.
 
          print("CSV file generated successfully.")
 
-
-.. _rst-tables:
-
-Tables
-==================================================
-
-.. rst-tables-start
-
-Tables are always fun! Amperity docs use the following table types:
-
-* :ref:`CSV tables <rst-tables-csv>`
-* :ref:`Grid tables <rst-tables-grid>`
-* :ref:`List tables <rst-tables-list>`
-* :ref:`Simple tables <rst-tables-simple>`
-
-Each table type requires very different approaches and not all of them are ideal for all table types.
-
-.. admonition:: In general
-   :class: caution
-
-   * Use list tables as much as possible.
-   * Keep the number of columns to 4 or fewer.
-   * Use a header row.
-
-.. rst-tables-end
-
-
-.. _rst-tables-csv:
-
-CSV table
---------------------------------------------------
-
-.. rst-tables-csv-start
-
-Use a CSV file that contains tabular information to build a table. For example, a CSV file that contains:
-
-.. code-block:: rst
-
-   Header1,Header2
-   12345,67890
-   abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz
-
-The ``.. csv-table::`` directive has the following attributes:
-
-* Use ``:file:`` to configure the path to the file. This file **must** be available to Sphinx at build time.
-* Use ``:widths:`` to configure column widths as a percentage. All widths must add up to 100%.
-* Use ``:header-rows:`` with a value of "1" to use the first row in the CSV file as the header row. Set this to "0" if there should not be a header row.
-
-**Do this**
-
-.. code-block:: none
-
-   .. csv-table::
-      :file: _static/test.csv
-      :widths: 30, 70
-      :header-rows: 1
-
-**For this**
-
-.. csv-table::
-   :file: _static/test.csv
-   :widths: 30, 70
-   :header-rows: 1
-
-.. rst-tables-csv-end
-
-
-.. _rst-tables-grid:
-
-Grid table
---------------------------------------------------
-
-.. rst-tables-grid-start
-
-`Grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`__ |ext_link| are built by physically spacing out the table within the topic, similar to how it appears on the page. These are easy when they are small.
-
-Amperity documentation uses a grid table in a single location: `the tables that list the allowed actions for policies <https://docs.amperity.com/reference/policies.html#allowed-actions>`__ |ext_link|.
-
-**Do this**
-
-.. code-block:: none
-
-   +------------+------------+-----------+ 
-   | Header 1   | Header 2   | Header 3  | 
-   +============+============+===========+ 
-   | body row 1 | column 2   | column 3  | 
-   +------------+------------+-----------+ 
-   | body row 2 | Cells may span columns.| 
-   +------------+------------+-----------+ 
-   | body row 3 | Cells may  | - Cells   | 
-   +------------+ span rows. | - contain | 
-   | body row 4 |            | - blocks. | 
-   +------------+------------+-----------+
-
-**For this**
-
-+------------+------------+-----------+ 
-| Header 1   | Header 2   | Header 3  | 
-+============+============+===========+ 
-| body row 1 | column 2   | column 3  | 
-+------------+------------+-----------+ 
-| body row 2 | Cells may span columns.| 
-+------------+------------+-----------+ 
-| body row 3 | Cells may  | - Cells   | 
-+------------+ span rows. | - contain | 
-| body row 4 |            | - blocks. | 
-+------------+------------+-----------+
-
-.. rst-tables-grid-end
-
-
-.. _rst-tables-list:
-
-List table
---------------------------------------------------
-
-.. rst-tables-list-start
-
-A list table is built using the ``.. list-table::`` directive with the following attributes:
-
-* Use ``:widths:`` to configure column widths as a percentage. All widths must add up to 100%.
-* Use ``:header-rows:`` with a value of "1" to use the first row in the list table as the header row. Set this to "0" if there should not be a header row.
-
-.. important:: The vertical alignment of a list table is important. Each row is delimited with a ``*`` character. Each column is delimited with a ``-`` character.
-
-**Do this**
-
-.. code-block:: none
-
-   .. list-table::
-      :widths: 30 70
-      :header-rows: 1
-
-      * - columnName
-        - columnName
-      * - **item1**
-        - description
-      * - **item2**
-        - description
-
-          More information about **item2**. Note the vertical alignment.
-
-          You can use
-
-          #. Lists
-          #. Images
-          #. And other formatting options
-
-          inside columns in a list table.
-
-**For this**
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - columnName
-     - columnName
-   * - **item1**
-     - description
-   * - **item2**
-     - description
-
-       More information about **item2**. Note the vertical alignment.
-
-       You can use
-
-       #. Lists
-       #. Images
-       #. And other formatting options
-
-       inside columns in a list table.
-
-.. rst-tables-list-end
-
-
-.. _rst-tables-simple:
-
-Simple table
---------------------------------------------------
-
-.. rst-tables-simple-start
-
-Simple tables are simple. The markup is focused mostly on the vertical layout. Like grid tables, they are easy when they are small.
-
-**Do this**
-
-.. code-block:: none
-
-   =====  =====  ====== 
-      Inputs     Output 
-   ------------  ------ 
-     A      B    A or B 
-   =====  =====  ====== 
-   False  False  False 
-   True   False  True 
-   False  True   True 
-   True   True   True 
-   =====  =====  ======
-
-**For this**
-
-=====  =====  ====== 
-   Inputs     Output 
-------------  ------ 
-  A      B    A or B 
-=====  =====  ====== 
-False  False  False 
-True   False  True 
-False  True   True 
-True   True   True 
-=====  =====  ======
-
-.. rst-tables-simple-end
+.. rst-tabs-end
 
 
 .. _rst-thematic-break:

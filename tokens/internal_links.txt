@@ -1426,6 +1426,11 @@
    <a href="https://docs.amperity.com/operator/table_campaign_recipients.html">Campaign Recipients</a>
 
 
+.. |table_campaign_recipients_summary| raw:: html
+
+   <a href="https://docs.amperity.com/operator/table_campaign_recipients_summary.html">Campaign Recipients Summary</a>
+
+
 .. |table_customer_attributes| raw:: html
 
    <a href="https://docs.amperity.com/operator/table_customer_attributes.html">Customer Attributes</a>

@@ -1190,7 +1190,7 @@ From Amazon S3
 
 .. workflows-context-source-amazon-s3-start
 
-In addition to all `common source workflow alerts <workflows-context-source-common>`, Amperity provides the following destination-specific workflow actions for Amazon S3:
+Along with `common source workflow alerts <workflows-context-source-common>`, Amperity provides the following destination-specific workflow actions for Amazon S3:
 
 * `Invalid bucket name <https://docs.amperity.com/operator/source_amazon_s3.html#invalid-bucket-name>`__
 * `Invalid credentials <https://docs.amperity.com/operator/source_amazon_s3.html#invalid-credentials>`__
@@ -1473,20 +1473,24 @@ Open from Recent activity panes
 
 .. workflows-howto-open-from-recent-activity-start
 
-The **Sources**, **Stitch**, **Customer 360**, **Campaigns**, and **Destinations** page will show workflow alerts when a task requires your attention. You can also access all workflows from the **Workflows** page.
+The **Sources**, **Stitch**, **Customer 360**, **Campaigns**, and **Destinations** page shows workflow alerts when a task requires your attention. You can also access all workflows from the **Workflows** page.
 
 .. workflows-howto-open-from-recent-activity-end
 
 **To open workflows from Recent activity panes**
+
+.. vale off
 
 .. workflows-howto-open-from-recent-activity-steps-start
 
 #. Open the **Sources**, **Stitch**, **Customer 360**, **Campaigns**, or **Destinations** page.
 #. Open the **Recent activity** pane.
 #. Browse or search the notifications.
-#. A notification with a workflow action is highlighted. Click the "View workflow" link to open the workflow.
+#. Notifications for workflow action are highlighted. Click the "View workflow" link to open the workflow.
 
    .. tip:: When workflow resolutions are available, an alert appears with a button named **Show resolutions**.
+
+.. vale on
 
 .. workflows-howto-open-from-recent-activity-steps-end
 
@@ -1593,9 +1597,9 @@ Send alerts to email addresses
 
 .. workflows-howto-email-address-start
 
-You can configure Amperity to send automated workflow alerts to individual email addresses or group aliases as long as the domain that is associated with those email addresses is configured to be an allowed domain in Amperity.
+Send automated workflow alerts to individual email addresses or group aliases that belong to an allowed domain in Amperity.
 
-Email workflow alerts are sent from "notifications@amperity.com". A reply to the emailed workflow alert will reply to "support@amperity.com", after which a support ticket is opened automatically.
+Emailed workflow alerts are from "notifications@amperity.com". A reply to the emailed workflow alert sends the reply to "support@amperity.com", and then creates a support ticket.
 
 .. workflows-howto-email-address-end
 

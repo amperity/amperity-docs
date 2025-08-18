@@ -136,6 +136,10 @@ The following table describes recommended patterns to use when defining semantic
    * - **blv/datasource**
      - String
      - Apply to the ``datasource`` column in the bad-values blocklist table.
+   * - **blv/is-preprocessed**
+     - Boolean
+     - Optional. Use when the provided bad value is already standardized and requires no further preprocessing. For example, assign this semantic tag to "iPhone Max Black 5G" to prevent blocklisting anyone with "Max" or "Black" in their first or last names.
+
    * - **blv/semantic**
      - String
      - Apply to the ``semantic`` column in the bad-values blocklist table.
@@ -818,8 +822,6 @@ Foreign keys (fk)
 .. semantics-key-foreign-start
 
 A foreign key semantic tag may be applied to any column in any data source, but should be associated with a field that can also act as a primary key for that data source *and* is present in other tables.
-
-A foreign key may be used once within a table. A table may have more than one foreign key. For example, if a data source contains customer and audience identifiers, apply **fk-customer** to the customer identifier and **fk-audience** to the audience identifier.
 
 .. semantics-key-foreign-end
 
