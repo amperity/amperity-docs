@@ -345,11 +345,11 @@ The **Campaign Recipients** table contains the following columns:
 
    * - **Target ID**
      - String
-     - The unique ID for the data template that was used to send campaign data to a downstream channel or workflow.
+     - The unique ID for a destination.
 
    * - **Target Name**
      - String
-     - The name of the data template that was used to send campaign data to a downstream channel or workflow.
+     - The name of the destination to which the associated campaign ID was sent.
 
    * - **Treatment ID**
      - String
