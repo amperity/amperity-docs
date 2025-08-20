@@ -205,15 +205,13 @@ Activation States
 
 .. data-tables-campaign-recipients-summary-about-start
 
-**Activation States** tables are not accessible from databases or queries. **Activation States** tables are only accessible as a condition from the **Segments Editor**.
+**Activation States** tables cannot be accessed from a sandbox, a query, or a database table. **Activation States** tables are only accessible as a condition from the **Segments Editor**.
 
 .. data-tables-campaign-recipients-summary-about-end
 
 .. data-tables-campaign-recipients-summary-sandboxes-start
 
-.. important:: Activation states tables cannot be accessed from a sandbox, a query, or a database table.
-
-   Access to the fields in the **Activation States** table requires at least one campaign or journey to be active in your tenant.
+.. important:: Access to the fields in the **Activation States** table requires at least one active campaign or journey in your tenant.
 
 .. data-tables-campaign-recipients-summary-sandboxes-end
 
