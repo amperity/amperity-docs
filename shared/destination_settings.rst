@@ -1610,7 +1610,7 @@ The account ID for your |destination-name| account.
 
 .. setting-meta-ads-manager-custom-audience-name-start
 
-The name of the custom audience in |destination-name|.
+The name of the custom audience in |destination-name|. The name of a custom audience should not include the word "treatment".
 
 .. setting-meta-ads-manager-custom-audience-name-end
 
@@ -1723,7 +1723,6 @@ The environment region for your Power Apps application. For example: "crm".
 .. setting-microsoft-dataverse-powerapps-region-end
 
 .. vale on
-
 
 **Truncate table?**
 

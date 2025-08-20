@@ -52,14 +52,14 @@ Click any of the following cards to open a page about that table.
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: Activation States
+      :link: table_activation_states.html
+
    .. grid-item-card:: All Opted-in Emails
       :link: table_all_opted_in_emails.html
 
    .. grid-item-card:: Campaign Recipients
       :link: table_campaign_recipients.html
-
-   .. grid-item-card:: Campaign Recipients Summary
-      :link: table_campaign_recipients_summary.html
 
    .. grid-item-card:: Customer 360
       :link: table_customer_360.html
@@ -165,9 +165,9 @@ Click any of the following cards to open a page about that table.
    :maxdepth: 2
    :hidden:
 
+   Activation States <table_activation_states>
    All Opted-in Emails <table_all_opted_in_emails>
    Campaign Recipients <table_campaign_recipients>
-   Campaign Recipients Summary <table_campaign_recipients_summary>
    Customer 360 <table_customer_360>
    Customer Attributes <table_customer_attributes>
    Detailed Examples <table_detailed_examples>

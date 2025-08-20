@@ -26,6 +26,14 @@ A
 ==================================================
 
 
+.. _a-activation-states-tables:
+
+**Activation States**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-activation-states-tables-start
+      :end-before: .. term-activation-states-tables-end
+
+
 .. _a-active-campaign:
 
 **ActiveCampaign**
@@ -715,14 +723,6 @@ C
    .. include:: ../../shared/terms.rst
       :start-after: .. term-campaign-recipients-table-start
       :end-before: .. term-campaign-recipients-table-end
-
-
-.. _c-campaign-recipients-summary-table:
-
-**Campaign Recipients Summary**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-campaign-recipients-summary-table-start
-      :end-before: .. term-campaign-recipients-summary-table-end
 
 
 .. _c-campaigns-tab:
