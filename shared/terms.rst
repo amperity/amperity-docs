@@ -741,7 +741,7 @@ An automatic segment is an active segment configured to run whenever upstream da
 
 .. term-average-order-value-start
 
-Average order value is the average order value for a unique customer's transactions.
+Average order value (AOV) is the average order value for a unique customer's transactions.
 
 .. term-average-order-value-end
 
