@@ -194,6 +194,172 @@ This diagram uses the following indicators to highlight relationships between ta
 .. data-tables-data-model-indicators-end
 
 
+.. _data-tables-activation-states:
+
+Activation States
+==================================================
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-activation-states-tables-start
+   :end-before: .. term-activation-states-tables-end
+
+.. data-tables-campaign-recipients-summary-about-start
+
+**Activation States** tables are not accessible from databases or queries. **Activation States** tables are only accessible as a condition from the **Segments Editor**.
+
+.. data-tables-campaign-recipients-summary-about-end
+
+.. data-tables-campaign-recipients-summary-sandboxes-start
+
+.. important:: Activation states tables cannot be accessed from a sandbox, a query, or a database table.
+
+   Access to the fields in the **Activation States** table requires at least one campaign or journey to be active in your tenant.
+
+.. data-tables-campaign-recipients-summary-sandboxes-end
+
+
+.. _data-tables-activation-states-campaigns:
+
+For campaigns
+--------------------------------------------------
+
+.. data-tables-activation-states-campaigns-start
+
+The **Activation States** table for campaigns keeps track of customers who belong to a campaign, including sub-audiences, treatments, destinations, how often and when.
+
+.. data-tables-activation-states-campaigns-end
+
+.. data-tables-activation-states-campaigns-usewith-start
+
+Campaign activation states can be added to any segment.
+
+.. image:: ../../images/attributes-picker-activation-activity-campaigns.png
+   :width: 480 px
+   :alt: The event curve.
+   :align: left
+   :class: no-scaled-link
+
+.. data-tables-activation-states-campaigns-usewith-end
+
+**Field reference**
+
+.. data-tables-activation-states-campaigns-fields-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Campaign ID**
+     - String
+     - The unique ID for a campaign.
+
+   * - **Count**
+     - String
+     - The sum of **First Entry** and **Last Entry**.
+
+   * - **Database ID**
+     - String
+     - The unique ID for the database.
+
+   * - **Destination ID**
+     - String
+     - The unique ID for a destination.
+
+   * - **First entry**
+     - String
+     - The date and time at which an audience member was first  part of a campaign.
+
+   * - **Identifier**
+     - String
+     - The activation ID associated with the audience member. For example, the Amperity ID or an email address.
+
+   * - **Identifier type**
+     - String
+     - The type of unique identifier. For example, the Amperity ID, a customer ID, or a loyalty ID.
+
+   * - **Last entry**
+     - String
+     - The date and time at which an audience member was most recently part of a campaign.
+
+   * - **Sub Audience ID**
+     - String
+     - The unique ID for the sub-audience to which the associated campaign was sent.
+
+   * - **Treatment ID**
+     - String
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-treatment-id-start
+          :end-before: .. term-treatment-id-end
+
+.. data-tables-activation-states-campaigns-fields-end
+
+
+.. _data-tables-activation-states-journeys:
+
+For journeys
+--------------------------------------------------
+
+.. data-tables-activation-states-journeys-start
+
+The **Activation States** table for journeys keeps track of customers who have entered a journey, along with the nodes each customer has travelled through, including how often and when.
+
+.. data-tables-activation-states-journeys-end
+
+.. data-tables-activation-states-journeys-usewith-start
+
+Journey activation states can be added to any segment.
+
+.. image:: ../../images/attributes-picker-activation-activity-journeys.png
+   :width: 480 px
+   :alt: The event curve.
+   :align: left
+   :class: no-scaled-link
+
+.. data-tables-activation-states-journeys-usewith-end
+
+**Field reference**
+
+.. data-tables-activation-states-journeys-fields-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **First entry time**
+     - String
+     - The date and time at which an audience member was first part of a journey.
+
+       When a node is specified, the date and time at which an audience member first entered the node within the journey.
+
+   * - **Entry count**
+     - String
+     - The number of times an audience member entered the selected node.
+
+   * - **Journey**
+     - String
+     - The name of the journey.
+
+   * - **Last entry time**
+     - String
+     - The date and time at which an audience member was most recently part of a journey.
+
+       When a node is specified, the date and time at which an audience member was most recently part of the node within the journey.
+
+   * - **Node**
+     - String
+     - The name of a node within the selected journey.
+
+.. data-tables-activation-states-journeys-fields-end
+
+
 .. _data-tables-all-opted-in-emails:
 
 All Opted In Emails
@@ -239,7 +405,7 @@ The **Campaign Recipients** table is generated by Amperity, and then made availa
 
 .. data-tables-campaign-recipients-table-about-start
 
-The **Campaign Recipients** table contains the following columns:
+The **Campaign Recipients** table has the following columns:
 
 .. data-tables-campaign-recipients-table-about-end
 
@@ -368,88 +534,6 @@ The **Campaign Recipients** table contains the following columns:
      - The unique ID for the workflow that managed the associated campaign.
 
 .. data-tables-campaign-recipients-table-end
-
-
-.. _data-tables-campaign-recipients-summary:
-
-Campaign Recipients Summary
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-campaign-recipients-summary-table-start
-   :end-before: .. term-campaign-recipients-summary-table-end
-
-.. data-tables-campaign-recipients-summary-about-start
-
-The **Campaign Recipients Summary** table is generated by Amperity, and then made available as a standard database table. Use this table to access campaign activity.
-
-.. data-tables-campaign-recipients-summary-about-end
-
-.. data-tables-campaign-recipients-summary-link-to-table-start
-
-.. note:: See |table_campaign_recipients_summary| for more information about how this table is built and maintained within Amperity.
-
-.. data-tables-campaign-recipients-summary-link-to-table-end
-
-.. data-tables-campaign-recipients-summary-table-about-start
-
-The **Campaign Recipients Summary** table contains the following columns:
-
-.. data-tables-campaign-recipients-summary-table-about-end
-
-.. data-tables-campaign-recipients-summary-table-start
-
-.. list-table::
-   :widths: 200 100 300
-   :header-rows: 1
-
-   * - Column name
-     - Data type
-     - Description
-
-   * - **Campaign ID**
-     - String
-     - The unique ID for a campaign.
-
-   * - **Count**
-     - String
-     - The sum of **First Entry** and **Last Entry**.
-
-   * - **Database ID**
-     - String
-     - The unique ID for the database.
-
-   * - **Destination ID**
-     - String
-     - The unique ID for a destination.
-
-   * - **First entry**
-     - String
-     - The date and time at which an audience member was first  part of a campaign.
-
-   * - **Identifier**
-     - String
-     - The activation ID associated with the audience member. For example, the Amperity ID or an email address.
-
-   * - **Identifier type**
-     - String
-     - The type of unique identifier. For example, the Amperity ID, a customer ID, or a loyalty ID.
-
-   * - **Last entry**
-     - String
-     - The date and time at which an audience member was most recently part of a campaign.
-
-   * - **Sub Audience ID**
-     - String
-     - The unique ID for the sub-audience to which the associated campaign was sent.
-
-   * - **Treatment ID**
-     - String
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-treatment-id-start
-          :end-before: .. term-treatment-id-end
-
-.. data-tables-campaign-recipients-summary-table-end
 
 
 .. _data-tables-customer-360:
@@ -604,7 +688,7 @@ Customer Attributes
 
 .. data-tables-customer-attributes-table-about-start
 
-The **Customer Attributes** table contains the following columns:
+The **Customer Attributes** table has the following columns:
 
 .. data-tables-customer-attributes-table-about-end
 
@@ -756,7 +840,7 @@ Detailed Examples
 
 .. data-tables-detailed-examples-table-about-start
 
-The **Detailed Examples** table contains the following columns, as its starting point. This table is typically updated to add more pairs, enable use for blocklisted values, and to support additional tenant-specific use cases.
+The **Detailed Examples** table has the following columns, as its starting point. This table is typically updated to add more pairs, enable use for blocklisted values, and to support additional tenant-specific use cases.
 
 .. data-tables-detailed-examples-table-about-end
 
@@ -930,7 +1014,7 @@ Email Engagement Attributes
 
 .. data-tables-email-engagement-attributes-table-about-start
 
-The **Email Engagement Attributes** table contains the following columns:
+The **Email Engagement Attributes** table has the following columns:
 
 .. data-tables-email-engagement-attributes-table-about-end
 
@@ -1068,7 +1152,7 @@ Email Engagement Summary
 
 .. data-tables-email-engagement-summary-table-about-start
 
-The **Email Engagement Summary** table contains the following columns:
+The **Email Engagement Summary** table has the following columns:
 
 .. data-tables-email-engagement-summary-table-about-end
 
@@ -1198,7 +1282,7 @@ The **EUID** table contains the results of EUID token generation when enabled fo
 
 .. data-tables-euid-table-about-start
 
-The **EUID** table contains the following columns:
+The **EUID** table has the following columns:
 
 .. data-tables-euid-table-about-end
 
@@ -1257,7 +1341,7 @@ An **Event Propensity** table associates individual customers to the events that
 
 .. data-tables-event-propensity-table-about-start
 
-The **Event Propensity** table contains the following columns:
+The **Event Propensity** table has the following columns:
 
 .. data-tables-event-propensity-table-about-end
 
@@ -1341,7 +1425,7 @@ The **Fiscal Calendar** table is generated by Amperity when fiscal calendar sema
 
 .. data-tables-fiscal-calendar-table-about-start
 
-The **Fiscal Calendar** table contains the following columns:
+The **Fiscal Calendar** table has the following columns:
 
 .. data-tables-fiscal-calendar-table-about-end
 
@@ -1413,7 +1497,7 @@ Merged Customers
 
 .. data-tables-merged-customers-table-about-start
 
-The **Merged Customers** table contains the following columns:
+The **Merged Customers** table has the following columns:
 
 .. data-tables-merged-customers-table-about-end
 
@@ -1705,7 +1789,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
 .. data-tables-optin-status-email-table-about-start
 
-The **Email Opt Status** table contains the following columns:
+The **Email Opt Status** table has the following columns:
 
 .. data-tables-optin-status-email-table-about-end
 
@@ -1794,7 +1878,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
 .. data-tables-optin-status-sms-table-about-start
 
-The **SMS Opt Status** table contains the following columns:
+The **SMS Opt Status** table has the following columns:
 
 .. data-tables-optin-status-sms-table-about-end
 
@@ -1863,7 +1947,7 @@ Predicted Affinity
 
 .. data-tables-affinity-table-about-start
 
-An **Affinity** table contains the following columns:
+An **Affinity** table has the following columns:
 
 .. data-tables-affinity-table-about-end
 
@@ -1938,7 +2022,7 @@ Predicted CLV Attributes
 
 .. data-tables-predicted-clv-attributes-table-about-start
 
-The **Predicted CLV Attributes** table contains the following columns:
+The **Predicted CLV Attributes** table has the following columns:
 
 .. data-tables-predicted-clv-attributes-table-about-end
 
@@ -2019,7 +2103,7 @@ The **Stitch BadValues** table contains all of the values that were added to the
 
 .. data-tables-stitch-bad-values-table-about-start
 
-The **Stitch BadValues** table contains the following columns:
+The **Stitch BadValues** table has the following columns:
 
 .. data-tables-stitch-bad-values-table-about-end
 
@@ -2078,7 +2162,7 @@ Stitch Blocking Keys
 
 .. data-tables-stitch-blocking-keys-table-about-start
 
-The **Stitch Blocking Keys** table contains the following columns:
+The **Stitch Blocking Keys** table has the following columns:
 
 .. data-tables-stitch-blocking-keys-table-about-end
 
@@ -2136,7 +2220,7 @@ Stitch BlocklistValues
 
 .. data-tables-stitch-blocklist-values-table-about-start
 
-The **Stitch BlocklistValues** table contains the following columns:
+The **Stitch BlocklistValues** table has the following columns:
 
 .. data-tables-stitch-blocklist-values-table-about-end
 
@@ -2186,7 +2270,7 @@ Stitch Scores
 
 .. data-tables-stitch-scores-table-about-start
 
-The **Stitch Scores** table contains the following columns:
+The **Stitch Scores** table has the following columns:
 
 .. data-tables-stitch-scores-table-about-end
 
@@ -2272,7 +2356,7 @@ Transaction Attributes Extended
 
 .. data-tables-transaction-attributes-table-about-start
 
-The **Transaction Attributes Extended** table contains the following columns:
+The **Transaction Attributes Extended** table has the following columns:
 
 .. data-tables-transaction-attributes-table-about-end
 
@@ -3139,7 +3223,7 @@ The **UID2** table contains the results of UID2 token generation when enabled fo
 
 .. data-tables-uid2-table-about-start
 
-The **UID2** table contains the following columns:
+The **UID2** table has the following columns:
 
 .. data-tables-uid2-table-about-end
 
@@ -3188,7 +3272,7 @@ Unified Changes Clusters
 
 .. data-tables-unified-changes-clusters-table-about-start
 
-The **Unified Changes Clusters** table contains the following columns:
+The **Unified Changes Clusters** table has the following columns:
 
 .. data-tables-unified-changes-clusters-table-about-end
 
@@ -3248,7 +3332,7 @@ Unified Changes PKS
 
 .. data-tables-unified-changes-pks-table-about-start
 
-The **Unified Changes PKS** table contains the following columns:
+The **Unified Changes PKS** table has the following columns:
 
 .. data-tables-unified-changes-pks-table-about-end
 
@@ -3328,7 +3412,7 @@ Unified Coalesced
 
 .. data-tables-unified-coalesced-table-about-start
 
-The **Unified Coalesced** table contains the following columns:
+The **Unified Coalesced** table has the following columns:
 
 .. data-tables-unified-coalesced-table-about-end
 
@@ -3840,7 +3924,7 @@ Unified Customer
 
 .. data-tables-unified-customers-table-about-start
 
-The **Unified Customer** table contains the following columns:
+The **Unified Customer** table has the following columns:
 
 .. data-tables-unified-customers-table-about-end
 
@@ -4084,7 +4168,7 @@ Unified Email Events
 
 .. data-tables-unified-email-events-table-about-start
 
-The **Unified Email Events** table contains the following columns:
+The **Unified Email Events** table has the following columns:
 
 .. data-tables-unified-email-events-table-about-end
 
@@ -4185,7 +4269,7 @@ The following diagram shows an example of the **Unified Itemized Transactions** 
 
 .. data-tables-unified-itemized-transactions-table-about-start
 
-The **Unified Itemized Transactions** table contains the following columns:
+The **Unified Itemized Transactions** table has the following columns:
 
 .. data-tables-unified-itemized-transactions-table-about-end
 
@@ -4714,7 +4798,7 @@ Unified Loyalty
 
 .. data-tables-unified-loyalty-about-start
 
-The **Unified Loyalty** table contains the following columns:
+The **Unified Loyalty** table has the following columns:
 
 .. data-tables-unified-loyalty-about-end
 
@@ -4870,7 +4954,7 @@ Unified Loyalty Events
 
 .. data-tables-unified-loyalty-events-about-start
 
-The **Unified Loyalty Events** table contains the following columns:
+The **Unified Loyalty Events** table has the following columns:
 
 .. data-tables-unified-loyalty-events-about-end
 
@@ -5057,7 +5141,7 @@ Unified Preprocessed Raw
 
 .. data-tables-unified-preprocessed-raw-about-start
 
-The **Unified Preprocessed Raw** table contains the following columns:
+The **Unified Preprocessed Raw** table has the following columns:
 
 .. data-tables-unified-preprocessed-raw-about-end
 
@@ -5255,7 +5339,7 @@ Unified Product Catalog
 
 .. data-tables-unified-product-catalog-table-about-start
 
-The **Unified Product Catalog** table contains the following columns:
+The **Unified Product Catalog** table has the following columns:
 
 .. data-tables-unified-product-catalog-table-about-end
 
@@ -5445,7 +5529,7 @@ Unified Scores
 
 .. data-tables-unified-scores-table-about-start
 
-The **Unified Scores** table contains the following columns:
+The **Unified Scores** table has the following columns:
 
 .. data-tables-unified-scores-table-about-end
 
@@ -5548,7 +5632,7 @@ The following diagram shows an example of the **Unified Transactions** table (cl
 
 .. data-tables-unified-transactions-table-about-start
 
-The **Unified Transactions** table contains the following columns:
+The **Unified Transactions** table has the following columns:
 
 .. data-tables-unified-transactions-table-about-end
 

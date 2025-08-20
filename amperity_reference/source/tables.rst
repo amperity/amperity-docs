@@ -34,14 +34,14 @@ A unified view of your customers, including profiles, transactions, and interact
    .. grid-item-card:: About data tables
       :link: data_tables.html
 
+   .. grid-item-card:: Activation States
+      :link: data_tables.html#activation-states
+
    .. grid-item-card:: All Opted In Emails
       :link: data_tables.html#all-opted-in-emails
 
    .. grid-item-card:: Campaign Recipients
       :link: data_tables.html#campaign-recipients
-
-   .. grid-item-card:: Campaign Recipients Summary
-      :link: data_tables.html#campaign-recipients-summary
 
    .. grid-item-card:: Customer 360
       :link: data_tables.html#customer-360
