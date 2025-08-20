@@ -46,6 +46,7 @@ For a production environment, most data sources are configured to run once per 2
 
 The following sections contain specific advice and/or recommendations:
 
+* :ref:`Character encoding <send-data-to-amperity-character-encoding>`
 * :ref:`Credentials and secrets <send-data-to-amperity-credentials-and-secrets>`
 * :ref:`File formats <send-data-to-amperity-file-format>`
 * :ref:`Pull data vs. push data <send-data-to-amperity-pull-vs-push>`
@@ -56,6 +57,20 @@ The following sections contain specific advice and/or recommendations:
 * :ref:`Large datasets <send-data-to-amperity-large-datasets>`
 
 .. send-data-to-amperity-sections-end
+
+
+.. _send-data-to-amperity-character-encoding:
+
+Character encoding
+==================================================
+
+.. send-data-to-amperity-character-encoding-start
+
+Character encoding within files must be in `UTF-8 <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link| or `UTF-16 <https://en.wikipedia.org/wiki/UTF-16>`__ |ext_link|, including the use of valid escape characters for the provided file format.
+
+When using UTF-16 character encoding ensure the file honors the byte order mark (BOM) for the header row *and* all subsequent data rows.
+
+.. send-data-to-amperity-character-encoding-end
 
 
 .. _send-data-to-amperity-credentials-and-secrets:
