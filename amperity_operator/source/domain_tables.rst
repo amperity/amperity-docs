@@ -67,12 +67,12 @@ Columns in domain tables may be one of the following types:
      - A value that represents an either/or, such as true or false, 0 or 1, true or NULL.
 
    * - **date**
-     - An ISO-8601 compliant date values, such as a birthdate. For example:
+     - An ISO-8601 compliant date value, such as a birthdate. For example:
 
        * 2021-11-04
 
    * - **datetime**
-     - An ISO-8601 compliant date and time values=, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
+     - ISO-8601 compliant date and time values, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
 
        * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
        * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
@@ -80,26 +80,26 @@ Columns in domain tables may be one of the following types:
        .. important:: Some fields that store datetime values are set to the string data type.
 
    * - **decimal**
-     - A fixed point number, such as for prices or message sizes. (The number of characters in the decimal value is configurable during feed setup.). For example:
+     - A fixed point number, such as for prices or message sizes. The number of characters in the decimal value is configurable. For example:
 
        * 1.50 (prices)
        * 1874.380 (message sizes)
        * 141.48042 (order subtotals)
 
    * - **float**
-     - A floating point number. (Use decimal for prices.) For example:
+     - A floating point number. Use decimal for prices. For example:
 
        * 3.14
        * 3.14159
 
    * - **integer**
-     - A numeric value, such as the quantity of items purchased. Do not use data type for prices. For example:
+     - A numeric value, such as the quantity of items purchased. Do not use this data type for prices. For example:
 
        * 1
        * 12345
 
    * - **string**
-     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, descriptions, and so on. May be empty. For example:
+     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. May be empty. For example:
 
        * John
        * Smith
