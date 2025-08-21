@@ -45,7 +45,7 @@ For campaigns
 
 .. table-activation-states-campaigns-tip-start
 
-.. tip:: Each filter for campaign activation states applies an **AND** operator to the criteria, which means the potential audience gets smaller each time an additional filter is applied.
+.. tip:: Each filter for campaign activation states applies an **AND** operator to the criteria. The potential audience gets smaller as additional filters are applied.
 
    For example, if the entry count is 3 and the campaign sends a sub-audience to Braze, then only customers activated 3 or more times *and* belong to the sub-audience activated in Braze will be returned by the segment.
 
@@ -100,7 +100,7 @@ For journeys
 
 .. table-activation-states-journeys-tip-start
 
-.. tip:: Each filter for journey activation states applies an **AND** operator to the criteria, which means the potential audience gets smaller each time an additional filter is applied.
+.. tip:: Each filter for journey activation states applies an **AND** operator to the criteria. The potential audience gets smaller as additional filters are applied.
 
    For example, if the entry count is 5 and the node is an activation that sends an audience to Braze, then only customers activated 5 or more times *and* activated in Braze will be returned by the segment.
 

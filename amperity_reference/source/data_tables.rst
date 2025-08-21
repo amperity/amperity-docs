@@ -211,7 +211,7 @@ Activation States
 
 .. data-tables-campaign-recipients-summary-sandboxes-start
 
-.. important:: Access to the fields in the **Activation States** table requires at least one active campaign or journey in your tenant.
+.. important:: Access to the fields in an **Activation States** table requires at least one active campaign or journey in your tenant.
 
 .. data-tables-campaign-recipients-summary-sandboxes-end
 
@@ -223,7 +223,7 @@ For campaigns
 
 .. data-tables-activation-states-campaigns-start
 
-The **Activation States** table for campaigns keeps track of customers who belong to a campaign, including sub-audiences, treatments, destinations, how often and when.
+Activation states for campaigns keep track of customers who are activated by a campaign, including by sub-audience or treatment, by destination, how often and when.
 
 .. data-tables-activation-states-campaigns-end
 
@@ -303,7 +303,7 @@ For journeys
 
 .. data-tables-activation-states-journeys-start
 
-The **Activation States** table for journeys keeps track of customers who have entered a journey, along with the nodes each customer has travelled through, including how often and when.
+Activation states for journeys keep track of customers who have entered a journey, along with which customers moved through specific nodes, including their first and last entry.
 
 .. data-tables-activation-states-journeys-end
 

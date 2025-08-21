@@ -47,10 +47,6 @@ modals: static ## Build only the "/modals" section
 	# Building destination modal pages...
 	$(BUILD_COMMAND) amperity_modals/source $(BUILDDIR)/modals
 
-contributing: static ## Build only the "/contributing" section
-	# Building Contributing pages...
-	$(BUILD_COMMAND) contributing/source $(BUILDDIR)/contributing
-
 legacy: static ## Build only the "/llm_kb" section
 	# Building Legacy pages...
 	$(BUILD_COMMAND) legacy/source $(BUILDDIR)/legacy
