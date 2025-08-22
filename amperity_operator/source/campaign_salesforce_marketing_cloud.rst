@@ -45,7 +45,7 @@ How this destination works
 
 .. campaign-salesforce-marketing-cloud-howitworks-start
 
-Amperity can send |what-send| with contact data to business units in |destination-name|. The |what-send| are uploaded to |destination-name| using SFTP, after which the Marketing Cloud SOAP API is used to manage data extensions and to move contacts data from the |what-send| into the data extensions.
+Amperity can send |what-send| with contact data to business units in |destination-name|. The |what-send| are uploaded to |destination-name| using SFTP, after which the Marketing Cloud REST API is used to manage data extensions and to move contacts data from the |what-send| into the data extensions.
 
 .. campaign-salesforce-marketing-cloud-howitworks-end
 
@@ -88,10 +88,6 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - Configure permissions for the installed package to allow business units to read from and write to the data extension.
 
-       .. admonition:: When does Amperity use an API?
-
-          Amperity uses the `Marketing Cloud REST API <https://developer.salesforce.com/docs/marketing/marketing-cloud/references/mc-import_job_api?meta=Queue%2Band%2Bstart%2Ba%2Bone-time%2Bdata%2Bimport>`__ |ext_link| to send contact data from Amperity. Amperity uses a pre-signed URL and provides that URL to the "/async/import" request.
-
        .. note:: You may configure Amperity to send |what-send| to |destination-name| using only SFTP. This will place the |what-send| in the configured SFTP location, but will require configuring the data extension and import definition, along with any process that moves that data from the SFTP location to the data extension.
 
 
@@ -118,7 +114,7 @@ A |destination-name| destination works like this:
 
           |destination-name| has strict rate limits when using their APIs to manage contact data. These rate limits generally exceed the number of contacts that are in the lists that you will want to send to |destination-name|.
 
-          Amperity uses SFTP to ensure that your contact lists can be successfully updated in |destination-name|, after which Amperity uses the Marketing Cloud SOAP API to make that list of contacts available to the configured data extension.
+          Amperity uses SFTP to ensure that your contact lists can be successfully updated in |destination-name|, after which Amperity uses the Marketing Cloud REST API to make that list of contacts available to the configured data extension.
 
 
    * - .. image:: ../../images/steps-05.png
@@ -725,7 +721,7 @@ Incorrect folder
 
 .. campaign-salesforce-marketing-cloud-workflow-actions-incorrect-folder-start
 
-The name of the directory within the |destination-name| SFTP site must match the folder name that is configured in Amperity. When the folder name does not match, the Marketing Cloud SOAP API will unable to get CSV files from that directory and the data extension will not be updated.
+The name of the directory within the |destination-name| SFTP site must match the folder name that is configured in Amperity. When the folder name does not match, the Marketing Cloud REST API will unable to get CSV files from that directory and the data extension will not be updated.
 
 .. campaign-salesforce-marketing-cloud-workflow-actions-incorrect-folder-end
 
