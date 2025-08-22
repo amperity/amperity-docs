@@ -7044,7 +7044,8 @@ div[class^=highlight]>.highlight>pre{
 
 .yue .table-wrapper td{
   border-left:1px solid var(--yue-c-td-border);
-  padding:.5rem 1rem
+  padding:.5rem 1rem;
+  vertical-align: top;
 }
 
 .yue .table-wrapper tr>td:first-child,.yue .table-wrapper tr>th:first-child{
