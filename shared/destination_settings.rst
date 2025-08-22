@@ -2060,14 +2060,6 @@ The directory within the |destination-name| SFTP site from which the Marketing C
 
 .. setting-salesforce-marketing-cloud-folder-name-end
 
-**Import location**
-
-.. setting-salesforce-marketing-cloud-import-location-start
-
-The directory within the |destination-name| SFTP server into which Amperity adds data. This is also the location from which the Marketing Cloud SOAP API finds the CSV files.
-
-.. setting-salesforce-marketing-cloud-import-location-end
-
 **Primary key**
 
 .. setting-salesforce-marketing-cloud-primary-key-start

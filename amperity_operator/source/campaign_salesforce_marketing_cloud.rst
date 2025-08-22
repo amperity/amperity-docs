@@ -90,7 +90,7 @@ A |destination-name| destination works like this:
 
        .. admonition:: When does Amperity use an API?
 
-          Amperity uses the `Marketing Cloud SOAP API <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/soap_tech_articles_de.html>`__ |ext_link| to manage the installed package and manage the `import definition <https://help.salesforce.com/s/articleView?id=sf.mc_cab_imports.htm&type=5>`__ |ext_link| process, which gets the contact data from the |what-send| that were sent from Amperity and then either adds a data extension or updates an existing data extension.
+          Amperity uses the `Marketing Cloud REST API <https://developer.salesforce.com/docs/marketing/marketing-cloud/references/mc-import_job_api?meta=Queue%2Band%2Bstart%2Ba%2Bone-time%2Bdata%2Bimport>`__ |ext_link| to send contact data from Amperity. Amperity uses a pre-signed URL and provides that URL to the "/async/import" request.
 
        .. note:: You may configure Amperity to send |what-send| to |destination-name| using only SFTP. This will place the |what-send| in the configured SFTP location, but will require configuring the data extension and import definition, along with any process that moves that data from the SFTP location to the data extension.
 
@@ -469,12 +469,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-salesforce-marketing-cloud-account-id-start
              :end-before: .. setting-salesforce-marketing-cloud-account-id-end
-
-       **Import location**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-salesforce-marketing-cloud-import-location-start
-             :end-before: .. setting-salesforce-marketing-cloud-import-location-end
 
        **Folder name**
 
