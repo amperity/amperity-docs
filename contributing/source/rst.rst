@@ -2563,7 +2563,6 @@ The following table shows the available badge types by color. The theme-defined 
 .. rst-inline-markup-badges-types-end
 
 
-
 .. _rst-inline-markup-bold:
 
 Bold
