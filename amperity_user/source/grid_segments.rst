@@ -61,8 +61,12 @@ Use the **Segments** page to build audieneces using attributes, conditions, and 
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: Activations
+      :link: activations.html
+
+
    .. grid-item-card:: Activation IDs
-      :link: segments_reference.html#activation-ids
+      :link: activations.html#activation-ids
 
 
    .. grid-item-card:: AND vs. OR

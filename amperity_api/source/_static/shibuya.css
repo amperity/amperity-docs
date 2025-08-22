@@ -6210,6 +6210,7 @@ html{
   font-size:1.5em;
   margin-top:2em;
   margin-bottom:1em;
+  border-bottom: 1.4px solid #0c0c0c;
   line-height:1.3333333
 }
 
@@ -6224,6 +6225,7 @@ html{
   font-size:1.25em;
   margin-top:1.6em;
   margin-bottom:.6em;
+  border-bottom: 1px solid #0c0c0c;
   line-height:1.6
 }
 
@@ -6237,6 +6239,7 @@ html{
   font-weight:600;
   margin-top:1.5em;
   margin-bottom:.5em;
+  border-bottom: .6px solid #0c0c0c;
   line-height:1.5
 }
 
@@ -6245,7 +6248,15 @@ html{
   color:inherit
 }
 
-.yue h5,.yue h6{
+.yue h5{
+  color:var(--yue-c-heading);
+  font-weight:600;
+  margin-top:1.22em;
+  margin-bottom:.5em;
+  border-bottom: .4px solid #0c0c0c;
+}
+
+.yue h6{
   color:var(--yue-c-heading);
   font-weight:600
 }
@@ -7033,7 +7044,8 @@ div[class^=highlight]>.highlight>pre{
 
 .yue .table-wrapper td{
   border-left:1px solid var(--yue-c-td-border);
-  padding:.5rem 1rem
+  padding:.5rem 1rem;
+  vertical-align: top;
 }
 
 .yue .table-wrapper tr>td:first-child,.yue .table-wrapper tr>th:first-child{

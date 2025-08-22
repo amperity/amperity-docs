@@ -43,6 +43,245 @@ Amperity Bridge for Snowflake is a first-class integration that uses secure data
 .. bridge-snowflake-switch-to-bridge-end
 
 
+.. _bridge-snowflake-data-types:
+
+Data types
+==================================================
+
+.. bridge-databricks-data-types-start
+
+Most `Snowflake data types <https://docs.snowflake.com/en/sql-reference/intro-summary-data-types>`__ |ext_link| are supported by Amperity Bridge.
+
+.. warning:: Complex types--arrays, objects, and maps--must have defined schemas.
+
+The following table describes how Snowflake data types map to Amperity data types.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Snowflake data type
+     - Amperity data type
+
+   * - `ARRAY <https://docs.snowflake.com/en/sql-reference/data-types-structured#specifying-a-structured-array-type>`__ |ext_link|
+
+       A sequence of elements with the type of ``element_type``. Each element must have a data type that maps to a supported Amperity data type.
+
+	   .. warning:: A semi-structured **ARRAY** data type is unsupported.
+
+          Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **ARRAY** into fully-structured data before sharing it with Amperity Bridge.
+
+     - **Array**
+
+       An ordered list of zero or more elements of non-array values by field name and value.
+
+       Fields within an **Array** must contain values for data types supported by Amperity.
+
+
+   * - `BINARY <https://docs.snowflake.com/en/sql-reference/data-types-text#binary>`__ |ext_link|
+
+       Synonymous with `VARBINARY <https://docs.snowflake.com/en/sql-reference/data-types-text#varbinary>`__ |ext_link|.
+
+     - .. warning:: The Snowflake **BINARY** data type is unsupported. Exclude fields with **BINARY** data types from tables before sharing them with Amperity.
+
+
+   * - `BOOLEAN <https://docs.snowflake.com/en/sql-reference/data-types-logical#boolean>`__ |ext_link|
+
+       A value that can be **TRUE**, **FALSE**, or **NULL**.
+
+     - **Boolean**
+
+       A value that can be **TRUE**, **FALSE**, or **NULL**.
+
+
+   * - `CHAR and CHARACTER <https://docs.snowflake.com/en/sql-reference/data-types-text#char-character-nchar>`__ |ext_link|
+
+       Synonymous with **VARCHAR**, except the default length is **VARCHAR(1)**.
+
+     - **String**
+
+       A string of characters.
+
+
+   * - `DATE <https://docs.snowflake.com/en/sql-reference/data-types-datetime#label-datatypes-date>`__ |ext_link|
+
+       Date values with no time element.
+
+     - **Date**
+
+       An ISO-8601 compliant date value, such as a birthdate. For example:
+
+       * 2021-11-04
+
+
+   * - `DATETIME <https://docs.snowflake.com/en/sql-reference/data-types-datetime#datetime>`__ |ext_link|
+
+       An alias for **TIMESTAMP_NTZ**.
+
+     - See **TIMESTAMP**.
+
+
+   * - `FILE <https://docs.snowflake.com/en/sql-reference/data-types-unstructured#file-data-type>`__ |ext_link|
+
+       A reference to a file in an internal or external stage.
+
+     - .. warning:: The Snowflake **FILE** data type is unsupported. Exclude fields with **FILE** data types from tables before sharing them with Amperity.
+
+
+   * - `FLOAT <https://docs.snowflake.com/en/sql-reference/data-types-numeric#float-float4-float8>`__ |ext_link|
+
+       A double-precision (64 bit) IEEE 754 floating-point number.
+
+       .. note:: Synonymous with **DOUBLE**, **DOUBLE PRECISION**, **FLOAT**, **FLOAT4**, **FLOAT8**, and **REAL** data types.
+
+     - **Float**
+
+       A floating point number. For example:
+
+       * 3.14
+       * 3.14159
+
+
+   * - `GEOGRAPHY <https://docs.snowflake.com/en/sql-reference/data-types-geospatial#label-data-types-geography>`__ |ext_link|
+
+       A collection of points, linestrings, and polygons that represent a set or subset of the surface of the Earth.
+
+     - .. warning:: The Snowflake **GEOGRAPHY** data type is unsupported. Exclude fields with **GEOGRAPHY** data types from tables before sharing them with Amperity.
+
+
+   * - `GEOMETRY <https://docs.snowflake.com/en/sql-reference/data-types-geospatial#label-data-types-geometry>`__ |ext_link|
+
+       A pairs of real numbers that represent features in a planar--Euclidean and Cartesian--coordinate system.
+
+     - .. warning:: The Snowflake **GEOMETRY** data type is unsupported. Exclude fields with **GEOMETRY** data types from tables before sharing them with Amperity.
+
+
+   * - `MAP <https://docs.snowflake.com/en/sql-reference/data-types-structured#label-structured-types-specifying-map>`__ |ext_link|
+
+       A set of key-value pairs. Each pair must have a data type that maps to a supported Amperity data type.
+
+       :bdg-warning:`Must be fully-structured.`
+
+       Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce into fully-structured data within Snowflake before sending data to Amperity Bridge.
+
+     - **Map**
+
+       A set of key-value pairs that map to supported Amperity data types.
+
+
+   * - `NUMBER <https://docs.snowflake.com/en/sql-reference/data-types-numeric#number>`__ |ext_link|
+
+       A number with up to 38 digits without precision and scale.
+
+       .. note:: Synonymous with **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT**.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `NUMBER (p,s) <https://docs.snowflake.com/en/sql-reference/data-types-numeric#number>`__ |ext_link|
+
+       A number with up to 38 digits and precision and scale. Default precision and scale is (38,0).
+
+       .. note:: Synonymous with **DECIMAL** and **NUMERIC** data types.
+
+     - **Decimal (p,s)**
+
+       A fixed point number, such as for prices or message sizes. The number of characters in the decimal value is configurable. For example:
+
+       * 1.50 (prices)
+       * 1874.380 (message sizes)
+       * 141.48042 (order subtotals)
+
+
+   * - `OBJECT <https://docs.snowflake.com/en/sql-reference/data-types-structured#label-structured-types-specifying-object>`__ |ext_link|
+
+       A container of ordered fields. Fields within an **OBJECT** must contain values for data types supported by Amperity.
+
+	   .. warning:: A semi-structured **OBJECT** data type is unsupported.
+
+          Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **OBJECT** into fully-structured data before sharing it with Amperity Bridge.
+
+     - **Struct**
+
+       A container of ordered fields by name and type.
+
+
+   * - `Semi-structured data types <https://docs.snowflake.com/en/sql-reference/data-types-semistructured>`__ |ext_link|
+
+       Snowflake allows **ARRAY**, **OBJECT**, and **VARIANT** data types to be semi-structured.
+
+     - .. warning:: Semi-structured data types are unsupported.
+
+       Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce into fully-structured data before sending data to Amperity Bridge.
+
+
+   * - `TIME <https://docs.snowflake.com/en/sql-reference/data-types-datetime#time>`__ |ext_link|
+
+       Time data stored as ``HH:MI:SS`` with optional precision. Default precision is 9.
+
+     - **String**
+
+       A string of characters that represents ``HH:MI:SS`` time data with optional precision.
+
+
+   * - `TIMESTAMP <https://docs.snowflake.com/en/sql-reference/data-types-datetime#label-datatypes-timestamp-variations>`__ |ext_link|
+
+       A timestamp, including UTC time, UTC time with an offset, or a time with a specified precision.
+
+       .. note:: Synonymous with **TIMESTAMP_LTZ**, **TIMESTAMP_NTZ**, and **TIMESTAMP_TZ**.
+
+     - **Datetime**
+
+       ISO-8601 compliant date and time values, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
+
+       * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
+       * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
+
+
+   * - `VARCHAR <https://docs.snowflake.com/en/sql-reference/data-types-text#varchar>`__ |ext_link|
+
+       A string of Unicode UTF-8 characters. Default length is 16777216 bytes. Maximum length is 134217728 bytes.
+
+       .. note:: Synonymous with `STRING and TEXT <https://docs.snowflake.com/en/sql-reference/data-types-text#string-text-nvarchar-nvarchar2-char-varying-nchar-varying>`__ |ext_link|.
+
+     - **String**
+
+       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, and descriptions. May be empty. For example:
+
+       * John
+       * Smith
+       * John Smith
+       * johnsmith @ domain.com
+       * 123 Main Street
+       * 206-555-1111
+       * 00002ac0-0915-3cb4-b7c7-5ee192b3bd49
+       * ACME
+       * pants
+       * 
+       * "A data source that pulls from an Amazon S3 bucket."
+
+
+   * - `VARIANT <https://docs.snowflake.com/en/sql-reference/data-types-semistructured#variant>`__ |ext_link|
+
+       A **VARIANT** value stores values of any type, including **OBJECT** and **ARRAY**, and is an unsupported `semi-structured data type <https://docs.snowflake.com/en/sql-reference/data-types-semistructured>`__ |ext_link|.
+
+     - .. warning:: The Snowflake **VARIANT** data type is unsupported.
+
+
+   * - `VECTOR <https://docs.snowflake.com/en/sql-reference/data-types-vector>`__ |ext_link|
+
+       A data type for encoding and processing vectors.
+
+     - .. warning:: The Snowflake **VECTOR** data type is unsupported. Exclude fields with **VECTOR** data types from tables before sharing them with Amperity.
+
+.. bridge-databricks-data-types-end
+
+
 .. _bridge-snowflake-sync-with-amperity:
 
 From Snowflake

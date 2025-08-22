@@ -74,7 +74,7 @@ A |destination-name| destination works like this:
 
        .. admonition:: What is a data extension?
 
-          A `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| is a table that stores data about your contacts. The fields that are available from your data extension match the columns and/or attributes that are sent from Amperity.
+          Amperity uses the `Marketing Cloud REST API <https://developer.salesforce.com/docs/marketing/marketing-cloud/references/mc-import_job_api?meta=Queue%2Band%2Bstart%2Ba%2Bone-time%2Bdata%2Bimport>`__ |ext_link| to send contact data from Amperity. Amperity uses a pre-signed URL and provides that URL to the "/async/import" request.
 
           Within |destination-name|, use the data in the data extension as a data source. Run queries, pull a subset of contacts from the data extension, and then send offers to that subset of contacts.
 
@@ -469,12 +469,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-salesforce-marketing-cloud-account-id-start
              :end-before: .. setting-salesforce-marketing-cloud-account-id-end
-
-       **Import location**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-salesforce-marketing-cloud-import-location-start
-             :end-before: .. setting-salesforce-marketing-cloud-import-location-end
 
        **Folder name**
 

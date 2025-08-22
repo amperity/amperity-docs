@@ -94,6 +94,9 @@ Find the right audience size, prevent churn, advertise across paid media, use pe
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: Activations
+      :link: activations.html
+
    .. grid-item-card:: Audience sizes
       :link: audience_sizes.html
 
@@ -210,6 +213,7 @@ Build audiences around activities like first orders, repeat orders, and who has 
    :maxdepth: 3
    :hidden:
 
+   Activations <activations>
    Audience sizes <recommended_audiences>
    Churn prevention <churn_prevention>
    Direct mail <direct_mail>

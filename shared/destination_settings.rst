@@ -957,6 +957,14 @@ The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_
 
 .. setting-braze-user-identifier-about-end
 
+**Update existing profiles**
+
+.. setting-braze-update-existing-profiles-start
+
+Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/user_attributes_object#update-existing-profiles-only>`__ |ext_link|. When this setting is not enabled a new user profile is created when a profile with a matching ``external_id`` value does not already exist.
+
+.. setting-braze-update-existing-profiles-end
+
 
 
 
@@ -2051,14 +2059,6 @@ For orchestrations, assign a name to the data extension.
 The directory within the |destination-name| SFTP site from which the Marketing Cloud SOAP API finds CSV files.
 
 .. setting-salesforce-marketing-cloud-folder-name-end
-
-**Import location**
-
-.. setting-salesforce-marketing-cloud-import-location-start
-
-The directory within the |destination-name| SFTP server into which Amperity adds data. This is also the location from which the Marketing Cloud SOAP API finds the CSV files.
-
-.. setting-salesforce-marketing-cloud-import-location-end
 
 **Primary key**
 

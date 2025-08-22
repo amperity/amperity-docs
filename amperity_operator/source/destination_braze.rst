@@ -525,6 +525,12 @@ Add destination
              :start-after: .. setting-braze-user-identifier-about-start
              :end-before: .. setting-braze-user-identifier-about-end
 
+       **Update existing profiles?**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-braze-update-existing-profiles-start
+             :end-before: .. setting-braze-update-existing-profiles-end
+
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

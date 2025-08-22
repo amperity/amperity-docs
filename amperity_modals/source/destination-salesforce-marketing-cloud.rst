@@ -82,12 +82,6 @@ Settings
    :start-after: .. setting-salesforce-marketing-cloud-account-id-start
    :end-before: .. setting-salesforce-marketing-cloud-account-id-end
 
-**Import location**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-salesforce-marketing-cloud-import-location-start
-   :end-before: .. setting-salesforce-marketing-cloud-import-location-end
-
 **Folder name**
 
 .. include:: ../../shared/destination_settings.rst

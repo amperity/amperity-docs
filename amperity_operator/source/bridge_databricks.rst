@@ -40,6 +40,208 @@ Configure Amperity Bridge for Databricks
 .. bridge-databricks-audits-and-encryption-end
 
 
+.. _bridge-databricks-data-types:
+
+Data types
+==================================================
+
+.. bridge-databricks-data-types-start
+
+Most `Databricks data types <https://docs.databricks.com/aws/en/sql/language-manual/sql-ref-datatypes>`__ |ext_link| are supported by Amperity Bridge.
+
+The following table describes how Databricks data types map to Amperity data types.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Databricks data type
+     - Amperity data type
+
+   * - `ARRAY <https://docs.databricks.com/aws/en/sql/language-manual/data-types/array-type>`__ |ext_link|
+
+       A sequence of elements with the type of ``elementType``. Each element must have a data type that maps to a supported Amperity data type.
+
+     - **Array**
+
+       A sequence of elements with data types and values supported by Amperity data types.
+
+
+   * - `BIGINT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/bigint-type>`__ |ext_link|
+
+       A 64-bit integer.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `BINARY <https://docs.databricks.com/aws/en/sql/language-manual/data-types/binary-type>`__ |ext_link|
+
+       Variable-length byte sequence values.
+
+     - .. warning:: The Databricks **BINARY** data type is unsupported. Use a view in Databricks to exclude fields with **BINARY** data types from tables before sharing them with Amperity.
+
+
+   * - `BOOLEAN <https://docs.databricks.com/aws/en/sql/language-manual/data-types/boolean-type>`__ |ext_link|
+
+       A value that can be **TRUE**, **FALSE**, or **NULL**.
+
+     - **Boolean**
+
+       A value that can be **TRUE**, **FALSE**, or **NULL**.
+
+
+   * - `DATE <https://docs.databricks.com/aws/en/sql/language-manual/data-types/date-type>`__ |ext_link|
+
+       Year, month, and day, without a time zone.
+
+     - **Date**
+
+       An ISO-8601 compliant date value, such as a birthdate. For example:
+
+       * 2021-11-04
+
+
+   * - `DECIMAL (p,s) <https://docs.databricks.com/aws/en/sql/language-manual/data-types/decimal-type>`__ |ext_link|
+
+       A number with a specified maximum precision and fixed scale. Precision is between 1-38 (default 10) and scale is the number of digits to the right of the decimal point.
+
+     - **Decimal**
+
+       A fixed point number, such as for prices or message sizes. The number of characters in the decimal value is configurable. For example:
+
+       * 1.50 (prices)
+       * 1874.380 (message sizes)
+       * 141.48042 (order subtotals)
+
+
+   * - `DOUBLE <https://docs.databricks.com/aws/en/sql/language-manual/data-types/double-type>`__ |ext_link|
+
+       8-byte double-precision floating point numbers.
+
+     - **Float**
+
+       A floating point number. For example:
+
+       * 3.14
+       * 3.14159
+
+
+   * - `FLOAT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/float-type>`__ |ext_link|
+
+       4-byte single-precision floating point numbers.
+
+     - **Float**
+
+       A floating point number. For example:
+
+       * 3.14
+       * 3.14159
+
+
+   * - `INT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/int-type>`__ |ext_link|
+
+       A 4-byte signed integer.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `INTERVAL <https://docs.databricks.com/aws/en/sql/language-manual/data-types/interval-type>`__ |ext_link|
+
+       Intervals of time on a scale of seconds or months.
+
+     - **Datetime**
+
+       * Sat Aug 23 2025 02:43:55 GMT+0000
+       * Fri Aug 22 2025 19:43:55 GMT-0700 (Pacific Daylight Time)
+
+
+   * - `MAP <https://docs.databricks.com/aws/en/sql/language-manual/data-types/map-type>`__ |ext_link|
+
+       A set of key-value pairs. Each pair must have a data type that maps to a supported Amperity data type.
+
+     - **Map**
+
+       A set of key-value pairs that map to supported Amperity data types.
+
+
+   * - `SMALLINT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/smallint-type>`__ |ext_link|
+
+       A 2-byte signed integer.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `STRING <https://docs.databricks.com/aws/en/sql/language-manual/data-types/string-type>`__ |ext_link|
+
+       Character string values.
+
+     - **String**
+
+       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, and descriptions. May be empty. For example:
+
+       * John
+       * Smith
+       * John Smith
+       * johnsmith @ domain.com
+       * 123 Main Street
+       * 206-555-1111
+       * 00002ac0-0915-3cb4-b7c7-5ee192b3bd49
+       * ACME
+       * pants
+       * 
+       * "A data source that pulls from an Amazon S3 bucket."
+
+
+   * - `STRUCT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/struct-type>`__ |ext_link|
+
+       A structure described by a sequence of fields. Each field must have a data type that maps to a supported Amperity data type.
+
+     - **Struct**
+
+       A sequence of fields.
+
+
+   * - `TIMESTAMP <https://docs.databricks.com/aws/en/sql/language-manual/data-types/timestamp-type>`__ |ext_link|
+
+       Values for year, month, day, hour, minute, and second with the session local timezone.
+
+     - **Datetime**
+
+       ISO-8601 compliant date and time values, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
+
+       * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
+       * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
+
+
+   * - `TINYINT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/tinyint-type>`__ |ext_link|
+
+       A 1-byte signed integer.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+.. bridge-databricks-data-types-end
+
+
 .. _bridge-databricks-sync-with-amperity:
 
 From Databricks
