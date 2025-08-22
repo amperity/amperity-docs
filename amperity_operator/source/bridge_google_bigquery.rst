@@ -41,6 +41,307 @@ Amperity Bridge for Google BigQuery is a first-class integration enables inbound
 .. bridge-google-bigquery-switch-to-bridge-end
 
 
+.. _bridge-google-bigquery-data-types:
+
+Data types
+==================================================
+
+.. bridge-google-bigquery-data-types-start
+
+Most `Google BigQuery data types <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types>`__ |ext_link| are supported by Amperity Bridge.
+
+.. note:: **BYTES** and **RANGE** data types are unsupported.
+
+The following table describes how Google BigQuery data types map to Amperity data types.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Google BigQuery data type
+     - Amperity data type
+
+   * - `ARRAY <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#array_type>`__ |ext_link|
+
+       An ordered list of zero or more elements of non-array values.
+
+       Each element must be a Google BigQuery type that maps to a supported Amperity type.
+
+     - **Array**
+
+       An ordered list of zero or more elements of non-array values by field name and value.
+
+       Fields within an **Array** must contain values for data types supported by Amperity.
+
+
+   * - `BIGINT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A numeric value and an alias for **INT64**.
+
+       .. note:: **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT** data types are aliases for **INT64** and represent values less than 64 bits.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `BIGNUMERIC <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A decimal value with precision of 76.
+
+       .. important:: Amperity supports precision for **BIGNUMERIC** data types when they are less than or equal to 38. Precision that is greater than 38 is not supported.
+
+     - **Decimal**
+
+       A fixed point number, such as for prices or message sizes. The number of characters in the decimal value is configurable. For example:
+
+       * 1.50 (prices)
+       * 1874.380 (message sizes)
+       * 141.48042 (order subtotals)
+
+
+   * - `BOOLEAN <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#boolean_type>`__ |ext_link|, **BOOL**
+
+       A value that can be **TRUE**, **FALSE**, or **NULL**.
+
+     - **Boolean**
+
+       A value that can be **TRUE**, **FALSE**, or **NULL**.
+
+
+   * - `BYTES <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#bytes_type>`__ |ext_link|
+
+       Variable-length binary data.
+
+     - .. warning:: The Google BigQuery **BYTES** data type is unsupported. Exclude fields with **BYTES** data types from tables before sharing them with Amperity.
+
+
+   * - `BYTEINT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A numeric value and an alias for **INT64**.
+
+       .. note:: **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT** data types are aliases for **INT64** and represent values less than 64 bits.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `DATE <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#date_type>`__ |ext_link|
+
+       A Gregorian calendar date, independent of time zone.
+
+     - **Date**
+
+       An ISO-8601 compliant date value, such as a birthdate. For example:
+
+       * 2021-11-04
+
+
+   * - `DATETIME <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#datetime_type>`__ |ext_link|
+
+       A Gregorian date and time, as they might be displayed on a watch, independent of time zone.
+
+     - **Datetime**
+
+       ISO-8601 compliant date and time values, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
+
+       * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
+       * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
+
+
+   * - `DECIMAL (p,s) <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_linK|
+
+       A decimal value with a precision of 38 digits.
+
+     - **Decimal**
+
+       A fixed point number, such as for prices or message sizes. The number of characters in the decimal value is configurable. For example:
+
+       * 1.50 (prices)
+       * 1874.380 (message sizes)
+       * 141.48042 (order subtotals)
+
+
+   * - `FLOAT64 <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       An approximate double precision numeric value.
+
+     - **Float**
+
+       A floating point number. For example:
+
+       * 3.14
+       * 3.14159
+
+
+   * - `GEOGRAPHY <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#geography_type>`__ |ext_link|
+
+       A collection of points, linestrings, and polygons that represent a set or subset of the surface of the Earth.
+
+     - **String**
+
+       A string of characters.
+
+
+   * - `INT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A numeric value and an alias for **INT64**.
+
+       .. note:: **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT** data types are aliases for **INT64** and represent values less than 64 bits.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `INT64 <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A numeric value up to 64 bits.
+
+       .. note:: **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT** data types are aliases for **INT64** and represent values less than 64 bits.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `INTEGER <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A numeric value and an alias for **INT64**.
+
+       .. note:: **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT** data types are aliases for **INT64** and represent values less than 64 bits.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `JSON <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#json_type>`__ |ext_link|
+
+       Represents JSON, a lightweight data-interchange format.
+
+     - **String**
+
+       A string of characters.
+
+
+   * - `NUMERIC (p,s) <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A decimal value with a precision of up to 38 digits.
+
+     - **Decimal**
+
+       A fixed point number, such as for prices or message sizes. The number of characters in the decimal value is configurable. For example:
+
+       * 1.50 (prices)
+       * 1874.380 (message sizes)
+       * 141.48042 (order subtotals)
+
+
+   * - `RANGE <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#range_type>`__ |ext_link|
+
+       A contiguous range between two dates, datetimes, or timestamps.
+
+     - .. warning:: The Google BigQuery **RANGE** data type is unsupported. Exclude fields with **RANGE** data types from tables before sharing them with Amperity.
+
+
+   * - `SMALLINT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A numeric value and an alias for **INT64**.
+
+       .. note:: **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT** data types are aliases for **INT64** and represent values less than 64 bits.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+
+   * - `STRING <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#string_type>`__ |ext_link|
+
+       Variable-length character data.
+
+     - **String**
+
+       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, and descriptions. May be empty. For example:
+
+       * John
+       * Smith
+       * John Smith
+       * johnsmith @ domain.com
+       * 123 Main Street
+       * 206-555-1111
+       * 00002ac0-0915-3cb4-b7c7-5ee192b3bd49
+       * ACME
+       * pants
+       * 
+       * "A data source that pulls from an Amazon S3 bucket."
+
+
+   * - `STRUCT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#struct_type>`__ |ext_link|
+
+       A container of ordered fields. Fields within a **STRUCT** must contain values for data types supported by Amperity.
+
+     - **Struct**
+
+       A container of ordered fields by name and type.
+
+
+   * - `TIME <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#time_type>`__ |ext_link|
+
+       A time of day, as might be displayed on a clock, independent of a specific date and time zone.
+
+     - **String**
+
+       A sequence of characters that represents the time of day.
+
+
+   * - `TIMESTAMP <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#timestamp_type>`__ |ext_link|
+
+       An absolute point in time, independent of any time zone or convention, such as daylight saving time (DST).
+
+     - **Datetime**
+
+       ISO-8601 compliant date and time values, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
+
+       * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
+       * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
+
+
+   * - `TINYINT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
+
+       A numeric value and an alias for **INT64**.
+
+       .. note:: **BIGINT**, **BYTEINT**, **INT**, **INTEGER**, **SMALLINT**, and **TINYINT** data types are aliases for **INT64** and represent values with fewer than 64 bits.
+
+     - **Integer**
+
+       A numeric value, such as the quantity of items purchased. For example:
+
+       * 1
+       * 12345
+
+.. bridge-google-bigquery-data-types-end
+
+
 .. _bridge-google-bigquery-sync-with-amperity:
 
 From Google BigQuery
