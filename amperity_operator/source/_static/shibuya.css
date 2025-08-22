@@ -6248,7 +6248,15 @@ html{
   color:inherit
 }
 
-.yue h5,.yue h6{
+.yue h5{
+  color:var(--yue-c-heading);
+  font-weight:600;
+  margin-top:1.22em;
+  margin-bottom:.5em;
+  border-bottom: .4px solid #0c0c0c;
+}
+
+.yue h6{
   color:var(--yue-c-heading);
   font-weight:600
 }
