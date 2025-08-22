@@ -420,9 +420,10 @@ Before you can create inbound sharing between |source-name| and Amperity you wil
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Requirement 4.
+          :alt: Requirement 5.
           :align: center
           :class: no-scaled-link
+
      - The following values are required to connect Amperity to a |source-name| data listing:
 
        #. **Share link** (for the data exchange)
@@ -431,9 +432,10 @@ Before you can create inbound sharing between |source-name| and Amperity you wil
 
           ::
 
-             https://console.cloud.google.com/bigquery/analytics-hub/\
-             exchanges/projects/123456789012/locations/<location>/\
-             dataExchanges/<exchange>/listings/<listing>
+             https://console.cloud.google.com/bigquery/ \
+             analytics-hub/exchanges/projects/123456789012/ \
+             locations/<location>/dataExchanges/<exchange>/ \
+             listings/<listing>
 
        #. **Subscriber**
 
@@ -443,7 +445,8 @@ Before you can create inbound sharing between |source-name| and Amperity you wil
 
           ::
 
-             amperity-bridge-<bridge-id>@amperity.iam.gserviceaccount.com
+             amperity-bridge-<bridge-id>@ \
+             amperity.iam.gserviceaccount.com
 
 
 .. bridge-google-bigquery-sync-amperity-get-details-end
@@ -508,9 +511,9 @@ A `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-ex
 
        .. note:: If you are configuring a new bridge, leave the Amperity account locator field blank. This will be added after the :ref:`account identifier is created <bridge-google-bigquery-sync-amperity-add-bridge>`.
 
-   * - .. image:: ../../images/steps-02.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step 3.
           :align: center
           :class: no-scaled-link
      - Click **Create exchange**.
