@@ -957,6 +957,14 @@ The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_
 
 .. setting-braze-user-identifier-about-end
 
+**Update existing profiles**
+
+.. setting-braze-update-existing-profiles-start
+
+Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/user_attributes_object#update-existing-profiles-only>`__ |ext_link|. When this setting is not enabled a new user profile is created when a profile with a matching ``external_id`` value does not already exist.
+
+.. setting-braze-update-existing-profiles-end
+
 
 
 
