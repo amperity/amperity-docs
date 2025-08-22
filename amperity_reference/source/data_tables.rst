@@ -232,8 +232,8 @@ Activation states for campaigns keep track of customers who are activated by a c
 Campaign activation states can be added to any segment.
 
 .. image:: ../../images/attributes-picker-activation-activity-campaigns.png
-   :width: 480 px
-   :alt: The event curve.
+   :width: 420 px
+   :alt: Use campaign activation activity in a segment.
    :align: left
    :class: no-scaled-link
 
@@ -251,47 +251,33 @@ Campaign activation states can be added to any segment.
      - Data type
      - Description
 
-   * - **Campaign ID**
+   * - **Campaign**
      - String
-     - The unique ID for a campaign.
+     - The name of a campaign.
 
    * - **Count**
      - String
      - The sum of **First Entry** and **Last Entry**.
 
-   * - **Database ID**
+   * - **Destination**
      - String
-     - The unique ID for the database.
-
-   * - **Destination ID**
-     - String
-     - The unique ID for a destination.
+     - The name of a destination in the selected campaign.
 
    * - **First entry**
      - String
      - The date and time at which an audience member was first  part of a campaign.
 
-   * - **Identifier**
-     - String
-     - The activation ID associated with the audience member. For example, the Amperity ID or an email address.
-
-   * - **Identifier type**
-     - String
-     - The type of unique identifier. For example, the Amperity ID, a customer ID, or a loyalty ID.
-
    * - **Last entry**
      - String
      - The date and time at which an audience member was most recently part of a campaign.
 
-   * - **Sub Audience ID**
+   * - **Sub-audience**
      - String
-     - The unique ID for the sub-audience to which the associated campaign was sent.
+     - The name of a sub-audience in the selected campaign.
 
-   * - **Treatment ID**
+   * - **Treatment**
      - String
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-treatment-id-start
-          :end-before: .. term-treatment-id-end
+     - The name of a treatment group in the selected campaign.
 
 .. data-tables-activation-states-campaigns-fields-end
 
@@ -312,8 +298,8 @@ Activation states for journeys keep track of customers who have entered a journe
 Journey activation states can be added to any segment.
 
 .. image:: ../../images/attributes-picker-activation-activity-journeys.png
-   :width: 480 px
-   :alt: The event curve.
+   :width: 420 px
+   :alt: Use journey activation activity in a segment.
    :align: left
    :class: no-scaled-link
 
@@ -331,15 +317,15 @@ Journey activation states can be added to any segment.
      - Data type
      - Description
 
+   * - **Entry count**
+     - String
+     - The number of times an audience member entered the selected node.
+
    * - **First entry time**
      - String
      - The date and time at which an audience member was first part of a journey.
 
        When a node is specified, the date and time at which an audience member first entered the node within the journey.
-
-   * - **Entry count**
-     - String
-     - The number of times an audience member entered the selected node.
 
    * - **Journey**
      - String
