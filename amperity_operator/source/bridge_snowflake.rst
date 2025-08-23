@@ -67,7 +67,7 @@ The following table describes how Snowflake data types map to Amperity data type
 
        A sequence of elements with the type of ``element_type``. Each element must have a data type that maps to a supported Amperity data type.
 
-	   .. warning:: A semi-structured **ARRAY** data type is unsupported.
+       .. warning:: A semi-structured **ARRAY** data type is unsupported.
 
           Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **ARRAY** into fully-structured data before sharing it with Amperity Bridge.
 
@@ -76,6 +76,8 @@ The following table describes how Snowflake data types map to Amperity data type
        An ordered list of zero or more elements of non-array values by field name and value.
 
        Fields within an **Array** must contain values for data types supported by Amperity.
+
+       .. note:: Only fully-structured **ARRAY** data types are supported.
 
 
    * - `BINARY <https://docs.snowflake.com/en/sql-reference/data-types-text#binary>`__ |ext_link|
@@ -160,13 +162,16 @@ The following table describes how Snowflake data types map to Amperity data type
 
        A set of key-value pairs. Each pair must have a data type that maps to a supported Amperity data type.
 
-       :bdg-warning:`Must be fully-structured.`
+       .. warning:: A **MAP** can have value types for **ARRAY** or **OBJECT**.
 
-       Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce into fully-structured data within Snowflake before sending data to Amperity Bridge.
+          Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce **ARRAY** and **OBJECT** value types within a **MAP** data type into fully-structured data before sharing it with Amperity Bridge.
+
 
      - **Map**
 
        A set of key-value pairs that map to supported Amperity data types.
+
+       .. note:: Only **MAP** data types with fully-structured value types are supported.
 
 
    * - `NUMBER <https://docs.snowflake.com/en/sql-reference/data-types-numeric#number>`__ |ext_link|
@@ -202,13 +207,15 @@ The following table describes how Snowflake data types map to Amperity data type
 
        A container of ordered fields. Fields within an **OBJECT** must contain values for data types supported by Amperity.
 
-	   .. warning:: A semi-structured **OBJECT** data type is unsupported.
+       .. warning:: A semi-structured **OBJECT** data type is unsupported.
 
           Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **OBJECT** into fully-structured data before sharing it with Amperity Bridge.
 
      - **Struct**
 
        A container of ordered fields by name and type.
+
+       .. note:: Only fully-structured **OBJECT** data types are supported.
 
 
    * - `Semi-structured data types <https://docs.snowflake.com/en/sql-reference/data-types-semistructured>`__ |ext_link|
@@ -217,7 +224,7 @@ The following table describes how Snowflake data types map to Amperity data type
 
      - .. warning:: Semi-structured data types are unsupported.
 
-       Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce into fully-structured data before sending data to Amperity Bridge.
+          Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce into fully-structured data before sending data to Amperity Bridge.
 
 
    * - `TIME <https://docs.snowflake.com/en/sql-reference/data-types-datetime#time>`__ |ext_link|
@@ -270,7 +277,7 @@ The following table describes how Snowflake data types map to Amperity data type
 
        A **VARIANT** value stores values of any type, including **OBJECT** and **ARRAY**, and is an unsupported `semi-structured data type <https://docs.snowflake.com/en/sql-reference/data-types-semistructured>`__ |ext_link|.
 
-     - .. warning:: The Snowflake **VARIANT** data type is unsupported.
+     - .. warning:: The Snowflake **VARIANT** data type is unsupported. Exclude fields with **VARIANT** data types from tables before sharing them with Amperity.
 
 
    * - `VECTOR <https://docs.snowflake.com/en/sql-reference/data-types-vector>`__ |ext_link|
