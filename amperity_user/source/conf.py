@@ -74,8 +74,8 @@ html_additional_pages = {
 #    docsearch_api_key = "ec63fbf7ade2fa535b0b82c86e7d1463"
 #    docsearch_index_name = "shibuya-lepture"
 
-if os.getenv("TRIM_HTML_SUFFIX"):
-    html_link_suffix = ""
+#if os.getenv("TRIM_HTML_SUFFIX"):
+#    html_link_suffix = ""
 
 html_favicon = "_static/icon-light.svg"
 
