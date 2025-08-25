@@ -485,7 +485,7 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
      - azure_australiaeast
      - MD18696
 
-.. important:: If the account ID / region ID pair does ot exist in your stack please contact Amperity Support.
+.. important:: If the account ID / region ID pair does not exist in your stack please contact Amperity Support.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-account-locator-end
 
