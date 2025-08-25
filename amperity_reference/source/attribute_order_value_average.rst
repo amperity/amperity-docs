@@ -28,7 +28,7 @@ Average order value intervals
 
 .. attribute-order-value-average-intervals-start
 
-Average order values are available at the following intervals:
+Average order values are calculated for the following intervals:
 
 * L30D Average Order Value (30 days)
 * L3M Average Order Value (3 months)
