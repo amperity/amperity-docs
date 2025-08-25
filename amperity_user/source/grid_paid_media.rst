@@ -117,55 +117,55 @@ Use high-quality audiences to find new customers across paid media platforms.
    :class-row: surface
 
    .. grid-item-card:: Bing Ads
-      :link: destination_microsoft_ads.html
+      :link: campaign_microsoft_ads.html
 
 
    .. grid-item-card:: Criteo
-      :link: destination_criteo.html
+      :link: campaign_criteo.html
 
 
    .. grid-item-card:: DV360
-      :link: destination_dv360.html
+      :link: campaign_dv360.html
 
 
    .. grid-item-card:: Facebook
-      :link: destination_meta_ads_manager.html
+      :link: campaign_meta_ads_manager.html
 
 
    .. grid-item-card:: Facebook Messenger
-      :link: destination_meta_ads_manager.html
+      :link: campaign_meta_ads_manager.html
 
 
    .. grid-item-card:: Gmail
-      :link: destination_google_ads.html
+      :link: campaign_google_ads.html
 
 
    .. grid-item-card:: Google Ads
-      :link: destination_google_ads.html
+      :link: campaign_google_ads.html
 
 
    .. grid-item-card:: Google Search
-      :link: destination_google_ads.html
+      :link: campaign_google_ads.html
 
 
    .. grid-item-card:: Google Shopping
-      :link: destination_google_ads.html
+      :link: campaign_google_ads.html
 
 
    .. grid-item-card:: Instagram
-      :link: destination_meta_ads_manager.html
+      :link: campaign_meta_ads_manager.html
 
 
    .. grid-item-card:: LiveRamp
-      :link: destination_liveramp.html
+      :link: campaign_liveramp.html
 
 
    .. grid-item-card:: Meta Ads Manager
-      :link: destination_meta_ads_manager.html
+      :link: campaign_meta_ads_manager.html
 
 
    .. grid-item-card:: Microsoft Ads
-      :link: destination_microsoft_ads.html
+      :link: campaign_microsoft_ads.html
 
 
    .. grid-item-card:: Neustar
@@ -177,7 +177,7 @@ Use high-quality audiences to find new customers across paid media platforms.
 
 
    .. grid-item-card:: Pinterest
-      :link: destination_pinterest.html
+      :link: campaign_pinterest.html
 
 
    .. grid-item-card:: Reddit Ads
@@ -185,31 +185,31 @@ Use high-quality audiences to find new customers across paid media platforms.
 
 
    .. grid-item-card:: Snapchat
-      :link: destination_snapchat.html
+      :link: campaign_snapchat.html
 
 
    .. grid-item-card:: The Trade Desk
-      :link: destination_the_trade_desk.html
+      :link: campaign_the_trade_desk.html
 
 
    .. grid-item-card:: TikTok
-      :link: destination_tiktok_ads_manager.html
+      :link: campaign_tiktok_ads.html
 
 
    .. grid-item-card:: WhatsApp
-      :link: destination_meta_ads_manager.html
-
-
-   .. grid-item-card:: Yahoo DSP
-      :link: destination_yahoo_dsp.html
-
-
-   .. grid-item-card:: YouTube
-      :link: destination_google_dv360.html
+      :link: campaign_meta_ads_manager.html
 
 
    .. grid-item-card:: Walmart DSP
-      :link: destination_walmart_dsp.html
+      :link: campaign_walmart_dsp.html
+
+
+   .. grid-item-card:: Yahoo DSP
+      :link: campaign_yahoo_dsp.html
+
+
+   .. grid-item-card:: YouTube
+      :link: campaign_dv360.html
 
 
 .. grid-paid-media-activate-audiences-grid-end
