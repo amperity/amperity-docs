@@ -651,6 +651,8 @@ Index response times
 
 .. profile-api-response-times-start
 
+The Profile API supports p95 response times under 100ms at 1000 requests per second. Response times will vary based on the number of attributes and profiles in an index.
+
 The number of rows and filter fields available from a Profile API endpoint determine:
 
 * The length of time it takes to build (or rebuild) an index
