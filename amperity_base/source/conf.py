@@ -26,6 +26,7 @@ extensions = [
     "sphinxcontrib.mermaid",
     "sphinxcontrib.video",
     "sphinxcontrib.youtube",
+    "sphinx_new_tab_link",
 ]
 todo_include_todos = True
 #jupyter_sphinx_thebelab_config = {
@@ -68,6 +69,14 @@ html_additional_pages = {
     "destinations": "destinations.html",
     "sources": "sources.html",
 }
+
+
+# Config for sphinx_new_tab_link extension
+# Show external links with icons? Leave false. We already have icons appended. Don't need two.
+new_tab_link_show_external_link_icon = False
+# Remove rel="norefferer" from external links?
+new_tab_link_enable_referrer = False
+
 
 #if os.getenv('USE_DOCSEARCH'):
 #    extensions.append("sphinx_docsearch")
