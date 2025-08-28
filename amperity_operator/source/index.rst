@@ -25,37 +25,44 @@ Operators Guide
    :class-row: surface
 
    .. grid-item-card:: |fa-grid| Build your tenant
-      :link: grid_build.html
+      :link-type: doc
+      :link: grid_build
 
       Add customer and interactions data, run Stitch, review benchmarks, build customer profiles.
 
    .. grid-item-card:: |fa-outlet| Configure connections
-      :link: grid_connections.html
+      :link-type: doc
+      :link: grid_connections
 
       Configure upstream and downstream connections to support your brand's use cases.
 
    .. grid-item-card:: |manage-users-icon| Manage customer profiles
-      :link: grid_datasets.html
+      :link-type: doc
+      :link: grid_datasets
 
       Build datasets to support all of your brand's use cases for customer profiles.
 
    .. grid-item-card:: |fa-clone| Maintain your tenant
-      :link: grid_maintain.html
+      :link-type: doc
+      :link: grid_maintain
 
       Use sandboxes maintain your tenant. Add more data, enable activations, schedule workflows.
 
    .. grid-item-card:: |fa-shield-check| Privacy rights
-      :link: privacy_rights.html
+      :link-type: doc
+      :link: privacy_rights
 
       Help your organization stay in compliance with data protection and privacy regulations.
 
    .. grid-item-card:: |fa-project-diagram| Predictive models
-      :link: grid_models.html
+      :link-type: doc
+      :link: grid_models
 
       Use customer profiles and behavioral history to predict customer purchasing behavior.
 
    .. grid-item-card:: |fa-shuffle| Configure Stitch
-      :link: grid_stitch.html
+      :link-type: doc
+      :link: grid_stitch
 
       Configure how Amperity builds probabilistic or deterministic customer profiles.
 

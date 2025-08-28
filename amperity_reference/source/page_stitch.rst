@@ -31,13 +31,16 @@ Stitch uses patented algorithms to process massive volumes of data and discover 
    :class-row: surface
 
    .. grid-item-card:: How Stitch works
-      :link: stitch.html
+      :link-type: doc
+      :link: stitch
 
    .. grid-item-card:: Stitch results
-      :link: stitch_results.html
+      :link-type: doc
+      :link: stitch_results
 
    .. grid-item-card:: Stitch benchmarks
-      :link: benchmarks.html
+      :link-type: doc
+      :link: benchmarks
 
    .. grid-item-card:: Stitch QA
       :link: ../operator/qa_stitch.html

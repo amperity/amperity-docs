@@ -31,13 +31,16 @@ Incorporate customer opt-in and opt-out preferences.
    :class-row: surface
 
    .. grid-item-card:: All opted-in email
-      :link: table_all_opted_in_emails.html
+      :link-type: doc
+      :link: table_all_opted_in_emails
 
    .. grid-item-card:: Email opt status
-      :link: table_email_opt_status.html
+      :link-type: doc
+      :link: table_email_opt_status
 
    .. grid-item-card:: SMS opt status
-      :link: table_sms_opt_status.html
+      :link-type: doc
+      :link: table_sms_opt_status
 
 .. opt-in-opt-out-about-grid-start
 

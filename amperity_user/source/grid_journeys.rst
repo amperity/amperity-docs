@@ -31,16 +31,20 @@ The **Journeys** page is a canvas for building, defining, and managing complex c
    :class-row: surface
 
    .. grid-item-card:: How journeys work
-      :link: journeys_reference.html#how-journeys-work
+      :link-type: ref
+      :link: journeys-howitworks
 
    .. grid-item-card:: Who enters?
-      :link: journeys_reference.html#who-enters
+      :link-type: ref
+      :link: journeys-setup-who-enters
 
    .. grid-item-card:: Who is excluded?
-      :link: journeys_reference.html#who-is-excluded
+      :link-type: ref
+      :link: journeys-setup-who-is-excluded
 
    .. grid-item-card:: Exit conditions
-      :link: journeys_reference.html#exit-conditions
+      :link-type: ref
+      :link: journeys-exit-conditions
 
 .. grid-journeys-setup-grid-end
 
@@ -64,25 +68,32 @@ Use the **Journeys** canvas to define the individual nodes that exist within eac
    :class-row: surface
 
    .. grid-item-card:: About the Journeys canvas
-      :link: journeys_reference.html#journeys-canvas
+      :link-type: ref
+      :link: journeys-canvas
 
    .. grid-item-card:: Journey start
-      :link: journeys_reference.html#journey-start
+      :link-type: ref
+      :link: journeys-node-start
 
    .. grid-item-card:: Activate
-      :link: journeys_reference.html#activate
+      :link-type: ref
+      :link: journeys-node-activate
 
    .. grid-item-card:: Delay
-      :link: journeys_reference.html#delay
+      :link-type: ref
+      :link: journeys-node-delay
 
    .. grid-item-card:: Conditional split
-      :link: journeys_reference.html#conditional-split
+      :link-type: ref
+      :link: journeys-node-split-conditional
 
    .. grid-item-card:: Percent split
-      :link: journeys_reference.html#percent-split
+      :link-type: ref
+      :link: journeys-node-split-percent
 
    .. grid-item-card:: Individual split
-      :link: journeys_reference.html#individual-split
+      :link-type: ref
+      :link: journeys-node-split-individual
 
 .. grid-journeys-canvas-grid-end
 
@@ -106,12 +117,15 @@ Use the audience canvas to build marketing campaigns for all stages of a custome
    :class-row: surface
 
    .. grid-item-card:: Add a node
-      :link: journeys_reference.html#add-a-node
+      :link-type: ref
+      :link: journeys-add-node
 
    .. grid-item-card:: Configure destination attributes
-      :link: journeys_reference.html#configure-destination-attributes
+      :link-type: ref
+      :link: journeys-configure-destination-attributes
 
    .. grid-item-card:: Set run frequency
-      :link: journeys_reference.html#set-run-frequency
+      :link-type: ref
+      :link: journeys-schedule-a-journey
 
 .. grid-journeys-create-grid-end

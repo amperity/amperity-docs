@@ -31,16 +31,20 @@ Use customer profiles and interaction histories to get insights and predict futu
    :class-row: surface
 
    .. grid-item-card:: Churn propensity
-      :link: model_churn_propensity.html
+      :link-type: doc
+      :link: model_churn_propensity
 
    .. grid-item-card:: Event propensity
-      :link: model_event_propensity.html
+      :link-type: doc
+      :link: model_event_propensity
 
    .. grid-item-card:: Predicted CLV
-      :link: model_predicted_clv.html
+      :link-type: doc
+      :link: model_predicted_clv
 
    .. grid-item-card:: Product affinity
-      :link: model_product_affinity.html
+      :link-type: doc
+      :link: model_product_affinity
 
 .. grid-models-grid-end
 

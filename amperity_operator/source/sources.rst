@@ -31,169 +31,220 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    :class-row: surface
 
    .. grid-item-card:: Acxiom
-      :link: source_acxiom.html
+      :link-type: doc
+      :link: source_acxiom
 
    .. grid-item-card:: Adobe Analytics
-      :link: source_adobe_analytics.html
+      :link-type: doc
+      :link: source_adobe_analytics
 
    .. grid-item-card:: Adobe Campaign
-      :link: source_adobe_campaign.html
+      :link-type: doc
+      :link: source_adobe_campaign
 
    .. grid-item-card:: Adobe Commerce
-      :link: source_adobe_commerce.html
+      :link-type: doc
+      :link: source_adobe_commerce
 
    .. grid-item-card:: Adobe Customer Attributes
-      :link: source_adobe_customer_attributes.html
+      :link-type: doc
+      :link: source_adobe_customer_attributes
 
    .. grid-item-card:: Amazon Kinesis Data Firehose
-      :link: source_amazon_redshift.html
+      :link-type: doc
+      :link: source_amazon_kinesis_data_firehose
 
    .. grid-item-card:: Amazon S3
-      :link: source_amazon_s3.html
+      :link-type: doc
+      :link: source_amazon_s3
 
    .. grid-item-card:: Attentive
-      :link: source_attentive_mobile.html
+      :link-type: doc
+      :link: source_attentive_mobile
 
    .. grid-item-card:: Azure Blob Storage
-      :link: source_azure_blob_storage.html
+      :link-type: doc
+      :link: source_azure_blob_storage
 
    .. grid-item-card:: BazaarVoice
-      :link: source_bazaarvoice.html
+      :link-type: doc
+      :link: source_bazaarvoice
 
    .. grid-item-card:: Bluecore
-      :link: source_bluecore.html
+      :link-type: doc
+      :link: source_bluecore
 
    .. grid-item-card:: Braze
-      :link: source_braze.html
+      :link-type: doc
+      :link: source_braze
 
    .. grid-item-card:: Camelot SMM
-      :link: source_camelot_smm.html
+      :link-type: doc
+      :link: source_camelot_smm
 
    .. grid-item-card:: Cheetah Digital
-      :link: source_cheetah_digital.html
+      :link-type: doc
+      :link: source_cheetah_digital
 
    .. grid-item-card:: Cordial
-      :link: source_cordial.html
+      :link-type: doc
+      :link: source_cordial
 
    .. grid-item-card:: Cross Country Computer
-      :link: source_cross_country_computer.html
+      :link-type: doc
+      :link: source_cross_country_computer
 
    .. grid-item-card:: Dynamic Yield
-      :link: source_dynamic_yield.html
+      :link-type: doc
+      :link: source_dynamic_yield
 
    .. grid-item-card:: Emarsys
-      :link: source_emarsys.html
+      :link-type: doc
+      :link: source_emarsys
 
    .. grid-item-card:: Epsilon Abacus
-      :link: source_epsilon_abacus.html
+      :link-type: doc
+      :link: source_epsilon_abacus
 
    .. grid-item-card:: Epsilon Conversant
-      :link: source_epsilon_conversant.html
+      :link-type: doc
+      :link: source_epsilon_conversant
 
    .. grid-item-card:: Epsilon Targeting
-      :link: source_epsilon_targeting.html
+      :link-type: doc
+      :link: source_epsilon_targeting
 
    .. grid-item-card:: Experian
-      :link: source_experian.html
+      :link-type: doc
+      :link: source_experian
 
    .. grid-item-card:: Fivetran
-      :link: source_fivetran.html
+      :link-type: doc
+      :link: source_fivetran
 
    .. grid-item-card:: Google Analytics
-      :link: source_google_analytics.html
+      :link-type: doc
+      :link: source_google_analytics
 
    .. grid-item-card:: Google Cloud Storage
-      :link: source_google_cloud_storage.html
+      :link-type: doc
+      :link: source_google_cloud_storage
 
    .. grid-item-card:: Heap
-      :link: source_heap.html
+      :link-type: doc
+      :link: source_heap
 
    .. grid-item-card:: HupSpot
-      :link: source_hubspot.html
+      :link-type: doc
+      :link: source_hubspot
 
    .. grid-item-card:: Infutor
-      :link: source_infutor.html
+      :link-type: doc
+      :link: source_infutor
 
    .. grid-item-card:: Klaviyo
-      :link: source_klaviyo.html
+      :link-type: doc
+      :link: source_klaviyo
 
    .. grid-item-card:: Koupon Media
-      :link: source_koupon_media.html
+      :link-type: doc
+      :link: source_koupon_media
 
    .. grid-item-card:: Listrak
-      :link: source_listrak.html
+      :link-type: doc
+      :link: source_listrak
 
    .. grid-item-card:: Microsoft Dataverse
-      :link: source_microsoft_dataverse.html
+      :link-type: doc
+      :link: source_microsoft_dataverse
 
    .. grid-item-card:: Monetate
-      :link: source_monetate.html
+      :link-type: doc
+      :link: source_monetate
 
    .. grid-item-card:: Neustar
-      :link: source_neustar.html
+      :link-type: doc
+      :link: source_neustar
 
    .. grid-item-card:: Optimizely
-      :link: source_optimizely.html
+      :link-type: doc
+      :link: source_optimizely
 
    .. grid-item-card:: Oracle Data Cloud
-      :link: source_oracle_data_cloud.html
+      :link-type: doc
+      :link: source_oracle_data_cloud
 
    .. grid-item-card:: Oracle OPERA
-      :link: source_oracle_opera.html
+      :link-type: doc
+      :link: source_oracle_opera
 
    .. grid-item-card:: Oracle Responsys
-      :link: source_oracle_responsys.html
+      :link-type: doc
+      :link: source_oracle_responsys
 
    .. grid-item-card:: PebblePost
-      :link: source_pebblepost.html
+      :link-type: doc
+      :link: source_pebblepost
 
    .. grid-item-card:: PowerReviews
-      :link: source_powerreviews.html
+      :link-type: doc
+      :link: source_powerreviews
 
    .. grid-item-card:: Quad
-      :link: source_quad.html
+      :link-type: doc
+      :link: source_quad
 
    .. grid-item-card:: RR Donnelly
-      :link: source_rr_donnelly.html
+      :link-type: doc
+      :link: source_rr_donnelly
 
    .. grid-item-card:: Sailthru
-      :link: source_sailthru.html
+      :link-type: doc
+      :link: source_sailthru
 
    .. grid-item-card:: Salesforce Commerce Cloud
-      :link: source_salesforce_commerce_cloud.html
+      :link-type: doc
+      :link: source_salesforce_commerce_cloud
 
    .. grid-item-card:: Salesforce Marketing Cloud
-      :link: destination_salesforce_marketing_cloud.html
-
-   .. grid-item-card:: Salesforce Marketing Cloud Personalization
-      :link: source_salesforce_marketing_cloud_personalization.html
+      :link-type: doc
+      :link: destination_salesforce_marketing_cloud
 
    .. grid-item-card:: Salesforce Pardot
-      :link: source_salesforce_pardot.html
+      :link-type: doc
+      :link: source_salesforce_pardot
 
    .. grid-item-card:: Salesforce Sales Cloud
-      :link: source_salesforce_sales_cloud.html
+      :link-type: doc
+      :link: source_salesforce_sales_cloud
 
    .. grid-item-card:: SFTP
-      :link: source_sftp.html
+      :link-type: doc
+      :link: source_sftp
 
    .. grid-item-card:: Shopify
-      :link: source_smg.html
+      :link-type: doc
+      :link: source_smg
 
    .. grid-item-card:: SMG
-      :link: source_smg.html
+      :link-type: doc
+      :link: source_smg
 
    .. grid-item-card:: SoundCommerce
-      :link: source_soundcommerce.html
+      :link-type: doc
+      :link: source_soundcommerce
 
    .. grid-item-card:: Square
-      :link: source_square.html
+      :link-type: doc
+      :link: source_square
 
    .. grid-item-card:: Vibes
-      :link: source_vibes.html
+      :link-type: doc
+      :link: source_vibes
 
    .. grid-item-card:: Zendesk
-      :link: source_zendesk.html
+      :link-type: doc
+      :link: source_zendesk
 
 .. sources-about-grid-end
 

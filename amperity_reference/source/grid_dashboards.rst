@@ -31,10 +31,12 @@ Dashboards show consumption of compute resources and storage for Amps and show u
    :class-row: surface
 
    .. grid-item-card:: Amps consumption
-      :link: amps.html
+      :link-type: doc
+      :link: amps
 
    .. grid-item-card:: Usage
-      :link: usage.html
+      :link-type: doc
+      :link: usage
 
 .. grid-dashboards-grid-end
 

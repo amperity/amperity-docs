@@ -31,67 +31,78 @@ Amperity supports many file types, including CSV, JSON, NDJSON, Parquet, and str
    :class-row: surface
 
    .. grid-item-card:: About file formats
-      :link: format_common.html
+      :link-type: doc
+      :link: format_common
 
       Settings and options that are common to all file formats.
 
 
    .. grid-item-card:: Apache Parquet
-      :link: format_parquet.html
+      :link-type: doc
+      :link: format_parquet
 
       A free and open source column-oriented data storage format developed within the Apache Hadoop ecosystem.
 
 
    .. grid-item-card:: Apache Avro
-      :link: format_avro.html
+      :link-type: doc
+      :link: format_avro
 
       A row-oriented remote procedure call and data serialization framework developed within the Apache Hadoop ecosystem.
 
 
    .. grid-item-card:: CBOR
-      :link: format_cbor.html
+      :link-type: doc
+      :link: format_cbor
 
       A binary data serialization format based on JSON.
 
 
    .. grid-item-card:: CSV
-      :link: format_csv.html
+      :link-type: doc
+      :link: format_csv
 
       A delimited text file that uses a comma to separate values.
 
 
    .. grid-item-card:: JSON
-      :link: format_json.html
+      :link-type: doc
+      :link: format_json
 
       A language-independent data format similar to JavaScript.
 
 
    .. grid-item-card:: NDJSON
-      :link: format_ndjson.html
+      :link-type: doc
+      :link: format_ndjson
 
       A format for structured data that defines the structure of JSON data using lines as separators.
 
 
    .. grid-item-card:: PSV
-      :link: format_psv.html
+      :link-type: doc
+      :link: format_psv
 
       A delimited text file that uses a pipe to separate values. A PSV file stores tabular data in plain text.
 
 
    .. grid-item-card:: Streaming JSON
-      :link: format_json_streaming.html
+      :link-type: doc
+      :link: format_json_streaming
 
       A format for increments of data using NDJSON within each increment. Each line of NDJSON file is a valid JSON value.
 
 
    .. grid-item-card:: TSV
-      :link: format_tsv.html
+      :link-type: doc
+      :link: format_tsv
 
       A delimited text file that uses a tab to separate values and stores tabular data in plain text.
 
 
    .. grid-item-card:: XML
-      :link: format_xml.html
+      :link-type: doc
+      :link: format_xml
 
       A standalone file that uses eXtensible Markup Language (XML).
 

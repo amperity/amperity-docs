@@ -117,100 +117,96 @@ Use high-quality audiences to find new customers across paid media platforms.
    :class-row: surface
 
    .. grid-item-card:: Bing Ads
-      :link: campaign_microsoft_ads.html
-
+      :link-type: doc
+      :link: campaign_microsoft_ads
 
    .. grid-item-card:: Criteo
-      :link: campaign_criteo.html
-
+      :link-type: doc
+      :link: campaign_criteo
 
    .. grid-item-card:: DV360
-      :link: campaign_dv360.html
-
+      :link-type: doc
+      :link: campaign_dv360
 
    .. grid-item-card:: Facebook
-      :link: campaign_meta_ads_manager.html
-
+      :link-type: doc
+      :link: campaign_meta_ads_manager
 
    .. grid-item-card:: Facebook Messenger
-      :link: campaign_meta_ads_manager.html
-
+      :link-type: doc
+      :link: campaign_meta_ads_manager
 
    .. grid-item-card:: Gmail
-      :link: campaign_google_ads.html
-
+      :link-type: doc
+      :link: campaign_google_ads
 
    .. grid-item-card:: Google Ads
-      :link: campaign_google_ads.html
-
+      :link-type: doc
+      :link: campaign_google_ads
 
    .. grid-item-card:: Google Search
-      :link: campaign_google_ads.html
-
+      :link-type: doc
+      :link: campaign_google_ads
 
    .. grid-item-card:: Google Shopping
-      :link: campaign_google_ads.html
-
+      :link-type: doc
+      :link: campaign_google_ads
 
    .. grid-item-card:: Instagram
-      :link: campaign_meta_ads_manager.html
-
+      :link-type: doc
+      :link: campaign_meta_ads_manager
 
    .. grid-item-card:: LiveRamp
-      :link: campaign_liveramp.html
-
+      :link-type: doc
+      :link: campaign_liveramp
 
    .. grid-item-card:: Meta Ads Manager
-      :link: campaign_meta_ads_manager.html
-
+      :link-type: doc
+      :link: campaign_meta_ads_manager
 
    .. grid-item-card:: Microsoft Ads
-      :link: campaign_microsoft_ads.html
-
+      :link-type: doc
+      :link: campaign_microsoft_ads
 
    .. grid-item-card:: Neustar
-      :link: destination_neustar.html
-
-
-   .. grid-item-card:: Oracle DMP
-      :link: destination_oracle_dmp.html
-
+      :link-type: doc
+      :link: destination_neustar
 
    .. grid-item-card:: Pinterest
-      :link: campaign_pinterest.html
-
+      :link-type: doc
+      :link: campaign_pinterest
 
    .. grid-item-card:: Reddit Ads
-      :link: destination_reddit_ads.html
-
+      :link-type: doc
+      :link: destination_reddit_ads
 
    .. grid-item-card:: Snapchat
-      :link: campaign_snapchat.html
-
+      :link-type: doc
+      :link: campaign_snapchat
 
    .. grid-item-card:: The Trade Desk
-      :link: campaign_the_trade_desk.html
-
+      :link-type: doc
+      :link: campaign_the_trade_desk
 
    .. grid-item-card:: TikTok
-      :link: campaign_tiktok_ads.html
-
+      :link-type: doc
+      :link: campaign_tiktok_ads
 
    .. grid-item-card:: WhatsApp
-      :link: campaign_meta_ads_manager.html
-
+      :link-type: doc
+      :link: campaign_meta_ads_manager
 
    .. grid-item-card:: Walmart DSP
-      :link: campaign_walmart_dsp.html
-
+      :link-type: doc
+      :link: campaign_walmart_dsp
 
    .. grid-item-card:: Yahoo DSP
-      :link: campaign_yahoo_dsp.html
-
+      :link-type: doc
+      :link: campaign_yahoo_dsp
 
    .. grid-item-card:: YouTube
-      :link: campaign_dv360.html
-
+      :link-type: doc
+      :link: campaign_dv360
 
 .. grid-paid-media-activate-audiences-grid-end
 
@@ -234,23 +230,23 @@ Use a combination of data within Amperity and data from outside parties to measu
    :class-row: surface
 
    .. grid-item-card:: About measuring campaigns
-      :link: paid_media.html#measure-campaigns
-
+      :link-type: ref
+      :link: paid-media-measure
 
    .. grid-item-card:: Amperity indicators
-      :link: paid_media.html#amperity-indicators
-
+      :link-type: ref
+      :link: paid-media-measure-performance-indicators-amperity
 
    .. grid-item-card:: Paid media indicators
-      :link: paid_media.html#paid-media-indicators
-
+      :link-type: ref
+      :link: paid-media-measure-performance-indicators-paid
 
    .. grid-item-card:: Owned media indicators
-      :link: paid_media.html#owned-media-indicators
-
+      :link-type: ref
+      :link: paid-media-measure-performance-indicators-owned
 
    .. grid-item-card:: Example
-      :link: paid_media.html#example-measuring-campaigns
-
+      :link-type: ref
+      :link: paid-media-measure-performance-indicators-example
 
 .. grid-paid-media-activation-campaigns-grid-end

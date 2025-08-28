@@ -31,16 +31,20 @@ Amperity Bridge enables inbound and outbound data sharing between Amperity and a
    :class-row: surface
 
    .. grid-item-card:: About Amperity Bridge
-      :link: bridge.html
+      :link-type: doc
+      :link: bridge
 
    .. grid-item-card:: Amperity Bridge for Databricks
-      :link: bridge_databricks.html
+      :link-type: doc
+      :link: bridge_databricks
 
    .. grid-item-card:: Amperity Bridge for Google BigQuery
-      :link: bridge_google_bigquery.html
+      :link-type: doc
+      :link: bridge_google_bigquery
 
    .. grid-item-card:: Amperity Bridge for Snowflake
-      :link: bridge_snowflake.html
+      :link-type: doc
+      :link: bridge_snowflake
 
 .. bridge-about-grid-end
 

@@ -31,24 +31,31 @@ Data assets are a collection of common datasets for common use cases.
    :class-row: surface
 
    .. grid-item-card:: Address standardization
-      :link: data_assets.html#address-standardization
+      :link-type: ref
+      :link: data-asset-address-standardization
 
    .. grid-item-card:: Fiscal calendars
-      :link: data_assets.html#fiscal-calendars
+      :link-type: ref
+      :link: data-asset-fiscal-calendars
 
    .. grid-item-card:: Gender name ratios
-      :link: data_assets.html#gender-name-ratios
+      :link-type: ref
+      :link: data-asset-gender-name-ratios
 
    .. grid-item-card:: Country lookups
-      :link: data_assets.html#lookup-countries
+      :link-type: ref
+      :link: data-asset-lookup-table-row
 
    .. grid-item-card:: USA lookups
-      :link: data_assets.html#lookup-united-states
+      :link-type: ref
+      :link: data-asset-lookup-table-usa
 
    .. grid-item-card:: Postal code lookups
-      :link: data_assets.html#lookup-zip-codes
+      :link-type: ref
+      :link: data-asset-lookup-table-zip
 
    .. grid-item-card:: USA normalization
-      :link: data_assets.html#normalization-united-states
+      :link-type: ref
+      :link: data-asset-lookup-table-normalization-usa
 
 .. data-assets-about-grid-end

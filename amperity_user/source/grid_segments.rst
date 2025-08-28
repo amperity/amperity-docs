@@ -35,7 +35,6 @@ Segments
    .. grid-item-card:: About segments
       :link: segments.html
 
-
    .. grid-item-card:: How segments work
       :link: segments.html#how-segments-work
 
@@ -62,47 +61,48 @@ Use the **Segments** page to build audieneces using attributes, conditions, and 
    :class-row: surface
 
    .. grid-item-card:: Activations
-      :link: activations.html
-
+      :link-type: doc
+      :link: activations
 
    .. grid-item-card:: Activation IDs
-      :link: activations.html#activation-ids
-
+      :link-type: ref
+      :link: segments-reference-activation-ids
 
    .. grid-item-card:: AND vs. OR
-      :link: segments_reference.html#and-vs-or
-
+      :link-type: ref
+      :link: segments-reference-and-vs-or
 
    .. grid-item-card:: Attributes
-      :link: attributes.html
-
+      :link-type: doc
+      :link: attributes
 
    .. grid-item-card:: Conditions and operators
-      :link: conditions_and_operators.html
-
+      :link-type: doc
+      :link: conditions_and_operators
 
    .. grid-item-card:: Customer lists
-      :link: segments_reference.html#customer-lists
-
+      :link-type: ref
+      :link: segments-reference-customer-lists
 
    .. grid-item-card:: Databases and tables
-      :link: segments_reference.html#databases-and-tables
-
+      :link-type: ref
+      :link: segments-reference-database-tables
 
    .. grid-item-card:: Inclusions and exclusions
-      :link: segments_reference.html#inclusions-and-exclusions
-
+      :link-type: ref
+      :link: segments-reference-inclusions-exclusions
 
    .. grid-item-card:: Purchase behaviors
-      :link: segments_reference.html#purchase-behaviors
-
+      :link-type: ref
+      :link: segments-reference-purchase-behaviors
 
    .. grid-item-card:: Segment insights
-      :link: segments_reference.html#segment-insights
-
+      :link-type: ref
+      :link: segments-reference-segment-insights
 
    .. grid-item-card:: SQL Editor
-      :link: segments_reference.html#sql-editor
+      :link-type: ref
+      :link: segments-reference-sql-editor
 
 
 .. grid-segments-features-about-grid-end
@@ -127,67 +127,68 @@ The following examples show using the visual **Segment Editor** to build audienc
    :class-row: surface
 
    .. grid-item-card:: Active store shoppers
-      :link: usecase_active_store_shoppers.html
-
+      :link-type: doc
+      :link: usecase_active_store_shoppers
 
    .. grid-item-card:: Dormant customers
-      :link: usecase_dormant_customers.html
-
+      :link-type: doc
+      :link: usecase_dormant_customers
 
    .. grid-item-card:: Early repeat purchasers
-      :link: usecase_early_repeat_purchasers.html
-
+      :link-type: doc
+      :link: usecase_early_repeat_purchasers
 
    .. grid-item-card:: First-time buyers, SMS
-      :link: usecase_1x_buyers_with_sms_optin.html
-
+      :link-type: doc
+      :link: usecase_1x_buyers_with_sms_optin
 
    .. grid-item-card:: High value, multichannel
-      :link: usecase_customers_high_value_multichannel.html
-
+      :link-type: doc
+      :link: usecase_customers_high_value_multichannel
 
    .. grid-item-card:: Lapsing customers
-      :link: usecase_customers_lapsing.html
-
+      :link-type: doc
+      :link: usecase_customers_lapsing
 
    .. grid-item-card:: New high value customers
-      :link: usecase_customers_high_value_new.html
-
+      :link-type: doc
+      :link: usecase_customers_high_value_new
 
    .. grid-item-card:: New website customers
-      :link: usecase_customers_website_new.html
-
+      :link-type: doc
+      :link: usecase_customers_website_new
 
    .. grid-item-card:: One and done
-      :link: usecase_one_and_done.html
-
+      :link-type: doc
+      :link: usecase_one_and_done
 
    .. grid-item-card:: Predicted top 10% customers
-      :link: usecase_predicted_top_10_percent.html
-
+      :link-type: doc
+      :link: usecase_predicted_top_10_percent
 
    .. grid-item-card:: Purchased yesterday
-      :link: usecase_purchased_yesterday.html
-
+      :link-type: doc
+      :link: usecase_purchased_yesterday
 
    .. grid-item-card:: Reach holiday shoppers, SMS
-      :link: usecase_holiday_shoppers_sms.html
-
+      :link-type: doc
+      :link: usecase_holiday_shoppers_sms
 
    .. grid-item-card:: Reduce paid media ad spend
-      :link: usecase_reduce_paid_media_spend.html
-
+      :link-type: doc
+      :link: usecase_reduce_paid_media_spend
 
    .. grid-item-card:: Store invites
-      :link: usecase_store_invite.html
-
+      :link-type: doc
+      :link: usecase_store_invite
 
    .. grid-item-card:: Top 20% revenue previous year
-      :link: usecase_customers_top20_revenue.html
-
+      :link-type: doc
+      :link: usecase_customers_top20_revenue
 
    .. grid-item-card:: Win-back campaign for lost customers
-      :link: usecase_winback_emails_lost_customers.html
+      :link-type: doc
+      :link: usecase_winback_emails_lost_customers
 
 
 .. grid-segments-features-about-grid-end

@@ -31,19 +31,22 @@ Customer- and privacy rights-focused workflows help your organization respect co
    :class-row: surface
 
    .. grid-item-card:: |fa-square-user| European Union ID (EUID)
-      :link: euid.html
+      :link-type: doc
+      :link: euid
 
       Deterministic identity for participants with access to the advertising ecosystem within the European Union.
 
 
    .. grid-item-card:: |fa-address-card| Privacy rights
+      :link-type: url
       :link: ../operator/privacy_rights.html
 
       Comply with data protection and privacy regulations, such as GDPR, CCPA. PIPEDA, and APP.
 
 
    .. grid-item-card:: |fa-square-user| Unified ID 2.0 (UID2)
-      :link: uid2.html
+      :link-type: doc
+      :link: uid2
 
       Deterministic identity for participants with access to the advertising ecosystem within North America.
 

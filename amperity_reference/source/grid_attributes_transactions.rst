@@ -31,121 +31,160 @@ Transaction attributes provide a history of the transactions your customers have
    :class-row: surface
 
    .. grid-item-card:: Average order value
-      :link: attribute_order_value_average.html
+      :link-type: doc
+      :link: attribute_order_value_average
 
    .. grid-item-card:: Brands purchased
-      :link: attribute_brands_purchased.html
+      :link-type: doc
+      :link: attribute_brands_purchased
 
    .. grid-item-card:: Cancelled quantity
-      :link: attribute_canceled_quantity.html
+      :link-type: doc
+      :link: attribute_canceled_quantity
 
    .. grid-item-card:: Cancelled revenue
-      :link: attribute_canceled_revenue.html
+      :link-type: doc
+      :link: attribute_canceled_revenue
 
    .. grid-item-card:: Costs
-      :link: attribute_costs.html
+      :link-type: doc
+      :link: attribute_costs
 
    .. grid-item-card:: Currency
-      :link: attribute_currency.html
+      :link-type: doc
+      :link: attribute_currency
 
    .. grid-item-card:: Days between orders
-      :link: attribute_days_between_orders.html
+      :link-type: doc
+      :link: attribute_days_between_orders
 
    .. grid-item-card:: Digital channels
-      :link: attribute_channels_digital.html
+      :link-type: doc
+      :link: attribute_channels_digital
 
    .. grid-item-card:: Discount amounts
-      :link: attribute_discount_amounts.html
+      :link-type: doc
+      :link: attribute_discount_amounts
 
    .. grid-item-card:: Discount percents
-      :link: attribute_discount_percents.html
+      :link-type: doc
+      :link: attribute_discount_percents
 
    .. grid-item-card:: Early repeat purchaser?
-      :link: attribute_early_repeat_purchaser.html
+      :link-type: doc
+      :link: attribute_early_repeat_purchaser
 
    .. grid-item-card:: First-to-latest order
-      :link: attribute_first_to_latest_order.html
+      :link-type: doc
+      :link: attribute_first_to_latest_order
 
    .. grid-item-card:: First-to-second order
-      :link: attribute_first_to_second_order.html
+      :link-type: doc
+      :link: attribute_first_to_second_order
 
    .. grid-item-card:: Is cancelled?
-      :link: attribute_is_canceled.html
+      :link-type: doc
+      :link: attribute_is_canceled
 
    .. grid-item-card:: Is returned?
-      :link: attribute_is_returned.html
+      :link-type: doc
+      :link: attribute_is_returned
 
    .. grid-item-card:: Largest order value
-      :link: attribute_order_value_largest.html
+      :link-type: doc
+      :link: attribute_order_value_largest
 
    .. grid-item-card:: List prices
-      :link: attribute_list_prices.html
+      :link-type: doc
+      :link: attribute_list_prices
 
    .. grid-item-card:: Multi-brand
-      :link: attribute_brands_multiple.html
+      :link-type: doc
+      :link: attribute_brands_multiple
 
    .. grid-item-card:: Multi-channel
-      :link: attribute_channels_multiple.html
+      :link-type: doc
+      :link: attribute_channels_multiple
 
    .. grid-item-card:: One and done?
-      :link: attribute_one_and_done.html
+      :link-type: doc
+      :link: attribute_one_and_done
 
    .. grid-item-card:: Order datetimes
-      :link: attribute_order_datetimes.html
+      :link-type: doc
+      :link: attribute_order_datetimes
 
    .. grid-item-card:: Order IDs
-      :link: attribute_order_id.html
+      :link-type: doc
+      :link: attribute_order_id
 
    .. grid-item-card:: Order shipping amounts
-      :link: attribute_order_shipping_amount.html
+      :link-type: doc
+      :link: attribute_order_shipping_amount
 
    .. grid-item-card:: Payment methods
-      :link: attribute_payment_method.html
+      :link-type: doc
+      :link: attribute_payment_method
 
    .. grid-item-card:: Product catalogs
-      :link: attribute_product_catalogs.html
+      :link-type: doc
+      :link: attribute_product_catalogs
 
    .. grid-item-card:: Profit amounts
-      :link: attribute_profit_amounts.html
+      :link-type: doc
+      :link: attribute_profit_amounts
 
    .. grid-item-card:: Purchase channels
-      :link: attribute_channels_purchased.html
+      :link-type: doc
+      :link: attribute_channels_purchased
 
    .. grid-item-card:: Quantity
-      :link: attribute_quantity.html
+      :link-type: doc
+      :link: attribute_quantity
 
    .. grid-item-card:: Repeat 365 days?
-      :link: attribute_repeat_365_days.html
+      :link-type: doc
+      :link: attribute_repeat_365_days
 
    .. grid-item-card:: Returned quantity
-      :link: attribute_returned_quantity.html
+      :link-type: doc
+      :link: attribute_returned_quantity
 
    .. grid-item-card:: Returned revenue
-      :link: attribute_returned_revenue.html
+      :link-type: doc
+      :link: attribute_returned_revenue
 
    .. grid-item-card:: Revenue
-      :link: attribute_revenue.html
+      :link-type: doc
+      :link: attribute_revenue
 
    .. grid-item-card:: RFM
-      :link: attribute_rfm.html
+      :link-type: doc
+      :link: attribute_rfm
 
    .. grid-item-card:: Store IDs
-      :link: attribute_store_id.html
+      :link-type: doc
+      :link: attribute_store_id
 
    .. grid-item-card:: Subtotals
-      :link: attribute_subtotals.html
+      :link-type: doc
+      :link: attribute_subtotals
 
    .. grid-item-card:: Sum of item discounts
-      :link: attribute_discount_amounts_sum_item.html
+      :link-type: doc
+      :link: attribute_discount_amounts_sum_item
 
    .. grid-item-card:: Tax amounts
-      :link: attribute_tax_amounts.html
+      :link-type: doc
+      :link: attribute_tax_amounts
 
    .. grid-item-card:: Total discount amount
-      :link: attribute_discount_amounts_total.html
+      :link-type: doc
+      :link: attribute_discount_amounts_total
 
    .. grid-item-card:: Total items
-      :link: attribute_total_items.html
+      :link-type: doc
+      :link: attribute_total_items
 
 .. grid-attributes-transaction-grid-end
 

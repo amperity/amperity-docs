@@ -31,25 +31,32 @@ Data assets are a collection of CSV files and SQL templates that add support for
    :class-row: surface
 
    .. grid-item-card:: 1st-party data
-      :link: data_first_party.html
+      :link-type: doc
+      :link: data_first_party
 
    .. grid-item-card:: 3rd-party data
-      :link: data_third_party.html
+      :link-type: doc
+      :link: data_third_party
 
    .. grid-item-card:: Amperity data assets
-      :link: grid_data_assets.html
+      :link-type: doc
+      :link: grid_data_assets
 
    .. grid-item-card:: Historical data
-      :link: historical_data.html
+      :link-type: doc
+      :link: historical_data
 
    .. grid-item-card:: Householding
-      :link: householding.html
+      :link-type: doc
+      :link: householding
 
    .. grid-item-card:: Nearest store
-      :link: calculate_nearest_store.html
+      :link-type: doc
+      :link: calculate_nearest_store
 
    .. grid-item-card:: Predicted gender
-      :link: predict_gender.html
+      :link-type: doc
+      :link: predict_gender
 
 .. more-data-assets-about-grid-end
 

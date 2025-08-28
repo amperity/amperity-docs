@@ -43,22 +43,28 @@ Rules define priority for deterministic identity resolution. Rules are evaluated
    :class-row: surface
 
    .. grid-item-card:: About rules
-      :link: configure_stitch.html#rules
+      :link-type: ref
+      :link: configure-stitch-rules
 
    .. grid-item-card:: Cluster records
-      :link: configure_stitch.html#cluster-records
+      :link-type: ref
+      :link: configure-stitch-rules-cluster
 
    .. grid-item-card:: Separate records
-      :link: configure_stitch.html#separate-records
+      :link-type: ref
+      :link: configure-stitch-rules-separate
 
    .. grid-item-card:: Rules can be in any order
-      :link: configure_stitch.html#rules-can-be-in-any-order
+      :link-type: ref
+      :link: configure-stitch-rules-order
 
    .. grid-item-card:: Remaining records
-      :link: configure_stitch.html#remaining-records
+      :link-type: ref
+      :link: configure-stitch-rules-remaining
 
    .. grid-item-card:: Visual vs. Code views
-      :link: configure_stitch.html#visual-vs-code-views
+      :link-type: ref
+      :link: configure-stitch-rules-code
 
 .. settings-rules-grid-end
 
@@ -82,28 +88,36 @@ Modify general settings after analyzing data in your tenant to improve data qual
    :class-row: surface
 
    .. grid-item-card:: Allowed empty tables
-      :link: configure_stitch.html#allowed-empty-tables
+      :link-type: ref
+      :link: configure-stitch-general-allowed-empty-tables
 
    .. grid-item-card:: Days of recorded history
-      :link: configure_stitch.html#days-of-recorded-history
+      :link-type: ref
+      :link: configure-stitch-general-performance-history
 
    .. grid-item-card:: Force Stitch to run
-      :link: configure_stitch.html#force-stitch-to-run
+      :link-type: ref
+      :link: configure-stitch-general-stitch-force
 
    .. grid-item-card:: Ignore jitter alerts
-      :link: configure_stitch.html#ignore-jitter-alerts
+      :link-type: ref
+      :link: configure-stitch-general-stitch-ignore-jitter
 
    .. grid-item-card:: One-to-one Stitch
-      :link: configure_stitch.html#one-to-one-stitch
+      :link-type: ref
+      :link: configure-stitch-general-one-to-one
 
    .. grid-item-card:: Skip unified changes
-      :link: configure_stitch.html#skip-unified-changes
+      :link-type: ref
+      :link: configure-stitch-general-stitch-skip-changes
 
    .. grid-item-card:: Skip unified scores
-      :link: configure_stitch.html#skip-unified-scores
+      :link-type: ref
+      :link: configure-stitch-general-stitch-skip-scores
 
    .. grid-item-card:: Stable IDs
-      :link: configure_stitch.html#stable-ids
+      :link-type: ref
+      :link: configure-stitch-general-stitch-stable-id
 
 .. settings-general-grid-end
 
@@ -127,10 +141,12 @@ Bad values are ignored by Stitch during identity resolution.
    :class-row: surface
 
    .. grid-item-card:: Rules for automatic detection
-      :link: configure_stitch.html#rules-for-automatic-detection
+      :link-type: ref
+      :link: configure-stitch-bad-values-rules
 
    .. grid-item-card:: Values to ignore
-      :link: configure_stitch.html#values-to-ignore
+      :link-type: ref
+      :link: configure-stitch-bad-values-ignore
 
 .. settings-bad-values-grid-end
 
@@ -154,48 +170,63 @@ Use advanced settings to modifiy specific behaviors and data preferences.
    :class-row: surface
 
    .. grid-item-card:: Australian phone numbers
-      :link: configure_stitch.html#australian-phone-numbers
+      :link-type: ref
+      :link: configure-stitch-advanced-profile-australian-phone
 
    .. grid-item-card:: Blocking strategies
-      :link: configure_stitch.html#test
+      :link-type: ref
+      :link: configure-stitch-advanced-clustering-blocking
 
    .. grid-item-card:: Business email addresses
-      :link: configure_stitch.html#business-email-addresses
+      :link-type: ref
+      :link: configure-stitch-advanced-profile-business-email
 
    .. grid-item-card:: Case-sensitive foreign keys
-      :link: configure_stitch.html#test
+      :link-type: ref
+      :link: configure-stitch-advanced-clustering-case-sensitive
 
    .. grid-item-card:: Clean foreign keys
-      :link: configure_stitch.html#clean-foreign-keys
+      :link-type: ref
+      :link: configure-stitch-advanced-profile-clean-foreign-keys
 
    .. grid-item-card:: Disable bad-values detection
-      :link: configure_stitch.html#test
+      :link-type: ref
+      :link: configure-stitch-advanced-bad-values-disable
 
    .. grid-item-card:: Email addresses
-      :link: configure_stitch.html#email-addresses
+      :link-type: ref
+      :link: configure-stitch-advanced-profile-email
 
    .. grid-item-card:: Matching strategy
-      :link: configure_stitch.html#matching-strategy
+      :link-type: ref
+      :link: configure-stitch-advanced-clustering-matching-strategy
 
    .. grid-item-card:: Matching thresholds
-      :link: configure_stitch.html#matching-thresholds
+      :link-type: ref
+      :link: configure-stitch-advanced-clustering-matching-thresholds
 
    .. grid-item-card:: Multiple preprocessing profiles
-      :link: configure_stitch.html#multiple-preprocessing-profiles
+      :link-type: ref
+      :link: configure-stitch-advanced-profile-multiple-profiles
 
    .. grid-item-card:: Normalize gender
-      :link: configure_stitch.html#normalize-gender
+      :link-type: ref
+      :link: configure-stitch-advanced-profile-normalize-gender
 
    .. grid-item-card:: Staple
-      :link: configure_stitch.html#staple
+      :link-type: ref
+      :link: configure-stitch-advanced-staple
 
    .. grid-item-card:: Stitch reports
-      :link: configure_stitch.html#stitch-reports
+      :link-type: ref
+      :link: configure-stitch-advanced-reports
 
    .. grid-item-card:: Graph partitions
-      :link: configure_stitch.html#graph-partitions
+      :link-type: ref
+      :link: configure-stitch-advanced-profile-supersized-clusters
 
    .. grid-item-card:: Trivial duplicates
-      :link: configure_stitch.html#trivial-duplicates
+      :link-type: ref
+      :link: configure-stitch-advanced-trivial-duplicates
 
 .. settings-advanced-grid-end

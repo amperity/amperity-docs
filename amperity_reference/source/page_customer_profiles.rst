@@ -31,22 +31,28 @@ Unified customer profiles help your brand better understand your customers. Buil
    :class-row: surface
 
    .. grid-item-card:: About customer profiles
-      :link: databases.html
+      :link-type: doc
+      :link: databases
 
    .. grid-item-card:: Data Explorer
-      :link: data_explorer.html
+      :link-type: doc
+      :link: data_explorer
 
    .. grid-item-card:: Data lineage
-      :link: data_lineage.html
+      :link-type: doc
+      :link: data_lineage
 
    .. grid-item-card:: Data tables
-      :link: data_tables.html
+      :link-type: doc
+      :link: data_tables
 
    .. grid-item-card:: File uploads
-      :link: file_uploads.html
+      :link-type: doc
+      :link: file_uploads
 
    .. grid-item-card:: Spark SQL
-      :link: sql_spark.html
+      :link-type: doc
+      :link: sql_spark
 
 .. customer-profiles-page-grid-end
 

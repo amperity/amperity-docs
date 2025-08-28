@@ -31,25 +31,32 @@ Manage changes and keep things running smoothly.
    :class-row: surface
 
    .. grid-item-card:: Use sandboxes
-      :link: sandboxes.html
+      :link-type: doc
+      :link: sandboxes
 
    .. grid-item-card:: Add more customer data
-      :link: add_customer_data.html
+      :link-type: doc
+      :link: add_customer_data
 
    .. grid-item-card:: Add more interactions
-      :link: grid_interactions.html
+      :link-type: doc
+      :link: grid_interactions
 
    .. grid-item-card:: Add data assets
-      :link: grid_more_datasets.html
+      :link-type: doc
+      :link: grid_more_datasets
 
    .. grid-item-card:: Enable activations
-      :link: add_campaigns.html
+      :link-type: doc
+      :link: add_campaigns
 
    .. grid-item-card:: Configure activation IDs
-      :link: activation_ids.html
+      :link-type: doc
+      :link: activation_ids
 
    .. grid-item-card:: Schedule workflows
-      :link: workflows.html
+      :link-type: doc
+      :link: workflows
 
 .. maintain-about-grid-end
 

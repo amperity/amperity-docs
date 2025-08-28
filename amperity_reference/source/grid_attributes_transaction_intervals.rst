@@ -31,37 +31,48 @@ Time-period rollups for every customer's transaction history.
    :class-row: surface
 
    .. grid-item-card:: Average items
-      :link: attribute_average_number_of_items_intervals.html
+      :link-type: doc
+      :link: attribute_average_number_of_items_intervals
 
    .. grid-item-card:: Average prices
-      :link: attribute_average_price_intervals.html
+      :link-type: doc
+      :link: attribute_average_price_intervals
 
    .. grid-item-card:: Order frequency
-      :link: attribute_order_frequency_intervals.html
+      :link-type: doc
+      :link: attribute_order_frequency_intervals
 
    .. grid-item-card:: Preferred brands
-      :link: attribute_brands_preferred_intervals.html
+      :link-type: doc
+      :link: attribute_brands_preferred_intervals
 
    .. grid-item-card:: Preferred channels
-      :link: attribute_channels_preferred_intervals.html
+      :link-type: doc
+      :link: attribute_channels_preferred_intervals
 
    .. grid-item-card:: Purchased brands
-      :link: attribute_brands_purchased_intervals.html
+      :link-type: doc
+      :link: attribute_brands_purchased_intervals
 
    .. grid-item-card:: Purchased channels
-      :link: attribute_channels_purchased_intervals.html
+      :link-type: doc
+      :link: attribute_channels_purchased_intervals
 
    .. grid-item-card:: Revenue
-      :link: attribute_revenue_intervals.html
+      :link-type: doc
+      :link: attribute_revenue_intervals
 
    .. grid-item-card:: Store preferences
-      :link: attribute_stores_preferred_intervals.html
+      :link-type: doc
+      :link: attribute_stores_preferred_intervals
 
    .. grid-item-card:: Store visits
-      :link: attribute_stores_visit_intervals.html
+      :link-type: doc
+      :link: attribute_stores_visit_intervals
 
    .. grid-item-card:: Total items
-      :link: attribute_total_items_intervals.html
+      :link-type: doc
+      :link: attribute_total_items_intervals
 
 .. grid-attributes-intervals-grid-end
 

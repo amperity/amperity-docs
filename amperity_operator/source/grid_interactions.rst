@@ -31,16 +31,20 @@ Add and manage data from a range of interactions and transactions.
    :class-row: surface
 
    .. grid-item-card:: Email engagement
-      :link: grid_email_engagement.html
+      :link-type: doc
+      :link: grid_email_engagement
 
    .. grid-item-card:: Loyalty programs
-      :link: grid_loyalty_programs.html
+      :link-type: doc
+      :link: grid_loyalty_programs
 
    .. grid-item-card:: Opt-in, opt-out
-      :link: grid_opt_in_opt_out.html
+      :link-type: doc
+      :link: grid_opt_in_opt_out
 
    .. grid-item-card:: More transactions
-      :link: add_transactions.html#more-transactions-data
+      :link-type: ref
+      :link: setup-transactions-more-transactions-data
 
 .. interactions-about-grid-end
 
