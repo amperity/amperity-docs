@@ -23,6 +23,12 @@ Use the **GET /indexes/{id}/profiles** endpoint to return a paginated list of cu
 
 .. endpoint-get-profiles-list-end
 
+.. endpoint-get-profiles-list-maximum-filters-start
+
+.. note:: The maximum number of fields in an index is "30".
+
+.. endpoint-get-profiles-list-maximum-filters-end
+
 
 .. _endpoint-get-profiles-list-prerequisites:
 
@@ -179,7 +185,7 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
 
       The following example shows how to use cURL to send a request to the **GET /indexes/{id}/profiles** endpoint.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request GET \
                 'https://tenant.amperity.com/api/indexes/{id}/profiles \
