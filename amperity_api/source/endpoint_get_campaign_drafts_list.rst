@@ -177,7 +177,7 @@ The following examples show how to send requests to the **GET /campaign-drafts**
 
       The following example shows how to use cURL to send a request to the **GET /campaign-drafts** endpoint.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request GET \
                 'https://tenant.amperity.com/api/campaign-drafts \

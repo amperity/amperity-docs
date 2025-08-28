@@ -184,7 +184,7 @@ The following examples show how to send requests to the **GET /audit-events** en
 
       The following example shows how to use cURL to send a request to the **GET /audit-events** endpoint.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request GET \
                 'https://tenant.amperity.com/api/audit-events \
