@@ -138,7 +138,7 @@ The following examples show how to send requests to the **GET /ingest/jobs/{id}*
 
       The following example shows how to use cURL to send a request to the **GET /ingest/jobs/{id}** endpoint.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request GET \
                 'https://tenant.amperity.com/api/ingest/jobs/{id}' \

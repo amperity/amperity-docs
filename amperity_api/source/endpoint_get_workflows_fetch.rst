@@ -151,7 +151,7 @@ The following examples show how to send requests to the **GET /workflow/runs/{id
 
       The following example shows how to use cURL to send a request to the **GET /workflow/runs/{id}** endpoint.
 
-      .. code-block:: python
+      .. code-block:: rest
 
          curl --request GET \
                 'https://tenant.amperity.com/api/workflow/runs/{id} \

@@ -179,7 +179,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
       The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run a campaign.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request POST \ 
                 'https://app.amperity.com/api/workflow/runs' \
@@ -194,7 +194,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
       The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run an orchestration.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request POST \ 
                 'https://app.amperity.com/api/workflow/runs' \
@@ -210,7 +210,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
       The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run a courier group.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request POST \ 
                 'https://app.amperity.com/api/workflow/runs' \

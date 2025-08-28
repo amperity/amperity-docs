@@ -41,6 +41,10 @@ Use the profile endpoints in the Amperity API to access customer profile indexes
 
 Each endpoint is defined by a query that you build in the **Queries** page, after which it may be generated as an index within the Profile API. A query defines an index, which is set of fields that exists within your unified customer profiles.
 
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-maximum-filters-start
+   :end-before: .. endpoint-get-profiles-list-maximum-filters-end
+
 Use Profile API endoints to support use cases, such as:
 
 * Loyalty programs
@@ -168,6 +172,10 @@ GET /indexes/{id}/profiles
    :start-after: .. endpoint-get-profiles-list-start
    :end-before: .. endpoint-get-profiles-list-end
 
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-maximum-filters-start
+   :end-before: .. endpoint-get-profiles-list-maximum-filters-end
+
 **Base URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
@@ -262,6 +270,10 @@ Queries
 .. profile-api-howitworks-queries-start
 
 Each index is associated with a single query. The query must have a field that contains a unique identifier and at least one other field that can be returned by the request to the Profile API endpoint.
+
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-maximum-filters-start
+   :end-before: .. endpoint-get-profiles-list-maximum-filters-end
 
 The field with the unique identifier is the :ref:`profile ID field <profile-api-howitworks-profile-id-field>`.
 
@@ -464,6 +476,10 @@ Build a query that contains the attributes you need to enable your downstream wo
 
 .. profile-api-enable-build-query-end
 
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-maximum-filters-start
+   :end-before: .. endpoint-get-profiles-list-maximum-filters-end
+
 
 .. _profile-api-enable-add-api-key:
 
@@ -659,6 +675,12 @@ The number of rows and filter fields available from a Profile API endpoint deter
 * The response time for requests that are made to an index
 
 As the number of rows and filter fields increase, the performance of that index will decrease. Large indexes with 5 or more filter fields will have decreased performance.
+
+.. note::
+
+   .. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+      :start-after: .. endpoint-get-profiles-list-maximum-filters-start
+      :end-before: .. endpoint-get-profiles-list-maximum-filters-end
 
 The size of the index has a greater effect on the length of time required to build or refresh an index than the response times for requests that are made to that index.
 

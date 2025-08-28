@@ -23,6 +23,10 @@ Use the **GET /indexes/{id}** endpoint to return the details for a specific inde
 
 .. endpoint-get-profile-index-id-end
 
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-maximum-filters-start
+   :end-before: .. endpoint-get-profiles-list-maximum-filters-end
+
 
 .. _endpoint-get-profile-index-id-prerequisites:
 
@@ -130,7 +134,7 @@ The following examples show how to send requests to the **GET /indexes/{id}** en
 
       The following example shows how to use cURL to send a request to the **GET /indexes/{id}** endpoint.
 
-      .. code-block:: bash
+      .. code-block:: rest
 
          curl --request GET \
                 'https://tenant.amperity.com/api/indexes/ \
