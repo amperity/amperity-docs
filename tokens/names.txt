@@ -644,3 +644,13 @@
 
    &nbsp;<i class="fa-solid fa-arrow-right-arrow-left"></i>&nbsp;
 
+
+.. |fa-direction-left-right| raw:: html
+
+   &nbsp;<i class="fa-solid fa-chevrons-right"></i>&nbsp;
+
+
+.. |fa-dotted-line-right| raw:: html
+
+   &nbsp;<i class="fa-solid fa-circle-arrow-right"></i>&nbsp;
+
