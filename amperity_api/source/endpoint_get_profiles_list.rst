@@ -25,7 +25,7 @@ Use the **GET /indexes/{id}/profiles** endpoint to return a paginated list of cu
 
 .. endpoint-get-profiles-list-maximum-filters-start
 
-.. note:: The maximum number of fields in an index is "30".
+.. note:: The maximum number of fields in an index is 30.
 
 .. endpoint-get-profiles-list-maximum-filters-end
 
