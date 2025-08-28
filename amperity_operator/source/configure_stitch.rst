@@ -139,7 +139,24 @@ Cluster records
 
 Rules can be configured to cluster records together when personally identifiable information (PII) matches or with matching foreign keys.
 
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Condition
+     - Description
+   * - **values match**
+     - Compares values for the selected semantic tag and clusters records when values match exactly.
+   * - **values approximately match**
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values have minor variations, such as misspellings, abbreviations, typos, or transposed characters, but otherwise match.
+
 For example:
+
+.. image:: ../../images/mockup-stitch-settings-rules-match-cluster-complex.png
+   :width: 440 px
+   :alt: Use multiple criteria to define a single rule.
+   :align: left
+   :class: no-scaled-link
 
 .. image:: ../../images/mockup-stitch-settings-rules-match-birthdate.png
    :width: 440 px
@@ -171,7 +188,32 @@ Separate records
 
 Rules can be configured to separate records together when values differ or when specific types of PII are similar, but do not match.
 
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Condition
+     - Description
+   * - **values differ**
+     - Compares values for the selected semantic tag and separates records when values do not match exactly.
+   * - **values significantly differ**
+     - Compares values for the selected semantic tag and separates records when values are more than approximately different.
+   * - **name is not the same (fuzzy match)**
+     - Compares values for names and separates records when values are not the same.
+   * - **birthdate is not the same (fuzzy match)**
+     - Compares values for birthdates and separates records when values are not the same.
+   * - **generational suffix is not the same (fuzzy match)**
+     - Compares values for generational suffix and separates records when values are not the same.
+   * - **company is not the same (fuzzy match)**
+     - Compares values for company and separates records when values are not the same.
+
 For example:
+
+.. image:: ../../images/mockup-stitch-settings-rules-match-separation-complex.png
+   :width: 440 px
+   :alt: Use multiple criteria to define a single rule.
+   :align: left
+   :class: no-scaled-link
 
 .. image:: ../../images/mockup-stitch-settings-rules-separate-email.png
    :width: 440 px
