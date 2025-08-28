@@ -347,6 +347,11 @@ You may configure more than one treatment group for each audience and sub-audien
 
 .. campaigns-treatment-groups-end
 
+.. campaigns-treatment-groups-note-start
+
+.. note:: Naming a treatment group with an underscore (_) as the first character will cause the campaign to fail. 
+
+.. campaigns-treatment-groups-note-end
 
 .. _campaigns-sub-audiences:
 
