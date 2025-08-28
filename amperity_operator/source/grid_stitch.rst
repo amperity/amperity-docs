@@ -31,25 +31,32 @@ Stitch uses patented algorithms to process massive volumes of data and discover 
    :class-row: surface
 
    .. grid-item-card:: Bad-values blocklist
-      :link: blocklist_bad_values.html
+      :link-type: doc
+      :link: blocklist_bad_values
 
    .. grid-item-card:: Labels
-      :link: stitch_labels.html
+      :link-type: doc
+      :link: stitch_labels
 
    .. grid-item-card:: Merge policy
-      :link: merge_policy.html
+      :link-type: doc
+      :link: merge_policy
 
    .. grid-item-card:: Nicknames
-      :link: stitch_nicknames.html
+      :link-type: doc
+      :link: stitch_nicknames
 
    .. grid-item-card:: Review data quality
-      :link: grid_review.html
+      :link-type: doc
+      :link: grid_review
 
    .. grid-item-card:: Review ID resolution
-      :link: stitch_results.html
+      :link-type: doc
+      :link: stitch_results
 
    .. grid-item-card:: Stitch settings
-      :link: grid_settings.html
+      :link-type: doc
+      :link: grid_settings
 
 .. stitch-about-grid-end
 

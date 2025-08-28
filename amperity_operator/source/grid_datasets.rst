@@ -31,25 +31,32 @@ A dataset is a collection of data grouped together to support use cases required
    :class-row: surface
 
    .. grid-item-card:: About datasets
-      :link: datasets.html
+      :link-type: doc
+      :link: datasets
 
    .. grid-item-card:: Feeds
-      :link: feeds.html
+      :link-type: doc
+      :link: feeds
 
    .. grid-item-card:: Semantic tags
-      :link: semantics.html
+      :link-type: doc
+      :link: semantics
 
    .. grid-item-card:: Custom domain tables
-      :link: custom_domain_tables.html
+      :link-type: doc
+      :link: custom_domain_tables
 
    .. grid-item-card:: Real-time tables
-      :link: realtime.html
+      :link-type: doc
+      :link: realtime
 
    .. grid-item-card:: Filtered 360 databases
-      :link: filtered_360_databases.html
+      :link-type: doc
+      :link: filtered_360_databases
 
    .. grid-item-card:: Standard table output
-      :link: grid_tables.html
+      :link-type: doc
+      :link: grid_tables
 
 .. datasets-about-grid-end
 

@@ -31,28 +31,32 @@ Set up inbound and outbound connections between Amperity and other applications 
    :class-row: surface
 
    .. grid-item-card:: Bridges
-      :link: grid_bridge.html
+      :link-type: doc
+      :link: grid_bridge
 
    .. grid-item-card:: Campaigns
-      :link: grid_campaigns.html
-
-   .. grid-item-card:: Data exports
-      :link: ../reference/data_exports.html
+      :link-type: doc
+      :link: grid_campaigns
 
    .. grid-item-card:: Destinations
-      :link: grid_destinations.html
+      :link-type: doc
+      :link: grid_destinations
 
    .. grid-item-card:: Offline events
-      :link: grid_events.html
+      :link-type: doc
+      :link: grid_events
 
    .. grid-item-card:: Profile API endpoints
-      :link: api_profile.html
+      :link-type: doc
+      :link: api_profile
 
    .. grid-item-card:: Sources
-      :link: sources.html
+      :link-type: doc
+      :link: sources
 
    .. grid-item-card:: Streaming API endpoints
-      :link: api_streaming.html
+      :link-type: doc
+      :link: api_streaming
 
 .. connections-about-grid-end
 

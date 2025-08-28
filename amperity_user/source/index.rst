@@ -29,10 +29,18 @@ A collection of in-depth user guides to help you:
 
 .. user-guides-about-end
 
-.. container:: buttons
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
 
-   `Tools for marketers <../user/tools_for_marketers.html>`_
-   `Tools for analysts <../user/tools_for_analysts.html>`_
+   .. grid-item-card:: Tools for marketers
+      :link-type: doc
+      :link: tools_for_marketers
+
+   .. grid-item-card:: Tools for analysts
+      :link-type: doc
+      :link: tools_for_analysts
 
 
 .. _user-guides-concepts:
@@ -56,22 +64,28 @@ Focus on your most valuable customers to build audiences that grow loyalty and i
    :class-row: surface
 
    .. grid-item-card:: AI Assistant
-      :link: grid_ampai.html
+      :link-type: doc
+      :link: grid_ampai
 
    .. grid-item-card:: Segments
-      :link: grid_segments.html
+      :link-type: doc
+      :link: grid_segments
 
    .. grid-item-card:: Campaigns
-      :link: grid_campaigns.html
+      :link-type: doc
+      :link: grid_campaigns
 
    .. grid-item-card:: Journeys
-      :link: grid_journeys.html
+      :link-type: doc
+      :link: grid_journeys
 
    .. grid-item-card:: Queries
-      :link: grid_queries.html
+      :link-type: doc
+      :link: grid_queries
 
    .. grid-item-card:: Workflows
-      :link: workflows.html
+      :link-type: doc
+      :link: workflows
 
 .. user-guides-concepts-grid-end
 
@@ -95,31 +109,40 @@ Find the right audience size, prevent churn, advertise across paid media, use pe
    :class-row: surface
 
    .. grid-item-card:: Activations
-      :link: activations.html
+      :link-type: doc
+      :link: activations
 
    .. grid-item-card:: Audience sizes
-      :link: audience_sizes.html
+      :link-type: doc
+      :link: audience_sizes
 
    .. grid-item-card:: Churn prevention
-      :link: churn_prevention.html
+      :link-type: doc
+      :link: churn_prevention
 
    .. grid-item-card:: Direct mail
-      :link: direct_mail.html
+      :link-type: doc
+      :link: direct_mail
 
    .. grid-item-card:: Offline events
-      :link: offline_events.html
+      :link-type: doc
+      :link: events
 
    .. grid-item-card:: One-time buyers
-      :link: onetime_buyers.html
+      :link-type: doc
+      :link: onetime_buyers
 
    .. grid-item-card:: Paid media
-      :link: paid_media.html
+      :link-type: doc
+      :link: paid_media
 
    .. grid-item-card:: People-based measurement
-      :link: people_based_measurement.html
+      :link-type: doc
+      :link: people_based_measurement
 
    .. grid-item-card:: RFM
-      :link: rfm.html
+      :link-type: doc
+      :link: rfm
 
 .. user-guides-usecases-grid-end
 
@@ -143,16 +166,20 @@ Build audiences using predicted behavior, including lifetime value, churn propen
    :class-row: surface
 
    .. grid-item-card:: Churn propensity
-      :link: model_predicted_churn.html
+      :link-type: doc
+      :link: model_predicted_churn
 
    .. grid-item-card:: Event propensity
-      :link: model_event_propensity.html
+      :link-type: doc
+      :link: model_event_propensity
 
    .. grid-item-card:: Predicted CLV
-      :link: model_predicted_clv.html
+      :link-type: doc
+      :link: model_predicted_clv
 
    .. grid-item-card:: Product affinity
-      :link: model_predicted_product_affinity.html
+      :link-type: doc
+      :link: model_predicted_product_affinity
 
 .. user-guides-predictive-models-grid-end
 
@@ -176,22 +203,28 @@ Build audiences around activities like first orders, repeat orders, and who has 
    :class-row: surface
 
    .. grid-item-card:: First purchase
-      :link: purchase_behavior_first_purchase.html
+      :link-type: doc
+      :link: purchase_behavior_first_purchase
 
    .. grid-item-card:: Has not purchased
-      :link: purchase_behavior_has_not_purchased.html
+      :link-type: doc
+      :link: purchase_behavior_has_not_purchased
 
    .. grid-item-card:: Has purchased
-      :link: purchase_behavior_has_purchased.html
+      :link-type: doc
+      :link: purchase_behavior_has_purchased
 
    .. grid-item-card:: Most frequently ordered
-      :link: purchase_behavior_most_frequent_order.html
+      :link-type: doc
+      :link: purchase_behavior_most_frequent_order
 
    .. grid-item-card:: Repeat purchase
-      :link: purchase_behavior_repeat_purchase.html
+      :link-type: doc
+      :link: purchase_behavior_repeat_purchase
 
    .. grid-item-card:: Total value of orders
-      :link: purchase_behavior_total_value_of_orders.html
+      :link-type: doc
+      :link: purchase_behavior_total_value_of_orders
 
 .. user-guides-purchase-behaviors-grid-end
 

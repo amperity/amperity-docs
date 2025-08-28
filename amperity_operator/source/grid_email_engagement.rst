@@ -31,16 +31,20 @@ Email engagement data captures the history of email interactions between a custo
    :class-row: surface
 
    .. grid-item-card:: About email engagement
-      :link: add_email_engagement.html
+      :link-type: doc
+      :link: add_email_engagement
 
    .. grid-item-card:: Email engagement attributes
-      :link: table_email_engagement_attributes.html
+      :link-type: doc
+      :link: table_email_engagement_attributes
 
    .. grid-item-card:: Email engagement summary
-      :link: table_email_engagement_summary.html
+      :link-type: doc
+      :link: table_email_engagement_summary
 
    .. grid-item-card:: Unified email events
-      :link: table_unified_email_events.html
+      :link-type: doc
+      :link: table_unified_email_events
 
 .. email-engagement-grid-end
 

@@ -31,16 +31,20 @@ The quality of data your brand makes available to Amperity matters. More accurat
    :class-row: surface
 
    .. grid-item-card:: Stitch benchmarks
-      :link: benchmarks.html
+      :link-type: doc
+      :link: benchmarks
 
    .. grid-item-card:: Input validation reports
-      :link: validate_inputs.html
+      :link-type: doc
+      :link: validate_inputs
 
    .. grid-item-card:: Stitch QA
-      :link: qa_stitch.html
+      :link-type: doc
+      :link: qa_stitch
 
    .. grid-item-card:: Transactions QA
-      :link: qa_transactions.html
+      :link-type: doc
+      :link: qa_transactions
 
 .. review-about-grid-end
 

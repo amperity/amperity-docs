@@ -45,7 +45,8 @@ Use the audit event endpoints to return a log of up to 1000 audit events for use
    :class-container: surface
 
    .. grid-item-card:: GET /audit-events
-      :link: endpoint_get_audit_events_list.html
+      :link-type: doc
+      :link: endpoint_get_audit_events_list
 
       .. include:: ../../amperity_reference/source/activity_logs.rst
          :start-after: .. settings-user-activity-logs-about-start
@@ -69,14 +70,16 @@ Use campaign endpoints to return a list of campaigns or draft campaigns.
    :class-container: surface
 
    .. grid-item-card:: GET /campaign-drafts
-      :link: endpoint_get_campaign_drafts_list.html
+      :link-type: doc
+      :link: endpoint_get_campaign_drafts_list
 
       .. include:: ../../amperity_api/source/endpoint_get_campaign_drafts_list.rst
          :start-after: .. endpoint-get-campaign-drafts-list-start
          :end-before: .. endpoint-get-campaign-drafts-list-end
 
    .. grid-item-card:: GET /campaigns
-      :link: endpoint_get_campaigns_list.html
+      :link-type: doc
+      :link: endpoint_get_campaigns_list
 
       .. include:: ../../amperity_api/source/endpoint_get_campaigns_list.rst
          :start-after: .. endpoint-get-campaigns-list-start
@@ -100,14 +103,16 @@ Use ingest job endpoints to return a list of jobs or return details about a spec
    :class-container: surface
 
    .. grid-item-card:: GET /ingest/jobs
-      :link: endpoint_get_ingest_jobs.html
+      :link-type: doc
+      :link: endpoint_get_ingest_jobs
 
       .. include:: ../../amperity_api/source/endpoint_get_ingest_jobs.rst
          :start-after: .. endpoint-get-ingest-jobs-start
          :end-before: .. endpoint-get-ingest-jobs-end
 
    .. grid-item-card:: GET /ingest/jobs/(id)
-      :link: endpoint_get_ingest_jobs_id.html
+      :link-type: doc
+      :link: endpoint_get_ingest_jobs_id
 
       .. include:: ../../amperity_api/source/endpoint_get_ingest_jobs_id.rst
          :start-after: .. endpoint-get-ingest-jobs-id-start
@@ -131,7 +136,8 @@ Use the segments endpoint to return a list of segments.
    :class-container: surface
 
    .. grid-item-card:: GET /segments
-      :link: endpoint_get_segments_list.html
+      :link-type: doc
+      :link: endpoint_get_segments_list
 
       .. include:: ../../amperity_api/source/endpoint_get_segments_list.rst
          :start-after: .. endpoint-get-segments-list-start
@@ -156,28 +162,32 @@ Use workflows endpoints to get a list of workflows, details for a specific workf
 
 
    .. grid-item-card:: GET /workflow/runs
-      :link: endpoint_get_workflows_list.html
+      :link-type: doc
+      :link: endpoint_get_workflows_list
 
       .. include:: ../../amperity_api/source/endpoint_get_workflows_list.rst
          :start-after: .. endpoint-get-workflows-list-start
          :end-before: .. endpoint-get-workflows-list-end
 
    .. grid-item-card:: GET /workflow/runs/{id}
-      :link: endpoint_get_workflows_fetch.html
+      :link-type: doc
+      :link: endpoint_get_workflows_fetch
 
       .. include:: ../../amperity_api/source/endpoint_get_workflows_fetch.rst
          :start-after: .. endpoint-get-workflows-fetch-start
          :end-before: .. endpoint-get-workflows-fetch-end
 
    .. grid-item-card:: POST /workflow/runs
-      :link: endpoint_post_workflows_start.html
+      :link-type: doc
+      :link: endpoint_post_workflows_start
 
       .. include:: ../../amperity_api/source/endpoint_post_workflows_start.rst
          :start-after: .. endpoint-post-workflows-start-start
          :end-before: .. endpoint-post-workflows-start-end
 
    .. grid-item-card:: POST /workflow/runs/{id}/stop
-      :link: endpoint_post_workflows_stop.html
+      :link-type: doc
+      :link: endpoint_post_workflows_stop
 
       .. include:: ../../amperity_api/source/endpoint_post_workflows_stop.rst
          :start-after: .. endpoint-post-workflows-stop-start

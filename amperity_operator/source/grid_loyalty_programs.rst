@@ -33,10 +33,12 @@ Your highest-value customers are often members of your brand’s loyalty program
    :class-row: surface
 
    .. grid-item-card:: Loyalty events
-      :link: table_unified_loyalty_events.html
+      :link-type: doc
+      :link: table_unified_loyalty_events
 
    .. grid-item-card:: Loyalty profiles
-      :link: table_unified_loyalty.html
+      :link-type: doc
+      :link: table_unified_loyalty
 
 .. loyalty-programs-about-grid-start
 

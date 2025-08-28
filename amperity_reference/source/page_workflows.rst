@@ -31,18 +31,23 @@ Monitor the current status of all workflows. View details for all steps in a wor
    :class-row: surface
 
    .. grid-item-card:: About workflows
-      :link: workflows.html
+      :link-type: doc
+      :link: workflows
 
    .. grid-item-card:: Workflow alerts
-      :link: workflows.html#workflow-alerts
+      :link-type: ref
+      :link: workflows-discover-alerts
 
    .. grid-item-card:: Workflow run details
-      :link: workflows.html#workflow-run-details
+      :link-type: ref
+      :link: workflows-discover-details
 
    .. grid-item-card:: Common resolutions
-      :link: workflows.html#common-resolutions
+      :link-type: ref
+      :link: workflows-common
 
    .. grid-item-card:: Context-specific resolutions
-      :link: workflows.html#context-specific-resolutions
+      :link-type: ref
+      :link: workflows-context
 
 .. workflows-page-grid-end

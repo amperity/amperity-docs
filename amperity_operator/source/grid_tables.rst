@@ -53,109 +53,144 @@ Click any of the following cards to open a page about that table.
    :class-row: surface
 
    .. grid-item-card:: Activation States
-      :link: table_activation_states.html
+      :link-type: doc
+      :link: table_activation_states
 
    .. grid-item-card:: All Opted-in Emails
-      :link: table_all_opted_in_emails.html
+      :link-type: doc
+      :link: table_all_opted_in_emails
 
    .. grid-item-card:: Campaign Recipients
-      :link: table_campaign_recipients.html
+      :link-type: doc
+      :link: table_campaign_recipients
 
    .. grid-item-card:: Customer 360
-      :link: table_customer_360.html
+      :link-type: doc
+      :link: table_customer_360
 
    .. grid-item-card:: Customer Attributes
-      :link: table_customer_attributes.html
+      :link-type: doc
+      :link: table_customer_attributes
 
    .. grid-item-card:: Detailed Examples
-      :link: table_detailed_examples.html
+      :link-type: doc
+      :link: table_detailed_examples
 
    .. grid-item-card:: Email AmpID Assignment
-      :link: table_email_ampid_assignment.html
+      :link-type: doc
+      :link: table_email_ampid_assignment
 
    .. grid-item-card:: Email Engagement Attributes
-      :link: table_email_engagement_attributes.html
+      :link-type: doc
+      :link: table_email_engagement_attributes
 
    .. grid-item-card:: Email Engagement Summary
-      :link: table_email_engagement_summary.html
+      :link-type: doc
+      :link: table_email_engagement_summary
 
    .. grid-item-card:: Email Opt Status
-      :link: table_email_opt_status.html
+      :link-type: doc
+      :link: table_email_opt_status
 
    .. grid-item-card:: Event Propensity
-      :link: table_event_propensity.html
+      :link-type: doc
+      :link: table_event_propensity
 
    .. grid-item-card:: Fiscal Calendar
-      :link: table_fiscal_calendar.html
+      :link-type: doc
+      :link: table_fiscal_calendar
 
    .. grid-item-card:: Merged Customers
-      :link: table_merged_customers.html
+      :link-type: doc
+      :link: table_merged_customers
 
    .. grid-item-card:: Merged Households
-      :link: table_merged_households.html
+      :link-type: doc
+      :link: table_merged_households
 
    .. grid-item-card:: PII
-      :link: table_pii.html
+      :link-type: doc
+      :link: table_pii
 
    .. grid-item-card:: Predicted Affinity
-      :link: table_predicted_affinity.html
+      :link-type: doc
+      :link: table_predicted_affinity
 
    .. grid-item-card:: Predicted CLV Attributes
-      :link: table_predicted_clv_attributes.html
+      :link-type: doc
+      :link: table_predicted_clv_attributes
 
    .. grid-item-card:: SMS Opt Status
-      :link: table_sms_opt_status.html
+      :link-type: doc
+      :link: table_sms_opt_status
 
    .. grid-item-card:: Stitch Blocking Keys
-      :link: table_stitch_blocking_keys.html
+      :link-type: doc
+      :link: table_stitch_blocking_keys
 
    .. grid-item-card:: Stitch Blocklist Values
-      :link: table_stitch_blocklistvalues.html
+      :link-type: doc
+      :link: table_stitch_blocklistvalues
 
    .. grid-item-card:: Stitch Scores
-      :link: table_stitch_scores.html
+      :link-type: doc
+      :link: table_stitch_scores
 
    .. grid-item-card:: Transaction Attributes Extended
-      :link: table_transaction_attributes_extended.html
+      :link-type: doc
+      :link: table_transaction_attributes_extended
 
    .. grid-item-card:: Unified Changes Clusters
-      :link: table_unified_changes_clusters.html
+      :link-type: doc
+      :link: table_unified_changes_clusters
 
    .. grid-item-card:: Unified Changes PKs
-      :link: table_unified_changes_pks.html
+      :link-type: doc
+      :link: table_unified_changes_pks
 
    .. grid-item-card:: Unified Coalesced
-      :link: table_unified_coalesced.html
+      :link-type: doc
+      :link: table_unified_coalesced
 
    .. grid-item-card:: Unified Customers
-      :link: table_unified_customers.html
+      :link-type: doc
+      :link: table_unified_customers
 
    .. grid-item-card:: Unified Email Events
-      :link: table_unified_email_events.html
+      :link-type: doc
+      :link: table_unified_email_events
 
    .. grid-item-card:: Unified Itemized Transactions
-      :link: table_unified_itemized_transactions.html
+      :link-type: doc
+      :link: table_unified_itemized_transactions
 
    .. grid-item-card:: Unified Loyalty Events
-      :link: table_unified_loyalty_events.html
+      :link-type: doc
+      :link: table_unified_loyalty_events
 
    .. grid-item-card:: Unified Loyalty
-      :link: table_unified_loyalty.html
+      :link-type: doc
+      :link: table_unified_loyalty
 
    .. grid-item-card:: Unified Paid Media
-      :link: table_unified_paid_media.html
+      :link-type: doc
+      :link: table_unified_paid_media
 
    .. grid-item-card:: Unified Preprocessed Raw
-      :link: table_unified_preprocessed_raw.html
+      :link-type: doc
+      :link: table_unified_preprocessed_raw
 
    .. grid-item-card:: Unified Product Catalog
-      :link: table_unified_product_catalog.html
+      :link-type: doc
+      :link: table_unified_product_catalog
 
    .. grid-item-card:: Unified Scores
-      :link: table_unified_scores.html
+      :link-type: doc
+      :link: table_unified_scores
 
    .. grid-item-card:: Unified Transactions
-      :link: table_unified_transactions.html
+      :link-type: doc
+      :link: table_unified_transactions
 
 .. formats-about-grid-end
 

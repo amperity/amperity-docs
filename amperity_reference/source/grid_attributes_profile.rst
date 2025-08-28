@@ -31,22 +31,28 @@ A unified view for each customer across all points of engagement, including attr
    :class-row: surface
 
    .. grid-item-card:: Birthdates
-      :link: attribute_customer_profile_birthdate.html
+      :link-type: doc
+      :link: attribute_customer_profile_birthdate
 
    .. grid-item-card:: Email addresses
-      :link: attribute_customer_profile_email.html
+      :link-type: doc
+      :link: attribute_customer_profile_email
 
    .. grid-item-card:: Gender
-      :link: attribute_customer_profile_gender.html
+      :link-type: doc
+      :link: attribute_customer_profile_gender
 
    .. grid-item-card:: Names
-      :link: attribute_customer_profile_names.html
+      :link-type: doc
+      :link: attribute_customer_profile_names
 
    .. grid-item-card:: Phone numbers
-      :link: attribute_customer_profile_phone.html
+      :link-type: doc
+      :link: attribute_customer_profile_phone
 
    .. grid-item-card:: Physical addresses
-      :link: attribute_customer_profile_addresses.html
+      :link-type: doc
+      :link: attribute_customer_profile_addresses
 
 .. grid-attributes-profile-grid-end
 

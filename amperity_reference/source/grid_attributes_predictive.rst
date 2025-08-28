@@ -31,28 +31,36 @@ Predict customer behavior, such as customer lifetime value, churn propensity, pr
    :class-row: surface
 
    .. grid-item-card:: Audience sizes
-      :link: attribute_audience_sizes.html
+      :link-type: doc
+      :link: attribute_audience_sizes
 
    .. grid-item-card:: Average order revenue
-      :link: attribute_predicted_average_order_revenue.html
+      :link-type: doc
+      :link: attribute_predicted_average_order_revenue
 
    .. grid-item-card:: CLV
-      :link: attribute_predicted_clv.html
+      :link-type: doc
+      :link: attribute_predicted_clv
 
    .. grid-item-card:: Customer ranking
-      :link: attribute_customer_ranking.html
+      :link-type: doc
+      :link: attribute_customer_ranking
 
    .. grid-item-card:: Lifecycle status
-      :link: attribute_predicted_lifecycle_status.html
+      :link-type: doc
+      :link: attribute_predicted_lifecycle_status
 
    .. grid-item-card:: Order frequency
-      :link: attribute_predicted_order_frequency.html
+      :link-type: doc
+      :link: attribute_predicted_order_frequency
 
    .. grid-item-card:: Transactions
-      :link: attribute_predicted_transactions.html
+      :link-type: doc
+      :link: attribute_predicted_transactions
 
    .. grid-item-card:: Value tier
-      :link: attribute_predicted_value_tier.html
+      :link-type: doc
+      :link: attribute_predicted_value_tier
 
 .. grid-attributes-predictive-about-end
 

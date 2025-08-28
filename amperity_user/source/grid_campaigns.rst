@@ -163,94 +163,124 @@ Send campaigns to any of the following marketing applications and workflows.
    :class-row: surface
 
    .. grid-item-card:: ActiveCampign
-      :link: campaign_active_campaign.html
+      :link-type: doc
+      :link: campaign_active_campaign
 
    .. grid-item-card:: Adobe Marketo
-      :link: campaign_adobe_marketo.html
+      :link-type: doc
+      :link: campaign_adobe_marketo
 
    .. grid-item-card:: Amazon S3
-      :link: campaign_amazon_s3.html
+      :link-type: doc
+      :link: campaign_amazon_s3
 
    .. grid-item-card:: Attentive (Audiences)
-      :link: campaign_attentive_mobile.html
+      :link-type: doc
+      :link: campaign_attentive_mobile
 
    .. grid-item-card:: Azure Blob Storage
-      :link: campaign_azure_blob_storage.html
+      :link-type: doc
+      :link: campaign_azure_blob_storage
 
    .. grid-item-card:: Braze
-      :link: campaign_braze.html
+      :link-type: doc
+      :link: campaign_braze
 
    .. grid-item-card:: Cheetah Digital
-      :link: campaign_cheetah_digital.html
+      :link-type: doc
+      :link: campaign_cheetah_digital
 
    .. grid-item-card:: Cordial
-      :link: campaign_cordial.html
+      :link-type: doc
+      :link: campaign_cordial
 
    .. grid-item-card:: Criteo
-      :link: campaign_criteo.html
+      :link-type: doc
+      :link: campaign_criteo
 
    .. grid-item-card:: Criteo Retail Media
-      :link: campaign_criteo_retail_media.html
+      :link-type: doc
+      :link: campaign_criteo_retail_media
 
    .. grid-item-card:: DV360
-      :link: campaign_dv360.html
+      :link-type: doc
+      :link: campaign_dv360
 
    .. grid-item-card:: Google Ads
-      :link: campaign_google_ads.html
+      :link-type: doc
+      :link: campaign_google_ads
 
    .. grid-item-card:: Google Cloud Storage
-      :link: campaign_google_cloud_storage.html
+      :link-type: doc
+      :link: campaign_google_cloud_storage
 
    .. grid-item-card:: HupSpot
-      :link: campaign_hubspot.html
+      :link-type: doc
+      :link: campaign_hubspot
 
    .. grid-item-card:: Klaviyo
-      :link: campaign_klaviyo.html
+      :link-type: doc
+      :link: campaign_klaviyo
 
    .. grid-item-card:: Listrak
-      :link: campaign_listrak.html
+      :link-type: doc
+      :link: campaign_listrak
 
    .. grid-item-card:: LiveRamp
-      :link: campaign_liveramp.html
+      :link-type: doc
+      :link: campaign_liveramp
 
    .. grid-item-card:: Meta Ads Manager
-      :link: campaign_meta_ads_manager.html
+      :link-type: doc
+      :link: campaign_meta_ads_manager
 
    .. grid-item-card:: Microsoft Ads
-      :link: campaign_microsoft_ads.html
+      :link-type: doc
+      :link: campaign_microsoft_ads
 
    .. grid-item-card:: Neustar
-      :link: campaign_neustar.html
+      :link-type: doc
+      :link: campaign_neustar
 
    .. grid-item-card:: Oracle Eloqua
-      :link: campaign_oracle_eloqua.html
+      :link-type: doc
+      :link: campaign_oracle_eloqua
 
    .. grid-item-card:: Pinterest
-      :link: campaign_pinterest.html
+      :link-type: doc
+      :link: campaign_pinterest
 
    .. grid-item-card:: Sailthru
-      :link: campaign_sailthru.html
+      :link-type: doc
+      :link: campaign_sailthru
 
    .. grid-item-card:: Salesforce Marketing Cloud
-      :link: campaign_salesforce_marketing_cloud.html
+      :link-type: doc
+      :link: campaign_salesforce_marketing_cloud
 
    .. grid-item-card:: SFTP
-      :link: campaign_sftp.html
+      :link-type: doc
+      :link: campaign_sftp
 
    .. grid-item-card:: Snapchat
-      :link: campaign_snapchat.html
+      :link-type: doc
+      :link: campaign_snapchat
 
    .. grid-item-card:: The Trade Desk
-      :link: campaign_the_trade_desk.html
+      :link-type: doc
+      :link: campaign_the_trade_desk
 
    .. grid-item-card:: TikTok Ads
-      :link: campaign_tiktok_ads.html
+      :link-type: doc
+      :link: campaign_tiktok_ads
 
    .. grid-item-card:: Walmart DSP
-      :link: campaign_walmart_dsp.html
+      :link-type: doc
+      :link: campaign_walmart_dsp
 
    .. grid-item-card:: Yahoo DSP
-      :link: campaign_yahoo_dsp.html
+      :link-type: doc
+      :link: campaign_yahoo_dsp
 
 .. grid-campaigns-sendto-grid-end
 

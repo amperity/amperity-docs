@@ -31,262 +31,348 @@ Set up connections to send data from Amperity to other marketing applications, t
    :class-row: surface
 
    .. grid-item-card:: ActiveCampign
-      :link: destination_active_campaign.html
+      :link-type: doc
+      :link: destination_active_campaign
 
    .. grid-item-card:: Acxiom
-      :link: destination_acxiom.html
+      :link-type: doc
+      :link: destination_acxiom
 
    .. grid-item-card:: Adobe Campaign
-      :link: destination_adobe_campaign.html
+      :link-type: doc
+      :link: destination_adobe_campaign
 
    .. grid-item-card:: Adobe Customer Attributes
-      :link: destination_adobe_customer_attributes.html
+      :link-type: doc
+      :link: destination_adobe_customer_attributes
 
    .. grid-item-card:: Adobe Experience Platform
-      :link: destination_adobe_aep.html
+      :link-type: doc
+      :link: destination_adobe_aep
 
    .. grid-item-card:: Adobe Marketo
-      :link: destination_adobe_marketo.html
+      :link-type: doc
+      :link: destination_adobe_marketo
 
    .. grid-item-card:: Airship
-      :link: destination_airship.html
+      :link-type: doc
+      :link: destination_airship
 
    .. grid-item-card:: Amazon Ads
-      :link: destination_amazon_ads.html
+      :link-type: doc
+      :link: destination_amazon_ads
 
    .. grid-item-card:: Amazon Pinpoint
-      :link: destination_amazon_pinpoint.html
+      :link-type: doc
+      :link: destination_amazon_pinpoint
 
    .. grid-item-card:: Amazon Redshift
-      :link: destination_amazon_redshift.html
+      :link-type: doc
+      :link: destination_amazon_redshift
 
    .. grid-item-card:: Amazon S3
-      :link: destination_amazon_s3.html
+      :link-type: doc
+      :link: destination_amazon_s3
 
    .. grid-item-card:: Attentive (Attributes)
-      :link: destination_attentive_mobile_api.html
+      :link-type: doc
+      :link: destination_attentive_mobile_api
 
    .. grid-item-card:: Attentive (Audiences)
-      :link: destination_attentive_mobile.html
+      :link-type: doc
+      :link: destination_attentive_mobile
 
    .. grid-item-card:: AWS Connect
-      :link: destination_aws_connect.html
+      :link-type: doc
+      :link: destination_aws_connect
 
    .. grid-item-card:: Azure Blob Storage
-      :link: destination_azure_blob_storage.html
+      :link-type: doc
+      :link: destination_azure_blob_storage
 
    .. grid-item-card:: Azure Synapse Analytics
-      :link: destination_azure_synapse.html
+      :link-type: doc
+      :link: destination_azure_synapse
 
    .. grid-item-card:: BazaarVoice
-      :link: destination_bazaarvoice.html
+      :link-type: doc
+      :link: destination_bazaarvoice
 
    .. grid-item-card:: Bluecore
-      :link: destination_bluecore.html
+      :link-type: doc
+      :link: destination_bluecore
 
    .. grid-item-card:: Braze
-      :link: destination_braze.html
+      :link-type: doc
+      :link: destination_braze
 
    .. grid-item-card:: Camelot SMM
-      :link: destination_camelot_smm.html
+      :link-type: doc
+      :link: destination_camelot_smm
 
    .. grid-item-card:: Cheetah Digital
-      :link: destination_cheetah_digital.html
+      :link-type: doc
+      :link: destination_cheetah_digital
 
    .. grid-item-card:: Cordial
-      :link: destination_cordial.html
+      :link-type: doc
+      :link: destination_cordial
 
    .. grid-item-card:: Criteo
-      :link: destination_criteo.html
+      :link-type: doc
+      :link: destination_criteo
 
    .. grid-item-card:: Criteo Retail Media
-      :link: destination_criteo_retail_media.html
+      :link-type: doc
+      :link: destination_criteo_retail_media
 
    .. grid-item-card:: Cross Country Computer
-      :link: destination_cross_country_computer.html
+      :link-type: doc
+      :link: destination_cross_country_computer
 
    .. grid-item-card:: Domo
-      :link: destination_domo.html
+      :link-type: doc
+      :link: destination_domo
 
    .. grid-item-card:: Dotdigital
-      :link: destination_dotdigital.html
+      :link-type: doc
+      :link: destination_dotdigital
 
    .. grid-item-card:: DV360
-      :link: destination_dv360.html
+      :link-type: doc
+      :link: destination_dv360
 
    .. grid-item-card:: Dynamic Yield
-      :link: destination_dynamic_yield.html
+      :link-type: doc
+      :link: destination_dynamic_yield
 
    .. grid-item-card:: Dynamics 365 Marketing
-      :link: destination_dynamics_365_marketing.html
+      :link-type: doc
+      :link: destination_dynamics_365_marketing
 
    .. grid-item-card:: Epsilon Abacus
-      :link: destination_epsilon_abacus.html
+      :link-type: doc
+      :link: destination_epsilon_abacus
 
    .. grid-item-card:: Epsilon Conversant
-      :link: destination_epsilon_conversant.html
+      :link-type: doc
+      :link: destination_epsilon_conversant
 
    .. grid-item-card:: Epsilon Targeting
-      :link: destination_epsilon_targeting.html
+      :link-type: doc
+      :link: destination_epsilon_targeting
 
    .. grid-item-card:: Evocalize
-      :link: destination_evocalize.html
+      :link-type: doc
+      :link: destination_evocalize
 
    .. grid-item-card:: Experian
-      :link: destination_experian.html
+      :link-type: doc
+      :link: destination_experian
 
    .. grid-item-card:: Google Ads
-      :link: destination_google_ads.html
+      :link-type: doc
+      :link: destination_google_ads
 
    .. grid-item-card:: Google BigQuery
-      :link: destination_google_bigquery.html
+      :link-type: doc
+      :link: destination_google_bigquery
 
    .. grid-item-card:: Google Cloud Storage
-      :link: destination_google_cloud_storage.html
+      :link-type: doc
+      :link: destination_google_cloud_storage
 
    .. grid-item-card:: Google Customer Match
-      :link: destination_google_customer_match.html
+      :link-type: doc
+      :link: destination_google_customer_match
 
    .. grid-item-card:: HupSpot
-      :link: destination_hubspot.html
+      :link-type: doc
+      :link: destination_hubspot
 
    .. grid-item-card:: Infutor
-      :link: destination_infutor.html
+      :link-type: doc
+      :link: destination_infutor
 
    .. grid-item-card:: Klaviyo
-      :link: destination_klaviyo.html
+      :link-type: doc
+      :link: destination_klaviyo
 
    .. grid-item-card:: Koupon Media
-      :link: destination_koupon_media.html
+      :link-type: doc
+      :link: destination_koupon_media
 
    .. grid-item-card:: LinkedIn DMP
-      :link: destination_linkedin_dmp.html
+      :link-type: doc
+      :link: destination_linkedin_dmp
 
    .. grid-item-card:: Listrak
-      :link: destination_listrak.html
+      :link-type: doc
+      :link: destination_listrak
 
    .. grid-item-card:: LiveRamp
-      :link: destination_liveramp.html
+      :link-type: doc
+      :link: destination_liveramp
 
    .. grid-item-card:: Mailchimp
-      :link: destination_mailchimp.html
+      :link-type: doc
+      :link: destination_mailchimp
 
    .. grid-item-card:: Meta Ads Manager
-      :link: destination_meta_ads_manager.html
+      :link-type: doc
+      :link: destination_meta_ads_manager
 
    .. grid-item-card:: Microsoft Ads
-      :link: destination_microsoft_ads.html
+      :link-type: doc
+      :link: destination_microsoft_ads
 
    .. grid-item-card:: Microsoft Dataverse
-      :link: destination_microsoft_dataverse.html
+      :link-type: doc
+      :link: destination_microsoft_dataverse
 
    .. grid-item-card:: Microsoft Dynamics
-      :link: destination_microsoft_dynamics.html
+      :link-type: doc
+      :link: destination_microsoft_dynamics
 
    .. grid-item-card:: Microsoft Power BI
-      :link: destination_power_bi.html
+      :link-type: doc
+      :link: destination_power_bi
 
    .. grid-item-card:: MoEngage
-      :link: destination_moengage.html
+      :link-type: doc
+      :link: destination_moengage
 
    .. grid-item-card:: Monetate
-      :link: destination_monetate.html
+      :link-type: doc
+      :link: destination_monetate
 
    .. grid-item-card:: Moveable Ink
-      :link: destination_moveableink.html
+      :link-type: doc
+      :link: destination_moveableink
 
    .. grid-item-card:: Neustar
-      :link: destination_neustar.html
+      :link-type: doc
+      :link: destination_neustar
 
    .. grid-item-card:: Optimizely
-      :link: destination_optimizely.html
+      :link-type: doc
+      :link: destination_optimizely
 
    .. grid-item-card:: Oracle Data Cloud
-      :link: destination_oracle_data_cloud.html
+      :link-type: doc
+      :link: destination_oracle_data_cloud
 
    .. grid-item-card:: Oracle Eloqua
-      :link: destination_oracle_eloqua.html
+      :link-type: doc
+      :link: destination_oracle_eloqua
 
    .. grid-item-card:: Oracle Responsys
-      :link: destination_oracle_responsys.html
+      :link-type: doc
+      :link: destination_oracle_responsys
 
    .. grid-item-card:: Panda Printing
-      :link: destination_panda_printing.html
+      :link-type: doc
+      :link: destination_panda_printing
 
    .. grid-item-card:: PebblePost
-      :link: destination_pebblepost.html
+      :link-type: doc
+      :link: destination_pebblepost
 
    .. grid-item-card:: Persado
-      :link: destination_persado.html
+      :link-type: doc
+      :link: destination_persado
 
    .. grid-item-card:: Pinterest
-      :link: destination_pinterest.html
+      :link-type: doc
+      :link: destination_pinterest
 
    .. grid-item-card:: PowerReviews
-      :link: destination_powerreviews.html
+      :link-type: doc
+      :link: destination_powerreviews
 
    .. grid-item-card:: Quad
-      :link: destination_quad.html
+      :link-type: doc
+      :link: destination_quad
 
    .. grid-item-card:: RR Donnelly
-      :link: destination_rr_donnelly.html
+      :link-type: doc
+      :link: destination_rr_donnelly
 
    .. grid-item-card:: Sailthru
-      :link: destination_sailthru.html
+      :link-type: doc
+      :link: destination_sailthru
 
    .. grid-item-card:: Salesforce Marketing Cloud
-      :link: destination_salesforce_marketing_cloud.html
+      :link-type: doc
+      :link: destination_salesforce_marketing_cloud
 
    .. grid-item-card:: Salesforce Marketing Cloud Personalization
-      :link: destination_salesforce_marketing_cloud_personalization.html
+      :link-type: doc
+      :link: destination_salesforce_marketing_cloud_personalization
 
    .. grid-item-card:: Salesforce Sales Cloud
-      :link: destination_salesforce_sales_cloud.html
+      :link-type: doc
+      :link: destination_salesforce_sales_cloud
 
    .. grid-item-card:: SFTP
-      :link: destination_sftp.html
+      :link-type: doc
+      :link: destination_sftp
 
    .. grid-item-card:: SMG
-      :link: destination_smg.html
+      :link-type: doc
+      :link: destination_smg
 
    .. grid-item-card:: Snapchat
-      :link: destination_snapchat.html
+      :link-type: doc
+      :link: destination_snapchat
 
    .. grid-item-card:: SoundCommerce
-      :link: destination_soundcommerce.html
+      :link-type: doc
+      :link: destination_soundcommerce
 
    .. grid-item-card:: Tableau
-      :link: destination_tableau.html
+      :link-type: doc
+      :link: destination_tableau
 
    .. grid-item-card:: The Trade Desk
-      :link: destination_the_trade_desk.html
+      :link-type: doc
+      :link: destination_the_trade_desk
 
    .. grid-item-card:: The Trade Desk 3P
-      :link: destination_the_trade_desk_3p.html
+      :link-type: doc
+      :link: destination_the_trade_desk_3p
 
    .. grid-item-card:: Throtle
-      :link: destination_throtle.html
+      :link-type: doc
+      :link: destination_throtle
 
    .. grid-item-card:: TikTok Ads
-      :link: destination_tiktok_ads.html
+      :link-type: doc
+      :link: destination_tiktok_ads
 
    .. grid-item-card:: Tulip
-      :link: destination_tulip.html
+      :link-type: doc
+      :link: destination_tulip
 
    .. grid-item-card:: Vibes
-      :link: destination_vibes.html
+      :link-type: doc
+      :link: destination_vibes
 
    .. grid-item-card:: Walmart DSP
-      :link: destination_walmart_dsp.html
+      :link-type: doc
+      :link: destination_walmart_dsp
 
    .. grid-item-card:: Webhook
-      :link: destination_webhook.html
+      :link-type: doc
+      :link: destination_webhook
 
    .. grid-item-card:: Yahoo DSP
-      :link: destination_yahoo_dsp.html
+      :link-type: doc
+      :link: destination_yahoo_dsp
 
    .. grid-item-card:: Zendesk
-      :link: destination_zendesk.html
+      :link-type: doc
+      :link: destination_zendesk
 
 .. destinations-about-grid-end
 

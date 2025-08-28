@@ -31,22 +31,28 @@ Configure your Amperity tenant for all of your use cases.
    :class-row: surface
 
    .. grid-item-card:: Choose storage
-      :link: storage.html
+      :link-type: doc
+      :link: storage
 
    .. grid-item-card:: Add customer data
-      :link: add_customer_data.html
+      :link-type: doc
+      :link: add_customer_data
 
    .. grid-item-card:: Run Stitch
-      :link: stitch.html
+      :link-type: doc
+      :link: stitch
 
    .. grid-item-card:: Review benchmarks
-      :link: benchmarks.html
+      :link-type: doc
+      :link: benchmarks
 
    .. grid-item-card:: Add transactions data
-      :link: add_transactions.html
+      :link-type: doc
+      :link: add_transactions
 
    .. grid-item-card:: Build customer profiles
-      :link: databases.html
+      :link-type: doc
+      :link: databases
 
 .. build-about-grid-end
 

@@ -31,12 +31,14 @@ A destination is a connection between Amperity and a downstream system that enab
    :class-row: surface
 
    .. grid-item-card:: About destinations
-      :link: destinations.html
+      :link-type: doc
+      :link: destinations
 
    .. grid-item-card:: Destinations list
       :link: ../destinations.html
 
    .. grid-item-card:: Orchestration groups
-      :link: orchestration_groups.html
+      :link-type: doc
+      :link: orchestration_groups
 
 .. destinations-page-grid-end

@@ -43,10 +43,12 @@ A query is SQL that runs from the **Queries** page against customer profiles. A 
    :class-row: surface
 
    .. grid-item-card:: About queries
-      :link: queries.html
+      :link-type: doc
+      :link: queries
 
    .. grid-item-card:: Presto SQL
-      :link: sql_presto.html
+      :link-type: doc
+      :link: sql_presto
 
 .. audiences-page-queries-grid-end
 
@@ -68,10 +70,12 @@ A segment defines a specific attribute profile for use with a marketing campaign
    :class-row: surface
 
    .. grid-item-card:: About segments
-      :link: segments.html
+      :link-type: doc
+      :link: segments
 
    .. grid-item-card:: Segments Editor
-      :link: segments_editor.html
+      :link-type: doc
+      :link: segments_editor
 
 .. audiences-page-segments-grid-end
 

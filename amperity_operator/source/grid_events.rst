@@ -31,19 +31,24 @@ Set up measurement of offline events like in-store purchases or venue check-ins.
    :class-row: surface
 
    .. grid-item-card:: Criteo
-      :link: events_criteo.html
+      :link-type: doc
+      :link: events_criteo
 
    .. grid-item-card:: Google Enhanced Conversions
-      :link: events_google_enhanced_conversions.html
+      :link-type: doc
+      :link: events_google_enhanced_conversions
 
    .. grid-item-card:: Meta Ads Manager
-      :link: events_meta_ads_manager.html
+      :link-type: doc
+      :link: events_meta_ads_manager
 
    .. grid-item-card:: The Trade Desk
-      :link: events_the_trade_desk.html
+      :link-type: doc
+      :link: events_the_trade_desk
 
    .. grid-item-card:: TikTok Ads
-      :link: events_tiktok_ads.html
+      :link-type: doc
+      :link: events_tiktok_ads
 
 .. events-about-grid-end
 

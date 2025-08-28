@@ -31,16 +31,20 @@ Activate audiences to any downstream marketing application or workflow using orc
    :class-row: surface
 
    .. grid-item-card:: About activations
-      :link: activations.html
+      :link-type: doc
+      :link: activations
 
    .. grid-item-card:: Campaigns
-      :link: campaigns.html
+      :link-type: doc
+      :link: campaigns
 
    .. grid-item-card:: Journeys
-      :link: journeys.html
+      :link-type: doc
+      :link: journeys
 
    .. grid-item-card:: Orchestrations
-      :link: orchestrations.html
+      :link-type: doc
+      :link: orchestrations
 
 .. activations-page-grid-end
 

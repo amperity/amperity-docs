@@ -30,13 +30,16 @@ About sandboxes
    :class-row: surface
 
    .. grid-item-card:: Create sandbox
-      :link: sandbox_create.html
+      :link-type: doc
+      :link: sandbox_create
 
    .. grid-item-card:: Open sandbox
-      :link: sandbox_open.html
+      :link-type: doc
+      :link: sandbox_open
 
    .. grid-item-card:: Promote changes
-      :link: sandbox_promote.html
+      :link-type: doc
+      :link: sandbox_promote
 
 
 .. _sandboxes-policy-allow-sandbox-administration:

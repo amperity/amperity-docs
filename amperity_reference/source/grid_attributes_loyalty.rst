@@ -31,19 +31,24 @@ Consolidate data for customers who belong to your brand's loyalty program into a
    :class-row: surface
 
    .. grid-item-card:: Balances
-      :link: attribute_loyalty_balances.html
+      :link-type: doc
+      :link: attribute_loyalty_balances
 
    .. grid-item-card:: Membership
-      :link: attribute_loyalty_membership.html
+      :link-type: doc
+      :link: attribute_loyalty_membership
 
    .. grid-item-card:: Profiles
-      :link: attribute_loyalty_profiles.html
+      :link-type: doc
+      :link: attribute_loyalty_profiles
 
    .. grid-item-card:: Spend
-      :link: attribute_loyalty_spend.html
+      :link-type: doc
+      :link: attribute_loyalty_spend
 
    .. grid-item-card:: Tiers
-      :link: attribute_loyalty_tiers.html
+      :link-type: doc
+      :link: attribute_loyalty_tiers
 
 .. grid-attributes-loyalty-grid-end
 

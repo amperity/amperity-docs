@@ -32,39 +32,40 @@ Offline events
    :class-row: surface
 
    .. grid-item-card:: Braze
-      :link: destination_braze.html#custom-attributes
-
+      :link-type: ref
+      :link: destination-braze-custom-attributes
 
    .. grid-item-card:: Criteo
-      :link: events_criteo.html
-
+      :link-type: doc
+      :link: events_criteo
 
    .. grid-item-card:: Google Ads
-      :link: events_google_enhanced_conversions.html
-
+      :link-type: doc
+      :link: events_google_enhanced_conversions
 
    .. grid-item-card:: Klaviyo
-      :link: destination_klaviyo.html#customer-profile-parameters
-
+      :link-type: ref
+      :link: destination-klaviyo-customer-profile-parameters
 
    .. grid-item-card:: Meta Ads Manager
-      :link: events_meta_ads_manager.html
-
+      :link-type: doc
+      :link: events_meta_ads_manager
 
    .. grid-item-card:: Pinterest
-      :link: events_pinterest.html
-
+      :link-type: doc
+      :link: events_pinterest
 
    .. grid-item-card:: Snapchat
-      :link: events_snapchat.html
-
+      :link-type: doc
+      :link: events_snapchat
 
    .. grid-item-card:: The Trade Desk
-      :link: events_the_trade_desk.html
-
+      :link-type: doc
+      :link: events_the_trade_desk
 
    .. grid-item-card:: TikTok Ads
-      :link: events_tiktok_ads_manager.html
+      :link-type: doc
+      :link: events_tiktok_ads_manager
 
 
 .. events-about-grid-end

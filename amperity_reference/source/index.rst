@@ -38,32 +38,38 @@ Key concepts
    :class-row: surface
 
    .. grid-item-card:: |fa-arrow-right-to-line| Sources
-      :link: sources.html
+      :link-type: doc
+      :link: sources
 
       Pull data to Amperity from any data source. APIs, cloud-based storage, sharing, SFTP.
 
    .. grid-item-card:: |fa-shuffle| Stitch
-      :link: page_stitch.html
+      :link-type: doc
+      :link: page_stitch
 
       Build highly accurate customer profiles that power your brand's marketing campaigns.
 
    .. grid-item-card:: |fa-circle-user| Customer profiles
-      :link: page_customer_profiles.html
+      :link-type: doc
+      :link: page_customer_profiles
 
       Customer profiles are the foundation for your brand's marketing activity.
 
    .. grid-item-card:: |fa-users-between-lines| Audiences
-      :link: page_audiences.html
+      :link-type: doc
+      :link: page_audiences
 
       Use segments and queries to build any type of audience.
 
    .. grid-item-card:: |fa-rotate-right| Workflows
-      :link: page_workflows.html
+      :link-type: doc
+      :link: page_workflows
 
       Monitor the current status of all workflows. View details for all steps in a workflow.
 
    .. grid-item-card:: |fa-arrow-right-from-line| Activations
-      :link: page_activations.html
+      :link-type: doc
+      :link: page_activations
 
       Activate audiences to any downstream marketing application or workflow.
 
@@ -84,133 +90,180 @@ Components
 
 
    .. grid-item-card:: |fa-id-card| Activation IDs
-      :link: activation_ids.html
+      :link-type: doc
+      :link: activation_ids
 
    .. grid-item-card:: |fa-bullseye-pointer| Activations
-      :link: activations.html
+      :link-type: doc
+      :link: activations
 
    .. grid-item-card:: |fa-sparkles| Ai Assistant
-      :link: assistant.html
+      :link-type: doc
+      :link: assistant
+
+   .. grid-item-card:: |fa-direction-left-right| Amperity Bridge
+      :link-type: doc
+      :link: bridge
 
    .. grid-item-card:: |fa-sparkles| AmpAI
-      :link: ampai.html
+      :link-type: doc
+      :link: ampai
 
    .. grid-item-card:: |fa-circle-nodes| APIs
-      :link: api.html
+      :link-type: doc
+      :link: api
 
    .. grid-item-card:: |fa-square-plus| Attribute types
-      :link: grid_attributes.html
+      :link-type: doc
+      :link: grid_attributes
 
    .. grid-item-card:: |fa-badge-check| Campaigns
-      :link: campaigns.html
+      :link-type: doc
+      :link: campaigns
 
    .. grid-item-card:: |fa-hexagon-nodes| Connected systems
-      :link: connected_systems.html
-
-   .. grid-item-card:: |fa-hexagon-check| Connection types
-      :link: grid_connections.html
+      :link-type: doc
+      :link: connected_systems
 
    .. grid-item-card:: |fa-address-card| Consumer privacy
-      :link: grid_privacy.html
+      :link-type: doc
+      :link: grid_privacy
 
    .. grid-item-card:: |fa-list-check| Courier groups
-      :link: courier_groups.html
+      :link-type: doc
+      :link: courier_groups
 
    .. grid-item-card:: |fa-line-columns| Couriers
-      :link: couriers.html
+      :link-type: doc
+      :link: couriers
 
    .. grid-item-card:: |fa-chart-line| Dashboards
-      :link: grid_dashboards.html
+      :link-type: doc
+      :link: grid_dashboards
 
    .. grid-item-card:: |fa-expand| Data Explorer
-      :link: data_explorer.html
+      :link-type: doc
+      :link: data_explorer
+
+   .. grid-item-card:: |fa-dotted-line-right| Data exports
+      :link-type: doc
+      :link: data_exports
 
    .. grid-item-card:: |fa-game-board-simple| Data lineage
-      :link: data_lineage.html
+      :link-type: doc
+      :link: data_lineage
 
    .. grid-item-card:: |fa-table-cells| Data tables
-      :link: tables.html
+      :link-type: doc
+      :link: tables
 
    .. grid-item-card:: |fa-layer-group| Databases
-      :link: databases.html
+      :link-type: doc
+      :link: databases
 
    .. grid-item-card:: |fa-arrow-right-from-line| Destinations
-      :link: page_destinations.html
+      :link-type: doc
+      :link: page_destinations
 
    .. grid-item-card:: |fa-table-cells-large| Domain tables
-      :link: domain_tables.html
+      :link-type: doc
+      :link: domain_tables
 
    .. grid-item-card:: |fa-grid| Feeds
-      :link: feeds.html
+      :link-type: doc
+      :link: feeds
 
    .. grid-item-card:: |fa-files| File formats
-      :link: grid_formats.html
+      :link-type: doc
+      :link: grid_formats
 
    .. grid-item-card:: |fa-circle-up| File uploads
-      :link: file_uploads.html
+      :link-type: doc
+      :link: file_uploads
 
    .. grid-item-card:: |fa-sitemap| Journeys
-      :link: journeys.html
+      :link-type: doc
+      :link: journeys
 
    .. grid-item-card:: |fa-send-back| Orchestration groups
-      :link: orchestration_groups.html
+      :link-type: doc
+      :link: orchestration_groups
 
    .. grid-item-card:: |fa-send-backward| Orchestrations
-      :link: orchestrations.html
+      :link-type: doc
+      :link: orchestrations
 
    .. grid-item-card:: |fa-user-shield| Policies
-      :link: policies.html
+      :link-type: doc
+      :link: policies
 
    .. grid-item-card:: |fa-calculator-simple| Predictive models
-      :link: grid_models.html
+      :link-type: doc
+      :link: grid_models
 
    .. grid-item-card:: |fa-angles-right| Presto SQL
-      :link: sql_presto.html
+      :link-type: doc
+      :link: sql_presto
 
    .. grid-item-card:: |fa-asterisk| Purchase behaviors
-      :link: grid_purchase_behaviors.html
+      :link-type: doc
+      :link: grid_purchase_behaviors
 
    .. grid-item-card:: |fa-border-outer| Queries
-      :link: queries.html
+      :link-type: doc
+      :link: queries
 
    .. grid-item-card:: |fa-bell| Recent activity
-      :link: notifications.html
+      :link-type: doc
+      :link: notifications
 
    .. grid-item-card:: |fa-object-group| Resource groups
-      :link: resource_groups.html
+      :link-type: doc
+      :link: resource_groups
 
    .. grid-item-card:: |fa-clone| Sandboxes
-      :link: sandboxes.html
+      :link-type: doc
+      :link: sandboxes
 
    .. grid-item-card:: |fa-user-group| Segments
-      :link: segments.html
+      :link-type: doc
+      :link: segments
 
    .. grid-item-card:: |fa-browser| Segment Editor
-      :link: segments_editor.html
+      :link-type: doc
+      :link: segments_editor
 
    .. grid-item-card:: |fa-tags| Semantics
-      :link: semantics.html
+      :link-type: doc
+      :link: semantics
 
    .. grid-item-card:: |fa-gears| Settings
-      :link: settings.html
+      :link-type: doc
+      :link: settings
 
    .. grid-item-card:: |fa-shield-check| Single sign-on (SSO)
-      :link: sso.html
+      :link-type: doc
+      :link: sso
 
    .. grid-item-card:: |fa-star| Spark SQL
-      :link: sql_spark.html
+      :link-type: doc
+      :link: sql_spark
 
    .. grid-item-card:: |fa-shuffle| Stitch
-      :link: stitch.html
+      :link-type: doc
+      :link: stitch
 
    .. grid-item-card:: |fa-ruler-horizontal| Stitch benchmarks
-      :link: benchmarks.html
+      :link-type: doc
+      :link: benchmarks
 
    .. grid-item-card:: |fa-square-poll-horizontal| Stitch results
-      :link: stitch_results.html
+      :link-type: doc
+      :link: stitch_results
 
    .. grid-item-card:: |fa-rotate-right| Workflows
-      :link: workflows.html
+      :link-type: doc
+      :link: workflows
 
 .. reference-components-end
 
@@ -248,13 +301,14 @@ Components
 
    Activation IDs <activation_ids>
    AI Assistants <assistant>
+   Amperity Bridge <bridge>
    AmpAI <ampai>
    APIs <api>
    Attribute types <grid_attributes>
    Connected systems <connected_systems>
-   Connection types <grid_connections>
    Consumer privacy <grid_privacy>
    Dashboards <grid_dashboards>
+   Data exports <data_exports>
    Destinations <page_destinations>
    File formats <grid_formats>
    Presto SQL <sql_presto>
