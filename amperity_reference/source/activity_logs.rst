@@ -35,6 +35,8 @@ Amperity maintains records of user activity that occured in your tenant. For exa
 
 All activity may be :ref:`downloaded <settings-user-activity-logs-download>` to a CSV file and individual event, user, and object IDs may be copied.
 
+.. important:: Activity logs are retained for audit and compliance purposes and cannot be deleted.
+
 .. note:: The **Users** section of the **Users and Activity** page requires the user to be assigned the **Allow user administration** policy option.
 
 .. settings-user-activity-logs-end
