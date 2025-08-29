@@ -127,7 +127,7 @@ The following table describes the parameters that may be used with the **POST /w
 
        .. important:: A value for **range_from** must be specified for any courier group that is configured to pull files from cloud storage: SFTP, Amazon S3, Azure Blob Storage, or Google Cloud Storage.
 
-       A timestamp that defines the start--inclusive--of the time window for which couriers in the workflow should pull data. See the **range_to** request parameter.
+       A timestamp that defines the start (inclusive) of the time window for which couriers in the workflow should pull data. See the **range_to** request parameter.
 
        A timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
 
@@ -141,7 +141,7 @@ The following table describes the parameters that may be used with the **POST /w
 
        .. important:: A value for **range_from** must be specified when **range_to** is included in the request.
 
-       A timestamp that defines the end--exclusive--of the time window for which couriers in the workflow should pull data. See the **range_from** request parameter.
+       A timestamp that defines the end (exclusive) of the time window for which couriers in the workflow should pull data. See the **range_from** request parameter.
 
        A timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
 

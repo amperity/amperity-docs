@@ -124,7 +124,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_end**
      - String. Optional.
 
-       The end date--exclusive--that defines the end of the time range for which audit events will be returned. For example: "2024-03-01T11:11:11Z".
+       The end date (exclusive) that defines the end of the time range for which audit events will be returned. For example: "2024-03-01T11:11:11Z".
 
        The values for the end date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -132,7 +132,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_start**
      - String. Optional.
 
-       The start date--inclusive--that defines the beginning of the time range for which audit events will be returned. For example: "2024-04-01T11:11:11Z".
+       The start date (inclusive) that defines the beginning of the time range for which audit events will be returned. For example: "2024-04-01T11:11:11Z".
 
        The start date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
