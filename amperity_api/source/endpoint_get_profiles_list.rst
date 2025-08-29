@@ -89,7 +89,7 @@ A request to the **GET /indexes/{id}/profiles** endpoint is similar to:
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-profiles-list-request-end
 
@@ -196,7 +196,7 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
    .. tab-item:: Python
 

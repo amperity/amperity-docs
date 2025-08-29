@@ -47,7 +47,7 @@ Choose storage location
 The location in which Amperity stores outputs is configurable. The first step for a new tenant allows your brand to choose one of the following storage locations:
 
 * An Amazon S3 storage location that is owned and managed by your brand
-* An Amazon S3 storage location that is only used by your tenant that is provisioned automatically by Amperity (default)
+* An Amazon S3 storage location that is only used by your tenant that is provisioned automatically by default
 
 .. storage-configure-location-end
 
@@ -161,7 +161,7 @@ To configure Amperity to use an Amazon S3 storage location that is owned and man
 
              It is recommended to keep the pre-populated stack name.
 
-          .. important:: You must allow **AWS CloudFormation** to create IAM resources. Select the checkbox under "The following resource(s) require capabilities [AWS::IAM::Role]".
+          .. important:: You must allow **AWS CloudFormation** to create IAM resources. Select the checkbox under "The following resources require capabilities [AWS::IAM::Role]".
 
        #. When finished, click **Create stack**.
 

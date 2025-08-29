@@ -35,13 +35,13 @@ When to use
 
 .. stitch-qa-query-unmatched-semantic-values-use-start
 
-#. Run this query to discover pairs of records that contain matching semantic values, but with different assigned Amperity IDs. For example: the same email address, but two different Amperity IDs. This query helps verify that Stitch correctly split records, and then also helps to discover underclustering.  
-#. Run with email as the semantic value (typically ~10 minutes).
-#. Run with phone as the semantic value (typically ~10 minutes).
-#. Run with address as the semantic value (typically ~10 minutes).
+#. Run this query to discover pairs of records that contain matching semantic values, but with different assigned Amperity IDs. For example: the same email address, but two different Amperity IDs. This query helps verify that Stitch correctly split records, and then also helps to discover underclustering.
+#. Run with email as the semantic value.
+#. Run with phone as the semantic value.
+#. Run with address as the semantic value.
 #. If other individual semantic values are useful for your tenant, run with those semantic values.
-#. Run for each semantic value with various **JOIN** conditions, such as given names matching or given names plus surnames matching (typically ~15 minutes).
-#. Run for each semantic with varying semantic frequency limit values (typically ~15-30 minutes).
+#. Run for each semantic value with various **JOIN** conditions, such as given names matching or given names plus surnames matching.
+#. Run for each semantic with varying semantic frequency limit values.
 #. Look for examples of underclustering.
 #. Look for values that should be added to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 #. Look for examples of records that were missed during blocking.
@@ -204,7 +204,7 @@ Configure query
       -- AND t1.blv_phone IS NULL
       -- AND t1.blv_address IS NULL
 
-   Uncomment the appropriate row (or rows) for this query's use case.
+   Uncomment the appropriate row or rows for this query's use case.
 
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.

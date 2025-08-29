@@ -31,7 +31,7 @@ Transaction Attributes Extended table
 
    #. :doc:`Unified Itemized Transactions <table_unified_itemized_transactions>`
    #. :doc:`Unified Transactions <table_unified_transactions>`
-   #. Transaction Attributes Extended (this topic)
+   #. Transaction Attributes Extended
 
    The :doc:`Unified Product Catalog <table_unified_product_catalog>` table is optional and may be configured for use with building queries, database tables, and other non-audience workflows. Your brand's product catalog must be integrated into the **Unified Itemized Transactions** table before you can use product catalog attributes to build audiences, segments, and campaigns.
 
@@ -316,7 +316,7 @@ Column reference
 
 .. transaction-attributes-extended-start
 
-Extended transaction attributes are presented as a single table (with many columns), including an Amperity ID, and fit into the following categories:
+Extended transaction attributes are presented as a single table with many columns, including an Amperity ID, and fit into the following categories:
 
 * :ref:`Customer flags <table-transaction-attributes-extended-reference-customer-flags>`
 * :ref:`Customer orders <table-transaction-attributes-extended-reference-customer-orders>`

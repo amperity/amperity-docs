@@ -35,7 +35,7 @@ Merged Customers table
 
 .. table-merged-customers-start
 
-This topic describes the starting point for the **Merged Customers** table, and then steps through the process of updating it to be specific to your tenant. (This topic does not attempt to address all of the specific use cases you may have for your tenant.)
+This topic describes the starting point for the **Merged Customers** table, and then steps through the process of updating it to be specific to your tenant. This topic does not attempt to address all of the specific use cases you may have for your tenant.
 
 Common ways of extending this table to support additional use cases are described, along with providing links to more detailed examples, when available. Start with the SQL that is added to your tenant by the "Customer 360" database template, and then add support for all of your required use cases.
 
@@ -93,12 +93,12 @@ Add table
 #. Name the table "Merged_Customers".
 #. Set the build mode to **SQL**.
 #. Click **Apply template**, and then select **Merged Customers**.
-#. Update the placeholder names (shown as "Domain:Table" in the query) and set field-level priorities.
+#. Update the placeholder names--shown as "Domain:Table" in the query--and set field-level priorities.
 #. Click **Validate** to verify the SQL runs without error.
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
 #. Verify that the **db/required** and **db/unique** database field semantics were applied to the **amperity_id** column.
-#. Verify that semantic tags---**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.---were applied to all PII fields correctly.
+#. Verify that semantic tags--**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.--were applied to all PII fields correctly.
 
    .. tip:: You can clear incorrectly tagged semantics individually or for the entire table. To clear semantic tags for the entire table, under **Semantic Suggestions** click **Clear semantics**.
 #. From the **Table Semantics** dropdown, select **Merged Customers**.
@@ -117,10 +117,10 @@ SQL query
 
 The following SQL query is the recommended starting point for the **Merged Customers** table. It exists in two parts: a window function that collects and groups PII data, and then a statement that updates the **Merged Customers** table with the results. This query does the following:
 
-#. Provides a location in which domain tables (i.e. "feeds that are made available to Stitch") are assigned priority. (This section must be updated to contain the names of the domain tables for your tenant that should be assigned a non-default priority.)
-#. Provides a location in which PII fields are assigned priority. (This section must be updated to contain the names of the domain tables that are assigned source priority, and then be updated to assign priorities to logical groups of fields that contain PII data, e.g. email addresses, physical addresses, and so on.)
+#. Provides a location in which domain tables are assigned priority. This section must be updated to contain the names of the domain tables for your tenant that should be assigned a non-default priority.
+#. Provides a location in which PII fields are assigned priority. This section must be updated to contain the names of the domain tables that are assigned source priority, and then be updated to assign priorities to logical groups of fields that contain PII data, such as email addresses and physical addresses.
 #. Left joins the fields in the **Unified Coalesced** table into a temporary table for prioritization.
-#. Left joins the fields in the **Unified Coalesced** table to form groupings of PII fields. For example, all address-related fields (**address**, **address2**, **city**, **state**, **postal**, and **country**) are grouped together. This is done for names, addresses, phone numbers, email addresses, birthdates, and gender.
+#. Left joins the fields in the **Unified Coalesced** table to form groupings of PII fields. For example, all address-related fields--**address**, **address2**, **city**, **state**, **postal**, and **country**--are grouped together. This is done for names, addresses, phone numbers, email addresses, birthdates, and gender.
 #. Left joins the fields in the **Unified Coalesced** table by logical groups *and* by assigned priority.
 #. Adds a set of fields to the temporary table for each of the logical groups, which are then added to the **Merged Customers** table.
 #. Refreshes the data in the **Merged Customers** table.
@@ -724,7 +724,7 @@ Assign field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority ("999"), and requires these data sources to be assigned different priorities.
+Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 
@@ -803,7 +803,7 @@ Skip field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Field priority is only necessary when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority ("999"), and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
+Field priority is only necessary when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 

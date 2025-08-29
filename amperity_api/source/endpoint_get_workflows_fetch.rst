@@ -81,7 +81,7 @@ A request to the **GET /workflow/runs/{id}** endpoint is similar to:
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-workflows-fetch-request-end
 
@@ -160,7 +160,7 @@ The following examples show how to send requests to the **GET /workflow/runs/{id
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-workflows-fetch-request-examples-tabs-end
 
@@ -349,14 +349,14 @@ A **200 OK** response contains the following parameters.
        **created_at**
           The date and time at which a workflow task started.
 
-          .. note:: This is the same value as the **Started** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Started** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
              **Duration**, as shown in the **Task Details** dialog, is the amount of time that occurred between **created_at** and **ended_at**.
 
        **ended_at**
           The date and time at which a workflow task ended.
 
-          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
              **Duration**, as shown in the **Task Details** dialog, is the amount of time that occurred between **created_at** and **ended_at**.
 
@@ -385,7 +385,7 @@ A **200 OK** response contains the following parameters.
        **id**
           The unique identifier for the task instance.
 
-          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **label**
           The name of the task instance. Examples of task instance labels include:
@@ -406,14 +406,14 @@ A **200 OK** response contains the following parameters.
           * Updating domain tables
           * Updating [table-name]
 
-          where the brackets [] are placeholders for named objects withn your tenant.
+          where the brackets ``[]`` are placeholders for named objects withn your tenant.
 
        .. note:: This is the same value that is visible from the **Task** column on each individual workflow page.
 
        **run_id**
           A unique identifier provided to the task instance to support situations where execution engines cannot provide a run ID. The value for this property is similar to: "abc-20240210-12345-6AbCDE".
 
-          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **state**
           The current state of the task. For example:
@@ -443,18 +443,18 @@ A **200 OK** response contains the following parameters.
        **task_definition_type**
           The task definition type. The possible values for this property are the similar to the **type** property for the workflow. For example, "bridge.sync" or "campaign.append-results".
 
-          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **task_instance_id**
           The unique identifier for the task instance.
 
-          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **tenant**
           The unique identifier for the tenant.
 
        **timeout_ms**
-          The length of time (in milliseconds) after which a running task instance will be forced to stop.
+          The length of time in milliseconds after which a running task instance will be forced to stop.
 
        **workflow_id**
           The unique identifier for the workflow to which this task belongs.
@@ -494,7 +494,7 @@ A **200 OK** response contains the following parameters.
 
 
    * - **warn_after_ms**
-     - The length of time (in milliseconds) after which a warning is sent that notifies users that a workflow is running longer than expected.
+     - The length of time in milliseconds after which a warning is sent that notifies users that a workflow is running longer than expected.
 
        .. note:: This parameter only applies to workflows that use SQL to write tables to storage.
 
@@ -502,6 +502,6 @@ A **200 OK** response contains the following parameters.
    * - **workflow_id**
      - The unique identifier for the workflow.
 
-       .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+       .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
 .. endpoint-get-workflows-fetch-response-parameters-end

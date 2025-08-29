@@ -45,7 +45,7 @@ For example:
    :align: left
    :class: no-scaled-link
 
-You may use other attributes in the **All Opted-In Emails** table (if they are available) to apply additional filters to the sub-audience.
+You may use other attributes in the **All Opted-In Emails** table, if they are available, to apply additional filters to the sub-audience.
 
 .. table-all-opted-in-emails-use-in-campaigns-end
 

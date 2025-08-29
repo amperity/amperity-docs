@@ -205,7 +205,7 @@ The following table lists the tags available to this semantic group (with requir
           :end-before: .. email-events-region-end
    * - **signup_to_purchase_days**
      - Integer
-     - The amount of time (in days) between using this email to sign up and the next transaction associated with this Amperity ID. This field is NULL if there has not been a transaction.
+     - The amount of time in days between using this email to sign up and the next transaction associated with this Amperity ID. This field is NULL if there has not been a transaction.
 
        .. important:: This semantic tag requires the **Transaction Attributes Extended** and **Unified Transactions** tables to be joined to the **Email Engagement Attributes** table.
 

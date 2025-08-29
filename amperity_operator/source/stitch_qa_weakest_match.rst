@@ -40,7 +40,7 @@ When to use
 
 #. Run this query periodically.
 #. Review the results of this query.
-#. Look for lowest scoring record pairs, and then investigate them (typically ~30 minutes).
+#. Look for lowest scoring record pairs, and then investigate them.
 
 .. stitch-qa-query-weakest-match-use-end
 
