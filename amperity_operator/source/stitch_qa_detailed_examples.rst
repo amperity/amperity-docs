@@ -53,7 +53,7 @@ Configure query
 
 #. Update the list of matched records to reflect those used for your tenant. The list of matched records is an A/B pair of semantic fields. The default template includes **given-name**, **surname**, **email**, **phone**, **address**, **birthdate**, **city**, **state**, and **postal**. 
 
-   Add matched records for one (or more) of the **full-name**, **generational-suffix**, **gender**, **address2**, **company**, and **title** semantic fields. For example:
+   Add matched records for one or more of the **full-name**, **generational-suffix**, **gender**, **address2**, **company**, and **title** semantic fields. For example:
 
    .. code-block:: sql
       :linenos:

@@ -137,7 +137,7 @@ Net order revenue
 #. Required. :ref:`Add Net Order Revenue to the Unified Transactions table <table-unified-transactions-extend-attributes-net-order-revenue>`.
 #. Open the **Transaction Attributes Extended** table in the SQL editor.
 #. Find the section named "attrs", which contains a series of commented-out extended attributes for net order revenue.
-#. Uncomment one (or more) of the following extended attributes:
+#. Uncomment one or more of the following extended attributes:
 
    .. code-block:: sql
       :linenos:
@@ -186,7 +186,7 @@ Order costs
 #. Required. :ref:`Add Order Cost to the Unified Transactions table <table-unified-transactions-extend-attributes-order-costs>`.
 #. Open the **Transaction Attributes Extended** table in the SQL editor.
 #. Find the section named "attrs", which contains a series of commented-out extended attributes for order costs.
-#. Uncomment one (or more) of the following extended attributes:
+#. Uncomment one or more of the following extended attributes:
 
    .. code-block:: sql
       :linenos:

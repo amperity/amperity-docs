@@ -946,7 +946,7 @@ The following query shows how to return results for product replenishment use ca
 
    The **product_group** field represents a category of products within your product catalog. Update this field to match the field in your product catalog that defines product categories.
 
-   Use the "AND product_group <> '<group>'" line to specify one (or more) groups. Add a line for each group. Remove the line when product categories should not returned for your product replenishment use case.
+   Use the "AND product_group <> '<group>'" line to specify one or more groups. Add a line for each group. Remove the line when product categories should not returned for your product replenishment use case.
 
    Explore the query results and tune the query parameters to align to your brand's product catalog and replenishment use case.
 
@@ -1013,7 +1013,7 @@ The following query shows how to return results for product replenishment use ca
 
    The **product_group** field represents a category of products within your product catalog. Update this field to match the field in your product catalog that defines product categories.
 
-   Use the "AND product_group <> '<group>'" line to specify one (or more) groups. Add a line for each group. Remove the line when product categories should not returned for your product replenishment use case.
+   Use the "AND product_group <> '<group>'" line to specify one or more groups. Add a line for each group. Remove the line when product categories should not returned for your product replenishment use case.
 
    Explore the query results and tune the query parameters to align to your brand's product catalog and replenishment use case.
 

@@ -172,7 +172,7 @@ Audiences
 
 .. image:: ../../images/mockup-campaigns-select-audience-from-segment.png
    :width: 650 px
-   :alt: Choose one (or more) segments to form the audience for this campaign.
+   :alt: Choose one or more segments to form the audience for this campaign.
    :align: left
    :class: no-scaled-link
 
@@ -252,7 +252,7 @@ Exclusion lists
 
 .. image:: ../../images/mockup-campaigns-select-exclusions-from-segment.png
    :width: 650 px
-   :alt: Choose one (or more) segments to exclude customers from this campaign.
+   :alt: Choose one or more segments to exclude customers from this campaign.
    :align: left
    :class: no-scaled-link
 

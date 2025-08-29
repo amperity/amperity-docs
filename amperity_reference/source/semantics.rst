@@ -1716,7 +1716,7 @@ Profile (PII)
 
 .. semantics-profile-start
 
-Profile semantics should be applied to customer records that contain three (or more) good sources of PII data. Profile semantics should be applied to interaction records only when customer records are stored alongside transaction details *and* when there are three (or more) good sources of PII data.
+Profile semantics should be applied to customer records that contain three or more good sources of PII data. Profile semantics should be applied to interaction records only when customer records are stored alongside transaction details *and* when there are three or more good sources of PII data.
 
 .. semantics-profile-end
 

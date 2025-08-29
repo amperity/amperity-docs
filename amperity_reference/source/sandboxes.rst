@@ -622,7 +622,7 @@ Most of the time you should receive a validation report that does not contain a 
    :align: left
    :class: no-scaled-link
 
-Occasionally, you will receive a validation report that shows one (or more) validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
+Occasionally, you will receive a validation report that shows one or more validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
 
 .. image:: ../../images/mockups-sandbox-access-validations-errors.png
    :width: 450 px
@@ -711,6 +711,6 @@ Click this link to open the **Promote changes** page, from which each validation
 
 #. In a sandbox, click **View errors**. This opens the **Promote changes** page.
 #. From the list of validation errors, select the |fa-kebab| icon, and then choose **View details**.
-#. The **Sandbox resolutions** dialog box opens. This dialog describes the cause of the validation issue, and then (if available) provides one (or more) steps you can use to resolve the validation issue.
+#. The **Sandbox resolutions** dialog box opens. This dialog describes the cause of the validation issue, and then (if available) provides one or more steps you can use to resolve the validation issue.
 
 .. sandboxes-howto-view-validation-details-steps-end

@@ -141,7 +141,7 @@ Stitch runs on a daily basis after all of your brand's data sources have provide
           :class: no-scaled-link
      - **Make domain tables available to Stitch**
 
-       All domain tables in which customer profile semantic tags were applied to one (or more) fields should be made available to Stitch.
+       All domain tables in which customer profile semantic tags were applied to one or more fields should be made available to Stitch.
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px

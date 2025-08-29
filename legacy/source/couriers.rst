@@ -145,7 +145,7 @@ Wildcards
 
 .. couriers-files-patterns-wildcards-start
 
-A wildcard can match zero (or more) characters up until a forward-slash character.
+A wildcard can match zero or more characters up until a forward-slash character.
 
 .. note:: When a file pattern with a wildcard matches more than one file for a given date or date range, the matched files are loaded in such a way that guarantees per-day ordering. If your courier uses an ingest query, ascending lexicographical ordering by file is not guaranteed or preserved within a single day's files.
 
@@ -194,7 +194,7 @@ Wildcards within archives
 
 .. couriers-files-patterns-wildcards-within-archives-start
 
-A wildcard can be used to match one (or more) files in an archive.
+A wildcard can be used to match one or more files in an archive.
 
 The following example shows how to use a wildcard to match a set of CSV files contained within the same archive:
 

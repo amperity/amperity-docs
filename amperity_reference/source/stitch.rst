@@ -909,7 +909,7 @@ Hierarchical comparison
 
 .. stitch-hierarchical-comparison-start
 
-A hierarchical comparison that identifies enough conflicting data will allow Amperity to assert that a group of records should be split into two (or more) groups of records.
+A hierarchical comparison that identifies enough conflicting data will allow Amperity to assert that a group of records should be split into two or more groups of records.
 
 .. stitch-hierarchical-comparison-end
 

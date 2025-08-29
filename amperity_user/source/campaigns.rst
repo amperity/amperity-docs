@@ -89,7 +89,7 @@ The following sections describe the steps you'll follow to set up and configure 
 
        .. image:: ../../images/mockup-campaigns-select-audience-from-segment.png
           :width: 650 px
-          :alt: Choose one (or more) segments to form the audience for this campaign.
+          :alt: Choose one or more segments to form the audience for this campaign.
           :align: left
           :class: no-scaled-link
 
@@ -103,11 +103,11 @@ The following sections describe the steps you'll follow to set up and configure 
           :class: no-scaled-link
      - Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
 
-       When you need to exclude audience members, choose one (or more) segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
+       When you need to exclude audience members, choose one or more segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
        .. image:: ../../images/mockup-campaigns-select-exclusions-from-segment.png
           :width: 650 px
-          :alt: Choose one (or more) segments to exclude customers from this campaign.
+          :alt: Choose one or more segments to exclude customers from this campaign.
           :align: left
           :class: no-scaled-link
 
@@ -139,7 +139,7 @@ The following sections describe the steps you'll follow to set up and configure 
           :align: left
           :class: no-scaled-link
 
-       Assign one (or more) destinations to this treatment group, and then edit the attributes to ensure Amperity is sending the right data.
+       Assign one or more destinations to this treatment group, and then edit the attributes to ensure Amperity is sending the right data.
 
        .. tip:: Use good naming patterns to ensure that you can always find your campaigns in the various applications to which you will send them. The campaign name will *always* appear in the filename that is sent to any destination and the treatment group name is often appended. Use a naming pattern that allows the treatment group name to build on the campaign name.
 

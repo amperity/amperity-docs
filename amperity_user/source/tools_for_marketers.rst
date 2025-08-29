@@ -152,7 +152,7 @@ The numbers in the previous diagram represent a scenario that builds an audience
 
 #. Open Amperity and review segments and segment insights.
 #. Open the visual segment editor and build a high-value audience that meets the goals for an upcoming marketing campaign.
-#. Add the audience to a campaign, and then define combinations of control groups, treatment groups, subaudiences, and exclusion lists. Associate each treatment group to one (or more) marketing channels.
+#. Add the audience to a campaign, and then define combinations of control groups, treatment groups, subaudiences, and exclusion lists. Associate each treatment group to one or more marketing channels.
 #. Schedule the campaign, and then send a segment of your audience to each defined marketing channel. 
 
 .. tools-for-marketers-example-workflow-end

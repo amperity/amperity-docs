@@ -54,7 +54,7 @@ Use Amperity to manage audience lists in |destination-name|. Build a query using
 
    If you don't want to wait to load customer profiles, you may instead use the `SFTP import tool <https://developers.klaviyo.com/en/docs/use_klaviyos_sftp_import_tool>`__ |ext_link| process. This approach is efficient and quick. It uses the :doc:`built-in SFTP connector in Amperity <destination_sftp>` and is capable of importing large sets of customer profiles.
 
-   The CSV file that is imported to |destination-name| has specific requirements on formatting and must include one (or more) of the following fields: "Email", "PhoneNumber", and/or "ExternalID". When these fields are present in the CSV file they must have those exact names.
+   The CSV file that is imported to |destination-name| has specific requirements on formatting and must include one or more of the following fields: "Email", "PhoneNumber", and/or "ExternalID". When these fields are present in the CSV file they must have those exact names.
 
 .. campaign-klaviyo-csv-note-end
 

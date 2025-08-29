@@ -209,7 +209,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-     - Add one (or more) couriers to the courier group.
+     - Add one or more couriers to the courier group.
 
        For each courier in the courier group, select a courier, configure the wait time and offset, and then enable alerts.
 
@@ -717,7 +717,7 @@ Alert when data is missing?
 
 .. courier-groups-howto-add-courier-alert-start
 
-A courier group can be configured to send workflow alerts when one (or more) files are missing, and then continue processing if files are missing.
+A courier group can be configured to send workflow alerts when one or more files are missing, and then continue processing if files are missing.
 
 .. courier-groups-howto-add-courier-alert-end
 
@@ -749,7 +749,7 @@ Stop when data is missing?
 
 .. courier-groups-howto-add-courier-stop-start
 
-A courier group can be configured to send workflow alerts when one (or more) files are missing, and then stop processing if files are missing.
+A courier group can be configured to send workflow alerts when one or more files are missing, and then stop processing if files are missing.
 
 .. courier-groups-howto-add-courier-stop-end
 

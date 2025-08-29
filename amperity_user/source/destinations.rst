@@ -4,11 +4,11 @@
 
 .. meta::
     :description lang=en:
-        Choose one (or more) destinations to use with your campaigns.
+        Choose one or more destinations to use with your campaigns.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Choose one (or more) destinations to use with your campaigns.
+        Choose one or more destinations to use with your campaigns.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

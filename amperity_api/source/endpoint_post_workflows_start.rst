@@ -349,7 +349,7 @@ A **200 OK** response contains the following parameters.
      - The state of the workflow.
 
    * - **task_instances**
-     - A JSON array that contains zero (or more) sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
+     - A JSON array that contains zero or more sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
 
        **started_at**
           The date and time at which a workflow task started.

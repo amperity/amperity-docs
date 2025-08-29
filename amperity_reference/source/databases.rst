@@ -878,7 +878,7 @@ Add empty database
 
 Add an empty database for use cases that do not require customer 360 profiles or Stitch QA validation activities. Start with an empty database, and then add tables.
 
-For example, after creating the empty database use the passthrough functionality to add one (or more) domain tables, and then use Spark SQL to build custom database tables against a subset of standard core tables and/or stitched domain tables to build a series of tables that support a series of non-marketing use cases.
+For example, after creating the empty database use the passthrough functionality to add one or more domain tables, and then use Spark SQL to build custom database tables against a subset of standard core tables and/or stitched domain tables to build a series of tables that support a series of non-marketing use cases.
 
 .. databases-database-howto-add-database-empty-end
 
@@ -987,7 +987,7 @@ Some use cases require a database table to have different information in a datab
 
    .. important:: The table name must be the same as the original standard database table.
 #. Set **Build Mode** to "Custom SQL".
-#. Add SQL using Spark SQL, a **SELECT** statement that references one (or more) standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
+#. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 
    .. important:: The custom definition must refer to the original table, i.e. “must refer to the table that is being overridden”. In some cases, this requires using a placeholder reference. For example:
 
@@ -1071,7 +1071,7 @@ Add custom SQL table
 
       Templates are provided for all standard tables (**Customer 360**, **Merged Customers**, **Transaction Attributes Extended**, **Unified Transactions**, and **Customer Attributes**) along with additional templates for use with multibrand databases and and tables that support use cases like joining transaction attributes to the **Customer 360** table, merged households, and customer lifecycle events.
 
-#. Add SQL using Spark SQL, a **SELECT** statement that references one (or more) standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
+#. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 #. Click **Validate** to verify that the SQL query runs correctly and returns the desired results. Adjust the query as necessary. When finished, click **Next**.
 #. Verify the configuration settings for the table, including semantic tags, field descriptions, and availablility to the **Segment Editor**.
 #. Click **Save** to add the table to the database.
@@ -2006,7 +2006,7 @@ Export database
 
 .. databases-database-howto-export-database-start
 
-A database may be configured to :ref:`export one (or more) tables (or even the entire database) <data-exports-add>` from Amperity. Each database export must be assigned a unique name, and then is :ref:`configured to select one (or more) tables <data-exports-add-tables>` to be included in the export. A database export must be :ref:`associated with a configured destination and must be added to an orchestration <data-exports-add-to-orchestration>`.
+A database may be configured to :ref:`export one or more tables (or even the entire database) <data-exports-add>` from Amperity. Each database export must be assigned a unique name, and then is :ref:`configured to select one or more tables <data-exports-add-tables>` to be included in the export. A database export must be :ref:`associated with a configured destination and must be added to an orchestration <data-exports-add-to-orchestration>`.
 
 .. databases-database-howto-export-database-end
 
@@ -2127,7 +2127,7 @@ An express refresh will only update database tables and custom domain tables wit
 #. Open the menu for the database you want to run.
 #. Select **Run**. The **Run <Database>** dialog box opens.
 #. Under **Run Options**, select **Express**.
-#. Under **Databases to Run**, select one (or more) databases to be run.
+#. Under **Databases to Run**, select one or more databases to be run.
 #. Click **Run**.
 
 .. databases-database-howto-run-express-steps-end
@@ -2154,7 +2154,7 @@ A full refresh will update all tables, including custom domain tables. This is t
 #. Open the menu for the database you want to run.
 #. Select **Run**. The **Run <Database>** dialog box opens.
 #. Under **Run Options**, select **Full Refresh**.
-#. Under **Databases to Run**, select one (or more) databases to be run.
+#. Under **Databases to Run**, select one or more databases to be run.
 #. Click **Run**.
 
 .. databases-database-howto-run-full-steps-end
@@ -2183,7 +2183,7 @@ Time-dependent clauses include any query that uses the :ref:`CURRENT_DATE() <sql
 #. Open the menu for the database you want to run.
 #. Select **Run**. The **Run <Database>** dialog box opens.
 #. Under **Run Options**, select **Normal**.
-#. Under **Databases to Run**, select one (or more) databases to be run.
+#. Under **Databases to Run**, select one or more databases to be run.
 #. Click **Run**.
 
 .. databases-database-howto-run-normal-steps-end

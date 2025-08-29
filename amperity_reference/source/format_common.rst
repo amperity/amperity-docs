@@ -440,7 +440,7 @@ Amperity supports the following compression and archiving formats:
 * Zip
 * GZip
 
-When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder will contain one (or more) files, each of which have generated names.
+When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder will contain one or more files, each of which have generated names.
 
 .. tip:: Compression and archive file extensions are not added to the filename template automatically. These may be added while configuring an orchestration. To add the file compression format to the output filename, append .tar, .tgz, .zip, or .gz after the file format extension in the filename template. For example: parquet.tar, csv.zip, or tsv.gz.
 

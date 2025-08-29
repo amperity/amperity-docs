@@ -88,7 +88,7 @@ When using TSV files, it is recommend to:
 
 * Use column headers (with no special characters except underscores)
 * Ensure duplicate header names are not present
-* Ensure one (or more) fields are present that can act as a unique identifier
+* Ensure one or more fields are present that can act as a unique identifier
 * Use a comma as the delimiter for fields; use a newline character as the delimiter for rows
 * Escape commas or quotes that appear in the data
 * Quote string values

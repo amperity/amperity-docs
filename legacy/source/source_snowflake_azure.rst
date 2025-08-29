@@ -397,7 +397,7 @@ Pull columns using Snowflake query syxtax
 
 .. source-snowflake-azure-add-courier-query-start
 
-You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query that runs against one (or more) Snowflake tables.
+You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query that runs against one or more Snowflake tables.
 
 .. important:: A Snowflake query name must be unique. The name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
 
@@ -413,7 +413,7 @@ You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the username and password. This should be the Amperity username and password created in Snowflake for the :ref:`user security object <source-snowflake-azure-configure-storage-integration>`.
 #. Add the credentials for the role with permission to access the Azure Blob Storage bucket used for :ref:`Snowflake stages <source-snowflake-azure-configure-storage-integration>`.
-#. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`one (or more) Snowflake tables against which a query that uses Snowflake query syntax will be run <source-snowflake-azure-configure-tables>` to be sent to Amperity:
+#. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`one or more Snowflake tables against which a query that uses Snowflake query syntax will be run <source-snowflake-azure-configure-tables>` to be sent to Amperity:
 
    ::
 

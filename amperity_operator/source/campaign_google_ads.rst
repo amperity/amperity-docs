@@ -539,7 +539,7 @@ Missing required field(s)
 
 .. campaign-google-ads-workflow-actions-missing-required-field-start
 
-One (or more) required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <campaign-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
+One or more required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <campaign-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
 
 .. campaign-google-ads-workflow-actions-missing-required-field-end
 

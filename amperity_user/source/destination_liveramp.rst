@@ -85,7 +85,7 @@ The correct approach here depends on the data and the desired use case (or cases
 .. important:: Uploads to |destination-name| may fail when:
 
    * The headers in the output file do not match the headers in |destination-name|.
-   * Two (or more) headers in the output file are identical.
+   * Two or more headers in the output file are identical.
    * The audience key in the output file does not match the audience key in LiveRamp.
    * The audience key is missing.
    * Mismatched identifiers. For example, if |destination-name| expects first and last names to be in the same field, but the output contains first and last names in separate fields.

@@ -42,7 +42,7 @@ About Slack
 You can configure Amperity to send workflow alerts to channels in your brand's Slack workspace. This configuration requires the following steps:
 
 #. :ref:`Authorize your Slack workspace <workflows-howto-slack-authorize>`
-#. :ref:`Configure one (or more) Slack channels for workflow alerts <workflows-howto-slack-channels>`
+#. :ref:`Configure one or more Slack channels for workflow alerts <workflows-howto-slack-channels>`
 
 .. workflows-howto-slack-end
 

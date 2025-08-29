@@ -119,7 +119,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
           This segment does not require a phone number because this segment should define an audience for a campaign, and is then assigned to a treatment group.
 
-          Each treatment group is configured to send data to one (or more) destinations. Each destination is configured to send a set of attributes downstream from Amperity.
+          Each treatment group is configured to send data to one or more destinations. Each destination is configured to send a set of attributes downstream from Amperity.
 
           For example: Attentive is a destination to which you can send lists of phone numbers for use with SMS campaigns. Edit the attributes that are sent to Attentive to include only the **phone** attribute, which will send the list of phone numbers that are associated with the customers in your segment.
 

@@ -115,7 +115,7 @@ The following table describes the parameters that may be used with the **GET /wo
    * - **created_from**
      - Datetime. Optional.
 
-       A timestamp that defines the start (inclusive) of the time window in which one (or more) workflows started to run. See the **created_to** request parameter.
+       A timestamp that defines the start (inclusive) of the time window in which one or more workflows started to run. See the **created_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
@@ -125,7 +125,7 @@ The following table describes the parameters that may be used with the **GET /wo
    * - **created_to**
      - Datetime. Optional.
 
-       A timestamp that defines the end (exclusive) of the time window in which one (or more) workflows started to run. See the **created_from** request parameter.
+       A timestamp that defines the end (exclusive) of the time window in which one or more workflows started to run. See the **created_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
@@ -135,7 +135,7 @@ The following table describes the parameters that may be used with the **GET /wo
    * - **ended_from**
      - Datetime. Optional.
 
-       A timestamp that defines the start (inclusive) of the time window in which one (or more) workflows stopped running. See the **ended_to** request parameter.
+       A timestamp that defines the start (inclusive) of the time window in which one or more workflows stopped running. See the **ended_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
@@ -145,7 +145,7 @@ The following table describes the parameters that may be used with the **GET /wo
    * - **ended_to**
      - Datetime. Optional.
 
-       A timestamp that defines the end (exclusive) of the time window in which one (or more) workflows stopped running. See the **ended_from** request parameter.
+       A timestamp that defines the end (exclusive) of the time window in which one or more workflows stopped running. See the **ended_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
@@ -332,7 +332,7 @@ A **200 OK** response contains the following parameters.
        **attribution**
           The source of the error. May be attributed to **customer** or **platform**.
 
-          * **customer** indicates the source of the error is one (or more) configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
+          * **customer** indicates the source of the error is one or more configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
           * **platform** indicates there is an issue with components and/or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
 
        **data**

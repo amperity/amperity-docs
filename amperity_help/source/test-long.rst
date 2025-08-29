@@ -20,7 +20,7 @@ A Cartesian product in Amperity between any two tables is often a very, very lar
 
 The database editor will show a validation alert for an implicit ``CROSS JOIN`` in situations like:
 
-#. A join statement does not use an ``ON()`` or ``USING()`` clause to specify one (or more) column names as the join criteria.
+#. A join statement does not use an ``ON()`` or ``USING()`` clause to specify one or more column names as the join criteria.
 
 #. A ``SELECT`` statement returns too many columns from two tables. For example, using ``SELECT * FROM Table_A, Table_B`` can behave like a ``CROSS JOIN``. In this situation you should first filter out ``NULL`` values to avoid performance issues, or refactor your query to be more specific about which columns from which tables are to be joined.
 
