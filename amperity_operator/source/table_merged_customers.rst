@@ -724,7 +724,7 @@ Assign field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority ("999"), and requires these data sources to be assigned different priorities.
+Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 
@@ -803,7 +803,7 @@ Skip field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Field priority is only necessary when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority ("999"), and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
+Field priority is only necessary when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 

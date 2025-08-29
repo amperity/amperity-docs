@@ -28,8 +28,8 @@ This topic describes the starting point for the **Customer Attributes** table, a
 .. note:: This topic assumes that the data in your tenant has the following types of data already configured:
 
    #. Customer profile data sources, such as names, addresses, email addresses, and phone numbers. This data is made available from the the **Merged Customers** table and is required by the **Customer Attributes** table.
-   #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes Extended** table (and is optional).
-   #. Customer consent data for email address and SMS/phone opt-in to receiving communication from your brand. This data is made available from the **Email Opt Status** and **SMS Opt Status** tables (and is optional).
+   #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes Extended** table and is optional.
+   #. Customer consent data for email address and SMS/phone opt-in to receiving communication from your brand. This data is made available from the **Email Opt Status** and **SMS Opt Status** tables and is optional.
 
 .. table-customer-attributes-end
 
@@ -165,7 +165,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. table-customer-attributes-recommended-starting-sql-note-start
 
-.. note:: If your tenant is not using transactions or if your tenant does not have email and/or SMS opt-in status, make some (or all) of the following changes to the recommended starting SQL for the **Customer Attributes** table:
+.. note:: If your tenant is not using transactions or if your tenant does not have email and/or SMS opt-in status, make some or all of the following changes to the recommended starting SQL for the **Customer Attributes** table:
 
    #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN tae_cte ta** line in the "Extend for classifications" common table expression (CTE).
    #. Remove the "Extend for email opt-in status" section.
@@ -575,7 +575,7 @@ Custom inputs
 
 .. table-customer-attributes-optional-custom-inputs-start
 
-If your tenant has a table (or a set of tables) that represents the value your customers have to your brand you may configure those tables to provide attributes to the **Customer Attributes** table. Use a pattern similar to how the :ref:`Transaction Attributes <table-customer-attributes-recommended-update-transaction-attributes>` table is configured.
+If your tenant has a table or a set of tables that represents the value your customers have to your brand you may configure those tables to provide attributes to the **Customer Attributes** table. Use a pattern similar to how the :ref:`Transaction Attributes <table-customer-attributes-recommended-update-transaction-attributes>` table is configured.
 
 .. table-customer-attributes-optional-custom-inputs-end
 
@@ -814,7 +814,7 @@ Employees
 
 .. table-customer-attributes-optional-email-categories-employees-start
 
-A customer is an employee when they are employed (or were employed) by your brand. You may choose to include employees within your marketing campaigns, but often it's preferable to exclude them. Use this extension to identify employees of your brand within your customer profile data.
+A customer is an employee when they are employed or were employed by your brand. You may choose to include employees within your marketing campaigns, but often it's preferable to exclude them. Use this extension to identify employees of your brand within your customer profile data.
 
 .. note:: This utility query follows steps that are similar to ones described in the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` utility query: build the utility query in **Queries** page, add the updated query to the **Customer Attributes** table, extend the **classification_config** section, and then update the **customer_attributes_final** section.
 
@@ -1140,7 +1140,7 @@ Churn prevention
 
 .. table-customer-attributes-optional-churn-prevention-start
 
-Each churn prevention campaign is unique, but they all have something in common: a series of messages that are sent when customers enter (or exit) specific stages within that churn prevention campaign. Each stage is associated with a threshold that defines a customer's current churn status.
+Each churn prevention campaign is unique, but they all have something in common: a series of messages that are sent when customers enter or exit specific stages within that churn prevention campaign. Each stage is associated with a threshold that defines a customer's current churn status.
 
 The **Customer Attributes** table can be configured to provide your customers' current churn status -- one of "active", "cooling down", "at risk", "highly at risk", or "lost" -- along with the date on which your customers were assigned to that status.
 
@@ -1262,7 +1262,7 @@ Contactability
 
 .. table-customer-attributes-optional-contactability-start
 
-A customer is considered to be "contactable" when they have a complete email address, phone number, or physical address (including all of street address, city, state, postal code) in the **Merged Customers** table.
+A customer is considered to be "contactable" when they have a complete email address, phone number, or physical address, including all of street address, city, state, postal code, in the **Merged Customers** table.
 
 When a customer has a complete email address **and** phone number they are considered to be contactable on paid social media.
 

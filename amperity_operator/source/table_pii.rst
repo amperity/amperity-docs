@@ -98,7 +98,7 @@ Use a SQL query similar to:
 The **CASE** statements do the following:
 
 * For phone numbers: ensure that only fields with actual phone numbers are added to the PII table, along with consistent formatting. Any phone number that is empty or does not contain a value will not be added.
-* For states: ensure that only values that are two characters (i.e. "WA", "NY", "CA", etc.) are added to the PII table. Any state that is not two characters will not be added.
+* For states: ensure that only values that are two characters, such as "WA", "NY", or "CA", are added to the PII table. Any state that is not two characters will not be added.
 * For gender: ensure that only M and F values are added to the table.
 
 .. tip:: You may use any SQL you want to build this table. For example, you could convert all state values that are spelled out to a two character value. Downstream uses cases should be the main driver for how data is shaped in this table.

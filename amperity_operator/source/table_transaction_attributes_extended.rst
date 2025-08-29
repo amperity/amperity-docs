@@ -316,7 +316,7 @@ Column reference
 
 .. transaction-attributes-extended-start
 
-Extended transaction attributes are presented as a single table (with many columns), including an Amperity ID, and fit into the following categories:
+Extended transaction attributes are presented as a single table with many columns, including an Amperity ID, and fit into the following categories:
 
 * :ref:`Customer flags <table-transaction-attributes-extended-reference-customer-flags>`
 * :ref:`Customer orders <table-transaction-attributes-extended-reference-customer-orders>`

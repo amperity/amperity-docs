@@ -31,7 +31,12 @@ Add table
 
 The **Customer 360** table is the most important table in the customer 360 database. The **Customer 360** table is built as a passthrough from the **Merged Customers** table, which makes available to the **Customer 360** table a unified view of the customer across all points of engagement, along with any attributes that cross systems.
 
-Attributes will vary tenant-to-tenant, but typically include profile information (names, addresses, email, phone), interactions by channel (ecommerce, point of sale, loyalty), insights (total lifetime value, transaction frequency, recency), and predictions (next best purchase, next best action, churn prediction).
+Attributes will vary tenant-to-tenant, but typically include:
+
+* Profile information, such as names, addresses, email, and phone
+* Interactions by channel, such as ecommerce, point of sale, and loyalty
+* Insights, such as total lifetime value, transaction frequency, and recency
+* Predictions, such as next best purchase, next best action, and churn prediction
 
 .. table-customer360-add-end
 
