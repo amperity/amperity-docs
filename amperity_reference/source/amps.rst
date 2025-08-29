@@ -502,8 +502,6 @@ Premium connectors
 
 .. destinations-premium-connectors-start
 
-.. note:: This section applies to an earlier version of Amps consumption.
-
 Some connectors have an additional amps charge to use. This charge is a flat fee and it is measured per month: 25K amps per connector per month.
 
 For example, if you use 3 premium connectors in one month and 4 the next, that consumes 75K amps in the first month and 100K amps the second month. Premium connectors do not consume storage.
