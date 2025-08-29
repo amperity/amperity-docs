@@ -148,7 +148,7 @@ Rules can be configured to cluster records together when personally identifiable
    * - **values match**
      - Compares values for the selected semantic tag and clusters records when values match exactly.
    * - **values approximately match**
-     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values have minor variations, such as misspellings, abbreviations, typos, or transposed characters, but otherwise match.
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values mostly match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
 
 For example:
 
@@ -318,7 +318,7 @@ Stitch rules for :ref:`clustering records <configure-stitch-rules-cluster>` and 
    * - **:fuzzy-different**
      - Compares values for the selected semantic tag and separates records when values are more than approximately different.
    * - **:fuzzy-similar**
-     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values have minor variations, such as misspellings, abbreviations, typos, or transposed characters, but otherwise match.
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values mostly match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
    * - **:fuzzy/different-birthdates**
      - Compares values for birthdates and separates records when values are not the same.
    * - **:fuzzy/different-companies**
