@@ -81,7 +81,7 @@ A request to the **GET /ingest/jobs/{id}** endpoint is similar to:
         --header 'Authorization: Bearer {token}'
 
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-ingest-jobs-id-request-end
 
@@ -146,7 +146,7 @@ The following examples show how to send requests to the **GET /ingest/jobs/{id}*
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-ingest-jobs-id-request-examples-tabs-end
 

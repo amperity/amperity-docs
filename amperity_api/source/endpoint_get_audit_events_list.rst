@@ -92,7 +92,7 @@ A request to the **GET /audit-events** endpoint is similar to:
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-audit-events-list-request-body-end
 
@@ -124,7 +124,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_end**
      - String. Optional.
 
-       The end date (exclusive) that defines the end of the time range for which audit events will be returned. For example: "2024-03-01T11:11:11Z".
+       The end date--exclusive--that defines the end of the time range for which audit events will be returned. For example: "2024-03-01T11:11:11Z".
 
        The values for the end date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -132,7 +132,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_start**
      - String. Optional.
 
-       The start date (inclusive) that defines the beginning of the time range for which audit events will be returned. For example: "2024-04-01T11:11:11Z".
+       The start date--inclusive--that defines the beginning of the time range for which audit events will be returned. For example: "2024-04-01T11:11:11Z".
 
        The start date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -196,7 +196,7 @@ The following examples show how to send requests to the **GET /audit-events** en
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
    .. tab-item:: Python
 
@@ -334,7 +334,7 @@ A **200 OK** response contains the following parameters.
           The identifier for the object against which the action occurred.
 
        **object_name**
-          Optional. A composed string that describes the object(s) for which the action occurred.
+          Optional. A composed string that describes the objects for which the action occurred.
 
        **origin_ip**
           The IP address that is associated with the user who initiated the action.

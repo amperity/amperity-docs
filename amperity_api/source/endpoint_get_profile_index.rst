@@ -80,7 +80,7 @@ A request to the **GET /indexes** endpoint is similar to:
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-profile-index-request-end
 
@@ -157,7 +157,7 @@ The following examples show how to send requests to the **GET /indexes** endpoin
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-profile-index-request-examples-tabs-end
 

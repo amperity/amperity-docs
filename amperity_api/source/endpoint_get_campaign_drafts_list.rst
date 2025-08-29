@@ -91,7 +91,7 @@ A request to the **GET /campaign-drafts** endpoint is similar to:
         --header 'api-version: unstable' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-campaign-drafts-list-request-end
 
@@ -188,7 +188,7 @@ The following examples show how to send requests to the **GET /campaign-drafts**
               --header 'api-version: unstable' \
               --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
    .. tab-item:: Python
 
@@ -303,7 +303,7 @@ A **200 OK** response contains the following parameters.
      - A JSON array of values for the current page of results. The array of values includes the following properties:
 
        **deliver_at**
-          The date and time at which the campaign was delivered (or will be delivered). Dates and times are in |ext_iso_8601| format and in UTC.
+          The date and time at which the campaign was delivered or will be delivered. Dates and times are in |ext_iso_8601| format and in UTC.
 
        **id**
           The Amperity internal identifier for the campaign.

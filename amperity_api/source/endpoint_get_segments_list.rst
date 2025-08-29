@@ -82,7 +82,7 @@ A request to the **GET /segments** endpoint is similar to:
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-segments-list-request-end
 
@@ -169,7 +169,7 @@ The following examples show how to send requests to the **GET /segments** endpoi
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
    .. tab-item:: Python
 

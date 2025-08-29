@@ -82,7 +82,7 @@ A request to the **GET /ingest/jobs** endpoint is similar to:
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-ingest-jobs-request-end
 
@@ -113,21 +113,21 @@ The following table describes the parameters that may be used with the **GET /in
    * - **created_from**
      - Datetime. Required.
 
-       A timestamp that defines the start (inclusive) of a 7-day time window in which one or more ingest jobs started. See the **created_to** request parameter.
+       A timestamp that defines the start--inclusive--of a 7-day time window in which one or more ingest jobs started. See the **created_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window will be returned. (See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.)
+       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
 
 
    * - **created_to**
      - Datetime. Required.
 
-       A timestamp that defines the end (exclusive) of a 7-day time window in which one or more ingest jobs started. See the **created_from** request parameter.
+       A timestamp that defines the end--exclusive--of a 7-day time window in which one or more ingest jobs started. See the **created_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window will be returned. (See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.)
+       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
 
    * - **with_total**
      - Boolean. Optional.
@@ -168,7 +168,7 @@ The following examples show how to send requests to the **GET /ingest/jobs** end
                --header 'api-version: 2024-04-01' \
                --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-ingest-jobs-request-examples-tabs-end
 

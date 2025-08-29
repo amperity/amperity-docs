@@ -81,7 +81,7 @@ A request to the **POST workflow/runs/{id}/stop** endpoint is similar to:
         --header 'Authorization: Bearer {token}'
 
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-post-workflows-stop-request-end
 
@@ -295,7 +295,7 @@ A **200 OK** response contains the following parameters.
        **ended_at**
           The date and time at which a workflow task ended.
 
-          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **execution_type**
           The service that runs a workflow task. Possible return values are spark-sql, prodigal, prodigal-aurora, databricks, identity, task-identity, legacy.
@@ -303,7 +303,7 @@ A **200 OK** response contains the following parameters.
        **id**
           The unique identifier for the task instance.
 
-          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **label**
           The name of the task instance. Examples of task instance labels include:
@@ -324,14 +324,14 @@ A **200 OK** response contains the following parameters.
           * Updating domain tables
           * Updating [table-name]
 
-          where the brackets [] are placeholders for named objects withn your tenant.
+          where the brackets ``[]`` are placeholders for named objects withn your tenant.
 
        .. note:: This is the same value that is visible from the **Task** column on each individual workflow page.
 
        **run_id**
           A unique identifier provided to the task instance to support situations where execution engines cannot provide a run ID. The value for this property is similar to: "abc-20240210-12345-6AbCDE".
 
-          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **state**
           The current state of the task. For example:
@@ -358,13 +358,13 @@ A **200 OK** response contains the following parameters.
        **task_definition_type**
           The task definition type. The possible values for this property are the similar to the **type** property for the workflow. For example, "bridge.sync" or "campaign.append-results".
 
-          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **tenant**
           The unique identifier for the tenant.
 
        **timeout_ms**
-          The length of time (in milliseconds) after which a running task instance will be forced to stop.
+          The length of time in milliseconds after which a running task instance will be forced to stop.
 
        **workflow_id**
           The unique identifier for the workflow to which this task belongs.
@@ -402,7 +402,7 @@ A **200 OK** response contains the following parameters.
        .. note:: This is the same value that is visible from the **Type** box on each individual workflow page and from the **Type** column on the **Workflows** page.
 
    * - **warn_after_ms**
-     - The length of time (in milliseconds) after which a warning is sent that notifies users that a workflow is running longer than expected.
+     - The length of time in milliseconds after which a warning is sent that notifies users that a workflow is running longer than expected.
 
        .. note:: This parameter only applies to workflows that use SQL to write tables to storage.
 

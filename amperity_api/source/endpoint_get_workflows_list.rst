@@ -82,7 +82,7 @@ A request to the **GET /workflow/runs** endpoint is similar to:
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-workflows-list-request-end
 
@@ -115,41 +115,41 @@ The following table describes the parameters that may be used with the **GET /wo
    * - **created_from**
      - Datetime. Optional.
 
-       A timestamp that defines the start (inclusive) of the time window in which one or more workflows started to run. See the **created_to** request parameter.
+       A timestamp that defines the start--inclusive--of the time window in which one or more workflows started to run. See the **created_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
+       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **created_to**
      - Datetime. Optional.
 
-       A timestamp that defines the end (exclusive) of the time window in which one or more workflows started to run. See the **created_from** request parameter.
+       A timestamp that defines the end--exclusive--of the time window in which one or more workflows started to run. See the **created_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
+       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **ended_from**
      - Datetime. Optional.
 
-       A timestamp that defines the start (inclusive) of the time window in which one or more workflows stopped running. See the **ended_to** request parameter.
+       A timestamp that defines the start--inclusive--of the time window in which one or more workflows stopped running. See the **ended_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **ended_to**
      - Datetime. Optional.
 
-       A timestamp that defines the end (exclusive) of the time window in which one or more workflows stopped running. See the **ended_from** request parameter.
+       A timestamp that defines the end--exclusive--of the time window in which one or more workflows stopped running. See the **ended_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.)
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **limit**
@@ -189,7 +189,7 @@ The following table describes the parameters that may be used with the **GET /wo
 
        Return a list of workflows that only match the specified workflow type.
 
-       .. tip:: Use this endpoint to return a list of workflows (and workflow types), and then use a value from the **type** response parameter to make a new request that filters by that workflow type value.
+       .. tip:: Use this endpoint to return a list of workflows and workflow types, and then use a value from the **type** response parameter to make a new request that filters by that workflow type value.
 
 
    * - **with_total**
@@ -231,7 +231,7 @@ The following examples show how to send requests to the **GET /workflow/runs** e
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-workflows-list-request-examples-tabs-end
 
@@ -303,7 +303,7 @@ A **200 OK** response contains the following parameters.
    * - **created_at**
      - The date and time at which a workflow task started.
 
-       .. note:: This is the same value as the **Started** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+       .. note:: This is the same value as the **Started** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
           **Duration**, as shown in the **Task Details** dialog, is the amount of time that occurred between **created_at** and **ended_at**.
 
@@ -347,14 +347,14 @@ A **200 OK** response contains the following parameters.
    * - **ended_at**
      - The date and time at which a workflow task ended.
 
-       .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+       .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
           **Duration**, as shown in the **Task Details** dialog, is the amount of time that occurred between **created_at** and **ended_at**.
 
    * - **id**
      - The unique identifier for the workflow.
 
-       .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+       .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
 
    * - **name**

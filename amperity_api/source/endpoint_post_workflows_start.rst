@@ -81,7 +81,7 @@ A request to the **POST /workflow/runs/** endpoint is similar to:
         --header 'Authorization: Bearer {token}' \
         --data '{"config_id"="cg-123ABc4DE"}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-post-workflows-start-request-end
 
@@ -125,9 +125,9 @@ The following table describes the parameters that may be used with the **POST /w
    * - **range_from**
      - String. Required for file-based workflows. Courier groups only.
 
-       .. important:: A value for **range_from** must be specified for any courier group that is configured to pull files from cloud storage (SFTP, Amazon S3, Azure Blob Storage, or Google Cloud Storage).
+       .. important:: A value for **range_from** must be specified for any courier group that is configured to pull files from cloud storage: SFTP, Amazon S3, Azure Blob Storage, or Google Cloud Storage.
 
-       A timestamp that defines the start (inclusive) of the time window for which couriers in the workflow should pull data. See the **range_to** request parameter.
+       A timestamp that defines the start--inclusive--of the time window for which couriers in the workflow should pull data. See the **range_to** request parameter.
 
        A timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
 
@@ -141,7 +141,7 @@ The following table describes the parameters that may be used with the **POST /w
 
        .. important:: A value for **range_from** must be specified when **range_to** is included in the request.
 
-       A timestamp that defines the end (exclusive) of the time window for which couriers in the workflow should pull data. See the **range_from** request parameter.
+       A timestamp that defines the end--exclusive--of the time window for which couriers in the workflow should pull data. See the **range_from** request parameter.
 
        A timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
 
@@ -188,7 +188,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --header 'Authorization: Bearer {token}' \
               --data '{"config_id"="cc-123ABc4DE"}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
    .. tab-item:: cURL, run orchestration
 
@@ -203,7 +203,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --header 'Authorization: Bearer {token}' \
               --data '{"config_id"="og-123ABc4DE"}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
 
    .. tab-item:: cURL, run workflow
@@ -222,7 +222,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --data '{"range_to"="YYYY-MM-DD"}' \
               --data '{"run_mode"="full"}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
    .. tab-item:: Python
 
@@ -354,7 +354,7 @@ A **200 OK** response contains the following parameters.
        **started_at**
           The date and time at which a workflow task started.
 
-          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **execution_type**
           The service that runs a workflow task. Possible return values are spark-sql, prodigal, prodigal-aurora, databricks, identity, task-identity, legacy.
@@ -362,7 +362,7 @@ A **200 OK** response contains the following parameters.
        **id**
           The unique identifier for the task instance.
 
-          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **label**
           The name of the task instance. Examples of task instance labels include:
@@ -390,7 +390,7 @@ A **200 OK** response contains the following parameters.
        **run_id**
           A unique identifier provided to the task instance to support situations where execution engines cannot provide a run ID. The value for this property is similar to: "abc-20240210-12345-6AbCDE".
 
-          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **state**
           The current state of the task. For example:
@@ -417,13 +417,13 @@ A **200 OK** response contains the following parameters.
        **task_definition_type**
           The task definition type. The possible values for this property are the similar to the **type** property for the workflow. For example, "bridge.sync" or "campaign.append-results".
 
-          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **tenant**
           The unique identifier for the tenant.
 
        **timeout_ms**
-          The length of time (in milliseconds) after which a running task instance will be forced to stop.
+          The length of time in milliseconds after which a running task instance will be forced to stop.
 
        **workflow_id**
           The unique identifier for the workflow to which this task belongs.
