@@ -35,7 +35,7 @@ Unified Itemized Transactions table
 
 .. important:: Database tables for transactions must be configured in the following order:
 
-   #. Unified Itemized Transactions (this topic)
+   #. Unified Itemized Transactions
    #. :doc:`Unified Transactions <table_unified_transactions>`
    #. :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>`
 

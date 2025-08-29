@@ -38,7 +38,7 @@ Use with Stitch QA
 Use the **Unified Preprocessed Raw** table as part of the Stitch QA process to:
 
 * Ensure semantic tags are selected and visible to the **Queries** page
-* Investigate relationships between records, especially when records appear to be assigned (not assigned) to an incorrect (correct) Amperity ID, which defines a single cluster of records
+* Investigate relationships between records, especially when records are assigned to a correct Amperity ID or not assigned to an incorrect Amperity ID, which defines a single cluster of records
 * Investigate blocklisted values
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-end
@@ -77,7 +77,7 @@ Use the **Queries** page to investigate unexpected relationships between individ
 
 Use a combination of the **Unified Coalesced** and **Unified Preprocessed Raw** tables to review the data that is associated with these records to help understand why groups of records were matched or why certain records were assigned to a cluster.
 
-In some cases, you may need to investigate and compare entire clusters to better understand why (or why not) these groups of records were maintained (or split) during hierarchical comparison, a step in the Stitch process that occurs *after* pairwise comparison and scoring.
+In some cases, you may need to investigate and compare entire clusters to better understand why or why not these groups of records were maintained (or split) during hierarchical comparison, a step in the Stitch process that occurs *after* pairwise comparison and scoring.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-relationships-records-end
 
