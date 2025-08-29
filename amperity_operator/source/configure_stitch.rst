@@ -148,7 +148,7 @@ Rules can be configured to cluster records together when personally identifiable
    * - **values match**
      - Compares values for the selected semantic tag and clusters records when values match exactly.
    * - **values approximately match**
-     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values have minor variations, such as misspellings, abbreviations, typos, or transposed characters, but otherwise match.
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values mostly match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
 
 For example:
 
@@ -297,6 +297,42 @@ The **Code** view uses Extensible Data Notation (EDN) formatting and is similar 
     :amperity.stitch.settings/supersized-partition-max-depth 4}
 
 .. configure-stitch-rules-code-end
+
+
+.. _configure-stitch-rules-code-view:
+
+Rules in the Code view
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. configure-stitch-rules-code-view-start
+
+Stitch rules for :ref:`clustering records <configure-stitch-rules-cluster>` and :ref:`separating records <configure-stitch-rules-cluster>` have specific names in the **Code** view.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Condition
+     - Description
+
+   * - **:fuzzy-different**
+     - Compares values for the selected semantic tag and separates records when values are more than approximately different.
+   * - **:fuzzy-similar**
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values mostly match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
+   * - **:fuzzy/different-birthdates**
+     - Compares values for birthdates and separates records when values are not the same.
+   * - **:fuzzy/different-companies**
+     - Compares values for company and separates records when values are not the same.
+   * - **:fuzzy/different-generations**
+     - Compares values for generational suffix and separates records when values are not the same.
+   * - **:fuzzy/incompatible-names**
+     - Compares values for names and separates records when values are not the same.
+   * - **:present-and-equal**
+     - Compares values for the selected semantic tag and clusters records when values match exactly.
+   * - **:present-and-not-equal**
+     - Compares values for the selected semantic tag and separates records when values do not match exactly.
+
+.. configure-stitch-rules-code-view-end
 
 
 .. _configure-stitch-general:
