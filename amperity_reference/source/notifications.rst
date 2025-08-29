@@ -136,7 +136,7 @@ Warnings
 
 .. notifications-type-warnings-start
 
-A warning notification--indicated by the |notification-alert| icon--is shown when a workflow is able to complete all steps, but detects issues with one (or more) steps within the workflow.
+A warning notification--indicated by the |notification-alert| icon--is shown when a workflow is able to complete all steps, but detects issues with one or more steps within the workflow.
 
 .. notifications-type-warnings-end
 

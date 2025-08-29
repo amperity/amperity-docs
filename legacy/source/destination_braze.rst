@@ -393,9 +393,9 @@ Add destination
 
        Select the user identifier. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers.
 
-       To update audience profiles only when one (or more) values change, enable the **Only send updated audience profiles** option.
+       To update audience profiles only when one or more values change, enable the **Only send updated audience profiles** option.
 
-       .. note:: Use the **Only send updated audience profiles** option to configure Amperity to :ref:`update audience profiles <destination-braze-attribute-updates>` only when one (or more) values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
+       .. note:: Use the **Only send updated audience profiles** option to configure Amperity to :ref:`update audience profiles <destination-braze-attribute-updates>` only when one or more values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
 
           For use cases that require sending attributes that have values that are expected to change frequently, consider using additional queries to orchestrate specific sets of attributes at defined intervals so that your brand can maintain these values independently of your customer profiles.
 

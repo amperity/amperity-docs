@@ -541,7 +541,7 @@ A Cartesian product in Amperity between any two tables is often a very, very lar
 
 The database editor will show a validation alert for an implicit **CROSS JOIN** in situations like:
 
-#. A join statement does not use an **ON()** or **USING()** clause to specify one (or more) column names as the join criteria.
+#. A join statement does not use an **ON()** or **USING()** clause to specify one or more column names as the join criteria.
 
 #. A **SELECT** statement returns too many columns from two tables. For example, using
 
@@ -638,7 +638,7 @@ Export databases and tables
 
 .. databases-export-start
 
-A database may be configured to export one (or more) tables (or even the entire database) from Amperity. Each database export must be assigned a unique name, and then is configured to select one (or more) tables to be included in the export. A database export must be associated with a configured destination and must be added to an orchestration.
+A database may be configured to export one or more tables (or even the entire database) from Amperity. Each database export must be assigned a unique name, and then is configured to select one or more tables to be included in the export. A database export must be associated with a configured destination and must be added to an orchestration.
 
 .. databases-export-end
 
@@ -651,7 +651,7 @@ A database may be configured to export one (or more) tables (or even the entire 
 #. Add the name of the database export, and then click **Add**. This will add a draft database export to the **Database Exports** page.
 #. Open the menu for the draft database export, and then select **Edit**.
 #. From the **Database** dropdown, select a database.
-#. From the **Entities** list, select one (or more) database tables to add to the database export.
+#. From the **Entities** list, select one or more database tables to add to the database export.
 
    For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 

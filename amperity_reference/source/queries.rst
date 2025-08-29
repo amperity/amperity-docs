@@ -905,7 +905,7 @@ Alerts are sent when the record count in the query output contains errors that e
 
       Use the **Warn when** threshold for queries that are not associated with an orchestration. This will prevent that query from stopping the workflow when record counts exceed the configured alert threshold.
 
-You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one (or more) courier groups and/or scheduled orchestration groups.
+You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one or more courier groups and/or scheduled orchestration groups.
 
 .. queries-enable-alerts-end
 

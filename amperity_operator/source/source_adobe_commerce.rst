@@ -225,7 +225,7 @@ Add data source and feeds
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - On the **Add courier** page, under **Select data to ingest**, enable one (or more) data sets to pull to Amperity:
+     - On the **Add courier** page, under **Select data to ingest**, enable one or more data sets to pull to Amperity:
 
        * **Customers**
        * **Customer Address**

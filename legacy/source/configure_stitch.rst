@@ -125,7 +125,7 @@ The combination of blocking keys is what creates the ideal recall rate without c
 
 .. configure-stitch-general-clustering-blocking-default-start
 
-To configure the blocking strategies that are used for your tenant, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) blocking strategies from the **Blocking Strategies** dropdown:
+To configure the blocking strategies that are used for your tenant, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one or more blocking strategies from the **Blocking Strategies** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-blocking-strategy.png
    :width: 380 px
@@ -217,7 +217,7 @@ Case-sensitive foreign keys
 
 .. configure-stitch-general-clustering-case-sensitive-start
 
-To specify which foreign keys are case-sensitive, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) case-sensitive foreign keys from the **Case-sensitive foreign keys** dropdown:
+To specify which foreign keys are case-sensitive, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one or more case-sensitive foreign keys from the **Case-sensitive foreign keys** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-case-sensitive.png
    :width: 380 px
@@ -402,7 +402,7 @@ Allowed empty tables
 
 .. configure-stitch-general-performance-empty-tables-start
 
-To allow empty tables, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Performance**, from the **Allow empty tables** dropdown, select one (or more) tables:
+To allow empty tables, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Performance**, from the **Allow empty tables** dropdown, select one or more tables:
 
 .. image:: ../../images/mockup-stitch-settings-general-allow-empty-tables.png
    :width: 380 px
@@ -1119,7 +1119,7 @@ All four groups of records transitively connect into a single connected cluster 
 
 .. configure-stitch-advanced-profile-supersized-clusters-start
 
-Amperity defines a supersized cluster as any cluster with 64 (or more) connections. To change this threshold to a higher or lower value, update the following advanced configuration setting:
+Amperity defines a supersized cluster as any cluster with 64 or more connections. To change this threshold to a higher or lower value, update the following advanced configuration setting:
 
 .. code-block:: clojure
 

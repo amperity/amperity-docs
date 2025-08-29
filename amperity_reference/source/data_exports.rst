@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Export one (or more) tables or an entire database from Amperity to support any downstream workflow.
+        Export one or more tables or an entire database from Amperity to support any downstream workflow.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Export one (or more) tables or an entire database from Amperity to support any downstream workflow.
+        Export one or more tables or an entire database from Amperity to support any downstream workflow.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ About data exports
 
 .. data-exports-start
 
-A database may be configured to export one (or more) tables or an entire database from Amperity. Each data export must be assigned a unique name. A data export must be associated with a configured destination and must be added to an orchestration.
+A database may be configured to export one or more tables or an entire database from Amperity. Each data export must be assigned a unique name. A data export must be associated with a configured destination and must be added to an orchestration.
 
 .. data-exports-end
 
@@ -52,7 +52,7 @@ How-tos
    #. Add the name of the data export, and then click **Add**. This will add a draft data export to the **Database Exports** page.
    #. Open the menu for the draft data export, and then select **Edit**.
    #. From the **Database** dropdown, select a database.
-   #. From the **Entities** list, select one (or more) database tables to add to the data export.
+   #. From the **Entities** list, select one or more database tables to add to the data export.
    #. Click **Activate**.
 
 
@@ -69,7 +69,7 @@ How-tos
 
    #. From the **Customer 360** page click **Configure Exports**. This opens the **Database Exports** page.
    #. Open the menu for a data export, and then select **Edit**.
-   #. From the **Entities** list, select one (or more) database tables to add to the data export.
+   #. From the **Entities** list, select one or more database tables to add to the data export.
 
       For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 
@@ -140,7 +140,7 @@ How-tos
    #. From the **Customer 360** page click **Configure Exports**. This opens the **Database Exports** page.
    #. Open the menu for a data export, and then select **Edit**.
    #. From the **Databases** dropdown menu, pick another database.
-   #. From the **Entities** list, select one (or more) database tables to add to the data export.
+   #. From the **Entities** list, select one or more database tables to add to the data export.
 
       For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 
@@ -160,7 +160,7 @@ How-tos
 
    #. From the **Customer 360** page click **Configure Exports**. This opens the **Database Exports** page.
    #. Open the menu for a data export, and then select **Edit**.
-   #. From the **Entities** list, select one (or more) database tables to remove from the data export.
+   #. From the **Entities** list, select one or more database tables to remove from the data export.
 
       For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 

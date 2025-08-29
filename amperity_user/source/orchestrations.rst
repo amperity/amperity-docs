@@ -80,7 +80,7 @@ The following sections describe the steps you'll follow to use an orchestration 
 
        .. image:: ../../images/mockup-orchestrations-select-destination-template-123.png
           :width: 650 px
-          :alt: Choose one (or more) segments to exclude customers from this campaign.
+          :alt: Choose one or more segments to exclude customers from this campaign.
           :align: left
           :class: no-scaled-link
 

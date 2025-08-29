@@ -20,7 +20,7 @@ Bad foreign key matches
 
 .. stitch-qa-query-bad-foreign-key-matches-start
 
-Use this query to return records where the Amperity ID and the foreign key are equal, but one (or more) values associated with the **email**, **given-name**, and **surname** semantics are not equal. Records with incorrect matches may be an indicator of overclustering.
+Use this query to return records where the Amperity ID and the foreign key are equal, but one or more values associated with the **email**, **given-name**, and **surname** semantics are not equal. Records with incorrect matches may be an indicator of overclustering.
 
 .. stitch-qa-query-bad-foreign-key-matches-end
 

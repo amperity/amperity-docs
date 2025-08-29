@@ -125,7 +125,7 @@ The following table lists the operators that are available to this attribute.
 
        Returns frequencies that are greater than or equal to the specified frequency.
 
-       Use this condition to find customers who are predicted to purchase from your brand during the next year. For example, to find customers who are predicted to make 3 (or more) purchases:
+       Use this condition to find customers who are predicted to purchase from your brand during the next year. For example, to find customers who are predicted to make 3 or more purchases:
 
        .. code-block:: none
 

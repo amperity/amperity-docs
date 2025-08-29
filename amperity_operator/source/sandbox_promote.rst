@@ -80,7 +80,7 @@ The following sections describe the steps you'll follow when promoting changes i
           :align: left
           :class: no-scaled-link
 
-       Occasionally, you will receive a validation report that shows one (or more) validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
+       Occasionally, you will receive a validation report that shows one or more validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
 
        .. image:: ../../images/mockups-sandbox-access-validations-errors.png
           :width: 380 px

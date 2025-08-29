@@ -41,7 +41,7 @@ How policies work
 
 .. policies-howitworks-start
 
-Actions within Amperity are controlled by policies, which act as containers for a set of actions. All tenants share a set of global policies with groups for standard policies and administrator policies. Each tenant assigns one (or more) policies to every user in their tenant, after which each user may also be assigned any of the policy options.
+Actions within Amperity are controlled by policies, which act as containers for a set of actions. All tenants share a set of global policies with groups for standard policies and administrator policies. Each tenant assigns one or more policies to every user in their tenant, after which each user may also be assigned any of the policy options.
 
 Each user has a set of assigned actions that are determined by their assigned policy (or policies). Policy assignment may be managed using SSO (recommended) or may be :doc:`managed from the Amperity user interface <resource_groups>` by users who are assigned the **Allow user administration** policy option.
 

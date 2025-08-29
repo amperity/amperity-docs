@@ -81,7 +81,7 @@ For example:
    :align: left
    :class: no-scaled-link
 
-will automatically ignore an email address that is associated with 8 (or more) distinct values for **given_name**.
+will automatically ignore an email address that is associated with 8 or more distinct values for **given_name**.
 
 .. note:: Default thresholds are set for the following combinations:
 

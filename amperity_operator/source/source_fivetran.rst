@@ -60,7 +60,7 @@ Every Fivetran-enabled workflow is different. Some workflows require permission 
 A Fivetran-enabled data source generally works like this:
 
 #. Fivetran is configured to pull data from a data source. This process will require allowing Fivetran the right level of access to pull that data from your data source to Fivetran.
-#. Fivetran pulls that data into one (or more) Snowflake tables.
+#. Fivetran pulls that data into one or more Snowflake tables.
 
    .. include:: ../../shared/sources.rst
       :start-after: .. sources-get-details-fivetran-does-not-store-data-start

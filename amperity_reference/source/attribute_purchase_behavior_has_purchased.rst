@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Which customers have purchased N (or more) items during the specified time period?
+        Which customers have purchased N or more items during the specified time period?
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Which customers have purchased N (or more) items during the specified time period?
+        Which customers have purchased N or more items during the specified time period?
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ Has purchased
 
 .. attribute-purchase-behavior-has-purchased-start
 
-**Has Purchased** returns a list of orders that meets the threshold that you define--for example, exactly 4, less than 5, more than 2, or between 2 and 10--*and* occurred during your chosen date range. For example, return all customers who have purchased 3 (or more) times in the previous 2 years:
+**Has Purchased** returns a list of orders that meets the threshold that you define--for example, exactly 4, less than 5, more than 2, or between 2 and 10--*and* occurred during your chosen date range. For example, return all customers who have purchased 3 or more times in the previous 2 years:
 
 .. image:: ../../images/attribute-purchase-behavior-has-purchased-example.png
    :width: 600 px
@@ -51,7 +51,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
 
 .. admonition:: How does the SQL for Has Purchased work?
 
-   **Has Purchased** is built from standard columns that are output by Amperity. The following example returns a list of customers who have purchased 3 (or more) times in the previous 2 years:
+   **Has Purchased** is built from standard columns that are output by Amperity. The following example returns a list of customers who have purchased 3 or more times in the previous 2 years:
 
    .. image:: ../../images/attribute-purchase-behavior-has-purchased-example.png
       :width: 500 px

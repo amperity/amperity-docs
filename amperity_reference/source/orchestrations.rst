@@ -126,7 +126,7 @@ Assign query
 
 .. orchestrations-assign-query-start
 
-A query orchestration sends the results of one (or more) active queries built using the visual **Query Editor** or **SQL Query Editor** to filedrop, REST API, and warehouse locations.
+A query orchestration sends the results of one or more active queries built using the visual **Query Editor** or **SQL Query Editor** to filedrop, REST API, and warehouse locations.
 
 .. orchestrations-assign-query-end
 

@@ -323,7 +323,7 @@ An SAS token may have invalid permissions for any of the following situations:
 
 To resolve this error, determine the cause for the invalid permissions error.
 
-#. Do one (or more) of the following:
+#. Do one or more of the following:
 
    Verify that the SAS token was configured correctly within Amperity.
 

@@ -185,7 +185,7 @@ Amperity overwrites Apache Parquet files when they are sent to the same location
 
 .. format-parquet-destination-warning-start
 
-.. note:: A folder is created with one (or more) files unless Parquet files are configured to be compressed/archived during orchestration.
+.. note:: A folder is created with one or more files unless Parquet files are configured to be compressed/archived during orchestration.
 
 .. format-parquet-destination-warning-end
 

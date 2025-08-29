@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Which customers have purchased N (or more) items during the specified time period?
+        Which customers have purchased N or more items during the specified time period?
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Which customers have purchased N (or more) items during the specified time period?
+        Which customers have purchased N or more items during the specified time period?
 
 .. meta::
     :content class=swiftype name=title data-type=string:

@@ -605,7 +605,7 @@ STEP 5
 STEP 5
 STEP 5
 
-.. TODO: The following is for couriers that use a checkbox to select one (or more) tables to bring to Amperity, such as Adobe Commerce, Shopify, et al.
+.. TODO: The following is for couriers that use a checkbox to select one or more tables to bring to Amperity, such as Adobe Commerce, Shopify, et al.
 
 .. sources-verify-feeds-and-domain-tables-start
 
