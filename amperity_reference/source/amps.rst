@@ -225,24 +225,14 @@ Amps and storage (TB) consumption is tracked in 5 categories---Sources, Stitch, 
    * - Category
      - Feature areas
 
-   * - **Sources**
-     - Amperity Bridge
+   * - **Activation**
+     - Campaigns
 
-       Ingest
+       Orchestrations
 
-       Source tables
-
-       Source transforms
-
-   * - **Stitch**
-     - Stitch
-
-       Stitch report
-
-   * - **Databases**
-     - Databases
-
-       Real time tables
+       Premium connectors
+       
+       Profile API
 
    * - **Analytics**
      - Advanced analytics
@@ -257,14 +247,25 @@ Amps and storage (TB) consumption is tracked in 5 categories---Sources, Stitch, 
 
        Spark SQL sessions
 
-   * - **Activation**
-     - Campaigns
+   * - **Databases**
+     - Databases
 
-       Orchestrations
+       Real time tables
 
-       Premium connectors
-       
-       Profile API
+   * - **Sources**
+     - Amperity Bridge
+
+       Ingest
+
+       Source tables
+
+       Source transforms
+
+   * - **Stitch**
+     - Stitch
+
+       Stitch report
+
 
 .. amps-consumption-categories-end
 
@@ -346,6 +347,26 @@ Monitor consumption for the **Campaigns** feature by:
 .. amps-consumption-feature-campaigns-end
 
 
+.. _amps-consumption-feature-cloud-storage:
+
+Cloud storage
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-consumption-feature-cloud-storage-start
+
+Amps consumption for cloud storage--Amazon S3, Google Cloud Storage, Microsoft Azure, and SFTP--is determined by the amount of data sent from Amperity cloud storage.
+
+.. note:: Amps consumption for data sent to :ref:`managed connectors <amps-consumption-feature-managed-connectors>` is its own category.
+
+Monitor Amps consumption for cloud storage by:
+
+* Reviewing the size of datasets
+* Reviewing the number of records sent
+* Monitoring the frequency at which data is sent to cloud storage
+
+.. amps-consumption-feature-cloud-storage-end
+
+
 .. _amps-consumption-feature-databases:
 
 Databases
@@ -401,6 +422,27 @@ Monitor consumption for the **Ingest** feature by:
 * Configuring courier groups to ingest files only when necessary; for example, some files must be ingested daily, but others might only need to be ingested weekly or monthly
 
 .. amps-consumption-feature-ingest-end
+
+
+.. _amps-consumption-feature-managed-connectors:
+
+Managed connectors
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-consumption-feature-managed-connectors-start
+
+Amps consumption for managed connectors--campaigns, journeys, and orchestrations--is determined by the amount of data sent from Amperity to `downstream marketing applications <../../destinations.html>`__.
+
+.. note:: Data sent to :ref:`cloud storage <amps-consumption-feature-cloud-storage>` is its own Amps category.
+
+Monitor Amps consumption for managed connectors by:
+
+* Reviewing campaign audience sizes
+* Monitoring the frequency at which campaigns and journeys run
+* Reviewing customer profiles
+* Reviewing the number of records sent in orchestrations
+
+.. amps-consumption-feature-managed-connectors-end
 
 
 .. _amps-consumption-feature-orchestrations:
@@ -460,8 +502,13 @@ Premium connectors
 
 .. destinations-premium-connectors-start
 
-Premium connectors are connectors that have an additional amps charge to use. You will not be charged for creating a destination, only for actually using it. This charge is a flat fee and it is measured per month so if you use it once or many times in a month, the charge is the same: 25K amps per connector per month.
-For example, if you use 3 premium connectors in one month and 4 the next, this would be 75K amps in the first month and 100K amps the second month. Premium connectors do not consume any storage. The following connectors are premium:
+.. note:: This section applies to an earlier version of Amps consumption.
+
+Some connectors have an additional amps charge to use. This charge is a flat fee and it is measured per month: 25K amps per connector per month.
+
+For example, if you use 3 premium connectors in one month and 4 the next, that consumes 75K amps in the first month and 100K amps the second month. Premium connectors do not consume storage.
+
+This applies to the following connectors:
 
 * Amazon Ads
 * Criteo Audience API
@@ -625,9 +672,61 @@ By category
 
 .. amps-reduce-category-start
 
-The following sections describe approaches your brand can take to help optimize your Amps consumption by category: **Sources**, **Stitch**, **Databases**, **Analytics**, and **Activation**.
+The following sections describe approaches your brand can take to help optimize your Amps consumption by category: **Activation**, **Analytics**, **Databases**, **Sources**, and **Stitch**.
 
 .. amps-reduce-category-end
+
+
+.. _amps-reduce-category-activation:
+
+Activation
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-reduce-category-activation-start
+
+To reduce Amps consumption for the **Activation** category:
+
+* Review SQL used in orchestrated queries. Complex operations over large datasets tend to consume more Amps.
+
+* Review segments used for campaigns. Complex operations over large datasets tend to consume more Amps.
+
+.. amps-reduce-category-activation-end
+
+
+.. _amps-reduce-category-analytics:
+
+Analytics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-reduce-category-analytics-start
+
+To reduce Amps consumption for the **Analytics** category:
+
+* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Please ask your Amperity representative for assistance with adjusting compute resourcing for predictive modeling.
+
+.. amps-reduce-category-analytics-end
+
+
+.. _amps-reduce-category-databases:
+
+Databases
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-reduce-category-databases-start
+
+To reduce Amps consumption for the **Databases** category:
+
+* Databases and source transforms run on Apache Spark and use Spark SQL. Review the run history to identify the longest-running tables.
+
+* Complex SQL over large datasets tends to consume more Amps. Consider opportunities to simplify the logic and filter or pre-aggregate incoming data.
+
+* Spark performance suffers in the presence of "skew", or poorly-distributed data that is used for joins, aggregations, or window function partitions. Check the distribution of values used in joining keys.
+
+* Duplication in joins can result in higher Amps consumption, as later operations must process a larger amount of data. Check for uniqueness in joining keys, and consider aggregating before joining to prevent duplication. 
+
+* Review compute settings. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Databases** category.
+
+.. amps-reduce-category-databases-end
 
 
 .. _amps-reduce-category-sources:
@@ -672,60 +771,6 @@ To reduce Amps consumption for the **Stitch** category:
 * As your brand adds more records Amps consumption will change. More complete records typically consume more Amps than sparse records. Depending on the type of data added, it may be helpful to adjust the compute resourcing. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Stitch** category.
 
 .. amps-reduce-category-stitch-end
-
-
-.. _amps-reduce-category-databases:
-
-Databases
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-reduce-category-databases-start
-
-To reduce Amps consumption for the **Databases** category:
-
-* Databases and source transforms run on Apache Spark and use Spark SQL. Review the run history to identify the longest-running tables.
-
-* Complex SQL over large datasets tends to consume more Amps. Consider opportunities to simplify the logic and filter or pre-aggregate incoming data.
-
-* Spark performance suffers in the presence of "skew", or poorly-distributed data that is used for joins, aggregations, or window function partitions. Check the distribution of values used in joining keys.
-
-* Duplication in joins can result in higher Amps consumption, as later operations must process a larger amount of data. Check for uniqueness in joining keys, and consider aggregating before joining to prevent duplication. 
-
-* Review compute settings. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Databases** category.
-
-.. amps-reduce-category-databases-end
-
-
-.. _amps-reduce-category-analytics:
-
-Analytics
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-reduce-category-analytics-start
-
-To reduce Amps consumption for the **Analytics** category:
-
-* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Please ask your Amperity representative for assistance with adjusting compute resourcing for predictive modeling.
-
-.. amps-reduce-category-analytics-end
-
-
-.. _amps-reduce-category-activation:
-
-Activation
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-reduce-category-activation-start
-
-To reduce Amps consumption for the **Activation** category:
-
-* Review SQL used in orchestrated queries. Complex operations over large datasets tend to consume more Amps.
-
-* Review segments used for campaigns. Complex operations over large datasets tend to consume more Amps.
-
-* Review the premium connectors in use. Unlike other consumption types, premium connectors consume Amps at a fixed monthly rate.
-
-.. amps-reduce-category-activation-end
 
 
 .. _amps-reduce-adjust-compute:
