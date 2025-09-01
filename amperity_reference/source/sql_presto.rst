@@ -285,7 +285,7 @@ For columns::
 
 For tables::
 
-   SELECT column_name(s)
+   SELECT column_names
    FROM table_name AS alias_name;
 
 When using an alias:
@@ -1015,7 +1015,7 @@ NOT operator
 
 .. sql-presto-statement-operator-not-start
 
-The **NOT** operator displays a record if the condition(s) is ``NOT TRUE``.
+The **NOT** operator displays a record if the conditions is ``NOT TRUE``.
 
 .. sql-presto-statement-operator-not-end
 

@@ -433,7 +433,7 @@ If you see an orchestration error notification, click the **View Workflow** link
 The following is a list of status notifications that appear within a notification as it is running or after it has completed:
 
 * Waiting to start ...
-* Orchestration group job(s) created
+* Orchestration group jobs created
 * Orchestration group run requested
 * Orchestration run requested
 * Orchestration started

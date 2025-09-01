@@ -47,7 +47,7 @@ When to use
 #. Run with **phone** as the semantic.
 #. Run with **given-name** and **surname** as the semantic.
 #. Run with other semantics, as necessary.
-#. Examine the results (~30 minutes). Look for examples of supersized clusters or for examples of overclustering.
+#. Examine the results. Look for examples of supersized clusters or for examples of overclustering.
 
 .. stitch-qa-query-many-semantic-values-use-end
 
@@ -58,6 +58,8 @@ Configure query
 ==================================================
 
 .. stitch-qa-query-many-semantic-values-steps-start
+
+.. vale off
 
 #. From the **Queries** page, open the **Stitch QA** folder, and then select this query.
 
@@ -117,5 +119,7 @@ Configure query
 
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
+
+.. vale on
 
 .. stitch-qa-query-many-semantic-values-steps-end

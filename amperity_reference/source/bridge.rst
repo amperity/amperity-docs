@@ -264,6 +264,12 @@ A sync that is not configured to run as part of a scheduled workflow may be sync
 
 .. bridge-howto-sync-end
 
+.. bridge-howto-sync-datatypes-start
+
+.. important:: If an upstream data type changes, edit the bridge in Amperity, accept the changes, and then save and sync the bridge.
+
+.. bridge-howto-sync-datatypes-end
+
 **To sync a bridge**
 
 .. bridge-howto-sync-steps-start

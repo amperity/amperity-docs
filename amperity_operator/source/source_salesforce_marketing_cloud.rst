@@ -55,9 +55,11 @@ Get details
 
 #. The username.
 #. The passphrase.
-#. The host public key (if encryption is configured).
+#. The host public key if encryption is configured.
 #. The hostname.
-#. A list of objects (by filename and file type, e.g. "accounts.csv", "customers.csv", "email-list.csv", and so on) in the |source-name| SFTP location to be sent to Amperity. This location is also referred to as the "Export" folder from the perspective of |source-name|.
+#. The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during feed creation.
+
+   This location is also referred to as the "Export" folder from the perspective of |source-name|.
 #. A sample for each file to simplify feed creation.
 #. Review the `Marketing Cloud SFTP Guide <https://help.salesforce.com/articleView?id=mc_es_enhanced_ftp_guide.htm>`__ |ext_link| to answer questions about configuring and managing |source-name|.
 #. The name of the directory within the |source-name| SFTP server from which data should is pulled. Use the **Import Location** field to define a non-default directory.

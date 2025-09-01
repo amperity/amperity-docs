@@ -128,6 +128,8 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. source-sailthru-review-data-start
 
+.. vale off
+
 The feed and domain table will match the fields defined in the `GET user profile data endpoint <https://getstarted.sailthru.com/developers/api/user/#GET_user_profile_data>`__ |ext_link|:
 
 * **click_time**
@@ -145,6 +147,8 @@ The feed and domain table will match the fields defined in the `GET user profile
 * **optout_email**
 * **signup_time**
 * **view_time**
+
+.. vale on
 
 .. source-sailthru-review-data-end
 

@@ -47,7 +47,7 @@ This approach ensures that customers can:
 
 .. sources-amazon-s3-cross-account-roles-setup-start
 
-After setting up cross-account role assumption, a list of files (by filename and file type), along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after cross-account role assumption is configured.
+After setting up cross-account role assumption, a list of files by filename and file type, along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after cross-account role assumption is configured.
 
 .. sources-amazon-s3-cross-account-roles-setup-end
 

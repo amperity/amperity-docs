@@ -22,7 +22,7 @@ About the Customer 360 database
 The **Customer 360** page allows databases to be created from any combination of stitched output, passed-through domain tables, and custom domain tables. At least one database must be designated as your "Customer 360" database, but there is no limit to the number of databases you may configure for use with any downstream workflow. For example:
 
 * Use a passthrough database to separate raw source data from stitched customer data.
-* Use a QA database to build tables for use with validating Stitch quality and for ensuring that interactions records (for orders and items) are being measured correctly.
+* Use a QA database to build tables for use with validating Stitch quality and for ensuring that interactions records are measured correctly.
 * Use a custom database for experimentation.
 
 .. databases-end
@@ -124,8 +124,8 @@ Define customer profile
 
 Customer profile details are pulled from the **Customer 360** table, which represents all of your unified customer profiles, including:
 
-* Names (first names, last names), email addresses, physical addresses, phone numbers
-* Transaction details (first purchases, last purchases, total purchases, etc)
+* Names, including first and last names, email addresses, physical addresses, phone numbers
+* Transaction details, including first purchases, last purchases, and total purchases
 * Other custom profile values that are unique to your company
 
 You can choose to summarize these customer profile details directly on the **Customer 360** page.
@@ -626,7 +626,7 @@ The following topics represent starting points for some of the ways you can exte
 #. :doc:`Use first-party data <data_first_party>`
 #. :doc:`Use third-party data <data_third_party>`
 
-This list represents a small percentage of the use cases you can enable with Amperity. Talk with your Amperity representative about how you can best enable these (and other) use cases for your tenant.
+This list represents a small percentage of the use cases you can enable with Amperity. Ask your Amperity representative about how you can best enable these types of use cases for your tenant.
 
 .. databases-extend-end
 
@@ -638,7 +638,7 @@ Export databases and tables
 
 .. databases-export-start
 
-A database may be configured to export one or more tables (or even the entire database) from Amperity. Each database export must be assigned a unique name, and then is configured to select one or more tables to be included in the export. A database export must be associated with a configured destination and must be added to an orchestration.
+A database may be configured to export one or more tables or even the entire database from Amperity. Each database export must be assigned a unique name, and then is configured to select one or more tables to be included in the export. A database export must be associated with a configured destination and must be added to an orchestration.
 
 .. databases-export-end
 

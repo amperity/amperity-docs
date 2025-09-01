@@ -402,6 +402,8 @@ Update the list of domain tables under **Source_Priority** to contain *at least 
 
 .. table-merged-customers-sql-query-required-update-source-priority-sql-start
 
+.. vale off
+
 .. code-block:: sql
    :linenos:
    :emphasize-lines: 5,6
@@ -414,6 +416,8 @@ Update the list of domain tables under **Source_Priority** to contain *at least 
          ,("Domain:Table", x)
        AS (sp_datasource, priority)
      )
+
+.. vale on
 
 .. table-merged-customers-sql-query-required-update-source-priority-sql-end
 
@@ -732,6 +736,8 @@ Assigning field priority to a custom PII semantic is optional and should only be
 
 .. table-merged-customers-extend-pii-semantic-custom-with-priority-steps-start
 
+.. vale off
+
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the **Merged Customers** table.
 #. Find the **Field_Priority** section and update it to add the **email_internal** column to the field priority list:
@@ -792,6 +798,8 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
+
+.. vale on
 
 .. table-merged-customers-extend-pii-semantic-custom-with-priority-steps-end
 
@@ -930,6 +938,8 @@ The following example shows how to extend the **Merged Customers** table to conc
 
 .. table-merged-customers-extend-pii-semantic-full-names-steps-start
 
+.. vale off
+
 #. From the **Customer 360** tab, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
 #. Find the **Unified_Preprocessed** section and add the highlighted line:
@@ -971,6 +981,8 @@ The following example shows how to extend the **Merged Customers** table to conc
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
 
+.. vale on
+
 .. table-merged-customers-extend-pii-semantic-full-names-steps-end
 
 
@@ -988,6 +1000,8 @@ The following example shows how to extend the **Merged Customers** table to supp
 **To support custom email semantics**
 
 .. table-merged-customers-extend-pii-semantic-email-steps-start
+
+.. vale off
 
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
@@ -1026,6 +1040,8 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
 
+.. vale on
+
 .. table-merged-customers-extend-pii-semantic-email-steps-end
 
 
@@ -1043,6 +1059,8 @@ The following example shows how to extend the **Merged Customers** table to supp
 **To support custom phone semantics**
 
 .. table-merged-customers-extend-pii-semantic-phone-steps-start
+
+.. vale off
 
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
@@ -1080,5 +1098,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
+
+.. vale on
 
 .. table-merged-customers-extend-pii-semantic-phone-steps-end

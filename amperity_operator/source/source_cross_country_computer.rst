@@ -38,7 +38,7 @@ Pull from Cross Country Computer
 
 .. source-ccc-not-a-delimited-file-start
 
-.. important:: Files provided by |source-name| are text files with fixed-width fields. These text files may (at first) appear to be a CSV file, but are not a delimited file format. This is the standard output and format of files provided by |source-name|. You may request from |source-name| to convert the text file format into a delimited CSV file, but |source-name| may charge your brand a fee to reformat the file.
+.. important:: Files provided by |source-name| are text files with fixed-width fields. These text files may appear to be a CSV file, but are not a delimited file format. This is the standard output and format of files provided by |source-name|. You may request from |source-name| to convert the text file format into a delimited CSV file, but |source-name| may charge your brand a fee to reformat the file.
 
    Because the frequency at which your brand updates data from |source-name| is likely to be very low, Amperity recommends to use a custom domain table to apply formatting to the individual fixed-width fields within the text file provided by |source-name|, after which you can apply semantic tags.
 
@@ -88,7 +88,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The host public key (if encryption is configured).
+     - The host public key if encryption is configured.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

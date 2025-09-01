@@ -33,7 +33,7 @@ When to use
 .. stitch-qa-query-detailed-examples-use-start
 
 #. Run this query on a regular basis.
-#. Review the results of this query (typically ~30-60 minutes).
+#. Review the results of this query.
 #. Look for clusters with anomalies above the threshold.
 #. Investigate each individual cluster in which anomalies are discovered.
 
@@ -122,7 +122,7 @@ Configure query
       t1.fk_campaign AS fk_campaign_a
       t2.fk_campaign AS fk_campaign_b
 
-#. Rows may be numbered by case (default) or by Amperity ID.
+#. Rows may be numbered by **case_count** or by Amperity ID.
 
    .. code-block:: sql
       :linenos:

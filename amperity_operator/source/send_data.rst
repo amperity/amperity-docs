@@ -200,8 +200,6 @@ Amperity strongly recommends and prefers data exchange to use customer-managed c
 
 Systems that support change data capture (CDC) are often suitable, but those types of systems are uncommon. Even when systems do support all of these properties, upstream changes, such as normalizing a status column or changing a billing code, can cause updates to large percentages of records, which can be risky given the preference for 24-hour cadences for all workflows.
 
-A hybrid path where a REST API is used for partial incremental changes, and then a separate file-based delivery path is used for catch-ups (either on regular intervals or on-demand) adds more surface area (i.e. risk) to the workflow.
-
 Some REST APIs support bulk delivery, which can perform with the same type of reliability as cloud-accessible storage locations.
 
 A complete file-based delivery using cloud-accessible storage locations is the most reliable way to get very large data volumes to Amperity.
@@ -258,7 +256,7 @@ The following collection details are needed for customer-owned Amazon S3, Azure 
    * - Azure Blob Storage
      - Using shared access credentials, the name of the container, the blob prefix, and credential details.
    * - SFTP
-     - Host name, user name, public key (preferred).
+     - Recommended. Host name, user name, and public key.
 
        -or-
 

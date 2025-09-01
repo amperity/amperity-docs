@@ -674,11 +674,15 @@ Incorrect data extension name
 
 .. destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name-start
 
+.. vale off
+
 The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
 
 ::
 
    ! @ # $ % ^ * ( ) = { } [ ] \ . < > / " : ? | , &
+
+.. vale on
 
 The name of a data extension in |destination-name| must be globally unique across folders in |destination-name| *and also* must match the primary key of that data extension, as it is configured in Amperity.
 

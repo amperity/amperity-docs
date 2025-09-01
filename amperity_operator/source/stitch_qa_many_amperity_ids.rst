@@ -47,7 +47,7 @@ When to use
 #. Run with **phone** as the semantic.
 #. Run with **address** as the semantic.
 #. Run with other semantics, as necessary.
-#. Examine the results (~30 minutes). Look for examples of underclustering and for values that can be added to the :doc:`bad-values blocklist <blocklist_bad_values>`.
+#. Examine the results. Look for examples of underclustering and for values that can be added to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 
 .. stitch-qa-query-many-amperity-ids-use-end
 
@@ -58,6 +58,8 @@ Configure query
 ==================================================
 
 .. stitch-qa-query-many-amperity-ids-steps-start
+
+.. vale off
 
 #. From the **Queries** page, open the **Stitch QA** folder, and then select this query.
 
@@ -183,5 +185,7 @@ Configure query
    .. tip:: You can create a separate query that contains only this **SELECT** statement instead of commenting out the **SELECT** statements in this query that find a single semantic or a combination of semantics.
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
+
+.. vale on
 
 .. stitch-qa-query-many-amperity-ids-steps-end

@@ -528,7 +528,7 @@ Invalid credentials
 
 .. _destination-google-ads-workflow-actions-missing-required-attributes:
 
-Missing required field(s)
+Missing required fields
 --------------------------------------------------
 
 .. destination-google-ads-workflow-actions-missing-required-field-start
@@ -631,7 +631,7 @@ Contact Info Matching
 
 .. destination-google-ads-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs. Each field should be matched to (at least) one of the following columns:
+A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340

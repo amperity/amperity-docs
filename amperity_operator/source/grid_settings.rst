@@ -31,7 +31,7 @@ Rules
 
 .. settings-rules-start
 
-Rules define priority for deterministic identity resolution. Rules are evaluated in order (top-to-bottom) until a rule returns true.
+Rules define priority for deterministic identity resolution. Rules are evaluated in order, from top-to-bottom, until a rule returns true.
 
 .. settings-rules-end
 

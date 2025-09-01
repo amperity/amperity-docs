@@ -415,7 +415,7 @@ State, province, and territory codes
 
 .. table-unified-paid-media-sql-query-optional-configure-codes-start
 
-Amperity uses a **CASE** statement ot define standardized state and province codes for the United States (states and territories) and Canada (provinces and territories).
+Amperity uses a **CASE** statement ot define standardized state and province codes for states and territories within the United States and provinces and territories within Canada.
 
 The default **CASE** statement located in the **address_and_details_prep** common table expression standardizes states, provinces, and territories into two digit codes:
 

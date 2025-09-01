@@ -111,7 +111,7 @@ Audience profile updates
 
 Profile attributes, such as **email**, **birthdate**, **address**, and **phone**, contain stable values. Most customers remain at the same address and have the same phone number for years. An individual customer's birthdate never changes. When customer profile attributes do change your brand will always want to update any downstream audience profiles.
 
-Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be carefully evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use case(s).
+Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be carefully evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use cases.
 
 .. destination-braze-attribute-updates-overview-end
 

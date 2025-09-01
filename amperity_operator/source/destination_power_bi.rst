@@ -191,7 +191,7 @@ Connect to Snowflake
 
 .. destination-powerbi-connect-to-snowflake-start
 
-Amperity can be configured to :doc:`share data (tables and/or entire databases) directly with Snowflake <bridge_snowflake>`. Microsoft Power BI can be configured to connect to a Snowflake data warehouse and use that data as a data source.
+Amperity can be configured to :doc:`share datasets directly with Snowflake <bridge_snowflake>`. Microsoft Power BI can be configured to connect to a Snowflake data warehouse and use that data as a data source.
 
 .. destination-powerbi-connect-to-snowflake-end
 

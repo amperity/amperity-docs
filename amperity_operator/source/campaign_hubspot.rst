@@ -64,7 +64,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
    If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import will fail and return a 400 error.
 
-   If you experience a 400 error (due to invalid email addresses), identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
+   If you experience a 400 error due to invalid email addresses, identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
 
    Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
 

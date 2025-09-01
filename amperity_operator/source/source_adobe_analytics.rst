@@ -60,13 +60,13 @@ Adobe Analytics may be configured to send data to Amperity using SFTP, Amazon S3
 
 #. The RSA public key to use for PGP encryption.
 
-   This key must be downloaded from the Adobe Analytics console, and then sent to Amperity using SnapPass. A representative of Amperity will add the certificate to the SFTP location that is built into Amperity (**<tenant>.sftp.amperity.com**).
+   This key must be downloaded from the Adobe Analytics console, and then sent to Amperity using SnapPass. A representative of Amperity will add the certificate to the SFTP location that is built into Amperity: **<tenant>.sftp.amperity.com**.
 
    .. tip:: Amperity provides a built-in SFTP connector for |source-name| with some pre-configured settings.
 
       You may configure |source-name| to send data to :doc:`Amazon S3 <source_amazon_s3>` or :doc:`Azure Blob Storage <source_azure_blob_storage>`, after which you would use that data source to configure your connection to |source-name|. The connection steps will change (from SFTP to Amazon S3 or Azure Blob Storage) and are outlined in those topics, but all other steps are the same as outlined in this topic.
 
-#. From the Adobe Anaytics admin console, configure an `Adobe Analytics Data Feed <https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html>`__ |ext_link|. Specify the connection type as **SFTP**, port **22**, the host name (**<tenant>.sftp.amperity.com**), and then the folder path to which that data is sent. For example: **/tenant/**.
+#. From the Adobe Anaytics admin console, configure an `Adobe Analytics Data Feed <https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html>`__ |ext_link|. Specify the connection type as **SFTP**, port **22**, the **<tenant>.sftp.amperity.com** hostname, and then the folder path to which that data is sent. For example: **/tenant/**.
 
 #. From the Adobe Analytics console, configure the contents of the data feed to contain a limited set of fields. (Clickstream data can contain hundreds or even thousands of fields. Many of these are not useful for workflows within Amperity).
 
@@ -103,7 +103,7 @@ Adobe Analytics can send data to the SFTP location that is built into Amperity. 
 
 .. source-adobe-analytics-clickstream-files-schedule-start
 
-When configured to run on a schedule, the output from Adobe Analytics is a compressed Gzip that contains multiple files. One of these files (**hit_data.tsv**) is the primary table and should be configured to run on a daily basis. All of the other files are static lookup tables for codes in the primary table.
+When configured to run on a schedule, the output from Adobe Analytics is a compressed Gzip that contains multiple files. One of these files--**hit_data.tsv**--is the primary table and should be configured to run on a daily basis. All of the other files are static lookup tables for codes in the primary table.
 
 .. source-adobe-analytics-clickstream-files-schedule-end
 

@@ -155,7 +155,7 @@ A source that uses |source-name| credentials may use a connection string, a shar
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - :ref:`Configure a data source and feed <source-azure-blob-storage-add-data-source>` to pull data from configured location, after which the list of files (by filename and file type) will be visible from Amperity.
+     - :ref:`Configure a data source and feed <source-azure-blob-storage-add-data-source>` to pull data from configured location, after which the list of files by filename and file type will be visible from Amperity.
 
 .. source-azure-blob-storage-configure-azure-credentials-end
 
@@ -184,7 +184,7 @@ Amperity recommends to use Azure Data Share to manage access to customer-managed
 
 .. source-azure-blob-storage-configure-azure-data-share-after-start
 
-After setting up Azure Data Share, a list of files (by filename and file type), along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after Azure Data Share is configured.
+After setting up Azure Data Share, a list of files by filename and file type, along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after Azure Data Share is configured.
 
 .. source-azure-blob-storage-configure-azure-data-share-after-end
 

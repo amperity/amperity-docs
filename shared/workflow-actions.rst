@@ -53,7 +53,7 @@ If you receive a notification error, review the details, and then click the **Vi
 
 .. workflow-actions-common-table-section-two-start
 
-On the **Workflows** page, review the individual steps to determine which step(s) have errors that require your attention, and then click **Show Resolutions** to review the list of workflow actions that were generated for this error.
+On the **Workflows** page, review the individual steps to determine which steps have errors that require your attention, and then click **Show Resolutions** to review the list of workflow actions that were generated for this error.
 
 .. workflow-actions-common-table-section-two-end
 

@@ -607,6 +607,8 @@ When using the bad-values blocklist, you must update the **Merged Customers** ta
 
 .. bad-values-blocklist-update-merged-customers-steps-start
 
+.. vale off
+
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
 #. Find the **Unified_Prioritized** section, and then update the first value blocks for **email** and **phone** to add the **.blv** entries:
@@ -664,6 +666,8 @@ When using the bad-values blocklist, you must update the **Merged Customers** ta
 
 .. note:: If you add other PII semantics to the bad-values blocklist, such as for addresses, be sure to make the same changes to the structs.
 
+.. vale on
+
 .. bad-values-blocklist-update-merged-customers-steps-end
 
 
@@ -704,7 +708,7 @@ The following Stitch QA queries can be configured to exclude values for the bad-
 #. :doc:`Split clusters <stitch_qa_split_clusters>`
 #. :doc:`Unmatched semantic values <stitch_qa_unmatched_semantic_values>`
 
-After configuring the bad-values blocklist, examine each of the Stitch QA queries and determine which bad values (if any) should be excluded from the query.
+After configuring the bad-values blocklist, examine each of the Stitch QA queries and determine which bad values should be excluded from the query.
 
 .. bad-values-blocklist-update-stitch-qa-end
 
@@ -780,7 +784,7 @@ Expand returned values
 
 .. bad-values-blocklist-advanced-expand-returned-values-start
 
-In situations where multiple values exist for phone and/or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole (concatenated) value.
+In situations where multiple values exist for phone and/or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole concatenated value.
 
 .. bad-values-blocklist-advanced-expand-returned-values-end
 
@@ -816,9 +820,9 @@ When **address** is added to the bad-values blocklist, be sure to verify that re
 
 .. bad-values-blocklist-advanced-addresses-context-start
 
-An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold (at least "40", but higher if necessary) for **address**, verify the results, and then adjust the threshold carefully until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
+An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold--at least "40", but higher if necessary--for **address**, verify the results, and then adjust the threshold carefully until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
 
-When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group---**address**, **city**, and **state**---does not replace the **address** value in the **Stitch_BadValues** table; the same address value may appear multiple times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
+When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group--**address**, **city**, and **state**--does not replace the **address** value in the **Stitch_BadValues** table; the same address value may appear multiple times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
 
 .. bad-values-blocklist-advanced-addresses-context-end
 
@@ -901,7 +905,11 @@ You may create a CSV file to use for custom bad-value blocklists. The table stru
 * semantic
 * value
 
+.. vale off
+
 and then must contain a unique value per row, associated to a single Amperity semantic. Use a wildcard value (``*``) to associate a value with all data sources:
+
+.. vale on
 
 .. code-block:: mysql
 

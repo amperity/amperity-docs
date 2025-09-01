@@ -527,13 +527,17 @@ This approach can help records survive blocking by ensuring groups of records ar
       * **rep_pk** is an identifier that represents the first grouping of records done by Stitch. This grouping is based on identical semantic patterns.
       * **rep_ds** is the datasource that is associated with the **rep_pk** column.
 
-      The combination of **rep_ds** and **rep_pk** represent nearly-identical records that were grouped together by Stitch early in the identity resolution process. (These nearly-identical records are also referred to as a "trivial duplicate".) All of these nearly-identical records are treated as a single record by downstream Stitch processes.
+      The combination of **rep_ds** and **rep_pk** represent nearly-identical records that were grouped together by Stitch early in the identity resolution process.
+
+      .. note:: Nearly-identical records are also referred to as a "trivial duplicate.
+
+      All nearly-identical records are treated as a single record by downstream Stitch processes.
 
    .. include:: ../../amperity_reference/source/semantics.rst
       :start-after: .. semantics-key-foreign-trivial-duplicates-start
       :end-before: .. semantics-key-foreign-trivial-duplicates-end
 
-#. Look for records that score at 5.0, but do not have foreign keys in common. One (or both) records likely have a trivial duplicate with another record with a different foreign key, causing there to be a foreign key match between two groups of trivial duplicates.
+#. Look for records that score at 5.0, but do not have foreign keys in common. One or both records likely have a trivial duplicate with another record with a different foreign key, causing there to be a foreign key match between two groups of trivial duplicates.
 #. If a trivial duplicate is identified, :ref:`configure Stitch to use a semantic exclusion <configure-stitch-advanced-trivial-duplicates-exclusions>`.
 
 .. qa-stitch-look-for-foreign-keys-trivial-duplicates-what-end
@@ -615,7 +619,7 @@ Problematic nicknames
 
 Nicknames can affect the results of blocking and clustering when they prevent obvious matches from being matched. For example, Mike is a nickname for Michael. :ref:`Blocking strategies <configure-stitch-advanced-clustering-blocking>` that include **given-name** use the first three characters to match records.
 
-In this example, "Mik" and "Mic" do not match, but :ref:`depending the presence of foreign keys and other profile values <configure-stitch-advanced-clustering-matching-strategy>` (like **email**, **surname**, **phone**, and **address**), these records may still be scored together.
+In this example, "Mik" and "Mic" do not match, but :ref:`depending the presence of foreign keys and other profile values <configure-stitch-advanced-clustering-matching-strategy>` records may still be scored together.
 
 Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations. You can :doc:`upload your own static CSV files to extend the list of common nicknames to add and/or remove nicknames <stitch_nicknames>` as needed for your tenant.
 
@@ -645,7 +649,7 @@ Each cluster with low-scoring record pairs should be investigated to confirm if 
 
 #. Run the :doc:`weakest match <stitch_qa_weakest_match>` query and examine low-scoring record pairs to confirm if those records were accurately clustered.
 #. Run the :doc:`cluster scores <stitch_qa_cluster_scores>` query to investigate pairwise comparison scores for individual clusters or for a set of clusters.
-#. Nicknames (unusual or less common) can be a reason for a low-scoring record pair.
+#. Unusual or less common nicknames can be a reason for a low-scoring record pair.
 #. Consider tuning Stitch to :ref:`raise or lower the pairwise comparison scoring threshold <configure-stitch-advanced-clustering-matching-thresholds>`. The default threshold is 3.0.
 
    .. important:: The default threshold is recommended, regardless of data quality or volume of data or quality of your current Stitch results. A lower threshold leads to more matches and fuzzier matched pairs, whereas a higher threshold will lead to fewer matches and more precise matched pairs. The default threshold is the right balance. Look for ways to resolve low-scoring record pairs without changing the pairwise comparison scoring threshold.

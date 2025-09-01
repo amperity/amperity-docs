@@ -93,7 +93,7 @@ The |source-name| destination requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - A list of objects (by filename and file type) in the S3 bucket to be sent to Amperity and a sample for each file to simplify feed creation.
+     - A list of objects by filename and file type in the S3 bucket to be sent to Amperity and a sample for each file to simplify feed creation.
 
        Review :ref:`how to configure Kinesis Data Firehose <source-amazon-kinesis-data-firehose-kinesis-data-firehose>`.
 
@@ -111,7 +111,7 @@ Configure Kinesis Data Firehose
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-start
 
-You may configure any supported data producer to use |source-name| services to automatically send real-time streaming data to |source-name|, and then make that data available to Amperity. Amperity can be configured to pull the real-time data (in batches) from any Amazon S3 location. It is recommended to send this data to a customer-managed Amazon S3 bucket, and then configure Amperity to pull data from that bucket.
+You may configure any supported data producer to use |source-name| services to automatically send real-time streaming data to |source-name|, and then make that data available to Amperity. Amperity can be configured to pull batched real-time data from any Amazon S3 location. It is recommended to send this data to a customer-managed Amazon S3 bucket, and then configure Amperity to pull data from that bucket.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-end
 
@@ -155,7 +155,7 @@ Filename patterns
 Recommended `filename patterns <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#s3-object-name>`__ |ext_link| include:
 
 * Using the YYYY/MM/DD/HH format when writing objects to |source-name|. This prefix will create a logical hierarchy in the bucket by year, then month, then date, and finally hour.
-* Using the default |source-name| object naming pattern that increments (by an increase of 1) a random string at the end of the object's filename.
+* Using the default |source-name| object naming pattern that increments by 1 a random string at the end of the object's filename.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-filename-patterns-end
 
@@ -169,7 +169,7 @@ Delivery frequency
 
 The |source-name| buffer size and interval will determine the `frequency of delivery <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#frequency>`__ |ext_link|. Incoming records will be concatenated based on the frequency of the delivery stream. 
 
-.. warning:: If data fails to deliver to |source-name|, |source-name| will retry for up to 24 hours. If data fails to deliver within 24 hours, the data will be lost, unless it is successfully delivered to a backup location. (You can re-send data if it's backed up.)
+.. warning:: If data fails to deliver to |source-name|, |source-name| will retry for up to 24 hours. If data fails to deliver within 24 hours, the data will be lost, unless it is successfully delivered to a backup location. You can re-send data if it's backed up.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-delivery-frequency-end
 

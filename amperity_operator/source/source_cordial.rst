@@ -194,6 +194,8 @@ Email contacts
 
 .. source-cordial-contacts-start
 
+.. vale off
+
 The feed and domain table for email contacts will match the following fields:
 
 The contacts ingress type will only capture all data, regardless of if a date restriction is placed in the UI.
@@ -205,6 +207,8 @@ The contacts ingress type will only capture all data, regardless of if a date re
 * **ID**
 * **subscribedAt**
 * **subscribeStatus**
+
+.. vale on
 
 .. source-cordial-contacts-start
 

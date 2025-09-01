@@ -80,7 +80,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The host public key (if encryption is configured).
+     - The host public key if encryption is configured.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -105,7 +105,7 @@ The |source-name| data source requires the following configuration details:
 
        .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
 
-       The location must contain the list of files (by filename and file type, e.g. "accounts.csv", "customers.ndjson", "email-list.tsv", and so on) that are to be pulled to Amperity. A sample of each file is used during feed creation.
+       The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during feed creation.
 
 .. source-sftp-get-details-end
 
@@ -117,7 +117,7 @@ Included SFTP site
 
 .. source-sftp-get-details-amperity-start
 
-Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. (The hostname is always all lowercase.)
+Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. The hostname is always all lowercase.
 
 .. note:: The SFTP site is provisioned by an Amperity administrator *after* the initial tenant creation. As such, the SFTP site is not immediately available, but this is not a long process. When the SFTP site is ready, Amperity will use SnapPass to send you the connection details. If you wish to use RSA key-based authentication, please provide the public key to your Amperity administrator when requesting SFTP access.
 

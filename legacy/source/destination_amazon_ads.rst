@@ -579,7 +579,7 @@ Invalid advertiser account ID
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-steps-start
 
-To resolve this error, verify that the advertiser account ID exists in |destination-name|, and then update Amperity for the correct advertiser ID (if necessary).
+To resolve this error, verify that the advertiser account ID exists in |destination-name|, and then update Amperity for the correct advertiser ID if necessary.
 
 #. Open the |destination-name| management console and verify your advertiser account ID.
 #. Open the **Destinations** page in Amperity, and then open the destination for |destination-name| that is associated with this workflow.

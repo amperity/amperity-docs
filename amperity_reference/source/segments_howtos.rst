@@ -1339,7 +1339,7 @@ You can view information on the edit history for a segment from the **Segments**
 #. From the **Segments** page, open the menu for a segment.
 #. Click **Version History**.
 
-The **Segment history** window appears with informations about who edited the segment, the date(s) when the segment was edited, and the description(s) of what was edited.
+The **Segment history** window appears with informations about who edited the segment, the dates when the segment was edited, and the descriptions of what was edited.
 
 .. segments-view-edit-history-steps-end
 

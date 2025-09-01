@@ -379,7 +379,7 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
 
 .. caution:: Review the list of offline events parameters that may be sent to |destination-name|. Compare these parameters to the fields that are available from your brand's customer 360 database to determine which fields are available to be sent to |destination-name|.
 
-   Some parameters, such as **city**, **region** (which represents a state within the United States), and **country**, must be associated with the location in which the offline event occurred, not the location at which the customer associated with the offline event resides.
+   Some parameters, such as **city**, **region**, which represents a state within the United States, and **country**, must be associated with the location in which the offline event occurred, not the location at which the customer associated with the offline event resides.
 
    The **eventname** parameter provides a list of options defined by |destination-name|. Your brand must choose one of the defined options.
 
@@ -469,7 +469,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        An event name groups your brand's offline events a specific category type for offline events as defined by |destination-name|.
 
-       The event name that most frequently is associated with offline events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table (listed alphabetically):
+       The event name that most frequently is associated with offline events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table:
 
        .. list-table::
           :widths: 25 75

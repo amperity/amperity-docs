@@ -491,7 +491,8 @@ A product catalog must be defined, and then joined to the **Unified Itemized Tra
    .. important:: Product affinity modeling requires the field that defines product categories -- **product-category** in the **Unified Product Catalog** table -- to contain between 20 and 2000 unique values.
 
 #. A list of custom attributes may be defined. These must be available as columns in the **Customer 360** database and must be added to the **Unified Itemized Transactions** table.
-#. Tables that define :ref:`product catalog semantic tags <semantics-product-catalogs>` and custom attributes are managed as a data source (and associated feed) and should be maintained as part of your organization's regular Amperity workflow.
+
+#. Tables that define :ref:`product catalog semantic tags <semantics-product-catalogs>` and custom attributes are managed as a data source and should be maintained as part of your organization's regular Amperity workflow.
 
 Extend the **Unified Itemized Transactions** to include the taxonomy that defines your products and brands:
 

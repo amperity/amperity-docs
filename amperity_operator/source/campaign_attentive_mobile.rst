@@ -408,7 +408,7 @@ The following table shows how your segment name will appear in |destination-name
    :header-rows: 1
 
    * - Pattern
-     - Segment name(s)
+     - Segment names
      - Description
 
    * - (empty)

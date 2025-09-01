@@ -117,7 +117,7 @@ Rules
 
 .. configure-stitch-rules-start
 
-Use the **Rules** tab to define a prioritized collection of rules that are used for deterministic identity resolution. Rules are evaluated in order (top-to-bottom), starting from the first rule defined in this tab, until a rule returns true.
+Use the **Rules** tab to define a prioritized collection of rules that are used for deterministic identity resolution. Rules are evaluated in order, from top-to-bottom, starting from the first rule defined in this tab, until a rule returns true.
 
 .. image:: ../../images/mockup-stitch-settings-rules.png
    :width: 520 px
@@ -467,7 +467,7 @@ Jitter tracks changes to Amperity IDs across Stitch runs. You may configure Stit
 
 .. configure-stitch-general-stitch-ignore-jitter-rates-start
 
-.. note:: The rates at which jitter may occur is when large numbers of customer records are added to or removed from your tenant or when two percent (or greater) of all customer records are assigned an updated Amperity ID.
+.. note:: The rates at which jitter may occur is when large numbers of customer records are added to or removed from your tenant or when two percent or greater of all customer records are assigned an updated Amperity ID.
 
 .. configure-stitch-general-stitch-ignore-jitter-rates-end
 
@@ -544,7 +544,7 @@ The following table describes the changes you will see in your tenant after it i
 
        The **Data Explorer** disables the tabs for **Cluster Graph** and **Pairwise Comparison**. These tabs are not available when one-to-one Stitch mode is configured.
 
-       .. note:: The Amperity ID that is generated in one-to-one Stitch mode is based on customer keys (and not on stable clusters of customer records).
+       .. note:: The Amperity ID that is generated in one-to-one Stitch mode is based on customer keys and not on stable clusters of customer records.
 
    * - **Customer 360**
      - The **Unified Scores** table is not generated.
@@ -655,8 +655,8 @@ As new data is input to Amperity, the Stitch process identifies when new or chan
 
 Stable ID assignment can be a resource-intensive process, in particular when:
 
-#. Adding data sources that contain large numbers of rows (100+ million rows) of customer records.
-#. Updating existing data sources with large numbers of rows on a periodic (monthly, quarterly, etc.) basis.
+#. Adding data sources that contain large numbers of rows, such as sources with 100+ million rows of customer records.
+#. Updating existing data sources with large numbers of rows on a periodic basis, such as monthly or quarterly.
 #. Data contains a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
 
 .. configure-stitch-general-stitch-stable-id-end
@@ -667,7 +667,7 @@ You can configure the stable ID assignment process in the following ways:
 
 #. :ref:`Disable stable IDs <configure-stitch-general-stitch-stable-id-disable>`
 #. :ref:`Increase the number of partitions that are available to stable ID assignment <configure-stitch-general-stitch-stable-id-partitions>`
-#. :ref:`Stop building the Unified Changes table (temporarily) <configure-stitch-general-stitch-skip-changes>`
+#. :ref:`Temporarily stop building the Unified Changes table <configure-stitch-general-stitch-skip-changes>`
 
 .. configure-stitch-general-stitch-stable-id-links-end
 
@@ -871,8 +871,8 @@ Blocking is a non-trivial step for record linking. The default blocking strategy
 
 The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
 
-* An overly generous blocking strategy may result in a high recall rate (too many pairs being evaluated) along with negative system performance.
-* An overly conservative blocking strategy may result in a low recall rate (too few pairs being evaluated).
+* An overly generous blocking strategy may result in a high recall rate, which means too many pairs are evaluated. This can affect system performance.
+* An overly conservative blocking strategy may result in a low recall rate, which means too few pairs being evaluated.
 * Individual blocking keys may be conservative or generous.
 
 .. configure-stitch-advanced-clustering-blocking-end
@@ -1256,7 +1256,7 @@ Clean foreign keys
 
 .. configure-stitch-advanced-profile-clean-foreign-keys-start
 
-To clean foreign keys (trim whitespace and update them to uppercase), use:
+To clean foreign keys, including trimming whitespace and updating to uppercase, use:
 
 .. code-block:: clojure
 
@@ -1480,7 +1480,7 @@ Stitch reports
 
 .. configure-stitch-advanced-reports-start
 
-A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included (or excluded) can help improve the quality of the Stitch report. The Amperity IDs that are included will appear first in the series of individuals shown when exploring Amperity IDs.
+A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included or excluded can help improve the quality of the Stitch report. The Amperity IDs that are included will appear first in the series of individuals shown when exploring Amperity IDs.
 
 Stitch may be configured to include or exclude specific Amperity IDs in the Stitch report.
 
@@ -1606,13 +1606,13 @@ However, not all of the PII is identical. The email addresses do not match acros
     r-829   Justin      Currie     123 West Elm St   ...    vnbb11095412@gmail.com
    ------- ----------- ---------- ----------------- ------ ------------------------
 
-The complete set of records (including trivial duplicates) will be available in the **Unified Coalesced** table. The collapsed records will be available in the **Unified Preprocessed Raw** table.
+The complete set of records, including trivial duplicates, will be available in the **Unified Coalesced** table. The collapsed records will be available in the **Unified Preprocessed Raw** table.
 
 .. configure-stitch-advanced-trivial-duplicates-example-end
 
 .. term-trivial-duplicate-qualified-start
 
-A qualified trivial duplicate is a set of records with enough matching PII to score 3.0 (or greater) and were grouped together.
+A qualified trivial duplicate is a set of records with enough matching PII to score 3.0 or greater and were grouped together.
 
 .. term-trivial-duplicate-qualified-end
 
@@ -1668,7 +1668,7 @@ To define an exclusion, add the following advanced configuration setting for Sti
 
    :amperity.stitch.settings/soft-trivial-dupe-semantic-exclusions #{"semantic_name"}
 
-where **semantic_name** is a the name of a semantic, such as **email**. (This value is **nil** by default.)
+where **semantic_name** is a the name of a semantic, such as **email**. This value is **nil** by default.
 
 .. configure-stitch-advanced-profile-trivial-duplicates-exclusions-end
 

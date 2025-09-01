@@ -29,13 +29,17 @@ Apply semantic tags
 
 .. admonition:: Extract, load, transform (ELT)
 
-   An important benefit of semantic tagging is that it allows raw data to be provided directly to Amperity. This avoids a traditional (and more expensive) extract, transform, and load (ETL) operations. Amperity extracts, loads, and then transforms raw data from any number of data sources.
+   An important benefit of semantic tagging is that it allows raw data to be provided directly to Amperity. This avoids a traditional and more expensive extract, transform, and load (ETL) operations. Amperity extracts, loads, and then transforms raw data from any number of data sources.
 
 .. semantics-noetl-end
 
 .. semantics-reference-links-start
 
+.. vale off
+
 The following groups of semantic tags are available: |semantics_customer_profile|, email address (|semantics_email_events|, |semantics_email_events_summary|, and |semantics_email_optin|), |semantics_product_catalog|, |semantics_keys_fk|, loyalty programs (|semantics_loyalty_profiles| and |semantics_loyalty_events|), |semantics_sms_optin|, and |semantics_transactions|.
+
+.. vale on
 
 .. semantics-reference-links-end
 
@@ -57,7 +61,7 @@ The following groups of semantic tags are available: |semantics_customer_profile
       The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with the LAST UPDATED FIELD dropdown list.
 #. Apply any other semantic tags, such as for transactions, itemized transactions, or custom semantic tags, as appropriate.
 
-   .. important:: Semantic tags for interactions records (transactions, itemized transactions, loyalty profiles, email events, and so on) may need to be reshaped prior to applying semantic tags. Use custom domain tables and reshape the data using domain SQL prior to applying semantic tags.
+   .. important:: Semantic tags for interactions records, such as transactions, itemized transactions, loyalty profiles, and email events, may need to be reshaped prior to applying semantic tags. Use custom domain tables and reshape the data using domain SQL prior to applying semantic tags.
 
       In those situations, leave the semantic tag fields empty in the **Feed Editor**, build a custom domain table that shapes the fields to align to the semantic tagging requirements, and then apply semantic tags.
 #. Click **Activate**.
@@ -88,6 +92,8 @@ Profiles
 
 .. semantics-profile-about-start
 
+.. vale off
+
 Semantic tagging is done while configuring a feed. A feed tells Amperity how to map your data to a series of standardized terms used by Amperity for PII data. These terms include:
 
 * **email** (for email addresses)
@@ -95,6 +101,8 @@ Semantic tagging is done while configuring a feed. A feed tells Amperity how to 
 * **given-name**, **surname**, **title**, **generational-suffix**, and **full-name** for all types of name combinations
 * **address**, **city**, **state**, **postal** for addresses
 * **birthdate** (for birthdays)
+
+.. vale on
 
 .. warning:: Fields to which the **postal** and **phone** semantic tags are applied must be configured to have a String data type. Fields to which the **birthdate** semantic tag is applied must be configured to have a Date data type. If these fields do not have the correct data type Amperity will show an error when saving the feed.
 
@@ -159,7 +167,7 @@ Use an ordinal to append an integer to each semantic within an address group.
      - postal-2
      - postal-3
 
-This will create columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, **address_3** and so on and will keep each location (which is a combination of address, address2, city, state, postal) intact.
+This will create columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, **address_3** and so on and will keep each location intact.
 
 .. semantics-profile-type-address-ordinals-end
 
@@ -463,7 +471,7 @@ Use the **loy/** and **loy-event/** semantic tag collections to apply semantic t
    #. The **loy/email** and **loy-event/email** semantic tags are applied to fields that contain email addresses.
    #. The **loy/birthdate** semantic tag is applied to fields that contain birthdates.
 
-   (Source tables for loyalty profiles and events should not be made available to Stitch.)
+   Source tables for loyalty profiles and events should not be made available to Stitch.
 
 .. semantics-profile-type-loyalty-make-available-to-stitch-end
 
@@ -1020,7 +1028,7 @@ Customer records
 
 .. semantics-interactions-customer-records-start
 
-If customer records use foreign keys---such as **fk-[namespace]**---as semantic tags *and* the same types of fields exist within interaction records, apply those foreign key semantic tags to the corresponding fields in the interaction records.
+If customer records use foreign keys, such as **fk-[namespace]**, as semantic tags *and* the same types of fields exist within interaction records, apply those foreign key semantic tags to the corresponding fields in the interaction records.
 
 This will directly associate the customer records to the interaction records and will create stitched output that adds the Amperity ID to both record types.
 
@@ -1034,7 +1042,7 @@ Interaction records
 
 .. semantics-interactions-interaction-records-start
 
-If interaction records use foreign keys---such as **fk-[namespace]**---as semantic tags and the same types of fields exist within customer records, apply those foreign key semantic tags to the corresponding fields in the customer records.
+If interaction records use foreign keys, such as **fk-[namespace]**, as semantic tags and the same types of fields exist within customer records, apply those foreign key semantic tags to the corresponding fields in the customer records.
 
 This will directly associate the interaction records to the customer records and will create stitched output that adds the Amperity ID to both record types.
 
@@ -1050,11 +1058,11 @@ Custom semantics
 
 .. semantics-interactions-custom-semantics-start
 
-In a scenario where foreign keys are not available, apply a custom semantic tag---such as **customer-id**---to a column that best identifies the customer within interaction records. Use a SQL join in the customer 360 database to associate this field (along with the interaction records) to the Amperity ID.
+In a scenario where foreign keys are not available, apply a custom semantic tag, such as **customer-id**, to a column that best identifies the customer within interaction records. Use a SQL join in the customer 360 database to associate this field, along with the interaction records, to the Amperity ID.
 
 Apply this type of custom semantic to both interaction records and customer records in a similar way as foreign keys. Use the following naming patterns:
 
-* For customer records: **customer-id** (without a prefix)
+* For customer records: **customer-id** without a prefix
 * For transactions data: **customer-id**
 
 and then use SQL in the customer 360 database similar to join transactions to the customer 360 table. For example:
@@ -1081,7 +1089,7 @@ Keys
 
 .. semantics-keys-start
 
-Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
+Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are not processed by Stitch for the purpose of identity resolution.
 
 .. semantics-keys-end
 
@@ -1146,7 +1154,9 @@ Update blocking strategies
 
 .. semantics-key-blocking-update-start
 
-Blocking is a non-trivial step for record linking in the Stitch process. An overly generous blocking strategy may result in a high recall rate (too many pairs being evaluated) along with negative system performance. An overly conservative blocking strategy may result in a low recall rate (too few pairs being evaluated). The right combination of blocking keys creates the ideal recall rate for Stitch results.
+Blocking is a non-trivial step for record linking in the Stitch process. An overly generous blocking strategy may result in a high recall rate, which means too many pairs are evaluated, along with negative system performance.
+
+An overly conservative blocking strategy may result in a low recall rate, which means too few pairs are evaluated. The right combination of blocking keys creates the ideal recall rate for Stitch results.
 
 .. semantics-key-blocking-update-end
 
@@ -1442,7 +1452,7 @@ By default, Amperity derives separation keys for **given-name** and **generation
 
 .. semantics-key-separation-associate-to-semantic-warning-start
 
-.. warning:: Using non-default separation keys to help resolve overclustering problems related to similarities in customer profile data (such as with names and households) requires the classifier for Stitch model configuration to be set to **:general-ordinal-sk-priority**.
+.. warning:: Using non-default separation keys to help resolve overclustering problems related to similarities in customer profile data, such as with names and households, requires the classifier for Stitch model configuration to be set to **:general-ordinal-sk-priority**.
 
 .. semantics-key-separation-associate-to-semantic-warning-end
 

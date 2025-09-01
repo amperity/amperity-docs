@@ -622,7 +622,7 @@ Invalid credentials
 
 .. _source-google-ads-workflow-actions-missing-required-attributes:
 
-Missing required field(s)
+Missing required fields
 --------------------------------------------------
 
 .. destination-google-ads-workflow-actions-missing-required-field-start

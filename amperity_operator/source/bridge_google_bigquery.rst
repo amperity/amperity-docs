@@ -50,6 +50,10 @@ Data types
 
 Most `Google BigQuery data types <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types>`__ |ext_link| are supported by Amperity Bridge.
 
+.. include:: ../../amperity_reference/source/bridge.rst
+   :start-after: .. bridge-howto-sync-datatypes-start
+   :end-before: .. bridge-howto-sync-datatypes-end
+
 .. note:: **BYTES** and **RANGE** data types are unsupported.
 
 The following table describes how Google BigQuery data types map to Amperity data types.
@@ -281,7 +285,7 @@ The following table describes how Google BigQuery data types map to Amperity dat
 
      - **String**
 
-       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, and descriptions. May be empty. For example:
+       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. May be empty. For example:
 
        * John
        * Smith

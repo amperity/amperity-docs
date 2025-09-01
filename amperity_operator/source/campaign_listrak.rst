@@ -102,7 +102,7 @@ Get details
 
              |destination-name| prefers to use a single list for managing email addresses, which is named "Master List" by default within |destination-name|. This is the name of the list that is most often managed when data is sent to |destination-name| from Amperity.
 
-             If you are not sure which list (or lists) should be managed by Amperity, work with your Listrak representative to determine the best approach for list management.
+             If you are not sure which lists should be managed by Amperity, work with your Listrak representative to determine the best approach for list management.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

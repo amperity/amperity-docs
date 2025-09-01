@@ -197,7 +197,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Suppress records**
 
-       Data in Stitch output (**Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table) that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
+       Data in Stitch output--the **Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table--that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -290,7 +290,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Suppress records**
 
-       Data in Stitch output (**Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table) that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
+       Data in Stitch output--the **Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table--that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -683,7 +683,7 @@ Record has returned?
 
 .. privacy-rights-record-has-returned-start
 
-Amperity is not able to delete records from upstream data sources. It is recommended to design a workflow that ensures that records that appear in the **Unified Compliance** table are deleted from upstream data sources on a schedule that matches the frequency at which Stitch is run in your Amperity tenant. (The **Unified Compliance** table is refreshed as part of each Stitch run.)
+Amperity is not able to delete records from upstream data sources. It is recommended to design a workflow that ensures that records that appear in the **Unified Compliance** table are deleted from upstream data sources on a schedule that matches the frequency at which Stitch is run in your Amperity tenant. The **Unified Compliance** table is refreshed as part of each Stitch run.
 
 If records are not deleted in upstream data sources, and then the records in those upstream data sources are made available to Amperity, it is possible for records that have been flagged for deletion by previous privacy rights workflows will return.
 

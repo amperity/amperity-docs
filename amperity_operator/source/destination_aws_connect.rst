@@ -239,7 +239,7 @@ Amperity provides a pre-built collection of Lambda functions that is available f
 
 #. Clone the open source **amperity-lambda-runner** repository or download it as a ZIP file.
 #. In the repo, navigate to "/src/lambdas/lambda_handlers/", and then open "amazon_pinpoint.py".
-#. You may use this file directly (requiring only configuration updates) or you may customize it to support your desired workflow.
+#. You may use this file directly, requiring only configuration updates, or you may customize it to support your desired workflow.
 
 .. destination-aws-connect-manual-get-template-end
 
@@ -251,7 +251,7 @@ Upload function to AWS Lambda
 
 .. destination-aws-connect-manual-upload-function-start
 
-You must upload the application code (and any dependencies) to AWS Lambda as a ZIP file archive.
+You must upload the application code and any dependencies to AWS Lambda as a ZIP file archive.
 
 **To upload a Lambda function to AWS Lambda**
 
@@ -267,7 +267,7 @@ You must upload the application code (and any dependencies) to AWS Lambda as a Z
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
-#. Find the ZIP file archive that contains the application code (and any dependencies), and then click **Upload**.
+#. Find the ZIP file archive that contains the application code and any dependencies, and then click **Upload**.
 #. Click **Save**.
 
 .. destination-aws-connect-manual-upload-function-end

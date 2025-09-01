@@ -179,7 +179,7 @@ An application user with permission to modify and update records is required.
 
    .. note:: The URI for the application ID and the Azure Active Directory Object ID are both completed automatically.
 
-#. Assign the user a role. Click **Manage Roles**, and then select a role with an access level that allows that user to modify and update records. (Some use cases require a user to delete records.)
+#. Assign the user a role. Click **Manage Roles**, and then select a role with an access level that allows that user to modify and update records. Some use cases require a user to delete records.
 
 .. destination-microsoft-dynamics-configure-user-steps-end
 
@@ -360,7 +360,7 @@ Common Data Service Web API
 
 .. note:: |destination-name| is a complex system. Even though Amperity has a built-in connector that supports sending data to entities within |destination-name|, there are more than 400 possible entities to which you can send data, such as sending segments to :doc:`Dynamics 365 Marketing <destination_dynamics_365_marketing>`, with each of these entities having its own schema that requires a unique mapping of data in a data template.
 
-The `Common Data Service Web API <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9>`__ |ext_link| (version 8.2 and higher or version 9.0) is the API to which Amperity can send data.
+The `Common Data Service Web API <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9>`__ |ext_link|, version 8.2 and higher or version 9.0, is the API to which Amperity can send data.
 
 * |destination-name| is not strict about required fields, in that you may choose to not send fields to |destination-name| even when they are marked as required.
 * |destination-name| is strict about extra fields, in that you should not send fields to |destination-name| that do not already exist in the entity's schema. Use the **include** section in the data template mapping to drop fields that should not be sent to |destination-name|.

@@ -205,7 +205,7 @@ EPM is highly configurable, with the only table used by default being **Merged C
 
 The target event is the event we want to model, e.g. loyalty program signups, credit card signups, repeat bookings. The data asset should have one row per event, and **must have a field for the event's date or timestamp**.
 
-A revenue generating event is an event in which a customer spends money with your brand, e.g. a retail transaction or a booking. The data asset should also have one row per event, and **must have fields for an event's date or timestamp and revenue amount**. You may also select other fields from the revenue generating event that you think would be helpful for modeling (e.g. purchase or booking channel).
+A revenue generating event is an event in which a customer spends money with your brand, e.g. a retail transaction or a booking. The data asset should also have one row per event, and **must have fields for an event's date or timestamp and revenue amount**. You may also select other fields from the revenue generating event that you think would be helpful for modeling, such as a purchase or booking channel.
 
 Additionally, you may configure custom events as further inputs to the model. Custom event data assets are also expected to be one row per event.
 
@@ -243,7 +243,7 @@ Each predictive model allows for additional fields to be added to support your b
 
    Ensure that the **Customer Attributes** table contains all possible exceptions that your brand may want to use.
 
-   Ensure that custom features your brand wants to use in predictive models are largely populated (i.e. small percentage of nulls) and reliable (values don't change much day-to-day).
+   Ensure that custom features your brand wants to use in predictive models are largely populated, have a small percentage of NULL values, and have reliable values that don't change much day-to-day)
 
 .. models-extend-end
 
@@ -347,7 +347,7 @@ Pause a model
 
 .. models-howtows-pause-steps-start
 
-A paused model will not run as part of a courier group workflow, even if that workflow is scheduled. You may activate a paused workflow without redefining the schedule (if a schedule exists).
+A paused model will not run as part of a courier group workflow, even if that workflow is scheduled. You may activate a paused workflow without redefining the schedule if a schedule exists.
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Choose a database, and then from the |fa-kebab| menu, select **Predictive models**. This opens the **Predictive models** page.
@@ -366,7 +366,7 @@ Promote from a sandbox
 The following steps are needed to prepare a model for sandbox promotion.
 
 #. Create a sandbox.
-#. Run the database(s) in which your brand intends to activate models.
+#. Run the databases in which your brand intends to activate models.
 #. :ref:`Add models <models-howtows-add>`.
 #. Start model validations from the lower left-hand-side of the page. When complete, confirm that validation metrics are passing.
 #. :ref:`Start the training jobs <models-howtows-view-jobs>`.

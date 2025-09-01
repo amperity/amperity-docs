@@ -198,7 +198,7 @@ Upload function to AWS Lambda
 
 .. destination-webhook-manual-upload-function-start
 
-You must upload the application code (and any dependencies) to AWS Lambda as a ZIP file archive.
+You must upload the application code and any dependencies to AWS Lambda as a ZIP file archive.
 
 **To upload a Lambda function to AWS Lambda**
 
@@ -214,7 +214,7 @@ You must upload the application code (and any dependencies) to AWS Lambda as a Z
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
-#. Find the ZIP file archive that contains the application code (and any dependencies), and then click **Upload**.
+#. Find the ZIP file archive that contains the application code and any dependencies, and then click **Upload**.
 #. Click **Save**.
 
 .. destination-webhook-manual-upload-function-end
@@ -233,7 +233,7 @@ AWS Lambda must be updated for the name of the custom destination application an
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Under **Runtime settings**, select **Edit**.
-#. Under **Handler**, add "app.application_name" (where "application_name" is replaced with the name of your application), and then click **Save**.
+#. Under **Handler**, add "app.application_name", where "application_name" is replaced with the name of your application, and then click **Save**.
 #. In the AWS Lambda console, open the **Configuration** tab.
 #. Under **General configuration**, select **Edit**.
 #. Set the **Timeout** value to "15 min 0 sec", and then click **Save**.

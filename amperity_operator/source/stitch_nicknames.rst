@@ -23,7 +23,7 @@ Manage nicknames
 
 .. stitch-nicknames-start
 
-Stitch uses given names to identify customer records that should (or should not) be grouped together. Nicknames help Stitch associate variations in given names to the sets of records that uniquely identify your customers.
+Stitch uses given names to identify customer records that should or should not be grouped together. Nicknames help Stitch associate variations in given names to the sets of records that uniquely identify your customers.
 
 Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations.
 
@@ -207,7 +207,7 @@ Likely nickname
 
 .. stitch-nicknames-example-likely-nickname-start
 
-Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details (email address and phone number), it's very likely that Ty is a nickname for Tylian.
+Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it's very likely that Ty is a nickname for Tylian.
 
 Add an entry to the nicknames table to increase the likelihood that Ty and Tylian are considered matching given names:
 

@@ -62,7 +62,7 @@ Amperity can be configured to pull data from Optimizely using Amazon S3. This re
 #. Access to an `Optimizely data service <https://docs.developers.optimizely.com/web/docs/access-optimizely-export-data-via-amazon-s3>`__ |ext_link| hosted in Amazon S3.
 #. The Amazon Resource Name (ARN) for a role with cross-account access.
 #. The name of the Amazon S3 bucket.
-#. A list of objects (by filename and file type) in the Amazon S3 bucket to be pulled to Amperity. 
+#. A list of objects by filename and file type in the Amazon S3 bucket to be pulled to Amperity.
 #. A sample for each file to simplify feed creation.
 
 .. include:: ../../shared/sources.rst

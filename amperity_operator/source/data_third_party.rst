@@ -117,8 +117,8 @@ Limited use of third-party data
 
 When the use of third-party data has fewer restrictions, such as the ability to use:
 
-* Regional and/or location details
-* Reverse appends for email addresses, phone numbers, and/physical addresses for only existing customers of the brand
+* Regional and location details
+* Reverse appends for email addresses, phone numbers, physical addresses for only existing customers of the brand
 * Legal use of end user data when communicating with them via marketing campaigns
 
 Limited restrictions are placed on the data by the vendor. Amperity cannot enforce any of these limited restrictions.
@@ -207,7 +207,7 @@ Match anonymous visitors
 
 Anonymous visitors can be matched to known customers by using a combination of IP addresses and device information, though it is possible for the same customer to browse a website using multiple devices and multiple IP addresses.
 
-It is difficult to personalize a website experience while an anonymous visitor is browsing a website (even when that visitor can be associated to a known customer), but can enable some degree of personalization for those customers as follow-up items, such as sending an abandoned browse or abandoned cart email.
+It is difficult to personalize a website experience while an anonymous visitor is browsing a website, even when that visitor can be associated to a known customer. Some degree of personalization can be provided to those customers as follow-up items, such as sending an abandoned browse or abandoned cart email.
 
 .. data-third-party-match-anonymous-visitors-end
 

@@ -453,7 +453,7 @@ Invalid account ID
 
 .. destination-linkedin-dmp-workflow-actions-invalid-account-id-steps-start
 
-To resolve this error, verify that the advertiser LinkedIn account ID exists in LinkedIn, and then update Amperity for the correct LinkedIn ID (if necessary)
+To resolve this error, verify that the advertiser LinkedIn account ID exists in LinkedIn, and then update Amperity for the correct LinkedIn ID if necessary
 
 #. Open the LinkedIn DMP management console and verify your LinkedIn account ID
 #. Open the **Destinations** page, and then open the destination for LinkedIn DMP associated with this workflow.

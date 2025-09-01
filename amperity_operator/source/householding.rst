@@ -47,7 +47,9 @@ How it works
 
 .. householding-address-based-start
 
-Address-based householding is built upon the results of the **Merged Customers** table. This enables address-based householding the ability to use the results of individual identity resolution that was performed by Amperity (and built into the **Merged Customers** table). Apply the results of address-based householding to campaigns that rely on physical addresses, such as direct mail campaigns, to ensure that a single household gets a single piece of direct mail, even when multiple unique individuals reside within the same household.
+Address-based householding is built upon the results of the **Merged Customers** table. This enables address-based householding the ability to use the results of individual identity resolution that is available from the **Merged Customers** table.
+
+Apply the results of address-based householding to campaigns that rely on physical addresses, such as direct mail campaigns, to ensure that a single household gets a single piece of direct mail, even when multiple unique individuals reside within the same household.
 
 .. householding-address-based-end
 
@@ -136,11 +138,24 @@ This section walks through the default SQL template that is used to define how a
 
    .. tip:: You may `download a copy of Merged Households <../downloads/sql/merged_households.txt>`__ as a template or you may :ref:`refer to the example <householding-address-sql-template>` at the end of this topic.
 
-   .. important:: Amperity uses a single table in the customer 360 database to collect rows from the **Unified Coalesced** table, and then collapses them into a single row per Amperity ID. This is referred to as the **Merged Customers** table. Prior to August 1, 2020 the name of this table was **Unified Merged**. Verify the name of this table as it is used for your tenant, and then update the template described in this topic so that it matches the name of the table in your tenant.
+   .. important:: Amperity uses a single table in the customer 360 database to collect rows from the **Unified Coalesced** table, and then collapses them into a single row per Amperity ID.
 
-#. The section titled "Basic address standardization" is a common table expression (CTE) that performs address standardization. This process removes non-alphanumeric characters, trims for leading, trailing, and repeating whitespace, converts characters to uppercase, converts all valid names of states in the United States to their two-character representation, converts all postal codes to five digits, and converts common representations of street addresses into standardized variants.
+   This is referred to as the **Merged Customers** table. Prior to August 1, 2020 the name of this table was **Unified Merged**. Verify the name of this table as it is used for your tenant, and then update the template described in this topic so that it matches the name of the table in your tenant.
 
-   Physical street addresses (as identified by the **address** field) are standardized by splitting on spaces. Each of the second, third, fourth, etc. elements of an address are compared to a lookup table. When matches are found, they are replaced with standardized values.
+#. The section titled "Basic address standardization" is a common table expression (CTE) that performs address standardization.
+
+   .. admonition:: What is address standardization?
+
+      Address standardization is a process that
+
+      * Removes non-alphanumeric characters
+      * Trims for leading, trailing, and repeating whitespace
+      * Converts characters to uppercase
+      * Converts all valid names of states in the United States to their two-character representation
+      * Converts all postal codes to five digits
+      * Converts common representations of street addresses into standardized variants
+
+   Physical street addresses, as identified by the **address** field, are standardized by splitting on spaces. Each of the second, third, fourth, etc. elements of an address are compared to a lookup table. When matches are found, they are replaced with standardized values.
 
 #. The section titled "Build the Household ID ..." builds a universally unique identifier (UUID) from unique combinations of the **address** and **surname** fields.
 
@@ -148,7 +163,7 @@ This section walks through the default SQL template that is used to define how a
 
    .. tip:: This section is where additional SQL is added to handle custom statistics on a per-household basis and to support other tenant-specific use cases. The default behavior only associates the Amperity ID to the Household ID, but can be tailored to support most use cases.
 
-      For example, you could add support for checking the number of Amperity IDs associated with a household, and if that exceeds a threshold, that address could be flagged as a business address (or some other non-household entity).
+      For example, you could add support for checking the number of Amperity IDs associated with a household, and if that exceeds a threshold, that address could be flagged as a business address or some other non-household entity.
 
 #. The section titled "Create flag for addresses in bad-values blocklist" identifies if addresses have been added to the bad-values blocklist.
 

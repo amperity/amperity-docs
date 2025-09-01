@@ -77,7 +77,7 @@ Use the **Queries** page to investigate unexpected relationships between individ
 
 Use a combination of the **Unified Coalesced** and **Unified Preprocessed Raw** tables to review the data that is associated with these records to help understand why groups of records were matched or why certain records were assigned to a cluster.
 
-In some cases, you may need to investigate and compare entire clusters to better understand why or why not these groups of records were maintained (or split) during hierarchical comparison, a step in the Stitch process that occurs *after* pairwise comparison and scoring.
+In some cases, you may need to investigate and compare entire clusters to better understand why or why not these groups of records were maintained or split during hierarchical comparison, a step in the Stitch process that occurs *after* pairwise comparison and scoring.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-relationships-records-end
 

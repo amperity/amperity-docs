@@ -80,7 +80,7 @@ Purchase histories
 
 .. database-interactions-apply-to-itemized-transactions-start
 
-For each incoming data source that contains item-level data, you should plan to use the domain SQL editor to reshape the data into a schema against which individual transaction (txn-item/) semantic tags can be applied.
+For each incoming data source that contains item-level data, you should plan to use the domain SQL editor to reshape the data into a schema against which individual transaction semantic tags can be applied.
 
 .. database-interactions-apply-to-itemized-transactions-end
 
@@ -108,9 +108,9 @@ Product catalogs
 
 .. setup-transactions-apply-semantics-product-catalogs-start
 
-Use **txn-item/pc** semantic tags (a subset of **txn-item/** semantic tags) when your brand wants to use your product catalog for segmentation, building audiences, and sending product catalog data alongside (or as part of) audiences. These tags add your brand's product catalog to the **Unified Itemized Transactions** table alongside your customers' purchase histories.
+Use **txn-item/pc** semantic tags--a subset of **txn-item/** semantic tags--when your brand wants to use your product catalog for segmentation, building audiences, and sending product catalog data alongside (or as part of) audiences. These tags add your brand's product catalog to the **Unified Itemized Transactions** table alongside your customers' purchase histories.
 
-In some cases, you may need to use the domain SQL editor to reshape the data into a schema to which product catalog (**txn-item/pc**) semantic tags can be applied.
+In some cases, you may need to use the domain SQL editor to reshape the data into a schema to which product catalog semantic tags can be applied.
 
 .. setup-transactions-apply-semantics-product-catalogs-end
 
@@ -202,7 +202,7 @@ Extend your customer 360 database for transactions by adding the following table
 
    Depending on the types of data sources your brand adds to Amperity over time, you may need to make specific changes to specific tables in your customer 360 database to support these updates. For example, if your brand adds a data source that contains PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
 
-   The initial configuration of your customer 360 database requires using SQL to add (and extend) a series of tables that are an extension that captures the interactions your brand has with your customers.
+   The initial configuration of your customer 360 database requires using SQL to add or extend a series of tables that are an extension that captures the interactions your brand has with your customers.
 
 .. setup-transactions-add-transaction-tables-important-end
 
@@ -620,7 +620,7 @@ Validation reports for email addresses and phone numbers include:
 
 * Are email events associated with multiple Amperity IDs?
 * Are email events unique by brand?
-* Does an email event have an associated event type (open, click, etc.)?
+* Does an email event have an associated event type, such as opens or clicks?
 * Are there conflicting opt-in preferences for email addresses and/or phone numbers?
 
 .. setup-transactions-validate-database-reports-email-phone-end
@@ -646,7 +646,7 @@ Validation reports for loyalty programs include:
 Validation reports for fiscal calenders include:
 
 * Are fiscal calendar dates unique?
-* Are fiscal calendars complete (when joined to the **Unified Transactions** table)?
+* Are fiscal calendars complete after joining them to the **Unified Transactions** table?
 
 .. setup-transactions-validate-database-reports-fiscal-end
 
@@ -661,7 +661,7 @@ Validation reports for transactions include:
 * Are there records without an associated order ID?
 * Are orders associated with multiple order IDs?
 * Are orders associated with a store ID?
-* Are there orders without associated product information (ID, category, subcategory, or description)?
+* Are there orders without associated product information, such as ID, category, subcategory, or description?
 * Are costs, quantities, and revenue non-positive for returns and cancellations?
 * Are returns and cancellations associated with their original order ID?
 * Are costs, list prices, discount amounts, discount percents, subtotals, and revenue positive for purchases?
@@ -695,6 +695,6 @@ More transactions data
 
 .. setup-transactions-more-transactions-data-start
 
-Many brands add transactions to their tenant over time. Adding new transactions (and data for other customer interactions) generally follow the same steps that were used for previous transactions. More sources helps Amperity build better profiles *and* helps your brand undersand how your customers' preferences for how they interact with your brand.
+Many brands add transactions to their tenant over time. Adding new transactions, along with data for other customer interactions, generally follow the same steps that were used for previous transactions. More sources helps Amperity build better profiles *and* helps your brand undersand how your customers' preferences for how they interact with your brand.
 
 .. setup-transactions-more-transactions-data-end

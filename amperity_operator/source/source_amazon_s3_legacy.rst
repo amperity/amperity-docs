@@ -268,7 +268,7 @@ For example:
 
 #. Under **Amazon S3 Settings**, add the name of the Amazon S3 bucket and prefix.
 #. Under **Amazon S3 Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
-#. Under **Amazon S3 Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+#. Under **Amazon S3 Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
