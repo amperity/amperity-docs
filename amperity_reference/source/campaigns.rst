@@ -740,10 +740,10 @@ This section describes tasks related to building campaigns in Amperity:
 * :ref:`campaigns-config-multi-channel-campaign`
 * :ref:`campaigns-config-onetime-campaign`
 * :ref:`campaigns-config-recurring-campaign`
+* :ref:`campaigns-copy-campaign`
 * :ref:`campaigns-copy-campaign-id`
 * :ref:`campaigns-delete-campaign`
 * :ref:`campaigns-discard-campaign`
-* :ref:`campaigns-duplicate-campaign`
 * :ref:`campaigns-edit-attribute`
 * :ref:`campaigns-edit-campaign`
 * :ref:`campaigns-edit-sub-audience`
@@ -1318,6 +1318,31 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 .. campaigns-workflow-recurring-steps-end
 
 
+.. _campaigns-copy-campaign:
+
+Copy campaign
+--------------------------------------------------
+
+.. campaigns-copy-campaign-start
+
+You can reuse, build, and scale campaigns with ease by using an existing campaign as a template for building new ones.
+
+.. campaigns-copy-campaign-end
+
+**To copy a campaign**
+
+.. campaigns-copy-campaign-steps-start
+
+#. From the **Campaigns** page, click the more options button on a campaign.
+#. Click **Make a copy**.
+#. The **Copy campaign** dialog box opens. Enter the name of the new campaign, and then click **Save**.
+#. On the **Edit Campaign** page, update the campaign configuration for the new campaign, and then click **Save**.
+
+The new campaign appears on the **Campaigns** page.
+
+.. campaigns-copy-campaign-steps-end
+
+
 .. _campaigns-copy-campaign-id:
 
 Copy campaign ID
@@ -1438,31 +1463,6 @@ You can download a recipients list from a delivered campaign on the **Campaigns*
 #. Open the .CSV file in a program and then view the recipients list.
 
 .. campaigns-download-recipients-how-to-end
-
-
-.. _campaigns-duplicate-campaign:
-
-Duplicate campaign
---------------------------------------------------
-
-.. campaigns-duplicate-campaign-start
-
-You can reuse, build, and scale campaigns with ease by utilizing a pre-existing campaign as a template. 
-
-.. campaigns-duplicate-campaign-end
-
-**To duplicate a campaign**
-
-.. campaigns-duplicate-campaign-steps-start
-
-#. From the **Campaigns** page, click the more options button on a campaign.
-#. Click **Duplicate**.
-#. The **Duplicate Segment** dialog box opens. Click **Confirm**.
-#. On the **Edit Campaign**, make your changes, and then click **Save**.
-
-The duplicated campaign appears on the **Campaigns** page.
-
-.. campaigns-duplicate-campaign-steps-end
 
 
 .. _campaigns-edit-attribute:
