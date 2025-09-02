@@ -24,7 +24,7 @@ About couriers (legacy)
    :start-after: .. term-courier-start
    :end-before: .. term-courier-end
 
-.. couriers-what-they-do-start
+.. couriers-legacy-what-they-do-start
 
 What a courier does:
 
@@ -37,29 +37,29 @@ What a courier needs:
 #. A location from which to copy data.
 #. An associated feed.
 #. A file format--CSV, TSV, Apache Parquet, etc., along with additional details for compression, archive, and encryption.
-#. A combination of :ref:`load settings <couriers-files-load-settings>` and :ref:`load operations <couriers-load-operation-types>`. The exact combination of settings and operations depends on the data source and the types of files to be pulled to Amperity.
+#. A combination of :ref:`load settings <couriers-legacy-files-load-settings>` and :ref:`load operations <couriers-legacy-load-operation-types>`. The exact combination of settings and operations depends on the data source and the types of files to be pulled to Amperity.
 
-.. couriers-what-they-do-end
+.. couriers-legacy-what-they-do-end
 
 
-.. _couriers-files:
+.. _couriers-legacy-files:
 
 File couriers
 ==================================================
 
-.. couriers-files-start
+.. couriers-legacy-files-start
 
 A file data source can provide files to Amperity in just about any file format, such as CSV, JSON, Apache Parquet, Apache AVRO, PSV, and TSV. Locations from which file data sources can be pulled include Amazon S3, Azure Blob Storage, Google Cloud Storage, and any SFTP site.
 
-.. couriers-files-end
+.. couriers-legacy-files-end
 
 
-.. _couriers-files-load-settings:
+.. _couriers-legacy-files-load-settings:
 
 Load settings
 --------------------------------------------------
 
-.. couriers-files-load-settings-start
+.. couriers-legacy-files-load-settings-start
 
 File data sources define load settings in two parts:
 
@@ -68,9 +68,9 @@ File data sources define load settings in two parts:
 
 The exact combination of files and load operations depends on the data source from which data is made available to Amperity.
 
-.. couriers-files-load-settings-end
+.. couriers-legacy-files-load-settings-end
 
-.. couriers-files-load-settings-syntax-start
+.. couriers-legacy-files-load-settings-syntax-start
 
 Load settings define the location of a data source, it's type, and how it should be processed by Amperity. The syntax for file load settings is similar to:
 
@@ -110,9 +110,9 @@ Load settings define the location of a data source, it's type, and how it should
      }
     ]
 
-.. couriers-files-load-settings-syntax-end
+.. couriers-legacy-files-load-settings-syntax-end
 
-.. couriers-files-load-settings-context-start
+.. couriers-legacy-files-load-settings-context-start
 
 Each filedrop load setting must specify the file pattern, which is the path to the file, its filename, a date stamp, and a file extension. The rest of the load settings block must match, i.e. the content type for a "some-file.csv" must be "text/csv". An archive must specify the archive *and* the file contained within it. If the file is archived as "some-file.zip" then the ``"object/type"`` would be "archive" and the content type of the file within it would be "text/csv".
 
@@ -120,33 +120,33 @@ If an archive contains only a single file *or* if all the files within the archi
 
 If an archive is missing contents and you would like to ignore or skip those missing contents, then ``"archive/skip-missing-contents"`` can be added to your settings.
 
-.. couriers-files-load-settings-context-end
+.. couriers-legacy-files-load-settings-context-end
 
 
-.. _couriers-files-patterns:
+.. _couriers-legacy-files-patterns:
 
 File patterns
 --------------------------------------------------
 
-.. couriers-files-patterns-start
+.. couriers-legacy-files-patterns-start
 
 A courier looks for objects in a filedrop location using a combination of the path to a directory, the name of a file, and a date. These are defined by the ``"object/file-pattern"`` setting for each object. A courier runs based on a date or a date range, and then looks for files in the filedrop location for that date or date range.
 
-.. couriers-files-patterns-end
+.. couriers-legacy-files-patterns-end
 
-.. couriers-files-patterns-links-start
+.. couriers-legacy-files-patterns-links-start
 
-A file pattern may use a combination of :ref:`literal strings <couriers-files-patterns-literal-strings>`, :ref:`wildcard characters <couriers-files-patterns-wildcards>` (``*``) within literal strings, :ref:`wildcard characters for filenames in archives <couriers-files-patterns-wildcards-within-archives>`, and :ref:`date components <couriers-files-patterns-date-components>`, separated by single quotes and forward slashes.
+A file pattern may use a combination of :ref:`literal strings <couriers-legacy-files-patterns-literal-strings>`, :ref:`wildcard characters <couriers-legacy-files-patterns-wildcards>` (``*``) within literal strings, :ref:`wildcard characters for filenames in archives <couriers-legacy-files-patterns-wildcards-within-archives>`, and :ref:`date components <couriers-legacy-files-patterns-date-components>`, separated by single quotes and forward slashes.
 
-.. couriers-files-patterns-links-end
+.. couriers-legacy-files-patterns-links-end
 
 
-.. _couriers-files-patterns-wildcards:
+.. _couriers-legacy-files-patterns-wildcards:
 
 Wildcards
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-files-patterns-wildcards-start
+.. couriers-legacy-files-patterns-wildcards-start
 
 A wildcard can match zero or more characters up until a forward-slash character.
 
@@ -187,15 +187,15 @@ The following example shows using multiple wildcards:
      }
    },
 
-.. couriers-files-patterns-wildcards-end
+.. couriers-legacy-files-patterns-wildcards-end
 
 
-.. _couriers-files-patterns-wildcards-within-archives:
+.. _couriers-legacy-files-patterns-wildcards-within-archives:
 
 Wildcards within archives
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-files-patterns-wildcards-within-archives-start
+.. couriers-legacy-files-patterns-wildcards-within-archives-start
 
 A wildcard can be used to match one or more files in an archive.
 
@@ -220,15 +220,15 @@ The following example shows how to use a wildcard to match a set of CSV files co
      }
    ]
 
-.. couriers-files-patterns-wildcards-within-archives-end
+.. couriers-legacy-files-patterns-wildcards-within-archives-end
 
 
-.. _couriers-files-patterns-literal-strings:
+.. _couriers-legacy-files-patterns-literal-strings:
 
 Literal strings
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-load-settings-file-pattern-literal-strings-start
+.. couriers-legacy-load-settings-file-pattern-literal-strings-start
 
 A literal string must be an exact match to characters in the file path, with the exception of the presence of wildcard characters within literal strings. Wrap literal strings that match Joda-Time format in single quotes. For example:
 
@@ -237,15 +237,15 @@ A literal string must be an exact match to characters in the file path, with the
 * '/'
 * 'MM-dd-YYYY'
 
-.. couriers-files-patterns-literal-strings-end
+.. couriers-legacy-files-patterns-literal-strings-end
 
 
-.. _couriers-files-patterns-date-components:
+.. _couriers-legacy-files-patterns-date-components:
 
 Date components
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-files-patterns-date-components-start
+.. couriers-legacy-files-patterns-date-components-start
 
 Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link|, but should generally be limited to the following patterns:
 
@@ -274,31 +274,31 @@ A courier that runs using this pattern:
 
 when run on April 10, 2020 will look for files at ``'files/2020/04/10/customers-*.csv'`` and will return any files that match.
 
-.. couriers-files-patterns-date-components-end
+.. couriers-legacy-files-patterns-date-components-end
 
 
-.. _couriers-files-patterns-compression:
+.. _couriers-legacy-files-patterns-compression:
 
 File compression / archive
 --------------------------------------------------
 
-.. couriers-files-patterns-compression-start
+.. couriers-legacy-files-patterns-compression-start
 
 Amperity supports the following compression and archive types:
 
-* :ref:`couriers-files-patterns-compression-gzip`
-* :ref:`couriers-files-patterns-compression-tar`
-* :ref:`couriers-files-patterns-compression-zip`
+* :ref:`couriers-legacy-files-patterns-compression-gzip`
+* :ref:`couriers-legacy-files-patterns-compression-tar`
+* :ref:`couriers-legacy-files-patterns-compression-zip`
 
-.. couriers-files-patterns-compression-end
+.. couriers-legacy-files-patterns-compression-end
 
 
-.. _couriers-files-patterns-compression-gzip:
+.. _couriers-legacy-files-patterns-compression-gzip:
 
 GZIP
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-files-patterns-compression-gzip-start
+.. couriers-legacy-files-patterns-compression-gzip-start
 
 .. code-block:: none
 
@@ -313,15 +313,15 @@ GZIP
      }
    }
 
-.. couriers-files-patterns-compression-gzip-end
+.. couriers-legacy-files-patterns-compression-gzip-end
 
 
-.. _couriers-files-patterns-compression-tar:
+.. _couriers-legacy-files-patterns-compression-tar:
 
 TAR
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-files-patterns-compression-tar-start
+.. couriers-legacy-files-patterns-compression-tar-start
 
 .. code-block:: none
 
@@ -338,15 +338,15 @@ TAR
      }
    }
 
-.. couriers-files-patterns-compression-tar-end
+.. couriers-legacy-files-patterns-compression-tar-end
 
 
-.. _couriers-files-patterns-compression-zip:
+.. _couriers-legacy-files-patterns-compression-zip:
 
 ZIP
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-files-patterns-compression-zip-start
+.. couriers-legacy-files-patterns-compression-zip-start
 
 .. code-block:: none
 
@@ -363,10 +363,10 @@ ZIP
      }
    }
 
-.. couriers-files-patterns-compression-zip-end
+.. couriers-legacy-files-patterns-compression-zip-end
 
 
-.. _couriers-load-settings-input-examples:
+.. _couriers-legacy-load-settings-input-examples:
 
 Input examples
 --------------------------------------------------
@@ -376,7 +376,7 @@ Input examples
    :end-before: .. format-common-send-input-examples-end
 
 
-.. _couriers-load-settings-input-example-single:
+.. _couriers-legacy-load-settings-input-example-single:
 
 for single files
 ++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -386,7 +386,7 @@ for single files
    :end-before: .. format-common-send-input-examples-single-end
 
 
-.. _couriers-load-settings-input-example-multiple:
+.. _couriers-legacy-load-settings-input-example-multiple:
 
 for multiple files
 ++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -396,31 +396,31 @@ for multiple files
    :end-before: .. format-common-send-input-examples-multiple-end
 
 
-.. _couriers-api:
+.. _couriers-legacy-api:
 
 API couriers
 ==================================================
 
-.. couriers-api-start
+.. couriers-legacy-api-start
 
 An API data source will vary, depending on the file format and other configuration details. API data sources include Google Analytics, Salesforce Sales Cloud, and Zendesk.
 
-.. couriers-api-end
+.. couriers-legacy-api-end
 
 
-.. _couriers-snowflake:
+.. _couriers-legacy-snowflake:
 
 Snowflake couriers
 ==================================================
 
-.. couriers-snowflake-start
+.. couriers-legacy-snowflake-start
 
 A Snowflake data source provides a list of tables that are consolidated into a fileset. Snowflake data sources include Snowflake itself, and then also any FiveTran data source, such as Klaviyo, Shopify, Kustomer, and HubSpot.
 
-.. couriers-snowflake-end
+.. couriers-legacy-snowflake-end
 
 
-.. _couriers-snowflake-table-list:
+.. _couriers-legacy-snowflake-table-list:
 
 Table lists
 --------------------------------------------------
@@ -429,7 +429,7 @@ Table lists
    :start-after: .. sources-add-courier-fivetran-table-list-start
    :end-before: .. sources-add-courier-fivetran-table-list-end
 
-.. couriers-snowflake-table-list-example-start
+.. couriers-legacy-snowflake-table-list-example-start
 
 ::
 
@@ -439,10 +439,10 @@ Table lists
      "AMPERITY_A1BO987C.ACME.CONTACT"
    ]
 
-.. couriers-snowflake-table-list-example-end
+.. couriers-legacy-snowflake-table-list-example-end
 
 
-.. _couriers-snowflake-stage-name:
+.. _couriers-legacy-snowflake-stage-name:
 
 Stage names
 --------------------------------------------------
@@ -451,16 +451,16 @@ Stage names
    :start-after: .. sources-add-courier-fivetran-stage-name-start
    :end-before: .. sources-add-courier-fivetran-stage-name-end
 
-.. couriers-snowflake-stage-name-example-start
+.. couriers-legacy-snowflake-stage-name-example-start
 
 ::
 
    AMPERITY_A1BO987C.ACME.ACME_STAGE
 
-.. couriers-snowflake-stage-name-example-end
+.. couriers-legacy-snowflake-stage-name-example-end
 
 
-.. _couriers-snowflake-load-operation:
+.. _couriers-legacy-snowflake-load-operation:
 
 Load operations
 --------------------------------------------------
@@ -469,7 +469,7 @@ Load operations
    :start-after: .. sources-add-courier-fivetran-load-operation-start
    :end-before: .. sources-add-courier-fivetran-load-operation-end
 
-.. couriers-snowflake-load-operation-start
+.. couriers-legacy-snowflake-load-operation-start
 
 ::
 
@@ -494,10 +494,10 @@ Load operations
      ]
    }
 
-.. couriers-snowflake-load-operation-end
+.. couriers-legacy-snowflake-load-operation-end
 
 
-.. _couriers-load-operation-types:
+.. _couriers-legacy-load-operation-types:
 
 Load operation types
 ==================================================
@@ -506,41 +506,41 @@ Load operation types
    :start-after: .. term-courier-fileset-start
    :end-before: .. term-courier-fileset-end
 
-.. couriers-load-operation-types-start
+.. couriers-legacy-load-operation-types-start
 
-.. couriers-load-operation-types-links-start
+.. couriers-legacy-load-operation-types-links-start
 
 Each file in a fileset must be associated with one of the following load operation types:
 
-* :ref:`couriers-load-operation-type-empty`
-* :ref:`couriers-load-operation-type-incorrect-feed-id`
-* :ref:`couriers-load-operation-type-load-files`
-* :ref:`couriers-load-operation-type-load-ingest-query`
-* :ref:`couriers-load-operation-type-truncate-then-load`
+* :ref:`couriers-legacy-load-operation-type-empty`
+* :ref:`couriers-legacy-load-operation-type-incorrect-feed-id`
+* :ref:`couriers-legacy-load-operation-type-load-files`
+* :ref:`couriers-legacy-load-operation-type-load-ingest-query`
+* :ref:`couriers-legacy-load-operation-type-truncate-then-load`
 
-.. couriers-load-operation-types-links-end
+.. couriers-legacy-load-operation-types-links-end
 
 
-.. _couriers-load-operation-type-empty:
+.. _couriers-legacy-load-operation-type-empty:
 
 Empty
 --------------------------------------------------
 
-.. couriers-load-operation-type-empty-start
+.. couriers-legacy-load-operation-type-empty-start
 
 An empty load operation will bring files to Amperity, but not try to load those files into a feed. An empty load operation is ideal for bringing sample files to Amperity prior to configuring the feed that defines the schema within Amperity for a data source. Use the sample file while configuring the feed, and then update the load operation to match the configuration requirements for the associated file type.
 
-.. couriers-load-operation-type-empty-end
+.. couriers-legacy-load-operation-type-empty-end
 
-.. couriers-load-operation-type-empty-block-start
+.. couriers-legacy-load-operation-type-empty-block-start
 
 .. code-block:: none
 
    {}
 
-.. couriers-load-operation-type-empty-block-end
+.. couriers-legacy-load-operation-type-empty-block-end
 
-.. couriers-load-operation-type-empty-tip-start
+.. couriers-legacy-load-operation-type-empty-tip-start
 
 .. tip:: You cannot use an empty load operation for files that require the use of an ingest query to transform the data prior to it being made available to the feed.
 
@@ -550,15 +550,15 @@ An empty load operation will bring files to Amperity, but not try to load those 
 
    Another option is to define the schema without using a sample file. Select the **Don't use sample file** option when adding the feed, and then use the **Add field** button to define each field in the schema.
 
-.. couriers-load-operation-type-empty-tip-end
+.. couriers-legacy-load-operation-type-empty-tip-end
 
 
-.. _couriers-load-operation-type-incorrect-feed-id:
+.. _couriers-legacy-load-operation-type-incorrect-feed-id:
 
 Incorrect feed ID
 --------------------------------------------------
 
-.. couriers-load-operation-type-incorrect-feed-id-start
+.. couriers-legacy-load-operation-type-incorrect-feed-id-start
 
 Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that will not be available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
 
@@ -585,21 +585,21 @@ This will return an error message similar to:
 
 The load operation will pull the files and make them available for use with defining a feed schema.
 
-.. couriers-load-operation-type-incorrect-feed-id-end
+.. couriers-legacy-load-operation-type-incorrect-feed-id-end
 
 
-.. _couriers-load-operation-type-load-files:
+.. _couriers-legacy-load-operation-type-load-files:
 
 Load files
 --------------------------------------------------
 
-.. couriers-load-operation-type-load-files-start
+.. couriers-legacy-load-operation-type-load-files-start
 
 You can load contents of a data file to a domain table as a load operation as an ``UPSERT`` operation that is based off of the primary key in the table.
 
-.. couriers-load-operation-type-load-files-end
+.. couriers-legacy-load-operation-type-load-files-end
 
-.. couriers-load-operation-type-load-files-block-start
+.. couriers-legacy-load-operation-type-load-files-block-start
 
 .. code-block:: none
 
@@ -610,10 +610,10 @@ You can load contents of a data file to a domain table as a load operation as an
      }
    ]
 
-.. couriers-load-operation-type-load-files-block-end
+.. couriers-legacy-load-operation-type-load-files-block-end
 
 
-.. _couriers-load-operation-type-load-ingest-query:
+.. _couriers-legacy-load-operation-type-load-ingest-query:
 
 Load ingest query
 --------------------------------------------------
@@ -630,7 +630,7 @@ Load ingest query
    :start-after: .. sql-spark-note-spark-vs-presto-start
    :end-before: .. sql-spark-note-spark-vs-presto-end
 
-.. couriers-load-operation-type-load-ingest-query-start
+.. couriers-legacy-load-operation-type-load-ingest-query-start
 
 The configuration for an ingest query load operation depends on the data source against which the ingest query will run:
 
@@ -644,23 +644,23 @@ The configuration for an ingest query load operation depends on the data source 
 * TSV
 * XML
 
-.. couriers-load-operation-type-load-ingest-query-end
+.. couriers-legacy-load-operation-type-load-ingest-query-end
 
 
-.. _couriers-load-operation-type-truncate-then-load:
+.. _couriers-legacy-load-operation-type-truncate-then-load:
 
 Truncate, then load
 --------------------------------------------------
 
-.. couriers-load-operation-type-truncate-then-load-start
+.. couriers-legacy-load-operation-type-truncate-then-load-start
 
 You can empty the contents of a table prior to loading a data file to a domain table as a load operation.
 
 .. note:: A truncate operation is always run first, regardless of where it's specified within the load operation.
 
-.. couriers-load-operation-type-truncate-then-load-end
+.. couriers-legacy-load-operation-type-truncate-then-load-end
 
-.. couriers-load-operation-type-truncate-then-load-block-start
+.. couriers-legacy-load-operation-type-truncate-then-load-block-start
 
 .. code-block:: none
 
@@ -674,31 +674,31 @@ You can empty the contents of a table prior to loading a data file to a domain t
      }
    ],
 
-.. couriers-load-operation-type-truncate-then-load-block-end
+.. couriers-legacy-load-operation-type-truncate-then-load-block-end
 
 
-.. _couriers-examples:
+.. _couriers-legacy-examples:
 
 Examples
 ==================================================
 
 The following sections provide examples for load settings and load operations by data source and/or by file type:
 
-* :ref:`couriers-example-apache-avro`
-* :ref:`couriers-example-apache-parquet`
-* :ref:`couriers-example-cbor`
-* :ref:`couriers-example-csv`
-* :ref:`couriers-example-json`
-* :ref:`couriers-example-ndjson`
-* :ref:`couriers-example-psv`
-* :ref:`couriers-example-salesforce-commerce-cloud`
-* :ref:`couriers-example-salesforce-sales-cloud`
-* :ref:`couriers-example-snowflake`
-* :ref:`couriers-example-tsv`
-* :ref:`couriers-example-xml`
+* :ref:`couriers-legacy-example-apache-avro`
+* :ref:`couriers-legacy-example-apache-parquet`
+* :ref:`couriers-legacy-example-cbor`
+* :ref:`couriers-legacy-example-csv`
+* :ref:`couriers-legacy-example-json`
+* :ref:`couriers-legacy-example-ndjson`
+* :ref:`couriers-legacy-example-psv`
+* :ref:`couriers-legacy-example-salesforce-commerce-cloud`
+* :ref:`couriers-legacy-example-salesforce-sales-cloud`
+* :ref:`couriers-legacy-example-snowflake`
+* :ref:`couriers-legacy-example-tsv`
+* :ref:`couriers-legacy-example-xml`
 
 
-.. _couriers-example-apache-avro:
+.. _couriers-legacy-example-apache-avro:
 
 Apache Avro
 --------------------------------------------------
@@ -733,7 +733,7 @@ Use courier load operations to associate a feed ID to the courier, apply the sam
 .. format-avro-pull-couriers-load-operations-end
 
 
-.. _couriers-example-apache-parquet:
+.. _couriers-legacy-example-apache-parquet:
 
 Apache Parquet
 --------------------------------------------------
@@ -789,7 +789,7 @@ Apache Parquet
 .. format-parquet-pull-couriers-load-operations-feed-end
 
 
-.. _couriers-example-cbor:
+.. _couriers-legacy-example-cbor:
 
 CBOR
 --------------------------------------------------
@@ -918,7 +918,7 @@ CBOR
 .. format-cbor-pull-couriers-load-operations-rowtag-start
 
 
-.. _couriers-example-csv:
+.. _couriers-legacy-example-csv:
 
 CSV
 --------------------------------------------------
@@ -1081,7 +1081,7 @@ CSV
 .. format-csv-pull-couriers-load-operations-ingest-query-caution-end
 
 
-.. _couriers-example-json:
+.. _couriers-legacy-example-json:
 
 JSON
 --------------------------------------------------
@@ -1130,7 +1130,7 @@ JSON
 .. format-json-pull-couriers-load-operations-block-end
 
 
-.. _couriers-example-ndjson:
+.. _couriers-legacy-example-ndjson:
 
 NDJSON
 --------------------------------------------------
@@ -1179,7 +1179,7 @@ NDJSON
 .. format-ndjson-pull-couriers-load-operations-block-end
 
 
-.. _couriers-example-psv:
+.. _couriers-legacy-example-psv:
 
 PSV
 --------------------------------------------------
@@ -1290,7 +1290,7 @@ PSV
 .. format-psv-pull-couriers-load-operations-ingest-query-end
 
 
-.. _couriers-example-salesforce-commerce-cloud:
+.. _couriers-legacy-example-salesforce-commerce-cloud:
 
 Salesforce Commerce Cloud
 --------------------------------------------------
@@ -1301,13 +1301,13 @@ Salesforce Commerce Cloud
 
 **Load settings**
 
-.. couriers-example-salesforce-commerce-cloud-settings-start
+.. couriers-legacy-example-salesforce-commerce-cloud-settings-start
 
 The Salesforce Commerce Cloud REST API has a clearly defined set of files that can be made available to Amperity. The load settings are built into Amperity by default. (Salesforce Commerce Cloud was previously known as Demandware.)
 
-.. couriers-example-salesforce-commerce-cloud-settings-end
+.. couriers-legacy-example-salesforce-commerce-cloud-settings-end
 
-.. couriers-example-salesforce-commerce-cloud-settings-block-start
+.. couriers-legacy-example-salesforce-commerce-cloud-settings-block-start
 
 .. code-block:: none
 
@@ -1367,11 +1367,11 @@ The Salesforce Commerce Cloud REST API has a clearly defined set of files that c
      }
    ]
 
-.. couriers-example-salesforce-commerce-cloud-settings-block-end
+.. couriers-legacy-example-salesforce-commerce-cloud-settings-block-end
 
 **Load operations**
 
-.. couriers-example-salesforce-commerce-cloud-operations-block-start
+.. couriers-legacy-example-salesforce-commerce-cloud-operations-block-start
 
 .. code-block:: none
 
@@ -1450,10 +1450,10 @@ The Salesforce Commerce Cloud REST API has a clearly defined set of files that c
      ]
    }
 
-.. couriers-example-salesforce-commerce-cloud-operations-block-end
+.. couriers-legacy-example-salesforce-commerce-cloud-operations-block-end
 
 
-.. _couriers-example-salesforce-sales-cloud:
+.. _couriers-legacy-example-salesforce-sales-cloud:
 
 Salesforce Sales Cloud
 --------------------------------------------------
@@ -1464,13 +1464,13 @@ Salesforce Sales Cloud
 
 **Load settings**
 
-.. couriers-example-salesforce-sales-cloud-settings-start
+.. couriers-legacy-example-salesforce-sales-cloud-settings-start
 
 The Sales Cloud integration allows you to use SQL patterns to specify which fields in an Object should be brought back to Amperity. Use the ``fields`` grouping to define which fields to bring back. Use ``*`` for all fields, otherwise specify a list of fields. Use ``where`` to specify values in the fields. The following table shows examples of Objects and the equivalent SQL query used to define load settings.
 
-.. couriers-example-salesforce-sales-cloud-settings-end
+.. couriers-legacy-example-salesforce-sales-cloud-settings-end
 
-.. couriers-example-salesforce-sales-cloud-settings-block-start
+.. couriers-legacy-example-salesforce-sales-cloud-settings-block-start
 
 .. code-block:: none
 
@@ -1508,9 +1508,9 @@ The Sales Cloud integration allows you to use SQL patterns to specify which fiel
      }
    ]
 
-.. couriers-example-salesforce-sales-cloud-settings-block-end
+.. couriers-legacy-example-salesforce-sales-cloud-settings-block-end
 
-.. couriers-example-salesforce-sales-cloud-settings-start
+.. couriers-legacy-example-salesforce-sales-cloud-settings-start
 
 **Select all fields in an Object**
 
@@ -1600,11 +1600,11 @@ Is equivalent to the following load operation:
      "where": "CustomField__c = 34"
    },
 
-.. couriers-example-salesforce-sales-cloud-settings-examples-end
+.. couriers-legacy-example-salesforce-sales-cloud-settings-examples-end
 
 **Load operations**
 
-.. couriers-example-salesforce-sales-cloud-operations-block-start
+.. couriers-legacy-example-salesforce-sales-cloud-operations-block-start
 
 .. code-block:: none
 
@@ -1629,10 +1629,10 @@ Is equivalent to the following load operation:
     ]
    }
 
-.. couriers-example-salesforce-sales-cloud-operations-block-end
+.. couriers-legacy-example-salesforce-sales-cloud-operations-block-end
 
 
-.. _couriers-example-snowflake:
+.. _couriers-legacy-example-snowflake:
 
 Snowflake
 --------------------------------------------------
@@ -1643,13 +1643,13 @@ Snowflake
 
 **Load settings**
 
-.. couriers-example-snowflake-settings-start
+.. couriers-legacy-example-snowflake-settings-start
 
 For tables in a data warehouse, such as Snowflake, a list of table names must be specified.
 
-.. couriers-example-snowflake-settings-end
+.. couriers-legacy-example-snowflake-settings-end
 
-.. couriers-example-snowflake-settings-block-start
+.. couriers-legacy-example-snowflake-settings-block-start
 
 .. code-block:: none
 
@@ -1658,11 +1658,11 @@ For tables in a data warehouse, such as Snowflake, a list of table names must be
       "table.name"
    ]
 
-.. couriers-example-snowflake-settings-block-end
+.. couriers-legacy-example-snowflake-settings-block-end
 
 **Load operations**
 
-.. couriers-example-snowflake-operations-block-start
+.. couriers-legacy-example-snowflake-operations-block-start
 
 .. code-block:: none
 
@@ -1675,10 +1675,10 @@ For tables in a data warehouse, such as Snowflake, a list of table names must be
      ]
    }
 
-.. couriers-example-snowflake-operations-block-end
+.. couriers-legacy-example-snowflake-operations-block-end
 
 
-.. _couriers-example-streaming-json:
+.. _couriers-legacy-example-streaming-json:
 
 Streaming JSON
 --------------------------------------------------
@@ -1728,7 +1728,7 @@ Streaming JSON
 .. format-json-streaming-pull-couriers-load-operations-block-end
 
 
-.. _couriers-example-tsv:
+.. _couriers-legacy-example-tsv:
 
 TSV
 --------------------------------------------------
@@ -1839,7 +1839,7 @@ TSV
 .. format-tsv-pull-couriers-load-operations-ingest-query-end
 
 
-.. _couriers-example-xml:
+.. _couriers-legacy-example-xml:
 
 XML
 --------------------------------------------------
@@ -1924,43 +1924,43 @@ XML
 .. format-xml-pull-couriers-load-operations-rowtag-start
 
 
-.. _couriers-howtos:
+.. _couriers-legacy-howtos:
 
 How-tos
 ==================================================
 
-.. couriers-howtos-list-start
+.. couriers-legacy-howtos-list-start
 
 This section describes tasks related to managing couriers in Amperity:
 
-* :ref:`couriers-add`
-* :ref:`couriers-add-as-copy`
-* :ref:`couriers-add-to-courier-group`
-* :ref:`couriers-delete`
-* :ref:`couriers-edit`
-* :ref:`couriers-load-data-only`
-* :ref:`Run and only load files <couriers-run-only-load-files>`
-* :ref:`Run for a specific day <couriers-run-for-specific-day>`
-* :ref:`Run for a time period <couriers-run-for-time-period>`
-* :ref:`Run, but skip missing files <couriers-run-skip-missing-files>`
-* :ref:`couriers-run-restart-job`
-* :ref:`couriers-view`
+* :ref:`couriers-legacy-add`
+* :ref:`couriers-legacy-add-as-copy`
+* :ref:`couriers-legacy-add-to-courier-group`
+* :ref:`couriers-legacy-delete`
+* :ref:`couriers-legacy-edit`
+* :ref:`couriers-legacy-load-data-only`
+* :ref:`Run and only load files <couriers-legacy-run-only-load-files>`
+* :ref:`Run for a specific day <couriers-legacy-run-for-specific-day>`
+* :ref:`Run for a time period <couriers-legacy-run-for-time-period>`
+* :ref:`Run, but skip missing files <couriers-legacy-run-skip-missing-files>`
+* :ref:`couriers-legacy-run-restart-job`
+* :ref:`couriers-legacy-view`
 
-.. couriers-howtos-list-end
+.. couriers-legacy-howtos-list-end
 
 
-.. _couriers-add:
+.. _couriers-legacy-add:
 
 Add courier
 --------------------------------------------------
 
-.. couriers-add-start
+.. couriers-legacy-add-start
 
 Use the **Add Courier** button to add a courier to Amperity. A courier should be created for each feed that exists in Amperity.
 
-.. couriers-add-end
+.. couriers-legacy-add-end
 
-.. couriers-add-context-start
+.. couriers-legacy-add-context-start
 
 For smaller data sources, a courier may be associated with more than one feed. For larger data sources, a courier should be associated with a single feed. This is, in part, because couriers are run in parallel, but multiple feeds associated with a single courier are run sequentially.
 
@@ -1972,11 +1972,11 @@ Some of these plugins have more than one option for credentials.
 
 Use SnapPass to securely share configuration data with your Amperity representative.
 
-.. couriers-add-context-end
+.. couriers-legacy-add-context-end
 
 **To add a courier**
 
-.. couriers-add-steps-start
+.. couriers-legacy-add-steps-start
 
 #. From the **Sources** page, click **Add Courier**. The **Add Courier** page opens.
 #. Enter the name of the courier.
@@ -1989,23 +1989,23 @@ Use SnapPass to securely share configuration data with your Amperity representat
 #. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity (including how they are made available), and then a series of load operations that associates each file in the list to a feed.
 #. Click **Save**.
 
-.. couriers-add-steps-end
+.. couriers-legacy-add-steps-end
 
 
-.. _couriers-add-as-copy:
+.. _couriers-legacy-add-as-copy:
 
 Add courier as copy
 --------------------------------------------------
 
-.. couriers-add-as-copy-start
+.. couriers-legacy-add-as-copy-start
 
 You may add a courier by copying an existing courier. This is useful when couriers share plugin, credential, and other common settings. A copied courier will retain all of the configured settings as the original, but will be assigned a unique name based on the name of the copied courier.
 
-.. couriers-add-as-copy-end
+.. couriers-legacy-add-as-copy-end
 
 **To add a courier as a copy**
 
-.. couriers-add-as-copy-steps-start
+.. couriers-legacy-add-as-copy-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Make a copy**. The **Add Courier** page opens.
 #. Update the name of the courier.
@@ -2013,10 +2013,10 @@ You may add a courier by copying an existing courier. This is useful when courie
 #. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity (including how they are made available), and then a series of load operations that associates each file in the list to a feed.
 #. Click **Save**.
 
-.. couriers-add-as-copy-steps-end
+.. couriers-legacy-add-as-copy-steps-end
 
 
-.. _couriers-add-to-courier-group:
+.. _couriers-legacy-add-to-courier-group:
 
 Add to courier group
 --------------------------------------------------
@@ -2027,143 +2027,143 @@ Add to courier group
 
 **To add a courier to a courier group**
 
-.. couriers-add-to-courier-group-steps-start
+.. couriers-legacy-add-to-courier-group-steps-start
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
 #. Select the name of a courier from the dropdown list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
 #. Click **Save**.
 
-.. couriers-add-to-courier-group-steps-end
+.. couriers-legacy-add-to-courier-group-steps-end
 
 
-.. _couriers-delete:
+.. _couriers-legacy-delete:
 
 Delete courier
 --------------------------------------------------
 
-.. couriers-delete-start
+.. couriers-legacy-delete-start
 
 Use the **Delete** option to remove a courier from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this courier before you delete it. This action will *not* delete the feeds associated with the courier.
 
-.. couriers-delete-end
+.. couriers-legacy-delete-end
 
 **To delete a courier**
 
-.. couriers-delete-steps-start
+.. couriers-legacy-delete-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Delete**. The **Delete Courier** dialog box opens.
 #. Click **Delete**.
 
-.. couriers-delete-steps-end
+.. couriers-legacy-delete-steps-end
 
 
-.. _couriers-edit:
+.. _couriers-legacy-edit:
 
 Edit courier
 --------------------------------------------------
 
-.. couriers-edit-start
+.. couriers-legacy-edit-start
 
 Use the **Edit** option in the row for a specific courier to make configuration changes. For example, a new file is added to an Amazon S3 filedrop location already configured to send data to Amperity. After the feed is created, it can be added to the existing courier objects and load operations.
 
 In other cases, a courier may need editing because the credentials to the data source have changed. 
 
-.. couriers-edit-end
+.. couriers-legacy-edit-end
 
 **To edit a courier**
 
-.. couriers-edit-steps-start
+.. couriers-legacy-edit-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Edit**. The **Edit Courier** page opens.
 #. Make your changes.
 #. Click **Save**.
 
-.. couriers-edit-steps-end
+.. couriers-legacy-edit-steps-end
 
 
-.. _couriers-load-data-only:
+.. _couriers-legacy-load-data-only:
 
 Load data only
 --------------------------------------------------
 
-.. couriers-load-data-only-start
+.. couriers-legacy-load-data-only-start
 
 A courier can be run to load data to a domain table and prevent downstream processes, such as Stitch, customer 360 database runs, queries, and orchestrations.
 
-.. couriers-load-data-only-end
+.. couriers-legacy-load-data-only-end
 
 **To load data (without downstream processing)**
 
-.. couriers-load-data-only-steps-start
+.. couriers-legacy-load-data-only-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Run**. The **Run Courier** page opens.
 #. Select **Load data from a specific day** or **Load data from a specific time period**.
 #. To prevent downstream processing, select **Ingest only**.
 #. Click **Run**.
 
-.. couriers-load-data-only-steps-end
+.. couriers-legacy-load-data-only-steps-end
 
 
-.. _couriers-run:
+.. _couriers-legacy-run:
 
 Run couriers
 --------------------------------------------------
 
-.. couriers-run-start
+.. couriers-legacy-run-start
 
 Use the **Run** option to run the courier manually.
 
-.. couriers-run-end
+.. couriers-legacy-run-end
 
 A courier can be run in the following ways:
 
-* :ref:`Only load files <couriers-run-only-load-files>`
-* :ref:`Run for a specific day <couriers-run-for-specific-day>`
-* :ref:`Run for a time period <couriers-run-for-time-period>`
-* :ref:`Skip missing files <couriers-run-skip-missing-files>`
-* :ref:`With empty load operation <couriers-run-with-empty-load-operation>`
+* :ref:`Only load files <couriers-legacy-run-only-load-files>`
+* :ref:`Run for a specific day <couriers-legacy-run-for-specific-day>`
+* :ref:`Run for a time period <couriers-legacy-run-for-time-period>`
+* :ref:`Skip missing files <couriers-legacy-run-skip-missing-files>`
+* :ref:`With empty load operation <couriers-legacy-run-with-empty-load-operation>`
 
 
-.. _couriers-run-only-load-files:
+.. _couriers-legacy-run-only-load-files:
 
 Only load files
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-run-only-load-files-start
+.. couriers-legacy-run-only-load-files-start
 
 A courier can be configured to load data, but not start any downstream processing, including Stitch, database generation, or queries.
 
 .. warning:: Stitch must be run for data to be available in databases. Jobs that are run as load only do not automatically run Stitch.
 
-.. couriers-run-only-load-files-end
+.. couriers-legacy-run-only-load-files-end
 
 **To run a courier without downstream processing**
 
-.. couriers-run-without-downstream-processing-steps-start
+.. couriers-legacy-run-without-downstream-processing-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Run**. The **Run Courier** page opens.
 #. Select **Load data from a specific day** or **Load data from a specific time period**.
 #. Under **Load options**, select **Ingest only**.
 #. Click **Run**.
 
-.. couriers-run-without-downstream-processing-steps-end
+.. couriers-legacy-run-without-downstream-processing-steps-end
 
 
-.. _couriers-run-for-specific-day:
+.. _couriers-legacy-run-for-specific-day:
 
 Run for a specific day
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-run-for-specific-day-start
+.. couriers-legacy-run-for-specific-day-start
 
 A courier can be configured to load data from a specific day.
 
-.. couriers-run-for-specific-day-end
+.. couriers-legacy-run-for-specific-day-end
 
 **To run a courier and load data from a specific day**
 
-.. couriers-run-for-specific-day-steps-start
+.. couriers-legacy-run-for-specific-day-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Run**. The **Run Courier** page opens.
 #. Select **Load data from a specific day**.
@@ -2173,23 +2173,23 @@ A courier can be configured to load data from a specific day.
    .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that contains PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
 #. Click **Run**.
 
-.. couriers-run-for-specific-day-steps-end
+.. couriers-legacy-run-for-specific-day-steps-end
 
 
-.. _couriers-run-for-time-period:
+.. _couriers-legacy-run-for-time-period:
 
 Run for a time period
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-run-for-time-period-start
+.. couriers-legacy-run-for-time-period-start
 
 A courier can be configured to load all data from a specified time period.
 
-.. couriers-run-for-time-period-end
+.. couriers-legacy-run-for-time-period-end
 
 **To run a courier to load all data from a specific time period**
 
-.. couriers-run-for-time-period-steps-start
+.. couriers-legacy-run-for-time-period-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Run**. The **Run Courier** page opens.
 #. Select **Load data from a specific time period**.
@@ -2201,103 +2201,103 @@ A courier can be configured to load all data from a specified time period.
    .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that contains PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
 #. Click **Run**.
 
-.. couriers-run-for-time-period-steps-end
+.. couriers-legacy-run-for-time-period-steps-end
 
 
-.. _couriers-run-skip-missing-files:
+.. _couriers-legacy-run-skip-missing-files:
 
 Skip missing files
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-run-skip-missing-files-start
+.. couriers-legacy-run-skip-missing-files-start
 
 A courier can be configured to skip sources files that are missing and continue running.
 
-.. couriers-run-skip-missing-files-end
+.. couriers-legacy-run-skip-missing-files-end
 
 **To skip missing files**
 
-.. couriers-run-skip-missing-files-steps-start
+.. couriers-legacy-run-skip-missing-files-steps-start
 
 #. From the **Sources** page, open the menu for a courier, and then select **Run**. The **Run Courier** page opens.
 #. Select **Load data from a specific day** or **Load data from a specific time period**.
 #. Under **Load options**, select **Skip missing files**.
 #. Click **Run**.
 
-.. couriers-run-skip-missing-files-steps-end
+.. couriers-legacy-run-skip-missing-files-steps-end
 
 
-.. _couriers-run-with-empty-load-operation:
+.. _couriers-legacy-run-with-empty-load-operation:
 
 With empty load operation
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-run-without-load-operations-start
+.. couriers-legacy-run-without-load-operations-start
 
 You can run a courier with an empty load operation using ``{}`` as the value for the load operation. Use this approach to get files to upload during feed creation, as a feed requires knowing the schema of a file before you can apply semantic tagging and other feed configuration settings.
 
-.. couriers-run-without-load-operations-end
+.. couriers-legacy-run-without-load-operations-end
 
 
-.. _couriers-view-errors:
+.. _couriers-legacy-view-errors:
 
 View error log
 --------------------------------------------------
 
-.. couriers-view-errors-start
+.. couriers-legacy-view-errors-start
 
 If a courier runs and returns an error, you may view the errors from that feed.
 
-.. couriers-view-errors-end
+.. couriers-legacy-view-errors-end
 
 **To view errors**
 
-.. couriers-view-errors-steps-start
+.. couriers-legacy-view-errors-steps-start
 
 #. From the **Notifications** pane, for the stage error, open the **View Load Details** link.
 #. From the **View Load Details** pane, select **View Error Log** for the feed with errors.
 #. Investigate the errors reported.
 
-.. couriers-view-errors-steps-end
+.. couriers-legacy-view-errors-steps-end
 
 
-.. _couriers-run-restart-job:
+.. _couriers-legacy-run-restart-job:
 
 Restart job
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. couriers-run-restart-job-start
+.. couriers-legacy-run-restart-job-start
 
 If a courier runs and returns an error, you may view the error, resolve that error by updating the feed configuration or Spark SQL query, and then restart it without having to reload the data associated with the job.
 
-.. couriers-run-restart-job-end
+.. couriers-legacy-run-restart-job-end
 
 **To restart a job**
 
-.. couriers-run-restart-job-steps-start
+.. couriers-legacy-run-restart-job-steps-start
 
 #. From the **Notifications** pane, for the stage error, open the **View Load Details** link and investigate why the job failed.
 #. Edit the feed configuration or Spark SQL query to address the reasons for the error.
 #. From the **Notifications** pane, click **Restart Ingest Job**.
 
-.. couriers-run-restart-job-steps-end
+.. couriers-legacy-run-restart-job-steps-end
 
 
-.. _couriers-view:
+.. _couriers-legacy-view:
 
 View courier
 --------------------------------------------------
 
-.. couriers-view-start
+.. couriers-legacy-view-start
 
 The **Sources** page shows the status of every courier, including when it last ran or updated, and its current status.
 
-.. couriers-view-end
+.. couriers-legacy-view-end
 
 **To view a courier**
 
-.. couriers-view-steps-start
+.. couriers-legacy-view-steps-start
 
 From the **Sources** page, open the menu for a courier, and then select **View**. The **View Courier** page opens.
 
-.. couriers-view-steps-end
+.. couriers-legacy-view-steps-end
