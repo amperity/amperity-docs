@@ -1567,7 +1567,7 @@ Trivial duplicates
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of nearly-identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records---the trivial duplicates---are not.
+A trivial duplicate is a set of nearly-identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records--the trivial duplicates--are not.
 
 .. term-trivial-duplicate-end
 

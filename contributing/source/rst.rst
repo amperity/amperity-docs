@@ -2260,10 +2260,10 @@ Header levels
 
 Up to four header levels may be used within a topic.
 
-* H1 headers are identified with equals symbols: ``=====``
-* H2 headers are identified with dash symbols ``-----``
-* H3 headers are identified with plus symbols ``+++++``
-* H4 headers are identified with carat symbols ``^^^^^``
+* H1 headers are identified with equals symbols: ``======``
+* H2 headers are identified with dash symbols ``------``
+* H3 headers are identified with plus symbols ``++++++``
+* H4 headers are identified with carat symbols ``^^^^^^``
 
 All header lengths :ref:`must be 50 characters <rst-header-markup-length>`.
 

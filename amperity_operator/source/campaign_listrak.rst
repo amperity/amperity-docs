@@ -124,7 +124,7 @@ Customers, products, and orders
 
 .. campaign-listrak-sftp-start
 
-Configure Amperity to additional data sets---customers, products, orders, and order items---to |destination-name| using SFTP.
+Configure Amperity to additional data sets--customers, products, orders, and order items--to |destination-name| using SFTP.
 
 .. note:: This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
 

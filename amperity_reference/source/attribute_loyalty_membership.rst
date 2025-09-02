@@ -146,7 +146,7 @@ The following table lists the operators that are available to these attributes.
    * - **is not**
      - **is not** returns an audience with any customer records that are not associated with a selected date.
 
-       .. tip:: Use the **Latest Update Datetime** attribute with this condition to return an audience of customers---who have made no updates to their loyalty profile within the defined selected dates---to send out a reminder message to ensure their loyalty profile information is up to date.
+       .. tip:: Use the **Latest Update Datetime** attribute with this condition to return an audience of customers--who have made no updates to their loyalty profile within the defined selected dates--to send out a reminder message to ensure their loyalty profile information is up to date.
 
    * - **is not between**
      - |attribute-stop| **Less useful**
@@ -158,7 +158,7 @@ The following table lists the operators that are available to these attributes.
 
        Returns customer records that are associated with a datetime or are opted in to being contacted by your loyalty program.
 
-       .. tip:: Use the **Latest Opted In Datetime** attribute with this condition to return an audience with customers---that have opted in to being contacted by your loyalty program---to be included in an advertising campaign.
+       .. tip:: Use the **Latest Opted In Datetime** attribute with this condition to return an audience with customers--that have opted in to being contacted by your loyalty program--to be included in an advertising campaign.
 
    * - **is NULL**
      - Returns customer records that are not opted in to being contacted by your loyalty membership or associated with a datetime.

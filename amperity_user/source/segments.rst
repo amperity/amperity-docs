@@ -35,7 +35,7 @@ This is part one of a series of topics that describes how this works.
 
 You can use the **Segment Editor** to build a segment using the attributes that are available to your tenant. Use a segment as the starting audience for any campaign.
 
-.. note:: A version of this editor---called **Audience Builder**---is also available from within the **Campaigns** page and is used to define sub-audiences for a campaign. The **Audience Builder** does not provide segment insights and you must use the same database and tables that were used to build the initial audience.
+.. note:: A version of this editor--called **Audience Builder**--is also available from within the **Campaigns** page and is used to define sub-audiences for a campaign. The **Audience Builder** does not provide segment insights and you must use the same database and tables that were used to build the initial audience.
 
 The following sections describe the individual elements within the **Segment Editor**.
 
@@ -56,7 +56,7 @@ The following sections describe the individual elements within the **Segment Edi
      - The **Segment Editor** is available from two locations within Amperity:
 
        * When adding an audience from the **Segments** page. The **Create Segment** button in the top right corner of the page opens the **Segment Editor**.
-       * When adding a sub-audience from within the campaigns editor. The **Add sub-audience** link opens a version of this editor---called **Audience Builder**---that does not contain segment insights.
+       * When adding a sub-audience from within the campaigns editor. The **Add sub-audience** link opens a version of this editor--called **Audience Builder**--that does not contain segment insights.
 
        .. note::
 
@@ -91,7 +91,7 @@ The following sections describe the individual elements within the **Segment Edi
 
           Amperity provides the following tables as standard output:
 
-          * The **Customer 360** table contains customer profile data---names, addresses, email addresses, phone numbers, and so on---summarized by unique customer.
+          * The **Customer 360** table contains customer profile data--names, addresses, email addresses, phone numbers, and so on--summarized by unique customer.
           * The **Unified Transactions** table contains order-level details for a transaction.
           * The **Unified Itemized Transactions** table contains line-item and product catalog details for a transaction.
           * The **Transaction Attributes Extended** table contains calculated attributes that are built from order- and item-level details in transaction tables.

@@ -190,7 +190,7 @@ About Amazon Marketing Cloud (AMC)
 
 .. destination-amazon-ads-about-amc-start
 
-Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign events, such as ad impressions, ad clicks, and ad-attributed conversions that span across media including streaming TV, audio, video, display, and sponsored ads. These inputs are uploaded into a dedicated instance of AMC---a "clean room"---after which that data stays within that instance and cannot be accessed or exported by Amazon.
+Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign events, such as ad impressions, ad clicks, and ad-attributed conversions that span across media including streaming TV, audio, video, display, and sponsored ads. These inputs are uploaded into a dedicated instance of AMC--a "clean room"--after which that data stays within that instance and cannot be accessed or exported by Amazon.
 
 Audience analysis takes place within Amazon Marketing Cloud, including across dimensions like audiences, device, time, or campaigns. Results are aggregated and may be exported as anonymous reports.
 

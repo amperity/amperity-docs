@@ -375,7 +375,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
           :alt: Requirement 4.
           :align: center
           :class: no-scaled-link
-     - A secure share identifier in Snowflake is a unique string---A-Z, 0-9, $, and _ (underscores)---that is added when creating a share. This string must configured in Amperity to enable the bridge.
+     - A secure share identifier in Snowflake is a unique string--A-Z, 0-9, $, and _ (underscores)--that is added when creating a share. This string must configured in Amperity to enable the bridge.
 
        Copy the secure share identifier from the Snowflake user interface, and then share the identifier with the individual who will configure Amperity for secure data sharing with Snowflake.
 
@@ -415,7 +415,7 @@ To enable data sharing between Snowflake and Amperity `a share must be created i
 #. For the share, select a source database, along with one or more target objects within the source database.
 #. A **Secure Share Identifier** is required for data sharing with Amperity.
 
-   A secure share identifier in Snowflake is a unique string---A-Z, 0-9, $, and _ (underscores)---that is added when creating a share. This string must be configured in Amperity to enable the bridge.
+   A secure share identifier in Snowflake is a unique string--A-Z, 0-9, $, and _ (underscores)--that is added when creating a share. This string must be configured in Amperity to enable the bridge.
 
 #. Find the :ref:`Amperity account locator ID <bridge-snowflake-sync-amperity-configure-snowflake-account-locator>`, and then add it to the configuration for the **Secure Share Identifier**.
 

@@ -40,7 +40,7 @@ Configure offline events for The Trade Desk
 
 Use this destination to send offline measurement data to The Trade Desk, and then use that data for attribution and targeting.
 
-Offline events help your brand track offline conversions---in-store sales, place visits, and other events---as they relate to your brand's marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
+Offline events help your brand track offline conversions--in-store sales, place visits, and other events--as they relate to your brand's marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
 
 .. tip:: Send offline events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
 

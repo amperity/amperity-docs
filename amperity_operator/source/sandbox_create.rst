@@ -106,7 +106,7 @@ The following sections describe the steps you'll follow when creating a sandbox 
        * What configuration state changes are ready for promotion to production
        * What updates are ready to be pulled from production to the sandbox
 
-       .. tip:: A sandbox that hasn't run recently---for example, within the previous two weeks---should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
+       .. tip:: A sandbox that hasn't run recently--for example, within the previous two weeks--should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
 
 
 .. sandbox-promote-callouts-end

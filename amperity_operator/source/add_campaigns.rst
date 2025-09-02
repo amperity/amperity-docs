@@ -22,7 +22,7 @@ Enable activations
 
 .. add-campaigns-steps-start
 
-Amperity provides a set of features---the **Campaigns** page, segment insights, and predictive attributes---to help you understand your customer's preferences and behaviors, and then to make better informed decisions as to how often you choose to interact with them.
+Amperity provides a set of features--the **Campaigns** page, segment insights, and predictive attributes--to help you understand your customer's preferences and behaviors, and then to make better informed decisions as to how often you choose to interact with them.
 
 .. add-campaigns-steps-end
 

@@ -171,7 +171,7 @@ Behavioral attributes, both historical and predicted, are more likely to contain
       * - **High-precision values**
         - High-precision values are found in attributes that contain floating points, decimals, and percentages.
 
-          These types of values---1.09413481, 345.47 or .34---often change slightly, but in a way that offers little value to the downstream business use case.
+          These types of values--1.09413481, 345.47 or .34--often change slightly, but in a way that offers little value to the downstream business use case.
 
           For example, predictive attributes are refreshed daily. Predicted CLV during the next 365 days might be $345.37 on one day and $348.75 a few days later.
 

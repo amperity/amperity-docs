@@ -29,7 +29,7 @@ The **Customer 360** page provides:
 
 * Visibility into the data that is behind your brand's customer profiles and interactions along with access to the **Data Explorer**, from which you can explore your brand's unified customer data
 * Access to building and managing databases
-* Visibility into what comprises your brand's set of standard core tables---building blocks for all of your brand's databases---and access to building and managing custom core tables
+* Visibility into what comprises your brand's set of standard core tables--building blocks for all of your brand's databases--and access to building and managing custom core tables
 
 .. databases-customer-360-page-end
 
@@ -2057,7 +2057,7 @@ Mark columns as PII
 
 .. databases-database-howto-mark-columns-as-pii-start
 
-Columns that contain PII---names (first, last, and full), addresses, phone numbers, email addresses, birthdates, gender, and other profile details---should be marked for all database tables.
+Columns that contain PII--names (first, last, and full), addresses, phone numbers, email addresses, birthdates, gender, and other profile details--should be marked for all database tables.
 
 .. databases-database-howto-mark-columns-as-pii-end
 

@@ -2584,7 +2584,7 @@ Transaction attributes, calculated
 
 .. data-tables-transaction-attributes-extended-start
 
-Extended transaction attributes---customer flags, customer orders, date differences, time period rollups, and RFM---are also calculated by Amperity based on data sources that contain interaction records that were tagged with transactions and itemized transaction semantics.
+Extended transaction attributes--customer flags, customer orders, date differences, time period rollups, and RFM--are also calculated by Amperity based on data sources that contain interaction records that were tagged with transactions and itemized transaction semantics.
 
 .. data-tables-transaction-attributes-extended-end
 

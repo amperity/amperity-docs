@@ -78,7 +78,7 @@ Storage consumption
 
 The rate at which source tables consume Amps is a combination of how much data is being loaded to Amperity and the file type for that data. For example, a large CSV file consumes more Amps than an Apache Parquet file when both tables contain similar record counts.
 
-More data---more rows, more fields, more complete data---will drive Amps consumption. Source tables that are transformed in Amperity prior to Stitch will consume Amps based on the complexity of Spark SQL that is used to perform the transformation.
+More data--more rows, more fields, more complete data--will drive Amps consumption. Source tables that are transformed in Amperity prior to Stitch will consume Amps based on the complexity of Spark SQL that is used to perform the transformation.
 
 Storage is typically stable after the implementation period has completed. Storage (by itself) typically consumes Amps at a lower rate when compared to running workflows and processing data.
 
@@ -180,7 +180,7 @@ By category
 
 .. amps-review-consumption-dashboard-category-start
 
-Consumption breakdown by category shows which category---Sources, Stitch, Databases, Analytics, or Activation---has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which category--Sources, Stitch, Databases, Analytics, or Activation--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. image:: ../../images/amps-consumption-category-view.png
    :width: 600 px
@@ -198,7 +198,7 @@ By feature
 
 .. amps-review-consumption-dashboard-feature-start
 
-Consumption breakdown by category shows which feature---BI Connect, Bridge, Campaigns, Databases, Ingest, Orchestrations, Predictive modeling, Profile API, Segmentation, Source Tables, Source Transforms, or Stitch---has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which feature--BI Connect, Bridge, Campaigns, Databases, Ingest, Orchestrations, Predictive modeling, Profile API, Segmentation, Source Tables, Source Transforms, or Stitch--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. amps-review-consumption-dashboard-feature-end
 
@@ -216,7 +216,7 @@ Consumption categories
 
 .. amps-consumption-categories-start
 
-Amps and storage (TB) consumption is tracked in 5 categories---Sources, Stitch, Databases, Analytics, and Activation---and is further broken down into product features.
+Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, Databases, Analytics, and Activation--and is further broken down into product features.
 
 .. list-table::
    :widths: 30 70

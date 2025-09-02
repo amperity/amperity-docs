@@ -942,7 +942,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
           ,event AS 'CompletePayment'
 
-       .. important:: The value for **event** must be one of the supported offline event types defined by |destination-name|. A partial list of event types---ones that are more likely to align to your Amperity use cases---is described in the following table.
+       .. important:: The value for **event** must be one of the supported offline event types defined by |destination-name|. A partial list of event types--ones that are more likely to align to your Amperity use cases--is described in the following table.
 
        The value for **event** must be one of the following:
 
