@@ -1075,7 +1075,7 @@ Use the archive feature for campaigns you have actively used, but you don't need
 
 .. campaigns-build-audience-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Archive**.
 
 .. campaigns-build-audience-steps-end
@@ -1101,7 +1101,7 @@ You can build an audience in a campaign on the **Edit Campaign** page.
 
    .. note:: The **Exclude** list is optional. Use the **Exclude** list to choose recipients to exclude from a campaign.
    
-   .. tip:: You can select up to 10 saved segments from the same database to build inclusions and exclusions for   an audience.
+   .. tip:: You can select up to 10 saved segments from the same database to build inclusions and exclusions for an audience.
 
 The recipients group and control group appear in the **All Recipients** table in the **Sub-audiences and Destinations** section.
 
@@ -1333,7 +1333,7 @@ You can reuse, build, and scale campaigns with ease by using an existing campaig
 
 .. campaigns-copy-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. Click **Make a copy**.
 #. The **Copy campaign** dialog box opens. Enter the name of the new campaign, and then click **Save**.
 #. On the **Edit Campaign** page, update the campaign configuration for the new campaign, and then click **Save**.
@@ -1358,7 +1358,7 @@ You can copy a campaign ID on the **Campaigns** page.
 
 .. campaigns-copy-campaign-id-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Copy ID**.
 #. Paste the campaign ID in the appropriate location.
 
@@ -1380,7 +1380,7 @@ You can delete a campaign on the **Campaigns** page.
 
 .. campaigns-delete-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Delete**.
 #. The **Delete Campaign** dialogue box opens. Click **Confirm**.
 
@@ -1456,7 +1456,7 @@ You can download a recipients list from a delivered campaign on the **Campaigns*
 
 .. campaigns-download-recipients-how-to-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. In the menu, click **Download Recipients**.
 #. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date:** dropdown menu.
 #. Click **Download**. An .CSV file downloads to your Downloads folder on your computer.
@@ -1501,7 +1501,7 @@ You can edit a draft, scheduled, or delivered campaign on the **Campaigns** pa
 
 .. campaigns-edit-draft-campaign-steps-start
 
-#. On the **Campaigns** page, on a campaign, click the more options button.
+#. On the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu that appears, click **Edit**.
 #. On the **Edit Campaigns** page, make your changes.
 #. When done, click **Schedule**.
@@ -1512,7 +1512,7 @@ You can edit a draft, scheduled, or delivered campaign on the **Campaigns** pa
 
 .. campaigns-edit-scheduled-campaign-steps-start
 
-#. On the **Campaigns** page, on a campaign, click the more options button.
+#. On the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu that appears, click **Unschedule and Edit**.
 #. On the **Unschedule and Edit** dialog box, click **Confirm**.
 #. On the **Edit Campaigns** page, make your changes.
@@ -1910,7 +1910,7 @@ You can unschedule a campaign on the **Campaigns** page.
 
 .. campaigns-unschedule-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a scheduled campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a scheduled campaign.
 #. On the menu that appears, click **Unschedule and edit**.
 #. The **Unschedule and Edit** dialogue box appears. Click **Confirm**.
 
@@ -1932,7 +1932,7 @@ You can view a campaign on the **Campaigns** page.
 
 .. campaigns-view-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. On the menu that appears, click **View**.
 
 The **Edit Campaign** page appears displaying the campaign details.
@@ -1955,7 +1955,7 @@ You can view a campaign's history on the **Campaigns** page.
 
 .. campaigns-view-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. On the menu that appears, click **History**.
 
 The **Campaign History** dialogue box appears displaying the campaign's history details.
