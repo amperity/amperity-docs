@@ -123,7 +123,7 @@ The following sections describe the individual steps within the workflow that oc
 
           A Stitch cluster often contains variations of email addresses, phone numbers, and address groups that are all associated with a single unique individual, but only one email address, phone number, or address group will match exactly to the values in the inbound request.
 
-          To avoid potentially exposing additional customer PII in the DSAR report (and possible DSAR response) it is recommended to use the **exact** strategy as often as possible.
+          To avoid potentially exposing additional customer PII in the DSAR report and possible DSAR response it is recommended to use the **exact** strategy as often as possible.
 
        .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a custom domain table will find all corresponding records in source domain tables.
 
