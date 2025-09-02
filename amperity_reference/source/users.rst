@@ -72,7 +72,7 @@ Before a user can log into Amperity they must be added and a policy must be assi
 #. Enter the user's full name (e.g. "Justin Currie") and the email address with which they will log into Amperity (e.g. "justin.currie@amperity.com"). Only users from a :ref:`known domain <settings-users-allow-domains>` are allowed to access Amperity.
 #. Select the :doc:`policy to which this user will be assigned <policies>`.
 #. Select a :doc:`resource group to which this user will be assigned <resource_groups>`.
-#. Be sure to send the user a welcome to Amperity email. (This is enabled by default.)
+#. Be sure to send the user a welcome to Amperity email. This is enabled by default.
 #. Click **Save**.
 
 .. settings-users-add-steps-end
@@ -194,7 +194,7 @@ Once initial enrollment in multi-factor authentication is completed, subsequent 
 
 .. settings-users-multifactor-authentication-self-steps-start
 
-#. Click the kebab icon (|fa-kebab|) next to your tenant name.
+#. Click the kebab icon--|fa-kebab|--next to your tenant name.
 #. Select **Reset MFA**.
 
    Users are immediately logged out and prompted to re-enroll in MFA on their next Amperity login.
@@ -208,7 +208,7 @@ You can reset another user's MFA if you are a Datagrid Administrator or you are 
 .. settings-users-multifactor-authentication-other-user-steps-start
 
 #. Go to the **Settings** page and click the **Users** tab.
-#. Click the kebab icon (fa-kebab) under **Actions** next to the name of the user whose MFA you want to reset.
+#. Click the kebab icon--fa-kebab--under **Actions** next to the name of the user whose MFA you want to reset.
 #. Select **Reset MFA**.
 
    Users are not logged out, but are required to re-enroll in MFA on their next Amperity login or after the current authorization expires.

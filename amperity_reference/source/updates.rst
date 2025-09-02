@@ -90,8 +90,8 @@ Spring 2025
 **Benchmarks**
    :bdg-success:`NEW` `Stitch benchmarks <../operator/benchmarks.html>`__ are heuristic scores that define the expectations for the quality of customer profiles. Use benchmarks to explore data quality and configuration changes that can help improve the quality of customer profiles in your tenant.
 
-**Bring your own storage** (Amazon S3)
-   :bdg-success:`NEW` For new tenants, `use your own AWS storage bucket <../operator/storage.html>`__ with no significant architecture changes required. 
+**Bring your own storage**
+   :bdg-success:`NEW` For new tenants, `use your own Amazon AWS storage bucket <../operator/storage.html>`__ with no significant architecture changes required. 
 
 **Complex types in source data**
    :bdg-success:`NEW` Amperity can ingest, process, and utilize complex data structures like arrays and structs directly from source systems without flattening.
@@ -118,7 +118,7 @@ Spring 2025
    :bdg-light:`UPDATED` Define a `prioritized collection of rules <../operator/configure_stitch.html#rules>`__ to use for deterministic identity resolution. Rules are evaluated in order, starting from the first, until a rule returns true.
 
 **Start workflows programmatically**
-   :bdg-success:`NEW` Start workflows programatically using the `POST /workflow/runs (start) <../api/endpoint_post_workflows_start.html>`__ endpoint.
+   :bdg-success:`NEW` Start workflows programatically using the `POST /workflow/runs <../api/endpoint_post_workflows_start.html>`__ endpoint.
 
 .. updates-2025-spring-end
 

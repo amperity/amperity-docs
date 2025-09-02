@@ -195,7 +195,7 @@ High-level details are visible within a series of boxes along the top of the pag
 * The type of workflow run, such as "courier", "courier group", "campaign send", "database", "file upload", and "orchestration group"
 * Who started the workflow run, such as "automated" or a user name
 * The time at which the workflow run started
-* The runtime of the workflow run (from start to finish or from start to failure)
+* The runtime of the workflow run, from start to finish or from start to failure
 
 .. image:: ../../images/howitworks-workflows-details-and-tasks.png
    :width: 600 px
@@ -235,7 +235,7 @@ Each stage has a series of individual tasks that run in sequence.
 
 For example, tasks for the **Sources** stage must locate today's data updates, pull those updates to Amperity, and then refresh domain tables with the updated data. Each data source that is located will show as an individual task, each data set that is pulled to Amperity will show as an individual task. Many of the steps a courier takes will show as an individual task.
 
-.. tip:: Use the **View task details** menu option to learn more about the information that was submitted to each task, such as the name of a service, the ID for the files that were submitted to the task, dependencies (such as list names or attribute names that are required by a destination), and so on.
+.. tip:: Use the **View task details** menu option to learn more about the information that was submitted to each task, such as the name of a service, the ID for the files that were submitted to the task, dependencies, such as list names or attribute names that are required by a destination.
 
    Outputs show the information that was submitted to the next step in the workflow.
 
@@ -300,7 +300,7 @@ A workflow run may show an warning when Amperity detects a problem. For example:
 
 * When a threshold that is defined for a validation report is exceeded
 * Optional files are missing
-* An issue with an upstream or downstream application, such as the amount of time it may take to send an audience to Google Ads (which is "up to 48 hours"; a new Google Ads workflow cannot start until a previous workflow has finished)
+* An issue with an upstream or downstream application, such as the amount of time it may take to send an audience to Google Ads, which is "up to 48 hours." A new Google Ads workflow cannot start until a previous workflow has finished
 
 A warning does not typically prevent a workflow run from completing, but a warning should be investigated to determine its cause and, where possible, steps should be taken to fix it.
 
@@ -581,7 +581,7 @@ Many workflows have context-specific resolutions that depend on upstream and dow
 
    For example, if your brand only uses Amazon S3 for file-based transfers, then SFTP-specific errors won't ever be shown. If your brand sends paid media campaigns to TikTok Ads and Meta Ads Manager, but not Google Ads, then Google Ads-specific errors won't ever be shown.
 
-   This section is a reference meant to show that Amperity provides a broad (but thorough) list of workflow actions that address the most likely causes and solutions to help your brand self-service resolutions of issues as they may arise.
+   This section is a reference meant to show that Amperity provides a broad list of workflow actions that address the most likely causes and solutions to help your brand self-service resolutions of issues as they may arise.
 
 .. workflows-context-note-end
 
@@ -612,7 +612,7 @@ Mismatched datatype
 
 A datatype defines what the value of an attribute can be. For example, an email address is a String, an order date is a Datetime, revenue is a Decimal, the number of items in an order is an Integer, and something that can be true or false is a Boolean.
 
-It's possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal (or some other non-String datatype). If a mismatched datatype occurs the campaign will fail, you will receive an error message, and an alert will be sent.
+It's possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal or some other non-String datatype. If a mismatched datatype occurs the campaign will fail, you will receive an error message, and an alert will be sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 
@@ -744,7 +744,7 @@ Some common workflow actions that your brand may see when generating databases i
 * :ref:`Cannot bind inputs to resolved state <workflows-databases-inputs-unbound>`
 * Errors resolving column names in tables
 * Missing tables
-* SQL query alerts (including warning *and* failure thresholds)
+* SQL query alerts, including warning *and* failure thresholds
 
 .. workflows-context-databases-end
 

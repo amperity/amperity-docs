@@ -178,7 +178,7 @@ Addresses
 
 .. stitch-preprocess-data-address-start
 
-Amperity preprocesses addresses by converting common abbreviations to complete words, removing periods and commas (``.``, ``,``), and converting all characters to UPPERCASE.
+Amperity preprocesses addresses by converting common abbreviations to complete words, removing periods and commas--``.`` and ``,``--and converting all characters to UPPERCASE.
 
 .. list-table::
    :widths: 300 300
@@ -293,7 +293,7 @@ It is OK if each row does not contain a value for each column. The alignment its
 
 .. stitch-union-of-tables-table-start
 
-The following example shows a couple rows from a few tables, the aligned (and preprocessed) semantic values, and no values when the data source did not provide it. Imagine this for all of your customer data, hundreds of millions of records, hundreds of millions of rows, with fields in the virtual table that span your complete set of customer data.
+The following example shows a couple rows from a few tables, the aligned and preprocessed semantic values, and no values when the data source did not provide it. Imagine this for all of your customer data, hundreds of millions of records, hundreds of millions of rows, with fields in the virtual table that span your complete set of customer data.
 
 .. list-table::
    :widths: 100 100 100 100 100 100
@@ -362,7 +362,13 @@ Blocking
 
 .. stitch-blocking-note-start
 
-.. note:: Blocking is a non-trivial step for record linking in the Stitch process. An overly generous blocking strategy may result in a high recall rate (too many pairs being evaluated) along with negative system performance. An overly conservative blocking strategy may result in a low recall rate (too few pairs being evaluated). Individual blocking keys may be conservative or generous. The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
+.. note:: Blocking is a non-trivial step for record linking in the Stitch process. 
+
+   * An overly generous blocking strategy may result in a high recall rate, which means too many pairs are evaluated. This can affect system performance.
+   * An overly conservative blocking strategy may result in a low recall rate, which means too few pairs being evaluated.
+   * Individual blocking keys may be conservative or generous.
+
+   The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
 
 .. stitch-blocking-note-end
 
@@ -690,7 +696,7 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
       * - **Email addresses**
         - * Do the usernames match exactly?
           * Are there common *or* uncommon usernames that match, despite having different domains?
-          * Does one side of the email address (username *or* domain) have an exact match and the other side have an approximate match?
+          * Does one side of the email address--username *or* domain--have an exact match and the other side have an approximate match?
 
       * - **Physical locations**
         - * How closely do the addresses match?
@@ -711,7 +717,7 @@ Potential connections
 
 .. stitch-pairwise-comparison-potential-start
 
-The pairwise comparison process goes beyond initial scoring to compare (and then score) all of the possible connections between all of the records that belong to the same group.
+The pairwise comparison process goes beyond initial scoring to compare and then score all of the possible connections between all of the records that belong to the same group.
 
 This section uses a group of eight records to show how pairwise comparisons work. A line between records will indicate the threshold for the comparison that was discovered.
 
@@ -893,7 +899,7 @@ After pairwise comparisons are completed and scored, the connections that scored
 
 .. stitch-pairwise-comparison-all-diagram-context-start
 
-This example shows all of the pairwise comparisons that scored above threshold (exact, excellent, and high). (The score at which record pairs fall below threshold is configurable. Moderate is the default threshold at which record pairs are dropped.)
+This example shows all of the pairwise comparisons that scored above threshold (exact, excellent, and high). The score at which record pairs fall below threshold is configurable. Moderate is the default threshold at which record pairs are dropped.
 
 .. stitch-pairwise-comparison-all-diagram-context-end
 
