@@ -121,7 +121,7 @@ The first row of the user activity file contains the following column headers, a
      - The identifier for the object against which the action occurred.
 
    * - **object-name**
-     - A composed string that describes the object(s) for which the action occurred.
+     - A composed string that describes the objects for which the action occurred.
 
        This value is also available from the **Object** column under **Users** on the **Users and Activity** page.
 

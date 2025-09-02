@@ -312,7 +312,9 @@ All queries must be activated before they can run as part of a scheduled workflo
 
 .. note:: Amperity is a multi-user system and the set of queries for your company is shared across all users. That means that if one user creates a draft query, another can open and edit it, so work can be easily passed between people on your team.
 
-   However, it also means that if 2 users are editing the same thing at the same time, their changes will collide.  Amperity resolves this by applying the last set of changes saved as a whole. This will always keep the query in a consistent state (it will never be half-implemented). But changes that were saved first will be overwritten. As a result, we strongly recommend that you coordinate changes to specific objects in Amperity with others on your team.
+   However, it also means that if 2 users are editing the same query at the same time, their changes will collide. Amperity resolves this by applying the last set of changes saved as a whole.
+
+   This keeps the query in a consistent state and ensures it will never be half-finished. But changes that were saved first will be overwritten. Be sure to coordinate changes to ensure that only one individual is working in a query.
 
 .. queries-editor-multiuser-warning-end
 
@@ -891,7 +893,7 @@ Enable query alerts
 
 Any query can be configured to send workflow alerts when configured thresholds are met. This is an important way to ensure that queries that have dependencies on courier groups so they never send inaccurate or incomplete data.
 
-Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. There are two alert levels (you may enable one or both):
+Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. There are two alert levels:
 
 #. **Warn when** record counts exceed the configured threshold. The workflow will continue running.
 
@@ -963,7 +965,7 @@ You can view details for any query, including the SQL query associated with the 
 .. queries-open-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor with the query as view-only.
-#. Click **Edit** to make changes. (This will change the query to a draft query, which will require re-activation when you are done making changes.)
+#. Click **Edit** to make changes. This will change the query to a draft query, which will require re-activation when you are done making changes.
 
 .. queries-open-steps-end
 
@@ -991,7 +993,7 @@ Add folder
 
 .. queries-add-folder-start
 
-Folders may be expanded (or collapsed) to view (and hide) the list of queries and subfolders contained within.
+Folders may be expanded or collapsed to view and hide the list of queries and subfolders contained within.
 
 .. queries-add-folder-end
 
@@ -1077,7 +1079,7 @@ Move query
 
 .. queries-list-move-query-start
 
-Use the **Move** option to move around and organize the list of folders and queries. Folders may be expanded (or collapsed) to view (and hide) the list of queries and subfolders contained within.
+Use the **Move** option to move around and organize the list of folders and queries. Folders may be expanded to view the list of queries and subfolders contained within.
 
 .. queries-list-move-query-end
 
@@ -1177,7 +1179,7 @@ A query may be configured to be refreshed automatically. When enabled, an active
 .. queries-refresh-automatically-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **Edit**. This opens the query editor with the query labeled a draft query.
-#. Under **Query Settings**, select the **Refresh automatically** checkbox. (This option is required to enable query alerts.)
+#. Under **Query Settings**, select the **Refresh automatically** checkbox. This option is required to enable query alerts.
 #. Click **Activate**. The query will run automatically when upstream data changes.
 
 .. queries-refresh-automatically-steps-end
@@ -1438,7 +1440,7 @@ You can view details for any SQL query, including the SQL query associated with 
 .. queries-view-query-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **View**. This opens the **SQL Query Editor** with the SQL query as view-only.
-#. Click **Edit** to make changes. (This will change the query to a draft query, which will require re-activation when you are done making changes.)
+#. Click **Edit** to make changes. This will change the query to a draft query, which will require re-activation when you are done making changes.
 
 .. queries-view-query-steps-end
 

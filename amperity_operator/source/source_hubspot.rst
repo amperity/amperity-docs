@@ -35,9 +35,9 @@ Pull from HubSpot
 HubSpot is a good source of marketing event data, including:
 
 * Customer lists
-* Customer profile data (names, email addresses, phone numbers, physical addresses)
+* Customer profile data, such as names, email addresses, phone numbers, physical addresses
 * Email opt-in and opt-out preferences
-* Campaign details (clicks, opens)
+* Campaign details, such as clicks and opens
 * Custom property fields defined in HubSpot
 
 .. source-hubspot-context-end
@@ -74,7 +74,7 @@ Get details
       :start-after: .. sources-get-details-fivetran-request-to-enable-start
       :end-before: .. sources-get-details-fivetran-request-to-enable-end
 
-#. Permission to sychronize FiveTran to HubSpot. This must be done by a user of HubSpot with `Super Admin level privileges <https://knowledge.hubspot.com/settings/hubspot-user-permissions-guide#super-admin>`__ |ext_link|. (Log into HubSpot as a user with **Super Admin** privileges, select the account you want to synchronize, click **Grant Access**, and then click **Save & Test**.)
+#. Permission to sychronize FiveTran to HubSpot. This must be done by a user of HubSpot with `Super Admin level privileges <https://knowledge.hubspot.com/settings/hubspot-user-permissions-guide#super-admin>`__ |ext_link|. Log into HubSpot as a user with **Super Admin** privileges, select the account you want to synchronize, click **Grant Access**, and then click **Save & Test**.
 
    .. include:: ../../shared/sources.rst
       :start-after: .. sources-get-details-fivetran-connect-start

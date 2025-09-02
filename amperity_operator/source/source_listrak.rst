@@ -7,7 +7,7 @@
 .. |domain-table-name| replace:: |source-name|:EmailContacts *AND / OR* |source-name|:SmsContacts
 .. |credential-type| replace:: **listrak**
 .. |what-pull| replace:: email and/or SMS profiles
-.. |credential-fields| replace:: the name of the credential, a description, the |source-name| client ID(s) and client secret(s)
+.. |credential-fields| replace:: the name of the credential, a description, the |source-name| client IDs and client secrets
 .. |settings-details| replace:: the list name for each integration being used, as defined in |source-name|
 .. |box-names| replace:: Email Contacts *AND / OR* SMS Contacts
 
@@ -73,7 +73,7 @@ Amperity can pull |what-pull| from |source-name|.
 
 A |source-name| data source works like this:
 
-#. Configure Amperity to pull one (or both) of the following data sources:
+#. Configure Amperity to pull one or both of the following data sources:
 
    Email subscription status using the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|.
 
@@ -97,7 +97,7 @@ Get details
 
 |source-name| requires the following configuration details:
 
-#. The client ID(s) and secret(s) for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| **and/or** `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
+#. The client IDs and secrets for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| **and/or** `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
 
    .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist in |source-name|.
 
@@ -229,6 +229,8 @@ Email
 
 .. source-listrak-review-data-email-start
 
+.. vale off
+
 The feed and domain table will match the fields defined in the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|:
 
 * **emailAddress** (assigned the **email** and **ck** semantic tags)
@@ -236,6 +238,8 @@ The feed and domain table will match the fields defined in the `Listrak Email AP
 * **subscribeMethod**
 * **unsubscribeDate**
 * **unsubscribeMethod**
+
+.. vale on
 
 .. source-listrak-review-data-email-end
 
@@ -246,6 +250,8 @@ SMS
 --------------------------------------------------
 
 .. source-listrak-review-data-sms-start
+
+.. vale off
 
 The feed and domain table will match the fields defined in the `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|:
 
@@ -258,6 +264,8 @@ The feed and domain table will match the fields defined in the `Listrak SMS API 
 * **optedOut**
 * **subscribeDate**
 * **unsubscribeDate**
+
+.. vale on
 
 .. source-listrak-review-data-sms-end
 

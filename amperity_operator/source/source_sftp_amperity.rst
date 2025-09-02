@@ -31,7 +31,7 @@ Pull to Amperity SFTP
 
 .. about-tenant-sftp-start
 
-Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. (The hostname is always all lowercase.)
+Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. The hostname is always all lowercase.
 
 The SFTP site is provisioned by an Amperity administrator after the initial tenant creation. As such, the SFTP site is not immediately available, but this is not a long process. When the SFTP site is ready, Amperity will use SnapPass to send you the connection details. If you wish to use RSA key-based authentication, please provide the public key to your Amperity administrator when requesting SFTP access.
 
@@ -77,7 +77,7 @@ An Amperity SFTP site requires the following configuration details:
 #. The passphrase.
 #. The host public key.
 #. The hostname. This is always ``[tenant].sftp.amperity.com``. For example, if your tenant name is ACME the hostname is ``acme.sftp.amperity.com``.
-#. A list of objects (by filename and file type, e.g. "accounts.csv", "customers.ndjson", "email-list.tsv", and so on) in the SFTP location to be sent to Amperity.
+#. The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during feed creation.
 #. A sample for each file to simplify feed creation.
 
 .. source-sftp-amperity-get-details-end

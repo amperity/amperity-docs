@@ -54,7 +54,7 @@ When to use
 #. Run this query when foreign keys or customer keys are present in the data.
 #. If customer keys are present, use **ck** as the deduplication key.
 #. Run this query for each data source.
-#. Investigate clusters with 2 or more deduplication keys (~30-60 minutes).
+#. Investigate clusters with 2 or more deduplication keys.
 #. Look for examples of overclustering.
 
 .. stitch-qa-query-dedupe-keys-per-amperity-id-use-end

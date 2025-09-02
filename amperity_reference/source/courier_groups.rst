@@ -384,7 +384,7 @@ The time zones that are available for selection in Amperity are modeled after th
 
 .. courier-groups-timezones-downstream-start
 
-The time zone that is chosen for an courier group schedule should consider every downstream business processes that requires the data and also the time zone(s) in which the consumers of that data will operate.
+The time zone that is chosen for an courier group schedule should consider every downstream business processes that requires the data and also the time zones in which the consumers of that data will operate.
 
 .. courier-groups-timezones-downstream-end
 
@@ -478,7 +478,7 @@ A courier can be configured to look for files within range of time that is older
 
 This range is typically 24 hours, but may be configured for longer ranges. For example, it's possible for a data file to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of how an upstream workflow is configured. A wait time helps ensure that the data at the source location is recognized correctly by the courier.
 
-.. warning:: This range of time may affect couriers in a courier group whether or not they run on a schedule. A manually run courier group may not take its schedule into consideration when determining the date range; only the provided input day(s) to load data from are used as inputs.
+.. warning:: This range of time may affect couriers in a courier group whether or not they run on a schedule. A manually run courier group may not take its schedule into consideration when determining the date range; only the provided input days to load data from are used as inputs.
 
 .. courier-groups-schedule-offset-end
 

@@ -34,7 +34,7 @@ Pull from Bluecore
 
 .. source-bluecore-context-start
 
-Pull email campaign data (such as email address, offer affinity, and lifetime value) and propensity metrics (such as open, click, and unsubscribe) to Amperity.
+Pull email campaign data, such as email address, offer affinity, and lifetime value, and propensity metrics, such as opens, clicks, and unsubscribes, to Amperity.
 
 .. source-bluecore-context-end
 
@@ -86,7 +86,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The host public key (if encryption is configured).
+     - The host public key if encryption is configured.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -111,7 +111,7 @@ The |source-name| data source requires the following configuration details:
 
        .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
 
-       The location must contain the list of files (by filename and file type, e.g. "accounts.csv", "customers.csv", "email-list.csv", and so on) that are to be pulled to Amperity. A sample of each file is used during feed creation.
+       The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during feed creation.
 
        .. include:: ../../amperity_reference/source/format_csv.rst
           :start-after: .. format-csv-file-sizes-start

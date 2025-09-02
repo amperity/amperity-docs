@@ -61,7 +61,7 @@ Configure query
 
    .. tip:: :ref:`Add the Stitch QA queries template folder <qa-stitch-enable-steps-add-queries>` if it does not already exist.
 
-   .. note:: These steps describe how to complete this template to find unmatched semantic values for email addresses only. You may modify this template in the **SQL Query Editor** directly prior to running it to support other semantics (i.e. changing email to phone everywhere) *or* you could create additional queries, one per semantic, so that each query may remain fully customized and tuned for that use case.
+   .. note:: These steps describe how to complete this template to find unmatched semantic values for email addresses only. You may modify this template in the **SQL Query Editor** directly prior to running it to support other semantics, such as changing email to phone everywhere, *or* you could create additional queries, one per semantic, so that each query may remain fully customized and tuned for that use case.
 
 #. Update the list of matching fields to contain any additional semantic or custom fields required by your tenant:
    

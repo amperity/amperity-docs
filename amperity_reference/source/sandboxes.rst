@@ -27,7 +27,7 @@ About sandboxes
 
    Ensure data is always available in production by making changes in a sandbox.
 
-   Each sandbox tracks changes, provides validation workflows and audit tools (that don't need to be configured or customized), and automates monitoring and alerts for changes in the sandbox.
+   Each sandbox tracks changes, provides validation workflows and audit tools that don't need to be configured or customized, and automates monitoring and alerts for changes in the sandbox.
 
    Open **Learning Lab** to learn more about how `sandboxes <https://learn.amperity.com/sandboxes-course>`__ |ext_link| work. Registration is required.
 
@@ -527,7 +527,7 @@ Validated changes within a sandbox can be promoted to production.
 
 #. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon, and then :ref:`open a sandbox <sandboxes-howto-open-sandbox>`.
 #. From the sandbox, :ref:`resolve all validation issues <sandboxes-howto-resolve-validation-issues>`.
-#. Click the **Promote** button, and then specify if you want to delete the sandbox immediately after promoting your changes or if you want to only promote changes (and keep the sandbox).
+#. Click the **Promote** button, and then specify if you want to delete the sandbox immediately after promoting your changes or if you want to only promote changes and keep the sandbox.
 #. Click **Promote**.
 
 .. sandboxes-howto-promote-changes-steps-end
@@ -711,6 +711,6 @@ Click this link to open the **Promote changes** page, from which each validation
 
 #. In a sandbox, click **View errors**. This opens the **Promote changes** page.
 #. From the list of validation errors, select the |fa-kebab| icon, and then choose **View details**.
-#. The **Sandbox resolutions** dialog box opens. This dialog describes the cause of the validation issue, and then (if available) provides one or more steps you can use to resolve the validation issue.
+#. The **Sandbox resolutions** dialog box opens. This dialog describes the cause of the validation issue, and then, if available, provides one or more steps you can use to resolve the validation issue.
 
 .. sandboxes-howto-view-validation-details-steps-end

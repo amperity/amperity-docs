@@ -100,7 +100,7 @@ Amperity recommends to use Azure Data Share to manage access to customer-managed
 
 .. source-azure-blob-storage-legacy-azure-data-share-after-start
 
-After setting up Azure Data Share, a list of files (by filename and file type), along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after Azure Data Share is configured.
+After setting up Azure Data Share, a list of files by filename and file type, along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after Azure Data Share is configured.
 
 .. source-azure-blob-storage-legacy-azure-data-share-after-end
 
@@ -135,8 +135,8 @@ A source that uses credentials to send data to Amperity from |source-name| requi
 
 #. The URL for the Azure authentication endpoint. This is typically in the format of ``https://login.microsoftonline.com/<directory_id>/oauth2/token``.
 #. The information needed for the selected credentials method: shared access credentials, a storage URI, or a connection string.
-#. The name of the container, the blob prefix, and credential details. (These vary depending on the chosen credential method.)
-#. A list of files (by filename and file type) in Azure Blob Storage to be sent to Amperity.
+#. The name of the container, the blob prefix, and credential details. These vary depending on the chosen credential method.
+#. A list of files by filename and file type in Azure Blob Storage to be sent to Amperity.
 #. A sample for each file to simplify feed creation.
 
 .. source-azure-blob-storage-legacy-credentials-end
@@ -200,7 +200,7 @@ Review :ref:`source-azure-blob-storage-legacy-azure-data-share` for more informa
         }
       ]
 
-#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
@@ -264,7 +264,7 @@ Credentials options to access Azure Blob Storage include shared access signature
         }
       ]
 
-#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 

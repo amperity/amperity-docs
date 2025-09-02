@@ -19,7 +19,7 @@ Responses
 
 .. status_codes-start
 
-Amperity API endpoints use conventional HTTP response status codes---3-digit numbers where the first digit of the code defines the class of response---to indicate success or failure for any API request. Response status codes fall into three categories:
+Amperity API endpoints use conventional HTTP response status codes--3-digit numbers where the first digit of the code defines the class of response--to indicate success or failure for any API request. Response status codes fall into three categories:
 
 #. 2xx - Success
 #. 4xx - Error

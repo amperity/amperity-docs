@@ -172,7 +172,7 @@ Your customer 360 database must be configured before you can use customer profil
 
    For example, if your brand adds a data source that contains PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
 
-The initial configuration of your customer 360 database requires using SQL to add (and extend) a series of tables that are the foundation of your brand's set of unified customer profiles.
+The initial configuration of your customer 360 database requires using SQL to add or extend a series of tables that are the foundation of your brand's set of unified customer profiles.
 
 #. :ref:`Unified Coalesced <setup-customer-profiles-build-database-table-uc>`
 #. :ref:`Best email address <setup-customer-profiles-build-database-table-best-email>`
@@ -368,7 +368,7 @@ Customer 360
 
 The **Customer 360** table contains all of your brand's unified customer profiles combined with the individual actions each of your customers have had with your brand.
 
-Individual rows within the **Customer 360** table represent customer profiles (and their interactions), unique by Amperity ID.
+Individual rows within the **Customer 360** table represent customer profiles and their interactions with your brand, unique by Amperity ID.
 
 .. setup-customer-profiles-build-database-table-c360-end
 

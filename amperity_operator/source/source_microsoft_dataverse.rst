@@ -56,11 +56,15 @@ Get details
 
 .. source-microsoft-dataverse-get-details-start
 
+.. vale off
+
 Amperity can be configured to send |what-pull| from |source-name|.
 
 #. The Azure tenant ID, Azure client ID, and your Azure client secret that has access to your Power Apps application.
 
 #. The environment region, environment name, and logical table name for your Power Apps application. For example: "crm" (region), "acme" (name), and "abc123_acme" (logical table name).
+
+.. vale on
 
 .. source-microsoft-dataverse-get-details-end
 

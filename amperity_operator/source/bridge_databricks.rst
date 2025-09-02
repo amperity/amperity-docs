@@ -49,6 +49,10 @@ Data types
 
 Most `Databricks data types <https://docs.databricks.com/aws/en/sql/language-manual/sql-ref-datatypes>`__ |ext_link| are supported by Amperity Bridge.
 
+.. include:: ../../amperity_reference/source/bridge.rst
+   :start-after: .. bridge-howto-sync-datatypes-start
+   :end-before: .. bridge-howto-sync-datatypes-end
+
 The following table describes how Databricks data types map to Amperity data types.
 
 .. list-table::
@@ -108,7 +112,7 @@ The following table describes how Databricks data types map to Amperity data typ
 
    * - `DECIMAL (p,s) <https://docs.databricks.com/aws/en/sql/language-manual/data-types/decimal-type>`__ |ext_link|
 
-       A number with a specified maximum precision and fixed scale. Precision is between 1-38 (default 10) and scale is the number of digits to the right of the decimal point.
+       A number with a specified maximum precision and fixed scale. Precision is between 1-38 and scale is the number of digits to the right of the decimal point. Default precision is 10.
 
      - **Decimal**
 
@@ -192,7 +196,7 @@ The following table describes how Databricks data types map to Amperity data typ
 
      - **String**
 
-       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, and descriptions. May be empty. For example:
+       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. May be empty. For example:
 
        * John
        * Smith
@@ -257,7 +261,7 @@ A sync from Databricks to Amperity requires configuration steps to be made in bo
 
 #. :ref:`Get details <bridge-databricks-sync-with-amperity-prerequisites>`
 #. :ref:`Configure Databricks <bridge-databricks-sync-with-amperity-configure-databricks>`
-#. :ref:`Configure subnet IDs <bridge-databricks-sync-with-amperity-subnet-ids>` (Microsoft Azure only)
+#. Microsoft Azure only. :ref:`Configure subnet IDs <bridge-databricks-sync-with-amperity-subnet-ids>`
 #. :ref:`Add inbound bridge <bridge-databricks-sync-with-amperity-add-bridge>`
 
 .. bridge-databricks-sync-with-amperity-links-end
@@ -293,7 +297,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :class: no-scaled-link
      - The user who will create a recipient for sharing data from Databricks to Amperity must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
 
-       .. note:: If a Databricks notebook is used to create the recipient the cluster must use Databricks Runtime 11.3 LTS (or higher) and must be running in shared mode or single-cluster access mode.
+       .. note:: If a Databricks notebook is used to create the recipient the cluster must use Databricks Runtime 11.3 LTS or higher and must be running in shared mode or single-cluster access mode.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -708,7 +712,7 @@ Configure an outbound bridge to sync data from Amperity to Databricks.
           :align: left
           :class: no-scaled-link
 
-       Optional. You may restrict access to specific IPs or to a valid CIDR (for a range of IPs). Place separate entries on a new line. Expand **Advanced Settings** to restrict access.
+       Optional. You may restrict access to specific IP addresses or to a valid CIDR for a range of IP addresses. Place separate entries on a new line. Expand **Advanced Settings** to restrict access.
 
        When finished, click **Create**. This will open the **Select tables** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-databricks-sync-with-databricks-select-tables>` to share with Databricks.
 

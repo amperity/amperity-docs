@@ -131,7 +131,7 @@ Build natural language queries
 
 .. assistant-query-example-natural-language-start
 
-You can use natural language---the same types of sentences you use when talking to co-workers and friends---to ask the **AmpAI Assistant** to help you build queries against any database in the **Customer 360** page.
+You can use natural language--the same types of sentences you use when talking to co-workers and friends--to ask the **AmpAI Assistant** to help you build queries against any database in the **Customer 360** page.
 
 .. assistant-query-example-natural-language-end
 

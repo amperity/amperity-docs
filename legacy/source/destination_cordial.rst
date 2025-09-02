@@ -42,7 +42,7 @@ Build a query or segment that contains the **email** field, along with any other
 
 .. note:: Amperity recommends using the |destination-api| to send |what-send| from Amperity to |destination-name|.
 
-   However, if you prefer to send a CSV or JSON file (one-time or recurring) instead of using the |destination-api| you may configure `Cordial Data Automations <https://support.cordial.com/hc/en-us/articles/360029407471>`__ |ext_link|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
+   However, if you prefer to send a CSV or JSON file instead of using the |destination-api| you may configure `Cordial Data Automations <https://support.cordial.com/hc/en-us/articles/360029407471>`__ |ext_link|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
 
 .. destination-cordial-get-details-alternate-note-end
 
@@ -458,9 +458,9 @@ To resolve this error, verify the attributes that are required by |destination-n
 #. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
-#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attributes" do one of the following:
 
-   Update the attribute(s) in |destination-name| to no longer be required.
+   Update the attributes in |destination-name| to no longer be required.
 
    *or*
 
@@ -479,9 +479,9 @@ To resolve this error, verify the attributes that are required by |destination-n
 #. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
-#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attributes" do one of the following:
 
-   Update the attribute(s) in |destination-name| to no longer be required.
+   Update the attributes in |destination-name| to no longer be required.
 
    *or*
 

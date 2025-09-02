@@ -6214,6 +6214,10 @@ html{
   line-height:1.3333333
 }
 
+.dark .yue h2{
+  border-bottom: 1.4px solid #ffffff;
+}
+
 .yue h2 strong{
   font-weight:800;
   color:inherit
@@ -6227,6 +6231,10 @@ html{
   margin-bottom:.6em;
   border-bottom: 1px solid #0c0c0c;
   line-height:1.6
+}
+
+.dark .yue h3{
+  border-bottom: 1px solid #ffffff;
 }
 
 .yue h3 strong{
@@ -6243,6 +6251,10 @@ html{
   line-height:1.5
 }
 
+.dark .yue h4{
+  border-bottom: .6px solid #ffffff;
+}
+
 .yue h4 strong{
   font-weight:700;
   color:inherit
@@ -6254,6 +6266,10 @@ html{
   margin-top:1.22em;
   margin-bottom:.5em;
   border-bottom: .4px solid #0c0c0c;
+}
+
+.dark .yue h5{
+  border-bottom: .4px solid #ffffff;
 }
 
 .yue h6{

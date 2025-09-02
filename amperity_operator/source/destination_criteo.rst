@@ -75,7 +75,7 @@ Send transactions data
 
 .. events-criteo-overview-start
 
-You can send transactions data (offline events) to |destination-name| as a CSV or TSV file using SFTP.
+You can send transactions data to |destination-name| as a CSV or TSV file using SFTP.
 
 Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to connect to |destination-name| using the |destination_sftp| destination.
 

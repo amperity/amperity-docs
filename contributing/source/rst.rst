@@ -358,42 +358,50 @@ Update the values for ``:author:`` and ``:read-time`` to be specific to the topi
 
 .. _rst-buttons:
 
-Buttons -- TODO
+Buttons
 ==================================================
 
 .. rst-buttons-start
 
 Buttons are like badges, but are bigger and link to somewhere.
 
-.. note:: Not an official formatting option. Under consideration.
+.. caution:: Not currently supported for general use. The following examples show that they work. Use sparingly or not at all.
 
-.. TODO: Need to decide if we're gonna use these. I think we should keep them as a formatting option, but severely limit their use.
+**A button**
 
 .. button-link:: https://docs.amperity.com
+
+**A button with text**
 
 .. button-link:: https://docs.amperity.com
 
    Button text
 
+**A button with a shadow**
+
 .. button-link:: https://docs.amperity.com
    :color: primary
    :shadow:
+
+**A button with an outline**
 
 .. button-link:: https://docs.amperity.com
    :color: primary
    :outline:
 
+**A button that fills the width of the page**
+
 .. button-link:: https://docs.amperity.com
    :color: secondary
    :expand:
 
+**Some buttons in a container**
 
 .. container:: buttons
 
    `User Guides <../user/index.html>`_
    `Operators Guide <../operator/index.html>`_
    `Guided Setup <start.html>`_
-
 
 .. rst-buttons-end
 
@@ -1831,116 +1839,170 @@ A figure requires two image configurations. Use the ``:figclass:`` attribute to 
 
 .. _rst-grids:
 
-Grids -- TODO
+Grids
 ==================================================
 
+.. rst-grids-start
 
-.. _rst-grids-items:
-
-Grid items
---------------------------------------------------
-
-.. grid:: 1 2 3 3
-    :outline:
-
-    .. grid-item::
-
-        Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. 
-
-    .. grid-item::
-
-        Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. 
-
-    .. grid-item::
-
-        Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. Lorem ipsum dolor set atemit. 
-
-
-
-.. _rst-grids-cards:
-
-Grid cards
---------------------------------------------------
+Use grids to build a list of links to other sections and pages in a topic collection or to pages outside Amperity documentation. Configure grids using a variety of linking options and apply Font Awesome or Octicon icons for additional flair. For example:
 
 .. grid:: 1 1 2 2
-    :padding: 0
-    :gutter: 2
+   :padding: 3
+   :gutter: 4
 
-    .. grid-item-card:: Tutorial
-        :link: /install/
+   .. grid-item-card:: Amperity User Guides
+      :link: https://docs.amperity.com/user/index.html
 
-        If you're new to Python and Sphinx, this is a great place to start.
+      Browse a collection of user guides to learn how to configure Amperity to support a variety of marketing and analytics use cases.
 
-    .. grid-item-card:: Customisation
-        :link: /customisation/
+   .. grid-item-card:: Amperity Operator Guides
+      :link: https://docs.amperity.com/user/index.html
 
-        Tailor configurations to meet your specific requirements with customizable settings.
+      Learn how to configure Amperity to support your brand's marketing use cases. Load and shape datasets, build customer profiles, and enable downstream workflows.
 
-    .. grid-item-card:: References
-        :link: /writing/
+   .. grid-item-card:: Style Guide
+      :link-type: doc
+      :link: styles
 
-        Learn the syntax of reStructuredText and examine how it is formatted.
+      Contribute to Amperity content. Follow the style guide to ensure your contributions fit in.
 
-    .. grid-item-card:: Contributing
-        :link: /contributing/
+   .. grid-item-card:: Formatting Guide
+      :link-type: doc
+      :link: rst
 
-        Your contributions can make a meaningful impact and help drive the project forward!
+      Use reStructuredTest to format pages within Amperity documentation.
+
+.. rst-grids-end
 
 
+.. _rst-grids-config:
 
-.. _rst-grids-surface:
-
-Surface grids
+Grid configuration options
 --------------------------------------------------
 
-By adding a class of ``surface``, a card would be rendered:
+.. rst-grids-config-start
+
+Each grid has the following configuration options:
+
+* :ref:`rst-grids-config-columns`
+* :ref:`rst-grids-config-gutter`
+* :ref:`rst-grids-config-icons`
+* :ref:`rst-grids-config-external`
+* :ref:`rst-grids-config-reference`
+* :ref:`rst-grids-config-topics`
+* :ref:`rst-grids-config-padding`
+* :ref:`rst-grids-config-surface`
+
+.. important:: Try to use the default values for gutter and padding and try to keep the number of columns to "1 1 2 2". Use link types as needed.
+
+.. rst-grids-config-end
+
+
+.. _rst-grids-config-columns:
+
+Columns
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-columns-start
+
+The ``grid`` directive supports configuration for up to 4 screen resolution sizes.
+
+For example:
 
 .. code-block:: none
 
-    .. grid:: 1 1 2 2
-        :class-row: surface
+   .. grid:: 1 1 2 2
+      :padding: 3
+      :gutter: 4
+
+The "1 1 2 2" values define the number of columns visible at extra small (1), small (1), medium (2), and large (2) screen resolutions. These will change as the screen resolution changes, including for responsive browser behaviors.
+
+A grid should never have more than 4 columns at any screen resolution. 3 columns can work if the content within all grids is consistent and similar. The first two values should always be "1" and "1".
+
+.. rst-grids-config-columns-end
+
+
+.. _rst-grids-config-gutter:
+
+Gutter
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-gutter-start
+
+A gutter is the distance between individual cards in a grid. If it's too low the cards are too close together and if it's too large the cards are too far apart. When a grid does not have a gutter and the container class is surface the content will appear as if there is a single card, but each individual grid is still formatted within the grid.
+
+The values for ``:gutter:`` must be between "0" and "4". Use "0" for no gutter. Use "1" for an extra small gutter, "2" for a small gutter, "3" for a medium gutter, and "4" for a large gutter. The default value is "4".
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid:: 1 1 2 2
+      :gutter: 4
+
+      .. grid-item-card:: :octicon:`star` Setup guide
+         :link-type: doc
+         :link: setup
+
+      .. grid-item-card:: :octicon:`zap` Style guide
+         :link-type: doc
+         :link: styles
+
+**For this**
 
 .. grid:: 1 1 2 2
-    :gutter: 2
-    :padding: 0
-    :class-container: surface
+   :gutter: 4
 
-    .. grid-item-card:: :octicon:`star` Beautiful Design
+   .. grid-item-card:: :octicon:`star` Setup guide
+      :link-type: doc
+      :link: setup
 
-        A visually stunning and modern design that makes your documentation
-        look professional and appealing.
+   .. grid-item-card:: :octicon:`zap` Style guide
+      :link-type: doc
+      :link: styles
 
-    .. grid-item-card:: :octicon:`zap` Responsive Layout
-
-        Look great on all devices, from desktops to smartphones, without
-        compromising on readability or functionality.
-
-    .. grid-item-card:: :octicon:`moon` Light/Dark Mode
-
-        Users can switch between light and dark modes according to their
-        preference.
-
-    .. grid-item-card:: :octicon:`paintbrush` Customizable Colors
-        :link: /customisation/colors/
-
-        Customize the colors to match your brand or personal preferences
-        with radix colors.
-
-    .. grid-item-card:: :octicon:`beaker` Jupyter Integration
-        :link: /extensions/nbsphinx/
-
-        Great CSS/UI for lots of Jupyter related extensions, enhance your
-        AI documentation.
-
-    .. grid-item-card:: :octicon:`browser` Multiple Layouts
-        :link: /writing/meta/#layout
-
-        Layouts of landing page, simple one page, and three-column
-        documentation page.
+.. rst-grids-config-gutter-end
 
 
-Grids with FontAwesome
---------------------------------------------------
+.. _rst-grids-config-icons:
+
+Apply icons to grids
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-icons-start
+
+Apply icons to grids using :ref:`Font Awesome <rst-grids-config-icons-font-awesome>` or :ref:`Octicons <rst-grids-config-icons-octicons>`.
+
+.. rst-grids-config-icons-end
+
+
+.. _rst-grids-config-icons-font-awesome:
+
+Grids and Font Awesome
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. rst-grids-config-icons-font-awesome-start
+
+Use :ref:`Font Awesome <rst-icons-font-awesome>` icons within cards in a grid.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid:: 1 1 2 2
+      :gutter: 2
+      :padding: 0
+      :class-row: surface
+
+      .. grid-item-card:: |u-euro| Setup guide
+         :link-type: doc
+         :link: setup
+
+      .. grid-item-card:: |u-dollar| Style guide
+         :link-type: doc
+         :link: styles
+
+**For this**
 
 .. grid:: 1 1 2 2
    :gutter: 2
@@ -1948,7 +2010,245 @@ Grids with FontAwesome
    :class-row: surface
 
    .. grid-item-card:: |u-euro| Setup guide
-      :link: setup.html
+      :link-type: doc
+      :link: setup
+
+   .. grid-item-card:: |u-dollar| Style guide
+      :link-type: doc
+      :link: styles
+
+.. rst-grids-config-icons-font-awesome-end
+
+
+.. _rst-grids-config-icons-octicons:
+
+Grids and Octicons
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. rst-grids-config-icons-octicons-start
+
+Use :ref:`Octicons <rst-icons-octicon>` icons within cards in a grid.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid:: 1 1 2 2
+      :gutter: 2
+      :padding: 0
+      :class-row: surface
+
+      .. grid-item-card:: :octicon:`star` Setup guide
+         :link-type: doc
+         :link: setup
+
+      .. grid-item-card:: :octicon:`zap` Style guide
+         :link-type: doc
+         :link: styles
+
+      .. grid-item-card:: :octicon:`star` Setup guide
+         :link-type: doc
+         :link: setup
+
+      .. grid-item-card:: :octicon:`zap` Style guide
+         :link-type: doc
+         :link: styles
+
+      .. grid-item-card:: :octicon:`star` Setup guide
+         :link-type: doc
+         :link: setup
+
+      .. grid-item-card:: :octicon:`zap` Style guide
+         :link-type: doc
+         :link: styles
+
+**For this**
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: :octicon:`star` Setup guide
+      :link-type: doc
+      :link: setup
+
+   .. grid-item-card:: :octicon:`zap` Style guide
+      :link-type: doc
+      :link: styles
+
+.. rst-grids-config-icons-octicons-end
+
+
+.. _rst-grids-config-external:
+
+Link to external pages
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-external-start
+
+Use the ``:link-type:`` option with a value of ``url`` for an :ref:`external link <rst-links-external>`. This does not require appending ``|ext_link|`` because the external link indicator icon is appended automatically by grid formatting.
+
+.. note:: When ``:link-type:`` is not specified ``url`` is the default value.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid-item-card:: Links
+      :link-type: url
+      :link: https://docs.amperity.com
+
+**For this**
+
+.. grid:: 1 1 2 2
+   :class-row: surface
+
+   .. grid-item-card:: Links
+      :link-type: url
+      :link: https://docs.amperity.com
+
+.. rst-grids-config-external-end
+
+
+.. _rst-grids-config-reference:
+
+Link to headers within topics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-reference-start
+
+Use the ``:link-type:`` option with a value of ``ref`` for a link that behaves the same way as :ref:`links to topic headings within the same collection <rst-links-reference>`.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid-item-card:: Reference links
+      :link-type: ref
+      :link: rst-links
+
+**For this**
+
+.. grid:: 1 1 2 2
+   :class-row: surface
+
+   .. grid-item-card:: Reference links
+      :link-type: ref
+      :link: rst-links
+
+.. rst-grids-config-reference-end
+
+
+.. _rst-grids-config-topics:
+
+Link to topics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-topics-start
+
+Use the ``:link-type:`` option with a value of ``doc`` for a link that behaves the same way as :ref:`links to topics within the same collection <rst-links-topic>`.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid-item-card:: Terminology
+      :link-type: doc
+      :link: terminology
+
+**For this**
+
+.. grid:: 1 1 2 2
+   :class-row: surface
+
+   .. grid-item-card:: Terminology
+      :link-type: doc
+      :link: terminology
+
+.. rst-grids-config-topics-end
+
+
+.. _rst-grids-config-padding:
+
+Padding
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-padding-start
+
+Padding is the distance from the outside edge to the location of the card. The default value for ``:padding:`` is "3".
+
+The values for ``:padding:`` must be between "0" and "5". Use "0" for no padding. Use "1" - "5" to increase the distance from the outside edge.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid:: 1 1 2 2
+      :padding: 3
+
+      .. grid-item-card:: :octicon:`star` Setup guide
+         :link-type: doc
+         :link: setup
+
+      .. grid-item-card:: :octicon:`zap` Style guide
+         :link-type: doc
+         :link: styles
+
+**For this**
+
+.. grid:: 1 1 2 2
+   :padding: 3
+
+   .. grid-item-card:: :octicon:`star` Setup guide
+      :link-type: doc
+      :link: setup
+
+   .. grid-item-card:: :octicon:`zap` Style guide
+      :link-type: doc
+      :link: styles
+
+.. rst-grids-config-padding-end
+
+
+.. _rst-grids-config-surface:
+
+Surface
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. rst-grids-config-surface-start
+
+Surface defines if the grid has an outline or a solid background. When ``:class-container: surface`` is applied, each grid has a solid background.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid:: 1 1 2 2
+      :class-container: surface
+
+      .. grid-item-card:: :octicon:`star` Setup guide
+         :link-type: doc
+         :link: setup
+
+      .. grid-item-card:: :octicon:`zap` Style guide
+         :link-type: doc
+         :link: styles
+
+**For this**
+
+.. grid:: 1 1 2 2
+   :class-container: surface
+
+   .. grid-item-card:: :octicon:`star` Setup guide
+      :link-type: doc
+      :link: setup
+
+   .. grid-item-card:: :octicon:`zap` Style guide
+      :link-type: doc
+      :link: styles
+
+.. rst-grids-config-surface-end
 
 
 .. _rst-header-levels:
@@ -1960,10 +2260,10 @@ Header levels
 
 Up to four header levels may be used within a topic.
 
-* H1 headers are identified with equals symbols: ``=====``
-* H2 headers are identified with dash symbols ``-----``
-* H3 headers are identified with plus symbols ``+++++``
-* H4 headers are identified with carat symbols ``^^^^^``
+* H1 headers are identified with equals symbols: ``======``
+* H2 headers are identified with dash symbols ``------``
+* H3 headers are identified with plus symbols ``++++++``
+* H4 headers are identified with carat symbols ``^^^^^^``
 
 All header lengths :ref:`must be 50 characters <rst-header-markup-length>`.
 
@@ -2006,73 +2306,151 @@ All header strings cannot exceed the 50 character limit of the header and should
 
 .. _rst-icons:
 
-Icons -- TODO
+Icons
 ==================================================
 
+.. rst-icons-start
+
+Amperity docs supports using the following icon libraries within documentation:
+
+* :ref:`rst-icons-font-awesome`
+* :ref:`rst-icons-octicon`
+
+.. note:: :ref:`Lucide <rst-icons-lucide>` icons are used within the Amperity Docs theme and may not be used within documentation pages.
+
+.. rst-icons-end
+
+
+.. _rst-icons-font-awesome:
 
 Font Awesome
 --------------------------------------------------
 
-.. TODO: Need to re-enable Font Awesome icons.
+.. rst-icons-font-awesome-start
 
-https://docs.fontawesome.com/web/setup/host-yourself/svg-js
+`Font Awesome <https://docs.fontawesome.com/>`__ |ext_link| is an icon library supported by this theme and is the icon library that is used within Amperity. Use the same Font Awesome icon in documentation as used within Amperity. Prefer Font Awesome icons over :ref:`Octicons <rst-icons-octicon>`. Amperity Docs support using any of the "brands", "solid", and "regular" icons.
 
-
-The currency symbol to show for metrics and segment insights is configurable. The following currency symbols are in the dropdown list:
+.. tip:: Font Awesome icons work inline |fa-github| in paragraphs and lists and within |system-yes| admonitions.
 
 .. list-table::
-   :widths: 50 25 25
-   :header-rows: 0
+   :widths: 50 50 50
+   :header-rows: 1
+
+   * - Name
+     - Do this
+     - For this
 
    * - **Australian Dollar**
-     - AUD
+     - .. code-block:: none
+
+          |u-dollar|
+
      - |u-dollar|
-   * - **Canadian Dollar**
-     - CAD
-     - |u-dollar|
-   * - **United States Dollar**
-     - USD
-     - |u-dollar|
-   * - **Mexican Peso**
-     - MXN
-     - |u-peso|
+
+   * - **Badge checkmark**
+     - .. code-block:: none
+
+          |system-yes|
+
+     - |system-yes|
+
    * - **British Pound**
-     - GBP
+     - .. code-block:: none
+
+          |u-pound|
+
      - |u-pound|
-   * - **Euro**
-     - EUR
-     - |u-euro|
-   * - **Indian Rupee**
-     - INR
-     - |u-rupee|
-   * - **Japanese Yen**
-     - JPY
-     - |u-yen|
 
-.. tip:: You may configure custom currency symbols, for example South Korean Won (KRW, |u-won|).
+   * - **External link indicator**
+     - .. code-block:: none
 
-|fa-github|
+          |ext_link|
 
-|system-yes|
+     - |ext_link|
+
+   * - **GitHub**
+     - .. code-block:: none
+
+          |fa-github|
+
+     - |fa-github|
 
 
+
+.. important:: Font Awesome icons must be configured in the ``/amperity-docs/shared/names.txt`` file before they can be used in Amperity Docs.
+
+.. rst-icons-font-awesome-end
+
+
+.. _rst-icons-lucide:
 
 Lucide
 --------------------------------------------------
 
-https://lucide.dev/
+.. rst-icons-lucide-start
+
+`Lucide <https://lucide.dev/>`_ icons are embeded in CSS and appear in the navigation, are the toggle for switching between light, dark, and default modes, and in admonitions. Custom Lucide icons must be configured within CSS. Lucide icons may not be used inline in paragraphs, lists, or admonitions.
+
+.. rst-icons-lucide-end
 
 
-Octicon
+.. _rst-icons-octicon:
+
+Octicons
 --------------------------------------------------
 
-https://primer.style/octicons/
+.. rst-icons-octicon-start
 
-- alert: :octicon:`alert`
-- bell: :octicon:`bell`
-- book: :octicon:`book`
-- clock: :octicon:`clock`
-- browser: :octicon:`browser`
+`Octicons <https://primer.style/octicons/>`__ is an icon library supported by this theme. Amperity Docs prefers :ref:`Font Awesome icons <rst-icons-font-awesome>` over Octicons, where possible.
+
+.. tip:: Octicons icons work inline :octicon:`browser` in paragraphs and lists and within admonitions.
+
+Some examples:
+
+.. list-table::
+   :widths: 50 50 50
+   :header-rows: 1
+
+   * - Name
+     - Do this
+     - For this
+
+   * - **Alert**
+     - .. code-block:: none
+
+          :octicon:`alert`
+
+     - :octicon:`alert`
+
+   * - **Bell**
+     - .. code-block:: none
+
+          :octicon:`bell`
+
+     - :octicon:`bell`
+
+   * - **Book**
+     - .. code-block:: none
+
+          :octicon:`book`
+
+     - :octicon:`book`
+
+   * - **Browser**
+     - .. code-block:: none
+
+          :octicon:`clock`
+
+     - :octicon:`clock`
+
+   * - **Clock**
+     - .. code-block:: none
+
+          :octicon:`browser`
+
+     - :octicon:`browser`
+
+.. rst-icons-octicon-end
 
 
 .. _rst-images:
@@ -2133,7 +2511,7 @@ Content can be included
 
 .. _rst-inclusions-from-file:
 
-from a file
+From a file
 --------------------------------------------------
 
 .. rst-inclusions-from-file-start
@@ -2222,7 +2600,7 @@ To include the glossary term for Moveable Ink into a topic, such as into the Amp
 
 .. _rst-inclusions-from-topic:
 
-from a topic
+From a topic
 --------------------------------------------------
 
 .. rst-inclusions-from-topic-start
@@ -2688,7 +3066,7 @@ A cross-site link is a link to a page in Amperity docs that is not in the same d
 
 .. code-block:: none
 
-   `string <URL>`__ |ext_link|
+   `string <URL>`__
 
 * Replace "string" with text.
 * Replace "URL" with the full URL. For example: ``https://docs.amperity.com/`` or ``https://docs.amperity.com/reference/sso.html#use-cases``.
@@ -2821,6 +3199,7 @@ Lists
 Use the following types of lists to organize information in topics.
 
 * :ref:`Definition lists <rst-list-definition>`
+* :ref:`Grid lists <rst-list-grid>`
 * :ref:`Horizontal lists <rst-list-horizontal>`
 * :ref:`Options lists <rst-list-options>`
 * :ref:`Ordered lists <rst-list-ordered>`
@@ -2860,6 +3239,82 @@ A definition list is a specially formatted list that uses whitespace to indent t
    The description must be indented three spaces.
 
 .. rst-list-definition-end
+
+
+.. _rst-list-grid:
+
+Grid lists
+--------------------------------------------------
+
+.. rst-list-grid-start
+
+Use a grid to present a list of information within boxes. Use grid lists sparingly and ony when each item in the list has a short and similar structure.
+
+**Do this**
+
+.. code-block:: none
+
+   .. grid:: 1 1 2 2
+      :outline:
+
+      .. grid-item::
+
+         Use ``1`` for an extra small gutter.
+
+      .. grid-item::
+
+         Use ``2`` for a small gutter.
+
+      .. grid-item::
+
+         Use ``3`` for a medium gutter.
+
+      .. grid-item::
+
+         Use ``4`` for a large gutter.
+
+**For this**
+
+.. grid:: 1 1 2 2
+   :outline:
+
+   .. grid-item::
+
+      Use ``1`` for an extra small gutter.
+
+   .. grid-item::
+
+      Use ``2`` for a small gutter.
+
+   .. grid-item::
+
+      Use ``3`` for a medium gutter.
+
+   .. grid-item::
+
+      Use ``4`` for a large gutter.
+
+**Or this** (no ``:outline:``)
+
+.. grid:: 1 1 2 2
+
+   .. grid-item::
+
+      Use ``1`` for an extra small gutter.
+
+   .. grid-item::
+
+      Use ``2`` for a small gutter.
+
+   .. grid-item::
+
+      Use ``3`` for a medium gutter.
+
+   .. grid-item::
+
+      Use ``4`` for a large gutter.
+
+.. rst-list-grid-end
 
 
 .. _rst-list-horizontal:

@@ -55,7 +55,7 @@ Google Cloud Storage requires the following configuration details:
 
 #. The name of the bucket in Cloud Storage.
 #. A Cloud Storage :ref:`service account key <source-google-cloud-storage-service-account>` that is configured for the **Storage Object Admin** role.
-#. A list of objects (by filename and file type) in the Cloud Storage bucket.
+#. A list of objects by filename and file type in the Cloud Storage bucket.
 #. A sample for each file to simplify feed creation.
 
 .. source-google-cloud-storage-get-details-end
@@ -94,7 +94,7 @@ Dataflow, Pub/Sub
 
 .. source-google-cloud-storage-dataflow-pubsub-start
 
-Dataflow is a fully-managed service for transforming and enriching data using stream (real-time) and/or batch modes that can be configured to `use Pub/Sub to stream messages <https://cloud.google.com/pubsub/docs/pubsub-dataflow#stream_messages_from_to>`__ |ext_link| to Cloud Storage.
+Dataflow is a fully-managed service for transforming and enriching data using streaming or batch modes that are configured to `use Pub/Sub to stream messages <https://cloud.google.com/pubsub/docs/pubsub-dataflow#stream_messages_from_to>`__ |ext_link| to |source-name|.
 
 .. source-google-cloud-storage-dataflow-pubsub-end
 

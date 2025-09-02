@@ -97,9 +97,9 @@ For example:
     2        TSmith     1              Table:Two      pk          456a-789b-123c
    -------- ---------- -------------- -------------- ----------- --------------------
 
-This tells Stitch that TSmith, despite having different values in different data sources, should be matched to the same customer record.
+This tells Stitch that "TSmith", despite having different values in different data sources, should be matched to the same customer record.
 
-Whereas the following table tells Stitch that JCurrie, despite having the same value in different data sources, should be split into two customer records:
+Whereas the following table tells Stitch that "JCurrie", despite having the same value in different data sources, should be split into two customer records:
 
 .. code-block:: mysql
 
@@ -120,10 +120,10 @@ How Stitch labels work
 
 .. stitch-labels-how-they-work-start
 
-The Stitch labels table does not require all of the possible combinations of semantic values to be specified. If any two rows in the Stitch labels table indicate that a customer record should be merged or split, it won't matter about any of the other semantic values matching (or not matching) elsewhere. Stitch will force the outcome to be what the Stitch labels table indicates.
+The Stitch labels table does not require all of the possible combinations of semantic values to be specified. If any two rows in the Stitch labels table indicate that a customer record should be merged or split, it won't matter about any of the other semantic values match or don't match elsewhere. Stitch will force the outcome to be what the Stitch labels table indicates.
 
 * Records labeled with the same **label-id** and the same **partition-id** will be merged into the same cluster. All records associated with these two records will be merged into the same cluster.
-* Records labeled with the same **label-id** and a different **partition-id** will be split into different clusters based on the **partition-id**. Other records associated with these two records may be split (or may not be split), depending on the outcome of the Stitch clustering analysis for each individual customer record.
+* Records labeled with the same **label-id** and a different **partition-id** will be split into different clusters based on the **partition-id**. Other records associated with these two records may be split or not split, depending on the outcome of the Stitch clustering analysis for each individual customer record.
 
 A Stitch labels table can have as many rows as required, but each individual row in the table must have a **label_id** that matches another **label_id** in another row in the table. More than one Stitch labels table may be used.
 
@@ -242,7 +242,7 @@ Likely nickname
 
 .. stitch-labels-example-likely-nickname-start
 
-Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details (email address and phone number), it's very likely that Ty is a nickname for Tylian. Add an entry to the Stitch labels table to ensure that Ty and Tylian are always merged into a single customer record:
+Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it's very likely that Ty is a nickname for Tylian. Add an entry to the Stitch labels table to ensure that Ty and Tylian are always merged into a single customer record:
 
 .. code-block:: none
 

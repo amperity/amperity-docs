@@ -796,7 +796,7 @@ Custom semantic values may be applied to any column in Amperity. Amperity has ma
 
 Amperity may not have all of the semantics required by a customer. Before adding custom semantics to Amperity you should work with the customer to define which custom semantic tags are required, what their purpose is, and what types of customized SQL queries will be required to present the outcome of the tagging effort in a way that is usable from a queries editor.
 
-.. caution:: If a semantic tag is added to Amperity that contains a typo---such as **emali** vs. **email**---both will be treated by Amperity as if they are unique semantic tags.
+.. caution:: If a semantic tag is added to Amperity that contains a typo--such as **emali** vs. **email**--both will be treated by Amperity as if they are unique semantic tags.
 
 .. feeds-apply-semantic-tags-custom-end
 

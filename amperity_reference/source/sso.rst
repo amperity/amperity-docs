@@ -25,7 +25,7 @@ Amperity supports the use of single sign-on (SSO) to manage the users who can ac
 
 #. Using any IdP that supports Security Assertion Markup Language (SAML), an open standard for exchanging authentication and authorization data between a service provider and an IdP. For example: Azure Active Directory, Auth0, Google G-suite, Okta, OneLogin, and `Ping Identity <https://docs.pingidentity.com/>`__ |ext_link|.
 
-#. Simplified user management. Define groups in your IdP, and then map those groups to user policies in Amperity. Manage user access to Amperity by adding users to (or removing users from) these groups.
+#. Simplified user management. Define groups in your IdP, and then map those groups to user policies in Amperity. Manage user access to Amperity by adding users to or removing users from these groups.
 
 .. sso-about-end
 
@@ -60,7 +60,7 @@ The following diagram steps through how SSO works with Amperity. This example us
 
 .. sso-howitworks-context-start
 
-#. A user accesses Amperity (https://app.amperity.com) from a supported web browser.
+#. A user accesses Amperity--``https://app.amperity.com``--from a supported web browser.
 #. Amperity displays the login page.
 #. The user enters their email address, Amperity identifies your tenant, after which Amperity redirects to the sign-in URL for your IdP.
 
@@ -85,15 +85,15 @@ Use cases
 The following use cases can be managed directly from your IdP after SSO is enabled for your tenant:
 
 **A user joins your organization**
-   When a user joins your organization you should add them to the group (or groups) in your IdP that are configured for Amperity, after which that user can log in to Amperity using their email address.
+   When a user joins your organization you should add them to the groups in your IdP that are configured for Amperity, after which that user can log in to Amperity using their email address.
 
 **A user leaves your organization**
-   When a user leaves your organization you should disable them or remove them from the group (or groups) in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity will fail during login.
+   When a user leaves your organization you should disable them or remove them from the groups in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity will fail during login.
 
    .. note:: Failed login attempts are recorded in Amperity application audit logs.
 
 **A user changes roles and should no longer have access to Amperity**
-   When a user changes roles within your organization you should remove them from the group (or groups) in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity will fail during login and they will be shown a message stating that they no longer have access to Amperity.
+   When a user changes roles within your organization you should remove them from the groups in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity will fail during login and they will be shown a message stating that they no longer have access to Amperity.
 
 .. sso-use-cases-end
 
@@ -205,12 +205,12 @@ The following claim keys must be configured in your IdP:
    The user's last name. This claim key **must contain only** the user's last name.
 
 **A user's email address**
-   The email address that is used to log into Amperity (and to your IdP). Amperity does not have a specific requirement for this claim key.
+   The email address that is used to log into Amperity and to your IdP. Amperity does not have a specific requirement for this claim key.
 
    The most common claim key is "emailaddress".
 
 **An assigned security group**
-   The name of the group (or groups) to which a user belongs. Each group in your IdP is mapped to a policy in Amperity. This will control what access the user has in Amperity through the security group assignment. Amperity recommends filtering the groups sent to Amperity to Amperity-specific groups.
+   The name of the groups to which a user belongs. Each group in your IdP is mapped to a policy in Amperity. This will control what access the user has in Amperity through the security group assignment. Amperity recommends filtering the groups sent to Amperity to Amperity-specific groups.
 
    The most common claim key is "groups".
 

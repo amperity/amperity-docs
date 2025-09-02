@@ -44,7 +44,7 @@ Basics
      - Move forward a word. On Mac OS X this requires the **Use Option as Meta key** setting to be enabled at **Terminal** > **Preferences** > **Profiles** > **Keyboard**.
 
    * - **man**
-     - Display the man(ual) page for any command
+     - Display the man page for any command
 
        Use **man grep** to show you all the different flags and options that you can pass to grep.
 

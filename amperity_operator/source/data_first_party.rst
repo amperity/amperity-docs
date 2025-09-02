@@ -52,7 +52,7 @@ Amperity is built to handle this complexity. Billions of PII-based customer reco
 
 Amperity can analyze first-party cookies and clickstream events to associate those interaction records to a unique customer. For example. clickstream events identify a product was browsed via a mobile application, first-party cookies identify that product was purchased online, and the Amperity ID associates a unique individual to both clickstream and first-party cookie interaction records. All of these results are available in the customer 360 database Use these results to create more useful marketing and analytics use cases.
 
-In addition to using first-party data as a fundamental part of your marketing strategy, understanding that first-party data (and knowing to which individual its associated) will help you be ready for future best practices around information security and knowing who's who in your data set.
+In addition to using first-party data as a fundamental part of your marketing strategy, understanding that first-party data, along knowing to which individual its associated, will help you be ready for future best practices around information security and knowing who's who in your data set.
 
 .. why-amperity-end
 
@@ -79,7 +79,7 @@ Using first-party data as part of the effort to understand your customer helps w
 * Did the customer eventually purchase those items via a different channel?
 * Are there other products to recommend?
 
-These questions (and their answers) are an important part of identifying downstream marketing efforts.
+These questions and answers are an important part of identifying downstream marketing efforts.
 
 .. data-source-first-party-use-cases-end
 
@@ -93,7 +93,7 @@ Raw clickstream data
 
 Raw clickstream data should be provided to Amperity as a targeted subset of operational data points. This filtering can be done in two ways:
 
-#. (Recommended) Configure the application that is sending clickstream data to send files that contain only a useful subset of fields. Configure these files as feeds and run the files that contain useful clickstream data on a daily basis.
+#. Recommended. Configure the application that is sending clickstream data to send files that contain only a useful subset of fields. Configure these files as feeds and run the files that contain useful clickstream data on a daily basis.
 #. Use a saved query to filter the fields into a useful subset prior to loading the data to Amperity, and then use two domain tables: one for all of the raw data and the other for the subset of useful data.
 
    The domain table with all of the raw data should never be made available to Stitch and never added to the customer 360 database.

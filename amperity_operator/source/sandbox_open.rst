@@ -24,7 +24,7 @@ Configure your tenant
 Use a sandbox to safely make changes to your production tenant:
 
 #. :doc:`Create a sandbox <sandbox_create>` before making configuration changes to your tenant.
-#. Access the sandbox (this topic), and then make configuration changes to your tenant. Run the updated workflow from within the sandbox, run sandbox validations, and verify that your changes are ready for promotion.
+#. Access the sandbox, and then make configuration changes to your tenant. Run the updated workflow from within the sandbox, run sandbox validations, and verify that your changes are ready for promotion.
 #. :doc:`Promote configuration changes <sandbox_promote>` to your production tenant.
 
 This is part two of a series of topics that describes how your brand can use sandboxes to safely make changes to your production tenant.

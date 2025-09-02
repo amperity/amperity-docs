@@ -37,7 +37,7 @@ This topic collects *all* of the attributes that are available in standard outpu
 
 .. standard-output-overview-note-start
 
-.. note:: It is not uncommon for certain tables---**Customer Attributes** and **Customer 360**, in particular---to contain additional attributes that are custom to your tenant. The :ref:`Merged Customers <standard-output-merged-customers>` table is visible when working in certain areas of the **Campaigns** page and is the underlying source of truth for attributes in the **Customer 360** table.
+.. note:: It is not uncommon for certain tables--**Customer Attributes** and **Customer 360**, in particular--to contain additional attributes that are custom to your tenant. The :ref:`Merged Customers <standard-output-merged-customers>` table is visible when working in certain areas of the **Campaigns** page and is the underlying source of truth for attributes in the **Customer 360** table.
 
 .. standard-output-overview-note-end
 
@@ -364,7 +364,7 @@ Merged Customers
 
 .. standard-output-merged-customers-start
 
-Merged customer attributes represent your unique customers across all of the data sources that you provided to Amperity. These attributes group customer profile data---names, email addresses, phone numbers, physical addresses---based on how it was discovered from across all of the data sources that were provided to your tenant.
+Merged customer attributes represent your unique customers across all of the data sources that you provided to Amperity. These attributes group customer profile data--names, email addresses, phone numbers, physical addresses--based on how it was discovered from across all of the data sources that were provided to your tenant.
 
 The following attributes are available from the **Merged Customers** table.
 
@@ -933,7 +933,7 @@ Unified Itemized Transactions
 
 .. standard-output-unified-itemized-transactions-start
 
-Item attributes provide a history of the interactions your customers have had with your products---returns, cancellations, costs, discounts, quantities, prices---sorted by customer orders for individual items, and then associated to the transactions made by your unique customers.
+Item attributes provide a history of the interactions your customers have had with your products--returns, cancellations, costs, discounts, quantities, prices--sorted by customer orders for individual items, and then associated to the transactions made by your unique customers.
 
 The following attributes are available from the **Unified Itemized Transaction** table.
 
@@ -1062,7 +1062,7 @@ Unified Transactions
 
 .. standard-output-unified-transactions-start
 
-Orders attributes provide a history of the transactions your customers have made with your brand---channel (store, online, etc.), currency, dates and times, costs, discounts, quantities---sorted by each transaction made by your unique customers.
+Orders attributes provide a history of the transactions your customers have made with your brand--channel (store, online, etc.), currency, dates and times, costs, discounts, quantities--sorted by each transaction made by your unique customers.
 
 The following attributes are available from the **Unified Transactions** table.
 

@@ -816,9 +816,9 @@ You can add a saved segment to a sub-audience in a campaign on the **Edit Campai
 
 #. From the **Edit Campaign** page, click **Add Sub-audience**.
 #. From the **Source** menu, click **Saved segments**.
-#. From the **Segment(s)** list, select one or more saved segments.
+#. From the **Segments** list, select one or more saved segments.
 
-The saved segment(s) appear in the **Sub-audiences and Destinations** section on the **Edit Campaign** page.
+The saved segments appear in the **Sub-audiences and Destinations** section on the **Edit Campaign** page.
 
 .. campaigns-add-a-saved-segment-to-sub-audience-steps-end
 
@@ -1096,8 +1096,8 @@ You can build an audience in a campaign on the **Edit Campaign** page.
 
 .. campaigns-build-audience-steps-start
 
-#. From the **Edit Campaign** page, in the **Audience** section, in the **Include** list, select the segment(s) to include.
-#. In the **Exclude** list, select the segment(s) to exclude.
+#. From the **Edit Campaign** page, in the **Audience** section, in the **Include** list, select the segments to include.
+#. In the **Exclude** list, select the segments to exclude.
 
    .. note:: The **Exclude** list is optional. Use the **Exclude** list to choose recipients to exclude from a campaign.
    
@@ -1784,7 +1784,7 @@ You can search for a campaign on the **Campaigns** page.
 
 .. campaigns-search-campaigns-steps-start
 
-#. From the **Campaigns** page, on the top of the page, enter the search term(s) into the search field.
+#. From the **Campaigns** page, on the top of the page, enter the search terms into the search field.
 
 The search results appear on the **Campaigns** page.
 

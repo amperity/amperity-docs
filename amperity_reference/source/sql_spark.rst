@@ -495,7 +495,7 @@ For columns::
 
 For tables::
 
-   SELECT column_name(s)
+   SELECT column_names
    FROM table_name AS alias_name;
 
 When using an alias:

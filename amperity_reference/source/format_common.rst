@@ -163,7 +163,7 @@ Time values conversion order
 
 .. format-common-pull-date-formats-time-values-start
 
-Time values (when present) are converted in the following order of precedence:
+Time values, when present, are converted in the following order of precedence:
 
 .. list-table::
    :widths: 20 200 200

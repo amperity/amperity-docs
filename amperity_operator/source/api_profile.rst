@@ -531,7 +531,7 @@ An index must be defined for each query that is used to generate an endpoint for
 
        Give the index a name that clearly describes how it will be used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
 
-       Use a description to help other users in your tenant know what use case(s) this index enables.
+       Use a description to help other users in your tenant know what use cases this index enables.
 
        .. note:: The name of the index is informational only. Indexes are listed alphabetically by name; index names are not used within requests.
 
@@ -559,7 +559,7 @@ Generate the endpoint
 
 An index must be generated to make it available from the Profile API.
 
-.. note:: The user interface for the Profile API shows a spinner icon (|notification-running|) when an index is being refreshed.
+.. note:: The user interface for the Profile API shows a spinner icon--|notification-running|--when an index is being refreshed.
 
 **To generate an index for a Profile API endpoint**
 
@@ -629,7 +629,7 @@ After the index has generated, validate the endpoint to verify that it is in the
 
 The most direct way to validate the endpoints is to use cURL commands to access the Profile API endpoints.
 
-.. important:: The steps to validate the endpoint may be different, depending on the downstream application or toolkit being used to enable your use case. For example, :ref:`Braze Connected Content <profile-api-usecase-braze-validate-connected-content>` has its own syntax (Liquid) for building the interface that interacts with the endpoint in your tenant's Profile API.
+.. important:: The steps to validate the endpoint may be different, depending on the downstream application or toolkit being used to enable your use case. For example, :ref:`Braze Connected Content <profile-api-usecase-braze-validate-connected-content>` has its own syntax--Liquid--for building the interface that interacts with the endpoint in your tenant's Profile API.
 
 .. profile-api-enable-validate-endpoint-end
 
@@ -671,7 +671,7 @@ The Profile API supports p95 response times under 100ms at 1000 requests per sec
 
 The number of rows and filter fields available from a Profile API endpoint determine:
 
-* The length of time it takes to build (or rebuild) an index
+* The length of time it takes to build or rebuild an index
 * The response time for requests that are made to an index
 
 As the number of rows and filter fields increase, the performance of that index will decrease. Large indexes with 5 or more filter fields will have decreased performance.
@@ -1670,7 +1670,7 @@ Server-side JavaScript in Salesforce
 
 .. profile-api-usecase-ssjs-ssmc-start
 
-AMPscript is a scripting language used by Salesforce Marketing Cloud to render content on a subscriber-by-subscriber basis in. Embed `AMPscript <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ampscript.html>`__ |ext_link| variables within HTML emails, text emails, landing pages, SMS messages, and push notifications. These variables are updated at the time a message or notification is sent to (or a page is shown to) a subscriber.
+AMPscript is a scripting language used by Salesforce Marketing Cloud to render content on a subscriber-by-subscriber basis in. Embed `AMPscript <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ampscript.html>`__ |ext_link| variables within HTML emails, text emails, landing pages, SMS messages, and push notifications. These variables are updated at the time a message or notification is sent or shown to a subscriber.
 
 Use Amperity unified customer profiles as values for variables defined by AMPscript. Use `Server-Side JavaScript (SSJS) <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ssjs_serverSideJavaScript.html>`__ |ext_link| to return data from a Profile API endpoint, and then make that data available to AMPscript.
 

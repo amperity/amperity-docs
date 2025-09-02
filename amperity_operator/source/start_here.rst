@@ -289,11 +289,11 @@ About this topic collection
 
 .. start-here-about-start
 
-The left-side navigation (from top to bottom) in this topic collection uses a verb-based approach to loosely organize around the series of actions that you may do when configuring Amperity.
+The left-side navigation uses a verb-based approach to loosely organize around the series of actions that you may do when configuring Amperity.
 
 .. note:: This left-to-right configuration workflow is most common whenever you add new data sources to Amperity.
 
-   This is because that workflow typically requires adding couriers, applying semantic tags, making domain tables available to Stitch, refactoring your customer 360 database (or other databases, as needed), and then making those results available to queries and/or segments, depending on the types of downstream workflows you need to support.
+   This is because that workflow typically requires adding couriers, applying semantic tags, making domain tables available to Stitch, refactoring your customer 360 databases, and then making those results available to queries and/or segments, depending on the types of downstream workflows you need to support.
 
    As you do these steps, you will move from the top toward the bottom of the left-side navigation in Amperity. For example: **Sources** > **Stitch** > **Customer 360**, and so on.
 
@@ -316,7 +316,7 @@ Included SFTP site
 
 .. start-here-tenant-sftp-start
 
-Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. (The hostname is always all lowercase.)
+Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. The hostname is always all lowercase.
 
 .. note:: The SFTP site is provisioned by an Amperity administrator *after* the initial tenant creation. As such, the SFTP site is not immediately available, but this is not a long process. When the SFTP site is ready, Amperity will use SnapPass to send you the connection details. If you wish to use RSA key-based authentication, please provide the public key to your Amperity administrator when requesting SFTP access.
 

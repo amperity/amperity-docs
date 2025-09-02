@@ -37,6 +37,6 @@ after which you can connect Tableau to that data, and then start building dashbo
    :align: left
    :class: no-scaled-link
 
-All workflows that make data available to Tableau should be configured to update automatically on a daily (or weekly) schedule. This ensures that users in your organization who will work in Tableau always have access to the latest data.
+All workflows that make data available to Tableau should be configured to update automatically on a daily or weekly schedule. This ensures that users in your organization who will work in Tableau always have access to the latest data.
 
 .. destination-tableau-end

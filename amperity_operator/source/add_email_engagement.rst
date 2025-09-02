@@ -83,7 +83,7 @@ Examples of summarized email events data include:
 
 * Email opens in the previous N days
 * Email clicks in the previous N days
-* Most recent click (date and time)
+* Most recent click, including date and time
 * Filters by opt-in and opt-out customers
 
 .. add-email-engagement-data-source-rollup-end
@@ -187,8 +187,8 @@ Steps to enable
 
 There are two options available for email engagement:
 
-#. :ref:`Unified (from raw email events data) <email-engagement-steps-workflow-unified>`
-#. :ref:`Summarized (from summarized email events data) <email-engagement-steps-workflow-summarized>`
+#. :ref:`Unified engagement from raw email events data <email-engagement-steps-workflow-unified>`
+#. :ref:`Summarized engagement from summarized email events data <email-engagement-steps-workflow-summarized>`
 
 Choose the option that matches the type of email engagment data that your organization will make available to Amperity.
 

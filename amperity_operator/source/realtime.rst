@@ -31,7 +31,7 @@ How real-time tables work
 
 .. realtime-howitworks-start
 
-Amperity uses a batch layer to build and maintain customer profiles that are durable and complete over longer timeframes. The batch layer is typically run (and refreshed) on a daily basis.
+Amperity uses a batch layer to build and maintain customer profiles that are durable and complete over longer timeframes. The batch layer is typically run and refreshed on a daily basis.
 
 Amperity uses a streaming layer to support use cases that require data that is updated or refreshed more than once per day.
 
@@ -213,7 +213,7 @@ Streaming endpoints are managed from the **Sources** page.
 
           is-2hzqsgX1E
 
-       Save these two values. You will need them to :ref:`configure the POST request <realtime-configure-post-request>` to the streaming endpoint and (optionally) to configure streamed data to :ref:`be part of the daily batched workflow <realtime-add-to-batch-workflow>`.
+       Save these two values. You will need them to :ref:`configure the POST request <realtime-configure-post-request>` to the streaming endpoint and to configure streamed data to :ref:`be part of the daily batched workflow <realtime-add-to-batch-workflow>`.
 
        The ID for the Streaming Ingest API endpoint is also available from the **Stream ID** column:
 

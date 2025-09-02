@@ -52,6 +52,10 @@ Data types
 
 Most `Snowflake data types <https://docs.snowflake.com/en/sql-reference/intro-summary-data-types>`__ |ext_link| are supported by Amperity Bridge.
 
+.. include:: ../../amperity_reference/source/bridge.rst
+   :start-after: .. bridge-howto-sync-datatypes-start
+   :end-before: .. bridge-howto-sync-datatypes-end
+
 .. warning:: Complex types--arrays, objects, and maps--must have defined schemas.
 
 The following table describes how Snowflake data types map to Amperity data types.
@@ -258,7 +262,7 @@ The following table describes how Snowflake data types map to Amperity data type
 
      - **String**
 
-       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, and descriptions. May be empty. For example:
+       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. May be empty. For example:
 
        * John
        * Smith
@@ -371,7 +375,7 @@ Before you can create inbound sharing between Snowflake and Amperity you will ne
           :alt: Requirement 4.
           :align: center
           :class: no-scaled-link
-     - A secure share identifier in Snowflake is a unique string---A-Z, 0-9, $, and _ (underscores)---that is added when creating a share. This string must configured in Amperity to enable the bridge.
+     - A secure share identifier in Snowflake is a unique string--A-Z, 0-9, $, and _ (underscores)--that is added when creating a share. This string must configured in Amperity to enable the bridge.
 
        Copy the secure share identifier from the Snowflake user interface, and then share the identifier with the individual who will configure Amperity for secure data sharing with Snowflake.
 
@@ -397,7 +401,7 @@ Create share
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-create-share-start
 
-To enable data sharing between Snowflake and Amperity `a share must be created in Snowflake <https://docs.snowflake.com/en/user-guide/data-sharing-provider#using-snowsight-to-create-a-share>`__ |ext_link|. You may `use Snowsight (the Snowflake user interace) to create the share <https://docs.snowflake.com/en/user-guide/data-sharing-provider#creating-a-share>`__ |ext_link|, as described in this topic, or you may use Snowflake SQL, starting with the `CREATE SHARE <https://docs.snowflake.com/en/sql-reference/sql/create-share>`__ |ext_link| command.
+To enable data sharing between Snowflake and Amperity `a share must be created in Snowflake <https://docs.snowflake.com/en/user-guide/data-sharing-provider#using-snowsight-to-create-a-share>`__ |ext_link|. You may `use Snowsight, the Snowflake user interace, to create the share <https://docs.snowflake.com/en/user-guide/data-sharing-provider#creating-a-share>`__ |ext_link|, as described in this topic, or you may use Snowflake SQL, starting with the `CREATE SHARE <https://docs.snowflake.com/en/sql-reference/sql/create-share>`__ |ext_link| command.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-create-share-end
 
@@ -411,7 +415,7 @@ To enable data sharing between Snowflake and Amperity `a share must be created i
 #. For the share, select a source database, along with one or more target objects within the source database.
 #. A **Secure Share Identifier** is required for data sharing with Amperity.
 
-   A secure share identifier in Snowflake is a unique string---A-Z, 0-9, $, and _ (underscores)---that is added when creating a share. This string must be configured in Amperity to enable the bridge.
+   A secure share identifier in Snowflake is a unique string--A-Z, 0-9, $, and _ (underscores)--that is added when creating a share. This string must be configured in Amperity to enable the bridge.
 
 #. Find the :ref:`Amperity account locator ID <bridge-snowflake-sync-amperity-configure-snowflake-account-locator>`, and then add it to the configuration for the **Secure Share Identifier**.
 
@@ -503,6 +507,7 @@ Add inbound bridge
 --------------------------------------------------
 
 Configure an inbound bridge to sync data from Snowflake to Amperity.
+
 **To add an inbound bridge**
 
 .. bridge-snowflake-sync-amperity-add-bridge-steps-start
@@ -836,7 +841,7 @@ After tables have been shared you will need to create a database in Snowflake us
 
        Open the database, and then click the **Get Data** button. This opens the **Get Data** dialog box.
 
-       Replace the value in the **Database name** field with the name of the database, and then choose the role (in addition to the **ACCOUNTADMIN** role) that will have access to this database. Click **Get Data**.
+       Replace the value in the **Database name** field with the name of the database, and then choose the role, in addition to the **ACCOUNTADMIN** role, that will have access to this database. Click **Get Data**.
 
        After the database is created click **View Database**.
 

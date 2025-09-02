@@ -45,7 +45,7 @@ Customer consent
 
 .. data-asset-customer-consent-start
 
-Customer consent data assets help your brand keep track of which customers can (and cannot) be sent email and/or SMS messages.
+Customer consent data assets help your brand keep track of which customers can and cannot be sent email or SMS messages.
 
 .. data-asset-customer-consent-end
 
@@ -141,7 +141,7 @@ Engagement summary
 
 .. data-asset-email-engagement-summary-start
 
-The :doc:`Email Engagement Summary <table_email_engagement_summary>` table is generated as Stitch output after applying |semantics_email_events_summary| semantic tags (when available) alongside |semantics_email_events| semantic tags to data sources that contain email engagement data, such as opens, clicks, opt-in and opt-out preferences, or conversions.
+The :doc:`Email Engagement Summary <table_email_engagement_summary>` table is generated as Stitch output after applying |semantics_email_events_summary| semantic tags alongside |semantics_email_events| semantic tags to data sources that contain email engagement data, such as opens, clicks, opt-in and opt-out preferences, or conversions.
 
 .. data-asset-email-engagement-summary-end
 
@@ -586,7 +586,11 @@ Lookup: Countries
 
 .. data-asset-lookup-table-row-start
 
-The country lookup data asset provides a set of standardized names and codes for all countries, along with categories for regions (Americas, Asia, Africa, etc.), sub-regions (Latin America and the Caribbean, Sub-Saharan Africa, etc.), and region codes.
+The country lookup data asset provides a set of standardized names and codes for all countries, along with categories for:
+
+* Regions, including Americas, Asia, and Africa
+* Region codes
+* Sub-regions, including Latin America and the Caribbean, and Sub-Saharan Africa
 
 .. data-asset-lookup-table-row-end
 

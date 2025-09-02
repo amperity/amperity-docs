@@ -70,7 +70,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
           :class: no-scaled-link
      - **Offline events**
 
-       :ref:`Offline events <destination-the-trade-desk-offline-events>` help your brand track offline conversions---for in-store sales, place visits, and other events---for your marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
+       :ref:`Offline events <destination-the-trade-desk-offline-events>` help your brand track offline conversions--for in-store sales, place visits, and other events--for your marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
 
        .. tip:: Send offline events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
 

@@ -244,7 +244,7 @@ The following attributes are available from the **Lifecycle_Events** table.
    * - **Previous event status**
      - The lifecycle event status for the previous lifecycle event associated with the Amperity ID.
    * - **Prev event status start date**
-     - The date on which the previous lifecycle event started. This value is ``NULL`` when there is no previous lifecycle event.
+     - The date on which the previous lifecycle event started. This value is **NULL** when there is no previous lifecycle event.
 
 .. attributes-campaign-lifecycle-events-table-end
 
@@ -338,7 +338,7 @@ Merged customers
 
 .. attributes-customer-profiles-merged-start
 
-Merged customer attributes represent your unique customers across all of the data sources that you provided to Amperity. These attributes group customer profile data---names, email addresses, phone numbers, physical addresses---based on how it was discovered from across all of the data sources that were provided to your tenant.
+Merged customer attributes represent your unique customers across all of the data sources that you provided to Amperity. These attributes group customer profile data--names, email addresses, phone numbers, physical addresses--based on how it was discovered from across all of the data sources that were provided to your tenant.
 
 The following attributes are available from the **Merged Customers** table.
 
@@ -653,7 +653,7 @@ Items
 
 .. attributes-interactions-items-start
 
-Item attributes provide a history of the interactions your customers have had with your products---returns, cancellations, costs, discounts, quantities, prices---sorted by customer orders for individual items, and then associated to the transactions made by your unique customers.
+Item attributes provide a history of the interactions your customers have had with your products--returns, cancellations, costs, discounts, quantities, prices--sorted by customer orders for individual items, and then associated to the transactions made by your unique customers.
 
 The following attributes are available from the **Unified Itemized Transaction** table.
 
@@ -772,7 +772,7 @@ Orders
 
 .. attributes-interactions-orders-start
 
-Orders attributes provide a history of the transactions your customers have made with your brand---channel (store, online, etc.), currency, dates and times, costs, discounts, quantities---sorted by each transaction made by your unique customers.
+Orders attributes provide a history of the transactions your customers have made with your brand--channel (store, online, etc.), currency, dates and times, costs, discounts, quantities--sorted by each transaction made by your unique customers.
 
 The following attributes are available from the **Unified Transactions** table.
 
@@ -1179,7 +1179,7 @@ Customer orders
        * **Latest Order Revenue**
 
    * - **<x> store ID**
-     - The ID of the store where the customer made their order. This value may be ``NULL`` if the associated channel is not retail or some equivalent. Available attributes:
+     - The ID of the store where the customer made their order. This value may be **NULL** if the associated channel is not retail or some equivalent. Available attributes:
 
        * **First order store ID**
        * **Second order store ID**
@@ -1390,7 +1390,7 @@ RFM
    * - Attributes
      - Description
    * - **L12M RFM score**
-     - The RFM score for the customer based on transactions that occurred within the last 12 months. The RFM score is represented as an integer between ``0`` and ``999`` and is concatenated using the individual recency, frequency, and monetary scores or is ``NULL`` if the customer has zero purchases within the last 12 months.
+     - The RFM score for the customer based on transactions that occurred within the last 12 months. The RFM score is represented as an integer between ``0`` and ``999`` and is concatenated using the individual recency, frequency, and monetary scores or is **NULL** if the customer has zero purchases within the last 12 months.
    * - **L12M recency**
      - The recency score for customer transactions that occurred within the last 12 months. The recency score is represented as an integer between ``0`` and ``9``. Each integer represents 10%:
 

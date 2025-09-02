@@ -904,7 +904,7 @@ CBOR
 
 .. format-cbor-pull-couriers-load-operations-important-start
 
-.. important:: The ``"schema"`` must match the structure of the incoming file, including all nested groupings and data types. Set ``"nullable"`` to ``True`` to allow fields to contain ``NULL`` values. A CBOR file can have hundreds of fields. The ellipses (``...``) in this example represents locations within this example structure where additional fields may be present.
+.. important:: The ``"schema"`` must match the structure of the incoming file, including all nested groupings and data types. Set ``"nullable"`` to ``True`` to allow fields to contain **NULL** values. A CBOR file can have hundreds of fields. The ellipses (``...``) in this example represents locations within this example structure where additional fields may be present.
 
 .. format-cbor-pull-couriers-load-operations-important-end
 

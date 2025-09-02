@@ -21,7 +21,7 @@ Gender prediction
 
 Gender prediction can be a helpful step when applying personalization to marketing campaigns, within email messages, and during visitor interactions on websites. When gender is known, it can be used as a signal for tailoring communications, recommendations, and product lists based on observed preferences that are common for that gender.
 
-When used carefully, gender prediction can have low downside risk due to false positives. That said, gender prediction should not be used for 1:1 personalization or to predict pronouns (he, him, she, her, they, them) because the benefits of correctly predicting gender is, in most cases, outweighed by the high downside risks of being wrong.
+When used carefully, gender prediction can have low downside risk due to false positives. That said, gender prediction should not be used for 1:1 personalization or to predict pronouns--he, him, she, her, they, them--because the benefits of correctly predicting gender is, in most cases, outweighed by the high downside risks of being wrong.
 
 It's important that your brand understands how gender prediction will be used prior to enabling it within your tenant. Work closely with partners to ensure this generated data is used responsibly.
 

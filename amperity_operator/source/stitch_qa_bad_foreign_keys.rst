@@ -43,7 +43,7 @@ When to use
 .. stitch-qa-query-bad-foreign-key-matches-use-start
 
 #. Run this query when foreign keys exist.
-#. Review the results of this query (typically ~30 minutes).
+#. Review the results of this query.
 #. Look for potentially inaccurate foreign keys.
 #. Look for indicators of overclustering.
 
@@ -131,7 +131,7 @@ Configure query
       t1.semantic AS semantic_a,
       t2.semantic AS semantic_b,
 
-   For example, to add **address** and **loyalty** (a custom semantic typically associated with loyalty programs):
+   For example, to add **address** and **loyalty**, a custom semantic associated with loyalty programs:
 
    .. code-block:: sql
       :linenos:
@@ -144,6 +144,8 @@ Configure query
       t2.loyalty AS loyalty_b,
 
 #. Replace **100** with the value that best represents the definition of high-frequency email:
+
+.. vale off
 
    .. code-block:: sql
       :linenos:
@@ -163,6 +165,8 @@ Configure query
       INNER JOIN Unified_Coalesced AS t2
         ON  t1.amperity_id = t2.amperity_id
         AND hf.high_freq_email IS NULL
+
+.. vale on
 
 #. Update the INNER JOIN for all foreign keys:
    

@@ -34,7 +34,7 @@ Configure campaigns for Criteo Retail Media
 
 .. campaign-criteo-retail-media-offline-vs-online-start
 
-.. important:: |destination-name| supports offsite and onsite display campaigns. These audiences must be sent independently and require specific configurations. Review the requirements for offline and online campaigns, and then configure a destination for each use case. A minimum match rate of 0.1% is required, calculated as (number of matches / total lines) before the audience is usable in |destination-name|.
+.. important:: |destination-name| supports offsite and onsite display campaigns. These audiences must be sent independently and require specific configurations. Review the requirements for offline and online campaigns, and then configure a destination for each use case. A minimum match rate of 0.1% is required, calculated as ``number of matches / total lines`` before the audience is usable in |destination-name|.
 
 .. campaign-criteo-retail-media-offline-vs-online-start
 

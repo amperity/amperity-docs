@@ -321,7 +321,7 @@ The Profile API returns the following HTTP status codes:
    * - Status code
      - Description
    * - **200 OK**
-     - The requested value(s) for the specified lookup key were returned successfully.
+     - The requested values for the specified lookup key were returned successfully.
 
    * - **401 Unauthorized**
      - Verify the access token, index ID, and {tenant-id} used to make the request.
@@ -641,7 +641,7 @@ An index must be defined for each query that is used to generate an endpoint for
 
        Give the endpoint a name that clearly describes how it will be used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
 
-       Use a description to help other users in your tenant know what use case(s) this endpoint enables.
+       Use a description to help other users in your tenant know what use cases this endpoint enables.
 
        .. note:: The name of the index is informational only. Endpoints are listed alphabetically by name; endpoint names are not used within requests.
 

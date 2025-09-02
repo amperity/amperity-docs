@@ -51,7 +51,7 @@ You may use other attributes in the **All Opted-In Emails** table, if they are a
 
 .. table-all-opted-in-emails-use-in-segments-note-start
 
-.. note:: The **email** attribute in the **All Opted-In Emails** table may represent more than one opted-in email address for the same customer. This is not uncommon and you may notice a difference between the number of records in the segment versus the (typically higher) number of records that were delivered by the campaign.
+.. note:: The **email** attribute in the **All Opted-In Emails** table may represent more than one opted-in email address for the same customer. This is not uncommon and you may notice a difference between the number of records in the segment versus the number of records that were delivered by the campaign.
 
 .. table-all-opted-in-emails-use-in-segments-note-start
 

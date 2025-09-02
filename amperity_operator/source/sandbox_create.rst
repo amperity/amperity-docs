@@ -22,7 +22,7 @@ Create a sandbox
 
 Use a sandbox to safely make changes to your production tenant:
 
-#. Create a sandbox (this topic) before making configuration changes to your tenant.
+#. Create a sandbox before making configuration changes to your tenant.
 #. :doc:`Access the sandbox <sandbox_open>`, and then make configuration changes to your tenant. Run the updated workflow from within the sandbox, run sandbox validations, and verify that your changes are ready for promotion.
 #. :doc:`Promote configuration changes <sandbox_promote>` to your production tenant.
 
@@ -103,10 +103,10 @@ The following sections describe the steps you'll follow when creating a sandbox 
        * The date and time at which it was created
        * The URL for the sandbox
        * The last time a workflow ran in this sandbox
-       * What (if any) configuration state changes are ready for promotion to production
-       * What (if any) updates are ready to be pulled from production to the sandbox
+       * What configuration state changes are ready for promotion to production
+       * What updates are ready to be pulled from production to the sandbox
 
-       .. tip:: A sandbox that hasn't run recently---for example, within the previous two weeks---should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
+       .. tip:: A sandbox that hasn't run recently--for example, within the previous two weeks--should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
 
 
 .. sandbox-promote-callouts-end

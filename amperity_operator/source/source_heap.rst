@@ -86,7 +86,7 @@ Amperity can be configured to pull data from |source-name| using Amazon S3. This
 #. |source-name| must be configured to use `Heap Connect for S3 <https://help.heap.io/hc/en-us/articles/18700055185308-S3-Integration>`__ |ext_link|. This will send data from |source-name| to a customer-managed Amazon S3 bucket.
 #. The Amazon Resource Name (ARN) for a role with cross-account access.
 #. The name of the customer-managed Amazon S3 bucket.
-#. A list of objects (by filename and file type) in the customer-managed Amazon S3 bucket to be pulled to Amperity. 
+#. A list of objects by filename and file type in the customer-managed Amazon S3 bucket to be pulled to Amperity. 
 #. A sample for each file to simplify feed creation.
 
 .. include:: ../../shared/sources.rst

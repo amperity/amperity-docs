@@ -34,7 +34,7 @@ When to use
 
 #. Run this query to identify split clusters.
 #. Test various column selections and/or versions of columns from the **Unified Coalesced** table.
-#. Add/update WHERE conditions to filter the initial results.
+#. Add/update **WHERE** conditions to filter the initial results.
 #. Spend 30-60 minutes examining various **CASE** statements and filters.
 #. Adjust selection columns from the **Unified Coalesced** table to inspect various cases of matching PII.
 #. Look for examples of missed nicknames.
@@ -49,6 +49,8 @@ Configure query
 ==================================================
 
 .. stitch-qa-query-split-clusters-steps-start
+
+.. vale off
 
 #. From the **Queries** page, open the **Stitch QA** folder, and then select this query.
 
@@ -193,5 +195,7 @@ Configure query
 
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
+
+.. vale on
 
 .. stitch-qa-query-split-clusters-steps-end

@@ -126,6 +126,8 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. source-klaviyo-review-data-start
 
+.. vale off
+
 The feed and domain table will pull in the following fields:
 
 * **emailAddress** (assigned the **email-event/email** semantic tag)
@@ -134,6 +136,8 @@ The feed and domain table will pull in the following fields:
 * **eventUuid** (assigned the **pk** semantic tag)
 * **metricId**
 * **sendId** (assigned the **email-event/send-id** semantic tag)
+
+.. vale on
 
 .. source-klaviyo-review-data-end
 

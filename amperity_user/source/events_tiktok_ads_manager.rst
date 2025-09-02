@@ -87,7 +87,7 @@ Use a query to build a combination of data from the your brand's customer 360 da
 
 and **MUST** contain the following fields: **email**, **event**, **event_id**, and **event_set_id**. Review the list of supported offline events parameters while building the query.
 
-Fields that contain PII---email address and phone numbers, for example---should have one-way SHA-256 hashing applied to them.
+Fields that contain PII--email address and phone numbers, for example--should have one-way SHA-256 hashing applied to them.
 
 .. note:: Currency must be in |ext_iso_4217|. For example: "EUR", "USD", or "JPY".
 

@@ -74,6 +74,8 @@ A Fivetran-enabled data source generally works like this:
 
 .. source-fivetran-generic-documented-start
 
+.. vale off
+
 .. tip:: There are a number of Fivetran-enabled data sources that may be configured directly from the Amperity user interface. The following data sources do not require Snowflake *and* do not require using Fivetran:
 
    * :doc:`Adobe Analytics <source_adobe_analytics>` (pull directly using SFTP)
@@ -90,6 +92,8 @@ A Fivetran-enabled data source generally works like this:
    * :doc:`Salesforce Marketing Cloud <source_salesforce_marketing_cloud>`
    * :doc:`SFTP <source_sftp>` (pull data from any SFTP site)
 
+.. vale on
+
 .. source-fivetran-generic-documented-start
 
 
@@ -100,7 +104,9 @@ Fivetran-enabled sources
 
 .. source-fivetran-sources-start
 
-Amperity does not document every Fivetran-enabled data source workflow on its own page, with the following exceptions: :doc:`Adobe Commerce (Magento) <source_adobe_commerce>`, :doc:`HubSpot <source_hubspot>`, :doc:`Kustomer <source_kustomer>`, :doc:`Salesforce Pardot <source_salesforce_pardot>`, and :doc:`Square <source_square>`. This group of topics describes the specific steps that are required for those data sources, including the steps you must do in Fivetran and the steps you must do in Amperity. This group of topics is represenatitive of the typical end-to-end configuration process that is required by many Fivetran-enabled data sources.
+Amperity does not document every Fivetran-enabled data source workflow on its own page, with the following exceptions: :doc:`Adobe Commerce (Magento) <source_adobe_commerce>`, :doc:`HubSpot <source_hubspot>`, :doc:`Kustomer <source_kustomer>`, :doc:`Salesforce Pardot <source_salesforce_pardot>`, and :doc:`Square <source_square>`.
+
+This group of topics describes the specific steps that are required for those data sources, including the steps you must do in Fivetran and the steps you must do in Amperity. This group of topics is represenatitive of the typical end-to-end configuration process that is required by many Fivetran-enabled data sources.
 
 .. source-fivetran-sources-end
 
@@ -118,7 +124,7 @@ Amperity does not document every Fivetran-enabled data source workflow on its ow
 
 .. source-fivetran-sources-start
 
-The following table is a list of Fivetran-enabled data sources. You must first configure these data sources to make their data available to Fivetran (and load that data successfully to Fivetran) before you can use a Snowflake connector in Amperity to pull that data to Amperity.
+The following table is a list of Fivetran-enabled data sources. You must first configure these data sources to make their data available to Fivetran and load it successfully, after which you can use a Snowflake connector in Amperity to pull that data to Amperity.
 
 .. source-fivetran-sources-end
 

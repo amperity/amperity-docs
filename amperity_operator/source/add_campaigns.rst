@@ -22,7 +22,7 @@ Enable activations
 
 .. add-campaigns-steps-start
 
-Amperity provides a set of features---the **Campaigns** page, segment insights, and predictive attributes---to help you understand your customer's preferences and behaviors, and then to make better informed decisions as to how often you choose to interact with them.
+Amperity provides a set of features--the **Campaigns** page, segment insights, and predictive attributes--to help you understand your customer's preferences and behaviors, and then to make better informed decisions as to how often you choose to interact with them.
 
 .. add-campaigns-steps-end
 
@@ -114,12 +114,12 @@ Data requirements
 Amperity has the following requirements for segments and campaigns:
 
 #. Data sources that contain interaction records--customer orders, items purchased by customers, products, brands, preferences, etc.--must be made available to Amperity.
-#. Data sources should allow for applying semantic tags to support transactions and itemized transactions, either directly to the feed or (more likely) after reshaping the interaction records with domain SQL.
+#. Data sources should allow for applying semantic tags to support transactions and itemized transactions, either directly to the feed or after reshaping the interaction records with domain SQL.
 #. All required tables are present, along with all of the required fields for each table.
 
    The **Merged Customers** table must have fields for given name, surname, birthdate, city, state, postal, and loyalty membership.
 
-   The **Unified Transactions** table must have fields for orders (date and time, revenue, quantity, and discount amount), purchases (brand and channel), digital channel, and store ID.
+   The **Unified Transactions** table must have fields for order dates and times, order revenue, order quantity, order discount amount, purchase channel, brand channel, digital channel, and store ID.
 
    .. note:: Required fields for which there is no historical data should be added to the tables and should be configured to have **NULL** values.
 
@@ -179,7 +179,7 @@ The fields required by segments and campaigns fall into three broad categories:
 
 * Demographic fields include details such as gender, age, and location. Demographic fields help marketers understand the segments to which their customers belong.
 * Product fields include details about individual products, such as brand, department, and categories. Product fields help marketers understand which products their customers prefer.
-* Channel and location fields include details about how the customer chose a certain product, such as digital, in-store (and store location), and online. Channel and location fields help marketers understand from where a customer chose to purchase a product or a service. 
+* Channel and location fields include details about how the customer chose a certain product, such as digital, in-store, and online. Channel and location fields help marketers understand from where a customer chose to purchase a product or a service. 
 
 The following table describes the fields that are required by column name, which component requires them, and the table (or tables) from which they are available. Columns that are required by predictive modeling are optional for tenants that do not plan to enable that feature.
 

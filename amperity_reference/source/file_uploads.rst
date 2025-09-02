@@ -61,7 +61,7 @@ SQL use case example
 
 Upload a list of customers to include or exclude from a campaign by building a query against file uploads that return the Amperity ID via the file upload feature.
 
-The following example shows SQL in the **Query Editor** that returns a series of values from an uploaded file, joins those values to the **Merged Customers** table (using the **email** column in both tables), and then returns a list of Amperity IDs.
+The following example shows SQL in the **Query Editor** that returns a series of values from an uploaded file, joins those values to the **Merged Customers** table using the **email** column in both tables, and then returns a list of Amperity IDs.
 
 .. note:: This is not required for uploaded files that contain an **email** column. For more complex use cases, a query that is made available to segments and campaigns must return a list of Amperity IDs.
 
@@ -313,7 +313,7 @@ Upload CSV file
 
 You can upload a CSV file in Amperity to use on the **Queries**, **Segments**, and **Campaigns** pages.
 
-.. note:: When you upload a file to Amperity, the system will write a table from the data contained in that file. The table is then layered on top of a database at the queries (storage-service) layer. 
+.. note:: When you upload a file to Amperity, the system will write a table from the data contained in that file. The table is then layered on top of a database at the queries layer.
 
    Amperity does not enforce a time constraint on how long uploaded files can remain in the database.
 

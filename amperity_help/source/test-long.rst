@@ -22,7 +22,7 @@ The database editor will show a validation alert for an implicit ``CROSS JOIN`` 
 
 #. A join statement does not use an ``ON()`` or ``USING()`` clause to specify one or more column names as the join criteria.
 
-#. A ``SELECT`` statement returns too many columns from two tables. For example, using ``SELECT * FROM Table_A, Table_B`` can behave like a ``CROSS JOIN``. In this situation you should first filter out ``NULL`` values to avoid performance issues, or refactor your query to be more specific about which columns from which tables are to be joined.
+#. A ``SELECT`` statement returns too many columns from two tables. For example, using ``SELECT * FROM Table_A, Table_B`` can behave like a ``CROSS JOIN``. In this situation you should first filter out **NULL** values to avoid performance issues, or refactor your query to be more specific about which columns from which tables are to be joined.
 
 .. databases-validation-alert-implicit-cross-join-end
 

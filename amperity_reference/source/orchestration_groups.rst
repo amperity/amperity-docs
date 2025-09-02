@@ -231,7 +231,7 @@ The timezones that are available for selection in Amperity are modeled after the
 
 .. orchestration-groups-timezones-downstream-start
 
-The timezone that is chosen for an orchestration group schedule should consider every downstream business processes that requires the data and also the timezone(s) in which the consumers of that data will operate.
+The timezone that is chosen for an orchestration group schedule should consider every downstream business processes that requires the data and also the timezones in which the consumers of that data will operate.
 
 .. orchestration-groups-timezones-downstream-end
 
