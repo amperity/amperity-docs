@@ -740,10 +740,10 @@ This section describes tasks related to building campaigns in Amperity:
 * :ref:`campaigns-config-multi-channel-campaign`
 * :ref:`campaigns-config-onetime-campaign`
 * :ref:`campaigns-config-recurring-campaign`
+* :ref:`campaigns-copy-campaign`
 * :ref:`campaigns-copy-campaign-id`
 * :ref:`campaigns-delete-campaign`
 * :ref:`campaigns-discard-campaign`
-* :ref:`campaigns-duplicate-campaign`
 * :ref:`campaigns-edit-attribute`
 * :ref:`campaigns-edit-campaign`
 * :ref:`campaigns-edit-sub-audience`
@@ -1075,7 +1075,7 @@ Use the archive feature for campaigns you have actively used, but you don't need
 
 .. campaigns-build-audience-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Archive**.
 
 .. campaigns-build-audience-steps-end
@@ -1101,7 +1101,7 @@ You can build an audience in a campaign on the **Edit Campaign** page.
 
    .. note:: The **Exclude** list is optional. Use the **Exclude** list to choose recipients to exclude from a campaign.
    
-   .. tip:: You can select up to 10 saved segments from the same database to build inclusions and exclusions for   an audience.
+   .. tip:: You can select up to 10 saved segments from the same database to build inclusions and exclusions for an audience.
 
 The recipients group and control group appear in the **All Recipients** table in the **Sub-audiences and Destinations** section.
 
@@ -1318,6 +1318,31 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 .. campaigns-workflow-recurring-steps-end
 
 
+.. _campaigns-copy-campaign:
+
+Copy campaign
+--------------------------------------------------
+
+.. campaigns-copy-campaign-start
+
+You can reuse, build, and scale campaigns with ease by using an existing campaign as a template for building new ones.
+
+.. campaigns-copy-campaign-end
+
+**To copy a campaign**
+
+.. campaigns-copy-campaign-steps-start
+
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
+#. Click **Make a copy**.
+#. The **Copy campaign** dialog box opens. Enter the name of the new campaign, and then click **Save**.
+#. On the **Edit Campaign** page, update the campaign configuration for the new campaign, and then click **Save**.
+
+The new campaign appears on the **Campaigns** page.
+
+.. campaigns-copy-campaign-steps-end
+
+
 .. _campaigns-copy-campaign-id:
 
 Copy campaign ID
@@ -1333,7 +1358,7 @@ You can copy a campaign ID on the **Campaigns** page.
 
 .. campaigns-copy-campaign-id-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Copy ID**.
 #. Paste the campaign ID in the appropriate location.
 
@@ -1355,7 +1380,7 @@ You can delete a campaign on the **Campaigns** page.
 
 .. campaigns-delete-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Delete**.
 #. The **Delete Campaign** dialogue box opens. Click **Confirm**.
 
@@ -1431,38 +1456,13 @@ You can download a recipients list from a delivered campaign on the **Campaigns*
 
 .. campaigns-download-recipients-how-to-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. In the menu, click **Download Recipients**.
 #. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date:** dropdown menu.
 #. Click **Download**. An .CSV file downloads to your Downloads folder on your computer.
 #. Open the .CSV file in a program and then view the recipients list.
 
 .. campaigns-download-recipients-how-to-end
-
-
-.. _campaigns-duplicate-campaign:
-
-Duplicate campaign
---------------------------------------------------
-
-.. campaigns-duplicate-campaign-start
-
-You can reuse, build, and scale campaigns with ease by utilizing a pre-existing campaign as a template. 
-
-.. campaigns-duplicate-campaign-end
-
-**To duplicate a campaign**
-
-.. campaigns-duplicate-campaign-steps-start
-
-#. From the **Campaigns** page, click the more options button on a campaign.
-#. Click **Duplicate**.
-#. The **Duplicate Segment** dialog box opens. Click **Confirm**.
-#. On the **Edit Campaign**, make your changes, and then click **Save**.
-
-The duplicated campaign appears on the **Campaigns** page.
-
-.. campaigns-duplicate-campaign-steps-end
 
 
 .. _campaigns-edit-attribute:
@@ -1501,7 +1501,7 @@ You can edit a draft, scheduled, or delivered campaign on the **Campaigns** pa
 
 .. campaigns-edit-draft-campaign-steps-start
 
-#. On the **Campaigns** page, on a campaign, click the more options button.
+#. On the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu that appears, click **Edit**.
 #. On the **Edit Campaigns** page, make your changes.
 #. When done, click **Schedule**.
@@ -1512,7 +1512,7 @@ You can edit a draft, scheduled, or delivered campaign on the **Campaigns** pa
 
 .. campaigns-edit-scheduled-campaign-steps-start
 
-#. On the **Campaigns** page, on a campaign, click the more options button.
+#. On the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu that appears, click **Unschedule and Edit**.
 #. On the **Unschedule and Edit** dialog box, click **Confirm**.
 #. On the **Edit Campaigns** page, make your changes.
@@ -1910,7 +1910,7 @@ You can unschedule a campaign on the **Campaigns** page.
 
 .. campaigns-unschedule-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a scheduled campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a scheduled campaign.
 #. On the menu that appears, click **Unschedule and edit**.
 #. The **Unschedule and Edit** dialogue box appears. Click **Confirm**.
 
@@ -1932,7 +1932,7 @@ You can view a campaign on the **Campaigns** page.
 
 .. campaigns-view-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. On the menu that appears, click **View**.
 
 The **Edit Campaign** page appears displaying the campaign details.
@@ -1955,7 +1955,7 @@ You can view a campaign's history on the **Campaigns** page.
 
 .. campaigns-view-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. On the menu that appears, click **History**.
 
 The **Campaign History** dialogue box appears displaying the campaign's history details.

@@ -166,7 +166,7 @@ Interaction records
 
 Interaction records are defined by the presence of data that can be assigned semantic tags for transactions, itemized transactions, product catalogs, and other behavior data, such as semantic tags for loyalty programs and customer engagement.
 
-Interaction records often :ref:`require data to be reshaped using domain SQL (and custom domain tables) <domain-data-reshape>` to ensure that the right combination of fields are present in the data to support components and workflows, including functionality that is available from the **Segments** page, predicted modeling, and the **Campaigns** page.
+Interaction records often :ref:`require data to be reshaped using domain SQL and custom domain tables <domain-data-reshape>` to ensure that the right combination of fields are present in the data to support components and workflows, including functionality that is available from the **Segments** page, predicted modeling, and the **Campaigns** page.
 
 .. domain-data-review-records-interactions-end
 
