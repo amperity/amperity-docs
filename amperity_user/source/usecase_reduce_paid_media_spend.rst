@@ -24,7 +24,7 @@ Your brand's spend on paid media is often the highest percentage of spend within
 
 For example, a "lost" customer has stopped interacting with your brand, probably for years. They have opted out from receiving email and SMS communications and have not purchased from any of your brand's direct mail efforts. Are these customers worth marketing to? It depends on the campaign and the answer is not always "No." Should these customers be included in your most expensive paid media campaigns? That's easier and the answer is always "No."
 
-You can exclude these customers from your paid media campaigns--and preserve a percentage of your total advertising budget--by building an audience of your brand's lowest value customers. Use this audience as an exclusion, which will prevent these customers from being part of your highest priority (and most expensive) paid media campaigns.
+You can exclude these customers from your paid media campaigns--and preserve a percentage of your total advertising budget--by building an audience of your brand's lowest value customers. Use this audience as an exclusion, which will prevent these customers from being part of your highest priority, and most expensive, paid media campaigns.
 
 .. usecase-reduce-paid-media-ad-spend-end
 

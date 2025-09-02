@@ -205,7 +205,7 @@ For example, a field named **evar_15** contains email addresses. This field shou
 * Email addresses
 * Personally identifiable information (PII)
 
-Email addresses are an important part of the identity resolution process. Using a semantic tag to tell Amperity which fields in your data sources contain email addresses (and PII!) saves you a lot of time because you don't have to do any data processing, ETLs, or data modeling before making that data source available to Amperity.
+Email addresses are an important part of the identity resolution process. Using a semantic tag to tell Amperity which fields in your data sources contain email addresses saves you a lot of time because you don't have to do any data processing, ETLs, or data modeling before making that data source available to Amperity.
 
 Connect the data, apply the semantic tag, and build customer profiles.
 

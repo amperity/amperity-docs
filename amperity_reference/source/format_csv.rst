@@ -62,7 +62,7 @@ CSV files, generally, do not have a formal specification, which allows for a wid
 
 If you notice data quality issues from a data source that uses a CSV file, consider updating that CSV file to adhere to the RFC as closely as possible, including applying a consistent approach for the use of double quotes, and then ensuring the escape character is compatible with the data provided by that data source.
 
-For example, many Polynesian languages use an apostrophe (') or a single quote (ʻ) at the start of (and within) first, last, and location names: Hawai'i, O'ahu, Kau'i, U'ilani. In Hawai'ian, a grave accent (`\``) is often used instead of an apostrophe: Hawai\`ian. (Apostrophes within names is not unique to Polynesian languages.)
+For example, many Polynesian languages use an apostrophe (') or a single quote (ʻ) at the start of or within first, last, and location names: Hawai'i, O'ahu, Kau'i, U'ilani. In Hawai'ian, a grave accent (`\``) is often used instead of an apostrophe: Hawai\`ian. (Apostrophes within names is not unique to Polynesian languages.)
 
 A courier quote configuration similar to ``"""`` will allow string values like:
 

@@ -20,7 +20,7 @@ Standard output
 
 .. standard-output-overview-start
 
-The following tables are standard output of Amperity. These tables (and the attributes within them) are always available to the **Segment Editor**:
+The following tables are standard output of Amperity. These tables and the attributes within them are always available to the **Segment Editor**:
 
 * :ref:`Campaign Recipients <standard-output-campaign-recipients>`
 * :ref:`Customer Attributes <standard-output-customer-attributes>`
@@ -197,7 +197,7 @@ Customer Attributes
 
 .. standard-output-customer-attributes-start
 
-.. note:: The **Customer Attributes** table is built (and often customized) for your tenant. It is not part of standard output until after it has been added to your tenant, but is included here because it is often used closely with standard output to support a variety of complex use cases, such as churn prevention campaigns.
+.. note:: The **Customer Attributes** table is built and often customized for your tenant. It is not part of standard output until after it has been added to your tenant, but is included here because it is often used closely with standard output to support a variety of complex use cases, such as churn prevention campaigns.
 
 .. standard-output-customer-attributes-end
 

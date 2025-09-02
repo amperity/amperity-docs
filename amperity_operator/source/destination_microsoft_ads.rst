@@ -39,13 +39,13 @@ Microsoft Advertising is a pay-per-click partner syndication network, which enab
 
 Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
 
-* Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk)
+* Bing, along with sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk
 * `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|
 * Microsoft News
 * Microsoft Edge
 * Outlook.com
 * Microsoft Start
-* Access to external partners, such as Yahoo.com (and sites owned and operated by Yahoo), DuckDuckGo, AOL.com (and sites owned and operated by AOL), Xandr, and Nine.
+* Access to external partners, such as Yahoo.com, along with sites owned and operated by Yahoo, DuckDuckGo, AOL.com, along with sites owned and operated by AOL, Xandr, and Nine.
 
 .. destination-microsoft-ads-about-end
 

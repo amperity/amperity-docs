@@ -77,7 +77,7 @@ Column types
        * 12345
 
    * - **string**
-     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, descriptions, and so on. May be empty. For example:
+     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, descriptions, and so on. May be empty. For example:
 
        * John
        * Smith
@@ -140,7 +140,7 @@ Interaction records
 
 Interaction records are defined by the presence of data that can be assigned semantic tags for :ref:`transactions <semantics-itemized-transactions>`, product catalogs, and other behavior data, such as :ref:`custom semantic tags for loyalty programs <semantics-custom>`.
 
-Interaction records often :ref:`require data to be reshaped using domain SQL (and custom domain tables) <domain-tables-custom>` to ensure that the right combination of fields are present in the data to support components and workflows within Amperity, including functionality that is available from the **Segment Brief** (a component within the **Segments** page), predicted customer lifetime value models, and the **Campaigns** page.
+Interaction records often :ref:`require data to be reshaped using domain SQL and custom domain tables <domain-tables-custom>` to ensure that the right combination of fields are present in the data to support components and workflows within Amperity, including functionality that is available from the **Segment Brief** (a component within the **Segments** page), predicted customer lifetime value models, and the **Campaigns** page.
 
 .. domain-domain-tables-record-type-interaction-end
 
@@ -762,7 +762,7 @@ With a matching value
 
 .. domain-tables-delete-records-value-start
 
-You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address ("email is like ``amperity.com``") or records that match a specific email address ("email is ``john@amperity.com``").
+You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address ``"email is like ``amperity.com``"`` or records that match a specific email address ``"email is "john@amperity.com"``.
 
 .. domain-tables-delete-records-value-end
 
@@ -788,7 +788,7 @@ Edit domain table
 
 .. domain-tables-edit-start
 
-A domain table cannot be edited directly. The data within the domain table is updated based on feed and courier settings. The name of the domain table is directly associated with the feed and its schema. Changes made to the feed (or feed schema) will update the data in the domain table automatically.
+A domain table cannot be edited directly. The data within the domain table is updated based on feed and courier settings. The name of the domain table is directly associated with the feed and its schema. Changes made to a feed will update the data in the domain table automatically.
 
 .. domain-tables-edit-end
 
@@ -904,7 +904,7 @@ When primary keys for a table are updated the data in the existing domain table 
 
 .. domain-tables-purge-context-start
 
-A domain table cannot be purged directly (though it may be deleted). Operations that may cause a purge of domain table data are initiated when a feed is edited. For example, when the primary key is changed. Purging data ensures the Stitch process does not have to deal with both new and old data.
+A domain table cannot be purged directly, though it may be deleted. Operations that may cause a purge of domain table data are initiated when a feed is edited. For example, when the primary key is changed. Purging data ensures the Stitch process does not have to deal with both new and old data.
 
 .. domain-tables-purge-context-end
 

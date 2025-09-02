@@ -91,7 +91,7 @@ Semantic tags
 
 .. admonition:: Extract, load, transform (ELT)
 
-   An important benefit of semantic tagging is that raw data can be provided directly to Amperity, which avoids a traditional (and more expensive) extract, transform, and load (ETL) process. Amperity can extract, load, and then transform raw data from any number of large datasets.
+   An important benefit of semantic tagging is that raw data can be provided directly to Amperity, which avoids a traditional and more expensive extract, transform, and load (ETL) process. Amperity can extract, load, and then transform raw data from any number of large datasets.
 
 .. stitch-semantic-noetl-end
 

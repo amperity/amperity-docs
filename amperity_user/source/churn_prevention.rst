@@ -86,7 +86,7 @@ How to build a churn prevention campaign
 
 .. churn-prevention-howto-start
 
-Building an effective churn prevention campaign starts with defining audiences that can be mapped to a series of churn thresholds. Experiment by sending an increasing number of promotions and offers to an increasing number of audiences (and sub-audiences) and marketing channels as you test, expand, and then optimize your churn prevention campaign.
+Building an effective churn prevention campaign starts with defining audiences that can be mapped to a series of churn thresholds. Experiment by sending an increasing number of promotions and offers to an increasing number of audiences and sub-audiences and marketing channels as you test, expand, and then optimize your churn prevention campaign.
 
 .. churn-prevention-howto-end
 

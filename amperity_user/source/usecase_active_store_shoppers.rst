@@ -86,7 +86,7 @@ The following sections describe using the the **Segment Editor** to build a segm
 
      - Add a second attribute to your segment.
 
-       To identify customers who have purchased from a store (and not your website), choose the **Purchase Channel** attribute from the **Transaction Attributes Extended** table, select the "is" operator, and then select "store":
+       To identify customers who have purchased from a store and not your website, choose the **Purchase Channel** attribute from the **Transaction Attributes Extended** table, select the "is" operator, and then select "store":
 
        .. image:: ../../images/usecase-active-store-shopper-purchase-channel.png
           :width: 540 px

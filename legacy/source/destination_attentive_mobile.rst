@@ -648,6 +648,6 @@ The following table shows how your segment name will appear in |destination-name
 
 .. destination-attentive-add-data-template-important-start
 
-.. important:: The filename template, as used with |destination-name| (and unlike how it is used with other destinations), **does not** build a file name. Instead the filename template defines which strings (campaign and/or treatment group) will be used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
+.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings (campaign and/or treatment group) will be used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
 
 .. destination-attentive-add-data-template-important-end

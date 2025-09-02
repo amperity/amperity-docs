@@ -90,7 +90,7 @@ Use the **Add Orchestration** button to add an orchestration to Amperity. An orc
 
       Orchestration settings vary depending on which destination and data template are associated with it.
 
-#. Set the workflow to **Manual**. (You can change this to automatic later, after verifying the end-to-end workflow.)
+#. Set the workflow to **Manual**. You can change this to automatic later, after verifying the end-to-end workflow.
 #. Click **Save**.
 
 .. orchestrations-add-steps-end

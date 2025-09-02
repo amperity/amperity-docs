@@ -77,7 +77,7 @@ How activations work
 
 #. **Define the audience**
 
-   Designate one or more **segments** (and optional **exclusion** segments) to determine who enters. For recurring runs, only customers who newly qualify since the last run are included.
+   Designate one or more **segments** and optional **exclusion** segments to determine who enters. For recurring runs, only customers who newly qualify since the last run are included.
 
 #. **Configure destinations and attributes**
 

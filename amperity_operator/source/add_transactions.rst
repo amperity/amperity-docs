@@ -559,7 +559,7 @@ To associate purchase histories with customer profiles apply transaction semanti
 
        You must run Stitch to associate purchase histories with customer profiles.
 
-       .. important:: Data tables that contain purchase histories (and not customer PII) should not be made available to Stitch. The Stitch process evaluates your customers' purchase histories, and then identifies which purchases should be associated to each unique customer profile.
+       .. important:: Data tables that contain purchase histories and not customer PII should not be made available to Stitch. The Stitch process evaluates your customers' purchase histories, and then identifies which purchases should be associated to each unique customer profile.
 
           The results are added to the **Unified Itemized Transactions** table, which associates your customer's Amperity ID to their purchase history. A row exists in the **Unified Itemized Transactions** table for each item that was purchased.
 

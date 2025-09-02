@@ -25,7 +25,7 @@ About courier groups
 
 A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit; couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
 
-For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate (or refresh) a customer 360 database. Orchestrations, recurring campaigns, and Profile API indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
+For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate or refresh a customer 360 database. Orchestrations, recurring campaigns, and Profile API indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
 
 .. courier-groups-context-end
 
@@ -78,7 +78,7 @@ Use the **Add courier group** button to add a courier group to Amperity. A couri
 
 For each courier added to a courier group, define a wait time and the number of days to look for data. This is used to help determine how much time the courier group should wait for the files associated with a courier to be ready for processing.
 
-In some cases, if the files are not ready, the courier (and courier group) will fail. But in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
+In some cases, if the files are not ready, the courier workflow will fail. But in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
 
 .. courier-groups-add-context-end
 
@@ -146,7 +146,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-     - Optional. Enable runtime alerts. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours (or minutes) at which, when the configured amount of time is exceeded, an alert will be sent.
+     - Optional. Enable runtime alerts. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when the configured amount of time is exceeded, an alert will be sent.
 
        .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
           :width: 400 px
@@ -184,7 +184,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-     - To enable the courier group and have it run on the configured schedule, set the courier group to **Active**. (If this setting is set to **Inactive** the courier group will not run on a schedule, but may be run manually.)
+     - To enable the courier group and have it run on the configured schedule, set the courier group to **Active**. If this setting is set to **Inactive** the courier group will not run on a schedule, but may be run manually.
 
        Many courier groups are scheduled to run on a daily basis. Some courier groups are scheduled to run less frequently, such as bi-weekly, monthly, or even quarterly. Use the **Only retrieve files dropped in the past day?** setting to configure a courier group that runs less frequently to only look for files dropped yesterday.
 
@@ -194,7 +194,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
+       .. tip:: A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will look for files on each day that has passed since the last time the courier group ran.
 
           When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
 
@@ -339,7 +339,7 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 
 A courier group that is scheduled to run on a daily basis will check for files on a daily basis.
 
-A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
+A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will look for files on each day that has passed since the last time the courier group ran.
 
 When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
 
@@ -538,7 +538,7 @@ Review activations
 
 An activation represents a part of a workflow that is run after databases have been updated. Any number of activations may be assigned to a workflow, after which all activations are run automatically on the schedule that is defined by the workflow.
 
-Individual :ref:`queries <courier-groups-howto-add-query>` and :ref:`data exports <courier-groups-howto-add-data-export>`, :ref:`orchestration group <courier-groups-howto-add-orchestration-group>` (that group multiple queries into a single activation), :ref:`Profile API endpoints <courier-groups-howto-add-profile-api-endpoint>`, and :ref:`recurring campaign <courier-groups-howto-add-recurring-campaign>` may all be assigned to a workflow as an activation.
+Individual :ref:`queries <courier-groups-howto-add-query>` and :ref:`data exports <courier-groups-howto-add-data-export>`, :ref:`orchestration group <courier-groups-howto-add-orchestration-group>`, :ref:`Profile API endpoints <courier-groups-howto-add-profile-api-endpoint>`, and :ref:`recurring campaign <courier-groups-howto-add-recurring-campaign>` may all be assigned to a workflow as an activation.
 
 .. courier-groups-review-activations-end
 
@@ -969,7 +969,7 @@ A runtime alert is a type of workflow alert that is sent when a courier group ha
 .. courier-groups-howto-notify-slow-steps-start
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
-#. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours (or minutes) at which, when this amount of time is exceeded, a workflow alert will be sent.
+#. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when this amount of time is exceeded, a workflow alert will be sent.
 
    .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
       :width: 400 px
@@ -989,7 +989,7 @@ Pull files for previous 24 hours?
 
 .. courier-groups-howto-pull-for-24-hours-start
 
-A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
+A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will look for files on each day that has passed since the last time the courier group ran.
 
 When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
 

@@ -61,7 +61,7 @@ The **Profiles** tab shows the date on which the primary customer 360 database w
 
 .. databases-profiles-context-start
 
-Each customer profile is a collection of common attributes (first name, last name, email, phone, etc.), transaction attributes (first purchase, last purchase, total purchases, etc.), and other custom values that are unique to each customer's data set. These details are summarized on the **Customer 360** page under **Customer Profile**.
+Each customer profile is a collection of common attributes, transaction attributes, and other custom values that are unique to each customer's data set. These details are summarized on the **Customer 360** page under **Customer Profile**.
 
 .. databases-profiles-context-end
 
@@ -1271,7 +1271,7 @@ Allow only admins
 
 .. databases-database-howto-configure-permission-admin-start
 
-A database that is configured for **Admin only** access restricts access to the database (and tables within the database) to only users who are assigned the **DataGrid Administrator** or **DataGrid Operator** policies.
+A database that is configured for **Admin only** access restricts access to the database and tables within the database to only users who are assigned the **DataGrid Administrator** or **DataGrid Operator** policies.
 
 .. databases-database-howto-configure-permission-admin-end
 

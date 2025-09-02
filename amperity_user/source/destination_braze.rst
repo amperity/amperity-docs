@@ -75,7 +75,7 @@ Customer profiles
 
 .. destination-braze-profile-attributes-start
 
-Customer profiles in |destination-name| are represented by a set of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link|. To update these fields in |destination-name| you must follow a strict naming convention when sending data from Amperity. These fields are also case sensitive (and are in lowercase).
+Customer profiles in |destination-name| are represented by a set of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link|. To update these fields in |destination-name| you must follow a strict naming convention when sending data from Amperity. These fields are case sensitive and must be lowercase.
 
 .. destination-braze-profile-attributes-end
 

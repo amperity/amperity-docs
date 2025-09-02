@@ -51,7 +51,7 @@ The **Detailed Examples** query should be configured to match the fields that ar
 
 #. Uncomment rows of matching a/b pairs or add new rows so that the uncommented rows match your tenant.
 #. Adjust case count and score count limits, if necessary.
-#. Add customer keys (`ck`) if they are available (and update this query if customer keys are added).
+#. Add customer keys (``ck``) if they are available and update this query if customer keys are added.
 #. Uncomment rows for the bad-values blocklist after it is enabled for your tenant.
 
 .. table-detailed-examples-use-with-stitch-qa-configure-end

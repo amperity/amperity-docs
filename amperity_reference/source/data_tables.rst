@@ -1696,17 +1696,17 @@ The **Merged Customers** table has the following columns:
       * - **Completion**
         - The number of NOT NULL values that are present in a set of data, as defined in **Merged Customers**. Combine the use of this column with **Priority** to understand why a record was selected.
 
-          A name has three possible values (**Given Name**, **Surname**, and **Full Name**). When all three values are NOT NULL, the value in the **Name Completion** column will be ``3``.
+          A name has three possible values: **Given Name**, **Surname**, and **Full Name**. When all three values are NOT NULL, the value in the **Name Completion** column will be ``3``.
 
-          An address has four possible values (**Address**, **City**, **State**, and **postal**). When all four values are NOT NULL, the value in the **Address Completion** column will be ``4``.
+          An address has four possible values: **Address**, **City**, **State**, and **postal**. When all four values are NOT NULL, the value in the **Address Completion** column will be ``4``.
 
-          An email address has one possible value (**Email**). When this value is NOT NULL, the value in the **Email Completion** column will be ``1``.
+          An email address has one possible value: **Email**. When this value is NOT NULL, the value in the **Email Completion** column will be ``1``.
 
-          A phone number has one possible value (**Phone**). When this value is NOT NULL, the value in the **Phone Completion** column will be ``1``.
+          A phone number has one possible value: **Phone**. When this value is NOT NULL, the value in the **Phone Completion** column will be ``1``.
 
-          A birthdate has one possible value (**Birthdate**). When this value is NOT NULL, the value in the **Birthdate Completion** column will be ``1``.
+          A birthdate has one possible value: **Birthdate**. When this value is NOT NULL, the value in the **Birthdate Completion** column will be ``1``.
 
-          Gender has one possible value (**Gender**). When this value is NOT NULL, the value in the **Gender Completion** column will be ``1``.
+          Gender has one possible value: **Gender**. When this value is NOT NULL, the value in the **Gender Completion** column will be ``1``.
 
       * - **Datasource**
         - The source data table from which the customer profile value originates. Combine the use of this column with **PK** to find the record in the source domain table.
@@ -5179,7 +5179,7 @@ The **Unified Preprocessed Raw** table has the following columns:
           :start-after: .. term-component-id-start
           :end-before: .. term-component-id-end
 
-       .. tip:: Use this field during the Stitch QA process to help identify why certain records were grouped (or not grouped) together.
+       .. tip:: Use this field during the Stitch QA process to help identify why certain records were grouped or not grouped together.
 
        Also in: **Unified Preprocessed Raw**
 
@@ -5231,11 +5231,11 @@ The **Unified Preprocessed Raw** table has the following columns:
 
    * - **Int ID**
      - Integer
-     - An identifier that represents a unique combination of **datasource** and **pk** (primary key) and their position in the Stitch record sort order *after* Stitch has identified (and removed) trivial duplicates.
+     - An identifier that represents a unique combination of **datasource** and **pk** (primary key) and their position in the Stitch record sort order *after* Stitch has identified and removed trivial duplicates.
 
        .. important:: This identifier is based on Stitch record sort order and is determined each time Stitch runs. Records will not always have the same position in the record sort order; you should not expect this ID to be stable over time.
 
-       .. tip:: Use this field during the Stitch QA process to help identify why certain records were grouped (or not grouped) together.
+       .. tip:: Use this field during the Stitch QA process to help identify why certain records were grouped or not grouped together.
 
    * - **Login Trimmed**
      - String
@@ -5605,7 +5605,7 @@ Unified Transactions
 
 .. data-tables-unified-transactions-example-start
 
-The following diagram shows an example of the **Unified Transactions** table (click to view a larger diagram):
+The following diagram shows an example of the **Unified Transactions** table. Click to view a larger diagram.
 
 .. data-tables-unified-transactions-example-end
 
@@ -5665,7 +5665,7 @@ The **Unified Transactions** table has the following columns:
        .. note:: A namespaced foreign key should be used along with a customer ID. When a foreign key is added to transactions data it:
 
           * Must match a foreign key in a table that is output by Stitch
-          * Must be well-distributed across the data source (a high percentage of values must not be 0)
+          * Must be well-distributed across the data source. A high percentage of values must not be 0.
           * May contain a NULL value
           * Must be unique for each order ID in the **Unified Transactions** table.
 
@@ -5832,7 +5832,7 @@ The **Unified Transactions** table has the following columns:
        This column is the primary key and must be associated with the **PK** semantic tag. Each unique order ID must:
 
        * Appear only once in the **Unified Transactions**.
-       * Match an order ID in the **Unified Itemized Transactions** table. (This order ID might be associated to multiple items within a single transactions.)
+       * Match an order ID in the **Unified Itemized Transactions** table. This order ID might be associated to multiple items within a single transactions.
 
        .. note::
 

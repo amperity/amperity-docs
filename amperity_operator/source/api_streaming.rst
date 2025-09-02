@@ -450,7 +450,7 @@ Once data is sent to a stream, it is batched and collected to be made ready for 
 
 .. note::
 
-   * The Streaming API only accepts individual JSON payloads (and does not accept NDJSON payloads)
+   * The Streaming API only accepts individual JSON payloads and does not accept NDJSON payloads
    * JSON payloads are combined into a single NDJSON file
    * Nested JSON payloads require a saved query to flatten the data
    * XML payloads are converted into CBOR by the streaming API

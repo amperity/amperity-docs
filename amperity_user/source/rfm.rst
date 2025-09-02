@@ -134,7 +134,7 @@ Direct mail campaigns
 
 .. rfm-example-direct-mail-start
 
-RFM scores were originally designed to support direct mail campaigns in the pre-digital age. RFM metrics can help you identify future customer behavior. A customer who has purchased recently is more likely to purchase again. A customer who has visited your website (and interacted with your brand) is more likely to visit again. A customer who spends a lot of money is more likely to keep spending a lot of money.
+RFM scores were originally designed to support direct mail campaigns in the pre-digital age. RFM metrics can help you identify future customer behavior. A customer who has purchased recently is more likely to purchase again. A customer who has visited your website and interacted with your brand is more likely to visit again. A customer who spends a lot of money is more likely to keep spending a lot of money.
 
 Direct mail provides a physical touchpoint that can help you make a positive impression on your customers. Many direct-to-consumer companies prefer direct mail campaigns because there are more formats and approaches that you can use to accurately represent your brand.
 

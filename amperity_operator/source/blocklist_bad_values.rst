@@ -975,7 +975,7 @@ Custom domain tables
 
 .. bad-values-blocklist-advanced-custom-domain-tables-start
 
-The bad-values blocklist uses a regular expression to identify domain tables. Domain tables are built using a **source:feed** pattern, whereas custom domain tables use a SQL-safe pattern that uses underscores (``_``) instead of a colon (``:``) as a delimiter. When custom domain table names are present, the default regular expression will not identify the underscores (and any related custom domain tables), and may return **NULL** values.
+The bad-values blocklist uses a regular expression to identify domain tables. Domain tables are built using a **source:feed** pattern, whereas custom domain tables use a SQL-safe pattern that uses underscores (``_``) instead of a colon (``:``) as a delimiter. When custom domain table names are present, the default regular expression will not identify the underscores and any related custom domain tables, and may return **NULL** values.
 
 If a blocklist returns NULL values and if custom domain tables are present, update the regular expression in the **SELECT** statements for the following sections:
 

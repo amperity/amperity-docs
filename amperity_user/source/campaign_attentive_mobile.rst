@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Attentive
 .. |what-send| replace:: email address **OR** phone numbers, but not both, in the same audience
 .. |what-enable| replace:: **email** or **phone**
-.. |attributes-sent| replace:: |destination-name| requires email addresses *or* phone numbers. You must choose one (and not the other). There are no optional fields.
+.. |attributes-sent| replace:: |destination-name| requires email addresses *or* phone numbers. You must choose one and not the other. There are no optional fields.
 .. |allow-for-what| replace:: audience segments
 .. |allow-for-duration| replace:: up to 24 hours
 
