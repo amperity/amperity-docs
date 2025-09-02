@@ -95,7 +95,7 @@ This value must be less than or equal to 0 when **is-return** or **is-cancellati
 
 .. less-than-or-equal-to-zero-is-canceled-start
 
-This value must be less than or equal to 0 when **is_canceled** is ``TRUE``.
+This value must be less than or equal to 0 when **is_canceled** is **TRUE**.
 
 .. less-than-or-equal-to-zero-is-canceled-end
 
@@ -107,7 +107,7 @@ This value must be less than or equal to 0 when **is_canceled** is ``TRUE``.
 
 .. less-than-or-equal-to-zero-is-return-start
 
-This value must be less than or equal to 0 when **is_return** is ``TRUE``.
+This value must be less than or equal to 0 when **is_return** is **TRUE**.
 
 .. less-than-or-equal-to-zero-is-return-end
 

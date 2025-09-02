@@ -95,7 +95,7 @@ About the Stitch run
 
 .. stitch-run-about-start
 
-A Stitch run takes a certain amount of time, depending on the size of the data analyzed and the number of potential pairs in the data. In general, you should expect to wait at least 20 minutes (but as much as 2 hours) for a Stitch run to complete.
+A Stitch run takes a certain amount of time, depending on the size of the data analyzed and the number of potential pairs in the data. In general, you should expect to wait at least 20 minutes, but as much as 2 hours,  for a Stitch run to complete.
 
 You can navigate to other areas of Amperity and do other tasks while waiting for Stitch to complete successfully. Stitch has two notifications: the Stitch run, and then the Stitch report. The UI will refresh with updates when the Stitch report has been generated.
 
@@ -103,7 +103,7 @@ You can navigate to other areas of Amperity and do other tasks while waiting for
 
 .. stitch-run-important-start
 
-.. important:: Before starting the Stitch run, verify that *all* tables that should be analyzed by Stitch have been :ref:`made available to Stitch <feeds-make-available-to-stitch>` via the **Feed Editor**, that all processes that load data to Amperity (including couriers, feeds, and domain tables) have finished processing, and that all domain tables are selected.
+.. important:: Before starting the Stitch run, verify that *all* tables that should be analyzed by Stitch have been :ref:`made available to Stitch <feeds-make-available-to-stitch>` via the **Feed Editor**, that all processes that load data to Amperity, including couriers, feeds, and domain tables, have finished processing, and that all domain tables are selected.
 
 .. stitch-run-important-end
 
@@ -176,7 +176,7 @@ The **Stitched Sources** section of the **Stitch** page shows a comparison of do
 
 .. stitch-explore-by-data-source-upset-plot-start
 
-The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. (An UpSet plot chart will have a row for each data source. This diagram shows the first two only.)
+The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. An UpSet plot chart will have a row for each data source. This diagram shows the first two only.
 
 .. stitch-explore-by-data-source-upset-plot-end
 
@@ -227,7 +227,7 @@ Explore semantics
 
 .. stitch-explore-semantics-start
 
-The **Semantics** link at the top of the **Stitch** page opens a dialog box that lists the configured semantics made available to Stitch from domain tables. This list is broken down by domain table, and then by semantic. For each semantic, it lists the semantic, the data type (string, date, integer, and so on), and the name of the field as defined in customer data.
+The **Semantics** link at the top of the **Stitch** page opens a dialog box that lists the configured semantics made available to Stitch from domain tables. This list is broken down by domain table, and then by semantic. For each semantic, it lists the semantic, its data type, and the name of the field as defined in customer data.
 
 .. stitch-explore-semantics-end
 
@@ -258,7 +258,7 @@ View cluster graph
 
 .. stitch-explore-cluster-graph-start
 
-The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line relationship between each stitched record, along with a detailed breakdown of PII similarities (and differences) for each pair of stitched records in the cluster graph.
+The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line relationship between each stitched record, along with a detailed breakdown of PII similarities and differences for each pair of stitched records in the cluster graph.
 
 .. stitch-explore-cluster-graph-end
 

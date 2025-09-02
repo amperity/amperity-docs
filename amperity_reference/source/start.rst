@@ -211,7 +211,7 @@ Connect the data, apply the semantic tag, and build customer profiles.
 
 You have two options:
 
-#. Let **AmpAI** apply semantic tags (this section)
+#. Let **AmpAI** apply semantic tags
 #. `Manually apply semantic tags <https://docs.amperity.com/operator/semantics.html>`__
 
 .. start-semantics-end

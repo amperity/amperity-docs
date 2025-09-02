@@ -817,7 +817,7 @@ SMS opt-in and subscriber status
 
 **sms-opt/phone**
 
-   The phone number to which a marketing may (or may not) be sent.
+   The phone number to which a marketing may or may not be sent.
 
 **sms-opt/region**
 

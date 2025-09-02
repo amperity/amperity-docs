@@ -246,7 +246,7 @@ Email addresses
 
 Amperity preprocesses email addresses by ensuring that only the local username and domain are present, separated by ``@``, and converted to UPPERCASE.
 
-.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, ``reservation@``, and so on. When an email address matches one of these patterns, that value is preprocessed to ``NULL``.
+.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, ``reservation@``, and so on. When an email address matches one of these patterns, that value is preprocessed to **NULL**.
 
 .. list-table::
    :widths: 300 300

@@ -1987,7 +1987,7 @@ The following table lists the tags available to this semantic group (with requir
      - String
      - |checkmark-required| **Required**
 
-       The email address to which a marketing may (or may not) be sent.
+       The email address to which a marketing may or may not be sent.
 
    * - **is-email-opted-in**
      - Boolean
@@ -2050,7 +2050,7 @@ The following table lists the tags available to this semantic group (with requir
      - String
      - |checkmark-required| **Required**
 
-       The phone number to which a marketing may (or may not) be sent.
+       The phone number to which a marketing may or may not be sent.
 
    * - **region**
      - String
@@ -2115,7 +2115,7 @@ The following table lists the tags available to this semantic group (with requir
 
        When a custom semantic tag is added to itemized transactions data it:
 
-       * Must be a unique customer identifier that can be used to join interaction records (transactions and itemized transactions) to tables that contain the Amperity ID.
+       * Must be a unique customer identifier that can be used to join interaction records to tables that contain the Amperity ID.
        * Must be unique for each order ID in the **Unified Itemized Transactions** table.
 
    * - **currency**
@@ -2159,7 +2159,7 @@ The following table lists the tags available to this semantic group (with requir
        * Must match a foreign key in a table that is output by Stitch.
        * Must be well-distributed across the data source (a high percentage of values must not be 0).
        * Must be unique for each order ID in the **Unified Itemized Transactions** table.
-       * May contain a ``NULL`` value.
+       * May contain a **NULL** value.
 
    * - **is-cancellation**
      - Boolean

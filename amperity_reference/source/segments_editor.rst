@@ -115,8 +115,8 @@ AND vs. OR
 
 AND and OR are used in SQL languages to specify how results should be filtered when more than one condition is present.
 
-* Use AND to return a smaller (and more specific) list of customers. A customer must match all conditions to belong to the list.
-* Use OR to return a larger (and more broad) list of customers. A customer may match any condition to belong to the list.
+* Use AND to return a smaller list of customers. A customer must match all conditions to belong to the list.
+* Use OR to return a larger list of customers. A customer may match any condition to belong to the list.
 
 Amperity uses AND and OR to help you choose which type of behavior--larger audiences or smaller audiences--you want to use in your segment.
 
@@ -271,7 +271,7 @@ Purchase behaviors
 
 .. segments-editor-condition-purchase-behaviors-start
 
-Purchase behaviors are a feature of Amperity that are built on top of standard output for transactions (orders and items). Purchase behaviors require standardized product catalog field names to be present in your standard output for transactions.
+Purchase behaviors are a feature of Amperity that are built on top of standard output for transactions. Purchase behaviors require standardized product catalog field names to be present in your standard output for transactions.
 
 .. segments-editor-condition-purchase-behaviors-end
 
@@ -329,7 +329,7 @@ The list of operators that are available to an attribute in the **Segment Editor
 
 .. segments-editor-operators-note-start
 
-.. note:: This topic is a reference for all operators that are available to all attributes and is organized alphabetically by data type, and then by operator. This topic does not contain specific recommendations for specific attributes (or attribute groups). Refer to the individual attribute reference pages to learn more about the set of operators that are available, including recommended operators and examples of using them.
+.. note:: This topic is a reference for all operators that are available to all attributes and is organized alphabetically by data type, and then by operator. This topic does not contain specific recommendations for specific attributes. Refer to the individual attribute reference pages to learn more about the set of operators that are available, including recommended operators and examples of using them.
 
 .. segments-editor-operators-note-end
 
@@ -491,7 +491,7 @@ Decimal
 
 A Decimal data type represents amounts, percentages, and scores.
 
-A Decimal data type accepts numeric values with a precision of 38 and a scale of 2 (default). Precision is the number of digits that may be in the decimal value. Scale is the number of digits that may be to the right of the decimal point.
+A Decimal data type accepts numeric values with a precision of 38 and a scale of 2. Precision is the number of digits that may be in the decimal value. Scale is the number of digits that may be to the right of the decimal point.
 
 .. note:: Amperity defaults precision and scale for the Decimal data type to 38 and 0: DECIMAL(38,2). The default value for scale may be configured in the feed for each data source.
 
@@ -673,7 +673,7 @@ A field with a **NOT NULL** value is a field with a value that is not empty. A v
 
 **Examples**
 
-For example, if you have 100 customers, 99 of which have provided a value for their phone number (even if some of those phone numbers are invalid phone numbers), 1 of which has not provided any value at all. The customer record that does not have a phone number is empty and is a **NULL** value.
+For example, if you have 100 customers, 99 of which have provided a value for their phone number, even if some of those phone numbers are invalid phone numbers, 1 of which has not provided any value at all. The customer record that does not have a phone number is empty and is a **NULL** value.
 
 Amperity returns 1 record when the "is NULL" operator is used and 99 records when the "is not NULL" operator is used, even if 2 of them contained spaces instead of numbers and 4 of them were "555-555-1234".
 
@@ -710,7 +710,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 
 
    * - **Today**
-     - Starts at 12:00:00 AM (or at the current time) on the current day and continues for 24 hours.
+     - Starts at 12:00:00 AM or at the current time on the current day and continues for 24 hours.
 
        For example, if the current day is "Thursday 01 / 12 / 2023" then **today** is "Thursday 01 / 12 / 2023".
 

@@ -244,7 +244,7 @@ The following attributes are available from the **Lifecycle_Events** table.
    * - **Previous event status**
      - The lifecycle event status for the previous lifecycle event associated with the Amperity ID.
    * - **Prev event status start date**
-     - The date on which the previous lifecycle event started. This value is ``NULL`` when there is no previous lifecycle event.
+     - The date on which the previous lifecycle event started. This value is **NULL** when there is no previous lifecycle event.
 
 .. attributes-campaign-lifecycle-events-table-end
 
@@ -1179,7 +1179,7 @@ Customer orders
        * **Latest Order Revenue**
 
    * - **<x> store ID**
-     - The ID of the store where the customer made their order. This value may be ``NULL`` if the associated channel is not retail or some equivalent. Available attributes:
+     - The ID of the store where the customer made their order. This value may be **NULL** if the associated channel is not retail or some equivalent. Available attributes:
 
        * **First order store ID**
        * **Second order store ID**
@@ -1390,7 +1390,7 @@ RFM
    * - Attributes
      - Description
    * - **L12M RFM score**
-     - The RFM score for the customer based on transactions that occurred within the last 12 months. The RFM score is represented as an integer between ``0`` and ``999`` and is concatenated using the individual recency, frequency, and monetary scores or is ``NULL`` if the customer has zero purchases within the last 12 months.
+     - The RFM score for the customer based on transactions that occurred within the last 12 months. The RFM score is represented as an integer between ``0`` and ``999`` and is concatenated using the individual recency, frequency, and monetary scores or is **NULL** if the customer has zero purchases within the last 12 months.
    * - **L12M recency**
      - The recency score for customer transactions that occurred within the last 12 months. The recency score is represented as an integer between ``0`` and ``9``. Each integer represents 10%:
 

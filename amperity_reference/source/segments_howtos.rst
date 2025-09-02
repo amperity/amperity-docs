@@ -477,7 +477,7 @@ You can access the campaign editor from the **Segments** page.
 .. segments-create-campaign-steps-start
 
 #. From the **Segments** page, select a segment.
-#. Click **Actions** (upper-right corner) and then click **Create campaign**.
+#. Click **Actions**, and then click **Create campaign**.
 
 The Segments editor opens.
 
@@ -743,7 +743,7 @@ You can edit a segment from the **Segment Editor**.
 
 .. segments-edit-segments-editor-steps-start
 
-#. From the **Segment Editor**, click **Actions** (upper-right corner).
+#. From the **Segment Editor**, click **Actions**.
 #. Click **Edit**.
 #. Make your changes and then click **Save**.
 
@@ -1023,7 +1023,7 @@ You can rename a segment from the **Segments** page.
 #. Click **Save**.
 
 
-#. From the **Segment** page, click **Actions** (upper-right corner).
+#. From the **Segment** page, click **Actions**.
 #. Click **Rename**.
 #. Enter a name and then click **Save**.
 
@@ -1291,7 +1291,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 .. segments-use-relative-dates-steps-start
 
 #. From the **Segment Editor**, click **Add condition**, and then choose an attribute with a date or datetime value.
-#. Select the **Use relative dates** option, and then specify the relative date (or dates) that match the condition you selected. For example: “30 days ago”.
+#. Select the **Use relative dates** option, and then specify the relative dates that match the condition you selected. For example: “30 days ago”.
 #. Click **Refresh** to validate the segment.
 #. Click **Save As**.
 

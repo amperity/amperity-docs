@@ -2734,7 +2734,7 @@ Each record contains a subset of order data from a customers first, second, and 
    * - **<X> Store ID**
      - String
      - 
-     - The ID of the store where the customer made their order. This value may be ``NULL`` if the associated channel is not retail or some equivalent. Available columns:
+     - The ID of the store where the customer made their order. This value may be **NULL** if the associated channel is not retail or some equivalent. Available columns:
 
        * **First Order Store ID**
        * **Second Order Store ID**
@@ -4324,7 +4324,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        Values in this column depend on fields that are tagged with the **txn-item/is-cancellation** semantic.
 
-       .. important:: This value should be ``TRUE`` when items are canceled and ``FALSE`` when items are purchases and ``NULL`` when the value is unknown.
+       .. important:: This value should be **TRUE** when items are canceled and **FALSE** when items are purchases and **NULL** when the value is unknown.
 
    * - **Is Return**
      - Boolean
@@ -4336,7 +4336,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        Values in this column depend on fields that are tagged with the **txn-item/is-return** semantic.
 
-       .. important:: This value should be ``TRUE`` when items are returns and ``FALSE`` when items are purchases and ``NULL`` when the value is unknown.
+       .. important:: This value should be **TRUE** when items are returns and **FALSE** when items are purchases and **NULL** when the value is unknown.
 
    * - **Item Cost**
      - Decimal
@@ -4502,9 +4502,9 @@ The **Unified Itemized Transactions** table has the following columns:
              :start-after: .. related-order-dates-should-be-added-to-upc-start
              :end-before: .. related-order-dates-should-be-added-to-upc-end
 
-       When **Is Return** is ``TRUE``, the date and time on which the order was returned.
+       When **Is Return** is **TRUE**, the date and time on which the order was returned.
 
-       When **IS Cancellation** is ``TRUE``, the date and time on which the order was canceled.
+       When **IS Cancellation** is **TRUE**, the date and time on which the order was canceled.
 
        Values in this column depend on fields that are tagged with the **txn-item/order-datetime** semantic.
 
@@ -5660,7 +5660,7 @@ The **Unified Transactions** table has the following columns:
           :start-after: .. term-customer-id-start
           :end-before: .. term-customer-id-end
 
-       A customer ID may appear once for each order ID in the transactions table. When a foreign key is not present, the customer ID is used to join interaction records (transactions and itemized transactions) to tables that contain the Amperity ID.
+       A customer ID may appear once for each order ID in the transactions table. When a foreign key is not present, the customer ID is used to join interaction records to tables that contain the Amperity ID.
 
        .. note:: A namespaced foreign key should be used along with a customer ID. When a foreign key is added to transactions data it:
 

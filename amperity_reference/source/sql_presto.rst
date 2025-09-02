@@ -991,7 +991,7 @@ AND operator
 
 .. sql-presto-statement-operator-and-start
 
-The **AND** operator is used to filter records based on more than one condition. The **AND** operator displays a record if all the conditions separated by **AND** are ``TRUE``.
+The **AND** operator is used to filter records based on more than one condition. The **AND** operator displays a record if all the conditions separated by **AND** are **TRUE**.
 
 .. sql-presto-statement-operator-and-end
 
@@ -1003,7 +1003,7 @@ OR operator
 
 .. sql-presto-statement-operator-or-start
 
-The **AND** operator is used to filter records based on more than one condition. The **OR** operator displays a record if any of the conditions separated by **OR** is ``TRUE``.
+The **AND** operator is used to filter records based on more than one condition. The **OR** operator displays a record if any of the conditions separated by **OR** is **TRUE**.
 
 .. sql-presto-statement-operator-or-end
 
@@ -1872,9 +1872,9 @@ Examples of **ALL** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ALL (...)           Evaluates to ``TRUE`` when A is equal to all values.
-A <> ALL (...)          Evaluates to ``TRUE`` when A doesn't match any value.
-A < ALL (...)           Evaluates to ``TRUE`` when A is smaller than the smallest value.
+A = ALL (...)           Evaluates to **TRUE** when A is equal to all values.
+A <> ALL (...)          Evaluates to **TRUE** when A doesn't match any value.
+A < ALL (...)           Evaluates to **TRUE** when A is smaller than the smallest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-all-end
@@ -1904,11 +1904,11 @@ Examples of **ANY** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ANY (...)           Evaluates to ``TRUE`` when A is equal to any of the values.
+A = ANY (...)           Evaluates to **TRUE** when A is equal to any of the values.
 
                         .. note:: This form is equivalent to A IN (...).
-A <> ANY (...)          Evaluates to ``TRUE`` when A doesn't match one or more values.
-A < ANY (...)           Evaluates to ``TRUE`` when A is smaller than the biggest value.
+A <> ANY (...)          Evaluates to **TRUE** when A doesn't match one or more values.
+A < ANY (...)           Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-any-end
@@ -1938,12 +1938,12 @@ Examples of **SOME** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = SOME (...)          Evaluates to ``TRUE`` when A is equal to any of the values.
+A = SOME (...)          Evaluates to **TRUE** when A is equal to any of the values.
 
                         .. note:: This form is equivalent to A IN (...).
 
-A <> SOME (...)         Evaluates to ``TRUE`` when A doesn't match one or more values.
-A < SOME (...)          Evaluates to ``TRUE`` when A is smaller than the biggest value.
+A <> SOME (...)         Evaluates to **TRUE** when A doesn't match one or more values.
+A < SOME (...)          Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-some-end
@@ -1958,13 +1958,13 @@ IS NULL
 
 The **IS NULL** operator tests whether a value is **NULL**. This operator works for all data types.
 
-Using **NULL** with **IS NULL** evaluates to ``TRUE``:
+Using **NULL** with **IS NULL** evaluates to **TRUE**:
 
 .. code-block:: none
 
    select NULL IS NULL;
 
-But any other constant does not evaluate to ``FALSE``:
+But any other constant does not evaluate to **FALSE**:
 
 .. code-block:: none
 
@@ -1982,13 +1982,13 @@ IS NOT NULL
 
 The **IS NULL** operator tests whether a value is not **NULL**. This operator works for all data types.
 
-Using **NULL** with **IS NOT NULL** evaluates to ``FALSE``:
+Using **NULL** with **IS NOT NULL** evaluates to **FALSE**:
 
 .. code-block:: none
 
    select NULL IS NOT NULL;
 
-But any other constant evaluates ``TRUE``:
+But any other constant evaluates **TRUE**:
 
 .. code-block:: none
 
