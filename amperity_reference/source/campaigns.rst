@@ -221,7 +221,7 @@ All campaigns start with an audience. Choose a segment from the **Include** drop
 
 .. image:: ../../images/mockup-campaigns-select-audience-from-segment.png
    :width: 650 px
-   :alt: Choose one (or more) segments to form the audience for this campaign.
+   :alt: Choose one or more segments to form the audience for this campaign.
    :align: left
    :class: no-scaled-link
 
@@ -319,7 +319,7 @@ Exclusion lists
 
 Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
 
-When you need to exclude audience members, choose one (or more) segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
+When you need to exclude audience members, choose one or more segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
 .. note:: When you select multiple exclusion lists, audience members will be excluded when they belong to *either* list. This is the same behavior as when the **OR** operator is used in SQL. "Exclude customers from this audience when they belong to segment A *OR* segment B."
 
@@ -327,7 +327,7 @@ When you need to exclude audience members, choose one (or more) segments from th
 
 .. image:: ../../images/mockup-campaigns-select-exclusions-from-segment.png
    :width: 650 px
-   :alt: Choose one (or more) segments to exclude customers from this campaign.
+   :alt: Choose one or more segments to exclude customers from this campaign.
    :align: left
    :class: no-scaled-link
 
@@ -1123,7 +1123,7 @@ Campaign audience counts are updated to reflect the count for records that match
 
 The language that is used within the **Campaign Editor** is updated to match the friendly, singular, and plural names of the activation ID.
 
-For example, the "Customers" column that is associated with audiences (and sub-audiences) is updated to "Email addresses" when the plural name is "email addresses" and the count of customers at the top of the **Campaign Editor** is updated to show "Total email addresses".
+For example, the "Customers" column that is associated with audiences and sub-audiences is updated to "Email addresses" when the plural name is "email addresses" and the count of customers at the top of the **Campaign Editor** is updated to show "Total email addresses".
 
 Attributes that are useable within campaigns are limited to only attributes that are available from tables that match the activation ID.
 
@@ -1209,7 +1209,7 @@ You you can configure a multichannel campaign on the **Edit Campaign** page.
 
    .. note:: A treatment group with multiple destinations will send data to *all* of the configured destinations.
 
-#. Optional. Add one (or more) sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
+#. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
 #. Optional. Give each sub-audience a name.
 
@@ -1255,7 +1255,7 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
    .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
 
-#. Optional. Add one (or more) sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
+#. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
 #. Optional. Give each sub-audience a name.
 
@@ -1301,7 +1301,7 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
    .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
 
-#. Optional. Add one (or more) sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
+#. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
 #. Optional. Give each sub-audience a name.
 
@@ -1687,7 +1687,7 @@ Move campaign
 
 .. campaigns-list-move-campaign-start
 
-Use the **Move** option to move around and organize the list of folders and campaigns. Folders may be expanded (or collapsed) to view (and hide) the list of campaigns and subfolders contained within.
+Use the **Move** option to move around and organize the list of folders and campaigns. Folders may be expanded (or collapsed) to view and hide the list of campaigns and subfolders contained within.
 
 .. campaigns-list-move-campaign-end
 

@@ -30,7 +30,7 @@ Direct mail campaigns
 
 Direct mail is an effective way to help your brand stand out in the age of digital ads and overflowing email inboxes. With the right audiences, direct mail gives your brand a physical touchpoint with which you can make a positive impression on your customers.
 
-Many direct-to-consumer companies prefer using direct mail because they can show the brand (and products) using a tangible format that customers can hold in their hands.
+Many direct-to-consumer companies prefer using direct mail because they can show the brand and products using a tangible format that customers can hold in their hands.
 
 The right mix of creative advertising, physical design of what is sent to the customer, offer, and frequency often leads to higher customer response rates when compared to digital and media advertising.
 

@@ -121,7 +121,7 @@ Optimal
 
 Optimal results represent benchmark check results that fall within the expected range. These results can be "more optimal" and they can be "less optimal".
 
-For most tenants, most of the time, nothing needs to be done when benchmark checks are optimal. In some cases, it might be worth exploring if scores that fall on the edge of optimal scoring (and are close to falling outside the optimal range) can be improved.
+For most tenants, most of the time, nothing needs to be done when benchmark checks are optimal. In some cases, it might be worth exploring if scores that fall on the edge of optimal scoring and are close to falling outside the optimal range can be improved.
 
 .. image:: ../../images/mockup-stitch-benchmarks-score-optimal.png
    :width: 380 px

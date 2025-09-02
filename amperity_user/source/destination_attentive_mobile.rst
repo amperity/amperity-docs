@@ -90,7 +90,7 @@ Build subscriber list
 
 .. sendto-attentive-mobile-build-subscriber-list-start
 
-Build a query defines a subscriber list in |destination-name|. A subscriber list must be built using phone numbers **or** using email addresses (and not both).
+Build a query defines a subscriber list in |destination-name|. A subscriber list must be built using phone numbers **or** using email addresses and not both.
 
 .. important:: The name of a subscriber list must be provided in a column named **segment_name**. The **segment_name** column must be added to the results of the query in Amperity. If a subscriber list with this name does not exist in Attentive Mobile, it will be created.
 

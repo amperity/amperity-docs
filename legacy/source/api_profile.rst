@@ -576,7 +576,7 @@ Build a query
 
 .. profile-api-enable-build-query-start
 
-Build a query that contains the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to light up these workflows. Consider your goals for each workflow, build a query that returns the list of attributes (and lookup key) that enables that workflow.
+Build a query that contains the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to light up these workflows. Consider your goals for each workflow, build a query that returns the list of attributes and lookup key that enables that workflow.
 
 .. TODO: This admonition is the paragraph as the intro for the use cases section. Is fine for now.
 

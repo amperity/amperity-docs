@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Policies define how your users can interact with features (and data) within Amperity.
+        Policies define how your users can interact with features and data within Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Policies define how your users can interact with features (and data) within Amperity.
+        Policies define how your users can interact with features and data within Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

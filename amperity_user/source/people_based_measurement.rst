@@ -69,7 +69,7 @@ Whereas the goal of people-based measurement is to measure the revenue lift for 
 
    You could screen patients beforehand to ensure that only patients with this gene were included in the control and treatment groups. This approach could be costly and take a long time.
 
-   You could accept that control and treatment groups have some mathematically equivalent ratio of patients with (and without) the special gene and that this ratio effectively represents the whole population.
+   You could accept that control and treatment groups have some mathematically equivalent ratio of patients with and without the special gene and that this ratio effectively represents the whole population.
 
    A customer's opt-in preference is similar to this special gene. Some customers are predisposed to be receptive to your message. When you add customers to your control and treatment groups randomly, you will get a mathematically equivalent ratio of customers who have opted in to receiving emails in both groups.
 

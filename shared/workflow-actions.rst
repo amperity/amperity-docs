@@ -191,7 +191,7 @@ To resolve this error, do the following.
 
 An archive that cannot be decompressed will return a workflow error; Amperity will be unable to complete the workflow until the issue is resolved.
 
-This issue may be shown when the name of the archive doesn't match the name of the configured archive or when Amperity is attempting to decompress a file (and not an archive). In some cases, the contents of the archive file may be the reason why Amperity is unable to decompress the archive.
+This issue may be shown when the name of the archive doesn't match the name of the configured archive or when Amperity is attempting to decompress a file and not an archive. In some cases, the contents of the archive file may be the reason why Amperity is unable to decompress the archive.
 
 To resolve this error, do the following.
 
@@ -329,7 +329,7 @@ To resolve this error, determine the cause for the invalid permissions error.
 
    Verify the permissions that have been assigned to the SAS token. This can be done from the Microsoft Azure Portal or by using `Azure Storage Explorer <https://azure.microsoft.com/en-in/products/storage/storage-explorer/>`__ |ext_link|. The policy for the SAS token must be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
 
-   Verify that the SAS token and/or the signing key associated with the SAS token is valid (and has not expired). If either have expired, generate a new SAS token (using a new signing key, if necessary).
+   Verify that the SAS token and/or the signing key associated with the SAS token is valid and has not expired. If either have expired, generate a new SAS token (using a new signing key, if necessary).
 
 #. After you have determined the cause of the invalid permissions error, make the appropriate updates within Microsoft Azure and/or the credentials for this destination within Amperity.
 

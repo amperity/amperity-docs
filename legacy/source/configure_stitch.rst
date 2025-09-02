@@ -719,7 +719,7 @@ The following table describes the changes you will see in your tenant after it i
 
        The **Data Explorer** disables the tabs for **Cluster Graph** and **Pairwise Comparison**. These tabs are not available when one-to-one Stitch mode is configured.
 
-       .. note:: The Amperity ID that is generated in one-to-one Stitch mode is based on customer keys (and not on stable clusters of customer records).
+       .. note:: The Amperity ID that is generated in one-to-one Stitch mode is based on customer keys and not on stable clusters of customer records.
 
    * - **Customer 360**
      - The **Unified Scores** table is not generated.

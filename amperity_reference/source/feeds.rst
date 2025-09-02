@@ -34,7 +34,7 @@ What a feed needs:
 
 #. An input data source, typically (but not always) managed by a courier.
 #. A 1:1 relationship with a courier for large data sources; couriers are run in parallel whereas feeds run sequentially.
-#. Correctly tagged :ref:`foreign keys <semantics-key-foreign>`, especially if the field associated with that key is shared across feeds. (This is because most tenants deterministically match on foreign keys.)
+#. Correctly tagged :ref:`foreign keys <semantics-key-foreign>`, especially if the field associated with that key is shared across feeds. This is because most tenants deterministically match on foreign keys.
 
    .. tip:: You can have any number of feeds populated in a courier. However, it is recommended to keep one feed per courier if possible, because couriers can be parallelized, but feeds within a courier are run sequentially.
 
@@ -164,7 +164,7 @@ Datetime formats in Amperity use a combination of symbols that are described in 
        * M outputs 8
        * MM outputs 08
        * MMM outputs Aug
-       * MMMM (or more) outputs August
+       * MMMM outputs August
 
    * - **d**
      - The day of the month. For example, January 18th is 18.
@@ -274,7 +274,7 @@ String
 
 .. feed-field-type-string-start
 
-Use the **string** field type for incoming fields that contain strings and that do not contain obvious matches with other field types, such as all identifiers (account IDs, loyalty IDs, customer IDs), first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, descriptions, and so on. For example:
+Use the **string** field type for incoming fields that contain strings and that do not contain obvious matches with other field types, such as all identifiers (account IDs, loyalty IDs, customer IDs), first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, descriptions, and so on. For example:
 
 * John
 * Smith
@@ -310,8 +310,8 @@ Semantic tagging is defined as part of every feed. This ensures that data from m
 
 Semantic tagging works like this:
 
-#. A field in the customer's system named "fname" stores an individual's given name (or first name).
-#. A field in the customer's system named "lname" stores the same individual's surname (or last name).
+#. A field in the customer's system named "fname" stores an individual's given name or first name.
+#. A field in the customer's system named "lname" stores the same individual's surname or last name.
 #. A field in the customer's system named "primary-phone" stores a phone number.
 #. A field in the customer's system named "date" stores an individual's birthdate.
 #. A field in the customer's system named "email_address1" stores an individual's primary email address.
@@ -361,7 +361,7 @@ Apply a similar pattern to every data source your tenant chooses to bring into A
 .. caution:: The semantic tagging process is not strictly enforced. For example:
 
    * You may choose to not apply tag a semantic tag to a column that contains first names
-   * You may use custom semantic tags instead of the default (and recommended) semantic tags. For example phone-1, phone-2, and phone-3 instead of phone.
+   * You may use custom semantic tags instead of the default semantic tags. For example phone-1, phone-2, and phone-3 instead of phone.
 
    Non-standard semantic tagging should be done carefully because it often lowers the accuracy of Amperity ID assignment and greater frequency of incomplete customer profiles.
 
@@ -406,11 +406,11 @@ There are two types of error log files:
 
 #. A feed-level log file that describes the types and frequency of errors.
 
-   From the **Ingest Details** page, open the actions menu (|fa-kebab|) for the feed, and then click **Download feed error log**.
+   From the **Ingest Details** page, open the actions menu--|fa-kebab|--for the feed, and then click **Download feed error log**.
 
 #. A file-level log that describes each error.
 
-   From the **Ingest Details** page, expand the table row to show the file, open the actions menu (|fa-kebab|) for the file, and then click **Download file error log**.
+   From the **Ingest Details** page, expand the table row to show the file, open the actions menu--|fa-kebab|--for the file, and then click **Download file error log**.
 
 .. feed-troubleshoot-ingest-errors-end
 
@@ -531,7 +531,7 @@ New sample file
 
 .. feeds-add-from-new-sources-sample-new-start
 
-Every feed requires a schema. Apply semantic tags to individual fields in the schema. Use one (or more) individual fields in the schema to define the primary key.
+Every feed requires a schema. Apply semantic tags to individual fields in the schema. Use one or more individual fields in the schema to define the primary key.
 
 .. feeds-add-from-new-sources-sample-new-end
 
@@ -805,7 +805,7 @@ Amperity may not have all of the semantics required by a customer. Before adding
 .. feeds-apply-semantic-tags-custom-steps-start
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
-#. In the **Semantic** column, enter the names of custom semantics. They should use hyphens (and not underscores) and they should be entered the same way as a PII semantic, but without it appearing in the dropdown pick-list.
+#. In the **Semantic** column, enter the names of custom semantics. They should use hyphens and not underscores and they should be entered the same way as a PII semantic, but without it appearing in the dropdown pick-list.
 #. Click **Activate**.
 
 .. note:: This may be done *during* the process of adding a feed, also.

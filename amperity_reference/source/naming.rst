@@ -103,7 +103,7 @@ For example:
 
 * Adobe_Clickstream
 * Adobe_Clickstream_Daily
-* Amazon_S3:Static (which contains individual files for postal codes, geolocation data, etc.)
+* Amazon_S3:Static, which contains individual files for postal codes, and geolocation data
 * Braze_Audience_EMEA
 * Braze_Audience_PNW
 * Sailthru_Responses

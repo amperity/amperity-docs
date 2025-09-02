@@ -57,7 +57,7 @@ Use Spark SQL to define all SQL queries related to the following areas of Amperi
 
 .. sql-spark-note-spark-vs-presto-start
 
-.. note:: Spark SQL is used to define all SQL queries related to the Stitch process up to (and including) building the tables in the customer 360 database. Presto SQL is used to define SQL queries for segments. Why both?
+.. note:: Spark SQL is used to define all SQL queries related to the Stitch process up to and including building the tables in the customer 360 database. Presto SQL is used to define SQL queries for segments. Why both?
 
    * Spark SQL performs better in more traditional processes like machine learning and ETL-like processes that are resource intensive.
    * Presto SQL performs better when running real-time queries against cloud datasets.
@@ -2681,7 +2681,7 @@ To do the type conversion for every row, use:
 
    MAX(DATE(order_datetime))
 
-For example, to return **order_datetime** as a date (and not a datetime) for each Amperity ID:
+For example, to return **order_datetime** as a date, and not a datetime, for each Amperity ID:
 
 .. code-block:: sql
    :linenos:

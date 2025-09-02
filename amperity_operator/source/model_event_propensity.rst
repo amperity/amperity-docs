@@ -115,7 +115,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
           :alt: Step 1.
           :align: center
           :class: no-scaled-link
-     - Open the **Customer 360** page, select a database, and then open the bottom (|fa-kebab|) menu and select **Predictive models**. This opens the **Predictive models page**.
+     - Open the **Customer 360** page, select a database, and then open the bottom--|fa-kebab|--menu and select **Predictive models**. This opens the **Predictive models page**.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px

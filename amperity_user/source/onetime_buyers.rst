@@ -183,7 +183,7 @@ Expand your one-time buyer campaign to include longer timelines, this time up to
 
 Your one-time buyer campaign can become more sophisticated. With longer timelines you can tailor messaging more specifically to each point in that timeline. Use your welcome campaign to message customers who purchased within the last 7 days. Use a more sophisticated offers campaign to message customers who purchased within the last 14 days.
 
-Use the knowledge you have gained from previous one-time buyer campaigns to help build your audiences for your current one-time campaign. Understand the behaviors and attributes of customers who made a second purchase, and then compare them to customers who shopped one time (and have fallen out of your one-time buyer campaign).
+Use the knowledge you have gained from previous one-time buyer campaigns to help build your audiences for your current one-time campaign. Understand the behaviors and attributes of customers who made a second purchase, and then compare them to customers who shopped one time and have fallen out of your one-time buyer campaign.
 
 * Look for patterns that lead to repeat customers.
 * Look for consistencies within the customers who never purchased again.

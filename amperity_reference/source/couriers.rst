@@ -428,7 +428,7 @@ Use SnapPass to securely share configuration data with your Amperity representat
 
 #. Enter the credentials for the courier type.
 #. Enter any courier-specific settings.
-#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity (including how they are made available), and then a series of load operations that associates each file in the list to a feed.
+#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity, including how they are made available, and then a series of load operations that associates each file in the list to a feed.
 #. Click **Save**.
 
 .. couriers-add-steps-end
@@ -452,7 +452,7 @@ You may add a courier by copying an existing courier. This is useful when courie
 #. From the **Sources** page, open the menu for a courier, and then select **Make a copy**. The **Add Courier** page opens.
 #. Update the name of the courier.
 #. Verify all other configuration settings. Edit them as necessary.
-#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity (including how they are made available), and then a series of load operations that associates each file in the list to a feed.
+#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity, including how they are made available, and then a series of load operations that associates each file in the list to a feed.
 #. Click **Save**.
 
 .. couriers-add-as-copy-steps-end
@@ -535,7 +535,7 @@ A courier can be run to load data to a domain table and prevent downstream proce
 
 .. couriers-load-data-only-end
 
-**To load data (without downstream processing)**
+**To load data without downstream processing**
 
 .. couriers-load-data-only-steps-start
 

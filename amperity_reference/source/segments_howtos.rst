@@ -872,7 +872,7 @@ Add folders
 
 .. segments-add-folder-start
 
-Folders may be expanded (or collapsed) to view (and hide) the list of segments and subfolders contained within.
+Folders may be expanded (or collapsed) to view and hide the list of segments and subfolders contained within.
 
 .. segments-add-folder-end
 
@@ -915,7 +915,7 @@ Move segment
 
 .. segments-list-move-segment-start
 
-Use the **Move** option to move around and organize the list of folders and segments. Folders may be expanded (or collapsed) to view (and hide) the list of segments and subfolders contained within.
+Use the **Move** option to move around and organize the list of folders and segments. Folders may be expanded (or collapsed) to view and hide the list of segments and subfolders contained within.
 
 .. segments-list-move-segment-end
 

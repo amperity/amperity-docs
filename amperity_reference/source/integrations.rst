@@ -21,7 +21,7 @@ About integrations
 
 The following integrations may be configured from the **Integrations** tab on the **Settings** page:
 
-* :ref:`Slack (send workflow alerts to Slack channels) <settings-integration-slack>`
+* :ref:`Send workflow alerts to Slack channels <settings-integration-slack>`
 
 .. settings-integrations-end
 
