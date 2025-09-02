@@ -1797,6 +1797,18 @@ Use the ``:open:`` attribute to configure a dropdown to be expanded by default.
 .. rst-dropdowns-open-end
 
 
+.. _rst-escape-characters:
+
+Escape characters
+==================================================
+
+.. rst-escape-characters-start
+
+Use a backslash to override special meaning for characters, such as backslash or grave characters, to show the intended character.
+
+.. rst-escape-characters-end
+
+
 .. _rst-figures:
 
 Figures
