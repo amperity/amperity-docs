@@ -238,7 +238,7 @@
 #doorbell #doorbell-success,#doorbell #doorbell-error {
   display: none;
   text-align: center;
-  margin-bottom: 15px
+  margin-bottom: 15px;
   background-color: #af3708;
   color: #ffffff;
 }
