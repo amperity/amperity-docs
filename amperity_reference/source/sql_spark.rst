@@ -469,7 +469,7 @@ Naming conventions
 
 .. sql-spark-recommendation-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would naturally include a space in the name (first name becomes ``first_name``). Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would naturally include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -923,7 +923,7 @@ Subqueries
 
 A subquery can be useful for shaping data prior to running a query. A subquery is a task that is required to be completed before additional processing can be performed. A subquery often runs quickly and can be used with little risk. That said, a poorly formed subquery can have adverse performance effects. Keep the following tips in mind when using a subquery:
 
-#. Don't join to an outer query from a subquery, as it may cause the subquery to run recursively for every value of the join key in the outer query. This may cause the subquery to run many times (or even millions of times). This type of subquery is sometimes referred to as a correlated subquery. The best way to avoid them is to never join between the inner and outer queries.
+#. Don't join to an outer query from a subquery, as it may cause the subquery to run recursively for every value of the join key in the outer query. This may cause the subquery to run many times, or even millions of times. This type of subquery is sometimes referred to as a correlated subquery. The best way to avoid them is to never join between the inner and outer queries.
 #. Each level of a subquery adds overhead. The fewer levels within a subquery, the easier it is to optimize the query. Try to flatten queries using joins instead of using additional levels. If you need to pull data into a subquery for multiple fields, try to use a single subquery instead of many.
 #. Remove columns and/or use as few columns in a subquery as possible. For example, use:
 
@@ -1312,7 +1312,7 @@ OUTER JOIN
 
 .. sql-spark-outer-join-clause-start
 
-An outer joins bring all of the rows from the named table (left for **LEFT JOIN**, right for **RIGHT JOIN**), but the overlapping rows can be removed by adding the condition **WHERE <key value in the other table> IS NULL**. You can do the same to select the non-intersecting portion of a **FULL OUTER** join by using **OR** with both key values as **IS NULL**.
+An outer joins bring all of the rows from the named table--left for **LEFT JOIN**, right for **RIGHT JOIN**--but the overlapping rows can be removed by adding the condition **WHERE <key value in the other table> IS NULL**. You can do the same to select the non-intersecting portion of a **FULL OUTER** join by using **OR** with both key values as **IS NULL**.
 
 Same as **LEFT JOIN** and **RIGHT JOIN**.
 
@@ -1565,7 +1565,7 @@ GROUP BY clause
 
 .. sql-spark-group-by-clause-start
 
-The **GROUP BY** clause divides the output of a **SELECT** statement into groups of rows containing matching values. A simple **GROUP BY** clause may contain any expression composed of input columns or it may be an ordinal number selecting an output column by position (starting at one).
+The **GROUP BY** clause divides the output of a **SELECT** statement into groups of rows containing matching values. A simple **GROUP BY** clause may contain any expression composed of input columns or it may be an ordinal number selecting an output column by position, starting at one.
 
 The following queries are equivalent. They both group the output by the nationkey input column with the first query using the ordinal position of the output column and the second query using the input column name:
 
@@ -1701,7 +1701,7 @@ The **ORDER BY** clause is used to sort a result set by one or more output expre
 
    ORDER BY expression [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...]
 
-Each expression may be composed of output columns or it may be an ordinal number selecting an output column by position (starting at one).
+Each expression may be composed of output columns or it may be an ordinal number selecting an output column by position, starting at one.
 
 The default sort order is ascending (**ASC**). **NULL** values will sort first when the sort order is ascending and will sort last when the sort order is descending (**DESC**). Use **NULLS FIRST** to sort **NULL** values first, regardless of sort order. Use **NULLS LAST** to sort **NULL** values last, regardless of sort order.
 
@@ -2272,7 +2272,7 @@ Standardize values for USA states
 
 .. sql-spark-function-coalesce-example-standardize-values-for-usa-states-start
 
-The following example standardizes values for all fifty states in the United States to only a two-character value (AK, AL, AR, etc.). The **CASE** statement uses the following strings to determine:
+The following example standardizes values for all fifty states in the United States to only a two-character value, such as AK, AL, and AR. The **CASE** statement uses the following strings to determine:
 
 #. The correct two-character value
 #. The correct spelled out value
@@ -3170,7 +3170,7 @@ Return states as 2 characters
 
 .. sql-spark-function-length-example-return-states-as-2-characters-start
 
-The following example uses the **LENGTH()** function to identify columns with two character values for states (AK, AL, AR, etc.), and then sets columns without two character values to **NULL**:
+The following example uses the **LENGTH()** function to identify columns with two character values for states, such as AK, AL, and AR, and then sets columns without two character values to **NULL**:
 
 .. code-block:: sql
    :linenos:

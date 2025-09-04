@@ -259,7 +259,7 @@ Naming conventions
 
 .. sql-presto-style-guide-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores—these can be hard to read. Use underscores where you would naturally include a space in the name (first name becomes ``first_name``). Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores—these can be hard to read. Use underscores where you would naturally include a space in the name. For example, "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -2250,7 +2250,7 @@ Cast RFM as REAL data type
 
 .. sql-presto-function-cast-example-cast-rfm-as-real-start
 
-The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the ``real`` data type (a floating-point, 32-bit inexact, variable-precision value).
+The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the ``real`` data type, which is a floating-point, 32-bit inexact, variable-precision value.
 
 .. code-block:: sql
 

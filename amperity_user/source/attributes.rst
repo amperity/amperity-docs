@@ -53,7 +53,7 @@ Campaign recipients
 
 .. attributes-campaign-recipients-start
 
-Campaign recipient attributes provide a record of campaigns that were sent from Amperity. Each campaign is associated with the segment that was used to build the audience (including control groups, treatment group, and sub-audiences), the campaign launch date, and any destination to which the campaign was sent.
+Campaign recipient attributes provide a record of campaigns that were sent from Amperity. Each campaign is associated with the segment that was used to build the audience, including control groups, treatment group, and sub-audiences, the campaign launch date, and any destination to which the campaign was sent.
 
 The following attributes are available from the **Campaign Recipients** table.
 
@@ -772,7 +772,7 @@ Orders
 
 .. attributes-interactions-orders-start
 
-Orders attributes provide a history of the transactions your customers have made with your brand--channel (store, online, etc.), currency, dates and times, costs, discounts, quantities--sorted by each transaction made by your unique customers.
+Orders attributes provide a history of the transactions your customers have made with your brand--channels, currency, dates and times, costs, discounts, quantities--sorted by each transaction made by your unique customers.
 
 The following attributes are available from the **Unified Transactions** table.
 
