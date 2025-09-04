@@ -829,7 +829,7 @@ Retry only failed feeds
 
 .. workflows-files-retry-failed-start
 
-When a feed failed on ingest you can rerun the ingest workflow for each failed feed. Select the **Retry ingesting only failed feeds** action to restart the ingest workflow.
+When a feed fails on ingest you can rerun the ingest workflow for each failed feed. Select the **Retry ingesting only failed feeds** action to restart the ingest workflow.
 
 .. workflows-files-retry-failed-end
 
