@@ -805,7 +805,7 @@ Some common workflow actions that your brand may see when loading files to Amper
 * :ref:`Retry only failed feeds <workflows-files-retry-failed>`
 * :ref:`Update error percentage <workflows-files-update-error-percentage>`
 
-.. tip:: Future workflows may fail for the same reasons. Investigate the causes of ingest failures to prevent the future workflows from failing for the same reason.
+.. tip:: Future workflows may fail for the same reasons. Investigate the causes of ingest failures to prevent future workflows from failing.
 
 .. workflows-context-files-end
 
