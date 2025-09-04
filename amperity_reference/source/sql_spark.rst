@@ -1312,7 +1312,7 @@ OUTER JOIN
 
 .. sql-spark-outer-join-clause-start
 
-An outer joins bring all of the rows from the named table--left for **LEFT JOIN**, right for **RIGHT JOIN**--but the overlapping rows can be removed by adding the condition **WHERE <key value in the other table> IS NULL**. You can do the same to select the non-intersecting portion of a **FULL OUTER** join by using **OR** with both key values as **IS NULL**.
+An **OUTER JOIN** clause brings all of the rows from the named table--left for **LEFT JOIN**, right for **RIGHT JOIN**--but the overlapping rows can be removed by adding the condition **WHERE <key value in the other table> IS NULL**. You can do the same to select the non-intersecting portion of a **FULL OUTER** join by using **OR** with both key values as **IS NULL**.
 
 Same as **LEFT JOIN** and **RIGHT JOIN**.
 
