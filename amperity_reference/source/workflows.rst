@@ -558,6 +558,11 @@ Many workflows have context-specific resolutions that depend on upstream and dow
       :link-type: ref
       :shadow: sm
 
+   .. grid-item-card:: Files
+      :link: workflows-context-files
+      :link-type: ref
+      :shadow: sm
+
    .. grid-item-card:: Scheduled orchestration groups
       :link: workflows-context-scheduled
       :link-type: ref
@@ -782,6 +787,67 @@ To resolve this error, wait for the schema migrations to complete, and then re-r
 If the error persists use the **Contact Support** link to open a support ticket for this error and to follow along with the resolution.
 
 .. workflows-databases-inputs-unbound-end
+
+
+
+
+
+.. _workflows-context-files:
+
+Files
+--------------------------------------------------
+
+.. workflows-context-files-start
+
+Some common workflow actions that your brand may see when loading files to Amperity include:
+
+* :ref:`Exclude feed <workflows-files-exclude-feed>`
+* :ref:`Retry only failed feeds <workflows-files-retry-failed>`
+* :ref:`Update error percentage <workflows-files-update-error-percentage>`
+
+.. tip:: Future workflows may fail for the same reasons. Investigate the causes of ingest failures to prevent future workflows from failing.
+
+.. workflows-context-files-end
+
+
+.. _workflows-files-exclude-feed:
+
+Exclude feed
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. workflows-files-exclude-feed-start
+
+When a workflow fails because one or more feeds within that workflow failed you can temporarily exclude those feeds, and then retry the workflow. Select the **Retry ingesting data excluding specific feeds** workflow action, and then choose the feeds to exclude. At least one feed must be excluded.
+
+.. workflows-files-exclude-feed-end
+
+
+.. _workflows-files-retry-failed:
+
+Retry only failed feeds
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. workflows-files-retry-failed-start
+
+When a feed fails on ingest you can rerun the ingest workflow for each failed feed. Select the **Retry ingesting only failed feeds** action to restart the ingest workflow.
+
+.. workflows-files-retry-failed-end
+
+
+.. _workflows-files-update-error-percentage:
+
+Update error percentage
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_reference/source/feeds.rst
+   :start-after: .. feeds-set-error-thresholds-start
+   :end-before: .. feeds-set-error-thresholds-end
+
+.. workflows-files-update-error-percentage-start
+
+Some feeds have a failure rate that exceeds the configured error limit. You can temporarily bypass this percentage with a workflow action. Select the **Retry with updated percentage** action, update the error percentage, and then restart the workflow.
+
+.. workflows-files-update-error-percentage-end
 
 
 .. _workflows-context-destinations:
