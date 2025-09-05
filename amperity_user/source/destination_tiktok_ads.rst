@@ -77,8 +77,6 @@ You will need to build a query that outputs email addresses and phone numbers.
 
 .. sendto-tiktok-ads-build-query-end
 
-.. TODO: The following section is *also* in Pinterest. Why.
-
 .. sendto-tiktok-ads-build-query-options-start
 
 .. tip:: Email addresses most often lead to the best match rates!

@@ -155,7 +155,7 @@ The following example describes the steps required to send an audience from Ampe
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Upload the CSV file to Pinterest.
+          :alt: Upload the CSV file to Reddit Ads.
           :align: center
           :class: no-scaled-link
 

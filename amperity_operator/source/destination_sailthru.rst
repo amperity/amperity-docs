@@ -131,7 +131,7 @@ Configure credentials
    :start-after: .. credential-snappass-start
    :end-before: .. credential-snappass-end
 
-**To configure credentials for Pinterest**
+**To configure credentials for Sailthru**
 
 .. destination-sailthru-credentials-steps-start
 
@@ -196,7 +196,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Pinterest**
+**To add a destination for Sailthru**
 
 .. destination-sailthru-add-steps-start
 
