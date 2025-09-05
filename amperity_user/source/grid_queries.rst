@@ -189,7 +189,7 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_google_cloud_storage
 
-   .. grid-item-card:: HupSpot
+   .. grid-item-card:: HubSpot
       :link-type: doc
       :link: destination_hubspot
 
@@ -527,7 +527,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Experian <destination_experian>
    Google Ads <destination_google_ads>
    Google Cloud Storage <destination_google_cloud_storage>
-   HupSpot <destination_hubspot>
+   HubSpot <destination_hubspot>
    Infutor <destination_infutor>
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>

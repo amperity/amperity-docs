@@ -214,7 +214,7 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_google_cloud_storage
 
-   .. grid-item-card:: HupSpot
+   .. grid-item-card:: HubSpot
       :link-type: doc
       :link: campaign_hubspot
 
@@ -303,7 +303,7 @@ Send campaigns to any of the following marketing applications and workflows.
    DV360 <campaign_dv360>
    Google Ads <campaign_google_ads>
    Google Cloud Storage <campaign_google_cloud_storage>
-   HupSpot <campaign_hubspot>
+   HubSpot <campaign_hubspot>
    Klaviyo <campaign_klaviyo>
    Listrak <campaign_listrak>
    LiveRamp <campaign_liveramp>

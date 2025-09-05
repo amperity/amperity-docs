@@ -134,7 +134,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_heap
 
-   .. grid-item-card:: HupSpot
+   .. grid-item-card:: HubSpot
       :link-type: doc
       :link: source_hubspot
 
@@ -280,7 +280,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    Google Analytics <source_google_analytics>
    Google Cloud Storage <source_google_cloud_storage>
    Heap <source_heap>
-   HupSpot <source_hubspot>
+   HubSpot <source_hubspot>
    Infutor <source_infutor>
    Klaviyo <source_klaviyo>
    Koupon Media <source_koupon_media>

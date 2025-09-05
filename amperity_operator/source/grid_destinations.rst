@@ -186,7 +186,7 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_google_customer_match
 
-   .. grid-item-card:: HupSpot
+   .. grid-item-card:: HubSpot
       :link-type: doc
       :link: destination_hubspot
 
@@ -421,7 +421,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Google BigQuery <destination_google_bigquery>
    Google Cloud Storage <destination_google_cloud_storage>
    Google Customer Match <destination_google_customer_match>
-   HupSpot <destination_hubspot>
+   HubSpot <destination_hubspot>
    Infutor <destination_infutor>
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>
