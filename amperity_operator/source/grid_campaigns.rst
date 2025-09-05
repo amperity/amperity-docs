@@ -150,7 +150,7 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_google_customer_match
 
-   .. grid-item-card:: HupSpot
+   .. grid-item-card:: HubSpot
       :link-type: doc
       :link: campaign_hubspot
 
