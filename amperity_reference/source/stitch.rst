@@ -939,7 +939,7 @@ Stable ID assignment
 
 .. term-amperity-id-start
 
-An Amperity ID is a `patented unique identifier <https://amperity.com/company/patents>`__ that is `assigned to clusters of customer records <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__. A single Amperity ID represents a single individual. Unlike other systems, the Amperity ID is reassessed every day for the most comprehensive view of your customers.
+An Amperity ID is a `patented unique identifier <https://amperity.com/patents>`__ that is `assigned to clusters of customer records <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__. A single Amperity ID represents a single individual. Unlike other systems, the Amperity ID is reassessed every day for the most comprehensive view of your customers.
 
 .. term-amperity-id-end
 
