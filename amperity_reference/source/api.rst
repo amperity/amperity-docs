@@ -542,19 +542,21 @@ Access tokens may be :ref:`refreshed directly (using an issuer token) <api-keys-
 
 .. _api-keys-access-tokens-refresh-api-issuer:
 
-using API issuer tokens
+Using API issuer tokens
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-api-issuer-start
 
-Use :ref:`API issuer tokens <api-keys-api-token-add-issuer>` to enable a downstream workflow to programmatically refresh access tokens. :ref:`Generate an access token for the issuer token <api-keys-access-tokens-generate>`, and then use the issuer token as part of the programmatic workflow. You will need the token ID for the access token you are looking to refresh, which can be found under **Settings**, **Users**, **API Keys** in the ID column. API Issuer tokens can be used to refresh their own tokens. In a fully automated token refresh workflow you will want to have the refresh token's token ID as well as the access token's token ID available.
+Use :ref:`API issuer tokens <api-keys-api-token-add-issuer>` to enable a downstream workflow to programmatically refresh access tokens. :ref:`Generate an access token for the issuer token <api-keys-access-tokens-generate>`, and then use the issuer token as part of the programmatic workflow.
+
+Find the token ID for the access token to be refreshed under **Settings**, **Users**, **API keys** in the ID column. API issuer tokens can refresh their own tokens. A fully automated token refresh workflow uses the refresh token's ID along with the access token's ID.
 
 .. api-keys-access-tokens-refresh-api-issuer-end
 
 
 .. _api-keys-access-tokens-refresh-curl:
 
-using cURL
+Using cURL
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-curl-start
@@ -575,7 +577,7 @@ To refresh an access token using cURL, submit a request similar to:
 
 .. _api-keys-access-tokens-refresh-http:
 
-using HTTP
+Using HTTP
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-http-start
@@ -597,7 +599,7 @@ To refresh an access token using HTTP, submit a request similar to:
 
 .. _api-keys-access-tokens-refresh-postman:
 
-using Postman
+Using Postman
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-postman-start
@@ -613,7 +615,7 @@ Amperity provides complete details for refreshing an API token using a |ext_down
 
 .. _api-keys-access-tokens-refresh-generate-token:
 
-when generating an access token
+When generating an access token
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-generate-token-start
