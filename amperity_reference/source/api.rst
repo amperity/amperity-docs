@@ -547,7 +547,7 @@ using API issuer tokens
 
 .. api-keys-access-tokens-refresh-api-issuer-start
 
-Use :ref:`API issuer tokens <api-keys-api-token-add-issuer>` to enable a downstream workflow to programmatically refresh access tokens. :ref:`Generate an access token for the issuer token <api-keys-access-tokens-generate>`, and then use the issuer token as part of the programmatic workflow.
+Use :ref:`API issuer tokens <api-keys-api-token-add-issuer>` to enable a downstream workflow to programmatically refresh access tokens. :ref:`Generate an access token for the issuer token <api-keys-access-tokens-generate>`, and then use the issuer token as part of the programmatic workflow. You will need the token ID for the access token you are looking to refresh, which can be found under **Settings**, **Users**, **API Keys** in the ID column. API Issuer tokens can be used to refresh their own tokens. In a fully automated token refresh workflow you will want to have the refresh token's token ID as well as the access token's token ID available.
 
 .. api-keys-access-tokens-refresh-api-issuer-end
 
