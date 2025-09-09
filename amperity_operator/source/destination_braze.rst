@@ -45,9 +45,18 @@ Amperity can send :ref:`customer profile and custom attributes <destination-braz
 About custom attributes
 ==================================================
 
-.. include:: ../../amperity_operator/source/destination_braze.rst
-   :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
-   :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
+.. destination-braze-ampiq-and-amp360-shared-intro-start
+
+Attributes in |destination-name| describe your customers.
+
+* :ref:`Profile attributes <destination-braze-profile-attributes>` describe who your customers are. For example: names, birthdates, email addresses, and phone numbers.
+* :ref:`Custom attributes <destination-braze-custom-attributes>` describe how your customers have interacted with your brand. For example: purchase histories, loyalty status, and value tiers.
+
+.. destination-braze-ampiq-and-amp360-shared-intro-end
+
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attributes-about-start
+   :end-before: .. braze-attributes-about-end
 
 
 .. _destination-braze-profile-attributes:
@@ -55,25 +64,25 @@ About custom attributes
 Customer profiles
 --------------------------------------------------
 
-.. include:: ../../amperity_operator/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-start
-   :end-before: .. destination-braze-profile-attributes-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-about-start
+   :end-before: .. braze-customer-profiles-about-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-admonition-consent-status-start
-   :end-before: .. destination-braze-profile-attributes-admonition-consent-status-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-admonition-start
+   :end-before: .. braze-customer-profiles-admonition-end
 
-.. include:: ../../amperity_operator/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-start
-   :end-before: .. destination-braze-profile-attributes-end
+.. include:: ../../amperity_operator/source/campaign_braze.rst
+   :start-after: .. campaign-braze-profile-attributes-start
+   :end-before: .. campaign-braze-profile-attributes-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-table-start
-   :end-before: .. destination-braze-profile-attributes-table-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-start
+   :end-before: .. braze-customer-profiles-common-attributes-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-note-start
-   :end-before: .. destination-braze-profile-attributes-note-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-note-start
+   :end-before: .. braze-customer-profiles-common-attributes-note-end
 
 
 .. _destination-braze-custom-attributes:
@@ -81,9 +90,9 @@ Customer profiles
 Custom attributes
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-custom-attributes-start
-   :end-before: .. destination-braze-custom-attributes-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-custom-attributes-start
+   :end-before: .. braze-custom-attributes-end
 
 
 .. _destination-braze-data-points:
@@ -91,11 +100,11 @@ Custom attributes
 About data points
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-data-points-start
-   :end-before: .. destination-braze-data-points-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-data-points-start
+   :end-before: .. braze-data-points-end
 
-.. include:: ../../amperity_operator/source/destination_braze.rst
+.. include:: ../../amperity_operator/source/campaign_braze.rst
    :start-after: .. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
    :end-before: .. profile-api-usecase-braze-connected-content-does-not-use-data-points-end
 
@@ -105,13 +114,13 @@ About data points
 Audience profile updates
 --------------------------------------------------
 
-.. include:: ../../amperity_operator/source/destination_braze.rst
-   :start-after: .. destination-braze-attribute-updates-overview-start
-   :end-before: .. destination-braze-attribute-updates-overview-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attribute-updates-start
+   :end-before: .. braze-attribute-updates-end
 
-.. include:: ../../amperity_operator/source/destination_braze.rst
-   :start-after: .. destination-braze-attribute-updates-admonition-start
-   :end-before: .. destination-braze-attribute-updates-admonition-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attribute-updates-admonition-start
+   :end-before: .. braze-attribute-updates-admonition-end
 
 
 .. _destination-braze-table:
