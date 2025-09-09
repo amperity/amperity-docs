@@ -61,11 +61,9 @@ Attributes in |destination-name| describe your customers.
 
 .. destination-braze-ampiq-and-amp360-unshared-intro-start
 
-.. destination-braze-ampiq-and-amp360-shared-intro-start
-
-When `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| are available in |destination-name| they can be used to build out audience `segments <https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/>`__ |ext_link| and to apply `personalization <https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid>`__ |ext_link| to your campaigns.
-
-.. destination-braze-ampiq-and-amp360-shared-intro-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attributes-about-start
+   :end-before: .. braze-attributes-about-end
 
 
 .. _destination-braze-profile-attributes:
@@ -73,19 +71,13 @@ When `user profile fields <https://www.braze.com/docs/api/objects_filters/user_a
 Customer profiles
 --------------------------------------------------
 
-.. destination-braze-profile-attributes-start
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-about-start
+   :end-before: .. braze-customer-profiles-about-end
 
-Customer profiles in |destination-name| are represented by a set of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link|. To update these fields in |destination-name| you must follow a strict naming convention when sending data from Amperity. These fields are case sensitive and must be lowercase.
-
-.. destination-braze-profile-attributes-end
-
-.. destination-braze-profile-attributes-admonition-consent-status-start
-
-.. admonition:: What about email and phone subscription status?
-
-   |destination-name| uses two fields to track email and phone subscription status: **email_subscribe** and **push_subscribe**. Braze should be your source of truth for customer consent and for tracking email and phone subscription status.
-
-.. destination-braze-profile-attributes-admonition-consent-status-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-admonition-start
+   :end-before: .. braze-customer-profiles-admonition-end
 
 .. destination-braze-profile-attributes-start
 
@@ -108,62 +100,13 @@ An orchestration can send customer profile updates to |destination-name| as the 
 
 .. destination-braze-profile-attributes-end
 
-.. destination-braze-profile-attributes-table-start
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-start
+   :end-before: .. braze-customer-profiles-common-attributes-end
 
-The following table describes the default `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| that are most commonly updated from Amperity:
-
-.. list-table::
-   :widths: 30 30 40
-   :header-rows: 1
-
-   * - Braze default field
-     - Amperity field name
-     - Description
-   * - **external_id**
-     - varies
-     - Required. The **external_id** is a unique identifer for user profiles in |destination-name|. The **external_id** is a unique identifier that exists in another system, such as the Amperity ID, a loyalty ID, or some other unique customer identifier.
-
-   * - **first_name**
-     - **given_name**
-     - Optional.
-
-   * - **last_name**
-     - **surname**
-     - Optional.
-
-   * - **email**
-     - **email**
-     - Optional.
-
-   * - **phone**
-     - **phone**
-     - Optional.
-
-   * - **home_city**
-     - **city**
-     - Optional.
-
-   * - **country**
-     - **country**
-     - Optional. Must be in |ext_iso_31661alpha2| format.
-
-   * - **dob**
-     - **birthdate**
-     - Optional. Must be in "YYYY-MM-DD" format.
-
-   * - **gender**
-     - **gender**
-     - Optional. Accepted values: "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or NULL.
-
-.. destination-braze-profile-attributes-table-end
-
-.. destination-braze-profile-attributes-note-start
-
-.. note:: Default user profile fields also exist for **alias_name**, **alias_label**, **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **email_subscribe**, **facebook**, **language**, **marked_email_as_spam_at**, **push_subscribe**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
-
-   These fields are not commonly sent to |destination-name| from Amperity, but if your brand chooses to update these user profile fields from Amperity, be sure to use the exact name of the default field name, send the correct value (or values), and to use lowercase.
-
-.. destination-braze-profile-attributes-note-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-note-start
+   :end-before: .. braze-customer-profiles-common-attributes-note-end
 
 
 .. _destination-braze-custom-attributes:
@@ -171,27 +114,9 @@ The following table describes the default `user profile fields <https://www.braz
 Custom attributes
 --------------------------------------------------
 
-.. destination-braze-custom-attributes-start
-
-Custom attributes in |destination-name| are represented by a set of custom-named fields. The names of these fields are determined by your brand. They may already exist in |destination-name|, in which case you will want to shape the output that is sent from Amperity to align to the names you already have.
-
-The names of custom attributes that can be managed by Amperity are defined by your brand. The names are strings, may contain hyphens, spaces, or underscores, may include numbers, and may contain a mix of lowercase and uppercase letters. For example, custom attribute can have names that:
-
-* Already exist within your organization.
-* Are exactly the same as Amperity standard output, such as "One and Done" or "L12M Monetary" (the "monetary" component of an RFM score), or "Early Repeat Purchaser".
-* Align to marketing goals and/or terminology that exists within your brand's segmentation strategy.
-
-Verify the names of custom attributes that will be sent to |destination-name| from Amperity. Amperity will add a custom attribute whenever there isn't a matching name.
-
-.. tip:: Avoid sending custom attributes as duplicates of default user profile fields. For example, birthdates should be sent to |destination-name| as a user profile field named "dob". If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created and the values in the "dob" field will not be updated.
-
-.. important:: Your brand's list of custom attributes *should* be a list that is mostly static, remains stable over time, and is focused on your most valuable customers.
-
-   Only update custom attributes for customers to which your brand is currently engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (with an opt-in status of true for phone numbers and/or email addresses).
-
-   This will help ensure that you are only updating custom attributes for your most valuable customers. Custom attributes will be updated only for those customers have a matching "external_id" or "braze_id" within |destination-name|.
-
-.. destination-braze-custom-attributes-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-custom-attributes-start
+   :end-before: .. braze-custom-attributes-end
 
 
 .. _destination-braze-use-in-segments:
@@ -235,19 +160,9 @@ and then select any of your Amperity-managed custom attributes for use in your |
 About data points
 --------------------------------------------------
 
-.. destination-braze-data-points-start
-
-|destination-name| uses `data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/>`__ |ext_link| to determine when to update segment membership, to identify which types of messages should be sent, and how to apply message personalization.
-
-You can send custom attributes to |destination-name| from Amperity by attaching attributes from your customer profiles in Amperity, such as first and last names, email addresses, phone numbers, physical locations, SMS and email consent status, purchase histories, and so on.
-
-Amperity tracks changes as they are sent to Braze and only sends list membership and attribute that have changed since the previous update.
-
-.. note:: Data points are part of the billing and pricing structure in your |destination-name| contract. Some data points are non-billable; many data points are billable.
-
-   Review the `lists of non-billable and billable data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/#data-points-1>`__ |ext_link|, and then review those lists against the attributes you will send to Braze from Amperity to understand which of those attributes are considered billable or non-billable data points.
-
-.. destination-braze-data-points-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-data-points-start
+   :end-before: .. braze-data-points-end
 
 .. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
 

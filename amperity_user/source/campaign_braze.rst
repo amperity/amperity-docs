@@ -56,9 +56,9 @@ Attributes in |destination-name| describe your customers.
 
 .. channel-braze-about-braze-attributes-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
-   :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attributes-about-start
+   :end-before: .. braze-attributes-about-end
 
 
 .. _channel-braze-profile-attributes:
@@ -66,13 +66,13 @@ Attributes in |destination-name| describe your customers.
 Customer profiles
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
-   :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-about-start
+   :end-before: .. braze-customer-profiles-about-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-admonition-consent-status-start
-   :end-before: .. destination-braze-profile-attributes-admonition-consent-status-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-admonition-start
+   :end-before: .. braze-customer-profiles-admonition-end
 
 .. destination-braze-profile-attributes-start
 
@@ -86,13 +86,13 @@ A campaign can send customer profile data to |destination-name| when attributes 
 
 .. destination-braze-profile-attributes-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-table-start
-   :end-before: .. destination-braze-profile-attributes-table-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-start
+   :end-before: .. braze-customer-profiles-common-attributes-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-note-start
-   :end-before: .. destination-braze-profile-attributes-note-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-note-start
+   :end-before: .. braze-customer-profiles-common-attributes-note-end
 
 
 .. _channel-braze-custom-attributes:
@@ -100,9 +100,9 @@ A campaign can send customer profile data to |destination-name| when attributes 
 Custom attributes
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-custom-attributes-start
-   :end-before: .. destination-braze-custom-attributes-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-custom-attributes-start
+   :end-before: .. braze-custom-attributes-end
 
 
 .. _channel-braze-use-in-segments:
@@ -120,9 +120,9 @@ Use in Braze segments
 About data points
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-data-points-start
-   :end-before: .. destination-braze-data-points-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-data-points-start
+   :end-before: .. braze-data-points-end
 
 .. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
 
