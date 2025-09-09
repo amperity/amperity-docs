@@ -49,9 +49,18 @@ Amperity can send :ref:`customer profile and custom attributes <destination-braz
 About custom attributes
 ==================================================
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
-   :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
+.. destination-braze-ampiq-and-amp360-shared-intro-start
+
+Attributes in |destination-name| describe your customers.
+
+* :ref:`Profile attributes <destination-braze-profile-attributes>` describe who your customers are. For example: names, birthdates, email addresses, and phone numbers.
+* :ref:`Custom attributes <destination-braze-custom-attributes>` describe how your customers have interacted with your brand. For example: purchase histories, loyalty status, and value tiers.
+
+.. destination-braze-ampiq-and-amp360-shared-intro-end
+
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attributes-about-start
+   :end-before: .. braze-attributes-about-end
 
 
 .. _destination-braze-profile-attributes:
@@ -59,21 +68,25 @@ About custom attributes
 Customer profiles
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
-   :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-about-start
+   :end-before: .. braze-customer-profiles-about-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-admonition-consent-status-start
-   :end-before: .. destination-braze-profile-attributes-admonition-consent-status-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-admonition-start
+   :end-before: .. braze-customer-profiles-admonition-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-table-start
-   :end-before: .. destination-braze-profile-attributes-table-end
+.. include:: ../../amperity_operator/source/campaign_braze.rst
+   :start-after: .. campaign-braze-profile-attributes-start
+   :end-before: .. campaign-braze-profile-attributes-end
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-note-start
-   :end-before: .. destination-braze-profile-attributes-note-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-start
+   :end-before: .. braze-customer-profiles-common-attributes-end
+
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-note-start
+   :end-before: .. braze-customer-profiles-common-attributes-note-end
 
 
 .. _destination-braze-custom-attributes:
@@ -81,9 +94,9 @@ Customer profiles
 Custom attributes
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-custom-attributes-start
-   :end-before: .. destination-braze-custom-attributes-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-custom-attributes-start
+   :end-before: .. braze-custom-attributes-end
 
 
 .. _destination-braze-data-points:
@@ -91,15 +104,13 @@ Custom attributes
 About data points
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/destination_braze.rst
-   :start-after: .. destination-braze-data-points-start
-   :end-before: .. destination-braze-data-points-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-data-points-start
+   :end-before: .. braze-data-points-end
 
-.. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
-
-.. important:: `Connected Content <https://docs.amperity.com/operator/api_profile.html#braze-connected-content>`__ does not write data to user profiles, which means you can use Connected Content to dynamically populate values into messages without consuming data points.
-
-.. profile-api-usecase-braze-connected-content-does-not-use-data-points-end
+.. include:: ../../amperity_operator/source/campaign_braze.rst
+   :start-after: .. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
+   :end-before: .. profile-api-usecase-braze-connected-content-does-not-use-data-points-end
 
 
 .. _destination-braze-attribute-updates:
@@ -107,50 +118,13 @@ About data points
 Audience profile updates
 --------------------------------------------------
 
-.. destination-braze-attribute-updates-overview-start
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attribute-updates-start
+   :end-before: .. braze-attribute-updates-end
 
-Profile attributes, such as **email**, **birthdate**, **address**, and **phone**, contain stable values. Most customers remain at the same address and have the same phone number for years. An individual customer's birthdate never changes. When customer profile attributes do change your brand will always want to update any downstream audience profiles.
-
-Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be carefully evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use cases.
-
-.. destination-braze-attribute-updates-overview-end
-
-.. destination-braze-attribute-updates-admonition-start
-
-.. admonition:: What types of attributes have values that change frequently?
-
-   The following types of attributes contain values that change frequently:
-
-   .. list-table::
-      :widths: 35 65
-      :header-rows: 0
-
-      * - **Relative date values**
-        - Attributes with relative date values typically contain a rolling value that is updated daily.
-
-          For example, the **Transaction Attributes Extended** table contains an attribute named **Days Since Latest Order**. This is a useful attribute that counts the number of days that have elapsed since an individual customer last placed an order with your brand. Today that value might be "10" and tomorrow, if that customer has not purchased, will be "11".
-
-          Using **Days Since Latest Order** as an attribute within customer profiles ensures that every customer profile associated with a customer who did not purchase during the previous X days will get an updated profile.
-
-          For relative date values, consider building a custom attribute that converts the ranges into a list of values. For example, you can assign a single value to represent a range of values. Less than 30 days is "green", less than 90 days is "yellow", and less than 365 days is "red". Include the custom attribute to capture the range of days as an indicator instead of the specific relative value.
-
-      * - **High-precision values**
-        - High-precision values are found in attributes that contain floating points, decimals, and percentages.
-
-          These types of values--1.09413481, 345.47 or .34--often change slightly, but in a way that offers little value to the downstream business use case.
-
-          For example, predictive attributes are refreshed daily. Predicted CLV during the next 365 days might be $345.37 on one day and $348.75 a few days later.
-
-          Instead of using predicted CLV in an audience profile, consider using predicted lifecycle status (active, at risk, etc.) or predicted value tier (gold, bronze, etc.), both of which are less likely to change because they represent a range of predicted behaviors instead of a specific predicted value.
-
-      * - **Calculated attribute values**
-        - Many attributes are calculated by Amperity, including all time period rollups.
-
-          For example, the **Transaction Attributes Extended** table contains an attribute named **L6M Order Revenue**. This attribute returns the order revenue for each customer over a rolling 6-month timeframe. This attribute is refreshed on a daily basis and the value is updated each time a customer makes a purchase.
-
-          Instead of using the time period rollup attributes directly you can build a custom attribute to define thresholds or to return a yes or no. For example, instead of using the specific revenue amount for **L6M Order Revenue** you could build a custom attribute that returns true when the value for **L6M Order Revenue** is greater than $500.
-
-.. destination-braze-attribute-updates-admonition-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attribute-updates-admonition-start
+   :end-before: .. braze-attribute-updates-admonition-end
 
 
 .. _destination-braze-table:
