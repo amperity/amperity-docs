@@ -282,24 +282,27 @@ This section describes each feature in-depth, and what actions you can take to i
 .. amps-consumption-features-end
 
 
-.. _amps-consumption-feature-bi-connect:
+.. _amps-consumption-features-sources:
 
-BI Connect
+Sources features
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. amps-consumption-feature-bi-connect-start
+.. amps-consumption-features-sources-start
 
-Amps consumption for the **BI Connect** feature is determined by the frequency at which data is sent to BI Connect, is orchestrated from BI Connect, along with the amount of data that is stored in BI Connect.
+Sources features include the following Amps categories:
 
-.. tip:: Work with your Amperity representative to better understand your brand's Amps consumption rates when using BI Connect.
+* :ref:`Bridge <amps-consumption-feature-bridge>`
+* :ref:`Ingest <amps-consumption-feature-ingest>`
+* :ref:`Tables <amps-consumption-feature-source-tables>`
+* :ref:`Transformations <amps-consumption-feature-source-transforms>`
 
-.. amps-consumption-feature-bi-connect-end
+.. amps-consumption-features-sources-end
 
 
 .. _amps-consumption-feature-bridge:
 
 Bridge
-++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. amps-consumption-feature-bridge-start
 
@@ -318,88 +321,10 @@ Monitor Amps consumption for the **Amperity Bridge** feature by:
 .. amps-consumption-feature-bridge-end
 
 
-.. _amps-consumption-feature-campaigns:
-
-Campaigns
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-campaigns-start
-
-Amps consumption for the **Campaigns** feature is determined by:
-
-* The frequency at which campaigns are run
-* The complexity of SQL queries that are used by a campaign
-* The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output; each segment that is run within a campaign will consume Amps
-* The amount of data being sent from Amperity to a downstream location
-
-Storage for the **Campaigns** feature is primarily determined by:
-
-* The size of the **Campaign Recipients** table
-
-Monitor consumption for the **Campaigns** feature by:
-
-* Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes will take longer to run and will consume more Amps
-* Monitoring workflows that contain recurring campaigns from the **Workflows** page
-* Monitoring the frequency and runtime duration for campaigns that are run automatically from the **Usage** page
-* Reviewing the customer profiles and records sent from the **Usage** page
-* Limiting the number of records that are maintained in the **Campaign Recipients** table by ensuring that campaigns sent from Amperity are actively used by your brand's downstream use cases
-
-.. amps-consumption-feature-campaigns-end
-
-
-.. _amps-consumption-feature-cloud-storage:
-
-Cloud storage
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-cloud-storage-start
-
-Amps consumption for cloud storage--Amazon S3, Google Cloud Storage, Microsoft Azure, and SFTP--is determined by the amount of data sent from Amperity cloud storage.
-
-.. note:: Amps consumption for data sent to :ref:`managed connectors <amps-consumption-feature-managed-connectors>` is its own category.
-
-Monitor Amps consumption for cloud storage by:
-
-* Reviewing the size of datasets
-* Reviewing the number of records sent
-* Monitoring the frequency at which data is sent to cloud storage
-
-.. amps-consumption-feature-cloud-storage-end
-
-
-.. _amps-consumption-feature-databases:
-
-Databases
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-databases-start
-
-Amps consumption for the **Databases** feature is determined by:
-
-* The frequency at which a database is run
-* The length of time it takes to run the database
-* Calculating extended transactions attributes
-* Larger compute settings for SQL resources
-
-Storage for the **Databases** feature is determined by:
-* The number of tables in a database
-* The number of custom tables that are used by analytics and marketing activities
-* The number of records in each table
-
-Monitor consumption for the **Databases** feature by:
-
-* Monitoring the database runtime and run history
-* Monitoring individual table runtimes and histories
-* Monitoring record counts over time by table, especially after updates are made to SQL queries
-* Comparing runtimes over time will help identify tables that contain inefficient or complex SQL; inefficient and complex SQL will consume more Amps at a higher rate than data quantity or data complexity
-
-.. amps-consumption-feature-databases-end
-
-
 .. _amps-consumption-feature-ingest:
 
 Ingest
-++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. amps-consumption-feature-ingest-start
 
@@ -424,52 +349,199 @@ Monitor consumption for the **Ingest** feature by:
 .. amps-consumption-feature-ingest-end
 
 
-.. _amps-consumption-feature-managed-connectors:
+.. _amps-consumption-feature-source-tables:
 
-Managed connectors
+Tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-source-tables-start
+
+Amps consumption for the **Source tables** feature is determined by:
+
+* The amount of data stored in source tables and the outputs of source transforms
+* The number if fields in source tables
+* The density of records in source tables
+
+Monitor Amps consumption for the **Source tables** feature by:
+
+* Monitoring the total number of records from the **Sources** page
+* Reviewing the number of records that are ingested per day from the **Usage** page
+
+.. amps-consumption-feature-source-tables-end
+
+
+.. _amps-consumption-feature-source-transforms:
+
+Transformations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-source-transforms-start
+
+Amps consumption for the **Transformations** feature is determined by:
+
+* The frequency at which transformations are run
+* The volume of data that is processed for transformations
+* Complex SQL in transformations may cause longer runtimes
+* Changes to transformations runtimes often cause variable Amps consumption
+* Larger compute resources
+
+.. note:: Transformations are also referred to as "custom domain tables".
+
+Monitor Amps consumption for the **Transformations** feature by:
+
+* Monitoring the history of runtime durations for transformations from the **Workflows** page
+* Count the number of transformations that are run from the **Workflows** page
+* Using version history to monitor changes to SQL queries for transformations
+
+.. amps-consumption-feature-source-transforms-end
+
+
+.. _amps-consumption-features-stitch:
+
+Stitch features
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. amps-consumption-feature-managed-connectors-start
+.. amps-consumption-features-stitch-start
 
-Amps consumption for managed connectors--campaigns, journeys, and orchestrations--is determined by the amount of data sent from Amperity to `downstream marketing applications <../../destinations.html>`__.
+Stitch features include the following Amps categories:
 
-.. note:: Data sent to :ref:`cloud storage <amps-consumption-feature-cloud-storage>` is its own Amps category.
+* :ref:`Stitch <amps-consumption-feature-stitch>`
+* :ref:`Stitch report <amps-consumption-feature-stitch-report>`
 
-Monitor Amps consumption for managed connectors by:
-
-* Reviewing campaign audience sizes
-* Monitoring the frequency at which campaigns and journeys run
-* Reviewing customer profiles
-* Reviewing the number of records sent in orchestrations
-
-.. amps-consumption-feature-managed-connectors-end
+.. amps-consumption-features-stitch-end
 
 
-.. _amps-consumption-feature-orchestrations:
+.. _amps-consumption-feature-stitch:
 
-Orchestrations
+Stitch
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-stitch-start
+
+Amps consumption for the **Stitch** feature is determined by:
+
+* Adding more inputs to Stitch, such as additional data sources that contain customer profile data, can increase Amps consumption. This is highly dependent on the types of records that are made available to Stitch. Sparse records with low connectivity will consume fewer Amps. Rich records with high connectivity will consume more Amps
+* Poorly configured foreign keys (FKs) can lead to higher frequencies of interconnected records, which may increase the duration of the Stitch run
+* Bad values that are not added to the bad-values blocklist may increase the duration of the Stitch run
+* Larger compute resources
+
+Monitor Amps consumption for the **Stitch** feature by:
+
+* Monitoring the duration of Stitch runs from the **Workflows** page
+* Viewing the number of profiles that are stitched over time from the **Usage** page
+
+.. amps-consumption-feature-stitch-end
+
+
+.. _amps-consumption-feature-stitch-report:
+
+Stitch Report
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-stitch-report-start
+
+Amps consumption for the **Stitch Report** feature is determined by the amount of time it takes to build the report after Stitch is done processing data for identity resolution. The amount of time it takes to build the report is determined by the complexity of the Stitch run.
+
+.. amps-consumption-feature-stitch-report-end
+
+
+.. _amps-consumption-features-databases:
+
+Databases features
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. amps-consumption-feature-orchestrations-start
+.. amps-consumption-features-databases-start
 
-Amps consumption for the **Orchestrations** feature is determined by:
+Databases features include the following Amps categories:
 
-* The frequency at which orchestrations are run
-* The complexity of SQL queries that are used with each orchestration
-* The amount of data being sent from Amperity to a downstream location
+* :ref:`Databases <amps-consumption-feature-databases>`
+* :ref:`Real-time tables <amps-consumption-feature-real-time-tables>`
 
-Monitor Amps consumption for the **Orchestrations** feature by:
+.. amps-consumption-features-databases-end
 
-* Monitoring workflows that contain queries that are run automatically from the **Workflows** page
-* Monitoring the frequency and runtime duration for queries that are run automatically from the **Usage** page
 
-.. amps-consumption-feature-orchestrations-end
+.. _amps-consumption-feature-databases:
+
+Databases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-databases-start
+
+Amps consumption for the **Databases** feature is determined by:
+
+* The frequency at which a database is run
+* The length of time it takes to run the database
+* Calculating extended transactions attributes
+* Larger compute settings for SQL resources
+
+Storage for the **Databases** feature is determined by:
+
+* The number of tables in a database
+* The number of custom tables that are used by analytics and marketing activities
+* The number of records in each table
+
+Monitor consumption for the **Databases** feature by:
+
+* Monitoring the database runtime and run history
+* Monitoring individual table runtimes and histories
+* Monitoring record counts over time by table, especially after updates are made to SQL queries
+* Comparing runtimes over time will help identify tables that contain inefficient or complex SQL; inefficient and complex SQL will consume more Amps at a higher rate than data quantity or data complexity
+
+.. amps-consumption-feature-databases-end
+
+
+.. _amps-consumption-feature-real-time-tables:
+
+Real-time tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-real-time-tables-start
+
+Amps consumption for the **Real-time tables** feature is determined by the volume of real-time data that is streamed to Amperity along with the amount of storage required.
+
+Monitor consumption for the **Real-time tables** feature to ensure that only events data required to support real-time use cases is stored in real-time tables.
+
+For example, some types of events data sources may contain hundreds of fields many of which are not useful for real-time use cases. Instead of streaming unnecessary fields in real-time you can use a batch ingest process when those fields support additional use cases.
+
+.. amps-consumption-feature-real-time-tables-end
+
+
+.. _amps-consumption-features-analytics:
+
+Analytics features
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-consumption-features-analytics-start
+
+Analytics features include the following Amps categories:
+
+* :ref:`BI Connect <amps-consumption-feature-bi-connect>`
+* :ref:`Predictive modeling <amps-consumption-feature-predictive-modeling>`
+* :ref:`Queries <amps-consumption-feature-queries>`
+* :ref:`Segments <amps-consumption-feature-segments>`
+* :ref:`Spark SQL sessions <amps-consumption-feature-spark-sql-sessions>`
+
+.. amps-consumption-features-analytics-end
+
+
+.. _amps-consumption-feature-bi-connect:
+
+BI Connect
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-bi-connect-start
+
+Amps consumption for the **BI Connect** feature is determined by the frequency at which data is sent to BI Connect, is orchestrated from BI Connect, along with the amount of data that is stored in BI Connect.
+
+.. tip:: Work with your Amperity representative to better understand your brand's Amps consumption rates when using BI Connect.
+
+.. amps-consumption-feature-bi-connect-end
 
 
 .. _amps-consumption-feature-predictive-modeling:
 
 Predictive modeling
-++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. amps-consumption-feature-predictive-modeling-start
 
@@ -495,10 +567,196 @@ Monitor consumption for the **Predictive modeling** feature by:
 .. amps-consumption-feature-predictive-modeling-end
 
 
+.. _amps-consumption-feature-queries:
+
+Queries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-queries-start
+
+Amps consumption for the **Queries** feature is determined by:
+
+* The number of ad-hoc queries
+* The complexity of each query as measured by the number of bytes scanned
+
+Monitor Amps consumption for the **Queries** feature by:
+
+* Monitoring the number of queries that are executed from the **Usage** page
+* Verifying the amount of data scanned by a query
+
+.. amps-consumption-feature-queries-end
+
+
+.. _amps-consumption-feature-segments:
+
+Segments
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-segments-start
+
+Amps consumption for the **Segments** feature is determined by:
+
+* The number of segments that are run
+* The complexity of segments as measured by the number of bytes scanned
+
+.. amps-consumption-feature-segments-end
+
+
+.. _amps-consumption-feature-spark-sql-sessions:
+
+Spark SQL sessions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-spark-sql-sessions-start
+
+Amps consumption for the **Spark SQL sessions** feature is determined by:
+
+* The size of the compute settings for the Spark SQL session
+* The number of Spark SQL sessions that are run
+* The length of each session
+
+.. amps-consumption-feature-spark-sql-sessions-end
+
+
+.. _amps-consumption-features-activation:
+
+Activation features
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. amps-consumption-features-activation-start
+
+Activation features include the following Amps categories:
+
+* :ref:`Audiences for campaigns <amps-consumption-feature-campaigns>`
+* :ref:`Audiences for journeys <amps-consumption-feature-journeys>`
+* :ref:`Audiences for orchestrations <amps-consumption-feature-orchestrations>`
+* :ref:`Data sent to cloud storage <amps-consumption-feature-cloud-storage>`
+* :ref:`Data sent to managed connectors <amps-consumption-feature-managed-connectors>`
+* :ref:`Profile API <amps-consumption-feature-profile-api>`
+
+.. amps-consumption-features-activation-end
+
+
+.. _amps-consumption-feature-campaigns:
+
+Audiences for campaigns
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-campaigns-start
+
+Amps consumption for the **Campaigns** feature is determined by:
+
+* The frequency at which campaigns are run
+* The complexity of SQL queries that are used by a campaign
+* The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output; each segment that is run within a campaign will consume Amps
+* The amount of data being sent from Amperity to a downstream location
+
+Storage for the **Campaigns** feature is primarily determined by:
+
+* The size of the campaigns activation state and **Campaign Recipients** tables
+
+Monitor consumption for the **Campaigns** feature by:
+
+* Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes will take longer to run and will consume more Amps
+* Monitoring workflows that contain recurring campaigns from the **Workflows** page
+* Monitoring the frequency and runtime duration for campaigns that are run automatically from the **Usage** page
+* Reviewing the customer profiles and records sent from the **Usage** page
+* Limiting the number of records that are maintained in the campaigns activation state and **Campaign Recipients** tables by ensuring that campaigns sent from Amperity are actively used by your brand's downstream use cases
+
+.. amps-consumption-feature-campaigns-end
+
+
+.. _amps-consumption-feature-journeys:
+
+Audiences for journeys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-journeys-start
+
+Amps consumption for the **Journeys** feature is determined by:
+
+* The frequency at which journeys are run
+* The complexity of SQL queries that are used by a journey
+* The frequency at which audiences are split into different pathways within a journey
+* The number of individual segments that are run within each journey
+* The size of each audience within the journey
+
+Monitor consumption for the **Journeys** feature by:
+
+* Reviewing audience sizes; larger segments take longer to analyze and journeys that have many branching paths will take longer to run and will consume more Amps
+* Monitoring the frequency and runtime duration for journeys that are run automatically from the **Usage** page
+* Reviewing the customer profiles and records sent from the **Usage** page
+* Limiting the number of records that are maintained in the journeys activation state table by ensuring that journeys sent from Amperity are actively used by your brand's downstream use cases
+
+.. amps-consumption-feature-journeys-end
+
+
+.. _amps-consumption-feature-orchestrations:
+
+Audiences for orchestrations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-orchestrations-start
+
+Amps consumption for the **Orchestrations** feature is determined by:
+
+* The frequency at which orchestrations are run
+* The complexity of SQL queries that are used with each orchestration
+* The amount of data being sent from Amperity to a downstream location
+
+Monitor Amps consumption for the **Orchestrations** feature by:
+
+* Monitoring workflows that contain queries that are run automatically from the **Workflows** page
+* Monitoring the frequency and runtime duration for queries that are run automatically from the **Usage** page
+
+.. amps-consumption-feature-orchestrations-end
+
+
+.. _amps-consumption-feature-cloud-storage:
+
+Data sent to cloud storage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-cloud-storage-start
+
+Amps consumption for cloud storage--Amazon S3, Google Cloud Storage, Microsoft Azure, and SFTP--is determined by the amount of data sent from Amperity cloud storage.
+
+.. note:: Amps consumption for data sent to :ref:`managed connectors <amps-consumption-feature-managed-connectors>` is its own category.
+
+Monitor Amps consumption for cloud storage by:
+
+* Reviewing the size of datasets
+* Reviewing the number of records sent
+* Monitoring the frequency at which data is sent to cloud storage
+
+.. amps-consumption-feature-cloud-storage-end
+
+
+.. _amps-consumption-feature-managed-connectors:
+
+Data sent to managed connectors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. amps-consumption-feature-managed-connectors-start
+
+Amps consumption for managed connectors--campaigns, journeys, and orchestrations--is determined by the amount of data sent from Amperity to `downstream marketing applications <../../destinations.html>`__.
+
+.. note:: Data sent to :ref:`cloud storage <amps-consumption-feature-cloud-storage>` is its own Amps category.
+
+Monitor Amps consumption for managed connectors by:
+
+* Reviewing campaign audience sizes
+* Monitoring the frequency at which campaigns and journeys run
+* Reviewing customer profiles
+* Reviewing the number of records sent in orchestrations
+
+.. amps-consumption-feature-managed-connectors-end
+
+
 .. _destinations-premium-connectors:
 
 Premium connectors
-++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. destinations-premium-connectors-start
 
@@ -535,7 +793,7 @@ This applies to the following connectors:
 .. _amps-consumption-feature-profile-api:
 
 Profile API
-++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. amps-consumption-feature-profile-api-start
 
@@ -544,111 +802,6 @@ Amps consumption for the **Profile API** feature is determined by the number of 
 Monitor Amps consumption for the **Profile API** feature by ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows.
 
 .. amps-consumption-feature-profile-api-end
-
-
-.. _amps-consumption-feature-queries:
-
-Queries
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-queries-start
-
-Amps consumption for the **Queries** feature is determined by:
-
-* The number of ad-hoc queries
-* The complexity of each query as measured by the number of bytes scanned
-
-Monitor Amps consumption for the **Queries** feature by:
-
-* Monitoring the number of queries that are executed from the **Usage** page
-* Verifying the amount of data scanned by a query
-
-.. amps-consumption-feature-queries-end
-
-
-.. _amps-consumption-feature-source-tables:
-
-Source tables
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-source-tables-start
-
-Amps consumption for the **Source tables** feature is determined by:
-
-* The amount of data stored in source tables and the outputs of source transforms
-* The number if fields in source tables
-* The density of records in source tables
-
-Monitor Amps consumption for the **Source tables** feature by:
-
-* Monitoring the total number of records from the **Sources** page
-* Reviewing the number of records that are ingested per day from the **Usage** page
-
-.. amps-consumption-feature-source-tables-end
-
-
-.. _amps-consumption-feature-source-transforms:
-
-Source transforms
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-source-transforms-start
-
-Amps consumption for the **Source transforms** feature is determined by:
-
-* The frequency at which source transforms are run
-* The volume of data that is processed for source transforms
-* Complex SQL in source transforms may cause longer runtimes
-* Changes to source transform runtimes often cause variable Amps consumption
-* Larger compute resources
-
-.. note:: Source transforms are also referred to as "custom domain tables".
-
-Monitor Amps consumption for the **Source transforms** feature by:
-
-* Monitoring the history of runtime durations for source transforms from the **Workflows** page
-* Count the number of source transforms that are run from the **Workflows** page
-* Using version history to monitor changes to SQL queries for source transforms
-
-.. amps-consumption-feature-source-transforms-end
-
-
-.. _amps-consumption-feature-spark-sql-sessions:
-
-Spark SQL sessions
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-spark-sql-sessions-start
-
-Amps consumption for the **Spark SQL sessions** feature is determined by:
-
-* The size of the compute settings for the Spark SQL session
-* The number of Spark SQL sessions that are run
-* The length of each session
-
-.. amps-consumption-feature-spark-sql-sessions-end
-
-
-.. _amps-consumption-feature-stitch:
-
-Stitch
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-feature-stitch-start
-
-Amps consumption for the **Stitch** feature is determined by:
-
-* Adding more inputs to Stitch, such as additional data sources that contain customer profile data, can increase Amps consumption. This is highly dependent on the types of records that are made available to Stitch. Sparse records with low connectivity will consume fewer Amps. Rich records with high connectivity will consume more Amps
-* Poorly configured foreign keys (FKs) can lead to higher frequencies of interconnected records, which may increase the duration of the Stitch run
-* Bad values that are not added to the bad-values blocklist may increase the duration of the Stitch run
-* Larger compute resources
-
-Monitor Amps consumption for the **Stitch** feature by:
-
-* Monitoring the duration of Stitch runs from the **Workflows** page
-* Viewing the number of profiles that are stitched over time from the **Usage** page
-
-.. amps-consumption-feature-stitch-end
 
 
 .. _amps-reduce:
