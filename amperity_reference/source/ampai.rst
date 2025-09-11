@@ -31,6 +31,11 @@ To enhance response accuracy, **AmpAI** leverages tenant-specific information, s
 
 .. ampai-overview-end
 
+.. ampai-privacy-note-start
+
+.. note:: AmpAI is powered by models that reside on Azure OpenAI Service. Review the :doc:`AmpAI Privacy FAQ <ampai_privacy>` for information about how Amperity interacts with Azure OpenAI service.
+
+.. ampai-privacy-note-end
 
 .. _ampai-good-results:
 
