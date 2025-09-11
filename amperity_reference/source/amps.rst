@@ -445,23 +445,8 @@ Amps consumption for the **Stitch Report** feature is determined by the amount o
 
 .. _amps-consumption-features-databases:
 
-Databases features
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. amps-consumption-features-databases-start
-
-Databases features include the following Amps categories:
-
-* :ref:`Databases <amps-consumption-feature-databases>`
-* :ref:`Real-time tables <amps-consumption-feature-real-time-tables>`
-
-.. amps-consumption-features-databases-end
-
-
-.. _amps-consumption-feature-databases:
-
 Databases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. amps-consumption-feature-databases-start
 
@@ -486,22 +471,6 @@ Monitor consumption for the **Databases** feature by:
 * Comparing runtimes over time will help identify tables that contain inefficient or complex SQL; inefficient and complex SQL will consume more Amps at a higher rate than data quantity or data complexity
 
 .. amps-consumption-feature-databases-end
-
-
-.. _amps-consumption-feature-real-time-tables:
-
-Real-time tables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. amps-consumption-feature-real-time-tables-start
-
-Amps consumption for the **Real-time tables** feature is determined by the volume of real-time data that is streamed to Amperity along with the amount of storage required.
-
-Monitor consumption for the **Real-time tables** feature to ensure that only events data required to support real-time use cases is stored in real-time tables.
-
-For example, some types of events data sources may contain hundreds of fields many of which are not useful for real-time use cases. Instead of streaming unnecessary fields in real-time you can use a batch ingest process when those fields support additional use cases.
-
-.. amps-consumption-feature-real-time-tables-end
 
 
 .. _amps-consumption-features-analytics:
@@ -682,8 +651,6 @@ Amps consumption for the **Journeys** feature is determined by:
 Monitor consumption for the **Journeys** feature by:
 
 * Reviewing audience sizes; larger segments take longer to analyze and journeys that have many branching paths will take longer to run and will consume more Amps
-* Monitoring the frequency and runtime duration for journeys that are run automatically from the **Usage** page
-* Reviewing the customer profiles and records sent from the **Usage** page
 * Limiting the number of records that are maintained in the journeys activation state table by ensuring that journeys sent from Amperity are actively used by your brand's downstream use cases
 
 .. amps-consumption-feature-journeys-end
