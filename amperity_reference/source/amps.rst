@@ -82,11 +82,9 @@ More data--more rows, more fields, more complete data--will drive Amps consumpti
 
 Storage is typically stable after the implementation period has completed. Storage (by itself) typically consumes Amps at a lower rate when compared to running workflows and processing data.
 
-.. note:: Deleting source tables will lead to lower Amps consumption. Amperity maintains a short buffer period to ensure data can be restored, should it need to be, after which the lower Amps consumption will show in the dashboard.
+.. note:: Storage is not a significant driver of Amps consumption and should be a small percentage (<5%) of overall Amps consumption.
 
 .. important:: A sandbox is a replica of your production environment. It starts as an exact duplicate of the configuration of your production tenant at the time it is created. It starts with access to the same data that is stored in your production tenant. If new data is ingested into the sandbox, added storage will increase your Amps consumption.
-
-.. important:: Amps drive consumption at a larger magnitude than storage. When optimizing your brand's consumption, monitor for ways to reduce Amps consumption over storage.
 
 .. amps-review-consumption-storage-end
 
