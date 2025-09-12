@@ -1755,19 +1755,23 @@ Enable table versioning
 
 .. databases-database-howto-enable-table-versioning-start
 
-A version is created for all tables every time the customer 360 database is run, regardless of database run type (express, normal, or full). The **amperity_version** column is added to all versioned tables. The typical frequency at which the customer 360 database is run is "once per day", but this is not always the case.
+A version is created for a table configured for table versioning each time the customer 360 database is run, regardless of database run type (express, normal, or full) and whether or not updates to data in the table occurred. The **amperity_version** column is appended to each versioned table.
 
 .. databases-database-howto-enable-table-versioning-end
 
 .. databases-database-howto-enable-table-versioning-important-start
 
-.. important:: The maximum number of versions is 10. A version must have been created within the last 14 days.
+.. important:: The maximum number of versions is 10. A version must have been created within the last 14 days. The frequency at which the customer 360 database is run will affect the total number of versions. For example:
+
+   * If the customer 360 database runs once per day, over a 14 days there will be a rolling count of 10 versions.
+   * If the customer 360 database runs every other day, the maximum number of versions will be 7.
+   * If the customer 360 database runs twice per day, the maximum number of versions will be 10, but all created within the last 7 days.
 
 .. databases-database-howto-enable-table-versioning-important-end
 
 .. databases-database-howto-enable-table-versioning-caution-start
 
-.. caution:: Changes to columns within a table that is enabled for table versioning changes the schema and will cause incompatible versions to be dropped. To avoid this, add columns to the end of the table.
+.. caution:: Changes to columns within a table that is enabled for table versioning changes the schema and will cause incompatible versions to be dropped. To avoid this, add columns to the end of the table *or* :ref:`enforce static table schemas <databases-database-howto-enforce-static-schemas>`.
 
 .. databases-database-howto-enable-table-versioning-caution-end
 
@@ -1775,12 +1779,14 @@ A version is created for all tables every time the customer 360 database is run,
 
 .. databases-database-howto-enable-table-versioning-steps-start
 
-#. From the **Database Table** editor, under **Advanced Settings**, expand **Version history**.
+#. From the **Customer 360** page open a database.
+#. From the **Database Table** editor, select a table.
+#. In the **Settings** pane for the selected table, under **Advanced Settings**, expand **Version history**.
 #. Select **Enable table version history**.
 
    .. note:: Version history allows queries to be made against older versions of this table. Adding or removing columns within the table will cause incompatible versions to be dropped.
 
-      |attribute-recommended| Enforce static table schemas when using table versioning. This will help avoid schema changes that cause incompatible versions to be dropped.
+      |attribute-recommended| Enforce static table schemas when using table versioning to ensure versions are not dropped from the table's version history.
 
 #. Click **Save**.
 
@@ -1794,23 +1800,32 @@ Enforce static table schemas
 
 .. databases-database-howto-enforce-static-schemas-start
 
-To prevent tables from being updated automatically you can enforce a static schema for the database table. When enabled, a user cannot save, activate, or run a database table when there is inconsistency between the database table's current schema and its upstream dependency.
-
-For example, a custom domain table with three fields is used to build a custom database table using ``SELECT * FROM Custom_Domain_Table``. With this pattern, if the custom domain table is updated to have four fields the custom database table will also be updated.
-
-To resolve this inconsistency, do one of the following:
-
-#. Disable static schema enforcement for the custom database table.
-#. Update the schema in the custom database table to match the updated schema in the custom domain table.
-#. Update the schema in the custom domain table to match the schema required the custom database table.
+To prevent table schemas from being updated automatically you can enforce a static schema for the database table. When enabled, a user cannot save, activate, or run a database table when there is inconsistency between the database table's current schema and its upstream dependency.
 
 .. databases-database-howto-enforce-static-schemas-end
+
+.. databases-database-howto-enforce-static-schemas-example-start
+
+.. admonition:: Example for static schema enforcement
+
+   For example, a custom domain table with three fields is used to build a custom database table using ``SELECT * FROM Custom_Domain_Table``. With this pattern, if the custom domain table is updated to have four fields the custom database table will not be updated when static table schemas are enforced.
+
+   To resolve this inconsistency, do one of the following:
+
+   #. Disable static schema enforcement for the custom database table.
+   #. Update the schema in the custom database table to match the updated schema in the custom domain table.
+   #. Update the schema in the custom domain table to match the schema required by the custom database table.
+   #. Enable static schema enforcement for the custom domain table.
+
+.. databases-database-howto-enforce-static-schemas-example-end
 
 **To enforce a static table schema**
 
 .. databases-database-howto-enforce-static-schemas-steps-start
 
-#. From the **Database Table** editor, under **Advanced Settings**, expand **Table Schema**.
+#. From the **Customer 360** page open a database.
+#. From the **Database Table** editor, select a table.
+#. In the **Settings** pane for the selected table, under **Advanced Settings**, expand **Table Schema**.
 #. Select **Enforce static schema**.
 
    .. note:: A table's schema cannot be changed when this option is enabled.
@@ -1818,7 +1833,6 @@ To resolve this inconsistency, do one of the following:
 #. Click **Save**.
 
 .. databases-database-howto-enforce-static-schemas-steps-end
-
 
 
 .. _databases-database-howto-explore:

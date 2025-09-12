@@ -180,14 +180,14 @@ The following table describes how Databricks data types map to Amperity data typ
 
    * - `SMALLINT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/smallint-type>`__ |ext_link|
 
-       A 2-byte signed integer.
+       A 2-byte signed integer ranging from -32,768 to 32,767.
 
      - **Integer**
 
        A numeric value, such as the quantity of items purchased. For example:
 
        * 1
-       * 12345
+       * -12345
 
 
    * - `STRING <https://docs.databricks.com/aws/en/sql/language-manual/data-types/string-type>`__ |ext_link|
@@ -234,14 +234,14 @@ The following table describes how Databricks data types map to Amperity data typ
 
    * - `TINYINT <https://docs.databricks.com/aws/en/sql/language-manual/data-types/tinyint-type>`__ |ext_link|
 
-       A 1-byte signed integer.
+       A 1-byte signed integer ranging from -128 to 127.
 
      - **Integer**
 
        A numeric value, such as the quantity of items purchased. For example:
 
        * 1
-       * 12345
+       * -5
 
 .. bridge-databricks-data-types-end
 
