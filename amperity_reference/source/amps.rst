@@ -224,18 +224,20 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
      - Feature areas
 
    * - **Activation**
-     - Campaigns
+     - Building audiences for campaigns
 
-       Orchestrations
+       Building audiences for journeys
 
-       Premium connectors
-       
+       Building audiences for orchestrations
+
+       Sending data to cloud storage
+
+       Sending data to managed connectors
+
        Profile API
 
    * - **Analytics**
-     - Advanced analytics
-
-       BI Connect
+     - BI Connect
 
        Predictive modeling
 
@@ -248,22 +250,19 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
    * - **Databases**
      - Databases
 
-       Real time tables
-
    * - **Sources**
      - Amperity Bridge
 
        Ingest
 
-       Source tables
+       Tables
 
-       Source transforms
+       Transformations
 
    * - **Stitch**
      - Stitch
 
-       Stitch report
-
+       Stitch Report
 
 .. amps-consumption-categories-end
 
@@ -307,7 +306,7 @@ Bridge
 Amps consumption for the **Amperity Bridge** feature is determined by:
 
 * The volume of data that is synced with Amperity
-* The amount of time required for each sync
+* The amount of time required for each sync data and process views
 * The frequency of syncs
 
 Monitor Amps consumption for the **Amperity Bridge** feature by:
@@ -329,7 +328,10 @@ Ingest
 Amps consumption for the **Ingest** feature is determined by:
 
 * The frequency at which data is loaded to Amperity
-* The amount of time it takes to ingest data; time affects Amps consumption more than volume or frequency because large file formats take longer to load than partitioned files of the same size
+* The amount of time it takes to ingest data.
+
+  Time affects Amps consumption more than volume or frequency because large file formats take longer to load than partitioned files of the same size.
+
 * The use of ingest queries that preprocess data prior to ingest
 
 Storage for the **Ingest** feature is determined by:
@@ -428,6 +430,15 @@ Monitor Amps consumption for the **Stitch** feature by:
 * Monitoring the duration of Stitch runs from the **Workflows** page
 * Viewing the number of profiles that are stitched over time from the **Usage** page
 
+.. admonition:: Stitch configuration and Amps consumption?
+
+   * Forcing Stitch to run increases Amps consumption because Stitch does not use cached results with that run mode.
+   * Skipping unified changes output can lower Amps consumption.
+   * Disabling stable IDs can lower Amps consumption, but also makes it more likely that Amperity ID assignment for profiles changes more often over time.
+   * Using 1:1 Stitch has the lowest Amps consumption, but that is because Stitch does not perform identity resolution with that run option.
+   * The size of graph partitions, also referred to as supersized clusters, can affect Amps consumption.
+   * A high threshold at which trivial duplicates are treated as a single record can affect Amps consumption.
+
 .. amps-consumption-feature-stitch-end
 
 
@@ -468,7 +479,13 @@ Monitor consumption for the **Databases** feature by:
 * Monitoring the database runtime and run history
 * Monitoring individual table runtimes and histories
 * Monitoring record counts over time by table, especially after updates are made to SQL queries
-* Comparing runtimes over time will help identify tables that contain inefficient or complex SQL; inefficient and complex SQL will consume more Amps at a higher rate than data quantity or data complexity
+* Comparing runtimes over time will help identify tables that contain inefficient or complex SQL.
+
+  Reducing cluster size may reduce Amps consumption for Spark processing, but may increase the overall runtime.
+
+* Inefficient and complex SQL will consume more Amps at a higher rate than data quantity or data complexity.
+
+  Duplication and skew in **JOIN** operations or window functions affects how the table is partitioned by Spark.
 
 .. amps-consumption-feature-databases-end
 
@@ -502,6 +519,8 @@ Amps consumption for the **BI Connect** feature is determined by the frequency a
 
 .. tip:: Work with your Amperity representative to better understand your brand's Amps consumption rates when using BI Connect.
 
+   Migrating BI Connect workflows to Amperity Bridge will lower Amps consumption.
+
 .. amps-consumption-feature-bi-connect-end
 
 
@@ -516,7 +535,8 @@ Amps consumption for the **Predictive modeling** feature is determined by:
 
 * The frequency at which predictions (including training and inference) are run
 * The number of courier groups that are associated with predictive modeling
-* The number of predictive models that are enabled; adding models will increase Amps consumption
+* The number of predictive models that are enabled. Adding models will increase Amps consumption.
+* The size of the dataset that is made available to predictive modeling.
 
 Storage for the **Predictive modeling** feature is determined by:
 
@@ -528,6 +548,7 @@ Monitor consumption for the **Predictive modeling** feature by:
 
 * Monitoring workflows that contain predictive modeling tasks from the **Workflows** page
 * Reviewing the record count for tables that are used by predictive modeling
+* Consider the frequency at which models are run. Less frequent training or inference will lower Amps consumption, but will decrease the accuracy of the models.
 * Ensuring that each model has the correct inputs. Use the **Predictive models** page that is available for each database to review the inputs to each model in your customer 360 database
 * Review each predictive modeling job, including when the next inference and training jobs will run. Use the **Predictive models** page to access individual jobs for each predictive model that is enabled in your tenant
 
@@ -545,11 +566,13 @@ Amps consumption for the **Queries** feature is determined by:
 
 * The number of ad-hoc queries
 * The complexity of each query as measured by the number of bytes scanned
+* The size of the dataset that is available to the query
 
 Monitor Amps consumption for the **Queries** feature by:
 
 * Monitoring the number of queries that are executed from the **Usage** page
 * Verifying the amount of data scanned by a query
+* Review Spark SQL queries with high Amps consumption for :ref:`skew <sql-spark-skew>`.
 
 .. amps-consumption-feature-queries-end
 
@@ -563,8 +586,8 @@ Segments
 
 Amps consumption for the **Segments** feature is determined by:
 
-* The number of segments that are run
-* The complexity of segments as measured by the number of bytes scanned
+* The number of tracked segments that are run
+* The complexity of tracked segments as measured by the number of bytes scanned
 
 .. amps-consumption-feature-segments-end
 
