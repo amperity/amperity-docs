@@ -61,7 +61,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
      - You may use any table in any database to build a query.
 
-       Your customer 360 database should already be selected for you (by default), though it is possible to have more than one 360 database available to the SQL **Query Editor**. Expand each of the table rows to see the attributes that are available from that table. Open the **Data Explorer** to view detailed information about every table and every attribute, including examples of the values they contain.
+       Your customer 360 database should already be selected for you by default, though it is possible to have more than one 360 database available to the SQL **Query Editor**. Expand each of the table rows to see the attributes that are available from that table. Open the **Data Explorer** to view detailed information about every table and every attribute, including examples of the values they contain.
 
        .. image:: ../../images/mockup-segments-tab-database-and-tables.png
           :width: 340 px

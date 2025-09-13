@@ -23,7 +23,7 @@ Create campaigns
 Sending campaigns from Amperity to downstream marketing workflows is a combination of:
 
 * A :doc:`segment <segments>` that defines the audience that you will use with your campaign.
-* A campaign (this topic) that breaks that audience down into sub-audiences that align to your marketing strategies and goals.
+* A campaign that breaks that audience down into sub-audiences that align to your marketing strategies and goals.
 * A set of :doc:`destinations <destinations>` that specify the locations and channels to which you will send each sub-audience.
 
 This is part two of a series of topics that describes how this works.
@@ -210,7 +210,7 @@ The following sections describe the steps you'll follow to set up and configure 
           :alt: Step 7.
           :align: center
           :class: no-scaled-link
-     - A campaign can be configured to be sent once or on a recurring basis. A campaign can also be scheduled (i.e. "to be sent at the time you choose in the future") or to be sent as soon as possible.
+     - A campaign can be configured to be sent once or on a recurring basis. A campaign can be scheduled to send as soon as possible or at a time in the future.
 
        .. image:: ../../images/mockup-campaigns-timing.png
           :width: 650 px

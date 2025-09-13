@@ -30,7 +30,7 @@ Queries page
 
 .. queries-tab-start
 
-The **Queries** page provides an overview of the status of every query. A table shows the status and details. Queries are listed by row. The details include the date and time at which this query last ran, along with the number of records (rows) that were returned during the last completed run.
+The **Queries** page provides an overview of the status of every query. A table shows the status and details. Queries are listed by row. The details include the date and time at which this query last ran, along with the number of rows of records that were returned during the last completed run.
 
 .. queries-tab-end
 
@@ -77,7 +77,7 @@ All queries must be activated before they can run as part of a scheduled workflo
 
 .. note:: Amperity is a multi-user system and the set of queries for your company is shared across all users. That means that if one user creates a draft query, another can open and edit it, so work can be easily passed between people on your team.
 
-   However, it also means that if 2 users are editing the same thing at the same time, their changes will collide.  Amperity resolves this by applying the last set of changes saved as a whole. This will always keep the query in a consistent state (it will never be half-implemented). But changes that were saved first will be overwritten. As a result, we strongly recommend that you coordinate changes to specific objects in Amperity with others on your team.
+   However, it also means that if 2 users are editing the same thing at the same time, their changes will collide.  Amperity resolves this by applying the last set of changes saved as a whole. This will keep the query in a consistent state. But changes that were saved first will be overwritten. As a result, we strongly recommend that you coordinate changes to specific objects in Amperity with others on your team.
 
 .. queries-editor-multiuser-warning-end
 
@@ -264,7 +264,7 @@ Cohort analysis
 
 .. queries-example-cohort-analysis-start
 
-The following SQL builds a cohort analysis against the **Transaction Attributes Extended** table that returns a month-by-month view of customers acquired, split by channel (store vs. online), and then for each monthly cohort, how many repurchased within 60, 90, 180, and 365 days, and the channel on which customers made their repeat purchases.
+The following SQL builds a cohort analysis against the **Transaction Attributes Extended** table that returns a month-by-month view of customers acquired, split by channel, and then for each monthly cohort, how many repurchased within 60, 90, 180, and 365 days, and the channel on which customers made their repeat purchases.
 
 .. tip:: Build cohort analysis queries for your tenant, and then send the results downstream to :doc:`your favorite analytics and/or BI tool <sendto_analytics_bi>`.
 

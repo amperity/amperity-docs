@@ -115,7 +115,7 @@ The following sections describe using the the **Segment Editor** to build a segm
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to view updated values for the combination of customers who have a contactable email address *and* whose most recent order was more than two years ago.
 
-       .. tip:: You can also use the **Historical Purchaser Lifecycle Status** attribute in the **Customer Attributes** table to identify dormant (or "lost") customers. Set the operator to "is in list", and then choose "Dormant":
+       .. tip:: You can also use the **Historical Purchaser Lifecycle Status** attribute in the **Customer Attributes** table to identify dormant, or "lost", customers. Set the operator to "is in list", and then choose "Dormant":
 
           .. image:: ../../images/attribute-historical-purchaser-lifecycle-status-dormant.png
              :width: 540 px

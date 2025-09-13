@@ -120,7 +120,7 @@ About this topic collection
 
 .. tools-for-marketers-about-this-collection-start
 
-The left-side navigation (from top to bottom) in this topic collection uses a verb-based approach to loosely organize around the series of actions that you may do when defining audiences (using segments and segment insights), and then building campaigns that send audience lists to a variety of marketing channels.
+The left-side navigation (from top to bottom) in this topic collection uses a verb-based approach to loosely organize around the series of actions that you may do when defining audiences, and then building campaigns that send audience lists to a variety of marketing channels.
 
 The left-side navigation has sections for the following types of activities:
 

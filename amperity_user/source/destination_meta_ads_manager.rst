@@ -194,7 +194,7 @@ Send offline events
 
 .. destination-meta-ads-manager-offline-events-parameters-start
 
-Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that must be (or may be) returned by your query.
+Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that should be returned by your query.
 
 .. destination-meta-ads-manager-offline-events-parameters-end
 

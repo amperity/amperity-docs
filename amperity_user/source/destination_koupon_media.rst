@@ -69,15 +69,15 @@ You may need to build a query that shapes the data so that fields in the output 
 
 You can do this in the following ways:
 
-#. Add a SQL table (using |sql_spark|) to the customer 360 database that selects PII fields from the **Customer 360** table, and then outputs them to a table with columns that map to the required naming patterns.
+#. Use |sql_spark| to add a SQL table to the customer 360 database that selects PII fields from the **Customer 360** table, and then outputs them to a table with columns that map to the required naming patterns.
 
    .. note:: PII fields may require |sql_spark_one_way_hash| or conversion to a UUID using the |sql_spark_cast| function.
 
-#. Add a SQL query (using |sql_presto|) that filters within the query, and then outputs results that map to the required patterns.
+#. Use |sql_presto| to add a SQL query that filters within the query, and then outputs results that map to the required patterns.
 
    .. note:: PII fields may require |sql_presto_one_way_hash| or conversion to a UUID using the |sql_presto_cast| function.
 
-The correct approach here depends on the data and the desired use case (or cases) for downstream workflows.
+The correct approach here depends on the data and the desired use cases for downstream workflows.
 
 .. sendto-koupon-media-build-query-end
 

@@ -62,7 +62,7 @@ Because this segment has only one condition and returns a list of customers who 
 
 There is only one city in the United States named "Chicago", which means the results of this segment won't include customers who live in multiple states.
 
-.. note:: There are attributes in your customer 360 database that can work well in segments when they are the only condition, such as **One and Done** (set it to "true") and **Early Repeat Purchaser** (also set it to "true").
+.. note:: There are attributes in your customer 360 database that can work well in segments when they are the only condition, such as **One and Done** and **Early Repeat Purchaser**.
 
 .. segments-and-vs-or-city-end
 
@@ -206,7 +206,7 @@ You can use multiple inclusion blocks, but be careful to avoid creating mutually
    :align: left
    :class: no-scaled-link
 
-This segment returns a list of customers who live in both cities, which (because it is unlikely that a customer lives in both cities) is zero.
+This segment returns a list of customers who live in both cities, which, because it is unlikely that a customer lives in both cities, is zero.
 
 .. image:: ../../images/segments-and-or-example-city-and-state-and-city-and-state-segment.png
    :width: 580 px
@@ -420,7 +420,7 @@ The following conditions show how exclusions *remove* customers the list of cust
 
 This segment returns a list of customers who have purchased in the previous calendar year, but *excludes* all customers who live in Chicago, Illinois.
 
-(See :ref:`this segment <segments-and-vs-or-city-and-state>` for an example of the customer list that is used to extend this segment.)
+See :ref:`this segment <segments-and-vs-or-city-and-state>` for an example of the customer list that is used to extend this segment.
 
 .. image:: ../../images/segments-and-vs-or-recent-purchases-exclude-chicago-segment.png
    :width: 580 px
@@ -448,7 +448,7 @@ The following conditions show how a customer list can be used to add to the list
 
 This segment returns a list of customers who live in Minneapolis, Minnesota *and* also customers who live in Seattle, Washington **AND** Portland, Oregon.
 
-(See :ref:`this segment <segments-and-vs-or-city-and-state-and-city-and-state>` for an example of the customer list that is used to extend this segment.)
+See :ref:`this segment <segments-and-vs-or-city-and-state-and-city-and-state>` for an example of the customer list that is used to extend this segment.
 
 .. image:: ../../images/segments-and-vs-or-city-and-state-include-cities-segment.png
    :width: 580 px
@@ -476,7 +476,7 @@ The following conditions show how a customer list can be used to include a high 
 
 This segment returns a list of customers who frequently purchase blue socks *and* belong to your brand's loyalty program *and* live in the states of California, Oregon, or Washington.
 
-(See :ref:`this segment <segments-and-vs-or-city-and-state-and-high-value>` for an example of the customer list that is used to extend this segment.)
+See :ref:`this segment <segments-and-vs-or-city-and-state-and-high-value>` for an example of the customer list that is used to extend this segment.
 
 .. image:: ../../images/segments-and-vs-or-cities-and-states-include-high-value-segment.png
    :width: 580 px
@@ -518,7 +518,7 @@ A common value used with **OR** may return a list of customers that includes mor
    :align: left
    :class: no-scaled-link
 
-This segment returns customers who live in a city named "Madison" (which exists in more than 20 states) *and* a customers who live in the state of Indiana.
+This segment returns customers who live in a city named "Madison", which exists in more than 20 states, *and* a customers who live in the state of Indiana.
 
 .. image:: ../../images/segments-and-or-example-city-and-state-segment-common.png
    :width: 580 px

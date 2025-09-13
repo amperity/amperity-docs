@@ -27,7 +27,7 @@ First purchase
 
 .. admonition:: What are purchase behaviors?
 
-   Purchase behaviors are a feature of Amperity that are built on top of standard output for transactions (purchases and items). Purchase behaviors require standardized product catalog field names to be present in your standard output for transactions.
+   Purchase behaviors are a feature of Amperity that are built on top of standard output for transactions. Purchase behaviors require standardized product catalog field names to be present in your standard output for transactions.
 
    Use purchase behaviors in segments to return a list of customers, *and then* filter that list of customers by any combination of brand, channel, individual items in your product catalog, and store.
 

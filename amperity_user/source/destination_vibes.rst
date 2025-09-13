@@ -69,15 +69,15 @@ You will need to build a query that shapes data to the fields required by a |des
 
 You can do this in the following ways:
 
-#. Add a SQL table (using |sql_spark|) to the customer 360 database that selects PII fields from the **Customer 360** table, and then outputs them to a table with columns that map to the required patterns.
+#. Use |sql_spark| to add a SQL table to the customer 360 database that selects PII fields from the **Customer 360** table, and then outputs them to a table with columns that map to the required patterns.
 
    .. note:: PII fields may require |sql_spark_one_way_hash| or conversion to a UUID using the |sql_spark_cast| function.
 
-#. Add a SQL query (using |sql_presto|) that filters within the query, and then outputs results that map to the required patterns.
+#. Use |sql_presto| to build a SQL query to filter within the query, and then outputs results that map to the required patterns.
 
    .. note:: PII fields may require |sql_presto_one_way_hash| or conversion to a UUID using the |sql_presto_cast| function.
 
-Choose the approach that works best for your use case (or use cases) and downstream workflows.
+Choose the approach that works best for your use cases and downstream workflows.
 
 .. sendto-vibes-build-query-end
 

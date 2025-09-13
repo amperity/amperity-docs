@@ -167,7 +167,7 @@ The best approach to validate the successful use of product affinity modeling in
 
 You should expect to see more revenue from a campaign that is based on product affinity.
 
-You may observe a lower unsubscribe rate with a campaign that is based on product affinity (if you have access to a data source that can provide email response statistics). A lower unsubscribe rate on a more targeted section of your customer base can reduce the overall unsubscribe rate among your larger set of customers.
+You may observe a lower unsubscribe rate with a campaign that is based on product affinity, if you have access to a data source that can provide email response statistics. A lower unsubscribe rate on a more targeted section of your customer base can reduce the overall unsubscribe rate among your larger set of customers.
 
 For example:
 

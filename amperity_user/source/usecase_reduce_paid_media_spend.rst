@@ -69,7 +69,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
          You can filter customers into your brand's lowest 20% by using the monetary component of approximate RFM scores. This scores measures customer activity during the previous year.
 
-         Choose the **L12M Monetary** attribute from the **Transaction Attributes Extended** table, select the "is in list" operator, and then choose the "1" and "2" values, which (when combined) represent the lowest 20%:
+         Choose the **L12M Monetary** attribute from the **Transaction Attributes Extended** table, select the "is in list" operator, and then choose the "1" and "2" values, which represent the lowest 20%:
 
          .. image:: ../../images/attribute-rfm-monetary-bottom-20.png
             :width: 540 px
@@ -113,7 +113,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - Send this list of customers to your favorite paid media destination (for example, Facebook Ads, Google Ads, etc.) on the **Campaigns** page.
+     - Send this list of customers to your preferred paid media destinations. For example: Meta Ads Manager and Google Ads.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px

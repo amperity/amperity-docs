@@ -217,7 +217,7 @@ Continue comparing revenue per user, profit per user, and overall conversion acr
 
 Continue to test a variety of messages across a greater number of audiences and sub-audiences and keep using the control group and don't stop using the control and treatment groups pattern with each audience and sub-audience. Get more creative with the campaigns that are sent to your most valuable customers.
 
-Consider using additional treatment groups (along with a control group) to allow for testing additional messages. Continue reusing promotions and offers that perform well. Look for ways to reuse creative assets and messages across your churn prevention campaign.
+Consider using additional treatment groups, along with a control group, to allow for testing additional messages. Continue reusing promotions and offers that perform well. Look for ways to reuse creative assets and messages across your churn prevention campaign.
 
 Start to automate elements within your churn prevention campaign with a goal of eventually automating the entire workflow. For example, start by configuring Amperity to automatically rerun the segments that power your churn prevention campaign, and then send those results automatically to your email service provider and Facebook.
 

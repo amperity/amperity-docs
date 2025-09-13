@@ -55,7 +55,7 @@ Campaign Recipients
 
 .. standard-output-campaign-recipients-start
 
-Campaign recipient attributes provide a record of campaigns that were sent from Amperity. Each campaign is associated with the segment that was used to build the audience (including control groups, treatment groups, and sub-audiences), the campaign launch date, and any destination to which the campaign was sent.
+Campaign recipient attributes provide a record of campaigns that were sent from Amperity. Each campaign is associated with the segment that was used to build the audience, including control groups, treatment groups, and sub-audiences, the campaign launch date, and any destination to which the campaign was sent.
 
 The following attributes are available from the **Campaign Recipients** table.
 
@@ -327,8 +327,8 @@ The **Customer Attributes** table contains the following columns:
 
        .. tip:: A reseller should be defined as an early repeat purchaser with a high lifetime order frequency. Use the following fields from the **Transaction Attributes Extended** table to define a reseller: 
 
-          * **Early Repeat Purchaser** (set to "true")
-          * **Lifetime Order Frequency** (define an order frequency threshold, such as "greater than 50")
+          * **Early Repeat Purchaser** Set to "True".
+          * **Lifetime Order Frequency** Define an order frequency threshold, such as "greater than 50".
 
    * - **Is Test Account**
      - Boolean
@@ -566,7 +566,7 @@ Transaction attributes provide the days in-between transaction events and time p
 
 .. standard-output-transaction-attributes-extended-links-start
 
-Extended transaction attributes are presented as a single table (with many columns), including an Amperity ID, and fit into the following categories:
+Extended transaction attributes are presented as a single table with many columns, including an Amperity ID, and fit into the following categories:
 
 * :ref:`Customer flags <standard-output-transaction-attributes-extended-customer-flags>`
 * :ref:`Customer orders <standard-output-transaction-attributes-extended-customer-orders>`
@@ -824,7 +824,7 @@ Time period rollups
        * **Lifetime Purchase Brands**
 
    * - **<x> Purchase Channels**
-     - The count of the distinct channels (online, in store, etc.) that the customer interacted with during during the time period. Available attributes:
+     - The count of the distinct channels--online or in store--that the customer interacted with during during the time period. Available attributes:
 
        * **L30D Purchase Channels**
        * **L3M Purchase Channels**
@@ -1062,7 +1062,7 @@ Unified Transactions
 
 .. standard-output-unified-transactions-start
 
-Orders attributes provide a history of the transactions your customers have made with your brand--channel (store, online, etc.), currency, dates and times, costs, discounts, quantities--sorted by each transaction made by your unique customers.
+Orders attributes provide a history of the transactions your customers have made with your brand--channel, currency, dates and times, costs, discounts, quantities--sorted by each transaction made by your unique customers.
 
 The following attributes are available from the **Unified Transactions** table.
 
