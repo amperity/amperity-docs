@@ -311,7 +311,7 @@ For example, if the activation ID is "email_id" then only tables with a field na
 
 The language that is used within the **Segment Editor** is updated to match the friendly, singular, and plural names of the selected activation ID.
 
-For example, the "Include customers with ALL of the following ..." statement is updated to "Include email addresses with ALL of the following ..." when the plural name is "email addresses".
+For example, the "Include customers with ALL of the following" statement is updated to "Include email addresses with ALL of the following" when the plural name is "email addresses".
 
 Segment insights are updated to only show the count for records that match the selected activation ID and the language is updatedf.
 
@@ -1218,7 +1218,7 @@ Up to five segments may be configured to show in the list of recommended segment
           :align: left
           :class: no-scaled-link
 
-       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." dropdown.
+       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for" dropdown.
 
        .. image:: ../../images/mockup-segments-recommended-choose-database.png
           :width: 420 px

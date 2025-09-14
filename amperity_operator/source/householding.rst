@@ -157,7 +157,7 @@ This section walks through the default SQL template that is used to define how a
 
    Physical street addresses, as identified by the **address** field, are standardized by splitting on spaces. Each of the second, third, fourth, etc. elements of an address are compared to a lookup table. When matches are found, they are replaced with standardized values.
 
-#. The section titled "Build the Household ID ..." builds a universally unique identifier (UUID) from unique combinations of the **address** and **surname** fields.
+#. The section titled "Build the Household ID" builds a universally unique identifier (UUID) from unique combinations of the **address** and **surname** fields.
 
 #. The section titled "Get count of Amperity ID per Household ID" associates a count of Amperity IDs to each Household ID.
 

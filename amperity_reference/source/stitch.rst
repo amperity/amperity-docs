@@ -143,8 +143,6 @@ For those semantic tags, the feed should apply semantic tags like this:
      - phone
    * - date
      - birthdate
-   * - ...
-     - ...
 
 This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically-tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
 

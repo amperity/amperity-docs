@@ -63,7 +63,7 @@ A good segment name is clear and concise, is not longer than necessary, uses pat
 
    If your downstream systems will have data from non-Amperity systems, consider using Amperity as the first prefix: "Amperity_Birthdays_Under_40_CA".
 
-   Use leading zeroes if a sequential numbering system is a prefix. For example: 0001, 0002, 0003, ...0100 is preferable to 1, 2, 3, ...100. This will help ensure that your segments are ordered sequentially in the Amperity **Segments** page *and* downstream systems.
+   Use leading zeroes if a sequential numbering system is a prefix. For example: 0001, 0002, 0003, 0004 is preferable to 1, 2, 3, 4. This will help ensure that your segments are ordered sequentially in the Amperity **Segments** page *and* downstream systems.
 
 .. segments-editor-names-important-end
 

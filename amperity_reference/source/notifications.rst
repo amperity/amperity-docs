@@ -329,7 +329,7 @@ The following is a list of status notifications that appear within a notificatio
 * Send for campaign started
 * Preparing campaign recipients
 * Sending to destinations
-* Completed in ...
+* Completed in
  
 .. notifications-campaigns-other-end
 
@@ -388,7 +388,7 @@ The following is a list of status notifications that appear within a notificatio
 * Database generation aborted
 * Starting database validation
 * Running database validation
-* Completed in ...
+* Completed in
 
 .. notifications-databases-common-warnings-end
 
@@ -432,7 +432,7 @@ If you see an orchestration error notification, click the **View Workflow** link
 
 The following is a list of status notifications that appear within a notification as it is running or after it has completed:
 
-* Waiting to start ...
+* Waiting to start
 * Orchestration group jobs created
 * Orchestration group run requested
 * Orchestration run requested
@@ -441,7 +441,7 @@ The following is a list of status notifications that appear within a notificatio
 * Waiting to upload
 * Uploading
 * Orchestration completed
-* Completed in ...
+* Completed in
 
 .. notifications-orchestrations-other-end
 
@@ -493,7 +493,7 @@ The following is a list of status notifications that appear within a notificatio
 * Activating a query
 * Activated query
 * Running a query
-* Completed in ...
+* Completed in
 
 .. notifications-queries-other-end
 
@@ -555,7 +555,7 @@ The following is a list of status notifications that appear within a notificatio
 * Courier batch completed
 * Courier job completed
 * Courier process completed
-* Completed in ...
+* Completed in
 
 .. notifications-sources-other-end
 
@@ -598,7 +598,7 @@ The following is a list of status notifications that appear within a notificatio
 * Generating report
 * Stitch report started
 * Stitch report ended
-* Completed in ...
+* Completed in
 
 .. notifications-stitch-reports-other-end
 	 
@@ -646,7 +646,7 @@ If you see a Stitch error notification, click the **View Workflow** link in that
 
 The following is a list of status notifications that appear within a notification as it is running or after it has completed:
 
-* Waiting to start ...
+* Waiting to start
 * Stitch requested
 * Loading data
 * Running custom domain tables
@@ -671,7 +671,7 @@ The following is a list of status notifications that appear within a notificatio
 * Generating Stitch metrics
 * Writing Stitch metrics
 * Stitch metrics generated
-* Completed in ...
+* Completed in
 
 .. notifications-stitch-runs-errors-other-end
 

@@ -395,11 +395,11 @@ You can configure the row limit by changing a value in the **pii_row_limit** com
 
 .. admonition:: How many rows are defined by the row limit?
 
-   If the limit is set to 10, and there are 10 rows each for email addresses, phone numbers, and address/details, there will be 10 x 10 x 10 combinations of rows, or 1000 rows in the **Unified Paid Media** table.
+   If the limit is set to 10, and there are 10 rows each for email addresses, phone numbers, and address/details, there will be "10 times 10 times 10" combinations of rows, or 1000 rows in the **Unified Paid Media** table.
 
-   If the limit is set to 5, and there are 5 rows each, there will be 5 x 5 x 5 combinations of rows, or 125 rows.
+   If the limit is set to 5, and there are 5 rows each, there will be "5 times 5 times 5" combinations of rows, or 125 rows.
 
-   If the limit is set to 3, and there are 3 rows each, there will be 3 x 3 x 3 combinations of rows, or 27 rows.
+   If the limit is set to 3, and there are 3 rows each, there will be "3 times 3 times 3" combinations of rows, or 27 rows.
 
    Adjust the row limit to control the size of the **Unified Paid Media** table, as required to support your brand's goals for match rates and customer matches in downstream marketing applications.
 

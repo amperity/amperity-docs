@@ -94,7 +94,6 @@ Source and custom tables make raw source data and custom domain tables available
 * Marketing campaign response data
 * Display advertising performance data
 * Passthrough tables that contain original customer data
-* And so on ...
 
 Any domain table or custom domain table can be configured as a passthrough table for any database.
 

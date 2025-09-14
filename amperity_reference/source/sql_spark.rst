@@ -1402,7 +1402,7 @@ NOT IN expression
 
 .. sql-spark-where-clause-expression-not-in-start
 
-The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** when the returned list contains **NULL**. Use **WHERE ... NOT IN ...** when the argument within the **NOT IN** expression is:
+The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** when the returned list contains **NULL**. Use **WHERE** followed by **NOT IN** when the argument within the **NOT IN** expression is:
 
 * A small table with no more than a few thousand rows *and* is not expected to grow significantly over time.
 * A hard-coded list of values. For example:
@@ -1415,9 +1415,9 @@ The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** w
 
 .. sql-spark-where-clause-expression-not-in-warning-start
 
-.. warning:: The use of **WHERE ... NOT IN ...** will cause performance issues when the argument within **NOT IN** is a large table or large query. This is because Spark SQL will implement the table or query as a broadcast join, and then attempt to broadcast that table or query to every worker node in the Spark cluster. This may cause Spark SQL to run slowly or result in out-of-memory errors.
+.. warning:: The use of **WHERE** followed by **NOT IN** will cause performance issues when the argument within **NOT IN** is a large table or large query. This is because Spark SQL will implement the table or query as a broadcast join, and then attempt to broadcast that table or query to every worker node in the Spark cluster. This may cause Spark SQL to run slowly or result in out-of-memory errors.
 
-   To prevent slow queries and/or out-of-memory errors use a **LEFT ANTI JOIN** operation instead of a **WHERE ... NOT IN <table or query>**. For example:
+   To prevent slow queries and/or out-of-memory errors use a **LEFT ANTI JOIN** operation instead of a **WHERE** followed by **NOT IN** a table or a query. For example:
 
    .. code-block:: sql
 
@@ -1475,7 +1475,7 @@ The **NOT EXISTS** returns **TRUE** when the subquery to which it refers returns
       LEFT ANTI JOIN (SELECT id FROM table_b) AS remove
       ON table_a.id = remove.id
 
-   The important difference is **WHERE ... NOT EXISTS ...** runs the same way in both Spark SQL and Presto SQL, wheres **LEFT ANTI JOIN** may only be used in Spark SQL.
+   The important difference is **WHERE** followed by **NOT EXISTS** runs the same way in both Spark SQL and Presto SQL, wheres **LEFT ANTI JOIN** may only be used in Spark SQL.
 
 .. sql-spark-where-clause-expression-not-exists-end
 
@@ -1851,9 +1851,9 @@ Examples of **ALL** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ALL (...)           Evaluates to **TRUE** when A is equal to all values.
-A <> ALL (...)          Evaluates to **TRUE** when A doesn't match any value.
-A < ALL (...)           Evaluates to **TRUE** when A is smaller than the smallest value.
+A = ALL (subquery)      Evaluates to **TRUE** when A is equal to all values.
+A <> ALL (subquery)     Evaluates to **TRUE** when A doesn't match any value.
+A < ALL (subquery)      Evaluates to **TRUE** when A is smaller than the smallest value.
 ====================    ===========
 
 .. sql-spark-operator-comparison-all-end
@@ -1883,11 +1883,11 @@ Examples of **ANY** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ANY (...)           Evaluates to **TRUE** when A is equal to any of the values.
+A = ANY (subquery)      Evaluates to **TRUE** when A is equal to any of the values.
 
-                        .. note:: This form is equivalent to A IN (...).
-A <> ANY (...)          Evaluates to **TRUE** when A doesn't match one or more values.
-A < ANY (...)           Evaluates to **TRUE** when A is smaller than the biggest value.
+                        .. note:: This form is equivalent to A IN (subquery).
+A <> ANY (subquery)     Evaluates to **TRUE** when A doesn't match one or more values.
+A < ANY (subquery)      Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-spark-operator-comparison-any-end
@@ -1917,12 +1917,12 @@ Examples of **SOME** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = SOME (...)          Evaluates to **TRUE** when A is equal to any of the values.
+A = SOME (subquery)     Evaluates to **TRUE** when A is equal to any of the values.
 
-                        .. note:: This form is equivalent to A IN (...).
+                        .. note:: This form is equivalent to A IN (subquery).
 
-A <> SOME (...)         Evaluates to **TRUE** when A doesn't match one or more values.
-A < SOME (...)          Evaluates to **TRUE** when A is smaller than the biggest value.
+A <> SOME (subquery)    Evaluates to **TRUE** when A doesn't match one or more values.
+A < SOME (subquery)     Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-spark-operator-comparison-some-end
@@ -2393,7 +2393,7 @@ CONCAT()
 
 .. sql-spark-function-concat-start
 
-Use the **CONCAT(column1, column2, ..., columnN)** function to return a concatenation of all columns. This function returns **NULL** if any value of any field is **NULL**. Use the **COALESCE()** function to map fields to zero-length string values prior to using this function.
+Use the **CONCAT(column1, column2, columnN)** function to return a concatenation of all columns. This function returns **NULL** if any value of any field is **NULL**. Use the **COALESCE()** function to map fields to zero-length string values prior to using this function.
 
 .. sql-spark-function-concat-end
 
@@ -3115,7 +3115,7 @@ LEAST()
 
 .. sql-spark-function-least-start
 
-Use the **LEAST(column_name, column_name, ...)** function to return the column with the lowest value among the values of all named columns.
+Use the **LEAST(column_name, column_name)** function to return the column with the lowest value among the values of all named columns.
 
 .. sql-spark-function-least-end
 
@@ -3476,7 +3476,7 @@ RANK()
 
 .. sql-spark-function-rank-start
 
-Use the **RANK(value, value, ...)** function to return the rank of a value in a group of values. The result is one plus the number of rows preceding or equal to the current row.
+Use the **RANK(value, value)** function to return the rank of a value in a group of values. The result is one plus the number of rows preceding or equal to the current row.
 
 .. sql-spark-function-rank-end
 

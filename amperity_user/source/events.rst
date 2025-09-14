@@ -41,7 +41,7 @@ Your brand may need to experiment with how offline events are provided to the ma
 
 .. _offline-events-destinations:
 
-Send offline events to ...
+Send offline events
 ==================================================
 
 .. offline-events-start

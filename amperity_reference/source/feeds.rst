@@ -317,6 +317,8 @@ Semantic tagging works like this:
 #. A field in the customer's system named "email_address1" stores an individual's primary email address.
 #. And so on.
 
+.. vale off
+
 A feed would apply these semantic tags similar to:
 
 .. list-table::
@@ -337,6 +339,8 @@ A feed would apply these semantic tags similar to:
      - email
    * - ...
      - ...
+
+.. vale on
 
 .. feeds-semantic-tags-end
 

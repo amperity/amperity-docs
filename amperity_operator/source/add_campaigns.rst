@@ -196,7 +196,7 @@ The following columns must exist in the following tables as an output of the Sti
    :header-rows: 1
 
    * - Column Name
-     - Required for ...
+     - Required for
      - Description
    * - **address**
      - **Campaigns** page

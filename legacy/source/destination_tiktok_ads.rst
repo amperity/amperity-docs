@@ -109,7 +109,7 @@ Get details
 
        If a custom audience already exists, the list of customers in that audience will be updated to match the list sent from Amperity. If a custom audience does not exist, Amperity will add it. Amperity does not delete custom audiences.
 
-       .. important:: A custom audience name may contain up to 400 visible characters, after which the name will be truncated to blank characters followed by "...".
+       .. important:: A custom audience name may contain up to 400 visible characters, after which the name will be truncated to blank characters followed by ``...``.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

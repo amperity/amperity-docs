@@ -180,7 +180,7 @@ The following columns are required by predictive models and must exist in the fo
    :header-rows: 1
 
    * - Column Name
-     - Required for ...
+     - Required for
      - Description
    * - **amperity_id**
      - Predictive models

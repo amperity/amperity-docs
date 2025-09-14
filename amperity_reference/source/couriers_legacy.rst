@@ -258,13 +258,13 @@ Date components act as placeholders for months, days, and years. Real values are
      - Examples
    * - **yyyy**
      - 4-digit year
-     - 2020, 2021, ...
+     - 2020, 2021, 2022
    * - **MM**
      - 2-digit month
-     - 01, 02, ... 12
+     - 01, 02, 03
    * - **dd**
      - 2-digit date
-     - 01, 02, ... 31
+     - 01, 02, 03, 04
 
 A courier that runs using this pattern:
 

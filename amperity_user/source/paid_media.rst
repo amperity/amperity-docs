@@ -262,12 +262,12 @@ What type of profile to send?
 
 .. _paid-media-destinations:
 
-Activate audiences with ...
+Activate audiences
 ==================================================
 
 .. paid-media-activate-customers-start
 
-There are many ways to activate customers across the paid media landscape. The first step is the most important: build audiences against complete customer profiles built from first-party data.
+There are many ways to activate audiences across the paid media landscape. The first step is the most important: build audiences against complete customer profiles built from first-party data.
 
 This approach leads to:
 

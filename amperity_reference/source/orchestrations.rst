@@ -198,7 +198,7 @@ Amperity sends the results to any number of downstream workflows via orchestrati
 .. orchestrations-run-steps-start
 
 #. From the **Destinations** page, open the menu for an orchestration, and then select **Run**.
-#. The **Status** column for the orchestration group will update to say "Waiting to start...", after which the notifications pane will update to include a notification that shows the status of the orchestration.
+#. The **Status** column for the orchestration group will update to say "Waiting to start", after which the notifications pane will update to include a notification that shows the status of the orchestration.
 #. When the orchestration has run successfully, its status is updated to "Completed".
 
 .. orchestrations-run-steps-end

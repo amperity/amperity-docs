@@ -190,7 +190,7 @@ You can add a query output to a segment from the **Segment Editor**.
 #. From the **Condition** menu, select a condition.
 #. From the value menu, either select a value *or* search for a value in the search field.
 #. Click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
+#. From the **Condition** list, select **Is a member of**.
 #. From the **Customer Lists** list, in the **Queries** section, select a query output.
 
    .. note:: To delete a segment associated with a query output, you will need to first delete the query output before being able to delete the segment.
@@ -255,7 +255,7 @@ You can add an uploaded file to a segment from the **Segment Editor**.
 #. From the **Condition** menu, select a condition.
 #. From the value menu, either select a value *or* search for a value in the search field.
 #. Click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
+#. From the **Condition** list, select **Is a member of**.
 #. From the **Customer Lists** list, in the **File Uploads** section, select an uploaded file output.
 
    .. note:: To delete a segment associated with a query output, you must first delete the uploaded file before being able to delete the segment.
@@ -283,7 +283,7 @@ You can view a list of uploaded files on the **Segment Editor**.
 .. file-uploads-view-file-segment-steps-start
 
 #. From the **Segment Editor** window, click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
+#. From the **Condition** list, select **Is a member of**.
 #. From the **Customer Lists** list, in the **File Uploads** section, view a list of uploaded files.
 
 .. file-uploads-view-file-segment-steps-end
