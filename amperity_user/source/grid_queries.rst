@@ -205,6 +205,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_koupon_media
 
+   .. grid-item-card:: LinkedIn DMP
+      :link-type: doc
+      :link: destination_linkedin_dmp
+
    .. grid-item-card:: Listrak
       :link-type: doc
       :link: destination_listrak
@@ -531,6 +535,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Infutor <destination_infutor>
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>
+   LinkedIn DMP <destination_linkedin_dmp>
    Listrak <destination_listrak>
    LiveRamp <destination_liveramp>
    Mailchimp <destination_mailchimp>

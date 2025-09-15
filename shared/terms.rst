@@ -3793,6 +3793,15 @@ A linkage table is a custom domain table that traces records back to their corre
 .. term-linkage-table-end
 
 
+**LinkedIn DMP**
+
+.. term-linkedin-dmp-start
+
+LinkedIn DMP aggregates LinkedIn advertiser data to enable business-to-business (B2B) marketers to identify and reach target audiences across different platforms and ad exchanges.
+
+.. term-linkedin-dmp-end
+
+
 **list price**
 
 .. term-list-price-start
