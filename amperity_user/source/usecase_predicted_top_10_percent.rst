@@ -105,7 +105,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - Send this list of customers to your favorite email marketing tool (i.e. Attentive) on the **Campaigns** page.
+     - Send this list of customers to your favorite email marketing tool. For example: Braze or Klaviyo.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

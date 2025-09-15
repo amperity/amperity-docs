@@ -453,7 +453,7 @@ Invalid account ID
 
 .. campaign-linkedin-dmp-workflow-actions-invalid-account-id-start
 
-|destination-name| requires a valid Linkedin account ID to be associated with an advertiser. When an advertiser is not associated with a LinkedIn account ID — such as when an advertiser LinkedIn ID has been deleted — Amperity will be unable to manage audiences within LinkedIn and a workflow action will be shown.
+|destination-name| requires a valid Linkedin account ID to be associated with an advertiser. When an advertiser is not associated with a LinkedIn account ID--such as when an advertiser LinkedIn ID has been deleted--Amperity will be unable to manage audiences within LinkedIn and a workflow action will be shown.
 
 .. campaign-linkedin-dmp-workflow-actions-invalid-account-id-end
 

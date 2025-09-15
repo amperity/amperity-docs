@@ -162,7 +162,7 @@ Get details
 
        .. admonition:: What is the authentication subdomain for the SOAP base URI?
 
-          Your authentication subdomain is represented by a 28-character string that starts with the letters "mc", such as "mcabc123...". The subdomain is part of the SOAP base URI for |destination-name|.
+          Your authentication subdomain is represented by a 28-character string that starts with the letters "mc", such as "mcabc123". The subdomain is part of the SOAP base URI for |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -193,7 +193,7 @@ Get details
 
        .. admonition:: What is the SFTP hostname?
 
-          Your SFTP hostname is represented by the same 28-character string that starts with the letters "mc", such as "mcabc123...". This is the same 28-character string that represents the subdomain, which is part of the SOAP base URI for |destination-name|.
+          Your SFTP hostname is represented by the same 28-character string that starts with the letters "mc", such as "mcabc123". This is the same 28-character string that represents the subdomain, which is part of the SOAP base URI for |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

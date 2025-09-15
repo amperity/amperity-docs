@@ -1413,8 +1413,6 @@ Assign a unique separation key to each primary key to prevent clusters from bein
         - **pk**, **sk-brand-acme**
       * - **order_number**
         - **order-quantity**
-      * - etc.
-        - ...
 
    and for ACME Deluxe:
 
@@ -1428,8 +1426,6 @@ Assign a unique separation key to each primary key to prevent clusters from bein
         - **pk**, **sk-brand-acme-deluxe**
       * - **order_number**
         - **order-quantity**
-      * - etc.
-        - ...
 
 When **sk-brand-acme** and **sk-brand-acme-deluxe** appear in the same cluster, they will be scored as non-matching and the records will be separated.
 

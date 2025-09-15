@@ -20,7 +20,7 @@ Dormant customers
 
 .. usecase-dormant-customers-start
 
-A dormant customer is a person who hasn't made a purchase with your brand within a defined time period. Amperity defines a dormant customer as a customer who hasn't made a purchase within the previous 730 days (2 years).
+A dormant customer is a person who hasn't made a purchase with your brand within a defined time period. Amperity defines a dormant customer as a customer who hasn't made a purchase within the previous 730 days.
 
 .. usecase-dormant-customers-end
 

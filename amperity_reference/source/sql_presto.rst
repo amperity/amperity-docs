@@ -1878,9 +1878,9 @@ Examples of **ALL** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ALL (...)           Evaluates to **TRUE** when A is equal to all values.
-A <> ALL (...)          Evaluates to **TRUE** when A doesn't match any value.
-A < ALL (...)           Evaluates to **TRUE** when A is smaller than the smallest value.
+A = ALL (subquery)      Evaluates to **TRUE** when A is equal to all values.
+A <> ALL (subquery)     Evaluates to **TRUE** when A doesn't match any value.
+A < ALL (subquery)      Evaluates to **TRUE** when A is smaller than the smallest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-all-end
@@ -1910,11 +1910,11 @@ Examples of **ANY** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ANY (...)           Evaluates to **TRUE** when A is equal to any of the values.
+A = ANY (subquery)      Evaluates to **TRUE** when A is equal to any of the values.
 
-                        .. note:: This form is equivalent to A IN (...).
-A <> ANY (...)          Evaluates to **TRUE** when A doesn't match one or more values.
-A < ANY (...)           Evaluates to **TRUE** when A is smaller than the biggest value.
+                        .. note:: This form is equivalent to A IN (subquery).
+A <> ANY (subquery)     Evaluates to **TRUE** when A doesn't match one or more values.
+A < ANY (subquery)      Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-any-end
@@ -1944,12 +1944,12 @@ Examples of **SOME** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = SOME (...)          Evaluates to **TRUE** when A is equal to any of the values.
+A = SOME (subquery)     Evaluates to **TRUE** when A is equal to any of the values.
 
-                        .. note:: This form is equivalent to A IN (...).
+                        .. note:: This form is equivalent to A IN (subquery).
 
-A <> SOME (...)         Evaluates to **TRUE** when A doesn't match one or more values.
-A < SOME (...)          Evaluates to **TRUE** when A is smaller than the biggest value.
+A <> SOME (subquery)    Evaluates to **TRUE** when A doesn't match one or more values.
+A < SOME (subquery)     Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-some-end
@@ -2352,7 +2352,7 @@ COALESCE()
 
 .. sql-presto-function-coalesce-start
 
-Use the **COALESCE(value1, value2[, ...])** function to return the first non-null value in the argument list. Arguments are only evaluated if necessary.
+Use the **COALESCE(value1, value2)** function to return the first non-null value in the argument list. Arguments are only evaluated if necessary.
 
 .. sql-presto-function-coalesce-end
 
@@ -2364,7 +2364,7 @@ CONCAT()
 
 .. sql-presto-function-concat-start
 
-Use the **CONCAT(array1, array2, ...)** function to concatenate a set of arrays into a single value that can be used elsewhere in a SQL query.
+Use the **CONCAT(array1, array2)** function to concatenate a set of arrays into a single value that can be used elsewhere in a SQL query.
 
 .. sql-presto-function-concat-end
 
@@ -2800,7 +2800,7 @@ GREATEST()
 
 .. sql-presto-function-greatest-start
 
-Use the **GREATEST(column_name, column_name, ...)** function to return the column with the greatest value among the values of all named columns.
+Use the **GREATEST(column_name, column_name)** function to return the column with the greatest value among the values of all named columns.
 
 .. sql-presto-function-greatest-end
 
@@ -2827,7 +2827,7 @@ LEAST()
 
 .. sql-presto-function-least-start
 
-Use the **LEAST(column_name, column_name, ...)** function to return the column with the lowest value among the values of all named columns.
+Use the **LEAST(column_name, column_name)** function to return the column with the lowest value among the values of all named columns.
 
 .. sql-presto-function-least-end
 

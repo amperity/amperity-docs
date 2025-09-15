@@ -55,7 +55,7 @@ Advantages of Amperity Bridge include:
 
 .. _bridge-sync-data-with:
 
-Sync data with ...
+Sync data
 ==================================================
 
 .. bridge-sync-data-with-start

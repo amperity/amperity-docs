@@ -20,7 +20,7 @@ Denormalized records
 
 .. stitch-qa-query-denormalized-records-start
 
-Use this query to look for foreign key clusters with large row expansions for denormalized records. This query performs 3x3x3 or 5x5x5 denormalization with a maximum of five rows that contain columns for email, phone, and address values and provides a condensed option for examining PII values.
+Use this query to look for foreign key clusters with large row expansions for denormalized records. This query performs "3 times 3 times 3" or "5 times 5 times 5" denormalization with a maximum of five rows that contain columns for email, phone, and address values and provides a condensed option for examining PII values.
 
 .. stitch-qa-query-denormalized-records-end
 

@@ -64,11 +64,11 @@ Throtle matching keys
 
 Throtle uses precision-level matching at an individual level for its matching process. The following identifiers are used as matching keys in |destination-name|:
 
-#. Email address fields ("Email 1", "Email 2", "Email 3", ...)
-#. First Name, Last Name, and full postal address ("Street Address 1", "Street Address 2", "City", "State", and "Zip Code")
-#. Phone numbers ("Telephone") 
-#. Mobile advertising IDs ("MAID 1", "MAID 2", "MAID 3", ...); examples of a mobile advertising ID include Identifier for Advertisers (IDFA) and Google Advertising ID (GAID) 
-#. IP addresses in either IPv4 or IPv6 format ("IP Address")
+#. Email address fields, such as "Email 1", "Email 2", and "Email 3"
+#. First Name, Last Name, and full postal address, including "Street Address 1", "Street Address 2", "City", "State", and "Zip Code"
+#. Phone numbers: "Telephone"
+#. Mobile advertising IDs, such as "MAID 1", "MAID 2", and "MAID 3". Examples of a mobile advertising IDs include Identifier for Advertisers (IDFA) and Google Advertising ID (GAID) 
+#. IP addresses in either IPv4 or IPv6 format: "IP Address"
 
 .. sendto-throtle-build-query-matching-keys-end
 
@@ -96,7 +96,7 @@ Privacy Safe data processing
 
 The following identifiers are used as matching keys in |destination-name| for Privacy Safe data processing:
 
-#. Email address fields ("Email 1", "Email 2", "Email 3", ...)
+#. Email address fields ("Email 1", "Email 2", and "Email 3")
 
    .. important:: Email addresses must be hashed using SHA-256 when sending results for Privacy Safe data processing; clear text should be avoided.
 

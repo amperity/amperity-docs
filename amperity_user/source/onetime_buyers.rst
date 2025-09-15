@@ -66,7 +66,7 @@ What is a one-time buyer campaign?
 
 .. onetime-buyers-whatis-start
 
-A one-time buyer campaign (sometimes referred to as a "win-back campaign") is a campaign that seeks to turn single-purchase customers into repeat customers.
+A one-time buyer campaign, also known as a "win-back campaign", is a campaign that seeks to turn single-purchase customers into repeat customers.
 
 A one-time buyer campaign must first identify your customers who have purchased only one time, and then from that list of customers devise a strategy based on a combination of products, time windows, lookalike audiences, and marketing goals that will attempt to reach specific groups of one-time buyers with the right offers that encourage them to become repeat customers.
 
@@ -92,11 +92,11 @@ It can be hard to make a connection and the window of opportunity is often short
    :align: left
    :class: no-scaled-link
 
-The most important step to identify your one-time buyers is to consolidate all of your customer and transaction data into one location, including across marketing channels, purchase locations (points of sale, online, *and* in-store), and all of your brands.
+The most important step to identify your one-time buyers is to consolidate all of your customer and transaction data into one location, including across marketing channels, purchase locations, including points of sale, online, *and* in-store, and all of your brands.
 
 .. important:: One-time buyers can be harder to spot when looking at single-channel purchase patterns. For example: someone might look like a one-time buyer in a store, but have purchased online multiple times.
 
-Adding data from your email service provider (clicks, opens, sends, and so on) helps ensure that you know how to contact your customers during your one-time buyer campaign.
+Adding data from your email service provider, such as clicks, opens, and sends, helps ensure that you know how to contact your customers during your one-time buyer campaign.
 
 .. tip:: Plan to use personalization as part of your one-time buyer campaign. Use personalization to tailor your welcome series to your customers instead of applying a one-size-fits-all approach. Plan to use different tracks based on known buyer types, relevant products, and timely offers that have historically led to early engagement and to repeat customers.
 
@@ -126,7 +126,7 @@ You should expect to see around 75% of your customers be one-time buyers. Compar
 * Lookalike audiences
 * Discount-sensitive customers
 * Cross-channel purchase patterns
-* Seasonal shoppers (one-time seasonal customers return at a lower rate than customers acquired outside of seasonal shopping windows)
+* Seasonal shoppers. One-time seasonal customers return at a lower rate than customers acquired outside of seasonal shopping windows.
 
 Spend time evaluating these profiles and comparing them to your one-time buyer profiles to understand what types of purchases they made, their average order size, and the locations from which they purchased, and what patterns might exist during a successful journey from one-time to repeat customer.
 
@@ -187,7 +187,7 @@ Use the knowledge you have gained from previous one-time buyer campaigns to help
 
 * Look for patterns that lead to repeat customers.
 * Look for consistencies within the customers who never purchased again.
-* Compare customers that never purchased again to find out if they fall into an even longer timeline, such as 1 year, 2 years, or 3 years. (There is a small percentage of "one-time buyers" who will become repeat customers on longer timelines.)
+* Compare customers that never purchased again to find out if they fall into an even longer timeline, such as 1 year, 2 years, or 3 years. There is a small percentage of "one-time buyers" who will become repeat customers on longer timelines.
 
 .. onetime-buyers-howto-expand-end
 

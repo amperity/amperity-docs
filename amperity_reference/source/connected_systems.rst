@@ -443,7 +443,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Google Customer Match**
      - 
      - |system-yes|
-     - Send segment data to Google Customer Match using the Google Audience Partner API. Google Customer Match enables advertising across Google – including search (Google Ads) and display advertising (DV360), the Shopping tab, Gmail, and YouTube.
+     - Send segment data to Google Customer Match using the Google Audience Partner API. Google Customer Match enables advertising across Google, including search (Google Ads) and display advertising (DV360), the Shopping tab, Gmail, and YouTube.
 
    * - **Google Play**
      - |system-yes|

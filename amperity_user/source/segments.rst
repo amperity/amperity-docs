@@ -23,7 +23,7 @@ Build segments
 
 Sending campaigns from Amperity to downstream marketing workflows is a combination of:
 
-* A segment (this topic) that defines the audience that you will use with your campaign.
+* A segment that defines the audience that you will use with your campaign.
 * A :doc:`campaign <campaigns>` that breaks that audience down into sub-audiences that align to your marketing strategies and goals.
 * A set of :doc:`destinations <destinations>` that specify the locations and channels to which you will send each sub-audience.
 
@@ -131,7 +131,7 @@ The following sections describe the individual elements within the **Segment Edi
 
           #. Files that have been uploaded by you directly to the **Segment Editor**. These attributes are only available when files have been uploaded.
 
-          Add attributes to your segment by clicking **Add attribute**, choosing a source (table, purchase behavior, custom table, or uploaded file), and then selecting an attribute.
+          Add attributes to your segment by clicking **Add attribute**, choosing a source--table, purchase behavior, custom table, or uploaded file--and then selecting an attribute.
 
           Some attributes, such as those that have "true" or "false" values will ask you to pick a value right away. Most attributes, such as those with string values, dates and times, amounts, and quantities, have additional fields that are available after the attribute is added to your segment.
 

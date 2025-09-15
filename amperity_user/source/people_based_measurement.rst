@@ -199,6 +199,6 @@ where the total revenue is equal to the number of customers in each subset of th
 
    30,000 * ($0.05 - $0.05) + 45,000 * ($0.15 - $0.08) = $3150
 
-Comparing the entire control group (opted out *and* opted in) to both treatment groups (opted out *and* opted in) shows the same results as comparing only the groups who had opted in.
+Comparing the entire control group--opted out *and* opted in--to both treatment groups--opted out *and* opted in--shows the same results as comparing only the groups who had opted in.
 
 .. people-based-measurement-another-example-end

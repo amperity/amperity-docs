@@ -226,12 +226,12 @@ Apache Spark
 
 .. send-data-to-amperity-apache-spark-start
 
-Apache Spark prefers load sizes to range between 1-10000 files and file sizes to range between 1-1000 MB. Apache Spark will parse 100 x 10 MB files faster than 10 x 100 MB files and much faster than 1 x 10000 MB file. When loading large files to Amperity, as a general guideline to optimize the performance of Apache Spark, look to create situations where:
+Apache Spark prefers load sizes to range between 1-10000 files and file sizes to range between 1-1000 MB. Apache Spark will parse one hundred 10 MB files faster than ten 100 MB files and much faster than one 10000 MB file. When loading large files to Amperity, as a general guideline to optimize the performance of Apache Spark, look to create situations where:
 
 * The number of individual files is below 3000.
 * The range of individual file sizes is below 100 MB.
 
-Put differently, Apache Spark will parse 3000 x 100 MB files faster than 300 x 1000 MB files and much faster than 30 x 10000 MB files.
+Put differently, Apache Spark will parse three thousand 100 MB files faster than three hundred 1000 MB files and much faster than thirty 10000 MB files.
 
 .. send-data-to-amperity-apache-spark-end
 

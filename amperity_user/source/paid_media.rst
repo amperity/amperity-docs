@@ -231,7 +231,7 @@ Amperity builds the best profiles for getting the best match rates across the pa
 
 The **Merged Customers** table contains your brand's best customer profiles, including each customer's best email address, best phone number, best physical address, best name, and so on. When your brand uses this table to send audiences to downstream marketing applications, one record is sent for each customer.
 
-The **Unified Paid Media** table contains all known profile data for each of your brand's customers. For example, some customers have a primary email address they use for personal communication, but then use a variation (or completely different email address) to sign up on social media. This variation may not be that customer's "best" email address for your brand's marketing campaigns, but it might be right email address for matching with that customer on Facebook or TikTok or Pinterest.
+The **Unified Paid Media** table contains all known profile data for each of your brand's customers. For example, some customers have a primary email address they use for personal communication, but then use a variation or completely different email address to sign up on social media. This variation may not be that customer's "best" email address for your brand's marketing campaigns, but it might be right email address for matching with that customer on Facebook or TikTok or Pinterest.
 
 .. admonition:: Match rates vs. matched customers
 
@@ -262,12 +262,12 @@ What type of profile to send?
 
 .. _paid-media-destinations:
 
-Activate audiences with ...
+Activate audiences
 ==================================================
 
 .. paid-media-activate-customers-start
 
-There are many ways to activate customers across the paid media landscape. The first step is the most important: build audiences against complete customer profiles built from first-party data.
+There are many ways to activate audiences across the paid media landscape. The first step is the most important: build audiences against complete customer profiles built from first-party data.
 
 This approach leads to:
 
@@ -375,7 +375,7 @@ Owned media indicators
 
 .. paid-media-measure-performance-indicators-owned-start
 
-Owned media indicators can help measure how often customers are interacting with your campaigns. Engagement metrics include clickstream (for mobile and website), email, and SMS. Direct attribution exists when your customers opened an email or SMS message, visited your website, app, or store, and then made a purchase.
+Owned media indicators can help measure how often customers are interacting with your campaigns. Engagement metrics include clickstream for mobile and website, email, and SMS. Direct attribution exists when your customers opened an email or SMS message, visited your website, app, or store, and then made a purchase.
 
 These indicators are already available to you within Amperity if you have made available to Amperity data sources that contain purchase histories (orders and items) and customer engagement (clickstream data for websites and apps, email and SMS engagement, and so on).
 

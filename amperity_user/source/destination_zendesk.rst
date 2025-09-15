@@ -109,7 +109,7 @@ Results that are sent to Zendesk must be correctly mapped to the following attri
      - String
      - Optional. The Zendesk User API contains 37 fields, most of which are not required. The Zendesk User API supports custom fields as long as they are prefixed with **user_fields.** in the field name. For example: **user_fields.city**.
 
-       .. note:: Fields submitted to Zendesk that are not built into the Zendesk User API or are not formatted as valid custom fields (including misspellings) will be ignored.
+       .. note:: Fields submitted to Zendesk that are not built into the Zendesk User API or are not formatted as valid custom fields, including misspellings, are ignored.
 
 .. sendto-zendesk-map-results-end
 

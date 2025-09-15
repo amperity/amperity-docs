@@ -24,7 +24,7 @@ Sending campaigns from Amperity to downstream marketing workflows is a combinati
 
 * A :doc:`segment <segments>` that defines the audience that you will use with your campaign.
 * A :doc:`campaign <campaigns>` that breaks that audience down into sub-audiences that align to your marketing strategies and goals.
-* A set of destinations (this topic) that specify the locations and channels to which you will send each sub-audience.
+* A set of destinations that specify the locations and channels to which you will send each sub-audience.
 
 This is part three of a series of topics that describes how this works.
 

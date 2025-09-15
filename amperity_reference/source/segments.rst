@@ -147,7 +147,7 @@ Up to five segments may be configured to show in the list of recommended segment
           :align: left
           :class: no-scaled-link
 
-       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." dropdown.
+       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for" dropdown.
 
        .. image:: ../../images/mockup-segments-recommended-choose-database.png
           :width: 420 px

@@ -65,7 +65,7 @@ Queries
 
 .. _grid-queries-destinations:
 
-Send query results to ...
+Send query results
 ==================================================
 
 .. grid-queries-destinations-about-start

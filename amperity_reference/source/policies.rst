@@ -1459,7 +1459,7 @@ The following table shows which policies enable user actions within the **Segmen
      - |policy|
      - |policy|
 
-   * - Save segment as ...
+   * - Save segment as
      - 
      - |policy|
      - |policy|

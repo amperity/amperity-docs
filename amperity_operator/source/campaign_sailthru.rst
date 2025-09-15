@@ -87,7 +87,7 @@ Get details
              :start-after: .. credential-sailthru-api-find-key-and-secret-start
              :end-before: .. credential-sailthru-api-find-key-and-secret-end
 
-       .. tip:: You can find the API key and secret after you log in to |destination-name|. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| are available after you authenticate to the |destination-name| API. (See the first item under "Setup – API & Postbacks" on that page.)
+       .. tip:: You can find the API key and secret after you log in to |destination-name|. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| are available after you authenticate to the |destination-name| API. (See the first item under "Setup: API & Postbacks" on that page.)
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

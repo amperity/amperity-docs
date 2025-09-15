@@ -650,7 +650,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :width: 140 px
           :align: left
      - |fivetran_google_sheets|
-     - Google Sheets lets you create a new spreadsheet and edit it with others at the same time — from your computer, phone or tablet.
+     - Google Sheets lets you create a new spreadsheet and edit it with others at the same time from your computer, phone or tablet.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-heap.svg
           :figclass: light-only

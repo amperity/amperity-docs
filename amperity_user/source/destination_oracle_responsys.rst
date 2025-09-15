@@ -31,7 +31,7 @@ Send query results to Oracle Responsys
 
 .. sendto-oracle-responsys-important-start
 
-.. important:: After files are delivered to |destination-name| from Amperity you must configure an job (one time or recurring) that imports this data into a :ref:`profile list or profile extension table <sendto-oracle-responsys-import>` using `Connect <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link|.
+.. important:: After files are delivered to |destination-name| from Amperity you must configure an job--one time or recurring-- that imports this data into a :ref:`profile list or profile extension table <sendto-oracle-responsys-import>` using `Connect <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link|.
 
 .. sendto-oracle-responsys-important-end
 
@@ -163,9 +163,9 @@ After these files are delivered to |destination-name| you must import this data 
 #. Set the target definition to be a profile list or a profile extension table.
 #. Map the columns from the file sent from Amperity to the fields in the target definition.
 
-   .. important:: These fields **must** match the fields sent from Amperity, regardless of if it is from a campaign or if it is from an orchestration (queries or database export).
+   .. important:: These fields **must** match the fields sent from Amperity, regardless of if it is from a campaign or if it is from an orchestration.
 #. Select any post processing action to take after the job is successful, such as launching a campaign from |destination-name|.
-#. Configure email notification (success or failure) for this job.
+#. Configure email notifications for this job.
 #. Schedule the job to run once or on a recurring schedule.
 
 .. sendto-oracle-responsys-import-end

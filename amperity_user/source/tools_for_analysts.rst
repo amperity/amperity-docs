@@ -49,7 +49,7 @@ Use Amperity to:
 
 The SQL query editor enable workflows, such as:
 
-* Linking the Amperity ID (first-party) to third-party provider person IDs
+* Linking the Amperity ID, a first-party identifier, to third-party provider person IDs
 * Enriching third-party non-PII data for customer analysis, segmentation, and targeting
 * Standardizing data for certain PII details
 * Using data hygiene to verify accuracy of PII with third-party data providers
@@ -209,7 +209,7 @@ There are four groups of tables in this diagram:
           :start-after: .. term-stitch-qa-start
           :end-before: .. term-stitch-qa-end
 
-       Stitch QA activities rely on a series of tables: **Unified Coalesced**, **Unified Scores**, **Detailed Examples**, **Unified Preprocessed Raw**, **Unified Changes Clusters**, and **Unified Changes PKs**. These tables are the basis for the Stitch QA process; the specific use of individual tables will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
+       Stitch QA activities rely on a series of tables: **Unified Coalesced**, **Unified Scores**, **Detailed Examples**, **Unified Preprocessed Raw**, **Unified Changes Clusters**, and **Unified Changes PKs**. These tables are the basis for the Stitch QA process; the specific use of individual tables will vary from tenant to tenant. Together they provide visibility into how Amperity grouped or did not group individual customer records to a single Amperity ID.
 
    * - Predictive tables
 
@@ -350,7 +350,7 @@ About this topic collection
 
 .. tools-for-analysts-about-this-collection-start
 
-The left-side navigation (from top to bottom) in this topic collection uses a verb-based approach to loosely organize around the series of actions that you may do when building queries, and then sending those results to downstream workflows.
+The left-side navigation uses a verb-based approach to loosely organize around the series of actions that you may do when building queries, and then sending those results to downstream workflows.
 
 The left-side navigation has sections for the following types of activities:
 
@@ -382,7 +382,7 @@ The numbers in the previous diagram represent a scenario that builds a query, an
 
 #. Open Amperity and review databases and tables.
 #. Build a query that returns the right set of data to support your downstream workflow.
-#. Send the results of that query to any configured destination. (Query results are sent to a single destination.)
+#. Send the results of that query to any configured destination. Query results are sent to a single destination.
 
 .. tools-for-analysts-example-workflow-end
 

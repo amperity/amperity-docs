@@ -168,7 +168,7 @@ The customerID must be at least 8 characters. Use a **CASE** statement to ensure
      ELSE id_from_amperity_table
    END AS "customerId"
 
-and then join attributes to this ID, including the Amperity ID (as an attribute in the output).
+and then join attributes to this ID, including the Amperity ID as an attribute in the output.
 
 .. sendto-optimizely-build-query-customer-profile-map-id-end
 
@@ -180,7 +180,7 @@ Define a query
 
 .. sendto-optimizely-build-query-customer-profile-define-query-start
 
-The following **SELECT** statement collects all the distinct IDs from Table O to associate with the |destination-name| **customerId**, ensures they are at least 8 characters, collects attributes from the customer 360 profile (represented by C) and Table A (represented by A), and then joins the attributes, along with the Amperity ID to a table that uses the **customerId** as the unique ID.
+The following **SELECT** statement collects all the distinct IDs from Table O to associate with the |destination-name| **customerId**, ensures they are at least 8 characters, collects attributes from the customer 360 profile, represented by C, and Table A, represented by A, and then joins the attributes, along with the Amperity ID to a table that uses the **customerId** as the unique ID.
 
 .. important:: For each row in the example, the field names that are represented by **AS "Optimizely_abc"** and **AS "Optimizely_123"** represent the field names to which the query maps data as they are defined in |destination-name|. These must match.
 

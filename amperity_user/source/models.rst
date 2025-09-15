@@ -31,7 +31,7 @@ Predictive models
    #. **Customer 360**
    #. **Merged Customers**
    #. **Transaction Attributes Extended**
-   #. **Unified Itemized Transactions** (updated to include product catalogs)
+   #. **Unified Itemized Transactions**. Updated to include product catalogs.
    #. **Unified Transactions**
 
 .. models-note-end
@@ -56,7 +56,7 @@ Common inputs to models
 
 .. models-common-inputs-start
 
-Columns from the **Merged Customers**, **Unified Transactions**, and **Unified Itemized Transactions** (including product catalogs) are used as inputs to predictive modeling. For multi-brand tenants, the **amperity_id** column from the **Customer 360** table is also used as an input to predictive modeling.
+Columns from the **Merged Customers**, **Unified Transactions**, and **Unified Itemized Transactions**, including product catalogs, are used as inputs to predictive modeling. For multi-brand tenants, the **amperity_id** column from the **Customer 360** table is also used as an input to predictive modeling.
 
 The following columns are common inputs to predictive models:
 

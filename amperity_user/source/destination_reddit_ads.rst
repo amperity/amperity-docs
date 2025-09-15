@@ -126,8 +126,8 @@ The following example describes the steps required to send an audience from Ampe
 
           This example does the following: returns a list of hashed email addresses from the **Merged Customers** table, which is the source of truth for personally identifiable information (PII) within your customer profiles, and then filters that list to:
 
-          #. Ensure these email addresses are contactable (using the **contactable_email** attribute from the **Customer Attributes** table).
-          #. Find customers who have purchased at least four times *and* spent at least $400 in the previous year (using the **L12M_order_frequency** and **L12M_order_revenue** attributes from the **Transaction Attributes Extended** table).
+          #. Ensure these email addresses are contactable using the **contactable_email** attribute from the **Customer Attributes** table.
+          #. Find customers who have purchased at least four times *and* spent at least $400 in the previous year using the **L12M_order_frequency** and **L12M_order_revenue** attributes from the **Transaction Attributes Extended** table.
 
 
    * - .. image:: ../../images/steps-03.png
