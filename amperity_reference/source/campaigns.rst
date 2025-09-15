@@ -249,7 +249,7 @@ Control groups
 
 .. campaigns-control-groups-start
 
-A campaign typically has a single control group, unless sub-audiences are defined within the campaign. Each sub-audience may contain a control group.
+A campaign typically has a single control group, unless sub-audiences are defined within the campaign. Each sub-audience may have a control group.
 
 .. campaigns-control-groups-end
 
@@ -274,6 +274,14 @@ A campaign typically has a single control group, unless sub-audiences are define
    #. And the following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
 
 .. campaigns-control-groups-consistent-membership-end
+
+.. campaigns-control-groups-zero-membership-start
+
+.. admonition:: What if a control group consistently has zero members?
+
+   When small audiences are configured with control group percentages below 10% it is possible for a control groups to have zero members. For small audiences that consistently see zero, or an unusual low percentage, adjust the size of the control group closer to 10%.
+
+.. campaigns-control-groups-zero-membership-end
 
 
 .. _campaigns-default-attributes:
