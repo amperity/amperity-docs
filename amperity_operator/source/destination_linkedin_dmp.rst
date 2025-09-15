@@ -28,15 +28,28 @@
 Configure destinations for LinkedIn DMP
 ==================================================
 
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-linkedin-dmp-start
+   :end-before: .. term-linkedin-dmp-end
+
 .. destination-linkedin-dmp-start
 
-The |destination-name| connector lets users activate audience segments from Amperity to market to LinkedIn members. 
+Use the |destination-name| connector to build audiences in Amperity, and then activate those audiences in |destination-name| to members of LinkedIn.
 
-.. destination-linkedin-dmp-start
+.. destination-linkedin-dmp-end
 
 .. destination-linkedin-dmp-about-start
 
 This connector automates uploading data into the |destination-name| as a CSV file of contacts to match with LinkedIn members, letting you create new audience segments to target specific accounts for LinkedIn advertising campaigns.
+
+The CSV file may contain the following contact information fields:
+
+* **email**
+* **title**
+* **employeecountry**
+* **company**
+
+The CSV file must have between 300 and 300,000 contacts.
 
 .. destination-linkedin-dmp-about-end
 
@@ -117,7 +130,7 @@ Get details
           :class: no-scaled-link
      - **Dataset size requirements**
 
-          LinkedIn requires the uploaded dataset to be `between 300 and 300,000 rows. <https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-list-uploads?view=li-lms-2025-01&tabs=curl#content-requirements-1>`__ |ext_link|
+       LinkedIn requires the uploaded dataset to be `between 300 and 300,000 rows. <https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-list-uploads?view=li-lms-2025-01&tabs=curl#content-requirements-1>`__ |ext_link|
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -126,7 +139,7 @@ Get details
           :class: no-scaled-link
      - **List attach limit**
 
-          A given segment `can only have one list attached to it. <https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-list-uploads?view=li-lms-2025-01&tabs=http#attach-list-to-dmp-segment>`__ |ext_link| Updating a segment deletes the current list and attaches the new list.
+       A given segment `can only have one list attached to it. <https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-list-uploads?view=li-lms-2025-01&tabs=http#attach-list-to-dmp-segment>`__ |ext_link| Updating a segment deletes the current list and attaches the new list.
 
 
 .. _destination-linkedin-dmp-credentials:
@@ -299,15 +312,15 @@ Add destination
 
        **Segment name** (Required at orchestration)
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-linkedin-dmp-segment-name-start
-          :end-before: .. setting-linkedin-dmp-segment-name-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-linkedin-dmp-segment-name-start
+             :end-before: .. setting-linkedin-dmp-segment-name-end
 
        **Segment description** (Required at orchestration)
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-linkedin-dmp-segment-description-start
-          :end-before: .. setting-linkedin-dmp-segment-description-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-linkedin-dmp-segment-description-start
+             :end-before: .. setting-linkedin-dmp-segment-description-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -479,7 +492,7 @@ Invalid fields
 To resolve this error, verify that the list you want to upload contains only allowed fields.
 
 #. Open the **Activations** page and locate the segment used with this workflow.
-#. Confirm that fields included are only 1) **email** or 2) **firstname** and **lastname**.   
+#. Confirm that fields included are only 1) **email** or 2) **firstname** and **lastname**.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-linkedin-dmp-workflow-actions-invalid-fields-end

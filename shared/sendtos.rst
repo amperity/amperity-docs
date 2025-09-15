@@ -34,8 +34,7 @@ The default audience list in |destination-name| requires only an email address. 
    :linenos:
 
    SELECT
-     ,amperity_id AS "Amperity ID"
-     ,email AS "Email"
+     email AS email
    FROM Customer360
 
 .. sendtos-build-query-email-only-end

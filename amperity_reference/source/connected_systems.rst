@@ -540,6 +540,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from LinkedIn using Fivetran.
 
+   * - **LinkedIn DMP**
+     - 
+     - |system-yes|
+     - Send audiences to LinkedIn DMP from Amperity.
+
    * - **Listrak**
      - |system-yes|
      - |system-yes|

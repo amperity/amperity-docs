@@ -75,6 +75,20 @@ Get details
              :end-before: .. credential-salesforce-sales-cloud-security-token-end
 
 
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 2.
+          :align: center
+          :class: no-scaled-link
+     - **Required configuration settings**
+
+       **Salesforce object**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-salesforce-sales-cloud-salesforce-object-start
+             :end-before: .. setting-salesforce-sales-cloud-salesforce-object-end
+
+
 .. destination-salesforce-sales-cloud-get-details-end
 
 

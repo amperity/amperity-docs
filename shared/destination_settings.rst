@@ -2153,7 +2153,7 @@ The operation may be one of the following: "Insert", "Upsert" (recommended), "Up
 
 .. setting-salesforce-sales-cloud-salesforce-object-start
 
-The name of the object in Salesforce Sales Cloud to which Amperity sends data.
+The name of the object, or audience list, in Salesforce Sales Cloud to which Amperity sends data. For example: "Contact", "Customers", or "Amperity_List__c".
 
 .. setting-salesforce-sales-cloud-salesforce-object-end
 

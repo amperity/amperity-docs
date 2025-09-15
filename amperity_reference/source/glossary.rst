@@ -2589,6 +2589,14 @@ L
       :end-before: .. term-linkage-table-end
 
 
+.. _l-linkedin-dmp:
+
+**LinkedIn DMP**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-linkedin-dmp-start
+      :end-before: .. term-linkedin-dmp-end
+
+
 .. _l-list-price:
 
 **list price**
