@@ -416,7 +416,7 @@ The address standardization data asset is available from an Amazon S3 bucket nam
 
 Add the address standardization data asset to your tenant by following the steps for :ref:`adding a data source and feed from an Amazon S3 bucket <source-amazon-s3-add-data-source>`. Click **Browse** and select the "address_standardization_conversion.csv" file from the **Amperity Data Assets** Amazon S3 bucket, which is located in the "householding" directory in the bucket.
 
-Use all three fields – **before**, **convert**, and **type** as the primary key.
+Use all three fields--**before**, **convert**, and **type**--as the primary key.
 
 Add a passthrough table to your customer 360 database named **LookupTables AddressStandardization**, and then run your customer 360 database to build the **LookupTables AddressStandardization** table.
 
