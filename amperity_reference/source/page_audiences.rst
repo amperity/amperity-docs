@@ -78,10 +78,3 @@ A segment defines a specific attribute profile for use with a marketing campaign
       :link: segments_editor
 
 .. audiences-page-segments-grid-end
-
-
-.. toctree::
-   :caption: Audiences page
-   :maxdepth: 2
-   :hidden:
-
