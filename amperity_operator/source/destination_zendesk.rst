@@ -113,7 +113,7 @@ Get details
           :class: no-scaled-link
      - **Required fields for Zendesk**
 
-       Be sure to send all fields from Amperity that will be required by |destination-name|.
+       Be sure to send all fields from Amperity that is required by |destination-name|.
 
        .. important:: Fields must exist in |destination-name| and should follow a "user_fields.[field_name]" naming pattern, where "field_name" is the name of the field that is sent to |destination-name| from Amperity.
 

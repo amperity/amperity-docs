@@ -69,7 +69,7 @@ Amperity provides direct connections to the most popular destinations across the
           :alt: Braze
           :align: center
           :class: no-scaled-link
-     - Offline events may be sent to Braze as :ref:`a set of custom attributes <destination-braze-custom-attributes>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Braze, in which case you will want to shape the output that is sent from Amperity to align to the names you already have in Braze.
+     - Offline events may be sent to Braze as :ref:`a set of custom attributes <destination-braze-custom-attributes>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Braze, in which case you shape the output that is sent from Amperity to align to the names you already have in Braze.
 
 
 .. _events-criteo:
@@ -115,7 +115,7 @@ Amperity provides direct connections to the most popular destinations across the
           :alt: Klaviyo
           :align: center
           :class: no-scaled-link
-     - Offline events may be sent to Klaviyo as :ref:`a set of custom fields <destination-klaviyo-customer-profile-parameters>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Klaviyo, in which case you will want to shape the output that is sent from Amperity to align to the names you already have in Klaviyo. Use the **properties** field to define the custom attributes as key-value pairs.
+     - Offline events may be sent to Klaviyo as :ref:`a set of custom fields <destination-klaviyo-customer-profile-parameters>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Klaviyo, in which case you shape the output that is sent from Amperity to align to the names you already have in Klaviyo. Use the **properties** field to define the custom attributes as key-value pairs.
 
 
 .. _events-meta-ads-manager:

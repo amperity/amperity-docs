@@ -108,6 +108,6 @@ Use customer ranking to define an audience using the top N customers. Use custom
 
 .. model-event-propensity-use-cases-customer-ranking-attribute-start
 
-The **Ranking** attribute in the **Event Propensity** table ranks customer scores by event. A rank that is less than or equal to X will provide the top N customers with a propensity for this event. Combine this attribute with the **Target Event** attribute to build customer rankings for a specific revenue-generating event. You can access this attribute directly from the segment editor.
+The **Ranking** attribute in the **Event Propensity** table ranks customer scores by event. A rank that is less than or equal to X provides the top N customers with a propensity for this event. Combine this attribute with the **Target Event** attribute to build customer rankings for a specific revenue-generating event. You can access this attribute directly from the segment editor.
 
 .. model-event-propensity-use-cases-customer-ranking-attribute-end

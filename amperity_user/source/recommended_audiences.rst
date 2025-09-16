@@ -127,7 +127,7 @@ Use fields in the product affinity table to build segments that contain the righ
 #. Start by associating product affinity to a smaller audience size, and then, depending on the goals of your campaign, increase the audience size until you have reached your campaign's circulation size and/or revenue goals.
 #. For further refinement you can compare the audience size to customer ranking. Increase or decrease the audience size by small amounts until the list of customers that fall within the desired ranking also matches the circulation size and/or revenue goals.
 
-You may also use audience size and customer ranking independently of each other, depending on what types of segments you want to build and what types of campaigns those segments will be associated with. For example, you can build a segment that uses ranking *or* audience size and not both.
+You may also use audience size and customer ranking independently of each other, depending on what types of segments you want to build and what types of campaigns those segments is associated with. For example, you can build a segment that uses ranking *or* audience size and not both.
 
 .. recommended-audiences-howto-end
 

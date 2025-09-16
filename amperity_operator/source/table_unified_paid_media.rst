@@ -403,7 +403,7 @@ You can configure the row limit by changing a value in the **pii_row_limit** com
 
    Adjust the row limit to control the size of the **Unified Paid Media** table, as required to support your brand's goals for match rates and customer matches in downstream marketing applications.
 
-   When an audiences is sent to a destination and that audience uses the **Unified Paid Media** table, only the fields that are supported by the downstream marketing application will be sent. For example, if a downstream marketing tool only requires email addresses, a row limit of 10 will send up to 10 email addresses *for each Amperity ID* that matched the audience that was built in Amperity.
+   When an audiences is sent to a destination and that audience uses the **Unified Paid Media** table, only the fields that are supported by the downstream marketing application is sent. For example, if a downstream marketing tool only requires email addresses, a row limit of 10 sends up to 10 email addresses *for each Amperity ID* that matched the audience that was built in Amperity.
 
 .. table-unified-paid-media-sql-query-optional-configure-row-limit-admonition-end
 

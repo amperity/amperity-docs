@@ -169,7 +169,7 @@ Snapchat schema types
 
 The following Amperity columns may be mapped to the corresponding schema type to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| using `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link|.
 
-.. note:: A row that contains a **NULL** value is automatically filtered out and will be shown in the error logs.
+.. note:: A row that contains a **NULL** value is automatically filtered out and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

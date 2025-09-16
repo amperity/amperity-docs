@@ -126,7 +126,7 @@ Use in Braze segments
 
 .. destination-braze-use-in-segmentss-start
 
-The list of custom attributes that is managed by Amperity is available from the **Data Settings** page in |destination-name|. Click **Data Settings** in the left-side navigation, and then choose **Custom Attributes**. This will open a page similar to:
+The list of custom attributes that is managed by Amperity is available from the **Data Settings** page in |destination-name|. Click **Data Settings** in the left-side navigation, and then choose **Custom Attributes**. This opens a page similar to:
 
 .. image:: ../../images/destination-braze-custom-attributes.png
    :width: 500 px
@@ -225,7 +225,7 @@ For example, ACME wants to manage custom attributes in |destination-name| by sen
 
 The **external_id** does not need to be associated with the Amperity ID. For example, if your brand has an internal identifier that you have pulled into Amperity, you can associate that identifier with the **external_id**.
 
-.. note:: You can make the query results available to campaigns if the query results are unique by Amperity ID. This will allow users of campaigns to select |destination-name| attributes when configuring which attributes are sent to |destination-name| for sub-audiences within your campaigns.
+.. note:: You can make the query results available to campaigns if the query results are unique by Amperity ID. This allows users of campaigns to select |destination-name| attributes when configuring which attributes are sent to |destination-name| for sub-audiences within your campaigns.
 
 .. sendto-braze-build-query-end
 

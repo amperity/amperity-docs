@@ -537,7 +537,7 @@ Customer 360
 
 .. data-tables-customer-360-note-start
 
-.. note:: The columns that appear in the **Customer 360** table will vary, depending on the SQL statement used to add columns to the table. The set of columns must include the Amperity ID and should include columns that contain profile (PII) data, along with columns that contain summary attributes for interaction records.
+.. note:: The columns that appear in the **Customer 360** table varies, depending on the SQL statement used to add columns to the table. The set of columns must include the Amperity ID and should include columns that contain profile (PII) data, along with columns that contain summary attributes for interaction records.
 
 .. data-tables-customer-360-note-end
 
@@ -1270,6 +1270,8 @@ The **EUID** table has the following columns:
 
 .. data-tables-euid-table-about-end
 
+.. vale off
+
 .. data-tables-euid-table-start
 
 .. list-table::
@@ -1284,7 +1286,9 @@ The **EUID** table has the following columns:
      - String
      - A unique identifier for the salt bucket that is used to ensure that expired EUID tokens are refreshed. This value is returned in the response from the **POST /identity/map** endpoint.
 
-       .. note:: Each EUID token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily. Amperity `monitors salt buckets <https://euid.eu/docs/guides/integration-advertiser-dataprovider-endpoints#5-monitor-for-salt-bucket-rotations-for-your-stored-raw-euids>`__ on a daily basis to determine which EUID tokens need to be refreshed.
+       .. note:: Each EUID token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily.
+
+          Amperity `monitors salt buckets <https://euid.eu/docs/guides/integration-advertiser-dataprovider-endpoints#5-monitor-for-salt-bucket-rotations-for-your-stored-raw-euids>`__ on a daily basis to determine which EUID tokens need to be refreshed.
 
 
    * - **Email**
@@ -1294,7 +1298,7 @@ The **EUID** table has the following columns:
 
    * - **Normalized Email**
      - String
-     - The normalized email address that was sent from Amperity to the **POST /identity/map** endpoint for mapping. This value is returned in the response from the **POST /identity/map** endpoint.
+     - The normalized email address sent from Amperity to the **POST /identity/map** endpoint for mapping. This value is returned in the response from the **POST /identity/map** endpoint.
 
 
    * - **EUID**
@@ -1302,6 +1306,8 @@ The **EUID** table has the following columns:
      - The raw EUID value for the customer. This value, when encrypted, may be used as a EUID token. This value is returned in the response from the **POST /identity/map** endpoint.
 
 .. data-tables-euid-table-end
+
+.. vale on
 
 
 .. _data-tables-predicted-event-propensity:
@@ -1367,7 +1373,7 @@ The **Event Propensity** table has the following columns:
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this event. A rank that is less than or equal to X will provide the top N customers with an propensity for this event.
+     - A ranking of customers by their score for this event. A rank that is less than or equal to X provides the top N customers with an propensity for this event.
 
    * - **Score**
      - Float
@@ -1976,7 +1982,7 @@ An **Affinity** table has the following columns:
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this product. A rank that is less than or equal to X will provide the top N customers with an affinity for this product.
+     - A ranking of customers by their score for this product. A rank that is less than or equal to X provides the top N customers with an affinity for this product.
 
    * - **Score**
      - Float
@@ -3211,6 +3217,8 @@ The **UID2** table has the following columns:
 
 .. data-tables-uid2-table-about-end
 
+.. vale off
+
 .. data-tables-uid2-table-start
 
 .. list-table::
@@ -3223,9 +3231,11 @@ The **UID2** table has the following columns:
 
    * - **Bucket ID**
      - String
-     - A unique identifier for the salt bucket that is used to ensure that expired UID2 tokens are refreshed. This value is returned in the response from the **POST /identity/map** endpoint.
+     - A unique identifier for the salt bucket used to ensure that expired UID2 tokens are refreshed. This value is returned in the response from the **POST /identity/map** endpoint.
 
-       .. note:: Each UID2 token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily. Amperity `monitors salt buckets <https://unifiedid.com/docs/guides/advertiser-dataprovider-guide#3-monitor-for-salt-bucket-rotations-related-to-your-stored-raw-uid2s>`__ on a daily basis to determine which UID2 tokens need to be refreshed.
+       .. note:: Each UID2 token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily.
+
+          Amperity `monitors salt buckets <https://unifiedid.com/docs/guides/advertiser-dataprovider-guide#3-monitor-for-salt-bucket-rotations-related-to-your-stored-raw-uid2s>`__ on a daily basis to determine which UID2 tokens need to be refreshed.
 
 
    * - **Email**
@@ -3235,7 +3245,7 @@ The **UID2** table has the following columns:
 
    * - **Normalized Email**
      - String
-     - The normalized email address that was sent from Amperity to the **POST /identity/map** endpoint for mapping. This value is returned in the response from the **POST /identity/map** endpoint.
+     - The normalized email address sent from Amperity to the **POST /identity/map** endpoint for mapping. This value is returned in the response from the **POST /identity/map** endpoint.
 
 
    * - **UID2**
@@ -3243,6 +3253,8 @@ The **UID2** table has the following columns:
      - The raw UID2 value for the customer. This value, when encrypted, may be used as a UID2 token. This value is returned in the response from the **POST /identity/map** endpoint.
 
 .. data-tables-uid2-table-end
+
+.. vale on
 
 
 .. _data-tables-unified-changes-clusters:
@@ -3298,7 +3310,7 @@ The **Unified Changes Clusters** table has the following columns:
 
    * - **Timestamp**
      - Datetime
-     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID will have the same value for **Timestamp**.
+     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID have the same value for **Timestamp**.
 
        Also in: **Unified Changes PKS**
 
@@ -3378,7 +3390,7 @@ The **Unified Changes PKS** table has the following columns:
 
    * - **Timestamp**
      - Datetime
-     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID will have the same value for **Timestamp**.
+     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID have the same value for **Timestamp**.
 
        Also in: **Unified Changes Clusters**
 
@@ -4545,7 +4557,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        This field is often the primary key and associated with the **pk** semantic tag.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same item, the order ID will appear more than once.
+       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same item, the order ID appears more than once.
 
        .. note::
 
@@ -4608,7 +4620,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        For example, a shirt with the same color and material, but with three different sizes would be represented by three unique SKUs and would also be represented by three unique product IDs.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID will appear more than once.
+       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID appears more than once.
 
        .. caution:: Every customer has their own definition for SKUs and product IDs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition.
 

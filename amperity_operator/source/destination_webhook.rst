@@ -58,7 +58,7 @@ How a webhook destination works
 
 The webhook destination is a broad purpose destination that generates a file in NDJSON format, publishes to Amazon S3, and then provides a pre-signed URL from which that NDJSON file may be downloaded.
 
-After the NDJSON file is generated, the destination will send a request to an AWS Lambda endpoint that exists outside of the Amperity virtual private cloud (VPC).
+After the NDJSON file is generated, the destination sends a request to an AWS Lambda endpoint that exists outside of the Amperity virtual private cloud (VPC).
 
 The Lambda function is built to process and publish the data however it needs. To ensure that Amperity can track the Lambda function, a public endpoint is available, to which regular updates from the Lambda function must be provided.
 
@@ -210,7 +210,7 @@ You must upload the application code and any dependencies to AWS Lambda as a ZIP
 
          sh util/lambda-build.sh filename=application_name.py
 
-      This will create a ZIP file that contains the following files: **application_name.py**, **amperity_runner.py**, and **helpers.py**, where "application_name" is the name of your Lambda function.
+      This creates a ZIP file that contains the following files: **application_name.py**, **amperity_runner.py**, and **helpers.py**, where "application_name" is the name of your Lambda function.
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
@@ -272,7 +272,7 @@ Add the API gateway
 
 #. Click **Add**.
 
-   You will need these values when configuring the webhook destination in Amperity.
+   You need these values when configuring the webhook destination in Amperity.
 
 .. destination-webhook-manual-add-gateway-end
 

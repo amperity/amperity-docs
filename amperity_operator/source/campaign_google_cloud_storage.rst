@@ -57,7 +57,7 @@ Get details
           :class: no-scaled-link
      - **Google Cloud Storage bucket details**
 
-       You will need to know the following details about the |destination-name| bucket to which Amperity will send data.
+       You need to know the following details about the |destination-name| bucket to which Amperity sends data.
 
        #. The name of the |destination-name| bucket. An object prefix is sometimes required.
 
@@ -213,7 +213,7 @@ A service account key must be downloaded so that it may be used to configure the
 
 #. Open the Google Cloud Platform console.
 #. Click **IAM**, and then **Admin**.
-#. Click the name of the project that is associated with the |destination-name| bucket to which Amperity will send data.
+#. Click the name of the project that is associated with the |destination-name| bucket to which Amperity sends data.
 #. Click **Service Accounts**, and then select **Create Service Account**.
 #. In the **Name** field, give your service account a name. For example, "Amperity GCS Connection".
 #. In the **Description** field, enter a description that will remind you of the purpose of the role.

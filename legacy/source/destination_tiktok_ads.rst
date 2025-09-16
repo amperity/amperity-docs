@@ -107,9 +107,9 @@ Get details
 
        The name of the custom audience to be managed by Amperity.
 
-       If a custom audience already exists, the list of customers in that audience will be updated to match the list sent from Amperity. If a custom audience does not exist, Amperity will add it. Amperity does not delete custom audiences.
+       If a custom audience already exists, the list of customers in that audience is updated to match the list sent from Amperity. If a custom audience does not exist, Amperity adds it. Amperity does not delete custom audiences.
 
-       .. important:: A custom audience name may contain up to 400 visible characters, after which the name will be truncated to blank characters followed by ``...``.
+       .. important:: A custom audience name may contain up to 400 visible characters, after which the name is truncated to blank characters followed by ``...``.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -139,7 +139,7 @@ Get details
 
        You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the TikTok Ads user interface.
 
-       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card; the event set ID is located under the name of the event set.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -169,7 +169,7 @@ Configure OAuth
 
 .. destination-tiktok-ads-configure-oauth-important-start
 
-.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that will be used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
+.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that is used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
 
 .. destination-tiktok-ads-configure-oauth-important-end
 
@@ -329,7 +329,7 @@ Add destination
 
        The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the dropdown menu in the top right of |destination-name|.
 
-       If a custom audience already exists, the list of customers in that audience will be updated to match the list sent from Amperity. If a custom audience does not exist, Amperity will add it. Amperity does not delete custom audiences.
+       If a custom audience already exists, the list of customers in that audience is updated to match the list sent from Amperity. If a custom audience does not exist, Amperity adds it. Amperity does not delete custom audiences.
 
        The user ID type must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** by default for campaigns.
 
@@ -683,7 +683,7 @@ Offline events must be sent using a query and orchestration. The data template a
 
        You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the TikTok Ads user interface.
 
-       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card; the event set ID is located under the name of the event set.
 
        .. note:: If the event set ID is not specified in the data template it must be specified at orchestration.
 
@@ -986,7 +986,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        An event set ID is a nineteen character string similar to "7654321098765432109".
 
-       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card; the event set ID is located under the name of the event set.
 
 
    * - **event_source**

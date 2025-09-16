@@ -47,7 +47,7 @@ Use a custom resource group to support any combination of team member access to 
 
 .. note:: Users who are associated with a custom resource group cannot access the **Sources** page. Access to the **Sources** page requires users to have access all data available to the tenant.
 
-   Users who are associated with a custom resource group *may* be able to view the **Stitch** page (depending on their policy), but will not be able to view personally identifiable information (PII).
+   Users who are associated with a custom resource group *may* be able to view the **Stitch** page (depending on their policy), but is not able to view personally identifiable information (PII).
 
 .. settings-security-resource-groups-custom-end
 
@@ -129,6 +129,6 @@ For example, a tenant with multiple brands, a global analytics team, multiple br
 #. Configure the database for brand A for permissions to the custom resource group associated with brand A.
 #. Configure the database for brand B for permissions to the custom resource group associated with brand B.
 
-This will allow members of the global analytics team to access the databases for brands A and B while ensuring that brand owners can only access their brand's database.
+This allows members of the global analytics team to access the databases for brands A and B while ensuring that brand owners can only access their brand's database.
 
 .. settings-security-resource-groups-multi-brand-tenants-end

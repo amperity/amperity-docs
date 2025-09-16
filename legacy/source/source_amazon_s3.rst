@@ -61,7 +61,7 @@ The |source-name| destination requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The name of the S3 bucket from which data will be pulled to Amperity.
+     - The name of the S3 bucket from which data is pulled to Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -69,7 +69,7 @@ The |source-name| destination requires the following configuration details:
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - For :ref:`cross-account role assumption <source-amazon-s3-legacy-credentials-role-to-role>` you will need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
+     - For :ref:`cross-account role assumption <source-amazon-s3-legacy-credentials-role-to-role>` you need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
 
        .. note:: The values for the **Amperity Role ARN** and the **External ID** fields are provided automatically.
 
@@ -259,7 +259,7 @@ For example:
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. source-amazon-s3-legacy-add-courier-steps-end

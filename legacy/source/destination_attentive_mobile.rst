@@ -50,7 +50,7 @@ How this destination works
 
 .. destination-attentive-howitworks-start
 
-Amperity can manage audiences in |destination-name| and provide attributes about the customers who belong to those audiences. A segment is the list of customers to which you will send emails or messages. A subscriber is a customer for which you have an opt-in/out status. You can only send emails or messages to customers who have opted-in.
+Amperity can manage audiences in |destination-name| and provide attributes about the customers who belong to those audiences. A segment is the list of customers to which you sends emails or messages. A subscriber is a customer for which you have an opt-in/out status. You can only send emails or messages to customers who have opted-in.
 
 .. destination-attentive-howitworks-end
 
@@ -134,7 +134,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The remote folder to which Amperity will send data: ``/uploads``.
+     - The remote folder to which Amperity sends data: ``/uploads``.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -171,7 +171,7 @@ Add destination
 
 .. destination-attentive-segments-add-destination-important-start
 
-.. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+.. important:: Be sure to use "Segments" in the destination title so that users of Amperity who sends segments to |destination-name| will be able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
 
 .. destination-attentive-segments-add-destination-important-end
 
@@ -589,13 +589,13 @@ About filename templates
 
 .. destination-attentive-add-data-template-intro-start
 
-A filename template defines how the names of segments and campaigns will appear in |destination-name|.
+A filename template defines how the names of segments and campaigns appears in |destination-name|.
 
 .. destination-attentive-add-data-template-intro-end
 
 .. destination-attentive-add-data-template-about-start
 
-The following table shows how your segment name will appear in |destination-name|. These examples represent a one-time buyer campaign that is attempting to win a second purchase. The campaign is named "Winback" and it has sub-audiences for "Dress Shirts", "Jeans", and "Shoes". Keep these types of patterns in mind when naming campaigns, treatment groups, and sub-audiences within your campaigns that will be sent to |destination-name|.
+The following table shows how your segment name appears in |destination-name|. These examples represent a one-time buyer campaign that is attempting to win a second purchase. The campaign is named "Winback" and it has sub-audiences for "Dress Shirts", "Jeans", and "Shoes". Keep these types of patterns in mind when naming campaigns, treatment groups, and sub-audiences within your campaigns that is sent to |destination-name|.
 
 .. list-table::
    :widths: 150 150 300
@@ -615,7 +615,7 @@ The following table shows how your segment name will appear in |destination-name
 
    * - **campaign_name**
      - Winback
-     - Use this pattern for campaigns that do not have more than one treatment group or sub-audiences. This will use the name of the campaign as the name of the segment in |destination-name|.
+     - Use this pattern for campaigns that do not have more than one treatment group or sub-audiences. This uses the name of the campaign as the name of the segment in |destination-name|.
 
        .. tip:: Use **{{ campaign_name }}** *instead of* **{{ list_name }}**.
 
@@ -648,6 +648,6 @@ The following table shows how your segment name will appear in |destination-name
 
 .. destination-attentive-add-data-template-important-start
 
-.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings (campaign and/or treatment group) will be used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
+.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings (campaign and/or treatment group) is used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
 
 .. destination-attentive-add-data-template-important-end

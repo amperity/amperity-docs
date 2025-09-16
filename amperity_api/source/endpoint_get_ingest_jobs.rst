@@ -117,7 +117,7 @@ The following table describes the parameters that may be used with the **GET /in
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
+       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
 
 
    * - **created_to**
@@ -127,7 +127,7 @@ The following table describes the parameters that may be used with the **GET /in
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
+       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
 
    * - **with_total**
      - Boolean. Optional.
@@ -180,7 +180,7 @@ Responses
 
 .. endpoint-get-ingest-jobs-responses-start
 
-A response from the **GET /ingest/jobs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /ingest/jobs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-ingest-jobs-responses-end
 

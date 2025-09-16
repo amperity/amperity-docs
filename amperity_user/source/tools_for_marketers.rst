@@ -49,7 +49,7 @@ Common marketing workflows use a combination of segment insights and predictive 
 * Use segment insights to build high-value segments.
 * Use recommended audience sizes to find the right number of customers for your campaign.
 * Perform opportunity sizing on a per-segment basis.
-* Build segments by customer value, i.e. "top 1%", "top 5%", "top 10%", etc.
+* Build segments by customer value. For example: "top 1%", "top 5%", or "top 10%".
 * Use predicted modeling attributes to build campaigns based on future customer behavior, such as for predicted customer lifetime value (pCLV), churn propensity, and next best product.
 * Review customer behavior by lifecycle status, such as "new", "active", "at risk", or "churned".
 
@@ -77,9 +77,9 @@ Sending campaigns
 
 Sending campaigns from Amperity is a combination of three things: segments, audiences, and destinations. The following series of topics describes how these work.
 
-* A :doc:`segment <segments>` defines the audience that you will use with your campaign.
+* A :doc:`segment <segments>` defines the audience that you use with your campaign.
 * A :doc:`campaign <campaigns>` breaks that audience down into sub-audiences that align to your marketing strategies and goals.
-* :doc:`Destinations <destinations>` are the locations and channels to which you will send those sub-audiences, after which you will perform specific marketing activities to support your marketing campaign.
+* :doc:`Destinations <destinations>` are the locations and channels to which you sends those sub-audiences, after which you will perform specific marketing activities to support your marketing campaign.
 
 .. tools-for-marketers-static-intro-end
 

@@ -67,7 +67,7 @@ Customer 360 database
 
 .. tools-for-analysts-customer360-start
 
-The customer 360 database is the most important database you can build in Amperity. It is the source from which all queries and segments are created and from which data will be sent to external systems for downstream workflows.
+The customer 360 database is the most important database you can build in Amperity. It is the source from which all queries and segments are created and from which data is sent to external systems for downstream workflows.
 
 .. tools-for-analysts-customer360-end
 

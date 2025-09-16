@@ -176,7 +176,7 @@ The **Stitched Sources** section of the **Stitch** page shows a comparison of do
 
 .. stitch-explore-by-data-source-upset-plot-start
 
-The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. An UpSet plot chart will have a row for each data source. This diagram shows the first two only.
+The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. An UpSet plot chart have a row for each data source. This diagram shows the first two only.
 
 .. stitch-explore-by-data-source-upset-plot-end
 
@@ -385,7 +385,7 @@ Notifications for Stitch reports that run in the **Stitch** page appear after Am
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. stitch-view-notifications-context-end
 

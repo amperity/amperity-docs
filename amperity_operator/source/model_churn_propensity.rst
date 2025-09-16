@@ -204,7 +204,7 @@ You can build a churn propensity model from the **Customer 360** page. Each data
           :alt: Step 3.
           :align: center
           :class: no-scaled-link
-     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1st, 2020 or you may choose a relative date like "today - 4 years".
+     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2020 or you may choose a relative date like "today - 4 years".
 
        A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer. 
 

@@ -110,7 +110,7 @@ Get details
 
    You can find all of this information from your |destination-name| instance in Microsoft Azure.
 
-   #. The registered application in Microsoft Azure will have the |destination-name| client ID, client secret, and Azure Active Directory ID.
+   #. The registered application in Microsoft Azure have the |destination-name| client ID, client secret, and Azure Active Directory ID.
    #. The login URL is similar to "https://<tenant-name>.crm.dynamics.com".
    #. The application user is added to the customer's instance of |destination-name|.
 
@@ -196,7 +196,7 @@ Build query
 
 .. destination-microsoft-dynamics-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to |destination-name|.
+You need to build a query that outputs fields that can be mapped to |destination-name|.
 
 .. destination-microsoft-dynamics-build-query-end
 

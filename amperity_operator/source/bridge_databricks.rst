@@ -295,7 +295,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :alt: Requirement 2.
           :align: center
           :class: no-scaled-link
-     - The user who will create a recipient for sharing data from Databricks to Amperity must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
+     - The user who creates a recipient for sharing data from Databricks to Amperity must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
 
        .. note:: If a Databricks notebook is used to create the recipient the cluster must use Databricks Runtime 11.3 LTS or higher and must be running in shared mode or single-cluster access mode.
 
@@ -305,7 +305,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :alt: Requirement 3.
           :align: center
           :class: no-scaled-link
-     - The user who will create a share in the Unity Catalog metastore must have `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| permissions in Databricks.
+     - The user who creates a share in the Unity Catalog metastore must have `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| permissions in Databricks.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -314,7 +314,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :align: center
           :class: no-scaled-link
 
-     - The user who will add tables to a share must:
+     - The user who adds tables to a share must:
 
        * Be a share owner; Databricks recommends to use a group as the share owner.
        * Have `USE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#use-catalog>`__ |ext_link| *and* `USE SCHEMA <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#use-schema>`__ |ext_link| permissions on the catalog and schema in which the tables are located.
@@ -334,7 +334,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
 
          If the user created the recipient and share, they are the share owner and recipient owner.
 
-         If the user did not create the recipient and share they will need **USE SHARE** and **SET SHARE PERMISSION** on the share and **USE RECIPIENT** on the recipient.
+         If the user did not create the recipient and share they need **USE SHARE** and **SET SHARE PERMISSION** on the share and **USE RECIPIENT** on the recipient.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -370,7 +370,7 @@ Configure Databricks
 
 .. bridge-databricks-sync-with-amperity-configure-databricks-start
 
-To configure Databricks to sync data with Amperity you will need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>` in Amperity.
+To configure Databricks to sync data with Amperity you need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>` in Amperity.
 
 .. note:: The following section briefly describes using the Databricks Catalog Explorer to configure Databricks to be ready to sync data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
 
@@ -415,7 +415,7 @@ To configure Databricks to sync data with Amperity you will need to `CREATE SHAR
           :class: no-scaled-link
      - Open sharing uses token-based authentication.
 
-       The credentials file that contains the token is available from an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. Use a secure channel to share the activation link with the user who will download the credentials file, and then :ref:`configure Amperity for inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>`.
+       The credentials file that contains the token is available from an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. Use a secure channel to share the activation link with the user who downloads the credentials file, and then :ref:`configure Amperity for inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>`.
 
        .. important:: You can download the credential file only once. Recipients should treat the downloaded credential as a secret and must not share it outside of their organization. If you have concerns that a credential may have been handled insecurely, you can `rotate credentials <https://docs.databricks.com/en/data-sharing/create-recipient.html#security-considerations-for-tokens>`__ |ext_link| at any time.
 
@@ -538,7 +538,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
 
        .. important:: You can download the credential file only once. Recipients should treat the downloaded credential as a secret and must not share it outside of their organization. If you have concerns that a credential may have been handled insecurely, you can `rotate credentials <https://docs.databricks.com/en/data-sharing/create-recipient.html#security-considerations-for-tokens>`__ |ext_link| at any time.
 
-       When finished, click **Continue**. This will open the **Select tables** dialog box.
+       When finished, click **Continue**. This opens the **Select tables** dialog box.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -554,9 +554,9 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync.
+       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync.
 
-       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -580,7 +580,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
 
        .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within synced tables to support any of your Amperity workflows.
 
-       When finished, click **Save and sync**. This will start a workflow that synchronizes data from Databricks to Amperity and will create the mapped domain table names.
+       When finished, click **Save and sync**. This will start a workflow that synchronizes data from Databricks to Amperity and creates the mapped domain table names.
 
        You can manually sync tables with Amperity using the **Sync** option from the **Actions** menu for the bridge.
 
@@ -638,7 +638,7 @@ Before you can create outbound sharing between Amperity and Databricks you must 
           :alt: Requirement 1.
           :align: center
           :class: no-scaled-link
-     - The user who will add the schema to a catalog in Databricks must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
+     - The user who adds the schema to a catalog in Databricks must have `CREATE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-catalog>`__ |ext_link| permissions in Databricks.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -646,7 +646,7 @@ Before you can create outbound sharing between Amperity and Databricks you must 
           :alt: Requirement 2.
           :align: center
           :class: no-scaled-link
-     - A user who will run queries against tables in a schema must have `SELECT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#select>`__ |ext_link| permissions in Databricks. **SELECT** permissions may be granted on a specific table, on a schema, or on a catalog.
+     - A user who runs queries against tables in a schema must have `SELECT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#select>`__ |ext_link| permissions in Databricks. **SELECT** permissions may be granted on a specific table, on a schema, or on a catalog.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -658,7 +658,7 @@ Before you can create outbound sharing between Amperity and Databricks you must 
 
        .. admonition:: For new users
 
-          If you have not already set up and configured the Databricks CLI you will need to do the following:
+          If you have not already set up and configured the Databricks CLI you need to do the following:
 
           #. Install the `Databricks CLI <https://docs.databricks.com/en/dev-tools/cli/install.html>`__ |ext_link|.
           #. Get a `personal access token <https://docs.databricks.com/en/dev-tools/auth/pat.html#databricks-personal-access-tokens-for-workspace-users>`__ |ext_link|.
@@ -666,7 +666,7 @@ Before you can create outbound sharing between Amperity and Databricks you must 
 
              Run the `databricks configure <https://docs.databricks.com/en/dev-tools/cli/configure-commands.html>`__ |ext_link| command, after which you will be asked to enter the hostname for your instance of Databricks along with your personal access token.
 
-       The user who will run the Databricks CLI and add a schema to Databricks for outbound sharing from Amperity must have `CREATE PROVIDER <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-provider>`__ |ext_link| permissions in Databricks.
+       The user who runs the Databricks CLI and add a schema to Databricks for outbound sharing from Amperity must have `CREATE PROVIDER <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-provider>`__ |ext_link| permissions in Databricks.
 
 
 .. bridge-databricks-sync-with-databricks-prerequisites-end
@@ -714,7 +714,7 @@ Configure an outbound bridge to sync data from Amperity to Databricks.
 
        Optional. You may restrict access to specific IP addresses or to a valid CIDR for a range of IP addresses. Place separate entries on a new line. Expand **Advanced Settings** to restrict access.
 
-       When finished, click **Create**. This will open the **Select tables** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-databricks-sync-with-databricks-select-tables>` to share with Databricks.
+       When finished, click **Create**. This opens the **Select tables** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-databricks-sync-with-databricks-select-tables>` to share with Databricks.
 
 .. bridge-databricks-sync-with-databricks-add-bridge-steps-end
 
@@ -759,7 +759,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
        If you select a schema, all tables in that schema will be shared, including all changes made to all tables in that schema.
 
-       When finished, click **Save**. This will open the **Download credential** dialog box, from which you will :ref:`download the credentials.share file <bridge-databricks-sync-with-databricks-download-credentials>` that is required by the Databricks CLI when :ref:`creating a catalog in Databricks <bridge-databricks-sync-with-databricks-add-catalog-from-share>`.
+       When finished, click **Save**. This opens the **Download credential** dialog box, from which you will :ref:`download the credentials.share file <bridge-databricks-sync-with-databricks-download-credentials>` that is required by the Databricks CLI when :ref:`creating a catalog in Databricks <bridge-databricks-sync-with-databricks-add-catalog-from-share>`.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -767,7 +767,7 @@ You can configure Amperity to share any combination of schemas and tables that a
           :alt: Step 2.
           :align: center
           :class: no-scaled-link
-     - When a bridge is already configured, you may edit the list of schemas and tables that are shared. From the **Destinations** page, under **Outbound shares**, open the **Actions** for a bridge, and then click **Edit**. This will open the **Select tables** dialog box.
+     - When a bridge is already configured, you may edit the list of schemas and tables that are shared. From the **Destinations** page, under **Outbound shares**, open the **Actions** for a bridge, and then click **Edit**. This opens the **Select tables** dialog box.
 
 .. bridge-databricks-sync-with-databricks-select-tables-steps-end
 

@@ -187,7 +187,7 @@ Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and
 
 .. format-json-pull-feeds-important-start
 
-.. important:: A feed will use the first record in a JSON file to determine its schema in the **Feed Editor**. If records contain optional fields and those records are *not the first record* you must add those fields to the feed definition manually.
+.. important:: A feed uses the first record in a JSON file to determine its schema in the **Feed Editor**. If records contain optional fields and those records are *not the first record* you must add those fields to the feed definition manually.
 
 .. format-json-pull-feeds-important-end
 

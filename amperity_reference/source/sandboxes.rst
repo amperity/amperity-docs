@@ -107,7 +107,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
        .. important:: Data is not moved between production and a sandbox. Configuration state is copied from production, and then applied to the sandbox.
 
-       .. tip:: If a sandbox is created while a Stitch run is in progress, wait for the Stitch run to finish in production before running the database in the sandbox. This will allow the database in the sandbox to use the most recent Stitch outputs in production for the initial database refresh in the sandbox.
+       .. tip:: If a sandbox is created while a Stitch run is in progress, wait for the Stitch run to finish in production before running the database in the sandbox. This allows the database in the sandbox to use the most recent Stitch outputs in production for the initial database refresh in the sandbox.
 
        .. note:: Configuration state for an inbound bridge is copied from production, and then applied to the sandbox. Configuration state for an outbound bridge **is not copied**. An outbound bridge must be configured within the sandbox.
 
@@ -146,7 +146,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
           :align: left
           :class: no-scaled-link
 
-       A list of changes will appear under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
+       A list of changes appears under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
 
        Review the list of **Added**, **Changed**, and/or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
 
@@ -195,7 +195,7 @@ Some objects are not copied to a sandbox:
 
    Versioned table histories are not copied to a sandbox.
 
-   A sandbox is a copy of your production tenant. A database in a sandbox must be run before tables in that database will contain data.
+   A sandbox is a copy of your production tenant. A database in a sandbox must be run before tables in that database contains data.
 
    The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
 
@@ -240,7 +240,7 @@ Continuous validation
 
 .. sandboxes-best-practice-continuously-validate-changes-start
 
-As you make changes within a sandbox, Amperity will continuously run validations against those changes. If an issue is discovered a notification will appear along with a link to learn more about the validation issue and the steps that may be required to resolve it. You should fix validation issues as they arise to keep your sandbox ready to be promoted to production.
+As you make changes within a sandbox, Amperity will continuously run validations against those changes. If an issue is discovered a notification appears along with a link to learn more about the validation issue and the steps that may be required to resolve it. You should fix validation issues as they arise to keep your sandbox ready to be promoted to production.
 
 * Required. Errors must be addressed before a sandbox can be promoted.
 * Recommended. Warnings should be addressed before promoting a sandbox.
@@ -260,44 +260,44 @@ The following table describes examples of errors and warnings that may be shown 
      - Description
    * - **Couriers**
      - Error
-     - Couriers will show an error when they refer to an ingest query that was renamed or deleted.
+     - Couriers shows an error when they refer to an ingest query that was renamed or deleted.
 
    * - **Data exports**
      - Error
-     - A database export will show an error when the tables to be exported are renamed or deleted.
+     - A database export shows an error when the tables to be exported are renamed or deleted.
 
    * - **Databases**
      - Error
-     - Database tables in databases that run automatically will show an error when:
+     - Database tables in databases that run automatically shows an error when:
 
        * An upstream table or field was deleted or renamed
        * A schema mismatch is present, such as a mismatch caused by data type changes
 
    * - **Queries**
      - Warning
-     - A query will show a warning when it is used with:
+     - A query shows a warning when it is used with:
 
        * An orchestration that is not configured for an orchestration group
        * A segment that is not part of a scheduled campaign
 
-       The warning will appear if there is a missing field or table, such as when a query references a that field has been deleted or renamed.
+       The warning appears if there is a missing field or table, such as when a query references a that field has been deleted or renamed.
 
        .. note:: A query that is not configured for an orchestration, orchestration group, or used with a campaign is not included in sandbox validations.
 
    * - **Queries**
      - Error
-     - A query will show an error when it is used with:
+     - A query shows an error when it is used with:
 
        * An orchestration that is configured for an orchestration group
        * A segment that is part of a scheduled campaign
 
-       The error will appear if there is a missing field or table, such as when a query references a that field has been deleted or renamed.
+       The error appears if there is a missing field or table, such as when a query references a that field has been deleted or renamed.
 
    * - **Segments**
      - Error
-     - A segment will show an error when it is used with a scheduled campaign.
+     - A segment shows an error when it is used with a scheduled campaign.
 
-       The error will appear if there is a missing field or table, such as when a segment references a that field has been deleted or renamed.
+       The error appears if there is a missing field or table, such as when a segment references a that field has been deleted or renamed.
 
 .. sandboxes-best-practice-continuously-validate-changes-end
 
@@ -311,7 +311,7 @@ Data across environments
 
 Data is not moved between your production environment and a sandbox environment. Only the configuration state is copied to the sandbox environment and only *changes to the configuration state* are copied back to your production environment.
 
-For example, if you use a sandbox to add the components required by a new data source, such as a courier, a feed, along with a custom domain table in which semantic tags are applied, after promoting those changes from a sandbox environment you will need to run the courier to pull the data to your production environment.
+For example, if you use a sandbox to add the components required by a new data source, such as a courier, a feed, along with a custom domain table in which semantic tags are applied, after promoting those changes from a sandbox environment you need to run the courier to pull the data to your production environment.
 
 .. sandboxes-best-practice-data-across-environments-end
 
@@ -399,7 +399,7 @@ Access a sandbox
 
 A user who is assigned the **Allow sandbox administration** policy option can, in addition to opening sandboxes they have created, can also access sandboxes other users have created.
 
-This process is similar to :ref:`opening a sandbox <sandboxes-howto-open-sandbox>`, except the name of the link is **Access sandbox** and sandboxes that other users have created will not be available from the menu in the top-right of your tenant.
+This process is similar to :ref:`opening a sandbox <sandboxes-howto-open-sandbox>`, except the name of the link is **Access sandbox** and sandboxes that other users have created is not available from the menu in the top-right of your tenant.
 
 .. sandboxes-howto-access-sandbox-end
 
@@ -501,7 +501,7 @@ A sandbox is accessible from the **Users and Activity** page *or* from the dropd
 #. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
 #. From the the list of options select **Open sandbox**.
 
-   This will open the sandbox in a new page in your Web browser.
+   This opens the sandbox in a new page in your Web browser.
 
    .. tip:: To open a sandbox in the *same page*, click the menu in the top-right of your tenant, and then from the dropdown list that appears, select a sandbox.
 
@@ -549,7 +549,7 @@ A sandbox must contain the current state of production to ensure that all change
    This sandbox is out of sync
    8 updates to pull from production
 
-This will open the **Pull updates** page, on which you can review all of the updates that will be pulled from production into your sandbox.
+This opens the **Pull updates** page, on which you can review all of the updates that is pulled from production into your sandbox.
 
 .. image:: ../../images/mockups-sandbox-access-pull-updates.png
    :width: 600 px
@@ -565,7 +565,7 @@ This will open the **Pull updates** page, on which you can review all of the upd
 
 #. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon, and then :ref:`open a sandbox <sandboxes-howto-open-sandbox>`.
 #. Click the "Updates to pull from production" link in the sandbox notification banner.
-#. The **Pull updates** page opens. Review all of the updates that will be pulled to your sandbox.
+#. The **Pull updates** page opens. Review all of the updates that is pulled to your sandbox.
 #. Click **Pull**.
 
 .. sandboxes-howto-pull-updates-from-production-steps-end
@@ -578,7 +578,7 @@ Resolve validation issues
 
 .. sandboxes-howto-resolve-validation-issues-start
 
-As you make changes within a sandbox, Amperity will run validations against those changes. A notification appears when :ref:`validation issues are present in your sandbox <sandboxes-howto-view-validation-details>` with a link similar to:
+As you make changes within a sandbox, Amperity runs validations against those changes. A notification appears when :ref:`validation issues are present in your sandbox <sandboxes-howto-view-validation-details>` with a link similar to:
 
 .. code:: none
 
@@ -590,7 +590,7 @@ followed by the number of validation issues:
 
    2 current errors to address
 
-Click this link to open the **Promote changes** page, from which each validation issue will appear as a row in a list of validation issues.
+Click this link to open the **Promote changes** page, from which each validation issue appears as a row in a list of validation issues.
 
 .. image:: ../../images/mockups-sandbox-access-validations-errors.png
    :width: 450 px
@@ -693,7 +693,7 @@ A notification appears when validation issues are present in your sandbox with a
 
    This sandbox has errors blocking promotion
 
-Click this link to open the **Promote changes** page, from which each validation issue will appear as a row in a list of validation issues.
+Click this link to open the **Promote changes** page, from which each validation issue appears as a row in a list of validation issues.
 
 .. image:: ../../images/mockups-sandbox-access-validations-errors.png
    :width: 420 px

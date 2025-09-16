@@ -84,7 +84,7 @@ Storage is typically stable after the implementation period has completed. Stora
 
 .. note:: Storage is not a significant driver of Amps consumption and should be a small percentage (<5%) of overall Amps consumption.
 
-.. important:: A sandbox is a replica of your production environment. It starts as an exact duplicate of the configuration of your production tenant at the time it is created. It starts with access to the same data that is stored in your production tenant. If new data is ingested into the sandbox, added storage will increase your Amps consumption.
+.. important:: A sandbox is a replica of your production environment. It starts as an exact duplicate of the configuration of your production tenant at the time it is created. It starts with access to the same data that is stored in your production tenant. If new data is ingested into the sandbox, added storage increases your Amps consumption.
 
 .. amps-review-consumption-storage-end
 
@@ -343,7 +343,7 @@ Monitor consumption for the **Ingest** feature by:
 * Monitoring ingest runtimes from the **Workflows** page
 * Preferring file formats that are partitioned, such as Apache Parquet, over file formats that are not, such as CSV
 * Using Amperity Bridge to sync large volumes of data instead of loading that same volume as a flat file
-* Review ingest queries to help ensure they are simple and efficient; complex or inefficient SQL within an ingest query will increase Amps consumption
+* Review ingest queries to help ensure they are simple and efficient; complex or inefficient SQL within an ingest query increases Amps consumption
 * Configuring courier groups to ingest files only when necessary; for example, some files must be ingested daily, but others might only need to be ingested weekly or monthly
 
 .. amps-consumption-feature-ingest-end
@@ -535,7 +535,7 @@ Amps consumption for the **Predictive modeling** feature is determined by:
 
 * The frequency at which predictions (including training and inference) are run
 * The number of courier groups that are associated with predictive modeling
-* The number of predictive models that are enabled. Adding models will increase Amps consumption.
+* The number of predictive models that are enabled. Adding models increases Amps consumption.
 * The size of the dataset that is made available to predictive modeling.
 
 Storage for the **Predictive modeling** feature is determined by:
@@ -550,7 +550,7 @@ Monitor consumption for the **Predictive modeling** feature by:
 * Reviewing the record count for tables that are used by predictive modeling
 * Consider the frequency at which models are run. Less frequent training or inference will lower Amps consumption, but will decrease the accuracy of the models.
 * Ensuring that each model has the correct inputs. Use the **Predictive models** page that is available for each database to review the inputs to each model in your customer 360 database
-* Review each predictive modeling job, including when the next inference and training jobs will run. Use the **Predictive models** page to access individual jobs for each predictive model that is enabled in your tenant
+* Review each predictive modeling job, including when the next inference and training jobs runs. Use the **Predictive models** page to access individual jobs for each predictive model that is enabled in your tenant
 
 .. amps-consumption-feature-predictive-modeling-end
 
@@ -647,7 +647,7 @@ Storage for the **Campaigns** feature is primarily determined by:
 
 Monitor consumption for the **Campaigns** feature by:
 
-* Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes will take longer to run and will consume more Amps
+* Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes takes longer to run and will consume more Amps
 * Monitoring workflows that contain recurring campaigns from the **Workflows** page
 * Monitoring the frequency and runtime duration for campaigns that are run automatically from the **Usage** page
 * Reviewing the customer profiles and records sent from the **Usage** page
@@ -673,7 +673,7 @@ Amps consumption for the **Journeys** feature is determined by:
 
 Monitor consumption for the **Journeys** feature by:
 
-* Reviewing audience sizes; larger segments take longer to analyze and journeys that have many branching paths will take longer to run and will consume more Amps
+* Reviewing audience sizes; larger segments take longer to analyze and journeys that have many branching paths takes longer to run and will consume more Amps
 * Limiting the number of records that are maintained in the journeys activation state table by ensuring that journeys sent from Amperity are actively used by your brand's downstream use cases
 
 .. amps-consumption-feature-journeys-end
@@ -885,7 +885,7 @@ To reduce Amps consumption for the **Sources** category:
 
 * Remove unused source tables. The amount of data that is stored will consume Amps. While storage costs do not typically lead to high Amps consumption, deleting unused source tables can help reduce Amps consumption.
 
-  .. note:: Amperity maintains a short buffer period to ensure data can be restored, should it need to be. After deleting unused source tables lower Amps consumption will show in the dashboard after the buffer period has been passed.
+  .. note:: Amperity maintains a short buffer period to ensure data can be restored, should it need to be. After deleting unused source tables lower Amps consumption shows in the dashboard after the buffer period has been passed.
 
 * Remove older records. Processing smaller tables consumes fewer Amps.
 
@@ -919,7 +919,7 @@ Adjust compute settings
 
 .. amps-reduce-adjust-compute-start
 
-Compute settings control the amount of compute resources, such as CPU and memory, that are available to a category. Increasing compute resource sizes will increase the rate at which Amps are consumed per hour. This rate will vary by feature and may be affected by other configurations within your tenant. Please ask Amperity Support for assistance with questions before adjusting compute resources.
+Compute settings control the amount of compute resources, such as CPU and memory, that are available to a category. Increasing compute resource sizes increases the rate at which Amps are consumed per hour. This rate varies by feature and may be affected by other configurations within your tenant. Please ask Amperity Support for assistance with questions before adjusting compute resources.
 
 You can adjust the compute settings for your tenant for the following categories:
 

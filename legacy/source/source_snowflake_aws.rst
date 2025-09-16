@@ -408,7 +408,7 @@ You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the username and password. This should be the Amperity username and password created in Snowflake for the :ref:`user security object <source-snowflake-aws-configure-storage-integration>`.
 #. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket used for :ref:`Snowflake stages <source-snowflake-aws-configure-storage-integration>`. Add the Amazon Resource Name (ARN) if the IAM role is provisioned for cross-account access.
-#. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`one or more Snowflake tables against which a query that uses Snowflake query syntax will be run <source-snowflake-aws-configure-tables>` to be sent to Amperity:
+#. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`one or more Snowflake tables against which a query that uses Snowflake query syntax is run <source-snowflake-aws-configure-tables>` to be sent to Amperity:
 
    ::
 
@@ -418,7 +418,7 @@ You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference
         "table.name.etc"
       ]
 
-   .. caution:: The courier will download both query results **AND** all listed tables.
+   .. caution:: The courier downloads both query results **AND** all listed tables.
 
 #. Enter :ref:`the name of the Snowflake stage <source-snowflake-aws-configure-storage-integration>`.
 #. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".

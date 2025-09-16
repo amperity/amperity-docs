@@ -100,7 +100,7 @@ Alerts are sent when:
 
 * Files are missing
 * A failure occurs within any part of a courier group workflow, including courier groups with orchestration groups, campaigns, or profile API indexes configured to run as part of the workflow
-* The courier group succeeds, if configured. If downstream workflows are configured, an alert will be sent both when database generation is complete and when downstream workflows succeed
+* The courier group succeeds, if configured. If downstream workflows are configured, an alert is sent both when database generation is complete and when downstream workflows succeed
 * The courier group runtime exceeds a threshold, if configured
 * Configured query thresholds are reached
 * A user cancels an automatically launched workflow
@@ -233,7 +233,7 @@ Tasks are grouped into stages, with each stage running a series of tasks. Indivi
 
 Each stage has a series of individual tasks that run in sequence.
 
-For example, tasks for the **Sources** stage must locate today's data updates, pull those updates to Amperity, and then refresh domain tables with the updated data. Each data source that is located will show as an individual task, each data set that is pulled to Amperity will show as an individual task. Many of the steps a courier takes will show as an individual task.
+For example, tasks for the **Sources** stage must locate today's data updates, pull those updates to Amperity, and then refresh domain tables with the updated data. Each data source that is located shows as an individual task, each data set that is pulled to Amperity shows as an individual task. Many of the steps a courier takes shows as an individual task.
 
 .. tip:: Use the **View task details** menu option to learn more about the information that was submitted to each task, such as the name of a service, the ID for the files that were submitted to the task, dependencies, such as list names or attribute names that are required by a destination.
 
@@ -355,7 +355,7 @@ You can access workflow alerts from the following locations:
 * A notification within the **Recent activity** pane on the **Sources**, **Stitch**, **Customer 360**, **Queries**, and **Destinations** pages.
 * The **Activity log** within the **Settings** tab will list an entry for every alert sent
 
-When you receive a workflow alert, use the link provided within the workflow alert to open Amperity, and then review the workflow details page. The individual task that has the error that caused the workflow to stop is shown with the the |workflow-failed| icon. An error message will appear at the top of the workflow details page.
+When you receive a workflow alert, use the link provided within the workflow alert to open Amperity, and then review the workflow details page. The individual task that has the error that caused the workflow to stop is shown with the the |workflow-failed| icon. An error message appears at the top of the workflow details page.
 
 .. image:: ../../images/howitworks-workflows-resolve-error-message.png
    :width: 600 px
@@ -443,7 +443,7 @@ Retry task
 
 A workflow resolution may allow retrying a specific task in a workflow. This is useful for transient issues that should not persist from one workflow to the next.
 
-This type of resolution will rerun the workflow from the point at which the workflow failed, starting with the same failed task and using the same inputs as those provided to the failed workflow. In many cases, this type of resolution will allow to you temporarily change the state of your tenant to help troubleshoot the cause of the workflow.
+This type of resolution will rerun the workflow from the point at which the workflow failed, starting with the same failed task and using the same inputs as those provided to the failed workflow. In many cases, this type of resolution allows to you temporarily change the state of your tenant to help troubleshoot the cause of the workflow.
 
 .. workflows-common-retry-end
 
@@ -459,7 +459,7 @@ This type of resolution will rerun the workflow from the point at which the work
 
    In these types of cases, the resolution *does not change the state of your tenant* after retrying the workflow. It only changes the state of the active workflow.
 
-   You will need to update your production tenant to persist the change to support future workflows.
+   You need to update your production tenant to persist the change to support future workflows.
 
 .. workflows-common-retry-caution-end
 
@@ -617,7 +617,7 @@ Mismatched datatype
 
 A datatype defines what the value of an attribute can be. For example, an email address is a String, an order date is a Datetime, revenue is a Decimal, the number of items in an order is an Integer, and something that can be true or false is a Boolean.
 
-It's possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal or some other non-String datatype. If a mismatched datatype occurs the campaign will fail, you will receive an error message, and an alert will be sent.
+It's possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal or some other non-String datatype. If a mismatched datatype occurs the campaign fails, you will receive an error message, and an alert is sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 
@@ -637,7 +637,7 @@ Missing table
 
 .. workflows-campaigns-missing-table-start
 
-Amperity must be able to find the table from which campaign attributes will be pulled before sending them to your destinations. If a table is renamed or removed the campaign will fail, you will receive an error message, and an email will be sent.
+Amperity must be able to find the table from which campaign attributes is pulled before sending them to your destinations. If a table is renamed or removed the campaign fails, you will receive an error message, and an email is sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 
@@ -657,7 +657,7 @@ Unresolved column name
 
 .. workflows-campaigns-unresolved-column-name-start
 
-Amperity must be able to find the column from which campaign attributes are pulled before sending them to destinations. A campaign will fail if a column is renamed or removed. An error message and an alert are sent.
+Amperity must be able to find the column from which campaign attributes are pulled before sending them to destinations. A campaign fails if a column is renamed or removed. An error message and an alert are sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 

@@ -29,7 +29,7 @@ Send query results to The Trade Desk
 
 .. sendto-the-trade-desk-start
 
-Use Amperity to manage email addresses in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. If contacts exist in |destination-name| for the emails sent in the query, the contact list will be updated to match the query.
+Use Amperity to manage email addresses in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. If contacts exist in |destination-name| for the emails sent in the query, the contact list is updated to match the query.
 
 .. sendto-the-trade-desk-end
 

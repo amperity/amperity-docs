@@ -89,7 +89,7 @@ Get details
           :class: no-scaled-link
      - The |destination-name| customer and account IDs.
 
-       .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page will contain two key-value pairs, one for the customer ID and the other for the account ID.
+       .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page contains two key-value pairs, one for the customer ID and the other for the account ID.
 
           The URL is similar to:
 
@@ -281,7 +281,7 @@ Add destination
           * - **Customer ID**
             - Your customer ID within |destination-name|.
 
-              .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page will contain two key-value pairs, one for the customer ID and the other for the account ID.
+              .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page contains two key-value pairs, one for the customer ID and the other for the account ID.
 
                  The URL is similar to:
 

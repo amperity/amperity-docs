@@ -79,7 +79,7 @@ Use the **Add Orchestration** button to add an orchestration to Amperity. An orc
 
 #. From the **Destinations** page click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
 #. From the **Object Type** dropdown, select **Query** or **Database Export**.
-#. From the **Object** dropdown, select the name of the query or database export that will be sent to a destination.
+#. From the **Object** dropdown, select the name of the query or database export that is sent to a destination.
 
    .. note:: This name will also be the name of the orchestration.
 #. From the **Destination** dropdown, select the name of a destination that is configured to send data.
@@ -198,7 +198,7 @@ Amperity sends the results to any number of downstream workflows via orchestrati
 .. orchestrations-run-steps-start
 
 #. From the **Destinations** page, open the menu for an orchestration, and then select **Run**.
-#. The **Status** column for the orchestration group will update to say "Waiting to start", after which the notifications pane will update to include a notification that shows the status of the orchestration.
+#. The **Status** column for the orchestration group updates to say "Waiting to start", after which the notifications pane updates to include a notification that shows the status of the orchestration.
 #. When the orchestration has run successfully, its status is updated to "Completed".
 
 .. orchestrations-run-steps-end
@@ -295,7 +295,7 @@ An orchestration can be scheduled to run every day, but then only start the run 
 .. orchestrations-run-when-upstream-changes-steps-start
 
 #. From the **Destinations** page, under **Destinations**, open the menu in the same row as the destination to be edited, and then select **Edit**.
-#. Enter a schedule, the courier group constraint, and an offset. The specified courier group must have updated data. The orchestration group will check for updated data at the scheduled time, but will run only when there is updated data.
+#. Enter a schedule, the courier group constraint, and an offset. The specified courier group must have updated data. The orchestration group will check for updated data at the scheduled time, but runs only when there is updated data.
 #. Click **Save**.
 #. From the **Destinations** page, under **Orchestrations**, open the menu in the same row as the orchestration to be edited, and then select **Edit**.
 #. Under **Workflow**, select **Automatically**, and then select the name of a query.
@@ -350,6 +350,6 @@ Notifications for the **Orchestrations** page appear after Amperity added an orc
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. orchestrations-view-notifications-context-end

@@ -88,7 +88,7 @@ Get details
 
    You may experience these rate limits when sending very large audience lists.
 
-   It is possible for |destination-name| to have multiple audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity will update the first audience list in that list.
+   It is possible for |destination-name| to have multiple audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity updates the first audience list in that list.
 
 .. destination-adobe-marketo-get-details-end
 

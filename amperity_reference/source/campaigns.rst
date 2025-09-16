@@ -63,7 +63,7 @@ How campaigns work
 
 .. campaigns-howitworks-start
 
-A campaign is defined in the **Campaigns** page, from which you configure the audience and sub-audiences that will be associated with the campaign, the downstream locations to which the campaign will be sent, and the time at which the campaign is to begin.
+A campaign is defined in the **Campaigns** page, from which you configure the audience and sub-audiences that is associated with the campaign, the downstream locations to which the campaign is sent, and the time at which the campaign is to begin.
 
 .. campaigns-howitworks-end
 
@@ -190,7 +190,7 @@ Audience attributes
 
 .. campaigns-attributes-start
 
-For many |campaign_destinations|, you may configure the list of attributes (i.e. first name, last name, state, etc.) that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the dropdown menu to select the destination if there is more than one.
+For many |campaign_destinations|, you may configure the list of attributes, such as first name, last name, and state, that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the dropdown menu to select the destination if there is more than one.
 
 .. campaigns-attributes-end
 
@@ -265,7 +265,7 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    Audience members that are added to a control group may have belonged to a treatment group on the previous send.
 
-   Audience members that are removed from the control group will belong to a treatment group on the next send.
+   Audience members that are removed from the control group belong to a treatment group on the next send.
 
    For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a mostly static group of customers, but with small fluctuations in audience size.
 
@@ -458,7 +458,7 @@ Email notifications
 
 Email notifications will alert you when there is an issue with campaign delivery. For example, email notifications are sent when Facebook Ads is missing an external identifier or two-factor authorization is not enabled for Google Ads.
 
-Email notifications will describe the issue and the steps that are required to resolve the issue, and will provide a link to the **Workflows** page in Amperity.
+Email notifications will describe the issue and the steps that are required to resolve the issue, and provides a link to the **Workflows** page in Amperity.
 
 .. campaigns-reference-campaign-notifications-end
 
@@ -487,7 +487,7 @@ Use this feature to define a performance measurement time period and then analyz
 
 .. tip:: Amperity tracks the purchases of your customers in the audiences lists. The purchase information is based on purchasing behavior across channels. 
 
-If you make any changes to this information downstream (i.e. launching a campaign on a different date then the one you entered into Amperity) they will not be reflected in Amperity.
+If you make any changes to this information downstream, such as launching a campaign on a different date then the one you entered into Amperity, they is not reflected in Amperity.
 
 .. campaigns-results-overview-end
 
@@ -547,19 +547,19 @@ You can finds details about the columns found in the campaign results download f
      - Decimal
      - Additional percentage of recipients converted in the treatment group relative to the control group during the campaign measurement period. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Incremental Revenue (Over Control)**
      - Decimal
      - Additional revenue generated measured by the difference between total test revenue recipient and total control revenue per recipient and then multiply that by test recipients. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Incremental Revenue Per Recipient (Over Control)**
      - Decimal
      - Additional revenue per recipient in the treatment group relative to the control audience during the campaign measurement period. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Is Control**
      - Boolean
@@ -650,8 +650,8 @@ Use cases
 You can use campaign results to determine how to successfully reach out to their customers for the following reasons:
 
 * If your campaign message was effective at converting customers
-* Whether one offer or treatment worked better at converting customers (i.e. A/B testing)
-* If a campaign drove incremental value (i.e. via a control group holdout)
+* Whether one offer or treatment worked better at converting customers
+* If a campaign drove incremental value
 
 .. campaigns-results-use-cases-end
 
@@ -663,7 +663,7 @@ Driving a campaign
 
 .. recurring-campaign-results-driving-start
 
-Once you have determined which channel to use for your campaign, you need to determine which is the most effective way to approach a campaign. For instance, if a you decide to send out an email campaign to your customers, you will need to decide which type of email will be most effective. Does the email with the 10% offer bring in more customer orders or does the $10 off email offer give customers more incentive to make a purchase?
+Once you have determined which channel to use for your campaign, you need to determine which is the most effective way to approach a campaign. For instance, if a you decide to send out an email campaign to your customers, you need to decide which type of email will be most effective. Does the email with the 10% offer bring in more customer orders or does the $10 off email offer give customers more incentive to make a purchase?
 
 .. recurring-campaign-results-driving-end
 
@@ -904,7 +904,7 @@ You can build a sub-audience in a campaign on the **Edit Campaign** page.
 #. Click **Edit attributes** to edit or add attributes.
 #. Click **Add Treatment** to add a treatment group.
 
-   .. note:: You cannot edit a segment that is added as a sub-audience if it is built from a segment. To make changes to the segment, you will need to edit it directly in the **Segment Editor**.
+   .. note:: You cannot edit a segment that is added as a sub-audience if it is built from a segment. To make changes to the segment, you need to edit it directly in the **Segment Editor**.
 
 .. campaigns-define-recipient-groups-steps-end
 
@@ -1215,7 +1215,7 @@ You you can configure a multichannel campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign multiple destinations.
 
-   .. note:: A treatment group with multiple destinations will send data to *all* of the configured destinations.
+   .. note:: A treatment group with multiple destinations sends data to *all* of the configured destinations.
 
 #. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
@@ -1261,7 +1261,7 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign at least one destination. You may assign more than one.
 
-   .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
+   .. note:: A treatment group with more than one configuration destination sends data to *all* of the configured destinations.
 
 #. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
@@ -1307,7 +1307,7 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign at least one destination. You may assign more than one.
 
-   .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
+   .. note:: A treatment group with more than one configuration destination sends data to *all* of the configured destinations.
 
 #. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
@@ -1433,7 +1433,7 @@ Download campaign results
 
 You can download a file that contains a list of campaign results.
 
-For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file will show one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
+For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file shows one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
 
 .. campaigns-download-end
 
@@ -1826,7 +1826,7 @@ Send campaign metadata to destination
 
 .. campaigns-send-metadata-start
 
-You can send campaign metadata (i.e., Amperity IDs and names associated with each audience group) to a destination on the **Edit Campaign** page.
+You can send campaign metadata, such as Amperity IDs and names associated with each audience group, to a destination on the **Edit Campaign** page.
 
 .. campaigns-send-metadata-end
 
@@ -2016,7 +2016,7 @@ Notifications for the **Campaigns** page appear after Amperity processes the seg
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. campaigns-view-notifications-context-end
 

@@ -60,7 +60,7 @@ Build query
 
 .. sendto-oracle-responsys-build-query-start
 
-You will need to build a query that shapes the data so that fields in the output can be mapped to the fields required by |destination-name|.
+You need to build a query that shapes the data so that fields in the output can be mapped to the fields required by |destination-name|.
 
 .. sendto-oracle-responsys-build-query-end
 

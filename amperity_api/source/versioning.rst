@@ -165,7 +165,7 @@ At least 6 months notice will be given before any supported version is marked as
 Amperity APIs evolve and change over time. To warn developers of upcoming deprecations Amperity uses the following headers:
 
 * `Deprecation Header <https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header>`__. When **true** a deprecation will occur at the date indicated in the header.
-* `Sunset Header <https://datatracker.ietf.org/doc/html/rfc8594>`__. When **true** a deprecated feature will stop working and return a 4xx response at the date indicated in the header.
+* `Sunset Header <https://datatracker.ietf.org/doc/html/rfc8594>`__. When **true** a deprecated feature stops working and return a 4xx response at the date indicated in the header.
 
 Deprecation and Sunset headers will be added at least 6 months prior to a deprecation. A deprecation date will be at least 3 months prior to a sunset date. For example:
 

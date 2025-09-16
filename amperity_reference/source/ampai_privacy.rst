@@ -27,7 +27,7 @@ Azure OpenAI Service has the following data sharing policies:
 * No data is available to or shared with other customers
 * No data is available to OpenAI
 * No data is used to improve OpenAI models
-* No data is used to improve any Microsoft or 3rd party products or services
+* No data is used to improve any Microsoft or third-party products or services
 
 You can read more details on the Azure OpenAI Service data and privacy policy `here <https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal>`__ |ext_link|.
 
@@ -82,7 +82,7 @@ What data is not sent to Azure OpenAI Service?
 
 Amperity sends only the data needed to ensure effective operation of the Azure OpenAI Service and no data is stored at rest in the Azure OpenAI service. In addition, Amperity restricts the use of the service to limit access to data:
 
-* Extensive customer PII. Amperity will send a sample of query results to the Azure OpenAI Service which may contain PII.
+* Extensive customer PII. Amperity sends a sample of query results to the Azure OpenAI Service which may contain PII.
 * Credentials. Amperity does not send any stored upstream or downstream credentials (usernames and passwords) to Azure OpenAI Service.
 
 .. ampai-azure-openai-service-not-sent-end

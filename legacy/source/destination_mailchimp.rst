@@ -77,7 +77,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The audience ID to which Amperity will write. (This is sometimes referred to as the list ID.)
+     - The audience ID to which Amperity writes. (This is sometimes referred to as the list ID.)
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -91,7 +91,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it will be associated to all audience members added by Amperity.
+     - A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to be applied to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it is associated to all audience members added by Amperity.
 
        .. important:: The tag name is configured as part of the orchestration from the **Tag Name** field.
 
@@ -121,7 +121,7 @@ Get details
    #. The datacenter ID is the information after the hyphen in the API key.
    #. There can be many audiences in |destination-name|. For each audience to which you want to send query results, click **Audiences**, then **Manage Audience**, then **Settings**. (A new page opens.)
    #. Click **Settings**, and then **Audience names and defaults**. The audience ID is on the right side and the audience name is on the left side.
-   #. The audience fields and merge tags are available from the same list as audience names and defaults. Click **Settings** and then **Audience fields and |MERGE| tags**. You will need to define the data template in Amperity to match those fields, along with mapping a field in Amperity that can map "subscribed" or "unsubscribed" values to a field that can be mapped to |destination-name|.
+   #. The audience fields and merge tags are available from the same list as audience names and defaults. Click **Settings** and then **Audience fields and |MERGE| tags**. You need to define the data template in Amperity to match those fields, along with mapping a field in Amperity that can map "subscribed" or "unsubscribed" values to a field that can be mapped to |destination-name|.
 
 .. destination-mailchimp-get-details-account-info-end
 

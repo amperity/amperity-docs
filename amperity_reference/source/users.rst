@@ -69,7 +69,9 @@ Before a user can log into Amperity they must be added and a policy must be assi
 
 #. Open the **Settings** page, and then select **Users**.
 #. Click **Add User**. This opens the **Add User** dialog box.
-#. Enter the user's full name (e.g. "Justin Currie") and the email address with which they will log into Amperity (e.g. "justin.currie@amperity.com"). Only users from a :ref:`known domain <settings-users-allow-domains>` are allowed to access Amperity.
+#. Enter the user's full name, such as "Justin Currie", and the email address with which they will log into Amperity, such as "justin.currie@amperity.com".
+
+   Only users from a :ref:`known domain <settings-users-allow-domains>` are allowed to access Amperity.
 #. Select the :doc:`policy to which this user will be assigned <policies>`.
 #. Select a :doc:`resource group to which this user will be assigned <resource_groups>`.
 #. Be sure to send the user a welcome to Amperity email. This is enabled by default.

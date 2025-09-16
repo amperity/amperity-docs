@@ -25,7 +25,7 @@ Send query results to Salesforce Marketing Cloud
 
 .. sendto-salesforce-marketing-cloud-start
 
-You can send query results that send |what-send| to business units in |destination-name|. The |what-send| is uploaded to |destination-name| using SFTP, after which the Marketing Cloud SOAP API will manage your data extensions and will move the |what-send| into the correct data extension automatically.
+You can send query results that send |what-send| to business units in |destination-name|. The |what-send| is uploaded to |destination-name| using SFTP, after which the Marketing Cloud SOAP API manages your data extensions and will move the |what-send| into the correct data extension automatically.
 
 .. sendto-salesforce-marketing-cloud-end
 
@@ -59,7 +59,7 @@ Build query
 
 .. sendto-salesforce-marketing-cloud-build-query-start
 
-You will need to build a query that returns the data you want to send to |destination-name|.
+You need to build a query that returns the data you want to send to |destination-name|.
 
 .. sendto-salesforce-marketing-cloud-build-query-end
 

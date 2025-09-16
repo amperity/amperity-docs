@@ -266,7 +266,7 @@ Review feeds and domain tables
 
 .. source-adobe-commerce-review-data-start
 
-After running the |source-name| courier it will create a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name|.
+After running the |source-name| courier it creates a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name|.
 
 .. source-adobe-commerce-review-data-end
 
@@ -278,7 +278,7 @@ Customers
 
 .. source-adobe-commerce-review-data-customer-start
 
-The feed and domain table for customer details will contain the following fields:
+The feed and domain table for customer details contains the following fields:
 
 * **CREATED_AT**
 * **CREATED_IN**
@@ -306,7 +306,7 @@ Customer address
 
 .. source-adobe-commerce-review-data-customer-address-start
 
-The feed and domain table for customer addresses will contain the following fields:
+The feed and domain table for customer addresses contains the following fields:
 
 * **CITY**
 * **COUNTRY_ID**
@@ -333,7 +333,7 @@ Customer group
 
 .. source-adobe-commerce-review-data-customer-group-start
 
-The feed and domain table for customer group will contain the following fields:
+The feed and domain table for customer group contains the following fields:
 
 * **CODE**
 * **CUSTOMER_GROUP_ID**
@@ -351,7 +351,7 @@ Orders
 
 .. source-adobe-commerce-review-data-orders-start
 
-The feed and domain table for orders will contain the following fields:
+The feed and domain table for orders contains the following fields:
 
 * **ADJUSTMENT_NEGATIVE**
 * **ADJUSTMENT_POSITIVE**
@@ -472,7 +472,7 @@ Order address
 
 .. source-adobe-commerce-review-data-order-address-start
 
-The feed and domain table for order address will contain the following fields:
+The feed and domain table for order address contains the following fields:
 
 * **ADDRESS_TYPE**
 * **CITY**
@@ -504,7 +504,7 @@ Order items
 
 .. source-adobe-commerce-review-data-order-items-start
 
-The feed and domain table for order items will contain the following fields:
+The feed and domain table for order items contains the following fields:
 
 * **AMOUNT_REFUNDED**
 * **BASE_AMOUNT_REFUNDED**

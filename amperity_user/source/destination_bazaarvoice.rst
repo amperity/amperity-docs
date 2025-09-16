@@ -128,7 +128,7 @@ and then assign this query to a destination that sends results to |destination-n
 
    * Do not include instances of a delimiter, such as commas, pipes, or tabs, within the field values, such as **Name** or **Description**.
    * Do not use double-quotes around field values.
-   * Avoid including leading and trailing spaces in field values because they will be included with the value when stored in the |destination-name| database.
+   * Avoid including leading and trailing spaces in field values because they is included with the value when stored in the |destination-name| database.
 
    Refer to `product catalog <https://docs.bazaarvoice.com/articles/vibe/upload-a-product-catalog-file>`__ |ext_link| for additional details.
 
@@ -158,7 +158,7 @@ Add orchestration
    * PSV
    * TSV
 
-   Use a single file for each product catalog to which Amperity will send data.
+   Use a single file for each product catalog to which Amperity sends data.
 
    Enable the **Include header row in output files** option for the Amperity destination.
 

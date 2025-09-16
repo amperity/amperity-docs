@@ -103,7 +103,7 @@ Next configure the settings that are specific to cross-account role assumption.
 
 The values for the **Amperity Role ARN** and **External ID** fields -- the Amazon Resource Name (ARN) for your Amperity tenant and its external ID -- are provided automatically.
 
-You must provide the values for the **Target Role ARN** and **S3 Bucket Name** fields. Enter the target role ARN for the IAM role that Amperity will use to access the customer-managed Amazon S3 bucket, and then enter the name of the Amazon S3 bucket.
+You must provide the values for the **Target Role ARN** and **S3 Bucket Name** fields. Enter the target role ARN for the IAM role that Amperity uses to access the customer-managed Amazon S3 bucket, and then enter the name of the Amazon S3 bucket.
 
 .. sources-amazon-s3-cross-account-roles-steps-settings-details-end
 

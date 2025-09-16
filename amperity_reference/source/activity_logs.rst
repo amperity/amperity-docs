@@ -55,7 +55,7 @@ The activity list displays the following columns:
 * **User** The user who took the action. For most users, this is that user's friendly name or email address.
 
   An auth token is displayed for users that accesses Amperity programatically.
-* **Action** The action taken in the application. Generally this will take the form of "action type/action". For example, activating a segment appears as "segment/activate" and running a segment for download appears as "query.exec/download".
+* **Action** The action taken in the application. Generally this takes the form of "action type/action". For example, activating a segment appears as "segment/activate" and running a segment for download appears as "query.exec/download".
 
   .. note:: A few actions in the list are not user-initiated. For example, when a user is granted a new authorization policy, both the grant and the receipt appear on separate rows.
 * **Object** The object against which the action occurred.
@@ -406,7 +406,7 @@ The following table lists the most common event types, grouped by the component 
        ``audience/created``
           An audience for a workflow alert was created.
 
-          .. note:: This event will show *only* the first time an email addresss or Slack channel is configured to receive workflow alerts for courier groups, scheduled orchestration groups, or campaigns. All subsequent events related to workflow alerts will show the ``audience/updated`` event.
+          .. note:: This event shows *only* the first time an email addresss or Slack channel is configured to receive workflow alerts for courier groups, scheduled orchestration groups, or campaigns. All subsequent events related to workflow alerts shows the ``audience/updated`` event.
 
        ``audience/updated``
           The membership of an audience for a workflow alert was updated. This includes adding or removing email addresses and/or Slack channels to or from a workflow alert.

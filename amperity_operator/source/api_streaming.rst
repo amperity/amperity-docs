@@ -75,7 +75,7 @@ The Streaming API has the following rate limits.
    * - **Payload size**
      - The maximum payload size may not exceed 5 MB.
 
-       Attempts to post more than 5 MB will fail with an HTTP 413 Payload Too Large status code.
+       Attempts to post more than 5 MB fails with an HTTP 413 Payload Too Large status code.
 
 .. streaming-ingest-rate-limits-end
 
@@ -150,7 +150,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Select the number of days this token will allow access to the API, after which it will expire. For example, 3 days:
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
        .. image:: ../../images/api-keys-set-token-expiration.png
           :width: 240 px
@@ -166,7 +166,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       .. important:: You are the only person who will have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
+       .. important:: You are the only person who have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 .. api-keys-access-tokens-generate-end
 
@@ -269,7 +269,7 @@ Data can be sent to the Streaming API by issuing POST requests to the ``/stream/
       :start-after: .. term-postman-start
       :end-before: .. term-postman-end
 
-   Amperity will provide complete details for using a |ext_download_postman_api_streaming| when your tenant is initialized. Use this template as the starting point for building out the API stream for your data source.
+   Amperity provides complete details for using a |ext_download_postman_api_streaming| when your tenant is initialized. Use this template as the starting point for building out the API stream for your data source.
 
 .. streaming-ingest-rest-api-configure-streams-postman-end
 
@@ -578,7 +578,7 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 
 #. Click **Save**.
 

@@ -54,7 +54,7 @@ Build query
 
 .. destination-domo-build-query-start
 
-You will need to build a query that outputs the data that you want to use within |destination-name|.
+You need to build a query that outputs the data that you want to use within |destination-name|.
 
 .. destination-domo-build-query-end
 

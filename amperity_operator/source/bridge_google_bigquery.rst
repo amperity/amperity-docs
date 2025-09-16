@@ -373,7 +373,7 @@ Get details
 
 .. bridge-google-bigquery-sync-amperity-get-details-start
 
-Before you can create inbound sharing between |source-name| and Amperity you will need to collect the following information.
+Before you can create inbound sharing between |source-name| and Amperity you need to collect the following information.
 
 .. list-table::
    :widths: 10 90
@@ -729,9 +729,9 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync. 
+       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync. 
 
-       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -755,7 +755,7 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
 
        .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within synced tables to support any of your Amperity workflows.
 
-       When finished, click **Save and sync**. This will start a workflow that synchronizes data from |source-name| to Amperity and will create the mapped domain table names.
+       When finished, click **Save and sync**. This will start a workflow that synchronizes data from |source-name| to Amperity and creates the mapped domain table names.
 
        You can manually sync tables that are synced with Amperity using the **Sync** option from the **Actions** menu for the inbound bridge.
 

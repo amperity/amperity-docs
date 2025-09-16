@@ -245,7 +245,7 @@ The **Unified Paid Media** table contains all known profile data for each of you
 
    For this example, 10 additional customer matches were found.
 
-   The overall match rate will drop from 80% to 64%. However, the total number of matched customers will increase from 80 to 90.
+   The overall match rate will drop from 80% to 64%. However, the total number of matched customers increases from 80 to 90.
 
 .. paid-media-about-match-rates-end
 
@@ -427,7 +427,7 @@ How can you measure the success of a paid media campaign over a defined time win
           :align: center
           :class: no-scaled-link
 
-     - To measure the success of your paid media campaigns you will need a set of key performance indicators for the defined time window. For example:
+     - To measure the success of your paid media campaigns you need a set of key performance indicators for the defined time window. For example:
 
        * Aggregated incremental revenue
        * Aggregated incremental conversion

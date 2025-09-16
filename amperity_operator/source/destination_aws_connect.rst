@@ -263,7 +263,7 @@ You must upload the application code and any dependencies to AWS Lambda as a ZIP
 
          sh util/lambda-build.sh filename=amazon_aws_connect.py
 
-      This will create a ZIP file that contains the following files: **amazon_aws_connect.py**, **amperity_runner.py**, and **helpers.py**.
+      This creates a ZIP file that contains the following files: **amazon_aws_connect.py**, **amperity_runner.py**, and **helpers.py**.
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
@@ -325,7 +325,7 @@ Add the API gateway
 
 #. Click **Add**.
 
-   You will need these values when configuring the webhook destination in Amperity.
+   You need these values when configuring the webhook destination in Amperity.
 
 .. destination-aws-connect-manual-add-gateway-end
 

@@ -55,11 +55,11 @@ The following sections describe using the **Segment Editor** to build a segment 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Find customers who made a purchase between November 1st and December 31st.
+          :alt: Find customers who made a purchase between November 1 and December 31.
           :align: center
           :class: no-scaled-link
 
-     - To find customers who have purchased from your brand during the Christmas holiday season -- November 1 - December 31 -- you will need to add a date range to your segment. Choose the **Has purchased** purchase, select the "between" operator, and then set each date using the calendar picker:
+     - To find customers who have purchased from your brand during the Christmas holiday season--November 1 and December 31--you need to add a date range to your segment. Choose the **Has purchased** purchase, select the "between" operator, and then set each date using the calendar picker:
 
        .. image:: ../../images/usecase-holiday-shoppers-sms-order-datetime-calendar-picker.png
           :width: 250 px
@@ -71,13 +71,13 @@ The following sections describe using the **Segment Editor** to build a segment 
 
        .. image:: ../../images/usecase-holiday-shoppers-sms-has-purchased.png
           :width: 540 px
-          :alt: Find customers who made a purchase between November 1st and December 31st.
+          :alt: Find customers who made a purchase between November 1 and December 31.
           :align: left
           :class: no-scaled-link
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to see how many customers are in your segment, how much they spent in the past year, how many are active, and how many of them could belong to a future campaign.
 
-       .. tip:: Define a time window that is appropriate for the holiday for which you want to run an SMS campaign. For example, October 1 - October 31 for Halloween, February 1 - February 14 for Valentine's Day, or two weeks before Easter.
+       .. tip:: Define a time window that is appropriate for the holiday for which you want to run an SMS campaign. For example, October 1 through October 31 for Halloween, February 1 through February 14 for Valentine's Day, or two weeks before Easter.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -97,7 +97,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
        Keep the and/or slider that is in-between attribute groups set to **AND**.
 
-       Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who have made a purchase between November 1st and December 31st *and* who have opted in to SMS.
+       Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who have made a purchase between November 1 and December 31 *and* who have opted in to SMS.
 
        .. tip:: For companies with multiple brands or are in multiple regions, you may use attributes that apply additional filters for brands, regions, or products within your product catalog.
 
@@ -121,7 +121,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
           Each treatment group is configured to send data to one or more destinations. Each destination is configured to send a set of attributes downstream from Amperity.
 
-          For example: Attentive is a destination to which you can send lists of phone numbers for use with SMS campaigns. Edit the attributes that are sent to Attentive to include only the **phone** attribute, which will send the list of phone numbers that are associated with the customers in your segment.
+          For example: Attentive is a destination to which you can send lists of phone numbers for use with SMS campaigns. Edit the attributes that are sent to Attentive to include only the **phone** attribute, which sends the list of phone numbers that are associated with the customers in your segment.
 
 
    * - .. image:: ../../images/steps-05.png

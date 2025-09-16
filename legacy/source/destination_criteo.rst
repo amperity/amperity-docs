@@ -291,7 +291,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Advertiser ID**
-            - The unique ID for the advertiser account in |destination-name| to which Amperity will send audiences.
+            - The unique ID for the advertiser account in |destination-name| to which Amperity sends audiences.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px

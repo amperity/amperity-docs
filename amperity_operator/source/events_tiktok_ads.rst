@@ -129,7 +129,7 @@ Configure credentials
 
 .. events-tiktok-ads-configure-oauth-important-start
 
-.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that will be used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
+.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that is used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
 
 .. events-tiktok-ads-configure-oauth-important-end
 
@@ -429,7 +429,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        An event set ID is a nineteen character string similar to "7654321098765432109".
 
-       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card; the event set ID is located under the name of the event set.
 
 
    * - **event_source**

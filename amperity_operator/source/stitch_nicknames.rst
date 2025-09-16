@@ -89,7 +89,7 @@ The following table tells Stitch which nicknames *should not* be associated with
        8        Daniel            Danny      REMOVE
       -------- ----------------  ---------- -------------
 
-   If you add a nickname for a canonical name that does not exist, a new row is added. For example, if "Daniel" does not exist in your nicknames list, row 8 will add "Daniel" and add a nickname for "Danny".
+   If you add a nickname for a canonical name that does not exist, a new row is added. For example, if "Daniel" does not exist in your nicknames list, row 8 adds "Daniel" and add a nickname for "Danny".
 
    If a nickname is added *and* removed, Amperity will ignore the remove request and keep the nickname in the list.
 

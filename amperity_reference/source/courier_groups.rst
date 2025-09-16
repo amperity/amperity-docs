@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        A courier group defines the end-to-end activities that will run within Amperity.
+        A courier group defines the end-to-end activities that runs within Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A courier group defines the end-to-end activities that will run within Amperity.
+        A courier group defines the end-to-end activities that runs within Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -78,7 +78,7 @@ Use the **Add courier group** button to add a courier group to Amperity. A couri
 
 For each courier added to a courier group, define a wait time and the number of days to look for data. This is used to help determine how much time the courier group should wait for the files associated with a courier to be ready for processing.
 
-In some cases, if the files are not ready, the courier workflow will fail. But in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
+In some cases, if the files are not ready, the courier workflow fails. But in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
 
 .. courier-groups-add-context-end
 
@@ -146,7 +146,7 @@ In some cases, if the files are not ready, the courier workflow will fail. But i
           :align: left
           :class: no-scaled-link
 
-     - Optional. Enable runtime alerts. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when the configured amount of time is exceeded, an alert will be sent.
+     - Optional. Enable runtime alerts. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when the configured amount of time is exceeded, an alert is sent.
 
        .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
           :width: 400 px
@@ -161,7 +161,7 @@ In some cases, if the files are not ready, the courier workflow will fail. But i
           :align: left
           :class: no-scaled-link
 
-     - Define how the courier group will run: a **Full**, a **Refresh**, or an **Source** workflow.
+     - Define how the courier group runs: a **Full**, a **Refresh**, or an **Source** workflow.
 
        .. image:: ../../images/mockups-workflow-courier-group-run-types.png
           :width: 400 px
@@ -365,7 +365,7 @@ Time zones
 
 A courier group schedule is associated with a time zone. The time zone determines the point at which a courier group's scheduled start time begins. A time zone should be aligned with the time zone of system from which the data is being pulled.
 
-Use the **Use this time zone for file date ranges** checkbox to use the selected time zone to look for files. If unchecked, the courier group will use the current time in UTC to look for files to pick up.
+Use the **Use this time zone for file date ranges** checkbox to use the selected time zone to look for files. If unchecked, the courier group uses the current time in UTC to look for files to pick up.
 
 .. courier-groups-timezones-end
 
@@ -392,7 +392,7 @@ The time zone that is chosen for an courier group schedule should consider every
 
 .. tip:: Do not create courier group schedules that may occur during a daylight savings time transition.
 
-   For example, an courier group schedule with the cron string of ``30 2 * * *`` and the time zone of "(GMT-08:00) Pacific Time" will run once a day most at 2:30am, except for one day in the spring when it will not run at all and one day in the fall when it will run twice.
+   For example, an courier group schedule with the cron string of ``30 2 * * *`` and the time zone of "(GMT-08:00) Pacific Time" runs once a day most at 2:30am, except for one day in the spring when it will not run at all and one day in the fall when it runs twice.
 
    This is because American daylight savings time transitions at 2:00 AM, meaning the 2:00 AM hour occurs twice when transitioning out of daylight savings time (Fall) and is skipped altogether when transitioning into daylight savings time (Spring).
 
@@ -484,9 +484,9 @@ This range is typically 24 hours, but may be configured for longer ranges. For e
 
 .. courier-groups-schedule-offset-callout-start
 
-.. important:: The schedule defines the frequency at which the courier group will run.
+.. important:: The schedule defines the frequency at which the courier group runs.
 
-   The timezone is the time at which the courier group will run. This may be set to your local time zone.
+   The timezone is the time at which the courier group runs. This may be set to your local time zone.
 
    Individual courier wait times are calculated using Coordinated Universal Time (UTC), even when a non-UTC time zone is specified for the courier group. This means that when a courier group runs, the current time in UTC is used to calculate the wait time.
 
@@ -723,7 +723,7 @@ A courier group can be configured to send workflow alerts when one or more files
 
 .. courier-groups-howto-add-courier-alert-tip-start
 
-.. tip:: Some files are not considered essential to the daily Amperity run. The reasons why a particular file may be considered non-essential will vary from tenant to tenant, but they may include situations like:
+.. tip:: Some files are not considered essential to the daily Amperity run. The reasons why a particular file may be considered non-essential varies from tenant to tenant, but they may include situations like:
 
    * A data source is mostly static
    * A data source does not contain PII that will affect the quality of the Amperity ID.
@@ -969,7 +969,7 @@ A runtime alert is a type of workflow alert that is sent when a courier group ha
 .. courier-groups-howto-notify-slow-steps-start
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
-#. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when this amount of time is exceeded, a workflow alert will be sent.
+#. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when this amount of time is exceeded, a workflow alert is sent.
 
    .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
       :width: 400 px
@@ -1086,7 +1086,7 @@ Automatically
 
 .. courier-groups-howto-run-automatically-start
 
-A courier group with a schedule will run automatically when :ref:`the courier group is activated <courier-groups-howto-activate>`.
+A courier group with a schedule runs automatically when :ref:`the courier group is activated <courier-groups-howto-activate>`.
 
 .. courier-groups-howto-run-automatically-end
 

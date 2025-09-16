@@ -20,7 +20,7 @@ Amperity ID stability
 
 Stitch depends on PKs being defined for each source table in order to keep track of which source rows are linked to each unified customer profile after ID resolution.
 
-When a source row changes (e.g. a user adds a secondary phone number or changes their account preferences), Stitch wants to assign the same Amperity ID to that customer instead of creating a new one.
+When a source row changes, such as when a user adds a secondary phone number or changes their account preferences, Stitch wants to assign the same Amperity ID to that customer instead of creating a new one.
 
 To keep a customer’s Amperity ID stable, PKs are used to recognize that a given source row changed and wasn't deleted.
 

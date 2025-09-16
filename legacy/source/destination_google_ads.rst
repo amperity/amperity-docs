@@ -100,7 +100,7 @@ Get details
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
-       The name of the product to which Amperity will send data: "Google Ads".
+       The name of the product to which Amperity sends data: "Google Ads".
 
        The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Google Ads" account.
 
@@ -116,9 +116,9 @@ Get details
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity will create it.
+     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity creates it.
 
-       The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+       The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
 
        .. tip:: Set this value to "0" to remove all audience members.
 
@@ -296,7 +296,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Audience name**
-            - The name of an audience in |destination-name|. If the audience does not exist, Amperity will create it.
+            - The name of an audience in |destination-name|. If the audience does not exist, Amperity creates it.
 
           * - **Audience description**
             - An optional description of the audience.
@@ -307,10 +307,10 @@ Add destination
               .. note:: The customer ID must be 10 digits and may not contain dashes.
 
           * - **Customer product**
-            - The name of the product to which Amperity will send data. Choose "Google Ads".
+            - The name of the product to which Amperity sends data. Choose "Google Ads".
 
           * - **Membership duration**
-            - The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+            - The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
 
               .. tip:: Set this value to "0" to remove all audience members.
 
@@ -725,7 +725,7 @@ Contact Info Matching
 
 .. destination-google-ads-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs. Each field should be matched to (at least) one of the following columns:
+A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to (at least) one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -828,7 +828,7 @@ Mobile Device ID Matching
 
 .. destination-google-ads-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -855,7 +855,7 @@ User ID Matching
 
 .. destination-google-ads-api-matching-user-start
 
-A list can be matched to advertiser-generated and assigned user IDs and/or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to advertiser-generated and assigned user IDs and/or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

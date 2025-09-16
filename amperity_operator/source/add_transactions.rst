@@ -586,7 +586,7 @@ C360 validations
 
 A customer 360 validation report is generated as an output of running the database. You can access this report from the Notifications pane on the **Databases** page.
 
-You should work through any of the individual validations in the report that indicate a validation error. In some cases, you may choose to ignore the error or adjust a threshold. In many cases, you will want to investigate the report to try to identify what is causing the error, and then determine if any adjustments can be made.
+You should work through any of the individual validations in the report that indicate a validation error. In some cases, you may choose to ignore the error or adjust a threshold. In many cases, you should investigate the report to try to identify what is causing the error, and then determine if any adjustments can be made.
 
 .. setup-transactions-validate-database-end
 

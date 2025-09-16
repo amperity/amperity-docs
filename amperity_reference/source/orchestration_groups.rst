@@ -239,7 +239,7 @@ The timezone that is chosen for an orchestration group schedule should consider 
 
 .. tip:: Do not create orchestration group schedules that may occur during a daylight savings time transition. 
 
-   For example, an orchestration group schedule with the cron string of ``30 2 * * *`` and a timezone of "(GMT-08:00) Pacific Time" will run once a day most at 2:30am, except for one day in the spring when it will not run at all and one day in the fall when it will run twice.
+   For example, an orchestration group schedule with the cron string of ``30 2 * * *`` and a timezone of "(GMT-08:00) Pacific Time" runs once a day most at 2:30am, except for one day in the spring when it will not run at all and one day in the fall when it runs twice.
 
    This is because American daylight savings time transitions at 2:00 AM, meaning the 2:00 AM hour occurs twice when transitioning out of daylight savings time (Fall) and is skipped altogether when transitioning into daylight savings time (Spring).
 

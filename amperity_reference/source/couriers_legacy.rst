@@ -114,7 +114,9 @@ Load settings define the location of a data source, it's type, and how it should
 
 .. couriers-legacy-files-load-settings-context-start
 
-Each filedrop load setting must specify the file pattern, which is the path to the file, its filename, a date stamp, and a file extension. The rest of the load settings block must match, i.e. the content type for a "some-file.csv" must be "text/csv". An archive must specify the archive *and* the file contained within it. If the file is archived as "some-file.zip" then the ``"object/type"`` would be "archive" and the content type of the file within it would be "text/csv".
+Each filedrop load setting must specify the file pattern, which is the path to the file, its filename, a date stamp, and a file extension. The rest of the load settings block must match. For example, the content type for a "some-file.csv" must be "text/csv".
+
+An archive must specify the archive *and* the file contained within it. If the file is archived as "some-file.zip" then the ``"object/type"`` would be "archive" and the content type of the file within it would be "text/csv".
 
 If an archive contains only a single file *or* if all the files within the archive have the same file tag, content type, and other settings, then ``"archive/contents"`` can be omitted and ``"object/land-as"`` can be specified instead. The files within the archive will all use the specified ``"object/land-as"`` settings.
 
@@ -403,7 +405,7 @@ API couriers
 
 .. couriers-legacy-api-start
 
-An API data source will vary, depending on the file format and other configuration details. API data sources include Google Analytics, Salesforce Sales Cloud, and Zendesk.
+An API data source varies, depending on the file format and other configuration details. API data sources include Google Analytics, Salesforce Sales Cloud, and Zendesk.
 
 .. couriers-legacy-api-end
 
@@ -560,7 +562,7 @@ Incorrect feed ID
 
 .. couriers-legacy-load-operation-type-incorrect-feed-id-start
 
-Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that will not be available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
+Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
 
 .. code-block:: none
 
@@ -632,7 +634,7 @@ Load ingest query
 
 .. couriers-legacy-load-operation-type-load-ingest-query-start
 
-The configuration for an ingest query load operation depends on the data source against which the ingest query will run:
+The configuration for an ingest query load operation depends on the data source against which the ingest query runs:
 
 * Apache Avro
 * Apache Parquet
@@ -1982,7 +1984,7 @@ Use SnapPass to securely share configuration data with your Amperity representat
 #. Enter the name of the courier.
 #. From the **Plugin** dropdown, select a plugin.
 
-   .. note:: The settings for a courier will vary, depending on the courier selected from the **Plugin** dropdown.
+   .. note:: The settings for a courier varies, depending on the courier selected from the **Plugin** dropdown.
 
 #. Enter the credentials for the courier type.
 #. Enter any courier-specific settings.

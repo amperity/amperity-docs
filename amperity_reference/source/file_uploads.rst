@@ -193,13 +193,13 @@ You can add a query output to a segment from the **Segment Editor**.
 #. From the **Condition** list, select **Is a member of**.
 #. From the **Customer Lists** list, in the **Queries** section, select a query output.
 
-   .. note:: To delete a segment associated with a query output, you will need to first delete the query output before being able to delete the segment.
+   .. note:: To delete a segment associated with a query output, you need to first delete the query output before being able to delete the segment.
    
 #. Click **Save As**.
 
 The data appears on the **Segments** page.
 
-.. note:: In order for a query output to appear on the **Segment Editor**, you will need to add the Amperity ID field as a column or add the email field as a column in to the .CSV file.
+.. note:: In order for a query output to appear on the **Segment Editor**, you need to add the Amperity ID field as a column or add the email field as a column in to the .CSV file.
 
    If your uploaded file doesn't have any Amperity IDs, you can select an email field to join one from the **Merged Customers** table on the **Configure File** window.
 
@@ -313,7 +313,7 @@ Upload CSV file
 
 You can upload a CSV file in Amperity to use on the **Queries**, **Segments**, and **Campaigns** pages.
 
-.. note:: When you upload a file to Amperity, the system will write a table from the data contained in that file. The table is then layered on top of a database at the queries layer.
+.. note:: When you upload a file to Amperity, the system writes a table from the data contained in that file. The table is then layered on top of a database at the queries layer.
 
    Amperity does not enforce a time constraint on how long uploaded files can remain in the database.
 
@@ -347,7 +347,7 @@ You can upload a CSV file the **Customer 360** page.
 #. In the **Email** field, select a incoming field to have the data mapped to that field.
 #. Click **Save**.
 
-   .. note:: In order for the uploaded customer list to appear on the **Segment Editor**, you will need to add the Amperity ID field as a column or add the email field as a column to the CSV file.
+   .. note:: In order for the uploaded customer list to appear on the **Segment Editor**, you need to add the Amperity ID field as a column or add the email field as a column to the CSV file.
 
 .. file-uploads-via-c360-steps-end
 

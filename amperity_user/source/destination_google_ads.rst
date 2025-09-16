@@ -65,7 +65,7 @@ Build query
 
 .. sendto-google-ads-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to :ref:`Google Ads API matching keys <sendto-google-ads-api-matching>`, one of:
+You need to build a query that outputs fields that can be mapped to :ref:`Google Ads API matching keys <sendto-google-ads-api-matching>`, one of:
 
 #. :ref:`Contact information, including personally identifiable information (PII) matching <sendto-google-ads-api-matching-contact>`
 #. :ref:`Mobile device matching <sendto-google-ads-api-matching-mobile>`

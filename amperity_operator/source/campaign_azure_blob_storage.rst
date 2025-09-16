@@ -57,7 +57,7 @@ Get details
           :class: no-scaled-link
      - **Azure Blob Storage container details**
 
-       You will need to know the following details about the |destination-name| container to which Amperity will send data.
+       You need to know the following details about the |destination-name| container to which Amperity sends data.
 
        #. The name of the |destination-name| container. A blob prefix is sometimes required.
 

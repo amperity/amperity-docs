@@ -22,9 +22,9 @@ Default attributes
 
 Sending campaigns from Amperity to downstream marketing workflows is a combination of:
 
-* A :doc:`segment <segments>` that defines the audience that you will use with your campaign.
+* A :doc:`segment <segments>` that defines the audience that you use with your campaign.
 * A :doc:`campaign <campaigns>` that breaks that audience down into sub-audiences that align to your marketing strategies and goals.
-* A set of :doc:`destinations <destinations>` that specify the locations and channels to which you will send each sub-audience.
+* A set of :doc:`destinations <destinations>` that specify the locations and channels to which you sends each sub-audience.
 
   Most destinations may be configured to send a list of attributes that are specific to your brand's use cases.
 
@@ -107,7 +107,7 @@ The following sections describe the steps you'll follow to configure the default
 
           For destinations that use an API, Amperity pre-configures the list of attributes that are required and/or are optional. Review the Amperity documentation for each destination to understand which attributes may be configured.
 
-          For destinations that accept files--SFTP, Amazon S3, Azure Blob Storage, and Google Cloud Storage--your brand should verify the requirements for the downstream system to which data will be sent before configuring default attributes.
+          For destinations that accept files--SFTP, Amazon S3, Azure Blob Storage, and Google Cloud Storage--your brand should verify the requirements for the downstream system to which data is sent before configuring default attributes.
 
 
    * - .. image:: ../../images/steps-04.png

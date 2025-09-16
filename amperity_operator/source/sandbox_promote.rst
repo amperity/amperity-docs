@@ -96,7 +96,7 @@ The following sections describe the steps you'll follow when promoting changes i
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - When configuration state changes in a sandbox are ready for promotion to production, the sandbox-specific notifications will provide a link named "Ready to promote".
+     - When configuration state changes in a sandbox are ready for promotion to production, the sandbox-specific notifications provides a link named "Ready to promote".
 
        .. image:: ../../images/mockups-sandbox-sync-with-production-promote.png
           :width: 600 px

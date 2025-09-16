@@ -66,7 +66,7 @@ Each destination requires configuration, such as:
 
 Configuration requirements are unique to each destination and use case. Review the "Get details" section for each destination that your brand wants to configure in Amperity. Review any links to external documentation to help ensure that your brand understands destination-specific requirements.
 
-After a destination is configured, run a test using a small audience. Verify that the data has arrived correctly. Make adjustments, if necessary, before sending an audience that will be used with your brand's marketing activity.
+After a destination is configured, run a test using a small audience. Verify that the data has arrived correctly. Make adjustments, if necessary, before sending an audience that is used with your brand's marketing activity.
 
 .. destinations-get-details-end
 

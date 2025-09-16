@@ -22,9 +22,9 @@ Create campaigns
 
 Sending campaigns from Amperity to downstream marketing workflows is a combination of:
 
-* A :doc:`segment <segments>` that defines the audience that you will use with your campaign.
+* A :doc:`segment <segments>` that defines the audience that you use with your campaign.
 * A campaign that breaks that audience down into sub-audiences that align to your marketing strategies and goals.
-* A set of :doc:`destinations <destinations>` that specify the locations and channels to which you will send each sub-audience.
+* A set of :doc:`destinations <destinations>` that specify the locations and channels to which you sends each sub-audience.
 
 This is part two of a series of topics that describes how this works.
 
@@ -62,7 +62,7 @@ The following sections describe the steps you'll follow to set up and configure 
 
        After the campaign builder opens, give your campaign a name.
 
-       .. tip:: Use good naming patterns to ensure that you can always find your campaigns in the various applications to which you will send them. The campaign name will *always* appear in the filename that is sent to any destination.
+       .. tip:: Use good naming patterns to ensure that you can always find your campaigns in the various applications to which you sends them. The campaign name will *always* appear in the filename that is sent to any destination.
 
           Avoid duplication between campaign and treatment group names.
 
@@ -119,7 +119,7 @@ The following sections describe the steps you'll follow to set up and configure 
           :class: no-scaled-link
      - Some campaigns have just one audience, while others require sub-audiences.
 
-       Sub-audiences can be many things. How you choose to configure them is dependent on your audience, marketing strategy and goals, and the type of campaign you will run.
+       Sub-audiences can be many things. How you choose to configure them is dependent on your audience, marketing strategy and goals, and the type of campaign.
 
        This topic uses sub-audiences to split the combined high-value audience into more specific audiences by lifecycle status.
 
@@ -141,7 +141,7 @@ The following sections describe the steps you'll follow to set up and configure 
 
        Assign one or more destinations to this treatment group, and then edit the attributes to ensure Amperity is sending the right data.
 
-       .. tip:: Use good naming patterns to ensure that you can always find your campaigns in the various applications to which you will send them. The campaign name will *always* appear in the filename that is sent to any destination and the treatment group name is often appended. Use a naming pattern that allows the treatment group name to build on the campaign name.
+       .. tip:: Use good naming patterns to ensure that you can always find your campaigns in the various applications to which you sends them. The campaign name will *always* appear in the filename that is sent to any destination and the treatment group name is often appended. Use a naming pattern that allows the treatment group name to build on the campaign name.
 
           Avoid duplication between campaign and treatment group names.
 
@@ -158,7 +158,7 @@ The following sections describe the steps you'll follow to set up and configure 
           * "Active", "CoolingDown", or "AtRisk"
           * "90D_Loyalty"
 
-          The campaign and treatment group names are concatenated, typically as **{{ campaign_name }}_{{ recipient_group_name }}**. The campaign and treatment group names become part of the filename that will be visible to users in the application to which you send this treatment group.
+          The campaign and treatment group names are concatenated, typically as **{{ campaign_name }}_{{ recipient_group_name }}**. The campaign and treatment group names become part of the filename that is visible to users in the application to which you send this treatment group.
 
 
    * - .. image:: ../../images/steps-05.png

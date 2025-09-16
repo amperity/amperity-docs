@@ -28,7 +28,7 @@ Configure campaigns for Klaviyo
 
 .. destination-klaviyo-start
 
-Use Amperity to manage audience lists in Klaviyo. Build a query using the **email** field, with optional additional customer profile fields, and then send the results of that query to Klaviyo. The audience list will be updated to match the query.
+Use Amperity to manage audience lists in Klaviyo. Build a query using the **email** field, with optional additional customer profile fields, and then send the results of that query to Klaviyo. The audience list is updated to match the query.
 
 .. destination-klaviyo-end
 
@@ -94,7 +94,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The list name to which the Klaviyo connector will write. This can be the name of an existing list or a new list.
+     - The list name to which the Klaviyo connector writes. This can be the name of an existing list or a new list.
 
        .. note:: |destination-name| supports up to 1000 lists and/or segments in your account at any given time.
 
@@ -321,7 +321,7 @@ Add data template
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Configure how Amperity will send data to |destination-name|.
+     - Configure how Amperity sends data to |destination-name|.
 
        **For campaigns**
 
@@ -329,7 +329,7 @@ Add data template
 
        **List Name** This is the name of the audience list in |destination-name|. If the audience list does not exist, this is the name of the audience list that will be created by Amperity.
 
-       .. note:: By default, Amperity will manage audience lists using only **email**.
+       .. note:: By default, Amperity manages audience lists using only **email**.
 
        **For orchestrations**
 
@@ -342,9 +342,9 @@ Add data template
 
        **List Name** This is the name of the audience list in |destination-name|. If the audience list does not exist, this is the name of the audience list that will be created by Amperity.
 
-       **Use full profile to update list** This option allows queries to send additional customer profile fields as part of the audience list, after which they will be visible in |destination-name| from the **Customer Properties** section within individual profiles for members of that audience list.
+       **Use full profile to update list** This option allows queries to send additional customer profile fields as part of the audience list, after which they is visible in |destination-name| from the **Customer Properties** section within individual profiles for members of that audience list.
 
-       .. note:: By default, Amperity will manage audience lists using only **email**.
+       .. note:: By default, Amperity manages audience lists using only **email**.
 
 
    * - .. image:: ../../images/steps-05.png

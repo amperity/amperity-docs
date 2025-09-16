@@ -50,7 +50,7 @@ Build query
 
 .. sendto-optimizely-build-query-start
 
-You will need to build a query that can send results to |destination-name| as a CSV file. This may be done for one of the following typically done for one of the following types:
+You need to build a query that can send results to |destination-name| as a CSV file. This may be done for one of the following typically done for one of the following types:
 
 * :ref:`Customer profiles <sendto-optimizely-build-query-customer-profiles>`
 * :ref:`List attributes <sendto-optimizely-build-query-list-attributes>`
@@ -137,7 +137,7 @@ Data that is output from Amperity and sent to |destination-name| must be shaped 
 
 #. Each column header for a registered attribute in the CSV file must correspond to the correct data type in |destination-name| and attribute name.
 
-   .. note:: If a column header doesn't correspond to a registered attribute name, the upload will fail. If an attribute value doesn't respect the attribute's data type and format, the upload will fail.
+   .. note:: If a column header doesn't correspond to a registered attribute name, the upload fails. If an attribute value doesn't respect the attribute's data type and format, the upload fails.
 
 .. sendto-optimizely-build-query-customer-profile-requirements-end
 

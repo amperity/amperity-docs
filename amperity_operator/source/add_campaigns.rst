@@ -468,7 +468,7 @@ Additional data sources
 
 .. add-campaigns-data-requirements-supporting-data-sources-start
 
-Additional data should be made available to Amperity beyond what is provided to support the basic requirements for segments and campaigns. Additional data will improve the quality of the downstream workflows that are available and will increase your ability to identify the right customer segments and profiles for which you will run campaigns.
+Additional data should be made available to Amperity beyond what is provided to support the basic requirements for segments and campaigns. Additional data will improve the quality of the downstream workflows that are available and increases your ability to identify the right customer segments and profiles for which you run campaigns.
 
 The following types of data are recommended to be made available to Amperity as additional data sources:
 

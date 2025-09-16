@@ -53,7 +53,7 @@ Apply semantic tags
 
 .. feeds-apply-semantic-tags-start
 
-Semantic tags must be defined for every feed that will provide profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Each group of semantic tags--:ref:`customer profile semantic tags <semantics-profile>`, :ref:`interaction semantic tags <semantics-profile>`, and :ref:`key semantic tags <semantics-profile>`--allow for a range of options.
 

@@ -119,7 +119,7 @@ The following table describes the parameters that may be used with the **GET /wo
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
+       .. important:: Only workflows that have a **created_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **created_to**
@@ -129,7 +129,7 @@ The following table describes the parameters that may be used with the **GET /wo
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
+       .. important:: Only workflows that have a **created_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **ended_from**
@@ -139,7 +139,7 @@ The following table describes the parameters that may be used with the **GET /wo
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window is returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **ended_to**
@@ -149,7 +149,7 @@ The following table describes the parameters that may be used with the **GET /wo
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window is returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **limit**
@@ -243,7 +243,7 @@ Responses
 
 .. endpoint-get-workflows-list-responses-start
 
-A response from the **GET /workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-list-responses-end
 
@@ -400,7 +400,7 @@ A **200 OK** response contains the following parameters.
 
 
    * - **type**
-     - The type of workflow. Most workflows will have workflow types related to the following areas within Amperity:
+     - The type of workflow. Most workflows have workflow types related to the following areas within Amperity:
 
        * Bridge sync
        * C360 validation

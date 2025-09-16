@@ -1,14 +1,14 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: The Trade Desk 3rd Party
+.. |destination-name| replace:: The Trade Desk 3P
 .. |what-send| replace:: email addresses or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
 
 
-The Trade Desk 3rd Party
+The Trade Desk 3P
 ==================================================
 
 Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting.

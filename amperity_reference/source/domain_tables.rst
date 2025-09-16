@@ -170,7 +170,7 @@ A custom domain table is built directly using Spark SQL to define a schema for t
 
 .. domain-tables-custom-note-start
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 .. domain-tables-custom-note-end
 
@@ -788,7 +788,7 @@ Edit domain table
 
 .. domain-tables-edit-start
 
-A domain table cannot be edited directly. The data within the domain table is updated based on feed and courier settings. The name of the domain table is directly associated with the feed and its schema. Changes made to a feed will update the data in the domain table automatically.
+A domain table cannot be edited directly. The data within the domain table is updated based on feed and courier settings. The name of the domain table is directly associated with the feed and its schema. Changes made to a feed updates the data in the domain table automatically.
 
 .. domain-tables-edit-end
 

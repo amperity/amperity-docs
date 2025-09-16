@@ -59,7 +59,7 @@ Every Fivetran-enabled workflow is different. Some workflows require permission 
 
 A Fivetran-enabled data source generally works like this:
 
-#. Fivetran is configured to pull data from a data source. This process will require allowing Fivetran the right level of access to pull that data from your data source to Fivetran.
+#. Fivetran is configured to pull data from a data source. This process requires allowing Fivetran the right level of access to pull that data from your data source to Fivetran.
 #. Fivetran pulls that data into one or more Snowflake tables.
 
    .. include:: ../../shared/sources.rst
@@ -116,7 +116,7 @@ This group of topics describes the specific steps that are required for those da
 
    All of the configuration requirements and steps for each Fivetran-enabled data source are found on the page for that data source within Fivetran documentation. Use the link in the table below to open that data source's page within the |fivetran_documentation| site.
 
-   All configuration requirements for connecting a data source to Fivetran are specified in Fivetran documentation. Be sure to review those requirements. In a scenario where your Amperity representative will configure Fivetran on your behalf, you will need to provide to your Amperity representative those details.
+   All configuration requirements for connecting a data source to Fivetran are specified in Fivetran documentation. Be sure to review those requirements. In a scenario where your Amperity representative will configure Fivetran on your behalf, you need to provide to your Amperity representative those details.
 
    Amperity uses Snowflake to pull data from Fivetran for all Fivetran-enabled data sources.
 

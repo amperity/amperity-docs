@@ -87,7 +87,7 @@ Source and custom tables
 
 .. databases-table-type-source-and-custom-start
 
-Source and custom tables make raw source data and custom domain tables available to your customer 360 database as a series of passthrough tables. Source and custom tables will vary from tenant to tenant, but typically represent data that can provide useful context to your customer profile data and to support a variety of upstream and downstream workflows, such as:
+Source and custom tables make raw source data and custom domain tables available to your customer 360 database as a series of passthrough tables. Source and custom tables vary from tenant to tenant, but typically represent data that can provide useful context to your customer profile data and to support a variety of upstream and downstream workflows, such as:
 
 * Behavioral data
 * Clickstream data
@@ -263,7 +263,7 @@ Passthrough template
 
 .. databases-manage-add-from-template-passthrough-start
 
-A database that is created using the passthrough template will add a table for each domain table or custom domain table that can be passed through to the database.
+A database that is created using the passthrough template adds a table for each domain table or custom domain table that can be passed through to the database.
 
 .. databases-manage-add-from-template-passthrough-end
 
@@ -296,7 +296,7 @@ Use multiple databases
 
 .. databases-multiple-start
 
-You may configure more than one database to be a customer 360 database. Each customer 360 database will contain a set of standard tables, and then may have an optional set of source and custom tables added as passthrough tables.
+You may configure more than one database to be a customer 360 database. Each customer 360 database contains a set of standard tables, and then may have an optional set of source and custom tables added as passthrough tables.
 
 .. databases-multiple-end
 
@@ -538,7 +538,7 @@ An implicit **CROSS JOIN** occurs when a query unintentionally returns a Cartesi
 
 A Cartesian product in Amperity between any two tables is often a very, very large number of pairs and, as a result, is an expensive operation. It is recommended to optimize your Spark SQL queries to avoid an implicit **CROSS JOIN**.
 
-The database editor will show a validation alert for an implicit **CROSS JOIN** in situations like:
+The database editor shows a validation alert for an implicit **CROSS JOIN** in situations like:
 
 #. A join statement does not use an **ON()** or **USING()** clause to specify one or more column names as the join criteria.
 
@@ -647,7 +647,7 @@ A database may be configured to export one or more tables or even the entire dat
 
 #. From the **Customer 360** page click **Configure Exports**. This opens the **Database Exports** page.
 #. Click **Create New Export**. This opens the **Add Export** dialog box.
-#. Add the name of the database export, and then click **Add**. This will add a draft database export to the **Database Exports** page.
+#. Add the name of the database export, and then click **Add**. This adds a draft database export to the **Database Exports** page.
 #. Open the menu for the draft database export, and then select **Edit**.
 #. From the **Database** dropdown, select a database.
 #. From the **Entities** list, select one or more database tables to add to the database export.

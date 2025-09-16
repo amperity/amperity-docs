@@ -77,7 +77,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The list name to which the |destination-name| connector will write. This can be the name of an existing list or a new list.
+     - The list name to which the |destination-name| connector writes. This can be the name of an existing list or a new list.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

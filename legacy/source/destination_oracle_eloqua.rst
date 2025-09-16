@@ -27,7 +27,7 @@ Configure campaigns for Oracle Eloqua
 
 Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
 
-Amperity will add and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list.
+Amperity adds and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list.
 
 .. destination-oracle-eloqua-context-end
 
@@ -91,8 +91,8 @@ Get details
 
        Use filename templates and/or data templates to configure Amperity to support managing more than one shared list. For example:
 
-       * A timestamp at the end of a filename template --- **Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv** --- will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
-       * A campaign that is configured only for campaign name and group name --- **{{ campaign_name }} - {{ group_name }}** --- will update the same shared list each time the audience is sent from Amperity.
+       * A timestamp at the end of a filename template --- **Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv** --- creates a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but have a unique datestamp.
+       * A campaign that is configured only for campaign name and group name --- **{{ campaign_name }} - {{ group_name }}** --- updates the same shared list each time the audience is sent from Amperity.
 
        .. caution:: You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
 
@@ -215,7 +215,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Shared List Name**
-            - The name of the shared list in |destination-name|. If the shared list does not exist, Amperity will create it.
+            - The name of the shared list in |destination-name|. If the shared list does not exist, Amperity creates it.
 
               .. important:: Amperity does not create custom attributes for a shared list. A shared list that contains custom attributes must be created in |destination-name| along with any custom attributes before Amperity can send data.
 

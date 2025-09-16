@@ -90,7 +90,7 @@ Results that are sent to Zendesk must be correctly mapped to the following attri
      - String
      - Optional; should be used instead of **email**. This field should be associated with the Amperity ID.
 
-       When **external_id** field is provided, it will take precedence over **email** and becomes the field Zendesk will use to identify users. After the creation of a user with a given **external_id**, subsequent requests with the same **external_id** are treated as updates and, in the presence of the same **external_id** and different **email** values, additional email addresses are added to the same user as secondary email addresses.
+       When **external_id** field is provided, it takes precedence over **email** and becomes the field Zendesk uses to identify users. After the creation of a user with a given **external_id**, subsequent requests with the same **external_id** are treated as updates and, in the presence of the same **external_id** and different **email** values, additional email addresses are added to the same user as secondary email addresses.
 
        .. tip:: Zendesk requires one of **email** or **external_id**, but is designed to *prefer* the **external_id** when it is available.
 
@@ -145,7 +145,7 @@ For example, to send results from Amperity to Zendesk you must associate a user'
 
 .. sendto-zendesk-map-results-with-attributes-table-example-start
 
-The following query will build an attributes table that maps the Amperity ID to the Zendesk external ID, and then map email addresses, full names, and phone numbers to the corresponding Zendesk attributes:
+The following query builds an attributes table that maps the Amperity ID to the Zendesk external ID, and then map email addresses, full names, and phone numbers to the corresponding Zendesk attributes:
 
 .. code-block:: sql
    :linenos:
@@ -178,7 +178,7 @@ Use a query
 
 .. sendto-zendesk-build-query-example-minimum-start
 
-The following example is a query that contains only the fields that are required by Zendesk: a name, an email address, and the Amperity ID, which will be used to identify the users in Zendesk:
+The following example is a query that contains only the fields that are required by Zendesk: a name, an email address, and the Amperity ID, which is used to identify the users in Zendesk:
 
 .. code-block:: sql
    :linenos:

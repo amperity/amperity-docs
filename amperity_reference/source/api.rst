@@ -385,9 +385,9 @@ You can rotate the internal secrets used by access tokens to ensure that previou
 
 When an API key is rotated a new internal secret is generated, after which it becomes the active secret for that API key. The previously-issued access token is deposed, which allows the previous code to remain valid for a short period of time to allow for distribution of the new access token. A deposed access token will remain valid for 30 days, or may be explicitly dropped.
 
-If an access token already has a deposed token, that deposed token is dropped and the previously-issued access token will take its place as the deposed token.
+If an access token already has a deposed token, that deposed token is dropped and the previously-issued access token takes its place as the deposed token.
 
-This process may be used to invalidate outstanding tokens issued without expiry times. Clients should be careful not to rotate too often (e.g. on every issue call), or they will be surprised when their existing tokens stop working suddenly.
+This process may be used to invalidate outstanding tokens issued without expiry times. Clients should be careful not to rotate too often, such as to not rotate on every issue call, or they will be surprised when their existing tokens stop working suddenly.
 
 .. note:: If you rotate your tokens too quickly you may run into issues where previously-issued access tokens are not deposed for a long enough time, which prevents newly-issued tokens from being distributed.
 
@@ -505,7 +505,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Select the number of days this token will allow access to the API, after which it will expire. For example, 3 days:
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
        .. image:: ../../images/api-keys-set-token-expiration.png
           :width: 240 px
@@ -523,7 +523,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       .. important:: You are the only person who will have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
+       .. important:: You are the only person who have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 .. api-keys-access-tokens-generate-end
 

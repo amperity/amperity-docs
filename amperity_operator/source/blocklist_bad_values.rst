@@ -53,7 +53,7 @@ Values can be configured to be:
 
 * Detected automatically using a threshold and an association between two fields. The value is ignored when the first field exceeds the configured threshold as it relates to the second field.
 
-  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it will not be used for identity resolution.
+  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it is not used for identity resolution.
 
   Automatic detection is available for `all fields to which customer profile semantic tags were applied <https://docs.amperity.com/operator/semantics.html#profiles>`__, such as **email**, **phone**, **address**, **given-name** and for fields that contain foreign keys.
 
@@ -372,7 +372,7 @@ This query must do the following:
 * Apply a count threshold, over which a value is returned for inclusion in the bad-values blocklist.
 * Return the data into columns named datasource, semantic, and values, one unique value per row.
 
-.. important:: Only the PII semantic fields **email**, **phone**, **given-name**, **surname**, and **address** will have corresponding **_blv** columns added to the **Unified Coalesced** table, but any semantic may be added to the blocklist.
+.. important:: Only the PII semantic fields **email**, **phone**, **given-name**, **surname**, and **address** have corresponding **_blv** columns added to the **Unified Coalesced** table, but any semantic may be added to the blocklist.
 
 The name of the query should contain the word "blocklist" to help clearly identify its purpose. For example: "Bad-values Blocklist".
 
@@ -549,7 +549,7 @@ Run Stitch
 Run the Stitch process to update the results for the bad-values blackist.
 
 #. On the **Stitch** page, click **Run**.
-#. Re-run each data table in the customer 360 database that contains data that could be affected by the bad-values blocklist. This will add the results of the most recent Stitch run to these data tables, including adding a series of columns that indicate the presence of bad-values.
+#. Re-run each data table in the customer 360 database that contains data that could be affected by the bad-values blocklist. This adds the results of the most recent Stitch run to these data tables, including adding a series of columns that indicate the presence of bad-values.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-has-blv-start
@@ -995,7 +995,7 @@ to:
 
    COALESCE(REGEXP_EXTRACT(datasource, '.+?(?=:)'), '*') AS datasource,
 
-This update will allow these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and will prevent **NULL** values from being returned.
+This update allows these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and will prevent **NULL** values from being returned.
 
 .. bad-values-blocklist-advanced-custom-domain-tables-end
 

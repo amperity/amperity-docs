@@ -55,7 +55,9 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-data-table:
 
 **data table** vs. **datatable**
-   Use **data table** as two words as a way to generically describe the things that exist in a database, i.e. "data tables". Use the correct name when it's available, such as "domain table" or "customer 360 table". But as a generic reference data table is fine.
+   Use **data table** as two words as a way to generically describe the things that exist in a database: "data tables".
+
+   Use the correct name when it's available, such as "domain table" or "customer 360 table", but as a generic reference "data table" is fine.
 
 
 .. _term-dummy:

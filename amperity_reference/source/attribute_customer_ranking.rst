@@ -87,7 +87,7 @@ The following table lists the operators that are available to this attribute.
 
        Returns customer records with values that are less than or equal to the specified ranking, including the specified ranking.
 
-       .. tip:: A rank that is less than or equal to X will provide the top N customers with an affinity for a product.
+       .. tip:: A rank that is less than or equal to X provides the top N customers with an affinity for a product.
 
    * - **is not**
      - Returns customer records with values that do not match the specified ranking.

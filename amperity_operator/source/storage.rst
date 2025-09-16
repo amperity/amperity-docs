@@ -71,7 +71,7 @@ To configure Amperity to use an Amazon S3 storage location that is owned and man
 
        #. Log in to the Amazon AWS console as a user with credentials that allow storage to be configured for your brand from within `AWS CloudFormation <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html>`__ |ext_link|, such as an administrator.
 
-          .. important:: When Amperity opens **AWS CloudFormation** during the storage setup process the IAM roles that are used for operations and role assumption within **AWS CloudFormation** will be inherited from the IAM role that is assigned to the logged-in user.
+          .. important:: When Amperity opens **AWS CloudFormation** during the storage setup process the IAM roles that are used for operations and role assumption within **AWS CloudFormation** is inherited from the IAM role that is assigned to the logged-in user.
 
        #. Log in to your tenant.
 

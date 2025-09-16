@@ -152,7 +152,7 @@ Data Explorer
 
 .. queries-data-explorer-start
 
-The **Data Explorer** may be accessed from the **Queries** page via the **Open Data Explorer** link in the right-side navigation. This link is visible when working in the visual **Query Editor** or the **SQL Query Editor**. When clicked it will open the data explorer for the selected database and will display all of the tables in the database. Click any of the databases to explore the schema, view sample data, and details.
+The **Data Explorer** may be accessed from the **Queries** page via the **Open Data Explorer** link in the right-side navigation. This link is visible when working in the visual **Query Editor** or the **SQL Query Editor**. When clicked it opens the data explorer for the selected database and will display all of the tables in the database. Click any of the databases to explore the schema, view sample data, and details.
 
 .. queries-data-explorer-end
 
@@ -244,7 +244,7 @@ Cardinality vs. uniqueness
 Use cardinality and uniqueness to help guide the creation of well-behaved **JOIN** operations when authoring SQL queries.
 
 * Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
-* Columns with low uniqueness values as keys on both sides of a **JOIN** operation will run more slowly and is less likely to return the desired results.
+* Columns with low uniqueness values as keys on both sides of a **JOIN** operation runs more slowly and is less likely to return the desired results.
 * Empty fields, such as NULL values, are counted as duplicates or "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. queries-data-explorer-full-screen-cardinality-end
@@ -500,7 +500,7 @@ Add as copy
 
 .. queries-add-as-copy-start
 
-Use the **Make a copy** option to add a copy of an existing query. This will create a draft query with the same settings and SQL query as the copied query, along with a placeholder name. Rename the query, and then make any other changes before activating it.
+Use the **Make a copy** option to add a copy of an existing query. This creates a draft query with the same settings and SQL query as the copied query, along with a placeholder name. Rename the query, and then make any other changes before activating it.
 
 .. queries-add-as-copy-end
 
@@ -512,7 +512,7 @@ Use the **Make a copy** option to add a copy of an existing query. This will cre
 
    The copied query will be of the same type--visual or SQL--as the original query.
 
-#. From the **Queries** page, open the menu for a query, and then select **Edit**. This will open a query editor.
+#. From the **Queries** page, open the menu for a query, and then select **Edit**. This opens a query editor.
 #. Make your changes to the query, and then validate them.
 #. Click **Activate**.
 #. In the **Activate Query** dialog box, select **Activate**.
@@ -595,7 +595,7 @@ Autocomplete table names
 
 .. queries-autocomplete-table-names-start
 
-Start typing table names in the **SQL Query Editor** and a list of available tables will appear. Use an arrow key to select a table, which autocompletes the rest of the table name.
+Start typing table names in the **SQL Query Editor** and a list of available tables appears. Use an arrow key to select a table, which autocompletes the rest of the table name.
 
 .. queries-autocomplete-table-names-end
 
@@ -863,7 +863,7 @@ You may enable performance mode for any query that returns large result sets. Pe
    * Column names cannot contain spaces.
    * Column names are output in lowercase.
    * Small queries may take longer.
-   * Part file names in Apache Parquet orchestrations will have a different pattern.
+   * Part file names in Apache Parquet orchestrations have a different pattern.
    * Date fields will be output as timestamps.
    * The **CURRENT_TIMESTAMP** function must be cast as a timestamp. For example:
 
@@ -903,7 +903,7 @@ Alerts are sent when the record count in the query output contains errors that e
 
    .. caution:: A query with a configured query alert is always run **even if the query is not associated with an orchestration**.
 
-      A query that runs and fails when record counts exceed the configured threshold will stop a workflow.
+      A query that runs and fails when record counts exceed the configured threshold stops a workflow.
 
       Use the **Warn when** threshold for queries that are not associated with an orchestration. This will prevent that query from stopping the workflow when record counts exceed the configured alert threshold.
 
@@ -965,7 +965,7 @@ You can view details for any query, including the SQL query associated with the 
 .. queries-open-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor with the query as view-only.
-#. Click **Edit** to make changes. This will change the query to a draft query, which will require re-activation when you are done making changes.
+#. Click **Edit** to make changes. This will change the query to a draft query, which requires re-activation when you are done making changes.
 
 .. queries-open-steps-end
 
@@ -1170,7 +1170,7 @@ Refresh query automatically
 
 .. queries-refresh-automatically-start
 
-A query may be configured to be refreshed automatically. When enabled, an active query will be run automatically whenever an upstream process is refreshed.
+A query may be configured to be refreshed automatically. When enabled, an active query is run automatically whenever an upstream process is refreshed.
 
 .. queries-refresh-automatically-end
 
@@ -1180,7 +1180,7 @@ A query may be configured to be refreshed automatically. When enabled, an active
 
 #. From the **Queries** page, open the menu for a query, and then select **Edit**. This opens the query editor with the query labeled a draft query.
 #. Under **Query Settings**, select the **Refresh automatically** checkbox. This option is required to enable query alerts.
-#. Click **Activate**. The query will run automatically when upstream data changes.
+#. Click **Activate**. The query runs automatically when upstream data changes.
 
 .. queries-refresh-automatically-steps-end
 
@@ -1223,7 +1223,7 @@ Amperity processes data in batches on automated schedules that start with collec
 .. queries-run-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **Run**.
-#. After a few moments, a notification will appear in the **Notifications** list that reports the status of the query run.
+#. After a few moments, a notification appears in the **Notifications** list that reports the status of the query run.
 
 .. queries-run-steps-end
 
@@ -1246,7 +1246,7 @@ You can run part of a statement from the **SQL Query Editor**.
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor** with the SQL query labeled a draft query.
 #. Within the SQL query, highlight part of the statement, and then select **Run selection**.
 
-   If the selected SQL is valid, Amperity will run it and return the results.
+   If the selected SQL is valid, Amperity runs it and return the results.
 
 .. queries-run-selection-steps-end
 
@@ -1419,7 +1419,7 @@ Notifications for the **Queries** page appear after Amperity has processed a que
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. queries-view-notifications-context-end
 
@@ -1440,7 +1440,7 @@ You can view details for any SQL query, including the SQL query associated with 
 .. queries-view-query-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **View**. This opens the **SQL Query Editor** with the SQL query as view-only.
-#. Click **Edit** to make changes. This will change the query to a draft query, which will require re-activation when you are done making changes.
+#. Click **Edit** to make changes. This will change the query to a draft query, which requires re-activation when you are done making changes.
 
 .. queries-view-query-steps-end
 

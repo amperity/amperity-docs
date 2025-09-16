@@ -53,7 +53,7 @@ Build query
 
 .. sendto-klaviyo-build-query-start
 
-To send query results to |destination-name| you must know which type of audience list will be updated by Amperity. There are two types:
+To send query results to |destination-name| you must know which type of audience list is updated by Amperity. There are two types:
 
 * :ref:`Email address only <sendto-klaviyo-build-query-email-only>`
 * :ref:`Email address + customer profiles <sendto-klaviyo-build-query-email-plus-profile>`

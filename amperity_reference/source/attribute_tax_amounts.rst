@@ -113,7 +113,7 @@ The following table lists the operators that are available to tax amount attribu
        Avoid using the **is not in list** condition when tax amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "3.33", "4.33", and "5.33", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "3.33", "4.33", and "5.33", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

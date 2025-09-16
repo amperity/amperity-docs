@@ -362,9 +362,9 @@ Amperity makes CSV files available to your tenant from a bridge.
           :class: no-scaled-link
      - Use the **Select tables** dialog box to select any combination of reference data to be synced to Amperity.
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync.
+       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync.
 
-       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -386,7 +386,7 @@ Amperity makes CSV files available to your tenant from a bridge.
        * Primary keys should not be assigned.
        * Semantic tags should not be applied.
 
-       When finished, click **Save and sync**. This will start a workflow that synchronizes reference data to Amperity and will create the mapped domain table names.
+       When finished, click **Save and sync**. This will start a workflow that synchronizes reference data to Amperity and creates the mapped domain table names.
 
        You can manually sync tables with Amperity using the **Sync** option from the **Actions** menu for the bridge.
 
@@ -433,7 +433,7 @@ Add a passthrough table to your customer 360 database named **LookupTables Addre
         WHERE type = 'STREET'
       ) AS a7clean ON (a7clean.before = core.a7)
 
-   You can name this table *anything* else, such as **Address Standardization USA**. If you use the **Merged Households** SQL template, you will need to update the LEFT JOIN sections within that template to contain the updated table name.
+   You can name this table *anything* else, such as **Address Standardization USA**. If you use the **Merged Households** SQL template, you need to update the LEFT JOIN sections within that template to contain the updated table name.
 
 .. data-asset-address-standardization-steps-end
 

@@ -124,7 +124,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_end**
      - String. Optional.
 
-       The end date (exclusive) that defines the end of the time range for which audit events will be returned. For example: "2024-03-01T11:11:11Z".
+       The end date (exclusive) that defines the end of the time range for which audit events is returned. For example: "2024-03-01T11:11:11Z".
 
        The values for the end date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -132,7 +132,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_start**
      - String. Optional.
 
-       The start date (inclusive) that defines the beginning of the time range for which audit events will be returned. For example: "2024-04-01T11:11:11Z".
+       The start date (inclusive) that defines the beginning of the time range for which audit events is returned. For example: "2024-04-01T11:11:11Z".
 
        The start date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -254,7 +254,7 @@ Responses
 
 .. endpoint-get-audit-events-list-responses-start
 
-A response from the **GET /audit-events** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /audit-events** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-audit-events-list-responses-end
 

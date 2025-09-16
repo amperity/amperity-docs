@@ -59,7 +59,7 @@ For example:
 
 This topic contains the templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
-In certain cases, a destination topic will require *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
+In certain cases, a destination topic requires *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
 
 .. destinations-overview-list-intro-start
 
@@ -173,7 +173,7 @@ Configure Amperity to send data to |destination-name| using the |destination-api
 
 .. destinations-add-destinations-intro-api-only-end
 
-.. TODO: The following API-based destinations have bespoke settings: Campaign Monitor, Mailchimp. If the steps below change, they are mostly global to API-based destinations, but you will need to also update ones with bespoke settings to retain consistency.
+.. TODO: The following API-based destinations have bespoke settings: Campaign Monitor, Mailchimp. If the steps below change, they are mostly global to API-based destinations, but you need to also update ones with bespoke settings to retain consistency.
 
 .. TODO: Facebook, Google use Oauth, which has different steps.
 
@@ -410,7 +410,7 @@ Enter the name for the credential, and then add a description.
    #. When complete, you will be redirected to the **Credentials** page in Amperity.
    #. Verify the credential is on the page, and then return to the **Destinations** tab. From the **Plugin** dropdown, select the |destination-name|, and then use the credential that was just created.
 
-      .. note:: The value for the **Refresh Token** setting will be updated automatically after you select the credential.
+      .. note:: The value for the **Refresh Token** setting is updated automatically after you select the credential.
 
 .. destinations-intro-for-additional-settings-oauth-refresh-token-end
 
@@ -421,7 +421,7 @@ Enter the name for the credential, and then add a description. Select |sftp-host
 
 .. destinations-intro-for-additional-settings-sftp-end
 
-.. TODO: For some connectors, we'll use "After the credential is saved you will need to provide additional settings for this destination." but only if there are additional settings.
+.. TODO: For some connectors, we'll use "After the credential is saved you need to provide additional settings for this destination." but only if there are additional settings.
 
 .. TODO: What follows here is bespoke for most destinations, except for the "When finished, click save" bit.
 

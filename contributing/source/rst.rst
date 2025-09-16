@@ -1941,7 +1941,7 @@ Gutter
 
 .. rst-grids-config-gutter-start
 
-A gutter is the distance between individual cards in a grid. If it's too low the cards are too close together and if it's too large the cards are too far apart. When a grid does not have a gutter and the container class is surface the content will appear as if there is a single card, but each individual grid is still formatted within the grid.
+A gutter is the distance between individual cards in a grid. If it's too low the cards are too close together and if it's too large the cards are too far apart. When a grid does not have a gutter and the container class is surface the content appears as if there is a single card, but each individual grid is still formatted within the grid.
 
 The values for ``:gutter:`` must be between "0" and "4". Use "0" for no gutter. Use "1" for an extra small gutter, "2" for a small gutter, "3" for a medium gutter, and "4" for a large gutter. The default value is "4".
 
@@ -3114,7 +3114,7 @@ An external link is a link to a page that exists outside Amperity documentation.
 * Replace "string" with text.
 * Replace "URL" with the full URL. For example: ``https://wwww.braze.com/docs/`` or ``https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content``.
 * Be sure to append the double underscores.
-* Use ``|ext_link|`` to apply an icon that indicates the link will take the reader from the Amperity docs site.
+* Use ``|ext_link|`` to apply an icon that indicates the link takes the reader from the Amperity docs site.
 
 **Do this**
 
@@ -3158,7 +3158,7 @@ or
 
 :ref:`Headers in same site <rst-links-reference>`
 
-A reference link without the "string" value will use the header string just below the anchor reference. Use the "string" value to blend reference links into the language you use in a paragraph, a list, or a table.
+A reference link without the "string" value uses the header string just below the anchor reference. Use the "string" value to blend reference links into the language you use in a paragraph, a list, or a table.
 
 .. important:: You cannot use reference links to link to a section in a topic located in another document collection. Use an :ref:`external link within the docs site <rst-links-cross-site>` to define the link.
 
@@ -3698,13 +3698,13 @@ For example:
       Topic A <filename_a>
       Topic B <filename_b>
 
-This will build a left-side navigation that have a section named "Section 1" with two subtopics: "Topic A" and "Topic B". The formatting for each topic is
+This builds a left-side navigation that have a section named "Section 1" with two subtopics: "Topic A" and "Topic B". The formatting for each topic is
 
 .. code-block:: none
 
    String <filename>
 
-Use "string" to define how the link will appear in the left-side navigation. The filename must be between angle brackets.
+Use "string" to define how the link appears in the left-side navigation. The filename must be between angle brackets.
 
 **Do this**
 
@@ -4034,7 +4034,7 @@ For example
 * ``.. rst-section-references-end``--line 14--defines the end of the content boundary
 * An :ref:`inclusion <rst-inclusions>` will include the content between the bounaries--lines 8-12--in the topic at the location of the ``.. include::`` directive.
 
-.. important:: Everything within the content boundary is included, including images, formatting, and links. If a link cannot be resolved after it is included Sphinx will stop building and return an error.
+.. important:: Everything within the content boundary is included, including images, formatting, and links. If a link cannot be resolved after it is included Sphinx stops building and return an error.
 
 .. rst-section-references-example-end
 
@@ -4450,7 +4450,7 @@ Add an `<hr>` tag into a topic using four hyphen characters: ``----``.
 Toctrees
 ==================================================
 
-.. TODO: Uuuugh. This section will need some work as toctrees are specific creatures. But the gist is correct and the User Guides show good patterns. Look at the grid_x topics for 2nd-level navigation toctrees.
+.. TODO: Uuuugh. This section need some work as toctrees are specific creatures. But the gist is correct and the User Guides show good patterns. Look at the grid_x topics for 2nd-level navigation toctrees.
 
 .. rst-toctrees-start
 
@@ -4469,7 +4469,7 @@ Use the ``.. toctree::`` directive to define a toctree. For example:
       Style guide <styles>
       Terminology <terminology>
 
-You can use more than one toctree. For example, the topic for "Formatting guide" could have an additional toctree that will show those pages as childred of "Formatting guide" in the left-side navigation.
+You can use more than one toctree. For example, the topic for "Formatting guide" could have an additional toctree that shows those pages as childred of "Formatting guide" in the left-side navigation.
 
 Toctree elements can also be embedded in non-index files. For example, the Operator and User guides use a series of "grid" topics, with filenames that start with ``grid_x.rst``, to build out a layered experience for topics that should appear in the left-side navigation.
 
@@ -4542,7 +4542,7 @@ Amperity docs use tokens for variables, strings, and icons that have common use 
 * :ref:`Global tokens <rst-tokens-global>`
 * :ref:`Topic-specific tokens <rst-tokens-topic>`
 
-.. note:: Tokens are used deliberately to solve build and maintanence problems. For example, a URL that is used in lots of places is harder to update if it changes. Icons from some libraries, such as Font Awesome, do not display inline in reStructuredText and need to be converted to raw HTML, and inline Unicode characters will parse literally.
+.. note:: Tokens are used deliberately to solve build and maintanence problems. For example, a URL that is used in lots of places is harder to update if it changes. Icons from some libraries, such as Font Awesome, do not display inline in reStructuredText and need to be converted to raw HTML, and inline Unicode characters parses literally.
 
 .. rst-tokens-end
 
@@ -4783,7 +4783,7 @@ The following descriptions are located in the ``/shared/destination_settings.rst
 
    .. setting-common-membership-duration-frequency-end
 
-This topic will use the following example variables to show how variables work within this topic.
+This topic uses the following example variables to show how variables work within this topic.
 
 .. list-table::
    :widths: 30 70

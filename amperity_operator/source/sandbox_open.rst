@@ -117,7 +117,7 @@ The following sections describe the steps you'll follow when working in a sandbo
           :align: left
           :class: no-scaled-link
 
-       A list of changes will appear under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
+       A list of changes appears under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
 
 
    * - .. image:: ../../images/steps-04.png

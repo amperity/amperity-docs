@@ -77,21 +77,21 @@ The following table lists the operators that are available to total item interva
 
        Returns customer records with values that are between the specified number of items in the interval.
 
-       For example: if **is between** is set to 10 and 20, then customer records with at least 11 (but not more than 19) total items will be returned.
+       For example: if **is between** is set to 10 and 20, then customer records with at least 11 (but not more than 19) total items is returned.
 
    * - **is greater than**
      - |attribute-recommended| **More useful**
 
        Returns customer records with values that are greater than the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is greater than** is set to 10, then customer records with 11 or more total items will be returned.
+       For example: if **is greater than** is set to 10, then customer records with 11 or more total items is returned.
 
    * - **is greater than or equal to**
      - |attribute-recommended| **More useful**
 
        Returns customer records with values that are greater than or equal to the specified number of items in the interval, including the specified number of items.
 
-       For example: if **is greater than or equal to** is set to 10, then customer records with 10 or more total items will be returned.
+       For example: if **is greater than or equal to** is set to 10, then customer records with 10 or more total items is returned.
 
    * - **is in list**
      - Returns customer records with values that match the number of items in the interval that are specified in a list.
@@ -99,12 +99,12 @@ The following table lists the operators that are available to total item interva
    * - **is less than**
      - Returns customer records with values that are less than the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is less than** is set to 20, then customer records with 19 (or fewer) total items will be returned.
+       For example: if **is less than** is set to 20, then customer records with 19 (or fewer) total items is returned.
 
    * - **is less than or equal to**
      - Returns customer records with values that are less than or equal to the specified number of items in the interval, including the specified number of items.
 
-       For example: if **is less than or equal to** is set to 20, then customer records with 20 (or fewer) total items will be returned.
+       For example: if **is less than or equal to** is set to 20, then customer records with 20 (or fewer) total items is returned.
 
    * - **is not**
      - |attribute-stop| **Less useful**
@@ -116,7 +116,7 @@ The following table lists the operators that are available to total item interva
 
        Returns customer records with values that are not between the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is not between** is set to 12 and 24, then customer records with at least 25 (but not more than 11) total items will be returned.
+       For example: if **is not between** is set to 12 and 24, then customer records with at least 25 (but not more than 11) total items is returned.
 
    * - **is not in list**
      - |attribute-stop| **Less useful**

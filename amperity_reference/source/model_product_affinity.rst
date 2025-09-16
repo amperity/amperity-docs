@@ -131,6 +131,6 @@ Customer ranking identifies the top N customers who are most likely to purchase.
 
 .. model-product-affinity-use-cases-customer-ranking-attribute-start
 
-The **Ranking** attribute in the **Predicted Affinity** table ranks customer scores by product. A rank that is less than or equal to X will provide the top N customers with an affinity for this product. Combine this attribute with the **Product Attribute** attribute to build customer rankings for a specific product category, class, or brand.
+The **Ranking** attribute in the **Predicted Affinity** table ranks customer scores by product. A rank that is less than or equal to X provides the top N customers with an affinity for this product. Combine this attribute with the **Product Attribute** attribute to build customer rankings for a specific product category, class, or brand.
 
 .. model-product-affinity-use-cases-customer-ranking-attribute-end

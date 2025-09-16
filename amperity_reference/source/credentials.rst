@@ -138,7 +138,7 @@ Amazon S3
 
 Amazon S3 supports the following credential types:
 
-**IAM role-to-role** credentials require the name of the Amazon S3 bucket and the target role ARN. Amperity will provide the values for the Amperity role ARN and the external ID.
+**IAM role-to-role** credentials require the name of the Amazon S3 bucket and the target role ARN. Amperity provides the values for the Amperity role ARN and the external ID.
 
 **IAM** credentials require the name of the Amazon S3 bucket, the IAM access key, and the IAM secret key. An IAM role ARN is optional.
 

@@ -68,7 +68,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The remote folder to which Amperity will send data.
+     - The remote folder to which Amperity sends data.
 
        .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
 

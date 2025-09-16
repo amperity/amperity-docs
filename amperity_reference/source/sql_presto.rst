@@ -859,7 +859,7 @@ FROM clause
 
 .. sql-presto-from-clause-start
 
-The **FROM** clause specifies the name of the data table against which the SQL query will be run and is part of every **SELECT** statement.
+The **FROM** clause specifies the name of the data table against which the SQL query is run and is part of every **SELECT** statement.
 
 .. sql-presto-from-clause-end
 
@@ -1570,7 +1570,7 @@ A window function has the following components:
 #. A window function that defines the operation to be performed by the window function. For example: **RANK()** or **SUM()**. This may be any of the ranking functions, value functions, or aggregate functions available in Presto SQL.
 #. **OVER()** defines the window frame, which represents a sliding window.
 #. **PARTITION BY** separates the input into different partitions; only rows in the specified partition will be considered by the window function
-#. **ORDER BY** determines the order in which the input will be processed by the window function.
+#. **ORDER BY** determines the order in which the input is processed by the window function.
 
    .. tip:: Use **ROWS BETWEEN** to define any number of preceding and following rows, as related to the current row.
    
@@ -2741,7 +2741,7 @@ DENSE_RANK()
 
 Use the **DENSE_RANK()** function to compute the rank of a value in a group of values. **DENSE_RANK()** will assign the same rank to rows with the same value and will not create gaps in the ranked sequence.
 
-.. note:: The **DENSE_RANK()** and **RANK()** functions both assign a rank to rows with the same value. The difference is that **RANK()** will create gaps in the sequence. The following example shows rows that are ranked in ascending order by column B:
+.. note:: The **DENSE_RANK()** and **RANK()** functions both assign a rank to rows with the same value. The difference is that **RANK()** creates gaps in the sequence. The following example shows rows that are ranked in ascending order by column B:
 
    .. code-block:: mysql
 
@@ -3021,7 +3021,7 @@ Percentiles by 10
 
 .. sql-presto-function-ntile-example-percentiles-start
 
-The following example shows how to return 10th percentiles.
+The following example shows how to return tenth percentiles.
 
 .. code-block:: sql
    :linenos:
@@ -3049,7 +3049,7 @@ Percentiles by 4
 
 .. sql-presto-function-ntile-example-percentiles-start
 
-The following example shows how to return the 25th, median, and 75th percentiles.
+The following example shows how to return the twenty-fifth, median, and seventy-fifth percentiles.
 
 .. code-block:: sql
    :linenos:
@@ -3432,7 +3432,7 @@ REPLACE()
 
 Use the **REPLACE()** function to remove and/or replace all instances of ``search`` from ``string``. There are two variants:
 
-* Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``, i.e. "replace string with nothing".
+* Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``.
 * Use **REPLACE(string, search, replace)** to replace all instances of ``search`` from ``string`` with ``replace``.
 
 .. sql-presto-function-replace-end

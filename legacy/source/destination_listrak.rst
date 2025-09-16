@@ -118,7 +118,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The name of the list that will be managed in |destination-name|. This is often, but not always, named "Master List".
+     - The name of the list that is managed in |destination-name|. This is often, but not always, named "Master List".
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -236,7 +236,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **List name**
-            - The name of the list that will be managed in |destination-name|. This is often, but not always, named "Master List".
+            - The name of the list that is managed in |destination-name|. This is often, but not always, named "Master List".
 
 
    * - .. image:: ../../images/steps-04.png

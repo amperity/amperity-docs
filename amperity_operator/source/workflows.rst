@@ -66,7 +66,7 @@ Name
 
 .. workflows-configure-name-start
 
-Give the workflow a clear and succinct name that is meaningful. This name will appear in various locations, including other locations within the Amperity user interface, error messages related to the workflow, and potentially in downstream applications and workflows.
+Give the workflow a clear and succinct name that is meaningful. This name appears in various locations, including other locations within the Amperity user interface, error messages related to the workflow, and potentially in downstream applications and workflows.
 
 .. workflows-configure-name-end
 

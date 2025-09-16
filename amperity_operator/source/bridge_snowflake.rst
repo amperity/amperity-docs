@@ -38,7 +38,7 @@ Amperity Bridge for Snowflake is a first-class integration that uses secure data
 
 .. tip:: Amperity Bridge for Snowflake shares data directly with Snowflake. A bridge does not require a courier or a database export to be configured. A bridge can be configured to run automatically as part of any scheduled workflow.
 
-   If your brand is currently using BI Connect to make data available in Snowflake your brand should consider moving the BI Connect workflow to Amperity Bridge. This will increase the speed at which This will allow your brand to self-service the data that is shared between Amperity and Snowflake directly from within your Snowflake account.
+   If your brand is currently using BI Connect to make data available in Snowflake your brand should consider moving the BI Connect workflow to Amperity Bridge. This increases the speed at which This allows your brand to self-service the data that is shared between Amperity and Snowflake directly from within your Snowflake account.
 
 .. bridge-snowflake-switch-to-bridge-end
 
@@ -320,7 +320,7 @@ Get details
 
 .. bridge-snowflake-sync-amperity-get-details-start
 
-Before you can create inbound sharing between Snowflake and Amperity you will need to collect the following information.
+Before you can create inbound sharing between Snowflake and Amperity you need to collect the following information.
 
 .. list-table::
    :widths: 10 90
@@ -569,7 +569,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :class: no-scaled-link
      - Add the **Secure Share Identifier**.
 
-       When finished, click **Continue**. This will open the **Select tables** dialog box.
+       When finished, click **Continue**. This opens the **Select tables** dialog box.
 
 
    * - .. image:: ../../images/steps-05.png
@@ -585,9 +585,9 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync. 
+       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync. 
 
-       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-06.png
@@ -611,7 +611,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
 
        .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within synced tables to support any of your Amperity workflows.
 
-       When finished, click **Save and sync**. This will start a workflow that synchronizes data from Snowflake to Amperity and will create the mapped domain table names.
+       When finished, click **Save and sync**. This will start a workflow that synchronizes data from Snowflake to Amperity and creates the mapped domain table names.
 
        You can manually sync tables that are synced with Amperity using the **Sync** option from the **Actions** menu for the inbound bridge.
 
@@ -653,7 +653,7 @@ Get details
 
 .. bridge-snowflake-sync-with-snowflake-prerequisites-start
 
-Before you can create inbound sharing between Snowflake and Amperity you will need to collect the following information.
+Before you can create inbound sharing between Snowflake and Amperity you need to collect the following information.
 
 .. list-table::
    :widths: 10 90
@@ -802,7 +802,7 @@ Configure Snowflake
 
 .. bridge-snowflake-sync-with-snowflake-configure-start
 
-After tables have been shared you will need to create a database in Snowflake using the data that was shared from Amperity.
+After tables have been shared you need to create a database in Snowflake using the data that was shared from Amperity.
 
 .. bridge-snowflake-sync-with-snowflake-configure-end
 
@@ -841,7 +841,7 @@ After tables have been shared you will need to create a database in Snowflake us
 
        Open the database, and then click the **Get Data** button. This opens the **Get Data** dialog box.
 
-       Replace the value in the **Database name** field with the name of the database, and then choose the role, in addition to the **ACCOUNTADMIN** role, that will have access to this database. Click **Get Data**.
+       Replace the value in the **Database name** field with the name of the database, and then choose the role, in addition to the **ACCOUNTADMIN** role, that have access to this database. Click **Get Data**.
 
        After the database is created click **View Database**.
 

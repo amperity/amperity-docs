@@ -155,7 +155,7 @@ A source that uses |source-name| credentials may use a connection string, a shar
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - :ref:`Configure a data source and feed <source-azure-blob-storage-add-data-source>` to pull data from configured location, after which the list of files by filename and file type will be visible from Amperity.
+     - :ref:`Configure a data source and feed <source-azure-blob-storage-add-data-source>` to pull data from configured location, after which the list of files by filename and file type is visible from Amperity.
 
 .. source-azure-blob-storage-configure-azure-credentials-end
 

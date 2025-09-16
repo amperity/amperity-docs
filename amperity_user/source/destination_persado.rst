@@ -95,7 +95,7 @@ Marketing engagement data should be sent every 24 hours and contain only data fo
      ,CAST(TO_UNIXTIME(MIN(field_name)) AS bigint) AS Unsubscribed_Timestamp
    FROM Marketing_Engagement_Table
 
-.. note:: The **Marketing_Engagement_Table** from which you will map data to the Persado schema will vary. For example, if Salesforce Marketing Cloud is used as part of a combined marketing effort with Persado, some combination of tables from Salesforce will be the source of this data.
+.. note:: The **Marketing_Engagement_Table** from which you will map data to the Persado schema will vary. For example, if Salesforce Marketing Cloud is used as part of a combined marketing effort with Persado, some combination of tables from Salesforce is the source of this data.
 
 .. sendto-persado-build-query-marketing-enagement-end
 

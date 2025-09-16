@@ -110,7 +110,7 @@ The recommended way to add Stitch QA queries to your tenant is to use the "Stitc
 #. From the **Queries** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Name the folder "Stitch QA".
 #. From the **Template** dropdown, select **Stitch QA**.
-#. Click **Create**. This will create a folder, into which a collection of draft Stitch QA queries are added.
+#. Click **Create**. This creates a folder, into which a collection of draft Stitch QA queries are added.
 #. Take a few minutes to review the queries that are added by the "Stitch QA" query template.
 
 .. qa-stitch-enable-steps-add-queries-steps-end
@@ -208,7 +208,7 @@ What to look for?
 
 It is important to review the quality of Stitch results. The general process for reviewing these results, also referred to as Stitch QA, is to use a series of SQL queries to pull back results that identify issues like overclustering, underclustering, or supersized clusters that indicate areas within the customer data that need more attention.
 
-These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses, unmonitored email accounts, and so on. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity will be the best approach for fine-tuning the quality of Stitch results.
+These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses, unmonitored email accounts, and so on. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity is the best approach for fine-tuning the quality of Stitch results.
 
 * :ref:`Anomalies in Stitch output <qa-stitch-look-for-anomalies>`
 * :ref:`Blocking keys <qa-stitch-look-for-blocking-keys>`
@@ -635,7 +635,7 @@ Record pairs and scores
 
 The quality of record pairs and their associated pairwise comparison scores should be investigated, starting with low-scoring record pairs in each cluster. At the start of the Stitch QA process it is not uncommon for low-scoring record pairs in a cluster to fall below threshold for pairwise comparison scoring.
 
-Each cluster of records will contain high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
+Each cluster of records contains high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
 
 Each cluster with low-scoring record pairs should be investigated to confirm if those pairs were accurately clustered and to determine if transitive connections to other high-scoring record pairs do exist.
 
@@ -741,6 +741,8 @@ Supersized clusters
    :start-after: .. term-supersized-cluster-start
    :end-before: .. term-supersized-cluster-end
 
+.. vale off
+
 .. configure-stitch-advanced-configuration-supersized-clusters-example-start
 
 A supersized cluster is created when multiple transitive connections are present. For example, a couple named Mary Johnson and Jeffrey Johnson with the following records:
@@ -759,6 +761,8 @@ These records block together in the following ways:
 All four groups of records transitively connect into a single connected cluster with a size of 100.
 
 .. configure-stitch-advanced-configuration-supersized-clusters-example-end
+
+.. vale on
 
 **What to look for**
 

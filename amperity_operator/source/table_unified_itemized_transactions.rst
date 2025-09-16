@@ -63,7 +63,7 @@ Define product catalog
 
 Your brand's product catalog must be joined to the **Unified Itemized Transactions** table to enable the use of product catalog attributes when building audiences for use with segments and campaigns.
 
-If your brand used the **txn-items/** group of semantics to apply tags to fields that define your product catalog, this step happens automatically. If your brand used the **pc/** group of semantics, you will need to use SQL to **LEFT JOIN** your product catalog to the **Unified Itemized Transactions** table to enable their use within segments and campaigns.
+If your brand used the **txn-items/** group of semantics to apply tags to fields that define your product catalog, this step happens automatically. If your brand used the **pc/** group of semantics, you need to use SQL to **LEFT JOIN** your product catalog to the **Unified Itemized Transactions** table to enable their use within segments and campaigns.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-unified-product-catalog-table-with-ampiq-start

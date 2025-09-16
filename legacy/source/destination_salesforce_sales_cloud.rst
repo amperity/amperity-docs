@@ -81,7 +81,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - If Amperity will send data to a sandbox instance.
+     - If Amperity sends data to a sandbox instance.
 
 .. destination-salesforce-sales-cloud-get-details-end
 
@@ -101,7 +101,7 @@ Build query
 
 .. destination-salesforce-sales-cloud-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to |destination-name|.
+You need to build a query that outputs fields that can be mapped to |destination-name|.
 
 .. destination-salesforce-sales-cloud-build-query-end
 
@@ -216,7 +216,7 @@ Add destination
             - Optional. The custom URL for |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``https://<hostname>`` or ``http://<hostname>``. The rest of the path is added automatically by Amperity.
 
           * - **Salesforce object**
-            - The name of the object in |destination-name| to which Amperity will send data.
+            - The name of the object in |destination-name| to which Amperity sends data.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -328,17 +328,17 @@ Add data template
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL for Salesforce logins (if used), the name of the object in Salesforce to which Amperity will send data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if NULL values should be used when fields are empty.
+     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL for Salesforce logins (if used), the name of the object in Salesforce to which Amperity sends data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if NULL values should be used when fields are empty.
 
        The custom URL for Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity.
 
        .. note:: A sandbox instance is ignored when a custom URL for Salesforce logins is used.
 
-       The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations will insert a new record *or* update an existing record, whereas insert and update operations insert or update (and not both).
+       The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations inserts a new record *or* update an existing record, whereas insert and update operations insert or update (and not both).
 
        The external ID should be set to **Amperity_ID__c**. (The **__c** identifies the field as a custom field in the Salesforce object.)
 
-       When enabled, NULL values in data sent from Amperity will be ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
+       When enabled, NULL values in data sent from Amperity is ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
 
        .. caution:: Enabling parallelism may cause Salesforce to process batches in parallel. This *may* improve performance, but comes with the risk of introducing failures due to locking. It's possible for more than one batch to attempt to obtain a lock on the same row, causing one or both batches to fail.
 

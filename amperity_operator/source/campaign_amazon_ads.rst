@@ -50,7 +50,7 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 
 .. campaign-amazon-ads-api-note-start
 
-.. note:: This destination uses the `Amazon Ads API <https://advertising.amazon.com/API/docs/en-us/info/api-overview>`__ |ext_link| to manage audiences. If the audience does not exist, Amperity will create it. If the audience exists, Amperity will update the list of members to match the list that is sent.
+.. note:: This destination uses the `Amazon Ads API <https://advertising.amazon.com/API/docs/en-us/info/api-overview>`__ |ext_link| to manage audiences. If the audience does not exist, Amperity creates it. If the audience exists, Amperity updates the list of members to match the list that is sent.
 
 .. campaign-amazon-ads-api-note-end
 
@@ -122,7 +122,7 @@ Get details
 
           .. important:: If an instance for Amazon Marketing Cloud **is not** configured, Amperity will skip adding audience members to Amazon Marketing Cloud.
 
-             If an Amazon Marketing Cloud instance is configured, Amperity will attempt to use an existing connection for Amazon Marketing Cloud *or* will create a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
+             If an Amazon Marketing Cloud instance is configured, Amperity will attempt to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -176,7 +176,7 @@ Get details
 
        .. note::
 
-           If both **extern_id** and **amperity_id** are provided, only **extern_id** will be used.
+           If both **extern_id** and **amperity_id** are provided, only **extern_id** is used.
 
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
@@ -196,7 +196,7 @@ Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign 
 
 Audience analysis takes place within Amazon Marketing Cloud, including across dimensions like audiences, device, time, or campaigns. Results are aggregated and may be exported as anonymous reports.
 
-Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination will send data.
+Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination sends data.
 
 .. campaign-amazon-ads-about-amc-end
 
@@ -507,7 +507,7 @@ Invalid advertiser account ID
 
 .. campaign-amazon-ads-workflow-actions-invalid-advertiser-id-start
 
-|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action will be shown.
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
 
 .. campaign-amazon-ads-workflow-actions-invalid-advertiser-id-end
 

@@ -50,8 +50,6 @@ The following out-of-the-box models are configurable directly within Amperity by
 
 .. models-list-end
 
-.. TODO: The following sections have "-about-" start/end blocks that are pulling from the individual model topics. These should act as the more detailed intros to the models, describe the use cases, etc. Customers will want to link to the more detailed topics.
-
 
 .. _model-churn-propensity:
 
@@ -203,9 +201,9 @@ Fields used by event propensity
 
 EPM is highly configurable, with the only table used by default being **Merged Customers**. The model requires that you select two other data assets with event-level data: one containing the target event, and one containing a revenue generating event.
 
-The target event is the event we want to model, e.g. loyalty program signups, credit card signups, repeat bookings. The data asset should have one row per event, and **must have a field for the event's date or timestamp**.
+The target event is the event we want to model. For example: loyalty program signups, credit card signups, or repeat bookings. The data asset should have one row per event, and **must have a field for the event's date or timestamp**.
 
-A revenue generating event is an event in which a customer spends money with your brand, e.g. a retail transaction or a booking. The data asset should also have one row per event, and **must have fields for an event's date or timestamp and revenue amount**. You may also select other fields from the revenue generating event that you think would be helpful for modeling, such as a purchase or booking channel.
+A revenue generating event is an event in which a customer spends money with your brand. For example: a retail transaction or a booking. The data asset should also have one row per event, and **must have fields for an event's date or timestamp and revenue amount**. You may also select other fields from the revenue generating event that you think would be helpful for modeling, such as a purchase or booking channel.
 
 Additionally, you may configure custom events as further inputs to the model. Custom event data assets are also expected to be one row per event.
 
@@ -289,7 +287,7 @@ Activate a model
 #. In the row with the model you want to edit, from the |fa-kebab| menu, select **Edit**.
 #. This opens the page for selected model in edit mode.
 #. Press **Activate** at top right-hand-side of the model configuration page
-#. Select a courier group. The model will run at the same frequency as the courier group.
+#. Select a courier group. The model runs at the same frequency as the courier group.
 
 .. models-howtows-activate-steps-end
 

@@ -74,7 +74,7 @@ Get details
           :alt: Detail 2.
           :align: center
           :class: no-scaled-link
-     - For an **FTP Profile**: a username and password is required, along with the remote folder to which Amperity will send data.
+     - For an **FTP Profile**: a username and password is required, along with the remote folder to which Amperity sends data.
 
        .. note:: The hostname for the SFTP server in |destination-name| is a combination of two values: the FTP URL, as configured for the **FTP Profile** and your |destination-name| username, separated by " - " (space, hyphen, space). For example: "sftp://acme - justinc".
 
@@ -165,7 +165,7 @@ Configure credentials
           :class: no-scaled-link
      - The settings that are available for a credential are determined by the credential type and by the settings that are required by the SFTP site. The following credential settings are available for SFTP sites.
 
-       Configure the settings that are required by the SFTP site to which Amperity will connect, and then click **Save**.
+       Configure the settings that are required by the SFTP site to which Amperity connects, and then click **Save**.
 
        **Host public key**
 

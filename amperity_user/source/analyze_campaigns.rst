@@ -58,7 +58,7 @@ Download results
 
 You can download a file that contains a list of campaign results.
 
-For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file will show one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
+For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file shows one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
 
 .. download-campaign-results-end
 

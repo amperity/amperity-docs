@@ -34,7 +34,7 @@ Configure campaigns for Klaviyo
 
 .. campaign-klaviyo-start
 
-Use Amperity to manage audience lists in |destination-name|. Build a query using the **email** field, with optional additional customer profile fields, and then send the results of that query to |destination-name|. The audience list will be updated to match the query.
+Use Amperity to manage audience lists in |destination-name|. Build a query using the **email** field, with optional additional customer profile fields, and then send the results of that query to |destination-name|. The audience list is updated to match the query.
 
 .. campaign-klaviyo-end
 
