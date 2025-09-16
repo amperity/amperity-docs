@@ -190,7 +190,7 @@ Audience attributes
 
 .. campaigns-attributes-start
 
-For many |campaign_destinations|, you may configure the list of attributes (i.e. first name, last name, state, etc.) that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the dropdown menu to select the destination if there is more than one.
+For many |campaign_destinations|, you may configure the list of attributes, such as first name, last name, and state, that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the dropdown menu to select the destination if there is more than one.
 
 .. campaigns-attributes-end
 
@@ -487,7 +487,7 @@ Use this feature to define a performance measurement time period and then analyz
 
 .. tip:: Amperity tracks the purchases of your customers in the audiences lists. The purchase information is based on purchasing behavior across channels. 
 
-If you make any changes to this information downstream (i.e. launching a campaign on a different date then the one you entered into Amperity) they will not be reflected in Amperity.
+If you make any changes to this information downstream, such as launching a campaign on a different date then the one you entered into Amperity, they will not be reflected in Amperity.
 
 .. campaigns-results-overview-end
 
@@ -650,8 +650,8 @@ Use cases
 You can use campaign results to determine how to successfully reach out to their customers for the following reasons:
 
 * If your campaign message was effective at converting customers
-* Whether one offer or treatment worked better at converting customers (i.e. A/B testing)
-* If a campaign drove incremental value (i.e. via a control group holdout)
+* Whether one offer or treatment worked better at converting customers
+* If a campaign drove incremental value
 
 .. campaigns-results-use-cases-end
 
@@ -1826,7 +1826,7 @@ Send campaign metadata to destination
 
 .. campaigns-send-metadata-start
 
-You can send campaign metadata (i.e., Amperity IDs and names associated with each audience group) to a destination on the **Edit Campaign** page.
+You can send campaign metadata, such as Amperity IDs and names associated with each audience group, to a destination on the **Edit Campaign** page.
 
 .. campaigns-send-metadata-end
 

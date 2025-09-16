@@ -196,7 +196,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for The Trade Desk 3rd-party**
+**To add a destination for The Trade Desk 3P**
 
 .. destination-the-trade-desk-3p-add-steps-start
 
