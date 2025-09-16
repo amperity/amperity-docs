@@ -146,7 +146,7 @@ Destinations are the locations to which you sends the lists of customers that ar
        * Attentive Mobile requires a phone number *or* an email address. The one you choose should match how you have configured your instance of Attentive.
        * Klaviyo requires an email address, but can be configured to allow additional customer profile data, such as birthdays, favorite colors, and so on.
        * Criteo requires an email address and does not accept any other attributes.
-       * TikTok Ads requires an email address **and** a phone number and will accept advertising IDs for Apple and Android.
+       * TikTok Ads requires an email address **and** a phone number and accepts advertising IDs for Apple and Android.
        * Facebook Ads requires mapping fields in your customer 360 database to field in Facebook and applying a strict naming convention.
        * Cloud-based storage -- Amazon S3, Google Cloud Storage, or Microsoft Azure -- and/or SFTP often have no restrictions.
 

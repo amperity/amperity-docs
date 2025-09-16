@@ -86,7 +86,7 @@ Real-time table limitations
 Real-time tables have the following limitations:
 
 #. Streamed data takes up to 2 minutes to appear in a real-time table.
-#. Events that partially match the schema for a real-time table will appear in a real-time table; events that do not match the schema will not.
+#. Events that partially match the schema for a real-time table appears in a real-time table; events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an append; data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
@@ -285,7 +285,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
-       .. note:: If your data has complex types, such as nested JSON, choose **string** as the type. This will allow the real-time table to process the complex object and make it available for querying purposes.
+       .. note:: If your data has complex types, such as nested JSON, choose **string** as the type. This allows the real-time table to process the complex object and make it available for querying purposes.
 
        Define the schema for the real-time table. Click **+ Add field** too add a field. Give the field a name and choose a data type. Drag-and-drop the fields into the order you want:
 

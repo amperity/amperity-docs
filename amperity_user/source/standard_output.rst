@@ -487,7 +487,7 @@ The following attributes are available from the **Predicted Affinity** table.
      - The field against which product affinity is measured. For example: a category, a class, or a brand.
 
    * - **Ranking**
-     - A ranking of customers by their score for this product. A rank that is less than or equal to X will provide the top N customers with an affinity for this product.
+     - A ranking of customers by their score for this product. A rank that is less than or equal to X provides the top N customers with an affinity for this product.
 
    * - **Score**
      - The strength of a customers's affinity for this product, shown as an uncalibrated probability.

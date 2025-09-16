@@ -99,7 +99,7 @@ The following sections describe how you can use the visual **Query Editor** to b
           :class: no-scaled-link
      - Click **Run Query** to run the query. The syntax for the attributes you added to the query are validated, after which the results are shown in the lower part of the visual **Query Editor**.
 
-       The results will show you the matching records from the **Customer 360** table by default. You can change the table from which matching records are shown. The **Show matching records from** option is located at the end of the visual query. In the same row you can click **Filter columns**, and then choose which attributes you want to see in the results.
+       The results shows you the matching records from the **Customer 360** table by default. You can change the table from which matching records are shown. The **Show matching records from** option is located at the end of the visual query. In the same row you can click **Filter columns**, and then choose which attributes you want to see in the results.
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px

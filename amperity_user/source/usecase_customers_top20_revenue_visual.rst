@@ -72,7 +72,7 @@ The following sections describe using the the visual **Query Editor** to build a
 
      - Run the query to validate the syntax, and then review the results.
 
-       .. note:: RFM scores are split into ten percentile groups. The lowest percentile is 0 and the highest percentile is 10. Each percentile represents 10% of the customers who belong to that segment. When you select "9" and "10" together the results will be the top 20 percent of your customers for revenue.
+       .. note:: RFM scores are split into ten percentile groups. The lowest percentile is 0 and the highest percentile is 10. Each percentile represents 10% of the customers who belong to that segment. When you select "9" and "10" together the results is the top 20 percent of your customers for revenue.
 
 
    * - .. image:: ../../images/steps-04.png

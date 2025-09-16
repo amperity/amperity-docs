@@ -415,7 +415,7 @@ Customer states are typically defined as "new", "active", "lapsed", "dormant", a
 
 A customer who has never interacted with your brand--never made a purchase--is assigned the value of "prospect".
 
-.. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it is included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
+.. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it is included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature is enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
 
 .. code-block:: sql
    :linenos:

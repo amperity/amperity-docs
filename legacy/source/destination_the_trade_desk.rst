@@ -170,7 +170,7 @@ Get details
           :class: no-scaled-link
      - **The Trade Desk offline events only**
 
-       A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name will appear in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send offline events to |destination-name|.
+       A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name appears in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send offline events to |destination-name|.
 
        .. important:: The tracking tag name must be unique across all offline tracking tags, especially if shared between an advertiser and an offline provider. The tracking tag name must not duplicate any previous name for the same advertiser and offline data provider ID.
 
@@ -550,7 +550,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Tracking tag name**
-            - A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name will appear in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send offline events to |destination-name|.
+            - A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name appears in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send offline events to |destination-name|.
 
               .. important:: The tracking tag name must be unique across all offline tracking tags, especially if shared between an advertiser and an offline provider. The tracking tag name must not duplicate any previous name for the same advertiser and offline data provider ID.
 

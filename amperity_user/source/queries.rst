@@ -96,7 +96,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
           :class: no-scaled-link
      - Click **Run Query** to run the query. The syntax for the attributes you added to the query are validated, after which the results are shown in the lower part of the SQL **Query Editor**.
 
-       The results will show you a list of columns, one for each attribute that was returned by the query.
+       The results shows you a list of columns, one for each attribute that was returned by the query.
 
        In this example, four columns are returned: **order_month**, **top_20_revenue**, **total_month_revenue**, and **top_20_percent_revenue**. The results are similar to:
 

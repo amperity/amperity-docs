@@ -125,7 +125,7 @@ The following table lists the operators that are available to these attributes.
        Avoid using the **is not in list** condition when individual price amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "4.99", "1.25", and "99.99", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "4.99", "1.25", and "99.99", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - **is NULL** returns customer records that do not have a value.

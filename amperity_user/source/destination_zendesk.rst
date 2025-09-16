@@ -145,7 +145,7 @@ For example, to send results from Amperity to Zendesk you must associate a user'
 
 .. sendto-zendesk-map-results-with-attributes-table-example-start
 
-The following query will build an attributes table that maps the Amperity ID to the Zendesk external ID, and then map email addresses, full names, and phone numbers to the corresponding Zendesk attributes:
+The following query builds an attributes table that maps the Amperity ID to the Zendesk external ID, and then map email addresses, full names, and phone numbers to the corresponding Zendesk attributes:
 
 .. code-block:: sql
    :linenos:

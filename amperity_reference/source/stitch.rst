@@ -117,7 +117,7 @@ Semantic tags
 
 .. feeds-semantic-tagging-start
 
-Semantic tags must be defined for every feed that will provide profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Semantic tagging works like this:
 
@@ -913,7 +913,7 @@ Hierarchical comparison
 
 .. stitch-hierarchical-comparison-start
 
-A hierarchical comparison that identifies enough conflicting data will allow Amperity to assert that a group of records should be split into two or more groups of records.
+A hierarchical comparison that identifies enough conflicting data allows Amperity to assert that a group of records should be split into two or more groups of records.
 
 .. stitch-hierarchical-comparison-end
 
@@ -967,7 +967,7 @@ This example shows three unique clusters of records, each of which were assigned
 
 .. stitch-stable-ids-jitter-start
 
-.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are really two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results will show jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
+.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are really two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results shows jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
 
 .. stitch-stable-ids-jitter-ends
 

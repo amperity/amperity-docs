@@ -204,7 +204,7 @@ Datetime formats in Amperity use a combination of symbols that are described in 
    * # (number sign or hash)
    * ? (question mark)
 
-   will appear as if they are not contained within single quotes.
+   appears as if they are not contained within single quotes.
 
    Other symbols may be available. Refer to Joda-Time documentation for more information about symbols that are not described in the previous table.
 

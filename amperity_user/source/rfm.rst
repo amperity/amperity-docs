@@ -184,7 +184,7 @@ High R, low F and M scores
 
 .. rfm-example-high-r-low-f-m-start
 
-A high recency score combined low frequency and monetary scores will build an audience of new customers who probably won't spend a lot of money in the future. Use this combination of scores as an indicator for customers that might respond to special offers, but consider the low spend to be an indicator of customers who may have a low response rate to more typical marketing campaigns.
+A high recency score combined low frequency and monetary scores builds an audience of new customers who probably won't spend a lot of money in the future. Use this combination of scores as an indicator for customers that might respond to special offers, but consider the low spend to be an indicator of customers who may have a low response rate to more typical marketing campaigns.
 
 .. rfm-example-high-r-low-f-m-end
 
@@ -196,7 +196,7 @@ High R and F, low M scores
 
 .. rfm-example-high-r-and-f-low-m-start
 
-High recency and frequency scores combined with a low monetary score will build an audience of active customers who purchase frequently, but do not spend a lot of money.
+High recency and frequency scores combined with a low monetary score builds an audience of active customers who purchase frequently, but do not spend a lot of money.
 
 Use this combination of scores as an indicator for customers who should not receive discounts. These customers already shop regularly, the challenge is growing their spend. Use cross-sell and upsell campaigns to improve spend amounts and consider inviting customers who respond to those campaigns into your loyalty program.
 

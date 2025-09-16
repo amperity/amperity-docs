@@ -208,7 +208,7 @@ What to look for?
 
 It is important to review the quality of Stitch results. The general process for reviewing these results, also referred to as Stitch QA, is to use a series of SQL queries to pull back results that identify issues like overclustering, underclustering, or supersized clusters that indicate areas within the customer data that need more attention.
 
-These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses, unmonitored email accounts, and so on. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity will be the best approach for fine-tuning the quality of Stitch results.
+These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses, unmonitored email accounts, and so on. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity is the best approach for fine-tuning the quality of Stitch results.
 
 * :ref:`Anomalies in Stitch output <qa-stitch-look-for-anomalies>`
 * :ref:`Blocking keys <qa-stitch-look-for-blocking-keys>`

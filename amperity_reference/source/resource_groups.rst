@@ -129,6 +129,6 @@ For example, a tenant with multiple brands, a global analytics team, multiple br
 #. Configure the database for brand A for permissions to the custom resource group associated with brand A.
 #. Configure the database for brand B for permissions to the custom resource group associated with brand B.
 
-This will allow members of the global analytics team to access the databases for brands A and B while ensuring that brand owners can only access their brand's database.
+This allows members of the global analytics team to access the databases for brands A and B while ensuring that brand owners can only access their brand's database.
 
 .. settings-security-resource-groups-multi-brand-tenants-end

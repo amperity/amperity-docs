@@ -152,7 +152,7 @@ Data Explorer
 
 .. queries-data-explorer-start
 
-The **Data Explorer** may be accessed from the **Queries** page via the **Open Data Explorer** link in the right-side navigation. This link is visible when working in the visual **Query Editor** or the **SQL Query Editor**. When clicked it will open the data explorer for the selected database and will display all of the tables in the database. Click any of the databases to explore the schema, view sample data, and details.
+The **Data Explorer** may be accessed from the **Queries** page via the **Open Data Explorer** link in the right-side navigation. This link is visible when working in the visual **Query Editor** or the **SQL Query Editor**. When clicked it opens the data explorer for the selected database and will display all of the tables in the database. Click any of the databases to explore the schema, view sample data, and details.
 
 .. queries-data-explorer-end
 
@@ -512,7 +512,7 @@ Use the **Make a copy** option to add a copy of an existing query. This creates 
 
    The copied query will be of the same type--visual or SQL--as the original query.
 
-#. From the **Queries** page, open the menu for a query, and then select **Edit**. This will open a query editor.
+#. From the **Queries** page, open the menu for a query, and then select **Edit**. This opens a query editor.
 #. Make your changes to the query, and then validate them.
 #. Click **Activate**.
 #. In the **Activate Query** dialog box, select **Activate**.
@@ -595,7 +595,7 @@ Autocomplete table names
 
 .. queries-autocomplete-table-names-start
 
-Start typing table names in the **SQL Query Editor** and a list of available tables will appear. Use an arrow key to select a table, which autocompletes the rest of the table name.
+Start typing table names in the **SQL Query Editor** and a list of available tables appears. Use an arrow key to select a table, which autocompletes the rest of the table name.
 
 .. queries-autocomplete-table-names-end
 
@@ -903,7 +903,7 @@ Alerts are sent when the record count in the query output contains errors that e
 
    .. caution:: A query with a configured query alert is always run **even if the query is not associated with an orchestration**.
 
-      A query that runs and fails when record counts exceed the configured threshold will stop a workflow.
+      A query that runs and fails when record counts exceed the configured threshold stops a workflow.
 
       Use the **Warn when** threshold for queries that are not associated with an orchestration. This will prevent that query from stopping the workflow when record counts exceed the configured alert threshold.
 
@@ -1223,7 +1223,7 @@ Amperity processes data in batches on automated schedules that start with collec
 .. queries-run-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **Run**.
-#. After a few moments, a notification will appear in the **Notifications** list that reports the status of the query run.
+#. After a few moments, a notification appears in the **Notifications** list that reports the status of the query run.
 
 .. queries-run-steps-end
 
@@ -1419,7 +1419,7 @@ Notifications for the **Queries** page appear after Amperity has processed a que
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. queries-view-notifications-context-end
 

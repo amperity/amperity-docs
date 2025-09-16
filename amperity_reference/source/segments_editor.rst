@@ -290,7 +290,7 @@ Operators
 
 .. segments-editor-operators-start
 
-An operator defines how results from a column in a data source will be returned.
+An operator defines how results from a column in a data source is returned.
 
 For example: From your customer 360 table, return all customer records that contain email addresses that are similar to "gmail.com". The data source is your customer 360 table, the attribute is the **email** field in that table, and the **is like** operator allows you to use "gmail.com" to look for values that contain "gmail.com", and then return a list of customers who have "gmail.com" in their email address.
 

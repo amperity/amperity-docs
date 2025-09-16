@@ -427,7 +427,7 @@ Contact Info Matching
 
 .. destination-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs. Each field should be matched to (at least) one of the following columns:
+A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to (at least) one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -530,7 +530,7 @@ Mobile Device ID Matching
 
 .. destination-dv360-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

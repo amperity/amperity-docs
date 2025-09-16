@@ -715,7 +715,7 @@ The following table describes the changes you will see in your tenant after it i
    * - Tab
      - Changes
    * - **Stitch**
-     - The overview page will show a 0.0% deduplication rate. The Amperity ID will align to the total source IDs provided by the **ck**.
+     - The overview page shows a 0.0% deduplication rate. The Amperity ID aligns to the total source IDs provided by the **ck**.
 
        The **Data Explorer** disables the tabs for **Cluster Graph** and **Pairwise Comparison**. These tabs are not available when one-to-one Stitch mode is configured.
 
@@ -1313,7 +1313,7 @@ Stitch reports
 
 .. configure-stitch-advanced-reports-start
 
-A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included (or excluded) can help improve the quality of the Stitch report. The Amperity IDs that are included will appear first in the series of individuals shown when exploring Amperity IDs.
+A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included (or excluded) can help improve the quality of the Stitch report. The Amperity IDs that are included appears first in the series of individuals shown when exploring Amperity IDs.
 
 Stitch may be configured to include or exclude specific Amperity IDs in the Stitch report.
 

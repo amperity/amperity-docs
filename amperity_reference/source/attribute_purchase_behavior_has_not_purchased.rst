@@ -272,7 +272,7 @@ The following table lists the operators that are available to this attribute.
    * - **not between**
      - Returns a list of customers who have not made a purchase outside the dates that define the specified time window.
 
-       For example, if you want to find customers who only purchased school supplies in the two weeks prior to the start of school, and if school started on 9/7, you could define the start of the time window as 8/24 and the end of the time window as 9/6, the **not between** condition will ensure that only customers who purchased within that time window will be returned.
+       For example, if you want to find customers who only purchased school supplies in the two weeks prior to the start of school, and if school started on 9/7, you could define the start of the time window as 8/24 and the end of the time window as 9/6, the **not between** condition will ensure that only customers who purchased within that time window is returned.
 
    * - **not on**
      - |attribute-stop| **Less useful**

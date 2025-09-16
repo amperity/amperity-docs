@@ -109,7 +109,7 @@ The following table lists the operators that are available to these attributes.
    * - **is not between**
      - Returns order dates that exist outside of a defined start and end date.
 
-       For example, if you choose August 10, 2022 and August 12, 2022 as your start and end dates, all orders before August 10. 2022 and all orders after August 12, 2022 will be returned.
+       For example, if you choose August 10, 2022 and August 12, 2022 as your start and end dates, all orders before August 10. 2022 and all orders after August 12, 2022 is returned.
 
    * - **is not NULL**
      - Returns customer records that have a value.

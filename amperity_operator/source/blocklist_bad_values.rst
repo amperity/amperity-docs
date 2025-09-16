@@ -995,7 +995,7 @@ to:
 
    COALESCE(REGEXP_EXTRACT(datasource, '.+?(?=:)'), '*') AS datasource,
 
-This update will allow these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and will prevent **NULL** values from being returned.
+This update allows these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and will prevent **NULL** values from being returned.
 
 .. bad-values-blocklist-advanced-custom-domain-tables-end
 

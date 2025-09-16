@@ -152,7 +152,7 @@ You have two options:
 
        This opens the **Add bridge** dialog box.
 
-       Choose **Sample data**. This will open the **Select tables** dialog box.
+       Choose **Sample data**. This opens the **Select tables** dialog box.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -168,7 +168,7 @@ You have two options:
           :align: left
           :class: no-scaled-link
 
-       When finished, click **Create**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Create**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -333,7 +333,7 @@ After all of the source tables to which semantic tags should be applied have sem
        #. Step through and grade the result as a "Good example" or "Poor example". When benchmark grading is finished click **Next**.,
        #. Review the list of steps you can take to improve customer profile quality.
 
-       .. note:: Amperity sample data will show mostly abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and more actionable abnormal benchmarks.
+       .. note:: Amperity sample data shows mostly abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and more actionable abnormal benchmarks.
 
 .. start-run-stitch-steps-end
 

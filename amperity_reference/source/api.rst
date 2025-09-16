@@ -505,7 +505,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Select the number of days this token will allow access to the API, after which it will expire. For example, 3 days:
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
        .. image:: ../../images/api-keys-set-token-expiration.png
           :width: 240 px

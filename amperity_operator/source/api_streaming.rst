@@ -150,7 +150,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Select the number of days this token will allow access to the API, after which it will expire. For example, 3 days:
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
        .. image:: ../../images/api-keys-set-token-expiration.png
           :width: 240 px
@@ -269,7 +269,7 @@ Data can be sent to the Streaming API by issuing POST requests to the ``/stream/
       :start-after: .. term-postman-start
       :end-before: .. term-postman-end
 
-   Amperity will provide complete details for using a |ext_download_postman_api_streaming| when your tenant is initialized. Use this template as the starting point for building out the API stream for your data source.
+   Amperity provides complete details for using a |ext_download_postman_api_streaming| when your tenant is initialized. Use this template as the starting point for building out the API stream for your data source.
 
 .. streaming-ingest-rest-api-configure-streams-postman-end
 

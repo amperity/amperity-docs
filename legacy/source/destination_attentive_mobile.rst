@@ -589,13 +589,13 @@ About filename templates
 
 .. destination-attentive-add-data-template-intro-start
 
-A filename template defines how the names of segments and campaigns will appear in |destination-name|.
+A filename template defines how the names of segments and campaigns appears in |destination-name|.
 
 .. destination-attentive-add-data-template-intro-end
 
 .. destination-attentive-add-data-template-about-start
 
-The following table shows how your segment name will appear in |destination-name|. These examples represent a one-time buyer campaign that is attempting to win a second purchase. The campaign is named "Winback" and it has sub-audiences for "Dress Shirts", "Jeans", and "Shoes". Keep these types of patterns in mind when naming campaigns, treatment groups, and sub-audiences within your campaigns that is sent to |destination-name|.
+The following table shows how your segment name appears in |destination-name|. These examples represent a one-time buyer campaign that is attempting to win a second purchase. The campaign is named "Winback" and it has sub-audiences for "Dress Shirts", "Jeans", and "Shoes". Keep these types of patterns in mind when naming campaigns, treatment groups, and sub-audiences within your campaigns that is sent to |destination-name|.
 
 .. list-table::
    :widths: 150 150 300

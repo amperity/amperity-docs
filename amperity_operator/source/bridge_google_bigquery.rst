@@ -731,7 +731,7 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
 
        If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync. 
 
-       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-04.png

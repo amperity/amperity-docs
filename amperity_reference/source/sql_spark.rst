@@ -829,7 +829,7 @@ Avoid duplication in **JOIN** operations by:
   Fields in a **GROUP BY** clause are always unique by grouping and can be used in a **JOIN** operation without risk of duplication.
 * Using the **db/unique** semantic tag on fields that are supposed to be unique.
 
-  This semantic tag adds an extra check to ensure that table results are unique by that field. If unexpected duplication occurs it will show as a warning in database notiications.
+  This semantic tag adds an extra check to ensure that table results are unique by that field. If unexpected duplication occurs it shows as a warning in database notiications.
 
 The following SQL query can help find **JOIN** operations with high duplication rates.
 

@@ -17,7 +17,7 @@
 Profile API
 ==================================================
 
-.. important:: The Profile API documented on this page (right now) will be deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__. The use cases in this topic are true, but should be built using the new endpoints.
+.. important:: The Profile API documented on this page (right now) is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__. The use cases in this topic are true, but should be built using the new endpoints.
 
 The Profile API is a RESTful API that supports building custom endpoints against unified customer profiles to enable any downstream workflow.
 
@@ -222,7 +222,7 @@ where
 * **{index-id}** is the index ID for the endpoint
 * **{key-value}** is the lookup key for the request
 
-  If an attribute is not unique for the specified lookup key value, a value will be returned, but it may not be the value you were expecting.
+  If an attribute is not unique for the specified lookup key value, a value is returned, but it may not be the value you were expecting.
 
 .. note:: The URL should not have a trailing slash.
 
@@ -336,7 +336,7 @@ The Profile API returns the following HTTP status codes:
        * 404: No build found for index-id: "index-id".
        * 404: No node found for build-id: "build-id".
 
-       .. note:: A 404 Not Found status code will be returned when the URL contains a trailing slash.
+       .. note:: A 404 Not Found status code is returned when the URL contains a trailing slash.
 
    * - **503 Service Unavailable**
      - A generic error has occurred. The service may be unavailable. Verify the configuration of the request and the expected response values and try again.
@@ -551,7 +551,7 @@ To enable the Profile API for your tenant:
 
        Support will enable the Profile API on your tenant and will let you know when the process is completed.
 
-       .. important:: Your support representative uses SnapPass to provide the temporary access token for the Profile API. (Amperity is building an interface that will allow you to self-generate the access token for the Profile API. This will ensure that only your team has access to the tokens and will make it easier to follow your organization's security policies, such as periodically refreshing the access tokens.)
+       .. important:: Your support representative uses SnapPass to provide the temporary access token for the Profile API. (Amperity is building an interface that allows you to self-generate the access token for the Profile API. This will ensure that only your team has access to the tokens and will make it easier to follow your organization's security policies, such as periodically refreshing the access tokens.)
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -665,7 +665,7 @@ An index must be defined for each query that is used to generate an endpoint for
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - Select the type of response this endpoint will provide.
+     - Select the type of response this endpoint provides.
 
        **A single unique record**
 

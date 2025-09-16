@@ -1373,7 +1373,7 @@ The **Event Propensity** table has the following columns:
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this event. A rank that is less than or equal to X will provide the top N customers with an propensity for this event.
+     - A ranking of customers by their score for this event. A rank that is less than or equal to X provides the top N customers with an propensity for this event.
 
    * - **Score**
      - Float
@@ -1982,7 +1982,7 @@ An **Affinity** table has the following columns:
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this product. A rank that is less than or equal to X will provide the top N customers with an affinity for this product.
+     - A ranking of customers by their score for this product. A rank that is less than or equal to X provides the top N customers with an affinity for this product.
 
    * - **Score**
      - Float
@@ -4557,7 +4557,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        This field is often the primary key and associated with the **pk** semantic tag.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same item, the order ID will appear more than once.
+       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same item, the order ID appears more than once.
 
        .. note::
 
@@ -4620,7 +4620,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        For example, a shirt with the same color and material, but with three different sizes would be represented by three unique SKUs and would also be represented by three unique product IDs.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID will appear more than once.
+       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID appears more than once.
 
        .. caution:: Every customer has their own definition for SKUs and product IDs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition.
 

@@ -71,7 +71,7 @@ Open a new command shell window, and then run the following commands.
 #. $ ``cd documents/github/amperity-docs``
 #. $ ``make``
 
-   This will build all of the docs and place the output in the ``/build`` directory within the ``amperity-docs`` repo.
+   This builds all of the docs and place the output in the ``/build`` directory within the ``amperity-docs`` repo.
 
 
 View the docs in localhost
@@ -188,7 +188,7 @@ To set up your local authoring environment:
           :align: left
           :class: no-scaled-link
 
-     - Run ``make``. This will build the documentation locally on your machine.
+     - Run ``make``. This builds the documentation locally on your machine.
 
        .. note:: If you get an error similar to "make: sphinx-build: No such file or directory" verify that your $PATH variable is updated to match the location on your machine into which Homebrew or Pip installed Sphinx.
 

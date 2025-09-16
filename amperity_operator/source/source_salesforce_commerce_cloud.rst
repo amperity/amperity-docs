@@ -33,7 +33,7 @@ Pull from Salesforce Commerce Cloud
 
 .. source-salesforce-commerce-cloud-rest-api-warning-start
 
-.. warning:: The current Salesforce Commerce Cloud REST API will be deprecated. Use :doc:`SFTP to pull flat files <source_sftp>` to Amperity.
+.. warning:: The current Salesforce Commerce Cloud REST API is deprecated. Use :doc:`SFTP to pull flat files <source_sftp>` to Amperity.
 
 .. source-salesforce-commerce-cloud-rest-api-warning-end
 

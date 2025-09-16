@@ -140,7 +140,7 @@ Customers can track their utilization against their free tier hours by requestin
 
    Discuss plans for heavy use of BI tools with your Amperity account team.
 
-   Compute service time is calculated in minute increments and is based on the running time of the customer's data warehouse. The warehouse is started when a query is first run. As queries are submitted, the data warehouse continues to run. Five minutes after all queries have completed, the data warehouse will stop running and service hours will stop accumulating.
+   Compute service time is calculated in minute increments and is based on the running time of the customer's data warehouse. The warehouse is started when a query is first run. As queries are submitted, the data warehouse continues to run. Five minutes after all queries have completed, the data warehouse stops running and service hours stops accumulating.
 
 .. destination-bic-request-to-enable-service-hours-end
 
@@ -711,7 +711,7 @@ SQL Workbench
       * - **Password**
         - The password for your Amperity username. Leave this blank.
 
-#. Click **OK**. Your browser will open.
+#. Click **OK**. Your browser opens.
 
    If you are already logged into Amperity, you will see a message in your browser that confirms you are authenticated to the |bic| data warehouse. Navigate back to SQL Workbench.
 
@@ -881,7 +881,7 @@ Tableau Desktop
         - The password for your Amperity username. Leave this blank.
 
 #. Select the **Advanced** tab, and then set **Custom Driver Parameters** to "authenticator=externalbrowser".
-#. Click **Sign In**. Your browser will open.
+#. Click **Sign In**. Your browser opens.
 
    If you are already logged into Amperity, you will see a message in your browser that confirms you are authenticated to the |bic| data warehouse. Navigate back to Tableau.
 

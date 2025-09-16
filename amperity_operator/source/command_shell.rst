@@ -150,7 +150,7 @@ Inspect files
    * - **grep "searchterm" filename.csv**
      - Will search the file for "searchterm" and return any results.
 
-       Use the -C flag in conjunction with a number to show the number of lines before and after a result Ex: -C5 will show 11 lines in total.
+       Use the -C flag in conjunction with a number to show the number of lines before and after a result Ex: -C5 shows 11 lines in total.
 
        Use the -E flag will to pass regex to grep rather than a simple search string.
 

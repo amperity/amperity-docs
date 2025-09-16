@@ -885,7 +885,7 @@ To reduce Amps consumption for the **Sources** category:
 
 * Remove unused source tables. The amount of data that is stored will consume Amps. While storage costs do not typically lead to high Amps consumption, deleting unused source tables can help reduce Amps consumption.
 
-  .. note:: Amperity maintains a short buffer period to ensure data can be restored, should it need to be. After deleting unused source tables lower Amps consumption will show in the dashboard after the buffer period has been passed.
+  .. note:: Amperity maintains a short buffer period to ensure data can be restored, should it need to be. After deleting unused source tables lower Amps consumption shows in the dashboard after the buffer period has been passed.
 
 * Remove older records. Processing smaller tables consumes fewer Amps.
 

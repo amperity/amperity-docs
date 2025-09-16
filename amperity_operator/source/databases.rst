@@ -538,7 +538,7 @@ An implicit **CROSS JOIN** occurs when a query unintentionally returns a Cartesi
 
 A Cartesian product in Amperity between any two tables is often a very, very large number of pairs and, as a result, is an expensive operation. It is recommended to optimize your Spark SQL queries to avoid an implicit **CROSS JOIN**.
 
-The database editor will show a validation alert for an implicit **CROSS JOIN** in situations like:
+The database editor shows a validation alert for an implicit **CROSS JOIN** in situations like:
 
 #. A join statement does not use an **ON()** or **USING()** clause to specify one or more column names as the join criteria.
 

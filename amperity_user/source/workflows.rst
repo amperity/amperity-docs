@@ -112,7 +112,7 @@ The following sections describe what you should do to monitor the health of each
           :class: no-scaled-link
      - Notifications show a status for individual steps within workflows that are related to queries and orchestrations. The status can be "Running", "Completed", "Alert", and "Error".
 
-       .. important:: All notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of tables, databases, queries, orchestrations, and destinations will appear in the notifications.
+       .. important:: All notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of tables, databases, queries, orchestrations, and destinations appears in the notifications.
 
           If there is an error, such as a processing error related to a specific column within a custom table, the notification contains the names you used for that custom table and also for the columns within that table.
 

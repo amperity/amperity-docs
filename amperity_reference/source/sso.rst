@@ -93,7 +93,7 @@ The following use cases can be managed directly from your IdP after SSO is enabl
    .. note:: Failed login attempts are recorded in Amperity application audit logs.
 
 **A user changes roles and should no longer have access to Amperity**
-   When a user changes roles within your organization you should remove them from the groups in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity fails during login and they will be shown a message stating that they no longer have access to Amperity.
+   When a user changes roles within your organization you should remove them from the groups in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity fails during login and they is shown a message stating that they no longer have access to Amperity.
 
 .. sso-use-cases-end
 
@@ -151,7 +151,7 @@ Send the URL for your IdP metadata to Amperity support. The Amperity support tea
 
 * The sign-in URL to which Amperity will redirect a user for authentication.
 * The sign-out URL to which Amperity will redirect a user who signs out.
-* The public X509 key that will allow signed SAML responses.
+* The public X509 key that allows signed SAML responses.
 
 The Amperity Support team will configure these details within your Amperity tenant.
 

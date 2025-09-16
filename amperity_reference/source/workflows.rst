@@ -233,7 +233,7 @@ Tasks are grouped into stages, with each stage running a series of tasks. Indivi
 
 Each stage has a series of individual tasks that run in sequence.
 
-For example, tasks for the **Sources** stage must locate today's data updates, pull those updates to Amperity, and then refresh domain tables with the updated data. Each data source that is located will show as an individual task, each data set that is pulled to Amperity will show as an individual task. Many of the steps a courier takes will show as an individual task.
+For example, tasks for the **Sources** stage must locate today's data updates, pull those updates to Amperity, and then refresh domain tables with the updated data. Each data source that is located shows as an individual task, each data set that is pulled to Amperity shows as an individual task. Many of the steps a courier takes shows as an individual task.
 
 .. tip:: Use the **View task details** menu option to learn more about the information that was submitted to each task, such as the name of a service, the ID for the files that were submitted to the task, dependencies, such as list names or attribute names that are required by a destination.
 
@@ -355,7 +355,7 @@ You can access workflow alerts from the following locations:
 * A notification within the **Recent activity** pane on the **Sources**, **Stitch**, **Customer 360**, **Queries**, and **Destinations** pages.
 * The **Activity log** within the **Settings** tab will list an entry for every alert sent
 
-When you receive a workflow alert, use the link provided within the workflow alert to open Amperity, and then review the workflow details page. The individual task that has the error that caused the workflow to stop is shown with the the |workflow-failed| icon. An error message will appear at the top of the workflow details page.
+When you receive a workflow alert, use the link provided within the workflow alert to open Amperity, and then review the workflow details page. The individual task that has the error that caused the workflow to stop is shown with the the |workflow-failed| icon. An error message appears at the top of the workflow details page.
 
 .. image:: ../../images/howitworks-workflows-resolve-error-message.png
    :width: 600 px
@@ -443,7 +443,7 @@ Retry task
 
 A workflow resolution may allow retrying a specific task in a workflow. This is useful for transient issues that should not persist from one workflow to the next.
 
-This type of resolution will rerun the workflow from the point at which the workflow failed, starting with the same failed task and using the same inputs as those provided to the failed workflow. In many cases, this type of resolution will allow to you temporarily change the state of your tenant to help troubleshoot the cause of the workflow.
+This type of resolution will rerun the workflow from the point at which the workflow failed, starting with the same failed task and using the same inputs as those provided to the failed workflow. In many cases, this type of resolution allows to you temporarily change the state of your tenant to help troubleshoot the cause of the workflow.
 
 .. workflows-common-retry-end
 

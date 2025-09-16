@@ -92,7 +92,7 @@ Review reports
 
 .. validate-inputs-review-reports-start
 
-The list of input validation reports that will be available in your tenant depends on the outcomes of running the validations. Each report is available from the **Input validations report** that will appear in the **Recent activity** pane after the reports are complete.
+The list of input validation reports that will be available in your tenant depends on the outcomes of running the validations. Each report is available from the **Input validations report** that appears in the **Recent activity** pane after the reports are complete.
 
 .. validate-inputs-review-reports-end
 

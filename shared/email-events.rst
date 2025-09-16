@@ -221,7 +221,7 @@ This flag indicates whether an Amperity ID is associated with a previous transac
 
 The number of days between the time this email was used to signup and the next transaction associated with an Amperity ID. 
 
-.. note:: This field will appear null if there is no transactions made after the email signup.
+.. note:: This field appears null if there is no transactions made after the email signup.
 
 .. email-events-signup-to-purchase-days-end
 

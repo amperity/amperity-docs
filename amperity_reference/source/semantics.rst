@@ -55,7 +55,7 @@ How semantic tags work
 
 .. semantics-howitworks-start
 
-Semantic tags must be defined for every feed that will provide profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Semantic tagging works like this:
 
@@ -859,7 +859,7 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
 .. semantics-key-foreign-trivial-duplicates-start
 
-.. note:: If foreign keys are linked together by a trivial duplicate they will appear in the **Unified Preprocessed Raw** table as a comma-separated list.
+.. note:: If foreign keys are linked together by a trivial duplicate they appears in the **Unified Preprocessed Raw** table as a comma-separated list.
 
 .. semantics-key-foreign-trivial-duplicates-end
 

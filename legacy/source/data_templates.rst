@@ -86,7 +86,7 @@ Campaign names
 
 .. data-templates-campaigns-campaign-name-start
 
-Use the ``{{ campaign_name }}`` variable to define where the name of the campaign is added to the filename for a campaign, as it will be received by the downstream system.
+Use the ``{{ campaign_name }}`` variable to define where the name of the campaign is added to the filename for a campaign, as it is received by the downstream system.
 
 Use this variable by itself to use the campaign name as the filename. For example, when the filename template is set to ``{{ campaign_name }}`` and the name of the campaign is ``acme_subscriber_bogo_20220815_1`` the filename will be ``acme_subscriber_bogo_20220815_1``.
 
@@ -102,7 +102,7 @@ Treatment group names
 
 .. data-templates-campaigns-group-name-start
 
-Use the ``{{ group_name }}`` variable to define where the name of a treatment group is added to the filename for a campaign, as it will be received by the downstream system.
+Use the ``{{ group_name }}`` variable to define where the name of a treatment group is added to the filename for a campaign, as it is received by the downstream system.
 
 Use this variable by itself to use the treatment group name as the filename. For example, when the filename template is set to ``{{ group_name }}`` and the name of the treatment group is ``Group1_bogo_20220815_1`` the filename will be ``Group1_bogo_20220815_1``.
 
@@ -118,7 +118,7 @@ List names
 
 .. data-templates-campaigns-list-name-start
 
-Use the ``{{ list_name }}`` variable to use the name of the campaign as the filename for a campaign, as it will be received by the downstream system.
+Use the ``{{ list_name }}`` variable to use the name of the campaign as the filename for a campaign, as it is received by the downstream system.
 
 .. data-templates-campaigns-list-name-end
 
@@ -232,7 +232,7 @@ Most file-based destinations share common settings:
 
 .. data-templates-files-common-done-start
 
-Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and will be the last file added by Amperity.
+Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and is the last file added by Amperity.
 
 .. data-templates-files-common-done-end
 
@@ -302,7 +302,7 @@ Custom delimiters
 
 .. data-templates-files-common-formats-delimiters-start
 
-Some formats will accept a custom delimiter. From the **File format** dropdown, select "Custom delimiter" and then in the **Delimiter** box type a single character to use as a custom delimiter.
+Some formats accepts a custom delimiter. From the **File format** dropdown, select "Custom delimiter" and then in the **Delimiter** box type a single character to use as a custom delimiter.
 
 .. data-templates-files-common-formats-delimiters-end
 
@@ -784,7 +784,7 @@ Enable success file
 
 .. data-templates-enable-success-file-start
 
-Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and will be the last file added by Amperity.
+Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and is the last file added by Amperity.
 
 .. data-templates-enable-success-file-end
 

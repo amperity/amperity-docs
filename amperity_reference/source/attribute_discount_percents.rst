@@ -118,7 +118,7 @@ The following table lists the operators that are available to discount percent a
        Avoid using the **is not in list** condition when individual profit amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as ".10", ".20", and ".90", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as ".10", ".20", and ".90", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

@@ -458,7 +458,7 @@ Email notifications
 
 Email notifications will alert you when there is an issue with campaign delivery. For example, email notifications are sent when Facebook Ads is missing an external identifier or two-factor authorization is not enabled for Google Ads.
 
-Email notifications will describe the issue and the steps that are required to resolve the issue, and will provide a link to the **Workflows** page in Amperity.
+Email notifications will describe the issue and the steps that are required to resolve the issue, and provides a link to the **Workflows** page in Amperity.
 
 .. campaigns-reference-campaign-notifications-end
 
@@ -547,19 +547,19 @@ You can finds details about the columns found in the campaign results download f
      - Decimal
      - Additional percentage of recipients converted in the treatment group relative to the control group during the campaign measurement period. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Incremental Revenue (Over Control)**
      - Decimal
      - Additional revenue generated measured by the difference between total test revenue recipient and total control revenue per recipient and then multiply that by test recipients. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Incremental Revenue Per Recipient (Over Control)**
      - Decimal
      - Additional revenue per recipient in the treatment group relative to the control audience during the campaign measurement period. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Is Control**
      - Boolean
@@ -1433,7 +1433,7 @@ Download campaign results
 
 You can download a file that contains a list of campaign results.
 
-For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file will show one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
+For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file shows one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
 
 .. campaigns-download-end
 
@@ -2016,7 +2016,7 @@ Notifications for the **Campaigns** page appear after Amperity processes the seg
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. campaigns-view-notifications-context-end
 

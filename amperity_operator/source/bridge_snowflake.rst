@@ -38,7 +38,7 @@ Amperity Bridge for Snowflake is a first-class integration that uses secure data
 
 .. tip:: Amperity Bridge for Snowflake shares data directly with Snowflake. A bridge does not require a courier or a database export to be configured. A bridge can be configured to run automatically as part of any scheduled workflow.
 
-   If your brand is currently using BI Connect to make data available in Snowflake your brand should consider moving the BI Connect workflow to Amperity Bridge. This increases the speed at which This will allow your brand to self-service the data that is shared between Amperity and Snowflake directly from within your Snowflake account.
+   If your brand is currently using BI Connect to make data available in Snowflake your brand should consider moving the BI Connect workflow to Amperity Bridge. This increases the speed at which This allows your brand to self-service the data that is shared between Amperity and Snowflake directly from within your Snowflake account.
 
 .. bridge-snowflake-switch-to-bridge-end
 
@@ -569,7 +569,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :class: no-scaled-link
      - Add the **Secure Share Identifier**.
 
-       When finished, click **Continue**. This will open the **Select tables** dialog box.
+       When finished, click **Continue**. This opens the **Select tables** dialog box.
 
 
    * - .. image:: ../../images/steps-05.png
@@ -587,7 +587,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
 
        If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync. 
 
-       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-06.png

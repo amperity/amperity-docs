@@ -701,7 +701,7 @@ The settings for nodes in a journey can be edited.
 #. Open **Node Configuration** sidebar, and then make your changes.
 #. Continue building the journey or, if finished, click **Save**.
 
-   Alternatively, clicking the **Node configuration** sidebar will open the configuration pane for the most recently edited node.
+   Alternatively, clicking the **Node configuration** sidebar opens the configuration pane for the most recently edited node.
 
 .. journeys-howtos-edit-steps-end
 

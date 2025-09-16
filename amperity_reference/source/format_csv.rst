@@ -64,7 +64,7 @@ If you notice data quality issues from a data source that uses a CSV file, consi
 
 For example, many Polynesian languages use an apostrophe (') or a single quote (ʻ) at the start of or within first, last, and location names: Hawai'i, O'ahu, Kau'i, U'ilani. In Hawai'ian, a grave accent (`\``) is often used instead of an apostrophe: Hawai\`ian. (Apostrophes within names is not unique to Polynesian languages.)
 
-A courier quote configuration similar to ``"""`` will allow string values like:
+A courier quote configuration similar to ``"""`` allows string values like:
 
 ::
 

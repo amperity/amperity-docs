@@ -573,7 +573,7 @@ Invalid advertiser account ID
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-start
 
-|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action will be shown.
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-end
 

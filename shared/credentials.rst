@@ -113,7 +113,7 @@ Credentials allow Amperity to connect to |destination-name| and must exist befor
 
 .. credentials-sources-configure-already-configured-tip-intro-start
 
-A courier that has credentials that are configured correctly will show a "Connection successful" status, similar to:
+A courier that has credentials that are configured correctly shows a "Connection successful" status, similar to:
 
 .. credentials-sources-configure-already-configured-tip-intro-end
 
