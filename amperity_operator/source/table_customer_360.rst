@@ -31,7 +31,7 @@ Add table
 
 The **Customer 360** table is the most important table in the customer 360 database. The **Customer 360** table is built as a passthrough from the **Merged Customers** table, which makes available to the **Customer 360** table a unified view of the customer across all points of engagement, along with any attributes that cross systems.
 
-Attributes will vary tenant-to-tenant, but typically include:
+Attributes vary tenant-to-tenant, but typically include:
 
 * Profile information, such as names, addresses, email, and phone
 * Interactions by channel, such as ecommerce, point of sale, and loyalty
@@ -65,7 +65,7 @@ Attributes will vary tenant-to-tenant, but typically include:
 #. Review picklists to ensure they have the desired sorting parameters.
 #. Add friendly names for any field. For example, add **First Name** as a friendly name for **given_name**.
 
-   .. tip:: The profile attribute names under **Customer Profile** on the **Customer 360** page are the same names that are entered in the **Friendly Names** column. If a friendly name is not added, Amperity will use the **Field Name** as the profile attribute name, including capitalization and underscores.
+   .. tip:: The profile attribute names under **Customer Profile** on the **Customer 360** page are the same names that are entered in the **Friendly Names** column. If a friendly name is not added, Amperity uses the **Field Name** as the profile attribute name, including capitalization and underscores.
 #. Define the general sort order for fields in the customer profile.
 #. Review icons assigned to fields. Assigned icons are visible under **Customer Profile** on the **Customer 360** page.
 

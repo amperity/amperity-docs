@@ -98,7 +98,7 @@ Dates should be quoted and should be in the "yyyy-MM-dd HH:mm:ss.SSS" format. Th
 * 2019-01-28 18:32:05
 * 2019-01-28
 
-When the date format is not similar to the expected date format, Amperity will attempt to convert the date and time values. If date formats are mixed, Amperity will use the first one that matches.
+When the date format is not similar to the expected date format, Amperity will attempt to convert the date and time values. If date formats are mixed, Amperity uses the first one that matches.
 
 .. format-common-pull-date-formats-end
 
@@ -342,7 +342,7 @@ Connect to destination
 
 .. format-common-send-credentials-start
 
-Amperity requires the ability to connect, and then write data to the location in which files will be dropped. The credentials that allow Amperity to write data to that location are configured in Amperity. If this location is not managed by Amperity, the customer will need to provide these credentials to Amperity using SnapPass to complete the configuration.
+Amperity requires the ability to connect, and then write data to the location in which files will be dropped. The credentials that allow Amperity to write data to that location are configured in Amperity. If this location is not managed by Amperity, the customer need to provide these credentials to Amperity using SnapPass to complete the configuration.
 
 .. format-common-send-credentials-end
 
@@ -440,7 +440,7 @@ Amperity supports the following compression and archiving formats:
 * Zip
 * GZip
 
-When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder will contain one or more files, each of which have generated names.
+When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder contains one or more files, each of which have generated names.
 
 .. tip:: Compression and archive file extensions are not added to the filename template automatically. These may be added while configuring an orchestration. To add the file compression format to the output filename, append .tar, .tgz, .zip, or .gz after the file format extension in the filename template. For example: parquet.tar, csv.zip, or tsv.gz.
 
@@ -591,7 +591,7 @@ Generate SSH keypairs
 
       $ ssh-keygen -t rsa -m PEM -f generated-key
 
-   This will write two files: generated-key (the private key) and generated-key.pub (the public key).
+   This writes two files: generated-key (the private key) and generated-key.pub (the public key).
 
 #. The location in which the public and private keys should be placed depends on the location to which data is transferred.
 #. Add the public key to the SFTP location from which data is sent to Amperity.
@@ -660,7 +660,7 @@ To use PGP encryption with data sources use the **PGP credentials** setting to s
 .. 
 ..       $ gpg --encrypt --recipient s3@acme.amperity.com data.csv
 .. 
-..    This will encrypt a file named "data.csv" and will output a file named "data.csv.gpg". Change ``data.csv`` to the name of the file to be encrypted. Change ``s3@acme.amperity.com`` to the location in Amperity to which the data will be sent.
+..    This will encrypt a file named "data.csv" and will output a file named "data.csv.gpg". Change ``data.csv`` to the name of the file to be encrypted. Change ``s3@acme.amperity.com`` to the location in Amperity to which the data is sent.
 .. 
 
 
@@ -700,7 +700,7 @@ To use PGP decryption with data sources use the **PGP credentials** setting to s
 .. 
 ..       $ gpg --decrypt --recipient [location]@acme.amperity.com data.csv.gpg
 .. 
-..    This will decrypt a file named "data.csv.gpg" and will output a file named "data.csv". Change ``data.csv`` to the name of the file to be decrypted. Change ``[location]`` to the parameter that indicates the cloud platform to which the data will be sent.
+..    This will decrypt a file named "data.csv.gpg" and will output a file named "data.csv". Change ``data.csv`` to the name of the file to be decrypted. Change ``[location]`` to the parameter that indicates the cloud platform to which the data is sent.
 .. 
 
 
@@ -729,20 +729,20 @@ When Amperity pulls files from upstream systems using SFTP, use the following co
 
 **for SSH**
 
-#. The owner of the upstream system will create the SSH keypair and will maintain the private SSH key.
+#. The owner of the upstream system creates the SSH keypair and will maintain the private SSH key.
 
 #. The public SSH key is configured in Amperity; you may send the public SSH key to your Amperity representative using SnapPass.
 
 
 **for PGP**
 
-#. Amperity Support will create the PGP keypair and will maintain the private PGP key.
+#. Amperity Support creates the PGP keypair and will maintain the private PGP key.
 
-#. Amperity Support will send you the public PGP key using SnapPass; the owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
+#. Amperity Support sends you the public PGP key using SnapPass; the owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
 
    .. tip:: Use :ref:`file compression <format-common-pull-file-compression>` *before* encrypting files; compression applied *after* encryption will not reduce the size of the file.
 
-#. Amperity will use the private PGP key to decrypt files pulled from the upstream system.
+#. Amperity uses the private PGP key to decrypt files pulled from the upstream system.
 
 .. format-common-pull-files-to-amperity-end
 
@@ -758,17 +758,17 @@ When Amperity sends files to downstream systems using SFTP, use the following co
 
 **for SSH**
 
-#. Amperity Support will create the SSH keypair and will maintain the private SSH key
+#. Amperity Support creates the SSH keypair and will maintain the private SSH key
 
-#. Amperity Support will send you the public SSH key using SnapPass; add the public SSH key to the downstream system to which Amperity is configured to send data
+#. Amperity Support sends you the public SSH key using SnapPass; add the public SSH key to the downstream system to which Amperity is configured to send data
 
 **for PGP**
 
 #. The owner of the downstream system creates the PGP keypair and maintains the private PGP key; you may send the public PGP key to your Amperity representative using SnapPass
 
-#. Amperity will use the public PGP key to encrypt files before sending them to the downstream system.
+#. Amperity uses the public PGP key to encrypt files before sending them to the downstream system.
 
-#. The downstream system will use the private PGP key to decrypt files sent from Amperity
+#. The downstream system uses the private PGP key to decrypt files sent from Amperity
 
 .. format-common-send-files-from-amperity-end
 

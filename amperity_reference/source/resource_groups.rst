@@ -47,7 +47,7 @@ Use a custom resource group to support any combination of team member access to 
 
 .. note:: Users who are associated with a custom resource group cannot access the **Sources** page. Access to the **Sources** page requires users to have access all data available to the tenant.
 
-   Users who are associated with a custom resource group *may* be able to view the **Stitch** page (depending on their policy), but will not be able to view personally identifiable information (PII).
+   Users who are associated with a custom resource group *may* be able to view the **Stitch** page (depending on their policy), but is not able to view personally identifiable information (PII).
 
 .. settings-security-resource-groups-custom-end
 

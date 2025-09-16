@@ -172,7 +172,7 @@ Responses
 
 .. endpoint-get-workflows-fetch-responses-start
 
-A response from the **GET /workflow/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /workflow/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-fetch-responses-end
 
@@ -203,7 +203,7 @@ The **200** response returns details for the named workflow.
 
 **Verbose**
 
-.. important:: The list of :ref:`response parameters that are returned <endpoint-get-workflows-fetch-response-parameters>` in the response will vary, depending on the state of the workflow, the number of tasks that were initiated by the workflow, and if an error occurred.
+.. important:: The list of :ref:`response parameters that are returned <endpoint-get-workflows-fetch-response-parameters>` in the response varies, depending on the state of the workflow, the number of tasks that were initiated by the workflow, and if an error occurred.
 
 .. code-block:: json
    :linenos:
@@ -464,7 +464,7 @@ A **200 OK** response contains the following parameters.
 
 
    * - **type**
-     - The type of workflow. Most workflows will have workflow types related to the following areas within Amperity:
+     - The type of workflow. Most workflows have workflow types related to the following areas within Amperity:
 
        * Bridge sync
        * C360 validation

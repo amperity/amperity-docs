@@ -49,7 +49,7 @@ Build query
 
 .. destination-oracle-eloqua-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to static lists in |destination-name|.
+You need to build a query that outputs fields that can be mapped to static lists in |destination-name|.
 
 .. code-block:: sql
    :linenos:

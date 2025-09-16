@@ -241,7 +241,7 @@ Identify sparse customer records
 
 A brand with a large brick-and-mortar presence likely has sparse customer data associated with purchases made by customers in physical stores. A common scenario for identifying consumers from sparse customer records is to associate the sparse data with better data that contains more PII, including email addresses, physical addresses, income, gender, age, profession, and so on.
 
-.. note:: Third-party data providers often use more PII than last name and the last 4 digits of a credit card to match a brand's record to a customer file. The approaches will vary depending on the provider.
+.. note:: Third-party data providers often use more PII than last name and the last 4 digits of a credit card to match a brand's record to a customer file. The approaches varies depending on the provider.
 
 Amperity can help with this effort, but the outcome depends on the quality of the match-rate between third- and first-party data. What can improve this scenario is to improve in-store and digital experiences in a way to encourage customers to provide additional information about themselves.
 

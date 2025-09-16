@@ -29,7 +29,7 @@ Send query results to ActiveCampaign
 
 .. sendto-active-campaign-start
 
-Use Amperity to manage audience lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. If contacts exist in |destination-name| for the emails sent in the query, the contact list will be updated to match the query.
+Use Amperity to manage audience lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. If contacts exist in |destination-name| for the emails sent in the query, the contact list is updated to match the query.
 
 .. sendto-active-campaign-end
 

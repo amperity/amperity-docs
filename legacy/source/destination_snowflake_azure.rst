@@ -227,7 +227,7 @@ To configure Snowflake objects use a Data Definition Language (DDL) command simi
 
 .. destination-snowflake-azure-configure-objects-note-start
 
-.. note:: You must send a customer who will connect directly to the Snowflake data warehouse the following information using a SnapPass link:
+.. note:: You must send a customer who connects directly to the Snowflake data warehouse the following information using a SnapPass link:
 
    #. The URL for the Snowflake data warehouse.
    #. The Snowflake username.
@@ -244,7 +244,7 @@ Configure user access
 
 .. destination-snowflake-azure-configure-user-access-start
 
-Users that will connect to Snowflake to use data in external applications, such as Tableau, Microsoft Power BI, and Databricks, will need to be granted read-only access to the Snowflake data warehouse. 
+Users that connects to Snowflake to use data in external applications, such as Tableau, Microsoft Power BI, and Databricks, need to be granted read-only access to the Snowflake data warehouse. 
 
 .. destination-snowflake-azure-configure-user-access-end
 

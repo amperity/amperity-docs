@@ -244,7 +244,7 @@ Cardinality vs. uniqueness
 Use cardinality and uniqueness to help guide the creation of well-behaved **JOIN** operations when authoring SQL queries.
 
 * Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
-* Columns with low uniqueness values as keys on both sides of a **JOIN** operation will run more slowly and is less likely to return the desired results.
+* Columns with low uniqueness values as keys on both sides of a **JOIN** operation runs more slowly and is less likely to return the desired results.
 * Empty fields, such as NULL values, are counted as duplicates or "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. queries-data-explorer-full-screen-cardinality-end
@@ -500,7 +500,7 @@ Add as copy
 
 .. queries-add-as-copy-start
 
-Use the **Make a copy** option to add a copy of an existing query. This will create a draft query with the same settings and SQL query as the copied query, along with a placeholder name. Rename the query, and then make any other changes before activating it.
+Use the **Make a copy** option to add a copy of an existing query. This creates a draft query with the same settings and SQL query as the copied query, along with a placeholder name. Rename the query, and then make any other changes before activating it.
 
 .. queries-add-as-copy-end
 
@@ -863,7 +863,7 @@ You may enable performance mode for any query that returns large result sets. Pe
    * Column names cannot contain spaces.
    * Column names are output in lowercase.
    * Small queries may take longer.
-   * Part file names in Apache Parquet orchestrations will have a different pattern.
+   * Part file names in Apache Parquet orchestrations have a different pattern.
    * Date fields will be output as timestamps.
    * The **CURRENT_TIMESTAMP** function must be cast as a timestamp. For example:
 
@@ -965,7 +965,7 @@ You can view details for any query, including the SQL query associated with the 
 .. queries-open-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor with the query as view-only.
-#. Click **Edit** to make changes. This will change the query to a draft query, which will require re-activation when you are done making changes.
+#. Click **Edit** to make changes. This will change the query to a draft query, which requires re-activation when you are done making changes.
 
 .. queries-open-steps-end
 
@@ -1170,7 +1170,7 @@ Refresh query automatically
 
 .. queries-refresh-automatically-start
 
-A query may be configured to be refreshed automatically. When enabled, an active query will be run automatically whenever an upstream process is refreshed.
+A query may be configured to be refreshed automatically. When enabled, an active query is run automatically whenever an upstream process is refreshed.
 
 .. queries-refresh-automatically-end
 
@@ -1180,7 +1180,7 @@ A query may be configured to be refreshed automatically. When enabled, an active
 
 #. From the **Queries** page, open the menu for a query, and then select **Edit**. This opens the query editor with the query labeled a draft query.
 #. Under **Query Settings**, select the **Refresh automatically** checkbox. This option is required to enable query alerts.
-#. Click **Activate**. The query will run automatically when upstream data changes.
+#. Click **Activate**. The query runs automatically when upstream data changes.
 
 .. queries-refresh-automatically-steps-end
 
@@ -1246,7 +1246,7 @@ You can run part of a statement from the **SQL Query Editor**.
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor** with the SQL query labeled a draft query.
 #. Within the SQL query, highlight part of the statement, and then select **Run selection**.
 
-   If the selected SQL is valid, Amperity will run it and return the results.
+   If the selected SQL is valid, Amperity runs it and return the results.
 
 .. queries-run-selection-steps-end
 
@@ -1440,7 +1440,7 @@ You can view details for any SQL query, including the SQL query associated with 
 .. queries-view-query-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **View**. This opens the **SQL Query Editor** with the SQL query as view-only.
-#. Click **Edit** to make changes. This will change the query to a draft query, which will require re-activation when you are done making changes.
+#. Click **Edit** to make changes. This will change the query to a draft query, which requires re-activation when you are done making changes.
 
 .. queries-view-query-steps-end
 

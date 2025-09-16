@@ -54,7 +54,7 @@ The **Email AmpID Assignment** table:
 #. Reranks all remaining email addresses and Amperity ID and identifies email addresses and Amperity IDs that share the top ranking.
 #. Unions the two sets of matching email addresses and Amperity IDs into a single list.
 
-   Some email addresses and Amperity IDs will not be matched. These non-matched email addresses and Amperity IDs are often not the best choice for a given email address or Amperity ID and should not be used to build campaigns that require the highest-ranked email address.
+   Some email addresses and Amperity IDs is not matched. These non-matched email addresses and Amperity IDs are often not the best choice for a given email address or Amperity ID and should not be used to build campaigns that require the highest-ranked email address.
 
 .. table-email-ampid-assignment-howitworks-end
 

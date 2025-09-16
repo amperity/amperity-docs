@@ -159,7 +159,7 @@ Responses
 
 .. endpoint-post-workflows-stop-responses-start
 
-A response from the **POST workflow/runs/{id}/stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was stopped. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **POST workflow/runs/{id}/stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains workflow details for the workflow run that was stopped. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-stop-responses-end
 
@@ -373,7 +373,7 @@ A **200 OK** response contains the following parameters.
      - The unique identifier for the tenant.
 
    * - **type**
-     - The type of workflow. Most workflows will have workflow types related to the following areas within Amperity:
+     - The type of workflow. Most workflows have workflow types related to the following areas within Amperity:
 
        * Bridge sync
        * C360 validation

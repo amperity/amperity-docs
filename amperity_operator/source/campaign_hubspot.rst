@@ -34,7 +34,7 @@ Configure campaigns for HubSpot
 
 .. campaign-hubspot-start
 
-Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
+Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity updates contacts that already exist in |destination-name|; Amperity does not create contacts.
 
 .. campaign-hubspot-end
 
@@ -62,11 +62,11 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
    #. May not contain quotation marks in the local part of the address, which is the part to the left of the @ symbol.
    #. Must end in a valid top-level domain (TLD), as listed at `https://data.iana.org/TLD/tlds-alpha-by-domain.txt <https://data.iana.org/TLD/tlds-alpha-by-domain.txt>`__ |ext_link| and may contain Unicode characters within the TLD.
 
-   If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import will fail and return a 400 error.
+   If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import fails and return a 400 error.
 
    If you experience a 400 error due to invalid email addresses, identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
 
-   Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
+   Amperity updates contacts that already exist in |destination-name|; Amperity does not create contacts.
 
 .. campaign-hubspot-build-query-end
 

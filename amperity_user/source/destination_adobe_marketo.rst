@@ -55,7 +55,7 @@ Build query
 
 .. sendto-adobe-marketo-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to audience fields in |destination-name|. For example, a |destination-name| audience may have the following fields:
+You need to build a query that outputs fields that can be mapped to audience fields in |destination-name|. For example, a |destination-name| audience may have the following fields:
 
 .. list-table::
    :widths: 140 140 320
@@ -113,7 +113,7 @@ Add orchestration
 
 .. sendto-adobe-marketo-add-orchestration-important-start
 
-.. important:: Specify the list and folder names as they are defined in |destination-name|. This is the list, and then folder names, to which Amperity will send audience list updates.
+.. important:: Specify the list and folder names as they are defined in |destination-name|. This is the list, and then folder names, to which Amperity sends audience list updates.
 
 .. sendto-adobe-marketo-add-orchestration-important-end
 

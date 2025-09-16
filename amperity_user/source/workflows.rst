@@ -34,7 +34,7 @@ This is part three of a series of topics that describes how this works.
 
 .. workflows-howitworks-start
 
-You can view workflows from the **Workflows** page, from which you configure the audience and sub-audiences that will be associated with the campaign, the downstream locations to which the campaign will be sent, and the time at which the campaign is to begin.
+You can view workflows from the **Workflows** page, from which you configure the audience and sub-audiences that is associated with the campaign, the downstream locations to which the campaign is sent, and the time at which the campaign is to begin.
 
 .. workflows-howitworks-end
 
@@ -62,7 +62,7 @@ The following sections describe what you should do to monitor the health of each
 
        You may need to update a query to ensure the results match specific requirements by the destination.
 
-       For example, you started with 6 data sources and used those to get your downstream use cases running. And then added a few more data sources. One of these sources has "messy records" that changed some of the data in your customer 360 database, which causes your Google Ads or DV360 orchestration to fail. Google Ads or DV360 requires phone numbers to use a "+11231234567" format and requires that first name, last name, zip code, and country be available to the the "Contact Info" upload key. An orchestration will fail when the data that is sent to Google Ads or DV360 doesn't match the formatting requirements.
+       For example, you started with 6 data sources and used those to get your downstream use cases running. And then added a few more data sources. One of these sources has "messy records" that changed some of the data in your customer 360 database, which causes your Google Ads or DV360 orchestration to fail. Google Ads or DV360 requires phone numbers to use a "+11231234567" format and requires that first name, last name, zip code, and country be available to the the "Contact Info" upload key. An orchestration fails when the data that is sent to Google Ads or DV360 doesn't match the formatting requirements.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -114,7 +114,7 @@ The following sections describe what you should do to monitor the health of each
 
        .. important:: All notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of tables, databases, queries, orchestrations, and destinations will appear in the notifications.
 
-          If there is an error, such as a processing error related to a specific column within a custom table, the notification will contain the names you used for that custom table and also for the columns within that table.
+          If there is an error, such as a processing error related to a specific column within a custom table, the notification contains the names you used for that custom table and also for the columns within that table.
 
        A warning is shown when the workfow was able to complete all steps, but detected issues with at least one step within the workflow.
 

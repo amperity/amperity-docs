@@ -81,7 +81,7 @@ The Profile API has the following endpoints:
 
 .. profile-api-howitworks-endpoints-which-policies-start
 
-.. admonition:: What policies will users need?
+.. admonition:: What policies users need?
 
    The Profile API requires the following policies to be assigned to users within your tenant:
 
@@ -137,7 +137,7 @@ where
 
 **Response**
 
-The response returns a list of endpoints (indexes) that are available within your tenant's Profile API. For example, a list of three indexes (Braze User Profiles, Product Catalog, and Hashed Email Profiles) will have a response similar to:
+The response returns a list of endpoints (indexes) that are available within your tenant's Profile API. For example, a list of three indexes (Braze User Profiles, Product Catalog, and Hashed Email Profiles) have a response similar to:
 
 .. code-block:: salt
    :linenos:
@@ -237,7 +237,7 @@ where
         ?key={key-value}\
         &all_matches=true'
 
-where all of the parameters are the same as the example request for a single unique record *with the addition of the* **all_matches=true** paramater, which returns all matching records :ref:`up to the configured limit for this endpoint <profile-api-enable-add-index>`. Each returned record will contain its own list of attributes.
+where all of the parameters are the same as the example request for a single unique record *with the addition of the* **all_matches=true** paramater, which returns all matching records :ref:`up to the configured limit for this endpoint <profile-api-enable-add-index>`. Each returned record contains its own list of attributes.
 
 **Responses**
 
@@ -253,7 +253,7 @@ The structure of the response depends on the attributes that are available withi
        "index-id" "index-id-value"}
    }
 
-For example, an index that uses "loyalty_id" as the lookup key, and returns "firstname", "lastname" for loyalty ID "a-01234-b" for a customer named "Dennis Terrell" will have a response similar to:
+For example, an index that uses "loyalty_id" as the lookup key, and returns "firstname", "lastname" for loyalty ID "a-01234-b" for a customer named "Dennis Terrell" have a response similar to:
 
 .. code-block:: salt
    :linenos:
@@ -273,7 +273,7 @@ For example, an index that uses "loyalty_id" as the lookup key, and returns "fir
      }
    }
 
-An index that returns multiple matching records will have a response similar to:
+An index that returns multiple matching records have a response similar to:
 
 .. code-block:: salt
    :linenos:
@@ -351,7 +351,7 @@ Queries
 
 .. profile-api-howitworks-queries-start
 
-A query defines the list of attributes that will be available from a Profile API endpoint, along with providing the lookup key that requests will use to return attribute values for the specified lookup key. Use the **Queries** page to build the query. Group all of the queries that support your tenant's Profile API use cases into the same folder.
+A query defines the list of attributes that will be available from a Profile API endpoint, along with providing the lookup key that requests uses to return attribute values for the specified lookup key. Use the **Queries** page to build the query. Group all of the queries that support your tenant's Profile API use cases into the same folder.
 
 .. tip:: All attribute names within a query that is used to build an endpoint for the Profile API should be unique to ensure that all attributes are unique by lookup key value in the index.
 
@@ -375,7 +375,7 @@ Lookup keys
 
 .. profile-api-howitworks-lookup-keys-start
 
-The lookup key for an index is the primary key for that index. The field in the index that acts as the lookup key must be a field that provides a unique identifier, such as the Amperity ID, a loyalty program ID, an ID that is unique in the downstream location from which the Profile API will be used to enable use cases, or some other identifier that allows a request to return a series of attributes that are associated with that unique identifier.
+The lookup key for an index is the primary key for that index. The field in the index that acts as the lookup key must be a field that provides a unique identifier, such as the Amperity ID, a loyalty program ID, an ID that is unique in the downstream location from which the Profile API is used to enable use cases, or some other identifier that allows a request to return a series of attributes that are associated with that unique identifier.
 
 Each endpoint must have a lookup key. You can find the lookup key for any endpoint from the **Lookup Key** column in the **Profile API** list:
 
@@ -393,7 +393,7 @@ Each endpoint must have a lookup key. You can find the lookup key for any endpoi
 
    This should be done *before* making that query available to the Profile API.
 
-   Formatting requirements are often determined by how the downstream use case will access the Profile API endpoint. These requirements include the tools that you will use to access the Profile API and also the individuals within your organization who need to understand how that information should be accessed.
+   Formatting requirements are often determined by how the downstream use case will access the Profile API endpoint. These requirements include the tools that you uses to access the Profile API and also the individuals within your organization who need to understand how that information should be accessed.
 
 .. profile-api-howitworks-lookup-keys-end
 
@@ -491,7 +491,7 @@ Rate limit
 
 .. profile-api-rate-limit-start
 
-The Profile API does not currently enforce a rate limit. A rate limit will be introduced at a point in the near future.
+The Profile API does not currently enforce a rate limit. A rate limit is introduced at a point in the near future.
 
 .. profile-api-rate-limit-end
 
@@ -551,7 +551,7 @@ To enable the Profile API for your tenant:
 
        Support will enable the Profile API on your tenant and will let you know when the process is completed.
 
-       .. important:: Your support representative will use SnapPass to provide the temporary access token for the Profile API. (Amperity is building an interface that will allow you to self-generate the access token for the Profile API. This will ensure that only your team has access to the tokens and will make it easier to follow your organization's security policies, such as periodically refreshing the access tokens.)
+       .. important:: Your support representative uses SnapPass to provide the temporary access token for the Profile API. (Amperity is building an interface that will allow you to self-generate the access token for the Profile API. This will ensure that only your team has access to the tokens and will make it easier to follow your organization's security policies, such as periodically refreshing the access tokens.)
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -639,7 +639,7 @@ An index must be defined for each query that is used to generate an endpoint for
           :align: left
           :class: no-scaled-link
 
-       Give the endpoint a name that clearly describes how it will be used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
+       Give the endpoint a name that clearly describes how it is used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
 
        Use a description to help other users in your tenant know what use cases this endpoint enables.
 
@@ -651,7 +651,7 @@ An index must be defined for each query that is used to generate an endpoint for
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Select the query that will be used to generate the fields in the index, and then choose the field in that index that will be used as the lookup key.
+     - Select the query that is used to generate the fields in the index, and then choose the field in that index that is used as the lookup key.
 
        .. image:: ../../images/api-profile-add-index-dialog-query-lookup.png
           :width: 500 px
@@ -1241,7 +1241,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - After the access token is available to Connected Content, use the cached access token to access the index. The type of request to use in this step will vary, depending on your use case.
+     - After the access token is available to Connected Content, use the cached access token to access the index. The type of request to use in this step varies, depending on your use case.
 
        **To query an index**
 

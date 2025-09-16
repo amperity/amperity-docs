@@ -68,7 +68,7 @@ All notifications within the recent activity pane fall into one of the following
 
 .. important:: Notifications fall into general behaviors, but all notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of data sources, feeds, couriers, tables, databases, queries, orchestrations, destinations, and campaigns will appear in the notifications.
 
-   If there is an error, such as a processing error related to a specific column within a custom table, the notification will contain the names you chose for the custom table and also for the columns within that table.
+   If there is an error, such as a processing error related to a specific column within a custom table, the notification contains the names you chose for the custom table and also for the columns within that table.
 
    This topic details what you should expect to see within your tenant, but it is not possible to know in advance the specific notifications that you may experience.
 
@@ -120,7 +120,7 @@ A completed notification--indicated by the |notification-complete| icon--is show
 
 .. notifications-type-completed-context-start
 
-For example, a notification for a workflow that has completed successfully will contain links to:
+For example, a notification for a workflow that has completed successfully contains links to:
 
 * A **Validation Report**
 * A **View Details** modal that shows how long it took for each table to be updated
@@ -155,7 +155,7 @@ For example, a notification for a workflow that has detected an issue will show 
    Unique validation failed for database "Customer 360" table
    "Unified_Transactions" column "order_id"
 
-and then will contain links to:
+and then contains links to:
 
 * A **Validation Report**
 * A **View Details** modal that shows how long it took for each table to be updated

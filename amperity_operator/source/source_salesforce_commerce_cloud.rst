@@ -79,7 +79,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The hostname and port for the SFTP site from which data will be pulled. For example, "sftp.acme.com" and "20".
+     - The hostname and port for the SFTP site from which data is pulled. For example, "sftp.acme.com" and "20".
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

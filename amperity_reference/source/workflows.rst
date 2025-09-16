@@ -100,7 +100,7 @@ Alerts are sent when:
 
 * Files are missing
 * A failure occurs within any part of a courier group workflow, including courier groups with orchestration groups, campaigns, or profile API indexes configured to run as part of the workflow
-* The courier group succeeds, if configured. If downstream workflows are configured, an alert will be sent both when database generation is complete and when downstream workflows succeed
+* The courier group succeeds, if configured. If downstream workflows are configured, an alert is sent both when database generation is complete and when downstream workflows succeed
 * The courier group runtime exceeds a threshold, if configured
 * Configured query thresholds are reached
 * A user cancels an automatically launched workflow
@@ -459,7 +459,7 @@ This type of resolution will rerun the workflow from the point at which the work
 
    In these types of cases, the resolution *does not change the state of your tenant* after retrying the workflow. It only changes the state of the active workflow.
 
-   You will need to update your production tenant to persist the change to support future workflows.
+   You need to update your production tenant to persist the change to support future workflows.
 
 .. workflows-common-retry-caution-end
 
@@ -617,7 +617,7 @@ Mismatched datatype
 
 A datatype defines what the value of an attribute can be. For example, an email address is a String, an order date is a Datetime, revenue is a Decimal, the number of items in an order is an Integer, and something that can be true or false is a Boolean.
 
-It's possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal or some other non-String datatype. If a mismatched datatype occurs the campaign will fail, you will receive an error message, and an alert will be sent.
+It's possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal or some other non-String datatype. If a mismatched datatype occurs the campaign fails, you will receive an error message, and an alert is sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 
@@ -637,7 +637,7 @@ Missing table
 
 .. workflows-campaigns-missing-table-start
 
-Amperity must be able to find the table from which campaign attributes will be pulled before sending them to your destinations. If a table is renamed or removed the campaign will fail, you will receive an error message, and an email will be sent.
+Amperity must be able to find the table from which campaign attributes is pulled before sending them to your destinations. If a table is renamed or removed the campaign fails, you will receive an error message, and an email is sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 
@@ -657,7 +657,7 @@ Unresolved column name
 
 .. workflows-campaigns-unresolved-column-name-start
 
-Amperity must be able to find the column from which campaign attributes are pulled before sending them to destinations. A campaign will fail if a column is renamed or removed. An error message and an alert are sent.
+Amperity must be able to find the column from which campaign attributes are pulled before sending them to destinations. A campaign fails if a column is renamed or removed. An error message and an alert are sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 

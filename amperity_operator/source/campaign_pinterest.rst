@@ -46,11 +46,11 @@ You can configure Amperity to maintain a list of SHA-256 hashed email addresses 
 
 A customer list is associated with an audience in |destination-name|, after which your brand may use that audience to advertise on |destination-name|.
 
-Amperity will create the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity will update the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity.
+Amperity creates the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity updates the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity.
 
 .. note:: An existing customer list should be empty the first time Amperity sends a list of email addresses.
 
-When a customer list is not associated with an audience in |destination-name|, Amperity will create an audience using the same name as the list name that was used in Amperity, and then attach the customer list that is managed by Amperity to that audience list.
+When a customer list is not associated with an audience in |destination-name|, Amperity creates an audience using the same name as the list name that was used in Amperity, and then attach the customer list that is managed by Amperity to that audience list.
 
 .. note:: A customer list must contain at least 100 email addresses that are associated with a |destination-name| account before it can be associated with an audience.
 
@@ -127,11 +127,11 @@ Get details
           :class: no-scaled-link
      - **Customer list name**
 
-       The customer list name to which the |destination-name| connector will send a list of SHA-256 hashed email addresses.
+       The customer list name to which the |destination-name| connector sends a list of SHA-256 hashed email addresses.
 
-       If the customer list does not exist, Amperity will create the list using the configured list name, and then add the list of email addresses that are sent from Amperity.
+       If the customer list does not exist, Amperity creates the list using the configured list name, and then add the list of email addresses that are sent from Amperity.
 
-       If the customer list already exists, Amperity will update the list to match the list of email addresses that are sent from Amperity.
+       If the customer list already exists, Amperity updates the list to match the list of email addresses that are sent from Amperity.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

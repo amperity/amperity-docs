@@ -204,7 +204,7 @@ Review :ref:`source-azure-blob-storage-legacy-azure-data-share` for more informa
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" or are not set to an obviously incorrect string the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" or are not set to an obviously incorrect string the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. source-azure-blob-storage-legacy-add-courier-for-data-share-steps-end
@@ -268,7 +268,7 @@ Credentials options to access Azure Blob Storage include shared access signature
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. source-azure-blob-storage-legacy-add-courier-for-credentials-steps-end

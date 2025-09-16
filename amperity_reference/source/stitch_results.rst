@@ -176,7 +176,7 @@ The **Stitched Sources** section of the **Stitch** page shows a comparison of do
 
 .. stitch-explore-by-data-source-upset-plot-start
 
-The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. An UpSet plot chart will have a row for each data source. This diagram shows the first two only.
+The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. An UpSet plot chart have a row for each data source. This diagram shows the first two only.
 
 .. stitch-explore-by-data-source-upset-plot-end
 

@@ -123,7 +123,7 @@ To enable a real-time workflow:
 #. :ref:`Create API key and access token <realtime-configure-api-key-access-token>`
 #. :ref:`Configure the POST request <realtime-configure-post-request>`
 #. :ref:`Add real-time tables to database as passthrough table <realtime-add-passthrough-tables>`
-#. :ref:`Run each database for which the streaming endpoint will be included <realtime-run-database>`
+#. :ref:`Run each database for which the streaming endpoint is included <realtime-run-database>`
 #. :ref:`Start streaming data to the streaming endpoint <realtime-stream-data>`
 #. :ref:`Build a query against the real-time table, and then verify data is returned <realtime-build-query>`
 #. :ref:`Make data available to real-time use cases <realtime-make-data-available>`
@@ -213,7 +213,7 @@ Streaming endpoints are managed from the **Sources** page.
 
           is-2hzqsgX1E
 
-       Save these two values. You will need them to :ref:`configure the POST request <realtime-configure-post-request>` to the streaming endpoint and to configure streamed data to :ref:`be part of the daily batched workflow <realtime-add-to-batch-workflow>`.
+       Save these two values. You need them to :ref:`configure the POST request <realtime-configure-post-request>` to the streaming endpoint and to configure streamed data to :ref:`be part of the daily batched workflow <realtime-add-to-batch-workflow>`.
 
        The ID for the Streaming Ingest API endpoint is also available from the **Stream ID** column:
 
@@ -297,7 +297,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Each field in the schema must exist in the fields that are streamed to Amperity by the streaming source for this real-time table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. If you have an existing feed configured for streaming purposes, you may refer to the feed for schema details.
 
-       .. note:: The schema for every real-time table will contain the following additional fields at the query layer:
+       .. note:: The schema for every real-time table contains the following additional fields at the query layer:
 
           * **_received_at** The time at which data arrived at the streaming endpoint.
           * **_written_at** The time at which data was written to the real-time table.
@@ -557,7 +557,7 @@ To include data that is streamed to Amperity in your batch workflow, such as inc
 
       SELECT * FROM realtime_table
 
-   where ``realtime_table`` is the name of the real-time table from which data will be pulled into the batch layer.
+   where ``realtime_table`` is the name of the real-time table from which data is pulled into the batch layer.
 
 #. Make this table available to Stitch. You may also semantically tag fields for Stitch to process.
 

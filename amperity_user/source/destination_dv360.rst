@@ -55,7 +55,7 @@ Build query
 
 .. destination-dv360-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to :ref:`Google Audience Partner API matching keys <sendto-dv360-api-matching>`, one of:
+You need to build a query that outputs fields that can be mapped to :ref:`Google Audience Partner API matching keys <sendto-dv360-api-matching>`, one of:
 
 #. :ref:`Contact information, including personally identifiable information (PII) matching <sendto-dv360-api-matching-contact>`
 #. :ref:`Mobile device matching <sendto-dv360-api-matching-mobile>`

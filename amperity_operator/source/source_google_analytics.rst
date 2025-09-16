@@ -123,7 +123,7 @@ Review feed and domain table
 
 .. source-google-analytics-review-data-start
 
-After creating the |source-name| courier it will create a source named |source-name| and a feed named |feed-name| that contains the fields that Amperity pulls from the configured Google Analytics 4 property.
+After creating the |source-name| courier it creates a source named |source-name| and a feed named |feed-name| that contains the fields that Amperity pulls from the configured Google Analytics 4 property.
 
 .. source-google-analytics-review-data-end
 

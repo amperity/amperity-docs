@@ -37,7 +37,7 @@ Configure campaigns for Oracle Eloqua
 
 Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
 
-Amperity will add and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list. The first audience that is sent from Amperity to |destination-name| should be to a new or empty shared list.
+Amperity adds and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list. The first audience that is sent from Amperity to |destination-name| should be to a new or empty shared list.
 
 .. campaign-oracle-eloqua-context-end
 
@@ -118,7 +118,7 @@ Get details
 
           Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv
 
-       will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
+       creates a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but have a unique datestamp.
 
        A campaign that is configured only for campaign name and group name
 
@@ -126,7 +126,7 @@ Get details
 
           {{ campaign_name }} - {{ group_name }}
 
-       will update the same shared list each time the audience is sent from Amperity.
+       updates the same shared list each time the audience is sent from Amperity.
 
        .. caution:: You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
 

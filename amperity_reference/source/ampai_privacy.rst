@@ -82,7 +82,7 @@ What data is not sent to Azure OpenAI Service?
 
 Amperity sends only the data needed to ensure effective operation of the Azure OpenAI Service and no data is stored at rest in the Azure OpenAI service. In addition, Amperity restricts the use of the service to limit access to data:
 
-* Extensive customer PII. Amperity will send a sample of query results to the Azure OpenAI Service which may contain PII.
+* Extensive customer PII. Amperity sends a sample of query results to the Azure OpenAI Service which may contain PII.
 * Credentials. Amperity does not send any stored upstream or downstream credentials (usernames and passwords) to Azure OpenAI Service.
 
 .. ampai-azure-openai-service-not-sent-end

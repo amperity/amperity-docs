@@ -79,7 +79,7 @@ Prerequisites
 
 .. start-prerequisites-start
 
-To follow-along with this guide you will need:
+To follow-along with this guide you need:
 
 #. Access to an Amperity account.
 #. Approximately ~1 hour of time to complete all of the steps within the guide.
@@ -125,7 +125,7 @@ You have two options:
 #. Use the provided data assets
 #. Use your own data from your own instance of Databricks
 
-   .. note:: For this option you will need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
+   .. note:: For this option you need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
 
 .. start-connect-end
 
@@ -233,7 +233,7 @@ You have two options:
 
        **AmpAI** will analyze the sample data and identify which tables contain PII, and then idenfity which semantic tags should be applied. You may change the tags **AmpAI** assigns to fields.
 
-       Click **Continue**. Wait for the **AmpAI** to finish applying semantic tags before continuing to the next step. This process will take up to 5 minutes to complete.
+       Click **Continue**. Wait for the **AmpAI** to finish applying semantic tags before continuing to the next step. This process takes up to 5 minutes to complete.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -279,7 +279,7 @@ After all of the source tables to which semantic tags should be applied have sem
 
        Wait for the Stitch to finish running before continuing to the next step. This process will 20-30 minutes to complete for Amperity sample data.
 
-       .. note:: The amount of time it will take to complete against your own data depends on the volume of data that is made available to Stitch, the number of unique data sources with PII, and the complexity of matching individual records across data with unique customer profiles.
+       .. note:: The amount of time it takes to complete against your own data depends on the volume of data that is made available to Stitch, the number of unique data sources with PII, and the complexity of matching individual records across data with unique customer profiles.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -372,7 +372,7 @@ Create database
           :class: no-scaled-link
      - The **Database Editor** page opens.
 
-       The following tables will be in the customer 360 database:
+       The following tables is in the customer 360 database:
 
        * Customer_360. A standardized table with the most complete set of customer profile data that is built from merge rules with a single row for each unique Amperity ID.
        * Merged_Customers. A standardized table that contains configurable merge rules.

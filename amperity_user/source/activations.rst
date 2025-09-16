@@ -212,7 +212,7 @@ Activation states for journeys keep track of customers who have entered a journe
 
 .. activations-activity-journeys-howitworks-start
 
-Journeys start with an audience, and then define a variety of paths members of that audience will take as they move through each step in the journey. Audiences are split to follow different paths through the journey, depending on the criteria defined within the journey. When audiences meet the criteria for activation, that audience is sent to downstream marketing applications, such as Meta Ads Manager, Klaviyo, Braze, or Snapchat.
+Journeys start with an audience, and then define a variety of paths members of that audience takes as they move through each step in the journey. Audiences are split to follow different paths through the journey, depending on the criteria defined within the journey. When audiences meet the criteria for activation, that audience is sent to downstream marketing applications, such as Meta Ads Manager, Klaviyo, Braze, or Snapchat.
 
 .. activations-activity-journeys-howitworks-end
 

@@ -198,7 +198,7 @@ Databases
 
 .. databases-database-start
 
-Use the **Databases** tab on the **Customer 360** page to define any number of individual databases. Each database will have its own collection of tables and attributes. Some databases may be configured as "customer 360" databases, and then others may be configured as a "Stitch QA" database or a custom database to support any of your brand's use cases.
+Use the **Databases** tab on the **Customer 360** page to define any number of individual databases. Each database have its own collection of tables and attributes. Some databases may be configured as "customer 360" databases, and then others may be configured as a "Stitch QA" database or a custom database to support any of your brand's use cases.
 
 .. databases-database-end
 
@@ -319,7 +319,7 @@ Multiple customer 360 databases
 
 .. databases-database-type-multiple-start
 
-You may configure more than one database to be a customer 360 database. Each database will contain its own set of standard tables, and then each may be configured to have its own combination of standard core tables and/or domain tables that are added as passthrough tables.
+You may configure more than one database to be a customer 360 database. Each database contains its own set of standard tables, and then each may be configured to have its own combination of standard core tables and/or domain tables that are added as passthrough tables.
 
 .. databases-database-type-multiple-end
 
@@ -395,7 +395,7 @@ Passthrough
 
 .. databases-database-table-type-passthrough-start
 
-A passthrough table allows a domain table to be used within the Amperity database layer. A passthrough will use a stitched domain table when it is available.
+A passthrough table allows a domain table to be used within the Amperity database layer. A passthrough uses a stitched domain table when it is available.
 
 .. databases-database-table-type-passthrough-end
 
@@ -617,7 +617,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
 
-   Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that will be associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
+   Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that is associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
 
    .. note:: The schema for every real-time table contains two additional fields: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table).
 
@@ -932,7 +932,7 @@ Add Stitch QA database
 
 .. databases-database-howto-add-database-stitchqa-context-start
 
-A Stitch QA database loaded from a template will contain a list of pre-loaded SQL queries that may be used to help validate the quality of Stitch output.
+A Stitch QA database loaded from a template contains a list of pre-loaded SQL queries that may be used to help validate the quality of Stitch output.
 
 .. databases-database-howto-add-database-stitchqa-context-end
 
@@ -1583,7 +1583,7 @@ Delete database
 
 .. databases-database-howto-delete-database-start
 
-A database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process will fail. If an upstream process cannot find the database, that process will fail.
+A database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process fails. If an upstream process cannot find the database, that process fails.
 
 .. databases-database-howto-delete-database-end
 
@@ -1605,7 +1605,7 @@ Delete database table
 
 .. databases-database-howto-delete-table-start
 
-A table in a database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the table is required by a downstream process, such as a query, the process will fail. If an upstream process cannot find the table or the schema does not match, that process will fail.
+A table in a database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the table is required by a downstream process, such as a query, the process fails. If an upstream process cannot find the table or the schema does not match, that process fails.
 
 .. databases-database-howto-delete-table-end
 
@@ -1709,7 +1709,7 @@ Edit database
 
 .. databases-database-howto-edit-database-start
 
-A database may be edited. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process will fail. If an upstream process cannot find the database, that process will fail.
+A database may be edited. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process fails. If an upstream process cannot find the database, that process fails.
 
 .. databases-database-howto-edit-database-end
 
@@ -1732,7 +1732,7 @@ Edit database table
 
 .. databases-database-howto-edit-table-start
 
-Tables in a database may be edited. This should not be done without considering the upstream and downstream effects of those changes. Changes may have unintended consequences: semantics, column names, pick-lists, and so on may not be immediately available to a downstream process, which may cause that downstream process to fail. If an upstream process cannot find the table or the schema does not match, that process will fail.
+Tables in a database may be edited. This should not be done without considering the upstream and downstream effects of those changes. Changes may have unintended consequences: semantics, column names, pick-lists, and so on may not be immediately available to a downstream process, which may cause that downstream process to fail. If an upstream process cannot find the table or the schema does not match, that process fails.
 
 .. databases-database-howto-edit-table-end
 
@@ -1808,7 +1808,7 @@ To prevent table schemas from being updated automatically you can enforce a stat
 
 .. admonition:: Example for static schema enforcement
 
-   For example, a custom domain table with three fields is used to build a custom database table using ``SELECT * FROM Custom_Domain_Table``. With this pattern, if the custom domain table is updated to have four fields the custom database table will not be updated when static table schemas are enforced.
+   For example, a custom domain table with three fields is used to build a custom database table using ``SELECT * FROM Custom_Domain_Table``. With this pattern, if the custom domain table is updated to have four fields the custom database table is not updated when static table schemas are enforced.
 
    To resolve this inconsistency, do one of the following:
 
@@ -1959,7 +1959,7 @@ The **Examples** view in the **Data Explorer** shows actual data for a randomly 
 Use cardinality and uniqueness to help guide the creation of well-behaved JOIN operations when authoring SQL queries.
 
 * Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
-* Columns with low uniqueness values as keys on both sides of a **JOIN** operation will run more slowly and is less likely to return the desired results.
+* Columns with low uniqueness values as keys on both sides of a **JOIN** operation runs more slowly and is less likely to return the desired results.
 * Empty fields, including **NULL** values, are counted as duplicates, that is "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. databases-database-howto-explore-example-data-context-end
@@ -2091,7 +2091,7 @@ Columns that contain PII--names (first, last, and full), addresses, phone number
 #. For each field that contains PII, verify that the box in the **PII** column is selected.
 
    Amperity automatically selects the **PII** checkbox for columns that were tagged with profile (PII) semantics. Verify that all columns associated with PII have the checkbox selected in the **PII** column.
-#. Activate the table. Restricted access to PII will be updated the next time this database table is refreshed.
+#. Activate the table. Restricted access to PII is updated the next time this database table is refreshed.
 
 .. databases-database-howto-mark-columns-as-pii-steps-end
 
@@ -2129,7 +2129,7 @@ Express refresh
 
 An express refresh will only update database tables and custom domain tables with new domain data or table definitions. This is the fastest option and is the recommended option for testing incremental changes.
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 .. databases-database-howto-run-express-end
 
@@ -2154,9 +2154,9 @@ Full refresh
 
 .. databases-database-howto-run-full-start
 
-A full refresh will update all tables, including custom domain tables. This is the slowest option and is best used for estimating runtime performance.
+A full refresh updates all tables, including custom domain tables. This is the slowest option and is best used for estimating runtime performance.
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 .. databases-database-howto-run-full-end
 
@@ -2183,7 +2183,7 @@ Normal refresh
 
 Any table with new data, new table definitions, or time-dependent clauses will be refreshed. A normal refresh is the default option.
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 Time-dependent clauses include any query that uses the :ref:`CURRENT_DATE() <sql-spark-function-current-date>`, :ref:`CURRENT_TIMESTAMP() <sql-spark-function-current-timestamp>`, :ref:`UNIX_TIMESTAMP() <sql-spark-function-unix-timestamp>`, or :ref:`RAND() <sql-spark-function-rand>` functions.
 

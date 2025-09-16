@@ -110,7 +110,7 @@ The recommended way to add Stitch QA queries to your tenant is to use the "Stitc
 #. From the **Queries** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Name the folder "Stitch QA".
 #. From the **Template** dropdown, select **Stitch QA**.
-#. Click **Create**. This will create a folder, into which a collection of draft Stitch QA queries are added.
+#. Click **Create**. This creates a folder, into which a collection of draft Stitch QA queries are added.
 #. Take a few minutes to review the queries that are added by the "Stitch QA" query template.
 
 .. qa-stitch-enable-steps-add-queries-steps-end
@@ -635,7 +635,7 @@ Record pairs and scores
 
 The quality of record pairs and their associated pairwise comparison scores should be investigated, starting with low-scoring record pairs in each cluster. At the start of the Stitch QA process it is not uncommon for low-scoring record pairs in a cluster to fall below threshold for pairwise comparison scoring.
 
-Each cluster of records will contain high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
+Each cluster of records contains high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
 
 Each cluster with low-scoring record pairs should be investigated to confirm if those pairs were accurately clustered and to determine if transitive connections to other high-scoring record pairs do exist.
 

@@ -27,7 +27,7 @@ Send query results to Sailthru by Marigold
 
 .. sendto-sailthru-start
 
-Use Amperity to manage |what-send| in |destination-name|. Build a query using the **email** field and then send the results of that query to |destination-name|. The audience list will be updated to match the query.
+Use Amperity to manage |what-send| in |destination-name|. Build a query using the **email** field and then send the results of that query to |destination-name|. The audience list is updated to match the query.
 
 .. sendto-sailthru-end
 

@@ -1065,7 +1065,7 @@ The following attributes are available from the **Transaction Attributes Extende
           :start-after: .. term-one-and-done-start
           :end-before: .. term-one-and-done-end
 
-       .. important:: Amperity resolves one-and-done for the data provided to it. For example, if data is provided that spans 2015-2020, a purchase in 2014 will not be in the results.
+       .. important:: Amperity resolves one-and-done for the data provided to it. For example, if data is provided that spans 2015-2020, a purchase in 2014 is not in the results.
 
    * - **Second Order Datetime**  
      - .. include:: ../../shared/terms.rst
@@ -1121,7 +1121,7 @@ Customer flags
    * - **One and done**
      - Indicates if a customer has made only one purchase.
 
-       .. important:: Amperity resolves one-and-done for the data provided to it. For example, if data is provided that spans 2015-2020, a purchase in 2014 will not be in the results.
+       .. important:: Amperity resolves one-and-done for the data provided to it. For example, if data is provided that spans 2015-2020, a purchase in 2014 is not in the results.
 
 .. attributes-interactions-transactions-extended-customer-flags-table-end
 

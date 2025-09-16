@@ -91,8 +91,8 @@ The structure for an ingest query load operation is similar to:
 
 where:
 
-* ``file`` is set to the name of the file (``FILE_NAME``) against which the ingest query will run.
-* ``FEED_ID`` is set to the ID for the feed for which the ingest query will run.
+* ``file`` is set to the name of the file (``FILE_NAME``) against which the ingest query runs.
+* ``FEED_ID`` is set to the ID for the feed for which the ingest query runs.
 * ``delimiter`` specifies the delimiter to use with CSV, TSV, and PSV files. (These default to ``,``, ``\t``, and ``|`` respectively if not otherwise specified.)
 * ``escape`` defines the character used for escaping quotes inside an already quoted value in the source file. The default escape character in Spark is the backslash (``\``).
 * ``multiline`` indicates the presence of records that cross multiple lines. Use only for CSV, TSV, or PSV file types and set to ``true`` only if that file has fields with newline characters in them.
@@ -359,7 +359,7 @@ Parse nested records
 
 .. format-csv-pull-ingest-queries-nested-records-start
 
-Occasionally, a CSV file will contain nested records. For example, a field within the CSV file contains JSON data similar to:
+Occasionally, a CSV file contains nested records. For example, a field within the CSV file contains JSON data similar to:
 
 .. code-block:: none
 
@@ -384,7 +384,7 @@ There are two general approaches to take when a CSV file contains nested records
 #. Recommended. The customer should update the process for how the data is provided to Amperity to ensure the file does not contain nested records.
 #. If the file cannot be provided without nested records, use an ingest query to flatten the data in these fields prior to loading it to Amperity.
 
-   .. note:: This will increase the preprocessing effort required by Amperity. Large datasets will take more time and this approach should be avoided with very large datasets and should be used carefully with datasets that will be processed on a daily basis.
+   .. note:: This increases the preprocessing effort required by Amperity. Large datasets takes more time and this approach should be avoided with very large datasets and should be used carefully with datasets that is processed on a daily basis.
 
 For example:
 
@@ -427,7 +427,7 @@ so that it
 
    12345,abcde,email@gmail.com,2025-01-30
 
-A regular expression similar to the following will remove the double quotes (") *and* backslash (\) characters: 
+A regular expression similar to the following removes the double quotes (") *and* backslash (\) characters: 
 
 .. code-block:: sql
 

@@ -131,7 +131,7 @@ The following table describes the parameters that may be used with the **POST /w
 
        A timestamp must be in |ext_iso_8601| format and in Coordinated Universal Time (UTC).
 
-       .. tip:: Use with **range_to** to define a date range within which to look for files. This date range will be inclusive of **range_from** and exclusive of **range_to**.
+       .. tip:: Use with **range_to** to define a date range within which to look for files. This date range is inclusive of **range_from** and exclusive of **range_to**.
 
           Use without **range_to** to define a specific day on which to run the workflow.
 
@@ -151,7 +151,7 @@ The following table describes the parameters that may be used with the **POST /w
 
        Indicates the run mode for the courier group workflow. Possible values: **full**, **refresh**, or **source**.
 
-       * Use **full** to pull data, refresh domain tables, run Stitch, update databases, then send workflow results downstream. All activations, including orchestrations, campaigns, and journeys, that are associated with this workflow will be run.
+       * Use **full** to pull data, refresh domain tables, run Stitch, update databases, then send workflow results downstream. All activations, including orchestrations, campaigns, and journeys, that are associated with this workflow is run.
        * Use **refresh** to pull data, refresh domain tables, run Stitch, and then update databases.
        * Use **source** to pull data and refresh domain tables.
 
@@ -272,7 +272,7 @@ Responses
 
 .. endpoint-post-workflows-start-responses-start
 
-A response from the **POST /workflow/runs/** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **POST /workflow/runs/** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-start-responses-end
 
@@ -432,7 +432,7 @@ A **200 OK** response contains the following parameters.
      - The unique identifier for the tenant.
 
    * - **type**
-     - The type of workflow. Most workflows will have workflow types related to the following areas within Amperity:
+     - The type of workflow. Most workflows have workflow types related to the following areas within Amperity:
 
        * Bridge sync
        * C360 validation

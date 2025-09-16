@@ -59,7 +59,7 @@ The |destination-name| destination requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The name of the S3 bucket to which Amperity will send data.
+     - The name of the S3 bucket to which Amperity sends data.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -67,7 +67,7 @@ The |destination-name| destination requires the following configuration details:
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - For :ref:`cross-account role assumption <destination-amazon-s3-credentials-role-to-role>` you will need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
+     - For :ref:`cross-account role assumption <destination-amazon-s3-credentials-role-to-role>` you need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
 
        .. note:: The values for the **Amperity Role ARN** and the **External ID** fields are provided automatically.
 

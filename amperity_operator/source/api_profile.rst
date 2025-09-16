@@ -75,7 +75,7 @@ The Profile API has the following endpoints:
 
 .. profile-api-howitworks-endpoints-which-policies-start
 
-.. admonition:: What policies will users need?
+.. admonition:: What policies users need?
 
    The Profile API requires the following policies to be assigned to users within your tenant:
 
@@ -529,7 +529,7 @@ An index must be defined for each query that is used to generate an endpoint for
 
        This opens the **Add Index** dialog box.
 
-       Give the index a name that clearly describes how it will be used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
+       Give the index a name that clearly describes how it is used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
 
        Use a description to help other users in your tenant know what use cases this index enables.
 
@@ -541,7 +541,7 @@ An index must be defined for each query that is used to generate an endpoint for
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Select the query that will be used to generate the fields in the index, choose the field in that index that will be used as the profile ID field, and then choose additional filtering fields.
+     - Select the query that is used to generate the fields in the index, choose the field in that index that is used as the profile ID field, and then choose additional filtering fields.
 
        Define the run options, either as part of a scheduled workflow or manually.
 
@@ -674,7 +674,7 @@ The number of rows and filter fields available from a Profile API endpoint deter
 * The length of time it takes to build or rebuild an index
 * The response time for requests that are made to an index
 
-As the number of rows and filter fields increase, the performance of that index will decrease. Large indexes with 5 or more filter fields will have decreased performance.
+As the number of rows and filter fields increase, the performance of that index will decrease. Large indexes with 5 or more filter fields have decreased performance.
 
 .. note::
 
@@ -1431,7 +1431,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
           :alt: Step 3.
           :align: left
           :class: no-scaled-link
-     - After the access token is available to Connected Content, use the cached access token to access the index. The type of request to use in this step will vary, depending on your use case.
+     - After the access token is available to Connected Content, use the cached access token to access the index. The type of request to use in this step varies, depending on your use case.
 
        **To query an index**
 

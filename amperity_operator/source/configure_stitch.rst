@@ -267,7 +267,7 @@ For records that do not match any of the prioritized collection of rules there a
 
 #. Recommended. Allow Stitch to evaluate these records, discover connections, and then use those connections to build clusters.
 
-#. Use only the prioritized collection of rules to build clusters. Records that do not match one of the rules will not be included in a cluster.
+#. Use only the prioritized collection of rules to build clusters. Records that do not match one of the rules is not included in a cluster.
 
 .. configure-stitch-rules-remaining-end
 
@@ -433,7 +433,7 @@ Force Stitch to run
 
 .. configure-stitch-general-stitch-force-start
 
-Stitch will run when domain tables contain updates to data that is used by Stitch for identity resolution. Stitch will not run when updates are not present.
+Stitch runs when domain tables contain updates to data that is used by Stitch for identity resolution. Stitch will not run when updates are not present.
 
 To force Stitch to run, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Stitch processing**, enable the **Force Stitch to run** setting:
 
@@ -511,7 +511,7 @@ Use the following steps to configure your tenant for one-to-one Stitch:
 
    .. tip:: You may apply the **ck** semantic tag from a feed or from a custom domain table.
 
-#. Apply all other semantic tags -- customer profile, foreign key, primary key, orders and items -- to the correct fields in all of your data sources. These tags will have no effect when running one-to-one Stitch, but are required for customer profiles, transactions, segment insights, and predictive modeling.
+#. Apply all other semantic tags -- customer profile, foreign key, primary key, orders and items -- to the correct fields in all of your data sources. These tags have no effect when running one-to-one Stitch, but are required for customer profiles, transactions, segment insights, and predictive modeling.
 
 #. To configure Amperity for one-to-one Stitch, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Bypass Stitch**, move the slider for the **Run 1:1 Stitch** setting to the right:
 
@@ -523,7 +523,7 @@ Use the following steps to configure your tenant for one-to-one Stitch:
 
 #. Run Stitch.
 
-   When the run is complete, each unique customer ID will be associated with an Amperity ID.
+   When the run is complete, each unique customer ID is associated with an Amperity ID.
 
 .. configure-stitch-general-one-to-one-end
 
@@ -553,7 +553,7 @@ The following table describes the changes you will see in your tenant after it i
 
        Fields related to the bad-values blocklist are not available, including **has_blv**, **blv_address**, **blv_email**, **blv_given_name**, **blv_phone**, and **blv_surname**.
 
-       All standard tables will contain a **ck** field.
+       All standard tables contains a **ck** field.
 
        The Stitch QA database template is not needed.
    * - **Queries**
@@ -709,7 +709,7 @@ When large differences are present between clusters of records for the current a
 
 By default, stable ID assignment is based on the edges that exist between current and previous clusters of customer records, weighted by the number of shared primary keys. The shared primary keys are sorted in descending order, after which ties are broken by sorting the cluster IDs in ascending order. Edges are removed when higher-ranked edges are associated to identical clusters of customer records. Edges that survive this ranking are then used to map current cluster IDs to previous cluster IDs. Changes to stable ID assignment are captured in the **Unified Changes Clusters** and **Unified Changes PKs** tables.
 
-In some cases, the differences between the current and previous clusters of customer records is very large, requiring access to a large amount of memory to complete the stable ID assignment process. In this type of situation Stitch processes may take a very long time, or even appear to be stuck; in some cases the Stitch job has run out of memory and will need to be rerun. In these situations, do the following:
+In some cases, the differences between the current and previous clusters of customer records is very large, requiring access to a large amount of memory to complete the stable ID assignment process. In this type of situation Stitch processes may take a very long time, or even appear to be stuck; in some cases the Stitch job has run out of memory and need to be rerun. In these situations, do the following:
 
 #. Look for unusual values, such as a large set of identical email address, that appear in the **Unified Coalesced** table. This can sometimes be the cause of slow stable ID assignment. Mitigate the presence of these unusual values, and then run Stitch again.
 #. Increase the number of partitions that are available to Stitch during the stable ID assignment process. You can increase the value of **stable-id-partition-count** to a value between 2-10 to improve the performance of Stitch during stable ID assigment.
@@ -746,7 +746,7 @@ Values can be configured to be:
 
 * Detected automatically using a threshold and an association between two fields. The value is ignored when the first field exceeds the configured threshold as it relates to the second field.
 
-  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it will not be used for identity resolution.
+  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it is not used for identity resolution.
 
   Automatic detection is available for `all fields to which customer profile semantic tags were applied <https://docs.amperity.com/operator/semantics.html#profiles>`__, such as **email**, **phone**, **address**, **given-name** and for fields that contain foreign keys.
 
@@ -905,7 +905,7 @@ The default blocking strategies are: "dnf1", "dnf3", "dnf4", "dnf5", "dnf6", "dn
 
       :dnf1 :dnf4 :dnf5 :dnf3
 
-   will be processed in the same way and will return the same results.
+   is processed in the same way and will return the same results.
 
 .. configure-stitch-advanced-clustering-blocking-note-end
 
@@ -1664,7 +1664,7 @@ Semantic exclusions
 
 .. configure-stitch-advanced-trivial-duplicates-exclusions-start
 
-Semantic exclusions for trivial duplicates may be specified. When excluded, for the purpose of identifying clusters of records, the values associated with that semantic will be ignored. This should only be done for limited scenarios where certain types of data are known to be of lower quality.
+Semantic exclusions for trivial duplicates may be specified. When excluded, for the purpose of identifying clusters of records, the values associated with that semantic is ignored. This should only be done for limited scenarios where certain types of data are known to be of lower quality.
 
 To define an exclusion, add the following advanced configuration setting for Stitch:
 

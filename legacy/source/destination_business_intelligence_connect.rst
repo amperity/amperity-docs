@@ -251,7 +251,7 @@ A service account is a static username and password that may be provisioned for 
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-start
 
-A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative will send to you your service account username and password via SnapPass, along with the URL for your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
+A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative sends to you your service account username and password via SnapPass, along with the URL for your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-end
 

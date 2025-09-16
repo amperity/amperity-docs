@@ -52,7 +52,7 @@ This can be a big challenge.
              :class: no-scaled-link
         - One-time buyers are a challenge every marketer faces. This book offers strategic and tactical advice for how to address this challenge head-on.
 
-          First, we describe how we got here. Next, we discuss the building blocks you will need. Then we outline methods for analyzing one-time buyers and how to build programs based on those insights. We conclude with measurement techniques that can help you measure both top-line and customer lifetime value.
+          First, we describe how we got here. Next, we discuss the building blocks you need. Then we outline methods for analyzing one-time buyers and how to build programs based on those insights. We conclude with measurement techniques that can help you measure both top-line and customer lifetime value.
 
           `Open the PDF to read the whole book <https://docs.amperity.com/downloads/pdf/One%20and%20(not)%20done.pdf>`__ |ext_link|
 
@@ -70,7 +70,7 @@ A one-time buyer campaign, also known as a "win-back campaign", is a campaign th
 
 A one-time buyer campaign must first identify your customers who have purchased only one time, and then from that list of customers devise a strategy based on a combination of products, time windows, lookalike audiences, and marketing goals that will attempt to reach specific groups of one-time buyers with the right offers that encourage them to become repeat customers.
 
-.. tip:: One important behavior you will want to keep an eye on is, for those customers that *do* make their second purchase, you will want to measure the amount of time that occurred between their first and their second orders *along with* the type of offer that customer responded to.
+.. tip:: One important behavior to keep an eye on is, for those customers that *do* make their second purchase, measure the amount of time that occurred between their first and their second orders *along with* the type of offer that customer responded to.
 
 .. onetime-buyers-whatis-end
 
@@ -112,7 +112,7 @@ Define an audience
 
 .. onetime-buyers-howto-define-start
 
-The audience for your one-time buyer campaign should be focused only on buyers who made their first purchase within the previous 90 days. Initially, your one-time buyer campaign starts out by sending welcome, brand education, and onboarding messaging with a planned window in which you will use specific messaging to attempt to win that second purchase.
+The audience for your one-time buyer campaign should be focused only on buyers who made their first purchase within the previous 90 days. Initially, your one-time buyer campaign starts out by sending welcome, brand education, and onboarding messaging with a planned window in which you use specific messaging to attempt to win that second purchase.
 
 Start your one-time buyer campaign with a simple welcome series, from which you will tailor your messaging to try to win repeat purchases from your one-time buyers.
 

@@ -55,7 +55,7 @@ The activity list displays the following columns:
 * **User** The user who took the action. For most users, this is that user's friendly name or email address.
 
   An auth token is displayed for users that accesses Amperity programatically.
-* **Action** The action taken in the application. Generally this will take the form of "action type/action". For example, activating a segment appears as "segment/activate" and running a segment for download appears as "query.exec/download".
+* **Action** The action taken in the application. Generally this takes the form of "action type/action". For example, activating a segment appears as "segment/activate" and running a segment for download appears as "query.exec/download".
 
   .. note:: A few actions in the list are not user-initiated. For example, when a user is granted a new authorization policy, both the grant and the receipt appear on separate rows.
 * **Object** The object against which the action occurred.

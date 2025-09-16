@@ -43,7 +43,7 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 
 .. destination-amazon-ads-api-note-start
 
-.. note:: This destination uses the `Amazon Ads API <https://advertising.amazon.com/API/docs/en-us/info/api-overview>`__ |ext_link| to manage audiences. If the audience does not exist, Amperity will create it. If the audience exists, Amperity will update the list of members to match the list that is sent.
+.. note:: This destination uses the `Amazon Ads API <https://advertising.amazon.com/API/docs/en-us/info/api-overview>`__ |ext_link| to manage audiences. If the audience does not exist, Amperity creates it. If the audience exists, Amperity updates the list of members to match the list that is sent.
 
 .. destination-amazon-ads-api-note-end
 
@@ -85,7 +85,7 @@ Get details
 
           .. important:: If an instance for Amazon Marketing Cloud **is not** configured, the connector will skip adding audience members to Amazon Marketing Cloud.
 
-             If an Amazon Marketing Cloud instance is configured, the connector will attempt to use an existing connection for Amazon Marketing Cloud *or* will create a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
+             If an Amazon Marketing Cloud instance is configured, the connector will attempt to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
        .. note:: The `refresh token <https://advertising.amazon.com/API/docs/en-us/getting-started/retrieve-access-token>`__ |ext_link| is provided :ref:`after the OAuth process is completed <destination-amazon-ads-configure-oauth>`.
 
@@ -95,11 +95,11 @@ Get details
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - Details for the audiences in |destination-name| that will be managed by Amperity.
+     - Details for the audiences in |destination-name| that is managed by Amperity.
 
-       #. An audience name and description. If there is not an audience that exactly matches the one sent from Amperity to |destination-name|, Amperity will create a new audience.
+       #. An audience name and description. If there is not an audience that exactly matches the one sent from Amperity to |destination-name|, Amperity creates a new audience.
 
-       #. The amount of time (in seconds) an audience member will belong to this audience, after which they are removed. Maximum value: "34,300,800" (which is the equivalent of 9528 hours or 397 days).
+       #. The amount of time (in seconds) an audience member belong to this audience, after which they are removed. Maximum value: "34,300,800" (which is the equivalent of 9528 hours or 397 days).
 
           .. tip:: Set this value to "0" to remove all audience members.
 
@@ -154,7 +154,7 @@ Get details
 
        .. note::
 
-           If both **extern_id** and **amperity_id** are provided, only **extern_id** will be used.
+           If both **extern_id** and **amperity_id** are provided, only **extern_id** is used.
 
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
@@ -175,7 +175,7 @@ Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign 
 
 Audience analysis takes place within Amazon Marketing Cloud, including across dimensions like audiences, device, time, or campaigns. Results are aggregated and may be exported as anonymous reports.
 
-Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination will send data.
+Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination sends data.
 
 .. destination-amazon-ads-about-amc-end
 

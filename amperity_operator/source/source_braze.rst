@@ -107,7 +107,7 @@ Your brand can configure |source-name| to send events `to an Amazon S3 bucket <h
 
        Use a secret access key *or* a role ARN. AES-256 encryption may be enabled.
 
-       Provide the name of an Amazon S3 bucket that is managed by your brand, along with the folder to which |source-name| will send events data.
+       Provide the name of an Amazon S3 bucket that is managed by your brand, along with the folder to which |source-name| sends events data.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -188,7 +188,7 @@ Your brand can configure |source-name| to send events `to an Azure Blob Storage 
 
        Give the integration a name and provide a contact email address.
 
-       Add the Azure Blob Storage connection string, the name of an Azure Blob Storage container, along with the prefix to which |source-name| will send events data.
+       Add the Azure Blob Storage connection string, the name of an Azure Blob Storage container, along with the prefix to which |source-name| sends events data.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -270,7 +270,7 @@ Your brand can configure |source-name| to send events `to a Google Cloud Storage
 
        Provide JSON credentials for Google Cloud Storage.
 
-       Provide the name of a Google Cloud Storage bucket that is managed by your brand, along with the prefix to which |source-name| will send events data.
+       Provide the name of a Google Cloud Storage bucket that is managed by your brand, along with the prefix to which |source-name| sends events data.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -327,7 +327,7 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
           :class: no-scaled-link
      - Log in to Amperity and configure a :doc:`Streaming API endpoint <api_streaming>` to send events data to Amperity using |source-name|.
 
-       You will need to :ref:`add an API key <streaming-ingest-api-enable-add-api-key>` and :ref:`generate an access (bearer) token <streaming-ingest-api-enable-generate-access-token>` for |source-name|.
+       You need to :ref:`add an API key <streaming-ingest-api-enable-add-api-key>` and :ref:`generate an access (bearer) token <streaming-ingest-api-enable-generate-access-token>` for |source-name|.
 
        Configure a :ref:`dedicated streaming API endpoint <streaming-ingest-endpoints>` for |source-name|.
 

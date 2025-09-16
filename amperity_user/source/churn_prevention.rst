@@ -19,7 +19,7 @@ Churn prevention campaigns
 
 .. churn-prevention-about-start
 
-Brands use churn prevention campaigns to win back customers who have not purchased within defined time windows, such as 90 days, 120 days, or even up to 2 years. The length of the defined time window and the types of promotions and offers you will send depends on your goals for each audience within the churn prevention campaign.
+Brands use churn prevention campaigns to win back customers who have not purchased within defined time windows, such as 90 days, 120 days, or even up to 2 years. The length of the defined time window and the types of promotions and offers you sends depends on your goals for each audience within the churn prevention campaign.
 
 .. churn-prevention-about-about-end
 
@@ -155,7 +155,7 @@ To get there, start with a simple campaign using only customers that are *coolin
    :align: left
    :class: no-scaled-link
 
-Send this campaign to a single marketing tool, such as your email service provider. This is the location from which you will run the initial churn prevention campaign.
+Send this campaign to a single marketing tool, such as your email service provider. This is the location from which you run the initial churn prevention campaign.
 
 The most important measurement is identifying how many customers do not churn. This is done by comparing revenue per user, profit per user, and overall conversion between the control group and all treatment groups. If one of the test outperforms the other, consider testing that promotion or offer again, but with a new set of control and treatment groups, to help identify ways to improve it.
 
@@ -183,7 +183,7 @@ Update the initial test campaign to include customers who are *at risk*. For bot
    :align: left
    :class: no-scaled-link
 
-Send these campaigns to your email service provider *and* another marketing tool, such as Facebook. These are the locations from which you will run the next phase of your churn prevention campaign.
+Send these campaigns to your email service provider *and* another marketing tool, such as Facebook. These are the locations from which you run the next phase of your churn prevention campaign.
 
 Continue comparing revenue per user, profit per user, and overall conversion, but this time for each set of control and treatment groups.
 

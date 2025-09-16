@@ -53,7 +53,7 @@ A |destination-name| destination works like this:
          :start-after: .. destination-meta-ads-manager-terms-of-service-start
          :end-before: .. destination-meta-ads-manager-terms-of-service-end
 
-      |destination-name| uses OAuth to grant access to Amperity. You will need to reauthorize OAuth if the token expires or is removed.
+      |destination-name| uses OAuth to grant access to Amperity. You need to reauthorize OAuth if the token expires or is removed.
 
    .. note::
 
@@ -85,7 +85,7 @@ Build audience
 
 .. sendto-meta-ads-manager-build-query-start
 
-You will need to build an audience using a query that shapes the data so that fields in the output are mapped to the :ref:`Facebook Marketing API keys <destination-meta-ads-manager-api-keys>`.
+You need to build an audience using a query that shapes the data so that fields in the output are mapped to the :ref:`Facebook Marketing API keys <destination-meta-ads-manager-api-keys>`.
 
 .. sendto-meta-ads-manager-build-query-end
 
@@ -135,7 +135,7 @@ A Facebook table collects PII data from the **Customer 360** table, and then cre
 
 and then run the customer 360 database to update that table. After the table has run, you can use a visual query to define a query that filters by matching records in the Facebook table. This will return any record in the Facebook table that matches the query and will return the results with *all* of the fields in the Facebook table.
 
-For example, you could define a query that finds all transactions in the past week for all email addresses, and then match records against the Facebook table. The results will contain the columns in the Facebook table for all emails associated with a transaction in the past week.
+For example, you could define a query that finds all transactions in the past week for all email addresses, and then match records against the Facebook table. The results contains the columns in the Facebook table for all emails associated with a transaction in the past week.
 
 .. sendto-meta-ads-manager-build-query-use-table-end
 
@@ -240,7 +240,7 @@ Run orchestration
 
 .. sendto-meta-ads-manager-run-orchestration-warning-start
 
-.. warning:: If the Terms of Service (ToS) for Custom Audiences have not been accepted you will get a permissions error with a link to the ToS. Someone with access to the Facebook account will need to accept the ToS before Custom Audiences will be sent.
+.. warning:: If the Terms of Service (ToS) for Custom Audiences have not been accepted you will get a permissions error with a link to the ToS. Someone with access to the Facebook account need to accept the ToS before Custom Audiences is sent.
 
 .. sendto-meta-ads-manager-run-orchestration-warning-end
 

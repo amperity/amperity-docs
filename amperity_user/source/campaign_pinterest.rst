@@ -73,7 +73,7 @@ Build a segment
 
    You can use any attributes in your customer 360 database to define the audience your brand wants to send to |destination-name|.
 
-   Amperity will send a list of SHA-256 hashed email addresses that matches the audience you have defined to |destination-name|, after which they will be available in Pinterest Ads as a customer list.
+   Amperity sends a list of SHA-256 hashed email addresses that matches the audience you have defined to |destination-name|, after which they will be available in Pinterest Ads as a customer list.
 
 
 .. _channel-pinterest-build-campaign:
@@ -184,6 +184,6 @@ Provide that URL to |destination-name|. |destination-name| will validate the fil
 
 If your product catalog is already accessible from a URL you can configure |destination-name| to use that location. Alternately, you can output your product catalog from Amperity, and then :doc:`send it to an SFTP site <destination_sftp>` that is configured to allow access to |destination-name|.
 
-|destination-name| will update your product catalog every 24 hours by reloading the file. Update the file that is in the location from which |destination-name| pulls your product catalog to refresh your product catalog on |destination-name|.
+|destination-name| updates your product catalog every 24 hours by reloading the file. Update the file that is in the location from which |destination-name| pulls your product catalog to refresh your product catalog on |destination-name|.
 
 .. campaign-pinterest-product-catalogs-end

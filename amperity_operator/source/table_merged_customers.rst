@@ -60,7 +60,7 @@ This topic assumes the following requirements are met:
      :start-after: .. term-update-dt-start
      :end-before: .. term-update-dt-end
 
-* You can extend the **Merged Customers** table to exclude common or "bad" values. Extensions may be done *after* the **Merged Customers** table is created because they often have both downstream and upstream dependencies within the Amperity workflow that will require some tuning within for the **Merged Customers** table.
+* You can extend the **Merged Customers** table to exclude common or "bad" values. Extensions may be done *after* the **Merged Customers** table is created because they often have both downstream and upstream dependencies within the Amperity workflow that requires some tuning within for the **Merged Customers** table.
 
 .. table-merged-customers-requirements-end
 
@@ -431,7 +431,7 @@ Field priority
 
 Use the field priority table to assign priorities for individual fields that are different from the priority assigned generally to each source domain table **Source_Priority**. Update the list of tables to match the same domain tables that were specified for **Source_Priority**, and then update the field priority table to specify individual priorities.
 
-* A NULL value will use the priority assigned to the source domain table or, when a priority is not assigned by a source domain table, the default priority of "999".
+* A NULL value uses the priority assigned to the source domain table or, when a priority is not assigned by a source domain table, the default priority of "999".
 * An integer value will assign priority, where "1" has a higher priority than "2".
 
 .. table-merged-customers-sql-query-required-update-field-priority-end
@@ -714,7 +714,7 @@ Within the **Merged Customers** table, you must decide if the custom semantic re
 
 For example, a company may have data sources that provide data about its own employees, such as internal email addresses, phone numbers, and so on. Use a custom PII semantic named **email-internal** to tag the fields that contain internal email addresses. Apply this custom PII semantic to all fields in all data sources that contain internal email addresses.
 
-Consistently tagging fields with internal email addresses with the **email-internal** custom PII semantic will create a column named **email_internal** in the **Unified Coalesced** table. The **Merged Customers** table can use this column to extend the merge rules to include rules for internal email addresses.
+Consistently tagging fields with internal email addresses with the **email-internal** custom PII semantic creates a column named **email_internal** in the **Unified Coalesced** table. The **Merged Customers** table can use this column to extend the merge rules to include rules for internal email addresses.
 
 .. important:: Do not apply the default **email** semantic to the **email-internal** columns or add the **email-internal** semantic to any merge rules that handle the presence of namespaced or ordinal custom email semantics.
 
@@ -993,7 +993,7 @@ Multiple email addresses
 
 .. table-merged-customers-extend-pii-semantic-email-start
 
-The following example shows how to extend the **Merged Customers** table to support email addresses that are tagged with namespaced custom email semantic tags: **email-home** and **email-work**. These tags are applied in addition to the default **email** semantic. These tags will create two columns in the **Unified Coalesced** table: **email_home** and **email_work**.
+The following example shows how to extend the **Merged Customers** table to support email addresses that are tagged with namespaced custom email semantic tags: **email-home** and **email-work**. These tags are applied in addition to the default **email** semantic. These tags creates two columns in the **Unified Coalesced** table: **email_home** and **email_work**.
 
 .. table-merged-customers-extend-pii-semantic-email-end
 
@@ -1052,7 +1052,7 @@ Multiple phone numbers
 
 .. table-merged-customers-extend-pii-semantic-phone-start
 
-The following example shows how to extend the **Merged Customers** table to support multiple phone numbers that are tagged with ordinal custom semantic tags: **phone-1** and **phone-2**. These tags are applied in addition to the default **phone** semantic. These tags will create two columns in the **Unified Coalesced** table: **phone_1** and **phone_2**.
+The following example shows how to extend the **Merged Customers** table to support multiple phone numbers that are tagged with ordinal custom semantic tags: **phone-1** and **phone-2**. These tags are applied in addition to the default **phone** semantic. These tags creates two columns in the **Unified Coalesced** table: **phone_1** and **phone_2**.
 
 .. table-merged-customers-extend-pii-semantic-phone-end
 

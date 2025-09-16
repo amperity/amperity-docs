@@ -78,7 +78,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The remote folder to which Amperity will send data.
+     - The remote folder to which Amperity sends data.
 
        .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
 
@@ -118,7 +118,7 @@ Bazaarvoice supports the following `file formats <https://docs.bazaarvoice.com/a
 * PSV
 * TSV
 
-Use a single file for each product catalog to which Amperity will send data.
+Use a single file for each product catalog to which Amperity sends data.
 
 .. important:: Be sure to enable the **Include header row in output files** option for the Amperity destination.
 

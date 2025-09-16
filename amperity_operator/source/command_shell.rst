@@ -29,7 +29,7 @@ Basics
    * - **Ctrl + a**
      - Move to the beginning of a line.
    * - **Ctrl + c**
-     - Stop the execution of the current command. Useful if you’ve typed something that will take a while to complete, but need to stop the command.
+     - Stop the execution of the current command. Useful if you’ve typed something that takes a while to complete, but need to stop the command.
    * - **Ctrl + e**
      - Move to the end of a line.
    * - **Ctrl + r**
@@ -219,13 +219,13 @@ Redirect stdout
    * - Command
      - Description
    * - **>**
-     - After a command will take the output of that command and write it to a file. For example:
+     - After a command takes the output of that command and write it to a file. For example:
 
        .. code-block:: console
 
           $ head BigFile.csv > SmallFile.csv
 
-       will take the first 10 lines from BigFile.csv and write them to the new file SmallFile.csv. If SmallFile.csv exists it will be overwritten. If it does not exist it will be created.
+       takes the first 10 lines from BigFile.csv and write them to the new file SmallFile.csv. If SmallFile.csv exists it will be overwritten. If it does not exist it will be created.
    * - **>>**
      - Can be used to concatenate results onto a file.  For example:
 
@@ -233,6 +233,6 @@ Redirect stdout
 
           $ head MediumFile.csv >> SmallFile.csv
 
-       will take the first 10 lines from MediumFile.csv and append them to SmallFile.csv.
+       takes the first 10 lines from MediumFile.csv and append them to SmallFile.csv.
 
 .. command-shell-redirect-stdout-end

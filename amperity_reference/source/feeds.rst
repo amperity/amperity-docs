@@ -483,7 +483,7 @@ Add feeds
 
 .. feeds-add-start
 
-Use the **Add Feed** button to add a feed to Amperity. A feed must be created for each individual data source that will be processed by Amperity. A feed may be based on a sample data file (recommended), be based on an existing file or be defined by hand. 
+Use the **Add Feed** button to add a feed to Amperity. A feed must be created for each individual data source that is processed by Amperity. A feed may be based on a sample data file (recommended), be based on an existing file or be defined by hand. 
 
 .. feeds-add-end
 
@@ -798,7 +798,7 @@ Custom semantics
 
 Custom semantic values may be applied to any column in Amperity. Amperity has many built-in semantics for PII, transactions, customer preferences, loyalty programs, and email attributes.
 
-Amperity may not have all of the semantics required by a customer. Before adding custom semantics to Amperity you should work with the customer to define which custom semantic tags are required, what their purpose is, and what types of customized SQL queries will be required to present the outcome of the tagging effort in a way that is usable from a queries editor.
+Amperity may not have all of the semantics required by a customer. Before adding custom semantics to Amperity you should work with the customer to define which custom semantic tags are required, what their purpose is, and what types of customized SQL queries is required to present the outcome of the tagging effort in a way that is usable from a queries editor.
 
 .. caution:: If a semantic tag is added to Amperity that contains a typo--such as **emali** vs. **email**--both will be treated by Amperity as if they are unique semantic tags.
 
@@ -922,7 +922,7 @@ Edit domain table name
 
 You may edit the name of the domain table from the **Feed Editor**.
 
-.. warning:: Changing the table name will reference the newly specified table for subsequent data ingestion. This table will be created if it does not exist. All data previously ingested will be in the prior table.
+.. warning:: Changing the table name will reference the newly specified table for subsequent data ingestion. This table will be created if it does not exist. All data previously ingested is in the prior table.
 
 .. feeds-configure-edit-domain-table-name-end
 
@@ -947,7 +947,7 @@ Incoming field names
 
 The **Incoming Field** column matches the column name in the source data file.
 
-Amperity will apply the casing in the sample file to the values of the **Incoming Field** column when a sample file is used to define a feed schema. Changes to the casing of column names will have no effect when loading updates to Amperity.
+Amperity will apply the casing in the sample file to the values of the **Incoming Field** column when a sample file is used to define a feed schema. Changes to the casing of column names have no effect when loading updates to Amperity.
 
 For example, a ``customer_id`` column name in the sample file is added to the **Incoming Field** column as ``customer_id``. A column name change to ``CUSTOMER_ID`` or ``Customer_ID`` will not affect how the feed loads data or updates to the domain table.
 
@@ -1062,7 +1062,7 @@ Add columns
 
 .. feeds-edit-column-add-start
 
-A column may be added to a feed. Before adding columns, be sure to also add the column to any customer 360 database tables that are using the domain table associated with this feed. Columns on passthrough database tables are opt-in, which means you will need to update the passthrough table to ensure all columns are loaded; however, this should only be done after the feed has successfully loaded this data to its domain table.
+A column may be added to a feed. Before adding columns, be sure to also add the column to any customer 360 database tables that are using the domain table associated with this feed. Columns on passthrough database tables are opt-in, which means you need to update the passthrough table to ensure all columns are loaded; however, this should only be done after the feed has successfully loaded this data to its domain table.
 
 .. warning:: Editing column types, column semantics, and column names without considering the downstream effects of those changes may have unintended consequences.
 
@@ -1158,11 +1158,11 @@ Delete columns
 
 .. feeds-edit-column-delete-start
 
-A column may be deleted from a feed. The timing of this deletion is important. If a column is deleted during feed creation, that column will not be loaded to a domain table, be part of any Stitch processes, be a column in a customer 360 database table, be part of a SQL query that defines a query, or be a data point sent to an external destination.
+A column may be deleted from a feed. The timing of this deletion is important. If a column is deleted during feed creation, that column is not loaded to a domain table, be part of any Stitch processes, be a column in a customer 360 database table, be part of a SQL query that defines a query, or be a data point sent to an external destination.
 
 However, a column that is deleted from a feed that *has* been loaded to a domain table, been part of the Stitch process, is a column in a customer 360 table, is part of a SQL query that defines a query, and is a data point that is sent to an external destination must be deleted carefully.
 
-Before deleting any column that has been loaded to a domain table, be sure to identify if that column is part of any downstream workflows. Every reference to that column will need to be removed from Amperity. This is especially important for customer 360 database tables and for queries.
+Before deleting any column that has been loaded to a domain table, be sure to identify if that column is part of any downstream workflows. Every reference to that column need to be removed from Amperity. This is especially important for customer 360 database tables and for queries.
 
 .. feeds-edit-column-delete-end
 

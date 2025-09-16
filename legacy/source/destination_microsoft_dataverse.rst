@@ -85,7 +85,7 @@ Amperity can be configured to send |what-send| to |destination-name|.
           :class: no-scaled-link
      - Microsoft Azure must be configured for your Power Apps application, after which your Power Apps application must be :ref:`added to the Microsoft Power Platform <destination-microsoft-dataverse-application>`.
 
-       You will need to provide your Azure tenant ID, Azure client ID, and your Azure client secret.
+       You need to provide your Azure tenant ID, Azure client ID, and your Azure client secret.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -366,7 +366,7 @@ Add data template
           :class: no-scaled-link
      - Under **Template Settings**, verify all template settings and make any required updates.
 
-       * **Dataverse Table Logical Name** The table name in Microsoft Dataverse. This is the table to which the connector will write data. For example: "abc123_customers".
+       * **Dataverse Table Logical Name** The table name in Microsoft Dataverse. This is the table to which the connector writes data. For example: "abc123_customers".
 
        .. important:: Select **Truncate?** to truncate the table before loading data.
 

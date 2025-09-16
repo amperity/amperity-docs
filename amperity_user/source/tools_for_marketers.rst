@@ -77,9 +77,9 @@ Sending campaigns
 
 Sending campaigns from Amperity is a combination of three things: segments, audiences, and destinations. The following series of topics describes how these work.
 
-* A :doc:`segment <segments>` defines the audience that you will use with your campaign.
+* A :doc:`segment <segments>` defines the audience that you use with your campaign.
 * A :doc:`campaign <campaigns>` breaks that audience down into sub-audiences that align to your marketing strategies and goals.
-* :doc:`Destinations <destinations>` are the locations and channels to which you will send those sub-audiences, after which you will perform specific marketing activities to support your marketing campaign.
+* :doc:`Destinations <destinations>` are the locations and channels to which you sends those sub-audiences, after which you will perform specific marketing activities to support your marketing campaign.
 
 .. tools-for-marketers-static-intro-end
 

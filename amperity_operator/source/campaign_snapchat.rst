@@ -88,7 +88,7 @@ Get details
           :alt: Detail 3.
           :align: center
           :class: no-scaled-link
-     - The name of the custom audience to which Amperity will send data. Amperity will create the custom audience name if it does not already exist.
+     - The name of the custom audience to which Amperity sends data. Amperity creates the custom audience name if it does not already exist.
 
        .. tip:: The custom audience name is visible from the **Snapchat Audiences** page. This name should be clear and understandable to users of Snapchat. An audience with this will be created if it does not exist.
 

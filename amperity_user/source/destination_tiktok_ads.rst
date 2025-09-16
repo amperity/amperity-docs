@@ -73,7 +73,7 @@ Build query
 
 .. sendto-tiktok-ads-build-query-start
 
-You will need to build a query that outputs email addresses and phone numbers.
+You need to build a query that outputs email addresses and phone numbers.
 
 .. sendto-tiktok-ads-build-query-end
 

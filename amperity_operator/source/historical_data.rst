@@ -273,7 +273,7 @@ For example:
 
    It is possible for more than one version to exist for the previous day, but only one version represents the data sent to downstream workflows.
 
-   For example, a manual database run will create new table versions but does not run any orchestrations and does not send data to a downstream workflow. If the manual run occurred after the automated run, the offset that represents data sent to downstream workflows is "offset 2".
+   For example, a manual database run creates new table versions but does not run any orchestrations and does not send data to a downstream workflow. If the manual run occurred after the automated run, the offset that represents data sent to downstream workflows is "offset 2".
 
    The :ref:`created_at <historical-data-access-created-at>` can have the same behavior.
 

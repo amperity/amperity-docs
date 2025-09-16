@@ -64,7 +64,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The name of the |destination-name| bucket to which Amperity will send data and its prefix.
+     - The name of the |destination-name| bucket to which Amperity sends data and its prefix.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -116,7 +116,7 @@ A service account key must be downloaded so that it may be used to configure the
 
 #. Open the Cloud Platform console.
 #. Click **IAM**, and then **Admin**.
-#. Click the name of the project that is associated with the Cloud Storage bucket to which Amperity will send data.
+#. Click the name of the project that is associated with the Cloud Storage bucket to which Amperity sends data.
 #. Click **Service Accounts**, and then select **Create Service Account**.
 #. In the **Name** field, give your service account a name. For example, "Amperity GCS Connection".
 #. In the **Description** field, enter a description that will remind you of the purpose of the role.
@@ -260,7 +260,7 @@ Add destination
 
        |destination-name| has the following settings:
 
-       * The name of the bucket to which Amperity will send data.
+       * The name of the bucket to which Amperity sends data.
        * The service account key.
 
          The service account key is the contents of the JSON file downloaded from Cloud Storage. Open the JSON file in a text editor, select all of the content in the JSON file, copy it, and then paste it into the **Service Account Key** field.

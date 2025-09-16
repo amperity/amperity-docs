@@ -49,7 +49,7 @@ Build query
 
 .. sendto-google-cloud-storage-build-query-start
 
-You will need to build a query, and then send the results to Google Cloud Storage.
+You need to build a query, and then send the results to Google Cloud Storage.
 
 .. sendto-google-cloud-storage-build-query-end
 

@@ -53,7 +53,7 @@ Build query
 
 .. sendto-airship-build-query-start
 
-You will need to build a query that shapes data to the fields required by an Airship audience list or attribute list.
+You need to build a query that shapes data to the fields required by an Airship audience list or attribute list.
 
 You can do this in the following ways:
 

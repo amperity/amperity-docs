@@ -130,7 +130,7 @@ Get details
 
           Use your partner ID to identify the customer ID to which Amperity should send data.
 
-       After choosing the type of advertising your brand will run on DV360, add your customer ID.
+       After choosing the type of advertising your brand runs on DV360, add your customer ID.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

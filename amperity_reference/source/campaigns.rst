@@ -63,7 +63,7 @@ How campaigns work
 
 .. campaigns-howitworks-start
 
-A campaign is defined in the **Campaigns** page, from which you configure the audience and sub-audiences that will be associated with the campaign, the downstream locations to which the campaign will be sent, and the time at which the campaign is to begin.
+A campaign is defined in the **Campaigns** page, from which you configure the audience and sub-audiences that is associated with the campaign, the downstream locations to which the campaign is sent, and the time at which the campaign is to begin.
 
 .. campaigns-howitworks-end
 
@@ -265,7 +265,7 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    Audience members that are added to a control group may have belonged to a treatment group on the previous send.
 
-   Audience members that are removed from the control group will belong to a treatment group on the next send.
+   Audience members that are removed from the control group belong to a treatment group on the next send.
 
    For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a mostly static group of customers, but with small fluctuations in audience size.
 
@@ -487,7 +487,7 @@ Use this feature to define a performance measurement time period and then analyz
 
 .. tip:: Amperity tracks the purchases of your customers in the audiences lists. The purchase information is based on purchasing behavior across channels. 
 
-If you make any changes to this information downstream, such as launching a campaign on a different date then the one you entered into Amperity, they will not be reflected in Amperity.
+If you make any changes to this information downstream, such as launching a campaign on a different date then the one you entered into Amperity, they is not reflected in Amperity.
 
 .. campaigns-results-overview-end
 
@@ -663,7 +663,7 @@ Driving a campaign
 
 .. recurring-campaign-results-driving-start
 
-Once you have determined which channel to use for your campaign, you need to determine which is the most effective way to approach a campaign. For instance, if a you decide to send out an email campaign to your customers, you will need to decide which type of email will be most effective. Does the email with the 10% offer bring in more customer orders or does the $10 off email offer give customers more incentive to make a purchase?
+Once you have determined which channel to use for your campaign, you need to determine which is the most effective way to approach a campaign. For instance, if a you decide to send out an email campaign to your customers, you need to decide which type of email will be most effective. Does the email with the 10% offer bring in more customer orders or does the $10 off email offer give customers more incentive to make a purchase?
 
 .. recurring-campaign-results-driving-end
 
@@ -904,7 +904,7 @@ You can build a sub-audience in a campaign on the **Edit Campaign** page.
 #. Click **Edit attributes** to edit or add attributes.
 #. Click **Add Treatment** to add a treatment group.
 
-   .. note:: You cannot edit a segment that is added as a sub-audience if it is built from a segment. To make changes to the segment, you will need to edit it directly in the **Segment Editor**.
+   .. note:: You cannot edit a segment that is added as a sub-audience if it is built from a segment. To make changes to the segment, you need to edit it directly in the **Segment Editor**.
 
 .. campaigns-define-recipient-groups-steps-end
 
@@ -1215,7 +1215,7 @@ You you can configure a multichannel campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign multiple destinations.
 
-   .. note:: A treatment group with multiple destinations will send data to *all* of the configured destinations.
+   .. note:: A treatment group with multiple destinations sends data to *all* of the configured destinations.
 
 #. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
@@ -1261,7 +1261,7 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign at least one destination. You may assign more than one.
 
-   .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
+   .. note:: A treatment group with more than one configuration destination sends data to *all* of the configured destinations.
 
 #. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
@@ -1307,7 +1307,7 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign at least one destination. You may assign more than one.
 
-   .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
+   .. note:: A treatment group with more than one configuration destination sends data to *all* of the configured destinations.
 
 #. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 

@@ -59,7 +59,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To find customers who have purchased from your brand during the Christmas holiday season--November 1 and December 31--you will need to add a date range to your segment. Choose the **Has purchased** purchase, select the "between" operator, and then set each date using the calendar picker:
+     - To find customers who have purchased from your brand during the Christmas holiday season--November 1 and December 31--you need to add a date range to your segment. Choose the **Has purchased** purchase, select the "between" operator, and then set each date using the calendar picker:
 
        .. image:: ../../images/usecase-holiday-shoppers-sms-order-datetime-calendar-picker.png
           :width: 250 px
@@ -121,7 +121,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
           Each treatment group is configured to send data to one or more destinations. Each destination is configured to send a set of attributes downstream from Amperity.
 
-          For example: Attentive is a destination to which you can send lists of phone numbers for use with SMS campaigns. Edit the attributes that are sent to Attentive to include only the **phone** attribute, which will send the list of phone numbers that are associated with the customers in your segment.
+          For example: Attentive is a destination to which you can send lists of phone numbers for use with SMS campaigns. Edit the attributes that are sent to Attentive to include only the **phone** attribute, which sends the list of phone numbers that are associated with the customers in your segment.
 
 
    * - .. image:: ../../images/steps-05.png

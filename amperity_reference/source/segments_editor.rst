@@ -61,7 +61,7 @@ A good segment name is clear and concise, is not longer than necessary, uses pat
 
    For example, if you have folders named “Braze” and “TikTok” use segment names like “Braze_Birthdays_Under_40_CA” and “TikTok_Birthdays_Under_40” for all segments that exist within those folders.
 
-   If your downstream systems will have data from non-Amperity systems, consider using Amperity as the first prefix: "Amperity_Birthdays_Under_40_CA".
+   If your downstream systems have data from non-Amperity systems, consider using Amperity as the first prefix: "Amperity_Birthdays_Under_40_CA".
 
    Use leading zeroes if a sequential numbering system is a prefix. For example: 0001, 0002, 0003, 0004 is preferable to 1, 2, 3, 4. This will help ensure that your segments are ordered sequentially in the Amperity **Segments** page *and* downstream systems.
 
@@ -75,7 +75,7 @@ Inclusions
 
 .. segments-editor-inclusions-start
 
-Inclusions define the set of conditions that determine which customers will belong to an audience. When a customer matches the criteria defined for an inclusion, that customer will be included in the audience.
+Inclusions define the set of conditions that determine which customers belong to an audience. When a customer matches the criteria defined for an inclusion, that customer is included in the audience.
 
 .. image:: ../../images/mockup-segments-inclusions-double.png
    :width: 480 px
@@ -93,7 +93,7 @@ Exclusions
 
 .. segments-editor-exclusions-start
 
-Exclusions define conditions that determine which customers will not belong to an audience. When a customer matches the criteria defined for an exclusion, that customer will be excluded from the audience.
+Exclusions define conditions that determine which customers is notlong to an audience. When a customer matches the criteria defined for an exclusion, that customer will be excluded from the audience.
 
 .. image:: ../../images/mockup-segments-exclusions.png
    :width: 480 px

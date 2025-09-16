@@ -120,7 +120,7 @@ General
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
 * Object-oriented design principles with SQL or database structures.
 * Boolean values wrapped in quotes. Use **TRUE** and **FALSE** without quotes.
-* Large tables defined within the **NOT IN** expression of a **WHERE** statement. These will run slowly and/or result in out-of-memory errors.
+* Large tables defined within the **NOT IN** expression of a **WHERE** statement. These runs slowly and/or result in out-of-memory errors.
 
 .. sql-spark-recommendation-general-end
 
@@ -604,7 +604,7 @@ Table names
 
 .. sql-spark-recommendation-naming-convention-table-names-start
 
-Table names must be unique within the same database or database generation will fail.
+Table names must be unique within the same database or database generation fails.
 
 .. sql-spark-recommendation-naming-convention-table-names-end
 
@@ -864,7 +864,7 @@ The following SQL query can help find **JOIN** operations with high duplication 
       LEFT JOIN {tableC} c
       ON b.{joinkey}2 = c.{joinkey}2
 
-   If "Table A" has many keys that are not present in "Table B" then the **LEFT JOIN** operation between those tables will result in an intermediate table with many records where the value is **NULL**. This will create skew during the second **JOIN** operation between tables B and C.
+   If "Table A" has many keys that are not present in "Table B" then the **LEFT JOIN** operation between those tables will result in an intermediate table with many records where the value is **NULL**. This creates skew during the second **JOIN** operation between tables B and C.
 
 .. sql-spark-skew-avoiding-join-operations-note-end
 
@@ -1150,7 +1150,7 @@ FROM clause
 
 .. sql-spark-from-clause-start
 
-The **FROM** clause specifies the name of the data table against which the SQL query will be run and is part of every **SELECT** statement.
+The **FROM** clause specifies the name of the data table against which the SQL query is run and is part of every **SELECT** statement.
 
 .. sql-spark-from-clause-end
 
@@ -2166,7 +2166,7 @@ COALESCE()
 
 Use the **COALESCE(column_name, value)** function to return the first non-**NULL** argument. Use a value of ``""``, ``0``, or ``1``.
 
-.. tip:: Some functions will fail if they encounter NULL values. Use this function prior to the **CONCAT()** and **SUM()** functions to ensure they do not encounter **NULL** values.
+.. tip:: Some functions fails if they encounter NULL values. Use this function prior to the **CONCAT()** and **SUM()** functions to ensure they do not encounter **NULL** values.
 
 .. sql-spark-function-coalesce-end
 
@@ -2904,7 +2904,7 @@ DENSE_RANK()
 
 Use the **DENSE_RANK()** function to compute the rank of a value in a group of values. **DENSE_RANK** will assign the same rank to rows with the same value and will not create gaps in the ranked sequence.
 
-.. note:: The **DENSE_RANK** and **RANK()** functions both assign a rank to rows with the same value. The difference is that **RANK()** will create gaps in the sequence. The following example shows rows that are ranked in ascending order by column B:
+.. note:: The **DENSE_RANK** and **RANK()** functions both assign a rank to rows with the same value. The difference is that **RANK()** creates gaps in the sequence. The following example shows rows that are ranked in ascending order by column B:
 
    .. code-block:: mysql
 
@@ -3798,7 +3798,7 @@ Parse fields with multiple separators
 
 .. sql-spark-function-split-example-parse-fields-with-multiple-separators-start
 
-Sometimes incoming data will contain data that should be tagged with more than one semantic tag, but also contain different separators within the incoming field. For example:
+Sometimes incoming data contains data that should be tagged with more than one semantic tag, but also contain different separators within the incoming field. For example:
 
 .. code-block:: mysql
 
@@ -3882,7 +3882,7 @@ SUBSTRING()
 
 Use the **SUBSTRING(string, position[, length])** function to return the substring of "string" that starts at "position" for the specified "length".
 
-.. note:: The "length" parameter is optional. Use it to return only the number of characters specified by "length". When not specified, **SUBSTRING()** will use "position" to determine the number of characters to return. For example:
+.. note:: The "length" parameter is optional. Use it to return only the number of characters specified by "length". When not specified, **SUBSTRING()** uses "position" to determine the number of characters to return. For example:
 
    ::
 

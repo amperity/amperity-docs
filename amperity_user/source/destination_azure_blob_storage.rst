@@ -55,7 +55,7 @@ Build query
 
 .. sendto-azure-blob-storage-build-query-start
 
-You will need to build a query, and then send the results to Azure Blob Storage.
+You need to build a query, and then send the results to Azure Blob Storage.
 
 .. sendto-azure-blob-storage-build-query-end
 

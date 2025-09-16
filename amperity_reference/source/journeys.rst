@@ -92,7 +92,7 @@ A journey should be assigned a name that makes it easy to find and for other Amp
 
 .. journeys-setup-name-tip-start
 
-.. tip:: Use good naming patterns to ensure that you can always find your journeys in the various applications to which you will send them. The journey name will *always* appear in the filename that is sent to any destination.
+.. tip:: Use good naming patterns to ensure that you can always find your journeys in the various applications to which you sends them. The journey name will *always* appear in the filename that is sent to any destination.
 
    Avoid duplication between journey and treatment group names.
 
@@ -147,7 +147,7 @@ Choose one or more segments from the **Select inclusion segments** dropdown list
    * All other segments--whether inclusion, exlcusion, or exit--are filtered to only show segments from that database.
    * Similarly, the activation ID associated with the initial segment determines the activation ID for all other segments to ensure consistency across the journey. For example, if the initial segment activates based on email, then other segments will only include customers with valid email addresses. 
    
-   To change the database associated with a journey, you must first remove all inclusion segments. Then, when you select a new first inclusion segment from a different database, the journey's database will update accordingly.
+   To change the database associated with a journey, you must first remove all inclusion segments. Then, when you select a new first inclusion segment from a different database, the journey's database updates accordingly.
 
 .. _journeys-setup-who-is-excluded:
 
@@ -934,7 +934,7 @@ View journey participant numbers
 
 In **View** mode on the **Journeys** canvas you can see  how many total people have moved through any journey that has run at least once and how many have moved through each node in the current run.
 
-Nodes will have icons and numbers, representing journey participants.
+Nodes have icons and numbers, representing journey participants.
 
    .. image:: ../../images/mockup-journeys-view-participant-numbers.png
       :width: 280 px
@@ -945,7 +945,7 @@ Nodes will have icons and numbers, representing journey participants.
 * The people icon on the left displays how many total participants have moved through the journey across all runs to date.
 * The circular arrow on the right displays how many partipants have moved through that node on the current run, as of last evaluation.
 
-A delay node will have an additional icon.
+A delay node have an additional icon.
 
    .. image:: ../../images/mockup-journeys-view-participant-numbers-delay.png
       :width: 280 px

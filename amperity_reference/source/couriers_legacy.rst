@@ -405,7 +405,7 @@ API couriers
 
 .. couriers-legacy-api-start
 
-An API data source will vary, depending on the file format and other configuration details. API data sources include Google Analytics, Salesforce Sales Cloud, and Zendesk.
+An API data source varies, depending on the file format and other configuration details. API data sources include Google Analytics, Salesforce Sales Cloud, and Zendesk.
 
 .. couriers-legacy-api-end
 
@@ -562,7 +562,7 @@ Incorrect feed ID
 
 .. couriers-legacy-load-operation-type-incorrect-feed-id-start
 
-Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that will not be available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
+Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
 
 .. code-block:: none
 
@@ -634,7 +634,7 @@ Load ingest query
 
 .. couriers-legacy-load-operation-type-load-ingest-query-start
 
-The configuration for an ingest query load operation depends on the data source against which the ingest query will run:
+The configuration for an ingest query load operation depends on the data source against which the ingest query runs:
 
 * Apache Avro
 * Apache Parquet
@@ -1984,7 +1984,7 @@ Use SnapPass to securely share configuration data with your Amperity representat
 #. Enter the name of the courier.
 #. From the **Plugin** dropdown, select a plugin.
 
-   .. note:: The settings for a courier will vary, depending on the courier selected from the **Plugin** dropdown.
+   .. note:: The settings for a courier varies, depending on the courier selected from the **Plugin** dropdown.
 
 #. Enter the credentials for the courier type.
 #. Enter any courier-specific settings.

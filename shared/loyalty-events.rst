@@ -239,7 +239,7 @@ The lifetime reward balance associated with the loyalty ID.
 
 .. loyalty-next-tier-start
 
-The name of the next loyalty tier to which, pending points accumulation, a customer will belong.
+The name of the next loyalty tier to which, pending points accumulation, a customer belong.
 
 .. loyalty-next-tier-end
 

@@ -29,7 +29,7 @@ Send audiences to Attentive
 
 You can use segments and campaigns to manage audience segments in |destination-name|. Each audience in |destination-name| has two components: subscribers and segments.
 
-An audience segment is the list of customers to which you will send SMS messages or emails. Amperity is your source of truth for your customers who will belong to audience segments in |destination-name|. Send this list to |destination-name| from Amperity.
+An audience segment is the list of customers to which you sends SMS messages or emails. Amperity is your source of truth for your customers who belong to audience segments in |destination-name|. Send this list to |destination-name| from Amperity.
 
 A subscriber is a customer for which you have an opt-in out status. You can only send SMS messages or emails to customers who have opted-in. |destination-name| is your source of truth for your audience's opt-in or opt-out and subscriber status.
 
@@ -45,7 +45,7 @@ A subscriber is a customer for which you have an opt-in out status. You can only
 
 An |destination-name| destination works like this:
 
-#. Use a segment to build a list of customers that will be sent SMS messages or emails.
+#. Use a segment to build a list of customers that is sent SMS messages or emails.
 #. Configure Amperity to use a campaign to send audience segments to |destination-name|.
 
    .. include:: ../../shared/channels.rst

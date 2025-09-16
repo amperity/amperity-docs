@@ -258,7 +258,7 @@ Change database source
 
 You can change the database that a segment retrieves data from.
  
-.. note:: Changing the database for a segment will remove all the segment conditions and the resulting customer lists. It will also change any campaign that uses this segment.
+.. note:: Changing the database for a segment removes all the segment conditions and the resulting customer lists. It will also change any campaign that uses this segment.
 
 .. segments-change-database-source-end
 

@@ -64,7 +64,7 @@ The following sections describe the steps you'll follow to use an orchestration 
 
        .. image:: ../../images/mockup-orchestrations-select-query-123.png
           :width: 650 px
-          :alt: Select the query that returns the results that will be sent.
+          :alt: Select the query that returns the results that is sent.
           :align: left
           :class: no-scaled-link
 
@@ -76,7 +76,7 @@ The following sections describe the steps you'll follow to use an orchestration 
           :class: no-scaled-link
      - Each orchestration is configured to send query results to a single destination. This destination must already be configured for your tenant, along with a data template that defines how the results are formatted for this destination.
 
-       For example, these query results will be sent to a dashboard in Domo. Choose the "Domo S3" destination and the "Domo S3 CSV Files for Dashboards" data template.
+       For example, these query results is sent to a dashboard in Domo. Choose the "Domo S3" destination and the "Domo S3 CSV Files for Dashboards" data template.
 
        .. image:: ../../images/mockup-orchestrations-select-destination-template-123.png
           :width: 650 px

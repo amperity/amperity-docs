@@ -25,7 +25,7 @@ This topic contains general advice and recommendations for sending data to Amper
 Sending data to Amperity is the combination of:
 
 #. Identifying a data source. It is important to define data sources to have predictable handoffs.
-#. Determining the location from which that data source will be made available to Amperity, the file format to be provided, and the process that will be used (cloud-based storage, SFTP, FiveTran, REST API, or Snowflake) to make that available.
+#. Determining the location from which that data source will be made available to Amperity, the file format to be provided, and the process that is used (cloud-based storage, SFTP, FiveTran, REST API, or Snowflake) to make that available.
 
    .. important:: Even if you do not see a data source in various lists of data sources that are shown to be "available" (such as on the Amperity website or on various pages within the documentation site), this does not mean you cannot send data from that source. A significant percentage of data sources used by Amperity customers are enabled using cloud-based storage.
 
@@ -38,7 +38,7 @@ For a production environment, most data sources are configured to run once per 2
 * Processing all queries and segments that have downstream dependencies
 * Sending query results or audiences to all configured destinations and marketing channels
 
-.. note:: Preprocessing or filtering data before sending it to Amperity is typically not required, but sometimes business and security concerns will require it.
+.. note:: Preprocessing or filtering data before sending it to Amperity is typically not required, but sometimes business and security concerns requires it.
 
 .. send-data-to-amperity-end
 
@@ -282,7 +282,7 @@ IP addresses for allowlists
 
 .. send-data-to-amperity-ip-allowlists-start
 
-You can add Amperity services to allowlists that may be required by upstream systems. The IP address that should be added to the allowlist for the upstream system depends on the service to which that upstream system will connect.
+You can add Amperity services to allowlists that may be required by upstream systems. The IP address that should be added to the allowlist for the upstream system depends on the service to which that upstream system connects.
 
 .. send-data-to-amperity-ip-allowlists-end
 

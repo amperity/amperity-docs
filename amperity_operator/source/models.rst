@@ -50,8 +50,6 @@ The following out-of-the-box models are configurable directly within Amperity by
 
 .. models-list-end
 
-.. TODO: The following sections have "-about-" start/end blocks that are pulling from the individual model topics. These should act as the more detailed intros to the models, describe the use cases, etc. Customers will want to link to the more detailed topics.
-
 
 .. _model-churn-propensity:
 
@@ -289,7 +287,7 @@ Activate a model
 #. In the row with the model you want to edit, from the |fa-kebab| menu, select **Edit**.
 #. This opens the page for selected model in edit mode.
 #. Press **Activate** at top right-hand-side of the model configuration page
-#. Select a courier group. The model will run at the same frequency as the courier group.
+#. Select a courier group. The model runs at the same frequency as the courier group.
 
 .. models-howtows-activate-steps-end
 

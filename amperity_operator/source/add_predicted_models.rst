@@ -48,8 +48,8 @@ The steps in the predictive models workflow include:
 #. A set of couriers are configured to pull these results from the Amazon S3 bucket to your tenant on a daily basis.
 #. Predictive models tables are loaded to Amperity using feeds, after which the associated predictive models domain tables are refreshed.
 #. After the Stitch process is complete, refreshed predictive models tables are passed through to your customer 360 database.
-#. Queries and segments that rely on predictive models table attributes will use the refreshed data the next time they are run and any new queries and segments will have access to the refreshed data.
-#. A campaign will use refreshed data the next time it is scheduled to run.
+#. Queries and segments that rely on predictive models table attributes use the refreshed data the next time they are run and any new queries and segments have access to the refreshed data.
+#. A campaign uses refreshed data the next time it is scheduled to run.
 
 **Predictive models components**
 
@@ -394,7 +394,7 @@ The typical process for setting up predictive models follows a series of general
 
 #. (~1 week) Amperity begins the process of training the models, validating backtesting, and optimizing predictions.
 
-#. (~1-2 weeks) Amperity performs stability testing on the models and the predictive results. This step may require some tuning of the model and will take longer for very large data sets.
+#. (~1-2 weeks) Amperity performs stability testing on the models and the predictive results. This step may require some tuning of the model and takes longer for very large data sets.
 
 Once this process is complete, the predicted attributes are available on a 1-day delayed rolling basis. These :ref:`tables are added to your tenant as a feed <add-predicted-models-configure>` in the **Sources** page and are available for use with segments and queries.
 

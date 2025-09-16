@@ -204,7 +204,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :class: no-scaled-link
      - Configure Snowflake objects for the correct database, tables, roles, and users. (Refer to the :ref:`Amazon S3 <destination-snowflake-aws-configure-objects>` or :ref:`Azure <destination-snowflake-azure-configure-objects>` tutorial, as appropriate for your tenant.)
 
-       .. note:: Snowflake can be configured to run in Amazon AWS or Azure. When using the Amazon Data Warehouse you will use the same cloud platform as your Amperity tenant. When using your own instance of Snowflake, you should use the same Amazon S3 bucket or Azure Blob Storage container that is included with your tenant when configuring Snowflake for data sharing, but then connect Microsoft Power BI directly to your own instance of Snowflake.
+       .. note:: Snowflake can be configured to run in Amazon AWS or Azure. When using the Amazon Data Warehouse you use the same cloud platform as your Amperity tenant. When using your own instance of Snowflake, you should use the same Amazon S3 bucket or Azure Blob Storage container that is included with your tenant when configuring Snowflake for data sharing, but then connect Microsoft Power BI directly to your own instance of Snowflake.
 
 
    * - .. image:: ../../images/steps-02.png

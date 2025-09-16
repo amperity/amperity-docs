@@ -68,7 +68,7 @@ The |source-name| destination requires the following configuration details:
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The name of the S3 bucket from which data will be pulled to Amperity, which is also the bucket to which the Firehose delivery stream will write data.
+     - The name of the S3 bucket from which data is pulled to Amperity, which is also the bucket to which the Firehose delivery stream writes data.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -76,7 +76,7 @@ The |source-name| destination requires the following configuration details:
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - For cross-account role assumption you will need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
+     - For cross-account role assumption you need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
 
        .. note:: The values for the **Amperity Role ARN** and the **External ID** fields are provided automatically.
 
@@ -138,9 +138,9 @@ Record separators
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-record-separators-start
 
-Data records are delivered to Amazon S3 as an Amazon S3 object. If you need to ensure that individual records are available to Amperity in |source-name|, you will need to configure the delivery stream to add `a record separator <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#format>`__ |ext_link| at the end of each data record.
+Data records are delivered to Amazon S3 as an Amazon S3 object. If you need to ensure that individual records are available to Amperity in |source-name|, you need to configure the delivery stream to add `a record separator <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#format>`__ |ext_link| at the end of each data record.
 
-When using the |source-name| connector, which only accepts NDJSON files, you will need to ensure that each data record is followed by a newline character.
+When using the |source-name| connector, which only accepts NDJSON files, you need to ensure that each data record is followed by a newline character.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-record-separators-end
 
@@ -154,7 +154,7 @@ Filename patterns
 
 Recommended `filename patterns <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#s3-object-name>`__ |ext_link| include:
 
-* Using the YYYY/MM/DD/HH format when writing objects to |source-name|. This prefix will create a logical hierarchy in the bucket by year, then month, then date, and finally hour.
+* Using the YYYY/MM/DD/HH format when writing objects to |source-name|. This prefix creates a logical hierarchy in the bucket by year, then month, then date, and finally hour.
 * Using the default |source-name| object naming pattern that increments by 1 a random string at the end of the object's filename.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-filename-patterns-end

@@ -25,7 +25,7 @@ Send audiences to Salesforce Marketing Cloud
 
 .. channel-salesforce-marketing-cloud-start
 
-You can build queries that return |what-send|, and then use orchestrations to send those results to business units in |destination-name|. The |what-send| is uploaded to |destination-name| using SFTP, after which the Marketing Cloud SOAP API will manage your data extensions and will move the |what-send| into the correct data extension automatically.
+You can build queries that return |what-send|, and then use orchestrations to send those results to business units in |destination-name|. The |what-send| is uploaded to |destination-name| using SFTP, after which the Marketing Cloud SOAP API manages your data extensions and will move the |what-send| into the correct data extension automatically.
 
 .. channel-salesforce-marketing-cloud-end
 

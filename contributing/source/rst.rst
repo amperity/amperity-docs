@@ -3114,7 +3114,7 @@ An external link is a link to a page that exists outside Amperity documentation.
 * Replace "string" with text.
 * Replace "URL" with the full URL. For example: ``https://wwww.braze.com/docs/`` or ``https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content``.
 * Be sure to append the double underscores.
-* Use ``|ext_link|`` to apply an icon that indicates the link will take the reader from the Amperity docs site.
+* Use ``|ext_link|`` to apply an icon that indicates the link takes the reader from the Amperity docs site.
 
 **Do this**
 
@@ -3158,7 +3158,7 @@ or
 
 :ref:`Headers in same site <rst-links-reference>`
 
-A reference link without the "string" value will use the header string just below the anchor reference. Use the "string" value to blend reference links into the language you use in a paragraph, a list, or a table.
+A reference link without the "string" value uses the header string just below the anchor reference. Use the "string" value to blend reference links into the language you use in a paragraph, a list, or a table.
 
 .. important:: You cannot use reference links to link to a section in a topic located in another document collection. Use an :ref:`external link within the docs site <rst-links-cross-site>` to define the link.
 
@@ -4450,7 +4450,7 @@ Add an `<hr>` tag into a topic using four hyphen characters: ``----``.
 Toctrees
 ==================================================
 
-.. TODO: Uuuugh. This section will need some work as toctrees are specific creatures. But the gist is correct and the User Guides show good patterns. Look at the grid_x topics for 2nd-level navigation toctrees.
+.. TODO: Uuuugh. This section need some work as toctrees are specific creatures. But the gist is correct and the User Guides show good patterns. Look at the grid_x topics for 2nd-level navigation toctrees.
 
 .. rst-toctrees-start
 
@@ -4783,7 +4783,7 @@ The following descriptions are located in the ``/shared/destination_settings.rst
 
    .. setting-common-membership-duration-frequency-end
 
-This topic will use the following example variables to show how variables work within this topic.
+This topic uses the following example variables to show how variables work within this topic.
 
 .. list-table::
    :widths: 30 70

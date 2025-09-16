@@ -74,7 +74,7 @@ Subscriber key
 
 .. source-salesforce-marketing-cloud-subscriber-key-start
 
-The subscriber key is an identifier in |source-name|. When a subscriber key is provided to Amperity for a workflow that will send data back to |source-name|, you should configure this workflow to carry the subscriber key through to the customer 360 database so that it may be included in the query that defines the results to be sent.
+The subscriber key is an identifier in |source-name|. When a subscriber key is provided to Amperity for a workflow that sends data back to |source-name|, you should configure this workflow to carry the subscriber key through to the customer 360 database so that it may be included in the query that defines the results to be sent.
 
 Use a customer key semantic tag for the subscriber key field when configuring the feed, and then ensure this field is available to the **Customer 360**, **Queries**, and/or **Segments** pages. Map this field to the |source-name| **subscriber_key** using a data template.
  

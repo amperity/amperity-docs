@@ -307,7 +307,7 @@ An SAS token may have invalid permissions for any of the following situations:
 
 #. The SAS token may have expired or the signing key associated with the SAS token may have been rotated.
 
-   These situations will require generating a new SAS token, and then updating the credentials in Amperity.
+   These situations requires generating a new SAS token, and then updating the credentials in Amperity.
 
 .. workflow-actions-azure-sas-invalid-permissions-end
 

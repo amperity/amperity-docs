@@ -50,7 +50,7 @@ Build query
 
 .. sendto-throtle-build-query-start
 
-You will need to build a query that returns the correct set of matching keys as required by |destination-name|.
+You need to build a query that returns the correct set of matching keys as required by |destination-name|.
 
 .. sendto-throtle-build-query-end
 

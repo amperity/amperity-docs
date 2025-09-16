@@ -55,7 +55,7 @@ Build query
 
 .. sendto-mailchimp-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to audience fields tags in Mailchimp. For example, a Mailchimp audience may have the following fields and field tags:
+You need to build a query that outputs fields that can be mapped to audience fields tags in Mailchimp. For example, a Mailchimp audience may have the following fields and field tags:
 
 .. list-table::
    :widths: 140 140 320

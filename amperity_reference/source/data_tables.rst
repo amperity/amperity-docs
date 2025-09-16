@@ -537,7 +537,7 @@ Customer 360
 
 .. data-tables-customer-360-note-start
 
-.. note:: The columns that appear in the **Customer 360** table will vary, depending on the SQL statement used to add columns to the table. The set of columns must include the Amperity ID and should include columns that contain profile (PII) data, along with columns that contain summary attributes for interaction records.
+.. note:: The columns that appear in the **Customer 360** table varies, depending on the SQL statement used to add columns to the table. The set of columns must include the Amperity ID and should include columns that contain profile (PII) data, along with columns that contain summary attributes for interaction records.
 
 .. data-tables-customer-360-note-end
 
@@ -3310,7 +3310,7 @@ The **Unified Changes Clusters** table has the following columns:
 
    * - **Timestamp**
      - Datetime
-     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID will have the same value for **Timestamp**.
+     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID have the same value for **Timestamp**.
 
        Also in: **Unified Changes PKS**
 
@@ -3390,7 +3390,7 @@ The **Unified Changes PKS** table has the following columns:
 
    * - **Timestamp**
      - Datetime
-     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID will have the same value for **Timestamp**.
+     - The timestamp that is associated with **Job ID**. Each row that shares the same job ID have the same value for **Timestamp**.
 
        Also in: **Unified Changes Clusters**
 

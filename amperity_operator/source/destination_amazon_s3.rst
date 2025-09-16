@@ -57,7 +57,7 @@ Get details
           :class: no-scaled-link
      - **Amazon S3 bucket details**
 
-       You will need to know the following details about the |destination-name| bucket to which Amperity will send data.
+       You need to know the following details about the |destination-name| bucket to which Amperity sends data.
 
        #. The name of the |destination-name| bucket. An S3 prefix is sometimes required.
 
@@ -73,7 +73,7 @@ Get details
 
        #. :ref:`IAM role-to-role (recommended) <destination-amazon-s3-credentials-role-to-role>`
 
-          For cross-account role assumption you will need the value for the IAM role ARN that allows Amperity to add data to an Amazon S3 bucket that is managed by your brand.
+          For cross-account role assumption you need the value for the IAM role ARN that allows Amperity to add data to an Amazon S3 bucket that is managed by your brand.
 
           The values for the **Amperity Role ARN** and the **External ID** fields are provided by Amperity.
 

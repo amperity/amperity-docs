@@ -242,7 +242,7 @@ Add destination
           :start-after: .. destinations-steps-name-and-description-start
           :end-before: .. destinations-steps-name-and-description-end
 
-       .. important:: Be sure the name of the destination includes a reference to the type of audience that will be sent from Amperity. For example: "Criteo Onsite Display" or "Criteo Retail Media Offsite".
+       .. important:: Be sure the name of the destination includes a reference to the type of audience that is sent from Amperity. For example: "Criteo Onsite Display" or "Criteo Retail Media Offsite".
 
        .. admonition:: Configure business user access
 

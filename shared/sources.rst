@@ -19,7 +19,7 @@ ADD THIS TO END OF GET DETAILS FOR ALL SOURCES AND CLEAN UP GET DETAILS
 
 This topic contains the templated sections for all of the "Pull from xxxxx" topics in /operator/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
 
-In certain cases, a source topic will require *some* customization within the templated sections. See the Salesforce Sales Cloud topic, **Run courier manually** section for how to do this.
+In certain cases, a source topic requires *some* customization within the templated sections. See the Salesforce Sales Cloud topic, **Run courier manually** section for how to do this.
 
 .. sources-overview-list-intro-start
 
@@ -128,7 +128,7 @@ A stage defines the location of objects that are available within Snowflake.
 
 .. sources-add-courier-fivetran-load-operation-start
 
-Load operations associate each table in the list of tables to a feed. (The initial setup for this courier will use an incorrect feed ID -- ``df-xxxxxx``.)
+Load operations associate each table in the list of tables to a feed. (The initial setup for this courier uses an incorrect feed ID -- ``df-xxxxxx``.)
 
 .. sources-add-courier-fivetran-load-operation-end
 
@@ -169,7 +169,7 @@ Load operations associate each table in the list of tables to a feed. (The initi
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to ``{}`` or are not set to an obviously incorrect string the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to ``{}`` or are not set to an obviously incorrect string the validation test for the courier configuration settings fails.
 
 #. Click **Save**.
 
@@ -203,7 +203,7 @@ An entites list defines the list of files to be pulled to Amperity, along with a
 
 .. sources-add-courier-entities-list-note-s3-generic-start
 
-.. note:: You may configure files as required (``"object/optional": false``) or optional (``"object/optional": true``.) A courier will fail if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
+.. note:: You may configure files as required (``"object/optional": false``) or optional (``"object/optional": true``.) A courier fails if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
 
 .. sources-add-courier-entities-list-note-s3-generic-end
 
@@ -224,7 +224,7 @@ This section has an introduction to entities lists and a note about required/opt
 
    .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to ``{}`` the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to ``{}`` the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. sources-add-courier-s3-generic-end
@@ -290,7 +290,7 @@ Every |source-name| file that is pulled to Amperity must be configured as a feed
 
 Run the |source-name| courier to pull sample files to Amperity for each of the tables configured in the load operation. Use these sample files to configure a feed for each |source-name| table to be loaded to Amperity.
 
-.. important:: The courier run will fail, but this process will successfully return a list of files, one for each table that was defined in the courier load operation. Use these files to define the feed schema.
+.. important:: The courier run fails, but this process will successfully return a list of files, one for each table that was defined in the courier load operation. Use these files to define the feed schema.
 
 .. sources-get-sample-files-fivetran-end
 
@@ -306,7 +306,7 @@ A sample CSV file may be output from Snowflake, and then uploaded to Amperity wh
 #. Select **Load data from a specific day**, and then select today's date.
 #. Click **Run**.
 
-   .. important:: The courier run will fail, but this process will successfully return a list of files from |source-name|.
+   .. important:: The courier run fails, but this process will successfully return a list of files from |source-name|.
 
    These files will be available for selection as an existing source from the **Add Feed** dialog box.
 #. Wait for the notification for this courier run to return an error similar to:
@@ -343,7 +343,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 .. sources-add-feed-note-file-start
 
-.. note:: A feed must be added for *each* file that is pulled from |source-name|, including all files that contain customer records and interaction records, along with any other files that will be used to support downstream workflows.
+.. note:: A feed must be added for *each* file that is pulled from |source-name|, including all files that contain customer records and interaction records, along with any other files that is used to support downstream workflows.
 
 .. sources-add-feed-note-file-end
 
@@ -353,7 +353,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 .. sources-add-feed-note-fivetran-start
 
-.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that will be used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
+.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that is used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
 
 .. sources-add-feed-note-fivetran-end
 
@@ -363,7 +363,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 .. sources-add-feed-note-snowflake-start
 
-.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that will be used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
+.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that is used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
 
 .. sources-add-feed-note-snowflake-end
 
@@ -427,13 +427,13 @@ There are two example intros, one for files and one for Fivetran.
 
 .. sources-add-load-operation-example-intro-start
 
-Load operations must specify each file that will be pulled to Amperity from |source-name|.
+Load operations must specify each file that is pulled to Amperity from |source-name|.
 
 .. sources-add-load-operation-example-intro-end
 
 .. sources-add-load-operation-example-intro-fivetran-start
 
-Load operations must specify each table that will be pulled to Amperity from |source-name|.
+Load operations must specify each table that is pulled to Amperity from |source-name|.
 
 .. sources-add-load-operation-example-intro-fivetran-end
 
@@ -444,7 +444,7 @@ Load operations must specify each table that will be pulled to Amperity from |so
 
 .. source-xxxxx-add-load-operations-example-start
 
-Load operations must specify each file that will be pulled to Amperity from |source-name|. For example:
+Load operations must specify each file that is pulled to Amperity from |source-name|. For example:
 
 ::
 
@@ -609,7 +609,7 @@ STEP 5
 
 .. sources-verify-feeds-and-domain-tables-start
 
-After running the |source-name| courier it will create a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name| and that any semantic tags for customer profiles and transactions are applied correctly for your tenant.
+After running the |source-name| courier it creates a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name| and that any semantic tags for customer profiles and transactions are applied correctly for your tenant.
 
 Select a time period to be run, and then click **Run**.
 
@@ -670,7 +670,7 @@ Select |source-name|. Do one of the following:
 
 .. sources-steps-03-select-file-start
 
-Select the file that will be pulled to Amperity, either directly (by going into the SFTP site and selecting it) or by providing a filename pattern.
+Select the file that is pulled to Amperity, either directly (by going into the SFTP site and selecting it) or by providing a filename pattern.
 
 .. sources-steps-03-select-file-end
 
@@ -678,9 +678,9 @@ Select the file that will be pulled to Amperity, either directly (by going into 
 
 .. sources-steps-03-browse-start
 
-Click **Browse** to open the **File browser**. Select the file that will be pulled to Amperity, and then click **Accept**.
+Click **Browse** to open the **File browser**. Select the file that is pulled to Amperity, and then click **Accept**.
 
-Use a filename pattern to define files that will be loaded on a recurring basis, but will have small changes to the filename over time, such as having a datestamp appended to the filename.
+Use a filename pattern to define files that will be loaded on a recurring basis, but have small changes to the filename over time, such as having a datestamp appended to the filename.
 
 .. sources-steps-03-browse-end
 

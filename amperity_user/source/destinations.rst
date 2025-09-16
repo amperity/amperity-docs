@@ -22,9 +22,9 @@ Choose destinations
 
 Sending campaigns from Amperity to downstream marketing workflows is a combination of:
 
-* A :doc:`segment <segments>` that defines the audience that you will use with your campaign.
+* A :doc:`segment <segments>` that defines the audience that you use with your campaign.
 * A :doc:`campaign <campaigns>` that breaks that audience down into sub-audiences that align to your marketing strategies and goals.
-* A set of destinations that specify the locations and channels to which you will send each sub-audience.
+* A set of destinations that specify the locations and channels to which you sends each sub-audience.
 
 This is part three of a series of topics that describes how this works.
 
@@ -32,7 +32,7 @@ This is part three of a series of topics that describes how this works.
 
 .. destinations-howitworks-start
 
-Destinations are the locations to which you will send the lists of customers that are associated with each treatment group within a sub-audience. You may send these lists to any destination that is configured for your tenant. You may send the same list to multiple destinations.
+Destinations are the locations to which you sends the lists of customers that are associated with each treatment group within a sub-audience. You may send these lists to any destination that is configured for your tenant. You may send the same list to multiple destinations.
 
 .. destinations-howitworks-end
 
@@ -57,7 +57,7 @@ Destinations are the locations to which you will send the lists of customers tha
           :alt: Step 2.
           :align: center
           :class: no-scaled-link
-     - A specific set of journeys and messaging creatives are built out and are tailored for customers who fall into the "active" lifecycle status. "Active" customers will be sent to the following channels:
+     - A specific set of journeys and messaging creatives are built out and are tailored for customers who fall into the "active" lifecycle status. "Active" customers is sent to the following channels:
 
        * Klaviyo, for email campaigns
        * Attentive, for mobile messaging campaigns
@@ -117,11 +117,11 @@ Destinations are the locations to which you will send the lists of customers tha
           :alt: Step 5.
           :align: center
           :class: no-scaled-link
-     - Each sub-audience that is configured for your campaign will have at least one destination associated with it. For each destination that is configured you must specify the set of attributes that will be sent from Amperity to that destination.
+     - Each sub-audience that is configured for your campaign have at least one destination associated with it. For each destination that is configured you must specify the set of attributes that is sent from Amperity to that destination.
 
-       Click the **Edit Attributes** link to open the attributes editor. From the dropdown select each of the destinations that has been configured for this sub-audience, and then select which attributes will be sent to that destination.
+       Click the **Edit Attributes** link to open the attributes editor. From the dropdown select each of the destinations that has been configured for this sub-audience, and then select which attributes is sent to that destination.
 
-       For example, if you are sending a treatment group to Attentive to support an SMS-based marketing campaign, you will need to send a list of phone numbers from Amperity to Attentive.
+       For example, if you are sending a treatment group to Attentive to support an SMS-based marketing campaign, you need to send a list of phone numbers from Amperity to Attentive.
 
        .. image:: ../../images/mockup-campaigns-edit-attributes-attentive.png
           :width: 740 px
@@ -139,7 +139,7 @@ Destinations are the locations to which you will send the lists of customers tha
           :alt: Step 6.
           :align: center
           :class: no-scaled-link
-     - The attributes that are available from the **Edit Attributes** window will vary, depending on the destination. Some destinations have strict naming requirements. Some destinations only allow specific fields to be sent. Some destinations allow only one or two attributes, whereas others have few restrictions.
+     - The attributes that are available from the **Edit Attributes** window varies, depending on the destination. Some destinations have strict naming requirements. Some destinations only allow specific fields to be sent. Some destinations allow only one or two attributes, whereas others have few restrictions.
 
        For example:
 
@@ -150,6 +150,6 @@ Destinations are the locations to which you will send the lists of customers tha
        * Facebook Ads requires mapping fields in your customer 360 database to field in Facebook and applying a strict naming convention.
        * Cloud-based storage -- Amazon S3, Google Cloud Storage, or Microsoft Azure -- and/or SFTP often have no restrictions.
 
-         .. note:: Workflows often use cloud-based storage and/or SFTP as a staging location before uploading that data to another application. That application may have specific requirements for which attributes are required. You will need to ensure that the list of attributes for those use cases are configured correctly within the campaigns builder.
+         .. note:: Workflows often use cloud-based storage and/or SFTP as a staging location before uploading that data to another application. That application may have specific requirements for which attributes are required. You need to ensure that the list of attributes for those use cases are configured correctly within the campaigns builder.
 
 .. destinations-howitworks-callouts-end

@@ -71,7 +71,7 @@ The **Customer Attributes** table has the following requirements:
 
 .. table-customer-attributes-start-here-recommended-start
 
-This topic assumes that your tenant will use transactions and customer consent tables for email addresses and SMS/phone numbers. These tables are enabled within the SQL that shows the :ref:`recommended starting point <table-customer-attributes-recommended-starting-sql>` for the **Customer Attributes** table.
+This topic assumes that your tenant uses transactions and customer consent tables for email addresses and SMS/phone numbers. These tables are enabled within the SQL that shows the :ref:`recommended starting point <table-customer-attributes-recommended-starting-sql>` for the **Customer Attributes** table.
 
 .. note:: You can comment out the SQL for :ref:`table-customer-attributes-recommended-update-transaction-attributes`, :ref:`table-customer-attributes-recommended-update-email-optin`, and :ref:`table-customer-attributes-recommended-update-sms-optin` if you do not plan to use these features within your tenant.
 
@@ -415,7 +415,7 @@ Customer states are typically defined as "new", "active", "lapsed", "dormant", a
 
 A customer who has never interacted with your brand--never made a purchase--is assigned the value of "prospect".
 
-.. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it will be included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
+.. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it is included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
 
 .. code-block:: sql
    :linenos:
@@ -492,7 +492,7 @@ The **Customer Attributes** table provides a list of customers who have complete
 
 .. tip:: The **Email Opt Status** table is generated when |semantics_email_optin| semantic tags are applied to feeds that contain records that indicate which of your customers have given their consent to receive email messages from your brand.
 
-.. note:: This topic assumes that the **Email Opt Status** table is available to your customer 360 database and that it will be included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their email address with your marketing campaigns.
+.. note:: This topic assumes that the **Email Opt Status** table is available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their email address with your marketing campaigns.
 
 .. code-block:: sql
    :linenos:
@@ -528,7 +528,7 @@ The **Customer Attributes** table provides a list of customers who have complete
 
 .. tip:: The **SMS Opt Status** table is generated when |semantics_sms_optin| semantic tags are applied to feeds that contain records that indicate which of your customers have given their consent to receive SMS messages from your brand.
 
-.. note:: This topic assumes that the **SMS Opt Status** table is available to your customer 360 database and that it will be included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their phone number with your marketing campaigns.
+.. note:: This topic assumes that the **SMS Opt Status** table is available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their phone number with your marketing campaigns.
 
 .. code-block:: sql
    :linenos:
@@ -1181,7 +1181,7 @@ You have two choices for defining churn events for this table:
 
    Update the values for each threshold to align to your products and customer purchase histories and to the stages your brand uses within churn prevention campaigns.
 
-If your brand will use the **Customer Attributes** table as part of your churn prevention campaign activities, replace the following SQL:
+If your brand uses the **Customer Attributes** table as part of your churn prevention campaign activities, replace the following SQL:
 
 .. code-block:: sql
 

@@ -133,11 +133,11 @@ Get details
           :class: no-scaled-link
      - The name of a segment in |destination-name|.
 
-       Membership duration defines the length of time (in days) at which individual audience members will belong to the segment in |destination-name|. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
+       Membership duration defines the length of time (in days) at which individual audience members belong to the segment in |destination-name|. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
 
        .. tip:: Set this value to "0" to remove all audience members.
 
-       .. caution:: The membership duration is measured in days. Adjust the membership duration value to be greater than (or equal to) than the frequency at which your brand will send campaigns or orchestrations from Amperity.
+       .. caution:: The membership duration is measured in days. Adjust the membership duration value to be greater than (or equal to) than the frequency at which your brand sends campaigns or orchestrations from Amperity.
 
           For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
@@ -655,7 +655,7 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       The name of the segment in |destination-name|. The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration. Set this value to "0" to clear out the audience in the segment.
+       The name of the segment in |destination-name|. The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration. Set this value to "0" to clear out the audience in the segment.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-note-start

@@ -206,7 +206,7 @@ API couriers
 
 .. couriers-api-start
 
-An API data source will vary, depending on the file format and other configuration details. API data sources include |source_campaign_monitor|, |source_google_analytics|, |source_salesforce_sales_cloud|, and |source_zendesk|.
+An API data source varies, depending on the file format and other configuration details. API data sources include |source_campaign_monitor|, |source_google_analytics|, |source_salesforce_sales_cloud|, and |source_zendesk|.
 
 .. couriers-api-end
 
@@ -424,7 +424,7 @@ Use SnapPass to securely share configuration data with your Amperity representat
 #. Enter the name of the courier.
 #. From the **Plugin** dropdown, select a plugin.
 
-   .. note:: The settings for a courier will vary, depending on the courier selected from the **Plugin** dropdown.
+   .. note:: The settings for a courier varies, depending on the courier selected from the **Plugin** dropdown.
 
 #. Enter the credentials for the courier type.
 #. Enter any courier-specific settings.

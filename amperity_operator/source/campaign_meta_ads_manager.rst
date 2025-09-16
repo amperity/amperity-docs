@@ -631,7 +631,7 @@ Security challenge
 
 .. campaign-meta-ads-manager-workflow-actions-security-challenge-start
 
-Sometimes |destination-name| will issue a security challenge to the advertising account and/or business account associated with this workflow.
+Sometimes |destination-name| issues a security challenge to the advertising account and/or business account associated with this workflow.
 
 .. campaign-meta-ads-manager-workflow-actions-security-challenge-end
 
@@ -705,15 +705,15 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
 
    * - **Birth Year**
      - **DOBY**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBY with a format of **YYYY** and a range from 1900 to the current year.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBY with a format of **YYYY** and a range from 1900 to the current year.
 
    * - **Birth Month**
      - **DOBM**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBM with a format of **01** to **12**.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBM with a format of **01** to **12**.
 
    * - **Birth Day**
      - **DOBD**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBD with a format of **01** to **31**.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBD with a format of **01** to **31**.
 
    * - **Last Name**
      - **LN**
@@ -735,7 +735,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Hashes data as SHA-256
    * - **First Initial**
      - **FI**
-     - .. warning:: Do not pass this column. The connector will use the first character of the normalized first name.
+     - .. warning:: Do not pass this column. The connector uses the first character of the normalized first name.
    * - **US States**
      - **ST**
      - A two-character `ANSI abbreviation code <https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations>`__ |ext_link| for US states.

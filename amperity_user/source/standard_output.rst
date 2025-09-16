@@ -607,7 +607,7 @@ Customer flags
    * - **One and Done**
      - Indicates if a customer has made only one purchase.
 
-       .. important:: Amperity resolves one-and-done for the data provided to it. For example, if data is provided that spans 2015-2020, a purchase in 2014 will not be in the results.
+       .. important:: Amperity resolves one-and-done for the data provided to it. For example, if data is provided that spans 2015-2020, a purchase in 2014 is not in the results.
 
 .. standard-output-transaction-attributes-extended-customer-flags-table-end
 

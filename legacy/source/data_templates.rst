@@ -515,7 +515,7 @@ API templates
 
 .. data-templates-api-start
 
-A data template for a destination that uses an API will vary, depending on the type of destination and other configuration details. Data templates that are associated with APIs include |destination_hubspot|, |destination_klaviyo|, |destination_sailthru|, |destination_zendesk|, |destination_meta_ads_manager|, |destination_google_ads|, |destination_campaign_monitor|, |destination_microsoft_dynamics|, and |destination_salesforce_marketing_cloud|.
+A data template for a destination that uses an API varies, depending on the type of destination and other configuration details. Data templates that are associated with APIs include |destination_hubspot|, |destination_klaviyo|, |destination_sailthru|, |destination_zendesk|, |destination_meta_ads_manager|, |destination_google_ads|, |destination_campaign_monitor|, |destination_microsoft_dynamics|, and |destination_salesforce_marketing_cloud|.
 
 .. data-templates-api-end
 
@@ -527,7 +527,7 @@ Snowflake templates
 
 .. data-templates-snowflake-start
 
-A data template for a destination that uses Snowflake must specify the location of the tables to which Amperity will write data, and then the action that will be performed against those tables.
+A data template for a destination that uses Snowflake must specify the location of the tables to which Amperity writes data, and then the action that will be performed against those tables.
 
 .. data-templates-snowflake-end
 

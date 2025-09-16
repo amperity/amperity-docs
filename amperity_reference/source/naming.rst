@@ -155,7 +155,7 @@ Destination names
 
 .. naming-destinations-start
 
-Use the name of the system to which Amperity will send data. Use title case and separate the name using an underscore (``_``), if needed.
+Use the name of the system to which Amperity sends data. Use title case and separate the name using an underscore (``_``), if needed.
 
 For example:
 

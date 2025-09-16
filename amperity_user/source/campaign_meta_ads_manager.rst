@@ -58,7 +58,7 @@ A |destination-name| destination works like this:
          :start-after: .. destination-meta-ads-manager-terms-of-service-start
          :end-before: .. destination-meta-ads-manager-terms-of-service-end
 
-      |destination-name| uses OAuth to grant access to Amperity. You will need to reauthorize OAuth if the token expires or is removed.
+      |destination-name| uses OAuth to grant access to Amperity. You need to reauthorize OAuth if the token expires or is removed.
 
    .. note::
 

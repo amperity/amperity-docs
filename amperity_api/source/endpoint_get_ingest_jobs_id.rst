@@ -158,7 +158,7 @@ Responses
 
 .. endpoint-get-ingest-jobs-id-responses-start
 
-A response from the **GET /ingest/jobs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /ingest/jobs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-ingest-jobs-id-responses-end
 

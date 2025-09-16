@@ -65,7 +65,7 @@ Build query
 
 .. sendto-vibes-build-query-start
 
-You will need to build a query that shapes data to the fields required by a |destination-name| recipient list. A recipient list is customizable, which may require a unique query for each recipient list.
+You need to build a query that shapes data to the fields required by a |destination-name| recipient list. A recipient list is customizable, which may require a unique query for each recipient list.
 
 You can do this in the following ways:
 

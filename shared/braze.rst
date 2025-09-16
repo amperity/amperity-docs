@@ -101,7 +101,7 @@ The following table describes the default `user profile fields <https://www.braz
 
 .. braze-custom-attributes-start
 
-Custom attributes in |destination-name| are represented by a set of custom-named fields. The names of these fields are determined by your brand. They may already exist in |destination-name|, in which case you will want to shape the output that is sent from Amperity to align to the names you already have.
+Custom attributes in |destination-name| are represented by a set of custom-named fields. The names of these fields are determined by your brand. They may already exist in |destination-name|, in which case shape the output that is sent from Amperity to align to the names you already have.
 
 The names of custom attributes that can be managed by Amperity are defined by your brand. The names are strings, may contain hyphens, spaces, or underscores, may include numbers, and may contain a mix of lowercase and uppercase letters. For example, custom attribute can have names that:
 
@@ -109,15 +109,15 @@ The names of custom attributes that can be managed by Amperity are defined by yo
 * Are exactly the same as Amperity standard output, such as "One and Done" or "L12M Monetary" (the "monetary" component of an RFM score), or "Early Repeat Purchaser".
 * Align to marketing goals and/or terminology that exists within your brand's segmentation strategy.
 
-Verify the names of custom attributes that will be sent to |destination-name| from Amperity. Amperity will add a custom attribute whenever there isn't a matching name.
+Verify the names of custom attributes that is sent to |destination-name| from Amperity. Amperity adds a custom attribute whenever there isn't a matching name.
 
-.. tip:: Avoid sending custom attributes as duplicates of default user profile fields. For example, birthdates should be sent to |destination-name| as a user profile field named "dob". If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created and the values in the "dob" field will not be updated.
+.. tip:: Avoid sending custom attributes as duplicates of default user profile fields. For example, birthdates should be sent to |destination-name| as a user profile field named "dob". If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created and the values in the "dob" field is not updated.
 
 .. important:: Your brand's list of custom attributes *should* be a list that is mostly static, remains stable over time, and is focused on your most valuable customers.
 
    Only update custom attributes for customers to which your brand is currently engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (with an opt-in status of true for phone numbers and/or email addresses).
 
-   This will help ensure that you are only updating custom attributes for your most valuable customers. Custom attributes will be updated only for those customers have a matching "external_id" or "braze_id" within |destination-name|.
+   This will help ensure that you are only updating custom attributes for your most valuable customers. Custom attributes is updated only for those customers have a matching "external_id" or "braze_id" within |destination-name|.
 
 .. braze-custom-attributes-end
 
@@ -135,7 +135,7 @@ Amperity tracks changes as they are sent to Braze and only sends list membership
 
 .. note:: Data points are part of the billing and pricing structure in your |destination-name| contract. Some data points are non-billable; many data points are billable.
 
-   Review the `lists of non-billable and billable data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/#data-points-1>`__ |ext_link|, and then review those lists against the attributes you will send to Braze from Amperity to understand which of those attributes are considered billable or non-billable data points.
+   Review the `lists of non-billable and billable data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/#data-points-1>`__ |ext_link|, and then review those lists against the attributes you sends to Braze from Amperity to understand which of those attributes are considered billable or non-billable data points.
 
 .. braze-data-points-end
 

@@ -100,7 +100,7 @@ Get details
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
-       The name of the product to which Amperity will send data: "Google Ads".
+       The name of the product to which Amperity sends data: "Google Ads".
 
        The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Google Ads" account.
 
@@ -116,9 +116,9 @@ Get details
           :alt: Detail two.
           :align: left
           :class: no-scaled-link
-     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity will create it.
+     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity creates it.
 
-       The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+       The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
 
        .. tip:: Set this value to "0" to remove all audience members.
 
@@ -296,7 +296,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Audience name**
-            - The name of an audience in |destination-name|. If the audience does not exist, Amperity will create it.
+            - The name of an audience in |destination-name|. If the audience does not exist, Amperity creates it.
 
           * - **Audience description**
             - An optional description of the audience.
@@ -307,10 +307,10 @@ Add destination
               .. note:: The customer ID must be 10 digits and may not contain dashes.
 
           * - **Customer product**
-            - The name of the product to which Amperity will send data. Choose "Google Ads".
+            - The name of the product to which Amperity sends data. Choose "Google Ads".
 
           * - **Membership duration**
-            - The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+            - The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
 
               .. tip:: Set this value to "0" to remove all audience members.
 

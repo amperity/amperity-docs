@@ -20,7 +20,7 @@ Cluster size distribution
 
 .. stitch-qa-query-cluster-size-distribution-start
 
-Use this query to understand the overall distribution of clusters. A good Stitch result will have an overwhelming majority of small clusters; however, there can be a long-tail of supersized clusters. The query defaults to using primary keys, but should be configured to use customer keys when they are available.
+Use this query to understand the overall distribution of clusters. A good Stitch result have an overwhelming majority of small clusters; however, there can be a long-tail of supersized clusters. The query defaults to using primary keys, but should be configured to use customer keys when they are available.
 
 .. stitch-qa-query-cluster-size-distribution-end
 

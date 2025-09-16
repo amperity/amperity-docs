@@ -167,7 +167,7 @@ Use an ordinal to append an integer to each semantic within an address group.
      - postal-2
      - postal-3
 
-This will create columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, **address_3** and so on and will keep each location intact.
+This creates columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, **address_3** and so on and will keep each location intact.
 
 .. semantics-profile-type-address-ordinals-end
 
@@ -214,7 +214,7 @@ A namespace appends a string to the **email** semantic. This approach provides a
 
 For example, a data source has two columns for email addresses: personal_email and work_email. Apply the **email** semantic to both columns, and then apply **email-primary** to the **personal_email** column and **email-alternate** to the **work_email** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -240,7 +240,7 @@ Apply ordinals to emails
 
 For example, a data source has two columns for email addresses: personal_email and work_email. Apply the **email** semantic to both columns, and then apply **email-1** to the **personal_email** column and **email-2** to the **work_email** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -506,7 +506,7 @@ Stitch will derive given names and surnames from **full-name** when a data sourc
 * Fields tagged with **given-name** and **surname** do not have explicit values
 * Fields cannot be tagged with **given-name** or **surname**
 
-When a table does not contain given names and/or surnames, values associated with **full-name** will not be available from the **Unified Coalesced** table for that data source, but values will be available from the **Unified Preprocessed Raw** table.
+When a table does not contain given names and/or surnames, values associated with **full-name** is not available from the **Unified Coalesced** table for that data source, but values will be available from the **Unified Preprocessed Raw** table.
 
 .. semantics-profile-type-names-derived-end
 
@@ -890,7 +890,7 @@ A namespace appends an string to the **phone** semantic. This approach provides 
 
 For example, a data source has three columns for phone numbers: personal_phone, mobile_phone, and work_phone. Apply the **phone** semantic to all columns, and then apply **phone-home** to the **personal_phone**, **phone-mobile** to the **mobile_phone** column, and **phone-work** to the **work_phone** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -918,7 +918,7 @@ An ordinal appends an integer to the **phone** semantic. This approach provides 
 
 For example, a data source has three columns for phone numbers: personal-phone, mobile-phone, and work-phone. Apply the **phone** semantic to all columns, and then apply **phone-1** to the **personal-phone**, **phone-2** to the **mobile-phone** column, and **phone-3** to the **work-phone** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -993,7 +993,7 @@ Domain SQL vs. feeds
 
 .. semantics-interactions-domain-sql-vs-feeds-start
 
-The most important decision to make when providing transaction records to Amperity is which method to use when applying semantic tags. You can do this directly from the **Feed Editor**, but more likely will need to use a custom domain table to shape the SQL prior to applying semantic tags.
+The most important decision to make when providing transaction records to Amperity is which method to use when applying semantic tags. You can do this directly from the **Feed Editor**, but more likely need to use a custom domain table to shape the SQL prior to applying semantic tags.
 
 Some things to consider when determining the best approach for applying semantic tags:
 
@@ -1030,7 +1030,7 @@ Customer records
 
 If customer records use foreign keys, such as **fk-[namespace]**, as semantic tags *and* the same types of fields exist within interaction records, apply those foreign key semantic tags to the corresponding fields in the interaction records.
 
-This will directly associate the customer records to the interaction records and will create stitched output that adds the Amperity ID to both record types.
+This will directly associate the customer records to the interaction records and creates stitched output that adds the Amperity ID to both record types.
 
 .. semantics-interactions-customer-records-end
 
@@ -1044,7 +1044,7 @@ Interaction records
 
 If interaction records use foreign keys, such as **fk-[namespace]**, as semantic tags and the same types of fields exist within customer records, apply those foreign key semantic tags to the corresponding fields in the customer records.
 
-This will directly associate the interaction records to the customer records and will create stitched output that adds the Amperity ID to both record types.
+This will directly associate the interaction records to the customer records and creates stitched output that adds the Amperity ID to both record types.
 
 In this scenario, be sure to verify Stitch output to look for the presence of clusters that are matching on this foreign key.
 
@@ -1252,7 +1252,7 @@ Use foreign keys to link identifiers in tables that contain interactions records
 
 .. tip:: Is there an appropriate foreign key that is already in use with customer records that are already made available to the Stitch process? Is this foreign key well-distributed across interaction records?
 
-If fields in a data source are unable to meet the requirements for using a foreign key, use **customer-id**. This will added the **customer_id** column to the **Unified Itemized Transactions** table.
+If fields in a data source are unable to meet the requirements for using a foreign key, use **customer-id**. This addsed the **customer_id** column to the **Unified Itemized Transactions** table.
 
 There can be only one customer ID per transaction.
 
@@ -1379,7 +1379,7 @@ Assign a unique separation key to each primary key to prevent clusters from bein
 
 .. caution:: This approach can result in the assignment of more than one Amperity ID for the same unique individual. For example, a customer shops at both ACME and ACME Deluxe and both data sources contain what would normally be scored as an exact match for profile (PII) data.
 
-   A separation key associated to the brands will create a cluster for each brand, despite the profile data matching well enough to score all of those records as belonging to the same customer.
+   A separation key associated to the brands creates a cluster for each brand, despite the profile data matching well enough to score all of those records as belonging to the same customer.
 
 .. semantics-key-separation-apply-to-brand-caution-end
 
@@ -1430,7 +1430,7 @@ Assign a unique separation key to each primary key to prevent clusters from bein
 When **sk-brand-acme** and **sk-brand-acme-deluxe** appear in the same cluster, they will be scored as non-matching and the records will be separated.
 
 * Records with the same brand share a separation key, but those values are guaranteed to be different because they are primary keys.
-* Records with different brands will have no non-**NULL** separation keys in common and will use the standard classifier.
+* Records with different brands have no non-**NULL** separation keys in common and uses the standard classifier.
 
 .. semantics-key-separation-apply-to-brand-steps-end
 

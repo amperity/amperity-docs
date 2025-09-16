@@ -73,7 +73,7 @@ A very simple example of calculating nearest stores starts with a common table e
 
 .. calculate-nearest-store-example-caution-start
 
-.. caution:: This example is appropriate for use with small, static data sources, or for defining a proof of concept for early iteration that will require a more complex workflow.
+.. caution:: This example is appropriate for use with small, static data sources, or for defining a proof of concept for early iteration that requires a more complex workflow.
 
 .. calculate-nearest-store-example-caution-end
 

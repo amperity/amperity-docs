@@ -252,7 +252,7 @@ This section contains examples of queries that you can add to your tenant:
 * :ref:`queries-example-totals-by-brand`
 * :ref:`queries-example-transactions-by-day`
 
-.. important:: These queries are not meant to be copy/paste queries. Use them as examples. Most will require some customization to be used effectively within your tenant.
+.. important:: These queries are not meant to be copy/paste queries. Use them as examples. Most requires some customization to be used effectively within your tenant.
 
 .. queries-examples-end
 
@@ -1185,7 +1185,7 @@ Use the **WHERE** clause to set the maximum threshold for product affinity:
 
    WHERE ranking < some_value
 
-For example, if the threshold is "10000000" then a customer is more than ten millionth in product affinity, then that customer will not be included in the ranking.
+For example, if the threshold is "10000000" then a customer is more than ten millionth in product affinity, then that customer is not included in the ranking.
 
 .. queries-example-rank-by-affinity-end
 
