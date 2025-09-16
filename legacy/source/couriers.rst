@@ -111,7 +111,7 @@ Load settings define the location of a data source, it's type, and how it should
 
 .. couriers-files-load-settings-context-start
 
-Each filedrop load setting must specify the file pattern, which is the path to the file, its filename, a date stamp, and a file extension. The rest of the load settings block must match, i.e. the content type for a "some-file.csv" must be "text/csv". An archive must specify the archive *and* the file contained within it. If the file is archived as "some-file.zip" then the ``"object/type"`` would be "archive" and the content type of the file within it would be "text/csv".
+Each filedrop load setting must specify the file pattern, which is the path to the file, its filename, a date stamp, and a file extension. The rest of the load settings block must match and the content type for a "some-file.csv" must be "text/csv". An archive must specify the archive *and* the file contained within it. If the file is archived as "some-file.zip" then the ``"object/type"`` would be "archive" and the content type of the file within it would be "text/csv".
 
 If an archive contains only a single file *or* if all the files within the archive have the same file tag, content type, and other settings, then ``"archive/contents"`` can be omitted and ``"object/land-as"`` can be specified instead. The files within the archive will all use the specified ``"object/land-as"`` settings.
 

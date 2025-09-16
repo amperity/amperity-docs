@@ -27,7 +27,7 @@ Has not purchased
    :align: left
    :class: no-scaled-link
 
-After you specify a date range you may apply filters to focus in on specific products, brands, channels, and stores, i.e. "who hasn't purchased a specific product by a specific brand from a specific channel or store." For example, return a list of customers who have not purchased a wool product online during the previous 3 months.
+After you specify a date range you may apply filters to focus in on specific products, brands, channels, and stores to discover"who hasn't purchased a specific product by a specific brand from a specific channel or store. For example, return a list of customers who have not purchased a wool product online during the previous three months.
 
 .. attribute-purchase-behavior-has-not-purchased-end
 

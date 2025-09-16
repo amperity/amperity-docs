@@ -167,7 +167,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - Send this list of customers to your favorite email marketing tool (i.e. Attentive) on the **Campaigns** page.
+     - Send this list of customers to your favorite email marketing tool, such as Attentive or Braze, on the **Campaigns** page.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
@@ -240,7 +240,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
           :alt: Step 3.
           :align: center
           :class: no-scaled-link
-     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1st, 2020 or you may choose a relative date like "today - 4 years".
+     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2025 or you may choose a relative date like "today - 4 years".
 
        A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer. 
 

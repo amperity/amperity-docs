@@ -741,6 +741,8 @@ Supersized clusters
    :start-after: .. term-supersized-cluster-start
    :end-before: .. term-supersized-cluster-end
 
+.. vale off
+
 .. configure-stitch-advanced-configuration-supersized-clusters-example-start
 
 A supersized cluster is created when multiple transitive connections are present. For example, a couple named Mary Johnson and Jeffrey Johnson with the following records:
@@ -759,6 +761,8 @@ These records block together in the following ways:
 All four groups of records transitively connect into a single connected cluster with a size of 100.
 
 .. configure-stitch-advanced-configuration-supersized-clusters-example-end
+
+.. vale on
 
 **What to look for**
 

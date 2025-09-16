@@ -64,7 +64,7 @@ Get details
 
 #. The email address the customer uses to access |source-name|.
 #. The customer's |source-name| API token.
-#. The subdomain for the customer's |source-name| account, e.g. "acme" (in ``acme.zendesk.com``).
+#. The subdomain for the customer's |source-name| account. For example: "acme" (in ``acme.zendesk.com``).
 
 .. source-zendesk-get-details-end
 

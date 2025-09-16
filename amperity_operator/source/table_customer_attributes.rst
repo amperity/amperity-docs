@@ -413,7 +413,7 @@ The **Customer Attributes** table can be extended to provide status for customer
 
 Customer states are typically defined as "new", "active", "lapsed", "dormant", and "prospect" and are based on purchase behaviors assigned across a 5-year window. A customer who has purchased within the previous 365 days (1 year) is assigned to "active" and within the previous 730 days (2 years) is assigned to "lapsed". A customer who has not purchased within 2 years is assigned to "dormant".
 
-A customer who has never interacted with your brand, i.e. "never made a purchase" is assigned the value of "prospect".
+A customer who has never interacted with your brand--never made a purchase--is assigned the value of "prospect".
 
 .. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it will be included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
 

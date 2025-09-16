@@ -871,6 +871,8 @@ RFM
 
 .. standard-output-transaction-attributes-extended-rfm-note-end
 
+.. vale off
+
 .. standard-output-transaction-attributes-extended-rfm-table-start
 
 .. list-table::
@@ -880,10 +882,10 @@ RFM
    * - Attributes
      - Description
    * - **L12M RFM Score**
-     - The RFM score for the customer based on transactions that occurred within the last 12 months. The RFM score is represented as an integer between "0" and "999" and is concatenated using the individual recency, frequency, and monetary scores or is **NULL** if the customer has zero purchases within the last 12 months.
+     - The RFM score for the customer is based on transactions made within the last 12 months. The RFM score is represented as an integer between "0" and "999" and is concatenated using the individual recency, frequency, and monetary scores or is **NULL** if the customer has zero purchases within the last 12 months.
 
    * - **L12M Recency**
-     - The recency score for customer transactions that occurred within the last 12 months. The recency score is represented as an integer between "0" and "9". Each integer represents 10%:
+     - The recency score for customer transactions made within the last 12 months. The recency score is represented as an integer between "0" and "9". Each integer represents 10%:
 
        * 0: 0-10th percentile
        * 1: 10-20th percentile
@@ -897,7 +899,7 @@ RFM
        * 9: 90-100th percentile
 
    * - **L12M Frequency**
-     - The frequency score for customer transactions that occurred within the last 12 months. The frequency score is represented as an integer between "0" and "9". Each integer represents 10%:
+     - The frequency score for customer transactions made within the last 12 months. The frequency score is represented as an integer between "0" and "9". Each integer represents 10%:
 
        * 0: 0-10th percentile
        * 1: 10-20th percentile
@@ -910,7 +912,7 @@ RFM
        * 8: 80-90th percentile
        * 9: 90-100th percentile
    * - **L12M Monetary**
-     - The monetary score for customer transactions that occurred within the last 12 months. The monetary score is represented as an integer between "0" and "9". Each integer represents 10%:
+     - The monetary score for customer transactions made within the last 12 months. The monetary score is represented as an integer between "0" and "9". Each integer represents 10%:
 
        * 0: 0-10th percentile
        * 1: 10-20th percentile
@@ -924,6 +926,8 @@ RFM
        * 9: 90-100th percentile
 
 .. standard-output-transaction-attributes-extended-rfm-table-end
+
+.. vale on
 
 
 .. _standard-output-unified-itemized-transactions:

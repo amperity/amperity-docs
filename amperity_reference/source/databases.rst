@@ -989,7 +989,7 @@ Some use cases require a database table to have different information in a datab
 #. Set **Build Mode** to "Custom SQL".
 #. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 
-   .. important:: The custom definition must refer to the original table, i.e. “must refer to the table that is being overridden”. In some cases, this requires using a placeholder reference. For example:
+   .. important:: The custom definition must refer to the original table, that is “must refer to the table that is being overridden”. In some cases, this requires using a placeholder reference. For example:
 
       .. code-block:: sql
 
@@ -1960,7 +1960,7 @@ Use cardinality and uniqueness to help guide the creation of well-behaved JOIN o
 
 * Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
 * Columns with low uniqueness values as keys on both sides of a **JOIN** operation will run more slowly and is less likely to return the desired results.
-* Empty fields (i.e. **NULL** values) are counted as duplicates, i.e. "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
+* Empty fields, including **NULL** values, are counted as duplicates, that is "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. databases-database-howto-explore-example-data-context-end
 
@@ -2345,7 +2345,7 @@ In addition to the primary customer 360 database, the **Customer 360** page may 
 
 .. databases-database-howto-view-all-databases-other-start
 
-Other databases may be created to support any desired use case. Each database has a specific schema (i.e. collection of tables and attributes). This is called a data model. The data model and individual database tables Amperity provides should make data easy to understand and explore for its specific use case and client.
+Other databases may be created to support any desired use case. Each database has a specific schema, which is a collection of tables and attributes. This is called a data model. The data model and individual database tables Amperity provides should make data easy to understand and explore for its specific use case and client.
 
 .. databases-database-howto-view-all-databases-other-end
 

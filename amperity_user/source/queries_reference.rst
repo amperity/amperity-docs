@@ -1260,7 +1260,7 @@ Return percentiles
 
 .. queries-example-return-percentiles-start
 
-Return 10th percentiles:
+Return tenth percentiles:
 
 .. code-block:: sql
    :linenos:

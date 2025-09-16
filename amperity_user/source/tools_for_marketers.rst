@@ -49,7 +49,7 @@ Common marketing workflows use a combination of segment insights and predictive 
 * Use segment insights to build high-value segments.
 * Use recommended audience sizes to find the right number of customers for your campaign.
 * Perform opportunity sizing on a per-segment basis.
-* Build segments by customer value, i.e. "top 1%", "top 5%", "top 10%", etc.
+* Build segments by customer value. For example: "top 1%", "top 5%", or "top 10%".
 * Use predicted modeling attributes to build campaigns based on future customer behavior, such as for predicted customer lifetime value (pCLV), churn propensity, and next best product.
 * Review customer behavior by lifecycle status, such as "new", "active", "at risk", or "churned".
 

@@ -335,7 +335,7 @@ Answers will include suggestsions similar to:
 
 #. Preferred Channel or Brand:
 
-   Focus on customers who prefer a specific purchase channel (e.g., online vs. in-store) or brand, if your new jeans offerings are exclusive or more prominent in certain channels or under specific brands.
+   Focus on customers who prefer a specific purchase channel or brand, if your new jeans offerings are exclusive or more prominent in certain channels or under specific brands.
 
 #. Contactability:
 
@@ -343,7 +343,7 @@ Answers will include suggestsions similar to:
 
 #. Geographic Proximity:
 
-   Filter for customers living in regions where jeans sales or promotions are planned or more likely (e.g., areas with upcoming in-store events).
+   Filter for customers living in regions where jeans sales or promotions are planned or more likely and in areas with upcoming in-store events.
 
 #. Previous Buyers of Premium Jeans:
 

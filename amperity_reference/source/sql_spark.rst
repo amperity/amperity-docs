@@ -1664,7 +1664,9 @@ Window functions
 
 .. sql-spark-window-functions-start
 
-Window functions are a way to evaluate rows around each row as it is being evaluated. There's great flexibility in controlling how the windows are made (i.e. which other rows to consider), but for most uses I've seen in Amperity databases, we use a relatively small subset to group the rows in the data set by the unique values of some field (i.e. like a **GROUP BY**) and then select a row from that group. In addition to great flexibility on which rows to include in a group, there's a powerful set of functions you can run across the group as well, and again the portions we generally use in Amperity are relatively small. So, you can use the info below for guidelines of what to write, and can learn more of the expressiveness available at your leisure. 
+Window functions are a way to evaluate rows around each row as it is being evaluated. Window functions are flexible for controlling how a window is made and which rows to consider.
+
+Most window functions only require a small subset and use **GROUP BY** to group using the unique values of a specific field, and then selecting a row from that group.
 
 .. caution:: From a performance point of view, window functions tend to be relatively performant when the **OVER()** function includes a **PARTITION BY** clause over a well-distributed field.
 

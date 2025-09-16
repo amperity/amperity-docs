@@ -157,9 +157,9 @@ Datetime formats in Amperity use a combination of symbols that are described in 
        * yyyy outputs 2001
 
    * - **D**
-     - The day of the year. For example, January 18th is 18 and February 1st is 32.
+     - The day of the year. For example, the eighteenth day of January is 18 and the first day of February is 32.
    * - **M**
-     - The month of the year. For example: August, Aug, or 8. Use text when 3 (or more) pattern characters are present, otherwise use numbers:
+     - The month of the year. For example: August, Aug, or 8. Use text when three or more pattern characters are present, otherwise use numbers:
 
        * M outputs 8
        * MM outputs 08
@@ -167,7 +167,7 @@ Datetime formats in Amperity use a combination of symbols that are described in 
        * MMMM outputs August
 
    * - **d**
-     - The day of the month. For example, January 18th is 18.
+     - The day of the month. For example, the eighteenth day of January is 18.
    * - **H**
      - The hour of the day, between 0-23. 1:00 PM is 13.
 
@@ -932,7 +932,7 @@ You may edit the name of the domain table from the **Feed Editor**.
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
 #. Under **Domain Table** select **Edit**. This allows the text box that contains the name of the domain table to be editable.
-#. Enter the new name for the domain table with the pattern <source-name>:<feed-name>, e.g. "Customers:Online".
+#. Enter the new name for the domain table with the pattern <source-name>:<feed-name>. For example: "Customers:Online".
 #. Click **Activate**.
 
 .. feeds-configure-edit-domain-table-name-steps-end

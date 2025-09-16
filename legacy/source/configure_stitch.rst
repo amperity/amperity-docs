@@ -1102,10 +1102,14 @@ A supersized cluster is a cluster of records that is discovered during the Stitc
 
 A supersized cluster is created when multiple transitive connections are present across clusters of records. For example, individuals named Mary Johnson and Jeffrey Johnson with the following records:
 
+.. vale off
+
 #. Mary Johnson, maryjohnson @gmail.com, 50 1st Avenue, New York, NY, with 50 connected records.
 #. Jeffrey Johnson, jeffjohnson @gmail.com, 50 1st Avenue, New York, NY, with 25 connected records.
 #. Mary Johnson, mjohnson50 @gmail.com, 50 1st Avenue, New York, NY, with 17 connected records.
 #. Jeffrey Johnson, mjohnson50 @gmail.com, 50 1st Avenue, New York, NY, with 8 connected records.
+
+.. vale on
 
 These records block together in the following ways:
    

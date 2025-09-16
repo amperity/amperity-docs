@@ -260,7 +260,7 @@ The use of the subscriber key within Amperity will vary, depending on if the sub
           :class: no-scaled-link
      - When a subscriber key is available, ensure that it is made available to the **Customer 360**, **Queries**, and **Segments** pages and that it may be included in queries and segments that will be sent to |destination-name|.
 
-       Use a customer key semantic tag (e.g. "fk-salesforce-subscriber key") to identify the subscriber key in your data sources.
+       Use a customer key semantic tag, such as "fk-salesforce-subscriber key", to identify the subscriber key in your data sources.
 
        .. tip:: Use an email address as the subscriber key if the subscriber key identifier is unavailable.
 

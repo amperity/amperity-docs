@@ -49,6 +49,8 @@ RFM percentiles
 
 Each RFM score is split into ten percentile groups. The lowest percentile is 1 and the highest percentile is 10. Each percentile represents 10% of the customers who belong to that segment.
 
+.. vale off
+
 * 10 represents the 90-100th percentile and the customers who have the highest recency, frequency, or monetary scores.
 * 9 represents the 80-90th percentile
 * 8 represents the 70-80th percentile
@@ -59,6 +61,8 @@ Each RFM score is split into ten percentile groups. The lowest percentile is 1 a
 * 3 represents the 20-30th percentile
 * 2 represents the 10-20th percentile
 * 1 represents the 0-10th percentile and the customers who have the lowest recency, frequency, or monetary scores.
+
+.. vale on
 
 .. tip:: Combine percentiles to build larger groups of customers. For example 9 and 10 together represent the "top 20%" while 8, 9, and 10 represent the "top 30%".
 

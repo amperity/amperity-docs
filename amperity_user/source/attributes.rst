@@ -1381,57 +1381,9 @@ RFM
    :start-after: .. data-tables-transaction-attributes-extended-optimize-start
    :end-before: .. data-tables-transaction-attributes-extended-optimize-end
 
-.. attributes-interactions-transactions-extended-rfm-table-start
-
-.. list-table::
-   :widths: 200 400
-   :header-rows: 1
-
-   * - Attributes
-     - Description
-   * - **L12M RFM score**
-     - The RFM score for the customer based on transactions that occurred within the last 12 months. The RFM score is represented as an integer between ``0`` and ``999`` and is concatenated using the individual recency, frequency, and monetary scores or is **NULL** if the customer has zero purchases within the last 12 months.
-   * - **L12M recency**
-     - The recency score for customer transactions that occurred within the last 12 months. The recency score is represented as an integer between ``0`` and ``9``. Each integer represents 10%:
-
-       * 0: 0-10th percentile
-       * 1: 10-20th percentile
-       * 2: 20-30th percentile
-       * 3: 30-40th percentile
-       * 4: 4-50th percentile
-       * 5: 5-60th percentile
-       * 6: 60-70th percentile
-       * 7: 70-80th percentile
-       * 8: 80-90th percentile
-       * 9: 90-100th percentile
-   * - **L12M frequency**
-     - The frequency score for customer transactions that occurred within the last 12 months. The frequency score is represented as an integer between ``0`` and ``9``. Each integer represents 10%:
-
-       * 0: 0-10th percentile
-       * 1: 10-20th percentile
-       * 2: 20-30th percentile
-       * 3: 30-40th percentile
-       * 4: 4-50th percentile
-       * 5: 5-60th percentile
-       * 6: 60-70th percentile
-       * 7: 70-80th percentile
-       * 8: 80-90th percentile
-       * 9: 90-100th percentile
-   * - **L12M monetary**
-     - The monetary score for customer transactions that occurred within the last 12 months. The monetary score is represented as an integer between ``0`` and ``9``. Each integer represents 10%:
-
-       * 0: 0-10th percentile
-       * 1: 10-20th percentile
-       * 2: 20-30th percentile
-       * 3: 30-40th percentile
-       * 4: 4-50th percentile
-       * 5: 5-60th percentile
-       * 6: 60-70th percentile
-       * 7: 70-80th percentile
-       * 8: 80-90th percentile
-       * 9: 90-100th percentile
-
-.. attributes-interactions-transactions-extended-rfm-table-end
+.. include:: ../../amperity_user/source/standard_output.rst
+   :start-after: .. standard-output-transaction-attributes-extended-rfm-table-start
+   :end-before: .. standard-output-transaction-attributes-extended-rfm-table-end
 
 
 .. _attributes-predicted:

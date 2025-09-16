@@ -27,7 +27,7 @@ Azure OpenAI Service has the following data sharing policies:
 * No data is available to or shared with other customers
 * No data is available to OpenAI
 * No data is used to improve OpenAI models
-* No data is used to improve any Microsoft or 3rd party products or services
+* No data is used to improve any Microsoft or third-party products or services
 
 You can read more details on the Azure OpenAI Service data and privacy policy `here <https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal>`__ |ext_link|.
 

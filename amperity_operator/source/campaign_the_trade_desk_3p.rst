@@ -1,8 +1,8 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: The Trade Desk 3rd-party Marketplace
-.. |plugin-name| replace:: "The Trade Desk 3rd-party Marketplace"
+.. |destination-name| replace:: The Trade Desk 3P Marketplace
+.. |plugin-name| replace:: "The Trade Desk 3P Marketplace"
 .. |credential-type| replace:: "tradedesk-3rd-party"
 .. |required-credentials| replace:: "advertiser ID", "advertiser secret", "provider ID", and "platform API token"
 .. |what-send| replace:: email addresses, EUID, or UID2 tokens
@@ -15,18 +15,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send campaigns to The Trade Desk 3rd-party Marketplace.
+        Configure Amperity to send campaigns to The Trade Desk 3P Marketplace.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send campaigns to The Trade Desk 3rd-party Marketplace.
+        Configure Amperity to send campaigns to The Trade Desk 3P Marketplace.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure campaigns for The Trade Desk 3rd-party Marketplace
+        Configure campaigns for The Trade Desk 3P Marketplace
 
 ==============================================================
-Configure campaigns for The Trade Desk 3rd-party Marketplace
+Configure campaigns for The Trade Desk 3P Marketplace
 ==============================================================
 
 .. include:: ../../shared/terms.rst
@@ -117,7 +117,7 @@ Configure credentials
    :start-after: .. credential-snappass-start
    :end-before: .. credential-snappass-end
 
-**To configure credentials for The Trade Desk 3rd-party**
+**To configure credentials for The Trade Desk 3P**
 
 .. campaign-the-trade-desk-3p-credentials-steps-start
 
@@ -196,7 +196,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for The Trade Desk 3rd-party**
+**To add a destination for The Trade Desk 3P**
 
 .. campaign-the-trade-desk-3p-add-steps-start
 

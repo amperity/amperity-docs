@@ -3021,7 +3021,7 @@ Percentiles by 10
 
 .. sql-presto-function-ntile-example-percentiles-start
 
-The following example shows how to return 10th percentiles.
+The following example shows how to return tenth percentiles.
 
 .. code-block:: sql
    :linenos:
@@ -3049,7 +3049,7 @@ Percentiles by 4
 
 .. sql-presto-function-ntile-example-percentiles-start
 
-The following example shows how to return the 25th, median, and 75th percentiles.
+The following example shows how to return the twenty-fifth, median, and seventy-fifth percentiles.
 
 .. code-block:: sql
    :linenos:
@@ -3432,7 +3432,7 @@ REPLACE()
 
 Use the **REPLACE()** function to remove and/or replace all instances of ``search`` from ``string``. There are two variants:
 
-* Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``, i.e. "replace string with nothing".
+* Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``.
 * Use **REPLACE(string, search, replace)** to replace all instances of ``search`` from ``string`` with ``replace``.
 
 .. sql-presto-function-replace-end

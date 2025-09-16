@@ -1528,6 +1528,8 @@ Graph partitions
    :start-after: .. tooltip-stitch-config-graph-partitions-start
    :end-before: .. tooltip-stitch-config-graph-partitions-end
 
+.. vale off
+
 .. configure-stitch-advanced-profile-supersized-clusters-example-start
 
 A supersized cluster typically results from transitive connections spanning what should be unrelated records. For example, individuals named Mary Johnson and Jeffrey Johnson with the following records:
@@ -1546,6 +1548,8 @@ These records are grouped together in the following ways:
 All four groups of records transitively connect into a single connected cluster with a size of 100.
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-end
+
+.. vale on
 
 .. configure-stitch-advanced-profile-supersized-clusters-config-start
 
