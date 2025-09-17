@@ -281,11 +281,11 @@ Airtable works like a spreadsheet but gives you the power of a database to organ
 
 .. vale off
 
-**All Opted In Emails**
+**All Opted-In Emails**
 
 .. term-all-opted-in-emails-table-start
 
-The **All Opted In Emails** table has all opted-in email addresses and associated Amperity IDs. Use the **Email Opt Status** table to build this table, after which you can extend it to support brands, regions, email programs, and language preferences.
+The **All Opted-In Emails** table has all opted-in email addresses and associated Amperity IDs. Use the **Email Opt Status** table to build this table, after which you can extend it to support brands, regions, email programs, and language preferences.
 
 .. term-all-opted-in-emails-table-end
 
