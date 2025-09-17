@@ -426,7 +426,7 @@ The address standardization data asset is available from an Amazon S3 bucket nam
 
 .. data-asset-address-standardization-steps-start
 
-After the address standardization data asset is added, use all three fields--**before**, **convert**, and **type**--as the primary key.
+After adding the address standardization data asset, use all three fields--**before**, **convert**, and **type**--as the primary key.
 
 Add a passthrough table to your customer 360 database named **LookupTables AddressStandardization**, and then run your customer 360 database to build the **LookupTables AddressStandardization** table.
 
@@ -488,7 +488,7 @@ The most important column is **gender_name_ratio**, which describes what proport
 
 .. data-asset-gender-name-ratios-steps-start
 
-After the **gender_name_ratios** data asset is added, use **given_name** as the primary key.
+After adding the **gender_name_ratios** data asset, use **given_name** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -606,7 +606,7 @@ The country lookup data asset provides a set of standardized names and codes for
 
 .. data-asset-lookup-table-row-steps-start
 
-After the country lookups data asset is added, use **country_name** and **country_code** as the primary key.
+After adding the country lookups data asset, use **country_name** and **country_code** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -630,7 +630,7 @@ The country lookup data asset provides a set of standardized names and codes for
 
 .. data-asset-lookup-table-usa-steps-start
 
-After the United States lookup data asset is added, use a combination of **US_State_Territory_Name**, **USPS_Code**, and **ISO_Code_2** as the primary key.
+After adding the United States lookup data asset, use a combination of **US_State_Territory_Name**, **USPS_Code**, and **ISO_Code_2** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -661,7 +661,7 @@ The zip codes lookup data asset provides a list of zip codes that:
 
 .. data-asset-lookup-table-zip-steps-start
 
-After the zip codes lookup data asset is added, use **zip** as the primary key.
+After adding the zip codes lookup data asset, use **zip** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -684,7 +684,7 @@ The normalization for United States data asset provides a list of long and abbre
 
 .. data-asset-lookup-table-normalization-usa-steps-start
 
-After the United States normalization data asset is added, use **US_State_Abbrev** and **US_State_Long** as the primary key.
+After adding the United States normalization data asset, use **US_State_Abbrev** and **US_State_Long** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
