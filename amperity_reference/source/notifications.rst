@@ -35,11 +35,11 @@ Use the recent activity pane to learn more about the state of workflows that are
 
 .. notifications-sections-start
 
-This topic is broken into the following sections:
+Review the following sections:
 
 #. The first section describes :ref:`notification types <notifications-types>` -- :ref:`Running <notifications-type-running>`, :ref:`Completed <notifications-type-completed>`, :ref:`Warnings <notifications-type-warnings>`, and :ref:`Error <notifications-type-errors>` -- and describes what you should expect from each notification type as they appear in the recent activity pane.
 
-   This section also describes :ref:`the fields that are shown in notifications <notifications-fields>`, such as links to validation reports and workflows, job, trace, IDs for use with troubleshooting, and status indicators, such as the amount of time a workflow ran.
+   :ref:`Fields are shown in notifications <notifications-fields>`, such as links to validation reports and workflows, job, trace, IDs for use with troubleshooting, and status indicators, such as the amount of time a workflow ran.
 
 #. The second section describes the notifications that appear within individual pages in the Amperity user interface. These sections are listed alphabetically by page: :ref:`Campaign <notifications-campaigns>`, :ref:`Database <notifications-databases>`, :ref:`Orchestrations <notifications-orchestrations>`, :ref:`Queries <notifications-queries>`, :ref:`Sources <notifications-sources>`, :ref:`Stitch reports <notifications-stitch-reports>`, and :ref:`Stitch runs <notifications-stitch-runs>`.
 
@@ -69,8 +69,6 @@ All notifications within the recent activity pane fall into one of the following
 .. important:: Notifications fall into general behaviors, but all notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of data sources, feeds, couriers, tables, databases, queries, orchestrations, destinations, and campaigns appears in the notifications.
 
    If there is an error, such as a processing error related to a specific column within a custom table, the notification contains the names you chose for the custom table and also for the columns within that table.
-
-   This topic details what you should expect to see within your tenant, but it is not possible to know in advance the specific notifications that you may experience.
 
    If you are unable to resolve a warning or an error using workflow actions, please contact Amperity support.
 
@@ -257,7 +255,7 @@ Notification fields
      - Is a job that processes Spark SQL queries related to the Stitch process and to building databases.
    * - **Stitch metrics**
      - Stitch
-     - These metrics displays the tenant, the time at which the job started, the ID for the Stitch report, the Stitch ID, the collapsed ID count, related  pairs count, and filtered related pair count.
+     - These metrics display the tenant, the time at which the job started, the ID for the Stitch report, the Stitch ID, the collapsed ID count, related pairs count, and filtered related pair count.
    * - **Stitch report**
      - Stitch
      - A Stitch report displays cluster graphs for individuals associated with the Amperity ID.
@@ -683,7 +681,7 @@ How-tos
 
 .. notifications-how-tos-start
 
-This section describes tasks that are available to notifications:
+Tasks available to notifications:
 
 * :ref:`Open the Workflows page <notifications-open-workflow-tab>`
 * :ref:`Resolve workflow errors <notifications-resolve-workflow-errors>`
@@ -708,7 +706,7 @@ You should resolve warnings and errors from the **Workflows** page.
 
 #. On the recent activity pane, click **More** for a notification with a warning or an error.
 #. Click **View Workflow**. This opens the **Workflows** page to the workflow for this notification.
-#. Find, and then open, the rows that contain warnings and/or errors, and then work to resolve them.
+#. Find, and then open, the rows that contain warnings or errors, and then work to resolve them.
 
    .. tip:: Use the provided workflow actions to quickly resolve an error.
 

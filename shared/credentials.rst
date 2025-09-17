@@ -7,7 +7,7 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
-This topic contains credentials information that is shared across all credentials steps. The pathway into sources is different from destinations. Some credentials -- Amazon S3, for example -- will quickly have bespoke steps. Keep those either in the source/destination topics (if they are unique) OR use a shared file like /shared/amazon_s3 to ensure reusability.
+Credentials information that is shared across all credentials steps. The pathway into sources is different from destinations. Some credentials -- Amazon S3, for example -- will quickly have bespoke steps. Keep those either in the source/destination topics (if they are unique) OR use a shared file like /shared/amazon_s3 to ensure reusability.
 
 
 **CREDENTIALS - INTRO, SOURCES & DESTINATIONS**

@@ -23,7 +23,7 @@ File format: DAT
 
 .. format-dat-important-start
 
-.. important:: This topic exists to show that Amperity is capable of collecting data from non-standard data sources, in addition to handling Apache Avro, Apache Parquet, CSV, JSON, NDJSON, PSV, TSV, and XML files.
+.. important:: Amperity is capable of collecting data from non-standard data sources, in addition to handling Apache Avro, Apache Parquet, CSV, JSON, NDJSON, PSV, TSV, and XML files.
 
 .. format-dat-important-end
 
@@ -103,7 +103,7 @@ The following example shows an ingest query that parses fields from a DAT file. 
 
 .. format-dat-pull-ingest-queries-important-start
 
-.. important:: Verify the fields that are parsed from the DAT file to ensure they contain correct values and have column names that represent the values they contain. In addition, be sure to verify that the feed is able to apply semantic tags to customer records and/or interactions records, and that the data is represented correctly downstream within Amperity by Stitch, within the customer 360 database, and as the data may be used within queries and segments.
+.. important:: Verify the fields that are parsed from the DAT file to ensure they contain correct values and have column names that represent the values they contain. In addition, be sure to verify that the feed is able to apply semantic tags to customer records and interactions records, and that the data is represented correctly downstream within Amperity by Stitch, within the customer 360 database, and as the data may be used within queries and segments.
 
 .. format-dat-pull-ingest-queries-important-end
 

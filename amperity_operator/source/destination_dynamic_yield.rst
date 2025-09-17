@@ -32,7 +32,7 @@ Configure destinations for Dynamic Yield
 
 .. destination-dynamic-yield-s3-or-sftp-start
 
-.. note:: This topic explains how to configure Amperity to send data to a password-protected Amazon S3 bucket that is managed by |destination-name|. You must configure |destination-name| to send data to an `Amazon S3 <https://support.dynamicyield.com/hc/en-us/articles/360038581394-Product-Feeds#product-feeds-0-0>`__ |ext_link| bucket that is managed from |destination-name|.
+.. note:: Configure Amperity to send data to a password-protected Amazon S3 bucket managed by |destination-name|. You must configure |destination-name| to send data to an `Amazon S3 <https://support.dynamicyield.com/hc/en-us/articles/360038581394-Product-Feeds#product-feeds-0-0>`__ |ext_link| bucket that is managed from |destination-name|.
 
 .. destination-dynamic-yield-s3-or-sftp-end
 

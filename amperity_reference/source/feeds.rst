@@ -356,7 +356,7 @@ Apply a similar pattern to every data source your tenant chooses to bring into A
 
 .. tip:: Use semantic tags to define consistency across all of the data sources that your brand chooses to make available to Amperity.
 
-   Many brands often choose to provide a wide range of data sources, including those with quality and/or completeness issues; applying semantic tags to all data sources, including lower quality and/or incomplete data sources, makes them usable for building complete and accurate customer profiles.
+   Many brands often choose to provide a wide range of data sources, including those with quality or completeness issues; applying semantic tags to all data sources, including lower quality or incomplete data sources, makes them usable for building complete and accurate customer profiles.
 
 .. feeds-semantic-tags-important-end
 
@@ -432,7 +432,7 @@ The **Sources** page shows the status of all feeds, including when they last ran
 
 .. feeds-howtos-list-start
 
-This section describes individual tasks that are related to managing feeds:
+Tasks that are related to managing feeds:
 
 * :ref:`Activate feed <feeds-activate>`
 * :ref:`Add column <feeds-edit-column-add>`
@@ -851,7 +851,7 @@ Configure feed schema
 
 A feed defines the schema for that data source, associates semantic tags with specific columns in the data, and assigns a primary key. A feed must be activated, after which the feed loads the data to a domain table. A feed that contains customer records for PII data must be made available to the Stitch process.
 
-If changes are made to a feed and/or the data schema in the data source itself changes, the feed must reload the data. In some cases, this also requires the domain table itself be purged, and then rebuilt upon feed reactivation.
+If changes are made to a feed or the data schema in the data source itself changes, the feed must reload the data. In some cases, this also requires the domain table itself be purged, and then rebuilt upon feed reactivation.
 
 .. feeds-configure-feed-schema-end
 
@@ -1119,7 +1119,7 @@ Change primary keys
 
 .. feeds-edit-change-primary-key-about-start
 
-A primary key may be updated in situations that allow for better associations with other data sources and/or situations that result in improvements to the quality of the identity resolution process.
+A primary key may be updated in situations that allow for better associations with other data sources or situations that result in improvements to the quality of the identity resolution process.
 
 Changes to the primary key requires truncating data from the domain table upon feed reactivation.
 
@@ -1341,7 +1341,7 @@ Set last updated field
 
 .. feeds-set-last-updated-field-start
 
-Amperity requires each feed to specify a field that describes when each record was last updated. If multiple records in the incoming data and/or the existing domain table have the same primary key, the record with the most recent "last updated" field will be retained. This may be associated with a field that has a datetime field type, or an integer (such as for unix timestamps).
+Amperity requires each feed to specify a field that describes when each record was last updated. If multiple records in the incoming data or the existing domain table have the same primary key, the record with the most recent "last updated" field will be retained. This may be associated with a field that has a datetime field type, or an integer (such as for unix timestamps).
 
 .. note:: Amperity does not use a field with a date data type because that value is not granular enough to determine priority.
 

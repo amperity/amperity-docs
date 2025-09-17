@@ -20,7 +20,7 @@ How-tos
 
 .. segments-how-tos-start
 
-This section describes tasks related to building segments in Amperity:
+Tasks related to building segments in Amperity:
 
 .. segments-how-tos-end
 

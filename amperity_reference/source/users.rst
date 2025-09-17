@@ -54,7 +54,11 @@ Before a user can log into Amperity they must be added and a policy must be assi
 
 .. settings-users-add-sso-start
 
+.. vale off
+
 .. TODO: Same as in /amperity_reference/sources/settings.rst, but with a link to this section.
+
+.. vale on
 
 .. admonition:: Can users be added when single sign-on (SSO) is enabled?
 

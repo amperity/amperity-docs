@@ -20,7 +20,11 @@
 Configure campaigns for Klaviyo
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_klaviyo.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-klaviyo-start
@@ -48,7 +52,7 @@ Use Amperity to manage audience lists in Klaviyo. Build a query using the **emai
 
    If you don't want to wait to load customer profiles, you may instead use the `SFTP import tool <https://developers.klaviyo.com/en/docs/use_klaviyos_sftp_import_tool>`__ |ext_link| process. This approach is efficient and quick. It uses the :doc:`built-in SFTP connector in Amperity <destination_sftp>` and is capable of importing large sets of customer profiles.
 
-   The CSV file that is imported to |destination-name| has specific requirements on formatting and must include one or more of the following fields: "Email", "PhoneNumber", and/or "ExternalID". When these fields are present in the CSV file they must have those exact names.
+   The CSV file that is imported to |destination-name| has specific requirements on formatting and must include one or more of the following fields: "Email", "PhoneNumber", or "ExternalID". When these fields are present in the CSV file they must have those exact names.
 
 .. destination-klaviyo-csv-note-end
 
@@ -96,7 +100,7 @@ Get details
           :class: no-scaled-link
      - The list name to which the Klaviyo connector writes. This can be the name of an existing list or a new list.
 
-       .. note:: |destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+       .. note:: |destination-name| supports up to 1000 lists or segments in your account at any given time.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -482,16 +486,16 @@ Maximum number of lists exceeded
 
 .. destination-klaviyo-workflow-actions-maximum-lists-start
 
-|destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+|destination-name| supports up to 1000 lists or segments in your account at any given time.
 
 .. destination-klaviyo-workflow-actions-maximum-lists-end
 
 .. destination-klaviyo-workflow-actions-maximum-lists-steps-start
 
-To resolve this error, verify the number of lists and/or segments associated with your |destination-name| account.
+To resolve this error, verify the number of lists or segments associated with your |destination-name| account.
 
-#. Log into |destination-name| and verify the number of lists and/or segments that are associated with your |destination-name| account.
-#. Remove unused lists and/or segments.
+#. Log into |destination-name| and verify the number of lists or segments that are associated with your |destination-name| account.
+#. Remove unused lists or segments.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-klaviyo-workflow-actions-maximum-lists-steps-start

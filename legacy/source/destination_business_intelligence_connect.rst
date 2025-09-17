@@ -112,7 +112,7 @@ Connection details
 
 Allow the Amperity support team a few days to complete the provisioning process. When finished, the support team will share the following connection details with you via SnapPass:
 
-#. The URL for the data warehouse.
+#. The URL of the data warehouse.
 #. The **Account Name**, **Region ID**, **Database name**, **Schema name**, and **Staging path**.
 #. A JDBC connection string.
 #. An ODBC connection string.
@@ -251,7 +251,7 @@ A service account is a static username and password that may be provisioned for 
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-start
 
-A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative sends to you your service account username and password via SnapPass, along with the URL for your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
+A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative sends to you your service account username and password via SnapPass, along with the URL of your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-end
 
@@ -259,7 +259,7 @@ A set of service accounts are defined for any tenant that chooses to enable |bic
 
 .. destination-bic-send-to-data-warehouse-service-accounts-steps-start
 
-#. Enter the URL for your instance of |bic| into your web browser.
+#. Enter the URL of your instance of |bic| into your web browser.
 #. On the login screen, enter the username and password for your service account. For example:
 
    .. image:: ../../images/bi-connect-login-screen.png
@@ -340,7 +340,7 @@ The following steps describe how to configure a destination for |bic| when it is
 #. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket.
 #. Under **Snowflake Settings**, enter the Snowflake account name, Amazon AWS region ID, Snowflake stage name, and Snowflake data warehouse name.
 
-   The **Account Name** is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
+   The **Account Name** is contained within the URL of the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
 
    The **Region ID** is the region ID in Amazon AWS. For example: "us-west-2".
 
@@ -379,7 +379,7 @@ The following steps describe how to configure a destination for |bic| when it is
 #. Add the Azure Blob Storage account name and shared access signature for the AZURE_ROLE with permission to access Azure Bob Storage.
 #. Under **Snowflake Settings**, enter the Snowflake account name, the region identifier, Snowflake stage name, and Snowflake data warehouse name.
 
-   The **Account Name** is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
+   The **Account Name** is contained within the URL of the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
 
    The **Region ID** is the region ID in Azure. For example: "west-us-2".
 
@@ -609,7 +609,7 @@ Download the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jd
 
 .. destination-bic-connect-other-jdbc-externalbrowser-start
 
-.. important:: BI tools that use the JDBC driver must set the **Authenticator** setting to **externalbrowser** as `a requirement for browser-based SSO <https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use.html#setting-up-browser-based-sso>`__ |ext_link|. The location in which this setting is configured varies, depending on the BI tool. For example, SQL Workbench appends this setting to the URL for the |bic| data warehouse:
+.. important:: BI tools that use the JDBC driver must set the **Authenticator** setting to **externalbrowser** as `a requirement for browser-based SSO <https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use.html#setting-up-browser-based-sso>`__ |ext_link|. The location in which this setting is configured varies, depending on the BI tool. For example, SQL Workbench appends this setting to the URL of the |bic| data warehouse:
 
    ::
 
@@ -650,9 +650,9 @@ Databricks
       * - **Driver**
         - The Snowflake JDBC driver.
       * - **URL**
-        - The URL for the |bic| data warehouse.
+        - The URL of the |bic| data warehouse.
 
-          This must start with ``jdbc:snowflake://``, be followed by the URL for the data warehouse, and then appended with ``?authenticator=externalbrowser``.
+          This must start with ``jdbc:snowflake://``, be followed by the URL of the data warehouse, and then appended with ``?authenticator=externalbrowser``.
 
           For example: 
 
@@ -696,9 +696,9 @@ SQL Workbench
       * - **Driver**
         - The Snowflake JDBC driver.
       * - **URL**
-        - The URL for the |bic| data warehouse.
+        - The URL of the |bic| data warehouse.
 
-          This must start with ``jdbc:snowflake://``, be followed by the URL for the data warehouse, and then appended with ``?authenticator=externalbrowser``.
+          This must start with ``jdbc:snowflake://``, be followed by the URL of the data warehouse, and then appended with ``?authenticator=externalbrowser``.
 
           For example: 
 
@@ -870,7 +870,7 @@ Tableau Desktop
       * - Setting
         - Description
       * - **Server**
-        - The URL for the |bic| data warehouse.
+        - The URL of the |bic| data warehouse.
       * - **Role**
         - The role that is assigned to this user. Leave this blank.
       * - **Authentication**

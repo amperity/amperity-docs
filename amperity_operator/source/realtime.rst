@@ -199,7 +199,7 @@ Streaming endpoints are managed from the **Sources** page.
           :class: no-scaled-link
      - For the stream that was just created, open the |fa-kebab| menu and click **Copy URL**.
 
-       The URL for the stream is similar to:
+       The URL of the stream is similar to:
 
        ::
 
@@ -273,7 +273,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Ensure that the real-time table is set to **Active**.
 
-       Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
+       Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table or the use case.
 
        .. image:: ../../images/mockup-databases-table-realtime-add-01.png
           :width: 420 px

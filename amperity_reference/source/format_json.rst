@@ -23,7 +23,7 @@ JSON files
 
 .. format-json-streaming-ingest-start
 
-.. note:: This topic is about standalone JSON files. JSON data that is sent to the |api_streaming_ingest| is converted to :doc:`NDJSON format <format_ndjson>`.
+.. note:: JSON data that is sent to the |api_streaming_ingest| is converted to :doc:`NDJSON format <format_ndjson>`.
 
 .. format-json-streaming-ingest-end
 
@@ -100,7 +100,7 @@ When using JSON files, it is recommend to:
         :start-after: .. formats-json-rfc-8259-start
         :end-before: .. formats-json-rfc-8259-end
 
-* Compress files prior to encryption using ZIP, GZIP, and/or TAR
+* Compress files prior to encryption using ZIP, GZIP, or TAR
 * Encrypt files using PGP; compression will not reduce the size of an encrypted file
 
 .. format-json-pull-data-sources-recommendations-end

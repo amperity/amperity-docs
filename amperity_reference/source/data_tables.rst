@@ -265,7 +265,7 @@ Campaign activation states can be added to any segment.
 
    * - **First entry**
      - String
-     - The date and time at which an audience member was first  part of a campaign.
+     - The date and time at which an audience member was first part of a campaign.
 
    * - **Last entry**
      - String
@@ -1379,7 +1379,7 @@ The **Event Propensity** table has the following columns:
      - Float
      - The strength of a customers's propensity for this event, shown as an uncalibrated probability.
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking and/or audience size, and should not be used in segments.
+       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
 
           Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with higher propensity.
 
@@ -1988,7 +1988,7 @@ An **Affinity** table has the following columns:
      - Float
      - The strength of a customers's affinity for this product, shown as an uncalibrated probability.
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking and/or audience size, and should not be used in segments.
+       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
 
           Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
 
@@ -3061,7 +3061,7 @@ Each record contains time period rollups of the customer's transaction history. 
    * - **<X> Purchase Channels**
      - Integer
      - 
-     - The count of the distinct channels (online, in store, etc.) that the customer interacted with during during the time period. Available columns:
+     - The count of the distinct channels (online, in store, etc.) that the customer interacted with during the time period. Available columns:
 
        * **L30D Purchase Channels**
        * **L3M Purchase Channels**
@@ -4602,7 +4602,7 @@ The **Unified Itemized Transactions** table has the following columns:
        Product catalog fields are added to the **Unified Itemized Transactions** table in two ways, depending on the approach your tenant used for defining your product catalog:
 
        #. When data sources use **txn-item/** product catalog semantic tags. 
-       #. When product catalog fields are joined from the **Unified Product Catalog** table. Refer to the section in this topic about the columns that are available to product catalogs.
+       #. When product catalog fields are joined from the **Unified Product Catalog** table.
 
        .. important:: The names of the columns that are available for product catalogs are identical. For example: **Product Brand**, **Product Category**, and **Product Gender**. The difference is the outcome of the approach your tenant used to define your product catalog within Amperity.
 

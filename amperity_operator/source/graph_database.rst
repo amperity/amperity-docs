@@ -37,7 +37,7 @@ A graph database is a collection of vertices and edges:
 
 .. graph-database-important-start
 
-.. important:: This topic describes a graph database that uses the Gremlin data format, which is a supported data format for Amazon Neptune.
+.. important:: Configure a graph database for the Gremlin data format, which is a supported data format for Amazon Neptune.
 
    The graph database queries included with Amperity may be customized to support any graph database format and destination.
 
@@ -53,7 +53,7 @@ Graph database workflow
 
 A graph database workflow has two main steps:
 
-#. :ref:`Add query templates <graph-database-workflow-add-templates>`, and then  run queries in Amperity to return data in a format that can be loaded by a graph database.
+#. :ref:`Add query templates <graph-database-workflow-add-templates>`, and then run queries in Amperity to return data in a format that can be loaded by a graph database.
 #. :ref:`Send the data <graph-database-workflow-send-data>` to Amazon S3, Azure Blob Storage, Google Cloud Storage, or SFTP, and then load that data to a graph database.
 #. Enabling downstream :ref:`use cases <graph-database-workflow-use-cases>`.
 
@@ -168,7 +168,7 @@ Vertices
      - 
      - The properties of the vertice. There is no limit to the number of properties that may be specified.
 
-       The format for this field is is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
+       The format for this field is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
    * - **~label**
      - |policy|
      - The type of vertice that matches the object type. For Amperity, this is a customer profile, a Customer 360 profile, or a transaction.
@@ -210,7 +210,7 @@ Edges
      - 
      - The properties of the vertice. There is no limit to the number of properties that may be specified.
 
-       The format for this field is is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
+       The format for this field is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
 
 .. graph-database-gremlin-edges-end
 

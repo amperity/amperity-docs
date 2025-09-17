@@ -21,7 +21,11 @@
 Configure campaigns for ActiveCampaign
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_active_campaign.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-active-campaign-start
@@ -476,7 +480,7 @@ When the name of the user group defined in Amperity does not match the name of a
 To resolve this error, verify the name of the user group in |destination-name|, and then update the data template in Amperity for the correct name of the user group.
 
 #. Log in to |destination-name| as a user assigned who is assigned to the **Admin** permission.
-#. Verify the name of the user group and/or create a user group with the name that is required by this workflow.
+#. Verify the name of the user group and create a user group with the name that is required by this workflow.
 #. Verify the name of the user group that is defined in the data template used by this workflow. Update this value if required.
 #. Return to the workflow action, and then click **Resolve** to retry.
 

@@ -53,7 +53,7 @@ Amperity provides the following attributes that your brand can use to build audi
           :start-after: .. loyalty-lifetime-balance-start
           :end-before: .. loyalty-lifetime-balance-end
 
-       For example, to return an audience customer records with a low lifetime reward points balance that that brands can include in a discounts campaign to intice at-risk customers to make more purchases with their brand.
+       For example, to return an audience customer records with a low lifetime reward points balance that brands can include in a discounts campaign to intice at-risk customers to make more purchases with their brand.
 
 .. attribute-loyalty-balances-attributes-end
 

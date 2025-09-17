@@ -35,7 +35,7 @@ Amperity uses a `series of patented innovations <https://amperity.com/patents>`_
 
 .. stitch-entity-matching-start
 
-This topic is an introduction to how Stitch works. Read `Entity Matching in the Wild: a Consistent and Versatile
+Read `Entity Matching in the Wild: a Consistent and Versatile
 Framework to Unify Data in Industrial Applications <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__ for a detailed explanation of how Amperity provides a consistent, reliable, and stable customer ID.
 
 .. stitch-entity-matching-end
@@ -717,7 +717,7 @@ Potential connections
 
 The pairwise comparison process goes beyond initial scoring to compare and then score all of the possible connections between all of the records that belong to the same group.
 
-This section uses a group of eight records to show how pairwise comparisons work. A line between records will indicate the threshold for the comparison that was discovered.
+A group of eight records shows how pairwise comparisons work. A line between records will indicate the threshold for the comparison that was discovered.
 
 .. stitch-pairwise-comparison-potential-end
 

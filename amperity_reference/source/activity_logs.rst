@@ -279,7 +279,7 @@ The following table lists the most common event types, grouped by the component 
      - The following events are associated with policies:
 
        ``policy/attached`` and ``policy/attached-to``
-          A policy was was attached to an object that was created within Amperity.
+          A policy was attached to an object that was created within Amperity.
 
           For example, when a new API token issuer is created, the ``policy/attached`` and ``policy/attached-to`` events are logged and are associated with the name of the API issuer token.
 
@@ -290,7 +290,7 @@ The following table lists the most common event types, grouped by the component 
           A policy was created.
 
        ``policy/detached`` and ``policy/detached-from``
-          A policy was was detached from an object that exists within Amperity.
+          A policy was detached from an object that exists within Amperity.
 
        ``policy/updated``
           A policy was updated.
@@ -381,7 +381,7 @@ The following table lists the most common event types, grouped by the component 
 
 
    * - **User activity**
-     - The following events are associated with the the **Users** section within the **Users and Activity** page:
+     - The following events are associated with the **Users** section within the **Users and Activity** page:
 
        ``audit.user-activity/download``
           A user downloaded user activity into a CSV file to view offline.
@@ -409,7 +409,7 @@ The following table lists the most common event types, grouped by the component 
           .. note:: This event shows *only* the first time an email addresss or Slack channel is configured to receive workflow alerts for courier groups, scheduled orchestration groups, or campaigns. All subsequent events related to workflow alerts shows the ``audience/updated`` event.
 
        ``audience/updated``
-          The membership of an audience for a workflow alert was updated. This includes adding or removing email addresses and/or Slack channels to or from a workflow alert.
+          The membership of an audience for a workflow alert was updated. This includes adding or removing email addresses or Slack channels to or from a workflow alert.
 
 
    * - **Workflows**

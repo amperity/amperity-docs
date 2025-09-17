@@ -34,7 +34,7 @@ Amperity stores the following outputs in Amazon S3 storage or Azure Blob Storage
 
 .. storage-about-start
 
-.. warning:: This topic applies only to new Amperity tenants that are provisioned for Amazon S3.
+.. warning:: Configured storage applies only to new Amperity tenants that are provisioned for Amazon S3.
 
 
 .. _storage-configure-location:

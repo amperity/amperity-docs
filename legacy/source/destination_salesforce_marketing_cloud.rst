@@ -20,7 +20,11 @@
 Configure campaigns for Salesforce Marketing Cloud
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-marketing-cloud-start
@@ -73,7 +77,7 @@ A |destination-name| destination works like this:
 
        .. admonition:: What is a data extension?
 
-          A `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| is a table that stores data about your contacts. The fields that are available from your data extension match the columns and/or attributes that are sent from Amperity.
+          A `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| is a table that stores data about your contacts. The fields that are available from your data extension match the columns and attributes that are sent from Amperity.
 
           Within |destination-name|, use the data in the data extension as a data source. Run queries, pull a subset of contacts from the data extension, and then send offers to that subset of contacts.
 

@@ -19,7 +19,7 @@ About file formats
 
 .. format-common-start
 
-This topic covers details that are common to files that can be pulled to or sent from Amperity using Amazon S3, Azure Blob Storage, Google Cloud Storage, or any SFTP site.
+Details that are common to files that can be pulled to or sent from Amperity using Amazon S3, Azure Blob Storage, Google Cloud Storage, or any SFTP site.
 
 .. format-common-end
 
@@ -80,7 +80,7 @@ Amperity supports the following file formats when using a filedrop location to p
 
 .. format-common-pull-files-note-start
 
-.. note:: Amperity can ingest data from a wide variety of data sources, such as legacy data outputs like :ref:`AS/400 <format-csv-pull-couriers-as400>`. Ask your Amperity Support representative about formats that are not directly listed in this section to determine if those data formats can be used as a way to provide data to Amperity.
+.. note:: Amperity can ingest data from a wide variety of data sources, such as legacy data outputs like :ref:`AS/400 <format-csv-pull-couriers-as400>`. Ask your Amperity Support representative about formats that are not directly listed to determine if those data formats can be used as a way to provide data to Amperity.
 
 .. format-common-pull-files-note-end
 
@@ -90,6 +90,8 @@ Amperity supports the following file formats when using a filedrop location to p
 Date formats
 --------------------------------------------------
 
+.. vale off
+
 .. format-common-pull-date-formats-start
 
 Dates should be quoted and should be in the "yyyy-MM-dd HH:mm:ss.SSS" format. The time portion (":mm:ss.SSS") is optional. For example:
@@ -98,9 +100,11 @@ Dates should be quoted and should be in the "yyyy-MM-dd HH:mm:ss.SSS" format. Th
 * 2019-01-28 18:32:05
 * 2019-01-28
 
-When the date format is not similar to the expected date format, Amperity will attempt to convert the date and time values. If date formats are mixed, Amperity uses the first one that matches.
+When the date format is not similar to the expected date format, Amperity will attempt to convert the date and time values. If date formats are mixed, Amperity uses the first date format that matches.
 
 .. format-common-pull-date-formats-end
+
+.. vale on
 
 .. format-common-pull-date-formats-tip-start
 
@@ -113,6 +117,8 @@ When the date format is not similar to the expected date format, Amperity will a
 
 Date values conversion order
 ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. vale off
 
 .. format-common-pull-date-formats-date-values-start
 
@@ -155,11 +161,15 @@ Date values are converted in the following order of precedence:
 
 .. format-common-pull-date-formats-date-values-end
 
+.. vale on
+
 
 .. _format-common-pull-date-formats-time-values:
 
 Time values conversion order
 ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. vale off
 
 .. format-common-pull-date-formats-time-values-start
 
@@ -216,6 +226,8 @@ Time values, when present, are converted in the following order of precedence:
      - "hh:mma z"
 
 .. format-common-pull-date-formats-time-values-end
+
+.. vale on
 
 
 .. _format-common-pull-file-compression:

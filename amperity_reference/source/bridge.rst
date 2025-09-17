@@ -118,7 +118,7 @@ How-tos
 
 .. bridge-howtos-start
 
-This section describes individual tasks that are related to managing bridges:
+Individual tasks that are related to managing a bridge:
 
 * :ref:`bridge-howto-add-inbound`
 * :ref:`bridge-howto-add-outbound`

@@ -23,7 +23,11 @@
 Configure campaigns for Microsoft Advertising
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_microsoft_ads.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-ads-start
@@ -89,7 +93,7 @@ Get details
           :class: no-scaled-link
      - The |destination-name| customer and account IDs.
 
-       .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page contains two key-value pairs, one for the customer ID and the other for the account ID.
+       .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL of the **Campaigns** page contains two key-value pairs, one for the customer ID and the other for the account ID.
 
           The URL is similar to:
 
@@ -281,7 +285,7 @@ Add destination
           * - **Customer ID**
             - Your customer ID within |destination-name|.
 
-              .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page contains two key-value pairs, one for the customer ID and the other for the account ID.
+              .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL of the **Campaigns** page contains two key-value pairs, one for the customer ID and the other for the account ID.
 
                  The URL is similar to:
 

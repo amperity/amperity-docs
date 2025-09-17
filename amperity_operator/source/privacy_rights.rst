@@ -34,7 +34,7 @@ A privacy rights workflow can help your organization stay in compliance with dat
      :start-after: .. term-pipeda-start
      :end-before: .. term-pipeda-end
 
-This topic describes how to configure Amperity to support a self-service privacy rights workflow that deletes consumer profile data and discovers records for a data subject access request (DSAR), depending on the :ref:`type of inbound compliance request <privacy-rights-workflows>`.
+Configure Amperity to support a self-service privacy rights workflow that deletes consumer profile data and discovers records for a data subject access request (DSAR), depending on the :ref:`type of inbound compliance request <privacy-rights-workflows>`.
 
 .. privacy-rights-overview-end
 
@@ -46,6 +46,8 @@ This topic describes how to configure Amperity to support a self-service privacy
 
 .. privacy-rights-note-end
 
+.. vale off
+
 .. privacy-rights-important-start
 
 .. important:: This topic does not constitute legal advice to third parties regarding General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) compliance, nor does it imply that steps taken by Amperity will satisfy these compliance requirements.
@@ -53,6 +55,8 @@ This topic describes how to configure Amperity to support a self-service privacy
    Customers are encouraged to seek legal counsel regarding General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) compliance and should not rely solely on Amperity for compliance.
 
 .. privacy-rights-important-end
+
+.. vale on
 
 
 .. _privacy-rights-workflows:
@@ -112,7 +116,7 @@ The following sections describe the individual steps within the workflow that oc
 
        .. admonition:: About the connected_pii strategy
 
-          Using the the **exact** strategy for DSAR requests is recommended.
+          Using the **exact** strategy for DSAR requests is recommended.
 
           The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that:
 
@@ -244,7 +248,7 @@ Delete PII
 
 An inbound request may require deleting specific PII fields within customer records.
 
-.. important:: The delete PII workflow requires requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
+.. important:: The delete PII workflow requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
 
 The following diagram shows the workflow that occurs when a delete PII request is present in the inbound requests table.
 
@@ -268,7 +272,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Find records**
 
-       A delete PII request runs runs when **type** field in the inbound requests table is set to **delete_pii**.
+       A delete PII request runs when **type** field in the inbound requests table is set to **delete_pii**.
 
        The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
 
@@ -495,7 +499,7 @@ You may the following custom key pairs:
 Identify fields to delete
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: This section only applies if the **delete_pii** request type is used.
+.. note:: Only applies if the **delete_pii** request type is used.
   
 The **delete** request type acts on entire rows of source tables, but it is possible to only delete PII from a record, while leaving the rest of the data intact.
 

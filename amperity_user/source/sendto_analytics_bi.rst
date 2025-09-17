@@ -23,8 +23,6 @@ Amperity supports making data available to all of the leading analytics and busi
 
 Send your data from Amperity to any of these tools, and then use that data to build dashboards along with anything else that is enabled by your favorite analytics and BI tools.
 
-This topic consolidates the discussion of how to get data from Amperity to your favorite analytics and/or BI tools into a single topic, along with providing links to the documentation for each of the analytics and BI tools.
-
 .. sendto-analytics-bi-end
 
 
@@ -53,7 +51,7 @@ Workflows that make data available to analytics and BI tools are done in two bro
        #. Send data to a cloud database -- :doc:`Amazon Redshift <destination_amazon_redshift>` or Azure Synapse Analytics.
        #. Send to a location from which you can use Open Database Connectivity (ODBC) or Java Database Connectivity (JDBC) to connect to the data.
 
-       The option that you choose for this step depend on which analytics and/or BI tools you use and/or what type of cloud infrastructure is available to your organization. Many analytics and BI tools support using any of these options. Cloud-based workflows are the most common.
+       The option that you choose for this step depend on which analytics or BI tools you use or what type of cloud infrastructure is available to your organization. Many analytics and BI tools support using any of these options. Cloud-based workflows are the most common.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px

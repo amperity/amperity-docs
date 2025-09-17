@@ -69,7 +69,7 @@ Names, multiple IDs
 
 .. stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for name IDs with multiple Amperity IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
+Use any of the following **SELECT** statements to look for name IDs with multiple Amperity IDs. Update **name_id** to the name ID, and **data_source** or **data_source_v2** to the name of the table or table version:
 
 .. code-block:: sql
    :linenos:
@@ -100,7 +100,7 @@ Names, different IDs
 
 .. stitch-qa-query-fk-validation-name-ids-with-different-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for name IDs with different Amperity IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
+Use any of the following **SELECT** statements to look for name IDs with different Amperity IDs. Update **name_id** to the name ID, and **data_source** or **data_source_v2** to the name of the table or table version:
 
 .. code-block:: sql
    :linenos:
@@ -137,7 +137,7 @@ Inspect Names
 
 .. stitch-qa-query-fk-validation-inspect-name-ids-start
 
-Use any of the following **SELECT** statements to inspect name IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
+Use any of the following **SELECT** statements to inspect name IDs. Update **name_id** to the name ID, and **data_source** or **data_source_v2** to the name of the table or table version:
 
 .. code-block:: sql
    :linenos:
@@ -181,7 +181,7 @@ Multiple Amperity IDs
 
 .. stitch-qa-query-fk-validation-multiple-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for foreign keys that have multiple Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
+Use any of the following **SELECT** statements to look for foreign keys that have multiple Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** or **data_source_2** to the name of the table:
 
 .. code-block:: sql
    :linenos:
@@ -212,7 +212,7 @@ Different Amperity IDs
 
 .. stitch-qa-query-fk-validation-different-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for foreign keys that have different Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
+Use any of the following **SELECT** statements to look for foreign keys that have different Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** or **data_source_2** to the name of the table:
 
 .. code-block:: sql
    :linenos:
@@ -249,7 +249,7 @@ Inspect keys between tables
 
 .. stitch-qa-query-fk-validation-inspect-between-tables-start
 
-Use any of the following **SELECT** statements to inspect foreign keys between tables. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
+Use any of the following **SELECT** statements to inspect foreign keys between tables. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** or **data_source_2** to the name of the table:
 
 .. code-block:: sql
    :linenos:

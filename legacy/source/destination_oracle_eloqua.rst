@@ -17,7 +17,11 @@
 Configure campaigns for Oracle Eloqua
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_oracle_eloqua.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-oracle-eloqua-start
@@ -89,7 +93,7 @@ Get details
           :class: no-scaled-link
      - The name of the shared list to be managed by Amperity.
 
-       Use filename templates and/or data templates to configure Amperity to support managing more than one shared list. For example:
+       Use filename templates or data templates to configure Amperity to support managing more than one shared list. For example:
 
        * A timestamp at the end of a filename template --- **Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv** --- creates a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but have a unique datestamp.
        * A campaign that is configured only for campaign name and group name --- **{{ campaign_name }} - {{ group_name }}** --- updates the same shared list each time the audience is sent from Amperity.

@@ -23,7 +23,7 @@ About policies
 
 .. policies-start
 
-This section describes the policies that are available in Amperity and that may be assigned to users, along with the actions that each policy represents. You may assign more than one policy to a user.
+Policies may be assigned to users, along with assigning the actions that each policy represents. You may assign more than one policy to a user.
 
 .. policies-end
 
@@ -2570,7 +2570,7 @@ Workflows
 
 .. policies-allowed-actions-workflows-start
 
-The following table shows which policies enable user actions within the **Workflows** page and access to workflows from within notifications located on the **Sources**, **Customer 360**, **Queries**, and/or **Campaigns** pages.
+The following table shows which policies enable user actions within the **Workflows** page and access to workflows from within notifications located on the **Sources**, **Customer 360**, **Queries**, and **Campaigns** pages.
 
 .. policies-allowed-actions-workflows-end
 
@@ -2699,7 +2699,7 @@ The following icons indicate the types of actions users can perform, depending o
 
        This is the default policy configuraton for sandboxes in Amperity.
 
-       .. note:: A **DataGrid Operator** and/or **DataGrid Administrator** who has not been granted the **Allow sandbox administration** policy option can:
+       .. note:: A **DataGrid Operator** or **DataGrid Administrator** who has not been granted the **Allow sandbox administration** policy option can:
 
           #. Add a sandbox
           #. Access that sandbox

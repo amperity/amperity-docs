@@ -20,7 +20,7 @@ About this site
 
 .. docs-about-start
 
-This topic is about the Amperity documentation site and describes the topic collections that are here and the features that help you find what you are looking for.
+An overview of the Amperity documentation site.
 
 .. docs-about-end
 

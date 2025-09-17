@@ -325,7 +325,7 @@ Exclusion lists
 
 .. campaigns-exclusion-lists-start
 
-Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
+Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging or who have unsubscribed from an email list.
 
 When you need to exclude audience members, choose one or more segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
@@ -444,7 +444,7 @@ The download recipients feature allows you to download and see your recipients l
 
 .. campaigns-download-recipients-manual-workflows-start
 
-.. tip:: Downloaded files can enable ad hoc workflows in any downstream tool that supports directly uploading and/or using CSV files. For example, marketing applications like `Airship <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/audience-lists/uploaded/>`__ |ext_link|, `Attentive <https://help.attentivemobile.com/hc/en-us/articles/360051463212-Create-a-manual-segment>`__ |ext_link|, `Bluecore <https://help.bluecore.com/en/articles/3552694-import-data>`__ |ext_link|, `Braze <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#csv>`__ |ext_link|, `Facebook Ads <https://www.facebook.com/business/help/170456843145568?id=2469097953376494>`__ |ext_link|, `Iterable <https://support.iterable.com/hc/en-us/articles/205694345-CSV-List-Import-Best-Practices->`__ |ext_link|, |channel_pinterest|, |channel_reddit_ads|, and `SendGrid <https://docs.sendgrid.com/ui/managing-contacts/create-and-manage-contacts>`__ |ext_link| all support directly uploading CSV files. Downloaded CSV files can be opened directly in Microsoft Excel and Google Sheets.
+.. tip:: Downloaded files can enable ad hoc workflows in any downstream tool that supports directly uploading or using CSV files. For example, marketing applications like `Airship <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/audience-lists/uploaded/>`__ |ext_link|, `Attentive <https://help.attentivemobile.com/hc/en-us/articles/360051463212-Create-a-manual-segment>`__ |ext_link|, `Bluecore <https://help.bluecore.com/en/articles/3552694-import-data>`__ |ext_link|, `Braze <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#csv>`__ |ext_link|, `Facebook Ads <https://www.facebook.com/business/help/170456843145568?id=2469097953376494>`__ |ext_link|, `Iterable <https://support.iterable.com/hc/en-us/articles/205694345-CSV-List-Import-Best-Practices->`__ |ext_link|, |channel_pinterest|, |channel_reddit_ads|, and `SendGrid <https://docs.sendgrid.com/ui/managing-contacts/create-and-manage-contacts>`__ |ext_link| all support directly uploading CSV files. Downloaded CSV files can be opened directly in Microsoft Excel and Google Sheets.
 
 .. campaigns-download-recipients-manual-workflows-end
 
@@ -730,7 +730,7 @@ How-tos
 
 .. campaigns-how-tos-start
 
-This section describes tasks related to building campaigns in Amperity:
+Tasks related to building campaigns in Amperity:
 
 .. campaigns-how-tos-end
 

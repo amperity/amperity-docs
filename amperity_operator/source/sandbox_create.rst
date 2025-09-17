@@ -101,7 +101,7 @@ The following sections describe the steps you'll follow when creating a sandbox 
        This opens a dialog box that shows details for the sandbox, including:
 
        * The date and time at which it was created
-       * The URL for the sandbox
+       * The URL of the sandbox
        * The last time a workflow ran in this sandbox
        * What configuration state changes are ready for promotion to production
        * What updates are ready to be pulled from production to the sandbox

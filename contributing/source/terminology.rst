@@ -5,7 +5,7 @@
 Terminology
 ==================================================
 
-This topic describes the correct use of terms within Amperity documentation. Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified in this topic.
+There are correct uses of terms within Amperity documentation. Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified here.
 
 
 .. _term-s3:
@@ -31,7 +31,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-blacklist:
 
 **blacklist** / **whitelist**
-   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|.  See **blocklist** / **allowlist**.
+   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|. See **blocklist** / **allowlist**.
 
 
 .. _term-blocklist:
@@ -152,7 +152,7 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 
 .. _term-stitch:
 
-**Stitch** vs. **stitch**, **stitched**, and/or **stitching**
+**Stitch** vs. **stitch**, **stitched**, or **stitching**
    You can stitch data and data can be stitched, but only Stitch is a feature within Amperity.
 
    Use a capital "S" when referring to Stitch as a feature. Never use Stitched, or Stitch's. Just Stitch. Rewrite your sentences to make this happen.

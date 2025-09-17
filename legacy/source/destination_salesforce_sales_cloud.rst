@@ -17,7 +17,11 @@
 Send data to Salesforce Sales Cloud
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_salesforce_sales_cloud.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-sales-cloud-start
@@ -89,7 +93,7 @@ Get details
 
 .. admonition:: How do I find |destination-name| account information?
 
-   You can find all of this information by logging into your |destination-name| admin console and by viewing the URL for your instance of |destination-name|.
+   You can find all of this information by logging into your |destination-name| admin console and by viewing the URL of your instance of |destination-name|.
 
 .. destination-salesforce-sales-cloud-get-details-account-info-end
 
@@ -210,10 +214,10 @@ Add destination
           * - **Sandbox?**
             - Optional. Select this option if the destination is a sandbox instance (and not a production instance).
 
-              .. note:: A sandbox instance is ignored when a custom URL for |destination-name| logins is used.
+              .. note:: A sandbox instance is ignored when a custom URL of |destination-name| logins is used.
 
           * - **Custom URL?**
-            - Optional. The custom URL for |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``https://<hostname>`` or ``http://<hostname>``. The rest of the path is added automatically by Amperity.
+            - Optional. The custom URL of |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``https://<hostname>`` or ``http://<hostname>``. The rest of the path is added automatically by Amperity.
 
           * - **Salesforce object**
             - The name of the object in |destination-name| to which Amperity sends data.
@@ -328,11 +332,11 @@ Add data template
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL for Salesforce logins (if used), the name of the object in Salesforce to which Amperity sends data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if NULL values should be used when fields are empty.
+     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL of Salesforce logins (if used), the name of the object in Salesforce to which Amperity sends data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if NULL values should be used when fields are empty.
 
-       The custom URL for Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity.
+       The custom URL of Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity.
 
-       .. note:: A sandbox instance is ignored when a custom URL for Salesforce logins is used.
+       .. note:: A sandbox instance is ignored when a custom URL of Salesforce logins is used.
 
        The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations inserts a new record *or* update an existing record, whereas insert and update operations insert or update (and not both).
 

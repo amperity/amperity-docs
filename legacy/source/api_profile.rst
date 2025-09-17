@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        This topic describes how the Profile API works.
+        How the Profile API works.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        This topic describes how the Profile API works.
+        How the Profile API works.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -17,7 +17,7 @@
 Profile API
 ==================================================
 
-.. important:: The Profile API documented on this page (right now) is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__. The use cases in this topic are true, but should be built using the new endpoints.
+.. important:: The Profile API documented on this page (right now) is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__.
 
 The Profile API is a RESTful API that supports building custom endpoints against unified customer profiles to enable any downstream workflow.
 
@@ -102,7 +102,7 @@ GET indexes
 
 Use the **indexes** endpoint to get a list of indexes that exist in your tenant's Profile API.
 
-The URL for this endpoint is:
+The URL of this endpoint is:
 
 ::
 
@@ -112,7 +112,7 @@ The URL for this endpoint is:
 
    .. image:: ../../images/api-profile-endpoint-copy-url.png
       :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
+      :alt: Copy the URL of an endpoint in the Amperity Profile API.
       :align: left
       :class: no-scaled-link
 
@@ -186,7 +186,7 @@ GET indexes/{index-id}
 
 Use the **indexes/{index-id}** endpoint to use the lookup key for **{index-id}** to access individual attributes associated with that lookup key.
 
-The URL for this endpoint is:
+The URL of this endpoint is:
 
 ::
 
@@ -198,7 +198,7 @@ where **{index-id}** :ref:`matches the index ID <profile-api-howitworks-index-id
 
    .. image:: ../../images/api-profile-endpoint-copy-url.png
       :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
+      :alt: Copy the URL of an endpoint in the Amperity Profile API.
       :align: left
       :class: no-scaled-link
 
@@ -405,7 +405,7 @@ Index IDs
 
 .. profile-api-howitworks-index-ids-start
 
-The index ID is a unique identifier for an endpoint. To make a request to an endpoint you must include the index ID in the URL for the request.
+The index ID is a unique identifier for an endpoint. To make a request to an endpoint you must include the index ID in the URL of the request.
 
 The index ID is available from the **Profile API** list. For the endpoint, open the actions menu, and then select "Copy index ID".
 
@@ -431,7 +431,7 @@ and then use the lookup key in your workflow to return individual attribute valu
 
    .. image:: ../../images/api-profile-endpoint-copy-url.png
       :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
+      :alt: Copy the URL of an endpoint in the Amperity Profile API.
       :align: left
       :class: no-scaled-link
 
@@ -471,7 +471,7 @@ Tenant ID
 
 .. profile-api-howitworks-tenant-id-start
 
-The tenant ID is a unique identifier for your tenant. To make a request to an endpoint you must include the tenant ID in the URL for the request.
+The tenant ID is a unique identifier for your tenant. To make a request to an endpoint you must include the tenant ID in the URL of the request.
 
 The tenant ID is available from the **Profile API** list. For the endpoint, open the actions menu, and then select "Copy tenant ID".
 
@@ -791,7 +791,7 @@ Copy the tenant ID
 
 .. profile-api-enable-copy-tenant-id-start
 
-The :ref:`GET indexes <profile-api-howitworks-endpoints-get-indexes>` and :ref:`GET indexes/{index-id} <profile-api-howitworks-endpoints-get-index>` endpoints require the tenant ID to be in the URL for the request.
+The :ref:`GET indexes <profile-api-howitworks-endpoints-get-indexes>` and :ref:`GET indexes/{index-id} <profile-api-howitworks-endpoints-get-index>` endpoints require the tenant ID to be in the URL of the request.
 
 The tenant ID is available from the **API keys** list that is located on the **Security** tab in the **Settings** page. For the API key, open the actions menu, and then select "Copy tenant ID".
 
@@ -1511,6 +1511,6 @@ Load the values from the Profile API endpoint using SSJS. This will make those v
 
 Update the **$INDEX-ID**, **$tenant-id**, and **$ACCESS-TOKEN** placeholders for the correct index ID, tenant ID, and access token.
 
-Use the **Variable.SetValue("@$FIELD",objResp.attributes.value.$FIELD);** function to declare the list of fields that are available to SSJS from the Profile API endpoint.
+Use the ``Variable.SetValue("@$FIELD",objResp.attributes.value.$FIELD);`` function to declare the list of fields that are available to SSJS from the Profile API endpoint.
 
 .. profile-api-usecase-ssjs-ssmc-end

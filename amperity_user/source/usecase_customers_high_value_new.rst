@@ -22,13 +22,13 @@ New high-value customers
 
 Repeat customers generate more revenue than one-time customers. In fact, it's not unusual in retail for ~20% of your customers to be ~80% of your revenue. Therefore, it's important to your business that you can identify new customers that also have the potential to become high-value repeat customers.
 
-You can find new high value customers first by identifying which customers have made their first purchase, and then by identifying which of those customers are predicted to to become high-value repeat customers.
+You can find new high value customers first by identifying which customers have made their first purchase, and then by identifying which of those customers are predicted to become high-value repeat customers.
 
 .. usecase-customers-high-value-new-end
 
 .. usecase-customers-high-value-new-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that finds new high-value customers.
+The following sections describe using the **Segment Editor** to build a segment that finds new high-value customers.
 
 .. usecase-customers-high-value-new-howitworks-end
 
@@ -88,7 +88,7 @@ The following sections describe using the the **Segment Editor** to build a segm
           :align: left
           :class: no-scaled-link
 
-       Keep the and/or slider set to **AND**.
+       Keep the slider set to **AND**.
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who purchased recently *and* are predicted to be high value customers.
 
@@ -106,7 +106,7 @@ The following sections describe using the the **Segment Editor** to build a segm
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions and want to build segments that are brand- and/or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-05.png

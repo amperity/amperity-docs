@@ -69,7 +69,7 @@ The following sections describe how you can use the visual **Query Editor** to b
 
      - Start building your query by choosing an attribute from the selected table. The attributes that you choose to add to your query will depend on your goals and your use case.
 
-       The example in this topic builds a list of customers who have opted out of receiving emails. Start building your query with the **Amperity ID** and **Email** attributes that are available in the **Merged Customers** table. Set the conditions for both of these columns to "is not NULL".
+       These example build a list of customers who have opted out of receiving emails. Start building your query with the **Amperity ID** and **Email** attributes that are available in the **Merged Customers** table. Set the conditions for both of these columns to "is not NULL".
 
        .. image:: ../../images/mockup-queries-tab-visual-email-and-amperity-id.png
           :width: 600 px
@@ -108,7 +108,7 @@ The following sections describe how you can use the visual **Query Editor** to b
           :class: no-scaled-link
      - Give your query a name a clear and understandable name. The name field is located in the upper left corner of the visual **Query Editor**.
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions.
 
           Some examples:
 

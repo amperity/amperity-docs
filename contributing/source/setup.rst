@@ -51,7 +51,7 @@ Run the following commands to create a Python virtual environment.
 Install dependencies
 ==================================================
 
-In the same virtual environment, run the following commands to install the theme and a collection of plugins required by the theme.
+In the same virtual environment, run the following commands to install theme and a collection of plugins required by theme.
 
 #. $.venv ``pip install shibuya``
 #. $.venv ``pip install sphinx-togglebutton``

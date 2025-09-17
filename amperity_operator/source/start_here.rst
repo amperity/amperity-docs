@@ -284,7 +284,7 @@ The **Destinations** page contains the following components:
 
 .. _start-here-about:
 
-About this topic collection
+About the Operators Guide
 ==================================================
 
 .. start-here-about-start
@@ -293,7 +293,7 @@ The left-side navigation uses a verb-based approach to loosely organize around t
 
 .. note:: This left-to-right configuration workflow is most common whenever you add new data sources to Amperity.
 
-   This is because that workflow typically requires adding couriers, applying semantic tags, making domain tables available to Stitch, refactoring your customer 360 databases, and then making those results available to queries and/or segments, depending on the types of downstream workflows you need to support.
+   This is because that workflow typically requires adding couriers, applying semantic tags, making domain tables available to Stitch, refactoring your customer 360 databases, and then making those results available to queries and segments, depending on the types of downstream workflows you need to support.
 
    As you do these steps, you will move from the top toward the bottom of the left-side navigation in Amperity. For example: **Sources** > **Stitch** > **Customer 360**, and so on.
 
@@ -303,7 +303,7 @@ The left-side navigation has sections for the following activities:
 #. Managing data sources, including ensuring semantic tags are applied to raw data, and ensuring that data tables that are made available to the Stitch process are in the right shapes for your business requirements.
 #. Running Stitch and validating those results.
 #. Building your customer 360 database and managing any other databases and tables that are required to support your business requirements.
-#. Managing destinations, including configuring them so that data analysts and marketers in your organization can use Amperity to build queries and send data to downstream workflows and/or define audiences and campaigns that can be sent to a variety of marketing channels.
+#. Managing destinations, including configuring them so that data analysts and marketers in your organization can send data to downstream workflows.
 #. Configuring certain end-to-end workflows to run on a defined schedule.
 
 .. start-here-about-end

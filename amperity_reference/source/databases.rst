@@ -319,7 +319,7 @@ Multiple customer 360 databases
 
 .. databases-database-type-multiple-start
 
-You may configure more than one database to be a customer 360 database. Each database contains its own set of standard tables, and then each may be configured to have its own combination of standard core tables and/or domain tables that are added as passthrough tables.
+You may configure more than one database to be a customer 360 database. Each database contains its own set of standard tables, and then each may be configured to have its own combination of standard core tables or domain tables that are added as passthrough tables.
 
 .. databases-database-type-multiple-end
 
@@ -524,7 +524,7 @@ Standard core tables belong to one of the following broad categories:
           :start-after: .. term-unified-tables-start
           :end-before: .. term-unified-tables-end
 
-       The collection of unified tables that is generated within your tenant depends on the types of semantic tags that were applied to feeds and/or custom domain tables in the **Sources** tab.
+       The collection of unified tables that is generated within your tenant depends on the types of semantic tags that were applied to feeds and custom domain tables in the **Sources** tab.
 
    * - **Stitch QA tables**
      - .. include:: ../../shared/terms.rst
@@ -582,7 +582,7 @@ Real-time tables contain the data that is streamed to Amperity. Real-time tables
 
 .. databases-realtime-howtos-start
 
-This section describes tasks related to managing real-time tables in Amperity:
+Tasks related to managing real-time tables in Amperity:
 
 * :ref:`databases-realtime-howtos-add`
 * :ref:`databases-realtime-howtos-delete`
@@ -615,7 +615,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
 #. In the **Create real-time table** dialog, do the following:
 
-   Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
+   Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table or the use case.
 
    Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that is associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
 
@@ -686,7 +686,7 @@ Edit real-time table name
 
 Use the **Edit** option to rename a real-time table.
 
-.. important:: You cannot change the schema or data format for a real-time table. To change the schema or data format, create a new real-time table, and then align that table to the data format and/or schema, and then associate that table with the correct streaming endpoint.
+.. important:: You cannot change the schema or data format for a real-time table. To change the schema or data format, create a new real-time table, and then align that table to the data format and schema, and then associate that table with the correct streaming endpoint.
 
 .. databases-realtime-howtos-edit-end
 
@@ -732,7 +732,7 @@ How-tos
 
 .. databases-databases-howtos-databasese-start
 
-This section describes tasks related to building and managing databases in Amperity.
+Tasks related to building and managing databases in Amperity.
 
 .. databases-databases-howtos-databasese-end
 
@@ -813,7 +813,7 @@ Add custom core table
 
 .. databases-core-howtos-add-custom-start
 
-You may add custom core tables using Spark SQL and the **Custom Core Table** SQL editor. Start with a SELECT statement, and then use a series of LEFT JOINs to reference core tables and/or domain tables. Use a sandbox to validate any workflows that will depend on the custom core table.
+You may add custom core tables using Spark SQL and the **Custom Core Table** SQL editor. Start with a SELECT statement, and then use a series of LEFT JOINs to reference core tables or domain tables. Use a sandbox to validate any workflows that will depend on the custom core table.
 
 .. databases-core-howtos-add-custom-end
 
@@ -878,7 +878,7 @@ Add empty database
 
 Add an empty database for use cases that do not require customer 360 profiles or Stitch QA validation activities. Start with an empty database, and then add tables.
 
-For example, after creating the empty database use the passthrough functionality to add one or more domain tables, and then use Spark SQL to build custom database tables against a subset of standard core tables and/or stitched domain tables to build a series of tables that support a series of non-marketing use cases.
+For example, after creating the empty database use the passthrough functionality to add one or more domain tables, and then use Spark SQL to build custom database tables against a subset of standard core tables or stitched domain tables to build a series of tables that support a series of non-marketing use cases.
 
 .. databases-database-howto-add-database-empty-end
 
@@ -1069,7 +1069,7 @@ Add custom SQL table
 
    .. note:: Click the **Apply SQL template** to select a SQL template as a starting point for the custom SQL table.
 
-      Templates are provided for all standard tables (**Customer 360**, **Merged Customers**, **Transaction Attributes Extended**, **Unified Transactions**, and **Customer Attributes**) along with additional templates for use with multibrand databases and and tables that support use cases like joining transaction attributes to the **Customer 360** table, merged households, and customer lifecycle events.
+      Templates are provided for all standard tables (**Customer 360**, **Merged Customers**, **Transaction Attributes Extended**, **Unified Transactions**, and **Customer Attributes**) along with additional templates for use with multibrand databases and tables that support use cases like joining transaction attributes to the **Customer 360** table, merged households, and customer lifecycle events.
 
 #. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 #. Click **Validate** to verify that the SQL query runs correctly and returns the desired results. Adjust the query as necessary. When finished, click **Next**.
@@ -1321,7 +1321,7 @@ Allow everyone
 
 .. databases-database-howto-configure-permission-everyone-start
 
-A database that is configured for **Standard** access may allow access to everyone. When resource groups are configured in Amperity, choose the "No resource group" option from the dropdown. When resource groups are not configured, choose the the **Standard** radio button.
+A database that is configured for **Standard** access may allow access to everyone. When resource groups are configured in Amperity, choose the "No resource group" option from the dropdown. When resource groups are not configured, choose the **Standard** radio button.
 
 .. databases-database-howto-configure-permission-everyone-end
 

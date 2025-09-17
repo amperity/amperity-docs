@@ -395,7 +395,7 @@ Stitched domain tables
 
 .. domain-tables-stitched-start
 
-All domain tables to which semantic tags are added and/or to which a foreign key is added that can be used to associate records in a domain table to an Amperity ID are processed by Stitch. This is in addition to all domain tables to which customer profile semantic tags were applied, and then were :ref:`made available to Stitch <feeds-make-available-to-stitch>`.
+All domain tables to which semantic tags are added or to which a foreign key is added that can be used to associate records in a domain table to an Amperity ID are processed by Stitch. This is in addition to all domain tables to which customer profile semantic tags were applied, and then were :ref:`made available to Stitch <feeds-make-available-to-stitch>`.
 
 .. domain-tables-stitched-end
 
@@ -423,7 +423,7 @@ How-tos
 
 .. domain-tables-howtos-start
 
-This section describes tasks related to managing domain tables in Amperity:
+Tasks related to managing domain tables in Amperity:
 
 * :ref:`domain-tables-add`
 * :ref:`domain-tables-add-custom`
@@ -654,7 +654,7 @@ Add linkage table
 #. Under **Custom domain tables** click **Add table**.
 #. Write SQL to specify which CDT records link to which source records. This will be four columns specifying the source table name, source table pk, cdt table name, and cdt pk.
 #. Click **Next**.
-#. Tag the the source table name with `compliance/source-ds`, source table pk with `compliance/source-pk`, cdt table name with `compliance/cdt-ds`, and cdt pk with `compliance/cdt-pk`.
+#. Tag the source table name with `compliance/source-ds`, source table pk with `compliance/source-pk`, cdt table name with `compliance/cdt-ds`, and cdt pk with `compliance/cdt-pk`.
 #. Click **Activate**.
 
 .. domain-tables-add-linkage-steps-end

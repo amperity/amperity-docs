@@ -401,7 +401,7 @@ Sync identity data to Databricks
 
 .. start-sync-to-databricks-start
 
-.. important:: The Amperity identity resolution agent does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
+.. important:: The Amperity identity resolution agent does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. As long as you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
 
 Amperity can sync customer profiles to your Databricks account.
 

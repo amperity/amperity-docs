@@ -557,7 +557,7 @@ Incorrect feed ID
 
 .. couriers-load-operation-type-incorrect-feed-id-start
 
-Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
+Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
 
 .. code-block:: none
 
@@ -679,7 +679,7 @@ You can empty the contents of a table prior to loading a data file to a domain t
 Examples
 ==================================================
 
-The following sections provide examples for load settings and load operations by data source and/or by file type:
+The following sections provide examples for load settings and load operations by data source and by file type:
 
 * :ref:`couriers-example-apache-avro`
 * :ref:`couriers-example-apache-parquet`
@@ -1928,7 +1928,7 @@ How-tos
 
 .. couriers-howtos-list-start
 
-This section describes tasks related to managing couriers in Amperity:
+Tasks related to managing couriers in Amperity:
 
 * :ref:`couriers-add`
 * :ref:`couriers-add-as-copy`

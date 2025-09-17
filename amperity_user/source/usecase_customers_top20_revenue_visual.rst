@@ -24,7 +24,7 @@ Top 20% revenue during previous year
 
 .. usecase-customers-top-20-revenue-howitworks-start
 
-The following sections describe using the the visual **Query Editor** to build a query that returns a list of your top 20-percent customers for revenue in the previous year.
+The following sections describe using the visual **Query Editor** to build a query that returns a list of your top 20-percent customers for revenue in the previous year.
 
 .. usecase-customers-top-20-revenue-howitworks-end
 
@@ -84,6 +84,6 @@ The following sections describe using the the visual **Query Editor** to build a
 
        Click the **Activate** button in the top right corner of the visual **Query Editor**. 
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions and want to build queries that are brand- and/or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build queries that are brand- or region-specific.
 
 .. usecase-customers-top-20-revenue-callouts-end

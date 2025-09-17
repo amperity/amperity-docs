@@ -20,7 +20,7 @@ General advice for sending data
 
 .. send-data-to-amperity-start
 
-This topic contains general advice and recommendations for sending data to Amperity.
+General advice and recommendations for sending data to Amperity.
 
 Sending data to Amperity is the combination of:
 
@@ -44,7 +44,7 @@ For a production environment, most data sources are configured to run once per 2
 
 .. send-data-to-amperity-sections-start
 
-The following sections contain specific advice and/or recommendations:
+The following sections contain specific advice and recommendations:
 
 * :ref:`Character encoding <send-data-to-amperity-character-encoding>`
 * :ref:`Credentials and secrets <send-data-to-amperity-credentials-and-secrets>`

@@ -75,7 +75,7 @@ The recommended way to add the Stitch QA database to your tenant is to use the "
 
 The Stitch QA database is preconfigured with the following tables:
 
-.. tip:: The following links open standalone pages for each table. This topic discusses how each of these tables fits within the recommended Stitch QA workflow.
+.. tip:: The following links open standalone pages for each table. Each of the following tables fits within the recommended Stitch QA workflow.
 
 * :doc:`Detailed Examples <table_detailed_examples>`
 * :doc:`Unified Changes Clusters <table_unified_changes_clusters>`
@@ -119,7 +119,7 @@ The recommended way to add Stitch QA queries to your tenant is to use the "Stitc
 
 The Stitch QA folder is preconfigured with the following queries:
 
-.. tip:: The following links open standalone pages for each query. This topic discusses how each of these queries fits within the recommended Stitch QA workflow.
+.. tip:: The following links open standalone pages for each query. Each of the following queries fits within the recommended Stitch QA workflow.
 
 * :doc:`Bad foreign keys <stitch_qa_bad_foreign_keys>`
 * :doc:`Cluster scores <stitch_qa_cluster_scores>`
@@ -621,7 +621,7 @@ Nicknames can affect the results of blocking and clustering when they prevent ob
 
 In this example, "Mik" and "Mic" do not match, but :ref:`depending the presence of foreign keys and other profile values <configure-stitch-advanced-clustering-matching-strategy>` records may still be scored together.
 
-Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations. You can :doc:`upload your own static CSV files to extend the list of common nicknames to add and/or remove nicknames <stitch_nicknames>` as needed for your tenant.
+Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations. You can :doc:`upload your own static CSV files to extend the list of common nicknames to add or remove nicknames <stitch_nicknames>` as needed for your tenant.
 
 .. qa-stitch-look-for-problematic-nicknames-end
 
@@ -694,7 +694,7 @@ Be sure to apply semantic tags consistently across data sources, in particular f
 
 .. table-unified-preprocessed-raw-use-with-qa-stitch-tags-keys-start
 
-Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile and/or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
+Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
 
 Open the table in the **Database Explorer** and verify that all rows in the table that are associated with a semantic tag or a foreign key have a checkmark in the left column. Rows without a checkmark will not make the associated **FIELD** available to the **Queries** page. If rows do not have a checkmark, edit the table and apply the checkmark, save the table, activate the Stitch QA database, and then run the database to refresh the table.
 
@@ -722,7 +722,7 @@ Open the table in the **Database Explorer** and verify that all rows in the tabl
 
    Look for inconsistencies in the results of semantic tagging and, if discovered, edit them to apply consistent tagging patterns, rerun Stitch, and then re-review the results.
 
-#. Run the :doc:`split clusters <stitch_qa_split_clusters>` query to investigate patterns in split clusters that lack transitive connections for names, email addresses, and/or post office boxes, and for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
+#. Run the :doc:`split clusters <stitch_qa_split_clusters>` query to investigate patterns in split clusters that lack transitive connections for names, email addresses, and post office boxes, or for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
 #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to look for underclustering. The results of this query help identify incorrectly split entities, explain the cardinality of semantic values, and identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 #. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are generally good identifiers.
 #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.

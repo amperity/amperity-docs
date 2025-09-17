@@ -7,7 +7,7 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
-This topic contains IAM and role ARN configuration content that is included into any source or destination topic that pulls data from or sends data to an Amazon S3 bucket.
+IAM and role ARN configuration content that is included into any source or destination topic that pulls data from or sends data to an Amazon S3 bucket.
 
 IAM secrets and keys are possible, but Amperity prefers the role ARN configuration.
 
@@ -64,7 +64,7 @@ After setting up cross-account role assumption, a list of files by filename and 
 .. sources-amazon-s3-aws-access-point-end
 
 
-.. TODO: The candidate /internal/source_amazon_s3 topic has a couple blocks of text in-between these paragraphs that might be shareable on a non-Snowflake use case. Right now, this topic is being single-sourced for updating Snowflake with role ARN info.
+.. TODO: The candidate /internal/source_amazon_s3 topic has a couple blocks of text in-between these paragraphs that might be shareable on a non-Snowflake use case. Right now is being single-sourced for updating Snowflake with role ARN info.
 
 .. TODO: The following section is in Snowflake topics, so keep edits neutral. This should remain a common intro to the steps to do cross-account roles. These are different by source/destination, so each has bespoke steps, Snowflake included.
 

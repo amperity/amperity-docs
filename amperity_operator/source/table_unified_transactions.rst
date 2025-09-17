@@ -222,7 +222,7 @@ Order costs
 
 #. Ensure that cost information is available from the **Unified Itemized Transactions** table.
 
-   .. important:: If cost information is not available, review the data sources and/or custom domain tables in which **txn-item** semantic tags were applied and apply the **txn-item/item-cost** semantic tag to the appropriate fields.
+   .. important:: If cost information is not available, review the data sources and custom domain tables in which **txn-item** semantic tags were applied and apply the **txn-item/item-cost** semantic tag to the appropriate fields.
 
 #. Open the **Unified Transactions** table in the SQL editor.
 #. Find the section named "rollup_uit", which rolls-up individual attributes from the **Unified Itemized Transactions** custom domain table.

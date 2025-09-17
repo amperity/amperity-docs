@@ -41,7 +41,7 @@ Use a query to build an audience that meets the criteria for how your brand want
 
 .. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending sending query results to |destination-name|.
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
 
 
 .. _sendto-pinterest-build-query:
@@ -60,7 +60,7 @@ Build a query that returns a list of email addresses. Use additional filters in 
 .. tip:: Be sure to exclude the following from query results:
 
    #. Users who have opted out of targeted advertising on |destination-name|
-   #. User activity from an app and/or website
+   #. User activity from an app or website
    #. Additional profile information, such as names, phone numbers, or physical addresses
 
 .. destination-pinterest-build-segment-tip-end

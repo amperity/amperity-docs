@@ -40,8 +40,6 @@ Non-breaking changes
 Version identifiers
 --------------------------------------------------
 
-.. TODO: Not identical to docs page because of an admonition. Could reverse the single-sourcing to be FROM this topic to get the admonition enabled (in the docs page).
-
 A version identifier is a date string that must be included with each request made to an API endpoint. All endpoints are versioned together. This provides consistency across all endpoints and ensures interoperability. A version identifier is updated only when breaking changes occur.
 
 For example:
@@ -83,7 +81,7 @@ Deprecated versions
 Authentication
 ==================================================
 
-.. TODO: This is NOT single-sourced, just paraphrased. This section in docs is pulling from the A-Z reference in docs and have images and more complex formatting.
+.. TODO: This is NOT single-sourced, just paraphrased. Is pulled from the A-Z reference in docs and have images and more complex formatting.
 
 All requests that are made to Amperity API endpoints must be authenticated by access tokens that are signed by Amperity-managed API keys.
 
@@ -91,14 +89,14 @@ All requests that are made to Amperity API endpoints must be authenticated by ac
 API keys
 --------------------------------------------------
 
-.. TODO: This is NOT single-sourced, just paraphrased. This section in docs is pulling from the A-Z reference in docs and have images and more complex formatting.
+.. TODO: This is NOT single-sourced, just paraphrased. Is pulled from the A-Z reference in docs and have images and more complex formatting.
 
 Amperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity. Your API key is configured within Amperity from the **Settings** page, **Security** tab.
 
 Access tokens
 --------------------------------------------------
 
-.. TODO: This is NOT single-sourced, just paraphrased. This section in docs is pulling from the A-Z reference in docs and have images and more complex formatting.
+.. TODO: This is NOT single-sourced, just paraphrased. Is pulled from the A-Z reference in docs and have images and more complex formatting.
 
 Access to the Amperity API requires using JWT access tokens that are signed by Amperity-managed API keys. Access tokens are generated against Amperity API keys within Amperity from the **Settings** page, **Security** tab.
 
@@ -128,7 +126,7 @@ Responses
 Pagination
 ==================================================
 
-.. TODO: This is NOT single-sourced. The docs page has more content about pagination than this section in the OpenAPI specification.
+.. TODO: This is NOT single-sourced. The docs page has more content about pagination than the OpenAPI specification.
 
 Amperity uses cursor-based pagination to return pages of data for large lists. A paginated endpoint returns responses with a list of results *and* a **next_token** parameter when another page is available in the returned dataset. You have reached the last page in the results set when the **next_token** parameter is not returned.
 

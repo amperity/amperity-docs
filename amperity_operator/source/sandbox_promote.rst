@@ -110,7 +110,7 @@ The following sections describe the steps you'll follow when promoting changes i
           :alt: Step 4.
           :align: left
           :class: no-scaled-link
-     - Review the list of **Added**, **Changed**, and/or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
+     - Review the list of **Added**, **Changed**, or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
 
        Resolve validation issues, as necessary.
 

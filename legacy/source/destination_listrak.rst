@@ -20,7 +20,11 @@
 Configure campaigns for Listrak
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_listrak.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-listrak-start
@@ -38,7 +42,7 @@ Amperity can manage email and SMS lists in |destination-name|. You can send emai
 
 * The `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|
 * The `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|
-* SFTP for email address and/or SMS lists, along with product catalogs, orders, and ordered items
+* SFTP for email address or SMS lists, along with product catalogs, orders, and ordered items
 
 Additional attributes may be appended using any of these processes.
 
@@ -109,7 +113,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - A client ID and secret for an email integration *and/or* a client ID and secret for an SMS integration. These integrations must already be set up in |destination-name|.
+     - A client ID and secret for an email integration or a client ID and secret for an SMS integration. These integrations must already be set up in |destination-name|.
 
        .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist of the |destination-name| integration.
 
@@ -272,7 +276,7 @@ SFTP
 
 .. destination-listrak-sftp-start
 
-Configure Amperity to send email addresses and/or phone numbers to |destination-name| using SFTP. This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
+Configure Amperity to send email addresses or phone numbers to |destination-name| using SFTP. This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
 
 You can use SFTP to send the following sets of data to |destination-name|.
 

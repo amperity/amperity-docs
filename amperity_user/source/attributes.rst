@@ -25,8 +25,6 @@ Audience attributes are available from a series of standard tables that are gene
 
 Some audience attributes represent consolidated views of your customers, while others are based on predictive modeling and other calculations that are part of Amperity and provide a series of specific attributes that you can use to define high-value segments for use with downstream campaigns.
 
-This topic describes all of the audience attributes that are available from standard tables.
-
 .. attributes-overview-end
 
 
@@ -1336,7 +1334,7 @@ Time period rollups
        * **Lifetime Purchase Brands**
 
    * - **<x> purchase channels**
-     - The count of the distinct channels that the customer interacted with during during the time period. Available attributes:
+     - The count of the distinct channels that the customer interacted with during the time period. Available attributes:
 
        * **L30D purchase channels**
        * **L3M purchase channels**
@@ -1498,6 +1496,6 @@ The following attributes are available from the **Predicted Affinity** table.
    * - **Score**
      - The strength of a customers's affinity for this product, shown as an uncalibrated probability.
 
-       .. tip:: This score is used internally by Amperity and does not directly correlate to ranking and/or audience size. Sort results by **ranking**, and then compare to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
+       .. tip:: This score is used internally by Amperity and does not directly correlate to ranking or audience size. Sort results by **ranking**, and then compare to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
 
 .. attributes-predicted-affinity-table-end

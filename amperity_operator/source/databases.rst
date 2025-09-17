@@ -29,7 +29,7 @@ The **Customer 360** page allows databases to be created from any combination of
 
 .. databases-prerequisites-start
 
-.. important:: This topic assumes that you have completed the processes for :doc:`adding customer profiles <add_customer_data>` and :doc:`adding transactions <add_transactions>` to Amperity and have created your customer 360 database.
+.. important:: Complete the processes for :doc:`adding customer profiles <add_customer_data>` and :doc:`adding transactions <add_transactions>` to Amperity before creating the customer 360 database.
 
 .. databases-prerequisites-start
 
@@ -175,7 +175,7 @@ Add empty database
 
 .. databases-manage-add-empty-start
 
-An empty database contains no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or  :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
+An empty database contains no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
 
 .. databases-manage-add-empty-end
 
@@ -396,7 +396,7 @@ Add as SQL
 
 .. databases-tables-add-sql-note-start
 
-.. note:: If a table was not stitched and/or does not have an Amperity ID, you must use SQL to associate the unique ID in that table to the Amperity ID. For example, CCUST associates the unique ID in a table to the Amperity ID:
+.. note:: If a table was not stitched or does not have an Amperity ID, you must use SQL to associate the unique ID in that table to the Amperity ID. For example, CCUST associates the unique ID in a table to the Amperity ID:
 
    .. code-block:: sql
 
@@ -455,7 +455,7 @@ Use table templates to add tables to your database that use Amperity standard ta
 #. Update the name of the table template, if necessary.
 #. Update the SQL in the table template to support your use case.
 
-   .. important:: Refer to the individual topic for each :ref:`standard table template <databases-tables-add-table-template-standard>` for more information about how to configure any required and/or recommended steps.
+   .. important:: Refer to the individual topic for each :ref:`standard table template <databases-tables-add-table-template-standard>` for more information about how to configure any required or recommended steps.
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly.
 #. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
 

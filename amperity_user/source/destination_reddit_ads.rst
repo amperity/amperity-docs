@@ -150,7 +150,7 @@ The following example describes the steps required to send an audience from Ampe
 
        Click the **Activate** button in the top right corner of the **Query Editor**. 
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions and want to build queries that are brand- and/or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build queries that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-05.png

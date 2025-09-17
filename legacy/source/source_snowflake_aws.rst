@@ -226,7 +226,7 @@ Configure storage integration
 
 .. source-snowflake-aws-configure-storage-integration-start
 
-Amperity can ingest any type of data structure or data format that can be output from Snowflake. This output is written by Snowflake to a customer-managed Amazon S3 bucket,  from which Amperity pulls the data.
+Amperity can ingest any type of data structure or data format that can be output from Snowflake. This output is written by Snowflake to a customer-managed Amazon S3 bucket, from which Amperity pulls the data.
 
 Use `secrets and keys <https://docs.snowflake.com/en/user-guide/data-load-s3-config-aws-iam-user>`__ |ext_link| to pull Snowflake table output from the customer-managed Amazon S3 bucket.
 
@@ -394,7 +394,7 @@ Pull columns using Snowflake query syntax
 
 You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query that runs against one or more Snowflake tables.
 
-.. important:: A Snowflake query name must be unique. The name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
+.. important:: A Snowflake query name must be unique. The name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and periods. For example: "Query_name.12-345a".
 
 .. source-snowflake-aws-add-courier-query-end
 
@@ -421,7 +421,7 @@ You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference
    .. caution:: The courier downloads both query results **AND** all listed tables.
 
 #. Enter :ref:`the name of the Snowflake stage <source-snowflake-aws-configure-storage-integration>`.
-#. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
+#. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and periods. For example: "Query_name.12-345a".
 
    .. caution:: You must add a blank line to the end of the |source-name| query.
 

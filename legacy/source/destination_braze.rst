@@ -18,7 +18,11 @@
 Configure campaigns for Braze
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_braze.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-braze-start
@@ -263,9 +267,9 @@ Get details
 
        * The `REST API endpoint <https://www.braze.com/docs/api/basics#endpoints>`__ |ext_link| from which your instance of |destination-name| is available.
 
-         For example, if your URL for |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
+         For example, if your URL of |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
 
-       * A list of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and/or `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that may be sent to |destination-name| from Amperity.
+       * A list of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| or `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that may be sent to |destination-name| from Amperity.
 
 .. destination-braze-get-details-end
 

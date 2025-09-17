@@ -17,13 +17,13 @@ ADD THIS TO END OF GET DETAILS FOR ALL SOURCES AND CLEAN UP GET DETAILS
 
 **TEMPLATE SECTIONS FOR DATA SOURCES**
 
-This topic contains the templated sections for all of the "Pull from xxxxx" topics in /operator/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
+The templated sections for all of the "Pull from xxxxx" topics in /operator/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
 
 In certain cases, a source topic requires *some* customization within the templated sections. See the Salesforce Sales Cloud topic, **Run courier manually** section for how to do this.
 
 .. sources-overview-list-intro-start
 
-This topic describes the steps that are required to pull |what-pull| to Amperity from |source-name|:
+The steps that are required to pull |what-pull| to Amperity from |source-name|:
 
 .. sources-overview-list-intro-end
 
@@ -104,7 +104,7 @@ FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 
-This section applies ONLY to data sources that use Fivetran.
+Applies ONLY to data sources that use Fivetran.
 
 .. sources-add-courier-fivetran-consolidate-start
 
@@ -150,7 +150,7 @@ Load operations associate each table in the list of tables to a feed. (The initi
       ]
 
 #. Enter the name of the Snowflake stage.
-#. Optional. Use a query to select specific columns from a Snowflake table prior to pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
+#. Optional. Use a query to select specific columns from a Snowflake table prior to pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, or periods. For example: "Query_name.12-345a".
 
    Use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query to run against a table that is to be pulled to Amperity.
 
@@ -185,7 +185,7 @@ AMAZON S3 COURIERS
 AMAZON S3 COURIERS
 AMAZON S3 COURIERS
 
-This section applies ONLY to data sources that use AMAZON S3.
+Applies ONLY to data sources that use AMAZON S3.
 
 .. TODO: Sync the example entities list intros to be generic for all file-based couriers.
 
@@ -207,7 +207,7 @@ An entites list defines the list of files to be pulled to Amperity, along with a
 
 .. sources-add-courier-entities-list-note-s3-generic-end
 
-This section has an introduction to entities lists and a note about required/optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. This section applies to SFTP connectors only.
+An introduction to entities lists and a note about required/optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. Applies to SFTP connectors only.
 
 .. sources-add-courier-s3-generic-start
 
@@ -240,7 +240,7 @@ API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 
-This section applies ONLY to data sources that use APIs and automatically handle the feed creation.
+Applies ONLY to data sources that use APIs and automatically handle the feed creation.
 
 .. TODO: Currently hooked into Zendesk, Sailthru, and Listrak. Not hooked into Google Analytics. Requires the credential-fields, settings-details, and box-names replacements.
 
@@ -278,7 +278,7 @@ API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 
 **Get sample files**
 
-This section has three possible introductions: one for files, another for Snowflake, and another for Fivetran. Fivetran does not have a howto.
+Three possible introductions: one for files, another for Snowflake, and another for Fivetran. Fivetran does not have a howto.
 
 .. sources-get-sample-files-start
 
@@ -339,7 +339,7 @@ A sample CSV file may be output from Snowflake, and then uploaded to Amperity wh
 
 **Add feeds**
 
-This section starts with the glossary term for feeds, then has a note. There are three styles for notes: one for files, one for Fivetran, and one for Snowflake. Slighly different. Then there are two styles for steps: one for Snowflake and another for everything else.
+Start with the glossary term for feeds, then has a note. There are three styles for notes: one for files, one for Fivetran, and one for Snowflake. Slighly different. Then there are two styles for steps: one for Snowflake and another for everything else.
 
 .. sources-add-feed-note-file-start
 
@@ -413,7 +413,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 **Add load operations**
 
-The introduction to this section is literally the same for all data sources and uses the "source name" variable. This section has a custom section that shows an example load operation, which is positioned after the introduction and before the how-to.
+The introduction is literally the same for all data sources and uses the "source name" variable. A custom section that shows an example load operation, which is positioned after the introduction and before the how-to.
 
 .. sources-add-load-operation-start
 
@@ -439,7 +439,7 @@ Load operations must specify each table that is pulled to Amperity from |source-
 
 .. 
 .. each source has its own example operation that should go in this spot
-.. do not pull this section to the file; each of these is unique
+.. do not pull it to the file; each of these is unique
 .. 
 
 .. source-xxxxx-add-load-operations-example-start
@@ -483,7 +483,7 @@ Load operations must specify each file that is pulled to Amperity from |source-n
 
 **Run courier manually**
 
-This section is literally the same for all data sources.
+The same for all data sources.
 
 .. sources-run-courier-start
 

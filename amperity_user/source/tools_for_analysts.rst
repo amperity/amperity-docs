@@ -345,7 +345,7 @@ Configure inbound and outbound shares in Amperity to enable bi-directional synci
 
 .. _tools-for-analysts-about-this-collection:
 
-About this topic collection
+About the User Guides
 ==================================================
 
 .. tools-for-analysts-about-this-collection-start

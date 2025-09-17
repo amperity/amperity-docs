@@ -28,7 +28,7 @@ Early repeat purchasers
 
 .. usecase-early-repeat-purchasers-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that returns a list of customers who are early repeat purchasers.
+The following sections describe using the **Segment Editor** to build a segment that returns a list of customers who are early repeat purchasers.
 
 .. usecase-early-repeat-purchasers-howitworks-end
 

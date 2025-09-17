@@ -17,7 +17,11 @@
 Send data to Snowflake on Amazon AWS
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_snowflake_aws.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-snowflake-start
@@ -139,7 +143,7 @@ The following objects must be created in the customer's instance of Snowflake:
 
    The **CREATE STAGE** command defaults to CSV file types.
 
-   When sending data from Amperity to Snowflake you must configure an external stage that points to the URL for the Amazon S3 bucket that is included with Amperity. (``URL = 's3://bucket[/path/]'``)
+   When sending data from Amperity to Snowflake you must configure an external stage that points to the URL of the Amazon S3 bucket that is included with Amperity. (``URL = 's3://bucket[/path/]'``)
 
 #. A warehouse via `CREATE WAREHOUSE <https://docs.snowflake.net/manuals/sql-reference/sql/create-warehouse.html>`__ |ext_link|.
 #. A user via `CREATE USER <https://docs.snowflake.net/manuals/sql-reference/sql/create-user.html>`__ |ext_link|.
@@ -190,7 +194,7 @@ To configure Snowflake objects use a Data Definition Language (DDL) command simi
 
 .. note:: You must send a customer who connects directly to the Snowflake data warehouse the following information using a SnapPass link:
 
-   #. The URL for the Snowflake data warehouse.
+   #. The URL of the Snowflake data warehouse.
    #. The Snowflake username.
    #. The password for that username.
    #. Snowflake data warehouse name.
@@ -414,7 +418,7 @@ Add a Snowflake destination
           * - **Setting**
             - **Description**
           * - **Account Name**
-            - The account name is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
+            - The account name is contained within the URL of the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
 
           * - **Region ID**
             - The region ID in Amazon AWS. For example: "us-west-2".

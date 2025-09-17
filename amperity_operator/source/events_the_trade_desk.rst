@@ -639,7 +639,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        A field in a database table that contains the date and time at which the offline event occurred.
 
-       For retail-focused offline events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and/or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
+       For retail-focused offline events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
 
        For example:
 
@@ -672,7 +672,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        .. note:: This field should be included with offline events to help |destination-name| deduplicate conversion events.
 
-       For retail-focused offline events this is most often the **Order Value** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and/or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Value**, and then rename it to the field name required by |destination-name|.
+       For retail-focused offline events this is most often the **Order Value** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Value**, and then rename it to the field name required by |destination-name|.
 
        For example:
 
@@ -686,7 +686,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The currency that was associated with the offline event.
 
-       For retail-focused offline events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and/or how your brand has configured Amperity. Within the **SELECT** statement, return **Currency**, and then rename it to the field name required by |destination-name|.
+       For retail-focused offline events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Currency**, and then rename it to the field name required by |destination-name|.
 
        For example:
 

@@ -424,7 +424,7 @@ NULL values
 Functions may fail when they encounter a **NULL** value and others may return **NULL** values if any of their arguments return **NULL** values.
 
 * Use the **COALESCE()** function to convert to a zero-length string when using the **CONCAT()** and **SUM()** functions.
-* Use the **COALESCE()** function to to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because ``1`` is the identity for multiplication, use ``COALESCE(myColumn, 1)``
+* Use the **COALESCE()** function to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because ``1`` is the identity for multiplication, use ``COALESCE(myColumn, 1)``
 
 .. sql-presto-style-guide-null-values-end
 
@@ -611,7 +611,7 @@ Spaces
 
 .. sql-presto-style-guide-whitespace-spaces-start
 
-Spaces should be used to line up the code so that the root keywords all start on the same character boundary, and also so that  This makes it easy to keep track of where you are in a query that may be multiple layers deep.
+Use spaces to line up code so that the root keywords all start on the same character boundary. This makes it easier to keep track of where you are in a complex query.
 
 .. code-block:: sql
    :linenos:
@@ -768,8 +768,6 @@ A **SELECT** statement can be complex, depending on the type of query you need t
    FROM TransactionsEcomm t
    ORDER BY t.amperity_id, rank ASC 
    LIMIT 100
-
-The rest of this topic describes the clauses, expressions, functions, and operators that are the most commonly used within the **SQL Segment Editor** in Amperity. More functionality than what is described in this topic is supported, as the segment editors use Presto SQL.
 
 .. important:: Not all of the functionality described in the official documentation for `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| should be used in the **SQL Segment Editor**.
 
@@ -1379,7 +1377,7 @@ UNION clause
 
 .. sql-presto-union-clause-start
 
-The **UNION** clause combines the the unique results of one query with the unique results of a second. For example:
+The **UNION** clause combines the unique results of one query with the unique results of a second. For example:
 
 ::
 
@@ -1403,7 +1401,7 @@ The **UNION** clause supports two arguments: **ALL** and **DISTINCT**. Use **UNI
 
 .. sql-presto-union-clause-tip-start
 
-.. tip:: Use :ref:`GROUP BY CUBE <sql-presto-group-by-cube>` and/or :ref:`GROUP BY ROLLUP <sql-presto-group-by-rollup>` clauses for more efficient unions of records.
+.. tip:: Use :ref:`GROUP BY CUBE <sql-presto-group-by-cube>` or :ref:`GROUP BY ROLLUP <sql-presto-group-by-rollup>` clauses for more efficient unions of records.
 
 .. sql-presto-union-clause-tip-end
 
@@ -1471,7 +1469,7 @@ The **UNNEST** clause expands an **ARRAY** or **MAP** into a relation.
 
 .. sql-presto-unnest-clause-example-expand-email-address-start
 
-Use the UNNEST clause in the SQL segment to expand phone and/or email addresses so that the query looks at individual bad values. The following example shows using an **UNNEST** clause to expand email addresses that are part of a bad-values blocklist SQL query:
+Use the UNNEST clause in the SQL segment to expand phone numbers or email addresses so that the query looks at individual bad values. The following example shows using an **UNNEST** clause to expand email addresses that are part of a bad-values blocklist SQL query:
 
 .. code-block:: sql
    :linenos:
@@ -2022,13 +2020,13 @@ Functions
 
 .. sql-presto-functions-start
 
-A function is a SQL statement that accepts input parameters, performs actions, and then returns results. This section highlights some useful functions for use when building segments in Amperity.
+A function is a SQL statement that accepts input parameters, performs actions, and then returns results.
 
 .. sql-presto-functions-end
 
 .. sql-presto-functions-note-start
 
-.. note:: This section highlights a very small subset of `the complete list of functions available in Presto SQL <https://prestodb.io/docs/current/functions.html>`__ |ext_link|, many of which can be useful depending on the type of query.
+.. note:: Amperity uses a subset of `the complete list of functions available in Presto SQL <https://prestodb.io/docs/current/functions.html>`__ |ext_link|, many of which can be useful depending on the type of query.
 
 .. sql-presto-functions-note-end
 
@@ -3430,7 +3428,7 @@ REPLACE()
 
 .. sql-presto-function-replace-start
 
-Use the **REPLACE()** function to remove and/or replace all instances of ``search`` from ``string``. There are two variants:
+Use the **REPLACE()** function to remove or replace all instances of ``search`` from ``string``. There are two variants:
 
 * Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``.
 * Use **REPLACE(string, search, replace)** to replace all instances of ``search`` from ``string`` with ``replace``.

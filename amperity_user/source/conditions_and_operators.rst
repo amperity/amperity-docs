@@ -20,7 +20,7 @@ Conditions and operators
 
 .. segments-and-vs-or-start
 
-This topic uses visuals to describe various combinations of conditions (inclusions and exclusions) and operators (**AND** and **OR**). Each example shows how inclusions, exclusions, and operators work together to determine the size of an audience that is returned by a segment.
+A set of visuals to describe various combinations of conditions (inclusions and exclusions) and operators (**AND** and **OR**). Each example shows how inclusions, exclusions, and operators work together to determine the size of an audience that is returned by a segment.
 
 .. segments-and-vs-or-end
 
@@ -130,7 +130,7 @@ When the **City** attrbute is used in a segment you should associate the state i
    :align: left
    :class: no-scaled-link
 
-This segment returns a list of customers who live in a city named "Chicago" and who live in the the state of "Illinois", which includes the city of Chicago.
+This segment returns a list of customers who live in a city named "Chicago" and who live in the state of "Illinois", which includes the city of Chicago.
 
 .. image:: ../../images/segments-and-or-example-city-or-state-segment.png
    :width: 580 px
@@ -152,7 +152,7 @@ This segment returns a list of customers who live in a city named "Chicago" and 
       :align: left
       :class: no-scaled-link
 
-   This segment returns a list of customers who live in a city named "Chicago" and who live in the the state of "Illinois", which includes the city of Chicago.
+   This segment returns a list of customers who live in a city named "Chicago" and who live in the state of "Illinois", which includes the city of Chicago.
 
    .. image:: ../../images/segments-and-or-example-city-or-state-dual-segment.png
       :width: 580 px
@@ -398,7 +398,7 @@ Customer lists
 
 .. segments-and-vs-or-include-exclude-segments-start
 
-This section uses previous examples *as if they are a segment* and then shows how using customer lists can affect the lists of customers that are returned by a segment.
+The following examples show how using customer lists can affect the lists of customers that are returned by a segment.
 
 .. segments-and-vs-or-include-exclude-segments-end
 

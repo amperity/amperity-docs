@@ -22,7 +22,11 @@
 Configure campaigns for TikTok Ads Manager
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_tiktok_ads.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-tiktok-ads-start
@@ -65,7 +69,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
 .. destination-tiktok-ads-steps-to-send-start
 
-This topic describes the steps that are required to send custom audiences and offline events to |destination-name|:
+The following steps are required to send custom audiences and offline events to |destination-name|:
 
 #. :ref:`Get details <destination-tiktok-ads-get-details>`
 #. :ref:`Configure OAuth <destination-tiktok-ads-configure-oauth>`

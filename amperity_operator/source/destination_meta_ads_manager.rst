@@ -625,7 +625,7 @@ Security challenge
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-start
 
-Sometimes |destination-name| issues a security challenge to the advertising account and/or business account associated with this workflow.
+Sometimes |destination-name| issues a security challenge to the advertising account or business account associated with this workflow.
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-end
 
@@ -751,7 +751,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Hashes data as SHA-256
    * - **Zip Code**
      - **ZIP**
-     - Use only the first five digits for the United States. Use Use `postcodes (area, district, sector) format <https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom>`__ |ext_link| for United Kingdom.
+     - Use only the first five digits for the United States. Use `postcodes (area, district, sector) format <https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom>`__ |ext_link| for United Kingdom.
 
        For this key, the connector:
 

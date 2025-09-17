@@ -267,7 +267,7 @@ You can use any of the following purchase behaviors in your segments:
 Segment insights
 ==================================================
 
-.. TODO: This section is included into the segments 1-2-3 topic.
+.. TODO: Included into the segments 1-2-3 topic.
 
 .. segments-reference-segment-insights-start
 

@@ -192,7 +192,7 @@ There are two options available for email engagement:
 
 Choose the option that matches the type of email engagment data that your organization will make available to Amperity.
 
-.. important:: :ref:`Email engagement attributes <email-engagement-steps-engagement-attributes>` are available to both options. These attributes use the **Merged Customers** table to associate email events data with the Amperity ID. Add the **Email Engagement Attributes** table to your customer 360 database after the **Unified Email Events** and/or **Email Engagement Summary** tables are available.
+.. important:: :ref:`Email engagement attributes <email-engagement-steps-engagement-attributes>` are available to both options. These attributes use the **Merged Customers** table to associate email events data with the Amperity ID. Add the **Email Engagement Attributes** table to your customer 360 database after the **Unified Email Events** and **Email Engagement Summary** tables are available.
 
 .. email-engagement-steps-end
 
@@ -292,7 +292,7 @@ Engagement attributes
 
 .. email-engagement-steps-engagement-attributes-start
 
-The **Email Engagement Attributes** table is available to both options and may be added as a SQL table after the **Unified Email Events** and/or **Email Events Summary** tables have been added as passthrough tables.
+The **Email Engagement Attributes** table is available to both options and may be added as a SQL table after the **Unified Email Events** and **Email Events Summary** tables have been added as passthrough tables.
 
 .. important:: To improve the quality of email engagement data be sure that each email address is associated to only one Amperity ID. 
 

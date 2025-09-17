@@ -154,7 +154,7 @@ Common activities
 
 .. sandboxes-howtos-start
 
-This section describes tasks related to working with sandboxes in Amperity:
+Tasks related to working with sandboxes in Amperity:
 
 * `Access a sandbox <../reference/sandboxes.html#access-a-sandbox>`__
 * `Add a sandbox <../reference/sandboxes.html#add-a-sandbox>`__

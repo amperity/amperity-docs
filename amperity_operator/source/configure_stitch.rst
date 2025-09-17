@@ -17,7 +17,7 @@
 Configure Stitch
 ==================================================
 
-.. TODO: This section title is required by a tooltip in the Stitch configuration dialog in Amperity. Do not change this title without also taking steps to ensure the link from the dialog is also updated.
+.. TODO: Is required by a tooltip in the Stitch configuration dialog in Amperity. Do not change this title without also taking steps to ensure the link from the dialog is also updated.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-stitch-start
@@ -461,7 +461,7 @@ Ignore jitter alerts
 
 .. tooltip-stitch-config-jitter-alerts-start
 
-Jitter tracks changes to Amperity IDs across Stitch runs. You may configure Stitch to ignore jitter, such as during the initial configuration phase for your tenant or when running a tenant in training and/or demonstration use cases.
+Jitter tracks changes to Amperity IDs across Stitch runs. You may configure Stitch to ignore jitter, such as during the initial configuration phase for your tenant or when running a tenant in training or demonstration use cases.
 
 .. tooltip-stitch-config-jitter-alerts-end
 

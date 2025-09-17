@@ -392,7 +392,7 @@ The time zone that is chosen for an courier group schedule should consider every
 
 .. tip:: Do not create courier group schedules that may occur during a daylight savings time transition.
 
-   For example, an courier group schedule with the cron string of ``30 2 * * *`` and the time zone of "(GMT-08:00) Pacific Time" runs once a day most at 2:30am, except for one day in the spring when it will not run at all and one day in the fall when it runs twice.
+   For example, an courier group schedule with the cron string of ``30 2 * * *`` and the time zone of "(GMT-08:00) Pacific Time" runs once a day most at 2:30 AM, except for one day in the spring when it will not run at all and one day in the fall when it runs twice.
 
    This is because American daylight savings time transitions at 2:00 AM, meaning the 2:00 AM hour occurs twice when transitioning out of daylight savings time (Fall) and is skipped altogether when transitioning into daylight savings time (Spring).
 
@@ -550,7 +550,7 @@ How-tos
 
 .. courier-groups-howtos-list-start
 
-This section describes tasks related to managing courier groups in Amperity:
+Tasks related to managing courier groups in Amperity:
 
 * :ref:`courier-groups-howto-activate`
 * :ref:`courier-groups-howto-add-bridge`
@@ -584,7 +584,7 @@ Activate courier group
 
 .. courier-groups-howto-activate-start
 
-An activated courier group is run automatically on a defined schedule. All couriers and bridges that are configured for the  courier group run as a unit and are used to run Stitch and refresh the customer 360 database. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
+An activated courier group is run automatically on a defined schedule. All couriers and bridges that are configured for the courier group run as a unit and are used to run Stitch and refresh the customer 360 database. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
 
 .. courier-groups-howto-activate-end
 
@@ -1190,7 +1190,7 @@ Wait for missing files
 
 .. courier-groups-wait-for-missing-files-start
 
-When files are missing or late, in addition to sending an email alert and either continuing or stopping the workflow, Amperity will continue to attempt to find the these files. Use the **Wait** setting to configure amount of time Amperity should wait:
+When files are missing or late, in addition to sending an email alert and either continuing or stopping the workflow, Amperity will continue to attempt to find these files. Use the **Wait** setting to configure amount of time Amperity should wait:
 
 .. image:: ../../images/mockups-workflow-courier-group-settings-wait.png
    :width: 400 px

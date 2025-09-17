@@ -48,7 +48,7 @@ Configure campaigns for Google Ads
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
-   Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
+   Use Amperity to build high-value product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
    Once uploaded, |plugin-name| hashes each record, and then matches all records against hashed user accounts that already exist in |plugin-name| to identify segments that contain records that match the ones sent from Amperity.
 
@@ -709,7 +709,7 @@ European Union user consent
 
 The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must `send the the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
+.. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
 
 .. list-table::
    :widths: 130 130 340
@@ -767,7 +767,7 @@ User ID Matching
 
 .. campaign-google-ads-api-matching-user-start
 
-A list can be matched to advertiser-generated and assigned user IDs and/or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to advertiser-generated and assigned user IDs or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

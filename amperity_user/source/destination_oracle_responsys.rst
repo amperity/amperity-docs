@@ -50,7 +50,7 @@ Send query results to Oracle Responsys
 
 .. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending sending query results to |destination-name|.
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
 
 
 .. _sendto-oracle-responsys-build-query:
@@ -113,7 +113,7 @@ After these files are delivered to |destination-name| you must import this data 
 
 **To import results to Oracle Responsys**
 
-.. tip:: See the `Oracle Responsys help center page <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link| for complete steps on importing results from Amperity. This section provides an overview, and then highlights specific settings as they relate to how you configured your results to be sent from Amperity.
+.. tip:: See the `Oracle Responsys help center page <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link| for complete steps on importing results from Amperity.
 
 #. From the **Data** side navigation bar, select **Connect** > **Create Job** > **Import Profile Data**. Add the required details to describe the job, and then click **Done**.
 #. Connect to a server.

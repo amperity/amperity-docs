@@ -28,7 +28,7 @@ Early repeat purchasers
 
 .. usecase-early-repeat-purchasers-howitworks-start
 
-The following sections describe using the the visual **Query Editor** to build a query that returns a list of customers who are early repeat purchasers.
+The following sections describe using the visual **Query Editor** to build a query that returns a list of customers who are early repeat purchasers.
 
 .. usecase-early-repeat-purchasers-howitworks-end
 

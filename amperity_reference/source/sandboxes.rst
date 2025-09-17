@@ -148,7 +148,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
        A list of changes appears under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
 
-       Review the list of **Added**, **Changed**, and/or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
+       Review the list of **Added**, **Changed**, and **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
 
        Resolve validation issues, as necessary.
 
@@ -373,7 +373,7 @@ How-tos
 
 .. sandboxes-howtos-start
 
-This section describes tasks related to working with sandboxes in Amperity:
+Tasks related to working with sandboxes in Amperity:
 
 * :ref:`Access a sandbox <sandboxes-howto-access-sandbox>`
 * :ref:`Add a sandbox <sandboxes-howto-add-sandbox>`
@@ -449,7 +449,7 @@ You can delete a sandbox from the list of sandboxes under **Sandboxes** on the *
 .. sandboxes-howto-delete-sandbox-steps-start
 
 #. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
-#. From the the list of options select **Delete**.
+#. From the list of options select **Delete**.
 #. On the **Delete sandbox** window, enter the sandbox ID in the field to confirm that you want to delete the sandbox, and then click **Delete**.
 
 .. sandboxes-howto-delete-sandbox-steps-end
@@ -471,7 +471,7 @@ The name and description of a sandbox can be edited after it has been created.
 .. sandboxes-howto-edit-validation-details-steps-start
 
 #. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
-#. From the the list of options select **Details**.
+#. From the list of options select **Details**.
 
    The **Sandbox details** window appears with information about the sandbox.
 
@@ -499,7 +499,7 @@ A sandbox is accessible from the **Users and Activity** page *or* from the dropd
 .. sandboxes-howto-open-sandbox-steps-start
 
 #. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
-#. From the the list of options select **Open sandbox**.
+#. From the list of options select **Open sandbox**.
 
    This opens the sandbox in a new page in your Web browser.
 
@@ -669,7 +669,7 @@ Sandbox details include the name of the sandbox, its tenant ID and URL, when it 
 .. sandboxes-howto-view-sandbox-details-steps-start
 
 #. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
-#. From the the list of options select **Details**.
+#. From the list of options select **Details**.
 
    The **Sandbox details** window appears with information about the sandbox.
 

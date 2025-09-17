@@ -45,7 +45,7 @@ Transaction events that occurred within the previous seven days *and* contain po
 
 .. caution:: This destination is available for sending offline events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending sending offline events to |destination-name|.
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending offline events to |destination-name|.
 
 
 .. _events-meta-ads-manager-build-segment:
@@ -91,7 +91,7 @@ You may include any of the following customer profile fields to help improve mat
 
 .. tip::
 
-   Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned and/or canceled.
+   Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned or canceled.
 
    For example:
 

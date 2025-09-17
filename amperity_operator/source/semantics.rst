@@ -506,7 +506,7 @@ Stitch will derive given names and surnames from **full-name** when a data sourc
 * Fields tagged with **given-name** and **surname** do not have explicit values
 * Fields cannot be tagged with **given-name** or **surname**
 
-When a table does not contain given names and/or surnames, values associated with **full-name** is not available from the **Unified Coalesced** table for that data source, but values will be available from the **Unified Preprocessed Raw** table.
+When a table does not contain given names or surnames, values associated with **full-name** is not available from the **Unified Coalesced** table for that data source, but values will be available from the **Unified Preprocessed Raw** table.
 
 .. semantics-profile-type-names-derived-end
 

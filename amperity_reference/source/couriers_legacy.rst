@@ -18,7 +18,11 @@
 About couriers (legacy)
 ==================================================
 
+.. vale off
+
 .. warning:: Use this topic for couriers with legacy configuration patterns and options. Use :doc:`About couriers <couriers>` for the new configuration patterns and options.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
@@ -562,7 +566,7 @@ Incorrect feed ID
 
 .. couriers-legacy-load-operation-type-incorrect-feed-id-start
 
-Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
+Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
 
 .. code-block:: none
 
@@ -684,7 +688,7 @@ You can empty the contents of a table prior to loading a data file to a domain t
 Examples
 ==================================================
 
-The following sections provide examples for load settings and load operations by data source and/or by file type:
+The following sections provide examples for load settings and load operations by data source and by file type:
 
 * :ref:`couriers-legacy-example-apache-avro`
 * :ref:`couriers-legacy-example-apache-parquet`
@@ -1933,7 +1937,7 @@ How-tos
 
 .. couriers-legacy-howtos-list-start
 
-This section describes tasks related to managing couriers in Amperity:
+Tasks related to managing couriers in Amperity:
 
 * :ref:`couriers-legacy-add`
 * :ref:`couriers-legacy-add-as-copy`

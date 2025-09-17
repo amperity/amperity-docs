@@ -146,7 +146,7 @@ Add to segments
 
 .. attribute-purchase-behavior-repeat-purchase-segments-start
 
-You can add the **Repeat purchase** purchase behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **Repeat purchase**.
+You can add the **Repeat purchase** behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **Repeat purchase**.
 
 .. image:: ../../images/attributes-picker-purchase-behavior-repeat-purchase.png
    :width: 540 px
@@ -154,7 +154,7 @@ You can add the **Repeat purchase** purchase behavior to a segment from the **Se
    :align: left
    :class: no-scaled-link
 
-After the **Repeat purchase** purchase behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
+After the **Repeat purchase** behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
 
 .. attribute-purchase-behavior-repeat-purchase-segments-end
 

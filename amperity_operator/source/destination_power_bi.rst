@@ -220,7 +220,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :class: no-scaled-link
      - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| or from the `Power BI Service <https://docs.microsoft.com/en-us/power-bi/connect-data/service-connect-snowflake>`__ |ext_link|.
 
-       .. note:: The URL for the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Microsoft Power BI to Snowflake.
+       .. note:: The URL of the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Microsoft Power BI to Snowflake.
 
 
    * - .. image:: ../../images/steps-03.png

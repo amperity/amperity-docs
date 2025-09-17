@@ -171,7 +171,7 @@ An application user with permission to modify and update records is required.
 
 .. destination-microsoft-dynamics-configure-user-steps-start
 
-#. Go to the customer's instance of |destination-name|, and then log in with Admin credentials. The URL for |destination-name| is similar to "<tenant-name>.crm.dynamics.com".
+#. Go to the customer's instance of |destination-name|, and then log in with Admin credentials. The URL of |destination-name| is similar to "<tenant-name>.crm.dynamics.com".
 #. Click **Settings**, then **System**, and then **Security**.
 #. On the **Security** page, click **Users**, and then click **Application Users**.
 #. Click **New**.

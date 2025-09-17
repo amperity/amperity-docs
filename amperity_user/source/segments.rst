@@ -183,7 +183,7 @@ The following sections describe the individual elements within the **Segment Edi
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions.
 
           Some examples:
 

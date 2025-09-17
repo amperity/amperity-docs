@@ -621,7 +621,7 @@ Validation reports for email addresses and phone numbers include:
 * Are email events associated with multiple Amperity IDs?
 * Are email events unique by brand?
 * Does an email event have an associated event type, such as opens or clicks?
-* Are there conflicting opt-in preferences for email addresses and/or phone numbers?
+* Are there conflicting opt-in preferences for email addresses or phone numbers?
 
 .. setup-transactions-validate-database-reports-email-phone-end
 
@@ -665,7 +665,7 @@ Validation reports for transactions include:
 * Are costs, quantities, and revenue non-positive for returns and cancellations?
 * Are returns and cancellations associated with their original order ID?
 * Are costs, list prices, discount amounts, discount percents, subtotals, and revenue positive for purchases?
-* Is revenue revenue greater than purchase revenue?
+* Is revenue greater than purchase revenue?
 * Does the differece between list price and revenue match discounted amounts?
 * Does revenue equal the sum of cost and profit?
 * Are discount percents accurate?

@@ -53,11 +53,11 @@ Use the **Unified Preprocessed Raw** table as part of the Stitch QA process to:
 Profile semantics and foreign keys
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-tags-keys-start
 
-Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile and/or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
+Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile and foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
 
 Open the table in the **Database Explorer** and verify that all rows in the table that are associated with a semantic tag or a foreign key have a checkmark in the left column. Rows without a checkmark will not make the associated **FIELD** available to the **Queries** page. If rows do not have a checkmark, edit the table and apply the checkmark, save the table, activate the Stitch QA database, and then run the database to refresh the table.
 
@@ -69,7 +69,7 @@ Open the table in the **Database Explorer** and verify that all rows in the tabl
 Relationships between records
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-relationships-records-start
 
@@ -87,7 +87,7 @@ In some cases, you may need to investigate and compare entire clusters to better
 Global blocklist values
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-blocklist-values-start
 

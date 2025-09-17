@@ -40,7 +40,7 @@ Send query results to Dynamic Yield
 
 .. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending sending query results to |destination-name|.
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
 
 
 .. _sendto-dynamic-yield-build-query:
@@ -72,10 +72,10 @@ Build a query that shapes the data so that fields in the output are mapped to th
    #. **sku**. Required. A product's unique ID. Values cannot contain spaces or "//" (double backslashes). For example: "1234".
    #. **group_id**. Required. An identifier for a group of products with different product attributes. For example: "4321".
    #. **name**. Required. The name of the product. For example: "t-shirt".
-   #. **url**. Required. A valid URL for a product. For example: ``https://store.com/product_page.html``.
-   #. **price**. Required. The price for a product. For example: "9.99".
+   #. **url**. Required. A valid URL of a product. For example: ``https://store.com/product_page.html``.
+   #. **price**. Required. The price of a product. For example: "9.99".
    #. **in_stock**. Required. Indicates if the product is in stock. For example: "true".
-   #. **image_url**. Required. A valid URL for a product's image. For example: ``https://store.com/images/image.png``.
+   #. **image_url**. Required. A valid URL of a product's image. For example: ``https://store.com/images/image.png``.
    #. **categories**. Required. The categories associated with a product.
    #. **keywords**. Optional. Additional information that describes a product.
 

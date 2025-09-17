@@ -56,13 +56,13 @@ The following sections describe what you should do to monitor the health of each
           :alt: Step 1.
           :align: center
           :class: no-scaled-link
-     - Ensure that each query results match the requirements and/or use cases that are required in the downstream application. 
+     - Ensure that each query results match the requirements and use cases that are required in the downstream application. 
 
        For example, you may need to update a query to match changes required by the destination. This might be due to a change in the scope of the use case, such as a request to add columns to the "Yearly_Revenue_by_Month" query to support an additional visualization element in your Domo dashboard.
 
        You may need to update a query to ensure the results match specific requirements by the destination.
 
-       For example, you started with 6 data sources and used those to get your downstream use cases running. And then added a few more data sources. One of these sources has "messy records" that changed some of the data in your customer 360 database, which causes your Google Ads or DV360 orchestration to fail. Google Ads or DV360 requires phone numbers to use a "+11231234567" format and requires that first name, last name, zip code, and country be available to the the "Contact Info" upload key. An orchestration fails when the data that is sent to Google Ads or DV360 doesn't match the formatting requirements.
+       For example, you started with 6 data sources and used those to get your downstream use cases running. And then added a few more data sources. One of these sources has "messy records" that changed some of the data in your customer 360 database, which causes your Google Ads or DV360 orchestration to fail. Google Ads or DV360 requires phone numbers to use a "+11231234567" format and requires that first name, last name, zip code, and country be available to the "Contact Info" upload key. An orchestration fails when the data that is sent to Google Ads or DV360 doesn't match the formatting requirements.
 
 
    * - .. image:: ../../images/steps-02.png

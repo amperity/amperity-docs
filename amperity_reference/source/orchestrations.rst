@@ -48,7 +48,7 @@ How-tos
 
 .. orchestrations-howtos-start
 
-This section describes tasks related to managing orchestrations in Amperity:
+Tasks related to managing orchestrations in Amperity:
 
 * :ref:`orchestrations-add`
 * :ref:`orchestrations-assign-database-export`

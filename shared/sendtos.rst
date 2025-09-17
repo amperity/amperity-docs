@@ -23,7 +23,7 @@
 
 **BUILD QUERY**
 
-.. This section is for any destination that defaults to just email-only.
+.. For any destination that defaults to just email-only.
 
 
 .. sendtos-build-query-email-only-start

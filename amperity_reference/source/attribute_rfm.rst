@@ -177,7 +177,7 @@ How combined RFM scores work
 
 .. attribute-rfm-score-howitworks-start
 
-A combined RFM score returns a list of customers who meet the requirement for each individual RFM score: recency **and** frequency **and** monetary. An RFM score of "9810" represents three individual scores. The following diagram shows individual RFM scores for individual recency ("9"), frequency ("8"), and monetary ("10"). The darker color represents the  scores:
+A combined RFM score returns a list of customers who meet the requirement for each individual RFM score: recency **and** frequency **and** monetary. An RFM score of "9810" represents three individual scores. The following diagram shows individual RFM scores for individual recency ("9"), frequency ("8"), and monetary ("10"). The darker color represents the scores:
 
 .. image:: ../../images/attribute-rfm-combined-example-9810-bubbles-individual.png
    :width: 600 px

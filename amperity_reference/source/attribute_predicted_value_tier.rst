@@ -54,7 +54,7 @@ Each of these attributes provides a score that is independent of other predicted
       #. :doc:`Predicted order frequency <attribute_predicted_order_frequency>` represents the number of orders a customer is predicted to make *if they return to make another purchase* during the next 365 days.
       #. :doc:`Predicted average order revenue <attribute_predicted_average_order_revenue>` represents the average value of each order a customer is predicted to make *if they return to make another purchase* during the next 365 days.
 
-#. Predicted value tiers group customers by pCLV: Platinum (top 1%),  Gold (top 1%-5%),  Silver (top 5%-10%),  Bronze (top 10%-25%),  Medium (top 25%-50%), and Low (bottom 50%).
+#. Predicted value tiers group customers by pCLV: Platinum (top 1%), Gold (top 1%-5%), Silver (top 5%-10%), Bronze (top 10%-25%), Medium (top 25%-50%), and Low (bottom 50%).
 
 .. attribute-predicted-value-tier-about-clv-end
 

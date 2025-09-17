@@ -31,7 +31,7 @@ The following tables are standard output of Amperity. These tables and the attri
 * :ref:`Unified Itemized Transactions <standard-output-unified-itemized-transactions>`
 * :ref:`Unified Transactions <standard-output-unified-transactions>`
 
-This topic collects *all* of the attributes that are available in standard output into a single topic. It is organized alphabetically by table, and then within each table attribues it is organized alphabetically by attribute name.
+All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attribues it is organized alphabetically by attribute name.
 
 .. standard-output-overview-end
 
@@ -40,12 +40,6 @@ This topic collects *all* of the attributes that are available in standard outpu
 .. note:: It is not uncommon for certain tables--**Customer Attributes** and **Customer 360**, in particular--to contain additional attributes that are custom to your tenant. The :ref:`Merged Customers <standard-output-merged-customers>` table is visible when working in certain areas of the **Campaigns** page and is the underlying source of truth for attributes in the **Customer 360** table.
 
 .. standard-output-overview-note-end
-
-.. standard-output-overview-tip-start
-
-.. tip:: This topic isn't designed to be read from end-to-end. You can if you want to, but it's more useful as a reference that you can browse when you need it. Use your browser's search function, type the name of an attribute you want to learn more about, and then find that attribute on the page.
-
-.. standard-output-overview-tip-end
 
 
 .. _standard-output-campaign-recipients:
@@ -492,7 +486,7 @@ The following attributes are available from the **Predicted Affinity** table.
    * - **Score**
      - The strength of a customers's affinity for this product, shown as an uncalibrated probability.
 
-       .. tip:: This score is used internally by Amperity and does not directly correlate to ranking and/or audience size. Sort results by **ranking**, and then compare to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
+       .. tip:: This score is used internally by Amperity and does not directly correlate to ranking or audience size. Sort results by **ranking**, and then compare to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
 
 .. standard-output-predicted-affinity-table-end
 
@@ -824,7 +818,7 @@ Time period rollups
        * **Lifetime Purchase Brands**
 
    * - **<x> Purchase Channels**
-     - The count of the distinct channels--online or in store--that the customer interacted with during during the time period. Available attributes:
+     - The count of the distinct channels--online or in store--that the customer interacted with during the time period. Available attributes:
 
        * **L30D Purchase Channels**
        * **L3M Purchase Channels**

@@ -45,7 +45,7 @@ Use data from Amperity in |destination-name| to:
 
 .. campaign-persado-about-eu-note-start
 
-.. note:: This topic describes how to use the |destination-name| SFTP connector that is built into Amperity, which is configured to use the North American hostname.
+.. note:: The |destination-name| SFTP connector built into Amperity is configured to use the North American hostname.
 
    You can send data to the European Union hostname by using the :doc:`generic SFTP destination <destination_sftp>`, and then specifying **eu-psftp.persado.com** as the hostname. All of the other configuration details are the same.
 

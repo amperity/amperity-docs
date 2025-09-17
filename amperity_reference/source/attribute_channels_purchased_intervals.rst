@@ -24,7 +24,7 @@ Purchased channel intervals
 
 .. attribute-channel-purchased-intervals-about-start
 
-Purchased channel attributes represent the count of the distinct channels (online, in store, etc.) through which a customer interacted with your brand during during the specified time period.
+Purchased channel attributes represent the count of the distinct channels (online, in store, etc.) through which a customer interacted with your brand during the specified time period.
 
 .. attribute-channel-purchased-intervals-about-end
 

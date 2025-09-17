@@ -13,7 +13,11 @@
 Send data to Microsoft Power BI
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_power_bi.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-powerbi-start
@@ -181,9 +185,11 @@ Connect to Snowflake
 
 .. destination-powerbi-connect-to-snowflake-start
 
-Amperity can be configured to share data (tables and/or entire databases) directly with Snowflake. Microsoft Power BI can be configured to connect to a Snowflake data warehouse and use that data as a data source.
+Amperity can be configured to share data usng tables or databases) directly with Snowflake. Microsoft Power BI can be configured to connect to a Snowflake data warehouse and use that data as a data source.
 
-Amperity offers additional services that allow Amperity to run as the Amperity Data Warehouse, which is synchronized to your Amperity tenant. (This is, currently, run as a Snowflake data warehouse that is accessible to only your Amperity tenant.) Microsoft Power BI is configured to connect directly to the Amperity Data Warehouse. Or you may send data directly to Snowflake by configuring the Snowflake destination to send data to your Snowflake tenant.
+Amperity offers additional services that allow Amperity to run as the Amperity Data Warehouse, which is synchronized to your Amperity tenant. This is, currently, run as a Snowflake data warehouse that is accessible to only your Amperity tenant.
+
+Microsoft Power BI is configured to connect directly to the Amperity Data Warehouse. Or you may send data directly to Snowflake by configuring the Snowflake destination to send data to your Snowflake tenant.
 
 .. destination-powerbi-connect-to-snowflake-end
 
@@ -222,7 +228,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
           :class: no-scaled-link
      - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| or from the `Power BI Service <https://docs.microsoft.com/en-us/power-bi/connect-data/service-connect-snowflake>`__ |ext_link|.
 
-       .. note:: The URL for the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Microsoft Power BI to Snowflake.
+       .. note:: The URL of the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Microsoft Power BI to Snowflake.
 
 
    * - .. image:: ../../images/steps-04.png

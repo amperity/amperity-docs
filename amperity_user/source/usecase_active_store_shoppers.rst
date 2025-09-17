@@ -26,7 +26,7 @@ An active store shopper is a customer who prefers to make their purchases at sto
 
 .. usecase-active-store-shoppers-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that finds customers who have frequently shopped at a brick and mortar store.
+The following sections describe using the **Segment Editor** to build a segment that finds customers who have frequently shopped at a brick and mortar store.
 
 .. usecase-active-store-shoppers-howitworks-end
 
@@ -94,7 +94,7 @@ The following sections describe using the the **Segment Editor** to build a segm
           :align: left
           :class: no-scaled-link
 
-       Keep the and/or slider set to **AND**.
+       Keep the slider set to **AND**.
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who have purchased from a store within the previous year.
 
@@ -115,7 +115,7 @@ The following sections describe using the the **Segment Editor** to build a segm
           :align: left
           :class: no-scaled-link
 
-       Keep the and/or slider set to **AND**.
+       Keep the slider set to **AND**.
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who have purchased from a store within the previous year *and* have purchased at least five times.
 
@@ -133,7 +133,7 @@ The following sections describe using the the **Segment Editor** to build a segm
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions and want to build segments that are brand- and/or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-06.png

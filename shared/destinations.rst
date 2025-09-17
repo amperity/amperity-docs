@@ -57,19 +57,19 @@ For example:
 
 **TEMPLATE SECTIONS FOR DESTINATIONS**
 
-This topic contains the templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
+Templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
 In certain cases, a destination topic requires *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
 
 .. destinations-overview-list-intro-start
 
-This topic describes the steps that are required to send |what-send| to |destination-name| from Amperity.
+The steps that are required to send |what-send| to |destination-name| from Amperity.
 
 .. destinations-overview-list-intro-end
 
 .. campaigns-overview-list-intro-start
 
-This topic describes the steps that are required to send campaigns to |destination-name| from Amperity.
+The steps that are required to send campaigns to |destination-name| from Amperity.
 
 .. campaigns-overview-list-intro-end
 
@@ -244,10 +244,10 @@ Use a webhook destination to send query results from Amperity to a Lambda functi
 
 #. Select **Allow business users to use this destination**.
 
-   This allows users who have been assigned to the **Amp360 User** and/or **AmpIQ User** policies to use this destination with orchestrations and/or campaigns.
+   This allows users who have been assigned to the **Amp360 User** or **AmpIQ User** policies to use this destination with orchestrations and campaigns.
 #. Select **Allow business users with limited PII access to send data**.
 
-   This allows users who have been assigned to the **Restrict PII access** policy option to use this destination with orchestrations and/or campaigns.
+   This allows users who have been assigned to the **Restrict PII access** policy option to use this destination with orchestrations and campaigns.
 #. Click **Save**.
 
 .. destinations-add-destinations-webhook-end
@@ -733,7 +733,7 @@ Review all settings, and then click **Save**.
 
 .. destinations-data-template-save-after-start
 
-After you have saved the data template, and depending on how you configured it, business users can |sendto-link| and/or |channel-link| to |destination-name|.
+After you have saved the data template, and depending on how you configured it, business users can |sendto-link| and |channel-link| to |destination-name|.
 
 .. destinations-data-template-save-after-end
 

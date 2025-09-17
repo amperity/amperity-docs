@@ -20,7 +20,11 @@
 Configure campaigns for Adobe Marketo
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_adobe_marketo.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-adobe-marketo-start
@@ -161,7 +165,7 @@ Add destination
 
        |destination-name| has the following settings:
 
-       * The The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
+       * The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
        * The subdomain used with |destination-name|.
 
        .. include:: ../../shared/destinations.rst

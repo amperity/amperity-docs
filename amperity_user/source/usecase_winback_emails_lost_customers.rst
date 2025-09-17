@@ -47,7 +47,7 @@ A win-back campaign for lost customers will typically include:
 
 .. usecase-winback-emails-lost-customers-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that returns a list of customers who have a contactable email address and whose most recent order was more than two years ago.
+The following sections describe using the **Segment Editor** to build a segment that returns a list of customers who have a contactable email address and whose most recent order was more than two years ago.
 
 .. usecase-winback-emails-lost-customers-howitworks-end
 
@@ -146,7 +146,7 @@ The following sections describe using the the **Segment Editor** to build a segm
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions and want to build segments that are brand- and/or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name or the region name if you have multiple brands or have multiple regions and want to build segments that are brand- and region-specific.
 
 
    * - .. image:: ../../images/steps-05.png

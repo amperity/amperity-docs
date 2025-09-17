@@ -22,7 +22,7 @@ Versioning
 
 Amperity APIs evolve and change over time. Amperity versions API endpoints to help your brand track changes to the Amperity API and to offer support to developers as these endpoints evolve.
 
-Your team of developers can track improvements to the Amperity API from the `changelog <https://docs.amperity.com/api/changelog.html>`__. Monitor the changelog to know when new versions are available and/or when existing versions are updated or planned for deprecation.
+Your team of developers can track improvements to the Amperity API from the `changelog <https://docs.amperity.com/api/changelog.html>`__. Monitor the changelog to know when new versions are available or when existing versions are updated or planned for deprecation.
 
 .. versioning-end
 

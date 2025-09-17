@@ -431,7 +431,7 @@ The following table shows how your segment name appears in |destination-name|. T
        Winback_Jeans
 
        Winback_Shoes
-     - Use this pattern for campaigns that have more than one treatment group and/or have sub-audiences.
+     - Use this pattern for campaigns that have more than one treatment group and have sub-audiences.
 
        You may use an underscore ( _ ) or a hyphen ( - ): **{{ campaign_name }}_{{ group_name }}** or **{{ campaign_name }}-{{ group_name }}**.
 
