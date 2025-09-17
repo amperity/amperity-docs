@@ -22,9 +22,9 @@ First-time buyers with SMS opt-in
 
 Customer retention is critical for the long-term growth of your brand. It is not enough to acquire a customer who makes a single purchase. It is essential to find ways to convince your first-time buyers to become long-term, repeat customers.
 
-If your brand uses SMS messaging as part of your one-time buyer and/or winback campaigns, a good early step is getting first-time buyers to opt-in to receiving SMS messages from your brand. Use incentives -- free shipping, a percentage discount, etc. -- to help convince first-time buyers to sign up to receive messages from your brand. This step works best when it's a part of the purchasing process.
+If your brand uses SMS messaging as part of your one-time buyer or winback campaigns, a good early step is getting first-time buyers to opt-in to receiving SMS messages from your brand. Use incentives -- free shipping, a percentage discount, etc. -- to help convince first-time buyers to sign up to receive messages from your brand. This step works best when it's a part of the purchasing process.
 
-The next step is to include first-time buyers who have opted-in as part of your one-time buyer and/or winback campaign strategies.
+The next step is to include first-time buyers who have opted-in as part of your one-time buyer or winback campaign strategies.
 
 .. usecase-engage-first-time-buyers-with-sms-end
 
@@ -87,11 +87,11 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       Keep the and/or slider set to **AND**.
+       Keep the slider set to **AND**.
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who made their first purchase within the previous 30 days *and* who have opted in to SMS.
 
-       .. tip:: For companies with multiple brands or are in multiple regions, you may use the **Brand** and **Region** attributes in the **SMS Opt Status** table to identify customer opt-in status by brand and/or by region.
+       .. tip:: For companies with multiple brands or are in multiple regions, you may use the **Brand** and **Region** attributes in the **SMS Opt Status** table to identify customer opt-in status by brand or by region.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -107,7 +107,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions and want to build segments that are brand- and/or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

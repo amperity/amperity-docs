@@ -244,10 +244,10 @@ Use a webhook destination to send query results from Amperity to a Lambda functi
 
 #. Select **Allow business users to use this destination**.
 
-   This allows users who have been assigned to the **Amp360 User** and/or **AmpIQ User** policies to use this destination with orchestrations and/or campaigns.
+   This allows users who have been assigned to the **Amp360 User** or **AmpIQ User** policies to use this destination with orchestrations and campaigns.
 #. Select **Allow business users with limited PII access to send data**.
 
-   This allows users who have been assigned to the **Restrict PII access** policy option to use this destination with orchestrations and/or campaigns.
+   This allows users who have been assigned to the **Restrict PII access** policy option to use this destination with orchestrations and campaigns.
 #. Click **Save**.
 
 .. destinations-add-destinations-webhook-end
@@ -733,7 +733,7 @@ Review all settings, and then click **Save**.
 
 .. destinations-data-template-save-after-start
 
-After you have saved the data template, and depending on how you configured it, business users can |sendto-link| and/or |channel-link| to |destination-name|.
+After you have saved the data template, and depending on how you configured it, business users can |sendto-link| and |channel-link| to |destination-name|.
 
 .. destinations-data-template-save-after-end
 

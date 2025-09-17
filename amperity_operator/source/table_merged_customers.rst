@@ -49,7 +49,7 @@ Requirements
 
 The **Merged Customers** table has the following requirements:
 
-* PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain customer records. For custom PII semantics and/or non-PII data that must be accessible from the **Unified Coalesced** table, you may need to :ref:`extend the Merged Customers table <table-merged-customers-custom-semantics>` to support them.
+* PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain customer records. For custom PII semantics and non-PII data that must be accessible from the **Unified Coalesced** table, you may need to :ref:`extend the Merged Customers table <table-merged-customers-custom-semantics>` to support them.
 * Feeds that contain customer records are made available to Stitch.
 * Each feed has a primary key; foreign keys are applied consistently across all feeds that are made available to Stitch.
 * At least one feed must contain a field that indicates when the data was last updated.
@@ -524,7 +524,7 @@ The :doc:`table_email_ampid_assignment` is configured by default in the SQL temp
 
 .. table-merged-customers-undo-ampid-assignment-steps-start
 
-Using the **Email Ampid Assignment** table is strongly recommended, but may be byassed when email opt status and/or email engagement data is not available in your tenant.
+Using the **Email Ampid Assignment** table is strongly recommended, but may be byassed when email opt status or email engagement data is not available in your tenant.
 
 If your tenant chooses to bypass the **Email Ampid Assignment** table, the following steps are required to update the **Merged Customers** table to use email address priority and completion values that do not rely on the **Email Ampid Assignment** table.
 
@@ -705,7 +705,7 @@ You can create custom semantics for PII and non-PII fields. All custom semantics
 #. Extend the **Merged Customers** table with custom merge rules that load the column created by the custom semantic from the **Unified Coalesced** table.
 #. Apply similar merge patterns used for PII semantics.
 
-Within the **Merged Customers** table, you must decide if the custom semantic requires source and/or field priority:
+Within the **Merged Customers** table, you must decide if the custom semantic requires source and field priority:
 
 * :ref:`Assign field priority <table-merged-customers-extend-pii-semantic-custom-assign-priority>`
 * :ref:`Skip field priority <table-merged-customers-extend-pii-semantic-custom-skip-priority>`

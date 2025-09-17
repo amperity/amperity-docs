@@ -784,7 +784,7 @@ Expand returned values
 
 .. bad-values-blocklist-advanced-expand-returned-values-start
 
-In situations where multiple values exist for phone and/or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole concatenated value.
+In situations where multiple values exist for phone numbers or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole concatenated value.
 
 .. bad-values-blocklist-advanced-expand-returned-values-end
 

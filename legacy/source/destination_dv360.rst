@@ -50,7 +50,7 @@ Configure campaigns for DV360
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
-   Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
+   Use Amperity to build high-value product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
    Once uploaded, |plugin-name| hashes each record, and then matches all records against hashed user accounts that already exist in |plugin-name| to identify segments that contain records that match the ones sent from Amperity.
 
@@ -111,7 +111,7 @@ Get details
 
        A refresh token that is generated from the authentication process that authorizes Amperity to send data to the selected product. This must be a Google account with permission to access the configured customer ID and product within Google.
 
-       .. important:: Authentication for "Display Video Advertiser" and/or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
+       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -216,7 +216,7 @@ Add destination
 
        To create a new credential for |destination-name|, generate an authorization link, and then use that link to log into your |destination-name| account. After you have completed that process, you will be provided a refresh token. Add the value for the refresh token to the **Refresh Token** setting in Amperity.
 
-       .. important:: Authentication for "Display Video Advertiser" and/or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
+       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
 
        .. image:: ../../images/mockup-destinations-tab-credentials-02-select-dv360.png
           :width: 500 px
@@ -503,7 +503,7 @@ European Union user consent
 
 The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy.
+.. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) or to adhere to the European Union (EU) user consent policy.
 
 .. list-table::
    :widths: 130 130 340

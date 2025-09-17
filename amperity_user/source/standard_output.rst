@@ -486,7 +486,7 @@ The following attributes are available from the **Predicted Affinity** table.
    * - **Score**
      - The strength of a customers's affinity for this product, shown as an uncalibrated probability.
 
-       .. tip:: This score is used internally by Amperity and does not directly correlate to ranking and/or audience size. Sort results by **ranking**, and then compare to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
+       .. tip:: This score is used internally by Amperity and does not directly correlate to ranking or audience size. Sort results by **ranking**, and then compare to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
 
 .. standard-output-predicted-affinity-table-end
 

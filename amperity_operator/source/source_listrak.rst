@@ -6,7 +6,7 @@
 .. |feed-name| replace:: Email Contacts *AND / OR* SMS Contacts
 .. |domain-table-name| replace:: |source-name|:EmailContacts *AND / OR* |source-name|:SmsContacts
 .. |credential-type| replace:: **listrak**
-.. |what-pull| replace:: email and/or SMS profiles
+.. |what-pull| replace:: email or SMS profiles
 .. |credential-fields| replace:: the name of the credential, a description, the |source-name| client IDs and client secrets
 .. |settings-details| replace:: the list name for each integration being used, as defined in |source-name|
 .. |box-names| replace:: Email Contacts *AND / OR* SMS Contacts
@@ -97,11 +97,11 @@ Get details
 
 |source-name| requires the following configuration details:
 
-#. The client IDs and secrets for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| **and/or** `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
+#. The client IDs and secrets for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| or `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
 
    .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist in |source-name|.
 
-#. The Email list name **and/or** SMS list name. (This depends on which REST APIs are configured.)
+#. The Email list name or SMS list name. (This depends on which REST APIs are configured.)
 
 #. Pull additional customer profile fields to Amperity using the :ref:`Additional fields <source-listrak-get-details-additional-fields>` setting.
 

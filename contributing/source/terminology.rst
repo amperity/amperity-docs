@@ -152,7 +152,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 
 .. _term-stitch:
 
-**Stitch** vs. **stitch**, **stitched**, and/or **stitching**
+**Stitch** vs. **stitch**, **stitched**, or **stitching**
    You can stitch data and data can be stitched, but only Stitch is a feature within Amperity.
 
    Use a capital "S" when referring to Stitch as a feature. Never use Stitched, or Stitch's. Just Stitch. Rewrite your sentences to make this happen.

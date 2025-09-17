@@ -71,7 +71,7 @@ The following sections describe at a high level the series of steps that are req
        #. :ref:`Enable UID2 <uid2-configure-amperity-enable-uid2>`.
        #. :ref:`Add the UID2 table <uid2-configure-amperity-add-uid2-table>` to your brand's database.
 
-       Use custom database tables, queries, and/or segments to configure Amperity to support your brand's use cases for UID2.
+       Use custom database tables, queries, and segments to configure Amperity to support your brand's use cases for UID2.
 
 
        .. admonition:: How does Amperity maintain UID2 tokens?
@@ -96,7 +96,7 @@ The following sections describe at a high level the series of steps that are req
 
        Use custom database tables, queries, and segments in Amperity to build audiences of UID2 tokens that support your brand's advertising strategies. Send these audiences to demand-side platforms (DSPs) that participate in Unified ID 2.0, such as The Trade Desk.
 
-       DSPs can receive UID2s from advertisers as first- and/or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
+       DSPs can receive UID2s from advertisers as first- or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
 
 .. uid2-howitworks-table-end
 
@@ -246,7 +246,7 @@ About UID2 workflows
 
 Use custom database tables, queries, and segments in Amperity to build audiences of UID2 tokens that support your brand's advertising strategies. Send these audiences to demand-side platforms (DSPs) that participate in Unified ID 2.0, such as The Trade Desk.
 
-DSPs can receive UID2s from advertisers as first- and/or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
+DSPs can receive UID2s from advertisers as first- or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
 
 .. list-table::
    :widths: 10 90

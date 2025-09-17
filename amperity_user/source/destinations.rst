@@ -148,8 +148,8 @@ Destinations are the locations to which you sends the lists of customers that ar
        * Criteo requires an email address and does not accept any other attributes.
        * TikTok Ads requires an email address **and** a phone number and accepts advertising IDs for Apple and Android.
        * Facebook Ads requires mapping fields in your customer 360 database to field in Facebook and applying a strict naming convention.
-       * Cloud-based storage -- Amazon S3, Google Cloud Storage, or Microsoft Azure -- and/or SFTP often have no restrictions.
+       * Cloud-based storage--Amazon S3, Google Cloud Storage, or Microsoft Azure--or SFTP often have no restrictions.
 
-         .. note:: Workflows often use cloud-based storage and/or SFTP as a staging location before uploading that data to another application. That application may have specific requirements for which attributes are required. You need to ensure that the list of attributes for those use cases are configured correctly within the campaigns builder.
+         .. note:: Workflows often use cloud-based storage or SFTP as a staging location before uploading that data to another application. That application may have specific requirements for which attributes are required. You need to ensure that the list of attributes for those use cases are configured correctly within the campaigns builder.
 
 .. destinations-howitworks-callouts-end

@@ -62,8 +62,8 @@ The **Customer Attributes** table has a small number of specific requirements, w
 The **Customer Attributes** table has the following requirements:
 
 * PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain the following types of customer records: email addresses, phone numbers, and physical addresses.
-* The **Merged Customers** table is extended to support :ref:`custom email <table-merged-customers-extend-pii-semantic-email>` or :ref:`custom phone <table-merged-customers-extend-pii-semantic-phone>` semantics that may be present when individual data sources provide multiple email addresses and/or phone numbers.
-* The **Merged Customers** table is extended to :doc:`exclude common or "bad" email, phone, and/or physical address values <blocklist_bad_values>`.
+* The **Merged Customers** table is extended to support :ref:`custom email <table-merged-customers-extend-pii-semantic-email>` or :ref:`custom phone <table-merged-customers-extend-pii-semantic-phone>` semantics that may be present when individual data sources provide multiple email addresses or phone numbers.
+* The **Merged Customers** table is extended to :doc:`exclude common or "bad" email, phone, or physical address values <blocklist_bad_values>`.
 
 .. table-customer-attributes-start-here-requirements-end
 
@@ -143,11 +143,11 @@ This table is designed to consolidate various data points about your customers i
 
 .. table-customer-attributes-sql-template-important-start
 
-.. important:: Review the :ref:`column reference <table-customer-attributes-reference>` to familiarize yourself with the table schema. If you extend and/or custommize this table you **must** use column names that match the names of columns that are in the defined table schema.
+.. important:: Review the :ref:`column reference <table-customer-attributes-reference>` to familiarize yourself with the table schema. If you extend or custommize this table you **must** use column names that match the names of columns that are in the defined table schema.
 
    For example, email and SMS opt-in status **must** return a Boolean value for **is_email_opted_in** and **is_sms_opted_in**.
 
-   You may extend and/or customize this table for columns that are not defined in the schema.
+   You may extend or customize this table for columns that are not defined in the schema.
 
 .. table-customer-attributes-sql-template-important-end
 
@@ -165,7 +165,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. table-customer-attributes-recommended-starting-sql-note-start
 
-.. note:: If your tenant is not using transactions or if your tenant does not have email and/or SMS opt-in status, make some or all of the following changes to the recommended starting SQL for the **Customer Attributes** table:
+.. note:: If your tenant is not using transactions or if your tenant does not have email or SMS opt-in status, make some or all of the following changes to the recommended starting SQL for the **Customer Attributes** table:
 
    #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN tae_cte ta** line in the "Extend for classifications" common table expression (CTE).
    #. Remove the "Extend for email opt-in status" section.
@@ -379,7 +379,7 @@ If a customer has a complete email address *and* phone number they are considere
 
 The **Merged Customers** table is the "source of truth" for this data within your customer 360 database and is required by the **Customer Attributes** table. Customers for which you do not have *any* personally identifiable information (PII) are also identified.
 
-.. note:: When the **Email Opt Status** and **SMS Opt Status** tables are available and are configured in this table, the **contactable_email** and **contactable_phone** records are updated to be email addresses and phone numbers that are complete in the **Merged Customers** table *and also* belong to customers who have given their consent to be contacted by your brand at their email address and/or phone number.
+.. note:: When the **Email Opt Status** and **SMS Opt Status** tables are available and are configured in this table, the **contactable_email** and **contactable_phone** records are updated to be email addresses and phone numbers that are complete in the **Merged Customers** table *and also* belong to customers who have given their consent to be contacted by your brand at their email address or phone number.
 
 .. table-customer-attributes-required-updates-end
 
@@ -391,7 +391,7 @@ Recommended updates
 
 .. table-customer-attributes-recommended-updates-start
 
-Most brands have transaction data histories, along with data that indicates if your customers have given consent to be contacted at their email address and/or phone number.
+Most brands have transaction data histories, along with data that indicates if your customers have given consent to be contacted at their email address or phone number.
 
 The following sections describe these features and also show you how to comment them out of the **Customer Attributes** table to disable them:
 
@@ -520,7 +520,7 @@ SMS opt-in status
 
 .. table-customer-attributes-recommended-update-sms-optin-start
 
-The **Customer Attributes** table provides a list of customers who have complete and contactable phone numbers. You can upgrade this list to only be a list of customers who have given consent to your brand sending them SMS and/or text messages by using the **SMS Opt Status** table.
+The **Customer Attributes** table provides a list of customers who have complete and contactable phone numbers. You can upgrade this list to only be a list of customers who have given consent to your brand sending them SMS or text messages by using the **SMS Opt Status** table.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-sms-opt-status-table-start

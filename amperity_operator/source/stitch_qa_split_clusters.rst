@@ -20,7 +20,7 @@ Split clusters
 
 .. stitch-qa-query-split-clusters-start
 
-Use this query to investigate patterns in split clusters that lack transitive matching for names, email addresses, and/or post office boxes, and for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
+Use this query to investigate patterns in split clusters that lack transitive matching for names, email addresses, or post office boxes, and for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
 
 .. stitch-qa-query-split-clusters-end
 
@@ -33,7 +33,7 @@ When to use
 .. stitch-qa-query-split-clusters-use-start
 
 #. Run this query to identify split clusters.
-#. Test various column selections and/or versions of columns from the **Unified Coalesced** table.
+#. Test various column selections and versions of columns from the **Unified Coalesced** table.
 #. Add/update **WHERE** conditions to filter the initial results.
 #. Spend 30-60 minutes examining various **CASE** statements and filters.
 #. Adjust selection columns from the **Unified Coalesced** table to inspect various cases of matching PII.

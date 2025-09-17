@@ -1379,7 +1379,7 @@ The **Event Propensity** table has the following columns:
      - Float
      - The strength of a customers's propensity for this event, shown as an uncalibrated probability.
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking and/or audience size, and should not be used in segments.
+       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
 
           Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with higher propensity.
 
@@ -1988,7 +1988,7 @@ An **Affinity** table has the following columns:
      - Float
      - The strength of a customers's affinity for this product, shown as an uncalibrated probability.
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking and/or audience size, and should not be used in segments.
+       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
 
           Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
 

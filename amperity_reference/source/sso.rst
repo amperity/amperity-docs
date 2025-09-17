@@ -115,7 +115,7 @@ Amperity recommends enabling SSO for your tenant. The process for enabling SSO r
 
 .. sso-request-to-enable-context-start
 
-To enable SSO for your tenant, make a request through your Amperity support representative. The process for configuring SSO requires some participation from members of your team, such as someone from security, support, and/or IT operations, depending on how your IdP is managed within your organization.
+To enable SSO for your tenant, make a request through your Amperity support representative. The process for configuring SSO requires some participation from members of your team, such as someone from security, support, and IT operations, depending on how your IdP is managed within your organization.
 
 .. important:: This process requires ongoing communication between members of your organization and the Amperity Support team.
 
@@ -273,7 +273,7 @@ Review the following sections to learn more about each policy:
 
 .. sso-map-groups-to-policies-context-start
 
-Add groups to your IdP that map to each of the policies in Amperity that you plan to use, and then add users to each group. Discuss with your Amperity Support team and/or representative if you have questions about mapping groups to policies.
+Add groups to your IdP that map to each of the policies in Amperity that you plan to use, and then add users to each group. Discuss with your Amperity Support representative if you have questions about mapping groups to policies.
 
 .. tip:: Use Amperity-specific prefixes for the group names in your IdP, such as **Amperity_Operators** or **Amperity_Users** to help identify the mapping.
 
@@ -293,6 +293,6 @@ The last step in the process for enabling SSO for your tenant is to verity that 
 
 This is most often done during a scheduled 30-minute meeting with your Amperity Support team, during which the configuration is tested and validated. You should plan to test at least one user for each group in your IdP that is mapped to a policy in Amperity.
 
-At the end of this meeting your organization can decide if additional configuration and validation is necessary and/or can determine the date at which SSO is enabled for your tenant.
+At the end of this meeting your organization can decide if additional configuration and validation is necessary or can determine the date at which SSO is enabled for your tenant.
 
 .. sso-validate-config-end

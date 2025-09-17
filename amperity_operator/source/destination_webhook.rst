@@ -74,7 +74,7 @@ The Lambda function is built to process and publish the data however it needs. T
 
 A webhook destination works like this:
 
-#. Use a query to build a table with data that matches rows, columns, and/or data types that are required by the custom destination.
+#. Use a query to build a table with data that matches rows, columns, or data types that are required by the custom destination.
 #. Configure a webhook destination to send data to a Lambda function that is running in AWS Lambda.
 #. Deploy a Lambda function to AWS Lambda. The Lambda function may be deployed as a :ref:`serverless application (recommended) <destination-webhook-serverless>` or it may be :ref:`a custom Lambda function that you have built using the open source toolkit provided by Amperity <destination-webhook-custom>`, and then uploaded to AWS Lambda.
 #. Configure a webhook destination to send data to a function that runs in AWS Lambda.
@@ -113,7 +113,7 @@ Custom destinations
 
 .. destination-webhook-configure-manual-start
 
-A custom destination is configured using a webhook destination and Lambda function. The Lambda function must be able to perform all actions that are required to move the data from Amperity to the custom destination, including validations and/or pre-processing that is required by the custom destination, and including any services, such as Amazon S3, that may be needed in-between Amperity and the custom destination.
+A custom destination is configured using a webhook destination and Lambda function. The Lambda function must be able to perform all actions that are required to move the data from Amperity to the custom destination, including validations and pre-processing that is required by the custom destination, and including any services, such as Amazon S3, that may be needed in-between Amperity and the custom destination.
 
 .. destination-webhook-configure-manual-end
 

@@ -266,7 +266,7 @@ Cohort analysis
 
 The following SQL builds a cohort analysis against the **Transaction Attributes Extended** table that returns a month-by-month view of customers acquired, split by channel, and then for each monthly cohort, how many repurchased within 60, 90, 180, and 365 days, and the channel on which customers made their repeat purchases.
 
-.. tip:: Build cohort analysis queries for your tenant, and then send the results downstream to :doc:`your favorite analytics and/or BI tool <sendto_analytics_bi>`.
+.. tip:: Build cohort analysis queries for your tenant, and then send the results downstream to :doc:`your favorite analytics or BI tools <sendto_analytics_bi>`.
 
 .. code-block:: sql
    :linenos:
@@ -374,7 +374,7 @@ The following examples show how to track customer acquisition by day for single-
 
 .. queries-example-customer-acquisition-tip-start
 
-.. tip:: Build customer acquisition queries for your tenant, and then send the results downstream to :doc:`your favorite analytics and/or BI tool <sendto_analytics_bi>`.
+.. tip:: Build customer acquisition queries for your tenant, and then send the results downstream to :doc:`your favorite analytics or BI tools <sendto_analytics_bi>`.
 
 .. queries-example-customer-acquisition-tip-end
 

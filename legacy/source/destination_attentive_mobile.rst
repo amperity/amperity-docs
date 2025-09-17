@@ -629,7 +629,7 @@ The following table shows how your segment name appears in |destination-name|. T
        Winback_Jeans
 
        Winback_Shoes
-     - Use this pattern for campaigns that have more than one treatment group and/or have sub-audiences.
+     - Use this pattern for campaigns that have more than one treatment group or have sub-audiences.
 
        You may use an underscore ( _ ) or a hyphen ( - ): **{{ campaign_name }}_{{ group_name }}** or **{{ campaign_name }}-{{ group_name }}**.
 
@@ -652,6 +652,6 @@ The following table shows how your segment name appears in |destination-name|. T
 
 .. destination-attentive-add-data-template-important-start
 
-.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings (campaign and/or treatment group) is used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
+.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings (campaign or treatment group) is used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
 
 .. destination-attentive-add-data-template-important-end

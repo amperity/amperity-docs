@@ -582,7 +582,7 @@ Many workflows have context-specific resolutions that depend on upstream and dow
 
 .. workflows-context-note-start
 
-.. note:: The potential list of context-specific workflow actions is larger than the lists of campaign-, courier group-, destination-, scheduled orchestration group- and/or source-specific resolutions. And this list of potential context-specific workflow actions may be only partially relevant to your tenant.
+.. note:: The potential list of context-specific workflow actions is larger than the lists of campaign-, courier group-, destination-, scheduled orchestration group- or source-specific resolutions. And this list of potential context-specific workflow actions may be only partially relevant to your tenant.
 
    For example, if your brand only uses Amazon S3 for file-based transfers, then SFTP-specific errors won't ever be shown. If your brand sends paid media campaigns to TikTok Ads and Meta Ads Manager, but not Google Ads, then Google Ads-specific errors won't ever be shown.
 
@@ -710,7 +710,7 @@ Runtime alerts
 
 .. courier-groups-configure-duration-alert-start
 
-A runtime alert notifies when a courier group has run for longer than a configured amount of time. A runtime alert is sent to each email address that is configured to receive email alerts for courier groups and/or to a channel in your Slack workspace.
+A runtime alert notifies when a courier group has run for longer than a configured amount of time. A runtime alert is sent to each email address that is configured to receive email alerts for courier groups or to a channel in your Slack workspace.
 
 .. courier-groups-configure-duration-alert-end
 

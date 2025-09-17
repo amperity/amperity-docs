@@ -186,7 +186,7 @@ In this scenario:
 #. Amperity ingests this data as first-party customer data.
 #. Amperity runs identity resolution across this data, and then creates customer profiles.
 #. Amperity sends the results to the NCOA data provider, including the Amperity ID associated with each unique customer. These results must include the first name, last name, and address of the customer in a format that matches the format for the NCOA provider.
-#. The NCOA provider sends back to Amperity data that contains the latest and/or updated first name, last name, address of the customer, and their Amperity ID.
+#. The NCOA provider sends back to Amperity data that contains the latest first name, last name, address of the customer, and their Amperity ID.
 #. Amperity ingests the updated data and semantically tags the updated address as an "updated address". The resulting customer profiles contain the original and updated addresses both tied to each unique customer in the data results.
 
 .. data-third-party-update-addresses-end

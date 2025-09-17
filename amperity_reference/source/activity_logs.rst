@@ -409,7 +409,7 @@ The following table lists the most common event types, grouped by the component 
           .. note:: This event shows *only* the first time an email addresss or Slack channel is configured to receive workflow alerts for courier groups, scheduled orchestration groups, or campaigns. All subsequent events related to workflow alerts shows the ``audience/updated`` event.
 
        ``audience/updated``
-          The membership of an audience for a workflow alert was updated. This includes adding or removing email addresses and/or Slack channels to or from a workflow alert.
+          The membership of an audience for a workflow alert was updated. This includes adding or removing email addresses or Slack channels to or from a workflow alert.
 
 
    * - **Workflows**

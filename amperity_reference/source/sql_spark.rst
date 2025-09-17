@@ -120,7 +120,7 @@ General
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
 * Object-oriented design principles with SQL or database structures.
 * Boolean values wrapped in quotes. Use **TRUE** and **FALSE** without quotes.
-* Large tables defined within the **NOT IN** expression of a **WHERE** statement. These runs slowly and/or result in out-of-memory errors.
+* Large tables defined within the **NOT IN** expression of a **WHERE** statement. Large tables run slowly and may result in out-of-memory errors.
 
 .. sql-spark-recommendation-general-end
 
@@ -925,7 +925,7 @@ A subquery can be useful for shaping data prior to running a query. A subquery i
 
 #. Don't join to an outer query from a subquery, as it may cause the subquery to run recursively for every value of the join key in the outer query. This may cause the subquery to run many times, or even millions of times. This type of subquery is sometimes referred to as a correlated subquery. The best way to avoid them is to never join between the inner and outer queries.
 #. Each level of a subquery adds overhead. The fewer levels within a subquery, the easier it is to optimize the query. Try to flatten queries using joins instead of using additional levels. If you need to pull data into a subquery for multiple fields, try to use a single subquery instead of many.
-#. Remove columns and/or use as few columns in a subquery as possible. For example, use:
+#. Remove columns or use as few columns in a subquery as possible. For example, use:
 
    .. code-block:: none
 
@@ -1417,7 +1417,7 @@ The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** w
 
 .. warning:: The use of **WHERE** followed by **NOT IN** will cause performance issues when the argument within **NOT IN** is a large table or large query. This is because Spark SQL will implement the table or query as a broadcast join, and then attempt to broadcast that table or query to every worker node in the Spark cluster. This may cause Spark SQL to run slowly or result in out-of-memory errors.
 
-   To prevent slow queries and/or out-of-memory errors use a **LEFT ANTI JOIN** operation instead of a **WHERE** followed by **NOT IN** a table or a query. For example:
+   To prevent slow queries or out-of-memory errors use a **LEFT ANTI JOIN** operation instead of a **WHERE** followed by **NOT IN** a table or a query. For example:
 
    .. code-block:: sql
 
@@ -3713,7 +3713,7 @@ Rehash PII data
 
 .. sql-spark-function-sha2-example-rehash-data-start
 
-Some segments send results downstream to support CCPA and/or GDPR workflows. Some CCPA and GDPR workflows send this data back to Amperity, which typically requires the data to be hashed using a domain table.
+Some segments send results downstream to support CCPA and GDPR workflows. Some CCPA and GDPR workflows send this data back to Amperity, which typically requires the data to be hashed using a domain table.
 
 For example, to hash the name, email, and phone fields in a table named "tohash_ccpa":
 
@@ -4127,7 +4127,7 @@ Use **LEADING**, **TRAILING**, or **BOTH** as keywords to define the location fr
 
 .. sql-spark-function-trim-tip-start
 
-The **TRIM(string)** function assumes it should trim spaces, which means all that is required to trim leading and/or trailing spaces is to specify the column name. For example:
+The **TRIM(string)** function assumes it should trim spaces, which means all that is required to trim leading or trailing spaces is to specify the column name. For example:
 
 .. code-block:: none
 

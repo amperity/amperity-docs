@@ -148,7 +148,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
 
        A list of changes appears under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
 
-       Review the list of **Added**, **Changed**, and/or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
+       Review the list of **Added**, **Changed**, and **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
 
        Resolve validation issues, as necessary.
 

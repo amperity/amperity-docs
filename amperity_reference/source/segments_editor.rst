@@ -47,7 +47,7 @@ A good segment name is clear and concise, is not longer than necessary, uses pat
 
    Be sure to follow good naming patterns to ensure that downstream users can always find your segments when they need them. Add details like “historical”, “daily”, or “test” as appropriate.
 
-   Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions.
+   Be sure to include the brand name or the region name if you have multiple brands or have multiple regions.
 
    Some examples:
 

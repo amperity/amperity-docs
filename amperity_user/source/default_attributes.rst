@@ -105,7 +105,7 @@ The following sections describe the steps you'll follow to configure the default
           * Require email addresses, but also accept a larger set of optional attributes.
           * Require attributes to be mapped to specific naming patterns, such as "email", "Email" or "EMAIL" before they can be accepted.
 
-          For destinations that use an API, Amperity pre-configures the list of attributes that are required and/or are optional. Review the Amperity documentation for each destination to understand which attributes may be configured.
+          For destinations that use an API, Amperity pre-configures the list of attributes that are required and are optional. Review the Amperity documentation for each destination to understand which attributes may be configured.
 
           For destinations that accept files--SFTP, Amazon S3, Azure Blob Storage, and Google Cloud Storage--your brand should verify the requirements for the downstream system to which data is sent before configuring default attributes.
 

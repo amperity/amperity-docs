@@ -80,7 +80,7 @@ The following query returns campaigns sorted by earliest and latest delivery dat
    GROUP BY 1,2,3,4,5,6
    ORDER BY 5,6,7
 
-where the **WHERE** statement is updated for the specific campaign ID and/or campaign name.
+where the **WHERE** statement is updated for the specific campaign ID or campaign name.
 
 .. table-campaign-recipients-delivery-dates-end
 

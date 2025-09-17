@@ -241,7 +241,7 @@ A **200 OK** response contains the following parameters.
           The source of the error. May be attributed to **customer** or **platform**.
 
           * **customer** indicates the source of the error is one or more configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
-          * **platform** indicates there is an issue with components and/or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
+          * **platform** indicates there is an issue with components or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
 
        **data**
           Additional data that is associated with the error. This parameter may be omitted from the response when the error message does not contain additional data or may return a NULL value.

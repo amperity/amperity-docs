@@ -91,7 +91,7 @@ You may include any of the following customer profile fields to help improve mat
 
 .. tip::
 
-   Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned and/or canceled.
+   Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned or canceled.
 
    For example:
 

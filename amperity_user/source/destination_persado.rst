@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Persado
-.. |what-send| replace:: marketing campaign engagement and/or segment data files
+.. |what-send| replace:: marketing campaign engagement or segment data files
 .. |sftp-type| replace:: **persado**
 .. |sftp-hostname| replace:: **psftp.persado.com**
 .. |file-format| replace:: CSV

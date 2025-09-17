@@ -144,7 +144,7 @@ Use the campaign editor to configure Amperity to send data to |destination-name|
 
 .. TODO: The following quote is the "boilerplate" for the "attributes-sent" variable used with all destinations that use file-based campaign sends, including SFTP, Amazon S3, Azure Blob Storage, Google Cloud Storage: "You must select the set of attributes that are sent to |destination-name|. Review your downstream requirements, open the **Edits attributes** page, and then select the attributes you want to send to |destination-name| for this campaign." If this gets updated, review all the campaigns to update the tokens to match this pattern.
 
-.. TODO: The following blocks build out single-sourced "Build a campaign" content for destinations for /ampiq/. They are built into a list-table structure in each topic and the reason why the table is in the topic and the content is here is to allow for the possibility that some destinations may require a unique ordering and/or bespoke content. Work with the docs team first before using unique ordering and/or bespoke content.
+.. TODO: The following blocks build out single-sourced "Build a campaign" content for destinations for /ampiq/. They are built into a list-table structure in each topic and the reason why the table is in the topic and the content is here is to allow for the possibility that some destinations may require a unique ordering or bespoke content. Work with the docs team first before using unique ordering or bespoke content.
 
 
 .. channels-build-campaign-steps-open-page-start

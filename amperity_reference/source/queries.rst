@@ -790,7 +790,7 @@ Download query
 
 .. queries-download-start
 
-When a query returns fewer than 100,000 rows of data, you can download those query results as a CSV file. The CSV format is supported by many applications, which makes the format a great way to send smaller results sets and/or to test the potential of orchestrating queries for downstream applications and workflows. (For queries that return more than 100,000 rows of data use orchestrations to send those results to cloud-based storage, such as SFTP or Amazon S3, as a CSV file.)
+When a query returns fewer than 100,000 rows of data, you can download those query results as a CSV file. The CSV format is supported by many applications, which makes the format a great way to send smaller results sets or to test the potential of orchestrating queries for downstream applications and workflows. (For queries that return more than 100,000 rows of data use orchestrations to send those results to cloud-based storage, such as SFTP or Amazon S3, as a CSV file.)
 
 .. note:: You cannot download the results of any query that returns an error.
 
@@ -907,7 +907,7 @@ Alerts are sent when the record count in the query output contains errors that e
 
       Use the **Warn when** threshold for queries that are not associated with an orchestration. This will prevent that query from stopping the workflow when record counts exceed the configured alert threshold.
 
-You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one or more courier groups and/or scheduled orchestration groups.
+You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one or more courier groups or scheduled orchestration groups.
 
 .. queries-enable-alerts-end
 

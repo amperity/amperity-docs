@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and/or cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
+        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and/or cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
+        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,7 +24,7 @@ Order revenue intervals
 
 .. attribute-order-revenue-intervals-start
 
-Order revenue is the total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and/or cancellations. Order revenue is available at the following intervals:
+Order revenue is the total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and cancellations. Order revenue is available at the following intervals:
 
 * L30D Order Revenue (30 days)
 * L3M Order Revenue (3 months)

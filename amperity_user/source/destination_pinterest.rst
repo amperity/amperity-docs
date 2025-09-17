@@ -60,7 +60,7 @@ Build a query that returns a list of email addresses. Use additional filters in 
 .. tip:: Be sure to exclude the following from query results:
 
    #. Users who have opted out of targeted advertising on |destination-name|
-   #. User activity from an app and/or website
+   #. User activity from an app or website
    #. Additional profile information, such as names, phone numbers, or physical addresses
 
 .. destination-pinterest-build-segment-tip-end

@@ -816,7 +816,7 @@ Map to external schemas
 
 Data mappings support two options:
 
-* Use **Visual and SQL queries** to allow mapping for this template to apply to queries created by the visual **Query Editor** and/or the **SQL Query Editor**.
+* Use **Visual and SQL queries** to allow mapping for this template to apply to queries created by the visual **Query Editor** or the **SQL Query Editor**.
 * Use **SQL queries only** to limit mapping for this template to apply only queries created by the **SQL Query Editor**.
 
 If the destination does not require Amperity fields to be mapped, leave the value **NULL**. Otherwise, replace with a data mapping structure that maps fields to the required naming pattern.

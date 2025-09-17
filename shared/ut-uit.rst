@@ -129,7 +129,7 @@ The order ID should never change, even when an item in the order is returned or 
 
 .. recycled-order-ids-not-guaranteed-to-be-unique-start
 
-If order IDs are recycled and/or are otherwise not guaranteed to be unique over time, the unique identifier for the order must be updated to be a combination of the order ID and the date on which the order occurred. This must be done using domain SQL similar to: ``CONCAT(order_id, order_date)``.
+If order IDs are recycled and are otherwise not guaranteed to be unique over time, the unique identifier for the order must be updated to be a combination of the order ID and the date on which the order occurred. This must be done using domain SQL similar to: ``CONCAT(order_id, order_date)``.
 
 .. recycled-order-ids-not-guaranteed-to-be-unique-end
 

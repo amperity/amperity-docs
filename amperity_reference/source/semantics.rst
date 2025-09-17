@@ -161,7 +161,7 @@ Compliance
 
 .. semantics-compliance-about-start
 
-The following table describes the semantic tags that are used for CCPA and/or GDPR compliance workflows. Compliance semantics are prefixed with **compliance/** in the semantics dropdown menu in the **Feed Editor**.
+The following table describes the semantic tags that are used for CCPA and GDPR compliance workflows. Compliance semantics are prefixed with **compliance/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-compliance-about-end
 
@@ -248,7 +248,7 @@ The following table describes the semantic tags that are used for CCPA and/or GD
         * **compliance/request-postal**
         * **compliance/request-country**
 
-       The values in these fields will be checked against any domain table that has the **address**, **address2**, **city**, **state**, **postal**, and/or **country** semantic tags. If a domain table only has some of these values tagged, the missing values will be treated as **NULL**. 
+       The values in these fields will be checked against any domain table that has the **address**, **address2**, **city**, **state**, **postal**, and **country** semantic tags. If a domain table only has some of these values tagged, the missing values will be treated as **NULL**. 
 
         .. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in domain tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
 
@@ -1945,7 +1945,7 @@ Subscriber status
 
 .. semantics-subscriber-status-start
 
-Subscriber status -- whether a customer has opted-in or opted-out to receiving communication -- can be difficult to track when it is not consolidated into a single table within your customer 360 database. Use subscriber status semantic tags to consolidate email and/or phone subscriber status information into a single table.
+Subscriber status -- whether a customer has opted-in or opted-out to receiving communication -- can be difficult to track when it is not consolidated into a single table within your customer 360 database. Use subscriber status semantic tags to consolidate email or phone subscriber status information into a single table.
 
 The following semantic tags consolidate your customers' email and phone subscriber status:
 

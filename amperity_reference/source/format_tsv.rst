@@ -93,7 +93,7 @@ When using TSV files, it is recommend to:
 * Escape commas or quotes that appear in the data
 * Quote string values
 * Encode files in UTF-8 or UTF-16. Amperity automatically detects the 2-byte header present with the UTF-16 encoding format. If the 2-byte header is missing, the file is treated as UTF-8.
-* Compress files prior to encryption using ZIP, GZIP, and/or TAR. Amperity automatically decompresses GZIP files; ZIP and TAR decompression must be specified in courier file load settings.
+* Compress files prior to encryption using ZIP, GZIP, or TAR. Amperity automatically decompresses GZIP files; ZIP and TAR decompression must be specified in courier file load settings.
 * Encrypt files using PGP; compression will not reduce the size of an encrypted file
 
 .. format-tsv-pull-data-sources-recommendations

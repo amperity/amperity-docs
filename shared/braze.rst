@@ -107,7 +107,7 @@ The names of custom attributes that can be managed by Amperity are defined by yo
 
 * Already exist within your organization.
 * Are exactly the same as Amperity standard output, such as "One and Done" or "L12M Monetary" (the "monetary" component of an RFM score), or "Early Repeat Purchaser".
-* Align to marketing goals and/or terminology that exists within your brand's segmentation strategy.
+* Align to marketing goals or terminology that exists within your brand's segmentation strategy.
 
 Verify the names of custom attributes that is sent to |destination-name| from Amperity. Amperity adds a custom attribute whenever there isn't a matching name.
 
@@ -115,7 +115,7 @@ Verify the names of custom attributes that is sent to |destination-name| from Am
 
 .. important:: Your brand's list of custom attributes *should* be a list that is mostly static, remains stable over time, and is focused on your most valuable customers.
 
-   Only update custom attributes for customers to which your brand is currently engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (with an opt-in status of true for phone numbers and/or email addresses).
+   Only update custom attributes for customers to which your brand is currently engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (with an opt-in status of true for phone numbers or email addresses).
 
    This will help ensure that you are only updating custom attributes for your most valuable customers. Custom attributes is updated only for those customers have a matching "external_id" or "braze_id" within |destination-name|.
 

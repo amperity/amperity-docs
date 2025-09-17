@@ -27,7 +27,7 @@ Stitch uses given names to identify customer records that should or should not b
 
 Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations.
 
-You can upload your files to extend the list of common nicknames to add and/or remove nicknames as needed for your tenant. You can use any file format -- |format_csv|, |format_json|, |format_psv|, |format_tsv|, |format_parquet|, etc. -- that is supported by Amperity. Stitch nicknames use a CSV file to describe how to manage nicknames.
+You can upload your files to extend the list of common nicknames to add or remove nicknames as needed for your tenant. You can use any file format -- |format_csv|, |format_json|, |format_psv|, |format_tsv|, |format_parquet|, etc. -- that is supported by Amperity. Stitch nicknames use a CSV file to describe how to manage nicknames.
 
 .. stitch-nicknames-end
 

@@ -395,7 +395,7 @@ Stitched domain tables
 
 .. domain-tables-stitched-start
 
-All domain tables to which semantic tags are added and/or to which a foreign key is added that can be used to associate records in a domain table to an Amperity ID are processed by Stitch. This is in addition to all domain tables to which customer profile semantic tags were applied, and then were :ref:`made available to Stitch <feeds-make-available-to-stitch>`.
+All domain tables to which semantic tags are added or to which a foreign key is added that can be used to associate records in a domain table to an Amperity ID are processed by Stitch. This is in addition to all domain tables to which customer profile semantic tags were applied, and then were :ref:`made available to Stitch <feeds-make-available-to-stitch>`.
 
 .. domain-tables-stitched-end
 

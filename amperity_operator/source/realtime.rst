@@ -273,7 +273,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Ensure that the real-time table is set to **Active**.
 
-       Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
+       Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table or the use case.
 
        .. image:: ../../images/mockup-databases-table-realtime-add-01.png
           :width: 420 px

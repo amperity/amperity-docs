@@ -70,7 +70,7 @@ The following sections describe the steps you'll follow to set up and configure 
 
           Use a naming pattern that ensures the campaign name works across every treatment group that is configured within any sub-audience.
 
-          If brand names and/or region names apply to all sub-audiences in the campaign, consider using them within the campaign name.
+          If brand names or region names apply to all sub-audiences in the campaign, consider using them within the campaign name.
 
           Some examples:
 
@@ -101,7 +101,7 @@ The following sections describe the steps you'll follow to set up and configure 
           :alt: Step 3.
           :align: center
           :class: no-scaled-link
-     - Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
+     - Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and who have unsubscribed from an email list.
 
        When you need to exclude audience members, choose one or more segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
@@ -147,7 +147,7 @@ The following sections describe the steps you'll follow to set up and configure 
 
           Avoid using the names of destinations as treatment group names unless the treatment group is sent to *only* that destination.
 
-          If brand names and/or region names are specific to sub-audiences, consider using the brand names within the treatment group names.
+          If brand names or region names are specific to sub-audiences, consider using the brand names within the treatment group names.
 
           Add details like "historical", "daily", or "test" as appropriate. Be sure to include the region name if you have multiple regions.
 

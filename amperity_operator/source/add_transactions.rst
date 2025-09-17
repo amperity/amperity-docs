@@ -621,7 +621,7 @@ Validation reports for email addresses and phone numbers include:
 * Are email events associated with multiple Amperity IDs?
 * Are email events unique by brand?
 * Does an email event have an associated event type, such as opens or clicks?
-* Are there conflicting opt-in preferences for email addresses and/or phone numbers?
+* Are there conflicting opt-in preferences for email addresses or phone numbers?
 
 .. setup-transactions-validate-database-reports-email-phone-end
 

@@ -53,7 +53,7 @@ Double quotes
 `RFC 4180 <https://tools.ietf.org/html/rfc4180>`__ |ext_link| has the following guidelines for the use of double quotes in CSV files:
 
 * A field may or may not be enclosed by double quotes. When a field is not enclosed by double quotes, double quotes may not appear inside a field.
-* A field that contains line breaks (CRLF), double quotes, and/or commas should be enclosed in double quotes.
+* A field that contains line breaks (CRLF), double quotes, or commas should be enclosed in double quotes.
 * When a field is enclosed by double quotes, a double quote that appears inside a field must be escaped using a double quote.
 
 When an escape character is not specified, Amperity will assume that the escape character is double quotes. This follows the RFC as closely as possible: "If double quotes are used to enclose fields, then a double quote appearing inside a field must be escaped by preceding it with another double quote."
@@ -138,7 +138,7 @@ When using CSV files, it is recommend to:
 * Escape commas or quotes that appear in the data
 * Quote string values
 * Encode files in UTF-8 or UTF-16. Amperity automatically detects the 2-byte header present with the UTF-16 encoding format. If the 2-byte header is missing, the file is treated as UTF-8.
-* Compress files prior to encryption using ZIP, GZIP, and/or TAR. Amperity automatically decompresses GZIP files; ZIP and TAR decompression must be specified in courier file load settings.
+* Compress files prior to encryption using ZIP, GZIP, or TAR. Amperity automatically decompresses GZIP files; ZIP and TAR decompression must be specified in courier file load settings.
 * Encrypt files using PGP; compression will not reduce the size of an encrypted file
 
 .. format-csv-pull-data-sources-recommendations

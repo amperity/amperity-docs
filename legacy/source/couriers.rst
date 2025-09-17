@@ -679,7 +679,7 @@ You can empty the contents of a table prior to loading a data file to a domain t
 Examples
 ==================================================
 
-The following sections provide examples for load settings and load operations by data source and/or by file type:
+The following sections provide examples for load settings and load operations by data source and by file type:
 
 * :ref:`couriers-example-apache-avro`
 * :ref:`couriers-example-apache-parquet`

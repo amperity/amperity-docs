@@ -31,9 +31,9 @@ Send query results to Attentive
 
 You can use queries and orchestrations to manage audiences in |destination-name|. Each audience in |destination-name| has two components: subscribers and segments.
 
-An audience segment is the list of customers to which you sends SMS messages and/or emails. Amperity is your source of truth for your customers who belong to audience segments in |destination-name|. Send this list to |destination-name| from Amperity.
+An audience segment is the list of customers to which you sends SMS messages or emails. Amperity is your source of truth for your customers who belong to audience segments in |destination-name|. Send this list to |destination-name| from Amperity.
 
-A subscriber is a customer for which you have an opt-in/out status. You can only send SMS messages and/or emails to customers who have opted-in. |destination-name| is your source of truth for your audience's opt-in/out and subscriber status.
+A subscriber is a customer for which you have an opt-in/out status. You can only send SMS messages or emails to customers who have opted-in. |destination-name| is your source of truth for your audience's opt-in/out and subscriber status.
 
 .. channel-attentive-end
 

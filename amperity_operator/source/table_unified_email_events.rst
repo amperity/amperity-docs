@@ -39,7 +39,7 @@ Requirements
 
 .. table-unified-email-events-requirements-start
 
-The **Unified Email Events** table has a dependency on the **Email Engagement Summary** table. The **Email Engagement Summary** table requires email summary semantic tags to be applied feeds and/or custom domain tables that contain email engagement data.
+The **Unified Email Events** table has a dependency on the **Email Engagement Summary** table. The **Email Engagement Summary** table requires email summary semantic tags to be applied feeds or custom domain tables that contain email engagement data.
 
 .. table-unified-email-events-requirements-end
 

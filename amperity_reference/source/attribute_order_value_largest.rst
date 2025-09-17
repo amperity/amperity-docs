@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        The largest order that is associated with a customer, ignoring returns and/or cancellations, for a customer’s entire purchase history.
+        The largest order that is associated with a customer, ignoring returns and cancellations, for a customer’s entire purchase history.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The largest order that is associated with a customer, ignoring returns and/or cancellations, for a customer’s entire purchase history.
+        The largest order that is associated with a customer, ignoring returns and cancellations, for a customer’s entire purchase history.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

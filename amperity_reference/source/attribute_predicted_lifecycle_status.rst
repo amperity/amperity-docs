@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        The likelihood repeat customers and/or one-time buyers will purchase again, grouped by tiers including “active”, “cooling down”, “at risk”, “highly at risk”, and “lost”.
+        The likelihood repeat customers and one-time buyers will purchase again, grouped by tiers including “active”, “cooling down”, “at risk”, “highly at risk”, and “lost”.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The likelihood repeat customers and/or one-time buyers will purchase again, grouped by tiers including “active”, “cooling down”, “at risk”, “highly at risk”, and “lost”.
+        The likelihood repeat customers and one-time buyers will purchase again, grouped by tiers including “active”, “cooling down”, “at risk”, “highly at risk”, and “lost”.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

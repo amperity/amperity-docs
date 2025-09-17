@@ -1401,7 +1401,7 @@ The **UNION** clause supports two arguments: **ALL** and **DISTINCT**. Use **UNI
 
 .. sql-presto-union-clause-tip-start
 
-.. tip:: Use :ref:`GROUP BY CUBE <sql-presto-group-by-cube>` and/or :ref:`GROUP BY ROLLUP <sql-presto-group-by-rollup>` clauses for more efficient unions of records.
+.. tip:: Use :ref:`GROUP BY CUBE <sql-presto-group-by-cube>` or :ref:`GROUP BY ROLLUP <sql-presto-group-by-rollup>` clauses for more efficient unions of records.
 
 .. sql-presto-union-clause-tip-end
 
@@ -1469,7 +1469,7 @@ The **UNNEST** clause expands an **ARRAY** or **MAP** into a relation.
 
 .. sql-presto-unnest-clause-example-expand-email-address-start
 
-Use the UNNEST clause in the SQL segment to expand phone and/or email addresses so that the query looks at individual bad values. The following example shows using an **UNNEST** clause to expand email addresses that are part of a bad-values blocklist SQL query:
+Use the UNNEST clause in the SQL segment to expand phone numbers or email addresses so that the query looks at individual bad values. The following example shows using an **UNNEST** clause to expand email addresses that are part of a bad-values blocklist SQL query:
 
 .. code-block:: sql
    :linenos:
@@ -3428,7 +3428,7 @@ REPLACE()
 
 .. sql-presto-function-replace-start
 
-Use the **REPLACE()** function to remove and/or replace all instances of ``search`` from ``string``. There are two variants:
+Use the **REPLACE()** function to remove or replace all instances of ``search`` from ``string``. There are two variants:
 
 * Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``.
 * Use **REPLACE(string, search, replace)** to replace all instances of ``search`` from ``string`` with ``replace``.

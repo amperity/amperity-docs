@@ -100,7 +100,7 @@ When using JSON files, it is recommend to:
         :start-after: .. formats-json-rfc-8259-start
         :end-before: .. formats-json-rfc-8259-end
 
-* Compress files prior to encryption using ZIP, GZIP, and/or TAR
+* Compress files prior to encryption using ZIP, GZIP, or TAR
 * Encrypt files using PGP; compression will not reduce the size of an encrypted file
 
 .. format-json-pull-data-sources-recommendations-end

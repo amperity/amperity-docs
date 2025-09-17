@@ -625,7 +625,7 @@ Security challenge
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-start
 
-Sometimes |destination-name| issues a security challenge to the advertising account and/or business account associated with this workflow.
+Sometimes |destination-name| issues a security challenge to the advertising account or business account associated with this workflow.
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-end
 

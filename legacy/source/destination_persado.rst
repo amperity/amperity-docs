@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: Persado
 .. |plugin-name| replace:: SFTP
-.. |what-send| replace:: marketing campaign engagement and/or segment data files
+.. |what-send| replace:: marketing campaign engagement or segment data files
 .. |email-plus-send| replace:: additional attributes
 .. |filter-the-list| replace:: "per"
 .. |sftp-type| replace:: **persado**

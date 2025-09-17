@@ -1126,7 +1126,7 @@ Security challenge
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-start
 
-Sometimes |destination-name| issues a security challenge to the advertising account and/or business account associated with this workflow.
+Sometimes |destination-name| issues a security challenge to the advertising account or business account associated with this workflow.
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-end
 
@@ -1379,7 +1379,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
-   * - **email** *and/or* **phone**
+   * - **email** or **phone**
      - **Required**
 
        You must send an email address *or* a phone number to |destination-name|; you may configure the query to send both.

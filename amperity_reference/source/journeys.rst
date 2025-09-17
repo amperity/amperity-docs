@@ -100,7 +100,7 @@ A journey should be assigned a name that makes it easy to find and for other Amp
 
    Use a naming pattern that ensures the journey name works across every treatment group that is configured within any sub-audience.
 
-   If brand names and/or region names apply to all sub-audiences in the journey, consider using them within the journey name.
+   If brand names or region names apply to all sub-audiences in the journey, consider using them within the journey name.
 
    Some examples:
 
@@ -156,7 +156,7 @@ Who is excluded?
 
 .. journeys-setup-who-is-excluded-start
 
-Sometimes a journey needs to exclude certain members of your audience. For example, a journey aimed at churn prevention often excludes customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
+Sometimes a journey needs to exclude certain members of your audience. For example, a journey aimed at churn prevention often excludes customers who have opted-out of SMS messaging or who have unsubscribed from an email list.
 
 When you need to exclude audience members, choose one or more segments from the **Select exclusion segments** dropdown list. The customers in an exclusion list will be removed from the audience for this journey.
 

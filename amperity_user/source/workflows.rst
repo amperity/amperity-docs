@@ -56,7 +56,7 @@ The following sections describe what you should do to monitor the health of each
           :alt: Step 1.
           :align: center
           :class: no-scaled-link
-     - Ensure that each query results match the requirements and/or use cases that are required in the downstream application. 
+     - Ensure that each query results match the requirements and use cases that are required in the downstream application. 
 
        For example, you may need to update a query to match changes required by the destination. This might be due to a change in the scope of the use case, such as a request to add columns to the "Yearly_Revenue_by_Month" query to support an additional visualization element in your Domo dashboard.
 

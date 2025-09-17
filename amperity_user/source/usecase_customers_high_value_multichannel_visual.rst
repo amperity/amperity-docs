@@ -80,7 +80,7 @@ The following sections describe using the visual **Query Editor** to build a que
           :align: left
           :class: no-scaled-link
 
-       Keep the and/or slider set to **AND**.
+       Keep the slider set to **AND**.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -101,6 +101,6 @@ The following sections describe using the visual **Query Editor** to build a que
 
        Click the **Activate** button in the top right corner of the visual **Query Editor**. 
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions and want to build queries that are brand- and/or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build queries that are brand- or region-specific.
 
 .. usecase-customers-high-value-multi-channel-callouts-end

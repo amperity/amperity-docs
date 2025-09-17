@@ -1031,7 +1031,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Yotpo**
      - 
      - 
-     - Amperity does not connect directly with Yotpo. The best way to bring your retail loyalty data from Yotpo to Amperity is to integrate Yotpo with your email service provider (ESP) or customer relationship manager (CRM), and then connect the ESP and/or CRM to Amperity.
+     - Amperity does not connect directly with Yotpo. The best way to bring your retail loyalty data from Yotpo to Amperity is to integrate Yotpo with your email service provider (ESP) or customer relationship manager (CRM), and then connect the ESP or CRM to Amperity.
 
        Adobe Commerce (Magento), Bazaarvoice, Braze, Cordial, Emarsys, Hubspot, Klaviyo, Listrak, Mailchimp, Sailthru, Salesforce Marketing Cloud, Shopify, and Zendesk all have integrations with Yotpo *and* have built-in connectors in Amperity.
 
@@ -1055,6 +1055,6 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Zoho Analytics**
      - 
      - |system-yes|
-     - Send query results and/or tables to cloud storage, and then load that data directly to Zoho Analytics.
+     - Send query results or tables to cloud storage, and then load that data directly to Zoho Analytics.
 
 .. connected-systems-table-end

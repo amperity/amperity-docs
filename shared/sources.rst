@@ -150,7 +150,7 @@ Load operations associate each table in the list of tables to a feed. (The initi
       ]
 
 #. Enter the name of the Snowflake stage.
-#. Optional. Use a query to select specific columns from a Snowflake table prior to pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
+#. Optional. Use a query to select specific columns from a Snowflake table prior to pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, or periods. For example: "Query_name.12-345a".
 
    Use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query to run against a table that is to be pulled to Amperity.
 

@@ -108,7 +108,7 @@ The following sections describe how you can use the visual **Query Editor** to b
           :class: no-scaled-link
      - Give your query a name a clear and understandable name. The name field is located in the upper left corner of the visual **Query Editor**.
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and/or the region name if you have multiple brands or have multiple regions.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions.
 
           Some examples:
 

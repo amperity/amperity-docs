@@ -486,7 +486,7 @@ Use **given_name** as the primary key.
 
 You can add predicted gender to your customer 360 database in two ways, depending on how your brand wants to use predicted gender to build segments:
 
-#. Extend the **Customer 360** and/or **Merged Customers** tables to include predicted gender (recommended).
+#. Extend the **Customer 360** and **Merged Customers** tables to include predicted gender (recommended).
 #. Add predicted gender values to your customer 360 database as a standalone table.
 
 **Extend the Merged_Customers table (recommended)**

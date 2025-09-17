@@ -63,7 +63,7 @@ There are many sources of first-party data, including:
 * Signing up for a benefit or rebate
 * Completing an online form
 * Filling out a registration card
-* Responding to email and/or SMS messaging
+* Responding to email and SMS messaging
 * Online (website) and offline (in-store) data
 * Loyalty programs
 
@@ -159,7 +159,7 @@ Optimize bidding for ads placement by using your most valuable audiences and str
 * Customers who are *almost* VIPs
 * Product affinity-based audiences
 
-and then use these audiences with acquisition and/or remarketing campaigns.
+and then use these audiences with acquisition or remarketing campaigns.
 
 .. paid-media-activation-scenario-optimize-search-bids-end
 
@@ -352,7 +352,7 @@ Paid media indicators
 
 Paid media indicators can help measure audience quality and attribution. These indicators are a combination of the costs associated with your paid media campaigns and how your customers interacted with your campaign messages.
 
-Did your customers click on a link and/or make a purchase after clicking on that link? You can measure attribution using metrics like:
+Did your customers click on a link and make a purchase after clicking on that link? You can measure attribution using metrics like:
 
 * Cost per acquisition (CPA)
 * Cost acquisition cost (CAC)

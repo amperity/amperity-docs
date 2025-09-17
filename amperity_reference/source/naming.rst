@@ -26,7 +26,7 @@ Use the following naming conventions to ensure that your tenant is configured wi
 
 .. naming-note-start
 
-.. note:: A tenant that is configured to support multiple brands or regions should use a consistent prefix for each brand and/or region.
+.. note:: A tenant that is configured to support multiple brands or regions should use a consistent prefix for each brand and region.
 
 .. naming-note-end
 

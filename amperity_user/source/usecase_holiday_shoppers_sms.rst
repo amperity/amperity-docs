@@ -95,7 +95,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       Keep the and/or slider that is in-between attribute groups set to **AND**.
+       Keep the slider that is in-between attribute groups set to **AND**.
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who have made a purchase between November 1 and December 31 *and* who have opted in to SMS.
 
