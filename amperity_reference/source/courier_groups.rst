@@ -1190,7 +1190,7 @@ Wait for missing files
 
 .. courier-groups-wait-for-missing-files-start
 
-When files are missing or late, in addition to sending an email alert and either continuing or stopping the workflow, Amperity will continue to attempt to find the these files. Use the **Wait** setting to configure amount of time Amperity should wait:
+When files are missing or late, in addition to sending an email alert and either continuing or stopping the workflow, Amperity will continue to attempt to find these files. Use the **Wait** setting to configure amount of time Amperity should wait:
 
 .. image:: ../../images/mockups-workflow-courier-group-settings-wait.png
    :width: 400 px

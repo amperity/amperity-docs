@@ -701,7 +701,7 @@ Add custom semantics
 
 You can create custom semantics for PII and non-PII fields. All custom semantics are added to the **Unified Coalesced** table.
 
-#. Apply the custom semantics to to feeds. Ensure each custom semantic uses a consistent data type across all feeds.
+#. Apply the custom semantics to feeds. Ensure each custom semantic uses a consistent data type across all feeds.
 #. Extend the **Merged Customers** table with custom merge rules that load the column created by the custom semantic from the **Unified Coalesced** table.
 #. Apply similar merge patterns used for PII semantics.
 

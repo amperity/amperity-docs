@@ -130,7 +130,7 @@ When the **City** attrbute is used in a segment you should associate the state i
    :align: left
    :class: no-scaled-link
 
-This segment returns a list of customers who live in a city named "Chicago" and who live in the the state of "Illinois", which includes the city of Chicago.
+This segment returns a list of customers who live in a city named "Chicago" and who live in the state of "Illinois", which includes the city of Chicago.
 
 .. image:: ../../images/segments-and-or-example-city-or-state-segment.png
    :width: 580 px
@@ -152,7 +152,7 @@ This segment returns a list of customers who live in a city named "Chicago" and 
       :align: left
       :class: no-scaled-link
 
-   This segment returns a list of customers who live in a city named "Chicago" and who live in the the state of "Illinois", which includes the city of Chicago.
+   This segment returns a list of customers who live in a city named "Chicago" and who live in the state of "Illinois", which includes the city of Chicago.
 
    .. image:: ../../images/segments-and-or-example-city-or-state-dual-segment.png
       :width: 580 px

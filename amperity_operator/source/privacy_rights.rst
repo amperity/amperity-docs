@@ -116,7 +116,7 @@ The following sections describe the individual steps within the workflow that oc
 
        .. admonition:: About the connected_pii strategy
 
-          Using the the **exact** strategy for DSAR requests is recommended.
+          Using the **exact** strategy for DSAR requests is recommended.
 
           The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that:
 
@@ -248,7 +248,7 @@ Delete PII
 
 An inbound request may require deleting specific PII fields within customer records.
 
-.. important:: The delete PII workflow requires requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
+.. important:: The delete PII workflow requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
 
 The following diagram shows the workflow that occurs when a delete PII request is present in the inbound requests table.
 
@@ -272,7 +272,7 @@ The following sections describe the individual steps within the workflow that oc
 
      - **Find records**
 
-       A delete PII request runs runs when **type** field in the inbound requests table is set to **delete_pii**.
+       A delete PII request runs when **type** field in the inbound requests table is set to **delete_pii**.
 
        The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
 

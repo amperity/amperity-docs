@@ -26,7 +26,7 @@ A dormant customer is a person who hasn't made a purchase with your brand within
 
 .. usecase-dormant-customers-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that returns dormant customers.
+The following sections describe using the **Segment Editor** to build a segment that returns dormant customers.
 
 .. usecase-dormant-customers-howitworks-end
 

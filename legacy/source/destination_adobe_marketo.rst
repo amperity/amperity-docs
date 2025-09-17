@@ -165,7 +165,7 @@ Add destination
 
        |destination-name| has the following settings:
 
-       * The The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
+       * The `client ID and client secret <https://developers.marketo.com/rest-api/authentication/#creating_an_access_token>`__ |ext_link|.
        * The subdomain used with |destination-name|.
 
        .. include:: ../../shared/destinations.rst

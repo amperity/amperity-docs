@@ -654,7 +654,7 @@ Add linkage table
 #. Under **Custom domain tables** click **Add table**.
 #. Write SQL to specify which CDT records link to which source records. This will be four columns specifying the source table name, source table pk, cdt table name, and cdt pk.
 #. Click **Next**.
-#. Tag the the source table name with `compliance/source-ds`, source table pk with `compliance/source-pk`, cdt table name with `compliance/cdt-ds`, and cdt pk with `compliance/cdt-pk`.
+#. Tag the source table name with `compliance/source-ds`, source table pk with `compliance/source-pk`, cdt table name with `compliance/cdt-ds`, and cdt pk with `compliance/cdt-pk`.
 #. Click **Activate**.
 
 .. domain-tables-add-linkage-steps-end

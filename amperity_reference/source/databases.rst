@@ -1069,7 +1069,7 @@ Add custom SQL table
 
    .. note:: Click the **Apply SQL template** to select a SQL template as a starting point for the custom SQL table.
 
-      Templates are provided for all standard tables (**Customer 360**, **Merged Customers**, **Transaction Attributes Extended**, **Unified Transactions**, and **Customer Attributes**) along with additional templates for use with multibrand databases and and tables that support use cases like joining transaction attributes to the **Customer 360** table, merged households, and customer lifecycle events.
+      Templates are provided for all standard tables (**Customer 360**, **Merged Customers**, **Transaction Attributes Extended**, **Unified Transactions**, and **Customer Attributes**) along with additional templates for use with multibrand databases and tables that support use cases like joining transaction attributes to the **Customer 360** table, merged households, and customer lifecycle events.
 
 #. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 #. Click **Validate** to verify that the SQL query runs correctly and returns the desired results. Adjust the query as necessary. When finished, click **Next**.
@@ -1321,7 +1321,7 @@ Allow everyone
 
 .. databases-database-howto-configure-permission-everyone-start
 
-A database that is configured for **Standard** access may allow access to everyone. When resource groups are configured in Amperity, choose the "No resource group" option from the dropdown. When resource groups are not configured, choose the the **Standard** radio button.
+A database that is configured for **Standard** access may allow access to everyone. When resource groups are configured in Amperity, choose the "No resource group" option from the dropdown. When resource groups are not configured, choose the **Standard** radio button.
 
 .. databases-database-howto-configure-permission-everyone-end
 

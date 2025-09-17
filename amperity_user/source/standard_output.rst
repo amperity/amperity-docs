@@ -818,7 +818,7 @@ Time period rollups
        * **Lifetime Purchase Brands**
 
    * - **<x> Purchase Channels**
-     - The count of the distinct channels--online or in store--that the customer interacted with during during the time period. Available attributes:
+     - The count of the distinct channels--online or in store--that the customer interacted with during the time period. Available attributes:
 
        * **L30D Purchase Channels**
        * **L3M Purchase Channels**

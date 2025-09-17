@@ -299,12 +299,12 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
        Send transactions data using SFTP.
 
-       Send offline events to to track offline conversions from your marketing campaigns.
+       Send offline events to track offline conversions from your marketing campaigns.
 
    * - **Criteo Retail Audience API**
      - 
      - |system-yes|
-     - Send offline events to to track offline conversions from your marketing campaigns.
+     - Send offline events to track offline conversions from your marketing campaigns.
 
    * - **Cross Country Computer**
      - |system-yes|
@@ -789,7 +789,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull data to Amperity from Reddit Ads using Fivetran.
 
-       Send data using SFTP or cloud storage, then upload to Reddit Ads to engage with your customers within the `the 100K+ active communities on Reddit <https://www.redditforbusiness.com/>`__ |ext_link|.
+       Send data using SFTP or cloud storage, then upload to Reddit Ads to engage with your customers within `the 100K+ active communities on Reddit <https://www.redditforbusiness.com/>`__ |ext_link|.
 
    * - **RR Donnelly**
      - |system-yes|
@@ -951,7 +951,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
        Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send offline events to track offline conversions from your marketing campaigns.
 
-       Send offline events to to track offline conversions from your marketing campaigns.
+       Send offline events to track offline conversions from your marketing campaigns.
 
    * - **Tulip**
      - 

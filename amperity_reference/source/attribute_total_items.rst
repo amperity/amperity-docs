@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        The number of items that were purchased as part of a customer's first, second, or most recent recent order.
+        The number of items that were purchased as part of a customer's first, second, or most recent order.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The number of items that were purchased as part of a customer's first, second, or most recent recent order.
+        The number of items that were purchased as part of a customer's first, second, or most recent order.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,7 +24,7 @@ Total items
 
 .. attribute-total-items-common-start
 
-Total items is a collection of attributes that represent the number of items that were purchased as part of a customer's first, second, or most recent recent order.
+Total items is a collection of attributes that represent the number of items that were purchased as part of a customer's first, second, or most recent order.
 
 .. attribute-total-items-common-end
 

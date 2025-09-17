@@ -170,7 +170,7 @@ You do not need to configure the following fields:
        * **Order cancelled revenue**
        * **Order discount amount**
 
-         If your tenant does not have order-level discount data, define order-level discounts to equal the the sum of item-level discount amounts. This will ensure that predictive modeling will be able to incorporate signals for discount shoppers.
+         If your tenant does not have order-level discount data, define order-level discounts to equal the sum of item-level discount amounts. This will ensure that predictive modeling will be able to incorporate signals for discount shoppers.
 
        * **Order returned quantity**
        * **Order returned revenue**

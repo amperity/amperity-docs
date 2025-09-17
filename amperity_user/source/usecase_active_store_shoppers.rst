@@ -26,7 +26,7 @@ An active store shopper is a customer who prefers to make their purchases at sto
 
 .. usecase-active-store-shoppers-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that finds customers who have frequently shopped at a brick and mortar store.
+The following sections describe using the **Segment Editor** to build a segment that finds customers who have frequently shopped at a brick and mortar store.
 
 .. usecase-active-store-shoppers-howitworks-end
 

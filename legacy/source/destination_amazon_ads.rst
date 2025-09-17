@@ -107,7 +107,7 @@ Get details
 
           .. tip:: Set this value to "0" to remove all audience members.
 
-       #. Leave the the external ID setting empty.
+       #. Leave the external ID setting empty.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

@@ -168,7 +168,7 @@ Vertices
      - 
      - The properties of the vertice. There is no limit to the number of properties that may be specified.
 
-       The format for this field is is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
+       The format for this field is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
    * - **~label**
      - |policy|
      - The type of vertice that matches the object type. For Amperity, this is a customer profile, a Customer 360 profile, or a transaction.
@@ -210,7 +210,7 @@ Edges
      - 
      - The properties of the vertice. There is no limit to the number of properties that may be specified.
 
-       The format for this field is is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
+       The format for this field is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
 
 .. graph-database-gremlin-edges-end
 

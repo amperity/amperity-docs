@@ -24,7 +24,7 @@ High-value multichannel customers
 
 .. usecase-customers-high-value-multi-channel-howitworks-start
 
-The following sections describe using the the visual **Query Editor** to build a query that returns a list of customers with a high lifetime value who have purchased across multiple channels.
+The following sections describe using the visual **Query Editor** to build a query that returns a list of customers with a high lifetime value who have purchased across multiple channels.
 
 .. usecase-customers-high-value-multi-channel-howitworks-end
 

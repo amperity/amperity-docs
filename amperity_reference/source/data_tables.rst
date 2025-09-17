@@ -3061,7 +3061,7 @@ Each record contains time period rollups of the customer's transaction history. 
    * - **<X> Purchase Channels**
      - Integer
      - 
-     - The count of the distinct channels (online, in store, etc.) that the customer interacted with during during the time period. Available columns:
+     - The count of the distinct channels (online, in store, etc.) that the customer interacted with during the time period. Available columns:
 
        * **L30D Purchase Channels**
        * **L3M Purchase Channels**

@@ -30,7 +30,7 @@ The next step is to include first-time buyers who have opted-in as part of your 
 
 .. usecase-engage-first-time-buyers-with-sms-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that returns a list of customers who have made their first purchase within the previous 30 days *and* have opted-in to receiving SMS messages from your brand.
+The following sections describe using the **Segment Editor** to build a segment that returns a list of customers who have made their first purchase within the previous 30 days *and* have opted-in to receiving SMS messages from your brand.
 
 .. usecase-engage-first-time-buyers-with-sms-howitworks-end
 

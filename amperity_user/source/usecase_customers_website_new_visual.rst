@@ -24,7 +24,7 @@ New website customers
 
 .. usecase-customers-new-website-customers-howitworks-start
 
-The following sections describe using the the visual **Query Editor** to build a query that returns a list of customers who placed their first website order within the previous 30 days.
+The following sections describe using the visual **Query Editor** to build a query that returns a list of customers who placed their first website order within the previous 30 days.
 
 .. usecase-customers-new-website-customers-howitworks-end
 

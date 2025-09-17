@@ -306,7 +306,7 @@ How is this possible? Let's walk through it.
 
 The overall deduplication rate (32.5%) represents the total number of records relative to the number of Amperity IDs. There can be a low deduplication rate on individual tables, but high connectivity between tables.
 
-An UpSet plot chart has a row for each table. In this case, the row for table 1 shows shows 117k source IDs and 108k Amperity IDs. This represents a 7.7% deduplication rate.
+An UpSet plot chart has a row for each table. In this case, the row for table 1 shows 117k source IDs and 108k Amperity IDs. This represents a 7.7% deduplication rate.
 
 .. image:: ../../images/deduplication-rate.png
    :width: 600 px

@@ -355,7 +355,7 @@ You can access workflow alerts from the following locations:
 * A notification within the **Recent activity** pane on the **Sources**, **Stitch**, **Customer 360**, **Queries**, and **Destinations** pages.
 * The **Activity log** within the **Settings** tab will list an entry for every alert sent
 
-When you receive a workflow alert, use the link provided within the workflow alert to open Amperity, and then review the workflow details page. The individual task that has the error that caused the workflow to stop is shown with the the |workflow-failed| icon. An error message appears at the top of the workflow details page.
+When you receive a workflow alert, use the link provided within the workflow alert to open Amperity, and then review the workflow details page. The individual task that has the error that caused the workflow to stop is shown with the |workflow-failed| icon. An error message appears at the top of the workflow details page.
 
 .. image:: ../../images/howitworks-workflows-resolve-error-message.png
    :width: 600 px
@@ -1195,7 +1195,7 @@ Some destination-specific workflow actions that your brand may see when using sc
 
 You can configure who receives alerts for orchestration group failures by editing the audiences under "Scheduled orchestration groups" in the workflow alerts dialog.
 
-.. note:: Scheduled orchestration group group failure alerts are not sent for orchestrations that are run manually or for orchestrations that are configured to run after a courier group.
+.. note:: Scheduled orchestration group failure alerts are not sent for orchestrations that are run manually or for orchestrations that are configured to run after a courier group.
 
 .. workflows-context-scheduled-end
 

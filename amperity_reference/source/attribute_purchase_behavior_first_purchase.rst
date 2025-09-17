@@ -126,7 +126,7 @@ Add to segments
 
 .. attribute-purchase-behavior-first-purchase-segments-start
 
-You can add the **First purchase** purchase behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **First purchase**.
+You can add the **First purchase** behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **First purchase**.
 
 .. image:: ../../images/attributes-picker-purchase-behavior-first-purchase.png
    :width: 540 px
@@ -134,7 +134,7 @@ You can add the **First purchase** purchase behavior to a segment from the **Seg
    :align: left
    :class: no-scaled-link
 
-After the **First purchase** purchase behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
+After the **First purchase** behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
 
 .. attribute-purchase-behavior-first-purchase-segments-end
 

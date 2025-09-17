@@ -28,7 +28,7 @@ One and done
 
 .. usecase-one-and-done-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that returns a list of customers who have purchased only one time.
+The following sections describe using the **Segment Editor** to build a segment that returns a list of customers who have purchased only one time.
 
 .. usecase-one-and-done-howitworks-end
 

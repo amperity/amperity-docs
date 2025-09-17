@@ -27,7 +27,7 @@ After the **Customer Attributes** table is configured you can extend it to be mo
 
 .. note:: The data in your tenant must have the following types of data already configured:
 
-   #. Customer profile data sources, such as names, addresses, email addresses, and phone numbers. This data is made available from the the **Merged Customers** table and is required by the **Customer Attributes** table.
+   #. Customer profile data sources, such as names, addresses, email addresses, and phone numbers. This data is made available from the **Merged Customers** table and is required by the **Customer Attributes** table.
    #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes Extended** table and is optional.
    #. Customer consent data for email address and SMS/phone opt-in to receiving communication from your brand. This data is made available from the **Email Opt Status** and **SMS Opt Status** tables and is optional.
 

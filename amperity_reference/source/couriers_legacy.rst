@@ -566,7 +566,7 @@ Incorrect feed ID
 
 .. couriers-legacy-load-operation-type-incorrect-feed-id-start
 
-Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
+Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
 
 .. code-block:: none
 

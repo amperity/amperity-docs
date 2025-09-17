@@ -28,7 +28,7 @@ You can find high-value multichannel customers first by identifying which custom
 
 .. usecase-customers-high-value-multi-channel-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across multiple channels.
+The following sections describe using the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across multiple channels.
 
 .. usecase-customers-high-value-multi-channel-howitworks-end
 

@@ -22,13 +22,13 @@ New high-value customers
 
 Repeat customers generate more revenue than one-time customers. In fact, it's not unusual in retail for ~20% of your customers to be ~80% of your revenue. Therefore, it's important to your business that you can identify new customers that also have the potential to become high-value repeat customers.
 
-You can find new high value customers first by identifying which customers have made their first purchase, and then by identifying which of those customers are predicted to to become high-value repeat customers.
+You can find new high value customers first by identifying which customers have made their first purchase, and then by identifying which of those customers are predicted to become high-value repeat customers.
 
 .. usecase-customers-high-value-new-end
 
 .. usecase-customers-high-value-new-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that finds new high-value customers.
+The following sections describe using the **Segment Editor** to build a segment that finds new high-value customers.
 
 .. usecase-customers-high-value-new-howitworks-end
 

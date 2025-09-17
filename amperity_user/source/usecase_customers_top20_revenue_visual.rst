@@ -24,7 +24,7 @@ Top 20% revenue during previous year
 
 .. usecase-customers-top-20-revenue-howitworks-start
 
-The following sections describe using the the visual **Query Editor** to build a query that returns a list of your top 20-percent customers for revenue in the previous year.
+The following sections describe using the visual **Query Editor** to build a query that returns a list of your top 20-percent customers for revenue in the previous year.
 
 .. usecase-customers-top-20-revenue-howitworks-end
 

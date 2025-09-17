@@ -424,7 +424,7 @@ NULL values
 Functions may fail when they encounter a **NULL** value and others may return **NULL** values if any of their arguments return **NULL** values.
 
 * Use the **COALESCE()** function to convert to a zero-length string when using the **CONCAT()** and **SUM()** functions.
-* Use the **COALESCE()** function to to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because ``1`` is the identity for multiplication, use ``COALESCE(myColumn, 1)``
+* Use the **COALESCE()** function to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because ``1`` is the identity for multiplication, use ``COALESCE(myColumn, 1)``
 
 .. sql-presto-style-guide-null-values-end
 
@@ -1377,7 +1377,7 @@ UNION clause
 
 .. sql-presto-union-clause-start
 
-The **UNION** clause combines the the unique results of one query with the unique results of a second. For example:
+The **UNION** clause combines the unique results of one query with the unique results of a second. For example:
 
 ::
 

@@ -47,7 +47,7 @@ A win-back campaign for lost customers will typically include:
 
 .. usecase-winback-emails-lost-customers-howitworks-start
 
-The following sections describe using the the **Segment Editor** to build a segment that returns a list of customers who have a contactable email address and whose most recent order was more than two years ago.
+The following sections describe using the **Segment Editor** to build a segment that returns a list of customers who have a contactable email address and whose most recent order was more than two years ago.
 
 .. usecase-winback-emails-lost-customers-howitworks-end
 
