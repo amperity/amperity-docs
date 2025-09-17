@@ -23,6 +23,11 @@ Consumption is measured in Amps and Storage (TB). Amps consumption is measured a
 
 .. amps-consumption-end
 
+.. amps-sandboxes-start
+
+.. important:: The **Amps** dashboard is not available from a sandbox. The **Amps** dashboard in the parent tenant tracks Amps consumption, including Amps consumed by a sandbox.
+
+.. amps-sandboxes-end
 
 .. _amps-consumption-overview:
 
@@ -33,6 +38,7 @@ Consumption overview
 
 Consumption is measured in Amps and Storage (TB).
 Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or sending campaigns.
+
 The storage that is required to support those compute resources is measured in terabytes (TB).
 
 Some examples of consumption drivers are:
