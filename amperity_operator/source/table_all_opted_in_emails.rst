@@ -21,10 +21,13 @@ All Opted-In Emails table
    :start-after: .. term-all-opted-in-emails-table-start
    :end-before: .. term-all-opted-in-emails-table-end
 
+The **All Opted-In Emails Table** is for use at the campaign level to send additional emails as an attribute. 
+
+For example, some customers have multiple emails opted in with your brand, and using this table as a campaign attribute will send to each of these emails so that customers have the highest chance of seeing your message. 
 
 .. _table-all-opted-in-emails-use-in-segments:
 
-Use in segments
+Interaction with segments
 ==================================================
 
 .. table-all-opted-in-emails-use-in-segments-start
@@ -58,6 +61,10 @@ You may use other attributes in the **All Opted-In Emails** table, if they are a
 .. table-all-opted-in-emails-use-in-segments-warning-start
 
 .. warning:: The **All Opted-In Emails** table *is not unique* by Amperity ID and should not be used within the **Segment Editor**.
+
+   However, it must be made available to the **Segment Editor** in order to send additional emails as attributes on a campaign.
+   
+   Choose the **email** attribute from the **All Opted In Emails** table from the **Edit Attributes** menu. This ensures that the **email** attribute in this table is available to campaigns. 
 
 .. table-all-opted-in-emails-use-in-segments-warning-end
 

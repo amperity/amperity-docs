@@ -346,7 +346,7 @@ Journey activation states can be added to any segment.
 
 .. _data-tables-all-opted-in-emails:
 
-All Opted In Emails
+All Opted-In Emails
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -359,7 +359,7 @@ All Opted In Emails
 
 .. data-tables-all-opted-in-emails-context-start
 
-The **All Opted In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted In Emails** table should be made available to the **Segment Editor**. This ensures that the **email** attribute in this table is available to campaigns. (Choose the **email** attribute from the **All Opted In Emails** table from the **Edit Attributes** menu.)
+The **All Opted-In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used to the **Segment Editor**, though it should be made available to the **Segment Editor**. Choose the **email** attribute from the **All Opted In Emails** table from the **Edit Attributes** menu. This ensures that the **email** attribute in this table is available to campaigns. 
 
 .. data-tables-all-opted-in-emails-context-end
 
