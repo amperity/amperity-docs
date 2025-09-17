@@ -20,7 +20,7 @@ General advice for sending data
 
 .. send-data-to-amperity-start
 
-This topic contains general advice and recommendations for sending data to Amperity.
+General advice and recommendations for sending data to Amperity.
 
 Sending data to Amperity is the combination of:
 

@@ -2015,13 +2015,13 @@ Functions
 
 .. sql-spark-functions-start
 
-A function is a SQL statement that accepts input parameters, performs actions, and then returns results. This section highlights some useful functions for use when using Spark SQL in Amperity.
+A function is a SQL statement that accepts input parameters, performs actions, and then returns results.
 
 .. sql-spark-functions-end
 
 .. sql-spark-functions-note-start
 
-.. note:: This section highlights a very small subset of the complete list of functions available in |ext_sparksql_version_current|, many of which can be useful depending on the type of query.
+.. note:: Amperity uses a subset of the complete list of functions available in |ext_sparksql_version_current|, many of which can be useful depending on the type of query.
 
 .. sql-spark-functions-note-end
 

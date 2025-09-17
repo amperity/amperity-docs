@@ -58,8 +58,6 @@ The following scenarios describe more specific approaches for using third-party 
 #. :ref:`Identifying sparse customer records <data-third-party-identify-sparse-records>`
 #. :ref:`Purchasing prospect lists <data-third-party-purchase-prospect-lists>`
 
-.. caution:: It's important to identify the use case and it's intended outcome. This topic does not contain a complete list of use cases for third-party data for which Amperity can provide a solution.
-
 .. third-party-use-cases-end
 
 

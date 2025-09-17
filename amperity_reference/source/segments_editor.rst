@@ -329,7 +329,7 @@ The list of operators that are available to an attribute in the **Segment Editor
 
 .. segments-editor-operators-note-start
 
-.. note:: This topic is a reference for all operators that are available to all attributes and is organized alphabetically by data type, and then by operator. This topic does not contain specific recommendations for specific attributes. Refer to the individual attribute reference pages to learn more about the set of operators that are available, including recommended operators and examples of using them.
+.. note:: Refer to the individual attribute reference pages to learn more about the set of operators that are available, including recommended operators and examples of using them.
 
 .. segments-editor-operators-note-end
 

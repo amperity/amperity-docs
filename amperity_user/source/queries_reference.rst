@@ -226,7 +226,7 @@ Example queries
 
 .. queries-examples-start
 
-This section contains examples of queries that you can add to your tenant:
+Examples of queries that you can add to your tenant:
 
 * :ref:`queries-example-cohort-analysis`
 * :ref:`queries-example-count-loyalty-by-state`

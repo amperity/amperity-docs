@@ -18,7 +18,11 @@
 About couriers (legacy)
 ==================================================
 
+.. vale off
+
 .. warning:: Use this topic for couriers with legacy configuration patterns and options. Use :doc:`About couriers <couriers>` for the new configuration patterns and options.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
@@ -1933,7 +1937,7 @@ How-tos
 
 .. couriers-legacy-howtos-list-start
 
-This section describes tasks related to managing couriers in Amperity:
+Tasks related to managing couriers in Amperity:
 
 * :ref:`couriers-legacy-add`
 * :ref:`couriers-legacy-add-as-copy`

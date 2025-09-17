@@ -12,11 +12,11 @@
 
 .. meta::
     :description lang=en:
-        This topic describes how the Streaming API works and how to pull data to Amperity.
+        Use the Streaming API to send events data to Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        This topic describes how the Streaming API works and how to pull data to Amperity.
+        Use the Streaming API to send events data to Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

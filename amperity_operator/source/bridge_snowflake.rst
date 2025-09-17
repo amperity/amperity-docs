@@ -401,7 +401,7 @@ Create share
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-create-share-start
 
-To enable data sharing between Snowflake and Amperity `a share must be created in Snowflake <https://docs.snowflake.com/en/user-guide/data-sharing-provider#using-snowsight-to-create-a-share>`__ |ext_link|. You may `use Snowsight, the Snowflake user interace, to create the share <https://docs.snowflake.com/en/user-guide/data-sharing-provider#creating-a-share>`__ |ext_link|, as described in this topic, or you may use Snowflake SQL, starting with the `CREATE SHARE <https://docs.snowflake.com/en/sql-reference/sql/create-share>`__ |ext_link| command.
+To enable data sharing between Snowflake and Amperity `a share must be created in Snowflake <https://docs.snowflake.com/en/user-guide/data-sharing-provider#using-snowsight-to-create-a-share>`__ |ext_link|. You may `use Snowsight, the Snowflake user interace, to create the share <https://docs.snowflake.com/en/user-guide/data-sharing-provider#creating-a-share>`__ |ext_link|, as described here, or you may use Snowflake SQL, starting with the `CREATE SHARE <https://docs.snowflake.com/en/sql-reference/sql/create-share>`__ |ext_link| command.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-create-share-end
 

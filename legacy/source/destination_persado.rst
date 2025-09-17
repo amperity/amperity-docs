@@ -22,7 +22,11 @@
 Send data to Persado
 ==================================================
 
+.. vale off
+
 .. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_persado.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-persado-start
@@ -38,7 +42,7 @@ Use data from Amperity in |destination-name| to:
 
 .. destination-persado-about-end
 
-.. note:: This topic describes how to use the |destination-name| SFTP connector that is built into Amperity, which is configured to use the North American hostname.
+.. note:: Use the |destination-name| SFTP connector that is built into Amperity, which is configured to use the North American hostname.
 
    You can send data to the European Union hostname by using the :doc:`generic SFTP destination <destination_sftp>`, and then specifying **eu-psftp.persado.com** as the hostname. All of the other configuration details are the same.
 
@@ -91,7 +95,7 @@ Get details
           :class: no-scaled-link
      - The public key to use for PGP encryption, if required.
 
-.. note:: This topic describes how to use the |destination-name| SFTP connector that is built into Amperity, which is configured to use the North American hostname.
+.. note:: Use the |destination-name| SFTP connector that is built into Amperity, which is configured to use the North American hostname.
 
    You can send data to the European Union hostname by using the :doc:`generic SFTP destination <destination_sftp>`, and then specifying **eu-psftp.persado.com** as the hostname. All of the other configuration details are the same.
 

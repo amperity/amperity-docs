@@ -64,7 +64,7 @@ Adobe Analytics may be configured to send data to Amperity using SFTP, Amazon S3
 
    .. tip:: Amperity provides a built-in SFTP connector for |source-name| with some pre-configured settings.
 
-      You may configure |source-name| to send data to :doc:`Amazon S3 <source_amazon_s3>` or :doc:`Azure Blob Storage <source_azure_blob_storage>`, after which you would use that data source to configure your connection to |source-name|. The connection steps will change (from SFTP to Amazon S3 or Azure Blob Storage) and are outlined in those topics, but all other steps are the same as outlined in this topic.
+      You may configure |source-name| to send data to :doc:`Amazon S3 <source_amazon_s3>` or :doc:`Azure Blob Storage <source_azure_blob_storage>`, after which you would use that data source to configure your connection to |source-name|. The connection steps will change (from SFTP to Amazon S3 or Azure Blob Storage) and are outlined in those topics, but all other steps are the same.
 
 #. From the Adobe Anaytics admin console, configure an `Adobe Analytics Data Feed <https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-overview.html>`__ |ext_link|. Specify the connection type as **SFTP**, port **22**, the **<tenant>.sftp.amperity.com** hostname, and then the folder path to which that data is sent. For example: **/tenant/**.
 

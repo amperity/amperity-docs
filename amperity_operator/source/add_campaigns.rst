@@ -28,7 +28,7 @@ Amperity provides a set of features--the **Campaigns** page, segment insights, a
 
 .. add-campaigns-important-start
 
-.. important:: This topic assumes that you have already configured Amperity using the recommended patterns and workflows for:
+.. important:: You must have already configured Amperity using the recommended patterns and workflows for:
 
    #. :doc:`Customer profiles <add_customer_data>`, which contain profile and PII data for individual customers.
    #. :doc:`Transactions <add_transactions>`, which contain transactions, itemized transactions, and product catalogs that, when compared to customer records, identify how your customers interacted with your brands.
@@ -67,7 +67,9 @@ Verify prerequisites
 
 .. add-campaigns-verify-prerequisites-tip-start
 
-.. tip:: If you closely followed the steps for configuring :doc:`customer profiles <add_customer_data>` and :doc:`transactions <add_transactions>` this section may be a formality. If your tenant has been on Amperity for a while and wants to enable segments and campaigns, you should carefully review of all data sources, Stitch results, and customer data tables to ensure that all of those components meet all requirements.
+.. tip:: If you closely followed the steps for configuring :doc:`customer profiles <add_customer_data>` and :doc:`transactions <add_transactions>` verifying prerequisites may be a formality.
+
+   If your tenant has been on Amperity for a while and wants to enable segments and campaigns, you should carefully review of all data sources, Stitch results, and customer data tables to ensure that all of those components meet all requirements.
 
 .. add-campaigns-verify-prerequisites-tip-end
 

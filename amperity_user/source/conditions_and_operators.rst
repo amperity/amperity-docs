@@ -20,7 +20,7 @@ Conditions and operators
 
 .. segments-and-vs-or-start
 
-This topic uses visuals to describe various combinations of conditions (inclusions and exclusions) and operators (**AND** and **OR**). Each example shows how inclusions, exclusions, and operators work together to determine the size of an audience that is returned by a segment.
+A set of visuals to describe various combinations of conditions (inclusions and exclusions) and operators (**AND** and **OR**). Each example shows how inclusions, exclusions, and operators work together to determine the size of an audience that is returned by a segment.
 
 .. segments-and-vs-or-end
 
@@ -398,7 +398,7 @@ Customer lists
 
 .. segments-and-vs-or-include-exclude-segments-start
 
-This section uses previous examples *as if they are a segment* and then shows how using customer lists can affect the lists of customers that are returned by a segment.
+The following examples show how using customer lists can affect the lists of customers that are returned by a segment.
 
 .. segments-and-vs-or-include-exclude-segments-end
 

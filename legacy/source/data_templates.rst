@@ -625,7 +625,7 @@ How-tos
 
 .. data-templates-howtos-start
 
-This section describes tasks related to managing data templates in Amperity:
+Tasks related to managing data templates in Amperity:
 
 * :ref:`data-templates-add`
 * :ref:`data-templates-allow-to-send-queries`
@@ -810,7 +810,7 @@ Amperity may be configured to include a "success file" to indicate when an orche
 Map to external schemas
 --------------------------------------------------
 
-.. warning:: This section applies **ONLY** to the |destination_meta_ads_manager| and |destination_google_ads| destinations.
+.. warning:: Applies **ONLY** to the |destination_meta_ads_manager| and |destination_google_ads| destinations.
 
 .. data-templates-map-to-external-schemas-start
 

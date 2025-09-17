@@ -37,7 +37,7 @@ A graph database is a collection of vertices and edges:
 
 .. graph-database-important-start
 
-.. important:: This topic describes a graph database that uses the Gremlin data format, which is a supported data format for Amazon Neptune.
+.. important:: Configure a graph database for the Gremlin data format, which is a supported data format for Amazon Neptune.
 
    The graph database queries included with Amperity may be customized to support any graph database format and destination.
 

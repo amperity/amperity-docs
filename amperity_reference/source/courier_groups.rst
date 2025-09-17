@@ -550,7 +550,7 @@ How-tos
 
 .. courier-groups-howtos-list-start
 
-This section describes tasks related to managing courier groups in Amperity:
+Tasks related to managing courier groups in Amperity:
 
 * :ref:`courier-groups-howto-activate`
 * :ref:`courier-groups-howto-add-bridge`

@@ -113,7 +113,7 @@ After these files are delivered to |destination-name| you must import this data 
 
 **To import results to Oracle Responsys**
 
-.. tip:: See the `Oracle Responsys help center page <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link| for complete steps on importing results from Amperity. This section provides an overview, and then highlights specific settings as they relate to how you configured your results to be sent from Amperity.
+.. tip:: See the `Oracle Responsys help center page <https://docs.oracle.com/en/cloud/saas/marketing/responsys-user/Connect_WizardUpload.htm>`__ |ext_link| for complete steps on importing results from Amperity.
 
 #. From the **Data** side navigation bar, select **Connect** > **Create Job** > **Import Profile Data**. Add the required details to describe the job, and then click **Done**.
 #. Connect to a server.

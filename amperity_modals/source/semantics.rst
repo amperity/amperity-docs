@@ -4,7 +4,7 @@
 Semantic tags
 ==================================================
 
-This topic contains a list of semantic tags that are individually shown as tooltips within the Amperity user interface.
+A list of semantic tags that are individually shown as tooltips within the Amperity user interface.
 
 
 

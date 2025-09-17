@@ -431,7 +431,7 @@ How-tos
 
 .. journeys-howtos-start
 
-This section describes tasks related to building journeys in Amperity:
+Tasks related to building journeys in Amperity:
 
 .. journeys-howtos-end
 

@@ -5,7 +5,7 @@
 Terminology
 ==================================================
 
-This topic describes the correct use of terms within Amperity documentation. Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified in this topic.
+There are correct uses of terms within Amperity documentation. Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified here.
 
 
 .. _term-s3:

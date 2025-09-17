@@ -4602,7 +4602,7 @@ The **Unified Itemized Transactions** table has the following columns:
        Product catalog fields are added to the **Unified Itemized Transactions** table in two ways, depending on the approach your tenant used for defining your product catalog:
 
        #. When data sources use **txn-item/** product catalog semantic tags. 
-       #. When product catalog fields are joined from the **Unified Product Catalog** table. Refer to the section in this topic about the columns that are available to product catalogs.
+       #. When product catalog fields are joined from the **Unified Product Catalog** table.
 
        .. important:: The names of the columns that are available for product catalogs are identical. For example: **Product Brand**, **Product Category**, and **Product Gender**. The difference is the outcome of the approach your tenant used to define your product catalog within Amperity.
 

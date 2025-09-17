@@ -284,7 +284,7 @@ The **Destinations** page contains the following components:
 
 .. _start-here-about:
 
-About this topic collection
+About the Operators Guide
 ==================================================
 
 .. start-here-about-start

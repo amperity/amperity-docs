@@ -23,9 +23,7 @@ Merged Customers table
 
 .. table-merged-customers-important-start
 
-.. tip:: This topic describes a recommended starting point for the **Merged Customers** table.
-
-   The **Merged Customers** table collects PII data from the **Unified Coalesced** table, and then performs additional processing and grouping of this data *prior* to making this data available to the **Customer 360** table.
+.. tip:: The **Merged Customers** table collects PII data from the **Unified Coalesced** table, and then performs additional processing and grouping of this data *prior* to making this data available to the **Customer 360** table.
 
    Use the **Merged Customers** tables to apply bad-values blocklists to merge rules.
 
@@ -35,7 +33,7 @@ Merged Customers table
 
 .. table-merged-customers-start
 
-This topic describes the starting point for the **Merged Customers** table, and then steps through the process of updating it to be specific to your tenant. This topic does not attempt to address all of the specific use cases you may have for your tenant.
+Configure the **Merged Customers** table, and then step through the process of updating it to be specific to your tenant.
 
 Common ways of extending this table to support additional use cases are described, along with providing links to more detailed examples, when available. Start with the SQL that is added to your tenant by the "Customer 360" database template, and then add support for all of your required use cases.
 
@@ -49,7 +47,7 @@ Requirements
 
 .. table-merged-customers-requirements-start
 
-This topic assumes the following requirements are met:
+The **Merged Customers** table has the following requirements:
 
 * PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain customer records. For custom PII semantics and/or non-PII data that must be accessible from the **Unified Coalesced** table, you may need to :ref:`extend the Merged Customers table <table-merged-customers-custom-semantics>` to support them.
 * Feeds that contain customer records are made available to Stitch.
@@ -117,8 +115,8 @@ SQL query
 
 The following SQL query is the recommended starting point for the **Merged Customers** table. It exists in two parts: a window function that collects and groups PII data, and then a statement that updates the **Merged Customers** table with the results. This query does the following:
 
-#. Provides a location in which domain tables are assigned priority. This section must be updated to contain the names of the domain tables for your tenant that should be assigned a non-default priority.
-#. Provides a location in which PII fields are assigned priority. This section must be updated to contain the names of the domain tables that are assigned source priority, and then be updated to assign priorities to logical groups of fields that contain PII data, such as email addresses and physical addresses.
+#. Provides a location in which domain tables are assigned priority. Update **Merged Customers** for the names of the domain tables in your tenant that should be assigned a non-default priority.
+#. Provides a location in which PII fields are assigned priority. Update **Merged Customers** for the names of the domain tables that are assigned source priority, and then be updated to assign priorities to logical groups of fields that contain PII data, such as email addresses and physical addresses.
 #. Left joins the fields in the **Unified Coalesced** table into a temporary table for prioritization.
 #. Left joins the fields in the **Unified Coalesced** table to form groupings of PII fields. For example, all address-related fields--**address**, **address2**, **city**, **state**, **postal**, and **country**--are grouped together. This is done for names, addresses, phone numbers, email addresses, birthdates, and gender.
 #. Left joins the fields in the **Unified Coalesced** table by logical groups *and* by assigned priority.
@@ -576,7 +574,7 @@ with:
      ,'completion', INT(ISNOTNULL(email))
    ) AS `email_struct`
 
-This should be placed in-between the **NAMED_STRUCT** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` in this topic to refernce the position of this block within the SQL template for the **Merged Customers** table.
+This should be placed in-between the **NAMED_STRUCT** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` to reference the position of this block within the SQL template for the **Merged Customers** table.
 
 .. table-merged-customers-undo-ampid-assignment-named-struct-end
 
@@ -609,7 +607,7 @@ with:
                 ,email_struct.pk
      ) AS email_struct
 
-This should be placed in-between the **FIRST** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` in this topic to refernce the position of this block within the SQL template for the **Merged Customers** table.
+This should be placed in-between the **FIRST** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` to reference the position of this block within the SQL template for the **Merged Customers** table.
 
 .. note:: If your tenant is using the bad-values blocklist you must also add the following line:
 

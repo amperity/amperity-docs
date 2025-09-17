@@ -74,7 +74,7 @@ Assign the credential a name and description that ensures other users of Amperit
 
 .. vale off
 
-Notes: When a source or destination supports more than one credential type, copy the contents of this section instead of using the inclusion, and then replace credential-type with the credential string. See the Amazon S3 destination topic for an example.
+Notes: When a source or destination supports more than one credential type, copy the contents instead of using the inclusion, and then replace credential-type with the credential string. See the Amazon S3 destination topic for an example.
 
 .. vale on
 

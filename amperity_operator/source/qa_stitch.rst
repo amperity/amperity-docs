@@ -75,7 +75,7 @@ The recommended way to add the Stitch QA database to your tenant is to use the "
 
 The Stitch QA database is preconfigured with the following tables:
 
-.. tip:: The following links open standalone pages for each table. This topic discusses how each of these tables fits within the recommended Stitch QA workflow.
+.. tip:: The following links open standalone pages for each table. Each of the following tables fits within the recommended Stitch QA workflow.
 
 * :doc:`Detailed Examples <table_detailed_examples>`
 * :doc:`Unified Changes Clusters <table_unified_changes_clusters>`
@@ -119,7 +119,7 @@ The recommended way to add Stitch QA queries to your tenant is to use the "Stitc
 
 The Stitch QA folder is preconfigured with the following queries:
 
-.. tip:: The following links open standalone pages for each query. This topic discusses how each of these queries fits within the recommended Stitch QA workflow.
+.. tip:: The following links open standalone pages for each query. Each of the following queries fits within the recommended Stitch QA workflow.
 
 * :doc:`Bad foreign keys <stitch_qa_bad_foreign_keys>`
 * :doc:`Cluster scores <stitch_qa_cluster_scores>`

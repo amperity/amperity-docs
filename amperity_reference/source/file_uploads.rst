@@ -143,7 +143,7 @@ How-tos
 
 .. file-uploads-overview-start
 
-This section describes tasks related to uploading CSV files and adding query outputs to segments and campaigns in Amperity.
+Tasks related to uploading CSV files and adding query outputs to segments and campaigns in Amperity.
 
 .. file-uploads-overview-end
 

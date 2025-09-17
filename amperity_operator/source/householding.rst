@@ -31,7 +31,7 @@ Address-based householding
 
 .. householding-address-based-note-start
 
-.. note:: This topic describes address-based householding as a starting point. An implementation of address-based householding can vary significantly across brand use cases, depending on the
+.. note:: Address-based householding is a starting point. An implementation of address-based householding can vary significantly across brand use cases, depending on the
 
    * Type and number of data sources
    * Number of addresses
@@ -117,7 +117,7 @@ Address standardization starts as a feed that loads a CSV file that contains a l
 
 .. _householding-address-add-merged-households-table:
 
-Add Merged_Households table
+Add Merged Households table
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -126,7 +126,7 @@ Add Merged_Households table
 
 .. householding-address-add-merged-households-table-start
 
-This section walks through the default SQL template that is used to define how address-based householding works in Amperity.
+The **Merged Households** table starts as a SQL template that defines how address-based householding works in Amperity.
 
 .. householding-address-add-merged-households-table-end
 
@@ -136,11 +136,11 @@ This section walks through the default SQL template that is used to define how a
 #. Click **Add Table**. Name the table "Merged_Households".
 #. Set **Build Mode** to "SQL", and then define a SQL query.
 
-   .. tip:: You may `download a copy of Merged Households <../downloads/sql/merged_households.txt>`__ as a template or you may :ref:`refer to the example <householding-address-sql-template>` at the end of this topic.
+   .. tip:: You may `download a copy of Merged Households <../downloads/sql/merged_households.txt>`__ as a template or you may :ref:`refer to an example <householding-address-sql-template>`.
 
    .. important:: Amperity uses a single table in the customer 360 database to collect rows from the **Unified Coalesced** table, and then collapses them into a single row per Amperity ID.
 
-   This is referred to as the **Merged Customers** table. Prior to August 1, 2020 the name of this table was **Unified Merged**. Verify the name of this table as it is used for your tenant, and then update the template described in this topic so that it matches the name of the table in your tenant.
+   This is referred to as the **Merged Customers** table. Prior to August 1, 2020 the name of this table was **Unified Merged**. Verify the name of this table as it is used for your tenant, and then update the template to match the name of the table in your tenant.
 
 #. The section titled "Basic address standardization" is a common table expression (CTE) that performs address standardization.
 
@@ -161,7 +161,7 @@ This section walks through the default SQL template that is used to define how a
 
 #. The section titled "Get count of Amperity ID per Household ID" associates a count of Amperity IDs to each Household ID.
 
-   .. tip:: This section is where additional SQL is added to handle custom statistics on a per-household basis and to support other tenant-specific use cases. The default behavior only associates the Amperity ID to the Household ID, but can be tailored to support most use cases.
+   .. tip:: Additional SQL may be added to handle custom statistics on a per-household basis and to support other tenant-specific use cases. The default behavior only associates the Amperity ID to the Household ID, but can be tailored to support most use cases.
 
       For example, you could add support for checking the number of Amperity IDs associated with a household, and if that exceeds a threshold, that address could be flagged as a business address or some other non-household entity.
 
@@ -207,7 +207,7 @@ This section walks through the default SQL template that is used to define how a
 
 #. The section titled "Build Merged_Households table" combines everything into the **Merged Households** table.
 
-   .. tip:: Extend this section to support additional use cases, such as for specific household-level statistics or to add filter criteria that checks for **BL.amperity_id IS NULL** or for **ST.amperity_id IS NULL**.
+   .. tip:: Extend to support additional use cases, such as for specific household-level statistics or to add filter criteria that checks for **BL.amperity_id IS NULL** or for **ST.amperity_id IS NULL**.
 
 #. Click **Validate** to verify that the SQL query runs correctly.
 #. Make the table available to the visual **Segment Editor** by checking the box in the **Show in VSE?** column.
@@ -225,7 +225,7 @@ Build queries and segments
 
 .. householding-address-build-segments-start
 
-The default **Merged Households** table (as described in this topic) makes available two new columns for segmentation: **household_id** (the address-based Household ID) and **household_size** (the number of unique individuals who share the same physical address).
+The default **Merged Households** table makes available two new columns for segmentation: **household_id** (the address-based Household ID) and **household_size** (the number of unique individuals who share the same physical address).
 
 As a SELECT statement, the **Merged Household** table is similar to:
 

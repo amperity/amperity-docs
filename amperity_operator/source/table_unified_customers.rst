@@ -35,7 +35,7 @@ The **Unified Customer** table is a required table for the customer 360 database
 
 .. table-unified-customers-add-important-start
 
-.. important:: This table is added automatically when the "Customer 360" template is used to add the customer 360 database. Using a template is the recommended way to add the **Unified Customer** table. This section documents how to manually add this table, should it be necessary.
+.. important:: This table is added automatically when the "Customer 360" template is used to add the customer 360 database. Using a template is the recommended way to add the **Unified Customer** table.
 
 .. table-unified-customers-add-important-end
 

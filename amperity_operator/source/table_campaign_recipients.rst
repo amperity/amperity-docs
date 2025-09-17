@@ -32,7 +32,7 @@ Requirements
 
 .. table-campaign-recipients-requirements-start
 
-This topic assumes that at least one campaign has been configured, and then sent from Amperity.
+The **Campaign Recipients** table requires at least one campaign has been configured, and then sent from Amperity.
 
 .. table-campaign-recipients-requirements-end
 

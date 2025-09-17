@@ -17,7 +17,7 @@
 Configure Stitch
 ==================================================
 
-.. TODO: This section title is required by a tooltip in the Stitch configuration dialog in Amperity. Do not change this title without also taking steps to ensure the link from the dialog is also updated.
+.. TODO: Is required by a tooltip in the Stitch configuration dialog in Amperity. Do not change this title without also taking steps to ensure the link from the dialog is also updated.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-stitch-start

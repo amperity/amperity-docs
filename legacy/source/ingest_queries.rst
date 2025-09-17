@@ -116,7 +116,7 @@ How-tos
 
 .. ingest-queries-howtos-start
 
-This section describes tasks related to managing ingest queries in Amperity:
+Tasks related to managing ingest queries in Amperity:
 
 * :ref:`ingest-queries-add`
 * :ref:`ingest-queries-add-to-courier-as-load-operation`

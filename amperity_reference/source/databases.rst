@@ -582,7 +582,7 @@ Real-time tables contain the data that is streamed to Amperity. Real-time tables
 
 .. databases-realtime-howtos-start
 
-This section describes tasks related to managing real-time tables in Amperity:
+Tasks related to managing real-time tables in Amperity:
 
 * :ref:`databases-realtime-howtos-add`
 * :ref:`databases-realtime-howtos-delete`
@@ -732,7 +732,7 @@ How-tos
 
 .. databases-databases-howtos-databasese-start
 
-This section describes tasks related to building and managing databases in Amperity.
+Tasks related to building and managing databases in Amperity.
 
 .. databases-databases-howtos-databasese-end
 

@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        This topic describes how the Profile API works.
+        How the Profile API works.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        This topic describes how the Profile API works.
+        How the Profile API works.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -17,7 +17,7 @@
 Profile API
 ==================================================
 
-.. important:: The Profile API documented on this page (right now) is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__. The use cases in this topic are true, but should be built using the new endpoints.
+.. important:: The Profile API documented on this page (right now) is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__.
 
 The Profile API is a RESTful API that supports building custom endpoints against unified customer profiles to enable any downstream workflow.
 

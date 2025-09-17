@@ -769,8 +769,6 @@ A **SELECT** statement can be complex, depending on the type of query you need t
    ORDER BY t.amperity_id, rank ASC 
    LIMIT 100
 
-The rest of this topic describes the clauses, expressions, functions, and operators that are the most commonly used within the **SQL Segment Editor** in Amperity. More functionality than what is described in this topic is supported, as the segment editors use Presto SQL.
-
 .. important:: Not all of the functionality described in the official documentation for `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| should be used in the **SQL Segment Editor**.
 
 .. sql-presto-select-statement-about-end
@@ -2022,13 +2020,13 @@ Functions
 
 .. sql-presto-functions-start
 
-A function is a SQL statement that accepts input parameters, performs actions, and then returns results. This section highlights some useful functions for use when building segments in Amperity.
+A function is a SQL statement that accepts input parameters, performs actions, and then returns results.
 
 .. sql-presto-functions-end
 
 .. sql-presto-functions-note-start
 
-.. note:: This section highlights a very small subset of `the complete list of functions available in Presto SQL <https://prestodb.io/docs/current/functions.html>`__ |ext_link|, many of which can be useful depending on the type of query.
+.. note:: Amperity uses a subset of `the complete list of functions available in Presto SQL <https://prestodb.io/docs/current/functions.html>`__ |ext_link|, many of which can be useful depending on the type of query.
 
 .. sql-presto-functions-note-end
 

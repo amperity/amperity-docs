@@ -121,7 +121,7 @@ The following sections describe the steps you'll follow to set up and configure 
 
        Sub-audiences can be many things. How you choose to configure them is dependent on your audience, marketing strategy and goals, and the type of campaign.
 
-       This topic uses sub-audiences to split the combined high-value audience into more specific audiences by lifecycle status.
+       Use sub-audiences to split the combined high-value audience into more specific audiences by lifecycle status.
 
        Click **Add sub-audience** to open the **Audience Builder**, find the **Predicted CLV Attributes** table, choose the **Predicted Lifecycle Status** attribute, and then select "Active".
 

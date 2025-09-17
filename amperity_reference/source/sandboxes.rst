@@ -373,7 +373,7 @@ How-tos
 
 .. sandboxes-howtos-start
 
-This section describes tasks related to working with sandboxes in Amperity:
+Tasks related to working with sandboxes in Amperity:
 
 * :ref:`Access a sandbox <sandboxes-howto-access-sandbox>`
 * :ref:`Add a sandbox <sandboxes-howto-add-sandbox>`

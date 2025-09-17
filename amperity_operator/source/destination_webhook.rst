@@ -38,7 +38,7 @@ A webhook destination tracks the AWS Lambda function runs and monitors for succe
 
 .. destination-webhook-steps-to-send-start
 
-This topic describes the steps that are required to send query results to a custom destination using a webhook:
+Send query results to a custom destination using a webhook:
 
 #. :ref:`Use serverless destinations <destination-webhook-serverless>`
 #. :ref:`Configure custom destination <destination-webhook-custom>`
@@ -139,7 +139,7 @@ To manually configure a custom webhook destination, do each of the following ste
 
 .. destination-webhook-configure-manual-important-start
 
-.. important:: Your custom destination may require additional steps and/or modifications to the steps described in this topic.
+.. important:: Your custom destination may require additional steps or modifications.
 
 .. destination-webhook-configure-manual-important-end
 

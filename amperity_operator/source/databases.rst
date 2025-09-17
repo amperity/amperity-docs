@@ -29,7 +29,7 @@ The **Customer 360** page allows databases to be created from any combination of
 
 .. databases-prerequisites-start
 
-.. important:: This topic assumes that you have completed the processes for :doc:`adding customer profiles <add_customer_data>` and :doc:`adding transactions <add_transactions>` to Amperity and have created your customer 360 database.
+.. important:: Complete the processes for :doc:`adding customer profiles <add_customer_data>` and :doc:`adding transactions <add_transactions>` to Amperity before creating the customer 360 database.
 
 .. databases-prerequisites-start
 

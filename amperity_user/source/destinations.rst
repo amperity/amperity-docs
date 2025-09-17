@@ -47,7 +47,7 @@ Destinations are the locations to which you sends the lists of customers that ar
           :alt: Step 1.
           :align: center
           :class: no-scaled-link
-     - This topic describes adding destinations to your :doc:`campaign <campaigns>`. This is done from within the campaign builder for each treatment group that is part of a sub-audience. You can assign more than one destination to each treatment group.
+     - Add destinations to your :doc:`campaign <campaigns>`. This is done from within the campaign builder for each treatment group that is part of a sub-audience. You can assign more than one destination to each treatment group.
 
        The following sections show adding destinations for each of the "active", "cooling down", and "at risk" :doc:`sub-audiences within the campaign <campaigns>`.
 

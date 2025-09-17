@@ -23,7 +23,7 @@ About policies
 
 .. policies-start
 
-This section describes the policies that are available in Amperity and that may be assigned to users, along with the actions that each policy represents. You may assign more than one policy to a user.
+Policies may be assigned to users, along with assigning the actions that each policy represents. You may assign more than one policy to a user.
 
 .. policies-end
 

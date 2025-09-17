@@ -119,7 +119,7 @@ The following examples show some of the ways you can use the **Queries AI Assist
 * :ref:`assistant-query-example-errors`
 * :ref:`assistant-query-example-syntax`
 
-.. note:: The answers to these questions within your tenant will depend on the query, schema, results, and error information that was provided to the model and may be different than the examples shown in this topic.
+.. note:: The answers to these questions within your tenant will depend on the query, schema, results, and error information that was provided to the model and may be different than the examples shown.
 
 .. assistant-query-examples-end
 
@@ -243,7 +243,7 @@ The following examples show some of the ways you can use the **Segments AI Assis
 * :ref:`ampai-segments-example-refine-segment`
 * :ref:`ampai-segments-example-get-advice-on-segment`
 
-.. note:: The answers to these questions within your tenant will depend on the query, schema, results, and error information that was provided to the model and may be different than the examples shown in this topic.
+.. note:: The answers to these questions within your tenant will depend on the query, schema, results, and error information that was provided to the model and may be different than the examples shown.
 
 
 .. _ampai-segments-example-create-segment:

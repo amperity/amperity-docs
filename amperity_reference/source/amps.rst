@@ -274,7 +274,7 @@ Consumption by feature
 
 .. amps-consumption-features-start
 
-This section describes each feature in-depth, and what actions you can take to influence your Amps and storage consumption. It includes information on what specifically drives consumption in that area, and areas of the product where you can monitor your tenant's Amps consumption by feature.
+A description of each feature and the actions you can take to influence your Amps and storage consumption. It includes information on what specifically drives consumption in that area, and areas of the product where you can monitor your tenant's Amps consumption by feature.
 
 .. amps-consumption-features-end
 

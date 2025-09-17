@@ -23,9 +23,9 @@ Customer Attributes table
 
 .. table-customer-attributes-start
 
-This topic describes the starting point for the **Customer Attributes** table, and then steps through the process required to extend it to be more specific to the use cases that are required by your tenant.
+After the **Customer Attributes** table is configured you can extend it to be more specific to the use cases that are required by your tenant.
 
-.. note:: This topic assumes that the data in your tenant has the following types of data already configured:
+.. note:: The data in your tenant must have the following types of data already configured:
 
    #. Customer profile data sources, such as names, addresses, email addresses, and phone numbers. This data is made available from the the **Merged Customers** table and is required by the **Customer Attributes** table.
    #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes Extended** table and is optional.
@@ -39,7 +39,7 @@ This topic describes the starting point for the **Customer Attributes** table, a
 
    Any column that exists in the :ref:`column reference <table-customer-attributes-reference>` must maintain the exact column name and data type, even if your tenant requires custom SQL to enable the feature.
 
-   This table may be extended to support use cases that are not described in this topic. The implementation for these types of use cases are always tenant-specific, but should follow a similar approach as the extensions that are described in this topic. Custom fields are not used by segment insights and predictive scoring, but may be used by workflows that you build within your tenant, and then enable downstream.
+   This table may be extended to support additional use cases. The implementation for these types of use cases are always tenant-specific, but should follow a similar approach as the :ref:`recommended <table-customer-attributes-recommended-updates>` and :ref:`optional <table-customer-attributes-optional>` extensions. Custom fields are not used by segment insights and predictive scoring, but may be used by workflows that you build within your tenant, and then enable downstream.
 
 .. table-customer-attributes-important-end
 
@@ -71,7 +71,7 @@ The **Customer Attributes** table has the following requirements:
 
 .. table-customer-attributes-start-here-recommended-start
 
-This topic assumes that your tenant uses transactions and customer consent tables for email addresses and SMS/phone numbers. These tables are enabled within the SQL that shows the :ref:`recommended starting point <table-customer-attributes-recommended-starting-sql>` for the **Customer Attributes** table.
+The **Customer Attributes** table should have access to transactions and customer consent tables for email addresses, SMS, and phone numbers. These tables are enabled within the SQL that shows the :ref:`recommended starting point <table-customer-attributes-recommended-starting-sql>` for the **Customer Attributes** table.
 
 .. note:: You can comment out the SQL for :ref:`table-customer-attributes-recommended-update-transaction-attributes`, :ref:`table-customer-attributes-recommended-update-email-optin`, and :ref:`table-customer-attributes-recommended-update-sms-optin` if you do not plan to use these features within your tenant.
 
@@ -180,7 +180,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. table-customer-attributes-recommended-starting-sql-tip-start
 
-.. tip:: Add the **Customer Attributes** table using the SQL template option to load a version of this table that does not have the **Transaction Attributes Extended**, **Email Opt Status**, and **SMS Opt Status** tables pre-configured. You may copy and paste the following example into the SQL editor to use the pre-configured starting point described in this topic.
+.. tip:: Add the **Customer Attributes** table using the SQL template option to load a version of this table that does not have the **Transaction Attributes Extended**, **Email Opt Status**, and **SMS Opt Status** tables pre-configured. You may copy and paste the following example into the SQL editor to use it as a pre-configured starting point.
 
 .. table-customer-attributes-recommended-starting-sql-tip-end
 
@@ -391,7 +391,7 @@ Recommended updates
 
 .. table-customer-attributes-recommended-updates-start
 
-Most brands have transaction data histories, along with data that indicates if your customers have given consent to be contacted at their email address and/or phone number. This topic assumes that this data is available in your tenant and that you want to include that data in the **Customer Attributes** table.
+Most brands have transaction data histories, along with data that indicates if your customers have given consent to be contacted at their email address and/or phone number.
 
 The following sections describe these features and also show you how to comment them out of the **Customer Attributes** table to disable them:
 
@@ -415,7 +415,7 @@ Customer states are typically defined as "new", "active", "lapsed", "dormant", a
 
 A customer who has never interacted with your brand--never made a purchase--is assigned the value of "prospect".
 
-.. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it is included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature is enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
+.. note:: The :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table should be available in the customer 360 database. The **Customer Attributes** table should enable the **historical_purchaser_lifecycle_status** feature. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
 
 .. code-block:: sql
    :linenos:
@@ -492,7 +492,7 @@ The **Customer Attributes** table provides a list of customers who have complete
 
 .. tip:: The **Email Opt Status** table is generated when |semantics_email_optin| semantic tags are applied to feeds that contain records that indicate which of your customers have given their consent to receive email messages from your brand.
 
-.. note:: This topic assumes that the **Email Opt Status** table is available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their email address with your marketing campaigns.
+.. note:: The **Email Opt Status** table should be available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their email address with your marketing campaigns.
 
 .. code-block:: sql
    :linenos:
@@ -528,7 +528,7 @@ The **Customer Attributes** table provides a list of customers who have complete
 
 .. tip:: The **SMS Opt Status** table is generated when |semantics_sms_optin| semantic tags are applied to feeds that contain records that indicate which of your customers have given their consent to receive SMS messages from your brand.
 
-.. note:: This topic assumes that the **SMS Opt Status** table is available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their phone number with your marketing campaigns.
+.. note:: The **SMS Opt Status** table should be available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their phone number with your marketing campaigns.
 
 .. code-block:: sql
    :linenos:
@@ -605,7 +605,7 @@ Each of these options follows a similar series of steps:
 #. Use a LEFT JOIN to include it with the **classification_config** CTE
 #. Update the list in the **customer_attributes_final** CTE
 
-.. note:: Refer to the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` section in this topic to see a more complete walkthrough of the series of steps required to add each of the non-customer email address sections to the **Customer Attributes** table. The other sections highlight important details within the utility queries for :ref:`employees <table-customer-attributes-optional-email-categories-employees>`, :ref:`gift givers <table-customer-attributes-optional-email-categories-gift-givers>`, :ref:`outliers <table-customer-attributes-optional-email-categories-outliers>`, :ref:`resellers <table-customer-attributes-optional-email-categories-resellers>`, and :ref:`test accounts <table-customer-attributes-optional-email-categories-test-accounts>`.
+.. note:: Refer to the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` section to see a more complete walkthrough of the series of steps required to add each of the non-customer email address sections to the **Customer Attributes** table. The other sections highlight important details within the utility queries for :ref:`employees <table-customer-attributes-optional-email-categories-employees>`, :ref:`gift givers <table-customer-attributes-optional-email-categories-gift-givers>`, :ref:`outliers <table-customer-attributes-optional-email-categories-outliers>`, :ref:`resellers <table-customer-attributes-optional-email-categories-resellers>`, and :ref:`test accounts <table-customer-attributes-optional-email-categories-test-accounts>`.
 
 .. table-customer-attributes-optional-non-customer-emails-end
 
@@ -922,7 +922,7 @@ The query starts by defining the revenue outlier threshold:
 
 .. note:: The outlier threshold specifies a value between 0-1000, where 1000 is 100% and 995 is 99.5%.
 
-The query builds a list of outliers by comparing records that exceed the record count threshold to lifetime order revenue. In this topic, the outlier threshold is "995" which returns a list of customers whose lifetime revenue is in your top 0.5%.
+The query builds a list of outliers by comparing records that exceed the record count threshold to lifetime order revenue. The outlier threshold is "995" which returns a list of customers whose lifetime revenue is in your top 0.5%.
 
 Run the query and validate the results. When the query is ready, under the following section in the **Customer Attributes** SQL template:
 
@@ -977,7 +977,7 @@ The following CTE identifies supersized clusters that exceed the defined thresho
      having count(*) > 50
    )
 
-The query builds a list of likely resellers by comparing supersized cluster records that exceed the record count threshold to lifetime order revenue that exceeds the configured revenue threshold. In this topic, the supersized records threshold is "50" and the revenue threshold is "990" which returns a list of supersized clusters whose lifetime revenue is in your top 1%.
+The query builds a list of likely resellers by comparing supersized cluster records that exceed the record count threshold to lifetime order revenue that exceeds the configured revenue threshold. The supersized records threshold is "50" and the revenue threshold is "990" which returns a list of supersized clusters whose lifetime revenue is in your top 1%.
 
 Run the query and validate the results. When the query is ready, under the following section in the **Customer Attributes** SQL template:
 
@@ -1144,7 +1144,7 @@ Each churn prevention campaign is unique, but they all have something in common:
 
 The **Customer Attributes** table can be configured to provide your customers' current churn status -- one of "active", "cooling down", "at risk", "highly at risk", or "lost" -- along with the date on which your customers were assigned to that status.
 
-.. important:: The **Customer Attributes** table requires a table that tracks churn prevention events to be present in your customer 360 database. The name of this table may be unique to your tenant. This topic refers to this table as the **Churn Events** table.
+.. important:: The **Customer Attributes** table should track churn prevention events from the customer 360 database. The name of this table may be unique to your tenant. For example: **Churn Events**.
 
 You have two choices for defining churn events for this table:
 
@@ -1217,7 +1217,7 @@ Classifications
 
 .. table-customer-attributes-optional-classifications-start
 
-The recommended starting SQL, as described in this topic, configures using the **Transaction Attributes Extended** table. This enables two flags that differentiate your customers into "purchasers" and "prospects". These flags are enabled by the following SQL in **classification_config**:
+The recommended starting SQL configures using the **Transaction Attributes Extended** table. This enables two flags that differentiate your customers into "purchasers" and "prospects". These flags are enabled by the following SQL in **classification_config**:
 
 .. code-block:: sql
    :linenos:

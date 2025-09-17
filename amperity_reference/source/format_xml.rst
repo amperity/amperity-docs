@@ -23,7 +23,7 @@ XML files
 
 .. format-xml-streaming-ingest-start
 
-.. note:: This topic is about standalone XML files. XML data that is sent to the |api_streaming_ingest| is converted to :doc:`CBOR format <format_cbor>`.
+.. note:: XML data that is sent to the |api_streaming_ingest| is converted to :doc:`CBOR format <format_cbor>`.
 
 .. format-xml-streaming-ingest-end
 

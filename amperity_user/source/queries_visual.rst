@@ -69,7 +69,7 @@ The following sections describe how you can use the visual **Query Editor** to b
 
      - Start building your query by choosing an attribute from the selected table. The attributes that you choose to add to your query will depend on your goals and your use case.
 
-       The example in this topic builds a list of customers who have opted out of receiving emails. Start building your query with the **Amperity ID** and **Email** attributes that are available in the **Merged Customers** table. Set the conditions for both of these columns to "is not NULL".
+       These example build a list of customers who have opted out of receiving emails. Start building your query with the **Amperity ID** and **Email** attributes that are available in the **Merged Customers** table. Set the conditions for both of these columns to "is not NULL".
 
        .. image:: ../../images/mockup-queries-tab-visual-email-and-amperity-id.png
           :width: 600 px

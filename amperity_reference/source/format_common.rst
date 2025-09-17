@@ -19,7 +19,7 @@ About file formats
 
 .. format-common-start
 
-This topic covers details that are common to files that can be pulled to or sent from Amperity using Amazon S3, Azure Blob Storage, Google Cloud Storage, or any SFTP site.
+Details that are common to files that can be pulled to or sent from Amperity using Amazon S3, Azure Blob Storage, Google Cloud Storage, or any SFTP site.
 
 .. format-common-end
 
@@ -80,7 +80,7 @@ Amperity supports the following file formats when using a filedrop location to p
 
 .. format-common-pull-files-note-start
 
-.. note:: Amperity can ingest data from a wide variety of data sources, such as legacy data outputs like :ref:`AS/400 <format-csv-pull-couriers-as400>`. Ask your Amperity Support representative about formats that are not directly listed in this section to determine if those data formats can be used as a way to provide data to Amperity.
+.. note:: Amperity can ingest data from a wide variety of data sources, such as legacy data outputs like :ref:`AS/400 <format-csv-pull-couriers-as400>`. Ask your Amperity Support representative about formats that are not directly listed to determine if those data formats can be used as a way to provide data to Amperity.
 
 .. format-common-pull-files-note-end
 

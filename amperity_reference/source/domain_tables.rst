@@ -423,7 +423,7 @@ How-tos
 
 .. domain-tables-howtos-start
 
-This section describes tasks related to managing domain tables in Amperity:
+Tasks related to managing domain tables in Amperity:
 
 * :ref:`domain-tables-add`
 * :ref:`domain-tables-add-custom`

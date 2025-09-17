@@ -13,7 +13,7 @@
 
 .. channels-overview-list-intro-start
 
-This topic describes the steps required to configure campaigns to send |what-send| to |destination-name|.
+The steps required to configure campaigns to send |what-send| to |destination-name|.
 
 .. channels-overview-list-intro-end
 

@@ -270,7 +270,18 @@ How-tos
 
 .. models-howtos-start
 
-This section describes individual tasks that are related to building predictive models:
+Individual tasks for building predictive models:
+
+* :ref:`models-howtows-activate`
+* :ref:`models-howtows-add`
+* :ref:`models-howtows-delete`
+* :ref:`models-howtows-edit`
+* :ref:`models-howtows-pause`
+* :ref:`models-howtows-promote-from-sandbox`
+* :ref:`models-howtows-schedule`
+* :ref:`models-howtows-view-jobs`
+* :ref:`models-howtows-view-model-configuration`
+* :ref:`models-howtows-view-model-versions`
 
 .. models-howtos-end
 

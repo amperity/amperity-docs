@@ -57,19 +57,19 @@ For example:
 
 **TEMPLATE SECTIONS FOR DESTINATIONS**
 
-This topic contains the templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
+Templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
 In certain cases, a destination topic requires *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
 
 .. destinations-overview-list-intro-start
 
-This topic describes the steps that are required to send |what-send| to |destination-name| from Amperity.
+The steps that are required to send |what-send| to |destination-name| from Amperity.
 
 .. destinations-overview-list-intro-end
 
 .. campaigns-overview-list-intro-start
 
-This topic describes the steps that are required to send campaigns to |destination-name| from Amperity.
+The steps that are required to send campaigns to |destination-name| from Amperity.
 
 .. campaigns-overview-list-intro-end
 

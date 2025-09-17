@@ -315,7 +315,7 @@ The "hyphen separated string" must be in lowercase and must follow this pattern:
 
    filename - section - subsection
 
-For example, the filename of this topic is ``rst.rst`` and the section is titled "Anchor references", which means the anchor reference is ``.. _rst-anchor-references:``.
+For example, the filename is ``rst.rst`` and the section is titled "Anchor references", which means the anchor reference is ``.. _rst-anchor-references:``.
 
 
 .. _rst-article-info:
@@ -2635,7 +2635,7 @@ The section references are:
 #. ".. uid2-overview-start"
 #. ".. uid2-overview-end"
 
-To include the paragraph into another topic, such as into this section, use the ``.. include::`` directive.
+To include the paragraph into another topic use the ``.. include::`` directive.
 
 .. code-block:: none
 
@@ -4053,7 +4053,7 @@ See also is not an :ref:`admonition <rst-admonitions>`, but it behaves like one.
    * A `command-line AI for customer data <https://www.chuckdata.ai/>`__.
    * :ref:`Additional resources <rst-additional-resources>` for an in-page example of when a See also block can be useful.
 
-.. caution:: **Use "See also" sparingly** and only to reference meaningful content that could not be linked to from within the topic. The :ref:`additional resources <rst-additional-resources>` section at the end of this topic is an example of a good "See also".
+.. caution:: **Use "See also" sparingly** and only to reference meaningful content that could not be linked to from within the topic. The :ref:`additional resources <rst-additional-resources>` section at the end is an example of a good "See also".
 
 .. rst-see-also-end
 
@@ -4450,8 +4450,6 @@ Add an `<hr>` tag into a topic using four hyphen characters: ``----``.
 Toctrees
 ==================================================
 
-.. TODO: Uuuugh. This section need some work as toctrees are specific creatures. But the gist is correct and the User Guides show good patterns. Look at the grid_x topics for 2nd-level navigation toctrees.
-
 .. rst-toctrees-start
 
 All topics that appear in the left-side navigation must belong to a toctree. 
@@ -4525,7 +4523,7 @@ A TODO is not an :ref:`admonition <rst-admonitions>`, but it behaves like one. T
 
 .. rst-todo-tip-start
 
-.. tip:: For an example of a TODO in this topic, look at the source code for this section.
+.. tip:: For an example of a TODO look at the source code.
 
 .. rst-todo-tip-end
 
@@ -4783,7 +4781,7 @@ The following descriptions are located in the ``/shared/destination_settings.rst
 
    .. setting-common-membership-duration-frequency-end
 
-This topic uses the following example variables to show how variables work within this topic.
+The following examples show how variables work.
 
 .. list-table::
    :widths: 30 70

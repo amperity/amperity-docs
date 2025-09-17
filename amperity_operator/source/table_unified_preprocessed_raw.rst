@@ -53,7 +53,7 @@ Use the **Unified Preprocessed Raw** table as part of the Stitch QA process to:
 Profile semantics and foreign keys
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-tags-keys-start
 
@@ -69,7 +69,7 @@ Open the table in the **Database Explorer** and verify that all rows in the tabl
 Relationships between records
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-relationships-records-start
 
@@ -87,7 +87,7 @@ In some cases, you may need to investigate and compare entire clusters to better
 Global blocklist values
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-blocklist-values-start
 

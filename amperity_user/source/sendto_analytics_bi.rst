@@ -23,8 +23,6 @@ Amperity supports making data available to all of the leading analytics and busi
 
 Send your data from Amperity to any of these tools, and then use that data to build dashboards along with anything else that is enabled by your favorite analytics and BI tools.
 
-This topic consolidates the discussion of how to get data from Amperity to your favorite analytics and/or BI tools into a single topic, along with providing links to the documentation for each of the analytics and BI tools.
-
 .. sendto-analytics-bi-end
 
 

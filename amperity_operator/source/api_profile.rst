@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        This topic describes how the Profile API works.
+        How to use the Profile API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        This topic describes how the Profile API works.
+        How to use the Profile API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

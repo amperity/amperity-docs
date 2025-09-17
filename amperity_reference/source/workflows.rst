@@ -582,11 +582,11 @@ Many workflows have context-specific resolutions that depend on upstream and dow
 
 .. workflows-context-note-start
 
-.. note:: The potential list of context-specific workflow actions is larger than the lists of campaign-, courier group-, destination-, scheduled orchestration group- and/or source-specific resolutions described in this section. And this list of potential context-specific workflow actions may be only partially relevant to your tenant.
+.. note:: The potential list of context-specific workflow actions is larger than the lists of campaign-, courier group-, destination-, scheduled orchestration group- and/or source-specific resolutions. And this list of potential context-specific workflow actions may be only partially relevant to your tenant.
 
    For example, if your brand only uses Amazon S3 for file-based transfers, then SFTP-specific errors won't ever be shown. If your brand sends paid media campaigns to TikTok Ads and Meta Ads Manager, but not Google Ads, then Google Ads-specific errors won't ever be shown.
 
-   This section is a reference meant to show that Amperity provides a broad list of workflow actions that address the most likely causes and solutions to help your brand self-service resolutions of issues as they may arise.
+   Amperity provides a broad list of workflow actions that address the most likely causes and solutions to help your brand self-service resolutions of issues as they may arise.
 
 .. workflows-context-note-end
 
@@ -1329,7 +1329,7 @@ How-tos
 
 .. workflows-howto-start
 
-This section describes tasks related to managing workflow actions in Amperity:
+Tasks related to managing workflow actions in Amperity:
 
 * :ref:`Configure runtime alerts for courier groups <workflows-howto-configure-duration-alerts>`
 * :ref:`Filter workflows by status <workflows-howto-filter-workflows-by-status>`

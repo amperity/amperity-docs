@@ -366,7 +366,7 @@ How-tos
 
 .. queries-howtos-start
 
-This section describes tasks related to building queries in Amperity:
+Tasks related to building queries in Amperity:
 
 .. queries-howtos-end
 

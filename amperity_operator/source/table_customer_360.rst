@@ -42,7 +42,7 @@ Attributes vary tenant-to-tenant, but typically include:
 
 .. table-customer360-add-important-start
 
-.. important:: This table is added automatically when the "Customer 360" template is used to add the customer 360 database. Using a template is the recommended way to add the recommended way to add the **Customer 360** table. This section documents how to manually add this table, should it be necessary.
+.. important:: This table is added automatically when the "Customer 360" template is used to add the customer 360 database. Using a template is the recommended way to add the recommended way to add the **Customer 360** table.
 
 .. table-customer360-add-important-end
 

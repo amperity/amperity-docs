@@ -730,7 +730,7 @@ How-tos
 
 .. campaigns-how-tos-start
 
-This section describes tasks related to building campaigns in Amperity:
+Tasks related to building campaigns in Amperity:
 
 .. campaigns-how-tos-end
 

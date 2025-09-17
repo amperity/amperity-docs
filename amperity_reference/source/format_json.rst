@@ -23,7 +23,7 @@ JSON files
 
 .. format-json-streaming-ingest-start
 
-.. note:: This topic is about standalone JSON files. JSON data that is sent to the |api_streaming_ingest| is converted to :doc:`NDJSON format <format_ndjson>`.
+.. note:: JSON data that is sent to the |api_streaming_ingest| is converted to :doc:`NDJSON format <format_ndjson>`.
 
 .. format-json-streaming-ingest-end
 

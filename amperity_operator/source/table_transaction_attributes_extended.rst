@@ -277,7 +277,7 @@ RFM
 .. table-transaction-attributes-extended-extend-attributes-rfm-steps-start
 
 #. Open the **Transaction Attributes Extended** table in the SQL editor.
-#. Uncomment the **l12m_rfm** block of SQL. This section uses the **NTILE()** function to calculate recency, frequency, and monetary scores as deciles.
+#. Uncomment the **l12m_rfm** block of SQL. Use the **NTILE()** function to calculate recency, frequency, and monetary scores as deciles.
 #. In the **attrs** block of SQL, uncomment the calculations for RFM attributes:
 
    .. code-block:: sql

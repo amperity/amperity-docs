@@ -373,7 +373,7 @@ How-tos
 
 .. couriers-howtos-list-start
 
-This section describes tasks related to managing couriers in Amperity:
+Tasks related to managing couriers in Amperity:
 
 * :ref:`couriers-add`
 * :ref:`couriers-add-as-copy`

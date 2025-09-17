@@ -432,7 +432,7 @@ The **Sources** page shows the status of all feeds, including when they last ran
 
 .. feeds-howtos-list-start
 
-This section describes individual tasks that are related to managing feeds:
+Tasks that are related to managing feeds:
 
 * :ref:`Activate feed <feeds-activate>`
 * :ref:`Add column <feeds-edit-column-add>`

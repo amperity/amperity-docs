@@ -25,8 +25,6 @@ Audience attributes are available from a series of standard tables that are gene
 
 Some audience attributes represent consolidated views of your customers, while others are based on predictive modeling and other calculations that are part of Amperity and provide a series of specific attributes that you can use to define high-value segments for use with downstream campaigns.
 
-This topic describes all of the audience attributes that are available from standard tables.
-
 .. attributes-overview-end
 
 

@@ -2424,7 +2424,7 @@ The following table lists the tags available to this semantic group (with requir
 
        .. important:: The names of the semantic tags that are available for product catalogs are identical. For example: "product-brand", "product-category", and "product-gender". The difference is the prefix that you choose to use and the pattern your tenant chooses for defining your product catalog within Amperity. You should determine which pattern you want to use early in your configuration and deployment process. Talk with your Amperity representative if you have questions about the best ways to approach this within your tenant.
 
-       To review the descriptions for all of the product catalog semantic tags you may prefix with **txn-item/** refer to the section in this topic about product catalog semantic tags.
+       To review the descriptions for all of the product catalog semantic tags you may prefix with **txn-item/** refer to the section about product catalog semantic tags.
 
    * - **product-id**
      - String
