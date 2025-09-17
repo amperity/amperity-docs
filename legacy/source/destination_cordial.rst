@@ -81,7 +81,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - A |destination-api| key and the URL for the |destination-name| API.
+     - A |destination-api| key and the URL of the |destination-name| API.
 
        .. important:: Use the `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| for Amperity to configure the allowlist for the |destination-api|.
 
@@ -193,7 +193,7 @@ Add destination
        |destination-name| has the following settings:
 
        * The |destination-api| key.
-       * The URL for the |destination-name| API.
+       * The URL of the |destination-name| API.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start

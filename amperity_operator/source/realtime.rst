@@ -199,7 +199,7 @@ Streaming endpoints are managed from the **Sources** page.
           :class: no-scaled-link
      - For the stream that was just created, open the |fa-kebab| menu and click **Copy URL**.
 
-       The URL for the stream is similar to:
+       The URL of the stream is similar to:
 
        ::
 

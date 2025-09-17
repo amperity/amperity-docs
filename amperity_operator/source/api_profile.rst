@@ -384,7 +384,7 @@ The index ID is available from:
 
 .. profile-api-howitworks-index-ids-tip-start
 
-.. tip:: You can copy the URL for the :ref:`GET /indexes/{id}/profiles <profile-api-howitworks-endpoints-get-indexes-id-profiles>` endpoint from the **Profile API** tab on the **Destinations** page. From the |fa-kebab| menu for an endpoint, select **Copy URL**.
+.. tip:: You can copy the URL of the :ref:`GET /indexes/{id}/profiles <profile-api-howitworks-endpoints-get-indexes-id-profiles>` endpoint from the **Profile API** tab on the **Destinations** page. From the |fa-kebab| menu for an endpoint, select **Copy URL**.
 
    The copied URL contains the correct values for the selected endpoint's **{tenant}** and **{index-id}** request parameters.
 
@@ -420,7 +420,7 @@ Tenant ID
 
 .. profile-api-howitworks-tenant-id-start
 
-The tenant ID is a unique identifier for your tenant. To make a request to an index you must include the tenant ID in the URL for the request.
+The tenant ID is a unique identifier for your tenant. To make a request to an index you must include the tenant ID in the URL of the request.
 
 The tenant ID is available from the **Profile API** list. For the index, open the actions menu, and then select "Copy tenant ID".
 
@@ -611,7 +611,7 @@ Copy the tenant ID
 
 .. profile-api-enable-copy-tenant-id-start
 
-The tenant ID is a unique identifier for your tenant. To make a request to an index you must include the tenant ID in the URL for the request.
+The tenant ID is a unique identifier for your tenant. To make a request to an index you must include the tenant ID in the URL of the request.
 
 The tenant ID is available from the **Profile API** list. For the index, open the actions menu, and then select "Copy tenant ID".
 

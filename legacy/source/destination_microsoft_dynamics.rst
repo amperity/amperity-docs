@@ -81,7 +81,7 @@ Get details
           :alt: Detail 3.
           :align: left
           :class: no-scaled-link
-     - The login URL for |destination-name|, similar to "<tenant-name>.crm.dynamics.com".
+     - The login URL of |destination-name|, similar to "<tenant-name>.crm.dynamics.com".
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -180,7 +180,7 @@ An application user with permission to modify and update records is required.
 
 .. destination-microsoft-dynamics-configure-user-steps-start
 
-#. Go to the customer's instance of |destination-name|, and then log in with Admin credentials. The URL for |destination-name| is similar to "<tenant-name>.crm.dynamics.com".
+#. Go to the customer's instance of |destination-name|, and then log in with Admin credentials. The URL of |destination-name| is similar to "<tenant-name>.crm.dynamics.com".
 #. Click **Settings**, then **System**, and then **Security**.
 #. On the **Security** page, click **Users**, and then click **Application Users**.
 #. Click **New**.
@@ -307,7 +307,7 @@ Add destination
             - The Active Directory tenant ID that is associated with your Microsoft Azure subscription.
 
           * - **Dynamics URL**
-            - The URL for your instance of |destination-name|.  The URL must be the full URL, including ``https://``. For example:
+            - The URL of your instance of |destination-name|.  The URL must be the full URL, including ``https://``. For example:
 
               ::
 

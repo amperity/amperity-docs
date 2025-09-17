@@ -226,7 +226,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **Tenant subdomain**
 
-       The subdomain is part of the URL for your Amperity tenant. For example, "socktown":
+       The subdomain is part of the URL of your Amperity tenant. For example, "socktown":
 
        .. code-block:: none
 

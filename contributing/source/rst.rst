@@ -3951,6 +3951,8 @@ Pages can be redirected from the current URL to a different URL. This is useful 
 
 Use the ``redirects.html`` template to create a redirect.
 
+.. vale off
+
 .. code-block:: salt
    :linenos:
    :caption: /contributing/_templates/redirects.html
@@ -3972,6 +3974,8 @@ Use the ``redirects.html`` template to create a redirect.
      </head>
      <body role="document"></body>
    </html>
+
+.. vale on
 
 **To add a redirect**
 

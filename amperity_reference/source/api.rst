@@ -719,9 +719,9 @@ Copy endpoint URL
 
 .. api-profile-action-copy-url-start
 
-Use this to get the full URL for your tenant, including the ID for the endpoint. Use this URL in the requests your brand makes to the profile API.
+Use this to get the full URL of your tenant, including the ID for the endpoint. Use this URL in the requests your brand makes to the profile API.
 
-.. important:: Each request to a profile API endpoint **MUST** have the correct URL for that endpoint. The URL for an endpoint is similar to:
+.. important:: Each request to a profile API endpoint **MUST** have the correct URL of that endpoint. The URL of an endpoint is similar to:
 
    ::
 
@@ -729,7 +729,7 @@ Use this to get the full URL for your tenant, including the ID for the endpoint.
 
 .. api-profile-action-copy-url-end
 
-**To copy the URL for an endpoint**
+**To copy the URL of an endpoint**
 
 .. api-profile-action-copy-url-steps-start
 
@@ -738,7 +738,7 @@ Use this to get the full URL for your tenant, including the ID for the endpoint.
 
    .. image:: ../../images/api-profile-endpoint-copy-url.png
       :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
+      :alt: Copy the URL of an endpoint in the Amperity Profile API.
       :align: left
       :class: no-scaled-link
 
@@ -754,7 +754,7 @@ Copy index ID
 
 .. api-profile-action-copy-index-id-start
 
-The index ID is a unique identifier for an endpoint. To make a request to any Profile API endpoint you must include the index ID in the URL for the request.
+The index ID is a unique identifier for an endpoint. To make a request to any Profile API endpoint you must include the index ID in the URL of the request.
 
 ::
 

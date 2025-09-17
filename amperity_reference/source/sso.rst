@@ -62,7 +62,7 @@ The following diagram steps through how SSO works with Amperity. This example us
 
 #. A user accesses Amperity--``https://app.amperity.com``--from a supported web browser.
 #. Amperity displays the login page.
-#. The user enters their email address, Amperity identifies your tenant, after which Amperity redirects to the sign-in URL for your IdP.
+#. The user enters their email address, Amperity identifies your tenant, after which Amperity redirects to the sign-in URL of your IdP.
 
    Amperity uses the domain in the email address to which IdP the login is redirected. For example, Amperity uses Auth0. Any user with an ``amperity.com`` email address is redirected to Auth0 for authentication and authorization.
 
@@ -131,8 +131,8 @@ Exchange of metadata
 
 A series of back-and-forth steps, also referred to as an "exchange of metadata", is required to configure the service provider (Amperity) and the IdP for the correct settings that enable SSO for your tenant:
 
-#. :ref:`Send URL for IdP metadata <sso-exchange-idp-metadata>`
-#. :ref:`Send URL for Amperity metadata <sso-exchange-amperity-metadata>`
+#. :ref:`Send URL of IdP metadata <sso-exchange-idp-metadata>`
+#. :ref:`Send URL of Amperity metadata <sso-exchange-amperity-metadata>`
 #. :ref:`Configure claim keys <sso-exchange-claim-keys>`
 #. :ref:`Send domain names and claim keys to Amperity <sso-exchange-domains-and-claim-keys>`
 #. :ref:`Establish trust <sso-exchange-establish-trust>`
@@ -142,12 +142,12 @@ A series of back-and-forth steps, also referred to as an "exchange of metadata",
 
 .. _sso-exchange-idp-metadata:
 
-Send URL for IdP metadata
+Send URL of IdP metadata
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sso-exchange-idp-metadata-start
 
-Send the URL for your IdP metadata to Amperity support. The Amperity support team will pull the following configuration details:
+Send the URL of your IdP metadata to Amperity support. The Amperity support team will pull the following configuration details:
 
 * The sign-in URL to which Amperity will redirect a user for authentication.
 * The sign-out URL to which Amperity will redirect a user who signs out.
@@ -160,19 +160,19 @@ The Amperity Support team will configure these details within your Amperity tena
 
 .. _sso-exchange-amperity-metadata:
 
-Send URL for Amperity metadata
+Send URL of Amperity metadata
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sso-exchange-amperity-metadata-start
 
-After your Amperity Support team has configured the metadata for your IdP they sends to you the URL for Amperity service provider metadata.
+After your Amperity Support team has configured the metadata for your IdP they sends to you the URL of Amperity service provider metadata.
 
 .. important:: The specific configuration details for your IdP may vary.
 
 The most common configuration details for this step include:
 
 * The entity ID for the service provider.
-* The URL for the Assertion Consumer Service (ACS).
+* The URL of the Assertion Consumer Service (ACS).
 * The X509 signing key
 
 Work with the Amperity Support team to identify additional configuration details, if necessary.
