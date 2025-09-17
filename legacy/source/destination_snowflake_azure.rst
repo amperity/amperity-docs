@@ -182,7 +182,7 @@ The following objects must be created in the customer's instance of Snowflake:
 
    The **CREATE STAGE** command defaults to CSV file types.
 
-   When sending data from Amperity to Snowflake you must configure an external stage that points to the URL of the Azure container that is included with Amperity.  (``URL = 'azure://account.blob.core.windows.net/container[/path/]'``).
+   When sending data from Amperity to Snowflake you must configure an external stage that points to the URL of the Azure container that is included with Amperity. (``URL = 'azure://account.blob.core.windows.net/container[/path/]'``).
 
 #. A warehouse via `CREATE WAREHOUSE <https://docs.snowflake.net/manuals/sql-reference/sql/create-warehouse.html>`__ |ext_link|.
 #. A user via `CREATE USER <https://docs.snowflake.net/manuals/sql-reference/sql/create-user.html>`__ |ext_link|.

@@ -1715,6 +1715,6 @@ Load the values from the Profile API endpoint using SSJS. This will make those v
 
 Update the **$INDEX-ID**, **$tenant-id**, and **$ACCESS-TOKEN** placeholders for the correct index ID, tenant ID, and access token.
 
-Use the **Variable.SetValue("@$FIELD",objResp.attributes.value.$FIELD);** function to declare the list of fields that are available to SSJS from the Profile API endpoint.
+Use the ``Variable.SetValue("@$FIELD",objResp.attributes.value.$FIELD);`` function to declare the list of fields that are available to SSJS from the Profile API endpoint.
 
 .. profile-api-usecase-ssjs-ssmc-end

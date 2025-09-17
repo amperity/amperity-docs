@@ -197,7 +197,7 @@ Individual rows within the **Unified Coalesced** table may not represent complet
 
 * Row 1 contains details from data source A and has customer email addresses, first and last names, and postal codes
 * Row 2 contains details from data source B and has phone numbers and first names
-* Row 3 contains details from data source C and has  first and last names, postal codes, and phone numbers
+* Row 3 contains details from data source C and has first and last names, postal codes, and phone numbers
 
 Each row within the **Unified Coalesced** table is assigned an Amperity ID.
 

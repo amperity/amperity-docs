@@ -227,7 +227,7 @@ Redirect stdout
 
        takes the first 10 lines from BigFile.csv and write them to the new file SmallFile.csv. If SmallFile.csv exists it will be overwritten. If it does not exist it will be created.
    * - **>>**
-     - Can be used to concatenate results onto a file.  For example:
+     - Can be used to concatenate results onto a file. For example:
 
        .. code-block:: console
 

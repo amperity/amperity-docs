@@ -611,7 +611,7 @@ Spaces
 
 .. sql-presto-style-guide-whitespace-spaces-start
 
-Spaces should be used to line up the code so that the root keywords all start on the same character boundary, and also so that  This makes it easy to keep track of where you are in a query that may be multiple layers deep.
+Use spaces to line up code so that the root keywords all start on the same character boundary. This makes it easier to keep track of where you are in a complex query.
 
 .. code-block:: sql
    :linenos:

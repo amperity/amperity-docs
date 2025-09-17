@@ -255,7 +255,7 @@ Notification fields
      - Is a job that processes Spark SQL queries related to the Stitch process and to building databases.
    * - **Stitch metrics**
      - Stitch
-     - These metrics displays the tenant, the time at which the job started, the ID for the Stitch report, the Stitch ID, the collapsed ID count, related  pairs count, and filtered related pair count.
+     - These metrics display the tenant, the time at which the job started, the ID for the Stitch report, the Stitch ID, the collapsed ID count, related pairs count, and filtered related pair count.
    * - **Stitch report**
      - Stitch
      - A Stitch report displays cluster graphs for individuals associated with the Amperity ID.

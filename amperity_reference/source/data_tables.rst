@@ -265,7 +265,7 @@ Campaign activation states can be added to any segment.
 
    * - **First entry**
      - String
-     - The date and time at which an audience member was first  part of a campaign.
+     - The date and time at which an audience member was first part of a campaign.
 
    * - **Last entry**
      - String

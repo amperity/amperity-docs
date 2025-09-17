@@ -226,7 +226,7 @@ Configure storage integration
 
 .. source-snowflake-aws-configure-storage-integration-start
 
-Amperity can ingest any type of data structure or data format that can be output from Snowflake. This output is written by Snowflake to a customer-managed Amazon S3 bucket,  from which Amperity pulls the data.
+Amperity can ingest any type of data structure or data format that can be output from Snowflake. This output is written by Snowflake to a customer-managed Amazon S3 bucket, from which Amperity pulls the data.
 
 Use `secrets and keys <https://docs.snowflake.com/en/user-guide/data-load-s3-config-aws-iam-user>`__ |ext_link| to pull Snowflake table output from the customer-managed Amazon S3 bucket.
 

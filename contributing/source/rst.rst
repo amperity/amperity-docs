@@ -3399,7 +3399,7 @@ Use an options list to show options for command-line tools or for other types of
 
 -p         This option has two paragraphs in the description. This is the first.
 
-           This is the second.  Blank lines may be omitted between options (as above) or left in (as here and below).
+           This is the second. Blank lines may be omitted between options (as above) or left in (as here and below).
 
 -f FILE, --file=FILE  These two options are synonyms; both have arguments.
 

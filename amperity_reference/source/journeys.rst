@@ -932,7 +932,7 @@ View journey participant numbers
 
 .. journeys-howtos-view-journey-participant-numbers-start
 
-In **View** mode on the **Journeys** canvas you can see  how many total people have moved through any journey that has run at least once and how many have moved through each node in the current run.
+In **View** mode on the **Journeys** canvas you can see how many total people have moved through any journey that has run at least once and how many have moved through each node in the current run.
 
 Nodes have icons and numbers, representing journey participants.
 

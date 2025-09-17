@@ -77,7 +77,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - The username,  such as "<persado_account_name>_amp", and passphrase.
+     - The username, such as "<persado_account_name>_amp", and passphrase.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

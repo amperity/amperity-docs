@@ -53,7 +53,7 @@ Graph database workflow
 
 A graph database workflow has two main steps:
 
-#. :ref:`Add query templates <graph-database-workflow-add-templates>`, and then  run queries in Amperity to return data in a format that can be loaded by a graph database.
+#. :ref:`Add query templates <graph-database-workflow-add-templates>`, and then run queries in Amperity to return data in a format that can be loaded by a graph database.
 #. :ref:`Send the data <graph-database-workflow-send-data>` to Amazon S3, Azure Blob Storage, Google Cloud Storage, or SFTP, and then load that data to a graph database.
 #. Enabling downstream :ref:`use cases <graph-database-workflow-use-cases>`.
 

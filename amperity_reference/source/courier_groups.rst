@@ -584,7 +584,7 @@ Activate courier group
 
 .. courier-groups-howto-activate-start
 
-An activated courier group is run automatically on a defined schedule. All couriers and bridges that are configured for the  courier group run as a unit and are used to run Stitch and refresh the customer 360 database. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
+An activated courier group is run automatically on a defined schedule. All couriers and bridges that are configured for the courier group run as a unit and are used to run Stitch and refresh the customer 360 database. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
 
 .. courier-groups-howto-activate-end
 

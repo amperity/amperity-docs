@@ -4008,7 +4008,7 @@ TO_DATE()
 
 Use the **TO_DATE(timestamp)** function to parse "timestamp".
 
-Use the **TO_DATE(timestamp +/- interval)** function to parse "timestamp", and then add  ( + ) or subtract ( - ) "interval", where "interval" is one of "hours", "minutes", "days", and so on.
+Use the **TO_DATE(timestamp +/- interval)** function to parse "timestamp", and then add ( + ) or subtract ( - ) "interval", where "interval" is one of "hours", "minutes", "days", and so on.
 
 A date format is not required.
 

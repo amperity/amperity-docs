@@ -31,7 +31,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-blacklist:
 
 **blacklist** / **whitelist**
-   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|.  See **blocklist** / **allowlist**.
+   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|. See **blocklist** / **allowlist**.
 
 
 .. _term-blocklist:

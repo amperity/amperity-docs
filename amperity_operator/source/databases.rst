@@ -175,7 +175,7 @@ Add empty database
 
 .. databases-manage-add-empty-start
 
-An empty database contains no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or  :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
+An empty database contains no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
 
 .. databases-manage-add-empty-end
 

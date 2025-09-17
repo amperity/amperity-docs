@@ -103,7 +103,7 @@ Configure query
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         -- AND t1.fk = t2.fk
         AND hf.high_freq_email IS NULL
 
@@ -113,7 +113,7 @@ Configure query
       :linenos:
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         AND fk_customer_id.fk = fk_customer_id.fk
         AND fk_campaign.fk = fk_campaign.fk
         AND hf.high_freq_email IS NULL
@@ -175,7 +175,7 @@ Configure query
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         -- AND t1.fk = t2.fk
         AND hf.high_freq_email IS NULL
 
@@ -203,7 +203,7 @@ Configure query
       :emphasize-lines: 7
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         AND hf.high_freq_email IS NULL
         AND TRIM(LOWER(t1.email)) <> TRIM(LOWER(t2.email))
         AND TRIM(LOWER(t1.given_name)) <> TRIM(LOWER(t2.given_name))

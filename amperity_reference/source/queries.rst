@@ -342,7 +342,7 @@ All queries that are built via the **SQL Query Editor** are done using a :ref:`S
 
 .. queries-editor-presto-sql-tip-start
 
-.. tip:: Follow the :ref:`general recommendations <sql-presto-style-guide>` and patterns for  :ref:`indentation <sql-presto-style-guide-indentation>`, :ref:`naming conventions <sql-presto-style-guide-naming-conventions>`, :ref:`reserved words <sql-presto-style-guide-reserved-words>`, and :ref:`whitespace <sql-presto-style-guide-whitespace>`.
+.. tip:: Follow the :ref:`general recommendations <sql-presto-style-guide>` and patterns for :ref:`indentation <sql-presto-style-guide-indentation>`, :ref:`naming conventions <sql-presto-style-guide-naming-conventions>`, :ref:`reserved words <sql-presto-style-guide-reserved-words>`, and :ref:`whitespace <sql-presto-style-guide-whitespace>`.
 
 .. queries-editor-presto-sql-tip-end
 
