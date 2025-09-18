@@ -100,10 +100,10 @@ The first row of the user activity file contains the following column headers, a
      - Description
 
    * - **event-id**
-     - The Amperity internal identifier for the event. This can be used to request additional information about the event, if needed.
+     - The Amperity internal identifier for the event. This can be used to request additional information about the event, if needed. For example: ``"event_id": "ae-Ab1cDeFg"``.
 
    * - **event-type**
-     - The :ref:`type of event <settings-user-activity-logs-event-types>`.
+     - The :ref:`type of event <settings-user-activity-logs-event-types>`. For example: ``"event_type": ":amperity.alert.audience/created"``.
 
        This value is also available from the **Action** column under **Users** on the **Users and Activity** page.
 
@@ -111,41 +111,47 @@ The first row of the user activity file contains the following column headers, a
      - Internal value only; this value will be NULL in downloaded log files.
 
    * - **happened-at**
-     - The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC.
+     - The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2024-04-09T17:21:06.747Z"``.
 
        This value is also available from the **Date** column under **Users** on the **Users and Activity** page.
 
        .. note:: The downloaded date and time are in GMT; the Amperity user interface shows the date and time in your local timezone.
 
    * - **object**
-     - The identifier for the object against which the action occurred.
+     - The identifier for the object against which the action occurred. For example: ``"object_id": "seg-35GMWpn6Y"``.
 
    * - **object-name**
-     - A composed string that describes the objects for which the action occurred.
+     - A composed string that describes the objects for which the action occurred. For example: ``"object_name": "Socktown Returning Customers"``.
 
        This value is also available from the **Object** column under **Users** on the **Users and Activity** page.
 
    * - **origin-ip**
-     - The IP address that is associated with the user who initiated the action.
+     - The IP address that is associated with the user who initiated the action. For example: ``"origin_ip": "111.11.111.1"``.
 
    * - **principal-email**
-     - The email address for the user who initiated the action.
+     - The email address for the user who initiated the action. For example: ``"principal_email": "user@socktown.com"``.
 
        This value may be NULL when the user is an API key.
 
    * - **principal-id**
-     - The identifier for the user who initiated the action. This user may be an API key or a non-human user.
+     - The identifier for the user who initiated the action. This user may be an API key or a non-human user. For example: ``"principal_id": "google-apps|user@socktown.com"``.
 
    * - **principal-name**
-     - The friendly name of the user associated with the activity, if available, otherwise the email address or API key.
+     - The friendly name of the user associated with the activity, if available, otherwise the email address or API key. For example: ``"principal_name": "Socktown User"``.
 
        This value is also available from the **User** column under **Users** on the **Users and Activity** page.
 
    * - **recorded-at**
      - The time at which the system recorded the action. May be slightly different than the value of **happened-at** due to the asynchronous nature of Amperity.
 
+   * - **session_id**
+     - "The identifier for the session from which the action occurred." For example: ``"session_id": "Ab1cDeFgHijkLMN2Op3QrStUvWxYZ0123"``.
+
    * - **source**
      - The component within Amperity that added the log entry.
+
+   * - **user_agent**
+     - The user agent string of the client that initiated the action. For example: ``"user_agent": "Mac OS X 4.5.6"`` or ``"user_agent": "Chrome 1.2.3"``.
 
 .. settings-user-activity-logs-download-column-names-end
 
