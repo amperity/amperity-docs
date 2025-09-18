@@ -35,29 +35,13 @@ Configure campaigns for DV360
    :start-after: .. term-dv360-start
    :end-before: .. term-dv360-end
 
-.. campaign-dv360-whatis-google-customer-match-start
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-whatis-google-customer-match-start
+   :end-before: .. destination-google-ads-whatis-google-customer-match-end
 
-.. admonition:: What is Google Customer Match?
-
-   |plugin-name| is a unified ad creation tool that you can use to create and publish search, display, and video ads across the Google-owned paid media ecosystem.
-
-   For example:
-
-   * Use Discovery campaigns to `reach customers in the Promotions and Social tabs in Gmail <https://support.google.com/google-ads/answer/9176876>`__ |ext_link|.
-   * Use `Google Ads <https://support.google.com/google-ads/answer/2567043>`__ |ext_link| to configure campaign types for search, display, video, app, local, hotel, call, smart, goal-based, and shopping.
-   * Run ads within `search results on Google.com <https://support.google.com/google-ads/answer/9510373>`__ |ext_link|.
-   * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
-   * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
-
-   Use Amperity to build high-value product affinity segments based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
-
-   Once uploaded, |plugin-name| hashes each record, and then matches all records against hashed user accounts that already exist in |plugin-name| to identify segments that contain records that match the ones sent from Amperity.
-
-   |plugin-name| builds audience lists that are reachable across the Google-owned paid media ecosystem.
-
-   Use these audience lists for precision cross-selling, to reach and convert new customers, and to improve the retention rate for your most loyal customers.
-
-.. campaign-dv360-whatis-google-customer-match-end
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
+   :end-before: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
 
 .. campaign-dv360-api-note-start
 

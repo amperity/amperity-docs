@@ -58,6 +58,15 @@ Configure destinations for Google Ads
 
 .. destination-google-ads-whatis-google-customer-match-end
 
+.. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
+
+.. admonition:: When to use Google Customer Match for sending audiences to Google Ads?
+
+   Use the :doc:`Google Customer Match <destination_google_customer_match>` destination when you want to use the same Google Ads account to send an audience to Google Ads *and* Google Display & Video.
+
+.. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
+
+
 .. destination-google-ads-api-note-start
 
 .. note:: This destination uses the `Google Audience Partner API <https://support.google.com/google-ads/answer/7361372?hl=en>`__ |ext_link|.

@@ -34,6 +34,14 @@ Use Google Customer Match to create and publish search, display, and video ads a
 
 .. campaign-google-customer-match-end
 
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-whatis-google-customer-match-start
+   :end-before: .. destination-google-ads-whatis-google-customer-match-end
+
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
+   :end-before: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
+
 
 .. _campaign-google-customer-match-get-details:
 
