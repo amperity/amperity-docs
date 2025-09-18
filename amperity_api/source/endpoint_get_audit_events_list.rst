@@ -274,16 +274,19 @@ A successful request made to the **GET /audit-events** endpoint will return a re
    {
      "data": [
        {
-         "tenant": "socktown",
+         "event_id": "ae-Ab1cDeFg",
+         "event_type": ":amperity.alert.audience/created",
+         "happened_at": "2024-04-09T17:21:06.747Z",
+         "principal_email": "example@amperity.com",
+         "principal_id": "google-apps|amperity@amperity.com",
          "principal_name": "Socktown User",
-         "object_id": "aud-20240409-55140-aBCDEFg1hiK",
-         "happened_from": "2024-04-09T15:19:00.636Z",
-         "tenant_family": "family",
-         "principal_email": "user@socktown.com",
-         "principal_id": "google-apps|user@socktown.com",
+         "object_id": "seg-35GMWpn6Y",
+         "object_name": "Socktown Returning Customers",
          "origin_ip": "111.11.111.1",
-         "event_id": "ae-Ab1cDeFgHijkLMN2Op3QrS",
-         "event_type": "amperity.alert.audience/created"
+         "session_id": "Ab1cDeFgHijkLMN2Op3QrStUvWxYZ0123",
+         "tenant": "acme-sb",
+         "tenant_family": "acme",
+         "user_agent": "Mac OS X 4.5.6"
        }
      ],
      "total": 102,
@@ -302,6 +305,10 @@ Response parameters
 
 A **200 OK** response contains the following parameters.
 
+.. endpoint-get-audit-events-list-response-parameters-start
+
+.. endpoint-get-audit-events-list-response-parameters-table-start
+
 .. list-table::
    :widths: 35 65
    :header-rows: 1
@@ -313,37 +320,43 @@ A **200 OK** response contains the following parameters.
      - A JSON array of values for the current page of results. The array of values includes the following properties:
 
        **event_id**
-          The Amperity internal identifier for the event.
+          The Amperity internal identifier for the event. For example: ``"event_id": "ae-Ab1cDeFg"``.
 
        **event_type**
-          The :ref:`type of event <endpoint-get-audit-events-list-common-event-types>`.
+          The :ref:`type of event <endpoint-get-audit-events-list-common-event-types>`. For example: ``"event_type": ":amperity.alert.audience/created"``.
 
        **happened_at**
-          The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC.
+          The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2024-04-09T17:21:06.747Z"``.
 
        **principal_email**
-          The email address for the user who initiated the action.
+          The email address for the user who initiated the action. For example: ``"principal_email": "user@socktown.com"``.
 
        **principal_id**
-          The authentication identifier for the user who initiated the action. This user may be an API key or a non-human user.
+          The authentication identifier for the user who initiated the action. This user may be an API key or a non-human user. For example: ``"principal_id": "google-apps|user@socktown.com"``.
 
        **principal_name**
-          The friendly name of the user associated with the activity, if available, otherwise the email address or API key.
+          The friendly name of the user associated with the activity, if available, otherwise the email address or API key. For example: ``"principal_name": "Socktown User"``.
 
        **object_id**
-          The identifier for the object against which the action occurred.
+          The identifier for the object against which the action occurred. For example: ``"object_id": "seg-35GMWpn6Y"``.
 
        **object_name**
-          Optional. A composed string that describes the objects for which the action occurred.
+          Optional. A composed string that describes the objects for which the action occurred. For example: ``"object_name": "Socktown Returning Customers"``.
 
        **origin_ip**
-          The IP address that is associated with the user who initiated the action.
+          The IP address that is associated with the user who initiated the action. For example: ``"origin_ip": "111.11.111.1"``.
 
-       **tenant_family**
-          The name of the tenant family that is associated with the action. When **tenant** is a sandbox, **tenant_family** is the tenant ID of the production tenant.
+       **session_id**
+          "The identifier for the session from which the action occurred." For example: ``"session_id": "Ab1cDeFgHijkLMN2Op3QrStUvWxYZ0123"``.
 
        **tenant**
-          The tenant ID of the tenant associated with the action. This ID may be for a sandbox.
+          The tenant ID of the tenant associated with the action. This ID may be for a sandbox. For example: ``"tenant": "socktown-sb"``.
+
+       **tenant_family**
+          The name of the tenant family that is associated with the action. When **tenant** is a sandbox, **tenant_family** is the tenant ID of the production tenant. For example: ``"tenant_family": "socktown"``.
+
+       **user_agent**
+          The user agent string of the client that initiated the action. For example: ``"user_agent": "Mac OS X 4.5.6"`` or ``"user_agent": "Chrome 1.2.3"``.
 
    * - **next_token**
      - The cursor value to use in a subsequent request to return the next page of results.
@@ -355,7 +368,7 @@ A **200 OK** response contains the following parameters.
 
        .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
 
-.. endpoint-get-audit-events-list-response-parameters-end
+.. endpoint-get-audit-events-list-response-parameters-table-end
 
 
 .. _endpoint-get-audit-events-list-common-event-types:
