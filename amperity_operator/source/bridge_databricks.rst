@@ -403,7 +403,7 @@ To configure Databricks to sync data with Amperity you need to `CREATE SHARE <ht
           :class: no-scaled-link
      - A recipient in Databricks represents the entity that will consume shared data: Amperity. Configure the recipient for open sharing and to use token-based authentication.
 
-       Open the Databricks Catalog Explorer. Under Delta Sharing, choose **Shared by me**, and then click **New recipient** to `create a recipient <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-1-create-the-recipient>`__ |ext_link|.
+       Open the Databricks Catalog Explorer. Under Delta Sharing, choose **Shared by me**, and then click **New recipient** to `create a recipient <https://docs.databricks.com/aws/en/delta-sharing/create-recipient-token>`__ |ext_link|.
 
        After the recipient is created, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|.
 
