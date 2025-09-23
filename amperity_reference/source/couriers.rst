@@ -77,6 +77,12 @@ File patterns
 
 A courier looks for objects using a combination of the path to a directory, the name of a file, and a date. A courier runs based on a date or a date range, and then looks for files in the source location for that date or date range.
 
+How to specify a basic file pattern:
+
+.. code-block:: none
+
+   "files/customers.csv"
+
 .. couriers-files-patterns-end
 
 
@@ -97,7 +103,7 @@ The following example shows using a wildcard at the end of a file pattern:
 
 .. code-block:: none
 
-   'files/'yyyy'/'MM'/'dd'/customers-*.csv'
+   "'files/'yyyy'/'MM'/'dd'/customers-*.csv'"
 
 will match any of these files:
 
@@ -162,9 +168,9 @@ A courier that runs using this pattern:
 
 .. code-block:: none
 
-   'files/'yyyy'/'MM'/'dd'/customers-*.csv'
+   "'files/'yyyy'/'MM'/'dd'/customers-*.csv'"
 
-when run on April 10, 2020 will look for files at ``'files/2020/04/10/customers-*.csv'`` and will return any files that match.
+when run on April 10, 2020 will look for files at ``files/2020/04/10/customers-*.csv`` and will return any files that match.
 
 .. couriers-files-patterns-date-components-end
 
