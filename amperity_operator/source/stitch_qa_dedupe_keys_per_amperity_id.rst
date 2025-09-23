@@ -99,7 +99,7 @@ Configure query
 
    .. code-block:: sql
       :linenos:
-      :emphasize-lines: 6
+      :emphasize-lines: 4
 
       SELECT *
       FROM dk_distribution
@@ -112,7 +112,7 @@ Configure query
 
    .. code-block:: sql
       :linenos:
-      :emphasize-lines: 1,7
+      :emphasize-lines: 1,5
 
       /*SELECT *
       FROM dk_distribution
