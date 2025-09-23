@@ -283,7 +283,7 @@ input::placeholder,textarea::placeholder{
 
 audio,canvas,embed,iframe,img,object,svg,video{
   display:block;
-  vertical-align:middle
+  vertical-align:middle;
 }
 
 img,video{
@@ -6279,7 +6279,15 @@ html{
 
 .yue img{
   display:inline;
-  max-width:100%
+  max-width:100%;
+}
+
+.dark .yue img{
+  display:inline;
+  max-width:100%;
+  border-width: 2px;
+  border-color: #5a5f66;
+  border-radius:.2rem
 }
 
 .yue img.rounded{
