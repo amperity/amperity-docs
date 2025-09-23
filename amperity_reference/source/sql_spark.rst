@@ -298,8 +298,7 @@ A pattern that filters out unneeded rows and selects only necessary columns is m
      ,uct.first_name
      ,uct.last_name
      ,ecomm.last_order_date
-   FROM
-   (
+   FROM (
      SELECT
        amperity_id
        ,first_name

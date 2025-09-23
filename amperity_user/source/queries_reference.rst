@@ -351,8 +351,7 @@ The following example counts customers in the United States, and then also in Ca
    SELECT
      state
      ,COUNT(amperity_id) AS TotalCustomers
-   FROM
-     Customer360
+   FROM Customer360
    WHERE (UPPER("country") = 'US'
    AND UPPER("state") in ('AK', 'CA', 'HI', 'OR', 'WA')
    AND LOWER("loyalty_id") IS NOT NULL)
@@ -767,8 +766,7 @@ The following example shows how to return all one-and-done purchasers for a sing
 
    SELECT
      COUNT(*) one_and_dones_2022
-   FROM
-     one_and_dones_2022
+   FROM one_and_dones_2022
 
 .. queries-example-one-and-dones-by-year-end
 

@@ -77,16 +77,14 @@ Use any of the following **SELECT** statements to look for name IDs with multipl
    SELECT
      name_id
      ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source
+   FROM data_source
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
 
    SELECT
      name_id
      ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source_v2
+   FROM data_source_v2
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
 
@@ -113,16 +111,14 @@ Use any of the following **SELECT** statements to look for name IDs with differe
      SELECT DISTINCT
        name_id
        ,amperity_id
-     FROM
-       data_source_v2)
-     AS v1
+     FROM data_source_v2
+   ) AS v1
    FULL OUTER JOIN (
      SELECT DISTINCT
        name_id
        ,amperity_id
-     FROM
-       data_source)
-     AS v2
+     FROM data_source
+   ) AS v2
    ON v1.name_id = v2.name_id
    WHERE v1.amperity_id <> v2.amperity_id
    LIMIT 100
@@ -189,16 +185,14 @@ Use any of the following **SELECT** statements to look for foreign keys that hav
    SELECT
     fk_field_name
     ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source_1
+   FROM data_source_1
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
    
    SELECT
      fk_field_name
      ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source_2
+   FROM data_source_2
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
 
@@ -225,17 +219,15 @@ Use any of the following **SELECT** statements to look for foreign keys that hav
      SELECT DISTINCT
        fk_field_name
        ,amperity_id 
-     FROM
-       data_source_2
+     FROM data_source_2
      ) 
    AS v1 FULL OUTER JOIN (
      SELECT DISTINCT
        fk_field_name
        ,amperity_id
-     FROM
-       data_source_1
-     )
-   AS v2 ON v1.fk_field_name = v2.fk_field_name
+     FROM data_source_1
+   ) AS v2
+   ON v1.fk_field_name = v2.fk_field_name
    WHERE v1.amperity_id <> v2.amperity_id 
    LIMIT 100
 
@@ -256,16 +248,14 @@ Use any of the following **SELECT** statements to inspect foreign keys between t
 
    SELECT
      COUNT(DISTINCT fk_field_name)
-   FROM
-     data_source
+   FROM data_source
 
 .. code-block:: sql
    :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)
-   FROM
-     data_source_1
+   FROM data_source_1
    WHERE fk_field_name IN (
      SELECT fk_field_name
      FROM data_source_2

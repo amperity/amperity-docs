@@ -74,10 +74,8 @@ Configure query
       SELECT
         LOWER(email),
         COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        email IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE email IS NOT NULL
       GROUP BY 1
       ORDER BY 2 DESC
       LIMIT 100
@@ -95,8 +93,7 @@ Configure query
         -- UPDATE FOR SEMANTICS YOU WANT TO USE
         ,COUNT(DISTINCT LOWER(semantic)) num_semantic
         ,COUNT(DISTINCT LOWER(semantic)) num_semantic
-      FROM
-        Unified_Coalesced
+      FROM Unified_Coalesced
       GROUP BY 1
       ORDER BY 2,3 DESC
       LIMIT 100
@@ -111,8 +108,7 @@ Configure query
         amperity_id
         ,COUNT(DISTINCT LOWER(given_name)) num_given_name
         ,COUNT(DISTINCT LOWER(surname)) num_surname
-      FROM
-        Unified_Coalesced
+      FROM Unified_Coalesced
       GROUP BY 1
       ORDER BY 2,3 DESC
       LIMIT 100

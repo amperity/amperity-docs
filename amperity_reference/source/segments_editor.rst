@@ -298,10 +298,8 @@ In SQL, an operator is expressed using the **WHERE** clause. The following examp
 
 ::
 
-   SELECT
-     email
-   FROM
-     Customer360
+   SELECT email
+   FROM Customer360
    WHERE email LIKE "gmail.com"
 
 In the **Segment Editor** you define operators using a series of picklists that do not require knowledge of SQL or how to define a **WHERE** clause:

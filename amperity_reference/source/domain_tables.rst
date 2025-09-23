@@ -518,9 +518,9 @@ Example: Unified transactions
        ,SUM(IF(is_return = TRUE, item_revenue, 0)) AS order_returned_revenue
        ,SUM(IF(is_cancellation = TRUE, COALESCE(item_quantity, -1), 0)) AS order_canceled_quantity
        ,SUM(IF(is_cancellation = TRUE, item_revenue, 0)) AS order_canceled_revenue
-     FROM
-       Unified_Itemized_Transactions
-     GROUP BY 1)
+     FROM Unified_Itemized_Transactions
+     GROUP BY 1
+   )
 
    SELECT
      ut.amperity_id
@@ -545,10 +545,9 @@ Example: Unified transactions
      -- Add in custom semantics as necessary. For example:
      --,ut.currency
      --,ut.order_shipping_amount
-   FROM
-     uit_rollup uitr JOIN
-     Unified_Transactions ut
-     ON uitr.order_id = ut.order_id
+   FROM uit_rollup uitr
+   JOIN Unified_Transactions ut
+   ON uitr.order_id = ut.order_id
 
 .. domain-tables-add-custom-example-unified-transactions-end
 

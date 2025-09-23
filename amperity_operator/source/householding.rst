@@ -244,8 +244,7 @@ As a SELECT statement, the **Merged Household** table is similar to:
      ,city AS "city"
      ,state AS "state"
      ,postal AS "postal"
-   FROM
-     Merged_Households
+   FROM Merged_Households
 
 .. householding-address-build-segments-end
 
@@ -350,13 +349,12 @@ Merged Households template
            ELSE REGEXP_REPLACE(UPPER(SPLIT(REGEXP_REPLACE(address,' {2,}',' '), ' ')[6]), '[.,\\/#!$%\\^&\\*;:{}=\\-_~()\\. ]', '')
          END AS a7
 
-       FROM
-         Merged_Customers
-         WHERE address IS NOT NULL
-         AND city IS NOT NULL
-         AND state IS NOT NULL
-         AND postal IS NOT NULL
-         AND COALESCE(surname, REVERSE(SPLIT(full_name,' '))[0]) IS NOT NULL
+       FROM Merged_Customers
+       WHERE address IS NOT NULL
+       AND city IS NOT NULL
+       AND state IS NOT NULL
+       AND postal IS NOT NULL
+       AND COALESCE(surname, REVERSE(SPLIT(full_name,' '))[0]) IS NOT NULL
      ) AS core
 
      LEFT JOIN (
@@ -443,8 +441,7 @@ Merged Households template
        SELECT
          amperity_id
          ,SHA(CONCAT(full_address, surname)) AS household_id
-       FROM
-         clean_addresses
+       FROM clean_addresses
      )
    ),
 

@@ -111,8 +111,7 @@ Add a SQL table with a **SELECT** statement similar to:
      ,order_date AS created
      ,order_total AS total
      ,ARRAY_JOIN(ARRAY_AGG(product_id), '|') AS products
-   FROM
-     Customer360
+   FROM Customer360
    LIMIT 1000
 
 .. sendto-bluecore-build-query-map-to-platform-with-query-end
