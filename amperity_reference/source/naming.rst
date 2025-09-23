@@ -184,7 +184,7 @@ For example:
 * Sailthru:Responses
 * Shopify:Orders
 
-.. important:: Custom domain tables should follow the source/feed naming convention as often as possible. Apply a consistent prefix to the source name to identify the table as a custom domain table, and then append the purpose of the table. For example, a custom domain table that filters Shopify data, and then applies semantic tags for unified transactions: CDT_Shopify_Orders_UT.
+.. important:: Custom domain tables should follow the source and feed naming convention as often as possible. Apply a consistent prefix to the source name to identify the table as a custom domain table, and then append the purpose of the table. For example, a custom domain table that filters Shopify data, and then applies semantic tags for unified transactions: CDT_Shopify_Orders_UT.
 
 .. naming-domain-tables-end
 

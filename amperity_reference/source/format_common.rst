@@ -78,11 +78,15 @@ Amperity supports the following file formats when using a filedrop location to p
 
 .. format-common-pull-files-end
 
+.. vale off
+
 .. format-common-pull-files-note-start
 
 .. note:: Amperity can ingest data from a wide variety of data sources, such as legacy data outputs like :ref:`AS/400 <format-csv-pull-couriers-as400>`. Ask your Amperity Support representative about formats that are not directly listed to determine if those data formats can be used as a way to provide data to Amperity.
 
 .. format-common-pull-files-note-end
+
+.. vale on
 
 
 .. _format-common-pull-date-formats:

@@ -362,6 +362,6 @@ Supported browsers
 
 Amperity works best with Google Chrome and works fine with Chromium-based browsers, such as Brave.
 
-Amperity is not supported from Firefox, Safari, Internet Explorer, or from mobile/tablet devices.
+Amperity is not supported from Firefox, Safari, Internet Explorer, or from mobile and tablet devices.
 
 .. start-here-tenant-browsers-end

@@ -54,7 +54,7 @@ How this destination works
 
 .. destination-attentive-howitworks-start
 
-Amperity can manage audiences in |destination-name| and provide attributes about the customers who belong to those audiences. A segment is the list of customers to which you sends emails or messages. A subscriber is a customer for which you have an opt-in/out status. You can only send emails or messages to customers who have opted-in.
+Amperity can manage audiences in |destination-name| and provide attributes about the customers who belong to those audiences. A segment is the list of customers to which you sends emails or messages. A subscriber is a customer for which you have an opt-in or opt-out status. You can only send emails or messages to customers who have opted-in.
 
 .. destination-attentive-howitworks-end
 

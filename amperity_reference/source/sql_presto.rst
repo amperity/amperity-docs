@@ -579,7 +579,7 @@ Line spacing
 
 .. sql-presto-style-guide-whitespace-line-spacing-start
 
-Always include newlines/vertical space:
+Always include newlines and vertical space:
 
 * before **AND** or **OR**
 * after semicolons to separate queries for easier reading

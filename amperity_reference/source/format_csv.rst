@@ -207,6 +207,8 @@ From the **Load type** dropdown select one of:
 .. format-csv-pull-couriers-feed-selection-end
 
 
+.. vale off
+
 .. _format-csv-pull-couriers-as400:
 
 AS/400
@@ -223,6 +225,8 @@ AS/400 is a computer platform that can provide raw data to Amperity as zipped CS
 #. Review the data within the tables, and then use domain SQL for additional data shaping, as necessary.
 
 .. format-csv-pull-couriers-as400-end
+
+.. vale on
 
 
 .. _format-csv-pull-feeds:

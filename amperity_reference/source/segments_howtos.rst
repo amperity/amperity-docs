@@ -330,7 +330,7 @@ Segment insights are updated to only show the count for records that match the s
 
 .. _segments-choose-andor:
 
-Choose AND/OR from toggle
+Choose AND or OR from toggle
 ==================================================
 
 .. segments-choose-andor
