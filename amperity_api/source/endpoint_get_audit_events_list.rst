@@ -307,8 +307,6 @@ A **200 OK** response contains the following parameters.
 
 .. endpoint-get-audit-events-list-response-parameters-start
 
-.. endpoint-get-audit-events-list-response-parameters-table-start
-
 .. list-table::
    :widths: 35 65
    :header-rows: 1
@@ -368,7 +366,7 @@ A **200 OK** response contains the following parameters.
 
        .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
 
-.. endpoint-get-audit-events-list-response-parameters-table-end
+.. endpoint-get-audit-events-list-response-parameters-end
 
 
 .. _endpoint-get-audit-events-list-common-event-types:
