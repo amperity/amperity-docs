@@ -120,7 +120,7 @@ Sources
 The **Sources** section in the **Usage** dashboard contains the following metrics and graphs that describe source utilization:
 
 **Sources configured**
-   Shows the number of feeds that are currently configured in your tenant.
+   Shows the number of feeds configured in your tenant.
 
 **Average records ingested**
    Shows the average number of records that are ingested per day during the selected time period.
