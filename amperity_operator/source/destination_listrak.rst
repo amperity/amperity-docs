@@ -27,27 +27,27 @@
 Configure destinations for Listrak (email)
 ==================================================
 
-.. destination-listtrak-about-start
+.. destination-listrak-about-start
 
 |destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.
 
-.. destination-listtrak-about-end
+.. destination-listrak-about-end
 
-.. destination-listtrak-context-start
+.. destination-listrak-context-start
 
 Amperity can manage `email <https://api.listrak.com/email>`__ |ext_link| lists in |destination-name|.
 
 Amperity automatically adds a field attribute to all email lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
 
-.. destination-listtrak-context-end
+.. destination-listrak-context-end
 
-.. destination-listtrak-use-sftp-when-start
+.. destination-listrak-use-sftp-when-start
 
 .. note:: Use the :doc:`SFTP connector <destination_sftp>` to manage `Customer lists <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Product lists <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Order lists <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order item lists <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|.
 
    Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
 
-.. destination-listtrak-use-sftp-when-end
+.. destination-listrak-use-sftp-when-end
 
 
 .. _destination-listrak-get-details:

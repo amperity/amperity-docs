@@ -28,16 +28,16 @@ Configure campaigns for Listrak (email)
 ==================================================
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. campaign-listtrak-about-start
-   :end-before: .. campaign-listtrak-about-end
+   :start-after: .. destination-listrak-about-start
+   :end-before: .. destination-listrak-about-end
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. campaign-listtrak-context-start
-   :end-before: .. campaign-listtrak-context-end
+   :start-after: .. destination-listrak-context-start
+   :end-before: .. destination-listrak-context-end
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listtrak-use-sftp-when-start
-   :end-before: .. destination-listtrak-use-sftp-when-end
+   :start-after: .. destination-listrak-use-sftp-when-start
+   :end-before: .. destination-listrak-use-sftp-when-end
 
 
 .. _campaign-listrak-get-details:
@@ -117,8 +117,8 @@ Customers, products, and orders
 ==================================================
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. campaign-listrak-sftp-start
-   :end-before: .. campaign-listrak-sftp-end
+   :start-after: .. destination-listrak-sftp-start
+   :end-before: .. destination-listrak-sftp-end
 
 
 .. _campaign-listrak-credentials:
