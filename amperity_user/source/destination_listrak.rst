@@ -36,8 +36,8 @@ You can build queries that return |what-send|, along with returning additional p
    :class: no-scaled-link
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listtrak-context-start
-   :end-before: .. destination-listtrak-context-end
+   :start-after: .. destination-listrak-context-start
+   :end-before: .. destination-listrak-context-end
 
 .. sendto-listrak-steps-to-send-start
 
@@ -51,9 +51,9 @@ You can build queries that return |what-send|, along with returning additional p
 
 .. sendto-listrak-steps-to-send-end
 
-.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _sendto-listrak-build-query:

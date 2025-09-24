@@ -130,10 +130,6 @@ Add orchestration
    :start-after: .. term-orchestration-start
    :end-before: .. term-orchestration-end
 
-.. include:: ../../shared/sendtos.rst
-   :start-after: .. sendtos-ask-to-configure-start
-   :end-before: .. sendtos-ask-to-configure-end
-
 .. admonition:: What is a dataset ID?
 
    .. include:: ../../shared/destination_settings.rst

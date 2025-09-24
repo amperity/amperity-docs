@@ -9,9 +9,21 @@
 
 .. sendtos-ask-to-configure-start
 
-.. note:: |destination-name| must be enabled before you can configure an orchestration to send query results.
+.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
 
 .. sendtos-ask-to-configure-end
+
+
+.. sendtos-ask-to-configure-campaigns-start
+
+.. caution:: This destination is available for sending campaign audiences to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending campaign audiences to |destination-name|.
+
+.. sendtos-ask-to-configure-campaigns-end
+
 
 
 .. sendtos-ask-to-configure-webhook-start
@@ -19,6 +31,17 @@
 .. note:: |destination-name| must be enabled as a webhook destination before you can configure an orchestration to send query results.
 
 .. sendtos-ask-to-configure-webhook-end
+
+
+**MARKETER CONFIG CALLOUT**
+
+.. destination-ask-to-config-start
+
+.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+
+.. destination-ask-to-config-emd
 
 
 **BUILD QUERY**

@@ -30,8 +30,8 @@ You can build campaigns that send |what-send| to |destination-name|, and then ap
 .. channel-listrak-end
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listtrak-context-start
-   :end-before: .. destination-listtrak-context-end
+   :start-after: .. destination-listrak-context-start
+   :end-before: .. destination-listrak-context-end
 
 .. include:: ../../shared/channels.rst
    :start-after: .. channels-overview-list-intro-start
@@ -41,9 +41,9 @@ You can build campaigns that send |what-send| to |destination-name|, and then ap
    :start-after: .. channels-overview-note-start
    :end-before: .. channels-overview-note-end
 
-.. caution:: This destination is available for sending campaign audiences to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending campaign audiences to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-campaigns-start
+   :end-before: .. sendtos-ask-to-configure-campaigns-end
 
 
 .. _channel-listrak-build-segment:
