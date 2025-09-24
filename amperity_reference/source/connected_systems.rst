@@ -555,7 +555,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull email and SMS events data to Amperity.
 
-       Send contact list updates to Listrak.
+       Send email and SMS contact list updates to Listrak.
 
    * - **LiveRamp**
      - |system-yes|
