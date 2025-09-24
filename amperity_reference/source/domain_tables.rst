@@ -381,7 +381,7 @@ Amperity adds the following columns to all domain tables. The added columns star
 #. The **_uuid_pk** column contains a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
 #. The **_updated** column contains details about the last update; it is a system-generated 64-bit integer that combines a timestamp with file/line information.
 
-   Amperity uses the value in the **_updated** column to ensure that the newest record is preferred over older records when both records have the same primary key. This preference is maintained between loads, between records in the same file, and between files/days in the same load.
+   Amperity uses the value in the **_updated** column to ensure that the newest record is preferred over older records when both records have the same primary key. This preference is maintained between loads, between records in the same file, and between files and days in the same load.
 
 These columns will be available in the customer 360 database when a domain table is configured as a passthrough table.
 
@@ -518,9 +518,9 @@ Example: Unified transactions
        ,SUM(IF(is_return = TRUE, item_revenue, 0)) AS order_returned_revenue
        ,SUM(IF(is_cancellation = TRUE, COALESCE(item_quantity, -1), 0)) AS order_canceled_quantity
        ,SUM(IF(is_cancellation = TRUE, item_revenue, 0)) AS order_canceled_revenue
-     FROM
-       Unified_Itemized_Transactions
-     GROUP BY 1)
+     FROM Unified_Itemized_Transactions
+     GROUP BY 1
+   )
 
    SELECT
      ut.amperity_id
@@ -545,10 +545,9 @@ Example: Unified transactions
      -- Add in custom semantics as necessary. For example:
      --,ut.currency
      --,ut.order_shipping_amount
-   FROM
-     uit_rollup uitr JOIN
-     Unified_Transactions ut
-     ON uitr.order_id = ut.order_id
+   FROM uit_rollup uitr
+   JOIN Unified_Transactions ut
+   ON uitr.order_id = ut.order_id
 
 .. domain-tables-add-custom-example-unified-transactions-end
 
@@ -916,7 +915,7 @@ Rename domain table
 
 .. domain-tables-rename-start
 
-You cannot rename a domain table directly because of their dependency on feeds. If you need to rename a domain table you must re-create the source/feed pair by adding a new feed, and then deleting the old feed to remove the old domain table from Amperity.
+You cannot rename a domain table directly because of their dependency on feeds. If you need to rename a domain table you must recreate the source and feed pair by adding a new feed, and then deleting the old feed to remove the old domain table from Amperity.
 
 .. domain-tables-rename-end
 

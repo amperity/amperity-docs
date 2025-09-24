@@ -29,9 +29,9 @@ Send audiences to Yahoo DSP
    :start-after: .. term-yahoo-dsp-start
    :end-before: .. term-yahoo-dsp-end
 
-.. caution:: This destination is available for sending campaign audiences to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending campaign audiences to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-campaigns-start
+   :end-before: .. sendtos-ask-to-configure-campaigns-end
 
 
 .. _channel-yahoo-dsp-build-segment:

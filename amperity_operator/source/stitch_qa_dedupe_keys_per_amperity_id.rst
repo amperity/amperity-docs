@@ -99,12 +99,10 @@ Configure query
 
    .. code-block:: sql
       :linenos:
-      :emphasize-lines: 6
+      :emphasize-lines: 4
 
-      SELECT
-        *
-      FROM
-        dk_distribution
+      SELECT *
+      FROM dk_distribution
       -- UPDATE BELOW FOR DESIRED dk_count
       WHERE dk_count > 1
       ORDER BY dk_count DESC
@@ -114,12 +112,10 @@ Configure query
 
    .. code-block:: sql
       :linenos:
-      :emphasize-lines: 1,7
+      :emphasize-lines: 1,5
 
-      /*SELECT
-        *
-      FROM
-        dk_distribution
+      /*SELECT *
+      FROM dk_distribution
       -- UPDATE BELOW FOR DESIRED dk_count
       WHERE dk_count > 1
       ORDER BY dk_count DESC*/

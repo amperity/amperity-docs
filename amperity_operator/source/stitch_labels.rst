@@ -186,7 +186,7 @@ The following examples show overclustering and underclustering, and how to apply
 
 .. note:: Stitch labels use similar examples as the ones in the :doc:`Stitch nicknames <stitch_nicknames>` topic to show how to use Stitch labels instead of nicknames to help Stitch evaluate records so they are grouped correctly.
 
-   If the match/mismatch is only due to issues with given names, you should consider using nicknames instead of labels to resolve the issue.
+   If the match or mismatch is only due to issues with given names, you should consider using nicknames instead of labels to resolve the issue.
 
 .. stitch-labels-examples-note-end
 

@@ -66,7 +66,7 @@ html_copy_source = False
 html_show_sourcelink = False
 
 html_additional_pages = {
-#    "branding": "branding.html",
+    'add_data_assets': 'add_data_assets.html'
 }
 
 

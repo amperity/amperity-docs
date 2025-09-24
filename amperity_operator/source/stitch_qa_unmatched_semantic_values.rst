@@ -122,15 +122,14 @@ Configure query
       :linenos:
       :emphasize-lines: 7
 
-      FROM
-        Unified_Coalesced AS t1
-        LEFT JOIN (
-          SELECT email, TRUE AS high_freq_email
-          FROM Unified_Coalesced
-          GROUP BY email             
-          HAVING COUNT(email) > 100 ) AS hf
-          ON LOWER(t1.email) = LOWER(hf.email)
-        INNER JOIN
+      FROM Unified_Coalesced AS t1
+      LEFT JOIN (
+        SELECT email, TRUE AS high_freq_email
+        FROM Unified_Coalesced
+        GROUP BY email             
+        HAVING COUNT(email) > 100 ) AS hf
+        ON LOWER(t1.email) = LOWER(hf.email)
+      INNER JOIN
 
 #. Update the **INNER JOIN** for any required additional filtering to be done prior to returning matching conditions:
 

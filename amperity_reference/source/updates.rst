@@ -43,6 +43,9 @@ Summer 2025
 
 .. updates-2025-summer-start
 
+**Activation activity**
+   :bdg-success:`NEW` Use the Segments Editor to apply customer `activation activity <http://docs.amperity.com/user/activations.html#activation-activity>`__ to segments used with campaigns and journeys.
+
 **AI Assistant**
    :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Segments** page.
 

@@ -13,37 +13,31 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send campaigns to Listrak.
+        Configure Amperity to send campaigns with email lists to Listrak.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send campaigns to Listrak.
+        Configure Amperity to send campaigns with email lists to Listrak.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
         Configure campaigns for Listrak
 
 ==================================================
-Configure campaigns for Listrak
+Configure campaigns for Listrak (email)
 ==================================================
 
-.. campaign-listtrak-about-start
+.. include:: ../../amperity_operator/source/destination_listrak.rst
+   :start-after: .. destination-listrak-about-start
+   :end-before: .. destination-listrak-about-end
 
-|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.
+.. include:: ../../amperity_operator/source/destination_listrak.rst
+   :start-after: .. destination-listrak-context-start
+   :end-before: .. destination-listrak-context-end
 
-.. campaign-listtrak-about-end
-
-.. campaign-listtrak-context-start
-
-Amperity can manage `email <https://api.listrak.com/email>`__ |ext_link| lists in |destination-name|.
-
-Amperity automatically adds a field attribute to all email lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
-
-.. note:: Use SFTP to manage `Customer lists <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Product lists <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Order lists <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order item lists <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|.
-
-   Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
-
-.. campaign-listtrak-context-end
+.. include:: ../../amperity_operator/source/destination_listrak.rst
+   :start-after: .. destination-listrak-use-sftp-when-start
+   :end-before: .. destination-listrak-use-sftp-when-end
 
 
 .. _campaign-listrak-get-details:
@@ -68,7 +62,7 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       You must configure this destination for email or SMS:
+       You must configure this destination for email:
 
        **Email client ID and client secret**
 
@@ -122,22 +116,9 @@ Get details
 Customers, products, and orders
 ==================================================
 
-.. campaign-listrak-sftp-start
-
-Configure Amperity to additional data sets--customers, products, orders, and order items--to |destination-name| using SFTP.
-
-.. note:: This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
-
-You can send the following sets of data to |destination-name|.
-
-#. `Customers <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|
-#. `Products <https://www.listrak.com/product-team/product-schema>`__ |ext_link|
-#. `Orders <https://www.listrak.com/product-team/order-schema>`__ |ext_link|
-#. `Order items <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|
-
-Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
-
-.. campaign-listrak-sftp-end
+.. include:: ../../amperity_operator/source/destination_listrak.rst
+   :start-after: .. destination-listrak-sftp-start
+   :end-before: .. destination-listrak-sftp-end
 
 
 .. _campaign-listrak-credentials:
@@ -284,8 +265,6 @@ Add destination
        **List name**
           |checkmark-required| **Required**
 
-          (Applies to Email **and** SMS lists.)
-
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-list-name-start
              :end-before: .. setting-listrak-list-name-end
@@ -325,5 +304,3 @@ Add destination
           :end-before: .. campaigns-steps-business-users-end
 
 .. campaign-listrak-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

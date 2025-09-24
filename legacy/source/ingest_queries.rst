@@ -252,8 +252,7 @@ Use the **EXPLODE()** function to process sales transaction data into a table us
      salesTransactionId
      ,tender.type AS type
      ,tender.amount AS amount
-   FROM
-     explodedData
+   FROM explodedData
 
 .. sql-spark-function-explode-example-load-xml-as-ingest-query-end
 
@@ -297,8 +296,7 @@ The following **SELECT** statement is an ingest query that returns **NULL** if t
      NULLIF(TRIM(BrandName),'') AS BrandName
      ,NULLIF(TRIM(AttributeName),'') AS AttributeName
      ,NULLIF(TRIM(Priority),'') AS Priority
-   FROM
-     Customer_Table
+   FROM Customer_Table
 
 .. sql-spark-function-nullif-example-ingest-query-end
 
@@ -472,8 +470,7 @@ To remove the ``_update`` field, use an ingest query similar to:
      id
      ,type
      ,datetime
-   FROM
-     table
+   FROM table
 
 .. ingest-queries-example-remove-field-end
 
@@ -489,9 +486,7 @@ In rare cases a file cannot be loaded using a feed and also requires no transfor
 
 .. code-block:: sql
 
-   SELECT
-     *
-   FROM
-     table
+   SELECT *
+   FROM table
 
 .. ingest-queries-example-select-fields-end

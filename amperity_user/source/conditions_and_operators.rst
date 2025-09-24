@@ -365,7 +365,7 @@ This segment returns a list of customers who live in Illinois and who have purch
 
 .. _segments-and-vs-or-recent-customers-plus-exclusions:
 
-Recent shoppers w/exclusions
+Recent shoppers with exclusions
 ==================================================
 
 .. segments-and-vs-or-recent-customers-plus-exclusions-start

@@ -211,7 +211,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
        Use the **Top N** field to define the number of distinct values the product affinity model will be trained on, based on popularity in the last year. For example, a value of "50" means the product affinity model will be trainined on the 50 most popular values for the specified product category by number of purchases in the past year. Default value: "50".
 
-       Use the **Exclude these values** and **Include these values** fields to exclude or include specific values from the 50 most popular values.
+       Use the **Exclude these values** and **Include these values** fields to exclude or include specific values from the 50 most popular values. These entries are case-sensitive. For example: "purchase", "Purchase", and "PURCHASE" are three different values.
 
 
    * - .. image:: ../../images/steps-06.png

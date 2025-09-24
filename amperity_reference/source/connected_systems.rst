@@ -321,6 +321,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Delighted using Fivetran.
 
+   * - **DotDigital**
+     - 
+     - |system-yes|
+     - Send data to DotDigital from Amperity using a REST API.
+
    * - **DV360**
      - 
      - |system-yes|
@@ -550,7 +555,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull email and SMS events data to Amperity.
 
-       Send contact list updates to Listrak.
+       Send email and SMS contact list updates to Listrak.
 
    * - **LiveRamp**
      - |system-yes|
@@ -634,6 +639,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - 
      - Pull data to Amperity from Mixpanel using Fivetran.
+
+   * - **MoEngage**
+     - 
+     - |system-yes|
+     - Send data to MoEngage from Amperity using a REST API.
 
    * - **MongoDB**
      - |system-yes|

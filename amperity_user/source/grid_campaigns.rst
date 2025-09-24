@@ -31,15 +31,18 @@ Use campaigns to build the audiences to which you want to send messages or offer
    :class-row: surface
 
    .. grid-item-card:: How campaigns work
-      :link: campaigns_reference.html#how-campaigns-work
+      :link-type: ref
+      :link: campaigns-reference-howitworks
 
 
    .. grid-item-card:: Email notifications
-      :link: campaigns_reference.html#email-notifications
+      :link-type: ref
+      :link: campaigns-reference-campaign-notifications
 
 
    .. grid-item-card:: Analyze campaigns
-      :link: analyze_campaigns.html
+      :link-type: doc
+      :link: analyze_campaigns
 
 
 .. grid-campaigns-about-grid-end
@@ -64,15 +67,18 @@ Campaigns can be configured to run once or on a schedule, and to send audiences 
    :class-row: surface
 
    .. grid-item-card:: One-time
-      :link: campaigns_reference.html#one-time
+      :link-type: ref
+      :link: campaigns-types-onetime
 
 
    .. grid-item-card:: Recurring
-      :link: campaigns_reference.html#recurring
+      :link-type: ref
+      :link: campaigns-types-recurring
 
 
    .. grid-item-card:: Multichannel
-      :link: campaigns_reference.html#multichannel
+      :link-type: ref
+      :link: campaigns-types-multi-channel
 
 
 .. grid-campaigns-types-about-grid-end
@@ -98,47 +104,58 @@ Use the **Campaigns** page to build campaigns using included or excluded segment
    :class-row: surface
 
    .. grid-item-card:: Activation IDs
-      :link: campaigns_reference.html#activation-ids
+      :link-type: ref
+      :link: campaigns-activation-ids
 
 
    .. grid-item-card:: Audience attributes
-      :link: campaigns_reference.html#audience-attributes
+      :link-type: ref
+      :link: campaigns-attributes
 
 
    .. grid-item-card:: Audiences
-      :link: campaigns_reference.html#audiences
+      :link-type: ref
+      :link: campaigns-audiences
 
 
    .. grid-item-card:: Control groups
-      :link: campaigns_reference.html#control-groups
+      :link-type: ref
+      :link: campaigns-control-groups
 
 
    .. grid-item-card:: Default attributes
-      :link: default_attributes.html
+      :link-type: ref
+      :link: campaigns-default-attributes
 
 
    .. grid-item-card:: Destinations
-      :link: campaigns_reference.html#destinations
+      :link-type: ref
+      :link: campaigns-destinations
 
 
    .. grid-item-card:: Exclusion lists
-      :link: campaigns_reference.html#exclusion-lists
+      :link-type: ref
+      :link: campaigns-exclusion-lists
 
 
    .. grid-item-card:: Sub-audiences
-      :link: campaigns_reference.html#sub-audiences
+      :link-type: ref
+      :link: campaigns-sub-audiences
 
 
    .. grid-item-card:: Tests
-      :link: campaigns_reference.html#tests
+      :link-type: ref
+      :link: campaigns-tests
 
 
    .. grid-item-card:: Timing and launch dates
-      :link: campaigns_reference.html#timing-and-launch-dates
+      :link-type: ref
+      :link: campaigns-timing-and-launch
 
 
    .. grid-item-card:: Treatment groups
-      :link: campaigns_reference.html#treatment-groups
+      :link-type: ref
+      :link: campaigns-treatment-groups
 
 
 .. grid-campaigns-features-about-grid-end

@@ -516,7 +516,7 @@ You can finds details about the columns found in the campaign results download f
      - Decimal
      - The average dollar value per order made by purchasers during the campaign measurement period. 
 
-       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group/sub-audiences.
+       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group or sub-audiences.
    * - **Average Unit Revenue**
      - Decimal
      - The average revenue per item purchased during the campaign measurement period.
@@ -599,7 +599,7 @@ You can finds details about the columns found in the campaign results download f
      - Decimal
      - The amount of revenue per recipient in a campaign.
 
-       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group/sub-audiences.
+       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group or sub-audiences.
 
    * - **Revenue Per Recipient Lift (Over Control)**
      - Decimal

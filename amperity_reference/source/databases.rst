@@ -1014,10 +1014,9 @@ Some use cases require a database table to have different information in a datab
            ,upc.product_category AS `product_category`
            ,upc.product_description AS `product_description`
            ,upc.product_subcategory AS `product_subcategory`
-         FROM
-           Unified_Itemized_Transactions uit
-           LEFT JOIN Unified_Product_Catalog upc
-           ON uit.product_id = upc.product_id
+         FROM Unified_Itemized_Transactions uit
+         LEFT JOIN Unified_Product_Catalog upc
+         ON uit.product_id = upc.product_id
 
 #. Click **Validate** to verify that the SQL query runs correctly and returns the desired results. Adjust the query as necessary. When finished, click **Next**.
 #. Verify the configuration settings for the table, including semantic tags, field descriptions, and availablility to the **Segment Editor**.

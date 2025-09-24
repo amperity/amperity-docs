@@ -33,9 +33,9 @@ Send audiences to ActiveCampaign
    :start-after: .. destination-active-campaign-api-note-start
    :end-before: .. destination-active-campaign-api-note-end
 
-.. caution:: This destination is available for sending campaign audiences to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending campaign audiences to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-campaigns-start
+   :end-before: .. sendtos-ask-to-configure-campaigns-end
 
 
 .. _channel-active-campaign-build-segment:

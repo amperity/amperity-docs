@@ -43,7 +43,7 @@ Common scenarios include:
 
 .. source-amazon-s3-about-end
 
-.. note:: :doc:`The legacy courier workflow is required <source_amazon_s3_legacy>` for certain use cases: XML and files that contain complex/nested JSON, ingest queries, and couriers that support many feeds.
+.. note:: :doc:`The legacy courier workflow is required <source_amazon_s3_legacy>` for certain use cases: XML and files that contain complex or nested JSON, ingest queries, and couriers that support many feeds.
 
 .. source-amazon-s3-steps-to-pull-start
 

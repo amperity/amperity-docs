@@ -428,9 +428,8 @@ For example, a query that returns data from a real-time table named **Winback_Su
    SELECT
      c360.amperity_id
      ,wb.*
-   FROM
-     winback_suppressions wb
-     JOIN Customer360 c360 ON wb.email = c360.email
+   FROM winback_suppressions wb
+   JOIN Customer360 c360 ON wb.email = c360.email
 
 .. realtime-build-query-end
 

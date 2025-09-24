@@ -41,9 +41,9 @@ Send query results to Bluecore
 
 .. sendto-bluecore-steps-to-send-end
 
-.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _sendto-bluecore-build-query:
@@ -111,8 +111,7 @@ Add a SQL table with a **SELECT** statement similar to:
      ,order_date AS created
      ,order_total AS total
      ,ARRAY_JOIN(ARRAY_AGG(product_id), '|') AS products
-   FROM
-     Customer360
+   FROM Customer360
    LIMIT 1000
 
 .. sendto-bluecore-build-query-map-to-platform-with-query-end

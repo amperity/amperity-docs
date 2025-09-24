@@ -579,7 +579,7 @@ Line spacing
 
 .. sql-presto-style-guide-whitespace-line-spacing-start
 
-Always include newlines/vertical space:
+Always include newlines and vertical space:
 
 * before **AND** or **OR**
 * after semicolons to separate queries for easier reading
@@ -677,8 +677,7 @@ The following example shows selecting the Amperity ID, purchase date, and order 
      t.transactiontotal,
      sum(t.transactiontotal) OVER (PARTITION BY t.Amperity_Id
                                    ORDER BY t.purchasedate) AS rolling_sum
-   FROM
-     TransactionsEcomm t
+   FROM TransactionsEcomm t
    ORDER BY t.Amperity_Id, rank
    LIMIT 100
 
@@ -2406,8 +2405,7 @@ The following example counts customers in the United States, and then also in Ca
    SELECT
      state
      ,COUNT(amperity_id) AS TotalCustomers
-   FROM
-     Customer360
+   FROM Customer360
    WHERE (UPPER("country") = 'US'
    AND UPPER("state") in ('AK', 'CA', 'HI', 'OR', 'WA')
    AND LOWER("loyalty_id") IS NOT NULL)
@@ -2671,8 +2669,7 @@ The following example shows using a common table expression to identify all one-
 
    SELECT
      COUNT(*) one_and_dones_2022
-   FROM
-     one_and_dones_2022
+   FROM one_and_dones_2022
 
 .. sql-presto-function-day-month-year-example-find-guests-who-canceled-end
 
@@ -3153,16 +3150,16 @@ The following SQL query uses the **RANK()** function to find the largest transac
    :emphasize-lines: 6,9,12
 
    WITH ranked_transactions AS (
-   SELECT
-     t.orderid
-     ,t.amperity_id
-     ,t.transactiontotal
-     ,RANK() OVER (PARTITION BY t.amperity_id ORDER BY t.transactiontotal DESC) AS rank
-   FROM
-     TransactionsEcomm t
-   ORDER BY t.amperity_id, rank ASC
-   LIMIT 100
+     SELECT
+       t.orderid
+       ,t.amperity_id
+       ,t.transactiontotal
+       ,RANK() OVER (PARTITION BY t.amperity_id ORDER BY t.transactiontotal DESC) AS rank
+     FROM TransactionsEcomm t
+     ORDER BY t.amperity_id, rank ASC
+     LIMIT 100
    )
+
    SELECT * FROM ranked_transactions WHERE rank = 1
 
 .. sql-presto-function-rank-example-rank-by-amperity-id-end

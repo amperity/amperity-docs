@@ -1420,7 +1420,7 @@ Assign ``rest`` as the name of the code block for code blocks with simple REST A
 
    https://www.yoursite.com/endpoint/{some_endpoint}
 
-.. note:: Use the :ref:`rst-code-language-json` code block style for the JSON request/response part of the REST API.
+.. note:: Use the :ref:`rst-code-language-json` code block style for the JSON request and response parts of the REST API.
 
 .. rst-code-language-rest-api-end
 

@@ -41,9 +41,9 @@ Send query results to Experian
 
 .. sendto-experian-steps-to-send-end
 
-.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _sendto-experian-build-query:
@@ -115,8 +115,7 @@ Build a query that maps fields in Amperity to the Experian data schema. For exam
        ELSE shipping_postal END AS postal
      ,email AS email_1
      ,phone AS phone_1
-   FROM
-     Customer360
+   FROM Customer360
 
 .. sendto-experian-build-query-map-fields-end
 
@@ -136,24 +135,21 @@ In some use cases, you may want to append data that was sent to Amperity from Ex
    WITH Experian_Import_Table AS (
      SELECT
        clid
-     FROM
-       Experian_Append_Versioned
-     WHERE
-       amperity_version = (
-         SELECT DISTINCT version
-         FROM amperity_table_versions
-         WHERE offset = 1
-       )
+     FROM Experian_Append_Versioned
+     WHERE amperity_version = (
+       SELECT DISTINCT version
+       FROM amperity_table_versions
+       WHERE offset = 1
+     )
    )
 
    SELECT
      ex.*
-   FROM
-     Experian_Append ex
-     LEFT JOIN Experian_Import_Table pr ON pr.clid = ex.clid
-   WHERE
-     pr.clid IS NULL
-     AND substr(ex.clid,14,1) = '-'
+   FROM Experian_Append ex
+   LEFT JOIN Experian_Import_Table pr
+   ON pr.clid = ex.clid
+   WHERE pr.clid IS NULL
+   AND substr(ex.clid,14,1) = '-'
 
 .. sendto-experian-build-query-append-data-end
 

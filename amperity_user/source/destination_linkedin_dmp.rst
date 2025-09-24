@@ -55,9 +55,9 @@ Send query results to LinkedIn DMP
 #. :ref:`Add orchestration <sendto-linkedin-dmp-add-orchestration>`
 #. :ref:`Run orchestration <sendto-linkedin-dmp-run-orchestration>`
 
-.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _sendto-linkedin-dmp-build-query:

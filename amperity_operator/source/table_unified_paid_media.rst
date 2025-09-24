@@ -375,7 +375,7 @@ Configure the row limit
 
 .. table-unified-paid-media-sql-query-optional-configure-row-limit-start
 
-The **Unified Paid Media** table is configured by default to include a ranked list of up to 10 phone numbers, email addresses, and addresses/details for each unique Amperity ID.
+The **Unified Paid Media** table is configured by default to include a ranked list of up to 10 phone numbers, email addresses, and address details for each unique Amperity ID.
 
 .. important:: Amperity IDs are duplicated in the **Unified Paid Media** table, but are limited by the configured row limit.
 
@@ -395,7 +395,7 @@ You can configure the row limit by changing a value in the **pii_row_limit** com
 
 .. admonition:: How many rows are defined by the row limit?
 
-   If the limit is set to 10, and there are 10 rows each for email addresses, phone numbers, and address/details, there will be "10 times 10 times 10" combinations of rows, or 1000 rows in the **Unified Paid Media** table.
+   If the limit is set to 10, and there are 10 rows each for email addresses, phone numbers, and address details, there will be "10 times 10 times 10" combinations of rows, or 1000 rows in the **Unified Paid Media** table.
 
    If the limit is set to 5, and there are 5 rows each, there will be "5 times 5 times 5" combinations of rows, or 125 rows.
 

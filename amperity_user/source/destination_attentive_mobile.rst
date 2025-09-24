@@ -33,7 +33,7 @@ You can use queries and orchestrations to manage audiences in |destination-name|
 
 An audience segment is the list of customers to which you sends SMS messages or emails. Amperity is your source of truth for your customers who belong to audience segments in |destination-name|. Send this list to |destination-name| from Amperity.
 
-A subscriber is a customer for which you have an opt-in/out status. You can only send SMS messages or emails to customers who have opted-in. |destination-name| is your source of truth for your audience's opt-in/out and subscriber status.
+A subscriber is a customer for which you have an opt-in or opt-out status. You can only send SMS messages or emails to customers who have opted-in. |destination-name| is your source of truth for your audience's opt-in, opt-out and subscriber status.
 
 .. channel-attentive-end
 
@@ -78,9 +78,9 @@ An |destination-name| destination works like this:
 
 .. sendto-attentive-mobile-steps-to-send-end
 
-.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _sendto-attentive-mobile-build-subscriber-list:

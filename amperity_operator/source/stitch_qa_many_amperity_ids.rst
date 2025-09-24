@@ -76,10 +76,8 @@ Configure query
       SELECT
         LOWER(email),
         COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        email IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE email IS NOT NULL
       GROUP BY 1
       ORDER BY 2 DESC
       LIMIT 100
@@ -93,10 +91,8 @@ Configure query
       SELECT
         LOWER(phone),
         COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        phone IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE phone IS NOT NULL
       GROUP BY 1
       ORDER BY 2 DESC
       LIMIT 100
@@ -110,10 +106,8 @@ Configure query
       SELECT
         LOWER(address),
         COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        address IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE address IS NOT NULL
       GROUP BY 1
       ORDER BY 2 DESC
       LIMIT 100
@@ -131,8 +125,7 @@ Configure query
         LOWER(semantic)
         ,LOWER(semantic)
         ,COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
+      FROM Unified_Coalesced
       WHERE
         -- UPDATE FOR SEMANTICS YOU WANT TO USE
         semantic IS NOT NULL
@@ -155,13 +148,11 @@ Configure query
         ,LOWER(phone)
         ,LOWER(address)
         ,COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        -- UPDATE FOR SEMANTICS YOU WANT TO USE
-        email IS NOT NULL
-        AND phone IS NOT NULL
-        AND address IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE email IS NOT NULL
+      -- UPDATE FOR SEMANTICS YOU WANT TO USE
+      AND phone IS NOT NULL
+      AND address IS NOT NULL
       GROUP BY 1
       -- UPDATE ORDERING FOR NUMBER OF COMBINED SEMANTICS
       ORDER BY 2,3 DESC

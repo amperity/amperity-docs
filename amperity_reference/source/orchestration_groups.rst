@@ -121,7 +121,7 @@ Run on a schedule
 
 An orchestration group may be configured to run on a schedule, using a cron schedule to define the specific time at which the run should begin, and a UTC timezone.
 
-.. note:: You will see the enable/disable status only for scheduled orchestration groups.
+.. note:: You will see the enabled or disabled status only for scheduled orchestration groups.
 
 .. orchestration-groups-run-on-a-schedule-end
 
