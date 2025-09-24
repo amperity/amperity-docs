@@ -363,6 +363,8 @@ Use a filter to shift a timezone, and then format it as a string. The following 
 Tokens
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. vale off
+
 .. data-templates-files-common-template-tokens-start
 
 Use a token to specify how to apply a datetime to a file. The following tokens are available:
@@ -377,6 +379,8 @@ Use a token to specify how to apply a datetime to a file. The following tokens a
      - Use the ``now`` token to apply a datetime to a file that is current *at the time* a file is written.
 
 .. data-templates-files-common-template-tokens-end
+
+.. vale on
 
 
 .. _data-templates-files-common-template-examples:

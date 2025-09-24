@@ -34,7 +34,7 @@ This is part one of a series of topics that describes how your brand can use san
 
 .. sandbox-promote-steps-start
 
-The following sections describe the steps you'll follow when creating a sandbox to make configuration state changes to production.
+The following sections describe the steps you will follow when creating a sandbox to make configuration state changes to production.
 
 .. sandbox-promote-steps-end
 

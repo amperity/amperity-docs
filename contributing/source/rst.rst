@@ -365,7 +365,7 @@ Buttons
 
 Buttons are like badges, but are bigger and link to somewhere.
 
-.. caution:: Not currently supported for general use. The following examples show that they work. Use sparingly or not at all.
+.. caution:: Not supported for general use. The following examples show that they work. Use sparingly or not at all.
 
 **A button**
 
@@ -415,7 +415,7 @@ Card carousel
 
 .. rst-card-carousel-start
 
-.. caution:: This formatting option is currently unused. Please ask the Amperity docs team before using it.
+.. caution:: This formatting option is unused. Please ask the Amperity docs team before using it.
 
 Use the ``.. card-carousel::`` directive to create a horizontal scrolling set of cards. Set an integer value between 1 and 4 to configure the number of visible cards on the page.
 
@@ -4553,8 +4553,6 @@ Amperity docs use tokens for variables, strings, and icons that have common use 
 
 Global tokens
 --------------------------------------------------
-
-.. warning:: FontAwesome library is currently not working. TODO to either fix or replace.
 
 .. rst-tokens-global-start
 

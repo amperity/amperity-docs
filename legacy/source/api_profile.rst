@@ -17,7 +17,7 @@
 Profile API
 ==================================================
 
-.. important:: The Profile API documented on this page (right now) is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__.
+.. important:: The Profile API documented on this page is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__.
 
 The Profile API is a RESTful API that supports building custom endpoints against unified customer profiles to enable any downstream workflow.
 
@@ -491,7 +491,7 @@ Rate limit
 
 .. profile-api-rate-limit-start
 
-The Profile API does not currently enforce a rate limit. A rate limit is introduced at a point in the near future.
+The Profile API does not enforce a rate limit. A rate limit is introduced at a point in the future.
 
 .. profile-api-rate-limit-end
 

@@ -274,7 +274,7 @@ You can configure a single activation node to send to multiple destinations at o
 
 .. journeys-node-activate-note-start
 
-.. note:: If you are activating to several destinations and each one uses different custom attributes, you'll need to create a separate activation node for each destination to assign those attributes correctly.
+.. note:: If you are activating to several destinations and each one uses different custom attributes, you will need to create a separate activation node for each destination to assign those attributes correctly.
 
 .. journeys-node-activate-note-end
 
@@ -820,7 +820,7 @@ You can monitor journey status and determine how to resolve errors on the `Workf
 
 .. journeys-howtos-monitor-resolve-steps-start
 
-#. Go to the **Workflows** page at the top level of your Amperity tenant. If you are starting from within the **Journeys** canvas you'll need to exit by clicking the X on the upper left.
+#. Go to the **Workflows** page at the top level of your Amperity tenant. If you are starting from within the **Journeys** canvas you will need to exit by clicking the X on the upper left.
 #. Locate the name of your journey and click in to monitor status and get guidance on resolving errors.
 
 .. journeys-howtos-monitor-resolve-steps-end
@@ -953,7 +953,7 @@ A delay node have an additional icon.
       :align: left
       :class: no-scaled-link
 	  
-* The clock icon displays the number of journey participants currently waiting at that node. 
+* The clock icon displays the number of journey participants waiting at that node. 
 
 .. journeys-howtos-view-journey-participant-numbers-end
 

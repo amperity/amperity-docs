@@ -41,7 +41,7 @@ This is part three of a series of topics that describes how your brand can use s
 
 .. sandbox-promote-steps-start
 
-The following sections describe the steps you'll follow when promoting changes in a sandbox to production.
+The following sections describe the steps you will follow when promoting changes in a sandbox to production.
 
 .. sandbox-promote-steps-end
 

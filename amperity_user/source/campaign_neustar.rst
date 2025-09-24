@@ -27,7 +27,7 @@ Send audiences to Neustar
    :start-after: .. term-neustar-start
    :end-before: .. term-neustar-end
 
-.. note:: |destination-name| is now `TransUnion TruAudience <https://www.transunion.com/solution/truaudience>`__ |ext_link|.
+.. note:: |destination-name| is also known as `TransUnion TruAudience <https://www.transunion.com/solution/truaudience>`__ |ext_link|.
 
 .. include:: ../../shared/channels.rst
    :start-after: .. channels-overview-list-intro-start
