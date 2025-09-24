@@ -46,6 +46,6 @@ CSV files
 Postman Collection
 ==================================================
 
-* `Profile API Postman collection <../downloads/postman/Amperity_Profile_API.postman_collection.json>`__
+* `Profile API (v0) Postman collection <../downloads/postman/Amperity_Profile_API.postman_collection.json>`__
 * `Refresh Token API Postman collection <../downloads/postman/Amperity_Refresh_Token_API.postman_collection.json>`__
 * `Streaming Ingest API Postman collection <../downloads/postman/Amperity_Streaming_Ingest_REST_API.postman_collection.json>`__
