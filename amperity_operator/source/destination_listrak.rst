@@ -24,18 +24,18 @@
         Configure destinations for Listrak
 
 ==================================================
-Configure destinations for Listrak (email)
+Configure destinations for Listrak Email
 ==================================================
 
 .. destination-listrak-about-start
 
-|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.
+|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage email-based audiences in |destination-name|.
 
 .. destination-listrak-about-end
 
 .. destination-listrak-context-start
 
-Amperity can manage `email <https://api.listrak.com/email>`__ |ext_link| lists in |destination-name|.
+Amperity can manage `email lists <https://api.listrak.com/email>`__ |ext_link| in |destination-name|.
 
 Amperity automatically adds a field attribute to all email lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
 
@@ -72,13 +72,17 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       You must configure this destination for email:
+       You must configure this destination for email lists:
 
        **Email client ID and client secret**
 
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-listrak-email-client-id-secret-start
              :end-before: .. credential-listrak-email-client-id-secret-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-listrak-client-id-secret-location-start
+             :end-before: .. credential-listrak-client-id-secret-location-end
 
        **About Listrak allowlists**
 
@@ -100,11 +104,11 @@ Get details
              :start-after: .. setting-listrak-list-name-start
              :end-before: .. setting-listrak-list-name-end
 
-          .. note::  Lists are available from the **Contacts** page within the |destination-name| user interface.
+          .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Open the **Contacts** menu, and then choose **List Manager**.
 
-             |destination-name| prefers to use a single list for managing email addresses, which is named "Master List" by default within |destination-name|. This is the name of the list that is most often managed when data is sent to |destination-name| from Amperity.
-
-             If you are not sure which lists should be managed by Amperity, work with your Listrak representative to determine the best approach for list management.
+             .. include:: ../../shared/destination_settings.rst
+                :start-after: .. setting-listrak-default-list-name-start
+                :end-before: .. setting-listrak-default-list-name-end
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -197,6 +201,10 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-listrak-email-client-id-secret-start
              :end-before: .. credential-listrak-email-client-id-secret-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-listrak-client-id-secret-location-start
+             :end-before: .. credential-listrak-client-id-secret-location-end
 
 .. destination-listrak-credentials-steps-end
 
