@@ -51,7 +51,7 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Phone list ID**
+**SMS list name**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-list-name-start
@@ -69,7 +69,7 @@ Settings
    :start-after: .. setting-common-audience-primary-key-start
    :end-before: .. setting-common-audience-primary-key-end
 
-**Include fields for segmentation**
+**Include attributes that match custom profile fields**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-sms-enable-segmentation-start
