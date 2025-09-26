@@ -29,7 +29,7 @@ Design journeys
 
 .. journeys-howitworks-steps-start
 
-The following sections describe the steps you'll follow to set up and configure a journey.
+The following sections describe the steps you will follow to set up and configure a journey.
 
 .. journeys-howitworks-steps-end
 

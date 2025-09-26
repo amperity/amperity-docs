@@ -209,9 +209,13 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_linkedin_dmp
 
-   .. grid-item-card:: Listrak
+   .. grid-item-card:: Listrak Email
       :link-type: doc
       :link: destination_listrak
+
+   .. grid-item-card:: Listrak SMS
+      :link-type: doc
+      :link: destination_listrak_sms
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
@@ -536,7 +540,8 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>
-   Listrak <destination_listrak>
+   Listrak Email <destination_listrak>
+   Listrak SMS <destination_listrak_sms>
    LiveRamp <destination_liveramp>
    Mailchimp <destination_mailchimp>
    Meta Ads Manager <destination_meta_ads_manager>

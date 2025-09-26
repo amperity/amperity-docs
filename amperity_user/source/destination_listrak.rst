@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/user/
 
 
-.. |destination-name| replace:: Listrak
+.. |destination-name| replace:: Listrak Email
 .. |what-send| replace:: email address
 .. |credential-typex| replace:: **listrak**
 .. |credential-detailsx| replace:: the Listrak client ID and secret
@@ -9,18 +9,18 @@
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send query results from Amperity to Listrak.
+        Use orchestrations to send query results from Amperity to Listrak Email.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send query results from Amperity to Listrak.
+        Use orchestrations to send query results from Amperity to Listrak Email.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send query results to Listrak
+        Send query results to Listrak Email
 
 ==================================================
-Send query results to Listrak
+Send query results to Listrak Email
 ==================================================
 
 .. sendto-listrak-start
@@ -28,12 +28,6 @@ Send query results to Listrak
 You can build queries that return |what-send|, along with returning additional profile attributes, and then use orchestrations to send those results to |destination-name|.
 
 .. sendto-listrak-end
-
-.. image:: ../../images/sendto-listrak.png
-   :width: 600 px
-   :alt: Send email lists to Listrak.
-   :align: left
-   :class: no-scaled-link
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
    :start-after: .. destination-listrak-context-start

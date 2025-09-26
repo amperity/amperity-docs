@@ -1680,11 +1680,11 @@ A common use in Amperity might look like this:
 
 It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Or, more briefly, "Give me the most recent email address for each customer." The window function bits do the following:
 
-* **FIRST_VALUE(<field name>)** - the **FIRST_VALUE()** window function picks the first record out of some set of records. In this case, it's selecting from the window / partition, which is defined next.
-* **OVER()** - the **OVER()** function sets up the window that we'll be finding records within. This function should include both **PARTITION BY** and **ORDER_BY** functions.
-* **PARTITION BY amperity_id** - the **PARTITION BY <field name>** function behaves in a way analogous to a **GROUP BY** in that it groups all records with unique values for the specified field together. So here it creates a subset of rows for each Amperity ID.
-* **ORDER BY merged_date DESC** - the **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it's sorting the rows for each Amperity ID. And **DESC** simply says sort in descending order, so most recent date is first.
-* **AS <field name>** - the final clause of the statement above isn't really part of the window function at all, but is the **AS** statement you've used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
+* **FIRST_VALUE(<field name>)** The **FIRST_VALUE()** window function picks the first record out of some set of records. In this case, it's selecting from the window or partition, whichever is defined next.
+* **OVER()** The **OVER()** function sets up the window in which records are found. This function should include both **PARTITION BY** and **ORDER_BY** functions.
+* **PARTITION BY amperity_id** The **PARTITION BY <field name>** function behaves in a way analogous to a **GROUP BY** in that it groups all records with unique values for the specified field together. So here it creates a subset of rows for each Amperity ID.
+* **ORDER BY merged_date DESC** The **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it's sorting the rows for each Amperity ID. And **DESC** simply says sort in descending order, so most recent date is first.
+* **AS <field name>** The final clause of the statement above isn't really part of the window function at all, but is the **AS** statement you've used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
 
 .. sql-spark-window-functions-end
 

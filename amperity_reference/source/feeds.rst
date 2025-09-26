@@ -169,13 +169,13 @@ Datetime formats in Amperity use a combination of symbols that are described in 
    * - **d**
      - The day of the month. For example, the eighteenth day of January is 18.
    * - **H**
-     - The hour of the day, between 0-23. 1:00 PM is 13.
+     - The hour of the day, 0-23. 1:00 PM is 13.
 
        * H outputs 9
        * HH outputs 09
 
    * - **h**
-     - The clockhour of halfday, between 1-12. 1:00 PM is 1.
+     - The clockhour of halfday, 1-12. 1:00 PM is 1.
    * - **m**
      - The minute of the hour. For example, 6:10 PM is 10.
    * - **s**

@@ -29,7 +29,7 @@ The **Usage** dashboard shows usage within Amperity across a broad range of feat
 
 .. usage-time-period-start
 
-You can configure the time period that is used to display metrics and graphs on the **Usage** dashboard. From the dropdown in the top right of the page, select one of the following time periods: "Last 30 days", "Last calendar month", "Last 60 days", "Last 90 days", "Last complete quarter", "Last year from now", or "Last calendar year".
+You can configure the time period that is used to display metrics and graphs on the **Usage** dashboard. From the dropdown in the top right of the page, select one of the following time periods: "Last 30 days", "Last calendar month", "Last 60 days", "Last 90 days", "Last complete quarter", "Last year", or "Last calendar year".
 
 .. usage-time-period-start
 
@@ -120,7 +120,7 @@ Sources
 The **Sources** section in the **Usage** dashboard contains the following metrics and graphs that describe source utilization:
 
 **Sources configured**
-   Shows the number of feeds that are currently configured in your tenant.
+   Shows the number of feeds configured in your tenant.
 
 **Average records ingested**
    Shows the average number of records that are ingested per day during the selected time period.

@@ -1,20 +1,19 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: Listrak
-.. |audience-primary-key| replace:: "email" 
-.. |what-send| replace:: email lists
+.. |destination-name| replace:: Listrak SMS
+.. |audience-primary-key| replace:: "phone" 
+.. |what-send| replace:: SMS profiles
 .. |where-send| replace:: |destination-name|
 
 
 Listrak
 ==================================================
 
-|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.
+Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to manage SMS profiles in |destination-name|.
 
-Amperity can manage email lists in |destination-name| using this destination.
+`Custom SMS profile attributes <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| must be created in |destination-name| before Amperity can send custom attributes.
 
-Amperity automatically adds a field attribute to all email lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
 
 
 Credentials
@@ -26,17 +25,11 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**Email client ID and client secret**
+**SMS client ID and client secret**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-listrak-email-client-id-secret-start
-   :end-before: .. credential-listrak-email-client-id-secret-end
-
-**Note**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-listrak-allowlist-start
-   :end-before: .. credential-listrak-allowlist-end
+   :start-after: .. credential-listrak-sms-client-id-secret-start
+   :end-before: .. credential-listrak-sms-client-id-secret-end
 
 
 Settings
@@ -58,11 +51,17 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**List name**
+**SMS list name**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-list-name-start
    :end-before: .. setting-listrak-list-name-end
+
+**Sender code ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-listrak-sms-sender-code-id-start
+   :end-before: .. setting-listrak-sms-sender-code-id-end
 
 **Audience primary key**
 
@@ -70,17 +69,11 @@ Settings
    :start-after: .. setting-common-audience-primary-key-start
    :end-before: .. setting-common-audience-primary-key-end
 
-**Field group**
+**Include attributes that match custom profile fields**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-listrak-field-group-start
-   :end-before: .. setting-listrak-field-group-end
-
-**Segment name** (Required at orchestration)
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-listrak-segment-name-start
-   :end-before: .. setting-listrak-segment-name-end
+   :start-after: .. setting-listrak-sms-enable-segmentation-start
+   :end-before: .. setting-listrak-sms-enable-segmentation-end
 
 **Campaign file settings**
 

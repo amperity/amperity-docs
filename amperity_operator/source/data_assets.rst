@@ -197,7 +197,7 @@ NRF calendar
 
 .. data-asset-fiscal-calendar-nrf-start
 
-The NRF calendars data asset contains a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans from 2016-2024 and divides each year into months based on a 4 weeks - 5 weeks - 4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
+The NRF calendars data asset contains a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans 2016-2024 and divides each year into months based on a 4 weeks--5 weeks--4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
 
 .. data-asset-fiscal-calendar-nrf-end
 

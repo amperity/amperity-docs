@@ -712,7 +712,7 @@ By default, stable ID assignment is based on the edges that exist between curren
 In some cases, the differences between the current and previous clusters of customer records is very large, requiring access to a large amount of memory to complete the stable ID assignment process. In this type of situation Stitch processes may take a very long time, or even appear to be stuck; in some cases the Stitch job has run out of memory and need to be rerun. In these situations, do the following:
 
 #. Look for unusual values, such as a large set of identical email address, that appear in the **Unified Coalesced** table. This can sometimes be the cause of slow stable ID assignment. Mitigate the presence of these unusual values, and then run Stitch again.
-#. Increase the number of partitions that are available to Stitch during the stable ID assignment process. You can increase the value of **stable-id-partition-count** to a value between 2-10 to improve the performance of Stitch during stable ID assigment.
+#. Increase the number of partitions that are available to Stitch during the stable ID assignment process. You can increase the value of **stable-id-partition-count** to 2-10 partitions to improve the performance of Stitch during stable ID assigment.
 
 This setting should be used temporarily, but for some tenants it may need to be left at a non-default value. Changing partitions may only be done using an advanced configuration setting:
 

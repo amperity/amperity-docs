@@ -448,7 +448,7 @@ Dataset size error
 To resolve this error, verify that the number of rows in the audience list is at least 300 and no more than 300,000.
 
 #. Open the **Activations** page, and then open the segment used with this workflow.
-#. Adjust segment attributes, monitor the segment insights panel to see how many customers are currently in the segment, and click **Refresh** to update the count as you make changes. 
+#. Adjust segment attributes, monitor the segment insights panel to see how many customers are in the segment, and click **Refresh** to update the count as you make changes. 
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-linkedin-dmp-workflow-actions-dataset-size error-steps-end

@@ -36,7 +36,7 @@ Configure query
 
    .. tip:: :ref:`Add the Stitch QA queries template folder <qa-stitch-enable-steps-add-queries>` if it does not already exist.
 
-#. Update the **uc_filter_query** to the desired threshold, which is currently set to "50".
+#. Update the **uc_filter_query** to the desired threshold, which is set to "50".
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
 

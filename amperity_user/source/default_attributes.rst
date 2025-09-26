@@ -44,7 +44,7 @@ Default attributes are configured from the **Campaigns** page. Each destination 
 
 .. campaigns-default-attributes-steps-intro-start
 
-The following sections describe the steps you'll follow to configure the default attributes for individual destinations.
+The following sections describe the steps you will follow to configure the default attributes for individual destinations.
 
 .. campaigns-default-attributes-steps-intro-end
 

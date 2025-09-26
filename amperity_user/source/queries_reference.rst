@@ -212,7 +212,7 @@ Use the **Orchestration** option to define a schedule for a query.
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens a query editor.
 
    .. tip:: The query does not need to be in edit mode to configure an orchestration.
-#. Under **Being Sent To** click **Add one now**. This opens the **Add Orchestration** dialog box.
+#. Under **Being Sent To** click **Add**. This opens the **Add Orchestration** dialog box.
 #. Follow the steps to add an orchestration. The steps will vary depending on the destination, the data template, and the orchestration.
 #. Click **Save**.
 

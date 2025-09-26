@@ -103,7 +103,7 @@ Spring 2025
    :bdg-light:`UPDATED` The workflow for configuring Amperity to send query results to built-in destinations has been refreshed with a more direct series of steps. Descriptions for each setting are provided within the configuration dialog box alongside the settings. All `destinations that use orchestrations to send query results <../operator/grid_destinations.html>`__ use the updated workflow.
 
 **European Unified ID (EUID)**
-   :bdg-success:`NEW` `EUID <euid.html>`__ is now available for use with European audiences alongside Unified ID 2.0 (UID2) for North American audiences.
+   :bdg-success:`NEW` `EUID <euid.html>`__ is available for use with European audiences alongside Unified ID 2.0 (UID2) for North American audiences.
 
 **Journeys**
    :bdg-success:`NEW` `Journeys <journeys.html>`__ provide a canvas on which you can create, visualize, and manage automated customer workflows for personalized experiences.

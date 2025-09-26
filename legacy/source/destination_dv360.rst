@@ -134,7 +134,7 @@ Get details
           :class: no-scaled-link
      - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity creates it.
 
-       The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+       The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be 0-540 (inclusive) or 10000 for an unlimited duration.
 
        .. tip:: Set this value to "0" to remove all audience members.
 

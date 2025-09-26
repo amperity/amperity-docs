@@ -36,7 +36,7 @@ This is part two of a series of topics that describes how this works.
 
 .. campaigns-howitworks-steps-start
 
-The following sections describe the steps you'll follow to set up and configure a campaign.
+The following sections describe the steps you will follow to set up and configure a campaign.
 
 .. campaigns-howitworks-steps-end
 

@@ -73,7 +73,7 @@ For example, it is expected that most, but not all, Amperity IDs should not have
 
 .. important:: Stitch is complex and perfection of Stitch results should not be the goal. A benchmark score that falls outside of an optimal range might not be a bad score. A high benchmark score does not always need to be addressed, at least not right away.
 
-   The purpose of benchmark scores is to provide a visible and direct way of inspecting the quality of customer profiles that currently exist in your tenant.
+   The purpose of benchmark scores is to provide a visible and direct way of inspecting the quality of customer profiles that exist in your tenant.
 
    Use benchmark scores to:
 

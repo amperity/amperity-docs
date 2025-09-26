@@ -83,7 +83,7 @@ The following sections describe how you can use the visual **Query Editor** to b
           :alt: Add attributes.
           :align: center
           :class: no-scaled-link
-     - The next attribute you'll need is in a different table. Click **+ Add section** to add another group of attributes, choose the **Email Opt Status** table, add the **Amperity ID** and **Is Email Opted In** attributes, and then set the condition for **Amperity ID** to "is not NULL" and the condition for **Is Email Opted In** to "is false".
+     - The next attribute you will need is in a different table. Click **+ Add section** to add another group of attributes, choose the **Email Opt Status** table, add the **Amperity ID** and **Is Email Opted In** attributes, and then set the condition for **Amperity ID** to "is not NULL" and the condition for **Is Email Opted In** to "is false".
 
        .. image:: ../../images/mockup-queries-tab-visual-email-optin.png
           :width: 600 px

@@ -35,7 +35,7 @@ This is part two of a series of topics that describes how your brand can use san
 
 .. sandbox-promote-steps-start
 
-The following sections describe the steps you'll follow when working in a sandbox to make configuration state changes to production.
+The following sections describe the steps you will follow when working in a sandbox to make configuration state changes to production.
 
 .. sandbox-promote-steps-end
 
@@ -73,7 +73,7 @@ The following sections describe the steps you'll follow when working in a sandbo
           :class: no-scaled-link
      - Sandbox configuration works the same way as it does in production with all of the same features and functionality. The main difference is that users in a sandbox are assigned the **DataGrid Administrator** policy, which gives them full access to the configuration state within the sandbox.
 
-       When you access a sandbox, it'll look much the same as production, but with a different color scheme.
+       When you access a sandbox, it will look much the same as production, but with a different color scheme.
 
        .. image:: ../../images/mockups-sandbox-generic-page.png
           :width: 600 px

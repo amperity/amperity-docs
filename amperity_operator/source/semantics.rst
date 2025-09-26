@@ -1561,7 +1561,7 @@ ACME Beverages defines its product catalog taxonomy using a simple hierarchy:
 
 This taxonomy results in approximately 400 individual types of beverages that are spread across 6 top-level categories with approximately 5000 individual beverages by brand.
 
-When determining the correct size of a product catalog for use with predictive modeling you want to choose the node in the taxonomy that provides between 20-2000 unique values. ACME Beverages chooses to use beverage type as the node within the taxonomy that is to be associated with predictive modeling for recommended audiences.
+When determining the correct size of a product catalog for use with predictive modeling you want to choose the node in the taxonomy that provides 20-2000 unique values. ACME Beverages chooses to use beverage type as the node within the taxonomy that is to be associated with predictive modeling for recommended audiences.
 
 By default, predictive modeling returns up to the top 50 values within the product catalog taxonomy, or the top 50 types of beverages within the product catalog. 
 

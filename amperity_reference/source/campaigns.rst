@@ -874,7 +874,7 @@ You can allocate customers (Amperity IDs) to multiple sub-audiences in a campaig
 
 #. From the **Edit Campaign** page, in the **Sub-audiences and Destinations** section, switch the **Assign to first match only** toggle off.
 
-Amperity will now allocate your customers (Amperity IDs) to multiple sub-audiences in your campaign. 
+Amperity will allocate your customers (Amperity IDs) to multiple sub-audiences in your campaign. 
 
 .. campaigns-allocate-multiple-sub-audiences-steps-end
 

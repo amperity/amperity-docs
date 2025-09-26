@@ -29,7 +29,7 @@ About recent activity
 
 .. notifications-about-start
 
-Use the recent activity pane to learn more about the state of workflows that are currently running in your tenant and as a starting point for resolving warnings and errors that may be shown for specific workflows.
+Use the recent activity pane to learn more about the state of workflows running in your tenant and as a starting point for resolving warnings and errors that may be shown for specific workflows.
 
 .. notifications-about-end
 
@@ -82,7 +82,7 @@ Running
 
 .. notifications-type-status-start
 
-A running notification -- indicated by the |notification-running| icon -- is shown when a workflow is currently running, but has not finished every step in the workflow.
+A running notification -- indicated by the |notification-running| icon -- is shown when a workflow is running, but has not finished every step in the workflow.
 
 .. notifications-type-status-end
 

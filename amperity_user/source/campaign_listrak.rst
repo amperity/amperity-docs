@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/user/
 
 
-.. |destination-name| replace:: Listrak
+.. |destination-name| replace:: Listrak Email
 .. |what-send| replace:: email address
 .. |what-enable| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires email addresses; you may include additional customer profile attributes.
@@ -9,18 +9,18 @@
 
 .. meta::
     :description lang=en:
-        Use segments and campaigns to send audiences from Amperity to Listrak.
+        Use segments and campaigns to send audiences from Amperity to Listrak Email.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use segments and campaigns to send audiences from Amperity to Listrak.
+        Use segments and campaigns to send audiences from Amperity to Listrak Email.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to Listrak
+        Send audiences to Listrak Email
 
 ==================================================
-Send audiences to Listrak
+Send audiences to Listrak Email
 ==================================================
 
 .. channel-listrak-start

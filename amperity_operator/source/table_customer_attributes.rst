@@ -920,7 +920,7 @@ The query starts by defining the revenue outlier threshold:
        995 AS percentile
    )
 
-.. note:: The outlier threshold specifies a value between 0-1000, where 1000 is 100% and 995 is 99.5%.
+.. note:: The outlier threshold is 0-1000, where 1000 is 100% and 995 is 99.5%.
 
 The query builds a list of outliers by comparing records that exceed the record count threshold to lifetime order revenue. The outlier threshold is "995" which returns a list of customers whose lifetime revenue is in your top 0.5%.
 
@@ -960,7 +960,7 @@ The query starts by defining the revenue outlier threshold:
        990 AS percentile
    )
 
-.. note:: The outlier threshold specifies a value between 0-1000, where 1000 is 100% and 990 is 99%.
+.. note:: The outlier threshold is 0-1000, where 1000 is 100% and 990 is 99%.
 
 The following CTE identifies supersized clusters that exceed the defined threshold. In the following example, the threshold is "50":
 

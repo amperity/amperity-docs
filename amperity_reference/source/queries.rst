@@ -581,7 +581,7 @@ Use the **Orchestration** option to define a schedule for a query.
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor.
 
    .. tip:: The query does not need to be in edit mode to configure an orchestration.
-#. Under **Being Sent To** click **Add one now**. This opens the **Add Orchestration** dialog box.
+#. Under **Being Sent To** click **Add**. This opens the **Add Orchestration** dialog box.
 #. Follow the steps to add an orchestration. The steps will vary depending on the destination, the data template, and the orchestration.
 #. Click **Save**.
 
@@ -666,7 +666,7 @@ You can convert a query to a segment on the **Queries** page.
 #. Click **Activate**.
 #. From the **Activate Query** dialog box, click **Activate**.
 
-The query is now available on the **Segments** page.
+The query is available on the **Segments** page.
 
 .. note:: To convert a query into a segment, the Amperity ID column must be added to the SQL in the query.
 
@@ -1462,7 +1462,7 @@ Query details show the time at which the query last ran, when it was activated, 
 
 #. From the **Queries** page, from the menu for a query, click the right angle icon. This opens the details pane for that query.
 #. Click the name of the query to view the orchestration details. The **View Orchestrations** dialog box opens. You can fully manage the orchestration from this dialog box.
-#. Click **Run now** to run the query from the details pane.
+#. Click **Run** to run the query from the details pane.
 
 .. queries-view-details-steps-end
 
