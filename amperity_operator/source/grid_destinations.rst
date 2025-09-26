@@ -98,6 +98,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_bazaarvoice
 
+   .. grid-item-card:: Bloomreach
+      :link-type: doc
+      :link: destination_bloomreach
+
    .. grid-item-card:: Bluecore
       :link-type: doc
       :link: destination_bluecore
@@ -382,7 +386,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    :maxdepth: 2
    :hidden:
 
-   ActiveCampign <destination_active_campaign>
+   ActiveCampaign <destination_active_campaign>
    Acxiom <destination_acxiom>
    Adobe Campaign <destination_adobe_campaign>
    Adobe Customer Attributes <destination_adobe_customer_attributes>
@@ -399,6 +403,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Azure Blob Storage <destination_azure_blob_storage>
    Azure Synapse Analytics <destination_azure_synapse>
    BazaarVoice <destination_bazaarvoice>
+   Bloomreach <destination_bloomreach>
    Bluecore <destination_bluecore>
    Braze <destination_braze>
    Camelot SMM <destination_camelot_smm>
