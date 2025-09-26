@@ -166,11 +166,11 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_linkedin_dmp
 
-   .. grid-item-card:: Listrak (email)
+   .. grid-item-card:: Listrak Email
       :link-type: doc
       :link: campaign_listrak
 
-   .. grid-item-card:: Listrak (SMS)
+   .. grid-item-card:: Listrak SMS
       :link-type: doc
       :link: campaign_listrak
 
@@ -347,8 +347,8 @@ Configure Amperity to send campaigns to any marketing workflow.
    Infutor <campaign_infutor>
    Klaviyo <campaign_klaviyo>
    LinkedIn DMP <campaign_linkedin_dmp>
-   Listrak (email) <campaign_listrak>
-   Listrak (SMS) <campaign_listrak_sms>
+   Listrak Email <campaign_listrak>
+   Listrak SMS <campaign_listrak_sms>
    LiveRamp <campaign_liveramp>
    Mailchimp <campaign_mailchimp>
    Meta Ads Manager <campaign_meta_ads_manager>

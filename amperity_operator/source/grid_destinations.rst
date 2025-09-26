@@ -206,11 +206,11 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_linkedin_dmp
 
-   .. grid-item-card:: Listrak (email)
+   .. grid-item-card:: Listrak Email
       :link-type: doc
       :link: destination_listrak
 
-   .. grid-item-card:: Listrak (SMS)
+   .. grid-item-card:: Listrak SMS
       :link-type: doc
       :link: destination_listrak
 
@@ -430,8 +430,8 @@ Set up connections to send data from Amperity to other marketing applications, t
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>
-   Listrak (email) <destination_listrak>
-   Listrak (SMS) <destination_listrak_sms>
+   Listrak Email <destination_listrak>
+   Listrak SMS <destination_listrak_sms>
    LiveRamp <destination_liveramp>
    Mailchimp <destination_mailchimp>
    Meta Ads Manager <destination_meta_ads_manager>
