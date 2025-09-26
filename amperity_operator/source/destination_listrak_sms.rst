@@ -39,10 +39,6 @@ Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to man
 
 .. destination-listrak-sms-context-end
 
-.. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listrak-use-sftp-when-start
-   :end-before: .. destination-listrak-use-sftp-when-end
-
 
 .. _destination-listrak-sms-get-details:
 
@@ -117,14 +113,15 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **Phone list ID**
+       **SMS list name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-list-name-start
              :end-before: .. setting-listrak-list-name-end
 
-          .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Open the **Contacts** menu, and then choose **SMS Lists**.
+          .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Under **SMS Contacts** open the **Contacts** menu, and then choose **SMS Lists**.
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-default-list-name-start
@@ -171,6 +168,8 @@ Use system attributes to personalize messages, such as adding a first name to an
 
 **Custom attributes**
 
+Enable the **Include attributes that match custom profile fields** field to sychronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|.
+
 |destination-name| supports `up to fifty custom SMS profile attributes <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link|. Use these to define additional SMS profile attributes to support your brand's use cases.
 
 .. important:: Each custom attribute must be defined in |destination-name| before Amperity can send them with SMS profiles.
@@ -178,16 +177,6 @@ Use system attributes to personalize messages, such as adding a first name to an
 Custom attributes must be one of the following data types: `Checkbox, Date, Number, or Text <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide#custom-profile-fields>`__ |ext_link|. Any custom attributes sent from Amperity must match one of these data types.
 
 .. destination-listrak-sms-attributes-end
-
-
-.. _destination-listrak-sms-sftp:
-
-Customers, products, and orders
-==================================================
-
-.. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listrak-sftp-start
-   :end-before: .. destination-listrak-sftp-end
 
 
 .. _destination-listrak-sms-credentials:
@@ -335,7 +324,8 @@ Add destination
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
-       **Phone list ID**
+       **SMS list name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -361,13 +351,13 @@ Add destination
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
 
-       **Include fields for segmentation**
+       **Include attributes that match custom profile fields**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-sms-enable-segmentation-start
              :end-before: .. setting-listrak-sms-enable-segmentation-end
 
-          :ref:`Custom attributes must be configured in Listrak <destination-listrak-sms-attributes>` before Amperity can send custom attributes in SMS profiles.
+          .. important:: :ref:`Custom attributes must be configured in Listrak <destination-listrak-sms-attributes>` before Amperity can send custom attributes in SMS profiles.
 
 
    * - .. image:: ../../images/steps-05.png
@@ -380,3 +370,13 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-listrak-sms-add-steps-end
+
+
+.. _destination-listrak-sms-sftp:
+
+Customers, products, and orders
+==================================================
+
+.. include:: ../../amperity_operator/source/destination_listrak.rst
+   :start-after: .. destination-listrak-sftp-start
+   :end-before: .. destination-listrak-sftp-end

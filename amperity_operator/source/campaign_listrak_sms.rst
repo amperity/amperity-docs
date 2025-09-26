@@ -35,10 +35,6 @@ Configure campaigns for Listrak SMS
    :start-after: .. destination-listrak-sms-context-start
    :end-before: .. destination-listrak-sms-context-end
 
-.. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listrak-use-sftp-when-start
-   :end-before: .. destination-listrak-use-sftp-when-end
-
 
 .. _campaign-listrak-sms-get-details:
 
@@ -113,19 +109,19 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **Phone list ID**
+       **SMS list name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-list-name-start
              :end-before: .. setting-listrak-list-name-end
 
-          .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Open the **Contacts** menu, and then choose **SMS Lists**.
+          .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Under **SMS Contacts** open the **Contacts** menu, and then choose **SMS Lists**.
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-default-list-name-start
              :end-before: .. setting-listrak-default-list-name-end
-
 
        **Sender code ID**
 
@@ -154,16 +150,6 @@ About Listrak SMS profile attributes
 .. include:: ../../amperity_operator/source/destination_listrak_sms.rst
    :start-after: .. destination-listrak-sms-attributes-start
    :end-before: .. destination-listrak-sms-attributes-end
-
-
-.. _campaign-listrak-sms-sftp:
-
-Customers, products, and orders
-==================================================
-
-.. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listrak-sftp-start
-   :end-before: .. destination-listrak-sftp-end
 
 
 .. _campaign-listrak-sms-credentials:
@@ -321,7 +307,8 @@ Add destination
           :start-after: .. campaigns-steps-settings-start
           :end-before: .. campaigns-steps-settings-end
 
-       **Phone list ID**
+       **SMS list name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -340,20 +327,25 @@ Add destination
              :start-after: .. setting-listrak-sms-sender-code-id-start
              :end-before: .. setting-listrak-sms-sender-code-id-end
 
-
        **Audience primary key**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
 
-       **Include fields for segmentation**
+       **Include attributes that match custom profile fields**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-sms-enable-segmentation-start
              :end-before: .. setting-listrak-sms-enable-segmentation-end
 
-          :ref:`Custom attributes must be configured in Listrak <campaign-listrak-sms-attributes>` before Amperity can send custom attributes in SMS profiles.
+          .. important:: :ref:`Custom attributes must be configured in Listrak <campaign-listrak-sms-attributes>` before Amperity can send custom attributes in SMS profiles.
+
+       **Campaign file settings**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. campaigns-steps-campaign-settings-start
+             :end-before: .. campaigns-steps-campaign-settings-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -366,3 +358,13 @@ Add destination
           :end-before: .. campaigns-steps-business-users-end
 
 .. campaign-listrak-sms-add-steps-end
+
+
+.. _campaign-listrak-sms-sftp:
+
+Customers, products, and orders
+==================================================
+
+.. include:: ../../amperity_operator/source/destination_listrak.rst
+   :start-after: .. destination-listrak-sftp-start
+   :end-before: .. destination-listrak-sftp-end
