@@ -35,10 +35,6 @@ Configure campaigns for Listrak Email
    :start-after: .. destination-listrak-context-start
    :end-before: .. destination-listrak-context-end
 
-.. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listrak-use-sftp-when-start
-   :end-before: .. destination-listrak-use-sftp-when-end
-
 
 .. _campaign-listrak-get-details:
 
@@ -88,6 +84,7 @@ Get details
      - **Required configuration settings**
 
        **List name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -111,16 +108,6 @@ Get details
        Use a query or a segment to build an audience to send to |destination-name|. The **email** field must be part of the audience. You may append additional profile attributes to the query or segment.
 
 .. campaign-listrak-get-details-end
-
-
-.. _campaign-listrak-sftp:
-
-Customers, products, and orders
-==================================================
-
-.. include:: ../../amperity_operator/source/destination_listrak.rst
-   :start-after: .. destination-listrak-sftp-start
-   :end-before: .. destination-listrak-sftp-end
 
 
 .. _campaign-listrak-credentials:
@@ -269,6 +256,7 @@ Add destination
           :end-before: .. campaigns-steps-settings-end
 
        **List name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -287,12 +275,13 @@ Add destination
              :start-after: .. setting-listrak-field-group-start
              :end-before: .. setting-listrak-field-group-end
 
+          .. note::  Field groups are available from the **Contacts** menu within the |destination-name| user interface. Under **Email Contacts** open **Profile Fields**.
+
        **Segment name** (Required at orchestration)
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-segment-name-start
              :end-before: .. setting-listrak-segment-name-end
-
 
        **Campaign file settings**
           .. include:: ../../shared/destination_settings.rst
@@ -310,3 +299,13 @@ Add destination
           :end-before: .. campaigns-steps-business-users-end
 
 .. campaign-listrak-add-steps-end
+
+
+.. _campaign-listrak-sftp:
+
+Customers, products, and orders
+==================================================
+
+.. include:: ../../amperity_operator/source/destination_listrak.rst
+   :start-after: .. destination-listrak-sftp-start
+   :end-before: .. destination-listrak-sftp-end
