@@ -4728,7 +4728,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
    * - Destination
      - Variables
    * - **Amazon Ads**
-     - Amazon Ads allows customers to be removed between *0-34,300,800 seconds*. The `Amazon Ads <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ topic uses the following variables:
+     - Amazon Ads allows customers to be removed in *0-34,300,800 seconds*. The `Amazon Ads <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ topic uses the following variables:
 
        .. code-block:: none
 
@@ -4738,7 +4738,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
    * - **Google Ads**
 
        **Google Customer Match**
-     - Google Ads and Google Customer Match allows customers to be removed between *0-540 days*. The `Google Ads <https://docs.amperity.com/operator/destination_ads.html>`__ and Google Customer Match topics use the following variables:
+     - Google Ads and Google Customer Match allows customers to be removed in *0-540 days*. The `Google Ads <https://docs.amperity.com/operator/destination_ads.html>`__ and Google Customer Match topics use the following variables:
 
        .. code-block:: none
 
@@ -4746,7 +4746,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
           .. |duration-value| replace:: "0" - "540"
 
    * - **The Trade Desk**
-     - The Trade Desk allows customers to be removed between *0-180 days*. The `The Trade Desk <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ topic uses the following variables:
+     - The Trade Desk allows customers to be removed in *0-180 days*. The `The Trade Desk <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ topic uses the following variables:
 
        .. code-block:: none
 
@@ -4754,7 +4754,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
           .. |duration-value| replace:: "0" - "180"
 
    * - **Yahoo DSP**
-     - Yahoo DSP allows customers to be removed between *0-90 days*. The `Yahoo DSP <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ topic uses the following variables:
+     - Yahoo DSP allows customers to be removed in *0-90 days*. The `Yahoo DSP <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ topic uses the following variables:
 
        .. code-block:: none
 

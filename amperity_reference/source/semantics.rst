@@ -1602,7 +1602,7 @@ The following table lists the tags available to this semantic group (with requir
           :start-after: .. term-product-id-start
           :end-before: .. term-product-id-end
 
-       .. important:: Predictive modeling requires a product catalog to contain between 20-2000 unique product IDs. A product ID is often associated with a stock keeping unit (SKU).
+       .. important:: Predictive modeling requires a product catalog to have 20-2000 unique product IDs. A product ID is often associated with a stock keeping unit (SKU).
 
           .. include:: ../../shared/terms.rst
              :start-after: .. term-sku-start
