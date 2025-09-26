@@ -1586,11 +1586,11 @@ The name of an SMS list in |destination-name| and managed by Amperity.
 
 .. setting-listrak-sms-phone-list-id-end
 
-**Include fields for segmentation**
+**Include attributes that match custom profile fields**
 
 .. setting-listrak-sms-enable-segmentation-start
 
-Select **Include fields for segmentation** to have Amperity sychronize all profile attributes in Amperity that match any system field or custom attributes defined in |destination-name|.
+Select **Include attributes that match custom profile fields** to have Amperity sychronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|. Custom attributes must match the name of the custom profile field in Listrak and must be a supported Listrak data.
 
 .. setting-listrak-sms-enable-segmentation-end
 
