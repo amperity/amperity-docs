@@ -13,11 +13,11 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send SMS audiences to Listrak.
+        Configure Amperity to send SMS profiles to Listrak.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send SMS audiences to Listrak.
+        Configure Amperity to send SMS profiles to Listrak.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -101,6 +101,11 @@ Get details
        `Custom SMS profile attributes <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| must be created in |destination-name| before Amperity can send custom attributes.
 
        * Up to fifty custom attributes may be defined in |destination-name|.
+
+         .. include:: ../../shared/destination_settings.rst
+            :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
+            :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
+
        * Custom attributes are defined in the |destination-name| user interface. Open the **Contacts** menu, and then choose **Profile Fields**. Click **New Profile Field** to add custom attributes.
        * System fields--**Birthday**, **Email Address**, **First Name**, **Last Name**, and **Postal Code**--are pre-defined by |destination-name| and cannot be modified.
        * **Phone Number** is the primary identifier for each SMS profile and is required.
@@ -170,7 +175,11 @@ Use system attributes to personalize messages, such as adding a first name to an
 
 Enable the **Include attributes that match custom profile fields** field to sychronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|.
 
-|destination-name| supports `up to fifty custom SMS profile attributes <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link|. Use these to define additional SMS profile attributes to support your brand's use cases.
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
+   :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
+
+|destination-name| supports up to fifty custom SMS profile attributes. Use these to define additional SMS profile attributes to support your brand's use cases.
 
 .. important:: Each custom attribute must be defined in |destination-name| before Amperity can send them with SMS profiles.
 
@@ -357,7 +366,9 @@ Add destination
              :start-after: .. setting-listrak-sms-enable-segmentation-start
              :end-before: .. setting-listrak-sms-enable-segmentation-end
 
-          .. important:: :ref:`Custom attributes must be configured in Listrak <destination-listrak-sms-attributes>` before Amperity can send custom attributes in SMS profiles.
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
+             :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
 
 
    * - .. image:: ../../images/steps-05.png
