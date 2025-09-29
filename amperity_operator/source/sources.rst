@@ -238,6 +238,10 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_square
 
+   .. grid-item-card:: Toast
+      :link-type: doc
+      :link: source_toast
+
    .. grid-item-card:: Vibes
       :link-type: doc
       :link: source_vibes
@@ -307,5 +311,6 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    SMG <source_smg>
    SoundCommerce <source_soundcommerce>
    Square <source_square>
+   Toast <source_toast>
    Vibes <source_vibes>
    Zendesk <source_zendesk>
