@@ -1574,7 +1574,7 @@ See common settings. This one defaults to "phone".
 
 A sender code associates your brand's |destination-name| account with SMS campaigns, such as broadcast, split tests, keyword, and subscription.
 
-The sender code is available from the |destination-name| user interface. Open the **Settings** menu, and then choose **Sender Code**. The sender code is the number shown alongside your brand's merchant name. Use the dropdown menu to view all sender codes associated with SMS-based profiles.
+The sender code is provided by |destination-name|. Ask your |destination-name| representative for the sender code if necessary.
 
 .. setting-listrak-sms-sender-code-id-end
 
