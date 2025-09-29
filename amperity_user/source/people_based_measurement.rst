@@ -105,7 +105,7 @@ Why people-based measurement works
 
 .. people-based-measurement-whyitworks-start
 
-Modern marketing tools increase the number of channels through which marketers can communicate with customers, provide access to highly-specific customer audiences, and make it possible to onboard previously unreachable sets of customers.
+Modern marketing tools increase the number of channels through which marketers can communicate with customers, provide access to highly specific customer audiences, and make it possible to onboard previously unreachable sets of customers.
 
 However, many of these modern marketing tools do not release contactability data, which makes it harder to measure the results of a channel-based campaign. For example, Facebook and Google provide the percentage of customers who were reachable, but do not provide data about which customers were served ad impressions or enhanced searches.
 

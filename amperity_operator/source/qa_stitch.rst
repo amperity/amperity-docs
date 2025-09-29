@@ -506,7 +506,7 @@ Presence of trivial duplicates
 
 .. qa-stitch-look-for-foreign-keys-trivial-duplicates-start
 
-In some cases, more than one nearly-identical record is passed to downstream Stitch processes. These nearly-identical records are referred to as "trivial duplicates".
+In some cases, more than one nearly identical record is passed to downstream Stitch processes. These nearly identical records are referred to as "trivial duplicates".
 
 For example, a situation where a high number of records are associated to the same foreign key, the same email address, and the same name, but many individual record are associated to a unique physical address.
 
@@ -527,11 +527,11 @@ This approach can help records survive blocking by ensuring groups of records ar
       * **rep_pk** is an identifier that represents the first grouping of records done by Stitch. This grouping is based on identical semantic patterns.
       * **rep_ds** is the datasource that is associated with the **rep_pk** column.
 
-      The combination of **rep_ds** and **rep_pk** represent nearly-identical records that were grouped together by Stitch early in the identity resolution process.
+      The combination of **rep_ds** and **rep_pk** represent nearly identical records that were grouped together by Stitch early in the identity resolution process.
 
-      .. note:: Nearly-identical records are also referred to as a "trivial duplicate.
+      .. note:: nearly identical records are also referred to as a "trivial duplicate.
 
-      All nearly-identical records are treated as a single record by downstream Stitch processes.
+      All nearly identical records are treated as a single record by downstream Stitch processes.
 
    .. include:: ../../amperity_reference/source/semantics.rst
       :start-after: .. semantics-key-foreign-trivial-duplicates-start

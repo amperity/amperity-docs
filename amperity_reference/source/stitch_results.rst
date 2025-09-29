@@ -450,7 +450,7 @@ You can view metrics for changes to records and Amperity IDs that may have occur
 
 This dialog box identifies the tenant, the time at which the job started, the ID for the Stitch report, and the Stitch ID, and then shows the following details about this Stitch run:
 
-* The collapsed ID count refers to the number of records present after nearly-identical records were removed.
+* The collapsed ID count refers to the number of records present after nearly identical records were removed.
 * The related pairs count shows number of unique record pairs that were identified by a blocking strategy.
 * The filtered related pairs count shows the number of unique record pairs that scored above the matching category threshold.
 

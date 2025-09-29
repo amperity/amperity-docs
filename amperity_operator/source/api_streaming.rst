@@ -166,7 +166,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       .. important:: You are the only person who have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
+       .. important:: You are the only person who have access to the newly generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 .. api-keys-access-tokens-generate-end
 

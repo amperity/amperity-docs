@@ -346,9 +346,9 @@ A feed would apply these semantic tags similar to:
 
 .. feeds-semantic-tags-context-start
 
-Amperity has :doc:`built-in semantic tags <semantics>` for personally-identifiable information (PII), transactions, and behaviors. Custom semantic tags may be applied to specific fields to account for the unique data that may exist within your brand's data.
+Amperity has :doc:`built-in semantic tags <semantics>` for personally identifiable information (PII), transactions, and behaviors. Custom semantic tags may be applied to specific fields to account for the unique data that may exist within your brand's data.
 
-Apply a similar pattern to every data source your tenant chooses to bring into Amperity. This will ensure that all semantically-tagged fields are analyzed by Amperity in exactly the same way.
+Apply a similar pattern to every data source your tenant chooses to bring into Amperity. This will ensure that all semantically tagged fields are analyzed by Amperity in exactly the same way.
 
 .. feeds-semantic-tags-context-end
 
@@ -1347,7 +1347,7 @@ Amperity requires each feed to specify a field that describes when each record w
 
 If you have no such updated field, you can choose to autogenerate a field, in which case the following logic is used to determine which record to keep in the case a primary key appears more than once:
 
-#. Records from newly-ingested data will always overwrite records that already exist in the domain table.
+#. Records from newly ingested data will always overwrite records that already exist in the domain table.
 
 #. If couriers are run over a date range, records from files associated with later dates will be retained.
 

@@ -142,7 +142,7 @@ Configure OAuth
 
 .. important:: When configuring OAuth for |destination-name| you must `select the portfolios <https://developers.criteo.com/marketing-solutions/docs/authorization-requests>`__ |ext_link| to which access will be granted.
 
-   Criteo will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly-generated link.
+   Criteo will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly generated link.
 
 .. destination-criteo-configure-oauth-must-select-portfolios-end
 

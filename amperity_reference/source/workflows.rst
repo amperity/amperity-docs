@@ -70,7 +70,7 @@ Workflow alerts are grouped into automated workflow alerts and workflow run aler
 
 * Configure recipients for automated workflow alerts when you want to monitor recurring automated workflow runs.
 
-* Subscribe to individual workflow run alerts when you want to subscribe to updates for individual manually-run workflows or if you want to subscribe to updates for a specific workflow.
+* Subscribe to individual workflow run alerts when you want to subscribe to updates for individual manually run workflows or if you want to subscribe to updates for a specific workflow.
 
 Workflow alerts may be configured to be :ref:`sent to an email address <workflows-howto-open-from-email-alerts>` or sent to :ref:`a channel in a Slack workspace <workflows-howto-open-from-slack-alerts>`. Click the link in the email or Slack message to open the workflow in Amperity, and then resolve the issue that caused the workflow alert.
 

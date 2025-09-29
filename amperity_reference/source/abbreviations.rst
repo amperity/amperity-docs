@@ -298,7 +298,7 @@ The following list combines industry-standard abbreviations and initialisms with
    * - **SSO**
      - Single Sign-On
    * - **SSP**
-     - Supply-side Platform
+     - Supply side Platform
    * - **TAA**
      - Trade Area Append
    * - **TAM**

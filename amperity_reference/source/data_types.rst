@@ -33,7 +33,7 @@ Array
 
 .. data-types-amperity-array-start
 
-A composite fully-structred data type that stores a sequence of elements where each element is a set of fields and values.
+A composite fully structured data type that stores a sequence of elements where each element is a set of fields and values.
 
 .. important:: Amperity will load a data source with an array to a domain table.
 
@@ -181,7 +181,7 @@ Map
 
 .. data-types-amperity-map-start
 
-A composite fully-structured data type that stores data as key-value pairs.
+A composite fully structured data type that stores data as key-value pairs.
 
 .. important:: Amperity will load a data source with a map to a domain table.
 
@@ -229,7 +229,7 @@ Struct
 
 .. data-types-amperity-struct-start
 
-A composite fully-structured data type that groups data as a sequence of fields within the structure.
+A composite fully structured data type that groups data as a sequence of fields within the structure.
 
 .. important:: Amperity will load a data source with a struct to a domain table.
 
@@ -257,7 +257,7 @@ Unsupported
 
 .. data-types-amperity-unsupported-start
 
-Semi-structured data types are unsupported and must be converted to a fully-structured data type.
+Semi-structured data types are unsupported and must be converted to a fully structured data type.
 
 .. admonition:: Unsupported data types
 
