@@ -51,11 +51,11 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**SMS list name**
+**SMS list ID**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-listrak-list-name-start
-   :end-before: .. setting-listrak-list-name-end
+   :start-after: .. setting-listrak-sms-phone-list-id-start
+   :end-before: .. setting-listrak-sms-phone-list-id-end
 
 **Sender code ID**
 
