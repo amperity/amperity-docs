@@ -1376,6 +1376,22 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :start-after: .. term-tiktok-ads-start
           :end-before: .. term-tiktok-ads-end
 
+
+   * - .. figure:: ../../amperity_base/source/_static/connector-toast.png
+          :figclass: light-only
+          :width: 140 px
+          :align: left
+
+       .. figure:: ../../amperity_base/source/_static/connector-toast.png
+          :figclass: dark-only
+          :width: 140 px
+          :align: left
+     - |fivetran_toast|
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-toast-start
+          :end-before: .. term-toast-end
+
+
    * - .. figure:: ../../amperity_base/source/_static/connector-twilio.svg
           :figclass: light-only
           :width: 140 px

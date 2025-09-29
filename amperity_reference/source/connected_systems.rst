@@ -963,6 +963,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
        Send offline events to track offline conversions from your marketing campaigns.
 
+   * - **Toast**
+     - |system-yes|
+     - 
+     - Pull data to Amperity from Toast using Fivetran or using a custom AWS Lambda function.
+
    * - **Tulip**
      - 
      - |system-yes|

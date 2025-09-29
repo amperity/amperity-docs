@@ -6615,6 +6615,15 @@ The title that precedes a full name connected with a unique Amperity ID. For exa
 .. term-title-ampid-end
 
 
+**Toast**
+
+.. term-toast-start
+
+Toast is a collection of cloud-based restaurant products and tools that integrates restaurant operations with the Toast point-of-sale app and Toast hardware to process orders and payments at restaurant locations.
+
+.. term-toast-end
+
+
 **token**
 
 .. term-token-start

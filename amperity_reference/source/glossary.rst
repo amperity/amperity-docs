@@ -4722,6 +4722,14 @@ T
       :end-before: .. term-title-ampid-end
 
 
+.. _t-toast:
+
+**Toast**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-toast-start
+      :end-before: .. term-toast-end
+
+
 .. _t-token:
 
 **token**
