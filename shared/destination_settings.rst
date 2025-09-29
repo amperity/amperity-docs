@@ -1574,15 +1574,17 @@ See common settings. This one defaults to "phone".
 
 A sender code associates your brand's |destination-name| account with SMS campaigns, such as broadcast, split tests, keyword, and subscription.
 
-The sender code is available from the |destination-name| user interface. Open the **Settings** menu, and then choose **Sender Code**. The sender code is the number shown alongside your brand's merchant name. Use the dropdown menu to view all sender codes associated with SMS-based profiles.
+The sender code is provided by |destination-name|. Ask your |destination-name| representative for the sender code if necessary.
 
 .. setting-listrak-sms-sender-code-id-end
 
-**Phone list ID**
+**SMS list ID**
 
 .. setting-listrak-sms-phone-list-id-start
 
 The name of an SMS list in |destination-name| and managed by Amperity.
+
+The SMS list ID is available from the |destination-name| user interface. Open the **Contacts** menu, and then choose **SMS Lists**. Open a list. The SMS list ID is available in the URL for the list after the equals symbol.
 
 .. setting-listrak-sms-phone-list-id-end
 
