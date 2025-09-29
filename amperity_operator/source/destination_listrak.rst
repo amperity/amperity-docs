@@ -24,30 +24,22 @@
         Configure destinations for Listrak
 
 ==================================================
-Configure destinations for Listrak (email)
+Configure destinations for Listrak Email
 ==================================================
 
 .. destination-listrak-about-start
 
-|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.
+|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage email-based audiences in |destination-name|.
 
 .. destination-listrak-about-end
 
 .. destination-listrak-context-start
 
-Amperity can manage `email <https://api.listrak.com/email>`__ |ext_link| lists in |destination-name|.
+Amperity can manage `email lists <https://api.listrak.com/email>`__ |ext_link| in |destination-name|.
 
 Amperity automatically adds a field attribute to all email lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
 
 .. destination-listrak-context-end
-
-.. destination-listrak-use-sftp-when-start
-
-.. note:: Use the :doc:`SFTP connector <destination_sftp>` to manage `Customer lists <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Product lists <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Order lists <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order item lists <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|.
-
-   Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
-
-.. destination-listrak-use-sftp-when-end
 
 
 .. _destination-listrak-get-details:
@@ -72,13 +64,17 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       You must configure this destination for email:
+       You must configure this destination for email lists:
 
        **Email client ID and client secret**
 
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-listrak-email-client-id-secret-start
              :end-before: .. credential-listrak-email-client-id-secret-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-listrak-client-id-secret-location-start
+             :end-before: .. credential-listrak-client-id-secret-location-end
 
        **About Listrak allowlists**
 
@@ -94,17 +90,18 @@ Get details
      - **Required configuration settings**
 
        **List name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-list-name-start
              :end-before: .. setting-listrak-list-name-end
 
-          .. note::  Lists are available from the **Contacts** page within the |destination-name| user interface.
+          .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Open the **Contacts** menu, and then choose **List Manager**.
 
-             |destination-name| prefers to use a single list for managing email addresses, which is named "Master List" by default within |destination-name|. This is the name of the list that is most often managed when data is sent to |destination-name| from Amperity.
-
-             If you are not sure which lists should be managed by Amperity, work with your Listrak representative to determine the best approach for list management.
+             .. include:: ../../shared/destination_settings.rst
+                :start-after: .. setting-listrak-default-list-name-start
+                :end-before: .. setting-listrak-default-list-name-end
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -117,29 +114,6 @@ Get details
        Use a query or a segment to build an audience to send to |destination-name|. The **email** field must be part of the audience. You may append additional profile attributes to the query or segment.
 
 .. destination-listrak-get-details-end
-
-
-.. _destination-listrak-sftp:
-
-Customers, products, and orders
-==================================================
-
-.. destination-listrak-sftp-start
-
-Configure Amperity to additional data sets--customers, products, orders, and order items--to |destination-name| using SFTP.
-
-.. note:: This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
-
-You can send the following sets of data to |destination-name|.
-
-#. `Customers <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|
-#. `Products <https://www.listrak.com/product-team/product-schema>`__ |ext_link|
-#. `Orders <https://www.listrak.com/product-team/order-schema>`__ |ext_link|
-#. `Order items <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|
-
-Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
-
-.. destination-listrak-sftp-end
 
 
 .. _destination-listrak-credentials:
@@ -197,6 +171,10 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-listrak-email-client-id-secret-start
              :end-before: .. credential-listrak-email-client-id-secret-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-listrak-client-id-secret-location-start
+             :end-before: .. credential-listrak-client-id-secret-location-end
 
 .. destination-listrak-credentials-steps-end
 
@@ -284,6 +262,7 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **List name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -302,6 +281,8 @@ Add destination
              :start-after: .. setting-listrak-field-group-start
              :end-before: .. setting-listrak-field-group-end
 
+          .. note::  Field groups are available from the **Contacts** menu within the |destination-name| user interface. Under **Email Contacts** open **Profile Fields**.
+
        **Segment name** (Required at orchestration)
 
           .. include:: ../../shared/destination_settings.rst
@@ -319,3 +300,26 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-listrak-add-steps-end
+
+
+.. _destination-listrak-sftp:
+
+Customers, products, and orders
+==================================================
+
+.. destination-listrak-sftp-start
+
+Configure Amperity to additional data sets--customers, products, orders, and order items--to |destination-name| using SFTP.
+
+.. note:: This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
+
+You can send the following sets of data to |destination-name|.
+
+#. `Customers <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|
+#. `Products <https://www.listrak.com/product-team/product-schema>`__ |ext_link|
+#. `Orders <https://www.listrak.com/product-team/order-schema>`__ |ext_link|
+#. `Order items <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link|
+
+Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
+
+.. destination-listrak-sftp-end

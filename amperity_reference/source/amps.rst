@@ -29,6 +29,7 @@ Consumption is measured in Amps and Storage (TB). Amps consumption is measured a
 
 .. amps-sandboxes-end
 
+
 .. _amps-consumption-overview:
 
 Consumption overview
@@ -50,6 +51,34 @@ Some examples of consumption drivers are:
 * The size of the compute resources that are available in your tenant.
 
 .. amps-review-consumption-end
+
+
+.. _amps-review-consumption-alerts:
+
+Consumption alerts
+--------------------------------------------------
+
+.. amps-review-consumption-alerts-start
+
+Configure Amperity to send email alerts when Amps consumption exceeds a configured threshold. Use Amps alerts to keep track of overall consumption, especially for when consumption is higher than expected. The consumption threshold may be adjusted over time.
+
+.. amps-review-consumption-alerts-end
+
+**To configure Amps consumption alerts**
+
+.. amps-review-consumption-alerts-steps-start
+
+#. Open the **Amps** page.
+#. Click the **Automated Amps alerts** link in the top right.
+#. In the **Automated Amps alerts** dialog box:
+
+   Configure a threshold for daily Amps consumption. A good starting threshold for Amps consumption is 150% of your tenant's average daily Amps consumption. For example, if your tenant consumes, on average, 100000 Amps per day, configure the initial threshold to be 150000. This threshold may be adjusted over time.
+
+   Enter one or more email addresses to which Amps alert email messages are sent. The email address may for individual users and it may be an alias.
+
+#. Click **Save**
+
+.. amps-review-consumption-alerts-steps-end
 
 
 .. _amps-review-consumption-compute:

@@ -567,7 +567,7 @@ Koupon Media
 
 .. _credential-listrak:
 
-Listrak
+Listrak Email
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
@@ -582,11 +582,31 @@ Listrak requires the following credentials:
    :start-after: .. credential-listrak-email-client-id-secret-start
    :end-before: .. credential-listrak-email-client-id-secret-end
 
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-listrak-client-id-secret-location-start
+   :end-before: .. credential-listrak-client-id-secret-location-end
+
+
+.. _credential-listrak-sms:
+
+Listrak SMS
+--------------------------------------------------
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-about-start
+   :end-before: .. destination-listrak-sms-about-end
+
+Listrak SMS requires the following credentials:
+
 **SMS client ID and client secret**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-listrak-sms-client-secret-start
-   :end-before: .. credential-listrak-sms-client-secret-end
+   :start-after: .. credential-listrak-sms-client-id-secret-start
+   :end-before: .. credential-listrak-sms-client-id-secret-end
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-listrak-client-id-secret-location-start
+   :end-before: .. credential-listrak-client-id-secret-location-end
 
 
 .. _credential-liveramp:

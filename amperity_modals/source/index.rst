@@ -53,6 +53,7 @@ Site Index
    destination-koupon-media
    destination-linkedin-dmp
    destination-listrak
+   destination-listrak-sms
    destination-liveramp
    destination-mailchimp
    destination-marketo

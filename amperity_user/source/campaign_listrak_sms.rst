@@ -1,33 +1,35 @@
 .. https://docs.amperity.com/user/
 
 
-.. |destination-name| replace:: Neustar
-.. |what-send| replace:: email address, phone numbers, and other profile attributes
-.. |what-enable| replace:: **email**, **phone**, and other profile attributes
-.. |attributes-sent| replace:: You must select the set of attributes that are sent to |destination-name|. Review your downstream requirements, open the **Edits attributes** page, and then select the attributes you want to send to |destination-name| for this campaign.
+.. |destination-name| replace:: Listrak SMS
+.. |what-send| replace:: SMS profiles
+.. |what-enable| replace:: **phone**
+.. |attributes-sent| replace:: |destination-name| requires phone numbers; you may include system and custom profile attributes.
 
 
 .. meta::
     :description lang=en:
-        Use segments and campaigns to send audiences from Amperity to Neustar.
+        Use segments and campaigns to send audiences from Amperity to Listrak SMS.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use segments and campaigns to send audiences from Amperity to Neustar.
+        Use segments and campaigns to send audiences from Amperity to Listrak SMS.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to Neustar
+        Send audiences to Listrak SMS
 
 ==================================================
-Send audiences to Neustar
+Send audiences to Listrak SMS
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-neustar-start
-   :end-before: .. term-neustar-end
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-about-start
+   :end-before: .. destination-listrak-sms-about-end
 
-.. note:: |destination-name| is also known as `TransUnion TruAudience <https://www.transunion.com/solution/truaudience>`__ |ext_link|.
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-context-start
+   :end-before: .. destination-listrak-sms-context-end
 
 .. include:: ../../shared/channels.rst
    :start-after: .. channels-overview-list-intro-start
@@ -42,7 +44,7 @@ Send audiences to Neustar
    :end-before: .. sendtos-ask-to-configure-campaigns-end
 
 
-.. _channel-neustar-build-segment:
+.. _channel-listrak-sms-build-segment:
 
 Build a segment
 ==================================================
@@ -53,14 +55,58 @@ Build a segment
 
 .. _attributes:
 
-.. admonition:: Which attributes should you use?
+.. channel-listrak-sms-configure-attributes-start
 
-   .. include:: ../../shared/channels.rst
-      :start-after: .. channels-build-segment-context-start
-      :end-before: .. channels-build-segment-context-end
+|destination-name| has the following requirements for attributes.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - **Amperity attribute**
+     - **Listrak profile field**
+
+   * - phone
+     - Phone
+
+       Required. The primary identifier for each SMS profile
+
+   * - email
+     - Email Address
+
+       A contact attribute.
+
+   * - given_name
+     - First Name
+
+       Use for personalization.
+
+   * - surname
+     - Last Name
+
+       Use for personalization.
+
+   * - postal
+     - Postal Code
+
+       Use for location targeting.
+
+   * - birthdate
+     - Birthday
+
+       Use for date-based segmentation.
+
+   * - Custom attributes
+     - Custom profile fields
+
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
+          :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
+
+.. channel-listrak-sms-configure-attributes-end
 
 
-.. _channel-neustar-build-campaign:
+.. _channel-listrak-sms-build-campaign:
 
 Add to a campaign
 ==================================================
@@ -69,11 +115,7 @@ Add to a campaign
    :start-after: .. channels-build-campaign-start
    :end-before: .. channels-build-campaign-end
 
-.. include:: ../../shared/channels.rst
-   :start-after: .. channels-build-campaign-important-filedrop-start
-   :end-before: .. channels-build-campaign-important-filedrop-end
-
-**To add Neustar to a campaign**
+**To add Listrak to a campaign**
 
 .. list-table::
    :widths: 10 90
@@ -98,9 +140,9 @@ Add to a campaign
           :start-after: .. channels-build-campaign-steps-destinations-start
           :end-before: .. channels-build-campaign-steps-destinations-end
 
-       .. image:: ../../images/mockup-campaigns-destination-neustar.png
+       .. image:: ../../images/mockup-campaigns-destination-listrak.png
           :width: 500 px
-          :alt: Add a destination for Neustar.
+          :alt: Add a destination for Listrak.
           :align: left
           :class: no-scaled-link
 
@@ -118,15 +160,12 @@ Add to a campaign
           :start-after: .. channels-build-campaign-steps-edit-attributes-start
           :end-before: .. channels-build-campaign-steps-edit-attributes-end
 
-       .. image:: ../../images/mockup-campaigns-attributes-files.png
+       .. image:: ../../images/mockup-campaigns-attributes-listrak.png
           :width: 500 px
-          :alt: Edit the attributes for campaigns that are sent to SFTP sites.
+          :alt: Edit the attributes for Listrak.
           :align: left
           :class: no-scaled-link
 
        .. include:: ../../shared/channels.rst
           :start-after: .. channels-build-campaign-steps-edit-attributes-note-start
           :end-before: .. channels-build-campaign-steps-edit-attributes-note-end
-
-
-

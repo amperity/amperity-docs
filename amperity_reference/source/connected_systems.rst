@@ -555,7 +555,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull email and SMS events data to Amperity.
 
-       Send email and SMS contact list updates to Listrak.
+       Send email lists and SMS profiles to Listrak.
 
    * - **LiveRamp**
      - |system-yes|
@@ -962,6 +962,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
        Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send offline events to track offline conversions from your marketing campaigns.
 
        Send offline events to track offline conversions from your marketing campaigns.
+
+   * - **Toast**
+     - |system-yes|
+     - 
+     - Pull data to Amperity from Toast using Fivetran or using a custom AWS Lambda function.
 
    * - **Tulip**
      - 

@@ -799,7 +799,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
      - |fivetran_magento_mysql|
 
        |fivetran_magento_mysql_amazon_rds|
-     - Magento is an ecommerce platform which provides online merchants with a flexible shopping cart system, and customization of their online store. Magento is now Adobe Commerce.
+     - Magento is an ecommerce platform which provides online merchants with a flexible shopping cart system, and customization of their online store. Magento is also known as Adobe Commerce.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-mailchimp.svg
           :figclass: light-only
@@ -1375,6 +1375,22 @@ The following table is a list of Fivetran-enabled data sources. You must first c
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-tiktok-ads-start
           :end-before: .. term-tiktok-ads-end
+
+
+   * - .. figure:: ../../amperity_base/source/_static/connector-toast.png
+          :figclass: light-only
+          :width: 140 px
+          :align: left
+
+       .. figure:: ../../amperity_base/source/_static/connector-toast.png
+          :figclass: dark-only
+          :width: 140 px
+          :align: left
+     - |fivetran_toast|
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-toast-start
+          :end-before: .. term-toast-end
+
 
    * - .. figure:: ../../amperity_base/source/_static/connector-twilio.svg
           :figclass: light-only

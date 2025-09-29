@@ -186,7 +186,7 @@ This series of diagrams steps through and shows you why your audience gets large
       :align: left
       :class: no-scaled-link
 
-   The results from the **Unified Itemized Transactions** table is smaller because only purchases that exist in both filters are returned. This means the results for **Has Not Purchased** will be larger, and now return "all of your customers who did not purchase a shirt from your website."
+   The results from the **Unified Itemized Transactions** table is smaller because only purchases that exist in both filters are returned. This means the results for **Has Not Purchased** will be larger and return "all of your customers who did not purchase a shirt from your website."
 
 #. The following diagram shows a *third* filter. Let's say this one adds product gender and that you chose "F":
 
@@ -196,7 +196,7 @@ This series of diagrams steps through and shows you why your audience gets large
       :align: left
       :class: no-scaled-link
 
-   The results from the **Unified Itemized Transactions** table is now much smaller and the results for **Has Not Purchased** have grown larger, and now return "all of your customers who did not purchase a women's shirt from your website."
+   The results from the **Unified Itemized Transactions** table is much smaller and the results for **Has Not Purchased** have grown larger and return "all of your customers who did not purchase a women's shirt from your website."
 
 .. attribute-purchase-behavior-has-not-purchased-howitworks-larger-end
 

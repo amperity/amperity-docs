@@ -187,7 +187,7 @@ Connect to Snowflake
 
 Amperity can be configured to share data usng tables or databases) directly with Snowflake. Microsoft Power BI can be configured to connect to a Snowflake data warehouse and use that data as a data source.
 
-Amperity offers additional services that allow Amperity to run as the Amperity Data Warehouse, which is synchronized to your Amperity tenant. This is, currently, run as a Snowflake data warehouse that is accessible to only your Amperity tenant.
+Amperity offers additional services that allow Amperity to run as the Amperity Data Warehouse, which is synchronized to your Amperity tenant, and run as a Snowflake data warehouse that is accessible to only your Amperity tenant.
 
 Microsoft Power BI is configured to connect directly to the Amperity Data Warehouse. Or you may send data directly to Snowflake by configuring the Snowflake destination to send data to your Snowflake tenant.
 

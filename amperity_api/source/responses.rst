@@ -140,7 +140,7 @@ The 5xx class of status codes indicate a fatal server error. When your integrati
      - An internal error occurred. Simplify the request or retry with exponential backoff.
 
    * - **503 Service Unavailable**
-     - The server is currently unavailable.
+     - The server is unavailable.
 
        .. tip:: Watch for 503 error codes and build a retry mechanism into the integrations or applications that interact with the Amperity API.
 

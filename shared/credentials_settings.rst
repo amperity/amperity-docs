@@ -1192,6 +1192,14 @@ The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send
 
 .. credential-listrak-allowlist-end
 
+**Client ID and client secret location**
+
+.. credential-listrak-client-id-secret-location-start
+
+.. tip:: The client ID and client secret are available from the **Integrations** menu in |destination-name|. Open the **Integrations** menu, select **Integrations Management**, and then from the **Integrations** page choose an integration. The client ID and client secret are on the **Setup** tab.
+
+.. credential-listrak-client-id-secret-location-end
+
 **Email client ID and client secret**
 
 .. credential-listrak-email-client-id-secret-start
@@ -1202,11 +1210,12 @@ A client ID and secret for an email integration that is already set up in |desti
 
 **SMS client ID and client secret**
 
-.. credential-listrak-sms-client-secret-start
+.. credential-listrak-sms-client-id-secret-start
 
 A client ID and secret for an SMS integration that is already set up in |destination-name|.
 
-.. credential-listrak-sms-client-secret-end
+.. credential-listrak-sms-client-id-secret-end
+
 
 
 

@@ -207,7 +207,7 @@ By the time you have finished building out a complete one-time buyer campaign yo
    :align: left
    :class: no-scaled-link
 
-Your welcome series has, by now, scaled into a multichannel approach, including digital advertising and direct mail when they can help drive incremental revenue. Dig deeper into the underlying trends that drive one-time buyer behavior, such as poor product quality, limited availability, or suboptimal customer experiences. 
+Your welcome series has scaled into a multichannel approach, including digital advertising and direct mail when they can help drive incremental revenue. Dig deeper into the underlying trends that drive one-time buyer behavior, such as poor product quality, limited availability, or suboptimal customer experiences. 
 
 Each of these audiences should be associated with relevant messaging and the right offer for that stage in the one-time buyer lifecycle.
 

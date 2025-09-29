@@ -221,7 +221,7 @@ Extending models
 
 You can build predictive models from the **Customer 360** page. Each database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You can only activate one churn or pCLV model per database, but you may have any number of product affinity and event propensity models.
 
-.. warning:: Currently, even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** in your database due to automated back-end validations.
+.. warning:: Even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** in your database due to automated back-end validations.
 
 Each predictive model allows for additional fields to be added to support your brand's use cases. There are two approaches:
 

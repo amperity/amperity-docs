@@ -112,7 +112,7 @@ The following table describes how Databricks data types map to Amperity data typ
 
    * - `DECIMAL (p,s) <https://docs.databricks.com/aws/en/sql/language-manual/data-types/decimal-type>`__ |ext_link|
 
-       A number with a specified maximum precision and fixed scale. Precision is between 1-38 and scale is the number of digits to the right of the decimal point. Default precision is 10.
+       A number with a specified maximum precision and fixed scale. Precision is 1-38 and scale is the number of digits to the right of the decimal point. Default precision is 10.
 
      - **Decimal**
 

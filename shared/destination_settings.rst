@@ -1515,7 +1515,7 @@ The name of segment in |destination-name|.
 
 
 
-**LISTRAK**
+**LISTRAK** (email)
 
 Settings unique to Listrak.
 
@@ -1533,23 +1533,77 @@ The name of a profile field group in |destination-name|, from which the collecti
 
 **List name**
 
-.. vale off
-
 .. setting-listrak-list-name-start
 
-The name of the list managed in |destination-name|. This is often, but not always, named "Master List".
+The name of the email list in |destination-name| and managed by Amperity.
 
 .. setting-listrak-list-name-end
-
-.. vale on
 
 **Segment name**
 
 .. setting-listrak-segment-name-start
 
-The name of segment in |destination-name| managed by Amperity.
+The name of a segment in |destination-name| managed by Amperity.
 
 .. setting-listrak-segment-name-end
+
+**Listrak default list name** (applies to SMS also)
+
+.. setting-listrak-default-list-name-start
+
+|destination-name| uses a list named "Master List" by default, but allows custom lists to be created. Verify the name of the list in |destination-name| before configuring this destination in Amperity.
+
+If you are not sure which lists should be managed by Amperity, work with your Listrak representative to determine the best approach for list management.
+
+.. setting-listrak-default-list-name-end
+
+
+
+
+**LISTRAK** (SMS)
+
+Settings unique to Listrak.
+
+**Audience primary key**
+
+See common settings. This one defaults to "phone".
+
+**Sender code ID**
+
+.. setting-listrak-sms-sender-code-id-start
+
+A sender code associates your brand's |destination-name| account with SMS campaigns, such as broadcast, split tests, keyword, and subscription.
+
+The sender code is available from the |destination-name| user interface. Open the **Settings** menu, and then choose **Sender Code**. The sender code is the number shown alongside your brand's merchant name. Use the dropdown menu to view all sender codes associated with SMS-based profiles.
+
+.. setting-listrak-sms-sender-code-id-end
+
+**Phone list ID**
+
+.. setting-listrak-sms-phone-list-id-start
+
+The name of an SMS list in |destination-name| and managed by Amperity.
+
+.. setting-listrak-sms-phone-list-id-end
+
+**Include attributes that match custom profile fields**
+
+.. setting-listrak-sms-enable-segmentation-start
+
+Select **Include attributes that match custom profile fields** to have Amperity sychronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|. Custom attributes must match the name of the custom profile field in Listrak and must be a supported Listrak data.
+
+.. setting-listrak-sms-enable-segmentation-end
+
+.. setting-listrak-sms-enable-segmentation-caveat-start
+
+.. important:: Custom attributes must be `configured as custom profile fields <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| before Amperity can send custom attributes with |destination-name| SMS profiles.
+
+   The attribute name in Amperity **must** match the profile field name in |destination-name|. Attribute names are not case-sensitive.
+
+   All custom attributes sent by Amperity **must** match a custom profile field that exists in |destination-name|.
+
+.. setting-listrak-sms-enable-segmentation-caveat-end
+
 
 
 

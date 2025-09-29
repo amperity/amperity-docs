@@ -239,9 +239,13 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_klaviyo
 
-   .. grid-item-card:: Listrak
+   .. grid-item-card:: Listrak Email
       :link-type: doc
       :link: campaign_listrak
+
+   .. grid-item-card:: Listrak SMS
+      :link-type: doc
+      :link: campaign_listrak_sms
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
@@ -322,7 +326,8 @@ Send campaigns to any of the following marketing applications and workflows.
    Google Cloud Storage <campaign_google_cloud_storage>
    HubSpot <campaign_hubspot>
    Klaviyo <campaign_klaviyo>
-   Listrak <campaign_listrak>
+   Listrak Email <campaign_listrak>
+   Listrak SMS <campaign_listrak_sms>
    LiveRamp <campaign_liveramp>
    Meta Ads Manager <campaign_meta_ads_manager>
    Microsoft Ads <campaign_microsoft_ads>

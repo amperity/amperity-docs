@@ -34,7 +34,7 @@ This is part two of a series of topics that describes how this works.
 
 .. orchestrations-howitworks-steps-start
 
-The following sections describe the steps you'll follow to use an orchestration to send the results of a query to a destination.
+The following sections describe the steps you will follow to use an orchestration to send the results of a query to a destination.
 
 .. orchestrations-howitworks-steps-end
 
