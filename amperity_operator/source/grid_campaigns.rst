@@ -172,7 +172,7 @@ Configure Amperity to send campaigns to any marketing workflow.
 
    .. grid-item-card:: Listrak SMS
       :link-type: doc
-      :link: campaign_listrak
+      :link: campaign_listrak_sms
 
    .. grid-item-card:: LiveRamp
       :link-type: doc

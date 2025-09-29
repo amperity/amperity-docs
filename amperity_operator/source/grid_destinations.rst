@@ -212,7 +212,7 @@ Set up connections to send data from Amperity to other marketing applications, t
 
    .. grid-item-card:: Listrak SMS
       :link-type: doc
-      :link: destination_listrak
+      :link: destination_listrak_sms
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
