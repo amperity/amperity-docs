@@ -114,13 +114,13 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-list-name-start
-             :end-before: .. setting-listrak-list-name-end
+             :start-after: .. setting-listrak-sms-phone-list-id-start
+             :end-before: .. setting-listrak-sms-phone-list-id-end
 
           .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Under **SMS Contacts** open the **Contacts** menu, and then choose **SMS Lists**.
 
@@ -312,13 +312,13 @@ Add destination
           :start-after: .. campaigns-steps-settings-start
           :end-before: .. campaigns-steps-settings-end
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-list-name-start
-             :end-before: .. setting-listrak-list-name-end
+             :start-after: .. setting-listrak-sms-phone-list-id-start
+             :end-before: .. setting-listrak-sms-phone-list-id-end
 
           .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Open the **Contacts** menu, and then choose **SMS Lists**.
 

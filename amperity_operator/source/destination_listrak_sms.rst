@@ -118,15 +118,13 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-list-name-start
-             :end-before: .. setting-listrak-list-name-end
-
-          .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Under **SMS Contacts** open the **Contacts** menu, and then choose **SMS Lists**.
+             :start-after: .. setting-listrak-sms-phone-list-id-start
+             :end-before: .. setting-listrak-sms-phone-list-id-end
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-default-list-name-start
@@ -333,13 +331,13 @@ Add destination
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-list-name-start
-             :end-before: .. setting-listrak-list-name-end
+             :start-after: .. setting-listrak-sms-phone-list-id-start
+             :end-before: .. setting-listrak-sms-phone-list-id-end
 
           .. note::  Lists are available from the **Contacts** menu within the |destination-name| user interface. Open the **Contacts** menu, and then choose **SMS Lists**.
 
