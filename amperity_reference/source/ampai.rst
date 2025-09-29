@@ -44,7 +44,7 @@ Getting good results with AmpAI
 
 .. ampai-good-results-start
 
-To achieve optimal results when using **AmpAI**, follow these best practices for structing your prompts:
+To achieve optimal results when using **AmpAI**, follow these best practices for structuring your prompts:
 
 * **Understand the question's scope**
 
@@ -74,7 +74,7 @@ About the custom prompt
 
 .. ampai-custom-prompt-start
 
-The custom prompt in **AmpAI** enables your brand to tailor responses to align with specific business logic. Custom prompts apply to all user queries within AmpAI and can be updated to include:
+The custom prompt in **AmpAI** enables your brand to tailor responses to align with specific business logic. Custom prompts apply to all user queries within AmpAI and Segments AI Assistant, and can be updated to include:
 
 * Customer definitions, such as defining how your brand interprets retention metrics
 * Priority tables and fields, such as specifying priority for default tables and fields that are used with loyalty-related queries
@@ -86,6 +86,13 @@ While **AmpAI** works effectively out of the box, updating the custom prompt is 
 
 .. ampai-custom-prompt-end
 
+.. ampai-custom-prompt-database-level-custom-prompting-note-start
+
+.. tip:: **Database-level custom prompting**
+
+         You can specify different custom prompts to apply to different databases. For example, in the case of a multi-brand tenant, users can retain brand-specific language and business rules across different customer databases.
+
+.. ampai-custom-prompt-database-level-custom-prompting-note-end
 
 .. _ampai-configure:
 
@@ -135,6 +142,21 @@ To maximize the effectiveness of custom prompts:
 * **Test iteratively**
 
   Make small incremental changes to the custom prompt and test after each modification to help identify what works and what needs additional refinement.
+
+* **Provide guidance for different databases**
+
+  Give clear instructions to set out different parameters by database. For example:
+  
+  .. code-block:: none
+     
+	 When working with [Brand A Database]:
+	  - Use "loyalty members" instead of "customers"
+	  - High value customers are those in the "platinum" and "gold" loyalty tiers
+	  - Our fiscal year starts June 1st. Use our fiscal calendar when fulfilling requests about "this year" or "last year"
+
+	  When working with [Brand B Database]:
+	  - Use "subscribers" for email contacts
+	  - Focus on engagement metrics rather than purchase behavior 
 
 .. ampai-configure-custom-prompt-end
 
