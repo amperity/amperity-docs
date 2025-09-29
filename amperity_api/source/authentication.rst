@@ -120,6 +120,22 @@ Generate access token
    :end-before: .. api-keys-access-tokens-generate-end
 
 
+.. _authentication-access-token-oauth:
+
+Get OAuth credentials
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/api.rst
+   :start-after: .. api-keys-api-token-oauth-start
+   :end-before: .. api-keys-api-token-oauth-end
+
+**To get OAuth credentials for an API key**
+
+.. include:: ../../amperity_reference/source/api.rst
+   :start-after: .. api-keys-api-token-oauth-steps-start
+   :end-before: .. api-keys-api-token-oauth-steps-end
+
+
 .. _authentication-access-token-revoke:
 
 Revoke access token
