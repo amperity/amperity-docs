@@ -118,7 +118,7 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 
@@ -333,7 +333,7 @@ Add destination
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 

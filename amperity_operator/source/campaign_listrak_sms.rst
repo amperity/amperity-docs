@@ -114,7 +114,7 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 
@@ -312,7 +312,7 @@ Add destination
           :start-after: .. campaigns-steps-settings-start
           :end-before: .. campaigns-steps-settings-end
 
-       **SMS list name**
+       **SMS list ID**
 
           |checkmark-required| **Required**
 

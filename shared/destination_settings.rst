@@ -1578,11 +1578,13 @@ The sender code is available from the |destination-name| user interface. Open th
 
 .. setting-listrak-sms-sender-code-id-end
 
-**Phone list ID**
+**SMS list ID**
 
 .. setting-listrak-sms-phone-list-id-start
 
-The name of an SMS list in |destination-name| and managed by Amperity.
+The ID of an SMS list in |destination-name| and managed by Amperity.
+
+The ID is available from the **List ID Details** page. Click **Help and Support**, and then choose **API ID Information**. Use the dropdown list at the top of the page to select an SMS list. The **ListID** field shows the SMS list ID. For example: "312345".
 
 .. setting-listrak-sms-phone-list-id-end
 
