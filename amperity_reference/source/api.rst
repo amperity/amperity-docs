@@ -151,6 +151,7 @@ API keys are managed directly from the Amperity UI.
 
 * :ref:`Add API keys <api-keys-api-token-add>`
 * :ref:`Delete API keys <api-keys-api-token-delete>`
+* :ref:`Get OAuth credentials <api-keys-api-token-oauth>`
 * :ref:`Rotate API keys <api-keys-api-token-rotate>`
 
 .. api-keys-api-tokens-end
@@ -372,6 +373,88 @@ In situations where rotating an access key isn't enough, you can delete an API k
           :class: no-scaled-link
 
 .. api-keys-api-token-delete-end
+
+
+.. _api-keys-api-token-oauth:
+
+Get OAuth credentials
+--------------------------------------------------
+
+.. api-keys-api-token-oauth-start
+
+Every configured API token has an access token to enable using OAuth.
+
+.. api-keys-api-token-oauth-end
+
+**To get OAuth credentials for an API key**
+
+.. api-keys-api-token-oauth-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: left
+          :class: no-scaled-link
+     - Open the **Settings** page, and then select the **Security** tab.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: left
+          :class: no-scaled-link
+     - Under **API keys** find the index, and then from the **Actions** menu select "Get OAuth credentials".
+
+       The **OAuth credentials** dialog box opens and shows the following credential details:
+
+       #. Client ID.
+       #. Client secret.
+       #. Token endpoint.
+
+       Use these values to configure automated workflows to use OAuth when accessing the API for which this token allows access.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step 3.
+          :align: left
+          :class: no-scaled-link
+     - Use the client ID and client secret to send an HTTP POST request to the token endpoint. This will return an access token.
+
+       **Example request details**
+
+       .. code-block:: none
+
+          POST /api/v0/oauth2/token HTTP/1.1
+          Host: acme.amperity.com
+          Content-Type: application/x-www-form-urlencoded
+          X-Amperity-Tenant: acme2
+
+          grant_type=client_credentials
+          &client_id=ClientId
+          &client_secret=ClientSecret
+
+       The 200 OK response will be similar to
+
+       .. code-block:: json
+
+          {
+            "access_token": "N88Du6L1xsmA5DRZrtxSGYmbHP",
+            "expires_in": 3600,
+            "token_type": "Bearer"
+          }
+
+       Where:
+
+       * ``access_token`` is an access token that can authenticate requests to the Amperity API. Use this access token in the HTTP Authorization header.
+       * ``expires_in`` is the amount of time, after which, the access token expires.
+       * ``token_type`` should always be set to "Bearer".
+
+.. api-keys-api-token-oauth-steps-end
 
 
 .. _api-keys-api-token-rotate:
