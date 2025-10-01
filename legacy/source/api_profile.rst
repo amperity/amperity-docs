@@ -1343,10 +1343,10 @@ Build a query that includes a hashed email address. For example:
 .. code-block:: sql
 
    SELECT
-     TO_HEX(SHA256(TO_UTF8(UPPER(TRIM(email))))) AS hashed_email
-     ,given_name AS first_name
-     ,surname AS last_name
-     ,postal AS zip_code
+     HEX(SHA2(UPPER(TRIM(email)), 256)) AS hashed_email,
+     given_name AS first_name,
+     surname AS last_name,
+     postal AS zip_code
    FROM Merged_Customers
 
 Use the hashed email address as the lookup key for the endpoint, generate the index, and then build workflows that your brand can use to personalize website, app, and browser experiences for your customers.
