@@ -302,7 +302,7 @@ A tenant has three sources of customer records represented by tables 1, 2, and 3
 * Overall deduplication rate is 32.5%
 * Individual deduplication rates for three customer records are 7.7%, 6.6%, and 0%
 
-How is this possible? Let's walk through it.
+How is this possible?
 
 The overall deduplication rate (32.5%) represents the total number of records relative to the number of Amperity IDs. There can be a low deduplication rate on individual tables, but high connectivity between tables.
 
@@ -338,7 +338,7 @@ Next compare the overlap between customer records 1 and 3 by hovering over custo
      100 * [(117k - 108k) / 117k] = 7.7%
 
 
-.. important:: Deduplication rate depends! The previous example shows deduplication rate for a database that does not use customer keys:
+.. important:: Deduplication rate depends on many factors. The previous example shows deduplication rate for a database that does not use customer keys:
 
    ::
 
@@ -450,7 +450,7 @@ You can view metrics for changes to records and Amperity IDs that may have occur
 
 This dialog box identifies the tenant, the time at which the job started, the ID for the Stitch report, and the Stitch ID, and then shows the following details about this Stitch run:
 
-* The collapsed ID count refers to the number of records present after nearly-identical records were removed.
+* The collapsed ID count refers to the number of records present after nearly identical records were removed.
 * The related pairs count shows number of unique record pairs that were identified by a blocking strategy.
 * The filtered related pairs count shows the number of unique record pairs that scored above the matching category threshold.
 

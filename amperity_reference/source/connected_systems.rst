@@ -128,7 +128,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Amazon Marketing Cloud**
      - 
      - |system-yes|
-     - Amperity can send data to your brand’s instance of Amazon Marketing Cloud (AMC) when `the instance name is configured alongside the demand-side platform (DSP) advertiser <https://docs.amperity.com/operator/destination_amazon_ads.html#about-amazon-marketing-cloud-amc>`__ to which Amperity sends data.
+     - Amperity can send data to your brand's instance of Amazon Marketing Cloud (AMC) when `the instance name is configured alongside the demand-side platform (DSP) advertiser <https://docs.amperity.com/operator/destination_amazon_ads.html#about-amazon-marketing-cloud-amc>`__ to which Amperity sends data.
 
    * - **Amazon Pinpoint**
      - 

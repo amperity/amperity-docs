@@ -37,7 +37,7 @@ The right mix of creative advertising, physical design of what is sent to the cu
 Use householding to support a wide variety of householding use cases, such as:
 
 * Deduplicating physical addresses to ensure that only one catalog is sent to each address
-* Sending high-value customers periodic direct mail offers that are different from the quarterly catalogue
+* Sending high-value customers periodic direct mail offers that are different from the quarterly catalog
 * Expanding digital marketing campaigns to include non-digital customers and customers who do not have an email address
 * Aligning householding use cases to your larger marketing strategy
 

@@ -110,7 +110,7 @@ Get details
 
 .. destination-microsoft-dynamics-get-details-account-info-start
 
-.. admonition:: How do I find |destination-name| account information?
+.. admonition:: How to find |destination-name| account information?
 
    You can find all of this information from your |destination-name| instance in Microsoft Azure.
 

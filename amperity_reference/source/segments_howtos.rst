@@ -1291,7 +1291,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 .. segments-use-relative-dates-steps-start
 
 #. From the **Segment Editor**, click **Add condition**, and then choose an attribute with a date or datetime value.
-#. Select the **Use relative dates** option, and then specify the relative dates that match the condition you selected. For example: “30 days ago”.
+#. Select the **Use relative dates** option, and then specify the relative dates that match the condition you selected. For example: "30 days ago".
 #. Click **Refresh** to validate the segment.
 #. Click **Save As**.
 

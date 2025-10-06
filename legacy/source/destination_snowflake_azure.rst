@@ -125,7 +125,7 @@ Get details
 
 .. destination-snowflake-azure-get-details-account-info-start
 
-.. admonition:: How do I find Snowflake account information?
+.. admonition:: How to find Snowflake account information?
 
    You can find all of this information after you log into Snowflake.
 

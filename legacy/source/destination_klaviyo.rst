@@ -114,7 +114,7 @@ Get details
 
 .. destination-klaviyo-get-details-account-info-start
 
-.. admonition:: How do I find Klaviyo account, private API key, and audience information?
+.. admonition:: How to find Klaviyo account, private API key, and audience information?
 
    You can find all of this information after you log into Klaviyo.
 

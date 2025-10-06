@@ -81,7 +81,7 @@ Get details
 
 .. destination-google-cloud-storage-get-details-account-info-start
 
-.. admonition:: How do I find |destination-name| account information?
+.. admonition:: How to find |destination-name| account information?
 
    You can find all of this information after you log into |destination-name|.
 

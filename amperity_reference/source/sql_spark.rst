@@ -779,7 +779,7 @@ Common causes of skew include:
 
   .. code-block:: none
 
-     COALESCE(NULLIF({field}, ‘{bad_value}’), _uuid_pk)
+     COALESCE(NULLIF({field}, ‘{bad_value}'), _uuid_pk)
 
   .. note:: Replacing a value that causes skew with primary key works because:
 
@@ -1248,7 +1248,7 @@ FULL OUTER JOIN
 
 .. sql-spark-full-outer-join-clause-start
 
-A **FULL OUTER JOIN** returns all of the rows in both tables A and B, no matter whether there’s a row in the other table with the same key value. Where there is a matching key value, columns from the other table will be brought in, where there’s no matching value for key columns from the other table will be set to **NULL**. While there is no filtering applied in a **FULL OUTER JOIN**, rows that match on the key are only included once, so the row count of the results will always be at most equal to the count of table A + the count of table B, and will usually be considerably smaller.
+A **FULL OUTER JOIN** returns all of the rows in both tables A and B, no matter whether there's a row in the other table with the same key value. Where there is a matching key value, columns from the other table will be brought in, where there's no matching value for key columns from the other table will be set to **NULL**. While there is no filtering applied in a **FULL OUTER JOIN**, rows that match on the key are only included once, so the row count of the results will always be at most equal to the count of table A + the count of table B, and will usually be considerably smaller.
 
 .. sql-spark-full-outer-join-clause-end
 
@@ -1260,7 +1260,7 @@ INNER JOIN
 
 .. sql-spark-inner-join-clause-start
 
-An **INNER JOIN** returns only those rows where there are values for the field key in both tables. Any rows in either table A or table B that have a value for key that doesn’t appear in the other table are not returned.
+An **INNER JOIN** returns only those rows where there are values for the field key in both tables. Any rows in either table A or table B that have a value for key that doesn't appear in the other table are not returned.
 
 .. sql-spark-inner-join-clause-end
 

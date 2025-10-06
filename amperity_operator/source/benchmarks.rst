@@ -111,7 +111,7 @@ Revisit benchmarks
 
 You should revisit benchmark scores on a regular basis. The frequency is determined by the current state of your tenant. For example:
 
-#. A newly-configured tenant should have benchmark scores reviewed after every Stitch run. Reduce the frequency when you are satisfied with each benchmark score.
+#. A newly configured tenant should have benchmark scores reviewed after every Stitch run. Reduce the frequency when you are satisfied with each benchmark score.
 #. Review benchmark scores after adding a data source that contains customer profile data that is used with identity resolution.
 #. On a production tenant with consistent data sources you may revisit benchmark scores less frequently.
 

@@ -127,7 +127,7 @@ The following table lists the operators that are available to these attributes.
 
        .. tip:: Use the **Current Balance Expiration Datetime**, **Current Tier Expiration Datetime**, **Latest Opted Out Datetime**, **Latest Opted In Datetime**, and **Current Tier Start Datetime** attributes with this condition to return audiences based on the selected date.
 
-          For example, the **Current Tier Expiration Datetime** attribute returns an audience based on the selected date before which a customer’s membership in their current rewards tier will end.
+          For example, the **Current Tier Expiration Datetime** attribute returns an audience based on the selected date before which a customer's membership in their current rewards tier will end.
 
    * - **is between**
      - |attribute-recommended| **More useful**

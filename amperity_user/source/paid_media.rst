@@ -296,7 +296,7 @@ Measure campaigns
 
 .. paid-media-measure-start
 
-Measuring the success of your paid media campaigns can be a challenge! Many of the channels are protective of the data around the performance of your campaigns and, at best, provide limited access to reporting data.
+Measuring the success of your paid media campaigns can be a challenge. Many of the channels are protective of the data around the performance of your campaigns and, at best, provide limited access to reporting data.
 
 You can measure campaign efficacy using a combination of data within Amperity and data from outside parties.
 

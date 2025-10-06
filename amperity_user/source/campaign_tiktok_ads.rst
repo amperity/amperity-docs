@@ -41,7 +41,7 @@ Use segments to build high-value audiences for retargeting and lookalike modelin
 
 .. channel-tiktok-ads-important-one-time-delivery-start
 
-.. caution:: To refresh audiences from Amperity, new one-time segment deliveries need to be created and uploaded to the client’s TikTok account.
+.. caution:: To refresh audiences from Amperity, new one-time segment deliveries need to be created and uploaded to the client's TikTok account.
 
 .. channel-tiktok-ads-important-one-time-delivery-end
 

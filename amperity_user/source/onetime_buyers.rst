@@ -52,8 +52,6 @@ This can be a big challenge.
              :class: no-scaled-link
         - One-time buyers are a challenge every marketer faces. This book offers strategic and tactical advice for how to address this challenge head-on.
 
-          First, we describe how we got here. Next, we discuss the building blocks you need. Then we outline methods for analyzing one-time buyers and how to build programs based on those insights. We conclude with measurement techniques that can help you measure both top-line and customer lifetime value.
-
           `Open the PDF to read the whole book <https://docs.amperity.com/downloads/pdf/One%20and%20(not)%20done.pdf>`__ |ext_link|
 
 .. onetime-buyers-custora-end
@@ -70,7 +68,7 @@ A one-time buyer campaign, also known as a "win-back campaign", is a campaign th
 
 A one-time buyer campaign must first identify your customers who have purchased only one time, and then from that list of customers devise a strategy based on a combination of products, time windows, lookalike audiences, and marketing goals that will attempt to reach specific groups of one-time buyers with the right offers that encourage them to become repeat customers.
 
-.. tip:: One important behavior to keep an eye on is, for those customers that *do* make their second purchase, measure the amount of time that occurred between their first and their second orders *along with* the type of offer that customer responded to.
+.. tip:: One behavior to look for is customers that, for customers who *do* make their second purchase, measure the amount of time that occurred between their first and second orders *along with* the type of offer to which each customer responded.
 
 .. onetime-buyers-whatis-end
 
@@ -82,7 +80,7 @@ How to build a one-time buyer campaign
 
 .. onetime-buyers-howto-start
 
-Brands love their customers, but it doesn’t always go both ways. Many customers engage once, but never come back. Some customers only buy on discount and some are seasonal shoppers. Others will stick with you for a while, and will then switch brands.
+Brands love their customers, but it doesn't always go both ways. Many customers engage once, but never come back. Some customers only buy on discount and some are seasonal shoppers. Others will stick with you for a while, and will then switch brands.
 
 It can be hard to make a connection and the window of opportunity is often short. It gets harder if you don't know who your customers are and what motivates them.
 

@@ -82,7 +82,7 @@ The following sections describe using the visual **Query Editor** to build a que
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done! Give your query a name that clearly describes the purpose. For example: "One and Done".
+     - You're done. Give your query a name that clearly describes the purpose. For example: "One and Done".
 
        Click the **Activate** button in the top right corner of the visual **Query Editor**. 
 

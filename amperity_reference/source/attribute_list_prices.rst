@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        The manufacturer’s suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
+        The manufacturer's suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The manufacturer’s suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
+        The manufacturer's suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

@@ -144,9 +144,9 @@ For those semantic tags, the feed should apply semantic tags like this:
    * - date
      - birthdate
 
-This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically-tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
+This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
 
-Amperity has built-in semantic tags for personally-identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
+Amperity has built-in semantic tags for personally identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
 
 .. feeds-semantic-tagging-end
 

@@ -19,7 +19,7 @@ Predictive models
 
 .. models-about-start
 
-Amperity predictive modeling is based on your brand’s customer profiles and behavioral history to give you insights into customer purchasing behavior.
+Amperity predictive modeling is based on your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior.
 
 .. models-about-end
 

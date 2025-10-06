@@ -17,9 +17,9 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-amperity:
 
 **Amperity** vs. **Amperity's**
-   You should almost never write |company_name| (or any trademarked term) as a possessive, such as "Amperity's Stitch process is the best!". Rewrite until |company_name| stands alone, such as "The best Stitch offerings are from |company_name|!"
+   You should almost never write |company_name| (or any trademarked term) as a possessive, such as "Amperity's Stitch process is the best." Rewrite until |company_name| stands alone, such as "The best Stitch offerings are from |company_name|."
 
-   .. note:: This is one of the reasons why the technical documentation uses a token for |company_name|: ``|company_name|``. Sure, you have to type more characters, but it also helps make sure that the company name is used correctly. (Plus, in the event of a merger or company rename--and we all know that will *never* happen!--we can just change the token.)
+   .. note:: This is one of the reasons why the technical documentation uses a token for |company_name|: ``|company_name|``. Sure, you have to type more characters, but it also helps make sure that the company name is used correctly. (Plus, in the event of a merger or company rename--and we all know that will *never* happen--we can just change the token.)
 
 
 .. _term-azure:

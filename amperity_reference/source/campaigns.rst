@@ -1390,7 +1390,7 @@ You can delete a campaign on the **Campaigns** page.
 
 #. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Delete**.
-#. The **Delete Campaign** dialogue box opens. Click **Confirm**.
+#. The **Delete Campaign** dialog box opens. Click **Confirm**.
 
 The campaign no longer appears on the **Campaigns** page.
 
@@ -1920,7 +1920,7 @@ You can unschedule a campaign on the **Campaigns** page.
 
 #. From the **Campaigns** page, open the |fa-kebab| menu for a scheduled campaign.
 #. On the menu that appears, click **Unschedule and edit**.
-#. The **Unschedule and Edit** dialogue box appears. Click **Confirm**.
+#. The **Unschedule and Edit** dialog box appears. Click **Confirm**.
 
 .. campaigns-unschedule-campaign-steps-end
 
@@ -1966,7 +1966,7 @@ You can view a campaign's history on the **Campaigns** page.
 #. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. On the menu that appears, click **History**.
 
-The **Campaign History** dialogue box appears displaying the campaign's history details.
+The **Campaign History** dialog box appears displaying the campaign's history details.
 
 .. campaigns-view-campaign-steps-end
 

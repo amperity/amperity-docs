@@ -989,7 +989,7 @@ Some use cases require a database table to have different information in a datab
 #. Set **Build Mode** to "Custom SQL".
 #. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 
-   .. important:: The custom definition must refer to the original table, that is “must refer to the table that is being overridden”. In some cases, this requires using a placeholder reference. For example:
+   .. important:: The custom definition must refer to the original table, that is "must refer to the table that is being overridden". In some cases, this requires using a placeholder reference. For example:
 
       .. code-block:: sql
 

@@ -351,7 +351,7 @@ Answers will include suggestsions similar to:
 
 #. Lapsed but Historically Loyal Customers:
 
-   Identify customers who have bought jeans repeatedly in the past but haven’t purchased any recently—they may respond well to a “welcome back” campaign for new jeans.
+   Identify customers who have bought jeans repeatedly in the past but haven't purchased any recently—they may respond well to a "welcome back" campaign for new jeans.
 
 #. Customer Lifecycle Status:
 

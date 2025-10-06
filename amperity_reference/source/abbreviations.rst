@@ -203,10 +203,14 @@ The following list combines industry-standard abbreviations and initialisms with
      - Mobile Directory Number
    * - **MFA**
      - Multi-factor Authentication
+   * - **MMM**
+     - Marketing Mix Modeling
    * - **MMS**
      - Multimedia Messaging Service
    * - **MSRP**
      - Manufacturer's Suggested Retail Price
+   * - **MTA**
+     - Multi-touch Attribution
    * - **MVP**
      - Minimal Viable Product
    * - **NBD**
@@ -298,7 +302,7 @@ The following list combines industry-standard abbreviations and initialisms with
    * - **SSO**
      - Single Sign-On
    * - **SSP**
-     - Supply-side Platform
+     - Supply side Platform
    * - **TAA**
      - Trade Area Append
    * - **TAM**

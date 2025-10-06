@@ -1571,7 +1571,7 @@ Trivial duplicates
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of nearly-identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records--the trivial duplicates--are not.
+A trivial duplicate is a set of nearly identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records--the trivial duplicates--are not.
 
 .. term-trivial-duplicate-end
 
@@ -1704,7 +1704,7 @@ The maximum allowed number of records with trivial duplicates is set to "10" by 
 
 Semantic exclusions define a threshold over which records like these will be collapsed into a trivial duplicate. For example, let's say you have defined a semantic exclusion for **email** and left the size threshold at "10".
 
-For each unique combination of PII--excluding email addresses!--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 10 distinct email addresses, those records are collapsed into a trivial duplicate.
+For each unique combination of PII--excluding email addresses--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 10 distinct email addresses, those records are collapsed into a trivial duplicate.
 
 .. configure-stitch-advanced-trivial-duplicates-example-end
 
@@ -1722,7 +1722,7 @@ Example: email addresses
 
 .. configure-stitch-advanced-profile-trivial-duplicates-example-start
 
-A long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly-identical records, each with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
+A long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly identical records, each with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
 
 Configure Stitch to define a semantic exclusion for email addresses:
 
@@ -1737,6 +1737,6 @@ and then define the threshold:
    :amperity.stitch.settings/soft-trivial-dupe-size-threshold 25
 
 
-For each unique combination of PII--excluding email addresses!--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
+For each unique combination of PII--excluding email addresses--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
 
 .. configure-stitch-advanced-trivial-duplicates-example-end

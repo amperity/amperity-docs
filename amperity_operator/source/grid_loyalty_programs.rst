@@ -21,7 +21,7 @@ Loyalty programs
 
 A loyalty program helps your brand build positive experiences with your customers in the form of rewards, referral programs, early access, incentives, customer community, more direct ways to provide feedback, and more.
 
-Your highest-value customers are often members of your brand’s loyalty program. Use the loyalty data assets to analyze the performance of your loyalty program and look for ways to improve the experiences your customers have with your brand.
+Your highest-value customers are often members of your brand's loyalty program. Use the loyalty data assets to analyze the performance of your loyalty program and look for ways to improve the experiences your customers have with your brand.
 
 .. loyalty-programs-about-end
 

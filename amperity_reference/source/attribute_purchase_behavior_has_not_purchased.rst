@@ -80,7 +80,7 @@ The following example returns all customers who have not purchased:
    :align: left
    :class: no-scaled-link
 
-This can be a large list!
+This can be a large list.
 
 The SQL for **Has Not Purchased** works like this. It uses order ID from the **Unified Itemized Transactions** table as its starting point:
 

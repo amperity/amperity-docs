@@ -91,7 +91,7 @@ Get details
 
 .. destination-salesforce-sales-cloud-get-details-account-info-start
 
-.. admonition:: How do I find |destination-name| account information?
+.. admonition:: How to find |destination-name| account information?
 
    You can find all of this information by logging into your |destination-name| admin console and by viewing the URL of your instance of |destination-name|.
 

@@ -676,11 +676,9 @@ The number of rows and filter fields available from a Profile API endpoint deter
 
 As the number of rows and filter fields increase, the performance of that index will decrease. Large indexes with 5 or more filter fields have decreased performance.
 
-.. note::
-
-   .. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
-      :start-after: .. endpoint-get-profiles-list-maximum-filters-start
-      :end-before: .. endpoint-get-profiles-list-maximum-filters-end
+.. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
+   :start-after: .. endpoint-get-profiles-list-maximum-filters-start
+   :end-before: .. endpoint-get-profiles-list-maximum-filters-end
 
 The size of the index has a greater effect on the length of time required to build or refresh an index than the response times for requests that are made to that index.
 
@@ -696,7 +694,7 @@ The size of the index has a greater effect on the length of time required to bui
 
    Response percentiles divide individual response times into groups based on distribution: p95, and p99. Response percentiles are shown in milliseconds (ms).
 
-   * **p950**
+   * **p95**
 
      95% of the response times were below this value.
 

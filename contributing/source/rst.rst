@@ -3506,7 +3506,7 @@ A table list uses a table without a header row, and then only two columns, one f
              :alt: Step two.
              :align: center
              :class: no-scaled-link
-        - Troubleshoot random authorization error!
+        - Troubleshoot random authorization error.
 
           #. Do this.
           #. Do that.
@@ -3553,7 +3553,7 @@ A table list uses a table without a header row, and then only two columns, one f
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Troubleshoot random authorization error!
+     - Troubleshoot random authorization error.
 
        #. Do this.
        #. Do that.
@@ -4069,7 +4069,7 @@ Tables
 
 .. rst-tables-start
 
-Tables are always fun! Amperity docs use the following table types:
+Tables are always fun. Amperity docs use the following table types:
 
 * :ref:`CSV tables <rst-tables-csv>`
 * :ref:`Grid tables <rst-tables-grid>`

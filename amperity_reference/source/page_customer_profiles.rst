@@ -19,7 +19,7 @@ Customer profiles
 
 .. customer-profiles-page-start
 
-Unified customer profiles help your brand better understand your customers. Build any type of database that your brand requires, including customer profile-focused databases to fuel your brand’s marketing activity and quality-focused databases that help your brand’s data experts better understand your customers.
+Unified customer profiles help your brand better understand your customers. Build any type of database that your brand requires, including customer profile-focused databases to fuel your brand's marketing activity and quality-focused databases that help your brand's data experts better understand your customers.
 
 .. customer-profiles-page-end
 

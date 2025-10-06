@@ -59,7 +59,7 @@ You can build as many endpoints as your downstream workflows require. Each indiv
 
 Any set of results that you can return with a query in Amperity can be enabled for use as an endpoint for your tenant's Profile API. Use any unique identifier in your unified customer profiles as the lookup key, use that lookup key to access individual attributes located at that endpoint, and then the on-demand access to your unified customer profiles to light up your use cases.
 
-.. tip:: :ref:`Use more (smaller) indexes instead of fewer (larger) indexes! <profile-api-response-times>` Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
+.. tip:: :ref:`Use more (smaller) indexes instead of fewer (larger) indexes. <profile-api-response-times>` Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
 
 .. profile-api-howitworks-end
 
@@ -868,7 +868,7 @@ The number of columns that are available from a Profile API endpoint determines:
 
 The performance of each index depends on the number of columns and the number of rows in that index. As the number of columns and rows increase, the performance of that index will decrease. The size of the index has a greater effect on the length of time it takes to build (or rebuild) an index than the response times for requests that are made to that index.
 
-.. important:: It is recommended to keep the size of an index to less than 10 columns and fewer than 100M rows. Use more (smaller) indexes instead of fewer (larger) indexes! Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
+.. important:: It is recommended to keep the size of an index to less than 10 columns and fewer than 100M rows. Use more (smaller) indexes instead of fewer (larger) indexes. Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
 
    The following sections show response times for :ref:`5 column <profile-api-response-times-5-columns>`, :ref:`10 column <profile-api-response-times-10-columns>`, and :ref:`30 column <profile-api-response-times-30-columns>` index sizes and a range of output rows.
 
