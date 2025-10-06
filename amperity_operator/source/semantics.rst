@@ -285,7 +285,7 @@ Exclude duplicate emails
 
 .. semantics-profile-type-email-exclude-start
 
-In some situations you might discover a large number of email addresses that should not be associated with any customer profiles. For example, a long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly-identical records, many with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
+In some situations you might discover a large number of email addresses that should not be associated with any customer profiles. For example, a long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly identical records, many with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
 
 Configure Stitch to define a semantic exclusion for email addresses:
 
@@ -299,7 +299,7 @@ and then define the threshold:
 
    :amperity.stitch.settings/soft-trivial-dupe-size-threshold 25
 
-For each unique combination of PII--excluding email addresses!--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
+For each unique combination of PII--excluding email addresses--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
 
 .. semantics-profile-type-email-exclude-end
 

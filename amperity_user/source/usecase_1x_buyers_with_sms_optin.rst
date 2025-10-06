@@ -99,7 +99,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done! Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "First-time Buyers with SMS Opt-in":
+     - You're done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "First-time Buyers with SMS Opt-in":
 
        .. image:: ../../images/usecases-dialog-engage-sms.png
           :width: 440 px

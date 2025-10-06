@@ -94,7 +94,7 @@ Dataflow, Pub/Sub
 
 .. source-google-cloud-storage-dataflow-pubsub-start
 
-Dataflow is a fully-managed service for transforming and enriching data using streaming or batch modes that are configured to `use Pub/Sub to stream messages <https://cloud.google.com/pubsub/docs/pubsub-dataflow#stream_messages_from_to>`__ |ext_link| to |source-name|.
+Dataflow is a fully managed service for transforming and enriching data using streaming or batch modes that are configured to `use Pub/Sub to stream messages <https://cloud.google.com/pubsub/docs/pubsub-dataflow#stream_messages_from_to>`__ |ext_link| to |source-name|.
 
 .. source-google-cloud-storage-dataflow-pubsub-end
 

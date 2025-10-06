@@ -906,7 +906,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :width: 140 px
           :align: left
      - |fivetran_microsoft_azure_sql_database|
-     - Microsoft Azure SQL Database is the intelligent, fully-managed relational cloud database service built for developers.
+     - Microsoft Azure SQL Database is the intelligent, fully managed relational cloud database service built for developers.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-microsoft-dynamics.svg
           :figclass: light-only
@@ -1360,7 +1360,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :width: 140 px
           :align: left
      - |fivetran_taboola|
-     - Taboola helps people find relevant content online, matching them with news stories, articles, blogs, videos, apps, products and other content they’re likely to want to explore.
+     - Taboola helps people find relevant content online, matching them with news stories, articles, blogs, videos, apps, products and other content they're likely to want to explore.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-tiktok.png
           :figclass: light-only

@@ -64,7 +64,7 @@ An established churn prevention campaign, as the following diagram represents, m
    :align: left
    :class: no-scaled-link
 
-This can create a large number of specific types of campaign messages, offers, promotions, marketing channels, etc. that are all associated to a single churn prevention campaign!
+This can create a large number of specific types of campaign messages, offers, promotions, marketing channels, etc. that are all associated to a single churn prevention campaign.
 
 The following sections describe the process of setting up an effective churn prevention campaign, including how to define your audience, test the campaign, extend the campaign by adding additional parameters and tools, and then optimize the campaign for all audiences and automation.
 

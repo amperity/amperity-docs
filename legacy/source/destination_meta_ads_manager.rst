@@ -222,7 +222,7 @@ Get details
           :class: no-scaled-link
      - The account ID.
 
-       .. admonition:: How do I find Facebook Ads account information?
+       .. admonition:: How to find Facebook Ads account information?
 
           You can find all of this information and perform all of the required steps from within `Facebook Business Manager <https://www.facebook.com/business/help/1492627900875762>`__ |ext_link|. Click **Business Settings**, then **Ad Accounts**, and then the Facebook Ads account name. The account ID is visible under **Details**.
 

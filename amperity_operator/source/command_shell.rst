@@ -29,13 +29,13 @@ Basics
    * - **Ctrl + a**
      - Move to the beginning of a line.
    * - **Ctrl + c**
-     - Stop the execution of the current command. Useful if you’ve typed something that takes a while to complete, but need to stop the command.
+     - Stop the execution of the current command. Useful if you've typed something that takes a while to complete, but need to stop the command.
    * - **Ctrl + e**
      - Move to the end of a line.
    * - **Ctrl + r**
      - Search through the terminal history.
 
-       After typing Ctrl + r start typing the command that you’re looking for and previously used commands will populate based on your search.
+       After typing Ctrl + r start typing the command that you're looking for and previously used commands will populate based on your search.
 
        To cycle through commands that use the same search term just hit Ctrl + r again.
    * - **Option + b**

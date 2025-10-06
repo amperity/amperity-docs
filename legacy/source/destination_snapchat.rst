@@ -92,7 +92,7 @@ Get details
 
 .. destination-snapchat-get-details-account-info-start
 
-.. admonition:: How do I find Snapchat account information?
+.. admonition:: How to find Snapchat account information?
 
    You can find all of this information and perform all of the required steps from within |destination-name|. Click the menu in the top-left corner, then **Ad Accounts**, and then copy the **Ad Account ID** of the account you want to send to.
 

@@ -433,7 +433,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **event_source**
-     - The type of event to be uploaded to TikTok Ads Manager. May be one of “web” or "offline".
+     - The type of event to be uploaded to TikTok Ads Manager. May be one of "web" or "offline".
 
        Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
 

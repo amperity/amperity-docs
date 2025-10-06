@@ -429,7 +429,7 @@ To resolve this error, you must provide a combination of email address and Zende
 #. Verify that the individual who authorized access to Zendesk has the correct permissions to allow Amperity to access Zendesk.
 #. Update the values that build the credentials string as necessary.
 
-   .. tip:: You may need to generate a new API token in Zendesk, and then reconfigure Amperity with the updated API token string *and* the email address for the user that generated the newly-generated API token.
+   .. tip:: You may need to generate a new API token in Zendesk, and then reconfigure Amperity with the updated API token string *and* the email address for the user that generated the newly generated API token.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-zendesk-workflow-actions-authorization-error-steps-start

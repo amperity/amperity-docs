@@ -35,7 +35,7 @@ RFM scores are available as out-of-the-box attributes in Amperity standard outpu
 
 .. rfm-scores-note-start
 
-.. note:: RFM scores, because they are historically-based and only cover a rolling 1-year window, are generally less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which is available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
+.. note:: RFM scores, because they are historically based and only cover a rolling 1-year window, are generally less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which is available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
 
 .. rfm-scores-note-end
 

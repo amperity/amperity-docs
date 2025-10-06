@@ -146,7 +146,7 @@ The following example describes the steps required to send an audience from Ampe
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done in Amperity! Give your query a name that clearly describes the purpose. For example: "Reddit Active Customers High Spend".
+     - You're done in Amperity. Give your query a name that clearly describes the purpose. For example: "Reddit Active Customers High Spend".
 
        Click the **Activate** button in the top right corner of the **Query Editor**. 
 

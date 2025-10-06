@@ -464,15 +464,15 @@ Rotate API keys
 
 .. api-keys-api-token-rotate-start
 
-You can rotate the internal secrets used by access tokens to ensure that previously-issued access tokens cannot authenticate to the Amperity API.
+You can rotate the internal secrets used by access tokens to ensure that previously issued access tokens cannot authenticate to the Amperity API.
 
-When an API key is rotated a new internal secret is generated, after which it becomes the active secret for that API key. The previously-issued access token is deposed, which allows the previous code to remain valid for a short period of time to allow for distribution of the new access token. A deposed access token will remain valid for 30 days, or may be explicitly dropped.
+When an API key is rotated a new internal secret is generated, after which it becomes the active secret for that API key. The previously issued access token is deposed, which allows the previous code to remain valid for a short period of time to allow for distribution of the new access token. A deposed access token will remain valid for 30 days, or may be explicitly dropped.
 
-If an access token already has a deposed token, that deposed token is dropped and the previously-issued access token takes its place as the deposed token.
+If an access token already has a deposed token, that deposed token is dropped and the previously issued access token takes its place as the deposed token.
 
 This process may be used to invalidate outstanding tokens issued without expiry times. Clients should be careful not to rotate too often, such as to not rotate on every issue call, or they will be surprised when their existing tokens stop working suddenly.
 
-.. note:: If you rotate your tokens too quickly you may run into issues where previously-issued access tokens are not deposed for a long enough time, which prevents newly-issued tokens from being distributed.
+.. note:: If you rotate your tokens too quickly you may run into issues where previously issued access tokens are not deposed for a long enough time, which prevents newly issued tokens from being distributed.
 
 .. api-keys-api-token-rotate-end
 
@@ -500,7 +500,7 @@ This process may be used to invalidate outstanding tokens issued without expiry 
           :class: no-scaled-link
      - Under **API keys** find the index, and then from the **Actions** menu select "Generate token".
 
-       Set the token expiration length. Enable the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously-provisioned tokens that are associated with the current API key to expire in 30 days.
+       Set the token expiration length. Enable the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
 
 .. api-keys-api-token-rotate-steps-end
 
@@ -596,7 +596,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       Use the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously-provisioned tokens that are associated with the current API key to expire in 30 days.
+       Use the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
 
        Click **Generate token**. The token is generated, and then is automatically copied to your clipboard.
 
@@ -606,7 +606,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       .. important:: You are the only person who have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
+       .. important:: You are the only person who have access to the newly generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 .. api-keys-access-tokens-generate-end
 
@@ -703,7 +703,7 @@ When generating an access token
 
 .. api-keys-access-tokens-refresh-generate-token-start
 
-Use the **Rotate key secret** option to rotate an existing secret when :ref:`generating an access token <api-keys-access-tokens-generate>`. This will force all previously-provisioned tokens that are associated with the current API key to expire in 30 days.
+Use the **Rotate key secret** option to rotate an existing secret when :ref:`generating an access token <api-keys-access-tokens-generate>`. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
 
 .. api-keys-access-tokens-refresh-generate-token-end
 

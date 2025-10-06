@@ -271,7 +271,7 @@ Escape characters
 
 .. data-templates-files-common-escape-character-start
 
-If an escape character is not specified and quote mode is set to “None” this may result in unescaped, unquoted files. When an escape character is not specified, you should select a non-“None” option.
+If an escape character is not specified and quote mode is set to "None" this may result in unescaped, unquoted files. When an escape character is not specified, you should select a non-"None" option.
 
 .. data-templates-files-common-escape-character-end
 

@@ -79,7 +79,7 @@ You need to build a query that outputs email addresses and phone numbers.
 
 .. sendto-tiktok-ads-build-query-options-start
 
-.. tip:: Email addresses most often lead to the best match rates!
+.. tip:: Email addresses most often lead to the best match rates.
 
    You may include, in addition to email addresses and phone numbers, mobile advertiser IDs (MAIDs) if they are available. Associate the MAIDs for Apple devices to **IDFA** and MAIDs for Google Android devices to **AAID**.
 

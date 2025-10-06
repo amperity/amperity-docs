@@ -88,9 +88,9 @@ For those semantic tags, the feed should apply semantic tags like this:
 
 .. vale on
 
-This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically-tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
+This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
 
-Amperity has built-in semantic tags for personally-identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
+Amperity has built-in semantic tags for personally identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
 
 Profile semantic tags are used by Amperity for identity resolution, which is the process that builds a unified customer profile for all of your unique customers. All other semantic tags, such as for transactions and itemized transactions, are used to associate your customer's interactions with your brand to their individual customer profiles.
 

@@ -894,7 +894,7 @@ To reduce Amps consumption for the **Databases** category:
 
 * Complex SQL over large datasets tends to consume more Amps. Consider opportunities to simplify the logic and filter or pre-aggregate incoming data.
 
-* Spark performance suffers in the presence of "skew", or poorly-distributed data that is used for joins, aggregations, or window function partitions. Check the distribution of values used in joining keys.
+* Spark performance suffers in the presence of "skew", or poorly distributed data that is used for joins, aggregations, or window function partitions. Check the distribution of values used in joining keys.
 
 * Duplication in joins can result in higher Amps consumption, as later operations must process a larger amount of data. Check for uniqueness in joining keys, and consider aggregating before joining to prevent duplication. 
 

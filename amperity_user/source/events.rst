@@ -254,7 +254,7 @@ Amperity provides direct connections to the most popular destinations across the
           :width: 140 px
           :align: left
           :class: no-scaled-link
-     - TikTok is the world’s leading destination for short-form mobile videos. TikTok’s mission is to capture and present the world’s creativity, knowledge, and moments that matter in everyday life. Send audiences to TikTok Ads Manager directly from Amperity.
+     - TikTok is the world's leading destination for short-form mobile videos. TikTok's mission is to capture and present the world's creativity, knowledge, and moments that matter in everyday life. Send audiences to TikTok Ads Manager directly from Amperity.
 
        Send :doc:`offline events to TikTok Ads Manager <events_tiktok_ads_manager>` to help your brand track offline conversions that result from your marketing campaigns. Support for offline events is part of the TikTok Events API.
 

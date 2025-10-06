@@ -87,7 +87,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done! Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Top 20 Percent Customers During Previous Year".
+     - You're done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Top 20 Percent Customers During Previous Year".
 
        .. image:: ../../images/usecases-dialog-save-top-20-percent.png
           :width: 440 px

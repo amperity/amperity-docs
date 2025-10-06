@@ -36,7 +36,7 @@ This is an example paragraph that shows how to use snippets to include content i
 
 
 
-.. The following group of terms are general. Use these in the glossary (always!) and use them as the first-level overview of concepts, sections, and other whatnots across the documentation.
+.. The following group of terms are general. Use these in the glossary (always) and use them as the first-level overview of concepts, sections, and other whatnots across the documentation.
 
 
 **Activation states**

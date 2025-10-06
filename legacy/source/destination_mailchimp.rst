@@ -117,7 +117,7 @@ Get details
 
 .. destination-mailchimp-get-details-account-info-start
 
-.. admonition:: How do I find |destination-name| account and audience information?
+.. admonition:: How to find |destination-name| account and audience information?
 
    You can find all of this information after you log into |destination-name|.
 
