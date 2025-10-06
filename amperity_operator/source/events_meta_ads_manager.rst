@@ -318,6 +318,7 @@ A query that returns a collection offline events for use in |destination-name| i
      ,uit.item_quantity AS quantity
      ,uit.product_id AS product_id
      ,uit.order_datetime AS timestamp
+     ,CAST(uit.order_datetime AS datetime) AS timestamp
      ,CAST(uit.item_revenue / uit.item_quantity AS DOUBLE) AS price
      ,'USD' AS currency
      ,'physical_store' AS action_source 
