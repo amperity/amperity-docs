@@ -86,7 +86,7 @@ Real-time table limitations
 Real-time tables have the following limitations:
 
 #. Streamed data takes up to 2 minutes to appear in a real-time table.
-#. Events that partially match the schema for a real-time table appears in a real-time table; events that do not match the schema will not.
+#. Events that match part of the schema for a real-time table appears in a real-time table; events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an append; data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
@@ -183,7 +183,7 @@ Streaming endpoints are managed from the **Sources** page.
 
        Give the stream a name and description, and then click **Save**. This will return you to the **Sources** page.
 
-       .. important:: Be sure the name clearly indicates how the stream is to be used within Amperity by your brand.
+       .. important:: Be sure the name indicates how the stream is to be used within Amperity by your brand.
 
        .. image:: ../../images/api-streaming-ingest-add-stream-name-desc.png
           :width: 420 px
@@ -400,7 +400,7 @@ Stream data to streaming endpoint
 
 .. realtime-stream-data-start
 
-Configure the upstream workflow to use the :ref:`POST request <realtime-configure-post-request>`, and then stream data to Amperity from the upstream data source. If data is being received correctly by the streaming endpoint you will be able to see data in the real-time table about ~2 minutes after it has been accepted by the streaming endpoint.
+Configure the upstream workflow to use the :ref:`POST request <realtime-configure-post-request>`, and then stream data to Amperity from the upstream data source. If data is being received correctly by the streaming endpoint you is able to see data in the real-time table about ~2 minutes after it has been accepted by the streaming endpoint.
 
 .. realtime-stream-data-end
 

@@ -1759,7 +1759,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
 .. data-tables-optin-status-email-not-source-of-truth-start
 
-.. important:: Amperity is not the source of truth for email consent status. Email consent status can change quickly, including between the time of this table's most recent update and the time at which your brand wants to send your customers an email as part of a campaign.
+.. important:: Amperity is not the source of truth for email consent status. Email consent status can change, including between the time of this table's most recent update and the time at which your brand wants to send your customers an email as part of a campaign.
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the email campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
@@ -1771,7 +1771,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
 .. note:: The **Email Opt Status** table represents every email address for which you have provided customer consent data to Amperity. There should be only one consent status by combination of email address, brand, region, or email program.
 
-   If you have multiple brands, regions or email programs, it's possible for the same email address to have more than one customer consent status.
+   If you have multiple brands, regions or email programs, it is possible for the same email address to have more than one customer consent status.
 
    If a brand, region, or email program does not exist, there should be only one customer consent status for each unique email address.
 
@@ -1848,7 +1848,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
 .. data-tables-optin-status-sms-not-source-of-truth-start
 
-.. important:: Amperity is not the source of truth for SMS consent status. SMS consent status can change quickly, including between the time of this table's most recent update and the time at which your brand wants to send your customers an SMS message as part of a campaign.
+.. important:: Amperity is not the source of truth for SMS consent status. SMS consent status can change, including between the time of this table's most recent update and the time at which your brand wants to send your customers an SMS message as part of a campaign.
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the SMS campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
@@ -1860,7 +1860,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
 .. note:: The **SMS Opt Status** table represents every phone number for which you have provided customer consent data to Amperity. There should be only one consent status by combination of phone number, brand, region, or SMS program.
 
-   If you have multiple brands, regions or SMS programs, it's possible for the same phone number to have more than one customer consent status.
+   If you have multiple brands, regions or SMS programs, it is possible for the same phone number to have more than one customer consent status.
 
    If a brand, region, or SMS program does not exist, there should be only one customer consent status for each unique phone number.
 
@@ -3134,7 +3134,7 @@ RFM
 
 Amperity calculates RFM scores against transactions that occurred within the last 12 months.
 
-Each of the recency (R), frequency (F), and monetary (M) scores are represented by a number between 0 and 9. The final RFM score is a concatenation of the individual scores: recency first, then frequency, monetary last. The final RFM score is a number between 0 and 999.
+Each of the recency (R), frequency (F), and monetary (M) scores are represented by a number between 0 and 9. The final RFM score is a concatenation of the individual scores: recency first, then frequency, monetary last. The final RFM score is between 0 and 999.
 
 .. data-tables-transaction-attributes-extended-rfm-end
 
@@ -3680,7 +3680,7 @@ The **Unified Coalesced** table has the following columns:
 
           All qualified trivial duplicates are treated as a single record by downstream Stitch processes.
 
-          The **Rep DS** and **Rep PK** fields are included in the **Unified Coalesced** table to help with situations where it's necessary to understand why two records were not clustered together.
+          The **Rep DS** and **Rep PK** fields are included in the **Unified Coalesced** table to help with situations where it is necessary to understand why two records were not clustered together.
 
    * - **State**
      - String

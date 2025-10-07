@@ -350,7 +350,7 @@ About the User Guides
 
 .. tools-for-analysts-about-this-collection-start
 
-The left-side navigation uses a verb-based approach to loosely organize around the series of actions that you may do when building queries, and then sending those results to downstream workflows.
+The left-side navigation uses a verb-based approach to organize around the series of actions that you may do when building queries, and then sending those results to downstream workflows.
 
 The left-side navigation has sections for the following types of activities:
 

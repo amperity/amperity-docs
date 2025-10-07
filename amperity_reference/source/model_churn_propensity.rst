@@ -121,7 +121,7 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        By grouping repeat customers into these tiers, you can:
 
-       * Focus on retaining and nurturing customers who contribute significantly to revenue.
+       * Focus on retaining and nurturing customers who contribute to revenue.
        * Develop targeted campaigns that address the specific needs and preferences of different customer segments.
        * Proactively address the concerns of customers who may be considering churning.
 
@@ -150,7 +150,7 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        * Identify and focus on customers who are predicted to generate the most revenue over their lifetime.
        * Develop targeted campaigns and offers that cater to the specific needs and preferences of different customer segments.
-       * Allocate resources more effectively by focusing on acquiring customers with high pCLV potential.
+       * Allocate resources by focusing on acquiring customers with high pCLV potential.
        * Implement strategies to retain and nurture high-value customers, maximizing their lifetime value.
 
 By combining various customer attributes, you can create highly targeted churn prevention and one-time buyer campaigns that focus on your most valuable customers at the optimal time.

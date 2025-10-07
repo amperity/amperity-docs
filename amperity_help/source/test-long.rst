@@ -58,7 +58,7 @@ Unescaped backslashes can cause errors with functions that use regular expressio
 
 .. databases-validation-alert-unintentional-broadcast-joins-start
 
-A broadcast join sends the smaller table in a join operation to all Spark executors, and then evaluates the larger table across each executor's partitions. When a broadcast join is small, it's fast. Above a certain threshold they can performance issues.
+A broadcast join sends the smaller table in a join operation to all Spark executors, and then evaluates the larger table across each executor's partitions. A small broadcast join runs faster, but above a certain threshold a broadcast join causes performance issues.
 
 A broadcast join often looks like:
 

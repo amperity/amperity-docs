@@ -372,7 +372,7 @@ Configure Databricks
 
 To configure Databricks to sync data with Amperity you need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>` in Amperity.
 
-.. note:: The following section briefly describes using the Databricks Catalog Explorer to configure Databricks to be ready to sync data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
+.. note:: The following section describes using the Databricks Catalog Explorer to configure Databricks to be ready to sync data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
 
 .. bridge-databricks-sync-with-amperity-configure-databricks-end
 
@@ -1051,7 +1051,7 @@ A catalog is the first layer in a Unity Catalog namespace and is used to organiz
           :class: no-scaled-link
      - From the list of schemas, select the schema you just created.
 
-       Click the **Create catalog** button, and then in the **Create a new catalog** dialog add the catalog name. A catalog name should clearly identify that data tables are shared from Amperity. For example: "Amperity Socktown outbound share". A catalog name cannot include a period, space, or forward slash. When finihsed, click **Create**.
+       Click the **Create catalog** button, and then in the **Create a new catalog** dialog add the catalog name. A catalog name should identify that data tables are shared from Amperity. For example: "Amperity Socktown outbound share". A catalog name cannot include a period, space, or forward slash. When finihsed, click **Create**.
 
        .. admonition:: You must have CREATE CATALOG permissions
 

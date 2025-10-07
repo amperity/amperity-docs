@@ -29,13 +29,13 @@ RFM scores
 
 .. rfm-scores-start
 
-RFM scores are available as out-of-the-box attributes in Amperity standard output. These attributes -- **L12M Recency**, **L12M Frequency**, and **L12M Monetary** -- can be found in the **Transaction Attributes Extended** table and are built from historical data for the previous 12 months. Use the scores in these attributes to quickly build useful audiences around how much your customers spend, how often they purchase, and how recently they purchase.
+RFM scores are available as out-of-the-box attributes in Amperity standard output. These attributes -- **L12M Recency**, **L12M Frequency**, and **L12M Monetary** -- can be found in the **Transaction Attributes Extended** table and are built from historical data for the previous 12 months. Use the scores in these attributes to build useful audiences around how much your customers spend, how often they purchase, and how recently they purchase.
 
 .. rfm-scores-end
 
 .. rfm-scores-note-start
 
-.. note:: RFM scores, because they are historically based and only cover a rolling 1-year window, are generally less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which is available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
+.. note:: RFM scores, because they are historically based and only cover a rolling 1-year window, are less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which is available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
 
 .. rfm-scores-note-end
 
@@ -120,7 +120,7 @@ More scenarios
 
 .. rfm-more-examples-start
 
-The following sections don't walk through how to configure attributes in the **Segment Editor**, but they do describe situations in which using RFM scores can help you build useful audiences for your campaigns.
+The following sections do not walk through how to configure attributes in the **Segment Editor**, but they do describe situations in which using RFM scores can help you build useful audiences for your campaigns.
 
 * :ref:`Direct mail campaigns <rfm-example-direct-mail>`
 * :ref:`High F, low R scores <rfm-example-high-m-low-r>`
@@ -184,7 +184,7 @@ High R, low F and M scores
 
 .. rfm-example-high-r-low-f-m-start
 
-A high recency score combined low frequency and monetary scores builds an audience of new customers who probably won't spend a lot of money in the future. Use this combination of scores as an indicator for customers that might respond to special offers, but consider the low spend to be an indicator of customers who may have a low response rate to more typical marketing campaigns.
+A high recency score combined low frequency and monetary scores builds an audience of new customers who probably will not spend a lot of money in the future. Use this combination of scores as an indicator for customers that might respond to special offers, but consider the low spend to be an indicator of customers who may have a low response rate to more typical marketing campaigns.
 
 .. rfm-example-high-r-low-f-m-end
 
@@ -198,6 +198,6 @@ High R and F, low M scores
 
 High recency and frequency scores combined with a low monetary score builds an audience of active customers who purchase frequently, but do not spend a lot of money.
 
-Use this combination of scores as an indicator for customers who should not receive discounts. These customers already shop regularly, the challenge is growing their spend. Use cross-sell and upsell campaigns to improve spend amounts and consider inviting customers who respond to those campaigns into your loyalty program.
+Use this combination of scores as an indicator for customers who should not receive discounts. These customers are repeat customers, the challenge is growing their spend. Use cross-sell and upsell campaigns to improve spend amounts and consider inviting customers who respond to those campaigns into your loyalty program.
 
 .. rfm-example-high-r-and-f-low-m-end

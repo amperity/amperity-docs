@@ -41,7 +41,7 @@ How this attribute works
 
 **First purchase** represents a common approach people use when they build segments: find all of my customers who made their first purchase in the past N days, months, or years, and then associate that list of customers to your products and brands.
 
-**First purchase** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**First purchase** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
@@ -210,6 +210,6 @@ Filter attributes
 
 .. attribute-purchase-behavior-first-purchase-filter-attributes-start
 
-A filter attribute is a standard column that is output by Amperity and is available from the **Unified Itemized Transactions** table. When a filter attribute is associated with a purchase behavior attribute, you may use them to filter the results by specific items in your product catalog, such as by brand, by channel, by store, or by specific details about the items in your product catalog, such as color, SKU, and so on. The list of filter attributes that will be available for product catalogs depends on their availability within your **Unified Itemized Transactions** table.
+A filter attribute is a standard column that is output by Amperity and is available from the **Unified Itemized Transactions** table. When a filter attribute is associated with a purchase behavior attribute, you may use them to filter the results by specific items in your product catalog, such as by brand, by channel, by store, or by specific details about the items in your product catalog, such as color or SKU. The list of filter attributes that will be available for product catalogs depends on their availability within your **Unified Itemized Transactions** table.
 
 .. attribute-purchase-behavior-first-purchase-filter-attributes-end

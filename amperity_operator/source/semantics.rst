@@ -122,9 +122,9 @@ Address groups
 
 .. semantics-profile-type-address-start
 
-An address group consists of a street address, city, state, and postal code. Some address groups also have apartment numbers or PO boxes. An address group depends on all of these details to define a complete address. Many individuals are often associated with home addresses, billing addresses, work addresses, and so on.
+An address group consists of a street address, city, state, and postal code. Some address groups also have apartment numbers or PO boxes. An address group depends on all of these details to define a complete address. Many individuals are often associated with home addresses, billing addresses, and work addresses.
 
-When a data source provides more than one address group in the data, it's important to apply the **address**, **address2**, **city**, **state**, and **postal** semantics to the correct fields in every group, and then apply a custom semantic that appends a namespace (recommended) or ordinal to each semantic within the address group to support potential downstream workflows.
+When a data source provides more than one address group in the data, it is important to apply the **address**, **address2**, **city**, **state**, and **postal** semantics to the correct fields in every group, and then apply a custom semantic that appends a namespace (recommended) or ordinal to each semantic within the address group to support potential downstream workflows.
 
 .. semantics-profile-type-address-end
 
@@ -167,7 +167,7 @@ Use an ordinal to append an integer to each semantic within an address group.
      - postal-2
      - postal-3
 
-This creates columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, **address_3** and so on and will keep each location intact.
+This creates columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, and **address_3**, and will keep each location intact.
 
 .. semantics-profile-type-address-ordinals-end
 
@@ -185,7 +185,7 @@ Email addresses
 
 A customer data source may have more than one field that contains an email address, such as for personal email and work email addresses.
 
-When a data source provides more than one email address in the data, it's important to apply the **email** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
+When a data source provides more than one email address in the data, it is important to apply the **email** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
 
 .. semantics-profile-type-email-end
 
@@ -483,7 +483,7 @@ Names
 
 .. semantics-profile-type-names-start
 
-Names are tagged using a combination of semantic tags. Apply the **given-name** and **surname** semantic tags to fields that contain the first and last names for customers. Apply the **full-name** semantic tag to fields that contain complete customer names, such as first, middle, and last. Apply the **generational-suffix** tag to fields that contain *only* suffixes like Jr, Sr, III, and so on.
+Names are tagged using a combination of semantic tags. Apply the **given-name** and **surname** semantic tags to fields that contain the first and last names for customers. Apply the **full-name** semantic tag to fields that contain complete customer names, such as first, middle, and last. Apply the **generational-suffix** tag to fields that contain *only* suffixes like Jr, Sr, or III.
 
 .. semantics-profile-type-names-end
 
@@ -840,9 +840,9 @@ Phone numbers
 
 .. semantics-profile-type-phone-start
 
-A customer data source may have more than one field that contains a phone number, such as a home phone number, a work phone number, a mobile phone number, and so on.
+A customer data source may have more than one field that contains a phone number, such as a home phone number, a work phone number, or a mobile phone number.
 
-When a data source provides more than one phone number in the data, it's important to apply the **phone** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
+When a data source provides more than one phone number in the data, it is important to apply the **phone** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
 
 .. semantics-profile-type-phone-end
 
@@ -1111,7 +1111,7 @@ You can define custom blocking labels using **bk-[label]**, and then use them as
 
 .. semantics-key-blocking-caution-start
 
-.. caution:: Use blocking keys carefully and be sure to verify that Stitch results contain the desired outcome.
+.. caution:: Use caution with blocking keys and ensure that Stitch results contain the desired outcome.
 
 .. semantics-key-blocking-caution-end
 

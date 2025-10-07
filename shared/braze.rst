@@ -109,11 +109,11 @@ The names of custom attributes that can be managed by Amperity are defined by yo
 * Are exactly the same as Amperity standard output, such as "One and Done" or "L12M Monetary" (the "monetary" component of an RFM score), or "Early Repeat Purchaser".
 * Align to marketing goals or terminology that exists within your brand's segmentation strategy.
 
-Verify the names of custom attributes that is sent to |destination-name| from Amperity. Amperity adds a custom attribute whenever there isn't a matching name.
+Verify the names of custom attributes that is sent to |destination-name| from Amperity. Amperity adds a custom attribute whenever there is not a matching name.
 
 .. tip:: Avoid sending custom attributes as duplicates of default user profile fields. For example, birthdates should be sent to |destination-name| as a user profile field named "dob". If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created and the values in the "dob" field is not updated.
 
-.. important:: Your brand's list of custom attributes *should* be a list that is mostly static, remains stable over time, and is focused on your most valuable customers.
+.. important:: Your brand's list of custom attributes *should* be a list that is static, remains stable over time, and is focused on your most valuable customers.
 
    Only update custom attributes for customers to which your brand is currently engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (with an opt-in status of true for phone numbers or email addresses).
 
@@ -129,7 +129,7 @@ Verify the names of custom attributes that is sent to |destination-name| from Am
 
 |destination-name| uses `data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/>`__ |ext_link| to determine when to update segment membership, to identify which types of messages should be sent, and how to apply message personalization.
 
-You can send custom attributes to |destination-name| from Amperity by attaching attributes from your customer profiles in Amperity, such as first and last names, email addresses, phone numbers, physical locations, SMS and email consent status, purchase histories, and so on.
+You can send custom attributes to |destination-name| from Amperity by attaching attributes from your customer profiles in Amperity, such as first and last names, email addresses, phone numbers, physical locations, SMS and email consent status, and purchase histories.
 
 Amperity tracks changes as they are sent to Braze and only sends list membership and attribute that have changed since the previous update.
 
@@ -147,7 +147,7 @@ Amperity tracks changes as they are sent to Braze and only sends list membership
 
 Profile attributes, such as **email**, **birthdate**, **address**, and **phone**, contain stable values. Most customers remain at the same address and have the same phone number for years. An individual customer's birthdate never changes. When customer profile attributes do change your brand will always want to update any downstream audience profiles.
 
-Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be carefully evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use cases.
+Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use cases.
 
 .. braze-attribute-updates-end
 

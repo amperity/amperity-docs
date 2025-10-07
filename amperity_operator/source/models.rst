@@ -19,7 +19,7 @@ About predictive models
 
 .. models-start
 
-Amperity predictive modeling is based on your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior. Amperity combs through hundreds of features to yield a state of the art adaptive ensemble model. Amperity layers on a rigorous MLOps infrastructure to continually monitor prediction accuracy and stability.
+Amperity predictive modeling is based on your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior. Amperity combs through hundreds of features to yield a state of the art adaptive ensemble model. Amperity layers on a rigorous MLOps infrastructure to monitor prediction accuracy and stability.
 
 .. models-end
 
@@ -58,7 +58,7 @@ Churn propensity
 
 .. model-churn-propensity-about-start
 
-Every customer has a unique purchase history. Instead of relying on hard-coded RFM analyses, use :doc:`churn propensity <model_churn_propensity>` scores to uncover each user's underlying purchase patterns and make predictions about their likelihood to re-engage with your brand, whether they're a daily, monthly, or seasonal shopper.
+Every customer has a unique purchase history. Instead of relying on hard-coded RFM analyses, use :doc:`churn propensity <model_churn_propensity>` scores to uncover each user's underlying purchase patterns and make predictions about their likelihood to re-engage with your brand, whether they are a daily, monthly, or seasonal shopper.
 
 * Identify customers who are likely to churn
 * Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
@@ -170,7 +170,7 @@ You do not need to configure the following fields:
        * **Order cancelled revenue**
        * **Order discount amount**
 
-         If your tenant does not have order-level discount data, define order-level discounts to equal the sum of item-level discount amounts. This will ensure that predictive modeling will be able to incorporate signals for discount shoppers.
+         If your tenant does not have order-level discount data, define order-level discounts to equal the sum of item-level discount amounts. This will ensure that predictive modeling is able to incorporate signals for discount shoppers.
 
        * **Order returned quantity**
        * **Order returned revenue**
@@ -241,7 +241,7 @@ Each predictive model allows for additional fields to be added to support your b
 
    Ensure that the **Customer Attributes** table contains all possible exceptions that your brand may want to use.
 
-   Ensure that custom features your brand wants to use in predictive models are largely populated, have a small percentage of NULL values, and have reliable values that don't change much day-to-day)
+   Ensure that custom features your brand wants to use in predictive models are populated, have a small percentage of NULL values, and have reliable values that do not change much day-to-day)
 
 .. models-extend-end
 

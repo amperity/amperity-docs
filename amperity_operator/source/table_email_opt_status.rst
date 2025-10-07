@@ -23,7 +23,7 @@ Email Opt Status table
 
 .. table-email-opt-status-add-important-start
 
-.. important:: Amperity is not the source of truth for email consent status. Email consent status can change quickly, including between the time of this table's most recent update and the time at which your brand wants to send your customers an email as part of a campaign.
+.. important:: Amperity is not the source of truth for email consent status. Email consent status can change, including between the time of this table's most recent update and the time at which your brand wants to send your customers an email as part of a campaign.
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the email campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 

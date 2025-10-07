@@ -275,7 +275,7 @@ The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line rel
 #. From the **Stitch** tab, click the **Explore Amperity IDs** button.
 #. This opens the **Data Explorer** to the **Stitched Records** tab.
 #. Click the **Cluster Graph** tab.
-#. In the cluster graph, select individual lines to view the details for that pair of records. The columns on the right shows the fields in the records that are associated with PII semantics. Compare the values on each side to see how closely these two records match.
+#. In the cluster graph, select individual lines to view the details for that pair of records. The columns on the right shows the fields in the records that are associated with PII semantics. Compare the values on each side to see how these two records match.
 #. Use the left and right arrows surrounding the full name to view additional cluster graphs for additional record clusters.
 #. When finished exploring, click **Close**.
 

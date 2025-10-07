@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Manage changes to your Amperity tenant and keep things running smoothly.
+        Manage changes to your Amperity tenant and keep things running.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Manage changes to your Amperity tenant and keep things running smoothly.
+        Manage changes to your Amperity tenant and keep things running.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ Maintain your tenant
 
 .. maintain-about-start
 
-Manage changes and keep things running smoothly.
+Manage changes and keep things running.
 
 .. maintain-about-end
 

@@ -695,6 +695,6 @@ More transactions data
 
 .. setup-transactions-more-transactions-data-start
 
-Many brands add transactions to their tenant over time. Adding new transactions, along with data for other customer interactions, generally follow the same steps that were used for previous transactions. More sources helps Amperity build better profiles *and* helps your brand undersand how your customers' preferences for how they interact with your brand.
+Many brands add transactions to their tenant over time. Adding new transactions, along with data for other customer interactions, follow the same steps that were used for previous transactions. More sources helps Amperity build better profiles *and* helps your brand undersand how your customers' preferences for how they interact with your brand.
 
 .. setup-transactions-more-transactions-data-end

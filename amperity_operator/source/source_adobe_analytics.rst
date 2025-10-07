@@ -74,9 +74,9 @@ Adobe Analytics may be configured to send data to Amperity using SFTP, Amazon S3
 
    Ensure that an authentication key is present in the data, such as an ID login or cookie, that links to the internal ID system to ensure that data associated with customers is usable.
 
-   Select only relevant events, as they relate to the authentication key, such as logins, purchases, and so on.
+   Select only relevant events, as they relate to the authentication key, such as logins and purchases.
 
-   Additional data attributes for product IDs, SKUs, categories, content types, and so on.
+   Additional data attributes for product IDs, SKUs, categories, and content types.
 
    Provide to Amperity a dictionary of configurable **evar** fields that are in use.
 

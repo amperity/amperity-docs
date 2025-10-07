@@ -27,7 +27,7 @@ Has not purchased
    :align: left
    :class: no-scaled-link
 
-After you specify a date range you may apply filters to focus in on specific products, brands, channels, and stores to discover"who hasn't purchased a specific product by a specific brand from a specific channel or store. For example, return a list of customers who have not purchased a wool product online during the previous three months.
+After you specify a date range you may apply filters to focus in on specific products, brands, channels, and stores to discover"who has not purchased a specific product by a specific brand from a specific channel or store. For example, return a list of customers who have not purchased a wool product online during the previous three months.
 
 .. attribute-purchase-behavior-has-not-purchased-end
 
@@ -53,7 +53,7 @@ How this attribute works
 
 **Has Not Purchased** represents a common approach people use when they build segments: which of my customers have not purchased, and then associate that list of customers to your products and brands.
 
-**Has Not Purchased** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**Has Not Purchased** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 

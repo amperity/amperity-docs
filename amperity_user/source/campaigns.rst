@@ -131,7 +131,7 @@ The following sections describe the steps you will follow to set up and configur
           :align: left
           :class: no-scaled-link
 
-       Then update the name of the treatment group. In this example, it's "Active_Socks". This is part of the filename that you will see in the application to which you send this sub-audience. For example: "Churn_HighValue_Early_Active_Socks".
+       Then update the name of the treatment group. In this example, it is "Active_Socks". This is part of the filename that you will see in the application to which you send this sub-audience. For example: "Churn_HighValue_Early_Active_Socks".
 
        .. image:: ../../images/mockup-campaigns-select-sub-audience-active.png
           :width: 650 px
@@ -174,7 +174,7 @@ The following sections describe the steps you will follow to set up and configur
           :align: left
           :class: no-scaled-link
 
-       Then update the name of the treatment group. In this example, it's "CoolingDown_Socks". This is part of the filename that you will see in the application to which you send this sub-audience. For example: "Churn_HighValue_Early_CoolingDown_Socks".
+       Then update the name of the treatment group. In this example, it is "CoolingDown_Socks". This is part of the filename that you will see in the application to which you send this sub-audience. For example: "Churn_HighValue_Early_CoolingDown_Socks".
 
        .. image:: ../../images/mockup-campaigns-select-sub-audience-cooling-down.png
           :width: 650 px
@@ -196,7 +196,7 @@ The following sections describe the steps you will follow to set up and configur
           :align: left
           :class: no-scaled-link
 
-       Then update the name of the treatment group. In this example, it's "AtRisk_Socks". This is part of the filename that you will see in the application to which you send this sub-audience. For example: "Churn_HighValue_Early_AtRisk_Socks".
+       Then update the name of the treatment group. In this example, it is "AtRisk_Socks". This is part of the filename that you will see in the application to which you send this sub-audience. For example: "Churn_HighValue_Early_AtRisk_Socks".
 
        .. image:: ../../images/mockup-campaigns-select-sub-audience-at-risk.png
           :width: 650 px

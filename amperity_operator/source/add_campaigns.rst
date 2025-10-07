@@ -67,9 +67,9 @@ Verify prerequisites
 
 .. add-campaigns-verify-prerequisites-tip-start
 
-.. tip:: If you closely followed the steps for configuring :doc:`customer profiles <add_customer_data>` and :doc:`transactions <add_transactions>` verifying prerequisites may be a formality.
+.. tip:: If you followed the steps for configuring :doc:`customer profiles <add_customer_data>` and :doc:`transactions <add_transactions>` verifying prerequisites may be a formality.
 
-   If your tenant has been on Amperity for a while and wants to enable segments and campaigns, you should carefully review all data sources, Stitch results, and customer data tables to ensure that all of those components meet all requirements.
+   If your tenant has been on Amperity for a while and wants to enable segments and campaigns, you should review all data sources, Stitch results, and customer data tables to ensure that all of those components meet all requirements.
 
 .. add-campaigns-verify-prerequisites-tip-end
 

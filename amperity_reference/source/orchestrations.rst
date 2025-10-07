@@ -148,7 +148,7 @@ Delete orchestration
 
 .. orchestrations-delete-start
 
-Use the **Delete** option to remove an orchestration from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this orchestration prior to deleting it. This action will *not* delete the data template or destination associated with the orchestration.
+Use the **Delete** option to remove an orchestration from Amperity. Verify that both upstream and downstream processes no longer depend on this orchestration prior to deleting it. This action will *not* delete the data template or destination associated with the orchestration.
 
 .. orchestrations-delete-end
 
@@ -169,7 +169,7 @@ Edit orchestration
 
 .. orchestrations-edit-start
 
-Use the **Edit** option to modify the settings for an orchestration. This should be done carefully. Verify that both upstream and downstream processes that depend on this orchestration continue to work properly after the changes are saved. This action will *not* modify the data template or destination associated with the orchestration.
+Use the **Edit** option to modify the settings for an orchestration. Verify that both upstream and downstream processes that depend on this orchestration continue to work after the changes are saved. This action will *not* modify the data template or destination associated with the orchestration.
 
 .. orchestrations-edit-end
 

@@ -374,7 +374,7 @@ This query must do the following:
 
 .. important:: Only the PII semantic fields **email**, **phone**, **given-name**, **surname**, and **address** have corresponding **_blv** columns added to the **Unified Coalesced** table, but any semantic may be added to the blocklist.
 
-The name of the query should contain the word "blocklist" to help clearly identify its purpose. For example: "Bad-values Blocklist".
+The name of the query should contain the word "blocklist" to help identify its purpose. For example: "Bad-values Blocklist".
 
 .. bad-values-blocklist-add-sql-query-requirements-end
 
@@ -450,9 +450,9 @@ Run query
 
 .. bad-values-blocklist-run-query-start
 
-Run the query from the SQL **Query Editor** to validate the syntax and to verify the output. Fix any errors that may be returned. If the values in the returned output don't seem correct, update the threshold for values counts to see if that improves the results.
+Run the query from the SQL **Query Editor** to validate the syntax and to verify the output. Fix any errors that may be returned. If the values in the returned output do not seem correct, update the threshold for values counts to see if that improves the results.
 
-.. tip:: The goal with a bad-values blocklist isn't to catch every single bad value, but rather to remove from the Stitch process the most comon bad values.
+.. tip:: The goal of the bad-values blocklist is not to catch every single bad value, but rather to remove from the Stitch process the most comon bad values.
 
 .. bad-values-blocklist-run-query-end
 
@@ -531,7 +531,7 @@ Add feed
       * - **value**
         - **blv/value**
 
-   .. note:: This is different from how semantics are applied to a non-blocklist feed. This is because the actual data source, actual semantic, and actual values are in the data source itself, as they were output from the customer 360 data as CSV data, and then re-ingested as CSV data in the feed created for the bad-values blocklist. This, effectively, round-trips output from the customer 360 database as a CSV file that creates a new domain table for use during the Stitch process.
+   .. note:: This is different from how semantics are applied to a non-blocklist feed. This is because the actual data source, actual semantic, and actual values are in the data source itself, as they were output from the customer 360 data as CSV data, and then re-ingested as CSV data in the feed created for the bad-values blocklist. This round-trips output from the customer 360 database as a CSV file that creates a new domain table for use during the Stitch process.
 #. Define the primary key. This is required by the Stitch process, but for the purpose of creating the bad-values blocklist is not important. Use any row ID.
 #. Uncheck the **Make available to Stitch** option.
 #. Activate the feed.
@@ -820,7 +820,7 @@ When **address** is added to the bad-values blocklist, be sure to verify that re
 
 .. bad-values-blocklist-advanced-addresses-context-start
 
-An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold--at least "40", but higher if necessary--for **address**, verify the results, and then adjust the threshold carefully until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
+An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold--at least "40", but higher if necessary--for **address**, verify the results, and then adjust the threshold until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
 
 When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group--**address**, **city**, and **state**--does not replace the **address** value in the **Stitch_BadValues** table; the same address value may appear multiple times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
 
@@ -834,7 +834,9 @@ address2 fields
 
 .. bad-values-blocklist-advanced-addresses-address2-start
 
-The **address** field may be used in the bad-values blocklist as part of a complete, normalized address. This should be done carefully because the fields associated with this semantic can follow many patterns and contain many types of values so applying a bad-values blocklist to them is more difficult and the results are less accurate.
+The **address** field may be used in the bad-values blocklist as part of a complete, normalized address. 
+
+.. caution:: The fields associated with this semantic can follow many patterns and contain many types of values. Applying a bad-values blocklist to them is more difficult and the results are less accurate.
 
 .. important:: The **address2** field should never be used in the bad-values blocklist in isolation.
 
@@ -995,7 +997,7 @@ to:
 
    COALESCE(REGEXP_EXTRACT(datasource, '.+?(?=:)'), '*') AS datasource,
 
-This update allows these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and will prevent **NULL** values from being returned.
+This update allows these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and prevents **NULL** values from being returned.
 
 .. bad-values-blocklist-advanced-custom-domain-tables-end
 

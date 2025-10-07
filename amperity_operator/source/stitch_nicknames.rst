@@ -207,7 +207,7 @@ Likely nickname
 
 .. stitch-nicknames-example-likely-nickname-start
 
-Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it's very likely that Ty is a nickname for Tylian.
+Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it is very likely that Ty is a nickname for Tylian.
 
 Add an entry to the nicknames table to increase the likelihood that Ty and Tylian are considered matching given names:
 

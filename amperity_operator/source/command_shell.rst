@@ -35,7 +35,7 @@ Basics
    * - **Ctrl + r**
      - Search through the terminal history.
 
-       After typing Ctrl + r start typing the command that you're looking for and previously used commands will populate based on your search.
+       After typing Ctrl + r start typing the command that you are looking for and previously used commands will populate based on your search.
 
        To cycle through commands that use the same search term just hit Ctrl + r again.
    * - **Option + b**

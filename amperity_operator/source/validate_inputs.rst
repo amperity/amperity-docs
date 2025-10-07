@@ -21,7 +21,7 @@ Input validation reports
 
 The quality of the data sources your brand chooses to make available to Amperity matters when it comes to building unified customer profiles because your brand uses those profiles to activate your customers across a wide variety of downstream use cases. More accurate profiles lead to higher activation rates, better match rates, and increased returns on advertiser spend.
 
-Amperity includes a series of input validation reports that help your brand measure the quality of email addresses, phone numbers, and transactions. Use them to quickly identify data quality issues so that your brand can work to resolve those data quality issues as soon as possible.
+Amperity includes a series of input validation reports that help your brand measure the quality of email addresses, phone numbers, and transactions. Use them to identify data quality issues so that your brand can work to resolve those data quality issues as soon as possible.
 
 .. validate-inputs-overview-end
 
@@ -128,7 +128,7 @@ Transactions
 
 .. validate-inputs-review-reports-transactions-start
 
-A complete transaction with good underlying data has a combination of values that work together to describe what was purchased, when it was purchased, where it was purchased, and so on. Incomplete transactions are shown using a variety of reports. For example:
+A complete transaction with good underlying data has a combination of values that work together to describe what was purchased, when it was purchased, or where it was purchased. Incomplete transactions are shown using a variety of reports. For example:
 
 * All items should be associated with a unique product ID.
 * All orders should be associated with a store ID.

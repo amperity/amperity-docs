@@ -50,7 +50,7 @@ When to use
 #. Review the cluster size distribution value specified in the query, and then adjust this size limit as appropriate.
 #. Look for supersize clusters or other indicators of overclustering.
 
-   .. important:: The presence of clusters that exist outside the 1-20 range is an indicator of overclustering. If a lot of clusters are present at the high end of this range, it's important to investigate those cases to identify if distinct entities were clustered together.
+   .. important:: The presence of clusters that exist outside the 1-20 range is an indicator of overclustering. If a lot of clusters are present at the high end of this range, it is important to investigate those cases to identify if distinct entities were clustered together.
 #. If present, investigate each cluster individually.
 
 .. stitch-qa-query-cluster-size-distribution-use-end

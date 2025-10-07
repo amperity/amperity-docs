@@ -411,7 +411,7 @@ Buttons are like badges, but are bigger and link to somewhere.
 Card carousel
 ==================================================
 
-.. TODO: FWIW, this isn't amazing. Will keep the functionality, but looking for a useful use case.
+.. TODO: FWIW, this is not amazing. Will keep the functionality, but looking for a useful use case.
 
 .. rst-card-carousel-start
 
@@ -1267,7 +1267,7 @@ Assign ``none`` as the name of the code block for situations that require code b
    .. code-block:: none
       :linenos:
 
-      This is a none block. It's formatted as if it were code, but isn't actually code.
+      This is a none block. It is formatted as if it were code, but is not actually code.
 
       Can include code-like things:
 
@@ -1280,7 +1280,7 @@ Assign ``none`` as the name of the code block for situations that require code b
 .. code-block:: none
    :linenos:
 
-   This is a none block. It's formatted as if it were code, but isn't actually code.
+   This is a none block. It is formatted as if it were code, but is not actually code.
 
    Can include code-like things:
 
@@ -1668,7 +1668,7 @@ Code block with sidebar
 
 .. rst-code-with-sidebar-start
 
-Code blocks can be configured to have a sidebar on the right side. In general do not use sidebars with code samples. The width of the topic just isn't wide enough in most cases. This formatting option should be used sparingly and only if it improves understanding technical content.
+Code blocks can be configured to have a sidebar on the right side. In general do not use sidebars with code samples. The width of the topic just is not wide enough in most cases. This formatting option should be used sparingly and only if it improves understanding technical content.
 
 .. sidebar:: A sidebar caption.
 
@@ -1758,7 +1758,7 @@ A dropdown shows a title string and a box that expands when the reader clicks it
 
    Dropdown content
 
-.. tip:: Dropdowns should be used to present information that a reader does not need to see immediately and the title should clearly identify what information appears.
+.. tip:: Dropdowns should be used to present information that a reader does not need to see immediately and the title should identify what information appears.
 
    Dropdowns should not be used when a section title should appear in the right-side navigation.
 
@@ -1941,7 +1941,7 @@ Gutter
 
 .. rst-grids-config-gutter-start
 
-A gutter is the distance between individual cards in a grid. If it's too low the cards are too close together and if it's too large the cards are too far apart. When a grid does not have a gutter and the container class is surface the content appears as if there is a single card, but each individual grid is still formatted within the grid.
+A gutter is the distance between individual cards in a grid. If it is too low the cards are too close together and if it is too large the cards are too far apart. When a grid does not have a gutter and the container class is surface the content appears as if there is a single card, but each individual grid is still formatted within the grid.
 
 The values for ``:gutter:`` must be between "0" and "4". Use "0" for no gutter. Use "1" for an extra small gutter, "2" for a small gutter, "3" for a medium gutter, and "4" for a large gutter. The default value is "4".
 
@@ -3379,7 +3379,7 @@ Use an options list to show options for command-line tools or for other types of
 .. code-block:: none
 
    -a         Output all.
-   -b         Output both (this description is quite long).
+   -b         Output both (this description is long).
    -c arg     Output just arg.
    --long     Output all day long.
 
@@ -3393,7 +3393,7 @@ Use an options list to show options for command-line tools or for other types of
 **For this**
 
 -a         Output all.
--b         Output both (this description is quite long).
+-b         Output both (this description is long).
 -c arg     Output just arg.
 --long     Output all day long.
 
@@ -3680,7 +3680,7 @@ Left-side
 
 .. rst-navigation-left-start
 
-.. TODO: Need to figure out how to show this within the contributing guide. The Style Guide might work with broken out standalone topics? Some of them will be really short though. Maybe groupings.
+.. TODO: Need to figure out how to show this within the contributing guide. The Style Guide might work with broken out standalone topics? Some of them will be short. Maybe groupings.
 
 The left-side navigation shows the table of contents for the entire topic collection.
 
@@ -3749,7 +3749,7 @@ In smaller screen sizes the right-side menu collapses and can be accessed from a
 Search
 --------------------------------------------------
 
-.. TODO: Update this for Kapa.ai when it's available.
+.. TODO: Update this for Kapa.ai when it is available.
 
 .. rst-navigation-search-start
 
@@ -4244,7 +4244,7 @@ Simple table
 
 .. rst-tables-simple-start
 
-Simple tables are simple. The markup is focused mostly on the vertical layout. Like grid tables, they are easy when they are small.
+Simple tables are simple. The markup is focused on the vertical layout. Like grid tables, they are easy when they are small.
 
 **Do this**
 
@@ -4544,7 +4544,7 @@ Amperity docs use tokens for variables, strings, and icons that have common use 
 * :ref:`Global tokens <rst-tokens-global>`
 * :ref:`Topic-specific tokens <rst-tokens-topic>`
 
-.. note:: Tokens are used deliberately to solve build and maintanence problems. For example, a URL that is used in lots of places is harder to update if it changes. Icons from some libraries, such as Font Awesome, do not display inline in reStructuredText and need to be converted to raw HTML, and inline Unicode characters parses literally.
+.. note:: Tokens are used to solve build and maintanence problems. For example, a URL that is used in lots of places is harder to update if it changes. Icons from some libraries, such as Font Awesome, do not display inline in reStructuredText and need to be converted to raw HTML, and inline Unicode characters parses literally.
 
 .. rst-tokens-end
 

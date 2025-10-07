@@ -23,7 +23,7 @@ Third-party data, such as from cookies that track a product or brand on someone 
 
 This is due to a combination of emerging trends around data transparency that give users more control over their data along with new government policies that mandate this transparency, such as General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
 
-With the value of using third-party data rapidly degrading, it's time to shift focus to first-party data.
+With the value of using third-party data degrading, it is time to shift focus to first-party data.
 
 .. backstory-end
 
@@ -100,7 +100,7 @@ Raw clickstream data should be provided to Amperity as a targeted subset of oper
 
    The domain table with the useful subset of data should be processed on a regular basis and may be made available to Stitch if it contains meaningful profile (PII) data, and then added to the customer 360 database as a passthrough table.
 
-   This dual-domain table approach ensures that Amperity has direct access to a filtered subset of operational clickstream data and that the superset of data does not require daily processing. Updates to that filtered subset can be done quickly by updating the saved query instead of creating a new feed.
+   This dual-domain table approach ensures that Amperity has direct access to a filtered subset of operational clickstream data and that the superset of data does not require daily processing. Updates to that filtered subset can be done by updating the saved query instead of creating a new feed.
 
 .. data-source-first-party-raw-clickstream-end
 

@@ -639,7 +639,7 @@ Two-step authentication required
 
 |destination-name| requires `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| to be enabled before Amperity can send data.
 
-.. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request wasn't made by the identity owner. For example: a login attempt from a device that is not trusted.
+.. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request was not made by the identity owner. For example: a login attempt from a device that is not trusted.
 
 To resolve this error, ensure that multi-factor authentication is enabled for your |destination-name| account.
 

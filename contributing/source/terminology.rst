@@ -11,7 +11,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-s3:
 
 **Amazon S3** vs. **S3**
-   Amazon S3 is the correct trademarked name for the Simple Storage Service. It's often shortened to just S3, but we should use Amazon S3 in documentation as often as possible.
+   Amazon S3 is the correct trademarked name for the Simple Storage Service. It is often shortened to just S3, but we should use Amazon S3 in documentation as often as possible.
 
 
 .. _term-amperity:
@@ -57,7 +57,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 **data table** vs. **datatable**
    Use **data table** as two words as a way to generically describe the things that exist in a database: "data tables".
 
-   Use the correct name when it's available, such as "domain table" or "customer 360 table", but as a generic reference "data table" is fine.
+   Use the correct name when it is available, such as "domain table" or "customer 360 table", but as a generic reference "data table" is fine.
 
 
 .. _term-dummy:
@@ -69,7 +69,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-e-commerce:
 
 **e-commerce** vs. **ecommerce** or **eCommerce**
-   It's **e-commerce**. Why? `Because Merriam-Webster says so <https://www.merriam-webster.com/dictionary/e-commerce>`__. It's arbitrary otherwise.
+   It is **e-commerce**. Why? `Because Merriam-Webster says so <https://www.merriam-webster.com/dictionary/e-commerce>`__. It is arbitrary otherwise.
 
 
 .. _term-excited:
@@ -93,7 +93,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-multi-tenant:
 
 **multitenant** vs **multi-tenant** or **multi tenant**
-   It's **multitenant**. Why? Because.
+   It is **multitenant**. Why? Because.
 
 
 .. _term-null:
@@ -105,7 +105,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-on-premises:
 
 **on-premises** vs. **on-premise**
-   It's **on-premises**. Why? Because. The words premise and premises do not mean the same thing. The plural of premise is not premises.
+   It is **on-premises**. Why? Because. The words premise and premises do not mean the same thing. The plural of premise is not premises.
 
    When referring to the installation of computer-related hardware, software, and whatnots within the customer's physical environment (and not, say, "the cloud") always (and without exception) use the term **on-premises**.
 
@@ -115,7 +115,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-on-site:
 
 **on-site** vs. **onsite**
-   A synonym of **on-premises** generally. Use **on-premises** when referring to hardware and software deployments that are not hosted in a Cloud environment, such as Amazon AWS. Use **on-site** for any non-on-premises situations, such as when individuals from |company_name| visit a customer: "An |company_name| representative visits with you on-site to discuss your on-premises deployment options."
+   A synonym of **on-premises**. Use **on-premises** when referring to hardware and software deployments that are not hosted in a Cloud environment, such as Amazon AWS. Use **on-site** for any non-on-premises situations, such as when individuals from |company_name| visit a customer: "An |company_name| representative visits with you on-site to discuss your on-premises deployment options."
 
 
 .. _term-open-source:
@@ -147,7 +147,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-slave:
 
 **slave**
-   See **primary** / **replica**. Don't use this term.
+   See **primary** / **replica**. Do not use this term.
 
 
 .. _term-stitch:

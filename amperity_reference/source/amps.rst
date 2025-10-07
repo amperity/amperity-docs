@@ -912,9 +912,9 @@ Sources
 
 To reduce Amps consumption for the **Sources** category:
 
-* Use Amperity Bridge to sync data to Amperity. A sync is more efficient and typically consumes Amps at a lower rate than loading files. Amperity Bridge connects to your Lakehouse quickly and efficiently.
+* Use Amperity Bridge to sync data to Amperity. A sync is more efficient and typically consumes Amps at a lower rate than loading files. Amperity Bridge efficiently connects to your Lakehouse.
 
-* Partitioned CSV files, when available, can be ingested in parallel, running more quickly than non-partitioned CSV files. Modern file formats, such as Apache Parquet, can be processed even more quickly.
+* Partitioned CSV files, when available, can be ingested in parallel, running faster than non-partitioned CSV files. Modern file formats, such as Apache Parquet, can be processed faster.
 
 * Ingesting data incrementally is faster than ingesting full historical data.
 
@@ -968,7 +968,7 @@ Compute settings for each category may be adjusted to one of XS (smallest), S, M
 
 .. note:: The compute resources for the **Ingest** category cannot be adjusted because ingest dynamically scales to the type and amount of data that is being pulled into the Amperity platform.
 
-Fine-tuning compute resource sizes is a balance between speed and cost. For well-distributed jobs, increasing compute resources might reduce runtime while consuming Amps at the same rate. For inefficient SQL operations, increasing compute resources may increase Amps consumption significantly, without significant runtime reduction. All changes to compute resources should be made in a sandbox and fully tested before promoting them to your production tenant.
+Fine-tuning compute resource sizes is a balance between speed and cost. For well-distributed jobs, increasing compute resources might reduce runtime while consuming Amps at the same rate. For inefficient SQL operations, increasing compute resources may increase Amps consumption, without significant runtime reduction. All changes to compute resources should be made in a sandbox and fully tested before promoting them to your production tenant.
 
 .. important:: Only a **Datagrid Administrator** can modify compute resource sizes. Please ask your Amperity representative for assistance with any questions around adjusting compute resources.
 

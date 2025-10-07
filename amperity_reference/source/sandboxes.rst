@@ -27,7 +27,7 @@ About sandboxes
 
    Ensure data is always available in production by making changes in a sandbox.
 
-   Each sandbox tracks changes, provides validation workflows and audit tools that don't need to be configured or customized, and automates monitoring and alerts for changes in the sandbox.
+   Each sandbox tracks changes, provides validation workflows and audit tools that do not need to be configured or customized, and automates monitoring and alerts for changes in the sandbox.
 
    Open **Learning Lab** to learn more about how `sandboxes <https://learn.amperity.com/sandboxes-course>`__ |ext_link| work. Registration is required.
 
@@ -420,7 +420,7 @@ Sandboxes are created from the **Users & Admin** page.
 .. sandboxes-howto-add-sandbox-steps-start
 
 #. From the **Users & Admin** page, under **Sandboxes**, click **Create sandbox**.
-#. Each sandbox should be given a name that clearly identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes.
+#. Each sandbox should be given a name that identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes.
 
    .. image:: ../../images/mockups-sandbox-create-dialog.png
       :width: 450 px
@@ -644,7 +644,7 @@ Restore changes
 
 Changes that are promoted to production from a sandbox may be restored to a previous state. There are two approaches:
 
-#. In many situations you can use a sandbox workflow to quickly restore the state of production, especially when a sandbox was used to make small, iterative changes. First create a sandbox, and then make changes in that sandbox that returns your tenant to its previous state.
+#. In many situations you can use a sandbox workflow to restore the state of production, especially when a sandbox was used to make small, iterative changes. First create a sandbox, and then make changes in that sandbox that returns your tenant to its previous state.
 
 #. In situations where this cannot be done using a sandbox workflow, please ask for assistance from your Amperity representative or the `Amperity Support <https://docs.amperity.com/support/index.html>`__ pages.
 

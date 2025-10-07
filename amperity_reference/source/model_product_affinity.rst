@@ -76,7 +76,7 @@ Audience sizes are inclusive of all smaller audience sizes.
 
 Recommended audience sizes identify customers who are most likely to purchase. Use recommended audience sizes to:
 
-* More effectively engage with customers for product-specific sends, such as clearance sale and new arrival announcements
+* Engage with customers for product-specific sends, such as clearance sale and new arrival announcements
 * Define more valuable campaigns to grow revenue for specific product categories
 * Drive up conversion rates
 * Drive down opt-outs

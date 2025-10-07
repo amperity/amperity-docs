@@ -22,9 +22,9 @@ Reduce paid media ad spend
 
 Your brand's spend on paid media is often the highest percentage of spend within your brand's total advertising budget. The best way to deliver greater ROI on the campaigns that your brand runs through paid media is to exclude your lowest value customers from those campaigns.
 
-For example, a "lost" customer has stopped interacting with your brand, probably for years. They have opted out from receiving email and SMS communications and have not purchased from any of your brand's direct mail efforts. Are these customers worth marketing to? It depends on the campaign and the answer is not always "No." Should these customers be included in your most expensive paid media campaigns? That's easier and the answer is always "No."
+For example, a "lost" customer has stopped interacting with your brand, probably for years. They have opted out from receiving email and SMS communications and have not purchased from any of your brand's direct mail efforts. Are these customers worth marketing to? It depends on the campaign and the answer is not always "No." Should these customers be included in your most expensive paid media campaigns? That is easier and the answer is always "No."
 
-You can exclude these customers from your paid media campaigns--and preserve a percentage of your total advertising budget--by building an audience of your brand's lowest value customers. Use this audience as an exclusion, which will prevent these customers from being part of your highest priority, and most expensive, paid media campaigns.
+You can exclude these customers from your paid media campaigns--and preserve a percentage of your total advertising budget--by building an audience of your brand's lowest value customers. Use this audience as an exclusion, which prevents these customers from being part of your highest priority, and most expensive, paid media campaigns.
 
 .. usecase-reduce-paid-media-ad-spend-end
 
@@ -120,7 +120,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done building your audience. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Reduce Paid Media Ad Spend"
+     - You are done building your audience. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Reduce Paid Media Ad Spend"
 
        .. image:: ../../images/usecases-dialog-reduce-paid-media-ad-spend.png 
           :width: 440 px

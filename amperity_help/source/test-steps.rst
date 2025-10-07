@@ -1,6 +1,6 @@
 .. workflows-resolve-errors-start
 
-Some workflows may have errors that will prevent the workflow from completing successfully. Use the **Workflows** page to resolve workflows that failed by reviewing options for resolution, and then choosing one of those options or choosing to restart the workflow.
+Some workflows may have errors that prevents the workflow from completing successfully. Use the **Workflows** page to resolve workflows that failed by reviewing options for resolution, and then choosing one of those options or choosing to restart the workflow.
 
 .. workflows-resolve-errors-end
 

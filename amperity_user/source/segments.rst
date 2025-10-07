@@ -91,7 +91,7 @@ The following sections describe the individual elements within the **Segment Edi
 
           Amperity provides the following tables as standard output:
 
-          * The **Customer 360** table contains customer profile data--names, addresses, email addresses, phone numbers, and so on--summarized by unique customer.
+          * The **Customer 360** table contains customer profile data--names, addresses, email addresses, and phone numbers--summarized by unique customer.
           * The **Unified Transactions** table contains order-level details for a transaction.
           * The **Unified Itemized Transactions** table contains line-item and product catalog details for a transaction.
           * The **Transaction Attributes Extended** table contains calculated attributes that are built from order- and item-level details in transaction tables.
@@ -175,7 +175,7 @@ The following sections describe the individual elements within the **Segment Edi
           :alt: Step 7.
           :align: center
           :class: no-scaled-link
-     - When you are done building your segment, click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment.
+     - When you are done building your segment, click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment.
 
        .. image:: ../../images/mockup-segments-tab-dialog-save.png
           :width: 440 px

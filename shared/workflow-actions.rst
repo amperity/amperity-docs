@@ -191,7 +191,7 @@ To resolve this error, do the following.
 
 An archive that cannot be decompressed will return a workflow error; Amperity will be unable to complete the workflow until the issue is resolved.
 
-This issue may be shown when the name of the archive doesn't match the name of the configured archive or when Amperity is attempting to decompress a file and not an archive. In some cases, the contents of the archive file may be the reason why Amperity is unable to decompress the archive.
+This issue may be shown when the name of the archive does not match the name of the configured archive or when Amperity is attempting to decompress a file and not an archive. In some cases, the contents of the archive file may be the reason why Amperity is unable to decompress the archive.
 
 To resolve this error, do the following.
 

@@ -343,7 +343,7 @@ Delete API keys
 
 .. api-keys-api-token-delete-start
 
-In situations where rotating an access key isn't enough, you can delete an API key.
+In situations where rotating an access key is not enough, you can delete an API key.
 
 **To delete API tokens**
 
@@ -470,9 +470,9 @@ When an API key is rotated a new internal secret is generated, after which it be
 
 If an access token already has a deposed token, that deposed token is dropped and the previously issued access token takes its place as the deposed token.
 
-This process may be used to invalidate outstanding tokens issued without expiry times. Clients should be careful not to rotate too often, such as to not rotate on every issue call, or they will be surprised when their existing tokens stop working suddenly.
+This process may be used to invalidate outstanding tokens issued without expiry times. Clients should be careful not to rotate too often, such as to not rotate on every issue call, or they will be surprised when their existing tokens stop working.
 
-.. note:: If you rotate your tokens too quickly you may run into issues where previously issued access tokens are not deposed for a long enough time, which prevents newly issued tokens from being distributed.
+.. note:: If you rotate your tokens too often you may run into issues where previously issued access tokens are not deposed for a long enough time, which prevents newly issued tokens from being distributed.
 
 .. api-keys-api-token-rotate-end
 

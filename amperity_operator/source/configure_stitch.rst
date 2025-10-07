@@ -81,11 +81,11 @@ After you have selected the list of tables to include in Stitch results, return 
 Interaction tables
 --------------------------------------------------
 
-.. TODO: If at all possible, edit this down. It's correct, but wordy.
+.. TODO: If at all possible, edit this down. It is correct, but wordy.
 
 .. configure-stitch-tables-interactions-start
 
-Domain tables that contain interactions, such as customer orders, loyalty profiles, website clicks, and so on, are generally not made available to Stitch.
+Domain tables that contain interactions, such as customer orders, loyalty profiles, or website clicks, are not made available to Stitch.
 
 Use foreign keys to associate unique identifiers in tables that **DO NOT** contain interactions to unique identifiers in tables that **DO** contain customer profile data.
 
@@ -148,7 +148,7 @@ Rules can be configured to cluster records together when personally identifiable
    * - **values match**
      - Compares values for the selected semantic tag and clusters records when values match exactly.
    * - **values approximately match**
-     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values mostly match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
 
 For example:
 
@@ -183,6 +183,8 @@ For example:
 
 Separate records
 --------------------------------------------------
+
+.. vale off
 
 .. configure-stitch-rules-separate-start
 
@@ -234,6 +236,8 @@ For example:
    :class: no-scaled-link
 
 .. configure-stitch-rules-separate-end
+
+.. vale on
 
 
 .. _configure-stitch-rules-order:
@@ -318,7 +322,7 @@ Stitch rules for :ref:`clustering records <configure-stitch-rules-cluster>` and 
    * - **:fuzzy-different**
      - Compares values for the selected semantic tag and separates records when values are more than approximately different.
    * - **:fuzzy-similar**
-     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values mostly match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
    * - **:fuzzy/different-birthdates**
      - Compares values for birthdates and separates records when values are not the same.
    * - **:fuzzy/different-companies**
@@ -911,7 +915,7 @@ The default blocking strategies are: "dnf1", "dnf3", "dnf4", "dnf5", "dnf6", "dn
 
 .. configure-stitch-advanced-clustering-blocking-list-start
 
-In nearly all cases for all customers, the default blocking strategy should provide a reasonable recall rate. Each individual blocking strategy looks at various combinations of PII data:
+In most cases for all customers, the default blocking strategy should provide a reasonable recall rate. Each individual blocking strategy looks at various combinations of PII data:
 
 .. list-table::
    :widths: 200 400
@@ -926,7 +930,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:dnf1**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first character in **surname**, and **birthdate**.
    * - **:dnf2**
-     - Non-default, use carefully. This blocking strategy groups values associated with the following semantics: the full **given-name** and **email**.
+     - Non-default. This blocking strategy groups values associated with the following semantics: the full **given-name** and **email**.
    * - **:dnf3**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first three characters in **surname**, and **postal**.
    * - **:dnf4**
@@ -952,7 +956,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:login-trimmed**
      - Non-default. This blocking strategy groups values associated with the first five characters of an email addresses derived from **email**. This is used for low-threshold email address matching.
    * - **:name**
-     - Non-default, use carefully. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
+     - Non-defaul. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
    * - **:phone**
      - Default. This blocking strategy groups values associated with the **phone** semantic.
 
@@ -1045,7 +1049,7 @@ The matching strategy classifier tells Stitch how to apply the results of the bl
 
 The default behavior prioritizes separation keys over foreign keys.
 
-.. warning:: This value should be changed only after careful consideration. If changed, be sure to validate these results carefully to ensure that any changes to pairwise comparison scoring had the desired outcome.
+.. warning:: This value should be changed only after careful consideration. If changed, be sure to validate these results to ensure that any changes to pairwise comparison scoring had the desired outcome.
 
 .. configure-stitch-advanced-clustering-matching-strategy-end
 
@@ -1571,7 +1575,7 @@ Trivial duplicates
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of nearly identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records--the trivial duplicates--are not.
+A trivial duplicate is a set of nearly identical records that share enough matching PII to identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records--the trivial duplicates--are not.
 
 .. term-trivial-duplicate-end
 
@@ -1630,7 +1634,7 @@ Qualified trivial duplicates are treated as a single record by downstream Stitch
 
 .. admonition:: What are the rep_ds and rep_pk columns?
 
-   Use the **rep_pk** and **rep_ds** columns in the **Unified Coalesced** table to help with situations where it's necessary to understand why two records were not clustered together.
+   Use the **rep_pk** and **rep_ds** columns in the **Unified Coalesced** table to help with situations where it is necessary to understand why two records were not clustered together.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-rep-pk-start
@@ -1710,7 +1714,7 @@ For each unique combination of PII--excluding email addresses--the distinct emai
 
 .. configure-stitch-advanced-trivial-duplicates-warning-start
 
-.. warning:: Semantic exclusions should be applied very carefully. Use a sandbox to configure and apply a semantic exclusion, and then carefully review and validate that all downstream processes are not adversely affected by the change prior to applying a semantic change to a production environment.
+.. warning:: Semantic exclusions should be applied. Use a sandbox to configure and apply a semantic exclusion, and then review and validate that all downstream processes are not adversely affected by the change prior to applying a semantic change to a production environment.
 
 .. configure-stitch-advanced-trivial-duplicates-warning-end
 

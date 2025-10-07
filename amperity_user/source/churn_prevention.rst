@@ -23,6 +23,8 @@ Brands use churn prevention campaigns to win back customers who have not purchas
 
 .. churn-prevention-about-about-end
 
+.. vale off
+
 .. churn-prevention-custora-start
 
 .. admonition:: It's Not You, It's My Data: A short book about churn prevention campaigns
@@ -36,7 +38,7 @@ Brands use churn prevention campaigns to win back customers who have not purchas
              :alt: It's not you, it's my data
              :align: left
              :class: no-scaled-link
-        - Brands that don't adapt—and marketers that don't adopt new technological skills—will not last.
+        - Brands that do not adapt—and marketers that do not adopt new technological skills—will not last.
 
           One of those primary skills is systematically leveraging data to grow customer loyalty and improve customer retention.
 
@@ -45,6 +47,8 @@ Brands use churn prevention campaigns to win back customers who have not purchas
           `Open the PDF to read the whole book <https://docs.amperity.com/downloads/pdf/It's%20not%20you,%20it's%20my%20data.pdf>`__ |ext_link|
 
 .. churn-prevention-custora-end
+
+.. vale on
 
 
 .. _churn-prevention-whatis:
@@ -99,7 +103,6 @@ Plan a series of promotions and offers that can be tied to each audience or sub-
 * Free shipping
 * Exclusive offers
 * Buy one and get one free
-* and so on
 
 .. churn-prevention-howto-strategies-end
 
@@ -169,7 +172,7 @@ Expand the campaign
 
 .. churn-prevention-howto-expand-start
 
-After you have established a rhythm with testing and measuring churn prevention campaigns for a small, targeted audience, it's time to start expanding the campaign to add more customers, more value tiers, and more marketing tools.
+After you have established a rhythm with testing and measuring churn prevention campaigns for a small, targeted audience, it is time to start expanding the campaign to add more customers, more value tiers, and more marketing tools.
 
 Update the initial test campaign to include customers who are *at risk*. For both *cooling down* and *at risk* customers, apply predicted customer lifetime value (pCLV) to identify customers who fall into the high and medium value tiers, and then, for each value tier, divide them randomly into three groups:
 
@@ -215,7 +218,7 @@ Send these campaigns to your email service provider, Facebook, and then continue
 
 Continue comparing revenue per user, profit per user, and overall conversion across each set of control and treatment groups. Continue to tailor your promotions and offers to specific combinations of customer lifecycle status and value tier.
 
-Continue to test a variety of messages across a greater number of audiences and sub-audiences and keep using the control group and don't stop using the control and treatment groups pattern with each audience and sub-audience. Get more creative with the campaigns that are sent to your most valuable customers.
+Continue to test a variety of messages across a greater number of audiences and sub-audiences and keep using the control group and do not stop using the control and treatment groups pattern with each audience and sub-audience. Get more creative with the campaigns that are sent to your most valuable customers.
 
 Consider using additional treatment groups, along with a control group, to allow for testing additional messages. Continue reusing promotions and offers that perform well. Look for ways to reuse creative assets and messages across your churn prevention campaign.
 

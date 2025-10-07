@@ -120,9 +120,9 @@ Get details
 
           Optional. Use the **AMC instance** dropdown to select an Amazon Marketing Cloud instance.
 
-          .. important:: If an instance for Amazon Marketing Cloud **is not** configured, Amperity will skip adding audience members to Amazon Marketing Cloud.
+          .. important:: If an instance for Amazon Marketing Cloud **is not** configured, Amperity skips adding audience members to Amazon Marketing Cloud.
 
-             If an Amazon Marketing Cloud instance is configured, Amperity will attempt to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
+             If an Amazon Marketing Cloud instance is configured, Amperity attempts to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -178,7 +178,7 @@ Get details
 
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
-       All personally identifiable information (PII)—email, phone, address, and so on—is sent to |destination-name| as SHA-256 hashed data.
+       All personally identifiable information (PII), such as email, phone, or address, is sent to |destination-name| as SHA-256 hashed data.
 
 .. destination-amazon-ads-get-details-table-end
 

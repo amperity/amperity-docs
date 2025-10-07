@@ -173,7 +173,7 @@ Configure Amperity to send data to |destination-name| using the |destination-api
 
 .. destinations-add-destinations-intro-api-only-end
 
-.. TODO: The following API-based destinations have bespoke settings: Campaign Monitor, Mailchimp. If the steps below change, they are mostly global to API-based destinations, but you need to also update ones with bespoke settings to retain consistency.
+.. TODO: The following API-based destinations have bespoke settings: Campaign Monitor, Mailchimp. If the steps below change, they are global to API-based destinations, but you need to also update ones with bespoke settings to retain consistency.
 
 .. TODO: Facebook, Google use Oauth, which has different steps.
 
@@ -324,7 +324,7 @@ DESTINATIONS
 DESTINATIONS
 DESTINATIONS
 
-.. TODO: This is the sections for the templated content for adding destinations in /operator/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
+.. TODO: This is the sections for the templated content for adding destinations in /operator/. These sections allow for bespoke steps, as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.
 
@@ -334,7 +334,7 @@ Open the **Destinations** tab to configure a destination for |destination-name|.
 
 .. destinations-add-destination-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-add-name-and-description-start
 
@@ -363,7 +363,7 @@ The credential type is set automatically to |sftp-type|. You may use an existing
 
 .. destinations-add-credentials-sftp-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-add-new-or-select-existing-start
 
@@ -375,7 +375,7 @@ Select **Create a new credential** from the **Credential** dropdown. This opens 
 
 .. destinations-add-new-or-select-existing-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-intro-for-additional-settings-start
 
@@ -651,7 +651,7 @@ DATA TEMPLATES
 DATA TEMPLATES
 DATA TEMPLATES
 
-.. TODO: This is the sections for the templated content for adding data templates to destinations in /operator/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step 4 as much as possible for consistency.
+.. TODO: This is the sections for the templated content for adding data templates to destinations in /operator/. These sections allow for bespoke steps, as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step 4 as much as possible for consistency.
 
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.
@@ -664,7 +664,7 @@ This opens the **Add Data Template** dialog box.
 
 .. destinations-data-template-open-template-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-data-template-open-template-name-start
 
@@ -683,7 +683,7 @@ A business user may also have restricted access to PII, which prevents them from
 
 .. destinations-data-template-business-users-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-data-template-business-users-access-not-configured-start
 

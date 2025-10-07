@@ -231,7 +231,7 @@ Transactions
       :start-after: .. term-unified-itemized-transactions-table-start
       :end-before: .. term-unified-itemized-transactions-table-end
 
-   Carefully review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :doc:`Unified Transactions table <table_unified_transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
+   Review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :doc:`Unified Transactions table <table_unified_transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
 
 .. feeds-apply-semantic-tags-itemized-important-end
 

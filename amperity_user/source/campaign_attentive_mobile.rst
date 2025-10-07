@@ -86,7 +86,7 @@ The campaign name and treatment group names are used to determine the segment na
 
 Be sure to use descriptive names for campaigns *and* treatment groups and be careful to not use the default treatment group names when sending campaigns to |destination-name|.
 
-This will ensure that downstream users in |destination-name| will be able to understand what each segment is for and won't have to view default naming patterns like "CampaignName_Recipient1", "CampaignName_Recipient2", etc.
+This will ensure that downstream users in |destination-name| is able to understand what each segment is for and will not have to view default naming patterns like "CampaignName_Recipient1", "CampaignName_Recipient2", etc.
 
 .. channel-attentive-names-end
 

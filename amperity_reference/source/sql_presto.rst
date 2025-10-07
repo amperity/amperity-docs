@@ -100,7 +100,7 @@ General
 **Avoid**
 
 * Using reserved keyword names as identifiers.
-* CamelCase, with the exception of the table name. CamelCase is difficult to scan quickly.
+* CamelCase, with the exception of the table name. CamelCase is difficult to scan.
 * Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
@@ -263,7 +263,7 @@ Ensure the name is unique and does not exist as a reserved keyword. Keep the len
 
 Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names.
 
-Use underscores where you would naturally include a space in the name. For example, "first name" becomes "first_name". Avoid the use of multiple consecutive underscores because they can be hard to read.
+Use underscores where you would include a space in the name. For example, "first name" becomes "first_name". Avoid the use of multiple consecutive underscores because they can be hard to read.
 
 Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
@@ -296,7 +296,7 @@ For tables::
 
 When using an alias:
 
-* Assign names that clearly relate to the column or table.
+* Assign names that relate to the column or table.
 
   .. important:: Do not use an alias when its name matches the original column name.
 
@@ -355,7 +355,7 @@ Example:
 
 When using correlations:
 
-* Assign names that clearly relate to the table. For example: a table named "Merged_Customers" should have a correlation name of "mc".
+* Assign names that relate to the table. For example: a table named "Merged_Customers" should have a correlation name of "mc".
 * Always use the first letter of the table as the first letter of the correlation.
 * Append additional alphanumeric characters as necessary's to ensure unique correlation names.
 * Ensure that correlation names are used only within the same query.
@@ -1876,7 +1876,7 @@ Examples of **ALL** comparison operator combinations:
 Expression              Meaning
 ====================    ===========
 A = ALL (subquery)      Evaluates to **TRUE** when A is equal to all values.
-A <> ALL (subquery)     Evaluates to **TRUE** when A doesn't match any value.
+A <> ALL (subquery)     Evaluates to **TRUE** when A does not match any value.
 A < ALL (subquery)      Evaluates to **TRUE** when A is smaller than the smallest value.
 ====================    ===========
 
@@ -1910,7 +1910,7 @@ Expression              Meaning
 A = ANY (subquery)      Evaluates to **TRUE** when A is equal to any of the values.
 
                         .. note:: This form is equivalent to A IN (subquery).
-A <> ANY (subquery)     Evaluates to **TRUE** when A doesn't match one or more values.
+A <> ANY (subquery)     Evaluates to **TRUE** when A does not match one or more values.
 A < ANY (subquery)      Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
@@ -1945,7 +1945,7 @@ A = SOME (subquery)     Evaluates to **TRUE** when A is equal to any of the valu
 
                         .. note:: This form is equivalent to A IN (subquery).
 
-A <> SOME (subquery)    Evaluates to **TRUE** when A doesn't match one or more values.
+A <> SOME (subquery)    Evaluates to **TRUE** when A does not match one or more values.
 A < SOME (subquery)     Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
@@ -2329,7 +2329,7 @@ Add leading apostrophe
 
 Some use cases for CSV files have a downstream dependency on Microsoft Excel. Excel automatically removes leading zeros and converts large numbers to scientific notation, such as 1.23E+15, to ensure that formulas and math operations work correctly.
 
-Long strings are output from Amperity in the form of the Amperity ID, customer keys, loyalty program IDs, product codes, and so on. Add a leading apostrophe (**'**) to these strings within the Amperity segment to ensure these string values are interpreted as text by Excel.
+Long strings are output from Amperity in the form of the Amperity ID, customer keys, loyalty program IDs, or product codes. Add a leading apostrophe (**'**) to these strings within the Amperity segment to ensure these string values are interpreted as text by Excel.
 
 Use the **CONCAT()** function to build a string with a leading character, and then use the **CHR()** function to apply Unicode codepoint ``39``, which is an apostrophe.
 

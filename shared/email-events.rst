@@ -205,7 +205,7 @@ The type of email event. Possible values:
 * Converted
 * Unsubscribe
 
-.. important:: The values for email event types **must** spelled as expected to ensure the **Email Engagement Summary** can properly summarize email events. For example: "Optin" may not be "Opt-in".
+.. important:: The values for email event types **must** spelled as expected to ensure the **Email Engagement Summary** can summarize email events. For example: "Optin" may not be "Opt-in".
 
 .. email-events-type-end
 

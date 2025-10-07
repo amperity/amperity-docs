@@ -57,7 +57,7 @@ Every Fivetran-enabled workflow is different. Some workflows require permission 
 
 .. source-fivetran-generic-howitworks-callouts-start
 
-A Fivetran-enabled data source generally works like this:
+A Fivetran-enabled data source works like this:
 
 #. Fivetran is configured to pull data from a data source. This process requires allowing Fivetran the right level of access to pull that data from your data source to Fivetran.
 #. Fivetran pulls that data into one or more Snowflake tables.
@@ -1360,7 +1360,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :width: 140 px
           :align: left
      - |fivetran_taboola|
-     - Taboola helps people find relevant content online, matching them with news stories, articles, blogs, videos, apps, products and other content they're likely to want to explore.
+     - Taboola helps people find relevant content online, matching them with news stories, articles, blogs, videos, apps, products and other content they are likely to want to explore.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-tiktok.png
           :figclass: light-only

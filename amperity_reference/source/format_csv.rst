@@ -25,7 +25,7 @@ CSV files
 
 .. tip:: Consider using :doc:`Apache Avro <format_avro>` and :doc:`Apache Parquet <format_parquet>` file formats instead of CSV. 
 
-   * Avro uses a JSON-like schema that stores data in rows. Avro files have a very small file size that transfers quickly.
+   * Avro uses a JSON-like schema that stores data in rows. Avro files are small with fast transfers.
    * Parquet is highly compact, can be transferred easily, and avoids escape character and data formatting issues that can be present in other formats.
 
 .. format-csv-tip-end
@@ -58,7 +58,7 @@ Double quotes
 
 When an escape character is not specified, Amperity will assume that the escape character is double quotes. This follows the RFC as closely as possible: "If double quotes are used to enclose fields, then a double quote appearing inside a field must be escaped by preceding it with another double quote."
 
-CSV files, generally, do not have a formal specification, which allows for a wide variety of implementations that can create very specific problems.
+CSV files, do not have a formal specification, which allows for a wide variety of implementations that can create very specific problems.
 
 If you notice data quality issues from a data source that uses a CSV file, consider updating that CSV file to adhere to the RFC as closely as possible, including applying a consistent approach for the use of double quotes, and then ensuring the escape character is compatible with the data provided by that data source.
 
@@ -218,7 +218,7 @@ AS/400
 
 AS/400 is a computer platform that can provide raw data to Amperity as zipped CSV files configured as a one-time export or as a recurring export. For recurring exports, the customer must set up a workflow that collects this data, and then puts it into a location from which Amperity can pull data (Amazon S3, Azure Blob Storage, Google Cloud Storage, or SFTP).
 
-#. Data must be configured to be exported as a collection of zipped CSV tables. For example, tables for customer profiles, orders, order items, shipments, emails, and so on.
+#. Data must be configured to be exported as a collection of zipped CSV tables. For example, tables for customer profiles, orders, order items, shipments, and emails.
 #. Records within these tables should have a common identifier, such as a customer number. Use this identifier for foreign key tagging within feeds.
 #. A data dictionary must be defined for these tables, and then provided to Amperity.
 #. Verify date formats. These may require additional processing within Amperity that transforms them into the preferred format.

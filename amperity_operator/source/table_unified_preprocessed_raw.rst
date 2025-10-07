@@ -242,7 +242,7 @@ Use a series of **WHERE** clauses to compare specific Amperity IDs:
    -- WHERE uc.amperity_id = 'amperity-id-2'
    -- WHERE uc.amperity_id = 'amperity-id-3'
 
-This can help identify situations where the bad-values blocklist isn't blocking specific values. Compare the values in the **Unified Preprocessed Raw** table to the values in the **Unified Coalesced** table and verify that values were correctly added to the **blv_** columns.
+This can help identify situations where the bad-values blocklist is not blocking specific values. Compare the values in the **Unified Preprocessed Raw** table to the values in the **Unified Coalesced** table and verify that values were correctly added to the **blv_** columns.
 
 .. table-unified-preprocessed-raw-cleaned-vs-uncleaned-filter-end
 

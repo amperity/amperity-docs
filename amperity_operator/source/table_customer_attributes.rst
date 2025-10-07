@@ -814,7 +814,7 @@ Employees
 
 .. table-customer-attributes-optional-email-categories-employees-start
 
-A customer is an employee when they are employed or were employed by your brand. You may choose to include employees within your marketing campaigns, but often it's preferable to exclude them. Use this extension to identify employees of your brand within your customer profile data.
+A customer is an employee when they are employed or were employed by your brand. You may choose to include employees within your marketing campaigns, but often it is preferable to exclude them. Use this extension to identify employees of your brand within your customer profile data.
 
 .. note:: This utility query follows steps that are similar to ones described in the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` utility query: build the utility query in **Queries** page, add the updated query to the **Customer Attributes** table, extend the **classification_config** section, and then update the **customer_attributes_final** section.
 
@@ -1160,7 +1160,7 @@ You have two choices for defining churn events for this table:
          :start-after: .. models-churn-propensitity-tiers-onetime-start
          :end-before: .. models-churn-propensitity-tiers-onetime-end
 
-#. Use historical order history to define your customers' churn status. For example, you could configure the **Customer Attributes** table to define churn status as "active" as "within the past 60 days", "at risk" as "within the past 365 days", and so on, using SQL similar to:
+#. Use historical order history to define your customers' churn status. For example, you could configure the **Customer Attributes** table to define churn status as "active" as "within the past 60 days" or "at risk" as "within the past 365 days", using SQL similar to:
 
    .. code-block:: sql
       :linenos:

@@ -21,7 +21,7 @@ About connected systems
 
 Amperity can read data from and write data to a wide variety of systems. The following table is a non-exhaustive list of systems that connect with Amperity.
 
-.. note:: Amperity Services has detailed knowledge and comprehensive experience about how to connect many types of systems to Amperity. If you don't see a system that you use in the table below, talk with your Amperity representative to determine the best approach for integrating that system with Amperity.
+.. note:: Amperity Services has detailed knowledge and comprehensive experience about how to connect many types of systems to Amperity. If you do not see a system that you use in the table below, talk with your Amperity representative to determine the best approach for integrating that system with Amperity.
 
 .. connected-systems-start
 

@@ -63,7 +63,6 @@ Semantic tagging works like this:
 #. A field in the customer's system named "lname" stores the same individual's last name.
 #. A field in the customer's system named "primary-phone" stores a phone number.
 #. A field in the customer's system named "date" stores an individual's birthdate.
-#. And so on.
 
 .. vale off
 
@@ -179,7 +178,7 @@ The following table describes the semantic tags that are used for CCPA and GDPR 
 
        Semantic tag: **compliance/request-id**
 
-       Usually a unique identifier for an inbound request. **Unified_Compliance_Overview** will report results for duplicates as if they were a single request.
+       A unique identifier for an inbound request. **Unified_Compliance_Overview** will report results for duplicates as if they were a single request.
 
        This identifier is used for validation purposes, allowing compliance actions to be easily linked to specific requests.
 
@@ -786,7 +785,7 @@ You can define custom blocking labels using **bk-[label]**, and then use them as
 
 .. semantics-key-blocking-caution-start
 
-.. caution:: Use blocking keys carefully and be sure to verify that Stitch results contain the desired outcome.
+.. caution:: Verify that Stitch results contain the desired outcome.
 
 .. semantics-key-blocking-caution-end
 
@@ -889,7 +888,7 @@ Primary keys (pk)
 
 .. semantics-key-primary-caution-start
 
-.. caution:: Amperity allows you to assign the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events -- clickstream, email, web activity, mobile app activity, and so on -- often contain many fields that could be used like a primary key.
+.. caution:: Amperity allows you to assign the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
 
    A domain table can have only one primary key. When the **pk** semantic tag is applied to more than one field in the **Feed Editor**, those values are concatenated into a primary key, which is stored in the **_pk** field in the domain table. You should limit the number of fields to which the **pk** semantic tag is applied.
 
@@ -2090,7 +2089,7 @@ Itemized transaction semantics are prefixed with **txn-item/** in the semantics 
       :start-after: .. term-unified-itemized-transactions-table-start
       :end-before: .. term-unified-itemized-transactions-table-end
 
-   Carefully review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :ref:`Unified Transactions table <data-tables-unified-transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
+   Review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :ref:`Unified Transactions table <data-tables-unified-transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
 
 .. semantics-itemized-transactions-important-end
 

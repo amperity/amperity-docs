@@ -208,7 +208,7 @@ What to look for?
 
 It is important to review the quality of Stitch results. The general process for reviewing these results, also referred to as Stitch QA, is to use a series of SQL queries to pull back results that identify issues like overclustering, underclustering, or supersized clusters that indicate areas within the customer data that need more attention.
 
-These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses, unmonitored email accounts, and so on. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity is the best approach for fine-tuning the quality of Stitch results.
+These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses and unmonitored email accounts. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity is the best approach for fine-tuning the quality of Stitch results.
 
 * :ref:`Anomalies in Stitch output <qa-stitch-look-for-anomalies>`
 * :ref:`Blocking keys <qa-stitch-look-for-blocking-keys>`
@@ -235,7 +235,7 @@ Anomalies in Stitch output
 
 .. qa-stitch-look-for-anomalies-start
 
-It's important to look for anomalies in Stitch output.
+It is important to look for anomalies in Stitch output.
 
 .. qa-stitch-look-for-anomalies-end
 
@@ -577,7 +577,7 @@ For example, two records with the same Amperity ID look as if they should be two
 .. qa-stitch-look-for-overclustering-what-start
 
 #. Run the :doc:`bad foreign key matches <stitch_qa_bad_foreign_keys>` query to return records where the Amperity ID and a foreign key are equal, but one or more values associated with **email**, **given-name**, and **surname** are not equal.
-#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are generally good identifiers.
+#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are good identifiers.
 #. Run the :doc:`cluster size distribution <stitch_qa_cluster_size_distribution>` query and look for a long-tail of supersized clusters.
 #. Run the :doc:`dedupe keys per Amperity ID <stitch_qa_dedupe_keys_per_amperity_id>` query to return a rough distribution of dedupe keys to Amperity ID.
 
@@ -724,10 +724,10 @@ Open the table in the **Database Explorer** and verify that all rows in the tabl
 
 #. Run the :doc:`split clusters <stitch_qa_split_clusters>` query to investigate patterns in split clusters that lack transitive connections for names, email addresses, and post office boxes, or for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
 #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to look for underclustering. The results of this query help identify incorrectly split entities, explain the cardinality of semantic values, and identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
-#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are generally good identifiers.
+#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are good identifiers.
 #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.
 
-   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, frequency limits, and so on.
+   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, or frequency limits.
 
 .. qa-stitch-look-for-semantic-tags-what-end
 
@@ -791,14 +791,14 @@ Underclustering
 
 #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.
 
-   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, frequency limits, and so on.
+   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, or frequency limits.
 
 #. Run the :doc:`common values <stitch_qa_common_values>` query to return common values across semantics in a single view that shows cardinality for semantic values and the context for values that occur across records and clusters.
 #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to look for underclustering. The results of this query help identify incorrectly split entities, explain the cardinality of semantic values, and identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 #. Look for two records that have been assigned different Amperity IDs, but should have been assigned the same Amperity ID. Do they share a foreign key? Do they have profile (PII) values in common?
 #. Determine if your :ref:`foreign key matching vs. separation key unmatching <configure-stitch-advanced-clustering-matching-strategy>` strategy needs to be modified. 
 #. Are larger clusters part of a :ref:`supersized cluster <qa-stitch-look-for-supersized-clusters>`?
-#. Look at the first names. Are they similar to the human eye, but potentially different based on edit distance? Should they be added to the :ref:`list of common nicknames <qa-stitch-look-for-problematic-nicknames>`?
+#. Look at the first names. Are they similar to the human eye, but different based on edit distance? Should they be added to the :ref:`list of common nicknames <qa-stitch-look-for-problematic-nicknames>`?
 #. Open the :doc:`Unified Coalesced <table_unified_coalesced>` and :doc:`Unified Preprocessed Raw <table_unified_preprocessed_raw>` tables and compare values in the **component_id** column. Did these records block together?
 
    .. include:: ../../shared/terms.rst
@@ -835,7 +835,7 @@ Values to blocklist
    #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
    #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.
 
-      The unmatched semantic values query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, frequency limits, and so on.
+      The unmatched semantic values query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, or frequency limits.
 
 #. Use a combination of the :doc:`Unified Coalesced <table_unified_coalesced>` and :doc:`Unified Preprocessed Raw <table_unified_preprocessed_raw>` tables to review and compare the values associated with **blv_** columns in the **Unified Coalesced** table. Are these values in the :doc:`Stitch BlocklistValues table <table_stitch_blocklistvalues>`?
 

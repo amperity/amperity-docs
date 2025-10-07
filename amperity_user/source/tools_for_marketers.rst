@@ -120,7 +120,7 @@ About the User Guides
 
 .. tools-for-marketers-about-this-collection-start
 
-The left-side navigation (from top to bottom) uses a verb-based approach to loosely organize around the series of actions that you may do when defining audiences, and then building campaigns that send audience lists to a variety of marketing channels.
+The left-side navigation (from top to bottom) uses a verb-based approach to organize around the series of actions that you may do when defining audiences, and then building campaigns that send audience lists to a variety of marketing channels.
 
 The left-side navigation has sections for the following types of activities:
 

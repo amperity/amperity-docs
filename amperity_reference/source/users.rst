@@ -135,7 +135,7 @@ Revoke tenant access
 
 .. settings-users-revoke-start
 
-Amperity users may have access to more than one tenant in Amperity. For example when two brands are managed as separate tenants. If a user has access to more than one set of data, access to an individual tenant may be revoked, which will prevent the user from being able to access this tenant. Access to any other tenant to which that user is assigned remains unchanged.
+Amperity users may have access to more than one tenant in Amperity. For example when two brands are managed as separate tenants. If a user has access to more than one set of data, access to an individual tenant may be revoked, which prevents the user from being able to access this tenant. Access to any other tenant to which that user is assigned remains unchanged.
 
 .. settings-users-revoke-end
 

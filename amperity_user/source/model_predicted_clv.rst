@@ -67,7 +67,7 @@ Build segments that capture your most valuable customers, and then build segment
 
 .. customer-lifetime-value-pclv-without-start
 
-Without access to predictive modeling brands are forced to estimate future purchases by using purchases from the previous year. This approach is generally challenging due the presence of one-time buyers, shifting dynamics among customer behavior, changes in inventory and offerings, and competition with other brands.
+Without access to predictive modeling brands are forced to estimate future purchases by using purchases from the previous year. This approach is challenging due the presence of one-time buyers, shifting dynamics among customer behavior, changes in inventory and offerings, and competition with other brands.
 
 .. customer-lifetime-value-pclv-without-end
 

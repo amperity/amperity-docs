@@ -590,7 +590,7 @@ Unintentional broadcast joins
 
 .. databases-validation-alert-unintentional-broadcast-joins-start
 
-A broadcast join sends the smaller table in a join operation to all Spark executors, and then evaluates the larger table across each executor's partitions. When a broadcast join is small, it's fast. Above a certain threshold they can performance issues.
+A broadcast join sends the smaller table in a join operation to all Spark executors, and then evaluates the larger table across each executor's partitions. A small broadcast join runs faster, but above a certain threshold a broadcast join causes performance issues.
 
 A broadcast join often looks like:
 
@@ -600,7 +600,7 @@ A broadcast join often looks like:
 
 When **values** is not a small list of constants a broadcast join may occur.
 
-.. note:: In some situations you may want to use a **LEFT ANTI JOIN**, which returns values from the left-side table when they do not have matches on the right-side table. Use a **LEFT ANTI JOIN** to avoid performance issues that may be caused by a broadcast join.
+.. note:: In some situations you may want to use a **LEFT ANTI JOIN**, which returns values from the left-side table when they do not have matches on the right-side table. Use a **LEFT ANTI JOIN** to avoid performance issues with broadcast joins.
 
 .. databases-validation-alert-unintentional-broadcast-joins-end
 

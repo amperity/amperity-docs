@@ -30,7 +30,7 @@ Advantages of Amperity Bridge include:
 
 * **Zero copy** Control access to shared tables without replicating data across platforms. Build pipelines faster and consolidate your brand's storage costs into a single location.
 
-* **Scalable processing** Enrich massive volumes of data quickly. Data is not moved or transformed from where it resides. Model customer data directly in the data lakehouse or model it in Amperity.
+* **Scalable processing** Enrich massive volumes of data. Data is not moved or transformed from where it resides. Model customer data directly in the data lakehouse or model it in Amperity.
 
 * **Live data** View customer data at rest in a data lakehouse or in Amperity through a shared catalog. Explore and query data without waiting for refreshes or updates.
 
@@ -40,7 +40,7 @@ Advantages of Amperity Bridge include:
 
 .. admonition:: Amperity Learning Lab
 
-   Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be quickly configured for inbound and outbound shares to give you access to shared tables without replication.
+   Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be configured for inbound and outbound shares to give you access to shared tables without replication.
 
    Start with an overview of data warehouses, compare Databricks and Snowflake, and then learn how Amperity Bridge shares data between Amperity and Databricks.
 

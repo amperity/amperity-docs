@@ -20,7 +20,7 @@ Many semantic values
 
 .. stitch-qa-query-many-semantic-values-start
 
-Use this query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are generally good identifiers. 
+Use this query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are good identifiers.
 
 For example, **email**, **given-name**, and **surname**. Use this query to determine if Amperity has incorrectly clustered different entities together into supersized clusters or by overclustering.
 

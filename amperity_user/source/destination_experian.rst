@@ -77,7 +77,7 @@ Map fields to Experian
 
 .. sendto-experian-build-query-map-fields-required-start
 
-Required fields will vary based on the Experian product and downstream use case to which Amperity sends data, but they generally require the following fields:
+Required fields will vary based on the Experian product and downstream use case to which Amperity sends data, but they require the following fields:
 
 * Inquiry ID, which is a unique identifier within Experian data
 * First and last names

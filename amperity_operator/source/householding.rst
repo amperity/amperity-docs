@@ -31,7 +31,7 @@ Address-based householding
 
 .. householding-address-based-note-start
 
-.. note:: Address-based householding is a starting point. An implementation of address-based householding can vary significantly across brand use cases, depending on the
+.. note:: Address-based householding is a starting point. An implementation of address-based householding can vary across brand use cases, depending on the
 
    * Type and number of data sources
    * Number of addresses

@@ -230,8 +230,8 @@ This option starts with semantically tagging raw email events data, and then add
         WHEN EventType = 'Bounce' THEN 'Bounce'
       END AS EventType
 
-#. A field for **Brand** must be added if it's not already present in the source data. Most email service providers do not provide brand unless there is multi-brand data. Brands may be identifiable by an account ID or some other indicator.
-#. A field for **SendID** must be added if it's not already present in the source data. The send ID is a unique identifier for a given email send action. An open and click data point may share the same send ID.
+#. A field for **Brand** must be added if it is not already present in the source data. Most email service providers do not provide brand unless there is multi-brand data. Brands may be identifiable by an account ID or some other indicator.
+#. A field for **SendID** must be added if it is not already present in the source data. The send ID is a unique identifier for a given email send action. An open and click data point may share the same send ID.
 
    Some email service providers do not provide a send ID directly. When a **SendID** is not directly available, build one using a concatenation similar to:
 

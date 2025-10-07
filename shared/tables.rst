@@ -23,7 +23,7 @@
 #. Give your segment a name.
 #. Select a table that contains the attributes you want to use, and then use the dropdowns, picklists, conditions, and values to define the attribute profile.
 
-   .. note:: The **Customer 360** table is the default. For many segments it's the only table you need.
+   .. note:: The **Customer 360** table is the default. For many segments it is the only table you need.
 #. When more than one attribute is present within an attribute group use **AND** or **OR** to filter values on more than one condition.
 #. Click **Add section** to add additional attribute groups.
 

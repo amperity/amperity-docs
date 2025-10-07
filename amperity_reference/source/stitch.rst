@@ -125,7 +125,6 @@ Semantic tagging works like this:
 #. A field in the customer's system named "lname" stores the same individual's last name.
 #. A field in the customer's system named "primary-phone" stores a phone number.
 #. A field in the customer's system named "date" stores an individual's birthdate.
-#. And so on.
 
 For those semantic tags, the feed should apply semantic tags like this:
 
@@ -244,7 +243,7 @@ Email addresses
 
 Amperity preprocesses email addresses by ensuring that only the local username and domain are present, separated by ``@``, and converted to UPPERCASE.
 
-.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, ``reservation@``, and so on. When an email address matches one of these patterns, that value is preprocessed to **NULL**.
+.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, or ``reservation@``. When an email address matches one of these patterns, that value is preprocessed to **NULL**.
 
 .. list-table::
    :widths: 300 300
@@ -433,7 +432,7 @@ The blocking process starts with no matches between records.
 
 .. stitch-blocking-potential-diagram-context-start
 
-Each of these individual dots represents an individual record that can potentially match other records. In the following diagrams, dots are highlighted and lines are added between them to indicate that at least one blocking key match has been discovered by Stitch.
+Each of these individual dots represents an individual record that can match other records. In the following diagrams, dots are highlighted and lines are added between them to indicate that at least one blocking key match has been discovered by Stitch.
 
 .. stitch-blocking-potential-diagram-context-end
 
@@ -549,7 +548,7 @@ When finished, the blocking process has unioned all of the matching blocking key
 
 .. stitch-blocking-complete-context-start
 
-These groups of records will be scored, first as an initial scoring pass that quickly filters out matching pairs that score below threshold, and then as a detailed pass that compares a record in a group to all of the other records in that group.
+These groups of records will be scored, first as an initial scoring pass that filters out matching pairs that score below threshold, and then as a detailed pass that compares a record in a group to all of the other records in that group.
 
 .. stitch-blocking-complete-context-end
 
@@ -576,7 +575,7 @@ The following example shows several matching pairs scoring below threshold, usin
 
 .. image:: ../../images/howitworks-stitch-scoring-01-initial.png
    :width: 600 px
-   :alt: Matching pairs discovered during blocking are quickly scored.
+   :alt: Matching pairs discovered during blocking are scored.
    :align: left
    :class: no-scaled-link
 
@@ -967,7 +966,7 @@ This example shows three unique clusters of records, each of which were assigned
 
 .. stitch-stable-ids-jitter-start
 
-.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are really two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results shows jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
+.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results shows jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
 
 .. stitch-stable-ids-jitter-ends
 

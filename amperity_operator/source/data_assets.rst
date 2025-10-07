@@ -246,7 +246,7 @@ You can |ext_fiscal_calendar_download| that runs from 2016 to 2030 and uses a 4-
 * Christmas
 * Boxing Day
 
-Use this CSV file to explore what a fiscal calendar looks like. Use a text editor to add additional holidays, extend for additional years, and so on. You may upload this CSV file to Amperity directly using the **Feed Editor**, and then apply semantic tags for fiscal calendars.
+Use this CSV file to explore what a fiscal calendar looks like. Use a text editor to add additional holidays and extend for additional years. You may upload this CSV file to Amperity directly using the **Feed Editor**, and then apply semantic tags for fiscal calendars.
 
 .. data-asset-fiscal-calendar-extended-end
 

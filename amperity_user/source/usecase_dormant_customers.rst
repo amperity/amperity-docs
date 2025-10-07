@@ -4,11 +4,11 @@
 
 .. meta::
     :description lang=en:
-        A use case for building an audience of customers who haven't made a purchase within the previous 2 years.
+        A use case for building an audience of customers who have not made a purchase within the previous 2 years.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A use case for building an audience of customers who haven't made a purchase within the previous 2 years.
+        A use case for building an audience of customers who have not made a purchase within the previous 2 years.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -20,7 +20,7 @@ Dormant customers
 
 .. usecase-dormant-customers-start
 
-A dormant customer is a person who hasn't made a purchase with your brand within a defined time period. Amperity defines a dormant customer as a customer who hasn't made a purchase within the previous 730 days.
+A dormant customer is a person who has not made a purchase with your brand within a defined time period. Amperity defines a dormant customer as a customer who has not made a purchase within the previous 730 days.
 
 .. usecase-dormant-customers-end
 
@@ -82,7 +82,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Dormant Customers"
+     - You are done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Dormant Customers"
 
        .. image:: ../../images/usecases-dialog-save-dormant-customers.png
           :width: 440 px

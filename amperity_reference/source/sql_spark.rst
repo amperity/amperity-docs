@@ -114,7 +114,7 @@ General
 **Avoid**
 
 * Reserved keyword names that are used as identifiers.
-* CamelCase, with the exception of the table name. CamelCase is more difficult to scan quickly.
+* CamelCase, with the exception of the table name. CamelCase is more difficult to scan.
 * Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
@@ -250,7 +250,7 @@ The costs of operations in Spark SQL depends on many things. In general, faster 
 
 The following types of actions have a minimal affect on Spark SQL performance:
 
-* **COALESCE()** runs across rows, but generally stops when it finds the first value.
+* **COALESCE()** runs across rows, but stops when it finds the first value.
 * Row-atomic functions, such as **CONCAT()**, operate on a single row, which keeps the dataset small.
 * Value-atomic functions, such as type conversions and **TRIM()**, operate on a single value.
 * **UNION** appends one set of rows to another, without deduplication.
@@ -468,7 +468,7 @@ Naming conventions
 
 .. sql-spark-recommendation-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would naturally include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -499,7 +499,7 @@ For tables::
 
 When using an alias:
 
-* Assign names that clearly relate to the column or table.
+* Assign names that relate to the column or table.
   .. important:: "Do not use an alias when its name matches the original column name.
 * Always use the **AS** keyword to ensure readability.
   .. tip:: Include the **AS** keyword when aliasing columns in a 'SELECT' statement.
@@ -550,7 +550,7 @@ A correlation name assigns a temporary name to a table. A correlation name is de
 
 When using correlations:
 
-* Assign names that clearly relate to the table. For example: a table named "Merged_Customers" should have a correlation name of "um".
+* Assign names that relate to the table. For example: a table named "Merged_Customers" should have a correlation name of "um".
 * Always use the first letter of the table as the first letter of the correlation.
 * Append numbers as necessary to ensure unique correlation names.
 * Only use the correlation name within the rest of same query.
@@ -754,7 +754,7 @@ Skew
 
 .. sql-spark-skew-start
 
-When Spark SQL runs domain tables and database tables it partitions the work and distributes each partition to an individual executor. When each partition is roughly equal in size each executor is assigned a roughly equal amount of work.
+When Spark SQL runs domain tables and database tables it partitions the work and distributes each partition to an individual executor. When each partition is equal in size each executor is assigned an equal amount of work.
 
 Skew occurs when one partition is assigned a greater amount of work than other partitions. All of the executors assigned lesser amounts of work will finish first, and then wait for the executor that was assigned the greater amount of work to finish.
 
@@ -783,7 +783,7 @@ Common causes of skew include:
 
   .. note:: Replacing a value that causes skew with primary key works because:
 
-     * A primary key is an extremely well-distributed field. All records have a unique primary key, which ensures that distribution of work is even across executors.
+     * A primary key is a well-distributed field. All records have a unique primary key, which ensures that distribution of work is even across executors.
      * The value of a primary key will never match to a value on the other side of a **JOIN** operation. The non-match is the same result as what would happen with the bad **NULL** or placeholder value the primary key replaced.
 
 .. sql-spark-skew-common-causes-end
@@ -892,7 +892,7 @@ Use a query to help identify which field is causing skew in a **PARTITION BY** c
    ORDER BY 5 DESC
    LIMIT 100
 
-Fields that appear more often are sources of skew. A field that appears significantly more often than others may be causing a high amount of skew and should be filtered out or :ref:`converted to a primary key <sql-spark-skew-common-causes>`.
+Fields that appear more often are sources of skew. A field that appears more often than others may be causing a high amount of skew and should be filtered out or :ref:`converted to a primary key <sql-spark-skew-common-causes>`.
 
 .. sql-spark-skew-avoiding-partition-by-end
 
@@ -920,9 +920,9 @@ Subqueries
 
 .. sql-spark-recommendation-subqueries-start
 
-A subquery can be useful for shaping data prior to running a query. A subquery is a task that is required to be completed before additional processing can be performed. A subquery often runs quickly and can be used with little risk. That said, a poorly formed subquery can have adverse performance effects. Keep the following tips in mind when using a subquery:
+A subquery can be useful for shaping data prior to running a query. A subquery is a task that is required to be completed before additional processing can be performed. A well-formed subquery is fast and low risk. A poorly formed subquery will affect performance. Keep the following tips in mind when using a subquery:
 
-#. Don't join to an outer query from a subquery, as it may cause the subquery to run recursively for every value of the join key in the outer query. This may cause the subquery to run many times, or even millions of times. This type of subquery is sometimes referred to as a correlated subquery. The best way to avoid them is to never join between the inner and outer queries.
+#. Do not join to an outer query from a subquery, as it may cause the subquery to run recursively for every value of the join key in the outer query. This may cause the subquery to run many times, or even millions of times. This type of subquery is sometimes referred to as a correlated subquery. The best way to avoid them is to never join between the inner and outer queries.
 #. Each level of a subquery adds overhead. The fewer levels within a subquery, the easier it is to optimize the query. Try to flatten queries using joins instead of using additional levels. If you need to pull data into a subquery for multiple fields, try to use a single subquery instead of many.
 #. Remove columns or use as few columns in a subquery as possible. For example, use:
 
@@ -1223,7 +1223,7 @@ CROSS JOIN
 
 A **CROSS JOIN** returns a Cartesian product. A Cartesian product combines every item in the first table with every item in the second. For example, if table A has three items and table B has three items, the Cartesian product is 9 pairs.
 
-A **CROSS JOIN** should generally be avoided due to typical size of tables in Amperity databases, which can often have millions of rows.
+A **CROSS JOIN** should be avoided due to typical size of tables in Amperity databases, which can often have millions of rows.
 
 A Cartesian product in Amperity between any two tables is often a very, very large number of pairs and, as a result, is an expensive operation. It is recommended to optimize your Spark SQL queries to avoid implicit cross joins.
 
@@ -1248,7 +1248,7 @@ FULL OUTER JOIN
 
 .. sql-spark-full-outer-join-clause-start
 
-A **FULL OUTER JOIN** returns all of the rows in both tables A and B, no matter whether there's a row in the other table with the same key value. Where there is a matching key value, columns from the other table will be brought in, where there's no matching value for key columns from the other table will be set to **NULL**. While there is no filtering applied in a **FULL OUTER JOIN**, rows that match on the key are only included once, so the row count of the results will always be at most equal to the count of table A + the count of table B, and will usually be considerably smaller.
+A **FULL OUTER JOIN** returns all of the rows in both tables A and B, no matter whether there is a row in the other table with the same key value. Where there is a matching key value, columns from the other table will be brought in, where there is no matching value for key columns from the other table will be set to **NULL**. While there is no filtering applied in a **FULL OUTER JOIN**, rows that match on the key are only included once, so the row count of the results will always be at most equal to the count of table A + the count of table B, and is considerably smaller.
 
 .. sql-spark-full-outer-join-clause-end
 
@@ -1260,7 +1260,7 @@ INNER JOIN
 
 .. sql-spark-inner-join-clause-start
 
-An **INNER JOIN** returns only those rows where there are values for the field key in both tables. Any rows in either table A or table B that have a value for key that doesn't appear in the other table are not returned.
+An **INNER JOIN** returns only those rows where there are values for the field key in both tables. Any rows in either table A or table B that have a value for key that does not appear in the other table are not returned.
 
 .. sql-spark-inner-join-clause-end
 
@@ -1403,7 +1403,7 @@ NOT IN expression
 
 The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** when the returned list contains **NULL**. Use **WHERE** followed by **NOT IN** when the argument within the **NOT IN** expression is:
 
-* A small table with no more than a few thousand rows *and* is not expected to grow significantly over time.
+* A small table with no more than a few thousand rows *and* is not expected to grow over time.
 * A hard-coded list of values. For example:
 
   ::
@@ -1667,7 +1667,7 @@ Window functions are a way to evaluate rows around each row as it is being evalu
 
 Most window functions only require a small subset and use **GROUP BY** to group using the unique values of a specific field, and then selecting a row from that group.
 
-.. caution:: From a performance point of view, window functions tend to be relatively performant when the **OVER()** function includes a **PARTITION BY** clause over a well-distributed field.
+.. caution:: From a performance point of view, window functions tend to be performant when the **OVER()** function includes a **PARTITION BY** clause over a well-distributed field.
 
 A common use in Amperity might look like this:
 
@@ -1678,13 +1678,13 @@ A common use in Amperity might look like this:
      ORDER BY merged_date DESC
    ) AS email_address,
 
-It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Or, more briefly, "Give me the most recent email address for each customer." The window function bits do the following:
+It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Alternately: "Give me the most recent email address for each customer." The window function bits do the following:
 
-* **FIRST_VALUE(<field name>)** The **FIRST_VALUE()** window function picks the first record out of some set of records. In this case, it's selecting from the window or partition, whichever is defined next.
+* **FIRST_VALUE(<field name>)** The **FIRST_VALUE()** window function picks the first record out of some set of records. In this case, it is selecting from the window or partition, whichever is defined next.
 * **OVER()** The **OVER()** function sets up the window in which records are found. This function should include both **PARTITION BY** and **ORDER_BY** functions.
 * **PARTITION BY amperity_id** The **PARTITION BY <field name>** function behaves in a way analogous to a **GROUP BY** in that it groups all records with unique values for the specified field together. So here it creates a subset of rows for each Amperity ID.
-* **ORDER BY merged_date DESC** The **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it's sorting the rows for each Amperity ID. And **DESC** simply says sort in descending order, so most recent date is first.
-* **AS <field name>** The final clause of the statement above isn't really part of the window function at all, but is the **AS** statement you've used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
+* **ORDER BY merged_date DESC** The **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it is sorting the rows for each Amperity ID. And **DESC** simply says sort in descending order, so most recent date is first.
+* **AS <field name>** The final clause of the statement above is not part of the window function at all, but is the **AS** statement you've used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
 
 .. sql-spark-window-functions-end
 
@@ -1853,7 +1853,7 @@ Examples of **ALL** comparison operator combinations:
 Expression              Meaning
 ====================    ===========
 A = ALL (subquery)      Evaluates to **TRUE** when A is equal to all values.
-A <> ALL (subquery)     Evaluates to **TRUE** when A doesn't match any value.
+A <> ALL (subquery)     Evaluates to **TRUE** when A does not match any value.
 A < ALL (subquery)      Evaluates to **TRUE** when A is smaller than the smallest value.
 ====================    ===========
 
@@ -1887,7 +1887,7 @@ Expression              Meaning
 A = ANY (subquery)      Evaluates to **TRUE** when A is equal to any of the values.
 
                         .. note:: This form is equivalent to A IN (subquery).
-A <> ANY (subquery)     Evaluates to **TRUE** when A doesn't match one or more values.
+A <> ANY (subquery)     Evaluates to **TRUE** when A does not match one or more values.
 A < ANY (subquery)      Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
@@ -1922,7 +1922,7 @@ A = SOME (subquery)     Evaluates to **TRUE** when A is equal to any of the valu
 
                         .. note:: This form is equivalent to A IN (subquery).
 
-A <> SOME (subquery)    Evaluates to **TRUE** when A doesn't match one or more values.
+A <> SOME (subquery)    Evaluates to **TRUE** when A does not match one or more values.
 A < SOME (subquery)     Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
@@ -4007,7 +4007,7 @@ TO_DATE()
 
 Use the **TO_DATE(timestamp)** function to parse "timestamp".
 
-Use the **TO_DATE(timestamp +/- interval)** function to parse "timestamp", and then add ( + ) or subtract ( - ) "interval", where "interval" is one of "hours", "minutes", "days", and so on.
+Use the **TO_DATE(timestamp +/- interval)** function to parse "timestamp", and then add ( + ) or subtract ( - ) "interval", where "interval" is one of "hours", "minutes", or "days".
 
 A date format is not required.
 
@@ -4043,7 +4043,7 @@ Converting an incorrectly ingested date in the year 19xx is not as simple as add
 
 The following example shows two ways to do this:
 
-#. The first **TO_DATE()** function shows how to use the current year as a breakpoint, which assumes that birthdates don't occur in the future and that the vast majority of people are less than 100 years old.
+#. The first **TO_DATE()** function shows how to use the current year as a breakpoint, which assumes that birthdates do not occur in the future and that the majority of people are less than 100 years old.
 #. The second **TO_DATE()** function shows to handle birthdates that occur after the year 2000.
 
 .. code-block:: sql

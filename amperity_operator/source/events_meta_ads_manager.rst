@@ -173,7 +173,7 @@ Terms of service
 
 .. events-meta-ads-manager-terms-of-service-start
 
-The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to |destination-name|.
 
 .. events-meta-ads-manager-terms-of-service-end
 

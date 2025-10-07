@@ -175,7 +175,7 @@ Amperity pre-selects the list of attributes sent to |destination-name|. The **Ed
 
 .. channels-build-campaign-steps-edit-attributes-end
 
-.. TODO: There is an image here that is often unique by destination. There are some generic mockups for "email only", "email + phone", "all attributes" and there is a bigger collection of destination-specific ones. Please pay attention to this spot closely and request a destination-specific mockup if you need one.
+.. TODO: There is an image here that is often unique by destination. There are some generic mockups for "email only", "email + phone", "all attributes" and there is a bigger collection of destination-specific ones. Please pay attention to this spot and request a destination-specific mockup if you need one.
 
 .. channels-build-campaign-steps-edit-attributes-note-start
 

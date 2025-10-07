@@ -63,7 +63,7 @@ To add a **Predicted Affinity** table you must extend the customer 360 database 
 
 #. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
-#. Name the table "Predicted Affinity" or some other name that clearly identifies this table as the product affinity table for your tenant.
+#. Name the table "Predicted Affinity" or some other name that identifies this table as the product affinity table for your tenant.
 #. Set the build mode to **SQL**.
 #. Add the following SQL:
 

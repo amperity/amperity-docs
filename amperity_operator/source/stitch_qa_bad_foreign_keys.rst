@@ -44,7 +44,7 @@ When to use
 
 #. Run this query when foreign keys exist.
 #. Review the results of this query.
-#. Look for potentially inaccurate foreign keys.
+#. Look for inaccurate foreign keys.
 #. Look for indicators of overclustering.
 
 .. stitch-qa-query-bad-foreign-key-matches-use-end

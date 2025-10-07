@@ -157,7 +157,7 @@ An external ID is an alphanumeric string between 2-1224 characters (without spac
 
 .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
 
-Click **Continue** to test the configuration and validate the connection to the customer-managed Amazon S3 bucket, after which you will be able to continue the steps for adding a courier.
+Click **Continue** to test the configuration and validate the connection to the customer-managed Amazon S3 bucket, after which you is able to continue the steps for adding a courier.
 
 .. sources-amazon-s3-cross-account-roles-steps-save-credentials-end
 

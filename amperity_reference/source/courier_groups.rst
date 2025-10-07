@@ -225,7 +225,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
        .. important:: A wait time is not required for a bridge.
 
-       A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and isn't made available within that time window.
+       A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and is not made available within that time window.
 
        Use a wait time to extend the time window for data to be made available. This can help reduce the number of alerts that may be generated for data sources that cannot be picked up by a courier group.
 
@@ -421,7 +421,7 @@ Bridge syncs
 
 .. courier-groups-bridge-syncs-start
 
-Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`quickly configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give you access to shared tables without replication.
+Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give you access to shared tables without replication.
 
 .. courier-groups-bridge-syncs-end
 
@@ -476,7 +476,7 @@ Number of days
 
 A courier can be configured to look for files within range of time that is older than the scheduled time. The scheduled time is in Coordinated Universal Time (UTC), unless the "Use this time zone for file date ranges" checkbox is enabled for the courier group.
 
-This range is typically 24 hours, but may be configured for longer ranges. For example, it's possible for a data file to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of how an upstream workflow is configured. A wait time helps ensure that the data at the source location is recognized correctly by the courier.
+This range is typically 24 hours, but may be configured for longer ranges. For example, it is possible for a data file to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of how an upstream workflow is configured. A wait time helps ensure that the data at the source location is recognized correctly by the courier.
 
 .. warning:: This range of time may affect couriers in a courier group whether or not they run on a schedule. A manually run courier group may not take its schedule into consideration when determining the date range; only the provided input days to load data from are used as inputs.
 
@@ -506,7 +506,7 @@ A wait time is a constraint placed on a courier group that defines an extended t
 
 .. important:: A wait time is not required for a bridge.
 
-A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and isn't made available within that time window.
+A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and is not made available within that time window.
 
 .. courier-groups-schedule-wait-time-end
 
@@ -725,7 +725,7 @@ A courier group can be configured to send workflow alerts when one or more files
 
 .. tip:: Some files are not considered essential to the daily Amperity run. The reasons why a particular file may be considered non-essential varies from tenant to tenant, but they may include situations like:
 
-   * A data source is mostly static
+   * A data source is static
    * A data source does not contain PII that will affect the quality of the Amperity ID.
    * A data source is associated with a workflow that often misses the configured Amperity wait time period.
 
@@ -915,7 +915,7 @@ Delete courier group
 
 .. courier-groups-howto-delete-start
 
-Use the **Delete** option to remove a courier group from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this courier group prior to deleting it.
+Use the **Delete** option to remove a courier group from Amperity. Verify that both upstream and downstream processes no longer depend on this courier group prior to deleting it.
 
 .. important:: This action will *not* delete couriers that are associated with the courier group.
 

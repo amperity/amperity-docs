@@ -102,7 +102,7 @@ How-tos
 .. dropdown:: Delete data export
    :icon: code
 
-   Use the **Delete** option to remove a data export from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this orchestration prior to deleting it. This action will *not* delete the data template or destination associated with the orchestration.
+   Use the **Delete** option to remove a data export from Amperity. Verify that both upstream and downstream processes no longer depend on this orchestration prior to deleting it. This action will *not* delete the data template or destination associated with the orchestration.
 
    **To delete a data export**
 

@@ -81,7 +81,7 @@ The following example uses **Has Not Purchased** to return a list of customers w
 
 .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-example-segments.png
    :width: 600 px
-   :alt: Who hasn't purchased t-shirts?
+   :alt: Who has not purchased t-shirts?
    :align: left
    :class: no-scaled-link
 

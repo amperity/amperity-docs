@@ -165,11 +165,11 @@ Load operations associate each table in the list of tables to a feed. (The initi
            }
 #. For each table to be sent to Amperity, define the load operations using the feed ID for the feed that is associated with that table.
 
-   Set the load operations to a string that is obviously incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
+   Set the load operations to a string that is incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to ``{}`` or are not set to an obviously incorrect string the validation test for the courier configuration settings fails.
+   .. caution:: If load operations are not set to ``{}`` or are not set to an incorrect string the validation test for the courier configuration settings fails.
 
 #. Click **Save**.
 
@@ -191,7 +191,7 @@ Applies ONLY to data sources that use AMAZON S3.
 
 .. sources-add-courier-entities-list-intro-s3-generic-start
 
-An entites list defines the list of files to be pulled to Amperity, along with any file-specific details (such as file name, file type, if header rows are required, and so on).
+An entites list defines the list of files to be pulled to Amperity, along with any file-specific details, such as file name, file type, or if header rows are required.
 
 .. sources-add-courier-entities-list-intro-s3-generic-end
 
@@ -203,11 +203,11 @@ An entites list defines the list of files to be pulled to Amperity, along with a
 
 .. sources-add-courier-entities-list-note-s3-generic-start
 
-.. note:: You may configure files as required (``"object/optional": false``) or optional (``"object/optional": true``.) A courier fails if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
+.. note:: You may configure files as required using ``"object/optional": false`` or as optional using ``"object/optional": true``. A courier fails if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
 
 .. sources-add-courier-entities-list-note-s3-generic-end
 
-An introduction to entities lists and a note about required/optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. Applies to SFTP connectors only.
+An introduction to entities lists and a note about required or optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. Applies to SFTP connectors only.
 
 .. sources-add-courier-s3-generic-start
 
@@ -220,9 +220,9 @@ An introduction to entities lists and a note about required/optional file behavi
 #. Enter a name for the credential and add the configuration settings. Click **Save**.
 #. Under **Amazon S3 Settings**, add the name of the Amazon S3 bucket and prefix.
 #. Under **Amazon S3 Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
-#. Under **Amazon S3 Settings** set the load operations to a string that is obviously incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
+#. Under **Amazon S3 Settings** set the load operations to a string that is incorrect, such as ``df-xxxxxx``. You may also set the load operation to empty: ``{}``.
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
    .. caution:: If load operations are not set to ``{}`` the validation test for the courier configuration settings fails.
 #. Click **Save**.
@@ -566,7 +566,7 @@ SOURCES
 SOURCES
 SOURCES
 
-.. TODO: This is the sections for the templated content for adding sources in /operator/. These sections allow for bespoke steps, usually as Step 3, but may have more if they are more complicated. Try to keep the bespoke content within Step 3 as much as possible for consistency.
+.. TODO: This is the sections for the templated content for adding sources in /operator/. These sections allow for bespoke steps, as Step 3, but may have more if they are more complicated. Try to keep the bespoke content within Step 3 as much as possible for consistency.
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.
 
@@ -580,7 +580,7 @@ Open the **Sources** page to configure a destination for |source-name|. Click th
 
 .. sources-add-source-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 IMPORTANT: The next paragraph after the image is located in the /shared/credentials.rst topic because they are IDENTICAL.
 
