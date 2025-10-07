@@ -100,7 +100,7 @@ General
 **Avoid**
 
 * Using reserved keyword names as identifiers.
-* CamelCase, with the exception of the table name. CamelCase is difficult to scan quickly.
+* CamelCase, with the exception of the table name. CamelCase is difficult to scan.
 * Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
@@ -263,7 +263,7 @@ Ensure the name is unique and does not exist as a reserved keyword. Keep the len
 
 Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names.
 
-Use underscores where you would naturally include a space in the name. For example, "first name" becomes "first_name". Avoid the use of multiple consecutive underscores because they can be hard to read.
+Use underscores where you would include a space in the name. For example, "first name" becomes "first_name". Avoid the use of multiple consecutive underscores because they can be hard to read.
 
 Avoid abbreviations and if you have to use them make sure they are commonly understood.
 

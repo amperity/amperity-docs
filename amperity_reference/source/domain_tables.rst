@@ -464,7 +464,7 @@ Add custom domain table
 
 A custom domain table is table that is created from a Spark SQL query built from one or more source domain tables to build a table with reshaped data. The custom domain table is made available to downstream processes, such as Stitch or the customer 360 database, in the same manner as source domain tables.
 
-Feeds quickly load data and apply a standard schema to customer data. Use a custom domain table to load this data in its raw form, and then reshape it to support any downstream workflow. For example:
+Feeds load data and apply a standard schema to customer data. Use a custom domain table to load this data in its raw form, and then reshape it to support any downstream workflow. For example:
 
 * Enabling privacy rights workflows to help remove data based on individual requests from customers, as required by CCPA and GDPR.
 * Applying semantic tags to data that contains :ref:`transactions <semantics-itemized-transactions>` details, including extending the schema and adding new fields.

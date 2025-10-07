@@ -1759,7 +1759,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
 .. data-tables-optin-status-email-not-source-of-truth-start
 
-.. important:: Amperity is not the source of truth for email consent status. Email consent status can change quickly, including between the time of this table's most recent update and the time at which your brand wants to send your customers an email as part of a campaign.
+.. important:: Amperity is not the source of truth for email consent status. Email consent status can change, including between the time of this table's most recent update and the time at which your brand wants to send your customers an email as part of a campaign.
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the email campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
@@ -1848,7 +1848,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
 .. data-tables-optin-status-sms-not-source-of-truth-start
 
-.. important:: Amperity is not the source of truth for SMS consent status. SMS consent status can change quickly, including between the time of this table's most recent update and the time at which your brand wants to send your customers an SMS message as part of a campaign.
+.. important:: Amperity is not the source of truth for SMS consent status. SMS consent status can change, including between the time of this table's most recent update and the time at which your brand wants to send your customers an SMS message as part of a campaign.
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the SMS campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 

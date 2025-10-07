@@ -84,7 +84,7 @@ Automated workflow alerts
 
 .. automated-workflow-alerts-start
 
-Configure automated workflow alerts by workflow type within the **Automated workflow alerts** dialog in the workflow page. Use this as your default set of recipients to receive alerts for regularly occurring workflows.
+Configure automated workflow alerts by workflow type within the **Automated workflow alerts** dialog in the workflow page. Use this as your default set of recipients to receive alerts for recurring workflows.
 
 .. automated-workflow-alerts-end
 
@@ -582,7 +582,7 @@ Many workflows have context-specific resolutions that depend on upstream and dow
 
 .. workflows-context-note-start
 
-.. note:: The potential list of context-specific workflow actions is larger than the lists of campaign-, courier group-, destination-, scheduled orchestration group- or source-specific resolutions. And this list of potential context-specific workflow actions may be only partially relevant to your tenant.
+.. note:: The potential list of context-specific workflow actions is larger than the lists of campaign-, courier group-, destination-, scheduled orchestration group- or source-specific resolutions.
 
    For example, if your brand only uses Amazon S3 for file-based transfers, then SFTP-specific errors will not ever be shown. If your brand sends paid media campaigns to TikTok Ads and Meta Ads Manager, but not Google Ads, then Google Ads-specific error will notn't ever be shown.
 

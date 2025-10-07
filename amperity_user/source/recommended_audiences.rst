@@ -61,7 +61,7 @@ The following diagram highlights the purchase curve. The audience size is on the
 
 The first 20% of customers in an audience have a high degree of certainty and a strong signal. The last 20% have a much lower degree of certainty and a weak signal.
 
-#. The 0-50% range quickly adds customers as the audience size grows. In this example, the purchase curve is steep for the first 100,000 customers because purchasers are being identified at a fast rate.
+#. The 0-50% range adds customers as the audience size grows. In this example, the purchase curve is steep for the first 100,000 customers because purchasers are being identified at a fast rate.
 
 #. The 50%-70% range starts to flatten out. A 70% rate requires almost 300,000 customers. At the lower end, there is still a strong signal, but at the higher end the signal has grown weaker.
 

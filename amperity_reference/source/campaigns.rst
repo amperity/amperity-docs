@@ -1075,7 +1075,7 @@ Archive campaign
 
 Use the archive feature for campaigns you have actively used, but you do not need anymore.
 
-.. note:: This action effectively deletes the campaign from your tenant. If you want to this campaign to be moved back into your tenant, please contact Amperity support.
+.. note:: This action deletes the campaign from your tenant. If you want to this campaign to be moved back into your tenant, please contact Amperity support.
 
 .. campaigns-build-audience-end
 

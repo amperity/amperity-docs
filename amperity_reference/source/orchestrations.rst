@@ -169,7 +169,7 @@ Edit orchestration
 
 .. orchestrations-edit-start
 
-Use the **Edit** option to modify the settings for an orchestration. Verify that both upstream and downstream processes that depend on this orchestration continue to work properly after the changes are saved. This action will *not* modify the data template or destination associated with the orchestration.
+Use the **Edit** option to modify the settings for an orchestration. Verify that both upstream and downstream processes that depend on this orchestration continue to work after the changes are saved. This action will *not* modify the data template or destination associated with the orchestration.
 
 .. orchestrations-edit-end
 

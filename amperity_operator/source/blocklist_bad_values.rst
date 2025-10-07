@@ -531,7 +531,7 @@ Add feed
       * - **value**
         - **blv/value**
 
-   .. note:: This is different from how semantics are applied to a non-blocklist feed. This is because the actual data source, actual semantic, and actual values are in the data source itself, as they were output from the customer 360 data as CSV data, and then re-ingested as CSV data in the feed created for the bad-values blocklist. This, effectively, round-trips output from the customer 360 database as a CSV file that creates a new domain table for use during the Stitch process.
+   .. note:: This is different from how semantics are applied to a non-blocklist feed. This is because the actual data source, actual semantic, and actual values are in the data source itself, as they were output from the customer 360 data as CSV data, and then re-ingested as CSV data in the feed created for the bad-values blocklist. This round-trips output from the customer 360 database as a CSV file that creates a new domain table for use during the Stitch process.
 #. Define the primary key. This is required by the Stitch process, but for the purpose of creating the bad-values blocklist is not important. Use any row ID.
 #. Uncheck the **Make available to Stitch** option.
 #. Activate the feed.

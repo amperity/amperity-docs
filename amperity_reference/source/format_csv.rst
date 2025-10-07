@@ -25,7 +25,7 @@ CSV files
 
 .. tip:: Consider using :doc:`Apache Avro <format_avro>` and :doc:`Apache Parquet <format_parquet>` file formats instead of CSV. 
 
-   * Avro uses a JSON-like schema that stores data in rows. Avro files have a very small file size that transfers quickly.
+   * Avro uses a JSON-like schema that stores data in rows. Avro files are small with fast transfers.
    * Parquet is highly compact, can be transferred easily, and avoids escape character and data formatting issues that can be present in other formats.
 
 .. format-csv-tip-end

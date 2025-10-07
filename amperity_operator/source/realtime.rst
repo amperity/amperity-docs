@@ -86,7 +86,7 @@ Real-time table limitations
 Real-time tables have the following limitations:
 
 #. Streamed data takes up to 2 minutes to appear in a real-time table.
-#. Events that partially match the schema for a real-time table appears in a real-time table; events that do not match the schema will not.
+#. Events that match part of the schema for a real-time table appears in a real-time table; events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an append; data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)

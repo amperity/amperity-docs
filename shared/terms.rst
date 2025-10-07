@@ -420,7 +420,7 @@ Assign this policy to users who manage databases, manage SQL queries, and send t
 .. 
 .. notes
 .. This is the kind of statement that would go at the end of a PDF, for example.
-.. The list of brands at the end should be updated regularly.
+.. The list of brands at the end should be updated.
 .. 
 
 .. term-amperity-about-start

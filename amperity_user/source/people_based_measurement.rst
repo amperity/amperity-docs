@@ -51,7 +51,7 @@ What is people-based measurement?
 
 .. people-based-measurement-whatis-start
 
-People-based measurement tracks changes in behavior in a way that does not require knowing who received a campaign message by randomly assigning customers from a single homogeneous segment to the control and treatment groups for a campaign. That is all that is required to effectively measure behavioral changes.
+People-based measurement tracks changes in behavior in a way that does not require knowing who received a campaign message by randomly assigning customers from a single homogeneous segment to the control and treatment groups for a campaign. That is all that is required to measure behavioral changes.
 
 This is a very different approach than channel-based measurement, which requires direct access to response metrics. For example, email campaign data typically includes opens, clicks, attributed revenue to links within the email, etc. The goal of channel-based measurement is to track which users received an email, and then for those users what actions were taken.
 
@@ -65,11 +65,11 @@ Whereas the goal of people-based measurement is to measure the revenue lift for 
 
    Imagine that you are running a experiment to measure the effects of a cholesterol drug on patients. Randomly assign people to the control and treatment groups from a single segment of patients who share the same age range, demographics, and health profile.
 
-   Some subset of these patients have a special gene that predisposes them to respond positively to this drug. How would this change the experiment?
+   Some subset of these patients have a special gene that predisposes them to respond to this drug. How would this change the experiment?
 
    You could screen patients beforehand to ensure that only patients with this gene were included in the control and treatment groups. This approach could be costly and take a long time.
 
-   You could accept that control and treatment groups have some mathematically equivalent ratio of patients with and without the special gene and that this ratio effectively represents the whole population.
+   You could accept that control and treatment groups have some mathematically equivalent ratio of patients with and without the special gene and that this ratio represents the whole population.
 
    A customer's opt-in preference is similar to this special gene. Some customers are predisposed to be receptive to your message. When you add customers to your control and treatment groups randomly, you will get a mathematically equivalent ratio of customers who have opted in to receiving emails in both groups.
 

@@ -912,9 +912,9 @@ Sources
 
 To reduce Amps consumption for the **Sources** category:
 
-* Use Amperity Bridge to sync data to Amperity. A sync is more efficient and typically consumes Amps at a lower rate than loading files. Amperity Bridge connects to your Lakehouse quickly and efficiently.
+* Use Amperity Bridge to sync data to Amperity. A sync is more efficient and typically consumes Amps at a lower rate than loading files. Amperity Bridge efficiently connects to your Lakehouse.
 
-* Partitioned CSV files, when available, can be ingested in parallel, running more quickly than non-partitioned CSV files. Modern file formats, such as Apache Parquet, can be processed even more quickly.
+* Partitioned CSV files, when available, can be ingested in parallel, running faster than non-partitioned CSV files. Modern file formats, such as Apache Parquet, can be processed faster.
 
 * Ingesting data incrementally is faster than ingesting full historical data.
 

@@ -19,7 +19,7 @@ About predictive models
 
 .. models-start
 
-Amperity predictive modeling is based on your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior. Amperity combs through hundreds of features to yield a state of the art adaptive ensemble model. Amperity layers on a rigorous MLOps infrastructure to continually monitor prediction accuracy and stability.
+Amperity predictive modeling is based on your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior. Amperity combs through hundreds of features to yield a state of the art adaptive ensemble model. Amperity layers on a rigorous MLOps infrastructure to monitor prediction accuracy and stability.
 
 .. models-end
 

@@ -82,7 +82,7 @@ The custom prompt in **AmpAI** enables your brand to tailor responses to align w
 * Default customer identifiers
 * Fiscal calendar information
 
-While **AmpAI** works effectively out of the box, updating the custom prompt is often necessary to keep AmpAI aligned with how your brand understands your customers. The custom prompt should be updated when an AmpAI response does not meet expectations.
+While **AmpAI** works out of the box, updating the custom prompt is often necessary to keep AmpAI aligned with how your brand understands your customers. The custom prompt should be updated when an AmpAI response does not meet expectations.
 
 .. ampai-custom-prompt-end
 

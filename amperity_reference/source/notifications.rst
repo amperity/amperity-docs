@@ -708,7 +708,7 @@ You should resolve warnings and errors from the **Workflows** page.
 #. Click **View Workflow**. This opens the **Workflows** page to the workflow for this notification.
 #. Find, and then open, the rows that contain warnings or errors, and then work to resolve them.
 
-   .. tip:: Use the provided workflow actions to quickly resolve an error.
+   .. tip:: Use the provided workflow actions to resolve an error.
 
 .. notifications-open-workflow-tab-steps-end
 

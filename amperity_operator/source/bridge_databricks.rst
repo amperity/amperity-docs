@@ -372,7 +372,7 @@ Configure Databricks
 
 To configure Databricks to sync data with Amperity you need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>` in Amperity.
 
-.. note:: The following section briefly describes using the Databricks Catalog Explorer to configure Databricks to be ready to sync data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
+.. note:: The following section describes using the Databricks Catalog Explorer to configure Databricks to be ready to sync data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
 
 .. bridge-databricks-sync-with-amperity-configure-databricks-end
 

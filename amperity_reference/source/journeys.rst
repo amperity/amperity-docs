@@ -329,11 +329,11 @@ A delay is applied to a single parent node.
 
 You can rename the delay node.
 
-.. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs. 
+.. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs.
    
-   For example, if a delay node is set to 3 days but the journey is scheduled to run weekly, customers will remain at the delay node until the next scheduled run, potentially waiting up to 7 days. 
+   For example, if a delay node is set to 3 days but the journey is scheduled to run weekly, customers will remain at the delay node until the next scheduled run, waiting up to 7 days.
    
-   If a journey is set to run only once, customers will not move beyond the delay node after it executes. 
+   If a journey is set to run only once, customers will not move beyond the delay node after it executes.
 
 .. journeys-node-delay-end
 
@@ -582,9 +582,9 @@ Add delay nodes
 .. journeys-howtos-node-delay-steps-end
 
 .. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs. 
-   
-   For example, if a delay node is set to 3 days but the journey is scheduled to run weekly, customers will remain at the delay node until the next scheduled run, potentially waiting up to 7 days. 
-   
+
+   For example, if a delay node is set to 3 days but the journey is scheduled to run weekly, customers will remain at the delay node until the next scheduled run, waiting up to 7 days.
+
    If a journey is set to run only once, customers will not move beyond the delay node after it executes.
 
 .. _journeys-howtos-node-percent-split:

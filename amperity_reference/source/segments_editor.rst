@@ -200,7 +200,7 @@ The following examples describe how AND and OR conditions work.
 
        This audience has two groups of attributes: email addresses **OR** phone numbers **AND** opt-in status for email addresses **OR** phone numbers.
 
-       The first group of attributes -- email addresses *or* phone numbers, as shown in the darker color -- should make your audience larger. Few data sets have a perfectly matching set of email addresses and phone numbers across all customers.
+       The first group of attributes -- email addresses *or* phone numbers, as shown in the darker color -- should make your audience larger. Few data sets have a matching set of email addresses and phone numbers across all customers.
 
        .. image:: ../../images/segments-and-vs-or-howitworks-3.png
           :width: 600 px

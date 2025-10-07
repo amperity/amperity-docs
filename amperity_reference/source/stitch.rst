@@ -432,7 +432,7 @@ The blocking process starts with no matches between records.
 
 .. stitch-blocking-potential-diagram-context-start
 
-Each of these individual dots represents an individual record that can potentially match other records. In the following diagrams, dots are highlighted and lines are added between them to indicate that at least one blocking key match has been discovered by Stitch.
+Each of these individual dots represents an individual record that can match other records. In the following diagrams, dots are highlighted and lines are added between them to indicate that at least one blocking key match has been discovered by Stitch.
 
 .. stitch-blocking-potential-diagram-context-end
 
@@ -548,7 +548,7 @@ When finished, the blocking process has unioned all of the matching blocking key
 
 .. stitch-blocking-complete-context-start
 
-These groups of records will be scored, first as an initial scoring pass that quickly filters out matching pairs that score below threshold, and then as a detailed pass that compares a record in a group to all of the other records in that group.
+These groups of records will be scored, first as an initial scoring pass that filters out matching pairs that score below threshold, and then as a detailed pass that compares a record in a group to all of the other records in that group.
 
 .. stitch-blocking-complete-context-end
 
@@ -575,7 +575,7 @@ The following example shows several matching pairs scoring below threshold, usin
 
 .. image:: ../../images/howitworks-stitch-scoring-01-initial.png
    :width: 600 px
-   :alt: Matching pairs discovered during blocking are quickly scored.
+   :alt: Matching pairs discovered during blocking are scored.
    :align: left
    :class: no-scaled-link
 

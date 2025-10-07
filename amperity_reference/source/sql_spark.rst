@@ -114,7 +114,7 @@ General
 **Avoid**
 
 * Reserved keyword names that are used as identifiers.
-* CamelCase, with the exception of the table name. CamelCase is more difficult to scan quickly.
+* CamelCase, with the exception of the table name. CamelCase is more difficult to scan.
 * Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
@@ -468,7 +468,7 @@ Naming conventions
 
 .. sql-spark-recommendation-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would naturally include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -920,7 +920,7 @@ Subqueries
 
 .. sql-spark-recommendation-subqueries-start
 
-A subquery can be useful for shaping data prior to running a query. A subquery is a task that is required to be completed before additional processing can be performed. A subquery often runs quickly and can be used with little risk. That said, a poorly formed subquery can have adverse performance effects. Keep the following tips in mind when using a subquery:
+A subquery can be useful for shaping data prior to running a query. A subquery is a task that is required to be completed before additional processing can be performed. A well-formed subquery is fast and low risk. A poorly formed subquery will affect performance. Keep the following tips in mind when using a subquery:
 
 #. Do not join to an outer query from a subquery, as it may cause the subquery to run recursively for every value of the join key in the outer query. This may cause the subquery to run many times, or even millions of times. This type of subquery is sometimes referred to as a correlated subquery. The best way to avoid them is to never join between the inner and outer queries.
 #. Each level of a subquery adds overhead. The fewer levels within a subquery, the easier it is to optimize the query. Try to flatten queries using joins instead of using additional levels. If you need to pull data into a subquery for multiple fields, try to use a single subquery instead of many.
@@ -1678,7 +1678,7 @@ A common use in Amperity might look like this:
      ORDER BY merged_date DESC
    ) AS email_address,
 
-It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Or, more briefly, "Give me the most recent email address for each customer." The window function bits do the following:
+It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Alternately: "Give me the most recent email address for each customer." The window function bits do the following:
 
 * **FIRST_VALUE(<field name>)** The **FIRST_VALUE()** window function picks the first record out of some set of records. In this case, it is selecting from the window or partition, whichever is defined next.
 * **OVER()** The **OVER()** function sets up the window in which records are found. This function should include both **PARTITION BY** and **ORDER_BY** functions.

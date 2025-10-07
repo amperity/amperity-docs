@@ -29,7 +29,7 @@ RFM scores
 
 .. rfm-scores-start
 
-RFM scores are available as out-of-the-box attributes in Amperity standard output. These attributes -- **L12M Recency**, **L12M Frequency**, and **L12M Monetary** -- can be found in the **Transaction Attributes Extended** table and are built from historical data for the previous 12 months. Use the scores in these attributes to quickly build useful audiences around how much your customers spend, how often they purchase, and how recently they purchase.
+RFM scores are available as out-of-the-box attributes in Amperity standard output. These attributes -- **L12M Recency**, **L12M Frequency**, and **L12M Monetary** -- can be found in the **Transaction Attributes Extended** table and are built from historical data for the previous 12 months. Use the scores in these attributes to build useful audiences around how much your customers spend, how often they purchase, and how recently they purchase.
 
 .. rfm-scores-end
 
@@ -198,6 +198,6 @@ High R and F, low M scores
 
 High recency and frequency scores combined with a low monetary score builds an audience of active customers who purchase frequently, but do not spend a lot of money.
 
-Use this combination of scores as an indicator for customers who should not receive discounts. These customers already shop regularly, the challenge is growing their spend. Use cross-sell and upsell campaigns to improve spend amounts and consider inviting customers who respond to those campaigns into your loyalty program.
+Use this combination of scores as an indicator for customers who should not receive discounts. These customers are repeat customers, the challenge is growing their spend. Use cross-sell and upsell campaigns to improve spend amounts and consider inviting customers who respond to those campaigns into your loyalty program.
 
 .. rfm-example-high-r-and-f-low-m-end

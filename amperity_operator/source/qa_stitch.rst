@@ -798,7 +798,7 @@ Underclustering
 #. Look for two records that have been assigned different Amperity IDs, but should have been assigned the same Amperity ID. Do they share a foreign key? Do they have profile (PII) values in common?
 #. Determine if your :ref:`foreign key matching vs. separation key unmatching <configure-stitch-advanced-clustering-matching-strategy>` strategy needs to be modified. 
 #. Are larger clusters part of a :ref:`supersized cluster <qa-stitch-look-for-supersized-clusters>`?
-#. Look at the first names. Are they similar to the human eye, but potentially different based on edit distance? Should they be added to the :ref:`list of common nicknames <qa-stitch-look-for-problematic-nicknames>`?
+#. Look at the first names. Are they similar to the human eye, but different based on edit distance? Should they be added to the :ref:`list of common nicknames <qa-stitch-look-for-problematic-nicknames>`?
 #. Open the :doc:`Unified Coalesced <table_unified_coalesced>` and :doc:`Unified Preprocessed Raw <table_unified_preprocessed_raw>` tables and compare values in the **component_id** column. Did these records block together?
 
    .. include:: ../../shared/terms.rst

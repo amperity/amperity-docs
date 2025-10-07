@@ -69,7 +69,7 @@ There are many sources of first-party data, including:
 
 An important concept around first-party data is that it not only needs to be accurate it also needs to be comprehensive. Customers are not static and neither is their relationship to your brands.
 
-Because customers are not static you need a platform that recomputes their identity and behaviors regularly. Having a comprehensive and historical view of your customer's behaviors across online and offline channels is the best way to get the data that enables the outcomes your brand requires from paid media.
+Because customers are not static you need a platform that frequently recomputes their identity and behaviors. Having a comprehensive and historical view of your customer's behaviors across online and offline channels is the best way to get the data that enables the outcomes your brand requires from paid media.
 
 .. paid-media-what-is-first-party-data-end
 

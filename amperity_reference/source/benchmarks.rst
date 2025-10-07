@@ -77,7 +77,7 @@ For example, it is expected that most, but not all, Amperity IDs should not have
 
    Use benchmark scores to:
 
-   #. Quickly assess the overall quality of customer profiles in your tenant.
+   #. Assess the overall quality of customer profiles in your tenant.
 
    #. Explore example Amperity IDs, especially for those benchmark checks that are high, to identify ways of changing the configuration of your tenant that can lead to overall improvements in benchmark scores.
 

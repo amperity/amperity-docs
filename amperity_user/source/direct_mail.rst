@@ -233,7 +233,7 @@ Other direct mail channels are available as plugins through popular marketing au
    * - Plugin
      - Description
    * - **Alyce**
-     - `Alyce <https://www.alyce.com/>`__ |ext_link| is a personal experience platform that enables marketers to more effectively reach customers using an AI-powered one-on-one gifting approach. Send query results or audience lists to Adobe Marketo, HubSpot, or Salesforce Marketing Cloud, and then use Alyce to manage your direct mail campaign.
+     - `Alyce <https://www.alyce.com/>`__ |ext_link| is a personal experience platform that enables marketers to reach customers using an AI-powered one-on-one gifting approach. Send query results or audience lists to Adobe Marketo, HubSpot, or Salesforce Marketing Cloud, and then use Alyce to manage your direct mail campaign.
    * - **Postal.io**
      - `Postal.io <https://www.postal.io/>`__ |ext_link| allows you to manage direct mail campaigns using customizable workflows and automated sends. Send query results or audience lists to Adobe Marketo, HubSpot, or Salesforce Marketing Cloud, and then use Postal.io to manage your direct mail campaign. 
 

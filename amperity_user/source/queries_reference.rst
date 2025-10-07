@@ -252,7 +252,7 @@ Examples of queries that you can add to your tenant:
 * :ref:`queries-example-totals-by-brand`
 * :ref:`queries-example-transactions-by-day`
 
-.. important:: These queries are not meant to be copied and pasted and used without modification for your use cases. Use them as examples. Most requires some customization to be used effectively within your tenant.
+.. important:: These queries are not meant to be copied and pasted and used without modification for your use cases. Use them as examples. Most requires some customization to be used within your tenant.
 
 .. queries-examples-end
 

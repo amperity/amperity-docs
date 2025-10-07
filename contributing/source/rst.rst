@@ -4544,7 +4544,7 @@ Amperity docs use tokens for variables, strings, and icons that have common use 
 * :ref:`Global tokens <rst-tokens-global>`
 * :ref:`Topic-specific tokens <rst-tokens-topic>`
 
-.. note:: Tokens are used deliberately to solve build and maintanence problems. For example, a URL that is used in lots of places is harder to update if it changes. Icons from some libraries, such as Font Awesome, do not display inline in reStructuredText and need to be converted to raw HTML, and inline Unicode characters parses literally.
+.. note:: Tokens are used to solve build and maintanence problems. For example, a URL that is used in lots of places is harder to update if it changes. Icons from some libraries, such as Font Awesome, do not display inline in reStructuredText and need to be converted to raw HTML, and inline Unicode characters parses literally.
 
 .. rst-tokens-end
 

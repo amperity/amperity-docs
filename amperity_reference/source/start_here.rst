@@ -21,7 +21,7 @@ About Amperity
 
 Amperity helps your brand build accurate customer profiles that makes your brand's customer data usable to your entire business.
 
-* Quickly build accurate customer profiles
+* Build accurate customer profiles
 * Build custom data models
 * Discover actionable data
 * Safely manage configuration changes
@@ -40,7 +40,7 @@ Accurate customer profiles
 
 Accurate customer profiles help your brand
 
-* Quickly connect customers across any number of data sources
+* Connect customers across any number of data sources
 * Use deterministic matching or probabilistic matching
 * Find hidden connections across data sources that link customer profiles
 

@@ -351,7 +351,7 @@ Stitch QA database
 
 A Stitch QA database contains a series of Amperity-generated tables that can be used to validate the Amperity ID assignment to customer profiles.
 
-Use the Stitch QA database template to quickly build a Stitch QA database for your tenant.
+Use the Stitch QA database template to build a Stitch QA database for your tenant.
 
 .. databases-database-type-stitchqa-end
 

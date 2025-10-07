@@ -1116,7 +1116,7 @@ Change primary keys
 
 .. feeds-edit-change-primary-key-warning-start
 
-.. warning:: Be careful when making changes to columns in a feed to ensure that all keys--primary, foreign, and customer--are maintained correctly. In general, changing a key can have downstream implications for Stitch, including (but not limited to) potentially affecting stable Amperity IDs that depend on this primary key.
+.. warning:: Be careful when making changes to columns in a feed to ensure that all keys--primary, foreign, and customer--are maintained correctly. In general, changing a key can have downstream implications for Stitch, including affecting stable Amperity IDs that depend on this primary key.
 
 .. feeds-edit-change-primary-key-warning-end
 

@@ -114,7 +114,7 @@ The audience for your one-time buyer campaign should be focused only on buyers w
 
 Start your one-time buyer campaign with a simple welcome series, from which you will tailor your messaging to try to win repeat purchases from your one-time buyers.
 
-Use a "one and done" attribute to quickly identify your one-time buyers across all channels, including points of sale, online, and in-store, and across all brands. You may choose to keep your one-time buyer audience as a single group or you may choose to break it down by brand, by channel, or any other combination that makes sense for your marketing goals.
+Use a "one and done" attribute to identify your one-time buyers across all channels, including points of sale, online, and in-store, and across all brands. You may choose to keep your one-time buyer audience as a single group or you may choose to break it down by brand, by channel, or any other combination that makes sense for your marketing goals.
 
 You should expect to see around 75% of your customers be one-time buyers. Compare the one-time buyer profiles to your existing customer profiles, such as:
 
