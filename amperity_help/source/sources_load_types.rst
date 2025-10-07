@@ -1,6 +1,6 @@
 .. no title
 
-.. TOOD: Keep this manually synced with the steps for Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP. Can't include because of a formatting issue (bold) that works in HTML, but not in tooltips (TXT).
+.. TOOD: Keep this manually synced with the steps for Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP. Cannot include because of a formatting issue (bold) that works in HTML, but not in tooltips (TXT).
 
 .. tooltip-sources_load_types-start
 

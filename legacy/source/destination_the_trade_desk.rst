@@ -908,7 +908,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
           ,store_id AS storeid
 
-       If you don't need to track offline events by individual physical stores, you may use a purchase channel to define this value. For example:
+       If you do not need to track offline events by individual physical stores, you may use a purchase channel to define this value. For example:
 
        .. code-block:: sql
 

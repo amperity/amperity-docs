@@ -145,7 +145,7 @@ Date components
 
 .. couriers-files-patterns-date-components-start
 
-Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link|, but should generally be limited to the following patterns:
+Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link|, but should be limited to the following patterns:
 
 .. list-table::
    :widths: 200 200 200
@@ -366,7 +366,7 @@ Truncate, then load file
 
 You can empty the contents of a table prior to loading a data file to a domain table as a load operation.
 
-.. note:: A truncate operation is always run first, regardless of where it's specified within the load operation.
+.. note:: A truncate operation is always run first, regardless of where it is specified within the load operation.
 
 .. couriers-load-operation-type-truncate-then-load-end
 
@@ -412,7 +412,7 @@ Use the **Add Courier** button to add a courier to Amperity. A courier should be
 
 For smaller data sources, a courier may be associated with more than one feed. For larger data sources, a courier should be associated with a single feed. This is, in part, because couriers are run in parallel, but multiple feeds associated with a single courier are run sequentially.
 
-For example: if Snowflake is configured to send six tables to Amperity via six feeds, but all running as part of the same courier, table one must finish before table two, which must finish before table three, and so on. Whereas if each table is configured with its own courier, all six tables could start processing at the same time.
+For example: if Snowflake is configured to send six tables to Amperity via six feeds, but all running as part of the same courier, table one must finish before table two, which must finish before table three. Whereas if each table is configured with its own courier, all six tables could start processing at the same time.
 
 A courier configured from the Amperity UI must be configured to use one of the existing plugins in Amperity, such as for Amazon S3, Azure Blob Storage, Azure Data Lake Storage, SFTP, or Snowflake.
 
@@ -447,7 +447,7 @@ Add courier as copy
 
 .. couriers-add-as-copy-start
 
-You may add a courier by copying an existing courier. This is useful when couriers share plugin, credential, and other common settings. A copied courier will retain all of the configured settings as the original, but will be assigned a unique name based on the name of the copied courier.
+You may add a courier by copying an existing courier. This is useful when couriers share plugin, credential, and other common settings. A copied courier retains all of the configured settings as the original, but will be assigned a unique name based on the name of the copied courier.
 
 .. couriers-add-as-copy-end
 
@@ -492,7 +492,7 @@ Delete courier
 
 .. couriers-delete-start
 
-Use the **Delete** option to remove a courier from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this courier before you delete it. This action will *not* delete the feeds associated with the courier.
+Use the **Delete** option to remove a courier from Amperity. Verify that both upstream and downstream processes no longer depend on this courier before you delete it. This action will *not* delete the feeds associated with the courier.
 
 .. couriers-delete-end
 

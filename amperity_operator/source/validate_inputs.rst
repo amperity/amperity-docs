@@ -128,7 +128,7 @@ Transactions
 
 .. validate-inputs-review-reports-transactions-start
 
-A complete transaction with good underlying data has a combination of values that work together to describe what was purchased, when it was purchased, where it was purchased, and so on. Incomplete transactions are shown using a variety of reports. For example:
+A complete transaction with good underlying data has a combination of values that work together to describe what was purchased, when it was purchased, or where it was purchased. Incomplete transactions are shown using a variety of reports. For example:
 
 * All items should be associated with a unique product ID.
 * All orders should be associated with a store ID.

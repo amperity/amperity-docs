@@ -235,7 +235,7 @@ Tellius
 
 .. sendto-analytics-bi-tool-tellius-start
 
-Tellius is a platform for analytics and BI that unifies visual data intelligence, actionable insights, machine learning capabilities, and custom predictive models.
+Tellius is a platform for analytics and BI that unifies visual data intelligence, insights, machine learning capabilities, and custom predictive models.
 
 You can send data to cloud storage and then move that data into a cloud database using any `connector that is supported by Tellius <https://help.tellius.com/article/2ch9kda9f5-list-of-connectors-by-type>`__ |ext_link|.
 

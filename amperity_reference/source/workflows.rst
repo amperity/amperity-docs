@@ -322,7 +322,7 @@ Review errors
 
 .. workflows-discover-details-actions-errors-start
 
-Some workflow runs may have errors that will prevent the run from completing successfully. Use the workflow details page to resolve workflows that failed by reviewing options for resolution, and then choosing one of those options or choosing to restart the workflow.
+Some workflow runs may have errors that prevents the run from completing successfully. Use the workflow details page to resolve workflows that failed by reviewing options for resolution, and then choosing one of those options or choosing to restart the workflow.
 
 .. image:: ../../images/howitworks-workflows-failures.png
    :width: 600 px
@@ -330,7 +330,7 @@ Some workflow runs may have errors that will prevent the run from completing suc
    :align: left
    :class: no-scaled-link
 
-.. tip:: Many workflow failures are caused by errors are directly actionable using a workflow resolution. In some situations, viewing the full error message can help troubleshoot the root cause of an error.
+.. tip:: Many workflow failures are caused by errors that can be fixed by using a workflow resolution. In some situations, viewing the full error message can help troubleshoot the root cause of an error.
 
 .. workflows-discover-details-actions-errors-end
 
@@ -584,7 +584,7 @@ Many workflows have context-specific resolutions that depend on upstream and dow
 
 .. note:: The potential list of context-specific workflow actions is larger than the lists of campaign-, courier group-, destination-, scheduled orchestration group- or source-specific resolutions. And this list of potential context-specific workflow actions may be only partially relevant to your tenant.
 
-   For example, if your brand only uses Amazon S3 for file-based transfers, then SFTP-specific errors won't ever be shown. If your brand sends paid media campaigns to TikTok Ads and Meta Ads Manager, but not Google Ads, then Google Ads-specific errors won't ever be shown.
+   For example, if your brand only uses Amazon S3 for file-based transfers, then SFTP-specific errors will not ever be shown. If your brand sends paid media campaigns to TikTok Ads and Meta Ads Manager, but not Google Ads, then Google Ads-specific error will notn't ever be shown.
 
    Amperity provides a broad list of workflow actions that address the most likely causes and solutions to help your brand self-service resolutions of issues as they may arise.
 
@@ -617,7 +617,7 @@ Mismatched datatype
 
 A datatype defines what the value of an attribute can be. For example, an email address is a String, an order date is a Datetime, revenue is a Decimal, the number of items in an order is an Integer, and something that can be true or false is a Boolean.
 
-It's possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal or some other non-String datatype. If a mismatched datatype occurs the campaign fails, you will receive an error message, and an alert is sent.
+It is possible for datatypes to be mismatched, which occurs when a campaign expects a datatype to be a String, but is returned as a Decimal or some other non-String datatype. If a mismatched datatype occurs the campaign fails, you will receive an error message, and an alert is sent.
 
 To resolve this error, open the link in the alert and visit the workflow actions page. The alert and workflow actions page will both contain the error message, which will be similar to:
 

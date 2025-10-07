@@ -169,7 +169,7 @@ A feedback button is available in the lower right. Please use this button to sen
    :align: left
    :class: no-scaled-link
 
-It's easy to send documentation feedback:
+It is easy to send documentation feedback:
 
 #. Click the feedback button.
 #. Type your feedback.

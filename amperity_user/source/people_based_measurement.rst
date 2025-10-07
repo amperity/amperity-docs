@@ -37,7 +37,7 @@ The challenge of measuring opt-in data
 
 For example, how do you measure the effects of an email campaign without knowing which customers received that email and which did not, *even without knowing which customers have opted in to receiving email*?
 
-It's a common assumption that having accurate opt-in and email response data is a requirement for measuring the incremental effects of an email campaign.
+It is a common assumption that having accurate opt-in and email response data is a requirement for measuring the incremental effects of an email campaign.
 
 From the perspective of Amperity, accurate results tracking and access to opt-in details do not matter because Amperity uses people-based measurement to ensure accurate tracking as long as the experiment is set up with randomized control and treatment groups.
 

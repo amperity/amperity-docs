@@ -121,7 +121,7 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        By grouping repeat customers into these tiers, you can:
 
-       * Focus on retaining and nurturing customers who contribute significantly to revenue.
+       * Focus on retaining and nurturing customers who contribute to revenue.
        * Develop targeted campaigns that address the specific needs and preferences of different customer segments.
        * Proactively address the concerns of customers who may be considering churning.
 

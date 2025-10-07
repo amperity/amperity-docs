@@ -704,7 +704,7 @@ Copy SELECT statement
 
 .. queries-copy-select-statement-start
 
-When adding a table, it's often necessary to reference many columns within that table. You can copy the **SELECT** statement for any table to use as a starting point for a table.
+When adding a table, it is often necessary to reference many columns within that table. You can copy the **SELECT** statement for any table to use as a starting point for a table.
 
 .. tip:: Use the copy **SELECT** statement functionality as a way to use existing queries that are similar to your use case as a template when adding queries. Be sure to review the **SELECT** statement and make any necessary updates for your new use case.
 
@@ -729,7 +729,7 @@ Delete query
 
 .. queries-delete-start
 
-Use the **Delete** option to remove a query from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this query prior to deleting it.
+Use the **Delete** option to remove a query from Amperity. Verify that both upstream and downstream processes no longer depend on this query prior to deleting it.
 
 .. queries-delete-end
 
@@ -856,7 +856,7 @@ You may enable performance mode for any query that returns large result sets. Pe
 
 .. queries-enable-performance-mode-important-start
 
-.. important:: Performance mode is significantly faster than running a query in non-performance mode, but has the following limitations:
+.. important:: Performance mode is faster than running a query in non-performance mode, but has the following limitations:
 
    * Sort order is not guaranteed because results are written in parallel to many files.
    * The **UNION** clause requires data types to match exactly.
@@ -905,7 +905,7 @@ Alerts are sent when the record count in the query output contains errors that e
 
       A query that runs and fails when record counts exceed the configured threshold stops a workflow.
 
-      Use the **Warn when** threshold for queries that are not associated with an orchestration. This will prevent that query from stopping the workflow when record counts exceed the configured alert threshold.
+      Use the **Warn when** threshold for queries that are not associated with an orchestration. This prevents that query from stopping the workflow when record counts exceed the configured alert threshold.
 
 You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one or more courier groups or scheduled orchestration groups.
 
@@ -1112,7 +1112,7 @@ You can preview the results of a SQL query by clicking the **Run Query** button.
 * Return an empty table.
 * Return some type of error.
 
-Use the preview results pane to fine-tune your queries, to make sure they return the data you want, and to make sure they don't contain any errors.
+Use the preview results pane to fine-tune your queries, to make sure they return the data you want, and to make sure they do not contain any errors.
 
 .. queries-preview-results-end
 
@@ -1192,7 +1192,7 @@ Rename query
 
 .. queries-rename-start
 
-Use the **Rename** option to rename a query. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this query prior to renaming it.
+Use the **Rename** option to rename a query. Verify that both upstream and downstream processes no longer depend on this query prior to renaming it.
 
 .. queries-rename-end
 
@@ -1452,7 +1452,7 @@ View query details
 
 .. queries-view-details-start
 
-Query details show the time at which the query last ran, when it was activated, to which database it's associated, what type of workflow it has been assigned, the destination to which it's being sent, and visual graph that shows trends over time.
+Query details show the time at which the query last ran, when it was activated, to which database it is associated, what type of workflow it has been assigned, the destination to which it is being sent, and visual graph that shows trends over time.
 
 .. queries-view-details-end
 

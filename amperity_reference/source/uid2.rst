@@ -194,7 +194,7 @@ Add your brand's Mapper credentials for UID2 to Amperity. Open the **Settings** 
    :align: left
    :class: no-scaled-link
 
-Choose the **UID2** plugin. Provide a name and description for the credential that ensures users within your tenant know it's related to UID2. Add the API key and the client secret for your brand's **Mapper** participant credentials.
+Choose the **UID2** plugin. Provide a name and description for the credential that ensures users within your tenant know it is related to UID2. Add the API key and the client secret for your brand's **Mapper** participant credentials.
 
 .. uid2-configure-amperity-add-credentials-end
 

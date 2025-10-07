@@ -194,7 +194,7 @@ Add your brand's Mapper credentials for EUID to Amperity. Open the **Settings** 
    :align: left
    :class: no-scaled-link
 
-Choose the **EUID** plugin. Provide a name and description for the credential that ensures users within your tenant know it's related to EUID. Add the API key and the client secret for your brand's **Mapper** participant credentials.
+Choose the **EUID** plugin. Provide a name and description for the credential that ensures users within your tenant know it is related to EUID. Add the API key and the client secret for your brand's **Mapper** participant credentials.
 
 .. euid-configure-amperity-add-credentials-end
 

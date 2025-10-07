@@ -205,7 +205,7 @@ For example, a field named **evar_15** contains email addresses. This field shou
 * Email addresses
 * Personally identifiable information (PII)
 
-Email addresses are an important part of the identity resolution process. Using a semantic tag to tell Amperity which fields in your data sources contain email addresses saves you a lot of time because you don't have to do any data processing, ETLs, or data modeling before making that data source available to Amperity.
+Email addresses are an important part of the identity resolution process. Using a semantic tag to tell Amperity which fields in your data sources contain email addresses saves you a lot of time because you do not have to do any data processing, ETLs, or data modeling before making that data source available to Amperity.
 
 Connect the data, apply the semantic tag, and build customer profiles.
 
@@ -246,7 +246,7 @@ You have two options:
 
        **AmpAI** will correctly assign semantic tags to all of the sample data tables, so you can click the **Save** button in the top right.
 
-       .. important:: If you are using your own data review the fields carefully. **AmpAI** will apply semantic tags for PII correctly most of the time, but it's good to double-check and be sure. If you think they are wrong, just remove the tag **AmpAI** applied and find the correct semantic tag.
+       .. important:: **AmpAI** will apply semantic tags for PII correctly most of the time, but it is good to double-check and be sure. If you think they are wrong, just remove the tag **AmpAI** applied and find the correct semantic tag.
 
 .. start-semantics-end
 
@@ -333,7 +333,7 @@ After all of the source tables to which semantic tags should be applied have sem
        #. Step through and grade the result as a "Good example" or "Poor example". When benchmark grading is finished click **Next**.,
        #. Review the list of steps you can take to improve customer profile quality.
 
-       .. note:: Amperity sample data shows mostly abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and more actionable abnormal benchmarks.
+       .. note:: Amperity sample data shows abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and fewer abnormal benchmarks.
 
 .. start-run-stitch-steps-end
 
@@ -421,7 +421,7 @@ Merge policy
 
 .. merge-policy-intro-start
 
-Merge policy defines how the **Merged Customers** table will be maintained by Amperity. The **Merged Customers** table collects PII data from all source datasets, and then collapses the best data into single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
+Merge policy defines how the **Merged Customers** table is maintained by Amperity. The **Merged Customers** table collects PII data from all source datasets, and then collapses the best data into single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
 
 Use merge policy to tell Amperity which tables are the most reliable sources of customer profile data.
 

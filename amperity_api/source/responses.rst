@@ -78,7 +78,7 @@ For example:
 
    {
      "status": 400,
-     "message": "Error updating database: Can't find campaign named \
+     "message": "Error updating database: Cannot find campaign named \
                  'CampaignName'",
      "request_id":"1ab23456-c78d-9012-3456-78efg9hi01j2",
      "trace_id":"1a2b3456789cd0ef1g234hijklm5nopq"

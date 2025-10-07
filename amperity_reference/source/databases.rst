@@ -661,7 +661,7 @@ Delete real-time table
 
 .. databases-realtime-howtos-delete-start
 
-Use the **Delete** option to remove a real-time table from Amperity. This should be done carefully. Verify that both upstream and downstream processes are not relying on the real-time table before you delete it.
+Use the **Delete** option to remove a real-time table from Amperity. Verify that both upstream and downstream processes are not relying on the real-time table before you delete it.
 
 
 .. databases-realtime-howtos-delete-end
@@ -862,7 +862,7 @@ Add customer 360 database
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "Customer 360", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "Customer 360", and set the permissions that determine which users is able to access this database, and then click **Create**.
 
    .. important:: A |add_customer_360_database| requires additional configuration after the database is created.
 
@@ -888,7 +888,7 @@ For example, after creating the empty database use the passthrough functionality
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "None", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "None", and set the permissions that determine which users is able to access this database, and then click **Create**.
 #. Use the **Database Editor** to add tables to the empty database.
 
 .. databases-database-howto-add-database-empty-steps-end
@@ -915,7 +915,7 @@ Stitched domain tables have an added column for the Amperity ID and replace the 
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users is able to access this database, and then click **Create**.
 #. Use the **Database Editor** to extend the passthrough database with custom SQL tables.
 
 .. databases-database-howto-add-database-passthrough-steps-end
@@ -942,7 +942,7 @@ A Stitch QA database loaded from a template contains a list of pre-loaded SQL qu
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users is able to access this database, and then click **Create**.
 #. Use the **Database Editor** to extend the passthrough database with custom SQL tables.
 
 .. databases-database-howto-add-database-stitchqa-steps-end
@@ -1364,7 +1364,7 @@ Define custom values and frequencies
 
 A pick-list may be configured with custom values, where each item in the pick-list is specified on its own line.
 
-.. caution:: Using custom values in a pick-list is uncommon. It is generally best to use automatically generated values.
+.. caution:: Using custom values in a pick-list is uncommon. It is best to use automatically generated values.
 
 .. databases-database-howto-pick-list-define-custom-end
 
@@ -1731,7 +1731,7 @@ Edit database table
 
 .. databases-database-howto-edit-table-start
 
-Tables in a database may be edited. This should not be done without considering the upstream and downstream effects of those changes. Changes may have unintended consequences: semantics, column names, pick-lists, and so on may not be immediately available to a downstream process, which may cause that downstream process to fail. If an upstream process cannot find the table or the schema does not match, that process fails.
+Tables in a database may be edited. This should not be done without considering the upstream and downstream effects of those changes. Changes may have unintended consequences: semantics, column names, or pick-lists, may not be immediately available to a downstream process, which may cause that downstream process to fail. If an upstream process cannot find the table or the schema does not match, that process fails.
 
 .. databases-database-howto-edit-table-end
 
@@ -2219,7 +2219,7 @@ Run tables sequentially in the selected databases to do the following:
 * Optimize resource capacity. 
 * Review individual table run times to identify issues. 
 
-.. note:: When you run a database in this mode, the duration of the database run may increase substantially.
+.. note:: When you run a database in this mode, the duration of the database run may increase.
 
 .. databases-database-howto-run-sequentially-end
 

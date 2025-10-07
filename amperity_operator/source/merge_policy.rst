@@ -19,7 +19,7 @@ About merge policy
 
 .. merge-policy-intro-start
 
-Merge policy defines how the **Merged Customers** table will be maintained by Amperity. The **Merged Customers** table collects personally identifiable information (PII) data from all source datasets, and then collapses the best data into a single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
+Merge policy defines how the **Merged Customers** table is maintained by Amperity. The **Merged Customers** table collects personally identifiable information (PII) data from all source datasets, and then collapses the best data into a single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
 
 Use merge policy to tell Amperity which tables are the most reliable sources of customer profile data.
 

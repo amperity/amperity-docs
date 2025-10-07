@@ -201,7 +201,7 @@ The data appears on the **Segments** page.
 
 .. note:: In order for a query output to appear on the **Segment Editor**, you need to add the Amperity ID field as a column or add the email field as a column in to the .CSV file.
 
-   If your uploaded file doesn't have any Amperity IDs, you can select an email field to join one from the **Merged Customers** table on the **Configure File** window.
+   If your uploaded file does not have any Amperity IDs, you can select an email field to join one from the **Merged Customers** table on the **Configure File** window.
 
 .. file-uploads-add-query-steps-end
 

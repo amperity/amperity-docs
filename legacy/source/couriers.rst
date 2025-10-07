@@ -69,7 +69,7 @@ The exact combination of files and load operations depends on the data source fr
 
 .. couriers-files-load-settings-syntax-start
 
-Load settings define the location of a data source, it's type, and how it should be processed by Amperity. The syntax for file load settings is similar to:
+Load settings define the location of a data source, its type, and how it should be processed by Amperity. The syntax for file load settings is similar to:
 
 .. code-block:: none
 
@@ -244,7 +244,7 @@ Date components
 
 .. couriers-files-patterns-date-components-start
 
-Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link|, but should generally be limited to the following patterns:
+Date components act as placeholders for months, days, and years. Real values are applied when the courier runs on a given date or date range. Date components must match `Joda-Time pattern-based formatting <https://www.joda.org/joda-time/key_format.html>`__ |ext_link|, but should be limited to the following patterns:
 
 .. list-table::
    :widths: 200 200 200
@@ -537,6 +537,8 @@ An empty load operation will bring files to Amperity, but not try to load those 
 
 .. couriers-load-operation-type-empty-block-end
 
+.. vale off
+
 .. couriers-load-operation-type-empty-tip-start
 
 .. tip:: You cannot use an empty load operation for files that require the use of an ingest query to transform the data prior to it being made available to the feed.
@@ -549,6 +551,8 @@ An empty load operation will bring files to Amperity, but not try to load those 
 
 .. couriers-load-operation-type-empty-tip-end
 
+.. vale on
+
 
 .. _couriers-load-operation-type-incorrect-feed-id:
 
@@ -557,7 +561,7 @@ Incorrect feed ID
 
 .. couriers-load-operation-type-incorrect-feed-id-start
 
-Instead of using an empty load operation you can use an obviously incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
+Instead of using an empty load operation you can use an incorrect feed ID to pull files to Amperity. This approach uses the default load configuration, but sets the feed ID to a string that is not available to the courier after feeds have been updated. For example, replacing the digits with six "x" characters:
 
 .. code-block:: none
 
@@ -653,7 +657,7 @@ Truncate, then load
 
 You can empty the contents of a table prior to loading a data file to a domain table as a load operation.
 
-.. note:: A truncate operation is always run first, regardless of where it's specified within the load operation.
+.. note:: A truncate operation is always run first, regardless of where it is specified within the load operation.
 
 .. couriers-load-operation-type-truncate-then-load-end
 
@@ -1300,7 +1304,7 @@ Salesforce Commerce Cloud
 
 .. couriers-example-salesforce-commerce-cloud-settings-start
 
-The Salesforce Commerce Cloud REST API has a clearly defined set of files that can be made available to Amperity. The load settings are built into Amperity by default. (Salesforce Commerce Cloud was previously known as Demandware.)
+The Salesforce Commerce Cloud REST API has a defined set of files that can be made available to Amperity. The load settings are built into Amperity by default. (Salesforce Commerce Cloud was previously known as Demandware.)
 
 .. couriers-example-salesforce-commerce-cloud-settings-end
 
@@ -1961,7 +1965,7 @@ Use the **Add Courier** button to add a courier to Amperity. A courier should be
 
 For smaller data sources, a courier may be associated with more than one feed. For larger data sources, a courier should be associated with a single feed. This is, in part, because couriers are run in parallel, but multiple feeds associated with a single courier are run sequentially.
 
-For example: if Snowflake is configured to send six tables to Amperity via six feeds, but all running as part of the same courier, table one must finish before table two, which must finish before table three, and so on. Whereas if each table is configured with its own courier, all six tables could start processing at the same time.
+For example: if Snowflake is configured to send six tables to Amperity via six feeds, but all running as part of the same courier, table one must finish before table two, which must finish before table three. Whereas if each table is configured with its own courier, all six tables could start processing at the same time.
 
 A courier configured from the Amperity UI must be configured to use one of the existing plugins in Amperity, such as for Amazon S3, Azure Blob Storage, Azure Data Lake Storage, SFTP, or Snowflake.
 
@@ -1996,7 +2000,7 @@ Add courier as copy
 
 .. couriers-add-as-copy-start
 
-You may add a courier by copying an existing courier. This is useful when couriers share plugin, credential, and other common settings. A copied courier will retain all of the configured settings as the original, but will be assigned a unique name based on the name of the copied courier.
+You may add a courier by copying an existing courier. This is useful when couriers share plugin, credential, and other common settings. A copied courier retains all of the configured settings as the original, but will be assigned a unique name based on the name of the copied courier.
 
 .. couriers-add-as-copy-end
 
@@ -2041,7 +2045,7 @@ Delete courier
 
 .. couriers-delete-start
 
-Use the **Delete** option to remove a courier from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this courier before you delete it. This action will *not* delete the feeds associated with the courier.
+Use the **Delete** option to remove a courier from Amperity. Verify that both upstream and downstream processes no longer depend on this courier before you delete it. This action will *not* delete the feeds associated with the courier.
 
 .. couriers-delete-end
 

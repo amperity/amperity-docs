@@ -81,7 +81,6 @@ Configure default attributes for each combination of destination + activation ID
 * Send to Braze from the **C360** database for **Customer ID**.
 * Send to Meta Ads Manager from the **C360** database for **Customer ID**. Map the **Customer ID** field to **EXTERN_ID**.
 * Send to The Trade Desk from the C360 database for **email**, which is sent as a UID2 token from Amperity.
-* And so on.
 
 .. activation-ids-configure-default-attributes-end
 

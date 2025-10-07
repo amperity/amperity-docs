@@ -198,7 +198,7 @@ About Spark SQL
 
 .. domain-data-reshape-start
 
-Use |sql_spark| to reshape domain tables into custom domain tables. A reshaped domain table acts like a feed, in that you can apply semantic tags, identify a primary key, make the table available to Stitch, and so on.
+Use |sql_spark| to reshape domain tables into custom domain tables. A reshaped domain table acts like a feed, in that you can apply semantic tags, identify a primary key, and make the table available to Stitch.
 
 .. domain-data-reshape-end
 

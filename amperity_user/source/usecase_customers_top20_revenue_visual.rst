@@ -80,7 +80,7 @@ The following sections describe using the visual **Query Editor** to build a que
           :alt: Save your segment.
           :align: left
           :class: no-scaled-link
-     - You're done. Give your query a name that clearly describes the purpose. For example: "Top 20 Percent Customers During Previous Year".
+     - You are done. Give your query a name that describes the purpose. For example: "Top 20 Percent Customers During Previous Year".
 
        Click the **Activate** button in the top right corner of the visual **Query Editor**. 
 

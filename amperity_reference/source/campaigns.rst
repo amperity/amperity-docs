@@ -133,7 +133,7 @@ Recurring campaigns
 A recurring campaign has the following components:
 
 #. A state change that initiates a campaign message.
-#. A segment that defines a list of customers to which the campaign message applies. This segment can be configured to limit the list to certain types of users, such as only business travelers, high-value customers, and so on.
+#. A segment that defines a list of customers to which the campaign message applies. This segment can be configured to limit the list to certain types of users, such as only business travelers or high-value customers.
 #. A launch cadence that defines the frequency--daily, weekly, monthly, quarterly--at which the campaign messages are run.
 
 .. campaigns-types-recurring-end
@@ -155,7 +155,7 @@ A multichannel campaign defines combinations of sub-audiences and channels to de
 A multichannel campaign has the following components:
 
 #. A state change that initiates a campaign message.
-#. A segment that defines the audience to which the multichannel campaign messages will be applied. This segment can be configured to limit the list to certain types of users, such as only business travelers, high-value customers, and so on.
+#. A segment that defines the audience to which the multichannel campaign messages will be applied. This segment can be configured to limit the list to certain types of users, such as only business travelers or high-value customers.
 #. The use of sub-audiences to partition the audience into a variety of campaign channels. Each sub-audience may be configured to have its own control group.
 #. A launch cadence that defines the frequency--daily, weekly, monthly, quarterly--at which the campaign messages are run.
 
@@ -197,7 +197,7 @@ For many |campaign_destinations|, you may configure the list of attributes, such
 
 .. campaigns-attributes-important-start
 
-.. important:: Some destinations only support sending specific attributes. Review the requirements for each destination to ensure that you don't attach unsupported attributes to the campaigns that you send.
+.. important:: Some destinations only support sending specific attributes. Review the requirements for each destination to ensure that you do not attach unsupported attributes to the campaigns that you send.
 
 .. campaigns-attributes-important-end
 
@@ -243,7 +243,7 @@ Control groups
 
 .. campaigns-control-groups-note-start
 
-.. note:: A control group is a completely randomized sample of customers that is pulled from the original audience.
+.. note:: A control group is a randomized sample of customers that is pulled from the original audience.
 
 .. campaigns-control-groups-note-end
 
@@ -267,7 +267,7 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    Audience members that are removed from the control group belong to a treatment group on the next send.
 
-   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a mostly static group of customers, but with small fluctuations in audience size.
+   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a static group of customers, but with small fluctuations in audience size.
 
    #. Today the size of the audience for the segment is 1200 customers and the size of the control group is 20 percent, or 240 customers. The campaign is sent to 960 customers.
    #. Next week the size of the audience is 1240, which means the size of the control group will be larger (248). The campaign is sent to 992 customers.
@@ -1073,7 +1073,7 @@ Archive campaign
 
 .. campaigns-build-audience-start
 
-Use the archive feature for campaigns you have actively used, but you don't need anymore.
+Use the archive feature for campaigns you have actively used, but you do not need anymore.
 
 .. note:: This action effectively deletes the campaign from your tenant. If you want to this campaign to be moved back into your tenant, please contact Amperity support.
 
@@ -1416,7 +1416,7 @@ You can discard a campaign on the **Edit Campaign** page.
 
 .. campaigns-discard-campaign-steps-start
 
-Use the **Discard** option to remove a campaign from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this campaign prior to discarding it.
+Use the **Discard** option to remove a campaign from Amperity. Verify that both upstream and downstream processes no longer depend on this campaign prior to discarding it.
 
 #. From the **Campaigns** page, open a campaign, and then select **Discard**.
 #. The **Discard Campaign** dialog box opens. Click **Confirm**.

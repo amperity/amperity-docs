@@ -143,7 +143,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - Send a test set of first-party data from Amperity, and then from within |destination-name| verify that this data is available from Meta Ads Manager.
 
-       .. important:: The :ref:`custom audience terms of service <destination-meta-ads-manager-terms-of-service>` must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+       .. important:: The :ref:`custom audience terms of service <destination-meta-ads-manager-terms-of-service>` must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to |destination-name|.
 
           |destination-name| uses OAuth to grant access to Amperity. You may need to :ref:`reauthorize OAuth <destination-meta-ads-manager-reauthorize-amperity>` if the token expires or is removed.
 
@@ -289,7 +289,7 @@ Terms of service
 
 .. destination-meta-ads-manager-terms-of-service-start
 
-The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to |destination-name|.
 
 .. destination-meta-ads-manager-terms-of-service-end
 
@@ -1075,7 +1075,7 @@ Must agree to Facebook terms
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-start
 
-The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to Facebook Ads.
 
 When the business user has not agreed to Facebook terms, an error similar to the following is shown:
 

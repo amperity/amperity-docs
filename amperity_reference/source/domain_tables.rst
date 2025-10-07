@@ -77,7 +77,7 @@ Column types
        * 12345
 
    * - **string**
-     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, descriptions, and so on. May be empty. For example:
+     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. May be empty. For example:
 
        * John
        * Smith
@@ -491,7 +491,7 @@ Feeds quickly load data and apply a standard schema to customer data. Use a cust
 
    Apply :ref:`semantics-itemized-transactions` to any column in the data schema that can be matched with transactions semantics.
 
-   .. note:: Other semantic tags may be applied, including for customer records and product catalogs. Tables that contain *only* transactions, itemized transactions, or product catalog semantic tags are generally not made available to Stitch.
+   .. note:: Other semantic tags may be applied, including for customer records and product catalogs. Tables that contain *only* transactions, itemized transactions, or product catalog semantic tags are not made available to Stitch.
 
 #. Click **Activate**.
 
@@ -666,7 +666,7 @@ Delete domain table
 
 .. domain-tables-delete-start
 
-Use the **Delete** option to remove a domain table from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this domain table prior to deleting it. This action will *not* delete the feeds associated with the domain table.
+Use the **Delete** option to remove a domain table from Amperity. Verify that both upstream and downstream processes no longer depend on this domain table prior to deleting it. This action will *not* delete the feeds associated with the domain table.
 
 .. domain-tables-delete-end
 

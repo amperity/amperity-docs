@@ -55,7 +55,7 @@ The activity list displays the following columns:
 * **User** The user who took the action. For most users, this is that user's friendly name or email address.
 
   An auth token is displayed for users that accesses Amperity programatically.
-* **Action** The action taken in the application. Generally this takes the form of "action type/action". For example, activating a segment appears as "segment/activate" and running a segment for download appears as "query.exec/download".
+* **Action** The action taken in the application. This takes the form of "action type/action". For example, activating a segment appears as "segment/activate" and running a segment for download appears as "query.exec/download".
 
   .. note:: A few actions in the list are not user-initiated. For example, when a user is granted a new authorization policy, both the grant and the receipt appear on separate rows.
 * **Object** The object against which the action occurred.
@@ -163,7 +163,7 @@ User activity event types
 
 .. settings-user-activity-logs-event-types-start
 
-The following table lists the most common event types, grouped by the component or area within Amperity that is most closely associated with the event type.
+The following table lists the most common event types, grouped by the component or area within Amperity that is most associated with the event type.
 
 .. note:: Many events are prefixed with a dot-delimited string that typically starts with "amperity". The specific event is located after a slash ("/"). The following table lists the events by the strings immediately before and after the slash.
 
@@ -303,7 +303,7 @@ The following table lists the most common event types, grouped by the component 
 
        .. important:: Occasionally members of your Amperity team will access your tenant. This is always done as a full administrator.
 
-          In situations where they are helping to troubleshoot an issue, answer a question with more detail, and so on, they will often switch their view to match the policy settings associated with your tenant.
+          In situations where they are helping to troubleshoot an issue or answer a question with more detail, they will often switch their view to match the policy settings associated with your tenant.
 
           For example, if the view is switched to "DataGrid Operator", that action is logged using the following event type:
 

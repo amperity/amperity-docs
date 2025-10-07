@@ -40,7 +40,7 @@ About the Segments page
 
 You can view a list of active segments along with recommended segments highlighted across the top of the page.
 
-Click **Create Segment** to open the **Segment Editor**. Build your segment using a series of dropdowns and picklists. Refresh **Segment insights** to see how many customers match and to see how much value they bring to your brand. Activate the segment when you're ready to use it in marketing campaigns.
+Click **Create Segment** to open the **Segment Editor**. Build your segment using a series of dropdowns and picklists. Refresh **Segment insights** to see how many customers match and to see how much value they bring to your brand. Activate the segment when you are ready to use it in marketing campaigns.
 
 You can reorder the list of segments alphabetically by **Name**  and **Status**. Or, you can reorder the date **Last updated**. Quickly view which campaigns a segment is activated under **Used in**.
 

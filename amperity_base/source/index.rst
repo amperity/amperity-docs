@@ -31,7 +31,7 @@ Type or enter "/" on your keyboard to search the docs site.
 
 .. admonition:: Product updates
 
-   Open the `product updates <reference/updates.html>`__ page to find out about what's new and what's changed.
+   Open the `product updates <reference/updates.html>`__ page to find out about what is new and what has changed.
 
 .. docs-updates-end
 

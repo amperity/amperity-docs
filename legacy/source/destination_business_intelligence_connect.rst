@@ -63,7 +63,7 @@ Provision the warehouse
 
 .. destination-bic-request-to-enable-provision-start
 
-Your Amperity support team will provision the following:
+Your Amperity support team provisions the following:
 
 #. A dedicated data warehouse in Snowflake that is configured to run in the same cloud platform as your tenant.
 

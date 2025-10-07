@@ -137,7 +137,7 @@ Data that is output from Amperity and sent to |destination-name| must be shaped 
 
 #. Each column header for a registered attribute in the CSV file must correspond to the correct data type in |destination-name| and attribute name.
 
-   .. note:: If a column header doesn't correspond to a registered attribute name, the upload fails. If an attribute value doesn't respect the attribute's data type and format, the upload fails.
+   .. note:: If a column header does not correspond to a registered attribute name, the upload fails. If an attribute value does not respect the attribute's data type and format, the upload fails.
 
 .. sendto-optimizely-build-query-customer-profile-requirements-end
 

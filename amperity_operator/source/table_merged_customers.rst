@@ -427,7 +427,7 @@ Field priority
 
 .. table-merged-customers-sql-query-required-update-field-priority-start
 
-Use the field priority table to assign priorities for individual fields that are different from the priority assigned generally to each source domain table **Source_Priority**. Update the list of tables to match the same domain tables that were specified for **Source_Priority**, and then update the field priority table to specify individual priorities.
+Use the field priority table to assign priorities for individual fields that are different from the priority assigned to each source domain table **Source_Priority**. Update the list of tables to match the same domain tables that were specified for **Source_Priority**, and then update the field priority table to specify individual priorities.
 
 * A NULL value uses the priority assigned to the source domain table or, when a priority is not assigned by a source domain table, the default priority of "999".
 * An integer value will assign priority, where "1" has a higher priority than "2".
@@ -710,7 +710,7 @@ Within the **Merged Customers** table, you must decide if the custom semantic re
 * :ref:`Assign field priority <table-merged-customers-extend-pii-semantic-custom-assign-priority>`
 * :ref:`Skip field priority <table-merged-customers-extend-pii-semantic-custom-skip-priority>`
 
-For example, a company may have data sources that provide data about its own employees, such as internal email addresses, phone numbers, and so on. Use a custom PII semantic named **email-internal** to tag the fields that contain internal email addresses. Apply this custom PII semantic to all fields in all data sources that contain internal email addresses.
+For example, a company may have data sources that provide data about its own employees, such as internal email addresses, and phone numbers. Use a custom PII semantic named **email-internal** to tag the fields that contain internal email addresses. Apply this custom PII semantic to all fields in all data sources that contain internal email addresses.
 
 Consistently tagging fields with internal email addresses with the **email-internal** custom PII semantic creates a column named **email_internal** in the **Unified Coalesced** table. The **Merged Customers** table can use this column to extend the merge rules to include rules for internal email addresses.
 

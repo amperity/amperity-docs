@@ -529,7 +529,7 @@ An index must be defined for each query that is used to generate an endpoint for
 
        This opens the **Add Index** dialog box.
 
-       Give the index a name that clearly describes how it is used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
+       Give the index a name that describes how it is used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
 
        Use a description to help other users in your tenant know what use cases this index enables.
 
@@ -1341,7 +1341,7 @@ The following sections describe some ways to use the Profile API:
 .. * :ref:`Website personalization <profile-api-usecase-website-personalization>`
 .. 
 
-.. TODO: Cordial doesn't support token-based access to the Profile API. https://support.cordial.com/hc/en-us/articles/115005857328-Get-JSON-Feeds-getJson-method
+.. TODO: Cordial does not support token-based access to the Profile API. https://support.cordial.com/hc/en-us/articles/115005857328-Get-JSON-Feeds-getJson-method
 
 .. profile-api-usecases-end
 

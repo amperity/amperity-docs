@@ -19,7 +19,7 @@ Product updates
 
 .. updates-intro-start
 
-What's new and what's changed?
+What is new and what has changed?
 
 .. updates-intro-end
 

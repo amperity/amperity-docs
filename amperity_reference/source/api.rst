@@ -343,7 +343,7 @@ Delete API keys
 
 .. api-keys-api-token-delete-start
 
-In situations where rotating an access key isn't enough, you can delete an API key.
+In situations where rotating an access key is not enough, you can delete an API key.
 
 **To delete API tokens**
 

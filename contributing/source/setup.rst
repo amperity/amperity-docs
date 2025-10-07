@@ -45,7 +45,7 @@ Run the following commands to create a Python virtual environment.
 
    "sphinx-build 7.4.7"
 
-.. note:: ``(.venv)`` isn't part of the command you should run. This just means "From the Python virtual environment, run the command after ``$``."
+.. note:: ``(.venv)`` is not part of the command you should run. This just means "From the Python virtual environment, run the command after ``$``."
 
 
 Install dependencies

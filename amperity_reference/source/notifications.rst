@@ -193,7 +193,7 @@ A message is shown that describes the error, such as:
    cannot resolve '`loyalty_tier`' given input columns:
    [Unified_Customer.address, Unified_Customer.address2, ... ]
 
-.. caution:: Each error is specific to a step in that workflow. In all cases an error will prevent the completion of that workflow. You should open the **Workflows** page, review the error in the workflow, and then work to resolve the error immediately.
+.. caution:: Each error is specific to a step in that workflow. In all cases an error prevents the completion of that workflow. You should open the **Workflows** page, review the error in the workflow, and then work to resolve the error immediately.
 
    Each workflow error will present a list of suggested workflow actions that are specific to this workflow error:
 

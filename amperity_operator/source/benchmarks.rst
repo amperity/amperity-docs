@@ -27,7 +27,7 @@ About Stitch benchmarks
 About benchmark results
 ==================================================
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-start
@@ -45,7 +45,7 @@ About benchmark results
 Optimal
 ---------------------------------------------------
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-optimal-start
@@ -57,7 +57,7 @@ Optimal
 Above optimal range
 ---------------------------------------------------
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-above-optimal-start
@@ -69,7 +69,7 @@ Above optimal range
 High
 ---------------------------------------------------
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-high-start

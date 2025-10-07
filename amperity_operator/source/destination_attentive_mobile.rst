@@ -255,7 +255,7 @@ Add destination
           :start-after: .. destinations-steps-name-and-description-start
           :end-before: .. destinations-steps-name-and-description-end
 
-       .. important:: Be sure to use "Segments" in the destination title so that users of Amperity who sends segments to |destination-name| will be able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+       .. important:: Be sure to use "Segments" in the destination title so that users of Amperity who sends segments to |destination-name| is able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
 
        .. admonition:: Configure business user access
 
@@ -435,14 +435,14 @@ The following table shows how your segment name appears in |destination-name|. T
 
        .. tip:: Be sure to use descriptive names for campaigns *and* treatment groups and be careful to not use the default treatment group names when sending campaigns to |destination-name|.
 
-          This will ensure that downstream users in |destination-name| will be able to understand what each segment is for and won't have to view default naming patterns like "Winback_Recipient1", "WinbackRecipient2", etc.
+          This will ensure that downstream users in |destination-name| is able to understand what each segment is for and will not have to view default naming patterns like "Winback_Recipient1", "WinbackRecipient2", etc.
    * - **group_name**
      - DressShirts
 
        Jeans
 
        Shoes
-     - Use this pattern to only use the names of treatment groups as segment names in |destination-name|. This will omit the name of the campaign *and* the name of the sub-audience from the segment name.
+     - Use this pattern to only use the names of treatment groups as segment names in |destination-name|. This omits the name of the campaign *and* the name of the sub-audience from the segment name.
 
 .. destination-attentive-add-data-template-about-end
 

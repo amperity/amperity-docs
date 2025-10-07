@@ -139,7 +139,7 @@ An attributes table can be configured to allow users of the **Visual Segment Edi
 
 .. sendto-zendesk-map-results-with-attributes-table-context-start
 
-For example, to send results from Amperity to Zendesk you must associate a user's **full_name** to **name**, you may associate the Amperity ID to **external_id**, and you may provide custom fields as long as they begin with **user_fields.**. When this table has been **Made available to the Visual Segment Editor** users will be able to build visual segments that use fields in the attributes table.
+For example, to send results from Amperity to Zendesk you must associate a user's **full_name** to **name**, you may associate the Amperity ID to **external_id**, and you may provide custom fields as long as they begin with **user_fields.**. When this table has been **Made available to the Visual Segment Editor** users is able to build visual segments that use fields in the attributes table.
 
 .. sendto-zendesk-map-results-with-attributes-table-context-end
 

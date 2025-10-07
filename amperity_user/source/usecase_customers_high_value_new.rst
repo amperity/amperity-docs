@@ -20,7 +20,7 @@ New high-value customers
 
 .. usecase-customers-high-value-new-start
 
-Repeat customers generate more revenue than one-time customers. In fact, it's not unusual in retail for ~20% of your customers to be ~80% of your revenue. Therefore, it's important to your business that you can identify new customers that also have the potential to become high-value repeat customers.
+Repeat customers generate more revenue than one-time customers. In fact, it is not unusual in retail for ~20% of your customers to be ~80% of your revenue. Therefore, it is important to your business that you can identify new customers that also have the potential to become high-value repeat customers.
 
 You can find new high value customers first by identifying which customers have made their first purchase, and then by identifying which of those customers are predicted to become high-value repeat customers.
 
@@ -98,7 +98,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "New High Value Customers".
+     - You are done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "New High Value Customers".
 
        .. image:: ../../images/usecases-dialog-save-new-high-value-customers.png
           :width: 440 px

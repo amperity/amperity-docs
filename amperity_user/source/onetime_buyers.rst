@@ -66,7 +66,7 @@ What is a one-time buyer campaign?
 
 A one-time buyer campaign, also known as a "win-back campaign", is a campaign that seeks to turn single-purchase customers into repeat customers.
 
-A one-time buyer campaign must first identify your customers who have purchased only one time, and then from that list of customers devise a strategy based on a combination of products, time windows, lookalike audiences, and marketing goals that will attempt to reach specific groups of one-time buyers with the right offers that encourage them to become repeat customers.
+A one-time buyer campaign must first identify your customers who have purchased only one time, and then from that list of customers devise a strategy based on a combination of products, time windows, lookalike audiences, and marketing goals that attempts to reach specific groups of one-time buyers with the right offers that encourage them to become repeat customers.
 
 .. tip:: One behavior to look for is customers that, for customers who *do* make their second purchase, measure the amount of time that occurred between their first and second orders *along with* the type of offer to which each customer responded.
 
@@ -80,9 +80,9 @@ How to build a one-time buyer campaign
 
 .. onetime-buyers-howto-start
 
-Brands love their customers, but it doesn't always go both ways. Many customers engage once, but never come back. Some customers only buy on discount and some are seasonal shoppers. Others will stick with you for a while, and will then switch brands.
+Brands love their customers, but it does not always go both ways. Many customers engage once, but never come back. Some customers only buy on discount and some are seasonal shoppers. Others will stick with you for a while, and will then switch brands.
 
-It can be hard to make a connection and the window of opportunity is often short. It gets harder if you don't know who your customers are and what motivates them.
+It can be hard to make a connection and the window of opportunity is often short. It gets harder if you do not know who your customers are and what motivates them.
 
 .. image:: ../../images/ampiq-onetime-buyers-all.png
    :width: 600 px
@@ -98,7 +98,7 @@ Adding data from your email service provider, such as clicks, opens, and sends, 
 
 .. tip:: Plan to use personalization as part of your one-time buyer campaign. Use personalization to tailor your welcome series to your customers instead of applying a one-size-fits-all approach. Plan to use different tracks based on known buyer types, relevant products, and timely offers that have historically led to early engagement and to repeat customers.
 
-The good news is that you're using Amperity, so you should already have this data consolidated into your customer 360. You are ready to find out who your one-time buyers are, and then determine which strategies to use to try to convince them into becoming long-term, repeat customers.
+The good news is that you are using Amperity, so you should already have this data consolidated into your customer 360. You are ready to find out who your one-time buyers are, and then determine which strategies to use to try to convince them into becoming long-term, repeat customers.
 
 .. onetime-buyers-howto-end
 
@@ -197,7 +197,7 @@ Optimize the campaign
 
 .. onetime-buyers-howto-optimize-start
 
-By the time you have finished building out a complete one-time buyer campaign you should have individual segments that separate one-time buyers into the following daily intervals: 7, 14, 30, 60, and 90 days. Some one-time buyer campaigns extend these intervals beyond 90 days, such as to 120, 180, 240, and so on.
+By the time you have finished building out a complete one-time buyer campaign you should have individual segments that separate one-time buyers into the following daily intervals: 7, 14, 30, 60, and 90 days. Some one-time buyer campaigns extend these intervals beyond 90 days, such as to 120, 180, and 240.
 
 .. image:: ../../images/ampiq-onetime-buyers-optimize.png
    :width: 600 px

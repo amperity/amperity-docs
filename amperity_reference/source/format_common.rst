@@ -104,7 +104,7 @@ Dates should be quoted and should be in the "yyyy-MM-dd HH:mm:ss.SSS" format. Th
 * 2019-01-28 18:32:05
 * 2019-01-28
 
-When the date format is not similar to the expected date format, Amperity will attempt to convert the date and time values. If date formats are mixed, Amperity uses the first date format that matches.
+When the date format is not similar to the expected date format, Amperity attempts to convert the date and time values. If date formats are mixed, Amperity uses the first date format that matches.
 
 .. format-common-pull-date-formats-end
 
@@ -664,7 +664,7 @@ Any tool that is compliant with the OpenPGP standard, as defined by `RFC 4880 <h
 
 To use PGP encryption with data sources use the **PGP credentials** setting to select a PGP credential. For new keys, use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the public key that is used to encrypt data.
 
-.. caution:: Be sure to include the "BEGIN PGP PUBLIC KEY BLOCK" and "END PGP PUBLIC KEY BLOCK" header and footer in the key. Only users and systems with access to the private key will be able to decrypt this data. Use Snappass to share the public key.
+.. caution:: Be sure to include the "BEGIN PGP PUBLIC KEY BLOCK" and "END PGP PUBLIC KEY BLOCK" header and footer in the key. Only users and systems with access to the private key is able to decrypt this data. Use Snappass to share the public key.
 
 .. format-common-pgp-sources-end
 

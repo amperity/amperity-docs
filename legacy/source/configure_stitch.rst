@@ -170,7 +170,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:dnf1**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first character in **surname**, and **birthdate**.
    * - **:dnf2**
-     - Non-default, use carefully. This blocking strategy groups values associated with the following semantics: the full **given-name** and **email**.
+     - Non-default. This blocking strategy groups values associated with the following semantics: the full **given-name** and **email**.
    * - **:dnf3**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first three characters in **surname**, and **postal**.
    * - **:dnf4**
@@ -196,7 +196,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:login-trimmed**
      - Non-default. This blocking strategy groups values associated with the first five characters of an email addresses derived from **email**. This is used for low-threshold email address matching.
    * - **:name**
-     - Non-default, use carefully. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
+     - Non-default. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
    * - **:phone**
      - Default. This blocking strategy groups values associated with the **phone** semantic.
 
@@ -258,7 +258,7 @@ To change the matching strategy classifier, open the **Stitch** page, and then c
    :align: left
    :class: no-scaled-link
 
-.. warning:: This value should be changed only after careful consideration. If changed, be sure to validate these results carefully to ensure that any changes to pairwise comparison scoring had the desired outcome.
+.. warning:: This value should be changed only after careful consideration. If changed, be sure to validate these results to ensure that any changes to pairwise comparison scoring had the desired outcome.
 
 .. configure-stitch-general-clustering-matching-strategy-steps-end
 
@@ -1190,7 +1190,7 @@ Qualified trivial duplicates are treated as a single record by downstream Stitch
 
 .. admonition:: What are the rep_ds and rep_pk columns?
 
-   Use the **rep_pk** and **rep_ds** columns in the **Unified Coalesced** table to help with situations where it's necessary to understand why two records were not clustered together.
+   Use the **rep_pk** and **rep_ds** columns in the **Unified Coalesced** table to help with situations where it is necessary to understand why two records were not clustered together.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-rep-pk-start
@@ -1270,7 +1270,7 @@ For each unique combination of PII--excluding email addresses--the distinct emai
 
 .. configure-stitch-advanced-profile-trivial-duplicates-warning-start
 
-.. warning:: Semantic exclusions should be applied very carefully. Use a sandbox to configure and apply a semantic exclusion, and then carefully review and validate that all downstream processes are not adversely affected by the change prior to applying a semantic change to a production environment.
+.. warning:: Use a sandbox to configure and apply a semantic exclusion, and then review and validate that all downstream processes are not adversely affected by the change prior to applying a semantic change to a production environment.
 
 .. configure-stitch-advanced-profile-trivial-duplicates-warning-end
 

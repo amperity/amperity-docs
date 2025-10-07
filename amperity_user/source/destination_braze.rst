@@ -184,7 +184,7 @@ For example, ACME wants to manage custom attributes in |destination-name| by sen
 
 #. **Merged Customers** for customer profile attributes; the table uses the Amperity ID to ensure the |destination-name| table is unique by Amperity ID and also to provide to |destination-name| the Amperity ID as the "extern_id", which is a required attribute
 
-   .. note:: The following query shows a field in **Merged Customers** that returns a customer's opt status. This field might be somewhere else in your tenant. It's important to filter your query to include *only* customers who are opted in to reduce the number of data points that are updated when you send custom attributes to |destination-name|.
+   .. note:: The following query shows a field in **Merged Customers** that returns a customer's opt status. This field might be somewhere else in your tenant. It is important to filter your query to include *only* customers who are opted in to reduce the number of data points that are updated when you send custom attributes to |destination-name|.
 #. **Transaction Attributes Extended** for purchase history attributes
 #. **Customer Attributes** for historical purchaser lifecycle status
 

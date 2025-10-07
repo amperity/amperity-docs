@@ -41,7 +41,7 @@ A journey starts with a defined audience that moves through a series of interact
 
 .. journeys-howitworks-context-start
 
-Here's an example of a built-out journey:
+Here is an example of a built-out journey:
 
 .. image:: ../../images/mockup-journeys-overview-alt.png
    :width: 600 px
@@ -58,7 +58,7 @@ Each different audience is sent down a different path toward activation in a mar
 * The high-value customers who purchased most recently are contacted immediately, giving them exclusive early access.
 * The high-value customers who purchased between 1 and 3 months ago are set for a delay followed by an activation, as a second wave of early access.
 * Additionally, this audience is further split, so that 75% receive a special promotion and 25% do not, to see how important an added incentive is for getting customers to purchase again.
-* Finally, the high-value customers who have not purchased in the last three months are contacted when the new products become generally available to make sure they are among the first to know.
+* Finally, the high-value customers who have not purchased in the last three months are contacted when the new products become available to make sure they are among the first to know.
 
 The journey can be further built out beyond this, with further splits based on whether or not customers purchase or how they engage with the communications they receive.
 
@@ -270,7 +270,7 @@ Activate
 
 You can rename the activate node.
 
-You can configure a single activation node to send to multiple destinations at once, and this is generally recommended for simplicity and efficiency.
+You can configure a single activation node to send to multiple destinations at once, and this is recommended for simplicity and efficiency.
 
 .. journeys-node-activate-note-start
 
@@ -887,7 +887,7 @@ Saving a journey initiates the workflow, allowing you to view results and return
 
 .. journeys-howtos-save-a-journey-note-start
 
-.. note:: You can save a journey with validation errors as long as it is not scheduled to run. However, if saving the journey would result in it being scheduled, and validation errors are still present, you won't be able to save it until those errors are resolved.
+.. note:: You can save a journey with validation errors as long as it is not scheduled to run. However, if saving the journey would result in it being scheduled, and validation errors are still present, you will not be able to save it until those errors are resolved.
 
 .. journeys-howtos-save-a-journey-note-end
 

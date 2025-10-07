@@ -61,7 +61,7 @@ The following diagram highlights the purchase curve. The audience size is on the
 
 The first 20% of customers in an audience have a high degree of certainty and a strong signal. The last 20% have a much lower degree of certainty and a weak signal.
 
-#. The 0-50% range quickly adds customers as the audience size grows. In this example, the purchase curve is steep for the first 100,000 customers because purchasers are being identified at a relatively fast rate.
+#. The 0-50% range quickly adds customers as the audience size grows. In this example, the purchase curve is steep for the first 100,000 customers because purchasers are being identified at a fast rate.
 
 #. The 50%-70% range starts to flatten out. A 70% rate requires almost 300,000 customers. At the lower end, there is still a strong signal, but at the higher end the signal has grown weaker.
 
@@ -172,7 +172,7 @@ You may observe a lower unsubscribe rate with a campaign that is based on produc
 
 For example:
 
-* Unsubscribe rates without product affinity is ~5%. If you send 120k emails at a 5% unsubscribe rate, that's 6k unsubscribes.
-* Unsubscribe rates with product affinity is ~3%. If you send 60k emails at a 3% unsubscribe rate, that's 1800 unsubscribes and 4200 fewer than the list without product affinity.
+* Unsubscribe rates without product affinity is ~5%. If you send 120k emails at a 5% unsubscribe rate, that is 6k unsubscribes.
+* Unsubscribe rates with product affinity is ~3%. If you send 60k emails at a 3% unsubscribe rate, that is 1800 unsubscribes and 4200 fewer than the list without product affinity.
 
 .. recommended-audiences-howto-validate-campaigns-end

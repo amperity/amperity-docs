@@ -107,7 +107,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Find customers who have opted in to receive text messages.
           :align: center
           :class: no-scaled-link
-     - You're done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Holiday Shoppers - SMS"
+     - You are done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Holiday Shoppers - SMS"
 
        .. image:: ../../images/usecases-dialog-save-holiday-shoppers-sms.png
           :width: 440 px
@@ -115,7 +115,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. admonition:: Why doesn't this segment have a phone number in it?
+       .. admonition:: Why does this segment not have a phone number in it?
 
           This segment does not require a phone number because this segment should define an audience for a campaign, and is then assigned to a treatment group.
 

@@ -120,7 +120,7 @@ How Stitch labels work
 
 .. stitch-labels-how-they-work-start
 
-The Stitch labels table does not require all of the possible combinations of semantic values to be specified. If any two rows in the Stitch labels table indicate that a customer record should be merged or split, it won't matter about any of the other semantic values match or don't match elsewhere. Stitch will force the outcome to be what the Stitch labels table indicates.
+The Stitch labels table does not require all of the possible combinations of semantic values to be specified. If any two rows in the Stitch labels table indicate that a customer record should be merged or split, it will not matter about any of the other semantic values match or do not match elsewhere. Stitch will force the outcome to be what the Stitch labels table indicates.
 
 * Records labeled with the same **label-id** and the same **partition-id** will be merged into the same cluster. All records associated with these two records will be merged into the same cluster.
 * Records labeled with the same **label-id** and a different **partition-id** will be split into different clusters based on the **partition-id**. Other records associated with these two records may be split or not split, depending on the outcome of the Stitch clustering analysis for each individual customer record.
@@ -242,7 +242,7 @@ Likely nickname
 
 .. stitch-labels-example-likely-nickname-start
 
-Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it's very likely that Ty is a nickname for Tylian. Add an entry to the Stitch labels table to ensure that Ty and Tylian are always merged into a single customer record:
+Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it is very likely that Ty is a nickname for Tylian. Add an entry to the Stitch labels table to ensure that Ty and Tylian are always merged into a single customer record:
 
 .. code-block:: none
 

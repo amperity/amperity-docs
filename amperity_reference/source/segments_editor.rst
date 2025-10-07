@@ -675,7 +675,7 @@ For example, if you have 100 customers, 99 of which have provided a value for th
 
 Amperity returns 1 record when the "is NULL" operator is used and 99 records when the "is not NULL" operator is used, even if 2 of them contained spaces instead of numbers and 4 of them were "555-555-1234".
 
-A practical example is a segment of 50 customers where the 'Opt in' field distinguishes customers based on their preferences for promotional emails. This field specifies that the customer has opted out of promotional emails but has consented to receive other types of messages. Here, 46 customers opted in, so the field has a value of **NOT NULL**. In this segment 3 customers did not opt in. They also have **Not NULL** in this field. A customer didn't respond, so the field has **NULL** for this customer.
+A practical example is a segment of 50 customers where the 'Opt in' field distinguishes customers based on their preferences for promotional emails. This field specifies that the customer has opted out of promotional emails but has consented to receive other types of messages. Here, 46 customers opted in, so the field has a value of **NOT NULL**. In this segment 3 customers did not opt in. They also have **Not NULL** in this field. A customer did not respond, so the field has **NULL** for this customer.
 
 .. segments-editor-null-not-null-end
 

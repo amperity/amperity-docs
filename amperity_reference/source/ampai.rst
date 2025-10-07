@@ -48,7 +48,7 @@ To achieve optimal results when using **AmpAI**, follow these best practices for
 
 * **Understand the question's scope**
 
-  Clearly define the scope of your question to avoid ambiguous results. For example, specify the timeframe, customer segments, or metrics you are analyzing.
+  Define the scope of your question to avoid ambiguous results. For example, specify the timeframe, customer segments, or metrics you are analyzing.
 
 * **Avoid overloading**
 
@@ -62,7 +62,7 @@ To achieve optimal results when using **AmpAI**, follow these best practices for
 
 * **Update the custom prompt often**
 
-  The custom prompt is a powerful tool. Update the custom prompt whenever you get a result that doesn't align with the way your business views the world.
+  The custom prompt is a powerful tool. Update the custom prompt whenever you get a result that does not align with the way your business views the world.
 
 .. ampai-good-results-end
 

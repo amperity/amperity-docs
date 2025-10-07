@@ -21,7 +21,7 @@ About data templates
    :start-after: .. term-data-template-start
    :end-before: .. term-data-template-end
 
-.. TODO: Data templates will be removed from the product during an upcoming redesign for the destinations page. It's likely some of the descriptions/settings will persist in the new UX.
+.. TODO: Data templates will be removed from the product during an upcoming redesign for the destinations page. It is likely some of the descriptions/settings will persist in the new UX.
 
 
 .. _data-templates-campaigns:
@@ -745,7 +745,7 @@ Delete data template
 
 .. data-templates-delete-start
 
-Use the **Delete Settings** option to remove a data template from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this data template prior to deleting it.
+Use the **Delete Settings** option to remove a data template from Amperity. Verify that both upstream and downstream processes no longer depend on this data template prior to deleting it.
 
 .. data-templates-delete-end
 
@@ -832,7 +832,7 @@ If the destination does not require Amperity fields to be mapped, leave the valu
 .. data-templates-map-to-external-schemas-steps-start
 
 #. From the **Destinations** page, open the menu in the same row as the data template to be edited, and then select **Edit Settings**.
-#. Identify the external schema to which Amperity data will be mapped.
+#. Identify the external schema to which Amperity data is mapped.
 #. As part of adding or editing a data template from within the **Data Template** dialog box, under **Data Mappings**, define the data mappings that are required to map Amperity fields with fields in the external schema.
 #. Click **Save**.
 

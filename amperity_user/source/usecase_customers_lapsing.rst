@@ -4,11 +4,11 @@
 
 .. meta::
     :description lang=en:
-        A use case for building an audience of customers who haven't purchased within the previous year.
+        A use case for building an audience of customers who have not purchased within the previous year.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A use case for building an audience of customers who haven't purchased within the previous year.
+        A use case for building an audience of customers who have not purchased within the previous year.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -20,7 +20,7 @@ Lapsing customers
 
 .. usecase-customers-lapsing-start
 
-A lapsed customer is someone who hasn't purchased within the past year. It's important to identify customers before they have lapsed to include them within elements of your churn prevention campaign.
+A lapsed customer is someone who has not purchased within the past year. It is important to identify customers before they have lapsed to include them within elements of your churn prevention campaign.
 
 You can find lapsing customers first by identifying customers who have not purchased within the previous year, and then identifying which predicted customer lifecycle status they hold within your churn prevention campaign
 
@@ -106,7 +106,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Lapsing Customers".
+     - You are done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Lapsing Customers".
 
        .. image:: ../../images/usecases-dialog-save-lapsing-customers.png
           :width: 440 px

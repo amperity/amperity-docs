@@ -22,7 +22,7 @@ First-time buyers with SMS opt-in
 
 Customer retention is critical for the long-term growth of your brand. It is not enough to acquire a customer who makes a single purchase. It is essential to find ways to convince your first-time buyers to become long-term, repeat customers.
 
-If your brand uses SMS messaging as part of your one-time buyer or winback campaigns, a good early step is getting first-time buyers to opt-in to receiving SMS messages from your brand. Use incentives -- free shipping, a percentage discount, etc. -- to help convince first-time buyers to sign up to receive messages from your brand. This step works best when it's a part of the purchasing process.
+If your brand uses SMS messaging as part of your one-time buyer or winback campaigns, a good early step is getting first-time buyers to opt-in to receiving SMS messages from your brand. Use incentives--free shipping or a percentage discount--to help convince first-time buyers to sign up to receive messages from your brand. This step works best when it is a part of the purchasing process.
 
 The next step is to include first-time buyers who have opted-in as part of your one-time buyer or winback campaign strategies.
 
@@ -99,7 +99,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "First-time Buyers with SMS Opt-in":
+     - You are done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "First-time Buyers with SMS Opt-in":
 
        .. image:: ../../images/usecases-dialog-engage-sms.png
           :width: 440 px

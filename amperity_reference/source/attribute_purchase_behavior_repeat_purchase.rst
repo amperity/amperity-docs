@@ -43,7 +43,7 @@ How this attribute works
 
 **Repeat purchase** represents a common approach people use when they build segments: find customers who have purchased more than one time within a time window, and then associate those customers to specific products and brands.
 
-**Repeat purchase** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**Repeat purchase** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 

@@ -625,7 +625,7 @@ You can customize insights charts on the **Breakdown** tab.
 .. segments-customize-charts-start
 
 #. From the **Breakdown** tab, in the **Attributes breakdown** section, click **Customize**.
-#. On the **Customize breakdown charts** window, you can select up to 6 customer attributes, behavioral attributes, and default attributes. You can also uncheck default attributes that you don't want to use.
+#. On the **Customize breakdown charts** window, you can select up to 6 customer attributes, behavioral attributes, and default attributes. You can also uncheck default attributes that you do not want to use.
 #. Once done updating the insights charts, click **Apply**.
 
 The default charts are available to all users of the **Breakdown** tab.
@@ -1412,7 +1412,7 @@ For attribute charts
 
 You can view the SQL query that calculates the statistics in the segment attribute charts.
 
-.. note:: You can't edit the query.
+.. note:: You cannot edit the query.
 
 .. segments-view-SQL-attribute-charts-end
 
@@ -1421,7 +1421,7 @@ You can view the SQL query that calculates the statistics in the segment attribu
 .. segments-view-SQL-attribute-charts-steps-start
 
 #. From the **Segments** page, select a segment and then click the **Breakdown** tab.
-#. Open the menu for a customer or behavioral attributes chart. 
+#. Open the menu for a customer or behavioral attributes chart.
 #. Select **View SQL**. The query that calculates the values in the tree is shown.
 
 .. segments-view-SQL-attribute-charts-steps-end
@@ -1436,7 +1436,7 @@ For revenue tree
 
 You can view the SQL query that calculates the statistics in the segment revenue tree.
 
-.. note:: You can't edit the query.
+.. note:: You cannot edit the query.
 
 .. segments-view-SQL-revenue-tree-end
 
@@ -1458,7 +1458,7 @@ For statistics
 
 .. segments-view-segment-stats-SQL-start
 
-You can view the SQL for segment statistics on the **Segments** page in the **Summary** and **Breakdown** tabs. 
+You can view the SQL for segment statistics on the **Segments** page in the **Summary** and **Breakdown** tabs.
 
 .. segments-view-segment-stats-SQL-end
 

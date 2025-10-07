@@ -35,7 +35,7 @@ RFM scores are available as out-of-the-box attributes in Amperity standard outpu
 
 .. rfm-scores-note-start
 
-.. note:: RFM scores, because they are historically based and only cover a rolling 1-year window, are generally less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which is available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
+.. note:: RFM scores, because they are historically based and only cover a rolling 1-year window, are less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which is available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
 
 .. rfm-scores-note-end
 
@@ -120,7 +120,7 @@ More scenarios
 
 .. rfm-more-examples-start
 
-The following sections don't walk through how to configure attributes in the **Segment Editor**, but they do describe situations in which using RFM scores can help you build useful audiences for your campaigns.
+The following sections do not walk through how to configure attributes in the **Segment Editor**, but they do describe situations in which using RFM scores can help you build useful audiences for your campaigns.
 
 * :ref:`Direct mail campaigns <rfm-example-direct-mail>`
 * :ref:`High F, low R scores <rfm-example-high-m-low-r>`
@@ -184,7 +184,7 @@ High R, low F and M scores
 
 .. rfm-example-high-r-low-f-m-start
 
-A high recency score combined low frequency and monetary scores builds an audience of new customers who probably won't spend a lot of money in the future. Use this combination of scores as an indicator for customers that might respond to special offers, but consider the low spend to be an indicator of customers who may have a low response rate to more typical marketing campaigns.
+A high recency score combined low frequency and monetary scores builds an audience of new customers who probably will not spend a lot of money in the future. Use this combination of scores as an indicator for customers that might respond to special offers, but consider the low spend to be an indicator of customers who may have a low response rate to more typical marketing campaigns.
 
 .. rfm-example-high-r-low-f-m-end
 

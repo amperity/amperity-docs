@@ -27,7 +27,7 @@ About ingest queries
 
    Ingest queries are a powerful tool that flatten hierarchical, unstructured data like JSON and XML.
 
-   Amperity can ingest data in most formats; however, to be stored in a source domain table and used in processes like Stitch, data must be in a format that fits neatly into rows and columns.
+   Amperity can ingest data in most formats; however, to be stored in a source domain table and used in processes like Stitch, data must be in a format that fits into rows and columns.
 
    Open **Learning Lab** for `ingest queries <https://learn.amperity.com/ingest-queries>`__ |ext_link|. Registration is required.
 
@@ -382,7 +382,7 @@ There are two general approaches to take when a CSV file contains nested records
 #. Recommended. The customer should update the process for how the data is provided to Amperity to ensure the file does not contain nested records.
 #. If the file cannot be provided without nested records, use an ingest query to flatten the data in these fields prior to loading it to Amperity.
 
-   .. note:: This increases the preprocessing effort required by Amperity. Large datasets takes more time and this approach should be avoided with very large datasets and should be used carefully with datasets that is processed on a daily basis.
+   .. note:: This increases the preprocessing effort required by Amperity. Large datasets takes more time and this approach should be avoided with very large datasets and should be used with datasets that is processed on a daily basis.
 
 For example:
 
@@ -438,7 +438,7 @@ A regular expression similar to the following removes the double quotes (") *and
      ,REGEXP_REPLACE(test, '[\"\\\\]', '') AS updated_test
    FROM test
 
-.. important:: Be sure to carefully test regular expressions to ensure the result matches your use case.
+.. important:: Be sure to test regular expressions to ensure the result matches your use case.
 
 .. ingest-queries-example-remove-characters-end
 

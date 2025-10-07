@@ -87,9 +87,9 @@ Get details
        #. An |destination-name| demand-side platform (DSP) advertiser.
        #. Optional. Your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link|.
 
-          .. important:: If an instance for Amazon Marketing Cloud **is not** configured, the connector will skip adding audience members to Amazon Marketing Cloud.
+          .. important:: If an instance for Amazon Marketing Cloud **is not** configured, the connector skips adding audience members to Amazon Marketing Cloud.
 
-             If an Amazon Marketing Cloud instance is configured, the connector will attempt to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
+             If an Amazon Marketing Cloud instance is configured, the connector attempts to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
        .. note:: The `refresh token <https://advertising.amazon.com/API/docs/en-us/getting-started/retrieve-access-token>`__ |ext_link| is provided :ref:`after the OAuth process is completed <destination-amazon-ads-configure-oauth>`.
 
@@ -162,7 +162,7 @@ Get details
 
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
-       All personally identifiable information (PII)—email, phone, address, and so on—is sent to |destination-name| as SHA-256 hashed data.
+       All personally identifiable information (PII), such as email, phone, or address, is sent to |destination-name| as SHA-256 hashed data.
 
 
 .. destination-amazon-ads-get-details-end

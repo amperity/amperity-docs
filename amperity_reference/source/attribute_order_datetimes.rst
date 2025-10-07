@@ -104,7 +104,7 @@ The following table lists the operators that are available to these attributes.
 
        Returns dates that exist within a defined start and end date.
 
-       For example, all orders made during a holiday shopping window, all orders made during a calendar year, and so on. Combine these attributes and condition with channels, brands, and purchase locations to build more specific audiences.
+       For example, all orders made during a holiday shopping window or all orders made during a calendar year. Combine these attributes and condition with channels, brands, and purchase locations to build more specific audiences.
 
    * - **is not between**
      - Returns order dates that exist outside of a defined start and end date.

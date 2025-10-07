@@ -200,11 +200,11 @@ Review :ref:`source-azure-blob-storage-legacy-azure-data-share` for more informa
         }
       ]
 
-#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
+#. Under **Azure Blob Storage Settings** set the load operations to a string that is incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" or are not set to an obviously incorrect string the validation test for the courier configuration settings fails.
+   .. caution:: If load operations are not set to "{}" or are not set to an incorrect string the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. source-azure-blob-storage-legacy-add-courier-for-data-share-steps-end
@@ -264,9 +264,9 @@ Credentials options to access Azure Blob Storage include shared access signature
         }
       ]
 
-#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
+#. Under **Azure Blob Storage Settings** set the load operations to a string that is incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
    .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 #. Click **Save**.

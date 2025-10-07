@@ -125,7 +125,6 @@ Semantic tagging works like this:
 #. A field in the customer's system named "lname" stores the same individual's last name.
 #. A field in the customer's system named "primary-phone" stores a phone number.
 #. A field in the customer's system named "date" stores an individual's birthdate.
-#. And so on.
 
 For those semantic tags, the feed should apply semantic tags like this:
 
@@ -244,7 +243,7 @@ Email addresses
 
 Amperity preprocesses email addresses by ensuring that only the local username and domain are present, separated by ``@``, and converted to UPPERCASE.
 
-.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, ``reservation@``, and so on. When an email address matches one of these patterns, that value is preprocessed to **NULL**.
+.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, or ``reservation@``. When an email address matches one of these patterns, that value is preprocessed to **NULL**.
 
 .. list-table::
    :widths: 300 300
@@ -967,7 +966,7 @@ This example shows three unique clusters of records, each of which were assigned
 
 .. stitch-stable-ids-jitter-start
 
-.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are really two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results shows jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
+.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results shows jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
 
 .. stitch-stable-ids-jitter-ends
 

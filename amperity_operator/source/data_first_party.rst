@@ -23,7 +23,7 @@ Third-party data, such as from cookies that track a product or brand on someone 
 
 This is due to a combination of emerging trends around data transparency that give users more control over their data along with new government policies that mandate this transparency, such as General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
 
-With the value of using third-party data rapidly degrading, it's time to shift focus to first-party data.
+With the value of using third-party data rapidly degrading, it is time to shift focus to first-party data.
 
 .. backstory-end
 

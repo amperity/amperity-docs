@@ -310,7 +310,7 @@ Get advice on your segment
 You can ask the **Segments AI Assistant** for guidance on how else you might design your segment to meet the goals of your campaign.
 
 **Question**
-   "What other criteria should I consider adding to the segment in order to attract high-value customers who haven't recently purchased to buy new offerings in our jeans category?"
+   "What other criteria should I consider adding to the segment in order to attract high-value customers who have not recently purchased to buy new offerings in our jeans category?"
 
 **Answer**
   The **Segments AI Assistant** will respond similar to:
@@ -324,7 +324,7 @@ You can ask the **Segments AI Assistant** for guidance on how else you might des
 .. code-block:: none
 
    "To make your segment even more effective for targeting high-value customers
-   who haven't recently purchased (especially with the goal of promoting new 
+   who have not recently purchased (especially with the goal of promoting new 
    jeans offerings), you might consider adding additional criteria."
 
 Answers will include suggestsions similar to:
@@ -347,11 +347,11 @@ Answers will include suggestsions similar to:
 
 #. Previous Buyers of Premium Jeans:
 
-   Target customers who have purchased higher-value or premium jeans in the past, as they're more likely to be interested in new, similar offerings.
+   Target customers who have purchased higher-value or premium jeans in the past, as they are more likely to be interested in new, similar offerings.
 
 #. Lapsed but Historically Loyal Customers:
 
-   Identify customers who have bought jeans repeatedly in the past but haven't purchased any recently—they may respond well to a "welcome back" campaign for new jeans.
+   Identify customers who have bought jeans repeatedly in the past but have not purchased any recently—they may respond well to a "welcome back" campaign for new jeans.
 
 #. Customer Lifecycle Status:
 

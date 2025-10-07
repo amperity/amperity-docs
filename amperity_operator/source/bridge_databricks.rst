@@ -1051,7 +1051,7 @@ A catalog is the first layer in a Unity Catalog namespace and is used to organiz
           :class: no-scaled-link
      - From the list of schemas, select the schema you just created.
 
-       Click the **Create catalog** button, and then in the **Create a new catalog** dialog add the catalog name. A catalog name should clearly identify that data tables are shared from Amperity. For example: "Amperity Socktown outbound share". A catalog name cannot include a period, space, or forward slash. When finihsed, click **Create**.
+       Click the **Create catalog** button, and then in the **Create a new catalog** dialog add the catalog name. A catalog name should identify that data tables are shared from Amperity. For example: "Amperity Socktown outbound share". A catalog name cannot include a period, space, or forward slash. When finihsed, click **Create**.
 
        .. admonition:: You must have CREATE CATALOG permissions
 

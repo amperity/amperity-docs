@@ -603,7 +603,7 @@ Incomplete account setup
 
 .. source-google-ads-workflow-actions-incomplete-account-setup-start
 
-Amperity cannot send data to an account in |destination-name| that is not set up completely. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
+Amperity cannot send data to an account in |destination-name| that is not set up. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
 
 To resolve this error, verify that your |destination-name| account is set up correctly.
 

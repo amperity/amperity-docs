@@ -76,7 +76,7 @@ The following sections describe the steps you will follow when creating a sandbo
           :alt: Step 2.
           :align: left
           :class: no-scaled-link
-     - Each sandbox should be given a name that clearly identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes. Click **Create** to generate the sandbox for your tenant.
+     - Each sandbox should be given a name that identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes. Click **Create** to generate the sandbox for your tenant.
 
        .. image:: ../../images/mockups-sandbox-create-dialog.png
           :width: 450 px
@@ -106,7 +106,7 @@ The following sections describe the steps you will follow when creating a sandbo
        * What configuration state changes are ready for promotion to production
        * What updates are ready to be pulled from production to the sandbox
 
-       .. tip:: A sandbox that hasn't run recently--for example, within the previous two weeks--should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
+       .. tip:: A sandbox that has not run recently--for example, within the previous two weeks--should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
 
 
 .. sandbox-promote-callouts-end

@@ -92,7 +92,7 @@ Enrich customer records
 
 Amperity can help enrich customer records that contain personally identifiable information (PII) when data sources with some form of associated contact information, such as email addresses, physical addresses, or phone numbers, are provided to Amperity.
 
-Because these data sources contain PII, it's more likely that Amperity can associate this information to high-quality data sources, after which additional third-party data sources that contain data for household income, gender, ethnicity, size of household, and so on, can also be associated.
+Because these data sources contain PII, it is more likely that Amperity can associate this information to high-quality data sources, after which additional third-party data sources that contain data for household income, gender, ethnicity, or size of household, can also be associated.
 
 .. data-third-party-enrich-customer-records-end
 
@@ -128,7 +128,7 @@ In this scenario:
 #. Amperity ingests first-party data to the tenant and builds customer profiles with customer records.
 #. Amperity syndicates customer profiles to a third-party data provider with which the customer already has a relationship.
 
-   .. note:: It's possible for Amperity to send data to an entity like Acxiom, or some other third-party data provider. Files exported to third-party providers must include the Amperity ID.
+   .. note:: It is possible for Amperity to send data to an entity like Acxiom, or some other third-party data provider. Files exported to third-party providers must include the Amperity ID.
 
 #. Amperity ingests the customer data.
 #. Amperity runs identity resolution across this data, builds a custom segment that outputs a list of net-new prospects, and then makes it available for segmentation.
@@ -157,7 +157,7 @@ In this scenario:
 #. Amperity ingests first-party data to the tenant and builds customer profiles with customer records.
 #. Amperity syndicates customer profiles to a third-party data provider with which the customer already has a relationship.
 
-   .. note:: It's possible for Amperity to send data to an entity like Acxiom, or some other third-party data provider. Files exported to third-party providers must include the Amperity ID.
+   .. note:: It is possible for Amperity to send data to an entity like Acxiom, or some other third-party data provider. Files exported to third-party providers must include the Amperity ID.
 
 #. Amperity ingests the customer data.
 #. Amperity runs identity resolution across this data, builds a custom segment that outputs the data, and is then sent to the third-party data vendor, after which the third-party vendor will append Amperity results to the third-party data, and then provide those results to the customer.
@@ -215,13 +215,13 @@ As a brand, because anonymous visitors represent a significant percentage of tra
 
 Amperity has some capability to address this issue when data sources that contain third-party data are provided to Amperity alongside more rich data sources that contain first-party data obtained directly by the customer, especially when the website traffic has a higher percentage of users that log in to the site while browsing.
 
-Amperity generally cannot solve this type of problem all by itself and works best when paired alongside a dedicated vendor that specializes in device ID, tagging, and cookie tracking.
+Amperity cannot solve this type of problem all by itself and works best when paired alongside a dedicated vendor that specializes in device ID, tagging, and cookie tracking.
 
 .. data-third-party-match-anonymous-visitors-context-end
 
 .. data-third-party-identify-anonymous-visitors-start
 
-.. note:: It's difficult to use third-party data to identify anonymous visitors. Legally, it is not possible to personally identify an anonymous visitor for the purpose of 1:1 communication. Amperity can perform tag, cookie, and device ID management that can be passed to downstream workflows.
+.. note:: It is difficult to use third-party data to identify anonymous visitors. Legally, it is not possible to personally identify an anonymous visitor for the purpose of 1:1 communication. Amperity can perform tag, cookie, and device ID management that can be passed to downstream workflows.
 
 .. data-third-party-identify-anonymous-visitors-end
 
@@ -237,7 +237,7 @@ Identify sparse customer records
 
 .. data-third-party-identify-sparse-records-start
 
-A brand with a large brick-and-mortar presence likely has sparse customer data associated with purchases made by customers in physical stores. A common scenario for identifying consumers from sparse customer records is to associate the sparse data with better data that contains more PII, including email addresses, physical addresses, income, gender, age, profession, and so on.
+A brand with a large brick-and-mortar presence likely has sparse customer data associated with purchases made by customers in physical stores. A common scenario for identifying consumers from sparse customer records is to associate the sparse data with better data that contains more PII, including email addresses, physical addresses, income, gender, age, or profession.
 
 .. note:: Third-party data providers often use more PII than last name and the last 4 digits of a credit card to match a brand's record to a customer file. The approaches varies depending on the provider.
 
@@ -261,7 +261,7 @@ Purchase prospect lists
 
 .. data-third-party-purchase-prospect-lists-start
 
-A brand with niche customer audiences, such as groups of professionals, high net-worth individuals, and so on, might want to seek out new customers by purchasing lists from third-party data providers. These lists must be a match to existing first-party data to ensure that marketing campaign spend is focused only on new prospects.
+A brand with niche customer audiences, such as groups of professionals or high net-worth individuals, might want to seek out new customers by purchasing lists from third-party data providers. These lists must be a match to existing first-party data to ensure that marketing campaign spend is focused only on new prospects.
 
 .. data-third-party-purchase-prospect-lists-end
 

@@ -8,7 +8,7 @@ You may enable performance mode for any query that returns large result sets. Pe
 
 .. queries-enable-performance-mode-important-start
 
-Performance mode is significantly faster than running a query in non-performance mode, but has the following limitations:
+Performance mode is faster than running a query in non-performance mode, but has the following limitations:
 
 * Sort order is not guaranteed because results are written in parallel to many files.
 * The ``UNION`` clause requires data types to match exactly.

@@ -34,7 +34,7 @@ With the rise of privacy-centric marketing strategies resulting in the demise of
 
 Capturing reliable data from across disparate silos in your organization to build unified customer profiles is essential to the future of your brand's acquisition strategy in paid media.
 
-Audiences built from unified customer profiles lead to significantly higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
+Audiences built from unified customer profiles lead to higher returns on ad spend (ROAS) when activating these audiences across paid media. Use these audiences to grow your brand, find new customers, and build better relationships with your most important customers.
 
 .. paid-media-overview-context-end
 
@@ -81,7 +81,7 @@ Activation scenarios
 
 .. paid-media-activation-scenarios-start
 
-The following sections broadly describe some of the most common reasons why brands choose to activate audiences using paid media, along with some examples of the types of audiences you could use for activation. This is not an exhaustive list.
+The following sections describe some of the most common reasons why brands choose to activate audiences using paid media, along with some examples of the types of audiences you could use for activation. This is not an exhaustive list.
 
 .. paid-media-activation-scenarios-end
 
@@ -229,9 +229,9 @@ Amperity builds the best profiles for getting the best match rates across the pa
    :align: left
    :class: no-scaled-link
 
-The **Merged Customers** table contains your brand's best customer profiles, including each customer's best email address, best phone number, best physical address, best name, and so on. When your brand uses this table to send audiences to downstream marketing applications, one record is sent for each customer.
+The **Merged Customers** table contains your brand's best customer profiles, including each customer's best email address, best phone number, best physical address, or best name. When your brand uses this table to send audiences to downstream marketing applications, one record is sent for each customer.
 
-The **Unified Paid Media** table contains all known profile data for each of your brand's customers. For example, some customers have a primary email address they use for personal communication, but then use a variation or completely different email address to sign up on social media. This variation may not be that customer's "best" email address for your brand's marketing campaigns, but it might be right email address for matching with that customer on Facebook or TikTok or Pinterest.
+The **Unified Paid Media** table contains all known profile data for each of your brand's customers. For example, some customers have a primary email address they use for personal communication, but then use a variation or different email address to sign up on social media. This variation may not be that customer's "best" email address for your brand's marketing campaigns, but it might be right email address for matching with that customer on Facebook or TikTok or Pinterest.
 
 .. admonition:: Match rates vs. matched customers
 
@@ -377,7 +377,7 @@ Owned media indicators
 
 Owned media indicators can help measure how often customers are interacting with your campaigns. Engagement metrics include clickstream for mobile and website, email, and SMS. Direct attribution exists when your customers opened an email or SMS message, visited your website, app, or store, and then made a purchase.
 
-These indicators are already available to you within Amperity if you have made available to Amperity data sources that contain purchase histories (orders and items) and customer engagement (clickstream data for websites and apps, email and SMS engagement, and so on).
+These indicators are already available to you within Amperity if you have made available to Amperity data sources that contain purchase histories, such as orders and items, and customer engagement, such as clickstream data for websites and apps or email and SMS engagement.
 
 Did your customers open the email or text message? Did they visit your website after opening that message? Engagement metrics for owned media include:
 

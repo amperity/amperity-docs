@@ -251,7 +251,7 @@ Build an audience of high-value customers. Configure a recurring campaign to sen
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done building your audience. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Predicted Top 10% High Value Customers".
+     - You are done building your audience. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Predicted Top 10% High Value Customers".
 
        .. image:: ../../images/usecases-dialog-save-top-10-high-value-customers.png
           :width: 440 px
@@ -322,7 +322,7 @@ The following sections describe using the **Segment Editor** to build update |de
           :alt: Save your segment.
           :align: center
           :class: no-scaled-link
-     - You're done building your audience. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that clearly describes the purpose and audience type for the segment. For example: "Braze Customer Profiles".
+     - You are done building your audience. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Braze Customer Profiles".
 
        .. image:: ../../images/usecases-dialog-save-top-10-high-value-customers.png
           :width: 440 px

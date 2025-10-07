@@ -357,7 +357,7 @@ A query defines the list of attributes that will be available from a Profile API
 
 There are two requirements for queries that are used to define Profile API endpoints:
 
-#. One field must be usable as the lookup key for the index. The value for this field must be a unique identifier. For example, the Amperity ID, a loyalty ID, a customer ID, a unique identifier in a downstream workflow (such as the "external_id" used in Braze), a non-hashed email address, a hashed email address, and so on.
+#. One field must be usable as the lookup key for the index. The value for this field must be a unique identifier. For example, the Amperity ID, a loyalty ID, a customer ID, a unique identifier in a downstream workflow (such as the "external_id" used in Braze), a non-hashed email address, or a hashed email address.
 
    Use the unique identifier that works best for your use case. Each endpoint may specify its own lookup key. For example, for website personalization you might use a customer ID or a loyalty ID, but when building your marketing campaigns in Braze that bring your customers to that website, you could use the Braze "external_id" for the index.
 
@@ -458,8 +458,6 @@ The access token is self-generated from the Amperity user interface and authoriz
    :class: no-scaled-link
 
 The access token must be available to each request made to the Profile API.
-
-.. TODO: Add here some info about the self-serve token once it's in the UI. The image steps step-by-step.
 
 .. profile-api-enable-api-jwt-end
 
@@ -639,7 +637,7 @@ An index must be defined for each query that is used to generate an endpoint for
           :align: left
           :class: no-scaled-link
 
-       Give the endpoint a name that clearly describes how it is used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
+       Give the endpoint a name that describes how it is used by downstream workflows. The name of an index must be unique and may not contain any of the following characters: ``\``, ``/``, ``:``, ``"``, ``*``, ``?``, ``<``, ``>``, or ``|``.
 
        Use a description to help other users in your tenant know what use cases this endpoint enables.
 
@@ -1131,7 +1129,7 @@ The following sections describe some ways to use the Profile API:
 .. * :ref:`Website personalization <profile-api-usecase-website-personalization>`
 .. 
 
-.. TODO: Cordial doesn't support token-based access to the Profile API. https://support.cordial.com/hc/en-us/articles/115005857328-Get-JSON-Feeds-getJson-method
+.. TODO: Cordial does not support token-based access to the Profile API. https://support.cordial.com/hc/en-us/articles/115005857328-Get-JSON-Feeds-getJson-method
 
 .. profile-api-usecases-end
 

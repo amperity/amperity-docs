@@ -63,15 +63,15 @@ The following individuals comprise the Amperity team at ACME Corp: Ace Managhan 
 
 Ace and Kendra are both assigned the **DataGrid Operator** policy in their production tenant. When they want to make changes to **Sources** and **Databases**, they create new sandboxes. In these sandboxes, they are automatically assigned the **DataGrid Administrator** policy, and maintain other add-on policies they have.
 
-Since Kendra has the **Allow sandbox administration** and **Allow user administration** add-on policies, she can immediately access Ace's sandboxes, add users to it, review Ace's changes, and promote them to production. 
+Kendra has the **Allow sandbox administration** and **Allow user administration** add-on policies and can immediately access Ace's sandboxes, add users to it, review Ace's changes, and promote changes to production.
 
-Ace works closely with Paul and Kendra to support their downstream marketing activity. Paul and Kendra belong to the marketing team. Paul is assigned the **AmpIQ User** policy and manages all campaign sends from HubSpot and Klaviyo. ACME Corp policy requires that only certain members of the company can have access to customer's profile data, which Kendra requires, but Paul does not. Paul is restricted from viewing profile data (though he can see the email addresses within HubSpot and Klaviyo, but only after they are sent from Amperity) and cannot download the segment results.
+Ace works with Paul and Kendra to support their downstream marketing activity. Paul and Kendra belong to the marketing team. Paul is assigned the **AmpIQ User** policy and manages all campaign sends from HubSpot and Klaviyo. ACME Corp policy requires that only certain members of the company can have access to customer's profile data, which Kendra requires, but Paul does not. Paul is restricted from viewing profile data (though can see the email addresses within HubSpot and Klaviyo, but only after they are sent from Amperity) and cannot download the segment results.
 
-Paul and Kendra belong to the marketing team. Paul is assigned the **AmpIQ User** policy and manages all campaign sends from HubSpot and Klaviyo. ACME Corp policy requires that only certain members of the company can have access to customer's profile data, which Kendra requires, but Paul does not. Paul is restricted from viewing profile data (though he can see the email addresses within HubSpot and Klaviyo, but only after they are sent from Amperity) and cannot download the segment results.
+Paul and Kendra belong to the marketing team. Paul is assigned the **AmpIQ User** policy and manages all campaign sends from HubSpot and Klaviyo. ACME Corp policy requires that only certain members of the company can have access to customer's profile data, which Kendra requires, but Paul does not. Paul is restricted from viewing profile data (though can see the email addresses within HubSpot and Klaviyo, but only after they are sent from Amperity) and cannot download the segment results.
 
 Kendra manages a complex series of marketing campaign activity through Salesforce, some of which requires verification of certain types of profile data before sending it to Salesforce from Amperity. Kendra often uses SQL to build custom queries to return specific results for key downstream use cases.
 
-Paul and Kendra work closely with Amanda to make sure the right data is being sent to their downstream marketing activities and also work closely with Ace to ensure they have access to the right sets of tables when building segments and queries.
+Paul and Kendra work with Amanda to make sure the right data is being sent to their downstream marketing activities and also work with Ace to ensure they have access to the right sets of tables when building segments and queries.
 
 .. policies-end
 

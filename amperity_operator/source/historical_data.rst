@@ -229,8 +229,8 @@ Build a delta that identifies which records are new or updated since the previou
 
    This approach has some risks.
    
-   * A workflow that is significantly delayed may cause this query to run on a different day than intended.
-   * A campaign that runs between midnight and this query won't be included in the query results until the following day.
+   * A workflow that is delayed may cause this query to run on a different day than intended.
+   * A campaign that runs between midnight and this query will not be included in the query results until the following day.
    * Timezones can affect the timing of orchestrations.
 
 .. historical-data-send-only-updated-records-append-end

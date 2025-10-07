@@ -5,7 +5,7 @@
 Filtered 360 databases
 ==================================================
 
-.. TODO: Link to AmpU training video, if it's external-facing. https://learn.amperity.com/multi-database-implementation-best-practices
+.. TODO: Link to AmpU training video, if it is external-facing. https://learn.amperity.com/multi-database-implementation-best-practices
 
 .. multiple-360-databases-overview-start
 
@@ -54,7 +54,7 @@ All domain tables that contain marketing unit-specific data must have a field in
 
 This field should be assigned the **database-key** semantic tag.
 
-.. note:: Domain tables that contain data for a single marketing unit do not require the **database-key** semantic tag; however, for consistency across all data sources should apply the semantic tag to help prevent situations where the name of a domain table does not clearly identify the name of the marketing unit.
+.. note:: Domain tables that contain data for a single marketing unit do not require the **database-key** semantic tag; however, for consistency across all data sources should apply the semantic tag to help prevent situations where the name of a domain table does not identify the name of the marketing unit.
 
 If the semantic tag grouping has a prefix, include the prefix in the semantic tag. For example, use the **txn-item/database-key** semantic tag to add the values of that field to the **database_key** column in the **Unified Itemized Transactions** table.
 

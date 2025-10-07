@@ -274,7 +274,7 @@ String
 
 .. feed-field-type-string-start
 
-Use the **string** field type for incoming fields that contain strings and that do not contain obvious matches with other field types, such as all identifiers (account IDs, loyalty IDs, customer IDs), first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, descriptions, and so on. For example:
+Use the **string** field type for incoming fields that contain strings and that do not contain obvious matches with other field types, such as all identifiers (account IDs, loyalty IDs, customer IDs), first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. For example:
 
 * John
 * Smith
@@ -315,7 +315,6 @@ Semantic tagging works like this:
 #. A field in the customer's system named "primary-phone" stores a phone number.
 #. A field in the customer's system named "date" stores an individual's birthdate.
 #. A field in the customer's system named "email_address1" stores an individual's primary email address.
-#. And so on.
 
 .. vale off
 
@@ -367,7 +366,7 @@ Apply a similar pattern to every data source your tenant chooses to bring into A
    * You may choose to not apply tag a semantic tag to a column that contains first names
    * You may use custom semantic tags instead of the default semantic tags. For example phone-1, phone-2, and phone-3 instead of phone.
 
-   Non-standard semantic tagging should be done carefully because it often lowers the accuracy of Amperity ID assignment and greater frequency of incomplete customer profiles.
+   Non-standard semantic tagging often lowers the accuracy of Amperity ID assignment and greater frequency of incomplete customer profiles.
 
 .. feeds-semantic-tags-caution-end
 
@@ -591,6 +590,8 @@ A sample file is not required to define a feed. You can add fields directly in t
 
 **To add a feed with no sample file**
 
+.. vale off
+
 .. feeds-add-from-new-sources-sample-none-steps-start
 
 #. From the **Sources** page, click **Add Feed**. This opens the **Add Feed** dialog box.
@@ -599,6 +600,8 @@ A sample file is not required to define a feed. You can add fields directly in t
 #. Click **Continue**. This opens the **Feed Editor** page.
 
 .. feeds-add-from-new-sources-sample-none-steps-end
+
+.. vale on
 
 
 .. _feeds-add-from-existing-sources:
@@ -682,6 +685,8 @@ A sample file is not required to define a feed. You can add fields directly in t
 
 **To add a feed without a sample file**
 
+.. vale off
+
 .. feeds-add-from-existing-sources-sample-none-steps-start
 
 #. From the **Sources** page, click **Add Feed**. This opens the **Add Feed** dialog box.
@@ -691,6 +696,8 @@ A sample file is not required to define a feed. You can add fields directly in t
 
 .. feeds-add-from-existing-sources-sample-none-steps-end
 
+.. vale on
+
 
 .. _feeds-apply-semantic-tags:
 
@@ -699,7 +706,7 @@ Apply semantic tags
 
 .. feeds-apply-semantic-tags-start
 
-A data schema defines the structure of customer data. This is in the form of a data table with columns and rows. It is not uncommon for a collection of data sources to have completely different data schemas. Amperity maps certain columns within customer data into a set of categories--personally identifiable information (PII), transaction attributes, etc.--to ensure consistency for customer records across all data sources.
+A data schema defines the structure of customer data. This is in the form of a data table with columns and rows. It is not uncommon for a collection of data sources to have different data schemas. Amperity maps certain columns within customer data into a set of categories--personally identifiable information (PII), transaction attributes, etc.--to ensure consistency for customer records across all data sources.
 
 .. feeds-apply-semantic-tags-end
 
@@ -727,7 +734,7 @@ Customer profile (PII)
 
 .. feeds-apply-semantic-tags-pii-start
 
-Amperity will assign PII semantic tags automatically when the incoming field name closely matches a known pattern.
+Amperity will assign PII semantic tags automatically when the incoming field name matches a known pattern.
 
 Review the :doc:`complete list of semantics <semantics>` (including :ref:`profile semantics <semantics-profile>` and :ref:`keys related to semantics <semantics-keys>`) before verifying the PII semantics that were applied automatically to customer records.
 
@@ -908,7 +915,7 @@ A field that is deleted may also be deleted *everywhere* else it appears in Ampe
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
 #. Click the trash can icon to delete the field.
 
-   .. warning:: Amperity does not ask for confirmation, so use this carefully.
+   .. warning:: Amperity does not ask for confirmation.
 
 .. feeds-configure-field-delete-steps-end
 
@@ -1023,7 +1030,7 @@ Delete feeds
 
 .. feeds-delete-start
 
-Use the **Delete** option to remove a feed from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this feed prior to deleting it. This action will not delete the associated data file.
+Use the **Delete** option to remove a feed from Amperity. Verify that both upstream and downstream processes no longer depend on this feed prior to deleting it. This action will not delete the associated data file.
 
 .. feeds-delete-end
 
@@ -1044,7 +1051,7 @@ Edit feeds
 
 .. feeds-edit-start
 
-Use the **Edit** option in the row for a specific feed to make changes, including to feed details, column names, column types, semantics, required columns, and so on. A very common scenario for editing a feed is to apply foreign key assignments to tables with customer records so that they may be associated to tables with interaction records.
+Use the **Edit** option in the row for a specific feed to make changes, including to feed details, column names, column types, semantics, or required columns. A very common scenario for editing a feed is to apply foreign key assignments to tables with customer records so that they may be associated to tables with interaction records.
 
 .. feeds-edit-end
 
@@ -1152,7 +1159,7 @@ Delete columns
 
 .. feeds-edit-column-delete-warning-start
 
-.. warning:: Deleting columns in a feed should not be done without considering the downstream effects of those changes. Changes may have unintended consequences: semantics, column names, pick-lists, and so on, may not be immediately available to a downstream process, which may cause that downstream process to fail.
+.. warning:: Deleting columns in a feed should not be done without considering the downstream effects of those changes. Changes may have unintended consequences: semantics, column names, or pick-lists, may not be immediately available to a downstream process, which may cause that downstream process to fail.
 
 .. feeds-edit-column-delete-warning-end
 
@@ -1160,7 +1167,7 @@ Delete columns
 
 A column may be deleted from a feed. The timing of this deletion is important. If a column is deleted during feed creation, that column is not loaded to a domain table, be part of any Stitch processes, be a column in a customer 360 database table, be part of a SQL query that defines a query, or be a data point sent to an external destination.
 
-However, a column that is deleted from a feed that *has* been loaded to a domain table, been part of the Stitch process, is a column in a customer 360 table, is part of a SQL query that defines a query, and is a data point that is sent to an external destination must be deleted carefully.
+However, a column that is deleted from a feed that *has* been loaded to a domain table and has been part of the Stitch process, is a column in a customer 360 table, is part of a SQL query that defines a query, and is a data point that is sent to an external destination.
 
 Before deleting any column that has been loaded to a domain table, be sure to identify if that column is part of any downstream workflows. Every reference to that column need to be removed from Amperity. This is especially important for customer 360 database tables and for queries.
 
@@ -1174,13 +1181,13 @@ Edit columns
 
 .. feeds-edit-column-edit-warning-start
 
-.. warning:: Editing columns in a feed should not be done without considering the downstream effects of those changes. Changes may have unintended consequences: semantics, column names, pick-lists, and so on, may not be immediately available to a downstream process, which may cause that downstream process to fail.
+.. warning:: Editing columns in a feed should not be done without considering the downstream effects of those changes. Changes may have unintended consequences: semantics, column names, or pick-lists, may not be immediately available to a downstream process, which may cause that downstream process to fail.
 
 .. feeds-edit-column-edit-warning-end
 
 .. feeds-edit-column-edit-start
 
-Changes to columns in feed data should be done carefully. Depending on the type and scope of changes to be made:
+Depending on the type and scope of changes to be made:
 
 #. Remove references to the column, re-load the data via the feed, and then re-add the column with the updated metadata.
 #. Remove any databases and queries that reference the column, re-load the data via the feed, and then recreate the databases and queries.
@@ -1351,7 +1358,7 @@ If you have no such updated field, you can choose to autogenerate a field, in wh
 
 #. If couriers are run over a date range, records from files associated with later dates will be retained.
 
-#. If multiple files are loaded for the same date, records for the latest-loaded file are retained. File loading order depends on the behavior of the source system, but is generally deterministic.
+#. If multiple files are loaded for the same date, records for the latest-loaded file are retained. File loading order depends on the behavior of the source system, but is deterministic.
 
 #. If the same primary key appears on multiple records on the same text-based file, the latest row on the file is retained.
 

@@ -65,7 +65,7 @@ A benchmark check is a heuristic that defines how often Amperity IDs are expecte
 
 Each benchmark check measures the percentage of Amperity IDs meeting its respective condition and compares the result against the optimal range. A benchmark check result can fall into the optimal range, above the optimal range, or far above the optimal range (high).
 
-For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. It is possible for an Amperity ID to be correctly associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, name changes, and so on. A higher-than-expected rate of Amperity IDs (generally) associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
+For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. It is possible for an Amperity ID to be correctly associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, or name changes. A higher-than-expected rate of Amperity IDs associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
 
 .. stitch-benchmark-checks-end
 
@@ -139,7 +139,7 @@ Above optimal range
 
 .. stitch-benchmark-results-above-optimal-start
 
-Results that fall above the optimal ranges may be investigated, but it's often not necessary. Compare the history of the scores and determine if anything should be done to try to improve the benchmark results.
+Results that fall above the optimal ranges may be investigated, but it is often not necessary. Compare the history of the scores and determine if anything should be done to try to improve the benchmark results.
 
 Was new data made available to your tenant? Were any changes made to Stitch configuration? Both of these may be the cause of scores falling above the optimal range.
 
@@ -324,7 +324,7 @@ Overclustering
 
 .. stitch-benchmark-category-overclustering-start
 
-Stitch benchmark checks for overclustering evaluate situations where records that likely belong to two or more individuals end up being assigned the same Amperity ID. This can occur when records with mostly different personally identifiable information (PII) are connected by a foreign key or by a small set of matching PII.
+Stitch benchmark checks for overclustering evaluate situations where records that likely belong to two or more individuals end up being assigned the same Amperity ID. This can occur when records with different personally identifiable information (PII) are connected by a foreign key or by a small set of matching PII.
 
 .. stitch-benchmark-category-overclustering-end
 

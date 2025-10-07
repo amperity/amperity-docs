@@ -60,7 +60,7 @@ Because this segment has only one condition and returns a list of customers who 
    :align: left
    :class: no-scaled-link
 
-There is only one city in the United States named "Chicago", which means the results of this segment won't include customers who live in multiple states.
+There is only one city in the United States named "Chicago", which means the results of this segment will not include customers who live in multiple states.
 
 .. note:: There are attributes in your customer 360 database that can work well in segments when they are the only condition, such as **One and Done** and **Early Repeat Purchaser**.
 
@@ -536,7 +536,7 @@ Should be qualified
 
 .. segments-and-vs-or-common-values-should-often-be-qualified-start
 
-This segment doesn't qualify the city of "Madison" to a specific state.
+This segment does not qualify the city of "Madison" to a specific state.
 
 .. image:: ../../images/segments-and-or-example-city-and-state-dual-conditions-qualify-conditions.png
    :width: 340 px

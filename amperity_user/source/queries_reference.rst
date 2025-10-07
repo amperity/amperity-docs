@@ -157,7 +157,7 @@ You can preview the results of a SQL query by clicking the **Run Query** button.
 * Return an empty table.
 * Return some type of error.
 
-Use the preview results pane to fine-tune your queries, to make sure they return the data you want, and to make sure they don't contain any errors.
+Use the preview results pane to fine-tune your queries, to make sure they return the data you want, and to make sure they do not contain any errors.
 
 .. queries-preview-results-end
 
