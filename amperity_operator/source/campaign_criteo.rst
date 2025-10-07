@@ -348,6 +348,7 @@ Add destination
              :end-before: .. setting-common-audience-primary-key-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end
@@ -363,5 +364,3 @@ Add destination
           :end-before: .. campaigns-steps-business-users-end
 
 .. campaign-criteo-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

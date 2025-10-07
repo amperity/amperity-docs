@@ -101,6 +101,7 @@ Get details
      - **Required configuration settings**
 
        **Customer ID**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-google-enhanced-conversions-customer-id-start
              :end-before: .. setting-google-enhanced-conversions-customer-id-end
@@ -240,11 +241,13 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Conversion action name** (Required at orchestration)
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-google-enhanced-conversions-action-name-start
              :end-before: .. setting-google-enhanced-conversions-action-name-end
 
        **Customer ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst

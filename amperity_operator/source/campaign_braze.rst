@@ -397,6 +397,7 @@ Add destination
              :end-before: .. setting-braze-user-identifier-about-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

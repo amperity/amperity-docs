@@ -70,6 +70,7 @@ Get details
      - **Credential settings**
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -77,6 +78,7 @@ Get details
              :end-before: .. credential-sailthru-api-key-end
 
        **API secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -97,6 +99,7 @@ Get details
      - **Required configuration settings**
 
        **Audience primary key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -104,6 +107,7 @@ Get details
              :end-before: .. setting-common-audience-primary-key-end
 
        **List name**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-sailthru-list-name-start
              :end-before: .. setting-sailthru-list-name-end
@@ -167,6 +171,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -174,6 +179,7 @@ Configure credentials
              :end-before: .. credential-sailthru-api-key-end
 
        **API secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

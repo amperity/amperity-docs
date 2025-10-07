@@ -74,7 +74,7 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_amazon_s3
 
-   .. grid-item-card:: Attentive (Attributes)
+   .. grid-item-card:: Attentive API (Attributes)
       :link-type: doc
       :link: destination_attentive_mobile_api
 
@@ -397,8 +397,8 @@ Set up connections to send data from Amperity to other marketing applications, t
    Amazon Pinpoint <destination_amazon_pinpoint>
    Amazon Redshift <destination_amazon_redshift>
    Amazon S3 <destination_amazon_s3>
-   Attentive (Attributes) <destination_attentive_mobile_api>
-   Attentive (Audience) <destination_attentive_mobile>
+   Attentive API (Attributes) <destination_attentive_mobile_api>
+   Attentive (Audiences) <destination_attentive_mobile>
    AWS Connect <destination_aws_connect>
    Azure Blob Storage <destination_azure_blob_storage>
    Azure Synapse Analytics <destination_azure_synapse>

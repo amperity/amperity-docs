@@ -72,6 +72,7 @@ Get details
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -86,6 +87,7 @@ Get details
      - **Meta Ads Manager settings**
 
        **Dataset ID**
+
           |checkmark-required| **May be required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst
@@ -145,6 +147,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -268,6 +271,7 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Dataset ID**
+
           |checkmark-required| **May be required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst

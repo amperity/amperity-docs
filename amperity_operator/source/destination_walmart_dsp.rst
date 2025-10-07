@@ -92,6 +92,7 @@ Get details
      - **Credential settings**
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
        .. include:: ../../shared/credentials_settings.rst
@@ -99,6 +100,7 @@ Get details
           :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        **Advertiser secret**
+
           |checkmark-required| **Required**
 
        .. include:: ../../shared/credentials_settings.rst
@@ -119,9 +121,9 @@ Get details
 
        **Segment name** (Required at orchestration)
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-segment-name-start
-          :end-before: .. setting-the-trade-desk-segment-name-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-segment-name-start
+             :end-before: .. setting-the-trade-desk-segment-name-end
 
 .. destination-walmart-dsp-get-details-end
 
@@ -175,22 +177,24 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-advertiser-id-start
-          :end-before: .. credential-the-trade-desk-advertiser-id-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-advertiser-id-start
+             :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        **Advertiser secret**
+
           |checkmark-required| **Required**
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-advertiser-secret-start
-          :end-before: .. credential-the-trade-desk-advertiser-secret-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-advertiser-secret-start
+             :end-before: .. credential-the-trade-desk-advertiser-secret-end
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-find-id-and-secret-start
-          :end-before: .. credential-the-trade-desk-find-id-and-secret-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-find-id-and-secret-start
+             :end-before: .. credential-the-trade-desk-find-id-and-secret-end
 
 .. destination-walmart-dsp-credentials-steps-end
 
@@ -280,23 +284,23 @@ Add destination
 
        **Segment name** (Required at orchestration)
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-segment-name-start
-          :end-before: .. setting-the-trade-desk-segment-name-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-segment-name-start
+             :end-before: .. setting-the-trade-desk-segment-name-end
 
        **Membership duration**
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-common-membership-duration-start
-          :end-before: .. setting-common-membership-duration-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-start
+             :end-before: .. setting-common-membership-duration-end
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-membership-duration-minmax-start
-          :end-before: .. setting-the-trade-desk-membership-duration-minmax-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-membership-duration-minmax-start
+             :end-before: .. setting-the-trade-desk-membership-duration-minmax-end
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-membership-duration-example-start
-          :end-before: .. setting-the-trade-desk-membership-duration-example-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-membership-duration-example-start
+             :end-before: .. setting-the-trade-desk-membership-duration-example-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -309,5 +313,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-walmart-dsp-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

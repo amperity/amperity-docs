@@ -268,7 +268,6 @@ Add destination
              :end-before: .. campaigns-steps-campaign-settings-end
 
 
-
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.

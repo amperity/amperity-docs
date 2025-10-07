@@ -88,6 +88,7 @@ Get details
      - **Required configuration settings**
 
        **File format**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
@@ -209,6 +210,7 @@ Connection string
           :end-before: .. credential-steps-settings-intro-end
 
        **Connection string**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -220,6 +222,7 @@ Connection string
              :end-before: .. credential-azure-blob-storage-connection-string-example-end
 
        **Container**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -299,6 +302,7 @@ Shared access signature
           :end-before: .. credential-steps-settings-intro-end
 
        **Account name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -306,6 +310,7 @@ Shared access signature
              :end-before: .. credential-azure-blob-storage-account-name-end
 
        **Container**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -313,6 +318,7 @@ Shared access signature
              :end-before: .. credential-azure-blob-storage-container-end
 
        **Shared access signature**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -386,6 +392,7 @@ Storage URI
           :end-before: .. credential-steps-settings-intro-end
 
        **Container**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -393,6 +400,7 @@ Storage URI
              :end-before: .. credential-azure-blob-storage-container-end
 
        **Storage URI**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -485,17 +493,20 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Blob prefix**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-azure-blob-storage-blob-prefix-start
              :end-before: .. setting-azure-blob-storage-blob-prefix-end
 
        **Compression**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-compression-start
              :end-before: .. setting-common-compression-end
 
 
        **Escape character**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-escape-character-start
              :end-before: .. setting-common-escape-character-end
@@ -506,6 +517,7 @@ Add destination
 
 
        **File format**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -524,24 +536,28 @@ Add destination
 
 
        **Filename template**
+
           .. include:: ../../shared/terms.rst
              :start-after: .. term-filename-template-start
              :end-before: .. term-filename-template-end
 
 
        **Header**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-header-start
              :end-before: .. setting-common-header-end
 
 
        **PGP public key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-pgp-public-key-start
              :end-before: .. setting-common-pgp-public-key-end
 
 
        **Quote mode**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-quote-mode-start
              :end-before: .. setting-common-quote-mode-end
@@ -552,6 +568,7 @@ Add destination
 
 
        **Success file**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-start
              :end-before: .. setting-common-success-file-end
@@ -562,18 +579,21 @@ Add destination
 
 
        **Split outputs**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-split-outputs-start
              :end-before: .. setting-common-split-outputs-end
 
 
        **Use Zip64?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start
              :end-before: .. setting-common-use-zip64-end
 
 
        **Row Number**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-row-number-start
              :end-before: .. setting-common-row-number-end

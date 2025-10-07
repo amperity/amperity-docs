@@ -63,6 +63,7 @@ Get details
      - **Credential settings**
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -77,6 +78,7 @@ Get details
      - **Required configuration settings**
 
        **Data center**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -136,6 +138,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -228,6 +231,7 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Data center**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -262,5 +266,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-mailchimp-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

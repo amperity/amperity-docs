@@ -87,6 +87,7 @@ Get details
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -94,6 +95,7 @@ Get details
              :end-before: .. credential-oauth-refresh-token-end
 
        **Permissions**
+
           |checkmark-required| **Required**
 
           The LinkedIn account of the user configuring this connector must have access to the Advertising API, which will give them the necessary **rw_ads** and **r_ads** OAuth scopes.
@@ -106,6 +108,7 @@ Get details
      - **Required configuration settings**
 
        **Account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -191,6 +194,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -198,6 +202,7 @@ Configure credentials
              :end-before: .. credential-oauth-refresh-token-end
 
        **Permissions**
+
           |checkmark-required| **Required**
 
           The LinkedIn account of the user configuring this connector must have access to the Advertising API, which will give them the necessary **rw_ads** and **r_ads** OAuth scopes.
@@ -298,6 +303,7 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst

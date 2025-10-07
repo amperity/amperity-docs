@@ -88,6 +88,7 @@ Get details
      - **Required configuration settings**
 
        **File format**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
@@ -209,6 +210,7 @@ Connection string
           :end-before: .. credential-steps-settings-intro-end
 
        **Connection string**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -220,6 +222,7 @@ Connection string
              :end-before: .. credential-azure-blob-storage-connection-string-example-end
 
        **Container**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -299,6 +302,7 @@ Shared access signature
           :end-before: .. credential-steps-settings-intro-end
 
        **Account name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -306,6 +310,7 @@ Shared access signature
              :end-before: .. credential-azure-blob-storage-account-name-end
 
        **Container**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -313,6 +318,7 @@ Shared access signature
              :end-before: .. credential-azure-blob-storage-container-end
 
        **Shared access signature**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

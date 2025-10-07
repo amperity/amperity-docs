@@ -83,6 +83,7 @@ Get details
      - **Credential settings**
 
        **Seat MDM ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -173,6 +174,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Seat MDM ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

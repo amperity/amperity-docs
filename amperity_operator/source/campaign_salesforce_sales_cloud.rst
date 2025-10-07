@@ -62,6 +62,7 @@ Get details
      - **Credential settings**
 
        **Username and password**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -141,6 +142,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Username and password**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -289,6 +291,7 @@ Add destination
              :end-before: .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end
@@ -304,5 +307,3 @@ Add destination
           :end-before: .. campaigns-steps-business-users-orchestration-only-end
 
 .. campaign-salesforce-sales-cloud-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

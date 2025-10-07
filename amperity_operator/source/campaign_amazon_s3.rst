@@ -88,6 +88,7 @@ Get details
      - **Required configuration settings**
 
        **File format**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
@@ -196,6 +197,7 @@ IAM role-to-role
           :end-before: .. credential-amazon-s3-cross-account-roles-steps-settings-required-end
 
        **Amazon S3 bucket name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -209,6 +211,7 @@ IAM role-to-role
                 :end-before: .. credential-amazon-s3-trust-policy-end
 
        **Target role ARN**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -220,6 +223,7 @@ IAM role-to-role
              :end-before: .. credential-amazon-s3-cross-account-roles-steps-settings-provided-end
 
        **Amperity role ARN**
+
           |setting-provided-by-amperity| **Provided by Amperity**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -227,6 +231,7 @@ IAM role-to-role
              :end-before: .. credential-amazon-s3-amperity-role-arn-end
 
        **External ID**
+
           |setting-provided-by-amperity| **Provided by Amperity**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -319,6 +324,7 @@ Both parts are required to authenticate requests to Amazon AWS resources.
           :class: no-scaled-link
 
        **IAM access key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -326,6 +332,7 @@ Both parts are required to authenticate requests to Amazon AWS resources.
              :end-before: .. credential-amazon-s3-iam-access-key-end
 
        **IAM secret key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -333,11 +340,13 @@ Both parts are required to authenticate requests to Amazon AWS resources.
              :end-before: .. credential-amazon-s3-iam-secret-key-end
 
        **IAM role ARN**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-amazon-s3-iam-role-arn-start
              :end-before: .. credential-amazon-s3-iam-role-arn-end
 
        **Amazon S3 bucket name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -431,12 +440,14 @@ Add destination
           :end-before: .. campaigns-steps-settings-end
 
        **Compression**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-compression-start
              :end-before: .. setting-common-compression-end
 
 
        **Escape character**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-escape-character-start
              :end-before: .. setting-common-escape-character-end
@@ -447,6 +458,7 @@ Add destination
 
 
        **File format**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -465,24 +477,28 @@ Add destination
 
 
        **Filename template**
+
           .. include:: ../../shared/terms.rst
              :start-after: .. term-filename-template-start
              :end-before: .. term-filename-template-end
 
 
        **Header**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-header-start
              :end-before: .. setting-common-header-end
 
 
        **PGP public key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-pgp-public-key-start
              :end-before: .. setting-common-pgp-public-key-end
 
 
        **Quote mode**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-quote-mode-start
              :end-before: .. setting-common-quote-mode-end
@@ -492,11 +508,13 @@ Add destination
              :end-before: .. setting-common-quote-mode-none-end
 
        **S3 prefix**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-amazon-s3-prefix-start
              :end-before: .. setting-amazon-s3-prefix-end
 
        **Success file**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-start
              :end-before: .. setting-common-success-file-end
@@ -507,18 +525,21 @@ Add destination
 
 
        **Split outputs**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-split-outputs-start
              :end-before: .. setting-common-split-outputs-end
 
 
        **Use Zip64?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start
              :end-before: .. setting-common-use-zip64-end
 
 
        **Row Number**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-row-number-start
              :end-before: .. setting-common-row-number-end
@@ -528,6 +549,7 @@ Add destination
              :end-before: .. setting-common-row-number-column-name-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

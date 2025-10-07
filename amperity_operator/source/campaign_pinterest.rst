@@ -100,6 +100,7 @@ Get details
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -114,6 +115,7 @@ Get details
      - **Required configuration settings**
 
        **Ad account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -194,6 +196,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -302,6 +305,7 @@ Add destination
              :end-before: .. setting-common-audience-primary-key-end
 
        **Ad account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -316,6 +320,7 @@ Add destination
 
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end
@@ -331,5 +336,3 @@ Add destination
           :end-before: .. campaigns-steps-business-users-end
 
 .. campaign-pinterest-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

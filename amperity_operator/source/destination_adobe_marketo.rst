@@ -59,6 +59,7 @@ Get details
      - **Credential settings**
 
        **Client ID and client secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -70,6 +71,7 @@ Get details
              :end-before: .. credential-adobe-marketo-access-token-end
 
        **Subdomain**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -129,6 +131,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Client ID and client secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -140,6 +143,7 @@ Configure credentials
              :end-before: .. credential-adobe-marketo-access-token-end
 
        **Subdomain**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -264,5 +268,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-adobe-marketo-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

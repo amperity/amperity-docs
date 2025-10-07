@@ -357,5 +357,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-criteo-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

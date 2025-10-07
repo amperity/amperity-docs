@@ -79,6 +79,7 @@ Get details
      - **Required configuration settings**
 
        **File format**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
@@ -88,6 +89,7 @@ Get details
              :end-before: .. setting-common-file-format-custom-delimiter-end
 
        **Remote folder**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-remote-folder-start
              :end-before: .. setting-common-remote-folder-end
@@ -166,6 +168,7 @@ Configure credentials
              :end-before: .. credential-sftp-host-public-key-end
 
        **Hostname**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

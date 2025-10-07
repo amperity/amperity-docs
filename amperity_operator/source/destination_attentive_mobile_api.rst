@@ -1,10 +1,10 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Attentive
+.. |destination-name| replace:: Attentive API
 .. |destination-api| replace:: Custom Attributes API
-.. |plugin-name| replace:: "attentive-api"
-.. |credential-type| replace:: "Custom Attributes API"
+.. |plugin-name| replace:: "Attentive API"
+.. |credential-type| replace:: "attentive-api"
 .. |required-credentials| replace:: "API key"
 .. |audience-primary-key| replace:: "email" or "phone"
 .. |what-send| replace:: custom attributes
@@ -285,5 +285,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-attentive-api-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

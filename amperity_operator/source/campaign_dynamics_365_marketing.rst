@@ -278,8 +278,8 @@ Add destination
              :start-after: setting-microsoft-dynamics-365-segment-name-start
              :end-before: setting-microsoft-dynamics-365-segment-name-end
 
-
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

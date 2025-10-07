@@ -62,6 +62,7 @@ Get details
      - **Credential settings**
 
        **Username and password**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -141,6 +142,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Username and password**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -298,5 +300,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-orchestration-only-end
 
 .. destination-salesforce-sales-cloud-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.
