@@ -213,18 +213,21 @@ Add destination
 
 
        **File format**
+
           |checkmark-required| **Required**
 
           Set this value to CSV.
 
 
        **Header**
+
           |checkmark-required| **Required**
 
           Enable header rows.
 
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

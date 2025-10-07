@@ -72,6 +72,7 @@ Get details
      - **Required configuration settings**
 
        **File format**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
@@ -81,6 +82,7 @@ Get details
              :end-before: .. setting-common-file-format-custom-delimiter-end
 
        **Remote folder**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-remote-folder-start
              :end-before: .. setting-common-remote-folder-end
@@ -153,16 +155,19 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Username**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-username-start
              :end-before: .. credential-sftp-username-end
 
        **Hostname**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-hostname-start
              :end-before: .. credential-sftp-hostname-end
 
        **Private key**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-private-key-start
              :end-before: .. credential-sftp-private-key-end
@@ -254,12 +259,14 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Compression**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-compression-start
              :end-before: .. setting-common-compression-end
 
 
        **Escape character**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-escape-character-start
              :end-before: .. setting-common-escape-character-end
@@ -270,6 +277,7 @@ Add destination
 
 
        **File format**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -282,30 +290,35 @@ Add destination
 
 
        **Filename template**
+
           .. include:: ../../shared/terms.rst
              :start-after: .. term-filename-template-start
              :end-before: .. term-filename-template-end
 
 
        **Header**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-header-start
              :end-before: .. setting-common-header-end
 
 
        **Line ending**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-line-ending-start
              :end-before: .. setting-common-line-ending-end
 
 
        **PGP public key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-pgp-public-key-start
              :end-before: .. setting-common-pgp-public-key-end
 
 
        **Quote mode**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-quote-mode-start
              :end-before: .. setting-common-quote-mode-end
@@ -316,6 +329,7 @@ Add destination
 
 
        **Remote folder**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -332,6 +346,7 @@ Add destination
 
 
        **Success file**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-start
              :end-before: .. setting-common-success-file-end
@@ -342,12 +357,14 @@ Add destination
 
 
        **Split outputs**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-split-outputs-start
              :end-before: .. setting-common-split-outputs-end
 
 
        **Use Zip64?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start
              :end-before: .. setting-common-use-zip64-end
@@ -364,6 +381,3 @@ Add destination
 
 
 .. destination-soundcommerce-add-steps-end
-
-
-.. TODO: Add workflow resolutions from existing topics HERE.

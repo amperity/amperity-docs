@@ -340,6 +340,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API client ID and client secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -347,6 +348,7 @@ Configure credentials
              :end-before: .. credential-salesforce-marketing-cloud-api-client-secret-end
 
        **API authentication subdomain**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -354,6 +356,7 @@ Configure credentials
              :end-before: .. credential-salesforce-marketing-cloud-api-subdomain-end
 
        **Hostname**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -361,6 +364,7 @@ Configure credentials
              :end-before: .. credential-sftp-hostname-end
 
        **Passphrase**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -368,6 +372,7 @@ Configure credentials
              :end-before: .. credential-sftp-passphrase-end
 
        **Username**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -509,6 +514,7 @@ Add destination
              :end-before: .. setting-salesforce-marketing-cloud-data-extension-name-context-orchestrations-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

@@ -82,6 +82,7 @@ Get details
      - **Credential settings**
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -144,6 +145,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -258,6 +260,7 @@ Add destination
              :end-before: .. setting-common-audience-primary-key-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

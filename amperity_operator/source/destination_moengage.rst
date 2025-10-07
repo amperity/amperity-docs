@@ -215,14 +215,15 @@ Add destination
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
-
        **File format**
+
           |checkmark-required| **Required**
 
           Set this value to CSV.
 
 
        **Header**
+
           |checkmark-required| **Required**
 
           Enable header rows.

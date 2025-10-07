@@ -83,6 +83,7 @@ Get details
      - **Credential settings**
 
        **Seat MDM ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -173,6 +174,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Seat MDM ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -278,6 +280,7 @@ Add destination
 
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

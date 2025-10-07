@@ -90,6 +90,7 @@ Get details
      - **Credential settings**
 
        **Azure tenant ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -97,6 +98,7 @@ Get details
              :end-before: .. credential-microsoft-dataverse-azure-tenant-id-end
 
        **Azure client ID and client secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -111,6 +113,7 @@ Get details
      - **Required configuration settings**
 
        **Power Apps environment region**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -118,6 +121,7 @@ Get details
              :end-before: .. setting-microsoft-dataverse-powerapps-region-end
 
        **Power Apps environment name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -125,6 +129,7 @@ Get details
              :end-before: .. setting-microsoft-dataverse-powerapps-name-end
 
        **Dataverse table logical name**
+
           |checkmark-required| **Required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst
@@ -236,6 +241,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Azure tenant ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -243,6 +249,7 @@ Configure credentials
              :end-before: .. credential-microsoft-dataverse-azure-tenant-id-end
 
        **Azure client ID and client secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

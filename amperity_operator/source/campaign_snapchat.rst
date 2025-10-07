@@ -62,6 +62,7 @@ Get details
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -76,6 +77,7 @@ Get details
      - **Required configuration settings**
 
        **Ad account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -152,6 +154,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -254,6 +257,7 @@ Add destination
           :end-before: .. campaigns-steps-settings-end
 
        **Ad account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -267,6 +271,7 @@ Add destination
              :end-before: .. setting-snapchat-segment-name-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

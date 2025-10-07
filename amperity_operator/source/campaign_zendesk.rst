@@ -77,6 +77,7 @@ Get details
      - **Credential settings**
 
        **API token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -84,6 +85,7 @@ Get details
              :end-before: .. credential-zendesk-api-token-end
 
        **Email address**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -126,8 +128,6 @@ Get details
        Floating point numbers must be in **DECIMAL(10,2)** format.
 
        From within |destination-name| verify that audience data has been loaded and is usable by all of the use cases you want to use within |destination-name| to build better customer experiences.
-
-
 
 .. campaign-zendesk-get-details-end
 
@@ -181,6 +181,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -188,6 +189,7 @@ Configure credentials
              :end-before: .. credential-zendesk-api-token-end
 
        **Email address**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -289,6 +291,7 @@ Add destination
 
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

@@ -69,6 +69,7 @@ Get details
      - **Credential settings**
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -76,6 +77,7 @@ Get details
              :end-before: .. credential-active-campaign-api-key-end
 
        **Base URL**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -91,11 +93,13 @@ Get details
      - **Required configuration settings**
 
        **Audience primary key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
 
        **Group name**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-active-campaign-group-name-start
              :end-before: .. setting-active-campaign-group-name-end
@@ -105,6 +109,7 @@ Get details
              :end-before: .. setting-active-campaign-group-name-access-end
 
        **List name** (Required at orchestration)
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-active-campaign-list-name-start
              :end-before: .. setting-active-campaign-list-name-end
@@ -172,6 +177,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -179,6 +185,7 @@ Configure credentials
              :end-before: .. credential-active-campaign-api-key-end
 
        **URL**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -271,6 +278,7 @@ Add destination
           :end-before: .. campaigns-steps-settings-end
 
        **Audience primary key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -278,6 +286,7 @@ Add destination
              :end-before: .. setting-common-audience-primary-key-end
 
        **Group name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -289,6 +298,7 @@ Add destination
              :end-before: .. setting-active-campaign-group-name-access-end
 
        **List name** (Required at orchestration)
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -296,11 +306,13 @@ Add destination
              :end-before: .. setting-active-campaign-list-name-end
 
        **Verbose logging?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-active-campaign-verbose-logging-start
              :end-before: .. setting-active-campaign-verbose-logging-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

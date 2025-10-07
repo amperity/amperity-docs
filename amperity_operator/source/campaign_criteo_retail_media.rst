@@ -78,16 +78,19 @@ Get details
      - **Required configuration settings**
 
        **Account ID**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-account-id-start
              :end-before: .. setting-criteo-account-id-end
 
        **Retailer ID**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-retailer-id-start
              :end-before: .. setting-criteo-retailer-id-end
 
        **Identifier type**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-identifier-type-start
              :end-before: .. setting-criteo-identifier-type-end
@@ -265,6 +268,7 @@ Add destination
           :end-before: .. campaigns-steps-settings-end
 
        **Account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -272,6 +276,7 @@ Add destination
              :end-before: .. setting-criteo-account-id-end
 
        **Retailer ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -279,6 +284,7 @@ Add destination
              :end-before: .. setting-criteo-retailer-id-end
 
        **Identifier type**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -292,6 +298,7 @@ Add destination
              :end-before: .. setting-criteo-audience-segment-description-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

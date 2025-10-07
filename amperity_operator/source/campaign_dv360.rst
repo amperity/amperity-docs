@@ -366,8 +366,8 @@ Add destination
              :start-after: .. setting-google-ads-mobile-app-id-start
              :end-before: .. setting-google-ads-mobile-app-id-end
 
-
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end
@@ -383,8 +383,6 @@ Add destination
           :end-before: .. campaigns-steps-business-users-end
 
 .. campaign-dv360-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.
 
 
 .. _campaign-dv360-api-matching:

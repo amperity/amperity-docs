@@ -82,6 +82,7 @@ Get details
      - **Credential settings**
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -144,6 +145,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

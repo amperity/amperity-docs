@@ -242,12 +242,14 @@ Add destination
           :end-before: .. destinations-steps-settings-end
 
        **Compression**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-compression-start
              :end-before: .. setting-common-compression-end
 
 
        **Escape character**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-escape-character-start
              :end-before: .. setting-common-escape-character-end
@@ -258,6 +260,7 @@ Add destination
 
 
        **File format**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -276,24 +279,28 @@ Add destination
 
 
        **Filename template**
+
           .. include:: ../../shared/terms.rst
              :start-after: .. term-filename-template-start
              :end-before: .. term-filename-template-end
 
 
        **Header**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-header-start
              :end-before: .. setting-common-header-end
 
 
        **PGP public key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-pgp-public-key-start
              :end-before: .. setting-common-pgp-public-key-end
 
 
        **Quote mode**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-quote-mode-start
              :end-before: .. setting-common-quote-mode-end
@@ -303,11 +310,13 @@ Add destination
              :end-before: .. setting-common-quote-mode-none-end
 
        **S3 prefix**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-amazon-s3-prefix-start
              :end-before: .. setting-amazon-s3-prefix-end
 
        **Success file**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-start
              :end-before: .. setting-common-success-file-end
@@ -318,18 +327,21 @@ Add destination
 
 
        **Split outputs**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-split-outputs-start
              :end-before: .. setting-common-split-outputs-end
 
 
        **Use Zip64?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start
              :end-before: .. setting-common-use-zip64-end
 
 
        **Row Number**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-row-number-start
              :end-before: .. setting-common-row-number-end

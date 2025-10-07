@@ -83,6 +83,7 @@ Get details
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -101,6 +102,7 @@ Get details
      - **Required configuration settings**
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -108,6 +110,7 @@ Get details
              :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
        **Audience name**
+
           |checkmark-required| **Required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst
@@ -115,6 +118,7 @@ Get details
              :end-before: .. setting-tiktok-ads-manager-custom-audience-name-end
 
        **User ID type**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -179,6 +183,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -285,6 +290,7 @@ Add destination
           :end-before: .. campaigns-steps-settings-end
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -292,6 +298,7 @@ Add destination
              :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
        **Audience name**
+
           |checkmark-required| **Required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst
@@ -299,6 +306,7 @@ Add destination
              :end-before: .. setting-tiktok-ads-manager-custom-audience-name-end
 
        **User ID type**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -307,6 +315,7 @@ Add destination
 
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

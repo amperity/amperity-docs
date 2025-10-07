@@ -77,6 +77,7 @@ Get details
      - **Credential settings**
 
        **API token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -84,6 +85,7 @@ Get details
              :end-before: .. credential-zendesk-api-token-end
 
        **Email address**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -181,6 +183,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **API token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -188,6 +191,7 @@ Configure credentials
              :end-before: .. credential-zendesk-api-token-end
 
        **Email address**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

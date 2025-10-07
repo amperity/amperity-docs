@@ -305,6 +305,7 @@ Add destination
              :end-before: .. setting-cordial-subscription-status-end
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end

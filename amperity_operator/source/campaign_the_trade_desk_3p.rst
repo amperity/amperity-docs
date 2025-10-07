@@ -70,6 +70,7 @@ Get details
      - **Credential settings**
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -77,6 +78,7 @@ Get details
              :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        **Advertiser secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -88,6 +90,7 @@ Get details
              :end-before: .. credential-the-trade-desk-find-id-and-secret-end
 
        **Provider ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -95,6 +98,7 @@ Get details
              :end-before: .. credential-the-trade-desk-provider-id-end
 
        **Platform API token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -153,6 +157,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -160,6 +165,7 @@ Configure credentials
              :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        **Advertiser secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -171,6 +177,7 @@ Configure credentials
              :end-before: .. credential-the-trade-desk-find-id-and-secret-end
 
        **Provider ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -178,6 +185,7 @@ Configure credentials
              :end-before: .. credential-the-trade-desk-provider-id-end
 
        **Platform API token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -291,6 +299,7 @@ Add destination
 
 
        **Campaign file settings**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end
@@ -306,5 +315,3 @@ Add destination
           :end-before: .. campaigns-steps-business-users-end
 
 .. campaign-the-trade-desk-3p-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

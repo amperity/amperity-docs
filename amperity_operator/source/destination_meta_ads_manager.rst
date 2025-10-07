@@ -68,6 +68,7 @@ Get details
      - **Credential settings**
 
        **Access token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -198,6 +199,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Access token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst

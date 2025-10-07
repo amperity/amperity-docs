@@ -218,31 +218,31 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **Integration name**
 
-       The name of the integration. For example: "Amperity customer profiels".
+          The name of the integration. For example: "Amperity customer profiels".
 
        **Bearer token**
 
-       A :ref:`bearer token <destination-moveableink-configure-profile-api-token>` allows Moveable Ink Studio access to Profile API endpoints.
+          A :ref:`bearer token <destination-moveableink-configure-profile-api-token>` allows Moveable Ink Studio access to Profile API endpoints.
 
        **Tenant subdomain**
 
-       The subdomain is part of the URL of your Amperity tenant. For example, "socktown":
+          The subdomain is part of the URL of your Amperity tenant. For example, "socktown":
 
-       .. code-block:: none
+          .. code-block:: none
 
-          https://socktown.amperity.com/
+             https://socktown.amperity.com/
 
        **Index ID**
 
-       The index ID is a unique ID for each Profile API endpoint to which Moveable Ink Studio will make requests. For example: "ix-2BmokYMVR". This value can be copied from the Amperity user interface :ref:`after the Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
+          The index ID is a unique ID for each Profile API endpoint to which Moveable Ink Studio will make requests. For example: "ix-2BmokYMVR". This value can be copied from the Amperity user interface :ref:`after the Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
 
        **User ID**
 
-       The user ID is a field within the Profile API index that is configured as the :ref:`profile ID field <destination-moveableink-configure-profile-id-field>`.
+          The user ID is a field within the Profile API index that is configured as the :ref:`profile ID field <destination-moveableink-configure-profile-id-field>`.
 
        **Tenant ID**
 
-       The tenant ID is the :ref:`unique ID for your Amperity tenant <destination-moveableink-configure-profile-api-tenant>`.
+          The tenant ID is the :ref:`unique ID for your Amperity tenant <destination-moveableink-configure-profile-api-tenant>`.
 
        When the settings are added correctly the Moveable Ink Studio user interface will display a successful connection with a 200 OK response.
 

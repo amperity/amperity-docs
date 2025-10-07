@@ -94,6 +94,7 @@ Get details
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -153,6 +154,7 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -276,5 +278,3 @@ Add destination
           :end-before: .. destinations-steps-business-users-end
 
 .. destination-hubspot-add-steps-end
-
-.. TODO: Add workflow resolutions from existing topics HERE.

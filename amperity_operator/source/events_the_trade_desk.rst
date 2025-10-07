@@ -87,6 +87,7 @@ Get details
      - **Credential settings**
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -94,6 +95,7 @@ Get details
              :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        **Advertiser secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
