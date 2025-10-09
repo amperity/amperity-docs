@@ -85,13 +85,13 @@ Select the credential for |destination-name| from the **Credential** dropdown, a
 
 .. destinations-steps-test-connection-start
 
-Click the "Test connection" link on the "Configure destination" page to verify that Amperity can connect to |destination-name|.
+If there are any issues with destination connectivity, an error message will display in the destination setup dialog. If the destination saves successfully, the connection is ready for use. 
 
 .. destinations-steps-test-connection-end
 
 .. campaigns-steps-test-connection-start
 
-Click the "Test connection" link on the "Configure destination" page to verify that Amperity can connect to |destination-name|.
+If there are any issues with destination connectivity, an error message will display in the destination setup dialog. If the destination saves successfully, the connection is ready for use. 
 
 .. campaigns-steps-test-connection-end
 
