@@ -668,7 +668,7 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
 
 .. important:: Records are scored based on a number of features, including:
 
-   * String matching patterns. such as Levenshtein and Jaro-Winkler distances, and Jaccard similarity
+   * String matching patterns, such as Levenshtein and Jaro-Winkler distances, and Jaccard similarity
    * Commonality statistics that focus on name distributions
    * Name matching, including for nicknames, combined with addresses and phone numbers
    * Lookup tables
