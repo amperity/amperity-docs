@@ -13,6 +13,7 @@ Site Index
    :hidden:
 
    404
+   amps
    destination_lorem_ipsum
    destination-active-campaign
    destination-acxiom
