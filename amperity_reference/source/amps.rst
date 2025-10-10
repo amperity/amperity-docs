@@ -764,7 +764,7 @@ Data sent to managed connectors
 
 Amps consumption for managed connectors--campaigns, journeys, and orchestrations--is determined by the amount of data sent from Amperity to `downstream marketing applications <../../destinations.html>`__.
 
-.. note:: Data sent to :ref:`cloud storage <amps-consumption-feature-cloud-storage>` is its own Amps category.
+.. note:: Data sent to cloud storage is its own Amps category.
 
 Monitor Amps consumption for managed connectors by:
 
