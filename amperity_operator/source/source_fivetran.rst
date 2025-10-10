@@ -1232,7 +1232,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :width: 140 px
           :align: left
      - |fivetran_sendgrid|
-     - SendGrid is a customer communication platform for transaction- and marketing-focused emails.
+     - SendGrid is a customer communication platform for transaction-focused and marketing-focused emails.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-servicenow.svg
           :figclass: light-only

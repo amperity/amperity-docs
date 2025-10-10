@@ -86,7 +86,7 @@ The following table lists the operators that are available to discount percent a
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual discount percents are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual discount percents are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**

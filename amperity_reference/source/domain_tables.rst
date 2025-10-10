@@ -235,7 +235,7 @@ The following example shows an ``IF`` statement within a ``SELECT`` statement th
 
 .. _domain-tables-custom-sql-use-case-combine-postal:
 
-Combine five- and four-digit postal codes
+Combine five and four digit postal codes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst
@@ -379,7 +379,7 @@ Amperity adds the following columns to all domain tables. The added columns star
 
 #. The **_pk** column is an identifier that is generated based on the all of the columns in the feed that were associated to the primary key.
 #. The **_uuid_pk** column contains a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
-#. The **_updated** column contains details about the last update; it is a system-generated 64-bit integer that combines a timestamp with file/line information.
+#. The **_updated** column contains details about the last update. It is a system-generated 64-bit integer that combines a timestamp with file/line information.
 
    Amperity uses the value in the **_updated** column to ensure that the newest record is preferred over older records when both records have the same primary key. This preference is maintained between loads, between records in the same file, and between files and days in the same load.
 

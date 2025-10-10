@@ -533,7 +533,7 @@ An index must be defined for each query that is used to generate an endpoint for
 
        Use a description to help other users in your tenant know what use cases this index enables.
 
-       .. note:: The name of the index is informational only. Indexes are listed alphabetically by name; index names are not used within requests.
+       .. note:: The name of the index is informational only. Indexes are listed alphabetically by name. Index names are not used within requests.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -1516,7 +1516,7 @@ A hashed email
 * Is anonymous
 * Is not PII
 * Cannot be decrypted
-* Is browser- and device-independent
+* Is browser and device independent
 * Enables multi-device, multi-browser, and multi-app tracking
 * Can be used to anonymously track users across websites, apps, and devices when the email address used to log into a website, app, or device matches the hashed email
 

@@ -1,4 +1,4 @@
-.. no title; include these back into datagrid/configure_stitch
+.. no title. include these back into datagrid/configure_stitch
 
 .. tooltip-stitch-config-days-of-recorded-history-start
 

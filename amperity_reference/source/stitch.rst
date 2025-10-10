@@ -623,7 +623,7 @@ Pairwise comparison
 
 .. stitch-pairwise-comparison-single-block-intro-start
 
-Let's walk through the process of pairwise scoring using a single block of records:
+An example of pairwise scoring using a single block of records:
 
 .. stitch-pairwise-comparison-single-block-intro-end
 

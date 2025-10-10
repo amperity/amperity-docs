@@ -130,7 +130,7 @@ The following table lists the operators that are available to this attribute.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual predicted average order revenue amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual predicted average order revenue amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**

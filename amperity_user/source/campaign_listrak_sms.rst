@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Listrak SMS
 .. |what-send| replace:: SMS profiles
 .. |what-enable| replace:: **phone**
-.. |attributes-sent| replace:: |destination-name| requires phone numbers; you may include system and custom profile attributes.
+.. |attributes-sent| replace:: |destination-name| requires phone numbers. You may include system and custom profile attributes.
 
 
 .. meta::

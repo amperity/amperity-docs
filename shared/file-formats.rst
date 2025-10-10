@@ -16,7 +16,7 @@ You may reference the following sections while configuring this data source:
 * Ensuring files are provided in a |format_common_file_formats|
 * Ensuring files are provided with the correct |format_common_date_formats|
 * Supporting the desired |format_common_file_compression_archive| method
-* Encrypting files before they are added to the location using |format_common_pgp|; an encryption key must be configured so that files can be decrypted by Amperity prior to loading them
+* Encrypting files before they are added to the location using |format_common_pgp|. An encryption key must be configured so that files can be decrypted by Amperity prior to loading them
 
   .. tip:: Use SnapPass to securely share your organization's credentials and encryption keys with your Amperity representative.
 

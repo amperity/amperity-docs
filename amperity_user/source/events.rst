@@ -27,14 +27,14 @@ The paths your customers take before they visit an app or a website can be compl
 
 Offline events represent a set of fields that may be used to help your brand attribute customer purchases and activities with your brand's marketing campaigns. Tracking offline events helps your brand measure the effectiveness of marketing campaigns across channels. This is done by associating offline customer actions, such as purchases made at physical stores, with an online marketing campaign.
 
-Offline events share similar use cases across marketing platforms; however, each marketing platform has its own terminology and requirements for using offline events. For example:
+Offline events share similar use cases across marketing platforms. However, each marketing platform has its own terminology and requirements for using offline events. For example:
 
 * :ref:`Braze <events-braze>` and :ref:`Klaviyo <events-klaviyo>` support offline events when sent as custom attributes for any audience.
 * :ref:`Criteo <events-criteo>`, :ref:`Pinterest <events-pinterest>`, and :ref:`Snapchat <events-snapchat>` support offline events for transactions, which must be sent separately from audiences using SFTP.
 * :ref:`Meta Ads Manager <events-meta-ads-manager>`, :ref:`The Trade Desk <events-the-trade-desk>`, and :ref:`TikTok Ads Manager <events-tiktok-ads-manager>` each support a complex set of offline events that are sent to REST API endpoints and require using SQL to return the unique sets of offline events that are required by each platform.
 * :ref:`Google Enhanced Conversions <events-google-enhanced-conversions>` to associate first-party customer data with transactions.
 
-Your brand may need to experiment with how offline events are provided to the marketing platforms from which your campaigns are run. Amperity is flexible; you may take any approach that works. For example: using a database tables that consolidates offline events, configuring default attributes to represent offline events for campaigns, or by using SQL to handle more complex sets of offline events.
+Your brand may need to experiment with how offline events are provided to the marketing platforms from which your campaigns are run. Amperity is flexible and you may take any approach that works. For example: using a database tables that consolidates offline events, configuring default attributes to represent offline events for campaigns, or by using SQL to handle more complex sets of offline events.
 
 .. offline-events-what-are-offline-events-end
 
@@ -260,6 +260,6 @@ Amperity provides direct connections to the most popular destinations across the
 
        For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
 
-       When offline events are shared with TikTok, they can better inform our measurement systems by providing insights into offline customer actions such as in-store purchases, offline subscriptions, purchases and more.
+       When offline events are shared with TikTok, they can better inform measurement systems by providing insights into offline customer actions such as in-store purchases, offline subscriptions, purchases and more.
 
 .. offline-events-destinations-tables-end

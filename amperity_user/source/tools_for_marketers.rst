@@ -28,7 +28,7 @@ Brands that ignore customer-centric marketing risk losing their most valuable cu
 
 Amperity promotes customer-centric marketing by enabling new insights on every customer, smart segmentation, and seamless campaign integration from an intuitive interface that makes it easy to apply the right segments, test and optimize, and then grow loyalty and lifetime value.
 
-* Generate customer- and segment-level insights, including for brand and channel behaviors, product preferences, revenue sizing, and recommended actions.
+* Generate customer-level and segment-level insights, including for brand and channel behaviors, product preferences, revenue sizing, and recommended actions.
 * Enable out-of-the-box predictive models, segments, and personas designed to improve customer lifetime value with a visual interface that allows you to explore and create segments on your own.
 * Activate campigns across channels to optimize channel mix, drive improved experiences, and improve return on investment.
 * Apply closed-loop measurements, multivariate testing, and control groups to transactions, revenue gains, and key performance indicators for customers.

@@ -57,9 +57,13 @@ For example:
 
 **TEMPLATE SECTIONS FOR DESTINATIONS**
 
+.. vale off
+
 Templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
 In certain cases, a destination topic requires *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
+
+.. vale on
 
 .. destinations-overview-list-intro-start
 
@@ -321,8 +325,6 @@ You can configure Amperity to |sendto-link|. These results are sent using an orc
 
 
 DESTINATIONS
-DESTINATIONS
-DESTINATIONS
 
 .. TODO: This is the sections for the templated content for adding destinations in /operator/. These sections allow for bespoke steps, as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
 
@@ -345,7 +347,7 @@ From the **Plugin** dropdown, start typing |filter-the-list| to filter the list,
 .. destinations-add-name-and-description-end
 
 
-.. TODO: This is Step 2; add credentials or use existing
+.. TODO: This is Step 2. Add credentials or use existing
 
 .. destinations-add-credentials-start
 
@@ -432,7 +434,7 @@ When finished, click **Save**.
 .. destinations-save-settings-end
 
 
-.. TODO: This is Step 3; add credentials or use existing
+.. TODO: This is Step 3. Add credentials or use existing
 
 .. destinations-destination-settings-start
 
@@ -604,7 +606,7 @@ Complete the following **Azure Blob Storage Settings**:
 
 
 
-.. TODO: This is Step "Business Users"; these are the same everywhere.
+.. TODO: This is Step "Business Users". These are the same everywhere.
 
 .. destinations-business-users-start
 
@@ -624,7 +626,7 @@ By default a destination is available to all users who have permission to view p
 .. destinations-business-users-admonition-end
 
 
-.. TODO: This is Step "Save"; these are the same everywhere.
+.. TODO: This is Step "Save". These are the same everywhere.
 
 .. destinations-save-start
 
@@ -673,7 +675,7 @@ Enter the name of the data template and a description. For example: "|data-templ
 .. destinations-data-template-open-template-name-end
 
 
-.. TODO: This is Step 2; the 2nd section can be removed for destinations that are not usable with campaigns.
+.. TODO: This is Step 2. The 2nd section can be removed for destinations that are not usable with campaigns.
 
 .. destinations-data-template-business-users-start
 

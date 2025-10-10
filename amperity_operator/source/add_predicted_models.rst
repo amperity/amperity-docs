@@ -124,7 +124,7 @@ Data requirements
 
 Predictive models have :ref:`the same requirements as segments and campaigns <add-campaigns-data-requirements>`, along with the following additional requirements:
 
-#. Data sources must provide at least four years of historical data to support predictive models; five or more years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
+#. Data sources must provide at least four years of historical data to support predictive models. Five or more years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
 #. A defined product catalog with 20-2000 distinct values is required to support recommended audience sizes for product affinity.
 
    .. important:: SKU-level recommendations are not supported.
@@ -486,7 +486,7 @@ A product catalog must be defined, and then joined to the **Unified Itemized Tra
 
    .. note:: Amperity documentation refers to this data source as the :doc:`Unified Product Catalog table <table_unified_product_catalog>`, but it may have a different name in your tenant.
 
-#. Apply the **product-id** semantic tag to product catalog data as required by predictive modeling; the **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
+#. Apply the **product-id** semantic tag to product catalog data as required by predictive modeling. The **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
 
    .. important:: Product affinity modeling requires the field that defines product categories -- **product-category** in the **Unified Product Catalog** table -- to contain between 20 and 2000 unique values.
 

@@ -63,10 +63,10 @@ The email address to which an email was sent.
 
 A classification that measures engagement frequency click rates for email addresses that have received a low volume of emails. Possible values:
 
-* **Non-recipient** (0 received emails)
-* **New** (fewer than 5 received emails)
-* **Active** (currently engaging with received emails)
-* **Inactive** (not currently engaging with received emails)
+* **Non-recipient** 0 received emails.
+* **New** Fewer than 5 received emails.
+* **Active** Engaging with received emails.
+* **Inactive** Not engaging with received emails.
 
 .. important:: Send rates must be available.
 

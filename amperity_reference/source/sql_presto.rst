@@ -24,7 +24,7 @@ About Presto SQL
 
 .. _sql-presto-why-should-i-use-this:
 
-Why should I use this reference?
+Why should you use this reference?
 ==================================================
 
 .. sql-presto-why-should-i-use-this-start
@@ -85,7 +85,7 @@ General
 * Keep code succinct and devoid of redundant SQL, such as unnecessary quoting or parentheses or **WHERE** clauses that can otherwise be derived.
 * Include comments in SQL code where necessary.
 
-  You may use the C-language style slash and asterisk opening (``/*``) and closing (``*/``) pair of delimiters to enclose comments single- and multi-line comments, as long as comments are not nested.
+  You may use the C-language style slash and asterisk opening (``/*``) and closing (``*/``) pair of delimiters to enclose comments single and multi-line comments, as long as comments are not nested.
 
   You may precede single-line comments using ``--``.
 
@@ -1566,7 +1566,7 @@ A window function has the following components:
 #. A list of columns that act as inputs to the window function.
 #. A window function that defines the operation to be performed by the window function. For example: **RANK()** or **SUM()**. This may be any of the ranking functions, value functions, or aggregate functions available in Presto SQL.
 #. **OVER()** defines the window frame, which represents a sliding window.
-#. **PARTITION BY** separates the input into different partitions; only rows in the specified partition will be considered by the window function
+#. **PARTITION BY** separates the input into different partitions. Only rows in the specified partition will be considered by the window function
 #. **ORDER BY** determines the order in which the input is processed by the window function.
 
    .. tip:: Use **ROWS BETWEEN** to define any number of preceding and following rows, as related to the current row.
@@ -2547,10 +2547,10 @@ Specifier     Description
 ===========   ===========================
 %a            Abbreviated weekday name (Sun .. Sat)
 %b            Abbreviated month name (Jan .. Dec)
-%c            Month, numeric (1 .. 12); This specifier does not support 0 as a month or day.
-%d            Day of the month, numeric (01 .. 31); This specifier does not support 0 as a month or day.
-%e            Day of the month, numeric (1 .. 31); This specifier does not support 0 as a month or day.
-%f            Fraction of second (6 digits for printing: 000000 .. 999000; 1 - 9 digits for parsing: 0 .. 999999999), truncated to milliseconds
+%c            Month, numeric (1 .. 12). This specifier does not support 0 as a month or day.
+%d            Day of the month, numeric (01 .. 31). This specifier does not support 0 as a month or day.
+%e            Day of the month, numeric (1 .. 31). This specifier does not support 0 as a month or day.
+%f            Fraction of second (6 digits for printing: 000000 .. 999000. 1 - 9 digits for parsing: 0 .. 999999999), truncated to milliseconds
 %H            Hour (00 .. 23)
 %h            Hour (01 .. 12)
 %I            Hour (01 .. 12)
@@ -2559,17 +2559,17 @@ Specifier     Description
 %k            Hour (0 .. 23)
 %l            Hour (1 .. 12)
 %M            Month name (January .. December)
-%m            Month, numeric (01 .. 12); This specifier does not support 0 as a month or day.
+%m            Month, numeric (01 .. 12). This specifier does not support 0 as a month or day.
 %p            AM or PM
 %r            Time, 12-hour (hh:mm:ss followed by AM or PM)
 %S            Seconds (00 .. 59)
 %s            Seconds (00 .. 59)
 %T            Time, 24-hour (hh:mm:ss)
-%v            Week (01 .. 53), where Monday is the first day of the week; used with %x
+%v            Week (01 .. 53), where Monday is the first day of the week. Used with %x
 %W            Weekday name (Sunday .. Saturday)
-%x            Year for the week, where Monday is the first day of the week, numeric, four digits; used with %v
+%x            Year for the week, where Monday is the first day of the week, numeric, four digits. Used with %v
 %Y            Year, numeric, four digits
-%y            Year, numeric (two digits); When parsing, two-digit year format assumes range 1970 to 2069, so "70" will result in year 1970 but "69" will produce 2069
+%y            Year, numeric (two digits). When parsing, two-digit year format assumes range 1970 to 2069, so "70" will result in year 1970 but "69" will produce 2069
 %%            A literal % character
 %x            x, for any x not listed above
 ===========   ===========================
@@ -3516,8 +3516,8 @@ SUBSTR()
 
 Use the **SUBSTR()** function to return N characters in a string. There are two variants:
 
-* Use **SUBSTR(string, start)** to return ``string`` from the ``start`` position that is equal to the value of ``start``. A positive starting position (``1``) is relative to the start of ``string``; a negative starting position (``-1``) is relative to the end of ``string``.
-* Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that contains the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``; a negative starting position (``-1``) is relative to the end of ``string``.
+* Use **SUBSTR(string, start)** to return ``string`` from the ``start`` position that is equal to the value of ``start``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
+* Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that contains the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
 
 .. sql-presto-function-substr-end
 

@@ -27,7 +27,7 @@ About ingest queries
 
    Ingest queries are a powerful tool that flatten hierarchical, unstructured data like JSON and XML.
 
-   Amperity can ingest data in most formats; however, to be stored in a source domain table and used in processes like Stitch, data must be in a format that fits into rows and columns.
+   Amperity can ingest data in most formats. However, to be stored in a source domain table and used in processes like Stitch, data must be in a format that fits into rows and columns.
 
    Open **Learning Lab** for `ingest queries <https://learn.amperity.com/ingest-queries>`__ |ext_link|. Registration is required.
 

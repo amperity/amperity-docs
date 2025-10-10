@@ -116,7 +116,7 @@ The URL of this endpoint is:
       :align: left
       :class: no-scaled-link
 
-   The copied URL contains the correct value for the selected endpoint's **{tenant-domain}**; change the **{index-id}** to "indexes".
+   The copied URL contains the correct value for the selected endpoint's **{tenant-domain}**. Change the **{index-id}** to "indexes".
 
 **cURL example**
 
@@ -641,7 +641,7 @@ An index must be defined for each query that is used to generate an endpoint for
 
        Use a description to help other users in your tenant know what use cases this endpoint enables.
 
-       .. note:: The name of the index is informational only. Endpoints are listed alphabetically by name; endpoint names are not used within requests.
+       .. note:: The name of the index is informational only. Endpoints are listed alphabetically by name. Endpoint names are not used within requests.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -1326,7 +1326,7 @@ A hashed email
 * Is anonymous
 * Is not PII
 * Cannot be decrypted
-* Is browser- and device-independent
+* Is browser and device independent
 * Enables multi-device, multi-browser, and multi-app tracking
 * Can be used to anonymously track users across websites, apps, and devices when the email address used to log into a website, app, or device matches the hashed email
 

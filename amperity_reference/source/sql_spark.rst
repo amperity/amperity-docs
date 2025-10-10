@@ -24,7 +24,7 @@ About Spark SQL
 
 .. _sql-spark-why-should-i-use-this:
 
-Why should I use this reference?
+Why should you use this reference?
 ==================================================
 
 .. sql-spark-why-should-i-use-this-start
@@ -93,7 +93,7 @@ General
 **Do**
 
 * Use consistent and descriptive identifiers and names.
-* Include comments in SQL code where necessary. Use the C style opening ``/*`` and closing ``*/`` where possible; otherwise precede comments with ``--`` and finish them with a new line.
+* Include comments in SQL code where necessary. Use the C style opening ``/*`` and closing ``*/`` where possible. Otherwise precede comments with ``--`` and finish them with a new line.
 * Make judicious use of white space and indentation to make code easier to read.
 * Store ISO-8601 compliant date and time information (YYYY-MM-DD HH:MM:SS.SSSSS).
 * Try to use only standard SQL functions instead of vendor-specific functions for reasons of portability.
@@ -1678,7 +1678,7 @@ A common use in Amperity might look like this:
      ORDER BY merged_date DESC
    ) AS email_address,
 
-It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Alternately: "Give me the most recent email address for each customer." The window function bits do the following:
+It says "Group the records by amperity_id, and for each group return the one with the latest merged_date". Alternately: "Return the most recent email address for each customer." The window function bits do the following:
 
 * **FIRST_VALUE(<field name>)** The **FIRST_VALUE()** window function picks the first record out of some set of records. In this case, it is selecting from the window or partition, whichever is defined next.
 * **OVER()** The **OVER()** function sets up the window in which records are found. This function should include both **PARTITION BY** and **ORDER_BY** functions.
@@ -2463,16 +2463,16 @@ Use the **CONCAT_WS(separator, [string | array(string)]+** function to return a 
 
 .. _sql-spark-function-concat-ws-example-combine-postal-codes:
 
-Combine five- and four-digit postal codes
+Combine five and four digit postal codes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sql-spark-function-concat-ws-example-combine-postal-codes-start
 
-Some data sources do not contain fields for complete postal codes and instead contain fields that separate the five- and four-digit codes. Some use cases require a single field for postal codes that includes both components, after which the **postal** semantic tag is applied.
+Some data sources do not contain fields for complete postal codes and instead contain fields that separate the five and four digit codes. Some use cases require a single field for postal codes that includes both components, after which the **postal** semantic tag is applied.
 
 The following example shows how to use a **CASE** statement to do the following:
 
-#. Find situations where the five- and four-digit codes are both present, and then combine them.
+#. Find situations where the five and four digit codes are both present, and then combine them.
 #. Find situations where only the five-digit code is present, and then use only the five-digit code.
 #. Uses the **CONCAT_WS** function to return "zip_code" and "zip_code_plus_four" separated by "-".
 #. Use **NULL** for situations where the five-digit code is not present.
@@ -2497,7 +2497,7 @@ The following example shows how to use a **CASE** statement to do the following:
 
 .. _sql-spark-function-concat-ws-example-build-single-field:
 
-Combine five- and four-digit postal codes
+Combine five and four digit postal codes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sql-spark-function-concat-ws-example-build-single-field-start

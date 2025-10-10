@@ -210,7 +210,7 @@ Add destination
 
    Include header rows.
 
-   The sequence of files that are sent to |destination-name| does matter. Heirarchy is used to determine, for example, categories and sub-categories; stores should be loaded before employees because an employee is assigned to a store.
+   The sequence of files that are sent to |destination-name| does matter. Heirarchy is used to determine, for example, categories and sub-categories. Stores should be loaded before employees because an employee is assigned to a store.
 
 .. destination-tulip-add-destination-important-end
 

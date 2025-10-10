@@ -33,7 +33,7 @@ What a feed does:
 What a feed needs:
 
 #. An input data source, typically (but not always) managed by a courier.
-#. A 1:1 relationship with a courier for large data sources; couriers are run in parallel whereas feeds run sequentially.
+#. A 1:1 relationship with a courier for large data sources. Couriers are run in parallel whereas feeds run sequentially.
 #. Correctly tagged :ref:`foreign keys <semantics-key-foreign>`, especially if the field associated with that key is shared across feeds. This is because most tenants deterministically match on foreign keys.
 
    .. tip:: You can have any number of feeds populated in a courier. However, it is recommended to keep one feed per courier if possible, because couriers can be parallelized, but feeds within a courier are run sequentially.
@@ -220,7 +220,7 @@ Decimal
 
 Use the **decimal** field type for fields that require precision, such as prices or message sizes. Decimal type precision is automatically set to 38. Scale is the number of digits following the decimal point and is configurable from 0 to 37.
 
-You may configure a field for a specific precision scale; you may apply that scale to all decimal field types in the same feed. For example:
+You may configure a field for a specific precision scale. You may apply that scale to all decimal field types in the same feed. For example:
 
 * 1.50 (prices)
 * 1874.38 (message sizes)
@@ -355,7 +355,7 @@ Apply a similar pattern to every data source your tenant chooses to bring into A
 
 .. tip:: Use semantic tags to define consistency across all of the data sources that your brand chooses to make available to Amperity.
 
-   Many brands often choose to provide a wide range of data sources, including those with quality or completeness issues; applying semantic tags to all data sources, including lower quality or incomplete data sources, makes them usable for building complete and accurate customer profiles.
+   Many brands often choose to provide a wide range of data sources, including those with quality or completeness issues. Applying semantic tags to all data sources, including lower quality or incomplete data sources, makes them usable for building complete and accurate customer profiles.
 
 .. feeds-semantic-tags-important-end
 
@@ -904,7 +904,7 @@ Delete fields
 
 .. feeds-configure-field-delete-start
 
-A field that is deleted may also be deleted *everywhere* else it appears in Amperity. The process that updates the domain table occurs automatically; additional steps may be required to remove the field from a database table, query, or segment that uses the field. A field may not be deleted when it is a dependency for a primary key.
+A field that is deleted may also be deleted *everywhere* else it appears in Amperity. The process that updates the domain table occurs automatically. Additional steps may be required to remove the field from a database table, query, or segment that uses the field. A field may not be deleted when it is a dependency for a primary key.
 
 .. feeds-configure-field-delete-end
 
@@ -1069,7 +1069,7 @@ Add columns
 
 .. feeds-edit-column-add-start
 
-A column may be added to a feed. Before adding columns, be sure to also add the column to any customer 360 database tables that are using the domain table associated with this feed. Columns on passthrough database tables are opt-in, which means you need to update the passthrough table to ensure all columns are loaded; however, this should only be done after the feed has successfully loaded this data to its domain table.
+A column may be added to a feed. Before adding columns, be sure to also add the column to any customer 360 database tables that are using the domain table associated with this feed. Columns on passthrough database tables are opt-in, which means you need to update the passthrough table to ensure all columns are loaded. However, this should only be done after the feed has successfully loaded this data to its domain table.
 
 .. warning:: Editing column types, column semantics, and column names without considering the downstream effects of those changes may have unintended consequences.
 

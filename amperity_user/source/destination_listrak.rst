@@ -61,7 +61,7 @@ Build query
 
 .. sendto-listrak-build-query-start
 
-.. tip:: |destination-name| requires an email address; you may include additional customer profile attributes.
+.. tip:: |destination-name| requires an email address. You may include additional customer profile attributes.
 
 .. sendto-listrak-build-query-end
 

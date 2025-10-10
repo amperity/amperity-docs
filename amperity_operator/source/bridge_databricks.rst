@@ -316,7 +316,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
 
      - The user who adds tables to a share must:
 
-       * Be a share owner; Databricks recommends to use a group as the share owner.
+       * Be a share owner. Databricks recommends to use a group as the share owner.
        * Have `USE CATALOG <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#use-catalog>`__ |ext_link| *and* `USE SCHEMA <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#use-schema>`__ |ext_link| permissions on the catalog and schema in which the tables are located.
        * Have `SELECT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#select>`__ |ext_link| permissions to each table.
 

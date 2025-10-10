@@ -455,7 +455,7 @@ The **Unified Paid Media** table only contains field associated with customer pr
 
    * - **Amperity ID**
      - String
-     - The unique identifier that is assigned to clusters of customer records that all represent the same individual. Each row in this table is associated with an Amperity ID; rows in this table are not unique by Amperity ID.
+     - The unique identifier that is assigned to clusters of customer records that all represent the same individual. Each row in this table is associated with an Amperity ID. Rows in this table are not unique by Amperity ID.
 
    * - **Address**
      - String

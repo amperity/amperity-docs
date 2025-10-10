@@ -71,7 +71,7 @@ Recommendations
 
 When using JSON files, it is recommend to:
 
-* Do use simple nested data structures; do not use nested array data structures
+* Do use simple nested data structures. Do not use nested array data structures
 
   **DO**
 
@@ -101,7 +101,7 @@ When using JSON files, it is recommend to:
         :end-before: .. formats-json-rfc-8259-end
 
 * Compress files prior to encryption using ZIP, GZIP, or TAR
-* Encrypt files using PGP; compression will not reduce the size of an encrypted file
+* Encrypt files using PGP. Compression will not reduce the size of an encrypted file
 
 .. format-json-pull-data-sources-recommendations-end
 

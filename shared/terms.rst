@@ -30,7 +30,7 @@ This is an example paragraph that shows how to use snippets to include content i
 
 .. term-placeholder-start
 
-.. warning:: This is a placeholder term. Add a real term to the "shared/terms.rst" file. Use a short paragraph, such as: "NAME is a marketing platform that uses email and SMS to market to your high-value customers." One or two sentences is ideal. Three sentences is occasionally fine.
+.. warning:: This is a placeholder term. Add a real term to the ``shared/terms.rst`` file. Use a short paragraph, such as: "NAME is a marketing platform that uses email and SMS to market to your high-value customers." One or two sentences is ideal. Three sentences is occasionally fine.
 
 .. term-placeholder-end
 
@@ -85,7 +85,7 @@ An active query:
 
 * Must have a unique name
 * Remains active until deleted
-* Must be a draft query for editing; a draft query has the same name as the active query, appended with "--Draft"
+* Must be a draft query for editing. A draft query has the same name as the active query, appended with "--Draft"
 * Remains active until edited
 
 .. term-active-segment-end
@@ -99,7 +99,7 @@ An active segment runs from the **Segments** page or run automatically using an 
 
 * Must have a unique name
 * Remains active until deleted
-* Must be a draft segment for editing; a draft segment has the same name as the active segment, appended with "--Draft"
+* Must be a draft segment for editing. A draft segment has the same name as the active segment, appended with "--Draft"
 * Remains active until activated
 
 .. term-active-segment-end
@@ -471,8 +471,8 @@ Do not use.
 .. 
 .. notes
 .. two descriptions
-.. 1) generic and a better "intro"; use this one in most places
-.. 2) specific to columns in Stitch output that contain the amperity_id; use this in data table references and other situations with a reference to this column, such as from within a segment/query
+.. 1) generic and a better "intro". Use this one in most places
+.. 2) specific to columns in Stitch output that contain the amperity_id. Use this in data table references and other situations with a reference to this column, such as from within a segment/query
 .. 
 
 .. term-amperity-id-start
@@ -2217,7 +2217,7 @@ Display & Video 360 (DV360) enables advertising on connected TVs (CTVs), such as
 
 **Domain SQL**
 
-.. TODO: Do not use; describes running Spark SQL against domain tables.
+.. TODO: Do not use. Describes running Spark SQL against domain tables.
 
 .. term-domain-sql-start
 
@@ -2290,7 +2290,7 @@ A draft segment is any segment that is not an active segment. A draft segment:
 * Is the default type for any segment that added to Amperity
 * Exists in a draft state until activated
 * May exist indefinitely
-* Appends "--Draft" when it is a working copy of an existing active segment; only a single working copy of an active segment may exist at any time
+* Appends "--Draft" when it is a working copy of an existing active segment. Only a single working copy of an active segment may exist at any time
 * Is auto-saved
 * Allows downloading results as a CSV file
 * Runs within the **Segment Editor**
@@ -6837,7 +6837,7 @@ An undercluster--a false negative--occurs when distinct records are incorrectly 
 .. 
 .. https://www.thetradedesk.com/us/about-us/industry-initiatives/unified-id-solution-2-0
 .. 
-.. #. Hashed and encrypted email addresses; regular rotation of decryption keys
+.. #. Hashed and encrypted email addresses. Regular rotation of decryption keys
 .. #. Consumers can view and manage preferences and opt out at any time
 .. #. Code of conduct
 .. #. Open-source and works across all devices and browsers

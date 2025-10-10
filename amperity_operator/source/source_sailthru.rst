@@ -135,7 +135,7 @@ The feed and domain table will match the fields defined in the `GET user profile
 * **click_time**
 * **create_time**
 * **device**
-* **email** (assigned the **email** semantic tag; this field is also the unique identifier)
+* **email** (assigned the **email** semantic tag. This field is also the unique identifier)
 * **engagement**
 * **lifetime_click**
 * **lifetime_message**

@@ -53,18 +53,20 @@ If you receive a notification error, review the details, and then click the **Vi
 
 .. workflow-actions-common-table-section-two-start
 
-On the **Workflows** page, review the individual steps to determine which steps have errors that require your attention, and then click **Show Resolutions** to review the list of workflow actions that were generated for this error.
+On the **Workflows** page, review the individual steps to determine which steps have errors that require your attention, and then click **Show Resolutions** to review the list of workflow actions generated for this error.
 
 .. workflow-actions-common-table-section-two-end
 
 **IMAGE IS HERE**
 
 
+.. vale off
 
+**TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
+**TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
+**TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
 
-**TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
-**TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
-**TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
+.. vale on
 
 .. workflow-actions-common-table-section-three-a-start
 
@@ -167,7 +169,7 @@ To resolve this error, verify name of the Amazon S3 bucket, and then update the 
 
 .. workflow-actions-files-generic-missing-file-start
 
-An archive that does not contain a file that is expected to be within an archive will return a workflow error; Amperity will be unable to complete the workflow until the issue is resolved.
+An archive that does not contain a file that is expected to be within an archive will return a workflow error. Amperity will be unable to complete the workflow until the issue is resolved.
 
 To resolve this error, do the following.
 
@@ -189,7 +191,7 @@ To resolve this error, do the following.
 
 .. workflow-actions-files-unable-to-decompress-file-start
 
-An archive that cannot be decompressed will return a workflow error; Amperity will be unable to complete the workflow until the issue is resolved.
+An archive that cannot be decompressed will return a workflow error. Amperity will be unable to complete the workflow until the issue is resolved.
 
 This issue may be shown when the name of the archive does not match the name of the configured archive or when Amperity is attempting to decompress a file and not an archive. In some cases, the contents of the archive file may be the reason why Amperity is unable to decompress the archive.
 
@@ -250,7 +252,7 @@ To resolve this error, verify the PGP key.
 #. Open the **Sources** page.
 #. Review the details for the PGP key.
 
-   If the PGP key is correct, verify that the file that is associated with this workflow error was encrypted using the correct PGP key. If necessary, upload a new file.
+   If the PGP key is correct, verify that the file associated with this workflow error is encrypted using the correct PGP key. If necessary, upload a new file.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. workflow-actions-generic-pgp-error-end
@@ -264,7 +266,7 @@ To resolve this error, verify the PGP key.
 
 .. workflow-actions-generic-status-401-start
 
-A "Status 401" error is an authorization error: Amperity was unable to connect to |destination-name|. This *may* be a transient error; however, this type of error is more likely caused by a configuration issue within Amperity. For example, the currently-configured API key is invalid because the API key was rotated.
+A "Status 401" error is an authorization error: Amperity is unable to connect to |destination-name|. This *may* be a transient error. However, this type of error is more likely caused by a configuration issue within Amperity. For example, the configured API key is invalid because of a rotated API key.
 
 To resolve this error, verify that the credentials required by this workflow are valid.
 
@@ -301,19 +303,19 @@ Microsoft Azure may be configured to use a shared access signature (SAS) to gran
 
 An SAS token may have invalid permissions for any of the following situations:
 
-#. The SAS token may be configured incorrectly within Amperity. For example: an extra character within or at at the end of the SAS token. Verify the string, and then make any updates that are required for the credentials within Amperity.
+#. The SAS token may be configured incorrectly within Amperity. For example: an extra character within or at the end of the SAS token. Verify the string, and then make any updates that are required for the credentials within Amperity.
 
-#. The permissions for the SAS token were configured incorrectly. Amperity requires an SAS token to be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+#. The permissions for the SAS token are configured incorrectly. Amperity requires an SAS token to be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
 
-#. The SAS token may have expired or the signing key associated with the SAS token may have been rotated.
+#. The SAS token may have expired or the signing key associated with the SAS token may have rotated.
 
-   These situations requires generating a new SAS token, and then updating the credentials in Amperity.
+   These situations require generating a new SAS token, and then updating the credentials in Amperity.
 
 .. workflow-actions-azure-sas-invalid-permissions-end
 
 .. workflow-actions-azure-sas-report-problem-start
 
-.. note:: If the shared access signature was provisioned by Amperity, please use the "Report a problem" feature in Amperity to contact your Amperity Support team and ask for help resolving this workflow issue.
+.. note:: If the shared access signature is provisioned by Amperity, please use the "Report a problem" feature in Amperity to contact your Amperity Support team and ask for help resolving this workflow issue.
 
    The "Report a problem" option is available from the |fa-help-circle| menu in the top navigation.
 
@@ -325,9 +327,9 @@ To resolve this error, determine the cause for the invalid permissions error.
 
 #. Do one or more of the following:
 
-   Verify that the SAS token was configured correctly within Amperity.
+   Verify that the SAS token is configured correctly within Amperity.
 
-   Verify the permissions that have been assigned to the SAS token. This can be done from the Microsoft Azure Portal or by using `Azure Storage Explorer <https://azure.microsoft.com/en-in/products/storage/storage-explorer/>`__ |ext_link|. The policy for the SAS token must be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+   Verify the permissions assigned to the SAS token. This can be done from the Microsoft Azure Portal or by using `Azure Storage Explorer <https://azure.microsoft.com/en-in/products/storage/storage-explorer/>`__ |ext_link|. The policy for the SAS token must be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
 
    Verify that the SAS token and the signing key associated with the SAS token is valid and has not expired. If either have expired, generate a new SAS token (using a new signing key, if necessary).
 
@@ -352,7 +354,7 @@ The SFTP site at |sftp-hostname| is unavailable. This may be due to any of the f
 * A configuration error within Amperity.
 * The SFTP server is unavailable or unresponsive.
 * The SFTP server does not have enough storage space.
-* Too many connection attempts were made to the SFTP server.
+* Too many connection attempts are made to the SFTP server.
 
 .. note:: Amperity will make multiple attempts to connect to an SFTP server before showing this workflow error.
 

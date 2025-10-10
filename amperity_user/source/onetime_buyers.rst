@@ -140,7 +140,7 @@ Test the campaign
 
 .. onetime-buyers-howto-test-start
 
-Start your one-time buyer campaign by blending your welcome series with follow-up messages at 7 days and 14 days. These messages do not require a hard sell; you are working to build a long-term relationship and that requires a soft touch, the right message, and the right offer.
+Start your one-time buyer campaign by blending your welcome series with follow-up messages at 7 days and 14 days. These messages do not require a hard sell. You are working to build a long-term relationship and that requires a soft touch, the right message, and the right offer.
 
 .. image:: ../../images/ampiq-onetime-buyers-test.png
    :width: 600 px

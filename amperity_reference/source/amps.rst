@@ -378,8 +378,8 @@ Monitor consumption for the **Ingest** feature by:
 * Monitoring ingest runtimes from the **Workflows** page
 * Preferring file formats that are partitioned, such as Apache Parquet, over file formats that are not, such as CSV
 * Using Amperity Bridge to sync large volumes of data instead of loading that same volume as a flat file
-* Review ingest queries to help ensure they are simple and efficient; complex or inefficient SQL within an ingest query increases Amps consumption
-* Configuring courier groups to ingest files only when necessary; for example, some files must be ingested daily, but others might only need to be ingested weekly or monthly
+* Review ingest queries to help ensure they are simple and efficient. Complex or inefficient SQL within an ingest query increases Amps consumption
+* Configuring courier groups to ingest files only when necessary. For example, some files must be ingested daily, but others might only need to be ingested weekly or monthly
 
 .. amps-consumption-feature-ingest-end
 
@@ -577,7 +577,7 @@ Storage for the **Predictive modeling** feature is determined by:
 
 * The amount of data that is configured and made available to predictive modeling
 
-  .. note:: Amperity trains models every two weeks; Amps consumption for predictive modeling increases during model training.
+  .. note:: Amperity trains models every two weeks. Amps consumption for predictive modeling increases during model training.
 
 Monitor consumption for the **Predictive modeling** feature by:
 
@@ -673,7 +673,7 @@ Amps consumption for the **Campaigns** feature is determined by:
 
 * The frequency at which campaigns are run
 * The complexity of SQL queries that are used by a campaign
-* The number of individual segments that are run within each campaign; a campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output; each segment that is run within a campaign will consume Amps
+* The number of individual segments that are run within each campaign. A campaign starts with a top-level audience, applies exclusions, uses additional segments to apply subaudiences by destination and use case, then finally appends relevant fields to the output. Each segment that is run within a campaign will consume Amps
 * The amount of data being sent from Amperity to a downstream location
 
 Storage for the **Campaigns** feature is primarily determined by:
@@ -682,7 +682,7 @@ Storage for the **Campaigns** feature is primarily determined by:
 
 Monitor consumption for the **Campaigns** feature by:
 
-* Reviewing audience sizes; larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes takes longer to run and will consume more Amps
+* Reviewing audience sizes. Larger segments take longer to analyze and campaigns that have more subaudiences, criteria, or configured attributes takes longer to run and will consume more Amps
 * Monitoring workflows that contain recurring campaigns from the **Workflows** page
 * Monitoring the frequency and runtime duration for campaigns that are run automatically from the **Usage** page
 * Reviewing the customer profiles and records sent from the **Usage** page
@@ -708,7 +708,7 @@ Amps consumption for the **Journeys** feature is determined by:
 
 Monitor consumption for the **Journeys** feature by:
 
-* Reviewing audience sizes; larger segments take longer to analyze and journeys that have many branching paths takes longer to run and will consume more Amps
+* Reviewing audience sizes. Larger segments take longer to analyze and journeys that have many branching paths takes longer to run and will consume more Amps
 * Limiting the number of records that are maintained in the journeys activation state table by ensuring that journeys sent from Amperity are actively used by your brand's downstream use cases
 
 .. amps-consumption-feature-journeys-end

@@ -211,20 +211,24 @@ All databases are managed from the **Customer 360** page.
    :align: left
    :class: no-scaled-link
 
+.. vale off
+
 .. start-here-build-databases-components-start
 
-After you have build your customer 360 database and it is running against a representative collection of your data sources, you can start to look at extending the database for additional workflows and use cases, such as:
+After you have built your customer 360 database and it is running against a representative collection of data sources, start to look at extending the database for additional workflows and use cases. For example:
 
 #. Blocklisting values from Stitch or from customer 360 data
-#. Applying specific labels to data 
+#. Applying specific labels to data
 #. Adding calculations
-#. Extending data to focus on address-based householding, first-party, third-party data
+#. Extending data to focus on address-based householding, first-party, or third-party data
 #. Adding CCPA or GDPR privacy rights workflows
 #. Extending for customer interactions, such as order-level and item-level transactions data and product catalogs
 #. Workflow-specific databases or tables to support PII consolidation or master data management (MDM) use cases
 #. Adding support to enable additional Amperity features
 
 .. start-here-build-databases-components-end
+
+.. vale on
 
 
 .. _start-here-run-queries:

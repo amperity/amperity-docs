@@ -531,7 +531,7 @@ Standard core tables belong to one of the following broad categories:
           :start-after: .. term-stitch-qa-tables-start
           :end-before: .. term-stitch-qa-tables-end
 
-       Some Stitch QA tables are required by databases that are configured as customer 360 databases; most are only available from databases that are configured as a Stitch QA database.
+       Some Stitch QA tables are required by databases that are configured as customer 360 databases. Most are only available from databases that are configured as a Stitch QA database.
 
 .. databases-core-table-type-standard-end
 
@@ -837,7 +837,7 @@ Add databases
 
 .. databases-database-howto-add-databases-start
 
-Amperity supports a wide variety of database types, including customer 360- and quality-focused databases your brand can build from templates, to help your brand (or brands) better understand your customers.
+Amperity supports a wide variety of database types, including customer 360 and quality focused databases your brand can build from templates, to help your brand (or brands) better understand your customers.
 
 .. databases-database-howto-add-databases-end
 

@@ -239,8 +239,6 @@ Itemized transactions
 
        Review the list of semantic tags that are available for **txn-items/** and ensure that data sources that contain your brand's purchase histories for your customers have these tags applied.
 
-       .. important:: Something_about_product_catalogs_goes_here. We support txn-items/product catalogs, but also pc/product catalogs. Can you do both to get both outcomes?
-
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px

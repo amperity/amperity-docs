@@ -17,9 +17,13 @@ ADD THIS TO END OF GET DETAILS FOR ALL SOURCES AND CLEAN UP GET DETAILS
 
 **TEMPLATE SECTIONS FOR DATA SOURCES**
 
+.. vale off
+
 The templated sections for all of the "Pull from xxxxx" topics in /operator/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
 
 In certain cases, a source topic requires *some* customization within the templated sections. See the Salesforce Sales Cloud topic, **Run courier manually** section for how to do this.
+
+.. vale on
 
 .. sources-overview-list-intro-start
 
@@ -439,7 +443,7 @@ Load operations must specify each table that is pulled to Amperity from |source-
 
 .. 
 .. each source has its own example operation that should go in this spot
-.. do not pull it to the file; each of these is unique
+.. do not pull it to the file. Each of these is unique
 .. 
 
 .. source-xxxxx-add-load-operations-example-start
@@ -563,8 +567,7 @@ Run the courier again. This time, because the load operations are present and th
 
 
 SOURCES
-SOURCES
-SOURCES
+
 
 .. TODO: This is the sections for the templated content for adding sources in /operator/. These sections allow for bespoke steps, as Step 3, but may have more if they are more complicated. Try to keep the bespoke content within Step 3 as much as possible for consistency.
 
@@ -831,7 +834,7 @@ Use the **Truncate and upsert** option to delete all records in the existing tab
 Use the feed editor to do all of the following:
 
 * Set the primary key
-* Choose the field that best presents when the data in the table was last updated; if there is not an obvious choice, use the "Generate an updated field" option.
+* Choose the field that best presents when the data in the table was last updated. If there is not an obvious choice, use the "Generate an updated field" option.
 * For each field in the incoming data, validate the field name and semantic tag columns in the feed. Make any necessary adjustments.
 * For tables that contain customer records, enable the "Make available to Stitch" to ensure the values in this data source are used for identity resolution.
 

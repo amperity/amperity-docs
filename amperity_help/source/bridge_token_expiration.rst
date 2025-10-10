@@ -1,4 +1,4 @@
-.. no title; include these back into datagrid/configure_bridge (or however this ends up)
+.. no title. include these back into datagrid/configure_bridge (or however this ends up)
 
 .. tooltip-bridge-token-expiration-start
 

@@ -203,7 +203,7 @@ The primary key for the audience. Set to |audience-primary-key|.
 
 Applies to: all destinations.
 
-.. TODO: These two settings are in an admonition block in docs pages; definition list in modals.
+.. TODO: These two settings are in an admonition block in docs pages. Definition list in modals.
 
 .. setting-common-business-user-access-allow-start
 
@@ -1549,6 +1549,8 @@ The name of a segment in |destination-name| managed by Amperity.
 
 **Listrak default list name** (applies to SMS also)
 
+.. vale off
+
 .. setting-listrak-default-list-name-start
 
 |destination-name| uses a list named "Master List" by default, but allows custom lists to be created. Verify the name of the list in |destination-name| before configuring this destination in Amperity.
@@ -1556,6 +1558,10 @@ The name of a segment in |destination-name| managed by Amperity.
 If you are not sure which lists should be managed by Amperity, work with your Listrak representative to determine the best approach for list management.
 
 .. setting-listrak-default-list-name-end
+
+.. vale on
+
+
 
 
 
@@ -1584,7 +1590,7 @@ The sender code ID is provided by |destination-name|. Ask your |destination-name
 
 The SMS list ID for a list in |destination-name|.
 
-The SMS list ID is available from the |destination-name| user interface. Open the **Contacts** menu, and then choose **SMS Lists**. Open a list. The SMS list ID is available in the URL for the list after the equals symbol.
+The SMS list ID is available from the |destination-name| user interface. Open the **Contacts** menu, and then choose **SMS Lists**. Open a list. The SMS list ID is available in the URL of the list after the equals symbol.
 
 .. setting-listrak-sms-phone-list-id-end
 

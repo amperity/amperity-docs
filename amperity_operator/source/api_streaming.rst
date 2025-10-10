@@ -61,7 +61,7 @@ Rate limits
 
 The Streaming API has the following rate limits.
 
-.. note:: Rate limits are not shared between production and sandboxes; each sandbox has its own rate limit.
+.. note:: Rate limits are not shared between production and sandboxes. Each sandbox has its own rate limit.
 
 .. list-table::
    :widths: 30 70
@@ -405,7 +405,7 @@ The Streaming API has the following HTTP status codes:
    * - **400**
      - Request malformed.
 
-       .. note:: XML payloads are not checked synchronously; a 202 response does not guarantee that XML payloads will be parsable downstream.
+       .. note:: XML payloads are not checked synchronously. A 202 response does not guarantee that XML payloads will be parsable downstream.
      - No
    * - **401**
      - Unauthorized. JWT could not be verified or is expired.

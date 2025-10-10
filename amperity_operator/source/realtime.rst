@@ -86,9 +86,9 @@ Real-time table limitations
 Real-time tables have the following limitations:
 
 #. Streamed data takes up to 2 minutes to appear in a real-time table.
-#. Events that match part of the schema for a real-time table appears in a real-time table; events that do not match the schema will not.
+#. Events that match part of the schema for a real-time table appears in a real-time table. Events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
-#. Data is loaded to real-time tables as an append; data may not be deleted from a real-time table.
+#. Data is loaded to real-time tables as an append. Data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
 #. Real-time tables may be used with the Profile API, but data that is available from a Profile API endpoint is only as current as of the most recent refresh of the index for that Profile API endpoint.
 
@@ -146,7 +146,7 @@ Streaming endpoints are managed from the **Sources** page.
 
 .. TODO: Gotta update api_streaming.rst with a "Send to real-time tables" section.
 
-.. TODO: Gotta update api_streaming.rst to say "#. JSON (preferred), which converts streaming data to NDJSON; required for real-time tables" instead of "#. JSON (preferred), which converts streaming data to NDJSON"
+.. TODO: Gotta update api_streaming.rst to say "#. JSON (preferred), which converts streaming data to NDJSON. Required for real-time tables" instead of "#. JSON (preferred), which converts streaming data to NDJSON"
 
 .. TODO: Link to api_streaming page, and then add admonition about setting up the keys. Just link to each section.
 

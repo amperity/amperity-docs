@@ -173,7 +173,7 @@ It is easy to send documentation feedback:
 
 #. Click the feedback button.
 #. Type your feedback.
-#. A valid email address is required. Provide your email address or use ``docs@amperity.com`` to send your feedback anonymously. We will review your feedback and address all feedback.
+#. A valid email address is required. Provide your email address or use ``docs@amperity.com`` to send your feedback anonymously. The docs team will review your feedback and will address all feedback.
 
    .. important:: If you have a genuine support issue, please click the **Get Support** link in the site navigation, and then follow the directions listed there, or contact your Amperity representative directly.
 #. Send your feedback. Thank you.

@@ -73,7 +73,7 @@ How activations work
 
 #. **Choose the activation type**
 
-   Selecting **Campaigns** opens the campaigns list and editor; selecting **Journeys** opens the Journeys list and the visual canvas.
+   Selecting **Campaigns** opens the campaigns list and editor. Selecting **Journeys** opens the Journeys list and the visual canvas.
 
 #. **Define the audience**
 

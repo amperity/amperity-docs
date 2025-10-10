@@ -17,6 +17,8 @@
 Abbreviations, initialisms
 ==================================================
 
+.. vale off
+
 The following list combines industry-standard abbreviations and initialisms with others that are specific to |company_name|.
 
 .. list-table::
@@ -337,3 +339,5 @@ The following list combines industry-standard abbreviations and initialisms with
      - Yet Another Resource Manager
    * - **YCSB**
      - Yahoo! Cloud Serving Benchmark
+
+.. vale on

@@ -36,7 +36,7 @@ User access to Amperity is managed in two steps:
 #. Authentication determines and validates who the user is.
 #. Authorization determines what that user is allowed to do.
 
-An unauthorized user may not access Amperity; an authorized user may only view and interact with the areas within Amperity to which their policy allows access.
+An unauthorized user may not access Amperity. An authorized user may only view and interact with the areas within Amperity to which their policy allows access.
 
 .. settings-users-context-end
 

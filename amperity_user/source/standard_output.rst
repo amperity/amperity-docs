@@ -943,7 +943,7 @@ The following attributes are available from the **Unified Itemized Transaction**
 
    Product catalog attributes describe all of the products, categories, and sub-categories that exist within your brand.
 
-   Common product attributes include **Product Category**, **Product Description**, **Product ID**, and **Product Subcategory**; however, product catalogs are often tenant-specific and you should expect to see additional product attributes that are unique to your tenant.
+   Common product attributes include **Product Category**, **Product Description**, **Product ID**, and **Product Subcategory**. However, product catalogs are often tenant-specific and you should expect to see additional product attributes that are unique to your tenant.
 
 .. standard-output-unified-itemized-transactions-note-end
 

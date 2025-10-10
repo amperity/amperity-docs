@@ -431,7 +431,7 @@ You can add a comments to a SQL query to explain sections or to prevent executio
 .. queries-add-comment-to-query-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor**.
-#. Select a row in the SQL query to which a comment will be added. A row must have content; you may need to add the comment first, and then comment it out.
+#. Select a row in the SQL query to which a comment will be added. A row must have content. You may need to add the comment first, and then comment it out.
 
    -- OR --
 

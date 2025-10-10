@@ -77,7 +77,7 @@ Get details
           :alt: Detail one.
           :align: left
           :class: no-scaled-link
-     - For passphrase credentials, the passphrase; for private key credentials, the private key.
+     - For passphrase credentials, the passphrase. For private key credentials, the private key.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

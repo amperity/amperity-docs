@@ -2727,10 +2727,14 @@ M
 
 .. _m-mdm:
 
+.. vale off
+
 **master data management (MDM)**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-mdm-start
       :end-before: .. term-mdm-end
+
+.. vale on
 
 
 .. _m-match-category:
