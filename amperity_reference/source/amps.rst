@@ -744,7 +744,7 @@ Data sent to cloud storage
 
 Amps consumption for cloud storage--Amazon S3, Google Cloud Storage, Microsoft Azure, and SFTP--is determined by the amount of data sent from Amperity cloud storage.
 
-.. note:: Amps consumption for data sent to :ref:`managed connectors <amps-consumption-feature-managed-connectors>` is its own category.
+.. note:: Amps consumption for data sent to managed connectors is its own category.
 
 Monitor Amps consumption for cloud storage by:
 
