@@ -465,7 +465,7 @@ Use the **loy/** and **loy-event/** semantic tag collections to apply semantic t
 
 .. semantics-profile-type-loyalty-make-available-to-stitch-start
 
-.. important:: Loyalty profiles are unique by Amperity ID; loyalty events are unique by Amperity ID and event datetime when:
+.. important:: Loyalty profiles are unique by Amperity ID. Loyalty events are unique by Amperity ID and event datetime when:
 
    #. The **fk-loyalty-id** semantic tag is applied to the same source fields as the **loy/loyalty-id** and **loy-event/loyalty-id** fields.
    #. The **loy/email** and **loy-event/email** semantic tags are applied to fields that contain email addresses.
@@ -1174,7 +1174,7 @@ Customer keys (ck)
 
 .. tip:: What happens to customer keys in the **Unified Coalesced** table?
 
-   * Records may have NULL customer keys; NULL customer keys are ignored by Stitch.
+   * Records may have NULL customer keys. NULL customer keys are ignored by Stitch.
    * There may be only one customer key per data source.
    * There may be multiple customer keys per Amperity ID. This is because customer keys may also be tagged as foreign keys.
 
@@ -1324,7 +1324,7 @@ Primary keys (pk)
 
    * Each record in the **Unified Coalesced** table must have a primary key.
    * A primary key is unique within a data source, but that primary key may not be unique across all data sources.
-   * There can be only one primary key per data source; each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
+   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
    * Each record in the **Unified Coalesced** table may only be associated with a single Amperity ID.
 
 .. semantics-key-primary-tip-end

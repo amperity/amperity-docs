@@ -37,7 +37,7 @@ After you specify a date range you may apply filters to focus in on specific pro
 
    Consider all of your brands and all of the products in your product catalog and all of your stores and your website. Consider the percentage of all of your customers who may have purchased within any time window. And then consider the number of customers you have in your Customer 360.
 
-   For example, let's say you have 1,000,000 customers in your Customer 360. If you configure **Has Not Purchased** to return only customers who purchased last month, that might be 8,000 customers.
+   For example, you have 1,000,000 customers in your Customer 360. If you configure **Has Not Purchased** to return only customers who purchased last month, that might be 8,000 customers.
 
    **Has Not Purchased** compares the list of customers who did purchase to your total list of customers, and then returns the difference. In this example that difference is 992,000 customers.
 
@@ -168,7 +168,7 @@ As you add filters to **Has Not Purchased** the size of the audience that is ret
 
 This series of diagrams steps through and shows you why your audience gets larger as you apply more filters. On the left side is the **Unified Itemized Transactions** table and on the right side is the **Merged Customers** table.
 
-#. The following diagram shows just one filter (the white inner circle). Let's say that filter is purchase channel and that you chose "online":
+#. The following diagram shows just one filter (the white inner circle). For example, filter is purchase channel and the channel type is "online":
 
    .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-1.png
       :width: 500 px
@@ -178,7 +178,7 @@ This series of diagrams steps through and shows you why your audience gets large
 
    The results of **Has Not Purchased** will return "all of your customers who did not purchase from your website."
 
-#. The following diagram shows a *second* filter. Let's say this one adds product category and that you chose "shirts":
+#. The following diagram shows a *second* filter. For example, product category and category type of "shirts":
 
    .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-2.png
       :width: 500 px
@@ -188,7 +188,7 @@ This series of diagrams steps through and shows you why your audience gets large
 
    The results from the **Unified Itemized Transactions** table is smaller because only purchases that exist in both filters are returned. This means the results for **Has Not Purchased** will be larger and return "all of your customers who did not purchase a shirt from your website."
 
-#. The following diagram shows a *third* filter. Let's say this one adds product gender and that you chose "F":
+#. The following diagram shows a *third* filter. For example, product gender and "F":
 
    .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-3.png
       :width: 500 px

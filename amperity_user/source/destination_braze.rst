@@ -25,7 +25,7 @@ Send query results to Braze
 
 .. destination-braze-context-start
 
-You can send customer profile and custom attributes to |destination-name| using a query and orchestration. Build a SQL query that returns a list of active customers, and then associate that list of active customers with the custom attributes that you want to send to |destination-name| from Amperity. Send the results of a query for active customers as often as you need; send updates for all custom attributes on a less frequent basis.
+You can send customer profile and custom attributes to |destination-name| using a query and orchestration. Build a SQL query that returns a list of active customers, and then associate that list of active customers with the custom attributes that you want to send to |destination-name| from Amperity. Send the results of a query for active customers as often as you need. Send updates for all custom attributes on a less frequent basis.
 
 .. destination-braze-context-end
 
@@ -182,7 +182,7 @@ Use the query editor to filter by the user identifier associated with your segme
 
 For example, ACME wants to manage custom attributes in |destination-name| by sending customer profile attributes, along with set of purchase history attributes. The following example uses the following standard output tables:
 
-#. **Merged Customers** for customer profile attributes; the table uses the Amperity ID to ensure the |destination-name| table is unique by Amperity ID and also to provide to |destination-name| the Amperity ID as the "extern_id", which is a required attribute
+#. **Merged Customers** for customer profile attributes. The table uses the Amperity ID to ensure the |destination-name| table is unique by Amperity ID and also to provide to |destination-name| the Amperity ID as the "extern_id", which is a required attribute
 
    .. note:: The following query shows a field in **Merged Customers** that returns a customer's opt status. This field might be somewhere else in your tenant. It is important to filter your query to include *only* customers who are opted in to reduce the number of data points that are updated when you send custom attributes to |destination-name|.
 #. **Transaction Attributes Extended** for purchase history attributes

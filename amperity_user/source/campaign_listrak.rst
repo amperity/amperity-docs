@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Listrak Email
 .. |what-send| replace:: email address
 .. |what-enable| replace:: **email**
-.. |attributes-sent| replace:: |destination-name| requires email addresses; you may include additional customer profile attributes.
+.. |attributes-sent| replace:: |destination-name| requires email addresses. You may include additional customer profile attributes.
 
 
 .. meta::

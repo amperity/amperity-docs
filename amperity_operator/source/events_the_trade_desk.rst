@@ -407,7 +407,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
      - Description
 
    * - **cat**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **item_code**, **name**, **price**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with offline events. See **item_code**, **name**, **price**, and **qty**.
 
        The name of a product in your product catalog.
 
@@ -467,7 +467,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **eventname**
-     - **Optional**; **Required** for sending product catalogs alongside offline events.
+     - **Optional**, but **Required** for sending product catalogs alongside offline events.
 
        An event name groups your brand's offline events a specific category type for offline events as defined by |destination-name|.
 
@@ -517,7 +517,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **item_code**
-     - **Optional**; **Required** when transaction details are included with offline events. See **cat**, **name**, **price**, and **qty**.
+     - **Optional**, but **Required** when transaction details are included with offline events. See **cat**, **name**, **price**, and **qty**.
 
        The unique identifier for a product in your brand's product catalog.
 
@@ -531,7 +531,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **name**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **price**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **price**, and **qty**.
 
        The name of a product in your brand's product catalog.
 
@@ -561,7 +561,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **price**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **name**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **name**, and **qty**.
 
        The price of each item that is associated with an offline event. For example: "$9.99"
 
@@ -575,7 +575,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **qty**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, and **price**.
+     - **Optional**, but **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, and **price**.
 
        The number of items that are associated with an offline event. For example: "10".
 
@@ -590,7 +590,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **region**
-     - **Optional**; **Required** when **country** is included with offline events.
+     - **Optional**, but **Required** when **country** is included with offline events.
 
        The region in which the offline event occurred. For the United States, **region** refers to the state in which the offline event occurred.
 

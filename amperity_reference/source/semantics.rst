@@ -904,7 +904,7 @@ Primary keys (pk)
 
    * Each record in the **Unified Coalesced** table must have a primary key.
    * A primary key is unique within a data source, but that primary key may not be unique across all data sources.
-   * There can be only one primary key per data source; each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
+   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
    * Each record in the Unified Coalesced table may only be associated with a single Amperity ID.
 
 .. semantics-key-primary-tip-end

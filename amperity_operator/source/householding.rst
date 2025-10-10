@@ -461,7 +461,7 @@ Merged Households template
 
    -------------------------------------------------------------------------
    -- Create flag for addresses in bad-values blocklist                   --
-   -- Blocklist_Values is the name of a domain table; verify then update  --
+   -- Blocklist_Values is the name of a domain table. Verify then update  --
    -- For use with downstream filters                                     --
    -------------------------------------------------------------------------
 

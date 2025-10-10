@@ -39,7 +39,7 @@ The default settings are recommended for most situations.
 Stitched tables
 ==================================================
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. TODO: Compare this to reference/stitch_results and sync up. Also image is updated.
 
@@ -344,7 +344,7 @@ Stitch rules for :ref:`clustering records <configure-stitch-rules-cluster>` and 
 General settings
 ==================================================
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-general-start
 
@@ -375,7 +375,7 @@ General settings are divided into the following categories:
 Allowed empty tables
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-allowed-empty-tables-start
 
@@ -403,7 +403,7 @@ The list of tables will match the list of domain tables that have been defined i
 Days of recorded history
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-days-of-recorded-history-start
 
@@ -433,7 +433,7 @@ To update the days of recorded history, open the **Stitch** page, and then click
 Force Stitch to run
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation. Tooltip is paraphrased version of this.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation. Tooltip is paraphrased version of this.
 
 .. configure-stitch-general-stitch-force-start
 
@@ -461,7 +461,7 @@ To force Stitch to run, open the **Stitch** page, and then click **Stitch settin
 Ignore jitter alerts
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-jitter-alerts-start
 
@@ -497,7 +497,7 @@ This setting as **false** in your production tenant as often as possible.
 One-to-one Stitch
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-one-to-one-start
 
@@ -571,7 +571,7 @@ The following table describes the changes you will see in your tenant after it i
 Skip unified changes
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-skip-changes-start
 
@@ -609,7 +609,7 @@ To skip building the unified changes tables, open the **Stitch** page, and then 
 Skip unified scores
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-skip-scores-start
 
@@ -641,13 +641,13 @@ To skip building unified scores, open the **Stitch** page, and then click **Stit
 Stable IDs
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amperity-id-start
    :end-before: .. term-amperity-id-end
 
-.. TODO: Keep the following in sync with a paragraph from the "stable ID assignment" section in /stitch.html; this is customized to link back to that section, but otherwise should have the same words.
+.. TODO: Keep the following in sync with a paragraph from the "stable ID assignment" section in /stitch.html. This is customized to link back to that section, but otherwise should have the same words.
 
 .. configure-stitch-general-stitch-stable-id-explore-start
 
@@ -713,7 +713,7 @@ When large differences are present between clusters of records for the current a
 
 By default, stable ID assignment is based on the edges that exist between current and previous clusters of customer records, weighted by the number of shared primary keys. The shared primary keys are sorted in descending order, after which ties are broken by sorting the cluster IDs in ascending order. Edges are removed when higher-ranked edges are associated to identical clusters of customer records. Edges that survive this ranking are then used to map current cluster IDs to previous cluster IDs. Changes to stable ID assignment are captured in the **Unified Changes Clusters** and **Unified Changes PKs** tables.
 
-In some cases, the differences between the current and previous clusters of customer records is very large, requiring access to a large amount of memory to complete the stable ID assignment process. In this type of situation Stitch processes may take a very long time, or even appear to be stuck; in some cases the Stitch job has run out of memory and need to be rerun. In these situations, do the following:
+In some cases, the differences between the current and previous clusters of customer records is very large, requiring access to a large amount of memory to complete the stable ID assignment process. In this type of situation Stitch processes may take a very long time, or even appear to be stuck. In some cases the Stitch job has run out of memory and need to be rerun. In these situations, do the following:
 
 #. Look for unusual values, such as a large set of identical email address, that appear in the **Unified Coalesced** table. This can sometimes be the cause of slow stable ID assignment. Mitigate the presence of these unusual values, and then run Stitch again.
 #. Increase the number of partitions that are available to Stitch during the stable ID assignment process. You can increase the value of **stable-id-partition-count** to 2-10 partitions to improve the performance of Stitch during stable ID assigment.
@@ -809,7 +809,7 @@ Values can be added to the bad-values blocklist manually for email addresses, ph
 Advanced settings
 ==================================================
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-start
 
@@ -863,11 +863,11 @@ The following settings are available for advanced configuration of Stitch:
 Blocking strategies
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-blocking-strategy-start
 
-Blocking is a non-trivial step for record linking. The default blocking strategy provides a reasonable recall rate for most use cases; work with your Amperity representative to identify the best approaches for tuning your tenant's blocking strategy.
+Blocking is a non-trivial step for record linking. The default blocking strategy provides a reasonable recall rate for most use cases. Work with your Amperity representative to identify the best approaches for tuning your tenant's blocking strategy.
 
 .. tooltip-stitch-config-blocking-strategy-end
 
@@ -979,7 +979,7 @@ Blocking strategies are configured with the following configuration setting:
 Case-sensitive foreign keys
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-case-sensitive-fk-start
 
@@ -1035,7 +1035,7 @@ You can disable automatic bad-value blocklists by updating the configuration to 
 Matching strategy
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-matching-classifier-start
 
@@ -1139,11 +1139,11 @@ When separation key unmatching is the priority, Amperity scores record pairs in 
 Matching thresholds
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-matching-thresholds-start
 
-Matching record pairs are included when they score better than this value. A lower value leads to more matches and weaker pairs; a higher value leads to fewer matches and more precise pairs. Five values may be chosen: 1.0 (weak), 2.0 (moderate), 3.0 (high, default and recommended value), 4.0 (excellent), and 5.0 (exact).
+Matching record pairs are included when they score better than this value. A lower value leads to more matches and weaker pairs. A higher value leads to fewer matches and more precise pairs. Five values may be chosen: 1.0 (weak), 2.0 (moderate), 3.0 (high, default and recommended value), 4.0 (excellent), and 5.0 (exact).
 
 .. tooltip-stitch-config-matching-thresholds-end
 
@@ -1192,7 +1192,7 @@ Matching thresholds are configured with the following configuration setting:
 Pre-processing profiles
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profiles-start
 
@@ -1220,7 +1220,7 @@ The advanced configuration setting for preprocessing profiles is:
 Australian phone numbers
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-australian-phone-start
 
@@ -1238,7 +1238,7 @@ To use Australian phone numbers, use:
 Business email addresses
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-business-email-start
 
@@ -1256,7 +1256,7 @@ To allow business email addresses, use:
 Clean foreign keys
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-clean-foreign-keys-start
 
@@ -1274,7 +1274,7 @@ To clean foreign keys, including trimming whitespace and updating to uppercase, 
 Multiple preprocessing profiles
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-multiple-profiles-start
 
@@ -1292,7 +1292,7 @@ To apply more than one preprocessing profile, use:
 Email addresses
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-email-start
 
@@ -1428,7 +1428,7 @@ Use a bad-values blocklist to configure Amperity to continue ignoring any of the
 Normalize gender
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-normalize-gender-start
 
@@ -1480,7 +1480,7 @@ Configure the semantics for which thresholds are lowered using the **staple-sema
 Stitch reports
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-reports-start
 
@@ -1526,7 +1526,7 @@ For example:
 Graph partitions
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. include:: ../../amperity_help/source/stitch_config_cluster_size.rst
    :start-after: .. tooltip-stitch-config-graph-partitions-start
@@ -1571,11 +1571,11 @@ Amperity defines a supersized cluster as any cluster with 500 or more connection
 Trivial duplicates
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of nearly identical records that share enough matching PII to identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records--the trivial duplicates--are not.
+A trivial duplicate is a set of nearly identical records that share enough matching PII to identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing. The other records--the trivial duplicates--are not.
 
 .. term-trivial-duplicate-end
 
@@ -1706,7 +1706,7 @@ All of the information is identical, except for variations in email addresses th
 
 The maximum allowed number of records with trivial duplicates is set to "10" by default. When the number of records with trivial duplicates is greater than this value, each individual record will be treated as a single record. Since the previous example shows eleven records for Justin Currie, each with a unique value for the email column, eleven individual records would be created.
 
-Semantic exclusions define a threshold over which records like these will be collapsed into a trivial duplicate. For example, let's say you have defined a semantic exclusion for **email** and left the size threshold at "10".
+Semantic exclusions define a threshold over which records like these will be collapsed into a trivial duplicate. For example, you have defined a semantic exclusion for **email** and left the size threshold at "10".
 
 For each unique combination of PII--excluding email addresses--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 10 distinct email addresses, those records are collapsed into a trivial duplicate.
 

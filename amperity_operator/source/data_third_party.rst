@@ -32,7 +32,7 @@ Acquiring third-party data should be an important part of the effort to better u
 
 When third-party data is provided to Amperity alongside rich sets of first-party data, Amperity can support many use cases that can become part of your brand's strategy to build a complete understanding of your customers.
 
-.. note:: Amperity does not directly license third-party data sources and instead offers a solution that can work with third-party data vendors, such as `Infutor <https://infutor.com/>`__ |ext_link| (a recommended partner of Amperity) or the third-party data vendor of your choice. Amperity is focused on first-party data; it is the responsibility of the customer to determine which types of third-party data will be provided to Amperity.
+.. note:: Amperity does not directly license third-party data sources and instead offers a solution that can work with third-party data vendors, such as `Infutor <https://infutor.com/>`__ |ext_link| (a recommended partner of Amperity) or the third-party data vendor of your choice. Amperity is focused on first-party data. It is the responsibility of the customer to determine which types of third-party data will be provided to Amperity.
 
 .. data-third-party-end
 
@@ -44,10 +44,10 @@ Use cases
 
 .. third-party-use-cases-start
 
-There are two broad use-cases for third-party data:
+There are two broad use cases for third-party data:
 
 #. The customer does third-party matching outside of Amperity, and then provides this data to Amperity with fields already append to first-party data or with a unique ID with which Amperity can join third-party data to the results of the identity resolution process.
-#. The customer provides third-party data to Amperity, which is then matched during the Amperity identity resolution process, just like with any other data source. Amperity will link the third- and first-party data together via the Amperity ID.
+#. The customer provides third-party data to Amperity, which is then matched during the Amperity identity resolution process, just like with any other data source. Amperity will link the third-party and first-party data together with the Amperity ID.
 
 The following scenarios describe more specific approaches for using third-party data with Amperity:
 
@@ -241,7 +241,7 @@ A brand with a large brick-and-mortar presence likely has sparse customer data a
 
 .. note:: Third-party data providers often use more PII than last name and the last 4 digits of a credit card to match a brand's record to a customer file. The approaches varies depending on the provider.
 
-Amperity can help with this effort, but the outcome depends on the quality of the match-rate between third- and first-party data. What can improve this scenario is to improve in-store and digital experiences in a way to encourage customers to provide additional information about themselves.
+Amperity can help with this effort, but the outcome depends on the quality of the match-rate between third-party and first-party data. What can improve this scenario is to improve in-store and digital experiences in a way to encourage customers to provide additional information about themselves.
 
 In this scenario:
 

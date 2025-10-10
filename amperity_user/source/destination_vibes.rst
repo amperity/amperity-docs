@@ -91,10 +91,10 @@ Map to Recipient List
 
 A `recipient list <https://developer-platform.vibes.com/docs/recipient-list-import>`__ |ext_link| is a collection of references used as a target filter for messages. A recipient list must include one of the following fields that acts as the unique ID:
 
-#. **person_id**; must be lowercase
-#. **person_key**; must be lowercase
-#. **external_person_id**; a unique ID that exists in an external system
-#. **mdn**; the mobile directory number (MDN)
+#. **person_id**. Must be lowercase
+#. **person_key**. Must be lowercase
+#. **external_person_id**. A unique ID that exists in an external system
+#. **mdn**. The mobile directory number (MDN)
 
    .. important:: The mobile directory number for phone numbers in the USA may use the 10-digit MDN format.
 

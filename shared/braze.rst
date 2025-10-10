@@ -115,7 +115,7 @@ Verify the names of custom attributes that is sent to |destination-name| from Am
 
 .. important:: Your brand's list of custom attributes *should* be a list that is static, remains stable over time, and is focused on your most valuable customers.
 
-   Only update custom attributes for customers to which your brand is currently engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (with an opt-in status of true for phone numbers or email addresses).
+   Only update custom attributes for customers to which your brand is engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (have an opt-in status of true for phone numbers or email addresses).
 
    This will help ensure that you are only updating custom attributes for your most valuable customers. Custom attributes is updated only for those customers have a matching "external_id" or "braze_id" within |destination-name|.
 
@@ -133,7 +133,7 @@ You can send custom attributes to |destination-name| from Amperity by attaching 
 
 Amperity tracks changes as they are sent to Braze and only sends list membership and attribute that have changed since the previous update.
 
-.. note:: Data points are part of the billing and pricing structure in your |destination-name| contract. Some data points are non-billable; many data points are billable.
+.. note:: Data points are part of the billing and pricing structure in your |destination-name| contract. Some data points are non-billable.
 
    Review the `lists of non-billable and billable data points <https://www.braze.com/docs/user_guide/data_and_analytics/data_points/#data-points-1>`__ |ext_link|, and then review those lists against the attributes you sends to Braze from Amperity to understand which of those attributes are considered billable or non-billable data points.
 

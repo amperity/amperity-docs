@@ -239,7 +239,7 @@ The **Unified Paid Media** table contains all known profile data for each of you
 
    If your brand sends a greater number of known email addresses your brand can increase the likelihood of matching more customers even if the overall match rate decreases.
 
-   For example, let's say that 100 customers have 100 email addresses sent from **Merged Customers**. These match at an 80% match rate.
+   For example, 100 customers have 100 email addresses sent from **Merged Customers**. These match at an 80% match rate.
 
    If you sent, in addition to those 100 email addresses, 40 additional known email addresses from the **Unified Paid Media** table, those 40 additional email addresses also have an opportunity to match with a customer.
 

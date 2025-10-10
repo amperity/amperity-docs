@@ -631,7 +631,7 @@ PGP helps protect your files while they are at rest. Amperity recommends to use:
 
 * 4096-bit keys
 * A strong passphrase
-* One PGP key per-tenant (minimum); one PGP key per system (recommended)
+* One PGP key per-tenant (minimum). One PGP key per system (recommended)
 
 Files that are encrypted using PGP are appended with the .pgp extension.
 
@@ -747,16 +747,16 @@ When Amperity pulls files from upstream systems using SFTP, use the following co
 
 #. The owner of the upstream system creates the SSH keypair and will maintain the private SSH key.
 
-#. The public SSH key is configured in Amperity; you may send the public SSH key to your Amperity representative using SnapPass.
+#. The public SSH key is configured in Amperity. You may send the public SSH key to your Amperity representative using SnapPass.
 
 
 **for PGP**
 
 #. Amperity Support creates the PGP keypair and will maintain the private PGP key.
 
-#. Amperity Support sends you the public PGP key using SnapPass; the owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
+#. Amperity Support sends you the public PGP key using SnapPass. The owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
 
-   .. tip:: Use :ref:`file compression <format-common-pull-file-compression>` *before* encrypting files; compression applied *after* encryption will not reduce the size of the file.
+   .. tip:: Use :ref:`file compression <format-common-pull-file-compression>` *before* encrypting files. Compression applied *after* encryption will not reduce the size of the file.
 
 #. Amperity uses the private PGP key to decrypt files pulled from the upstream system.
 
@@ -776,11 +776,11 @@ When Amperity sends files to downstream systems using SFTP, use the following co
 
 #. Amperity Support creates the SSH keypair and will maintain the private SSH key
 
-#. Amperity Support sends you the public SSH key using SnapPass; add the public SSH key to the downstream system to which Amperity is configured to send data
+#. Amperity Support sends you the public SSH key using SnapPass. Add the public SSH key to the downstream system to which Amperity is configured to send data
 
 **for PGP**
 
-#. The owner of the downstream system creates the PGP keypair and maintains the private PGP key; you may send the public PGP key to your Amperity representative using SnapPass
+#. The owner of the downstream system creates the PGP keypair and maintains the private PGP key. You may send the public PGP key to your Amperity representative using SnapPass
 
 #. Amperity uses the public PGP key to encrypt files before sending them to the downstream system.
 

@@ -98,7 +98,7 @@ The following identifiers are used as matching keys in |destination-name| for Pr
 
 #. Email address fields ("Email 1", "Email 2", and "Email 3")
 
-   .. important:: Email addresses must be hashed using SHA-256 when sending results for Privacy Safe data processing; clear text should be avoided.
+   .. important:: Email addresses must be hashed using SHA-256 when sending results for Privacy Safe data processing. Clear text should be avoided.
 
       .. include:: ../../amperity_reference/source/sql_presto.rst
          :start-after: .. sql-presto-style-guide-one-way-sha256-hashes-start

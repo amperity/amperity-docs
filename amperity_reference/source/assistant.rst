@@ -310,7 +310,7 @@ Get advice on your segment
 You can ask the **Segments AI Assistant** for guidance on how else you might design your segment to meet the goals of your campaign.
 
 **Question**
-   "What other criteria should I consider adding to the segment in order to attract high-value customers who have not recently purchased to buy new offerings in our jeans category?"
+   "What other criteria should I consider adding to the segment in order to attract high-value customers who have not recently purchased to buy new offerings in the jeans category?"
 
 **Answer**
   The **Segments AI Assistant** will respond similar to:

@@ -9,95 +9,95 @@ Amperity documentation
 .. raw:: html
     :file: _templates/accent-colors.html
 
+.. vale off
 
-Tomato = var(--tomato-9)
- $amperity-brand-red: #af3708;
+.. code-block:: none
 
-Red = var(--red-9)
- $amperity-brand-crimson: #f75b2b;
+   Tomato = var(--tomato-9)
+   $amperity-brand-red: #af3708;
 
-Ruby = var(--ruby-9)
- $amperity-brand-prime-red: #ff9988;
+   Red = var(--red-9)
+   $amperity-brand-crimson: #f75b2b;
 
-Crimson = var(--crimson-9)
- $amperity-brand-hmred: #f5e6e8;
+   Ruby = var(--ruby-9)
+   $amperity-brand-prime-red: #ff9988;
 
-Pink = var(--pink-9)
- $amperity-brand-flamingo: #f5cfe4;
+   Crimson = var(--crimson-9)
+   $amperity-brand-hmred: #f5e6e8;
 
-Plum = var(--plum-9)
- $amperity-brand-lavender: #b5b5e0;
+   Pink = var(--pink-9)
+   $amperity-brand-flamingo: #f5cfe4;
 
-Purple = var(--purple-9)
- $amperity-brand-warm-grey: #f6ffdc;
+   Plum = var(--plum-9)
+   $amperity-brand-lavender: #b5b5e0;
 
-Violet = var(--violet-9)
- $amperity-brand-midnight: #002c33;
+   Purple = var(--purple-9)
+   $amperity-brand-warm-grey: #f6ffdc;
 
-Iris = var(--iris-9)
- $amperity-brand-dark-teal: #09717f;
+   Violet = var(--violet-9)
+   $amperity-brand-midnight: #002c33;
 
-Indigo = var(--indigo-9)
- $amperity-awesome-blue: #00a6f2;
+   Iris = var(--iris-9)
+   $amperity-brand-dark-teal: #09717f;
 
-Blue = var(--blue-9)
- $amperity-brand-ocean: #459aa8;
+   Indigo = var(--indigo-9)
+   $amperity-awesome-blue: #00a6f2;
 
-Cyan = var(--cyan-9)
- $amperity-brand-prime-teal: #80c7d1;
+   Blue = var(--blue-9)
+   $amperity-brand-ocean: #459aa8;
 
-Teal = var(--teal-9)
- $amperity-brand-cement: #e8edef;
+   Cyan = var(--cyan-9)
+   $amperity-brand-prime-teal: #80c7d1;
 
-Jade = var(--jade-9)
- $amperity-brand-green: #317a1c;
+   Teal = var(--teal-9)
+   $amperity-brand-cement: #e8edef;
 
-Green = var(--green-9)
- $amperity-brand-apple: #8fdd7a;
+   Jade = var(--jade-9)
+   $amperity-brand-green: #317a1c;
 
-Grass = var(--grass-9)
- $amperity-brand-prime-green: #ade5a3;
+   Green = var(--green-9)
+   $amperity-brand-apple: #8fdd7a;
 
-Orange = var(--orange-9)
- $amperity-brand-orange: #f4b670;
+   Grass = var(--grass-9)
+   $amperity-brand-prime-green: #ade5a3;
 
-Brown = var(--brown-9)
- $amperity-brand-moss: #d8e21a;
+   Orange = var(--orange-9)
+   $amperity-brand-orange: #f4b670;
 
-Sky = var(--sky-9)
- $amperity-brand-ice: #caefef;
+   Brown = var(--brown-9)
+   $amperity-brand-moss: #d8e21a;
 
-Mint = var(--mint-9)
- $amperity-brand-hmgreen: #e9f6ea;
+   Sky = var(--sky-9)
+   $amperity-brand-ice: #caefef;
 
-Lime = var(--lime-9)
- $amperity-brand-merengue: #edff95;
+   Mint = var(--mint-9)
+   $amperity-brand-hmgreen: #e9f6ea;
 
-Yellow = var(--yellow-9)
- $amperity-brand-yellow: #dff200;
+   Lime = var(--lime-9)
+   $amperity-brand-merengue: #edff95;
 
-Amber = var(--amber-9)
- $amperity-brand-sunburst: #ddf85b;
+   Yellow = var(--yellow-9)
+   $amperity-brand-yellow: #dff200;
 
-Gold = var(--gold-9)
- $amperity-brand-gold: #b2b520;
+   Amber = var(--amber-9)
+   $amperity-brand-sunburst: #ddf85b;
 
-Bronze = var(--bronze-9)
- $amperity-brand-anvil: #282b2e;
+   Gold = var(--gold-9)
+   $amperity-brand-gold: #b2b520;
 
-Gray = var(--bronze-9)
- $amperity-brand-prime-gray: #c2cbd1;
+   Bronze = var(--bronze-9)
+   $amperity-brand-anvil: #282b2e;
 
-Mauve
-Slate
-Sage
-Olive
-Sand
+   Gray = var(--bronze-9)
+   $amperity-brand-prime-gray: #c2cbd1;
 
+   Mauve
+   Slate
+   Sage
+   Olive
+   Sand
 
-
-
-
+.. vale on
 
 
 .. Hide the TOC from this file.

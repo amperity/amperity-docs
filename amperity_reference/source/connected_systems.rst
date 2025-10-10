@@ -609,7 +609,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Microsoft Advertising**
      - 
      - |system-yes|
-     - Send audience lists to Microsoft Advertising using the Bing Ads API; make ads available across display, mobile, video, and native channels, including Bing, LinkedIn, XBox, MSN, and any partner available from the Microsoft Advertising partner syndication network.
+     - Send audience lists to Microsoft Advertising using the Bing Ads API. Make ads available across display, mobile, video, and native channels, including Bing, LinkedIn, XBox, MSN, and any partner available from the Microsoft Advertising partner syndication network.
 
    * - **Microsoft Azure SQL Database**
      - |system-yes|
@@ -831,7 +831,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Salesforce Marketing Cloud Personalization**
      - |system-yes|
      - |system-yes|
-     - Formerly known as Evergage; formerly known as Salesforce Interaction Studio.
+     - Formerly known as Evergage. Formerly known as Salesforce Interaction Studio.
 
        Send data to an SFTP site using a CSV file.
 

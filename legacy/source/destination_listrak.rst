@@ -60,6 +60,8 @@ Amperity automatically adds a field attribute to all contact lists that are sent
    :align: left
    :class: no-scaled-link
 
+.. vale off
+
 .. destination-listrak-howitworks-callouts-start
 
 An |destination-name| destination works like this:
@@ -80,6 +82,8 @@ An |destination-name| destination works like this:
 
 .. destination-listrak-howitworks-callouts-end
 
+.. vale on
+
 
 .. _destination-listrak-api:
 
@@ -99,6 +103,8 @@ Build a query or segment that returns an **email** field or **phone** field, and
 
 Get details
 --------------------------------------------------
+
+.. vale off
 
 .. destination-listrak-api-get-details-start
 
@@ -133,6 +139,8 @@ Get details
 
 .. destination-listrak-api-get-details-end
 
+.. vale on
+
 
 .. _destination-listrak-api-add-destination:
 
@@ -150,6 +158,8 @@ Add destination
 .. destination-listrak-api-add-destination-end
 
 **To add a destination**
+
+.. vale off
 
 .. destination-listrak-api-add-destination-steps-start
 
@@ -267,6 +277,8 @@ Add destination
           :end-before: .. destinations-save-end
 
 .. destination-listrak-api-add-destination-steps-end
+
+.. vale on
 
 
 .. _destination-listrak-sftp:

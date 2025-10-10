@@ -95,7 +95,7 @@ Combine day, month, year as birthdate
 
 .. _custom-domain-tables-combine-postal:
 
-Combine five- and four-digit postal codes
+Combine five and four digit postal codes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst

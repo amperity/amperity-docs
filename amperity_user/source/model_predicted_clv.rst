@@ -81,10 +81,10 @@ Without access to predictive modeling brands are forced to estimate future purch
 
 Use predicted CLV to identify your top customers by predicted spend, and then avoid having to use only historical purchases when deciding how and when to market to your most valuable customers.
 
-* Which customers are the most valuable and how can we attract more of them to our brand?
+* Which customers are the most valuable and how to attract more of them to your brand?
 * Is there anything unique about high value customers?
 * Are dedicated customers for one product more valuable than dedicated customers for another?
-* What can we learn to better inform acquisition efforts and product merchandising?
+* What learning can inform acquisition efforts and product merchandising?
 * Does a promotion attract high or low value customers?
 * Should a promotion be relaunched next month, next quarter, next year?
 * Which customers are best engaged through a VIP program?

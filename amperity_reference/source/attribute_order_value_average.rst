@@ -92,7 +92,7 @@ The following table lists the operators that are available to average order valu
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual average order value amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual average order value amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**

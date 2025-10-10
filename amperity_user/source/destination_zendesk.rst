@@ -81,14 +81,14 @@ Results that are sent to Zendesk must be correctly mapped to the following attri
 
    * - **email**
      - String
-     - Optional; may be used instead of **external_id**. The primary email address for the customer record. Zendesk uses the **email** field to identify users within Zendesk by default. You may use the **external_id** field to provide the Amperity ID to Zendesk, after which you may use the Amperity ID within Zendesk to identify a user.
+     - Optional. May be used instead of **external_id**. The primary email address for the customer record. Zendesk uses the **email** field to identify users within Zendesk by default. You may use the **external_id** field to provide the Amperity ID to Zendesk, after which you may use the Amperity ID within Zendesk to identify a user.
 
        When the **email** field is present and **external_id** is not present, multiple records orchestrated with the same email address are treated as updates to the same user.
 
        .. tip:: Use this field in conjunction with the **verified** field to define when email address updates are made to a customer's primary or secondary email address.
    * - **external_id**
      - String
-     - Optional; should be used instead of **email**. This field should be associated with the Amperity ID.
+     - Optional. Should be used instead of **email**. This field should be associated with the Amperity ID.
 
        When **external_id** field is provided, it takes precedence over **email** and becomes the field Zendesk uses to identify users. After the creation of a user with a given **external_id**, subsequent requests with the same **external_id** are treated as updates and, in the presence of the same **external_id** and different **email** values, additional email addresses are added to the same user as secondary email addresses.
 

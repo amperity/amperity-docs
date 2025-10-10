@@ -91,7 +91,7 @@ The following table lists the operators that are available to subtotal attribute
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual subtotal amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual subtotal amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**

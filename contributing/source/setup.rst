@@ -91,7 +91,7 @@ Open a new command shell window, and then run the following commands.
 Set up your environment (Python venv)
 ==================================================
 
-.. TODO: Make this the "default" and let's get rid of the more convoluted steps that use the built-in macOS Pythonisms.
+.. TODO: Make this the "default" and get rid of the more convoluted steps that use the built-in macOS Pythonisms.
 
 .. contributing-set-up-environment-venv-start
 

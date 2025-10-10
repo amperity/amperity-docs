@@ -11,7 +11,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-s3:
 
 **Amazon S3** vs. **S3**
-   Amazon S3 is the correct trademarked name for the Simple Storage Service. It is often shortened to just S3, but we should use Amazon S3 in documentation as often as possible.
+   Amazon S3 is the correct trademarked name for the Simple Storage Service. It is often shortened to just S3, but Amperity should use Amazon S3 in documentation as often as possible.
 
 
 .. _term-amperity:
@@ -19,7 +19,9 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 **Amperity** vs. **Amperity's**
    You should almost never write |company_name| (or any trademarked term) as a possessive, such as "Amperity's Stitch process is the best." Rewrite until |company_name| stands alone, such as "The best Stitch offerings are from |company_name|."
 
-   .. note:: This is one of the reasons why the technical documentation uses a token for |company_name|: ``|company_name|``. Sure, you have to type more characters, but it also helps make sure that the company name is used correctly. (Plus, in the event of a merger or company rename--and we all know that will *never* happen--we can just change the token.)
+   .. note:: This is one of the reasons why technical documentation uses a token for |company_name|: ``|company_name|``. Sure, you have to type more characters, but it also helps make sure that the company name is used correctly.
+
+   Plus, in the event of a merger or company rename--and everyone knows that will *never* happen--only the token requires an update.
 
 
 .. _term-azure:
@@ -30,14 +32,22 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 
 .. _term-blacklist:
 
+.. vale off
+
 **blacklist** / **whitelist**
    Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|. See **blocklist** / **allowlist**.
+
+.. vale on
 
 
 .. _term-blocklist:
 
+.. vale off
+
 **blocklist** / **allowlist**
    Use the word-pair **blocklist** and **allowlist** to refer behaviors and processes that block or allow values to be processed by Amperity, such as a bad-values blocklist or a 360 values blocklist.
+
+.. vale on
 
 
 .. _term-datasource:
@@ -81,13 +91,17 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-filename:
 
 **filename** vs. **FILENAME**
-   Probably the latter. What we mean here is, for example, the file extension for a Microsoft Excel spreadsheet is literally ``.xls``. This should never be written literally, but instead abbreviated and in all caps, like ``XLS`` (as opposed to ``xls``), unless you need to say the full filename and extension together, in which case you'd use ``some-file.xls``.
+   Probably the latter. For example, the file extension for a Microsoft Excel spreadsheet is literally ``.xls``. This should never be written literally, but instead abbreviated and in all caps, like ``XLS`` (as opposed to ``xls``), unless you need to say the full filename and extension together, in which case you'd use ``some-file.xls``.
 
 
 .. _term-master:
 
+.. vale off
+
 **master** / **slave**
    Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|. See **primary** / **replica**.
+
+.. vale on
 
 
 .. _term-multi-tenant:
@@ -99,7 +113,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 .. _term-null:
 
 **NULL** vs. **Null** vs. **null**
-   **NULL** indicates something does not have a value. In Amperity documentation we use **NULL**. Why? Because the context of **NULL** in Amperity documentation is almost always a SQL context.
+   **NULL** indicates something does not have a value. In Amperity documentation use **NULL**. Why? Because the context of **NULL** in Amperity documentation is almost always a SQL context.
 
 
 .. _term-on-premises:
@@ -109,7 +123,7 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 
    When referring to the installation of computer-related hardware, software, and whatnots within the customer's physical environment (and not, say, "the cloud") always (and without exception) use the term **on-premises**.
 
-   .. note:: The use of a hyphen between on and premises in **on-premises** is debated in some circles, but not here at |company_name|. We use the hyphen. See **on-site**.
+   .. note:: The use of a hyphen between on and premises in **on-premises** is debated in some circles, but not here at |company_name|. Use the hyphen. See **on-site**.
 
 
 .. _term-on-site:
@@ -126,10 +140,14 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 
 .. _term-primary-replica:
 
+.. vale off
+
 **primary** / **replica**
    Use the word-pair **primary** and **replica** to refer to machines in a cluster. For example, in a YARN/Spark/Hadoop cluster, a **primary** machine manages the cluster (the YARN Resource Manager), and then each **replica** node in the cluster is run when asked to by the primary (the YARN Node Manager).
 
    .. warning:: Use **primary** / **replica** even when the application to which you are referring uses another term, such as how YARN refers to **master** and **slave** nodes.
+
+.. vale on
 
 
 .. _term-replica:
@@ -146,8 +164,12 @@ There are correct uses of terms within Amperity documentation. Refer to the Goog
 
 .. _term-slave:
 
+.. vale off
+
 **slave**
    See **primary** / **replica**. Do not use this term.
+
+.. vale on
 
 
 .. _term-stitch:

@@ -94,7 +94,7 @@ The following sections describe the individual elements within the **Segment Edi
           * The **Customer 360** table contains customer profile data--names, addresses, email addresses, and phone numbers--summarized by unique customer.
           * The **Unified Transactions** table contains order-level details for a transaction.
           * The **Unified Itemized Transactions** table contains line-item and product catalog details for a transaction.
-          * The **Transaction Attributes Extended** table contains calculated attributes that are built from order- and item-level details in transaction tables.
+          * The **Transaction Attributes Extended** table contains calculated attributes that are built from order-level and item-level details in transaction tables.
 
 
    * - .. image:: ../../images/steps-03.png

@@ -499,7 +499,7 @@ Table templates are available for other tables:
 
 * :doc:`Customer360 <table_customer_360>` that joins **Transaction Attributes Extended**
 * :doc:`Detailed Examples <table_detailed_examples>`
-* :doc:`Merged Households <table_merged_households>`; this table requires access to address standardization lookup tables.
+* :doc:`Merged Households <table_merged_households>`. This table requires access to address standardization lookup tables.
 
 .. databases-tables-add-table-template-other-end
 

@@ -77,7 +77,9 @@ All queries must be activated before they can run as part of a scheduled workflo
 
 .. note:: Amperity is a multi-user system and the set of queries for your company is shared across all users. That means that if one user creates a draft query, another can open and edit it, so work can be easily passed between people on your team.
 
-   However, it also means that if 2 users are editing the same thing at the same time, their changes will collide. Amperity resolves this by applying the last set of changes saved as a whole. This will keep the query in a consistent state. But changes that were saved first will be overwritten. As a result, we strongly recommend that you coordinate changes to specific objects in Amperity with others on your team.
+   However, it also means that if 2 users are editing the same thing at the same time, their changes will collide. Amperity resolves this by applying the last set of changes saved as a whole. This will keep the query in a consistent state. But changes that were saved first will be overwritten. 
+
+   Coordinate changes to specific objects in Amperity with others on your team.
 
 .. queries-editor-multiuser-warning-end
 
@@ -367,7 +369,7 @@ Customer acquisition
 
 .. queries-example-customer-acquisition-start
 
-The following examples show how to track customer acquisition by day for single- and multi-brand tenants.
+The following examples show how to track customer acquisition by day for single and multi-brand tenants.
 
 .. queries-example-customer-acquisition-end
 

@@ -51,7 +51,7 @@ The **Merged Customers** table has the following requirements:
 
 * PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain customer records. For custom PII semantics and non-PII data that must be accessible from the **Unified Coalesced** table, you may need to :ref:`extend the Merged Customers table <table-merged-customers-custom-semantics>` to support them.
 * Feeds that contain customer records are made available to Stitch.
-* Each feed has a primary key; foreign keys are applied consistently across all feeds that are made available to Stitch.
+* Each feed has a primary key. Foreign keys are applied consistently across all feeds that are made available to Stitch.
 * At least one feed must contain a field that indicates when the data was last updated.
 
   .. include:: ../../shared/terms.rst

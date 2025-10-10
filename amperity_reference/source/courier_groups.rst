@@ -23,7 +23,7 @@ About courier groups
 
 .. courier-groups-context-start
 
-A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit; couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
+A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit. Couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
 
 For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate or refresh a customer 360 database. Orchestrations, recurring campaigns, and Profile API indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
 
@@ -478,7 +478,7 @@ A courier can be configured to look for files within range of time that is older
 
 This range is typically 24 hours, but may be configured for longer ranges. For example, it is possible for a data file to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of how an upstream workflow is configured. A wait time helps ensure that the data at the source location is recognized correctly by the courier.
 
-.. warning:: This range of time may affect couriers in a courier group whether or not they run on a schedule. A manually run courier group may not take its schedule into consideration when determining the date range; only the provided input days to load data from are used as inputs.
+.. warning:: This range of time may affect couriers in a courier group whether or not they run on a schedule. A manually run courier group may not take its schedule into consideration when determining the date range. Only the provided input days to load data from are used as inputs.
 
 .. courier-groups-schedule-offset-end
 

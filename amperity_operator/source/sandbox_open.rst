@@ -139,7 +139,7 @@ The following sections describe the steps you will follow when working in a sand
 
        .. image:: ../../images/mockups-sandbox-access-validations-errors.png
           :width: 600 px
-          :alt: Some validations passed; schema error.
+          :alt: Some validations passed. Schema error.
           :align: left
           :class: no-scaled-link
 

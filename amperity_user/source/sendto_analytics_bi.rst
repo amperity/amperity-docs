@@ -163,7 +163,7 @@ Microsoft Power BI
 
 .. sendto-power-bi-important-start
 
-Data is not sent from Amperity directly to Microsoft Power BI. Microsoft Power BI must connect to a location that supports queries to that data; Microsoft Power BI cannot connect directly to a static file. Amperity must send data to Microsoft Power BI indirectly by configuring a destination to:
+Data is not sent from Amperity directly to Microsoft Power BI. Microsoft Power BI must connect to a location that supports queries to that data. Microsoft Power BI cannot connect directly to a static file. Amperity must send data to Microsoft Power BI indirectly by configuring a destination to:
 
 #. Send a CSV file to an Azure container, after which it is :ref:`picked up by Azure Synapse Analytics <sendto-powerbi-connect-to-azure>`.
 #. Send data to `any supported connector <https://learn.microsoft.com/en-us/power-query/connectors/>`__ |ext_link|.
@@ -213,7 +213,7 @@ Tableau
 
 .. sendto-tableau-important-start
 
-Data is not sent from Amperity directly to Tableau. Tableau must connect to a location that supports queries to that data; Tableau cannot connect directly to a static file. Amperity must send data to Tableau indirectly by configuring a destination to:
+Data is not sent from Amperity directly to Tableau. Tableau must connect to a location that supports queries to that data. Tableau cannot connect directly to a static file. Amperity must send data to Tableau indirectly by configuring a destination to:
 
 #. Send a CSV file to an Amazon S3 bucket, after which it is :ref:`picked up by Amazon Redshift <sendto-tableau-connect-to-amazon-redshift>`.
 #. Send a CSV file to an Azure container, after which it is :ref:`picked up by Azure Synapse Analytics <sendto-tableau-connect-to-azure>`.

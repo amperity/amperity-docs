@@ -6,7 +6,7 @@
 .. |plugin-name| replace:: SFTP
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
-.. |attributes-sent| replace:: |destination-name| requires email addresses; Amperity applies SHA-256 hashing to email addresses automatically.
+.. |attributes-sent| replace:: |destination-name| requires email addresses. Amperity applies SHA-256 hashing to email addresses automatically.
 
 
 .. meta::

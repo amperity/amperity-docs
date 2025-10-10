@@ -147,7 +147,7 @@ As new data is input to Amperity, the Stitch process identifies when new or chan
 
 .. stitch-explore-by-amperity-id-continued-start
 
-Amperity IDs do not replace primary and foreign keys already assigned in customer data; Amperity IDs exist alongside primary and foreign keys within the customer 360 profile and act as key for finding clusters of unique customer records.
+Amperity IDs do not replace primary and foreign keys already assigned in customer data. Amperity IDs exist alongside primary and foreign keys within the customer 360 profile and act as key for finding clusters of unique customer records.
 
 .. stitch-explore-by-amperity-id-continued-end
 

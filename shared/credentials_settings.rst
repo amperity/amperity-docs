@@ -200,7 +200,7 @@ See SFTP.
 
 .. credential-adobe-campaign-hostname-start
 
-"[value]" is the name of your tenant on |destination-name|; ".campaign.adobe.com" is appended automatically.
+"[value]" is the name of your tenant on |destination-name|. ".campaign.adobe.com" is appended automatically.
 
 .. credential-adobe-campaign-hostname-end
 

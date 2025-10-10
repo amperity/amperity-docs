@@ -34,7 +34,7 @@ Configure destinations for HubSpot
 
 .. destination-hubspot-start
 
-Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity updates contacts that already exist in |destination-name|; Amperity does not create contacts.
+Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity updates contacts that already exist in |destination-name|. Amperity does not create contacts.
 
 .. destination-hubspot-end
 
@@ -66,7 +66,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
    If you experience a 400 error due to invalid email addresses identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
 
-   Amperity updates contacts that already exist in |destination-name|; Amperity does not create contacts.
+   Amperity updates contacts that already exist in |destination-name|. Amperity does not create contacts.
 
 .. destination-hubspot-build-query-end
 

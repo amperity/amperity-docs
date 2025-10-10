@@ -11,7 +11,7 @@ IAM and role ARN configuration content that is included into any source or desti
 
 IAM secrets and keys are possible, but Amperity prefers the role ARN configuration.
 
-This is true even for Snowflake, because when Snowflake runs on AWS, we use an S3 bucket to stage the data into a SQL lite instance that holds the data in-between Amperity and Snowflake. That said, at the moment, we are not sharing any of this content into either of the AWS-based Snowflake topics.
+This is true even for Snowflake, because when Snowflake runs on AWS, Amperity uses an S3 bucket to stage the data into a SQL lite instance that holds the data in-between Amperity and Snowflake. That said, at the moment, Amperity is not sharing any of this content into either of the AWS-based Snowflake topics.
 
 
 **General intro**
@@ -40,7 +40,7 @@ This approach ensures that customers can:
 
 * Directly manage the IAM policies that control access to data
 * Directly manage the files that are available within the Amazon S3 bucket
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Amazon AWS account, after which data sharing ends immediately
+* Modify access without requiring involvement by Amperity. Access may be revoked at any time by either Amazon AWS account, after which data sharing ends immediately
 * Directly troubleshoot incomplete or missing files
 
 .. sources-amazon-s3-cross-account-roles-context-end
@@ -50,6 +50,8 @@ This approach ensures that customers can:
 After setting up cross-account role assumption, a list of files by filename and file type, along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after cross-account role assumption is configured.
 
 .. sources-amazon-s3-cross-account-roles-setup-end
+
+.. vale off
 
 .. sources-amazon-s3-aws-access-point-start
 
@@ -62,6 +64,8 @@ After setting up cross-account role assumption, a list of files by filename and 
    #. Traffic is not restricted to VPC-only
 
 .. sources-amazon-s3-aws-access-point-end
+
+.. vale on
 
 
 .. TODO: The candidate /internal/source_amazon_s3 topic has a couple blocks of text in-between these paragraphs that might be shareable on a non-Snowflake use case. Right now is being single-sourced for updating Snowflake with role ARN info.
@@ -147,7 +151,11 @@ The value for the role ARN is similar to:
 
    arn:aws:iam::123456789012:role/prod/amperity-plugin
 
-An external ID is an alphanumeric string between 2-1224 characters (without spaces) and may include the following symbols: plus (+), equal (=), comma (,), period (.), at (@), colon (:), forward slash (/), and hyphen (-).
+.. vale off
+
+An external ID is an alphanumeric string of 2-1224 characters without spaces and may include the following symbols: plus (+), equal (=), comma (,), period (.), at (@), colon (:), forward slash (/), and hyphen (-).
+
+.. vale on
 
 .. sources-amazon-s3-cross-account-roles-steps-policy-example-end
 

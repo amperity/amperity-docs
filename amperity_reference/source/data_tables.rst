@@ -115,7 +115,7 @@ There are four groups of tables in this diagram:
           :start-after: .. term-stitch-qa-start
           :end-before: .. term-stitch-qa-end
 
-       Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process; the use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
+       Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process. The use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
 
    * - Predictive models
 
@@ -1286,7 +1286,7 @@ The **EUID** table has the following columns:
      - String
      - A unique identifier for the salt bucket that is used to ensure that expired EUID tokens are refreshed. This value is returned in the response from the **POST /identity/map** endpoint.
 
-       .. note:: Each EUID token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily.
+       .. note:: Each EUID token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire. Approximately 1/365th of all salt buckets are rotated daily.
 
           Amperity `monitors salt buckets <https://euid.eu/docs/guides/integration-advertiser-dataprovider-endpoints#5-monitor-for-salt-bucket-rotations-for-your-stored-raw-euids>`__ on a daily basis to determine which EUID tokens need to be refreshed.
 
@@ -3233,7 +3233,7 @@ The **UID2** table has the following columns:
      - String
      - A unique identifier for the salt bucket used to ensure that expired UID2 tokens are refreshed. This value is returned in the response from the **POST /identity/map** endpoint.
 
-       .. note:: Each UID2 token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire; approximately 1/365th of all salt buckets are rotated daily.
+       .. note:: Each UID2 token is associated with a salt bucket that links that token to a specific point in time. Salt buckets expire. Approximately 1/365th of all salt buckets are rotated daily.
 
           Amperity `monitors salt buckets <https://unifiedid.com/docs/guides/advertiser-dataprovider-guide#3-monitor-for-salt-bucket-rotations-related-to-your-stored-raw-uid2s>`__ on a daily basis to determine which UID2 tokens need to be refreshed.
 
@@ -4624,7 +4624,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        .. caution:: Every customer has their own definition for SKUs and product IDs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition.
 
-       Values in this column depend on fields that are tagged with the **txn-item/product-id** semantic. The combination of **Order ID** and **Product ID** must be unique for each row in this table; product quantity is counted using **Item Quantity**.
+       Values in this column depend on fields that are tagged with the **txn-item/product-id** semantic. The combination of **Order ID** and **Product ID** must be unique for each row in this table. Product quantity is counted using **Item Quantity**.
 
        .. important:: This column is recommended when using a product catalog. A product catalog is a requirement for certain predictive features of Amperity, such as for product affinity and audience sizes.
 
@@ -5245,7 +5245,7 @@ The **Unified Preprocessed Raw** table has the following columns:
      - Integer
      - An identifier that represents a unique combination of **datasource** and **pk** (primary key) and their position in the Stitch record sort order *after* Stitch has identified and removed trivial duplicates.
 
-       .. important:: This identifier is based on Stitch record sort order and is determined each time Stitch runs. Records will not always have the same position in the record sort order; you should not expect this ID to be stable over time.
+       .. important:: This identifier is based on Stitch record sort order and is determined each time Stitch runs. Records will not always have the same position in the record sort order. You should not expect this ID to be stable over time.
 
        .. tip:: Use this field during the Stitch QA process to help identify why certain records were grouped or not grouped together.
 

@@ -4,9 +4,13 @@
 Stitch benchmarking
 ==================================================
 
+.. vale off
+
 Content groupings for cards that explain Stitch benchmarks.
 
 Each H1 is the title of a card. The **xxxx-desc** is the visible description for that card and the **xxxxx-more** is the "show more" content.
+
+.. vale on
 
 
 Size of largest cluster

@@ -337,7 +337,7 @@ Add article information to the top of a topic when it is appropriate, such as fo
       :avatar-outline: muted
       :author: Identity resolution agent
       :date: |today|
-      :read-time: 10 min read; ~1 hour to complete
+      :read-time: 10 min read. ~1 hour to complete
       :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 
 **For this**
@@ -348,7 +348,7 @@ Add article information to the top of a topic when it is appropriate, such as fo
    :avatar-outline: muted
    :author: Identity resolution agent
    :date: |today|
-   :read-time: 10 min read; ~1 hour to complete
+   :read-time: 10 min read. ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 
 Update the values for ``:author:`` and ``:read-time`` to be specific to the topic.
@@ -3387,7 +3387,7 @@ Use an options list to show options for command-line tools or for other types of
 
               This is the second.  Blank lines may be omitted between options (as above) or left in (as here and below).
 
-   -f FILE, --file=FILE  These two options are synonyms; both have arguments.
+   -f FILE, --file=FILE  These two options are synonyms. Both have arguments.
 
 
 **For this**
@@ -3401,7 +3401,7 @@ Use an options list to show options for command-line tools or for other types of
 
            This is the second. Blank lines may be omitted between options (as above) or left in (as here and below).
 
--f FILE, --file=FILE  These two options are synonyms; both have arguments.
+-f FILE, --file=FILE  These two options are synonyms. Both have arguments.
 
 .. rst-list-options-end
 
@@ -4504,6 +4504,8 @@ Make sure there is a row in-between the topic location string and ``:orphan:`` a
 
 .. _rst-todo:
 
+.. vale off
+
 TODO
 ==================================================
 
@@ -4530,6 +4532,8 @@ A TODO is not an :ref:`admonition <rst-admonitions>`, but it behaves like one. T
 .. tip:: For an example of a TODO look at the source code.
 
 .. rst-todo-tip-end
+
+.. vale on
 
 
 .. _rst-tokens:

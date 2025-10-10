@@ -79,7 +79,7 @@ The following table lists the operators that are available to these attributes.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual totals for all item discount amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual totals for all item discount amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**

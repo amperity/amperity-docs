@@ -48,7 +48,7 @@ How SSO works (with Amperity)
 
 .. sso-howitworks-start
 
-The following diagram steps through how SSO works with Amperity. This example uses Auth0 as the IdP; each supported IdP follows the same workflow. 
+The following diagram steps through how SSO works with Amperity. This example uses Auth0 as the IdP. Each supported IdP follows the same workflow. 
 
 .. sso-howitworks-end
 

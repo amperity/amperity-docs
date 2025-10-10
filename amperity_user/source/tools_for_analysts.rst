@@ -209,7 +209,7 @@ There are four groups of tables in this diagram:
           :start-after: .. term-stitch-qa-start
           :end-before: .. term-stitch-qa-end
 
-       Stitch QA activities rely on a series of tables: **Unified Coalesced**, **Unified Scores**, **Detailed Examples**, **Unified Preprocessed Raw**, **Unified Changes Clusters**, and **Unified Changes PKs**. These tables are the basis for the Stitch QA process; the specific use of individual tables will vary from tenant to tenant. Together they provide visibility into how Amperity grouped or did not group individual customer records to a single Amperity ID.
+       Stitch QA activities rely on a series of tables: **Unified Coalesced**, **Unified Scores**, **Detailed Examples**, **Unified Preprocessed Raw**, **Unified Changes Clusters**, and **Unified Changes PKs**. These tables are the basis for the Stitch QA process. The specific use of individual tables will vary from tenant to tenant. Together they provide visibility into how Amperity grouped or did not group individual customer records to a single Amperity ID.
 
    * - Predictive tables
 

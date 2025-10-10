@@ -1352,7 +1352,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **website**
          Use when the offline conversion was made on a website.
 
-         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|; missing or empty values are filtered from the results.
+         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|. Missing or empty values are filtered from the results.
 
          * The value for **client_user_agent** must be the user agent for the browser corresponding to the event.
 
@@ -1382,7 +1382,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **email** or **phone**
      - **Required**
 
-       You must send an email address *or* a phone number to |destination-name|; you may configure the query to send both.
+       You must send an email address *or* a phone number to |destination-name|. You may configure the query to send both.
 
        Add at least one of **email** or **phone** to your query:
 

@@ -121,7 +121,7 @@ Amperity prefers to send data to customer-managed cloud storage. This approach e
 
 * Use security policies managed in Azure Data Share to manage access to data
 * Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
+* Modify access without requiring involvement by Amperity. Access may be revoked at any time by either Azure account, after which data sharing ends immediately
 * Directly troubleshoot incomplete or missing files
 
 Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.

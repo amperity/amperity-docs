@@ -2,7 +2,7 @@
 
 The SQL editor shows a validation alert when syntax is detected in your query that has the potential to cause performance issues with database generation, the length of time it may take to complete running a query, or situations where you can improve the quality of your SQL syntax.
 
-.. admonition:: What should I do if my query has a validation alert?
+.. admonition:: What if a query has a validation alert?
 
    A validation alert does not mean your SQL is invalid. If your query has a validation alert, review the alert, review your SQL, and consider alternates that can help you avoid potential performance issues or avoid the situation the alert describes. There are situations where the SQL you need is the SQL that is causing the validation warning. You may activate a query even when it contains a validation alert.
 

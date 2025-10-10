@@ -72,7 +72,7 @@ The following sections describe the three types of privacy rights workflows:
 * :ref:`Delete records <privacy-rights-workflows-delete-records>`
 * :ref:`Delete PII <privacy-rights-workflows-delete-pii>`
 
-The sections are repetitive when the workflows have shared behavior and are different when they have unique behavior. For example: the first step for all privacy rights workflows is to find all records with exact matches to the inbound request; however, the **Delete PII** privacy rights workflow is the only one that requires using the **compliance/pii** semantic tag.
+The sections are repetitive when the workflows have shared behavior and are different when they have unique behavior. For example: the first step for all privacy rights workflows is to find all records with exact matches to the inbound request. However, the **Delete PII** privacy rights workflow is the only one that requires using the **compliance/pii** semantic tag.
 
 .. privacy-rights-workflows-end
 

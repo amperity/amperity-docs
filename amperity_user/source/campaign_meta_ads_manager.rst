@@ -74,7 +74,7 @@ A |destination-name| destination works like this:
          :start-after: .. destination-meta-ads-manager-meta-ads-manager-start
          :end-before: .. destination-meta-ads-manager-meta-ads-manager-end
 
-#. Place ads on Facebook, Instagram, and Messenger; use Audience Network to extend advertising beyond Facebook to reach audiences on apps and mobile devices, such as WhatsApp.
+#. Place ads on Facebook, Instagram, and Messenger. Use Audience Network to extend advertising beyond Facebook to reach audiences on apps and mobile devices, such as WhatsApp.
 
 .. sendto-meta-ads-manager-howitworks-callouts-end
 

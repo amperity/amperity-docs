@@ -23,7 +23,7 @@ Identity resolution agent
    :avatar-outline: muted
    :author: Identity resolution agent
    :date: |today|
-   :read-time: 10 min read; ~1 hour to complete
+   :read-time: 10 min read. ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 
 .. start-overview-start
@@ -405,7 +405,7 @@ Sync identity data to Databricks
 
 Amperity can sync customer profiles to your Databricks account.
 
-.. note:: Additional configuration in Databricks is often required. Syncing data from Amperity to Databricks can use the same credentials; however, the configuration within Databricks is not the same as syncing data from Databricks to Amperity.
+.. note:: Additional configuration in Databricks is often required. Syncing data from Amperity to Databricks can use the same credentials. However, the configuration within Databricks is not the same as syncing data from Databricks to Amperity.
 
    To sync data to Databricks, `review the prerequisites <https://docs.amperity.com/operator/bridge_databricks.html#bridge-databricks-sync-with-databricks-prerequisites>`__, `add an outbound bridge <https://docs.amperity.com/operator/bridge_databricks.html#add-outbound-bridge>`__, `select tables to share with Databricks <https://docs.amperity.com/operator/bridge_databricks.html#select-tables-to-share>`__, `download the credentials file <https://docs.amperity.com/operator/bridge_databricks.html#download-credential-file>`__, `add the provider in Databricks <https://docs.amperity.com/operator/bridge_databricks.html#add-provider>`__, `add catalog from share <https://docs.amperity.com/operator/bridge_databricks.html#add-catalog-from-share>`__, and then `verify table sharing <https://docs.amperity.com/operator/bridge_databricks.html#verify-table-sharing>`__.
 

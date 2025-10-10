@@ -21,7 +21,7 @@ Pagination
 
 Amperity uses cursor-based pagination to return pages of data for large lists.
 
-.. tip:: A cursor acts like a pointer; it refers to a particular point in the data and marks the boundary between pages. A paginated endpoint returns responses with a list of results *and* a **next_token** parameter when another page is available in the returned dataset.
+.. tip:: A cursor acts like a pointer and refers to a particular point in the data and marks the boundary between pages. A paginated endpoint returns responses with a list of results *and* a **next_token** parameter when another page is available in the returned dataset.
 
    You have reached the last page in the results set when the **next_token** parameter is not returned.
 

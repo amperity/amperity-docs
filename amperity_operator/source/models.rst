@@ -201,13 +201,13 @@ Fields used by event propensity
 
 EPM is highly configurable, with the only table used by default being **Merged Customers**. The model requires that you select two other data assets with event-level data: one containing the target event, and one containing a revenue generating event.
 
-The target event is the event we want to model. For example: loyalty program signups, credit card signups, or repeat bookings. The data asset should have one row per event, and **must have a field for the event's date or timestamp**.
+The target event is the event to model. For example: loyalty program signups, credit card signups, or repeat bookings. The data asset should have one row per event, and **must have a field for the event's date or timestamp**.
 
 A revenue generating event is an event in which a customer spends money with your brand. For example: a retail transaction or a booking. The data asset should also have one row per event, and **must have fields for an event's date or timestamp and revenue amount**. You may also select other fields from the revenue generating event that you think would be helpful for modeling, such as a purchase or booking channel.
 
 Additionally, you may configure custom events as further inputs to the model. Custom event data assets are also expected to be one row per event.
 
-For revenue generating events and custom events, there are configuration options for the event's timestamp, and also the event's **realization date**. For events, such as bookings, where a customer pays money at one point in time, but then "realizes" or consumes the good or service at another point in time, we strongly recommend supplying both fields to the model.
+For revenue generating events and custom events, there are configuration options for the event's timestamp, and also the event's **realization date**. For events, such as bookings, where a customer pays money at one point in time, but then "realizes" or consumes the good or service at another point in time. Supply both fields to the model.
 
 .. models-fields-used-by-epm-end
 

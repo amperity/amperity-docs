@@ -109,7 +109,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
       INNER JOIN first_order_datetime
       ON distinct_order_datetime
 
-   (Note that "first_order_datetime" and "distinct_order_datetime" names do not represent the real names of the CTEs that are joined; these names identify the two sources that are joined together as part of the steps within the SQL that identify your repeat customers.)
+   (Note that "first_order_datetime" and "distinct_order_datetime" names do not represent the real names of the CTEs that are joined. These names identify the two sources that are joined together as part of the steps within the SQL that identify your repeat customers.)
 
    Returns and cancellations are then filtered out automatically, like this:
 

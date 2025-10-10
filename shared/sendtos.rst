@@ -127,7 +127,7 @@ Run the orchestration manually to validate that it works.
 .. sendtos-run-orchestration-steps-start
 
 #. Open the **Activations** page, select the **Orchestrations** tab, and then open the |fa-kebab| menu for the |destination-name| orchestration. Select **Run**.
-#. The **Status** column for the orchestration updates to say "Waiting to start...", after which the notifications pane updates to include a notification that shows the current status.
+#. The **Status** column for the orchestration updates to say "Waiting to start", after which the notifications pane updates to include a notification that shows the current status.
 #. When the orchestration has run successfully, the status is updated to "Completed".
 
 .. sendtos-run-orchestration-steps-end

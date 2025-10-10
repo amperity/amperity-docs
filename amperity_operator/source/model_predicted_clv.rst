@@ -254,7 +254,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
           :alt: Step 4.
           :align: center
           :class: no-scaled-link
-     - Select the tables from which order- and item-level data is made available to the model.
+     - Select the tables from which order-level and item-level data is made available to the model.
 
        For order-level data, select **Unified Transactions**. For item-level data, select **Unified Itemized Transactions**.
 
