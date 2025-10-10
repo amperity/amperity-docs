@@ -607,7 +607,7 @@ Monitor Amps consumption for the **Queries** feature by:
 
 * Monitoring the number of queries that are executed from the **Usage** page
 * Verifying the amount of data scanned by a query
-* Review Spark SQL queries with high Amps consumption for :ref:`skew <sql-spark-skew>`.
+* Review Spark SQL queries with high Amps consumption for skew.
 
 .. amps-consumption-feature-queries-end
 
