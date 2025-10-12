@@ -662,11 +662,13 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
 
 .. stitch-pairwise-comparison-score-types-end
 
+.. vale off
+
 .. stitch-pairwise-comparison-important-start
 
 .. important:: Records are scored based on a number of features, including:
 
-   * String matching patterns. such as Levenshtein and Jaro–Winkler distances, and Jaccard similarity
+   * String matching patterns, such as Levenshtein and Jaro-Winkler distances, and Jaccard similarity
    * Commonality statistics that focus on name distributions
    * Name matching, including for nicknames, combined with addresses and phone numbers
    * Lookup tables
@@ -705,6 +707,8 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
         - * Do the phone numbers match exactly?
 
 .. stitch-pairwise-comparison-important-end
+
+.. vale on
 
 
 .. _stitch-pairwise-comparison-potential:
