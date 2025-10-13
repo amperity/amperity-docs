@@ -84,9 +84,9 @@ To follow-along with this guide you need:
 #. Access to an Amperity account.
 #. Approximately ~1 hour of time to complete all of the steps within the guide.
 
-   .. note:: More time may be required if you want to sync data from your Databricks account instead of using Amperity sample data.
+   .. note:: More time may be required if you want to sync your brand's data instead of using Amperity sample data.
 
-#. Source data. Amperity provides a set of sample data that can be used to complete the steps in this guide. You may provide your own data if you have a Databricks account with customer profile data *and* permissions to configure your Databricks account to accept Delta Sharing with Amperity from the Databricks Unity Catalog.
+#. Source data. Amperity provides a set of sample data that can be used to complete the steps in this guide. You may provide your own data with customer profiles.
 
    .. note:: Amperity sample data contains ~10 million customer records. Additional time may be necessary for loading and processing data if you choose to use your own data instead of Amperity sample data assets, depending on the number of records.
 
@@ -95,25 +95,26 @@ To follow-along with this guide you need:
 
 .. _start-login:
 
-Log in to Amperity
+Connect to data sources
 ==================================================
 
 .. start-login-start
 
-To start using Amperity, do the following:
+To connect Amperity to data sources, do the following:
 
 #. Log in to `Amperity <https://app.amperity.com>`__.
-#. Open the **Quick Start** page. This is located in the left-side menu at the top.
-#. Under **Identity resolution** click **Set up**.
+#. Open the **Quick start** page. This is located in the left-side menu at the top.
+#. Under **Identity resolution** click **Add datasource**.
+#. Select one of the following options: `Amazon S3 <https://docs.amperity.com/operator/destination_amazon_s3.html>`__, `Azure Blob Storage <https://docs.amperity.com/operator/destination_azure_blob_storage.html>`__, `Databricks <https://docs.amperity.com/operator/bridge_databricks.html#from-databricks>`__, `Google BigQuery <https://docs.amperity.com/operator/bridge_google_bigquery.html#from-google-bigquery>`__, `Google Cloud Storage <https://docs.amperity.com/operator/destination_google_cloud_storage.html>`__, or `Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#from-snowflake>`__.
 
-   This opens the **Identity resolution** page that will walk you through steps for connecting to Databricks, adding semantic tags to synced tables, running Stitch, and then syncing unified tables back to Databricks.
+   This opens a page that will walk you through steps for connecting to Amperity to the selected option.
 
 .. start-login-end
 
 
 .. _start-connect:
 
-Connect to Databricks
+Example: Connect to Databricks
 ==================================================
 
 .. start-connect-start
@@ -192,7 +193,7 @@ You have two options:
 .. _start-semantics:
 
 Add semantic tags
-==================================================
+--------------------------------------------------
 
 .. start-semantics-start
 
@@ -254,7 +255,7 @@ You have two options:
 .. _start-run-stitch:
 
 Run Stitch
-==================================================
+--------------------------------------------------
 
 .. start-run-stitch-start
 
@@ -341,7 +342,7 @@ After all of the source tables to which semantic tags should be applied have sem
 .. _start-create-database:
 
 Create database
-==================================================
+--------------------------------------------------
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-customer-360-database-start
@@ -397,7 +398,7 @@ Create database
 .. _start-sync-to-databricks:
 
 Sync identity data to Databricks
-==================================================
+--------------------------------------------------
 
 .. start-sync-to-databricks-start
 
@@ -415,7 +416,7 @@ Amperity can sync customer profiles to your Databricks account.
 .. _start-merge-policy:
 
 Merge policy
-==================================================
+--------------------------------------------------
 
 .. TODO: Currently in review
 
@@ -473,7 +474,7 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 .. _start-conclusion:
 
 Conclusion and next steps
-==================================================
+--------------------------------------------------
 
 .. start-conclusion-start
 
