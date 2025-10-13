@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: TikTok Ads Offline Events
+.. |destination-name| replace:: TikTok Ads Manager
 .. |plugin-name| replace:: "TikTok Ads Offline Events"
 .. |credential-type| replace:: "tiktok-offline-events"
 .. |required-credentials| replace:: "refresh token"
