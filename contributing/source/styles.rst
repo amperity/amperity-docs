@@ -51,7 +51,7 @@ For external brands and products
 
 .. style-guide-capitalization-external-start
 
-When referring to external brands and products use those brand's capitalization and pattern preferences as much as possible.
+When referring to external brands and products use each brand's capitalization and pattern preferences as much as possible.
 
 These are often available from brand guidelines or from a copyright or trademark notice or from reviewing their own technical documentation.
 
