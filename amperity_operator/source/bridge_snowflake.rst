@@ -631,7 +631,7 @@ A sync from Amperity to Snowflake requires configuration steps to be made in bot
 
 .. bridge-snowflake-sync-sandbox-start
 
-.. note:: Configuration state for an outbound bridge **is not copied** from production and then applied to the sandbox. An outbound bridge must be configured within the sandbox.
+.. note:: Configuration state for an outbound bridge **is not copied** from production to a sandbox. An outbound bridge must be configured within a sandbox.
 
 .. bridge-snowflake-sync-sandbox-end
 
@@ -653,7 +653,7 @@ Get details
 
 .. bridge-snowflake-sync-with-snowflake-prerequisites-start
 
-Before you can create inbound sharing between Snowflake and Amperity you need to collect the following information.
+Before you can create outbound sharing between Snowflake and Amperity you need to collect the following information.
 
 .. list-table::
    :widths: 10 90
@@ -708,7 +708,7 @@ Add outbound bridge
 
 .. bridge-snowflake-sync-with-snowflake-add-bridge-start
 
-Configure an outbound bridge to sync data from Amperity to Snowflake.
+Configure an outbound bridge to sync data with Snowflake.
 
 .. bridge-snowflake-sync-with-snowflake-add-bridge-end
 
@@ -725,7 +725,7 @@ Configure an outbound bridge to sync data from Amperity to Snowflake.
           :alt: Step 1.
           :align: center
           :class: no-scaled-link
-     - Open the **Destinations** page. Under **Outbound shares** click **Add bridge**. This opens the **Create bridge** dialog box.
+     - Open the **Destinations** page. Select the **Outbound shares** tab, and then click **Add bridge**. Choose Snowflake. This opens the **Create bridge** dialog box.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -786,11 +786,16 @@ You can configure Amperity to share any combination of schemas and tables that a
           :align: left
           :class: no-scaled-link
 
-       You may select any combination of schemas and tables.
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: center
+          :class: no-scaled-link
+     - You may select any combination of schemas and tables.
 
        If you select a schema, all tables in that schema will be shared, including all changes made to all tables in that schema.
 
-       When finished, click **Save**. :ref:`The next steps must be done in Snowflake <bridge-snowflake-sync-with-snowflake-configure>`.
+       When finished, click **Save**. :ref:`The next steps are done in Snowflake <bridge-snowflake-sync-with-snowflake-configure>`.
 
 .. bridge-snowflake-sync-with-snowflake-select-tables-steps-end
 

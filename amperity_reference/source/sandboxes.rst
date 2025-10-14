@@ -89,7 +89,7 @@ All sandbox workflows follow the same pattern: create a sandbox, make iterative 
           :alt: Step 1.
           :align: center
           :class: no-scaled-link
-     - Sandboxes are created from the **Users & Admin** page. Find the **Sandboxes** section, and then click **Create sandbox**.
+     - Sandboxes are created from the **Settings** page. Open the **Sandboxes** tab, and then click **Create sandbox**.
 
        .. image:: ../../images/mockups-sandbox-create.png
           :width: 480 px
@@ -411,7 +411,7 @@ Add a sandbox
 
 .. sandboxes-howto-add-sandbox-start
 
-Sandboxes are created from the **Users & Admin** page.
+Sandboxes are created from the **Sandboxes** tab on the **Settings** page.
 
 .. sandboxes-howto-add-sandbox-end
 
@@ -419,7 +419,7 @@ Sandboxes are created from the **Users & Admin** page.
 
 .. sandboxes-howto-add-sandbox-steps-start
 
-#. From the **Users & Admin** page, under **Sandboxes**, click **Create sandbox**.
+#. From the **Settings** page open the **Sandboxes** tab, and then click **Create sandbox**.
 #. Each sandbox should be given a name that identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes.
 
    .. image:: ../../images/mockups-sandbox-create-dialog.png
@@ -440,7 +440,7 @@ Delete a sandbox
 
 .. sandboxes-howto-delete-sandbox-start
 
-You can delete a sandbox from the list of sandboxes under **Sandboxes** on the **Users & Admin** page.
+You can delete a sandbox from the list of sandboxes in the **Sandboxes** tab on the **Settings** page.
 
 .. sandboxes-howto-delete-sandbox-end
 
@@ -448,7 +448,7 @@ You can delete a sandbox from the list of sandboxes under **Sandboxes** on the *
 
 .. sandboxes-howto-delete-sandbox-steps-start
 
-#. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
+#. From the **Settings** page open the **Sandboxes** tab, and then from the list of sandboxes select the |fa-kebab| icon.
 #. From the list of options select **Delete**.
 #. On the **Delete sandbox** window, enter the sandbox ID in the field to confirm that you want to delete the sandbox, and then click **Delete**.
 
@@ -470,7 +470,7 @@ The name and description of a sandbox can be edited after it has been created.
 
 .. sandboxes-howto-edit-validation-details-steps-start
 
-#. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
+#. From the **Settings** page open the **Sandboxes** tab, and then from the list of sandboxes select the |fa-kebab| icon.
 #. From the list of options select **Details**.
 
    The **Sandbox details** window appears with information about the sandbox.
@@ -498,7 +498,7 @@ A sandbox is accessible from the **Users and Activity** page *or* from the dropd
 
 .. sandboxes-howto-open-sandbox-steps-start
 
-#. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
+#. From the **Settings** page open the **Sandboxes** tab, and then from the list of sandboxes select the |fa-kebab| icon.
 #. From the list of options select **Open sandbox**.
 
    This opens the sandbox in a new page in your Web browser.
@@ -525,7 +525,7 @@ Validated changes within a sandbox can be promoted to production.
 
 .. sandboxes-howto-promote-changes-steps-start
 
-#. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon, and then :ref:`open a sandbox <sandboxes-howto-open-sandbox>`.
+#. From the **Settings** page open the **Sandboxes** tab, select the |fa-kebab| icon, and then :ref:`open a sandbox <sandboxes-howto-open-sandbox>`.
 #. From the sandbox, :ref:`resolve all validation issues <sandboxes-howto-resolve-validation-issues>`.
 #. Click the **Promote** button, and then specify if you want to delete the sandbox immediately after promoting your changes or if you want to only promote changes and keep the sandbox.
 #. Click **Promote**.
@@ -563,7 +563,7 @@ This opens the **Pull updates** page, on which you can review all of the updates
 
 .. sandboxes-howto-pull-updates-from-production-steps-start
 
-#. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon, and then :ref:`open a sandbox <sandboxes-howto-open-sandbox>`.
+#. From the **Settings** page open the **Sandboxes** tab, select the |fa-kebab| icon, and then :ref:`open a sandbox <sandboxes-howto-open-sandbox>`.
 #. Click the "Updates to pull from production" link in the sandbox notification banner.
 #. The **Pull updates** page opens. Review all of the updates that is pulled to your sandbox.
 #. Click **Pull**.
@@ -668,7 +668,7 @@ Sandbox details include the name of the sandbox, its tenant ID and URL, when it 
 
 .. sandboxes-howto-view-sandbox-details-steps-start
 
-#. From the **Users & Admin** page, under **Sandboxes**, from the list of sandboxes, select the |fa-kebab| icon.
+#. From the **Settings** page open the **Sandboxes** tab, and then from the list of sandboxes select the |fa-kebab| icon.
 #. From the list of options select **Details**.
 
    The **Sandbox details** window appears with information about the sandbox.

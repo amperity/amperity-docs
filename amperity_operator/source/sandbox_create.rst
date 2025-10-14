@@ -49,7 +49,7 @@ The following sections describe the steps you will follow when creating a sandbo
           :alt: Step 1.
           :align: left
           :class: no-scaled-link
-     - Sandboxes are created from the **Users & Admin** page. Find the **Sandboxes** section, and then click **Create sandbox**.
+     - Sandboxes are created from the **Settings** page. Open the **Sandboxes** tab, and then click **Create sandbox**.
 
        .. image:: ../../images/mockups-sandbox-create.png
           :width: 600 px
