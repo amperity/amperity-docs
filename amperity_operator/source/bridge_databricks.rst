@@ -602,7 +602,7 @@ A sync from Amperity to Databricks requires configuration steps to be made in bo
 
 .. bridge-databricks-sync-with-databricks-sandbox-start
 
-.. note:: Configuration state for an outbound bridge **is not copied** from production, and then applied to the sandbox. An outbound bridge must be configured within the sandbox.
+.. note:: Configuration state for an outbound bridge **is not copied** from production to a sandbox. An outbound bridge must be configured within a sandbox.
 
 .. bridge-databricks-sync-with-databricks-sandbox-end
 
@@ -679,7 +679,7 @@ Add outbound bridge
 
 .. bridge-databricks-sync-with-databricks-add-bridge-start
 
-Configure an outbound bridge to sync data from Amperity to Databricks.
+Configure an outbound bridge to sync data with Databricks.
 
 .. bridge-databricks-sync-with-databricks-add-bridge-end
 
@@ -696,7 +696,7 @@ Configure an outbound bridge to sync data from Amperity to Databricks.
           :alt: Step 1.
           :align: center
           :class: no-scaled-link
-     - Open the **Destinations** page. Under **Outbound shares** click **Add bridge**. This opens the **Create bridge** dialog box.
+     - Open the **Destinations** page. Select the **Outbound shares** tab, and then click **Add bridge**. Choose Databricks. This opens the **Create bridge** dialog box.
 
 
    * - .. image:: ../../images/steps-02.png
