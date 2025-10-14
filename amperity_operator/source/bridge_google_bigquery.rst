@@ -761,3 +761,210 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
 
 
 .. bridge-google-bigquery-sync-amperity-add-inbound-bridge-steps-end
+
+
+.. _bridge-google-bigquery-sync-with-google-bigquery:
+
+To Google BigQuery
+==================================================
+
+.. bridge-google-bigquery-sync-with-google-bigquery-start
+
+A sync from Amperity to Google BigQuery requires configuration steps to be made in both Amperity and Google BigQuery.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-end
+
+.. bridge-google-bigquery-sync-sandbox-start
+
+.. note:: Configuration state for an outbound bridge **is not copied** from production to a sandbox. An outbound bridge must be configured within a sandbox.
+
+.. bridge-google-bigquery-sync-sandbox-end
+
+.. bridge-google-bigquery-sync-with-google-bigquery-links-start
+
+#. :ref:`Verify subscriber details <bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers>`
+#. :ref:`Add bridge <bridge-google-bigquery-sync-with-google-bigquery-add-bridge>`
+#. :ref:`Select tables to share <bridge-google-bigquery-sync-with-google-bigquery-select-tables>`
+#. :ref:`Configure recipients <bridge-google-bigquery-sync-with-google-bigquery-recipients>`
+#. :ref:`Subscribe to datasets <bridge-google-bigquery-sync-with-google-bigquery-subscribe>`
+#. :ref:`Verify table sharing <bridge-google-bigquery-sync-with-google-bigquery-verify-table-sharing>`
+
+.. bridge-google-bigquery-sync-with-databricks-links-end
+
+
+.. _bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers:
+
+Verify subscriber details
+--------------------------------------------------
+
+.. bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers-start
+
+Verify that `IAM principals <https://cloud.google.com/iam/docs/principals-overview>`__ |ext_link| are configured in Google BigQuery.
+
+IAM principals must be authorized to the following roles:
+
+* `Google BigQuery User <https://cloud.google.com/bigquery/docs/access-control#bigquery.user>`__ |ext_link|
+* `Analytics Hub Subscription Owner <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscription-owner-role>`__ |ext_link|
+
+IAM principals must have the following permissions:
+
+* View and subscribe to the `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#grant-role-data-exchange>`__ |ext_link|
+* View and subscribe to the `listing <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscription-owner-role>`__ |ext_link|
+
+.. bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers-end
+
+
+.. _bridge-google-bigquery-sync-with-google-bigquery-add-bridge:
+
+Add outbound bridge
+--------------------------------------------------
+
+.. bridge-google-bigquery-sync-with-google-bigquery-add-bridge-start
+
+Configure an outbound bridge to sync data with Google BigQuery.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-add-bridge-end
+
+**To add an outbound bridge**
+
+.. bridge-google-bigquery-sync-with-databricks-add-bridge-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: center
+          :class: no-scaled-link
+     - Open the **Destinations** page. Select the **Outbound shares** tab, and then click **Add bridge**. Choose Google BigQuery. This opens the **Create bridge** dialog box.
+
+       .. image:: ../../images/bridge-inbound-choose-bigquery.png
+          :width: 320 px
+          :alt: Add a bridge for a sync.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: center
+          :class: no-scaled-link
+     - Add a name and description for the bridge *or* select an existing bridge.
+
+       Click **Next**, after which you will :ref:`select the tables to be shared with Google BigQuery <bridge-google-bigquery-sync-with-google-bigquery-select-tables>`.
+
+.. bridge-google-bigquery-sync-with-databricks-add-bridge-steps-end
+
+
+.. _bridge-google-bigquery-sync-with-google-bigquery-select-tables:
+
+Select tables to share
+--------------------------------------------------
+
+.. bridge-google-bigquery-sync-with-google-bigquery-select-tables-start
+
+You can configure Amperity to share any combination of schemas and tables that are available from the **Customer 360** page.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-select-tables-end
+
+**To select schemas and tables to share**
+
+.. bridge-google-bigquery-sync-with-google-bigquery-select-tables-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: center
+          :class: no-scaled-link
+     - After you have :ref:`configured the settings for the bridge <bridge-google-bigquery-sync-with-google-bigquery-add-bridge>`, click **Next** to open the **Select tables** dialog box.
+
+       .. image:: ../../images/bridge-select-databases-and-tables.png
+          :width: 500 px
+          :alt: Select schemas and tables to be shared.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: center
+          :class: no-scaled-link
+     - You may select any combination of schemas and tables.
+
+       If you select a schema, all tables in that schema will be shared, including all changes made to all tables in that schema.
+
+       When finished, click **Save**.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-select-tables-steps-end
+
+
+.. _bridge-google-bigquery-sync-with-google-bigquery-recipients:
+
+Configure recipients
+--------------------------------------------------
+
+.. bridge-google-bigquery-sync-with-google-bigquery-recipients-start
+
+Authorize `specific IAM principals <https://cloud.google.com/iam/docs/principals-overview>`__ |ext_link| configured in your brand's Google Cloud environment.
+
+Authorized principals are subscribed to the shared schema Amperity syncs to Google BigQuery. There are four types of recipients that can be configured: **Service acounts**, **Users**, **Groups**, and **Domains**.
+
+.. note:: You may click **Next** and skip this step without authorizing principals. As long as this bridge exists in Amperity the list of configured recipients may be edited to authorize new principals or to revoke authorization for existing principals.
+
+ :ref:`The next steps are done in Google BigQuery <bridge-google-bigquery-sync-with-google-bigquery-subscribe>`.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-recipients-end
+
+
+.. _bridge-google-bigquery-sync-with-google-bigquery-subscribe:
+
+Subscribe to datasets
+--------------------------------------------------
+
+.. bridge-google-bigquery-sync-with-google-bigquery-subscribe-start
+
+After tables are shared and recipients are configured you must finish setup in Google BigQuery. Click the **Share link** button, which redirects you to the listing in the Google Cloud console. `All authorized principals who will access data in the share must subscribe to the dataset <https://cloud.google.com/bigquery/docs/analytics-hub-view-subscribe-listings>`__ |ext_link|.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-subscribe-end
+
+.. _bridge-google-bigquery-sync-with-google-bigquery-verify-table-sharing:
+
+Verify table sharing
+--------------------------------------------------
+
+.. bridge-google-bigquery-sync-with-google-bigquery-verify-table-sharing-start
+
+Verify that the tables shared from Amperity are available from a database in Google BigQuery.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-verify-table-sharing-end
+
+**To verify that tables were shared from Amperity to Google BigQuery**
+
+.. bridge-google-bigquery-sync-with-google-bigquery-verify-table-sharing-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step 1.
+          :align: center
+          :class: no-scaled-link
+     - From the **Google Cloud** console, open **Solutions**, **All products**, and then under **Analytics** click **BigQuery** or navigate directly to `https://console.cloud.google.com/bigquery <https://console.cloud.google.com/bigquery>`__ |ext_link|.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step 2.
+          :align: center
+          :class: no-scaled-link
+     - Use the **Explorer** to browse the data collection. Find the tables shared from Amperity and verify the data within them.
+
+.. bridge-google-bigquery-sync-with-google-bigquery-verify-table-sharing-steps-end
