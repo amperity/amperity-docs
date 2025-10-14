@@ -14,10 +14,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure Amperity Bridge for Databricks
+        Connect Amperity Bridge to Databricks
 
 ==================================================
-Configure Amperity Bridge for Databricks
+Connect Amperity Bridge to Databricks
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -34,7 +34,7 @@ Configure Amperity Bridge for Databricks
 
    Audit logging occurs in Databricks *and* in Amperity.
 
-   * `Audit logging <https://docs.amperity.com/reference/settings.html#about-activity-logs>`__ in Amperity shows each users actions and interactions along with access to a history of workflows with tasks that use a bridge to sync data between Amperity and Databricks.
+   * `Audit logging <https://docs.amperity.com/reference/settings.html#about-activity-logs>`__ in Amperity shows each users actions and interactions along with access to a history of workflows with tasks that use a bridge to connect Amperity and Databricks.
    * Databricks captures `Delta Sharing provider events <https://docs.databricks.com/en/admin/account-settings/audit-logs.html#delta-sharing-events>`__ |ext_link|, which includes logging for when a recipient (Amperity) accesses data.
 
 .. bridge-databricks-audits-and-encryption-end
@@ -253,7 +253,7 @@ From Databricks
 
 .. bridge-databricks-sync-with-amperity-start
 
-A sync from Databricks to Amperity requires configuration steps to be made in both Amperity and Databricks.
+A connection between Databricks and Amperity requires configuration steps to be made in both Amperity and Databricks.
 
 .. bridge-databricks-sync-with-amperity-end
 
@@ -370,9 +370,9 @@ Configure Databricks
 
 .. bridge-databricks-sync-with-amperity-configure-databricks-start
 
-To configure Databricks to sync data with Amperity you need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>` in Amperity.
+To configure Databricks to connect with Amperity you need to `CREATE SHARE <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-share>`__ |ext_link| and add tables to that share, `CREATE RECIPIENT <https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html#create-recipient>`__ |ext_link|, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|, and then get an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. The activation link allows a user to download a credential file that is required to :ref:`configure inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>` in Amperity.
 
-.. note:: The following section describes using the Databricks Catalog Explorer to configure Databricks to be ready to sync data with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
+.. note:: The following section describes using the Databricks Catalog Explorer to configure Databricks to be ready to connect with Amperity, along with links to Databricks documentation for each step. You may use the Databricks CLI if you prefer. Instructions for using the Databricks CLI are available from the linked pages.
 
 .. bridge-databricks-sync-with-amperity-configure-databricks-end
 
@@ -486,7 +486,7 @@ Add inbound bridge
 
 .. bridge-databricks-sync-with-amperity-add-bridge-start
 
-Configure an inbound bridge to sync data from Databricks to Amperity.
+Configure an inbound bridge to connect Databricks with Amperity.
 
 .. bridge-databricks-sync-with-amperity-add-bridge-end
 
@@ -509,7 +509,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
 
        .. image:: ../../images/bridge-inbound-choose-databricks.png
           :width: 320 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 
@@ -517,7 +517,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
 
        .. image:: ../../images/bridge-inbound-name-description.png
           :width: 500 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 
@@ -532,7 +532,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
      - Connect the bridge to Databricks by uploading the credential file that was downloaded from the `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. There are two ways to upload the credential file:
 
        #. Uploading the credentials as the second step when adding a bridge. Drop the file into the dialog box or browse to a location on your local machine.
-       #. Choosing the **Upload credential** option from the **Actions** menu for a sync.
+       #. Choosing the **Upload credential** option from the **Actions** menu for a connection.
 
        After the credential file is uploaded, click **Continue**.
 
@@ -546,7 +546,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :alt: Step 3.
           :align: center
           :class: no-scaled-link
-     - Use the **Select tables** dialog box to select any combination of schemas and tables to be synced to Amperity.
+     - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
@@ -554,7 +554,7 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync.
+       If you select a schema, all tables in that schema will be connected. Any new tables added later need to be manually added to the connection.
 
        When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
@@ -564,25 +564,25 @@ Configure an inbound bridge to sync data from Databricks to Amperity.
           :alt: Step 4.
           :align: center
           :class: no-scaled-link
-     - Map the tables that are synced from Databricks to domain tables in Amperity.
+     - Map the tables that are connected from Databricks to domain tables in Amperity.
 
        .. image:: ../../images/bridge-map-inbound-to-domain.png
           :width: 500 px
-          :alt: Map inbound synced tables to domain tables.
+          :alt: Map inbound connected tables to domain tables.
           :align: left
           :class: no-scaled-link
 
-       Tables that are synced with Amperity are added as domain tables.
+       Tables that are connected with Amperity are added as domain tables.
 
-       * The names of synced tables must be unique among all domain tables.
+       * The names of connected tables must be unique among all domain tables.
        * Primary keys are not assigned.
        * Semantic tags are not applied.
 
-       .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within synced tables to support any of your Amperity workflows.
+       .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within connected tables to support any of your Amperity workflows.
 
        When finished, click **Save and sync**. This will start a workflow that synchronizes data from Databricks to Amperity and creates the mapped domain table names.
 
-       You can manually sync tables with Amperity using the **Sync** option from the **Actions** menu for the bridge.
+       You can manually connect tables with Amperity using the **Sync** option from the **Actions** menu for the bridge.
 
 .. bridge-databricks-sync-with-amperity-add-bridge-steps-end
 
@@ -594,7 +594,7 @@ To Databricks
 
 .. bridge-databricks-sync-with-databricks-start
 
-A sync from Amperity to Databricks requires configuration steps to be made in both Amperity and Databricks.
+A connection between Amperity and Databricks requires configuration steps to be made in both Amperity and Databricks.
 
 .. tip:: If you have already installed and configured the Databricks CLI and have permission to configure catalogs and providers in Databricks, the configuration process for outbound shares takes about 5 minutes.
 
@@ -679,7 +679,7 @@ Add outbound bridge
 
 .. bridge-databricks-sync-with-databricks-add-bridge-start
 
-Configure an outbound bridge to sync data with Databricks.
+Configure an outbound bridge to connect with Databricks.
 
 .. bridge-databricks-sync-with-databricks-add-bridge-end
 
@@ -708,7 +708,7 @@ Configure an outbound bridge to sync data with Databricks.
 
        .. image:: ../../images/bridge-add-name-and-set-token.png
           :width: 500 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 

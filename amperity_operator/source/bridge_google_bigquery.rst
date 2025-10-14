@@ -14,10 +14,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure Amperity Bridge for Google BigQuery
+        Connect Amperity Bridge to Google BigQuery
 
 ==================================================
-Configure Amperity Bridge for Google BigQuery
+Connect Amperity Bridge to Google BigQuery
 ==================================================
 
 .. bridge-google-bigquery-about-start
@@ -353,7 +353,7 @@ From Google BigQuery
 
 .. bridge-google-bigquery-sync-amperity-start
 
-A sync from |source-name| to Amperity requires configuration steps to be made in both Amperity and |source-name|.
+A connection from |source-name| to Amperity requires configuration steps to be made in both Amperity and |source-name|.
 
 .. bridge-google-bigquery-sync-amperity-end
 
@@ -662,7 +662,7 @@ Add inbound bridge
 
 .. bridge-google-bigquery-sync-amperity-add-inbound-bridge-start
 
-Configure an inbound bridge to sync data from Google BigQuery to Amperity.
+Configure an inbound bridge to connect Google BigQuery to Amperity.
 
 .. bridge-google-bigquery-sync-amperity-add-inbound-bridge-end
 
@@ -685,7 +685,7 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
 
        .. image:: ../../images/bridge-inbound-choose-bigquery.png
           :width: 320 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 
@@ -693,7 +693,7 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
 
        .. image:: ../../images/bridge-inbound-name-description.png
           :width: 500 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 
@@ -721,7 +721,7 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
           :alt: Step 3.
           :align: center
           :class: no-scaled-link
-     - Use the **Select tables** dialog box to select any combination of schemas and tables to be synced to Amperity.
+     - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
@@ -729,7 +729,7 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync. 
+       If you select a schema, all tables in that schema will be connected. Any new tables added later need to be manually added to the connection. 
 
        When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
@@ -739,25 +739,25 @@ Configure an inbound bridge to sync data from Google BigQuery to Amperity.
           :alt: Step 4.
           :align: center
           :class: no-scaled-link
-     - Map the tables that are synced from |source-name| to domain tables in Amperity.
+     - Map the tables that are connected from |source-name| to domain tables in Amperity.
 
        .. image:: ../../images/bridge-map-inbound-to-domain.png
           :width: 500 px
-          :alt: Map synced tables to domain tables.
+          :alt: Map connected tables to domain tables.
           :align: left
           :class: no-scaled-link
 
-       Tables that are synced with Amperity are added as domain tables.
+       Tables that are connected with Amperity are added as domain tables.
 
-       * The names of synced tables must be unique among all domain tables.
+       * The names of connected tables must be unique among all domain tables.
        * Primary keys are not assigned.
        * Semantic tags are not applied.
 
-       .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within synced tables to support any of your Amperity workflows.
+       .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within connected tables to support any of your Amperity workflows.
 
-       When finished, click **Save and sync**. This will start a workflow that synchronizes data from |source-name| to Amperity and creates the mapped domain table names.
+       When finished, click **Save and sync**. This will start a workflow that connects data from |source-name| to Amperity and creates the mapped domain table names.
 
-       You can manually sync tables that are synced with Amperity using the **Sync** option from the **Actions** menu for the inbound bridge.
+       You can manually sync tables that are connected with Amperity using the **Sync** option from the **Actions** menu for the inbound bridge.
 
 
 .. bridge-google-bigquery-sync-amperity-add-inbound-bridge-steps-end
@@ -770,7 +770,7 @@ To Google BigQuery
 
 .. bridge-google-bigquery-sync-with-google-bigquery-start
 
-A sync from Amperity to Google BigQuery requires configuration steps to be made in both Amperity and Google BigQuery.
+A connection between Amperity and Google BigQuery requires configuration steps to be made in both Amperity and Google BigQuery.
 
 .. bridge-google-bigquery-sync-with-google-bigquery-end
 
@@ -821,7 +821,7 @@ Add outbound bridge
 
 .. bridge-google-bigquery-sync-with-google-bigquery-add-bridge-start
 
-Configure an outbound bridge to sync data with Google BigQuery.
+Configure an outbound bridge to connect Amperity with Google BigQuery.
 
 .. bridge-google-bigquery-sync-with-google-bigquery-add-bridge-end
 
@@ -842,7 +842,7 @@ Configure an outbound bridge to sync data with Google BigQuery.
 
        .. image:: ../../images/bridge-inbound-choose-bigquery.png
           :width: 320 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 
@@ -913,7 +913,7 @@ Configure recipients
 
 Authorize `specific IAM principals <https://cloud.google.com/iam/docs/principals-overview>`__ |ext_link| configured in your brand's Google Cloud environment.
 
-Principals are authorized to subscribe to the shared schema Amperity syncs to Google BigQuery. There are four types of recipients that can be configured: **Service acounts**, **Users**, **Groups**, and **Domains**.
+Principals are authorized to subscribe to the shared schema Amperity connects to Google BigQuery. There are four types of recipients that can be configured: **Service acounts**, **Users**, **Groups**, and **Domains**.
 
 .. note:: You may click **Next** and skip this step without authorizing principals. As long as this bridge exists in Amperity the list of configured recipients may be edited to authorize new principals or to revoke authorization for existing principals.
 
