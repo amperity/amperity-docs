@@ -14,10 +14,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure Amperity Bridge for Snowflake
+        Connect Amperity Bridge to Snowflake
 
 ==================================================
-Configure Amperity Bridge for Snowflake
+Connect Amperity Bridge to Snowflake
 ==================================================
 
 .. bridge-snowflake-about-start
@@ -300,7 +300,7 @@ From Snowflake
 
 .. bridge-snowflake-sync-amperity-start
 
-A sync from Snowflake to Amperity requires configuration steps to be made in both Amperity and Snowflake.
+A connection between Snowflake to Amperity requires configuration steps to be made in both Amperity and Snowflake.
 
 .. bridge-snowflake-sync-amperity-end
 
@@ -506,7 +506,7 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
 Add inbound bridge
 --------------------------------------------------
 
-Configure an inbound bridge to sync data from Snowflake to Amperity.
+Configure an inbound bridge to connect Snowflake with Amperity.
 
 **To add an inbound bridge**
 
@@ -527,7 +527,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
 
        .. image:: ../../images/bridge-inbound-choose-snowflake.png
           :width: 320 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 
@@ -535,7 +535,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
 
        .. image:: ../../images/bridge-inbound-name-description.png
           :width: 500 px
-          :alt: Add a bridge for a sync.
+          :alt: Add a bridge for a connection.
           :align: left
           :class: no-scaled-link
 
@@ -577,7 +577,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :alt: Step 4.
           :align: center
           :class: no-scaled-link
-     - Use the **Select tables** dialog box to select any combination of schemas and tables to be synced to Amperity.
+     - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
@@ -585,7 +585,7 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync. 
+       If you select a schema, all tables in that schema will be connected. Any new tables added later need to be manually added to the connection. 
 
        When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
@@ -595,25 +595,25 @@ Configure an inbound bridge to sync data from Snowflake to Amperity.
           :alt: Step 5.
           :align: center
           :class: no-scaled-link
-     - Map the tables that are synced from Snowflake to domain tables in Amperity.
+     - Map the tables that are connected from Snowflake to domain tables in Amperity.
 
        .. image:: ../../images/bridge-map-inbound-to-domain.png
           :width: 500 px
-          :alt: Map synced tables to domain tables.
+          :alt: Map connected tables to domain tables.
           :align: left
           :class: no-scaled-link
 
-       Tables that are synced with Amperity are added as domain tables.
+       Tables that are connected with Amperity are added as domain tables.
 
-       * The names of synced tables must be unique among all domain tables.
+       * The names of connected tables must be unique among all domain tables.
        * Primary keys are not assigned.
        * Semantic tags are not applied.
 
-       .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within synced tables to support any of your Amperity workflows.
+       .. tip:: Use a custom domain table to assign primary keys, apply semantic tags, and shape data within connected tables to support any of your Amperity workflows.
 
        When finished, click **Save and sync**. This will start a workflow that synchronizes data from Snowflake to Amperity and creates the mapped domain table names.
 
-       You can manually sync tables that are synced with Amperity using the **Sync** option from the **Actions** menu for the inbound bridge.
+       You can manually sync tables that are connected with Amperity using the **Sync** option from the **Actions** menu for the inbound bridge.
 
 .. bridge-snowflake-sync-amperity-add-bridge-steps-end
 
@@ -625,7 +625,7 @@ To Snowflake
 
 .. bridge-snowflake-sync-with-snowflake-start
 
-A sync from Amperity to Snowflake requires configuration steps to be made in both Amperity and Snowflake.
+A connection between Amperity and Snowflake requires configuration steps to be made in both Amperity and Snowflake.
 
 .. bridge-snowflake-sync-with-snowflake-end
 
@@ -708,7 +708,7 @@ Add outbound bridge
 
 .. bridge-snowflake-sync-with-snowflake-add-bridge-start
 
-Configure an outbound bridge to sync data with Snowflake.
+Configure an outbound bridge to connect with Snowflake.
 
 .. bridge-snowflake-sync-with-snowflake-add-bridge-end
 

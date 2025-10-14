@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Amperity Bridge enables inbound and outbound data sharing between Amperity and a data lakehouse, using industry-standard data formats and without replicating data.
+        Amperity Bridge allows users to connect Amperity with data warehouses using industry-standard data formats.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity Bridge enables inbound and outbound data sharing between Amperity and a data lakehouse, using industry-standard data formats and without replicating data.
+        Amperity Bridge allows users to connect Amperity with data warehouses using industry-standard data formats.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -17,11 +17,9 @@
 Configure Amperity Bridge
 ==================================================
 
-.. bridge-about-start
-
-Amperity Bridge enables inbound and outbound data sharing between Amperity and a data lakehouse, using industry-standard data formats and without replicating data.
-
-.. bridge-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-amperity-bridge-start
+   :end-before: .. term-amperity-bridge-end
 
 .. bridge-about-grid-start
 

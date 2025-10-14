@@ -55,12 +55,12 @@ Advantages of Amperity Bridge include:
 
 .. _bridge-sync-data-with:
 
-Sync data
+Connect data warehousees
 ==================================================
 
 .. bridge-sync-data-with-start
 
-Amperity Bridge supports syncing tables with the following applications:
+Amperity Bridge supports connecting with the following applications:
 
 * :ref:`bridge-sync-data-with-databricks`
 * :ref:`bridge-sync-data-with-google-bigquery`
@@ -80,7 +80,7 @@ Amperity Bridge for Databricks
 
 .. bridge-sync-data-with-databricks-start
 
-Configure inbound and outbound shares in Amperity to :ref:`sync Databricks with Amperity <bridge-databricks-sync-with-amperity>` and :ref:`sync Amperity with Databricks <bridge-databricks-sync-with-databricks>`.
+Configure inbound and outbound shares in Amperity to :ref:`connect Databricks with Amperity <bridge-databricks-sync-with-amperity>` and :ref:`connect Amperity with Databricks <bridge-databricks-sync-with-databricks>`.
 
 .. bridge-sync-data-with-databricks-end
 
@@ -92,7 +92,7 @@ Amperity Bridge for Google BigQuery
 
 .. bridge-sync-data-with-google-bigquery-start
 
-Configure inbound and outbound shares in Amperity to enable :ref:`inbound syncing of data tables between Amperity and Google BigQuery <bridge-google-bigquery-sync-with-amperity>`.
+Configure inbound and outbound shares in Amperity to enable :ref:`inbound <bridge-google-bigquery-sync-with-amperity>` and :ref:`outbound connections <bridge-google-bigquery-sync-with-google-bigquery>` connections between Amperity and Google BigQuery.
 
 .. bridge-sync-data-with-google-bigquery-end
 

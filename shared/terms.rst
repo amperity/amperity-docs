@@ -456,7 +456,7 @@ Amperity is a cloud data platform analyzes all types of source data, and then bu
 
 .. term-amperity-bridge-start
 
-Amperity Bridge enables sharing data between Amperity and a data lakehouse using industry-standard data formats. Each bridge configures inbound or outbound connections that give you access to shared tables without replicating data.
+Amperity Bridge allows users to connect Amperity with data warehouses using industry-standard data formats. Access shared tables in Databricks, Google BigQuery, or Snowflake without copying data.
 
 .. term-amperity-bridge-end
 

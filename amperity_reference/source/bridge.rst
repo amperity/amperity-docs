@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats.
+        Amperity Bridge allows users to connect Amperity with data warehouses using industry-standard data formats.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats.
+        Amperity Bridge allows users to connect Amperity with data warehouses using industry-standard data formats.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -49,32 +49,32 @@ Advantages of Amperity Bridge include:
 .. bridge-learning-lab-end
 
 
-.. _bridge-sync:
+.. _bridge-connect:
 
-Sync data with
+Connect with
 ==================================================
 
-.. bridge-sync-start
+.. bridge-connect-start
 
-Configure Amperity Bridge to sync data with the following cloud databases:
+Configure Amperity Bridge to connect with the following cloud data warehouses:
 
-* :ref:`bridge-sync-databricks`
-* :ref:`bridge-sync-google-bigquery`
-* :ref:`bridge-sync-snowflake`
+* :ref:`bridge-connect-databricks`
+* :ref:`bridge-connect-google-bigquery`
+* :ref:`bridge-connect-snowflake`
 
-.. bridge-sync-end
+.. bridge-connect-end
 
 
-.. _bridge-sync-databricks:
+.. _bridge-connect-databricks:
 
 Amperity Bridge for Databricks
 --------------------------------------------------
 
-.. bridge-sync-databricks-start
+.. bridge-connect-databricks-start
 
-Configure inbound and outbound shares in Amperity to enable `bi-directional syncing of data tables between Amperity and Databricks <../operator/bridge_databricks.html>`__.
+Configure inbound and outbound shares in Amperity to enable `bi-directional connections of data tables between Amperity and Databricks <../operator/bridge_databricks.html>`__.
 
-.. bridge-sync-databricks-end
+.. bridge-connect-databricks-end
 
 .. admonition:: About Delta Sharing
 
@@ -83,28 +83,28 @@ Configure inbound and outbound shares in Amperity to enable `bi-directional sync
       :end-before: .. term-delta-sharing-end
 
 
-.. _bridge-sync-google-bigquery:
+.. _bridge-connect-google-bigquery:
 
 Amperity Bridge for Google BigQuery
 --------------------------------------------------
 
-.. bridge-sync-google-bigquery-start
+.. bridge-connect-google-bigquery-start
 
-Configure inbound and outbound shares in Amperity to enable `inbound syncing of data tables between Amperity and Google BigQuery <../operator/bridge_google_bigquery.html>`__.
+Configure inbound and outbound shares in Amperity to enable `inbound and outbound connections of data tables between Amperity and Google BigQuery <../operator/bridge_google_bigquery.html>`__.
 
-.. bridge-sync-google-bigquery-end
+.. bridge-connect-google-bigquery-end
 
 
-.. _bridge-sync-snowflake:
+.. _bridge-connect-snowflake:
 
 Amperity Bridge for Snowflake
 --------------------------------------------------
 
-.. bridge-sync-snowflake-start
+.. bridge-connect-snowflake-start
 
 Amperity Bridge for Snowflake is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <../operator/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
 
-.. bridge-sync-snowflake-end
+.. bridge-connect-snowflake-end
 
 .. include:: ../../amperity_operator/source/bridge_snowflake.rst
    :start-after: .. bridge-snowflake-what-is-data-sharing-start
@@ -139,7 +139,7 @@ Add inbound bridge
 
 .. bridge-howto-add-inbound-start
 
-The steps for adding an inbound bridge depend on the location from which data will be synced to Amperity:
+The steps for adding an inbound bridge depend on the location from which data will be connected to Amperity:
 
 * `Amperity Bridge for Databricks <../operator/bridge_databricks.html#from-databricks>`__
 * `Amperity Bridge for Google BigQuery <../operator/bridge_google_bigquery.html#from-google-bigquery>`__
@@ -155,9 +155,10 @@ Add outbound bridge
 
 .. bridge-howto-add-outbound-start
 
-The steps for adding an outbound bridge depend on the location to which data will be synced from Amperity:
+The steps for adding an outbound bridge depend on the location to which data will be conencted:
 
 * `Amperity Bridge for Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__
+* `Amperity Bridge for Google BigQuery <https://docs.amperity.com/operator/bridge_google_bigquery.html#to-snowflake>`__
 * `Amperity Bridge for Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#to-snowflake>`__
 
 .. bridge-howto-add-outbound-end
@@ -212,7 +213,7 @@ Download credentials
 
 .. bridge-howto-download-credentials-start
 
-To sync data from Amperity with a data lakehouse you may need to configure credentials for Amperity within the data lakehouse. You can download these credentials from the Amperity user interface.
+To connect Amperity with a data warehouse you may need to configure credentials for Amperity within the data warehouse. You can download these credentials from the Amperity user interface.
 
 .. bridge-howto-download-credentials-end
 
@@ -292,7 +293,7 @@ Upload credentials
 
 .. bridge-howto-upload-credentials-start
 
-To sync data to Amperity from a data lakehouse you may need to configure credentials for the data lakehouse within Amperity. You can upload these credentials directly from the Amperity user interface.
+To sync data to Amperity from a data warehouse you may need to configure credentials for the data warehouse within Amperity. You can upload these credentials directly from the Amperity user interface.
 
 .. bridge-howto-upload-credentials-end
 
