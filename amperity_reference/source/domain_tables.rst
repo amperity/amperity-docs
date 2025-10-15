@@ -434,6 +434,7 @@ Tasks related to managing domain tables in Amperity:
 * :ref:`domain-tables-explore`
 * :ref:`domain-tables-explore-sample-data`
 * :ref:`domain-tables-explore-schema`
+* :ref:`domain-tables-find-primary-keys`
 * :ref:`domain-tables-purge`
 * :ref:`domain-tables-rename`
 * :ref:`domain-tables-search`
@@ -866,6 +867,44 @@ The schema shows how data in the domain table maps to the semantic tagging appli
 .. tip:: The number of records in a domain table may not match the number of records loaded by Amperity after loading data. Amperity uses an UPSERT process when loading data and determines priority based on the **Last Updated Field**. If a large difference exists take a close look at the primary key and determine if the primary key is the cause.
 
 .. domain-tables-records-mismatch-tip-end
+
+
+.. _domain-tables-find-primary-key:
+
+Find primary keys
+--------------------------------------------------
+
+.. domain-tables-find-primary-key-start
+
+A custom domain table must have a primary key. The field to which the PK semantic tag is applied must have a unique value for every record in the table. 
+
+.. warning:: Duplicate primary key values will cause database failures. A primary key must be stable over time and should never be transformed or overwritten by updates to source tables.
+
+.. domain-tables-find-primary-key-end
+
+**To find primary keys**
+
+.. domain-tables-find-primary-key-steps-start
+
+#. Open a custom domain table in edit mode.
+#. Click the **Start session** link to start a Spark SQL session. This may take a few minutes.
+
+#. After the Spark SQL session is started, click the **Find primary key** link. This opens the **Explore primary keys** dialog box.
+
+#. From the **Primary key field** dropdown, select one or more fields, and then click the **Validate** button.
+
+   Amperity will evaluate the selected fields and then report on the uniqueness of values in the selected fields. Only fields with unique values should be used as a primary key. For example:
+
+   .. code-block:: none
+
+      Primary key is only < 5.471% unique
+      There are duplicate values in the selected field.
+
+   Click the **View duplicates** link to view a list of records with duplicate values.
+
+   When a single field does not contain unique values you must concatenate two or more fields with values that are stable over time into a single field. Use the concatenated field as the primary key. Hash the value for the concatenated primary key when any of input fields contain personally identifiable information (PII), such as an email address or phone number.
+
+.. domain-tables-find-primary-key-steps-end
 
 
 .. _domain-tables-publish-to-queries:
