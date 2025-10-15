@@ -19,7 +19,7 @@ About AmpAI
 
 .. ampai-overview-start
 
-**AmpAI** enables brands to ask and answer complex questions about their customers, with support for visualizations. **AmpAI** operates over the data in the database and takes natural language questions and converts them into SQL.
+**AmpAI** enables brands to ask and answer complex questions about their customers, with support for visualizations. **AmpAI** operates over the data in the database and makes it easy for users to ask questions and get answers about their customers.
 
 **AmpAI** supports customization through custom prompting capabilities. This enables organizations to encode specific business logic and defintions, tailoring **AmpAI** to align with their business requirements and ensuring consistency in results.
 
@@ -90,7 +90,11 @@ While **AmpAI** works out of the box, updating the custom prompt is often necess
 
 .. tip:: **Database-level custom prompting**
 
-         You can specify different custom prompts to apply to different databases. For example, in the case of a multi-brand tenant, users can retain brand-specific language and business rules across different customer databases.
+         You can specify different custom prompts to apply to different databases. 
+
+         For example, in the case of a multi-brand tenant, users can retain brand- or region-specific language and business rules across different customer databases, like distinct definitions of loyalty status for brands in the US versus in Europe. 
+
+         :ref:`See below for another example of setting parameters by database. <multi-database-example>`
 
 .. ampai-custom-prompt-database-level-custom-prompting-note-end
 
@@ -142,6 +146,8 @@ To maximize the effectiveness of custom prompts:
 * **Test iteratively**
 
   Make small incremental changes to the custom prompt and test after each modification to help identify what works and what needs additional refinement.
+
+.. _multi-database-example:
 
 * **Provide guidance for different databases**
 
