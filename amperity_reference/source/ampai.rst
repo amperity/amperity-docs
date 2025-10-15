@@ -94,7 +94,7 @@ While **AmpAI** works out of the box, updating the custom prompt is often necess
 
          For example, in the case of a multi-brand tenant, users can retain brand- or region-specific language and business rules across different customer databases, like distinct definitions of loyalty status for brands in the US versus in Europe. 
 
-         :ref:`See below for another example of setting parameters by database. <multi-database-example>`
+         :ref:`Another example shows setting parameters by database. <multi-database-example>`
 
 .. ampai-custom-prompt-database-level-custom-prompting-note-end
 
