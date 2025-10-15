@@ -434,7 +434,7 @@ Tasks related to managing domain tables in Amperity:
 * :ref:`domain-tables-explore`
 * :ref:`domain-tables-explore-sample-data`
 * :ref:`domain-tables-explore-schema`
-* :ref:`domain-tables-find-primary-keys`
+* :ref:`domain-tables-find-primary-key`
 * :ref:`domain-tables-purge`
 * :ref:`domain-tables-rename`
 * :ref:`domain-tables-search`
@@ -871,7 +871,7 @@ The schema shows how data in the domain table maps to the semantic tagging appli
 
 .. _domain-tables-find-primary-key:
 
-Find primary keys
+Find primary key
 --------------------------------------------------
 
 .. domain-tables-find-primary-key-start
@@ -882,7 +882,7 @@ A custom domain table must have a primary key. The field to which the PK semanti
 
 .. domain-tables-find-primary-key-end
 
-**To find primary keys**
+**To find primary key**
 
 .. domain-tables-find-primary-key-steps-start
 
