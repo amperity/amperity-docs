@@ -5164,7 +5164,7 @@ The Profile API enables your brand to access customer profiles using a collectio
 
 .. term-profile-api-administrator-policy-start
 
-The **Allow Profile API administration** policy allows full access to the Profile API, including the ability to manage a list of **Profile API** endpoints from the **Destinations** page.
+The **Allow Profile API administration** policy option allows full access to the Profile API, including the ability to manage a list of **Profile API** endpoints from the **Destinations** page.
 
 .. term-profile-api-administrator-policy-end
 
@@ -5675,7 +5675,7 @@ A sandbox is a copy of your production tenant in which you can make configuratio
 
 .. term-sandbox-administrator-policy-start
 
-The **Allow sandbox administration** policy allows full access to all sandboxes in a tenant. Access includes the ability to view details for any sandbox, access any sandbox, promote changes from any sandbox, and delete any sandbox.
+The **Allow sandbox administration** policy option allows full access to all sandboxes in a tenant. Access includes the ability to view details for any sandbox, access any sandbox, promote changes from any sandbox, and delete any sandbox.
 
 .. term-sandbox-administrator-policy-end
 
