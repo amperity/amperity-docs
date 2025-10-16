@@ -162,6 +162,8 @@ Policy options
 
 .. policies-policy-options-start
 
+Policy options are not standalone policies. They must be attached to :ref:`standard policies <policies-standard>` to allow users to perform additional actions within your tenant.
+
 The following policy options are available:
 
 * :ref:`Allow API key administration <policies-api-key-administrator>`
