@@ -225,8 +225,7 @@ The following building blocks are available to users for creating journeys:
 * :ref:`journeys-node-split-conditional`
 * :ref:`journeys-node-split-percent`
 * :ref:`journeys-node-split-individual`
-
-.. * :ref:`journeys-merge`
+* :ref:`journeys-node-merge`
 
 .. journeys-node-types-end
 
@@ -410,12 +409,12 @@ Individual split
 .. journeys-node-split-individual-end
 
 
-.. .. _journeys-merge:
+.. _journeys-node-merge:
 
 Merge
 --------------------------------------------------
 
-.. journeys-merge-start
+.. journeys-node-merge-start
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-merge-start
@@ -429,7 +428,7 @@ Merge
 
 .. note:: The option to merge only appears when you click the plus button below a split. 
 
-.. journeys-merge-end
+.. journeys-node-merge-end
 
 
 Add a node
@@ -446,7 +445,7 @@ If the plus button is after a split node, theer will also be the option to choos
    :alt: Delay node
    :align: left
    :class: no-scaled-link
-.
+
 .. journeys-node-add-end
 
 
