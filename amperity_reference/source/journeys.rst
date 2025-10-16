@@ -226,6 +226,8 @@ The following building blocks are available to users for creating journeys:
 * :ref:`journeys-node-split-percent`
 * :ref:`journeys-node-split-individual`
 
+.. * :ref:`journeys-merge`
+
 .. journeys-node-types-end
 
 
@@ -408,19 +410,43 @@ Individual split
 .. journeys-node-split-individual-end
 
 
+.. .. _journeys-merge:
+
+Merge
+--------------------------------------------------
+
+.. journeys-merge-start
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-merge-start
+   :end-before: .. term-journey-merge-end
+
+.. image:: ../../images/mockup-journeys-canvas-merge-merged.png
+   :width: 440 px
+   :alt: Merged nodes
+   :align: left
+   :class: no-scaled-link
+
+.. note:: The option to merge only appears when you click the plus button below a split. 
+
+.. journeys-merge-end
+
+
 Add a node
 --------------------------------------------------
 
 .. journeys-node-add-start
 
-Click the plus button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split."
+Click the plus button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split." 
+
+If the plus button is after a split node, theer will also be the option to choose "Merge."
 
 .. image:: ../../images/mockup-journeys-canvas-plus.png
    :width: 280 px
    :alt: Delay node
    :align: left
    :class: no-scaled-link
-
+.
 .. journeys-node-add-end
 
 
@@ -449,6 +475,7 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-edit-starting-audience`
 * :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-interact`
+* :ref:`journeys-howtos-merge`
 * :ref:`journeys-howtos-monitor-resolve`
 * :ref:`journeys-howtos-rename`
 * :ref:`journeys-howtos-save-a-journey`
@@ -464,9 +491,11 @@ Tasks related to building journeys in Amperity:
 Add a journey
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/journeys.rst
-   :start-after: .. journeys-about-start
-   :end-before: .. journeys-about-end
+.. .. include:: ../../amperity_reference/source/journeys.rst
+   
+.. :start-after: .. journeys-about-start
+   
+.. :end-before: .. journeys-about-end
 
 .. journeys-howitworks-steps-start
 
@@ -668,7 +697,7 @@ Delete node
 
 .. journeys-howtos-delete-start
 
-Any node on the **Journeys** canvas can be deleted. This action only deletes the node. All child nodes remain in the journey.
+Any node on the **Journeys** canvas can be deleted. This action only deletes that node. All child nodes remain in the journey.
 
 .. journeys-howtos-delete-end
 
@@ -676,7 +705,7 @@ Any node on the **Journeys** canvas can be deleted. This action only deletes the
 
 .. journeys-howtos-delete-steps-start
 
-#. From the **Journeys** canvas, select a node the |fa-kebab| menu on the node you wish to delete, then select **Delete**.
+#. From the **Journeys** canvas, click the |fa-kebab| icon on the node you wish to delete, then select **Delete**.
 #. Continue building the journey or, if finished, click **Save**.
 
 .. journeys-howtos-delete-steps-ende
@@ -806,6 +835,33 @@ The **Journeys** canvas supports the following user interactions:
  
 .. journeys-howtos-interact-end
 
+.. _journeys-howtos-merge:
+
+Merge a split
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-merge-start
+   :end-before: .. term-journey-merge-end
+
+**To merge a split in a journey** 
+
+.. journeys-howtos-merge-steps-start
+
+#. From the **Journeys** canvas, select the plus symbol in any path after a split node, and then choose **Merge**.
+
+   .. image:: ../../images/mockup-journeys-canvas-merge-select.png
+      :width: 280 px
+      :alt: Merge select
+      :align: left
+      :class: no-scaled-link
+
+   To delete the merge, click the |fa-kebab| icon that appears below the merged paths and select **Delete merge**.
+
+
+#. Continue building the journey or, if finished, click **Save**.
+
+.. journeys-howtos-merge-steps-end
 
 .. _journeys-howtos-monitor-resolve:
 
