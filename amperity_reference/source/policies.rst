@@ -191,7 +191,7 @@ Allow API key administration
 
 .. policies-api-key-administrator-start
 
-The **Allow API key administration** policy allows full access to managing the API keys and access tokens that are used with the Profile and Streaming Ingest APIs. This policy enables the **API keys** list on the **Users and Activity** page.
+The **Allow API key administration** policy option allows full access to managing the API keys and access tokens that are used with the Profile and Streaming Ingest APIs. This policy option  enables the **API keys** list on the **Users and Activity** page.
 
 .. policies-api-key-administrator-end
 
@@ -227,7 +227,7 @@ Allow source data deletion
 
 .. policies-sandbox-administrator-start
 
-The **Allow source data deletion** policy may be assigned to a **DataGrid Operator** to allow users assigned that policy the ability to delete domain table data from the **Sources** page.
+The **Allow source data deletion** policy option  may be assigned to a **DataGrid Operator** to allow users assigned that policy the ability to delete domain table data from the **Sources** page.
 
 .. policies-sandbox-administrator-end
 
@@ -239,7 +239,7 @@ Allow user administration
 
 .. policies-allow-user-administration-start
 
-The **Allow user administration** policy may be assigned to users to enable access to the :ref:`Users settings tab <policies-allowed-actions-settings-users>`, the :ref:`Security settings tab (for resource groups) <policies-allowed-actions-settings-security>`, and the :ref:`Activity log settings tab <policies-allowed-actions-settings-activity-log>`.
+The **Allow user administration** policy option  may be assigned to users to enable access to the :ref:`Users settings tab <policies-allowed-actions-settings-users>`, the :ref:`Security settings tab (for resource groups) <policies-allowed-actions-settings-security>`, and the :ref:`Activity log settings tab <policies-allowed-actions-settings-activity-log>`.
 
 .. policies-allow-user-administration-end
 
