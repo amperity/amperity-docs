@@ -29,7 +29,7 @@ Why should you use this reference?
 
 .. sql-presto-why-should-i-use-this-start
 
-The **SQL Segment Editor** in the **Queries** and **Segment** tabs uses Presto SQL as the underlying SQL engine. Amperity segments are built almost exclusively by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available.
+The **SQL Segment Editor** in the **Queries** and **Segment** tabs uses Presto SQL as the underlying SQL engine. Amperity segments are built almost exclusively by using the **SELECT** statement and window functions, along with the clauses, operators, expressions, and functions you would expect to be available.
 
 This reference is focused on how Presto SQL is used with Amperity and is not focused on anything that you would not expect to do from the **Queries** and **Segment** tabs in Amperity.
 
