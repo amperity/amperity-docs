@@ -2224,6 +2224,24 @@ Coalesce to 1 (non-NULL) values
 .. sql-spark-function-coalesce-example-coalesce-to-1-non-null-values-end
 
 
+.. _sql-spark-function-coalesce-example-coalesce-primary-keys:
+
+Coalesce to primary keys
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-spark-function-coalesce-example-coalesce-primary-keys-start
+
+Values that are not needed in the final output, including **NULL** values or placeholders for **NULL** values, such as "1900-01-01" can be filtered out to prevent them from causing skew. If values are required, you can replace them with a primary key.
+
+For example:
+
+.. code-block:: none
+
+   COALESCE(NULLIF({field}, ‘{bad_value}'), _uuid_pk)
+
+.. sql-spark-function-coalesce-example-coalesce-primary-keys-end
+
+
 .. _sql-spark-function-coalesce-example-handle-multiple-delimiter-types:
 
 Multiple delimiter types
