@@ -3525,6 +3525,14 @@ An individual split node represents each path in a journey that defines a condit
 
 .. term-journey-node-individual-split-end
 
+**journey node: Merge**
+
+.. term-journey-merge-start
+
+A merge joins together paths in a conditional or percent split so that users don't need to duplicate logic if the journey for both paths should be the same after the split. 
+
+.. term-journey-merge-end
+
 
 **journey node: Percent split**
 

@@ -45,6 +45,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Application Programming Interface
    * - **APP**
      - Australian Privacy Principles
+   * - **ARM**
+     - Azure Resource Manager
    * - **ARN**
      - Amazon Resource Name
    * - **ASCII**

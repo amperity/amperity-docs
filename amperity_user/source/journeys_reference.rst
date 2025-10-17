@@ -160,6 +160,16 @@ Individual split
    :end-before: .. journeys-node-split-individual-end
 
 
+.. _journeys-node-merge:
+
+Merge
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-node-merge-start
+   :end-before: .. journeys-node-merge-end
+
+
 .. _journeys-add-node:
 
 Add a node
