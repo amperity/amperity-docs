@@ -146,8 +146,8 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Review customer profile reports**
 
@@ -157,8 +157,8 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Review transaction reports**
 
@@ -228,8 +228,8 @@ Itemized transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -242,8 +242,8 @@ Itemized transactions
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Multi-brand databases only**
 
@@ -260,8 +260,8 @@ Itemized transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -293,8 +293,8 @@ Unified transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Pre-requisite**
 
@@ -303,8 +303,8 @@ Unified transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -313,8 +313,8 @@ Unified transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -348,8 +348,8 @@ Extended attributes
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Pre-requisite**
 
@@ -358,8 +358,8 @@ Extended attributes
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -368,8 +368,8 @@ Extended attributes
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -550,8 +550,8 @@ To associate purchase histories with customer profiles apply transaction semanti
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Run Stitch**
 
@@ -563,8 +563,8 @@ To associate purchase histories with customer profiles apply transaction semanti
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Refresh the customer 360 database**
 

@@ -62,28 +62,28 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The username and password of a Salesforce account configured for API access.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The |destination-name| security token that belongs to username. (The security token is not required if IP range policies are configured from the Salesforce admin console.)
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - The scheme and host for a custom |destination-name| URL, if used by customer.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - If Amperity sends data to a sandbox instance.
 
@@ -129,8 +129,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -149,8 +149,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -190,8 +190,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -225,8 +225,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -239,8 +239,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -268,8 +268,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -288,8 +288,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -298,7 +298,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -309,8 +309,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -329,8 +329,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL of Salesforce logins (if used), the name of the object in Salesforce to which Amperity sends data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if NULL values should be used when fields are empty.
 
@@ -349,8 +349,8 @@ Add data template
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

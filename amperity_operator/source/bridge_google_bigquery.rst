@@ -495,7 +495,7 @@ A `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-ex
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **BigQuery Console** to the **Sharing** page.
@@ -504,7 +504,7 @@ A `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-ex
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - In the **Exchange configuration** pane, do the following:
@@ -517,7 +517,7 @@ A `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-ex
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Click **Create exchange**.
@@ -552,7 +552,7 @@ A `data listing within a private data exchange <https://cloud.google.com/bigquer
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - On the **Sharing** page click the name of the exchange.
@@ -561,7 +561,7 @@ A `data listing within a private data exchange <https://cloud.google.com/bigquer
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - From the **Resource type** dropdown select "BigQuery Dataset", and then select a dataset.
@@ -571,7 +571,7 @@ A `data listing within a private data exchange <https://cloud.google.com/bigquer
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Configure a series of details for the data listing.
@@ -588,7 +588,7 @@ A `data listing within a private data exchange <https://cloud.google.com/bigquer
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Click **Publish**.
@@ -629,7 +629,7 @@ A share link allows a subscriber to connect to a data listing. Copy the share li
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - On the **Sharing** page in the row for the exchange that will share data with Amperity select **Set permissions** from the ellipses menu.
@@ -644,7 +644,7 @@ A share link allows a subscriber to connect to a data listing. Copy the share li
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - On the **Sharing** page in the row for the exchange that will share data with Amperity select **Copy share link** from the ellipses menu.
@@ -676,7 +676,7 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Sources** page. Under **Inbound shares** click **Add bridge**. 
@@ -702,7 +702,7 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Add the :ref:`share link <bridge-google-bigquery-sync-amperity-configure-bigquery-subscriber-and-share>` that was copied from the |source-name| data exchange.
@@ -718,7 +718,7 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
@@ -736,7 +736,7 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Map the tables that are connected from |source-name| to domain tables in Amperity.
@@ -835,7 +835,7 @@ Configure an outbound bridge to connect Amperity with Google BigQuery.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Destinations** page. Select the **Outbound shares** tab, and then click **Add bridge**. Choose Google BigQuery. This opens the **Create bridge** dialog box.
@@ -848,7 +848,7 @@ Configure an outbound bridge to connect Amperity with Google BigQuery.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Add a name and description for the bridge *or* select an existing bridge.
@@ -879,7 +879,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - After you have :ref:`configured the settings for the bridge <bridge-google-bigquery-sync-with-google-bigquery-add-bridge>`, click **Next** to open the **Select tables** dialog box.
@@ -892,7 +892,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - You may select any combination of schemas and tables.
@@ -954,7 +954,7 @@ Verify that the tables shared from Amperity are available from a database in Goo
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - From the **Google Cloud** console, open **Solutions**, **All products**, and then under **Analytics** click **BigQuery** or navigate directly to `https://console.cloud.google.com/bigquery <https://console.cloud.google.com/bigquery>`__ |ext_link|.
@@ -962,7 +962,7 @@ Verify that the tables shared from Amperity are available from a database in Goo
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Use the **Explorer** to browse the data collection. Find the tables shared from Amperity and verify the data within them.

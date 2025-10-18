@@ -408,7 +408,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-source-start
@@ -427,7 +427,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -442,7 +442,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -470,7 +470,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

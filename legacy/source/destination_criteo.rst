@@ -50,7 +50,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Custom audiences**
 
@@ -59,7 +59,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Transactions data**
 
@@ -97,14 +97,14 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The advertiser ID.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Criteo account <destination-criteo-configure-oauth>`.
 
@@ -154,8 +154,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -163,8 +163,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -172,8 +172,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -219,8 +219,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -239,8 +239,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -273,8 +273,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -299,8 +299,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -313,8 +313,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -348,8 +348,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -368,8 +368,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -377,7 +377,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -392,8 +392,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -412,8 +412,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

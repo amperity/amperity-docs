@@ -55,7 +55,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-00.png
           :width: 60 px
-          :alt: Step 0.
+          :alt: Step zero.
           :align: center
           :class: no-scaled-link
      - **Prerequisites**
@@ -81,7 +81,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Create an Amazon S3 bucket**
@@ -93,7 +93,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Create an IAM role for AWS Lambda**
@@ -136,7 +136,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - **Create an AWS Lambda function**
@@ -156,7 +156,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - **Deploy the code for the AWS Lambda function**
@@ -170,7 +170,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - **Install dependencies**
@@ -211,7 +211,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - **Configure environment variables**
@@ -252,7 +252,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step seven.
           :align: center
           :class: no-scaled-link
      - **Configure function settings**
@@ -269,7 +269,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
+          :alt: Step eight.
           :align: center
           :class: no-scaled-link
      - **Create schedule**
@@ -300,7 +300,7 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
 
    * - .. image:: ../../images/steps-09.png
           :width: 60 px
-          :alt: Step 9.
+          :alt: Step nine.
           :align: center
           :class: no-scaled-link
      - **Validate the function**

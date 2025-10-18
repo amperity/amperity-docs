@@ -386,7 +386,7 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - A share is a securable object in Unity Catalog that can be configured to share tables with Amperity.
@@ -398,7 +398,7 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - A recipient in Databricks represents the entity that will consume shared data: Amperity. Configure the recipient for open sharing and to use token-based authentication.
@@ -410,7 +410,7 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Open sharing uses token-based authentication.
@@ -500,7 +500,7 @@ Configure an inbound bridge to connect Databricks with Amperity.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
@@ -526,7 +526,7 @@ Configure an inbound bridge to connect Databricks with Amperity.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Connect the bridge to Databricks by uploading the credential file that was downloaded from the `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. There are two ways to upload the credential file:
@@ -543,7 +543,7 @@ Configure an inbound bridge to connect Databricks with Amperity.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
@@ -561,7 +561,7 @@ Configure an inbound bridge to connect Databricks with Amperity.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Map the tables that are connected from Databricks to domain tables in Amperity.
@@ -693,7 +693,7 @@ Configure an outbound bridge to connect with Databricks.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Destinations** page. Select the **Outbound shares** tab, and then click **Add bridge**. Choose Databricks. This opens the **Create bridge** dialog box.
@@ -701,7 +701,7 @@ Configure an outbound bridge to connect with Databricks.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Add the name for the bridge and a description, and then set the duration for which the token will remain active.
@@ -744,7 +744,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - After you have :ref:`configured the settings for the bridge <bridge-databricks-sync-with-databricks-add-bridge>`, click **Next** to open the **Select tables** dialog box.
@@ -764,7 +764,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - When a bridge is already configured, you may edit the list of schemas and tables that are shared. From the **Destinations** page, under **Outbound shares**, open the **Actions** for a bridge, and then click **Edit**. This opens the **Select tables** dialog box.
@@ -787,14 +787,14 @@ There are two ways to download the credential file:
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Click the **Download credential** button as part of the steps shown when you configure a bridge by clicking the **Add bridge** button located under **Outbound shares** on the **Destinations** page.
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Choosing the **Download credential** option from the **Actions** menu for an outbound share.
@@ -837,14 +837,14 @@ You can create a provider directly from the Databricks user interface. Upload th
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the Databricks user interface. Open **Catalog Explorer**, then **Delta Sharing**, and then **Shared with me**.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - At the bottom of the **Shared with me** page, click the **Import provider directly** button. This opens the **Import Provider** dialog.
@@ -861,7 +861,7 @@ You can create a provider directly from the Databricks user interface. Upload th
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - On the providers page, click **Create catalog** to :ref:`add a catalog <bridge-databricks-sync-with-databricks-add-catalog-from-share>` for the data that is shared from Amperity.
@@ -888,14 +888,14 @@ You can use the Databricks CLI to create a provider in Databricks. Attach the cr
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the Databricks CLI in a command window.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Run the `databricks providers create <https://docs.databricks.com/api/workspace/providers/create>`__ |ext_link| command:
@@ -934,7 +934,7 @@ You can use the Databricks CLI to create a provider in Databricks. Attach the cr
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - A successful response from Databricks is similar to:
@@ -1028,7 +1028,7 @@ A catalog is the first layer in a Unity Catalog namespace and is used to organiz
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Log in to Databricks, and then open the **Catalog Explorer**.
@@ -1036,7 +1036,7 @@ A catalog is the first layer in a Unity Catalog namespace and is used to organiz
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - In the **Catalog Explorer**, expand **Delta Sharing**, and then select **Shared with me**.
@@ -1046,7 +1046,7 @@ A catalog is the first layer in a Unity Catalog namespace and is used to organiz
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - From the list of schemas, select the schema you just created.
@@ -1093,7 +1093,7 @@ Verify that the tables shared from Amperity are available from a catalog in Data
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - From the **Catalog Explorer** in Databricks, expand **Catalog**, and then find the catalog that was created for sharing Amperity data.
@@ -1101,7 +1101,7 @@ Verify that the tables shared from Amperity are available from a catalog in Data
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Open the catalog, and then verify that the tables you shared from Amperity are available in the catalog.

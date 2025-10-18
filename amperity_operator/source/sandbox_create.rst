@@ -46,8 +46,8 @@ The following sections describe the steps you will follow when creating a sandbo
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Sandboxes are created from the **Settings** page. Open the **Sandboxes** tab, and then click **Create sandbox**.
 
@@ -73,8 +73,8 @@ The following sections describe the steps you will follow when creating a sandbo
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Each sandbox should be given a name that identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes. Click **Create** to generate the sandbox for your tenant.
 
@@ -85,10 +85,10 @@ The following sections describe the steps you will follow when creating a sandbo
           :class: no-scaled-link
 
 
-   * - .. image:: ../../images/steps-04.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - You can view details about this sandbox. From the list of sandboxes, select the |fa-kebab| icon, and then from the list of options select **Details**.
 

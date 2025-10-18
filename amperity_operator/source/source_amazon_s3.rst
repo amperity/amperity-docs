@@ -76,7 +76,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The name of the S3 bucket from which data is pulled to Amperity.
 
@@ -84,7 +84,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - For :ref:`cross-account role assumption <source-amazon-s3-credentials-role-to-role>` you need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
 
@@ -148,8 +148,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-start
@@ -168,8 +168,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
@@ -184,8 +184,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
@@ -204,8 +204,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
@@ -217,8 +217,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
@@ -246,8 +246,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-01-open-dialog-start
@@ -266,8 +266,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-already-configured-start
@@ -288,8 +288,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-03-select-file-start
@@ -328,8 +328,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-04-review-start
@@ -360,8 +360,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-05-feed-options-start
@@ -409,8 +409,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-05-feed-options-start
@@ -458,8 +458,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-06-feed-editor-start
@@ -468,8 +468,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
-          :align: left
+          :alt: Step seven.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-07-courier-start
@@ -516,7 +516,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-source-start
@@ -535,7 +535,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -550,7 +550,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -578,7 +578,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

@@ -22,7 +22,7 @@ Offline events
    :end-before: .. offline-events-overview-end
 
 
-**Send offline events**
+**Send offline events to**
 
 .. events-about-grid-start
 

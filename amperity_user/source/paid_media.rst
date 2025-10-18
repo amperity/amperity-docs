@@ -423,7 +423,7 @@ How can you measure the success of a paid media campaign over a defined time win
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
 
@@ -437,7 +437,7 @@ How can you measure the success of a paid media campaign over a defined time win
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
 
@@ -450,7 +450,7 @@ How can you measure the success of a paid media campaign over a defined time win
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
 

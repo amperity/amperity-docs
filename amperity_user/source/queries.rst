@@ -47,7 +47,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
 
@@ -55,7 +55,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
 
@@ -72,7 +72,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
 
@@ -91,7 +91,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Click **Run Query** to run the query. The syntax for the attributes you added to the query are validated, after which the results are shown in the lower part of the SQL **Query Editor**.
@@ -122,7 +122,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Give your query a name a clear and understandable name. The name field is located in the upper left corner of the SQL **Query Editor**.
@@ -140,7 +140,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
           :alt: Save your query.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - When you are done building your query, click the **Activate** button in the top right corner of the SQL **Query Editor**.
 

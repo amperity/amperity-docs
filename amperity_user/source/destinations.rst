@@ -44,7 +44,7 @@ Destinations are the locations to which you sends the lists of customers that ar
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Add destinations to your :doc:`campaign <campaigns>`. This is done from within the campaign builder for each treatment group that is part of a sub-audience. You can assign more than one destination to each treatment group.
@@ -54,7 +54,7 @@ Destinations are the locations to which you sends the lists of customers that ar
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - A specific set of journeys and messaging creatives are built out and are tailored for customers who fall into the "active" lifecycle status. "Active" customers is sent to the following channels:
@@ -82,7 +82,7 @@ Destinations are the locations to which you sends the lists of customers that ar
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - "Cooling down" customers are sent to the same channels as "active" customers, but journeys and messaging creatives will be tailored to the "cooling down" lifecycle status.
@@ -98,7 +98,7 @@ Destinations are the locations to which you sends the lists of customers that ar
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - "At risk" high-value customers are sent to the same channels as "active" and "cooling down" customers and also to TikTok and Facebook. Journeys and messaging creatives will be tailored to the "at risk" lifecycle status, along with new channels for display advertising creatives that are tailored to customers who fall into the "at risk" lifecycle status.
@@ -114,7 +114,7 @@ Destinations are the locations to which you sends the lists of customers that ar
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Each sub-audience that is configured for your campaign have at least one destination associated with it. For each destination that is configured you must specify the set of attributes that is sent from Amperity to that destination.
@@ -136,7 +136,7 @@ Destinations are the locations to which you sends the lists of customers that ar
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - The attributes that are available from the **Edit Attributes** window varies, depending on the destination. Some destinations have strict naming requirements. Some destinations only allow specific fields to be sent. Some destinations allow only one or two attributes, whereas others have few restrictions.

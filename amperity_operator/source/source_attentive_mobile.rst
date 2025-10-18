@@ -100,42 +100,42 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The hostname for the SFTP site from which data is pulled. For example: |sftp-hostname|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The username and passphrase.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - The host public key if encryption is configured.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - A private key when the "private-key" credential type is selected.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail five.
+          :align: center
           :class: no-scaled-link
      - The public key to use for PGP encryption.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail six.
+          :align: center
           :class: no-scaled-link
      - The remote folder from which Amperity will pull data.
 
@@ -149,8 +149,8 @@ The |source-name| data source requires the following configuration details:
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail seven.
+          :align: center
           :class: no-scaled-link
      - Conversions data pulled from |source-name| has a field named **message_text** that contains the lines of an SMS message using **\n** to separate each line of the message.
 
@@ -191,8 +191,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-01-open-dialog-start
@@ -211,8 +211,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-already-configured-start
@@ -233,8 +233,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-03-select-file-start
@@ -273,8 +273,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-04-review-start
@@ -301,8 +301,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-05-feed-options-start
@@ -350,8 +350,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-06-feed-editor-start
@@ -360,8 +360,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
-          :align: left
+          :alt: Step seven.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-07-courier-start
@@ -408,7 +408,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-source-start
@@ -427,7 +427,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -442,7 +442,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -470,7 +470,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

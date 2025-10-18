@@ -169,26 +169,14 @@ There are four groups of tables in this diagram:
    * - Group name
      - Description
 
-   * - Customer records
-
-       .. image:: ../../images/data_tables-customer-records.png
-          :width: 20 px
-          :alt: The color associated with the customer profile table group.
-          :align: left
-          :class: no-scaled-link
+   * - **Customer records**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-customer-profile-start
           :end-before: .. term-customer-profile-end
 
        The **Customer 360** table represents your primary set of customer profiles and is the most common starting point for building segments. Each customer profile is built using a combination of the **Merged Customers**, **Unified Customer**, and **Unified Coalesced** tables.
 
-   * - Interaction records
-
-       .. image:: ../../images/data_tables-interaction-records.png
-          :width: 20 px
-          :alt: The color associated with the interaction records table group.
-          :align: left
-          :class: no-scaled-link
+   * - **Interaction records**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-interaction-record-start
           :end-before: .. term-interaction-record-end
@@ -198,27 +186,14 @@ There are four groups of tables in this diagram:
        Each Amperity ID in the **Customer 360** table can be associated to many rows in the **Unified Transactions** table, and then each Amperity ID in the **Unified Transactions** can be associated to many rows in the **Unified Itemized Transactions** table. Each Amperity ID in the **Customer 360** table is associated to one Amperity ID in the **Transaction Attributes Extended** table.
 
 
-   * - Stitch results
-
-       .. image:: ../../images/data_tables-stitch-results.png
-          :width: 20 px
-          :alt: The color associated with the Stitch results table group.
-          :align: left
-          :class: no-scaled-link
+   * - **Stitch results**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-stitch-qa-start
           :end-before: .. term-stitch-qa-end
 
        Stitch QA activities rely on a series of tables: **Unified Coalesced**, **Unified Scores**, **Detailed Examples**, **Unified Preprocessed Raw**, **Unified Changes Clusters**, and **Unified Changes PKs**. These tables are the basis for the Stitch QA process. The specific use of individual tables will vary from tenant to tenant. Together they provide visibility into how Amperity grouped or did not group individual customer records to a single Amperity ID.
 
-   * - Predictive tables
-
-       .. image:: ../../images/data_tables-ampiq.png
-          :width: 20 px
-          :alt: The color associated with predictive tables.
-          :align: left
-          :class: no-scaled-link
-
+   * - **Predictive tables**
      - Tables may be enabled for users of Amperity. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1:1 or 1:many relationship between those three tables and tables. The **Predicted CLV Attributes** table contains one row per Amperity ID, whereas the **Affinity** and **Recommendation** tables contain many rows per Amperity ID.
 
        The **Campaign Recipients** table contains a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.

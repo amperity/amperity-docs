@@ -74,13 +74,7 @@ There are four groups of tables in this diagram:
    * - Group name
      - Description
 
-   * - Customer records
-
-       .. image:: ../../images/data_tables-customer-records.png
-          :width: 20 px
-          :alt: The color associated with the customer profile table group.
-          :align: left
-          :class: no-scaled-link
+   * - **Customer records**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-customer-profile-start
           :end-before: .. term-customer-profile-end
@@ -88,13 +82,7 @@ There are four groups of tables in this diagram:
        The :ref:`data-tables-customer-360` table represents your primary set of customer profiles and is the most common starting point for building segments. Each customer profile is built using a combination of the :ref:`data-tables-merged-customers`, :ref:`data-tables-customer-attributes`, :ref:`data-tables-unified-customers`, and :ref:`data-tables-unified-coalesced` tables.
 
 
-   * - Interaction records
-
-       .. image:: ../../images/data_tables-interaction-records.png
-          :width: 20 px
-          :alt: The color associated with the interaction records table group.
-          :align: left
-          :class: no-scaled-link
+   * - **Interaction records**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-interaction-record-start
           :end-before: .. term-interaction-record-end
@@ -104,26 +92,14 @@ There are four groups of tables in this diagram:
        Each Amperity ID in the **Customer 360** table can be associated to many rows in the **Unified Transactions** table, and then each Amperity ID in the **Unified Transactions** can be associated to many rows in the **Unified Itemized Transactions** table. Each Amperity ID in the **Customer 360** table is associated to one Amperity ID in the **Transaction Attributes Extended** table.
 
 
-   * - Stitch results
-
-       .. image:: ../../images/data_tables-stitch-results.png
-          :width: 20 px
-          :alt: The color associated with the Stitch results table group.
-          :align: left
-          :class: no-scaled-link
+   * - **Stitch results**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-stitch-qa-start
           :end-before: .. term-stitch-qa-end
 
        Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process. The use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
 
-   * - Predictive models
-
-       .. image:: ../../images/data_tables-ampiq.png
-          :width: 20 px
-          :alt: The color associated with the predictive modeling table group.
-          :align: left
-          :class: no-scaled-link
+   * - **Predictive models**
      - Predictive modeling tables are the results of the configuration and tuning of Amperity for predictive analytics. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1-to-1 or 1-to-many relationship between those three tables and predictive modeling tables. The :ref:`data-tables-predicted-clv-attributes` table contains one row per Amperity ID, whereas the :ref:`data-tables-affinity` table contains many rows per Amperity ID.
 
        The :ref:`data-tables-campaign-recipients` table contains a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
@@ -179,7 +155,7 @@ This diagram uses the following indicators to highlight relationships between ta
        .. image:: ../../images/data_tables-linking.png
           :width: 20 px
           :alt: An indicator that this column is a linking key.
-          :align: center
+          :align: left
      - Indicates this column links customer records, such as those associated with a customer key or a foreign key that were defined as part of a feed or custom domain table from the **Sources** page.
 
    * - Data source

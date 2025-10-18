@@ -47,8 +47,8 @@ The following sections describe the steps you will follow when working in a sand
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - To access a sandbox, from the list of sandboxes, select the |fa-kebab| icon, and then from the list of options select **Access sandbox**.
 
@@ -68,8 +68,8 @@ The following sections describe the steps you will follow when working in a sand
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Sandbox configuration works the same way as it does in production with all of the same features and functionality. The main difference is that users in a sandbox are assigned the **DataGrid Administrator** policy, which gives them full access to the configuration state within the sandbox.
 
@@ -96,8 +96,8 @@ The following sections describe the steps you will follow when working in a sand
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Sandbox-specific notifications are built into the pages to help you identify the current configuration state of the sandbox as it relates to the configuration state in production. These appear near the top of each page. 
 
@@ -122,8 +122,8 @@ The following sections describe the steps you will follow when working in a sand
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - A series of validations are run against updates. These validations will notify you within the sandbox when the configuration state of production and a sandbox conflict.
 
@@ -148,8 +148,8 @@ The following sections describe the steps you will follow when working in a sand
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - When there are updates that can be pulled to your sandbox from production you will be notified, after which you can review the validations and each of the updates. Click the **Pull** button in the top-right of the page to pull the updates to your sandbox.
 

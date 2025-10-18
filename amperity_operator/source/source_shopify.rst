@@ -86,7 +86,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Permission to connect FiveTran to Shopify.
 
@@ -101,8 +101,8 @@ The |source-name| data source requires the following configuration details:
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - A Shopify shop name, which is the same as ``shop-name`` in your Shopify URL: ``shop-name.myshopify.com``.
 
@@ -111,24 +111,24 @@ The |source-name| data source requires the following configuration details:
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - A Shopify username for an account with permission to `read data from the Shopify Admin API <https://shopify.dev/docs/admin-api/access-scopes>`__ |ext_link|, specifically, the ability to ``read_all_orders``, ``read_customers``, ``read_draft_orders``, ``read_fulfillments``, ``read_inventory``, ``read_price_rules``, ``read_product``, and ``read_shipping``.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - The passphrase for the Shopify username.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-get-details-fivetran-access-to-snowflake-start

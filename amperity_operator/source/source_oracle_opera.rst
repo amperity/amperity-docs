@@ -74,7 +74,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Configure environment and application, get Oracle OPERA config settings**
 
@@ -92,7 +92,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Configure Amperity**
 
@@ -106,7 +106,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Configure business events for streaming, enable stream**
 
@@ -140,7 +140,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - |source-name| makes streamed data available from the `Streaming API <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/c_streaming_api.htm>`__ |ext_link|.
 

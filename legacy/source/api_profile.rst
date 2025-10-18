@@ -542,8 +542,8 @@ To enable the Profile API for your tenant:
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ (or send email to support@amperity.com) and request enabling the Profile API for your tenant.
 
@@ -553,8 +553,8 @@ To enable the Profile API for your tenant:
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - After the Profile API is enabled, the Destinations page is updated to show the list of endpoints available to the Profile API:
 
@@ -624,8 +624,8 @@ An index must be defined for each query that is used to generate an endpoint for
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page and click the **Add Index** button. This button is located to the right of the **Profile API** section header.
 
@@ -646,8 +646,8 @@ An index must be defined for each query that is used to generate an endpoint for
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Select the query that is used to generate the fields in the index, and then choose the field in that index that is used as the lookup key.
 
@@ -660,8 +660,8 @@ An index must be defined for each query that is used to generate an endpoint for
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Select the type of response this endpoint provides.
 
@@ -690,10 +690,10 @@ An index must be defined for each query that is used to generate an endpoint for
        Use the **LIMIT** setting to define the maximum number of matching records that may be in the list. This value must be at least 1 and cannot be more than 10.
 
 
-   * - .. image:: ../../images/steps-03.png
+   * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Choose the method by which the index will be generated (over time). There are two options: after a courier group run or manually.
 
@@ -714,10 +714,10 @@ An index must be defined for each query that is used to generate an endpoint for
              :class: no-scaled-link
 
 
-   * - .. image:: ../../images/steps-04.png
+   * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Save the index.
 
@@ -747,8 +747,8 @@ An index must be generated before the endpoint will be available to your tenant'
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Manually. Open the **Actions** menu for the index, and then select **Run**.
 
@@ -766,8 +766,8 @@ An index must be generated before the endpoint will be available to your tenant'
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - After a courier group completes.
 
@@ -1179,8 +1179,8 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Build an index that contains the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles. For example: loyalty ID and loyalty tier, predicted CLV tiers, and the rest of the customer profile (address, state, postal, and full name):
 
@@ -1210,8 +1210,8 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Your Profile API access token is a JSON Web Token (JWT) that should be accessible from a safe location and not be embedded directly within your request.
 
@@ -1236,8 +1236,8 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - After the access token is available to Connected Content, use the cached access token to access the index. The type of request to use in this step varies, depending on your use case.
 
@@ -1278,8 +1278,8 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Add values from the index using the following syntax:
 
