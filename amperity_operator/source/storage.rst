@@ -64,7 +64,7 @@ To configure Amperity to use an Amazon S3 storage location that is owned and man
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Choose a storage location**
@@ -90,7 +90,7 @@ To configure Amperity to use an Amazon S3 storage location that is owned and man
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Specify regions**
@@ -102,7 +102,7 @@ To configure Amperity to use an Amazon S3 storage location that is owned and man
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - **Create backup storage**
@@ -142,7 +142,7 @@ To configure Amperity to use an Amazon S3 storage location that is owned and man
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - **Create primary storage**
@@ -174,7 +174,7 @@ To configure Amperity to use an Amazon S3 storage location that is owned and man
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - **Bind storage**

@@ -56,210 +56,128 @@ Amperity provides direct connections to the most popular destinations across the
 
 .. offline-events-destinations-end
 
-.. offline-events-destinations-tables-start
 
 .. _events-braze:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+Braze
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-braze.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-braze-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-braze-dark.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+Offline events may be sent to Braze as :ref:`a set of custom attributes <destination-braze-custom-attributes>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Braze, in which case you shape the output that is sent from Amperity to align to the names you already have in Braze.
 
-     - Offline events may be sent to Braze as :ref:`a set of custom attributes <destination-braze-custom-attributes>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Braze, in which case you shape the output that is sent from Amperity to align to the names you already have in Braze.
+.. events-braze-end
 
 
 .. _events-criteo:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+Criteo
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-cr1t30.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-criteo-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-cr1t30.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+Use the :doc:`Criteo destination <destination_criteo>` to send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
 
-     - Use the :doc:`Criteo destination <destination_criteo>` to send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
+.. tip:: Use your brand's :doc:`offline transactions data <events_criteo>` to optimize advertising targeting algorithms in Criteo. Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
 
-       .. tip:: Use your brand's :doc:`offline transactions data <events_criteo>` to optimize advertising targeting algorithms in Criteo. Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to send offline transactions data for the previous 24 hours on a daily basis.
+.. events-criteo-end
 
 
 .. _events-google-enhanced-conversions:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+Google Enhanced Conversions
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-google-ads.svg
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-google-enhanced-conversions-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-google-ads.svg
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+Use the :doc:`Google Ads destination <destination_google_ads>` to send audiences to Google Ads.
 
-     - Use the :doc:`Google Ads destination <destination_google_ads>` to send audiences to Google Ads.
+.. tip:: Use your brand's :doc:`offline transactions data <events_google_enhanced_conversions>` to enhance conversion measurement in Google Ads by associating first-party customer data with transactions.
 
-       .. tip:: Use your brand's :doc:`offline transactions data <events_google_enhanced_conversions>` to enhance conversion measurement in Google Ads by associating first-party customer data with transactions.
+.. events-google-enhanced-conversions-end
 
 
 .. _events-klaviyo:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+Klaviyo
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-klaviyo.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-klaviyo-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-klaviyo-dark.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+Offline events may be sent to Klaviyo as :ref:`a set of custom fields <destination-klaviyo-customer-profile-parameters>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Klaviyo, in which case you shape the output that is sent from Amperity to align to the names you already have in Klaviyo. Use the **properties** field to define the custom attributes as key-value pairs.
 
-     - Offline events may be sent to Klaviyo as :ref:`a set of custom fields <destination-klaviyo-customer-profile-parameters>` that belong to an audience. The names of these fields are determined by your brand. They may already exist in Klaviyo, in which case you shape the output that is sent from Amperity to align to the names you already have in Klaviyo. Use the **properties** field to define the custom attributes as key-value pairs.
+.. events-klaviyo-end
 
 
 .. _events-meta-ads-manager:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+Meta Ads Manager
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-meta.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-meta-ads-manager-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-meta-dark.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+Meta Ads Manageris a unified ad creation tool that your brand can use to create and publish ads to Facebook, Messenger, Instagram and the Meta Audience Network. When you send data to Facebook using the Facebook Ads destination, your data will be available from Meta Ads Manager.
 
-     - Meta Ads Manageris a unified ad creation tool that your brand can use to create and publish ads to Facebook, Messenger, Instagram and the Meta Audience Network. When you send data to Facebook using the Facebook Ads destination, your data will be available from Meta Ads Manager.
+:doc:`Send a rolling 7-day window of offline events <events_meta_ads_manager>` to Meta Ads Manager to help your brand track offline conversions that result from your marketing campaigns. Offline events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-       :doc:`Send a rolling 7-day window of offline events <events_meta_ads_manager>` to Meta Ads Manager to help your brand track offline conversions that result from your marketing campaigns. Offline events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+.. events-meta-ads-manager-end
 
 
 .. _events-pinterest:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+Pinterest
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-pinterest.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-pinterest-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-pinterest.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+Pinterest is a visual discovery engine on which your brand can engage with your customers. Upload a CSV file that contains offline conversions to Pinterest Ads Manager, after which Pinterest Ads Manager will match campaigns to these conversions so your brand can review total conversions in Pinterest Ads Manager as they relate to all active campaigns.
 
-     - Pinterest is a visual discovery engine on which your brand can engage with your customers. Upload a CSV file that contains offline conversions to Pinterest Ads Manager, after which Pinterest Ads Manager will match campaigns to these conversions so your brand can review total conversions in Pinterest Ads Manager as they relate to all active campaigns.
+:doc:`Send offline events <events_pinterest>` to Pinterest at least once a month and send conversion data within 30 days of each conversion occurrence to Pinterest Ads Manager.
 
-       :doc:`Send offline events <events_pinterest>` to Pinterest at least once a month and send conversion data within 30 days of each conversion occurrence to Pinterest Ads Manager.
+.. events-pinterest-end
 
 
 .. _events-snapchat:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+Snapchat
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-snapchat.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-snapchat-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-snapchat-dark.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+Snapchat is a social media platform that allows users to access pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
 
-     - Snapchat is a social media platform that allows users to access pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
+:doc:`Send offline events <events_snapchat>` to Snapchat as a CSV file that contains `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to Snapchat.
 
-       :doc:`Send offline events <events_snapchat>` to Snapchat as a CSV file that contains `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to Snapchat.
+.. events-snapchat-end
 
 
 .. _events-the-trade-desk:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+The Trade Desk
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-thetradedesk.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-the-trade-desk-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-thetradedesk-dark.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
-     - The Trade Desk is a platform for wide internet advertising and enables the use of UID 2.0 for first-party paid media advertising. Send your best audiences from Amperity to the The Trade Desk, and then reach audiences across connected TVs, live sporting events, and advertising platforms like Disney Advertising (Disney+, Hulu, ESPN), Paramount Advertising, and more.
+The Trade Desk is a platform for wide internet advertising and enables the use of UID 2.0 for first-party paid media advertising. Send your best audiences from Amperity to the The Trade Desk, and then reach audiences across connected TVs, live sporting events, and advertising platforms like Disney Advertising (Disney+, Hulu, ESPN), Paramount Advertising, and more.
 
-       :doc:`Send offline events <events_the_trade_desk>` to The Trade Desk as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days. Offline events should be sent for United States audiences only.
+:doc:`Send offline events <events_the_trade_desk>` to The Trade Desk as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days. Offline events should be sent for United States audiences only.
+
+.. events-the-trade-desk-end
 
 
 .. _events-tiktok-ads-manager:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+TikTok Ads Manager
+--------------------------------------------------
 
-   * - .. figure:: ../../amperity_base/source/_static/connector-tiktok.png
-          :figclass: light-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
+.. events-tiktok-ads-manager-start
 
-       .. figure:: ../../amperity_base/source/_static/connector-tiktok-dark.png
-          :figclass: dark-only
-          :width: 140 px
-          :align: left
-          :class: no-scaled-link
-     - TikTok is the world's leading destination for short-form mobile videos. TikTok's mission is to capture and present the world's creativity, knowledge, and moments that matter in everyday life. Send audiences to TikTok Ads Manager directly from Amperity.
+TikTok is the world's leading destination for short-form mobile videos. TikTok's mission is to capture and present the world's creativity, knowledge, and moments that matter in everyday life. Send audiences to TikTok Ads Manager directly from Amperity.
 
-       Send :doc:`offline events to TikTok Ads Manager <events_tiktok_ads_manager>` to help your brand track offline conversions that result from your marketing campaigns. Support for offline events is part of the TikTok Events API.
+Send :doc:`offline events to TikTok Ads Manager <events_tiktok_ads_manager>` to help your brand track offline conversions that result from your marketing campaigns. Support for offline events is part of the TikTok Events API.
 
-       For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
+For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
 
-       When offline events are shared with TikTok, they can better inform measurement systems by providing insights into offline customer actions such as in-store purchases, offline subscriptions, purchases and more.
+When offline events are shared with TikTok, they can better inform measurement systems by providing insights into offline customer actions such as in-store purchases, offline subscriptions, purchases and more.
 
-.. offline-events-destinations-tables-end
+.. events-tiktok-ads-manager-end

@@ -221,14 +221,14 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, select a database, and then open the bottom--|fa-kebab|--menu and select **Predictive models**. This opens the **Predictive models page**.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Next to **Predicted customer lifetime value (pCLV)**, click **Add model**. This opens the **Predictive enablement** page for predicted CLV models.
@@ -237,7 +237,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2025 or you may choose a relative date like "today - 4 years".
@@ -251,7 +251,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Select the tables from which order-level and item-level data is made available to the model.
@@ -260,7 +260,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Use the **Prediction horizon** field to specify the number of days into the future for which you want pCLV modeling. The default value ("365") is fine for most use cases.
@@ -268,7 +268,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - Use the **Customer exclusions** field to use fields in the **Customer Attributes** table to identify customers who have purchase patterns that should be excluded from pCLV modeling.
@@ -284,7 +284,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step seven.
           :align: center
           :class: no-scaled-link
      - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the pCLV model.
@@ -294,7 +294,7 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
+          :alt: Step eight.
           :align: center
           :class: no-scaled-link
      - Click **Start validation**.

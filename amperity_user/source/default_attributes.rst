@@ -56,7 +56,7 @@ The following sections describe the steps you will follow to configure the defau
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Default attributes for each destination are configured from the **Campaigns** tab in the **Activations** page. Click **Settings** to open the **Configure attributes** dialog.
@@ -70,7 +70,7 @@ The following sections describe the steps you will follow to configure the defau
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - On the **Default attributes** tab, click **Add default attributes**. This opens the **Configure attributes** dialog.
@@ -86,7 +86,7 @@ The following sections describe the steps you will follow to configure the defau
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Under **Default attributes** click **Add attribute**. Select a table, and then choose an attribute. For example, the list of attributes that may be sent to Meta Ads Manager:
@@ -112,7 +112,7 @@ The following sections describe the steps you will follow to configure the defau
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - When default attributes are ready, click the **Save** button in the lower right corner of the **Default attributes** page.

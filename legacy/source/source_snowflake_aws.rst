@@ -74,7 +74,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The username and password.
 
@@ -83,7 +83,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The stage name, along with credentials that allow Amperity to pull data from a customer-managed Amazon S3 bucket, which is the :ref:`storage location <source-snowflake-aws-configure-storage-integration>` to which Snowflake stages data and from which Amperity pulls data.
 
@@ -92,14 +92,14 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The Snowflake account name.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The region in which Snowflake is located.
 
@@ -108,7 +108,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail five.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A list of table names in the Snowflake database to be pulled to Amperity.
 

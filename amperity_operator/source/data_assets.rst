@@ -340,8 +340,8 @@ Amperity makes CSV files available to your tenant from a bridge.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
 
@@ -366,8 +366,8 @@ Amperity makes CSV files available to your tenant from a bridge.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Use the **Select tables** dialog box to select any combination of reference data to be synced to Amperity.
 
@@ -376,10 +376,10 @@ Amperity makes CSV files available to your tenant from a bridge.
        When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
-   * - .. image:: ../../images/steps-04.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Map the reference data tables that are synced to domain tables in Amperity.
 

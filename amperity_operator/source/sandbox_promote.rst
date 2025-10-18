@@ -53,8 +53,8 @@ The following sections describe the steps you will follow when promoting changes
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the sandbox from which you want to promote configuration state changes.
 
@@ -67,8 +67,8 @@ The following sections describe the steps you will follow when promoting changes
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - A series of validations are run against updates. These validations will notify you within the sandbox when the configuration states of production and sandbox conflict.
 
@@ -93,8 +93,8 @@ The following sections describe the steps you will follow when promoting changes
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - When configuration state changes in a sandbox are ready for promotion to production, the sandbox-specific notifications provides a link named "Ready to promote".
 
@@ -107,8 +107,8 @@ The following sections describe the steps you will follow when promoting changes
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Review the list of **Added**, **Changed**, or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
 
@@ -122,8 +122,8 @@ The following sections describe the steps you will follow when promoting changes
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Enter a merge message for this set of configuration state changes.
 
@@ -144,8 +144,8 @@ The following sections describe the steps you will follow when promoting changes
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - After the updates are safely running in production, you should delete the sandbox.
 

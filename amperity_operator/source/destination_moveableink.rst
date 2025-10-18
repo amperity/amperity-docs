@@ -200,7 +200,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Log in to Moveable Ink.
@@ -211,7 +211,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - The following settings are required to configure a connection between Moveable Ink Studio and a Profile API endpoint:
@@ -255,7 +255,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Click **Next** and configure how the fields in the Profile API index should be shown within Moveable Ink Studio.
@@ -269,7 +269,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Click **Save**. The integration is added to the list of active integrations and is available for use within Moveable Ink Studio.

@@ -162,16 +162,16 @@ Streaming endpoints are managed from the **Sources** page.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Sources** page.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **Streaming Ingest** click **Add stream**.
 
@@ -194,8 +194,8 @@ Streaming endpoints are managed from the **Sources** page.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - For the stream that was just created, open the |fa-kebab| menu and click **Copy URL**.
 
@@ -226,8 +226,8 @@ Streaming endpoints are managed from the **Sources** page.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - To add streamed data to the daily batch processing workflow, use a courier, and then use the stream ID to identify which stream's data will be added to the daily workflow.
 
@@ -257,8 +257,8 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, and then select the **Real-time tables** tab.
 
@@ -266,8 +266,8 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - In the **Create real-time table** dialog, do the following:
 
@@ -310,8 +310,8 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
 
      - Run any database to make the real-time table available for querying. When this step is complete, open the **Queries** page and verify that the real-time table is available for queries and that data in the real-time table can be returned in the results.

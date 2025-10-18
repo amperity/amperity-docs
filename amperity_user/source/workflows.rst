@@ -53,7 +53,7 @@ The following sections describe what you should do to monitor the health of each
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Ensure that each query results match the requirements and use cases that are required in the downstream application. 
@@ -67,7 +67,7 @@ The following sections describe what you should do to monitor the health of each
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Ensure that all of your orchestrations are running successfully. You can monitor this from the **Workflows** page.
@@ -91,7 +91,7 @@ The following sections describe what you should do to monitor the health of each
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Troubleshoot orchestration failures caused by incorrect settings in Amperity *or* in the downstream system.
@@ -107,7 +107,7 @@ The following sections describe what you should do to monitor the health of each
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Notifications show a status for individual steps within workflows that are related to queries and orchestrations. The status can be "Running", "Completed", "Alert", and "Error".

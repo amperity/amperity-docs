@@ -518,7 +518,7 @@ Configure an inbound bridge to connect Snowflake with Amperity.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Sources** page. Under **Inbound shares** click **Add bridge**. 
@@ -544,7 +544,7 @@ Configure an inbound bridge to connect Snowflake with Amperity.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Configure the organization, account name, and region.
@@ -564,7 +564,7 @@ Configure an inbound bridge to connect Snowflake with Amperity.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Add the **Secure Share Identifier**.
@@ -574,7 +574,7 @@ Configure an inbound bridge to connect Snowflake with Amperity.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
@@ -592,7 +592,7 @@ Configure an inbound bridge to connect Snowflake with Amperity.
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Map the tables that are connected from Snowflake to domain tables in Amperity.
@@ -722,7 +722,7 @@ Configure an outbound bridge to connect with Snowflake.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Destinations** page. Select the **Outbound shares** tab, and then click **Add bridge**. Choose Snowflake. This opens the **Create bridge** dialog box.
@@ -730,7 +730,7 @@ Configure an outbound bridge to connect with Snowflake.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Add a name and description for the bridge *or* select an existing bridge.
@@ -775,7 +775,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - After you have :ref:`configured the settings for the bridge <bridge-snowflake-sync-with-snowflake-add-bridge>`, click **Next** to open the **Select tables** dialog box.
@@ -788,7 +788,7 @@ You can configure Amperity to share any combination of schemas and tables that a
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - You may select any combination of schemas and tables.
@@ -821,7 +821,7 @@ After tables have been shared you need to create a database in Snowflake using t
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - `Access the consumer listings that are available in your Snowflake account <https://docs.snowflake.com/en/user-guide/data-exchange-using#access-consumer-listings>`__ |ext_link|.
@@ -831,7 +831,7 @@ After tables have been shared you need to create a database in Snowflake using t
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - `Switch the role to the ACCOUNTADMIN role <https://docs.snowflake.com/en/user-guide/security-access-privileges-shares>`__ |ext_link|.
@@ -839,7 +839,7 @@ After tables have been shared you need to create a database in Snowflake using t
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - `Create the database in Snowflake from data that was shared from Amperity <https://docs.snowflake.com/en/user-guide/data-share-consumers#creating-a-database-from-a-share>`__ |ext_link|.
@@ -874,7 +874,7 @@ Verify that the tables shared from Amperity are available from a database in Sno
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - From the **Snowsight** user interface in Snowflake, expand **Data**, then expand **Databases**, and then find the database that was created for sharing Amperity data.
@@ -882,7 +882,7 @@ Verify that the tables shared from Amperity are available from a database in Sno
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Open the database, and then verify that the tables you shared from Amperity are available in the database.

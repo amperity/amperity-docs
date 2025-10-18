@@ -52,7 +52,7 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Image panel 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Before you can configure Amperity to act as a UID2 Operator for your brand you must do the following:
 
@@ -63,7 +63,7 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Image panel 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 Operator for your brand.
 
@@ -90,7 +90,7 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Image panel 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Build workflows against the **UID2** table to support your brand's :ref:`UID2 workflows <uid2-workflows>`.
 

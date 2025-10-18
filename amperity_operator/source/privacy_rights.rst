@@ -104,8 +104,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
 
      - **Find records**
@@ -134,8 +134,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
 
      - **Results**
@@ -178,8 +178,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
 
      - **Find records**
@@ -195,8 +195,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
 
      - **Suppress records**
@@ -206,8 +206,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
 
      - **Delete records**
@@ -219,8 +219,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
 
      - **Results**
@@ -266,8 +266,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
 
      - **Find records**
@@ -288,8 +288,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
 
      - **Suppress records**
@@ -299,8 +299,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
 
      - **Delete PII**
@@ -315,8 +315,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
 
      - **Results**

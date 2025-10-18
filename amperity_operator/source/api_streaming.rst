@@ -125,16 +125,16 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Users & Activity** page.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select "Generate access token".
 
@@ -147,8 +147,8 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
@@ -192,16 +192,16 @@ You can self-manage the endpoints your brand uses to stream data to Amperity.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Sources** page.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **Streaming Ingest** click **Add stream**.
 
@@ -222,8 +222,8 @@ You can self-manage the endpoints your brand uses to stream data to Amperity.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - The ID for the Streaming API endpoint is available from the **Stream ID** column:
 

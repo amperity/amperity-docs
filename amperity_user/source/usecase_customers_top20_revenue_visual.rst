@@ -78,7 +78,7 @@ The following sections describe using the visual **Query Editor** to build a que
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Save your segment.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - You are done. Give your query a name that describes the purpose. For example: "Top 20 Percent Customers During Previous Year".
 

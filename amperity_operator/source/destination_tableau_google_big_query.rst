@@ -68,7 +68,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Use a query return the data you want to make available to Tableau for use with data visualizations.
@@ -76,7 +76,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Send an Apache Parquet, Apache Avro, CSV, or JSON file to :doc:`Google Cloud Storage <destination_google_cloud_storage>` from Amperity.
@@ -84,7 +84,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - `Transfer data from Cloud Storage <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer>`__ |ext_link| to Google BigQuery.
@@ -92,7 +92,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Connect Tableau to `Google BigQuery <https://help.tableau.com/current/pro/desktop/en-us/examples_googlebigquery.htm>`__ |ext_link|, and then access the data sent from Amperity.
@@ -100,7 +100,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Tableau.
@@ -108,7 +108,7 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - Configure Amperity to automate this workflow for a regular (daily) refresh of data.

@@ -92,7 +92,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: left
           :class: no-scaled-link
 
@@ -107,7 +107,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: left
           :class: no-scaled-link
 
@@ -128,7 +128,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: left
           :class: no-scaled-link
 
@@ -142,7 +142,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: left
           :class: no-scaled-link
 
@@ -157,7 +157,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: left
           :class: no-scaled-link
 
@@ -180,7 +180,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: left
           :class: no-scaled-link
 
@@ -205,7 +205,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step seven.
           :align: left
           :class: no-scaled-link
 
@@ -232,7 +232,7 @@ In some cases, if the files are not ready, the courier workflow fails. But in ot
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
+          :alt: Step eight.
           :align: left
           :class: no-scaled-link
 

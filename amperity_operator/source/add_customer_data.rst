@@ -89,7 +89,7 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Review customer profile reports**
@@ -100,7 +100,7 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Review transaction reports**
@@ -136,7 +136,7 @@ Stitch runs on a daily basis after all of your brand's data sources have provide
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Make domain tables available to Stitch**
@@ -145,7 +145,7 @@ Stitch runs on a daily basis after all of your brand's data sources have provide
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Run Stitch**
@@ -216,7 +216,7 @@ Each row within the **Unified Coalesced** table is assigned an Amperity ID.
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Initial configuration only**
@@ -225,7 +225,7 @@ Each row within the **Unified Coalesced** table is assigned an Amperity ID.
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Multi-brand databases only**
@@ -258,7 +258,7 @@ The **Email Ampid Assignment** table identifies the best email address to use fo
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Initial configuration only**
@@ -267,7 +267,7 @@ The **Email Ampid Assignment** table identifies the best email address to use fo
 
    * - .. image:: ../../images/checklist-caution.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Optional. Use email priority instead of Amperity ID assignment**
@@ -307,7 +307,7 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Initial configuration only**
@@ -316,7 +316,7 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Repeat for all data sources that contain PII**
@@ -329,7 +329,7 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - **Repeat for all data sources that contain PII**
@@ -346,7 +346,7 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - **Configure best email address**
@@ -384,7 +384,7 @@ Individual rows within the **Customer 360** table represent customer profiles an
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Initial configuration only**
@@ -399,7 +399,7 @@ Individual rows within the **Customer 360** table represent customer profiles an
 
    * - .. image:: ../../images/checklist-caution.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Optional. Extend for custom attributes**
@@ -432,7 +432,7 @@ To make data available in your customer 360 database you must activate, and then
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - **Multi-brand databases only**
@@ -445,7 +445,7 @@ To make data available in your customer 360 database you must activate, and then
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - **Run the customer 360 database**

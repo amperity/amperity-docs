@@ -140,8 +140,8 @@ You have two options:
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - In **Identity resolution**, next to **Inbound sharing data** click **Add bridge**.
 
@@ -158,8 +158,8 @@ You have two options:
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Use the **Select tables to share** dialog box to select the sample data from "amperity-trial/trial-data".
 
@@ -174,8 +174,8 @@ You have two options:
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - In the **Sample data** dialog, review the table names, and then click **Save and sync**.
 
@@ -227,8 +227,8 @@ You have two options:
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - In **Identity resolution**, if you are using Amperity sample data, next to **Identity tables**, click **AmpAI select**.
 
@@ -238,8 +238,8 @@ You have two options:
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - When **AmpAI** is finished applying semantic tags, next to **Identify your fields**, click **Edit**.
 
@@ -273,8 +273,8 @@ After all of the source tables to which semantic tags should be applied have sem
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - In **Identity resolution**, next to **Generate Amperity IDs**, click **Run Stitch**.
 
@@ -284,8 +284,8 @@ After all of the source tables to which semantic tags should be applied have sem
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - The identity resolution agent will refresh to show high-level results of identity resolution similar to:
 
@@ -300,16 +300,16 @@ After all of the source tables to which semantic tags should be applied have sem
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - The **Summary** tab shows a comparison of domain tables and the record pairs identified both within each data source and across all data sources. This is presented as an UpSet Plot chart with links to the underlying data sources.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - The **Benchmark** tab shows the results of a series of tests that are run by Amperity, grouped by "Optimal" and "Abnormal".
 
@@ -358,8 +358,8 @@ Create database
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, select the **Databases** tab, and then click **Create Database**.
 
@@ -368,8 +368,8 @@ Create database
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - The **Database Editor** page opens.
 
@@ -383,10 +383,10 @@ Create database
        Click **Activate**. This will return you to the **Customer 360** page.
 
 
-   * - .. image:: ../../images/steps-02.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - For the database you just created click **Run**. This will load records to each of the customer 360 database tables.
 
@@ -440,8 +440,8 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Source priority can be defined for names, physical addresses, email addresses, phone numbers, birthdates, and gender.
 
@@ -459,8 +459,8 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Source table precedence can also be defined for data sources that contain semantic tags that are not grouped by profile attribute. Precedence determines which tables are more likely to contain high quality customer profile data, as determined by your brand.
 

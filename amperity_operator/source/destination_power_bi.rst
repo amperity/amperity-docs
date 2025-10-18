@@ -71,7 +71,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Send CSV data to an :doc:`Azure Blob Storage <destination_azure_blob_storage>` container from Amperity.
@@ -79,7 +79,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - `Load CSV data from Azure Blob Storage <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool>`__ |ext_link| to Azure Synapse Analytics.
@@ -87,7 +87,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - `Connect Microsoft Power BI <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/tutorial-connect-power-bi-desktop>`__ |ext_link| to an Azure Synapse Analytics workspac, and then access the data sent from Amperity.
@@ -95,7 +95,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Microsoft Power BI.
@@ -103,7 +103,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Configure Amperity to :doc:`automate this workflow <workflows>` for a regular (daily) refresh of data.
@@ -140,7 +140,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Send CSV data to :doc:`Google Cloud Storage <destination_google_cloud_storage>` from Amperity.
@@ -148,7 +148,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - `Transfer data from Cloud Storage <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer>`__ |ext_link| to Google BigQuery.
@@ -156,7 +156,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - `Connect Microsoft Power BI to Google BigQuery <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-bigquery>`__ |ext_link|, and then access the data sent from Amperity.
@@ -164,7 +164,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Microsoft Power BI.
@@ -172,7 +172,7 @@ The steps required to configure Amperity to send data that is accessible to Powe
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Configure Amperity to :doc:`automate this workflow <workflows>` for a regular (daily) refresh of data.
@@ -207,7 +207,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Configure Snowflake to sync data using :doc:`Amperity Bridge <bridge_snowflake>`.
@@ -215,7 +215,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| or from the `Power BI Service <https://docs.microsoft.com/en-us/power-bi/connect-data/service-connect-snowflake>`__ |ext_link|.
@@ -225,7 +225,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Microsoft Power BI.
@@ -233,7 +233,7 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Configure Amperity to :doc:`automate this workflow <workflows>` for a regular (daily) refresh of data.

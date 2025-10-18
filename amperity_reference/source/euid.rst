@@ -52,7 +52,7 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Image panel 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Before you can configure Amperity to act as a EUID Operator for your brand you must do the following:
 
@@ -63,7 +63,7 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Image panel 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID Operator for your brand.
 
@@ -90,7 +90,7 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Image panel 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Build workflows against the **EUID** table to support your brand's :ref:`EUID workflows <euid-workflows>`.
 
@@ -255,7 +255,7 @@ DSPs can receive EUIDs from advertisers as first- or third-party data. Advertise
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Advertisers and EUID
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Advertising with EUID enables the use of use `first-party data <https://euid.eu/docs/overviews/overview-advertisers>`__ |ext_link| to build omnichannel campaigns across devices using a single identifier. Using EUID as part of your advertising strategy will help your brand:
 
@@ -269,7 +269,7 @@ DSPs can receive EUIDs from advertisers as first- or third-party data. Advertise
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Data providers and EUID
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Data providers can use EUID to enable the use of `third-party data <https://euid.eu/docs/overviews/overview-data-providers>`__ |ext_link|. This approach to advertising can reduce identity fragmentation and connect third-party data to a more durable, omnichannel, cross-device identifier.
 

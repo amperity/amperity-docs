@@ -66,7 +66,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The name of the container in |source-name| from which Amperity will pull data.
 
@@ -74,7 +74,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Credentials that allow Amperity to access the container. This may be done using :ref:`credentials (a connection string, a shared access signature, or a storage URI) <source-azure-blob-storage-configure-credentials>` or using :ref:`Azure Data Share <source-azure-blob-storage-configure-azure-data-share>`.
 
@@ -123,15 +123,15 @@ A source that uses |source-name| credentials may use a connection string, a shar
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - The URL of the Azure authentication endpoint.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - The information needed depends on the selected credential type.
 
@@ -152,8 +152,8 @@ A source that uses |source-name| credentials may use a connection string, a shar
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - :ref:`Configure a data source and feed <source-azure-blob-storage-add-data-source>` to pull data from configured location, after which the list of files by filename and file type is visible from Amperity.
 
@@ -208,8 +208,8 @@ The following steps describe how to configure Amperity to use Azure Data Share t
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - The customer sends Amperity an invitation to set up data sharing.
 
@@ -218,8 +218,8 @@ The following steps describe how to configure Amperity to use Azure Data Share t
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - The customer determines the location from which data will be shared with Amperity, and then configures the schedule for how frequently snapshots of the data will be shared.
 
@@ -228,8 +228,8 @@ The following steps describe how to configure Amperity to use Azure Data Share t
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - :ref:`Configure a data source and feed <source-azure-blob-storage-add-data-source>` to pull data from the customer-dedicated Azure Blob Storage instance.
 
@@ -255,8 +255,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-01-open-dialog-start
@@ -275,8 +275,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-already-configured-start
@@ -297,8 +297,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-03-select-file-start
@@ -337,8 +337,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-04-review-start
@@ -369,8 +369,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-05-feed-options-start
@@ -418,8 +418,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-06-feed-editor-start
@@ -428,8 +428,8 @@ Add data source and feed
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
-          :align: left
+          :alt: Step seven.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-07-courier-start
@@ -476,7 +476,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-source-start
@@ -495,7 +495,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -510,7 +510,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -538,7 +538,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

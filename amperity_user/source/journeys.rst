@@ -42,8 +42,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Journeys** canvas. This is available on the **Activations** page. Select the **Journeys** button on the top left and then click **Create journey**.
 
@@ -52,8 +52,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Who enters?**
 
@@ -70,8 +70,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Activate node**
 
@@ -92,8 +92,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - **Delay node**
 
@@ -108,8 +108,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - **Conditional split node**
 
@@ -124,8 +124,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - **Percent split node**
 
@@ -142,8 +142,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
-          :align: left
+          :alt: Step seven.
+          :align: center
           :class: no-scaled-link
      - A journey may use any combination of nodes to define the paths that your brand wants your customers to take.
 
@@ -158,8 +158,8 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
-          :align: left
+          :alt: Step eight.
+          :align: center
           :class: no-scaled-link
      - When you are finished building the journey, click **Save**.
 

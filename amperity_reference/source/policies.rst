@@ -2693,7 +2693,7 @@ The following icons indicate the types of actions users can perform, depending o
    * - .. image:: ../../images/policy-sandbox-limited.png
           :width: 60 px
           :alt: Add sandbox, and then work in that sandbox.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The |policy-sandbox-limited| icon indicates actions that are available to users assigned the **DataGrid Operator** and **DataGrid Administrator** policies, *but who are not assigned* the **Allow sandbox administration** policy option.
 
@@ -2713,7 +2713,7 @@ The following icons indicate the types of actions users can perform, depending o
    * - .. image:: ../../images/policy-sandbox-allow-admin.png
           :width: 60 px
           :alt: Allow sandbox administration
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The |policy-sandbox-allow-admin| icon indicates actions that are available to users assigned the **DataGrid Operator** and **DataGrid Administrator** policies and assigned the **Allow sandbox administration** policy option.
 
@@ -2727,7 +2727,7 @@ The following icons indicate the types of actions users can perform, depending o
    * - .. image:: ../../images/policy-sandbox-validation-required.png
           :width: 60 px
           :alt: Validate sandbox, then promote sandbox.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The |policy-sandbox-validation-required| icon indicates actions that **must be completed within a sandbox**, including resolving any validation issues, before changes may be promoted from a sandbox to production.
 
