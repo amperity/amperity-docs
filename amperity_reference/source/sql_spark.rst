@@ -29,7 +29,7 @@ Why should you use this reference?
 
 .. sql-spark-why-should-i-use-this-start
 
-The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built almost exclusively by using a **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available.
+The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built almost exclusively by using a **SELECT** statement and window functions, along with the clauses, operators, expressions, and functions you would expect to be available.
 
 Please refer to this reference first, and then to the official Spark SQL documentation for `SELECT statements <https://spark.apache.org/docs/3.5.5/sql-ref-syntax.html#data-retrieval-statements>`__ |ext_link| and the `list of built-in functions <https://spark.apache.org/docs/latest/api/sql/index.html>`__ |ext_link|.
 
@@ -2222,6 +2222,24 @@ Coalesce to 1 (non-NULL) values
    ,COALESCE(column_name, 1)
 
 .. sql-spark-function-coalesce-example-coalesce-to-1-non-null-values-end
+
+
+.. _sql-spark-function-coalesce-example-coalesce-primary-keys:
+
+Coalesce to primary keys
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-spark-function-coalesce-example-coalesce-primary-keys-start
+
+Values that are not needed in the final output, including **NULL** values or placeholders for **NULL** values, such as "1900-01-01" can be filtered out to prevent them from causing skew. If values are required, you can replace them with a primary key.
+
+For example:
+
+.. code-block:: none
+
+   COALESCE(NULLIF({field}, ‘{bad_value}'), _uuid_pk)
+
+.. sql-spark-function-coalesce-example-coalesce-primary-keys-end
 
 
 .. _sql-spark-function-coalesce-example-handle-multiple-delimiter-types:
