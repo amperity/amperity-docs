@@ -61,28 +61,28 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The username.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The host public key.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - For passphrase credentials, the passphrase. For private key credentials, the private key.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - The remote folder to which Amperity sends data.
 
@@ -90,8 +90,8 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail five.
+          :align: center
           :class: no-scaled-link
      - The public key to use for PGP encryption.
 
@@ -117,8 +117,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -137,8 +137,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-sftp-start
@@ -171,8 +171,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -191,8 +191,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -205,8 +205,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -234,8 +234,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -254,8 +254,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -263,7 +263,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -278,8 +278,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -299,8 +299,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

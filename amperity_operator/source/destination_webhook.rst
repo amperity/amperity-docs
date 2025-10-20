@@ -389,7 +389,7 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
@@ -409,7 +409,7 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
@@ -418,8 +418,8 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
-          :align: center
+          :alt: Step 2
+          :align: left
           :class: no-scaled-link
 
        .. include:: ../../shared/destinations.rst
@@ -429,7 +429,7 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
@@ -451,7 +451,7 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst

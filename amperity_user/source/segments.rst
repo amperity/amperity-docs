@@ -49,7 +49,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
 
@@ -73,7 +73,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
 
@@ -99,7 +99,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
 
@@ -138,7 +138,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../amperity_user/source/segments_reference.rst
@@ -147,7 +147,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - Add as many attributes to your segment as you need.
@@ -172,7 +172,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step seven.
           :align: center
           :class: no-scaled-link
      - When you are done building your segment, click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment.
@@ -197,7 +197,7 @@ The following sections describe the individual elements within the **Segment Edi
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 8.
+          :alt: Step eight.
           :align: center
           :class: no-scaled-link
      - After your segment is saved the **Segment Overview** page opens and shows additional details, such as historical and predicted revenue, the percentage of customers that are reachable by email, by phone, on Facebook, and customer trends, such as purchases by channel, revenue by lifetime spend. Reachable customers may not have opted into marketing through these contact methods.

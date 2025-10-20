@@ -102,8 +102,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -122,8 +122,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -138,8 +138,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -158,8 +158,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -169,8 +169,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start

@@ -197,16 +197,16 @@ An API issuer token enables your downstream workflow to programmatically issue n
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **API Token Issuer** option, and then click **Save**.
 
@@ -236,16 +236,16 @@ An API key enables your downstream use cases to interact with the Amperity API.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **DataGrid Operator** option, and then click **Save**.
 
@@ -275,16 +275,16 @@ An API key enables your downstream use cases to read data from the Profile API.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **Profile API Data Access** option, and then click **Save**.
 
@@ -314,16 +314,16 @@ A write access token enables your upstream use cases to write data to the Stream
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **Streaming Ingest Write Access** option, and then click **Save**.
 
@@ -353,16 +353,16 @@ In situations where rotating an access key is not enough, you can delete an API 
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **API keys** find the index, and then from the **Actions** menu select "Delete".
 
@@ -396,16 +396,16 @@ Every configured API token has an access token to enable using OAuth.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **API keys** find the index, and then from the **Actions** menu select "Get OAuth credentials".
 
@@ -420,8 +420,8 @@ Every configured API token has an access token to enable using OAuth.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Use the client ID and client secret to send an HTTP POST request to the token endpoint. This will return an access token.
 
@@ -487,16 +487,16 @@ This process may be used to invalidate outstanding tokens issued without expiry 
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **API keys** find the index, and then from the **Actions** menu select "Generate token".
 
@@ -563,16 +563,16 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select "Generate access token".
 
@@ -585,8 +585,8 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
@@ -734,24 +734,24 @@ The selected action cannot be undone.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **API keys** find the API key for which you want to revoke tokens, and then from the **Actions** menu select "Revoke token".
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - From the **Revoke tokens** dialog, choose one of the following options:
 
@@ -768,8 +768,8 @@ The selected action cannot be undone.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Click **Revoke tokens**, and then confirm that you want to revoke the selected tokens. This action cannot be undone.
 

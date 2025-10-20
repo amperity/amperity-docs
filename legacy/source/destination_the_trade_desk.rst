@@ -56,7 +56,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Custom audiences**
 
@@ -69,8 +69,8 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Custom audiences
-          :align: left
+          :alt: Offline events
+          :align: center
           :class: no-scaled-link
      - **Offline events**
 
@@ -119,7 +119,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
@@ -133,7 +133,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The name of a segment in |destination-name|.
 
@@ -150,7 +150,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - You may use a query to build the list of email addresses or you may select the **email** attribute from the attribute editor in your campaigns.
 
@@ -170,7 +170,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **The Trade Desk offline events only**
 
@@ -223,8 +223,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -243,8 +243,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -277,8 +277,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -300,8 +300,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -314,8 +314,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -349,8 +349,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -369,8 +369,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -378,7 +378,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access-no-campaigns.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: left
           :class: no-scaled-link
 
@@ -389,8 +389,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -413,8 +413,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -482,8 +482,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -502,8 +502,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -532,8 +532,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -563,8 +563,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -577,8 +577,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -608,8 +608,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -626,8 +626,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -635,7 +635,7 @@ Offline events must be sent using a query and orchestration. The data template a
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access-no-campaigns.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -646,8 +646,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -668,8 +668,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

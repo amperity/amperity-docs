@@ -163,14 +163,14 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, select a database, and then open the bottom--|fa-kebab|--menu and select **Predictive models**. This opens the **Predictive models page**.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - Next to **Product affinity**, click **Add model**.
@@ -179,7 +179,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Use the **Customer exclusions** field to use fields in the **Customer Attributes** table to identify customers who have purchase patterns that should be excluded from product affinity modeling.
@@ -195,7 +195,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the pCLV model.
@@ -204,7 +204,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Configure values.
@@ -216,7 +216,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - Set product thresholds.
@@ -228,7 +228,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step seven.
           :align: center
           :class: no-scaled-link
      - Define audience sizes. Each size is defined as a percentage of the total number of customers in the audience that are required to meet an individual audience size. The product affinity model will select which customers need to be in the audience so that it captures each threshold within the next 30 days. Default values: "0.5" (small), "0.7" (medium), and "0.9" (large).
@@ -236,7 +236,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
+          :alt: Step eight.
           :align: center
           :class: no-scaled-link
      - Click **Start validation**.

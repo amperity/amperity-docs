@@ -93,7 +93,7 @@ Add to a campaign
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/channels.rst
@@ -103,7 +103,7 @@ Add to a campaign
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/channels.rst
@@ -123,7 +123,7 @@ Add to a campaign
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/channels.rst

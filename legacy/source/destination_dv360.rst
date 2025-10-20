@@ -99,7 +99,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
@@ -117,7 +117,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Amperity must be `configured as a linked account in DV360 <https://support.google.com/displayvideo/answer/9134175?hl=en>`__ |ext_link| before audience lists can be sent from Amperity to partners or advertisers.
 
@@ -129,8 +129,8 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity creates it.
 
@@ -145,8 +145,8 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail three.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - :ref:`Review the user consent policy <destination-dv360-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
 
@@ -177,8 +177,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -197,8 +197,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -231,8 +231,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -271,8 +271,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -285,8 +285,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -320,8 +320,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -340,8 +340,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -349,7 +349,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -364,8 +364,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -384,8 +384,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

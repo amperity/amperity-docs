@@ -49,7 +49,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - The campaign builder is available from the **Campaigns** page. The **Create Campaign** button in the top right corner of the page opens the campaign builder.
@@ -82,7 +82,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - All campaigns start with an audience. Choose a segment from the **Include** dropdown list. The customers in that list will become the audience for this campaign.
@@ -98,7 +98,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and who have unsubscribed from an email list.
@@ -114,7 +114,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Some campaigns have just one audience, while others require sub-audiences.
@@ -163,7 +163,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - The second sub-audience is similar to the first one, but instead choose the "Cooling down" value from **Predicted Lifecycle Status**.
@@ -185,7 +185,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - The third sub-audience is similar to the previous two, but instead choose the "At risk" value from **Predicted Lifecycle Status**.
@@ -207,7 +207,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step seven.
           :align: center
           :class: no-scaled-link
      - A campaign can be configured to be sent once or on a recurring basis. A campaign can be scheduled to send as soon as possible or at a time in the future.
@@ -221,7 +221,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
+          :alt: Step eight.
           :align: center
           :class: no-scaled-link
      - Enter the date on which you plan to launch your campaign. This date helps Amperity improve results tracking and campaign results measurement.
@@ -239,7 +239,7 @@ The following sections describe the steps you will follow to set up and configur
 
    * - .. image:: ../../images/steps-09.png
           :width: 60 px
-          :alt: Step 9.
+          :alt: Step nine.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../amperity_reference/source/campaigns.rst

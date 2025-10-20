@@ -72,24 +72,24 @@ An orchestration group may be configured to run only after a courier group has r
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page, and then from the **Orchestrations** section, click the **Add orchestration group** link.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - In the **Add orchestration group** dialog box, give the orchestration group a name, and then move the slider to enabled.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Under **Run options**, select **Run after courier group**.
 
@@ -104,8 +104,8 @@ An orchestration group may be configured to run only after a courier group has r
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Click **Save**.
 
@@ -135,24 +135,24 @@ An orchestration group may be configured to run on a schedule, using a cron sche
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page, and then from the **Orchestrations** section, click the **Add orchestration group** link.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - In the **Add orchestration group** dialog box, give the orchestration group a name, and then move the slider to enabled.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Under **Run options**, select **Run on a schedule**.
 
@@ -165,8 +165,8 @@ An orchestration group may be configured to run on a schedule, using a cron sche
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Click **Save**.
 
@@ -267,7 +267,7 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - Open the **Destinations** page, and then from the **Orchestrations** section, click the **Add orchestration group** link.
@@ -275,7 +275,7 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - In the **Add orchestration group** dialog box, give the orchestration group a name, and then move the slider to enabled.
@@ -283,7 +283,7 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Under **Run options**, select **Run manually**.
@@ -297,7 +297,7 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - To run the orchestration group, on the **Destinations** page, and then from the actions menu for that orchestration group, select the **Run** menu option.
@@ -311,7 +311,7 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - Click **Save**.

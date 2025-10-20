@@ -47,7 +47,7 @@ The following sections describe the steps you will follow to use an orchestratio
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: center
           :class: no-scaled-link
      - An orchestration connects the results of a query to a workflow that sends those results to a destination.
@@ -57,7 +57,7 @@ The following sections describe the steps you will follow to use an orchestratio
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: center
           :class: no-scaled-link
      - The **New Orchestration** dialog box is a series of picklists. Configuring the orchestration to use a query, and then select the name of the query for which you want to send results.
@@ -71,7 +71,7 @@ The following sections describe the steps you will follow to use an orchestratio
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - Each orchestration is configured to send query results to a single destination. This destination must already be configured for your tenant, along with a data template that defines how the results are formatted for this destination.
@@ -87,7 +87,7 @@ The following sections describe the steps you will follow to use an orchestratio
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Each data template has a series of settings that may be configured from an orchestration. 
@@ -105,7 +105,7 @@ The following sections describe the steps you will follow to use an orchestratio
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - A good dashboard should always have updated data, which means this orchestration should send data on a regular basis.
@@ -121,7 +121,7 @@ The following sections describe the steps you will follow to use an orchestratio
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - Review all settings, and then click **Save**.
