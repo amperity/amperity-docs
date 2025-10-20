@@ -438,13 +438,13 @@ Add a node
 
 Click the plus button to add a node to the journey. May be one of "Activate", "Delay", "Conditional Split", or "Percent Split." 
 
-If the plus button is after a split node, theer will also be the option to choose "Merge."
-
 .. image:: ../../images/mockup-journeys-canvas-plus.png
    :width: 280 px
    :alt: Delay node
    :align: left
    :class: no-scaled-link
+
+If the plus button is after a split node, there will also be the option to choose "Merge."
 
 .. journeys-node-add-end
 
@@ -850,7 +850,7 @@ Merge a split
 #. From the **Journeys** canvas, select the plus symbol in any path after a split node, and then choose **Merge**.
 
    .. image:: ../../images/mockup-journeys-canvas-merge-select.png
-      :width: 280 px
+      :width: 480 px
       :alt: Merge select
       :align: left
       :class: no-scaled-link

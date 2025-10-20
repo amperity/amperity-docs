@@ -95,6 +95,10 @@ Use the **Journeys** canvas to define the individual nodes that exist within eac
       :link-type: ref
       :link: journeys-node-split-individual
 
+   .. grid-item-card:: Merge a split
+      :link-type: ref
+      :link: journeys-node-merge
+
 .. grid-journeys-canvas-grid-end
 
 
