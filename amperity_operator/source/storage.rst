@@ -299,12 +299,11 @@ Configure a new tenant to use a Microsoft Azure Blob Storage location that is ow
              :align: left
              :class: no-scaled-link
 
-       #. Navigate to the `Microsoft Entra <https://entra.microsoft.com/>`__ |ext_link| admin center.
+          .. note:: You can grant admin consent from the Microsoft Entra admin center. Navigate to the `Microsoft Entra <https://entra.microsoft.com/>`__ |ext_link| admin center.
 
+             Under **Security** select **Permissions**. On the **Permissions** page click the **Grant admin consent for Amperity** button.
 
-          Under **Security** select **Permissions**. On the **Permissions** page click the **Grant admin consent for Amperity** button.
-
-          An **Entra ID** is created for Amperity in your Microsoft Azure account, along with an `application object <https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser#application-object>`__ |ext_link|, after which you are redirected back to Amperity.
+             An **Entra ID** is created for Amperity in your Microsoft Azure account, along with an `application object <https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser#application-object>`__ |ext_link|, after which you are redirected back to Amperity.
 
 
    * - .. image:: ../../images/steps-03.png
