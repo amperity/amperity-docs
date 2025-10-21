@@ -74,7 +74,7 @@ About the custom prompt
 
 .. ampai-custom-prompt-start
 
-The custom prompt in **AmpAI** enables your brand to tailor responses to align with specific business logic. Custom prompts apply to all user queries within AmpAI and Segments AI Assistant, and can be updated to include:
+The custom prompt in **AmpAI** enables your brand to tailor responses to align with specific business logic. Custom prompts apply to all user queries within AmpAI and the AI Assistant, and can be updated to include:
 
 * Customer definitions, such as defining how your brand interprets retention metrics
 * Priority tables and fields, such as specifying priority for default tables and fields that are used with loyalty-related queries
