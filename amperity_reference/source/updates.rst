@@ -36,6 +36,30 @@ What is new and what has changed?
 .. TODO: :bdg-light:`UPDATED`
 
 
+**Amperity Bridge for Google BigQuery (outbound)**
+   :bdg-success:`NEW` Configure Amperity to connect with `Google BigQuery <../operator/bridge_google_bigquery.html#to-google-bigquery>`__.
+
+**Bring your own storage**
+   :bdg-success:`NEW` For new tenants, `use your own Microsoft Azure storage bucket <../operator/storage.html#provision-storage-on-microsoft-azure>`__ without significant architecture changes.
+
+**Campaign activation states**
+   :bdg-success:`NEW` Keep track of customers who are `activated by a campaign <../user/activations.html#campaign-activation-states>`__, including by sub-audience or treatment, by destination, and frequency.
+
+**Custom prompts for AmpAI**
+   :bdg-success:`NEW` Use :ref:`custom prompts <ampai-custom-prompt>` with AmpAI to align responses to specific business logic for the AI Assistant for segments and queries.
+
+**Journey activation states**
+   :bdg-success:`NEW` Keep track of customers who have `entered a journey <../user/activations.html#journey-activation-states>`__, moved through specific nodes, and first and last entry.
+
+**Merge paths in journeys**
+   :bdg-success:`NEW` A merge node :ref:`joins paths defined by conditional splits or percent splits <journeys-node-merge>` back into a shared pathway within a journey.
+
+**Multi-factor authentication**
+   :bdg-light:`UPDATED` Amperity requires :ref:`multi-factor authentication <settings-users-multifactor-authentication>` for all users who log in with a username and password.
+
+
+
+
 .. _updates-2025-summer:
 
 Summer 2025
@@ -44,13 +68,13 @@ Summer 2025
 .. updates-2025-summer-start
 
 **Activation activity**
-   :bdg-success:`NEW` Use the Segments Editor to apply customer `activation activity <http://docs.amperity.com/user/activations.html#activation-activity>`__ to segments used with campaigns and journeys.
+   :bdg-success:`NEW` Use the Segments Editor to apply customer `activation activity <../user/activations.html#activation-activity>`__ to segments used with campaigns and journeys.
 
 **AI Assistant**
    :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Segments** page.
 
 **Amperity Bridge for Google BigQuery (inbound)**
-   :bdg-success:`NEW` Configure Amperity to sync data with `Google BigQuery <../operator/bridge_google_bigquery.html>`__.
+   :bdg-success:`NEW` Configure Amperity to connect with `Google BigQuery <../operator/bridge_google_bigquery.html#from-google-bigquery>`__.
 
 **Configure destinations**
    :bdg-light:`UPDATED` The configuration steps for `destinations <../operator/grid_destinations.html>`__ have been updated with dedicated configuration paths for `campaigns <../operator/grid_campaigns.html>`__.
@@ -94,7 +118,7 @@ Spring 2025
    :bdg-success:`NEW` `Stitch benchmarks <../operator/benchmarks.html>`__ are heuristic scores that define the expectations for the quality of customer profiles. Use benchmarks to explore data quality and configuration changes that can help improve the quality of customer profiles in your tenant.
 
 **Bring your own storage**
-   :bdg-success:`NEW` For new tenants, `use your own Amazon AWS storage bucket <../operator/storage.html>`__ with no significant architecture changes required. 
+   :bdg-success:`NEW` For new tenants, `use your own Amazon AWS storage bucket <../operator/storage.html#provision-storage-on-amazon-aws>`__ without significant architecture changes.
 
 **Complex types in source data**
    :bdg-success:`NEW` Amperity can ingest, process, and utilize complex data structures like arrays and structs directly from source systems without flattening.
@@ -112,7 +136,7 @@ Spring 2025
    :bdg-success:`NEW` Use a `drag-and-drop editor to define merge policy settings <../operator/merge_policy.html>`__ for all customer profile attributes and for all source tables that contain customer PII. This replaces the need to use SQL to define priority and determines how records are added to the **Merged Customers** table.
 
 **Amperity Bridge for Snowflake (outbound)**
-   :bdg-success:`NEW` Use Secure Data Sharing to make unified customer data available in `Snowflake <../operator/bridge_snowflake.html>`__.
+   :bdg-success:`NEW` Use Secure Data Sharing to connect with `Snowflake <../operator/bridge_snowflake.html>`__.
 
 **Real-time tables**
    :bdg-light:`UPDATED` `Process and activate customer events in real-time <../operator/realtime.html>`__ instead of scheduled batches.
@@ -137,7 +161,7 @@ Fall 2024
    :bdg-success:`NEW` Configure a new tenant to use your brand's `Amazon S3 storage <../operator/storage.html>`__.
 
 **Amperity Bridge for Snowflake (inbound)**
-   :bdg-success:`NEW` Use Secure Data Sharing to make `Snowflake <../operator/bridge_snowflake.html>`__ data available to unified customer profiles.
+   :bdg-success:`NEW` Use Secure Data Sharing to connect with `Snowflake <../operator/bridge_snowflake.html>`__.
 
 **Real-time tables**
    :bdg-success:`NEW` `Process and activate customer events in real-time <../operator/realtime.html>`__ instead of scheduled batches.
