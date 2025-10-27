@@ -313,6 +313,7 @@ Components
    File formats <grid_formats>
    Presto SQL <sql_presto>
    Predictive models <grid_models>
+   Profiles <profiles>
    Queries <queries>
    Recent activity <notifications>
    Sandboxes <sandboxes>
