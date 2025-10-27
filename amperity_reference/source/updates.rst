@@ -23,6 +23,10 @@ What is new and what has changed?
 
 .. updates-intro-end
 
+.. tip:: Sign up for the `customer newsletter <https://amperity.com/customers/customer-newsletter>`__ |ext_link| to receive an email with product updates.
+
+   To submit product feedback or requests use the question mark icon within your Amperity tenant, select **Product feedback**, and then follow the prompt.
+
 .. TODO: Headers only for the product release, i.e. "April 2025". Do not use headers within the page for individual updates.
 
 .. TODO: Use a short paragraph, not more than 3 wrapped lines, that contains a link to a doc with the update. only persistent links allowed. only tier 1 or tier 2 changes. no beta announcements. in alphabetical order.
@@ -70,7 +74,7 @@ Fall 2025
 
 **Learning Lab**
 
-   :bdg-success:`NEW` Added videos for `features in the Fall 2005 release <https://learn.amperity.com/page/fall-product-launch>`__ |ext_link| to the Amperity Learning Lab. Registration required.
+   :bdg-success:`NEW` Added videos for `features in the Fall 2005 release <https://learn.amperity.com/page/fall-2025-product-release>`__ |ext_link| to the Amperity Learning Lab. Registration required.
 
 **Merge paths in journeys**
 
