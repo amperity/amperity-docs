@@ -124,7 +124,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - Send a test from Amperity.
 
-       .. important:: Be sure to send all fields from Amperity that is required by the data extension in |destination-name|.
+       .. important:: Be sure to send all fields required by the data extension in |destination-name|.
 
 
    * - .. image:: ../../images/steps-06.png
