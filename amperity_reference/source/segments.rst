@@ -255,7 +255,7 @@ Each **Summary** tab contains the following details:
 
    .. tip:: You can view the SQL query for each summary statistic by opening the menu and choosing **View SQL**. 
 
-.. segments-overview-details-end
+.. segments-summary-details-end
 
 **Summary tab tasks**
 
@@ -268,6 +268,37 @@ Each **Summary** tab contains the following details:
 * :ref:`segments-explore-copy`
 
 .. segments-summary-howtos-end
+
+.. _segments-howitworks-custom-segment-metrics:
+
+Custom segment metrics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. custom-segment-metrics-summary-start
+
+**Custom segment metrics** allow you to visualize the metrics that are most meaningful to your business, based on attributes in your databases or profiles. Select and manage **Custom segment metrics** from the **Summary** tab.
+
+You can set a maximum of ten **Custom segment metrics** for any segment. 
+
+.. note:: **Custom segment metrics** apply to a pairing of a **Database** and an **Activation ID**, displayed at the top of the **Summary** tab. All other segments with the same pairing will have the same **Custom segment metrics.**
+
+.. TODO Add image
+
+There are two formats for a **Custom segment metric**:
+
+* **Bar chart**, for visualizing distribution among different categories of an attribute. For example: gender, purchase channel, product preference, etc. 
+* **Number**, for visualizing a single stat. For example: loyalty points, household size, total purchases, etc. 
+
+.. custom-segment-metrics-summary-end
+
+**Custom segment metrics tasks**
+
+.. custom-segment-metrics-howtos-start
+
+* :ref:`segments-set-custom-segment-metrics`
+* :ref:`segments-manage-custom-segment-metrics`
+
+.. custom-segment-metrics-howtos-end
 
 
 .. _segments-howitworks-segment-breakdown:

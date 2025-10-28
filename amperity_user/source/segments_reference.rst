@@ -74,8 +74,17 @@ Summary tab
 
 .. include:: ../../amperity_reference/source/segments.rst
    :start-after: .. segments-summary-details-start
-   :end-before: .. segments-overview-details-end
+   :end-before: .. segments-summary-details-end
 
+
+.. _segments-howitworks-custom-segment-metrics:
+
+Custom segment metrics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_reference/source/segments.rst
+   :start-after: .. custom-segment-metrics-summary-start
+   :end-before: .. custom-segment-metrics-summary-end
 
 .. _segments-howitworks-segment-breakdown:
 
