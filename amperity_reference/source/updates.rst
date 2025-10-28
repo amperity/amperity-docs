@@ -23,7 +23,7 @@ What is new and what has changed?
 
 .. updates-intro-end
 
-.. tip:: Sign up to `receive an email with product updates <https://amperity.com/customers/customer-newsletter>`__ |ext_link|.
+.. tip:: Sign up to `receive emailed product updates <https://amperity.com/customers/customer-newsletter>`__ |ext_link|.
 
    To submit product feedback or requests use the question mark icon within your Amperity tenant, select **Product feedback**, and then follow the prompt.
 
@@ -77,7 +77,7 @@ Fall 2025
    :bdg-success:`NEW` Keep track of customers who have `entered a journey <../user/activations.html#journey-activation-states>`__, moved through specific nodes, and first and last entry.
 
 
-**Learning Lab**
+**Learning Lab courses**
 
    :bdg-success:`NEW` Added courses for `features in the Fall 2025 release <https://learn.amperity.com/page/fall-2025-product-release>`__ |ext_link| to the Amperity Learning Lab. Registration required.
 
@@ -124,7 +124,7 @@ Summer 2025
 
    :bdg-light:`UPDATED` Use the activation canvas to build a series of audiences for :doc:`multi-touch journeys <journeys>` to support your brand's marketing ecosystem.
 
-**Learning Lab**
+**Learning Lab courses**
 
    :bdg-success:`NEW` Added courses for `features in the Summer 2005 release <https://learn.amperity.com/page/july-product-launch>`__ |ext_link| to the Amperity Learning Lab. Registration required.
 
