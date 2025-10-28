@@ -23,7 +23,7 @@ What is new and what has changed?
 
 .. updates-intro-end
 
-.. tip:: Sign up for the `customer newsletter <https://amperity.com/customers/customer-newsletter>`__ |ext_link| to receive an email with product updates.
+.. tip:: Sign up to `receive an email with product updates <https://amperity.com/customers/customer-newsletter>`__ |ext_link|.
 
    To submit product feedback or requests use the question mark icon within your Amperity tenant, select **Product feedback**, and then follow the prompt.
 
@@ -67,6 +67,11 @@ Fall 2025
    :bdg-success:`NEW` Use :ref:`custom prompts <ampai-custom-prompt>` with AmpAI to align responses to specific business logic for the AI Assistant for segments and queries.
 
 
+**Custom segment metrics**
+
+   :bdg-success:`NEW` Define custom segment metrics that track key indicators that are meaningful to your business.
+
+
 **Journey activation states**
 
    :bdg-success:`NEW` Keep track of customers who have `entered a journey <../user/activations.html#journey-activation-states>`__, moved through specific nodes, and first and last entry.
@@ -74,7 +79,7 @@ Fall 2025
 
 **Learning Lab**
 
-   :bdg-success:`NEW` Added videos for `features in the Fall 2005 release <https://learn.amperity.com/page/fall-2025-product-release>`__ |ext_link| to the Amperity Learning Lab. Registration required.
+   :bdg-success:`NEW` Added courses for `features in the Fall 2025 release <https://learn.amperity.com/page/fall-2025-product-release>`__ |ext_link| to the Amperity Learning Lab. Registration required.
 
 **Merge paths in journeys**
 
@@ -121,7 +126,7 @@ Summer 2025
 
 **Learning Lab**
 
-   :bdg-success:`NEW` Added videos for `features in the Summer 2005 release <https://learn.amperity.com/page/july-product-launch>`__ |ext_link| to the Amperity Learning Lab. Registration required.
+   :bdg-success:`NEW` Added courses for `features in the Summer 2005 release <https://learn.amperity.com/page/july-product-launch>`__ |ext_link| to the Amperity Learning Lab. Registration required.
 
 **Multi-factor authentication**
 
