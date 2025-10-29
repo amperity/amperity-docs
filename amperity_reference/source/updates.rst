@@ -69,7 +69,7 @@ Fall 2025
 
 **Custom segment metrics**
 
-   :bdg-success:`NEW` Define custom segment metrics that track key indicators that are meaningful to your business.
+   :bdg-success:`NEW` Define :ref:`custom segment metrics <segments-howitworks-custom-segment-metrics>` that track key indicators that are meaningful to your business.
 
 
 **Journey activation states**
