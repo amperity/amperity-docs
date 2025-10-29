@@ -105,7 +105,7 @@ To connect Amperity to data sources, do the following:
 #. Log in to `Amperity <https://app.amperity.com>`__.
 #. Open the **Quick start** page. This is located in the left-side menu at the top.
 #. Under **Identity resolution** click **Add datasource**.
-#. Select one of the following options: `Amazon S3 <https://docs.amperity.com/operator/destination_amazon_s3.html>`__, `Azure Blob Storage <https://docs.amperity.com/operator/destination_azure_blob_storage.html>`__, `Databricks <https://docs.amperity.com/operator/bridge_databricks.html#from-databricks>`__, `Google BigQuery <https://docs.amperity.com/operator/bridge_google_bigquery.html#from-google-bigquery>`__, `Google Cloud Storage <https://docs.amperity.com/operator/destination_google_cloud_storage.html>`__, or `Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#from-snowflake>`__.
+#. Select one of the following options: Amazon S3, Azure Blob Storage, Databricks, Google BigQuery, SFTP, or Snowflake.
 
    This opens a page that will walk you through steps for connecting to Amperity to the selected option.
 
