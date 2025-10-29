@@ -36,7 +36,7 @@ Segments
       :link: segments.html
 
    .. grid-item-card:: How segments work
-      :link: segments.html#how-segments-work
+      :link: segments_reference.html#how-segments-work
 
 
 .. segments-about-grid-end
