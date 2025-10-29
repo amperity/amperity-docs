@@ -461,6 +461,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
 * :ref:`segments-format-segment`
+* :ref:`segments-hide-summary-statistics`
 * :ref:`segments-create-new-segment-from-overlap`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
