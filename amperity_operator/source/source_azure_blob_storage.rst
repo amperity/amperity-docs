@@ -35,6 +35,8 @@ Pull from Azure Blob Storage
 
 .. important:: Use this data source to pull data to Amperity from Azure Data Lake Storage Gen1 or Azure Data Lake Storage Gen2.
 
+.. note:: This data source is different from :ref:`provisioning storage on Microsoft Azure <storage-provision-location-azure>`, which is for managing all of the underlying data of an Amperity tenant.
+
 .. source-azure-blob-storage-important-end
 
 .. source-azure-blob-storage-steps-to-pull-start
