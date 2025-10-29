@@ -43,6 +43,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-copy-segment-id`
 * :ref:`segments-copy-sql-query`
 * :ref:`segments-create-campaign`
+* :ref:`segments-custom-segment-metrics`
 * :ref:`segments-create-customer-list`
 * :ref:`segments-create-sql-segment-in-folder`
 * :ref:`segments-customize-charts`
@@ -54,6 +55,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
 * :ref:`segments-format-segment`
+* :ref:`segments-hide-summary-statistics`
 * :ref:`segments-create-new-segment-from-overlap`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
@@ -484,6 +486,75 @@ The Segments editor opens.
 .. segments-create-campaign-steps-end
 
 
+.. _segments-custom-segment-metrics:
+
+Custom segment metrics
+==================================================
+
+.. segments-custom-segment-metrics-start
+
+You can define custom segment metrics for a given segment in the **Summary** tab:
+
+* :ref:`Set custom segment metrics <segments-set-custom-segment-metrics>`
+* :ref:`Manage custom segment metrics <segments-manage-custom-segment-metrics>`
+
+.. segments-custom-segment-metrics-end
+
+.. _segments-set-custom-segment-metrics:
+
+Set custom segment metrics
+--------------------------------------------------
+
+.. segments-set-custom-segment-metrics-start
+
+You can set custom segment metrics for a given segment in the **Summary** tab.
+
+.. segments-set-custom-segment-metrics-end
+
+**To set custom segment metrics**
+
+.. segments-set-custom-segment-metrics-steps-start
+
+#. From the **Summary** tab, click **Add** button at the bottom of the page. This opens the **Custom chart** dialog box.
+
+   .. note:: The **Add** button will not appear if there is already the maximum of ten custom segment metrics. 
+   
+#. Set the metric title.
+#. Use the "Type" dropdown menu to select the type of metric, either **Bar chart** or **Number**.
+   
+   For a **Bar chart**, click **Add attribute** and use the dropdown menus to select first the source table and then the attribute.
+   
+   For a **Number**, click **Add attribute** and use the dropdown menus to select first the source table and then the attribute.
+   You must also use the dropdown menus to select a **calculation type** (sum, average, maximum, etc.) and a **number format** (integer, dollar amount, percentage, etc). You may optionally name the units being counted.
+#. Once you have set all required fields, click **Confirm**.
+
+.. segments-set-custom-segment-metrics-steps-start
+
+.. _segments-manage-custom-segment-metrics:
+
+Manage custom segment metrics
+--------------------------------------------------
+
+.. segments-manage-custom-segment-metrics-start
+
+You can manage custom segment metrics for a given segment in the **Summary** tab.
+
+.. segments-manage-custom-segment-metrics-end
+
+**To manage custom segment metrics**
+
+.. segments-manage-custom-segment-metrics-steps-start
+
+Click the |fa-kebab| icon on a custom segment metric tile to access options:
+
+* **View SQL** to view, but not edit, the SQL behind the query
+* **View** to open the **Custom chart** dialog box, where you can click **Edit** to adjust the parameters 
+* **Edit** to go directly to editing the paramters
+* **Delete** to delete the custom segment metric
+
+.. segments-manage-custom-segment-metrics-steps-end
+
+
 .. _segments-create-customer-list:
 
 Customer lists
@@ -820,6 +891,29 @@ You can format a segment from the **Segments** page.
 .. segments-edit-segments-steps-end
 
 
+.. _segments-hide-summary-statistics:
+
+Hide/display summary statistics
+==================================================
+
+.. segments-hide-summary-statistics-start
+
+You can choose which summary statistics appear on the **Summary** tab.
+
+.. segments-hide-summary-statistics-end
+
+**To hide or display summary statistics**
+
+.. segments-hide-summary-statistics-steps-start
+
+#. From the **Summary** tab, click **Actions**.
+#. Select **Summary settings**.
+#. In the **Configure view** dialog box, use the checkboxes to hide or display summary statistics.
+#. Click **Save**.
+
+.. segments-hide-summary-statistics-steps-end
+
+
 .. _segments-create-new-segment-from-overlap:
 
 New segment from intersection
@@ -1130,7 +1224,7 @@ Set default charts
 
 .. segments-set-default-charts-start
 
-You can set and default charts from the **Segment Editor**.
+You can set default charts from the **Segment Editor**.
 
 .. segments-set-default-charts-end
 
