@@ -55,6 +55,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
 * :ref:`segments-format-segment`
+* :ref:`segments-hide-summary-statistics`
 * :ref:`segments-create-new-segment-from-overlap`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
@@ -888,6 +889,29 @@ You can format a segment from the **Segments** page.
 #. Click the **Format** button.
 
 .. segments-edit-segments-steps-end
+
+
+.. _segments-hide-summary-statistics:
+
+Hide/display summary statistics
+==================================================
+
+.. segments-hide-summary-statistics-start
+
+You can choose which summary statistics appear on the **Summary** tab.
+
+.. segments-hide-summary-statistics-end
+
+**To hide or display summary statistics**
+
+.. segments-hide-summary-statistics-steps-start
+
+#. From the **Summary** tab, click **Actions**.
+#. Select **Summary settings**.
+#. In the **Configure view** dialog box, use the checkboxes to hide or display summary statistics.
+#. Click **Save**.
+
+.. segments-hide-summary-statistics-steps-end
 
 
 .. _segments-create-new-segment-from-overlap:

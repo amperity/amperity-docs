@@ -263,6 +263,7 @@ Each **Summary** tab contains the following details:
 
 * :ref:`segments-bulk-delete-segments`
 * :ref:`segments-bulk-move-segment`
+* :ref:`segments-hide-summary-statistics`
 * :ref:`segments-view-SQL-revenue-tree`
 * :ref:`segments-view-segment-stats-SQL`
 * :ref:`segments-explore-copy`
@@ -276,15 +277,15 @@ Custom segment metrics
 
 .. custom-segment-metrics-summary-start
 
-**Custom segment metrics** allow you to visualize the metrics that are most meaningful to your business, based on attributes in your databases or profiles. Select and manage **Custom segment metrics** from the **Summary** tab.
+Custom segment metrics allow you to visualize the metrics that are most meaningful to your business, based on attributes in your databases or profiles. Select and manage custom segment metrics from the **Summary** tab.
 
-You can set a maximum of ten **Custom segment metrics** for any segment. 
+You can set a maximum of ten custom segment metrics for any segment. 
 
-.. note:: **Custom segment metrics** apply to a pairing of a **Database** and an **Activation ID**, displayed at the top of the **Summary** tab. All other segments with the same pairing will have the same **Custom segment metrics.**
+.. note:: Custom segment metrics apply to a pairing of a **Database** and an **Activation ID**, displayed at the top of the **Summary** tab. All other segments with the same pairing will have the same custom segment metrics.
 
 .. TODO Add image
 
-There are two formats for a **Custom segment metric**:
+Use the following formats to define a custom segment metric:
 
 * **Bar chart**, for visualizing distribution among different categories of an attribute. For example: gender, purchase channel, product preference, etc. 
 * **Number**, for visualizing a single stat. For example: loyalty points, household size, total purchases, etc. 
