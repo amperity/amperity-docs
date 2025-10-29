@@ -426,7 +426,23 @@ Merge
    :align: left
    :class: no-scaled-link
 
-.. note:: The option to merge only appears when you click the plus button below a split. 
+.. note:: The option to merge only appears when you click the plus button below a split.
+
+.. note:: If a journey ends on a merge, that merge is removed upon saving the journey because a closing merge does not result in any action.
+
+.. note:: Merging an outer path will first merge the inner path.
+
+.. image:: ../../images/screenshot-journeys-merge-outer-path-before.png
+   :width: 440 px
+   :alt: Merged nodes
+   :align: left
+   :class: no-scaled-link
+   
+.. image:: ../../images/screenshot-journeys-merge-outer-path-after.png
+   :width: 440 px
+   :alt: Merged nodes
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-node-merge-end
 
@@ -836,14 +852,14 @@ The **Journeys** canvas supports the following user interactions:
 
 .. _journeys-howtos-merge:
 
-Merge a split
+Merge a split path
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-journey-merge-start
    :end-before: .. term-journey-merge-end
 
-**To merge a split in a journey** 
+**To merge a split path in a journey** 
 
 .. journeys-howtos-merge-steps-start
 
