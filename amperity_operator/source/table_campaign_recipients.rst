@@ -32,25 +32,9 @@ Requirements
 
 .. table-campaign-recipients-requirements-start
 
-The **Campaign Recipients** table requires at least one campaign has been configured, and then sent from Amperity.
+The **Campaign Recipients** table requires at least one campaign to be configured, and then sent from Amperity.
 
 .. table-campaign-recipients-requirements-end
-
-
-.. _table-campaign-recipients-add-table:
-
-Add table
-==================================================
-
-.. include:: ../../amperity_reference/source/campaigns.rst
-   :start-after: .. campaigns-enable-campaign-recipients-table-start
-   :end-before: .. campaigns-enable-campaign-recipients-table-end
-
-**To enable Campaign Recipients tables**
-
-.. include:: ../../amperity_reference/source/campaigns.rst
-   :start-after: .. campaigns-enable-campaign-recipients-table-steps-start
-   :end-before: .. campaigns-enable-campaign-recipients-table-steps-end
 
 
 .. _table-campaign-recipients-delivery-dates:
