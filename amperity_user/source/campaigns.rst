@@ -244,7 +244,7 @@ The following sections describe the steps you will follow to set up and configur
           :class: no-scaled-link
      - .. include:: ../../amperity_reference/source/campaigns.rst
           :start-after: .. campaigns-enable-campaign-activation-states-start
-          :end-before: .. campaigns-enable-campaign-activation-states-start-end
+          :end-before: .. campaigns-enable-campaign-activation-states-end
 
        .. include:: ../../amperity_reference/source/campaigns.rst
           :start-after: .. campaigns-test-campaign-start
