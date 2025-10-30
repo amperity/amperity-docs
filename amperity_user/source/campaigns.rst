@@ -243,6 +243,10 @@ The following sections describe the steps you will follow to set up and configur
           :align: center
           :class: no-scaled-link
      - .. include:: ../../amperity_reference/source/campaigns.rst
+          :start-after: .. campaigns-enable-campaign-activation-states-start
+          :end-before: .. campaigns-enable-campaign-activation-states-start-end
+
+       .. include:: ../../amperity_reference/source/campaigns.rst
           :start-after: .. campaigns-test-campaign-start
           :end-before: .. campaigns-test-campaign-end
 

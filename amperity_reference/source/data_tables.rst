@@ -517,6 +517,12 @@ Customer 360
 
 .. data-tables-customer-360-note-end
 
+.. data-tables-customer-360-credit-and-debit-cards-start
+
+.. caution:: Amperity does not have built-in semantic tags for credit cards or debit cards. Hash credit card or debit card numbers *before* making them available to Amperity and use a custom semantic tag, such as **credit-card** or **cc**. Do not use unhashed card numbers in Amperity customer profiles.
+
+.. data-tables-customer-360-credit-and-debit-cards-end
+
 .. data-tables-customer-360-table-about-start
 
 The following table represents a **Customer 360** table with profile data and a few summary attributes based on interaction records for transaction data:

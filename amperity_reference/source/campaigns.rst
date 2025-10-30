@@ -755,7 +755,7 @@ Tasks related to building campaigns in Amperity:
 * :ref:`campaigns-edit-attribute`
 * :ref:`campaigns-edit-campaign`
 * :ref:`campaigns-edit-sub-audience`
-* :ref:`campaigns-enable-campaign-recipients-table`
+* :ref:`campaigns-enable-campaign-activation-states`
 * :ref:`campaigns-filter-a-campaign`
 * :ref:`campaigns-remove-sub-audience`
 * :ref:`campaigns-run-as-part-of-workflow`
@@ -1563,30 +1563,25 @@ You can edit a sub-audience on the **Edit Campaign** page.
 .. campaigns-campaigns-edit-sub-audience-steps-end
 
 
-.. _campaigns-enable-campaign-recipients-table:
+.. _campaigns-enable-campaign-activation-states:
 
-Enable Campaign Recipients table
+Enable activation states
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-campaign-recipients-table-start
-   :end-before: .. term-campaign-recipients-table-end
+.. campaigns-enable-campaign-activation-states-start
 
-.. campaigns-enable-campaign-recipients-table-start
+Activation activity is enabled by default for every campaign and keeps track of the activation states for customers who were activated by the campaign, including by sub-audience or treatment, by destination, how often and when.
 
-A **Campaign Recipients** table can be enabled directly from the **Campaigns** page. It may be enabled for each combination of database + activation that is configured in your tenant.
+.. campaigns-enable-campaign-activation-states-end
 
-.. campaigns-enable-campaign-recipients-table-end
+**To disable Campaign Recipients tables**
 
-**To enable Campaign Recipients tables**
+.. campaigns-enable-campaign-activation-states-steps-start
 
-.. campaigns-enable-campaign-recipients-table-steps-start
+#. From the **Campaigns** page open a campaign.
+#. De-select the **Record to campaign recipients?** checkbox at the bottom.
 
-#. Click the **Campaign settings** link next to the **Create campaign** button, and then open the **Campaign Recipients** tab.
-#. Select the databases for which the **Campaign Recipients** table should be enabled.
-#. Click **Save**.
-
-.. campaigns-enable-campaign-recipients-table-steps-end
+.. campaigns-enable-campaign-activation-states-steps-end
 
 
 .. _campaigns-filter-a-campaign:
