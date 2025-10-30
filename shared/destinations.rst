@@ -248,10 +248,10 @@ Use a webhook destination to send query results from Amperity to a Lambda functi
 
 #. Select **Allow business users to use this destination**.
 
-   This allows users who have been assigned to the **Amp360 User** or **AmpIQ User** policies to use this destination with orchestrations and campaigns.
+   Users who are assigned the **Amp360 User** or **AmpIQ User** policies can access this destination from orchestrations, journeys, and campaigns.
 #. Select **Allow business users with limited PII access to send data**.
 
-   This allows users who have been assigned to the **Restrict PII access** policy option to use this destination with orchestrations and campaigns.
+   Users who are assigned the **Restrict PII access** policy option can access this destination from orchestrations, journeys, and campaigns.
 #. Click **Save**.
 
 .. destinations-add-destinations-webhook-end
@@ -687,17 +687,19 @@ A business user may also have restricted access to PII, which prevents them from
 
 .. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
+.. TODO: The following is /legacy only.
+
 .. destinations-data-template-business-users-access-not-configured-start
 
-If business user access was not configured as part of the destination, you may configure access from the data template.
+If business user access is not configured for a destination, you may configure access from a data template.
 
 .. destinations-data-template-business-users-access-not-configured-end
 
 .. destinations-data-template-business-users-allow-campaigns-start
 
-.. important:: To allow business users to use this destination with campaigns, you must enable the **Available to campaigns** option. This allows users to send campaign results from Amperity to |destination-name|.
+.. important:: Use the **Available to campaigns** option to allow business users to use this destination from campaigns.
 
-   If you enable this option, the data extension settings require using campaign name and group name template variables to associate the name of the data extension to your campaign.
+   When enabled data extension settings require using campaign name and group name template variables to associate the name of the data extension with the campaign.
 
 .. destinations-data-template-business-users-allow-campaigns-end
 

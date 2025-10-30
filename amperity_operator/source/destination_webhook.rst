@@ -422,10 +422,6 @@ Add data template
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
