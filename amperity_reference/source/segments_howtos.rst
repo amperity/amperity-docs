@@ -55,7 +55,6 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
 * :ref:`segments-format-segment`
-* :ref:`segments-hide-summary-statistics`
 * :ref:`segments-create-new-segment-from-overlap`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
@@ -66,6 +65,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-set-default-charts`
 * :ref:`segments-configure-segments`
 * :ref:`segments-show-columns`
+* :ref:`segments-show-summary-statistics`
 * :ref:`segments-switch-sql-segment`
 * :ref:`segments-use-relative-dates`
 * :ref:`segments-view-segment`
@@ -891,29 +891,6 @@ You can format a segment from the **Segments** page.
 .. segments-edit-segments-steps-end
 
 
-.. _segments-hide-summary-statistics:
-
-Hide/display summary statistics
-==================================================
-
-.. segments-hide-summary-statistics-start
-
-You can choose which summary statistics appear on the **Summary** tab.
-
-.. segments-hide-summary-statistics-end
-
-**To hide or display summary statistics**
-
-.. segments-hide-summary-statistics-steps-start
-
-#. From the **Summary** tab, click **Actions**.
-#. Select **Summary settings**.
-#. In the **Configure view** dialog box, use the checkboxes to hide or display summary statistics.
-#. Click **Save**.
-
-.. segments-hide-summary-statistics-steps-end
-
-
 .. _segments-create-new-segment-from-overlap:
 
 New segment from intersection
@@ -1345,6 +1322,29 @@ You can view columns that are in the segment results from the **Customers** page
 #. Click **Refresh** to update the segment results to show the configured set of columns.
 
 .. segments-show-columns-steps-end
+
+
+.. _segments-show-summary-statistics:
+
+Show summary statistics
+==================================================
+
+.. segments-hide-summary-statistics-start
+
+You can choose which summary statistics appear on the **Summary** tab.
+
+.. segments-hide-summary-statistics-end
+
+**To hide or display summary statistics**
+
+.. segments-hide-summary-statistics-steps-start
+
+#. From the **Summary** tab, click **Actions**.
+#. Select **Summary settings**.
+#. In the **Configure view** dialog box, use the checkboxes to hide or display summary statistics.
+#. Click **Save**.
+
+.. segments-hide-summary-statistics-steps-end
 
 
 .. _segments-switch-sql-segment:

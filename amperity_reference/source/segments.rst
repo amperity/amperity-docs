@@ -461,7 +461,6 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
 * :ref:`segments-format-segment`
-* :ref:`segments-hide-summary-statistics`
 * :ref:`segments-create-new-segment-from-overlap`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
@@ -472,6 +471,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-set-default-charts`
 * :ref:`segments-configure-segments`
 * :ref:`segments-show-columns`
+* :ref:`segments-show-summary-statistics`
 * :ref:`segments-switch-sql-segment`
 * :ref:`segments-use-relative-dates`
 * :ref:`segments-view-segment`
