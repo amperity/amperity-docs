@@ -432,13 +432,13 @@ Merge
 
 .. note:: Merging an outer path will first merge the inner path.
 
-.. image:: ../../images/screenshot-journeys-merge-outer-path-before.png
+.. image:: ../../images/mockup-journeys-canvas-merge-select-a.png
    :width: 440 px
    :alt: Merged nodes
    :align: left
    :class: no-scaled-link
    
-.. image:: ../../images/screenshot-journeys-merge-outer-path-after.png
+.. image:: ../../images/mockup-journeys-canvas-merge-merged-a.png
    :width: 440 px
    :alt: Merged nodes
    :align: left
