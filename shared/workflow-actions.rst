@@ -4,6 +4,8 @@
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR WORKFLOW ACTIONS**
 **TEMPLATE SECTIONS FOR WORKFLOW ACTIONS**
 **TEMPLATE SECTIONS FOR WORKFLOW ACTIONS**
@@ -11,6 +13,8 @@
 
 
 **INTRO**
+
+.. vale on
 
 .. workflow-actions-common-table-intro-start
 
@@ -21,9 +25,13 @@ Open the **Workflows** page to review a list of workflow actions, choose an acti
 .. workflow-actions-common-table-intro-end
 
 
+.. vale off
+
 **TABLE, SECTION ONE**
 **TABLE, SECTION ONE**
 **TABLE, SECTION ONE**
+
+.. vale on
 
 .. workflow-actions-common-table-section-one-a-start
 
@@ -37,7 +45,11 @@ You may receive a notifications error for a configured |source-name| data source
 
 .. workflow-actions-common-table-section-one-a-source-end
 
+.. vale off
+
 **IMAGE IS HERE**
+
+.. vale on
 
 .. workflow-actions-common-table-section-one-b-start
 
@@ -47,9 +59,13 @@ If you receive a notification error, review the details, and then click the **Vi
 
 
 
+.. vale off
+
 **TABLE, SECTION TWO**
 **TABLE, SECTION TWO**
 **TABLE, SECTION TWO**
+
+.. vale on
 
 .. workflow-actions-common-table-section-two-start
 
@@ -57,7 +73,12 @@ On the **Workflows** page, review the individual steps to determine which steps 
 
 .. workflow-actions-common-table-section-two-end
 
+.. vale off
+
 **IMAGE IS HERE**
+
+.. vale on
+
 
 
 .. vale off
@@ -74,7 +95,11 @@ A list of individual workflow actions are shown. Review the list to identify whi
 
 .. workflow-actions-common-table-section-three-a-end
 
+.. vale off
+
 **IMAGE IS HERE**
+
+.. vale on
 
 .. workflow-actions-common-table-section-three-b-start
 
@@ -87,9 +112,13 @@ In certain cases, actions are specific and are shown when certain conditions exi
 .. TODO: Immediately after "section three" there is often a bespoke list of links to workflow action sections that are unique. See Salesforce Marketing Cloud, Zendesk, or Active Campaign for examples of how this can vary across topics.
 
 
+.. vale off
+
 **TABLE, SECTION FOUR**
 **TABLE, SECTION FOUR**
 **TABLE, SECTION FOUR**
+
+.. vale on
 
 .. workflow-actions-common-table-section-four-a-start
 
@@ -108,9 +137,13 @@ After you have completed the steps in the workflow action, click **Continue** to
 
 
 
+.. vale off
+
 **GENERIC FILES BAD ARCHIVE**
 **GENERIC FILES BAD ARCHIVE**
 **GENERIC FILES BAD ARCHIVE**
+
+.. vale on
 
 .. TODO: This is a bit hand-wavy and vague.
 
@@ -128,9 +161,13 @@ To resolve this error, do the following.
 
 
 
+.. vale off
+
 **AMAZON S3 INCORRECT BUCKET NAME**
 **AMAZON S3 INCORRECT BUCKET NAME**
 **AMAZON S3 INCORRECT BUCKET NAME**
+
+.. vale on
 
 .. workflow-actions-s3-generic-incorrect-bucket-name-destination-start
 
@@ -163,9 +200,13 @@ To resolve this error, verify name of the Amazon S3 bucket, and then update the 
 
 
 
+.. vale off
+
 **GENERIC FILES MISSING FILE**
 **GENERIC FILES MISSING FILE**
 **GENERIC FILES MISSING FILE**
+
+.. vale on
 
 .. workflow-actions-files-generic-missing-file-start
 
@@ -185,9 +226,13 @@ To resolve this error, do the following.
 
 
 
+.. vale off
+
 **GENERIC FILES UNABLE TO DECOMPRESS FILE**
 **GENERIC FILES UNABLE TO DECOMPRESS FILE**
 **GENERIC FILES UNABLE TO DECOMPRESS FILE**
+
+.. vale on
 
 .. workflow-actions-files-unable-to-decompress-file-start
 
@@ -210,9 +255,13 @@ To resolve this error, do the following.
 
 
 
+.. vale off
+
 **GENERIC INVALID CREDENTIALS**
 **GENERIC INVALID CREDENTIALS**
 **GENERIC INVALID CREDENTIALS**
+
+.. vale on
 
 .. workflow-actions-generic-invalid-credentials-start
 
@@ -239,9 +288,13 @@ To resolve this error, verify that the credentials required by this workflow are
 .. workflow-actions-generic-invalid-credentials-source-end
 
 
+.. vale off
+
 **GENERIC PGP ERROR**
 **GENERIC PGP ERROR**
 **GENERIC PGP ERROR**
+
+.. vale on
 
 .. workflow-actions-generic-pgp-error-start
 
@@ -260,9 +313,13 @@ To resolve this error, verify the PGP key.
 
 
 
+.. vale off
+
 **GENERIC STATUS 401**
 **GENERIC STATUS 401**
 **GENERIC STATUS 401**
+
+.. vale on
 
 .. workflow-actions-generic-status-401-start
 
@@ -279,9 +336,13 @@ To resolve this error, verify that the credentials required by this workflow are
 
 
 
+.. vale off
+
 **MICROSOFT AZURE SAS TOKENS**
 **MICROSOFT AZURE SAS TOKENS**
 **MICROSOFT AZURE SAS TOKENS**
+
+.. vale on
 
 .. workflow-actions-azure-sas-intro-start
 
@@ -341,9 +402,13 @@ To resolve this error, determine the cause for the invalid permissions error.
 
 
 
+.. vale off
+
 **SFTP UNAVAILABLE (SHARED)**
 **SFTP UNAVAILABLE (SHARED)**
 **SFTP UNAVAILABLE (SHARED)**
+
+.. vale on
 
 .. TODO: This is a bit hand-wavy and vague.
 

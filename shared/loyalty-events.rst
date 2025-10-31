@@ -4,12 +4,15 @@
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR LOYALTY EVENTS**
 
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 
+.. vale on
 
 .. loyalty-id-start
 
@@ -272,6 +275,10 @@ The amount of money a customer must spend to move to the next loyalty tier.
 .. loyalty-spend-to-next-tier-end
 
 
+.. vale off
+
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
+
+.. vale on

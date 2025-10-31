@@ -7,17 +7,19 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
+.. vale off
+
 ADD THIS TO END OF GET DETAILS FOR ALL SOURCES AND CLEAN UP GET DETAILS
+
+.. vale on
 
 
 .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 
-
+.. vale off
 
 **TEMPLATE SECTIONS FOR DATA SOURCES**
-
-.. vale off
 
 The templated sections for all of the "Pull from xxxxx" topics in /operator/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
 
@@ -36,12 +38,16 @@ The steps that are required to pull |what-pull| to Amperity from |source-name|:
 
 **Get details**
 
+.. vale off
 
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 
 Fivetran couriers share some common details: 1) request to enable, 2) access to Snowflake, 3) the introduction, 4) note about Fivetran, 5) important about not storing data with 3, 4, and 5 tucked into consistent locations. The steps in-between 1) and 2) are custom to each topic.
+
+.. vale on
+
 
 .. sources-get-details-fivetran-overview-start
 
@@ -78,6 +84,8 @@ Access to the instance of Snowflake that stores the |source-name| data tables th
 .. sources-get-details-fivetran-access-to-snowflake-start
 
 
+.. vale off
+
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
@@ -86,6 +94,8 @@ FIVETRAN COURIERS
 **Configure OAuth**
 
 USE THIS FOR ALL SOURCES THAT ALLOW OAUTH
+
+.. vale on
 
 .. sources-oauth-configure-start
 
@@ -102,13 +112,15 @@ USE THIS FOR ALL SOURCES THAT ALLOW OAUTH
 
 **Add courier**
 
-
+.. vale off
 
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 
 Applies ONLY to data sources that use Fivetran.
+
+.. vale on
 
 .. sources-add-courier-fivetran-consolidate-start
 
@@ -179,6 +191,8 @@ Load operations associate each table in the list of tables to a feed. (The initi
 
 .. sources-add-courier-fivetran-end
 
+.. vale off
+
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
@@ -190,6 +204,8 @@ AMAZON S3 COURIERS
 AMAZON S3 COURIERS
 
 Applies ONLY to data sources that use AMAZON S3.
+
+.. vale on
 
 .. TODO: Sync the example entities list intros to be generic for all file-based couriers.
 
@@ -233,6 +249,8 @@ An introduction to entities lists and a note about required or optional file beh
 
 .. sources-add-courier-s3-generic-end
 
+.. vale off
+
 AMAZON S3 COURIERS
 AMAZON S3 COURIERS
 AMAZON S3 COURIERS
@@ -245,6 +263,8 @@ API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 
 Applies ONLY to data sources that use APIs and automatically handle the feed creation.
+
+.. vale on
 
 .. TODO: Currently hooked into Zendesk, Sailthru, and Listrak. Not hooked into Google Analytics. Requires the credential-fields, settings-details, and box-names replacements.
 
@@ -271,6 +291,8 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. sources-add-courier-review-feed-and-domain-table-end
 
+.. vale off
+
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
@@ -283,6 +305,8 @@ API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 **Get sample files**
 
 Three possible introductions: one for files, another for Snowflake, and another for Fivetran. Fivetran does not have a howto.
+
+.. vale on
 
 .. sources-get-sample-files-start
 
@@ -564,7 +588,7 @@ Run the courier again. This time, because the load operations are present and th
 
 
 
-
+.. vale off
 
 SOURCES
 
@@ -577,6 +601,8 @@ STEP 1
 STEP 1
 STEP 1
 
+.. vale on
+
 .. sources-add-source-start
 
 Open the **Sources** page to configure a destination for |source-name|. Click the **Add courier** button to open the **Add courier** dialog box.
@@ -584,6 +610,8 @@ Open the **Sources** page to configure a destination for |source-name|. Click th
 .. sources-add-source-end
 
 .. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
+
+.. vale off
 
 IMPORTANT: The next paragraph after the image is located in the /shared/credentials.rst topic because they are IDENTICAL.
 
@@ -596,6 +624,8 @@ STEP 4
 STEP 4
 STEP 4
 
+.. vale on
+
 .. sources-run-the-courier-start
 
 From the **Sources** tab, open the |fa-kebab| menu for the courier, and then select **Run**. The **Run Courier** dialog box opens.
@@ -604,11 +634,15 @@ Select a time period to be run, and then click **Run**.
 
 .. sources-run-the-courier-end
 
+.. vale off
+
 STEP 5
 STEP 5
 STEP 5
 
 .. TODO: The following is for couriers that use a checkbox to select one or more tables to bring to Amperity, such as Adobe Commerce, Shopify, et al.
+
+.. vale on
 
 .. sources-verify-feeds-and-domain-tables-start
 
@@ -622,6 +656,7 @@ Select a time period to be run, and then click **Run**.
 
 
 
+.. vale off
 
 
 
@@ -629,6 +664,8 @@ Select a time period to be run, and then click **Run**.
 
 
 **STEP 00**
+
+.. vale on
 
 .. sources-steps-00-intro-start
 
@@ -639,8 +676,11 @@ Configure Amperity to pull one or more files, and then for each file review the 
 .. sources-steps-00-intro-end
 
 
+.. vale off
 
 **STEP 01**
+
+.. vale on
 
 .. sources-steps-01-open-dialog-start
 
@@ -662,6 +702,7 @@ Select |source-name|. Do one of the following:
 .. sources-steps-01-select-source-end
 
 
+.. vale off
 
 **STEP 02**
 
@@ -670,6 +711,8 @@ Select |source-name|. Do one of the following:
 
 
 **STEP 03**
+
+.. vale on
 
 .. sources-steps-03-select-file-start
 
@@ -703,7 +746,11 @@ Use the **PGP credential** setting to specify the credentials to use for an encr
 
 
 
+.. vale off
+
 **STEP 04**
+
+.. vale on
 
 .. sources-steps-04-review-start
 
@@ -751,7 +798,11 @@ Review the file, and then update these settings, if necessary.
 
 
 
+.. vale off
+
 **STEP 05**
+
+.. vale on
 
 .. sources-steps-05-feed-options-start
 
@@ -827,7 +878,11 @@ Use the **Truncate and upsert** option to delete all records in the existing tab
 
 
 
+.. vale off
+
 **STEP 06**
+
+.. vale on
 
 .. sources-steps-06-feed-editor-start
 
@@ -843,8 +898,11 @@ When finished, click **Activate**.
 .. sources-steps-06-feed-editor-end
 
 
+.. vale off
 
 **STEP 07**
+
+.. vale on
 
 .. sources-steps-07-courier-start
 

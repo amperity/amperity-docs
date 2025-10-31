@@ -30,9 +30,13 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 .. vale on
 
 
+.. vale off
+
 **STEPS**
 
 All the steps that all credentials follow. Custom information belongs in specific destination topics.
+
+.. vale on
 
 **Step 01**
 
@@ -87,7 +91,11 @@ The settings that are available for a credential vary by credential type. For th
 
 
 
+.. vale off
+
 **COMMON**
+
+.. vale on
 
 Credential settings that are not unique.
 
@@ -144,6 +152,8 @@ An individual with access to |destination-name| should use SnapPass to securely 
 
 
 
+.. vale off
+
 **ACTIVECAMPAIGN**
 
 Credentials that are unique to ActiveCampaign.
@@ -167,9 +177,9 @@ The `base URL <https://developers.activecampaign.com/reference/url>`__ |ext_link
 
 
 
-**ACXIOM**
-
 .. vale off
+
+**ACXIOM**
 
 **Hostname**
 
@@ -188,9 +198,9 @@ See SFTP.
 
 
 
-**ADOBE CAMPAIGN**
-
 .. vale off
+
+**ADOBE CAMPAIGN**
 
 **Hostname**
 
@@ -216,6 +226,8 @@ See SFTP.
 
 
 
+
+.. vale off
 
 **ADOBE COMMERCE**
 
@@ -249,9 +261,9 @@ TBD
 
 
 
-**ADOBE CUSTOMER ATTRIBUTES**
-
 .. vale off
+
+**ADOBE CUSTOMER ATTRIBUTES**
 
 **Hostname**
 
@@ -270,11 +282,10 @@ See SFTP.
 
 
 
+.. vale off
 
 **ADOBE EXPERIENCE CLOUD**
 
-.. vale off
-
 **Hostname**
 
 .. vale on
@@ -293,7 +304,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **ADOBE MARKETO**
+
+.. vale on
 
 The following settings are unique to Adobe Marketo.
 
@@ -342,9 +357,9 @@ The `subdomain <https://experienceleague.adobe.com/en/docs/marketo/using/product
 
 
 
-**AIRSHIP**
-
 .. vale off
+
+**AIRSHIP**
 
 **Hostname**
 
@@ -372,7 +387,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **AMAZON ADS**
+
+.. vale on
 
 **OAuth flow**
 
@@ -382,7 +401,11 @@ See "OAuth common flows".
 
 
 
+.. vale off
+
 **AMAZON S3**
+
+.. vale on
 
 Credentials that are unique to Amazon S3.
 
@@ -462,7 +485,11 @@ The complete trust policy is available from a link at the bottom of the credenti
 
 .. credential-amazon-s3-trust-policy-end
 
+.. vale off
+
 **SETUP STEPS FOR ROLE-TO-ROLE**
+
+.. vale on
 
 **Intro**
 
@@ -588,7 +615,11 @@ Click **Continue** to test the configuration and validate the connection to the 
 
 
 
+.. vale off
+
 **ATTENTIVE** API + SFTP
+
+.. vale on
 
 Credentials that are unique to Attentive SFTP + API connectors.
 
@@ -620,7 +651,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **AZURE BLOB STORAGE**
+
+.. vale on
 
 Credentials that are unique to Azure Blob Storage.
 
@@ -722,9 +757,9 @@ Each |destination-name| resource has a `storage URI <https://learn.microsoft.com
 
 
 
-**BAZAARVOICE**
-
 .. vale off
+
+**BAZAARVOICE**
 
 **Hostname**
 
@@ -743,11 +778,11 @@ See SFTP.
 
 
 
+
+.. vale off
 
 **BLUECORE**
 
-.. vale off
-
 **Hostname**
 
 .. vale on
@@ -766,7 +801,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **BRAZE**
+
+.. vale on
 
 **API key**
 
@@ -780,9 +819,9 @@ Required. The API key for your |destination-name| account.
 
 
 
-**CAMELOT SMM**
-
 .. vale off
+
+**CAMELOT SMM**
 
 **Hostname**
 
@@ -802,9 +841,13 @@ See SFTP.
 
 
 
+.. vale off
+
 **CORDIAL**
 
 .. TODO: Are the Cordial IAM + S3 bucket settings identical to Amazon S3 destination settings?
+
+.. vale on
 
 For cordial and cordial-aws both use API key and API URL.
 
@@ -858,7 +901,11 @@ Required. The name of the Amazon S3 bucket.
 
 
 
+.. vale off
+
 **CRITEO**
+
+.. vale on
 
 See OAuth common.
 
@@ -866,9 +913,9 @@ See OAuth common.
 
 
 
-**CROSS COUNTRY COMPUTER**
-
 .. vale off
+
+**CROSS COUNTRY COMPUTER**
 
 **Hostname**
 
@@ -887,7 +934,11 @@ See SFTP.
 
 
 
-**Dotdigital**
+.. vale off
+
+**DOTDIGITAL**
+
+.. vale on
 
 **API username**
 
@@ -909,9 +960,9 @@ The password for the API user.
 
 
 
-**EPSILON ABACUS**
-
 .. vale off
+
+**EPSILON ABACUS**
 
 **Hostname**
 
@@ -931,9 +982,9 @@ See SFTP.
 
 
 
-**EPSILON CONVERSANT**
-
 .. vale off
+
+**EPSILON CONVERSANT**
 
 **Hostname**
 
@@ -958,9 +1009,9 @@ See SFTP.
 
 
 
-**EPSILON TARGETING**
-
 .. vale off
+
+**EPSILON TARGETING**
 
 **Hostname**
 
@@ -981,9 +1032,9 @@ See SFTP.
 
 
 
-**EXPERIAN**
-
 .. vale off
+
+**EXPERIAN**
 
 **Hostname**
 
@@ -1006,7 +1057,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **GOOGLE ADS**
+
+.. vale on
 
 See OAuth common.
 
@@ -1014,7 +1069,11 @@ See OAuth common.
 
 
 
+.. vale off
+
 **GOOGLE ANALYTICS** / **GOOGLE ANALYTICS 4**
+
+.. vale on
 
 **OAuth flow**
 
@@ -1024,7 +1083,11 @@ See "OAuth common flows".
 
 
 
+.. vale off
+
 **GOOGLE CLOUD STORAGE**
+
+.. vale on
 
 Credentials that are unique to Google Cloud Storage.
 
@@ -1073,25 +1136,33 @@ Assign the **Storage Object Admin** role to the service account.
 
 
 
+.. vale off
+
 **GOOGLE CUSTOMER MATCH**
+
+.. vale on
 
 See OAuth common.
 
 
 
 
+
+.. vale off
 
 **HUBSPOT**
 
+.. vale on
+
 See OAuth common.
 
 
 
 
 
-**INFUTOR**
-
 .. vale off
+
+**INFUTOR**
 
 **Hostname**
 
@@ -1110,11 +1181,11 @@ See SFTP.
 
 
 
+
+.. vale off
 
 **KIBO**
 
-.. vale off
-
 **Hostname**
 
 .. vale on
@@ -1133,7 +1204,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **KLAVIYO**
+
+.. vale on
 
 **API key**
 
@@ -1156,9 +1231,9 @@ The `private API key <https://developers.klaviyo.com/en/docs/authenticate_#priva
 
 
 
-**KOUPON MEDIA**
-
 .. vale off
+
+**KOUPON MEDIA**
 
 **Hostname**
 
@@ -1178,9 +1253,9 @@ See SFTP.
 
 
 
-**LISTRAK**
-
 .. vale off
+
+**LISTRAK**
 
 **Allowlist callout**
 
@@ -1221,9 +1296,9 @@ A client ID and secret for an SMS integration that is already set up in |destina
 
 
 
-**LIVERAMP**
-
 .. vale off
+
+**LIVERAMP**
 
 **Hostname**
 
@@ -1243,7 +1318,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **MAILCHIMP**
+
+.. vale on
 
 **API key**
 
@@ -1257,7 +1336,11 @@ Required. The API key for your |destination-name| account.
 
 
 
+.. vale off
+
 **META ADS MANAGER** Facebook
+
+.. vale on
 
 **OAuth flow**
 
@@ -1266,9 +1349,13 @@ See "OAuth common flows".
 
 
 
+
+.. vale off
 
 **META ADS MANAGER: OFFLINE EVENTS**
 
+.. vale on
+
 **OAuth flow**
 
 See "OAuth common flows".
@@ -1276,9 +1363,13 @@ See "OAuth common flows".
 
 
 
+
+.. vale off
 
 **MICROSOFT ADVERTISING**
 
+.. vale on
+
 **OAuth flow**
 
 See "OAuth common flows".
@@ -1287,7 +1378,11 @@ See "OAuth common flows".
 
 
 
+.. vale off
+
 **MICROSOFT DATAVERSE**
+
+.. vale on
 
 .. credential-microsoft-dataverse-requirements-start
 
@@ -1315,7 +1410,11 @@ A client ID and client secret for Microsoft Azure that has permission to access 
 
 
 
+.. vale off
+
 **MICROSOFT DYNAMICS 365 MARKETING**
+
+.. vale on
 
 **Azure client ID and client secret**
 
@@ -1338,7 +1437,11 @@ The Microsoft Azure tenant ID for your instance of |destination-name|.
 
 
 
+.. vale off
+
 **MICROSOFT DYNAMICS**
+
+.. vale on
 
 **Client ID and client secret**
 
@@ -1357,7 +1460,11 @@ Set the expiration date for client secrets to "expires in 1 year", "expires in 2
 
 
 
+.. vale off
+
 **MONETATE**
+
+.. vale on
 
 See Kibo.
 
@@ -1365,9 +1472,9 @@ See Kibo.
 
 
 
-**NEUSTAR**
-
 .. vale off
+
+**NEUSTAR**
 
 **Hostname**
 
@@ -1432,9 +1539,9 @@ You may need to reauthorize access to |destination-name|. This is necessary when
 
 
 
-**ORACLE DATA CLOUD**
-
 .. vale off
+
+**ORACLE DATA CLOUD**
 
 **Hostname**
 
@@ -1456,7 +1563,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **ORACLE ELOQUA**
+
+.. vale on
 
 **Company name**
 
@@ -1482,9 +1593,9 @@ See SFTP.
 
 
 
-**ORACLE RESPONSYS**
-
 .. vale off
+
+**ORACLE RESPONSYS**
 
 **Hostname**
 
@@ -1508,11 +1619,11 @@ See SFTP.
 
 
 
+
+.. vale off
 
 **PANDA PRINTING**
 
-.. vale off
-
 **Hostname**
 
 .. vale on
@@ -1531,11 +1642,11 @@ See SFTP.
 
 
 
+
+.. vale off
 
 **PEBBLEPOST**
 
-.. vale off
-
 **Hostname**
 
 .. vale on
@@ -1554,9 +1665,9 @@ See SFTP.
 
 
 
-**PERSADO**
-
 .. vale off
+
+**PERSADO**
 
 **Hostname**
 
@@ -1576,7 +1687,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **PINTEREST**
+
+.. vale on
 
 See OAuth common.
 
@@ -1584,9 +1699,9 @@ See OAuth common.
 
 
 
-**POWERREVIEWS**
-
 .. vale off
+
+**POWERREVIEWS**
 
 **Hostname**
 
@@ -1605,11 +1720,11 @@ See SFTP.
 
 
 
+
+.. vale off
 
 **QUAD**
 
-.. vale off
-
 **Hostname**
 
 .. vale on
@@ -1628,11 +1743,11 @@ See SFTP.
 
 
 
+
+.. vale off
 
 **RR DONNELLY**
 
-.. vale off
-
 **Hostname**
 
 .. vale on
@@ -1652,7 +1767,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **SAILTHRU**
+
+.. vale on
 
 **API key**
 
@@ -1684,13 +1803,21 @@ You can find the API key and secret after you log in to |destination-name| and a
 
 
 
+.. vale off
+
 **SALESFORCE COMMERCE CLOUD**
 
+.. vale on
 
 
 
+
+
+.. vale off
 
 **SALESFORCE MARKETING CLOUD**
+
+.. vale on
 
 **API client ID and client secret**
 
@@ -1757,7 +1884,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **SALESFORCE SALES CLOUD**
+
+.. vale on
 
 **Security token**
 
@@ -1779,9 +1910,9 @@ The username and password of a Salesforce account configured for API access.
 
 
 
-**SFTP**
-
 .. vale off
+
+**SFTP**
 
 Credentials that are unique to SFTP. These credentials apply to all sources and destinations that use SFTP, including Acxiom, Adobe Campaign, Adobe Customer Attributes, Adobe Experience Platform, Airship, Attentive, BazaarVoice, Bluecore, Camelot SMM, Cheetah Digital, Criteo (offline events), Cross Country Computer, Emarsys, Epsilon, Evocalize, Experian, Infutor, Iterable, Kibo, Koupon Media, LiveRamp, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, Pinterest (product catalogs), PowerReviews, Quad, Reddit Ads, RR Donnelly, Salesforce Commerce Cloud, Salesforce Marketing Cloud, Salesforce Marketing Cloud Personalization, SMG, SoundCommerce, Vibes.
 
@@ -1858,7 +1989,11 @@ Required. A username with access to |where-send|. This username must have permis
 
 
 
+.. vale off
+
 **SHOPIFY**
+
+.. vale on
 
 **Access token**
 
@@ -1879,9 +2014,9 @@ Required. A username with access to |where-send|. This username must have permis
 
 
 
-**SMG**
-
 .. vale off
+
+**SMG**
 
 **Hostname**
 
@@ -1901,7 +2036,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **SNAPCHAT**
+
+.. vale on
 
 See OAuth.
 
@@ -1909,7 +2048,11 @@ See OAuth.
 
 
 
+.. vale off
+
 **SNOWFLAKE**
+
+.. vale on
 
 These settings apply to destination *and* bridge.
 
@@ -1967,7 +2110,11 @@ A username with permission to access |destination-name|.
 
 .. credential-snowflake-username-end
 
+.. vale off
+
 **SNOWFLAKE** AWS-specific
+
+.. vale on
 
 **IAM access key**
 
@@ -1993,15 +2140,13 @@ Required. The IAM secret key, along with the access key, that allows Amperity to
 
 .. credential-snowflake-iam-secret-key-end
 
-**SNOWFLAKE** Azure-specific
-
 .. vale off
+
+**SNOWFLAKE** Azure-specific
 
 **Account name**
 
 .. vale on
-
-.. vale off
 
 .. credential-snowflake-account-name-start
 
@@ -2020,9 +2165,9 @@ The shared access signature that allows access to a Microsoft Azure Blob Storage
 
 
 
-**SOUNDCOMMERCE**
-
 .. vale off
+
+**SOUNDCOMMERCE**
 
 **Hostname**
 
@@ -2042,7 +2187,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **THE TRADE DESK**
+
+.. vale on
 
 **Advertiser ID**
 
@@ -2072,7 +2221,11 @@ You can find the advertiser ID and secret key from the management console within
 
 
 
+.. vale off
+
 **THE TRADE DESK: 3P MARKETPLACE**
+
+.. vale on
 
 **Advertiser secret**
 
@@ -2102,7 +2255,11 @@ The provider ID for your account with The Trade Desk. Ask your The Trade Desk re
 
 
 
+.. vale off
+
 **THE TRADE DESK: OFFLINE EVENTS**
+
+.. vale on
 
 **Advertiser ID**
 
@@ -2116,7 +2273,11 @@ See The Trade Desk.
 
 
 
+.. vale off
+
 **TIKTOK ADS MANAGER**
+
+.. vale on
 
 See OAuth.
 
@@ -2131,7 +2292,11 @@ TikTok Advertiser Accounts must use OAuth. Assign the account used to allow acce
 
 
 
+.. vale off
+
 **TIKTOK ADS MANAGER: OFFLINE EVENTS**
+
+.. vale on
 
 See OAuth.
 
@@ -2141,9 +2306,9 @@ See TikTok Ads Manager.
 
 
 
-**VIBES**
-
 .. vale off
+
+**VIBES**
 
 **Hostname**
 
@@ -2162,7 +2327,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **YAHOO DSP**
+
+.. vale on
 
 **Site MDM ID**
 
@@ -2179,7 +2348,11 @@ Required. The "Site MDM ID" is the value of your brand's Master Data Management 
 
 
 
+.. vale off
+
 **ZENDESK**
+
+.. vale on
 
 **API token**
 

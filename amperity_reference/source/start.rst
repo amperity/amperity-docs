@@ -67,7 +67,7 @@ The following diagram shows the data model for the sample data that is part of t
 
 .. data-tables-data-model-tables-note-start
 
-.. note:: Click this diagram to open it in your full browser window. Click `HERE <https://docs.amperity.com/reference/_images/quickstart_sample_erd.png>`__ |ext_link| to open this diagram in a new tab or right-click that link to save a copy to your computer.
+.. note:: Click this diagram to open it in your full browser window. `Open this diagram <https://docs.amperity.com/reference/_images/quickstart_sample_erd.png>`__ |ext_link| in a new tab or right-click that link to save a copy to your computer.
 
 .. data-tables-data-model-tables-note-end
 

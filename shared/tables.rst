@@ -4,18 +4,26 @@
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR DATABASE TABLES**
 
+.. vale on
 
 
 
 
+
+
+.. vale off
 
 **PASSTHROUGH TABLES**
 
+.. vale on
 
 
-**To add [TABLE] as a passthrough table**
+
+**To add [table-name] as a passthrough table**
 
 .. tables-add-passthrough-steps-start
 

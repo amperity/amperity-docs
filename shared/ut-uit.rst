@@ -3,9 +3,11 @@
 ..
 
 
+.. vale off
 
 **TEMPLATE SECTIONS FOR COMMON CONTENT RELATED TO ORDERS AND ITEMS**
 
+.. vale on
 
 
 
@@ -145,16 +147,3 @@ Other dates associated with an order that are not specific to a transactions, su
 
 .. related-order-dates-should-be-added-to-upc-end
 
-
-
-
-
-.. TODO: Use the following block as a template for adding these into tables:
-
-
-
-       .. note::
-
-          .. include:: ../../shared/ut-uit.rst
-             :start-after: .. related-order-dates-should-be-added-to-upc-start
-             :end-before: .. related-order-dates-should-be-added-to-upc-end
