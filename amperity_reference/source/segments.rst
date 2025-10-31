@@ -263,7 +263,7 @@ Each **Summary** tab contains the following details:
 
 * :ref:`segments-bulk-delete-segments`
 * :ref:`segments-bulk-move-segment`
-* :ref:`segments-hide-summary-statistics`
+* :ref:`segments-show-summary-statistics`
 * :ref:`segments-view-SQL-revenue-tree`
 * :ref:`segments-view-segment-stats-SQL`
 * :ref:`segments-explore-copy`
