@@ -814,7 +814,7 @@ Amperity may be configured to include a "success file" to indicate when an orche
 Map to external schemas
 --------------------------------------------------
 
-.. warning:: Applies **ONLY** to the |destination_meta_ads_manager| and |destination_google_ads| destinations.
+.. warning:: Applies **only** to the |destination_meta_ads_manager| and |destination_google_ads| destinations.
 
 .. data-templates-map-to-external-schemas-start
 
