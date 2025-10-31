@@ -3,8 +3,11 @@
 ..
 
 
+.. vale off
 
 **TEMPLATE SECTIONS FOR SENDTOS**
+
+.. vale on
 
 
 .. sendtos-ask-to-configure-start
@@ -33,7 +36,11 @@
 .. sendtos-ask-to-configure-webhook-end
 
 
+.. vale off
+
 **MARKETER CONFIG CALLOUT**
+
+.. vale on
 
 .. destination-ask-to-config-start
 
@@ -44,7 +51,11 @@
 .. destination-ask-to-config-emd
 
 
+.. vale off
+
 **BUILD QUERY**
+
+.. vale on
 
 .. For any destination that defaults to just email-only.
 
@@ -70,7 +81,11 @@ The default audience list in |destination-name| requires only an email address. 
 .. sendtos-build-query-webhook-lambda-note-end
 
 
+.. vale off
+
 **ADD ORCHESTRATION**
+
+.. vale on
 
 .. sendtos-add-orchestration-generic-start
 
@@ -116,7 +131,11 @@ The default audience list in |destination-name| requires only an email address. 
 
 
 
+.. vale off
+
 **RUN ORCHESTRATION**
+
+.. vale on
 
 .. sendtos-run-orchestration-start
 

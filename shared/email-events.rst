@@ -4,11 +4,15 @@
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR EMAIL EVENTS**
 
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
+
+.. vale on
 
 .. email-events-brand-start
 
@@ -226,6 +230,10 @@ The number of days between the time this email was used to signup and the next t
 .. email-events-signup-to-purchase-days-end
 
 
+.. vale off
+
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
+
+.. vale on

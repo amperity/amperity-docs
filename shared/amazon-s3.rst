@@ -22,7 +22,11 @@ This is true even for Snowflake, because when Snowflake runs on AWS, Amperity us
 
 
 
+.. vale off
+
 **Cross-account roles -- INTRO**
+
+.. vale on
 
 .. TODO: The following section is in Snowflake topics, so keep edits neutral.
 
@@ -74,7 +78,11 @@ After setting up cross-account role assumption, a list of files by filename and 
 
 
 
+.. vale off
+
 **Cross-account roles -- STEPS**
+
+.. vale on
 
 .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-start
 
@@ -85,7 +93,11 @@ The following steps describe how to configure Amperity to use cross-account role
 .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-end
 
 
+.. vale off
+
 **Cross-account roles -- STEP ONE**
+
+.. vale on
 
 .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
 
@@ -95,7 +107,11 @@ From the **Credentials** dialog box, enter a name for the credential, select the
 
 
 
+.. vale off
+
 **Cross-account roles -- STEP TWO**
+
+.. vale on
 
 .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
 
@@ -112,7 +128,11 @@ You must provide the values for the **Target Role ARN** and **S3 Bucket Name** f
 .. sources-amazon-s3-cross-account-roles-steps-settings-details-end
 
 
+.. vale off
+
 **Cross-account roles -- STEP THREE**
+
+.. vale on
 
 .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
 
@@ -161,7 +181,11 @@ An external ID is an alphanumeric string of 2-1224 characters without spaces and
 
 
 
+.. vale off
+
 **Cross-account roles -- STEP FOUR**
+
+.. vale on
 
 .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
 

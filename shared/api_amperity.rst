@@ -3,7 +3,11 @@
 ..
 
 
+.. vale off
+
 **TEMPLATE SECTIONS API ENDPOINTS**
+
+.. vale on
 
 .. term-http-methods-start
 

@@ -169,7 +169,11 @@ After configuring this destination users may send campaigns to |destination-name
 
 
 
+.. vale off
+
 **COMMON API**
+
+.. vale on
 
 Details common to API-based destinations.
 
@@ -183,7 +187,11 @@ Changes to |allow-for-what| are not immediately available in |destination-name|.
 
 
 
+.. vale off
+
 **COMMON**
+
+.. vale on
 
 Settings across more than one destination.
 
@@ -525,7 +533,11 @@ Enable to apply Zip64 data compression to large files.
 
 
 
+.. vale off
+
 **ACTIVECAMPAIGN**
+
+.. vale on
 
 Settings unique to ActiveCampaign.
 
@@ -577,22 +589,34 @@ A list of rejected contacts returned by the response from ActiveCampaign lists e
 
 
 
+.. vale off
+
 **ACXIOM**
+
+.. vale on
 
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **ADOBE CAMPAIGN**
 
+.. vale on
+
 See SFTP.
 
 
 
 
+.. vale off
+
 **ADOBE COMMERCE**
+
+.. vale on
 
 Not a destination.
 
@@ -600,23 +624,35 @@ Not a destination.
 
 
 
+.. vale off
+
 **ADOBE CUSTOMER ATTRIBUTES**
+
+.. vale on
 
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **ADOBE EXPERIENCE CLOUD**
 
+.. vale on
+
 See SFTP.
 
 
 
 
 
+.. vale off
+
 **ADOBE MARKETO**
+
+.. vale on
 
 Settings unique to Adobe Marketo.
 
@@ -675,7 +711,11 @@ The name of the program in which the audience list managed by Amperity is locate
 
 
 
+.. vale off
+
 **AIRSHIP**
+
+.. vale on
 
 See SFTP.
 
@@ -683,7 +723,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **AMAZON ADS**
+
+.. vale on
 
 Settings unique to Amazon Ads.
 
@@ -728,7 +772,11 @@ Days. See common.
 
 
 
+.. vale off
+
 **AMAZON S3**
+
+.. vale on
 
 Settings unique to Amazon S3.
 
@@ -792,7 +840,11 @@ See Common.
 
 
 
+.. vale off
+
 **ATTENTIVE** (API + SFTP)
+
+.. vale on
 
 Settings unique to Attentive (API).
 
@@ -834,7 +886,11 @@ The name of the segment in |destination-name| managed by Amperity.
 
 
 
+.. vale off
+
 **AZURE BLOB STORAGE**
+
+.. vale on
 
 Settings unique to Azure Blob Storage.
 
@@ -898,7 +954,11 @@ See Common.
 
 
 
+.. vale off
+
 **BAZAARVOICE**
+
+.. vale on
 
 See SFTP.
 
@@ -906,7 +966,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **BLUECORE**
+
+.. vale on
 
 See SFTP.
 
@@ -925,7 +989,11 @@ Consider naming queries sent to the |destination-name| platform in a way that sa
 
 
 
+.. vale off
+
 **BRAZE**
+
+.. vale on
 
 Settings unique to Braze.
 
@@ -969,7 +1037,11 @@ Use the **Update existing profiles only?** option to `update only existing user 
 
 
 
+.. vale off
+
 **CAMELOT SMM**
+
+.. vale on
 
 See SFTP.
 
@@ -977,7 +1049,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **CORDIAL**
+
+.. vale on
 
 Settings unique to Cordial.
 
@@ -1005,7 +1081,11 @@ Enable "Do not set subscription status automatically" to prevent subscriptions w
 
 
 
+.. vale off
+
 **CRITEO**
+
+.. vale on
 
 Settings unique to Criteo.
 
@@ -1032,7 +1112,11 @@ See common settings.
 
 
 
+.. vale off
+
 **CRITEO RETAIL MEDIA**
+
+.. vale on
 
 Settings unique to Criteo Retail Media.
 
@@ -1079,14 +1163,22 @@ For onsite display campaigns choose the "CustomerID" identifier.
 
 
 
+.. vale off
+
 **CROSS COUNTRY COMPUTER**
+
+.. vale on
 
 See SFTP.
 
 
 
 
+.. vale off
+
 **DATABRICKS**
+
+.. vale on
 
 Settings unique to Databricks.
 
@@ -1118,7 +1210,11 @@ The table name to use for Databricks.
 
 
 
+.. vale off
+
 **DOTDIGITAL**
+
+.. vale on
 
 Settings unique to Dotdigital.
 
@@ -1138,39 +1234,59 @@ The primary identifier for matching contacts in |destination-name|. Use "email" 
 
 
 
+.. vale off
+
 **EPSILON ABACUS**
+
+.. vale on
 
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **EPSILON CONVERSANT**
 
+.. vale on
+
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **EPSILON TARGETING**
 
+.. vale on
+
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **EXPERIAN**
 
+.. vale on
+
 See SFTP.
 
 
 
 
 
+.. vale off
+
 **GOOGLE ADS**
+
+.. vale on
 
 Settings unique to Google Ads.
 
@@ -1228,7 +1344,11 @@ The key to use for audience matching in |destination-name|. May be one of "Conta
 
 
 
+.. vale off
+
 **GOOGLE CLOUD STORAGE**
+
+.. vale on
 
 Settings unique to Google Cloud Storage.
 
@@ -1296,7 +1416,11 @@ See Common.
 
 
 
+.. vale off
+
 **GOOGLE CUSTOMER MATCH**
+
+.. vale on
 
 Settings unique to Google Customer Match.
 
@@ -1336,7 +1460,11 @@ See Google Ads.
 
 
 
+.. vale off
+
 **GOOGLE ENHANCED CONVERSIONS**
+
+.. vale on
 
 Settings unique to Google Enhanced Conversions.
 
@@ -1360,7 +1488,11 @@ The Customer ID of the Google Enhanced Conversions account.
 
 
 
+.. vale off
+
 **HUBSPOT**
+
+.. vale on
 
 Settings unique to HubSpot.
 
@@ -1388,7 +1520,11 @@ The list name to which Amperity sends contacts. This can be the name of an exist
 
 
 
+.. vale off
+
 **INFUTOR**
+
+.. vale on
 
 See SFTP.
 
@@ -1425,7 +1561,11 @@ Use public key encryption to encrypt data that has PII before using SFTP to send
 
 
 
+.. vale off
+
 **KIBO**
+
+.. vale on
 
 See SFTP.
 
@@ -1433,7 +1573,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **KLAVIYO**
+
+.. vale on
 
 Settings unique to Klaviyo.
 
@@ -1467,7 +1611,11 @@ Send customer profile fields with an audience list, These fields are visible in 
 
 
 
+.. vale off
+
 **KOUPON MEDIA**
+
+.. vale on
 
 See SFTP.
 
@@ -1475,7 +1623,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **LINKEDIN DMP**
+
+.. vale on
 
 Settings unique to LinkedIn DMP.
 
@@ -1515,7 +1667,11 @@ The name of segment in |destination-name|.
 
 
 
+.. vale off
+
 **LISTRAK** (email)
+
+.. vale on
 
 Settings unique to Listrak.
 
@@ -1566,7 +1722,11 @@ If you are not sure which lists should be managed by Amperity, work with your Li
 
 
 
+.. vale off
+
 **LISTRAK** (SMS)
+
+.. vale on
 
 Settings unique to Listrak.
 
@@ -1617,7 +1777,11 @@ Select **Include attributes that match custom profile fields** to have Amperity 
 
 
 
+.. vale off
+
 **LIVERAMP**
+
+.. vale on
 
 See SFTP.
 
@@ -1625,7 +1789,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **MAILCHIMP**
+
+.. vale on
 
 Settings unique to Mailchimp.
 
@@ -1664,7 +1832,11 @@ A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link
 
 
 
+.. vale off
+
 **META ADS MANAGER**
+
+.. vale on
 
 Settings unique to Meta Ads Manager.
 
@@ -1700,7 +1872,11 @@ A setting that describes how to collect custom audience information. Select one 
 
 
 
+.. vale off
+
 **META ADS MANAGER: OFFLINE EVENTS**
+
+.. vale on
 
 Settings unique to Meta Ads Manager: Offline Events.
 
@@ -1718,7 +1894,11 @@ A `dataset ID configured <https://www.facebook.com/business/help/581868466483146
 
 
 
+.. vale off
+
 **MICROSOFT ADVERTISING**
+
+.. vale on
 
 Settings unique to Microsoft Advertising.
 
@@ -1762,7 +1942,11 @@ The name of the list in Microsoft Advertising.
 
 
 
+.. vale off
+
 **MICROSOFT DATAVERSE**
+
+.. vale on
 
 Settings unique to Microsoft Dataverse.
 
@@ -1806,7 +1990,11 @@ Select **Truncate?** to truncate the table before loading data.
 
 
 
+.. vale off
+
 **MICROSOFT DYNAMICS 365 MARKETING**
+
+.. vale on
 
 Settings unique to Microsoft Dynamics 365 Marketing.
 
@@ -1841,7 +2029,11 @@ The environment region for your Power Apps application. For example: "crm".
 
 
 
+.. vale off
+
 **MICROSOFT DYNAMICS**
+
+.. vale on
 
 Settings unique to Microsoft Dynamics.
 
@@ -1891,31 +2083,47 @@ The field to use for upsert or delete operations.
 
 
 
+.. vale off
+
 **MONETATE**
+
+.. vale on
 
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **NEUSTAR**
 
+.. vale on
+
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **ORACLE DATA CLOUD**
 
+.. vale on
+
 See SFTP.
 
 
 
 
 
+.. vale off
+
 **ORACLE ELOQUA**
+
+.. vale on
 
 Settings unique to Oracle Eloqua.
 
@@ -1960,31 +2168,47 @@ This approach requires adding an empty shared list to |destination-name|, and th
 
 
 
+.. vale off
+
 **PANDA PRINTING**
+
+.. vale on
 
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **PEBBLEPOST**
 
+.. vale on
+
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **PERSADO**
 
+.. vale on
+
 See SFTP.
 
 
 
 
 
+.. vale off
+
 **PINTEREST**
+
+.. vale on
 
 Settings unique to Pinterest.
 
@@ -2013,31 +2237,47 @@ The list name to which Amperity sends a list of SHA-256 hashed email addresses. 
 
 
 
+.. vale off
+
 **POWERREVIEWS**
+
+.. vale on
 
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **QUAD**
 
+.. vale on
+
 See SFTP.
 
 
 
 
+
+.. vale off
 
 **RR DONNELLY**
 
+.. vale on
+
 See SFTP.
 
 
 
 
 
+.. vale off
+
 **SAILTHRU**
+
+.. vale on
 
 Settings unique to Sailthru by Marigold Engage.
 
@@ -2057,7 +2297,11 @@ The name of the list in |destination-name| managed by Amperity. Amperity creates
 
 
 
+.. vale off
+
 **SALESFORCE MARKETING CLOUD**
+
+.. vale on
 
 Settings unique to Salesforce Marketing Cloud.
 
@@ -2150,7 +2394,11 @@ A subscriber key is the "primary key" for the destination. Choose the |destinati
 
 
 
+.. vale off
+
 **SALESFORCE SALES CLOUD**
+
+.. vale on
 
 Settings unique to Salesforce Sales Cloud.
 
@@ -2231,7 +2479,11 @@ Enable to use "NULL" values when fields are empty.
 
 
 
+.. vale off
+
 **SFTP**
+
+.. vale on
 
 Settings unique to SFTP.
 
@@ -2301,7 +2553,11 @@ See Common.
 
 
 
+.. vale off
+
 **SMG**
+
+.. vale on
 
 See SFTP.
 
@@ -2309,7 +2565,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **SNAPCHAT**
+
+.. vale on
 
 Settings unique to Snapchat.
 
@@ -2335,7 +2595,11 @@ The name of the audience in |destination-name| managed by Amperity. Amperity cre
 
 
 
+.. vale off
+
 **SNOWFLAKE**
+
+.. vale on
 
 Settings unique to Snowflake.
 
@@ -2433,7 +2697,11 @@ The name of the Snowflake data warehouse created by the `CREATE WAREHOUSE <https
 
 
 
+.. vale off
+
 **SOUND COMMERCE**
+
+.. vale on
 
 See SFTP.
 
@@ -2441,7 +2709,11 @@ See SFTP.
 
 
 
+.. vale off
+
 **THE TRADE DESK**
+
+.. vale on
 
 Settings unique to The Trade Desk.
 
@@ -2491,7 +2763,11 @@ Your brand must have a UID 2.0 agreement in-place with The Trade Desk before con
 
 
 
+.. vale off
+
 **THE TRADE DESK: 3P MARKETPLACE**
+
+.. vale on
 
 Settings unique to The Trade Desk: 3P Marketplace.
 
@@ -2511,7 +2787,11 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 
 
 
+.. vale off
+
 **THE TRADE DESK: OFFLINE EVENTS**
+
+.. vale on
 
 Settings unique to The Trade Desk: Offline Events.
 
@@ -2533,7 +2813,11 @@ The name of the tracking tag for offline events. The name is a string, may have 
 
 
 
+.. vale off
+
 **TIKTOK ADS MANAGER**
+
+.. vale on
 
 Settings unique to TikTok Ads Manager.
 
@@ -2564,7 +2848,11 @@ The user ID type. This value must be one of the following: "AAID" (Google), "EMA
 
 
 
+.. vale off
+
 **TIKTOK ADS MANAGER: OFFLINE EVENTS**
+
+.. vale on
 
 Settings unique to TikTok Ads Manager: Offline Events.
 
@@ -2624,7 +2912,11 @@ The event uploaded to TikTok Ads Manager. May be one of "web" or "offline". Use 
 
 
 
+.. vale off
+
 **VIBES**
+
+.. vale on
 
 See SFTP.
 
@@ -2639,7 +2931,11 @@ A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/
 
 
 
+.. vale off
+
 **WEBHOOK**
+
+.. vale on
 
 **Label name**
 
@@ -2648,7 +2944,11 @@ A |destination-name| `recipient list <https://developer-platform.vibes.com/docs/
 
 
 
+.. vale off
+
 **YAHOO DSP**
+
+.. vale on
 
 **Short intro**
 
@@ -2673,7 +2973,11 @@ The name of the segment in |destination-name|. This can be the name of an existi
 
 
 
+.. vale off
+
 **ZENDESK**
+
+.. vale on
 
 Settings unique to Zendesk.
 

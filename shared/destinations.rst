@@ -55,9 +55,9 @@ For example:
 
 
 
-**TEMPLATE SECTIONS FOR DESTINATIONS**
-
 .. vale off
+
+**TEMPLATE SECTIONS FOR DESTINATIONS**
 
 Templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
@@ -303,28 +303,11 @@ You can configure Amperity to |sendto-link|. These results are sent using an orc
 
 
 
+.. vale off
 
+**DESTINATIONS**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DESTINATIONS
+.. vale on
 
 .. TODO: This is the sections for the templated content for adding destinations in /operator/. These sections allow for bespoke steps, as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
 
@@ -447,7 +430,11 @@ Each destination has settings that define how Amperity will deliver data to |des
 .. TODO: The following section is used *only* with SFTP connectors. It consolidates all of the common settings. If there is a unique setting for a specific connector, just add it to the topic LAST in the list so we can continue to reuse the common settings.
 
 
-SETTINGS FOR SFTP DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR SFTP DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-sftp-start
 
@@ -486,7 +473,11 @@ Complete the following **SFTP Settings**:
 .. destinations-destination-settings-sftp-end
 
 
-SETTINGS FOR GOOGLE CLOUD STORAGE DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR GOOGLE CLOUD STORAGE DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-google-cloud-storage-start
 
@@ -525,7 +516,11 @@ Complete the following **SFTP Settings**:
 .. destinations-destination-settings-google-cloud-storage-end
 
 
-SETTINGS FOR AMAZON S3 DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR AMAZON S3 DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-amazon-s3-start
 
@@ -565,7 +560,11 @@ Complete the following **Amazon S3 Settings**:
 
 
 
-SETTINGS FOR AZURE BLOB STORAGE DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR AZURE BLOB STORAGE DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-azure-blob-storage-start
 
@@ -649,9 +648,13 @@ Review all settings, and then click **Save**.
 
 
 
-DATA TEMPLATES
-DATA TEMPLATES
-DATA TEMPLATES
+.. vale off
+
+**DATA TEMPLATES**
+**DATA TEMPLATES**
+**DATA TEMPLATES**
+
+.. vale on
 
 .. TODO: This is the sections for the templated content for adding data templates to destinations in /operator/. These sections allow for bespoke steps, as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step 4 as much as possible for consistency.
 

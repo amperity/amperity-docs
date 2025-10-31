@@ -4,7 +4,11 @@
 
 
 
+.. vale off
+
 **SECTIONS FOR SHARED FILE FORMATS**
+
+.. vale on
 
 
 .. formats-filedrop-common-start
