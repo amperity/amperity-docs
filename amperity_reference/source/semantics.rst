@@ -2401,7 +2401,7 @@ The following table lists the tags available to this semantic group (with requir
      - String
      - *Optional*
 
-       Product catalog semantics may be applied to data sources that contain product catalog data. There are two sets of product catalog semantic tags: **txn-item/** and **pc/**.
+       Product catalog semantics may be applied to data sources that contain product catalog data. Use one of these product catalog semantic tags: **txn-item/** and **pc/**.
 
        #. You may use **txn-item/** product catalog semantic tags when product catalog data appears within data sources that contain details about your product catalog when it exists alongside details about orders and items.
 

@@ -1967,7 +1967,7 @@ Using **NULL** with **IS NULL** evaluates to **TRUE**:
 
    SELECT NULL IS NULL;
 
-But any other constant does not evaluate to **FALSE**:
+Any other constant does not evaluate to **FALSE**:
 
 .. code-block:: none
 
@@ -1991,7 +1991,7 @@ Using **NULL** with **IS NOT NULL** evaluates to **FALSE**:
 
    SELECT NULL IS NOT NULL;
 
-But any other constant evaluates **TRUE**:
+Any other constant evaluates **TRUE**:
 
 .. code-block:: none
 
@@ -3425,7 +3425,7 @@ REPLACE()
 
 .. sql-presto-function-replace-start
 
-Use the **REPLACE()** function to remove or replace all instances of ``search`` from ``string``. There are two variants:
+Use the **REPLACE()** function to remove or replace all instances of ``search`` from ``string``. Do one of the following:
 
 * Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``.
 * Use **REPLACE(string, search, replace)** to replace all instances of ``search`` from ``string`` with ``replace``.
@@ -3514,7 +3514,7 @@ SUBSTR()
 
 .. sql-presto-function-substr-start
 
-Use the **SUBSTR()** function to return N characters in a string. There are two variants:
+Use the **SUBSTR()** function to return N characters in a string. Do one of the following:
 
 * Use **SUBSTR(string, start)** to return ``string`` from the ``start`` position that is equal to the value of ``start``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
 * Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that contains the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.

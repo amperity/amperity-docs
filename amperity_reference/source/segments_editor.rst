@@ -230,7 +230,7 @@ Segment conditions
 
 .. segments-editor-conditions-start
 
-You can add conditions to a segment by selecting them from a list. There are three types of conditions:
+You can add conditions to a segment by selecting them from a list using conditions:
 
 * :ref:`segments-editor-condition-attributes`
 * :ref:`segments-editor-condition-customer-lists`

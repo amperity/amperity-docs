@@ -185,7 +185,7 @@ Use the knowledge you have gained from previous one-time buyer campaigns to help
 
 * Look for patterns that lead to repeat customers.
 * Look for consistencies within the customers who never purchased again.
-* Compare customers that never purchased again to find out if they fall into an even longer timeline, such as 1 year, 2 years, or 3 years. There is a small percentage of "one-time buyers" who will become repeat customers on longer timelines.
+* Compare customers that never purchased again to find out if they fall into an even longer timeline, such as 1 year, 2 years, or 3 years. A small percentage of "one-time buyers" will become repeat customers on longer timelines.
 
 .. onetime-buyers-howto-expand-end
 

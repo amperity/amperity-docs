@@ -22,9 +22,9 @@ Deduplication keys per Amperity ID
 
 Use this query to return a rough distribution of deduplication keys to Amperity IDs. The deduplication key may be set to a foreign key, a customer key, or a concatenated value.
 
-There are no obvious "good" or "bad" results, but it is useful to take a closer look at all clusters that return 2 or more deduplication keys, as this shows evidence of records that have been connected, but were previously independent, and may indicate overclustering.
+Obvious "good" or "bad" results do not exist. It is useful to take a closer look at all clusters that return two or more deduplication keys, as this shows evidence of records that have been connected, but were previously independent, and may indicate overclustering.
 
-* Foreign keys are interesting because Amperity deterministically matches on foreign keys in most situations. When there are 2 or more deduplication keys related to foreign keys, this is an indication of records that were connected beyond what the customer could have connected deterministically.
+* Foreign keys are interesting because Amperity deterministically matches on foreign keys in most situations. When there are two or more deduplication keys related to foreign keys, this is an indication of records that were connected beyond what the customer could have connected deterministically.
 * Customer keys are interesting because they show the before and after of entity distribution.
 * Concatenated values, such as **datasource + fk** can help focus the results on a per-source level.
 
@@ -38,7 +38,7 @@ There are no obvious "good" or "bad" results, but it is useful to take a closer 
 
 .. note:: This query is two queries.
 
-   * The first query returns the distribution of deduplication keys by Amperity ID with one row for the number of Amperity IDs that have 2 or more deduplication keys.
+   * The first query returns the distribution of deduplication keys by Amperity ID with one row for the number of Amperity IDs that have two or more deduplication keys.
    * The second query returns a list of Amperity IDs along with the number of deduplication keys associated to each Amperity ID, sorted from most to least.
 
 .. stitch-qa-query-dedupe-keys-per-amperity-id-note-end
@@ -54,7 +54,7 @@ When to use
 #. Run this query when foreign keys or customer keys are present in the data.
 #. If customer keys are present, use **ck** as the deduplication key.
 #. Run this query for each data source.
-#. Investigate clusters with 2 or more deduplication keys.
+#. Investigate clusters with two or more deduplication keys.
 #. Look for examples of overclustering.
 
 .. stitch-qa-query-dedupe-keys-per-amperity-id-use-end
@@ -95,7 +95,7 @@ Configure query
 
       COUNT(distinct CONCAT(datasource, COALESCE(ck, pk))) AS dk_count
 
-#. By default, the deduplication key count is 2 or more. You can adjust this value higher:
+#. By default, the deduplication key count is two or more. You can adjust this value higher:
 
    .. code-block:: sql
       :linenos:

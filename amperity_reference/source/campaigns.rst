@@ -271,7 +271,7 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    #. Today the size of the audience for the segment is 1200 customers and the size of the control group is 20 percent, or 240 customers. The campaign is sent to 960 customers.
    #. Next week the size of the audience is 1240, which means the size of the control group will be larger (248). The campaign is sent to 992 customers.
-   #. And the following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
+   #. The following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
 
 .. campaigns-control-groups-consistent-membership-end
 

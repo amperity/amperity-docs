@@ -133,7 +133,7 @@ Data that is output from Amperity and sent to |destination-name| must be shaped 
 
 #. The header row of the CSV file must include a column named **customerId**. This name is not case-sensitive. All rows in the CSV file must contain a valid value for this column. The value of this column should be unchanged from the original value. For example. if the customer ID field is a UUID in Amperity, then it should be sent to |destination-name| as the same UUID.
 
-#. Each column in the header row must be a registered attribute name in |destination-name|. A CSV *may contain a subset* of the registered attributes, it *does not need to contain all* of the registered attributes. There is no requirement for a minimum number of registered attributes.
+#. Each column in the header row must be a registered attribute name in |destination-name|. A CSV *may contain a subset* of the registered attributes, it *does not need to contain all* of the registered attributes. A minimum number of registered attributes is not required.
 
 #. Each column header for a registered attribute in the CSV file must correspond to the correct data type in |destination-name| and attribute name.
 
@@ -217,7 +217,7 @@ The following **SELECT** statement collects all the distinct IDs from Table O to
    LEFT JOIN TableA A ON A.amperity_id = C.amperity_id
    WHERE O.id_to_associate_to_customerId IS NOT NULL
 
-.. note:: There are many ways to build a **SELECT** or **SELECT DISTINCT** statement that maps data in the Amperity customer 360 database to fields in |destination-name|. The only absolute requirement is to map an ID that is not the Amperity ID to the **customerID** field in Optimizely. Attributes from tables in Amperity that you want to send to |destination-name| must be mapped to the field names as they are defined in |destination-name|, but there is no requirement to map to any particular attribute.
+.. note:: Use a **SELECT** or **SELECT DISTINCT** statement to map data tables in Amperity to fields in |destination-name|. The only absolute requirement is to map an ID that is not the Amperity ID to the **customerID** field in Optimizely. Attributes from tables in Amperity that you want to send to |destination-name| must be mapped to the field names as they are defined in |destination-name|, but there is no requirement to map to any particular attribute.
 
 .. sendto-optimizely-build-query-customer-profile-define-query-end
 

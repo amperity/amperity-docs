@@ -35,7 +35,7 @@ After you specify a date range you may apply filters to focus in on specific pro
 
 .. tip:: As you add filters to this attribute, the number of customer records that is returned gets larger.
 
-   Consider all of your brands and all of the products in your product catalog and all of your stores and your website. Consider the percentage of all of your customers who may have purchased within any time window. And then consider the number of customers you have in your Customer 360.
+   Consider all of your brands and all of the products in your product catalog and all of your stores and your website, consider the percentage of all of your customers who may have purchased within any time window, and then consider the number of customers you have in your Customer 360.
 
    For example, you have 1,000,000 customers in your Customer 360. If you configure **Has Not Purchased** to return only customers who purchased last month, that might be 8,000 customers.
 

@@ -152,7 +152,7 @@ The following **SELECT** statement maps customer profile data to the set of matc
 
 where **SN** represents the source name for each segment.
 
-.. note:: There are many ways to build a **SELECT** statement that maps data from tables in Amperity to fields in |destination-name|. Refer to your specific |destination-name| field requirements, and then build your query to return the matching results. The only absolute requirement is to map an ID that is not the Amperity ID to the **customerID** field in |destination-name|. Attributes from tables in Amperity that you want to send to |destination-name| must be mapped to the field names as they are defined in |destination-name|, but there is no requirement to map to any particular attribute.
+.. note:: Use a **SELECT** statement to map data tables in Amperity to fields in |destination-name|. Refer to your specific |destination-name| field requirements, and then build your query to return the matching results. The only absolute requirement is to map an ID that is not the Amperity ID to the **customerID** field in |destination-name|. Attributes from tables in Amperity that you want to send to |destination-name| must be mapped to the field names as they are defined in |destination-name|, but there is no requirement to map to any particular attribute.
 
 .. sendto-throtle-build-query-sql-end
 

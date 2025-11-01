@@ -31,7 +31,6 @@ SMS messaging should be an important part of your brand's larger omnnichannel ma
 * Promote a limited-time in-store offer
 * Announce an upcoming flash sale event
 * Showcase new products that have arrived in your stores
-* And more
 
 An in-store focused campaign requires knowing which customers are close enough to your stores for them to be able to take advantage of your personalized offers. Build a list of customers who have opted in to receiving SMS messages from your brand, and then filter those customers by physical location.
 
@@ -98,7 +97,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - The next step is to filter your audience by proximity to your stores. There are many ways to do this, such as filtering by region, by state/province, by store ID, or by postal code.
+     - The next step is to filter your audience by proximity to your stores, such as by region, by state or province, by store ID, or by postal code.
 
        Choose the **Postal** attribute from the **Customer 360** table to build a list of postal codes for each city.
 
@@ -110,7 +109,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to view updated values for the combination of customers with contactable phone number *and* who are located within a specific postal code area.
 
-       .. tip:: You can use sub-audiences in your campaign to split those audiences by region. There are many ways you can do this and it depends on how your brand groups physical stores and then information that you have for them in Amperity.
+       .. tip:: You can use sub-audiences in your campaign to split those audiences by region. Your approach depends on how your brand groups physical stores and in the data that is provided to Amperity.
 
           For example, zip codes can be used to separate customers by cities, such as Portland, OR and in Seattle, WA.
 

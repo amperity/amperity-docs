@@ -65,7 +65,7 @@ What data does the Azure OpenAI Service process?
 
 .. ampai-azure-openai-service-process-start
 
-There are two types of data Amperity sends to the Azure OpenAI Service:
+Amperity sends two types of data to the Azure OpenAI Service:
 
 * Data to improve model performance. This includes database schema information, tables names, fields and descriptions, the current query's SQL, a sample of results from the query, and any errors encountered.
 * AmpAI message history. Amperity sends the full message history for a given conversation to Azure OpenAI Service to maintain the context of the conversation.

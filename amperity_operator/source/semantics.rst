@@ -191,7 +191,7 @@ When a data source provides more than one email address in the data, it is impor
 
 .. semantics-profile-type-email-options-start
 
-There are some options available as you determine the best way to configure Amperity for email addresses:
+Determine the best way to configure Amperity for email addresses:
 
 * :ref:`semantics-profile-type-email-namespace` (recommended when multiple email addresses are present)
 * :ref:`semantics-profile-type-email-ordinals`
@@ -856,7 +856,7 @@ When a data source provides more than one phone number in the data, it is import
 
 .. semantics-profile-type-phone-options-start
 
-There are some options available as you determine the best way to configure Amperity for phone numbers:
+Determine the best way to configure Amperity for phone numbers:
 
 * :ref:`semantics-profile-type-phone-namespaces` (recommended when multiple phone numbers are present)
 * :ref:`semantics-profile-type-phone-ordinals`

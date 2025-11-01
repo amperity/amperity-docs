@@ -44,7 +44,7 @@ Use cases
 
 .. third-party-use-cases-start
 
-There are two broad use cases for third-party data:
+Two broad use cases exist for third-party data:
 
 #. The customer does third-party matching outside of Amperity, and then provides this data to Amperity with fields already append to first-party data or with a unique ID with which Amperity can join third-party data to the results of the identity resolution process.
 #. The customer provides third-party data to Amperity, which is then matched during the Amperity identity resolution process, just like with any other data source. Amperity will link the third-party and first-party data together with the Amperity ID.

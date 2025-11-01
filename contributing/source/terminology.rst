@@ -5,13 +5,15 @@
 Terminology
 ==================================================
 
-There are correct uses of terms within Amperity documentation. Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified here.
+Use terminology correctly within Amperity documentation and the user interface.
+
+.. note:: Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified here.
 
 
 .. _term-s3:
 
 **Amazon S3** vs. **S3**
-   Amazon S3 is the correct trademarked name for the Simple Storage Service. It is often shortened to just S3, but Amperity should use Amazon S3 in documentation as often as possible.
+   Amazon S3 is the correct trademarked name for the Simple Storage Service. It is often shortened to just S3, but Amperity should use Amazon S3 as often as possible.
 
 
 .. _term-amperity:

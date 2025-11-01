@@ -60,9 +60,9 @@ Because this segment has only one condition and returns a list of customers who 
    :align: left
    :class: no-scaled-link
 
-There is only one city in the United States named "Chicago", which means the results of this segment will not include customers who live in multiple states.
+Only one city in the United States is named "Chicago", which means the results of this segment will not include customers who live in multiple states.
 
-.. note:: There are attributes in your customer 360 database that can work well in segments when they are the only condition, such as **One and Done** and **Early Repeat Purchaser**.
+.. note:: Some attributes in your customer 360 database work best in segments when they are the only condition, such as **One and Done** and **Early Repeat Purchaser**.
 
 .. segments-and-vs-or-city-end
 
@@ -214,7 +214,7 @@ This segment returns a list of customers who live in both cities, which, because
    :align: left
    :class: no-scaled-link
 
-There are use cases for segments that use multiple sets of inclusion blocks to return a list of customers that may be zero. A segment that typically returns zero, but sometimes does not return zero can be interesting.
+Some segments use multiple sets of inclusion blocks to return a list of zero customers. A segment that typically returns zero, but sometimes does not return zero, can be interesting.
 
 .. segments-and-vs-or-city-and-state-and-city-and-state-end
 

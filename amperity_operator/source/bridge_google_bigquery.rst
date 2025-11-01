@@ -913,7 +913,7 @@ Configure recipients
 
 Authorize `specific IAM principals <https://cloud.google.com/iam/docs/principals-overview>`__ |ext_link| configured in your brand's Google Cloud environment.
 
-Principals are authorized to subscribe to the shared schema Amperity connects to Google BigQuery. There are four types of recipients that can be configured: **Service acounts**, **Users**, **Groups**, and **Domains**.
+Principals are authorized to subscribe to the shared schema Amperity connects to Google BigQuery. Use one of the following recipient types: **Service acounts**, **Users**, **Groups**, and **Domains**.
 
 .. note:: You may click **Next** and skip this step without authorizing principals. As long as this bridge exists in Amperity the list of configured recipients may be edited to authorize new principals or to revoke authorization for existing principals.
 

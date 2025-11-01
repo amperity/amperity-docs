@@ -590,7 +590,7 @@ You should work through any of the individual validations in the report that ind
 
 .. setup-transactions-validate-database-reports-start
 
-There are many types of C360 validation reports, including for customer attributes, email addresses, loyalty programs, fiscal calendars, and transactions. Each individual report describes the issue, suggests potential ways to address the issue, and then links to the SQL that generated the validation report. Use these reports to improve the quality of data in your tenant.
+Many types of C360 validation reports exist, including for customer attributes, email addresses, loyalty programs, fiscal calendars, and transactions. Each individual report describes the issue, suggests potential ways to address the issue, and then links to the SQL that generated the validation report. Use these reports to improve the quality of data in your tenant.
 
 .. setup-transactions-validate-database-reports-end
 

@@ -1677,7 +1677,7 @@ Code blocks can be configured to have a sidebar on the right side. In general do
    * A list
    * Is OK.
 
-   And more content.
+   More content.
 
    The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
 
@@ -2297,7 +2297,9 @@ Headers are configured like this:
 
 .. rst-header-levels-important-start
 
-.. note:: There is not an H5 header level. Instead use bold strings like headers. See :ref:`custom admonitions <rst-admonition-custom>` for an example of using bold strings in place of H5 headers.
+.. note:: H5 header levels are not supported.
+
+   Instead use bold strings like headers. See :ref:`custom admonitions <rst-admonition-custom>` for an example of using bold strings in place of H5 headers.
 
 .. rst-header-levels-important-end
 
@@ -4230,7 +4232,7 @@ A list table is built using the ``.. list-table::`` directive with the following
 
        #. Lists
        #. Images
-       #. And other formatting options
+       #. Other formatting options
 
        inside columns in a list table.
 
@@ -4766,9 +4768,9 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
           .. |duration-value| replace:: "0" - "90"
 
 
-The challenge is to come up with a description for **Membership duration** that can be used in *all* topics for destinations that have configure audience membership lengths.
+The challenge is to come up with a description for **Membership duration** for use in *all* destination topics that have configurable audience membership lengths.
 
-The following descriptions are located in the ``/shared/destination_settings.rst`` file. There are two paragraphs, each bracketed by :ref:`section references <rst-section-references>`.
+The following paragraphs, each bracketed by :ref:`section references <rst-section-references>`, are located in the ``/shared/destination_settings.rst`` file.
 
 .. code-block:: none
    :caption: /shared/destination_settings.rst

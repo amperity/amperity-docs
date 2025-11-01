@@ -35,7 +35,9 @@
 #. When more than one attribute is present within an attribute group use **AND** or **OR** to filter values on more than one condition.
 #. Click **Add section** to add additional attribute groups.
 
-   Each attribute group has the same requirement for using **AND** or **OR** to filter values. There is another **AND** versus **OR** choice that must be made in-between each attribute group.
+   Each attribute group has the same requirement for using **AND** or **OR** to filter values.
+
+   Using **AND** or **OR** between each attribute group is required.
 
 #. For each attribute group that is added to the segment, select the database table that contains the attributes, and then select attributes.
 

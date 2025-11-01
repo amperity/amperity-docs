@@ -160,7 +160,7 @@ Data tables
 
 .. tools-for-analysts-data-model-table-types-start
 
-There are four groups of tables in this diagram:
+The data tables diagram has four groups of tables:
 
 .. list-table::
    :widths: 100 500
@@ -288,7 +288,7 @@ Send to downstream workflows
 
 .. tools-for-analysts-send-to-downstream-workflows-start
 
-You can send data from the customer 360 database to any downstream location or workflow. There are two ways to do send data:
+You can send data from the customer 360 database to any downstream location or workflow. Do one of the following:
 
 #. By using Presto SQL to send only data that is returned by a query to a configured destination
 #. By exporting a database or a table

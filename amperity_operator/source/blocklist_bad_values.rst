@@ -746,7 +746,7 @@ Advanced options
 
 .. bad-values-blocklist-advanced-start
 
-There are more ways to do blocklists:
+Blocklists can do any of the following advanced options:
 
 * :ref:`Per-data source <bad-values-blocklist-advanced-per-data-source>`
 * :ref:`Per-database <bad-values-blocklist-advanced-per-database>`
@@ -844,7 +844,7 @@ The **address** field may be used in the bad-values blocklist as part of a compl
 
 .. important:: The **address2** field should never be used in the bad-values blocklist in isolation.
 
-In certain situations, the **address2** field is the source of a value that may need to be added to the bad-values blocklist. There are two ways to do this:
+In certain situations, the **address2** field is the source of a value that may need to be added to the bad-values blocklist. Do one of the following:
 
 #. :ref:`Remove a single address <bad-values-blocklist-advanced-addresses-address2-remove>`.
 #. :ref:`Concatenate address and address2 <bad-values-blocklist-advanced-addresses-address2-concatenate>`.

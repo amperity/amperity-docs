@@ -176,7 +176,7 @@ Permissions and policies
 
 AmpAI permissions are controlled at the user level, allowing **User Administrators** the ability to grant access to AmpAI for individual users.
 
-There are three user-level policy options associated with AmpAI:
+AmpAI has the following user-level policy options:
 
 #. **Restrict AmpAI access**
 

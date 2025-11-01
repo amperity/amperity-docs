@@ -223,7 +223,7 @@ You can build predictive models from the **Customer 360** page. Each database th
 
 .. warning:: Even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** in your database due to automated back-end validations.
 
-Each predictive model allows for additional fields to be added to support your brand's use cases. There are two approaches:
+Each predictive model allows for additional fields to be added to support your brand's use cases. Do one of the following:
 
 #. **Optimize for implementation speed**
 

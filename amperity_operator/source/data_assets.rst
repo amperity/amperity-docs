@@ -114,7 +114,7 @@ Email engagement
 
 .. data-asset-email-engagement-start
 
-Email engagement captures interactions with the emails that your brand has sent to your customers. There are three sets of data that you can make available in your tenant:
+Email engagement captures interactions with the emails that your brand has sent to your customers. Use any of the following sets of data:
 
 * :ref:`Email engagment attributes <data-asset-email-engagement-attributes>`
 * :ref:`Email engagment summaries <data-asset-email-engagement-summary>`

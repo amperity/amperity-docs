@@ -20,7 +20,7 @@ About AmpAI Assistants
 
 .. assistant-overview-start
 
-There are two **AmpAI Assistants**:
+**AmpAI Assistants** include the following:
 
 * **Queries AI Assistant** helps users author SQL queries and resolve errors
 * **Segments AI Assistant** helps users build segments

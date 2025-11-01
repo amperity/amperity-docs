@@ -34,7 +34,7 @@ Sending campaigns from Amperity to downstream marketing workflows is a combinati
 
 Default attributes are configured from the **Campaigns** page. Each destination may be configured to send a list of attributes that your brand can use with a variety of downstream workflows, such as audience matching, customer activation, paid media workflows, or measuring campaign results using offline events.
 
-.. important:: For many downstream marketing applications the names of attributes are not arbitrary. There are often specific requirements for names of attributes and the data that may be associated with each attribute.
+.. important:: For many downstream marketing applications the names of attributes are not arbitrary. Specific requirements for names of attributes and the data that may be associated with each attribute are often necessary.
 
    For example, the name of the field for an email address attribute may be case-sensitive, such as "email", "Email" or "EMAIL". Many downstream marketing applications require email addresses to be converted to a SHA-256 hashed value.
 

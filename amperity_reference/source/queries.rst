@@ -316,7 +316,7 @@ All queries must be activated before they can run as part of a scheduled workflo
 
    However, it also means that if 2 users are editing the same query at the same time, their changes will collide. Amperity resolves this by applying the last set of changes saved as a whole.
 
-   This keeps the query in a consistent state and ensures it will never be half-finished. But changes that were saved first will be overwritten. Be sure to coordinate changes to ensure that only one individual is working in a query.
+   This keeps the query in a consistent state and ensures it will never be half-finished. Changes that were saved first will be overwritten. Be sure to coordinate changes to ensure that only one individual is working in a query.
 
 .. queries-editor-multiuser-warning-end
 
@@ -895,7 +895,7 @@ Enable query alerts
 
 Any query can be configured to send workflow alerts when configured thresholds are met. This is an important way to ensure that queries that have dependencies on courier groups so they never send inaccurate or incomplete data.
 
-Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. There are two alert levels:
+Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. Alert levels include:
 
 #. **Warn when** record counts exceed the configured threshold. The workflow will continue running.
 

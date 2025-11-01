@@ -355,13 +355,13 @@ A query defines the list of attributes that will be available from a Profile API
 
 .. tip:: All attribute names within a query that is used to build an endpoint for the Profile API should be unique to ensure that all attributes are unique by lookup key value in the index.
 
-There are two requirements for queries that are used to define Profile API endpoints:
+Queries used to define Profile API endpoints have the following requirements:
 
 #. One field must be usable as the lookup key for the index. The value for this field must be a unique identifier. For example, the Amperity ID, a loyalty ID, a customer ID, a unique identifier in a downstream workflow (such as the "external_id" used in Braze), a non-hashed email address, or a hashed email address.
 
    Use the unique identifier that works best for your use case. Each endpoint may specify its own lookup key. For example, for website personalization you might use a customer ID or a loyalty ID, but when building your marketing campaigns in Braze that bring your customers to that website, you could use the Braze "external_id" for the index.
 
-#. There must be at least one attribute in that query that can be returned by the request to the endpoint for the specified lookup key. There is no practical limit to the number of attributes that can be in the index, but it is recommended to keep the list of attributes specific to your use case.
+#. At least one attribute must be returned in the response to the request to the endpoint for the specified lookup key. The number of attributes that can be in an index is not limited, but it is recommended to keep the list of attributes specific to your use case.
 
    Plan to use a variety of indexes to support a variety of use cases instead of using a single, large index. Some indexes, with the right combination of attributes, may be used to support multiple workflows.
 
@@ -518,7 +518,9 @@ The Profile API must be configured for use in Amperity. This is done in a series
 
 .. profile-api-enable-api-note-start
 
-.. note:: For endpoints that are running in your production environment that are actively being used with workflows, you should be careful about making changes to the list of attributes that are available in the index and to the values that are contained within those attributes. There are two approaches you could take:
+.. note:: For endpoints that are running in your production environment that are actively being used with workflows, you should be careful about making changes to the list of attributes that are available in the index and to the values that are contained within those attributes.
+
+   Do one of the following:
 
    #. Use a sandbox to make changes directly to the "production" index, but run it from the sandbox to validate the changes and the effects those changes may have on the downstream workflow. This approach allows you to keep the same index ID in place and helps prevent disruption to any live Profile API integrations.
 

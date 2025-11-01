@@ -616,7 +616,7 @@ Missing required field
 
 .. destination-braze-workflow-actions-missing-required-field-start
 
-A unique identifier must be provided to |destination-name|. There are two options:
+A unique identifier must be provided to |destination-name|. Do one of the following:
 
 #. Recommended. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link|, which is a unique identifier for your customers. This may be the Amperity ID or it may be some other unique identifier.
 #. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link|, which is a unique identifier for existing |destination-name| customers and may be available when |destination-name| is also a data source for your tenant.

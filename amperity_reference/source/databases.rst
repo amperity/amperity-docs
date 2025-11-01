@@ -479,7 +479,7 @@ Core tables
 
 .. databases-core-table-list-start
 
-There are two types of core tables:
+Core tables have the following types:
 
 #. :ref:`Standard core tables <databases-core-table-type-standard>`
 #. :ref:`Custom core tables <databases-core-table-type-custom>`

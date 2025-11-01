@@ -377,7 +377,7 @@ which is JSON data in a nested format:
      }
    ]
 
-There are two general approaches to take when a CSV file contains nested records:
+When a CSV file contains nested records do one of the following:
 
 #. Recommended. The customer should update the process for how the data is provided to Amperity to ensure the file does not contain nested records.
 #. If the file cannot be provided without nested records, use an ingest query to flatten the data in these fields prior to loading it to Amperity.

@@ -639,7 +639,7 @@ Files that are encrypted using PGP are appended with the .pgp extension.
 
 .. format-common-pgp-important-subkeys-start
 
-.. important:: There are two types of PGP public keys: a primary key and a subkey. Amperity does not allow the use of a primary key for public-private key encryption. If you attempt to use a primary key you will see an error similar to "Destination failed validation: PGP public key is a primary key. Please provide a subkey or a keyring with exactly one subkey."
+.. important:: PGP public keys have two types: a primary key and a subkey. Amperity does not allow the use of a primary key for public-private key encryption. If you attempt to use a primary key you will see an error similar to "Destination failed validation: PGP public key is a primary key. Please provide a subkey or a keyring with exactly one subkey."
 
 .. format-common-pgp-important-subkeys-end
 

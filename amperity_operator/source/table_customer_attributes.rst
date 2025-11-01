@@ -619,7 +619,7 @@ Businesses
 
 Use the "is_business" utility query to identify customer records that likely belong to a business. This query selects street addresses, first names, and last names from the **Merged Customers** table, and then builds a list of strings that are indicators a name or address may belong to a business.
 
-Review the utility query, and then configure it to identify likely business email addresses. There are two locations in this query that must be updated for your tenant.
+Review the utility query, and then configure it to identify likely business email addresses. Two locations in this query must be updated for your tenant.
 
 The first is the **likely_business** CTE. Update the values in the CASE statement to match known business address patterns that exist in your tenant:
 

@@ -219,7 +219,7 @@ Get details
           :class: no-scaled-link
      - The :ref:`subscriber key <destination-salesforce-marketing-cloud-subscriber-key>` for |destination-name|. (The use of the subscriber key is recommended.)
 
-       .. important:: A subscriber key is configured as the "primary key" for the destination. There are two options: using the |destination-name| subscriber key or using **email**. One of these options must be specified before the destination can send data to |destination-name|.
+       .. important:: A subscriber key is configured as the "primary key" for the destination. Do one of the following: use the |destination-name| subscriber key or use **email**. One of these options must be specified before the destination can send data to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -809,7 +809,7 @@ Missing primary key
 
 The **primary_key** field is typically used to specify the :ref:`subscriber key <destination-salesforce-marketing-cloud-subscriber-key>` that is used with this destination.
 
-There are two options: using the |destination-name| subscriber key or using email addresses. One of these options must be specified before Amperity can send data to |destination-name|.
+Do one of the following: use the |destination-name| subscriber key or use email addresses. One of these options must be specified before Amperity can send data to |destination-name|.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key-end
 

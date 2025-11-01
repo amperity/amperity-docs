@@ -146,7 +146,7 @@ Unstable versions
 
 During development, Amperity may release APIs for testing using the **unstable** version identifier. Unstable versions contain features that are still in progress and may not be backward compatible.
 
-There are no guarantees around customer support, notification of changes, breaking changes, or availability of unstable versions.
+Unstable versions do not guarantee customer support, notification of changes or breaking changes, or availability.
 
 .. versioning-unstable-versions-end
 

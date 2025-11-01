@@ -78,7 +78,7 @@ Use the **Add courier group** button to add a courier group to Amperity. A couri
 
 For each courier added to a courier group, define a wait time and the number of days to look for data. This is used to help determine how much time the courier group should wait for the files associated with a courier to be ready for processing.
 
-In some cases, if the files are not ready, the courier workflow fails. But in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
+In some cases, if the files are not ready, the courier workflow fails, but in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
 
 .. courier-groups-add-context-end
 
@@ -453,7 +453,7 @@ Courier alerts
 
 .. courier-groups-source-courier-alerts-start
 
-Files can be missing for any number of reasons, including by delays that may have occurred in upstream workflows that exist outside of Amperity. And in many situations a file is late, not missing.
+Files can be missing for any number of reasons, including by delays that may have occurred in upstream workflows that exist outside of Amperity. In many situations a file is late, not missing.
 
 .. courier-groups-source-courier-alerts-end
 
