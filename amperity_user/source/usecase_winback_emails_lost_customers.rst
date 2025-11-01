@@ -51,7 +51,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-winback-emails-lost-customers-howitworks-end
 
-**USE EMAIL TO WIN BACK LOST CUSTOMERS**
+**Use email to win back lost customers**
 
 .. usecase-winback-emails-lost-customers-howitworks-callouts-start
 

@@ -396,7 +396,7 @@ Add as SQL
 
 .. databases-tables-add-sql-note-start
 
-.. note:: If a table was not stitched or does not have an Amperity ID, you must use SQL to associate the unique ID in that table to the Amperity ID. For example, CCUST associates the unique ID in a table to the Amperity ID:
+.. note:: If a table was not stitched or does not have an Amperity ID, you must use SQL to associate the unique ID in that table to the Amperity ID. For example, ``CCUST`` associates the unique ID in a table to the Amperity ID:
 
    .. code-block:: sql
 

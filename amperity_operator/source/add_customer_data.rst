@@ -79,7 +79,7 @@ Review validations
 
 .. _setup-customer-profiles-input-validations-checklist:
 
-**INPUT VALIDATIONS CHECKLIST**
+**Checklist for input validations**
 
 .. setup-customer-profiles-stitch-checklist-start
 
@@ -248,7 +248,7 @@ The **Email Ampid Assignment** table identifies the best email address to use fo
 
 .. _setup-customer-profiles-build-database-table-best-email-checklist:
 
-**BEST EMAIL ADDRESS CHECKLIST**
+**Checklist for best email address**
 
 .. setup-customer-profiles-build-database-table-best-email-checklist-start
 

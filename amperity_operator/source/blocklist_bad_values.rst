@@ -175,6 +175,8 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
 
 .. bad-values-blocklist-global-values-list-start
 
+.. vale off
+
 .. list-table::
    :widths: 200 400
    :header-rows: 1
@@ -311,6 +313,8 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
        * NO NAME
        * RESERVED
        * USE
+
+.. vale on
 
 .. bad-values-blocklist-global-values-list-start
 
@@ -1047,7 +1051,7 @@ The bad-values blocklist operates against pre-processed semantic rows, and not a
 
    If the targeted data source is configured to derive **given-name** and **surname** semantics from the **full-name** semantic, values in the **full-name** semantic should never be added to a bad-values blocklist.
 
-   For example, if "BLACK BLACK" were added to the bad-values blocklist via the **full-name** semantic, then "BLACK" for both **given-name** and **surname** semantics would be blocklisted too. This type of situation is not common, but must be considered when deciding which semantics to use for building the bad-values blocklist.
+   For example, if ``BLACK BLACK`` were added to the bad-values blocklist via the **full-name** semantic, then ``BLACK`` for both **given-name** and **surname** semantics would be blocklisted too. This type of situation is not common, but must be considered when deciding which semantics to use for building the bad-values blocklist.
 
 .. bad-values-blocklist-derived-semantics-end
 

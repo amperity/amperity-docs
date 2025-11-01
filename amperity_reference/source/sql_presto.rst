@@ -80,7 +80,7 @@ General
 
 * Use consistent and descriptive identifiers and names.
 * Make judicious use of white space and indentation to make code easier to read.
-* Store ISO-8601 compliant time and date information (YYYY-MM-DD HH:MM:SS.SSSSS).
+* Store ISO-8601 compliant time and date information: ``YYYY-MM-DD HH:MM:SS.SSSSS``.
 * Try to use only standard SQL functions instead of vendor-specific functions for reasons of portability.
 * Keep code succinct and devoid of redundant SQL, such as unnecessary quoting or parentheses or **WHERE** clauses that can otherwise be derived.
 * Include comments in SQL code where necessary.
@@ -1703,7 +1703,7 @@ The **ORDER BY** clause sorts a result set by one or more output expressions.
 
 .. code-block:: none
 
-    ORDER BY expression [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...]
+   ORDER BY expression [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...]
 
 Each expression may be composed of output columns or it may be an ordinal number selecting an output column by position (starting at one). The **ORDER BY** clause is evaluated as the last step of a query after any **GROUP BY** or **HAVING** clause. The default null ordering is **NULLS LAST**, regardless of the ordering direction.
 
@@ -1965,7 +1965,7 @@ Using **NULL** with **IS NULL** evaluates to **TRUE**:
 
 .. code-block:: none
 
-   select NULL IS NULL;
+   SELECT NULL IS NULL;
 
 But any other constant does not evaluate to **FALSE**:
 
@@ -1989,7 +1989,7 @@ Using **NULL** with **IS NOT NULL** evaluates to **FALSE**:
 
 .. code-block:: none
 
-   select NULL IS NOT NULL;
+   SELECT NULL IS NOT NULL;
 
 But any other constant evaluates **TRUE**:
 

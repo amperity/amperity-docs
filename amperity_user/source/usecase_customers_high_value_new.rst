@@ -32,7 +32,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-customers-high-value-new-howitworks-end
 
-**FIND NEW HIGH-VALUE CUSTOMERS**
+**Find new high value customers**
 
 .. usecase-customers-high-value-new-howitworks-callouts-start
 

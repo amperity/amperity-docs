@@ -136,7 +136,7 @@ Review validations
 
 .. _setup-transactions-input-validations-checklist:
 
-**INPUT VALIDATIONS CHECKLIST**
+**Checklist for input validations**
 
 .. setup-transactions-stitch-checklist-start
 

@@ -646,15 +646,27 @@ Example: Loyalty programs
 Add linkage table
 --------------------------------------------------
 
+.. domain-tables-add-linkage-start
+
+A linkage table defines how source tables and custom domain tables are linked by primary keys.
+
+.. domain-tables-add-linkage-end
+
 .. domain-tables-add-linkage-steps-start
 
 **To add a linkage table**
 
 #. Open the **Sources** page.
 #. Under **Custom domain tables** click **Add table**.
-#. Write SQL to specify which CDT records link to which source records. This will be four columns specifying the source table name, source table pk, cdt table name, and cdt pk.
+#. Write SQL to specify which custom domain table records link to which source records. This will be four columns: a column for the source table name, a column for the primary key in the source table, a column for the custom table name, and a column for the primary key in the custom domain table.
 #. Click **Next**.
-#. Tag the source table name with `compliance/source-ds`, source table pk with `compliance/source-pk`, cdt table name with `compliance/cdt-ds`, and cdt pk with `compliance/cdt-pk`.
+#. Apply the ``compliance/source-ds`` semantic tag to the source table name.
+
+   Apply the ``compliance/source-pk`` semantic tag to the primary key for the source table. 
+
+   Apply the ``compliance/cdt-ds`` semantic tag to the custom domain table name.
+
+   Apply the ``compliance/cdt-pk`` semantic tag to the primary key for the custom domain table.
 #. Click **Activate**.
 
 .. domain-tables-add-linkage-steps-end

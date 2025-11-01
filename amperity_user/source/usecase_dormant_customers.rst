@@ -30,7 +30,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-dormant-customers-howitworks-end
 
-**FIND DORMANT CUSTOMERS**
+**Find dormant customers**
 
 .. usecase-dormant-customers-howitworks-callouts-start
 

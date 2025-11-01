@@ -1036,7 +1036,7 @@ Add custom SQL table
 
 .. databases-database-howto-add-table-custom-tip-start
 
-.. tip:: You can associate the Amperity ID to a unique ID in a custom SQL table. For example, "CCUST" associates a unique ID in a table to the Amperity ID:
+.. tip:: You can associate the Amperity ID to a unique ID in a custom SQL table. For example, ``CCUST`` associates a unique ID in a table to the Amperity ID:
 
    .. code-block:: sql
 

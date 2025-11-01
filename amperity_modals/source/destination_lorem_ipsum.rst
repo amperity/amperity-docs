@@ -97,7 +97,7 @@ Formatting observations for Markdown files in app modals:
 * No tables because tables are hard.
 * No images from docs site. App could put images into the modal.
 * Docs comments and docs ``TODO`` are not passed through by Pandoc when converting .rst > .md.
-* Links cannot be REF or DOC, only defined as external with paths. Can be a relative path, should that be necessary.
+* Links cannot be ``REF`` or ``DOC``, only defined as external with paths. Can be a relative path, should that be necessary.
 
 
 Links

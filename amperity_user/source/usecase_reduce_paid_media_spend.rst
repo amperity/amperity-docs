@@ -34,7 +34,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-reduce-paid-media-ad-spend-howitworks-end
 
-**REDUCE PAID MEDIA AD SPEND**
+**Reduce paid media ad spend**
 
 .. usecase-reduce-paid-media-ad-spend-howitworks-callouts-start
 

@@ -1806,21 +1806,9 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-       Supported values for fields associated with the **gender** semantic tag include:
-
-       * F
-       * FEMALE (is normalized to F)
-       * M
-       * MALE (is normalized to M)
-       * MAN (is normalized to M)
-       * NONE (is treated as NULL)
-       * WOMAN (is normalized to F)
-       * X
-       * NONBINARY (is normalized to X)
-       * NON-BINARY (is normalized to X)
-       * ENBY (is normalized to X)
-       * NB (is normalized to X)
-       * OTHER (is normalized to X)
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-gender-supported-values-start
+          :end-before: .. term-gender-supported-values-end
 
    * - **generational-suffix**
      - String

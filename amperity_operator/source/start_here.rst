@@ -352,7 +352,7 @@ You must provide your credentials to Amperity in order to log in.
 #. When prompted, provide your Amperity credentials.
 
    .. note:: Most credentials are configured to use some form of single sign-on (SSO), but may be configured to use usernames and passwords, depending on how user access is configured for your tenant.
-#. Click **LOG IN**.
+#. Click **Log in**.
 
 .. start-here-log-in-amperity-steps-end
 

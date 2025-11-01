@@ -280,6 +280,8 @@ Customers
 
 The feed and domain table for customer details contains the following fields:
 
+.. vale off
+
 * **CREATED_AT**
 * **CREATED_IN**
 * **DEFAULT_BILLING**
@@ -293,6 +295,8 @@ The feed and domain table for customer details contains the following fields:
 * **STORE_ID**
 * **UPDATED_AT**
 * **WEBSITE_ID**
+
+.. vale on
 
 You may choose to apply customer profile semantic tags to the columns in this table.
 
@@ -308,6 +312,8 @@ Customer address
 
 The feed and domain table for customer addresses contains the following fields:
 
+.. vale off
+
 * **CITY**
 * **COUNTRY_ID**
 * **ENTITY_ID**
@@ -320,6 +326,8 @@ The feed and domain table for customer addresses contains the following fields:
 * **STREET**
 * **TELEPHONE**
 * **UPDATED_AT**
+
+.. vale on
 
 You may choose to apply customer profile semantic tags to the columns in this table.
 
@@ -335,11 +343,15 @@ Customer group
 
 The feed and domain table for customer group contains the following fields:
 
+.. vale off
+
 * **CODE**
 * **CUSTOMER_GROUP_ID**
 * **TAX_CLASS_ID**
 * **TAX_CLASS_NAME**
 * **VIP_DATA**
+
+.. vale on
 
 .. source-adobe-commerce-review-data-customer-group-end
 
@@ -352,6 +364,8 @@ Orders
 .. source-adobe-commerce-review-data-orders-start
 
 The feed and domain table for orders contains the following fields:
+
+.. vale off
 
 * **ADJUSTMENT_NEGATIVE**
 * **ADJUSTMENT_POSITIVE**
@@ -460,6 +474,8 @@ The feed and domain table for orders contains the following fields:
 * **WEIGHT**
 * **X_FORWARDED_FOR**
 
+.. vale on
+
 You may choose to apply itemized transaction semantic tags to the columns in this table.
 
 .. source-adobe-commerce-review-data-orders-end
@@ -473,6 +489,8 @@ Order address
 .. source-adobe-commerce-review-data-order-address-start
 
 The feed and domain table for order address contains the following fields:
+
+.. vale off
 
 * **ADDRESS_TYPE**
 * **CITY**
@@ -492,6 +510,8 @@ The feed and domain table for order address contains the following fields:
 * **STREET**
 * **TELEPHONE**
 
+.. vale on
+
 You may choose to apply customer profile semantic tags to the columns in this table.
 
 .. source-adobe-commerce-review-data-order-address-end
@@ -505,6 +525,8 @@ Order items
 .. source-adobe-commerce-review-data-order-items-start
 
 The feed and domain table for order items contains the following fields:
+
+.. vale off
 
 * **AMOUNT_REFUNDED**
 * **BASE_AMOUNT_REFUNDED**
@@ -560,6 +582,8 @@ The feed and domain table for order items contains the following fields:
 * **UPDATED_AT**
 * **WEEE_TAX_APPLIED**
 * **WEIGHT**
+
+.. vale on
 
 You may choose to apply itemized transaction semantic tags to the columns in this table.
 

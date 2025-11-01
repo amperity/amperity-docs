@@ -30,7 +30,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-active-store-shoppers-howitworks-end
 
-**ACTIVE STORE SHOPPERS**
+**Active store shoppers**
 
 .. usecase-active-store-shoppers-howitworks-callouts-start
 

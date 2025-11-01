@@ -30,7 +30,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-holiday-shoppers-sms-howitworks-end
 
-**FIND HOLIDAY SHOPPERS**
+**Find holiday shoppers**
 
 .. usecase-holiday-shoppers-sms-howitworks-callouts-start
 

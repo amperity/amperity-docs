@@ -292,6 +292,8 @@ It is OK if each row does not contain a value for each column. The alignment its
 
 The following example shows a couple rows from a few tables, the aligned and preprocessed semantic values, and no values when the data source did not provide it. Imagine this for all of your customer data, hundreds of millions of records, hundreds of millions of rows, with fields in the virtual table that span your complete set of customer data.
 
+.. vale off
+
 .. list-table::
    :widths: 100 100 100 100 100 100
    :header-rows: 1
@@ -344,6 +346,8 @@ The following example shows a couple rows from a few tables, the aligned and pre
      - 
      - 
      - B-23456-b
+
+.. vale on
 
 .. stitch-union-of-tables-table-end
 

@@ -32,7 +32,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-one-and-done-howitworks-end
 
-**FIND ONE AND DONE CUSTOMERS**
+**Find one and done customers**
 
 .. usecase-one-and-done-howitworks-callouts-start
 

@@ -32,7 +32,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-customers-new-website-customers-howitworks-end
 
-**NEW WEBSITE CUSTOMERS**
+**New website customers**
 
 .. usecase-customers-new-website-customers-howitworks-callouts-start
 

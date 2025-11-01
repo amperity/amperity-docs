@@ -95,7 +95,7 @@ General
 * Use consistent and descriptive identifiers and names.
 * Include comments in SQL code where necessary. Use the C style opening ``/*`` and closing ``*/`` where possible. Otherwise precede comments with ``--`` and finish them with a new line.
 * Make judicious use of white space and indentation to make code easier to read.
-* Store ISO-8601 compliant date and time information (YYYY-MM-DD HH:MM:SS.SSSSS).
+* Store ISO-8601 compliant date and time information: ``YYYY-MM-DD HH:MM:SS.SSSSS``.
 * Try to use only standard SQL functions instead of vendor-specific functions for reasons of portability.
 * Keep code succinct and devoid of redundant SQL, such as unnecessary quoting or parentheses or **WHERE** clauses that can otherwise be derived.
 * Convert string values to lowercase. For example: **LOWER(column_name) = 'value'**.
@@ -3680,7 +3680,7 @@ Return rounded sum
 
 .. sql-spark-function-round-example-rounded-sum-start
 
-The following example returns the sum of a, b, and c rounded to two decimal places as the ABC score:
+The following example returns the sum of a, b, and c rounded to two decimal places as the score:
 
 .. code-block:: none
 

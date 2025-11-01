@@ -67,7 +67,7 @@ Configure query
    
    .. code-block:: sql
       :linenos:
-      :emphasize-lines: 10
+      :emphasize-lines: 8-9
 
       SELECT DISTINCT
         ,t1.amperity_id AS amp_id_a
@@ -78,12 +78,12 @@ Configure query
         ,t2.given_name AS given_name_b
         ,t1.surname AS surname_a
         ,t2.surname AS surname_b
-        -- ADD MATCHING PAIRS FOR SEMANTICS
 
-   For example, to add **address**:
+   Extend this block to add matching pairs for semantic tags. For example, to add **address**:
 
    .. code-block:: sql
       :linenos:
+      :emphasize-lines: 10-11
 
       SELECT DISTINCT
         ,t1.amperity_id AS amp_id_a
@@ -120,7 +120,7 @@ Configure query
 
    .. code-block:: sql
       :linenos:
-      :emphasize-lines: 7
+      :emphasize-lines: 6
 
       FROM Unified_Coalesced AS t1
       LEFT JOIN (
@@ -135,14 +135,13 @@ Configure query
 
    .. code-block:: sql
       :linenos:
-      :emphasize-lines: 6,7
+      :emphasize-lines: 6
 
       INNER JOIN
         Unified_Coalesced AS t2
         ON t1.amperity_id <> t2.amperity_id
         AND LOWER(t1.email) = LOWER(t2.email)      
         AND hf.high_freq_email IS NULL
-        -- MORE JOIN CONDITIONS MAY BE ADDED
         -- AND LOWER(t1.matching_field) = LOWER(t2.matching_field)
 
    For example, to require given name and surname to match when email addresses do not match:
