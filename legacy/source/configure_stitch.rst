@@ -196,7 +196,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:login-trimmed**
      - Non-default. This blocking strategy groups values associated with the first five characters of an email addresses derived from **email**. This is used for low-threshold email address matching.
    * - **:name**
-     - Non-default. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
+     - Non-default. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for ``JOHN SMITH`` and ``SMITH JOHN`` is ``JOHN:SMITH``.
    * - **:phone**
      - Default. This blocking strategy groups values associated with the **phone** semantic.
 
@@ -944,6 +944,8 @@ Many email addresses are not useful for identity resolution. Some of them are ge
 
 The following values associated with the **email** semantic are ignored by Stitch when performing identity resolution:
 
+.. vale off
+
 * **@NOEMAIL.COM**
 * **@NOMAIL.COM**
 * 0000000000
@@ -1019,6 +1021,8 @@ The following values associated with the **email** semantic are ignored by Stitc
 * VENDORS@
 * **XXX@**
 
+.. vale on
+
 The values in **bold** are always ignored.
 
 .. configure-stitch-advanced-profile-email-address-patterns-end
@@ -1032,6 +1036,8 @@ Stitch may be configured to allow certain generic email addresses to be availabl
    pre-processing-profile :allow-business-email
 
 When this setting is updated, only the following email address patterns are ignored by Stitch:
+
+.. vale off
 
 * @NOEMAIL.COM
 * @NOMAIL.COM
@@ -1055,6 +1061,8 @@ When this setting is updated, only the following email address patterns are igno
 * NOTHANKYOU@
 * REFUSED@
 * XXX@
+
+.. vale on
 
 Use a bad-values blocklist to configure Amperity to continue ignoring any of the email address patterns that were removed from the default list of ignored email patterns.
 

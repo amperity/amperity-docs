@@ -97,7 +97,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-predicted-top-10-percent-howitworks-end
 
-**WHICH CUSTOMERS ARE PREDICTED TO BE YOUR TOP 10%?**
+**Which customers are predicted to be in your top ten percent?**
 
 .. usecase-predicted-top-10-percent-howitworks-callouts-start
 

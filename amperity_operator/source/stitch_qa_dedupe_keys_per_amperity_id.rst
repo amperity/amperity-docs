@@ -103,9 +103,10 @@ Configure query
 
       SELECT *
       FROM dk_distribution
-      -- UPDATE BELOW FOR DESIRED dk_count
       WHERE dk_count > 1
       ORDER BY dk_count DESC
+
+   Update ``dk_count > 1`` to the desired threshold.
 
 #. Click **Run Segment** to return a list of Amperity IDs, along with the number of deduplication keys associated to each Amperity ID.
 #. To return the distribution of deduplication keys by Amperity ID, first use ``/*`` and ``*/`` to comment out the size investigation **SELECT** statement:
@@ -116,11 +117,10 @@ Configure query
 
       /*SELECT *
       FROM dk_distribution
-      -- UPDATE BELOW FOR DESIRED dk_count
       WHERE dk_count > 1
       ORDER BY dk_count DESC*/
 
-   then remove the comments from the distribution **SELECT** statement, and then click **Run Segment**.
+   Update ``dk_count > 1`` to the desired threshold, and then remove the comments from the distribution **SELECT** statement, and then click **Run Segment**.
 #. Click **Activate**.
 
 .. stitch-qa-query-dedupe-keys-per-amperity-id-steps-end

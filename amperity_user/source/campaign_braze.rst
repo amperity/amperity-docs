@@ -182,7 +182,7 @@ Purchased yesterday
    :start-after: .. usecase-purchased-yesterday-howitworks-start
    :end-before: .. usecase-purchased-yesterday-howitworks-end
 
-**WHICH CUSTOMERS PURCHASED YESTERDAY?**
+**Which customers purchased yesterday?**
 
 .. include:: ../../amperity_user/source/usecase_purchased_yesterday.rst
    :start-after: .. usecase-purchased-yesterday-howitworks-callouts-start
@@ -206,7 +206,7 @@ Build an audience of high-value customers. Configure a recurring campaign to sen
    :start-after: .. usecase-predicted-top-10-percent-howitworks-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-end
 
-**WHO ARE YOUR HIGH-VALUE CUSTOMERS?**
+**Who are your high value customers?**
 
 .. channel-braze-example-high-value-steps-start
 
@@ -277,7 +277,7 @@ Build an audience that contains customer profiles -- first and last name, email 
 
 The following sections describe using the **Segment Editor** to build update |destination-name| user profile attributes with values from customer profiles in Amperity.
 
-**UPDATE CUSTOMER PROFILE ATTRIBUTES**
+**Update customer profile attributes**
 
 .. channel-braze-example-customer-profiles-steps-start
 

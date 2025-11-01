@@ -964,7 +964,7 @@ Add line numbers to code blocks using the ``:linenos:`` attribute.
      ],
    }
 
-.. tip:: This attribute is sometimes picky and the build breaks and you discover that it works fine with FOUR spaces instead of THREE (with everything aligned with the FOUR spaces instead of THREE). Ask for help from the docs team if you run into this issue.
+.. tip:: This attribute is sometimes picky and the build breaks and you discover that it works fine with four spaces instead of three (with everything aligned with the four spaces instead of three). Ask for help from the docs team if you run into this issue.
 
 .. rst-code-block-line-numbers-end
 

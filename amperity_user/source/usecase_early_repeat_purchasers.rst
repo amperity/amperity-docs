@@ -32,7 +32,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-early-repeat-purchasers-howitworks-end
 
-**FIND EARLY REPEAT PURCHASERS**
+**Find early repeat purchasers**
 
 .. usecase-early-repeat-purchasers-howitworks-callouts-start
 

@@ -32,7 +32,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-customers-lapsing-howitworks-end
 
-**FIND LAPSING CUSTOMERS**
+**Find lapsing customers**
 
 .. usecase-customers-lapsing-howitworks-callouts-start
 

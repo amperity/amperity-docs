@@ -43,7 +43,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-store-invite-howitworks-end
 
-**INVITE CUSTOMERS TO YOUR STORES USING SMS**
+**Invite customers to your stores using SMS**
 
 .. usecase-store-invite-howitworks-callouts-start
 

@@ -1873,7 +1873,7 @@ You can set a delivery schedule on the **Edit Campaign** page.
 
 .. campaigns-set-delivery-schedule-steps-start
 
-#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, either select **Schedule delivery** *or* **Deliver ASAP** from the menu.
+#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, either select **Schedule delivery** *or* **Deliver as soon as possible** from the menu.
 
 .. campaigns-set-delivery-schedule-steps-end
 
