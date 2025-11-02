@@ -12,7 +12,7 @@
 
 **About Braze attributes**
 
-(First paragraph is not shared.)
+First paragraph is not shared.
 
 .. braze-attributes-about-start
 
@@ -36,6 +36,8 @@ Customer profiles in |destination-name| are represented by a set of `user profil
    |destination-name| uses two fields to track email and phone subscription status: **email_subscribe** and **push_subscribe**. Braze should be your source of truth for customer consent and for tracking email and phone subscription status.
 
 .. braze-customer-profiles-admonition-end
+
+.. vale off
 
 .. braze-customer-profiles-common-attributes-start
 
@@ -86,12 +88,13 @@ The following table describes the default `user profile fields <https://www.braz
 
 .. braze-customer-profiles-common-attributes-end
 
+.. vale on
 
 .. braze-customer-profiles-common-attributes-note-start
 
 .. note:: Default user profile fields also exist for **alias_name**, **alias_label**, **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **email_subscribe**, **facebook**, **language**, **marked_email_as_spam_at**, **push_subscribe**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
 
-   These fields are not commonly sent to |destination-name| from Amperity, but if your brand chooses to update these user profile fields from Amperity, be sure to use the exact name of the default field name, send the correct value (or values), and to use lowercase.
+   These fields are not commonly sent to |destination-name| from Amperity, but if your brand chooses to update these user profile fields from Amperity, be sure to use the exact name of the default field name, send the correct value or values, and to use lowercase.
 
 .. braze-customer-profiles-common-attributes-note-end
 
@@ -115,7 +118,7 @@ Verify the names of custom attributes that is sent to |destination-name| from Am
 
 .. important:: Your brand's list of custom attributes *should* be a list that is static, remains stable over time, and is focused on your most valuable customers.
 
-   Only update custom attributes for customers to which your brand is engaged. Define an audience in Amperity that is some combination of "high value" (historical or predicted), "active" (has purchased recently), and are "contactable" (have an opt-in status of true for phone numbers or email addresses).
+   Only update custom attributes for customers to which your brand is engaged. Define an audience in Amperity that is some combination of historical or predicted "high value", "active", and are "contactable" because they have an opt-in status of true for phone numbers or email addresses.
 
    This will help ensure that you are only updating custom attributes for your most valuable customers. Custom attributes is updated only for those customers have a matching "external_id" or "braze_id" within |destination-name|.
 
@@ -177,7 +180,7 @@ Behavioral attributes, both historical and predicted, are more likely to contain
 
           For example, predictive attributes are refreshed daily. Predicted CLV during the next 365 days might be $345.37 on one day and $348.75 a few days later.
 
-          Instead of using predicted CLV in an audience profile, consider using predicted lifecycle status (active, at risk, etc.) or predicted value tier (gold, bronze, etc.), both of which are less likely to change because they represent a range of predicted behaviors instead of a specific predicted value.
+          Instead of using predicted CLV in an audience profile, consider using predicted lifecycle status or predicted value tier, both of which are less likely to change because they represent a range of predicted behaviors instead of a specific predicted value.
 
       * - **Calculated attribute values**
         - Many attributes are calculated by Amperity, including all time period rollups.

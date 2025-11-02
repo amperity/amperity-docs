@@ -86,7 +86,7 @@ After setting up cross-account role assumption, a list of files by filename and 
 
 .. sources-amazon-s3-cross-account-roles-steps-intro-done-by-admins-start
 
-The following steps describe how to configure Amperity to use cross-account role assumption to pull data from (or push data to) a customer-managed Amazon S3 bucket.
+The following steps describe how to configure Amperity to use cross-account role assumption to pull data from or push data to a customer-managed Amazon S3 bucket.
 
 .. important:: These steps require configuration changes to customer-managed Amazon AWS accounts and must be done by users with administrative access.
 
