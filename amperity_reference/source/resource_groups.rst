@@ -88,7 +88,7 @@ A database may be associated with a single custom resource group. A custom resou
 
 .. note:: A database is *always* associated with the "All resource groups" resource group.
 
-A database that is assigned permission to a custom resource group allows users associated with that resource group to:
+Users assigned permission to access a custom resource group in a database can:
 
 #. View that database from the **Customer 360** page.
 #. View all tables in that database.

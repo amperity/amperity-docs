@@ -24,7 +24,7 @@ About destinations
 
 .. destinations-about-start
 
-A destination is a connection between Amperity and a downstream system that enables users of Amperity to send data to that system.
+A destination is a connection between Amperity and a downstream system that allows Amperity to send data to that system.
 
 After a destination is configured, users of Amperity can:
 

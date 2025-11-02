@@ -85,8 +85,8 @@ The Profile API has the following endpoints:
 
    The Profile API requires the following policies to be assigned to users within your tenant:
 
-   #. **Allow Profile API administration** This policy allows users to use the **Destinations** page to manage endpoints in your tenant's Profile API.
-   #. **Allow API key administration** This policy allows users to use the **Users and Activity** page to manage API keys and tokens required by Amperity APIs.
+   #. **Allow Profile API administration** This policy allows access to the **Destinations** page to manage endpoints in your tenant's Profile API.
+   #. **Allow API key administration** This policy allows access to the **Settings** page to manage API keys and tokens required by Amperity APIs.
 
    These policies may be assigned to the same user.
 
@@ -522,7 +522,7 @@ The Profile API must be configured for use in Amperity. This is done in a series
 
    Do one of the following:
 
-   #. Use a sandbox to make changes directly to the "production" index, but run it from the sandbox to validate the changes and the effects those changes may have on the downstream workflow. This approach allows you to keep the same index ID in place and helps prevent disruption to any live Profile API integrations.
+   #. Use a sandbox to make changes directly to the "production" index, but run it from the sandbox to validate the changes and the effects those changes may have on the downstream workflow. This approach keeps the same index ID in place and helps prevent disruption to any live Profile API integrations.
 
    #. Build a new index that contains the changes, and then test those changes incrementally downstream on individual locations within the workflow. This requires updating the index ID in the downstream workflow.
 
@@ -549,9 +549,9 @@ To enable the Profile API for your tenant:
           :class: no-scaled-link
      - Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ (or send email to support@amperity.com) and request enabling the Profile API for your tenant.
 
-       Support will enable the Profile API on your tenant and will let you know when the process is completed.
+       Support will enable the Profile API on your tenant and will notify when the process is completed.
 
-       .. important:: Your support representative uses SnapPass to provide the temporary access token for the Profile API. (Amperity is building an interface that allows you to self-generate the access token for the Profile API. This will ensure that only your team has access to the tokens and will make it easier to follow your organization's security policies, such as periodically refreshing the access tokens.)
+       .. important:: A support representative uses SnapPass to provide the temporary access token for the Profile API.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px

@@ -888,7 +888,7 @@ Primary keys (pk)
 
 .. semantics-key-primary-caution-start
 
-.. caution:: Amperity allows you to assign the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
+.. caution:: Amperity allows assignment the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
 
    A domain table can have only one primary key. When the **pk** semantic tag is applied to more than one field in the **Feed Editor**, those values are concatenated into a primary key, which is stored in the **_pk** field in the domain table. You should limit the number of fields to which the **pk** semantic tag is applied.
 

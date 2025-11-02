@@ -228,9 +228,7 @@ Queries
 
 .. tools-for-analysts-queries-tab-start
 
-Queries enable you to discover lists of customers, get insight into their preferences and habits, identify properties and characteristics of that list, and then use that list to initiate marketing actions, campaigns, and other downstream workflows.
-
-Queries also enable you to write SQL that can be used to perform QA against various databases and tables in the customer 360 database.
+Use queries to find lists of customers, get insights into their preferences and habits, identify additional properties and characteristics, and then initiate marketing activities, run campaigns, or analytics.
 
 .. tools-for-analysts-queries-tab-end
 

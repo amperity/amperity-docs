@@ -764,7 +764,7 @@ By data source
 
 .. bad-values-blocklist-advanced-per-data-source-start
 
-You can create a group of bad-values queries, with one query per data source. This allows you to tune the SQL query results to a specific data set for both semantic associations and thresholds. Use the existing SQL query as a template and the create a unique query for each bad-values blocklist you want to build based on results in the customer 360 database.
+You can create a group of bad-values queries, with one query per data source. This tunes the SQL query results to a specific data set for both semantic associations and thresholds. Use the existing SQL query as a template and the create a unique query for each bad-values blocklist you want to build based on results in the customer 360 database.
 
 .. bad-values-blocklist-advanced-per-data-source-end
 

@@ -250,7 +250,6 @@ Each **Summary** tab contains the following details:
 
      Average unit revenue is net revenue divided by the quanity of purchased items.
 
-
    .. note:: Historical revenue represents the sum of order revenue for all customers who made at least one purchase during the previous year.
 
    .. tip:: You can view the SQL query for each summary statistic by opening the menu and choosing **View SQL**. 
@@ -277,7 +276,7 @@ Custom segment metrics
 
 .. custom-segment-metrics-summary-start
 
-Custom segment metrics allow you to visualize the metrics that are most meaningful to your business, based on attributes in your databases or profiles. Select and manage custom segment metrics from the **Summary** tab.
+Use custom segment metrics to visualize the metrics that are most meaningful to your business, based on attributes in your databases or profiles. Select and manage custom segment metrics from the **Summary** tab.
 
 You can set a maximum of ten custom segment metrics for any segment. 
 

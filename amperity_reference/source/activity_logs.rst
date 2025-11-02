@@ -370,7 +370,7 @@ The following table lists the most common event types, grouped by the component 
        ``tenant/updated``
           A sandbox was updated.
 
-       .. note:: These events appear within the sandbox and are followed by the ``policy/attached-to`` and ``policy/attached`` events to allow the user who created the sandbox to access the sandbox as a **DataGrid Administrator**.
+       .. note:: These events appear within the sandbox and are followed by the ``policy/attached-to`` and ``policy/attached`` events and allow **DataGrid Administrator** access to the sandbox.
 
 
    * - **Single Sign-on**

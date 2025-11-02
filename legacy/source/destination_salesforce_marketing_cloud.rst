@@ -550,7 +550,11 @@ Add data template
 
        Assign a name to the data extension that will be added (or updated) by Amperity.
 
-       .. important:: The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters: ! @ # $ % ^ * ( ) = { } [ ] \ . < > / " : ? | , &
+       .. important:: The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
+
+          .. code-block::
+
+             ! @ # $ % ^ * ( ) = { } [ ] \ . < > / " : ? | , &
 
 
    * - .. image:: ../../images/steps-05.png

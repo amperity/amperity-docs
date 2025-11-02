@@ -412,7 +412,7 @@ Snowflake couriers
 
 .. couriers-snowflake-start
 
-A Snowflake data source provides a list of tables that are consolidated into a fileset. Snowflake data sources include Snowflake itself, and then also any FiveTran data source, such as Klaviyo, Shopify, Kustomer, and HubSpot.
+A Snowflake data source provides a list of tables that are consolidated into a fileset. Snowflake data sources include Snowflake itself, and then also any Fivetran data source, such as Klaviyo, Shopify, Kustomer, and HubSpot.
 
 .. couriers-snowflake-end
 
@@ -1467,7 +1467,7 @@ Salesforce Sales Cloud
 
 .. couriers-example-salesforce-sales-cloud-settings-start
 
-The Sales Cloud integration allows you to use SQL patterns to specify which fields in an Object should be brought back to Amperity. Use the ``fields`` grouping to define which fields to bring back. Use ``*`` for all fields, otherwise specify a list of fields. Use ``where`` to specify values in the fields. The following table shows examples of Objects and the equivalent SQL query used to define load settings.
+The Sales Cloud integration uses SQL patterns to specify which fields in an Object should be brought back to Amperity. Use the ``fields`` grouping to define which fields to bring back. Use ``*`` for all fields, otherwise specify a list of fields. Use ``where`` to specify values in the fields. The following table shows examples of Objects and the equivalent SQL query used to define load settings.
 
 .. couriers-example-salesforce-sales-cloud-settings-end
 

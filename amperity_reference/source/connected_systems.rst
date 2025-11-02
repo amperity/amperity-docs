@@ -927,7 +927,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Square**
      - |system-yes|
      - 
-     - Pull online stores, payments, and transactions data from Square using FiveTran.
+     - Pull online stores, payments, and transactions data from Square using Fivetran.
 
    * - **Stripe**
      - |system-yes|

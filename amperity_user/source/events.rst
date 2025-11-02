@@ -144,7 +144,7 @@ Snapchat
 
 .. events-snapchat-start
 
-Snapchat is a social media platform that allows users to access pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
+Snapchat is a social media platform for accessing pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
 
 :doc:`Send offline events <events_snapchat>` to Snapchat as a CSV file that contains `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to Snapchat.
 

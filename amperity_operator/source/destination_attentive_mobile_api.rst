@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Attentive API
+.. |destination-name| replace:: Attentive
 .. |destination-api| replace:: Custom Attributes API
 .. |plugin-name| replace:: "Attentive API"
 .. |credential-type| replace:: "attentive-api"
@@ -40,7 +40,7 @@ Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/t
 
 .. destination-attentive-mobile-api-attributes-caution-start
 
-.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
+.. caution:: The |destination-name| |destination-api| builds segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
 
 .. destination-attentive-mobile-api-attributes-caution-end
 

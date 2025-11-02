@@ -74,7 +74,7 @@ Get details
       :start-after: .. sources-get-details-fivetran-request-to-enable-start
       :end-before: .. sources-get-details-fivetran-request-to-enable-end
 
-#. Permission to sychronize FiveTran to HubSpot. This must be done by a user of HubSpot with `Super Admin level privileges <https://knowledge.hubspot.com/settings/hubspot-user-permissions-guide#super-admin>`__ |ext_link|. Log into HubSpot as a user with **Super Admin** privileges, select the account you want to synchronize, click **Grant Access**, and then click **Save & Test**.
+#. Permission to sychronize Fivetran to HubSpot. This must be done by a user of HubSpot with `Super Admin level privileges <https://knowledge.hubspot.com/settings/hubspot-user-permissions-guide#super-admin>`__ |ext_link|. Log into HubSpot as a user with **Super Admin** privileges, select the account you want to synchronize, click **Grant Access**, and then click **Save & Test**.
 
    .. include:: ../../shared/sources.rst
       :start-after: .. sources-get-details-fivetran-connect-start

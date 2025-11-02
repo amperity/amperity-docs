@@ -829,7 +829,7 @@ Review the **is_employee** utility query, and then configure it to identify cust
      ELSE false
    END AS is_email
 
-and then allows you to define exceptions:
+and then define exceptions:
 
 .. code-block:: sql
    :linenos:
@@ -874,7 +874,7 @@ The **is_gift_giver** utility query returns product descriptions from the **Unif
      ELSE false
    END AS likely_gift_purchase
 
-and then allows you to define exceptions:
+and then define exceptions:
 
 .. code-block:: sql
    :linenos:
@@ -1023,7 +1023,7 @@ Review the **is_test_accounts** utility query, and then configure it to identify
      ELSE false
    END AS is_likely_test_account
 
-and then allows you to define exceptions:
+and then define exceptions:
 
 .. code-block:: sql
    :linenos:

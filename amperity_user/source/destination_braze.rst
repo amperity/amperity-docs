@@ -225,7 +225,7 @@ For example, ACME wants to manage custom attributes in |destination-name| by sen
 
 The **external_id** does not need to be associated with the Amperity ID. For example, if your brand has an internal identifier that you have pulled into Amperity, you can associate that identifier with the **external_id**.
 
-.. note:: You can make the query results available to campaigns if the query results are unique by Amperity ID. This allows users of campaigns to select |destination-name| attributes when configuring which attributes are sent to |destination-name| for sub-audiences within your campaigns.
+.. note:: You can make query results available to campaigns if query results are unique by Amperity ID. Select |destination-name| attributes when configuring which attributes are sent to |destination-name|.
 
 .. sendto-braze-build-query-end
 
