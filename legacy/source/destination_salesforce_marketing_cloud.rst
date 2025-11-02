@@ -548,9 +548,9 @@ Add data template
           :align: left
           :class: no-scaled-link
 
-       Assign a name to the data extension that will be added (or updated) by Amperity.
+       Assign a name to the data extension that will be added or updated by Amperity.
 
-       .. important:: The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
+       .. important:: The name of a data extension must be unique within |destination-name|, should use underscores ``_`` instead of spaces, and may not contain *any* of the following characters:
 
           .. code-block::
 
@@ -732,7 +732,7 @@ Incorrect data extension name
 
 .. destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name-start
 
-The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
+The name of a data extension must be unique within |destination-name|, should use underscores ``_`` instead of spaces, and may not contain *any* of the following characters:
 
 ::
 

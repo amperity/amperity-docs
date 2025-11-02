@@ -91,10 +91,10 @@ The structure for an ingest query load operation is similar to:
 
 where:
 
-* ``file`` is set to the name of the file (``FILE_NAME``) against which the ingest query runs.
+* ``file`` is set to the ``FILE_NAME`` against which the ingest query runs.
 * ``FEED_ID`` is set to the ID for the feed for which the ingest query runs.
-* ``delimiter`` specifies the delimiter to use with CSV, TSV, and PSV files. (These default to ``,``, ``\t``, and ``|`` respectively if not otherwise specified.)
-* ``escape`` defines the character used for escaping quotes inside an already quoted value in the source file. The default escape character in Spark is the backslash (``\``).
+* ``delimiter`` specifies the delimiter to use with CSV, TSV, and PSV files. These default to ``,``, ``\t``, and ``|`` respectively if not otherwise specified.
+* ``escape`` defines the character used for escaping quotes inside an already quoted value in the source file. The default escape character in Spark is the backslash ``\``.
 * ``multiline`` indicates the presence of records that cross multiple lines. Use only for CSV, TSV, or PSV file types and set to ``true`` only if that file has fields with newline characters in them.
 
   .. note:: Use an ingest query to remove the multiline elements. For example:
@@ -103,7 +103,7 @@ where:
 
         REGEXP_REPLACE(message_text,"\n","") AS message_text
 
-* ``quote`` defines the character used for escaping quoted values where the separator can be part of the value in the source file. The default character is the double quote (``"``).
+* ``quote`` defines the character used for escaping quoted values where the separator can be part of the value in the source file. The default character is the double quote ``"``.
 * ``INGEST_QUERY_NAME`` is set to the name of the ingest query.
 
 .. ingest-queries-courier-load-operations-structure-block-end
@@ -413,7 +413,7 @@ Remove characters with regular expression
 
 .. ingest-queries-example-remove-characters-start
 
-You can use a regular expression to remove characters. For example, removing double quotes (") *and* backslash (\) characters from an email address from a record similar to:
+You can use a regular expression to remove characters. For example, removing double quotes ``"`` *and* backslash ``\`` characters from an email address from a record similar to:
 
 ::
 
@@ -425,7 +425,7 @@ so that it
 
    12345,abcde,email@gmail.com,2025-01-30
 
-A regular expression similar to the following removes the double quotes (") *and* backslash (\) characters: 
+A regular expression similar to the following removes the double quotes ``"`` *and* backslash ``\`` characters: 
 
 .. code-block:: sql
 

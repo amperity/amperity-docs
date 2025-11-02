@@ -133,7 +133,7 @@ A courier looks for objects in a filedrop location using a combination of the pa
 
 .. couriers-files-patterns-links-start
 
-A file pattern may use a combination of :ref:`literal strings <couriers-files-patterns-literal-strings>`, :ref:`wildcard characters <couriers-files-patterns-wildcards>` (``*``) within literal strings, :ref:`wildcard characters for filenames in archives <couriers-files-patterns-wildcards-within-archives>`, and :ref:`date components <couriers-files-patterns-date-components>`, separated by single quotes and forward slashes.
+A file pattern may use a combination of :ref:`literal strings <couriers-files-patterns-literal-strings>`, :ref:`wildcard characters <couriers-files-patterns-wildcards>` ``*`` within literal strings, :ref:`wildcard characters for filenames in archives <couriers-files-patterns-wildcards-within-archives>`, and :ref:`date components <couriers-files-patterns-date-components>`, separated by single quotes and forward slashes.
 
 .. couriers-files-patterns-links-end
 
@@ -908,7 +908,7 @@ CBOR
 
 .. format-cbor-pull-couriers-load-operations-important-start
 
-.. important:: The ``"schema"`` must match the structure of the incoming file, including all nested groupings and data types. Set ``"nullable"`` to ``True`` to allow fields to contain **NULL** values. A CBOR file can have hundreds of fields. The ellipses (``...``) in this example represents locations within this example structure where additional fields may be present.
+.. important:: The ``"schema"`` must match the structure of the incoming file, including all nested groupings and data types. Set ``"nullable"`` to ``True`` to allow fields to contain **NULL** values. A CBOR file can have hundreds of fields. The ellipses ``...`` in this example represents locations within this example structure where additional fields may be present.
 
 .. format-cbor-pull-couriers-load-operations-important-end
 
@@ -1304,7 +1304,7 @@ Salesforce Commerce Cloud
 
 .. couriers-example-salesforce-commerce-cloud-settings-start
 
-The Salesforce Commerce Cloud REST API has a defined set of files that can be made available to Amperity. The load settings are built into Amperity by default. (Salesforce Commerce Cloud was previously known as Demandware.)
+The Salesforce Commerce Cloud REST API has a defined set of files that can be made available to Amperity. The load settings are built into Amperity by default. Salesforce Commerce Cloud was previously known as Demandware.
 
 .. couriers-example-salesforce-commerce-cloud-settings-end
 
@@ -1987,7 +1987,7 @@ Use SnapPass to securely share configuration data with your Amperity representat
 
 #. Enter the credentials for the courier type.
 #. Enter any courier-specific settings.
-#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity (including how they are made available), and then a series of load operations that associates each file in the list to a feed.
+#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity, including how they are made available, and then a series of load operations that associates each file in the list to a feed.
 #. Click **Save**.
 
 .. couriers-add-steps-end
@@ -2011,7 +2011,7 @@ You may add a courier by copying an existing courier. This is useful when courie
 #. From the **Sources** page, open the menu for a courier, and then select **Make a copy**. The **Add Courier** page opens.
 #. Update the name of the courier.
 #. Verify all other configuration settings. Edit them as necessary.
-#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity (including how they are made available), and then a series of load operations that associates each file in the list to a feed.
+#. Under **<COURIER NAME> Settings** configure the file load settings. This is done in two parts: a list of files that should be available to Amperity, including how they are made available, and then a series of load operations that associates each file in the list to a feed.
 #. Click **Save**.
 
 .. couriers-add-as-copy-steps-end
@@ -2094,7 +2094,7 @@ A courier can be run to load data to a domain table and prevent downstream proce
 
 .. couriers-load-data-only-end
 
-**To load data (without downstream processing)**
+**To load data without downstream processing**
 
 .. couriers-load-data-only-steps-start
 

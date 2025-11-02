@@ -125,9 +125,16 @@ Get details
 
        The user ID type.
 
-       This value must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** by default for campaigns.
+       This value must be one of the following:
 
-       .. tip:: The **EMAIL** (email addresses) user ID type most often leads to the best match rates.
+       * **AAID** Google
+       * **EMAIL** Email addresses
+       * **IDFA** Apple
+       * **PHONE** Phone numbers
+
+       Amperity is configured to send **EMAIL** by default for campaigns.
+
+       .. tip:: The **EMAIL** user ID type most often leads to the best match rates.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

@@ -53,7 +53,7 @@ Build query
 
 .. sendto-experian-build-query-start
 
-You may need to build a query that shapes the data so that fields in the output are mapped to the fields required by Experian. Data shaping is typically required only one time.
+You may need to build a query that shapes the data so that fields in the output are mapped to the fields required by |destination-name|. Data shaping is typically required only one time.
 
 You can do this in the following ways:
 
@@ -77,11 +77,11 @@ Map fields to Experian
 
 .. sendto-experian-build-query-map-fields-required-start
 
-Required fields will vary based on the Experian product and downstream use case to which Amperity sends data, but they require the following fields:
+Required fields will vary based on the |destination-name| product and downstream use case to which Amperity sends data, but they require the following fields:
 
-* Inquiry ID, which is a unique identifier within Experian data
+* Inquiry ID, which is a unique identifier within |destination-name| data
 * First and last names
-* Complete addresses (street, city, state, zip code)
+* Complete addresses, including street, city, state, and zip code
 
   .. important:: Ensure that zip code values do not contain leading zeroes.
 
@@ -89,7 +89,7 @@ Required fields will vary based on the Experian product and downstream use case 
 
 .. sendto-experian-build-query-map-fields-start
 
-Build a query that maps fields in Amperity to the Experian data schema. For example:
+Build a query that maps fields in Amperity to the |destination-name| data schema. For example:
 
 .. code-block:: sql
    :linenos:
@@ -127,7 +127,7 @@ Append previous day's data
 
 .. sendto-experian-build-query-append-data-start
 
-In some use cases, you may want to append data that was sent to Amperity from Experian to the data that is sent from Amperity to Experian. The following example queries historical Experian data tables to collect data from the previous day, and then join it to the results:
+In some use cases, you may want to append data that was sent to Amperity from |destination-name| to the data that is sent from Amperity to |destination-name|. The following example queries historical |destination-name| data tables to collect data from the previous day, and then join it to the results:
 
 .. code-block:: sql
    :linenos:

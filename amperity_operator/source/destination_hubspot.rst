@@ -40,7 +40,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-start
 
-.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters (``a-z``), numbers (``0-9``), and underscores (``_``). Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters (such as ``#``, ``*``, or ``-``) with an underscore.
+.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters, numbers, and underscores. Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters, such as ``#``, ``*``, or ``-``, with an underscore.
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-end
 

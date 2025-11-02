@@ -351,7 +351,7 @@ Define a database export
 
 .. destination-snowflake-azure-database-export-start
 
-Database tables (or even entire databases) can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
+Database tables, or even entire databases, can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
 
 .. destination-snowflake-azure-database-export-end
 
@@ -442,7 +442,7 @@ Add a Snowflake destination
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings.png
           :width: 500 px
-          :alt: Settings for Snowflake (Azure).
+          :alt: Settings for Snowflake on Microsoft Azure.
           :align: left
           :class: no-scaled-link
 

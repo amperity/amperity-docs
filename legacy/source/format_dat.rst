@@ -86,7 +86,7 @@ Use Spark SQL to define an ingest query for the DAT file that parses the individ
 
 .. sql-spark-function-substr-example-parse-fields-from-dat-file-start
 
-The following example shows an ingest query that parses fields from a DAT file. Each field (fields 1-6) has a starting point within the DAT file (1, 21, 52, 63, 69, 70) and a length (20, 30, 10, 15, 1, 140). Use an ordinal ( _c0 ) to define each source field within the DAT file.
+The following example shows an ingest query that parses fields from a DAT file. Each field--fields 1-6--has a starting point within the DAT file, such as 1, 21, 52, 63, 69, or 70, and a length, such as 20, 30, 10, 15, 1, or 140. Use an ordinal--``_c0``--to define each source field within the DAT file.
 
 .. code-block:: none
 

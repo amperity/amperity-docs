@@ -96,7 +96,11 @@ Amperity can be configured to send |what-send| to |destination-name|.
           :alt: Detail two.
           :align: center
           :class: no-scaled-link
-     - The environment region, environment name, and logical table name for your Power Apps application. For example: "crm" (region), "acme" (name), and "abc123_acme" (table name).
+     - The environment region, environment name, and logical table name for your Power Apps application. For example:
+
+      * **Environment region** "crm"
+      * **Environment name** "socktown"
+      * **Logical table name** "abc123_socktown"
 
 .. destination-microsoft-dataverse-get-details-end
 

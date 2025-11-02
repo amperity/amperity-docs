@@ -270,7 +270,7 @@ This segment returns a list of customers who live in a city named "Chicago" and 
    :align: left
    :class: no-scaled-link
 
-This segment returns a much smaller list of customers than the starting point ("all customers") and is closer to the type of segment that can help define an audience that can be used in marketing campaigns.
+This segment returns a much smaller list of customers than the starting point--"all customers"--and is closer to the type of segment that can help define an audience that can be used in marketing campaigns.
 
 .. segments-and-vs-or-city-and-state-and-orders-end
 

@@ -90,7 +90,10 @@ Get details
           :alt: Detail two.
           :align: center
           :class: no-scaled-link
-     - The environment region and environment name |destination-name|. For example: "crm" (region) and "acme" (name).
+     - The environment region and environment name |destination-name|. For example:
+
+      * **Environment region** "crm"
+      * **Environment name** "socktown"
 
 .. destination-dynamics-365-marketing-get-details-end
 

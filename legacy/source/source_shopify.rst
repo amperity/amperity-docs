@@ -178,16 +178,16 @@ The feed and domain table for customer details contains the following fields:
 
 * **created_at**
 * **currency**
-* **email** (assigned the **email** semantic tag)
-* **first_name** (assigned the **given-name** semantic tag)
-* **id** (assigned the **ck** semantic tag)
-* **last_name** (assigned the **surname** semantic tag)
+* **email** Assigned the **email** semantic tag.
+* **first_name** Assigned the **given-name** semantic tag.
+* **id** Assigned the **ck** semantic tag.
+* **last_name** Assigned the **surname** semantic tag.
 * **last_order_id**
 * **last_order_name**
 * **multipass_identifier**
 * **note**
 * **orders_count**
-* **phone** (assigned the **phone** semantic tag)
+* **phone** Assigned the **phone** semantic tag.
 * **state**
 * **tags**
 * **tax_exempt**
@@ -207,22 +207,22 @@ Customer address
 
 The feed and domain table for customer addresses contains the following fields:
 
-* **address1** (assigned the **address** semantic tag)
-* **address2** (assigned the **address2** semantic tag)
-* **city** (assigned the **city** semantic tag)
-* **company** (assigned the **company** semantic tag)
-* **country** (assigned the **country** semantic tag)
+* **address1** Assigned the **address** semantic tag.
+* **address2** Assigned the **address2** semantic tag.
+* **city** Assigned the **city** semantic tag.
+* **company** Assigned the **company** semantic tag.
+* **country** Assigned the **country** semantic tag.
 * **country_code**
 * **country_name**
-* **customer_id** (assigned the **ck** semantic tag)
+* **customer_id** Assigned the **ck** semantic tag.
 * **default**
-* **first_name** (assigned the **given-name** semantic tag)
+* **first_name** Assigned the **given-name** semantic tag.
 * **id**
-* **last_name** (assigned the **surname** semantic tag)
-* **phone** (assigned the **phone** semantic tag)
-* **province** (assigned the **state** semantic tag)
+* **last_name** Assigned the **surname** semantic tag.
+* **phone** Assigned the **phone** semantic tag.
+* **province** Assigned the **state** semantic tag.
 * **province_code**
-* **zip** (assigned the **postal** semantic tag)
+* **zip** Assigned the **postal** semantic tag.
 
 .. source-shopify-review-data-customer-address-end
 
@@ -253,7 +253,7 @@ The feed and domain table for discount allocations contains the following fields
 
 * **amount**
 * **discount_allocation_index**
-* **order_line_id** (assigned the **ck** and **pk** semantic tags)
+* **order_line_id** Assigned the **ck** and **pk** semantic tags.
 
 .. source-shopify-review-data-discount-allocation-end
 
@@ -269,7 +269,7 @@ The feed and domain table for discount codes contains the following fields:
 
 * **amount**
 * **code**
-* **order_id** (assigned the **ck** and **pk** semantic tags)
+* **order_id** Assigned the **ck** and **pk** semantic tags.
 * **type**
 
 .. source-shopify-review-data-discount-codes-end
@@ -285,8 +285,8 @@ Locations
 The feed and domain table for locations contains the following fields:
 
 * **active**
-* **address1** (assigned the **addresss** semantic tag)
-* **address2** (assigned the **addresss2** semantic tag)
+* **address1** Assigned the **addresss** semantic tag.
+* **address2** Assigned the **addresss2** semantic tag.
 * **city**
 * **country**
 * **country_code**
@@ -430,7 +430,7 @@ Order tags
 
 The feed and domain table for order tags contains the following fields:
 
-* **order_id** (assigned the **ck** and **pk** semantic tags)
+* **order_id** Assigned the **ck** and **pk** semantic tags.
 * **value**
 
 .. source-shopify-review-data-order-tags-end
@@ -448,7 +448,7 @@ The feed and domain table for products contains the following fields:
 * **body_html**
 * **created_at**
 * **handle**
-* **id** (assigned the **pc/product-id** semantic tag)
+* **id** Assigned the **pc/product-id** semantic tag.
 * **product_type**
 * **published_at**
 * **published_scope**
@@ -471,7 +471,7 @@ Product tags
 
 The feed and domain table for product tags contains the following fields:
 
-* **product_id** (assigned the **ck** and **pk** semantic tags)
+* **product_id** Assigned the **ck** and **pk** semantic tags.
 * **value**
 
 .. source-shopify-review-data-product-tags-end

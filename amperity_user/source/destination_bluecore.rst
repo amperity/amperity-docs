@@ -97,7 +97,7 @@ The purchase data type requires the following fields:
 * **email**, which is the unique ID used within the Bluecore platform
 * **created**, which identifies the date of the purchase, in one of the following patterns: "MM/DD/YYYY HH:MM" or "YYYY-MM-DDTHH:MM:SS".
 * **total**, which identifies the sum of the purchase price for all products, including taxes, in the number format without commas and currency symbol
-* **products**, which identifies the product ID for each product bought as part of the purchase, separated by a pipe ( | ) character
+* **products**, which identifies the product ID for each product bought as part of the purchase, separated by a pipe ``|`` character
 
 Add a SQL table with a **SELECT** statement similar to:
 
@@ -128,7 +128,7 @@ Add orchestration
 
 .. sendto-bluecore-add-orchestration-important-start
 
-.. important:: Bluecore requires a header row to be present in CSV files. The header row cannot start with a number or contain any special characters other than underscores ( _ ) and must be less than 30 characters in length.
+.. important:: Bluecore requires a header row to be present in CSV files. The header row cannot start with a number or contain any special characters other than underscores ``_`` and must be less than 30 characters in length.
 
 .. sendto-bluecore-add-orchestration-important-end
 

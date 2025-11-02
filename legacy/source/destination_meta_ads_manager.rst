@@ -650,7 +650,7 @@ Build a query
 
 .. destination-meta-ads-manager-offline-events-parameters-start
 
-Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that must be (or may be) returned by your query.
+Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that returned by your query.
 
 .. destination-meta-ads-manager-offline-events-parameters-end
 
@@ -1492,7 +1492,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **timestamp**
      - **Required**
 
-       A Unix timestamp (in seconds) that indicates when the offline event occurred.
+       A Unix timestamp in seconds that indicates when the offline event occurred.
 
        .. note:: When viewing parameters in the |destination-name| user interface, **timestamp** is shown as **event_time**.
 
