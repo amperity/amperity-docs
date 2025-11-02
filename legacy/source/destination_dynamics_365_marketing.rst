@@ -92,8 +92,8 @@ Get details
           :class: no-scaled-link
      - The environment region and environment name |destination-name|. For example:
 
-      * **Environment region** "crm"
-      * **Environment name** "socktown"
+       * **Environment region** "crm"
+       * **Environment name** "socktown"
 
 .. destination-dynamics-365-marketing-get-details-end
 
