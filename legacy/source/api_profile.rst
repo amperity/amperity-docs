@@ -872,7 +872,7 @@ The performance of each index depends on the number of columns and the number of
 
    The following sections show response times for :ref:`5 column <profile-api-response-times-5-columns>`, :ref:`10 column <profile-api-response-times-10-columns>`, and :ref:`30 column <profile-api-response-times-30-columns>` index sizes and a range of output rows.
 
-   Response times were measured using simulated traffic across multiple Profile API endpoints simultaneously from US-East to US-West. Response times for US-West to US-West were less than 50ms. Use these response times as an indicator for the types of response times you will see for your tenant's set of Profile API endpoints.
+   Response times were measured using simulated traffic across multiple Profile API endpoints simultaneously from US-East to US-West. Response times for US-West to US-West were less than 50 ms. Use these response times as an indicator for the types of response times you will see for your tenant's set of Profile API endpoints.
 
 .. profile-api-response-times-start
 

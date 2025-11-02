@@ -112,7 +112,7 @@ The following table describes the parameters that may be used with the **GET /in
    * - **id**
      - String. Required.
 
-       The Amperity internal identifier for the injest job. For example **isj-20240701-48815-6dcXdk**.
+       The Amperity internal identifier for the injest job. For example: ``isj-20240701-48815-6dcXdk``.
 
        .. note:: From the workflows page, on the right side, click **Recent Activity**, select **Ingest details** under the job, and copy the job id from the open dialog box.
 

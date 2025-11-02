@@ -257,7 +257,7 @@ Get details
                :align: left
                :class: no-scaled-link
 
-         The API key that you use to configure Amperity credentials is available from the **Identifier** column on the **Rest API Key** page and is similar to: "a1bc2345-678d-9012-e3fg-hi34jk5l6789".
+         The API key that you use to configure Amperity credentials is available from the **Identifier** column on the **Rest API Key** page and is similar to: ``a1bc2345-678d-9012-e3fg-hi34jk5l6789``.
 
          .. image:: ../../images/destination-braze-rest-api-identifier.png
             :width: 500 px

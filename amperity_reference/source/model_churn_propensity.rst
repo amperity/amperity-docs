@@ -78,13 +78,13 @@ Attributes that predict a customer's future purchase behavior are available from
 
    * - Attribute Name
      - Description
-   * - **Predicted Average Order Revenue Next 365d**
+   * - **Predicted Average Order Revenue Next 365 Days**
      - A customer's predicted average order revenue over the next 365 days.
-   * - **Predicted CLV Next 365d**
+   * - **Predicted CLV Next 365 Days**
      - The total predicted spend for a customer over the next 365 days.
-   * - **Predicted Order Frequency Next 365d**
+   * - **Predicted Order Frequency Next 365 Days**
      - A customer's predicted number of orders over the next 365 days.
-   * - **Predicted Probability of Transaction Next 365d**
+   * - **Predicted Probability of Transaction Next 365 Days**
      - The probability that a customer will purchase again in the next 365 days.
 
 Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns.

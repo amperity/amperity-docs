@@ -667,7 +667,7 @@ Index response times
 
 .. profile-api-response-times-start
 
-The Profile API supports p95 response times under 100ms at 1000 requests per second. Response times will vary based on the number of attributes and profiles in an index.
+The Profile API supports p95 response times under 100 ms at 1000 requests per second. Response times will vary based on the number of attributes and profiles in an index.
 
 The number of rows and filter fields available from a Profile API endpoint determine:
 
@@ -729,9 +729,9 @@ The following table shows response times for a 5 column index with zero filter f
      - 0
 
    * - **Workflow duration**
-     - 2m 43s
-     - 3m 40s
-     - 26m
+     - 2 m 43 s
+     - 3 m 40 s
+     - 26 m
 
    * - **Median latency (ms)**
      - 41 ms
@@ -780,9 +780,9 @@ The following table shows response times for a 5 column index with 1 filter fiel
      - 1
 
    * - **Workflow duration**
-     - 2m 25s
-     - 3m 19s
-     - 29m
+     - 2 m 25 s
+     - 3 m 19 s
+     - 29 m
 
    * - **Median latency (ms)**
      - 63 ms
@@ -831,9 +831,9 @@ The following table shows response times for a 5 column index with 3 filter fiel
      - 3
 
    * - **Workflow duration**
-     - 3m 2s
-     - 4m 59s
-     - 34m
+     - 3 m 2 s
+     - 4 m 59 s
+     - 34 m
 
    * - **Median latency (ms)**
      - 1000 ms
@@ -882,9 +882,9 @@ The following table shows response times for a 10 column index with zero filter 
      - 0
 
    * - **Workflow duration**
-     - 2m 25s
-     - 3m 40s
-     - 42m
+     - 2 m 25 s
+     - 3 m 40 s
+     - 42 m
 
    * - **Median latency (ms)**
      - 36 ms
@@ -933,9 +933,9 @@ The following table shows response times for a 10 column index with 1 filter fie
      - 1
 
    * - **Workflow duration**
-     - 2m 29s
-     - 3m 50s
-     - 43m
+     - 2 m 29 s
+     - 3 m 50 s
+     - 43 m
 
    * - **Median latency (ms)**
      - 84 ms
@@ -984,9 +984,9 @@ The following table shows response times for a 10 column index with 3 filter fie
      - 3
 
    * - **Workflow duration**
-     - 3m 14s
-     - 5m
-     - 50m
+     - 3 m 14 s
+     - 5 m
+     - 50 m
 
    * - **Median latency (ms)**
      - 420 ms
@@ -1035,9 +1035,9 @@ The following table shows response times for a 10 column index with 5 filter fie
      - 5
 
    * - **Workflow duration**
-     - 2m 32s
-     - 4m 10s
-     - 49m
+     - 2 m 32 s
+     - 4 m 10 s
+     - 49 m
 
    * - **Median latency (ms)**
      - 390 ms
@@ -1086,9 +1086,9 @@ The following table shows response times for a 30 column index with zero filter 
      - 0
 
    * - **Workflow duration**
-     - 2m 50s
-     - 7m 14s
-     - 2h
+     - 2 m 50 s
+     - 7 m 14 s
+     - 2 h
 
    * - **Median latency (ms)**
      - 48 ms
@@ -1137,8 +1137,8 @@ The following table shows response times for a 30 column index with 1 filter fie
      - 1
 
    * - **Workflow duration**
-     - 2m 32s
-     - 5m 39s
+     - 2 m 32 s
+     - 5 m 39 s
      - --
 
    * - **Median latency (ms)**
@@ -1188,8 +1188,8 @@ The following table shows response times for a 30 column index with 3 filter fie
      - 3
 
    * - **Workflow duration**
-     - 3m 14s
-     - 6m 51s
+     - 3 m 14 s
+     - 6 m 51 s
      - --
 
    * - **Median latency (ms)**
@@ -1239,8 +1239,8 @@ The following table shows response times for a 30 column index with 5 filter fie
      - 5
 
    * - **Workflow duration**
-     - 2m 32s
-     - 6m 38s
+     - 2 m 32 s
+     - 6 m 38 s
      - --
 
    * - **Median latency (ms)**
@@ -1290,8 +1290,8 @@ The following table shows response times for a 30 column index with 10 filter fi
      - 10
 
    * - **Workflow duration**
-     - 2m 42s
-     - 6m 54s
+     - 2 m 42 s
+     - 6 m 54 s
      - --
 
    * - **Median latency (ms)**

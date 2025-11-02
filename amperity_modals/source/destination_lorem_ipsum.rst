@@ -105,4 +105,4 @@ Links
 
 * Link to `Amperity Docs <https://docs.amperity.com>`__ |ext_link|.
 * Link to `Active Campaign <https://docs.amperity.com/operator/destination_active_campaign.html>`__ |ext_link|.
-* Relative link example (probably 404s) `some link text here <../tutorials/start_here.html>`__ |ext_link|.
+* Relative link example (probably 404) `some link text here <../tutorials/start_here.html>`__ |ext_link|.

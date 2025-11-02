@@ -150,7 +150,7 @@ A Stitch labels table is a CSV file that is maintained as a local file, and then
       FROM Unified_Coalesced
       WHERE amperity_id IN ('123a-456b-789c','234d-567e-891f')
 
-   where "'123a-456b-789c','234d-567e-891f'" represents the pair of Amperity IDs in the overcluster or undercluster.
+   where ``123a-456b-789c``, ``234d-567e-891f`` represents the pair of Amperity IDs in the overcluster or undercluster.
 
    This query will return all of the rows associated with those Amperity IDs. Examine the results to understand if the customer records were merged or split correctly.
    
