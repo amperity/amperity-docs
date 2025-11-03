@@ -2877,6 +2877,32 @@ The gender connected with a unique Amperity ID.
 
 .. term-gender-ampid-end
 
+.. TODO: The following is used only in /reference/semantics.rst.
+
+.. vale off
+
+.. term-gender-supported-values-start
+
+Supported values for fields associated with the **gender** semantic tag include:
+
+* F
+* FEMALE (is normalized to F)
+* M
+* MALE (is normalized to M)
+* MAN (is normalized to M)
+* NONE (is treated as NULL)
+* WOMAN (is normalized to F)
+* X
+* NONBINARY (is normalized to X)
+* NON-BINARY (is normalized to X)
+* ENBY (is normalized to X)
+* NB (is normalized to X)
+* OTHER (is normalized to X)
+
+.. term-gender-supported-values-end
+
+.. vale on
+
 
 **General Data Protection Regulation (GDPR)**
 

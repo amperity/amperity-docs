@@ -75,7 +75,7 @@ Get details
 
        .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
 
-       .. important:: Bluecore requires a header row to be present in CSV files. The header row cannot start with a number or contain any special characters other than underscores ( _ ) and must be less than 30 characters in length.
+       .. important:: Bluecore requires a header row to be present in CSV files. The header row cannot start with a number or contain any special characters other than underscores ``_`` and must be less than 30 characters in length.
 
           Bluecore recommends the following file naming convention:
 

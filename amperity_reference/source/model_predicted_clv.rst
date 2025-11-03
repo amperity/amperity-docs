@@ -61,7 +61,7 @@ How much will customers spend?
 
 .. model-predicted-clv-use-cases-spend-start
 
-The **Predicted CLV Next 365d** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days.
+The **Predicted CLV Next 365 Days** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days.
 
 After you select this attribute you can specify the type of values you want to use for this audience, such as:
 

@@ -61,7 +61,7 @@ How much will customers spend?
 
 .. model-predicted-clv-use-cases-spend-start
 
-The **Predicted CLV Next 365d** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days. You can access this attribute directly from the **Segment Editor**.
+The **Predicted CLV Next 365 Days** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days. You can access this attribute directly from the **Segment Editor**.
 
 After you select this attribute you can specify the type of values you want to use for this audience, such as:
 
@@ -97,7 +97,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-predicted-top-10-percent-howitworks-end
 
-**WHICH CUSTOMERS ARE PREDICTED TO BE YOUR TOP 10%?**
+**Which customers are predicted to be in your top ten percent?**
 
 .. usecase-predicted-top-10-percent-howitworks-callouts-start
 

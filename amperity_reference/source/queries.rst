@@ -134,7 +134,9 @@ Search queries
 
 .. queries-tab-search-start
 
-You can search for queries on the **Queries** page. From the search box, type a string and then hit the ENTER key. The list of queries is filtered to contain only those queries that match the search criteria. Each query in the list has available to it the same actions as it would from the unfiltered queries list. Click the name of the query to view it. Use the individual query menu to edit, make a copy, run, download, move, or delete.
+You can search for queries on the **Queries** page. From the search box, start searching by typing a string of characters.
+
+The list of queries is filtered to contain only queries that match the search criteria. Click the name of the query to view it. Use the individual query menu to edit, make a copy, run, download, move, or delete the query.
 
 Click **Clear** to return to the unfiltered queries list.
 
@@ -314,7 +316,7 @@ All queries must be activated before they can run as part of a scheduled workflo
 
    However, it also means that if 2 users are editing the same query at the same time, their changes will collide. Amperity resolves this by applying the last set of changes saved as a whole.
 
-   This keeps the query in a consistent state and ensures it will never be half-finished. But changes that were saved first will be overwritten. Be sure to coordinate changes to ensure that only one individual is working in a query.
+   This keeps the query in a consistent state and ensures it will never be half-finished. Changes that were saved first will be overwritten. Be sure to coordinate changes to ensure that only one individual is working in a query.
 
 .. queries-editor-multiuser-warning-end
 
@@ -508,7 +510,7 @@ Use the **Make a copy** option to add a copy of an existing query. This creates 
 
 .. queries-add-as-copy-steps-start
 
-#. From the **Queries** page, open the menu for a query, and then select **Make a copy**. This refreshes the recently edited queries list to add a query with "COPY - DRAFT" appended to the name.
+#. From the **Queries** page, open the menu for a query, and then select **Make a copy**. This refreshes the recently edited queries list to add a query with ``COPY - DRAFT`` appended to the name.
 
    The copied query will be of the same type--visual or SQL--as the original query.
 
@@ -893,7 +895,7 @@ Enable query alerts
 
 Any query can be configured to send workflow alerts when configured thresholds are met. This is an important way to ensure that queries that have dependencies on courier groups so they never send inaccurate or incomplete data.
 
-Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. There are two alert levels:
+Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. Alert levels include:
 
 #. **Warn when** record counts exceed the configured threshold. The workflow will continue running.
 

@@ -59,7 +59,7 @@ You can build as many endpoints as your downstream workflows require. Each indiv
 
 Any set of results that you can return with a query in Amperity can be enabled for use as an endpoint for your tenant's Profile API. Use any unique identifier in your unified customer profiles as the lookup key, use that lookup key to access individual attributes located at that endpoint, and then the on-demand access to your unified customer profiles to light up your use cases.
 
-.. tip:: :ref:`Use more (smaller) indexes instead of fewer (larger) indexes. <profile-api-response-times>` Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
+.. tip:: :ref:`Use more smaller indexes instead of fewer larger indexes. <profile-api-response-times>` Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
 
 .. profile-api-howitworks-end
 
@@ -85,8 +85,8 @@ The Profile API has the following endpoints:
 
    The Profile API requires the following policies to be assigned to users within your tenant:
 
-   #. **Allow Profile API administration** This policy allows users to use the **Destinations** page to manage endpoints in your tenant's Profile API.
-   #. **Allow API key administration** This policy allows users to use the **Users and Activity** page to manage API keys and tokens required by Amperity APIs.
+   #. **Allow Profile API administration** This policy allows access to the **Destinations** page to manage endpoints in your tenant's Profile API.
+   #. **Allow API key administration** This policy allows access to the **Settings** page to manage API keys and tokens required by Amperity APIs.
 
    These policies may be assigned to the same user.
 
@@ -137,7 +137,7 @@ where
 
 **Response**
 
-The response returns a list of endpoints (indexes) that are available within your tenant's Profile API. For example, a list of three indexes (Braze User Profiles, Product Catalog, and Hashed Email Profiles) have a response similar to:
+The response returns a list of endpoints that are available within your tenant's Profile API. For example, a list of three indexes--Braze User Profiles, Product Catalog, and Hashed Email Profiles--have a response similar to:
 
 .. code-block:: salt
    :linenos:
@@ -355,13 +355,13 @@ A query defines the list of attributes that will be available from a Profile API
 
 .. tip:: All attribute names within a query that is used to build an endpoint for the Profile API should be unique to ensure that all attributes are unique by lookup key value in the index.
 
-There are two requirements for queries that are used to define Profile API endpoints:
+Queries used to define Profile API endpoints have the following requirements:
 
 #. One field must be usable as the lookup key for the index. The value for this field must be a unique identifier. For example, the Amperity ID, a loyalty ID, a customer ID, a unique identifier in a downstream workflow (such as the "external_id" used in Braze), a non-hashed email address, or a hashed email address.
 
    Use the unique identifier that works best for your use case. Each endpoint may specify its own lookup key. For example, for website personalization you might use a customer ID or a loyalty ID, but when building your marketing campaigns in Braze that bring your customers to that website, you could use the Braze "external_id" for the index.
 
-#. There must be at least one attribute in that query that can be returned by the request to the endpoint for the specified lookup key. There is no practical limit to the number of attributes that can be in the index, but it is recommended to keep the list of attributes specific to your use case.
+#. At least one attribute must be returned in the response to the request to the endpoint for the specified lookup key. The number of attributes that can be in an index is not limited, but it is recommended to keep the list of attributes specific to your use case.
 
    Plan to use a variety of indexes to support a variety of use cases instead of using a single, large index. Some indexes, with the right combination of attributes, may be used to support multiple workflows.
 
@@ -518,9 +518,11 @@ The Profile API must be configured for use in Amperity. This is done in a series
 
 .. profile-api-enable-api-note-start
 
-.. note:: For endpoints that are running in your production environment that are actively being used with workflows, you should be careful about making changes to the list of attributes that are available in the index and to the values that are contained within those attributes. There are two approaches you could take:
+.. note:: For endpoints that are running in your production environment that are actively being used with workflows, you should be careful about making changes to the list of attributes that are available in the index and to the values that are contained within those attributes.
 
-   #. Use a sandbox to make changes directly to the "production" index, but run it from the sandbox to validate the changes and the effects those changes may have on the downstream workflow. This approach allows you to keep the same index ID in place and helps prevent disruption to any live Profile API integrations.
+   Do one of the following:
+
+   #. Use a sandbox to make changes directly to the "production" index, but run it from the sandbox to validate the changes and the effects those changes may have on the downstream workflow. This approach keeps the same index ID in place and helps prevent disruption to any live Profile API integrations.
 
    #. Build a new index that contains the changes, and then test those changes incrementally downstream on individual locations within the workflow. This requires updating the index ID in the downstream workflow.
 
@@ -545,11 +547,11 @@ To enable the Profile API for your tenant:
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ (or send email to support@amperity.com) and request enabling the Profile API for your tenant.
+     - Contact your support representative via the `Amperity Support Portal <../support/index.html>`__, or send email to support@amperity.com, and request to enable the Profile API for your tenant.
 
-       Support will enable the Profile API on your tenant and will let you know when the process is completed.
+       Support will enable the Profile API on your tenant and will notify when the process is completed.
 
-       .. important:: Your support representative uses SnapPass to provide the temporary access token for the Profile API. (Amperity is building an interface that allows you to self-generate the access token for the Profile API. This will ensure that only your team has access to the tokens and will make it easier to follow your organization's security policies, such as periodically refreshing the access tokens.)
+       .. important:: A support representative uses SnapPass to provide the temporary access token for the Profile API.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -685,7 +687,7 @@ An index must be defined for each query that is used to generate an endpoint for
           :align: left
           :class: no-scaled-link
 
-       Use the dropdown lists to define the field that determines sort order, and then choose a direction (ascending or descending). The field that determines sort order may be the same field that is used as the lookup key.
+       Use the dropdown lists to define the field that determines sort order, and then choose a direction, ascending or descending. The field that determines sort order may be the same field that is used as the lookup key.
 
        Use the **LIMIT** setting to define the maximum number of matching records that may be in the list. This value must be at least 1 and cannot be more than 10.
 
@@ -695,7 +697,10 @@ An index must be defined for each query that is used to generate an endpoint for
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - Choose the method by which the index will be generated (over time). There are two options: after a courier group run or manually.
+     - Choose the method by which the index will be generated over time. Do one of the following:
+
+       * Generate after a courier group run
+       * Generate manually
 
        Choose **None** when setting up an index for the first time or for an index that requires asynchronous or infrequent regeneration.
 
@@ -723,7 +728,7 @@ An index must be defined for each query that is used to generate an endpoint for
 
        If this save is for an initial test of the endpoint and contains only a small number of rows of data, the amount of time it can take to generate the index is measured in minutes. Use the **LIMIT** clause in the query to control the size of the index.
 
-       .. note:: A very large index that is generated for the first time can take a while (up to 6 hours). Please allow the index to finish generating before trying to access it from a downstream workflow.
+       .. note:: A very large index that is generated for the first time can up to six hours. Please allow the index to finish generating before trying to access it from a downstream workflow.
 
 .. api-profile-add-index-steps-end
 
@@ -737,7 +742,7 @@ Generate the endpoint
 
 An index must be generated before the endpoint will be available to your tenant's Profile API.
 
-.. note:: The user interface for the Profile API shows a spinner icon (|notification-running|) when an index is being refreshed.
+.. note:: The user interface for the Profile API shows a spinner icon |notification-running| when an index is being refreshed.
 
 **To generate an index for a Profile API endpoint**
 
@@ -815,7 +820,7 @@ The most direct way to validate the endpoints is to use cURL commands:
 #. Run the :ref:`GET indexes <profile-api-howitworks-endpoints-get-indexes>` command to verify the index is in the list of indexes.
 #. Run the :ref:`GET indexes/{index-id} <profile-api-howitworks-endpoints-get-index>` command to verify that a lookup key returns a single unique attribute or a list of attributes for that key.
 
-.. important:: The steps to validate the endpoint may be different, depending on the downstream application or toolkit being used to enable your use case. For example, :ref:`Braze Connected Content <profile-api-usecase-braze-validate-connected-content>` has its own syntax (Liquid) for building the interface that interacts with the endpoint in your tenant's Profile API.
+.. important:: The steps to validate the endpoint may be different, depending on the downstream application or toolkit being used to enable your use case. For example, :ref:`Braze Connected Content <profile-api-usecase-braze-validate-connected-content>` uses Liquid syntax for building the interface that interacts with the endpoint in your tenant's Profile API.
 
 .. profile-api-enable-validate-endpoint-end
 
@@ -861,16 +866,16 @@ Index response times
 
 The number of columns that are available from a Profile API endpoint determines:
 
-* The length of time it takes to build (or rebuild) an index
+* The length of time it takes to build or rebuild an index
 * The response time for requests that are made to an index
 
-The performance of each index depends on the number of columns and the number of rows in that index. As the number of columns and rows increase, the performance of that index will decrease. The size of the index has a greater effect on the length of time it takes to build (or rebuild) an index than the response times for requests that are made to that index.
+The performance of each index depends on the number of columns and the number of rows in that index. As the number of columns and rows increase, the performance of that index will decrease. The size of the index has a greater effect on the length of time it takes to build or rebuild an index than the response times for requests that are made to that index.
 
-.. important:: It is recommended to keep the size of an index to less than 10 columns and fewer than 100M rows. Use more (smaller) indexes instead of fewer (larger) indexes. Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
+.. important:: It is recommended to keep the size of an index to less than 10 columns and fewer than 100M rows. Use more smaller indexes instead of fewer larger indexes. Build each endpoint to be as specific to your downstream use case requirements as you need it to be.
 
    The following sections show response times for :ref:`5 column <profile-api-response-times-5-columns>`, :ref:`10 column <profile-api-response-times-10-columns>`, and :ref:`30 column <profile-api-response-times-30-columns>` index sizes and a range of output rows.
 
-   Response times were measured using simulated traffic across multiple Profile API endpoints simultaneously from US-East to US-West. Response times for US-West to US-West were less than 50ms. Use these response times as an indicator for the types of response times you will see for your tenant's set of Profile API endpoints.
+   Response times were measured using simulated traffic across multiple Profile API endpoints simultaneously from US-East to US-West. Response times for US-West to US-West were less than 50 ms. Use these response times as an indicator for the types of response times you will see for your tenant's set of Profile API endpoints.
 
 .. profile-api-response-times-start
 
@@ -880,7 +885,7 @@ The performance of each index depends on the number of columns and the number of
 
 .. admonition:: About response percentiles
 
-   Response percentiles divide individual response times into groups based on distribution: p90, and p99. Response percentiles are shown in ms (milliseconds).
+   Response percentiles divide individual response times into groups based on distribution: p90, and p99. Response percentiles are shown in milliseconds.
 
    * **p90**
 
@@ -1182,7 +1187,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Build an index that contains the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles. For example: loyalty ID and loyalty tier, predicted CLV tiers, and the rest of the customer profile (address, state, postal, and full name):
+     - Build an index that contains the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles. For example: loyalty ID and loyalty tier, predicted CLV tiers, and the rest of the customer profile, such as address, state, postal, and full name:
 
        .. code-block:: sql
 
@@ -1464,7 +1469,7 @@ Server-side JavaScript in Salesforce
 
 .. profile-api-usecase-ssjs-ssmc-start
 
-AMPscript is a scripting language used by Salesforce Marketing Cloud to render content on a subscriber-by-subscriber basis in. Embed `AMPscript <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ampscript.html>`__ |ext_link| variables within HTML emails, text emails, landing pages, SMS messages, and push notifications. These variables are updated at the time a message or notification is sent to (or a page is shown to) a subscriber.
+AMPscript is a scripting language used by Salesforce Marketing Cloud to render content on a subscriber-by-subscriber basis in. Embed `AMPscript <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ampscript.html>`__ |ext_link| variables within HTML emails, text emails, landing pages, SMS messages, and push notifications. These variables are updated at the time a message or notification is sent to, or a page is shown to, a subscriber.
 
 Use Amperity unified customer profiles as values for variables defined by AMPscript. Use `Server-Side JavaScript (SSJS) <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/ssjs_serverSideJavaScript.html>`__ |ext_link| to return data from a Profile API endpoint, and then make that data available to AMPscript.
 

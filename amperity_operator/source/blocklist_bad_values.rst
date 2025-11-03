@@ -175,6 +175,8 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
 
 .. bad-values-blocklist-global-values-list-start
 
+.. vale off
+
 .. list-table::
    :widths: 200 400
    :header-rows: 1
@@ -311,6 +313,8 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
        * NO NAME
        * RESERVED
        * USE
+
+.. vale on
 
 .. bad-values-blocklist-global-values-list-start
 
@@ -742,7 +746,7 @@ Advanced options
 
 .. bad-values-blocklist-advanced-start
 
-There are more ways to do blocklists:
+Blocklists can do any of the following advanced options:
 
 * :ref:`Per-data source <bad-values-blocklist-advanced-per-data-source>`
 * :ref:`Per-database <bad-values-blocklist-advanced-per-database>`
@@ -760,7 +764,7 @@ By data source
 
 .. bad-values-blocklist-advanced-per-data-source-start
 
-You can create a group of bad-values queries, with one query per data source. This allows you to tune the SQL query results to a specific data set for both semantic associations and thresholds. Use the existing SQL query as a template and the create a unique query for each bad-values blocklist you want to build based on results in the customer 360 database.
+You can create a group of bad-values queries, with one query per data source. This tunes the SQL query results to a specific data set for both semantic associations and thresholds. Use the existing SQL query as a template and the create a unique query for each bad-values blocklist you want to build based on results in the customer 360 database.
 
 .. bad-values-blocklist-advanced-per-data-source-end
 
@@ -840,7 +844,7 @@ The **address** field may be used in the bad-values blocklist as part of a compl
 
 .. important:: The **address2** field should never be used in the bad-values blocklist in isolation.
 
-In certain situations, the **address2** field is the source of a value that may need to be added to the bad-values blocklist. There are two ways to do this:
+In certain situations, the **address2** field is the source of a value that may need to be added to the bad-values blocklist. Do one of the following:
 
 #. :ref:`Remove a single address <bad-values-blocklist-advanced-addresses-address2-remove>`.
 #. :ref:`Concatenate address and address2 <bad-values-blocklist-advanced-addresses-address2-concatenate>`.
@@ -1047,7 +1051,7 @@ The bad-values blocklist operates against pre-processed semantic rows, and not a
 
    If the targeted data source is configured to derive **given-name** and **surname** semantics from the **full-name** semantic, values in the **full-name** semantic should never be added to a bad-values blocklist.
 
-   For example, if "BLACK BLACK" were added to the bad-values blocklist via the **full-name** semantic, then "BLACK" for both **given-name** and **surname** semantics would be blocklisted too. This type of situation is not common, but must be considered when deciding which semantics to use for building the bad-values blocklist.
+   For example, if ``BLACK BLACK`` were added to the bad-values blocklist via the **full-name** semantic, then ``BLACK`` for both **given-name** and **surname** semantics would be blocklisted too. This type of situation is not common, but must be considered when deciding which semantics to use for building the bad-values blocklist.
 
 .. bad-values-blocklist-derived-semantics-end
 

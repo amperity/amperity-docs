@@ -118,7 +118,7 @@ Orchestration groups
 Alerts are sent when:
 
 * A failure occurs within an orchestration group workflow, regardless of whether the orchestration group is configured to run after a courier group or run on a schedule.
-* A failure occurs in an upstream courier group if your orchestration group is configured to run after a courier group. This is to let you know about potential delays to your orchestration group workflow.
+* A failure occurs in an upstream courier group if your orchestration group is configured to run after a courier group.
 * A user cancels an automatically launched workflow
 * The orchestration group succeeds, if configured. This is only available for orchestration groups run on a schedule. Subscribe to courier group runtime alerts if your orchestration group is configured to run after a courier group and you want to know when it succeeds.
 
@@ -136,7 +136,7 @@ Alerts are sent when:
 
 * A failure occurs within campaign send, regardless of whether the campaign is configured to run after a courier group or run on a schedule
 * A user cancels an automatically launched workflow
-* A failure occurs in an upstream courier group if your campaign is configured to run after a courier group. This is to let you know about potential delays to your campaign send.
+* A failure occurs in an upstream courier group if your campaign is configured to run after a courier group.
 * The campaign succeeds, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group success alerts if your campaign is configured to run after a courier group and you want to know when it succeeds.
 * The campaign runtime exceeds a threshold, if configured. This is only available for campaigns run on a schedule. Subscribe to courier group runtime alerts if your campaign is configured to run after a courier group and you want to know when it runs long.
 
@@ -422,7 +422,7 @@ A workflow resolution may allow restarting a workflow. This will rerun the workf
 
 .. workflows-common-restart-note-start
 
-.. caution:: A workflow resolution may allow you to restart a workflow after making a configuration update to your tenant.
+.. caution:: A workflow resolution can be restarted after making a configuration update to your tenant.
 
    For example, a workflow restart may allow:
 
@@ -449,7 +449,7 @@ This type of resolution will rerun the workflow from the point at which the work
 
 .. workflows-common-retry-caution-start
 
-.. caution:: A workflow resolution may allow you to change a parameter, and then retry a task.
+.. caution:: A workflow resolution can change parameters, and then retry a task.
 
    For example, a workflow retry may allow:
 

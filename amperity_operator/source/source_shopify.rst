@@ -88,7 +88,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail one.
           :align: center
           :class: no-scaled-link
-     - Permission to connect FiveTran to Shopify.
+     - Permission to connect Fivetran to Shopify.
 
        .. include:: ../../shared/sources.rst
           :start-after: .. sources-get-details-fivetran-connect-start

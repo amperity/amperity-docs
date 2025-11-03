@@ -98,8 +98,8 @@ Building an effective churn prevention campaign starts with defining audiences t
 
 Plan a series of promotions and offers that can be tied to each audience or sub-audience within your campaign. For example:
 
-* Modest discounts (10% off)
-* Substantial discount (25% off)
+* Modest discounts, such as 10% off
+* Substantial discount, such as 25% off
 * Free shipping
 * Exclusive offers
 * Buy one and get one free

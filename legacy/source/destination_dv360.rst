@@ -134,7 +134,7 @@ Get details
           :class: no-scaled-link
      - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity creates it.
 
-       The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be 0-540 (inclusive) or 10000 for an unlimited duration.
+       The membership duration defines the length of time in days at which individual audience members belong to the segment. The membership duration must be 0-540 inclusive or 10000 for an unlimited duration.
 
        .. tip:: Set this value to "0" to remove all audience members.
 
@@ -431,7 +431,7 @@ Contact Info Matching
 
 .. destination-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to (at least) one of the following columns:
+A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340

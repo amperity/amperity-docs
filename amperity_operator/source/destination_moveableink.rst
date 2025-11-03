@@ -234,7 +234,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **Index ID**
 
-          The index ID is a unique ID for each Profile API endpoint to which Moveable Ink Studio will make requests. For example: "ix-2BmokYMVR". This value can be copied from the Amperity user interface :ref:`after the Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
+          The index ID is a unique ID for each Profile API endpoint to which Moveable Ink Studio will make requests. For example: ``ix-2BmokYMVR``. This value can be copied from the Amperity user interface :ref:`after the Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
 
        **User ID**
 

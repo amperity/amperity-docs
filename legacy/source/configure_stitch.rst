@@ -115,8 +115,8 @@ Blocking strategy
 
 The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
 
-* An overly generous blocking strategy may result in a high recall rate (too many pairs being evaluated) along with negative system performance.
-* An overly conservative blocking strategy may result in a low recall rate (too few pairs being evaluated).
+* An overly generous blocking strategy may result in a high recall rate--too many pairs being evaluated--along with negative system performance.
+* An overly conservative blocking strategy may result in a low recall rate--too few pairs being evaluated.
 * Individual blocking keys may be conservative or generous.
 
 .. configure-stitch-general-clustering-blocking-end
@@ -196,7 +196,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:login-trimmed**
      - Non-default. This blocking strategy groups values associated with the first five characters of an email addresses derived from **email**. This is used for low-threshold email address matching.
    * - **:name**
-     - Non-default. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
+     - Non-default. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for ``JOHN SMITH`` and ``SMITH JOHN`` is ``JOHN:SMITH``.
    * - **:phone**
      - Default. This blocking strategy groups values associated with the **phone** semantic.
 
@@ -495,7 +495,7 @@ Ignore jitter alerts
 
 .. configure-stitch-general-stitch-ignore-jitter-rates-start
 
-.. note:: The rates at which jitter may occur is when large numbers of customer records are added to or removed from your tenant or when two percent (or greater) of all customer records are assigned an updated Amperity ID.
+.. note:: The rates at which jitter may occur is affected by adding or removing large numbers of customer records or when two percent or greater of all customer records are assigned an updated Amperity ID.
 
 .. configure-stitch-general-stitch-ignore-jitter-rates-end
 
@@ -602,15 +602,15 @@ As new data is input to Amperity, the Stitch process identifies when new or chan
 
 Stable ID assignment can be a resource-intensive process, in particular when:
 
-#. Adding data sources that contain large numbers of rows (100+ million rows) of customer records.
-#. Updating existing data sources with large numbers of rows on a periodic (monthly, quarterly, etc.) basis.
+#. Adding data sources that contain large numbers of rows--100+ million rows--of customer records.
+#. Updating existing data sources with large numbers of rows on a periodic basis, such as monthly or quarterly.
 #. Data contains a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
 
 You can configure the stable ID assignment process in the following ways:
 
 #. :ref:`Disable stable IDs <configure-stitch-general-stitch-stable-id-disable>`
 #. :ref:`Increase the number of partitions that are available to stable ID assignment <configure-stitch-general-stitch-stable-id-partitions>`
-#. :ref:`Stop building the Unified Changes table (temporarily) <configure-stitch-general-stitch-skip-changes>`
+#. :ref:`Stop building the Unified Changes table temporarily <configure-stitch-general-stitch-skip-changes>`
 
 .. configure-stitch-general-stitch-stable-id-end
 
@@ -900,7 +900,7 @@ Clean foreign keys
 
 .. configure-stitch-advanced-profile-clean-foreign-keys-start
 
-To clean foreign keys (trim whitespace and update them to uppercase), use:
+To clean foreign keys, trim whitespace, and update them to uppercase, use:
 
 .. code-block:: clojure
 
@@ -943,6 +943,8 @@ Many email addresses are not useful for identity resolution. Some of them are ge
 .. configure-stitch-advanced-profile-email-address-patterns-start
 
 The following values associated with the **email** semantic are ignored by Stitch when performing identity resolution:
+
+.. vale off
 
 * **@NOEMAIL.COM**
 * **@NOMAIL.COM**
@@ -1019,6 +1021,8 @@ The following values associated with the **email** semantic are ignored by Stitc
 * VENDORS@
 * **XXX@**
 
+.. vale on
+
 The values in **bold** are always ignored.
 
 .. configure-stitch-advanced-profile-email-address-patterns-end
@@ -1032,6 +1036,8 @@ Stitch may be configured to allow certain generic email addresses to be availabl
    pre-processing-profile :allow-business-email
 
 When this setting is updated, only the following email address patterns are ignored by Stitch:
+
+.. vale off
 
 * @NOEMAIL.COM
 * @NOMAIL.COM
@@ -1055,6 +1061,8 @@ When this setting is updated, only the following email address patterns are igno
 * NOTHANKYOU@
 * REFUSED@
 * XXX@
+
+.. vale on
 
 Use a bad-values blocklist to configure Amperity to continue ignoring any of the email address patterns that were removed from the default list of ignored email patterns.
 
@@ -1176,7 +1184,7 @@ However, not all of the PII is identical. The email addresses do not match acros
     r-829   Justin      Currie     123 West Elm St   ...    vnbb11095412@gmail.com
    ------- ----------- ---------- ----------------- ------ ------------------------
 
-The complete set of records (including trivial duplicates) will be available in the **Unified Coalesced** table. The collapsed records will be available in the **Unified Preprocessed Raw** table.
+The complete set of records, including trivial duplicates, will be available in the **Unified Coalesced** table. The collapsed records will be available in the **Unified Preprocessed Raw** table.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-trivial-duplicate-qualified-start
@@ -1232,7 +1240,7 @@ To define an exclusion, add the following advanced configuration setting for Sti
 
    :amperity.stitch.settings/soft-trivial-dupe-semantic-exclusions #{"semantic_name"}
 
-where **semantic_name** is a the name of a semantic, such as **email**. (This value is **nil** by default.)
+where **semantic_name** is a the name of a semantic, such as **email**. Default value: **nil**.
 
 .. configure-stitch-advanced-profile-trivial-duplicates-exclusions-end
 
@@ -1311,7 +1319,7 @@ Stitch reports
 
 .. configure-stitch-advanced-reports-start
 
-A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included (or excluded) can help improve the quality of the Stitch report. The Amperity IDs that are included appears first in the series of individuals shown when exploring Amperity IDs.
+A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included or excluded can help improve the quality of the Stitch report. The Amperity IDs that are included appears first in the series of individuals shown when exploring Amperity IDs.
 
 Stitch may be configured to include or exclude specific Amperity IDs in the Stitch report.
 

@@ -37,7 +37,7 @@ About data sources
 
 .. add-email-engagement-data-sources-start
 
-There are two general types of data sources that may be used to provide email engagement data to Amperity: "raw email events" and "summarized events".
+Two types of data sources exist for providing email engagement data to Amperity: "raw email events" and "summarized events".
 
 Your tenant's approach to adding email engagement will determine which types of data sources to use, along with which sets of semantic tags will be applied to incoming data.
 
@@ -185,7 +185,7 @@ Steps to enable
 
 .. email-engagement-steps-start
 
-There are two options available for email engagement:
+Do one of the following:
 
 #. :ref:`Unified engagement from raw email events data <email-engagement-steps-workflow-unified>`
 #. :ref:`Summarized engagement from summarized email events data <email-engagement-steps-workflow-summarized>`

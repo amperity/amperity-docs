@@ -36,7 +36,7 @@ Orchestration groups are configured in the **Destinations** page, from the **Add
 
 .. orchestration-groups-about-list-start
 
-There are three configuration options for orchestration groups:
+Configure orchestration groups to:
 
 #. :ref:`Run after courier group <orchestration-groups-run-after-courier-group>`
 #. :ref:`Run on a schedule <orchestration-groups-run-on-a-schedule>`

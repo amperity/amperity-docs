@@ -19,7 +19,7 @@ About user settings
 
 .. settings-users-start
 
-The **Users** tab on the **Settings** page allows users assigned the :ref:`Allow user administration <policies-allow-user-administration>` policy option to self-service the management of individual users who have access to your tenant.
+The **Users** tab on the **Settings** page is for self-service management of individual username and password user accounts. Users must be assigned the :ref:`Allow user administration <policies-allow-user-administration>` policy option to access this page and self-service account management.
 
 .. settings-users-end
 
@@ -48,7 +48,7 @@ Add users
 
 .. settings-users-add-start
 
-Before a user can log into Amperity they must be added and a policy must be assigned to them. The Amperity admin interface allows users to be managed directly using name and password authentication.
+Before a user can log into Amperity they must be added and a policy must be assigned to them. The Amperity admin interface can be managed directly with username and password authentication.
 
 .. settings-users-add-end
 

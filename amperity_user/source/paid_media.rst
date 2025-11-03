@@ -54,7 +54,7 @@ First-party data is provided to a company or a brand from the customer, often di
    :align: left
    :class: no-scaled-link
 
-There are many sources of first-party data, including:
+Many sources of first-party data exist, including:
 
 * Browsing activity on your brand's website
 * Browsing activity within a mobile app
@@ -235,7 +235,7 @@ The **Unified Paid Media** table contains all known profile data for each of you
 
 .. admonition:: Match rates vs. matched customers
 
-   A customer profile in the **Merged Customers** table is associated with a customer's best email address. But often customers have alternate email addresses for a variety of reasons. These alternate email addresses are available from the **Unified Paid Media** table.
+   A customer profile in the **Merged Customers** table is associated with a customer's best email address, but often customers have alternate email addresses for a variety of reasons. These alternate email addresses are available from the **Unified Paid Media** table.
 
    If your brand sends a greater number of known email addresses your brand can increase the likelihood of matching more customers even if the overall match rate decreases.
 
@@ -267,7 +267,7 @@ Activate audiences
 
 .. paid-media-activate-customers-start
 
-There are many ways to activate audiences across the paid media landscape. The first step is the most important: build audiences against complete customer profiles built from first-party data.
+Many ways exist for activating audiences across the paid media landscape. The first step is the most important: build audiences against complete customer profiles built from first-party data.
 
 This approach leads to:
 
@@ -312,7 +312,7 @@ Performance indicators
 
 .. paid-media-measure-performance-indicators-start
 
-There are three broad groups of performance indicators that you can use to measure the success of your paid media campaigns:
+Use the following broad groups of performance indicators to measure the success of paid media campaigns:
 
 * Amperity-focused
 * Paid channel-focused

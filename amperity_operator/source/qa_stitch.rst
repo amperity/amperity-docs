@@ -322,7 +322,7 @@ Customer keys
 
 #. Run the :doc:`dedupe keys per Amperity ID <stitch_qa_dedupe_keys_per_amperity_id>` query to return a rough distribution of dedupe keys to Amperity ID. Customer keys are interesting because they show before and after for entity distribution.
 
-   Update this query to use customer keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return 2 or more dedupe keys.
+   Update this query to use customer keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return two or more dedupe keys.
 
 .. qa-stitch-look-for-customer-keys-what-end
 
@@ -350,7 +350,7 @@ Foreign keys
 
 #. Look for records where :ref:`the Amperity ID and a foreign key. <qa-stitch-look-for-foreign-keys-bad-matches>`  are equal, but one or more values associated with **email**, **given-name**, and **surname** are not.
 #. :ref:`Compare foreign keys across data sources. <qa-stitch-look-for-foreign-keys-compare>`
-#. Return a rough distribution of :ref:`deduplicated foreign keys <qa-stitch-look-for-foreign-keys-deduplicated-distribution>`, and then look for clusters of records 2 or more.
+#. Return a rough distribution of :ref:`deduplicated foreign keys <qa-stitch-look-for-foreign-keys-deduplicated-distribution>`, and then look for clusters of records two or more.
 #. Investigate if blocking size limits for :ref:`foreign keys caused splits <qa-stitch-look-for-foreign-keys-limit>` to groups of records.
 #. Are foreign keys being :ref:`prioritized over separation keys <qa-stitch-look-for-foreign-keys-prioritization>` correctly?
 #. Look for records that :ref:`score at 5.0 <qa-stitch-look-for-foreign-keys-trivial-duplicates>`, but do not have foreign keys in common.
@@ -414,9 +414,9 @@ Deduplicated distribution
 
 Run the :doc:`dedupe keys per Amperity ID <stitch_qa_dedupe_keys_per_amperity_id>` query to return a rough distribution of dedupe keys to Amperity ID.
 
-Foreign keys are interesting because Amperity deterministically matches on them in most situations. When there are 2 or more dedupe keys related to foreign keys, this is an indicator that records were connected beyond what could have been connected deterministically.
+Foreign keys are interesting because Amperity deterministically matches on them in most situations. When there are two or more dedupe keys related to foreign keys, this is an indicator that records were connected beyond what could have been connected deterministically.
 
-Update the query to use foreign keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return 2 or more dedupe keys. Evidence of records that are connected, but were previously independent, is :ref:`an indicator of overclustering <qa-stitch-look-for-overclustering>`.
+Update the query to use foreign keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return two or more dedupe keys. Evidence of records that are connected, but were previously independent, is :ref:`an indicator of overclustering <qa-stitch-look-for-overclustering>`.
 
 .. tip:: Use concatenated values, such as "datasource + fk", to focus the results on a per-source level.
 
@@ -583,7 +583,7 @@ For example, two records with the same Amperity ID look as if they should be two
 
    :ref:`Foreign keys <qa-stitch-look-for-foreign-keys-deduplicated-distribution>` are interesting because Amperity deterministically matches on them in most situations. :ref:`Customer keys <qa-stitch-look-for-customer-keys>` are interesting because they show before and after for entity distribution.
 
-   You should not expect obvious "good" or "bad" results, instead focus on clusters that return 2 or more dedupe keys.
+   You should not expect obvious "good" or "bad" results, instead focus on clusters that return two or more dedupe keys.
 
 #. Run the :doc:`common values <stitch_qa_common_values>` query to return common values across semantics in a single view that shows cardinality for semantic values and the context for values that occur across records and clusters.
 

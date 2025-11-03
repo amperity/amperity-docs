@@ -297,7 +297,7 @@ Export databases and tables
 
 .. destination-snowflake-aws-database-export-start
 
-Database tables (or even entire databases) can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
+Database tables, or even entire databases, can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
 
 .. destination-snowflake-aws-database-export-end
 

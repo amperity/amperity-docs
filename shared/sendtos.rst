@@ -94,7 +94,7 @@ The default audience list in |destination-name| requires only an email address. 
 #. From the **Object** dropdown, select the query for which results is sent to |destination-name|.
 #. From the **Destination** dropdown, select a destination that is configured for sending data to |destination-name|.
 #. Verify all settings.
-#. Set the workflow to **Manual**. (You can change this to automatic later, after verifying the end-to-end workflow.)
+#. Set the workflow to **Manual**. You can change this to automatic later, after verifying the end-to-end workflow.
 #. Click **Save**.
 
 .. sendtos-add-orchestration-generic-end
@@ -124,7 +124,7 @@ The default audience list in |destination-name| requires only an email address. 
       AMPERITY.CUSTOMER_360.TABLE_NAME
 
 #. Verify the option to use for managing the table in Snowflake.
-#. Set the workflow to **Manual**. (You can change this to automatic later, after verifying the end-to-end workflow.)
+#. Set the workflow to **Manual**. You can change this to automatic later, after verifying the end-to-end workflow.
 #. Click **Save**.
 
 .. sendtos-add-orchestration-snowflake-end

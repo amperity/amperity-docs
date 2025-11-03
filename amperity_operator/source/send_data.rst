@@ -25,7 +25,7 @@ General advice and recommendations for sending data to Amperity.
 Sending data to Amperity is the combination of:
 
 #. Identifying a data source. It is important to define data sources to have predictable handoffs.
-#. Determining the location from which that data source will be made available to Amperity, the file format to be provided, and the process that is used (cloud-based storage, SFTP, FiveTran, REST API, or Snowflake) to make that available.
+#. Determining the location from which that data source will be made available to Amperity, the file format to be provided, and the process that is used (cloud-based storage, SFTP, Fivetran, REST API, or Snowflake) to make that available.
 
    .. important:: Even if you do not see a data source in various lists of data sources that are shown to be "available" (such as on the Amperity website or on various pages within the documentation site), this does not mean you cannot send data from that source. A significant percentage of data sources used by Amperity customers are enabled using cloud-based storage.
 
@@ -160,7 +160,7 @@ Amperity can ingest data from many types of data sources, such as:
 * |format_ndjson|
 * |format_json| and |format_json_streaming|
 * Many REST APIs
-* Snowflake tables, including data sources that use FiveTran to send data
+* Snowflake tables, including data sources that use Fivetran to send data
 * |format_cbor|
 
 .. send-data-to-amperity-file-format-other-end
@@ -191,7 +191,7 @@ Data may be provided to Amperity in the following ways:
    
    Some data sources provide a REST API that may be used to provide data to Amperity, such as |source_campaign_monitor|.
 
-   Many data sources are eligible to use FiveTran as the interface that pulls data to Amperity, such as |source_hubspot| |source_klaviyo|, |source_kustomer|, |source_shopify|, |source_sailthru|, and |source_square|.
+   Many data sources are eligible to use Fivetran as the interface that pulls data to Amperity, such as |source_hubspot| |source_klaviyo|, |source_kustomer|, |source_shopify|, |source_sailthru|, and |source_square|.
 #. The customer pushes data to Amperity via the |api_streaming_ingest|.
 
    .. note:: This scenario should only be used for transactional or event-like data that would be streamed as it happens.

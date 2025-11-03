@@ -29,7 +29,7 @@ Brands that ignore customer-centric marketing risk losing their most valuable cu
 Amperity promotes customer-centric marketing by enabling new insights on every customer, smart segmentation, and seamless campaign integration from an intuitive interface that makes it easy to apply the right segments, test and optimize, and then grow loyalty and lifetime value.
 
 * Generate customer-level and segment-level insights, including for brand and channel behaviors, product preferences, revenue sizing, and recommended actions.
-* Enable out-of-the-box predictive models, segments, and personas designed to improve customer lifetime value with a visual interface that allows you to explore and create segments on your own.
+* Enable out-of-the-box predictive models, segments, and personas designed to improve customer lifetime value with a visual interface to explore and create segments on your own.
 * Activate campigns across channels to optimize channel mix, drive improved experiences, and improve return on investment.
 * Apply closed-loop measurements, multivariate testing, and control groups to transactions, revenue gains, and key performance indicators for customers.
 * Send these results to any 100+ integrations and any of your downstream workflows, including to marketing, customer experience, advertising, and attribution tools.
@@ -44,7 +44,7 @@ Common workflows
 
 .. tools-for-marketers-ampiq-common-workflows-start
 
-Common marketing workflows use a combination of segment insights and predictive attributes to define audiences, and then assign those audiences to campaigns that are split into a series of control and treatment groups that allow you to test and refine that campaign over time.
+Common marketing workflows use a combination of segment insights and predictive attributes to define audiences, and then assign those audiences to campaigns that are split into a series of control and treatment groups for testing and refining campaigns over time.
 
 * Use segment insights to build high-value segments.
 * Use recommended audience sizes to find the right number of customers for your campaign.

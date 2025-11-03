@@ -32,7 +32,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-customers-high-value-multi-channel-howitworks-end
 
-**HIGH-VALUE MULTICHANNEL CUSTOMERS**
+**High-value multichannel customers**
 
 .. usecase-customers-high-value-multi-channel-howitworks-callouts-start
 

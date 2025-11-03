@@ -888,7 +888,7 @@ Primary keys (pk)
 
 .. semantics-key-primary-caution-start
 
-.. caution:: Amperity allows you to assign the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
+.. caution:: Amperity allows assignment the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
 
    A domain table can have only one primary key. When the **pk** semantic tag is applied to more than one field in the **Feed Editor**, those values are concatenated into a primary key, which is stored in the **_pk** field in the domain table. You should limit the number of fields to which the **pk** semantic tag is applied.
 
@@ -1806,21 +1806,9 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-       Supported values for fields associated with the **gender** semantic tag include:
-
-       * F
-       * FEMALE (is normalized to F)
-       * M
-       * MALE (is normalized to M)
-       * MAN (is normalized to M)
-       * NONE (is treated as NULL)
-       * WOMAN (is normalized to F)
-       * X
-       * NONBINARY (is normalized to X)
-       * NON-BINARY (is normalized to X)
-       * ENBY (is normalized to X)
-       * NB (is normalized to X)
-       * OTHER (is normalized to X)
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-gender-supported-values-start
+          :end-before: .. term-gender-supported-values-end
 
    * - **generational-suffix**
      - String
@@ -2413,7 +2401,7 @@ The following table lists the tags available to this semantic group (with requir
      - String
      - *Optional*
 
-       Product catalog semantics may be applied to data sources that contain product catalog data. There are two sets of product catalog semantic tags: **txn-item/** and **pc/**.
+       Product catalog semantics may be applied to data sources that contain product catalog data. Use one of these product catalog semantic tags: **txn-item/** and **pc/**.
 
        #. You may use **txn-item/** product catalog semantic tags when product catalog data appears within data sources that contain details about your product catalog when it exists alongside details about orders and items.
 

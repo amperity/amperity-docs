@@ -964,7 +964,7 @@ Add line numbers to code blocks using the ``:linenos:`` attribute.
      ],
    }
 
-.. tip:: This attribute is sometimes picky and the build breaks and you discover that it works fine with FOUR spaces instead of THREE (with everything aligned with the FOUR spaces instead of THREE). Ask for help from the docs team if you run into this issue.
+.. tip:: This attribute is sometimes picky and the build breaks and you discover that it works fine with four spaces instead of three, with everything aligned with the four spaces instead of three. Ask for help from the docs team if you run into this issue.
 
 .. rst-code-block-line-numbers-end
 
@@ -1677,7 +1677,7 @@ Code blocks can be configured to have a sidebar on the right side. In general do
    * A list
    * Is OK.
 
-   And more content.
+   More content.
 
    The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
 
@@ -2297,7 +2297,9 @@ Headers are configured like this:
 
 .. rst-header-levels-important-start
 
-.. note:: There is not an H5 header level. Instead use bold strings like headers. See :ref:`custom admonitions <rst-admonition-custom>` for an example of using bold strings in place of H5 headers.
+.. note:: H5 header levels are not supported.
+
+   Instead use bold strings like headers. See :ref:`custom admonitions <rst-admonition-custom>` for an example of using bold strings in place of H5 headers.
 
 .. rst-header-levels-important-end
 
@@ -2960,7 +2962,7 @@ Bold
 
 .. rst-inline-markup-bold-start
 
-Use two asterisks (``**``) around the word to apply bold formatting: ``**bold**``. For example: **this is bold content**.
+Use two asterisks ``**`` around the word to apply bold formatting: ``**bold**``. For example: **this is bold content**.
 
 .. caution:: You may not use bold in headers or within the text strings for hyperlinks.
 
@@ -2998,7 +3000,7 @@ Italics
 
 .. rst-inline-markup-italic-start
 
-Use a single asterisk (``*``) around the word to apply italics formatting: ``*italics*``. For example: *this is italicized content*.
+Use a single asterisk ``*`` around the word to apply italics formatting: ``*italics*``. For example: *this is italicized content*.
 
 .. caution:: You may not use italics in headers or within the text strings for hyperlinks.
 
@@ -3306,7 +3308,7 @@ Use a grid to present a list of information within boxes. Use grid lists sparing
 
       Use ``4`` for a large gutter.
 
-**Or this** (no ``:outline:``)
+**Or this** without ``:outline:``
 
 .. grid:: 1 1 2 2
 
@@ -3379,7 +3381,7 @@ Use an options list to show options for command-line tools or for other types of
 .. code-block:: none
 
    -a         Output all.
-   -b         Output both (this description is long).
+   -b         Output both this description is longer to show wrapped output.
    -c arg     Output just arg.
    --long     Output all day long.
 
@@ -3393,13 +3395,13 @@ Use an options list to show options for command-line tools or for other types of
 **For this**
 
 -a         Output all.
--b         Output both (this description is long).
+-b         Output both this description is longer to show wrapped output.
 -c arg     Output just arg.
 --long     Output all day long.
 
 -p         This option has two paragraphs in the description. This is the first.
 
-           This is the second. Blank lines may be omitted between options (as above) or left in (as here and below).
+           This is the second. Blank lines may be omitted between options or left in.
 
 -f FILE, --file=FILE  These two options are synonyms. Both have arguments.
 
@@ -3575,7 +3577,7 @@ Unordered lists
 
 .. rst-list-unordered-start
 
-An unordered list has each list item preceded by a single asterisk (``*``) followed by a space.
+An unordered list has each list item preceded by a single asterisk ``*`` followed by a space.
 
 **Do this**
 
@@ -4230,7 +4232,7 @@ A list table is built using the ``.. list-table::`` directive with the following
 
        #. Lists
        #. Images
-       #. And other formatting options
+       #. Other formatting options
 
        inside columns in a list table.
 
@@ -4566,7 +4568,7 @@ Global tokens are used sparingly. Examples of global tokens include:
 * Inline icons for Font Awesome, such as |notification-error|, |policy|, and |checkmark-required|.
 * Unicode characters, such as |u-dollar|, |u-peso|, |u-pound|, |u-euro|, |u-rupee|, |u-yen|, and |u-won|.
 
-The source for global tokens is a text file located in the ``/shared`` directory. Each global token is defined using the ``.. raw::`` directive or ``.. unicode::`` directive. The variable is declared between pipe characters (``|``) as part of the directive, along with what to convert the variable to within the topic.
+The source for global tokens is a text file located in the ``/shared`` directory. Each global token is defined using the ``.. raw::`` directive or ``.. unicode::`` directive. The variable is declared between pipe characters ``|`` as part of the directive, along with what to convert the variable to within the topic.
 
 **For URLs**
 
@@ -4732,7 +4734,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
    * - Destination
      - Variables
    * - **Amazon Ads**
-     - Amazon Ads allows customers to be removed in *0-34,300,800 seconds*. The `Amazon Ads <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ topic uses the following variables:
+     - Amazon Ads removes customers in *0-34,300,800 seconds*. The `Amazon Ads <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ topic uses the following variables:
 
        .. code-block:: none
 
@@ -4742,7 +4744,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
    * - **Google Ads**
 
        **Google Customer Match**
-     - Google Ads and Google Customer Match allows customers to be removed in *0-540 days*. The `Google Ads <https://docs.amperity.com/operator/destination_ads.html>`__ and Google Customer Match topics use the following variables:
+     - Google Ads and Google Customer Match removes customers in *0-540 days*. The `Google Ads <https://docs.amperity.com/operator/destination_ads.html>`__ and Google Customer Match topics use the following variables:
 
        .. code-block:: none
 
@@ -4750,7 +4752,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
           .. |duration-value| replace:: "0" - "540"
 
    * - **The Trade Desk**
-     - The Trade Desk allows customers to be removed in *0-180 days*. The `The Trade Desk <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ topic uses the following variables:
+     - The Trade Desk removes customers in *0-180 days*. The `The Trade Desk <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ topic uses the following variables:
 
        .. code-block:: none
 
@@ -4758,7 +4760,7 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
           .. |duration-value| replace:: "0" - "180"
 
    * - **Yahoo DSP**
-     - Yahoo DSP allows customers to be removed in *0-90 days*. The `Yahoo DSP <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ topic uses the following variables:
+     - Yahoo DSP removes customers in *0-90 days*. The `Yahoo DSP <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ topic uses the following variables:
 
        .. code-block:: none
 
@@ -4766,9 +4768,9 @@ For example, some destinations for paid media, including Amazon Ads, Google Ads,
           .. |duration-value| replace:: "0" - "90"
 
 
-The challenge is to come up with a description for **Membership duration** that can be used in *all* topics for destinations that have configure audience membership lengths.
+The challenge is to come up with a description for **Membership duration** for use in *all* destination topics that have configurable audience membership lengths.
 
-The following descriptions are located in the ``/shared/destination_settings.rst`` file. There are two paragraphs, each bracketed by :ref:`section references <rst-section-references>`.
+The following paragraphs, each bracketed by :ref:`section references <rst-section-references>`, are located in the ``/shared/destination_settings.rst`` file.
 
 .. code-block:: none
    :caption: /shared/destination_settings.rst

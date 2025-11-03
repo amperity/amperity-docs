@@ -1,1 +1,1 @@
-*This file is authored in simple text (.txt), intentionally italicized, and located in the `/shared` directory.*
+*This file is authored in simple text using a .txt file extension, is intentionally italicized, and is located in the `/shared` directory.*

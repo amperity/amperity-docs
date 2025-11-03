@@ -37,7 +37,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-start
 
-.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters (``a-z``), numbers (``0-9``), and underscores (``_``). Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters (such as ``#``, ``*``, or ``-``) with an underscore.
+.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters, numbers, and underscores. Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters, such as ``#``, ``*``, or ``-``, with an underscore.
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-end
 
@@ -61,7 +61,7 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
 
    If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import fails and return a 400 error.
 
-   If you experience a 400 error (due to invalid email addresses), identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
+   If you experience a 400 error due to invalid email addresses, first identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
 
    Amperity updates contacts that already exist in |destination-name|. Amperity does not create contacts.
 

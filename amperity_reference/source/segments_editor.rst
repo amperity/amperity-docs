@@ -230,7 +230,7 @@ Segment conditions
 
 .. segments-editor-conditions-start
 
-You can add conditions to a segment by selecting them from a list. There are three types of conditions:
+You can add conditions to a segment by selecting them from a list using conditions:
 
 * :ref:`segments-editor-condition-attributes`
 * :ref:`segments-editor-condition-customer-lists`
@@ -292,7 +292,7 @@ Operators
 
 An operator defines how results from a column in a data source is returned.
 
-For example: From your customer 360 table, return all customer records that contain email addresses that are similar to "gmail.com". The data source is your customer 360 table, the attribute is the **email** field in that table, and the **is like** operator allows you to use "gmail.com" to look for values that contain "gmail.com", and then return a list of customers who have "gmail.com" in their email address.
+For example: from your customer 360 table, return all customer records that contain email addresses similar to "gmail.com". The data source is your customer 360 table, the attribute is the **email** field in that table. Use the **is like** operator and give it a value of ``gmail.com`` to look for values that contain "gmail.com". This returns a list of customers who have "gmail.com" in their email address.
 
 In SQL, an operator is expressed using the **WHERE** clause. The following example returns a list of customers who have "gmail.com" in their email address:
 
@@ -807,7 +807,7 @@ SQL Editor
 
 .. segments-editor-sql-start
 
-The **Segment Editor** is an optional interface that allows you to build an attribute profile using Presto SQL. Start with a **SELECT** statement that returns the Amperity ID, and then apply a series of **WHERE** statements to define one or more attribute groups that match specific conditions and values.
+The **Segment Editor** is an optional interface that builds attribute profiles using Presto SQL. Start with a **SELECT** statement, configure it to return customers unique by the Amperity ID, and then apply a series of **WHERE** statements to define one or more attribute groups that match specific conditions and values.
 
 .. segments-editor-sql-end
 

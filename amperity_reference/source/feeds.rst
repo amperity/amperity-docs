@@ -405,7 +405,7 @@ When a file shows an error on ingest you can troubleshoot those errors by downlo
 
 The **Ingest Details** page is accessible from the **Recent activity** pane in the **Sources** page. Error logs are only available for download when errors are present.
 
-There are two types of error log files:
+Error log files have the following types:
 
 #. A feed-level log file that describes the types and frequency of errors.
 
@@ -501,7 +501,7 @@ Use the **Add Feed** button to add a feed to Amperity. A feed must be created fo
 
 .. feeds-add-scenarios-start
 
-There are two common scenarios for adding feeds to Amperity:
+Common scenarios for adding feeds to Amperity include:
 
 #. :ref:`Add a source grouping <feeds-add-from-new-sources>`
 #. :ref:`Use an existing source grouping <feeds-add-from-existing-sources>`

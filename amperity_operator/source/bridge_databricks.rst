@@ -779,7 +779,7 @@ Download credential file
 
 .. bridge-databricks-sync-with-databricks-download-credentials-start
 
-There are two ways to download the credential file:
+Do one of the following to download the credential file:
 
 .. list-table::
    :widths: 10 90

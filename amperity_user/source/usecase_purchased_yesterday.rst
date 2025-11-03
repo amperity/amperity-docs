@@ -32,7 +32,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-purchased-yesterday-howitworks-end
 
-**WHICH CUSTOMERS PURCHASED YESTERDAY?**
+**Which customers purchased yesterday?**
 
 .. usecase-purchased-yesterday-howitworks-callouts-start
 

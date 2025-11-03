@@ -212,7 +212,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Sandbox?**
-            - Optional. Select this option if the destination is a sandbox instance (and not a production instance).
+            - Optional. Select this option if the destination is a sandbox instance and not a production instance.
 
               .. note:: A sandbox instance is ignored when a custom URL of |destination-name| logins is used.
 
@@ -338,9 +338,11 @@ Add data template
 
        .. note:: A sandbox instance is ignored when a custom URL of Salesforce logins is used.
 
-       The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations inserts a new record *or* update an existing record, whereas insert and update operations insert or update (and not both).
+       The operation may be one of the following: "Insert", "Upsert", "Update", or "Delete".
 
-       The external ID should be set to **Amperity_ID__c**. (The **__c** identifies the field as a custom field in the Salesforce object.)
+       Upsert operations are recommended and insert a new record *or* update an existing record, whereas insert and update operations insert or update and not both.
+
+       The external ID should be set to **Amperity_ID__c**. The **__c** identifies the field as a custom field in the Salesforce object.
 
        When enabled, NULL values in data sent from Amperity is ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
 

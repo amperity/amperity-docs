@@ -273,7 +273,7 @@ Get details
           :class: no-scaled-link
      - **Meta Ads Manager offline events only**
 
-       `Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
+       `Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
 
        A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
 
@@ -650,7 +650,7 @@ Build a query
 
 .. destination-meta-ads-manager-offline-events-parameters-start
 
-Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that must be (or may be) returned by your query.
+Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that returned by your query.
 
 .. destination-meta-ads-manager-offline-events-parameters-end
 
@@ -733,7 +733,7 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       `Datasets allow you to connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
+       `Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
 
        A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
 
@@ -1492,7 +1492,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **timestamp**
      - **Required**
 
-       A Unix timestamp (in seconds) that indicates when the offline event occurred.
+       A Unix timestamp in seconds that indicates when the offline event occurred.
 
        .. note:: When viewing parameters in the |destination-name| user interface, **timestamp** is shown as **event_time**.
 

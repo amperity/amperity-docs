@@ -9,7 +9,7 @@
 LinkedIn DMP
 ==================================================
 
-The |destination-name| connector lets users activate audience segments from Amperity as a CSV file to market to LinkedIn members. 
+Use the |destination-name| connector to send audience segments from Amperity as a CSV file to activate that audience in LinkedIn.
 
 
 Credentials

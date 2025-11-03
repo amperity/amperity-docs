@@ -23,6 +23,6 @@ You can configure the stable ID assignment process in the following ways:
 
 #. :doc:`Disable stable IDs <stitch_configure_disable_stable_ids>`
 #. :doc:`Increase the number of partitions that are available to stable ID assignment <stitch_configure_increase_partitions>`
-#. :doc:`Stop building the Unified Changes table (temporarily) <stitch_configure_skip_unified_changes>`
+#. :doc:`Stop building the Unified Changes table <stitch_configure_skip_unified_changes>`
 
 .. stitch-configure-stable-ids-end

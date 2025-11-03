@@ -479,7 +479,7 @@ Core tables
 
 .. databases-core-table-list-start
 
-There are two types of core tables:
+Core tables have the following types:
 
 #. :ref:`Standard core tables <databases-core-table-type-standard>`
 #. :ref:`Custom core tables <databases-core-table-type-custom>`
@@ -1036,7 +1036,7 @@ Add custom SQL table
 
 .. databases-database-howto-add-table-custom-tip-start
 
-.. tip:: You can associate the Amperity ID to a unique ID in a custom SQL table. For example, "CCUST" associates a unique ID in a table to the Amperity ID:
+.. tip:: You can associate the Amperity ID to a unique ID in a custom SQL table. For example, ``CCUST`` associates a unique ID in a table to the Amperity ID:
 
    .. code-block:: sql
 

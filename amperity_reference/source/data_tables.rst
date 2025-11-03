@@ -65,7 +65,7 @@ The following diagram shows the data model for core tables in Amperity. Color co
 
 .. data-tables-data-model-table-types-start
 
-There are four groups of tables in this diagram:
+The data tables diagram has four groups of tables:
 
 .. list-table::
    :widths: 100 500

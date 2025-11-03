@@ -115,7 +115,7 @@ However, many of these modern marketing tools do not release contactability data
 
 .. admonition:: People-based measurement is not new
 
-   There are many forms of using people-based measurement to run a successful campaign.
+   Many forms of people-based measurement are part of successful campaigns.
 
    For example, catalog mailers do not know all of the users who saw a given piece of direct mail. Maybe the recipient threw the catalog out without looking at it? Maybe a neighbor picked the catalog up? Maybe the catalog was delivered to an address at which the intended recipient no longer resides?
 

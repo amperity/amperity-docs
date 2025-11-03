@@ -367,7 +367,11 @@ A sample CSV file may be output from Snowflake, and then uploaded to Amperity wh
 
 **Add feeds**
 
+.. vale off
+
 Start with the glossary term for feeds, then has a note. There are three styles for notes: one for files, one for Fivetran, and one for Snowflake. Slighly different. Then there are two styles for steps: one for Snowflake and another for everything else.
+
+.. vale on
 
 .. sources-add-feed-note-file-start
 
@@ -451,7 +455,11 @@ After the feeds are activated and domain tables are available, add the load oper
 
 **Example for example load operations**
 
+.. vale off
+
 There are two example intros, one for files and one for Fivetran.
+
+.. vale on
 
 .. sources-add-load-operation-example-intro-start
 

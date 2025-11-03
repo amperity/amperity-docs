@@ -191,7 +191,7 @@ When a data source provides more than one email address in the data, it is impor
 
 .. semantics-profile-type-email-options-start
 
-There are some options available as you determine the best way to configure Amperity for email addresses:
+Determine the best way to configure Amperity for email addresses:
 
 * :ref:`semantics-profile-type-email-namespace` (recommended when multiple email addresses are present)
 * :ref:`semantics-profile-type-email-ordinals`
@@ -319,6 +319,8 @@ Many email addresses are not useful for identity resolution. Some of them are ge
 
 The following values associated with the **email** semantic are ignored by Stitch when performing identity resolution:
 
+.. vale off
+
 * **@NOEMAIL.COM**
 * **@NOMAIL.COM**
 * 0000000000
@@ -394,6 +396,8 @@ The following values associated with the **email** semantic are ignored by Stitc
 * VENDORS@
 * **XXX@**
 
+.. vale on
+
 The values in **bold** are always ignored.
 
 .. semantics-profile-type-email-ignored-list-end
@@ -407,6 +411,8 @@ Stitch may be configured to allow certain generic email addresses to be availabl
    pre-processing-profile :allow-business-email
 
 When this setting is updated, only the following email address patterns are ignored by Stitch:
+
+.. vale off
 
 * @NOEMAIL.COM
 * @NOMAIL.COM
@@ -430,6 +436,8 @@ When this setting is updated, only the following email address patterns are igno
 * NOTHANKYOU@
 * REFUSED@
 * XXX@
+
+.. vale on
 
 Use a :doc:`bad-values blocklist <blocklist_bad_values>` to configure Amperity to continue ignoring any of the email address patterns that were removed from the default list of ignored email patterns.
 
@@ -848,7 +856,7 @@ When a data source provides more than one phone number in the data, it is import
 
 .. semantics-profile-type-phone-options-start
 
-There are some options available as you determine the best way to configure Amperity for phone numbers:
+Determine the best way to configure Amperity for phone numbers:
 
 * :ref:`semantics-profile-type-phone-namespaces` (recommended when multiple phone numbers are present)
 * :ref:`semantics-profile-type-phone-ordinals`

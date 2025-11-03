@@ -298,7 +298,7 @@ Custom attributes (API)
 
 Amperity uses the `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoint to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
-.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
+.. caution:: The |destination-name| |destination-api| builds segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
 
 .. destination-attentive-attributes-end
 
@@ -631,9 +631,9 @@ The following table shows how your segment name appears in |destination-name|. T
        Winback_Shoes
      - Use this pattern for campaigns that have more than one treatment group or have sub-audiences.
 
-       You may use an underscore ( _ ) or a hyphen ( - ): **{{ campaign_name }}_{{ group_name }}** or **{{ campaign_name }}-{{ group_name }}**.
+       You may use an underscore ``_`` or a hyphen ``-``: **{{ campaign_name }}_{{ group_name }}** or **{{ campaign_name }}-{{ group_name }}**.
 
-       You may put them next to each other (without using an underscore or hyphen): **{{ campaign_name }}{{ group_name }}**.
+       You may put them next to each other without using an underscore or hyphen: **{{ campaign_name }}{{ group_name }}**.
 
        You may switch the ordering: **{{ group_name }}_{{ campaign_name }}**.
 
@@ -652,6 +652,6 @@ The following table shows how your segment name appears in |destination-name|. T
 
 .. destination-attentive-add-data-template-important-start
 
-.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings (campaign or treatment group) is used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
+.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings--campaign or treatment group--is used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
 
 .. destination-attentive-add-data-template-important-end

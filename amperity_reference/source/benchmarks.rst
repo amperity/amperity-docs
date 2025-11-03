@@ -59,7 +59,9 @@ Benchmark checks
 
 .. stitch-benchmark-checks-start
 
-Stitch collects data that your brand has provided to Amperity, runs, and then outputs a series of tables that contain the results. There is no "ground truth" dataset for your brand against which Amperity can compare Amperity IDs to validate identity, which prevents using standard error metrics to evaluate the quality of Stitch output.
+Stitch collects data that your brand has provided to Amperity, runs, and then outputs a series of tables that contain the results.
+
+A "ground truth" dataset for your brand, against which Amperity can compare Amperity IDs to validate identity, does not exist and prevents using standard error metrics to evaluate the quality of Stitch output.
 
 A benchmark check is a heuristic that defines how often Amperity IDs are expected to meet a certain condition. For example, Amperity expects no more than 0.011% of your Amperity IDs to be associated with more than three given names.
 

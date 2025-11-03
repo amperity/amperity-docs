@@ -19,7 +19,7 @@ About settings
 
 .. settings-about-start
 
-The **Settings** page lets you manage users, configure SSO, define resource groups, manage credentials for sources and destinations, and monitor user activity.
+Use the **Settings** page to manage users, configure SSO, define resource groups, manage credentials for sources and destinations, and monitor user activity.
 
 .. settings-about-end
 

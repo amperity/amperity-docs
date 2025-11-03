@@ -29,11 +29,11 @@ Send audiences to Reddit Ads
 
 You can send audience lists to |destination-name| using a CSV file that contains hashed email addresses and is sent to cloud storage or SFTP, after which you can upload the CSV file to |destination-name| through the |destination-name| Manager.
 
-An audience list should contain hashed email addresses. Upload the audience list to |destination-name|, and then used it for :ref:`audience targeting in Reddit Ads <destination-reddit-ads-audience-targeting>`. There are two options:
+An audience list should contain hashed email addresses. Upload the audience list to |destination-name|, and then used it for :ref:`audience targeting in Reddit Ads <destination-reddit-ads-audience-targeting>`. Do one of the following:
 
-:ref:`Use a query to return a list of hashed email addresses <destination-reddit-ads-audience-targeting-query>`, download the results of that query, and then upload it to |destination-name|.
+* :ref:`Use a query to return a list of hashed email addresses <destination-reddit-ads-audience-targeting-query>`, download the results of that query, and then upload it to |destination-name|.
 
-:ref:`Add a hashed email column to your customer 360 database <destination-reddit-ads-audience-targeting-database>`, and then send a file that contains those hashed email address to a location from which they can be uploaded to |destination-name|.
+* :ref:`Add a hashed email column to your customer 360 database <destination-reddit-ads-audience-targeting-database>`, and then send a file that contains those hashed email address to a location from which they can be uploaded to |destination-name|.
 
 .. destination-reddit-ads-about-end
 

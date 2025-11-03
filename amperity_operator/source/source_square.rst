@@ -62,7 +62,7 @@ Get details
       :start-after: .. sources-get-details-fivetran-request-to-enable-start
       :end-before: .. sources-get-details-fivetran-request-to-enable-end
 
-#. Access to an active |source-name| account using a private API key. Create an API key in |source-name| for use by FiveTran, and then provide the private API key to Amperity support. They need this to complete the configuration of FiveTran.
+#. Access to an active |source-name| account using a private API key. Create an API key in |source-name| for use by Fivetran, and then provide the private API key to Amperity support. They need this to complete the configuration of Fivetran.
 
    .. include:: ../../shared/sources.rst
       :start-after: .. sources-get-details-fivetran-connect-start

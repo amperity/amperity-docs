@@ -34,7 +34,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-customers-top-20-revenue-howitworks-end
 
-**CUSTOMERS IN YOUR TOP 20% REVENUE**
+**Customers in your top twenty percent revenue**
 
 .. usecase-customers-top-20-revenue-howitworks-callouts-start
 

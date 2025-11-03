@@ -642,7 +642,7 @@ Restore changes
 
 .. sandboxes-howto-rollback-changes-start
 
-Changes that are promoted to production from a sandbox may be restored to a previous state. There are two approaches:
+Changes that are promoted to production from a sandbox may be restored to a previous state. Do one of the following:
 
 #. In many situations you can use a sandbox workflow to restore the state of production, especially when a sandbox was used to make small, iterative changes. First create a sandbox, and then make changes in that sandbox that returns your tenant to its previous state.
 

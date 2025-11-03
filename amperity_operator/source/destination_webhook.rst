@@ -359,7 +359,7 @@ Add destination
 
       If your Lambda function does not have any settings *OR* when your Lambda function is deployed as a serverless application, use empty curly braces: "{}".
 
-#. Enable the **Allow customers to use this data template** option, and then enable the **Make available to campaigns** option. This allows users to send campaign results from Amperity to |destination-name|.
+#. Enable the **Allow customers to use this data template** option, and then enable the **Make available to campaigns** option to send campaign results from Amperity to |destination-name|.
 #. Verify all template settings and make any required updates.
 #. Click **Save**.
 

@@ -193,14 +193,14 @@ The unique ID for a reservation that is associated with a redemption or accrual 
 
 .. loyalty-event-tier-end-datetime-start
 
-The date and time at which the current loyalty tier ends (or ended).
+The date and time at which the current loyalty tier ends or ended.
 
 .. loyalty-event-tier-end-datetime-end
 
 
 .. loyalty-event-tier-start-datetime-start
 
-The date and time at which the current loyalty tier starts (or started).
+The date and time at which the current loyalty tier starts or started.
 
 .. loyalty-event-tier-start-datetime-end
 

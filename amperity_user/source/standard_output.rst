@@ -511,10 +511,10 @@ The following attributes are available from the **Predicted CLV Attributes** tab
 
    * - Attributes
      - Description
-   * - **Predicted Average Order Revenue Next 365d**
+   * - **Predicted Average Order Revenue Next 365 Days**
      - The predicted average order revenue over the next 365 days.
 
-   * - **Predicted CLV Next 365d**
+   * - **Predicted CLV Next 365 Days**
      - The total predicted customer spend over the next 365 days.
 
    * - **Predicted Customer Lifecycle Status**
@@ -536,10 +536,10 @@ The following attributes are available from the **Predicted CLV Attributes** tab
        #. Medium: top 25%-50% of customers
        #. Low: bottom 50% of customers
 
-   * - **Predicted Order Frequency Next 365d**
+   * - **Predicted Order Frequency Next 365 Days**
      - The predicted number of orders over the next 365 days.
 
-   * - **Predicted Probability of Transaction Next 365d**
+   * - **Predicted Probability of Transaction Next 365 Days**
      - The probability a customer will purchase again in the next 365 days.
 
 .. standard-output-predicted-clv-attributes-table-end

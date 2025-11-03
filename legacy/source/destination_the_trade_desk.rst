@@ -62,7 +62,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
        Amperity can manage :ref:`custom audiences <destination-the-trade-desk-custom-audiences>` for |destination-name| demand-side platform, from which your brand can reach those audiences throughout their entire digital journey and across every channel and device, including:
 
-       * Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events (Major League Baseball), in-store advertising at WalMart, and more.
+       * Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events, such as Major League Baseball, in-store advertising at WalMart, and more.
        * Video advertising on over-the-top (OTT) and connected TV (CTV) apps and platforms, such as Disney+, Major League Baseball, Hulu, Fox, Vevo, Paramount+, and more.
        * Audio advertising in-between songs and during podcasts across Spotify, Pandora, SoundCloud, iHeart, and more.
 
@@ -137,11 +137,11 @@ Get details
           :class: no-scaled-link
      - The name of a segment in |destination-name|.
 
-       Membership duration defines the length of time (in days) at which individual audience members belong to the segment in |destination-name|. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
+       Membership duration defines the length of time in days at which individual audience members belong to the segment in |destination-name|. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
 
        .. tip:: Set this value to "0" to remove all audience members.
 
-       .. caution:: The membership duration is measured in days. Adjust the membership duration value to be greater than (or equal to) than the frequency at which your brand sends campaigns or orchestrations from Amperity.
+       .. caution:: The membership duration is measured in days. Adjust the membership duration value to be greater than or equal to than the frequency at which your brand sends campaigns or orchestrations from Amperity.
 
           For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
@@ -290,9 +290,9 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Optional. You may define a segment name and membership duration (in days) for individual audience members. These may be left blank, and then specified with a data template.
+       Optional. You may define a segment name and membership duration in days for individual audience members. These may be left blank, and then specified with a data template.
 
-       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than (or equal to) the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
+       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than or equal to the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
 
           For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
@@ -402,7 +402,7 @@ Add data template
           :align: left
           :class: no-scaled-link
 
-       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than (or equal to) the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
+       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than or equal to the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
 
           For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
@@ -659,7 +659,7 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       The name of the segment in |destination-name|. The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration. Set this value to "0" to clear out the audience in the segment.
+       The name of the segment in |destination-name|. The membership duration defines the length of time in days at which individual audience members belong to the segment. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration. Set this value to "0" to clear out the audience in the segment.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-note-start
@@ -756,7 +756,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        An event name groups your brand's offline events a specific category type for offline events as defined by |destination-name|.
 
-       The event name that most frequently is associated with offline events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table (listed alphabetically):
+       The event name that most frequently is associated with offline events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table, listed alphabetically:
 
        .. list-table::
           :widths: 25 75

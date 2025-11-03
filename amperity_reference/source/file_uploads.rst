@@ -241,7 +241,7 @@ You can add an uploaded file to a segment from the **Segment Editor**.
 
 .. note:: It may take up to 10 minutes for your file to upload and you can only upload one file per tenant at a time.
 
-.. warning:: Uploaded CSV files are limited to 50MB.
+.. warning:: Uploaded CSV files are limited to 50 MB.
 
 .. file-uploads-add-query-end
 

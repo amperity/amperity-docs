@@ -124,7 +124,7 @@ Use the ``{{ list_name }}`` variable to use the name of the campaign as the file
 
 .. data-templates-campaigns-list-name-caution-start
 
-.. caution:: You should avoid using this campaign template with one-time or recurring campaigns and instead use ``{{ campaign_name }}`` (with or without a timestamp).
+.. caution:: You should avoid using this campaign template with one-time or recurring campaigns and instead use ``{{ campaign_name }}`` with or without a timestamp.
 
 .. data-templates-campaigns-list-name-caution-end
 
@@ -136,7 +136,7 @@ Campaign examples
 
 .. data-templates-campaigns-examples-start
 
-The following examples show various campaign template configurations for a campaign named "ACME Churn" and three treatment groups named "Facebook", "Google", and "Bing" that are configured to send the campaign to Meta Ads Manager, Google Ads, and Microsoft Ads.
+The following examples show various campaign template configurations for a campaign named "Socktown Churn" and three treatment groups named "Facebook", "Google", and "Bing" that are configured to send the campaign to Meta Ads Manager, Google Ads, and Microsoft Ads.
 
 **campaign name, group name, datestamp**
 
@@ -146,9 +146,9 @@ The following examples show various campaign template configurations for a campa
 
 would send three campaigns with names similar to:
 
-* ACME_Churn_Bing_2022-06-15.csv (sent to Microsoft Ads)
-* ACME_Churn_Facebook_2022-06-15.csv (sent to Meta Ads Manager)
-* ACME_Churn_Google_2022-06-15.csv (sent to Google Ads)
+* Socktown_Churn_Bing_2022-06-15.csv sent to Microsoft Ads
+* Socktown_Churn_Facebook_2022-06-15.csv sent to Meta Ads Manager
+* Socktown_Churn_Google_2022-06-15.csv sent to Google Ads
 
 
 **group name, datestamp**
@@ -159,9 +159,9 @@ would send three campaigns with names similar to:
 
 would send three campaigns with names similar to:
 
-* Bing_2022-06-15.csv (sent to Microsoft Ads)
-* Facebook_2022-06-15.csv (sent to Meta Ads Manager)
-* Google_2022-06-15.csv (sent to Google Ads)
+* Bing_2022-06-15.csv sent to Microsoft Ads
+* Facebook_2022-06-15.csv sent to Meta Ads Manager
+* Google_2022-06-15.csv sent to Google Ads
 
 
 **campaign name, datestamp**
@@ -172,9 +172,9 @@ would send three campaigns with names similar to:
 
 would send three campaigns with names similar to:
 
-* ACME_Churn_2022-06-15.csv (sent to Microsoft Ads)
-* ACME_Churn_2022-06-15.csv (sent to Meta Ads Manager)
-* ACME_Churn_2022-06-15.csv (sent to Google Ads)
+* Socktown_Churn_2022-06-15.csv sent to Microsoft Ads
+* Socktown_Churn_2022-06-15.csv sent to Meta Ads Manager
+* Socktown_Churn_2022-06-15.csv sent to Google Ads
 
 
 **campaign name, no datestamp**
@@ -185,9 +185,9 @@ would send three campaigns with names similar to:
 
 would send three campaigns with names similar to:
 
-* ACME_Churn.csv (sent to Microsoft Ads)
-* ACME_Churn.csv (sent to Meta Ads Manager)
-* ACME_Churn.csv (sent to Google Ads)
+* Socktown_Churn.csv sent to Microsoft Ads
+* Socktown_Churn.csv sent to Meta Ads Manager
+* Socktown_Churn.csv sent to Google Ads
 
 .. data-templates-campaigns-examples-end
 
@@ -412,7 +412,7 @@ Header rows
 
 .. data-templates-files-common-header-rows-start
 
-Files, such as CSV, PSV, or TSV, may (or may not) require header rows, which define the headers for that data set. Configure the settings to match if header rows are required by the downstream workflow.
+Files, such as CSV, PSV, or TSV, often require header rows, which define the headers for each column in the data set. Configure settings to match if header rows are required by the downstream workflow.
 
 .. data-templates-files-common-header-rows-end
 

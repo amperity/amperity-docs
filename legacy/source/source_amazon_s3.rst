@@ -12,7 +12,7 @@
 
 
 ==================================================
-Pull from Amazon S3 (Legacy)
+Pull from Amazon S3--Legacy
 ==================================================
 
 .. include:: ../../shared/terms.rst

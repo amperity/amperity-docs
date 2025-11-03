@@ -38,7 +38,7 @@ Configure campaigns for Amazon Ads
 Amperity can manage audiences within |destination-name| for use with a variety of advertising and paid media channels, such as: 
 
 * Sponsored ads for products and brands that appear within search results on the Amazon website and within the mobile app.
-* Sponsored display ads that reach audiences as they browse, research, or buy products on Amazon, on Twitch, or by using Amazon DSP, a demand-side platform that allows you to programmatically buy ads to reach new and existing audiences on and off Amazon.
+* Sponsored display ads that reach audiences as they browse, research, or buy products on Amazon, on Twitch, or by using Amazon DSP, a demand-side platform to programmatically buy ads to reach new and existing audiences on and off Amazon.
 * Video ads for streaming TV and online video. Streaming TV ads can appear on Twitch, live sports events, top TV and network broadcaster apps, and curated news on Fire TV. Online video ads reach audiences on Amazon-owned sites, including IMDb.com and Twitch and may appear on third-party sites through Amazon Publisher Direct.
 * Audio ads that are heard during breaks in premium audio content, including first-party Amazon Music ad-supported tiers, connected TV environments, Twitch News, Alexa-enabled devices, and third-party sites through Amazon Publisher Direct.
 * Access to a secure, privacy-safe, and cloud-based clean room solution when the instance name for your brand's `Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/solutions/products/amazon-marketing-cloud>`__ |ext_link| account is configured.

@@ -95,7 +95,7 @@ General
 * Use consistent and descriptive identifiers and names.
 * Include comments in SQL code where necessary. Use the C style opening ``/*`` and closing ``*/`` where possible. Otherwise precede comments with ``--`` and finish them with a new line.
 * Make judicious use of white space and indentation to make code easier to read.
-* Store ISO-8601 compliant date and time information (YYYY-MM-DD HH:MM:SS.SSSSS).
+* Store ISO-8601 compliant date and time information: ``YYYY-MM-DD HH:MM:SS.SSSSS``.
 * Try to use only standard SQL functions instead of vendor-specific functions for reasons of portability.
 * Keep code succinct and devoid of redundant SQL, such as unnecessary quoting or parentheses or **WHERE** clauses that can otherwise be derived.
 * Convert string values to lowercase. For example: **LOWER(column_name) = 'value'**.
@@ -1682,8 +1682,8 @@ It says "Group the records by amperity_id, and for each group return the one wit
 
 * **FIRST_VALUE(<field name>)** The **FIRST_VALUE()** window function picks the first record out of some set of records. In this case, it is selecting from the window or partition, whichever is defined next.
 * **OVER()** The **OVER()** function sets up the window in which records are found. This function should include both **PARTITION BY** and **ORDER_BY** functions.
-* **PARTITION BY amperity_id** The **PARTITION BY <field name>** function behaves in a way analogous to a **GROUP BY** in that it groups all records with unique values for the specified field together. So here it creates a subset of rows for each Amperity ID.
-* **ORDER BY merged_date DESC** The **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it is sorting the rows for each Amperity ID. And **DESC** simply says sort in descending order, so most recent date is first.
+* **PARTITION BY amperity_id** The **PARTITION BY <field name>** function is similar to **GROUP BY** and groups all records with unique values for the specified field together and creates a subset of rows for each Amperity ID.
+* **ORDER BY merged_date DESC** The **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it is sorting the rows for each Amperity ID. **DESC** sorts in descending order and the most recent date is first.
 * **AS <field name>** The final clause of the statement above is not part of the window function at all, but is the **AS** statement you've used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
 
 .. sql-spark-window-functions-end
@@ -1944,7 +1944,7 @@ Using **NULL** with **IS NULL** evaluates to **TRUE**:
 
    SELECT NULL IS NULL
 
-But any other constant does not evaluate to **FALSE**:
+Any other constant does not evaluate to **FALSE**:
 
 .. code-block:: none
 
@@ -1968,7 +1968,7 @@ Using **NULL** with **IS NOT NULL** evaluates to **FALSE**:
 
    SELECT NULL IS NOT NULL
 
-But any other constant evaluates **TRUE**:
+Any other constant evaluates **TRUE**:
 
 .. code-block:: none
 
@@ -3680,7 +3680,7 @@ Return rounded sum
 
 .. sql-spark-function-round-example-rounded-sum-start
 
-The following example returns the sum of a, b, and c rounded to two decimal places as the ABC score:
+The following example returns the sum of a, b, and c rounded to two decimal places as the score:
 
 .. code-block:: none
 

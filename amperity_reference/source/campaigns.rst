@@ -271,7 +271,7 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    #. Today the size of the audience for the segment is 1200 customers and the size of the control group is 20 percent, or 240 customers. The campaign is sent to 960 customers.
    #. Next week the size of the audience is 1240, which means the size of the control group will be larger (248). The campaign is sent to 992 customers.
-   #. And the following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
+   #. The following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
 
 .. campaigns-control-groups-consistent-membership-end
 
@@ -372,9 +372,7 @@ Sub-audiences
 
 .. campaigns-sub-audiences-start
 
-A sub-audience enables you to measure the performance of individual communications in a campaign. A sub-audience could represent a set of users for which you have a better understanding of their marketing preferences and you would like to send them specific messaging as part of a larger campaign. For example, you can see how the jackets sub-audience marketing email performed as compared to the t-shirts sub-audience marketing email within the same campaign. Additionally, each sub-audience can be configured to use its own control and treatment groups, providing even greater control and flexibility. 
-
-A sub-audience may define users by brand, most commonly purchased sub-brand, product affinity, product category, product type, demographics, etc.
+A sub-audience may define users by brand, most commonly purchased sub-brand, product affinity, product category, product type, or demographics.
 
 .. note:: The limit for number of sub-audiences per campaign is 60.
 
@@ -438,7 +436,7 @@ Download recipients
 
 .. campaigns-download-recipients-start
 
-The download recipients feature allows you to download and see your recipients list. This option provides you with the ability to see details about your recipients, including the Amperity ID and the Treatment ID.
+Use the download recipients feature to download a list of recipients to view details about recipients in the list, including the Amperity ID and the Treatment ID.
 
 .. campaigns-download-recipients-end
 
@@ -470,7 +468,7 @@ Campaign results
 
 .. campaigns-results-overview-start
 
-The campaign results feature allows you to download and see your one-time or recurring campaign results data. This option provides you with the ability to explore campaign results data and measure performance in more detail.
+Use campaign results feature to download and view one-time or recurring campaign results data, explore campaign results data, and measure performance.
 
 .. image:: ../../images/mockup-campaign-results-standalone.png
    :width: 400 px
@@ -1873,7 +1871,7 @@ You can set a delivery schedule on the **Edit Campaign** page.
 
 .. campaigns-set-delivery-schedule-steps-start
 
-#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, either select **Schedule delivery** *or* **Deliver ASAP** from the menu.
+#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, either select **Schedule delivery** *or* **Deliver as soon as possible** from the menu.
 
 .. campaigns-set-delivery-schedule-steps-end
 

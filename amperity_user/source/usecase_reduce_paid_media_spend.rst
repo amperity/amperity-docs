@@ -34,7 +34,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
 .. usecase-reduce-paid-media-ad-spend-howitworks-end
 
-**REDUCE PAID MEDIA AD SPEND**
+**Reduce paid media ad spend**
 
 .. usecase-reduce-paid-media-ad-spend-howitworks-callouts-start
 
@@ -63,7 +63,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - The first step is to identify your lowest value customers. There are many ways you use Amperity to build this type of segment, including approximate RFM scores, historical purchaser lifecycle status, and predicted lifecycle status. The approach that you choose depends on how your brand defines your lowest value customers.
+     - The first step is to identify your lowest value customers. Consider using approximate RFM scores, historical purchaser lifecycle status, or predicted lifecycle status to find these customers. The approach that you choose depends on how your brand defines your lowest value customers.
 
        * **Approximate RFM scores**
 

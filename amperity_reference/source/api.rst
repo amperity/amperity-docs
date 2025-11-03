@@ -715,7 +715,7 @@ Revoke access tokens
 
 .. api-keys-access-tokens-revoke-start
 
-You may revoke access tokens associated with an API key by opening the **Actions** menu for an API key, and then choosing **Revoke tokens**. There are two options:
+You may revoke access tokens associated with an API key by opening the **Actions** menu for an API key, and then choosing **Revoke tokens**. Do one of the following:
 
 #. Revoke all tokens that were issued prior to the last rotation.
 #. Revoke all tokens immediately.

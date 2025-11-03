@@ -224,7 +224,7 @@ Snowflake couriers
 
 .. couriers-snowflake-start
 
-A Snowflake data source provides a list of tables that are consolidated into a fileset. Snowflake data sources include Snowflake itself, and then also any FiveTran data source, such as |source_klaviyo|, |source_shopify|, |source_kustomer|, and |source_hubspot|.
+A Snowflake data source provides a list of tables that are consolidated into a fileset. Snowflake data sources include Snowflake itself, and then also any Fivetran data source, such as |source_klaviyo|, |source_shopify|, |source_kustomer|, and |source_hubspot|.
 
 .. couriers-snowflake-end
 

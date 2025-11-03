@@ -81,7 +81,7 @@ Get details
           :alt: Detail three.
           :align: center
           :class: no-scaled-link
-     - The audience ID to which Amperity writes. (This is sometimes referred to as the list ID.)
+     - The audience ID to which Amperity writes. This is sometimes referred to as the list ID.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -123,7 +123,7 @@ Get details
 
    #. The |destination-name| API key is associated with your account username. Click your username, then **Account**, then **Extras**, and then **API Keys**. Copy the API key, including after the hyphen.
    #. The datacenter ID is the information after the hyphen in the API key.
-   #. There can be many audiences in |destination-name|. For each audience to which you want to send query results, click **Audiences**, then **Manage Audience**, then **Settings**. (A new page opens.)
+   #. There can be many audiences in |destination-name|. For each audience to which you want to send query results, click **Audiences**, then **Manage Audience**, then **Settings**. A new page opens.
    #. Click **Settings**, and then **Audience names and defaults**. The audience ID is on the right side and the audience name is on the left side.
    #. The audience fields and merge tags are available from the same list as audience names and defaults. Click **Settings** and then **Audience fields and |MERGE| tags**. You need to define the data template in Amperity to match those fields, along with mapping a field in Amperity that can map "subscribed" or "unsubscribed" values to a field that can be mapped to |destination-name|.
 

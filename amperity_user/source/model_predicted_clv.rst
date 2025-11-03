@@ -178,7 +178,7 @@ Which customers are the most valuable?
    :start-after: .. usecase-predicted-top-10-percent-howitworks-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-end
 
-**WHICH CUSTOMERS ARE PREDICTED TO BE YOUR TOP 10%?**
+**Which customers are predicted to be in your top ten percent?**
 
 .. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-howitworks-callouts-start
