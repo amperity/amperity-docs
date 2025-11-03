@@ -57,6 +57,7 @@ Site Index
    destination-listrak-sms
    destination-liveramp
    destination-mailchimp
+   destination-marigold
    destination-marketo
    destination-meta-offline-events
    destination-microsoft-dataverse
