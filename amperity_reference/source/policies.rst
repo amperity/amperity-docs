@@ -371,7 +371,7 @@ AmpIQ User - Read Only
 
 .. policies-read-only-ampiq-user-start
 
-The **AmpIQ User - Read Only** policy allows read-only access to the **Metrics**, **Segments**, and **Campaigns** pages.
+The **AmpIQ User - Read Only** policy allows read-only access to the **Segments** and **Activations** pages.
 
 Assign this policy to users who will view and explore metrics, segments, and campaigns, but will not create segments or run campaigns.
 
@@ -385,7 +385,7 @@ DataGrid Operator - Read Only
 
 .. policies-read-only-datagrid-operator-start
 
-The **DataGrid Operator - Read Only** policy allows read-only access to the **Sources**, **Stitch**, **Customer 360**, **Queries**, **Metrics**, **Segments**, **Campaigns**, and **Destinations** page.
+The **DataGrid Operator - Read Only** policy allows read-only access to the **Sources**, **Stitch**, **Customer 360**, **Queries**, **Segments**, **Activations**, and **Destinations** page.
 
 Assign this policy to users who need to view the entire application, including *all resource groups*, but should not make changes.
 
@@ -1562,7 +1562,7 @@ Campaigns
 
 .. policies-allowed-actions-campaigns-start
 
-The following table shows which policies enable user actions within the **Campaigns** page.
+The following table shows which policies enable user actions within the **Campaigns** tab on the **Activations** page.
 
 .. policies-allowed-actions-campaigns-end
 
@@ -1578,7 +1578,7 @@ The following table shows which policies enable user actions within the **Campai
      - DataGrid Operator
      - DataGrid Admin
 
-   * - View **Campaigns** page
+   * - View **Campaigns** tab
      - 
      - |policy|
      - |policy|
@@ -1746,6 +1746,107 @@ The following table shows which policies enable user actions within the **Campai
 .. policies-allowed-actions-campaigns-table-end
 
 
+.. _policies-allowed-actions-orchestrations:
+
+Orchestrations
+--------------------------------------------------
+
+.. policies-allowed-actions-orchestrations-start
+
+The following table shows which policies enable user actions within the **Orchestrations** tab on the **Activations** page.
+
+.. policies-allowed-actions-orchestrations-end
+
+.. policies-allowed-actions-orchestrations-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - View **Orchestrations** tab
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+
+   * - View destinations
+     - |poliro|
+     - 
+     - |policy|
+     - |policy|
+
+
+   * - **Orchestrations**
+     - 
+     - 
+     - 
+     - 
+
+   * - Add orchestrations
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - Assign database exports
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - Assign queries
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - Delete orchestrations
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - Edit orchestrations
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - Run orchestrations
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - Search orchestrations
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - View orchestrations
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+   * - View query
+     - |policy|
+     - 
+     - |policy|
+     - |policy|
+
+
+.. policies-allowed-actions-orchestrations-table-end
+
+
 .. _policies-allowed-actions-destinations:
 
 Destinations
@@ -1857,67 +1958,6 @@ The following table shows which policies enable user actions within the **Destin
 
    * - View data templates
      - |poliro|
-     - 
-     - |policy|
-     - |policy|
-
-
-   * - **Orchestrations**
-     - 
-     - 
-     - 
-     - 
-
-   * - Add orchestrations
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Assign database exports
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Assign queries
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Delete orchestrations
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Edit orchestrations
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Run orchestrations
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - Search orchestrations
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - View orchestrations
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
-   * - View query
-     - |policy|
      - 
      - |policy|
      - |policy|
@@ -2572,7 +2612,7 @@ Workflows
 
 .. policies-allowed-actions-workflows-start
 
-The following table shows which policies enable user actions within the **Workflows** page and access to workflows from within notifications located on the **Sources**, **Customer 360**, **Queries**, and **Campaigns** pages.
+The following table shows which policies enable user actions within the **Workflows** page and access to workflows from within notifications located on the **Sources**, **Customer 360**, **Queries**, and **Activations** pages.
 
 .. policies-allowed-actions-workflows-end
 
