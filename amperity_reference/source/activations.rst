@@ -57,7 +57,7 @@ What are activations?
 
 Activations match audiences to individual steps in complex marketing workflows. For example, build an audience that defines the customers to which your brand wants to send offers. A subset of this audience is sent to an email service provider for communication, a smaller, high-value subset of that audience is sent to one or more demand-side platforms for lookalike audience matching. Use journeys to define exits for customers who respond to the offer with a purchase.
 
-Activations can be a single audience matched to a single offer. For example, sending a thank you offer to customers who were in the top 20% of purchases during the previous year. Build a segment that uses the `monetary element of RFM scoring <rfm.html#example-top-20-revenue-during-the-previous-year>`__ to find these customers and then assign that segment to a campaign.
+Activations can be a single audience matched to a single offer. For example, sending a thank you offer to customers who were in the top 20% of purchases during the previous year. Build a segment that uses the `monetary element of RFM scoring <../user/rfm.html#rfm-example-top-20-revenue>`__ to find these customers and then assign that segment to a campaign.
 
 Activations can be complex with audiences split into multiple pathways with a series of offers created for each pathway. For example, `a churn prevention campaign <../user/churn_prevention.html#what-is-a-churn-prevention-campaign>`__.
 
