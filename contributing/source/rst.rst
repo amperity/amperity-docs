@@ -3577,7 +3577,7 @@ Unordered lists
 
 .. rst-list-unordered-start
 
-An unordered list has each list item preceded by a single asterisk (``*``) followed by a space.
+An unordered list has each list item preceded by a single asterisk ``*`` followed by a space.
 
 **Do this**
 

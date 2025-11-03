@@ -19,7 +19,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-amperity:
 
 **Amperity** vs. **Amperity's**
-   You should almost never write |company_name| (or any trademarked term) as a possessive, such as "Amperity's Stitch process is the best." Rewrite until |company_name| stands alone, such as "The best Stitch offerings are from |company_name|."
+   You should almost never write |company_name|, or any trademarked term, as a possessive, such as "Amperity's Stitch process is the best." Rewrite until |company_name| stands alone, such as "The best Stitch offerings are from |company_name|."
 
    .. note:: This is one of the reasons why technical documentation uses a token for |company_name|: ``|company_name|``. Sure, you have to type more characters, but it also helps make sure that the company name is used correctly.
 
@@ -29,7 +29,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-azure:
 
 **Azure storage services**
-   Azure, in the context of storage services like Azure Blob Storage and Azure Data Lake Storage should be used in the first instance. Microsoft does not use acronyms (ABS, ADLS), but does drop the Azure from second instances (Blob Storage, Data Lake Storage). In Amperity context, "Azure storage services" is probably fine also for generic references.
+   Azure, in the context of storage services like Azure Blob Storage and Azure Data Lake Storage should be used in the first instance. Microsoft does not use acronyms--for example: ABS or ADLS--but does drop "Azure" from second instances--for example: Blob Storage or Data Lake Storage. In Amperity context, "Azure storage services" is probably fine also for generic references.
 
 
 .. _term-blacklist:
@@ -75,7 +75,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-dummy:
 
 **dummy**, **dumb**
-   Avoid using **dummy** (and variations) as a synonym for "placeholder".
+   Avoid using **dummy** and variations as a synonym for "placeholder".
 
 
 .. _term-e-commerce:
@@ -93,7 +93,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-filename:
 
 **filename** vs. **FILENAME**
-   Probably the latter. For example, the file extension for a Microsoft Excel spreadsheet is literally ``.xls``. This should never be written literally, but instead abbreviated and in all caps, like ``XLS`` (as opposed to ``xls``), unless you need to say the full filename and extension together, in which case you'd use ``some-file.xls``.
+   Probably the latter. For example, the file extension for a Microsoft Excel spreadsheet is literally ``.xls``. This should never be written literally, but instead abbreviated and in all caps, like ``XLS``, as opposed to ``xls``, unless you need to say the full filename and extension together, in which case you'd use ``some-file.xls``.
 
 
 .. _term-master:
@@ -123,7 +123,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 **on-premises** vs. **on-premise**
    It is **on-premises**. Why? Because. The words premise and premises do not mean the same thing. The plural of premise is not premises.
 
-   When referring to the installation of computer-related hardware, software, and whatnots within the customer's physical environment (and not, say, "the cloud") always (and without exception) use the term **on-premises**.
+   When referring to the installation of computer-related hardware, software, and whatnots within the customer's physical environment, and not, say, "the cloud", always and without exception use the term **on-premises**.
 
    .. note:: The use of a hyphen between on and premises in **on-premises** is debated in some circles, but not here at |company_name|. Use the hyphen. See **on-site**.
 
@@ -137,7 +137,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-open-source:
 
 **open source** vs. **open-source**
-   |company_name| prefers **open source** (without the hyphen) though technically both are correct.
+   |company_name| prefers **open source** without the hyphen though technically both are correct.
 
 
 .. _term-primary-replica:
@@ -145,7 +145,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. vale off
 
 **primary** / **replica**
-   Use the word-pair **primary** and **replica** to refer to machines in a cluster. For example, in a YARN/Spark/Hadoop cluster, a **primary** machine manages the cluster (the YARN Resource Manager), and then each **replica** node in the cluster is run when asked to by the primary (the YARN Node Manager).
+   Use the word-pair **primary** and **replica** to refer to machines in a cluster. For example, in a YARN/Spark/Hadoop cluster, a **primary** machine manages the cluster, which is the YARN Resource Manager, and then each **replica** node in the cluster is run when asked to by the primary, which is the YARN Node Manager.
 
    .. warning:: Use **primary** / **replica** even when the application to which you are referring uses another term, such as how YARN refers to **master** and **slave** nodes.
 
@@ -161,7 +161,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-serial-comma:
 
 **serial comma**
-   See Oxford (or serial) comma.
+   See Oxford, or serial, comma.
 
 
 .. _term-slave:
@@ -193,4 +193,4 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-white-paper:
 
 **white paper** vs. **whitepaper**
-   Use **white paper** (two words) to describe a technical article written by |company_name|.
+   Use **white paper**--two words--to describe a technical article written by |company_name|.
