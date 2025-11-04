@@ -59,10 +59,10 @@ For example:
 
 * `"Amazon S3" <https://docs.aws.amazon.com/s3/>`__ is the trademark name for "Amazon Simple Storage Service". Spell out "Amazon S3" and do not shorten it to "S3".
 
-* `"Conversions API" <https://developers.facebook.com/docs/marketing-api/conversions-api/>`__ is the name Meta Ads Manager uses to describe the API for sending offline events to Meta Ads Manager.
+* `"Conversions API" <https://developers.facebook.com/docs/marketing-api/conversions-api/>`__ is the name Meta Ads Manager uses to describe the API for sending events to Meta Ads Manager.
 
-  Spell out "Conversions API" and append "offline events" for context. Do not abbreviate "Conversions API" in documentation even if casual marketing conversations substitute "CAPI" for any offline events story.
+  Spell out "Conversions API" and append "events" for context. Do not abbreviate "Conversions API" in documentation even if casual marketing conversations substitute "CAPI" for any events story.
 
-  .. important:: Each destination may have its own specific terminology for offline events. For example, TikTok Ads Manager uses the "Events API for offline events".
+  .. important:: Each destination may have its own specific terminology for events. For example, TikTok Ads Manager uses the "Events API for events".
 
 .. style-guide-capitalization-external-end

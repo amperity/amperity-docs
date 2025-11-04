@@ -3,18 +3,18 @@
 
 .. meta::
     :description lang=en:
-        Offline events attribute customer interactions to marketing activity.
+        Events attribute customer interactions to marketing activity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Offline events attribute customer interactions to marketing activity.
+        Events attribute customer interactions to marketing activity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Offline events
+        Events
 
 ==================================================
-Offline events
+Events
 ==================================================
 
 .. include:: ../../amperity_user/source/events.rst
@@ -22,7 +22,7 @@ Offline events
    :end-before: .. offline-events-overview-end
 
 
-**Send offline events to**
+**Send events to**
 
 .. events-about-grid-start
 
@@ -76,7 +76,7 @@ Offline events
    :maxdepth: 2
    :hidden:
 
-   About offline events <events>
+   About events <events>
    Criteo <events_criteo>
    Google Ads <events_google_enhanced_conversions>
    Meta Ads Manager <events_meta_ads_manager>

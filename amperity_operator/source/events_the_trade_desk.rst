@@ -1,12 +1,12 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: The Trade Desk Offline Events
+.. |destination-name| replace:: The Trade Desk Events
 .. |destination-api| replace:: The Trade Desk API
 .. |plugin-name| replace:: "The Trade Desk"
 .. |credential-type| replace:: "tradedesk"
 .. |required-credentials| replace:: "advertiser ID" and "advertiser secret"
-.. |what-send| replace:: offline events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
@@ -16,18 +16,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send offline events to The Trade Desk.
+        Configure Amperity to send events to The Trade Desk.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send offline events to The Trade Desk.
+        Configure Amperity to send events to The Trade Desk.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send offline events to The Trade Desk
+        Send events to The Trade Desk
 
 ==================================================
-Configure offline events for The Trade Desk
+Configure events for The Trade Desk
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -40,15 +40,15 @@ Configure offline events for The Trade Desk
 
 Use this destination to send offline measurement data to The Trade Desk, and then use that data for attribution and targeting.
 
-Offline events help your brand track offline conversions--in-store sales, place visits, and other events--as they relate to your brand's marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
+Events help your brand track offline conversions--in-store sales, place visits, and other events--as they relate to your brand's marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
 
-.. tip:: Send offline events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
+.. tip:: Send events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
 
 .. events-the-trade-desk-about-end
 
 .. events-the-trade-desk-api-note-start
 
-.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage offline events.
+.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage events.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -335,19 +335,19 @@ Build a query
 
 .. events-the-trade-desk-offline-events-build-query-start
 
-Use a query to build a combinations of data from your **Customer 360** database tables that best represent the set of offline events that your brand wants to use within |destination-name|.
+Use a query to build a combinations of data from your **Customer 360** database tables that best represent the set of events that your brand wants to use within |destination-name|.
 
 .. events-the-trade-desk-offline-events-build-query-end
 
 .. events-the-trade-desk-offline-events-build-query-tip-start
 
-.. tip:: Send offline events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
+.. tip:: Send events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
 
 .. events-the-trade-desk-offline-events-build-query-tip-end
 
 .. events-the-trade-desk-offline-events-build-query-example-start
 
-You can send offline events to |destination-name| to support your brand's use cases.
+You can send events to |destination-name| to support your brand's use cases.
 
 A query that returns a collection offline event is similar to:
 
@@ -379,7 +379,7 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
 
    You may use **euid** as a source attribute when your brand is a participant in `European Unified ID (EUID) <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
 
-.. caution:: Review the list of offline events parameters that may be sent to |destination-name|. Compare these parameters to the fields that are available from your brand's customer 360 database to determine which fields are available to be sent to |destination-name|.
+.. caution:: Review the list of events parameters that may be sent to |destination-name|. Compare these parameters to the fields that are available from your brand's customer 360 database to determine which fields are available to be sent to |destination-name|.
 
    Some parameters, such as **city**, **region**, which represents a state within the United States, and **country**, must be associated with the location in which the offline event occurred, not the location at which the customer associated with the offline event resides.
 
@@ -390,12 +390,12 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
 
 .. _events-the-trade-desk-parameters-offline:
 
-Offline events paramaters
+Events paramaters
 ==================================================
 
 .. events-the-trade-desk-parameters-offline-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events. The **TD1** - **TD10** fields represent the optional fields your brand may include to extend customer profiles to include offline events.
+The following table describes each of the parameters that are required by |destination-name| for events. The **TD1** - **TD10** fields represent the optional fields your brand may include to extend customer profiles to include events.
 
 The fields are listed alphabetically, but may be returned by the query in any order.
 
@@ -407,7 +407,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
      - Description
 
    * - **cat**
-     - **Optional**, but **Recommended** when transaction details are included with offline events. See **item_code**, **name**, **price**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **item_code**, **name**, **price**, and **qty**.
 
        The name of a product in your product catalog.
 
@@ -431,9 +431,9 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The three-letter country code for the country in which the offline event occurred.
 
-       .. note:: Offline events should only be sent to |destination-name| when they occurred within the United States.
+       .. note:: Events should only be sent to |destination-name| when they occurred within the United States.
 
-          Use a **WHERE** clause to limit query results to only offline events that occurred within the United States.
+          Use a **WHERE** clause to limit query results to only events that occurred within the United States.
 
           .. code-block:: sql
 
@@ -467,11 +467,11 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **eventname**
-     - **Optional**, but **Required** for sending product catalogs alongside offline events.
+     - **Optional**, but **Required** for sending product catalogs alongside events.
 
-       An event name groups your brand's offline events a specific category type for offline events as defined by |destination-name|.
+       An event name groups your brand's events a specific category type for events as defined by |destination-name|.
 
-       The event name that most frequently is associated with offline events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table:
+       The event name that most frequently is associated with events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table:
 
        .. list-table::
           :widths: 25 75
@@ -492,7 +492,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
           * - **purchase**
             - Default. A user completed a purchase.
 
-              .. tip:: Recommended for *all* retail offline events.
+              .. tip:: Recommended for *all* retail events.
 
           * - **searchcategory**
             - A user searched for a category
@@ -517,7 +517,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **item_code**
-     - **Optional**, but **Required** when transaction details are included with offline events. See **cat**, **name**, **price**, and **qty**.
+     - **Optional**, but **Required** when transaction details are included with events. See **cat**, **name**, **price**, and **qty**.
 
        The unique identifier for a product in your brand's product catalog.
 
@@ -531,7 +531,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **name**
-     - **Optional**, but **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **price**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, **price**, and **qty**.
 
        The name of a product in your brand's product catalog.
 
@@ -549,7 +549,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        A unique identifier for the transaction. The value for this field is a string with a maximum of 64 characters.
 
-       .. note:: This field should be included with offline events to help |destination-name| deduplicate conversion events.
+       .. note:: This field should be included with events to help |destination-name| deduplicate conversion events.
 
        This value is most often associated with the **Order ID** field in the **Unified Transactions** table. Within the **SELECT** statement, return **Order ID**, and then rename it to the field name required by |destination-name|.
 
@@ -561,7 +561,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **price**
-     - **Optional**, but **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **name**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, **name**, and **qty**.
 
        The price of each item that is associated with an offline event. For example: "$9.99"
 
@@ -575,7 +575,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **qty**
-     - **Optional**, but **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, and **price**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, and **price**.
 
        The number of items that are associated with an offline event. For example: "10".
 
@@ -590,7 +590,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **region**
-     - **Optional**, but **Required** when **country** is included with offline events.
+     - **Optional**, but **Required** when **country** is included with events.
 
        The region in which the offline event occurred. For the United States, **region** refers to the state in which the offline event occurred.
 
@@ -603,7 +603,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
           ,country AS country
           ,state AS region
 
-       .. tip:: Use a **WHERE** clause to limit query results to only offline events that occurred in specific states.
+       .. tip:: Use a **WHERE** clause to limit query results to only events that occurred in specific states.
 
           .. code-block:: sql
 
@@ -623,7 +623,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
           ,store_id AS storeid
 
-       If you do not need to track offline events by individual physical stores, you may use a purchase channel to define this value. For example:
+       If you do not need to track events by individual physical stores, you may use a purchase channel to define this value. For example:
 
        .. code-block:: sql
 
@@ -641,7 +641,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        A field in a database table that contains the date and time at which the offline event occurred.
 
-       For retail-focused offline events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
+       For retail-focused events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
 
        For example:
 
@@ -672,9 +672,9 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The monetary value of the offline event to your brand. The value for this field must be a decimal.
 
-       .. note:: This field should be included with offline events to help |destination-name| deduplicate conversion events.
+       .. note:: This field should be included with events to help |destination-name| deduplicate conversion events.
 
-       For retail-focused offline events this is most often the **Order Value** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Value**, and then rename it to the field name required by |destination-name|.
+       For retail-focused events this is most often the **Order Value** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Value**, and then rename it to the field name required by |destination-name|.
 
        For example:
 
@@ -688,7 +688,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The currency that was associated with the offline event.
 
-       For retail-focused offline events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Currency**, and then rename it to the field name required by |destination-name|.
+       For retail-focused events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Currency**, and then rename it to the field name required by |destination-name|.
 
        For example:
 

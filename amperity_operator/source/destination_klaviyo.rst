@@ -406,7 +406,7 @@ Customer profile parameters
 
 .. destination-klaviyo-customer-profile-parameters-start
 
-The following table describes the parameters that may be sent to |destination-name|. Use the **properties** field to define a series of custom properties as key-value pairs to represent offline events.
+The following table describes the parameters that may be sent to |destination-name|. Use the **properties** field to define a series of custom properties as key-value pairs to represent events.
 
 Amperity uses the `Update Profile <https://developers.klaviyo.com/en/reference/update_profile>`__ |ext_link| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
 

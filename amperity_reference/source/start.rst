@@ -485,7 +485,7 @@ Amperity can do a lot more:
 * `Automate identity resolution <https://docs.amperity.com/operator/workflows.html#courier-groups>`__
 * `Automate syncing <https://docs.amperity.com/reference/bridge.html#add-bridge-to-scheduled-workflow>`__
 * Semantic tagging for `transactions <https://docs.amperity.com/reference/semantics.html#transactions>`__, `loyalty programs <https://docs.amperity.com/reference/semantics.html#loyalty-programs>`__, and more
-* Destinations for `paid media <https://docs.amperity.com/paid_media.html>`__, `marketing automation <https://docs.amperity.com/marketing_apps.html>`__, `offline events <https://docs.amperity.com/offline_events.html>`__
+* Destinations for `paid media <https://docs.amperity.com/paid_media.html>`__, `marketing automation <https://docs.amperity.com/marketing_apps.html>`__, `events <https://docs.amperity.com/offline_events.html>`__
 * `Segments <https://docs.amperity.com/ampiq/segments_reference.html>`__ and `campaigns <https://docs.amperity.com/ampiq/campaigns_reference.html>`__
 * `Queries <https://docs.amperity.com/amp360/queries_reference.html>`__ and orchestrations
 * `Profile API <https://docs.amperity.com/operator/api_profile.html>`__

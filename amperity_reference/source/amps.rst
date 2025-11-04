@@ -797,7 +797,7 @@ This applies to the following connectors:
 * Google Customer Match
 * Google Enhanced Conversions
 * LiveRamp
-* Meta Ads Offline Events
+* Meta Ads Events
 * Microsoft Ads
 * Microsoft Invest
 * Neustar
@@ -805,9 +805,9 @@ This applies to the following connectors:
 * Snapchat
 * The Trade Desk
 * The Trade Desk 3P Marketplace
-* The Trade Desk Offline Events
+* The Trade Desk Events
 * TikTok Ads
-* TikTok Ads Offline Events
+* TikTok Ads Events
 * Yahoo DSP
 
 .. destinations-premium-connectors-end

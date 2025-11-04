@@ -1352,7 +1352,7 @@ See "OAuth common flows".
 
 .. vale off
 
-**META ADS MANAGER: OFFLINE EVENTS**
+**META ADS MANAGER: EVENTS**
 
 .. vale on
 
@@ -1914,7 +1914,7 @@ The username and password of a Salesforce account configured for API access.
 
 **SFTP**
 
-Credentials that are unique to SFTP. These credentials apply to all sources and destinations that use SFTP, including Acxiom, Adobe Campaign, Adobe Customer Attributes, Adobe Experience Platform, Airship, Attentive, BazaarVoice, Bluecore, Camelot SMM, Cheetah Digital, Criteo (offline events), Cross Country Computer, Emarsys, Epsilon, Evocalize, Experian, Infutor, Iterable, Kibo, Koupon Media, LiveRamp, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, Pinterest (product catalogs), PowerReviews, Quad, Reddit Ads, RR Donnelly, Salesforce Commerce Cloud, Salesforce Marketing Cloud, Salesforce Marketing Cloud Personalization, SMG, SoundCommerce, Vibes.
+Credentials that are unique to SFTP. These credentials apply to all sources and destinations that use SFTP, including Acxiom, Adobe Campaign, Adobe Customer Attributes, Adobe Experience Platform, Airship, Attentive, BazaarVoice, Bluecore, Camelot SMM, Cheetah Digital, Criteo (events), Cross Country Computer, Emarsys, Epsilon, Evocalize, Experian, Infutor, Iterable, Kibo, Koupon Media, LiveRamp, Neustar, Oracle Data Cloud, Oracle DMP, Oracle Responsys, PebblePost, Persado, Pinterest (product catalogs), PowerReviews, Quad, Reddit Ads, RR Donnelly, Salesforce Commerce Cloud, Salesforce Marketing Cloud, Salesforce Marketing Cloud Personalization, SMG, SoundCommerce, Vibes.
 
 .. vale on
 
@@ -2257,7 +2257,7 @@ The provider ID for your account with The Trade Desk. Ask your The Trade Desk re
 
 .. vale off
 
-**THE TRADE DESK: OFFLINE EVENTS**
+**THE TRADE DESK: EVENTS**
 
 .. vale on
 
@@ -2294,7 +2294,7 @@ TikTok Advertiser Accounts must use OAuth. Assign the account used to allow acce
 
 .. vale off
 
-**TIKTOK ADS MANAGER: OFFLINE EVENTS**
+**TIKTOK ADS MANAGER: EVENTS**
 
 .. vale on
 

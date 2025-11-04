@@ -9,18 +9,18 @@
 
 .. meta::
     :description lang=en:
-        Send offline events from Amperity to Criteo.
+        Send events from Amperity to Criteo.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Send offline events from Amperity to Criteo.
+        Send events from Amperity to Criteo.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send offline events to Criteo
+        Send events to Criteo
 
 ==================================================
-Send offline events to Criteo
+Send events to Criteo
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -31,9 +31,9 @@ Send offline events to Criteo
    :start-after: .. events-criteo-overview-start
    :end-before: .. events-criteo-overview-end
 
-.. caution:: This destination is available for sending offline events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+.. caution:: This destination is available for sending events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending offline events to |destination-name|.
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending events to |destination-name|.
 
 
 .. _events-criteo-build-query:

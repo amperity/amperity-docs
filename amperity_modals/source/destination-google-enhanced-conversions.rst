@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Google Enhanced Conversions
-.. |what-send| replace:: offline events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 
 

@@ -299,12 +299,12 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
        Send transactions data using SFTP.
 
-       Send offline events to track offline conversions from your marketing campaigns.
+       Send events to track offline conversions from your marketing campaigns.
 
    * - **Criteo Retail Audience API**
      - 
      - |system-yes|
-     - Send offline events to track offline conversions from your marketing campaigns.
+     - Send events to track offline conversions from your marketing campaigns.
 
    * - **Cross Country Computer**
      - |system-yes|
@@ -597,7 +597,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Meta Ads Manager**
      - 
      - |system-yes|
-     - Send audiences and offline events to Meta Ads Manager, run ads on Facebook, Messenger, Instagram, and more.
+     - Send audiences and events to Meta Ads Manager, run ads on Facebook, Messenger, Instagram, and more.
 
    * - **MetaRouter**
      - |system-yes|
@@ -959,9 +959,9 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull data to Amperity from TikTok Ads using Fivetran.
 
-       Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send offline events to track offline conversions from your marketing campaigns.
+       Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send events to track offline conversions from your marketing campaigns.
 
-       Send offline events to track offline conversions from your marketing campaigns.
+       Send events to track offline conversions from your marketing campaigns.
 
    * - **Toast**
      - |system-yes|

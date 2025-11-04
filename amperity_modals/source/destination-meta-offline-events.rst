@@ -1,19 +1,19 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: Meta Offline Events
-.. |what-send| replace:: offline events
+.. |destination-name| replace:: Meta Events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 
 
-Meta Offline Events
+Meta Events
 ==================================================
 
 .. TODO: Sync this with the updated events topics.
 
-Send offline events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Offline events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for offline events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
+Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
 
 The first time transaction events are sent to |destination-name|, seven days of data is sent, after which Amperity should be configured to send daily updates, which will maintain a 7-day rolling window of transaction events.
 

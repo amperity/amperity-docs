@@ -37,7 +37,7 @@ Configure campaigns for Meta Ads Manager
 
 .. destination-meta-ads-manager-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90
@@ -64,10 +64,10 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Offline events
+          :alt: Events
           :align: center
           :class: no-scaled-link
-     - **Offline events**
+     - **Events**
 
        .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-overview-start
@@ -88,7 +88,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
 #. :ref:`Get details <destination-meta-ads-manager-get-details>`
 #. :ref:`Authorize Amperity access to the customer's account <destination-meta-ads-manager-configure-oauth>`
 #. :ref:`Custom audiences <destination-meta-ads-manager-custom-audiences>`
-#. :ref:`Offline events <destination-meta-ads-manager-offline-events>`
+#. :ref:`Events <destination-meta-ads-manager-offline-events>`
 
 .. destination-meta-ads-manager-steps-to-send-end
 
@@ -226,7 +226,7 @@ Get details
 
           You can find all of this information and perform all of the required steps from within `Facebook Business Manager <https://www.facebook.com/business/help/1492627900875762>`__ |ext_link|. Click **Business Settings**, then **Ad Accounts**, and then the Facebook Ads account name. The account ID is visible under **Details**.
 
-       .. note:: You may use the same credentials to send offline events.
+       .. note:: You may use the same credentials to send events.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -271,13 +271,13 @@ Get details
           :alt: Detail five.
           :align: center
           :class: no-scaled-link
-     - **Meta Ads Manager offline events only**
+     - **Meta Ads Manager events only**
 
        `Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
 
-       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
+       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send events from Amperity.
 
-       A :ref:`query that defines the set of offline events <destination-meta-ads-manager-offline-events-build-query>` to be sent to |destination-name|.
+       A :ref:`query that defines the set of events <destination-meta-ads-manager-offline-events-build-query>` to be sent to |destination-name|.
 
 .. destination-meta-ads-manager-get-details-end
 
@@ -627,7 +627,7 @@ Add data template
 
 .. _destination-meta-ads-manager-offline-events:
 
-Offline events
+Events
 ==================================================
 
 .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
@@ -691,7 +691,7 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the destination and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the destination and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
@@ -713,9 +713,9 @@ Add destination
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       |destination-name| requires using OAuth to :ref:`authorize Amperity to send offline events to your Meta Ads Manager account <destination-meta-ads-manager-configure-oauth>`.
+       |destination-name| requires using OAuth to :ref:`authorize Amperity to send events to your Meta Ads Manager account <destination-meta-ads-manager-configure-oauth>`.
 
-       .. note:: You may use the same credentials to send both custom audiences and offline events to |destination-name|.
+       .. note:: You may use the same credentials to send both custom audiences and events to |destination-name|.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -729,13 +729,13 @@ Add destination
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings-meta-ads-offline.png
           :width: 500 px
-          :alt: Settings for Meta Ads Manager offline events.
+          :alt: Settings for Meta Ads Manager events.
           :align: left
           :class: no-scaled-link
 
        `Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
 
-       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send offline events from Amperity.
+       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send events from Amperity.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -770,7 +770,7 @@ Add data template
 
 .. destination-meta-ads-manager-offline-events-add-data-template-start
 
-Offline events must be sent using a query and orchestration. The data template associated with offline events should not be made available to the **Campaigns** editor.
+Events must be sent using a query and orchestration. The data template associated with events should not be made available to the **Campaigns** editor.
 
 .. destination-meta-ads-manager-offline-events-add-data-template-end
 
@@ -797,7 +797,7 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the data template and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the data template and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
@@ -1289,7 +1289,7 @@ Conversions API parameters
 
 .. destination-meta-ads-manager-conversion-api-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with offline events that are returned by the query and sent to |destination-name|.
+The following table describes each of the parameters that are required by |destination-name| for events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with events that are returned by the query and sent to |destination-name|.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
@@ -1303,7 +1303,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **action_source**
      - **Optional**
 
-       Action sources group offline events into categories and enable ad measurmeent and custom audience creation abilities from within the |destination-name| user interface. The default value for **action_source** is **physical_store**.
+       Action sources group events into categories and enable ad measurmeent and custom audience creation abilities from within the |destination-name| user interface. The default value for **action_source** is **physical_store**.
 
        Add **action_source** to your query and then set a value:
 
@@ -1369,7 +1369,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **currency**
      - **Required**
 
-       A value for **currency** is required by the Conversions API for offline events. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
+       A value for **currency** is required by the Conversions API for events. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
 
        Add **currency** to your query, and then set a value:
 

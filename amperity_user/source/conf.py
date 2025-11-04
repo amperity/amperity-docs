@@ -161,7 +161,7 @@ html_theme_options = {
                     "summary": "Send data to any downstream system."
                 },
                 {
-                    "title": "Offline events",
+                    "title": "Events",
                     "url": "../operator/grid_events",
                     "summary": "Measure marketing efforts across channels."
                 },

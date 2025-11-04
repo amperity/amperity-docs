@@ -104,7 +104,7 @@ You need to build a query that outputs email addresses and phone numbers.
 
 .. _sendto-tiktok-ads-build-query-offline-events:
 
-Send offline events
+Send events
 --------------------------------------------------
 
 .. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
@@ -154,7 +154,7 @@ Run orchestration
 
 .. _destination-tiktok-ads-parameters:
 
-Offline events parameters
+Events parameters
 ==================================================
 
 .. include:: ../../amperity_operator/source/events_tiktok_ads.rst

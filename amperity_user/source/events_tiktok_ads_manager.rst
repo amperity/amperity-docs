@@ -6,23 +6,23 @@
 
 .. meta::
     :description lang=en:
-        Send offline events from Amperity to TikTok Ads Manager.
+        Send events from Amperity to TikTok Ads Manager.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Send offline events from Amperity to TikTok Ads Manager.
+        Send events from Amperity to TikTok Ads Manager.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send offline events to TikTok Ads Manager
+        Send events to TikTok Ads Manager
 
 ==================================================
-Send offline events to TikTok Ads Manager
+Send events to TikTok Ads Manager
 ==================================================
 
 .. events-tiktok-ads-offline-events-start
 
-Send offline events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Support for `offline events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
+Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Support for `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
 For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
 
@@ -30,24 +30,24 @@ For example: When did a customer purchase? What did a customer purchase? Was it 
 
 .. events-tiktok-ads-offline-events-attribution-windows-start
 
-Offline events must have occurred within the previous 28 days. The maximum attribution windows for
+Events must have occurred within the previous 28 days. The maximum attribution windows for
 
 * Click-through attribution (CTA) is 28 days
 * View-through attribution (VTA) is 7 days
 
-Offline events beyond these attribution windows are not matched to ads or displayed in reporting.
+Events beyond these attribution windows are not matched to ads or displayed in reporting.
 
 .. events-tiktok-ads-offline-events-attribution-windows-end
 
 .. events-tiktok-ads-offline-events-allowfor-start
 
-.. note:: Offline events are not immediately available in |destination-name|. Allow for up to 24 hours after the point at which Amperity has finished sending offline events for them to be available.
+.. note:: Events are not immediately available in |destination-name|. Allow for up to 24 hours after the point at which Amperity has finished sending events for them to be available.
 
 .. events-tiktok-ads-offline-events-allowfor-end
 
-.. caution:: This destination is available for sending offline events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+.. caution:: This destination is available for sending events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending offline events to |destination-name|.
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending events to |destination-name|.
 
 
 .. _events-tiktok-ads-build-query:
@@ -57,7 +57,7 @@ Build a query
 
 .. events-tiktok-ads-offline-events-build-query-start
 
-Use a query to build a combination of data from the your brand's customer 360 database to represent the set of offline events that your brand wants to use within |destination-name|. A query that collects offline events for use in |destination-name| is similar to:
+Use a query to build a combination of data from the your brand's customer 360 database to represent the set of events that your brand wants to use within |destination-name|. A query that collects events for use in |destination-name| is similar to:
 
 .. code-block:: sql
    :linenos:
@@ -85,7 +85,7 @@ Use a query to build a combination of data from the your brand's customer 360 da
    LEFT JOIN Merged_Customers mc ON uit.amperity_id = mc.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
 
-and **MUST** contain the following fields: **email**, **event**, **event_id**, and **event_set_id**. Review the list of supported offline events parameters while building the query.
+and **MUST** contain the following fields: **email**, **event**, **event_id**, and **event_set_id**. Review the list of supported events parameters while building the query.
 
 Fields that contain PII--email address and phone numbers, for example--should have one-way SHA-256 hashing applied to them.
 
@@ -102,7 +102,7 @@ Fields that contain PII--email address and phone numbers, for example--should ha
 
 .. _events-tiktok-ads-parameters:
 
-Offline events parameters
+Events parameters
 ==================================================
 
 .. include:: ../../amperity_operator/source/events_tiktok_ads.rst

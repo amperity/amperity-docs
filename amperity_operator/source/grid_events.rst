@@ -3,23 +3,23 @@
 
 .. meta::
     :description lang=en:
-        Amperity lets you set up measurement of offline events like in-store purchases or venue check-ins.
+        Amperity lets you set up measurement ofevents events like in-store purchases or venue check-ins.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity lets you set up measurement of offline events like in-store purchases or venue check-ins.
+        Amperity lets you set up measurement of events like in-store purchases or venue check-ins.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure offline events
+        Configure events
 
 ==================================================
-Configure offline events
+Configure events
 ==================================================
 
 .. events-about-start
 
-Set up measurement of offline events like in-store purchases or venue check-ins.
+Set up measurement of events like in-store purchases or venue check-ins.
 
 .. events-about-end
 
@@ -54,7 +54,7 @@ Set up measurement of offline events like in-store purchases or venue check-ins.
 
 
 .. toctree::
-   :caption: Offline events
+   :caption: Events
    :maxdepth: 2
    :hidden:
 

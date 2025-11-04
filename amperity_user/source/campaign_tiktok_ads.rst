@@ -190,7 +190,7 @@ Configure default attributes
    * - phone
      - PHONE
 
-   * - Offline events parameters
-     - Optional. :ref:`Review the list of offline events parameters <events-tiktok-ads-parameters>` your brand can send to |destination-name|. These may be configured as default attributes in Amperity.
+   * - Events parameters
+     - Optional. :ref:`Review the list of events parameters <events-tiktok-ads-parameters>` your brand can send to |destination-name|. These may be configured as default attributes in Amperity.
 
 .. channel-tiktok-ads-configure-default-attributes-end
