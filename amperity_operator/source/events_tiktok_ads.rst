@@ -2,11 +2,11 @@
 
 
 .. |destination-name| replace:: TikTok Ads Manager
-.. |plugin-name| replace:: "TikTok Ads Offline Events"
+.. |plugin-name| replace:: "TikTok Ads Events"
 .. |credential-type| replace:: "tiktok-offline-events"
 .. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: offline events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "tik"
 .. |allow-for-what| replace:: audience mapping
@@ -15,34 +15,34 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send offline events to TikTok Ads Manager.
+        Configure Amperity to send events to TikTok Ads Manager.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send offline events to TikTok Ads Manager.
+        Configure Amperity to send events to TikTok Ads Manager.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send offline events to TikTok Ads
+        Send events to TikTok Ads
 
 ==================================================
-Configure offline events for TikTok Ads
+Configure events for TikTok Ads
 ==================================================
 
 .. events-tiktok-ads-start
 
-Offline events help your brand track offline conversions from your marketing campaigns on |destination-name|. Support for sending `offline events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
+Events help your brand track offline conversions from your marketing campaigns on |destination-name|. Support for sending `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
 .. events-tiktok-ads-end
 
 .. events-tiktok-ads-attribution-windows-start
 
-.. tip:: Offline events must have occurred within the previous 28 days. The maximum attribution windows for
+.. tip:: Events must have occurred within the previous 28 days. The maximum attribution windows for
 
    * Click-through attribution (CTA) is 28 days
    * View-through attribution (VTA) is 7 days
 
-   Offline events beyond these attribution windows are not matched to ads or displayed in reporting.
+   Events beyond these attribution windows are not matched to ads or displayed in reporting.
 
 .. events-tiktok-ads-attribution-windows-end
 
@@ -323,12 +323,12 @@ Add destination
 
 .. _events-tiktok-ads-offline-events-parameters:
 
-Offline events parameters
+Events parameters
 ==================================================
 
 .. events-tiktok-ads-offline-events-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events.
+The following table describes each of the parameters that are required by |destination-name| for events.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
@@ -415,7 +415,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **Subscribe**
          Use when the offline event is associated with a customer subscribing to something, such as your brand's loyalty program or notifications (email or SMS).
 
-       The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use offline events within |destination-name|.
+       The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use events within |destination-name|.
 
 
    * - **event_channel**
@@ -439,7 +439,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
 
-       .. note:: This value is specified from the **Event source** setting in the destination that is configured to send offline events to |destination-name|. This value should not be specified in the query that returns the set of offline events.
+       .. note:: This value is specified from the **Event source** setting in the destination that is configured to send events to |destination-name|. This value should not be specified in the query that returns the set of events.
 
    * - **ip**
      - Web events only. A non-hashed public IP address for the user's device. May be an IPv4 or an IPv6 address, full or compressed. This field should be sent along with **agent** when both are available. 

@@ -24,7 +24,7 @@ A collection of in-depth user guides to help you:
 * Build segments, journeys, and campaigns
 * Build and run SQL queries and send those results anywhere
 * Send audiences to paid media applications
-* Use offline events to help track the success of your campaigns
+* Use events to help track the success of your campaigns
 * Use AmpAI features
 
 .. user-guides-about-end
@@ -124,7 +124,7 @@ Find the right audience size, prevent churn, advertise across paid media, use pe
       :link-type: doc
       :link: direct_mail
 
-   .. grid-item-card:: Offline events
+   .. grid-item-card:: Events
       :link-type: doc
       :link: events
 
@@ -250,7 +250,7 @@ Build audiences around activities like first orders, repeat orders, and who has 
    Audience sizes <recommended_audiences>
    Churn prevention <churn_prevention>
    Direct mail <direct_mail>
-   Offline events <grid_events>
+   Events <grid_events>
    One-time buyers <onetime_buyers>
    Paid media <grid_paid_media>
    People-based measurement <people_based_measurement>

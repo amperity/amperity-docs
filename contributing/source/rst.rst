@@ -3720,7 +3720,7 @@ Use "string" to define how the link appears in the left-side navigation. The fil
       Bridges <grid_bridge>
       Campaigns <grid_campaigns>
       Destinations <grid_destinations>
-      Offline events <grid_events>
+      Events <grid_events>
       Profile API endpoints <api_profile>
       Sources <grid_sources>
       Streaming API endpoints <api_streaming>
@@ -3850,7 +3850,7 @@ The navigation links in the top menus are managed from the conf.py file in each 
            "summary": "Send data to any downstream system."
          },
          {
-           "title": "Offline events",
+           "title": "Events",
            "url": "../operator/grid_events",
            "summary": "Measure marketing efforts across channels."
          },

@@ -1,16 +1,16 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: TikTok Ads Offline Events
+.. |destination-name| replace:: TikTok Ads Events
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: offline events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 
 
-TikTok Ads Offline Events
+TikTok Ads Events
 ==================================================
 
-Send offline events to TikTok Ads Manager to help your brand track offline conversions that result from your marketing campaigns. Support for offline events and parameters is part of the TikTok Events API.
+Send events to TikTok Ads Manager to help your brand track offline conversions that result from your marketing campaigns. Support for events and parameters is part of the TikTok Events API.
 
 
 Credentials

@@ -39,7 +39,7 @@ Configure campaigns for Criteo
 
 .. campaign-criteo-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90

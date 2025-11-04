@@ -36,9 +36,9 @@ Upload a CSV file that contains `offline conversions <https://help.pinterest.com
 
 .. events-pinterest-overview-tip-end
 
-.. caution:: This destination is available for sending offline events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+.. caution:: This destination is available for sending events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending offline events to |destination-name|.
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending events to |destination-name|.
 
 
 .. _events-pinterest-build-query:

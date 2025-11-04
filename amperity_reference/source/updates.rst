@@ -132,9 +132,9 @@ Summer 2025
 
    :bdg-success:`NEW` Added support to :ref:`enforce multi-factor authentication (MFA) <settings-users-multifactor-authentication>` for all username-password users on non-SSO tenants.
 
-**Offline events**
+**Events**
 
-   :bdg-success:`NEW` Configure Amperity to send offline events to `Google Enhanced Conversions <../operator/events_google_enhanced_conversions.html>`__.
+   :bdg-success:`NEW` Configure Amperity to send events to `Google Enhanced Conversions <../operator/events_google_enhanced_conversions.html>`__.
 
 **Profile API**
 

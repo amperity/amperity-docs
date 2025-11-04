@@ -129,6 +129,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Data Subject Access Request
    * - **DSP**
      - Demand-side Platform
+   * - **DST**
+     - Daylight Savings Time
    * - **DTC**
      - Direct-to-Consumer
    * - **DW**, **DWH**

@@ -42,7 +42,7 @@ Set up inbound and outbound connections between Amperity and other applications 
       :link-type: doc
       :link: grid_destinations
 
-   .. grid-item-card:: Offline events
+   .. grid-item-card:: Events
       :link-type: doc
       :link: grid_events
 
@@ -69,7 +69,7 @@ Set up inbound and outbound connections between Amperity and other applications 
    Bridges <grid_bridge>
    Campaigns <grid_campaigns>
    Destinations <grid_destinations>
-   Offline events <grid_events>
+   Events <grid_events>
    Profile API endpoints <api_profile>
    Sources <sources>
    Streaming API endpoints <api_streaming>

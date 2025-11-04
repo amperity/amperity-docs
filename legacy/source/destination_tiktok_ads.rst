@@ -34,7 +34,7 @@ Configure campaigns for TikTok Ads Manager
 
 .. destination-tiktok-ads-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90
@@ -51,30 +51,30 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Offline events
+          :alt: Events
           :align: center
           :class: no-scaled-link
-     - **Offline events**
+     - **Events**
 
-       :ref:`Offline events <destination-tiktok-ads-offline-events>` help your brand track offline conversions from your marketing campaigns. Support for `offline events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
+       :ref:`Events <destination-tiktok-ads-offline-events>` help your brand track offline conversions from your marketing campaigns. Support for `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
-       .. tip:: Offline events must have occurred within the previous 28 days. The maximum attribution windows for
+       .. tip:: Events must have occurred within the previous 28 days. The maximum attribution windows for
 
           * Click-through attribution (CTA) is 28 days
           * View-through attribution (VTA) is 7 days
 
-          Offline events beyond these attribution windows are not matched to ads or displayed in reporting.
+          Events beyond these attribution windows are not matched to ads or displayed in reporting.
 
 .. destination-tiktok-ads-custom-audiences-and-offline-events-end
 
 .. destination-tiktok-ads-steps-to-send-start
 
-The following steps are required to send custom audiences and offline events to |destination-name|:
+The following steps are required to send custom audiences and events to |destination-name|:
 
 #. :ref:`Get details <destination-tiktok-ads-get-details>`
 #. :ref:`Configure OAuth <destination-tiktok-ads-configure-oauth>`
 #. :ref:`Custom audiences <destination-tiktok-ads-custom-audiences>`
-#. :ref:`Offline events <destination-tiktok-ads-offline-events>`
+#. :ref:`Events <destination-tiktok-ads-offline-events>`
 
 .. destination-tiktok-ads-steps-to-send-end
 
@@ -142,7 +142,7 @@ Get details
           :alt: Detail four.
           :align: center
           :class: no-scaled-link
-     - **TikTok Ads offline events only**
+     - **TikTok Ads events only**
 
        The event set ID. (The event set must exist before you can send data to it from Amperity.)
 
@@ -158,7 +158,7 @@ Get details
           :alt: Detail five.
           :align: center
           :class: no-scaled-link
-     - :ref:`Authorize Amperity to send data to the customer's TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>` for offline events.
+     - :ref:`Authorize Amperity to send data to the customer's TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>` for events.
 
        .. note:: Destinations for |destination-name| audience segments and offline profiles both use the same OAuth process, but may require different credentials and must be configured individually.
 
@@ -292,7 +292,7 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the destination and a description. For example: "|destination-name| custom audiences" and "Send offline events to |destination-name|.".
+       Enter the name of the destination and a description. For example: "|destination-name| custom audiences" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
@@ -488,7 +488,7 @@ Add data template
 
 .. _destination-tiktok-ads-offline-events:
 
-Offline events
+Events
 ==================================================
 
 .. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
@@ -546,7 +546,7 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the destination and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the destination and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
@@ -568,7 +568,7 @@ Add destination
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       |destination-name| requires using OAuth to :ref:`authorize Amperity to send offline events to your TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>`.
+       |destination-name| requires using OAuth to :ref:`authorize Amperity to send events to your TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>`.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -582,7 +582,7 @@ Add destination
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings-tiktok-offline.png
           :width: 500 px
-          :alt: Settings for TikTok Ads offline events.
+          :alt: Settings for TikTok Ads events.
           :align: left
           :class: no-scaled-link
 
@@ -623,7 +623,7 @@ Add data template
 
 .. destination-tiktok-ads-offline-events-add-data-template-start
 
-Offline events must be sent using a query and orchestration. The data template associated with offline events should not be made available to the **Campaigns** editor.
+Events must be sent using a query and orchestration. The data template associated with events should not be made available to the **Campaigns** editor.
 
 .. destination-tiktok-ads-offline-events-add-data-template-end
 
@@ -650,7 +650,7 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the data template and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the data template and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
@@ -889,12 +889,12 @@ To resolve this error, verify that the business user is assigned to the **Operat
 
 .. _destination-tiktok-ads-offline-events-parameters:
 
-Offline events parameters
+Events parameters
 ==================================================
 
 .. destination-tiktok-ads-offline-events-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events.
+The following table describes each of the parameters that are required by |destination-name| for events.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
@@ -981,7 +981,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **Subscribe**
          Use when the offline event is associated with a customer subscribing to something, such as your brand's loyalty program or notifications (email or SMS).
 
-       The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use offline events within |destination-name|.
+       The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use events within |destination-name|.
 
 
    * - **event_channel**

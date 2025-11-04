@@ -1,14 +1,14 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: The Trade Desk Offline Events
-.. |what-send| replace:: offline events
+.. |destination-name| replace:: The Trade Desk Events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
 
 
-The Trade Desk Offline Events
+The Trade Desk Events
 ==================================================
 
 Send offline measurement data to The Trade Desk, and then use that data for attribution and targeting.

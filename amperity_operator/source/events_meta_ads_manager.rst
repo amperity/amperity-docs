@@ -1,40 +1,40 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Meta Ads Offline Events
+.. |destination-name| replace:: Meta Ads Events
 .. |plugin-name| replace:: "Facebook"
 .. |credential-type| replace:: "facebook"
 .. |required-credentials| replace:: "refresh token"
-.. |what-send| replace:: offline events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 .. |what-enable| replace:: **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE**
-.. |allow-for-what| replace:: offline events
+.. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
 
 .. meta::
     :description lang=en:
-        Send offline events from Amperity to Meta Ads Manager.
+        Send events from Amperity to Meta Ads Manager.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Send offline events from Amperity to Meta Ads Manager.
+        Send events from Amperity to Meta Ads Manager.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send offline events to Meta Ads Manager
+        Send events to Meta Ads Manager
 
 ==================================================
-Configure offline events for Meta Ads Manager
+Configure events for Meta Ads Manager
 ==================================================
 
 .. TODO: Sync this with the updated events topics.
 
 .. events-meta-ads-manager-overview-start
 
-Send offline events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Offline events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for offline events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
+Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
 
 .. important:: The first time transaction events are sent to |destination-name|, and when **action_source** is set to **physical_store**, up to 62 days of transactions data may be sent, after which Amperity should be configured to send updates that maintain a 7-day rolling window of transaction events.
 
@@ -42,9 +42,9 @@ Transaction events that occurred within the previous seven days *and* contain po
 
 .. events-meta-ads-manager-allowfor-start
 
-.. note:: Offline events are not immediately available in |destination-name|. Allow for |allow-for-duration| after the point at which Amperity has finished sending |allow-for-what| for them to be available.
+.. note:: Events are not immediately available in |destination-name|. Allow for |allow-for-duration| after the point at which Amperity has finished sending |allow-for-what| for them to be available.
 
-   Offline events that are sent to |destination-name| can be accessed from `Meta Events Manager <https://www.facebook.com/business/help/898185560232180?id=565900110447546>`__ |ext_link|.
+   Events that are sent to |destination-name| can be accessed from `Meta Events Manager <https://www.facebook.com/business/help/898185560232180?id=565900110447546>`__ |ext_link|.
 
 .. events-meta-ads-manager-allowfor-end
 
@@ -111,7 +111,7 @@ Configure credentials
    :start-after: .. credential-snappass-start
    :end-before: .. credential-snappass-end
 
-**To configure credentials for Meta Ads Manager offline events**
+**To configure credentials for Meta Ads Manager events**
 
 .. events-meta-ads-manager-credentials-steps-start
 
@@ -221,7 +221,7 @@ Add destination
           :start-after: .. destinations-add-destination-start
           :end-before: .. destinations-add-destination-end
 
-       Enter the name of the destination and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the destination and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -236,9 +236,9 @@ Add destination
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       |destination-name| requires using OAuth to :ref:`authorize Amperity to send offline events to your Meta Ads Manager account <events-meta-ads-manager-credentials>`.
+       |destination-name| requires using OAuth to :ref:`authorize Amperity to send events to your Meta Ads Manager account <events-meta-ads-manager-credentials>`.
 
-       .. note:: You may use the same credentials to send both custom audiences and offline events to |destination-name|.
+       .. note:: You may use the same credentials to send both custom audiences and events to |destination-name|.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -299,9 +299,9 @@ Build a query
 
 .. events-meta-ads-manager-offline-events-build-query-start
 
-Use a query to build a combination of data from the **Unified Itemized Transactions**, **Unified Transactions**, and **Customer 360** tables to represent the set of offline events that your brand wants to use within |destination-name|.
+Use a query to build a combination of data from the **Unified Itemized Transactions**, **Unified Transactions**, and **Customer 360** tables to represent the set of events that your brand wants to use within |destination-name|.
 
-A query that returns a collection offline events for use in |destination-name| is similar to:
+A query that returns a collection events for use in |destination-name| is similar to:
 
 .. code-block:: sql
    :linenos:
@@ -373,7 +373,7 @@ Conversions API parameters
 
 .. events-meta-ads-manager-conversion-api-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with offline events that are returned by the query and sent to |destination-name|.
+The following table describes each of the parameters that are required by |destination-name| for events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with events that are returned by the query and sent to |destination-name|.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
@@ -387,7 +387,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **action_source**
      - **Optional**
 
-       Action sources group offline events into categories and enable ad measurmeent and custom audience creation abilities from within the |destination-name| user interface. The default value for **action_source** is **physical_store**.
+       Action sources group events into categories and enable ad measurmeent and custom audience creation abilities from within the |destination-name| user interface. The default value for **action_source** is **physical_store**.
 
        Add **action_source** to your query and then set a value:
 
@@ -453,7 +453,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **currency**
      - **Required**
 
-       A value for **currency** is required by the Conversions API for offline events. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
+       A value for **currency** is required by the Conversions API for events. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
 
        Add **currency** to your query, and then set a value:
 

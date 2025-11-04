@@ -145,7 +145,7 @@ After configuring this destination users may use:
 
 * Orchestrations to send query results
 * Orchestrations and campaigns to send audiences
-* Orchestrations and campaigns to send offline events
+* Orchestrations and campaigns to send events
 
 .. destinations-steps-business-users-end
 
@@ -1874,11 +1874,11 @@ A setting that describes how to collect custom audience information. Select one 
 
 .. vale off
 
-**META ADS MANAGER: OFFLINE EVENTS**
+**META ADS MANAGER: EVENTS**
 
 .. vale on
 
-Settings unique to Meta Ads Manager: Offline Events.
+Settings unique to Meta Ads Manager: Events.
 
 **Dataset ID**
 
@@ -1886,7 +1886,7 @@ Settings unique to Meta Ads Manager: Offline Events.
 
 `Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources--such as from websites, mobile apps, physical store locations or business chats--from one location.
 
-A `dataset ID configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| supports sending send offline events from Amperity.
+A `dataset ID configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| supports sending send events from Amperity.
 
 .. setting-meta-ads-manager-dataset-id-end
 
@@ -2756,7 +2756,7 @@ The name of a segment in |destination-name|.
 
 |destination-name| supports using `UID 2.0 <https://unifiedid.com/docs/intro>`__ |ext_link| to help establish your customers' identifies without using third-party data. UID 2.0 enables publisher websites, mobile apps, and Connected TV (CTV) apps to monetize through programmatic workflows, while offering user transparency and privacy controls that meet local market requirements.
 
-Your brand must have a UID 2.0 agreement in-place with The Trade Desk before configuring Amperity to send offline events to |destination-name|.
+Your brand must have a UID 2.0 agreement in-place with The Trade Desk before configuring Amperity to send events to |destination-name|.
 
 .. setting-the-trade-desk-uid2-agreement-end
 
@@ -2789,17 +2789,17 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 
 .. vale off
 
-**THE TRADE DESK: OFFLINE EVENTS**
+**THE TRADE DESK: EVENTS**
 
 .. vale on
 
-Settings unique to The Trade Desk: Offline Events.
+Settings unique to The Trade Desk: Events.
 
 **Tracking tag name**
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-The name of the tracking tag for offline events. The name is a string, may have up to 256 characters, must be unique, and may not duplicate any previous advertiser name or offline data provider ID. The tracking tag name appears in the UI for |destination-name| exactly as it is in Amperity.
+The name of the tracking tag for events. The name is a string, may have up to 256 characters, must be unique, and may not duplicate any previous advertiser name or offline data provider ID. The tracking tag name appears in the UI for |destination-name| exactly as it is in Amperity.
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
 
@@ -2850,11 +2850,11 @@ The user ID type. This value must be one of the following: "AAID" (Google), "EMA
 
 .. vale off
 
-**TIKTOK ADS MANAGER: OFFLINE EVENTS**
+**TIKTOK ADS MANAGER: EVENTS**
 
 .. vale on
 
-Settings unique to TikTok Ads Manager: Offline Events.
+Settings unique to TikTok Ads Manager: Events.
 
 **Advertiser ID**
 
@@ -2896,7 +2896,7 @@ Each event set has its own card. The event set ID is located under the name of t
 
 .. setting-tiktok-ads-manager-offline-event-set-name-start
 
-The name of the offline events set in TikTok Ads Manager.
+The name of the events set in TikTok Ads Manager.
 
 .. setting-tiktok-ads-manager-offline-event-set-name-end
 
