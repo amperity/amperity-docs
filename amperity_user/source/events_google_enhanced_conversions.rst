@@ -2,38 +2,42 @@
 
 
 .. |destination-name| replace:: Google Enhanced Conversions
-.. |what-send| replace:: first-party customer data that is associated with transactions
+.. |what-send| replace:: first-party customer data associated with transactions
 .. |what-enablex| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires first-party data that is associated with transactions.
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send offline events to Google Enhanced Conversions.
+        Configure Amperity to send online events to Google Enhanced Conversions.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send offline events to Google Enhanced Conversions.
+        Configure Amperity to send online events to Google Enhanced Conversions.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send offline events to Google Enhanced Conversions
+        Send online events to Google Enhanced Conversions
 
-==================================================
-Send offline events to Google Enhanced Conversions
-==================================================
+=================================================
+Send online events to Google Enhanced Conversions
+=================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-google-enhanced-conversions-start
    :end-before: .. term-google-enhanced-conversions-end
 
 .. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
-   :start-after: .. destination-google-enhanced-conversions-about-start
-   :end-before: .. destination-google-enhanced-conversions-about-end
+   :start-after: .. events-google-enhanced-conversions-about-start
+   :end-before: .. events-google-enhanced-conversions-about-end
 
-.. caution:: This destination is available for sending offline events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-offline-start
+   :end-before: .. events-google-enhanced-conversions-offline-end
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending offline events to |destination-name|.
+.. caution:: This destination is available for sending events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+
+   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending events to |destination-name|.
 
 
 .. _events-google-enhanced-conversions-build-query:
@@ -59,4 +63,20 @@ For example:
    JOIN Unified_Transactions t ON c.amperity_id = t.amperity_id
    WHERE t.order_datetime >= DATE_ADD('day', -30, CURRENT_DATE)
 
+Extend the SQL to include :ref:`any of the additional fields <events-google-enhanced-conversions-fields>` that are accepted by |destination-name|.
+
 .. events-google-enhanced-conversions-build-query-end
+
+
+.. _events-google-enhanced-conversions-fields:
+
+Fields for enhanced conversions
+==================================================
+
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-fields-start
+   :end-before: .. events-google-enhanced-conversions-fields-end
+
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-fields-table-start
+   :end-before: .. events-google-enhanced-conversions-fields-table-end
