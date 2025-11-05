@@ -636,7 +636,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Phone Number**
      - **phone**
@@ -645,7 +645,7 @@ A list can be matched to contact information that contains PII data. If a row co
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Last Name**
      - **lastname**
@@ -654,7 +654,7 @@ A list can be matched to contact information that contains PII data. If a row co
        * Trims leading and trailing whitespace
        * Removes spaces in-between
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **First Name**
      - **firstname**
@@ -663,7 +663,7 @@ A list can be matched to contact information that contains PII data. If a row co
        * Trims leading and trailing whitespace
        * Removes spaces in-between
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Zip Code**
      - **zip**
@@ -765,7 +765,7 @@ A list can be matched to advertiser-generated and assigned user IDs or to custom
      - A list of customer IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Optional. Hashes data as SHA-256
+       * Optional. Hashes data as one-way SHA-256
 
 .. campaign-google-ads-api-matching-user-end
 
