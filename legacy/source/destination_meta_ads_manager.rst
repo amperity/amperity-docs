@@ -1171,7 +1171,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
 
        * Trims leading and trailing whitespace
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Phone Numbers**
      - **PHONE**
@@ -1181,7 +1181,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
 
        * Trims leading and trailing whitespace
        * Removes symbols, letters, and any leading zeros
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Gender**
      - **GEN**
@@ -1190,7 +1190,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Converts to m and f
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Birth Date**
      - **BIRTH**
@@ -1218,7 +1218,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Converts to lower-case
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **First Name**
      - **FN**
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
@@ -1227,7 +1227,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Converts to lower-case
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **First Initial**
      - **FI**
      - .. warning:: Do not pass this column. The connector uses the first character of the normalized first name.
@@ -1241,7 +1241,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Converts to lower-case
        * Normalizes states located outside of the United States
        * Removes punctuation, special characters, and whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **City**
      - **CT**
      - For this key, the connector:
@@ -1249,7 +1249,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Removes punctuation, special characters, and whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **Zip Code**
      - **ZIP**
      - Use only the first five digits for the United States. Use `postcodes (area, district, sector) format <https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom>`__ |ext_link| for United Kingdom.
@@ -1260,7 +1260,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Converts to lower-case
        * Removes whitespace from lower-case for United Kingdom
        * Trims to five digits for United States
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **Country Code**
      - **COUNTRY**
      - A two-letter country code in |ext_iso_31661alpha2| format.
@@ -1269,7 +1269,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
 
        * Trims leading and trailing whitespace
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **Mobile Advertiser ID**
      - **MADID**
      - For this key, the connector:
@@ -1277,7 +1277,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Keeps hyphens
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
 .. destination-meta-ads-manager-api-keys-end
 

@@ -185,7 +185,7 @@ The following Amperity columns may be mapped to the corresponding schema type to
 
        * Trims leading and trailing whitespace
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **mobile_id**
      - **MOBILE_AD_ID_SHA256**
@@ -194,7 +194,7 @@ The following Amperity columns may be mapped to the corresponding schema type to
        * Trims leading and trailing whitespace
        * Converts to lower-case
        * Keeps hyphens
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **phone**
      - **PHONE_SHA256**
@@ -204,6 +204,6 @@ The following Amperity columns may be mapped to the corresponding schema type to
 
        * Trims leading and trailing whitespace
        * Removes symbols, letters, and any leading zeros
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
 .. sendto-snapchat-schema-types-end
