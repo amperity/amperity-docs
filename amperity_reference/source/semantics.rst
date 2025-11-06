@@ -348,11 +348,11 @@ The following semantics may be used to tag fields as required, as unique, or as 
      - Description
    * - **required**
      - 
-     - Indicates if the field is required to have a non-NULL value.
+     - Indicates if the field is required to have a non-**NULL** value.
 
        .. note:: This tag is assigned automatically to all fields that contain the Amperity ID.
 
-       A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-NULL value, but does not require values to be unique. NULL values will cause an error during validation. All other values, including zero-length strings, will pass validation.
+       A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-**NULL** value, but does not require values to be unique. **NULL** values will cause an error during validation. All other values, including zero-length strings, will pass validation.
 
        .. note::
 
@@ -362,7 +362,7 @@ The following semantics may be used to tag fields as required, as unique, or as 
      - 
      - Indicates if the field is required to be a unique field in the customer 360 database.
 
-       A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with NULL values are ignored by validation, but all other values, including zero-length strings, must pass.
+       A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with **NULL** values are ignored by validation, but all other values, including zero-length strings, must pass.
 
        .. note::
 
@@ -803,7 +803,7 @@ Customer keys (ck)
 
 .. tip:: What happens to customer keys in the **Unified Coalesced** table?
 
-   * Records may have NULL customer keys.
+   * Records may have **NULL** customer keys.
    * There may be only one customer key per data source.
 
 .. semantics-key-customer-tip-end
@@ -849,7 +849,7 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
 .. tip:: What happens to foreign keys in the **Unified Coalesced** table?
 
-   * Records may have NULL foreign keys.
+   * Records may have **NULL** foreign keys.
    * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
    * There may be multiple foreign keys per Amperity ID.
    * There should not be multiple Amperity IDs per foreign key.
@@ -939,7 +939,7 @@ Use a separation key (sk) for deterministic unmatching of records. This prevents
 
 .. semantics-key-separation-assign-pairs-start
 
-A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
+A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-**NULL** value.
 
 .. note:: The following separation keys do not consider approximately matched values to be conflicting values:
 

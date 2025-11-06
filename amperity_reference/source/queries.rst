@@ -247,7 +247,7 @@ Use cardinality and uniqueness to help guide the creation of well-behaved **JOIN
 
 * Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
 * Columns with low uniqueness values as keys on both sides of a **JOIN** operation runs more slowly and is less likely to return the desired results.
-* Empty fields, such as NULL values, are counted as duplicates or "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
+* Empty fields, such as **NULL** values, are counted as duplicates or "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. queries-data-explorer-full-screen-cardinality-end
 

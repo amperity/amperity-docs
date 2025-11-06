@@ -420,7 +420,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-quote-mode-start
 
-The quote mode to use within the file. May be one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+The quote mode to use within the file. May be one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
 .. setting-common-quote-mode-end
 

@@ -129,7 +129,7 @@ Predictive models have :ref:`the same requirements as segments and campaigns <ad
 
    .. important:: SKU-level recommendations are not supported.
 
-#. If required fields are not available in customer data, maintain the column on the table with NULL values.
+#. If required fields are not available in customer data, maintain the column on the table with **NULL** values.
 
 .. add-predicted-models-data-requirements-end
 
