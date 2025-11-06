@@ -3339,7 +3339,7 @@ A flag that identifies a canceled item.
 
 .. term-is-canceled-important-note-regarding-possible-values-start
 
-.. important:: The **is-cancellation** semantic must represent a value that is "TRUE" for canceled items and "FALSE" for purchases and "NULL" for unknown values.
+.. important:: The **is-cancellation** semantic must represent a value that is **TRUE** for canceled items and **FALSE** for purchases and **NULL** for unknown values.
 
 .. term-is-canceled-important-note-regarding-possible-values-end
 
@@ -3354,7 +3354,7 @@ A flag that identifies a returned item.
 
 .. term-is-return-important-note-regarding-possible-values-start
 
-.. important:: The **is-return** semantic must represent a value that is "TRUE" for returned items and "FALSE" for purchases and "NULL" for unknown values.
+.. important:: The **is-return** semantic must represent a value that is **TRUE** for returned items and **FALSE** for purchases and **NULL** for unknown values.
 
 .. term-is-return-important-note-regarding-possible-values-end
 
