@@ -68,7 +68,7 @@ Columns in domain tables may be one of the following types:
    * - Type
      - Description
    * - **Boolean**
-     - A value that represents an either/or, such as true or false, 0 or 1, true or NULL.
+     - A value that represents an either/or, such as true or false, 0 or 1, true or **NULL**.
 
    * - **date**
      - An ISO-8601 compliant date value, such as a birthdate. For example:

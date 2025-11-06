@@ -2306,12 +2306,12 @@ Use flags to help ensure that data within Amperity remains healthy and to help e
       * - columnName
         - columnName
       * - **db/unique**
-        - A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with NULL values are ignored by validation, but all other values, including zero-length strings, must pass.
+        - A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with **NULL** values are ignored by validation, but all other values, including zero-length strings, must pass.
 
           For a field that is unique, apply the **db/unique** semantic tag.
 
       * - **db/required**
-        - A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-NULL value, but does not require values to be unique. NULL values will cause an error during validation. All other values, including zero-length strings, will pass validation.
+        - A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-**NULL** value, but does not require values to be unique. **NULL** values will cause an error during validation. All other values, including zero-length strings, will pass validation.
 
           For a field that is required, apply the **db/required** semantic tag.
 

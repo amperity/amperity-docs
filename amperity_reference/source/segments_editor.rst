@@ -665,7 +665,7 @@ NULL and NOT NULL values
 
 A field with a **NULL** value is a field with a value that is empty. A **NULL** value is different than a value of zero, a blank value, or a value that contains only spaces. 
 
-An attribute can only have a **NULL** value if it remained empty after the record was created. With **NULL**, you can insert a new record or update a record without adding a value to this field and the field will be saved with a NULL value.
+An attribute can only have a **NULL** value if it remained empty after the record was created. With **NULL**, you can insert a new record or update a record without adding a value to this field and the field will be saved with a **NULL** value.
 
 A field with a **NOT NULL** value is a field with a value that is not empty. A value exists in the field, including values of zero, blank values, and value that contain only spaces.
 

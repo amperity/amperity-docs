@@ -42,7 +42,7 @@ Column types
    * - Type
      - Description
    * - **Boolean**
-     - A value that represents an either/or, such as true or false, yes or no, 0 or 1, true or NULL.
+     - A value that represents an either/or, such as true or false, yes or no, 0 or 1, true or **NULL**.
 
    * - **date**
      - An ISO-8601 compliant date values, such as a birthdate. For example:

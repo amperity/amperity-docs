@@ -336,7 +336,7 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
        A data source that is made available to Stitch may :ref:`assign field priorities for names, physical addresses, email addresses, birthdates, and gender <table-merged-customers-sql-query-required-update-field-priority>`.
 
-       A NULL field priority value uses the source priority value as the field priority value.
+       A **NULL** field priority value uses the source priority value as the field priority value.
 
        An integer priority value takes precedence over source priority when the field priority value is higher than the source priority value.
 

@@ -2165,7 +2165,7 @@ COALESCE()
 
 Use the **COALESCE(column_name, value)** function to return the first non-**NULL** argument. Use a value of ``""``, ``0``, or ``1``.
 
-.. tip:: Some functions fails if they encounter NULL values. Use this function prior to the **CONCAT()** and **SUM()** functions to ensure they do not encounter **NULL** values.
+.. tip:: Some functions fails if they encounter **NULL** values. Use this function prior to the **CONCAT()** and **SUM()** functions to ensure they do not encounter **NULL** values.
 
 .. sql-spark-function-coalesce-end
 
@@ -2452,7 +2452,7 @@ Add a +1 to phone numbers
 
 .. sql-spark-function-concat-example-add-1-to-phone-numbers-start
 
-The following **CASE** statement uses the **TRIM()** function to find empty or NULL phone numbers, sets them to **NULL**, and then standardizes all phone numbers to add a +1:
+The following **CASE** statement uses the **TRIM()** function to find empty or **NULL** phone numbers, sets them to **NULL**, and then standardizes all phone numbers to add a +1:
 
 .. code-block:: sql
    :linenos:
@@ -2548,9 +2548,9 @@ COUNT()
 
 .. sql-spark-function-count-start
 
-Use the **COUNT(*)** function to return the total number of rows, including rows with unique and non-NULL values.
+Use the **COUNT()** function to return the total number of rows, including rows with unique and non-**NULL** values.
 
-Use the **COUNT(expression)** function to return the number of non-NULL rows for "expression".
+Use the **COUNT(expression)** function to return the number of non-**NULL** rows for "expression".
 
 .. code-block:: none
 
@@ -2589,7 +2589,7 @@ COUNT(DISTINCT)
 
 .. sql-spark-function-count-distinct-start
 
-Use the **COUNT(DISTINCT expression)** function to return the number of unique and non-NULL rows for "expression". For example:
+Use the **COUNT(DISTINCT expression)** function to return the number of unique and non-**NULL** rows for "expression". For example:
 
 .. code-block:: none
 
@@ -4160,7 +4160,7 @@ Clean phone numbers
 
 .. sql-spark-function-trim-example-phone-numbers-start
 
-The following example uses the **TRIM()** function to find empty or NULL phone numbers, sets them to **NULL**, and then standardizes all phone numbers to add a +1:
+The following example uses the **TRIM()** function to find empty or **NULL** phone numbers, sets them to **NULL**, and then standardizes all phone numbers to add a +1:
 
 .. code-block:: none
    :linenos:

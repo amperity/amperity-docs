@@ -1682,19 +1682,19 @@ The **Merged Customers** table has the following columns:
       * - Column Suffix
         - Description
       * - **Completion**
-        - The number of NOT NULL values that are present in a set of data, as defined in **Merged Customers**. Combine the use of this column with **Priority** to understand why a record was selected.
+        - The number of **NOT NULL** values that are present in a set of data, as defined in **Merged Customers**. Combine the use of this column with **Priority** to understand why a record was selected.
 
-          A name has three possible values: **Given Name**, **Surname**, and **Full Name**. When all three values are NOT NULL, the value in the **Name Completion** column will be ``3``.
+          A name has three possible values: **Given Name**, **Surname**, and **Full Name**. When all three values are **NOT NULL**, the value in the **Name Completion** column will be ``3``.
 
-          An address has four possible values: **Address**, **City**, **State**, and **postal**. When all four values are NOT NULL, the value in the **Address Completion** column will be ``4``.
+          An address has four possible values: **Address**, **City**, **State**, and **postal**. When all four values are **NOT NULL**, the value in the **Address Completion** column will be ``4``.
 
-          An email address has one possible value: **Email**. When this value is NOT NULL, the value in the **Email Completion** column will be ``1``.
+          An email address has one possible value: **Email**. When this value is **NOT NULL**, the value in the **Email Completion** column will be ``1``.
 
-          A phone number has one possible value: **Phone**. When this value is NOT NULL, the value in the **Phone Completion** column will be ``1``.
+          A phone number has one possible value: **Phone**. When this value is **NOT NULL**, the value in the **Phone Completion** column will be ``1``.
 
-          A birthdate has one possible value: **Birthdate**. When this value is NOT NULL, the value in the **Birthdate Completion** column will be ``1``.
+          A birthdate has one possible value: **Birthdate**. When this value is **NOT NULL**, the value in the **Birthdate Completion** column will be ``1``.
 
-          Gender has one possible value: **Gender**. When this value is NOT NULL, the value in the **Gender Completion** column will be ``1``.
+          Gender has one possible value: **Gender**. When this value is **NOT NULL**, the value in the **Gender Completion** column will be ``1``.
 
       * - **Datasource**
         - The source data table from which the customer profile value originates. Combine the use of this column with **PK** to find the record in the source domain table.
@@ -5402,7 +5402,7 @@ The **Unified Product Catalog** table has the following columns:
      - The ID for the fabric used for a product or item.
    * - **Product Gender**
      - String
-     - A list of gender options for products. For example: F, M, unisex, NULL (for unknown).
+     - A list of gender options for products. For example: F, M, unisex, **NULL** (for unknown).
    * - **Product Group**
      - String
      - The group to which a product or item belongs.
@@ -5660,7 +5660,7 @@ The **Unified Transactions** table has the following columns:
 
           * Must match a foreign key in a table that is output by Stitch
           * Must be well-distributed across the data source. A high percentage of values must not be 0.
-          * May contain a NULL value
+          * May contain a **NULL** value
           * Must be unique for each order ID in the **Unified Transactions** table.
 
        Also in: **Unified Itemized Transactions**

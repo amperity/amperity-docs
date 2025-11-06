@@ -1182,7 +1182,7 @@ Customer keys (ck)
 
 .. tip:: What happens to customer keys in the **Unified Coalesced** table?
 
-   * Records may have NULL customer keys. NULL customer keys are ignored by Stitch.
+   * Records may have **NULL** customer keys. **NULL** customer keys are ignored by Stitch.
    * There may be only one customer key per data source.
    * There may be multiple customer keys per Amperity ID. This is because customer keys may also be tagged as foreign keys.
 
@@ -1227,7 +1227,7 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
 .. tip:: What happens to foreign keys in the **Unified Coalesced** table?
 
-   * Records may have NULL foreign keys.
+   * Records may have **NULL** foreign keys.
    * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
    * There may be multiple foreign keys per Amperity ID.
    * There should not be multiple Amperity IDs per foreign key.
@@ -1349,7 +1349,7 @@ Separation keys (sk)
 
 .. semantics-key-separation-about-start
 
-A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
+A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-**NULL** value.
 
 .. note:: The following separation keys do not consider approximately matched values to be conflicting values:
 
@@ -1474,7 +1474,7 @@ sk-birthdate
 * Are not off by 1 character.
 * Do not have the month and day swapped.
 * Exactly one of month, day, or year are off by 1 character from each other.
-* Are not NULL.
+* Are not **NULL**.
 
 Add the **sk-birthdate** separation key to fields that are tagged with the **birthdate** semantic to prevent Stitch from using birthdates to match records.
 

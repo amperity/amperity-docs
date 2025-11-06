@@ -84,7 +84,7 @@ The following table describes the default `user profile fields <https://www.braz
 
    * - **gender**
      - **gender**
-     - Optional. Accepted values: "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or NULL.
+     - Optional. Accepted values: "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or **NULL**.
 
 .. braze-customer-profiles-common-attributes-end
 

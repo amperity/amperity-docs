@@ -69,7 +69,7 @@ Many NULL records
 
 **many-null-records-desc**
 
-   The percentage of stitched records that contain sparse data, which occurs when email addresses, physical addresses, and phone numbers have NULL values.
+   The percentage of stitched records that contain sparse data, which occurs when email addresses, physical addresses, and phone numbers have **NULL** values.
 
 **many-null-records-more**
 
