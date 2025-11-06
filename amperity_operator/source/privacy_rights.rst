@@ -579,6 +579,12 @@ Amperity generates the following tables for reporting compliance results as part
 
 .. privacy-rights-reports-tables-end
 
+.. privacy-rights-reports-tables-passthrough-start
+
+.. note:: Report tables are not automatically added to any database. Optional: You may add each report table to any database as a passthrough table.
+
+.. privacy-rights-reports-tables-passthrough-end
+
 
 .. _privacy-rights-reports-tables-unified-compliance-overview:
 
