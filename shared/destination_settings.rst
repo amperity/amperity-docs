@@ -2441,7 +2441,7 @@ Configure the external ID as "Amperity_ID__c". The "__c" identifies the field as
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-start
 
-When enabled, "Upsert" operations ignore "NULL" values in data sent from Amperity. If a field has a "NULL" value and there is a value in the corresponding Salesforce object, the operation keeps the value in the Salesforce object.
+When enabled, "Upsert" operations ignore **NULL** values in data sent from Amperity. If a field has a **NULL** value and there is a value in the corresponding Salesforce object, the operation keeps the value in the Salesforce object.
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-end
 
@@ -2471,7 +2471,7 @@ The name of the object, or audience list, in Salesforce Sales Cloud to which Amp
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
 
-Enable to use "NULL" values when fields are empty.
+Enable to use **NULL** values when fields are empty.
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 

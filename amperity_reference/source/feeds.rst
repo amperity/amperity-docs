@@ -84,7 +84,7 @@ Boolean
 
 .. feed-field-type-boolean-start
 
-Use the **Boolean** field type for incoming fields that contain either/or values, such as "true" or "false", "yes" or "no", "0" or "1", or "NULL".
+Use the **Boolean** field type for incoming fields that contain either/or values, such as "true" or "false", "yes" or "no", "0" or "1", or **NULL**.
 
 .. feed-field-type-boolean-end
 
