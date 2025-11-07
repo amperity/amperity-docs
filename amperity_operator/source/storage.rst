@@ -129,8 +129,6 @@ Configure a new tenant to use an Amazon S3 storage location that is owned and ma
 
              * - US West
                - **us-west-2**
-             * - US East
-               - **us-east-1**
              * - Canada
                - **ca-central-1**
 
