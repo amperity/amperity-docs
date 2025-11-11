@@ -506,7 +506,11 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
 Add inbound bridge
 --------------------------------------------------
 
+.. bridge-snowflake-sync-amperity-add-bridge-start
+
 Configure an inbound bridge to connect Snowflake with Amperity.
+
+.. bridge-snowflake-sync-amperity-add-bridge-end
 
 **To add an inbound bridge**
 

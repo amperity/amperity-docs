@@ -55,7 +55,7 @@ How semantic tags work
 
 .. semantics-howitworks-start
 
-Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every data source that provides customer profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Semantic tagging works like this:
 
@@ -66,7 +66,7 @@ Semantic tagging works like this:
 
 .. vale off
 
-For those semantic tags, the feed should apply semantic tags like this:
+For those fields apply semantic tags like this:
 
 .. list-table::
    :widths: 100 100
@@ -87,13 +87,17 @@ For those semantic tags, the feed should apply semantic tags like this:
 
 .. vale on
 
-This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
+Apply the same pattern every customer data source that is brought into Amperity that contains customer profiles to ensure that all customer profile data is evaluated by Stitch in exactly the same way.
+
+.. semantics-howitworks-end
+
+.. semantics-howitworks-context-start
 
 Amperity has built-in semantic tags for personally identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
 
 Profile semantic tags are used by Amperity for identity resolution, which is the process that builds a unified customer profile for all of your unique customers. All other semantic tags, such as for transactions and itemized transactions, are used to associate your customer's interactions with your brand to their individual customer profiles.
 
-.. semantics-howitworks-end
+.. semantics-howitworks-context-end
 
 .. semantics-howitworks-profile-tags-start
 
@@ -757,7 +761,9 @@ Keys
 
 .. semantics-keys-start
 
-Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
+Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key.
+
+For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
 
 .. semantics-keys-end
 
@@ -900,11 +906,15 @@ Primary keys (pk)
 
 .. semantics-key-primary-tip-start
 
-.. tip:: What happens to primary keys in the **Unified Coalesced** table?
+.. note:: What happens to primary keys in the **Unified Coalesced** table?
 
-   * Each record in the **Unified Coalesced** table must have a primary key.
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-unified-coalesced-table-start
+      :end-before: .. term-unified-coalesced-table-end
+
+   * Each record in the **Unified Coalesced** table has a primary key.
    * A primary key is unique within a data source, but that primary key may not be unique across all data sources.
-   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
+   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table is uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
    * Each record in the Unified Coalesced table may only be associated with a single Amperity ID.
 
 .. semantics-key-primary-tip-end

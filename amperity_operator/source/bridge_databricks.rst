@@ -20,6 +20,12 @@
 Connect Amperity Bridge to Databricks
 ==================================================
 
+.. bridge-databricks-about-start
+
+Amperity Bridge for Databricks is a first-class integration that enables bi-directional data access between Amperity and Databricks without copying data or scheduling ETL workloads.
+
+.. bridge-databricks-about-end
+
 .. include:: ../../shared/terms.rst
    :start-after: .. term-delta-sharing-start
    :end-before: .. term-delta-sharing-end
@@ -440,6 +446,8 @@ For bridges that connect to Databricks environments running in Microsoft Azure a
 
 **az-prod East US 2**
 
+.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-2-start
+
 .. code-block:: bash
 
    az storage account network-rule add --subnet \
@@ -449,10 +457,14 @@ For bridges that connect to Databricks environments running in Microsoft Azure a
    --resource-group "myresourcegroup" \
    --account-name "mystorageaccount"
 
+.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-2-end
+
 
 .. _az-prod-east-us:
 
 **az-prod East US**
+
+.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-start
 
 .. code-block:: bash
 
@@ -463,10 +475,14 @@ For bridges that connect to Databricks environments running in Microsoft Azure a
    --resource-group "myresourcegroup" \
    --account-name "mystorageaccount"
 
+.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-end
+
 
 .. _az-prod-en1-north-europe:
 
 **az-prod-en1 North Europe**
+
+.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-en1-north-europe-start
 
 .. code-block:: bash
 
@@ -477,6 +493,7 @@ For bridges that connect to Databricks environments running in Microsoft Azure a
    --resource-group "myresourcegroup" \
    --account-name "mystorageaccount"
 
+.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-en1-north-europe-end
 
 
 .. _bridge-databricks-sync-with-amperity-add-bridge:

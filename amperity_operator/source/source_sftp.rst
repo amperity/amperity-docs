@@ -105,7 +105,7 @@ The |source-name| data source requires the following configuration details:
 
        .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
 
-       The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during feed creation.
+       The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during source creation.
 
 .. source-sftp-get-details-end
 

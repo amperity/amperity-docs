@@ -22,7 +22,7 @@ Connect Amperity Bridge to Google BigQuery
 
 .. bridge-google-bigquery-about-start
 
-Amperity Bridge for Google BigQuery is a first-class integration enables inbound data access to Amperity from Google BigQuery without copying data or scheduling ETL workloads.
+Amperity Bridge for Google BigQuery is a first-class integration that enables bi-directional data access between Amperity and Google BigQuery without copying data or scheduling ETL workloads.
 
 .. bridge-google-bigquery-about-end
 
@@ -599,7 +599,10 @@ A `data listing within a private data exchange <https://cloud.google.com/bigquer
 
        ::
 
-          https://console.cloud.google.com/bigquery/analytics-hub/exchanges/projects/123456789012/locations/<location>/dataExchanges/<exchange>/listings/<listing>
+          https://console.cloud.google.com/bigquery/ \
+          analytics-hub/exchanges/projects/123456789012/ \
+          locations/<location>/dataExchanges/<exchange>/ \
+          listings/<listing>
 
        Configure this identifier in |source-name| as the :ref:`subscriber for the data listing <bridge-google-bigquery-sync-amperity-configure-bigquery-subscriber-and-share>`.
 
@@ -679,7 +682,7 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**. 
+     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
 
        Choose **Google BigQuery**.
 
@@ -689,7 +692,7 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
           :align: left
           :class: no-scaled-link
 
-       This opens the **Add bridge** dialog box. 
+       This opens the **Add bridge** dialog box.
 
        .. image:: ../../images/bridge-inbound-name-description.png
           :width: 500 px
@@ -711,7 +714,10 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
 
        ::
 
-          https://console.cloud.google.com/bigquery/analytics-hub/exchanges/projects/123456789012/locations/<location>/dataExchanges/<exchange>/listings/<listing>
+          https://console.cloud.google.com/bigquery/ \
+          analytics-hub/exchanges/projects/123456789012/ \
+          locations/<location>/dataExchanges/<exchange>/ \
+          listings/<listing>
 
        Configure this identifier in |source-name| as the :ref:`subscriber for the data listing <bridge-google-bigquery-sync-amperity-configure-bigquery-subscriber-and-share>`.
 
@@ -729,7 +735,7 @@ Configure an inbound bridge to connect Google BigQuery to Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be connected. Any new tables added later need to be manually added to the connection. 
+       If you select a schema, all tables in that schema will be connected. Any new tables added later need to be manually added to the connection.
 
        When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
