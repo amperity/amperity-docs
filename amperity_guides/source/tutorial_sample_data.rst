@@ -248,7 +248,7 @@ Run Stitch
 
 .. start-run-stitch-start
 
-After all of the source tables to which semantic tags should be applied have semantic tags applied you are ready to run Stitch.
+After applying semantic tags to all source tables that require them, you are ready to run stitch
 
 .. start-run-stitch-end
 
