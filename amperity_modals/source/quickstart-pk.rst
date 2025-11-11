@@ -30,4 +30,4 @@ The two factors that make a good primary key are uniqueness and stability:
 
 * **first_name** is an example of a bad primary key field because it is unlikely to be *unique* among all rows in a table
 * **updated_at** is another example of a bad primary key field because even though it is unique, its value for a given row can *change*, making it unstable
-* **customer_id** is an example of a good primary key field because it is likely to identify the same source row if the contents of the row changes, tomorrow
+* **customer_id** is an example of a good primary key field because it is likely to identify a single customer and is a reliable value over time

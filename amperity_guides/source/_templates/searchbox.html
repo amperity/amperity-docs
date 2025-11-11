@@ -1,0 +1,8 @@
+<!--  Swiftype javascript is in extra-head.html -->
+
+{%- if pathto('search') != '#' -%}
+<form class="searchbox flex items-center">
+  <input type="text" name="q" placeholder="{{ _('Search + press return') }}" class="st-default-search-input" />
+  <kbd>/</kbd>
+</form>
+{%- endif -%}

@@ -740,7 +740,7 @@ Use a filename pattern to define files that will be loaded on a recurring basis,
 
 .. sources-steps-03-browse-note-start
 
-.. note:: For a new feed, this file is *also* used as the sample file that is used to define the schema. For an existing feed, this file must match the schema that has already been defined.
+.. note:: For a new data source, this file is *also* used as the sample file that is used to define the schema. For an existing data source, this file must match the schema that has already been defined.
 
 .. sources-steps-03-browse-note-end
 
@@ -782,7 +782,7 @@ The contents of the file may be viewed as a table and in the raw format. Switch 
 
 .. sources-steps-04-review-formatting-details-start
 
-Amperity will infer formatting details, and then adds these details to a series of settings located along the left side of the file view. File settings include:
+Amperity will infer formatting details, and then add these details to a series of settings located along the left side of the file view. File settings include:
 
 * Delimiter
 * Compression
@@ -814,7 +814,7 @@ Review the file, and then update these settings, if necessary.
 
 .. sources-steps-05-feed-options-start
 
-A feed defines the schema for a file that is loaded to Amperity, after which that data is loaded into a domain table and ready for use with workflows within Amperity.
+Each file that is loaded to Amperity must have a defined schema, after which the data in the file is loaded into a domain table ready for use with workflows within Amperity.
 
 .. sources-steps-05-feed-options-end
 
@@ -822,7 +822,7 @@ A feed defines the schema for a file that is loaded to Amperity, after which tha
 
 .. sources-steps-05-feed-new-start
 
-To use a new feed, choose the **Create new feed** option, select an existing source from the **Source** dropdown *or* type the name of a new data source, and then enter the name of the feed.
+To use a new data source, choose the **Create new feed** option, select an existing source from the **Source** dropdown *or* type the name of a new data source, and then enter the name of the feed.
 
 .. image:: ../../images/mockup-sources-add-04-feed-new.png
    :width: 380 px
@@ -924,7 +924,7 @@ On the **Sources** page, under **Couriers**, find the courier you want to run an
 
 .. sources-steps-07-calendar-start
 
-Select a date from the calendar picker that is before today, but after the date on which the file was added to the |source-name| bucket.
+Select a date from the calendar picker that is before today, but after the date on which the file was added to the |source-name| file system.
 
 .. sources-steps-07-calendar-end
 
@@ -932,7 +932,7 @@ Select a date from the calendar picker that is before today, but after the date 
 
 .. sources-steps-07-run-start
 
-Leave the load options in the **Run courier** dialog box unselected, and then click **Run**.
+Leave the load options unselected, and then click **Run**.
 
 After the courier has run successfully, inspect the domain table that contains the data that was loaded to Amperity. After you have verified that the data is correct, you may do any of the following:
 

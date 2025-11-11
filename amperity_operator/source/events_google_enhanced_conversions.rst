@@ -425,12 +425,12 @@ The following table describes the fields that may be sent to |destination-name| 
      - **timestamp**
      - The date and time of the conversion. The value must have a timezone and the format must be ``yyyy-mm-dd HH:mm:ss+|-HH:mm``. Daylight Savings Time (DST) may be ignored.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads; alternately it may be the **Order Datetime** field in the **Unified Itemized Transactions** table.
+       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads *or* it may be the **Order Datetime** field in the **Unified Itemized Transactions** table.
 
 
    * - **Unit List Price**
      - **unit_price**
-     - Unit list price is the manufacturer’s suggested retail price (MSRP) for a single unit of an item.
+     - Unit list price is the manufacturer's suggested retail price (MSRP) for a single unit of an item.
 
        .. tip:: Use the **Unit List Price** field in the **Unified Itemized Transactions** table.
 

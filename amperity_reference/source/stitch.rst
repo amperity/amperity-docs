@@ -29,7 +29,7 @@ How Stitch works
 
 .. stitch-how-it-works-start
 
-Amperity uses a `series of patented innovations <https://amperity.com/patents>`__ to ensure that identity resolution against your customer data is accurate and that the output of the Stitch process represents a true unified view of your customers.
+Amperity uses a `series of patented innovations <https://amperity.com/patents>`__ to ensure that identity resolution against your customer data is accurate and that the output of the Stitch process represents a unified view of your customers.
 
 .. stitch-how-it-works-end
 

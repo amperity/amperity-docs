@@ -48,6 +48,9 @@ jobs:
           name: Build A-Z reference
           command: sphinx-build -b html --jobs auto -W amperity_reference/source ./site-test/reference
       - run:
+          name: Build Guided setup
+          command: sphinx-build -b html --jobs auto -W amperity_guides/source ./site-test/guides
+      - run:
           name: Build Contributing
           command: sphinx-build -b html --jobs auto -W contributing/source ./site-test/contributing
       - run:
