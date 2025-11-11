@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases.
+        Use Amperity to build robust, unified datasets and durable customer profiles that support all of your brand's use cases.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases.
+        Use Amperity to build robust, unified datasets and durable customer profiles that support all of your brand's use cases.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -28,7 +28,7 @@ Identity resolution agent
 
 .. start-overview-start
 
-Amperity specializes in using AI to turn raw data into a growing library of robust unified datasets and durable customer profiles that are available to support all of your brand's use cases.
+Amperity specializes in using AI to turn raw data into a growing library of robust, unified datasets and durable customer profiles that are available to support all of your brand's use cases.
 
 By the end of this guide you will know how to do the following:
 
@@ -42,7 +42,7 @@ By the end of this guide you will know how to do the following:
 
 .. admonition:: Sign up for a free trial of Amperity.
 
-   `Sign up for a free trial <https://amperity.com/trial>`__ |ext_link| to see how your brand can use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases. You may use trial data provided by Amperity or you may upload samples of your own customer data.
+   `Sign up for a free trial <https://amperity.com/trial>`__ |ext_link| to see how you can use Amperity to build robust, unified datasets and durable customer profiles that support all of your brand's use cases. You may use trial data provided by Amperity or you may upload samples of your own customer data.
 
 .. start-free-trial-end
 
@@ -81,7 +81,7 @@ Prerequisites
 To follow-along with this guide you need:
 
 #. Access to an Amperity account.
-#. Approximately ~1 hour of time to complete all of the steps within the guide.\
+#. Approximately ~1 hour of time to complete all of the steps within the guide.
 #. Source data. Amperity provides a set of sample data that can be used to complete the steps in this guide. You may provide your own data with customer profiles.
 
    .. note:: Amperity sample data contains ~10 million customer records.
