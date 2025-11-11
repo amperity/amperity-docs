@@ -54,3 +54,4 @@ Guided setup is a series of guided workflows for configuring identity resolution
 
    Identity resolution <grid_identity_resolution>
    Customer profiles <grid_profiles>
+   Tutorial: Identity agent <tutorial_sample_data>
