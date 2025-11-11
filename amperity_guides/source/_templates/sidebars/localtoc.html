@@ -1,0 +1,157 @@
+{%- if display_toc -%}
+  <div class="localtoc"><h2>{{ _('ON THIS PAGE') }}</h2>{{ toc }}</div>
+{%- endif -%}
+
+  {% macro feedback_buttons() %}
+  <div class="feedback-container">
+      <script>
+      function sendFeedback(type) {
+          // Push event to dataLayer for Google Tag Manager
+          window.dataLayer = window.dataLayer || [];
+
+          // Define the correct element class based on the feedback type
+          let elementClass = '';
+          let feedbackMessage = '';
+          if (type === 'thumbs_up') {
+              elementClass = 'feedback-thumbs-up';
+              feedbackMessage = 'Thanks! Use the feedback button below to comment.';
+          } else if (type === 'thumbs_down') {
+              elementClass = 'feedback-thumbs-down';
+              feedbackMessage = 'Thanks! Use the feedback button below to let us know how we can improve.';
+          }
+
+          // Push event to dataLayer with specific values
+          window.dataLayer.push({
+              'event': 'feedback_click',
+              'feedback_type': type,
+              'feedback_element_id': 'thumbs-' + type.replace('_', '-'),
+              'feedback_element_class': elementClass,
+              'page_path': window.location.pathname,
+              'page_title': document.title,
+              'timestamp': new Date().toISOString()
+          });
+
+          // Show message in the feedback message area
+          const messageElement = document.getElementById('feedback-message');
+          messageElement.textContent = feedbackMessage;
+          messageElement.style.display = 'block';
+        
+          // Hide the message after a few seconds
+          setTimeout(function() {
+              messageElement.style.display = 'none';
+          }, 5000);
+      }
+      </script>
+
+      <div class="feedback-buttons"> Is this page helpful?
+          <div class="feedback-thumbs-up"><button 
+              id="thumbs-up" 
+              class="feedback-button up" 
+              onclick="sendFeedback('thumbs_up')" 
+              aria-label="This page is helpful"
+          >
+            <img src="_static/thumbs-up-solid.svg" width="14px" alt="Thumbs up">
+          </button></div>
+          <div class="feedback-thumbs-down"><button 
+              id="thumbs-down" 
+              class="feedback-button down" 
+              onclick="sendFeedback('thumbs_down')" 
+              aria-label="This page is unhelpful"
+          >
+            <img src="_static/thumbs-down-solid.svg" width="14px" alt="Thumbs down">
+          </button></div>
+      </div>
+
+      <!-- Feedback response -->
+      <div id="feedback-message" class="feedback-message"></div>
+
+  </div>
+
+  <style>
+	
+  .feedback-container {
+      border-left: 3px solid #459aa8;
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      padding-top: .6rem;
+      padding-bottom: .6rem;
+      background-color: #caefef;
+      height: auto;
+      text-align: left;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-top-right-radius: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-topleft: 2px;
+      -moz-border-radius-topright: 2px;
+      -moz-border-radius-bottomleft: 2px;
+      -moz-border-radius-bottomright: 2px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+  }
+
+  .feedback-buttons {
+      background-color: #caefef;
+      padding-left: 10px;
+      color: #0c0c0c;
+      font-weight: 600;
+      display: -webkit-flex;
+      flex-direction: row;
+  }
+
+  .feedback-thumbs-up {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      padding-top: 0rem;
+      padding-left: .9rem;
+      text-align: center;
+  }
+
+  .feedback-thumbs-down {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      padding-top: .2rem;
+      padding-left: 1rem;
+      margin-right: 2px;
+      text-align: center;
+  }
+
+  .feedback-button.up {
+      background-color: #caefef;
+      border: 0px;
+      color: #0c0c0c;
+      cursor: pointer;
+  }
+
+  .feedback-button.down {
+      background-color: #caefef;
+      border: 0px;
+      color: #0c0c0c;
+      cursor: pointer;
+  }
+
+  /* Added styling for the feedback message */
+  .feedback-message {
+      display: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      margin-bottom: -10px;
+      font-weight: 500;
+      color: #0c0c0c;
+      background-color: #f2f4f4;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-bottomright: 2px;
+      border-bottom-right-radius: 3px;
+  }
+
+  </style>
+
+  {% endmacro %}
+
+  {# Add this in your base.html or custom template #}
+  {{ feedback_buttons() }}
+
+
+<a href="https://github.com/amperity/amperity-docs/tree/main/amperity_operator/source/{{ pagename }}.rst" target="_blank" class="edit-in-github">{{ _("Edit this page on GitHub") }}</a>
