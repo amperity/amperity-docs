@@ -34,7 +34,7 @@ Amperity can pull data a wide variety of file types, file formats, and file size
 
 .. source-sftp-prerequisites-start
 
-.. note:: Review `Pull from any SFTP site  <../operator/source_sftp.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. This topic assumes that all configuration prerequisites and are finished before stepping through this workflow.
+.. note:: Review `Pull from any SFTP site  <../operator/source_sftp.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. All configuration prerequisites must be completed before stepping through this workflow.
 
 .. source-sftp-prerequisites-start
 

@@ -31,7 +31,7 @@ Add Snowflake
 
 .. source-snowflake-prerequisites-start
 
-.. note:: Review `Connect Amperity Bridge to Snowflake <../operator/bridge_snowflake.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. This topic assumes that all configuration prerequisites and are finished before stepping through this workflow.
+.. note:: Review `Connect Amperity Bridge to Snowflake <../operator/bridge_snowflake.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. All configuration prerequisites must be completed before stepping through this workflow.
 
 .. source-snowflake-prerequisites-start
 

@@ -33,7 +33,7 @@ Amperity can pull data a wide variety of file types, file formats, and file size
 
 .. source-amazon-s3-prerequisites-start
 
-.. note:: Review `Pull from Amazon S3  <../operator/source_amazon_s3.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. This topic assumes that all configuration prerequisites and are finished before stepping through this workflow.
+.. note:: Review `Pull from Amazon S3  <../operator/source_amazon_s3.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. All configuration prerequisites must be completed before stepping through this workflow.
 
 .. source-amazon-s3-prerequisites-start
 

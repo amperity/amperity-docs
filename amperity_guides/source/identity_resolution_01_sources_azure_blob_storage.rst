@@ -33,7 +33,7 @@ Amperity can pull data a wide variety of file types, file formats, and file size
 
 .. source-azure-blog-storage-prerequisites-start
 
-.. note:: Review `Pull from Azure Blob Storage  <../operator/source_azure_blob_storage.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. This topic assumes that all configuration prerequisites and are finished before stepping through this workflow.
+.. note:: Review `Pull from Azure Blob Storage  <../operator/source_azure_blob_storage.html>`__ for more information about prerequisites, requirements, and optional configurations for |source-name|. All configuration prerequisites must be completed before stepping through this workflow.
 
 .. source-azure-blob-storage-prerequisites-start
 
