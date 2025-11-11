@@ -19,7 +19,7 @@ Identity resolution
 
 .. guides-identity-resolution-start
 
-Amperity accurately resolve customer identities and generates a customer identifier that remains stable even when new and conflicting data is collected across online, offline, and anonymous sources. Use high-confidence matching for operational use cases or broader probabilistic matching for marketing campaigns.
+Amperity accurately resolves customer identities and generates a customer identifier that remains stable even when new and conflicting data is collected across online, offline, and anonymous sources. Use high-confidence matching for operational use cases or broader probabilistic matching for marketing campaigns.
 
 .. guides-identity-resolution-end
 

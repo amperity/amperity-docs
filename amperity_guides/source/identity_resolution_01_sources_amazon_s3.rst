@@ -27,7 +27,7 @@ Add Amazon S3
 
 .. source-amazon-s3-about-start
 
-Amperity can pull data a wide variety of file types, file formats, and file sizes from |source-name|, which is the most common data source across all Amperity tenants.
+Amperity can pull data in a wide variety of file types, file formats, and file sizes from |source-name|, which is the most common data source across all Amperity tenants.
 
 .. source-amazon-s3-about-end
 
