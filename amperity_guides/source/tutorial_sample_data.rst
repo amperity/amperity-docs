@@ -78,7 +78,7 @@ Prerequisites
 
 .. start-prerequisites-start
 
-To follow-along with this guide you need:
+To follow along with this guide you need:
 
 #. Access to an Amperity account.
 #. Approximately ~1 hour of time to complete all of the steps within the guide.
@@ -284,7 +284,7 @@ After all of the source tables to which semantic tags should be applied have sem
           :align: left
           :class: no-scaled-link
 
-       Click the box to open the **Identity resolution** page. This page shows a summary, a collection of benchmarks, along with access to the configuration that was used to get these results.
+       Click the box to open the **Identity resolution** page. This page shows a summary and a collection of benchmarks, along with access to the configuration that was used to get these results.
 
 
    * - .. image:: ../../images/steps-03.png
