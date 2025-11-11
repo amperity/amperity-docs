@@ -2,7 +2,7 @@ BUILDDIR = build
 BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
 BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
 
-all: base user operator api reference amp360 ampiq contributing tooltips modals legacy llmkb
+all: base user operator api reference guides amp360 ampiq contributing tooltips modals legacy llmkb
 
 static:
 	cp -vr downloads $(BUILDDIR)/
@@ -26,6 +26,10 @@ api: static ## Build only the "/api" section
 reference: static ## Build only the "/reference" section
 	# Building A-Z Reference pages...
 	$(BUILD_COMMAND) amperity_reference/source $(BUILDDIR)/reference
+
+guides: static ## Build only the "/guides" section
+	# Building A-Z Reference pages...
+	$(BUILD_COMMAND) amperity_guides/source $(BUILDDIR)/guides
 
 amp360: static ## Build only the "/amp360" section
 	# Building redirects for Amp360 pages...
