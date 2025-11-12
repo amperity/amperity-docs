@@ -1,6 +1,5 @@
 .. https://docs.amperity.com/guides/
 
-
 .. meta::
     :description lang=en:
         Add connections between Amperity and the locations from which your brand will make data available to Amperity. For example, your Databricks lakehouse, a Snowflake data warehouse, an Amazon S3 bucket, or a standalone SFTP site.
@@ -71,13 +70,3 @@ To add data sources open the **Identity resolution** page in **Quick start**, fr
       :link: ../sources.html
 
 .. identity-resolution-01-sources-start-grid-end
-
-.. toctree::
-   :hidden:
-
-   Amazon S3 <identity_resolution_sources_amazon_s3>
-   Azure Blob Storage <identity_resolution_sources_azure_blob_storage>
-   Databricks <identity_resolution_sources_databricks>
-   Google BigQuery <identity_resolution_sources_google_bigquery>
-   SFTP <identity_resolution_sources_sftp>
-   Snowflake <identity_resolution_sources_snowflake>

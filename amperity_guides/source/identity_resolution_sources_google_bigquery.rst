@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/guides/
 
+:orphan:
+
 .. |source-name| replace:: Google BigQuery
 .. |destination-name| replace:: Google BigQuery
 

@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/guides/
 
+:orphan:
+
 .. |source-name| replace:: SFTP
 .. |plugin-name| replace:: SFTP
 .. |feed-name| replace:: CustomerRecords
