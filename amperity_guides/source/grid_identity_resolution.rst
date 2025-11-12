@@ -60,7 +60,6 @@ Amperity accurately resolves customer identities and generates a customer identi
 
 .. toctree::
    :caption: Identity resolution
-   :maxdepth: 2
    :hidden:
 
    Add data sources <identity_resolution_sources>

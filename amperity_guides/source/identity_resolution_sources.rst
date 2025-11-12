@@ -73,7 +73,6 @@ To add data sources open the **Identity resolution** page in **Quick start**, fr
 .. identity-resolution-01-sources-start-grid-end
 
 .. toctree::
-   :maxdepth: 3
    :hidden:
 
    Amazon S3 <identity_resolution_sources_amazon_s3>
