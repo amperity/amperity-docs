@@ -3,37 +3,45 @@
 
 .. meta::
     :description lang=en:
-        Semantic tags must be defined for every data source that provides customer profile data to Stitch.
+        Add connections between Amperity and the locations from which your brand will make data available to Amperity. For example, your Databricks lakehouse, a Snowflake data warehouse, an Amazon S3 bucket, or a standalone SFTP site.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Semantic tags must be defined for every data source that provides customer profile data to Stitch.
+        Add connections between Amperity and the locations from which your brand will make data available to Amperity. For example, your Databricks lakehouse, a Snowflake data warehouse, an Amazon S3 bucket, or a standalone SFTP site.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Validate profile semantics
+        Add data sources
 
 ==================================================
-Validate profile semantics
+Add data sources
 ==================================================
 
-.. include:: ../../amperity_reference/source/semantics.rst
-   :start-after: .. semantics-howitworks-start
-   :end-before: .. semantics-howitworks-end
+.. identity-resolution-data-start
 
-.. identity-resolution-02-tables-with-pii-start
+Add connections between Amperity and the locations from which your brand will make data available to Amperity. For example, your Databricks lakehouse, a Snowflake data warehouse, an Amazon S3 bucket, or a standalone SFTP site.
 
-To validate semantic tags open the **Identity resolution** page in **Quick start**. On the **Identity tables** card, do one of the following:
+.. image:: ../../images/mockup-guided-idres-sources.png
+   :width: 500 px
+   :alt: Add a data source
+   :align: left
+   :class: no-scaled-link
 
-#. Click **AmpAI select** to have the **AmpAI Assistant** determine which tables contain the best data for identity resolution, which fields in each data source are the optimal primary key, and which customer profile semantic tags to apply to fields in each data source.
-#. Click **Manually select** on the **Identity your fields** card to apply semantic tags without using the **AmpAI Assistant**.
+To add data sources open the **Identity resolution** page in **Quick start**, from the **Add data source** dropdown, select Amazon S3, Azure Blob Storage, Databricks, Google BigQuery, SFTP, or Snowflake.
 
-   .. image:: ../../images/mockup-guided-idres-semantic-tags.png
-      :width: 500 px
-      :alt: Identify tables with PII.
-      :align: left
-      :class: no-scaled-link
+.. identity-resolution-data-end
 
-Click **Edit** on the **Identity your fields** card to review tables that are already selected.
+.. identity-resolution-data-grid-start
 
-.. identity-resolution-02-tables-with-pii-end
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Amazon S3
+      :link-type: doc
+      :link: identity_resolution_data_from_amazon_s3
+
+.. identity-resolution-data-grid-end
+
+
