@@ -4072,7 +4072,7 @@ Match rate is the number of records sent from Amperity that matched with records
 
 .. term-match-type-start
 
-The score. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected. Records assigned a "scored_transitive" value are transitively connected.
+The score assigned to matched records. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected. Records assigned a "scored_transitive" value are transitively connected.
 
 .. term-match-type-end
 
