@@ -30,13 +30,13 @@ jobs:
           name: Build base docs
           command: sphinx-build -b html --jobs auto -W amperity_base/source ./site-test/
       - run:
-          name: Build AmpIQ user guides
+          name: Build legacy AmpIQ redirects
           command: sphinx-build -b html --jobs auto -W amperity_ampiq/source ./site-test/ampiq
       - run:
-          name: Build Amp360 user guides
+          name: Build legacy Amp360 redirects
           command: sphinx-build -b html --jobs auto -W amperity_amp360/source ./site-test/amp360
       - run:
-          name: Build Operators guide
+          name: Build legacy Operators redirects
           command: sphinx-build -b html --jobs auto -W amperity_datagrid/source ./site-test/datagrid
       - run:
           name: Build Operators guide
