@@ -36,15 +36,15 @@ Customer profiles
 
    .. grid-item-card:: Define merge policy
       :link-type: doc
-      :link: profiles_01_merge_policy
+      :link: profiles_merge_policy
 
    .. grid-item-card:: Generate customer profiles
       :link-type: doc
-      :link: profiles_02_generate
+      :link: profiles_generate
 
    .. grid-item-card:: Standard output
       :link-type: doc
-      :link: profiles_03_standard_output
+      :link: profiles_standard_output
 
 .. guides-customer-profiles-grid-end
 
@@ -54,6 +54,6 @@ Customer profiles
    :maxdepth: 2
    :hidden:
 
-   Define merge policy <profiles_01_merge_policy>
-   Generate customer profiles <profiles_02_generate>
-   Standard output <profiles_03_standard_output>
+   Define merge policy <profiles_merge_policy>
+   Generate customer profiles <profiles_generate>
+   Standard output <profiles_standard_output>

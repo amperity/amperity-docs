@@ -38,33 +38,32 @@ Amperity accurately resolves customer identities and generates a customer identi
 
    .. grid-item-card:: Add data sources
       :link-type: doc
-      :link: identity_resolution_01_sources
+      :link: identity_resolution_sources
 
    .. grid-item-card:: Identify tables with PII
       :link-type: doc
-      :link: identity_resolution_02_tables_with_pii
+      :link: identity_resolution_tables_with_pii
 
    .. grid-item-card:: Select primary keys
       :link-type: doc
-      :link: identity_resolution_03_primary_keys
+      :link: identity_resolution_primary_keys
 
    .. grid-item-card:: Validate profile semantics
       :link-type: doc
-      :link: identity_resolution_04_semantics
+      :link: identity_resolution_semantics
 
    .. grid-item-card:: Exclude data
       :link-type: doc
-      :link: identity_resolution_05_exclude_data
+      :link: identity_resolution_exclude_data
 
 .. guides-identity-resolution-grid-end
 
 .. toctree::
    :caption: Identity resolution
-   :maxdepth: 2
    :hidden:
 
-   Add data sources <identity_resolution_01_sources>
-   Identify tables with PII <identity_resolution_02_tables_with_pii>
-   Select primary keys <identity_resolution_03_primary_keys>
-   Validate profile semantics <identity_resolution_04_semantics>
-   Exclude data <identity_resolution_05_exclude_data>
+   Add data sources <identity_resolution_sources>
+   Identify tables with PII <identity_resolution_tables_with_pii>
+   Select primary keys <identity_resolution_primary_keys>
+   Validate profile semantics <identity_resolution_semantics>
+   Exclude data <identity_resolution_exclude_data>
