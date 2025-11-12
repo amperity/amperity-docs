@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/guides/
 
+:orphan:
+
 .. |source-name| replace:: Azure Blob Storage
 .. |plugin-name| replace:: Azure Blob Storage
 .. |feed-name| replace:: CustomerRecords

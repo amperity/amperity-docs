@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/guides/
 
+:orphan:
+
 .. |source-name| replace:: Amazon S3
 .. |plugin-name| replace:: Amazon S3
 .. |feed-name| replace:: CustomerRecords
