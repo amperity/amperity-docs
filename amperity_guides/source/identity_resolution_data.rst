@@ -66,7 +66,7 @@ To add data sources open the **Identity resolution** page in **Quick start**, fr
 
 
 .. toctree::
-   :caption: Data sources
+   :caption: Add data sources
    :maxdepth: 2
    :hidden:
 
