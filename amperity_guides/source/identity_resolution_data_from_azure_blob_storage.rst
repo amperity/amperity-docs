@@ -2,18 +2,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to pull data from any Amazon S3 bucket.
+        Configure Amperity to pull data from any Azure Blob Storage bucket.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to pull data from any Amazon S3 bucket.
+        Configure Amperity to pull data from any Azure Blob Storage bucket.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Amazon S3
+        Azure Blob Storage
 
 ==================================================
-Amazon S3
+Azure Blob Storage
 ==================================================
 
 EMPTY
