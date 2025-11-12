@@ -36,11 +36,9 @@ Amperity accurately resolves customer identities and generates a customer identi
    :padding: 0
    :class-row: surface
 
-   .. grid-item-card:: Identity resolution steps
-
    .. grid-item-card:: Add data sources
       :link-type: doc
-      :link: identity_resolution_sources
+      :link: identity_resolution_data
 
    .. grid-item-card:: Identify tables with PII
       :link-type: doc
@@ -64,7 +62,7 @@ Amperity accurately resolves customer identities and generates a customer identi
    :caption: Identity resolution
    :hidden:
 
-   Add data sources <identity_resolution_sources>
+   Add data sources <identity_resolution_data>
    Identify tables with PII <identity_resolution_tables_with_pii>
    Select primary keys <identity_resolution_primary_keys>
    Validate profile semantics <identity_resolution_semantics>
