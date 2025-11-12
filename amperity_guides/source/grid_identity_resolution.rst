@@ -58,10 +58,6 @@ Amperity accurately resolves customer identities and generates a customer identi
       :link-type: doc
       :link: identity_resolution_exclude_data
 
-   .. grid-item-card:: Data sources
-      :link-type: doc
-      :link: identity_resolution_semantics2
-
 .. guides-identity-resolution-grid-end
 
 .. toctree::
@@ -73,4 +69,3 @@ Amperity accurately resolves customer identities and generates a customer identi
    Select primary keys <identity_resolution_primary_keys>
    Validate profile semantics <identity_resolution_semantics>
    Exclude data <identity_resolution_exclude_data>
-   Data sources <identity_resolution_semantics2>
