@@ -68,9 +68,9 @@ Amperity accurately resolves customer identities and generates a customer identi
    :caption: Identity resolution
    :hidden:
 
-   Data sources <identity_resolution_semantics2>
    Add data sources <identity_resolution_sources>
    Identify tables with PII <identity_resolution_tables_with_pii>
    Select primary keys <identity_resolution_primary_keys>
    Validate profile semantics <identity_resolution_semantics>
    Exclude data <identity_resolution_exclude_data>
+   Data sources <identity_resolution_semantics2>
