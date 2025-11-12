@@ -36,10 +36,6 @@ Amperity accurately resolves customer identities and generates a customer identi
    :padding: 0
    :class-row: surface
 
-   .. grid-item-card:: Data sources
-      :link-type: doc
-      :link: identity_resolution_data_sources
-
    .. grid-item-card:: Add data sources
       :link-type: doc
       :link: identity_resolution_sources
@@ -59,6 +55,10 @@ Amperity accurately resolves customer identities and generates a customer identi
    .. grid-item-card:: Exclude data
       :link-type: doc
       :link: identity_resolution_exclude_data
+
+   .. grid-item-card:: Data sources
+      :link-type: doc
+      :link: identity_resolution_data_sources
 
 .. guides-identity-resolution-grid-end
 
