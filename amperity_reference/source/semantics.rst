@@ -857,7 +857,7 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
    Amperity ID assignment occurs when tables with customer profile data have semantic tags applied to personally identifiable information (PII) and those tables are made available to Stitch.
 
-   Amperity ID assignment for tables with non-customer profile semantic tags, such as for transactions, loyalty programs, or engagement events, require foreign key relationships to exist.
+   This requires a foreign key relationship in cases where tables include non-customer profile semantic tags, such as for transactions, loyalty programs, or engagement events
 
    This relationship exists when three conditions are met:
 
