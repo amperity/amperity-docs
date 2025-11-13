@@ -724,7 +724,7 @@ Select |source-name|. Do one of the following:
 
 .. sources-steps-03-select-file-start
 
-Select the file that is pulled to Amperity, either directly (by browsing into storage and selecting it) or by providing a filename pattern.
+Select the file that is pulled to Amperity, either by browsing into storage and selecting it or by providing a filename pattern.
 
 .. sources-steps-03-select-file-end
 
