@@ -113,6 +113,11 @@ html_theme_options = {
             "title": "Guides",
             "children": [
                 {
+                    "title": "Guided setup",
+                    "url": "../guides/index",
+                    "summary": "Guided setup for profiles and identity resolution."
+                },
+                {
                     "title": "Users",
                     "url": "../user/index",
                     "summary": "Audiences, campaigns, journeys, activations."
