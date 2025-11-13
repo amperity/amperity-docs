@@ -135,7 +135,7 @@ Add Google BigQuery
 .. bridge-google-bigquery-sync-amperity-add-inbound-bridge-steps-end
 
 
-.. _bridge-google-bigquery-data-types:
+.. _bridge-google-bigquery-data-typesa:
 
 Data types
 ==================================================

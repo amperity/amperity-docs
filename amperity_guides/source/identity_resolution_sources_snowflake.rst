@@ -145,11 +145,11 @@ Add Snowflake
 .. bridge-snowflake-sync-amperity-add-bridge-steps-end
 
 
-.. _bridge-snowflake-data-types:
+.. _bridge-snowflake-data-typesa:
 
 Data types
 ==================================================
 
 .. include:: ../../amperity_operator/source/bridge_snowflake.rst
-   :start-after: .. bridge-databricks-data-types-start
-   :end-before: .. bridge-databricks-data-types-end
+   :start-after: .. bridge-snowflake-data-types-start
+   :end-before: .. bridge-snowflake-data-types-end

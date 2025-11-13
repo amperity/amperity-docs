@@ -136,7 +136,7 @@ Add Databricks
 .. bridge-databricks-sync-with-amperity-add-bridge-steps-end
 
 
-.. _bridge-databricks-data-types:
+.. _bridge-databricks-data-typesa:
 
 Data types
 ==================================================
