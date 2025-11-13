@@ -22,7 +22,7 @@ Amperity Reference
 
    `User Guides <../user/index.html>`_
    `Operators Guide <../operator/index.html>`_
-   `Guided Setup <start.html>`_
+   `Guided Setup <../guides/index.html>`_
 
 
 .. _reference-concepts:
