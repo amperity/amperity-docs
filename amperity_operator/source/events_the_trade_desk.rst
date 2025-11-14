@@ -113,7 +113,7 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **Data Provider ID**
+       **Offline Data Provider ID**
 
           |checkmark-required| **Required**
 
@@ -313,7 +313,7 @@ Add destination
              :start-after: .. setting-the-trade-desk-membership-duration-example-start
              :end-before: .. setting-the-trade-desk-membership-duration-example-end
 
-       **Data Provider ID**
+       **Offline Data Provider ID**
 
           |checkmark-required| **Required**
 

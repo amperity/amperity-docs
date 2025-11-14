@@ -75,7 +75,7 @@ Settings
    :start-after: .. setting-the-trade-desk-membership-duration-example-start
    :end-before: .. setting-the-trade-desk-membership-duration-example-end
 
-**Data Provider ID**
+**Offline Data Provider ID**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-offline-data-provider-id-start
