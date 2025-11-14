@@ -853,12 +853,25 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
 .. semantics-key-foreign-tip-start
 
-.. tip:: What happens to foreign keys in the **Unified Coalesced** table?
+.. admonition:: How foreign keys work in Amperity
 
-   * Records may have NULL foreign keys.
-   * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
-   * There may be multiple foreign keys per Amperity ID.
-   * There should not be multiple Amperity IDs per foreign key.
+   Amperity ID assignment occurs when tables with customer profile data have semantic tags applied to personally identifiable information (PII) and those tables are made available to Stitch.
+
+   This requires a foreign key relationship in cases where tables include non-customer profile semantic tags, such as for transactions, loyalty programs, or engagement events.
+
+   This relationship exists when three conditions are met:
+
+   #. At least one source table with customer profile semantic tags is made available to Stitch **and** a foreign key is applied to at least one field in that table.
+
+      .. note:: A source table with customer profile semantic tags may have more than one foreign key.
+
+   #. For tables with non-customer profile semantic tags, a single foreign key must be assigned to a single field in the table.
+
+      .. important:: A source table with non-customer profile semantic tags **must have only one** field assigned a foreign key.
+
+   #. The **Unified Coalesced** table has rows for all customer profile data processed by Stitch. Each semantic tag is represented by a column header, including columns for foreign keys, in the **Unified Coalesced** table.
+
+      When a foreign key matches a foreign key in the **Unified Coalesced** table **and** matches only one Amperity ID, that Amperity ID is assigned to the rows in non-customer profile tables with the matching foreign keys.
 
 .. semantics-key-foreign-tip-end
 
