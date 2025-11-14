@@ -40,7 +40,7 @@ What a courier needs:
 #. Access to the source location. Most data sources--Amazon S3, Azure Blob Storage, Google Cloud Storage, or any SFTP site--allow the use of many file formats, while others may use Snowflake or REST APIs.
 #. A location from which to copy data.
 #. An associated feed.
-#. A file format--CSV, TSV, Apache Parquet, etc., along with additional details for compression, archive, and encryption.
+#. A file format, such as CSV, TSV, or Apache Parquet, along with additional details for compression, archive, and encryption.
 #. A combination of :ref:`load settings <couriers-legacy-files-load-settings>` and :ref:`load operations <couriers-legacy-load-operation-types>`. The exact combination of settings and operations depends on the data source and the types of files to be pulled to Amperity.
 
 .. couriers-legacy-what-they-do-end
@@ -91,7 +91,7 @@ Load settings define the location of a data source, it is type, and how it shoul
        }
      },
      {
-       "object/file-pattern": "'ARCHIVED/FILENAME_'MM-dd-yyyy'.zip'",
+       "object/file-pattern": "ARCHIVED/FILENAME_'MM-dd-yyyy'.zip",
        "object/type": "archive",
        "archive/contents": {
          "FILENAME": {
@@ -104,7 +104,7 @@ Load settings define the location of a data source, it is type, and how it shoul
        }
      },
      {
-       "object/file-pattern": "'ARCHIVED/FILENAME_'MM-dd-yyyy'.zip'",
+       "object/file-pattern": "ARCHIVED/FILENAME_'MM-dd-yyyy'.zip",
        "object/type": "archive",
        "object/land-as": {
          "file/tag": "FILENAME_TAG",
@@ -357,7 +357,7 @@ ZIP
 .. code-block:: none
 
    {
-     "object/file-pattern": "'ARCHIVED/FILENAME_'MM-dd-yyyy'.zip'",
+     "object/file-pattern": "ARCHIVED/FILENAME_'MM-dd-yyyy'.zip",
      "object/type": "archive",
      "archive/contents": {
        "FILENAME": {
