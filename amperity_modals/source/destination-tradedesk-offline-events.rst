@@ -75,6 +75,18 @@ Settings
    :start-after: .. setting-the-trade-desk-membership-duration-example-start
    :end-before: .. setting-the-trade-desk-membership-duration-example-end
 
+**Data Provider ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-offline-data-provider-id-start
+   :end-before: .. setting-the-trade-desk-offline-data-provider-id-end
+
+**Merchant ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-offline-merchant-id-start
+   :end-before: .. setting-the-trade-desk-offline-merchant-id-end
+
 **Tracking tag name**
 
 .. include:: ../../shared/destination_settings.rst
