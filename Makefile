@@ -2,7 +2,7 @@ BUILDDIR = build
 BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
 BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
 
-all: base user operator api reference amp360 ampiq contributing tooltips modals legacy llmkb
+all: base user operator api reference guides amp360 ampiq contributing tooltips modals legacy
 
 static:
 	cp -vr downloads $(BUILDDIR)/
@@ -27,6 +27,10 @@ reference: static ## Build only the "/reference" section
 	# Building A-Z Reference pages...
 	$(BUILD_COMMAND) amperity_reference/source $(BUILDDIR)/reference
 
+guides: static ## Build only the "/guides" section
+	# Building A-Z Reference pages...
+	$(BUILD_COMMAND) amperity_guides/source $(BUILDDIR)/guides
+
 amp360: static ## Build only the "/amp360" section
 	# Building redirects for Amp360 pages...
 	$(BUILD_COMMAND) amperity_amp360/source $(BUILDDIR)/amp360
@@ -50,10 +54,6 @@ modals: static ## Build only the "/modals" section
 legacy: static ## Build only the "/legacy" section
 	# Building Legacy pages...
 	$(BUILD_COMMAND) legacy/source $(BUILDDIR)/legacy
-
-llmkb: static ## Build only the "/legacy" section
-	# Building Legacy pages...
-	$(BUILD_COMMAND) llm_kb/source $(BUILDDIR)/llmkb
 
 clean: ## Flush the entire build directory
 	# Cleaning out build directory...

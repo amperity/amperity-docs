@@ -4072,7 +4072,7 @@ Match rate is the number of records sent from Amperity that matched with records
 
 .. term-match-type-start
 
-The score. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected. Records assigned a "scored_transitive" value are transitively connected.
+The score assigned to matched records. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected. Records assigned a "scored_transitive" value are transitively connected.
 
 .. term-match-type-end
 
@@ -5118,7 +5118,7 @@ Amperity calculates this score using various factors, such as the customer's his
 
 .. term-primary-key-start
 
-A primary key is a column in a data table that uniquely identifies each row in a data source or data table.
+A primary key is a column in a data table that uniquely identifies each row the table.
 
 .. term-primary-key-end
 
@@ -6324,7 +6324,7 @@ A stay identifies rooms, preferences, brands, and other information about hotel 
 
 .. term-stitch-start
 
-Stitch uses patented algorithms to process massive volumes of data and discover the hidden connections in your customer profiles that identify unique individuals. Stitch outputs a unified collection of data that assigns a unique identifier to each unique customer profile.
+Stitch uses patented algorithms to process massive volumes of data and discovers the hidden connections in your customer profiles that identify unique individuals. Stitch outputs a unified collection of data that assigns a unique identifier to each unique customer profile.
 
 .. term-stitch-end
 

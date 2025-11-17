@@ -52,7 +52,7 @@ The following table describes the default `user profile fields <https://www.braz
      - Description
    * - **external_id**
      - varies
-     - Required. The **external_id** is a unique identifer for user profiles in |destination-name|. The **external_id** is a unique identifier that exists in another system, such as the Amperity ID, a loyalty ID, or some other unique customer identifier.
+     - Required. The **external_id** is a unique identifier for user profiles in |destination-name|. The **external_id** is a unique identifier that exists in another system, such as the Amperity ID, a loyalty ID, or some other unique customer identifier.
 
    * - **first_name**
      - **given_name**

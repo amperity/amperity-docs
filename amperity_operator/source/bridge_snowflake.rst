@@ -48,7 +48,7 @@ Amperity Bridge for Snowflake is a first-class integration that uses secure data
 Data types
 ==================================================
 
-.. bridge-databricks-data-types-start
+.. bridge-snowflake-data-types-start
 
 Most `Snowflake data types <https://docs.snowflake.com/en/sql-reference/intro-summary-data-types>`__ |ext_link| are supported by Amperity Bridge.
 
@@ -290,7 +290,7 @@ The following table describes how Snowflake data types map to Amperity data type
 
      - .. warning:: The Snowflake **VECTOR** data type is unsupported. Exclude fields with **VECTOR** data types from tables before sharing them with Amperity.
 
-.. bridge-databricks-data-types-end
+.. bridge-snowflake-data-types-end
 
 
 .. _bridge-snowflake-sync-with-amperity:
@@ -506,7 +506,11 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
 Add inbound bridge
 --------------------------------------------------
 
+.. bridge-snowflake-sync-amperity-add-bridge-start
+
 Configure an inbound bridge to connect Snowflake with Amperity.
+
+.. bridge-snowflake-sync-amperity-add-bridge-end
 
 **To add an inbound bridge**
 

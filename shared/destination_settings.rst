@@ -2795,6 +2795,26 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 
 Settings unique to The Trade Desk: Events.
 
+**Offline Data Provider ID**
+
+.. vale off
+
+.. setting-the-trade-desk-offline-data-provider-id-start
+
+The offline data provider ID assigned to your |destination-name| account. Default value: "amperity".
+
+.. setting-the-trade-desk-offline-data-provider-id-end
+
+.. vale on
+
+**Merchant ID**
+
+.. setting-the-trade-desk-offline-merchant-id-start
+
+A numeric platform ID assigned by |destination-name| during the onboarding process. For example: "11001".
+
+.. setting-the-trade-desk-offline-merchant-id-end
+
 **Tracking tag name**
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start

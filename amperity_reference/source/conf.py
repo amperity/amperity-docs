@@ -66,7 +66,7 @@ html_copy_source = False
 html_show_sourcelink = False
 
 html_additional_pages = {
-#    "branding": "branding.html",
+    "start": "start.html",
 }
 
 
@@ -110,6 +110,11 @@ html_theme_options = {
         {
             "title": "Guides",
             "children": [
+                {
+                    "title": "Guided setup",
+                    "url": "../guides/index",
+                    "summary": "Guided setup for profiles and identity resolution."
+                },
                 {
                     "title": "Users",
                     "url": "../user/index",
