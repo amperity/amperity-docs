@@ -247,7 +247,7 @@ Add data source and feed
    :start-after: .. sources-steps-00-intro-start
    :end-before: .. sources-steps-00-intro-end
 
-**To add a data source for an Amazon S3 bucket**
+**To add a data source for Azure Blob Storage**
 
 .. source-azure-blob-storage-add-data-source-steps-start
 

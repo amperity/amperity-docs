@@ -1932,7 +1932,7 @@ View workflow graphs
 
 .. workflows-howto-view-workflow-graph-start
 
-Each workflow has a workflow graph. This is a visual representation of each task run in the workflow, showing their relationships to each other and the state of each task. Workflow states for "Failed", "Stopped", and "Succeeded" are color coded.
+Each workflow has a workflow graph. This is a visual representation of each task run in the workflow, showing their relationships to each other and the state of each task. Workflow states for "Failed", "Stopped", and "Succeeded" are color-coded.
 
 .. workflows-howto-view-workflow-graph-end
 

@@ -412,7 +412,7 @@ Contact Info Matching
 
 .. campaign-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+A list can be matched to contact information that contains PII data. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -427,7 +427,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Phone Number**
      - **phone**
@@ -436,7 +436,7 @@ A list can be matched to contact information that contains PII data. If a row co
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Last Name**
      - **lastname**
@@ -445,7 +445,7 @@ A list can be matched to contact information that contains PII data. If a row co
        * Trims leading and trailing whitespace
        * Removes spaces in-between
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **First Name**
      - **firstname**
@@ -454,7 +454,7 @@ A list can be matched to contact information that contains PII data. If a row co
        * Trims leading and trailing whitespace
        * Removes spaces in-between
        * Converts to lower-case
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Zip Code**
      - **zip**
@@ -515,7 +515,7 @@ Mobile Device ID Matching
 
 .. campaign-dv360-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

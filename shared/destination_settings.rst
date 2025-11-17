@@ -420,7 +420,7 @@ Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
 
 .. setting-common-quote-mode-start
 
-The quote mode to use within the file. May be one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+The quote mode to use within the file. May be one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
 .. setting-common-quote-mode-end
 
@@ -2441,7 +2441,7 @@ Configure the external ID as "Amperity_ID__c". The "__c" identifies the field as
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-start
 
-When enabled, "Upsert" operations ignore "NULL" values in data sent from Amperity. If a field has a "NULL" value and there is a value in the corresponding Salesforce object, the operation keeps the value in the Salesforce object.
+When enabled, "Upsert" operations ignore **NULL** values in data sent from Amperity. If a field has a **NULL** value and there is a value in the corresponding Salesforce object, the operation keeps the value in the Salesforce object.
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-end
 
@@ -2471,7 +2471,7 @@ The name of the object, or audience list, in Salesforce Sales Cloud to which Amp
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
 
-Enable to use "NULL" values when fields are empty.
+Enable to use **NULL** values when fields are empty.
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
@@ -2794,6 +2794,26 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 .. vale on
 
 Settings unique to The Trade Desk: Events.
+
+**Offline Data Provider ID**
+
+.. vale off
+
+.. setting-the-trade-desk-offline-data-provider-id-start
+
+The offline data provider ID assigned to your |destination-name| account. Default value: "amperity".
+
+.. setting-the-trade-desk-offline-data-provider-id-end
+
+.. vale on
+
+**Merchant ID**
+
+.. setting-the-trade-desk-offline-merchant-id-start
+
+A numeric platform ID assigned by |destination-name| during the onboarding process. For example: "11001".
+
+.. setting-the-trade-desk-offline-merchant-id-end
 
 **Tracking tag name**
 

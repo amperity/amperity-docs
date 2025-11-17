@@ -55,7 +55,7 @@ How semantic tags work
 
 .. semantics-howitworks-start
 
-Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every data source that provides customer profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Semantic tagging works like this:
 
@@ -66,7 +66,7 @@ Semantic tagging works like this:
 
 .. vale off
 
-For those semantic tags, the feed should apply semantic tags like this:
+For those fields apply semantic tags like this:
 
 .. list-table::
    :widths: 100 100
@@ -87,13 +87,17 @@ For those semantic tags, the feed should apply semantic tags like this:
 
 .. vale on
 
-This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
+Apply the same pattern every customer data source that is brought into Amperity that contains customer profiles to ensure that all customer profile data is evaluated by Stitch in exactly the same way.
+
+.. semantics-howitworks-end
+
+.. semantics-howitworks-context-start
 
 Amperity has built-in semantic tags for personally identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
 
 Profile semantic tags are used by Amperity for identity resolution, which is the process that builds a unified customer profile for all of your unique customers. All other semantic tags, such as for transactions and itemized transactions, are used to associate your customer's interactions with your brand to their individual customer profiles.
 
-.. semantics-howitworks-end
+.. semantics-howitworks-context-end
 
 .. semantics-howitworks-profile-tags-start
 
@@ -348,11 +352,11 @@ The following semantics may be used to tag fields as required, as unique, or as 
      - Description
    * - **required**
      - 
-     - Indicates if the field is required to have a non-NULL value.
+     - Indicates if the field is required to have a non-**NULL** value.
 
        .. note:: This tag is assigned automatically to all fields that contain the Amperity ID.
 
-       A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-NULL value, but does not require values to be unique. NULL values will cause an error during validation. All other values, including zero-length strings, will pass validation.
+       A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-**NULL** value, but does not require values to be unique. **NULL** values will cause an error during validation. All other values, including zero-length strings, will pass validation.
 
        .. note::
 
@@ -362,7 +366,7 @@ The following semantics may be used to tag fields as required, as unique, or as 
      - 
      - Indicates if the field is required to be a unique field in the customer 360 database.
 
-       A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with NULL values are ignored by validation, but all other values, including zero-length strings, must pass.
+       A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with **NULL** values are ignored by validation, but all other values, including zero-length strings, must pass.
 
        .. note::
 
@@ -757,7 +761,9 @@ Keys
 
 .. semantics-keys-start
 
-Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
+Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key.
+
+For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
 
 .. semantics-keys-end
 
@@ -803,7 +809,7 @@ Customer keys (ck)
 
 .. tip:: What happens to customer keys in the **Unified Coalesced** table?
 
-   * Records may have NULL customer keys.
+   * Records may have **NULL** customer keys.
    * There may be only one customer key per data source.
 
 .. semantics-key-customer-tip-end
@@ -847,12 +853,30 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
 .. semantics-key-foreign-tip-start
 
-.. tip:: What happens to foreign keys in the **Unified Coalesced** table?
+.. admonition:: How foreign keys work in Amperity
 
-   * Records may have NULL foreign keys.
+   Amperity ID assignment occurs when tables with customer profile data have semantic tags applied to personally identifiable information (PII) and those tables are made available to Stitch.
+
+   This requires a foreign key relationship in cases where tables include non-customer profile semantic tags, such as for transactions, loyalty programs, or engagement events.
+
+   This relationship exists when three conditions are met:
+
+   * Records may have **NULL** foreign keys.
    * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
    * There may be multiple foreign keys per Amperity ID.
    * There should not be multiple Amperity IDs per foreign key.
+
+   #. At least one source table with customer profile semantic tags is made available to Stitch **and** a foreign key is applied to at least one field in that table.
+
+      .. note:: A source table with customer profile semantic tags may have more than one foreign key.
+
+   #. For tables with non-customer profile semantic tags, a single foreign key must be assigned to a single field in the table.
+
+      .. important:: A source table with non-customer profile semantic tags **must have only one** field assigned a foreign key.
+
+   #. The **Unified Coalesced** table has rows for all customer profile data processed by Stitch. Each semantic tag is represented by a column header, including columns for foreign keys, in the **Unified Coalesced** table.
+
+      When a foreign key matches a foreign key in the **Unified Coalesced** table **and** matches only one Amperity ID, that Amperity ID is assigned to the rows in non-customer profile tables with the matching foreign keys.
 
 .. semantics-key-foreign-tip-end
 
@@ -900,11 +924,15 @@ Primary keys (pk)
 
 .. semantics-key-primary-tip-start
 
-.. tip:: What happens to primary keys in the **Unified Coalesced** table?
+.. note:: What happens to primary keys in the **Unified Coalesced** table?
 
-   * Each record in the **Unified Coalesced** table must have a primary key.
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-unified-coalesced-table-start
+      :end-before: .. term-unified-coalesced-table-end
+
+   * Each record in the **Unified Coalesced** table has a primary key.
    * A primary key is unique within a data source, but that primary key may not be unique across all data sources.
-   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
+   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table is uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
    * Each record in the Unified Coalesced table may only be associated with a single Amperity ID.
 
 .. semantics-key-primary-tip-end
@@ -939,7 +967,7 @@ Use a separation key (sk) for deterministic unmatching of records. This prevents
 
 .. semantics-key-separation-assign-pairs-start
 
-A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
+A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-**NULL** value.
 
 .. note:: The following separation keys do not consider approximately matched values to be conflicting values:
 

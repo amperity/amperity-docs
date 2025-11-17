@@ -454,7 +454,7 @@ Complete the following **SFTP Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -497,7 +497,7 @@ Complete the following **SFTP Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -540,7 +540,7 @@ Complete the following **Amazon S3 Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -584,7 +584,7 @@ Complete the following **Azure Blob Storage Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 

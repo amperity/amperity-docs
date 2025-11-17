@@ -241,7 +241,7 @@ Each predictive model allows for additional fields to be added to support your b
 
    Ensure that the **Customer Attributes** table contains all possible exceptions that your brand may want to use.
 
-   Ensure that custom features your brand wants to use in predictive models are populated, have a small percentage of NULL values, and have reliable values that do not change much day-to-day)
+   Ensure that custom features your brand wants to use in predictive models are populated, have a small percentage of **NULL** values, and have reliable values that do not change much day-to-day)
 
 .. models-extend-end
 

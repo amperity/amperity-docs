@@ -2809,7 +2809,7 @@ IF()
 
 Use the **IF(condition,x)** function to evaluate and return true, NULL, or false.
 
-* Use **IF(condition,true_value)** to evaluate and return ``true_value`` when the ``condition`` is ``true``, otherwise return NULL.
+* Use **IF(condition,true_value)** to evaluate and return ``true_value`` when the ``condition`` is ``true``, otherwise return **NULL**.
 * Use **IF(condition,true_value, false_value)** to return ``true_value`` when the ``condition`` is ``true`` or return ``false_value`` when the ``condition`` is ``false``.
 
 .. sql-presto-function-if-end

@@ -35,15 +35,23 @@ Pull from Amazon S3
 
 Amperity can pull data from Amazon S3. Amazon S3 is an efficient cloud storage option that supports a wide variety of file types, file formats, and file sizes and is the most frequently used data source across all Amperity tenants.
 
+.. source-amazon-s3-about-end
+
+.. source-amazon-s3-about-context-start
+
 Common scenarios include:
 
 * One-time uploads of files
 * Regular uploads of files from upstream systems that cannot connect directly to Amperity
 * Apache Parquet uploads made available as output from an upstream cloud database into an Amazon S3 bucket
 
-.. source-amazon-s3-about-end
+.. source-amazon-s3-about-context-end
 
-.. note:: :doc:`The legacy courier workflow is required <source_amazon_s3_legacy>` for certain use cases: XML and files that contain complex or nested JSON, ingest queries, and couriers that support many feeds.
+.. source-amazon-s3-about-note-start
+
+.. note:: :doc:`A courier workflow is required <source_amazon_s3_legacy>` for certain use cases: XML and files that contain complex or nested JSON, ingest queries, and couriers that support many feeds.
+
+.. source-amazon-s3-about-note-end
 
 .. source-amazon-s3-steps-to-pull-start
 

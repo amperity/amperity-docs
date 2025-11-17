@@ -108,7 +108,7 @@ The first row of the user activity file contains the following column headers, a
        This value is also available from the **Action** column under **Users** on the **Users and Activity** page.
 
    * - **external-id**
-     - Internal value only. This value will be NULL in downloaded log files.
+     - Internal value only. This value will be **NULL** in downloaded log files.
 
    * - **happened-at**
      - The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2024-04-09T17:21:06.747Z"``.
@@ -131,7 +131,7 @@ The first row of the user activity file contains the following column headers, a
    * - **principal-email**
      - The email address for the user who initiated the action. For example: ``"principal_email": "user@socktown.com"``.
 
-       This value may be NULL when the user is an API key.
+       This value may be **NULL** when the user is an API key.
 
    * - **principal-id**
      - The identifier for the user who initiated the action. This user may be an API key or a non-human user. For example: ``"principal_id": "google-apps|user@socktown.com"``.
