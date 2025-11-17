@@ -69,9 +69,9 @@ Data sources that contain fields to which profile semantic tags were applied can
 
    If the value in table A is "justin@email.com" then the priority for email address is table A and the value "justin@email.com".
 
-   If the value in table A is NULL and the value in table B is "justinc@email.com" then the priority for email address is table B and the value "justinc@email.com".
+   If the value in table A is **NULL** and the value in table B is "justinc@email.com" then the priority for email address is table B and the value "justinc@email.com".
 
-   If the values in tables A and B are NULL and the value in table C is "justin.c@email.com" then the priority for email address is table C and the value "justin.c@email.com".
+   If the values in tables A and B are **NULL** and the value in table C is "justin.c@email.com" then the priority for email address is table C and the value "justin.c@email.com".
 
 .. merge-policy-attributes-end
 

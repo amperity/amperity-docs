@@ -66,7 +66,7 @@ You need to build a query that outputs fields that can be mapped to :ref:`Google
 
 .. note:: |destination-name| has specific requirements. Define a query, and then export it as a CSV file to profile the data.
 
-   * Add and normalize the country code when states are US and Canada, but the country is NULL.
+   * Add and normalize the country code when states are US and Canada, but the country is **NULL**.
    * Phone numbers are required to have a +11231234567 format.
    * First name, last name, zip code, and country are all required for the "Contact Info" upload key. If any are missing, none are passed.
 

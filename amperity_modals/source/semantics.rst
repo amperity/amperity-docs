@@ -708,7 +708,7 @@ Product catalogs
 
 **pc/product-gender**
 
-   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, NULL (for unknown).
+   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, **NULL** (for unknown).
 
 **pc/product-group**
 
@@ -1009,7 +1009,7 @@ Transactions
 
 **txn-item/product-gender**
 
-   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, NULL (for unknown).
+   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, **NULL** (for unknown).
 
 **txn-item/product-group**
 

@@ -332,7 +332,7 @@ Add data template
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL of Salesforce logins (if used), the name of the object in Salesforce to which Amperity sends data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if NULL values should be used when fields are empty.
+     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL of Salesforce logins (if used), the name of the object in Salesforce to which Amperity sends data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if **NULL** values should be used when fields are empty.
 
        The custom URL of Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity.
 
@@ -344,7 +344,7 @@ Add data template
 
        The external ID should be set to **Amperity_ID__c**. The **__c** identifies the field as a custom field in the Salesforce object.
 
-       When enabled, NULL values in data sent from Amperity is ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
+       When enabled, **NULL** values in data sent from Amperity is ignored during "Upsert" operations. If a field from Amperity is **NULL** and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
 
        .. caution:: Enabling parallelism may cause Salesforce to process batches in parallel. This *may* improve performance, but comes with the risk of introducing failures due to locking. It is possible for more than one batch to attempt to obtain a lock on the same row, causing one or both batches to fail.
 

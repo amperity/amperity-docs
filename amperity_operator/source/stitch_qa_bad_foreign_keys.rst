@@ -156,7 +156,7 @@ Configure query
         HAVING COUNT(email) > 100
       ) AS hf ON LOWER(t1.email) = LOWER(hf.email)
 
-   and then set the value for **high_freq_email** to NULL or TRUE:
+   and then set the value for **high_freq_email** to **NULL** or **TRUE**:
 
    .. code-block:: sql
       :linenos:

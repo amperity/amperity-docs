@@ -429,7 +429,7 @@ Field priority
 
 Use the field priority table to assign priorities for individual fields that are different from the priority assigned to each source domain table **Source_Priority**. Update the list of tables to match the same domain tables that were specified for **Source_Priority**, and then update the field priority table to specify individual priorities.
 
-* A NULL value uses the priority assigned to the source domain table or, when a priority is not assigned by a source domain table, the default priority of "999".
+* A **NULL** value uses the priority assigned to the source domain table or, when a priority is not assigned by a source domain table, the default priority of "999".
 * An integer value will assign priority, where "1" has a higher priority than "2".
 
 .. table-merged-customers-sql-query-required-update-field-priority-end
