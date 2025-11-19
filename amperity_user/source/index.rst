@@ -19,7 +19,7 @@ User guides
 
 .. user-guides-about-start
 
-A collection of in-depth user guides to help you:
+A collection of in-depth user guides to help marketers and analysts:
 
 * Build segments, journeys, and campaigns
 * Build and run SQL queries and send those results anywhere
