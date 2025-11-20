@@ -48,7 +48,7 @@ Events help your brand track offline conversions--in-store sales, place visits, 
 
 .. events-the-trade-desk-api-note-start
 
-.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage events.
+.. note:: This destination uses the `POST /providerapi/offlineconversion endpoint <https://partner.thetradedesk.com/v3/portal/data/doc/post-providerapi-offlineconversion>`__ |ext_link| for the Data Integration API to manage events.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
