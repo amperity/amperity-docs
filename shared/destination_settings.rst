@@ -2795,25 +2795,25 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 
 Settings unique to The Trade Desk: Events.
 
+**Merchant ID**
+
+.. setting-the-trade-desk-offline-merchant-id-start
+
+The merchant ID is a numeric platform identifier assigned by |destination-name| during the onboarding process. The merchant ID is required if |destination-name| has assigned one to your brand. For example: "11001".
+
+.. setting-the-trade-desk-offline-merchant-id-end
+
 **Offline Data Provider ID**
 
 .. vale off
 
 .. setting-the-trade-desk-offline-data-provider-id-start
 
-The offline data provider ID assigned to your |destination-name| account. Default value: "amperity".
+The offline data provider ID assigned to your |destination-name| account. Default value: "amperity". Use the default value if your brand only sends data for first-party measurement.
 
 .. setting-the-trade-desk-offline-data-provider-id-end
 
 .. vale on
-
-**Merchant ID**
-
-.. setting-the-trade-desk-offline-merchant-id-start
-
-A numeric platform ID assigned by |destination-name| during the onboarding process. For example: "11001".
-
-.. setting-the-trade-desk-offline-merchant-id-end
 
 **Tracking tag name**
 
