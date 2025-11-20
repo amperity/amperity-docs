@@ -55,7 +55,7 @@ Type or enter "/" on your keyboard to search the docs site.
 
 
    .. grid-item-card:: |fa-object-exclude| Guided setup
-      :link: /reference/start.html
+      :link: /guides/index.html
 
       Guided setup to land data from your data warehouse and build complete customer profiles.
 
