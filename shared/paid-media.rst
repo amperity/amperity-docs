@@ -23,11 +23,11 @@ Amperity provides the right set of data to support your brand's paid media adver
 
 #. **Merged Customers** vs. **Unified Paid Media**
 
-   The |table_merged_customers| table contains each of your customers' best profiles.
+   The |table_merged_customers| table contains each of your customers' best profiles, such as their best email address, best phone number, and best physical address.
 
-   The |table_unified_paid_media| table contains all your customer's known profile data.
+   The |table_unified_paid_media| table contains all your customer's known profile data, including all known email addresses, all known phone numbers, and all known physical addresses.
 
-   Your brand requires additional data templates to use the **Unified Paid Media** table alongside the **Merged Customers** table to support paid media campaigns.
+   You may configure data templates to use **Merged Customers**, **Unified Paid Media**, or both, depending on your downstream use cases.
 
 #. Enable dedicated data templates for each table.
 
@@ -35,11 +35,13 @@ Amperity provides the right set of data to support your brand's paid media adver
 
    Use a consistent naming pattern to label data templates that use data from the **Unified Paid Media** table. For example: "Full profile".
 
-#. After data templates are configured for both tables, use the |campaign_default_attributes| component on the **Campaigns** page to configure which attributes is associated with the destination, including the table from which those attributes is pulled.
+#. Configure default attributes for each destination.
+
+   Use the |campaign_default_attributes| component on the **Campaigns** page to configure which attributes are associated with each destination, including the table from which those attributes are pulled.
 
    The selected table will affect your brand's downstream match rates *and* overall customer matches within your |paid_media|. The decision behind which table to use depends on your brand's downstream use case and the type and amount of customer profile data your brand wants to use to match customers.
 
-   You brand should expect to see higher |paid_media_match_rates| when sending audiences from the **Merged Customers** table, but a higher number of matched customer profiles when sending audiences from the **Unified Paid Media** table. Use A/B testing to compare the results from each table, after which your brand can use the audience that works best for your campaigns.
+   You should expect to see higher |paid_media_match_rates| when sending audiences from the **Merged Customers** table, but a higher number of matched customer profiles when sending audiences from the **Unified Paid Media** table. Use A/B testing to compare the results from each table, after which you can use the audience that works best for your campaigns.
 
 .. paid-media-admonition-about-end
 
@@ -53,7 +55,7 @@ Amperity provides the right set of data to support your brand's paid media adver
 
 .. paid-media-ampiq-about-start
 
-Amperity provides the right set of data to support your brand's paid media advertising from two tables, both of which contain customer profile data.
+Amperity supports paid media advertising from two tables, both of which contain customer profile data:
 
 * The **Merged Customers** table contains your customers' best profiles, such as their best email address, best phone number, and best physical address.
 * The **Unified Paid Media** table contains your customers complete profile, including all known email addresses, all known phone numbers, and all known physical addresses.
@@ -62,7 +64,7 @@ Your brand can send data from one or both of these tables to any paid media adve
 
 The table your brand uses to send data will affect your brand's downstream match rates *and* overall customer matches within your |paid_media|. The decision behind which table to use depends on your brand's downstream use case and the type and amount of customer profile data your brand wants to use to match customers.
 
-You brand should expect to see higher |paid_media_match_rates| when sending audiences from the **Merged Customers** table, but a higher number of matched customer profiles when sending audiences from the **Unified Paid Media** table. Use A/B testing to compare the results from each table, after which your brand can use the audience that works best for your campaigns.
+In general, you should expect to see higher |paid_media_match_rates| when sending audiences from the **Merged Customers** table, but a higher number of matched customer profiles when sending audiences from the **Unified Paid Media** table. Use A/B testing to compare the results from each table, after which you can use the audience that works best for your campaigns.
 
 .. paid-media-ampiq-about-end
 
