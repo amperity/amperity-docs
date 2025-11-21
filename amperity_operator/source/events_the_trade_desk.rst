@@ -121,6 +121,18 @@ Get details
              :start-after: .. setting-the-trade-desk-offline-data-provider-id-start
              :end-before: .. setting-the-trade-desk-offline-data-provider-id-end
 
+       **Merchant ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-offline-merchant-id-start
+             :end-before: .. setting-the-trade-desk-offline-merchant-id-end
+
+       .. note:: 
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-offline-merchant-versus-offline-start
+             :end-before: .. setting-the-trade-desk-offline-merchant-versus-offline-end
+
        **Tracking tag name**
 
           .. include:: ../../shared/destination_settings.rst
@@ -326,6 +338,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-the-trade-desk-offline-merchant-id-start
              :end-before: .. setting-the-trade-desk-offline-merchant-id-end
+
+       .. note:: 
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-offline-merchant-versus-offline-start
+             :end-before: .. setting-the-trade-desk-offline-merchant-versus-offline-end
 
        **Tracking tag name**
 

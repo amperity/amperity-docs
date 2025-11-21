@@ -2799,9 +2799,21 @@ Settings unique to The Trade Desk: Events.
 
 .. setting-the-trade-desk-offline-merchant-id-start
 
-The merchant ID is a numeric platform identifier assigned by |destination-name| during the onboarding process. The merchant ID is required if |destination-name| has assigned one to your brand. For example: "11001".
+Required if |destination-name| has assigned one to your brand. The merchant ID is a numeric platform identifier assigned to retailers who are onboarded to |destination-name| as a **Merchant**. For example: "11001".
 
 .. setting-the-trade-desk-offline-merchant-id-end
+
+.. setting-the-trade-desk-offline-merchant-versus-offline-start
+
+Brands onboarded to The Trade Desk as a **Merchant** have access to **Product Catalog** and event tracking features in The Trade Desk user interface.
+
+Brands not onboarded to The Trade Desk as a **Merchant** can:
+
+#. Monetize conversation data for measurement and targeting using the **Offline Provider ID**.
+#. Request to be onboarded as a **Merchant**, after which a merchant identifier is assigned.
+ #. Send conversion data to the advertiser seat at The Trade Desk for measurement within their own campaigns. Use "amperity" as the value for the **Offline Provider ID** setting for this use case.
+
+.. setting-the-trade-desk-offline-merchant-versus-offline-end
 
 **Offline Data Provider ID**
 
@@ -2809,7 +2821,7 @@ The merchant ID is a numeric platform identifier assigned by |destination-name| 
 
 .. setting-the-trade-desk-offline-data-provider-id-start
 
-The offline data provider ID assigned to your |destination-name| account. Default value: "amperity". Use the default value if your brand only sends data for first-party measurement.
+Required. The offline data provider ID assigned to your |destination-name| account. Default value: "amperity". Use the default value if your brand only sends data for first-party measurement.
 
 .. setting-the-trade-desk-offline-data-provider-id-end
 
@@ -2819,7 +2831,7 @@ The offline data provider ID assigned to your |destination-name| account. Defaul
 
 .. setting-the-trade-desk-offline-tracking-tag-name-start
 
-The name of the tracking tag for events. The name is a string, may have up to 256 characters, must be unique, and may not duplicate any previous advertiser name or offline data provider ID. The tracking tag name appears in the UI for |destination-name| exactly as it is in Amperity.
+Required. The name of the tracking tag for events. The name is a string, may have up to 256 characters, must be unique, and may not duplicate any previous advertiser name or offline data provider ID. The tracking tag name appears in the UI for |destination-name| exactly as it is in Amperity.
 
 .. setting-the-trade-desk-offline-tracking-tag-name-end
 
