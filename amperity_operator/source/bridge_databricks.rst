@@ -431,20 +431,17 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
 .. _bridge-databricks-sync-with-amperity-subnet-ids:
 
 Configure subnet IDs
---------------------
+--------------------------------------------------
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-start
 
 The following applies if:
 
 * Your Amperity tenant is hosted in Azure.
-* You are using Bridge to connect to data in Azure Databricks stored in Azure Data Lake Storage.
-* Your Azure Data Lake Storage uses Storage Account firewall rules to restrict who can connect to it.
+* You are using Amperity Bridge to connect to data in Azure Databricks stored in Azure Data Lake Storage.
+* Your Azure Data Lake Storage uses Storage Account firewall rules to restrict connections.
 
-You will need to ensure that the firewall rules on your Azure Storage Account
-allow connections from Amperity. This can be done by creating
-virtual network rules to allow traffic from Amperity subnets.
-
+You will need to ensure that the firewall rules on your Azure Storage Account allow connections from Amperity. This is done by creating virtual network rules to allow traffic from Amperity subnets.
 
 .. important:: The following command line examples use placeholders. Replace "myresourcegroup" and "mystorageaccount" with the names of your resource group and storage account.
 
@@ -457,12 +454,16 @@ If your Amperity tenant is hosted in **Azure East US 2**, add the following netw
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-2-start
 
+.. TODO: Keep the command formatting as-is with the very long subnet value to ensure it's a single token without spaces.
+
 .. code-block:: bash
 
    az storage account network-rule add \
      --resource-group "myresourcegroup" \
      --account-name "mystorageaccount" \
      --subnet "/subscriptions/e733fc0a-b51a-4e9d-b6bb-fffc216f4d87/resourceGroups/prod/providers/Microsoft.Network/virtualNetworks/prod/subnets/compute-spark-outbound"
+
+.. TODO: Keep the command formatting as-is with the very long subnet value to ensure it's a single token without spaces.
 
 .. code-block:: bash
 
@@ -479,6 +480,8 @@ If your Amperity tenant is hosted in **Azure East US 2**, add the following netw
 If your Amperity tenant is hosted in **Azure North Europe**, add the following network rule:
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-en1-north-europe-start
+
+.. TODO: Keep the command formatting as-is with the very long subnet value to ensure it's a single token without spaces.
 
 .. code-block:: bash
 
