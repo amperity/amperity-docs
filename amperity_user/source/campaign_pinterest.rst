@@ -89,6 +89,12 @@ Add to a campaign
    :start-after: .. sendto-tiktok-ads-build-query-options-start
    :end-before: .. sendto-tiktok-ads-build-query-options-end
 
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add Pinterest to a campaign**
 
 .. list-table::

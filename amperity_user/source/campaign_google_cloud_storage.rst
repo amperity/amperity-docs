@@ -71,6 +71,12 @@ Add to a campaign
    :start-after: .. channels-build-campaign-important-filedrop-start
    :end-before: .. channels-build-campaign-important-filedrop-end
 
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add Google Cloud Storage to a campaign**
 
 .. list-table::

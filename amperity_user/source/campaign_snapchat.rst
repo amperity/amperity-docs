@@ -89,6 +89,12 @@ Add to a campaign
 
 .. channel-snapchat-build-campaign-end
 
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add Snapchat to a campaign**
 
 .. list-table::

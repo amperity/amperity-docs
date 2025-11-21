@@ -105,6 +105,12 @@ Add to a campaign
    :start-after: .. sendto-tiktok-ads-build-query-options-start
    :end-before: .. sendto-tiktok-ads-build-query-options-end
 
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add TikTok Ads to a campaign**
 
 .. list-table::
@@ -159,9 +165,6 @@ Add to a campaign
        .. include:: ../../shared/channels.rst
           :start-after: .. channels-build-campaign-steps-edit-attributes-note-start
           :end-before: .. channels-build-campaign-steps-edit-attributes-note-end
-
-
-
 
 
 .. _channel-tiktok-ads-configure-default-attributes:

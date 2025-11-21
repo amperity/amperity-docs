@@ -85,6 +85,12 @@ Add to a campaign
    :start-after: .. channels-build-campaign-start
    :end-before: .. channels-build-campaign-end
 
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add Criteo Retail Media to a campaign**
 
 .. list-table::
