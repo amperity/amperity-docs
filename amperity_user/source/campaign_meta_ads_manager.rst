@@ -118,6 +118,12 @@ Add to a campaign
    :start-after: .. destinations-oauth-warning-about-reauthorize-start
    :end-before: .. destinations-oauth-warning-about-reauthorize-end
 
+.. admonition:: About paid media campaigns
+
+   .. include:: ../../shared/paid-media.rst
+      :start-after: .. paid-media-admonition-about-start
+      :end-before: .. paid-media-admonition-about-end
+
 **To add Meta Ads Manager to a campaign**
 
 .. list-table::

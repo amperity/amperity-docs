@@ -221,7 +221,7 @@ Match rates
 
 .. paid-media-about-match-rates-start
 
-Amperity builds the best profiles for getting the best match rates across the paid media ecosystem. These profiles are available from the **Merged Customers** and **Unified Paid Media** tables.
+Amperity builds unified customer profiles that are designed to support strong match rates across the paid media ecosystem. These profiles are available from the **Merged Customers** and **Unified Paid Media** tables.
 
 .. image:: ../../images/paid-media-match-rates.png
    :width: 600 px
@@ -237,13 +237,13 @@ The **Unified Paid Media** table contains all known profile data for each of you
 
    A customer profile in the **Merged Customers** table is associated with a customer's best email address, but often customers have alternate email addresses for a variety of reasons. These alternate email addresses are available from the **Unified Paid Media** table.
 
-   If your brand sends a greater number of known email addresses your brand can increase the likelihood of matching more customers even if the overall match rate decreases.
+   If your brand sends a greater number of known email addresses you can increase the likelihood of matching more customers even if the overall match rate decreases.
 
    For example, 100 customers have 100 email addresses sent from **Merged Customers**. These match at an 80% match rate.
 
    If you sent, in addition to those 100 email addresses, 40 additional known email addresses from the **Unified Paid Media** table, those 40 additional email addresses also have an opportunity to match with a customer.
 
-   For this example, 10 additional customer matches were found.
+   In this example, 10 additional customer matches were found.
 
    The overall match rate will drop from 80% to 64%. However, the total number of matched customers increases from 80 to 90.
 
@@ -255,10 +255,111 @@ The **Unified Paid Media** table contains all known profile data for each of you
 What type of profile to send?
 ==================================================
 
-.. include:: ../../shared/paid-media.rst
-   :start-after: .. paid-media-ampiq-about-start
-   :end-before: .. paid-media-ampiq-about-end
+.. paid-media-what-type-of-profile-about-start
 
+Amperity supports paid media advertising from two tables, both of which contain customer profile data:
+
+* The **Merged Customers** table contains your customers' best profiles, such as their best email address, best phone number, and best physical address.
+* The **Unified Paid Media** table contains your customers complete profile, including all known email addresses, all known phone numbers, and all known physical addresses.
+
+Your brand can send data from one or both of these tables to any paid media advertising application. You can configure the default attributes for each data set from the **Campaigns** page.
+
+The table your brand uses to send data will affect your brand's downstream match rates *and* overall customer matches within your paid media activations. The decision behind which table to use depends on your brand's downstream use case and the type and amount of customer profile data your brand wants to use to match customers.
+
+In general, you should expect to see higher match rates when sending audiences from the **Merged Customers** table, but a higher number of matched customer profiles when sending audiences from the **Unified Paid Media** table. Use A/B testing to compare the results from each table, after which you can use the audience that works best for your campaigns.
+
+.. paid-media-what-type-of-profile-about-end
+
+.. _paid-media-what-table-best-profile:
+
+Use your best profile
+--------------------------------------------------
+
+.. paid-media-what-table-best-profile-start
+
+Use the **Merged Customers** table when your goal is to get the highest match rate for an advertising campaign. The **Merged Customers** table contains each customer's best profile, such as their best email address, best phone number, and best physical address, and sending your best profile leads to the highest match rates.
+
+.. paid-media-what-table-best-profile-end
+
+.. image:: ../../images/use-cases-merged-customers-alt.png
+   :width: 600 px
+   :alt: Advantages of Merged Customers and Unified Paid Media tables
+   :align: left
+   :class: no-scaled-link
+
+
+.. _paid-media-what-table-all-matching-profiles:
+
+Use all matching profiles
+--------------------------------------------------
+
+.. paid-media-what-table-all-matching-profiles-start
+
+Use the **Unified Paid Media** table when your goal is to maximize the total number of matched customers in paid channels, especially when customers use alternate email addresses, phone numbers, or postal addresses in downstream applications.
+
+Typical scenarios where **Unified Paid Media** often performs better than **Merged Customers** include:
+
+* Acquisition and prospecting campaigns that rely on multiple identifiers (email, phone, postal).
+* Reactivation campaigns where customers may have changed their primary email or phone.
+* Channels and destinations that can accept multiple identifiers per person.
+
+Because **Unified Paid Media** sends all known profile data for each customer, your brand may see a lower overall match rate percentage but a higher number of matched customer profiles. The :ref:`match rates vs. matched customers example above <paid-media-about-match-rates>` illustrates how this tradeoff works in practice.
+
+.. paid-media-what-table-all-matching-profiles-end
+
+.. image:: ../../images/use-cases-unified-paid-media-alt.png
+   :width: 600 px
+   :alt: Advantages of Merged Customers and Unified Paid Media tables
+   :align: left
+   :class: no-scaled-link
+
+.. _paid-media-what-table-ab-test:
+
+A/B test profiles
+--------------------------------------------------
+
+.. paid-media-what-table-ab-test-start
+
+The most reliable way to decide which table to use is to run an A/B test:
+
+#. Build a broad audience in Amperity.
+#. Send that audience once from **Merged Customers** and once from **Unified Paid Media**.
+#. After the destination finishes matching, typically within 24–48 hours, compare the number of matched customers and downstream performance. This requires someone with access to the downstream platform to provide the number of customers matched.
+#. Choose the table that best aligns to your campaign objective.
+
+.. paid-media-what-table-ab-test-end
+
+.. _paid-media-what-table-configure-profiles:
+
+Configure profiles for campaigns
+--------------------------------------------------
+
+.. paid-media-what-table-configure-profiles-start
+
+**Merged Customers** is typically the default source of attributes for paid media. You can set the default source to **Unified Paid Media** for a given paid media destination. Even if you change the defaults for a particular destination, you can still adjust the source for individual campaigns.
+
+To configure default attributes for a destination:
+
+#. On the **Activations** page, go to the **Campaigns** tab and click **Settings**.
+#. Click **Add default attributes**.
+#. Select the destination, database, and activation ID.
+#. Set the **source table** to **Unified Paid Media**, and then select the required field, for example: email, phone, postal address. You must set the **source table** to **Unified Paid Media** for each attribute.
+#. Click **Save**.
+
+All *new* campaigns to that destination will use these default attributes. To update an existing campaign:
+
+#. Edit the campaign.
+#. Click **Edit attributes**.
+#. Click **Reset to defaults** to pull in the updated default attributes from **Unified Paid Media**. **Reset to defaults** will only appear if attributes have been customized.
+#. Click **Save** and reschedule the campaign.
+
+.. note::
+
+   For more details about configuring default attributes, including screenshots and additional options, see :doc:`default_attributes`.
+
+   For technical details about how the **Unified Paid Media** table is built and configured, such as row limits and available identifiers, see `the Operators guide article <https://docs.amperity.com/operator/table_unified_paid_media.html>`__.
+
+.. paid-media-what-table-configure-profiles-end
 
 .. _paid-media-destinations:
 

@@ -31,19 +31,23 @@ Use first-party data to build high-quality audiences and then use those audience
    :class-row: surface
 
    .. grid-item-card:: About paid media
-      :link: paid_media.html
+      :link-type: doc
+      :link: paid_media
 
 
    .. grid-item-card:: What is first-party data?
-      :link: paid_media.html#what-is-first-party-data
+      :link-type: ref
+      :link: paid-media-what-is-first-party-data
 
 
    .. grid-item-card:: Match rates
-      :link: paid_media.html#match-rates
+      :link-type: ref
+      :link: paid-media-about-match-rates
 
 
    .. grid-item-card:: What type of profile to send?
-      :link: paid_media.html#what-type-of-profile-to-send
+      :link-type: ref
+      :link: paid-media-what-table
 
 
 .. grid-paid-media-about-grid-end
@@ -68,31 +72,38 @@ Activate audiences using paid media for any of the following scenarios.
    :class-row: surface
 
    .. grid-item-card:: Audience expansion
-      :link: paid_media.html#audience-expansion
+      :link-type: ref
+      :link: paid-media-activation-scenario-audience-expansion
 
 
    .. grid-item-card:: Lifecycle marketing
-      :link: paid_media.html#lifecycle-marketing
+      :link-type: ref
+      :link: paid-media-activation-scenario-lifecycle-marketing
 
 
    .. grid-item-card:: Product marketing
-      :link: paid_media.html#product-marketing
+      :link-type: ref
+      :link: paid-media-activation-scenario-product-marketing
 
 
    .. grid-item-card:: Optimize bidding
-      :link: paid_media.html#optimize-bidding
+      :link-type: ref
+      :link: paid-media-activation-scenario-optimize-search-bids
 
 
    .. grid-item-card:: Optimize budgets with CLV
-      :link: paid_media.html#optimize-budgets-with-clv
+      :link-type: ref
+      :link: paid-media-activation-scenario-optimize-budgets
 
 
    .. grid-item-card:: Prospect conversion
-      :link: paid_media.html#prospect-conversion
+      :link-type: ref
+      :link: paid-media-activation-scenario-prospect-conversion
 
 
    .. grid-item-card:: Suppression lists
-      :link: paid_media.html#suppression-lists
+      :link-type: ref
+      :link: paid-media-activation-scenario-suppression-lists
 
 
 .. grid-paid-media-activation-scenarios-grid-end
