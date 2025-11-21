@@ -259,10 +259,31 @@ What type of profile to send?
    :start-after: .. paid-media-ampiq-about-start
    :end-before: .. paid-media-ampiq-about-end
 
-.. _paid-media-use-upm:
 
-When to use the Unified Paid Media table
+.. _paid-media-what-table-best-profile:
+
+Use your best profile
 --------------------------------------------------
+
+.. paid-media-what-table-best-profile-start
+
+Use the **Merged Customers** table when your goal is to get the highest match rate for an advertising campaign. The **Merged Customers** table contains each customer's best profile, such as their best email address, best phone number, and best physical address, and sending your best profile leads to the highest match rates.
+
+.. paid-media-what-table-best-profile-end
+
+.. image:: ../../images/use-cases-merged-customers-alt.png
+   :width: 600 px
+   :alt: Advantages of Merged Customers and Unified Paid Media tables
+   :align: left
+   :class: no-scaled-link
+
+
+.. _paid-media-what-table-all-matching-profiles:
+
+Use all matching profiles
+--------------------------------------------------
+
+.. paid-media-what-table-all-matching-profiles-start
 
 Use the **Unified Paid Media** table when your goal is to maximize the **total number of matched customers** in paid channels, especially when customers use alternate email addresses, phone numbers, or postal addresses in downstream applications.
 
@@ -274,23 +295,21 @@ Typical scenarios where **Unified Paid Media** often performs better than **Merg
 
 Because **Unified Paid Media** sends all known profile data for each customer, your brand may see a lower overall match rate percentage but a higher number of matched customer profiles. The :ref:`match rates vs. matched customers example above <paid-media-about-match-rates>` illustrates how this tradeoff works in practice.
 
-.. image:: ../../images/use-cases-unified-paid-media-vs-merged-customers.png
-   :width: 750 px
+.. paid-media-what-table-all-matching-profiles-end
+
+.. image:: ../../images/use-cases-unified-paid-media-alt.png
+   :width: 600 px
    :alt: Advantages of Merged Customers and Unified Paid Media tables
    :align: left
    :class: no-scaled-link
 
-.. tip::
 
-   The most reliable way to decide which table to use is to run an A/B test:
+.. _paid-media-what-table-configure-profiles:
 
-   #. Build a broad audience in Amperity.
-   #. Send that audience once from **Merged Customers** and once from **Unified Paid Media**.
-   #. After the destination finishes matching, typically within 24–48 hours, compare the number of matched customers and downstream performance. This requires someone with access to the downstream platform to provide the number of customers matched.
-   #. Choose the table that best aligns to your campaign objective.
+Configure profiles for campaigns
+--------------------------------------------------
 
-Configure campaigns to use Unified Paid Media
-++++++++++++++++++++++++++++++++++++++++++++++++++
+.. paid-media-what-table-configure-profiles-start
 
 You can make **Unified Paid Media** the default source of attributes for a given paid media destination, while still allowing individual campaigns to override that choice.
 
@@ -314,6 +333,26 @@ All *new* campaigns to that destination will use these default attributes. To up
    For more details about configuring default attributes, including screenshots and additional options, see :doc:`default_attributes`.
 
    For technical details about how the **Unified Paid Media** table is built and configured (such as row limits and available identifiers), see `the Operators guide article <https://docs.amperity.com/operator/table_unified_paid_media.html>`__.
+
+.. paid-media-what-table-configure-profiles-end
+
+
+.. _paid-media-what-table-ab-test:
+
+A/B test profiles
+--------------------------------------------------
+
+.. paid-media-what-table-ab-test-start
+
+The most reliable way to decide which table to use is to run an A/B test:
+
+#. Build a broad audience in Amperity.
+#. Send that audience once from **Merged Customers** and once from **Unified Paid Media**.
+#. After the destination finishes matching, typically within 24–48 hours, compare the number of matched customers and downstream performance. This requires someone with access to the downstream platform to provide the number of customers matched.
+#. Choose the table that best aligns to your campaign objective.
+
+.. paid-media-what-table-ab-test-end
+
 
 .. _paid-media-destinations:
 
