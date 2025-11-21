@@ -2811,7 +2811,7 @@ Brands not onboarded to The Trade Desk as a **Merchant** can:
 
 #. Monetize conversation data for measurement and targeting using the **Offline Provider ID**.
 #. Request to be onboarded as a **Merchant**, after which a merchant identifier is assigned.
- #. Send conversion data to the advertiser seat at The Trade Desk for measurement within their own campaigns. Use "amperity" as the value for the **Offline Provider ID** setting for this use case.
+#. Send conversion data to the advertiser seat at The Trade Desk for measurement within their own campaigns. Use "amperity" as the value for the **Offline Provider ID** setting for this use case.
 
 .. setting-the-trade-desk-offline-merchant-versus-offline-end
 
