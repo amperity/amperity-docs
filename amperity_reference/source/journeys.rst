@@ -492,6 +492,10 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-interact`
 * :ref:`journeys-howtos-merge`
 * :ref:`journeys-howtos-monitor-resolve`
+* :ref:`journeys-howtos-organize`
+* :ref:`journeys-howtos-add-folder`
+* :ref:`journeys-howtos-add-subfolder`
+* :ref:`journeys-howtos-move`
 * :ref:`journeys-howtos-rename`
 * :ref:`journeys-howtos-save-a-journey`
 * :ref:`journeys-howtos-schedule-a-journey`
@@ -906,6 +910,92 @@ You may receive workflow alerts related to your journeys.
 
 .. journeys-howtos-monitor-resolve-workflow-alerts-end
 
+.. _journeys-howtos-organize:
+
+Organize journeys
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-folder-start
+   :end-before: .. term-journey-folder-end
+
+You can organize the journeys shown on the **Journeys** page:
+
+* :ref:`Add a folder <journeys-howtos-add-folder>`
+* :ref:`Add a subfolder <journeys-howtos-add-subfolder>`
+* :ref:`Move a journey to another folder <journeys-howtos-move>`
+
+
+.. _journeys-howtos-add-folder:
+
+Add folder
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-add-folder-start
+
+Folders may be expanded or collapsed to view and hide the list of journeys and subfolders contained within.
+
+.. journeys-add-folder-end
+
+**To add a folder**
+
+.. journeys-add-folder-steps-start
+
+#. From the **Journeys** page click **Create folder**. This opens the **Create folder** dialog box.
+#. Enter the name for the folder.
+#. Click **Save**.
+
+Alternately, you can click the |fa-kebab| icon for an existing journey to create a folder that will contain this journey.
+
+.. journeys-add-folder-steps-end
+
+
+.. _journeys-howtos-add-subfolder:
+
+Add subfolder
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-list-organize-subfolder-start
+
+Use the **Create folder** option in the |fa-kebab| menu for an existing folder to add a subfolder. You may configure up to four levels of subfolders. All folder names must be unique.
+
+.. journeys-list-organize-subfolder-end
+
+**To add a subfolder**
+
+.. journeys-add-subfolder-steps-start
+
+#. On the **Journeys** page, open the menu for a folder or subfolder by clicking the |fa-kebab| icon, and then select **Create folder**. This opens the **Create subfolder** dialog box.
+#. Enter the name for the subfolder.
+#. Click **Save**.
+
+.. journeys-add-subfolder-steps-end
+
+.. _journeys-howtos-move:
+
+Move journey
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-list-move-journey-start
+
+Use the **Move** option to move around and organize the list of folders and journeys. Folders may be expanded to view the list of journeys and subfolders contained within.
+
+.. journeys-list-move-journey-end
+
+**To move a journey**
+
+.. journeys-move-steps-start
+
+#. From the **Journeys** page, click the |fa-kebab| icon to open the menu for a journey, and then select **Move**. This opens the **Move journey** dialog box.
+#. Select the name of an existing folder to which a journey will be moved, and then click **Move**.
+
+.. journeys-move-steps-end
+
+.. journeys-move-hint-start
+
+.. hint:: If the folder to which a journey will be moved is not present in the list of folders, you can add it directly from the **Move journey** dialog box. Click the **New folder** link, type a name for the folder, and then select it.
+
+.. journeys-move-hint-end
 
 .. _journeys-howtos-rename:
 

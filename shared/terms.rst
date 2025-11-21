@@ -3515,6 +3515,14 @@ A journey is an automated sequence for connecting with customers across channels
 
 .. term-journey-end
 
+**journey folder**
+
+.. term-journey-folder-start
+
+A folder helps you organize the list of journeys on the **Journeys** page. You may add up to four levels of subfolders.
+
+.. term-journey-folder-end
+
 
 **journey node: Activate**
 
