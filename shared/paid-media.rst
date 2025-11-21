@@ -27,13 +27,9 @@ Amperity provides the right set of data to support your brand's paid media adver
 
    The |table_unified_paid_media| table contains all your customer's known profile data, including all known email addresses, all known phone numbers, and all known physical addresses.
 
-   You may configure data templates to use **Merged Customers**, **Unified Paid Media**, or both, depending on your downstream use cases.
+   You may configure campaigns to use **Merged Customers**, **Unified Paid Media**, or both, depending on your downstream use cases.
 
-#. Enable dedicated data templates for each table.
-
-   Use a consistent naming pattern to label data templates that use data from the **Merged Customers** table. For example: "Best profile".
-
-   Use a consistent naming pattern to label data templates that use data from the **Unified Paid Media** table. For example: "Full profile".
+#. Use a consistent naming pattern to label when profiles are from the **Merged Customers** or **Unified Paid Media** tables. For example: "Best profile" or "Full profile".
 
 #. Configure default attributes for each destination.
 
