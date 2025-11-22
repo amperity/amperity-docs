@@ -6431,11 +6431,11 @@ Streaming JSON is a way to send increments of data using NDJSON formatting withi
 .. term-streaming-json-end
 
 
-**Streaming Ingest API**
+**Streaming API**
 
 .. term-streaming-ingest-api-start
 
-The Streaming Ingest API is a tenant-specific API that supports real-time streaming of data from external systems to Amperity.
+The Streaming API is a tenant-specific API that supports real-time streaming of data from external systems to Amperity.
 
 .. term-streaming-ingest-api-end
 
