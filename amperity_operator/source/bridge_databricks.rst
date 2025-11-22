@@ -435,63 +435,60 @@ Configure subnet IDs
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-start
 
-For bridges that connect to Databricks environments running in Microsoft Azure and are using storage account firewalls, the outbound subnet IDs for Amperity Bridge must be configured in Microsoft Azure using the Azure CLI. This step is only required for Microsoft Azure storage accounts running in any of the following regions: :ref:`az-prod East US 2 <az-prod-east-us-2>`, :ref:`az-prod East US <az-prod-east-us>`, or :ref:`az-prod-en1 North Europe <az-prod-en1-north-europe>`.
+The following applies if:
 
-.. important:: The following command line examples use placeholders. Replace "myresourcegroup" and "mystorageaccount" to the names of the resource group and storage account that exists within your Microsoft Azure environment.
+* Your Amperity tenant is hosted in Azure.
+* You are using Amperity Bridge to connect to data in Azure Databricks stored in Azure Data Lake Storage.
+* Your Azure Data Lake Storage uses Storage Account firewall rules to restrict connections.
+
+You will need to ensure that the firewall rules on your Azure Storage Account allow connections from Amperity. This is done by creating virtual network rules to allow traffic from Amperity subnets.
+
+.. important:: The following command line examples use placeholders. Replace "myresourcegroup" and "mystorageaccount" with the names of your resource group and storage account.
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-end
 
 
 .. _az-prod-east-us-2:
 
-**az-prod East US 2**
+If your Amperity tenant is hosted in **Azure East US 2**, add the following network rules:
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-2-start
 
-.. code-block:: bash
-
-   az storage account network-rule add --subnet \
-   /subscriptions/e733fc0a-b51a-4e9d-b6bb-fffc216f4d87/ \
-   resourceGroups/prod/providers/Microsoft.Network/ \
-   virtualNetworks/prod/subnets/compute-spark-outbound \
-   --resource-group "myresourcegroup" \
-   --account-name "mystorageaccount"
-
-.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-2-end
-
-
-.. _az-prod-east-us:
-
-**az-prod East US**
-
-.. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-start
+.. TODO: Keep the command formatting as-is with the very long subnet value to ensure it's a single token without spaces.
 
 .. code-block:: bash
 
-   az storage account network-rule add --subnet \
-   /subscriptions/e733fc0a-b51a-4e9d-b6bb-fffc216f4d87/ \
-   resourceGroups/prod-compute-failover/providers/Microsoft.Network/ \
-   virtualNetworks/prod-compute-failover/subnets/compute-spark-outbound \
-   --resource-group "myresourcegroup" \
-   --account-name "mystorageaccount"
+   az storage account network-rule add \
+     --resource-group "myresourcegroup" \
+     --account-name "mystorageaccount" \
+     --subnet "/subscriptions/e733fc0a-b51a-4e9d-b6bb-fffc216f4d87/resourceGroups/prod/providers/Microsoft.Network/virtualNetworks/prod/subnets/compute-spark-outbound"
+
+.. TODO: Keep the command formatting as-is with the very long subnet value to ensure it's a single token without spaces.
+
+.. code-block:: bash
+
+   az storage account network-rule add \
+     --resource-group "myresourcegroup" \
+     --account-name "mystorageaccount" \
+     --subnet "/subscriptions/e733fc0a-b51a-4e9d-b6bb-fffc216f4d87/resourceGroups/prod-compute-failover/providers/Microsoft.Network/virtualNetworks/prod-compute-failover/subnets/compute-spark-outbound"
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-east-us-end
 
 
 .. _az-prod-en1-north-europe:
 
-**az-prod-en1 North Europe**
+If your Amperity tenant is hosted in **Azure North Europe**, add the following network rule:
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-en1-north-europe-start
 
+.. TODO: Keep the command formatting as-is with the very long subnet value to ensure it's a single token without spaces.
+
 .. code-block:: bash
 
-   az storage account network-rule add --subnet \
-   /subscriptions/0e2b72b5-de51-4c28-8ba3-355fc7db10b7/ \
-   resourceGroups/prod-en1/providers/Microsoft.Network/ \
-   virtualNetworks/vnet/subnets/compute-spark-outbound \
-   --resource-group "myresourcegroup" \
-   --account-name "mystorageaccount"
+   az storage account network-rule add \
+     --resource-group "myresourcegroup" \
+     --account-name "mystorageaccount" \
+     --subnet "/subscriptions/0e2b72b5-de51-4c28-8ba3-355fc7db10b7/resourceGroups/prod-en1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/compute-spark-outbound"
 
 .. bridge-databricks-sync-with-amperity-subnet-ids-az-prod-en1-north-europe-end
 
