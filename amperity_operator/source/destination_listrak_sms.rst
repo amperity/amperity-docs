@@ -33,6 +33,10 @@ Configure destinations for Listrak SMS
 
 .. destination-listrak-sms-about-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-listrak-sms-optin-start
+   :end-before: .. setting-listrak-sms-optin-end
+
 .. destination-listrak-sms-context-start
 
 Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to manage SMS profiles in |destination-name|.
@@ -90,6 +94,9 @@ Get details
 
           The **List Name** in |destination-name| is the value for the **Phone list ID** configuration setting in Amperity.
 
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-listrak-sms-optin-start
+          :end-before: .. setting-listrak-sms-optin-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
