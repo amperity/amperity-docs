@@ -23,7 +23,7 @@ Amperity has the following APIs:
 
 * :ref:`Amperity API <api-amperity>`
 * :ref:`Profile API <api-profile>`
-* :ref:`Streaming Ingest API <api-streaming-ingest>`
+* :ref:`Streaming API <api-streaming-ingest>`
 
 .. api-overview-end
 
@@ -80,7 +80,7 @@ The |api_profile| is unique to your tenant. The endpoints that are enabled for y
 
 .. _api-streaming-ingest:
 
-Streaming Ingest API
+Streaming API
 ==================================================
 
 .. include:: ../../shared/terms.rst

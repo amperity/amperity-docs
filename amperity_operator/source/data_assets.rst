@@ -311,6 +311,7 @@ The following file-based data assets are available:
 
 * :ref:`data-asset-address-standardization`
 * :ref:`data-asset-gender-name-ratios`
+* :ref:`data-asset-latitude-longitude`
 * :ref:`data-asset-lookup-table-row`
 * :ref:`data-asset-lookup-table-usa`
 * :ref:`data-asset-lookup-table-zip`
@@ -569,6 +570,18 @@ Your brand's use cases for predicted gender may prefer using a standalone table.
    .. tip:: This table will be unique by Amperity ID and may be made available to the **Segment Editor** for use with campaigns.
 
 .. data-asset-gender-name-ratios-steps-end
+
+
+.. _data-asset-latitude-longitude:
+
+Latitudes and longitudes
+--------------------------------------------------
+
+.. data-asset-latitude-longitude-start
+
+Use the latitudes and longitudes data asset to apply :doc:`nearest store calculations <calculate_nearest_store>` using postal codes for all customers in the United States and Canada. Select the **lat_lng_zip** data asset from the list of :ref:`reference data assets <data-asset-reference-enable>`, and then add it as a passthrough table to your customer 360 database.
+
+.. data-asset-latitude-longitude-end
 
 
 .. _data-asset-lookup-tables:
