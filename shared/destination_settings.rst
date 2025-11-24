@@ -1738,11 +1738,11 @@ See common settings. This one defaults to "phone".
 
 .. setting-listrak-sms-optin-start
 
-.. caution:: Audience members sent to |destination-name| from Amperity are opted-in by |destination-name| to receiving SMS messages by default.
+.. caution:: Audience members sent to |destination-name| from Amperity are subscribed to a list and can receive SMS messages as the default behavior in |destination-name|. Audience members who do not exist in |destination-name| are created and subscribed by default.
 
-   To avoid sending opted-out customers, apply filters to remove any customers who have opted out before sending audiences to |destination-name| using campaigns, journeys, or orchestrations.
+   To avoid sending unsubscribed customers, apply filters to remove any customers who have unsubscribed from recieving SMS messages before sending audiences to |destination-name| using campaigns, journeys, or orchestrations.
 
-   Amperity updates the membership of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, and **postal code**. Additional profile attributes may be sent when a matching custom segmentation field exists in |destination-name|.
+   Amperity updates the contact attributes of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, and **postal code**. Additional attributes may be sent when a matching custom segmentation field exists in |destination-name|.
 
 .. setting-listrak-sms-optin-end
 
