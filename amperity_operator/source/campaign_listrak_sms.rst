@@ -31,6 +31,10 @@ Configure campaigns for Listrak SMS
    :start-after: .. destination-listrak-sms-about-start
    :end-before: .. destination-listrak-sms-about-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-listrak-sms-optin-start
+   :end-before: .. setting-listrak-sms-optin-end
+
 .. include:: ../../amperity_operator/source/destination_listrak_sms.rst
    :start-after: .. destination-listrak-sms-context-start
    :end-before: .. destination-listrak-sms-context-end
@@ -86,6 +90,9 @@ Get details
 
           The **List Name** in |destination-name| is the value for the **Phone list ID** configuration setting in Amperity.
 
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-listrak-sms-optin-start
+          :end-before: .. setting-listrak-sms-optin-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
