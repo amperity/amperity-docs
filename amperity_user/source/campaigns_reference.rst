@@ -203,10 +203,6 @@ Control groups
    :end-before: .. campaigns-control-groups-consistent-membership-end
 
 .. include:: ../../amperity_reference/source/campaigns.rst
-   :start-after: .. campaigns-control-groups-consistent-membership-start
-   :end-before: .. campaigns-control-groups-consistent-membership-end
-
-.. include:: ../../amperity_reference/source/campaigns.rst
    :start-after: .. campaigns-control-groups-zero-membership-start
    :end-before: .. campaigns-control-groups-zero-membership-end
 

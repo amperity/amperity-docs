@@ -456,9 +456,7 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
    * - Amperity stack
      - Snowflake region
      - Account locator
-   * - aws-prod
-     - aws_us_west_2
-     - GUB98973
+
    * - aws-prod
      - aws_us_east_1
      - MVB61607
@@ -466,14 +464,19 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
      - aws_us_east_2
      - BL95184
    * - aws-prod
+     - gcp_us_east4
+     - YU29648
+   * - aws-prod
+     - aws_us_west_2
+     - GUB98973
+   * - aws-prod
      - azure_westus2
      - PZ39828
+
    * - aws-prod-cc1
      - aws_us_west_2
      - EXB14788
-   * - aws-prod
-     - gcp_us_east4
-     - YU29648
+
    * - az-prod
      - azure_centralus
      - MC75461
@@ -483,18 +486,19 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
    * - az-prod
      - aws_us_west_2
      - BCB42530
-   * - az-prod-en1
-     - aws_us_west_2
-     - WKB77434
-   * - az-prod
-     - azure_westeurope
-     - RN08588
-   * - az-prod-en1
-     - azure_australiaeast
-     - TD45616
    * - az-prod
      - azure_australiaeast
      - MD18696
+   * - az-prod
+     - azure_westeurope
+     - RN08588
+
+   * - az-prod
+     - azure_australiaeast
+     - MD18696
+   * - az-prod-en1
+     - azure_australiaeast
+     - TD45616
    * - az-prod-en1
      - azure_westeurope
      - KV75952
