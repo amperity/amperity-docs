@@ -250,7 +250,7 @@ Indexes
 
 .. profile-api-howitworks-indexes-start
 
-An index defines a list of customer profile attributes that can be accused from a Profile API endpoint.
+An index defines a list of customer profile attributes that can be accessed from a Profile API endpoint.
 
 The fields that are available from an index are defined by a query.
 
