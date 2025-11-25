@@ -25,7 +25,7 @@ Profile API
 
 .. admonition:: Amperity Learning Lab
 
-   Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://learn.amperity.com/profile-api>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://learn.amperity.com/query-for-profile-information-via-the-api>`__ |ext_link|. Registration is required.
 
 .. api-profile-learning-lab-end
 
