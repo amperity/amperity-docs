@@ -493,12 +493,12 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
      - azure_westeurope
      - RN08588
 
+   * - az-prod
+     - azure_australiaeast
+     - MD18696
    * - az-prod-en1
      - azure_australiaeast
      - TD45616
-   * - az-prod-en1
-     - aws_us_west_2
-     - WKB77434
    * - az-prod-en1
      - azure_westeurope
      - KV75952
