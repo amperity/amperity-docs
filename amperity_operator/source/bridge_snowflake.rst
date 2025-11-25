@@ -495,6 +495,9 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
    * - az-prod
      - azure_australiaeast
      - MD18696
+   * - az-prod-en1
+     - azure_westeurope
+     - KV75952
 
 .. important:: If the account ID / region ID pair does not exist in your stack please contact Amperity Support.
 
