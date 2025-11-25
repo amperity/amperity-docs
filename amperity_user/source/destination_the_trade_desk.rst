@@ -85,6 +85,12 @@ You may build a more refined list of email addresses, such as those associated w
 
 .. sendto-the-trade-desk-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-the-trade-desk-add-orchestration:
 

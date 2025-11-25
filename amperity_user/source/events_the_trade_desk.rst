@@ -99,6 +99,12 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
 
 .. events-the-trade-desk-offline-events-build-query-retail-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _events-the-trade-desk-parameters:
 

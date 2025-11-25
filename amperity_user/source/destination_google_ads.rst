@@ -108,6 +108,12 @@ You need to build a query that outputs fields that can be mapped to :ref:`Google
 
 .. sendto-google-ads-build-query-example-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-google-ads-add-orchestration:
 

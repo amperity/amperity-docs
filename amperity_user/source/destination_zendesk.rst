@@ -113,6 +113,11 @@ Results that are sent to Zendesk must be correctly mapped to the following attri
 
 .. sendto-zendesk-map-results-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
 
 .. _sendto-zendesk-map-results-with-attributes-table:
 

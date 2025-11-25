@@ -71,6 +71,12 @@ You may need to build a query that shapes the data so that fields in the output 
 
 .. destination-monetate-get-details-note-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-monetate-add-orchestration:
 

@@ -65,6 +65,12 @@ Build query
    :start-after: .. destination-hubspot-build-query-start
    :end-before: .. destination-hubspot-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-hubspot-add-orchestration:
 

@@ -99,6 +99,12 @@ You need to build a query that outputs fields that can be mapped to :ref:`Google
 
 .. destination-dv360-build-query-example-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _destination-dv360-add-orchestration:
 

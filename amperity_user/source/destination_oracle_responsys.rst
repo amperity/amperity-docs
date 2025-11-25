@@ -64,6 +64,12 @@ You need to build a query that shapes the data so that fields in the output can 
 
 .. sendto-oracle-responsys-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-oracle-responsys-add-orchestration:
 

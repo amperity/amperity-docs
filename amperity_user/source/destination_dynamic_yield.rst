@@ -83,6 +83,12 @@ Build a query that shapes the data so that fields in the output are mapped to th
 
 .. sendto-dynamic-yield-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-dynamic-yield-add-orchestration:
 

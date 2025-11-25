@@ -69,6 +69,12 @@ Choose the approach that works best for your use cases and downstream workflows.
 
 .. sendto-pebblepost-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-pebblepost-build-query-map-to-downstream-customer:
 

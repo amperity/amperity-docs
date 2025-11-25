@@ -67,6 +67,11 @@ Extend the SQL to include :ref:`any of the additional fields <events-google-enha
 
 .. events-google-enhanced-conversions-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
 
 .. _events-google-enhanced-conversions-fields:
 

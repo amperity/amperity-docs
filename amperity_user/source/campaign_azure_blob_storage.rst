@@ -57,6 +57,12 @@ Build a segment
       :start-after: .. channels-build-segment-context-start
       :end-before: .. channels-build-segment-context-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _channel-azure-blob-storage-build-campaign:
 

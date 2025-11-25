@@ -120,6 +120,11 @@ Review the :ref:`Conversions API parameters <events-meta-ads-manager-conversions
 
 .. events-meta-ads-manager-offline-events-parameters-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
 
 .. _events-meta-ads-manager-add-orchestration:
 

@@ -75,6 +75,12 @@ Build a segment
 
    Amperity sends a list of SHA-256 hashed email addresses that matches the audience you have defined to |destination-name|, after which they will be available in Pinterest Ads as a customer list.
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _channel-pinterest-build-campaign:
 

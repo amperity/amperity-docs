@@ -146,6 +146,12 @@ Build a segment
    :start-after: .. sendto-braze-build-segments-whatfor-start
    :end-before: .. sendto-braze-build-segments-whatfor-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _channel-braze-examples:
 

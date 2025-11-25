@@ -99,6 +99,12 @@ Fields that contain PII--email address and phone numbers, for example--should ha
 
 .. events-tiktok-ads-offline-events-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _events-tiktok-ads-parameters:
 

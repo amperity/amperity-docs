@@ -116,6 +116,12 @@ Add a SQL table with a **SELECT** statement similar to:
 
 .. sendto-bluecore-build-query-map-to-platform-with-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-bluecore-add-orchestration:
 

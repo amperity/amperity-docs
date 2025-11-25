@@ -58,6 +58,12 @@ You need to build a query that outputs the data that you want to use within |des
 
 .. destination-domo-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _destination-domo-add-orchestration:
 

@@ -63,6 +63,12 @@ Build query
    :start-after: .. sendtos-build-query-email-only-start
    :end-before: .. sendtos-build-query-email-only-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _destination-microsoft-ads-add-orchestration:
 

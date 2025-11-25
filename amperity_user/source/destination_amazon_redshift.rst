@@ -87,6 +87,12 @@ Build a query that returns rows that match the schema of a table in |destination
    :start-after: .. sendtos-build-query-webhook-lambda-note-start
    :end-before: .. sendtos-build-query-webhook-lambda-note-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-amazon-redshift-add-orchestration:
 

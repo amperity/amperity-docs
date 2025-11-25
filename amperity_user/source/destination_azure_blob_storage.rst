@@ -59,6 +59,12 @@ You need to build a query, and then send the results to Azure Blob Storage.
 
 .. sendto-azure-blob-storage-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-azure-blob-storage-add-orchestration:
 

@@ -65,6 +65,12 @@ Build query
 
 .. sendto-snapchat-build-query-note-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-snapchat-build-query-email:
 

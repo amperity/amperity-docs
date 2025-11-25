@@ -43,7 +43,6 @@ Amazon Pinpoint is a flexible and scalable communications service for inbound an
 #. :ref:`Get details <destination-amazon-pinpoint-get-details>`
 #. :ref:`Configure Amazon Pinpoint <destination-amazon-pinpoint-configure>`
 #. :ref:`Add webhook destination <destination-amazon-pinpoint-add-destination>`
-#. :ref:`Add data template <destination-amazon-pinpoint-add-data-template>`
 
 .. destination-amazon-pinpoint-steps-to-send-end
 
@@ -428,101 +427,3 @@ Add webhook destination
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-add-destinations-webhook-start
    :end-before: .. destinations-add-destinations-webhook-end
-
-
-.. _destination-amazon-pinpoint-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-amazon-pinpoint-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: center
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Add details.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step two.
-          :align: center
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Allow access.
-          :align: left
-          :class: no-scaled-link
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step three.
-          :align: center
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. important:: Under **Webhook settings**, if **Webhook Settings** is empty, set it to empty curly braces: {}.
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step four.
-          :align: center
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-after-queries-only-start
-          :end-before: .. destinations-data-template-save-after-queries-only-end
-
-.. destination-amazon-pinpoint-add-data-template-steps-end

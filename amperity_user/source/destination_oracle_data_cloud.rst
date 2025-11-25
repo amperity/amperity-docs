@@ -73,6 +73,12 @@ The correct approach here depends on the data and the desired use case (or cases
 
 .. sendto-oracle-data-cloud-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-oracle-data-cloud-add-orchestration:
 

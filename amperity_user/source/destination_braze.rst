@@ -229,6 +229,12 @@ The **external_id** does not need to be associated with the Amperity ID. For exa
 
 .. sendto-braze-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 .. sendto-braze-build-segments-whatfor-start
 
 .. admonition:: What can you use custom attributes with in Braze?

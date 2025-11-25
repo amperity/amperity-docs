@@ -98,6 +98,12 @@ You need to build a query that outputs fields that can be mapped to static lists
 
 .. destination-oracle-eloqua-build-query-custom-attributes-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-oracle-eloqua-add-orchestration:
 

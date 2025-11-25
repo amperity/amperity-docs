@@ -87,6 +87,12 @@ For example:
    :start-after: .. channel-listrak-sms-configure-attributes-start
    :end-before: .. channel-listrak-sms-configure-attributes-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-listrak-sms-add-orchestration:
 

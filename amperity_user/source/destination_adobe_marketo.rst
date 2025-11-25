@@ -101,6 +101,12 @@ Build a query named "Marketo - Audience List and Attributes" builds an audience 
 
 .. sendto-adobe-marketo-build-query-example-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-adobe-marketo-add-orchestration:
 

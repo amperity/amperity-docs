@@ -80,6 +80,12 @@ and then assign this query to an orchestration that sends results to |destinatio
 
 .. sendto-salesforce-marketing-cloud-build-query-use-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-salesforce-marketing-cloud-add-orchestration:
 
