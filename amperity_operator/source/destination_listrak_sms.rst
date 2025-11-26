@@ -63,6 +63,7 @@ Amperity uses specific endpoints in the `Listrak SMS REST API <https://api.listr
    :align: left
    :class: no-scaled-link
 
+A |destination-name| destination works like this:
 
 .. list-table::
    :widths: 10 90
