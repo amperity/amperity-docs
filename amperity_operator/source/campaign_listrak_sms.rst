@@ -40,6 +40,16 @@ Configure campaigns for Listrak SMS
    :end-before: .. destination-listrak-sms-context-end
 
 
+.. _campaign-listrak-sms-howitworks:
+
+How this destination works
+==================================================
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-start
+   :end-before: .. destination-listrak-sms-howitworks-end
+
+
 .. _campaign-listrak-sms-get-details:
 
 Get details
