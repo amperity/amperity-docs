@@ -77,6 +77,12 @@ You need to build a query, and then send the results to SFTP.
 
 .. sendto-sftp-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-sftp-add-orchestration:
 

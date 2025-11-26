@@ -55,6 +55,12 @@ The following examples show how to build the same audience using :ref:`a query t
 
 .. destination-reddit-ads-audience-targeting-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _destination-reddit-ads-audience-targeting-query:
 

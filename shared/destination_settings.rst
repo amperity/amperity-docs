@@ -168,6 +168,15 @@ After configuring this destination users may send campaigns to |destination-name
 .. campaigns-steps-business-users-orchestration-only-end
 
 
+**Step 06**
+
+.. destinations-steps-validate-audience-start
+
+Test the connection with |destination-name| by using an audience with a very small membership. For example: 10 or 100 members or the minimum audience size recommended by |destination-name|. Send the test audience to |destination-name| and verify the audience is correct in |destination-name|. Make adjustments if necessary. Only send full audiences after validation is complete.
+
+.. destinations-steps-validate-audience-end
+
+
 
 .. vale off
 

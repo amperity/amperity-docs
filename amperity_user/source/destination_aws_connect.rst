@@ -77,6 +77,12 @@ Build a query that returns customer profiles and custom values. For example:
    :start-after: .. sendtos-build-query-webhook-lambda-note-start
    :end-before: .. sendtos-build-query-webhook-lambda-note-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-aws-connect-add-orchestration:
 

@@ -116,6 +116,12 @@ For email addresses:
 
 .. sendto-attentive-mobile-build-subscriber-list-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-attentive-mobile-add-orchestration:
 

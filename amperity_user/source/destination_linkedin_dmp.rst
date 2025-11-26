@@ -88,6 +88,12 @@ You may include additional audience details for title, country, and company.
 
 .. sendto-linkedin-dmp-build-query-example-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-linkedin-dmp-add-orchestration:
 

@@ -348,6 +348,16 @@ Add destination
           :start-after: .. destinations-steps-business-users-orchestration-only-start
           :end-before: .. destinations-steps-business-users-orchestration-only-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
 .. destination-microsoft-dynamics-add-steps-end
 
 

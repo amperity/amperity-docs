@@ -72,3 +72,9 @@ For example:
 You can download the results of this query directly from the **Query Editor** in Amperity or you can use an orchestration to send the CSV file to cloud storage or an SFTP bucket.
 
 .. events-pinterest-build-query-end
+
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end

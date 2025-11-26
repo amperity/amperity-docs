@@ -162,6 +162,16 @@ Configure cross-account roles
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
           :end-before: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
 .. destination-dynamic-yield-credentials-role-to-role-steps-end
 
 

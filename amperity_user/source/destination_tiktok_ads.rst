@@ -101,6 +101,11 @@ You need to build a query that outputs email addresses and phone numbers.
 
 .. sendto-tiktok-ads-build-query-example-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
 
 .. _sendto-tiktok-ads-build-query-offline-events:
 

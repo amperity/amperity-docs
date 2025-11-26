@@ -44,3 +44,9 @@ Build a query
 .. include:: ../../amperity_operator/source/events_criteo.rst
    :start-after: .. events-criteo-build-query-start
    :end-before: .. events-criteo-build-query-end
+
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end

@@ -53,6 +53,12 @@ You need to build a query, and then send the results to Google Cloud Storage.
 
 .. sendto-google-cloud-storage-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-google-cloud-storage-add-orchestration:
 

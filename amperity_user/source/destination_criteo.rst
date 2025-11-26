@@ -74,6 +74,12 @@ Build query
 
 .. sendto-criteo-build-query-example-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-criteo-send-transactions:
 

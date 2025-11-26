@@ -98,6 +98,12 @@ The following query returns a list of hashed email addresses for customers who a
 
 .. sendto-pinterest-build-query-example-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-pinterest-add-orchestration:
 

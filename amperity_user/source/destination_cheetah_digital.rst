@@ -63,6 +63,12 @@ Build a query that returns the customer profile data that you want to send to |d
 
 .. sendto-cheetah-digital-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-cheetah-digital-add-orchestration:
 

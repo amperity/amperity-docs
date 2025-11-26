@@ -81,6 +81,12 @@ The correct approach here depends on the data and the desired use cases for down
 
 .. sendto-koupon-media-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-koupon-media-build-query-map-to-channel:
 

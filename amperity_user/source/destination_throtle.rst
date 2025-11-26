@@ -54,6 +54,11 @@ You need to build a query that returns the correct set of matching keys as requi
 
 .. sendto-throtle-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
 
 .. _sendto-throtle-build-query-matching-keys:
 

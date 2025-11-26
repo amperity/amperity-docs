@@ -81,6 +81,11 @@ Choose the approach that works best for your use cases and downstream workflows.
 
 .. sendto-vibes-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
 
 .. _sendto-vibes-build-query-map-to-recipient-list:
 

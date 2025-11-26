@@ -70,6 +70,12 @@ You may need to build queries that shape data into one of the following schemas:
 
 .. sendto-persado-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-persado-build-query-marketing-enagement:
 

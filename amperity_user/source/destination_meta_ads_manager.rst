@@ -100,6 +100,12 @@ The correct approach here depends on the data and the desired use case (or cases
 
 .. sendto-meta-ads-manager-build-query-tip-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-meta-ads-manager-build-query-use-table:
 

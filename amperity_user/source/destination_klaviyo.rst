@@ -60,6 +60,12 @@ To send query results to |destination-name| you must know which type of audience
 
 .. sendto-klaviyo-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-klaviyo-build-query-email-only:
 

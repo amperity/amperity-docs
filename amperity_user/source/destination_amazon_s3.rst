@@ -53,6 +53,12 @@ You need to build a query, and then send the results to Amazon S3.
 
 .. sendto-amazon-s3-build-query-end
 
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. destinations-steps-validate-audience-start
+      :end-before: .. destinations-steps-validate-audience-end
+
 
 .. _sendto-amazon-s3-add-orchestration:
 

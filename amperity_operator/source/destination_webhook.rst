@@ -43,7 +43,6 @@ Send query results to a custom destination using a webhook:
 #. :ref:`Use serverless destinations <destination-webhook-serverless>`
 #. :ref:`Configure custom destination <destination-webhook-custom>`
 #. :ref:`Add webhook destination <destination-webhook-add-destination>`
-#. :ref:`Add data template <destination-webhook-add-data-template>`
 #. :ref:`Extend the AWS Lambda function <destination-webhook-extend-function>`
 
 .. destination-webhook-steps-to-send-end
