@@ -43,7 +43,7 @@ Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to man
 
 #. Amperity uses the `Update Contact <https://api.listrak.com/sms#operation/Contact_PutContactResource>`__ endpoint to update an audience member's information by **{phoneNumber}**.
 #. Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ endpoint to unsubscribe audience members from an SMS list.
-#. Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for {phoneNumber} values that do not exist in the SMS list.
+#. Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist in the SMS list.
 
 .. destination-listrak-sms-context-end
 
@@ -130,7 +130,7 @@ A |destination-name| destination works like this:
 
        Audience members that do not exist in the SMS list in Listrak and who are in the current audience for this workflow are subscribed to the SMS list.
 
-       Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for {phoneNumber} values that do not exist in an SMS list. All audience members added to an SMS list using this endpoint are subscribed to the list.
+       Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist in an SMS list. All audience members added to an SMS list using this endpoint are subscribed to the list.
 
 
    * - .. image:: ../../images/steps-05.png

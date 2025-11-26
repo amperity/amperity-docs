@@ -1785,7 +1785,7 @@ Select **Include attributes that match custom profile fields** to have Amperity 
 
 .. setting-listrak-sms-enable-segmentation-caveat-start
 
-.. important:: Custom attributes must be `configured as custom profile fields <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| before Amperity can send custom attributes with |destination-name| SMS profiles.
+.. important:: Custom attributes must be `configured as custom profile fields <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| in Listrak before Amperity can send custom attributes with |destination-name| profiles.
 
    The attribute name in Amperity **must** match the profile field name in |destination-name|. Attribute names are not case-sensitive.
 
