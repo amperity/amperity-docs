@@ -154,8 +154,9 @@ A |destination-name| destination works like this:
 
        All audience members added to an SMS list using this endpoint are automatically subscribed to the list when the phone number does not already exist under the sender code.
 
-       .. important:: Use the **SMS_Opt_Status** table to filter query results and audience segments to include only customers who consent to receiving SMS messaging.
+       .. important:: Use the :doc:`SMS_Opt_Status <table_sms_opt_status>` table in Amperity to filter query results and audience segments to include only customers who consent to receiving SMS messaging.
 
+          Consider using `double opt-in messaging <https://help.listrak.com/en/articles/4853719-sms-lists-management-guide#h_90cb3fdead>`__ |ext_link| for campaigns sent from Listrak. Double opt-in uses two messages: the first message asks for consent, the second message confirms receipt of consent.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
