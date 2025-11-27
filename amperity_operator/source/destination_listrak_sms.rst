@@ -55,13 +55,33 @@ How this destination works
 
 .. destination-listrak-sms-howitworks-start
 
+|destination-name| is a subscription-based model. Adding a phone number can cause an immediate SMS subscription.
+
+.. destination-listrak-sms-howitworks-end
+
+.. destination-listrak-sms-howitworks-optin-start
+
+.. important:: To avoid sending SMS messages to people who did not consent to receiving them, ensure only consented phone numbers are included in the data provided to Amperity, or maintain consent status as a separate attribute.
+
+   For example, bring Listrak consent status to Amperity as a data source, and then use that data source with the **SMS Opt Status** table to ensure customers are filterable by consent status.
+
+   SMS opt-in requirements are different from email opt-in requirements and require separate consent tracking.
+
+.. destination-listrak-sms-howitworks-optin-end
+
+.. destination-listrak-sms-howitworks-endpoints-start
+
 Amperity uses specific endpoints in the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to manage SMS profiles in |destination-name|.
+
+.. destination-listrak-sms-howitworks-endpoints-end
 
 .. image:: ../../images/howitworks-listrak-sms.png
    :width: 640 px
    :alt: Listrak SMS connector
    :align: left
    :class: no-scaled-link
+
+.. destination-listrak-sms-howitworks-table-start
 
 A |destination-name| destination works like this:
 
@@ -104,7 +124,7 @@ A |destination-name| destination works like this:
 
        When attributes for existing audience members change Amperity will update the profile to match the updated attributes. For example, a custom attribute for "Most recent purchase" has an existing value of "Socktown 5-pack ankle" and Amperity updates the attribute to "Socktown 5 pack mid-calf".
 
-       Amperity uses the `Update Contact <https://api.listrak.com/sms#operation/Contact_PutContactResource>`__ endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, and **postal_code**) and custom fields are updated for all customers, inclusive of opt status. Amperity does not change an audience member's opt status.
+       Amperity uses the `Update Contact <https://api.listrak.com/sms#operation/Contact_PutContactResource>`__ endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, and **postal_code**) and custom fields are updated for all customers. Amperity does not change an audience member's opt status.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -128,9 +148,13 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **SUBSCRIBE {phoneNumber} TO {phoneListId}**
 
-       Audience members that do not exist in the SMS list in Listrak and who are in the current audience for this workflow are subscribed to the SMS list.
+       Audience members that do not exist in the SMS list in Listrak, but do exist in the current audience being sent to |destination-name| *are automatically subscribed to the SMS list*.
 
-       Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist in an SMS list. All audience members added to an SMS list using this endpoint are subscribed to the list.
+       Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist in an SMS list.
+
+       All audience members added to an SMS list using this endpoint are automatically subscribed to the list when the phone number does not already exist under the sender code.
+
+       .. important:: Use the **SMS_Opt_Status** table to filter query results and audience segments to include only customers who consent to receiving SMS messaging.
 
 
    * - .. image:: ../../images/steps-05.png
@@ -143,7 +167,7 @@ A |destination-name| destination works like this:
        The workflow ends when all attributes are updated for existing audience members, certain existing audience members are unsubscribed from SMS lists, or certain new audience members are subscribed to SMS lists.
 
 
-.. destination-listrak-sms-howitworks-end
+.. destination-listrak-sms-howitworks-table-end
 
 
 .. _destination-listrak-sms-get-details:

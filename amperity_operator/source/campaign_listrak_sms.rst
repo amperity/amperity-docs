@@ -49,6 +49,24 @@ How this destination works
    :start-after: .. destination-listrak-sms-howitworks-start
    :end-before: .. destination-listrak-sms-howitworks-end
 
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-optin-start
+   :end-before: .. destination-listrak-sms-howitworks-optin-end
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-endpoints-start
+   :end-before: .. destination-listrak-sms-howitworks-endpoints-end
+
+.. image:: ../../images/howitworks-listrak-sms.png
+   :width: 640 px
+   :alt: Listrak SMS connector
+   :align: left
+   :class: no-scaled-link
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-table-start
+   :end-before: .. destination-listrak-sms-howitworks-table-end
+
 
 .. _campaign-listrak-sms-get-details:
 

@@ -61,25 +61,45 @@ Build query
    :start-after: .. destination-listrak-sms-attributes-start
    :end-before: .. destination-listrak-sms-attributes-end
 
+.. sendto-listrak-sms-build-query-fields-start
+
+An SMS profile in |destination-name| requires only a phone number, but may include all system profile attributes, including email address, first name, last name, postal code, and birthdate. Custom attributes may be included in the query results.
+
+.. important:: Use the **SMS Opt Status** table to filter the results to include only customers who have opted in to receiveing SMS messaaging.
+
+.. sendto-listrak-sms-build-query-fields-end
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-optin-start
+   :end-before: .. destination-listrak-sms-howitworks-optin-end
+
 .. sendto-listrak-sms-build-query-start
 
-An SMS profile in |destination-name| requires only a phone number, but should include all system profile fields, along with any custom profile fields your brand is using for segmentation in |destination-name|.
-
-For example:
+**Example query**
 
 .. code-block:: sql
    :linenos:
 
+   WITH sms_opt_status AS (
+     SELECT
+       so.amperity_id
+       ,so.phone
+       ,so.is_sms_opted_in
+     FROM SMS_Opt_Status so
+   )
+
    SELECT
-     phone AS "Phone"
-     ,email AS "Email Address"
-     ,given_name AS "First Name"
-     ,surname AS "Last Name"
-     ,postal AS "Postal Code"
-     ,birthdate AS "Birthday"
-     ,custom_field_1 AS "Custom Profile Field 1"
-     ,custom_field_2 AS "Custom Profile Field 2"
-   FROM Customer360
+     co.amperity_id
+     ,co.Phone AS "Phone"
+     ,co.Email AS "Email Address"
+     ,co.FirstName AS "First Name"
+     ,co.LastName AS "Last Name"
+     ,co.PostalCode AS "Postal Code"
+     ,co.Birthdate AS "Birthday"
+     ,co.LoyaltyTier AS "Loyalty"
+   FROM Customer360 co
+   LEFT JOIN SMS_Opt_Status so ON co.amperity_id = so.amperity_id
+   WHERE is_sms_opted_in = true
 
 .. sendto-listrak-sms-build-query-end
 
