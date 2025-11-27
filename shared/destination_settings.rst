@@ -1753,6 +1753,8 @@ See common settings. This one defaults to "phone".
 
    Amperity updates the contact attributes of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, and **postal code**. Additional attributes may be sent when a matching custom segmentation field exists in |destination-name|.
 
+   Talk with your Amperity representative about the |destination-name| connector before configuring it in your tenant.
+
 .. setting-listrak-sms-optin-end
 
 **Sender code ID**
@@ -1785,7 +1787,7 @@ Select **Include attributes that match custom profile fields** to have Amperity 
 
 .. setting-listrak-sms-enable-segmentation-caveat-start
 
-.. important:: Custom attributes must be `configured as custom profile fields <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| before Amperity can send custom attributes with |destination-name| SMS profiles.
+.. important:: Custom attributes must be `configured as custom profile fields <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| in Listrak before Amperity can send custom attributes with |destination-name| profiles.
 
    The attribute name in Amperity **must** match the profile field name in |destination-name|. Attribute names are not case-sensitive.
 
