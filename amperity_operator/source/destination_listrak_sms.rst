@@ -266,6 +266,8 @@ Get details
 
        **Sender code ID**
 
+          |checkmark-required| **Required**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-sms-sender-code-id-start
              :end-before: .. setting-listrak-sms-sender-code-id-end
@@ -480,6 +482,8 @@ Add destination
                 :end-before: .. setting-listrak-default-list-name-end
 
        **Sender code ID**
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-sms-sender-code-id-start
