@@ -146,11 +146,23 @@ A |destination-name| destination works like this:
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - **SUBSCRIBE {phoneNumber} TO {phoneListId}**
+     - Amperity processes each addition individually. For each audience member with additions, Amperity uses the `Get Contact <https://api.listrak.com/sms#operation/Contact_GetContactResource>`__ |ext_link| endpoint to find out if the audience member already exists in the Listrak SMS list.
+
+       Amperity takes one of two possible actions: subscribes the audience member to the SMS list *or* adds the audience member to the SMS list, subscribes the audience member to the list, and updates additional contact data when it exists in the profile.
+
+       **SUBSCRIBE EXISTING {phoneNumber} TO {phoneListId}**
+
+       Audience members that exist in the SMS list in Listrak are subscribed to the SMS list.
+
+       Amperity uses the `Subscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_PostContactListSubscription>`__ |ext_link| endpoint to subscribe each contact to the SMS list. This action only subscribes contacts that already exist on the sender code.
+
+       .. important:: Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ |ext_link| endpoint to create and subscribe the audience member when they do not already exist on the sender code.
+
+       **CREATE AND SUBSCRIBE {phoneNumber} TO {phoneListId}**
 
        Audience members that do not exist in the SMS list in Listrak, but do exist in the current audience being sent to |destination-name| *are automatically subscribed to the SMS list*.
 
-       Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist in an SMS list.
+       Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ |ext_link| endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist in an SMS list.
 
        All audience members added to an SMS list using this endpoint are automatically subscribed to the list when the phone number does not already exist under the sender code.
 
