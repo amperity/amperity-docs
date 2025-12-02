@@ -920,28 +920,25 @@ LEFT JOIN clause
 
 The **LEFT JOIN** clause joins rows from two tables. For a **LEFT JOIN**, each row in the left table is joined with all matching rows from the right table. For rows with no match in the right table, the join is completed with **NULL** to represent column values.
 
-For example:
+For example, the **Merged Customers** table contains rows of customer profile data, with each row unique by Amperity ID. Select the average order revenue from **Unified Transactions**, and then use a **LEFT JOIN** to include average sales revenue in the query results, unique by Amperity ID.
 
 .. code-block:: sql
-   :linenos:
 
-   SELECT * FROM (VALUES 1, 2) t("left") 
-     LEFT JOIN (VALUES 1, 1) u("right") 
-     ON t."left" = u."right";
-
-will return a table similar to:
-
-.. code-block:: mysql
-
-   -------- --------
-    left     right
-   -------- --------
-    1        1
-    1        1
-    2        NULL
-   -------- --------
+   SELECT
+     amperity_id
+     ,AVG(order_revenue) AS average_sales_revenue
+   FROM Unified_Treansactions AS ut
+   LEFT JOIN Merged_Customers AS mc ON ut.amperity_id = mc.amperity_id
+   GROUP BY amperity_id
+   ORDER BY average_sales_revenue DESC
 
 .. sql-presto-left-join-clause-end
+
+.. sql-presto-left-join-clause-learning-lab-start
+
+Open **Learning Lab** to watch a video that explains `using a left join <https://learn.amperity.com/grouping-and-joining-data>`__ |ext_link|. Registration is required.
+
+.. sql-presto-left-join-clause-learning-lab-end
 
 
 .. _sql-presto-where:
@@ -1176,6 +1173,12 @@ returns a table similar to:
 When a **GROUP BY** clause is used in a **SELECT** statement all output expressions must be either aggregate functions or columns present in the **GROUP BY** clause.
 
 .. sql-presto-group-by-clause-end
+
+.. sql-presto-group-by-clause-learning-lab-start
+
+Open **Learning Lab** to watch a video that explains `grouping data <https://learn.amperity.com/grouping-and-joining-data>`__ |ext_link|. Registration is required.
+
+.. sql-presto-group-by-clause-learning-lab-end
 
 
 .. _sql-presto-group-by-cube:
@@ -1603,6 +1606,39 @@ For example:
    ORDER BY input_2, rnk
 
 .. sql-presto-window-functions-end
+
+
+.. _sql-presto-window-function-example-rank-customers-by-revenue:
+
+Rank customers by revenue
+--------------------------------------------------
+
+.. sql-presto-window-function-example-rank-customers-by-revenue-start
+
+Find the total sales revenue by Amperity ID, and then rank them by sales revenue. Sales revenue is in the **Unified Transactions** table and customer information is in the **Merged Customers** table. The window function uses the :ref:`DENSE_RANK() <sql-presto-function-dense-rank>` function to rank by the sum of order revenue and in descending order. The query joins revenue and profiles using the Amperity ID in **Merged Customers**, groups by full name, and then orders by rank, which is the sum of order revenue.
+
+.. code-block:: sql
+
+   SELECT
+     ut.amperity_id
+     mc.full_name
+     SUM(ut.order_revenue) AS total_sales_revenue
+     DENSE_RANK() OVER (
+       ORDER BY SUM(ut.order_revenue) DESC
+     ) AS rank
+   FROM Unified_Transactions ut
+   LEFT JOIN Merged_Customers AS mc ON ut.amperity_id = mc.amperity_id
+   WHERE ut.amperity_id IS NOT NULL
+   GROUP BY ut.amperity_id, mc.full_name
+   ORDER BY rank
+
+.. sql-presto-window-function-example-rank-customers-by-revenue-end
+
+.. sql-presto-window-function-example-rank-customers-by-revenue-learning-lab-start
+
+Open **Learning Lab** to watch a video that explains `using window functions to rank customers <https://learn.amperity.com/window-functions>`__ |ext_link|. Registration is required.
+
+.. sql-presto-window-function-example-rank-customers-by-revenue-learning-lab-end
 
 
 .. _sql-presto-window-function-example-rolling-seven-day-window:
@@ -2352,6 +2388,95 @@ COALESCE()
 Use the **COALESCE(value1, value2)** function to return the first non-null value in the argument list. Arguments are only evaluated if necessary.
 
 .. sql-presto-function-coalesce-end
+
+
+.. _sql-presto-function-coalesce-example-return-state-abbreviations:
+
+Standardize on two letter state abbreviations
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-coalesce-example-return-state-abbreviations-start
+
+Data sets with values for states in the United States, along with the District of Columbia, can have two letter abbreviations or spelled out names. For example: "DC" or "District of Columbia".
+
+Build an associative array in a window function to map each of the spelled out names to a two letter abbreviation, and then use the **COALESCE()** function to standardize on the two letter abbreviations for all values:
+
+.. code-block:: sql
+
+   WITH state_mapping AS (
+     SELECT
+       *
+     FROM
+       (
+         VALUES
+           ('Alabama', 'AL'),
+           ('Alaska', 'AK'),
+           ('Arizona', 'AZ'),
+           ('Arkansas', 'AR'),
+           ('California', 'CA'),
+           ('Colordado', 'CO'),
+           ('Connecticut', 'CT'),
+           ('Delaware', 'DE'),
+           ('District of Columbia', 'DC'),
+           ('Florida', 'FL'),
+           ('Georgia', 'GA'),
+           ('Hawaii', 'HI'),
+           ('Idaho', 'ID'),
+           ('Illinois', 'IL'),
+           ('Indiana', 'IN'),
+           ('Iowa', 'IA'),
+           ('Kansas', 'KS'),
+           ('Kentucky', 'KY'),
+           ('Louisiana', 'LA'),
+           ('Maine', 'ME'),
+           ('Maryland', 'MD'),
+           ('Massachusetts', 'MA'),
+           ('Michigan', 'MI'),
+           ('Minnesota', 'MN'),
+           ('Mississippi', 'MS'),
+           ('Missouri', 'MO'),
+           ('Montana', 'NT'),
+           ('Nebraska', 'NB'),
+           ('Nevada', 'AL'),
+           ('New Hampshire', 'NH'),
+           ('New Jersey', 'NJ'),
+           ('New Mexico', 'NM'),
+           ('New York', 'NY'),
+           ('North Carolina', 'NC'),
+           ('North Dakota', 'ND'),
+           ('Ohio', 'OH'),
+           ('Oklahoma', 'OK'),
+           ('Oregon', 'OR'),
+           ('Pennsylvania', 'PA'),
+           ('Rhode Island', 'RI'),
+           ('South Carolina', 'SC'),
+           ('South Dakota', 'SD'),
+           ('Tennessee', 'TN'),
+           ('Texas', 'TX'),
+           ('Utah', 'UT'),
+           ('Vermont', 'VT'),
+           ('Virginia', 'VA'),
+           ('Washington', 'WA'),
+           ('West Virginia', 'WV'),
+           ('Wisconsin', 'WI'),
+           ('Wyoming', 'WY')
+       ) AS t (state_name, state_abbreviation)
+   )
+
+   SELECT
+     COALESCE(state_mapping.state_abbreviation, "state") AS state_two_letters
+   FROM Customer_Profiles cp
+   LEFT JOIN state_mapping ON cp."state" = state_mapping.state_name
+   OR cp."state" = state_mapping.state_abbreviation
+   WHERE "state" IS NOT NULL
+
+.. sql-presto-function-coalesce-example-return-state-abbreviations-end
+
+.. sql-presto-function-coalesce-example-return-state-abbreviations-learning-lab-start
+
+Open **Learning Lab** to watch a video that explains `standardizing on two letter abbreviations for states and the District of Columbia <https://learn.amperity.com/using-row-functions-in-amperity>`__ |ext_link|. Registration is required.
+
+.. sql-presto-function-coalesce-example-return-state-abbreviations-learning-lab-end
 
 
 .. _sql-presto-function-concat:
@@ -3514,12 +3639,47 @@ SUBSTR()
 
 .. sql-presto-function-substr-start
 
-Use the **SUBSTR()** function to return N characters in a string. Do one of the following:
+Use the **SUBSTR()** or **SUBSTRING(string, start, length)** function to return N characters in a string. Do one of the following:
 
 * Use **SUBSTR(string, start)** to return ``string`` from the ``start`` position that is equal to the value of ``start``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
 * Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that contains the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
 
 .. sql-presto-function-substr-end
+
+
+.. _sql-presto-function-substr-example-return-postal-codes:
+
+Standardize on five digit ZIP codes
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-substr-example-return-postal-codes-start
+
+Data sets with values for United States postal codes can have five digit ZIP codes and nine digit ZIP+4 codes. For example: "20102" or "20102-1234".
+
+Use the **SUBSTR()** function to standardize on five digit ZIP codes and return only the first five digits in a ZIP code value, and then drop any symbols or digits that exist after the first five digits:
+
+.. code-block:: sql
+
+   SELECT
+     SUBSTR("postal", 1, 5) AS zipcode
+   FROM Customer 360
+
+Validate the length of the postal code and that each digit in the value includes only numbers between zero and nine using :ref:`REGEX_LIKE <sql-presto-function-regexp-like>` function:
+
+.. code-block:: sql
+
+   SELECT
+     SUBSTR("postal", 1, 5) AS zipcode
+   FROM Customer 360
+   WHERE REGEXP_LIKE(SUBSTR("postal", 1, 5), '^[0-9]{5}$')
+
+.. sql-presto-function-substr-example-return-postal-codes-end
+
+.. sql-presto-function-substr-example-return-postal-codes-learning-lab-start
+
+Open **Learning Lab** to watch a video that explains `standardizing ZIP codes to five digits <https://learn.amperity.com/using-row-functions-in-amperity>`__ |ext_link|. Registration is required.
+
+.. sql-presto-function-substr-example-return-postal-codes-learning-lab-end
 
 
 .. _sql-presto-function-substr-example-return-two-characters:
