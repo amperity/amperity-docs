@@ -43,6 +43,8 @@ Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to man
 
 #. Amperity uses the `Update Contact <https://api.listrak.com/sms#operation/Contact_PutContactResource>`__ endpoint to update an audience member's information by **{phoneNumber}**.
 #. Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ endpoint to unsubscribe audience members from an SMS list.
+#. Amperity processes each addition individually. For each audience member with additions, Amperity uses the `Get Contact <https://api.listrak.com/sms#operation/Contact_GetContactResource>`__ |ext_link| endpoint to find out if the audience member already exists in the Listrak SMS list.
+#. Amperity uses the `Subscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_PostContactListSubscription>`__ |ext_link| endpoint to subscribe each contact to the SMS list. This action only subscribes contacts that already exist on the sender code.
 #. Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist in the SMS list.
 
 .. destination-listrak-sms-context-end
@@ -55,7 +57,7 @@ How this destination works
 
 .. destination-listrak-sms-howitworks-start
 
-|destination-name| is a subscription-based model. Adding a phone number can cause an immediate SMS subscription.
+|destination-name| is a subscription-based model and this connector manages the membership of an SMS list. Full audiences must be sent each time. Amperity manages the membership of the SMS list by comparing list membership in |destination-name| to the current audience in Amperity. Profile attributes for existing members of the SMS list are updated. Audience members who are not in the SMS list are added and are automatically subscribed to the SMS list.
 
 .. destination-listrak-sms-howitworks-end
 
