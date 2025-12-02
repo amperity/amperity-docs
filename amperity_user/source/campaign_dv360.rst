@@ -6,7 +6,7 @@
 .. |what-enable| replace:: **email**, **phone**, **firstname**, **lastname**, **zip**, and **country**
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
-.. |attributes-sent| replace:: |destination-name| accepts any combination of email address, phone number, first name, last name, zip code, and country attributes.
+.. |attributes-sent| replace:: |destination-name| accepts any combination of email address, phone number, first name, last name, ZIP code, and country attributes.
 
 
 .. meta::

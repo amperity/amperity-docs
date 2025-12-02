@@ -62,7 +62,7 @@ The following sections describe what you should do to monitor the health of each
 
        You may need to update a query to ensure the results match specific requirements by the destination.
 
-       For example, start with 6 data sources and used them to get your downstream use cases running, and then add more data sources. One of these sources has "messy records" that changed some of the data in your customer 360 database, which causes your Google Ads or DV360 orchestration to fail. Google Ads or DV360 requires phone numbers to use a "+11231234567" format and requires that first name, last name, zip code, and country be available to the "Contact Info" upload key. An orchestration fails when the data that is sent to Google Ads or DV360 does not match the formatting requirements.
+       For example, start with 6 data sources and used them to get your downstream use cases running, and then add more data sources. One of these sources has "messy records" that changed some of the data in your customer 360 database, which causes your Google Ads or DV360 orchestration to fail. Google Ads or DV360 requires phone numbers to use a "+11231234567" format and requires that first name, last name, ZIP code, and country be available to the "Contact Info" upload key. An orchestration fails when the data that is sent to Google Ads or DV360 does not match the formatting requirements.
 
 
    * - .. image:: ../../images/steps-02.png

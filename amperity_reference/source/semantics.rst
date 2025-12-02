@@ -1879,7 +1879,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-postal-start
           :end-before: .. term-postal-end
 
-       A full 9-digit zip code is derived from fields that contain zip code data.
+       A full 9-digit ZIP code is derived from fields that contain ZIP code data.
 
        .. tip:: A field that is tagged with the **postal** semantic tag will return an error when the feed is saved and the data type is not set to String.
 

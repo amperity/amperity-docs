@@ -202,7 +202,7 @@ The following table describes how Databricks data types map to Amperity data typ
 
      - **String**
 
-       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. May be empty. For example:
+       A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, ZIP codes, product names, and descriptions. May be empty. For example:
 
        * John
        * Smith
