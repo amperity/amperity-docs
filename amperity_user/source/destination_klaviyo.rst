@@ -84,7 +84,7 @@ Email address + customer profiles
 
 .. sendto-klaviyo-build-query-email-plus-profile-start
 
-You can send results to |destination-name| that include customer profiles along with their email address, such as first and last names, phone numbers, and zip codes. :ref:`Review the list of customer profile parameters <destination-klaviyo-customer-profile-parameters>` your brand can send to |destination-name|.
+You can send results to |destination-name| that include customer profiles along with their email address, such as first and last names, phone numbers, and ZIP codes. :ref:`Review the list of customer profile parameters <destination-klaviyo-customer-profile-parameters>` your brand can send to |destination-name|.
 
 For example:
 

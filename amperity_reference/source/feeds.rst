@@ -274,7 +274,7 @@ String
 
 .. feed-field-type-string-start
 
-Use the **string** field type for incoming fields that contain strings and that do not contain obvious matches with other field types, such as all identifiers (account IDs, loyalty IDs, customer IDs), first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, zip codes, product names, and descriptions. For example:
+Use the **string** field type for incoming fields that contain strings and that do not contain obvious matches with other field types, such as all identifiers (account IDs, loyalty IDs, customer IDs), first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, ZIP codes, product names, and descriptions. For example:
 
 * John
 * Smith

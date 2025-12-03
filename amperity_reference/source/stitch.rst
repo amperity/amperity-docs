@@ -471,7 +471,7 @@ This example shows an important blocking strategy that groups values associated 
 
 .. _stitch-blocking-strategy-example-postal:
 
-Given name, surname, zip code
+Given name, surname, ZIP code
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. stitch-blocking-strategy-example-postal-start
@@ -703,7 +703,7 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
 
       * - **Physical locations**
         - * How closely do the addresses match?
-          * Do the addresses have the same zip code or city?
+          * Do the addresses have the same ZIP code or city?
           * Are there any obvious conflicts?
           * Are the addresses unlike each other?
 
@@ -808,7 +808,7 @@ A high match score is applied to records that, even with some profile data not m
 
 .. stitch-pairwise-comparison-high-diagram-context-start
 
-This example shows a high match between two records. The last names and zip codes are exact matches. The first names do not match, but do share a common nickname. The email addresses do not match, but are identical before the ``@`` symbol.
+This example shows a high match between two records. The last names and ZIP codes are exact matches. The first names do not match, but do share a common nickname. The email addresses do not match, but are identical before the ``@`` symbol.
 
 .. stitch-pairwise-comparison-high-diagram-context-end
 
@@ -844,7 +844,7 @@ Weak matches
 
 .. stitch-pairwise-comparison-weak-start
 
-A weak match score is applied to records that match on non-unique customer attributes, such as name, state, and zip code, but cannot be easily associated with the same unique individual.
+A weak match score is applied to records that match on non-unique customer attributes, such as name, state, and ZIP code, but cannot be easily associated with the same unique individual.
 
 .. stitch-pairwise-comparison-weak-end
 

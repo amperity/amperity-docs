@@ -87,9 +87,9 @@ Required fields will vary based on the |destination-name| product and downstream
 
 * Inquiry ID, which is a unique identifier within |destination-name| data
 * First and last names
-* Complete addresses, including street, city, state, and zip code
+* Complete addresses, including street, city, state, and ZIP code
 
-  .. important:: Ensure that zip code values do not contain leading zeroes.
+  .. important:: Ensure that ZIP code values do not contain leading zeroes.
 
 .. sendto-experian-build-query-map-fields-required-end
 

@@ -343,5 +343,7 @@ The following list combines industry-standard abbreviations and initialisms with
      - Yet Another Resource Manager
    * - **YCSB**
      - Yahoo! Cloud Serving Benchmark
+   * - **ZIP**
+     - Zone Improvement Plan
 
 .. vale on

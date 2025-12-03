@@ -2653,7 +2653,7 @@ The **Feed Editor** is the second step adds a new data source to Amperity. The *
 
 .. term-field-start
 
-A field refers to a single piece of data within a record or a set of records. In relational databases, this corresponds to the data within a column. For instance, within an Amperity customer table, a field would describe an individual piece of data, such as zip code, or phone number.
+A field refers to a single piece of data within a record or a set of records. In relational databases, this corresponds to the data within a column. For instance, within an Amperity customer table, a field would describe an individual piece of data, such as ZIP code, or phone number.
 
 .. term-field-end
 
@@ -4058,7 +4058,7 @@ A match category is a classifier that applies to an individual record-pair withi
    * - **Moderate**
      - Amperity has moderate confidence that these records match, due to weak or fuzzy matches between unique customer attributes, such as email, phone, or address.
    * - **Weak**
-     - Amperity lacks confidence, but if asked to guess, Amperity would assert these records do belong to the same individual, because they match on non-unique customer attributes, such as name, state, zip code.
+     - Amperity lacks confidence, but if asked to guess, Amperity would assert these records do belong to the same individual, because they match on non-unique customer attributes, such as name, state, ZIP code.
    * - **Non-match**
      - Amperity has high confidence that these records do NOT match, because core profile data is in conflict.
 
@@ -4986,7 +4986,7 @@ A policy represents a set of actions that are available to a user when assigned 
 
 .. term-postal-start
 
-The zip code or postal code connected with the location of a customer.
+The ZIP code or postal code connected with the location of a customer.
 
 .. term-postal-end
 
@@ -4994,7 +4994,7 @@ The zip code or postal code connected with the location of a customer.
 
 .. term-postal-ampid-start
 
-The zip code or postal code connected with the location of a unique Amperity ID.
+The ZIP code or postal code connected with the location of a unique Amperity ID.
 
 .. term-postal-ampid-end
 
@@ -6183,7 +6183,7 @@ Spark SQL is a high performance SQL query engine used by Amperity to ingest data
 
 .. term-sparse-customer-record-start
 
-A sparse customer profile is an incomplete set of personally identifiable information (PII) that can still identify a unique individual when compared against rich sets of PII data. For example, a dataset with sparse customer profiles may only contain last names, the last 4 digits of credit cards, and store zip codes associated with the transaction.
+A sparse customer profile is an incomplete set of personally identifiable information (PII) that can still identify a unique individual when compared against rich sets of PII data. For example, a dataset with sparse customer profiles may only contain last names, the last 4 digits of credit cards, and store ZIP codes associated with the transaction.
 
 .. term-sparse-customer-record-end
 
@@ -6697,7 +6697,7 @@ The total discount amount for the entire transaction, including item-specific di
 
 .. term-taa-start
 
-Trade-area append (TAA) is a process that uses names, zip codes, and credit card hashes to identify groups of users for online and offline marketing campaigns.
+Trade-area append (TAA) is a process that uses names, ZIP codes, and credit card hashes to identify groups of users for online and offline marketing campaigns.
 
 .. term-taa-end
 

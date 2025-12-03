@@ -654,27 +654,27 @@ Add a passthrough table to your customer 360 database named **Lookup USA**, and 
 
 .. _data-asset-lookup-table-zip:
 
-Lookup: Zip codes
+Lookup: ZIP codes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. data-asset-lookup-table-zip-start
 
-The zip codes lookup data asset provides a list of zip codes that:
+The ZIP codes lookup data asset provides a list of ZIP codes that:
 
-* Identifies if a zip code is standard, a post office box, or unique
-* Associates the primary city for each zip code
-* The state, county, and time zone in which a zip code is located
-* The phone number area codes associated with a zip code
-* The number of households and population counts within each zip code, including demographics
-* Geolocation data for each zip code
+* Identifies if a ZIP code is standard, a post office box, or unique
+* Associates the primary city for each ZIP code
+* The state, county, and time zone in which a ZIP code is located
+* The phone number area codes associated with a ZIP code
+* The number of households and population counts within each ZIP code, including demographics
+* Geolocation data for each ZIP code
 
 .. data-asset-lookup-table-zip-end
 
-**To add the zip codes lookups data asset**
+**To add the ZIP codes lookups data asset**
 
 .. data-asset-lookup-table-zip-steps-start
 
-After adding the zip codes lookup data asset, use **zip** as the primary key.
+After adding the ZIP codes lookup data asset, use **zip** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -693,7 +693,7 @@ The normalization for United States data asset provides a list of long and abbre
 
 .. data-asset-lookup-table-normalization-usa-end
 
-**To add the zip codes lookups data asset**
+**To add the ZIP codes lookups data asset**
 
 .. data-asset-lookup-table-normalization-usa-steps-start
 

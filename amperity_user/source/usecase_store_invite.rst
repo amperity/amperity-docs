@@ -111,7 +111,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
        .. tip:: You can use sub-audiences in your campaign to split those audiences by region. Your approach depends on how your brand groups physical stores and in the data that is provided to Amperity.
 
-          For example, zip codes can be used to separate customers by cities, such as Portland, OR and in Seattle, WA.
+          For example, ZIP codes can be used to separate customers by cities, such as Portland, OR and in Seattle, WA.
 
           .. image:: ../../images/usecase-store-invite-subaudience-by-postal-code.png
              :width: 540 px

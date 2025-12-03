@@ -462,7 +462,7 @@ A list can be matched to contact information that contains PII data. If a row co
        * Converts to lower-case
        * Hashes data as one-way SHA-256
 
-   * - **Zip Code**
+   * - **ZIP Code**
      - **zip**
      - For this key, the connector:
 
