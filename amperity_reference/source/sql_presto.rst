@@ -1174,6 +1174,27 @@ When a **GROUP BY** clause is used in a **SELECT** statement all output expressi
 
 .. sql-presto-group-by-clause-end
 
+
+.. _sql-presto-group-by-example-average-order-revenue:
+
+Average order revenue grouped by Amperity ID
+--------------------------------------------------
+
+.. sql-presto-group-by-example-average-order-revenue-start
+
+The **Unified Transactions** table contains rows of customer transactions data with each row assigned an Amperity ID. Select the average order revenue from **Unified Transactions**, group by Amperity ID, and then order by average sales revenue in descending order.
+
+.. code-block:: sql
+
+   SELECT
+     amperity_id
+     ,AVG(order_revenue) AS average_sales_revenue
+   FROM Unified_Treansactions AS
+   GROUP BY amperity_id
+   ORDER BY average_sales_revenue DESC
+
+.. sql-presto-group-by-example-average-order-revenue-end
+
 .. sql-presto-group-by-clause-learning-lab-start
 
 Open **Learning Lab** to watch a video that explains `grouping data <https://learn.amperity.com/grouping-and-joining-data>`__ |ext_link|. Registration is required.
