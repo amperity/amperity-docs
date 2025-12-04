@@ -218,7 +218,6 @@ Amperity recommends the following patterns when working with sandboxes:
 * :ref:`Run partial workflows <sandboxes-best-practice-partial-workflows>`
 * :ref:`Short-lived sandboxes <sandboxes-best-practice-short-lived>`
 * :ref:`Very small test audiences <sandboxes-best-practice-small-test-audiences>`
-
 .. sandboxes-best-practice-end
 
 
@@ -367,6 +366,46 @@ A sandbox should be short-lived and should be used to make small, iterative chan
 .. sandboxes-best-practice-short-lived-end
 
 
+.. sandboxes-best-practice-small-test-audiences-start
+
+Use very small audiences to test and validate configuration updates for destinations. In a sandbox you can build a query that returns an audience that matches the requirements for the downstream use case. Use the **LIMIT** clause at the end of the query to limit the size of the audience to the specified integer. For example: ``LIMIT 10`` returns an audience with ten members and ``LIMIT 100`` returns an audience with one hundred members. Use a manual orchestration to send the test audience to the destination. Log into the destination and verify the audience was received and is correctly formatted for your use case.
+
+.. tip:: Campaigns do not run in sandboxes. If you must use a segment and campaign to test an audience you must do this in production. Promote the sandbox with the configuration updates, and then build a query that is unique by Amperity ID with the same size limits. Make this query available to the **Segments** page, and then build a segment using that query. Add the query to the campaign, and then run the test with the limited audience size.
+
+.. sandboxes-best-practice-small-test-audiences-end
+
+
+.. _sandboxes-howtos:
+
+How-tos
+==================================================
+
+.. sandboxes-howtos-start
+
+Tasks related to working with sandboxes in Amperity:
+
+* :ref:`Access a sandbox <sandboxes-howto-access-sandbox>`
+* :ref:`Add a sandbox <sandboxes-howto-add-sandbox>`
+* :ref:`Delete a sandbox <sandboxes-howto-delete-sandbox>`
+* :ref:`Edit sandbox details <sandboxes-howto-edit-sandbox-details>`
+* :ref:`Open a sandbox <sandboxes-howto-open-sandbox>`
+* :ref:`Pull updates from production <sandboxes-howto-pull-updates-from-production>`
+* :ref:`Promote changes <sandboxes-howto-promote-changes>`
+* :ref:`Resolve validation issues <sandboxes-howto-resolve-validation-issues>`
+* :ref:`Review changes <sandboxes-howto-review-changes>`
+* :ref:`View sandbox details <sandboxes-howto-view-sandbox-details>`
+* :ref:`View validation details <sandboxes-howto-view-validation-details>`
+
+.. sandboxes-howtos-end
+
+
+.. _sandboxes-howto-access-sandbox:
+
+Access a sandbox
+--------------------------------------------------
+
+.. sandboxes-howto-access-sandbox-start
+=======
 .. _sandboxes-best-practice-small-test-audiences:
 
 Very small test audiences
@@ -379,7 +418,7 @@ To validate configuration updates for destinations use a manual workflow and a q
 .. sandboxes-best-practice-small-test-audiences-end
 
 
-.. _sandboxes-howtos:
+>>>>>>> External Changes
 
 How-tos
 ==================================================
