@@ -217,6 +217,7 @@ Amperity recommends the following patterns when working with sandboxes:
 * :ref:`Delete sandbox on promote <sandboxes-best-practice-delete-on-promote>`
 * :ref:`Run partial workflows <sandboxes-best-practice-partial-workflows>`
 * :ref:`Short-lived sandboxes <sandboxes-best-practice-short-lived>`
+* :ref:`Very small test audiences <sandboxes-best-practice-small-test-audiences>`
 
 .. sandboxes-best-practice-end
 
@@ -337,7 +338,7 @@ Run partial workflows
 
 Each workflow should be validated before promoting changes to production using a partial workflow.
 
-* A partial workflow pulls data from upstream sources to the sandbox, run Stitch, and then refresh databases.
+* A partial workflow pulls data from upstream sources to the sandbox, runs Stitch, and then refreshes databases.
 * A partial workflow *does not* run orchestrations *or* campaigns. This ensures that data in your sandbox is not inadvertently sent to any downstream workflows.
 
 .. sandboxes-best-practice-partial-workflows-end
@@ -364,6 +365,18 @@ A sandbox should be short-lived and should be used to make small, iterative chan
    After these changes are promoted to production, the sandbox should be deleted.
 
 .. sandboxes-best-practice-short-lived-end
+
+
+.. _sandboxes-best-practice-small-test-audiences:
+
+Very small test audiences
+--------------------------------------------------
+
+.. sandboxes-best-practice-small-test-audiences-start
+
+To validate configuration updates for destinations use a manual workflow and a query to send a very small test audience from Amperity to the configured destination. Use the **LIMIT** clause at the end of the query to enforce the size of the very small audience. For example: ``LIMIT 10`` or ``LIMIT 100``.
+
+.. sandboxes-best-practice-small-test-audiences-end
 
 
 .. _sandboxes-howtos:
