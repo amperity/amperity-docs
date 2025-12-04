@@ -41,11 +41,11 @@ Configure destinations for Listrak SMS
 
 Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to manage SMS profiles in |destination-name|.
 
-#. Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ endpoint to update an audience member's information by **{phoneNumber}**.
-#. Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ endpoint to unsubscribe audience members from an SMS list.
+#. Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ |ext_link| endpoint to update an audience member's information by **{phoneNumber}**.
+#. Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ |ext_link| endpoint to unsubscribe audience members from an SMS list.
 #. Amperity processes each addition individually. For each audience member with additions, Amperity uses the `Get Contact <https://api.listrak.com/sms#operation/Contact_GetContactResource>`__ |ext_link| endpoint to find out if the audience member already exists in the Listrak SMS list.
 #. Amperity uses the `Subscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_PostContactListSubscription>`__ |ext_link| endpoint to subscribe each contact to the SMS list. This action only subscribes contacts that already exist on the sender code.
-#. Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist on the sender code.
+#. Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ |ext_link| endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist on the sender code.
 
 .. destination-listrak-sms-context-end
 
@@ -63,7 +63,7 @@ Amperity manages the membership of the SMS list by sending an audience to |desti
 
 Profile attributes for existing members of the SMS list are updated. Audience members who are not in the SMS list are added and are automatically subscribed to the SMS list.
 
-.. caution:: Audiences built from a query or segment in Amperity, and then sent to |destination-name| will refresh the membership of an SMS list to match the membership of the audience sent from Amperity.
+.. caution:: Audiences are built from a query or segment in Amperity, and then sent to |destination-name| will refresh the membership of an SMS list to match the membership of the audience sent from Amperity.
 
    If more than one audience is sent to the same SMS list, then the membership of the SMS list will match the membership of the most recently sent audience.
 
@@ -77,7 +77,7 @@ Profile attributes for existing members of the SMS list are updated. Audience me
 
 .. important:: To avoid sending SMS messages to people who did not consent to receiving them, ensure only consented phone numbers are included in the data provided to Amperity, or maintain consent status as a separate attribute.
 
-   For example, bring Listrak subscriber status to Amperity as a data source, and then use that data source with the **SMS Opt Status** table to help ensure customers are filterable in queries and segments by subscriber status.
+   For example, bring Listrak subscriber status to Amperity as a data source, and then use that data source with the **SMS Opt Status** table to help ensure customers are filterable by subscriber status in queries and segments.
 
    SMS opt-in requirements are different from email opt-in requirements and require separate consent tracking.
 
@@ -136,9 +136,9 @@ A |destination-name| destination works like this:
 
        Custom attributes may also be defined.
 
-       When attributes for existing audience members change Amperity will update the profile to match the updated attributes. For example, a custom attribute for "Most recent purchase" has an existing value of "Socktown 5-pack ankle" and Amperity updates the attribute to "Socktown 5 pack mid-calf".
+       When attributes for existing audience members change, Amperity will update the profile to match the updated attributes. For example, a custom attribute for "Most recent purchase" has an existing value of "Socktown 5-pack ankle" and Amperity updates the attribute to "Socktown 5-pack mid-calf".
 
-       Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, and **postal_code**) and custom fields are updated for all customers. Amperity does not change an audience member's opt status.
+       Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ |ext_link| endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, and **postal_code**) and custom fields are updated for all customers. Amperity does not change an audience member's opt status.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -150,7 +150,7 @@ A |destination-name| destination works like this:
 
        Audience members that exist in the SMS list in Listrak, but are not in the current audience for this workflow, are unsubscribed from the SMS list.
 
-       Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ endpoint to unsubscribe audience members from an SMS list.
+       Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ |ext_link| endpoint to unsubscribe audience members from an SMS list.
 
        .. important:: Only audience members that exist in a matching **{senderCodeId}** *and* **{phoneListID}** are unsubscribed.
 
@@ -166,7 +166,7 @@ A |destination-name| destination works like this:
 
        Amperity takes one of two possible actions:
 
-       #. Subscribes the existing audience member to the SMS list
+       #. Subscribes the existing audience member to the SMS list.
        #. Adds the audience member to the sender code and subscribes them to the list.
 
    * - .. image:: ../../images/steps-05.png
