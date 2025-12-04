@@ -193,7 +193,7 @@ A |destination-name| destination works like this:
 
        Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ |ext_link| endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist on the sender code.
 
-       All audience members added to an SMS list using this endpoint are automatically subscribed to the list when the phone number does not already exist on the sender code.
+       All audience members added to an SMS list using this endpoint **are automatically subscribed** to the SMS list when the phone number does not already exist on the sender code.
 
        .. important:: Use the :doc:`SMS_Opt_Status <table_sms_opt_status>` table in Amperity to filter query results and audience segments to include only customers who consent to receiving SMS messaging.
 
