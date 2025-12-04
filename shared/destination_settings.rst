@@ -488,7 +488,7 @@ Use the **Column name** setting to specify the name of the row number column in 
 
 Amperity recommends using a sandbox to configure a destination for |destination-name|. Before promoting your changes to production from the sandbox, consider sending a very small test audience using a query and an orchestration to verify the results in |destination-name|. After verifying the end-to-end workflow, push the configuration changes from the sandbox to production.
 
-.. tip:: Learn more about `how sandboxes work <../reference/sandboxes.html>`__ and sandbox best practices such as `deleting sandboxes after configuration changes are promoted to production <..../reference/sandboxes.html#sandboxes-best-practice-delete-on-promote>`__, `using short-lived sandboxes <../reference/sandboxes.html#short-lived-sandboxes>`__, and `sending very small test audiences <../reference/sandboxes.html#short-lived-small-test-audiences>`__.
+.. tip:: Learn more about `how sandboxes work <../reference/sandboxes.html>`__ and sandbox best practices such as `deleting sandboxes after configuration changes are promoted to production <../reference/sandboxes.html#sandboxes-best-practice-delete-on-promote>`__, `using short-lived sandboxes <../reference/sandboxes.html#short-lived-sandboxes>`__, and `sending very small test audiences <../reference/sandboxes.html#short-lived-small-test-audiences>`__.
 
 .. setting-common-sandbox-recommendation-end
 
