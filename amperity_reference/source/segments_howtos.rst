@@ -753,6 +753,9 @@ You can download segment results as a CSV file. The CSV format is supported by m
 
 .. segments-download-steps-end
 
+.. include:: ../../amperity_reference/source/format_csv.rst
+   :start-after: .. format-csv-destination-note-start
+   :end-before: .. format-csv-destination-note-end
 
 .. _segments-duplicate-segment:
 
