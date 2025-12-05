@@ -285,6 +285,11 @@ Amperity can send CSV files to downstream workflows using any of the following d
 
 .. format-csv-destination-links-end
 
+.. format-csv-destination-note-start
+
+.. note:: Sometimes CSV files with Japanese or other East Asian languages may not display the characters properly when uploaded to Microsoft Excel, even if the file contains UTF-8 or UTF-16 character encoding. Try using an alternate character encoding, `such as Shift JIS <https://en.wikipedia.org/wiki/Shift_JIS>`__ |ext_link|, to work around `character encoding problems in Microsoft Excel <https://learn.microsoft.com/en-us/answers/questions/5142715/not-able-to-see-proper-japanese-fonts-in-excel-csv>`__ |ext_link|.
+
+.. format-csv-destination-note-end
 
 .. _format-csv-destination-split-outputs-start:
 
