@@ -1138,6 +1138,37 @@ The following table shows which policies enable user actions within the **Custom
      - |policy|
      - |policy|
 
+
+   * - **Predictive models**
+     - 
+     - 
+     - 
+     - 
+
+   * - Add event propensity model
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Add predicted affinity model
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Add predicted customer lifetime value model
+     - 
+     - 
+     - 
+     - |policy|
+
+   * - Open predictive models editor
+     - 
+     - 
+     - 
+     - |policy|
+
 .. policies-allowed-actions-databases-table-end
 
 
