@@ -94,6 +94,7 @@ Site Index
    destination-yahoo-dsp
    destination-zendesk
    openapi
+   plugins
    quickstart-pk
    semantics
    stitch_benchmarks

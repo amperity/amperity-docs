@@ -174,7 +174,7 @@ html_theme_options = {
                 },
                 {
                     "title": "Sources",
-                    "url": "../sources",
+                    "url": "../operator/sources",
                     "summary": "Pull data from any upstream system."
                 },
             ]
