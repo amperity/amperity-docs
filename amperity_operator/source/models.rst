@@ -33,7 +33,7 @@ Available models
 
 .. models-list-start
 
-The following out-of-the-box models are configurable directly within Amperity by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policies:
+The following out-of-the-box models are configurable directly within Amperity by a user who is assigned the **DataGrid Administrator** policy:
 
 * :ref:`Churn propensity <model-churn-propensity>`
 * :ref:`Event propensity (EPM) <model-event-propensity>`
