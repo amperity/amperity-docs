@@ -32,3 +32,12 @@ You may reference the following sections while configuring this data source:
 JSON files that are used as source data with Amperity must follow `RFC 8259 <https://datatracker.ietf.org/doc/html/rfc8259>`__ |ext_link|, which requires using, at a minimum, the UTF-8 encoding format.
 
 .. formats-json-rfc-8259-end
+
+
+**SFTP server data limit**
+
+.. formats-sftp-data-retention-start
+
+.. caution:: The SFTP server has a 30-day limit on data, after which data is deleted.
+
+.. formats-sftp-data-retention-end
