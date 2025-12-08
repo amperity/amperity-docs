@@ -118,7 +118,9 @@ Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.a
 
 Once this site is provisioned, you may configure the SFTP site as an SFTP source or an SFTP destination to support any desired workflow. External customer processes can be configured to connect to the site using SFTP, after which they can add data to or pick up data from the site to support any external workflow.
 
-.. caution:: The SFTP server has a 30-day limit on data and after 30 days, data may be moved automatically to an archive location. This location is still accessible to Amperity in case it becomes necessary to reuse it.
+.. include:: ../../shared/file-formats.rst
+   :start-after: .. formats-sftp-data-retention-start
+   :end-before: .. formats-sftp-data-retention-end
 
 .. important:: The hostname for the SFTP site is always ``<tenant-name>.sftp.amperity.com``. Some older tenants may still be using the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
 
