@@ -464,6 +464,55 @@ If the plus button is after a split node, there will also be the option to choos
 
 .. journeys-node-add-end
 
+.. _journeys-use-cases:
+
+Journey Use Cases
+==================================================
+
+.. journeys-reference-use-cases-start
+
+To help you get started with Journeys, Amperity provides sample journeys of common and effective use cases. These examples show how to structure your canvas flow and how to leverage different channels to achieve specific business goals.
+
+.. For a detailed walkthrough of each use case, see :ref:`journeys-sample-use-cases`.
+
+.. list-table:: **Sample Journey Use Cases**
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Use Case
+     - Goal
+
+   * - Welcome and onboarding
+     - Turn a new subscriber or customer into an engaged participant by providing helpful, sequenced information.
+
+   * - Abandoned cart
+     - Convert users who started a purchase but didn't finish.
+
+   * - Birthday or loyalty milestone
+     - Drive immediate, high-margin revenue through personalized, time-sensitive offers.
+
+   * - Product consideration to purchase
+     - Convert recent browsers or product page viewers into purchasers.
+
+   * - Cross-sell / complete-the-Look
+     - Increase Average Order Value (AOV) by recommending complementary products post-purchase.
+
+   * - Seasonal / holiday campaign
+     - Drive revenue during key shopping periods using high-precision audience segmentation.
+
+   * - VIP / loyalty tier upgrade
+     - Incentivize high-value customers who are close to the next tier to achieve that level.
+
+   * - Test drive / service appointment (Automotive)
+     - Convert website interest into an in-person appointment or service booking.
+
+   * - Skincare replenishment (or any subscription item)
+     - Drive repeat purchases based on predicted product consumption cycles.
+
+   * - Financial services onboarding
+     - Guide new account holders to full product adoption and usage (e.g., depositing funds, setting up direct deposit).
+
+.. journeys-reference-use-cases-end
 
 .. _journeys-howtos:
 
