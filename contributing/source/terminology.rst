@@ -55,7 +55,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-data-center:
 
 **data center** vs. **datacenter**
-   Use **data center** as a two words to describe the physical locations in which essential infrastructure for cloud computing are located.
+   Use **data center** as a two word phrase to describe the physical locations in which essential infrastructure for cloud computing are located.
 
 
 .. _term-datasheet:
@@ -67,13 +67,13 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-datasource:
 
 **data source** vs. **datasource**
-   Use **data source** as two words to describe upstream sources from which Amperity is configured to pull data.
+   Use **data source** as a two word phrase to describe upstream sources from which Amperity is configured to pull data.
 
 
 .. _term-data-table:
 
 **data table** vs. **datatable**
-   Use **data table** as two words as a way to generically describe the things that exist in a database: "data tables".
+   Use **data table** as a two word phrase as a way to generically describe the things that exist in a database: "data tables".
 
    Use the correct name when it is available, such as "domain table" or "customer 360 table", but as a generic reference "data table" is fine.
 
@@ -199,4 +199,4 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-white-paper:
 
 **white paper** vs. **whitepaper**
-   Use **white paper**--two words--to describe a technical article written by |company_name|.
+   Use **white paper** as a two word phrase to describe a technical article written by |company_name|.
