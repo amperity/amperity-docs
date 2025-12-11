@@ -136,7 +136,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select "Generate access token".
+     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select **Get token**.
 
        .. image:: ../../images/api-keys-generate-access-token-streaming.png
           :width: 500 px
