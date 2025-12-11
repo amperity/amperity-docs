@@ -2303,6 +2303,22 @@ Use the **CAST(value AS type)** function to cast the value of ``value`` as ``typ
 .. sql-presto-function-cast-end
 
 
+.. _sql-presto-function-cast-example-convert-floats-to-decimals:
+
+Convert floating point values to decimals
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-cast-example-convert-floats-to-decimals-start
+
+A floating point value often has more digits than needed, such as for prices, tax amounts, or item prices. Use the **CAST()** function and specify a precision of **(38,2)**. This will convert a value like "4.263256414" into "4.26".
+
+.. code-block:: sql
+
+   COALESCE(CAST(taxes AS decimal(38,2))), 0.00) AS unit_tax_amount
+
+.. sql-presto-function-cast-example-convert-floats-to-decimals-end
+
+
 .. _sql-presto-function-cast-example-cast-rfm-as-real:
 
 Cast RFM as REAL data type
