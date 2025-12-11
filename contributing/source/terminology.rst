@@ -52,16 +52,22 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. vale on
 
 
-.. _term-datasource:
+.. _term-data-center:
 
-**datasource** vs. **data source**
-   Use **data source** as two words to describe upstream sources from which Amperity is configured to pull data.
+**data center** vs. **datacenter**
+   Use **data center** as a two words to describe the physical locations in which essential infrastructure for cloud computing are located.
 
 
 .. _term-datasheet:
 
-**datasheet** vs. **data sheet**
+**data sheet** vs. **datasheet**
    Use **datasheet** as a single word to describe a deliverable that contains technical information for customers about an |company_name| product or scenario.
+
+
+.. _term-datasource:
+
+**data source** vs. **datasource**
+   Use **data source** as two words to describe upstream sources from which Amperity is configured to pull data.
 
 
 .. _term-data-table:
