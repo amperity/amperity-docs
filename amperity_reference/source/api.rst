@@ -364,7 +364,7 @@ In situations where rotating an access key is not enough, you can delete an API 
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Under **API keys** find the index, and then from the **Actions** menu select "Delete".
+     - Under **API keys** find the index, and then from the **Actions** menu select **Delete**.
 
        .. image:: ../../images/api-keys-delete-access-token.png
           :width: 500 px
@@ -407,7 +407,7 @@ Every configured API token has an access token to enable using OAuth.
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Under **API keys** find the index, and then from the **Actions** menu select "Get OAuth credentials".
+     - Under **API keys** find the index, and then from the **Actions** menu select **Get OAuth credentials**.
 
        The **OAuth credentials** dialog box opens and shows the following credential details:
 
@@ -498,7 +498,7 @@ This process may be used to invalidate outstanding tokens issued without expiry 
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Under **API keys** find the index, and then from the **Actions** menu select "Generate token".
+     - Under **API keys** find the index, and then from the **Actions** menu select **Generate token**.
 
        Set the token expiration length. Enable the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
 
@@ -522,7 +522,7 @@ Access tokens are managed directly from the Amperity UI.
 
 .. api-keys-access-tokens-list-start
 
-* :ref:`Generate access tokens <api-keys-access-tokens-generate>`
+* :ref:`Get tokens <api-keys-access-tokens-generate>`
 * :ref:`Refresh access tokens <api-keys-access-tokens-refresh>`
 
 .. api-keys-access-tokens-list-end
@@ -574,7 +574,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select "Generate access token".
+     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select **Get token**.
 
        .. image:: ../../images/api-keys-generate-access-token.png
           :width: 500 px
@@ -745,7 +745,7 @@ The selected action cannot be undone.
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Under **API keys** find the API key for which you want to revoke tokens, and then from the **Actions** menu select "Revoke token".
+     - Under **API keys** find the API key for which you want to revoke tokens, and then from the **Actions** menu select **Revoke token**.
 
 
    * - .. image:: ../../images/steps-03.png
