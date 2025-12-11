@@ -786,6 +786,14 @@ A connection between Amperity and Google BigQuery requires configuration steps t
 
 .. bridge-google-bigquery-sync-sandbox-end
 
+.. bridge-google-bigquery-must-be-colocated-start
+
+.. important:: Amperity uses `BigQuery Omni <https://docs.cloud.google.com/bigquery/docs/omni-introduction>`__ |ext_link| to export data from Amazon S3 or Azure Blob Storage to the Google BigQuery ecosystem. BigQuery Omni processes queries in the same location as the dataset that contains the tables you're querying.
+
+   The data center in which Amazon S3 or Azure Blob Storage is located **must be** colocated with a `compatible Google data center <https://docs.cloud.google.com/bigquery/docs/locations#omni-loc>`__ |ext_link|.
+
+.. bridge-google-bigquery-must-be-colocated-end
+
 .. bridge-google-bigquery-sync-with-google-bigquery-links-start
 
 #. :ref:`Verify subscriber details <bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers>`
