@@ -41,7 +41,176 @@ Configure destinations for Listrak SMS
 
 Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to manage SMS profiles in |destination-name|.
 
+#. Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ |ext_link| endpoint to update an audience member's information by **{phoneNumber}**.
+#. Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ |ext_link| endpoint to unsubscribe audience members from an SMS list.
+#. Amperity processes each addition individually. For each audience member with additions, Amperity uses the `Get Contact <https://api.listrak.com/sms#operation/Contact_GetContactResource>`__ |ext_link| endpoint to find out if the audience member already exists in the Listrak SMS list.
+#. Amperity uses the `Subscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_PostContactListSubscription>`__ |ext_link| endpoint to subscribe each contact to the SMS list. This action only subscribes contacts that already exist on the sender code.
+#. Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ |ext_link| endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist on the sender code.
+
 .. destination-listrak-sms-context-end
+
+
+.. _destination-listrak-sms-howitworks:
+
+How this destination works
+==================================================
+
+.. destination-listrak-sms-howitworks-start
+
+|destination-name| is a subscription-based model and this connector manages the membership of an SMS list. Full audiences must be sent each time.
+
+Amperity manages the membership of the SMS list by sending an audience to |destination-name|, and then updating the SMS list to match the set of audience profiles sent by Amperity.
+
+Profile attributes for existing members of the SMS list are updated. Audience members who are not in the SMS list are added and are automatically subscribed to the SMS list.
+
+.. caution:: Audiences are built from a query or segment in Amperity, and then sent to |destination-name| will refresh the membership of an SMS list to match the membership of the audience sent from Amperity.
+
+   If more than one audience is sent to the same SMS list, then the membership of the SMS list will match the membership of the most recently sent audience.
+
+   Use a single query or segment in Amperity to manage a single SMS list in |destination-name|. Use a single activation workflow--a single campaign or a single orchestration--for each SMS list in |destination-name|.
+
+   Ensure the audience built by the query or segment matches the intended use case for the SMS list in |destination-name|.
+
+.. destination-listrak-sms-howitworks-end
+
+.. destination-listrak-sms-howitworks-optin-start
+
+.. important:: To avoid sending SMS messages to people who did not consent to receiving them, ensure only consented phone numbers are included in the data provided to Amperity, or maintain consent status as a separate attribute.
+
+   For example, bring Listrak subscriber status to Amperity as a data source, and then use that data source with the **SMS Opt Status** table to help ensure customers are filterable by subscriber status in queries and segments.
+
+   SMS opt-in requirements are different from email opt-in requirements and require separate consent tracking.
+
+.. destination-listrak-sms-howitworks-optin-end
+
+.. destination-listrak-sms-howitworks-endpoints-start
+
+Amperity uses specific endpoints in the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to manage SMS profiles in |destination-name|.
+
+.. destination-listrak-sms-howitworks-endpoints-end
+
+.. image:: ../../images/howitworks-listrak-sms.png
+   :width: 640 px
+   :alt: Listrak SMS connector
+   :align: left
+   :class: no-scaled-link
+
+.. destination-listrak-sms-howitworks-table-start
+
+A |destination-name| destination works like this:
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - **START WORKFLOW**
+
+       After the workflow is started, Amperity:
+
+       #. Gets the value for the **{senderCodeId}** from Amperity configuration. This destination stores this value in the **Sender Code ID** field. Amperity replaces the "{senderCodeId}" value in the path to Listrak SMS API endpoints with this value.
+
+       #. Gets the value for the **{phoneListID}** from Amperity configuration. The destination stores this value in the **SMS List ID** field. Amperity replaces the "{phoneListID}" value in the path to Listrak SMS API endpoints with this value.
+
+       #. Amperity builds the audience list for the query or segment.
+
+       #. Amperity validates the audience list.
+
+       #. Amperity normalizes phone numbers for each audience member. SMS audience members are referred to as "contacts" in Listrak documentation. 
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - **UPDATE ATTRIBUTES FOR {phoneNumber} IN {phoneListId}**
+
+       All members of an audience in Listrak must have a phone number.
+
+       In addition to phone numbers, you may send email addresses, first and last names, birthdates, and postal codes.
+
+       Custom attributes may also be defined.
+
+       When attributes for existing audience members change, Amperity will update the profile to match the updated attributes. For example, a custom attribute for "Most recent purchase" has an existing value of "Socktown 5-pack ankle" and Amperity updates the attribute to "Socktown 5-pack mid-calf".
+
+       Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ |ext_link| endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, and **postal_code**) and custom fields are updated for all customers. Amperity does not change an audience member's opt status.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - **UNSUBSCRIBE {phoneNumber} FROM {phoneListId}**
+
+       Audience members that exist in the SMS list in Listrak, but are not in the current audience for this workflow, are unsubscribed from the SMS list.
+
+       Amperity uses the `Unsubscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_DeleteUnsubscribeContactListSubscription>`__ |ext_link| endpoint to unsubscribe audience members from an SMS list.
+
+       .. important:: Only audience members that exist in a matching **{senderCodeId}** *and* **{phoneListID}** are unsubscribed.
+
+          Amperity does nothing when an audience member does not exist in the matching **{senderCodeId}** *and* **{phoneListID}** even when that audience member is in the current audience.
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - Amperity processes each addition individually. For each audience member with additions, Amperity uses the `Get Contact <https://api.listrak.com/sms#operation/Contact_GetContactResource>`__ |ext_link| endpoint to find out if the audience member already exists in the Listrak SMS list.
+
+       Amperity takes one of two possible actions:
+
+       #. Subscribes the existing audience member to the SMS list.
+       #. Adds the audience member to the sender code and subscribes them to the list.
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - **SUBSCRIBE EXISTING {phoneNumber} TO {phoneListId}**
+
+       Audience members that exist in the sender code in Listrak are subscribed to the SMS list.
+
+       Amperity uses the `Subscribe Contact <https://api.listrak.com/sms#operation/ContactListSubscription_PostContactListSubscription>`__ |ext_link| endpoint to subscribe each contact to the SMS list. This action only subscribes contacts that already exist on the sender code.
+
+       .. important:: Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ |ext_link| endpoint to create and subscribe the audience member when they do not already exist on the sender code.
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - **CREATE AND SUBSCRIBE {phoneNumber} TO {phoneListId}**
+
+       Audience members that do not exist in the SMS list in Listrak, but do exist in the current audience being sent to |destination-name| *are automatically subscribed to the SMS list*.
+
+       Amperity uses the `Create Contact <https://api.listrak.com/sms#operation/Contact_PostContactListResource>`__ |ext_link| endpoint to create and subscribe a new audience member for **{phoneNumber}** values that do not exist on the sender code.
+
+       All audience members added to an SMS list using this endpoint **are automatically subscribed** to the SMS list when the phone number does not already exist on the sender code.
+
+       .. important:: Use the :doc:`SMS_Opt_Status <table_sms_opt_status>` table in Amperity to filter query results and audience segments to include only customers who consent to receiving SMS messaging.
+
+          Consider using `double opt-in messaging <https://help.listrak.com/en/articles/4853719-sms-lists-management-guide#h_90cb3fdead>`__ |ext_link| for campaigns sent from Listrak. Double opt-in uses two messages: the first message asks for consent, the second message confirms receipt of consent.
+
+
+   * - .. image:: ../../images/steps-07.png
+          :width: 60 px
+          :alt: Step seven.
+          :align: center
+          :class: no-scaled-link
+     - **END WORKFLOW**
+
+       The workflow ends when all attributes are updated for existing audience members, certain existing audience members are unsubscribed from SMS lists, or certain new audience members are subscribed to SMS lists.
+
+
+.. destination-listrak-sms-howitworks-table-end
 
 
 .. _destination-listrak-sms-get-details:
@@ -138,6 +307,8 @@ Get details
              :end-before: .. setting-listrak-default-list-name-end
 
        **Sender code ID**
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-sms-sender-code-id-start
@@ -402,6 +573,8 @@ Add destination
 
 Customers, products, and orders
 ==================================================
+
+.. TODO: Included from Listrak Email destination.
 
 .. include:: ../../amperity_operator/source/destination_listrak.rst
    :start-after: .. destination-listrak-sftp-start
