@@ -70,6 +70,24 @@ The **SMS Opt Status** table is a recommended table for the customer 360 databas
 .. table-sms-opt-status-add-steps-end
 
 
+.. _table-sms-opt-status-query:
+
+Use table in a query
+==================================================
+
+.. table-sms-opt-status-query-start
+
+An SMS profile often requires only a phone number, but may include other profile attributes, such as email address, first name, last name, postal code, and birthdate. Custom attributes are often allowed within SMS profiles.
+
+.. important:: Use the **SMS Opt Status** table to filter the results to include only customers who have opted in to receiveing SMS messaaging.
+
+.. table-sms-opt-status-query-end
+
+.. include:: ../../amperity_user/source/destination_listrak_sms.rst
+   :start-after: .. sendto-listrak-sms-build-query-start
+   :end-before: .. sendto-listrak-sms-build-query-end
+
+
 .. _table-sms-opt-status-reference:
 
 Column reference
