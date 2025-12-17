@@ -38,6 +38,7 @@ Site Index
    destination-dynamics-365-marketing
    destination-dynamics
    destination-eloqua
+   destination-emarsys
    destination-epsilon-abacus
    destination-epsilon-conversant
    destination-epsilon-targeting
