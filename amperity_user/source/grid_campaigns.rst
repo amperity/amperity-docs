@@ -279,6 +279,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_salesforce_marketing_cloud
 
+   .. grid-item-card:: SAP Emarsys
+      :link-type: doc
+      :link: campaign_sap_emarsys
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: campaign_sftp

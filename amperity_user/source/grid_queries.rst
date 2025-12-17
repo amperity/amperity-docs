@@ -293,6 +293,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_salesforce_marketing_cloud
 
+   .. grid-item-card:: SAP Emarsys
+      :link-type: doc
+      :link: destination_sap_emarsys
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: destination_sftp
@@ -561,6 +565,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Reddit Ads <destination_reddit_ads>
    Sailthru <destination_sailthru>
    Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>
+   SAP Emarsys <destination_sap_emarsys>
    SFTP <destination_sftp>
    Snapchat <destination_snapchat>
    Tableau <destination_tableau>
