@@ -336,6 +336,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Pinterest <campaign_pinterest>
    Sailthru <campaign_sailthru>
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
+   SAP Emarsys <campaign_sap_emarsys>
    SFTP <campaign_sftp>
    Snapchat <campaign_snapchat>
    The Trade Desk <campaign_the_trade_desk>
