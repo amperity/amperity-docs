@@ -2191,6 +2191,14 @@ I
       :end-before: .. term-idfa-end
 
 
+.. _i-identity-graph:
+
+**identity graph**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-identity-graph-start
+      :end-before: .. term-identity-graph-end
+
+
 .. _i-identity-provider:
 
 **identity provider**, **IdP**, **IDP**

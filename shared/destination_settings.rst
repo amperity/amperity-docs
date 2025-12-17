@@ -2501,6 +2501,50 @@ Enable to use **NULL** values when fields are empty.
 
 
 
+.. vale off
+
+**SAP EMARSYS**
+
+.. vale on
+
+Settings unique to SAP Emarsys.
+
+**Contact identifier**
+
+.. setting-sap-emarsys-contact-identifier-start
+
+The contact identifier for contact lists managed by this destination. Possible values: "email" or "phone".
+
+.. setting-sap-emarsys-contact-identifier-end
+
+**Does the list exist?**
+
+.. setting-sap-emarsys-list-exists-start
+
+If Amperity is managing a list that already exists in |destination-name| configure the **Contact identifier** to match the one used by the list and ensure the name of the audience sent from Amperity matches the name of the contact list in |destination-name|.
+
+If the contact list name doesn't exist Amperity will create it. If it exists, Amperity will update membership.
+
+.. setting-sap-emarsys-list-exists-end
+
+**Profile attributes and custom fields**
+
+.. setting-sap-emarsys-attributes-and-fields-start
+
+Profile attributes sent to |destination-name| must match any of the `SAP Emarsys system fields <https://help.sap.com/docs/SAP_EMARSYS/5d44574160f44536b0130abf58cb87cc/fdf56fb974c110149470d0c1a7fb5ee9.html>`__ |ext_link| or any `custom fields <https://help.sap.com/docs/SAP_EMARSYS/f8e2fafeea804018a954a8857d9dfff3/bea073ce154d4839b41ae26b5e451624.html>`__ |ext_link| that you have defined.
+
+The name of the system or custom field sent from Amperity must match the name of the system attribute or custom field in |destination-name|.
+
+Amperity will automatically pass the Amperity ID to the contact list when a custom field named **external_id** exists in the contact list.
+
+.. important:: Log in to |destination-name| to find the correct string value for the system or custom field. Choose **Management** and open the **Field Editor**.
+
+   Use the **Field String ID** column to indentify the correct system or custom field name. System fields are available from the **System fields** tab and custom fields are available from the **Custom fields** tab.
+
+.. setting-sap-emarsys-attributes-and-fields-end
+
+
+
 
 .. vale off
 

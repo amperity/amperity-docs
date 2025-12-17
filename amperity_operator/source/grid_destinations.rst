@@ -318,6 +318,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_salesforce_sales_cloud
 
+   .. grid-item-card:: SAP Emarsys
+      :link-type: doc
+      :link: destination_sap_emarsys
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: destination_sftp
@@ -458,6 +462,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>
    Salesforce Marketing Cloud Personalization <destination_salesforce_marketing_cloud_personalization>
    Salesforce Sales Cloud <destination_salesforce_sales_cloud>
+   SAP Emarsys <destination_sap_emarsys>
    SFTP <destination_sftp>
    SMG <destination_smg>
    Snapchat <destination_snapchat>

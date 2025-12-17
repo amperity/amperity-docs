@@ -855,6 +855,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from SAP Concur using Fivetran.
 
+   * - **SAP Emarsys**
+     - 
+     - |system-yes|
+     - Maintain contact lists using the SAP Emarsys REST API.
+
    * - **SAP ERP (S/4 HANA)**
      - |system-yes|
      - 

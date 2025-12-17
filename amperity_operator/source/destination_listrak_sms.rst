@@ -90,7 +90,7 @@ Amperity uses specific endpoints in the `Listrak SMS REST API <https://api.listr
 .. destination-listrak-sms-howitworks-endpoints-end
 
 .. image:: ../../images/howitworks-listrak-sms.png
-   :width: 640 px
+   :width: 600 px
    :alt: Listrak SMS connector
    :align: left
    :class: no-scaled-link
@@ -110,7 +110,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **START WORKFLOW**
 
-       After the workflow is started, Amperity:
+       After the workflow starts, Amperity:
 
        #. Gets the value for the **{senderCodeId}** from Amperity configuration. This destination stores this value in the **Sender Code ID** field. Amperity replaces the "{senderCodeId}" value in the path to Listrak SMS API endpoints with this value.
 
