@@ -2535,6 +2535,8 @@ Profile attributes sent to |destination-name| must match any of the `SAP Emarsys
 
 The name of the system or custom field sent from Amperity must match the name of the system attribute or custom field in |destination-name|.
 
+Amperity will automatically pass the Amperity ID to the contact list when a custom field named **external_id** exists in the contact list.
+
 .. important:: Log in to |destination-name| to find the correct string value for the system or custom field. Choose **Management** and open the **Field Editor**.
 
    Use the **Field String ID** column to indentify the correct system or custom field name. System fields are available from the **System fields** tab and custom fields are available from the **Custom fields** tab.
