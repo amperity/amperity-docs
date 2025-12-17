@@ -110,7 +110,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **START WORKFLOW**
 
-       After the workflow is started, Amperity:
+       After the workflow starts, Amperity:
 
        #. Gets the value for the **{senderCodeId}** from Amperity configuration. This destination stores this value in the **Sender Code ID** field. Amperity replaces the "{senderCodeId}" value in the path to Listrak SMS API endpoints with this value.
 

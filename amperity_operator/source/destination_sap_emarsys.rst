@@ -30,7 +30,7 @@ Configure destinations for SAP Emarsys
 
 .. destination-sap-emarsys-about-start
 
-|destination-name| is an omnichannel customer engagement platform for personalizing customer interactions across channels for the purpose of increasing customer engagement and lifetime value.
+|destination-name| is an omnichannel customer engagement platform for personalizing customer interactions across channels to increase customer engagement and lifetime value.
 
 .. destination-sap-emarsys-about-end
 
@@ -55,7 +55,7 @@ How this destination works
 
 .. destination-sap-emarsys-howitworks-start
 
-Amperity uses a combination of endpoints maintain contact lists in |destination-name|.
+Amperity uses a combination of endpoints to maintain contact lists in |destination-name|.
 
 .. destination-sap-emarsys-howitworks-end
 
@@ -80,7 +80,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **START WORKFLOW**
 
-       After the workflow is started, Amperity:
+       After the workflow starts, Amperity:
 
        #. Gets the value for **{listId}** for the contact list from |destination-name|.
 
@@ -104,7 +104,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **UPDATE CONTACTS**
 
-       The `Update Contacts <https://dev.emarsys.com/docs/core-api-reference/f8ljhut3ac2i1-update-contacts>`__ |ext_link| endpoint to update contact attributes and profile information to match what is sent from Amperity.
+       The `Update Contacts <https://dev.emarsys.com/docs/core-api-reference/f8ljhut3ac2i1-update-contacts>`__ |ext_link| endpoint updates contact attributes and profile information to match the audience sent from Amperity.
 
        Amperity uses the same endpoint to upsert contact attributes and profile information to contacts that exist in the audience sent from Amperty, but do not exist for the contact in the contact list in |destination-name|.
 
@@ -115,7 +115,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **ADD CONTACTS**
 
-       The `Add Contacts to a Contact List <https://dev.emarsys.com/docs/core-api-reference/e6v1un6ph06f3-add-contacts-to-a-contact-list>`__ |ext_link| endpoint to add any contacts that exist in the audience sent from Amperity, but do not exist in the contact list in |destination-name|.
+       The `Add Contacts to a Contact List <https://dev.emarsys.com/docs/core-api-reference/e6v1un6ph06f3-add-contacts-to-a-contact-list>`__ |ext_link| endpoint adds any contacts that exist in the audience sent from Amperity, but do not exist in the contact list in |destination-name|.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
@@ -124,7 +124,7 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **REMOVE CONTACTS**
 
-       The `Remove Contacts from a Contact List <https://dev.emarsys.com/docs/core-api-reference/4ir8e6fgq3570-remove-contacts-from-a-contact-list>`__ |ext_link| endpoint to remove any contacts that exist in |destination-name|, but do not exist in the audience sent from Amperity.
+       The `Remove Contacts from a Contact List <https://dev.emarsys.com/docs/core-api-reference/4ir8e6fgq3570-remove-contacts-from-a-contact-list>`__ |ext_link| endpoint removes any contacts that exist in |destination-name|, but do not exist in the audience sent from Amperity.
 
 
    * - .. image:: ../../images/steps-06.png
