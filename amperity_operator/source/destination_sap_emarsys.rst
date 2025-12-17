@@ -40,7 +40,7 @@ Use contact lists in |destination-name| as an alternative to segments when selec
 
 You can configure Amperity to maintain contact lists in |destination-name| using the |destination-api|. Amperity updates the contact list in |destination-name| to match the audience sent from Amperity. Amperity:
 
-#. Adds contact lists when they don't exist in |destination-name|. The name of a contact list is case-insensitive.
+#. Adds contact lists when they don't exist in |destination-name|.
 #. Updates contact attributes and profile information for contacts already in a contact list to match what is sent from Amperity.
 #. Adds contacts to a contact list when they don't exist in |destination-name|.
 #. Removes contacts from a contact list when they don't exist in the audience sent from Amperity.
@@ -96,6 +96,9 @@ A |destination-name| destination works like this:
      - **CREATE CONTACT LIST?**
 
        If the contact list does not exist, Amperity uses the `Create a Contact List <https://dev.emarsys.com/docs/core-api-reference/enmevkj1fi016-create-a-contact-list>`__ |ext_link| endpoint to create the list.
+
+       .. important:: When the contact list exists in |destination-name|, the name of the audience sent from Amperity **must exactly match** the name of a contact list in |destination-name|, including capitalizations, spaces, and characters.
+
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
