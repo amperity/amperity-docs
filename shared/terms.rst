@@ -3240,7 +3240,7 @@ The Identifier for Advertisers (IDFA) is a random device identifier that tracks 
 
 .. term-identity-graph-start
 
-An identity graph is a database that links rows of data to individual customers, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers collected by your brand. This identity graph is the foundation of unified customer profiles and provides the necessary links for activating marketing campaigns and journeys, as well as integrating with operational systems.
+An identity graph is a database that links rows of data to individual customers, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers your brand collects. This identity graph is the foundation of unified customer profiles and provides the necessary links for activating marketing campaigns and journeys, as well as integrating with operational systems.
 
 .. term-identity-graph-end
 
