@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Idenitify tables with personally identifiable information (PII). Have AmpAI make the selections for you or make the selections yourself.
+        Identify tables with personally identifiable information (PII). Have AmpAI make the selections for you or make the selections yourself.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Idenitify tables with personally identifiable information (PII). Have AmpAI make the selections for you or make the selections yourself.
+        Identify tables with personally identifiable information (PII). Have AmpAI make the selections for you or make the selections yourself.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
