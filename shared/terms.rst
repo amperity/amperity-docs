@@ -1152,9 +1152,9 @@ Churn prevention is a process of identifying, and then marketing to users who ar
 
 Churn propensity is a predictive model that finds the likelihood that a customer is active based on their purchase history. The churn propensity model outputs a score between 0 and 1 that represents a customer's probability of returning to make a purchase.
 
-* A score closer to 0 indicates a low probability of churn, suggesting the customer is likely to remain active.
+* A score closer to 1 indicates a low probability of churn, suggesting the customer is likely to remain active.
 
-* A score closer to 1 indicates a high probability of churn, suggesting the customer is at risk of leaving.
+* A score closer to 0 indicates a high probability of churn, suggesting the customer is at risk of leaving.
 
 .. term-churn-propensity-end
 

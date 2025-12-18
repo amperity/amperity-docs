@@ -652,7 +652,7 @@ A share link allows a subscriber to connect to a data listing. Copy the share li
           :class: no-scaled-link
      - On the **Sharing** page in the row for the exchange that will share data with Amperity select **Copy share link** from the ellipses menu.
 
-       .. important:: This value required when :ref:`adding the inbound share <bridge-google-bigquery-sync-amperity-add-bridge>`.
+       .. important:: This value is required when :ref:`adding the inbound share <bridge-google-bigquery-sync-amperity-add-bridge>`.
 
 
 .. bridge-google-bigquery-sync-amperity-configure-bigquery-subscriber-and-share-steps-end
