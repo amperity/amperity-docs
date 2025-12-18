@@ -18,9 +18,9 @@ Credentials
 
 **Client ID and secret**
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. setting-sap-emarsys-client-id-and-secret-start
-   :end-before: .. setting-sap-emarsys-client-id-and-secret-end
+A client ID and client secret with permission to access your instance of |destination-name|. These values are part of the `API credentials <https://help.sap.com/docs/SAP_EMARSYS/5d44574160f44536b0130abf58cb87cc/fdf4b58974c110149353957a3e7ef453.html?locale=en-US&state=PRODUCTION&version=CLOUD&q=client%20id>`__ |ext_link| configured for your instance of |destination-name|.
+
+The OAuth user associated with the client ID and secret must have `contact, contactlist, and field <https://dev.emarsys.com/docs/emarsys-core-api-guides/ef41493bd7812-endpoint-permission-settings>`__ |ext_link| permissions to the SAP Emarsys Rest API.
 
 
 
