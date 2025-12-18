@@ -1,8 +1,7 @@
 BUILDDIR = build
-BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
-BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
+BUILD_COMMAND = .venv/bin/python -m sphinx -b html --jobs auto -W
 
-all: base user operator api reference guides amp360 ampiq contributing tooltips modals legacy
+all: deps base user operator api reference guides amp360 ampiq contributing tooltips modals legacy
 
 static:
 	cp -vr downloads $(BUILDDIR)/
@@ -58,15 +57,19 @@ legacy: static ## Build only the "/legacy" section
 clean: ## Flush the entire build directory
 	# Cleaning out build directory...
 	@rm -rf $(BUILDDIR)
+	# Cleaning out .venv directory...
+	@rm -rf .venv
 
-serve: ## Start up a server on http://locahost:8080
-	serve -dir build
-	open http://localhost:8080
+deps: ## Create a Python virtualenv and install dependencies.
+	python3 -m venv .venv
+	.venv/bin/pip install --quiet -r requirements.txt
 
-dependencies: ## Install all the required dependencies. You must have Homebrew installed first
-	brew install python
-	pip3 install -r requirements.txt
-	brew install serve
+render:
+	$(BUILD_COMMAND)
+
+serve: all ## Serve the docs from a local HTTP server.
+	# Serving docs on http://localhost:8080 ...
+	.venv/bin/python -m http.server --directory build --bind localhost 8080
 
 help:
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
