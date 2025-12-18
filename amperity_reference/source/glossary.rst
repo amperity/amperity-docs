@@ -5192,7 +5192,7 @@ V
 
    .. image:: ../../images/mockup-segments-tab-vse.png
       :width: 600 px
-      :alt: The Visual Segments Editor located within the Segments page in Amperity.
+      :alt: The Visual Segment Editor located within the Segments page in Amperity.
       :align: left
       :class: no-scaled-link
 

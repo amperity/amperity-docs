@@ -126,7 +126,7 @@ Query output
 
 .. file-uploads-query-output-start
 
-The following are some ways that you can use this feature on the **Segments Editor** and on the **Campaigns** page: 
+The following are some ways that you can use this feature on the **Segment Editor** and on the **Campaigns** page: 
 
 * Create a complex view of customers on the **Segments** page by adding a query output to a segment, which can also be included or excluded in a campaign on the **Campaigns** page.
 * Create a custom join logic from an uploaded customer list for further segmentation in the **Segment Editor** and on the **Campaigns** page.

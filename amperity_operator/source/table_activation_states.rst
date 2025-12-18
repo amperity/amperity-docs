@@ -55,10 +55,10 @@ For campaigns
 
 .. table-activation-states-campaigns-usewith-steps-start
 
-#. Open the **Segments Editor**.
+#. Open the **Segment Editor**.
 #. Click **Add condition**, choose **Activation activity**, and then select **In a campaigns**.
 
-#. From the **Segments Editor** click the **Filters** link for the selected activiation activity. This opens the **Filter criteria** dialog box.
+#. From the **Segment Editor** click the **Filters** link for the selected activiation activity. This opens the **Filter criteria** dialog box.
 
 #. From the **Filter criteria** dialog box select a campaigns from the **Campaigns** dropdown.
 
@@ -108,10 +108,10 @@ For journeys
 
 **To use journey activation activity in a segment**
 
-#. Open the **Segments Editor**.
+#. Open the **Segment Editor**.
 #. Click **Add condition**, choose **Activation activity**, and then select **In a journey**.
 
-#. From the **Segments Editor** click the **Filters** link for the selected activiation activity. This opens the **Filter criteria** dialog box.
+#. From the **Segment Editor** click the **Filters** link for the selected activiation activity. This opens the **Filter criteria** dialog box.
 
 #. From the **Filter criteria** dialog box select a journey from the **Journey** dropdown.
 
