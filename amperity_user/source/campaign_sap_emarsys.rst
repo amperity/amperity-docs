@@ -40,7 +40,7 @@ Send audiences to SAP Emarsys
    :end-before: .. sendtos-ask-to-configure-campaigns-end
 
 
-.. _channel-pinterest-build-segment:
+.. _channel-sap-emarsys-build-segment:
 
 Build a segment
 ==================================================
@@ -63,7 +63,7 @@ Build a segment
       :end-before: .. destinations-steps-validate-audience-end
 
 
-.. _channel-pinterest-build-campaign:
+.. _channel-sap-emarsys-build-campaign:
 
 Add to a campaign
 ==================================================
@@ -122,7 +122,7 @@ Add to a campaign
           :end-before: .. channels-build-campaign-steps-edit-attributes-note-end
 
 
-.. _channel-pinterest-configure-default-attributes:
+.. _channel-sap-emarsys-configure-default-attributes:
 
 Configure default attributes
 ==================================================
@@ -131,7 +131,7 @@ Configure default attributes
    :start-after: .. channels-configure-default-attributes-start
    :end-before: .. channels-configure-default-attributes-end
 
-.. channel-pinterest-configure-default-attributes-start
+.. channel-sap-emarsys-configure-default-attributes-start
 
 |destination-name| has the following requirements for attributes.
 
@@ -147,4 +147,4 @@ Configure default attributes
    * - phone
      - phone
 
-.. channel-pinterest-configure-default-attributes-end
+.. channel-sap-emarsys-configure-default-attributes-end
