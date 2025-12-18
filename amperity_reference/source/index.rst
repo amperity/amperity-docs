@@ -231,7 +231,7 @@ Components
 
    .. grid-item-card:: |fa-browser| Segment Editor
       :link-type: doc
-      :link: segments_editor
+      :link: segment_editor
 
    .. grid-item-card:: |fa-tags| Semantics
       :link-type: doc
@@ -319,7 +319,7 @@ Components
    Sandboxes <sandboxes>
    Settings <settings>
    Segments <segments>
-   Segments Editor <segments_editor>
+   Segment Editor <segment_editor>
    Single sign-on (SSO) <sso>
    Spark SQL <sql_spark>
    Stitch <page_stitch>

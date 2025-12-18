@@ -27,6 +27,16 @@ About the Segment Editor
    :align: left
    :class: no-scaled-link
 
+.. _segments-ai-assistant:
+
+About the Segments AI Assistant
+==================================================
+
+.. segments-ai-assistant-start
+
+The :doc:`Segments AI Assistant <assistant>` is a generative AI feature within the **Segment Editor** that lets you use natural language to generate and refine segments.
+
+.. segments-ai-assistant-end
 
 .. _segments-editor-names:
 
