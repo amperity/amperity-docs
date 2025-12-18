@@ -481,7 +481,7 @@ You can access the campaign editor from the **Segments** page.
 #. From the **Segments** page, select a segment.
 #. Click **Actions**, and then click **Create campaign**.
 
-The Segments editor opens.
+The Segment Editor opens.
 
 .. segments-create-campaign-steps-end
 
@@ -862,7 +862,7 @@ You can explore a copy of a saved segment on the **Summary** tab.
 .. segments-explore-copy-steps-start
 
 #. From the **Summary** tab, click **Explore a Copy**.
-#. From the **Segments Editor**, you can do one of the following:
+#. From the **Segment Editor**, you can do one of the following:
 
    Explore the saved segment attribute details
 

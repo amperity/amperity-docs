@@ -181,7 +181,7 @@ Activation States
 
 .. data-tables-campaign-recipients-summary-about-start
 
-**Activation States** tables cannot be accessed from a sandbox, a query, or a database table. **Activation States** tables are only accessible as a condition from the **Segments Editor**.
+**Activation States** tables cannot be accessed from a sandbox, a query, or a database table. **Activation States** tables are only accessible as a condition from the **Segment Editor**.
 
 .. data-tables-campaign-recipients-summary-about-end
 
