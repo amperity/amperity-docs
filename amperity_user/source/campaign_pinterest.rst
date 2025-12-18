@@ -91,10 +91,6 @@ Add to a campaign
    :start-after: .. channels-build-campaign-start
    :end-before: .. channels-build-campaign-end
 
-.. include:: ../../amperity_user/source/destination_tiktok_ads.rst
-   :start-after: .. sendto-tiktok-ads-build-query-options-start
-   :end-before: .. sendto-tiktok-ads-build-query-options-end
-
 .. admonition:: About paid media campaigns
 
    .. include:: ../../shared/paid-media.rst

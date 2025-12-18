@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: Pinterest
 .. |destination-api| replace:: Pinterest API
-.. |plugin-name| replace:: SFTP
+.. |plugin-name| replace:: pinterest
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 .. |attributes-sent| replace:: |destination-name| requires email addresses. Amperity applies SHA-256 hashing to email addresses automatically.
@@ -84,17 +84,17 @@ The following query returns a list of hashed email addresses for customers who a
          )
        )
      ) AS email
-     FROM Merged_Customers mc
-     INNER JOIN Customer_Attributes ca
-     ON mc.amperity_id = ca.amperity_id
-     INNER JOIN Transaction_Attributes_Extended tae
-     ON mc.amperity_id = tae.amperity_id
-     WHERE (
-       LOWER(mc.email) IS NOT NULL
-       AND pin.contactable_pinterest = TRUE
-       AND tae.L12M_order_frequency >= 4
-       AND tae.L12M_order_revenue >= 400
-     )
+   FROM Merged_Customers mc
+   INNER JOIN Customer_Attributes ca
+   ON mc.amperity_id = ca.amperity_id
+   INNER JOIN Transaction_Attributes_Extended tae
+   ON mc.amperity_id = tae.amperity_id
+   WHERE (
+     LOWER(mc.email) IS NOT NULL
+     AND pin.contactable_pinterest = TRUE
+     AND tae.L12M_order_frequency >= 4
+     AND tae.L12M_order_revenue >= 400
+   )
 
 .. sendto-pinterest-build-query-example-end
 

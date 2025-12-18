@@ -279,6 +279,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_salesforce_marketing_cloud
 
+   .. grid-item-card:: SAP Emarsys
+      :link-type: doc
+      :link: campaign_sap_emarsys
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: campaign_sftp
@@ -336,6 +340,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Pinterest <campaign_pinterest>
    Sailthru <campaign_sailthru>
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
+   SAP Emarsys <campaign_sap_emarsys>
    SFTP <campaign_sftp>
    Snapchat <campaign_snapchat>
    The Trade Desk <campaign_the_trade_desk>
