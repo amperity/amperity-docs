@@ -67,7 +67,7 @@ deps: ## Create a Python virtualenv and install dependencies.
 render:
 	$(BUILD_COMMAND)
 
-serve: all ## Serve the docs from a local HTTP server.
+serve: all ## Build and serve the docs from a local HTTP server.
 	# Serving docs on http://localhost:8080 ...
 	.venv/bin/python -m http.server --directory build --bind localhost 8080
 

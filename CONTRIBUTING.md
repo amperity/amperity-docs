@@ -1,11 +1,29 @@
 # Contributing
 
-The full guide to contributing is published on the docs site.
-See [Amperity Docs | Setup](https://docs.amperity.com/contributing/setup.html)
-for setup instructions, plus syntax, style, and formatting guides.
+To report issues, request updates, or suggest changes, use the **Edit in
+GitHub** link located in the upper right on every Amperity documentation page
+to open that page in the Amperity documentation repository on GitHub.
 
-But a quick way to start is to clone this git repository and then:
+From that page you may:
 
-```
-make serve
-```
+1. Report an issue
+1. Request an update
+1. Suggest changes
+
+
+## Style guide
+
+The style guide is published on the docs site itself:
+
+* [Style](https://docs.amperity.com/contributing/style.html)
+
+as well as some other guides linked from that page.
+
+
+## Preview changes locally
+
+This repo uses a Makefile for local development commands.
+
+Clone this repo, then run `make help` to see the available commands.
+
+To preview a change locally, run `make serve`.
