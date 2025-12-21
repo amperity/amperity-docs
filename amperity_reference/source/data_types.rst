@@ -21,7 +21,7 @@ About data types
 
 .. data-types-amperity-start
 
-Amperity supports the following data types when structured data is made available to Amperity. Complex types--arrays, maps, and structs--must be converted to individual fields prior to making them available to the Stitch process.
+Amperity supports the following data types when structured data is made available to Amperity. Complex types--**array**, **map**, and **struct**--must be converted to individual fields prior to making them available to the Stitch process.
 
 .. data-types-amperity-end
 
@@ -35,13 +35,13 @@ Array
 
 A composite fully structred data type that stores a sequence of elements where each element is a set of fields and values.
 
-.. important:: Amperity will load a data source with an array to a domain table.
+.. important:: Amperity will load a data source with an **array** to a domain table.
 
-   For data sources with an array, you must use a custom domain table to convert all elements in the array to individual fields in the table output.
+   For data sources with an **array**, you must use a custom domain table to convert all elements in the **array** to individual fields in the table output.
 
    After all elements are converted to individual fields in the custom domain table output you assign semantic tags and keys to individual fields in the table.
 
-   An array may be used as part of a common table expression (CTE) in Spark SQL and Presto SQL as long as output of the query does not have a field with an array data type.
+   An **array** may be used as part of a common table expression (CTE) in Spark SQL and Presto SQL as long as output of the query does not have a field with an **array** data type.
 
 .. admonition:: Compare to
 
@@ -183,13 +183,13 @@ Map
 
 A composite fully structured data type that stores data as key-value pairs.
 
-.. important:: Amperity will load a data source with a map to a domain table.
+.. important:: Amperity will load a data source with a **map** to a domain table.
 
-   For data sources with a map, you must use a custom domain table to convert all elements in the map to individual fields in the table output.
+   For data sources with a **map**, you must use a custom domain table to convert all elements in the **map** to individual fields in the table output.
 
    After all elements are converted to individual fields in the custom domain table output you assign semantic tags and keys to individual fields in the table.
 
-   A map may be used as part of a common table expression (CTE) in Spark SQL and Presto SQL as long as output of the query does not have a field with a map data type.
+   A **map** may be used as part of a common table expression (CTE) in Spark SQL and Presto SQL as long as output of the query does not have a field with a **map** data type.
 
 .. admonition:: Compare to
 
@@ -231,13 +231,13 @@ Struct
 
 A composite fully structured data type that groups data as a sequence of fields within the structure.
 
-.. important:: Amperity will load a data source with a struct to a domain table.
+.. important:: Amperity will load a data source with a **struct** to a domain table.
 
-   For data sources with a struct, you must use a custom domain table to convert all elements in the struct to individual fields in the table output.
+   For data sources with a **struct**, you must use a custom domain table to convert all elements in the struct to individual fields in the table output.
 
    After all elements are converted to individual fields in the custom domain table output you assign semantic tags and keys to individual fields in the table.
 
-   A struct may be used as part of a common table expression (CTE) in Spark SQL and Presto SQL as long as output of the query does not have a field with a struct data type.
+   A **struct** may be used as part of a common table expression (CTE) in Spark SQL and Presto SQL as long as output of the query does not have a field with a **struct** data type.
 
 .. admonition:: Compare to
 

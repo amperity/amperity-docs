@@ -81,7 +81,7 @@ Columns in domain tables may be one of the following types:
        * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
        * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
 
-       .. important:: Some fields that store datetime values are set to the string data type.
+       .. important:: Some fields that store datetime values are set to the **string** data type.
 
    * - **decimal**
      - A fixed point number, such as for prices or message sizes. The number of characters in the decimal value is configurable. For example:
@@ -97,7 +97,7 @@ Columns in domain tables may be one of the following types:
        * 3.14159
 
    * - **integer**
-     - A numeric value, such as the quantity of items purchased. Do not use this data type for prices. For example:
+     - A numeric value, such as the quantity of items purchased. Do not use an **integer** data type for prices. For example:
 
        * 1
        * 12345

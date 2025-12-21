@@ -104,7 +104,7 @@ Semantic tagging is done while configuring a feed. A feed tells Amperity how to 
 
 .. vale on
 
-.. warning:: Fields to which the **postal** and **phone** semantic tags are applied must be configured to have a String data type. Fields to which the **birthdate** semantic tag is applied must be configured to have a Date data type. If these fields do not have the correct data type Amperity shows an error when saving the feed.
+.. warning:: Fields to which the **postal** and **phone** semantic tags are applied must be configured to have a **string** data type. Fields to which the **birthdate** semantic tag is applied must be configured to have a **date** data type. If these fields do not have the correct data type Amperity shows an error when saving the feed.
 
 Custom semantic tags allow for additional tagging of certain types of fields, such as a field that identifies a loyalty membership ID. Use foreign keys to apply consistently across customer tables for certain types of identifiers.
 

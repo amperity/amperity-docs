@@ -1350,7 +1350,7 @@ Set last updated field
 
 Amperity requires each feed to specify a field that describes when each record was last updated. If multiple records in the incoming data or the existing domain table have the same primary key, the record with the most recent "last updated" field will be retained. This may be associated with a field that has a datetime field type, or an integer (such as for unix timestamps).
 
-.. note:: Amperity does not use a field with a date data type because that value is not granular enough to determine priority.
+.. note:: Amperity does not use a field with a **date** data type because that value is not granular enough to determine priority.
 
 If you have no such updated field, you can choose to autogenerate a field, in which case the following logic is used to determine which record to keep in the case a primary key appears more than once:
 
@@ -1372,7 +1372,7 @@ If you have no such updated field, you can choose to autogenerate a field, in wh
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
 #. The last updated field is above the field list in the center of the page.
-#. Under **Last Updated Field**, choose how Amperity will determine priority: automatically generated, a field with an integer data type, or a field with a datetime data type (often the same field to which the **update-dt** merge rules semantic tag is applied).
+#. Under **Last Updated Field**, choose how Amperity will determine priority: automatically generated, a field with an **integer** data type, or a field with a **datetime** data type (often the same field to which the **update-dt** merge rules semantic tag is applied).
 #. Click **Activate**
 
 .. feeds-set-last-updated-field-steps-end
