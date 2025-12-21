@@ -308,7 +308,7 @@ The following table describes recommended patterns to use when defining custom s
           :start-after: .. term-loyalty-id-start
           :end-before: .. term-loyalty-id-end
 
-       A loyalty ID may be associated with a customer key (**ck**) or a foreign key (**fk-[namespace]**), but otherwise follows all patterns associated with PII semantics.
+       A loyalty ID may be associated with a customer key (**ck**) or a foreign key, but otherwise follows all patterns associated with PII semantics. For example: **fk-loyalty-id**
 
        .. tip:: Use additional custom semantic tags when the data contains more information about loyalty programs. Keep the prefix **loyalty-**, and then append an appropriate string to improve the user experience with downstream workflows. For example, if the data contains a field for loyalty points, use a custom semantic named **loyalty-points** to tag that field.
 

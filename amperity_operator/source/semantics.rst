@@ -1036,7 +1036,7 @@ Customer records
 
 .. semantics-interactions-customer-records-start
 
-If customer records use foreign keys, such as **fk-[namespace]**, as semantic tags *and* the same types of fields exist within interaction records, apply those foreign key semantic tags to the corresponding fields in the interaction records.
+If customer records use foreign keys--**fk-[namespace]**, where "[namespace]" represents a string of characters, such as **fk-customer-id**--as semantic tags *and* the same types of fields exist within interaction records, apply those foreign key semantic tags to the corresponding fields in the interaction records.
 
 This will directly associate the customer records to the interaction records and creates stitched output that adds the Amperity ID to both record types.
 
@@ -1050,7 +1050,7 @@ Interaction records
 
 .. semantics-interactions-interaction-records-start
 
-If interaction records use foreign keys, such as **fk-[namespace]**, as semantic tags and the same types of fields exist within customer records, apply those foreign key semantic tags to the corresponding fields in the customer records.
+If interaction records use foreign keys--**fk-[namespace]**, where "[namespace]" represents a string of characters, such as **fk-customer-id**--as semantic tags and the same types of fields exist within customer records, apply those foreign key semantic tags to the corresponding fields in the customer records.
 
 This will directly associate the interaction records to the customer records and creates stitched output that adds the Amperity ID to both record types.
 

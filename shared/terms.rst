@@ -2804,7 +2804,7 @@ A fiscal calendar is a yearly accounting period that aligns the weeks and months
 
 .. term-fk-start
 
-The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace. For example: **fk-customer**, **fk-interaction**, **fk-audience**, or **fk-brand**.
+The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace and "namespace" is a string of characters. For example: **fk-customer-id**, **fk-interaction**, **fk-audience**, **fk-loyalty-id**, or **fk-brand**.
 
 .. term-fk-end
 
