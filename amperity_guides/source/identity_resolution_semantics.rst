@@ -34,7 +34,7 @@ To validate semantic tags open the **Identity resolution** page in **Quick start
       :align: left
       :class: no-scaled-link
 
-   .. tip:: A custom semantic tag is a string, such as "loyalty-id", that is typed directly into the **Semantic tags** column. Press the **ENTER** or **RETURN** key on your keyboard to save the custom semantic tag in the **Semantic tag editor**.
+   .. tip:: A custom semantic tag is a string of characters, such as "loyalty-id", that is typed directly into the **Semantic tags** column. Press the **ENTER** or **RETURN** key on your keyboard to save the custom semantic tag in the **Semantic tag editor**.
 
 #. Click **Edit** on the **Identity your fields** card to review tables that are already selected.
 
