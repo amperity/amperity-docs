@@ -395,6 +395,13 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
           :alt: Step one.
           :align: center
           :class: no-scaled-link
+     - Verify that Delta Sharing is enabled on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|.
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
      - A share is a securable object in Unity Catalog that can be configured to share tables with Amperity.
 
        Open the Databricks Catalog Explorer. Under Delta Sharing, choose **Shared by me**, then select **Share data**, and then `create a share <https://docs.databricks.com/en/data-sharing/create-share.html#create-a-share-object>`__ |ext_link|.
@@ -402,9 +409,9 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
        After you have created the share you may `add tables to the share <https://docs.databricks.com/en/data-sharing/create-share.html#add-tables-to-a-share>`__ |ext_link|. Click **Add assets**, and then select the tables to share.
 
 
-   * - .. image:: ../../images/steps-02.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step two.
+          :alt: Step three.
           :align: center
           :class: no-scaled-link
      - A recipient in Databricks represents the entity that will consume shared data: Amperity. Configure the recipient for open sharing and to use token-based authentication.
@@ -414,9 +421,9 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
        After the recipient is created, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|.
 
 
-   * - .. image:: ../../images/steps-03.png
+   * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step three.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - Open sharing uses token-based authentication.
