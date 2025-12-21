@@ -280,7 +280,7 @@ Get details
 
 .. bridge-databricks-sync-with-amperity-prerequisites-start
 
-Before you can create inbound sharing between Databricks and Amperity a recipient and share must be created in Databricks, after which tables are added to the share and access to the share is granted to the recipient.
+Before you can create inbound sharing between Databricks and Amperity, Delta Sharing must be enabled on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|, a recipient and share must be created in Databricks, after which tables are added to the share and access to the share is granted to the recipient.
 
 The user who performs these actions may use the Databricks CLI or the Databricks Catalog Explorer and must be assigned the **CREATE RECIPIENT**, **CREATE SHARE**, **USE CATALOG**, **USE SCHEMA**, and **SELECT** permissions, along with the ability to grant the recipient access to the share.
 
