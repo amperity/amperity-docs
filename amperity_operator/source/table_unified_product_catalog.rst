@@ -41,7 +41,7 @@ The **Unified Product Catalog** table is a required table for the customer 360 d
 
 .. table-unified-product-catalog-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified_Product_Catalog".
 #. Set the build mode to **Passthrough**.
