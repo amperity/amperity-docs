@@ -2804,7 +2804,7 @@ A fiscal calendar is a yearly accounting period that aligns the weeks and months
 
 .. term-fk-start
 
-The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace. For example: **fk-customer**, **fk-interaction**, **fk-audience**, or **fk-brand**.
+The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace and "namespace" is a string of characters. For example: **fk-customer-id**, **fk-interaction**, **fk-audience**, **fk-loyalty-id**, or **fk-brand**.
 
 .. term-fk-end
 
@@ -3240,7 +3240,7 @@ The Identifier for Advertisers (IDFA) is a random device identifier that tracks 
 
 .. term-identity-graph-start
 
-An identity graph is a database that links rows of data to individual customers, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers your brand collects. This identity graph is the foundation of unified customer profiles and provides the necessary links for activating marketing campaigns and journeys, as well as integrating with operational systems.
+An identity graph links rows of data to individual customers, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers your brand collects. This identity graph is the foundation of unified customer profiles and provides the necessary links for activating marketing campaigns and journeys, as well as integrating with operational systems.
 
 .. term-identity-graph-end
 

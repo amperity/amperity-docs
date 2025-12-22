@@ -308,7 +308,7 @@ The following table describes recommended patterns to use when defining custom s
           :start-after: .. term-loyalty-id-start
           :end-before: .. term-loyalty-id-end
 
-       A loyalty ID may be associated with a customer key (**ck**) or a foreign key (**fk-[namespace]**), but otherwise follows all patterns associated with PII semantics.
+       A loyalty ID may be associated with a customer key (**ck**) or a foreign key, but otherwise follows all patterns associated with PII semantics. For example: **fk-loyalty-id**
 
        .. tip:: Use additional custom semantic tags when the data contains more information about loyalty programs. Keep the prefix **loyalty-**, and then append an appropriate string to improve the user experience with downstream workflows. For example, if the data contains a field for loyalty points, use a custom semantic named **loyalty-points** to tag that field.
 
@@ -1416,7 +1416,7 @@ The following table lists the tags available to this semantic group (with requir
 
        Indicates whether a customer has given consent to being contacted by your brand using the customer's email address.
 
-       .. important:: The field to which this semantic tag is applied **must** have a Boolean data type. If the data source to which you want to apply this tag is not a Boolean, use a custom domain table to shape the data into a Boolean data type, and then apply this semantic tag.
+       .. important:: The field to which this semantic tag is applied **must** have a **Boolean** data type. If the data source to which you want to apply this tag is not a **Boolean**, use a custom domain table to shape the data into a **Boolean** data type, and then apply this semantic tag.
 
    * - **language-preference**
      - String
@@ -1473,7 +1473,7 @@ The following table lists the tags available to this semantic group (with requir
 
        Indicates whether a customer has opted-in to being contacted by your brand using the customer's phone number.
 
-       .. important:: The field to which this semantic tag is applied **must** have a Boolean data type. If the data source to which you want to apply this tag is not a Boolean, use a custom domain table to shape the data into a Boolean data type, and then apply this semantic tag.
+       .. important:: The field to which this semantic tag is applied **must** have a **Boolean** data type. If the data source to which you want to apply this tag is not a **Boolean** data type, use a custom domain table to shape the data into a **Boolean** data type, and then apply this semantic tag.
 
    * - **language-preference**
      - String
@@ -1784,7 +1784,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-birthdate-start
           :end-before: .. term-birthdate-end
 
-       .. tip:: A field that is tagged with the **birthdate** semantic tag will return an error when the feed is saved and the data type is not set to Date.
+       .. tip:: A field that is tagged with the **birthdate** semantic tag will return an error when the feed is saved and the data type is not set to **Date**.
 
    * - **city**
      - String
@@ -1860,7 +1860,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-phone-start
           :end-before: .. term-phone-end
 
-       .. tip:: A field that is tagged with the **phone** semantic tag will return an error when the feed is saved and the data type is not set to String.
+       .. tip:: A field that is tagged with the **phone** semantic tag will return an error when the feed is saved and the data type is not set to **String**.
 
        .. important::
 
@@ -1881,7 +1881,7 @@ The following table lists the tags available to this semantic group:
 
        A full 9-digit ZIP code is derived from fields that contain ZIP code data.
 
-       .. tip:: A field that is tagged with the **postal** semantic tag will return an error when the feed is saved and the data type is not set to String.
+       .. tip:: A field that is tagged with the **postal** semantic tag will return an error when the feed is saved and the data type is not set to **String**.
 
    * - **state**
      - String

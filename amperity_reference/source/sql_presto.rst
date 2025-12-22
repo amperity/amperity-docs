@@ -2326,11 +2326,11 @@ Cast RFM as REAL data type
 
 .. sql-presto-function-cast-example-cast-rfm-as-real-start
 
-The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the ``real`` data type, which is a floating-point, 32-bit inexact, variable-precision value.
+The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the **REAL** data type, which is a floating-point, 32-bit inexact, variable-precision value.
 
 .. code-block:: sql
 
-   ,ROUND((CAST(Recency AS real) + CAST(Frequency AS real) + CAST(Monetary AS real)) / 3, 2) 
+   ,ROUND((CAST(Recency AS REAL) + CAST(Frequency AS REAL) + CAST(Monetary AS REAL)) / 3, 2) 
 
 .. sql-presto-function-cast-example-cast-rfm-as-real-end
 

@@ -55,7 +55,7 @@ Column types
        * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
        * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
 
-       .. important:: Some fields that store datetime values are set to the string data type.
+       .. important:: Some fields that store datetime values are set to the **string** data type.
 
    * - **decimal**
      - A fixed point number, such as for prices or message sizes. (The number of characters in the decimal value is configurable during feed setup.). For example:
@@ -731,7 +731,7 @@ You can delete all records in a domain table that are older than a date.
 #. From the **Sources** page, open the menu for a domain table, and then select **Delete records**. The **Delete records** dialog box opens.
 #. Under **Record criteria**, select "Older than a set date".
 
-   Select a field in the domain table with a datetime data type, and then select a date. You may use relative dates.
+   Select a field in the domain table with a **datetime** data type, and then select a date. You may use relative dates.
 
 #. Click **Preview deletion**, and then review the list of records that are returned.
 #. Click **Delete records**. In the **Remove records** dialog box, confirm that you want to delete the list of records by clicking **Remove records**.
@@ -757,7 +757,7 @@ You can delete all records in a domain table that exist between two dates.
 #. From the **Sources** page, open the menu for a domain table, and then select **Delete records**. The **Delete records** dialog box opens.
 #. Under **Record criteria**, select "Within a set timeframe".
 
-   Select a field in the domain table with a datetime data type, and then select the start and end dates for the timeframe. You may use relative dates.
+   Select a field in the domain table with a **datetime** data type, and then select the start and end dates for the timeframe. You may use relative dates.
 
    .. note:: End dates are exclusive.
 

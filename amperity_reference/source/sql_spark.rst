@@ -2649,7 +2649,7 @@ DATE()
 
 .. sql-spark-function-date-start
 
-Use the **DATE(expression)** function to cast the value of "expression" to a date data type.
+Use the **DATE(expression)** function to cast the value of "expression" to a **date** data type.
 
 .. sql-spark-function-date-end
 
