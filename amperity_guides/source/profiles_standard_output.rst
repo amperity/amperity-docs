@@ -103,42 +103,21 @@ The following attributes are available from the **Customer Profiles** table.
 Identity Graph
 ==================================================
 
-.. standard-output-identity-graph-start
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-identity-graph-start
+   :end-before: .. term-identity-graph-end
 
-The **Identity Graph** table compiles rows in the **Unified Coalesced** table into a graph that maps each data source, along with the primary key for that data source and any customer keys, to the Amperity ID.
+.. include:: ../../amperity_operator/source/table_identity_graph.rst
+   :start-after: .. table-identity-graph-about-start
+   :end-before: .. table-identity-graph-about-end
 
-The **Identity Graph** table contains the following columns:
+.. include:: ../../amperity_operator/source/table_identity_graph.rst
+   :start-after: .. table-identity-graph-reference-start
+   :end-before: .. table-identity-graph-reference-end
 
-.. standard-output-identity-graph-end
-
-.. standard-output-identity-graph-table-start
-
-.. list-table::
-   :widths: 200 100 300
-   :header-rows: 1
-
-   * - Column Name
-     - Data type
-     - Description
-   * - **Amperity ID**
-     - String
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-amperity-id-column-start
-          :end-before: .. term-amperity-id-column-end
-
-       .. include:: ../../shared/terms.rst
-          :start-after: .. term-amperity-id-format-start
-          :end-before: .. term-amperity-id-format-end
-
-   * - **Datasource**
-     - String
-     - The name of the source data table.
-
-   * - **Customer Key**
-     - String
-     - The primary key and all customer keys from a data source coalesced into a single value.
-
-.. standard-output-identity-graph-table-end
+.. include:: ../../amperity_operator/source/table_identity_graph.rst
+   :start-after: .. table-identity-graph-reference-columns-start
+   :end-before: .. table-identity-graph-reference-columns-end
 
 
 .. _standard-output-merged-customers:

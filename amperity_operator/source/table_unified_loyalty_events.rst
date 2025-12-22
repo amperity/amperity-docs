@@ -41,7 +41,7 @@ The **Unified Loyalty Events** table is an optional table for the customer 360 d
 
 .. table-unified-loyalty-events-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified Loyalty Events".
 #. Set the build mode to **Passthrough**.
