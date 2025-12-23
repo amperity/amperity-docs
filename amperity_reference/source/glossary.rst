@@ -2356,6 +2356,13 @@ I
 J
 ==================================================
 
+.. _j-japs-olson:
+
+**Japs-Olson**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-japs-olson-start
+      :end-before: .. term-japs-olson-end
+
 
 .. _j-jdbc:
 

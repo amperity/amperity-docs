@@ -196,6 +196,16 @@ Cross Country Computer
    :end-before: .. term-ccc-end
 
 
+.. _direct-mail-sendto-channel-japs-olson:
+
+Japs-Olson
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-japs-olson-start
+   :end-before: .. term-japs-olson-end
+
+
 .. _direct-mail-sendto-channel-pebblepost:
 
 PebblePost
