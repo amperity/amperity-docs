@@ -199,6 +199,15 @@ Some objects are not copied to a sandbox:
 
    The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
 
+
+#. **Amperity Bridge shares**
+
+   Configured shares are not copied to a sandbox.
+
+   You can configure outbound shares in a sandbox, and then share data with Databricks, Snowflake, and Google BigQuery.
+
+   Always use unique share names in a sandbox. This ensures the fully qualified reference in Databricks, Snowflake, or Google BigQuery is different and sending data from the sandbox will not overwrite data sent from production.
+
 .. sandboxes-not-copied-end
 
 
