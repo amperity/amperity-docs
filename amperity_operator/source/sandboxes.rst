@@ -147,6 +147,16 @@ Short-lived sandboxes
    :end-before: .. sandboxes-best-practice-short-lived-end
 
 
+.. _sandboxes-best-practice-small-test-audiences:
+
+Very small test audiences
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/sandboxes.rst
+   :start-after: .. sandboxes-best-practice-small-test-audiences-start
+   :end-before: .. sandboxes-best-practice-small-test-audiences-end
+
+
 .. _sandboxes-howtos:
 
 Common activities
