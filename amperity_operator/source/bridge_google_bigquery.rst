@@ -824,6 +824,8 @@ Before you can create outbound sharing between Amperity and |destination-name| r
 
        .. important:: Amperity uses `BigQuery Omni <https://docs.cloud.google.com/bigquery/docs/omni-introduction>`__ |ext_link| to export data from Amazon S3 or Azure Blob Storage to the Google BigQuery ecosystem. BigQuery Omni processes queries in the same location as the dataset that contains the tables you're querying.
 
+          Your Amperity tenant *or* :doc:`configured storage <storage>` **must be** colocated in a `BigQuery Omni supported region <https://docs.cloud.google.com/bigquery/docs/locations#omni-loc>`__ |ext_link|.
+
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
