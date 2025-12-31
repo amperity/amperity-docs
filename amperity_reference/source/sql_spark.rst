@@ -615,7 +615,7 @@ NULL values
 
 .. sql-spark-style-guide-null-values-start
 
-Functions may fail when they encounter a **NULL** value and others may return **NULL** values if any of their arguments return **NULL** values. `Spark SQL handles NULL values in a variety of ways. <https://spark.apache.org/docs/3.5.5/sql-ref-null-semantics.html>`__ |ext_link|
+Functions may fail when they encounter a **NULL** value and other functions may return **NULL** values if any of their arguments return **NULL** values. `Spark SQL handles NULL values in a variety of ways. <https://spark.apache.org/docs/3.5.5/sql-ref-null-semantics.html>`__ |ext_link|
 
 .. sql-spark-style-guide-null-values-end
 
