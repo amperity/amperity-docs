@@ -55,11 +55,7 @@ The following sections describe the steps you will follow to set up and configur
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - **Define Audience, Exclusion, and Exit Conditions**
-
-       Use the **Journey setup** sidebar to define the audience.
-
-       **Who enters?**
+     - **Who enters?**
 
        .. include:: ../../amperity_reference/source/journeys.rst
           :start-after: .. journeys-setup-who-enters-start
@@ -71,11 +67,6 @@ The following sections describe the steps you will follow to set up and configur
           :start-after: .. journeys-setup-who-is-excluded-start
           :end-before: .. journeys-setup-who-is-excluded-end
 
-       **Set Exit Conditions**
-
-        .. include:: ../../amperity_reference/source/journeys.rst
-           :start-after: .. journeys-exit-conditions-start
-           :end-before: .. journeys-exit-conditions-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
@@ -128,7 +119,7 @@ The following sections describe the steps you will follow to set up and configur
 
        On the **Journeys** canvas, under an existing node, click the plus symbol and then choose **Conditional split**.
 
-       Name the conditional split node and then add paths. For each path, define the sub-audience using a segment or custom criteria.
+       Name the delay node and then add paths. For each path, define the sub-audience using a segment or custom criteria.
 
 
    * - .. image:: ../../images/steps-06.png
@@ -144,7 +135,7 @@ The following sections describe the steps you will follow to set up and configur
 
        On the **Journeys** canvas, under an existing node, click the plus symbol and then choose **Percent split**.
 
-       Name the percent split node and then add paths. For each path, define the percentages.
+       Name the delay node and then add paths. For each path, define the percentages.
 
        A control group is set to 10% by default. You may increase or decrease the size of the control group. Control groups use the concepts of `people-based measurement <https://docs.amperity.com/ampiq/people_based_measurement>`__ to assign customers to control and treatment groups, which gives marketers the ability to accurately measure the incremental effects of a campaign.
 

@@ -132,8 +132,4 @@ Use the audience canvas to build marketing campaigns for all stages of a custome
       :link-type: ref
       :link: journeys-schedule-a-journey
 
-   .. grid-item-card:: Journeys use case examples
-      :link-type: ref
-      :link: journeys-sample-use-cases
-
 .. grid-journeys-create-grid-end
