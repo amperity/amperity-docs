@@ -2191,6 +2191,14 @@ I
       :end-before: .. term-idfa-end
 
 
+.. _i-identity-graph:
+
+**identity graph**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-identity-graph-start
+      :end-before: .. term-identity-graph-end
+
+
 .. _i-identity-provider:
 
 **identity provider**, **IdP**, **IDP**
@@ -2347,6 +2355,13 @@ I
 
 J
 ==================================================
+
+.. _j-japs-olson:
+
+**Japs-Olson**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-japs-olson-start
+      :end-before: .. term-japs-olson-end
 
 
 .. _j-jdbc:
@@ -5184,7 +5199,7 @@ V
 
    .. image:: ../../images/mockup-segments-tab-vse.png
       :width: 600 px
-      :alt: The Visual Segments Editor located within the Segments page in Amperity.
+      :alt: The Visual Segment Editor located within the Segments page in Amperity.
       :align: left
       :class: no-scaled-link
 

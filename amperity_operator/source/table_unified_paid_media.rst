@@ -55,7 +55,7 @@ The **Unified Paid Media** table is an optional table for the customer 360 datab
 
 .. table-unified-paid-media-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified_Paid_Media".
 #. Set the build mode to **SQL**.

@@ -59,7 +59,7 @@ The **Days Since Last Order** and **Historical Order Frequency Lifetime** column
 
 .. table-predicted-clv-attributes-add-as-sql-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Set **Build Mode** to "SQL", and then use a **SELECT** statement similar to the following to define the schema:
 

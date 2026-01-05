@@ -51,7 +51,7 @@ To add a **Event Propensity** table you must extend the customer 360 database to
 
 .. table-event-propensity-add-table-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Event Propensity" or some other name that identifies this table as the event propensity table for your tenant.
 #. Set the build mode to **SQL**.

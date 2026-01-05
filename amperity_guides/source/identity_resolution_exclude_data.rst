@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        xxxxx
+        Some values in source data tables should be excluded from unified customer profiles in Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        xxxxx
+        Some values in source data tables should be excluded from unified customer profiles in Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

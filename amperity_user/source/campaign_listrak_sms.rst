@@ -57,6 +57,10 @@ Build a segment
    :start-after: .. channels-build-segment-start
    :end-before: .. channels-build-segment-end
 
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-optin-start
+   :end-before: .. destination-listrak-sms-howitworks-optin-end
+
 .. _attributes:
 
 .. channel-listrak-sms-configure-attributes-start

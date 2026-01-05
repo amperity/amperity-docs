@@ -1152,9 +1152,9 @@ Churn prevention is a process of identifying, and then marketing to users who ar
 
 Churn propensity is a predictive model that finds the likelihood that a customer is active based on their purchase history. The churn propensity model outputs a score between 0 and 1 that represents a customer's probability of returning to make a purchase.
 
-* A score closer to 0 indicates a low probability of churn, suggesting the customer is likely to remain active.
+* A score closer to 1 indicates a low probability of churn, suggesting the customer is likely to remain active.
 
-* A score closer to 1 indicates a high probability of churn, suggesting the customer is at risk of leaving.
+* A score closer to 0 indicates a high probability of churn, suggesting the customer is at risk of leaving.
 
 .. term-churn-propensity-end
 
@@ -2804,7 +2804,7 @@ A fiscal calendar is a yearly accounting period that aligns the weeks and months
 
 .. term-fk-start
 
-The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace. For example: **fk-customer**, **fk-interaction**, **fk-audience**, or **fk-brand**.
+The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace and "namespace" is a string of characters. For example: **fk-customer-id**, **fk-interaction**, **fk-audience**, **fk-loyalty-id**, or **fk-brand**.
 
 .. term-fk-end
 
@@ -3236,6 +3236,15 @@ The Identifier for Advertisers (IDFA) is a random device identifier that tracks 
 .. term-idfa-end
 
 
+**identity graph**
+
+.. term-identity-graph-start
+
+An identity graph links rows of data to individual customers, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers your brand collects. This identity graph is the foundation of unified customer profiles and provides the necessary links for activating marketing campaigns and journeys, as well as integrating with operational systems.
+
+.. term-identity-graph-end
+
+
 **identity provider**, **IdP**, **IDP**
 
 .. term-identity-provider-start
@@ -3478,6 +3487,15 @@ An itemized transactions semantic is a way to identify brands, channels, stores,
 Iterable enables brands to create, execute and optimize campaigns across email, push, SMS, in-app and more with unparalleled data flexibility.
 
 .. term-iterable-end
+
+
+**Japs-Olson**
+
+.. term-japs-olson-start
+
+`Japs-Olson <https://japsolson.com/>`__ |ext_link| is a direct mail partner that offers complete services for print, envelope, and direct mail, along with response and data optimization strategies that maximize response rates from print and in-house mailing services.
+
+.. term-japs-olson-end
 
 
 **Java Database Connectivity (JDBC)**

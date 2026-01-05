@@ -214,7 +214,7 @@ The marketing engagement data schema supports the following fields:
 
        #. Converts the characters to lower case
        #. Removes the **+** character, along with any characters between the **+** and the **@** symbol
-       #. Uses the VARCHAR data type
+       #. Uses the **VARCHAR** data type
 
    * - **Opened_Timestamp**
      - The timestamp at which the customer opened the email. For example: "1614080616D".
@@ -278,7 +278,7 @@ The segment data schema supports the following fields:
 
        #. Converts the characters to lower case
        #. Removes the **+** character, along with any characters between the **+** and the **@** symbol
-       #. Uses the VARCHAR data type
+       #. Uses the **VARCHAR** data type
 
    * - **loyalty**
      - Associated with the **children_count**, **registration_source**, and **profile_compl_flag** columns.

@@ -53,7 +53,7 @@ The **Email Engagement Attributes** table is a table that contains one email add
 
 .. table-email-engagement-attributes-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Email Engagement Attributes".
 #. Set the build mode to **SQL**.

@@ -421,7 +421,7 @@ NULL values
 
 .. sql-presto-style-guide-null-values-start
 
-Functions may fail when they encounter a **NULL** value and others may return **NULL** values if any of their arguments return **NULL** values.
+Functions may fail when they encounter a **NULL** value and other functions may return **NULL** values if any of their arguments return **NULL** values.
 
 * Use the **COALESCE()** function to convert to a zero-length string when using the **CONCAT()** and **SUM()** functions.
 * Use the **COALESCE()** function to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because ``1`` is the identity for multiplication, use ``COALESCE(myColumn, 1)``
@@ -2303,6 +2303,22 @@ Use the **CAST(value AS type)** function to cast the value of ``value`` as ``typ
 .. sql-presto-function-cast-end
 
 
+.. _sql-presto-function-cast-example-convert-floats-to-decimals:
+
+Convert floating point values to decimals
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-cast-example-convert-floats-to-decimals-start
+
+A floating point value often has more digits than needed, such as for prices, tax amounts, or item prices. Use the **CAST()** function and specify a precision of **(38,2)**. This will convert a value like "4.263256414" into "4.26".
+
+.. code-block:: sql
+
+   COALESCE(CAST(taxes AS decimal(38,2))), 0.00) AS unit_tax_amount
+
+.. sql-presto-function-cast-example-convert-floats-to-decimals-end
+
+
 .. _sql-presto-function-cast-example-cast-rfm-as-real:
 
 Cast RFM as REAL data type
@@ -2310,11 +2326,11 @@ Cast RFM as REAL data type
 
 .. sql-presto-function-cast-example-cast-rfm-as-real-start
 
-The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the ``real`` data type, which is a floating-point, 32-bit inexact, variable-precision value.
+The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the **REAL** data type, which is a floating-point, 32-bit inexact, variable-precision value.
 
 .. code-block:: sql
 
-   ,ROUND((CAST(Recency AS real) + CAST(Frequency AS real) + CAST(Monetary AS real)) / 3, 2) 
+   ,ROUND((CAST(Recency AS REAL) + CAST(Frequency AS REAL) + CAST(Monetary AS REAL)) / 3, 2) 
 
 .. sql-presto-function-cast-example-cast-rfm-as-real-end
 

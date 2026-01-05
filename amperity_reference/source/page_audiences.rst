@@ -73,8 +73,8 @@ A segment defines a specific attribute profile for use with a marketing campaign
       :link-type: doc
       :link: segments
 
-   .. grid-item-card:: Segments Editor
+   .. grid-item-card:: Segment Editor
       :link-type: doc
-      :link: segments_editor
+      :link: segment_editor
 
 .. audiences-page-segments-grid-end

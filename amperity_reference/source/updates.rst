@@ -51,31 +51,25 @@ Fall 2025
 
    :bdg-success:`NEW` Configure Amperity to connect with `Google BigQuery <../operator/bridge_google_bigquery.html#to-google-bigquery>`__.
 
-
 **Bring your own storage**
 
    :bdg-success:`NEW` For new tenants, `use your own Microsoft Azure storage bucket <../operator/storage.html#provision-storage-on-microsoft-azure>`__ without significant architecture changes.
-
 
 **Campaign activation states**
 
    :bdg-success:`NEW` Keep track of customers who are `activated by a campaign <../user/activations.html#campaign-activation-states>`__, including by sub-audience or treatment, by destination, and frequency.
 
-
 **Custom prompts for AmpAI**
 
    :bdg-success:`NEW` Use :ref:`custom prompts <ampai-custom-prompt>` with AmpAI to align responses to specific business logic for the AI Assistant for segments and queries.
-
 
 **Custom segment metrics**
 
    :bdg-success:`NEW` Define :ref:`custom segment metrics <segments-howitworks-custom-segment-metrics>` that track key indicators that are meaningful to your business.
 
-
 **Journey activation states**
 
    :bdg-success:`NEW` Keep track of customers who have `entered a journey <../user/activations.html#journey-activation-states>`__, moved through specific nodes, and first and last entry.
-
 
 **Learning Lab courses**
 
@@ -84,7 +78,6 @@ Fall 2025
 **Merge paths in journeys**
 
    :bdg-success:`NEW` A merge node :ref:`joins paths defined by conditional splits or percent splits <journeys-node-merge>` back into a shared pathway within a journey.
-
 
 **Multi-factor authentication**
 
@@ -102,7 +95,7 @@ Summer 2025
 
 **Activation activity**
 
-   :bdg-success:`NEW` Use the Segments Editor to apply customer `activation activity <http://docs.amperity.com/user/activations.html#activation-activity>`__ to segments used with campaigns and journeys.
+   :bdg-success:`NEW` Use the Segment Editor to apply customer `activation activity <http://docs.amperity.com/user/activations.html#activation-activity>`__ to segments used with campaigns and journeys.
 
 **AI Assistant**
 

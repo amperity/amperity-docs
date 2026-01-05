@@ -41,15 +41,13 @@ The SFTP site is provisioned by an Amperity administrator after the initial tena
 
 Once provisioned, you may configure the SFTP site to support any desired SFTP workflow. External customer processes can be configured to connect to the site using SFTP, after which they can add data to or pick up data from the site to support any upstream or downstream workflow.
 
+.. include:: ../../shared/file-formats.rst
+   :start-after: .. formats-sftp-data-retention-start
+   :end-before: .. formats-sftp-data-retention-end
+
+The hostname for the SFTP site is always |sftp-hostname|. Some older tenants may use the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
+
 .. about-tenant-sftp-provisioned-end
-
-.. about-tenant-sftp-provisioned-start
-
-.. note:: The SFTP server has a 30-day limit on data and after 30 days, data will be removed.
-
-   The hostname for the SFTP site is always |sftp-hostname|. Some older tenants may still be using the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
-
-.. about-tenant-sftp-note-end
 
 
 .. _source-sftp-amperity-list:

@@ -1909,6 +1909,26 @@ The username and password of a Salesforce account configured for API access.
 
 
 
+.. vale off
+
+**SAP EMARSYS**
+
+.. vale on
+
+SAP Emarsys uses OAuth, but for this connector you must provide the client ID and client secret as a config setting in Amperity.
+
+**Client ID and secret**
+
+.. setting-sap-emarsys-client-id-and-secret-start
+
+A client ID and client secret with permission to access your instance of |destination-name|. These values are part of the `API credentials <https://help.sap.com/docs/SAP_EMARSYS/5d44574160f44536b0130abf58cb87cc/fdf4b58974c110149353957a3e7ef453.html?locale=en-US&state=PRODUCTION&version=CLOUD&q=client%20id>`__ |ext_link| configured for your instance of |destination-name|.
+
+.. important:: The OAuth user associated with the client ID and secret must have `contact, contactlist, and field <https://dev.emarsys.com/docs/emarsys-core-api-guides/ef41493bd7812-endpoint-permission-settings>`__ |ext_link| permissions to the SAP Emarsys Rest API.
+
+.. setting-sap-emarsys-client-id-and-secret-end
+
+
+
 
 .. vale off
 

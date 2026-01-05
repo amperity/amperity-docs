@@ -40,6 +40,34 @@ Configure campaigns for Listrak SMS
    :end-before: .. destination-listrak-sms-context-end
 
 
+.. _campaign-listrak-sms-howitworks:
+
+How this destination works
+==================================================
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-start
+   :end-before: .. destination-listrak-sms-howitworks-end
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-optin-start
+   :end-before: .. destination-listrak-sms-howitworks-optin-end
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-endpoints-start
+   :end-before: .. destination-listrak-sms-howitworks-endpoints-end
+
+.. image:: ../../images/howitworks-listrak-sms.png
+   :width: 600 px
+   :alt: Listrak SMS connector
+   :align: left
+   :class: no-scaled-link
+
+.. include:: ../../amperity_operator/source/destination_listrak_sms.rst
+   :start-after: .. destination-listrak-sms-howitworks-table-start
+   :end-before: .. destination-listrak-sms-howitworks-table-end
+
+
 .. _campaign-listrak-sms-get-details:
 
 Get details
@@ -136,6 +164,8 @@ Get details
              :end-before: .. setting-listrak-default-list-name-end
 
        **Sender code ID**
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-sms-sender-code-id-start
@@ -334,6 +364,8 @@ Add destination
                 :end-before: .. setting-listrak-default-list-name-end
 
        **Sender code ID**
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-listrak-sms-sender-code-id-start

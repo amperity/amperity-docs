@@ -27,6 +27,16 @@ About the Segment Editor
    :align: left
    :class: no-scaled-link
 
+.. _segments-ai-assistant:
+
+About the Segments AI Assistant
+==================================================
+
+.. segments-ai-assistant-start
+
+The :doc:`Segments AI Assistant <assistant>` is a generative AI feature within the **Segment Editor** that lets you use natural language to generate and refine segments.
+
+.. segments-ai-assistant-end
 
 .. _segments-editor-names:
 
@@ -339,13 +349,13 @@ Boolean
 
 .. segments-editor-operator-boolean-start
 
-A Boolean data type represents true and false outcomes, such as "Has this person purchased more than once?" The answer is "Yes" or "No."
+A **Boolean** data type represents true and false outcomes, such as "Has this person purchased more than once?" The answer is "Yes" or "No."
 
 .. segments-editor-operator-boolean-end
 
 .. segments-editor-operator-boolean-list-start
 
-The following operators are available to all attributes with the Boolean data type:
+The following operators are available to all attributes with the **Boolean** data type:
 
 .. list-table::
    :widths: 300 300
@@ -375,15 +385,15 @@ Date
 
 .. segments-editor-operator-date-start
 
-A Date data type represents a day, a month, and a year. For example: a birthdate.
+A **date** data type represents a day, a month, and a year. For example: a birthdate.
 
-A Date data type accepts ``YYYY-MM-DD``.
+A **date** data type accepts ``YYYY-MM-DD``.
 
 .. segments-editor-operator-date-end
 
 .. segments-editor-operator-date-list-start
 
-The following operators are available to all attributes with the Date data type:
+The following operators are available to all attributes with the **date** data type:
 
 .. list-table::
    :widths: 300 300
@@ -431,15 +441,15 @@ Datetime
 
 .. segments-editor-operator-datetime-start
 
-A Datetime data type represents a date and time combination. For example: a date and time at which a customer made a purchase.
+A **datetime** data type represents a date and time combination. For example: a date and time at which a customer made a purchase.
 
-A Datetime data type accepts "YYYY-MM-DD hh:mm:ss".
+A **datetime** data type accepts "YYYY-MM-DD hh:mm:ss".
 
 .. segments-editor-operator-datetime-end
 
 .. segments-editor-operator-datetime-list-start
 
-The following operators are available to all attributes with the Datetime data type:
+The following operators are available to all attributes with the **datetime** data type:
 
 .. list-table::
    :widths: 300 300
@@ -487,17 +497,17 @@ Decimal
 
 .. segments-editor-operator-decimal-start
 
-A Decimal data type represents amounts, percentages, and scores.
+A **decimal** data type represents amounts, percentages, and scores.
 
-A Decimal data type accepts numeric values with a precision of 38 and a scale of 2. Precision is the number of digits that may be in the decimal value. Scale is the number of digits that may be to the right of the decimal point.
+A **decimal** data type accepts numeric values with a precision of 38 and a scale of 2. Precision is the number of digits that may be in the decimal value. Scale is the number of digits that may be to the right of the decimal point.
 
-.. note:: Amperity defaults precision and scale for the Decimal data type to 38 and 0: DECIMAL(38,2). The default value for scale may be configured in the feed for each data source.
+.. note:: Amperity defaults precision and scale for the **decimal** data type to 38 and 0: **DECIMAL(38,2)**. The default value for scale may be configured in the feed for each data source.
 
 .. segments-editor-operator-decimal-end
 
 .. segments-editor-operator-decimal-list-start
 
-The following operators are available to all attributes with the Decimal data type:
+The following operators are available to all attributes with the **decimal** data type:
 
 .. list-table::
    :widths: 300 300
@@ -551,15 +561,15 @@ Integer
 
 .. segments-editor-operator-integer-start
 
-An Integer data type represents quantities, such as items ordered, frequency of purchase, number of orders, clicks, and page visits.
+An **integer** data type represents quantities, such as items ordered, frequency of purchase, number of orders, clicks, and page visits.
 
-An Integer data type accepts numeric values with an implied scale of zero.
+An **integer** data type accepts numeric values with an implied scale of zero.
 
 .. segments-editor-operator-integer-end
 
 .. segments-editor-operator-integer-list-start
 
-The following operators are available to all attributes with the Integer data type:
+The following operators are available to all attributes with the **integer** data type:
 
 .. list-table::
    :widths: 300 300
@@ -613,15 +623,15 @@ String
 
 .. segments-editor-operator-string-start
 
-A String data type represents many things, such as identifiers, names of people, places, and products, and phone numbers.
+A **string** data type represents many things, such as identifiers, names of people, places, and products, and phone numbers.
 
-A String data type accepts A-Z, a-Z, underscores, and hyphens.
+A **string** data type accepts A-Z, a-Z, underscores, and hyphens.
 
 .. segments-editor-operator-string-end
 
 .. segments-editor-operator-string-list-start
 
-The following operators are available to all attributes with the String data type:
+The following operators are available to all attributes with the **string** data type:
 
 .. list-table::
    :widths: 300 300

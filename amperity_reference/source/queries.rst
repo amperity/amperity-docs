@@ -24,12 +24,12 @@ About queries
 
 .. _queries-ai-assistant:
 
-About the AI Assistant
+About the Queries AI Assistant
 ==================================================
 
 .. queries-ai-assistant-start
 
-The :doc:`AI Assistant <assistant>` is a generative AI feature within the SQL **Query Editor** that provides real-time insights while you author SQL queries against any database in the **Customer 360** page.
+The :doc:`Queries AI Assistant <assistant>` is a generative AI feature within the SQL **Query Editor** that provides real-time insights while you author SQL queries against any database in the **Customer 360** page.
 
 .. queries-ai-assistant-end
 

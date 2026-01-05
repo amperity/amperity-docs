@@ -60,7 +60,7 @@ Each different audience is sent down a different path toward activation in a mar
 * Additionally, this audience is further split, so that 75% receive a special promotion and 25% do not, to see how important an added incentive is for getting customers to purchase again.
 * Finally, the high-value customers who have not purchased in the last three months are contacted when the new products become available to make sure they are among the first to know.
 
-The journey can be further built out beyond this, with further splits based on whether or not customers purchase or how they engage with the communications they receive.
+The journey can be further built out beyond this, with additional splits based on whether or not customers purchase or how they engage with the communications they receive.
 
 .. journeys-howitworks-context-end
 
@@ -229,6 +229,16 @@ The following building blocks are available to users for creating journeys:
 
 .. journeys-node-types-end
 
+.. _journeys-ai-assistant:
+
+About the Journeys AI Assistant
+--------------------------------------------------
+
+.. journeys-ai-assistant-start
+
+The :doc:`Journeys AI Assistant <assistant>` is a generative AI feature within the **Journeys** canvas that lets you use natural language to edit and personalize journeys.
+
+.. journeys-ai-assistant-end
 
 .. _journeys-node-start:
 

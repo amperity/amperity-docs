@@ -66,6 +66,7 @@ html_copy_source = False
 html_show_sourcelink = False
 
 html_additional_pages = {
+    "quick_start": "quick_start.html",
     "start": "start.html",
 }
 

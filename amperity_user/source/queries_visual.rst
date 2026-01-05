@@ -133,7 +133,7 @@ The following sections describe how you can use the visual **Query Editor** to b
 AND vs. OR
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-and-vs-or-intro-start
    :end-before: .. segments-editor-and-vs-or-intro-end
 
@@ -143,6 +143,6 @@ AND vs. OR
 How AND vs. OR works
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-and-vs-or-start
    :end-before: .. segments-editor-and-vs-or-end

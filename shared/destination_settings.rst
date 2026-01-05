@@ -1747,11 +1747,13 @@ See common settings. This one defaults to "phone".
 
 .. setting-listrak-sms-optin-start
 
-.. caution:: Audience members sent to |destination-name| from Amperity are subscribed to a list and can receive SMS messages as the default behavior in |destination-name|. Audience members who do not exist in |destination-name| are created and subscribed by default.
+.. caution:: Audience members sent to |destination-name| from Amperity are automatically subscribed to a list and can receive SMS messages as the default behavior in |destination-name|. Audience members who did not already exist in |destination-name| are created and subscribed by default.
 
-   To avoid sending unsubscribed customers, apply filters to remove any customers who have unsubscribed from recieving SMS messages before sending audiences to |destination-name| using campaigns, journeys, or orchestrations.
+   To avoid sending unsubscribed customers, apply filters to remove any customers who have unsubscribed from receiving SMS messages before sending audiences to |destination-name| using campaigns, journeys, or orchestrations.
 
    Amperity updates the contact attributes of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, and **postal code**. Additional attributes may be sent when a matching custom segmentation field exists in |destination-name|.
+
+   Talk with your Amperity representative about the |destination-name| connector before configuring it in your tenant.
 
 .. setting-listrak-sms-optin-end
 
@@ -1785,7 +1787,7 @@ Select **Include attributes that match custom profile fields** to have Amperity 
 
 .. setting-listrak-sms-enable-segmentation-caveat-start
 
-.. important:: Custom attributes must be `configured as custom profile fields <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| before Amperity can send custom attributes with |destination-name| SMS profiles.
+.. important:: Custom attributes must be `configured as custom profile fields <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| in Listrak before Amperity can send custom attributes with |destination-name| profiles.
 
    The attribute name in Amperity **must** match the profile field name in |destination-name|. Attribute names are not case-sensitive.
 
@@ -2496,6 +2498,50 @@ Enable to use **NULL** values when fields are empty.
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
+
+
+
+.. vale off
+
+**SAP EMARSYS**
+
+.. vale on
+
+Settings unique to SAP Emarsys.
+
+**Contact identifier**
+
+.. setting-sap-emarsys-contact-identifier-start
+
+The contact identifier for contact lists managed by this destination. Possible values: "email" or "phone".
+
+.. setting-sap-emarsys-contact-identifier-end
+
+**Does the list exist?**
+
+.. setting-sap-emarsys-list-exists-start
+
+If Amperity is managing a list that already exists in |destination-name| configure the **Contact identifier** to match the one used by the list and ensure the name of the audience sent from Amperity matches the name of the contact list in |destination-name|.
+
+If the contact list name doesn't exist Amperity will create it. If it exists, Amperity will update membership.
+
+.. setting-sap-emarsys-list-exists-end
+
+**Profile attributes and custom fields**
+
+.. setting-sap-emarsys-attributes-and-fields-start
+
+Profile attributes sent to |destination-name| must match any of the `SAP Emarsys system fields <https://help.sap.com/docs/SAP_EMARSYS/5d44574160f44536b0130abf58cb87cc/fdf56fb974c110149470d0c1a7fb5ee9.html>`__ |ext_link| or any `custom fields <https://help.sap.com/docs/SAP_EMARSYS/f8e2fafeea804018a954a8857d9dfff3/bea073ce154d4839b41ae26b5e451624.html>`__ |ext_link| that you have defined.
+
+The name of the system or custom field sent from Amperity must match the name of the system attribute or custom field in |destination-name|.
+
+Amperity will automatically pass the Amperity ID to the contact list when a custom field named **external_id** exists in the contact list.
+
+.. important:: Log in to |destination-name| to find the correct string value for the system or custom field. Choose **Management** and open the **Field Editor**.
+
+   Use the **Field String ID** column to indentify the correct system or custom field name. System fields are available from the **System fields** tab and custom fields are available from the **Custom fields** tab.
+
+.. setting-sap-emarsys-attributes-and-fields-end
 
 
 

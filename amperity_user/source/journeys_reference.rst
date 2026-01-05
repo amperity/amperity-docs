@@ -454,7 +454,7 @@ Seasonal campaign
 
 .. journeys-use-case-seasonal-start
 
-Teh goal of a seasonal campaign journey is to drive revenue and brand engagement during key shopping periods (for example, Black Friday, Summer sale).
+The goal of a seasonal campaign journey is to drive revenue and brand engagement during key shopping periods (for example, Black Friday, Summer sale).
 
 .. admonition:: Why seasonal campaign journeys work
 

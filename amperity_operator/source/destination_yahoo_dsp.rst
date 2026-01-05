@@ -113,7 +113,7 @@ Get details
        * **storage-consent**
        * **personalization-consent**
 
-       Both fields have a Boolean data type and may be set to "true" or "false".
+       Both fields have a **Boolean** data type and may be set to "true" or "false".
 
        When these fields are present in an audience, any users for whom the fields are not set or are both set to "false" is omitted from the upload to |destination-name|. Only users who have both fields set and at least one field set to "true" are uploaded.
 
