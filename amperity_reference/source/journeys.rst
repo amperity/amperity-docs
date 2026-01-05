@@ -474,6 +474,55 @@ If the plus button is after a split node, there will also be the option to choos
 
 .. journeys-node-add-end
 
+.. _journeys-use-cases:
+
+Journey Use Cases
+==================================================
+
+.. journeys-reference-use-cases-start
+
+To help you get started with Journeys, Amperity provides sample journeys of common and effective use cases. These examples show how to structure your canvas flow and how to leverage different channels to achieve specific business goals.
+
+.. For a detailed walkthrough of each use case, see :ref:`journeys-sample-use-cases`.
+
+.. list-table:: **Sample Journey Use Cases**
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Use Case
+     - Goal
+
+   * - New customer
+     - Turn a new subscriber or customer into an engaged participant by providing helpful, sequenced information.
+
+   * - Abandoned cart
+     - Convert users who started a purchase but didn't finish.
+
+   * - Birthday
+     - Drive immediate, high-margin revenue through personalized, time-sensitive offers.
+
+   * - Product consideration
+     - Convert recent browsers or product page viewers into purchasers.
+
+   * - Cross-sell
+     - Increase Average Order Value (AOV) by recommending complementary products post-purchase.
+
+   * - Seasonal campaign
+     - Drive revenue during key shopping periods using high-precision audience segmentation.
+
+   * - Loyalty tier upgrade
+     - Incentivize high-value customers who are close to the next tier to achieve that level.
+
+   * - Car test drive
+     - Convert website interest into an in-person appointment or service booking.
+
+   * - Product replenishment
+     - Drive repeat purchases based on predicted product consumption cycles.
+
+   * - Financial services welcome
+     - Guide new account holders to full product adoption and usage (e.g., depositing funds, setting up direct deposit).
+
+.. journeys-reference-use-cases-end
 
 .. _journeys-howtos:
 
