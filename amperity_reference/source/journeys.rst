@@ -482,34 +482,34 @@ To help you get started with Journeys, Amperity provides sample journeys of comm
    * - Use Case
      - Goal
 
-   * - Welcome and onboarding
+   * - New customer
      - Turn a new subscriber or customer into an engaged participant by providing helpful, sequenced information.
 
    * - Abandoned cart
      - Convert users who started a purchase but didn't finish.
 
-   * - Birthday or loyalty milestone
+   * - Birthday
      - Drive immediate, high-margin revenue through personalized, time-sensitive offers.
 
-   * - Product consideration to purchase
+   * - Product consideration
      - Convert recent browsers or product page viewers into purchasers.
 
-   * - Cross-sell / complete-the-Look
+   * - Cross-sell
      - Increase Average Order Value (AOV) by recommending complementary products post-purchase.
 
-   * - Seasonal / holiday campaign
+   * - Seasonal campaign
      - Drive revenue during key shopping periods using high-precision audience segmentation.
 
-   * - VIP / loyalty tier upgrade
+   * - Loyalty tier upgrade
      - Incentivize high-value customers who are close to the next tier to achieve that level.
 
-   * - Test drive / service appointment (Automotive)
+   * - Car test drive
      - Convert website interest into an in-person appointment or service booking.
 
-   * - Skincare replenishment (or any subscription item)
+   * - Product replenishment
      - Drive repeat purchases based on predicted product consumption cycles.
 
-   * - Financial services onboarding
+   * - Financial services welcome
      - Guide new account holders to full product adoption and usage (e.g., depositing funds, setting up direct deposit).
 
 .. journeys-reference-use-cases-end
