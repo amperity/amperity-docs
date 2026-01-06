@@ -90,6 +90,7 @@ Site Index
    destination-tradedesk
    destination-tradedesk-offline-events
    destination-tradedesk-3rd-party
+   destination-tulip
    destination-vibes
    destination-webhook
    destination-yahoo-dsp
