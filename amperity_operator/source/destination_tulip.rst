@@ -7,7 +7,7 @@
 .. |required-credentials| replace:: "username", "hostname", and "private key"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: Tulip
-.. |sftp-hostname| replace:: , which is similar to "sftp-tulip-staging.tulipretail.com"
+.. |sftp-hostname| replace:: your brand's hostname, which is similar to "sftp-tulip-staging.tulipretail.com"
 .. |remote-folder| replace:: "/folder/name"
 .. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "sftp"

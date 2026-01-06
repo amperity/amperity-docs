@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: Tulip
 .. |file-format| replace:: CSV
-.. |sftp-hostname| replace:: "sftp.tulip.com"
+.. |sftp-hostname| replace:: your brand's hostname, which is similar to "sftp-tulip-staging.tulipretail.com"
 .. |remote-folder| replace:: "/folder"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
