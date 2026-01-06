@@ -481,45 +481,49 @@ Journey Use Cases
 
 .. journeys-reference-use-cases-start
 
-To help you get started with Journeys, Amperity provides sample journeys of common and effective use cases. These examples show how to structure your canvas flow and how to leverage different channels to achieve specific business goals.
+To help you get started with journeys, Amperity provides example journeys of common and effective use cases. These examples show how to structure your canvas flow and how to leverage different channels to achieve specific business goals.
 
-.. For a detailed walkthrough of each use case, see :ref:`journeys-sample-use-cases`.
+.. include:: ../../amperity_user/source/journeys_reference.rst
+   :start-after: .. journeys-use-case-examples-note-start
+   :end-before: .. journeys-use-case-examples-note-end
 
-.. list-table:: **Sample Journey Use Cases**
+**Sample Journey Use Cases**
+
+.. list-table::
    :widths: 30 70
    :header-rows: 1
 
    * - Use Case
      - Goal
 
-   * - New customer
+   * - `New customer <https://docs.amperity.com/user/journeys_reference.html#new-customer>`__
      - Turn a new subscriber or customer into an engaged participant by providing helpful, sequenced information.
 
-   * - Abandoned cart
+   * - `Abandoned cart <https://docs.amperity.com/user/journeys_reference.html#abandoned-cart>`__
      - Convert users who started a purchase but didn't finish.
 
-   * - Birthday
+   * - `Birthday <https://docs.amperity.com/user/journeys_reference.html#birthday>`__
      - Drive immediate, high-margin revenue through personalized, time-sensitive offers.
 
-   * - Product consideration
+   * - `Product consideration <https://docs.amperity.com/user/journeys_reference.html#product-consideration>`__
      - Convert recent browsers or product page viewers into purchasers.
 
-   * - Cross-sell
+   * - `Cross-sell <https://docs.amperity.com/user/journeys_reference.html#cross-sell>`__
      - Increase Average Order Value (AOV) by recommending complementary products post-purchase.
 
-   * - Seasonal campaign
+   * - `Seasonal campaign <https://docs.amperity.com/user/journeys_reference.html#seasonal-campaign>`__
      - Drive revenue during key shopping periods using high-precision audience segmentation.
 
-   * - Loyalty tier upgrade
+   * - `Loyalty tier upgrade <https://docs.amperity.com/user/journeys_reference.html#loyalty-tier-upgrade>`__
      - Incentivize high-value customers who are close to the next tier to achieve that level.
 
-   * - Car test drive
+   * - `Car test drive <https://docs.amperity.com/user/journeys_reference.html#car-test-drive>`__
      - Convert website interest into an in-person appointment or service booking.
 
-   * - Product replenishment
+   * - `Product replenishment <https://docs.amperity.com/user/journeys_reference.html#product-replenishment>`__
      - Drive repeat purchases based on predicted product consumption cycles.
 
-   * - Financial services welcome
+   * - `Financial services welcome <https://docs.amperity.com/user/journeys_reference.html#financial-services-welcome>`__
      - Guide new account holders to full product adoption and usage (e.g., depositing funds, setting up direct deposit).
 
 .. journeys-reference-use-cases-end

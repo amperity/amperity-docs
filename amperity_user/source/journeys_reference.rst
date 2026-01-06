@@ -223,7 +223,11 @@ Journeys use case examples
 
 The following examples demonstrate how to structure a journey in the Journeys canvas to achieve specific business outcomes.
 
-.. note:: These are hypothetical examples to give a sense of what is possible. Use them as inspiration or a starting point to structure a journey that fits your brand's particular circumstances. 
+.. journeys-use-case-examples-note-start
+
+.. note:: These are hypothetical examples to give a sense of what is possible. Use them as inspiration or a starting point to structure a journey that fits your brand's particular circumstances.
+
+.. journeys-use-case-examples-note-end
 
 .. _journeys-use-case-new-customer:
 
