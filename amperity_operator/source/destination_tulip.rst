@@ -8,7 +8,7 @@
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: Tulip
 .. |sftp-hostname| replace:: your brand's hostname, which is similar to "sftp-tulip-staging.tulipretail.com"
-.. |remote-folder| replace:: "/folder/name"
+.. |remote-folder| replace:: "<yourtenant>/upload/"
 .. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "sftp"
 
