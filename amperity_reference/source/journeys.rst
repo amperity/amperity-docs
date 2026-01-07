@@ -481,13 +481,13 @@ Journey Use Cases
 
 .. journeys-reference-use-cases-start
 
-To help you get started with journeys, Amperity provides example journeys of common and effective use cases. These examples show how to structure your canvas flow and how to leverage different channels to achieve specific business goals.
+To help you get started with journeys, Amperity provides example journeys of common and effective use cases. These examples show how to structure your canvas flow and how to use different channels to achieve specific business goals.
 
 .. include:: ../../amperity_user/source/journeys_reference.rst
    :start-after: .. journeys-use-case-examples-note-start
    :end-before: .. journeys-use-case-examples-note-end
 
-**Sample Journey Use Cases**
+**Example journeys use cases**
 
 .. list-table::
    :widths: 30 70
