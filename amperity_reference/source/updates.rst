@@ -40,6 +40,35 @@ What is new and what has changed?
 .. TODO: :bdg-light:`UPDATED`
 
 
+.. _updates-2026-winter:
+
+Winter 2026
+==================================================
+
+.. updates-2026-winter-start
+
+**AI Assistant**
+
+   :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Journeys** page.
+
+
+**Destination topics**
+
+   :bdg-success:`NEW` New destinations for `Oracle Emarsys <../operator/destination_oracle_emarsys.html>`__ and `Tulip <../operator/destination_tulip.html>`__.
+
+
+**Incremental matching**
+
+   :bdg-success:`NEW` An `incremental Stitch run <../operator/stitch.html#incremental-match>`__ does not reevaluate existing profiles and only attaches new records to existing profiles *or* creates new profiles. Profiles are not split or merged. PII is not reassigned.
+
+
+**Source topics**
+
+   :bdg-success:`NEW` New sources for `Toast <../operator/source_toast.html>`__.
+
+.. updates-2026-winter-end
+
+
 .. _updates-2025-fall:
 
 Fall 2025
