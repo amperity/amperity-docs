@@ -223,7 +223,11 @@ Journeys use case examples
 
 The following examples demonstrate how to structure a journey in the Journeys canvas to achieve specific business outcomes.
 
-.. note:: These are hypothetical examples to give a sense of what is possible. Use them as inspiration or a starting point to structure a journey that fits your brand's particular circumstances. 
+.. journeys-use-case-examples-note-start
+
+.. note:: These are hypothetical examples to give a sense of what is possible. Use them as inspiration or a starting point to structure a journey that fits your brand's particular circumstances.
+
+.. journeys-use-case-examples-note-end
 
 .. _journeys-use-case-new-customer:
 
@@ -238,7 +242,27 @@ The goal of a new customer journey is to turn a new customer into an engaged par
 
    A new customer journey ensures the customer receives prompt, relevant communication, and non-engaged users get an additional message on a separate channel with an incentive to act quickly.
 
-**Example new customer journey flow:**
+**Example basic new customer journey**
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Step
+     - Description
+   * - **Start**
+     - Customer meets the "First-time buyer" segment criteria.
+   * - **Activate** 
+     - Send a personalized "Welcome" email with a thank you and brand story/mission.
+   * - **Delay**
+     - Wait 24 hours.
+   * - **Activate**
+     - Send a short, high value SMS (for example, "Use code WELCOME10 for 10% off your next order!"). 
+   * - **Exit**
+     - Customers exit a new customer journey when they complete a second purchase.
+
+
+**Example new customer journey flow with split:**
 
 .. list-table::
    :widths: 30 70
@@ -251,14 +275,14 @@ The goal of a new customer journey is to turn a new customer into an engaged par
    * - **Activate** 
      - Send a personalized "Welcome" email with a thank you and brand story/mission.
    * - **Conditional split** 
-     - Check if the customer has made a purchase or viewed a product page within 7 days.
+     - Check if the customer has viewed a product page within 7 days.
    * - **Path A (Engaged)**
-     - **Activate:** Send a "Tips and Tricks" email relevant to their purchased/viewed product.
+     - **Activate:** Send a "Tips and Tricks" email relevant to their viewed product.
    * - **Path B (Not Engaged)**
      - For customers who have not made a second purchase or viewed any additional products, take the following steps: 
        
        #. **Delay:** Wait 3 days.
-       #. **Activate:** Send a short, high-value SMS (for example, "Use code WELCOME10 for 10% off your first order!").
+       #. **Activate:** Send a short, high value SMS (for example, "Use code WELCOME10 for 10% off your next order!").
    * - **Exit** 
      - Customers exit a new customer journey when they complete a second purchase.
 
