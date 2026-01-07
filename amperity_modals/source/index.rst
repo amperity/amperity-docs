@@ -93,6 +93,7 @@ Site Index
    destination-tulip
    destination-vibes
    destination-webhook
+   destination-webhook-single-record
    destination-yahoo-dsp
    destination-zendesk
    openapi
