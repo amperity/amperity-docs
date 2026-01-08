@@ -1351,6 +1351,21 @@ The key to use for audience matching in |destination-name|. May be one of "Conta
 
 
 
+.. vale off
+
+**GOOGLE ANALYTICS 4 (GA4)** (destination)
+
+.. vale on
+
+Settings unique to Google Analytics 4 (GA4).
+
+.. setting-google-analytics-xxxxx-start
+
+.. TODO: Currently: None.
+
+.. setting-google-analytics-xxxxx-end
+
+
 
 
 .. vale off
