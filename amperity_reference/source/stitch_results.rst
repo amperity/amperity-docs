@@ -88,6 +88,52 @@ After you have selected the list of tables to include in Stitch results, return 
 .. stitch-run-select-tables-note-end
 
 
+.. _stitch-run-types:
+
+About Stitch run types
+--------------------------------------------------
+
+.. stitch-run-types-start
+
+A Stitch workflow runs out-of-date source transforms and automatic databases. A Stitch workflow has the following options for reevaluating customer profiles:
+
+* :ref:`stitch-run-type-force-refresh`
+* :ref:`stitch-run-type-incremental-match`
+* :ref:`stitch-run-type-normal`
+
+.. stitch-run-types-end
+
+
+.. _stitch-run-type-force-refresh:
+
+Force refresh
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-force-refresh-start
+   :end-before: .. stitch-run-type-force-refresh-end
+
+
+.. _stitch-run-type-incremental-match:
+
+Incremental matching
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-incremental-match-start
+   :end-before: .. stitch-run-type-incremental-match-end
+
+
+.. _stitch-run-type-normal:
+
+Normal
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-normal-start
+   :end-before: .. stitch-run-type-normal-end
+
+
 .. _stitch-run-about:
 
 About the Stitch run

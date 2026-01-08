@@ -122,12 +122,32 @@ The following alerts can be configured:
 
 .. _workflows-configure-run-type:
 
-Set the run type
+Set the workflow run type
 --------------------------------------------------
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
    :start-after: .. courier-groups-run-types-start
    :end-before: .. courier-groups-run-types-end
+
+
+.. _workflows-configure-stitch-run-type:
+
+Select Stitch run type
+--------------------------------------------------
+
+.. workflows-configure-stitch-run-type-start
+
+Choose the Stitch run type for the scheduled workflow:
+
+* .. include:: ../../amperity_operator/source/stitch.rst
+     :start-after: .. stitch-run-type-force-refresh-start
+     :end-before: .. stitch-run-type-force-refresh-end
+
+* .. include:: ../../amperity_operator/source/stitch.rst
+     :start-after: .. stitch-run-type-incremental-match-start
+     :end-before: .. stitch-run-type-incremental-match-end
+
+.. workflows-configure-stitch-run-type-end
 
 
 .. _workflows-couriers:
