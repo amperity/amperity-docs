@@ -3635,6 +3635,14 @@ P
       :end-before: .. term-profile-api-end
 
 
+.. _p-pseudonymous-identifier:
+
+**Pseudonymous identifier**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-pseudonymous-identifier-start
+      :end-before: .. term-pseudonymous-identifier-end
+
+
 .. _p-psv:
 
 **PSV**, **pipe-separated values**
