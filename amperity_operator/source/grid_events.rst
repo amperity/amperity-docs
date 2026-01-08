@@ -34,6 +34,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_criteo
 
+   .. grid-item-card:: Google Analytics 4
+      :link-type: doc
+      :link: events_google_analytics
+
    .. grid-item-card:: Google Enhanced Conversions
       :link-type: doc
       :link: events_google_enhanced_conversions
@@ -59,6 +63,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    :hidden:
 
    Criteo <events_criteo>
+   Google Analytics 4 <events_google_analytics>
    Google Enhanced Conversions <events_google_enhanced_conversions>
    Meta Ads Manager <events_meta_ads_manager>
    The Trade Desk <events_the_trade_desk>
