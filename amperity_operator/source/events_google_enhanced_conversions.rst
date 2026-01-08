@@ -20,7 +20,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send events to Google Enhanced Conversions
+        Configire events for Google Enhanced Conversions
 
 =======================================================
 Configure events for Google Enhanced Conversions

@@ -24,7 +24,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send events to The Trade Desk
+        Configire events for The Trade Desk
 
 ==================================================
 Configure events for The Trade Desk

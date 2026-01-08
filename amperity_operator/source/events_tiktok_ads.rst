@@ -23,7 +23,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send events to TikTok Ads
+        Configure events for TikTok Ads
 
 ==================================================
 Configure events for TikTok Ads
