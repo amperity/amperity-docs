@@ -96,6 +96,10 @@ Fall 2025
 
    :bdg-success:`NEW` Define :ref:`custom segment metrics <segments-howitworks-custom-segment-metrics>` that track key indicators that are meaningful to your business.
 
+**Destination topics**
+
+   :bdg-success:`NEW` New destinations for `Listrak SMS <../operator/destination_listrak_sms.html>`__.
+
 **Journey activation states**
 
    :bdg-success:`NEW` Keep track of customers who have `entered a journey <../user/activations.html#journey-activation-states>`__, moved through specific nodes, and first and last entry.
