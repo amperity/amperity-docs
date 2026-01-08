@@ -46,6 +46,7 @@ Site Index
    destination-facebook
    destination-gcs
    destination-google-ads
+   destination-google-analytics-offline-events
    destination-google-customer-match
    destination-google-enhanced-conversions
    destination-hubspot
