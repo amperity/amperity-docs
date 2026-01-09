@@ -1123,7 +1123,7 @@ To find the measurement ID log in to Google Analytics. Expand **Data collection*
 
 .. credential-google-analytics-verify-credential-start
 
-|destination-name| only `validates purchase events <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=firebase#payload_validation_info>`__ |ext_link|. |destination-name| does not validate the measurement ID *or* the API secret associated with the payload. Verify that you have configured the correct measurement ID *and* added the correct API secret for that measurement ID.
+|destination-name| only `validates purchase events <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=firebase#payload_validation_info>`__ |ext_link|. |destination-name| does not validate the measurement ID *or* the API secret associated with the payload. Verify that you have configured the correct measurement ID *and* added the correct API secret for the measurement ID.
 
 .. credential-google-analytics-verify-credential-end
 
