@@ -284,7 +284,7 @@ Information for the query that sends purchase events data to |destination-name| 
 
       #. Build a custom SQL table in your customer 360 database for |destination-name| data.
 
-      #. Use a **SELECT** statement and a common table expression to select columns from the |destination-name| source table. The **USER_PSEUDO_ID**, **TRANSACTION_ID**, **USER_ID** columns |destination-name| source data must be selected, along with a column with a unique value that matches a unique value in a table evaluated by Stitch and in which rows are assigned an Amperity ID.
+      #. Use a **SELECT** statement and a common table expression to select columns from the |destination-name| source table. The **USER_PSEUDO_ID**, **SESSION_ID**, **TRANSACTION_ID**, **USER_ID** columns |destination-name| source data must be selected, along with a column with a unique value that matches a unique value in a table evaluated by Stitch and in which rows are assigned an Amperity ID.
 
       #. Use an **INNER JOIN** to add the Amperity ID to rows in the |destination-name| database table using the shared unique identifier as the join key.
 
@@ -352,6 +352,7 @@ The following SQL example shows how to return purchase events data from three ta
    SELECT
      ut.amperity_id
      ,ga.USER_PSEUDO_ID AS client_id
+     ,ga.SESSION_ID AS session_id
      ,ga.TRANSACTION_ID AS transaction_id
      ,ga.USER_ID AS user_id
      ,ut.currency
@@ -510,6 +511,12 @@ All fields, including optional fields, are listed alphabetically, but may be ret
        The quantity of items purchased. If a quantity is not specified the quantity is "1". Applies only to individual items within a transaction.
 
 
+   * - **session_id**
+     - **SESSION_ID**
+
+       A timestamp that identifies the start of a session. For example: ``485123456.1767654321.1769876543``. Combined with **user_id** or **client_id** a **session_id** uniquely identifies a session.
+
+
    * - **shipping**
      - **Optional**
 
@@ -602,7 +609,7 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
        The **client_id** is required to associate events with existing sessions of |destination-name|. Must be a non-empty numeric string. For example: ``310123456.1739876543``.
 
-       The source for **client_id** is a table in your customer 360 database with |destination-name| data that has been evaluated by Stitch and has rows of data assigned an Amperity ID. The client ID is available from a field named **USER_PSEUDO_ID**.
+       The source for **client_id** is a table in your customer 360 database with |destination-name| data with rows of data assigned an Amperity ID. The client ID is available from a field named **USER_PSEUDO_ID**.
 
 
    * - **coupon**
@@ -706,6 +713,14 @@ All fields, including optional fields, are listed alphabetically, but may be ret
        Use the **Item Quantity** field in the **Unified Itemized Transactions** table.
 
 
+   * - **session_id**
+     - **SESSION_ID**
+
+       A timestamp that identifies the start of a session. For example: ``485123456.1767654321.1769876543``. Combined with **user_id** or **client_id** a **session_id** uniquely identifies a session.
+
+       The source for **session_id** is a table in your customer 360 database with |destination-name| data with rows of data assigned an Amperity ID. The session ID is available from a field named **SESSION_ID**.
+
+
    * - **shipping**
      - **Order Shipping Amount**
 
@@ -739,7 +754,7 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
        The **transaction_id** is required for deduplicating purchase events and must be a non-empty numeric string.
 
-       The source for **transaction_id** is a table in your customer 360 database with |destination-name| data that has been evaluated by Stitch and has rows of data assigned an Amperity ID. The transaction ID is available from a field named **TRANSACTION_ID**.
+       The source for **transaction_id** is a table in your customer 360 database with |destination-name| data with rows of data assigned an Amperity ID. The transaction ID is available from a field named **TRANSACTION_ID**.
 
 
    * - **user_id**
@@ -747,7 +762,7 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
        A unique user identifier within |destination-name| that links events to known users. Must be a non-empty string. For example: ``12345678``.
 
-       The source for **user_id** is a table in your customer 360 database with |destination-name| data that has been evaluated by Stitch and has rows of data assigned an Amperity ID. The user ID is available from a field named **USER_ID**.
+       The source for **user_id** is a table in your customer 360 database with |destination-name| data with rows of data assigned an Amperity ID. The user ID is available from a field named **USER_ID**.
 
 
    * - Custom parameters
