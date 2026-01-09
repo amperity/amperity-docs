@@ -548,6 +548,13 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
        .. important:: Amperity calculates the total **value** for a transaction using the **price** and **quantity** purchase events paramaters. **value** is the sum of the price and quantity for all items purchased in a single transaction, not including shipping costs or taxes.
 
+
+   * - Custom parameters
+     - **Optional**
+
+       Up to `27 custom parameters <https://developers.google.com/analytics/devguides/collection/ga4/item-scoped-ecommerce>`__ |ext_link| may be included in purchase events sent to |destination-name|.
+
+
 .. events-google-analytics-event-parameters-table-end
 
 
