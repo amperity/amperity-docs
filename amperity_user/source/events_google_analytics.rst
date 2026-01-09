@@ -60,7 +60,7 @@ Extend the SQL to include :ref:`any of the additional fields <events-google-anal
 
 .. _events-google-analytics-event-parameters:
 
-Fields for purchase events
+GA4 events parameters
 ==================================================
 
 .. include:: ../../amperity_operator/source/events_google_analytics.rst

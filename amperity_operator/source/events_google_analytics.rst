@@ -343,7 +343,7 @@ Use an orchestration to send purchase events data to |destination-name|.
 
 .. _events-google-analytics-event-parameters:
 
-Purchase events parameters
+GA4 events parameters
 ==================================================
 
 .. events-google-analytics-event-parameters-start
@@ -702,5 +702,4 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
        The source for **user_id** is a table in your customer 360 database with |destination-name| data that has been evaluated by Stitch and has rows of data assigned an Amperity ID. The user ID is available from a field named **USER_ID**.
 
-.. events-google-analytics-event-map-parameters-table-end
 .. events-google-analytics-event-map-parameters-table-end
