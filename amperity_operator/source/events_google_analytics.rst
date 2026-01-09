@@ -276,7 +276,7 @@ Information for the query that sends purchase events data to |destination-name| 
 #. **Unified Itemized Transactions** has item-level purchase events data.
 #. A table with unique identifiers from |destination-name|. The following example uses a table named **Google_Analytics** as the source for specific events data points required by |destination-name|.
 
-   .. admonition:: How to build a Google Analytics table in a customer 360 database?
+   .. admonition:: How to build a Google Analytics table in a customer 360 database
 
       |destination-name| data should not be made available to Stitch, but must be available from the customer 360 database before purchase events data can be sent to |destination-name|.
 
