@@ -49,6 +49,12 @@ Get details
    :start-after: .. setting-common-get-details-start
    :end-before: .. setting-common-get-details-end
 
+.. important::
+
+   .. include:: ../../shared/credentials_settings.rst
+      :start-after: .. credential-google-analytics-verify-credential-start
+      :end-before: .. credential-google-analytics-verify-credential-end
+
 .. events-google-analytics-get-details-table-start
 
 .. list-table::
@@ -164,6 +170,12 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-google-analytics-api-secret-howto-start
              :end-before: .. credential-google-analytics-api-secret-howto-end
+
+       .. important::
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-google-analytics-verify-credential-start
+             :end-before: .. credential-google-analytics-verify-credential-end
 
 .. events-google-analytics-credentials-steps-end
 
