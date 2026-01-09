@@ -10,7 +10,7 @@
 .. |sftp-hostname| replace:: , which is similar to "sftp-tulip-staging.tulipretail.com"
 .. |remote-folder| replace:: "/folder/name"
 .. |sftp-port| replace:: "22"
-.. |filter-the-list| replace:: "sftp"
+.. |filter-the-list| replace:: "tul"
 
 
 .. meta::
