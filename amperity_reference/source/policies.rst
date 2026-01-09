@@ -1304,12 +1304,6 @@ The following table shows which policies enable user actions within the **Querie
      - |no-download-policy|
      - |no-download-policy|
 
-   * - Enable materialization
-     - |policy|
-     - 
-     - |policy|
-     - |policy|
-
    * - Enable performance mode
      - |policy|
      - 
