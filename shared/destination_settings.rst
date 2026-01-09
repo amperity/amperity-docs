@@ -2532,6 +2532,15 @@ The contact identifier for contact lists managed by this destination. Possible v
 
 .. setting-sap-emarsys-contact-identifier-end
 
+**Create new contact**
+
+.. setting-sap-emarsys-create-contact-start
+
+Enable to create contacts when they do not exist in |destination-name|. Disable to prevent creating new contacts.
+
+.. setting-sap-emarsys-create-contact-end
+
+
 **Does the list exist?**
 
 .. setting-sap-emarsys-list-exists-start

@@ -45,6 +45,8 @@ You can configure Amperity to maintain contact lists in |destination-name| using
 #. Adds contacts to a contact list when they don't exist in |destination-name|.
 #. Removes contacts from a contact list when they don't exist in the audience sent from Amperity.
 
+.. note:: If a dataset only includes phone nubmers or email addresses Amperity will update the contact list without modifying attributes.
+
 .. destination-sap-emarsys-configure-end
 
 
@@ -351,6 +353,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-sap-emarsys-contact-identifier-start
              :end-before: .. setting-sap-emarsys-contact-identifier-end
+
+       **Create contact?**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-sap-emarsys-create-contact-start
+             :end-before: .. setting-sap-emarsys-create-contact-end
 
 
    * - .. image:: ../../images/steps-05.png

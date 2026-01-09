@@ -265,6 +265,12 @@ Add destination
              :start-after: .. setting-sap-emarsys-contact-identifier-start
              :end-before: .. setting-sap-emarsys-contact-identifier-end
 
+       **Create contact?**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-sap-emarsys-create-contact-start
+             :end-before: .. setting-sap-emarsys-create-contact-end
+
        **Campaign file settings**
 
           .. include:: ../../shared/destination_settings.rst
