@@ -274,7 +274,46 @@ Information for the query that sends purchase events data to |destination-name| 
 
 #. **Unified Transactions** has transaction-level purchase events data.
 #. **Unified Itemized Transactions** has item-level purchase events data.
-#. A table with unique identifiers from |destination-name|.
+#. A table with unique identifiers from |destination-name|. The following example uses a table named **Google_Analytics** as the source for specific events data points required by |destination-name|.
+
+   .. admonition:: How to build a Google Analytics table in a customer 360 database?
+
+      |destination-name| data should not be made available to Stitch, but must be available from the customer 360 database before purchase events data can be sent to |destination-name|.
+
+      #. Configure a data source for |destination-name| data.
+
+      #. Build a custom SQL table in your customer 360 database for |destination-name| database data.
+
+      #. Use a **SELECT** statement and a common table expression to select columns from the |destination-name| source table. The **USER_PSEUDO_ID**, **TRANSACTION_ID**, **USER_ID** columns must be selected, along with a column with a unique value that matches a unique value in a table evaluated by Stitch and in which rows are assigned an Amperity ID.
+
+      #. Use use an **INNER JOIN** to add the Amperity ID to rows in the |destination-name| database table using the shared unique identifier as the join key.
+
+      For example:
+
+      .. code-block:: sql
+         :linenos:
+         :emphasize-lines: 11
+
+         WITH ranked AS (
+           SELECT
+             cp.amperity_id
+             ,ga.*
+             ,ROW_NUMBER() OVER (
+               PARTITION BY cp.amperity_id
+               ORDER BY ga.LAST_MODIFIED_TIMESTAMP DESC
+             ) AS row_number
+           FROM GA4_SOURCE_TABLE AS ga
+           INNER JOIN Customer_Profiles_Table AS cp
+           ON cp.CUSTOMER_ID = ga.CUSTOMER_ID
+         )
+
+         SELECT *
+         FROM ranked
+         WHERE row_number = 1
+
+      Replace the names of the **CUSTOMER_ID** fields within the **INNER JOIN** with the real column names in your database.
+
+**Example: Return results for purchase events**
 
 The following SQL example shows how to return purchase events data from three tables and combine them into a single results set that is mapped to the event names required by |destination-name|.
 
