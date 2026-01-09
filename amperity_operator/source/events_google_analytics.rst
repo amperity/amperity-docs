@@ -291,6 +291,7 @@ Information for the query that sends purchase events data to |destination-name| 
       For example:
 
       .. code-block:: sql
+         :caption: Google_Analytics table
          :linenos:
          :emphasize-lines: 11
 
