@@ -282,11 +282,11 @@ Information for the query that sends purchase events data to |destination-name| 
 
       #. Configure a data source for |destination-name| data.
 
-      #. Build a custom SQL table in your customer 360 database for |destination-name| database data.
+      #. Build a custom SQL table in your customer 360 database for |destination-name| data.
 
-      #. Use a **SELECT** statement and a common table expression to select columns from the |destination-name| source table. The **USER_PSEUDO_ID**, **TRANSACTION_ID**, **USER_ID** columns must be selected, along with a column with a unique value that matches a unique value in a table evaluated by Stitch and in which rows are assigned an Amperity ID.
+      #. Use a **SELECT** statement and a common table expression to select columns from the |destination-name| source table. The **USER_PSEUDO_ID**, **TRANSACTION_ID**, **USER_ID** columns |destination-name| source data must be selected, along with a column with a unique value that matches a unique value in a table evaluated by Stitch and in which rows are assigned an Amperity ID.
 
-      #. Use use an **INNER JOIN** to add the Amperity ID to rows in the |destination-name| database table using the shared unique identifier as the join key.
+      #. Use an **INNER JOIN** to add the Amperity ID to rows in the |destination-name| database table using the shared unique identifier as the join key.
 
       For example:
 

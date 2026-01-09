@@ -47,7 +47,7 @@ Build a query
 
 .. events-google-analytics-build-query-start
 
-Extend the SQL to include :ref:`any of the additional fields <events-google-analytics-event-parameters>` that are accepted by |destination-name|.
+Extend the SQL to include :ref:`any of the additional fields <events-google-analytics-map-parameters>` that are accepted by |destination-name|.
 
 .. events-google-analytics-build-query-end
 
