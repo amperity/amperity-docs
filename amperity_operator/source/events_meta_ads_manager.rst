@@ -14,15 +14,15 @@
 
 .. meta::
     :description lang=en:
-        Send events from Amperity to Meta Ads Manager.
+        Configure Amperity to send events to Meta Ads Manager.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Send events from Amperity to Meta Ads Manager.
+        Configure Amperity to send events to Meta Ads Manager.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send events to Meta Ads Manager
+        Configure events for Meta Ads Manager
 
 ==================================================
 Configure events for Meta Ads Manager

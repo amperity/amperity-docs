@@ -43,6 +43,10 @@ Events
       :link-type: doc
       :link: events_google_enhanced_conversions
 
+   .. grid-item-card:: Google Analytics 4
+      :link-type: doc
+      :link: events_google_analytics
+
    .. grid-item-card:: Klaviyo
       :link-type: ref
       :link: destination-klaviyo-customer-profile-parameters
@@ -79,6 +83,7 @@ Events
    About events <events>
    Criteo <events_criteo>
    Google Ads <events_google_enhanced_conversions>
+   Google Analytics 4 <events_google_analytics>
    Meta Ads Manager <events_meta_ads_manager>
    Pinterest <events_pinterest>
    Snapchat <events_snapchat>

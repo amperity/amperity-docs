@@ -1205,6 +1205,15 @@ The Command Line for Amperity (CLAMP) is the command-line interface to Amperity 
 .. term-clamp-deprecated-end
 
 
+**client ID** (GA4)
+
+.. term-client-id-ga4-start
+
+A |destination-name| **client_id** is a pseudonymous identifier created by a first-party cookie stored on a user's device or browser when they visit a website with a |destination-name| tracking code. For example: ``GA1.1.489876543.1234567890``.
+
+.. term-client-id-ga4-end
+
+
 **clienteling**
 
 .. term-clienteling-start
@@ -1624,7 +1633,7 @@ A `comma-separated values (CSV) <https://en.wikipedia.org/wiki/Comma-separated_v
 
 .. term-currency-start
 
-Currency represents the currency used to pay for an item. For example: dollar.
+Currency represents the currency used to pay for an item. The value should be a three character alphabetic `ISO 4217 currency code <https://en.wikipedia.org/wiki/ISO_4217>`__ |ext_link|, such as "USD" (United States dollar), "JPY" (Japanese Yen), "GBP" (Great Britain pound), or "EUR" (Euro).
 
 .. term-currency-end
 
@@ -2978,7 +2987,7 @@ The Google advertising ID (Google AAID) is a device identifier for advertisers t
 
 .. term-google-analytics-start
 
-Google Analytics is an events-based and session-based analytics service that collects data from websites and apps. Google Analytics 4 properties support privacy controls, such as cookieless measurement, and is directly on websites and apps to help your brand better understand the customer journey.
+Google Analytics is an events-based and session-based analytics service that collects data from websites and apps. Google Analytics 4 properties support privacy controls, such as cookieless measurement, to help your brand better understand the customer journey.
 
 .. term-google-analytics-end
 
@@ -5227,6 +5236,15 @@ The Profile API enables your brand to access customer profiles using a collectio
 The **Allow Profile API administration** policy option allows full access to the Profile API, including the ability to manage a list of **Profile API** endpoints from the **Destinations** page.
 
 .. term-profile-api-administrator-policy-end
+
+
+**Pseudonymous identifier**
+
+.. term-pseudonymous-identifier-start
+
+A pseudonymous identifier is a temporary, non-personally identifiable code that substitutes for a real user's identity for tracking user behavior on websites or apps without revealing personally identifiable information (PII).
+
+.. term-pseudonymous-identifier-end
 
 
 **PSV**, **pipe-separated values**

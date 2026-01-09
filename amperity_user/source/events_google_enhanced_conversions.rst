@@ -9,11 +9,11 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send online events to Google Enhanced Conversions.
+        Send online events from Amperity to Google Enhanced Conversions.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send online events to Google Enhanced Conversions.
+        Send online events from Amperity to Google Enhanced Conversions.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

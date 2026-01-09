@@ -1071,13 +1071,53 @@ See OAuth common.
 
 .. vale off
 
-**GOOGLE ANALYTICS** / **GOOGLE ANALYTICS 4**
+**GOOGLE ANALYTICS** / **GOOGLE ANALYTICS 4** (source)
 
 .. vale on
 
 **OAuth flow**
 
 See "OAuth common flows".
+
+
+
+
+
+.. vale off
+
+**GOOGLE ANALYTICS 4 (GA4)** (destination)
+
+.. vale on
+
+Settings unique to Google Analytics 4 (GA4).
+
+**API secret**
+
+.. credential-google-analytics-api-secret-start
+
+The API secret generated from the Google Analytics admin console for your brand's instance of the `Measurement Protocol API <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=firebase>`__ |ext_link|.
+
+.. credential-google-analytics-api-secret-end
+
+.. credential-google-analytics-api-secret-howto-start
+
+To create an API secret for the Measurement Protocol API log in to Google Analytics. Expand **Data collection** and choose **Data streams**. Choose the data stream to which you want to send purchase events. Click **Measurement Protocol API secrets**, and then click **Create**. Copy the secret and use that value to configure the destination for |destination-name| in Amperity.
+
+.. credential-google-analytics-api-secret-howto-end
+
+**Measurement ID**
+
+.. credential-google-analytics-measurement-id-start
+
+The `measurement ID <https://support.google.com/analytics/answer/12270356?hl=en>`__ |ext_link| associated with your Google Analytics account. All measurement IDs start with "G-" and are followed by a combination of letters and numbers. For example: "G-ABC1DE2FG3".
+
+.. credential-google-analytics-measurement-id-end
+
+.. credential-google-analytics-measurement-id-howto-start
+
+To find the measurement ID log in to Google Analytics. Expand **Data collection** and choose **Data streams**. Select the data stream to which you want to send purchase events. The measurement ID is available under **Stream details**. Copy the measurement ID and use that value to configure the destination for |destination-name| in Amperity.
+
+.. credential-google-analytics-measurement-id-howto-end
 
 
 
