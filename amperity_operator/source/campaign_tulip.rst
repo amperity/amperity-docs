@@ -16,40 +16,34 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send customer profiles to Tulip.
+        Configure Amperity to send campaigns to Tulip.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send customer profiles to Tulip.
+        Configure Amperity to send campaigns to Tulip.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destinations for Tulip
+        Configure campaigns for Tulip
 
 ==================================================
-Configure destinations for Tulip
+Configure campaigns for Tulip
 ==================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-tulip-start
    :end-before: .. term-tulip-end
 
-.. destination-tulip-start
-
-Use the |destination-name| `File Importer <https://docs.tulip.com/integrating/file-importer/overview/>`__ |ext_link| tool to send CSV files to |destination-name| using SFTP, after which the files are automatically uploaded to |destination-name| by the Bulk API.
-
-.. important:: |destination-name| replaces the contents of its database with the data in the CSV file, including removing and adding column values depending on what is in the CSV file. To maintain the full record in |destination-name| send the full record each time.
-
-.. note:: |destination-name| supports the following entities: stores, employees, categories, products, variants, prices, inventory, customers, and order history. Review the `file naming conventions <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#file-naming-conventions>`__ |ext_link| for each entity, `review the sample files <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#supported-csv-file-types>`__ |ext_link|, and make sure your output has the `correct file formatting <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#important-considerations-for-performance-and-formatting>`__ |ext_link|.
-
-.. destination-tulip-end
+.. include:: ../../amperity_operator/source/destination_tulip.rst
+   :start-after: .. destination-tulip-start
+   :end-before: .. destination-tulip-end
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-file-configure-start
    :end-before: .. setting-common-file-configure-end
 
 
-.. _destination-tulip-get-details:
+.. _campaign-tulip-get-details:
 
 Get details
 ==================================================
@@ -58,7 +52,7 @@ Get details
    :start-after: .. setting-common-get-details-start
    :end-before: .. setting-common-get-details-end
 
-.. destination-tulip-get-details-table-start
+.. campaign-tulip-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -97,10 +91,11 @@ Get details
        * Wrap strings that contain commas with double quotes. For example: ``“23,“Whitby, York”, 64CA”``.
        * Use a header row.
 
-.. destination-tulip-get-details-table-end
+
+.. campaign-tulip-get-details-table-end
 
 
-.. _destination-tulip-credentials:
+.. _campaign-tulip-credentials:
 
 Configure credentials
 ==================================================
@@ -115,7 +110,7 @@ Configure credentials
 
 **To configure credentials for Tulip**
 
-.. destination-tulip-credentials-steps-start
+.. campaign-tulip-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -175,10 +170,10 @@ Configure credentials
              :end-before: .. credential-sftp-username-end
 
 
-.. destination-tulip-credentials-steps-end
+.. campaign-tulip-credentials-steps-end
 
 
-.. _destination-tulip-add:
+.. _campaign-tulip-add:
 
 Add destination
 ==================================================
@@ -189,7 +184,7 @@ Add destination
 
 **To add a destination for Tulip**
 
-.. destination-tulip-add-steps-start
+.. campaign-tulip-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -201,8 +196,8 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-add-destinations-start
-          :end-before: .. destinations-steps-add-destinations-end
+          :start-after: .. campaigns-steps-add-destinations-start
+          :end-before: .. campaigns-steps-add-destinations-end
 
        .. image:: ../../images/mockup-destinations-add-01-select-destination-tulip.png
           :width: 380 px
@@ -211,8 +206,8 @@ Add destination
           :class: no-scaled-link
 
        .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-add-destinations-select-start
-          :end-before: .. destinations-steps-add-destinations-select-end
+          :start-after: .. campaigns-steps-add-destinations-select-start
+          :end-before: .. campaigns-steps-add-destinations-select-end
 
 
    * - .. image:: ../../images/steps-02.png
@@ -221,14 +216,14 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-select-credential-start
-          :end-before: .. destinations-steps-select-credential-end
+          :start-after: .. campaigns-steps-select-credential-start
+          :end-before: .. campaigns-steps-select-credential-end
 
        .. tip::
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. destinations-steps-test-connection-start
-             :end-before: .. destinations-steps-test-connection-end
+             :start-after: .. campaigns-steps-test-connection-start
+             :end-before: .. campaigns-steps-test-connection-end
 
 
    * - .. image:: ../../images/steps-03.png
@@ -237,8 +232,8 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-name-and-description-start
-          :end-before: .. destinations-steps-name-and-description-end
+          :start-after: .. campaigns-steps-name-and-description-start
+          :end-before: .. campaigns-steps-name-and-description-end
 
        .. admonition:: Configure business user access
 
@@ -257,8 +252,8 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-settings-start
-          :end-before: .. destinations-steps-settings-end
+          :start-after: .. campaigns-steps-settings-start
+          :end-before: .. campaigns-steps-settings-end
 
        **File formatting**
 
@@ -280,8 +275,8 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-business-users-start
-          :end-before: .. destinations-steps-business-users-end
+          :start-after: .. campaigns-steps-business-users-start
+          :end-before: .. campaigns-steps-business-users-end
 
 
    * - .. image:: ../../images/steps-06.png
@@ -293,10 +288,10 @@ Add destination
           :start-after: .. destinations-steps-validate-audience-start
           :end-before: .. destinations-steps-validate-audience-end
 
-.. destination-tulip-add-steps-end
+.. campaign-tulip-add-steps-end
 
 
-.. _destination-tulip-workflow-actions:
+.. _campaign-tulip-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -305,7 +300,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. destination-tulip-workflow-actions-start
+.. campaign-tulip-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -366,8 +361,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-tulip-workflow-actions-invalid-credentials`
-       * :ref:`destination-tulip-workflow-actions-sftp-unavailable`
+       * :ref:`campaign-tulip-workflow-actions-invalid-credentials`
+       * :ref:`campaign-tulip-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -389,10 +384,10 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. destination-tulip-workflow-actions-end
+.. campaign-tulip-workflow-actions-end
 
 
-.. _destination-tulip-workflow-actions-invalid-credentials:
+.. _campaign-tulip-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -402,7 +397,7 @@ Invalid credentials
    :end-before: .. workflow-actions-generic-invalid-credentials-end
 
 
-.. _destination-tulip-workflow-actions-sftp-unavailable:
+.. _campaign-tulip-workflow-actions-sftp-unavailable:
 
 SFTP site unavailable
 --------------------------------------------------

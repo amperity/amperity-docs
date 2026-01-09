@@ -54,7 +54,7 @@ Winter 2026
 
 **Destination topics**
 
-   :bdg-success:`NEW` New destinations for `Oracle Emarsys <../operator/destination_sap_emarsys.html>`__ and `Tulip <../operator/destination_tulip.html>`__.
+   :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Oracle Emarsys <../operator/destination_sap_emarsys.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
 
 
 **Incremental matching**
