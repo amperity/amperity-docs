@@ -524,7 +524,7 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
 
    * - **session_id**
-     - **SESSION_ID**
+     - **Recommended**
 
        A timestamp that identifies the start of a session. For example: ``485123456.1767654321.1769876543``. Combined with **user_id** or **client_id** a **session_id** uniquely identifies a session.
 
