@@ -285,7 +285,7 @@ Build a query
 Information for the query that sends purchase events data to |destination-name| is likely found in three tables in your customer 360 database:
 
 #. **Unified Transactions** has transaction-level purchase events data.
-#. **Unified Itemized Transactions** has item-level purchase events data.
+#. **Unified Itemized Transactions** has item-level purchase events data. This table may require some customization to align with all of the purchase events parameters supported by |destination-name|.
 #. A table with unique identifiers from |destination-name|. The following example uses a table named **Google_Analytics** as the source for specific events data points required by |destination-name|.
 
    .. admonition:: How to build a Google Analytics table in a customer 360 database
