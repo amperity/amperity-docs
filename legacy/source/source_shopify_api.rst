@@ -32,7 +32,7 @@ Pull from Shopify
 
 .. caution:: The API used by this connector is deprecated. New data sources cannot be configured using this connector.
 
-.. source-shopify-context-start
+.. source-shopify-api-context-start
 
 Shopify is source of high quality data for both customer records *and* interaction records, including:
 
@@ -45,56 +45,56 @@ Shopify is source of high quality data for both customer records *and* interacti
 * Customer searches
 * Guest checkout data, including email address and associated order details
 
-.. source-shopify-context-end
+.. source-shopify-api-context-end
 
-.. source-shopify-steps-to-pull-start
+.. source-shopify-api-steps-to-pull-start
 
 .. include:: ../../shared/sources.rst
    :start-after: .. sources-overview-list-intro-start
    :end-before: .. sources-overview-list-intro-end
 
-#. :ref:`Get details <source-shopify-get-details>`
-#. :ref:`Configure authorization access scopes <source-shopify-configure-authorization-access-scopes>`
-#. :ref:`Run courier <source-shopify-run-courier>`
-#. :ref:`Review feed and domain table <source-shopify-review-data>`
-#. :ref:`Add to courier group <source-shopify-add-to-courier-group>`
+#. :ref:`Get details <source-shopify-api-get-details>`
+#. :ref:`Configure authorization access scopes <source-shopify-api-configure-authorization-access-scopes>`
+#. :ref:`Run courier <source-shopify-api-run-courier>`
+#. :ref:`Review feed and domain table <source-shopify-api-review-data>`
+#. :ref:`Add to courier group <source-shopify-api-add-to-courier-group>`
 
-.. source-shopify-steps-to-pull-end
+.. source-shopify-api-steps-to-pull-end
 
 
-.. _source-shopify-get-details:
+.. _source-shopify-api-get-details:
 
 Get details
 ==================================================
 
-.. source-shopify-get-details-start
+.. source-shopify-api-get-details-start
 
 #. Your |source-name| **Shop Name**.
 #. A list of tables to be pulled to Amperity from |source-name|.
 
    This is done by configuring |source-name| to allow Amperity to `read data from the Shopify Admin API <https://shopify.dev/docs/admin-api/access-scopes>`__ |ext_link| using a set of authorization access scopes.
 
-.. source-shopify-get-details-end
+.. source-shopify-api-get-details-end
 
 
-.. _source-shopify-configure-authorization-access-scopes:
+.. _source-shopify-api-configure-authorization-access-scopes:
 
 Configure authorization access scopes
 ==================================================
 
-.. source-shopify-configure-access-to-tables-start
+.. source-shopify-api-configure-access-to-tables-start
 
 You must configure read access within |source-name| to allow Amperity to pull data from tables. The following authorization access scopes must be enabled:
 
-* `read_customers <https://shopify.dev/api/admin-rest/2022-10/resources/customer>`__ |ext_link|, from which Amperity builds the :ref:`customer <source-shopify-review-data-customer>` and :ref:`customer address <source-shopify-review-data-customer-address>` feeds
-* `read_orders <https://shopify.dev/api/admin-rest/2022-10/resources/order>`__ |ext_link|, from which Amperity builds the :ref:`order <source-shopify-review-data-order>` and :ref:`order line <source-shopify-review-data-order-line>` feeds
-* `read_products <https://shopify.dev/api/admin-rest/2022-10/resources/product>`__ |ext_link|, from which Amperity builds the :ref:`product <source-shopify-review-data-product>` and :ref:`product variant <source-shopify-review-data-product-variant>` feeds
+* `read_customers <https://shopify.dev/api/admin-rest/2022-10/resources/customer>`__ |ext_link|, from which Amperity builds the :ref:`customer <source-shopify-api-review-data-customer>` and :ref:`customer address <source-shopify-api-review-data-customer-address>` feeds
+* `read_orders <https://shopify.dev/api/admin-rest/2022-10/resources/order>`__ |ext_link|, from which Amperity builds the :ref:`order <source-shopify-api-review-data-order>` and :ref:`order line <source-shopify-api-review-data-order-line>` feeds
+* `read_products <https://shopify.dev/api/admin-rest/2022-10/resources/product>`__ |ext_link|, from which Amperity builds the :ref:`product <source-shopify-api-review-data-product>` and :ref:`product variant <source-shopify-api-review-data-product-variant>` feeds
 
-.. source-shopify-configure-access-to-tables-end
+.. source-shopify-api-configure-access-to-tables-end
 
 **To configure authorization access scopes for Amperity**
 
-.. source-shopify-configure-access-to-tables-steps-start
+.. source-shopify-api-configure-access-to-tables-steps-start
 
 Follow the steps outlined within |source-name| documentation to `enable the required scopes <https://help.shopify.com/en/manual/apps/custom-apps#update-admin-api-scopes-for-a-custom-app>`__ |ext_link| for your instance of |source-name|.
 
@@ -112,10 +112,10 @@ Follow the steps outlined within |source-name| documentation to `enable the requ
    **locations_read**
 #. Click **Save**.
 
-.. source-shopify-configure-access-to-tables-steps-end
+.. source-shopify-api-configure-access-to-tables-steps-end
 
 
-.. _source-shopify-add-courier:
+.. _source-shopify-api-add-courier:
 
 Add courier
 ==================================================
@@ -126,20 +126,20 @@ Add courier
 
 **To add a courier**
 
-.. source-shopify-add-courier-steps-start
+.. source-shopify-api-add-courier-steps-start
 
 #. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
-#. Select the user account you added that is associated with :ref:`authorization access scopes <source-shopify-configure-authorization-access-scopes>`.
+#. Select the user account you added that is associated with :ref:`authorization access scopes <source-shopify-api-configure-authorization-access-scopes>`.
 #. Select the checkbox next to the table name to pull that table to Amperity from |source-name|. You may select the following tables: **Customer**, **Customer Address**, **Discount Allocations**, **Locations**, **Order**, **Order Line**, **Order Line Refund**, **Product**, and **Product Variant**.
 #. Click **Create**.
 
-.. source-shopify-add-courier-steps-end
+.. source-shopify-api-add-courier-steps-end
 
 
-.. _source-shopify-run-courier:
+.. _source-shopify-api-run-courier:
 
 Run courier manually
 ==================================================
@@ -155,24 +155,24 @@ Run courier manually
    :end-before: .. sources-run-courier-steps-end
 
 
-.. _source-shopify-review-data:
+.. _source-shopify-api-review-data:
 
 Review feed and domain table
 ==================================================
 
-.. source-shopify-review-data-start
+.. source-shopify-api-review-data-start
 
 After running the |source-name| courier it creates a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name|.
 
-.. source-shopify-review-data-end
+.. source-shopify-api-review-data-end
 
 
-.. _source-shopify-review-data-customer:
+.. _source-shopify-api-review-data-customer:
 
 Customer
 --------------------------------------------------
 
-.. source-shopify-review-data-customer-start
+.. source-shopify-api-review-data-customer-start
 
 The feed and domain table for customer details contains the following fields:
 
@@ -195,15 +195,15 @@ The feed and domain table for customer details contains the following fields:
 * **updated_at**
 * **verified_email**
 
-.. source-shopify-review-data-customer-end
+.. source-shopify-api-review-data-customer-end
 
 
-.. _source-shopify-review-data-customer-address:
+.. _source-shopify-api-review-data-customer-address:
 
 Customer address
 --------------------------------------------------
 
-.. source-shopify-review-data-customer-address-start
+.. source-shopify-api-review-data-customer-address-start
 
 The feed and domain table for customer addresses contains the following fields:
 
@@ -224,30 +224,30 @@ The feed and domain table for customer addresses contains the following fields:
 * **province_code**
 * **zip** Assigned the **postal** semantic tag.
 
-.. source-shopify-review-data-customer-address-end
+.. source-shopify-api-review-data-customer-address-end
 
 
-.. _source-shopify-review-data-customer-tags:
+.. _source-shopify-api-review-data-customer-tags:
 
 Customer tags
 --------------------------------------------------
 
-.. source-shopify-review-data-customer-tags-start
+.. source-shopify-api-review-data-customer-tags-start
 
 The feed and domain table for customer tags contains the following fields:
 
 * **customer_id**
 * **value**
 
-.. source-shopify-review-data-customer-tags-end
+.. source-shopify-api-review-data-customer-tags-end
 
 
-.. _source-shopify-review-data-discount-allocation:
+.. _source-shopify-api-review-data-discount-allocation:
 
 Discount allocation
 --------------------------------------------------
 
-.. source-shopify-review-data-discount-allocation-start
+.. source-shopify-api-review-data-discount-allocation-start
 
 The feed and domain table for discount allocations contains the following fields:
 
@@ -255,15 +255,15 @@ The feed and domain table for discount allocations contains the following fields
 * **discount_allocation_index**
 * **order_line_id** Assigned the **ck** and **pk** semantic tags.
 
-.. source-shopify-review-data-discount-allocation-end
+.. source-shopify-api-review-data-discount-allocation-end
 
 
-.. _source-shopify-review-data-discount-codes:
+.. _source-shopify-api-review-data-discount-codes:
 
 Discount codes
 --------------------------------------------------
 
-.. source-shopify-review-data-discount-codes-start
+.. source-shopify-api-review-data-discount-codes-start
 
 The feed and domain table for discount codes contains the following fields:
 
@@ -272,15 +272,15 @@ The feed and domain table for discount codes contains the following fields:
 * **order_id** Assigned the **ck** and **pk** semantic tags.
 * **type**
 
-.. source-shopify-review-data-discount-codes-end
+.. source-shopify-api-review-data-discount-codes-end
 
 
-.. _source-shopify-review-data-locations:
+.. _source-shopify-api-review-data-locations:
 
 Locations
 --------------------------------------------------
 
-.. source-shopify-review-data-locations-start
+.. source-shopify-api-review-data-locations-start
 
 The feed and domain table for locations contains the following fields:
 
@@ -303,15 +303,15 @@ The feed and domain table for locations contains the following fields:
 * **province_name**
 * **zip**
 
-.. source-shopify-review-data-locations-end
+.. source-shopify-api-review-data-locations-end
 
 
-.. _source-shopify-review-data-order:
+.. _source-shopify-api-review-data-order:
 
 Order
 --------------------------------------------------
 
-.. source-shopify-review-data-order-start
+.. source-shopify-api-review-data-order-start
 
 The feed and domain table for orders contains the following fields:
 
@@ -365,15 +365,15 @@ The feed and domain table for orders contains the following fields:
 * **updated_at**
 * **user_id**
 
-.. source-shopify-review-data-order-end
+.. source-shopify-api-review-data-order-end
 
 
-.. _source-shopify-review-data-order-line:
+.. _source-shopify-api-review-data-order-line:
 
 Order line
 --------------------------------------------------
 
-.. source-shopify-review-data-order-line-start
+.. source-shopify-api-review-data-order-line-start
 
 The feed and domain table for order lines contains the following fields:
 
@@ -397,15 +397,15 @@ The feed and domain table for order lines contains the following fields:
 * **variant_title**
 * **vendor**
 
-.. source-shopify-review-data-order-line-end
+.. source-shopify-api-review-data-order-line-end
 
 
-.. _source-shopify-review-data-order-line-refund:
+.. _source-shopify-api-review-data-order-line-refund:
 
 Order line refund
 --------------------------------------------------
 
-.. source-shopify-review-data-order-line-refund-start
+.. source-shopify-api-review-data-order-line-refund-start
 
 The feed and domain table for order line refunds contains the following fields:
 
@@ -418,30 +418,30 @@ The feed and domain table for order line refunds contains the following fields:
 * **quantity**
 * **total_tax**
 
-.. source-shopify-review-data-order-line-refund-end
+.. source-shopify-api-review-data-order-line-refund-end
 
 
-.. _source-shopify-review-data-order-tags:
+.. _source-shopify-api-review-data-order-tags:
 
 Order tags
 --------------------------------------------------
 
-.. source-shopify-review-data-order-tags-start
+.. source-shopify-api-review-data-order-tags-start
 
 The feed and domain table for order tags contains the following fields:
 
 * **order_id** Assigned the **ck** and **pk** semantic tags.
 * **value**
 
-.. source-shopify-review-data-order-tags-end
+.. source-shopify-api-review-data-order-tags-end
 
 
-.. _source-shopify-review-data-product:
+.. _source-shopify-api-review-data-product:
 
 Product
 --------------------------------------------------
 
-.. source-shopify-review-data-product-start
+.. source-shopify-api-review-data-product-start
 
 The feed and domain table for products contains the following fields:
 
@@ -459,30 +459,30 @@ The feed and domain table for products contains the following fields:
 * **updated_at**
 * **vendor**
 
-.. source-shopify-review-data-product-end
+.. source-shopify-api-review-data-product-end
 
 
-.. _source-shopify-review-data-product-tags:
+.. _source-shopify-api-review-data-product-tags:
 
 Product tags
 --------------------------------------------------
 
-.. source-shopify-review-data-product-tags-start
+.. source-shopify-api-review-data-product-tags-start
 
 The feed and domain table for product tags contains the following fields:
 
 * **product_id** Assigned the **ck** and **pk** semantic tags.
 * **value**
 
-.. source-shopify-review-data-product-tags-end
+.. source-shopify-api-review-data-product-tags-end
 
 
-.. _source-shopify-review-data-product-variant:
+.. _source-shopify-api-review-data-product-variant:
 
 Product variant
 --------------------------------------------------
 
-.. source-shopify-review-data-product-variant-start
+.. source-shopify-api-review-data-product-variant-start
 
 The feed and domain table for product variants contains the following fields:
 
@@ -510,10 +510,10 @@ The feed and domain table for product variants contains the following fields:
 * **weight**
 * **weight_unit**
 
-.. source-shopify-review-data-product-variant-end
+.. source-shopify-api-review-data-product-variant-end
 
 
-.. _source-shopify-add-to-courier-group:
+.. _source-shopify-api-add-to-courier-group:
 
 Add to courier group
 ==================================================
