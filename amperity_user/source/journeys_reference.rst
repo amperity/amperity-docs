@@ -216,7 +216,7 @@ Schedule a journey
    :end-before: .. journeys-howtos-schedule-a-journey-important-admonition-end
 
 
-.. _journeys-sample-use-cases:
+.. _journeys-example-use-cases:
 
 Journeys use case examples
 ==================================================
@@ -242,7 +242,7 @@ The goal of a new customer journey is to turn a new customer into an engaged par
 
    A new customer journey ensures the customer receives prompt, relevant communication, and non-engaged users get an additional message on a separate channel with an incentive to act quickly.
 
-**Example basic new customer journey**
+**Example basic new customer journey:**
 
 .. list-table::
    :widths: 30 70
@@ -260,6 +260,12 @@ The goal of a new customer journey is to turn a new customer into an engaged par
      - Send a short, high value SMS (for example, "Use code WELCOME10 for 10% off your next order!"). 
    * - **Exit**
      - Customers exit a new customer journey when they complete a second purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-new-customer.png
+   :width: 280 px
+   :alt: Example new customer journey
+   :align: left
+   :class: no-scaled-link
 
 
 **Example new customer journey flow with split:**
@@ -286,7 +292,14 @@ The goal of a new customer journey is to turn a new customer into an engaged par
    * - **Exit** 
      - Customers exit a new customer journey when they complete a second purchase.
 
-.. journeys-use-case-welcome-end
+.. image:: ../../images/mockup-journeys-canvas-example-new-customer-split.png
+   :width: 440 px
+   :alt: Example new customer journey with split
+   :align: left
+   :class: no-scaled-link
+
+
+.. journeys-use-case-new-customer-end
 
 .. _journeys-use-case-abandoned-cart:
 
@@ -329,6 +342,13 @@ The goal of an abandoned cart journey is to convert users who started a purchase
        #. **Activate**: Add customer to a Facebook/Google Retargeting Ad Audience for the specific product.
    * - **Exit**
      - Customers exit an abandoned cart journey when they complete the purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-abandoned-cart.png
+   :width: 440 px
+   :alt: Example abandoned cart journey
+   :align: left
+   :class: no-scaled-link
+
 
 .. journeys-use-case-abandoned-cart-end
 
@@ -376,6 +396,12 @@ It can also be used for other similar milestones, like the aniversary of reachin
    * - **Exit**
      - Customers exit a birthday journey if they redeem the offer and make a purchase.
 
+.. image:: ../../images/mockup-journeys-canvas-example-birthday.png
+   :width: 440 px
+   :alt: Example birthday journey
+   :align: left
+   :class: no-scaled-link
+
 .. journeys-use-case-birthday-end
 
 .. _journeys-use-case-product-consideration:
@@ -391,7 +417,7 @@ The goal of a product consideration journey is to convert recent browsers and pr
 
    Product consideration journeys use multi-channel engagement to keep the product top-of-mind, while the A/B test measures the incremental lift provided by the paid advertising or discount channel against organic email.
 
-**Example product consideration journey flow**
+**Example product consideration journey flow:**
 
 .. list-table::
    :widths: 30 70
@@ -417,6 +443,12 @@ The goal of a product consideration journey is to convert recent browsers and pr
      - CRM syncs with point of sale so that if customers visit a store, associate sees the same recommendations.
    * - **Exit**
      - Customers exit a product consideration journey when they make a purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-product-consideration.png
+   :width: 440 px
+   :alt: Example product consideration journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-product-consideration-end
 
