@@ -449,7 +449,7 @@ Amperity account locator IDs
 
 Snowflake must be configured for the correct `account locator IDs <https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-2-account-locator-in-a-region>`__ |ext_link| used by Amperity. Account locator IDs are specific to the stack in which your Amperity tenant is provisioned *and* the `region ID <https://docs.snowflake.com/en/user-guide/admin-account-identifier#region-ids>`__ |ext_link| in which your Snowflake account resides.
 
-.. important:: In the case of an outbound bridge, performance is reduced if you host your Snowflake account on a different region from where Amperity hosts your tenant storage.
+.. note:: Outbound queries run faster when your Snowflake account and Amperity tenant storage are hosted in the same region. Outbound queries run slower when your Snowflake account and Amperity tenant storage are hosted in different regions.
 
    For example, if your Amperity tenant storage is hosted on azure_eastus2 and you host your Snowflake account on azure_westus2, queries will be slower than if both were hosted on azure_eastus2. 
 
