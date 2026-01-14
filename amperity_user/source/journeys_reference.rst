@@ -481,10 +481,10 @@ The goal of a cross-sell journey is to increase order frequency by recommending 
      - **Activate**: Send a "Complete your look" email to VIPs featuring high-margin, complementary products and offering double loyalty points on the next purchase.
    * - **Path B**
      - **Activate**: Send a "Complementary items" email to everyone else with a focus on free shipping for the next order.
-   * - **Delay**
-     - Wait 48 hours.
    * - **Merge**
      - Bring the two paths back together.
+   * - **Delay**
+     - Wait 48 hours.
    * - **Conditional split**
      - Check if a cross-sell purchase has been made.
    * - **Path A**
@@ -539,7 +539,7 @@ The goal of a seasonal campaign journey is to drive revenue and brand engagement
    * - **Conditional split**
      - Check if the customer is a VIP/loyalty member
    * - **Path A (VIP)**
-     - **Activate:** Exclusive direct mailcatalog with QR to curated collection. 
+     - **Activate:** Exclusive direct mail catalog with QR to curated collection. 
    * - **Path B (Non-VIP)**
      - **Activate:** Social media ad carousel featuring relevant items.
    * - **Exit**
