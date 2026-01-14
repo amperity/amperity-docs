@@ -222,10 +222,6 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_sftp
 
-   .. grid-item-card:: Shopify
-      :link-type: doc
-      :link: source_smg
-
    .. grid-item-card:: SMG
       :link-type: doc
       :link: source_smg
@@ -307,7 +303,6 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    Salesforce Pardot <source_salesforce_pardot>
    Salesforce Sales Cloud <source_salesforce_sales_cloud>
    SFTP <source_sftp>
-   Shopify <source_shopify>
    SMG <source_smg>
    SoundCommerce <source_soundcommerce>
    Square <source_square>
