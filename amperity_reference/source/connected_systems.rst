@@ -518,7 +518,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Kibo**
      - |system-yes|
      - |system-yes|
-     - Send data to and from Amperity using SFTP. Previously known as Monetate.
+     - See Monetate.
 
    * - **Klaviyo**
      - |system-yes|
@@ -644,6 +644,13 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - |system-yes|
      - Send data to MoEngage from Amperity using a REST API.
+
+   * - **Monetate**
+     - |system-yes|
+     - |system-yes|
+     - Send personalization data to and from Amperity using SFTP.
+
+       Previously known as Kibo.
 
    * - **MongoDB**
      - |system-yes|
