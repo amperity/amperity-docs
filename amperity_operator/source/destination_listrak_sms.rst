@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Listrak SMS
-.. |plugin-name| replace:: "Listrak SMS"
+.. |plugin-name| replace:: "Listrak SMS -- List Management"
 .. |credential-type| replace:: "listrak-sms"
 .. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "phone"
@@ -13,19 +13,19 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send SMS profiles to Listrak.
+        Configure destinations for Listrak SMS list management.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send SMS profiles to Listrak.
+        Configure destinations for Listrak SMS list management.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destinations for Listrak SMS
+        Configure destinations for Listrak SMS list management
 
-==================================================
-Configure destinations for Listrak SMS
-==================================================
+======================================================
+Configure destinations for Listrak SMS list management
+======================================================
 
 .. destination-listrak-sms-about-start
 

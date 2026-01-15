@@ -9,18 +9,18 @@
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send SMS profiles to Listrak SMS.
+        Use orchestrations to manage lists in Listrak SMS.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send SMS profiles to Listrak SMS.
+        Use orchestrations to manage lists in Listrak SMS.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send query results to Listrak SMS
+        Manage lists in Listrak SMS
 
 ==================================================
-Send query results to Listrak SMS
+Manage lists in Listrak SMS
 ==================================================
 
 .. include:: ../../amperity_operator/source/destination_listrak_sms.rst
