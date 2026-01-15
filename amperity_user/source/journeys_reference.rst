@@ -216,7 +216,7 @@ Schedule a journey
    :end-before: .. journeys-howtos-schedule-a-journey-important-admonition-end
 
 
-.. _journeys-sample-use-cases:
+.. _journeys-example-use-cases:
 
 Journeys use case examples
 ==================================================
@@ -242,7 +242,7 @@ The goal of a new customer journey is to turn a new customer into an engaged par
 
    A new customer journey ensures the customer receives prompt, relevant communication, and non-engaged users get an additional message on a separate channel with an incentive to act quickly.
 
-**Example basic new customer journey**
+**Example basic new customer journey:**
 
 .. list-table::
    :widths: 30 70
@@ -260,6 +260,12 @@ The goal of a new customer journey is to turn a new customer into an engaged par
      - Send a short, high value SMS (for example, "Use code WELCOME10 for 10% off your next order!"). 
    * - **Exit**
      - Customers exit a new customer journey when they complete a second purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-new-customer.png
+   :width: 280 px
+   :alt: Example new customer journey
+   :align: left
+   :class: no-scaled-link
 
 
 **Example new customer journey flow with split:**
@@ -286,7 +292,14 @@ The goal of a new customer journey is to turn a new customer into an engaged par
    * - **Exit** 
      - Customers exit a new customer journey when they complete a second purchase.
 
-.. journeys-use-case-welcome-end
+.. image:: ../../images/mockup-journeys-canvas-example-new-customer-split.png
+   :width: 440 px
+   :alt: Example new customer journey with split
+   :align: left
+   :class: no-scaled-link
+
+
+.. journeys-use-case-new-customer-end
 
 .. _journeys-use-case-abandoned-cart:
 
@@ -329,6 +342,13 @@ The goal of an abandoned cart journey is to convert users who started a purchase
        #. **Activate**: Add customer to a Facebook/Google Retargeting Ad Audience for the specific product.
    * - **Exit**
      - Customers exit an abandoned cart journey when they complete the purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-abandoned-cart.png
+   :width: 440 px
+   :alt: Example abandoned cart journey
+   :align: left
+   :class: no-scaled-link
+
 
 .. journeys-use-case-abandoned-cart-end
 
@@ -376,6 +396,12 @@ It can also be used for other similar milestones, like the aniversary of reachin
    * - **Exit**
      - Customers exit a birthday journey if they redeem the offer and make a purchase.
 
+.. image:: ../../images/mockup-journeys-canvas-example-birthday.png
+   :width: 440 px
+   :alt: Example birthday journey
+   :align: left
+   :class: no-scaled-link
+
 .. journeys-use-case-birthday-end
 
 .. _journeys-use-case-product-consideration:
@@ -391,7 +417,7 @@ The goal of a product consideration journey is to convert recent browsers and pr
 
    Product consideration journeys use multi-channel engagement to keep the product top-of-mind, while the A/B test measures the incremental lift provided by the paid advertising or discount channel against organic email.
 
-**Example product consideration journey flow**
+**Example product consideration journey flow:**
 
 .. list-table::
    :widths: 30 70
@@ -417,6 +443,12 @@ The goal of a product consideration journey is to convert recent browsers and pr
      - CRM syncs with point of sale so that if customers visit a store, associate sees the same recommendations.
    * - **Exit**
      - Customers exit a product consideration journey when they make a purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-product-consideration.png
+   :width: 440 px
+   :alt: Example product consideration journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-product-consideration-end
 
@@ -449,10 +481,10 @@ The goal of a cross-sell journey is to increase order frequency by recommending 
      - **Activate**: Send a "Complete your look" email to VIPs featuring high-margin, complementary products and offering double loyalty points on the next purchase.
    * - **Path B**
      - **Activate**: Send a "Complementary items" email to everyone else with a focus on free shipping for the next order.
-   * - **Delay**
-     - Wait 48 hours.
    * - **Merge**
      - Bring the two paths back together.
+   * - **Delay**
+     - Wait 48 hours.
    * - **Conditional split**
      - Check if a cross-sell purchase has been made.
    * - **Path A**
@@ -468,6 +500,11 @@ The goal of a cross-sell journey is to increase order frequency by recommending 
    * - **Exit**
      - Customers exit a cross-sell journey after they make a second, qualifying purchase within the timeframe defined by the cross-sell journey.
 
+.. image:: ../../images/mockup-journeys-canvas-example-cross-sell.png
+   :width: 440 px
+   :alt: Example cross-sell journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-cross-sell-end
 
@@ -507,11 +544,17 @@ The goal of a seasonal campaign journey is to drive revenue and brand engagement
    * - **Conditional split**
      - Check if the customer is a VIP/loyalty member
    * - **Path A (VIP)**
-     - **Activate:** Exclusive direct mailcatalog with QR to curated collection. 
+     - **Activate:** Exclusive direct mail catalog with QR to curated collection. 
    * - **Path B (Non-VIP)**
      - **Activate:** Social media ad carousel featuring relevant items.
    * - **Exit**
      - Customers exit a seasonal campaign journey by making a purchase during the defined seasonal window.
+
+.. image:: ../../images/mockup-journeys-canvas-example-seasonal.png
+   :width: 440 px
+   :alt: Example seasonal journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-seasonal-end
 
@@ -549,6 +592,12 @@ The goal of a loyalty tier upgrade journey is to reward and retain high value cu
    * - **Exit**
      - Customers exit a loyalty tier upgrade journey 30 days after achieving the new status tier.
 
+.. image:: ../../images/mockup-journeys-canvas-example-loyalty-tier-upgrade.png
+   :width: 280 px
+   :alt: Example loyalty tier upgrade journey
+   :align: left
+   :class: no-scaled-link
+
 .. journeys-use-case-vip-upgrade-end
 
 .. _journeys-use-case-test-drive:
@@ -576,14 +625,14 @@ The goal of a car test-drive journey is to convert website interest (for example
      - Customer meets the "Viewed Vehicle Details Page or Used 'Build & Price' tool in last 7 days" segment criteria.
    * - **Conditional split**
      - Check if the customer has already booked an appointment.
-   * - **Path A (No appointment)**
+   * - **Path A (Appointment booked)**
+     - **Activate:** Send a "Pre-appointment checklist" email with confirmation details and required documentation.
+   * - **Path B (No appointment)**
      - For customers who have not yet booked an appointment, take the following steps:
 
        #. **Activate**: Send an email offering a local dealer consultation or link to book a test drive.
        #. **Delay**: Wait 48 hours.
        #. **Activate**: Send a follow up SMS with a link to book a test drive.
-   * - **Path B (Appointment booked)**
-     - **Activate:** Send a "Pre-appointment checklist" email with confirmation details and required documentation.
    * - **Merge**
      - Bring the two paths back together.
    * - **Activate**
@@ -598,6 +647,12 @@ The goal of a car test-drive journey is to convert website interest (for example
      - **Activate:** CRM alerts sales rep to call customer.
    * - **Exit**
      - A customer exits a car test-drive journey when they have completed a purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-car-test-drive.png
+   :width: 440 px
+   :alt: Example car test drive journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-test-drive-end
 
@@ -639,6 +694,12 @@ The goal of a product replenishment journey is to drive repeat purchases based o
    * - **Exit**
      - Customers exit a product replenishment journey when they purchase the specific product or activate a subscription.
 
+.. image:: ../../images/mockup-journeys-canvas-example-product-replenishment.png
+   :width: 440 px
+   :alt: Example product replenishment journey
+   :align: left
+   :class: no-scaled-link
+
 .. journeys-use-case-replenishment-end
 
 .. _journeys-use-case-financial-onboarding:
@@ -677,5 +738,11 @@ The goal of a financial services welcome journey is to guide new account holders
        #. **Activate**: CRM flags a task in the call center queue for a proactive outreach call.
    * - **Exit**
      - Customers exit a financial services welcome journey when direct deposit is set up.
+
+.. image:: ../../images/mockup-journeys-canvas-example-financial-services-welcome.png
+   :width: 440 px
+   :alt: Example financial services welcome journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-financial-onboarding-end
