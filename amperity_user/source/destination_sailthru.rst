@@ -1,24 +1,24 @@
 .. https://docs.amperity.com/user/
 
 
-.. |destination-name| replace:: Sailthru by Marigold
+.. |destination-name| replace:: Sailthru by Zeta
 .. |what-send| replace:: email address lists
 
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send query results from Amperity to Sailthru by Marigold.
+        Use orchestrations to send query results from Amperity to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send query results from Amperity to Sailthru by Marigold.
+        Use orchestrations to send query results from Amperity to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send query results to Sailthru by Marigold
+        Send query results to Sailthru by Zeta
 
 ==================================================
-Send query results to Sailthru by Marigold
+Send query results to Sailthru by Zeta
 ==================================================
 
 .. include:: ../../shared/terms.rst

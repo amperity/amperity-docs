@@ -1123,7 +1123,7 @@ A channel interaction is data about customer purchases, such as online, point-of
 
 .. term-cheetah-digital-start
 
-Cheetah Digital by Marigold is a customer engagement platform that helps marketers deliver personalized experiences, create effective cross-channel messaging, and increase customer loyalty.
+Cheetah Digital by Zeta is a customer engagement platform that helps marketers deliver personalized experiences, create effective cross-channel messaging, and increase customer loyalty.
 
 .. term-cheetah-digital-end
 
@@ -5681,7 +5681,7 @@ RR Donnelly provides marketing and business communications, commercial printing,
 
 .. term-sailthru-start
 
-Sailthru by Marigold is a cross-channel marketing platform built to deliver personalized experiences for consumers across email, web, and mobile channels.
+Sailthru by Zeta is a cross-channel marketing platform built to deliver personalized experiences for consumers across email, web, and mobile channels.
  
 .. term-sailthru-end
 
