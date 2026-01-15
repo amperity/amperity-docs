@@ -476,7 +476,7 @@ If the plus button is after a split node, there will also be the option to choos
 
 .. _journeys-use-cases:
 
-Journey Use Cases
+Journeys Use Cases
 ==================================================
 
 .. journeys-reference-use-cases-start

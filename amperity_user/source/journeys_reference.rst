@@ -500,6 +500,11 @@ The goal of a cross-sell journey is to increase order frequency by recommending 
    * - **Exit**
      - Customers exit a cross-sell journey after they make a second, qualifying purchase within the timeframe defined by the cross-sell journey.
 
+.. image:: ../../images/mockup-journeys-canvas-example-cross-sell.png
+   :width: 440 px
+   :alt: Example cross-sell journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-cross-sell-end
 
@@ -545,6 +550,12 @@ The goal of a seasonal campaign journey is to drive revenue and brand engagement
    * - **Exit**
      - Customers exit a seasonal campaign journey by making a purchase during the defined seasonal window.
 
+.. image:: ../../images/mockup-journeys-canvas-example-seasonal.png
+   :width: 440 px
+   :alt: Example seasonal journey
+   :align: left
+   :class: no-scaled-link
+
 .. journeys-use-case-seasonal-end
 
 .. _journeys-use-case-vip-upgrade:
@@ -581,6 +592,12 @@ The goal of a loyalty tier upgrade journey is to reward and retain high value cu
    * - **Exit**
      - Customers exit a loyalty tier upgrade journey 30 days after achieving the new status tier.
 
+.. image:: ../../images/mockup-journeys-canvas-example-loyalty-tier-upgrade.png
+   :width: 280 px
+   :alt: Example loyalty tier upgrade journey
+   :align: left
+   :class: no-scaled-link
+
 .. journeys-use-case-vip-upgrade-end
 
 .. _journeys-use-case-test-drive:
@@ -608,14 +625,14 @@ The goal of a car test-drive journey is to convert website interest (for example
      - Customer meets the "Viewed Vehicle Details Page or Used 'Build & Price' tool in last 7 days" segment criteria.
    * - **Conditional split**
      - Check if the customer has already booked an appointment.
-   * - **Path A (No appointment)**
+   * - **Path A (Appointment booked)**
+     - **Activate:** Send a "Pre-appointment checklist" email with confirmation details and required documentation.
+   * - **Path B (No appointment)**
      - For customers who have not yet booked an appointment, take the following steps:
 
        #. **Activate**: Send an email offering a local dealer consultation or link to book a test drive.
        #. **Delay**: Wait 48 hours.
        #. **Activate**: Send a follow up SMS with a link to book a test drive.
-   * - **Path B (Appointment booked)**
-     - **Activate:** Send a "Pre-appointment checklist" email with confirmation details and required documentation.
    * - **Merge**
      - Bring the two paths back together.
    * - **Activate**
@@ -630,6 +647,12 @@ The goal of a car test-drive journey is to convert website interest (for example
      - **Activate:** CRM alerts sales rep to call customer.
    * - **Exit**
      - A customer exits a car test-drive journey when they have completed a purchase.
+
+.. image:: ../../images/mockup-journeys-canvas-example-car-test-drive.png
+   :width: 440 px
+   :alt: Example car test drive journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-test-drive-end
 
@@ -671,6 +694,12 @@ The goal of a product replenishment journey is to drive repeat purchases based o
    * - **Exit**
      - Customers exit a product replenishment journey when they purchase the specific product or activate a subscription.
 
+.. image:: ../../images/mockup-journeys-canvas-example-product-replenishment.png
+   :width: 440 px
+   :alt: Example product replenishment journey
+   :align: left
+   :class: no-scaled-link
+
 .. journeys-use-case-replenishment-end
 
 .. _journeys-use-case-financial-onboarding:
@@ -709,5 +738,11 @@ The goal of a financial services welcome journey is to guide new account holders
        #. **Activate**: CRM flags a task in the call center queue for a proactive outreach call.
    * - **Exit**
      - Customers exit a financial services welcome journey when direct deposit is set up.
+
+.. image:: ../../images/mockup-journeys-canvas-example-financial-services-welcome.png
+   :width: 440 px
+   :alt: Example financial services welcome journey
+   :align: left
+   :class: no-scaled-link
 
 .. journeys-use-case-financial-onboarding-end
