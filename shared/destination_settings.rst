@@ -2317,7 +2317,7 @@ See SFTP.
 
 .. vale on
 
-Settings unique to Sailthru by Marigold Engage.
+Settings unique to Sailthru by Zeta Engage.
 
 **Audience primary key**
 

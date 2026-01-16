@@ -277,7 +277,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Campaign Manager using Fivetran.
 
-   * - **Cheetah Digital by Marigold**
+   * - **Cheetah Digital by Zeta**
      - |system-yes|
      - |system-yes|
      - Pull data to and send data from Amperity using SFTP.
@@ -518,7 +518,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Kibo**
      - |system-yes|
      - |system-yes|
-     - Send data to and from Amperity using SFTP. Previously known as Monetate.
+     - See Monetate.
 
    * - **Klaviyo**
      - |system-yes|
@@ -555,7 +555,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull email and SMS events data to Amperity.
 
-       Send email lists and SMS profiles to Listrak.
+       Send email and SMS lists to Listrak.
 
    * - **LiveRamp**
      - |system-yes|
@@ -644,6 +644,13 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - |system-yes|
      - Send data to MoEngage from Amperity using a REST API.
+
+   * - **Monetate**
+     - |system-yes|
+     - |system-yes|
+     - Send personalization data to and from Amperity using SFTP.
+
+       Previously known as Kibo.
 
    * - **MongoDB**
      - |system-yes|
@@ -811,7 +818,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Sage Interact using Fivetran.
 
-   * - **Sailthru by Marigold**
+   * - **Sailthru by Zeta**
      - |system-yes|
      - |system-yes|
      - Pull data to Amperity from Sailthru using Amazon S3.

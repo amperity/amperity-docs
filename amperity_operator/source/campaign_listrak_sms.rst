@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Listrak SMS
-.. |plugin-name| replace:: "Listrak SMS"
+.. |plugin-name| replace:: "Listrak SMS -- List Management"
 .. |credential-type| replace:: "listrak-sms"
 .. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "phone"
@@ -13,19 +13,19 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send campaigns with SMS audiences to Listrak.
+        Configure campaigns for Listrak SMS list management.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send campaigns with SMS audiences to Listrak.
+        Configure campaigns for Listrak SMS list management.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure campaigns for Listrak SMS
+        Configure campaigns for Listrak SMS list management
 
-==================================================
-Configure campaigns for Listrak SMS
-==================================================
+===================================================
+Configure campaigns for Listrak SMS list management
+===================================================
 
 .. include:: ../../amperity_operator/source/destination_listrak_sms.rst
    :start-after: .. destination-listrak-sms-about-start

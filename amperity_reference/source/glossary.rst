@@ -759,7 +759,7 @@ C
 
 .. _c-cheetah-digital:
 
-**Cheetah Digital by Marigold**
+**Cheetah Digital by Zeta**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-cheetah-digital-start
       :end-before: .. term-cheetah-digital-end
@@ -3988,7 +3988,7 @@ S
 
 .. _s-sailthru:
 
-**Sailthru by Marigold**
+**Sailthru by Zeta**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-sailthru-start
       :end-before: .. term-sailthru-end

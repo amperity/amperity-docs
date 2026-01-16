@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Sailthru by Marigold
+.. |destination-name| replace:: Sailthru by Zeta
 .. |destination-api| replace:: Sailthru API
 .. |plugin-name| replace:: "Sailthru"
 .. |credential-type| replace:: "sailthru"
@@ -16,18 +16,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Sailthru by Marigold.
+        Configure Amperity to send data to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Sailthru by Marigold.
+        Configure Amperity to send data to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destinations for Sailthru by Marigold
+        Configure destinations for Sailthru by Zeta
 
 ==================================================
-Configure destinations for Sailthru by Marigold
+Configure destinations for Sailthru by Zeta
 ==================================================
 
 .. include:: ../../shared/terms.rst

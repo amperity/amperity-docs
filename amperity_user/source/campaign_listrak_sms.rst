@@ -9,18 +9,18 @@
 
 .. meta::
     :description lang=en:
-        Use segments and campaigns to send audiences from Amperity to Listrak SMS.
+        Use segments and campaigns for list managment in Listrak SMS.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use segments and campaigns to send audiences from Amperity to Listrak SMS.
+        Use segments and campaigns for list managment in Listrak SMS.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send audiences to Listrak SMS
+        Manage lists in Listrak SMS
 
 ==================================================
-Send audiences to Listrak SMS
+Manage lists in Listrak SMS
 ==================================================
 
 .. include:: ../../amperity_operator/source/destination_listrak_sms.rst

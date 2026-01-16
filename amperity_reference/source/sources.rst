@@ -108,7 +108,7 @@ Pull data from upstream marketing applications and workflows to Amperity.
    .. grid-item-card:: Camelot SMM
       :link: ../operator/source_camelot_smm.html
 
-   .. grid-item-card:: Cheetah Digital by Marigold
+   .. grid-item-card:: Cheetah Digital by Zeta
       :link: ../operator/source_cheetah_digital.html
 
    .. grid-item-card:: Cordial
