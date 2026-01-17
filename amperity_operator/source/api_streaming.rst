@@ -73,9 +73,9 @@ The Streaming API has the following rate limits.
        Requests to the Streaming API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
 
    * - **Payload size**
-     - The maximum payload size may not exceed 5 MB.
+     - The maximum payload size may not exceed 1 MB.
 
-       Attempts to post more than 5 MB fails with an HTTP 413 Payload Too Large status code.
+       Attempts to post more than 1 MB fails with an HTTP 413 Payload Too Large status code.
 
 .. streaming-ingest-rate-limits-end
 
