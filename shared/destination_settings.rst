@@ -719,6 +719,38 @@ The name of the program in which the audience list managed by Amperity is locate
 
 
 
+.. vale off
+
+**ADOBE TARGET**
+
+.. vale on
+
+Settings unique to Adobe Target.
+
+**Identifier type**
+
+.. setting-adobe-target-identifier-start
+
+The identifier type for individual profiles in the |destination-name| profile store. The first column in the dataset sent to |destination-name| must have a header that matches the name of the selected identifier type.
+
+.. setting-adobe-target-identifier-end
+
+**thirdPartyId** (identifier type)
+
+.. setting-adobe-target-identifier-thirdpartyid-start
+
+The **thirdPartyId** is a persistent identifier that uniquely identifies visitors to a website, mobile app, social media platform, and other cross-channel locations to which your customers log in. For example, a loyalty ID, a membership number, a web account ID, or some other identifier that is not personally identifiable information (PII) or sensitive information. Every call made to the |destination-name| profile store must use the **thirdPartyId**.
+
+.. setting-adobe-target-identifier-thirdpartyid-end
+
+**pcId** (identifier type)
+
+.. setting-adobe-target-identifier-pcid-start
+
+The **pcId** is an internal identifier generated automatically by |destination-name|. It is tied to the visitor's browser **mboxPC** cookie and is the source of truth for profile storage on a single device, single browser, or other cookie location. A single visitor can have many **pcId** identifiers.
+
+.. setting-adobe-target-identifier-pcid-end
+
 
 .. vale off
 
