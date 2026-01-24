@@ -105,6 +105,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_adobe_marketo
 
+   .. grid-item-card:: Adobe Target
+      :link-type: doc
+      :link: destination_adobe_target
+
    .. grid-item-card:: Airship
       :link-type: doc
       :link: destination_airship
@@ -519,6 +523,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Adobe Customer Attributes <destination_adobe_customer_attributes>
    Adobe Experience Platform <destination_adobe_aep>
    Adobe Marketo <destination_adobe_marketo>
+   Adobe Target <destination_adobe_target>
    Airship <destination_airship>
    Amazon Pinpoint <destination_amazon_pinpoint>
    Amazon Redshift <destination_amazon_redshift>
