@@ -54,6 +54,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_adobe_marketo
 
+   .. grid-item-card:: Adobe Target
+      :link-type: doc
+      :link: destination_adobe_target
+
    .. grid-item-card:: Airship
       :link-type: doc
       :link: destination_airship
@@ -396,6 +400,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Adobe Customer Attributes <destination_adobe_customer_attributes>
    Adobe Experience Platform <destination_adobe_aep>
    Adobe Marketo <destination_adobe_marketo>
+   Adobe Target <destination_adobe_target>
    Airship <destination_airship>
    Amazon Ads <destination_amazon_ads>
    Amazon Pinpoint <destination_amazon_pinpoint>
