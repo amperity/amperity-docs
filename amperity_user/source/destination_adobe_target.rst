@@ -61,9 +61,9 @@ Personalization and optimization activities
    :start-after: .. destination-adobe-target-activities-start
    :end-before: .. destination-adobe-target-activities-end
 
-.. caution:: This destination is available for profile parameters to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected as an orchestration ask your Datagrid Operator or Amperity representative to configure a destination for sending profile parameters to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _destination-adobe-target-build-query:
