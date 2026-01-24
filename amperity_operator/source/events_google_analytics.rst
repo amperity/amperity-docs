@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: Google Analytics 4
 .. |plugin-name| replace:: "Google Analytics 4"
-.. |credential-type| replace:: "google-analytics-offline-events."
+.. |credential-type| replace:: "google-analytics-offline-events"
 .. |required-credentials| replace:: "measurement ID" and "API secret"
 .. |what-send| replace:: purchase events
 .. |where-send| replace:: |destination-name|
@@ -114,7 +114,7 @@ Configure credentials
 
 **To configure credentials for Google Analytics 4 events**
 
-.. events-google-analyticsr-credentials-steps-start
+.. events-google-analytics-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
