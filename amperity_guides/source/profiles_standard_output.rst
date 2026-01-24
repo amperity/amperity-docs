@@ -22,7 +22,7 @@ Standard output
 
 The following tables are standard output of Amperity when using guided setup. These tables and the attributes within them are always available to the **Segment Editor**:
 
-* :ref:`Customer Profiles <standard-output-customer-profiles>`
+* :ref:`Customer 360 <standard-output-customer-360>`
 * :ref:`Identity Graph <standard-output-identity-graph>`
 * :ref:`Merged Customers <standard-output-merged-customers>`
 * :ref:`Unified Coalesced <standard-output-unified-coalesced>`
@@ -33,20 +33,20 @@ All of the attributes that are available in standard output as a single topic. I
 .. standard-output-overview-end
 
 
-.. _standard-output-customer-profiles:
+.. _standard-output-customer-360:
 
-Customer Profiles
+Customer 360
 ==================================================
 
-.. standard-output-customer-profiles-start
+.. standard-output-customer-360-start
 
-Customer Profiles attributes present a unified view of your customers across all points of engagement, including attributes that cross systems.
+Customer 360 attributes present a unified view of your customers across all points of engagement, including attributes that cross systems.
 
-The following attributes are available from the **Customer Profiles** table.
+The following attributes are available from the **Customer 360** table.
 
-.. standard-output-customer-profiles-end
+.. standard-output-customer-360-end
 
-.. standard-output-customer-profiles-table-start
+.. standard-output-customer-360-table-start
 
 .. list-table::
    :widths: 30 70
@@ -95,7 +95,7 @@ The following attributes are available from the **Customer Profiles** table.
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-.. standard-output-customer-profiles-table-end
+.. standard-output-customer-360-table-end
 
 
 .. _standard-output-identity-graph:
