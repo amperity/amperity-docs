@@ -41,8 +41,6 @@ Send profile parameters from Amperity to |destination-name| and manage the colle
 
 .. note:: Amperity uses the `Bulk Profile Update API <https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profile-bulk-api>`__ |ext_link| to send |what-send| to |where-send|.
 
-   Profiles are unique by **thirdPartyId**. Each profile property value
-
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
       :end-before: .. destinations-add-destinations-intro-allow-for-end
