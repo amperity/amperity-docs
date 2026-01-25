@@ -329,6 +329,36 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 
 .. courier-groups-schedules-end
 
+.. courier-groups-schedules-examples-start
+
+**Example cron schedules**
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - columnName
+     - columnName
+   * - **0 17 * * ***
+     - Daily at 17:00 UTC
+
+   * - **0 17 * * 1,3**
+     - Monday and Wednesday at 17:00 UTC
+
+   * - **0 17 * * 1-5**
+     - Weekly on Monday through Friday at 17:00 UTC
+
+   * - **0 17 * * 0**
+     - Weekly on Sunday at 17:00 UTC
+
+   * - **0 22 * * 0**
+     - Weekly on Sunday at 22:00 UTC
+
+   * - **30 15 * * 1,2,5**
+     - Monday, Tuesday, and Friday 15:30 PM UTC
+
+.. courier-groups-schedules-examples-end
+
 .. courier-groups-schedules-note-start
 
 .. note:: Scheduling a courier group is optional. When a courier group is not assigned a schedule, it may be run manually on an ad hoc basis.
