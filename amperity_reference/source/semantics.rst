@@ -1960,7 +1960,7 @@ Subscriber status
 
 .. semantics-subscriber-status-start
 
-Subscriber status -- whether a customer has opted-in or opted-out to receiving communication -- can be difficult to track when it is not consolidated into a single table within your customer 360 database. Use subscriber status semantic tags to consolidate email or phone subscriber status information into a single table.
+Subscriber status--whether a customer has opted-in or opted-out to receiving communication--can be difficult to track when it is not consolidated into a single table within your customer 360 database. Use subscriber status semantic tags to consolidate email or phone subscriber status information into a single table.
 
 The following semantic tags consolidate your customers' email and phone subscriber status:
 

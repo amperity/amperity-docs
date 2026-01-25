@@ -180,7 +180,7 @@ The following examples describe how AND and OR conditions work.
           :align: left
           :class: no-scaled-link
 
-       In this example, the audience that is returned -- shown as the darker color -- is smaller because only a subset of customers for whom you have email addresses have opted in to receiving email messages from your brand.
+       In this example, the audience that is returned--shown as the darker color--is smaller because only a subset of customers for whom you have email addresses have opted in to receiving email messages from your brand.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -210,7 +210,7 @@ The following examples describe how AND and OR conditions work.
 
        This audience has two groups of attributes: email addresses **OR** phone numbers **AND** opt-in status for email addresses **OR** phone numbers.
 
-       The first group of attributes -- email addresses *or* phone numbers, as shown in the darker color -- should make your audience larger. Few data sets have a matching set of email addresses and phone numbers across all customers.
+       The first group of attributes--email addresses *or* phone numbers, as shown in the darker color--should make your audience larger. Few data sets have a matching set of email addresses and phone numbers across all customers.
 
        .. image:: ../../images/segments-and-vs-or-howitworks-3.png
           :width: 600 px
@@ -218,7 +218,7 @@ The following examples describe how AND and OR conditions work.
           :align: left
           :class: no-scaled-link
 
-       The second group of attributes -- opt-in status for email addresses *or* phone numbers, as shown in the lighter color -- should also be larger as a group than by themselves. You should expect the number of customers who have opted in to receive email or SMS communications to be smaller than the number of customers who have provided email addresses or phone numbers to your brand.
+       The second group of attributes--opt-in status for email addresses *or* phone numbers, as shown in the lighter color--should also be larger as a group than by themselves. You should expect the number of customers who have opted in to receive email or SMS communications to be smaller than the number of customers who have provided email addresses or phone numbers to your brand.
 
        These two groups are in-between an **AND** condition within your segment: email address *or* phone *and* opt-in status for email address *or* phone.
 

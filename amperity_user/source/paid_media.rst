@@ -95,7 +95,7 @@ Audience expansion
 
 Finding new customers is critical to the successful growth of your brand.
 
-Use Amperity to build high quality seed audiences that contain your most valuable customers. Filter that audience using attributes and PII in your customer 360 -- demographics, interests, product preferences, product affinities, purchase histories -- to define a seed audience that your brand can use with lookalike campaigns.
+Use Amperity to build high quality seed audiences that contain your most valuable customers. Filter that audience using attributes and PII in your customer 360--demographics, interests, product preferences, product affinities, purchase histories--to define a seed audience that your brand can use with lookalike campaigns.
 
 Use seed audiences to grow your customer base and find new customers who are similar to the high-value customers your brand already has.
 
@@ -116,12 +116,12 @@ Lifecycle marketing
 
 .. paid-media-activation-scenario-lifecycle-marketing-start
 
-Amplify lifecycle marketing campaigns -- churn prevention, VIP cultivation, one-time buyers -- with more detailed audiences. For example, build audiences for:
+Amplify lifecycle marketing campaigns--churn prevention, VIP cultivation, one-time buyers--with more detailed audiences. For example, build audiences for:
 
 * Highest value VIPs
 * Customers who are *almost* VIPs
 * Customers who have opted out and were, at one point high-value customers, but have churned
-* Customers who are at every stage -- active, at risk, churned, etc. -- to build out complex churn prevention and one-time buyer campaigns
+* Customers who are at every stage, such as active, at risk, or churned, to build out complex churn prevention and one-time buyer campaigns
 
 .. note:: Lifecycle marketing campaigns are often highly complex with many stages and subtle differences that define how your brand wants to interact with customers who are at specific stages within the campaign.
 

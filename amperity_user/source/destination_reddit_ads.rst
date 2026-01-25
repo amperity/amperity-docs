@@ -244,7 +244,7 @@ The following example describes the steps required to add a column to your custo
           :align: center
           :class: no-scaled-link
 
-     - Configure a one-time campaign to use the hashed email address segment as its starting audience, and then set the control group to 0%. Select your destination -- SFTP or cloud storage -- and then open the **Edit Attributes** page.
+     - Configure a one-time campaign to use the hashed email address segment as its starting audience, and then set the control group to 0%. Select your destination--SFTP or cloud storage--and then open the **Edit Attributes** page.
 
        Choose the **Hashed Email** attribute from the **Customer 360** table.
 

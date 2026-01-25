@@ -238,7 +238,7 @@ Amperity provides a series of predictive attributes for predicted customer lifet
 
 A churn prevention campaign starts with predicted customer lifetime value, the value tiers customers are predicted to fall into, and their lifecycle status.
 
-Use the individual components of pCLV -- predicted average order revenue, predicted order frequency, and probability of transaction -- to fine-tune your understanding of your customers, and then get more precise about where they fit within the various stages of your churn prevention campaigns.
+Use the individual components of pCLV--predicted average order revenue, predicted order frequency, and probability of transaction--to fine-tune your understanding of your customers, and then get more precise about where they fit within the various stages of your churn prevention campaigns.
 
 Use non-predictive attributes to find historical measurements, such as the number of days since a customer has last ordered.
 

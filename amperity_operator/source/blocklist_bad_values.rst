@@ -724,7 +724,7 @@ Automate blocklist
 
 .. bad-values-blocklist-automate-start
 
-The bad-values blocklist must be refreshed on a daily basis. To do this, configure a destination to send the results of the :ref:`bad-values blocklist query <bad-values-blocklist-run-query>` to the cloud-based storage location that is included with your tenant -- :doc:`Amazon S3 <destination_amazon_s3>` *or* :doc:`Microsoft Azure Blob Storage <destination_azure_blob_storage>`. Update your courier to pull the bad-values blocklist from that location, and then configure the end-to-end workflow to run automatically.
+The bad-values blocklist must be refreshed on a daily basis. To do this, configure a destination to send the results of the :ref:`bad-values blocklist query <bad-values-blocklist-run-query>` to the cloud-based storage location that is included with your tenant: :doc:`Amazon S3 <destination_amazon_s3>` *or* :doc:`Microsoft Azure Blob Storage <destination_azure_blob_storage>`. Update your courier to pull the bad-values blocklist from that location, and then configure the end-to-end workflow to run automatically.
 
 .. bad-values-blocklist-automate-end
 

@@ -684,7 +684,7 @@ Use the following steps to configure your tenant for one-to-one Stitch:
 
    .. tip:: You may apply the **ck** semantic tag from a feed or from a custom domain table.
 
-#. Apply all other semantic tags -- customer profile, foreign key, primary key, orders and items -- to the correct fields in all of your data sources. These tags have no effect when running one-to-one Stitch, but are required for customer profiles, transactions, segment insights, and predictive modeling.
+#. Apply all other semantic tags--customer profile, foreign key, primary key, orders and items--to the correct fields in all of your data sources. These tags have no effect when running one-to-one Stitch, but are required for customer profiles, transactions, segment insights, and predictive modeling.
 
 #. To configure Amperity for one-to-one Stitch, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Bypass Stitch**, move the slider for the **Run 1:1 Stitch** setting to the right:
 
