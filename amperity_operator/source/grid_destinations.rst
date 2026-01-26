@@ -370,10 +370,6 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_vibes
 
-   .. grid-item-card:: Walmart DSP
-      :link-type: doc
-      :link: destination_walmart_dsp
-
    .. grid-item-card:: Webhook
       :link-type: doc
       :link: destination_webhook
@@ -479,7 +475,6 @@ Set up connections to send data from Amperity to other marketing applications, t
    TikTok Ads <destination_tiktok_ads>
    Tulip <destination_tulip>
    Vibes <destination_vibes>
-   Walmart DSP <destination_walmart_dsp>
    Webhook <destination_webhook>
    Yahoo DSP <destination_yahoo_dsp>
    Zendesk <destination_zendesk>

@@ -299,10 +299,6 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_tiktok_ads
 
-   .. grid-item-card:: Walmart DSP
-      :link-type: doc
-      :link: campaign_walmart_dsp
-
    .. grid-item-card:: Yahoo DSP
       :link-type: doc
       :link: campaign_yahoo_dsp
@@ -345,5 +341,4 @@ Send campaigns to any of the following marketing applications and workflows.
    Snapchat <campaign_snapchat>
    The Trade Desk <campaign_the_trade_desk>
    TikTok Ads <campaign_tiktok_ads>
-   Walmart DSP <campaign_walmart_dsp>
    Yahoo DSP <campaign_yahoo_dsp>
