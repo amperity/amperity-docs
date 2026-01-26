@@ -70,6 +70,13 @@ A list of plugins for sources, destinations, campaigns, and journeys.
       :end-before: .. term-adobe-marketo-end
 
 
+**adobe-target**
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-adobe-target-start
+      :end-before: .. term-adobe-target-end
+
+
 **adroll**
 
    .. include:: ../../shared/terms.rst

@@ -302,10 +302,6 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_vibes
 
-   .. grid-item-card:: Walmart DSP
-      :link-type: doc
-      :link: campaign_walmart_dsp
-
    .. grid-item-card:: Yahoo DSP
       :link-type: doc
       :link: campaign_yahoo_dsp
@@ -390,6 +386,5 @@ Configure Amperity to send campaigns to any marketing workflow.
    TikTok Ads Manager <campaign_tiktok_ads>
    Tulip <campaign_tulip>
    Vibes <campaign_vibes>
-   Walmart DSP <campaign_walmart_dsp>
    Yahoo DSP <campaign_yahoo_dsp>
    Zendesk <campaign_zendesk>

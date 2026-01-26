@@ -79,7 +79,7 @@ A request to the **POST /workflow/runs/** endpoint is similar to:
         --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}' \
-        --data '{"config_id"="cg-123ABc4DE"}'
+        --data '{"config_id":"cg-123ABc4DE"}'
 
 This example is formatted for readability in a narrow page layout.
 
@@ -186,7 +186,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --header 'amperity-tenant: {tenant}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
-              --data '{"config_id"="cc-123ABc4DE"}'
+              --data '{"config_id":"cc-123ABc4DE"}'
 
       This example is formatted for readability in a narrow page layout.
 
@@ -201,7 +201,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --header 'amperity-tenant: {tenant}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
-              --data '{"config_id"="og-123ABc4DE"}'
+              --data '{"config_id":"og-123ABc4DE"}'
 
       This example is formatted for readability in a narrow page layout.
 
@@ -217,10 +217,10 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --header 'amperity-tenant: {tenant}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
-              --data '{"config_id"="cg-123ABc4DE"}' \
-              --data '{"range_from"="YYYY-MM-DD"}' \
-              --data '{"range_to"="YYYY-MM-DD"}' \
-              --data '{"run_mode"="full"}'
+              --data '{"config_id":"cg-123ABc4DE"}' \
+              --data '{"range_from":"YYYY-MM-DD"}' \
+              --data '{"range_to":"YYYY-MM-DD"}' \
+              --data '{"run_mode":"full"}'
 
       This example is formatted for readability in a narrow page layout.
 
