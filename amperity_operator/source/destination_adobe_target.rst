@@ -41,6 +41,18 @@ Send profile parameters from Amperity to |destination-name| and manage the colle
 
 .. note:: Amperity uses the `Bulk Profile Update API <https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profile-bulk-api>`__ |ext_link| to send |what-send| to |where-send|.
 
+   * Amperity creates profiles when the identifier--**thirdPartyId** or **pcId**--does not exist in the |destination-name| profile store.
+
+   * Amperity updates profile parameters when the identifier exists.
+
+   * Parameter names are case-sensitive. Amperity creates profile parameters when a matching parameter name does not exist.
+
+   * Parameter values are case-sensitive. Amperity updates profile parameter values to match the value sent from Amperity.
+
+   * Empty values--missing fields, "", or **NULL**--do not reset or delete values in the |destination-name| profile store.
+
+   * Existing profile parameter values are never removed.
+
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
       :end-before: .. destinations-add-destinations-intro-allow-for-end
