@@ -673,7 +673,7 @@ Amperity's approach
 
 .. campaigns-results-amperitys-method-start
 
-Amperity creates a 360-degree view of your customers, which includes a complete transaction history. This process uses a stable identifier -- the Amperity ID -- to track customers even when their path to a purchase is non-linear.
+Amperity creates a 360-degree view of your customers, which includes a complete transaction history. This process uses a stable identifier--the Amperity ID--to track customers even when their path to a purchase is non-linear.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amperity-id-start
@@ -681,12 +681,12 @@ Amperity creates a 360-degree view of your customers, which includes a complete 
 	  
 Amperity provides marketers with the following capabilities which gives them a 360 view of their customer's behavior:
 
-* Compares more than one set of marketing data -- via the Amperity ID -- to determine whether customer behavior has changed around a campaign.
+* Compares more than one set of marketing data using the Amperity ID to determine if customer behavior has changed around a campaign.
 * Tracks customer behavior through transactional data and an Amperity ID associated with a campaign.
 * Automatically holds back a control group when a campaign is created to test whether a customer will buy something in a store or whether they received an email or not.
 * Tracks omnichannel behavior of customers targeted in the test group, as well as the behavior of customers in the control holdout group.
 * Compares the behavior of control customers to those who received the marketing treatment and calculates the incremental impact of the campaign.
-* Determines whether a customer -- with an Amperity ID associated with a campaign -- has made a purchase within a timeframe set by the marketer. For instance, if a customer were to shop online or in a store. 
+* Determines whether a customer--with an Amperity ID associated with a campaign--has made a purchase within a timeframe set by the marketer. For instance, if a customer were to shop online or in a store. 
 * Tests within smaller sub-sets of customer groups to determine how certain components within a campaign affect customer behavior. For example, how was the 10 percent email offer received by customers compared to the $10 off email offer.
 * Uses people-based measurement to randomly assign customers to control and treatment groups, which gives you the ability to accurately measure the incremental effects of a campaign. To learn more about people-based measurement, refer to the |people_based_measurement| topic.
 

@@ -29,13 +29,13 @@ RFM scores
 
 .. rfm-scores-start
 
-RFM scores are available as out-of-the-box attributes in Amperity standard output. These attributes -- **L12M Recency**, **L12M Frequency**, and **L12M Monetary** -- can be found in the **Transaction Attributes Extended** table and are built from historical data for the previous 12 months. Use the scores in these attributes to build useful audiences around how much your customers spend, how often they purchase, and how recently they purchase.
+RFM scores are available as out-of-the-box attributes in Amperity standard output. These attributes--**L12M Recency**, **L12M Frequency**, and **L12M Monetary**--can be found in the **Transaction Attributes Extended** table and are built from historical data for the previous 12 months. Use the scores in these attributes to build useful audiences around how much your customers spend, how often they purchase, and how recently they purchase.
 
 .. rfm-scores-end
 
 .. rfm-scores-note-start
 
-.. note:: RFM scores, because they are historically based and only cover a rolling 1-year window, are less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which is available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
+.. note:: RFM scores, because they are historically based and only cover a rolling 1-year window, are less accurate than :doc:`(p)CLV attributes <model_predicted_clv>`, which are available when you enable Amperity predictive analytics in your tenant. (p)CLV attributes provide better answers than RFM scores for the following questions: "How much will customers spend in the next year?" and "Which customers are your most valuable customers?"
 
 .. rfm-scores-note-end
 

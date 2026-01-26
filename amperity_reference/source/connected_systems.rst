@@ -83,6 +83,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Send data from Amperity using the Marketo API.
 
+   * - **Adobe Target**
+     - 
+     - |system-yes|
+     - Send profile properties to the Adobe Target profile store using the Bulk Profile Update API.
+
    * - **AdRoll**
      - |system-yes|
      - 

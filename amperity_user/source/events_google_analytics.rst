@@ -31,9 +31,9 @@ Send purchase events to Google Analytics 4
    :start-after: .. events-google-analytics-overview-start
    :end-before: .. events-google-analytics-overview-end
 
-.. caution:: This destination is available for sending events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected as an orchestration ask your Datagrid Operator or Amperity representative to configure a destination for sending events to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _events-google-analytics-build-query:

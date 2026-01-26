@@ -488,7 +488,7 @@ A product catalog must be defined, and then joined to the **Unified Itemized Tra
 
 #. Apply the **product-id** semantic tag to product catalog data as required by predictive modeling. The **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
 
-   .. important:: Product affinity modeling requires the field that defines product categories -- **product-category** in the **Unified Product Catalog** table -- to contain between 20 and 2000 unique values.
+   .. important:: Product affinity modeling requires the field that defines product categories--**product-category** in the **Unified Product Catalog** table--to contain between 20 and 2000 unique values.
 
 #. A list of custom attributes may be defined. These must be available as columns in the **Customer 360** database and must be added to the **Unified Itemized Transactions** table.
 

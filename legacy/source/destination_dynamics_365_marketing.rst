@@ -29,7 +29,7 @@ Send segments to Dynamics 365 Marketing
 
 .. destination-dynamics-365-marketing-context-start
 
-Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts -- all contacts, by demographic, by behavior, by firmographic, or by other considerations -- to narrow your segments down to the right audience for your marketing campaign.
+Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts--all contacts, by demographic, by behavior, by firmographic, or by other considerations--to narrow your segments down to the right audience for your marketing campaign.
 
 .. destination-dynamics-365-marketing-context-end
 

@@ -106,7 +106,7 @@ LiveRamp and PII data
 
 .. sendto-liveramp-build-query-pii-start
 
-`LiveRamp terms of service restrict PII data <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link| -- government-issued identification numbers (like social security numbers), financial and customer account numbers, birthdates, gender, email addresses, names (first, last, and full), and similar data -- should be excluded from query data that is sent to |destination-name|.
+`LiveRamp terms of service restrict PII data <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|. Government-issued identification numbers (like social security numbers), financial and customer account numbers, birthdates, gender, email addresses, names (first, last, and full), and similar data should be excluded from query data that is sent to |destination-name|.
 
 Because the data sent to |destination-name| contains the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
 

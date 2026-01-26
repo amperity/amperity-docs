@@ -426,7 +426,7 @@ Authorization error
 
 A 403 response means that Amperity is not able to access the Zendesk Users API. When a 403 response is received from Zendesk, a workflow action named "Authorization Error" is generated.
 
-Amperity uses two configuration settings -- |credential-details| -- to build a credentials string that is added to the request authorization header. The format for the credentials string is:
+Amperity uses two configuration settings--|credential-details|--to build a credentials string that is added to the request authorization header. The format for the credentials string is:
 
 ::
 

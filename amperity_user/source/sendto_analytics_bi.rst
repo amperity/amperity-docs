@@ -46,9 +46,9 @@ Workflows that make data available to analytics and BI tools are done in two bro
           :class: no-scaled-link
      - Use any of the following options:
 
-       #. Send data from Amperity to cloud storage -- one of :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
+       #. Send data from Amperity to cloud storage: :doc:`Amazon S3 <destination_amazon_s3>`, :doc:`Azure Blob Storage <destination_azure_blob_storage>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
        #. Send data to Snowflake.
-       #. Send data to a cloud database -- :doc:`Amazon Redshift <destination_amazon_redshift>` or Azure Synapse Analytics.
+       #. Send data to a cloud database: :doc:`Amazon Redshift <destination_amazon_redshift>` or Azure Synapse Analytics.
        #. Send to a location from which you can use Open Database Connectivity (ODBC) or Java Database Connectivity (JDBC) to connect to the data.
 
        The option that you choose for this step depend on which analytics or BI tools you use or what type of cloud infrastructure is available to your organization. Many analytics and BI tools support using any of these options. Cloud-based workflows are the most common.

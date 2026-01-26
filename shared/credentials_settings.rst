@@ -359,6 +359,33 @@ The `subdomain <https://experienceleague.adobe.com/en/docs/marketo/using/product
 
 .. vale off
 
+**ADOBE TARGET**
+
+.. vale on
+
+The following settings are unique to Adobe Marketo.
+
+**Authentication token**
+
+.. credential-adobe-target-authentication-token-start
+
+The authentication token is created from the |destination-name| `user interface <https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/profile-api-settings>`__ |ext_link| *or* from the `Adobe Target Admin API <https://developer.adobe.com/target/administer/admin-api/#tag/Authentication/operation/requestAuthorizationToken>`__ |ext_link|.
+
+.. credential-adobe-target-authentication-token-end
+
+**Client code**
+
+.. credential-adobe-target-client-code-start
+
+The name of the |destination-name| client. The client code is located in the URL for your instance of |destination-name|. For example, "socktown" is the client code in the ``socktown.tt.omtrdc.net`` URL.
+
+.. credential-adobe-target-client-code-end
+
+
+
+
+.. vale off
+
 **AIRSHIP**
 
 **Hostname**

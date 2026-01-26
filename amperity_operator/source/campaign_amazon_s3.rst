@@ -345,6 +345,12 @@ Both parts are required to authenticate requests to Amazon AWS resources.
              :start-after: .. credential-amazon-s3-iam-role-arn-start
              :end-before: .. credential-amazon-s3-iam-role-arn-end
 
+       **External ID**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-external-id-start
+             :end-before: .. credential-amazon-s3-external-id-end
+
        **Amazon S3 bucket name**
 
           |checkmark-required| **Required**

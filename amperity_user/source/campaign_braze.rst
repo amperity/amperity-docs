@@ -275,7 +275,7 @@ Update customer profiles
 
 .. channel-braze-example-customer-profiles-start
 
-Build an audience that contains customer profiles -- first and last name, email address, phone number, external ID, gender, birthdate, city, and country. This audience should be updated on a regular basis. For example, every 30 days.
+Build an audience that contains customer profiles, such as first and last name, email address, phone number, external ID, gender, birthdate, city, and country. This audience should be updated on a regular basis. For example, every 30 days.
 
 .. note:: This example assumes that your customer 360 database has a table from which a segment can access the |destination-name| **external_id**. For example, a |braze_table| in your customer 360 database that is unique by Amperity ID and contains all of the default user attributes that you want to update in |destination-name|. This table may also contain custom attributes.
 

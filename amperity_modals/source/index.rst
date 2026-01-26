@@ -21,6 +21,7 @@ Site Index
    destination-adobe-ecs
    destination-adobe-customer-attributes
    destination-adobe-campaign
+   destination-adobe-target
    destination-amazon-ads
    destination-attentive
    destination-attentive-api
@@ -101,4 +102,5 @@ Site Index
    plugins
    quickstart-pk
    semantics
+   stitch
    stitch_benchmarks

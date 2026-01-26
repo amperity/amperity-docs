@@ -19,7 +19,7 @@ Configure destinations for Tableau
 
 .. destination-tableau-start
 
-Many organizations use Tableau to enable its users -- data analysts, data scientists, and business users -- to explore data, discover insights, and share the results in a visual way across the organization.
+Many organizations use Tableau to enable its users--data analysts, data scientists, and business users--to explore data, discover insights, and share the results in a visual way across the organization.
 
 Tableau connects to Amperity data indirectly. You must first configure Amperity to send the results of a query or a database export to any of the following cloud-based data warehouses:
 

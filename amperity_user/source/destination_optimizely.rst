@@ -73,7 +73,7 @@ Optimizely and PII data
 
 .. sendto-optimizely-build-query-pii-start
 
-Optimizely terms of service prohibit PII data -- names, social security numbers, email addresses, and similar data -- from being collected by or sent to |destination-name| services for use with customer profiles or any other feature. It is important to ensure that queries and database exports from Amperity comply with requirements for using |destination-name| services.
+Optimizely terms of service prohibit PII data--names, social security numbers, email addresses, and similar data--from being collected by or sent to |destination-name| services for use with customer profiles or any other feature. It is important to ensure that queries and database exports from Amperity comply with requirements for using |destination-name| services.
 
 Because the data sent to |destination-name| contains the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
 

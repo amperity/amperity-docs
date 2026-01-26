@@ -91,7 +91,7 @@ The SQL for **Has Not Purchased** works like this. It uses order ID from the **U
      ,COUNT(DISTINCT order_id) AS purchase_count
    FROM Unified_Itemized_Transactions
 
-and finds all of the distinct orders that were made by all customers -- the "purchase count" -- and groups them by Amperity ID for all orders that match the date range:
+and finds all of the distinct orders that were made by all customers--the "purchase count"--and groups them by Amperity ID for all orders that match the date range:
 
 ::
 

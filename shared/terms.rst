@@ -243,6 +243,15 @@ Adobe Marketo is marketing automation software that streamlines, automates, and 
 .. term-adobe-marketo-end
 
 
+**Adobe Target**
+
+.. term-adobe-target-start
+
+Adobe Target is a set of tools for personalizing and optimizing customer experiences across digital channels, including websites, mobile apps, and social media platforms.
+
+.. term-adobe-target-end
+
+
 **AdRoll**
 
 .. term-adroll-start
@@ -2155,6 +2164,15 @@ The **Detailed Examples** table has detailed examples of Stitch results. Use the
 Deterministic is identity resolution that uses rules-based matching to generate exact matches. The results rank predictability over accuracy. For example: processing that connects a person with their payments.
 
 .. term-deterministic-end
+
+
+**deterministic connection**
+
+.. term-deterministic-connection-start
+
+Deterministic record matching uses rules that define exact matching for customer keys and semantic tags. Records that do not match exactly to a rule are not scored.
+
+.. term-deterministic-connection-end
 
 
 **digital channel**
@@ -5158,6 +5176,15 @@ A primary key is a column in a data table that uniquely identifies each row the 
 .. term-primary-key-end
 
 
+**probabilistic connection**
+
+.. term-probabilistic-connection-start
+
+Probabilistic record matching uses rules that define approximate matching for customer keys and semantic tags. Records that approximately match are evaluated by Stitch and scored.
+
+.. term-probabilistic-connection-end
+
+
 **product affinity**
 
 .. term-product-affinity-start
@@ -6778,7 +6805,7 @@ Marketers use purchase activities to gather information about how customers inte
 
 .. term-transitive-connection-start
 
-A transitive connection exists between individual records when any two records share a strong match to an intermediate record, but do not have a strong match to each other. For example: record 1 matches record 2, record 3 matches record 2, neither records 1 or 3 match to each other, but they have a transitive connection because both match record 2.
+A transitive connection exists between individual records when any two records share a strong match to an intermediate record, but do not have a strong match to each other. For example: record 1 matches record 2; record 3 matches record 2; neither records 1 nor 3 match each other, but they have a transitive connection because both match record 2.
 
 .. term-transitive-connection-end
 

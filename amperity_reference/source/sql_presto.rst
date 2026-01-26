@@ -304,7 +304,7 @@ When using an alias:
 
   ..tip:: Include the **AS** keyword when aliasing columns in a **SELECT** statement.
 
-* For computed data -- **SUM()** or **AVG()** -- use the name you would give it were it a column defined in the schema.
+* For computed data--**SUM()** or **AVG()**--use the name you would give it were it a column defined in the schema.
 * Always wrap an aliased field name with single back ticks::
 
      `given_name`

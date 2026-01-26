@@ -174,6 +174,14 @@ A
       :end-before: .. term-adobe-marketo-end
 
 
+.. _a-adobe-target:
+
+**Adobe Target**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-adobe-target-start
+      :end-before: .. term-adobe-target-end
+
+
 .. _a-adroll:
 
 **AdRoll**

@@ -785,7 +785,7 @@ Do one of the following: use the |destination-name| subscriber key or use email 
 To resolve this error, you must configure the primary key.
 
 #. Open the Amperity **Credentials** page in a new tab.
-#. For a query, open the **Queries** page, and then update the query to return the field -- **subscriber_key** or **email** -- that matches the **Primary Key** setting in the data template. Validate, and then activate the query.
+#. For a query, open the **Queries** page, and then update the query to return the field--**subscriber_key** or **email**--that matches the **Primary Key** setting in the data template. Validate, and then activate the query.
 
    For a campaign, open the **Campaigns** page, and then update the campaign and ensure the primary key is in the list of attributes that are sent to |destination-name|. Activate the campaign.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.

@@ -144,7 +144,7 @@ A stage defines the location of objects that are available within Snowflake.
 
 .. sources-add-courier-fivetran-load-operation-start
 
-Load operations associate each table in the list of tables to a feed. (The initial setup for this courier uses an incorrect feed ID -- ``df-xxxxxx``.)
+Load operations associate each table in the list of tables to a feed. (The initial setup for this courier uses an incorrect feed ID, such as ``df-xxxxxx``.)
 
 .. sources-add-courier-fivetran-load-operation-end
 

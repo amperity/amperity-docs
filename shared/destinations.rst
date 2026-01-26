@@ -444,7 +444,7 @@ Complete the following **SFTP Settings**:
 
    .. tip:: If the path to the remote folder contains a space, use a backslash (\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -487,7 +487,7 @@ Complete the following **SFTP Settings**:
 
    The object prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -530,7 +530,7 @@ Complete the following **Amazon S3 Settings**:
 
    The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -574,7 +574,7 @@ Complete the following **Azure Blob Storage Settings**:
 
    The name of the container and blob prefix. For example: |azure-container-name| and |azure-blob-prefix|.
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
