@@ -24,36 +24,17 @@ Package audiences as first-party data, and then deliver those audiences as a pro
    :align: left
    :class: no-scaled-link
 
-Private audiences have advertiser-specific rates. Each private audience is purchased by a single advertiser. Public audiences have a standard rates. A public audience may be purchased by an unlimited number of advertisers.
+Private audiences have advertiser-specific rates. Each private audience is purchased by a single advertiser. 
 
-After purchase, advertisers can use your brand's audiences as a lookalike audience for their marketing campaigns. Use the **Segment Editor** to define audiences, and then use the **Monetization** page to send public or private audiences to the following marketplaces:
+Public audiences have standard rates. A public audience may be purchased by an unlimited number of advertisers.
+
+After purchase, advertisers can use your brand's audiences as a lookalike audience for their marketing campaigns. 
+
+Use the **Segment Editor** to define audiences, and then use the **Monetization** page to send public or private audiences to the following marketplaces:
 
 * The Trade Desk
 
-
-.. TODO: Moving the private vs. public to the two bullets also gets rid of the awkward table.
-
-OLD
-OLD
-OLD
-
-The **Audience monetization** feature allows you to package your first-party data in the form of customer audiences as a product to sell on third-party marketplaces.
-
-This feature allows you to define audiences using existing segments or by creating a new segment with the **Visual Segment Editor**. Instead of sending these audiences to a marketing destination, like Facebook or Google Ads, you are sending them to a marketplace where advertisers can purchase access to them.
-
-OLD
-OLD
-OLD
-
 .. monetize-about-end
-
-.. monetize-trade-desk-note-start
-
-.. TODO: Don't need this anymore. We start with a list of one element and when we get more marketplaces the list grows, alphabetically.
-
-.. note:: Audience monetization currently only supports sending audiences to The Trade Desk.
-
-.. monetize-trade-desk-note-end
 
 .. _monetize-public-private:
 
@@ -62,7 +43,8 @@ Public vs. private marketplaces
 
 .. monetize-public-private-start
 
-.. TODO: Yeet this whole section!
+.. TODO: Yeet this whole section!  
+.. TODO: Sam's response: I will if they change the UX copy/terminology
 
 You can monetize audience data in two ways. The workflow you choose depends on who is buying your data.
 
@@ -125,7 +107,7 @@ Custom audience
 
 .. monetize-howtos-public-custom-start
 
-.. TODO: Short intro goes here
+Use the visual **Segment Editor** accessible through the **Audience Monetization** page to define a new audience that is available to all advertisers in a public marketplace.
 
 .. monetize-howtos-public-custom-end
 
@@ -164,7 +146,7 @@ Existing audience
 
 .. monetize-howtos-public-existing-start
 
-.. TODO: Short intro goes here
+Select an audience that has already been defined in Amperity to make it available to all advertisers in a public marketplace.
 
 .. monetize-howtos-public-existing-end
 
@@ -220,8 +202,7 @@ Custom audience
 
 .. monetize-howtos-private-custom-start
 
-.. TODO: Intro goes here.
-
+Use the visual **Segment Editor** accessible through the **Audience Monetization** page to define a new audience for a specific deal with a single buyer.
 .. monetize-howtos-private-custom-end
 
 **To build a custom audience for a private marketplace**
@@ -259,7 +240,7 @@ Existing audience
 
 .. monetize-howtos-private-existing-start
 
-.. TODO: Intro goes here.
+Select an audience that has already been defined in Amperity to fulfill a specific deal with a single buyer.
 
 .. monetize-howtos-private-existing-end
 
