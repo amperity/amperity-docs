@@ -87,7 +87,7 @@ A request to the **GET /audit-events** endpoint is similar to:
           ?limit=10 \
           ?with_total=true \
           ?happened_from=2024-04-01 \
-          ?happened_tod=2024-04-10' \
+          ?happened_to=2024-04-10' \
         --header 'amperity-tenant: {tenant}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
@@ -121,7 +121,7 @@ The following table describes the parameters that may be used with the **GET /au
        .. note:: You may use the **api-version** request header instead of the **api-version** request parameter.
 
 
-   * - **happened_end**
+   * - **happened_to**
      - String. Optional.
 
        The end date (exclusive) that defines the end of the time range for which audit events are returned. For example: "2024-03-01T11:11:11Z".
@@ -129,7 +129,7 @@ The following table describes the parameters that may be used with the **GET /au
        The values for the end date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
 
-   * - **happened_start**
+   * - **happened_from**
      - String. Optional.
 
        The start date (inclusive) that defines the beginning of the time range for which audit events are returned. For example: "2024-04-01T11:11:11Z".
