@@ -180,7 +180,7 @@ The **200** response returns details for the workflow that was stopped.
      "id":"wf-20240801-65278-x9E9U",
       "type":"campaign.send",
       "name":"testing",
-      "tenant":"acme2-max",
+      "tenant":"socktown",
       "created_at":"2024-08-01T18:07:58.099Z",
       "ended_at":"2024-08-01T18:10:47.712Z",
       "state":"succeeded"

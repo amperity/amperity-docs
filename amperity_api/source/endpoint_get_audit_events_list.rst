@@ -284,8 +284,8 @@ A successful request made to the **GET /audit-events** endpoint will return a re
          "object_name": "Socktown Returning Customers",
          "origin_ip": "111.11.111.1",
          "session_id": "Ab1cDeFgHijkLMN2Op3QrStUvWxYZ0123",
-         "tenant": "acme-sb",
-         "tenant_family": "acme",
+         "tenant": "socktown-sb",
+         "tenant_family": "socktown",
          "user_agent": "Mac OS X 4.5.6"
        }
      ],
