@@ -565,7 +565,7 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-view-journey-participant-numbers`
 * :ref:`journeys-howtos-view-node-configuration`
 
-.. journeys-howtos-list-start
+.. journeys-howtos-list-end
 
 
 .. _journeys-howtos-add:
