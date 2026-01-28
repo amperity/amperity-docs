@@ -48,7 +48,7 @@ Direct all requests to the **POST /workflow/runs/** endpoint should be directed 
 
 .. code-block:: rest
 
-   https://{tenant-id}.amperity.com/api/workflow/runs
+   https://{tenant}.amperity.com/api/workflow/runs
 
 .. endpoint-post-workflows-start-base-url-end
 

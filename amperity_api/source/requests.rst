@@ -30,9 +30,9 @@ In addition to all required headers, you must specify the HTTP method, and base 
 ::
 
    curl -request GET \
-        -url "https://{tenant-id}.amperity.com/api/{endpoint}/" \
+        -url "https://{tenant}.amperity.com/api/{endpoint}/" \
         -H "Authorization: Bearer ${access-token}" \
-        -H "Amperity-Tenant: {tenant-id}" \
+        -H "Amperity-Tenant: {tenant}" \
         -H "api-version: {version}"
 
 Most endpoints provide a set of endpoint-specific properties that may be included within the URL header.

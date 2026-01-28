@@ -54,7 +54,7 @@ Direct all requests to the **GET /campaign-drafts** endpoint to the following ba
 
 ::
 
-   https://{tenant-id}.amperity.com/api/campaign-drafts/
+   https://{tenant}.amperity.com/api/campaign-drafts/
 
 .. endpoint-get-campaign-drafts-list-base-url-end
 

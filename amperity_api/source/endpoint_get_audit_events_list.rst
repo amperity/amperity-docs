@@ -56,7 +56,7 @@ Direct all requests to the **GET /audit-events** endpoint to the following base 
 
 ::
 
-   https://{tenant-id}.amperity.com/api/audit-events/
+   https://{tenant}.amperity.com/api/audit-events/
 
 .. endpoint-get-audit-events-list-base-url-end
 

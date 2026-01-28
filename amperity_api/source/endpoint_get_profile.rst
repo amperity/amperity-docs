@@ -48,7 +48,7 @@ Direct all requests to the **GET /indexes/{id}/profiles/{id}** endpoint to the f
 
 ::
 
-   https://{tenant-id}.amperity.com/api/indexes/
+   https://{tenant}.amperity.com/api/indexes/
 
 .. endpoint-get-profile-base-url-end
 

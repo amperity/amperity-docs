@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        All requests to the Amperity API use 'https://{tenant-id}.amperity.com/api' as the base URL.
+        All requests to the Amperity API use 'https://{tenant}.amperity.com/api' as the base URL.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        All requests to the Amperity API use 'https://{tenant-id}.amperity.com/api' as the base URL.
+        All requests to the Amperity API use 'https://{tenant}.amperity.com/api' as the base URL.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -23,7 +23,7 @@ All requests made to Amperity API endpoints should be directed to the following 
 
 ::
 
-   https://{tenant-id}.amperity.com/api
+   https://{tenant}.amperity.com/api
 
 
 You can find the tenant ID from the Amperity user interface. From the **Users and Activity** page, select the **Actions** menu for an API key, and then click **Copy tenant ID**.
