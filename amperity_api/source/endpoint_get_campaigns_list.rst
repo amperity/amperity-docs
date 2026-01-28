@@ -48,7 +48,7 @@ Direct all requests to the **GET /campaigns** endpoint to the following base URL
 
 ::
 
-   https://{tenant-id}.amperity.com/api/campaigns/
+   https://{tenant}.amperity.com/api/campaigns/
 
 .. endpoint-get-campaigns-list-base-url-end
 

@@ -48,7 +48,7 @@ Direct all requests to the **GET /ingest/jobs** endpoint to the following base U
 
 .. code-block:: rest
 
-   https://{tenant-id}.amperity.com/api/ingest/jobs
+   https://{tenant}.amperity.com/api/ingest/jobs
 
 .. endpoint-get-ingest-jobs-base-url-end
 

@@ -48,7 +48,7 @@ Direct all requests to the **GET /segments** endpoint to the following base URL:
 
 ::
 
-   https://{tenant-id}.amperity.com/api/segments/
+   https://{tenant}.amperity.com/api/segments/
 
 .. endpoint-get-segments-list-base-url-end
 

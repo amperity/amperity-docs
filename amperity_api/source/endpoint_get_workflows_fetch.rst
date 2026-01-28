@@ -48,7 +48,7 @@ Direct all requests to the **GET /workflow/runs/{id}** endpoint to the following
 
 ::
 
-   https://{tenant-id}.amperity.com/api/workflow/runs/{id}
+   https://{tenant}.amperity.com/api/workflow/runs/{id}
 
 .. endpoint-get-workflows-fetch-base-url-end
 
