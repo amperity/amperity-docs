@@ -45,20 +45,32 @@ Each request to an endpoint in the Amperity API must be authenticated.
 .. endpoint-get-audit-events-list-prerequisites-end
 
 
-.. _endpoint-get-audit-events-list-base-url:
+.. _endpoint-get-audit-events-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-audit-events-list-base-url-start
+.. endpoint-get-audit-events-list-request-url-start
 
-Direct all requests to the **GET /audit-events** endpoint to the following base URL:
+Direct all requests to the **GET /audit-events** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant}.amperity.com/api/audit-events/
+.. code-block:: rest
 
-.. endpoint-get-audit-events-list-base-url-end
+   https://app.amperity.com/api/audit-events
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/audit-events
+
+.. endpoint-get-audit-events-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-audit-events-list-rate-limit:
@@ -83,12 +95,12 @@ A request to the **GET /audit-events** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/audit-events \
+          'https://app.amperity.com/api/audit-events \
           ?limit=10 \
-          ?with_total=true \
-          ?happened_from=2024-04-01 \
-          ?happened_to=2024-04-10' \
-        --header 'amperity-tenant: {tenant}' \
+          &with_total=true \
+          &happened_from=2024-04-01 \
+          &happened_to=2024-04-10' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -187,12 +199,12 @@ The following examples show how to send requests to the **GET /audit-events** en
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/audit-events \
+                'https://app.amperity.com/api/audit-events \
                 ?limit=10 \
                 &with_total=true \
                 &happened_from=2024-04-01 \
                 &happened_to=2024-04-10' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
@@ -210,13 +222,13 @@ The following examples show how to send requests to the **GET /audit-events** en
          import csv
 
          # URL for Audit Events endpoint
-         url = "https://tenant-name.amperity.com/api/audit-events"
+         url = "https://app.amperity.com/api/audit-events"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
-           'amperity-tenant': '{tenant}'
+           'amperity-tenant': '{tenant-id}'
          }
 
          # Query parameters for time ranges

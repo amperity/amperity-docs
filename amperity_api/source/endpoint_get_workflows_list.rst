@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-workflows-list-prerequisites-end
 
 
-.. _endpoint-get-workflows-list-base-url:
+.. _endpoint-get-workflows-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-workflows-list-base-url-start
+.. endpoint-get-workflows-list-request-url-start
 
-Direct all requests to the **GET /workflow/runs** endpoint to the following base URL:
+Direct all requests to the **GET /workflow/runs** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant}.amperity.com/api/workflow/runs
+.. code-block:: rest
 
-.. endpoint-get-workflows-list-base-url-end
+   https://app.amperity.com/api/workflow/runs
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/workflow/runs
+
+.. endpoint-get-workflows-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-workflows-list-rate-limit:
@@ -75,10 +87,10 @@ A request to the **GET /workflow/runs** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs \
+          'https://app.amperity.com/api/workflow/runs \
           ?limit=12 \
           &with_total=true' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -224,10 +236,10 @@ The following examples show how to send requests to the **GET /workflow/runs** e
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/workflow/runs \
+                'https://app.amperity.com/api/workflow/runs \
                 ?limit=12 \
                 ?with_total=true' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 

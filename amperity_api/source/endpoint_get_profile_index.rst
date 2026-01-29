@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-profile-index-prerequisites-end
 
 
-.. _endpoint-get-profile-index-base-url:
+.. _endpoint-get-profile-index-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-profile-index-base-url-start
+.. endpoint-get-profile-index-request-url-start
 
-Direct all requests to the **GET /indexes** endpoint to the following base URL:
+Direct all requests to the **GET /indexes** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant}.amperity.com/api/indexes/
+.. code-block:: rest
 
-.. endpoint-get-profile-index-base-url-end
+   https://app.amperity.com/api/indexes
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/indexes
+
+.. endpoint-get-profile-index-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-profile-index-rate-limit:
@@ -75,8 +87,8 @@ A request to the **GET /indexes** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/indexes \
-        --header 'amperity-tenant: {tenant}' \
+          'https://app.amperity.com/api/indexes \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
@@ -152,8 +164,8 @@ The following examples show how to send requests to the **GET /indexes** endpoin
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/indexes \
-                --header 'amperity-tenant: {tenant}' \
+                'https://app.amperity.com/api/indexes \
+                --header 'amperity-tenant: {tenant-id}' \
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 

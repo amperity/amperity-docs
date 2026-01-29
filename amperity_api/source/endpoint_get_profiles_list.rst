@@ -43,20 +43,32 @@ Prerequisites
 .. endpoint-get-profiles-list-prerequisites-end
 
 
-.. _endpoint-get-profiles-list-base-url:
+.. _endpoint-get-profiles-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-profiles-list-base-url-start
+.. endpoint-get-profiles-list-request-url-start
 
-Direct all requests to the **GET /indexes/{id}/profiles** endpoint to the following base URL:
+Direct all requests to the **GET /indexes/{id}/profiles** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant}.amperity.com/api/indexes/
+.. code-block:: rest
 
-.. endpoint-get-profiles-list-base-url-end
+   https://app.amperity.com/api/indexes/{id}/profiles
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/indexes/{id}/profiles
+
+.. endpoint-get-profiles-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-profiles-list-rate-limit:
@@ -81,11 +93,11 @@ A request to the **GET /indexes/{id}/profiles** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/indexes/{id}/profiles \
+          'https://app.amperity.com/api/indexes/{id}/profiles \
           ?limit=100 \
           &with_total=true \
           &filter[<attribute>]=<value>' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
@@ -188,11 +200,11 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/indexes/{id}/profiles \
+                'https://app.amperity.com/api/indexes/{id}/profiles \
                 ?limit=100 \
                 &with_total=true \
                 &filter[<attribute>]=<value>' \
-                --header 'amperity-tenant: {tenant}' \
+                --header 'amperity-tenant: {tenant-id}' \
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 
@@ -210,13 +222,13 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
          import csv
 
          # URL for Campaigns endpoint
-         url = "https://tenant-name.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>"
+         url = "https://app.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
-           'amperity-tenant': '{tenant}',
+           'amperity-tenant': '{tenant-id}',
            'api-version': '{version}'
          }
 

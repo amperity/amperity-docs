@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-segments-list-prerequisites-end
 
 
-.. _endpoint-get-segments-list-base-url:
+.. _endpoint-get-segments-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-segments-list-base-url-start
+.. endpoint-get-segments-list-request-url-start
 
-Direct all requests to the **GET /segments** endpoint to the following base URL:
+Direct all requests to the **GET /segments** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant}.amperity.com/api/segments/
+.. code-block:: rest
 
-.. endpoint-get-segments-list-base-url-end
+   https://app.amperity.com/api/segments
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/segments
+
+.. endpoint-get-segments-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-segments-list-rate-limit:
@@ -75,10 +87,10 @@ A request to the **GET /segments** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/segments \
+          'https://app.amperity.com/api/segments \
           ?limit=12 \
-          ?with_total=true' \
-        --header 'amperity-tenant: {tenant}' \
+          &with_total=true' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -162,10 +174,10 @@ The following examples show how to send requests to the **GET /segments** endpoi
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/segments \
+                'https://app.amperity.com/api/segments \
                 ?limit=12 \
                 &with_total=true' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
@@ -183,13 +195,13 @@ The following examples show how to send requests to the **GET /segments** endpoi
          import csv
 
          # URL for Segments endpoint
-         url = "https://tenant-name.amperity.com/api/segments"
+         url = "https://app.amperity.com/api/segments"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
-           'amperity-tenant': '{tenant}',
+           'amperity-tenant': '{tenant-id}',
            'api-version': 'version'
          }
 

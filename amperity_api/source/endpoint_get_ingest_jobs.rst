@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-ingest-jobs-prerequisites-end
 
 
-.. _endpoint-get-ingest-jobs-base-url:
+.. _endpoint-get-ingest-jobs-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-ingest-jobs-base-url-start
+.. endpoint-get-ingest-jobs-request-url-start
 
-Direct all requests to the **GET /ingest/jobs** endpoint to the following base URL:
+Direct all requests to the **GET /ingest/jobs** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
 
 .. code-block:: rest
 
-   https://{tenant}.amperity.com/api/ingest/jobs
+   https://app.amperity.com/api/ingest/jobs
 
-.. endpoint-get-ingest-jobs-base-url-end
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/ingest/jobs
+
+.. endpoint-get-ingest-jobs-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-ingest-jobs-rate-limit:
@@ -75,10 +87,10 @@ A request to the **GET /ingest/jobs** endpoint is similar to:
 ::
 
    curl --request GET \
-          'https://tenant.amperity.com/api/ingest/jobs \
+          'https://app.amperity.com/api/ingest/jobs \
           ?created_from=2024-10-01 \
-          ?created_to=2024-10-07' \
-        --header 'amperity-tenant: {tenant}' \
+          &created_to=2024-10-07' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -161,10 +173,10 @@ The following examples show how to send requests to the **GET /ingest/jobs** end
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/ingest/jobs \
+                'https://app.amperity.com/api/ingest/jobs \
                 ?created_from=2024-10-01 \
                 ?created_to=2024-10-07' \
-               --header 'amperity-tenant: {tenant}' \
+               --header 'amperity-tenant: {tenant-id}' \
                --header 'api-version: 2024-04-01' \
                --header 'Authorization: Bearer {token}'
 
