@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-post-workflows-start-prerequisites-end
 
 
-.. _endpoint-post-workflows-start-base-url:
+.. _endpoint-post-workflows-start-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-post-workflows-start-base-url-start
+.. endpoint-post-workflows-start-request-url-start
 
-Direct all requests to the **POST /workflow/runs/** endpoint should be directed to the following base URL:
+Direct all requests to the **POST /workflow/runs/** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
 
 .. code-block:: rest
 
-   https://{tenant}.amperity.com/api/workflow/runs
+   https://app.amperity.com/api/workflow/runs/
 
-.. endpoint-post-workflows-start-base-url-end
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/workflow/runs/
+
+.. endpoint-post-workflows-start-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-post-workflows-start-rate-limit:
@@ -76,7 +88,7 @@ A request to the **POST /workflow/runs/** endpoint is similar to:
 
    curl --request POST \ 
           'https://app.amperity.com/api/workflow/runs' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}' \
         --data '{"config_id":"cg-123ABc4DE"}'
@@ -183,7 +195,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
          curl --request POST \ 
                 'https://app.amperity.com/api/workflow/runs' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
               --data '{"config_id":"cc-123ABc4DE"}'
@@ -198,7 +210,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
          curl --request POST \ 
                 'https://app.amperity.com/api/workflow/runs' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
               --data '{"config_id":"og-123ABc4DE"}'
@@ -214,7 +226,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
          curl --request POST \ 
                 'https://app.amperity.com/api/workflow/runs' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
               --data '{"config_id":"cg-123ABc4DE"}' \
@@ -241,7 +253,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
          # Headers including authorization and custom headers
          headers = {
            "Authorization": f"Bearer {token}",
-           "amperity-tenant": "{tenant}",
+           "amperity-tenant": "{tenant-id}",
            "api-version": "2024-04-01"
          }
 

@@ -43,20 +43,32 @@ Prerequisites
 .. endpoint-get-campaign-drafts-list-prerequisites-end
 
 
-.. _endpoint-get-campaign-drafts-list-base-url:
+.. _endpoint-get-campaign-drafts-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-campaign-drafts-list-base-url-start
+.. endpoint-get-campaign-drafts-list-request-url-start
 
-Direct all requests to the **GET /campaign-drafts** endpoint to the following base URL:
+Direct all requests to the **GET /campaign-drafts** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant}.amperity.com/api/campaign-drafts/
+.. code-block:: rest
 
-.. endpoint-get-campaign-drafts-list-base-url-end
+   https://app.amperity.com/api/campaign-drafts
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/campaign-drafts
+
+.. endpoint-get-campaign-drafts-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-campaign-drafts-list-rate-limit:
@@ -83,11 +95,11 @@ A request to the **GET /campaign-drafts** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/campaign-drafts \
+          'https://app.amperity.com/api/campaign-drafts \
           ?limit=12 \
-          ?with_total=true \
-          ?destination_data_template_id=ptg-1abcAB4C2' \
-        --header 'amperity-tenant: {tenant}' \
+          &with_total=true \
+          &destination_data_template_id=ptg-1abcAB4C2' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: unstable' \
         --header 'Authorization: Bearer {token}'
 
@@ -180,11 +192,11 @@ The following examples show how to send requests to the **GET /campaign-drafts**
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/campaign-drafts \
+                'https://app.amperity.com/api/campaign-drafts \
                 ?limit=12 \
                 &with_total=true \
                 &destination_data_template_id=ptg-1abcAB4C2' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: unstable' \
               --header 'Authorization: Bearer {token}'
 
@@ -202,13 +214,13 @@ The following examples show how to send requests to the **GET /campaign-drafts**
          import csv
 
          # URL for Draft campaigns endpoint
-         url = "https://tenant-name.amperity.com/api/campaign-drafts"
+         url = "https://app.amperity.com/api/campaign-drafts"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
-           'amperity-tenant': '{tenant}',
+           'amperity-tenant': '{tenant-id}',
            'api-version': 'version'
          }
 

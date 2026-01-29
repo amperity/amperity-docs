@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-post-workflows-stop-prerequisites-end
 
 
-.. _endpoint-post-workflows-stop-base-url:
+.. _endpoint-post-workflows-stop-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-post-workflows-stop-base-url-start
+.. endpoint-post-workflows-stop-request-url-start
 
-Direct all requests to the **POST workflow/runs/{id}/stop** endpoint should be directed to the following base URL:
+Direct all requests to the **POST workflow/runs/{id}/stop** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
 
 .. code-block:: rest
 
-   https://{tenant}.amperity.com/api/workflow/runs/{id}/stop
+   https://app.amperity.com/api/workflow/runs/{id}/stop
 
-.. endpoint-post-workflows-stop-base-url-end
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/workflow/runs/{id}/stop
+
+.. endpoint-post-workflows-stop-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-post-workflows-stop-rate-limit:
@@ -76,7 +88,7 @@ A request to the **POST workflow/runs/{id}/stop** endpoint is similar to:
 
    curl --request POST \ 
           'https://app.amperity.com/api/workflow/runs/{id}/stop' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -142,8 +154,8 @@ The following examples show how to send requests to the **POST workflow/runs/{id
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/workflow/runs/{id}/stop' \
-              --header 'amperity-tenant: {tenant}' \
+                'https://app.amperity.com/api/workflow/runs/{id}/stop' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 

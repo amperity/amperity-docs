@@ -96,11 +96,11 @@ GET /indexes
    :start-after: .. endpoint-get-profile-index-start
    :end-before: .. endpoint-get-profile-index-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
-   :start-after: .. endpoint-get-profile-index-base-url-start
-   :end-before: .. endpoint-get-profile-index-base-url-end
+   :start-after: .. endpoint-get-profile-index-request-url-start
+   :end-before: .. endpoint-get-profile-index-request-url-end
 
 **cURL example**
 
@@ -134,11 +134,11 @@ GET /indexes/{id}
    :start-after: .. endpoint-get-profile-index-id-start
    :end-before: .. endpoint-get-profile-index-id-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
-   :start-after: .. endpoint-get-profile-index-id-base-url-start
-   :end-before: .. endpoint-get-profile-index-id-base-url-end
+   :start-after: .. endpoint-get-profile-index-id-request-url-start
+   :end-before: .. endpoint-get-profile-index-id-request-url-end
 
 **cURL example**
 
@@ -176,11 +176,11 @@ GET /indexes/{id}/profiles
    :start-after: .. endpoint-get-profiles-list-maximum-filters-start
    :end-before: .. endpoint-get-profiles-list-maximum-filters-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
-   :start-after: .. endpoint-get-profiles-list-base-url-start
-   :end-before: .. endpoint-get-profiles-list-base-url-end
+   :start-after: .. endpoint-get-profiles-list-request-url-start
+   :end-before: .. endpoint-get-profiles-list-request-url-end
 
 **cURL example**
 
@@ -214,11 +214,11 @@ GET /indexes/{id}/profiles/{id}
    :start-after: .. endpoint-get-profile-start
    :end-before: .. endpoint-get-profile-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profile.rst
-   :start-after: .. endpoint-get-profile-base-url-start
-   :end-before: .. endpoint-get-profile-base-url-end
+   :start-after: .. endpoint-get-profile-request-url-start
+   :end-before: .. endpoint-get-profile-request-url-end
 
 **cURL example**
 

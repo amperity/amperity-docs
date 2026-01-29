@@ -41,20 +41,32 @@ Prerequisites
 .. endpoint-get-profile-index-id-prerequisites-end
 
 
-.. _endpoint-get-profile-index-id-base-url:
+.. _endpoint-get-profile-index-id-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-profile-index-id-base-url-start
+.. endpoint-get-profile-index-id-request-url-start
 
-Direct all requests to the **GET /indexes/{id}** endpoint to the following base URL:
+Direct all requests to the **GET /indexes/{id}** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant}.amperity.com/api/indexes/
+.. code-block:: rest
 
-.. endpoint-get-profile-index-id-base-url-end
+   https://app.amperity.com/api/indexes/{id}
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/indexes/{id}
+
+.. endpoint-get-profile-index-id-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-profile-index-id-rate-limit:
@@ -79,9 +91,9 @@ A request to the **GET /indexes/{id}** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/indexes \
+          'https://app.amperity.com/api/indexes \
           ?index-id={id} \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
@@ -137,9 +149,9 @@ The following examples show how to send requests to the **GET /indexes/{id}** en
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/indexes/ \
+                'https://app.amperity.com/api/indexes/ \
                 ?index-id={id} \
-                --header 'amperity-tenant: {tenant}' \
+                --header 'amperity-tenant: {tenant-id}' \
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 

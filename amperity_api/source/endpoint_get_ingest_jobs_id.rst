@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-ingest-jobs-id-prerequisites-end
 
 
-.. _endpoint-get-ingest-jobs-id-base-url:
+.. _endpoint-get-ingest-jobs-id-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-ingest-jobs-id-base-url-start
+.. endpoint-get-ingest-jobs-id-request-url-start
 
-Direct all requests to the **GET /ingest/jobs/{id}** endpoint to the following base URL:
+Direct all requests to the **GET /ingest/jobs/{id}** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
 
 .. code-block:: rest
 
-   https://{tenant}.amperity.com/api/ingest/jobs/{id}
+   https://app.amperity.com/api/ingest/jobs/{id}
 
-.. endpoint-get-ingest-jobs-id-base-url-end
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/ingest/jobs/{id}
+
+.. endpoint-get-ingest-jobs-id-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-ingest-jobs-id-rate-limit:
@@ -76,7 +88,7 @@ A request to the **GET /ingest/jobs/{id}** endpoint is similar to:
 
    curl --request GET \
           'https://app.amperity.com/api/ingest/jobs/{id}' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -141,8 +153,8 @@ The following examples show how to send requests to the **GET /ingest/jobs/{id}*
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/ingest/jobs/{id}' \
-              --header 'amperity-tenant: {tenant}' \
+                'https://app.amperity.com/api/ingest/jobs/{id}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
