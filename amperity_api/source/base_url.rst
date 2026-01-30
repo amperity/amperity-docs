@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        All requests to the Amperity API use 'https://{tenant}.amperity.com/api' as the base URL.
+        All requests to the Amperity API have a base URL.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        All requests to the Amperity API use 'https://{tenant}.amperity.com/api' as the base URL.
+        All requests to the Amperity API have a base URL.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
