@@ -335,18 +335,23 @@
                 
                 // Parse the Sphinx search index
                 // The file contains: Search.setIndex({...})
-                // We need to extract the JSON object
-                let indexData = null;
+                // We need to extract the JSON object without using eval()
                 
-                // Create a temporary Search object to capture the index
-                const Search = {
-                    setIndex: function(data) {
-                        indexData = data;
-                    }
-                };
+                // Match Search.setIndex({ ... }) and extract the JSON object
+                const match = text.match(/Search\.setIndex\s*\(\s*(\{[\s\S]*\})\s*\)/);
                 
-                // Execute the search index file content
-                eval(text);
+                if (!match || !match[1]) {
+                    throw new Error('Failed to find Search.setIndex in search index file');
+                }
+                
+                // Parse the extracted JSON
+                let indexData;
+                try {
+                    indexData = JSON.parse(match[1]);
+                } catch (parseError) {
+                    console.error('JSON parse error:', parseError);
+                    throw new Error('Failed to parse search index JSON');
+                }
                 
                 if (!indexData) {
                     throw new Error('Failed to parse search index');
@@ -376,13 +381,14 @@
             if (KEYWORD_MAPPING[query]) {
                 const mappedPath = KEYWORD_MAPPING[query];
                 
-                // Extract collection and docname from the path
-                // Path format: /collection/docname.html
-                const pathMatch = mappedPath.match(/^\/([^\/]+)\/(.+)\.html$/);
+                // Extract collection, docname, and optional anchor from the path
+                // Path format: /collection/docname.html or /collection/docname.html#anchor
+                const pathMatch = mappedPath.match(/^\/([^\/]+)\/(.+?)\.html(#.+)?$/);
                 
                 if (pathMatch) {
                     const collection = pathMatch[1];
                     const docname = pathMatch[2];
+                    const anchor = pathMatch[3] || ''; // Optional anchor (e.g., #transactions)
                     
                     // Load the search index to get the actual page title
                     const index = await loadSearchIndex(collection);
@@ -397,9 +403,12 @@
                             pageTitle = titles[docIndex];
                         }
                         
+                        // Build the URL with the anchor if present
+                        const finalUrl = `/` + collection + `/` + docname + `.html` + anchor;
+                        
                         const keywordResult = [{
                             title: pageTitle,
-                            url: mappedPath,
+                            url: finalUrl,
                             context: 'Direct keyword match',
                             collection: collection,
                             score: 100,
@@ -411,7 +420,7 @@
                     }
                 }
                 
-                // Fallback if parsing fails
+                // Fallback if parsing fails - use the mappedPath as-is
                 const keywordResult = [{
                     title: query,
                     url: mappedPath,
