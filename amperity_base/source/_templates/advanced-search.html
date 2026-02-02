@@ -82,7 +82,7 @@
             padding-right: 18px;
             margin-bottom: 0px;
             border-radius: 4px;
-            max-height: 220px;
+            max-height: 300px;
             overflow-y: auto;
         }
 
@@ -236,7 +236,7 @@
                     </div>
                     <div class="filter-option">
                         <input type="checkbox" id="coll-operator" checked />
-                        <label for="coll-operator">Operator's guide</label>
+                        <label for="coll-operator">Operators guide</label>
                     </div>
                     <div class="filter-option">
                         <input type="checkbox" id="coll-user" checked />
@@ -249,6 +249,24 @@
                     <div class="filter-option">
                         <input type="checkbox" id="coll-reference" checked />
                         <label for="coll-reference">Reference</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Limit search results</h3>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="include-titles" checked />
+                        <label for="include-titles">Include page titles</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="include-headers" checked />
+                        <label for="include-headers">Include section headers</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="include-content" checked />
+                        <label for="include-content">Include content matches</label>
                     </div>
                 </div>
             </div>
@@ -273,6 +291,7 @@
                     <label for="exact-order">Exact order only</label>
                 </div>
             </div>
+
         </div>
 
         <div id="search-results">
@@ -284,6 +303,7 @@
     <script>
         // Keyword to path mapping
         const KEYWORD_MAPPING = {
+            "itemized transaction semantics": "/reference/semantics.html#transactions",
             "Punnch": "/reference/connected_systems.html",
             "Yotpo": "/reference/connected_systems.html"
         };
@@ -446,10 +466,38 @@
 
             console.log(`Total results found: ${allResults.length}`);
 
+            // Get "Search within" filter settings
+            const includeTitles = document.getElementById('include-titles').checked;
+            const includeHeaders = document.getElementById('include-headers').checked;
+            const includeContent = document.getElementById('include-content').checked;
+            
+            console.log('Include titles:', includeTitles);
+            console.log('Include headers:', includeHeaders);
+            console.log('Include content:', includeContent);
+
+            // Filter results based on "Search within" settings
+            const filteredResults = allResults.filter(result => {
+                // Page title matches
+                if (!result.isHeader && !result.isContent) {
+                    return includeTitles;
+                }
+                // Section header matches
+                if (result.isHeader) {
+                    return includeHeaders;
+                }
+                // Content matches
+                if (result.isContent) {
+                    return includeContent;
+                }
+                return true; // Default to include if type is unclear
+            });
+
+            console.log(`Filtered results: ${filteredResults.length}`);
+
             // Sort by score and limit results
             const maxResults = parseInt(document.getElementById('num-results').value) || 10;
-            allResults.sort((a, b) => b.score - a.score);
-            const limitedResults = allResults.slice(0, maxResults);
+            filteredResults.sort((a, b) => b.score - a.score);
+            const limitedResults = filteredResults.slice(0, maxResults);
 
             displayResults(limitedResults, query);
         }
