@@ -404,7 +404,7 @@ Add destination
 
 .. _destination-adobe-target-build-dataset:
 
-Build a dataaset for Adobe Target
+Build a dataset for Adobe Target
 ==================================================
 
 .. destination-adobe-target-build-dataset-start

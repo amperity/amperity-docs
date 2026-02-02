@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-         Use this API to stop a running workflow.
+         Use this API endpoint to stop a running workflow.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-         Use this API to stop a running workflow.
+         Use this API endpoint to stop a running workflow.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

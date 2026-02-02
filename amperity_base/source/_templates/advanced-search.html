@@ -1,0 +1,932 @@
+{% extends "layout.html" %}
+{%- block htmltitle -%}
+  <title>Advanced search</title>
+{% endblock %}
+{% block themestyles %}
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Outfit, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            color: var(--sy-c-text);
+            background-color: var(--sy-c-background);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro p{
+          margin-top:1rem;
+          margin-bottom:1.25rem
+        }
+
+        .search-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        #filter-button {
+            padding: 6px 10px;
+            background: var(--sy-c-surface);
+            border: 0px solid var(--gray-a3);
+            color: var(--sy-c-text);
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            transition: background-color 0.2s;
+        }
+
+        #filter-button:hover {
+            background-color: var(--accent-a3);
+        }
+
+        #search-input {
+            flex: 1;
+            padding: 6px 10px;
+            font-size: 1rem;
+            border: 0px solid var(--gray-a3);
+            background: var(--sy-c-surface);
+            color: var(--sy-c-text);
+            border-radius: 4px;
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: var(--accent-9);
+        }
+
+        #filter-panel {
+            display: none;
+            background: var(--sy-c-surface);
+            border: 0px solid var(--gray-a3);
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 18px;
+            padding-right: 18px;
+            margin-bottom: 0px;
+            border-radius: 4px;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        #filter-panel.active {
+            display: block;
+        }
+
+        .filter-section {
+            margin-bottom: 15px;
+        }
+
+        .filter-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: .4em;
+            margin-bottom: .6em;
+            color: var(--sy-c-text);
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .filter-option input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        .filter-option label {
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .filter-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .filter-row label {
+            font-size: 0.9rem;
+        }
+
+        .filter-row input[type="number"] {
+            width: 60px;
+            padding-top: 00px;
+            padding-bottom: 00px;
+            padding-left: 10px;
+            padding-right: 00px;
+            margin-left: 10px;
+            border: 0px solid var(--gray-a3);
+            background: var(--sy-c-background);
+            color: var(--sy-c-text);
+            border-radius: 3px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--gray-a3);
+            margin: 20px 0;
+        }
+
+        #search-results {
+            margin-top: 20px;
+        }
+
+        #search-summary {
+            font-size: 0.95rem;
+            color: var(--sy-c-text);
+            margin-bottom: 15px;
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+
+        .search-result {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--sy-c-surface);
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .search-result:hover {
+            background: var(--accent-a3);
+        }
+
+        .search-result a {
+            color: var(--accent-9);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .search-result a:hover {
+            text-decoration: underline;
+        }
+
+        .search-result .context {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: var(--sy-c-text);
+            opacity: 0.7;
+        }
+
+        .highlighted {
+            background-color: var(--accent-a4);
+            font-weight: 600;
+        }
+
+        .no-results {
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--sy-c-text);
+            opacity: 0.6;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+
+    <div class="container">
+        <h1>Advanced search</h1>
+
+        <div class="intro">
+            <p>Advanced search works best with simple word searches, such as single words, complete names, or multiword searches set to match exactly. For example: "Adobe", "Adobe Target", and "Adobe Target" (set to match exactly) will return a different number of results. Do not search for phrases, such as "How to configure Amperity".</p><p>Open the Filters menu to choose which topic collections to search, to adjust the number of returned results, and to require exact matches.</p>
+        </div>
+
+        <div class="search-wrapper">
+            <button id="filter-button">Filters</button>
+            <input type="text" id="search-input" placeholder="Search documentation..." />
+        </div>
+
+        <div id="filter-panel">
+            <div class="filter-section">
+                <h3>Topic collections</h3>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="coll-guided" checked />
+                        <label for="coll-guided">Guided setup</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="coll-operator" checked />
+                        <label for="coll-operator">Operator's guide</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="coll-user" checked />
+                        <label for="coll-user">User guides</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="coll-api" checked />
+                        <label for="coll-api">Amperity API</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="coll-reference" checked />
+                        <label for="coll-reference">Reference</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-row">
+                    <label for="num-results">Number of search results to return</label>
+                    <input type="number" id="num-results" min="1" max="100" value="10" />
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-row">
+                    <input type="checkbox" id="exact-match" />
+                    <label for="exact-match">Exact matches only</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-row">
+                    <input type="checkbox" id="exact-order" />
+                    <label for="exact-order">Exact order only</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="search-results">
+            <div id="search-summary"></div>
+            <div id="results-list"></div>
+        </div>
+    </div>
+
+    <script>
+        // Keyword to path mapping
+        const KEYWORD_MAPPING = {
+            "Punnch": "/reference/connected_systems.html",
+            "Yotpo": "/reference/connected_systems.html"
+        };
+
+        // Search indexes cache
+        const searchIndexes = {
+            api: null,
+            guided: null,
+            operator: null,
+            reference: null,
+            user: null
+        };
+
+        // Load a search index
+        async function loadSearchIndex(collection) {
+            if (searchIndexes[collection]) {
+                return searchIndexes[collection];
+            }
+
+            try {
+                const url = `/${collection}/searchindex.js`;
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const text = await response.text();
+                
+                // Parse the Sphinx search index
+                // The file contains: Search.setIndex({...})
+                // We need to extract the JSON object
+                let indexData = null;
+                
+                // Create a temporary Search object to capture the index
+                const Search = {
+                    setIndex: function(data) {
+                        indexData = data;
+                    }
+                };
+                
+                // Execute the search index file content
+                eval(text);
+                
+                if (!indexData) {
+                    throw new Error('Failed to parse search index');
+                }
+                
+                searchIndexes[collection] = indexData;
+                return indexData;
+            } catch (error) {
+                console.error(`Failed to load search index for ${collection}:`, error);
+                return null;
+            }
+
+        }
+
+        // Search function
+        async function performSearch() {
+            const query = document.getElementById('search-input').value.trim();
+            
+            console.log('Performing search for:', query);
+            
+            if (!query) {
+                displayResults([], query);
+                return;
+            }
+
+            // Check for keyword mapping first
+            if (KEYWORD_MAPPING[query]) {
+                const mappedPath = KEYWORD_MAPPING[query];
+                
+                // Extract collection and docname from the path
+                // Path format: /collection/docname.html
+                const pathMatch = mappedPath.match(/^\/([^\/]+)\/(.+)\.html$/);
+                
+                if (pathMatch) {
+                    const collection = pathMatch[1];
+                    const docname = pathMatch[2];
+                    
+                    // Load the search index to get the actual page title
+                    const index = await loadSearchIndex(collection);
+                    
+                    if (index) {
+                        const docnames = index.docnames || [];
+                        const titles = index.titles || [];
+                        const docIndex = docnames.indexOf(docname);
+                        
+                        let pageTitle = query; // Fallback to keyword if not found
+                        if (docIndex >= 0 && titles[docIndex]) {
+                            pageTitle = titles[docIndex];
+                        }
+                        
+                        const keywordResult = [{
+                            title: pageTitle,
+                            url: mappedPath,
+                            context: 'Direct keyword match',
+                            collection: collection,
+                            score: 100,
+                            isHeader: false,
+                            isContent: false
+                        }];
+                        displayResults(keywordResult, query);
+                        return;
+                    }
+                }
+                
+                // Fallback if parsing fails
+                const keywordResult = [{
+                    title: query,
+                    url: mappedPath,
+                    context: 'Direct keyword match',
+                    collection: 'reference',
+                    score: 100,
+                    isHeader: false,
+                    isContent: false
+                }];
+                displayResults(keywordResult, query);
+                return;
+            }
+
+            // Get selected collections
+            const selectedCollections = [];
+            ['api', 'guided', 'operator', 'reference', 'user'].forEach(coll => {
+                if (document.getElementById(`coll-${coll}`).checked) {
+                    selectedCollections.push(coll);
+                }
+            });
+
+            console.log('Selected collections:', selectedCollections);
+
+            if (selectedCollections.length === 0) {
+                displayResults([], query);
+                return;
+            }
+
+            // Get exact match setting
+            const exactMatch = document.getElementById('exact-match').checked;
+            const exactOrder = document.getElementById('exact-order').checked;
+            
+            console.log('Exact match:', exactMatch);
+            console.log('Exact order:', exactOrder);
+
+            // Load and search each selected collection
+            const allResults = [];
+            
+            for (const collection of selectedCollections) {
+                console.log(`Loading index for collection: ${collection}`);
+                const index = await loadSearchIndex(collection);
+                if (!index) {
+                    console.error(`Failed to load index for ${collection}`);
+                    continue;
+                }
+                
+                console.log(`Index loaded for ${collection}, docnames:`, index.docnames?.length || 0);
+                const results = searchInIndex(index, query, collection, exactMatch, exactOrder);
+                console.log(`Found ${results.length} results in ${collection}`);
+                allResults.push(...results);
+            }
+
+            console.log(`Total results found: ${allResults.length}`);
+
+            // Sort by score and limit results
+            const maxResults = parseInt(document.getElementById('num-results').value) || 10;
+            allResults.sort((a, b) => b.score - a.score);
+            const limitedResults = allResults.slice(0, maxResults);
+
+            displayResults(limitedResults, query);
+        }
+
+        // Search within a single index
+        function searchInIndex(index, query, collection, exactMatch, exactOrder) {
+            const results = [];
+            const queryLower = query.toLowerCase();
+            const queryWords = queryLower.split(/\s+/);
+
+            // Get all document names
+            const docnames = index.docnames || [];
+            const titles = index.titles || [];
+            const terms = index.terms || {};
+            const filenames = index.filenames || [];
+            
+            // Get section/header data from the index
+            const alltitles = index.alltitles || {};
+            const objects = index.objects || {};
+            
+            // Get term positions for content searching
+            // terms format: { "word": [docIndex, ...] or { "word": [[docIndex, titleIndex], ...] }
+            
+            // Track which documents have content matches
+            const contentMatches = new Map(); // docIndex -> {score, matchingTerms}
+
+            // Helper function for exact match with word boundaries
+            function exactMatchWithWordBoundaries(text, searchQuery) {
+                // Escape special regex characters
+                const escapedQuery = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                // Create regex with word boundaries, case-insensitive
+                const regex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
+                return regex.test(text);
+            }
+
+            // Helper function to check if words appear in exact order
+            function wordsInExactOrder(text, words) {
+                const textLower = text.toLowerCase();
+                let lastIndex = -1;
+                
+                for (const word of words) {
+                    const index = textLower.indexOf(word, lastIndex + 1);
+                    if (index === -1 || index <= lastIndex) {
+                        return false;
+                    }
+                    lastIndex = index;
+                }
+                return true;
+            }
+
+            // First, search page titles
+            docnames.forEach((docname, docIndex) => {
+                let score = 0;
+                let matchFound = false;
+                const title = titles[docIndex] || docname;
+                
+                // Exact match search
+                if (exactMatch) {
+                    // Use word boundaries to ensure "SAP" doesn't match "disappear"
+                    if (exactMatchWithWordBoundaries(title, query)) {
+                        score = 100;
+                        matchFound = true;
+                    }
+                } else if (exactOrder) {
+                    // Exact order search - words must appear in the exact order
+                    if (wordsInExactOrder(title, queryWords)) {
+                        score = 90; // High score for exact order matches
+                        matchFound = true;
+                    }
+                } else {
+                    // Fuzzy search - check each word
+                    const docText = title.toLowerCase();
+                    queryWords.forEach(word => {
+                        if (docText.includes(word)) {
+                            score += 10;
+                            matchFound = true;
+                        }
+                        
+                        // Title match gets higher score
+                        if (title.toLowerCase().includes(word)) {
+                            score += 20;
+                        }
+                    });
+                }
+
+                if (matchFound) {
+                    // Construct the URL
+                    const url = `/${collection}/${docname}.html`;
+                    
+                    results.push({
+                        title: title,
+                        url: url,
+                        context: docname,
+                        score: score,
+                        collection: collection,
+                        isHeader: false,
+                        isContent: false
+                    });
+                }
+            });
+
+            // Second, search headers/sections within pages (H2, H3, H4 only - excluding H1)
+            // alltitles format: { "Header Text": [[docIndex, "anchor"], ...], ... }
+            for (const [headerText, locations] of Object.entries(alltitles)) {
+                let score = 0;
+                let matchFound = false;
+
+                // Exact match search
+                if (exactMatch) {
+                    // Use word boundaries to ensure "SAP" doesn't match "disappear"
+                    if (exactMatchWithWordBoundaries(headerText, query)) {
+                        score = 80; // Slightly lower than page title matches
+                        matchFound = true;
+                    }
+                } else if (exactOrder) {
+                    // Exact order search - words must appear in the exact order
+                    if (wordsInExactOrder(headerText, queryWords)) {
+                        score = 70; // High score for exact order matches
+                        matchFound = true;
+                    }
+                } else {
+                    // Fuzzy search - check each word
+                    const headerLower = headerText.toLowerCase();
+                    queryWords.forEach(word => {
+                        if (headerLower.includes(word)) {
+                            score += 8;
+                            matchFound = true;
+                        }
+                    });
+                }
+
+                if (matchFound && locations && locations.length > 0) {
+                    // Add a result for each location where this header appears
+                    locations.forEach(location => {
+                        const [docIndex, anchor] = location;
+                        
+                        // Skip H1 headers (they don't have anchors or have empty anchors)
+                        // H1 is the page title, so it would be duplicate
+                        if (!anchor || anchor === '') {
+                            return;
+                        }
+                        
+                        const docname = docnames[docIndex];
+                        const pageTitle = titles[docIndex] || docname;
+                        
+                        // Construct URL with anchor
+                        let url = `/${collection}/${docname}.html`;
+                        url += `#${anchor}`;
+                        
+                        results.push({
+                            title: headerText,
+                            url: url,
+                            context: docname,
+                            score: score,
+                            collection: collection,
+                            isHeader: true,
+                            isContent: false,
+                            pageTitle: pageTitle
+                        });
+                    });
+                }
+            }
+
+            // Third, search within document content using the terms index
+            queryWords.forEach(word => {
+                if (terms[word]) {
+                    const termData = terms[word];
+                    
+                    // Handle different term data formats
+                    // Can be: [docIndex, ...] or [[docIndex, titleIndex], ...]
+                    let docIndices = [];
+                    
+                    if (Array.isArray(termData)) {
+                        termData.forEach(item => {
+                            if (Array.isArray(item)) {
+                                // Format: [docIndex, titleIndex]
+                                docIndices.push(item[0]);
+                            } else {
+                                // Format: docIndex
+                                docIndices.push(item);
+                            }
+                        });
+                    }
+                    
+                    // Add content matches for each document containing this term
+                    docIndices.forEach(docIndex => {
+                        if (!contentMatches.has(docIndex)) {
+                            contentMatches.set(docIndex, {
+                                score: 0,
+                                matchingTerms: new Set()
+                            });
+                        }
+                        
+                        const match = contentMatches.get(docIndex);
+                        match.matchingTerms.add(word);
+                        
+                        // Score based on term match
+                        if (exactMatch) {
+                            // For exact match, we need all words present
+                            match.score += 5;
+                        } else if (exactOrder) {
+                            // For exact order, we'll verify order when fetching snippet
+                            match.score += 5;
+                        } else {
+                            // For fuzzy match, each word adds to score
+                            match.score += 5;
+                        }
+                    });
+                }
+            });
+
+            // Add content match results
+            contentMatches.forEach((matchData, docIndex) => {
+                // For exact match, require all query words to be present
+                if (exactMatch && matchData.matchingTerms.size < queryWords.length) {
+                    return;
+                }
+                
+                // For exact order, require all query words to be present
+                if (exactOrder && matchData.matchingTerms.size < queryWords.length) {
+                    return;
+                }
+                
+                const docname = docnames[docIndex];
+                const pageTitle = titles[docIndex] || docname;
+                const url = `/${collection}/${docname}.html`;
+                
+                // Check if we already have this page as a title or header match
+                const alreadyExists = results.some(r => 
+                    r.url === url && (!r.isHeader || r.isContent)
+                );
+                
+                // Only add if this is a new result (not already matched by title/header)
+                if (!alreadyExists) {
+                    results.push({
+                        title: pageTitle,
+                        url: url,
+                        context: docname,
+                        score: matchData.score,
+                        collection: collection,
+                        isHeader: false,
+                        isContent: true,
+                        matchingTerms: Array.from(matchData.matchingTerms),
+                        needsSnippet: true,
+                        exactMatch: exactMatch,
+                        exactOrder: exactOrder,
+                        queryWords: queryWords,
+                        query: query
+                    });
+                }
+            });
+
+            return results;
+        }
+
+        // Extract text snippet from page content
+        async function getContentSnippet(url, matchingTerms, isExactMatch, isExactOrder, queryWords, query) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) return null;
+                
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Remove unwanted elements
+                doc.querySelectorAll('script, style, nav, header, footer, .headerlink').forEach(el => el.remove());
+                
+                // Get main content text
+                const mainContent = doc.querySelector('main, article, .document, body');
+                if (!mainContent) return null;
+                
+                const fullText = mainContent.textContent.replace(/\s+/g, ' ').trim();
+                const words = fullText.split(' ');
+                
+                let matchIndex = -1;
+                
+                if (isExactMatch && query) {
+                    // For exact match, find the query with word boundaries
+                    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
+                    const match = fullText.match(regex);
+                    
+                    if (match) {
+                        // Count words up to the match position
+                        const textBefore = fullText.substring(0, match.index);
+                        matchIndex = textBefore.split(' ').length - 1;
+                        if (matchIndex < 0) matchIndex = 0;
+                    }
+                } else if (isExactOrder && queryWords) {
+                    // For exact order, find the first occurrence where all words appear in order
+                    for (let i = 0; i < words.length; i++) {
+                        const wordLower = words[i].toLowerCase().replace(/[^\w]/g, '');
+                        
+                        // Check if this is the start of the sequence
+                        if (wordLower === queryWords[0] || wordLower.includes(queryWords[0])) {
+                            // Check if all subsequent words appear in order
+                            let currentIndex = i;
+                            let foundAll = true;
+                            
+                            for (let j = 0; j < queryWords.length; j++) {
+                                let found = false;
+                                for (let k = currentIndex; k < words.length && k < currentIndex + 20; k++) {
+                                    const testWord = words[k].toLowerCase().replace(/[^\w]/g, '');
+                                    if (testWord === queryWords[j] || testWord.includes(queryWords[j])) {
+                                        currentIndex = k + 1;
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                if (!found) {
+                                    foundAll = false;
+                                    break;
+                                }
+                            }
+                            
+                            if (foundAll) {
+                                matchIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                } else {
+                    // Find first matching term (original fuzzy logic)
+                    for (let i = 0; i < words.length; i++) {
+                        const wordLower = words[i].toLowerCase().replace(/[^\w]/g, '');
+                        for (const term of matchingTerms) {
+                            if (wordLower === term || wordLower.includes(term)) {
+                                matchIndex = i;
+                                break;
+                            }
+                        }
+                        if (matchIndex >= 0) break;
+                    }
+                }
+                
+                if (matchIndex < 0) return null;
+                
+                // Extract context: 10 words before and 10 after
+                const start = Math.max(0, matchIndex - 10);
+                const end = Math.min(words.length, matchIndex + 11);
+                
+                let snippet = words.slice(start, end).join(' ');
+                if (start > 0) snippet = '...' + snippet;
+                if (end < words.length) snippet = snippet + '...';
+                
+                return snippet;
+            } catch (error) {
+                console.error('Error fetching snippet:', error);
+                return null;
+            }
+        }
+
+        // Display search results
+        async function displayResults(results, query) {
+            const summaryDiv = document.getElementById('search-summary');
+            const resultsDiv = document.getElementById('results-list');
+
+            if (results.length === 0) {
+                summaryDiv.textContent = query ? `No results found for "${query}"` : '';
+                resultsDiv.innerHTML = '<div class="no-results">No results to display. Try adjusting your search or filters.</div>';
+                return;
+            }
+
+            summaryDiv.textContent = `Found ${results.length} result${results.length !== 1 ? 's' : ''} for "${query}"`;
+            
+            // Map collection names to display names
+            const collectionNames = {
+                'api': 'API reference',
+                'guided': 'Guided setup',
+                'operator': 'Operators guide',
+                'reference': 'Reference',
+                'user': 'User guides'
+            };
+            
+            // Fetch snippets for content matches in parallel
+            const snippetPromises = results.map(async (result) => {
+                if (result.needsSnippet && result.matchingTerms) {
+                    const snippet = await getContentSnippet(
+                        result.url, 
+                        result.matchingTerms, 
+                        result.exactMatch || false,
+                        result.exactOrder || false,
+                        result.queryWords || [],
+                        result.query || query
+                    );
+                    return { ...result, snippet };
+                }
+                return result;
+            });
+            
+            const resultsWithSnippets = await Promise.all(snippetPromises);
+            
+            resultsDiv.innerHTML = resultsWithSnippets.map(result => {
+                const collectionName = collectionNames[result.collection] || result.collection;
+                let breadcrumb;
+                let matchType = '';
+                
+                if (result.isHeader) {
+                    // For headers: Docs > Collection > Page Title
+                    breadcrumb = `Docs > ${collectionName} > ${result.pageTitle}`;
+                    matchType = ' (section header)';
+                } else if (result.isContent) {
+                    // For content matches: Docs > Collection > Page Title
+                    breadcrumb = `Docs > ${collectionName} > ${result.title}`;
+                    matchType = ' (content match)';
+                } else {
+                    // For page titles: Docs > Collection > Page Title
+                    breadcrumb = `Docs > ${collectionName} > ${result.title}`;
+                    matchType = ' (page title)';
+                }
+                
+                // Add snippet for content matches
+                const snippetHtml = result.snippet ? 
+                    `<div class="snippet">${highlightText(result.snippet, query)}</div>` : '';
+                
+                return `
+                    <div class="search-result">
+                        <a href="${result.url}">${highlightText(result.title, query)}</a>
+                        <div class="context">${breadcrumb}${matchType}</div>
+                        ${snippetHtml}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Highlight matching text
+        function highlightText(text, query) {
+            if (!query) return text;
+            
+            const queryWords = query.split(/\s+/);
+            let highlighted = text;
+            
+            queryWords.forEach(word => {
+                const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
+                highlighted = highlighted.replace(regex, '<span class="highlighted">$1</span>');
+            });
+            
+            return highlighted;
+        }
+
+        // Escape special regex characters
+        function escapeRegex(str) {
+            return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        // Event listeners
+        document.getElementById('filter-button').addEventListener('click', () => {
+            const panel = document.getElementById('filter-panel');
+            panel.classList.toggle('active');
+        });
+
+        document.getElementById('search-input').addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        document.getElementById('search-input').addEventListener('input', () => {
+            // Auto-search as user types (with debounce would be better)
+            performSearch();
+        });
+
+        // Re-run search when filters change
+        document.querySelectorAll('#filter-panel input').forEach(input => {
+            input.addEventListener('change', () => {
+                const query = document.getElementById('search-input').value.trim();
+                if (query) {
+                    performSearch();
+                }
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Advanced search initialized');
+        });
+    </script>
+
+{% endblock %}

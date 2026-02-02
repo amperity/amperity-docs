@@ -65,6 +65,7 @@ html_copy_source = False
 html_show_sourcelink = False
 
 html_additional_pages = {
+    "advanced_search": "advanced-search.html",
     "destinations": "destinations.html",
     "sources": "sources.html",
 }
