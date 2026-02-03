@@ -215,9 +215,11 @@
 <section>
 
   <div class="intro">
-    <p>Advanced search works best with simple word searches, such as single words, complete names, or multiword searches set to match exactly. For example: "Adobe", "Adobe Target", and "Adobe Target" (set to match exactly) will return a different number of results. Do not search for phrases, such as "How to configure Amperity".</p>
+    <p>Use advanced search to filter searches for more precise results. Single words, complete names, and multiword searches set to match exactly or match the order of words in the search query work best.</p>
 
-    <p>Open the Filters menu to choose which topic collections to search, to adjust the number of returned results, to limit results to page titles, section headers, or content matches, and to require exact matches or exact ordering.</p>
+    <p>For example: <strong>Adobe</strong>, <strong>Adobe Target</strong> and <strong>Adobe Target</strong> (set to "Exact matches only") return different numbers of results. Results are prioritized by page title, then section header, and then content matches within sections. Do not search for phrases, such as <strong>How to configure Amperity</strong>. Use the exact match and exact order filter options instead of quotation marks.</p>
+
+    <p>Open the Filters menu to filter search results to specific topic collections, specific locations within topics, exact matches, exact word order, and the number of results to return.</p>
   </div>
 
   <div class="search-wrapper">
@@ -771,7 +773,7 @@
                 const doc = parser.parseFromString(html, 'text/html');
                 
                 // Remove unwanted elements
-                doc.querySelectorAll('script, style, nav, header, footer, .headerlink').forEach(el => el.remove());
+                doc.querySelectorAll('script, style, nav, header, footer, .globaltoc, .localtoc, .headerlink').forEach(el => el.remove());
                 
                 // Get main content text
                 const mainContent = doc.querySelector('main, article, .document, body');
