@@ -3,304 +3,302 @@
   <title>Advanced search</title>
 {% endblock %}
 {% block themestyles %}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    <style>
+  body {
+    font-family: Outfit, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--sy-c-text);
+    background-color: var(--sy-c-background);
+    line-height: 1.6;
+  }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-        body {
-            font-family: Outfit, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            color: var(--sy-c-text);
-            background-color: var(--sy-c-background);
-            padding: 20px;
-            line-height: 1.6;
-        }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+  .intro p{
+    margin-top:1rem;
+    margin-bottom:1.25rem
+  }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
+  .search-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 
-        .intro p{
-          margin-top:1rem;
-          margin-bottom:1.25rem
-        }
+  #filter-button {
+    padding: 6px 10px;
+    background: var(--sy-c-surface);
+    border: 0px solid var(--gray-a3);
+    color: var(--sy-c-text);
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+  }
 
-        .search-wrapper {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
+  #filter-button:hover {
+    background-color: var(--accent-a3);
+  }
 
-        #filter-button {
-            padding: 6px 10px;
-            background: var(--sy-c-surface);
-            border: 0px solid var(--gray-a3);
-            color: var(--sy-c-text);
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 4px;
-            white-space: nowrap;
-            transition: background-color 0.2s;
-        }
+  #search-input {
+    flex: 1;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: 0px solid var(--gray-a3);
+    background: var(--sy-c-surface);
+    color: var(--sy-c-text);
+    border-radius: 4px;
+  }
 
-        #filter-button:hover {
-            background-color: var(--accent-a3);
-        }
+  #search-input:focus {
+    outline: none;
+    border-color: var(--accent-9);
+  }
 
-        #search-input {
-            flex: 1;
-            padding: 6px 10px;
-            font-size: 1rem;
-            border: 0px solid var(--gray-a3);
-            background: var(--sy-c-surface);
-            color: var(--sy-c-text);
-            border-radius: 4px;
-        }
+  #filter-panel {
+    display: none;
+    background: var(--sy-c-surface);
+    border: 0px solid var(--gray-a3);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 0px;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
 
-        #search-input:focus {
-            outline: none;
-            border-color: var(--accent-9);
-        }
+  #filter-panel.active {
+    display: block;
+  }
 
-        #filter-panel {
-            display: none;
-            background: var(--sy-c-surface);
-            border: 0px solid var(--gray-a3);
-            padding-top: 4px;
-            padding-bottom: 4px;
-            padding-left: 18px;
-            padding-right: 18px;
-            margin-bottom: 0px;
-            border-radius: 4px;
-            max-height: 300px;
-            overflow-y: auto;
-        }
+  .filter-section {
+    margin-bottom: 15px;
+  }
 
-        #filter-panel.active {
-            display: block;
-        }
+  .filter-section:last-child {
+    margin-bottom: 0;
+  }
 
-        .filter-section {
-            margin-bottom: 15px;
-        }
+  .filter-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: .4em;
+    margin-bottom: .6em;
+    color: var(--sy-c-text);
+  }
 
-        .filter-section:last-child {
-            margin-bottom: 0;
-        }
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-        .filter-section h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-top: .4em;
-            margin-bottom: .6em;
-            color: var(--sy-c-text);
-        }
+  .filter-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
 
-        .filter-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+  .filter-option input[type="checkbox"] {
+    cursor: pointer;
+  }
 
-        .filter-option {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
+  .filter-option label {
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
 
-        .filter-option input[type="checkbox"] {
-            cursor: pointer;
-        }
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
 
-        .filter-option label {
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
+  .filter-row label {
+    font-size: 0.9rem;
+  }
 
-        .filter-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
+  .filter-row input[type="number"] {
+    width: 60px;
+    padding-top: 00px;
+    padding-bottom: 00px;
+    padding-left: 10px;
+    padding-right: 00px;
+    margin-left: 10px;
+    border: 0px solid var(--gray-a3);
+    background: var(--sy-c-background);
+    color: var(--sy-c-text);
+    border-radius: 3px;
+  }
 
-        .filter-row label {
-            font-size: 0.9rem;
-        }
+  hr {
+    border: none;
+    border-top: 1px solid var(--gray-a3);
+    margin: 20px 0;
+  }
 
-        .filter-row input[type="number"] {
-            width: 60px;
-            padding-top: 00px;
-            padding-bottom: 00px;
-            padding-left: 10px;
-            padding-right: 00px;
-            margin-left: 10px;
-            border: 0px solid var(--gray-a3);
-            background: var(--sy-c-background);
-            color: var(--sy-c-text);
-            border-radius: 3px;
-        }
+  #search-results {
+    margin-top: 20px;
+  }
 
-        hr {
-            border: none;
-            border-top: 1px solid var(--gray-a3);
-            margin: 20px 0;
-        }
+  #search-summary {
+    font-size: 0.95rem;
+    color: var(--sy-c-text);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    opacity: 0.8;
+  }
 
-        #search-results {
-            margin-top: 20px;
-        }
+  .search-result {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--sy-c-surface);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
 
-        #search-summary {
-            font-size: 0.95rem;
-            color: var(--sy-c-text);
-            margin-bottom: 15px;
-            margin-top: 15px;
-            opacity: 0.8;
-        }
+  .search-result:hover {
+    background: var(--accent-a3);
+  }
 
-        .search-result {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--sy-c-surface);
-            border-radius: 4px;
-            transition: background-color 0.2s;
-        }
+  .search-result a {
+    color: var(--accent-9);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
 
-        .search-result:hover {
-            background: var(--accent-a3);
-        }
+  .search-result a:hover {
+    text-decoration: underline;
+  }
 
-        .search-result a {
-            color: var(--accent-9);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
+  .search-result .context {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--sy-c-text);
+    opacity: 0.7;
+  }
 
-        .search-result a:hover {
-            text-decoration: underline;
-        }
+  .highlighted {
+    background-color: var(--accent-a4);
+    font-weight: 600;
+  }
 
-        .search-result .context {
-            margin-top: 5px;
-            font-size: 0.9rem;
-            color: var(--sy-c-text);
-            opacity: 0.7;
-        }
-
-        .highlighted {
-            background-color: var(--accent-a4);
-            font-weight: 600;
-        }
-
-        .no-results {
-            padding: 40px 20px;
-            text-align: center;
-            color: var(--sy-c-text);
-            opacity: 0.6;
-        }
-    </style>
+  .no-results {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--sy-c-text);
+    opacity: 0.6;
+  }
+</style>
 {% endblock %}
 {% block body %}
+<h1 class="headline">Advanced search</h1>
 
-    <div class="container">
-        <h1>Advanced search</h1>
+<section>
 
-        <div class="intro">
-            <p>Advanced search works best with simple word searches, such as single words, complete names, or multiword searches set to match exactly. For example: "Adobe", "Adobe Target", and "Adobe Target" (set to match exactly) will return a different number of results. Do not search for phrases, such as "How to configure Amperity".</p><p>Open the Filters menu to choose which topic collections to search, to adjust the number of returned results, and to require exact matches.</p>
+  <div class="intro">
+    <p>Advanced search works best with simple word searches, such as single words, complete names, or multiword searches set to match exactly. For example: "Adobe", "Adobe Target", and "Adobe Target" (set to match exactly) will return a different number of results. Do not search for phrases, such as "How to configure Amperity".</p>
+
+    <p>Open the Filters menu to choose which topic collections to search, to adjust the number of returned results, to limit results to page titles, section headers, or content matches, and to require exact matches or exact ordering.</p>
+  </div>
+
+  <div class="search-wrapper">
+    <button id="filter-button">Filters</button>
+    <input type="text" id="search-input" placeholder="Search documentation..." />
+  </div>
+
+  <div id="filter-panel">
+    <div class="filter-section">
+      <h3>Topic collections</h3>
+        <div class="filter-options">
+          <div class="filter-option">
+            <input type="checkbox" id="coll-guided" checked />
+            <label for="coll-guided">Guided setup</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="coll-operator" checked />
+            <label for="coll-operator">Operators guide</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="coll-user" checked />
+            <label for="coll-user">User guides</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="coll-api" checked />
+            <label for="coll-api">Amperity API</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="coll-reference" checked />
+            <label for="coll-reference">Reference</label>
+          </div>
         </div>
+      </div>
 
-        <div class="search-wrapper">
-            <button id="filter-button">Filters</button>
-            <input type="text" id="search-input" placeholder="Search documentation..." />
+      <div class="filter-section">
+        <h3>Limit search results</h3>
+        <div class="filter-options">
+          <div class="filter-option">
+            <input type="checkbox" id="include-titles" checked />
+            <label for="include-titles">Include page titles</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="include-headers" checked />
+            <label for="include-headers">Include section headers</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="include-content" checked />
+            <label for="include-content">Include content matches</label>
+          </div>
         </div>
+      </div>
 
-        <div id="filter-panel">
-            <div class="filter-section">
-                <h3>Topic collections</h3>
-                <div class="filter-options">
-                    <div class="filter-option">
-                        <input type="checkbox" id="coll-guided" checked />
-                        <label for="coll-guided">Guided setup</label>
-                    </div>
-                    <div class="filter-option">
-                        <input type="checkbox" id="coll-operator" checked />
-                        <label for="coll-operator">Operators guide</label>
-                    </div>
-                    <div class="filter-option">
-                        <input type="checkbox" id="coll-user" checked />
-                        <label for="coll-user">User guides</label>
-                    </div>
-                    <div class="filter-option">
-                        <input type="checkbox" id="coll-api" checked />
-                        <label for="coll-api">Amperity API</label>
-                    </div>
-                    <div class="filter-option">
-                        <input type="checkbox" id="coll-reference" checked />
-                        <label for="coll-reference">Reference</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="filter-section">
-                <h3>Limit search results</h3>
-                <div class="filter-options">
-                    <div class="filter-option">
-                        <input type="checkbox" id="include-titles" checked />
-                        <label for="include-titles">Include page titles</label>
-                    </div>
-                    <div class="filter-option">
-                        <input type="checkbox" id="include-headers" checked />
-                        <label for="include-headers">Include section headers</label>
-                    </div>
-                    <div class="filter-option">
-                        <input type="checkbox" id="include-content" checked />
-                        <label for="include-content">Include content matches</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="filter-section">
-                <div class="filter-row">
-                    <label for="num-results">Number of search results to return</label>
-                    <input type="number" id="num-results" min="1" max="100" value="10" />
-                </div>
-            </div>
-
-            <div class="filter-section">
-                <div class="filter-row">
-                    <input type="checkbox" id="exact-match" />
-                    <label for="exact-match">Exact matches only</label>
-                </div>
-            </div>
-
-            <div class="filter-section">
-                <div class="filter-row">
-                    <input type="checkbox" id="exact-order" />
-                    <label for="exact-order">Exact order only</label>
-                </div>
-            </div>
-
+      <div class="filter-section">
+        <div class="filter-row">
+          <label for="num-results">Number of search results to return</label>
+          <input type="number" id="num-results" min="1" max="100" value="20" />
         </div>
+      </div>
 
-        <div id="search-results">
-            <div id="search-summary"></div>
-            <div id="results-list"></div>
+      <div class="filter-section">
+        <div class="filter-row">
+          <input type="checkbox" id="exact-match" />
+          <label for="exact-match">Exact matches only</label>
         </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-row">
+          <input type="checkbox" id="exact-order" />
+          <label for="exact-order">Exact order only</label>
+        </div>
+      </div>
     </div>
 
-    <script>
+    <div id="search-results">
+      <div id="search-summary"></div>
+      <div id="results-list"></div>
+    </div>
+  </div>
+
+  <script>
         // Keyword to path mapping
         const KEYWORD_MAPPING = {
             "itemized transaction semantics": "/reference/semantics.html#transactions",
@@ -984,6 +982,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             console.log('Advanced search initialized');
         });
-    </script>
-
+  </script>
+</section>
 {% endblock %}
