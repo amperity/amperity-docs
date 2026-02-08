@@ -667,7 +667,6 @@ B
 .. _b-braze-currents:
 
 **Braze Currents**
-
    .. include:: ../../shared/terms.rst
       :start-after: .. term-braze-currents-start
       :end-before: .. term-braze-currents-end
@@ -1745,14 +1744,26 @@ E
       :start-after: .. term-epsilon-start
       :end-before: .. term-epsilon-end
 
+
+.. _e-epsilon-abacus:
+
+**Epsilon Abacus**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-epsilon-abacus-start
       :end-before: .. term-epsilon-abacus-end
 
+
+.. _e-epsilon-conversant:
+
+**Epsilon Conversant**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-epsilon-conversant-start
       :end-before: .. term-epsilon-conversant-end
 
+
+.. _e-epsilon-targeting:
+
+**Epsilon Targeting**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-epsilon-targeting-start
       :end-before: .. term-epsilon-targeting-end
