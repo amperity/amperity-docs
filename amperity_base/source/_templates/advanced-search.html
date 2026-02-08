@@ -117,11 +117,13 @@
 
   .filter-option input[type="checkbox"] {
     cursor: pointer;
+    accent-color: var(--accent-9);
   }
 
   .filter-option label {
     cursor: pointer;
     font-size: 0.9rem;
+    font-weight: 500;
   }
 
   .filter-row {
@@ -133,6 +135,7 @@
 
   .filter-row label {
     font-size: 0.9rem;
+    font-weight: 500;
   }
 
   .filter-row input[type="number"] {
@@ -289,11 +292,9 @@
 <section>
 
   <div class="intro">
-    <p>Use advanced search to filter searches for more precise results. Single words, complete names, and multiword searches set to match exactly or match the order of words in the search query work best.</p>
+    <p>Advanced search provides additional filters for returning more precise search results. Access advanced search filters from the <strong>Filters</strong> menu. Advanced search filter options include searching by topic collection or by location within topics, looking for exact matches or exact word order, setting the number of topics to return, excluding words, or allowing wildcards.</p>
 
-    <p>For example: <strong>Adobe</strong>, <strong>Adobe Target</strong> and <strong>Adobe Target</strong> (set to "Exact matches only") return different numbers of results. Results are prioritized by page title, then section header, and then content matches within sections. Do not search for phrases, such as <strong>How to configure Amperity</strong>. Use the exact match and exact order filter options instead of quotation marks.</p>
-
-    <p>Open the <strong>Filters</strong> menu to filter search results to specific topic collections, specific locations within topics, exact matches, exact word order, and the number of results to return.</p>
+    <p>Matching results are shown as you type and are prioritized by topic title, then section header, and then content matches within sections. When a glossary term matches exactly the term is shown as the first search result.</p>
   </div>
 
   <div class="search-wrapper">
@@ -306,8 +307,8 @@
       <h3>Topic collections</h3>
       <div class="filter-options">
         <div class="filter-option">
-          <input type="checkbox" id="coll-guided" checked />
-          <label for="coll-guided">Guided setup</label>
+          <input type="checkbox" id="coll-guides" checked />
+          <label for="coll-guides">Guided setup</label>
         </div>
         <div class="filter-option">
           <input type="checkbox" id="coll-user" checked />
@@ -381,7 +382,7 @@
         <!-- Row 2, Column 2 -->
         <div class="match-option-cell">
           <div class="filter-row">
-            <label for="exclude-words">Exclude these words</label>
+            <label for="exclude-words">Exclude these words:</label>
             <input type="text" id="exclude-words" placeholder="word1 word2 word3" />
           </div>
         </div>
@@ -421,10 +422,17 @@
   </div>
 
   <script>
+        // Keyword to path mapping
+        const KEYWORD_MAPPING = {
+            "itemized transaction semantics": "/reference/semantics.html#transactions",
+            "punnch": "/reference/connected_systems.html",
+            "yotpo": "/reference/connected_systems.html"
+        };
+
         // Search indexes cache
         const searchIndexes = {
             api: null,
-            guided: null,
+            guides: null,
             operator: null,
             reference: null,
             user: null
@@ -559,9 +567,91 @@
                 return;
             }
 
+            // Check for keyword mapping first
+            const queryLowerForMapping = query.toLowerCase();
+            if (KEYWORD_MAPPING[queryLowerForMapping]) {
+                const mappedPath = KEYWORD_MAPPING[queryLowerForMapping];
+                
+                // Extract collection, docname, and optional anchor from the path
+                // Path format: /collection/docname.html or /collection/docname.html#anchor
+                const pathMatch = mappedPath.match(/^\/([^\/]+)\/(.+?)\.html(#.+)?$/);
+                
+                if (pathMatch) {
+                    const collection = pathMatch[1];
+                    const docname = pathMatch[2];
+                    const anchor = pathMatch[3] || ''; // Optional anchor (e.g., #transactions)
+                    
+                    // Load the search index to get the actual page title
+                    const index = await loadSearchIndex(collection);
+                    
+                    if (index) {
+                        const docnames = index.docnames || [];
+                        const titles = index.titles || [];
+                        const docIndex = docnames.indexOf(docname);
+                        
+                        let pageTitle = query; // Fallback to keyword if not found
+                        if (docIndex >= 0 && titles[docIndex]) {
+                            pageTitle = titles[docIndex];
+                        }
+                        
+                        // Build the URL with the anchor if present
+                        const finalUrl = `/` + collection + `/` + docname + `.html` + anchor;
+                        
+                        const keywordResult = [{
+                            title: pageTitle,
+                            url: finalUrl,
+                            context: 'Direct keyword match',
+                            collection: collection,
+                            score: 100,
+                            isHeader: false,
+                            isContent: false
+                        }];
+                        displayResults(keywordResult, query);
+                        return;
+                    }
+                }
+                
+                // Fallback if parsing fails - try to extract collection and get title
+                // Try to extract at least the collection from the path
+                const fallbackMatch = mappedPath.match(/^\/([^\/]+)\//);
+                let fallbackTitle = query; // Ultimate fallback to keyword
+                
+                if (fallbackMatch) {
+                    const collection = fallbackMatch[1];
+                    const index = await loadSearchIndex(collection);
+                    
+                    if (index) {
+                        // Try to find the docname in the path
+                        const docnameMatch = mappedPath.match(/\/([^\/]+)\.html/);
+                        if (docnameMatch) {
+                            const docname = docnameMatch[1];
+                            const docnames = index.docnames || [];
+                            const titles = index.titles || [];
+                            const docIndex = docnames.indexOf(docname);
+                            
+                            if (docIndex >= 0 && titles[docIndex]) {
+                                fallbackTitle = titles[docIndex];
+                            }
+                        }
+                    }
+                }
+                
+                const keywordResult = [{
+                    title: fallbackTitle,
+                    url: mappedPath,
+                    context: 'Direct keyword match',
+                    collection: 'reference',
+                    score: 100,
+                    isHeader: false,
+                    isContent: false
+                }];
+                displayResults(keywordResult, query);
+                return;
+            }
+
             // Get filter values
             const selectedCollections = [];
-            if (document.getElementById('coll-guided').checked) selectedCollections.push('guided');
+            if (document.getElementById('coll-guides').checked) selectedCollections.push('guides');
             if (document.getElementById('coll-user').checked) selectedCollections.push('user');
             if (document.getElementById('coll-operator').checked) selectedCollections.push('operator');
             if (document.getElementById('coll-api').checked) selectedCollections.push('api');
@@ -695,16 +785,16 @@
                     }
                     return true;
                 } else {
-                    // Any order match with wildcards
+                    // Any order match with wildcards - match if ANY word is found (OR logic)
                     if (allowWildcards && (useAsterisk || useQuestion)) {
                         const textWords = textLower.split(/\s+/);
-                        return queryWords.every(queryWord => 
+                        return queryWords.some(queryWord => 
                             textWords.some(textWord => 
                                 matchesWildcard(textWord, queryWord, useAsterisk, useQuestion)
                             )
                         );
                     } else {
-                        return queryWords.every(word => textLower.includes(word));
+                        return queryWords.some(word => textLower.includes(word));
                     }
                 }
             }
@@ -821,9 +911,30 @@
                     const docname = index.docnames[docIndex];
                     const title = index.titles[docIndex] || docname;
                     
-                    // Check if this content match should be excluded
+                    // Check if this content match should be excluded based on title
                     if (containsExcludedWords(title)) {
                         return;
+                    }
+                    
+                    // Check if any excluded words exist in this document's content
+                    if (excludeWords.length > 0) {
+                        const hasExcludedWord = excludeWords.some(excludedWord => {
+                            const excludedTermData = terms[excludedWord];
+                            if (!excludedTermData) return false;
+                            
+                            let docIndicesWithExcluded = [];
+                            if (Array.isArray(excludedTermData)) {
+                                docIndicesWithExcluded = excludedTermData;
+                            } else if (typeof excludedTermData === 'object') {
+                                docIndicesWithExcluded = Object.keys(excludedTermData).map(k => parseInt(k));
+                            }
+                            
+                            return docIndicesWithExcluded.includes(docIndex);
+                        });
+                        
+                        if (hasExcludedWord) {
+                            return;
+                        }
                     }
                     
                     results.push({
@@ -857,8 +968,7 @@
                 const doc = parser.parseFromString(html, 'text/html');
                 
                 // Remove unwanted elements
-                doc.querySelectorAll('script, style, nav, header, footer, H1, .globaltoc, .localtoc, .headerlink').forEach(el => el.remove());
-                
+                doc.querySelectorAll('script, style, nav, header, footer, H1, .globaltoc, .localtoc, .headerlink, .sd-card').forEach(el => el.remove());
                 // Get main content text
                 const mainContent = doc.querySelector('main, article, .document, body');
                 if (!mainContent) return null;
@@ -954,13 +1064,11 @@
                 resultsDiv.innerHTML = '<div class="no-results">No results to display. Try adjusting your search or filters.</div>';
                 return;
             }
-
-            summaryDiv.textContent = `Found ${results.length} result${results.length !== 1 ? 's' : ''} for "${query}"`;
             
             // Map collection names to display names
             const collectionNames = {
-                'api': 'API reference',
-                'guided': 'Guided setup',
+                'api': 'Amperity API',
+                'guides': 'Guided setup',
                 'operator': 'Operators guide',
                 'reference': 'Reference',
                 'user': 'User guides'
@@ -984,7 +1092,31 @@
             
             const resultsWithSnippets = await Promise.all(snippetPromises);
             
-            resultsDiv.innerHTML = resultsWithSnippets.map(result => {
+            // Filter out content results where exact match or exact order failed
+            const filteredResults = resultsWithSnippets.filter(result => {
+                // Keep all non-content results (titles, headers, glossary)
+                if (!result.isContent) return true;
+                
+                // For content results with exact match or exact order enabled,
+                // filter out if snippet is null (validation failed)
+                if (result.exactMatch || result.exactOrder) {
+                    return result.snippet !== null;
+                }
+                
+                // For regular content searches, keep all results
+                return true;
+            });
+            
+            // Update summary with actual result count
+            if (filteredResults.length === 0) {
+                summaryDiv.textContent = query ? `No results found for "${query}"` : '';
+                resultsDiv.innerHTML = '<div class="no-results">No results to display. Try adjusting your search or filters.</div>';
+                return;
+            }
+            
+            summaryDiv.textContent = `Found ${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} for "${query}"`;
+            
+            resultsDiv.innerHTML = filteredResults.map(result => {
                 const collectionName = collectionNames[result.collection] || result.collection;
                 let breadcrumb;
                 let matchType = '';
