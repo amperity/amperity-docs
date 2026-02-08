@@ -119,6 +119,7 @@
 
   .compact-filter-option input[type="checkbox"] {
     cursor: pointer;
+    accent-color: var(--accent-9);
   }
 
   .compact-filter-option label {
@@ -195,16 +196,16 @@
   <div id="compact-results-overlay" class="compact-results-overlay">
     <div class="compact-search-buttons">
       <button type="button" id="compact-filter-button" class="compact-filter-btn">Filters</button>
-      <a href="../advanced_search.html" class="compact-advanced-btn">Advanced Search</a>
+      <a href="../advanced_search.html" class="compact-advanced-btn">Open advanced search</a>
     </div>
 
     <div id="compact-filter-panel" class="compact-filter-panel">
       <div class="compact-filter-section">
-        <h3>Collections</h3>
+        <h3>Choose topic collections</h3>
         <div class="compact-filter-options">
           <div class="compact-filter-option">
-            <input type="checkbox" id="compact-coll-guided" checked />
-            <label for="compact-coll-guided">Guided setup</label>
+            <input type="checkbox" id="compact-coll-guides" checked />
+            <label for="compact-coll-guides">Guided setup</label>
           </div>
           <div class="compact-filter-option">
             <input type="checkbox" id="compact-coll-user" checked />
@@ -234,10 +235,17 @@
 
 <script>
   (function() {
+    // Keyword to path mapping
+    const KEYWORD_MAPPING = {
+      "itemized transaction semantics": "/reference/semantics.html#transactions",
+      "punnch": "/reference/connected_systems.html",
+      "yotpo": "/reference/connected_systems.html"
+    };
+
     // Search indexes cache
     const searchIndexes = {
       api: null,
-      guided: null,
+      guides: null,
       operator: null,
       reference: null,
       user: null
@@ -331,7 +339,7 @@
 
     // Perform search
     async function performSearch() {
-      const query = document.getElementById('compact-search-input').value.trim().toLowerCase();
+      const query = document.getElementById('compact-search-input').value.trim();
       const resultsOverlay = document.getElementById('compact-results-overlay');
       const resultsDiv = document.getElementById('compact-results-list');
 
@@ -339,6 +347,94 @@
         resultsOverlay.classList.remove('active');
         return;
       }
+
+      // Check for keyword mapping first
+      const queryLowerForMapping = query.toLowerCase();
+      if (KEYWORD_MAPPING[queryLowerForMapping]) {
+        const mappedPath = KEYWORD_MAPPING[queryLowerForMapping];
+        
+        // Extract collection, docname, and optional anchor from the path
+        // Path format: /collection/docname.html or /collection/docname.html#anchor
+        const pathMatch = mappedPath.match(/^\/([^\/]+)\/(.+?)\.html(#.+)?$/);
+        
+        if (pathMatch) {
+          const collection = pathMatch[1];
+          const docname = pathMatch[2];
+          const anchor = pathMatch[3] || ''; // Optional anchor (e.g., #transactions)
+          
+          // Load the search index to get the actual page title
+          const index = await loadSearchIndex(collection);
+          
+          if (index) {
+            const docnames = index.docnames || [];
+            const titles = index.titles || [];
+            const docIndex = docnames.indexOf(docname);
+            
+            let pageTitle = query; // Fallback to keyword if not found
+            if (docIndex >= 0 && titles[docIndex]) {
+              pageTitle = titles[docIndex];
+            }
+            
+            // Build the URL with the anchor if present
+            const finalUrl = `/${collection}/${docname}.html${anchor}`;
+            
+            const keywordResult = [{
+              title: pageTitle,
+              url: finalUrl,
+              collection: collection,
+              score: 100,
+              isHeader: false,
+              isContent: false,
+              isKeywordMatch: true
+            }];
+            
+            await displayResults(keywordResult, query);
+            resultsOverlay.classList.add('active');
+            return;
+          }
+        }
+        
+        // Fallback if parsing fails - try to extract collection and get title
+        // Try to extract at least the collection from the path
+        const fallbackMatch = mappedPath.match(/^\/([^\/]+)\//);
+        let fallbackTitle = query; // Ultimate fallback to keyword
+        
+        if (fallbackMatch) {
+          const collection = fallbackMatch[1];
+          const index = await loadSearchIndex(collection);
+          
+          if (index) {
+            // Try to find the docname in the path
+            const docnameMatch = mappedPath.match(/\/([^\/]+)\.html/);
+            if (docnameMatch) {
+              const docname = docnameMatch[1];
+              const docnames = index.docnames || [];
+              const titles = index.titles || [];
+              const docIndex = docnames.indexOf(docname);
+              
+              if (docIndex >= 0 && titles[docIndex]) {
+                fallbackTitle = titles[docIndex];
+              }
+            }
+          }
+        }
+        
+        const keywordResult = [{
+          title: fallbackTitle,
+          url: mappedPath,
+          collection: 'reference',
+          score: 100,
+          isHeader: false,
+          isContent: false,
+          isKeywordMatch: true
+        }];
+        
+        await displayResults(keywordResult, query);
+        resultsOverlay.classList.add('active');
+        return;
+      }
+
+      const queryLower = query.toLowerCase();
 
       // Get active collections
       const selectedCollections = getActiveCollections();
@@ -359,7 +455,7 @@
           continue;
         }
         
-        const results = searchInIndex(index, query, collection);
+        const results = searchInIndex(index, queryLower, collection);
         allResults.push(...results);
       }
 
@@ -370,7 +466,7 @@
       let limitedResults = allResults.slice(0, 10);
       
       // Check if query matches a glossary term
-      const glossaryMatch = await checkGlossaryMatch(query);
+      const glossaryMatch = await checkGlossaryMatch(queryLower);
       if (glossaryMatch) {
         // Create a special glossary result
         const glossaryResult = {
@@ -395,7 +491,7 @@
     // Get active collections from checkboxes
     function getActiveCollections() {
       const collections = [];
-      if (document.getElementById('compact-coll-guided').checked) collections.push('guided');
+      if (document.getElementById('compact-coll-guides').checked) collections.push('guides');
       if (document.getElementById('compact-coll-operator').checked) collections.push('operator');
       if (document.getElementById('compact-coll-user').checked) collections.push('user');
       if (document.getElementById('compact-coll-reference').checked) collections.push('reference');
@@ -414,7 +510,7 @@
         const doc = parser.parseFromString(html, 'text/html');
         
         // Remove unwanted elements
-        doc.querySelectorAll('script, style, nav, header, footer, H1, .globaltoc, .localtoc, .headerlink').forEach(el => el.remove());
+        doc.querySelectorAll('script, style, nav, header, footer, H1, .globaltoc, .localtoc, .headerlink, .sd-card').forEach(el => el.remove());
         
         // Get main content text
         const mainContent = doc.querySelector('main, article, .document, body');
@@ -568,8 +664,8 @@
       }
 
       const collectionNames = {
-        'api': 'API reference',
-        'guided': 'Guided setup',
+        'api': 'Amperity API',
+        'guides': 'Guided setup',
         'operator': 'Operators guide',
         'reference': 'Reference',
         'user': 'User guides'
@@ -595,6 +691,10 @@
           // For glossary matches: show the definition
           contextText = result.definition;
           matchType = '';
+        } else if (result.isKeywordMatch) {
+          // For keyword matches: show Docs > Collection > Page Title (page title)
+          contextText = `Docs > ${collectionName} > ${result.title}`;
+          matchType = ' (page title)';
         } else {
           contextText = collectionName;
           if (result.isHeader) {
@@ -606,8 +706,8 @@
           }
         }
         
-        // Add snippet for content matches (but not for glossary matches)
-        const snippetHtml = result.snippet && !result.isGlossary ? 
+        // Add snippet for content matches (but not for glossary or keyword matches)
+        const snippetHtml = result.snippet && !result.isGlossary && !result.isKeywordMatch ? 
           `<div class="compact-result-snippet">${highlightText(result.snippet, query)}</div>` : '';
         
         return `
