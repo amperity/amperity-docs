@@ -34,7 +34,7 @@ A
       :end-before: .. term-activation-states-tables-end
 
 
-.. _a-active-campaign:
+.. _a-activecampaign:
 
 **ActiveCampaign**
    .. include:: ../../shared/terms.rst
@@ -662,6 +662,15 @@ B
    .. include:: ../../shared/terms.rst
       :start-after: .. term-braze-start
       :end-before: .. term-braze-end
+
+
+.. _b-braze-currents:
+
+**Braze Currents**
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-braze-currents-start
+      :end-before: .. term-braze-currents-end
 
 
 .. _b-brightloom:
@@ -1477,12 +1486,12 @@ D
       :end-before: .. term-detailed-examples-table-end
 
 
-.. _d-deterministic:
+.. _d-deterministic-connection:
 
-**deterministic**
+**deterministic connection**
    .. include:: ../../shared/terms.rst
-      :start-after: .. term-deterministic-start
-      :end-before: .. term-deterministic-end
+      :start-after: .. term-deterministic-connection-start
+      :end-before: .. term-deterministic-connection-end
 
 
 .. _d-digital-channel:
@@ -3593,6 +3602,14 @@ P
    .. include:: ../../shared/terms.rst
       :start-after: .. term-primary-key-start
       :end-before: .. term-primary-key-end
+
+
+.. _d-probabilistic-connection:
+
+**probabilistic connection**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-probabilistic-connection-start
+      :end-before: .. term-probabilistic-connection-end
 
 
 .. _p-product-affinity:

@@ -1015,6 +1015,16 @@ Braze is a leading marketing automation platform for creating custom experiences
 .. term-braze-end
 
 
+
+**Braze Currents**
+
+.. term-braze-currents-start
+
+Braze Currents is a real-time data streaming tool that exports events data from the Braze platform. Use Braze Currents to stream message engagement and customer behavior events to Amperity.
+
+.. term-braze-currents-end
+
+
 **Brightloom**
 
 .. term-brightloom-start
