@@ -1,7 +1,5 @@
 .. https://docs.amperity.com/reference/
 
-:orphan:
-
 
 ==================================================
 Search the docs
