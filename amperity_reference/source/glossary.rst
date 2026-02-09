@@ -3615,7 +3615,7 @@ P
       :end-before: .. term-primary-key-end
 
 
-.. _d-probabilistic-connection:
+.. _p-probabilistic-connection:
 
 **probabilistic connection**
    .. include:: ../../shared/terms.rst
