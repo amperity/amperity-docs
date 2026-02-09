@@ -106,6 +106,7 @@ Amperity documentation
    :hidden:
 
    Formatting guide <rst>
+   about_search
    setup
    styles
    terminology
