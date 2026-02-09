@@ -25,6 +25,12 @@ Search from navigation
 
 Navigation search is pinned at the top of every page in the Amperity docs site.
 
+.. image:: ../../images/search-navigation.png
+   :width: 579 px
+   :alt: Search the Amperity documentation site.
+   :align: left
+   :class: no-scaled-link
+
 **To use navigation search**
 
 #. Select the search bar in the top navigation of the Amperity docs site.
@@ -72,6 +78,12 @@ Advanced search filters
 .. search-advanced-filters-start
 
 Advanced search provides additional filters for returning more precise search results. Access filters from the **Filters** menu.
+
+.. image:: ../../images/search-filter-options.png
+   :width: 520 px
+   :alt: Advanced search filter options.
+   :align: left
+   :class: no-scaled-link
 
 Filter options include:
 
