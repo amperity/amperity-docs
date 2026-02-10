@@ -31,6 +31,7 @@ Site Index
    destination-blue-core
    destination-braze
    destination-camelot-smm
+   destination-cheetah-digital
    destination-cordial
    destination-criteo
    destination-criteo-retail-media
@@ -60,7 +61,6 @@ Site Index
    destination-listrak-sms
    destination-liveramp
    destination-mailchimp
-   destination-marigold
    destination-marketo
    destination-meta-offline-events
    destination-microsoft-dataverse
