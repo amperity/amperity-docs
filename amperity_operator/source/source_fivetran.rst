@@ -86,7 +86,6 @@ A Fivetran-enabled data source works like this:
    * :doc:`Google Analytics <source_google_analytics>` (pull directly using a REST API)
    * :doc:`Google Cloud Storage <source_google_cloud_storage>` (pull any file from cloud-based storage)
    * :doc:`Heap <source_heap>` (pull directly using an Amazon S3-based workflow)
-   * :doc:`Klaviyo <source_klaviyo>` (pull directly using a REST API)
    * :doc:`Optimizely <source_optimizely>` (pull directly using an Amazon S3-based workflow)
    * :doc:`Sailthru by Zeta <source_sailthru>` (pull directly using a REST API)
    * :doc:`Salesforce Marketing Cloud <source_salesforce_marketing_cloud>`
