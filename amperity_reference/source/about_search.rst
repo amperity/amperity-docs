@@ -39,7 +39,7 @@ Search from navigation
 Navigation search is pinned at the top of every page in the Amperity docs site.
 
 .. image:: ../../images/search-navigation.png
-   :width: 579 px
+   :width: 380 px
    :alt: Search the Amperity documentation site.
    :align: left
    :class: no-scaled-link
