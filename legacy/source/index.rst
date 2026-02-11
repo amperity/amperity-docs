@@ -75,6 +75,7 @@ Site index
    format_dat
    ingest_queries
    source_amazon_s3
+   source_klaviyo_fivetran
    source_shopify_api
    source_shopify_fivetran
    source_snowflake_aws.rst

@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/operator/
+.. https://docs.amperity.com/legacy/
 
 
 .. |source-name| replace:: Shopify
